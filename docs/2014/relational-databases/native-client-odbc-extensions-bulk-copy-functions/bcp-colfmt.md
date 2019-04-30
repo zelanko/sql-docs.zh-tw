@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065456"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
   在使用者檔案中指定資料的來源或目標格式。 當做來源格式使用時**bcp_colfmt**指定現有的資料檔案做為大量複製中的資料來源的格式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表。 資料檔案當做目標格式使用時，會建立使用指定的資料行格式**bcp_colfmt**。  

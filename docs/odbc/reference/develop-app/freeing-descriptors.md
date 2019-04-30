@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d643ccad0110796127524a10e82aef7c3339b163
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061486"
 ---
 # <a name="freeing-descriptors"></a>釋放描述項
 明確配置描述元可以是藉由呼叫其中一個明確地釋放**SQLFreeHandle**具有*HandleType* SQL_HANDLE_DESC，或以隱含的方式，當連接控制代碼釋放。 明確配置描述項會釋放時，要自動套用的釋放描述項會還原為隱含地配置給它們的描述元的所有陳述式控制代碼。  

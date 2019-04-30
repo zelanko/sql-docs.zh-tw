@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1db4c6895fb499458c198008319302a25b8cd34b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156221"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>記憶體中 OLTP 的 Transact-SQL 支援
   您可以使用任何 Transact-SQL 查詢或 DML 陳述式 (SELECT、INSERT、UPDATE 或 DELETE)、特定陳述式及 SQL 模組 (例如預存程序、資料表值函數、純量函數、觸發程序和檢視表) 來存取記憶體最佳化的資料表。 如需詳細資訊，請參閱[TRANSACT-SQL 存取記憶體最佳化資料表使用解譯](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)。  
@@ -34,7 +34,7 @@ ms.locfileid: "48218488"
   
 -   [建立類型&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql) (請參閱`MEMORY_OPTIMIZED`， `BUCKET_COUNT`， `INDEX`，和`HASH`)  
   
--   [宣告@local_variable &#40;TRANSACT-SQL&#41; ](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (請參閱`NULL`  |  `NOT NULL`)  
+-   [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (see `NULL` | `NOT NULL`)  
   
  記憶體最佳化資料表支援 `PRIMARY KEY` 和 `NOT NULL` 條件約束。 如需實作不支援的條件約束的資訊，請參閱[移轉檢查和 Foreign Key 條件約束](../../database-engine/migrating-check-and-foreign-key-constraints.md)。  
   

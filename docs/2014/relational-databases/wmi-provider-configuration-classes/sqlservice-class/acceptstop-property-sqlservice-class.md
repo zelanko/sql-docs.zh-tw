@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 38da38f867c6266d25f3b5d4c329a3e18a0e7292
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223343"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>AcceptStop 屬性 (SqlService 類別)
   取得可指定是否可停止服務的布林屬性值。  

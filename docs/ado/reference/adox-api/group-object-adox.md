@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 537e0d3b1408a3cb159a79ad4e256fc8b5cf720f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63179816"
 ---
 # <a name="group-object-adox"></a>Group 物件 (ADOX)
 代表可受保護的資料庫內的存取權限的群組帳戶。  

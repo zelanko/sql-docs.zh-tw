@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 40dc214fa7f77dfb81c941095ecd71d3d4bf5a36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061556"
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>驅動程式管理員中的函式對應
 驅動程式管理員支援採用字串引數的函式的兩個進入點。 未裝飾的函式 (**SQLDriverConnect**) 是 ANSI 格式的函式。 以 Unicode 格式以裝飾*W* (**SQLDriverConnectW**。)  

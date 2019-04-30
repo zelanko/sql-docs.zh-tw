@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aec8603dd46b6ab4a0fe6f3e7539efdcebd876ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209558"
 ---
 # <a name="complete-word-intellisense"></a>自動完成文字 (IntelliSense)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 的 [自動完成文字] 選項會在您輸入的字元足以找出單一的變數、命令或函數名稱之後，輸入該字詞的其餘部分。  

@@ -1,5 +1,5 @@
 ---
-title: 工作 13:加入將資料寫入 MDS 暫存資料表的 OLE DB 目的地 |Microsoft Docs
+title: 工作 13：加入將資料寫入 MDS 暫存資料表的 OLE DB 目的地 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 34f68c4604d70dc83579f8c9284802b82cc6291d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222612"
 ---
-# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>工作 13:加入 OLE DB 目的地，以便將資料寫入 MDS 暫存資料表
+# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>工作 13：新增 OLE DB 目的地來將資料寫入 MDS 暫存資料表
   既然您已新增**ImportType**並**BatchTag**所有記錄的值，您已準備好將它們傳送至 MDS 供暫存。 在這個工作中，您可以使用 OLE DB 目的地將資料寫入至**stg.supplier_Leaf**暫存資料表。  
   
 1.  拖曳**OLE DB 目的地**從**其他目的地**一節中**SSIS 工具箱**至**資料流程**索引標籤並將它放在**加入 MDS 所需的資料行**。  

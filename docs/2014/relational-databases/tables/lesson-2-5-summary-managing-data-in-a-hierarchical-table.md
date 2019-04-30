@@ -1,5 +1,5 @@
 ---
-title: 摘要：在階層式資料表中管理資料 | Microsoft Docs
+title: 摘要：管理階層式資料表中的資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26fefad9fa8b2a20e03a8a87e873556427db1646
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223328"
 ---
 # <a name="summary-managing-data-in-a-hierarchical-table"></a>摘要：在階層式資料表中管理資料
   `hierarchyid` 資料類型可讓您輕鬆建立反映階層式資料的資料表，然後建立深度優先和廣度優先的索引，即可有效率地存取資料表。 使用階層式方法來查詢與操作資料。  

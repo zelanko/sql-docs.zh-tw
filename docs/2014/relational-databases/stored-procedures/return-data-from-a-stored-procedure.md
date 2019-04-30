@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b11f924ce5692378896f1fd7d50186861abf223
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140433"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>從預存程序傳回資料
   將結果集或資料從程序傳回至呼叫端程式的方式有兩種：輸出參數和傳回碼。 本主題提供有關這兩種方法的詳細資訊。  
@@ -74,10 +74,10 @@ GO
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程序可以使用`cursor`資料類型只能針對 OUTPUT 參數。 如果`cursor`指定資料類型的參數，該程序定義中的參數必須指定 VARYING 和 OUTPUT 關鍵字。 參數可以指定為僅 OUTPUT，但如果在參數宣告中指定 VARYING 關鍵字，則必須是資料型別`cursor`和也必須指定 OUTPUT 關鍵字。  
   
 > [!NOTE]  
->  `cursor`無法透過 OLE DB、 ODBC、 ADO 和 Db-library 之類的資料庫 Api 的應用程式變數繫結資料型別。 因為應用程式可以執行的程序，程序之前，必須繫結 OUTPUT 參數`cursor`輸出參數無法從資料庫 Api 呼叫。 您可以從呼叫這些程序[!INCLUDE[tsql](../../../includes/tsql-md.md)]批次、 程序或觸發程序時，才`cursor`OUTPUT 變數指派給[!INCLUDE[tsql](../../../includes/tsql-md.md)]本機`cursor`變數。  
+>  `cursor` 資料類型不可透過 OLE DB、ODBC、ADO 以及 DB-Library 之類的資料庫 API 繫結至應用程式變數。 因為必須先繫結 OUTPUT 參數，然後應用程式才能執行程序，所以不能從資料庫 API 呼叫具有 `cursor` OUTPUT 參數的程序。 只有當 `cursor` OUTPUT 變數指定給 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 本機 `cursor` 變數時，才可以從 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 批次、程序或觸發程序呼叫這些程序。  
   
 ### <a name="rules-for-cursor-output-parameters"></a>Cursor 輸出參數的規則  
- 以下規則是有關`cursor`程序執行時，將輸出參數：  
+ 以下規則是有關程序執行時的 `cursor` 輸出參數：  
   
 -   順向資料指標的結果集之中只會傳回程序執行結束時，位於或超過資料指標所在位置的資料列，例如：  
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9382835ffc0a92ee572df07aee8cabb8fa762182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161591"
 ---
 # <a name="examining-data"></a>檢查資料
 [取得資料](../../../ado/guide/data/getting-data.md)一節說明如何從資料來源擷取資料，做為一或多個**資料錄集**物件。 本節將討論**Recordset**的詳細資料，包括如何瀏覽**資料錄集**並檢視其資料。  

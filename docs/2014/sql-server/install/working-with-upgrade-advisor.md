@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b310b51c32e4a0b3254035311c7a10182c06e550
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154731"
 ---
 # <a name="working-with-upgrade-advisor"></a>使用 Upgrade Advisor
   為了確保能夠成功升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，Upgrade Advisor 提供了中央主控台，可識別在升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之前，安裝中需要處理的問題。  

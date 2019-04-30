@@ -1,5 +1,5 @@
 ---
-title: 步驟 1： 連接到資料來源 |Microsoft Docs
+title: 步驟 1:連接到資料來源 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 154fdd7368835ba2a578d3ec641705c4064859ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149010"
 ---
-# <a name="step-1-connect-to-the-data-source"></a>步驟 1：連線到資料來源
+# <a name="step-1-connect-to-the-data-source"></a>步驟 1:連線至資料來源
 任何應用程式的第一個步驟是連接到資料來源。 這個階段中，包括它需要，函式會在下圖中顯示。  
   
  ![連接到 ODBC 應用程式中的資料來源](../../../odbc/reference/develop-app/media/pr11.gif "pr11")  

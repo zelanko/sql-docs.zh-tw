@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0865502928e98329764ae6085ab2b67aa26f0517
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128022"
 ---
 # <a name="drop-table-command"></a>DROP TABLE 命令
 移除與資料來源所指定的資料庫中的資料表，並從磁碟中予以刪除。  
@@ -51,4 +51,4 @@ DROP TABLE TableName | FileName | ?
 |ODBC 語法|資料來源|Visual FoxPro 語法|  
 |-----------------|-----------------|--------------------------|  
 |DROP TABLE*基底資料表名稱*|資料庫 （.dbc 檔案）|移除資料表*TableName*刪除|  
-||可用的資料表 （.dbf 檔案） 的目錄|清除*dbfName*<br /><br /> 清除*cdxName*<br /><br /> 清除*fptName*|
+||可用的資料表 （.dbf 檔案） 的目錄|ERASE *dbfName*<br /><br /> ERASE *cdxName*<br /><br /> ERASE *fptName*|

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c29fb18431d1f02d82db76605a8a53752ea0357
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184904"
 ---
 # <a name="using-cachesize"></a>使用 CacheSize
 使用**CacheSize**屬性，即可控制多少筆記錄到本機的記憶體，從提供者擷取一次。 例如，如果**CacheSize**為 10 之後的第一個左,**資料錄集**物件，提供者擷取的前 10 筆記錄到本機的記憶體。 當您瀏覽**資料錄集**物件，提供者傳回的資料從本機記憶體緩衝區。 只要您超出快取中的最後一筆記錄時，提供者會從資料來源擷取的接下來的 10 筆記錄到快取中。  

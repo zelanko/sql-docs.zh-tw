@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0c13eda55eb5b0a3d6d0a7764df2def4972d3bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209650"
 ---
 # <a name="bookmarks-f1-help"></a>書籤 F1 說明
   此章節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [書籤] 頁面的 F1 說明。  

@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b9dd83baa9139af4ea46940852e0b357f51e5a12
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209337"
 ---
 # <a name="systemstore-property-securitycertificate-class"></a>SystemStore 屬性 (SecurityCertificate 類別)
   取得安全性憑證的系統存放區。  

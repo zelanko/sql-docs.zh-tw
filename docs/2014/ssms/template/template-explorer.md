@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 42e52d92d993627129f79f215fa536001f44538d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63074054"
 ---
 # <a name="template-explorer"></a>範本總管
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供各種範本。 範本為包含 SQL 指令碼的模板檔案，可協助您在資料庫中建立物件。 第一次開啟範本總管時，範本的複本會放在 C:\Users AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates 底下資料夾的使用者。  

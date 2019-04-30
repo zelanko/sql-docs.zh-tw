@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 769bc3ad8b330afd81b14aed1340a67c1d7812ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137594"
 ---
 # <a name="database-maintenance-plans-superseded"></a>已取代資料庫維護計畫
     

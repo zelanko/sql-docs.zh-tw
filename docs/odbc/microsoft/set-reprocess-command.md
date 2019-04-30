@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 41877986d5d0e8afdfb30841860df360efd26da0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159377"
 ---
 # <a name="set-reprocess-command"></a>SET REPROCESS 命令
 指定多少時間，或如何鎖定的嘗試失敗後的檔案或記錄長時間。  

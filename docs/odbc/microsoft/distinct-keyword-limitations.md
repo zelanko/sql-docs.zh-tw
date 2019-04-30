@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bbd01a38e7e78d0db64d254b9574d23e7dfeffe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128063"
 ---
 # <a name="distinct-keyword-limitations"></a>DISTINCT 關鍵字限制
 不支援長文字欄位 (Microsoft Access) 或附註欄位 (dBASE)。

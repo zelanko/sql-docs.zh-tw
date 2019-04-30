@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137509"
 ---
 # <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>自動修復頁面 (適用於可用性群組和資料庫鏡像)
   資料庫鏡像與 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 都支援自動修復頁面。 在頁面因為某些錯誤類型而損毀、無法讀取之後，資料庫鏡像夥伴 (主體或鏡像) 或可用性複本 (主要或次要) 會嘗試自動復原頁面。 無法讀取頁面的夥伴/複本會向其夥伴或另一個複本要求一個全新頁面副本。 如果這個要求成功，無法讀取的頁面就會被可讀取的副本取代，而這通常會解決錯誤。  
@@ -45,14 +45,14 @@ ms.locfileid: "48070580"
   
   
   
-##  <a name="UnrepairablePageTypes"></a> Page Types That Cannot Be Automatically Repaired  
+##  <a name="UnrepairablePageTypes"></a> 無法自動修復的頁面類型  
  自動修復頁面無法修復下列控制頁類型：  
   
 -   檔案標頭頁面 (頁面識別碼 0)。  
   
 -   第 9 頁 (資料庫啟動頁面)。  
   
--   配置頁面—全域配置對應 (Global Allocation Map，GAM) 頁面、共用全域配置對應 (Shared Global Allocation Map，SGAM) 頁面，以及頁面可用空間 (Page Free Space，PFS) 頁面。  
+-   配置頁面：全域配置對應 (GAM) 頁面、 共用全域配置對應 (SGAM) 頁面，以及頁面可用空間 (PFS) 頁面。  
   
 
   
@@ -88,7 +88,7 @@ ms.locfileid: "48070580"
   
 
   
-##  <a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
+##  <a name="ViewAPRattempts"></a> 操作說明：檢視自動修復頁面嘗試  
  下列動態管理檢視會針對給定可用性資料庫或鏡像資料庫上進行的最新自動修復頁面嘗試行為傳回資料列，每個資料庫最多 100 個資料列。  
   
 -   **AlwaysOn 可用性群組：**  

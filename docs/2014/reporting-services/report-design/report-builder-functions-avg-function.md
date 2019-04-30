@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 13275d0a3a2070c7fd57d65a67d083af06c00af3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59957234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216160"
 ---
 # <a name="avg-function-report-builder-and-ssrs"></a>Avg 函數 (報表產生器及 SSRS)
   傳回運算式指定的所有非 Null 數值的平均值 (在給定範圍中評估)。  

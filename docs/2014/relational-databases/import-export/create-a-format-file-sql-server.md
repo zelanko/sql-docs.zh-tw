@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4d5e8b6e3bc008263c83a9bdf5b36b4235897921
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140586"
 ---
 # <a name="create-a-format-file-sql-server"></a>建立格式檔案 (SQL Server)
   當您將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表，或從資料表大量匯出資料時，可以使用格式檔案提供可用來寫入資料檔的彈性系統，幾乎不需要進行編輯即可符合其他資料格式，或是從其他軟體程式讀取資料檔。  
@@ -163,7 +163,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 |----------------|-----------------|  
 |**formatnul f** _format_file_ **-x**|指定 XML 格式檔案。|  
 |**-c**|指定字元資料。|  
-|**-t** `,`|指定逗號 (**,**) 作為欄位結束字元。<br /><br /> 注意：如果資料檔案使用預設的欄位結束字元 (`\t`)，則 **-t**不是必要參數。|  
+|**-t** `,`|指定逗號 (**,**) 作為欄位結束字元。<br /><br /> 注意:如果資料檔使用預設欄位結束字元 (`\t`)，則不需要 **-t** 參數。|  
 |**-T**|指定 **bcp** 公用程式使用整合式安全性的信任連接，連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，則必須指定 **-U** 與 **-P** ，才能順利登入。|  
   
  在 Windows 命令提示字元中，輸入下列 `bcp` 命令：  

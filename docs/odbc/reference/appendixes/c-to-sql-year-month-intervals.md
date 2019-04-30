@@ -1,5 +1,5 @@
 ---
-title: C 到 SQL： 年月間隔 |Microsoft Docs
+title: C 轉換為 SQL：年月間隔 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d12727f9298eb63fe10b44c48b9d3b7996a839d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159286"
 ---
-# <a name="c-to-sql-year-month-intervals"></a>C 到 SQL：年月間隔
+# <a name="c-to-sql-year-month-intervals"></a>C 轉換為 SQL：年月間隔
 年月間隔 ODBC C 資料類型的識別項是：  
   
  SQL_C_INTERVAL_MONTH SQL_C_INTERVAL_YEAR SQL_C_INTERVAL_YEAR_TO_MONTH  
@@ -32,9 +32,9 @@ ms.locfileid: "47692766"
   
 |SQL 型別識別項|測試|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR [a]<br /><br /> [A] SQL_VARCHAR<br /><br /> [A] SQL_LONGVARCHAR|資料行的位元組長度 > = 字元位元組長度<br /><br /> 資料行的位元組長度 < 字元位元組長度 [a]<br /><br /> 資料值不是常值的有效間隔|n/a<br /><br /> 22001<br /><br /> 22015|  
-|[A] SQL_WCHAR<br /><br /> SQL_WVARCHAR [a]<br /><br /> [A] SQL_WLONGVARCHAR|資料行的字元長度 > = 字元長度的資料<br /><br /> 資料行的字元長度 < 字元長度的資料，[a]<br /><br /> 資料值不是常值的有效間隔|n/a<br /><br /> 22001<br /><br /> 22015|  
-|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b]<br /><br /> SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b]<br /><br /> SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|將單一欄位間隔轉換不會造成整個的位數截斷<br /><br /> 轉換導致截斷的整數|n/a<br /><br /> 22003|  
+|SQL_CHAR[a]<br /><br /> SQL_VARCHAR[a]<br /><br /> SQL_LONGVARCHAR[a]|資料行的位元組長度 > = 字元位元組長度<br /><br /> 資料行的位元組長度 < 字元位元組長度 [a]<br /><br /> 資料值不是常值的有效間隔|n/a<br /><br /> 22001<br /><br /> 22015|  
+|SQL_WCHAR[a]<br /><br /> SQL_WVARCHAR[a]<br /><br /> SQL_WLONGVARCHAR[a]|資料行的字元長度 > = 字元長度的資料<br /><br /> 資料行的字元長度 < 字元長度的資料，[a]<br /><br /> 資料值不是常值的有效間隔|n/a<br /><br /> 22001<br /><br /> 22015|  
+|SQL_TINYINT[b]<br /><br /> SQL_SMALLINT[b]<br /><br /> SQL_INTEGER[b]<br /><br /> SQL_BIGINT[b]<br /><br /> SQL_NUMERIC[b]<br /><br /> SQL_DECIMAL[b]|將單一欄位間隔轉換不會造成整個的位數截斷<br /><br /> 轉換導致截斷的整數|n/a<br /><br /> 22003|  
 |SQL_INTERVAL_MONTH<br /><br /> SQL_INTERVAL_YEAR<br /><br /> SQL_INTERVAL_YEAR_TO_MONTH|已轉換資料值，而不會截斷的任何欄位<br /><br /> 資料值的一個或多個欄位已在轉換期間截斷|n/a<br /><br /> 22015|  
   
  [a] 的所有 C 間隔資料類型可以轉換成字元資料類型。  

@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4ef2127e3f554ac4d7bbd92e9d823ecd1e025fe9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131443"
 ---
 # <a name="architecture-of-client-side-and-server-side-xml-formatting-sqlxml-40"></a>用戶端和伺服器端 XML 格式的架構 (SQLXML 4.0)
   下圖顯示伺服器端上的 XML 格式的架構。  
@@ -40,7 +40,7 @@ ms.locfileid: "52750350"
   
  ![在用戶端 XML 格式化架構。](../../../database-engine/dev-guide/media/clientsidexml.gif "架構的 XML 格式化的用戶端。")  
   
- 在這個範例中，用戶端會使用 SQLXMLOLEDB 提供者。 在連接字串中，則必須設定為 SQLOLEDB 的資料提供者屬性。 (這是 SQLXML 4.0 中唯一接受的值)。在用戶端上執行的命令會傳送至伺服器。 在伺服器上產生的資料列集會傳送至用戶端。 來自資料列集的 XML 文件的格式會在用戶端上執行。  
+ 在這個範例中，用戶端會使用 SQLXMLOLEDB 提供者。 在連接字串中，則必須設定為 SQLOLEDB 的資料提供者屬性。 （這是唯一在 SQLXML 4.0 中接受的值）。在用戶端執行此命令會傳送到伺服器。 在伺服器上產生的資料列集會傳送至用戶端。 來自資料列集的 XML 文件的格式會在用戶端上執行。  
   
  在 SQLXML 4.0 中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) 或 SQLOLEDB 提供者可用來當做資料提供者。 您可能可以存取任何資料來源。 只要查詢傳回單一資料列集，就可以在用戶端上套用 XML 轉換。  
   

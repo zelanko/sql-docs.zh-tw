@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 33b2d2f33cf0ed85524dba50c936f4a2ea774d29
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164686"
 ---
 # <a name="enter-data-source-credentials-dialog-box"></a>輸入資料來源認證對話方塊
   使用**輸入資料來源認證**對話方塊來提供您[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]認證，讓您可以從資料來源擷取資料。  

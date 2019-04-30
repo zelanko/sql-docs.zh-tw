@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 78505f010706a39e5278d50219dd4504e33dd67c
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142937"
 ---
 # <a name="types-of-events"></a>事件的類型
 有兩種基本的事件。 「 將事件，「 呼叫作業開始之前，通常，例如名稱-中包含 「 會 」 **WillChangeRecordset**或是**WillConnect**。 事件的事件完成之後通常稱為 「 完成 」 名稱中包含-例如， **RecordChangeComplete**或是**ConnectComplete**。 例外狀況存在-這類**InfoMessage** -但相關聯的作業完成後，會發生這些情況。  

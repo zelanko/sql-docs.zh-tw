@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d78101fd564e18467e6833f480cec2409dc2c44b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198313"
 ---
 # <a name="default-driver-subkey"></a>預設驅動程式子機碼
 預設子機碼包含描述的預設資料來源所使用的驅動程式的單一值。 下表顯示此值的格式。  
   
-|名稱|資料類型|data|  
+|名稱|資料類型|資料|  
 |----------|---------------|----------|  
-|**驅動程式**|REG_SZ|*預設驅動程式描述*|  
+|**驅動程式**|REG_SZ|*default-driver-description*|  
   
  *預設驅動程式描述*名稱等同於底下說明驅動程式的 ODBC 驅動程式子機碼值的名稱。  
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21c4eae0608e433ed3ca7888091a7c658726192d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214788"
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>將來賓權限授與網頁伺服器電腦
 匿名的 Web 伺服器帳戶 (iusr_< 電腦*ComputerName*) 必須新增至本機來賓在 Web 伺服器電腦上使用 RDS  

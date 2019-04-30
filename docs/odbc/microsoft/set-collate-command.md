@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 372d3b2df79d66084f5599b4ac098b8c273ee78a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127837"
 ---
 # <a name="set-collate-command"></a>SET COLLATE 命令
 在後續的編製索引和排序作業中指定字元欄位的定序順序。  

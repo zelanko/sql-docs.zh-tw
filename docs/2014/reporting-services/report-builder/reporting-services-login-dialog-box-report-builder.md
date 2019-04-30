@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e82aefb411f35e5eb8ad33cb16650e6963a461d1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156645"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Reporting Services 登入對話方塊 (報表產生器)
   使用 **[Reporting Services 登入]** 對話方塊，即可提供發行報表至報表伺服器的認證。 如需這些認證的說明，請連絡報表伺服器管理員。  

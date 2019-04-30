@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 649731c1dbbe3f52dec899cc47366cfeb15c9c56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195237"
 ---
 # <a name="ole-automation-result-sets"></a>OLE Automation 結果集
   如果 OLE Automation 屬性或方法以一維或二維陣列 (One or two Dimension Array) 的形式傳回資料，該陣列將以結果集 (Result Set) 形式傳給用戶端：  

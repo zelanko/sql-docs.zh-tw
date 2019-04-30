@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b29e5020cbe552fac66f7bb4e621ce0eda6779a5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190787"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 組態檔
   RSReportDesigner.config 檔會儲存有關 [報表設計師] 可用之轉譯和資料處理延伸模組的設定。 資料處理延伸模組資訊儲存在 `Data` 元素中。 轉譯延伸模組資訊儲存在 `Render` 元素中。 `Designer` 元素列舉報表設計師中所使用的查詢產生器。  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a284254c058eae0362fe23860e1b406a97f0bf49
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222476"
 ---
 # <a name="working-with-multidimensional-data"></a>使用多維度資料
 A*資料格集*是多維度資料的查詢的結果。 它包含的軸、 通常不超過四個座標軸通常只有兩個或三個集合。 *軸*是用來找出或篩選 cube 中的特定值的一或多個維度的成員集合。  

@@ -10,11 +10,11 @@ ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199619"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Analytics Platform System 的防毒軟體
 如果您的資料中心需要防毒軟體，請使用下列方針 Analytics Platform System 上安裝防毒軟體。 建議您不要安裝防毒軟體，除非它是強制的需求，將資料中心。  

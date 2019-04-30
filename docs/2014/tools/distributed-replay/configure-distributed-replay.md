@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5e44910c72e5162b9acb74ebbf74cd19d7ce1bc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149514"
 ---
 # <a name="configure-distributed-replay"></a>設定 Distributed Replay
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 組態詳細資料指定於 Distributed Replay Controller、Client 以及安裝管理工具所在的 XML 檔案中。 這些檔案包括下列各項：  
@@ -28,7 +28,7 @@ ms.locfileid: "54124568"
   
 -   [重新執行組態檔](#ReplayConfig)  
   
-##  <a name="DReplayController"></a> 控制器組態檔：DReplayController.config  
+##  <a name="DReplayController"></a> 控制器設定檔：DReplayController.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 服務啟動時，會從控制器組態檔 `DReplayController.config`載入記錄層次。 這個檔案位於您安裝 Distributed Replay Controller 服務的資料夾中：  
   
  **\<控制器安裝路徑>\DReplayController.config**  
@@ -49,7 +49,7 @@ ms.locfileid: "54124568"
 </Options>  
 ```  
   
-##  <a name="DReplayClient"></a> 用戶端組態檔：DReplayClient.config  
+##  <a name="DReplayClient"></a> 用戶端設定檔：DReplayClient.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務啟動時，會從用戶端組態檔 ( `DReplayClient.config`) 載入組態設定。 這個檔案位於每個用戶端上您安裝 Distributed Replay Client 服務的資料夾中：  
   
  **\<用戶端安裝路徑>\DReplayClient.config**  
@@ -76,7 +76,7 @@ ms.locfileid: "54124568"
 </Options>  
 ```  
   
-##  <a name="PreprocessConfig"></a> 前置處理組態檔：DReplay.exe.preprocess.config  
+##  <a name="PreprocessConfig"></a> 前置處理設定檔：DReplay.exe.preprocess.config  
  當您使用管理工具來起始前置處理階段時，管理工具就會從前置處理組態檔 `DReplay.exe.preprocess.config`載入前置處理設定。  
   
  您可以使用預設組態檔，也可以使用管理工具的 **-c** 參數來指定已修改前置處理組態檔的位置。 如需使用管理工具之前置處理選項的詳細資訊，請參閱[前置處理選項 &#40;Distributed Replay 管理工具&#41;](preprocess-option-distributed-replay-administration-tool.md)。  
@@ -105,7 +105,7 @@ ms.locfileid: "54124568"
 </Options>  
 ```  
   
-##  <a name="ReplayConfig"></a> 重新執行組態檔：DReplay.exe.replay.config  
+##  <a name="ReplayConfig"></a> 重新執行設定檔：DReplay.exe.replay.config  
  當您使用管理工具來起始事件重新執行階段時，管理工具就會從重新執行組態檔 `DReplay.exe.replay.config`載入重新執行設定。  
   
  您可以使用預設組態檔，也可以使用管理工具的 **-c** 參數來指定已修改重新執行組態檔的位置。 如需使用管理工具之重新執行選項的詳細資訊，請參閱[重新執行選項 &#40;Distributed Replay 管理工具&#41;](replay-option-distributed-replay-administration-tool.md)。  

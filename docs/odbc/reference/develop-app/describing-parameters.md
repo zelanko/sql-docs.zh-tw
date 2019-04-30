@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bc752afc0cb5214e629a343c35464e612b57c36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049838"
 ---
 # <a name="describing-parameters"></a>描述參數
 **SQLBindParameter**包含描述參數的引數： 其 SQL 類型、 有效位數和小數位數。 驅動程式會使用這項資訊，或是*中繼資料，* 將參數值轉換成所需的資料來源類型。 第一眼，它看起來的驅動程式是有利的位置，來了解應用程式; 以外的參數中繼資料中畢竟，驅動程式可以輕易找出中繼資料的結果集資料行。 其實，這不是如此。 首先，大部分的資料來源未提供的驅動程式，以探索參數中繼資料的方式。 第二個，大部分的應用程式已知的中繼資料。  

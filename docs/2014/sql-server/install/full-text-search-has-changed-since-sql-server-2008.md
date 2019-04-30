@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c6a5301a972775d262f0b7d4640880610bef3b9d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127066"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>自 SQL Server 2008 起，全文檢索搜尋已經變更
   Upgrade Advisor 偵測到全文檢索搜尋即將升級。 許多全文檢索搜尋選項和設定都已經變更。 因此，當您升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 全文檢索搜尋時，某些設定可能需要進行修改。  

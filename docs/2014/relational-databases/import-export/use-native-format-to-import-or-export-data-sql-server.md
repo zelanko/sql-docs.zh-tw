@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2dee0f6a337cab7713862e662e06bb94a0b34a5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065746"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用原生格式匯入或匯出資料 (SQL Server)
   在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間，使用不包含任何擴充/雙位元組字集 (DBCS) 字元的資料檔傳送大量資料時，建議使用原生格式。  
@@ -64,9 +64,9 @@ ms.locfileid: "48124298"
   
 -   `sql_variant` 資料  
   
-     如果`sql_variant`資料儲存為 SQLVARIANT 原生格式資料檔中，則資料會維持它所有的特性。 用來記錄每一個資料值的資料類型的中繼資料，會與資料值一起儲存。 此中繼資料用來重新建立相同的資料類型，在目的地中的資料值`sql_variant`資料行。  
+     如果 `sql_variant` 資料以原生格式資料檔儲存為 SQLVARIANT，則資料會維持它所有的特性。 用來記錄每一個資料值的資料類型的中繼資料，會與資料值一起儲存。 中繼資料是用來以目的地 `sql_variant` 資料行中相同的資料類型，重新建立資料值。  
   
-     如果目的地資料行的資料型別不`sql_variant`，每個資料值會轉換成資料類型的目的地資料行，依照隱含資料轉換的一般規則。 如果資料轉換期間發生錯誤，將會回復目前批次。 任何在 `char` 資料行之間傳送的 `varchar` 及 `sql_variant` 值，都可能有字碼頁轉換問題。  
+     如果目的地資料行的資料類型不是 `sql_variant`，則每一個資料值將依照隱含資料轉換的一般規則，轉換為目的地資料行的資料類型。 如果資料轉換期間發生錯誤，將會回復目前批次。 任何在 `char` 資料行之間傳送的 `varchar` 及 `sql_variant` 值，都可能有字碼頁轉換問題。  
   
      如需資料轉換的詳細資訊，請參閱[資料類型轉換 &#40;Database Engine&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)。  
   

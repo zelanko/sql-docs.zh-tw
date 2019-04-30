@@ -1,5 +1,5 @@
 ---
-title: ADO 事件具現化： Visual c + + |Microsoft Docs
+title: ADO 事件具現化：視覺化C++|Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d3760cedb077bfde9f0972ad5e5544ae7b01d9a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062944"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO 事件具現化：Visual C++
 這是如何在 Microsoft® C++® 中的 ADO 事件具現化的圖解說明。 請參閱[ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)如需完整說明。  
@@ -66,7 +66,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
 // EndEventExampleVC02  
 ```  
   
- 事件類別是繼承自**IUnknown**，因此您也必須實作**QueryInterface**， **AddRef**，以及**發行**方法。 也會實作類別建構函式和解構函式。 選擇與您熟悉最簡化此工作的一部分的 Visual c + + 工具。  
+ 事件類別是繼承自**IUnknown**，因此您也必須實作**QueryInterface**， **AddRef**，以及**發行**方法。 也會實作類別建構函式和解構函式。 選擇 視覺效果C++工具與您熟悉最簡化此工作的一部分。  
   
  讓它知道的事件處理常式可發出**QueryInterface**上[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)並[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件**IConnectionPointContainer**並**IConnectionPoint**介面。 接著發出**IConnectionPoint::Advise**針對每個類別。  
   

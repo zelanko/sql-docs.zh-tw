@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cd0c7e3bc9ece2a6eafa9de1623bfa2b641e5e64
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064082"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>第 2 課：指定連線資訊 (Reporting Services)
   將報表加入教學課程專案之後，您需要定義「資料來源」，這是讓報表從關聯式資料庫、多維度資料庫或其他資源存取資料所用的連接資訊。  

@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f6540789cbd05f2a7c5e5b61bf5597221dc3305f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162476"
 ---
 # <a name="database-engine-upgrade-issues"></a>Database Engine 升級問題
   本章節的主題描述的是可能會影響升級為 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 問題。 這些主題會描述一些可讓您採取的動作，以便減少這些變更對環境的影響。  

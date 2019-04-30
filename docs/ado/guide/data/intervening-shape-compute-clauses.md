@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b51bdbb489c3ddb1c00663dc70d05841dd6fb36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161473"
 ---
 # <a name="intervening-shape-compute-clauses"></a>中介 Shape COMPUTE 子句
 是有效的父系和子系之間的一或多個 COMPUTE 子句嵌入在參數化的圖形命令，如下列範例所示：  

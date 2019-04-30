@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8af8b499430c7048588a32f0f580a641e4aa72b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126857"
 ---
 # <a name="navigating-through-data"></a>巡覽資料
 **資料錄集**支援各種方法和屬性，以瀏覽結果的資料集。 我們透過少數的情況下，使用我們的範例，來檢查這項功能**資料錄集**物件。  

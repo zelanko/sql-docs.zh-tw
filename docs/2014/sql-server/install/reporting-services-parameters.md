@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 662fe968faadf9d5a5bba10b934c421a5d3c3e95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057576"
 ---
 # <a name="reporting-services-parameters"></a>Reporting Services 參數
   若要分析[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，您必須指定的執行個體[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，並提供有關如何連接至該執行個體的資訊。  

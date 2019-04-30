@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b29965c33270bbf8d9173c55e96af48b9c4f749
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135528"
 ---
 # <a name="optimize-sql-trace"></a>最佳化 SQL 追蹤
   因為執行 SQL 追蹤會使用系統資源來收集資料，所以會產生效能成本，但是有許多方式可以使成本降至最少。 若要使追蹤導致的效能成本降至最少，請試試下列方法：  

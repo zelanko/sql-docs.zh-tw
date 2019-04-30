@@ -1,5 +1,5 @@
 ---
-title: 工作 12:探索知識 （知識探索） |Microsoft Docs
+title: 工作 12：探索知識 （知識探索） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 478634dce86c8ccb0cf36d4d558be3826048983e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223424"
 ---
-# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>工作 12:探索知識 (知識探索)
+# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>工作 12：探索知識 (知識探索)
   在這個工作中，您會執行**知識探索**上的活動**Supplier ID**並**Supplier Name**網域。 在此案例中，知識探索程序主要會匯入這兩個定義域的值。  
   
  在本教學課程中，您會從頭開始建立知識庫。 您也可以藉由執行知識探索活動來開始建立知識庫。 當您按一下 **建立知識庫**在主頁面中，DQS 用戶端會帶您前往與頁面**定義域管理**選取活動的活動。 您可以變更**活動**要**知識探索**，然後在下一個頁面中您可以建立網域知識探索程序的一部分。 請參閱[Perform Knowledge Discovery](https://msdn.microsoft.com/library/hh510398.aspx)如需詳細資訊。  

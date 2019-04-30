@@ -1,5 +1,5 @@
 ---
-title: LookupCube (MDX) |Microsoft 文件
+title: LookupCube (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8f8338a542bf9e15816205930704c45a536a5629
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208511"
 ---
 # <a name="lookupcube-mdx"></a>LookupCube (MDX)
 
@@ -43,16 +43,16 @@ LookupCube(Cube_Name, String_Expression )
  有效的字串運算式，這通常是傳回字串之資料格座標的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 如果指定數值運算式， **LookupCube**函式評估指定的數值運算式所指定 cube 中，並傳回結果的數值。  
+ 如果指定數值運算式，則**LookupCube**函式會評估指定的 cube 中指定之數值運算式，並傳回產生的數字值。  
   
- 如果指定的字串運算式，則**LookupCube**函式評估指定的 cube 中的指定的字串運算式，並傳回結果的字串值。  
+ 如果指定的字串運算式，則**LookupCube**函式會評估指定的 cube 中的指定的字串運算式，並傳回結果的字串值。  
   
- **LookupCube**函數所在之 MDX 查詢的來源 cube 包含適用於在相同資料庫內的 cube 上**LookupCube**函式的執行。  
+ **LookupCube**函式的運作方式相同資料庫內的 cube 所在之 MDX 查詢的來源 cube 包含**LookupCube**函式執行。  
   
 > [!IMPORTANT]  
 >  您必須在數值或字串運算式中提供任何必要的目前成員，因為目前查詢的內容不會延續至所查詢的 Cube。  
   
- 任何計算使用**LookupCube**函式都可能會發生效能不彰。 請考慮重新設計方案，讓所有必要資料出現在一個 Cube 中，而不要使用這個函數。  
+ 使用任何計算**LookupCube**函式都可能會發生效能不彰。 請考慮重新設計方案，讓所有必要資料出現在一個 Cube 中，而不要使用這個函數。  
   
 ## <a name="examples"></a>範例  
  下列查詢會示範 LookupCube 的使用：  
@@ -66,6 +66,6 @@ LookupCube(Cube_Name, String_Expression )
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

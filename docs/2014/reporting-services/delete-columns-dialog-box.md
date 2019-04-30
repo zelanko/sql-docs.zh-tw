@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a198ad51c424b42aff71afbeb3a82952aa57a52
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164725"
 ---
 # <a name="delete-columns-dialog-box"></a>刪除資料行對話方塊
   使用 **[刪除資料行]** 對話方塊，即可從資料表、矩陣或清單資料區域中刪除資料行。 對於與群組關聯的資料行，您也可以刪除群組定義。  

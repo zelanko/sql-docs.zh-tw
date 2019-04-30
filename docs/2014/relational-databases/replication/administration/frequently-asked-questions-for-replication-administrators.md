@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207055"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>複寫管理員的常見問題集
   透過下列問題和答覆可以了解複寫的資料庫管理員所面臨的各種工作。  
@@ -42,7 +42,7 @@ ms.locfileid: "54125848"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>訂閱何時可用？訂閱資料庫何時可用？  
  訂閱可在快照集套用至訂閱資料庫後使用。 儘管在此之前可以存取訂閱資料庫，但在套用快照集之前不應使用資料庫。 使用「複寫監視器」檢查快照集產生狀態與應用程式：  
   
--   快照集由「快照集代理程式」產生。 在複寫監視器中發行集的 **[代理程式]** 索引標籤上檢視快照集產生狀態。 如需詳細資訊，請參閱 < [View Information and Perform Tasks 使用 「 複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+-   快照集由「快照集代理程式」產生。 在複寫監視器中發行集的 **[代理程式]** 索引標籤上檢視快照集產生狀態。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 -   快照集由「散發代理程式」或「合併代理程式」套用。 在「複寫監視器」的 **[散發代理程式]** 或 **[合併代理程式]** 頁面中檢視快照集應用程式狀態。 
   
@@ -121,7 +121,7 @@ ms.locfileid: "54125848"
   
 -   物件的定義，例如 CREATE TABLE 陳述式。 依預設，複寫將所有複寫物件的定義複製到「訂閱者」。  
   
--   在其中建立物件的命名空間：\<資料庫 >。\<結構描述 >。\<物件 >。 結構描述使用 CREATE SCHEMA 陳述式來定義。  
+-   作為物件建立位置的命名空間：\<資料庫>.\<結構描述>.\<物件>。 結構描述使用 CREATE SCHEMA 陳述式來定義。  
   
 -   針對結構描述和物件擁有權，複寫在新增複寫精靈中具有下列預設行為：  
   

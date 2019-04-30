@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2565e4cc8aa9bddb83af5e8e9077987ebd27663f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195071"
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server 中的地區語言版本
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 Windows 作業系統所支援的所有語言。  

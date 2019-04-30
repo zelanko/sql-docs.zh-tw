@@ -18,11 +18,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1819fe94f3fac39d1697f2d4ee08738020e57d17
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058128"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Reporting Services 組態選項 (SSRS)
   您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝精靈的 [Reporting Services 組態] 頁面來指定報表伺服器的安裝和設定方式。 某個安裝選項的可用與否，取決於您先前在 [特徵選取] 頁面上選擇的選項，以及在安裝報表伺服器時是否也一併安裝 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的本機執行個體。  
@@ -49,7 +49,7 @@ ms.locfileid: "53375680"
 #### <a name="install-only"></a>只安裝  
  安裝報表伺服器程式檔、建立報表伺服器服務帳戶，以及註冊報表伺服器 Windows Management Instrumentation (WMI) 提供者。 這個安裝選項稱為「僅限檔案」的安裝。 如果您不想要使用預設組態，請選取這個選項。 如果無法安裝預設組態，或者您正在安裝包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]容錯移轉叢集，這就是唯一可用的選項。 如需有關僅限檔案安裝的詳細資訊，請參閱 <<c0> [ 僅限檔案安裝 (Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199093) (https://go.microsoft.com/fwlink/?LinkId=199093)。  
   
- 安裝完成之後，您必須建立報表伺服器資料庫以及設定報表伺服器，之後，才能使用它。 若要設定報表伺服器和建立資料庫，請使用 Reporting Services 組態管理員。 如需詳細資訊，請參閱[How to:建立報表伺服器資料庫 (Reporting Services 組態)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094)並[設定報表伺服器資料庫連接](https://go.microsoft.com/fwlink/?LinkId=199095)(https://go.microsoft.com/fwlink/?LinkId=199095)。  
+ 安裝完成之後，您必須建立報表伺服器資料庫以及設定報表伺服器，之後，才能使用它。 若要設定報表伺服器和建立資料庫，請使用 Reporting Services 組態管理員。 如需詳細資訊，請參閱[如何：建立報表伺服器資料庫 (Reporting Services 組態)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094)並[設定報表伺服器資料庫連接](https://go.microsoft.com/fwlink/?LinkId=199095)(https://go.microsoft.com/fwlink/?LinkId=199095)。  
   
 ### <a name="reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 模式  
   

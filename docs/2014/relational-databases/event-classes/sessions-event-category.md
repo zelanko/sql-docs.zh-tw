@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 91c87062d00e46d931afba0599cf4b19ed316ebc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049531"
 ---
 # <a name="sessions-event-category"></a>Sessions 事件類別目錄
   **Sessions** 事件類別目錄包含 **ExistingConnection** 事件類別。  

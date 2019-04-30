@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 097286f14de4dead4490c322615a6405c157f118
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140254"
 ---
 # <a name="delete-method-ado-fields-collection"></a>Delete 方法 (ADO Fields 集合)
 刪除的物件[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)集合。  

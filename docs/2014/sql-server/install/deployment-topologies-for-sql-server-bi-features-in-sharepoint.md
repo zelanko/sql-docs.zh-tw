@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2bcb706eda464730d978d0098281c2ebcd2336ed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192215"
 ---
 # <a name="deployment-topologies-for-sql-server-bi-features-in-sharepoint"></a>Deployment Topologies for SQL Server BI Features in SharePoint
   本主題說明在 SharePoint 2010 和 SharePoint 2013 環境中安裝 SQL Server 商業智慧功能 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] 的常見拓撲。 例如，單一伺服器和三層式安裝。  
@@ -169,7 +169,7 @@ ms.locfileid: "53365760"
 ##  <a name="bkmk_sharepoint2010_scaleserver"></a> 三層向外延展部署  
  此拓撲描述在多部伺服器上執行相同共用服務的向外延展部署，可服務 PowerPivot 資料或 Reporting Services 報表的大量要求，並提供更佳的處理能力。 下圖顯示三個應用程式伺服器叢集，每個叢集執行不同的共用服務組合。 在 SharePoint 環境中，服務探索及可用性會內建於伺服器陣列中。 在執行相同共用服務應用程式之多部實體伺服器之間的平衡負載，是共用服務架構的一部分。  
   
- 部署多伺服器的伺服器陣列時，請務必遵循下列 SharePoint 文章中的指示：[多部伺服器的三層式伺服器陣列 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834)。  
+ 部署多伺服器陣列時，請務必遵循下列 SharePoint 文章中的指示：[多部伺服器的三層式伺服器陣列 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834)。  
   
  ![5 個伺服器拓撲](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "5 個伺服器拓撲")  
   

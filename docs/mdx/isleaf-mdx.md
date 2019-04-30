@@ -1,5 +1,5 @@
 ---
-title: IsLeaf (MDX) |Microsoft 文件
+title: IsLeaf (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 13b609d0abb7d032828dca78b185652ad138977b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224551"
 ---
 # <a name="isleaf-mdx"></a>IsLeaf (MDX)
 
@@ -33,7 +33,7 @@ IsLeaf(Member_Expression)
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **IsLeaf**函式會傳回**true**如果指定的成員為分葉成員。 否則，函數會傳回**false**。  
+ **IsLeaf**函式會傳回 **，則為 true**如果指定的成員是分葉成員。 否則，函數會傳回**false**。  
   
 ## <a name="example"></a>範例  
  如果 [Date].[Fiscal].CurrentMember 是分葉成員，下列範例會傳回 TRUE：  
@@ -49,6 +49,6 @@ IsLeaf(Member_Expression)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

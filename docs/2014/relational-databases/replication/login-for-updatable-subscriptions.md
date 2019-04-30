@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058092"
 ---
 # <a name="login-for-updatable-subscriptions"></a>可更新訂閱的登入
   如果您在此精靈的 **[可更新的訂閱]** 頁面上選取 **[複寫]** ，就必須在訂閱者端指定帳戶，並使用此帳戶建立發行者的連接，以進行立即更新訂閱。 在訂閱者端引發的觸發程序，會使用這些連接將變更傳播至發行者。 即使您在 **[可更新的訂閱]** 頁面上選取 **[佇列變更且儘可能認可]** ，也需要此帳戶，因為 [新增訂閱精靈] 預設會將佇列更新設定為在必要時切換到立即更新。  

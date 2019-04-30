@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a99592210ff315db026d60b8743d4a3bca13c969
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061626"
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>使用 SQLBulkOperations 擷取資料列
 資料可以使用書籤的資料列集到 refetched 呼叫**SQLBulkOperations。** 要擷取的資料列會識別繫結的書籤資料行中的書籤。 尚未擷取的 SQL_COLUMN_IGNORE 值的資料行。  

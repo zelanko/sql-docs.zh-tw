@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1fb077261eda4b2e013abd6d87e894637a29216a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181238"
 ---
 # <a name="odbc-cursor-library-error-codes"></a>ODBC 資料指標程式庫錯誤碼
 > [!IMPORTANT]  
@@ -38,10 +38,10 @@ ms.locfileid: "47691126"
 |01000|未使用的資料指標程式庫。 沒有足夠的驅動程式支援。|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |01000|未使用的資料指標程式庫。 驅動程式管理員使用的版本不符。|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |01000|驅動程式會傳回 SQL_SUCCESS_WITH_INFO。 已遺失的警告訊息。|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
-|就會傳回 S1000|一般錯誤： 無法建立檔案緩衝區。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|就會傳回 S1000|一般錯誤： 無法讀取檔案緩衝區。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|就會傳回 S1000|一般錯誤： 無法寫入檔案緩衝區。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|就會傳回 S1000|一般錯誤： 無法關閉或移除檔案緩衝區。|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
+|S1000|一般錯誤：無法建立檔案緩衝區。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|一般錯誤：無法讀取檔案緩衝區。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|一般錯誤：無法寫入檔案緩衝區。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|一般錯誤：無法關閉或移除檔案緩衝區。|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
 |SL001|無法執行定位的要求，因為沒有可搜尋的資料行已繫結。|**SQLExecDirect**<br /><br /> **SQLGetData**<br /><br /> **SQLPrepare**|  
 |SL002|無法執行定位的要求，因為結果集所建立的聯結條件。|**SQLExecute**<br /><br /> **SQLExecDirect**<br /><br /> **SQLGetData**|  
 |SL003|繫結的緩衝區超過最大區段大小。|**SQLFetch**<br /><br /> **SQLFetchScroll**|  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: fabc454fe6adc77ec3e9789925e099fb6b0de6b1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138840"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>建立伺服器連線檔案 (AccessToSQL)
 伺服器的資訊可以是指定伺服器一節的指令碼檔案。 伺服器的資訊也可以指定不同的伺服器連線檔案中。 伺服器連接檔案的命令列參數是`-c <serverconnectionfile>`。 相同的伺服器識別碼是否存在於指令碼和伺服器連線檔案，則會視為在指令碼檔案中的伺服器定義。  

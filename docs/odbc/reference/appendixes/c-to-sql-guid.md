@@ -1,5 +1,5 @@
 ---
-title: 'C 到 SQL: GUID |Microsoft Docs'
+title: C 轉換為 SQL：GUID | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af0ed8307652ccf45e7fbfffb6c00355c8a8b004
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159358"
 ---
-# <a name="c-to-sql-guid"></a>C 到 SQL：GUID
+# <a name="c-to-sql-guid"></a>C 轉換為 SQL：GUID
 GUID ODBC C 資料類型的識別項是：  
   
  SQL_C_GUID  
@@ -37,7 +37,7 @@ GUID ODBC C 資料類型的識別項是：
 |SQL_WCHAR|資料行的字元長度 > = 36|n/a|  
 |SQL_WVARCHAR|資料行的字元長度 < 36|22001|  
 |SQL_WLONGVARCHAR|資料值不是有效的 GUID|22018|  
-|SQL_GUID|無 [a]|n/a|  
+|SQL_GUID|None[a]|n/a|  
   
  [a] 所有的十六進位值的有效期為 GUID。  
   

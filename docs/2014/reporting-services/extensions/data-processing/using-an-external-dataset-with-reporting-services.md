@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c912d6ac343bbcb3f908596a8ea804ad8f21dd82
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164036"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>透過 Reporting Services 使用外部資料集
   **DataSet** 物件是支援 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 已中斷連線之分散式資料案例的關鍵。 **DataSet** 物件是常駐記憶體的資料表示，可提供與資料來源無關的一致性關聯式程式設計模型。 它可與多個不同的資料來源一起使用、與 XML 資料一起使用，或管理應用程式的本機資料。 **DataSet** 物件表示一組完整的資料，包括相關資料表、條件約束及資料表間的關聯性。 因為 **DataSet** 物件具有儲存和公開資料的多樣性，所以通常會在報告您的資料之前，先將該資料處理和轉換成 **DataSet** 物件。  

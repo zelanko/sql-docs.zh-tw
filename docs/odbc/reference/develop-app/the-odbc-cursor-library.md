@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a85868cf22fa6d385c3bf75261e0f1cd54e4e1d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149072"
 ---
 # <a name="the-odbc-cursor-library"></a>ODBC 資料指標程式庫
 > [!IMPORTANT]  
@@ -31,4 +31,4 @@ ms.locfileid: "47727372"
   
  區塊及可捲動資料指標會非常有用的新功能，對許多應用程式。 不過，並非所有的驅動程式支援區塊和可捲動資料指標。 相同成立的定位的 update 和 delete 陳述式及**SQLSetPos**，其中會討論更新資料的資料。 因此，ODBC 元件的 Windows sdk，原本是收錄在 Microsoft Data Access Components (MDAC) SDK，包括資料指標程式庫。 資料指標程式庫實作區塊、 靜態資料指標、 定位的 update 和 delete 陳述式，並**SQLSetPos**符合開啟群組的標準 CLI 一致性層級的任何驅動程式。 資料指標程式庫可轉散發 ODBC 應用程式;授權協議中的 SDK，如需詳細資訊，請參閱。  
   
- 若要使用資料指標程式庫，應用程式會設定 SQL_ATTR_ODBC_CURSORS 連接屬性，才能連線到資料來源。 如需有關資料指標程式庫的詳細資訊，請參閱 <<c0> [ 附錄 f: ODBC 資料指標程式庫](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)。
+ 若要使用資料指標程式庫，應用程式會設定 SQL_ATTR_ODBC_CURSORS 連接屬性，才能連線到資料來源。 如需有關資料指標程式庫的詳細資訊，請參閱[附錄 f:ODBC 資料指標程式庫](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)。

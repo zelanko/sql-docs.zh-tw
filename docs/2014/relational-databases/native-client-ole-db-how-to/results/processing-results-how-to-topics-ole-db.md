@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0ffe1ae426b39742e9d50f343daf913777836cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225471"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>處理結果的使用說明主題 (OLE DB)
   在 OLE DB 應用程式中處理結果所牽涉到的步驟是先決定結果集的特性，然後將資料擷取到程式變數中。 如果命令執行預存程序，您也必須知道如何處理預存程序中的傳回碼和輸出參數。  

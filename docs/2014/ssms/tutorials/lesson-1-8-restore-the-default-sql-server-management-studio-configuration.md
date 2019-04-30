@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1df89b0c8f9ee694fcb2a77b21c82c3d7839287d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151538"
 ---
 # <a name="restore-the-default-sql-server-management-studio-configuration"></a>還原預設的 SQL Server Management Studio 組態
   剛接觸 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的使用者可能會不小心關閉或隱藏視窗，而且在還原 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的原始配置時，也可能會發生困難。 下列步驟會還原 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的預設環境配置。  

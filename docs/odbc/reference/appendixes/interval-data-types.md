@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 930a848ea01d128cb248c7929408ce7510937ad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188897"
 ---
 # <a name="interval-data-types"></a>間隔資料類型
 間隔被定義為兩個日期和時間之間的差異。 間隔被以兩種不同方式的其中一個。 其中一個是*年月*表示年和月數的整數間隔的時間間隔。 另一個則是*日期時間*表示時間間隔，以天、 分和秒為單位的間隔。 這兩種類型的間隔相異，且不能混用，因為月份可以有不同的數字的天數。  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c7800e7da867b4eb0c34fa3feeba5edb2d41cd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049870"
 ---
 # <a name="deferred-fields"></a>延遲的欄位
 值*延後欄位*不會設定它們，但驅動程式會將儲存的延後的效果之變數的位址時使用。 應用程式參數描述項中，驅動程式會使用變數的內容呼叫當時**SQLExecDirect**或是**SQLExecute**。 應用程式的資料列描述項中，驅動程式會使用變數的內容在提取的階段。  

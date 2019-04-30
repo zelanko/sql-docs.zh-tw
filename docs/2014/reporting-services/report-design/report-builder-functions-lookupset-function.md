@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8b43eebafb47a2f9173825ea79b5ba035e27ebca
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215351"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>LookupSet 函數 (報表產生器及 SSRS)
   從包含名稱/值組的資料集傳回符合指定之名稱的值組。  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d6e0cf91fe697458854a57e1d57099c7cb1bf6a3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164753"
 ---
 # <a name="define-query-parameters-dialog-box-report-builder"></a>定義查詢參數對話方塊 (報表產生器)
   使用 **[定義查詢參數]** 對話方塊，即可在設計階段在查詢設計工具中執行查詢以查看範例資料時，指定參數值。 查詢參數會篩選資料來源的資料，並且協助限制報表所處理的資料量。 這些值不會儲存在報表定義中。  

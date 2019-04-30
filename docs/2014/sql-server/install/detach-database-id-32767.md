@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 624dfeeec691aeacecdc71f0b68d4ba0684f1567
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131067"
 ---
 # <a name="detach-database-id-32767"></a>卸離資料庫識別碼 32767
   Upgrade Advisor 偵測到資料庫識別碼為 32767 的資料庫。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本中，此為保留的資料庫識別碼。 升級之前，請先卸離資料庫。 您可以在升級之後附加資料庫。  

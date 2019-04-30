@@ -1,5 +1,5 @@
 ---
-title: LastPeriods (MDX) |Microsoft 文件
+title: LastPeriods (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58e94b5128760dfd1d179ecad3cae7bbf065ee10
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205293"
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods (MDX)
 
@@ -36,13 +36,13 @@ LastPeriods(Index [ ,Member_Expression ] )
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 如果指定的週期數目是正數， **LastPeriods**函式會傳回一組成員之後的第開頭的成員*索引*-1，從指定的成員運算式，且結尾為指定的成員。 函數所傳回的成員數目等於*索引*。  
+ 如果指定的週期數目是正數， **LastPeriods**函式會傳回一組成員之後的第開頭的成員*Index* -1 與指定的成員運算式，以結束指定的成員。 函式所傳回的成員數目等於*Index*。  
   
- 如果指定的週期數目是負數， **LastPeriods**函式會傳回一組的開頭指定成員的成員和成員，會導致以結束 (-*索引*-1) 從指定的成員。 函數所傳回的成員數目等於數值的絕對值*索引*。  
+ 如果指定的週期數目是負數， **LastPeriods**函數會傳回一組指定的成員開頭的成員，並會導致該成員的結尾 (- *Index* -1) 從指定成員。 函式所傳回的成員數目等於數值的絕對值*Index*。  
   
- 如果指定的週期數目為零， **LastPeriods**函式會傳回空集合。 這是與不同的是**延隔**函式，如果指定 0 時，傳回指定的成員。  
+ 如果指定的週期數目為零， **LastPeriods**函式會傳回空集合。 這一點不同於**延隔時間**函式，如果指定 0 時，會傳回指定的成員。  
   
- 如果未指定成員， **LastPeriods**函式使用**Time.CurrentMember**。 如果沒有維度標示為 Time 維度，此函數將會剖析，並且在不發生錯誤的情況下執行，但會在用戶端應用程式中造成資料格錯誤。  
+ 如果未指定成員，則**LastPeriods**函式會使用**Time.CurrentMember**。 如果沒有維度標示為 Time 維度，此函數將會剖析，並且在不發生錯誤的情況下執行，但會在用戶端應用程式中造成資料格錯誤。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回 2002 會計年度第二、第三、第四會計季度的預設量值。  
@@ -67,6 +67,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

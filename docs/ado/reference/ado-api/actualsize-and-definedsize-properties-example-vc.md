@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b85ba458b96a8c5b48a2f40f1bf777374775c3b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065463"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize 和 DefinedSize 屬性範例 （VC + +）
 這個範例會使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)並[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)来顯示的已定義的大小和實際大小 欄位的屬性。  
@@ -129,24 +129,24 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **存放區名稱： Eric 讀取書籍**  
-**定義的大小： 40**  
-**實際大小： 19**  
-**存放區名稱： Barnum**  
-**定義的大小： 40**  
-**實際大小： 8**  
-**存放區名稱： 新聞與 Brews**  
-**定義的大小： 40**  
-**實際大小： 12**  
-**存放區名稱： 文件-U-Mat： 品質洗衣和書籍**  
-**定義的大小： 40**  
-**實際大小： 36**  
-**存放區名稱： Fricative Bookshop**  
-**定義的大小： 40**  
-**實際大小： 18**  
-**存放區名稱： Bookbeat**  
-**定義的大小： 40**  
-**實際大小： 8**   
+ **存放區名稱：Eric 讀取書籍**  
+**定義的大小：40**  
+**實際大小：19**  
+**存放區名稱：Barnum 的**  
+**定義的大小：40**  
+**實際大小：8**  
+**存放區名稱：新聞與 Brews**  
+**定義的大小：40**  
+**實際大小：12**  
+**存放區名稱：文件-U-Mat:品質洗衣和書籍**  
+**定義的大小：40**  
+**實際大小：36**  
+**存放區名稱：Fricative Bookshop**  
+**定義的大小：40**  
+**實際大小：18**  
+**存放區名稱：Bookbeat**  
+**定義的大小：40**  
+**實際大小：8**   
 ## <a name="see-also"></a>另請參閱  
  [ActualSize 屬性 (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [DefinedSize 屬性](../../../ado/reference/ado-api/definedsize-property.md)

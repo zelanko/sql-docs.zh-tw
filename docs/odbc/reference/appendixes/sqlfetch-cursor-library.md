@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 487a6b357d21ee675fa9594d32c7a2bb7c66e400
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199480"
 ---
 # <a name="sqlfetch-cursor-library"></a>SQLFetch (資料指標程式庫)
 > [!IMPORTANT]  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76fbb95117b1aae982242f24dc2cb1e815bc2356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063094"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>彙總函式、CALC 函式和 NEW 關鍵字
 資料成形支援下列函數。 指派給包含的資料行的章節，以操作的名稱是*章別名*。  
@@ -44,7 +44,7 @@ ms.locfileid: "47625926"
   
 |新的關鍵字|描述|  
 |-----------------|-----------------|  
-|新*欄位型別*[(*寬度* &#124; *擴展* &#124; *精確度* &#124; *錯誤*[，*擴展* &#124; *錯誤*])]|加入空白資料行指定型別的**資料錄集**。|  
+|NEW *field-type* [(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|加入空白資料行指定型別的**資料錄集**。|  
   
  *欄位類型*傳遞包含新的關鍵字可以是任何下列資料類型。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47625926"
 |DBTYPE_I8|adBigInt|  
 |DBTYPE_UI8|adUnsignedBigInt|  
 |DBTYPE_GUID|adGuid|  
-|DBTYPE_BYTES|adBinary，AdVarBinary，adLongVarBinary|  
+|DBTYPE_BYTES|adBinary, AdVarBinary, adLongVarBinary|  
 |DBTYPE_STR|adChar adVarChar adLongVarChar|  
 |DBTYPE_WSTR|adWChar adVarWChar adLongVarWChar|  
 |DBTYPE_NUMERIC|adNumeric|  

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7de38f3c91814dbd364caee84b34dacdfbdf475
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200309"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>分析驅動程式效能資料 (ODBC)
   此範例顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式專用選項，以記錄效能統計資料。 此範例會建立一個檔案： Odbcperf.log 範例顯示如何建立效能資料記錄檔並直接從 SQLPERF 資料結構 （SQLPERF 結構定義於 Odbcss.h） 顯示效能資料。 此範例是針對 ODBC 3.0 版或更新版本所開發。  

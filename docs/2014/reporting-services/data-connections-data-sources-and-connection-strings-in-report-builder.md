@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e5fe086d16728a95b9ee8f2a52878d5a2c4bad4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164924"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>報表產生器中的資料連接、資料來源及連接字串
   若要在報表中包含資料，請建立資料連接和資料集。 資料連接包括如何存取外部資料來源的相關資訊。 資料集包括查詢命令，其中指定要使用資料連接包含哪些資料。  

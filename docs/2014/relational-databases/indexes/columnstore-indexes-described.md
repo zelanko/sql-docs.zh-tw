@@ -17,11 +17,11 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58bf23c84914d7df4b9f2637cc7682de2021bf08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155470"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *記憶體中資料行存放區索引*儲存及管理使用資料行的資料儲存和資料行的查詢處理的資料。 資料行存放區索引可在主要執行大量載入和唯讀查詢的資料倉儲工作負載中順利運作。 與傳統的資料列導向儲存相較之下，使用資料行存放區索引最高可達到 **10 倍查詢效能** 改善，與未壓縮資料大小相較之下，最高可達到 **7 倍資料壓縮** 。  
@@ -64,7 +64,7 @@ ms.locfileid: "48109800"
 |-|  
 |**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。|  
   
- 在  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，非叢集資料行存放區索引：  
+ 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，叢集資料行存放區索引：  
   
 -   由 Enterprise、Developer 及 Evaluation Edition 提供。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48109800"
 |-|  
 |**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。|  
   
- 在  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，非叢集資料行存放區索引：  
+ 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，非叢集資料行存放區索引：  
   
 -   可對叢集索引或堆積中的資料行子集建立索引。 例如，可以對常用的資料行建立索引。  
   
@@ -157,16 +157,16 @@ ms.locfileid: "48109800"
   
  凡是具有非叢集資料行存放區索引的資料表，直到卸除或停用索引之前都是唯讀的。 若要更新此資料表和非叢集資料行存放區索引，您可以將資料分割切換移入和移出。您也可以停用索引、更新資料表，然後再重建索引。  
   
- 如需詳細資訊，請參閱[使用非叢集資料行存放區索引](indexes.md)  
+ 如需詳細資訊，請參閱＜ [Using Nonclustered Columnstore Indexes](indexes.md)＞。  
   
 ###  <a name="dataload_cci"></a> 將資料載入叢集資料行存放區索引  
  ![載入至叢集資料行存放區索引](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "載入至叢集資料行存放區索引")  
   
- 如圖所示，將資料載入叢集資料行存放區索引[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+ 如圖中所示，若要將資料載入叢集資料行存放區索引中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：  
   
 1.  將最大大小的資料列群組直接插入資料行存放區中。 資料載入時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會依先到先處理的順序將資料列指派至開放的資料列群組中。  
   
-2.  每個資料列群組達到其大小的上限後，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：  
+2.  每個資料列群組達到其大小的上限後， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：  
   
     1.  將資料列群組標示為 CLOSED。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "48109800"
   
     2.  如果資料列數低於每個資料列群組的資料列數下限，則會將資料列加入至差異存放區。  
   
- 如需有關差異存放區工作和程序的詳細資訊，請參閱[使用叢集資料行存放區索引](../../database-engine/using-clustered-columnstore-indexes.md)  
+ 如需有關差異存放區各項工作和程序的詳細資訊，請參閱＜ [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)＞。  
   
 ##  <a name="performance"></a> 效能秘訣  
   
@@ -196,7 +196,7 @@ ms.locfileid: "48109800"
 ##  <a name="related"></a> 相關的工作和主題  
   
 ### <a name="nonclustered-columnstore-indexes"></a>非叢集資料行存放區索引  
- 如需常見的工作，請參閱[Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md)。  
+ 如需相關的一般工作，請參閱＜ [Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md)＞。  
   
 -   [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
@@ -205,9 +205,9 @@ ms.locfileid: "48109800"
 -   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
 ### <a name="clustered-columnstore-indexes"></a>叢集資料行存放區索引  
- 如需常見的工作，請參閱[Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)。  
+ 如需相關的一般工作，請參閱＜ [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)＞。  
   
--   [建立叢集資料行存放區索引&#40;Transact SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
+-   [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
 -   [ALTER INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql)搭配 REBUILD 或 REORGANIZE。  
   

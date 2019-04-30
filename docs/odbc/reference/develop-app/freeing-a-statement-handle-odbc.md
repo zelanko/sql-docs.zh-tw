@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc16e820671aa69c15365413d44fb9bcf807236b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061541"
 ---
 # <a name="freeing-a-statement-handle-odbc"></a>釋放陳述式控制代碼 ODBC
 如先前所述，它是更有效率的方式重複使用比要卸除它們，並配置新的陳述式。 然後再執行新的 SQL 陳述式的陳述式，應用程式應該確定目前的陳述式設定適當。 這些包括陳述式屬性、參數繫結，以及結果集繫結。 一般而言，參數和結果集，舊的 SQL 陳述式需要將解除繫結 (藉由呼叫**SQLFreeStmt**使用 SQL_RESET_PARAMS 和 SQL_UNBIND 選項) 和重新繫結為新的 SQL 陳述式。  

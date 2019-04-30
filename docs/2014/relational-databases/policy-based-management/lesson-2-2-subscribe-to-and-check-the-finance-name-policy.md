@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f1b91c1d46bc4a396a8b0358a1a3bf3aa8acbcd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135693"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>訂閱和檢查 Finance Name 原則
   在這項工作中，您會將 Finance 資料庫設定為訂閱 Finance 原則類別目錄。 然後，您將測試 Finance Name 原則。  
@@ -69,7 +69,7 @@ ms.locfileid: "48137078"
  這個教學課程已經示範了如何建立以原則為基礎的管理條件、原則和原則群組，以及如何套用篩選和檢查以原則為基礎的管理目標是否符合。  
   
 ## <a name="next"></a>下一個  
- 本教學課程已完成。 若要返回開頭，請按一下 [教學課程：使用以原則為基礎的管理來管理伺服器](tutorial-administering-servers-by-using-policy-based-management.md)。  
+ 本教學課程已完成。 若要返回開頭，請按一下[教學課程：使用原則式管理來管理伺服器](tutorial-administering-servers-by-using-policy-based-management.md)。  
   
  如需教學課程的清單，請參閱 < [SQL Server 2014 的教學課程](../../tutorials/tutorials-for-sql-server-2014.md)。  
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77ad00d9c21a7f7558f8f5cafc66464c1ffc54f7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217647"
 ---
 # <a name="server-property-rds"></a>Server 屬性 (RDS)
 指出 Internet Information Services (IIS) 名稱和通訊的通訊協定。  

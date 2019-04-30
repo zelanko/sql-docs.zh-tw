@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f5a8237e32479bed033b8b9a8003726556a3b25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126324"
 ---
 # <a name="column-wise-binding"></a>資料行取向的繫結
 當使用資料行取向的繫結，應用程式繫結一或兩個，或在某些情況下的三個陣列傳回資料的每個資料行。 第一個陣列保存資料值，而第二個陣列包含長度/指標緩衝區。 指標和長度的值可以儲存在個別的緩衝區的 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 的描述項欄位設為不同的值;如果這麼做，會繫結的第三個陣列。 每個陣列包含資料列集內有資料列的項目數。  

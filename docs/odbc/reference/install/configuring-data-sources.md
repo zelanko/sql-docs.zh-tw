@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 865534b607e8f8de0f0058f712ed12a87c50804d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198223"
 ---
 # <a name="configuring-data-sources"></a>設定資料來源
 資料來源的相關資訊會儲存在系統登錄中。 使用者修改資料來源資訊，透過管理程式。 這可以是 ODBC 管理員、 ODBC 控制台裝置或應用程式或驅動程式的開發人員所撰寫的系統管理 程式。  

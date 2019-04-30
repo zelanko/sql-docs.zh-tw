@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 988a091fa7d536386cadd2ed3412213a2e608564
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63052884"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>第 1 課：建立新的表格式模型專案
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在這一課，您將在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中建立新的空白表格式模型專案。 建立新專案之後，您就可以使用 [資料表匯入精靈] 開始加入資料。 這一課也可讓您撰寫環境，在 SSDT 中的表格式模型的簡介。  
   
-完成本課程的估計時間：**10 分鐘**  
+估計的時間才能完成這一課：**10 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 本主題是表格式模型撰寫教學課程的第一課。 若要完成這一課，您必須使用 SQL Server 執行個體上安裝 AdventureWorksDW 範例資料庫。 若要進一步了解，請參閱[表格式模型化&#40;Adventure Works 教學課程&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)。  

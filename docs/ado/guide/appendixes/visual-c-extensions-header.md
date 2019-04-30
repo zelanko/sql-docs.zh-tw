@@ -1,5 +1,5 @@
 ---
-title: Visual c + + 延伸模組標頭 |Microsoft Docs
+title: 視覺化C++延伸模組標頭 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b9e9d744955faa41b771834095a6cc51233af4bd
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217665"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++ Extensions 標題
 下列標頭中， **icrsint.h**，允許擷取欄位的用戶端的介面將詳細說明**資料錄集**為衍生自的類別中定義的變數**CADORecordBinding**. 您必須指定您想要存取每個欄位的 ADO 繫結巨集。  
@@ -209,5 +209,5 @@ public:
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Visual c + + 延伸模組範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
+ [視覺化C++延伸模組範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [使用 Visual C++ Extensions](../../../ado/guide/appendixes/using-visual-c-extensions.md)

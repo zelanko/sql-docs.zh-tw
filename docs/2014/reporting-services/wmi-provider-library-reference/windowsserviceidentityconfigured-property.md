@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e457229b44a2d3176fe6c36d825f86dd917c47b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59943565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206464"
 ---
 # <a name="windowsserviceidentityconfigured-property-wmi-msreportserverconfigurationsetting"></a>WindowsServiceIdentityConfigured 屬性 (WMI MSReportServer_ConfigurationSetting)
   傳回上次設定報表伺服器 Windows 服務執行時所使用的識別。 唯讀。  

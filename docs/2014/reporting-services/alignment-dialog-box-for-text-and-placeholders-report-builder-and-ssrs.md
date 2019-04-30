@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0663bfce435187be66889858316b5ced0573f149
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233458"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>文字和預留位置的對齊對話方塊 (報表產生器及 SSRS)
   選取 **[對齊]** 索引標籤，可以定位選取之資料格或資料區域內的值。 您只能在文字方塊中格式化個別文字的水平對齊方式。 如果您要在文字方塊上設定填補值或垂直對齊文字的方式，請使用對應的文字方塊屬性。 如需詳細資訊，請參閱 <<c0> [ 文字方塊屬性對話方塊、 對齊&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md)。</c0>  

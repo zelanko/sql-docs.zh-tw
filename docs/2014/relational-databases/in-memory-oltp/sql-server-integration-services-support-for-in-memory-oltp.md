@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ccd4469ef7bb52927213e27e72498afa961e81a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156741"
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>In-Memory OLTP 的 SQL Server Integration Services 支援
   您可以使用記憶體最佳化資料表、參考記憶體最佳化資料表的檢視，或是原生編譯預存程序作為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 封裝的來源或目的地。 您可以使用 SSIS 封裝的資料流程中的 [ADO NET 來源](../../integration-services/data-flow/ado-net-source.md)、 [OLE DB 來源](../../integration-services/data-flow/ole-db-source.md)或 [ODBC 來源](../../integration-services/data-flow/odbc-source.md) ，並且設定來源元件從記憶體最佳化資料表或檢視擷取資料，或是指定 SQL 陳述式執行原生編譯預存程序。 同樣地，您可以使用 [ADO NET 目的地](../../integration-services/data-flow/ado-net-destination.md)、 [OLE DB 目的地](../../integration-services/data-flow/ole-db-destination.md)或 [ODBC 目的地](../../integration-services/data-flow/odbc-destination.md) 將資料載入記憶體最佳化資料表或檢視，或是指定 SQL 陳述式執行原生編譯預存程序。  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bb5476902d36bd5761ebea6139bd1b7085da414b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200491"
 ---
 # <a name="visual-foxpro-odbc-driver-programmer39s-reference"></a>Visual FoxPro ODBC Driver 程式設計&#39;參考
 Visual FoxPro ODBC Driver 文件的本節包含下列主題：  

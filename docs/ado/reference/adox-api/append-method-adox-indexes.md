@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 18e9162c3c9a1b79c28ca6e0ae94f8680db0ac80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206266"
 ---
 # <a name="append-method-adox-indexes"></a>Append 方法 (ADOX Indexes)
 加入新[Index](../../../ado/reference/adox-api/index-object-adox.md)物件[索引](../../../ado/reference/adox-api/indexes-collection-adox.md)集合。  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f2860db43c5b336ce0259d721e4adccfb8ad17d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206303"
 ---
 # <a name="ado-md-code-examples-in-visual-basic"></a>Visual Basic 中的 ADO MD 程式碼範例
 下列範例會要求 Microsoft Visual Basic 版本 5.0 Service Pack 3 或 Visual Basic 6.0 版。  

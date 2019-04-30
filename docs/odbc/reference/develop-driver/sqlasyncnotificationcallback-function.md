@@ -1,5 +1,5 @@
 ---
-title: SQLAsyncNotificationCallback 函式 |Microsoft Docs
+title: SQLAsyncNotificationCallback Function | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b78764e1dccb7118d43cc967f3b03838366d6eb0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224516"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback 函式
 **合規性**  
- 版本導入： ODBC 3.8  
+ 導入的版本：ODBC 3.8  
   
- 標準相容性： 無  
+ 標準的合規性：None  
   
  **摘要**  
  **SQLAsyncNotificationCallback**可讓驅動程式管理員時驅動程式傳回 SQL_STILL_EXECUTING 之後會有一些進度，目前的非同步作業呼叫的驅動程式。 **SQLAsyncNotificationCallback**只能由驅動程式呼叫。  

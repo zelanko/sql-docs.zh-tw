@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5f3d74cad3f462d9bd8d2d57cc3b6e37c4739598
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050924"
 ---
 # <a name="spcachemiss-event-class"></a>SP:CacheMiss 事件類別
   SP:CacheMiss 事件類別指出在快取中找不到程序。 若經常發生 SP:CacheMiss 事件類別，可能表示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要更多的可用記憶體，以便增加程序快取的大小。  

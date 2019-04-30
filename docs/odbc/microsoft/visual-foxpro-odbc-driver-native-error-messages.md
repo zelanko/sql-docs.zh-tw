@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 661752a55b808b010f8a111bcc18e47048a3999b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065105"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Visual FoxPro ODBC Driver 原生錯誤訊息
 下表列出 Visual FoxPro ODBC Driver 的原生的錯誤訊息。  
@@ -167,7 +167,7 @@ ms.locfileid: "47677236"
 |492|指定的 update 資料表沒有索引鍵資料行\\*值*\\。 使用資料指標的 KeyFieldList 屬性。|  
 |493|遺漏 SQL 參數。|  
 |494|檢視定義已變更。|  
-|495|警告： 資料表 KeyField 屬性所定義的金鑰*值*不是唯一的。|  
+|495|警告：KeyField 屬性資料表所定義的索引鍵*值*不是唯一的。|  
 |498|SQL SELECT 陳述式無效。|  
 |499|SQL 參數*值*無效。|  
   
@@ -280,7 +280,7 @@ ms.locfileid: "47677236"
   
 |||  
 |-|-|  
-|802|SQL： 找不到資料表。|  
+|802|SQL:找不到資料表。|  
 |872|太多的資料行。|  
 |879|沒有主索引鍵。|  
 |884|索引的唯一性*值*違反了。|  
@@ -297,7 +297,7 @@ ms.locfileid: "47677236"
 |902|運算式評估工具失敗。|  
 |903|字串太長而無法容納。|  
 |904|* * 或 ^ 網域時發生錯誤。|  
-|905|Log （）： 零或負值做為引數。|  
+|905|LOG （):零或負值做為引數。|  
 |906|Sqrt （） 的引數不可為負數。|  
 |912|作業的一般欄位無效。|  
 |914|字碼頁編號無效。|  

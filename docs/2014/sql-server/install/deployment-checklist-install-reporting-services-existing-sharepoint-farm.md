@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 27e6b4a1fb9726496ac4ae99a08b2e47a9136562
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195213"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>部署檢查清單：將 Reporting Services 安裝至現有的 SharePoint 伺服器陣列
   您可以將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 報表伺服器安裝至新的 SharePoint 伺服器陣列中，或安裝至現有的 SharePoint 伺服器陣列中。 此主題描述將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝至現有 SharePoint 伺服器陣列中的可能案例和最佳作法。  
@@ -29,7 +29,7 @@ ms.locfileid: "52399661"
 |建立或識別報表伺服器部署中使用的帳戶。 您必須擁有報表伺服器服務的服務帳戶，以及連接到報表伺服器資料庫的認證||  
 |決定主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 您可以使用本機或遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 您所選擇之執行個體所在的電腦上，應有足以容納您報表的儲存容量。||  
 |(選擇性) 如果您想要在訂閱中使用報表伺服器電子郵件，請尋找會對組織提供電子郵件服務之 SMTP 伺服器或閘道的名稱|[為電子郵件傳遞設定報表伺服器&#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)|  
-|注意：如果您從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 先前的 CTP 版本升級電腦，並對組態檔進行了自訂變更，則需要在升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之後，對組態檔進行相同的變更。 受影響的檔案都**web.config**並**client.config**。||  
+|注意:如果您要從先前的 CTP 版本升級電腦[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和您的組態檔進行了自訂變更，您必須進行相同變更組態檔，以遵循升級至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 受影響的檔案都**web.config**並**client.config**。||  
   
 ## <a name="installation-scenarios"></a>安裝案例  
  下表說明將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝至現有 SharePoint 伺服器陣列中的可能案例。 本機模式可讓您從 SharePoint 文件庫本機轉譯報表，而不需要與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器整合。 需要 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集，但不需要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器。 如需本機模式的詳細資訊，請參閱[本機模式與連線模式報表 [報表檢視器] &#40;Reporting Services SharePoint 模式&#41;](../../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)並[哪裡可以找到的 Reporting Services 增益集適用於 SharePoint 產品](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  

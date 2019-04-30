@@ -1,5 +1,5 @@
 ---
-title: ADCPROP_ASYNCTHREADPRIORITY_ENUM |Microsoft Docs
+title: ADCPROP_ASYNCTHREADPRIORITY_ENUM | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c0b9d4e0e6f844ef2dda18e95aadfcf3b910995d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065298"
 ---
 # <a name="adcpropasyncthreadpriorityenum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
 對於使用 RDS[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件時，指定擷取資料的非同步執行緒的執行優先權。  

@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43083d569ca8f06571ce52445b2a2d9c2bb6178e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047852"
 ---
 # <a name="sysdmoshosts-transact-sql"></a>sys.dm_os_hosts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,8 +59,8 @@ ms.locfileid: "47837926"
   
 |來源|若要|關聯性|  
 |----------|--------|------------------|  
-|sys.dm_os_hosts.  default_memory_clerk_address|sys.dm_os_memory_clerks. memory_clerk_address|一對一|  
-|sys.dm_os_hosts.  host_address|sys.dm_os_memory_clerks. host_address|一對一|  
+|sys.dm_os_hosts. default_memory_clerk_address|sys.dm_os_memory_clerks. memory_clerk_address|一對一|  
+|sys.dm_os_hosts. host_address|sys.dm_os_memory_clerks. host_address|一對一|  
   
 ## <a name="examples"></a>範例  
  下列範例會判斷由主控元件認可的記憶體總數。  
@@ -79,7 +79,7 @@ GROUP BY h.type;
   
 ## <a name="see-also"></a>另請參閱  
 
- [sys.dm_os_memory_clerks &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
+ [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
  [SQL Server 作業系統相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

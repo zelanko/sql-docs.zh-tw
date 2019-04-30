@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: e25c975dca01ee2787a598afbe1a67f09fbab0ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065757"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字元格式匯入或匯出資料 (SQL Server)
   若要將資料大量匯出到用於其他程式的文字檔，或是要從其他程式產生的文字檔大量匯入資料，建議您使用字元格式。  
@@ -42,7 +42,7 @@ ms.locfileid: "48078438"
   
 -   若要避免在轉換期間遺失擴充字元，請使用 Unicode 字元格式，或指定字碼頁。  
   
--   所有儲存在字元格式檔案中的 `sql_variant` 資料，會在沒有中繼資料的情況下儲存。 每個資料值會轉換成`char`格式，根據隱含資料轉換的規則。 匯入至 `sql_variant` 資料行時，資料會以 `char` 格式匯入。 當匯入資料行資料類型以外`sql_variant`，資料會從轉換`char`使用隱含轉換。 如需資料轉換的詳細資訊，請參閱[資料類型轉換 &#40;Database Engine&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)。  
+-   所有儲存在字元格式檔案中的 `sql_variant` 資料，會在沒有中繼資料的情況下儲存。 每個資料值會根據隱含資料轉換的規則，轉換成 `char` 格式。 匯入至 `sql_variant` 資料行時，資料會以 `char` 格式匯入。 要匯入的資料行如果不是採用 `sql_variant` 資料類型，則會使用隱含轉換將資料從 `char` 轉換過來。 如需資料轉換的詳細資訊，請參閱[資料類型轉換 &#40;Database Engine&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)。  
   
 -   **Bcp**公用程式匯出`money`有四個位數小數點之後、 但沒有任何數字分位符號，例如逗點分隔符號字元格式資料檔的值。 例如，`money` 資料行包含的值 1,234,567.123456，會採用 1234567.1235 的字元字串，大量匯出到資料檔。  
   
@@ -97,7 +97,7 @@ SELECT Col1,Col2,Col3 FROM myTestCharData
 |限定詞|描述|  
 |----------------|-----------------|  
 |**-c**|指定字元格式。|  
-|**-t** `,`|指定逗號 (`,`) 作為欄位結束字元。<br /><br /> 注意：預設的欄位結束字元是定位字元 (\t)。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)。|  
+|**-t** `,`|指定逗號 (`,`) 作為欄位結束字元。<br /><br /> 注意:預設欄位結束字元是定位字元 (\t)。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)。|  
 |**-T**|指定 **bcp** 公用程式使用整合式安全性的信任連接，連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，則必須指定 **-U** 與 **-P** ，才能順利登入。|  
   
  下列範例會將字元格式的資料，從 `myTestCharData` 資料表大量匯出至名為 `myTestCharData-c.Dat` 的新資料檔，並使用逗號 (,) 做為欄位結束字元。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 命令提示字元中，輸入：  

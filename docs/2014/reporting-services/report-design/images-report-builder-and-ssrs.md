@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8b8a9b295df0cfa4d49e0964a6d6c83e62fefb8e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224991"
 ---
 # <a name="images-report-builder-and-ssrs"></a>影像 (報表產生器及 SSRS)
   影像是一種報表項目，其中包含了內嵌在報表中、儲存在資料庫中、儲存在報表伺服器上或儲存在網路上其他位置之影像的參考。 影像可能是一個隨資料列數重複顯示的圖片。 您也可以將影像當做某些報表項目的背景。  

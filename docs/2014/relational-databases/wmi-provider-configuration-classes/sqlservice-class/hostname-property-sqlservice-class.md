@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c27c0e32953833a8b7438501d1d42a617cae2cc0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061868"
 ---
 # <a name="hostname-property-sqlservice-class"></a>HostName 屬性 (SqlService 類別)
   取得服務的主機名稱。  

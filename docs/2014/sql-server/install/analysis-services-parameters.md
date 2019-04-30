@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d2bfcd8f6cd5f4bf6dcfab196978f43fbb53536
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215057"
 ---
 # <a name="analysis-services-parameters"></a>Analysis Services 參數
   若要分析[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，您必須指定的執行個體[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，並提供有關如何連接至該執行個體的資訊。  

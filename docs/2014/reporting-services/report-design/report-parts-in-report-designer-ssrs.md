@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 70a4cdef25a096f4ff0514f169839df482e9f4b3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215387"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>報表設計師中的報表組件 (SSRS)
   在報表設計師中，建立專案的資料表、圖表及其他報表項目之後，您可以將它們當做 *「報表組件」* (Report part) 發行至報表伺服器或與報表伺服器整合的 SharePoint 網站，以供您和其他人員在其他報表中重複使用這些組件。  

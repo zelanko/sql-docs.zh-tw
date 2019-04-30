@@ -1,5 +1,5 @@
 ---
-title: 工作 8:建立複合定義域規則 |Microsoft Docs
+title: 工作 8：建立複合定義域規則 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: douglaslms
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c17508b14ba8352e8dd17e2e0c1322c0c1856ed6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217790"
 ---
-# <a name="task-8-creating-a-composite-domain-rule"></a>工作 8:建立複合定義域規則
+# <a name="task-8-creating-a-composite-domain-rule"></a>工作 8：建立複合定義域規則
   在這個工作中，您建立的規則**地址驗證**複合定義域。 您會定義跨定義域規則： 如果**城市**是**Los Angeles**，**狀態**必須是**CA**其中**縣 （市)** 並**狀態**是兩個網域。  
   
 1.  在右窗格中，切換至**CD 規則** 索引標籤。  

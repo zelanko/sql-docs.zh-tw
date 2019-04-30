@@ -34,11 +34,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8c890bb596c83c75330165ae1105f97df83ef69b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060289"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 插入資料 (SQLXML 4.0)
   當記錄執行個體中出現時，updategram 代表插入作業**\<之後 >** 區塊但不是在對應**\<之前 >** 區塊。 在此情況下，updategram 會插入在資料錄**\<之後 >** 區塊至資料庫。  
@@ -64,7 +64,7 @@ ms.locfileid: "53365850"
 </ROOT>  
 ```  
   
-## <a name="before-block"></a>\<之前 > 區塊  
+## <a name="before-block"></a>\<before> Block  
  **\<之前 >** 區塊，則可以省略插入作業。 如果選擇性`mapping-schema`未指定屬性，則**\<項目名稱 >** ，則 updategram 會對應至資料庫資料表和子元素中指定，或屬性對應到資料表中的資料行。  
   
 ## <a name="after-block"></a>\<之後 > 區塊  

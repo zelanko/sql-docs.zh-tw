@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 194a90482946814995ca1963f7c8fc4bce48d223
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126361"
 ---
 # <a name="committing-and-rolling-back-transactions"></a>認可及回復交易
 若要認可或回復交易在手動認可模式下，應用程式會呼叫**SQLEndTran**。 通常支援交易的 Dbms 的驅動程式來實作此函式執行**認可**或是**ROLLBACK**陳述式。 驅動程式管理員不會呼叫**SQLEndTran**時連接處於自動認可模式，它只會傳回 SQL_SUCCESS，即使應用程式會嘗試回復交易。 因為不支援交易的 Dbms 的驅動程式永遠會在自動認可模式下，它們可以實作**SQLEndTran**傳回 SQL_SUCCESS，而不會執行任何動作，或未實作。  

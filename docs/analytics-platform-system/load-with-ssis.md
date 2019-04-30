@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213377"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>使用平行處理資料倉儲的 Integration Services 載入資料
 提供使用 SQL Server Integration Services (SSIS) 封裝將資料載入 SQL Server Parallel Data Warehouse 的參考和部署資訊。  
@@ -151,7 +151,7 @@ For the maximum number of loads and queued loads per appliance, see [Minimum and
   
 ## <a name="Examples"></a>範例  
   
-### <a name="Walkthrough"></a>A。 簡單的負載，從一般檔案  
+### <a name="Walkthrough"></a>A. 簡單的負載，從一般檔案  
 下列逐步解說會示範簡單的資料負載，使用 載入至 SQL Server PDW 應用裝置的一般檔案資料 Integration Services。  這個範例將假設用戶端機器上的 Integration Services 已經安裝，而且已安裝 SQL Server PDW 目的地，如上面所述。  
   
 在此範例中，我們會載入到`Orders`有下列 DDL 的資料表。 `Orders`資料表會是一部分`LoadExampleDB`資料庫。  
@@ -218,9 +218,9 @@ id,city,lastUpdateDate,orderDate
   
 5.  填寫您的應用裝置的特定資訊的伺服器、 使用者、 密碼和目的地資料庫的資訊。 （範例如下所示）。 然後按一下 [確定]。  
   
-    InfiniBand 連線**伺服器名稱**： 輸入 < 設備名稱 >-SQLCTL01，接著 17001。  
+    InfiniBand 連線**伺服器名稱**:輸入 < 設備名稱 >-SQLCTL01，接著 17001。  
   
-    為乙太網路連線**伺服器名稱**： 輸入的控制節點的叢集、 逗點和連接埠接著 17001 的 IP 位址。 比方說，10.192.63.134,17001。  
+    為乙太網路連線**伺服器名稱**:輸入控制節點的叢集、 逗點和連接埠接著 17001 的 IP 位址。 比方說，10.192.63.134,17001。  
   
     **使用者：**`user1`  
   
@@ -250,11 +250,11 @@ id,city,lastUpdateDate,orderDate
 [建立指令碼工作使用 SSIS PDW 目的地配接器](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
 [設計和實作封裝 (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
-[教學課程： 建立基本封裝，使用精靈](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
+[教學課程：建立基本封裝，使用精靈](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [開始使用 (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
 [動態封裝產生範例](https://go.microsoft.com/fwlink/?LinkId=202413)  
 [設計您的 SSIS 套件的平行處理原則 （SQL Server 影片）](https://msdn.microsoft.com/library/dd795221.aspx)  
-[Microsoft SQL Server 社群範例： Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
+[Microsoft SQL Server 社群範例：Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [與異動資料擷取改善累加式載入](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [緩時變維度轉換](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
 [大量插入工作](../integration-services/control-flow/bulk-insert-task.md)  

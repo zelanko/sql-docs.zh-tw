@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 336eae5accaf5fabed542012bbb4e5b6145a02c5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164675"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>轉譯延伸模組的裝置資訊設定 (Reporting Services)
   在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，裝置資訊設定會用於將轉譯參數傳遞給轉譯延伸模組。 每一個轉譯延伸模組都會接受一組特定的設定。  

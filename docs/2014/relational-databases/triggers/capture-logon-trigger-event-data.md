@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e9ee204d55114b7e31a9a9550d86cae3baa4dffc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130362"
 ---
 # <a name="capture-logon-trigger-event-data"></a>擷取登入觸發程序事件資料
   若要擷取有關 LOGON 事件的 XML 資料，以用於登入觸發程序內部，請使用 [EVENTDATA](/sql/t-sql/functions/eventdata-transact-sql) 函式。 LOGON 事件會傳回下列事件資料結構描述：  

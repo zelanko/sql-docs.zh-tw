@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 85df40b07542e1af144796d4e8b5f9fb33cdc7c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065752"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>使用 Unicode 字元格式匯入或匯出資料 (SQL Server)
   使用含有擴充/DBCS 字元的資料檔在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間大量傳送資料時，建議使用 Unicode 字元格式。 Unicode 字元資料格式可允許從伺服器匯出資料時所使用的字碼頁，與執行作業之用戶端所使用的字碼頁不同。 在此情況下，使用 Unicode 字元格式具有下列優點：  
@@ -32,7 +32,7 @@ ms.locfileid: "48191768"
 > [!IMPORTANT]  
 >  如果格式檔案要與 Unicode 字元資料檔案搭配使用，則所有的輸入欄位都必須是 Unicode 文字字串 (也就是固定大小或以字元結束的 Unicode 字串)。  
   
- `sql_variant`相同的方式，其運作方式在字元格式資料檔中，不同之處在於資料會儲存為作業的資料儲存在 Unicode 字元格式資料檔`nchar`而不是`char`資料。 如需詳細資訊，請參閱 [定序和 Unicode 支援](../collations/collation-and-unicode-support.md)。  
+ 儲存在 Unicode 字元格式資料檔的 `sql_variant` 資料，其操作方式和在字元格式資料檔中相同，不同之處在於資料是儲存為 `nchar`，而非 `char` 資料。 如需詳細資訊，請參閱 [定序和 Unicode 支援](../collations/collation-and-unicode-support.md)。  
   
  若要使用 Unicode 字元格式預設值以外的欄位或資料列結束字元，請參閱[指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)。  
   
@@ -84,7 +84,7 @@ SELECT Col1,Col2,Col3 FROM myTestUniCharData;
 |限定詞|描述|  
 |----------------|-----------------|  
 |**-w**|指定 Unicode 字元格式。|  
-|**-t** `,`|指定逗號 (`,`) 作為欄位結束字元。<br /><br /> 附註： 預設的欄位結束字元是 tab 鍵 Unicode 字元 (\t)。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)。|  
+|**-t** `,`|指定逗號 (`,`) 作為欄位結束字元。<br /><br /> 注意:預設欄位結束字元是 tab 鍵 Unicode 字元 (\t)。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)。|  
 |**-T**|指定 **bcp** 公用程式使用整合式安全性的信任連接，連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T**，則必須指定 **-U** 與 **-P**，才能順利登入。|  
   
  下列範例會將 Unicode 字元格式的資料，從 `myTestUniCharData` 資料表大量匯出到名為 `myTestUniCharData-w.Dat` 的新資料檔，並使用逗號 (`,`) 做為欄位結束字元。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 命令提示字元中，輸入：  

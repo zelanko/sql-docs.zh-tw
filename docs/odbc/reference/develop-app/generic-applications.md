@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 59110f66c512845ff5ce1f2f246c05c63fa755b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061496"
 ---
 # <a name="generic-applications"></a>泛型應用程式
 一般應用程式有時會執行硬式編碼工作，例如從資料庫擷取資料的試算表。 它們可能也會執行各種不同的使用者定義的工作，例如允許使用者輸入並執行 SQL 陳述式的一般查詢應用程式。 什麼一般的應用程式的共通是它們必須使用各種不同的 Dbms 和，開發人員不事前不知道這些 Dbms 會有什麼。  

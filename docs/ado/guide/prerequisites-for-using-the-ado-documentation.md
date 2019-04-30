@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d778f2e005003a0ab3cb50b6a25823c2d711441f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222000"
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>使用 ADO 文件的必要條件
-若要使用這份文件，您應該有，最少，因為大部分的指南中的範例以這個語言開發應用程式使用 Microsoft Visual Basic 中，一些經驗。 也有 Microsoft Visual c + +、 Java、 Visual Basic Scripting Edition (VBScript) 和 Microsoft JScript 撰寫的一些範例。  
+若要使用這份文件，您應該有，最少，因為大部分的指南中的範例以這個語言開發應用程式使用 Microsoft Visual Basic 中，一些經驗。 另外還有以 Microsoft Visual 撰寫一些範例C++、 Java、 Visual Basic Scripting Edition (VBScript) 和 Microsoft JScript。  
   
  因為 ADO 用來從各種來源存取資料，您還需要一些了解的關聯式資料庫管理系統和線上分析處理 (OLAP) 和基本的熟悉網際網路及網際網路通訊協定。  
   

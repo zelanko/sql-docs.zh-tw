@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10aa1c7132126dd705986a55d5dc02d78a5263ef
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188429"
 ---
 # <a name="model-item-security-page-report-manager"></a>模型項目安全性頁面 (報表管理員)
   您可以使用這個頁面，透過授與或撤銷特定項目的唯讀權限，保護模型的各部分。 模型項目安全性會影響執行階段的特定資料瀏覽，以及在報表產生器中建立報表時使用已發行模型之各部分的能力。 若要使用這項功能，您必須擁有「內容管理員」權限。  

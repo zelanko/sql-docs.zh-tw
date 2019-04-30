@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c12692a6ebd1467148b52f993a77043ff495d43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161770"
 ---
 # <a name="editing-data"></a>編輯資料
 我們已說明如何使用 ADO 連接到資料來源執行命令，取得中的結果**Recordset**物件，並瀏覽**資料錄集**。 本節著重於下一個基本的 ADO 作業： 編輯資料。  

@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 96e28a50e58693bbb297bd1e80335482cdd9e82b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213270"
 ---
 # <a name="executing-statements-odbc"></a>執行陳述式 ODBC
 ODBC 應用程式執行的 SQL 陳述式執行幾乎所有資料庫存取權。 一般事件序列是配置陳述式控制代碼、 設定任何陳述式屬性、 執行陳述式、 擷取任何結果，並釋放陳述式控制代碼。  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 77b858cdee3940bb797ab2bfa3929ae09ed807e6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204573"
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>發生 SQL 語法錯誤對話方塊 (Visual Database Tools)
   這個對話方塊會通知您，設計工具無法在 [SQL] 窗格中剖析 SQL 陳述式。  

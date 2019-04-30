@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 433f5d279e638e3ccdf7ba3a7bb2590f80b04a6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062366"
 ---
 # <a name="requery-method"></a>Requery 方法
 更新中的資料[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)重新執行查詢所依據之物件的物件。  
@@ -35,7 +35,7 @@ recordset.Requery Options
 ```  
   
 #### <a name="parameters"></a>參數  
- *選項*  
+ *選項。*  
  選擇性。 包含的位元遮罩[的執行方式](../../../ado/reference/ado-api/executeoptionenum.md)並[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)會影響這項作業的值。  
   
 > [!NOTE]

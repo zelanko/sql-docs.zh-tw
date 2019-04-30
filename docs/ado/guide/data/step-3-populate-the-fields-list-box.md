@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1aecb94fd7367b12ed2c1aaca06ffe26f586e604
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062774"
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>步驟 3：填入 [欄位] 清單方塊
 若要填入的欄位 清單方塊中，插入下列程式碼的 Click 事件處理常式`lstMain`:  
@@ -59,5 +59,5 @@ End Sub
   
 ## <a name="see-also"></a>另請參閱  
  [網際網路發佈案例](../../../ado/guide/data/internet-publishing-scenario.md)   
- [步驟 2:初始化 [主要] 清單方塊](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
- [步驟 4:填入詳細資料 文字方塊](../../../ado/guide/data/step-4-populate-the-details-text-box.md)
+ [步驟 2：初始化 [主要] 清單方塊](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
+ [步驟 4：填入詳細資料 文字方塊](../../../ado/guide/data/step-4-populate-the-details-text-box.md)

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2a52573ce455fc19b776143ce009c5fc89ef9523
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200462"
 ---
 # <a name="product-support"></a>產品支援
 ODBC 的產品支援是由 Microsoft 產品支援服務提供。 由於許多 Microsoft 產品使用 ODBC 的核心元件，而且也轉散發 ODBC 驅動程式，Microsoft 產品支援服務會考慮每項產品，其中包含 ODBC 做為元件的一部分的 ODBC。 支援對 ODBC 提供依照該產品的支援合約。 請參閱個別的產品文件，如需詳細資訊。

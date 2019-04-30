@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0979892b6770b9a9c2d0d9c4e8a0d734d873c085
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062186"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>資料列集和參數中的資料類型對應
   在資料列集和參數值， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者代表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用下列的 OLE DB 資料定義資料類型，函數中報告**icolumnsinfo:: Getcolumninfo**並**Icommandwithparameters:: Getparameterinfo**。  
@@ -89,7 +89,7 @@ ms.locfileid: "52766040"
   
 |||  
 |-|-|  
-|SSPROP_ALLOWNATIVEVARIANT|類型：VT_BOOL<br /><br /> R/W：讀取/寫入<br /><br /> 預設：VARIANT_FALSE<br /><br /> 描述：判斷是否為 DBTYPE_VARIANT 或 DBTYPE_SQLVARIANT 提取的資料。<br /><br /> VARIANT_TRUE：資料行類型會傳回為 DBTYPE_SQLVARIANT，在此案例的緩衝區會保存 SSVARIANT 結構。<br /><br /> VARIANT_FALSE：資料行類型以 DBTYPE_VARIANT 傳回，緩衝區將具有 VARIANT 結構。|  
+|SSPROP_ALLOWNATIVEVARIANT|類型：VT_BOOL<br /><br /> R/W:讀取/寫入<br /><br /> 預設：VARIANT_FALSE<br /><br /> 描述：判斷是否為 DBTYPE_VARIANT 或 DBTYPE_SQLVARIANT 提取的資料。<br /><br /> VARIANT_TRUE:資料行類型會傳回為 DBTYPE_SQLVARIANT，在此案例的緩衝區會保存 SSVARIANT 結構。<br /><br /> VARIANT_FALSE:資料行類型以 DBTYPE_VARIANT 傳回，緩衝區將具有 VARIANT 結構。|  
   
 ## <a name="see-also"></a>另請參閱  
  [資料型別&#40;OLE DB&#41;](data-types-ole-db.md)  

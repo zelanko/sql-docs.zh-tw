@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 798f986adfeda95ef091161458d94c2ccc33b2e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125526"
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>SQLSetConnectAttrForDbcInfo 函式
 **合規性**  
- 版本導入： ODBC 3.81 標準相容性： ODBC  
+ 導入的版本：ODBC 3.81 標準合規性：ODBC  
   
  **摘要**  
  **SQLSetConnectAttrForDbcInfo**等同**SQLSetConnectAttr**，但它的連線資訊語彙基元而不是在連接控制代碼上設定的屬性。  

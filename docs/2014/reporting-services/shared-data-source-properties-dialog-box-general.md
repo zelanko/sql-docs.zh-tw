@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3936047c89a76181710fa3bba04cc20b95ef70b9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222959"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>共用資料來源屬性對話方塊、一般
   使用 [共用資料來源屬性] 對話方塊，即可在報表中顯示和修改共用資料來源的連接資訊。  

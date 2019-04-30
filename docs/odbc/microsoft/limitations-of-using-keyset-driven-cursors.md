@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3c4910ebd2c6dd988e937f1e9d6a3281bb0e9741
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192328"
 ---
 # <a name="limitations-of-using-keyset-driven-cursors"></a>使用索引鍵集驅動資料指標的限制
 > [!IMPORTANT]  
@@ -30,4 +30,4 @@ ms.locfileid: "47668106"
  此外，如果您的應用程式會使用資料表別名，索引鍵集驅動資料指標將無法運作;順向或靜態資料指標類型所需。 使用索引鍵集資料指標類型，以資料表別名會導致下列錯誤: 「 [Microsoft] [ODBC driver for Oracle] 無法使用索引鍵集驅動資料指標聯結與 union、 intersect 或減去或唯讀結果集。 」  
   
 > [!NOTE]  
->  由於驅動程式會處理傳送到 Oracle 伺服器的 SQL 陳述式的方式，Oracle 內部傳回下列錯誤訊息: 「 ORA 00964： 資料表名稱不在清單中。 」
+>  由於驅動程式會處理傳送到 Oracle 伺服器的 SQL 陳述式的方式，Oracle 在內部會傳回下列錯誤訊息：「 ORA 00964： 資料表名稱不在清單中。 」

@@ -1,5 +1,5 @@
 ---
-title: TM:Commit Tran Starting 事件類別 |Microsoft Docs
+title: TM：Commit Tran Starting 事件類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53d8731ff9d5ef2484b652fc1c7c673ba9b3984
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061348"
 ---
-# <a name="tm-commit-tran-starting-event-class"></a>TM:Commit Tran Starting 事件類別
+# <a name="tm-commit-tran-starting-event-class"></a>TM：Commit Tran Starting 事件類別
   TM:Commit Tran Starting 事件類別指出正在啟動 COMMIT TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。 EventSubClass 資料行指出在認可目前交易之後，是否會啟動新交易。  
   
-## <a name="tm-commit-tran-starting-event-class-data-columns"></a>TM:Commit Tran Starting 事件類別資料行  
+## <a name="tm-commit-tran-starting-event-class-data-columns"></a>TM：Commit Tran Starting 事件類別資料行  
   
 |資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  

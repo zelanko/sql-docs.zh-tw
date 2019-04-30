@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164050"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>探索時序群集模型 (中繼資料採礦教學課程)
   既然您已建立**Sequence Clustering with Region**模型，您可以使用瀏覽它[!INCLUDE[msCoName](../includes/msconame-md.md)]中的時序叢集檢視器**採礦模型檢視器**資料採礦設計師 索引標籤。 [!INCLUDE[msCoName](../includes/msconame-md.md)]時序叢集檢視器包含五個索引標籤：**叢集圖表**，**叢集設定檔**，**群集特性**， **ClusterDiscrimination**，以及**狀態轉換**. 如需如何使用這個檢視器的詳細資訊，請參閱[瀏覽模型，使用 Microsoft 時序叢集檢視器](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)。  
@@ -149,7 +149,7 @@ ms.locfileid: "56024992"
   
 4.  轉換資料列包含的文字轉換中**變數**直條圖和循序屬性值中的一些組合**值**資料行。 此序列也可包含起點和遺漏的值。  
   
-     例如，假設轉換的值為 [Start] -> Road Tire Tube。 這表示此群集中的客戶經常會將 Road Tire Tube 先放在他們的購物籃中。 這可能表示，此產品是客戶會先尋找的熱賣商品，或者可能只表示，此產品很容易在購買網站上找到。  
+     例如，假設轉換的值，[開始]-> Road Tire Tube。 這表示此群集中的客戶經常會將 Road Tire Tube 先放在他們的購物籃中。 這可能表示，此產品是客戶會先尋找的熱賣商品，或者可能只表示，此產品很容易在購買網站上找到。  
   
 5.  捲動清單，直到您找到第一個轉換，並沒有 **[開始]** 或是**遺漏**裡面。  
   
@@ -223,7 +223,7 @@ ms.locfileid: "56024992"
   
 8.  按一下 Touring Tire 的節點，並將滑動軸控制項往下移回中間位置。  
   
-     在一開始，有許多轉換線連接 Touring Tire 和其他產品，但是當您提高機率臨界值時，從圖表中移除轉換的可能性就越低，只留下 Touring Tire > Touring Tire Tube 轉換。 這個轉換表示，如果某位客戶將 Touring Tire 放入購物籃，則該客戶接著將 Touring Tire Tube 也放入購物籃的機率很高。  
+     一開始，有許多轉換線連接 Touring tire 和其他產品，但比較不可能轉換時您提高機率臨界值時，會刪除從圖形，讓剛轉換 Touring Tire > Touring Tire Tube。 這個轉換表示，如果某位客戶將 Touring Tire 放入購物籃，則該客戶接著將 Touring Tire Tube 也放入購物籃的機率很高。  
   
  [回到頁首](#bkmk_CDiagram)  
   

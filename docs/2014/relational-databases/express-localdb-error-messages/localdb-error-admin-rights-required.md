@@ -1,5 +1,5 @@
 ---
-title: LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED |Microsoft Docs
+title: LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69907816ca0cfc95eb567af869980d1ae318ce1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061927"
 ---
 # <a name="localdberroradminrightsrequired"></a>LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED
     

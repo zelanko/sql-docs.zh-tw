@@ -1,5 +1,5 @@
 ---
-title: ObjectStateEnum |Microsoft Docs
+title: ObjectStateEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 560e95bdafe3f5bbae82b200d8f7db0dcb121911
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217718"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 指定物件是否為開啟或關閉、 連接到資料來源，執行命令，或擷取資料。  

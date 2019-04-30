@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 914bd4759552680a57c345dc3a7c3bc1bcc103a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188503"
 ---
 # <a name="procedure-call-escape-sequence"></a>程序呼叫逸出序列
 ODBC 會將逸出序列用於程序呼叫。 此逸出序列的語法如下所示：  
@@ -29,15 +29,15 @@ ODBC 會將逸出序列用於程序呼叫。 此逸出序列的語法如下所�
   
  在 backus-naur form，BNF 標記法中，語法如下所示：  
   
- *ODBC 程序逸出*:: =  
+ *ODBC-procedure-escape* ::=  
   
  &#124;*ODBC-esc-啟動器*[？ =] 呼叫*程序 ODBC esc 鍵結束字元*  
   
- *程序*:: =*程序名稱* &#124; *程序名稱*(*程序參數清單*)  
+ *procedure* ::= *procedure-name* &#124; *procedure-name* (*procedure-parameter-list*)  
   
- *程序識別項*:: =*使用者定義名稱*  
+ *procedure-identifier* ::= *user-defined-name*  
   
- *程序名稱*:: =*程序識別項*  
+ *procedure-name* ::= *procedure-identifier*  
   
  &#124;*擁有者名稱*。*程序識別項*  
   
@@ -47,25 +47,25 @@ ODBC 會將逸出序列用於程序呼叫。 此逸出序列的語法如下所�
   
  （第三個的語法是資料來源不支援擁有者時，才有效）。  
   
- *擁有者名稱*:: =*使用者定義名稱*  
+ *owner-name* ::= *user-defined-name*  
   
- *目錄名稱*:: =*使用者定義名稱*  
+ *catalog-name* ::= *user-defined-name*  
   
- *目錄分隔符號*:: = {*實作定義*}  
+ *catalog-separator* ::= {*implementation-defined*}  
   
  (經由傳回的目錄分隔符號**SQLGetInfo** SQL_CATALOG_NAME_SEPARATOR 資訊選項。)  
   
- *程序參數清單*:: =*程序參數*  
+ *procedure-parameter-list* ::= *procedure-parameter*  
   
- &#124;*程序參數*，*程序參數清單*  
+ &#124; *procedure-parameter*, *procedure-parameter-list*  
   
- *程序參數*:: =*動態參數* &#124; *常值* &#124; *空字串*  
+ *procedure-parameter* ::= *dynamic-parameter* &#124; *literal* &#124; *empty-string*  
   
- *空字串*:: =  
+ *empty-string* ::=  
   
- *起始 esc ODBC 端*:: = {  
+ *ODBC-esc-initiator* ::= {  
   
- *ODBC esc 鍵結束字元*:: =}  
+ *ODBC-esc-terminator* ::= }  
   
  （程序參數是否為空字串，此程序使用的預設值為該參數。）  
   

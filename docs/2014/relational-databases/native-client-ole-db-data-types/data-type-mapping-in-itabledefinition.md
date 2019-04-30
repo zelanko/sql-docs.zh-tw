@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e561742406c173b69bfb5040c2f2f51efdf5ed64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201221"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition 中的資料類型對應
   藉由建立資料表時**itabledefinition:: Createtable**函式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者取用者可以指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的資料型別*pwszTypeName*傳遞之 DBCOLUMNDESC 陣列的成員。 如果取用者依照名稱來指定資料行的資料類型，系統就會忽略 OLE DB 資料對應 (由 DBCOLUMNDESC 結構的 *wType* 成員代表)。  

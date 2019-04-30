@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4dfdb60f9a394fa4d11e9b66ffb1f4b205881293
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156294"
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand 屬性 (ADO)
 指出[命令](../../../ado/reference/ado-api/command-object-ado.md)物件建立關聯[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  

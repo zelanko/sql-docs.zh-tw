@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6ab4f714182a7433c6a8fdea2ee68d17673b710
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63066426"
 ---
 # <a name="failover-cluster-report"></a>容錯移轉叢集報表
   使用 [容錯移轉叢集報表] 頁面，即可檢視這項作業之安裝程式系統掃描的報表結果。  

@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b76b7a550211522c2b2100776b88f311abb2b932
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233342"
 ---
 # <a name="sqltransact-function"></a>SQLTransact 函式
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： 已被取代  
+ 導入的版本：ODBC 1.0 標準的合規性：已被取代  
   
  **摘要**  
  在 ODBC 3。*x*，ODBC 2 *.x*函式**SQLTransact**已被取代**SQLEndTran**。 如需詳細資訊，請參閱 < [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)。  

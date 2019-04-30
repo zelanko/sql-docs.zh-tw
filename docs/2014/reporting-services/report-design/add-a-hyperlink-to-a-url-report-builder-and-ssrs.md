@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2dae0498da8fe1387b6b082d7cc6ae37af27d464
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206940"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>將超連結加入到 URL (報表產生器及 SSRS)
   當您希望使用者能夠按一下報表中的連結，並開啟瀏覽器指向您所指定的 URL 時，可以將超連結加入到報表項目。 超連結可以是靜態 URL，或是評估為 URL 的運算式。 如果資料庫中有一個包含 URL 的欄位，運算式便能包含這個欄位，結果會在報表中產生超連結的動態清單。 您可以將超連結加入至文字方塊、影像、圖表和量測計。 您必須確定使用者可存取您提供的 URL。  

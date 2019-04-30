@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: abd354021f589260304681ebc45634e7406e538d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062446"
 ---
 # <a name="resync-method-example-vc"></a>Resync 方法範例 (VC++)
 此範例示範如何使用[Resync](../../../ado/reference/ado-api/resync-method.md)方法，以重新整理靜態的資料錄集中的資料。  

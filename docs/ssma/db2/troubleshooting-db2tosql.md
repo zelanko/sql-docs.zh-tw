@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ff0ef803274b23a54e3964ae2822dc351a3ce784
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63077260"
 ---
 # <a name="troubleshooting-db2tosql"></a>疑難排解 (DB2ToSQL)
 它不是屢見不鮮移轉問題中途島執行主控台指令碼或命令。  

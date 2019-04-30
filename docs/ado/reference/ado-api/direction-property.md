@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: df2f7cc5eadce7d4f8f61674f4915ec3b1561e02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180967"
 ---
 # <a name="direction-property"></a>Direction 屬性
 指出是否[參數](../../../ado/reference/ado-api/parameter-object.md)代表輸入的參數、 輸出參數、 輸入和一個 output 參數，或如果參數是預存程序的傳回值。  

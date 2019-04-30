@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b391c7e76ab5feeeb6e355924349a578c446c882
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63218049"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot 連接類型 (SSRS)
   您可以使用 SQL Server Analysis Services 資料處理延伸模組，從已在 SharePoint PowerPivot 圖庫中發行的 PowerPivot 活頁簿中擷取資料。  

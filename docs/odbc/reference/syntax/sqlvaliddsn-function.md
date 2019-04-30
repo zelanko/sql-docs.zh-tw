@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb490b475c5795125d11915729693eb630934eb8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233481"
 ---
 # <a name="sqlvaliddsn-function"></a>SQLValidDSN 函式
 **合規性**  

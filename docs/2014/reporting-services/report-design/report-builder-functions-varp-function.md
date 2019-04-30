@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5370eb821ed018e451fbb3f1992ccbb3df22c834
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216228"
 ---
 # <a name="varp-function-report-builder-and-ssrs"></a>VarP 函數 (報表產生器及 SSRS)
   傳回運算式指定的所有非 Null 數值的母體擴展變異數 (在給定範圍的內容中評估)。  

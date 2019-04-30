@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8e2f3b1e63578af7c0b42f00113fbb9e87cb8003
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208422"
 ---
 # <a name="paradox-data-types"></a>Paradox 資料類型
 ODBC Paradox 驅動程式會將 Paradox 資料類型對應至 ODBC SQL 資料類型。 下表列出所有 Paradox 資料類型，並顯示 ODBC SQL 資料類型，它們會對應至。  
@@ -31,19 +31,19 @@ ODBC Paradox 驅動程式會將 Paradox 資料類型對應至 ODBC SQL 資料類
 |Paradox 資料類型|ODBC 資料類型|  
 |-----------------------|--------------------|  
 |英數字元|SQL_VARCHAR|  
-|自動遞增 [1]|SQL_INTEGER|  
-|BCD [1]|SQL_DOUBLE|  
-|位元組 [1]|SQL_BINARY|  
+|AUTOINCREMENT[1]|SQL_INTEGER|  
+|BCD[1]|SQL_DOUBLE|  
+|BYTES[1]|SQL_BINARY|  
 |DATE|SQL_DATE|  
-|[2] 的影像|SQL_LONGVARBINARY|  
-|邏輯 [1]|SQL_BIT|  
-|長時間 [1]|SQL_INTEGER|  
-|附註 [2]|SQL_LONGVARCHAR|  
-|MONEY [1]|SQL_DOUBLE|  
+|IMAGE[2]|SQL_LONGVARBINARY|  
+|LOGICAL[1]|SQL_BIT|  
+|LONG[1]|SQL_INTEGER|  
+|MEMO[2]|SQL_LONGVARCHAR|  
+|MONEY[1]|SQL_DOUBLE|  
 |NUMBER|SQL_DOUBLE|  
 |簡短|SQL_SMALLINT|  
-|時間 [1]|SQL_TIMESTAMP|  
-|時間戳記 [1]|SQL_TIMESTAMP|  
+|TIME[1]|SQL_TIMESTAMP|  
+|TIMESTAMP[1]|SQL_TIMESTAMP|  
   
  [1] 只會針對 Paradox 第 5 版的有效。*x*。  
   

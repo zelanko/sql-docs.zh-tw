@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 268d5f00d787cef8dfdcb29bd9e091f81a5ed2c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125577"
 ---
 # <a name="catalog-functions"></a>目錄函式
 所有的資料庫有概述如何將資料儲存在資料庫中的結構。 例如，簡單的銷售訂單的資料庫可能顯示在下圖中，在其識別碼資料行用來連結資料表的結構。  

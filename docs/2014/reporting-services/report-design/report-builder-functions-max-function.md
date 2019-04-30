@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 78a9aa951b96354f628a8aa6fd180fbc01b186a7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215388"
 ---
 # <a name="max-function-report-builder-and-ssrs"></a>Max 函數 (報表產生器及 SSRS)
   傳回運算式指定的所有非 Null 數值的最大值 (在給定範圍的內容中)。  

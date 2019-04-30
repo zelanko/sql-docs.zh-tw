@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89be9c958cb848384a67e7eaf74cfecc72f07c35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148876"
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE 對應
-本主題會討論 ODBC 2 SQLSTATE 值。*x*和 ODBC 3。*x*。 如需有關 ODBC 3 的詳細資訊。*x* SQLSTATE 值，請參閱[附錄 a: ODBC 錯誤碼](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。  
+本主題會討論 ODBC 2 SQLSTATE 值。*x*和 ODBC 3。*x*。 如需有關 ODBC 3 的詳細資訊。*x* SQLSTATE 值，請參閱[附錄 a:ODBC 錯誤碼](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。  
   
  在 ODBC 3。*x*HYxxx Sqlstate 會傳回而不是 S1xxx，，而不是 S00XX 傳回 42Sxx Sqlstate。 這麼做是為了與 Open Group 和 ISO 標準。 在許多情況下，對應並非一對一因為標準已重新定義的數個 Sqlstate 解譯。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "47855012"
   
  當 SQL_ATTR_ODBC_VERSION 環境屬性設定為 SQL_OV_ODBC2 時，驅動程式會張貼 ODBC 2。*x*而不是 ODBC 3 的 Sqlstate。*x* Sqlstate 時**SQLGetDiagField**或是**SQLGetDiagRec**呼叫。 您會看到 ODBC 2 也可判斷特定的對應 *.x*對應到 ODBC 3 的下列資料表的資料行 1 中的 SQLSTATE。*x*資料行 2 中的 SQLSTATE。  
   
-|ODBC 2。*x* SQLSTATE|ODBC 3。*x* SQLSTATE|註解|  
+|ODBC 2.*x* SQLSTATE|ODBC 3.*x* SQLSTATE|註解|  
 |-------------------------|-------------------------|--------------|  
 |01S03|01001||  
 |01S04|01001||  
@@ -48,14 +48,14 @@ ms.locfileid: "47855012"
 |S0021|42S21||  
 |S0022|42S22||  
 |S0023|42S23||  
-|就會傳回 S1000|HY000||  
+|S1000|HY000||  
 |S1001|HY001||  
 |S1002|07009|ODBC 2。*x* SQLSTATE S1002 會對應至 ODBC 3。*x* SQLSTATE 07009 基礎函式是否**SQLBindCol**， **SQLColAttribute**， **SQLExtendedFetch**， **SQLFetch**， **SQLFetchScroll**，或**SQLGetData**。|  
 |S1003|HY003||  
 |S1004|HY004||  
 |S1008|HY008||  
 |S1009|HY009|傳回 null 指標無效地使用。|  
-|S1009|其中包含 SQLSTATE=HY024|傳回無效的屬性值。|  
+|S1009|HY024|傳回無效的屬性值。|  
 |S1009|HY092|若要呼叫所傳回的更新或刪除資料**SQLSetPos**，或新增、 更新或刪除資料，藉由呼叫**SQLBulkOperations**、 並行唯讀時。|  
 |S1010|HY007 HY010|SQLSTATE S1010 會對應至 SQLSTATE HY007 時**SQLDescribeCol**稱為才能呼叫**SQLPrepare**， **SQLExecDirect**，或目錄函式，如*StatementHandle*。 否則，SQLSTATE S1010 會對應至 SQLSTATE HY010。|  
 |S1011|HY011||  
@@ -72,7 +72,7 @@ ms.locfileid: "47855012"
 |S1101|HY101||  
 |S1103|HY103||  
 |S1104|HY104||  
-|S1105|包含 SQLSTATE=HY105||  
+|S1105|HY105||  
 |S1106|HY106||  
 |S1107|HY107||  
 |S1108|HY108||  

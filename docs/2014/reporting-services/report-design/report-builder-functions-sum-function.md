@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 814f5349e8afc9deb3e7c364f99d796f5c2665d8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215399"
 ---
 # <a name="sum-function-report-builder-and-ssrs"></a>Sum 函數 (報表產生器及 SSRS)
   傳回運算式指定之所有非 Null 數值的總和 (在給定範圍中評估)。  

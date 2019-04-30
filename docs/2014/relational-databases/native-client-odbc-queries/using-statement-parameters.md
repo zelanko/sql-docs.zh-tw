@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a16f070623503dcb17788bc75bd5695bc1584d7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200241"
 ---
 # <a name="using-statement-parameters"></a>使用陳述式參數
   參數是 SQL 陳述式內的變數，可讓 ODBC 應用程式進行以下作業：  

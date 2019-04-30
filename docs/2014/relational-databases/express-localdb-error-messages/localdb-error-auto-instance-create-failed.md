@@ -1,8 +1,8 @@
 ---
-title: LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED |Microsoft Docs
+title: LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
@@ -11,13 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cee93e798f7fd43af06bc8aae33ac6cd5f013c4c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062426"
 ---
 # <a name="localdberrorautoinstancecreatefailed"></a>LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>詳細資料  
   

@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 522c563a113bab599481821dbb5d79422126a901
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062576"
 ---
 # <a name="ado-md-properties"></a>ADO MD 屬性
 
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|指出哪一個 ado**連線**物件目前的資料格集，或目前所屬的目錄。|  
-|[Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|指出當顯示時使用的文字標題**層級**或是**成員**物件。|  
+|[標題](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|指出當顯示時使用的文字標題**層級**或是**成員**物件。|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|指出為其成員數目前**成員**物件是階層中的父系。|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|傳回的集合**成員**為其目前**成員**階層中的父系。|  
 |[計數](../../../ado/reference/ado-api/count-property-ado.md)|指出集合中的物件數目。|  

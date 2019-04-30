@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad42ea14e58e28bf5eee0e5aac66c5a8fc309f2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140124"
 ---
 # <a name="datasource-property-ado"></a>DataSource 屬性 (ADO)
 表示包含資料表示為物件[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
@@ -33,7 +33,7 @@ ms.locfileid: "47801276"
   
  參考的物件必須實作**IDataSource**介面，並必須包含**IRowset**介面。  
   
-## <a name="usage"></a>使用方式  
+## <a name="usage"></a>使用量  
   
 ```  
 Dim rs as New ADODB.Recordset  

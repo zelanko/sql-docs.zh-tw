@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 181d07e187c6b1091d38ebbe0018c61ae856caf3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204992"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>使用 FOR XML 從資料列集產生 XML
   您可以產生`xml`從資料列集使用 FOR XML 搭配新的資料類型執行個體**型別**指示詞。  
@@ -26,7 +26,7 @@ ms.locfileid: "58529060"
   
  新的 **FOR XML TYPE** 指示詞可用來定義含有 SQL 語法之關聯式資料的唯讀 XML 檢視。 您可以用 SQL 陳述式和內嵌的 XQuery 來查詢該檢視，如下列範例所示。 您也可以在預存程序中參照這些 SQL 檢視。  
   
-## <a name="example-sql-view-returning-generated-xml-data-type"></a>範例傳回所產生之 xml 資料類型的 SQL 檢視  
+## <a name="example-sql-view-returning-generated-xml-data-type"></a>範例SQL 檢視傳回所產生的 xml 資料類型  
  下列 SQL 檢視定義會建立一個 XML 檢視，可供檢視從 XML 資料行中擷取的關聯式資料行、pk 及書籍作者。  
   
 ```  

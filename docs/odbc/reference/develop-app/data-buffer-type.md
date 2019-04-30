@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e02d42d6d63608ccb70dc984e05ae11578d3160
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049964"
 ---
 # <a name="data-buffer-type"></a>資料緩衝區類型
 應用程式所指定之緩衝區的 C 資料類型。 使用單一的變數，這會發生於應用程式會將變數配置。 使用泛用的記憶體-也就是記憶體所指的類型 void 的指標。 發生這種情況時應用程式轉換成特定類型的記憶體。 驅動程式會探索此類型有兩種：  

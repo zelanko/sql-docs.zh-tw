@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c994a04f41b548599deff4ff5a0a99ba89be6c7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064578"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>大量匯入資料時保留識別值 (SQL Server)
   您可以將包含識別值的資料檔案大量匯入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體中。 根據預設，會忽略所匯入資料檔案中的識別欄位值， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動指定唯一值。 唯一值的依據是資料表建立期間所指定的初始值及累加值。  
@@ -74,7 +74,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
  如需建立格式檔案的詳細資訊，請參閱[建立格式檔案 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)。  
   
 ### <a name="a-using-bcp-and-keeping-identity-values"></a>A. 使用 bcp 並保留識別值  
- 下列範例示範如何在使用 `bcp` 大量匯入資料時保留識別值。 `bcp`命令會使用格式檔案中， `myDepartment-f-n-x.Xml`，並包含下列參數：  
+ 下列範例示範如何在使用 `bcp` 大量匯入資料時保留識別值。 `bcp` 命令會使用格式檔案 `myDepartment-f-n-x.Xml`，並包含下列參數：  
   
 |限定詞|描述|  
 |----------------|-----------------|  

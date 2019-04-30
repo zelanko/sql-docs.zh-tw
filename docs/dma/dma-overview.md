@@ -16,11 +16,11 @@ author: HJToland3
 ms.author: rajpo
 manager: craigg
 ms.openlocfilehash: 0bb91177a204f93bd141d57b90420678dcd0b722
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63152330"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant 的概觀
 Data Migration Assistant (DMA) 可協助您升級至新式資料平台，藉由偵測可能會影響資料庫功能的新版本的 SQL Server 或 Azure SQL Database 的相容性問題。 DMA 建議的效能和可靠性的改進目標環境，並可讓您將您的結構描述、 資料和非內含性的物件從來源伺服器移至您的目標伺服器。
@@ -48,7 +48,7 @@ Data Migration Assistant (DMA) 可協助您升級至新式資料平台，藉由�
 
   - 效能
   - 安全性
-  - Storage
+  - 儲存體
 
 - 最新 SQL Server 執行個體裝載內部部署或 Azure 虛擬機器 (VM) 可從您的內部部署網路存取，請移轉內部部署 SQL Server 執行個體。 Azure VM，可以使用 VPN 或其他技術來存取。 移轉工作流程可協助您移轉下列元件：
 

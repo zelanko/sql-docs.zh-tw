@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f294ad3868670783d3010498dd0ba89e1e6a48be
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127058"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>執行複寫維護作業 (SQL Server Management Studio)
   複寫會使用下列維護作業：  
@@ -69,7 +69,7 @@ ms.locfileid: "54128388"
   
 ## <a name="see-also"></a>另請參閱  
  [啟動及停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
- [檢視資訊並執行的工作，使用 「 複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [使用複寫監視器來檢視資訊及執行工作](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [複寫代理程式管理](../agents/replication-agent-administration.md)  
   
   

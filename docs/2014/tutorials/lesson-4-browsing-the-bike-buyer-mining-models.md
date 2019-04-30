@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 709df371d840d4b24e420b4fcd08750fd31e8075
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070876"
 ---
-# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>第 4 課：瀏覽 Bike Buyer 採礦模型
+# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>第 4 課：瀏覽自行車買主採礦模型
   在這一課，您將使用[SELECT (DMX)](/sql/dmx/select-dmx)陳述式來探索決策樹和群集採礦的內容模型中建立您[第 2 課：將採礦模型加入預測採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)。  
   
  包含在採礦模型中的資料行不是採礦結構所定義的資料行，而是描述該演算法所發現的趨勢和模式的一組特定資料行。 這些採礦模型資料行所述[DMSCHEMA_MINING_MODEL_CONTENT 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)結構描述資料列。 例如，內容結構描述資料列集的 MODEL_NAME 資料行包含採礦模型的名稱。 若為群集採礦模型，NODE_CAPTION 資料行包含每一個群集的名稱，NODE_DESCRIPTION 資料行包含每一個群集之特性的描述。 您可以利用 SELECT FROM 瀏覽這些資料行\<模型 >。在 DMX 中的陳述式內容。 您也可以使用此陳述式來探索用來建立採礦模型的資料。 您必須在採礦結構中啟用鑽研，才能使用此陳述式。 如需有關此陳述式的詳細資訊，請參閱[FROM&#60;模型&#62;。案例&#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)。  

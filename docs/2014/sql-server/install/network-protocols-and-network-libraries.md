@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f4649f6a5abd9726a1b01e3ed30d6cabf88aef9e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067690"
 ---
 # <a name="network-protocols-and-network-libraries"></a>網路通訊協定和網路程式庫
   伺服器可以一次接聽或監視多個網路通訊協定。 然而，必須設定每個通訊協定。 如果未設定特定的通訊協定，則伺服器將無法接聽該通訊協定。 安裝之後，您可以利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來變更通訊協定組態。  
