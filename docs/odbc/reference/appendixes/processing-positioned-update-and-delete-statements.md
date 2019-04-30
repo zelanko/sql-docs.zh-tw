@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d898fcc7d1b35230173afa0443219d59c54720ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057071"
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>處理定點更新和刪除陳述式
 > [!IMPORTANT]  

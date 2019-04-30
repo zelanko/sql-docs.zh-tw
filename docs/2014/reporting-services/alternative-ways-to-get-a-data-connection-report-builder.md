@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e98be6ed17cebe6c06033b7230fbbdcdde18dd66
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233518"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>取得資料連接的替代方式 (報表產生器)
   資料連接包含連接至外部資料來源的資訊，例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。 通常您會向資料來源擁有者取得連接資訊以及要使用的認證類型。  

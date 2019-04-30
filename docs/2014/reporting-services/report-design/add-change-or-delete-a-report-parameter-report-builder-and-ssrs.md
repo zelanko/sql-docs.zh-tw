@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f6069aba71f5c6026db2bfa083a71d923a727e50
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206833"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>加入、變更或刪除報表參數 (報表產生器及 SSRS)
   報表參數可讓您選擇報表資料、將相關的報表連接在一起，以及變更報表呈現方式。 您可以提供預設值和可用值的清單，而且使用者可以變更選取範圍。  

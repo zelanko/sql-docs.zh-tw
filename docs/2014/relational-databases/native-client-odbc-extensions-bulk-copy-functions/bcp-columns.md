@@ -1,5 +1,5 @@
 ---
-title: bcp_columns |Microsoft Docs
+title: bcp_columns | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fcfbbdb1881662401e791ea197115120444cf855
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225534"
 ---
 # <a name="bcpcolumns"></a>bcp_columns
   設定在使用者檔案中可搭配大量複製在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中進出作業的資料行總數。 [bcp_setbulkmode](bcp-setbulkmode.md)可用來代替 bcp_columns 並[bcp_colfmt](bcp-colfmt.md)。  

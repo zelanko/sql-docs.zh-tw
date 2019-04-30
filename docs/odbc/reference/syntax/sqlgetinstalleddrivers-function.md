@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 173346c990e388935c800d76069f97ee9cf3f399
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132734"
 ---
 # <a name="sqlgetinstalleddrivers-function"></a>SQLGetInstalledDrivers 函式
 **合規性**  

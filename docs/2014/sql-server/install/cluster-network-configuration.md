@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3cd117a9f873de13938d8a6946faf4f1c00d522d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064416"
 ---
 # <a name="cluster-network-configuration"></a>叢集網路組態
   使用 **[叢集網路選取]** 頁面，即可指定容錯移轉叢集執行個體的網路資源。  
@@ -41,7 +41,7 @@ ms.locfileid: "48163024"
   
     -   如果您要加入支援其他網路子網路的節點，但是這個節點不支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集之現有節點所支援的任何子網路，就必須加入其他 IP 位址。 IP 位址資源相依性會設定為 OR，以便反映所有指定的 IP 位址在所有叢集節點上都無效。  
   
--   進階安裝：在安裝的完成步驟期間，請針對容錯移轉叢集執行個體的所有節點和子網路指定 IP 位址。 您可以針對多重子網路容錯移轉叢集指定多個 IP 位址，但是每個子網路只支援一個 IP 位址。 每個備妥的節點都至少應該是一個 IP 位址的擁有者。 如果您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集具有多個子網路，系統就會提示您將 IP 位址資源相依性設為 OR。移除節點：  
+-   進階的安裝：在安裝的 [完成] 步驟中，指定所有節點的 IP 位址和子網路容錯移轉叢集執行個體。 您可以針對多重子網路容錯移轉叢集指定多個 IP 位址，但是每個子網路只支援一個 IP 位址。 每個備妥的節點都至少應該是一個 IP 位址的擁有者。 如果您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集具有多個子網路，系統就會提示您將 IP 位址資源相依性設為 OR。移除節點：  
   
     -   如果所有其餘節點都支援其餘 IP 位址，系統就會提示您將 IP 位址資源相依性設定為 AND。  
   

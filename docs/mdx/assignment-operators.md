@@ -1,5 +1,5 @@
 ---
-title: 指派運算子 |Microsoft 文件
+title: 指派運算子 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6ea4e67435ed0830767fa778eebe34de53c6c507
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181669"
 ---
 # <a name="assignment-operators"></a>指派運算子
 

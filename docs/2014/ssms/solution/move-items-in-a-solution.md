@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c6711b736f0313508f74b6c30253e7b2e2a3f93
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154699"
 ---
 # <a name="move-items-in-a-solution"></a>移動方案中的項目
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 專案中的專案項目有「查詢」、「連接」及「其他」檔案。 您可以在 [方案總管] 中的各專案之間移動「查詢」和「其他」檔案，不過，不能移動「連接」。  

@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a6fbf5cbf55b5ad63317b7cadc0db2c7df738712
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193058"
 ---
 # <a name="upgrade-how-to-topics"></a>升級的使用說明主題
   此章節的主題描述如何升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的獨立執行個體。  

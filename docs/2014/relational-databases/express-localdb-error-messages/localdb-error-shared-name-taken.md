@@ -1,8 +1,8 @@
 ---
-title: LOCALDB_ERROR_SHARED_NAME_TAKEN |Microsoft Docs
+title: LOCALDB_ERROR_SHARED_NAME_TAKEN | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/06/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
@@ -11,13 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a39c95d20d670a2408e440e6ff7775d46c7affd7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63066446"
 ---
 # <a name="localdberrorsharednametaken"></a>LOCALDB_ERROR_SHARED_NAME_TAKEN
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>詳細資料  
   

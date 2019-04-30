@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63e08aa2e75d560ce73c549d307418432ffe16af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149115"
 ---
 # <a name="transaction-isolation-levels"></a>交易隔離等級
 *交易隔離等級*是隔離成功的交易範圍的量值。 特別的是，交易隔離等級會定義由下列的現象存在：  

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155377"
 ---
 # <a name="create-clustered-indexes"></a>建立叢集索引
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的資料表上建立叢集索引。 除了極少數的例外狀況之外，每個資料表都應該要有叢集索引。 除了可以改善查詢效能以外，叢集索引還能夠視需要加以重建或重新組織，以便控制資料表分散程度。 檢視上也可以建立叢集索引。 (叢集索引是在 [叢集與非叢集索引說明](clustered-and-nonclustered-indexes-described.md)主題中進行定義。)  
@@ -122,7 +122,7 @@ ms.locfileid: "54126158"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     USE AdventureWorks2012;  

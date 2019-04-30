@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9eecd202a17a0a08e8607ebec0caaa31b7b3ca9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199202"
 ---
 # <a name="bookmarks-odbc"></a>書籤 (ODBC)
 書籤是用來識別資料列的值。 書籤值的意義僅適用於驅動程式或資料來源。 例如，書籤可能跟資料列號碼一樣簡單，也可能跟磁碟位址一樣複雜。 ODBC 中的書籤是有點不同於實際活頁簿中的書籤。 在實際的書中，讀取器置於特定頁面的書籤，並接著會尋找該書籤返回頁面。 在 ODBC 中，應用程式會要求特定資料列的書籤、將其儲存起來，然後將其傳回資料指標，即可傳回到資料列。 因此，在 ODBC 中的書籤會類似於讀取器寫下頁碼，記住它，並接著查看頁面。  

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: fddec2033997a1b76f34fa9a2fe006d385bc0132
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155844"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>使用格式檔案大量匯入資料 (SQL Server)
   此主題說明格式檔案在大量匯入作業中的用法。 格式檔案會將資料檔案的欄位對應到資料表的資料行。  您可以使用非 XML 或 XML 格式檔案來大量匯入資料，當您使用 **bcp** 命令或 BULK INSERT 或 INSERT ......SELECT * FROM OPENROWSET(BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令時，可以使用非 XML 或 XML 格式的檔案來大量匯入資料。  
@@ -36,12 +36,12 @@ ms.locfileid: "53364080"
 |------------------------|-----------------------------------|  
 |BULK INSERT|FORMATFILE = '*format_file_path*'|  
 |INSERT ...SELECT * FROM OPENROWSET(BULK...)|FORMATFILE = '*format_file_path*'|  
-|**bcp** ...**中**|**-f** *format_file*|  
+|**bcp** ... **in**|**-f** *format_file*|  
   
  如需詳細資訊，請參閱 [bcp 公用程式](../../tools/bcp-utility.md)、[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 或 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)。  
   
 > [!NOTE]  
->  若要大量匯出或匯入 SQLXML 資料，請在格式檔案中使用下列其中一種資料類型：SQLCHAR 或 SQLVARYCHAR （資料會在用戶端字碼頁或定序所隱含的字碼頁傳送）、 SQLNCHAR 或 SQLNVARCHAR （資料會以 Unicode 傳送）、 SQLBINARY 或 SQLVARYBIN （資料會傳送未經任何轉換）。  
+>  若要大量匯出或匯入 SQLXML 資料，請在格式檔案中使用下列其中一種資料類型：SQLCHAR 或 SQLVARYCHAR (資料會以用戶端字碼頁或定序所隱含的字碼頁傳送)、SQLNCHAR 或 SQLNVARCHAR (資料會以 Unicode 傳送)，或是 SQLBINARY 或 SQLVARYBIN (資料不經轉換即傳送)。  
   
 ## <a name="examples"></a>範例  
  本節中的範例說明如何藉由使用下列命令來以格式檔案大量匯入資料：**bcp** 命令與 BULK INSERT 和 INSERT ......SELECT * FROM OPENROWSET(BULK...) 陳述式。 執行其中一個大量匯入範例之前，必須先建立範例資料表、資料檔案與格式檔案。  

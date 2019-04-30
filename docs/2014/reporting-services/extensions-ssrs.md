@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 6a702f7a78c3377651e544757789e7a7034f2923
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165181"
 ---
 # <a name="extensions-for-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 的延伸模組
 

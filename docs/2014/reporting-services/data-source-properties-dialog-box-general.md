@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7db7aa857e695e35dee5125cdfed1effe3dd1852
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164724"
 ---
 # <a name="data-source-properties-dialog-box-general"></a>資料來源屬性對話方塊、一般
   選取 **[資料來源屬性]** 對話方塊上的 **[一般]** ，即可在報表中顯示和修改資料來源的連接資訊。  

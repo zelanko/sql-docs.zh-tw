@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 703643f2c51ec86090cb03ba7089080dfe416620
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137459"
 ---
 # <a name="lesson-4-update-the-report-definition-programmatically"></a>第 4 課：以程式設計方式更新報表定義
   既然已經使用報表欄位從報表伺服器載入報表定義，並且您具有對它的參考，就必須更新報表定義。 在此範例中，您將更新報表的 `Description` 屬性。  

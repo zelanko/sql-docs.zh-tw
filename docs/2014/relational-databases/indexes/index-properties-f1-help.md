@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161894"
 ---
 # <a name="index-properties-f1-help"></a>索引屬性 F1 說明
   本主題中的章節參考使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對話方塊提供的各種不同索引屬性。  
@@ -52,7 +52,7 @@ ms.locfileid: "48084699"
  顯示索引的名稱。 這個檔案對現有的索引而言是唯讀的。 建立新的索引時，請輸入索引的名稱。  
   
  **索引類型**  
- 表示索引的類型。 如果是新的索引，則表示開啟此對話方塊時所選取的索引類型。 索引可以是： **[叢集]**、 **[非叢集]**、 **[主要 XML]**、 **[次要 XML]**、 **[空間]**、 **[叢集資料行存放區]** 或 **[非叢集資料行存放區]**。  
+ 表示索引的類型。 如果是新的索引，則表示開啟此對話方塊時所選取的索引類型。 索引可以是：**叢集化**，**非叢集**，**主要 XML**，**次要 XML**，**空間**，**叢集資料行存放區**，或**非叢集資料行存放區**。  
   
  **注意** ：每個資料表只允許有一個叢集索引。 每個資料表只允許有一個 xVelocity 記憶體最佳化的資料行存放區索引。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "48084699"
  表示索引的鑲嵌式配置。 支援的鑲嵌式配置如下所示。  
   
  **幾何方格**  
- 指定幾何方格鑲嵌式配置，這會套用到的資料行`geometry`資料型別。  
+ 指定幾何方格鑲嵌式配置，這會套用到 `geometry` 資料類型的資料行。  
   
  **幾何自動方格**  
  當資料庫相容性層級設定為 110 或更高時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會啟用這個選項。  

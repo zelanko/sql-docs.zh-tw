@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 12e2e61c6b55bf3c549c08f2b090059d674ed83d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162023"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>專案設定 (轉換) (MySQLToSQL)
 [轉換] 頁面**專案設定**對話方塊包含設定自訂 SSMA 如何將 MySQL 語法轉換為 SQL Server 或 SQL Azure 的語法。  

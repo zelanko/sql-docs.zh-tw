@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192968"
 ---
 # <a name="create-a-multiserver-environment"></a>建立多伺服器環境
   多伺服器管理會要求您設定一部主要伺服器 (MSX) 以及一或多部目標伺服器 (TSX)。 將在所有目標伺服器上處理的作業會先在主要伺服器上定義，然後再下載至目標伺服器。  
@@ -35,10 +35,10 @@ ms.locfileid: "52795611"
 ## <a name="considerations-for-multiserver-environments"></a>多伺服器環境的考量事項  
  如需受支援的 MSX/TSX 組態，請參閱下表。  
   
-||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 或更高版本**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
+||**TSX = 7.0**|**TSX = 8.0 < SP3**|**TSX = 8.0 SP3 或更高版本**|**TSX = 9.0**|**TSX= 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
 |**MSX = 7.0**|是|是|否|否|否|否|否|  
-|**MSX = 8.0 &LT; SP3**|是|是|否|否|否|否|否|  
+|**MSX = 8.0 < SP3**|是|是|否|否|否|否|否|  
 |**MSX = 8.0 SP3 或更高版本**|否|否|是|是|是|是|是|  
 |**MSX = 9.0**|否|否|否|是|是|是|是|  
 |**MSX = 10.0**|否|否|否|否|是|是|是|  
@@ -65,7 +65,7 @@ ms.locfileid: "52795611"
 |描述如何將目標伺服器編列到主要伺服器中。|[將目標伺服器編列至主要伺服器](enlist-a-target-server-to-a-master-server.md)|  
 |描述如何使目標伺服器脫離主要伺服器，|[使目標伺服器脫離主要伺服器](defect-a-target-server-from-a-master-server.md)|  
 |描述如何從主要伺服器脫離多部目標伺服器。|[從主要伺服器脫離多個目標伺服器](defect-multiple-target-servers-from-a-master-server.md)|  
-|描述如何檢查目標伺服器的狀態。|[sp_help_targetserver &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
+|描述如何檢查目標伺服器的狀態。|[sp_help_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
 ## <a name="see-also"></a>另請參閱  
  [為使用 Proxy 的多伺服器作業疑難排解](troubleshoot-multiserver-jobs-that-use-proxies.md)  

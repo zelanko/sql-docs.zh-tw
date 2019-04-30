@@ -24,11 +24,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 033e1852f076dde631a3ea1e9be1c8918eab042a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158314"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>編寫部署和管理工作的指令碼
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援使用指令碼，以自動執行例行安裝、部署和管理工作。 部署報表伺服器是一個多步驟的程序， 您必須使用數個工具和程序來設定部署；並沒有單一程式或方法可用來自動化處理所有工作。  

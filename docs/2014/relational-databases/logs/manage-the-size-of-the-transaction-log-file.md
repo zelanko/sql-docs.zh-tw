@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144329"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理交易記錄檔的大小
   在部分情況下，實際壓縮或擴充 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫之交易記錄的實體記錄檔十分有用。 本主題包含下列作業的資訊：如何監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易記錄大小、壓縮交易記錄、加入或加大交易記錄檔、最佳化 **tempdb** 交易記錄成長率，以及控制交易記錄檔的成長。  

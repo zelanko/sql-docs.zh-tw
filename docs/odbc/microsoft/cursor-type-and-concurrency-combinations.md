@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e83cb131f37dd2901b77e70d19f5ed95ef596bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151295"
 ---
 # <a name="cursor-type-and-concurrency-combinations"></a>資料指標類型和並行組合
 > [!IMPORTANT]  

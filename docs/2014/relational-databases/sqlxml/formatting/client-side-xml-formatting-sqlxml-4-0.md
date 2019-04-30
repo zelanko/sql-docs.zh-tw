@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ee49bec234f5ee29d377253034a2bc58b195c3b2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131354"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>用戶端 XML 格式 (SQLXML 4.0)
   本主題提供有關用戶端 XML 格式的資訊。 用戶端格式指的是 XML 在中間層的格式。  

@@ -10,11 +10,11 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 20acdf2789158bf067319930a5be65770eae67f3
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126822"
 ---
 # <a name="sql-server-machine-learning"></a>SQL Server 機器學習服務
 

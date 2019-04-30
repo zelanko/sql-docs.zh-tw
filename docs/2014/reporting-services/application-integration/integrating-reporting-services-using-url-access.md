@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fedf4ce3011d9caae9d673acf354265537115057
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126124"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>使用 URL 存取整合 Reporting Services
   使用 URL 存取，即可透過報表伺服器 URL 來存取報表。 URL 要求可讓您存取特定的報表伺服器，以及在報表伺服器資料庫中的報表、資源和其他項目。 您也可以自訂使用者的報表檢視和導覽經驗。 URL 的查詢字串包含裝置資訊設定，以及以報表和所選轉譯輸出為目標的報表參數。 報表伺服器處理 URL 要求的方法須視透過 URL 存取的參數、參數前置詞以及項目類型而定。  

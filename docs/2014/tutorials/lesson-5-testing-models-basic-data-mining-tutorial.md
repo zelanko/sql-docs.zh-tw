@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 88a9d564b297d277d1566152cc11599bec912ddc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185435"
 ---
 # <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>第 5 課：測試模型 （基本資料採礦教學課程）
   現在您已經使用目標郵寄案例定型集處理過模型，所以將會針對測試集來測試模型。 驗證是資料採礦程序中的一個重要步驟。 將模型部署到實際環境之前，了解目標郵寄採礦模型對實際資料的執行效能有多好是非常重要的事情。  

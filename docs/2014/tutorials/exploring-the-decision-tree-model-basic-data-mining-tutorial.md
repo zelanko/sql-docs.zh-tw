@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e7b77b445ff8cbef8be3acb72ef9cdb6fa3af159
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224601"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>瀏覽決策樹模型 (基本資料採礦教學課程)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 決策樹演算法會根據定型集中的其餘資料行，預測哪些資料行影響了自行車的購買決策。  

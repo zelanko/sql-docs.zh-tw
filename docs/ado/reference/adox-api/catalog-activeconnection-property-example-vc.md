@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30f7f4f4165b608070fafa5464e64c9c238651c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184180"
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>Catalog ActiveConnection 屬性範例 (VC++)
 設定[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)屬性，以有效的開啟連接的 「 開啟 」 目錄。 從開啟的目錄中，您可以存取包含在該目錄內的結構描述物件。  

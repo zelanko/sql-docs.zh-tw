@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9d38f80dcc44afa0d399885559b10f20027f906
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161653"
 ---
 # <a name="named-commands"></a>具名命令
 [建立和執行簡單的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)示範一種方法來執行命令。 還有另一個方法： 您可以把它具名的命令，，，然後呼叫具名命令直接對這**連接**物件 (指派給**ActiveConnection**屬性**命令**物件)。 命名命令表示指派名稱給**名稱**屬性**命令**物件。 例如，  

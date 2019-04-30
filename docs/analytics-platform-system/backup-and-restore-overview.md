@@ -10,11 +10,11 @@ ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200969"
 ---
 # <a name="backup-and-restore"></a>備份與還原
 
@@ -120,7 +120,7 @@ PDW 會使用 SQL Server 備份技術，來備份和還原應用裝置資料庫�
   
 5.  每個計算節點還原它的使用者資料庫的部分。 如果還原的任何未完成成功，所有資料庫中移除，並還原未順利完成。  
   
-## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>還原至具有大量的計算節點的應用裝置  
+## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>還原至具有較多計算節點的設備  
   
 將備份還原至具有較多計算節點的應用裝置時，會讓已配置的資料庫大小依計算節點數目比例成長。  
   

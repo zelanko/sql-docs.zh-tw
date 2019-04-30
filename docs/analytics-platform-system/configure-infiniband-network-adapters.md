@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057171"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Analytics Platform System 設定 InfiniBand 網路介面卡
 描述如何 InfiniBand 網路介面卡的伺服器上設定非應用裝置用戶端連接到控制節點上 Parallel Data Warehouse (PDW)。 基本連線能力和高可用性，以便載入、 備份及其他處理程序會自動連線到作用中的 InfiniBand 網路，使用下列指示。  

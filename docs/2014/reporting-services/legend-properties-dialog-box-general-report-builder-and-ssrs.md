@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae9d8c9b156b2b7b1655c0b854a4615264e56b3c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143007"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>圖例屬性對話方塊、一般 (報表產生器及 SSRS)
   使用 **[圖例]** 對話方塊來定義圖表中圖例的外觀與配置。 如需詳細資訊，請參閱 <<c0> [ 圖表上格式化圖例&#40;報表產生器及 SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)。</c0>  

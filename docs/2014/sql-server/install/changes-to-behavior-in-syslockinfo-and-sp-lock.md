@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4e2fa557efb6f09eae78180390c733f35bdc4a17
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215000"
 ---
 # <a name="changes-to-behavior-in-syslockinfo-and-splock"></a>syslockinfo 與 sp_lock 中之行為的變更
   **syslockinfo**並**sp_lock**可能會傳回非預期的值。 它們可能也會傳回額外的資料列，而先前的版本**syslockinfo**並**sp_lock**傳回每個鎖定資源的兩個資料列的最大值。  

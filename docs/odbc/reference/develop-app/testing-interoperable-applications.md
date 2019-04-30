@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 509dd17efeeb982c51938d7a18fad99a2e84ba5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148934"
 ---
 # <a name="testing-interoperable-applications"></a>測試可互通的應用程式
 測試可互通的應用程式是在最耗時的商務和最糟的情況不可能因為市場上不斷出現新的驅動程式。 不過，一定的測試可能會。 有限或低的互通性的應用程式只需要針對保證可支援這些驅動程式進行測試。 不過，它們必須是完全針對測試這些驅動程式。  

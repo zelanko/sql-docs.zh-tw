@@ -12,11 +12,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e3f76346bf77e782eb47999a7acc36369fbec104
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214928"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>從 SQL Server 2005 升級嗎？
   由於對 SQL Server 2005 的延伸支援即將結束，因此建議您立即升級到新版 SQL Server 及 Azure SQL Database。 透過升級，您能夠維護安全性與相容性、達到突破性的效能，並將資料平台基礎結構最佳化。  

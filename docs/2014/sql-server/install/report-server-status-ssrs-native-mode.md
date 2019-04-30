@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 217fc6d3d5a94fb443ea262563255c10bcfc2dda
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057947"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>報表伺服器狀態 (SSRS 原生模式)
   使用此頁面可檢視目前所連接之報表伺服器執行個體的相關資訊。 此頁面是報表伺服器組態的起始頁面。 其他頁面可用於設定 URL、服務帳戶、報表伺服器資料庫、報表伺服器電子郵件傳遞、向外延展部署和加密金鑰。  

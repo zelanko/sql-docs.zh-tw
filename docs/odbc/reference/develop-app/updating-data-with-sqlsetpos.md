@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d1c31ef622281b4f52f62ca3867c5afa7dcae8ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194422"
 ---
 # <a name="updating-data-with-sqlsetpos"></a>使用 SQLSetPos 更新資料
 應用程式可更新或刪除任何資料列與資料列集中**SQLSetPos**。 呼叫**SQLSetPos**是方便的替代建構及執行 SQL 陳述式。 它可讓 ODBC 驅動程式支援定位的更新，即使資料來源不支援定位的 SQL 陳述式。 它是達到完整的資料庫存取透過函式呼叫範例的一部分。  

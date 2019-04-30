@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcaa38cd3849f1665d0f31e8d2749730d2494fcc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217940"
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>SQL Server Integration Services 屬性 (登入索引標籤)
   您可以使用 **[屬性]** 對話方塊的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **[登入]** 索引標籤，指定要供 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務使用的帳戶，以及啟動和停止該服務。  

@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151190"
 ---
 # <a name="create-a-new-plan-guide"></a>建立新的計畫指南
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立計畫指南。 計畫指南是將查詢提示或固定的查詢計畫附加至查詢，以影響查詢的最佳化。 在計畫指南中，指定您要最佳化的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或包含您想要使用的查詢提示的 OPTION 子句，或者是您想要用來將查詢進行最佳化的特定查詢計畫。 在執行查詢的時候，查詢最佳化工具會比對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式與計畫指南，在執行階段將 OPTION 子句附加至查詢，或是使用特定的查詢計畫。  
@@ -96,7 +96,7 @@ ms.locfileid: "52519867"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     -- creates a plan guide named Guide1 based on a SQL statement  

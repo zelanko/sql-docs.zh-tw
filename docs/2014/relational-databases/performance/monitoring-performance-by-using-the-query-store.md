@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150797"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoring Performance By Using the Query Store
   查詢存放區功能為 DBA 提供查詢計劃選擇及效能的深入了解。 它能讓您快速找出因為查詢計劃中的變更所導致的效能差異，以簡化效能疑難排解。 該功能會自動擷取查詢、計劃及執行階段統計資料的記錄，並會保留這些記錄供您檢閱。 其會以時段來區分資料、供您查看資料庫使用模式，並了解何時在伺服器上發生查詢計劃變更。 使用 [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) 選項，可設定查詢存放區。  

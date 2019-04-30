@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a131d7607c798faed2e99a6e03713095bb6bb60f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150110"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 功能可協助您評估未來 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 升級的影響。 您也可以使用它來協助評估硬體和作業系統升級以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 微調的影響。  

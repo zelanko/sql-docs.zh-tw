@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d20a8ea8a4e05b455a4c69a867504e82bdce014a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165383"
 ---
 # <a name="feature-selection"></a>特徵選取
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈之 [特徵選取] 頁面上的核取方塊可選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的元件。  
@@ -34,16 +34,16 @@ ms.locfileid: "53365830"
  **共用功能** 指的是給定機器上所有執行個體都通用的功能。 這些每一個共用功能的設計，都與支援且可並存安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本 (Service Pack、累計更新以及 Hotfix) 回溯相容。  
   
 > [!NOTE]  
->  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集：**[!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 元件是唯一支援容錯移轉叢集的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能。 雖然您可以在容錯移轉叢集節點上安裝其他元件 (例如 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)])，但是這些元件無法感知叢集，而且如果容錯移轉叢集節點離線，這些元件的服務就不會容錯移轉。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
+>  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集：**[!INCLUDE[ssDE](../../includes/ssde-md.md)]並[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]元件是唯一[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]功能支援容錯移轉叢集。 雖然您可以在容錯移轉叢集節點上安裝其他元件 (例如 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)])，但是這些元件無法感知叢集，而且如果容錯移轉叢集節點離線，這些元件的服務就不會容錯移轉。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
 ### <a name="instance-features"></a>執行個體功能  
  當您選取元件時，每一個元件群組的描述會出現在 [描述] 窗格中。 您可以選取核取方塊的任何組合。 若要繼續，您必須做選擇。  
   
 |功能|描述|  
 |--------------|-----------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 包含 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、用來儲存、處理及保護資料安全的核心服務、複寫、全文檢索搜尋功能、用來管理關聯式和 XML 資料的工具，以及 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 伺服器。 以下是 Database Engine的功能：<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是用來儲存、處理和保護資料安全的核心服務。<br /><br /> 複寫：選擇性:複寫是指，將資料和資料庫物件從某個資料庫複製和散發到另一個資料庫，然後在兩個資料庫之間進行同步處理，以維護一致性的一組技術。<br /><br /> 全文檢索搜尋：選擇性:全文檢索搜尋提供一種功能，可針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中一般以字元為主的資料發出全文檢索查詢。<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]:選擇性:[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 是一種資料清除方案，可讓您在資料來源中探索不一致和不正確的資料，並提供電腦輔助及互動的方式以清理資料。 選取此核取方塊可安裝 DQS 伺服器。 在完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝之後，您必須執行 DQSInstaller.exe 檔案才能「完成」 DQS 伺服器安裝。 如果您安裝 SQL server 的預設執行個體，這個檔案位於 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\。MSSQLSERVER\MSSQL\Binn。<br /><br /> <br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集：** 當您選取 Database Engine Services 時，複寫和全文檢索搜尋元件為必要項目，且安裝程式會自動選取這些元件進行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝。|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 包含 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、用來儲存、處理及保護資料安全的核心服務、複寫、全文檢索搜尋功能、用來管理關聯式和 XML 資料的工具，以及 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 伺服器。 以下是 Database Engine的功能：<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是用來儲存、處理和保護資料安全的核心服務。<br /><br /> 複寫：選擇性：複寫是指，將資料和資料庫物件從某個資料庫複製和散發到另一個資料庫，然後在兩個資料庫之間進行同步處理，以維護一致性的一組技術。<br /><br /> 全文檢索搜尋：選擇性：全文檢索搜尋提供一種功能，可針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中一般以字元為主的資料發出全文檢索查詢。<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]:選擇性：[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 是一種資料清除方案，可讓您探索不一致和不正確的資料，在您的資料來源，並提供電腦輔助及互動的方式，以清理資料。 選取此核取方塊可安裝 DQS 伺服器。 在完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝之後，您必須執行 DQSInstaller.exe 檔案才能「完成」 DQS 伺服器安裝。 如果您安裝 SQL server 的預設執行個體，這個檔案位於 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\。MSSQLSERVER\MSSQL\Binn。<br /><br /> <br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集：** 複寫和全文檢索搜尋元件就需要，而且安裝程式會自動選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]容錯移轉叢集安裝，當您選取 Database Engine Services 時。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括用來建立及管理線上分析處理 (OLAP) 和資料採礦應用程式的工具。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -原生|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式包括伺服器和用戶端元件，可用來建立、管理和部署表格式、矩陣、圖形化和自由形式報表。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 也是一個可延伸的平台，可讓您用來開發報表應用程式。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Native|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式包括伺服器和用戶端元件，可用來建立、管理和部署表格式、矩陣、圖形化和自由形式報表。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 也是一個可延伸的平台，可讓您用來開發報表應用程式。|  
   
 > [!IMPORTANT]
 >  1.  安裝程式不會為 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 向外延展部署中的多個節點，設定負載平衡和單一 URL 定址。 若要完成向外延展部署，您必須使用 Windows Server、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center 或協力廠商叢集管理軟體。 如需有關設定 Web 伺服陣列部署的詳細資訊，請參閱 <<c0> [ 設定 Reporting Services 進行向外延展部署](https://go.microsoft.com/fwlink/?LinkId=199448)(https://go.microsoft.com/fwlink/?LinkId=199448)。  

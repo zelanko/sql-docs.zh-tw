@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf5feafd69cb16e1989496de90ce9e7af4df3687
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165019"
 ---
 # <a name="data-source-selection-page-report-manager"></a>資料來源選擇頁面 (報表管理員)
   您可以使用 [資料來源選擇] 頁面來選取要搭配報表或報表模型使用的現有共用資料來源項目。 您也可以使用此頁面來選取不同的資料來源。 若要檢視資料來源類型或連接字串，您必須導覽到共用資料來源並開啟屬性頁面。  

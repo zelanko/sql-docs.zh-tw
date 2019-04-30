@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cec3e79e3d37f064cb742588519a374737e01319
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191804"
 ---
 # <a name="required-client-settings"></a>必要用戶端設定
 > [!IMPORTANT]

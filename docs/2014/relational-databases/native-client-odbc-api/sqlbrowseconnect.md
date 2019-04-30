@@ -1,5 +1,5 @@
 ---
-title: SQLBrowseConnect |Microsoft Docs
+title: SQLBrowseConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9cb9439dd76c636df46b8ac3d737d79415b5ea5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067657"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
   **SQLBrowseConnect**使用關鍵字可分類成三個層級的連接資訊。 下表針對每個關鍵字指出是否傳回有效值清單以及關鍵字是否為選擇性。  
@@ -52,7 +52,7 @@ ms.locfileid: "53352687"
   
  下列屬性，而這藉由呼叫設定[SQLSetConnectAttr](sqlsetconnectattr.md)，判斷所傳回的結果集**SQLBrowseConnect**。  
   
-|attribute|描述|  
+|屬性|描述|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|如果設定為 SQL_MORE_INFO_YES， **SQLBrowseConnect**傳回伺服器屬性的擴充的字串。<br /><br /> 以下是所傳回之擴充字串的範例**SQLBrowseConnect**: ServerName\InstanceName;叢集： 否;版本： 8.00.131<br /><br /> 在這個字串中，分號是用來區隔伺服器相關資訊的不同部分， 逗號則是用來區隔不同的伺服器執行個體。|  
 |SQL_COPT_SS_BROWSE_SERVER|如果指定的伺服器名稱，則**SQLBrowseConnect**會傳回指定之伺服器的資訊。 如果 SQL_COPT_SS_BROWSE_SERVER 設定為 NULL， **SQLBrowseConnect**傳回網域中的所有伺服器的資訊。<br /><br /> 因為網路問題，而**SQLBrowseConnect**可能未收到所有伺服器及時的回應。 因此，每個要求所傳回的伺服器清單可能各不相同。|  

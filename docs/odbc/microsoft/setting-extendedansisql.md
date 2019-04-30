@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c9b8999e229e8a6ed4804b2f06a4072d139ae93a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159360"
 ---
 # <a name="setting-extendedansisql"></a>設定 ExtendedAnsiSQL
 屬性可以控制的連接字串中，藉由新增 ExtendedAnsiSQL 屬性：  
   
 |值|描述|  
 |-----------|-----------------|  
-|ExtendedAnsiSQL = 0 （預設值）|此設定不會啟用新功能。|  
-|ExtendedAnsiSQL = 1|此設定可讓新的功能。|  
+|ExtendedAnsiSQL=0 (default)|此設定不會啟用新功能。|  
+|ExtendedAnsiSQL=1|此設定可讓新的功能。|  
   
  屬性也可以設定透過 dsn**進階選項**時設定 DSN 中的，透過 [控制台] 對話方塊。  
   

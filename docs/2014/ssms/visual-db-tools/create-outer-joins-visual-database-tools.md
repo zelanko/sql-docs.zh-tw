@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184318"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>建立外部聯結 (Visual Database Tools)
   在預設狀況下， [查詢和檢視表設計工具](visual-database-tools.md) 會在資料表之間建立內部聯結 (Inner Join)。 內部聯結將刪除不符合其他資料表之資料列的資料列。 然而，外部聯結則至少傳回 FROM 子句提到的一個資料表或檢視，只要這些資料列符合任何 WHERE 或 HAVING 搜尋條件。 若要在不具有符合聯結資料表中資料的結果集中包含資料列，就可以建立外部聯結。  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab434e90f1b92911bfdfb9f66da67244e26ef776
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63129840"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 函數
 **合規性**  
@@ -184,7 +184,7 @@ SQLRETURN SQLBindCol(
 ## <a name="column-wise-binding"></a>資料行取向的繫結  
  在 資料行取向的繫結，應用程式繫結不同的資料和長度/指標陣列至每個資料行。  
   
- 若要使用資料行取向的繫結，應用程式第一次為 SQL_BIND_BY_COLUMN 設定 SQL_ATTR_ROW_BIND_TYPE 陳述式屬性。 (這是預設值。)每個資料行繫結，應用程式會執行下列步驟：  
+ 若要使用資料行取向的繫結，應用程式第一次為 SQL_BIND_BY_COLUMN 設定 SQL_ATTR_ROW_BIND_TYPE 陳述式屬性。 （這是預設值）。每個資料行繫結，應用程式會執行下列步驟：  
   
 1.  配置資料緩衝區陣列。  
   

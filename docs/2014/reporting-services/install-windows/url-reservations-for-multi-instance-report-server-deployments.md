@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ac6232b85990bb065d8188ede372e2b44cdd20c5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143243"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>多重執行個體報表伺服器部署的 URL 保留項目 (SSRS 組態管理員)
   如果您在相同電腦上安裝多個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體，您就必須考慮要如何為每一個執行個體定義 URL 保留項目。 在每一個執行個體中，報表伺服器 Web 服務和報表管理員至少每一個都必須有一個 URL 保留項目。 完整的保留項目集合在 HTTP.SYS 中必須是唯一的。  

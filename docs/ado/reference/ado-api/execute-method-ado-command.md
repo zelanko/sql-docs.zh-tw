@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f9508b85bc73ebbec82ad7d3bea5af5148d7c674
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184804"
 ---
 # <a name="execute-method-ado-command"></a>Execute 方法 (ADO 命令)
 執行查詢、 SQL 陳述式或預存程序中指定[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或是[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)屬性[命令物件](../../../ado/reference/ado-api/command-object-ado.md)。  
@@ -44,7 +44,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
  *參數*  
  選擇性。 A **Variant**搭配的輸入的字串或資料流中所指定的參數值的陣列**CommandText**或是**CommandStream**。 （輸出參數不會傳回正確的值，這個引數傳遞時）。  
   
- *選項*  
+ *選項。*  
  選擇性。 A**長**值，指出提供者應該如何評估[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)屬性[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。 可以是使用位元遮罩值[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)及/或[的執行方式](../../../ado/reference/ado-api/executeoptionenum.md)值。 比方說，您可以使用**adCmdText**並**adExecuteNoRecords**組合，如果您要評估的值的 ADO **CommandText**屬性為文字，及指出命令應該捨棄，並不會傳回執行命令文字時，可能會產生任何記錄。  
   
 > [!NOTE]

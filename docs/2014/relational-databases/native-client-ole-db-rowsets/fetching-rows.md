@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21a66754a9259dadcb8788d6afef4947f9a69ad1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140474"
 ---
 # <a name="fetching-rows"></a>提取資料列
   **IRowset** 介面是基底資料列集介面。 **IRowset** 介面提供的方法會循序擷取資料列、從這些資料列中取得資料，以及管理資料列。 取用者會使用 **IRowset** 中的方法，進行所有基本資料列集作業。 這包括提取與釋放資料列，以及取得資料行值。  

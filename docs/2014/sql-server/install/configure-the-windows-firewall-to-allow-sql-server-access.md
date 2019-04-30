@@ -24,11 +24,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 336cdd3d1b0de43a08cc4ea69dd072e5d0e09fe5
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058104"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   防火牆系統有助於預防未經授權存取電腦資源。 如果防火牆已開啟，但是設定不正確，則嘗試連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的行為可能會被封鎖。  

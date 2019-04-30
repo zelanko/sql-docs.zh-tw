@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190819"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>建立購物籃結構和模型 (中繼資料採礦教學課程)
   現在您已經建立了資料來源檢視，接著要使用資料採礦精靈建立新的採礦結構。 在這項工作中，您將根據 [!INCLUDE[msCoName](../includes/msconame-md.md)] 關聯分析演算法建立一個採礦結構和一個採礦模型。  
@@ -55,11 +55,11 @@ ms.locfileid: "56019449"
   
     |[資料行]|內容類型|資料類型|  
     |-------------|------------------|---------------|  
-    |IncomeGroup|Discrete|文字|  
-    |Order Number|Key|文字|  
-    |Region|Discrete|文字|  
+    |IncomeGroup|Discrete|Text|  
+    |Order Number|Key|Text|  
+    |Region|Discrete|Text|  
     |vAssocSeqLineItems|||  
-    |[模型]|Key|文字|  
+    |[模型]|Key|Text|  
   
 12. 在 **建立測試設定**頁面上，選項的預設值**測試資料的百分比**為 30%。 變更為**0**。 按一下 [下一步] 。  
   

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144339"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>建立維護計畫 (維護計畫設計介面)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的維護計畫設計介面，建立單一伺服器或多伺服器維護計畫。 雖然 **[維護計畫精靈]** 最適用於建立基本的維護計畫，但使用設計介面建立計畫時可讓您利用加強的工作流程。  
@@ -160,10 +160,10 @@ ms.locfileid: "54132783"
          定義條件約束在兩個工作之間的工作方式。  
   
          **評估作業**  清單  
-         指定優先順序條件約束所使用的評估作業。 作業為：**條件約束**，**運算式**，**運算式與條件約束**，和**運算式或條件約束**。  
+         指定優先順序條件約束所使用的評估作業。 這些作業有：[條件約束]、[運算式]、[運算式與條件約束]，以及 [運算式或條件約束]。  
   
          **值** 清單  
-         指定的條件約束值：**成功**，**失敗**，或**完成**。 **[成功]** 是預設值。  
+         指定條件約束值：[成功]、[失敗] 或 [完成]。 **[成功]** 是預設值。  
   
         > [!NOTE]  
         >  優先順序條件約束線條若是綠色代表 [成功]、紅色代表 [失敗]，而藍色代表 [完成]。  

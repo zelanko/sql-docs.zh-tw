@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a76281eead6430ca0dafae8671c7990f3c6c2de3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201073"
 ---
 # <a name="project-property-pages-dialog-box"></a>專案屬性頁對話方塊
   使用專案屬性頁，即可設定報表伺服器專案的部署屬性。 若要開啟此對話方塊，請從 專案 功能表按一下 \<報表專案名稱>屬性。  

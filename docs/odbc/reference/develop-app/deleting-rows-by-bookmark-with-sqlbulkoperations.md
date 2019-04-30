@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5895a106c389afe2d1979cf8d9c16e92f570538a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049941"
 ---
 # <a name="deleting-rows-by-bookmark-with-sqlbulkoperations"></a>使用 SQLBulkOperations 依書籤刪除資料列
 當刪除資料列的書籤**SQLBulkOperations**刪除一或多個選取的資料列之資料表的資料來源。 資料列識別的繫結的書籤資料行中的書籤。  

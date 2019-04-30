@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d8f96b28a15258df4b7d093ce14f227f28ad9b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161743"
 ---
 # <a name="error-handling"></a>錯誤處理
 ADO 使用多種不同的方法來通知發生之錯誤的應用程式。 本節討論當您使用 ADO 和您的應用程式接收通知的方式可能會發生的錯誤類型。 它做出結論，提出有關如何處理這些錯誤的建議。  

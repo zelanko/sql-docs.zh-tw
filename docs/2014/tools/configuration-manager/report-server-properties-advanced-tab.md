@@ -1,23 +1,26 @@
 ---
 title: 報表伺服器屬性 (進階索引標籤) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 80aedab6-2be4-409d-88ba-2107e96345fe
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: 90280725036f3d984b0d7b989e9a802dfec38746
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048623"
 ---
 # <a name="report-server-properties-advanced-tab"></a>Report Server 屬性 (進階索引標籤)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   這個服務是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 如果定義了自訂屬性，屬性與其值會在這個索引標籤上顯示。  
   
 ## <a name="options"></a>選項。  

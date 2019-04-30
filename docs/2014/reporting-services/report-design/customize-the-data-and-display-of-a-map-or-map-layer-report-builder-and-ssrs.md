@@ -25,11 +25,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3bd3ef7205591d0353d7e8ee75e2d0ec49a221d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185482"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自訂地圖或地圖圖層的資料和顯示 (報表產生器及 SSRS)
   使用精靈將地圖或地圖圖層加入至報表之後，您可能會想要變更地圖在報表中的外觀。 您可以考慮下列構想來進行改善：  

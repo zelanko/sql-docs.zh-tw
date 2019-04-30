@@ -28,11 +28,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1edd2b59d7a681fda1f18083b73f26aa3e38fbe3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143327"
 ---
 # <a name="manage-code-formatting"></a>管理程式碼格式設定
   當使用編輯器時，您可以利用縮排、隱藏文字、URL...等，來建立程式碼的格式。 您也可以利用智慧型縮排 (Smart Indenting) 功能，在輸入程式碼的同時，自動建立程式碼的格式。  

@@ -1,5 +1,5 @@
 ---
-title: 步驟 6： 中斷與資料來源 |Microsoft Docs
+title: 步驟 6：從資料來源中斷連接 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a42465e763f8f6d520ed9c1dac42612aa1b28575
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149225"
 ---
 # <a name="step-6-disconnect-from-the-data-source"></a>步驟 6：中斷與資料來源的連線
 最後一個步驟是中斷連接資料來源，如下圖所示。 首先，應用程式，以釋放任何陳述式控制代碼呼叫**SQLFreeHandle**。 如需詳細資訊，請參閱 <<c0> [ 釋放陳述式控制代碼](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)。  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf05de13f0aada12da055f2e9c1e5a3a0db1d1df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195031"
 ---
 # <a name="page-setup-dialog-box"></a>版面設定對話方塊
   您可以選取 [頁面設定] 對話方塊中的選項，自訂您的頁面設計。 提供的選項取決於您針對編輯安裝與啟用的語言。  

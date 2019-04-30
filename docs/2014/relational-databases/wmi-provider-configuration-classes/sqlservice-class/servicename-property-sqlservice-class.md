@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 04ce91a5bd1d2405233c98633089d4e6d96869ac
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062106"
 ---
 # <a name="servicename-property-sqlservice-class"></a>ServiceName 屬性 (SqlService 類別)
   取得服務的名稱。  

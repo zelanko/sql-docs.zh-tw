@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6f249bb13ece6382e96dfe953b1d3c1d96c7bf65
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148996"
 ---
 # <a name="statement-handles"></a>陳述式控制代碼
 A*陳述式*最容易想像成 SQL 陳述式，例如**選取\*從員工**。 不過，在陳述式是不只是 SQL 陳述式-它包含所有與該 SQL 陳述式，例如任何結果集的陳述式所建立和執行陳述式中使用的參數相關聯的資訊。 陳述式甚至不必有應用程式定義的 SQL 陳述式。 例如，當目錄函數這類**SQLTables**執行上一個陳述式，它會執行預先定義的 SQL 陳述式會傳回一份資料表的名稱。  

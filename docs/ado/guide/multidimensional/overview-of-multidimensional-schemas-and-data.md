@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f06f62768637ebb48ffa6e1cfd2560ff3b53c383
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194910"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多維度結構描述和資料的概觀
 ## <a name="understanding-multidimensional-schemas"></a>了解多維度的結構描述  
@@ -32,12 +32,12 @@ ms.locfileid: "51350412"
   
  A*成員*是維度中的資料項目。 一般而言，您建立標題或描述的資料庫使用成員的量值。  
   
- Cube 由[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)中 ADO MD 物件 維度、 階層、 層級和成員也都表示其相對應的 ADO MD 物件：[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)，[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)，[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)，和[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)。  
+ Cube 由[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)中 ADO MD 物件 維度、 階層、 層級和成員也會以其對應的 ADO MD 物件表示：[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)，[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)，[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)，和[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)。  
   
 ### <a name="dimensions"></a>維度  
  Cube 的維度，取決於您的商務實體和類型的資料進行模型化資料庫中。 一般而言，每個維度是獨立的進入點或選取資料的機制。  
   
- 例如，包含銷售資料的 cube 有下列五個維度： 銷售人員、 地理位置、 時間、 產品和量值。 此量值維度包含實際的銷售資料值，而其他維度代表分類及分組的銷售資料值的方式。  
+ 例如，包含銷售資料的 cube 有下列五個維度：銷售人員、 地理位置、 時間、 產品和量值。 此量值維度包含實際的銷售資料值，而其他維度代表分類及分組的銷售資料值的方式。  
   
  [Geography] 維度具有下列成員的集合：  
   
@@ -82,7 +82,7 @@ Hamburg, Munich, Stuttgart}
   
  可以沿著每個維度的一個或多個階層合併成員。 請考慮時間維度有兩種方式可從天層級彙總 Year 層級：  
   
- 此範例也說明了另一個特性： 年度季階層的任何層級中看不到一週的階層層級年週的某些成員。 因此，階層不需要包含維度的所有成員。  
+ 此範例也會說明另一個特性：年度季階層的任何層級中看不到一週的階層層級年週的某些成員。 因此，階層不需要包含維度的所有成員。  
   
 ## <a name="see-also"></a>另請參閱  
  [ADO MD 物件模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)   

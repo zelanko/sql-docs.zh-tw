@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da462979ee21e09a55015f9c9d30d72edd1ce67d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232362"
 ---
 # <a name="xml-data-sql-server"></a>XML 資料 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了功能強大的平台，可針對半結構化的資料管理來開發豐富的應用程式。 支援將 XML 整合至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的所有元件，並包含下列項目：  

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4596485b4eebeba66028d03f5a54b3ee2461205b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198878"
 ---
 # <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>工作 2 (選擇性)：使用主資料管理員建立 MDS 訂閱檢視
   在這個工作中，您會建立訂閱檢視，公開**供應商**中的實體**供應商**模型到其他應用程式。 您不會在目前的教學課程版本中使用這個檢視。  

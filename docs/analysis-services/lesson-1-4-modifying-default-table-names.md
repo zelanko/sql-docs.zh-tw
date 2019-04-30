@@ -1,5 +1,5 @@
 ---
-title: 修改預設資料表名稱 |Microsoft 文件
+title: 修改預設資料表名稱 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 40d580a79371cfb73dd38bc92a0dd69c50df1cd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63053122"
 ---
 # <a name="lesson-1-4---modifying-default-table-names"></a>課程 1-4-修改預設資料表名稱
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34015661"
 7.  在 [檔案] 功能表上或 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的工具列上，按一下 [全部儲存]，即可儲存您到目前為止在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案中所做的變更。 如果您想要的話，可以在此停止教學課程，之後再繼續。  
   
 ## <a name="next-lesson"></a>下一課  
-[第 2 課︰ 定義和部署 Cube](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
+[第 2 課：定義和部署 Cube](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [多維度模型中的資料來源檢視](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  

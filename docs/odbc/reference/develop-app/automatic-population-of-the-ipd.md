@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d127e2da3397e96059c7d04305a983766ca1db6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198343"
 ---
 # <a name="automatic-population-of-the-ipd"></a>自動 IPD 擴展
 有些驅動程式是可參數化的查詢已備妥之後，請設定 IPD 欄位。 描述項欄位會自動填入參數，包括資料類型、 有效位數、 小數位數和其他特性的相關資訊。 這相當於支援**SQLDescribeParam**。 當它有沒有其他方法來探索它，例如隨選查詢執行的應用程式不知道的參數時，這項資訊可以是非常有價值的應用程式。  

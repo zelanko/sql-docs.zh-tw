@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138880"
 ---
 # <a name="open-file-dialog-box"></a>開啟檔案對話方塊
   使用 [開啟檔案] 對話方塊來開啟磁碟中的現有檔案。 您也可以使用這個對話方塊，以不同的語言編碼選項來開啟已開啟的檔案。  

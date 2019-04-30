@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 61bb013885238492d9c7324658ede198c489361d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127327"
 ---
 # <a name="functions-accepting-string-parameters"></a>接受字串參數的函式
 接受字串參數的所有函式會轉換成 Unicode。 （將匯出的函式的"W"形式）。位元組計數會轉換成這些適用的 ODBC api 的字元計數。 這適用於下列函數：  
@@ -47,9 +47,9 @@ ms.locfileid: "47818736"
   
 -   **SQLGetInfo**  
   
--   **SQLGetStmtOption** (會變成**SQLGetStmtAttr**)  
+-   **SQLGetStmtOption** (becomes **SQLGetStmtAttr**)  
   
--   **SQLSetStmtOption** (會變成**SQLSetStmtAttr**)  
+-   **SQLSetStmtOption** (becomes **SQLSetStmtAttr**)  
   
 -   **SQLGetConnectOption**  
   

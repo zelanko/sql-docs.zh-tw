@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 16d0590d3297b52891bf399822ce984674022583
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188915"
 ---
 # <a name="interval-data-type-length"></a>間隔資料類型長度
 下列規則用來決定間隔資料類型以字元為單位的長度。 長度是以字元數表示。 位元組數目，取決於的字元集。 的長度會包含下列的值加在一起：  

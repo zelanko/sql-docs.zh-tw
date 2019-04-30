@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8ccc6581e48a44e636fad07891bd8ec51596fbf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063492"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>針對 xs:dateTime、xs:date 和 xs:time 類型之儲存格式所做的變更
   XMLDATETIME 規則會識別您的資料庫是否包含升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之後將成為無效的具類型 XML 資料。  

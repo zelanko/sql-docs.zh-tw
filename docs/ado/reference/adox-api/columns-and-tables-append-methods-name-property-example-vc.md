@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cadebd87f664f603a94532531432446c015039d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183944"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Columns 和 Tables Append 方法、Name 屬性範例 (VC++)
 下列程式碼示範如何建立新的資料表。  

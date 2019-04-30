@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 015ea45d1383e6813973aeb1e4c86451a506a2aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213323"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (Visual FoxPro ODBC Driver)
 > [!NOTE]  
 >  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支援： 完整  
+ 支援：完整  
   
- ODBC API 相容性： 層級 1  
+ ODBC API 相容性：層級 1  
   
  傳回 Visual FoxPro ODBC Driver 和連接控制代碼相關聯的資料來源的一般資訊*hdbc*。 下列清單顯示每個 Visual FoxPro ODBC 驅動程式所傳回的值*fInfoType*引數和傳回的值相關的註解。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "47855416"
   
  SQL_GROUP_BY 傳回 SQL_GB_NO_RELATION。  
   
-## <a name="i-j"></a>我-J  
+## <a name="i-j"></a>I-J  
  SQL_IDENTIFIER_CASE 傳回 SQL_IC_MIXED。  
   
  SQL_IDENTIFIER_QUOTE_CHAR 傳回 '。  
@@ -199,7 +199,7 @@ ms.locfileid: "47855416"
   
  SQL_MAX_QUALIFIER_NAME_LEN 傳回最大的作業系統路徑長度。  
   
- SQL_MAX_ROW_SIZE 傳回 254 ^2。  
+ SQL_MAX_ROW_SIZE returns 254^2.  
   
  SQL_MAX_ROW_SIZE_INCLUDES_LONG 傳回 ' N '。  
   
@@ -355,7 +355,7 @@ ms.locfileid: "47855416"
   
 -   SQL_FN_STR_UCASE  
   
--   SQL_FN_STR_SPACE。  
+-   SQL_FN_STR_SPACE.  
   
  SQL_SUBQUERIES 會傳回：  
   
@@ -367,7 +367,7 @@ ms.locfileid: "47855416"
   
 -   SQL_SQ_IN  
   
--   SQL_SQ_QUANTIFIED。  
+-   SQL_SQ_QUANTIFIED.  
   
  SQL_SYSTEM_FUNCTIONS 會傳回：  
   
@@ -384,7 +384,7 @@ ms.locfileid: "47855416"
   
  SQL_TIMEDATE_ADD_INTERVALS 會傳回：  
   
--   SQL_FN_TSI_ 秒  
+-   SQL_FN_TSI_ SECOND  
   
 -   SQL_FN_TSI_MINUTE  
   
@@ -406,7 +406,7 @@ ms.locfileid: "47855416"
   
  SQL_TIMEDATE_DIFF_INTERVALS 會傳回：  
   
--   SQL_FN_TSI_ 秒  
+-   SQL_FN_TSI_ SECOND  
   
 -   SQL_FN_TSI_MINUTE  
   

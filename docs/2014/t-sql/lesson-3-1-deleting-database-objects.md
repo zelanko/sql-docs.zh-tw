@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a23d307cc33e5b8e59111819b245bc9df1df67df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063112"
 ---
 # <a name="deleting-database-objects"></a>刪除資料庫物件
   若要移除這個教學課程中的所有執行內容，原本只要刪除資料庫就可以了， 但是，在這個主題中，您將會逐步執行各個步驟，以反轉您在這個教學課程中所做的每一個動作。  
@@ -100,7 +100,7 @@ ms.locfileid: "48092301"
  「撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式」教學課程到此結束。 請記住，這個教學課程只是簡短概觀，因此並不會描述陳述式的所有選項。 如果要設計和建立有效率的資料庫結構，以及設定資料的安全存取，則所需的資料庫將會比這個教學課程的所示範例更加複雜。  
   
 ## <a name="return-to-sql-server-tools-portal"></a>返回 SQL Server 工具入口網站  
- [教學課程：撰寫國際性通用的 Transact-SQL 陳述式](tutorial-writing-transact-sql-statements.md)  
+ [教學課程：撰寫 Transact-SQL 陳述式](tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   

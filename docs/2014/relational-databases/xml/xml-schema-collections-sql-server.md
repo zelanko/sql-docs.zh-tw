@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193035"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 結構描述集合 (SQL Server)
   主題中所述[xml &#40;TRANSACT-SQL&#41;](/sql/t-sql/xml/xml-transact-sql)，SQL Server 提供原生的 XML 資料，透過儲存`xml`資料類型。 您可以選擇性地關聯的 XSD 結構描述的變數或資料行`xml`透過 XML 結構描述集合的型別。 XML 結構描述集合會儲存匯入的 XML 結構描述，然後用來執行下列作業：  

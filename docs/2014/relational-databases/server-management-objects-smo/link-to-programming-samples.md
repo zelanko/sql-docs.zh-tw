@@ -15,11 +15,11 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 933274c4e5084d50d530b1d90377648b793a6f86
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131778"
 ---
 # <a name="link-to-programming-samples"></a>程式設計範例連結
   下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Programmability\SMO 目錄所提供的 [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)] 管理物件 (SMO) 程式設計範例。 這些範例都可以在[!INCLUDE[csprcs](../../includes/csprcs-md.md)]和[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].NET。  

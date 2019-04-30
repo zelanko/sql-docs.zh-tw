@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e352a6c4d548b382d700c54cf0167fadcec8bf7b
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126882"
 ---
 # <a name="namespaces"></a>命名空間
 在 ADO 中的 XML 保存格式會使用下列四個命名空間。  

@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 408d6a3bfdd2618931ceefa5d6d82ad6ab581485
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198959"
 ---
 # <a name="repair-powerpivot-for-sharepoint"></a>修復 PowerPivot for SharePoint
   您可以使用 PowerPivot 組態工具修復 PowerPivot for SharePoint 的現有安裝。 此工具可讀取本機 PowerPivot for SharePoint 執行個體的組態設定，並提供重新設定與 PowerPivot for SharePoint 安裝不一致之設定的動作。 例如，如果您停止服務或撤銷方案，此工具會提供啟動服務及部署方案的動作。  

@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bc521d814065a5585ca90dd0006b6299b3aa4722
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128739"
 ---
 # <a name="localdbdeleteinstance-function"></a>LocalDBDeleteInstance 函數
   移除指定的 SQL Server Express LocalDB 執行個體。  

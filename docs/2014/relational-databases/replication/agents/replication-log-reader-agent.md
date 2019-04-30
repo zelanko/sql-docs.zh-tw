@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2dbe201e2690a013902ad6891b7f93f68fe0e04
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127009"
 ---
 # <a name="replication-log-reader-agent"></a>複寫記錄讀取器代理程式
   「複寫記錄讀取器代理程式」是一個可執行檔，它會監視針對異動複寫所設定之每個資料庫的交易記錄，並將標示要複寫的交易從交易記錄複製到散發資料庫中。  

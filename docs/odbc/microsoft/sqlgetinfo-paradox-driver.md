@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo （Paradox 驅動程式） |Microsoft Docs
+title: SQLGetInfo (Paradox Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76517ac2ded567877d542be688aa47abeca21c1c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135256"
 ---
 # <a name="sqlgetinfo-paradox-driver"></a>SQLGetInfo (Paradox 驅動程式)
 > [!NOTE]  
@@ -36,7 +36,7 @@ ms.locfileid: "52528930"
  ODBC 驅動程式會傳回 SQL_FILE_TABLE，因為每個檔案是一個資料表。  
   
 ## <a name="sqlaltertable"></a>SQL_ALTER_TABLE  
- SQL_AT_ADD_COLUMN &AMP;#124; SQL_AT_DROP_COLUMN  
+ SQL_AT_ADD_COLUMN &#124; SQL_AT_DROP_COLUMN  
   
 ## <a name="sqlddlindex"></a>SQL_DDL_INDEX  
  SQL_DL_CREATE_INDEX  
@@ -52,7 +52,7 @@ ms.locfileid: "52528930"
 ||5.x|05.00.0000|  
   
 ## <a name="sqlcatalogusage"></a>SQL_CATALOG_USAGE  
- SQL_QU_DML_STATEMENTS &AMP;#124; SQL_QU_TABLE_DEFINITION &AMP;#124; SQL_QU_INDEX_DEFINITION  
+ SQL_QU_DML_STATEMENTS &#124; SQL_QU_TABLE_DEFINITION &#124; SQL_QU_INDEX_DEFINITION  
   
 ## <a name="sqltimedatefunctions"></a>SQL_TIMEDATE_FUNCTIONS  
  SQL_FN_TD_DAYOFMONTH &AMP;#124; SQL_FN_TD_DAYOFWEEK &AMP;#124; SQL_FN_TD_DAYOFYEAR &AMP;#124; SQL_FN_TD_HOUR &AMP;#124; SQL_FN_TD_MINUTE &AMP;#124; SQL_FN_TD_MONTH &AMP;#124; SQL_FN_TD_SECOND &AMP;#124; SQL_FN_TD_WEEK &AMP;#124; SQL_FN_TD_YEAR

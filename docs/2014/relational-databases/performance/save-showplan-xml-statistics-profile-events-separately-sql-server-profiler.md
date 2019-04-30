@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 79f3f41d4224baacd485c7d2151db0f3f2059f86
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150623"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>個別儲存 Showplan XML 統計資料設定檔事件 (SQL Server Profiler)
   此主題描述如何使用 **，將在追蹤中所擷取的** Showplan XML Statistics Profile [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]事件，儲存至個別的 .SQLPlan 檔案中。 您可以在 **中開啟** Showplan XML Statistics Profile [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]事件檔案，以便檢視每個事件的圖形執行計畫。  

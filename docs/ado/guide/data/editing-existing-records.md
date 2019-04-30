@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 64262ae52b802398fc2060092a03e7469146f063
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161725"
 ---
 # <a name="editing-existing-records"></a>編輯現有的記錄
 若要編輯現有的記錄，請移至您想要編輯和變更的資料列**值**您想要變更的欄位的屬性。 如需詳細資訊**欄位**物件的**值**屬性，請參閱[檢查資料](../../../ado/guide/data/examining-data.md)。 根據您的資料指標類型，您將使用**更新**或是**UpdateBatch**將變更傳送回資料來源。 如需詳細資訊，請參閱 <<c0> [ 更新和保存資料](../../../ado/guide/data/updating-and-persisting-data.md)。  

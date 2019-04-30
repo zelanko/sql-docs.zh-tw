@@ -1,5 +1,5 @@
 ---
-title: 工作 1:建立使用主資料管理員的供應商模型 |Microsoft Docs
+title: 工作 1：建立使用主資料管理員的供應商模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 275b7cd57336c22b6d1f67206d1e1cdb0b7d2abd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222679"
 ---
-# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>工作 1:使用主資料管理員建立供應商模型
+# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>工作 1：使用主資料管理員建立供應商模型
   在這個工作中，您會建立名為的模型**供應商**在 MDS 中使用**主資料管理員**。  
   
 1.  瀏覽至[ http://localhost/mds ](http://localhost/mds)以啟動**主資料管理員**。 如果您已經使用不同的名稱或在不同網站上設定 Web 應用程式，請替換此 URL。  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157997"
 ---
 # <a name="memory-optimization-advisor"></a>記憶體最佳化 Advisor
   交易效能報告工具 (請參閱＜ [判斷是否應將資料表或預存程序匯出至記憶體中 OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)＞) 會通知您，匯出使用記憶體中 OLTP 時資料庫中哪些資料表有加分效果。 識別您要匯出使用記憶體中 OLTP 的資料表之後，即可使用 Memory Optimization Advisor，協助您將以磁碟為基礎的資料庫資料表移轉到記憶體中 OLTP。  

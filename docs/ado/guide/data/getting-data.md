@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 15d64d7b25abe5f67ba00e207f8f46c820aacd4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161767"
 ---
 # <a name="getting-data"></a>取得資料
 [ADO 基本概念](../../../ado/guide/data/ado-fundamentals.md)，而[HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md)範例將特別介紹建立 ADO 應用程式所需的四個主要作業： 取得資料、 檢查資料、 編輯資料，以及更新資料。 本章節會討論更多詳細資料。  

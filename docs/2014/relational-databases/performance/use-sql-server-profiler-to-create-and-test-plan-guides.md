@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fcdbfe9f9289ab9cc529d4d37eb27d877dfff3ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150483"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>使用 SQL Server Profiler 建立及測試計畫指南
   當您建立計畫指南時，可使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來擷取精確的查詢文字，以供使用於 **sp_create_plan_guide** 預存程序的 <陳述式文字> 引數。 這有助於確保計畫指南符合編譯時期的查詢。 在建立計畫指南之後， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 也可用來測試計畫指南實際上是否符合查詢。 一般而言，您應該使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來測試計畫指南，以確認查詢符合您的計畫指南。  

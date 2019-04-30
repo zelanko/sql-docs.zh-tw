@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5d6db633a5c718ea38d2b8959fa54305ec02883
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065176"
 ---
 # <a name="addnew-method-example-vbscript"></a>AddNew 方法範例 (VBScript)
 這個範例會使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法用來建立具有指定名稱的新記錄。  

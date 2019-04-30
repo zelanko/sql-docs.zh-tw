@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 28256433802d686f4362b2b733fc2d2b13e65302
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149143"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>使用者所輸入的 SQL 陳述式
 通常也執行臨機操作分析的應用程式可讓使用者直接輸入 SQL 陳述式。 例如：  

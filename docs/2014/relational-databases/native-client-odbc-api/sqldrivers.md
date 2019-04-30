@@ -1,5 +1,5 @@
 ---
-title: SQLDrivers |Microsoft Docs
+title: SQLDrivers | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 87b7f550bf63c9cf14f16c829932398470848e6f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192330"
 ---
 # <a name="sqldrivers"></a>SQLDrivers
   ODBC 驅動程式管理員會傳回所有**SQLDrivers**屬性規格字串。 如需有關屬性字串和值定義的詳細資訊，請參閱[Data Access 和 Storage Developer Center](https://go.microsoft.com/fwlink/?LinkId=4173)，或者，您可以檢視[ODBC 程式設計人員參考](https://go.microsoft.com/fwlink/?LinkId=45250)線上。  

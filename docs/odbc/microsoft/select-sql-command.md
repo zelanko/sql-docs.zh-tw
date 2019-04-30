@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127870"
 ---
 # <a name="select---sql-command"></a>SELECT - SQL 命令
 從一或多個資料表擷取資料。  
@@ -48,7 +48,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 > [!NOTE]  
 >  A*子查詢*下列引數中，選取中的使用 SELECT，是必須括在括號。 您可以在相同的層級最多兩個子查詢 （未巢狀） 的 WHERE 子句中。 （請參閱該區段的引數）。子查詢可以包含多個聯結條件。  
   
- [所有&#124;DISTINCT]  [*別名*。]*Select_Item* [AS *Column_Name*] [，[*別名*。]*Select_Item* [AS *Column_Name*]...]  
+ [ALL &#124; DISTINCT]   [*Alias*.] *Select_Item* [AS *Column_Name*]    [, [*Alias*.] *Select_Item* [AS *Column_Name*] ...]  
  SELECT 子句會指定欄位、 常數和查詢結果中會顯示的運算式。  
   
  根據預設，所有查詢結果中顯示了所有資料列。  
@@ -97,14 +97,14 @@ FROM [DatabaseName!]Table [Local_Alias]
  AS *Column_Name*  
  指定在查詢輸出中的資料行的標題。 這很有用，當*Select_Item*是運算式，或包含欄位函式，而且您想要讓資料行有意義的名稱。 *Column_Name*可以是運算式，但不能包含資料表的欄位名稱中不允許的字元 （例如空格）。  
   
- 從 [*DatabaseName*！]*表格*[*Local_Alias*] [，[*DatabaseName*！]*表格*[*Local_Alias*]...]  
+ FROM [*DatabaseName*!]*Table* [*Local_Alias*]   [, [*DatabaseName*!]*Table* [*Local_Alias*] ...]  
  列出包含此查詢會擷取資料的資料表。 如果資料表不是開啟的就會顯示 Visual FoxPro**開啟**對話方塊，讓您指定的檔案位置。 開啟它之後，資料表仍為開啟之後查詢已完成。  
   
- *DatabaseName*！ 指定與資料來源所指定以外的資料庫名稱。 您必須包含資料庫包含資料表，如果未指定資料庫與資料來源的名稱。 之後的資料庫名稱和資料表名稱之前，請包含驚嘆號 （！） 分隔符號。  
+ *DatabaseName*! 指定與資料來源所指定以外的資料庫名稱。 您必須包含資料庫包含資料表，如果未指定資料庫與資料來源的名稱。 之後的資料庫名稱和資料表名稱之前，請包含驚嘆號 （！） 分隔符號。  
   
  *Local_Alias*指定資料表中所命名的暫存名稱*表格*。 如果您指定的區域別名，您必須使用本機的別名，而不是在 SELECT 陳述式的資料表名稱。 本機別名不會影響 Visual FoxPro 環境。  
   
- 何處*JoinCondition* [AND *JoinCondition* ...]   [AND&#124;或者*FilterCondition* [AND&#124;或者*FilterCondition* ...]]  
+ WHERE *JoinCondition* [AND *JoinCondition* ...]    [AND &#124; OR *FilterCondition* [AND &#124; OR *FilterCondition* ...]]  
  會告訴 Visual FoxPro 查詢結果中包含特定的記錄。 視需要從多個資料表擷取資料。  
   
  *JoinCondition*指定連結的 FROM 子句中資料表的欄位。 如果您在查詢中包含多個資料表，您應該指定每個資料表的聯結條件，在第一個之後。  
@@ -153,7 +153,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  當篩選條件可包含所有時，欄位必須符合之前的記錄會包含查詢結果中，子查詢所產生的所有值的比較條件。  
   
- **範例 4** *FieldName 比較*y &#124; SOME (*子查詢*)  
+ **Example 4** *FieldName Comparison* ANY &#124; SOME (*Subquery*)  
   
  `company < ANY ;`  
   
@@ -177,7 +177,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `orders.postalcode)`  
   
- **範例 7** *FieldName* [NOT] IN *value_set&lt*  
+ **Example 7** *FieldName* [NOT] IN *Value_Set*  
   
  `customer.postalcode NOT IN ("98052","98072","98034")`  
   
@@ -195,9 +195,9 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `customer.country NOT LIKE "USA"`  
   
- 此篩選條件會搜尋比對每個欄位*cExpression*。 您可以使用百分比符號 （%） 和底線 (_) 萬用字元所組成的一部分*cExpression*。 底線表示未知的單一字元，在字串中。  
+ 此篩選條件會搜尋比對每個欄位*cExpression*。 您可以使用百分比符號 （%）和底線 (_) 萬用字元，做為一部分*cExpression*。 底線表示未知的單一字元，在字串中。  
   
- GROUP BY *GroupColumn* [， *GroupColumn* ...]  
+ GROUP BY *GroupColumn* [, *GroupColumn* ...]  
  在查詢中一或多個資料行中的值為基礎的群組資料列。 *GroupColumn*可以是下列其中之一：  
   
 -   一般資料表欄位的名稱。  
@@ -259,7 +259,7 @@ WHERE customer.cust_id NOT IN ;
     > [!NOTE]  
     >  預留位置必須是相同的型別所代表的欄位。 如果欄位是日期類型，應該是預留位置 {/ /}。 如果欄位為字元的欄位，將預留位置應該是空字串 ("")。  
   
- ORDER BY *Order_Item* [ASC &#124; DESC] [， *Order_Item* [ASC &#124; DESC]...]  
+ ORDER BY *Order_Item* [ASC &#124; DESC] [, *Order_Item* [ASC &#124; DESC] ...]  
  排序查詢結果根據一或多個資料行中的資料。 每個*Order_Item*必須對應到查詢結果中的資料行，而且可以是下列其中之一：  
   
 -   也是主要的 SELECT 子句 （不在子查詢） 中的選取項目從資料表中的欄位。  
@@ -282,7 +282,7 @@ WHERE customer.cust_id NOT IN ;
  當您的應用程式傳送到資料來源的 ODBC SQL 陳述式 SELECT 時，Visual FoxPro ODBC Driver 將命令轉換 Visual FoxPro 選取命令，無需進行翻譯除非命令中包含的 ODBC 逸出序列。 括住的 ODBC 逸出序列的項目會轉換成 Visual FoxPro 語法。 如需使用 ODBC 的詳細資訊逸出序列，請參閱 <<c0> [ 時間和日期函數](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md)然後在*Microsoft ODBC 程式設計人員參考*，請參閱[ODBC 中的逸出序列](../../odbc/reference/develop-app/escape-sequences-in-odbc.md).  
   
 ## <a name="see-also"></a>另請參閱  
- [CREATE TABLE-SQL](../../odbc/microsoft/create-table-sql-command.md)   
- [INSERT-SQL](../../odbc/microsoft/insert-sql-command.md)   
+ [CREATE TABLE - SQL](../../odbc/microsoft/create-table-sql-command.md)   
+ [INSERT - SQL](../../odbc/microsoft/insert-sql-command.md)   
  [SET ANSI](../../odbc/microsoft/set-ansi-command.md)   
- [設定正確](../../odbc/microsoft/set-exact-command.md)
+ [SET EXACT](../../odbc/microsoft/set-exact-command.md)

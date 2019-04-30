@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4aa7e597bcfa80d7d45064c844986018d64617d5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190312"
 ---
 # <a name="sqlfreestmt"></a>SQLFreeStmt
   **SQLFreeStmt**不建議使用在 ODBC 3.0 和更新版本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援所有定義*選項*的值**SQLFreeStmt**。 不過， [SQLCloseCursor](sqlclosecursor.md)， [SQLBindParameter](sqlbindparameter.md)， [SQLBindCol](sqlbindcol.md)， **SQLSetDescField**，和[SQLFreeHandle](sqlfreehandle.md)取代或重複的函式**SQLFreeStmt** ，應該改為使用。  

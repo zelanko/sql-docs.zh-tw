@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a24b4a4dd0ffe0c4b4ba988460e10f6bf832766e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155559"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>報表區段對話方塊 (報表產生器)
   當您開啟報表時，報表產生器會驗證此報表只包含一個報表定義語言 (RDL) **\<Section>** 項目。 不支援開啟具有多個 **\<Section>** 項目的報表。  

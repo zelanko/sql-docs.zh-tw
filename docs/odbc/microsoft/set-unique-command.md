@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f58eb771245b9820e27ca4d14c2f69035effa44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159310"
 ---
 # <a name="set-unique-command"></a>SET UNIQUE 命令
 指定是否要將具有重複的索引鍵值的記錄維持索引檔案中。  

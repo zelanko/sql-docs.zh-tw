@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4d793720638ee4a98d99e6a915457d8657a1c325
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215288"
 ---
 # <a name="changes-to-behavior-of-string-length-and-substring"></a>字串長度及子字串行為的變更
   [String-length 函式&#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-string-length)並[substring 函數&#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-substring)函式可能會傳回不同的結果與包含的 XML 資料庫搭配使用時surrogate 字元。  

@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 09d7ffed955615aa2ddfbedc812a0c0a3da3706e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064498"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>SSRS 服務應用程式的佈建訂閱及警示
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱和資料警示需要 SQL Server Agent，並且需要 SQL Server Agent 的權限組態。 如果您看到錯誤訊息指出需要 SQL Server Agent，而您已確認 SQL Server Agent 正在執行，則請更新或驗證權限。 本主題的範圍是 SharePoint 模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，且本主題說明三種可以用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱來更新 SQL Server Agent 權限的方法。 在本主題中用來執行步驟的認證必須要有足夠的權限，才能針對服務應用程式、msdb 和 master 資料庫中的物件授與 RSExecRole 的執行權限。  

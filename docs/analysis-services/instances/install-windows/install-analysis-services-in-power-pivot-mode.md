@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63054783"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>以 Power Pivot 模式安裝 Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "52527755"
 ###  <a name="bkmk_sqleditions"></a> SQL Server Edition 需求  
  並非在所有版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中都提供商業智慧功能。 如需詳細資訊，請參閱 < [Analysis Services 的 SQL Server 2016 版本所支援的功能](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)並[SQL Server 2016 的元件和版本](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
-##  <a name="InstallSQL"></a> 步驟 1:安裝 Power Pivot for SharePoint  
+##  <a name="InstallSQL"></a> 步驟 1：安裝 Power Pivot for SharePoint  
  在此步驟中，您會執行 SQL Server 安裝程式，以在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式中安裝 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器。 在後續步驟中，您針對活頁簿資料模型設定 Excel Services 使用此伺服器。  
   
 1.  執行 [SQL Server 安裝精靈] \(Setup.exe)。  
@@ -77,7 +77,7 @@ ms.locfileid: "52527755"
   
 9. 若您看到另一個 [安裝程式支援規則] ，請檢閱任何警告，然後選取 [下一步] 。  
   
-     **注意：** 由於已啟用 Windows 防火牆，因此您會看到開放通訊埠才可啟用遠端存取的警告。  
+     **注意：** 因為已啟用 Windows 防火牆，您會看到開放通訊埠來啟用遠端存取的警告。  
   
 10. 在 [安裝程式角色]  頁面上，選取 [SQL Server 功能安裝] 。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "52527755"
   
 3.  連接至 Analysis Services 執行個體，例如 **[您的伺服器名稱]\POWERPIVOT**。 如果您可以連接到執行個體，表示已確認服務正在執行。  
   
-##  <a name="bkmk_config"></a> 步驟 2:設定基本 Analysis Services SharePoint 整合  
+##  <a name="bkmk_config"></a> 步驟 2：設定基本 Analysis Services SharePoint 整合  
  下列步驟描述必要的組態變更，讓您可以與 SharePoint 文件庫中的 Excel 進階資料模型互動。 在您安裝 SharePoint 和 SQL Server Analysis Services 之後，完成這些步驟。  
   
 ### <a name="sharepoint-2016"></a>SharePoint 2016  
@@ -215,10 +215,10 @@ ms.locfileid: "52527755"
   
     ```  
   
-##  <a name="bkmk_verify"></a> 步驟 3:確認整合  
+##  <a name="bkmk_verify"></a> 步驟 3：確認整合  
  下列步驟會逐步引導您建立和上傳新的活頁簿，以確認 Analysis Services 整合。 您將需要使用 SQL Server 資料庫才能完成這些步驟。  
   
-1.  **注意：** 如果您已有含交叉分析篩選器或篩選的進階活頁簿，可以將它上傳至 SharePoint 文件庫，然後確認您可以從文件庫檢視中與交叉分析篩選器和篩選互動。  
+1.  **注意：** 如果您已經使用交叉分析篩選器或篩選的進階活頁簿，您可以將它上傳至 SharePoint 文件庫，並確認您能夠與交叉分析篩選器和篩選互動從文件庫檢視。  
   
 2.  在 Excel 中啟動新的活頁簿。  
   

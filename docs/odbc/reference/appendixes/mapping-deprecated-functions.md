@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b59d2604dd9d4b7c3166027c1917dea096b331d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181312"
 ---
 # <a name="mapping-deprecated-functions"></a>對應已淘汰的函式
 本節說明如何已被取代的函式會對應由 ODBC 3 *.x*驅動程式管理員，以確保 ODBC 3 的回溯相容性 *.x*驅動程式所使用的 ODBC 2。*x*應用程式。 驅動程式管理員會執行這項對應，而不論應用程式版本。 因為每個 ODBC 2。*x*下列清單中的函式會對應到對應的 ODBC 3 *.x*函式呼叫在 ODBC 3 時 *.x*驅動程式，而 ODBC 3 *.x*驅動程式不需要實作 ODBC 2。*x*函式。  

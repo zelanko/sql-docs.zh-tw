@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 95d367efc0bf3fb3e3a74bd0ba9d48b9d8f25be2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067764"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
   對於執行的陳述式， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不需要查詢伺服器來描述結果集資料行。 在此情況下，`SQLDescribeCol`不會造成伺服器往返。 像是[SQLColAttribute](sqlnumresultcols.md)，則呼叫`SQLDescribeCol`上備妥但未執行的陳述式會產生伺服器往返。  
@@ -37,7 +37,7 @@ ms.locfileid: "53369840"
   
 ||*DataTypePtr*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
 |-|-------------------|---------------------|------------------------|  
-|DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
+|datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |日期|SQL_TYPE_DATE|10|0|  
 |time|SQL_SS_TIME2|8, 10..16|0..7|  

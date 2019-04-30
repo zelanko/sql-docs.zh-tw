@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9f87ea4b801e9f7c60364e235877f84db810384c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217981"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>連接至 Management Studio 中的報表伺服器
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供物件總管，可讓您連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系列中的任何伺服器並以圖形方式瀏覽其內容。 若為 Reporting Services，您可以使用 [物件總管] 來進行下列作業：  

@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3ee79dc617ed6fc9f49c0b2f95d4df43fcaf9eb4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065336"
 ---
 # <a name="upgrade-a-report-server-database"></a>升級報表伺服器資料庫
   報表伺服器資料庫為一個或多個報表伺服器執行個體提供了儲存裝置。 由於報表伺服器資料庫結構描述可隨著每個新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]版本一起變更，所以此資料庫版本必須符合您所使用的報表伺服器執行個體版本。 在大多數情況下，報表伺服器資料庫可以自動升級，而不需要您採取特定的動作。  

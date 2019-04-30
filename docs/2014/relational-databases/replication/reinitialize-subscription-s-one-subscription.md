@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af1548ad29203f06e6d9cc49c048f1973afa3e3b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131467"
 ---
 # <a name="reinitialize-subscriptions---one-subscription"></a>重新初始化訂閱 - 一個訂閱
   **[重新初始化訂閱]** 對話方塊可讓您將訂閱標示為重新初始化。 重新初始化包含將快照集套用至訂閱者；針對交易式發行集的訂閱，是由散發代理程式執行，而針對合併式發行集的訂閱，則是由合併代理程式執行。  

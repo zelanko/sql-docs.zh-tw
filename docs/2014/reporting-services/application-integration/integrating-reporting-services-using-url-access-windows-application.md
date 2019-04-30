@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb841d187385724ea31b5a7db86fcb323bf10663
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60153917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126234"
 ---
 # <a name="using-url-access-in-a-windows-application"></a>在 Windows 應用程式中使用 URL 存取
   雖然會為 Web 環境最佳化報表伺服器的 URL 存取，不過，您也可以使用 URL 存取來將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表內嵌到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式。 不過，需要 Windows Form 的 URL 存取仍然需要您使用網頁瀏覽器技術。 您可以透過 URL 存取與 Windows Form 使用下列整合案例：  

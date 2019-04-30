@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c238b89f6fefbb158c50531d28d2c234c64f64bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125464"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>選擇資料來源或驅動程式
 資料來源或應用程式所使用的驅動程式有時會硬式編碼應用程式中。 比方說，撰寫由 MIS 部門傳送到另一個資料來源資料會包含名稱的自訂應用程式的這些資料來源的應用程式根本不能運作與任何其他資料來源。 另一個範例是垂直的應用程式，例如一個用於訂單項目。 這類應用程式一律使用相同的資料來源都有已知的應用程式的預先定義結構描述。  

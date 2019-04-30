@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cbaa41c75297d62e84cfc808463214d19c4ff8fa
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126265"
 ---
 # <a name="integrating-reporting-services-using-the-reportviewer-controls"></a>使用 ReportViewer 控制項整合 Reporting Services
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 提供兩個 ReportViewer 控制項將報表檢視功能納入應用程式整合。 一個版本是用於 Windows Form 應用程式，另一個版本則是用於 Web Form 應用程式。 每個控制項都提供類似的功能，但是每個功能都是針對其個別的環境所設計的。 兩個控制項都可以處理已經部署到報表伺服器 (遠端處理模式) 的報表，或是已經複製到尚未安裝 (本機處理模式) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之電腦上的報表。  

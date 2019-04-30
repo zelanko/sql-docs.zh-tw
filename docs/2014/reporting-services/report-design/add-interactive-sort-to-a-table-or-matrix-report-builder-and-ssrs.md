@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1e33b0c3e957e13ea6178a3d7e65279a3be84794
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185927"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>將互動式排序加入至資料表或矩陣 (報表產生器及 SSRS)
   加入互動式排序按鈕，讓使用者變更資料表和矩陣中資料列和資料行的排序次序。 系統僅能以支援使用者互動的轉譯格式支援此功能，例如 HTML。  

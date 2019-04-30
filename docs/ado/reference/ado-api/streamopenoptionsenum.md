@@ -1,5 +1,5 @@
 ---
-title: StreamOpenOptionsEnum |Microsoft Docs
+title: StreamOpenOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a1e7e685e9d3f23d4d1c3317e24f63d7bdac23db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180739"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
 指定選項，開啟[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。 值可以結合 OR 運算。  

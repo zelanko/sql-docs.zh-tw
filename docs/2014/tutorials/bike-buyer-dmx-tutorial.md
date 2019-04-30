@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140534"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Bike Buyer DMX 教學課程
   您將在此教學課程中學會如何使用資料採礦延伸模組 (DMX) 查詢語言，來建立、培訓和探索採礦模型。 您將使用這些採礦模型來建立預測，以判斷客戶是否要購買自行車。  

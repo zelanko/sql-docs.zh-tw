@@ -15,11 +15,11 @@ author: HJToland3
 ms.author: rajpo
 manager: craigg
 ms.openlocfilehash: ac3f4b2ab00b7a2c792788d6e778857c7d563f66
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151862"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>資料移轉小幫手的新功能
 本文章列出新增的項目在每個版本的 Data Migration Assistant (DMA)。
@@ -122,7 +122,7 @@ DMA v1.0 發行時的初始版本，並提供：
 - 探索的資料庫可以受益於升級的目標 SQL Server 平台的新功能。 任何所發現的錯誤會被稱為功能建議，並加以分類成下列區域：
     - 效能
     - 安全性
-    - Storage
+    - 儲存體
 -   若要執行評估的現代化使用者體驗。
 
 ## <a name="see-also"></a>另請參閱

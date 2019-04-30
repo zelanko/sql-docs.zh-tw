@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bc152d3130d903f4b098a495451d2918abcd7329
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151597"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>管理報表伺服器資料庫 (SSRS 原生模式)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署會使用兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫供內部儲存之用。 根據預設，資料庫是命名為 ReportServer 和 ReportServerTempdb。 ReportServerTempdb 是由主要報表伺服器資料庫所建立，用於儲存暫存資料、工作階段資訊和快取報表。  

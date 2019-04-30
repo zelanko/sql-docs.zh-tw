@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c8be5ffca0ad28793b1b5e22bbeabca05001e361
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127252"
 ---
 # <a name="implementing-desktop-database-drivers"></a>實作桌面資料庫驅動程式
 ODBC 資料來源管理員線上說明中可以找到指示和有關如何實作及設定 Microsoft ODBC 桌面資料庫驅動程式的技術提示。 這個檔案可以存取從驅動程式安裝程式常式期間[Microsoft ODBC 資料來源管理員](../../odbc/admin/odbc-data-source-administrator.md)。  
@@ -31,7 +31,7 @@ ODBC 資料來源管理員線上說明中可以找到指示和有關如何實作
   
 -   [ODBC 元件檔案](../../odbc/microsoft/odbc-component-files.md)  
   
--   [硬體和軟體需求](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
+-   [硬體及軟體需求](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
   
 -   [桌面資料庫驅動程式的描述元](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
   

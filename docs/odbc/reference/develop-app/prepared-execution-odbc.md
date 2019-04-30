@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c7bd6bc8281dd6bdc3bcfbd437380b2d5269ee43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199108"
 ---
 # <a name="prepared-execution-odbc"></a>備妥的執行 ODBC
 備妥的執行是有效的方式來執行陳述式一次以上。 第一次編譯的陳述式，或是*備妥，* 到存取計畫。 然後執行一或多次稍後存取計劃。 如需有關存取計劃的詳細資訊，請參閱[處理 SQL 陳述式](../../../odbc/reference/processing-a-sql-statement.md)。  

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9f73710f1cdb13477736d3b7496fb26b76f90e3
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184494"
 ---
 # <a name="winsock-proxy-configuration-not-supported"></a>不支援 Winsock Proxy 組態
   無法使用設定 Winsock proxy [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]工具。  

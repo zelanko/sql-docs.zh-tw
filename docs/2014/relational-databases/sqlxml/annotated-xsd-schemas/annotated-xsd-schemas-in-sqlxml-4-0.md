@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 85142b248fe8e734aeb1700d8eee353df1684d51
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131197"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0 中的註解式 XSD 結構描述
   本章節提供在 SQLXML 4.0 中使用註解式 XSD 結構描述的相關資訊。 在舊版的 SQLXML 中，XML-Data Reduced (XDR) 結構描述有提供類似的功能。 本章節也提供用於舊版應用程式的 XDR 資訊。  

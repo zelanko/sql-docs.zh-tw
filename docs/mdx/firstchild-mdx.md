@@ -1,5 +1,5 @@
 ---
-title: FirstChild (MDX) |Microsoft 文件
+title: FirstChild (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ed769da991c54b4ae7bc85091a652a27f5399a73
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155180"
 ---
 # <a name="firstchild-mdx"></a>FirstChild (MDX)
 
@@ -42,6 +42,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>另請參閱  
  [LastChild &#40;MDX&#41;](../mdx/lastchild-mdx.md)   
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

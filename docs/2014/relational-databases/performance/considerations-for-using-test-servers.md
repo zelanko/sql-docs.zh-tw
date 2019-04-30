@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c1ed99e6ee3ef6385e6041044e9b2cb829b1b3ce
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151147"
 ---
 # <a name="considerations-for-using-test-servers"></a>使用測試伺服器的考量
   使用測試伺服器微調實際伺服器上的資料庫，是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 的重要優點。 您可利用這項功能，在不需將實際資料從實際伺服器複製到測試伺服器的情況下，將微調負擔卸載到測試伺服器上。  

@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5472595383c7e4fcf448374c1fd85587246328f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199218"
 ---
 # <a name="c-data-types-in-odbc"></a>ODBC 中的 C 資料類型
-ODBC 定義的 C 資料類型所使用的應用程式變數和其對應的型別識別項。 這些使用繫結至結果集資料行和陳述式參數的緩衝區。 例如，假設應用程式想要擷取成字元格式的結果集資料行中的資料。 它會宣告變數與 SQLCHAR * 資料類型，並將此變數繫結 SQL_C_CHAR 的型別識別項的結果集資料行。 如需 C 資料類型和類型識別碼的完整清單，請參閱[附錄 d： 資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
+ODBC 定義的 C 資料類型所使用的應用程式變數和其對應的型別識別項。 這些使用繫結至結果集資料行和陳述式參數的緩衝區。 例如，假設應用程式想要擷取成字元格式的結果集資料行中的資料。 它會宣告變數與 SQLCHAR * 資料類型，並將此變數繫結 SQL_C_CHAR 的型別識別項的結果集資料行。 如需 C 資料類型和類型識別碼的完整清單，請參閱[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
  ODBC 也定義成 C 資料類型從每個 SQL 資料類型的預設對應。 例如，資料來源中的 2 位元組的整數會對應至應用程式中的 2 位元組的整數。 若要使用預設對應，應用程式會指定 SQL_C_DEFAULT 型別識別項。 不過，不建議使用這個識別項的互通性的原因。  
   

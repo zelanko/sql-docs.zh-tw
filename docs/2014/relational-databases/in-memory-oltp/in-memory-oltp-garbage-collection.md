@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a28f2401f11f20f8891dbe71537ce2240a570ed8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158254"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>記憶體中的 OLTP 記憶體回收
   如果某個不再使用的交易刪除資料列，則該資料列視為過時。 過時的資料列適合進行記憶體回收。 以下是 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]之記憶體回收的特性：  

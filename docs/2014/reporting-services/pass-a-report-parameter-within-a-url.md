@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f05aaedf8e3b8bb15d5d15d47823752832e659a5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188268"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>在 URL 內傳遞報表參數
   您可以在報表 URL 中包括報表參數，以便將它們傳遞給報表。 這些 URL 參數不會加上前置詞，因為它們會直接傳遞給報表處理引擎。  

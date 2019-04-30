@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9666e611b9f0a0a4348cc75a2adb1e8b711c60fc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130266"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>捨棄對查詢所做的變更 (Visual Database Tools)
   在儲存對查詢定義所做的變更之前，您可以捨棄這些變更。 一旦儲存之後，就無法回復為先前的狀態。  

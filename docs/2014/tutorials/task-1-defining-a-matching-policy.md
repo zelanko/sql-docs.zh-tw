@@ -1,5 +1,5 @@
 ---
-title: 工作 1:定義比對原則 |Microsoft Docs
+title: 工作 1：定義比對原則 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 85a6ca52573bec3d7e6c19e68f809048ed0786db
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222803"
 ---
-# <a name="task-1-defining-a-matching-policy"></a>工作 1:定義比對原則
+# <a name="task-1-defining-a-matching-policy"></a>工作 1：定義比對原則
   在這項工作中，您會建立包含一個規則的比對原則。 此規則將會有一個必要條件：**Supplier ID**，也就是說，Supplier Id 必須符合才能使用規則中的其他定義域。 此規則會使用其他兩個定義域：**Supplier Name**與**相似度**值設定為**70%** 並**Contact Email**使用**相似度**值設定為**30%**。  
   
 1.  中的主頁面**DQS 用戶端**，按一下**向右箭號**旁**供應商**知識，然後選取**比對原則**。  

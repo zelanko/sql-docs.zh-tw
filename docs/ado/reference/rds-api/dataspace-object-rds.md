@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d75a5dcd8a09388c031e4e01c8bb8b9c1d62bb80
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134482"
 ---
 # <a name="dataspace-object-rds"></a>DataSpace 物件 (RDS)
 > [!IMPORTANT]
@@ -29,7 +29,7 @@ ms.locfileid: "51600558"
   
  遠端資料服務需要商務物件 proxy，以便用戶端元件可以與位於中介層商務物件通訊。 封裝、 unpackaging，和傳輸 （封送處理） 的應用程式，幫助 proxy[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)跨處理序或電腦界限的資料。  
   
- 遠端資料服務會使用**rds。DataSpace**物件的[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法用來建立商務物件 proxy。 每當建立它的中介層商務物件互相對應的執行個體時，動態建立商務物件 proxy。 遠端資料服務支援下列通訊協定： HTTP、 HTTPS （HTTP 安全通訊端）、 DCOM 和同處理序 （用戶端元件和商務物件位於相同的電腦上）。  
+ 遠端資料服務會使用**rds。DataSpace**物件的[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法用來建立商務物件 proxy。 每當建立它的中介層商務物件互相對應的執行個體時，動態建立商務物件 proxy。 遠端資料服務支援下列通訊協定：HTTP、 HTTPS （HTTP 安全通訊端）、 DCOM 和同處理序 （用戶端元件和商務物件位於相同的電腦上）。  
   
 > [!NOTE]
 >  以 「 無狀態 」 的方式運作的 RDS 時**rds。DataSpace**物件使用的 HTTP 或 HTTPS 通訊協定。 也就是伺服器傳回回應之後，會捨棄任何有關用戶端要求的內部資訊。  

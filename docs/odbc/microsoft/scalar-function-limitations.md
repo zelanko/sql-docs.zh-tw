@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6bfb6ff3ba39400278db23931b4c9420e506c973
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127941"
 ---
 # <a name="scalar-function-limitations"></a>純量函式限制
 純量函數僅支援使用 ODBC 標準格式。

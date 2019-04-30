@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1bff3c8a155e1e9378acbb659f00817f478382e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161601"
 ---
 # <a name="grandchild-aggregates"></a>孫系彙總
 可能會提供形狀命令的子句中所建立的章節資料行*章別名*（通常是使用 AS 關鍵字）。 您可以識別形狀的任何一章中的任何資料行**資料錄集**識別包含資料行的子系的完整名稱。 比方說，如果父本章 chap1，包含子章節，chap2，具有 amount 資料行時，amt，則限定的名稱會是 chap1.chap2.amt。限定的名稱可用做為引數，其中一個彙總函式 （SUM、 AVG、 MAX、 最小值、 計數、 STDEV，或任何）。  

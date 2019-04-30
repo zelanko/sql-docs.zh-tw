@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150630"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>啟動及使用 Database Engine Tuning Advisor
   此主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中啟動及使用 Database Engine Tuning Advisor。 如需如何在微調資料庫後檢視及處理結果的資訊，請參閱 [檢視及處理 Database Engine Tuning Advisor 的輸出](database-engine-tuning-advisor.md)。  
@@ -443,7 +443,7 @@ database_name.owner_name.table_name
  只包含加入索引檢視的建議。 不建議叢集與非叢集索引。  
   
  **包含篩選的索引**  
- 包含加入篩選之索引的建議。 此選項是當您選取其中一個實體設計結構使用：**索引和索引檢視表**，**索引**，或**非叢集索引**。  
+ 包含加入篩選之索引的建議。 如果您選取下列其中一個實體設計結構，即可使用這個選項：[索引與索引檢視]、[索引] 或 [非叢集索引]。  
   
  **[索引]**  
  只包含加入叢集與非叢集索引的建議。 不建議索引檢視。  

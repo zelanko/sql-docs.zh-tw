@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157240"
 ---
 # <a name="supported-sql-server-features"></a>支援的 SQL Server 功能
   本主題會討論在使用記憶體最佳化的物件時，所支援或不支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。  
@@ -63,7 +63,7 @@ ms.locfileid: "53375030"
   
 -   與 AlwaysOn 整合： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供幾個選項用於建立伺服器或資料庫的高可用性，包括 AlwaysOn。 如需詳細資訊，請參閱 [高可用性解決方案 &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)。  
   
--   記錄傳送：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄傳送可讓您將「主要伺服器」執行個體上「主要資料庫」中的交易記錄備份，自動傳送到個別的「次要伺服器」執行個體上的一個或多個「次要資料庫」。 如需詳細資訊，請參閱[關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
+-   記錄傳送：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄傳送可讓您自動從主要伺服器執行個體上的主要資料庫的交易記錄備份傳送到個別的次要伺服器執行個體上的一或多個次要資料庫。 如需詳細資訊，請參閱[關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
 -   訂閱者端記憶體最佳化資料表的異動複寫受到支援，但是有一些限制。 如需詳細資訊，請參閱[複寫至記憶體最佳化資料表訂閱者](../replication/replication-to-memory-optimized-table-subscribers.md)。  
   

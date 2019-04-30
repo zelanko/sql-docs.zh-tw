@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3128dee728cbb2e9eda6e87232675558fe9413e3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188505"
 ---
 # <a name="new-data-source-page-report-manager"></a>新增資料來源頁面 (報表管理員)
   使用 [新增資料來源] 頁面來建立共用資料來源項目。 共用資料來源定義外部資料來源的連接。 您可以利用共用資料來源來建立和維護資料來源連接的設定，與使用該資料來源的報表、模型和資料驅動訂閱分開處理。  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6935c6a113aa90d656b6aa91c5fd840856b11774
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224944"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>加入帶狀線來強調圖表資料 (報表產生器及 SSRS)
   帶狀線 (或稱寬帶) 是水平或垂直的範圍，這些範圍會以規則或自訂的間隔來繪製圖表背景的陰影。 您可以使用區域線：  

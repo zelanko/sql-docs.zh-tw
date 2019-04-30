@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156590"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>SQL Server 2014 中的報表產生器
   報表產生器是一個報表撰寫環境，適合喜歡在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 環境中工作的商務使用者使用。 當您設計報表時，可以指定要取得資料的位置、要取得的資料，以及要顯示資料的方式。 當您執行報表時，報表處理器會採用已指定的所有資訊、擷取資料，然後將它與報表配置結合，以便產生報表。 您可以在報表產生器中預覽報表，也可以將報表發行至報表伺服器或處於 SharePoint 整合模式的報表伺服器，讓其他人執行報表。  

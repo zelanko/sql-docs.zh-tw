@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 846e7960e9aca4bfb5deea8f50eae3c8a2f58c70
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184426"
 ---
 # <a name="sequence-properties-general-page"></a>順序屬性 (一般頁面)
   建立順序物件，並指定其屬性。 序列是使用者定義之結構描述繫結的物件，該物件會根據建立序列所使用的規格產生一連串的數值。 數值序列會在定義的間隔依照遞增或遞減順序來產生，而且在用完時可設定為重新啟動 (循環)。 順序不會與特定資料表產生關聯，與識別欄位不同。 應用程式會參考順序物件，以擷取它的下一個值。 順序與資料表之間的關聯性是由應用程式所控制。 使用者的應用程式可以參考序列物件，並協調跨越多個資料列和資料表的值。  

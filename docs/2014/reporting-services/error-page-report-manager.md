@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b5e8c919b496ea739b6152a6159b5ffae62dfbd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164676"
 ---
 # <a name="error-page-report-manager"></a>錯誤頁面 (報表管理員)
   使用 [錯誤] 頁面即可檢視錯誤狀況的詳細資料。 伺服器或工作階段為基礎的錯誤會出現此頁面上。 有關特定頁面控制項的驗證錯誤，則會內嵌顯示於該控制項旁。  

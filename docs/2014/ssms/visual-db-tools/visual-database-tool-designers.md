@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 773ceb4aedddd6a39df6487bd36b47b83f7fa9a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63227036"
 ---
 # <a name="visual-database-tool-designers"></a>Visual Database Tool 設計工具
   Visual Database Tools 是設計組合工具，可用來使用資料來源。 您可以使用這些工具來建立查詢、設計或修改資料庫結構，或是更新資料。 這些工具包括資料庫圖表設計工具、資料表設計師以及查詢和檢視設計師。  

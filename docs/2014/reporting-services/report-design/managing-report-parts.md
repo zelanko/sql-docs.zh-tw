@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f7564a37766972782a5c118ced64298b7f4ce076
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209277"
 ---
 # <a name="managing-report-parts"></a>管理報表組件
   開頭[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，報表組件可以發行至報表伺服器，並重複使用在其他報表和其他使用者有適當的權限。  

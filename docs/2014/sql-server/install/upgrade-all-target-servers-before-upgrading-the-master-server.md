@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97272209c1ceba780711ecf4a07178ddf8943d49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156721"
 ---
 # <a name="upgrade-all-target-servers-before-upgrading-the-master-server"></a>先升級所有目標伺服器後再升級主要伺服器
   升級主要伺服器之前，請先升級所有設定為目標伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦。  
@@ -37,7 +37,7 @@ ms.locfileid: "48061939"
 ## <a name="corrective-action"></a>更正動作  
  如果您無法在升級主要伺服器之前升級所有目標伺服器，就必須在升級之後，脫離所有目標伺服器並重新編列它們。  
   
- 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜將整個企業的管理自動化＞、＜如何：使目標伺服器脫離主要伺服器＞和＜如何：將目標伺服器編列至主要伺服器＞。  
+ 如需詳細資訊，請參閱 「 自動化整個企業的管理，"的主題"How to:脫離目標伺服器從主要伺服器 」 和 「 如何：編列至主要目標伺服器 」 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Agent 升級問題](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)   

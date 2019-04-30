@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7acd72b5386eed5e78ddcd2fe1cd0344905fa833
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050974"
 ---
 # <a name="spstmtstarting-event-class"></a>SP:StmtStarting 事件類別
   SP:StmtStarting 事件類別指出已啟動預存程序內的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  

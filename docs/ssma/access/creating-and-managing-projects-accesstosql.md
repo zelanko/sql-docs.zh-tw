@@ -19,11 +19,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1cf23a076f7e4d7e873f48988364c51b1daa03b0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138797"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>建立和管理專案 (AccessToSQL)
 若要將 Access 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您必須先建立 SSMA 專案。 專案是包含您想要移轉至 Access 資料庫的相關中繼資料的檔案[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，目標執行個體的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 移轉的物件和資料，將會接收[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]連線資訊和專案設定。  
@@ -90,7 +90,7 @@ SSMA 會建立專案檔。 您現在可以執行的下一個步驟[新增一或�
   
         儲存中繼資料，可能需要幾分鐘的時間。 如果您不想在此時儲存中繼資料，請勿選取任何核取方塊。  
   
-    2.  按一下 **[儲存]**。  
+    2.  按一下 [儲存] 。  
   
         SSMA 會剖析存取結構描述，並將中繼資料儲存到專案檔。  
   

@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e0d2245dbba51d69d6dd31fd91044d3efd5b07b0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192032"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>NumberOfProps 屬性 (ClientNetworkProtocol 類別)
   取得用戶端的屬性數目的網路所指定的通訊協定[SetOrderValue 方法 （ClientNetworkProtocol 類別）](clientnetworkprotocol-class.md)。  

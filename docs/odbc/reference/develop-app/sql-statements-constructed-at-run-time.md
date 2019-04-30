@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0573851ee93bda4aa33e8645148cf2ee66200bee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149126"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>在執行階段建構 SQL 陳述式
 通常執行臨機操作分析的應用程式在執行階段建立 SQL 陳述式。 例如，試算表可能會允許使用者選取要從中擷取資料的資料行：  

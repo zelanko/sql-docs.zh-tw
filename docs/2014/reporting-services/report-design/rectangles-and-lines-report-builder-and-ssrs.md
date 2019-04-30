@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0933593220b73b8d57d76645ebea05d733e5661
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215588"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>矩形和線條 (報表產生器及 SSRS)
   矩形和線條可在報表內建立視覺效果。 您可以從 [主資料夾] 索引標籤的 [框線] 區段設定這些報表項目的顯示屬性，而且可以使用 [屬性] 窗格來設定其他屬性。 您可以將背景色彩或影像、工具提示或書籤等功能加入至矩形。  

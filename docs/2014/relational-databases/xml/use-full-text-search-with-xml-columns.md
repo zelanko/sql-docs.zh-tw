@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 897002d437dcee8a6c64750f964c957c18a077f3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193258"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>使用 XML 資料行進行全文檢索搜尋
   您可以在 XML 資料行上建立全文檢索索引，以檢索 XML 值的內容，但忽略 XML 標記。 元素標記會當做 Token 界限來使用。 其中會檢索下列項目：  
@@ -33,7 +33,7 @@ ms.locfileid: "58530900"
   
 2.  接著，查詢那些在 XML 資料行上使用 XML 索引的 XML 值。  
   
-## <a name="example-combining-full-text-search-with-xml-querying"></a>範例合併全文檢索搜尋與 XML 查詢  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>範例將全文檢索搜尋與 XML 查詢合併  
  在 XML 資料行上建立全文檢索之後，下列查詢會確認 XML 值在書名中有包含 "custom" 這個字：  
   
 ```  
@@ -49,7 +49,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  此外，全文檢索搜尋會使用詞幹，但 XQuery **contains()** 是逐字比對的相符項。 下一個範例將舉例說明之間的差異。  
   
-## <a name="example-full-text-search-on-xml-values-using-stemming"></a>範例在使用詞幹分析的 XML 值上的全文檢索搜尋  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>範例使用詞幹對 XML 值進行全文檢索搜尋  
  在上個範例中執行的 XQuery **contains()** 檢查通常是無法排除的。 請考量這項查詢：  
   
 ```  

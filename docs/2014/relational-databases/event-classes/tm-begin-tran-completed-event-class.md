@@ -1,5 +1,5 @@
 ---
-title: TM:Begin Tran Completed 事件類別 |Microsoft Docs
+title: TM：Begin Tran Completed 事件類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54247d32ab508601fb6768e1de493a98a3369b65
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061226"
 ---
-# <a name="tm-begin-tran-completed-event-class"></a>TM:Begin Tran Completed 事件類別
+# <a name="tm-begin-tran-completed-event-class"></a>TM：Begin Tran Completed 事件類別
   TM:Begin Tran Completed 事件類別指出 BEGIN TRANSACTION 要求已完成。 要求是從用戶端透過交易管理介面傳送。  
   
-## <a name="tm-begin-tran-completed-event-class-data-columns"></a>TM:Begin Tran Completed 事件類別資料行  
+## <a name="tm-begin-tran-completed-event-class-data-columns"></a>TM：Begin Tran Completed 事件類別資料行  
   
 |資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  

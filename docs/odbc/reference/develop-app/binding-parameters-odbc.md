@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d62c0864678e116e30a0673bdf2625d70de0cedd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199603"
 ---
 # <a name="binding-parameters-odbc"></a>繫結參數 ODBC
 SQL 陳述式中的每個參數必須是相關聯，或*繫結，* 給應用程式之前執行的陳述式中的變數。 當應用程式會將變數繫結至參數時，它會描述該變數-位址、 C 資料類型等位，驅動程式。 它也會描述參數本身-SQL 資料類型、 有效位數和等等。 驅動程式會將此資訊儲存在結構中，它會維護該陳述式，並從變數擷取值，陳述式執行時使用的資訊。  

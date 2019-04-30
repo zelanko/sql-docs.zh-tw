@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d2823ad2eefd8855ba5e6ebd706e99271d30da0a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223303"
 ---
 # <a name="select-the-data-source"></a>選取資料來源
   使用報表精靈的這個頁面，即可定義報表的資料來源。  

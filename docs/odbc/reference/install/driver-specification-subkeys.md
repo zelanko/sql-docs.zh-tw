@@ -17,31 +17,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b15aa278e2fe38afe93f5628433a6c8f4b41cd8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198315"
 ---
 # <a name="driver-specification-subkeys"></a>驅動程式規格子機碼
 ODBC 驅動程式子機碼中所列每個驅動程式都有自己的子機碼。 這個子機碼有相同名稱下的 ODBC 驅動程式子機碼的對應值。 這個子機碼底下的值清單的驅動程式和驅動程式安裝程式 Dll，所傳回的驅動程式關鍵字值的完整路徑**SQLDrivers**，並使用計數。 值的格式是下表所示。  
   
-|名稱|資料類型|data|  
+|名稱|資料類型|資料|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|ConnectFunctions|REG_SZ|{**Y**&AMP;#124;**N**} {**Y**&AMP;#124;**N**} {**Y**&AMP;#124;**N**}|  
-|CreateDSN|REG_SZ|*驅動程式說明*|  
-|驅動程式|REG_SZ|*驅動程式 DLL 路徑*|  
+|ConnectFunctions|REG_SZ|{**Y**&#124;**N**}{**Y**&#124;**N**}{**Y**&#124;**N**}|  
+|CreateDSN|REG_SZ|*driver-description*|  
+|驅動程式|REG_SZ|*driver-DLL-path*|  
 |DriverODBCVer|REG_SZ|*nn.nn*|  
-|FileExtns|REG_SZ|**\*.** *檔案 extension1*[**，\*。** *檔案 extension2*]...|  
+|FileExtns|REG_SZ|**\*.** *檔案 extension1*[**，\*。** *file-extension2*]...|  
 |FileUsage|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|安裝程式|REG_SZ|*安裝程式 DLL 路徑*|  
+|安裝程式|REG_SZ|*setup-DLL-path*|  
 |SQLLevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
 |UsageCount|REG_DWORD|*計數*|  
   
  下表顯示每個關鍵字的使用。  
   
-|關鍵字|使用方式|  
+|關鍵字|使用量|  
 |-------------|-----------|  
 |**APILevel**|數字，表示 ODBC 介面驅動程式支援的一致性層級：<br /><br /> 0 = 無<br /><br /> 1 = 受支援的層級 1<br /><br /> 2 = 層級 2 支援<br /><br /> 這必須是 SQL_ODBC_INTERFACE_CONFORMANCE 選項中所傳回的值相同**SQLGetInfo**。|  
 |**CreateDSN**|若要安裝驅動程式時，會建立一或多個資料來源的名稱。 系統資訊必須包含一個資料來源規格 區段中列出的每個資料來源**CreateDSN**關鍵字。 不應該包含下列各節**驅動程式**關鍵字，因為這是區段中指定驅動程式規格，但必須包含足夠的資訊**ConfigDSN**驅動程式中的函式安裝程式 DLL，而不會顯示任何對話方塊建立資料來源的規格。 如需資料來源規格區段的格式，請參閱[資料來源規格子機碼](../../../odbc/reference/install/data-source-specification-subkeys.md)。|  

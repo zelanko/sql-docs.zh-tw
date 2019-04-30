@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b69440f38af5cd71e481325d5d4df577d4c267b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070825"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>使用 ISequentialStream 從 FILESTREAM 資料行擷取資料 (OLE DB)
   此範例會範例如何在 ICommandText 介面中使用 ISequentialStream 介面來擷取 Filestream 資料行中的單一記錄。  

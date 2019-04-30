@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b150c7e42cf5389783706138c055c4a7fdea9b05
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63219168"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>將新的或現有的報表加入報表專案 (SSRS)
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，您可以使用 [報表精靈] 或將新的空白報表加入至專案，藉以加入新的報表。 您也可以加入現有的報表。 新增報表之後，您就可以看到報表名稱列在專案的 [報表] 資料夾下。  

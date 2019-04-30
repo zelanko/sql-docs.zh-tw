@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 076db2370f027b0d7dffeccb294899b48a065c40
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188647"
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>了解 SQL Server Management Studio 視窗管理
    [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的工具視窗是機能性、靈活性和有效性都非常高的系統，可讓您執行下列動作：  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1fdc41aaaad19317db3b3795cc63d137b19600c2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63055261"
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013"></a>安裝或解除安裝 PowerPivot for SharePoint 增益集 (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "52418509"
   
 -   包含 SharePoint 2013 和 SharePoint 模式之 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的單一伺服器部署不需要此增益集。 當您以 SharePoint 模式安裝 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器時，就會包含此增益集所安裝的元件。 如需增益集部署範例的圖表，請參閱 [SQL Server BI 功能的部署拓撲](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)。  
   
- **注意：** 本主題將描述如何安裝 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 方案檔以及 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 組態工具。 安裝之後，請參閱下列主題以取得組態工具和其他功能的相關資訊：[設定 Power Pivot 及部署方案 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)。  
+ **注意：** 本主題描述如何安裝[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]方案檔和[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint 2013 組態工具。 安裝之後，請參閱下列主題以取得組態工具和其他功能的相關資訊：[設定 Power Pivot 及部署方案 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)。  
   
  如需如何下載 **spPowerPivot.msi**, see [Microsoft® SQL Server® 2014 Power Pivot® for Microsoft SharePoint®](http://go.microsoft.com/fwlink/?LinkID=324854)的相關資訊  
   
@@ -42,7 +42,7 @@ ms.locfileid: "52418509"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分析管理物件。  
   
--   **後端服務：** 如果您使用 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 建立包含分析資料的活頁簿，伺服器環境必須具有以執行 SharePoint 模式 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 之 BI 伺服器設定的 Excel Services，才可存取該資料。 您可以在已安裝 SharePoint Server 2013 的電腦或在沒有 SharePoint 軟體的另一部電腦上執行 SQL Server 安裝程式。 Analysis Services 沒有 SharePoint 的相依性。  
+-   **後端服務：** 如果您使用[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for Excel 建立包含分析資料的活頁簿，您必須執行之 BI 伺服器設定的 Excel Services[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]來存取該資料的伺服器環境中的 SharePoint 模式。 您可以在已安裝 SharePoint Server 2013 的電腦或在沒有 SharePoint 軟體的另一部電腦上執行 SQL Server 安裝程式。 Analysis Services 沒有 SharePoint 的相依性。  
   
      如需有關安裝、解除安裝及設定後端服務的詳細資訊，請參閱以下主題：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "52418509"
 ##  <a name="bkmk_where_to_install"></a> 在何處安裝 spPowerPivot.msi？  
  建議的最佳作法是在 SharePoint 伺服器陣列的所有伺服器上安裝 **spPowerPivot.msi** 以保持組態一致性，包括應用程式伺服器和 Web 前端伺服器。 安裝程式套件包含 Analysis Services 資料提供者以及 [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 組態工具。 當您安裝 **spPowerPivot.msi** 時，可以排除個別元件來自訂安裝。  
   
- **資料提供者：** 數項 SharePoint 和 SQL Server 技術使用 Analysis Services 資料提供者，包括 Excel Services、PerformancePoint Services 和 Power View。 在所有 SharePoint 伺服器上安裝 **spPowerPivot.msi** ，可確保完整的 Analysis Services 資料提供者集和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 連接在整個伺服器陣列中是一致可用的。  
+ **資料提供者：** 數項 SharePoint 和 SQL Server 技術使用 Analysis Services 資料提供者，包括 Excel Services、 PerformancePoint Services 和 Power View。 在所有 SharePoint 伺服器上安裝 **spPowerPivot.msi** ，可確保完整的 Analysis Services 資料提供者集和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 連接在整個伺服器陣列中是一致可用的。  
   
 > [!NOTE]  
 >  您必須使用 **spPowerPivot.msi**，在 SharePoint 2013 伺服器上安裝 Analysis Services 資料提供者。 不支援 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 功能套件中的其他安裝程式套件，因為這些套件不包含資料提供者在此環境中需要的 SharePoint 2013 支援檔案。  
@@ -68,7 +68,7 @@ ms.locfileid: "52418509"
   
 -   中的伺服器[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]模式。 Excel Services 會使用 SQL Server Analysis Services 執行個體當做 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器。 Analysis Services 可在本機或遠端電腦上執行。  
   
--   **權限：** 若要安裝 [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)]，目前使用者必須是電腦的系統管理員以及 SharePoint 伺服器陣列管理員群組的成員。  
+-   **權限：** 若要安裝[!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)]，目前的使用者必須是系統管理員之電腦以及 SharePoint 伺服器陣列管理員群組。  
   
 -   如需 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 需求和必要條件的詳細資訊，請瀏覽 [Analysis Services SharePoint 模式伺服器的硬體和軟體需求 (SQL Server 2014)](http://msdn.microsoft.com/library/fb86ca0a-518c-4c61-ae78-7680c57fae1f)。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "52418509"
   
 4.  在 **[特徵選取]** 頁面上，已預設選取所有功能。  
   
-5.  按 [下一步] 。  
+5.  按一下 [下一步] 。  
   
 6.  按一下 **[安裝]** 完成安裝。  
   

@@ -1,5 +1,5 @@
 ---
-title: 使用 SSIS PDW 目的地配接器建立指令碼工作 |Microsoft 文件
+title: 使用 SSIS PDW 目的地配接器建立指令碼工作 |Microsoft Docs
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
 manager: craigg
@@ -10,14 +10,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 4f1f668c0fca14c81173141df3767319f987c9a9
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142300"
 ---
-# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>建立使用 SSIS Parallel Data Warehouse 目的地配接器的指令碼工作
-此 SSIS 封裝的指令碼是使用 SSIS PDW 目的地配接器程式碼範例。  Integration Services 指令碼工作可讓您在.Net 應用程式內容中的 SSIS 控制流程中執行幾乎任何作業，即可達成。 
+# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>建立會使用平行處理資料倉儲 SSIS 目的地配接器的指令碼工作
+此 SSIS 封裝的指令碼是使用 SSIS PDW 目的地配接器的程式碼範例。  Integration Services 指令碼工作可讓您執行.Net 應用程式內容中的 SSIS 控制流程可以完成幾乎任何作業。 
   
 ## <a name="sample-code"></a>範例程式碼  
   
@@ -27,9 +27,9 @@ ms.locfileid: "31538968"
   
 3.  編輯指令碼，使用下面提供的程式碼。 自訂您的環境的指令碼進行下列變更：  
   
-    -   您必須保留的命名空間的指令碼工作所建立的指令碼。 請注意命名空間名稱`namespace ST_<GUID>`和編輯下面變更指令碼*ST_<GUID>* 原始*GUID*指令碼工作。  
+    -   您必須保留指令碼工作所建立的指令碼的命名空間。 請注意命名空間名稱`namespace ST_<GUID>`並編輯下列指令碼，變更*ST_<GUID>* 原始*GUID*指令碼工作。  
   
-    -   四個取代的預留位置值*XXXXXXXX*適用於您的環境，主要是動作的值。  
+    -   四個取代的預留位置值*XXXXXXXX*適用於您環境和預定的動作的值。  
   
     ```c#  
     #region Help:  Introduction to the script task  
@@ -265,7 +265,7 @@ ms.locfileid: "31538968"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
-[With Integration Services 載入資料](load-with-ssis.md)  
+[使用 Integration Services 載入資料](load-with-ssis.md)  
 
 <!-- MISSING LINK
 [Install Integration Services Destination Adapters](install-integration-services-destination-adapters-sql-server-pdw.md)

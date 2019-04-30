@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3604e9f3bd47a10ae1a6e5ec401b198675c2d3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149292"
 ---
 # <a name="how-is-metadata-used"></a>中繼資料的使用方式為何？
 應用程式需要大部分結果集作業的中繼資料。 例如，應用程式會使用資料行的資料類型來決定要繫結到該資料行的變數種類。 它會使用字元資料行的位元組長度來決定它必須顯示該資料行中的多少空間。 應用程式決定資料行之中繼資料的方式取決於應用程式的類型。  

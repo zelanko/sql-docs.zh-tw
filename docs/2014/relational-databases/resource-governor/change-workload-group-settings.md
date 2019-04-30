@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2bcb3cfa20948e6bb0964d29331ca1d426b8916
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199910"
 ---
 # <a name="change-workload-group-settings"></a>變更工作負載群組設定
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來變更工作負載群組設定。  
   
--   **開始之前：**[限制事項](#LimitationsRestrictions)，[權限](#Permissions)  
+-   **開始之前：**[限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **若要變更的設定工作負載群組，請使用：**[SQL Server Management Studio](#ChgWGProp)， [Transact SQL](#ChgWGTSQL)  
+-   **若要變更工作負載群組的設定，請使用下列方式：**[SQL Server Management Studio](#ChgWGProp)、[Transact-SQL](#ChgWGTSQL)  
   
 ## <a name="before-you-begin"></a>開始之前  
   

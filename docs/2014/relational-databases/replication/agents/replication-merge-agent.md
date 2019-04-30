@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec21ff98d49cff26bde48452a30fd347c23782fe
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216004"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   「複寫合併代理程式」是一個公用程式可執行檔，它會將資料庫資料表中保存的初始快照集套用至「訂閱者」。 此外，它也會合併建立初始快照集之後在「發行者」端發生的累加資料變更，並根據您設定的規則或使用您建立的自訂解析程式來調解衝突。  

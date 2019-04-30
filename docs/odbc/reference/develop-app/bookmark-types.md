@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f5c5a126ea220f055349ad00dc950281606ed4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199249"
 ---
 # <a name="bookmark-types"></a>書籤類型
 在 ODBC 3 的所有書籤 *.x*是可變長度的書籤。 這可讓主索引鍵或唯一索引的資料表，來為書籤與相關聯。 書籤也可以是 32 位元值，如 ODBC 2 中所使用。*x*。 若要指定資料指標，而 ODBC 3 搭配使用的書籤 *.x*應用程式設定 SQL_UB_VARIABLE SQL_ATTR_USE_BOOKMARK 陳述式屬性。 系統會自動使用可變長度的書籤。  

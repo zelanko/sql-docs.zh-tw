@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b071494697d21a37f4420889a8f60cc35fe3d8b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049884"
 ---
 # <a name="deferred-buffers"></a>延遲的緩衝區
 A*延後的緩衝區*是其中一個使用其值的某個時間點*之後*函式呼叫中指定。 例如， **SQLBindParameter**用來建立關聯，或*繫結，* 資料緩衝區中，使用 SQL 陳述式中的參數。 應用程式指定的參數數目，並將傳遞地址、 位元組長度和類型的緩衝區。 驅動程式會將此資訊儲存，但不會檢查緩衝區的內容。 稍後，當應用程式執行的陳述式，驅動程式擷取的資訊，並使用它來擷取參數資料，並將它傳送至資料來源。 因此，會延後的輸入緩衝區中的資料。 延後的緩衝區會有一個函式中指定，並在另一個使用，因為它是應用程式的程式設計錯誤釋放延後的緩衝區時，驅動程式仍需要它的存在;如需詳細資訊，請參閱 < [Allocating 及釋放緩衝區](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)稍後這一節。  

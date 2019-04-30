@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f117c8ba2bc933747c725662100cf438dcd67a1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185946"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>將程式碼加入至報表 (SSRS)
   在任何運算式中，您可以呼叫自己的自訂程式碼。 您可以透過下列兩個方法來提供程式碼：  

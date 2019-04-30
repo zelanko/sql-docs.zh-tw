@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc62e7b5225c434bac33630f2f0cf8f39c72bfc9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199299"
 ---
 # <a name="block-cursors"></a>區塊資料指標
 許多應用程式花費大量時間將在網路上的資料。 此時間部分所花費的實際透過網路將資料以及其中的組件所花費網路額外負荷，例如驅動程式發出要求的資料列呼叫。 可以降低後者的時間，如果應用程式會有效率地使用*區塊中，* 或是*fat* *資料指標，* 這可以一次傳回多個資料列。  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ad9c1fed7e328540513ee3955b95704d51e8008f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156566"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>將報表儲存到報表伺服器 (報表產生器)
   在報表產生器中，您可以將報表定義儲存至報表伺服器 (也稱為發行報表)。 當報表儲存至報表伺服器時，其他使用者就可以檢視此報表。 每當您執行已發行的報表時，您將會擷取最新的資料。 若要儲存已轉譯之報表的靜態複本，請將此報表匯出到另一個檔案格式並儲存起來，或是使用報表記錄功能來儲存已轉譯的報表版本。  

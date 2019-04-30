@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184553"
 ---
 # <a name="maintenance-plan-design-tab"></a>維護計畫 (設計索引標籤)
   使用 [維護計畫 (設計索引標籤)] 可指定維護計畫及其子計畫的屬性。 將工作從工具箱拖曳至計畫設計師。 在工作群組按一下滑鼠右鍵，即可建立分支執行路徑。 維護計畫會儲存為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，然後由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業執行。  

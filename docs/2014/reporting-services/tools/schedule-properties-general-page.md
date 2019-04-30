@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eaaff2a90f18a4fb7cec3c049945c87fd0a5ed8b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158721"
 ---
 # <a name="schedule-properties-general-page"></a>排程屬性 (一般頁面)
   使用此頁面即可檢視或修改共用排程。 共用排程可以用來取代報表特定或訂閱特定的排程。 對排程所做的變更會在您儲存排程之後套用。 編輯排程並不會影響目前正在進行中的作業。 如果您編輯排程時，該排程正在使用中，則系統會允許根據該排程觸發的所有目前處理中報表和訂閱繼續完成。  

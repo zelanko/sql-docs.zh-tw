@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a79e97721f246d47f8fab413be8074836f753cbe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135306"
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>Access 的 SQLGetInfo 傳回值
 下表列出 C 語言 #defines *fInfoType*引數和所傳回的對應值**SQLGetInfo**。 這項資訊可以擷取傳遞所列出的 C 語言 #defines **SQLGetInfo**中*fInfoType*引數。 如需詳細資訊，所傳回之值的相關**SQLGetInfo**，請參閱*ODBC 程式設計人員參考*。  
@@ -30,7 +30,7 @@ ms.locfileid: "47826256"
 > [!NOTE]  
 >  何處**SQLGetInfo**會傳回 32 位元遮罩，垂直列 (&#124;) 代表位元 OR 運算。  
   
-|資訊類型|傳回的值|  
+|InfoType|傳回的值|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -142,7 +142,7 @@ ms.locfileid: "47826256"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|多個值|  
-|SQL_ODBC_SAG_CLI_ 一致性|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|從 驅動程式管理員|  
 |SQL_OJ_CAPABILITIES|多個值|  

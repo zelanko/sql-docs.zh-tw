@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 644b80d6a547c58b058c4c932a261762a0235430
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156661"
 ---
-# <a name="task-6-adding-excel-source-to-the-data-flow"></a>工作 6：將 Excel 來源加入至資料流程
+# <a name="task-6-adding-excel-source-to-the-data-flow"></a>工作 6：將 Excel 來源新增至資料流程
   在這項工作中，您會將 Excel 來源加入至資料流程，以便從來源 Excel 檔案讀取供應商資料。 Excel 來源會從 Microsoft Excel 活頁簿中的工作表或範圍擷取資料。 請參閱[Excel 來源](../integration-services/data-flow/excel-source.md)如需詳細資訊。  
   
 1.  拖放**Excel 來源**從**其他來源**中**SSIS 工具箱**至**資料流程** 索引標籤。  

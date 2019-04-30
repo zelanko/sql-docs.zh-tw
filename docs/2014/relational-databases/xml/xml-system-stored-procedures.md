@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20ea97f50592c6d8abc51e64acb4a164ad0b95b3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192976"
 ---
 # <a name="xml-system-stored-procedures"></a>XML 系統預存程序
   SQL Server 提供以下系統預存程序，可與 OPENXML 一起使用：  

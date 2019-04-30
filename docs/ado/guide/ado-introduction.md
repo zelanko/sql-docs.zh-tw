@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c56a328d7b3495b57d34f127a2d12947f0ecfd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214866"
 ---
 # <a name="ado-overview-and-benefits"></a>ADO 概觀和優點
 ActiveX Data Objects (ADO) 是 OLE DB 的高層級、 簡單易用介面。 OLE DB 是各種不同的資料存放區的低層級、 高效能的介面。 ADO 和 OLE DB 可以使用關聯式 （表格式） 與非關聯式 (階層式或資料流) 資料。

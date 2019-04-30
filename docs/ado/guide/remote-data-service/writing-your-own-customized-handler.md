@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: daddb9057775e1f098754dd2a331c1dc77194d10
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155908"
 ---
 # <a name="writing-your-own-customized-handler"></a>撰寫您自己的自訂處理常式
 您可能想要撰寫您自己的處理常式，如果您是 IIS 伺服器系統管理員，想要支援 RDS，預設值，但更充分掌控使用者的要求和存取權限。  

@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 19beaafe3e73265eb12f825190ee8aafcdf59897
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047357"
 ---
 # <a name="sysdmosmemorycachecounters-transact-sql"></a>sys.dm_os_memory_cache_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中傳回快取健全狀況的快照集。 **sys.dm_os_memory_cache_counters**提供有關配置的快取項目執行階段資訊、 其使用情形和之記憶體來源的快取項目。  
   
-> **注意：** 呼叫這個屬性從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或是[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_memory_cache_counters**。  
+> **注意：** 若要呼叫這個屬性從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或是[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_memory_cache_counters**。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

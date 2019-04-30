@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125998"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>重新命名 SQL Server 容錯移轉叢集執行個體
   當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體是容錯移轉叢集的一部份時，重新命名虛擬伺服器的程序會不同於重新命名獨立執行個體的程序。 如需詳細資訊，請參閱 [重新命名主控 SQL Server 獨立執行個體的電腦](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)。  

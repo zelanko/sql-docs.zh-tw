@@ -1,5 +1,5 @@
 ---
-title: 工作 5:從 Excel 建立網域型屬性 |Microsoft Docs
+title: 工作 5：從 Excel 建立網域型屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1a2826bb0c9b542837e05b7f600c9ce7d934fd4e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143066"
 ---
-# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>工作 5:從 Excel 建立定義域屬性
+# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>工作 5：從 Excel 建立定義域屬性
   在這個工作中，您將轉換**狀態**屬性**供應商**實體**網域型屬性**。 設定是以網域為基礎，並將其發行至 MDS，名為的新實體的 State 屬性之後**狀態**資料行中的所有值的 MDS 伺服器上將建立並**狀態**屬性**供應商**的值將會填入實體**狀態**實體。 現在，請**供應商**模型應該有兩個實體：**供應商**並**狀態**何處**狀態**屬性**供應商**實體是取決於網域屬性**的狀態**實體。  
   
 1.  若要切換**Excel**有視窗**Cleansed and Matched Suppliers.xlsx**開啟。  

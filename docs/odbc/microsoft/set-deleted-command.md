@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5efbd7e98b430128e52634f5c7d71597afc89ace
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127826"
 ---
 # <a name="set-deleted-command"></a>SET DELETED 命令
 指定是否標示為要刪除的記錄會被處理，以及是否可用於其他命令。  

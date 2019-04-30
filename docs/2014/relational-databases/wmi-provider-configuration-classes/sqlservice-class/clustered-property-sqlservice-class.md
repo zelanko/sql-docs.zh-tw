@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 065440d834033d1c1c999ea9d38d321be9a6278c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223321"
 ---
 # <a name="clustered-property-sqlservice-class"></a>Clustered 屬性 (SqlService 類別)
   取得可指定服務是否為叢集執行個體之一部分的布林屬性值。  

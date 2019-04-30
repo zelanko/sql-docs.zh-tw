@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4cd80e7d999314c549df4ebb5e51aa2a0ca2d3f8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154834"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>群組查詢結果中的資料列 (Visual Database Tools)
   如果您要建立小計，或顯示資料表子集的其他摘要資訊，請使用彙總查詢 (Aggregate Query) 建立群組。 每個群組都會針對資料表中具有相同值的所有資料列摘要資料。  

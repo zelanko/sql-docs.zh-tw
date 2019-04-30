@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 155d70856ae46a83f07ecd9c5c6848ee74f813dc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067702"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援各種[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特有的關鍵字/值配對的資料來源組態屬性字串。  

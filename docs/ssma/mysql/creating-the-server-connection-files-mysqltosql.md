@@ -14,16 +14,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d827a48f76639b15cc63e295e7f40190b60a4694
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132275"
 ---
 # <a name="creating-the-server-connection-files-mysqltosql"></a>建立伺服器連線檔案 (MySQLToSQL)
 伺服器一節的指令碼檔案或不同的伺服器連線檔案中，可以指定伺服器的資訊。 伺服器連接檔案的命令列參數即`-c <serverconnectionfile>`。 如果存在於指令碼檔案與伺服器連線檔案相同的伺服器識別碼，則會視為在指令碼檔案中的伺服器定義。  
   
-**範例：**  
+**範例:**  
   
 ```xml  
 <!--Sample of server connection file commands -->  

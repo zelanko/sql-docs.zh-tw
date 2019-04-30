@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba21e2a13b755c938c8b1bdc321a5f23bf87c29f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213309"
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>資料行大小、 十進位數字，傳輸八位元長度和顯示大小-ODBC
 資料類型的特性在於其資料行 （或參數） 的大小、 小數位數、 長度和顯示大小。 下列 ODBC 函數會傳回這些屬性中的 SQL 陳述式的參數或 SQL 資料類型的資料來源。 每個 ODBC 函式會傳回一組不同的這些屬性，如下所示：  

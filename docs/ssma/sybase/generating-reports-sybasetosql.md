@@ -15,11 +15,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: bb377e36f73bad59da35fabc2f6e9189544230e1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126291"
 ---
 # <a name="generating-reports-sybasetosql"></a>產生報表 (SybaseToSQL)
 使用命令來執行某些活動的報表會產生物件樹狀結構層級的 SSMA 主控台中。  
@@ -35,10 +35,10 @@ ms.locfileid: "52411025"
     |**Sl。[否]。**|**Command**|**報表標題**|  
     |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
-    |3|移轉資料|DataMigrationReport&lt;n&gt;。XML|  
+    |3|migrate-data|DataMigrationReport&lt;n&gt;.XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
-    |5|同步處理目標|TargetSynchronizationReport&lt;n&gt;.XML|  
-    |6|從資料庫重新整理|SourceDBRefreshReport&lt;n&gt;.XML|  
+    |5|synchronize-target|TargetSynchronizationReport&lt;n&gt;.XML|  
+    |6|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
     > 輸出報表與不同評定報告。 前者是一種報表執行的命令時的效能，後者是以程式設計方式使用的 XML 報表。  
@@ -50,8 +50,8 @@ ms.locfileid: "52411025"
     ||||  
     |-|-|-|  
     |**Sl。[否]。**|**命令與參數**|**輸出描述**|  
-    |1|詳細資訊 ="false"|產生之活動的摘要的報告。|  
-    |2|詳細資訊 ="true"|產生每個活動的摘要和詳細狀態報告。|  
+    |1|verbose="false"|產生之活動的摘要的報告。|  
+    |2|verbose="true"|產生每個活動的摘要和詳細狀態報告。|  
   
     > [!NOTE]  
     > 上面指定的報表詳細等級設定時產生評估報表、 轉換結構描述、 移轉資料、 轉換 sql 陳述式命令。  
@@ -61,8 +61,8 @@ ms.locfileid: "52411025"
     ||||  
     |-|-|-|  
     |**Sl。[否]。**|**命令與參數**|**輸出描述**|  
-    |1|報告錯誤 ="false"|沒有詳細資料發生錯誤 / 警告 / 資訊訊息。|  
-    |2|報告錯誤 ="true"|詳細的錯誤 / 警告 / 資訊訊息。|  
+    |1|report-errors="false"|沒有詳細資料發生錯誤 / 警告 / 資訊訊息。|  
+    |2|report-errors="true"|詳細的錯誤 / 警告 / 資訊訊息。|  
   
     > [!NOTE]  
     > 錯誤報告設定上述指定時產生評估報表、 轉換結構描述、 移轉資料、 轉換 sql 陳述式命令。  
@@ -105,15 +105,15 @@ ms.locfileid: "52411025"
   
 />  
 ```  
-**物件名稱：** 指定視為 （它也可以有個別的物件名稱或群組的物件名稱） 的同步處理的物件。  
+**object-name:** 指定視為 （它也可以有個別的物件名稱或群組的物件名稱） 的同步處理的物件。  
   
 **錯誤：** 指定是否要指定同步處理錯誤視為警告或錯誤。 錯誤的可用選項：  
   
--   報表-總計-為-警告  
+-   report-total-as-warning  
   
--   報表-每個-為-警告  
+-   report-each-as-warning  
   
--   失敗指令碼  
+-   fail-script  
   
 ### <a name="refresh-from-database"></a>重新整理從-資料庫：  
 命令**從資料庫重新整理**已**報告錯誤至**參數，指定重新整理作業的錯誤報表的位置。 然後，依名稱的檔案**SourceDBRefreshReport&lt;n&gt;。XML**會建立在指定的位置，其中**&lt;n&gt;** 是唯一的檔案數目，以每次執行相同的命令數字會遞增。  
@@ -135,15 +135,15 @@ ms.locfileid: "52411025"
   
 />  
 ```  
-**物件名稱：** 指定重新整理 （它也可以有個別的物件名稱或群組的物件名稱） 被視為物件。  
+**object-name:** 指定重新整理 （它也可以有個別的物件名稱或群組的物件名稱） 被視為物件。  
   
 **錯誤：** 指定是否要指定重新整理錯誤視為警告或錯誤。 錯誤的可用選項：  
   
--   報表-總計-為-警告  
+-   report-total-as-warning  
   
--   報表-每個-為-警告  
+-   report-each-as-warning  
   
--   失敗指令碼  
+-   fail-script  
   
 ## <a name="see-also"></a>另請參閱  
 [執行 SSMA 主控台 (Sybase)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  

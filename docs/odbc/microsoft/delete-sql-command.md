@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dac94d8bfb0e2bc0ab91f6a18e6f18606481b112
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198583"
 ---
 # <a name="delete---sql-command"></a>DELETE - SQL 命令
 將標示為要刪除的記錄。  
@@ -34,10 +34,10 @@ DELETE FROM [DatabaseName!]TableName
 ```  
   
 ## <a name="arguments"></a>引數  
- 從 [ *DatabaseName ！*]*TableName*  
+ FROM [ *DatabaseName!*] *TableName*  
  指定的記錄標示為刪除的資料表。  
   
- *DatabaseName ！* 指定如果包含的資料庫不是與資料來源所指定的資料庫包含資料表的資料庫名稱。 您必須包含的資料庫，如果資料庫不是與資料來源所指定的資料庫包含之資料表的名稱。 之後的資料庫名稱和資料表名稱之前，請包含驚嘆號 （！） 分隔符號。  
+ *DatabaseName!* 指定如果包含的資料庫不是與資料來源所指定的資料庫包含資料表的資料庫名稱。 您必須包含的資料庫，如果資料庫不是與資料來源所指定的資料庫包含之資料表的名稱。 之後的資料庫名稱和資料表名稱之前，請包含驚嘆號 （！） 分隔符號。  
   
  何處*FilterCondition1*[AND&#124;或者*FilterCondition2*...]  
  指定 Visual FoxPro 標記為要刪除特定記錄。  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46fdd38274cb1400742d0bcda8654ebb7fd77b6c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064884"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>安裝或解除安裝 SharePoint 的 Reporting Services 增益集 (SharePoint 2010 和 SharePoint 2013)
   在 SharePoint 伺服器上執行適用於 SharePoint 產品的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集安裝套件 (rsSharePoint.msi)，以在 SharePoint 部署中啟用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 功能包含 Power View、報表檢視器 Web 組件、URL Proxy 端點、內容類型以及應用程式頁面，讓您可以建立、檢視及管理報表、報表模型、資料來源以及在 SharePoint 網站上的其他報表伺服器內容。 適用於 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集是以 SharePoint 模式執行之報表伺服器的必要元件。 增益集可以從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈安裝，或是從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能套件下載 rsSharePoint.msi。 如需增益集版本和下載頁面的清單，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  

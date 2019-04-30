@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76105982e4a1655fcb91e8432ea69bcee658a7fd
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191822"
 ---
 # <a name="manage-bookmarks"></a>管理書籤
   使用程式碼編輯器時，[書籤] 視窗可讓您建立連結至文件內之程式碼的特定行。 您可以從 [檢視] 功能表顯示這個視窗。  

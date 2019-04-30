@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fe7194c8a6f54da50eeef21891bc1049735ddd1e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164980"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>資料集屬性對話方塊、參數 (報表產生器)
   選取 **參數**上**資料集屬性**對話方塊，即可加入、 變更與刪除查詢參數。  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f44ef4421419d3b3dd452fb7fab2e4a8768f1b06
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183108"
 ---
 # <a name="data-migration-report--mysqltosql"></a>資料移轉報告 (MySQLToSQL)
 **資料移轉報告** 對話方塊隨即出現之後您將資料移轉至, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

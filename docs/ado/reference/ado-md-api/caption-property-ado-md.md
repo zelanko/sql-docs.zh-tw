@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c1481faee1574f74e786a561c25ceb2ce8c4876
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062587"
 ---
 # <a name="caption-property-ado-md"></a>Caption 屬性 (ADO MD)
 指出當顯示時使用的文字標題[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)或是[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)物件。  

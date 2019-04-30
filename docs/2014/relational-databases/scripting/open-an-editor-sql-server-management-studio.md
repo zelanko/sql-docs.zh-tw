@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: abfaedbc8eb415d00b1947fe36bef0a51716f536
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144756"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>開啟編輯器 (SQL Server Management Studio)
   此主題描述如何在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查詢、MDX、DMX 或 XML/A 編輯器。 開啟時，每個編輯器視窗都會顯示為 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]之中央面板中的索引標籤。  
@@ -30,7 +30,7 @@ ms.locfileid: "52513012"
 ### <a name="permissions"></a>Permissions  
  在程式碼編輯器中執行的作業，需要有授與用來登入之驗證帳戶的權限。 例如，如果您使用 [Windows 驗證] 來開啟 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗，則無法執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，而此陳述式參照您的 Windows 登入帳戶無權存取的物件。  
   
-## <a name="how-to-open-editors"></a>如何：開啟編輯器  
+## <a name="how-to-open-editors"></a>HOW TO：開啟編輯器  
  本節說明如何在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中開啟各種編輯器。  
   
 ### <a name="using-the-filenew-menu"></a>使用檔案/新增功能表  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1d3e8051c246c6ec5c29df4fc49fd0f242852354
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223124"
 ---
 # <a name="site-settings-page-report-manager"></a>站台設定頁面 (報表管理員)
   您可以使用 [站台設定] 頁面來變更應用程式標題、針對報表記錄限制和報表處理逾時值設定整個網站的預設值、管理系統層級角色指派，以及管理共用排程。 您必須擁有「內容管理員」和「系統管理員」權限才能檢視此頁面。  

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 595da161660b60845c02d71e22411a2a4eba009c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192116"
 ---
 # <a name="handling-smo-exceptions"></a>處理 SMO 例外狀況
   在 Managed 程式碼中發生錯誤時會擲回例外狀況。 SMO 方法和屬性不會在傳回值中報告成功或失敗， 而是由例外處理常式攔截和處理例外狀況。  

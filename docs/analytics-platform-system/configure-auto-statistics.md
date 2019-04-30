@@ -11,11 +11,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
 ms.openlocfilehash: e48d40d78c25431fd6e5592dacfa410723b31f82
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057061"
 ---
 # <a name="configure-auto-statistics"></a>設定自動統計資料
 
@@ -32,7 +32,7 @@ ms.locfileid: "52617958"
 自動統計資料包含下列三項設定： 
 
 ### <a name="autocreatestatistics"></a>AUTO_CREATE_STATISTICS
-自動建立統計資料選項，當 AUTO_CREATE_STATISTICS 為 ON 時，查詢最佳化工具會在查詢述詞中，必要時，若要改善查詢計劃的基數估計值的個別資料行上建立統計資料。 這些單一資料行統計資料是針對在現有統計資料物件中尚未具有長條圖的資料行建立的。
+當自動建立統計資料選項 AUTO_CREATE_STATISTICS 為 ON 時，查詢最佳化工具就會視需要針對查詢述詞中的個別資料行來建立統計資料，以便改善查詢計劃的基數估計值。 這些單一資料行統計資料是針對在現有統計資料物件中尚未具有長條圖的資料行建立的。
 
 ### <a name="autoupdatestatistics"></a>AUTO_UPDATE_STATISTICS 
 開啟自動更新統計資料選項 AUTO_UPDATE_STATISTICS 時，查詢最佳化工具就會判斷統計資料可能過期的時間，然後在查詢使用統計資料時加以更新。 當作業插入、更新、刪除或合併變更資料表或索引檢視表中的資料分佈之後，統計資料就會變成過期。 查詢最佳化工具會計算自從上次更新統計資料以來資料修改的次數，並且比較修改次數與臨界值，藉以判斷統計資料可能過期的時間。 此臨界值是以資料表或索引檢視表中的資料列數目為基礎。

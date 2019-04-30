@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144715"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>寫滿交易記錄疑難排解 (SQL Server 錯誤 9002)
   本主題將討論對於寫滿交易記錄的可能回應，並建議將來可採用的避免方法。 當交易記錄寫滿時， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 就會發出 9002 錯誤。 此記錄可能會在資料庫處於線上或復原狀態時填滿。 如果此記錄是在資料庫處於線上狀態時填滿，資料庫會保持線上狀態，不過只能讀取而無法更新資料庫。 如果此記錄是在復原期間填滿，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將資料庫標示為 RESOURCE PENDING。 不論是哪一種情況，使用者都必須採取動作，以便提供足夠的記錄空間。  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224612"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>探索購物籃模型 (中繼資料採礦教學課程)
   既然您已建立`Association`模型中，您可以使用瀏覽它[!INCLUDE[msCoName](../includes/msconame-md.md)]中的關聯檢視器**採礦模型檢視器**資料採礦設計師 索引標籤。 此教學課程會逐步引導您使用檢視器來探索項目之間的關聯性。 此檢視器可幫助您快速地查看哪些產品經常一起出現，並大概了解新興的模式。  
@@ -37,7 +37,7 @@ ms.locfileid: "56035299"
   
  連接兩個項目的線條表示，這兩個項目很可能同時出現在單一交易中。 換句話說，客戶很可能一起購買這兩個項目。 滑動軸與規則的機率相關。 將滑動軸往上移或往下移來篩選掉微弱的關聯，也就是機率很低的規則。  
   
- 相依性網路圖表會顯示成對的規則，這些規則在邏輯上可以表示為 A->B，這表示如果購買了產品 A，也可能會購買產品 B。 此圖形無法顯示類型 AB->C 的規則。 如果您移動滑動軸來顯示所有規則，但是在圖表中仍然未看到任何線條，這表示沒有任何成對規則符合演算法參數的準則。  
+ 相依性網路圖表會顯示成對的規則，為 a->b，這表示如果購買產品 A，則產品 B 可能可以以邏輯方式表示。 此圖表無法顯示類型 AB->C 的規則]-> [c。 如果您移動滑動軸來顯示所有規則，但是在圖表中仍然未看到任何線條，這表示沒有任何成對規則符合演算法參數的準則。  
   
  您也可以依據名稱來尋找節點，其方式是輸入屬性名稱的第一個字母。 如需詳細資訊，請參閱[尋找節點對話方塊 &#40;採礦模型檢視器&#41;](../../2014/analysis-services/find-node-dialog-box-mining-model-viewer.md)。  
   

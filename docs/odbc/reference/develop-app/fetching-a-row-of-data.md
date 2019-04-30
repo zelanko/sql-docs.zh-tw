@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 012e454d03a0eb4ad16095353351d67e50d9586a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061516"
 ---
 # <a name="fetching-a-row-of-data"></a>擷取一列資料
 若要擷取的資料列，應用程式會呼叫**SQLFetch**。 **SQLFetch**可以使用任何一種資料指標，呼叫，但它只會移動資料列集資料指標順向的方向。 **SQLFetch**游標前進到下一個資料列，並傳回已繫結呼叫的任何資料行的資料**SQLBindCol**。 當游標觸達結果結束設定，請**SQLFetch**傳回 sql_no_data 為止。 如需呼叫的範例**SQLFetch**，請參閱[使用 SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)。  

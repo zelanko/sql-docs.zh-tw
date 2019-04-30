@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 926223ad0a5a8cdb1a5ff7aacfb7fdd7f84a8c57
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188324"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>新增訂閱或編輯訂閱頁面 (報表管理員)
   使用 [新增訂閱] 或 [編輯訂閱] 頁面，即可在報表中建立新的訂閱或修改現有的訂閱。 這個頁面的此選項隨著您的角色指派而改變。 具有進階權限的使用者可以使用額外的選項。  

@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127041"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 鍵盤快速鍵
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 為使用者提供了兩種鍵盤配置。 根據預設，它會使用 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 配置，其鍵盤快速鍵是以 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 為基礎。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 也提供了類似於 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]中標準配置的鍵盤配置。 若要變更鍵盤配置或加入其他鍵盤快速鍵，請在 [工具] 功能表上，按一下 [選項]。 請在 [環境]、[鍵盤] 頁面上，選取所需要的鍵盤配置。  

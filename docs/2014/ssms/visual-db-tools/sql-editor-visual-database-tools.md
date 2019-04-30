@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 973ad34d5d24eecd0c3af0e0451b0d2ba9058222
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194923"
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 編輯器 (Visual Database Tools)
   使用 [SQL 編輯器] 可編輯現有的預存程序、函數、觸發程序和 SQL 指令碼。 在開啟上述任一物件時，此視窗會開啟。 若要建立針對資料來源執行的新 SQL 陳述式，請使用查詢設計工具的 [SQL 窗格](visual-database-tools.md) 。  

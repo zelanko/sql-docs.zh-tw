@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e947fbc490769379392e1dcef80ad4cd2818d510
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183904"
 ---
 # <a name="command-and-commandtext-properties-example-vc"></a>Command 和 CommandText 屬性範例 (VC++)
 下列程式碼示範如何使用[命令](../../../ado/reference/adox-api/command-property-adox.md)来更新的程序文字屬性。  

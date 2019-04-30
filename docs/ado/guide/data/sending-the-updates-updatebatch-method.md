@@ -1,5 +1,5 @@
 ---
-title: 傳送更新： UpdateBatch 方法 |Microsoft Docs
+title: 傳送更新：UpdateBatch 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3da407de4489ec829151696793f547e31541e6df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062874"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>傳送更新：UpdateBatch 方法
 下列程式碼藉由 LockType 屬性設定為 Adlockpessimistic 和以 adUseClient CursorLocation 批次模式中開啟資料錄集。 它將加入兩筆新記錄和變更在現有的記錄儲存到原始值欄位的值，然後呼叫 UpdateBatch 傳送回資料來源所做的變更。  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10e5dfa6bd2ca34fe24433333bc20c99bcf25a66
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225240"
 ---
 # <a name="find-results-windows"></a>尋找結果視窗
   兩個尋找結果視窗使用 **[尋找和取代]** 對話方塊的 **[檔案中尋找]** 或 **[檔案中取代]** 索引標籤，顯示找到的相符結果。 **[檔案中尋找]** 和 **[檔案中取代]** 的 **[結果選項]** 命令允許您選擇 [尋找結果] 視窗，其中會列出所有找到的相符結果。  

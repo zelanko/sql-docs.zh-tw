@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e808f1fc82dfe0a9fd6fa96999e6e2c5320ee452
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162017"
 ---
 # <a name="metadata-discovery"></a>中繼資料探索
   中的中繼資料探索改進[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]可讓[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端應用程式，以確保，從執行查詢所傳回的資料行或參數中繼資料與相同或相容的中繼資料的格式指定之前您在執行查詢。 如果查詢執行之後傳回的中繼資料與您在查詢執行之前指定的中繼資料格式不相容，您就會收到錯誤。  

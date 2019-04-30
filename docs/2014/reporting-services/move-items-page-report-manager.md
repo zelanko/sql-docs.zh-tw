@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: acee0f51707a0535f0d6f63152cdf461ad50f46c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188434"
 ---
 # <a name="move-items-page-report-manager"></a>移動項目頁面 (報表管理員)
   您可以使用 [移動項目] 頁面，將報表、資料夾或其他項目移至報表伺服器上的新位置。 您可以輸入新位置的路徑，或使用樹狀檢視以導覽到報表伺服器命名空間中的新位置。 您只能移動您有權移動並儲存在目前報表伺服器上的項目。  

@@ -1,5 +1,5 @@
 ---
-title: SQLCloseCursor |Microsoft Docs
+title: SQLCloseCursor | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da7d6541f7bf31920519cc7462bdfd24a5f6dc0d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067684"
 ---
 # <a name="sqlclosecursor"></a>SQLCloseCursor
   **SQLCloseCursor**會取代[SQLFreeStmt](sqlfreestmt.md)具有*選項*SQL_CLOSE 的值。 在收到**SQLCloseCursor**，則[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式會捨棄暫止的結果集資料列。 請注意，陳述式的資料行和參數繫結 （如果有的話） 會保留而不改變**SQLCloseCursor**。  

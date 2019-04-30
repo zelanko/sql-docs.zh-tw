@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: df7a2d036692cefcd1b2ea2338d51938a11ea85a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208431"
 ---
 # <a name="vertical-applications"></a>垂直應用程式
 垂直應用程式通常會執行完整定義的工作，針對單一 DBMS。 例如，訂單輸入應用程式會追蹤公司中的訂單。 什麼這些類型的應用程式有共通是資料庫結構描述通常設計用在應用程式開發人員，當應用程式可能會使用幾個不同的 Dbms 的它使用單一的 DBMS 單一客戶。  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c457676daa5870e90964ea4d3d25d0397797cd2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065031"
 ---
 # <a name="server-property-example-vbscript"></a>Server 屬性範例 (VBScript)
 > [!IMPORTANT]

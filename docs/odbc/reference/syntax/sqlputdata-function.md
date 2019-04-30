@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f91799e5d484a763c23fcc132232a8a35fc6152c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186109"
 ---
 # <a name="sqlputdata-function"></a>SQLPutData 函數
 **合規性**  
@@ -51,7 +51,7 @@ SQLRETURN SQLPutData(
  *DataPtr*  
  [輸入]包含參數或資料行的實際資料之緩衝區的指標。 資料必須在中指定的 C 資料類型*ValueType*引數**SQLBindParameter** （適用於參數的資料） 或*TargetType*引數**SQLBindCol** （適用於資料行的資料）。  
   
- *Strlen_or_ind&lt*  
+ *StrLen_or_Ind*  
  [輸入]長度\* *DataPtr*。 指定的呼叫中傳送的資料量**SQLPutData**。 資料量可能會隨給定的參數或資料行的每個呼叫。 *Strlen_or_ind&lt*會被忽略，除非它符合下列條件的其中一項：  
   
 -   *Strlen_or_ind&lt*是 SQL_NTS、 SQL_NULL_DATA 或 SQL_DEFAULT_PARAM。  

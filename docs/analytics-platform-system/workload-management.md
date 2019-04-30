@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 2281262c086f4d8dcab27debc8bb735ea5e8e1ba
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157468"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Analytics Platform System 中的工作負載管理
 
@@ -127,7 +127,7 @@ SQL 陳述式和作業都受到資源類別控管：
   
 -   使用載入資料**dwloader**。  
   
--   INSERT SELECT  
+-   INSERT-SELECT  
   
 -   UPDATE  
   

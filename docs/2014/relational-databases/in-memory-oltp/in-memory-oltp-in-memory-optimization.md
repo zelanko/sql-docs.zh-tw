@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c3be59fd99f072b7cb3a9156b92d5ee794208f1f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158013"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (記憶體中最佳化)
   [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]是 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 中的新功能，可大幅提升 OLTP 資料庫應用程式效能。 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 是已整合至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎的記憶體最佳化資料庫引擎，已針對 OLTP 最佳化。  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 171aaa250930d5563d8ce6ec3b08b5939710b881
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206350"
 ---
 # <a name="append-method-adox-groups"></a>Append 方法 (ADOX Groups)
 加入新[群組](../../../ado/reference/adox-api/group-object-adox.md)物件[群組](../../../ado/reference/adox-api/groups-collection-adox.md)集合。  

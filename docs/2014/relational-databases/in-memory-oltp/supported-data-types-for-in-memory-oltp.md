@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de5f805a9d722974adf7975f713436bc7b1ca4d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155156"
 ---
 # <a name="supported-data-types"></a>支援的資料類型
   記憶體最佳化的資料表及原生編譯預存程序 **支援** 下列資料類型：  
@@ -40,23 +40,23 @@ ms.locfileid: "48075298"
 |資料類型|如需詳細資訊|  
 |---------------|--------------------------|  
 |char(n)|[char 和 varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
-|varchar （n) <sup>1</sup>|[char 和 varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
+|varchar(n) <sup>1</sup>|[char 和 varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
 |nchar(n)|[nchar 和 nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
-|nvarchar （n) <sup>1</sup>|[nchar 和 nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
+|nvarchar(n) <sup>1</sup>|[nchar 和 nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
 |sysname|[nchar 和 nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
   
  <sup>1</sup>限制為每個資料列總計 8060 個位元組的可變長度的類型中計算 (n)。  
   
- 如需支援的定序資訊，請參閱[Collations and Code Pages](../../database-engine/collations-and-code-pages.md)。  
+ 如需支援之定序的資訊，請參閱＜ [Collations and Code Pages](../../database-engine/collations-and-code-pages.md)＞。  
   
  **日期和時間資料類型**  
   
 |資料類型|如需詳細資訊|  
 |---------------|--------------------------|  
-|日期|[日期&#40;-SQL&AMP;#41;&#41;](/sql/t-sql/data-types/date-transact-sql)|  
+|日期|[日期 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
 |time|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)|  
-|DATETIME|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)|  
-|datetime2|[datetime2 &#40;Transact SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
+|datetime|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)|  
+|datetime2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
 |smalldatetime|[smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|  
   
  **二進位資料類型**  

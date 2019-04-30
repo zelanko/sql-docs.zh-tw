@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c71967bd72f7f13a725d47517cb9e66eee7da87f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199391"
 ---
 # <a name="binding-parameter-markers"></a>繫結參數標記
 藉由呼叫應用程式繫結的參數**SQLBindParameter**。 **SQLBindParameter**將一個參數繫結一次。 有了它，應用程式則指定下列項目：  
@@ -28,7 +28,7 @@ ms.locfileid: "47645986"
   
 -   參數類型 （輸入、 輸入/輸出或輸出）。 除了程序呼叫中的參數，所有參數都是輸入的參數。 如需詳細資訊，請參閱 <<c0> [ 程序參數](../../../odbc/reference/develop-app/procedure-parameters.md)稍後這一節。  
   
--   C 資料類型、 位址和位元組長度的變數繫結至參數。 驅動程式必須能夠將 C 資料類型的資料轉換成 SQL 資料類型或傳回錯誤。 如需支援的轉換，請參閱[轉換將資料從 C 到 SQL 資料類型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)附錄 d： 資料型別中。  
+-   C 資料類型、 位址和位元組長度的變數繫結至參數。 驅動程式必須能夠將 C 資料類型的資料轉換成 SQL 資料類型或傳回錯誤。 如需支援的轉換，請參閱[轉換將資料從 C 到 SQL 資料類型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)附錄 d:資料類型。  
   
 -   SQL 資料類型、 有效位數和小數位數參數本身。  
   

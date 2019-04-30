@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11fe5ef40e06772c38390096363903113a28bd46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63071807"
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>Execute、 Requery 和 Clear 方法範例 (VB)
 此範例示範**Execute**方法時執行兩個[命令](../../../ado/reference/ado-api/command-object-ado.md)物件和[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。 它也會使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法來擷取目前的資料，在[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，而[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法，以清除內容[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 (**錯誤**收集透過存取**連線**物件[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)屬性[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。)ExecuteCommand 和 PrintOutput 程序不需要執行這個程序。  

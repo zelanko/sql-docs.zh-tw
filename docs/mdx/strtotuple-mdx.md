@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 054786440afaf2b7ab458b4704bd5f8e2e26c135
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136163"
 ---
 # <a name="strtotuple-mdx"></a>StrToTuple (MDX)
 

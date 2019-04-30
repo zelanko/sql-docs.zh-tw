@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 29ce7218735ba78ec4bcb5594b422eda7d327c24
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127640"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>執行含有命名空間的 XPath 查詢 (SQLXML Managed 類別)
   XPath 查詢可以包含命名空間。 如果結構描述元素會限定命名空間 (使用目標命名空間)，針對此結構描述進行的 XPath 查詢就必須指定此命名空間。  

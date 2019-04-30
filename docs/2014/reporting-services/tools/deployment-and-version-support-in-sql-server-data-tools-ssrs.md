@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bfac4568659d03f62294bf6159604ce6230639d2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63218390"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>SQL Server 資料工具中的部署和版本支援 (SSRS)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 支援以下案例：  

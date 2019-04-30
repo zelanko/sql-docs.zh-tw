@@ -1,5 +1,5 @@
 ---
-title: LOCALDB_ERROR_UNKNOWN_ERROR_CODE |Microsoft Docs
+title: LOCALDB_ERROR_UNKNOWN_ERROR_CODE | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff7116a6f6dc9407e5782ce3f5d9bce23e527380
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067874"
 ---
 # <a name="localdberrorunknownerrorcode"></a>LOCALDB_ERROR_UNKNOWN_ERROR_CODE
     

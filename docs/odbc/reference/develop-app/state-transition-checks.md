@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcfefffb167b97ace09bfa358296d886265a987f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149056"
 ---
 # <a name="state-transition-checks"></a>狀態轉換檢查
 驅動程式管理員會檢查環境、 連線或陳述式的狀態適用於所呼叫的函式。 比方說，連線必須在配置時**SQLConnect**稱為; 陳述式必須在備妥時狀態**SQLExecute**呼叫。 驅動程式管理員會傳回 SQL_ERROR 狀態轉換錯誤。

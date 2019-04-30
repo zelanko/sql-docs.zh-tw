@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 6188ddab466ccbb27e121e5500a9af68ecbd71fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067604"
 ---
 # <a name="obsolete-extensions-were-detected-on-the-report-server-computer-upgrade-advisor"></a>在報表伺服器電腦上偵測到過時的延伸模組 (Upgrade Advisor)
   Upgrade Advisor 偵測到一個或多個在目前版本中已經無法使用的轉譯延伸模組。  

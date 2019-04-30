@@ -1,5 +1,5 @@
 ---
-title: Avg (MDX) |Microsoft 文件
+title: Avg (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7d6b2e91504c2c9ba796d2c0a55ba19fb3f6493e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181692"
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
 
@@ -36,19 +36,19 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  有效的數值運算式，這通常是傳回數字之資料格座標的多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 如果指定了一組空的 tuple 或空的集合， **Avg**函式會傳回空值。  
+ 如果指定一組空的 tuple 或空的集合，則**Avg**函式會傳回空值。  
   
- **Avg**函式的第一次計算中指定的集合，儲存格上的 值的總和，然後計算總和的指定集合中的非空白資料格計數計算指定集合中的資料格的非空白值的平均值。  
+ **Avg**函式會先計算在指定集合中的資料格的 值的總和，然後再將導出的總和除以非空白資料格中的計數來計算指定集合中的儲存格的非空白值的平均值指定的集合。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在計算數字集合中的平均值時會忽略 Null。  
   
- 如果未指定特定的數值運算式 （通常是量值）， **Avg**函式會計算目前查詢內容中的每個量值的平均值。 如果提供特定量值，則**Avg**函數會先評估量值集合，並再計算平均數根據指定的量值。  
+ 如果未指定特定的數值運算式 （通常是量值）， **Avg**函式會計算目前查詢內容中的每個量值的平均值。 如果提供特定量值，則**Avg**函式會先評估量值集合，然後函式會計算指定量值的平均值。  
   
 > [!NOTE]  
->  當使用**CurrentMember**函式中的導出的成員陳述式中，您必須指定數值運算式，因為有這樣的查詢內容中的目前座標沒有預設量值。  
+>  使用時**CurrentMember**函式中的導出的成員陳述式中，您必須指定數值運算式，因為有這樣的查詢內容中的目前座標沒有預設量值。  
   
- 若要強制納入空白資料格，應用程式必須使用[CoalesceEmpty](../mdx/coalesceempty-mdx.md)函式，或請指定有效的*Numeric_Expression*提供空的值為零 (0) 的值。 如需有關空的資料格的詳細資訊，請參閱 OLE DB 文件集。  
+ 若要強制納入空白資料格，應用程式必須使用[CoalesceEmpty](../mdx/coalesceempty-mdx.md)函式，或指定有效*Numeric_Expression* ，提供空白值零 (0) 的值。 如需有關空的資料格的詳細資訊，請參閱 OLE DB 文件集。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回指定之集合中量值的平均值。 請注意，指定的量值可以是指定之集合成員的預設量值或是指定量值。  
@@ -81,7 +81,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE ([Geography].[Geography].[NW Region Avg])`  
   
- 下列範例會傳回每日平均`Measures.[Gross Profit Margin]`量值，從計算中 2003年會計年度的每個月的每一日**Adventure Works** cube。 **Avg**函式計算平均值的天的每個月中所包含的一組從`[Ship Date].[Fiscal Time]`階層。 第一個計算版本會顯示 Avg 從平均值中排除並未記錄任何銷售量之天數的預設行為，而第二個版本則顯示如何在平均值中包含沒有銷售量的天數。  
+ 下列範例會傳回每日平均`Measures.[Gross Profit Margin]`量值，計算出的 2003年會計年度，每個月的天數**Adventure Works** cube。 **Avg**函式會計算內的每個月的天數集合的平均值`[Ship Date].[Fiscal Time]`階層。 第一個計算版本會顯示 Avg 從平均值中排除並未記錄任何銷售量之天數的預設行為，而第二個版本則顯示如何在平均值中包含沒有銷售量的天數。  
   
  `WITH MEMBER Measures.[Avg Gross Profit Margin] AS`  
   
@@ -127,7 +127,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE([Product].[Product Categories].[Product].&[344])`  
   
- 下列範例會傳回每日平均`Measures.[Gross Profit Margin]`量值，從計算中 2003年會計年度每半年度的每一日**Adventure Works** cube。  
+ 下列範例會傳回每日平均`Measures.[Gross Profit Margin]`量值，計算出的 2003年會計年度每半年度**Adventure Works** cube。  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS  
@@ -146,6 +146,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

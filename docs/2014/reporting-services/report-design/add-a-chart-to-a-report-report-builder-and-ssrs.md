@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e8776cb0c1f0db206274ff7d766f31ba1c446f51
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206929"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>將圖表加入至報表 (報表產生器及 SSRS)
   當您想要以視覺格式摘要資料時，請使用圖表資料區域。 針對您要呈現的資料類型選擇適當的圖表類型相當重要。 因為這會影響以圖表形式放入資料時可以解譯資料的程度。 如需詳細資訊，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  

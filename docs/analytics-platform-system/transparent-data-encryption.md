@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: e9067416365e56dccf9c09f2e826c01fb3ecfa3c
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156957"
 ---
 # <a name="transparent-data-encryption"></a>透明資料加密
 您可以採取幾個預防措施來維護資料庫安全，例如設計安全的系統、加密機密的資產，以及在資料庫伺服器周圍建立防火牆。 不過，所在實體媒體 （例如磁碟機或備份磁帶） 遭竊的案例中，惡意人士可以只還原或附加資料庫並瀏覽資料。 一個解決方案是加密資料庫中的敏感性資料，並使用憑證來保護用來加密資料的金鑰。 如此可防止沒有金鑰的任何人使用資料，但是這種防護類型必須事先規劃。  

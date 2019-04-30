@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c8a5b88f3fdca03be7740ba086e7ff61edbf684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127223"
 ---
 # <a name="length-of-the-product-cycle"></a>產品週期的長度
 關於互通性的最後一個問題是時間。 通常開發的可互通的應用程式所花費的時間比開發 noninteroperable 一個。 原因是應用程式必須檢查 DBMS 功能，以不同的方式執行相同的工作，針對不同的 Dbms、 解決由某些 Dbms 而非其他支援的功能和等等。  

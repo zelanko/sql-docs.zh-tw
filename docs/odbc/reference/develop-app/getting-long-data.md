@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d61f6e2d5c2999a1ff7cea86d497eb4f0fb13244
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061596"
 ---
 # <a name="getting-long-data"></a>取得長資料
 定義 Dbms*長資料*為任何字元或二進位資料超過特定大小，例如 255 個字元。 這項資料可能夠小，無法儲存在單一緩衝區，例如數個數千個字元的部分描述。 不過，它可能會太長而無法儲存在記憶體中，例如長文字文件或點陣圖。 因為這類資料無法儲存在單一緩衝區中，它會從使用組件中的驅動程式**SQLGetData**已經提取資料列中的其他資料之後。  
@@ -30,9 +30,9 @@ ms.locfileid: "47849436"
 > [!NOTE]  
 >  應用程式可以實際擷取資料的任何型別**SQLGetData**，不只是 long 資料，雖然組件中，則可以擷取只字元和二進位資料。 不過，如果資料夠小，無法放入單一緩衝區中，有通常是使用沒有理由**SQLGetData**。 就能輕鬆將緩衝區繫結至資料行，並讓傳回的資料緩衝區中的驅動程式。  
   
- 若要從資料行擷取 long 資料，應用程式第一次呼叫**SQLFetchScroll**或是**SQLFetch**來移至資料列，並提取的資料繫結資料行。 接著，應用程式會呼叫**SQLGetData**。 **SQLGetData**具有相同的引數**SQLBindCol**： 陳述式控制代碼; 資料行編號; 應用程式變數; 的 C 資料類型、 位址和位元組長度和長度/指標緩衝區的位址。 這兩個函式會具有相同的引數，因為它們執行基本上相同的工作： 它們同時會描述應用程式變數到驅動程式並指定特定的資料行的資料應該會傳回該變數。 主要差異是， **SQLGetData**擷取的資料列之後，會呼叫 (和有時稱為*晚期繫結*基於這個理由) 及所指定的繫結**SQLGetData**生命週期僅限於在呼叫期間。  
+ 若要從資料行擷取 long 資料，應用程式第一次呼叫**SQLFetchScroll**或是**SQLFetch**來移至資料列，並提取的資料繫結資料行。 接著，應用程式會呼叫**SQLGetData**。 **SQLGetData**具有相同的引數**SQLBindCol**： 陳述式控制代碼; 資料行編號; 應用程式變數; 的 C 資料類型、 位址和位元組長度和長度/指標緩衝區的位址。 這兩個函式會具有相同的引數，因為它們執行基本上相同的工作：它們同時說明驅動程式應用程式變數，並指定特定的資料行的資料應該會傳回該變數。 主要差異是， **SQLGetData**擷取的資料列之後，會呼叫 (和有時稱為*晚期繫結*基於這個理由) 及所指定的繫結**SQLGetData**生命週期僅限於在呼叫期間。  
   
- 關於單一資料行**SQLGetData**行為都像是**SQLFetch**： 擷取資料行的資料、 將它轉換成變數的型別應用程式，並傳回該變數中。 它也會傳回長度/指標緩衝區中的資料的位元組長度。 如需有關如何**SQLFetch**傳回的資料，請參閱[擷取資料的資料列](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)。  
+ 關於單一資料行**SQLGetData**行為都像是**SQLFetch**:擷取資料行的資料、 將它轉換成變數的型別應用程式，以及傳回該變數中。 它也會傳回長度/指標緩衝區中的資料的位元組長度。 如需有關如何**SQLFetch**傳回的資料，請參閱[擷取資料的資料列](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)。  
   
  **SQLGetData**有別**SQLFetch**中重要的一點。 如果呼叫一次以上連續在相同的資料行，則每次呼叫會傳回連續資料的一部分。 除了最後一次呼叫的每個呼叫會傳回 SQL_SUCCESS_WITH_INFO 和 SQLSTATE 01004 （字串資料，右邊已截斷）;最後一次呼叫都會傳回 SQL_SUCCESS。 這是如何**SQLGetData**用來擷取部分的 long 資料。 若要傳回，沒有更多資料時**SQLGetData**傳回 sql_no_data 為止。 應用程式會負責將長資料放在一起，這可能表示串連的組件的資料。 每個部分是以 null 終止;應用程式必須移除 null 終止的字元，如果串連的組件。 擷取組件中的資料可以在進行可變長度的書籤也與其他的 long 資料。 雖然很常見的驅動程式無法探索可用的資料數量，並傳回 SQL_NO_TOTAL 位元組長度，長度/指標緩衝區會減少，每個呼叫中傳回的在前一個呼叫中，傳回的位元組數的值。 例如：  
   

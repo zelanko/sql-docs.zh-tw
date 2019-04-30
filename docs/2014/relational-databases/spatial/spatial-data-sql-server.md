@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: fb30ce3e7115bad41d26dd126b6f8b9ae9e0b934
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199051"
 ---
 # <a name="spatial-data-sql-server"></a>空間資料 (SQL Server)
   空間資料代表有關幾何物件之實體位置與形狀的資訊。 這些物件可以是點位置或更為複雜的物件，例如鄉村、道路或湖泊。  

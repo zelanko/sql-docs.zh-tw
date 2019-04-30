@@ -1,5 +1,5 @@
 ---
-title: SQL 到 c:Numeric | Microsoft Docs
+title: SQL 轉換為 C：Numeric | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9abd536110222f8e30a781b6d648402335837f61
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151282"
 ---
-# <a name="sql-to-c-numeric"></a>SQL 到 c:數值
+# <a name="sql-to-c-numeric"></a>SQL 轉換為 C：Numeric
 
 數字的 ODBC SQL 資料類型的識別碼，如下所示：
 

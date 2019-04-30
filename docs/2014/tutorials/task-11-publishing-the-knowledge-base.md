@@ -1,5 +1,5 @@
 ---
-title: 工作 11:發行知識庫 |Microsoft Docs
+title: 工作 11：發行知識庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 345dd3670fe42789907a567fce4df4ad34ce3cd3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222504"
 ---
-# <a name="task-11-publishing-the-knowledge-base"></a>工作 11:發行知識庫
+# <a name="task-11-publishing-the-knowledge-base"></a>工作 11：發行知識庫
   在這項工作中，您會發行知識庫。 已發行的知識庫可用於清理或比對資料品質專案中的活動。  
   
 1.  按一下 [**完成**底部的視窗] 按鈕。  

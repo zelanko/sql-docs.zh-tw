@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: fbfc160f495f9717645c8417f11f67f572271d9b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157624"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader 平行處理資料倉儲的命令列載入器
 **dwloader**是 Parallel Data Warehouse (PDW) 的命令列工具，將資料表的資料列大量載入至現有的資料表。 載入時的資料列，您可以將所有資料列加入資料表的結尾 (*附加模式*或是*fastappend 模式*)、 附加新資料列，並更新現有的資料列 (*upsert 模式*)，或刪除所有現有之前載入的資料列，然後再將所有資料列插入空的資料表 (*重新載入模式*)。  
@@ -156,7 +156,7 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name。*[*結構描述*]。*table_name*  
+**-T** *target_database_name.*[*schema*].*table_name*  
 在目的地資料表的三部分名稱。  
   
 **-I***source_data_location*  
@@ -235,7 +235,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 範例:  
   
--t"|"  
+-t "|"  
   
 -t ' '  
   
@@ -279,7 +279,7 @@ LF 的範例：
   
 -s 0x22  
   
-< fixed_width_column_options >  
+< fixed_width_column_options>  
 具有固定長度資料行的來源資料檔案的選項。 根據預設， *source_data_file_name*包含可變長度資料行中的 ASCII 字元。  
   
 UTF8-e 時不支援固定的寬度資料行。  
@@ -339,7 +339,7 @@ LF 的範例：
   
 需要 Unix LF。 需要 Windows CR。  
   
-**-D** { **ymd** | ydm | mdy | myd | dmy |dym |*custom_date_format* }  
+**-D** { **ymd** | ydm | mdy | myd |  dmy | dym | *custom_date_format* }  
 在輸入檔中指定的月份 (m)、 一天 (d) 和年份 (y) 的所有日期時間欄位的順序。 預設順序是 ymd。 若要指定多個相同的原始程式檔的順序格式，請使用-dt 選項。  
   
 ymd |dmy  
@@ -362,10 +362,10 @@ mdy
 -   01011975  
   
 myd  
-年 3 月的輸入檔範例 04,2010:03-2010年-04，3/2010年/4  
+年 3 月的輸入檔範例 04,2010:03-2010-04, 3/2010/4  
   
 dym  
-2010 年 3 月 04 日的輸入的檔範例：04-2010年-03，4/2010/3  
+2010 年 3 月 04 日的輸入的檔範例：04-2010-03, 4/2010/3  
   
 *custom_date_format*  
 *custom_date_format*是自訂的日期格式 (例如，MM/dd/yyyy)，而且包含基於回溯相容性。 dwloader 會不 enfoce 自訂日期格式。 相反地，當您指定自訂日期格式**dwloader**會將它轉換成 ymd、 ydm、 mdy、 myd、 dym，或 dmy 對應的設定。  
@@ -397,7 +397,7 @@ dym
 fastappend  
 載入器而不需使用暫存資料表時，目的地資料表中的現有資料列的結尾，請以直接插入資料列。 fastappend 需要多的交易 (-m) 選項。 使用 fastappend 時，就無法指定暫存資料庫。 與 fastappend，這表示從失敗或已中止負載復原必須由您自己的載入程序沒有回復。  
   
-upsert **-K***merge_column* [，...*n* ]    
+upsert **-K**  *merge_column* [ ,...*n* ]  
 載入器會使用 SQL Server Merge 陳述式來更新現有的資料列，並插入新資料列。  
   
 -K 選項指定為基礎的合併的資料行。 這些資料行形成合併索引鍵，應該代表唯一的資料列。 如果合併索引鍵存在於目的地資料表中，會更新資料列。 如果合併索引鍵不存在於目的地資料表，則會附加資料列。  
@@ -425,7 +425,7 @@ upsert **-K***merge_column* [，...*n* ]
 <reject_options>  
 指定決定，則載入器可讓載入失敗數目的選項。 如果載入失敗超過閾值時，載入器將會中止，並認可任何資料列。  
   
-**-rt** {**值**| 百分比}  
+**-rt** { **value** | percentage }  
 指定是否-*reject_value*中 **-rv** *reject_value*選項是常值的數字的資料列 （值） 或失敗 （百分比） 的速率。 預設為值。  
   
 [百分比] 選項是即時計算所根據的 rs 選項的間隔發生。  
@@ -441,7 +441,7 @@ upsert **-K***merge_column* [，...*n* ]
   
 當使用以-rt 百分比，則載入器會不時計算百分比 (-rs 選項)。 因此，失敗的資料列百分比可能會超過*reject_value*。  
   
-**cd-r** *reject_sample_size*  
+**-rs** *reject_sample_size*  
 搭配`-rt percentage`選項來指定增量百分比檢查。 比方說，如果 reject_sample_size 1000，則載入器會計算失敗資料列的百分比已嘗試載入 1000 個資料列之後。 它會重新計算失敗資料列的百分比之後它會嘗試載入每個額外的 1000 個資料列。  
   
 **-c**  

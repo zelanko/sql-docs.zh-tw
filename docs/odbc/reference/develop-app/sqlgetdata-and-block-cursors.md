@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a14c98f045fd974b404209cc998496dc5fa7193e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149074"
 ---
 # <a name="sqlgetdata-and-block-cursors"></a>SQLGetData 和區塊資料指標
 **SQLGetData**作業的單一資料列的單一資料行，而且無法擷取陣列，包含多個資料列的資料。 這是因為主要使用的**SQLGetData**是擷取組件中的 long 資料，而且沒有少量或沒有執行此動作一次多個資料列的原因。  

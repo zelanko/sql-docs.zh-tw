@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 88c798ce1bd5f25b1a844894b8aa609a4c641e4c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185589"
 ---
 # <a name="hide-legend-items-on-the-chart-report-builder-and-ssrs"></a>隱藏圖表上的圖例項目 (報表產生器及 SSRS)
   根據預設，加入到非形狀圖中的任何數列都會當做圖例中的項目加入。 至於圓形圖、環圈圖、漏斗圖與金字塔圖，加入到圖表中的任何數列則會在圖例中加入個別的資料點。  

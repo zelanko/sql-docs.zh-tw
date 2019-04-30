@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 681fffa274b9ec8bf9f4e5d76e909325d1611d6b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215469"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>轉譯資料 (報表產生器及 SSRS)
   使用配置轉譯器 (例如 HTML、MHTML、Word、Excel、PDF 或影像) 時，資料及其組織會保持不變。 使用資料轉譯器格式 (例如，逗號分隔值 (CSV) 或 XML) 匯出時，不會轉譯任何視覺化配置元素。 轉譯報表時，CSV 和 XML 會將某些規則套用到報表主體及其內容。 這些規則決定了如何以這些格式轉譯資料。  

@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de71808c54264639aea82fe66cf23a7bfd6bd0ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162159"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>堆積 (無叢集索引的資料表)
-  堆積是一種沒有叢集索引的資料表。 一個或多個可以建立在儲存為堆積之資料表上的非叢集索引。 資料會以無指定順序的方式儲存於堆積中。 一般來說，資料一開始是會以資料表中插入資料列的順序儲存，但是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會移動堆積中的資料，以有效率地儲存資料列，因此無法預期資料順序。 為確保從堆積中傳回的資料列的順序，您必須使用`ORDER BY`子句。 若要指定儲存資料列的順序，請於資料表上建立叢集索引，如此一來資料表便不是堆積。  
+  堆積是一種沒有叢集索引的資料表。 一個或多個可以建立在儲存為堆積之資料表上的非叢集索引。 資料會以無指定順序的方式儲存於堆積中。 一般來說，資料一開始是會以資料表中插入資料列的順序儲存，但是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會移動堆積中的資料，以有效率地儲存資料列，因此無法預期資料順序。 為確保從堆積中傳回之資料列順序，您必須使用 `ORDER BY` 子句。 若要指定儲存資料列的順序，請於資料表上建立叢集索引，如此一來資料表便不是堆積。  
   
 > [!NOTE]  
 >  有些時候不建立叢集索引，而讓資料表保持為堆積反而有助於工作，但有效地使用堆積是一項進階的技巧。 除非有將資料表保留為堆積的特殊理由，否則大多數的資料表都應該選擇一個適合的叢集索引。  

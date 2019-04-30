@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d37c7b2a75b6e0f6fa832fb562dd04aca77c88b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155030"
 ---
 # <a name="miscellaneous-files"></a>其他檔案
   任何專案的外部檔案稱為「其他檔案」(Miscellaneous file)。 您開啟了某個方案之後，便可以開啟和修改關聯於這個專案的其他檔案。 如果副檔名沒有相關的專案程式碼編輯器，這個檔案便會分類為其他檔案。 例如，在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案中，就會將副檔名為 .txt 或 .mdx 的檔案當作其他檔案來處理。 在 MDX 專案中，副檔名為 .txt 或 .sql 的檔案會當作其他檔案來處理。 若要使副檔名與程式碼編輯器相關聯，請參閱[使副檔名與程式碼編輯器](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)。  

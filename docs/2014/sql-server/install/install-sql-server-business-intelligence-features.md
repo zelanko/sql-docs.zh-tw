@@ -10,11 +10,11 @@ manager: kfile
 ms.date: 10/24/2018
 ms.technology: install
 ms.openlocfilehash: 44805d6fd7512a5180a2b62e2c8808b890901705
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151646"
 ---
 # <a name="install-sql-server-2014-bi-features"></a>安裝 SQL Server 2014 BI 功能
 

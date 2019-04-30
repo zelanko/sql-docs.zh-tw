@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5b2b832fbd7eb83fa26353750770894bfb6f2a8a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165154"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014 中 SQL Server Reporting Services 已被取代的功能
   本主題描述已被取代的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能。 在此版本中仍然提供已被取代的功能，不過，這些功能排程在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]之後版本中移除。 已被取代的功能不應在新應用程式中使用。  

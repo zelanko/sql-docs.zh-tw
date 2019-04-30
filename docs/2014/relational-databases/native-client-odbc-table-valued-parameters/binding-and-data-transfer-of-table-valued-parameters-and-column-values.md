@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26bcf31c2d4e0d188e93587dd9bdec1a9ff382e0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199959"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>資料表值參數和資料行值的繫結與資料傳送
   資料表值參數與其他參數一樣，必須先繫結，然後才能傳遞至伺服器。 應用程式繫結資料表值參數與其他參數的方式相同： 使用 SQLBindParameter 或 SQLSetDescField 或 SQLSetDescRec 同等的呼叫。 資料表值參數的伺服器資料類型是 SQL_SS_TABLE。 C 類型可以指定為 SQL_C_DEFAULT 或 SQL_C_BINARY。  
@@ -36,7 +36,7 @@ ms.locfileid: "52533978"
 |*ValueType*|APD 中的 SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE。|APD 中的 SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE。<br /><br /> 這必須是 SQL_C_DEFAULT 或 SQL_C_BINARY。|  
 |*ParameterType*|IPD 中的 SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE。|IPD 中的 SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE。<br /><br /> 這必須是 SQL_SS_TABLE。|  
 |*ColumnSize*|IPD 中的 SQL_DESC_LENGTH 或 SQL_DESC_PRECISION。<br /><br /> 這取決於 windows 7 *ParameterType*。|SQL_DESC_ARRAY_SIZE<br /><br /> 當參數焦點設定為資料表值參數時，也可以使用 SQL_ATTR_PARAM_SET_SIZE 來設定。<br /><br /> 如果是資料表值參數，這就是資料表值參數資料行緩衝區中的資料列數目。|  
-|*D*|IPD 中的 SQL_DESC_PRECISION 或 SQL_DESC_SCALE。|未使用的。 這必須是 0。<br /><br /> 如果這個參數是不 0、 SQLBindParameter 會傳回 SQL_ERROR，並將診斷記錄會產生含有 SQLSTATE = HY104 和訊息 「 無效的有效位數或小數位數 」。|  
+|*DecimalDigits*|IPD 中的 SQL_DESC_PRECISION 或 SQL_DESC_SCALE。|未使用的。 這必須是 0。<br /><br /> 如果這個參數是不 0、 SQLBindParameter 會傳回 SQL_ERROR，並將診斷記錄會產生含有 SQLSTATE = HY104 和訊息 「 無效的有效位數或小數位數 」。|  
 |*ParameterValuePtr*|APD 中的 SQL_DESC_DATA_PTR。|SQL_CA_SS_TYPE_NAME。<br /><br /> 這個參數對於預存程序呼叫而言是選擇性的，如果不需要的話可以指定 NULL。 您必須針對不是程序呼叫的 SQL 陳述式指定這個參數。<br /><br /> 這個參數也會當做一個唯一值，應用程式可以在使用變動資料列繫結時使用這個值來識別這個資料表值參數。 如需詳細資訊，請參閱本主題後面的「變動資料表值參數資料列繫結」一節。<br /><br /> SQLBindParameter 的呼叫上指定的資料表值參數類型名稱時，它必須指定為 Unicode 值，即使在建置為 ANSI 應用程式的應用程式。 使用參數的值*StrLen_or_IndPtr*應該是 SQL_NTS 或是字串長度乘以 sizeof （wchar） 的名稱。|  
 |*BufferLength*|APD 中的 SQL_DESC_OCTET_LENGTH。|資料表值參數類型名稱的長度 (以位元組為單位)。<br /><br /> 如果此類型名稱以 Null 結尾，這項設定可以是 SQL_NTS；如果不需要資料表值參數類型名稱則為 0。|  
 |*StrLen_or_IndPtr*|APD 中的 SQL_DESC_OCTET_LENGTH_PTR。|APD 中的 SQL_DESC_OCTET_LENGTH_PTR。<br /><br /> 若為資料表值參數，這就是資料列計數而非資料長度。|  

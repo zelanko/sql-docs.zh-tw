@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2f7a25a4a6a4bb6b8f153a8b04b47aeb542265c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162480"
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
   當您執行線上索引作業時，下列指導方針將適用：  
@@ -71,7 +71,7 @@ ms.locfileid: "53356199"
   
  因為索引作業的最終階段會保留 S-lock 或 Sch-M 鎖定，所以在明確的使用者交易 (例如 BEGIN TRANSACTION...COMMIT 區塊) 內執行線上索引作業時要特別小心。 這樣做導致交易完後才執行鎖定，而妨礙使用者進行並行作業。  
   
- 當線上索引重建可搭配 `MAX DOP > 1` 和 `ALLOW_PAGE_LOCKS = OFF` 選項執行時，可能會增加片段。 如需詳細資訊，請參閱[運作方式：線上索引重建-可能會導致片段增加的](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx)。  
+ 當線上索引重建可搭配 `MAX DOP > 1` 和 `ALLOW_PAGE_LOCKS = OFF` 選項執行時，可能會增加片段。 如需詳細資訊，請參閱 [How It Works:Online Index Rebuild - Can Cause Increased Fragmentation](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx) (運作方式：線上索引重建 - 可能會導致片段增加)。  
   
 ## <a name="transaction-log-considerations"></a>交易記錄考量因素  
  大規模的索引作業，無論是離線或線上執行，都會產生大量資料負載，而很快就填滿了交易記錄。 若要確定可以回復索引作業，在索引作業完成以前，不能截斷交易記錄；不過，在索引作業期間可以備份此記錄。 因此，在索引作業期間，交易記錄必須有足夠的空間，才能儲存索引作業交易與任何並行使用者交易。 如需詳細資訊，請參閱 [索引作業的交易記錄磁碟空間](transaction-log-disk-space-for-index-operations.md)。  

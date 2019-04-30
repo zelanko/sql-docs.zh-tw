@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 00144c51e60b72fe043443d2a9c8d1d51a6cb8da
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138830"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>建立變數值檔案 (AccessToSQL)
 變數的值，檔案是 XML 檔案包含經常變更整個伺服器的移轉命令 （例如來源或目的地伺服器名稱） 的參數值。 大量的資料庫移轉發生時，建立和主要的指令碼檔案中參考多個變數的檔案，以儲存每個來源伺服器的價值 **-v**在命令列切換。 此行為有助於維護幾個指令碼檔案中的靜態值，與多個變數的檔案中的變數值。  

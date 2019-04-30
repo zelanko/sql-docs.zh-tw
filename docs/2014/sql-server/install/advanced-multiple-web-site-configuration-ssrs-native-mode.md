@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d6860e41991d00e6cd0c2869413dca110422c4e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226015"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>進階多重網站組態 (SSRS 原生模式)
   使用此對話方塊可建立及管理用來存取報表伺服器或報表管理員的 URL。 **[進階多重網站組態]** 對話方塊是用來建立其他 URL (亦即包含主機標頭名稱的自訂 URL)，或是指定 IPv4 或 IPv6 格式的 IP 位址。  
@@ -27,7 +27,7 @@ ms.locfileid: "48185368"
   
  如果您想要設定不同的方式來存取報表伺服器，建立多個 URL 將會非常實用。 例如，透過內部網路和外部網路連接的報表伺服器存取，通常需要對每一種連接類型都有不同的 URL。  
   
- 若要開啟 [**進階多重網站組態**] 對話方塊中，按一下**進階**上**Web 服務 URL**或**報表管理員 URL**頁面[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager。 當 **[進階多重網站組態]** 對話方塊開啟之後，您可以按一下 **[加入]** 或 **[編輯]** ，以定義新的 URL 或是修改或刪除現有的 URL。  
+ 若要開啟 **[進階多重網站組態]** 對話方塊，請在 **組態管理員的** [Web 服務 URL] **或** [報表管理員 URL] **頁面上按一下** [進階] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 當 **[進階多重網站組態]** 對話方塊開啟之後，您可以按一下 **[加入]** 或 **[編輯]** ，以定義新的 URL 或是修改或刪除現有的 URL。  
   
  按一下 **[確定]** 儲存您的變更。 如果您加入或移除 URL，然後沒有先按一下 **[確定]** 就關閉此對話方塊，您的變更將會遺失。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48185368"
  從清單中清除 URL 項目。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 組態管理員&#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   

@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 674f6f53610c8bf864aba5a2b5c7310c10f969c2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049481"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>在無仲裁情況下強制啟動 WSFC 叢集
   本主題描述如何在沒有仲裁的情況下強制啟動 Windows Server 容錯移轉叢集 (WSFC) 叢集節點。  在災害復原和多重子網路案例中，可能需要這個方式才能針對 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體來復原資料及完整重新建立高可用性。  
   
--   **在開始之前：**[建議](#Recommendations)，[安全性](#Security)  
+-   **開始之前：**[建議](#Recommendations)，[安全性](#Security)  
   
 -   **若要強制叢集啟動沒有仲裁，使用：**[使用容錯移轉叢集管理員](#FailoverClusterManagerProcedure)，[使用 Powershell](#PowerShellProcedure)，[使用 Net.exe](#CommandPromptProcedure)  
   
@@ -102,7 +102,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> 後續操作：在沒有仲裁的情況下強制啟動叢集之後  
+##  <a name="FollowUp"></a> 後續操作：在強制仲裁的啟動叢集之後  
   
 -   在讓其他節點重新於線上工作之前，您必須重新評估及重新設定 NodeWeight 值，以正確建構新的仲裁。 否則，叢集可能會再次離線。  
   

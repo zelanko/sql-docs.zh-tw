@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 860732a8d694ee59dae05f76eb9cabe49ebc8c96
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161579"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>XML 中的階層式資料錄集
 ADO 可讓持續性的階層式資料錄集物件為 XML。 使用階層式資料錄集物件，在父資料錄集欄位的值會是另一個資料錄集。 這類欄位會表示為 XML 資料流，而不是屬性的子項目。  

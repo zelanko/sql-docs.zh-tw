@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9f55c1fb1b90f676f3e1867c6aefdd13889c2cce
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188374"
 ---
 # <a name="new-linked-report-page-report-manager"></a>新增連結報表頁面 (報表管理員)
   使用 [新增連結報表] 頁面即可建立連結報表。 連結報表具有專屬的設定值和屬性，但連結至另一個報表的報表定義。 當您有想要針對特定群組或使用者改變的基底報表時，連結報表就很有用。例如，根據您指定為參數之區域碼傳回不同資料的區域報表。 通常是在變更參數化的報表時建立連結報表，然後以不同的參數值儲存每一個報表執行個體。 不過，可以從您有權存取的任何報表來建立連結報表。  

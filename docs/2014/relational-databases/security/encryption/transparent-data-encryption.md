@@ -19,11 +19,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 40bf5851663840dac27252aa5cdfdadb0e76da93
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188024"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明資料加密 (TDE)
   *透明資料加密* (TDE) 會加密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 資料檔案，一般稱之為靜止的加密資料。 您可以採取幾個預防措施來維護資料庫安全，例如設計安全的系統、加密機密的資產，以及在資料庫伺服器周圍建立防火牆。 但是，當發生實體媒體 (如磁碟機或備份磁帶) 遭竊的狀況時，惡意人士可以還原或附加資料庫，並瀏覽資料。 一個解決方案是加密資料庫中的敏感性資料，並使用憑證來保護用來加密資料的金鑰。 如此可防止沒有金鑰的任何人使用資料，但是這種防護類型必須事先規劃。  

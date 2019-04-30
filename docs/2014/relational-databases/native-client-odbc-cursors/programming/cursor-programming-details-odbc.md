@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9138b9abc8b75107061e794f44341f628e58ac67
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207264"
 ---
 # <a name="cursor-programming-details-odbc"></a>資料指標程式設計詳細內容 (ODBC)
   選擇正確的資料指標類型可以改善應用程式效能。 在某些情況下，當您執行所要求之資料指標類型不支援的 SQL 陳述式時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可能會隱含轉換資料指標類型。  

@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63072745"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>記憶體最佳化資料表的持久性
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 為記憶體最佳化的資料表提供完整的持久性。 當變更記憶體最佳化資料表的交易認可時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (對磁碟基礎的資料表也一樣) 會保證這些變更是永久的 (即使資料庫重新啟動後也會存在)，前提是要提供基礎儲存。 持久性有兩個重要元件：交易記錄及磁碟儲存的保存資料變更。  
@@ -111,7 +111,7 @@ ms.locfileid: "52392022"
  如有需要可以藉由呼叫明確執行手動合併[sys.sp_xtp_merge_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)。  
   
 ### <a name="life-cycle-of-a-cfp"></a>CFP 的生命週期  
- CPF 解除配置之前會歷經幾個過渡狀態。 在任何時間內，CFP 將處於下列階段之一：PRECREATED、UNDER CONSTRUCTION、ACTIVE、MERGE TARGET、MERGED SOURCE、REQUIRED FOR BACKUP/HA、IN TRANSITION TO TOMBSTONE 以及 TOMBSTONE。 如需這些階段的說明，請參閱 [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)。  
+ CPF 解除配置之前會歷經幾個過渡狀態。 在任何給定的時間，Cfp 將處於下列階段之一：預先建立、 建構、 ACTIVE、 MERGE TARGET、 合併來源、 所需的備份/高可用性、 IN TRANSITION TO TOMBSTONE 和標記。 如需這些階段的說明，請參閱 [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)。  
   
  在考量到 CFP 在各個不同階段所佔的儲存空間之後，持久的記憶體最佳化資料表所佔的整體儲存空間可能遠大於該資料表在記憶體中大小的 2 倍。 DMV [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)可查詢來列出所有 Cfp 記憶體最佳化檔案群組中，包括其階段。 將 CFP 從「合併來源」狀態轉換為「標記」狀態且最後為記憶體回收的程序，最多可能會使用五個檢查點，每個檢查點後面都接著交易記錄備份 (如果資料庫有設定完整或大量記錄復原模式)。  
   

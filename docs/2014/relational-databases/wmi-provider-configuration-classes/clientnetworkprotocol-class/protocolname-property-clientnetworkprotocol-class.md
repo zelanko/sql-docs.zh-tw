@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 81e1081623b363cdcb9610c83301bd424cb3694d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191959"
 ---
 # <a name="protocolname-property-clientnetworkprotocol-class"></a>ProtocolName 屬性 (ClientNetworkProtocol 類別)
   取得所指定之目前網路通訊協定的名稱[Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)。  

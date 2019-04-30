@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162441"
 ---
 # <a name="indexes-on-computed-columns"></a>計算資料行的索引
   只要符合下列要求，您就可以在計算資料行上定義索引：  
@@ -70,7 +70,7 @@ ms.locfileid: "48049568"
   
 -   它並非 `float` 或 `real` 資料類型的運算式。  
   
--   它不會使用`float`或`real`在其定義中的資料類型。 例如，在下列陳述式中，資料行`y`是`int`且具決定性，但不是精確。  
+-   它的定義中並沒有使用 `float` 或 `real` 資料類型。 例如，在下列陳述式中，`y` 資料行是 `int` 且具有決定性，但並不是精確的。  
   
     ```  
     CREATE TABLE t2 (a int, b int, c int, x float,   
@@ -82,7 +82,7 @@ ms.locfileid: "48049568"
     ```  
   
 > [!NOTE]  
->  任何`float`或是`real`運算式都會視為不精確，並且不能的索引鍵;`float`或`real`運算式可用於索引檢視中，但不是做為索引鍵。 對於計算資料行也是如此。 任何函式、 運算式或使用者定義函式會被視為不精確，如果它包含任何`float`或`real`運算式。 這包含邏輯運算式 (比較)。  
+>  任何 `float` 或 `real` 運算式都被視為非精確，並且不能作為索引的索引鍵；`float` 或 `real` 運算式可用於索引檢視中，但不能作為索引鍵。 對於計算資料行也是如此。 若任何函數、運算式、使用者自訂函數包含任何 `float` 或 `real` 運算式，均會被視為不精確。 這包含邏輯運算式 (比較)。  
   
  COLUMNPROPERTY 函數的 **IsPrecise** 屬性會報告 *computed_column_expression* 是否精確。  
   
@@ -90,9 +90,9 @@ ms.locfileid: "48049568"
   
 -   *Computed_column_expression*定義的計算資料行不能評估為`text`， `ntext`，或`image`資料型別。  
   
--   計算資料行衍生自`image`， `ntext`， `text`， `varchar(max)`， `nvarchar(max)`， `varbinary(max)`，和`xml`，只要計算資料行資料類型可當做索引鍵資料行，可以進行索引的資料類型。  
+-   從 `image`、`ntext`、`text`、`varchar(max)`、`nvarchar(max)`、`varbinary(max)` 以及 `xml` 資料類型所衍生的計算資料行，只要其資料類型可作為索引鍵資料行，就可以製作成索引。  
   
--   計算資料行衍生自`image`， `ntext`，和`text`資料類型可以是在非叢集索引的非索引鍵 （內含） 資料行，只要計算資料行資料類型可作為非索引鍵索引資料行。  
+-   從 `image`、`ntext` 以及 `text` 資料類型所衍生的計算資料行，只要其資料類型可作為非索引鍵之索引資料行，就可作為非叢集索引中無索引鍵 (內含) 的資料行。  
   
  **SET Option Requirements**  
   

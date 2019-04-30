@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eb61a77aca509393143d4abae98af0a9efb5e888
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047997"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52407145"
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|閂鎖類別的名稱。|  
 |waiting_requests_count|**bigint**|這個類別中的閂鎖等候數。 這個計數器是從開始閂鎖等候時逐量遞增計算。|  
-|wait_time_ms|**bigint**|這個類別的總閂鎖等候時間 (以毫秒為單位)。<br /><br /> **注意：** 這個資料行在閂鎖等候期間，每隔五分鐘更新一次，一直到閂鎖等候結束。|  
+|wait_time_ms|**bigint**|這個類別的總閂鎖等候時間 (以毫秒為單位)。<br /><br /> **注意：** 每隔五分鐘期間閂鎖等候及閂鎖等候結束時，會更新此資料行。|  
 |max_wait_time_ms|**bigint**|這是記憶體物件可以等候這個閂鎖的最長時間。 如果這個值超乎尋常地高，可能是發生內部死結。|  
 |pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   

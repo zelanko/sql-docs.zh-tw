@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b00567781ac2a87bb2d5ff48eaa9d7cd04058f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223202"
 ---
 # <a name="set-the-language-for-report-parameters-in-a-url"></a>設定 URL 中報表參數的語言
   *rs:ParameterLanguage* URL 存取參數會緩和問題，其中區分文化特性的報表參數 (例如、日期、時間、貨幣和數字) 會使用瀏覽器語言進行解譯。 透過 *rs:ParameterLanguage*，現在可以獨立於瀏覽器之外解譯 URL。 例如，如果將報表伺服器設定為德文的區域設定，但是使用者是透過使用設定為英文 (美國) 的瀏覽器之 URL 來存取報表，則傳遞到報表伺服器的參數值將會被誤解。  

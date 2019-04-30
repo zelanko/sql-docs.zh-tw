@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0c84c1c87aa492ebc0643a72de863504eec883c6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154769"
 ---
 # <a name="previewing-reports-in-report-builder"></a>在報表產生器中預覽報表
   當您建立報表時，經常預覽報表以確認報表如預期般顯示相當有協助。 若要預覽報表，按一下 **[執行]**。 報表隨即在預覽模式下呈現。  

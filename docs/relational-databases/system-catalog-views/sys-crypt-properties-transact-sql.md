@@ -22,11 +22,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b006e2795a79f9a7cbaf3686113bb2f1c7ad8172
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049735"
 ---
 # <a name="syscryptproperties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47805436"
 |**class**|**tinyint**|識別屬性所在的項目類別。<br /><br /> 1 = 物件或資料行<br /> 5 = 組件|  
 |**class_desc**|**nvarchar(60)**|屬性所在項目類別的描述。<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
 |**major_id**|**int**|屬性所在項目的識別碼，根據類別加以解譯|  
-|**憑證指紋**|**varbinary(32)**|所用憑證或非對稱金鑰的 SHA-1 雜湊。|  
+|**thumbprint**|**varbinary(32)**|所用憑證或非對稱金鑰的 SHA-1 雜湊。|  
 |**crypt_type**|**char(4)**|加密類型。<br /><br /> SPVC = 以憑證私密金鑰加密<br /><br /> SPVA = 以非對稱私密金鑰加密<br /><br /> CPVC = 以憑證私密金鑰簽署的計數器簽章<br /><br /> CPVA = 以非對稱金鑰簽署的計數器簽章|  
 |**crypt_type_desc**|**nvarchar(60)**|加密類型的描述。<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> COUNTER SIGNATURE BY CERTIFICATE<br /><br /> COUNTER SIGNATURE BY ASYMMETRIC KEY|  
 |**crypt_property**|**varbinary(max)**|簽署或加密的位元。|  

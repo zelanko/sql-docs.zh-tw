@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 094ceed90543e61bf0577131508612244393cead
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63080669"
 ---
 # <a name="user-interface-reference-db2tosql"></a>使用者介面參考 (DB2ToSQL)
 本節包含說明主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) for DB2。  

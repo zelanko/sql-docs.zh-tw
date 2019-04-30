@@ -1,5 +1,5 @@
 ---
-title: SQLFreeHandle |Microsoft Docs
+title: SQLFreeHandle | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 197d3e1d36f8513821cec9630cade8f52681a43d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154668"
 ---
 # <a name="sqlfreehandle"></a>SQLFreeHandle
   在手動認可模式中，呼叫**SQLFreeHandle**陳述式上一個開啟交易的控制代碼會使暫止的變更資料庫的回復。 呼叫**SQLFreeHandle**的陳述式控制代碼永遠關閉任何開啟的資料指標並捨棄暫止的結果，請釋放陳述式控制代碼相關聯的所有資源。  

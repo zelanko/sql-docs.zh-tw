@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be4125f417b6333bfcb3002b15f1319f484d22a1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049457"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多重子網路叢集 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集是一個組態，當中每個容錯移轉叢集節點都會連接到不同的子網路或不同的子網路集。 這些子網路可以位於相同位置，或位於散佈於不同地理區域的站台。 跨越散佈於不同地理區域之站台的叢集有時候又稱為「延展叢集」。 由於沒有可供所有節點存取的共用儲存體，資料應該在多重子網路上的資料儲存體之間複寫。 透過資料複寫，可用資料就可以擁有多份複本。 因此，除了具有高可用性之外，多重子網路容錯移轉叢集也提供了災害復原方案。  

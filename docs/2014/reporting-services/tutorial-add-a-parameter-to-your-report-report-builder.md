@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151543"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教學課程：將參數加入至報表 （報表產生器）
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教學課程：將參數新增至報表 (報表產生器)
   將參數加入至報表可讓使用者從資料來源或報表中篩選報表資料。 系統會針對您包含在資料集查詢中的每個查詢參數，自動建立報表參數。 參數資料類型會決定該類型會如何在報表檢視器工具列上顯示。  
   
  ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  

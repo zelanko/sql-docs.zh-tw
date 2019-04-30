@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c10649c3dbe873464bcc52ca5bc54e5b948d547a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157604"
 ---
 # <a name="server-properties-history-page"></a>伺服器多個屬性 (記錄頁面)
   使用此頁面，即可設定要保留之報表記錄副本數目的預設值。 預設值會提供建立所有報表之報表記錄限制的初始設定。 您可以針對個別報表更改這些設定。  

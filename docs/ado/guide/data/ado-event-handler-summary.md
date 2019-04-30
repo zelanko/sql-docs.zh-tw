@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93790b3df8cb1d78ab2e0988cdc43cbd9af0718c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063014"
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 連接和資料錄集的事件
 兩個 ADO 物件可以引發事件：[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件並[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 **ConnectionEvent**系列上屬於作業**連線**物件，而**RecordsetEvent**系列上屬於作業**資料錄集**物件。

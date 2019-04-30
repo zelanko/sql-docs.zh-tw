@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a883377a17aa9e0c3426b4805263616375ea6215
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198403"
 ---
 # <a name="installation-components"></a>安裝元件
 > [!NOTE]  

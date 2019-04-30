@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6541cae5271e35fd5ad0030ffc8625fc97a46149
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231133"
 ---
 # <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>建立部署指令碼以 SQL Server Always On 可用性群組
 
@@ -64,7 +64,7 @@ az aks get-credentials --resource-group=<GroupName> --name=<ClusterName>
 
 下列範例示範如何執行`deploy-ag.py`。
 
-### <a name="help"></a>說明
+### <a name="help"></a>Help
 
 ```cmd
 python ./deploy-ag.py --help

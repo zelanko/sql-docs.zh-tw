@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 179944412ed72bc0055bf5c47b788a3a929e9844
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150829"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>效能監視及微調工具
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一組完整的工具，可用來監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的事件，以及用來微調實體資料庫設計。 要選擇的工具依據要做的監視或微調類型，以及要監視的特殊事件而定。  

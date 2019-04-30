@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c3a004d30a5edb20da77e6f93bf51a94472419b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192166"
 ---
 # <a name="calling-methods"></a>呼叫方法
   方法會執行特定工作相關的物件，例如發出`Checkpoint`上的資料庫，或要求的執行個體的登入的列舉的清單[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  

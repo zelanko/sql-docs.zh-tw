@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e459682da63bac8359fa8310233c234e456f4e5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195223"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 與 OLE 物件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**ISequentialStream**介面，以支援取用者存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**，**文字**，**映像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，以及 xml 資料類型當做二進位大型物件 (Blob). **ISequentialStream** 上的 **Read** 方法可讓取用者在可管理的區塊中擷取更多資料。  

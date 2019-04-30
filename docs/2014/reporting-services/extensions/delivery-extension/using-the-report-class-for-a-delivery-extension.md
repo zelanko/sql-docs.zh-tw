@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a3f750c2383253636db255cbe9f1ce0ee676a9d9
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63163969"
 ---
 # <a name="using-the-report-class-for-a-delivery-extension"></a>使用傳遞延伸模組的報表類別
   <xref:Microsoft.ReportingServices.Interfaces.Report> 類別代表報表伺服器資料庫中的報表。 任何訂閱都與特定報表相關聯。 報表包含在通知中。 您的傳遞延伸模組可以使用屬於通知一部分的 <xref:Microsoft.ReportingServices.Interfaces.Report> 物件來轉譯報表。 <xref:Microsoft.ReportingServices.Interfaces.Report> 物件也包含報表特定屬性，例如在報表伺服器上的報表 URL 以及報表名稱。 這些屬性全部都可以做為傳遞提供者的一部分。  

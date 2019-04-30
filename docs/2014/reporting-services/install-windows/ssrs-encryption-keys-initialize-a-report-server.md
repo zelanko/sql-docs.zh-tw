@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 38aed7f227c4720f334f6a4791a6f2c61583c0d3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144544"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>初始化報表伺服器 (SSRS 組態管理員)
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，初始化的伺服器是可以在報表伺服器資料庫中加密和解密資料的伺服器。 初始化是報表伺服器作業的需求。 報表伺服器服務第一次啟動時，會進行初始化。 在您將報表伺服器聯結至現有的部署時，或者您在復原處理中手動重新建立金鑰時，也會進行初始化。 如需如何和為什麼使用加密金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 設定管理員&#41;](ssrs-encryption-keys-manage-encryption-keys.md) 和[儲存加密的報表伺服器資料 &#40;SSRS 設定管理員&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)。  

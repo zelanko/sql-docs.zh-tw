@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b1faef483d62d1e7853e30279d9c789ebb05372
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190967"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>效能、快照、快取 (Reporting Services)
   報表伺服器的效能會受到一些因素組合的影響，包括硬體、存取報表的並行使用者數目、報表中的資料量，以及輸出格式。 若要了解安裝特有的效能因素以及哪些補救措施可產生所需的結果，您必須取得基準資料並執行測試。 如需有關工具和指導方針的詳細資訊，請參閱 MSDN 上的下列發行集：[Reporting Services 效能最佳化](https://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx)並[到 SQL Server 2005 Reporting Services 報表伺服器上執行負載測試中使用 Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkID=77519)。  

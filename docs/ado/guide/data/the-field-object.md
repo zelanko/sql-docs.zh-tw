@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e152c3147ab7c316494c6891424c0a7c8173f002
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062664"
 ---
 # <a name="the-field-object"></a>Field 物件
 每個**欄位**物件通常會對應至資料庫資料表中的資料行。 不過，**欄位**也可以代表指標到另一個**資料錄集**，呼叫一章。 例外狀況，例如章節資料行，將本指南稍後會說明。  

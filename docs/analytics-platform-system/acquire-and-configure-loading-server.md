@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: da404aa881f3ff7af26a681751aae12a45f2628f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231100"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>取得並設定載入伺服器來進行平行處理資料倉儲
 本文說明如何取得和設定載入伺服器做為非應用裝置 Windows 系統，來提交資料載入至 Parallel Data Warehouse (PDW)。  
@@ -32,12 +32,12 @@ ms.locfileid: "51703776"
   
 -   為您自己的客戶網域，不是應用裝置的網域。 您客戶的網域和設備網域之間沒有信任關係。  
   
-## <a name="Step1"></a>步驟 1︰ 決定容量需求  
+## <a name="Step1"></a>步驟 1:決定容量需求  
 正在載入系統可以設計成一或多個執行並行載入，載入伺服器。 每個載入伺服器沒有專用只載入時，只要它會處理您的工作負載的效能和儲存體需求。  
   
 載入伺服器的系統需求幾乎完全取決於您自己的工作負載。 使用[載入伺服器容量規劃工作表](loading-server-capacity-planning-worksheet.md)來協助判斷您的容量需求。  
   
-## <a name="Step2"></a>步驟 2： 取得 Server  
+## <a name="Step2"></a>步驟 2:取得 Server  
 既然您進一步了解您的容量需求，您可以規劃伺服器和您將需要購買或佈建的網路元件。 下列清單中的需求併入您的購買方案，然後購買您的伺服器，或佈建現有的伺服器。  
   
 ### <a name="R"></a>軟體需求  
@@ -45,7 +45,7 @@ ms.locfileid: "51703776"
   
 -   Windows Server 2012 或 Windows Server 2012 R2。 這些作業系統需要 FDR 網路介面卡。  
   
--   Windows Server 2008 R2。 這個作業系統需要 DDR 網路介面卡。  
+-   Windows Server 2008 R2. 這個作業系統需要 DDR 網路介面卡。  
   
 伺服器必須使用 EN-US 地區設定，才能使用 dwloader 命令列載入工具。 dwloader 不支援其他地區設定。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "51703776"
   
 3.  購買的雙連接埠卡片的 2 個 FDR InfiniBand 纜線或單一連接埠卡 1 FDR InfiniBand 纜線。 FDR InfiniBand 纜線會連接到設備的 InfiniBand 網路的載入伺服器。 根據您的環境，載入伺服器與設備 InfiniBand 交換器之間的距離取決纜線長度。  
   
-## <a name="Step3"></a>步驟 3： 將伺服器連線到 InfiniBand 網路  
+## <a name="Step3"></a>步驟 3:將伺服器連線到 InfiniBand 網路  
 使用下列步驟來載入伺服器連線到 InfiniBand 網路。 如果伺服器不使用 InfiniBand 網路，請略過此步驟。  
   
 1.  機架伺服器夠靠近應用裝置，讓您可以將它連接到設備的 InfiniBand 網路。  
@@ -75,7 +75,7 @@ ms.locfileid: "51703776"
   
 5.  設定網路介面卡的 InfiniBand 和 DNS 設定。 組態指示，請參閱[設定的 InfiniBand 網路介面卡](configure-infiniband-network-adapters.md)。  
   
-## <a name="Step4"></a>步驟 4： 安裝載入工具  
+## <a name="Step4"></a>步驟 4:安裝載入工具  
 用戶端工具則可從 Microsoft 下載中心下載。 
 
 若要安裝 dwloader，執行 dwloader 安裝用戶端工具中。
@@ -85,7 +85,7 @@ ms.locfileid: "51703776"
 <!-- To install the des[Install Integration Services Destination Adapters](install-integration-services-destination-adapters.md). 
 --> 
   
-## <a name="Step5"></a>步驟 5： 開始載入  
+## <a name="Step5"></a>步驟 5:啟動載入  
 您現在已準備好開始載入資料。 如需詳細資訊，請參閱：  
   
 1.  [dwloader 命令列載入工具](dwloader.md)  
@@ -107,7 +107,7 @@ ms.locfileid: "51703776"
   
 -   指定一個 PDW 使用者具有將資料的權限。 根據您的安全性需求，您可以有一個特定的使用者，每個資料庫。  
   
--   載入伺服器上的作業可以接受從中提取資料從受信任的內部網路之外的 UNC 路徑。 和攻擊者在網路上或影響名稱解析的能力可以攔截或修改資料傳送至 SQL Server PDW。 這代表竄改和資訊洩漏風險。 應該需要登入連接降低遭到竄改。 若要降低此風險，請在中設定下列群組原則選項**Security Settings\Local Policies\Security Options**載入伺服器上： **Microsoft 網路用戶端： 數位簽章通訊 （自動）：已啟用**  
+-   載入伺服器上的作業可以接受從中提取資料從受信任的內部網路之外的 UNC 路徑。 和攻擊者在網路上或影響名稱解析的能力可以攔截或修改資料傳送至 SQL Server PDW。 這代表竄改和資訊洩漏風險。 應該需要登入連接降低遭到竄改。 若要降低此風險，請在中設定下列群組原則選項**Security Settings\Local Policies\Security Options**載入伺服器上：**Microsoft 網路用戶端：數位簽署通訊 （自動）：已啟用**  
   
 -   關閉 Windows Server 2012 和更新版本的立即檔案初始化。 在 [效能] 區段中所述，這會是效能與安全性之間有所取捨。 您需要決定哪一種最佳根據您的安全性需求。  
   

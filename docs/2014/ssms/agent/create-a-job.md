@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed3c7cf100d0105d393bb8c22bbc0d38d2e9de26
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131533"
 ---
 # <a name="create-a-job"></a>建立作業
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 SQL Server 管理物件 (SMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中建立 SQL Server Agent 作業。  
@@ -93,7 +93,7 @@ ms.locfileid: "52808880"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     USE msdb ;  
@@ -134,7 +134,7 @@ ms.locfileid: "52808880"
   
 -   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
--   [sp_add_jobserver &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
+-   [sp_add_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
   
 ##  <a name="SMOProcedure"></a> 使用 SQL Server 管理物件  
  **若要建立 SQL Server Agent 作業**  

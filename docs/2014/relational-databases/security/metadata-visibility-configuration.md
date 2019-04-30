@@ -20,11 +20,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187925"
 ---
 # <a name="metadata-visibility-configuration"></a>中繼資料可見性組態
   中繼資料的可見性會限制在使用者所擁有的安全性實體，或已授與使用者某些權限的安全性實體。 例如，如果授與使用者資料表 `myTable`的 SELECT 或 INSERT 權限，則下列查詢會傳回一個資料列。  
@@ -63,7 +63,7 @@ GO
   
 -   發出中繼資料的內建函數 (例如 OBJECTPROPERTYEX) 可能傳回 NULL。  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 預存程序可能只會傳回資料列的子集，或傳回 NULL。  
+-    [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 預存程序可能只會傳回資料列的子集，或傳回 NULL。  
   
  SQL 模組 (例如預存程序和觸發程序) 會在呼叫者的安全性內容下執行，因此在中繼資料的存取上受到限制。 例如，在下列的程式碼中，當預存程序嘗試存取資料表 `myTable` 的中繼資料而呼叫者對此資料表沒有任何權限時，將會傳回空的結果集。 若在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則會傳回一個資料列。  
   

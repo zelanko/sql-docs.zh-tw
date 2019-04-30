@@ -27,11 +27,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 29dac7e1636026da3f77ac832a148a832abe240a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151450"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>檢視及處理 Database Engine Tuning Advisor 的輸出
   Database Engine Tuning Advisor 微調資料庫時，會建立摘要、建議、報表和微調記錄。 您可以使用微調記錄輸出針對 Database Engine Tuning Advisor 的微調工作階段進行疑難排解。 您可以使用摘要、建議和報表來判定是否要實作微調建議，或繼續微調，直到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的查詢效能改進達到所需的程度為止。 如需有關如何使用 Database Engine Tuning Advisor 來建立工作負載及微調資料庫的詳細資訊，請參閱＜ [啟動及使用 Database Engine Tuning Advisor](database-engine-tuning-advisor.md)＞。  

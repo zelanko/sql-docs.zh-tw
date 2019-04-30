@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7dc88892fab2fd18dbcbec5ce54fa09c9c9b89e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199386"
 ---
 # <a name="result-set-metadata"></a>結果集中繼資料
 *中繼資料*是描述其他資料的資料。 例如，結果集中繼資料會描述結果集，例如在結果集中的資料行數目、 這些資料行，其名稱、 有效位數、 null 屬性和等等的資料類型。  

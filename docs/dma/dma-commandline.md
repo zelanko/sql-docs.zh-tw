@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 575c456736242bebfe23544c430efe414d5097d2
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: ec274af1b3674cb821f0f5a477d1f798c404000e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154672"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>從命令列執行 Data Migration Assistant
 2.1 版和更新版本，當您安裝 Data Migration Assistant，它也會安裝在 dmacmd.exe *%programfiles%\\Microsoft Data Migration Assistant\\*。 使用 dmacmd.exe 來評估您的資料庫，以自動模式，並輸出結果以 JSON 或 CSV 檔案。 評估多個資料庫或大量資料庫時，這個方法會特別有用。 
@@ -46,8 +46,8 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | 如何使用 dmacmd.exe 說明文字        | N
 |`/AssessmentName`     |   評估專案的名稱   | Y
 |`/AssessmentDatabases`     | 連接字串的以逗號分隔清單。 資料庫名稱 （初始類別目錄） 會區分大小寫。 | Y
-|`/AssessmentSourcePlatform`     | 為支援的值評估的原始碼平台：SqlOnPrem RdsSqlServer。 目標整備度評量也會支援 Cassandra 作為來源平台。 預設值是 SqlOnPrem   | N
-|`/AssessmentTargetPlatform`     | 為支援的值評估的目標平台：AzureSqlDatabase、 ManagedSqlServer、 SqlServer2012、 SqlServer2014、 SqlServer2016、 SqlServerLinux2017 和 SqlServerWindows2017。 目標整備度評量也會做為目標平台支援 CosmosDB。 預設值是 SqlServerWindows2017   | N
+|`/AssessmentSourcePlatform`     | 評定的原始碼平台： <br>評估為支援的值：SqlOnPrem，RdsSqlServer （預設值） <br>支援目標整備性評估的值：SqlOnPrem RdsSqlServer （預設）、 Cassandra （預覽版）   | N
+|`/AssessmentTargetPlatform`     | 評估的目標平台：  <br> 評估為支援的值：AzureSqlDatabase、 ManagedSqlServer、 SqlServer2012、 SqlServer2014、 SqlServer2016、 SqlServerLinux2017 和 SqlServerWindows2017 （預設值）  <br> 支援目標整備性評估的值：ManagedSqlServer （預設）、 CosmosDB （預覽）   | N
 |`/AssessmentEvaluateFeatureParity`  | 執行功能同位規則。 如果 RdsSqlServer 原始碼平台，功能同位檢查評估不支援目標平台 AzureSqlDatabase  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | 執行相容性規則  | Y <br> （AssessmentEvaluateCompatibilityIssues 或 AssessmentEvaluateRecommendations 是必要）。
 |`/AssessmentEvaluateRecommendations`     | 執行功能建議        | Y <br> （AssessmentEvaluateCompatibilityIssues 或所需的 AssessmentEvaluateRecommendationsis）

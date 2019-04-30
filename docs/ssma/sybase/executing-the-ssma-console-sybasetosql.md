@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126301"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>執行 SSMA 主控台 (SybaseToSQL)
 Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 SSMA 活動。 後續章節將詳細說明相同。  
@@ -35,7 +35,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 ## <a name="project-commands"></a>專案命令  
 建立專案、 開啟、 儲存及結束專案的專案的命令控制代碼。  
   
-### <a name="create-new-project"></a>建立新專案間的  
+### <a name="create-new-project"></a>create-new-project  
 此命令會建立新的 SSMA 專案。  
   
 -   `project-folder` 表示取得建立之專案的資料夾。  
@@ -85,7 +85,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 > [!NOTE]  
 > SSMA for SAP ASE 主控台應用程式支援回溯相容性。 您可以使用它來開啟 建立的前一版的 SSMA 專案。  
   
-### <a name="save-project"></a>儲存專案  
+### <a name="save-project"></a>save-project  
 此命令會將儲存移轉專案。  
   
 **語法範例：**  
@@ -154,7 +154,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 <reconnect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="connect-target-database"></a>連線目標資料庫  
+### <a name="connect-target-database"></a>connect-target-database  
 此命令會連線到目標 SQL Server 資料庫，並完全載入目標資料庫的高層級的中繼資料，但不是中繼資料。  
   
 如果無法連線到目標，則會產生錯誤和主控台應用程式會停止進一步執行。  
@@ -312,7 +312,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 </convert-schema>  
 ```  
   
-### <a name="migrate-data"></a>移轉資料  
+### <a name="migrate-data"></a>migrate-data  
 此命令會將來源資料移轉至目標。  
   
 -   `object-name:` 指定來源物件視為移轉資料 （支援個別的物件名稱或群組物件名稱）。  
@@ -372,7 +372,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 > [!NOTE]  
 > [移轉] 命令設定預設的主控台輸出會是 'Full' 輸出報表不詳細的錯誤報告：只有在來源物件樹狀結構根節點的摘要。  
   
-### <a name="map-schema"></a>對應結構描述  
+### <a name="map-schema"></a>map-schema  
 這個命令會提供結構描述對應到目標結構描述的來源資料庫。  
   
 -   `source-schema` 指定要移轉的來源結構描述。  
@@ -393,7 +393,7 @@ sql-server-schema="<target-schema>"/>
 > [!NOTE]  
 > [移轉] 命令設定預設的主控台輸出會是 'Full' 輸出報表不詳細的錯誤報告：只有在來源物件樹狀結構根節點的摘要。  
   
-### <a name="synchronize-target"></a>同步處理目標  
+### <a name="synchronize-target"></a>synchronize-target  
 此命令會使用目標資料庫，同步處理的目標物件。  
  
 如果針對來源資料庫執行此命令時，發生錯誤。  
@@ -406,11 +406,11 @@ sql-server-schema="<target-schema>"/>
   
 -   `on-error:` 指定是否要指定同步處理錯誤視為警告或錯誤。 錯誤的可用選項：  
   
-    -   報表-總計-為-警告  
+    -   report-total-as-warning  
   
-    -   報表-每個-為-警告  
+    -   report-each-as-warning  
   
-    -   失敗指令碼  
+    -   fail-script  
   
 -   `report-errors-to:` 指定同步處理作業 （也就是選擇性屬性） 的錯誤報表的位置。 如果只指定資料夾路徑，然後檔案名稱**TargetSynchronizationReport.XML**建立。  
   
@@ -454,7 +454,7 @@ fail-script>" (optional)
 </synchronize-target>  
 ```  
   
-### <a name="refresh-from-database"></a>從資料庫重新整理  
+### <a name="refresh-from-database"></a>refresh-from-database  
 此命令會重新整理資料庫的來源物件。  
   
 如果針對目標資料庫執行此命令時，會產生錯誤。  
@@ -467,11 +467,11 @@ fail-script>" (optional)
   
 -   `on-error:` 指定是否要呼叫重新整理錯誤視為警告或錯誤。 錯誤的可用選項：  
   
-    -   報表-總計-為-警告  
+    -   report-total-as-warning  
   
-    -   報表-每個-為-警告  
+    -   report-each-as-warning  
   
-    -   失敗指令碼  
+    -   fail-script  
   
 -   `report-errors-to:` 指定的錯誤報表重新整理作業 （也就是選擇性屬性） 的位置。 如果只指定資料夾路徑，然後檔案名稱**SourceDBRefreshReport.XML**建立。  
   

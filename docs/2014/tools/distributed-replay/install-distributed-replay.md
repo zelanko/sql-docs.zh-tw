@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 67d74db6faf9b40ad323ed2948c2c0a596a63016
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149742"
 ---
 # <a name="install-distributed-replay-from-the-command-prompt"></a>從命令提示字元處安裝 Distributed Replay
   在命令提示字元處安裝 Distributed Replay 的新執行個體，讓您可以指定安裝功能及應如何設定。 命令提示字元安裝支援安裝、修復、升級及解除 Distributed Replay 元件。 透過命令提示字元安裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援使用 /Q 參數進行完整無訊息模式。  

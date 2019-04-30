@@ -29,11 +29,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3dd81f9ff49b7b99baf6796b3030da1611d02b7f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185700"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>在圖表上格式化圖例 (報表產生器及 SSRS)
   圖表圖例包含圖表中每一個類別目錄的描述。 圖例一定會包含一或多個圖例項目，其中每一個圖例項目都是由代表數列的彩色方塊及描述此數列的文字字串所組成，如下圖所示。  

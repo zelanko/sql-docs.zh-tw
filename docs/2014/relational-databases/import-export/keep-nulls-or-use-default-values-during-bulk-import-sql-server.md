@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4753e1097dee300d4d806c42b71954e6e557ed12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063929"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>大量匯入期間保留 Null 或使用預設值 (SQL Server)
   依預設，當資料匯入資料表時，**bcp** 命令和 BULK INSERT 陳述式會查看資料表中的資料行是否已定義預設值。 例如，若資料檔中有一個 Null 值欄位，將會以載入該資料行的預設值來取代。 **bcp** 命令和 BULK INSERT 陳述式都可以指定保留 Null 值。  

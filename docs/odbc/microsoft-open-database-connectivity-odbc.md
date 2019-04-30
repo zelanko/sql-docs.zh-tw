@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 53e9fdb135b46cedaad6e79fa4ff12c06a4c3ea8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198325"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft 開放式資料庫連接 (ODBC)
 Microsoft 開放式資料庫連接 (ODBC) 介面是 C 程式設計語言介面，可讓應用程式從各種不同的資料庫管理系統 (Dbms) 存取資料。 ODBC 是低階高效能的介面，專為關聯式資料存放區。  
@@ -44,7 +44,7 @@ Microsoft 開放式資料庫連接 (ODBC) 介面是 C 程式設計語言介面�
   
  定義與 ODBC 相關的詞彙。  
   
- [ODBCCONF。EXE](../odbc/odbcconf-exe.md)  
+ [ODBCCONF.EXE](../odbc/odbcconf-exe.md)  
   
  描述設定驅動程式和資料來源名稱的命令列公用程式。  
   

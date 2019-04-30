@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 414ff334139919e08b06291ec910f8531c70cd55
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136277"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>建立及附加排程至作業
   排程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業是表示定義在沒有使用者互動的情況下讓作業開始執行的條件。 您可以透過建立作業的新排程，或將現有的排程附加至作業，將作業排程為自動執行。  
@@ -91,7 +91,7 @@ ms.locfileid: "52757533"
 |說明如何定義伺服器的 CPU 閒置條件。|[設定 CPU 閒置與持續時間 &#40;SQL Server Management Studio&#41;](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_help_jobschedule &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   
- [msdb &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
+ [sp_help_jobschedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   
+ [dbo.sysjobschedules &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
   
   

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 920fc72443036328e4ac5c9181c479b2900d84fc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215284"
 ---
 # <a name="var-function-report-builder-and-ssrs"></a>Var 函數 (報表產生器及 SSRS)
   傳回運算式指定的所有非 Null 數值的變異數 (在給定範圍中評估)。  

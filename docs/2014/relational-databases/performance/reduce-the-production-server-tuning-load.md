@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f59763b63f4e73687620482a2c1e739fe21fb6f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150746"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>降低生產伺服器的微調負載
   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Tuning Advisor 會仰賴查詢最佳化工具來分析工作負載以及提出微調建議。 針對實際伺服器執行這項分析會增加伺服器負載，而且可能會在微調工作階段期間減損伺服器效能。 除了實際伺服器以外，您可以使用測試伺服器來減少微調工作階段期間對伺服器負載造成的影響。  

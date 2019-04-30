@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7c9e55741c72d624b7149435ced90550135d8b4a
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63163993"
 ---
 # <a name="implementing-a-datareader-class-for-a-data-processing-extension"></a>為資料處理延伸模組實作 DataReader 類別
   **DataReader** 物件允許用戶端從資料來源擷取唯讀、順向的資料流。 執行查詢時會傳回結果，並一直儲存於用戶端上的網路緩衝區中，直到您使用 **DataReader** 類別的 **Read** 方法要求它們為止。 若要建立 **DataReader** 類別，請實作 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 並選擇性地實作 <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension>。 使用 **DataReader** 物件可以提高應用程式的效能，方法是在資料可用時立即擷取它，而不是等待傳回查詢的整個結果，以及 (依預設) 一次只將一個資料列儲存到記憶體中，進而減少系統負擔。  

@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 49fce70b4fc01f77fe7ca54e3951f0372ba18489
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067644"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 容錯移轉叢集安裝
   若要安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式來建立及設定容錯移轉叢集執行個體。  
@@ -43,7 +43,7 @@ ms.locfileid: "52815730"
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝選項  
   
-##### <a name="option-1-integrated-installation-with-add-node"></a>選項 1：整合式的安裝與加入節點  
+##### <a name="option-1-integrated-installation-with-add-node"></a>選項 1：整合式安裝與加入節點  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 整合式容錯移轉叢集安裝包含兩個步驟：  
   
 1.  建立並設定單一節點的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體。 節點設定完成時，您就擁有可完整運作的容錯移轉叢集執行個體。 此時，它仍沒有高可用性，因為容錯移轉叢集只有單一節點。  

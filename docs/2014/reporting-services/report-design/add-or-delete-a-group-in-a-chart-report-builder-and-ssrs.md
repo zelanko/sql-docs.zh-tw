@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 89dc9cf211a9ab66c5617b6ef545795f332546f0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206475"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>在圖表中加入或刪除群組 (報表產生器及 SSRS)
   在圖表資料區域中按一下，以顯示 **[圖表資料]** 窗格。 將資料集欄位拖曳到 **[類別目錄群組]** 和 **[數列群組]** 區域來建立群組。 若要加入巢狀群組，請將多個欄位加入至該區域。  

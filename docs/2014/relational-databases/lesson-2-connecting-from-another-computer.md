@@ -1,5 +1,5 @@
 ---
-title: 第 2 課：從另一部電腦連接 |Microsoft Docs
+title: 第 2 課：從另一部電腦連線 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144797"
 ---
-# <a name="lesson-2-connecting-from-another-computer"></a>第 2 課：從另一部電腦連接
+# <a name="lesson-2-connecting-from-another-computer"></a>第 2 課：從另一部電腦連線
   為了加強安全性，初始安裝時，您不能從另一部電腦存取 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer Edition、Express Edition 和 Evaluation Edition 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 這一課教您如何啟用通訊協定、設定通訊埠以及設定 Windows 防火牆，以便從其他電腦連接。  
   
  這一課包含下列工作：  
@@ -91,7 +91,7 @@ ms.locfileid: "54127208"
   
 3.  在 **[規則類型]** 對話方塊中，選取 **[通訊埠]**，然後按 **[下一步]**。  
   
-4.  在 **[通訊協定及連接埠]** 對話方塊中，選取 **[TCP]**。 選取 [特定本機連接埠]，然後輸入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體的通訊埠編號。 輸入 1433 表示預設執行個體。 型別`49172`如果您要設定具名執行個體，而且在先前的工作已設定固定通訊埠。 按 [下一步] 。  
+4.  在 **[通訊協定及連接埠]** 對話方塊中，選取 **[TCP]**。 選取 [特定本機連接埠]，然後輸入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體的通訊埠編號。 輸入 1433 表示預設執行個體。 型別`49172`如果您要設定具名執行個體，而且在先前的工作已設定固定通訊埠。 按一下 [下一步] 。  
   
 5.  在 **[執行動作]** 對話方塊中，選取 **[允許連線]**，然後按 **[下一步]**。  
   
@@ -127,6 +127,6 @@ ms.locfileid: "54127208"
  以上總結這個簡短的基本連接教學課程。  
   
 ## <a name="return-to-tutorials-portal"></a>返回教學課程入口網站  
- [教學課程：Database Engine 使用者入門](tutorial-getting-started-with-the-database-engine.md)  
+ [教學課程：資料庫引擎使用者入門](tutorial-getting-started-with-the-database-engine.md)  
   
   

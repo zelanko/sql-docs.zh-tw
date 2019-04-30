@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 16651df836ac3fb87c5e28b4b8fa25088e9dd86a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159349"
 ---
 # <a name="set-exact-command"></a>SET EXACT 命令
 指定的規則來比較兩個字串的長度不同。  
@@ -53,18 +53,18 @@ SET EXACT ON | OFF
   
 |比較|= 完全關閉|= 確切上|= = 確切的 ON 或 OFF|  
 |----------------|------------------|-----------------|--------------------------|  
-|"abc"="abc"|相符項目|相符項目|相符項目|  
-|"ab"="abc"|沒有相符項目|沒有相符項目|沒有相符項目|  
-|"abc"="ab"|相符項目|沒有相符項目|沒有相符項目|  
-|"abc"="ab_ 」|沒有相符項目|沒有相符項目|沒有相符項目|  
-|"ab"="ab_ 」|沒有相符項目|相符項目|沒有相符項目|  
-|「 ab_"="ab"|相符項目|相符項目|沒有相符項目|  
+|"abc" = "abc"|相符項目|相符項目|相符項目|  
+|"ab" = "abc"|沒有相符項目|沒有相符項目|沒有相符項目|  
+|"abc" = "ab"|相符項目|沒有相符項目|沒有相符項目|  
+|"abc" = "ab_"|沒有相符項目|沒有相符項目|沒有相符項目|  
+|"ab" = "ab_"|沒有相符項目|相符項目|沒有相符項目|  
+|"ab_" = "ab"|相符項目|相符項目|沒有相符項目|  
 |「"="ab"|沒有相符項目|沒有相符項目|沒有相符項目|  
-|"ab"=""|相符項目|沒有相符項目|沒有相符項目|  
+|"ab" = ""|相符項目|沒有相符項目|沒有相符項目|  
 |"__" = ""|相符項目|相符項目|沒有相符項目|  
 |"" = "___"|沒有相符項目|相符項目|沒有相符項目|  
-|TRIM("___") =""|相符項目|相符項目|相符項目|  
-|「"= TRIM("___")|相符項目|相符項目|相符項目|  
+|TRIM("___") = ""|相符項目|相符項目|相符項目|  
+|"" = TRIM("___")|相符項目|相符項目|相符項目|  
   
 ## <a name="see-also"></a>另請參閱  
  [SET ANSI 命令](../../odbc/microsoft/set-ansi-command.md)

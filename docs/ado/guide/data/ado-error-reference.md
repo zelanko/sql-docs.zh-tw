@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a71b651df387bfe28992d426fd2080587e439ad
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063074"
 ---
 # <a name="ado-errors"></a>ADO 錯誤
-**ErrorValueEnum**常數描述 ADO 錯誤值。 如需完整清單，這些列舉的常數，包括值，請參閱[附錄 b: ADO 錯誤](../../../ado/guide/appendixes/appendix-b-ado-errors.md)。 本節會檢查一些更有趣的錯誤，並說明某些特定的情況下，可能會引發，或若要修正此問題的解決方案。 這兩個**ErrorValueEnum**列出常數及簡短的正面十進位數字。
+**ErrorValueEnum**常數描述 ADO 錯誤值。 如需完整清單，這些列舉的常數，包括值，請參閱[附錄 b:ADO 錯誤](../../../ado/guide/appendixes/appendix-b-ado-errors.md)。 本節會檢查一些更有趣的錯誤，並說明某些特定的情況下，可能會引發，或若要修正此問題的解決方案。 這兩個**ErrorValueEnum**列出常數及簡短的正面十進位數字。
 
 |Number|ErrorValueEnum 常數|描述/可能的原因|
 |------------|-----------------------------|----------------------------------|

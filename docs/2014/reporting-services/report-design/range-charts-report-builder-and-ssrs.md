@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 70c597e7dd98d0eac435ae18423d296785369fa2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215492"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>範圍圖表 (報表產生器及 SSRS)
   範圍圖表類型會顯示一組資料點，每個點都是由相同類別的多個值所定義。 這些值會以值軸所測量的標記高度來表示。 類別標籤會顯示在類別軸上。 一般範圍圖表會針對每個資料點，填滿上界值和下界值之間的區域。  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21ff73c95bb85167dfba64d434ed7b6c42051c07
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193281"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>在 FOR XML 查詢中的 TYPE 指示詞
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援[xml &#40;TRANSACT-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql)可讓您選擇性地要求的 FOR XML 查詢結果傳回為`xml`藉由指定 TYPE 指示詞的資料類型。 這將允許您處理伺服器上 FOR XML 查詢的結果。 例如，您可以針對它指定 XQuery、 將結果指派給`xml`類型變數或撰寫[巢狀 FOR XML 查詢](use-nested-for-xml-queries.md)。  

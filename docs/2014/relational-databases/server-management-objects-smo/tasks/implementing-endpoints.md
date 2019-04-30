@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 88f1d38f1769659842757d535309c6e42d70a289
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158740"
 ---
 # <a name="implementing-endpoints"></a>實作端點
   端點是可以透過原生方式接聽要求的服務。 SMO 藉由使用 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 物件來支援各種端點類型。 您可以藉由建立 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 物件的執行個體和設定其屬性，建立處理特定裝載類型的端點服務 (此類服務使用特定的通訊協定)。  

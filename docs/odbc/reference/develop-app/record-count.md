@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f8b0a6fc7aa5765d9373af33ab4fac0a4a07aac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151231"
 ---
 # <a name="record-count"></a>記錄計數
 SQL_DESC_COUNT 標頭欄位，描述元是以一為基的索引包含資料的最高編號記錄。 此欄位不是所有的資料行或參數繫結的計數。 當配置描述元時，SQL_DESC_COUNT 的初始值為 0。  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 40ab945f5eadbf1e1e876e37e921626719755a8f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209382"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>插入或刪除資料列 (報表產生器及 SSRS)
   您可以在 Tablix 資料區中加入或刪除資料列。 Tablix 資料區可以是資料表、矩陣或清單。 下列程序不適用於圖表和量測計資料區域。  

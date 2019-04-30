@@ -27,11 +27,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127897"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>SQL Server 安裝的安全性考量
   安全性對於每一個產品和每一項業務都很重要。 只要遵循簡單的最佳做法，就可以避免許多安全性漏洞。 本主題會討論一些您在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前和安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之後應該考慮的安全性最佳做法。 特定功能的參考主題中會包括那些功能的安全性指南。  

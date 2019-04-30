@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9931ad6cca3e47f3de324fc1fe7f8f0a5ed67cbe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191105"
 ---
 # <a name="protocolname-property-clientnetlibinfo-class"></a>ProtocolName 屬性 (ClientNetLibInfo 類別)
   取得與用戶端網路程式庫有關的通訊協定名稱。  

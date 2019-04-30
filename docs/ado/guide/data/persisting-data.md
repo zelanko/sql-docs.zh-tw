@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b89f05822ee23f5ad62c627b8bc6d67ebe401a2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130203"
 ---
 # <a name="persisting-data"></a>保存資料
 可攜式電腦運算 （例如，使用膝上型電腦），已產生可以在連線或中斷連線的狀態下執行的應用程式的需求。 ADO 已新增這個的支援，讓開發人員能夠儲存用戶端資料指標**資料錄集**到磁碟，稍後再重新載入它。  

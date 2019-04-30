@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5174b5c859fa76ceeccdb99b7a46f510fd62d923
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63072744"
 ---
 # <a name="native-compilation-advisor"></a>原生編譯 Advisor
   交易效能報告工具 (請參閱[判斷是否將資料表或預存程序應該移植至記憶體中 OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 會通知您，哪些解譯的預存程序，在您的資料庫中會有匯出使用原生編譯。 識別您要匯出使用原生編譯的預存程序之後，即可使用原生編譯 Advisor 協助您將解譯的預存程序移轉到原生編譯。 如需原生編譯的預存程序的詳細資訊，請參閱 [原生編譯的預存程序](natively-compiled-stored-procedures.md)。  

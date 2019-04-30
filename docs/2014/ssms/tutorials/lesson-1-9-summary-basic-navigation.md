@@ -1,5 +1,5 @@
 ---
-title: 摘要：基本導覽 | Microsoft Docs
+title: 摘要：基本導覽 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f25cc02e61fceb42a8c02919d4deaab42c0ab586
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151499"
 ---
 # <a name="summary-basic-navigation"></a>摘要：基本導覽
   您可以根據個人的喜好設定和工作需求來自訂 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設計介面。  
@@ -31,6 +31,6 @@ ms.locfileid: "48086478"
 -   設定 [啟動時] 選項來自訂預設配置。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 2 課：撰寫 Transact-SQL](lesson-2-writing-transact-sql.md)  
+ [第 2 課：撰寫 TRANSACT-SQL](lesson-2-writing-transact-sql.md)  
   
   

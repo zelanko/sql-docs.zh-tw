@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9371f053f95754cdcb7107559f9e0bc3eca2e9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062136"
 ---
 # <a name="data-types-ole-db"></a>資料類型 (OLE DB)
   若要執行[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式並處理結果使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，您必須知道如何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到繫結時，OLE DB 資料類型的資料類型參數或資料行中資料列集，以及它使用**ITableDefinition**介面來建立的資料表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63072366"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>判斷是否應將資料表或預存程序匯出至記憶體中 OLTP
   在 交易效能收集器[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]可協助您評估記憶體中 OLTP 是否能改善資料庫應用程式的效能。 交易效能分析報表還會指出應用程式啟用記憶體中 OLTP 所需執行的工作。 識別您要匯出至記憶體內部 OLTP 的磁碟資料表之後，即可使用 [記憶體最佳化建議程式](memory-optimization-advisor.md)協助您遷移資料表。 同樣地， [Native Compilation Advisor](native-compilation-advisor.md) 可協助您將預存程序匯出為原生編譯的預存程序。  

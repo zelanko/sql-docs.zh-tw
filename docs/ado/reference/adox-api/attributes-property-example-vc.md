@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4aab3372068a621235da9e26461df29240928440
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184161"
 ---
 # <a name="attributes-property-example-vc"></a>Attributes 屬性範例 (VC++)
 此範例示範[屬性](../../../ado/reference/adox-api/attributes-property-adox.md)屬性[資料行](../../../ado/reference/adox-api/column-object-adox.md)。 將它設定為**adColNullable**可讓使用者設定的值[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [欄位](../../../ado/reference/ado-api/field-object.md)設為空字串。 在此情況下，使用者可以區別不知道資料的記錄和記錄資料不會套用。  

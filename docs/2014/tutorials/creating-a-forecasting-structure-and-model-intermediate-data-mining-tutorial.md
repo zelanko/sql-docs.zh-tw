@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204807"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>建立預測結構和模型 (中繼資料採礦教學課程)
   接下來，您將使用資料採礦精靈，根據您剛建立的資料來源檢視建立新的採礦結構和採礦模型。 在這項工作中，您將指定採礦模型應使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 時間序列演算法。  

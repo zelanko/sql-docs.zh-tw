@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7ef2839bd49e48615ed77ab917a90169ac20bca3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188163"
 ---
 # <a name="publishing-data-sources-and-reports"></a>發行資料來源與報表
   發行報表前，您應該預覽報表以查看報表執行時的外觀。 您可以持續精簡設計，直到您滿意其結果為止。  

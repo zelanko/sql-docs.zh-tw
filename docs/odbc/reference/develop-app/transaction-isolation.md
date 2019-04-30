@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 46e063a5458bec095148c8bcda2783bb03dd622a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149052"
 ---
 # <a name="transaction-isolation"></a>交易隔離
 *交易隔離*指的是多個並行交易之間的互動程度。 若要查看這為何重要，您必須先看看可序列化能力的概念。  

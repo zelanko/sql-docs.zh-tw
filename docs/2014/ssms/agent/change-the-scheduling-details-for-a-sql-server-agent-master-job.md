@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f9e53c4ae42f981b1b579294954a965ef8c376
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140680"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>變更 SQL Server Agent 主要作業的排程詳細資料
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中變更作業定義的排程詳細資料。  
@@ -68,7 +68,7 @@ ms.locfileid: "54127158"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     -- changes the enabled status of the NightlyJobs schedule to 0   

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d6b0523bad560c2ca84396562a46d52a91fe0cb8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185655"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>圖表類型 (報表產生器及 SSRS)
   針對您要呈現的資料類型選擇適當的圖表類型相當重要。 因為這可以決定以圖表形式放入資料時可以解譯資料的程度。 例如，如果您的資料集包含多個相對於圖表大小的資料點，最好使用區域、線條或散佈圖呈現。 如需如何根據選取的圖表類型準備資料的相關討論，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  

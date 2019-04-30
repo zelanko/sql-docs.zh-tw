@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b512ff83d0002ef4a7c79b48cd8829fc2dbb9ba3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049774"
 ---
 # <a name="descriptor-fields"></a>描述項欄位
 項目中包含*標頭*並*記錄*完整地描述資料行或參數的欄位。  

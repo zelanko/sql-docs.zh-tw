@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2bdd2643fdeb0f317e47c4d54b8b1ca62dec4109
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183960"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Columns 和 Tables Append 方法、Name 屬性範例 (VB)
 下列程式碼示範如何建立新的資料表。  

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 379877d3a08c60a293b96c5c57d55a2894ba0a79
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63074046"
 ---
 # <a name="handle-multiple-job-steps"></a>處理多個作業步驟
   如果您的作業有多重作業步驟，則必須指定這些作業步驟的執行順序。 這就叫做「流程控制」。 您可以加入新的作業步驟，並可隨時重新排列作業步驟的流程；變更內容將會在下次執行作業時生效。 下圖顯示資料庫備份作業的流程控制。  
@@ -44,9 +44,9 @@ ms.locfileid: "52768380"
   
 ## <a name="see-also"></a>另請參閱  
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
- [dbo.sysjobhistory &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)   
- [dbo.sysjobs &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)   
- [dbo.sysjobsteps &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobsteps-transact-sql)   
+ [dbo.sysjobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)   
+ [dbo.sysjobs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)   
+ [dbo.sysjobsteps &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobsteps-transact-sql)   
  [實作作業](implement-jobs.md)   
  [管理作業步驟](manage-job-steps.md)  
   

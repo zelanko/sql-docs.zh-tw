@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 68dfb8976312016ee7f2e42fc4fcdecb93fd28cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199373"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>依名稱繫結參數 (具名參數)
 某些 Dbms 允許應用程式名稱，而非在程序呼叫中的位置來指定預存程序的參數。 這種參數稱為*具名參數*。 ODBC 支援具名參數使用。 在 ODBC 中，具名的參數僅用於預存程序的呼叫，並不能用於其他 SQL 陳述式。  

@@ -13,11 +13,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6e390430115daf394c5e94267dad30a87851375d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128690"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB 標頭和版本資訊
   SQL Server Express LocalDB 執行個體 API 沒有個別的標頭檔；LocalDB 函數簽章和錯誤碼會定義在 SQL Server Native Client 標頭檔 (sqlncli.h) 中。 若要使用 LocalDB 執行個體 API，您必須在專案中包含 sqlncli.h 標頭檔。  
@@ -27,7 +27,7 @@ ms.locfileid: "52795350"
   
  *major.minor[.build[.revision]]*  
   
- 版本字串的前兩個數字 (*主要*並*次要*) 是必要項目。 版本字串的最後兩個數字 (*建置*並*修訂*) 為選擇性，預設為零，如果使用者離開其。這表示如果使用者僅指定 "12.2" 做為 LocalDB 版本號碼，則會視為使用者指定 "12.2.0.0"。  
+ 版本字串的前兩個數字 (*主要*並*次要*) 是必要項目。 版本字串的最後兩個數字 (*建置*並*修訂*) 為選擇性，預設為零，如果使用者離開其。這表示，如果使用者僅指定"12.2"做為 LocalDB 版本號碼，則會被視為使用者指定"12.2.0.0"。  
   
  例如，LocalDB 安裝的版本定義於 MSSQLServer\CurrentVersion 登錄機碼中的 SQL Server 執行個體登錄機碼底下，例如：  
   

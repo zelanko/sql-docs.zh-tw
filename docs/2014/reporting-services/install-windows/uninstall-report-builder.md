@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10d6d79587051b78f212c5fbe4a9d866ee0c75e0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143944"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>解除安裝單機版報表產生器 (報表產生器)
   您可以從控制台或命令列解除安裝單機版本的報表產生器。 如果沒有解除安裝 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]，您就不能解除安裝 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 版本的報表產生器。  

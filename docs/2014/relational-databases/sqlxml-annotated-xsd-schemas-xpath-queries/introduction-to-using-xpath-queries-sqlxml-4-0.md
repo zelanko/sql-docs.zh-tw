@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 775e9ac76d6c3b16d2c9ba6ce688a2a3dfbf48d6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127703"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>使用 XPath 查詢的簡介 (SQLXML 4.0)
   您可以將 XML 路徑語言 (XPath) 查詢指定成 URL 的一部分或在範本中指定此查詢。 對應結構描述會決定這個產生片段的結構，而且系統會從資料庫中擷取值。 這個程序在概念上類似於使用 CREATE VIEW 陳述式來建立檢視，然後針對它們撰寫 SQL 查詢。  
@@ -116,7 +116,7 @@ ms.locfileid: "52753370"
   
  當您在範本中指定 XPath 查詢時，請注意下列行為：  
   
--   XPath 可以包含在 XML 中具有特殊意義的 < 或 & 等字元 (而且範本是 XML 文件)。 您必須使用 XML & 編碼來逸出這些字元，或在 URL 中指定 XPath。  
+-   XPath 可以包含字元，例如 < 或 & XML 中具有特殊意義 （和範本是 XML 文件）。 您必須逸出這些字元使用 XML （& s)-編碼，或在 URL 中指定的 XPath。  
   
 ## <a name="see-also"></a>另請參閱  
  [在 SQLXML 4.0 中使用 XPath 查詢](using-xpath-queries-in-sqlxml-4-0.md)  

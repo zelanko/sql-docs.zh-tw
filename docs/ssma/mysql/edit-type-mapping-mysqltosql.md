@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 98b7c0433e506d7ef6e825199a9a6629c52e6f3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183088"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>編輯類型對應 (MySQLToSQL)
 **編輯類型對應**對話方塊可讓您指定類型的來源和目的地的資料庫物件之間的對應方式。  

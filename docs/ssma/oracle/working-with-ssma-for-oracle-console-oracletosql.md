@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 6131551a793257e201809dff469ee0980b8ece61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132333"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>使用 SSMA for Oracle 主控台 (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 適用於 Oracle 的移轉小幫手 (SSMA) 版本現在已可透過在命令列主控台應用程式。 指令碼檔案會形成執行命令的應用程式的輸入。 是主控台應用程式中，SSMA 啟用指令碼層級互動可減少移轉週期，並調整的移轉工作。  
@@ -36,7 +36,7 @@ ms.locfileid: "47639446"
 |[使用範例主控台指令碼檔&#40;OracleToSQL&#41;](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)|說明如何輕鬆地自訂範例檔案，以及產品中所提供的指令碼的方式|  
 |[管理密碼&#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)|描述有關密碼加密與解密，以及匯入 / 匯出的密碼資訊。|  
 |[產生報告&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)|列出要產生報表的命令。|  
-|[疑難排解&#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)|提供有關修正移轉問題的簡短資訊。|  
+|[Troubleshooting &#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)|提供有關修正移轉問題的簡短資訊。|  
   
 ## <a name="see-also"></a>另請參閱  
 [開始使用 SSMA for Oracle 主控台](getting-started-with-ssma-for-oracle-console-oracletosql.md)  

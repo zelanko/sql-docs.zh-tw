@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 75b29477c7ead402f06c9df2505a84636b906978
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63163955"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>指定搜尋條件 (Visual Database Tools)
   您可以藉由指定搜尋條件來指定出現在查詢中的資料列。 例如，若是正在查詢 `employee` 資料表，可以指定只尋找在特定區域工作的員工。  
