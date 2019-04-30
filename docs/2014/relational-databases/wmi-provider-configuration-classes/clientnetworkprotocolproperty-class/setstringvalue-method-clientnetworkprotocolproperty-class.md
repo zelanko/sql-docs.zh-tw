@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 82b89246d6289d0b19ee97e68e94f77d7cb30a77
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244993"
 ---
 # <a name="setstringvalue-method-clientnetworkprotocolproperty-class"></a>SetStringValue 方法 (ClientNetworkProtocolProperty 類別)
   設定所參考之目前屬性的字串值[PropertyIdx 屬性 （ClientNetworkProtocolProperty 類別）](clientnetworkprotocolproperty-class.md)值。  
@@ -47,7 +47,7 @@ StrValue
   
 |參數|描述|  
 |---------------|-----------------|  
-|*strValue*|指定目前屬性之新值的字串值。|  
+|*StrValue*|指定目前屬性之新值的字串值。|  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  `uint32` 值，如果已成功修改此服務為 0，如果不支援要求則為 1，以及其他指示錯誤的任何數字。  

@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79c1a291781c5d58b83b05f77ce5ccb952765277
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242437"
 ---
 # <a name="search-a-report-using-url-access"></a>使用 URL 存取搜尋報表
   您可以使用 URL 存取來搜尋特定文字集的報表。 若要搜尋報表，請在 URL 上將 *rc:FindString* 參數的值設定為等於您要搜尋的文字。 此外，請使用 *rc:StartFind* 和 *rc:EndFind* 參數，將搜尋縮小到報表內的特定頁面。  

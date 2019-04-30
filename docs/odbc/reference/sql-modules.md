@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30c116878049c4f6a8f36e988731ab641e03c6d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232769"
 ---
 # <a name="sql-modules"></a>SQL 模組
 將 SQL 陳述式傳送至 DBMS 的第二個技巧是透過模組。 簡單地說，模組會包含群組的程序，從主應用程式的程式設計語言呼叫。 每個程序包含單一的 SQL 陳述式，且資料會傳遞與程序參數。  

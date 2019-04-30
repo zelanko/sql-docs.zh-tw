@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 815eff4ba68cb35a5f38b98514cc5359347a42e3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237691"
 ---
 # <a name="atom-device-information-settings"></a>ATOM 裝置資訊設定
   Atom 轉譯延伸模組的裝置資訊設定支援提交 Atom 摘要名稱以及要使用的字元編碼。  

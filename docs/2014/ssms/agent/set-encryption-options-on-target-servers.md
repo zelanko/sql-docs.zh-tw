@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b27dd81df572e289d182fdaa637a3af972b3d603
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244981"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>在目標伺服器上設定加密選項
   如果您無法在主要伺服器與部分或全部的目標伺服器之間，使用安全通訊端層 (SSL) 加密通訊的憑證，但是您想要加密它們之間的通道，請將目標伺服器設定為使用所需的安全性層級。  

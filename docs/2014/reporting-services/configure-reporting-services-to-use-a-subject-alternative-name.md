@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c0d16d95709746d32323ab7a4e17c0b4405ba12
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266049"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>設定 Reporting Services 使用主體替代名稱
   此主題說明如何透過修改 rsreportserver.config 檔案和使用 Netsh.exe 工具來設定 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS)，以使用主體替代名稱 (SAN)。  

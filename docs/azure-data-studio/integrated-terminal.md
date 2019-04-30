@@ -12,11 +12,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239365"
 ---
 # <a name="integrated-terminal"></a>整合式終端機
 
@@ -98,13 +98,13 @@ ms.locfileid: "53030432"
 ---|---
 **Ctrl +'**|顯示整合式終端機
 **Ctrl + Shift +'**|建立新的終端機
-**Ctrl + 向上鍵**|向上捲動
-**Ctrl + 向下鍵**|向下捲動
-**Ctrl + PageUp**|向上捲動一頁
-**Ctrl + PageDown**|向下捲動一頁
-**Ctrl + Home**|捲動至上方
-**Ctrl + End**|捲動至底端
-**Ctrl + K**|清除 終端機
+**Ctrl+Up**|向上捲動
+**Ctrl+Down**|向下捲動
+**Ctrl+PageUp**|向上捲動一頁
+**Ctrl+PageDown**|向下捲動一頁
+**Ctrl+Home**|捲動至上方
+**Ctrl+End**|捲動至底端
+**Ctrl+K**|清除 終端機
 
 其他終端機命令可用，並可以繫結至您慣用的鍵盤快速鍵。
 
@@ -129,7 +129,7 @@ ms.locfileid: "53030432"
 
 複製並貼上的按鍵繫結關係，請依照下列平台標準：
 
-* Linux:**Ctrl + Shift + C**和**Ctrl + Shift + V**
+* Linux：**Ctrl + Shift + C**和**Ctrl + Shift + V**
 * Mac:**Cmd + C**和**Cmd + V**
 * Windows:**Ctrl + C**和**Ctrl + V**
 

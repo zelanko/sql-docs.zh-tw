@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00d51c24583231f28ec15dd86c1848ba95c345d6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255384"
 ---
 # <a name="updatable-subscriptions"></a>可更新的訂閱
   若為異動複寫，重複的資料應當成唯讀處理；然而，您可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者端使用可更新的訂閱，來修改複寫的資料。 如果您需要修改訂閱者端的資料，請視您的需求，使用下列其中一個選項。  
@@ -36,9 +36,9 @@ ms.locfileid: "52771000"
 -   針對佇列更新訂閱，請選取 **[佇列變更且儘可能認可]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [建立提取訂閱](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [訂閱發行集](subscribe-to-publications.md)   
  [異動複寫的可更新訂閱](transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

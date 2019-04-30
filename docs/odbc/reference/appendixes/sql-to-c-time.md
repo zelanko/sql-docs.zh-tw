@@ -1,5 +1,5 @@
 ---
-title: SQL 到 c： 時間 |Microsoft Docs
+title: SQL 轉換為 C：Time | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e028502bd7bc6ac1a81006d340b6ce606a0ae337
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259597"
 ---
-# <a name="sql-to-c-time"></a>SQL 到 C：時間
+# <a name="sql-to-c-time"></a>SQL 轉換為 C：Time
 ODBC SQL 資料類型是次識別碼：  
   
  SQL_TYPE_TIME  
@@ -31,11 +31,11 @@ ODBC SQL 資料類型是次識別碼：
   
 |C 類型識別碼|測試|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > 字元位元組長度<br /><br /> *9* <= *Columnsize* < = 字元位元組長度<br /><br /> *BufferLength* < 9|data<br /><br /> 截斷的資料 [a]<br /><br /> 未定義|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > 字元長度<br /><br /> *9* <= *Columnsize* < = 字元長度<br /><br /> *BufferLength* < 9|data<br /><br /> 截斷的資料 [a]<br /><br /> 未定義|以字元為單位的資料長度<br /><br /> 以字元為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|data<br /><br /> 未定義|以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 22003|  
-|SQL_C_TYPE_TIME|無 [b]|data|6 [d]|n/a|  
-|SQL_C_TYPE_TIMESTAMP|無 [b]|資料 [c]|16 [d]|n/a|  
+|SQL_C_CHAR|*BufferLength* > 字元位元組長度<br /><br /> *9* <= *Columnsize* < = 字元位元組長度<br /><br /> *BufferLength* < 9|資料<br /><br /> 截斷的資料 [a]<br /><br /> 未定義|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > 字元長度<br /><br /> *9* <= *Columnsize* < = 字元長度<br /><br /> *BufferLength* < 9|資料<br /><br /> 截斷的資料 [a]<br /><br /> 未定義|以字元為單位的資料長度<br /><br /> 以字元為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|資料<br /><br /> 未定義|以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 22003|  
+|SQL_C_TYPE_TIME|None[b]|資料|6[d]|n/a|  
+|SQL_C_TYPE_TIMESTAMP|None[b]|Data[c]|16[d]|n/a|  
   
  [a] 的小數秒數時間會被截斷。  
   

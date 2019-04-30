@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c76e3e4f1f2e427d8f56c0b832475a22aee6648d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262276"
 ---
 # <a name="files-only-installation-reporting-services"></a>僅限檔案安裝 (Reporting Services)
   「僅限檔案安裝」是指安裝程式會建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 程式檔案的資料夾結構、將檔案複製到磁碟、在本機電腦上註冊報表伺服器服務、設定服務帳戶、授與檔案權限給此服務帳戶，並註冊 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供者的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝。  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 74470d40bace6e1443ef9eb94f9698e225ff2946
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232842"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>修改聯結運算子 (Visual Database Tools)
   [查詢和檢視設計工具](visual-database-tools.md) 會使用等號 (等聯結) 聯結資料表，從而比對兩個聯結資料行中的值。 如果需要，可以變更用來比較聯結資料行中各值的運算子。  

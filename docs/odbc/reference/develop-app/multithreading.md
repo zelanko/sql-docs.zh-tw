@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a16262d562ca2088f38cd863a6f44e537e65d40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254212"
 ---
 # <a name="multithreading"></a>多執行緒
 多執行緒在作業系統上，驅動程式必須是安全執行緒。 也就是它必須是應用程式可能要在多個執行緒上使用相同的控制代碼。 如何達成這是驅動程式特有，而且很可能驅動程式將會序列化任何嘗試同時在兩個不同的執行緒上使用相同的控制代碼。  

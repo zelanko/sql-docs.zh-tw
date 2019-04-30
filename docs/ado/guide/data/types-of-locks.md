@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b66b87b0c741bf943cc2558862a0e1853c386b5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228072"
 ---
 # <a name="types-of-locks"></a>鎖定的類型
 ## <a name="adlockbatchoptimistic"></a>adLockBatchOptimistic  

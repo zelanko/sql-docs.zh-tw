@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a031a71fd482eadb9d27861d436b7245017ee8e9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232228"
 ---
 # <a name="sample-odbc-program"></a>ODBC 程式範例
 [ODBC 程式碼範例](https://go.microsoft.com/fwlink/?LinkId=244831)會提示您輸入 ODBC 資料來源名稱。  您會接著提示輸入查詢，此範例會顯示查詢的結果。

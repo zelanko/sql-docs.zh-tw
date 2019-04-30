@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a6b4b76edb7eb7761511e39ba97b811dcf3d5e99
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260664"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>一般屬性頁面，資源 (報表管理員)
   使用資源的 [一般] 屬性頁面，即可重新命名、刪除、移動或取代資源。 有關誰新增資源或修改屬性的資訊顯示在頁面上方。  

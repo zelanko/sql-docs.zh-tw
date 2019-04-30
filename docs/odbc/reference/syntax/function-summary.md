@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 04da1deae2745efb3b40cecaf842a42dfcdc30de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232029"
 ---
 # <a name="function-summary"></a>函式摘要
 下列各節摘要說明使用的函式藉由啟用 ODBC 的應用程式和相關的軟體。  

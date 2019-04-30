@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: d297b8516cb09db317ba835b49fe41b3e13be9e3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228555"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>使用 targetNamespace 屬性來指定目標命名空間 (SQLXML 4.0)
   在撰寫 XSD 結構描述，您可以使用 XSD **targetNamespace**屬性來指定目標命名空間。 本主題描述如何 XSD **targetNamespace**， **elementFormDefault**，並**attributeFormDefault**屬性運作，它們如何影響的 XML 執行個體產生，以及與命名空間指定 XPath 查詢的方式。  

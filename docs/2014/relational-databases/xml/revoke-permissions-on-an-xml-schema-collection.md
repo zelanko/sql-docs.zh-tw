@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 864a310044d2bf6b903b69b1b53bd6cd5bd3b38d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240723"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>撤銷 XML 結構描述集合上的權限
   建立 XML 結構描述集合的權限可以使用下列其中一種方式來撤銷：  

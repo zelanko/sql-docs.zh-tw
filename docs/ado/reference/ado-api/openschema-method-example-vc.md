@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c529e6d4d03ad8ac476894a7442589c06c772b95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239562"
 ---
 # <a name="openschema-method-example-vc"></a>OpenSchema 方法範例 (VC++)
 這個範例會使用[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法，以顯示每個資料表中的類型與名稱***Pubs***資料庫。  

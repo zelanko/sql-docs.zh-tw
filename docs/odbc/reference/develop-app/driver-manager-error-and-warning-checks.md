@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e00b6907d58cda1708cf61907d3c5ff6bf56edfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238037"
 ---
 # <a name="driver-manager-error-and-warning-checks"></a>驅動程式管理員錯誤和警告檢查
 驅動程式管理員完全或部分實作數個函式，並因此檢查所有或部分的錯誤和警告中這些函式。  

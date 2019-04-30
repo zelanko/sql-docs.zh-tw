@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 788e749d7fbfe62e61bedb57b53c994351427be3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266285"
 ---
 # <a name="cube-selection-dialog-box-report-builder"></a>選取 Cube 對話方塊 (報表產生器)
   使用 **[選取 Cube]** 對話方塊，即可選取不同的 Cube 做為報表的資料來源。 選取不同的 Cube 後，您的查詢可能會不再有效。  

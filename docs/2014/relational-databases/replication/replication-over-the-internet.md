@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 91def0dda11d1a16ceaac4d12a3c9294a084d247
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250384"
 ---
 # <a name="replication-over-the-internet"></a>透過網際網路的複寫
   透過網際網路複寫資料，可讓遠端、離線使用者在需要時使用網際網路連線存取資料。 使用下列方式，透過網際網路複寫資料：  

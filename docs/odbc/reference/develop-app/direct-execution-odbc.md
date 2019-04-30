@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73c061718dc326e43f72be369a28ad12726a3cab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242357"
 ---
 # <a name="direct-execution-odbc"></a>直接執行 ODBC
 直接執行是執行陳述式的最簡單方式。 當陳述式提交執行時，資料來源會將它編譯成存取計劃，，然後執行該存取計劃。  

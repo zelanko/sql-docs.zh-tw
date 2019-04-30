@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f22a5af8401a0cf16c508f805dbb38ee9970780
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242682"
 ---
 # <a name="create-and-manage-role-assignments"></a>建立和管理角色指派
   *「角色指派」* (Role assignment) 是一種安全性原則，可決定使用者或群組是否能夠存取特定的報表伺服器項目或執行作業。 角色指派是由單一使用者或群組帳戶名稱以及一或多個角色定義所組成。  

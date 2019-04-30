@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e671905eaf17c5980f2a89a6a8d1b6056dd6831
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245411"
 ---
 # <a name="arguments-dialog-box"></a>引數對話方塊
   [引數] 對話方塊用來指定工具的新引數或現有引數。 當您啟動在 [外部工具] 對話方塊中選取了 [提示輸入引數] 選項的外部工具時，會出現這個對話方塊。  

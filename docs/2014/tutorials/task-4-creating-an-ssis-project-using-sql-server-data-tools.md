@@ -1,5 +1,5 @@
 ---
-title: 工作 4:建立使用 SQL Server Data Tools 的 SSIS 專案 |Microsoft Docs
+title: 工作 4：建立使用 SQL Server Data Tools 的 SSIS 專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21a7b32332c2fe8c4a37831a3fdd745016503087
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249937"
 ---
-# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>工作 4:使用 SQL Server Data Tools 建立 SSIS 專案
+# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>工作 4：使用 SQL Server Data Tools 建立 SSIS 專案
   在這個工作中，您必須建立 SSIS 專案使用**SQL Server Data Tools**自動化清理和比對供應商資料。  
   
 1.  啟動 **SQL Server Data Tools**。 按一下 [開始]，指向**所有程式**，展開**Microsoft SQL Server 2012**，然後按一下**SQL Server Data Tools**。  

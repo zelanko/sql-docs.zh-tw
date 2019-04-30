@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00d20f8a6dd4d79b3100549d9286e7534bc8ce6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240375"
 ---
 # <a name="defining-text-format-text-file-driver"></a>定義文字格式 (文字檔驅動程式)
 使用文字驅動程式時，您可以使用**定義文字格式**對話方塊來定義資料行的格式中選取的檔案。 此對話方塊可讓您指定每個資料表的結構描述。 此資訊會寫入到 Schema.ini 檔案資料來源目錄中。 針對每個文字資料來源目錄建立個別的 Schema.ini 檔案。  

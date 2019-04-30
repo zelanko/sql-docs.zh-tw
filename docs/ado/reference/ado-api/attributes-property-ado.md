@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db3cb8276a4acda4c5d383252c2d92f51b57c684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248360"
 ---
 # <a name="attributes-property-ado"></a>Attributes 屬性 (ADO)
 表示物件的一或多個特性。  

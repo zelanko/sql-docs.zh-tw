@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebb42ac44d26e9ad8a091795eb3f8ab7283f6bcb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242864"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>將報表伺服器的存取權授與使用者 (報表管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用角色型安全性將報表伺服器的存取權授與使用者。 在新的報表伺服器安裝上，只有屬於本機管理員群組的成員擁有報表伺服器內容和作業的權限。 若要讓報表伺服器供其他使用者使用，您必須建立角色指派，以便將使用者或群組帳戶對應至指定工作集合的預先定義角色。  

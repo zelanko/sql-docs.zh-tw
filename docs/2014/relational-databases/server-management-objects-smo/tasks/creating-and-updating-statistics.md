@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 06fee22dc02a543aa9ab8ff249ca26f4cfb4aa40
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226166"
 ---
 # <a name="creating-and-updating-statistics"></a>建立和更新統計資料
   在 SMO 中，有關在資料庫中處理查詢的統計資訊可以利用 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 物件來收集。  

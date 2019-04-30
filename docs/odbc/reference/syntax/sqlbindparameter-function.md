@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc566c7cfd86e76df5389e56b7465dcd04b76f51
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237889"
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 函數
 
@@ -334,7 +334,7 @@ SQLRETURN SQLBindParameter(
 
  在 資料行取向的繫結，應用程式繫結不同的參數和長度/指標陣列至每個參數。  
   
- 若要使用資料行取向的繫結，應用程式首先會將 SQL_PARAM_BIND_BY_COLUMN 設定 SQL_ATTR_PARAM_BIND_TYPE 陳述式屬性。 (這是預設值。)每個資料行繫結，應用程式會執行下列步驟：  
+ 若要使用資料行取向的繫結，應用程式首先會將 SQL_PARAM_BIND_BY_COLUMN 設定 SQL_ATTR_PARAM_BIND_TYPE 陳述式屬性。 （這是預設值）。每個資料行繫結，應用程式會執行下列步驟：  
   
 1.  配置參數緩衝區陣列。  
   

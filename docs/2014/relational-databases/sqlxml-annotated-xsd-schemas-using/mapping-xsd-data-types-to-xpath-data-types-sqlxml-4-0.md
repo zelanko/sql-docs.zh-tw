@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: e1e74f5d2cfdd80e3d8a348808d9ecd6d8f38219
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228539"
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>將 XSD 資料類型對應到 XPath 資料類型 (SQLXML 4.0)
   當 XPath 查詢針對 XSD 結構描述執行，而且 XSD 類型是在 `xsd:type` 屬性中指定時，XPath 會在處理查詢時使用指定的資料類型。  

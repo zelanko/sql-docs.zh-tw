@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7fa7317d048d2bb9e19b6e82f5323a3b8ed15751
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238899"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 使用 insight 小工具管理資料庫與伺服器
 

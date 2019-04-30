@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5e9c8f954d5c9839b732912e8f747a443b57f7bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276093"
 ---
 # <a name="ready-to-install"></a>安裝準備就緒
   [準備安裝] 頁面會提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式所要安裝或變更之功能的摘要。  

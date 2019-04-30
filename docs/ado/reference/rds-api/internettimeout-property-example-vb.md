@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fe7074c592c837d292257bcaa18f3eb0638a6515
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63275923"
 ---
 # <a name="internettimeout-property-example-vb"></a>InternetTimeout 屬性範例 (VB)
 > [!IMPORTANT]
@@ -78,7 +78,7 @@ End Sub
   
 ## <a name="see-also"></a>另請參閱  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [DataSpace 物件 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+ [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [InternetTimeout 屬性 (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)
 
 

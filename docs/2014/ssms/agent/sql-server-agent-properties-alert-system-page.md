@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245746"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server Agent 屬性 (警示系統頁面)
   使用此頁面來檢視和修改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示所傳送的訊息設定。  

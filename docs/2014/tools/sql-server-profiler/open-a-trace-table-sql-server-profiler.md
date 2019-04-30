@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 66329c13eff3d8691e44c5b0ca07171cb9493bc9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240556"
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>開啟追蹤資料表 (SQL Server Profiler)
   此主題描述如何利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來開啟現有的追蹤資料表。  

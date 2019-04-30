@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79e43f273183d531a8fbc61fd71315a971213773
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265385"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>使用 ReportViewer 建立包含參數的鑽研 (RDLC) 報表 (SSRS 教學課程)
   [鑽研](https://technet.microsoft.com/library/ff519554.aspx)報表是使用者從另一個報表按一下連結所開啟的報表。 鑽研報表通常包含有關原始摘要報表之項目的詳細資料。 本教學課程將逐步引導您進行下列課程，以 [本機模式報表](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)建立包含參數和查詢的鑽研報表。  

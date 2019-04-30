@@ -22,14 +22,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 70f459f60616e7edd77078a7e9653ab9dff097e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248350"
 ---
 # <a name="establishing-a-connection"></a>建立連線
-配置環境和連接控制代碼，並設定任何連接屬性，應用程式之後即可連接到資料來源或驅動程式。 有三個不同的函數應用程式可用來執行這項操作： **SQLConnect** （核心介面一致性層級）， **SQLDriverConnect** （核心），和**SQLBrowseConnect**(層級 1)。 每三個可用於不同的案例。 連線之前，應用程式可以決定其中哪些功能支援**ConnectFunctions**所傳回的關鍵字**SQLDrivers**。  
+配置環境和連接控制代碼，並設定任何連接屬性，應用程式之後即可連接到資料來源或驅動程式。 有三個不同的函式應用程式可用來執行這項操作：**SQLConnect** （核心介面一致性層級）， **SQLDriverConnect** （核心），以及**SQLBrowseConnect** (層級 1)。 每三個可用於不同的案例。 連線之前，應用程式可以決定其中哪些功能支援**ConnectFunctions**所傳回的關鍵字**SQLDrivers**。  
   
 > [!NOTE]  
 >  有些驅動程式限制它們支援的作用中連線數目。 應用程式呼叫**SQLGetInfo** SQL_MAX_DRIVER_CONNECTIONS 選項，以決定多少個作用中連線的特定驅動程式支援。  

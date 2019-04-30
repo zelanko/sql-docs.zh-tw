@@ -1,5 +1,5 @@
 ---
-title: 工作 3 （選擇性）：檢閱訂閱檢視 |Microsoft Docs
+title: 工作 3 (選擇性)：檢閱訂閱檢視 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 27e7351f1643d18790d67703858ec6df7694ebd8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249986"
 ---
-# <a name="task-3-optional-reviewing-the-subscription-views"></a>工作 3 （選擇性）：檢閱訂閱檢視
+# <a name="task-3-optional-reviewing-the-subscription-views"></a>工作 3 (選擇性)：檢閱訂閱檢視
   在這項工作中，您會確認已使用 SQL Server Management Studio 建立 SQL 檢視表。  
   
 1.  啟動**SQL Server Management Studio**。 按一下 **開始**按鈕，再按一下**所有程式**，按一下  **Microsoft SQL Server 2012**，然後按一下**SQL Server Management Studio**。  

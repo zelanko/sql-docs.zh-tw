@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9cc02b99c77f35ad803f6e975ae445a50ccf718d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266367"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>導出數列屬性對話方塊、一般 (報表產生器及 SSRS)
   選取 [導出數列屬性] 對話方塊上的 [公式]，加入或修改將會根據使用現有數列資料作為輸入之內建公式導出的數列。  

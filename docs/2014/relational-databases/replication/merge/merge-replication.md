@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d0e7f4d0c1b8f6e4b1f4442c9b3ae6538b0eabef
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250561"
 ---
 # <a name="merge-replication"></a>合併式複寫
   合併式複寫與異動複寫類似，通常以發行集資料庫物件和資料的快照集啟動。 在「發行者」和「訂閱者」端所作的後續資料變更和結構描述修改可使用觸發程序進行追蹤。 該「訂閱者」在連接到網路時會與「發行者」同步，並且在「發行者」與「訂閱者」之間交換自上次同步處理後進行過變更的所有資料列。  

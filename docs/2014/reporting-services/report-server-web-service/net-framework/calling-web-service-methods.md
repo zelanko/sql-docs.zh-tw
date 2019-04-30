@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 87f1485b4e3c0ed064e42bb3b411fece96eba8d2
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261990"
 ---
 # <a name="calling-web-service-methods"></a>呼叫 Web 服務方法
   當您使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Proxy 類別來呼叫 Web 服務作業時，可以使用該類別的方法來這樣做。 這些方法會像在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 類別庫中類別的任何其他方法一樣回應。 所有的 Web 服務方法都有公用存取權，而且會要求您提供適當數目的引數與引數類型。 在專案中建立 Proxy 類別的執行個體之後，可以呼叫方法來透過報表伺服器執行報表作業。 下列 C# 程式碼範例說明 <xref:ReportService2010.ReportingService2010> Proxy 類別的 <xref:ReportService2010.ReportingService2010.ListChildren%2A> 方法。 此程式碼是用以遞迴呼叫傳回 <xref:ReportService2010.CatalogItem> 物件陣列的 Web 服務，這些物件包含報表伺服器資料庫中所有項目的清單：  

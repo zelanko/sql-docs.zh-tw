@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce86f56f1436d3442cd974f77ed7b3047d6d23a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249123"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - WFC 語法索引
 ADO 語言參考會使用 Microsoft Visual Basic 程式設計語言來說明 ADO 方法和屬性語法。 此索引是 ADO 語言參考主題，ADO 的 Windows Foundation Classes (ADO/WFC) 為基礎的交互參考。 語法差異發生時，請在這個索引，而不是語言參考主題中的語法清單中使用函式簽章。  

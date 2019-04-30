@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47e3c3991bd4732d542bf1ce79e83000e738ff77
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245417"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>針對使用 Proxy 的多伺服器作業進行疑難排解
   這是在目標伺服器上，於 Proxy 帳戶的環境下執行 Proxy 之相關聯步驟的散發式作業。 如果使用 Proxy 帳戶從主要伺服器下載的作業步驟失敗，請在 **msdb** 資料庫的 **sysdownloadlist** 資料表中，檢查 **error_message** 資料行，以了解下列錯誤訊息：  

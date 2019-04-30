@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3e5c894c75002f95ed67c8383c5497db998dfa9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240712"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>總計、彙總與內建集合的運算式範圍 (報表產生器及 SSRS)
   撰寫運算式時，您會發現 *「範圍」* (Scope) 一詞用於多個內容。 範圍可以指定要用於評估運算式的資料、轉譯頁面上的文字方塊集合、可以根據切換顯示或隱藏之報表項目的集合。 您將會在與運算式評估、彙總函式語法、條件式可用性相關的主題中，以及與這些領域相關的錯誤訊息中看 *「範圍」* (Scope) 一詞。 使用下列描述來協助區分 *「範圍」* (Scope) 適用的意義：  

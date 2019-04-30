@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a33585b216da10bd09a604905c50ce97b528de49
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250534"
 ---
 # <a name="sql-server-httpstorageobject"></a>SQL Server：HTTP_STORAGE_OBJECT
   **SQLServer:HTTP_STORAGE_OBJECT** 效能物件包含監視 Windows Azure 儲存體帳戶的效能計數器。 使用[在 Windows Azure 中的 SQL Server 資料檔案](../databases/sql-server-data-files-in-microsoft-azure.md)功能，您可以將資料庫檔案儲存在 Windows Azure 儲存體 Blob 中。 這個效能物件會將每個 Windows Azure 儲存體帳戶視為不同的磁碟機。  

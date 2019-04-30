@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240242"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 函數
 **合規性**  
@@ -122,7 +122,7 @@ SQLRETURN SQLGetFunctions(
 |-|-|  
 |SQL_API_SQLBINDPARAMETER|SQL_API_SQLNATIVESQL|  
 |SQL_API_SQLBROWSECONNECT|SQL_API_SQLNUMPARAMS|  
-|SQL_API_SQLBULKOPERATIONS [1]|SQL_API_SQLPRIMARYKEYS|  
+|SQL_API_SQLBULKOPERATIONS[1]|SQL_API_SQLPRIMARYKEYS|  
 |SQL_API_SQLCOLUMNPRIVILEGES|SQL_API_SQLPROCEDURECOLUMNS|  
 |SQL_API_SQLDESCRIBEPARAM|SQL_API_SQLPROCEDURES|  
 |SQL_API_SQLDRIVERCONNECT|SQL_API_SQLSETPOS|  
@@ -139,7 +139,7 @@ SQLRETURN SQLGetFunctions(
   
  [2] **SQLCancelHandle**會傳回只支援此驅動程式支援同時**SQLCancel**並**SQLCancelHandle**。 如果**SQLCancel**支援，但**SQLCancelHandle**不是，應用程式仍然可以呼叫**SQLCancelHandle**陳述式控制代碼，因為它會對應到**SQLCancel**。  
   
-## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS 巨集  
+## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS Macro  
  SQL_FUNC_EXISTS (*SupportedPtr*， *FunctionID*) 巨集用來判斷支援的 ODBC 3 *.x*或先前的函式之後**SQLGetFunctions**已使用呼叫*FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS 引數。 應用程式會呼叫與 SQL_FUNC_EXISTS *SupportedPtr*引數設定為*SupportedPtr*傳入*SQLGetFunctions*，並使用*FunctionID*引數設定為 **#define**函式。 SQL_FUNC_EXISTS 否則傳回支援的函式，如果 SQL_TRUE 和 SQL_FALSE。  
   
 > [!NOTE]

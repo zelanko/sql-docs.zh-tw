@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: fac27805730a7afa9541ed835f7900acf6e309d2
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63275999"
 ---
 # <a name="appliance-topology---analytics-platform-system"></a>設備拓撲-Analytics Platform System
 會顯示整個 Analytics Platform System 上的摘要資訊。  

@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 73294cfc5d1a7e4b2693615692604ef991421169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255303"
 ---
 # <a name="create-the-off-by-default-policy"></a>建立依預設為關閉的原則
   這項工作會建立名為 Mail Off 並且以介面區組態 Facet 為基礎的條件。 然後，它會建立名為 Off By Default 的原則。  

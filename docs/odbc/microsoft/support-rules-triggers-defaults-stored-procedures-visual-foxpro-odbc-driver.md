@@ -30,11 +30,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269870"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>規則、觸發程序、預設值和預存程序支援 (Visual FoxPro ODBC Driver)
 您無法建立 Visual FoxPro 規則、 觸發程序、 預設值或使用 Visual FoxPro ODBC Driver 的預存程序。 不過，您的應用程式可能互動與現有的規則、 觸發程序、 預設值或預存程序中，因為它會插入、 更新或刪除 Visual FoxPro 資料儲存在資料庫中。  
@@ -202,7 +202,7 @@ ms.locfileid: "47655006"
 |參數的命令|主要 （） 函式|私用的命令|  
 |PI （） 函式|程式 （） 函式|適當的 （） 函式|  
 |程序命令|PV （） 函式||  
-|公用的命令|PADL （) &#124; PADR （) &#124; PADC （） 函式||  
+|公用的命令|PADL( ) &#124; PADR( ) &#124; PADC( ) Functions||  
   
 ## <a name="r"></a>R  
   

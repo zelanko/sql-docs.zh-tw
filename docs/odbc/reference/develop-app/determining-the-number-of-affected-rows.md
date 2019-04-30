@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 99e3676c3b73b177f5e6fc3acef0d93d55cce898
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262095"
 ---
 # <a name="determining-the-number-of-affected-rows"></a>判斷受影響的資料列數目
 應用程式更新、 刪除或插入資料列之後，它可以呼叫**SQLRowCount**來判斷多少資料列受到影響。 **SQLRowCount**會傳回此值，不論資料列已更新、 刪除或執行插入**更新**，**刪除**，或**插入**陳述式，藉由執行定位更新或刪除陳述式，或藉由呼叫**SQLSetPos**。  

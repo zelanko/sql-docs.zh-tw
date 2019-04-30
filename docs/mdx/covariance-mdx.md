@@ -1,5 +1,5 @@
 ---
-title: 共變數 (MDX) |Microsoft 文件
+title: 共變數 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1bb24e4dcb536af144214f96dd5b904cc8530cd4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249609"
 ---
 # <a name="covariance-mdx"></a>Covariance (MDX)
 
@@ -39,12 +39,12 @@ Covariance(Set_Expression,Numeric_Expression_y [ ,Numeric_Expression_x ] )
  有效的數值運算式，這通常是傳回表示 X 軸數值之資料格座標的多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **共變數**函式評估指定的集合，針對第一個數值運算式，以取得 y 軸的值。 此函數接著會針對第二個數值運算式 (如果已指定) 來評估指定的集合，以取得 X 軸的值集合。 如果未指定第二個數值 expressionis，此函數會使用指定集合中的資料格目前內容做為值當做 x 軸。  
+ **共變性**函式評估指定的集合，針對第一個數值運算式，以取得 y 軸的值。 此函數接著會針對第二個數值運算式 (如果已指定) 來評估指定的集合，以取得 X 軸的值集合。 如果未指定第二個數值 expressionis，此函數會使用指定集合中的資料格目前內容做為值的 x 軸。  
   
- **共變數**函數使用偏誤的母體公式。 這是相對於[CovarianceN](../mdx/covariancen-mdx.md)使用非偏誤的母體公式 （除以 x-y 配對數，再減 1） 的函式。  
+ **共變性**函數使用偏誤的母體公式。 這是相對於[CovarianceN](../mdx/covariancen-mdx.md)函式，會使用非偏誤的母體公式 （除以 x-y 配對數，再減 1）。  
   
 > [!NOTE]  
->  **共變數**函式會忽略空白資料格包含文字或忽略邏輯值。 不過，此函數包括值為零的資料格。  
+>  **共變性**函式會忽略空白資料格或包含文字的資料格，或忽略邏輯值。 不過，此函數包括值為零的資料格。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何使用 Covariance 函數：  
@@ -59,6 +59,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
