@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5399ff5fa98b98665cea3e7fa67eb94eee693a63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127352"
 ---
 # <a name="from-clause-limitations"></a>FROM 子句限制
 FROM 子句中資料表的最大數目為 16。

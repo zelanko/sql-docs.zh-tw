@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b24db48d6a76c221e72944e8e5e6826cb8d5d55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127981"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>錯誤訊息 (Visual FoxPro ODBC Driver)
 發生錯誤時，Visual FoxPro 驅動程式會傳回下列資訊：  
@@ -43,14 +43,14 @@ ms.locfileid: "47804416"
 ## <a name="syntax"></a>語法  
  錯誤訊息的格式如下：  
   
- **[** *廠商* **] [** *ODBC_component* **]** *error_message*  
+ **[** *vendor* **][** *ODBC_component* **]** *error_message*  
   
  下表中所定義，在括號 ([]) 中的前置詞會識別錯誤的來源。  
   
 |資料來源|Prefix|值|  
 |-----------------|------------|-----------|  
-|驅動程式管理員|[廠商]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC 驅動程式管理員]<br />不適用|  
-|Visual FoxPro 驅動程式|廠商]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC Visual FoxPro 驅動程式]<br />不適用|  
+|驅動程式管理員|[vendor]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC 驅動程式管理員]<br />N/A|  
+|Visual FoxPro 驅動程式|廠商]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC Visual FoxPro 驅動程式]<br />N/A|  
   
  例如，如果 Visual FoxPro ODBC Driver 找不到檔案 employee.dbf，它可能會傳回下列錯誤訊息：  
   

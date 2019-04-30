@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5567bf3cc460aac6abfc2979a14e124bfd9d4cac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061932"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command 動態屬性 (ADO)
 指定使用者所提供的命令字串[Resync](../../../ado/reference/ado-api/resync-method.md)方法來重新整理中所命名的資料表中資料的問題[唯一資料表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)動態屬性。  

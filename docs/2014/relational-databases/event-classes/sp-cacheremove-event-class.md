@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ec9f519b6326b0c2188663b558ff099cac75c78
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058084"
 ---
 # <a name="spcacheremove-event-class"></a>SP:CacheRemove 事件類別
   SP:CacheRemove 事件類別指出已從計畫快取中移除預存程序。  

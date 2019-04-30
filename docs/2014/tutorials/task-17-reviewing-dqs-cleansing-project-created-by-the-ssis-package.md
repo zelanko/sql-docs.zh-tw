@@ -1,5 +1,5 @@
 ---
-title: 工作 17:檢閱 SSIS 封裝的 DQS 清理專案建立 |Microsoft Docs
+title: 工作 17：檢閱 SSIS 封裝的 DQS 清理專案建立 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4653ce040e19b82b9e70daa7ebfc02047d71b194
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057842"
 ---
-# <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>工作 17:檢閱 SSIS 封裝所建立的 DQS 清理專案
+# <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>工作 17：檢閱 SSIS 封裝所建立的 DQS 清理專案
   在這項工作中，您會開啟 DQS 用戶端中的 SSIS 封裝所建立的 DQS 專案、檢閱清理程序的結果，並選擇性地執行互動式清理及匯出結果。  
   
 1.  啟動**Data Quality Client**。  
@@ -26,7 +26,7 @@ ms.locfileid: "56024439"
   
 3.  排序依據清單**活動開始時間**以查看最新的記錄。  
   
-4.  請注意，您會看到以下格式的專案名稱：**CleanseAndCurate.Cleanse Supplier Data.GUID**。  
+4.  請注意，您會看到以下列格式的專案名稱：**CleanseAndCurate.Cleanse Supplier Data.GUID**。  
   
      ![DQS 清理專案建立的 SSIS 封裝](../../2014/tutorials/media/et-reviewingdqscpcreatedbythessispackage.jpg "SSIS 封裝所建立的 DQS 清理專案")  
   
@@ -38,7 +38,7 @@ ms.locfileid: "56024439"
   
 8.  中的主頁面**DQS 用戶端**，按一下**開啟資料品質專案**中**資料品質專案**窗格。  
   
-9. 在專案清單中，選取 SSIS DQS 清理元件所建立的專案。 專案的名稱應該具有以下格式：**CleanseAndCurate.Cleanse Supplier Data.GUID (紅色）**。 您可能需要根據清單排序**建立日期**資料行並尋找最新的記錄。  
+9. 在專案清單中，選取 SSIS DQS 清理元件所建立的專案。 專案的名稱應該採用格式：**CleanseAndCurate.Cleanse Supplier Data.GUID (紅色）**。 您可能需要根據清單排序**建立日期**資料行並尋找最新的記錄。  
   
 10. 按一下 [下一步] 。  
   

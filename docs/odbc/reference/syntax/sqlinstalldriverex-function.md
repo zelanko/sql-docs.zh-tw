@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ec40b97f8953f114081292ac82069fd4a81692a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132720"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx 函式
 **合規性**  
@@ -68,7 +68,7 @@ BOOL SQLInstallDriverEx(
  *pcbPathOut*  
  [輸出]（不包括 null 結束字元） 的位元組總數可用以傳回*lpszPathOut*。 傳回可用的位元組數目是否大於或等於*cbPathOutMax*中的輸出路徑*lpszPathOut*會被截斷成*cbPathOutMax*減號null 結束字元。 *PcbPathOut*引數可以是 null 指標。  
   
- *常見*  
+ *fRequest*  
  [輸入]要求的類型。 *常見*引數必須包含下列值之一：  
   
  ODBC_INSTALL_INQUIRY:查詢驅動程式安裝。  
@@ -100,9 +100,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>註解  
  *LpszDriver*引數是一份關鍵字-值配對的形式的屬性。 每組都終止 null 位元組，並將整個清單結尾 null 位元組。 （也就是兩個 null 位元組標記清單的結尾）。此清單的格式如下所示：  
   
- _驅動程式 desc_ **\\**0Driver**=**_驅動程式 DLL 的檔名_**\\**0 [安裝程式**=**_安裝程式-DLL 檔名_<b>\\</b>0]  
+ _driver-desc_ **\\**0Driver**=**_driver-DLL-filename_**\\**0[Setup**=**_setup-DLL-filename_<b>\\</b>0]  
   
- [_驅動程式-attr-keyword1_**=**_value1_<b>\\</b>0] [_驅動程式-attr-keyword2_ **=** _value2_<b>\\</b>0]...<b> \\ </b>0  
+ [_driver-attr-keyword1_**=**_value1_<b>\\</b>0][_driver-attr-keyword2_**=**_value2_<b>\\</b>0]...<b>\\</b>0  
   
  \0 所在 null 位元組並*驅動程式-attr-keywordn*任何驅動程式屬性的關鍵字。 關鍵字必須出現在指定的順序。 例如，假設格式化文字檔驅動程式會有不同的驅動程式和安裝程式 Dll，而且可以使用.txt 和.csv 副檔名的檔案。 *LpszDriver*引數，此驅動程式的可能，如下所示：  
   

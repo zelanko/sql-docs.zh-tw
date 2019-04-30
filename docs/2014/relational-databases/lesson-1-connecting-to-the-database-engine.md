@@ -1,5 +1,5 @@
 ---
-title: 第 1 課：連接到 Database Engine |Microsoft Docs
+title: 第 1 課：連線到資料庫引擎 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63145509"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連接至 Database Engine
+# <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連線到資料庫引擎
   當您安裝 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]時，所安裝的工具視版本和安裝選項而定。 這一課檢閱主要工具，顯示您如何連接及執行基本功能 (授權更多使用者)。  
   
   
@@ -101,6 +101,6 @@ ms.locfileid: "53375300"
 >  這是讓您快速入門的基本資訊。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供多樣化的安全性環境，安全性顯然是資料庫作業的重要一環。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 2 課：從另一部電腦連接](lesson-2-connecting-from-another-computer.md)  
+ [第 2 課：從另一部電腦連線](lesson-2-connecting-from-another-computer.md)  
   
   

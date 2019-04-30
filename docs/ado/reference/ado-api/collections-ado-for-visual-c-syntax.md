@@ -1,5 +1,5 @@
 ---
-title: 集合 (ADO for Visual c + + 語法) |Microsoft Docs
+title: 集合 (ADO for VisualC++語法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d94570a337f564588b2709fd292eab5ed5396dc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126699"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Collections (ADO for Visual C++ 語法)
 ## <a name="parameters"></a>參數  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcd89e7473ba2fb2a27b827da26f3654ea9d9b87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048965"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>啟動 dta 命令提示字元公用程式和微調工作負載
   這項工作會帶您逐步啟動 **dta** 公用程式、檢視它的說明，再從命令提示字元之下，利用它來微調工作負載。 它會使用您在 Database Engine Tuning Advisor 圖形化使用者介面 (GUI) 的 [微調工作負載](lesson-1-1-tuning-a-workload.md)練習中所建立的 MyScript.sql 工作負載。  
@@ -63,7 +63,7 @@ ms.locfileid: "48171108"
   
 -   ＜[dta Utility](dta-utility.md) ＞提供有關命令提示字元公用程式的參考資料，以及可用來控制公用程式作業的選擇性 XML 檔案。  
   
- 若要返回教學課程的開頭，請參閱 [教學課程：Database Engine Tuning Advisor](tutorial-database-engine-tuning-advisor.md)。  
+ 若要返回教學課程一開始，請參閱[教學課程：Database Engine Tuning Advisor](tutorial-database-engine-tuning-advisor.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 教學課程](../../relational-databases/database-engine-tutorials.md)  

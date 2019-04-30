@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 74ea4a208cad079933b27a7305a5ce0462e08515
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161414"
 ---
 # <a name="filtering-for-updated-records"></a>篩選更新的記錄
 在呼叫 UpdateBatch 之前，您可以使用資料錄集篩選器屬性，以檢視這些資料錄集開啟之後已經變更的記錄或 UpdateBatch 的最後一個呼叫。 若要這樣做，請設定篩選條件等於 adFilterPendingRecords 來判斷多少筆記錄將會更新，在下一節中的程式碼範例所示。  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a083f9d411474769335fdfae32bd59dfe455a9f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184928"
 ---
 # <a name="using-bookmarks"></a>使用書籤
 通常很有用直接傳回到特定記錄後需要四處移動**資料錄集**而不需捲動以查看每一筆記錄，並比較值。 比方說，如果您嘗試使用記錄搜尋**尋找**方法，但搜尋未傳回資料錄，您會自動放置在兩端**資料錄集**。 如果您的提供者支援它們，書籤可用來將您的位置標記之前使用**尋找**方法，讓您可以返回您的位置。 書籤**Variant**輸入可唯一識別中的記錄值**資料錄集**物件。  

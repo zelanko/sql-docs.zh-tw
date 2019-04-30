@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6f47f3c40ed85cf0b38615176309f47bfb6ce542
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067544"
 ---
 # <a name="saving-to-the-xml-dom-object"></a>儲存到 XML DOM 物件
 下列 Visual Basic 程式碼所示，您可以在 MSXML DOM 物件的執行個體的 XML 格式儲存資料錄集：  
