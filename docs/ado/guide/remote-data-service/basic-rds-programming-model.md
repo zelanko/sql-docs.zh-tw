@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be7123595b823434dd6b9f4a369115d83c0d68ec
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214802"
 ---
 # <a name="basic-rds-programming-model"></a>基本 RDS 程式設計模型
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- RDS 位址存在下列環境中的應用程式： 用戶端應用程式指定將在伺服器與要傳回的所需的資訊所需的參數執行的程式。 在指定的資料來源，以提升存取伺服器上叫用的程式擷取的資訊、 選擇性地處理資料，和將產生的資訊傳回用戶端應用程式的表單，它可以輕鬆地使用。 RDS 可讓您執行下列動作順序的方法：  
+ RDS 解決下列環境中存在的應用程式：用戶端應用程式會指定將在伺服器與要傳回的所需的資訊所需的參數執行的程式。 在指定的資料來源，以提升存取伺服器上叫用的程式擷取的資訊、 選擇性地處理資料，和將產生的資訊傳回用戶端應用程式的表單，它可以輕鬆地使用。 RDS 可讓您執行下列動作順序的方法：  
   
 -   指定要在伺服器上，叫用的程式，並取得用來從用戶端參考它。 (有時稱為 「 此參照*proxy*。 它代表遠端伺服器的程式。 用戶端應用程式會 「 呼叫 」 proxy 視為就像是本機的程式，但它實際上會叫用的遠端伺服器的程式。）  
   

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b892adaf02f13ec7de150ae1de9966a65ac1d7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200384"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>執行查詢使用說明主題 (ODBC)
   在 ODBC 應用程式中執行 SQL 陳述式需要配置陳述式控制代碼、設定陳述式屬性，以及準備和執行 SQL 陳述式。  

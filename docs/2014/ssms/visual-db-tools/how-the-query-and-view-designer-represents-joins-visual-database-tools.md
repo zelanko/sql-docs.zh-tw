@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: abd8dd7c3c23a13b1cdff7a2d6f76fb99375a641
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155278"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>查詢和檢視設計工具表示聯結的方式 (Visual Database Tools)
   如果資料表是聯結的， [查詢和檢視表設計工具](visual-database-tools.md) 將在 [圖表窗格](diagram-pane-visual-database-tools.md) 中以圖形表示該聯結，並在 [SQL 窗格](sql-pane-visual-database-tools.md)中使用 SQL 語法。  

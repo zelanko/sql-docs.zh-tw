@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50e1d85076c2d056d8abdec9668457ca2a29d2fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198363"
 ---
 # <a name="installing-and-configuring-the-odbc-software"></a>安裝及設定 ODBC 軟體
 > [!NOTE]  

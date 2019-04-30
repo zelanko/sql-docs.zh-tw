@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d56689bb045a6540bfdfbb9c7147dc34db110bde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207001"
 ---
 # <a name="date-and-time-improvements-odbc"></a>日期和時間改善 (ODBC)
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了新的日期和時間資料類型。 本章節描述如何將這些新類型公開為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的延伸模組。 如需概觀[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 支援新的日期和時間資料類型，請參閱[日期和時間改善](../native-client/features/date-and-time-improvements.md)。 如需示範 ODBC 日期/時間支援的範例，請參閱 <<c0> [ 使用日期和時間類型](../native-client-odbc-how-to/use-date-and-time-types.md)。  
@@ -29,7 +29,7 @@ ms.locfileid: "48123620"
  [資料類型對 ODBC 日期和時間支援的改善](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)  
  提供有關支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期和時間資料類型之 ODBC 類型的資訊。  
   
- [中繼資料&#40;ODBC&#41;](../../database-engine/dev-guide/metadata-odbc.md)  
+ [Metadata &#40;ODBC&#41;](../../database-engine/dev-guide/metadata-odbc.md)  
  描述在實作參數描述項 (IPD) 和實作資料列描述項 (IRD) 欄位中傳回的資訊，以及 `SQLColumns` 和 `SQLProcedureColumns` 傳回的資料行中繼資料。 也會描述 `SQLGetTypeInfo` 所傳回的資料類型中繼資料。  
   
  [datetime 資料類型轉換&#40;ODBC&#41;](datetime-data-type-conversions-odbc.md)  

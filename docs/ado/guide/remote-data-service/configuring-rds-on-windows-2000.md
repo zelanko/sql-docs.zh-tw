@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee1d76052402ab775e9e8de20e1ef6da07e23432
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214798"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>在 Windows 2000 上設定 RDS
 如果您遇到取得 RDS 升級至 Windows 2000 之後正確運作的問題，請遵循下列步驟來排解這個問題：  
@@ -29,7 +29,7 @@ ms.locfileid: "51558446"
   
 3.  使用 [RegEdit] 公用程式，瀏覽至 「 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DataFactory\HandlerInfo"，並確定**HandlerRequired**設為 0 並**DefaultHandler**是""(Null 字串)。  
   
-     **請注意**如果您對登錄的這一部分的任何變更，您必須停止並重新啟動 World Wide Web Publishing 服務，輸入下列命令在命令提示字元:"NET 停止 W3SVC"和"NET 啟動 W3SVC"。  
+     **請注意**如果您對登錄的這一部分的任何變更，您必須停止並重新啟動 World Wide Web Publishing 服務，輸入下列命令在命令提示字元："NET STOP W3SVC"和"NET 啟動 W3SVC"。  
   
 4.  使用 RegEdit 公用程式，在 「 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch"登錄中瀏覽，並確認沒有名為索引鍵**RDSServer.Datafactory**。 否則，請建立它。  
   
