@@ -16,19 +16,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a9a93c9c6efdd5a864b5ab3ce0beacb7cbf1632
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049618"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>變更容錯移轉叢集執行個體的 IP 位址
   此主題描述如何使用容錯移轉叢集管理員嵌入式管理單元，在 AlwaysOn 容錯移轉叢集執行個體 (FCI) 中變更 IP 位址資源。 容錯移轉叢集管理員嵌入式管理單元是 Windows Server 容錯移轉叢集 (WSFC) 服務的叢集管理應用程式。  
   
--   **Before you begin:**  [Security](#Security)  
+-   **開始之前：**[安全性](#Security)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
- 在開始之前，請先檢閱下列《 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》主題︰ [安裝容錯移轉叢集之前](../install/before-installing-failover-clustering.md)。  
+ 您開始之前，請先檢閱下列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]線上叢書 》 主題：[安裝容錯移轉叢集之前](../install/before-installing-failover-clustering.md)。  
   
 ###  <a name="Security"></a> 安全性  
   

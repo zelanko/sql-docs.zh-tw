@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d9411ab88d259718aaa62873e615a62efdd82e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728926"
 ---
 # <a name="defining-calculated-members"></a>定義導出成員
   導出成員是根據 Cube 資料、算術運算子、數字和函數組合所定義的維度成員或量值群組成員。 例如，您可以建立一個導出成員，計算 Cube 中兩個實體量值的總和。 導出成員定義是儲存在 Cube 中，但其值是在查詢時計算。  
@@ -168,7 +168,7 @@ ms.locfileid: "48070300"
   
 1.  在 [計算] 索引標籤的工具列上，按一下 [表單檢視]。  
   
-2.  在 **指令碼組合管理**窗格中，選取`[Total GPM]`，然後按一下 **新增導出成員**工具列上的**計算**] 索引標籤。  
+2.  在 **指令碼組合管理**窗格中，選取`[Total GPM]`，然後按一下 [**新增導出成員**工具列上的**計算**] 索引標籤。  
   
      在按一下 [新增導出成員] 之前，先按一下 [指令碼組合管理] 窗格中的最後一個導出成員，可確保這個新的導出成員加在指令碼結尾。 指令碼是以它們出現在 [指令碼組合管理] 窗格中的順序執行的。  
   

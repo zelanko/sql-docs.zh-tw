@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11b55e2faeb251f8c3a7ab5220d9716476e66639
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667584"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>狀態列 (Database Engine 查詢編輯器)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗的狀態列可能利用彩色編碼，以便表示每個視窗所連接的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。  

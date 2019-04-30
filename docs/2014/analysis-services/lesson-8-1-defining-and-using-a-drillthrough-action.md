@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 606fe679f4cc58a627b2d2978b52d9865da741c1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728408"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>定義和使用鑽研動作
   依據事實維度測量事實資料的維度，但卻未正確篩選查詢傳回的資料，可能會降低查詢效能。 為了避免這種情況，您可以定義鑽研動作，以便限制傳回的資料列總數。 這樣做將會大幅改善查詢效能。  

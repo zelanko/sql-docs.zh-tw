@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f42b418a2cc40b3e805e0129dc3414c3db5bbdc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650348"
 ---
 # <a name="browse-data-source-view-data-mining-wizard"></a>瀏覽資料來源檢視 (資料採礦精靈)
   使用 [Browse Data Source View (瀏覽資料來源檢視)] 對話方塊，即可檢視您在精靈之 [選取資料來源檢視] 頁面上所選取的資料來源檢視。  
@@ -26,7 +26,7 @@ ms.locfileid: "48187279"
 > [!NOTE]  
 >  唯有您在精靈的 [選取定義方法] 頁面上選取了 [從現有的關聯式資料庫或資料倉儲] 後，才會顯示此頁面。  
   
- **如需詳細資訊，請參閱**[多維度模型中的資料來源檢視](multidimensional-models/data-source-views-in-multidimensional-models.md)、[資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
+ **如需詳細資訊：**[資料來源的多維度模型中的檢視](multidimensional-models/data-source-views-in-multidimensional-models.md)，[資料採礦精靈 &#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>選項。  
  **顯示比例**  

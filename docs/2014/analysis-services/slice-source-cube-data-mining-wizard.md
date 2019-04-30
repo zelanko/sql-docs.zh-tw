@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c68ec29c2461cb7ffddfdbd2792e1a1a191076b2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746461"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>配量來源 Cube (資料採礦精靈)
    您可以使用 [配量來源 Cube] 對話方塊來限制用於培訓模型的資料。 Cube 通常包含了與許多不同維度及屬性相關的資料，例如所有商店、所有區域和所有產品。 根據無限制的屬性組合來培訓模型並不實用，所以您要使用此對話方塊選擇用於培訓模型的一組特定項目。  

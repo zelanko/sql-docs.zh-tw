@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b4db6133a486e77369630dc717fab02b3be7f8e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729294"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>檢閱 Cube 和維度屬性
   定義 Cube 之後，您可以使用 Cube 設計師來檢閱這些結果。 在下列工作中，您將檢閱 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案中 Cube 的結構。  
@@ -35,7 +35,7 @@ ms.locfileid: "48196268"
   
 4.  在 [Cube 結構] 索引標籤的 [維度] 窗格中，展開 [客戶]，然後按一下 [編輯客戶]，即可在維度設計師中開啟該維度。  
   
-     維度設計師包含下列索引標籤：[維度結構]、[屬性關聯性]、[翻譯] 和 [瀏覽器]。 請注意，[維度結構] 索引標籤包含三個窗格：[屬性]、[階層] 和 [資料來源檢視]。 該維度所包含的屬性會顯示在 [屬性] 窗格中。 如需詳細資訊，請參閱 < [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md)，[建立使用者定義階層](multidimensional-models/user-defined-hierarchies-create.md)。  
+     維度設計師包含下列索引標籤：**維度結構**，**屬性關聯性**，**翻譯**，和**瀏覽器**。 請注意，**維度結構** 索引標籤包含三個窗格：**屬性**，**階層**，以及**資料來源檢視**。 該維度所包含的屬性會顯示在 [屬性] 窗格中。 如需詳細資訊，請參閱 < [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md)，[建立使用者定義階層](multidimensional-models/user-defined-hierarchies-create.md)。  
   
 5.  若要切換到 Cube 設計師，可在方案總管中以滑鼠右鍵按一下 [Cube] 節點中的 [Analysis Services 教學課程] Cube，然後按一下 [檢視設計師]。  
   
@@ -61,6 +61,6 @@ ms.locfileid: "48196268"
  [部署 Analysis Services 專案](lesson-2-5-deploying-an-analysis-services-project.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [在維度設計工具中瀏覽維度資料](multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  
+ [在維度設計師中瀏覽維度資料](multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  
   
   
