@@ -1,5 +1,5 @@
 ---
-title: TupleToStr (MDX) |Microsoft Docs
+title: TupleToStr (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f07e71e5b8314320f76be4496744da5a9d9e81a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208453"
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr (MDX)
 
@@ -36,7 +36,7 @@ TupleToStr(Tuple_Expression)
  這個函數是用來將 Tuple 的字串表示傳送至外部函數，以進行剖析。 所傳回的字串括在大括弧{}和每個成員，如果一個以上的 tuple 中明確定義以逗號分隔。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回字串 ([Date].[Calendar Year].&[2001],[Geography].[Geography].[Country].&[United States])：  
+ 下列範例會傳回字串 ([Date]。 [Calendar Year]。 year].&[2001],[geography].[geography].[country].&[united，[Geography]。[Geography]。[國家/地區]。 （& s) [United States]):  
   
 ```  
 WITH MEMBER Measures.x AS TupleToStr   

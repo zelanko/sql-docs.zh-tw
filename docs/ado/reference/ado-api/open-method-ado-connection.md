@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 008ff3dacaa4bf3256429984973608c10a73d43e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217671"
 ---
 # <a name="open-method-ado-connection"></a>Open 方法 (ADO Connection)
 開啟資料來源的連接。  
@@ -39,13 +39,13 @@ connection.Open ConnectionString, UserID, Password, Options
  *ConnectionString*  
  選擇性。 A**字串**包含連接資訊的值。 請參閱[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性，如需有關有效的設定。  
   
- *使用者識別碼*  
+ *UserID*  
  選擇性。 A**字串**值，其中包含要建立連接時使用的使用者名稱。  
   
  *密碼*  
  選擇性。 A**字串**值，其中包含要建立連線時所使用的密碼。  
   
- *選項*  
+ *選項。*  
  選擇性。 A [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)值，決定是否此方法應傳回之後 （同步） 或之前 （非同步） 建立連線。  
   
 ## <a name="remarks"></a>備註  

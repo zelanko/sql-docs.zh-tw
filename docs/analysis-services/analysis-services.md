@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b2cd892ad41beba2b5715b3a7186ae5e44bb7911
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206362"
 ---
 # <a name="about-sql-server-analysis-services"></a>關於 SQL Server Analysis Services
 

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9dcd848643f942006b6e837a5a4670cf7c7b90d8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215649"
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>設定度量單位 (報表產生器及 SSRS)
   指標提供兩個度量單位：百分比和數值。 根據預設，指標會設定為使用百分比做為度量單位。 也就是說，指派給指標集合中每個圖示的指標值取決於百分比範圍。 百分比範圍會在指標集合的圖示中平均分配。 每個圖示代表一個指標狀態。 您可以指定不同的開始與結束百分比來變更指標集合中每個圖示的百分比。 指標也會自動偵測資料中的最小值與最大值。  

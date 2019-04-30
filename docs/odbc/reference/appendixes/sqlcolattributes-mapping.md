@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7a1508d10431ba9975c44a2002faa4e5b913312
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199418"
 ---
 # <a name="sqlcolattributes-mapping"></a>SQLColAttributes 對應
 當應用程式呼叫**SQLColAttributes**透過 ODBC 3 *.x*驅動程式，會呼叫**SQLColAttributes**對應到**SQLColAttribute** ，如下所示：  

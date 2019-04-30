@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d2bf3deb1614e586e38ce05f7016e92ec3f802e1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216094"
 ---
 # <a name="last-function-report-builder-and-ssrs"></a>Last 函數 (報表產生器及 SSRS)
   傳回所指定運算式給定範圍中的最後一個值。  

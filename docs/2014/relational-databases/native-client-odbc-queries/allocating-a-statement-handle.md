@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 68e3d7a53f96216d158ddbdb1d1d0ca59db5f81f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200260"
 ---
 # <a name="allocating-a-statement-handle"></a>配置陳述式控制代碼
   在應用程式可以執行陳述式之前，它必須配置陳述式控制代碼。 其做法是呼叫**SQLAllocHandle**具有*HandleType*參數設定為 SQL_HANDLE_STMT 並*InputHandle*指向連接控制代碼。  
