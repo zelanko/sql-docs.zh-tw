@@ -5,16 +5,16 @@ description: 了解的步驟和部署 SQL Server 2019 巨量資料叢集 （預�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/18/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 5aeb6f5f92eba1bad828455b472d25561570901a
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860429"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472244"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>開始使用 SQL Server 的巨量資料叢集
 
@@ -45,21 +45,23 @@ ms.locfileid: "58860429"
 
 - **Minikube**:Minikube 可讓您在單一伺服器上本機執行 Kubernetes。 如果您正在嘗試巨量資料叢集，或需要使用在測試或開發的案例中，它就會是不錯的選項。 如需使用 Minikube 的詳細資訊，請參閱 < [Minikube 文件](https://kubernetes.io/docs/setup/minikube/)。 巨量資料叢集搭配使用 Minikube 的特定需求，請參閱 <<c0> [ 設定適用於 SQL Server 2019 巨量資料叢集部署的 minikube](deploy-on-minikube.md)。
 
-## <a name="deployment-scripts"></a>部署指令碼
-
-部署指令碼可協助部署 Kubernetes 和巨量資料叢集以單一步驟。 它們也經常會提供必要的環境變數的預設值。 如需的巨量資料叢集在 Azure Kubernetes Service (AKS) 的部署指令碼範例，請參閱 <<c0> [ 部署與部署指令碼 (AKS) 叢集的巨量資料的 SQL Server 2019](quickstart-big-data-cluster-deploy.md)。
-
-您可以自訂任何部署指令碼，藉由建立您自己的版本，以不同的方式設定巨量資料叢集環境變數。
-
 ## <a name="deploy-a-big-data-cluster"></a>部署巨量資料叢集
 
-若要使用單一指令碼將 Kubernetes 和巨量資料叢集部署到 AKS，請參閱下列範例：
+您可以設定 Kubernetes 之後, 部署的巨量資料叢集`mssqlctl cluster create`命令。 部署時，您可以採取數個不同的方法。
 
-- [部署與部署指令碼 (AKS) 的 SQL Server 2019 巨量資料叢集](quickstart-big-data-cluster-deploy.md)
+- 如果您要部署到開發 / 測試環境，您可以選擇使用其中一種[預設組態](deployment-guidance.md#deploy)所提供**mssqlctl**。
 
-如需部署使用 AKS，kubeadm，MiniKube 的巨量資料叢集的詳細的部署指導方針，請參閱下列文章：
+- 若要自訂您的部署，您可以建立並使用您自己[部署設定檔案](deployment-guidance.md#configfile)。 
 
-- [如何部署 SQL Server 在 Kubernetes 上的巨量資料叢集](deployment-guidance.md)
+- 完全自動的安裝，您可以傳遞環境變數中的所有其他設定。 如需詳細資訊，請參閱 <<c0> [ 自動的部署](deployment-guidance.md#unattended)。
+
+## <a name="deployment-scripts"></a>部署指令碼
+
+部署指令碼可協助部署 Kubernetes 和巨量資料叢集以單一步驟。 它們也經常會提供的巨量資料叢集設定的預設值。 例如巨量資料叢集在 Azure Kubernetes Service (AKS) 的部署指令碼中，請參閱下列文章：
+
+[部署使用部署指令碼 (AKS) 叢集的巨量資料的 SQL Server 2019](quickstart-big-data-cluster-deploy.md)。
+
+您可以自訂任何部署指令碼，藉由建立您自己的版本，以不同的方式設定巨量資料叢集環境變數。
 
 ## <a name="next-steps"></a>後續步驟
 

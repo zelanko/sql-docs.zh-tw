@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a33663ff92a093ea63f183cf8efb901d133a5a27
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751740"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63460134"
 ---
 # <a name="create-a-project"></a>建立專案
   您可以在現有方案內，建立一或多個專案。  
@@ -94,7 +94,7 @@ ms.locfileid: "52751740"
   
 4.  按一下 [確定] 。  
   
- 您可以設定指令碼專案的名稱，但資料夾名稱由 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 建立，無法變更。 您可以使用 [新增專案] 對話方塊，為一組常用資料夾設定磁碟和路徑規格。 在方案總管中，以滑鼠右鍵按一下方案，然後按一下 [新增]。 指令碼專案資料夾的預設位置是：C:\Documents and Settings\\*使用者名稱*\My Documents\SQL Server Management Studio\Projects\\。  
+ 您可以設定指令碼專案的名稱，但資料夾名稱由 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 建立，無法變更。 您可以使用 [新增專案] 對話方塊，為一組常用資料夾設定磁碟和路徑規格。 在方案總管中，以滑鼠右鍵按一下方案，然後按一下 [新增]。 指令碼專案資料夾的預設位置：C:\Documents and Settings\\使用者名稱\My Documents\SQL Server Management Studio\Projects\\。  
   
 ## <a name="see-also"></a>另請參閱  
  [方案總管](solution-explorer.md)   

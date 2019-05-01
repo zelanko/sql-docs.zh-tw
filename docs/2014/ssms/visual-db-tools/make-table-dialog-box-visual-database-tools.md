@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9873268608072ed7f2d6cdb4d0026ba62e5d090
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810690"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63459978"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>製成資料表對話方塊 (Visual Database Tools)
   讓您命名為複製資料列所建立的資料表。 這個對話方塊會在將查詢的類型變更為 MAKE TABLE 查詢時出現。 若要變更查詢類型，請在 [查詢設計工具] 功能表中指向 [變更類型]，然後按一下 [製成資料表]。  

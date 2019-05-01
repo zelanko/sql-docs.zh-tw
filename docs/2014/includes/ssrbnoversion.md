@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: cbfbfd75b9a765e161b73afe13cfab7ba6eaabf2
+ms.openlocfilehash: 0e48ae5898c4d999b7478e80ffb7487bba6af5f5
 ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/23/2019
-ms.locfileid: "62775763"
+ms.locfileid: "62843491"
 ---
- SQL Server 2012 Express 
+報表產生器

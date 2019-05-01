@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac92c6d40ea9ead6b8875e3338bb740b4bdf8523
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631816"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473180"
 ---
 # <a name="types-of-changes"></a>變更的類型
 ODBC 3 進行三種類型的變更。*x* （和 ODBC 的任何版本）。 每一種方式會影響回溯相容性，並以不同方式處理。 下表說明這些變更。  

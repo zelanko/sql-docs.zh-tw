@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b3dcd9c348d83dad1e295e253cb37768fbb0abb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526718"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473052"
 ---
 # <a name="sqlrowcount-cursor-library"></a>SQLRowCount (資料指標程式庫)
 > [!IMPORTANT]  

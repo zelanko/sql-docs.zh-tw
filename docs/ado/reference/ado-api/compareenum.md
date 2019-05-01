@@ -1,5 +1,5 @@
 ---
-title: CompareEnum |Microsoft Docs
+title: CompareEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1f28a5dfc7e8abb15d1adf2f457ab49b4fbdd9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839598"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63459881"
 ---
 # <a name="compareenum"></a>CompareEnum
 指定兩筆記錄由其書籤的相對位置。  

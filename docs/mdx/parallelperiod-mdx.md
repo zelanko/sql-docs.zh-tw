@@ -1,5 +1,5 @@
 ---
-title: ParallelPeriod (MDX) |Microsoft 文件
+title: ParallelPeriod (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c1f495ce1fad9a318ea5e6c1f3fadd88f8313cd6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742367"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473082"
 ---
 # <a name="parallelperiod-mdx"></a>ParallelPeriod (MDX)
 
@@ -39,11 +39,11 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 雖然類似[Cousin](../mdx/cousin-mdx.md)函式， **ParallelPeriod**函式更密切的時間序列。 **ParallelPeriod**函式會在指定的層級的指定成員的上階，尋找上階的同層級，與指定的延遲，和最後會傳回指定成員的同層級之下階當中的平行週期。  
+ 雖然類似[Cousin](../mdx/cousin-mdx.md)函式**ParallelPeriod**函式更密切的時間序列。 **ParallelPeriod**函式會指定成員的祖系採用指定層級、 尋找上階的同層級，與指定的延遲，和最後會傳回指定成員之間的平行週期同層級子系。  
   
  **ParallelPeriod**函式具有下列的預設值：  
   
--   如果指定層級運算式或成員運算式，預設成員值是一種之第一個維度的第一個階層的目前成員*時間*量值群組中。  
+-   如果指定層級運算式或成員運算式都不是，預設成員值是一種之第一個維度的第一個階層的目前成員*時間*量值群組中。  
   
 -   如果指定層級運算式，但沒有指定成員運算式，預設成員值是*Level_Expression*。**Hierarchy.CurrentMember**。  
   
@@ -51,7 +51,7 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
   
 -   預設層級是指定成員之父系的層級。  
   
- **ParallelPeriod**函數即相當於以下 MDX 陳述式：  
+ **ParallelPeriod**函式相當於以下的 MDX 陳述式：  
   
  `Cousin(Member_Expression, Ancestor(Member_Expression, Level_Expression) .Lag(Numeric_Expression))`  
   
@@ -77,6 +77,6 @@ SELECT ParallelPeriod ([Date].[Calendar].[Calendar Semester]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

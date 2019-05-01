@@ -6,23 +6,23 @@ author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4dba3e620ae3e6cd9aa6c09eb6196ac37acd77a7
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 3084d9ecc80dcd8f283a52ca5559783626a7ca4e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583401"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472172"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>什麼是 SQL Server 的巨量資料叢集上的控制站？
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-控制站會裝載部署及管理巨量資料叢集的核心邏輯。 它會負責與 Kubernetes 叢集與 HDFS 和 Spark 等其他元件的一部分的 SQL Server 執行個體的所有互動。 
+控制站會裝載部署及管理巨量資料叢集的核心邏輯。 它會負責與 Kubernetes 叢集與 HDFS 和 Spark 等其他元件的一部分的 SQL Server 執行個體的所有互動。
 
 控制器服務提供核心功能如下：
 
@@ -31,9 +31,10 @@ ms.locfileid: "59583401"
 - 管理計算、 資料和儲存體集區
 - 若要觀察的叢集狀態的監視工具公開 （expose)
 - 公開 （expose) 來偵測並修復未預期的問題的疑難排解工具
-- 管理叢集安全性： 確保安全的叢集端點、 管理使用者和角色、 設定叢集間通訊的認證
-- 管理升級的工作流程，以便安全地實作 （不適用於 CTP 2.4）
-- （不適用於 CTP 2.4） 叢集中具狀態服務的管理高可用性和 DR
+- 管理叢集安全性：
+  - 確保安全的叢集端點
+  - 管理使用者和角色
+  - 設定叢集間通訊的認證
 
 ## <a name="deploying-the-controller-service"></a>部署控制器服務
 

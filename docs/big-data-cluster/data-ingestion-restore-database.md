@@ -5,17 +5,17 @@ description: 這篇文章會示範如何將資料庫還原到 SQL Server 2019 �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: cc1fddfd7aa2e3400dda3d005eb365cde7364dd4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 7ac5e43a92012d2027847d9ea3630a17e7722609
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860310"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472178"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>將資料庫還原到 SQL Server 巨量資料叢集主要執行個體
 
@@ -104,10 +104,6 @@ IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool'
 -- Create the SqlStoragePool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
 BEGIN
-  IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-    CREATE EXTERNAL DATA SOURCE SqlStoragePool
-    WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-  ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
     CREATE EXTERNAL DATA SOURCE SqlStoragePool
     WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
 END
