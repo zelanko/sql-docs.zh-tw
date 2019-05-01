@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebd3b1af1bc9b342ad6b2d33596e69b487888ced
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239526"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>教學課程：使用情況下啟用資料表空間使用方式範例深入解析小工具 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

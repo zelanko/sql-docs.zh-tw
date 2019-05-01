@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 1168609d35a266f2ac5fe6641aee7ca131bc9d89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759903"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>開始使用 SQL Server Migration Assistant for Access (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) 的存取可讓您快速轉換至 Access 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 物件上傳到產生的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB，並將資料從存取移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。 如果有必要，您也可以連結來存取資料表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 資料表，好讓您可以繼續使用現有存取前端應用程式與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。  
@@ -67,7 +67,7 @@ ms.locfileid: "47668666"
 ### <a name="metadata-explorers"></a>中繼資料瀏覽器  
 SSMA 包含兩個中繼資料瀏覽器，您可以使用瀏覽並執行動作的存取和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 資料庫。  
   
-#### <a name="access-metadata-explorer"></a>存取中繼資料總管  
+#### <a name="access-metadata-explorer"></a>Access Metadata Explorer  
 存取中繼資料總管 會顯示已新增至專案的存取資料庫的詳細資訊。 當您新增 Access 資料庫時，SSMA 會擷取該資料庫，也就是可存取中繼資料總管 中的中繼資料相關的中繼資料。  
   
 您可以使用存取中繼資料總管 來執行下列工作：  
@@ -88,7 +88,7 @@ SSMA 包含兩個中繼資料瀏覽器，您可以使用瀏覽並執行動作的
 如需詳細資訊，請參閱 <<c0> [ 載入轉換的資料庫物件載入 SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md)。  
   
 ### <a name="metadata"></a>中繼資料  
-右邊的每個中繼資料總管 會描述所選的物件的索引標籤。 比方說，如果您在存取中繼資料總管 中選取資料表，四個索引標籤會出現：**表格**，**型別對應**，**屬性**，以及**資料**. 如果您選取的資料表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管 中，三個索引標籤會顯示：**表格**， **SQL**，和**資料**。  
+右邊的每個中繼資料總管 會描述所選的物件的索引標籤。 例如，如果您在存取中繼資料總管 中選取資料表，會出現四個索引標籤：**表格**，**類型對應**，**屬性**，和**資料**。 如果您選取的資料表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管 中，三個索引標籤會出現：**表格**， **SQL**，以及**資料**。  
   
 大部分的中繼資料設定是唯讀的。 不過，您可以變更下列中繼資料：  
   

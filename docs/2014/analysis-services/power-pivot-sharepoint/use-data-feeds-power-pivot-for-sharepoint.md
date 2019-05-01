@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 354e1dce8bfb11f7eefc0f90df0868ebc01757e0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748997"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>使用資料摘要 (PowerPivot for SharePoint)
   資料摘要是從線上資料來源產生，並串流至目的地文件或應用程式的一個或多個資料流。 如果您使用的是 PowerPivot for Excel，資料摘要可以協助您從任意資料來源取得現有的公司或商務資料，送到 Excel 2010 活頁簿的 PowerPivot 視窗中。 將資料摘要匯入活頁簿之後，您可以在 SharePoint 伺服器上排程的任何資料重新整理作業中參考該摘要。  

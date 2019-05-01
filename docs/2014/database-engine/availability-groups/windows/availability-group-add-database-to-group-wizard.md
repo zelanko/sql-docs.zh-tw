@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815723"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>使用 [將資料庫加入至可用性群組] 精靈 (SQL Server Management Studio)
   使用 [將資料庫加入至可用性群組精靈] 可將一個或多個資料庫加入現有的 AlwaysOn 可用性群組。  
@@ -36,7 +36,7 @@ ms.locfileid: "48055631"
   
      [Security](#Security)  
   
--   **若要加入資料庫，請使用：**[將資料庫加入可用性群組精靈 (SQL Server Management Studio)](#SSMSProcedure)  
+-   **若要加入資料庫中，使用：**[將資料庫加入可用性群組精靈 (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  如果您永遠不會有將資料庫加入可用性群組中，請參閱中的 < 可用性資料庫 > 一節[必要條件、 限制和建議的 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  

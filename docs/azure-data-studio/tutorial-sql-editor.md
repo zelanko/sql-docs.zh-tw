@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 04e6e366d1fd0a5d710296353d6326022f716199
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240943"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>教學課程：使用 TRANSACT-SQL 編輯器來建立資料庫物件， [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -72,7 +72,7 @@ ms.locfileid: "53030452"
 
 3.  建立預存程序程式碼片段有兩個欄位可以進行 [快速編輯]， *StoredProcedureName* 和 *SchemaName*。  選取 *StoredProcedureName* ，按一下滑鼠右鍵，然後選取**變更所有相符項目**。 鍵入 *getCustomer* 並將全部 *StoredProcedureName* 項目變更為 *getCustomer*。
 
-   ![程式碼片段](./media/tutorial-sql-editor/snippet.png)
+   ![snippet](./media/tutorial-sql-editor/snippet.png)
 
 5. 同上一步操作，將所有 *SchemaName* 變更為 *dbo*。 
 6. 程式碼片段包含許多參數預留位置與內容需要更新。 *EXECUTE* 陳述式也包含文字預留位置，因為不知道預存程序有多少參數。 本教學課程更新程式碼片段後，結果如下列程式碼所示：

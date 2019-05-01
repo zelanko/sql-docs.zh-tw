@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2e939e27263f52dc3a6ac607bc59cd8db6c1806
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250704"
 ---
 # <a name="sql-server-clr-object"></a>SQL Server 的 CLR 物件
    **SQLServer:CLR** 物件提供用來監視在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中執行 Common Language Runtime (CLR) 的計數器。  

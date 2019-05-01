@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 71db7ba5246e151bbca8a52972a2ba835b80ddb6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855871"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>建立相關的時序群集採礦模型 (中繼資料採礦教學課程)
   探索時序群集模型之後，您了解到 Region 或 Income 等其他屬性對於模型也有很大的影響。因此，若要進一步了解時序，您需要建立相關的時序群集模型，並移除與客戶人口統計有關的屬性。  
@@ -26,7 +26,7 @@ ms.locfileid: "56035109"
   
 ### <a name="to-make-a-copy-of-the-sequence-clustering-model"></a>若要製作時序群集模型的副本  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，在 資料採礦設計師中，按一下 [**採礦模型**] 索引標籤。  
+1.  在  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，在 資料採礦設計師中，按一下 **採礦模型**] 索引標籤。  
   
 2.  以滑鼠右鍵按一下您想要複製，並選取的模型**新的採礦模型**。  
   

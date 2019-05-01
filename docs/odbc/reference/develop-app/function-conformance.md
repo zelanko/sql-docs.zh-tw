@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b6cb2f56113487922866573caf3b5f8b67fff7c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061576"
 ---
 # <a name="function-conformance"></a>函式一致性
 下表指出這是妥善定義的每個 ODBC 函式，一致性層級。  
@@ -30,27 +30,27 @@ ms.locfileid: "47740076"
 |--------------|-----------------------|  
 |**SQLAllocHandle**|核心|  
 |**SQLBindCol**|核心|  
-|**SQLBindParameter**|Core [1]|  
+|**SQLBindParameter**|Core[1]|  
 |**SQLBrowseConnect**|層級 1|  
 |**SQLBulkOperations**|層級 1|  
-|**SQLCancel**|Core [1]|  
+|**SQLCancel**|Core[1]|  
 |**SQLCloseCursor**|核心|  
-|**SQLColAttribute**|Core [1]|  
+|**SQLColAttribute**|Core[1]|  
 |**SQLColumnPrivileges**|層級 2|  
 |**SQLColumns**|核心|  
 |**SQLConnect**|核心|  
 |**SQLCopyDesc**|核心|  
 |**SQLDataSources**|核心|  
-|**SQLDescribeCol**|Core [1]|  
+|**SQLDescribeCol**|Core[1]|  
 |**SQLDescribeParam**|層級 2|  
 |**SQLDisconnect**|核心|  
 |**SQLDriverConnect**|核心|  
 |**SQLDrivers**|核心|  
-|**SQLEndTran**|Core [1]|  
+|**SQLEndTran**|Core[1]|  
 |**SQLExecDirect**|核心|  
 |**SQLExecute**|核心|  
 |**SQLFetch**|核心|  
-|**SQLFetchScroll**|Core [1]|  
+|**SQLFetchScroll**|Core[1]|  
 |**SQLForeignKeys**|層級 2|  
 |**SQLFreeHandle**|核心|  
 |**SQLFreeStmt**|核心|  
@@ -77,14 +77,14 @@ ms.locfileid: "47740076"
 |**SQLProcedures**|層級 1|  
 |**SQLPutData**|核心|  
 |**SQLRowCount**|核心|  
-|**SQLSetConnectAttr**|Core [2]|  
+|**SQLSetConnectAttr**|Core[2]|  
 |**SQLSetCursorName**|核心|  
-|**SQLSetDescField**|Core [1]|  
+|**SQLSetDescField**|Core[1]|  
 |**SQLSetDescRec**|核心|  
-|**SQLSetEnvAttr**|Core [2]|  
+|**SQLSetEnvAttr**|Core[2]|  
 |**SQLSetPos**|層級 1] [1]|  
-|**SQLSetStmtAttr**|Core [2]|  
-|**SQLSpecialColumns**|Core [1]|  
+|**SQLSetStmtAttr**|Core[2]|  
+|**SQLSpecialColumns**|Core[1]|  
 |**SQLStatistics**|核心|  
 |**SQLTablePrivileges**|層級 2|  
 |**SQLTables**|核心|  

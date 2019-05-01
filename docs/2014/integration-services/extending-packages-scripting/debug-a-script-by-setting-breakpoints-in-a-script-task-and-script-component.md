@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97c41b4ca75336f70b049239112132c89b05fba5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768484"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>在指令碼工作和指令碼元件中設定中斷點來偵錯指令碼
   此程序描述如何在用於指令碼工作和指令碼元件的指令碼中設定中斷點。  
@@ -26,7 +26,7 @@ ms.locfileid: "58374687"
  在指令碼中設定中斷點後，[設定中斷點 - \<物件名稱>] 對話方塊會列出中斷點與內建的中斷點。  
   
 > [!IMPORTANT]  
->  在某些情況下，會忽略指令碼工作和指令碼元件的中斷點。 如需詳細資訊，請參閱 **偵錯指令碼工作**一節中[編碼和偵錯指令碼工作](../control-flow/script-task.md)並**偵錯指令碼元件**中 [編碼區段and Debugging the Script] (../ extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md。  
+>  在某些情況下，會忽略指令碼工作和指令碼元件的中斷點。 如需詳細資訊，請參閱 <<c0>  **偵錯指令碼工作**一節中[編碼和偵錯指令碼工作](../control-flow/script-task.md)並**偵錯指令碼元件**中 [編碼] 區段and Debugging the Script] (../ extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md。  
   
 ### <a name="to-set-a-breakpoint-in-script"></a>在指令碼中設定中斷點  
   

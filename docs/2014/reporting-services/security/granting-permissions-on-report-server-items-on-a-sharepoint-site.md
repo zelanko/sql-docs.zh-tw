@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c52bc6b7781b6593f945d582e033653aeb61dc9f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242831"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>授與 SharePoint 網站上報表伺服器項目的權限
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 提供內建的安全性功能，可用來授與從 SharePoint 網站和文件庫存取報表伺服器項目的權限。 如果您已經指定權限給使用者，則在設定 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 與報表伺服器之間的整合設定之後，那些使用者就能立即存取報表伺服器項目和作業。 您可以使用現有權限來上傳報表定義和其他文件、檢視報表、建立訂閱和管理項目。  

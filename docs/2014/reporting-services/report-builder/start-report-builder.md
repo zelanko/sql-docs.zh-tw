@@ -17,17 +17,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 70ec1c794e86782551099b4fb5d8459c8bae6191
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157464"
 ---
 # <a name="start-report-builder-report-builder"></a>啟動報表產生器 (報表產生器)
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 包括單機和[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]版本的報表產生器。 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 版本可以搭配在原生模式或 SharePoint 整合模式下安裝的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用。  
   
 > [!NOTE]  
->  報表產生器無法安裝在 Itanium 64 型電腦上。 這同樣適用於 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 和單機版本的報表產生器。  
+>  報表產生器無法安裝在 Itanium 64 型電腦上。 這適用於[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]和單機版本報表產生器。  
   
  如果開啟之 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 版本的報表產生器為舊版的報表產生器，請連絡可以更新報表管理員和 SharePoint 網站的管理員來使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的報表產生器。  
   

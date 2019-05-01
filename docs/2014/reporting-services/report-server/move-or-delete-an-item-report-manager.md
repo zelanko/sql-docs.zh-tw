@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ed81395066cd25ed30b095d4e080019abc8c9b26
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191224"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>移動或刪除項目 (報表管理員)
   您發行至報表伺服器的報表和報表相關項目會儲存在資料夾中。 您可以將項目移至不同的資料夾，報表伺服器會自動維護這些項目的參考。 刪除某個項目之前，請考慮是否有其他項目相依於該項目。  

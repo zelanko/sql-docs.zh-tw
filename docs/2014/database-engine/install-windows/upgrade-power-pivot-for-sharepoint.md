@@ -11,11 +11,11 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de63ecc80b175385846845f5901fde5eb37ec97c
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775644"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>升級 PowerPivot for SharePoint
   本主題概述將 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署升級至 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]所需的步驟。 特定步驟取決於您環境目前所執行的 SharePoint 版本，並包含 PowerPivot for SharePoint 增益集 (**spPowerPivot.msi**)。  
@@ -160,7 +160,7 @@ ms.locfileid: "58434499"
   
     3.  按一下 **[升級功能、服務、應用程式和方案]**，然後按一下 **[確定]** 繼續。  
   
-    4.  會出現下列警告：「 PowerPivot 管理儀表板中的活頁簿即將升級為最新版本。 您對現有活頁簿所做的任何自訂內容都將遺失。 您要繼續嗎？」  
+    4.  出現下列警告：「 PowerPivot 管理儀表板中的活頁簿即將升級為最新版本。 您對現有活頁簿所做的任何自訂內容都將遺失。 您要繼續嗎？」  
   
          此警告指的是 PowerPivot 管理儀表板中，針對資料重新整理活動報告的活頁簿。 如果您自訂這些活頁簿，當現有的檔案取代成較新的版本時，您對這些活頁簿所做的任何變更都會遺失。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "58434499"
   
     10. 在伺服器陣列中升級方案和功能可能需要數分鐘才能完成。 在此期間，PowerPivot 資料連接要求將會失敗並出現 「 無法重新整理資料 」 或者 「 錯誤時發生嘗試執行要求的動作。 請再試一次」。 升級完成後，伺服器將會變成可以使用，而且將不再發生這些錯誤。  
   
-8.  **重複此程序**伺服陣列中每個 SQL Server Analysis Services (PowerPivot) 服務：1) 執行 SQL Server 安裝程式 2) 執行 PowerPivot 組態工具。  
+8.  **重複此程序**伺服陣列中每個 SQL Server Analysis Services (PowerPivot) 服務：1） 執行 SQL Server 安裝程式 2） 執行 PowerPivot 組態工具。  
   
 9. 透過執行升級後的步驟以及檢查伺服器陣列中的 PowerPivot 伺服器版本，驗證升級成功。 如需詳細資訊，請參閱本主題中的 [Post-upgrade verification tasks](#verify) 和下列章節：  
   
@@ -203,7 +203,7 @@ ms.locfileid: "58434499"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  檢閱現有部署的下列資訊：[類型] 是 [撤銷] 或 [部署]、[檔案] 是 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
+    2.  檢閱現有部署中的下列資訊：[類型] 是 [撤銷] 或 [部署]、[檔案] 是 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
   
     3.  部署或撤銷與 PowerPivot 方案相關將複製的 GUID 值**JobId**然後將它貼到下列命令 （使用標記]、 [複製] 和 [貼上命令殼層的 [編輯] 功能表上來複製 GUID）：  
   
@@ -343,7 +343,7 @@ Get-PowerPivotSystemService
 |工作|連結|  
 |----------|----------|  
 |確認伺服器在執行 PowerPivot for SharePoint 的所有電腦上執行。|[啟動或停止 PowerPivot for SharePoint 伺服器](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)|  
-|確認網站集合層級的功能啟用。|[為在 [管理中心] 的 網站集合啟用 PowerPivot 功能整合](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|  
+|確認網站集合層級的功能啟用。|[為在 [管理中心] 的 [網站集合啟用 PowerPivot 功能整合](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|  
 |確認個別的 PowerPivot 活頁簿會透過開啟活頁簿，並按一下篩選與交叉分析篩選器起始查詢來正確載入。|檢查快取的檔案是否存在硬碟上。 快取的檔案可確認資料檔案已在實體伺服器上載入。 尋找 c:\Program Files\Microsoft SQL Server\MSAS12.POWERPIVOT\OLAP\Backup 資料夾中的快取檔案。|  
 |在設定為資料重新整理的所選活頁簿上測試資料重新整理。|測試資料重新整理最簡單的方式就是修改資料重新整理排程，也就是選擇 **[並且盡快重新整理]** 核取方塊，讓資料重新整理立即執行。 此步驟將判斷目前活頁簿的資料重新整理是否成功。 針對其他常用的活頁簿重複這些步驟以確保資料重新整理運作正常。 如需有關排程資料重新整理，請參閱 <<c0> [ 排程資料重新整理&#40;PowerPivot for SharePoint&#41;](../../../2014/analysis-services/schedule-a-data-refresh-powerpivot-for-sharepoint.md)。</c0>|  
 |一段時間之後，監視 PowerPivot 管理儀表板中的資料重新整理報表以確認沒有資料重新整理錯誤。|[PowerPivot 管理儀表板和使用量資料](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)|  

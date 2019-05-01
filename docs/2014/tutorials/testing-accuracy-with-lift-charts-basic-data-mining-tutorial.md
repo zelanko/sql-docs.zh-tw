@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 06cefcdac192b715fe843f842088456f769cdd24
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042631"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>使用增益圖測試精確度 (基本資料採礦教學課程)
   在  **採礦精確度圖表** 索引標籤的 資料採礦設計師中，您可以計算程度的模型執行預測，並比較直接對照其他模型的結果的每個模型的結果。 這種比較方法稱為*增益圖*。 一般來說，採礦模型的預測精確度是由「增益」(Lift) 或分類精確度所衡量。 在此教學課程中，我們只會使用增益圖。  
@@ -31,7 +31,7 @@ ms.locfileid: "56033919"
   
 #### <a name="to-select-the-data-set"></a>若要選取資料集  
   
-1.  切換至 **[採礦精確度圖表**] 索引標籤中的資料採礦設計師中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，然後選取**輸入選擇** 索引標籤。  
+1.  切換至 **[採礦精確度圖表** 索引標籤中的資料採礦設計師中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，然後選取**輸入選擇** 索引標籤。  
   
 2.  在 **選取要用於精確度圖表的資料集**群組方塊中，選取**使用採礦結構測試案例**。 這是您在建立採礦結構時擱置在一旁的測試資料。  
   

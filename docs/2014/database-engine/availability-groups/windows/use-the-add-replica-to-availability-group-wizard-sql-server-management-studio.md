@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a9074c49b3e8c9d80666d3bb586ffeba225e88b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813375"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>使用 [將複本加入至可用性群組] 精靈 (SQL Server Management Studio)
   使用 [將複本加入至可用性群組精靈]，可協助您將新次要複本加入至現有的 AlwaysOn 可用性群組。  
@@ -77,12 +77,12 @@ ms.locfileid: "48218148"
   
 4.  在 **[連接到現有次要複本]** 頁面上，連接到可用性群組中的每一個次要複本。 如需詳細資訊，請參閱 <<c0> [ 連接到現有次要複本頁面&#40;新增複本精靈] 及 [新增資料庫精靈]&#41;](connect-to-existing-secondary-replicas-page.md)。</c0>  
   
-5.  在 **[指定複本]** 頁面上，針對可用性群組指定並設定一個或多個新次要複本。 此頁面包含三個索引標籤。 下表將介紹這些索引標籤。 如需詳細資訊，請參閱[指定複本頁面 &#40;新增可用性群組精靈：加入複本精靈&#41;](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)。  
+5.  在 **[指定複本]** 頁面上，針對可用性群組指定並設定一個或多個新次要複本。 此頁面包含三個索引標籤。 下表將介紹這些索引標籤。 如需詳細資訊，請參閱[指定複本頁面 &#40;新增可用性群組精靈：新增複本精靈 &#41;](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)。  
   
     |索引標籤|簡短描述|  
     |---------|-----------------------|  
     |**複本**|使用此索引標籤可指定將裝載新次要複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。|  
-    |**端點**|使用此索引標籤來驗證每個新次要複本的現有資料庫鏡像端點 (如果有的話)。 如果在其服務帳戶使用 Windows 驗證的伺服器執行個體上缺少此端點，精靈會嘗試自動建立該端點。 **注意：** 任何伺服器執行個體在非網域使用者帳戶下執行，如果您需要執行到您的伺服器執行個體進行手動變更，才可以繼續在精靈中。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#Prerequisites)＞。|  
+    |**端點**|使用此索引標籤來驗證每個新次要複本的現有資料庫鏡像端點 (如果有的話)。 如果在其服務帳戶使用 Windows 驗證的伺服器執行個體上缺少此端點，精靈會嘗試自動建立該端點。 **注意：** 如果在非網域使用者帳戶下執行任何伺服器執行個體，您需要執行到您的伺服器執行個體進行手動變更，才可以繼續在精靈中。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#Prerequisites)＞。|  
     |**備份喜好設定**|使用此索引標籤可指定整個可用性群組的備份喜好設定，如果您希望修改目前設定，可指定個別可用性複本的備份優先權。|  
   
 6.  在 **[選取初始資料同步處理]** 頁面上，選擇您要如何建立新的次要資料庫並將它聯結至可用性群組。 選擇下列其中一個選項：  
@@ -119,7 +119,7 @@ ms.locfileid: "48218148"
      當精靈完成時，按一下 **[關閉]** 以結束。  
   
 > [!IMPORTANT]  
->  加入複本之後，請參閱 [將次要複本加入至可用性群組 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)。  
+>  在之後新增複本時，請參閱 「 後續操作：在之後加入複本 」 一節[將次要複本加入至可用性群組&#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
 
   

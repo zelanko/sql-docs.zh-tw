@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c7d4a14a6afc2d716e85e687cbae1a202a596d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241244"
 ---
 # <a name="display-size"></a>顯示大小
 資料行的顯示大小是以字元格式顯示資料所需字元數目上限。 下表定義每個 ODBC SQL 資料類型的顯示大小。  

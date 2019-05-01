@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044064"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>測試篩選過的模型 (基本資料採礦教學課程)
   既然您判斷出`TM_Decision_Tree`模型最為正確，您要自訂的模型，使其更符合需求的[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]目標郵寄促銷活動。 具體而言，行銷部門想要知道男性和女性客戶之間是否有任何差異。 資訊可協助他們決定要用於廣告使用哪些雜誌和哪些產品當做郵寄活動的特色。  
@@ -107,7 +107,7 @@ ms.locfileid: "56011139"
   
 #### <a name="to-test-the-lift-of-the-filtered-models"></a>若要測試篩選過之模型的增益  
   
-1.  切換至 **[採礦精確度圖表**] 索引標籤中的資料採礦設計師中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，然後選取**輸入選擇** 索引標籤。  
+1.  切換至 **[採礦精確度圖表** 索引標籤中的資料採礦設計師中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，然後選取**輸入選擇** 索引標籤。  
   
 2.  在 **選取要用於精確度圖表的資料集**群組方塊中，選取**使用採礦結構測試案例**。  
   

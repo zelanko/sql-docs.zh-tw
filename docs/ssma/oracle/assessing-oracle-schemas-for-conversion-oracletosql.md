@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: acf31c29b498562708c7cb049e89a0a7425fd31f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288456"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>評定 Oracle 結構描述的轉換 (OracleToSQL)
 在您載入的物件，並將資料移轉至之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您應判斷移轉將會複雜程度，以及多少時間移轉。 SSMA 可以建立顯示的會成功轉換的物件百分比的評定報告。 SSMA 也可讓您檢視導致轉換失敗的特定問題。  
@@ -37,7 +37,7 @@ ms.locfileid: "47631196"
   
     SSMA 會顯示在視窗底部的 [狀態] 列中的進度。 如果 [輸出] 窗格為可見，您也會看到 [輸出] 窗格中的訊息。  
   
-    當評估完成時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle： 評定報告視窗會出現。  
+    當評估完成時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle:評估 [報告] 視窗會出現。  
   
 ## <a name="using-assessment-reports"></a>使用評估報告  
 評定報告視窗包含三個窗格：  

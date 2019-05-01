@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e569dfba5470a6c8c13bb9caa0e36c9711119634
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747280"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>選取巢狀資料表資料行 (加入新的巢狀資料表精靈)
   使用 [選取巢狀資料表資料行] 頁面，即可選取要包含在巢狀資料表中的屬性和量值，並定義採礦模型使用屬性和量值的方式。  
   
- **如需詳細資訊，請參閱**：[採礦模型資料行](data-mining/mining-model-columns.md)、[資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
+ **如需詳細資訊：**[採礦模型資料行](data-mining/mining-model-columns.md)，[資料採礦精靈] &#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>選項。  
  **資料行**  

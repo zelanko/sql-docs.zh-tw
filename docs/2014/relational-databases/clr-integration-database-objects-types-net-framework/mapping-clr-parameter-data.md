@@ -27,11 +27,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b297d329f11e05ed1b1995004150644e4b76ec9b
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874842"
 ---
 # <a name="mapping-clr-parameter-data"></a>對應 CLR 參數資料
   下表列出[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型、 common language runtime (CLR) 中的對應項[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中`System.Data.SqlTypes`命名空間，並在其原生 CLR 對等用法[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework。  
@@ -74,7 +74,7 @@ ms.locfileid: "58477683"
 |`uniqueidentifier`|`SqlGuid`|**Guid，可為 Null\<Guid >**|  
 |`User-defined type(UDT)`|None|繫結到相同組件或相依組件中之使用者定義型別的相同類別。|  
 |**varbinary**|`SqlBytes, SqlBinary`|`Byte[]`|  
-|`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**byte、 Byte []、 Nullable\<位元組 >**|  
+|`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**byte、 Byte []、 [Nullable\<位元組 >**|  
 |`varchar`|None|None|  
 |`xml`|`SqlXml`|None|  
   

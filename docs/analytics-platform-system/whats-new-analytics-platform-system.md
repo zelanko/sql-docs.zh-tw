@@ -10,11 +10,11 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: cc64fdd430e64f7ad1b152234c2a203f453745c8
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63243773"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System，向外延展 MPP 資料倉儲中最新消息
 請參閱什麼是最新的應用裝置更新 Microsoft Analytics Platform System (APS) 的新功能。 APS 是裝載 MPP SQL Server Parallel Data Warehouse 的向外延展內部部署設備。 
