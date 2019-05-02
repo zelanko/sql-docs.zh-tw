@@ -19,7 +19,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "63260995"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>移轉 Reporting Services 安裝 (SharePoint 模式)
-  本主題概述將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式部署從一個 SharePoint 環境移轉至另一個 SharePoint 環境所需的步驟。 特定的步驟可能會因為您移轉的來源版本而有所不同。 如需有關 SharePoint 模式升級及移轉案例的詳細資訊，請參閱＜ [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)＞。 如果您只是要將報表項目從一部伺服器複製到另一部，請參閱 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
+  本主題概述將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式部署從一個 SharePoint 環境移轉至另一個 SharePoint 環境所需的步驟。 特定的步驟可能會因為您移轉的來源版本而有所不同。 如需有關 SharePoint 模式升級及移轉案例的詳細資訊，請參閱＜ [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)＞。 如果您只是要將報表項目從一部伺服器複製到另一部，請參閱 [在報表伺服器之間移轉內容的範例 Reporting Services rs.exe 指令碼](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
  如需移轉 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式部署的資訊，請參閱 [移轉 Reporting Services 安裝 &#40;原生模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)＞。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "63260995"
 ###  <a name="bkmk_content_only_migration"></a> 僅限內容移轉  
  **Reporting Services 僅限內容移轉：** 若要將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 內容複製到新的伺服器陣列，您需要使用 **rs.exe** 之類的工具將內容複製到新的 SharePoint 安裝。 如需有關僅限內容移轉的詳細資訊，請參閱以下主題：  
   
--   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 指令碼：** 指令碼可以移轉內容及原生模式和 SharePoint 模式報表伺服器之間的資源。 如需詳細資訊，請參閱 < [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)和[Reporting Services RS.exe 指令碼，將內容從一個報表伺服器移轉到另一個](http://azuresql.codeplex.com/releases/view/115207).  
+-   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 指令碼：** 指令碼可以移轉內容及原生模式和 SharePoint 模式報表伺服器之間的資源。 如需詳細資訊，請參閱 < [在報表伺服器之間移轉內容的範例 Reporting Services rs.exe 指令碼](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)和[Reporting Services RS.exe 指令碼，將內容從一個報表伺服器移轉到另一個](http://azuresql.codeplex.com/releases/view/115207).  
   
 -   **Reporting Services 移轉工具：** 工具可以從原生模式伺服器複製您的報表項目至 SharePoint 模式伺服器。 如需詳細資訊，請參閱 [Reporting Services 移轉工具](https://www.microsoft.com/download/details.aspx?id=29560)。  
   

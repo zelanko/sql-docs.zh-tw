@@ -279,7 +279,7 @@ ms.locfileid: "63298807"
   
 6.  按一下 **[啟用]**。 功能狀態會變更為 **[使用中]**。  
   
- 每個網站集合都已完成這個程序。 如需詳細資訊，請參閱 [Activate the Report Server and Power View Integration Features in SharePoint](../../../2014/reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)。  
+ 每個網站集合都已完成這個程序。 如需詳細資訊，請參閱 [在 SharePoint 中啟用報表伺服器和 Power View 整合功能](../../../2014/reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)。  
   
 ##  <a name="bkmk_full_script"></a> 步驟 1-4 的 Windows PowerShell 指令碼  
  本節中的 PowerShells 指令碼與上一節的完成步驟 1 到 4 相同。 此指令碼完成下列各項：  
