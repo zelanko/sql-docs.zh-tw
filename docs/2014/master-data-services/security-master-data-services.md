@@ -40,7 +40,7 @@ ms.locfileid: "62923190"
   
 -   [模型物件權限](../../2014/master-data-services/model-object-permissions-master-data-services.md)，決定使用者可以存取的屬性，以及使用者對這些屬性的存取權類型 (讀取或更新)。  
   
--   [](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)(選擇性) 階層成員權限，決定使用者可以存取的成員，以及使用者對這些成員的存取權類型 (讀取或更新)。  
+-   [階層成員權限](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)(選擇性) ，決定使用者可以存取的成員，以及使用者對這些成員的存取權類型 (讀取或更新)。  
   
  將權限指派給屬性和成員時，權限會交集，此時規則會決定優先使用的權限。 如需詳細資訊，請參閱 [如何決定權限 &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)。  
   
