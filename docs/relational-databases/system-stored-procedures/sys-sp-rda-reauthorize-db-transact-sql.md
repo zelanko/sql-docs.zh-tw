@@ -19,7 +19,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: f16a46c9461e7870897582fe2094fa233232973e
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47790436"
@@ -58,7 +58,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
  需要 db_owner 權限。  
   
 ## <a name="remarks"></a>備註  
- 當您執行[sys.sp_rda_reauthorize_db & Amp;#40;transact-SQL&AMP;#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)重新連線到遠端的 Azure 資料庫，這項作業會自動重設查詢模式 LOCAL_AND_REMOTE，這是 Stretch Database 的預設行為。 也就是說，查詢會傳回結果，從本機和遠端資料。  
+ 當您執行[sys.sp_rda_reauthorize_db (transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)重新連線到遠端的 Azure 資料庫，這項作業會自動重設查詢模式 LOCAL_AND_REMOTE，這是 Stretch Database 的預設行為。 也就是說，查詢會傳回結果，從本機和遠端資料。  
   
 ## <a name="example"></a>範例  
  下列範例會還原已啟用延展功能和遠端資料庫的本機資料庫之間已驗證的連接。 它會建立一份遠端資料 （建議），並連接至新的複本。  

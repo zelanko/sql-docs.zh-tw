@@ -21,7 +21,7 @@ ms.locfileid: "62521385"
 
   [Data Analysis Expressions (DAX) 參考](https://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)  
   
- [多維度運算式 &#40;MDX&#41 參考](../mdx/multidimensional-expressions-mdx-reference.md)  
+ [多維度運算式 &#40;MDX&#41; 參考](../mdx/multidimensional-expressions-mdx-reference.md)  
   
  [資料採礦延伸模組 &#40;DMX&#41; 參考](../dmx/data-mining-extensions-dmx-reference.md)  
   
