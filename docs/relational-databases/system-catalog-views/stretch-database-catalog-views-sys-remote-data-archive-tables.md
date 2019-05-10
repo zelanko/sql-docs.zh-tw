@@ -3,7 +3,6 @@ title: sys.remote_data_archive_tables (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: stored-procedures
 ms.topic: language-reference
 f1_keywords:
@@ -16,15 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.remote_data_archive_tables catalog view
 ms.assetid: 765069b7-60fd-414c-875f-3455460b75cd
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 3633612e6aa674a5cd7513c6a84ce1d77ca46a4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93dfc97acab31b5078bcba569b52c64f773c775b
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689186"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64945673"
 ---
 # <a name="stretch-database-catalog-views---sysremotedataarchivetables"></a>Stretch Database 目錄檢視-sys.remote_data_archive_tables
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

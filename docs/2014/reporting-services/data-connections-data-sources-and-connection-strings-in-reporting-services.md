@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a89cb1d06b60d086c139b4d618b7bd716c04616e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63462042"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775084"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   若要在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表中包括資料，您必須先建立「資料來源」  與「資料集」 。 本主題說明資料來源的類型、如何建立資料來源，以及與資料來源認證相關的重要資訊。 資料來源包括資料來源類型、連接資訊，以及要使用的認證類型。 資料來源有兩種類型：內嵌和共用。 內嵌資料來源是定義在報表中，而且只能供該報表使用。 共用資料來源則與報表分開定義，而且可以供多個報表使用。 如需詳細資訊，請參閱[內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) 和[內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)。  

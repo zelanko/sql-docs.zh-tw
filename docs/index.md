@@ -10,12 +10,12 @@ ms.topic: hub-page
 ms.prod: sql
 ms.technology: release-landing
 ms.date: 12/15/2018
-ms.openlocfilehash: 2cafca919cc7592b9b7c6998b1f20910e9be7d4e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cf7a57e1136f53697a6f49cbd098b91977e98c8c
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206645"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775106"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -97,7 +97,7 @@ ms.locfileid: "63206645"
                                           <div class="cardText">
                                               <h3>Windows 上的 SQL Server</h3>
                                               <ul class="noBullet">
-                                              <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?toc=..%2ftoc%2ftoc.json"><strong>內部部署</strong></a></li>
+                                              <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?toc=../toc/toc.json"><strong>內部部署</strong></a></li>
                                               <li><a class="barLink" href="/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/"> <strong>在 Azure VM 上</strong></a></li>
                                               <li><a class="barLink" href="/sql/sql-server/what-s-new-in-sql-server-ver15/"><strong>新功能</strong></a></li>
                                               </ul>

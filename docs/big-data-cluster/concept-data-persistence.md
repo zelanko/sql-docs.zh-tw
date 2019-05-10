@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: edef0fa21cc2a41785e14f7c96cf3c52b1e0bacb
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: d095af731e3c62ce24dd3d8cbf059aa6278dd22c
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472200"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776164"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>在 Kubernetes 上的 SQL Server 巨量資料叢集使用的資料持續性
 
@@ -49,19 +49,19 @@ SQL Server 的巨量資料叢集會取用這些永續性磁碟區的方式是使
 > [!WARNING]
 > 執行而永續性儲存體不能在測試環境中，但它可能會導致非功能性的叢集。 在 pod 重新啟動時，叢集中繼資料及/或使用者資料會永久遺失。 我們不建議在此組態中執行。 
 
-本節提供有關如何設定 SQL Server 的巨量資料叢集部署的儲存體設定的更多範例。
+[設定儲存體](#config-samples)章節提供有關如何設定 SQL Server 的巨量資料叢集部署的儲存體設定的更多範例。
 
 ## <a name="aks-storage-classes"></a>AKS 儲存類別
 
 AKS 隨附[兩個內建的儲存體類別](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)**預設**並**管理 premium**以及它們的動態佈建程式。 您可以指定這些，或建立您自己的儲存類別啟用永續性儲存體，以部署巨量資料叢集。 根據預設，內建在 aks 叢集組態檔*aks-dev-test.json*隨附應使用的永續性儲存體組態**管理 premium**儲存類別。
 
 > [!WARNING]
-> 使用建立的永續性磁碟區**預設**儲存類別擁有的收回原則*刪除*。 時，您可以刪除 SQL Server 巨量資料叢集，因此永續性磁碟區宣告會取得已刪除，然後永續性磁碟區。 **管理高階**已回收的原則*保留*。 您可以深入了解 AKS 中的儲存體類別和其組態中的[這](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes)文章。
+> 使用內建的儲存體類別建立永續性磁碟區**預設**並**管理 premium**擁有的收回原則*刪除*。 時，您可以刪除 SQL Server 巨量資料叢集，因此永續性磁碟區宣告會取得已刪除，然後永續性磁碟區。 您可以建立使用自訂的儲存體類別**azure 磁碟**使用 privioner*保留*收回原則中所示[這](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes)文章。
 
 
 ## <a name="minikube-storage-class"></a>Minikube 儲存類別
 
-Minikube 隨附內建的儲存體類別，稱為**標準**以及它的動態佈建程式。 內建的組態檔。 minikube *minikube-dev-test.json*控制平面規格中有儲存體組態設定。相同的設定會套用至所有的集區規格中。 您也可以自訂此檔案的複本，並將它用於您的巨量資料叢集部署，在 minikube。 您可以手動編輯自訂檔案，並變更您想要執行的永續性磁碟區宣告以容納工作負載的特定集區的大小。 或者，請參閱本節的範例，如何使用的編輯*mssqlctl*命令。
+Minikube 隨附內建的儲存體類別，稱為**標準**以及它的動態佈建程式。 內建的組態檔。 minikube *minikube-dev-test.json*控制平面規格中有儲存體組態設定。相同的設定會套用至所有的集區規格中。 您也可以自訂此檔案的複本，並將它用於您的巨量資料叢集部署，在 minikube。 您可以手動編輯自訂檔案，並變更您想要執行的永續性磁碟區宣告以容納工作負載的特定集區的大小。 或者，請參閱[設定存放裝置](#config-samples)如需有關如何執行範例的區段可讓您編輯使用*mssqlctl*命令。
 
 ## <a name="kubeadm-storage-classes"></a>Kubeadm 儲存類別
 
@@ -97,7 +97,7 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.typ
 mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
 ```
 
-### <a name="configure-storage-class"></a>設定儲存體類別
+### <a id="config-samples"></a> 設定儲存體類別
 
 下列範例示範如何修改控制平面的儲存體類別：
 

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -17,15 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_attributes catalog view
 ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 123258c5eceebe14a8b920b7917941cd83dc7b42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bb20f646179ec147e4bbca43689812cc39c5bf97
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62860822"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64945947"
 ---
 # <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

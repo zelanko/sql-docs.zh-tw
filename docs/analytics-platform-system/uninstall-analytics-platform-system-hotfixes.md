@@ -36,7 +36,7 @@ ms.locfileid: "62675667"
   
 2.  使用 [執行為系統管理員] 選項開啟命令提示字元。  
   
-3.  將目錄變更為`C:\PDWINST\Patches\<kbarticle>\media`何處*<kbarticle>* 解除安裝此 hotfix 的知識庫文件編號。  
+3.  將目錄變更為`C:\PDWINST\Patches\<kbarticle>\media`何處 *<kbarticle>* 解除安裝此 hotfix 的知識庫文件編號。  
   
     ```  
     cd /d c:\PDWINST\Patches\<kbarticle>\media  

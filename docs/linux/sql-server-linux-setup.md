@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 1edc63d4dc29e05a914bbfbd891df06a4b3a7255
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: fde3465c26d2e148d99976b81e0a01c9fb3395ff
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63455092"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775506"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的安裝指引
 
@@ -82,7 +82,7 @@ SQL Server 2017 都有適用於 Linux 的系統需求如下：
 - [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)
 - [在 Ubuntu 上安裝](quickstart-install-connect-ubuntu.md)
 - [在 Docker 上執行](quickstart-install-connect-docker.md)
-- [在 Azure 中佈建 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+- [在 Azure 中佈建 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
 ## <a id="sqlvnext"></a> 安裝 SQL Server 2019 preview
 

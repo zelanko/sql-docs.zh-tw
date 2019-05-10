@@ -1,5 +1,5 @@
 ---
-title: sp_OAGetProperty (TRANSACT-SQL) |Microsoft Docs
+title: sp_OAGetProperty (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a8c87eb8ed41b1669cf423aaccb8b06ee8b0e54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6611998b8aa22242693ec5d44bf842671a777c98
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690006"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449721"
 ---
 # <a name="spoagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_OAGetProperty objecttoken , propertyname
  *propertyvalue* **輸出**  
  這是傳回的屬性值。 如果指定的話，它必須是適當資料類型的本機變數。  
   
- 如果屬性傳回 OLE 物件， *propertyvalue*必須是資料類型的區域變數**int**。物件 Token 儲存在本機變數中，這個物件 Token 可以搭配其他 OLE Automation 預存程序來使用。  
+ 如果屬性傳回 OLE 物件， *propertyvalue*必須是資料類型的區域變數**int**。物件 token 儲存在本機變數中，與這個物件 token 可以搭配其他 OLE Automation 預存程序。  
   
  如果屬性傳回單一值，指定區域變數*propertyvalue*，它會傳回屬性值在本機變數，或不指定*propertyvalue*，就會傳回用戶端，做為單一資料行、 單一資料列結果集的屬性值。  
   
@@ -83,7 +83,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  當資料行中的所有資料值都共用相同的資料類型時，整個資料行都會使用這個資料類型。 當資料行中的資料值是不同資料類型時，便會根據下表來選擇整個資料行的資料類型。  
   
-||ssNoversion|FLOAT|money|DATETIME|varchar|NVARCHAR|  
+||ssNoversion|FLOAT|money|datetime|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -96,7 +96,7 @@ sp_OAGetProperty objecttoken , propertyname
  您也可以使用**sp_OAMethod**取得屬性值。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
+ 需要的成員資格**sysadmin**固定伺服器角色，或直接執行這個預存程序權限。 `Ole Automation Procedures` 組態必須是**啟用**使用 OLE Automation 與相關的任何系統程序。  
   
 ## <a name="examples"></a>範例  
   

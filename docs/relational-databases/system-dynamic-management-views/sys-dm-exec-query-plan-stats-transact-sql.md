@@ -18,11 +18,11 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 89185976120c15f9d1fcdfef75f2bddb41415c65
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63474274"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774923"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]

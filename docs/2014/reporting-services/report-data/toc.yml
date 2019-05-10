@@ -153,8 +153,6 @@
       href: ../report-data/dataset-properties-dialog-box-parameters.md
     - name: 資料集屬性對話方塊、查詢
       href: ../dataset-properties-dialog-box-query.md
-    - name: 定義查詢參數對話方塊
-      href: define-query-parameters-dialog-box.md
     - name: 輸入資料來源認證對話方塊
       href: ../enter-data-source-credentials-dialog-box.md
     - name: 共用資料來源屬性對話方塊、認證

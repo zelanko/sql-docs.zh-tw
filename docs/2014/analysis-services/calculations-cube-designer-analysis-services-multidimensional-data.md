@@ -20,7 +20,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62681085"
 ---
-# <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>*計算 (Cube 設計工具) (Analysis Services - 多維度資料)
+# <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>計算 (Cube 設計工具) (Analysis Services - 多維度資料)
   使用 Cube 設計師中的 [計算] 索引標籤來檢視和編輯計算，包含選取之 Cube 的導出成員、命名集和多維度運算式 (MDX) 指令碼命令。  
   
 ## <a name="form-view-and-script-view"></a>表單檢視和指令碼檢視  

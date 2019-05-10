@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f24376d93f09066d68610e7ac5463945a6db7abd
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f8bc4571d212f2722050818e8e591e48b63df06e
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147793"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449626"
 ---
 # <a name="multidimensional-model-programming"></a>多維度模型程式設計
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,6 +37,6 @@ ms.locfileid: "50147793"
   
 ## <a name="see-also"></a>另請參閱  
  [表格式模型程式設計相容性層級 1050年到 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [資料採礦程式設計](../../analysis-services/data-mining-programming.md)  
+ [資料採礦程式設計](../../analysis-services/data-mining/data-mining-programming.md)  
   
   

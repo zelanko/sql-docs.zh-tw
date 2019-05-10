@@ -10,11 +10,11 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/27/2017
 ms.openlocfilehash: c82d8295ec4a8293abc822900e25e654447a492c
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63462186"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775798"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>從外部資料來源加入資料 (SSRS)
 

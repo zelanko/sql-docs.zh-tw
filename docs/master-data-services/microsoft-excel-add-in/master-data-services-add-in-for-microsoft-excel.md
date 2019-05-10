@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e3892d17d25980efe16acea58a0e8a93c28325c4
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: c87b8ecc730c70bbe0b49c1fe071c08079816a42
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581612"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477074"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>適用於 Microsoft Excel 的 Master Data Services 增益集
 
