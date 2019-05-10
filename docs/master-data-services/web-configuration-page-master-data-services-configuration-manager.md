@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.mds.configmanager.webconfigpg.f1
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f04a620a16ae2389412280ebd6b6c1bdacb32d5e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 8e9036bbff7302a0580bcbc5370ba8c6e9f7835a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776990"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485523"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>Web 組態頁面 (Master Data Services 組態管理員)
 
@@ -28,7 +28,7 @@ ms.locfileid: "52776990"
   
 ## <a name="configure-the-web-application"></a>設定 Web 應用程式  
   
-|控制項名稱|Description|  
+|控制項名稱|描述|  
 |------------------|-----------------|  
 |**網站**|建立新網站、選取預設網站，或選取其他可用的網站 (如有列出)。 此清單會顯示本機電腦上的 Internet Information Services (IIS) 中所定義的網站。 建立新網站時，會自動建立新的 Web 應用程式。 選取預設或其他現有的網站時，您必須手動建立應用程式。|  
 |**Web 應用程式**|選取要進行組態設定的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式。 這個方塊只會顯示選定網站中的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式。<br /><br /> 如果未顯示任何項目，請按一下 [建立] 來建立網站。|  
@@ -36,7 +36,7 @@ ms.locfileid: "52776990"
   
 ## <a name="associate-application-with-database"></a>將應用程式與資料庫產生關聯  
   
-|控制項名稱|Description|  
+|控制項名稱|描述|  
 |------------------|-----------------|  
 |**Select**|開啟 **[連接到伺服器]** 對話方塊，您可以從這裡連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，並選取要與選定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 應用程式產生關聯的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 資料庫。|  
 |**SQL Server 執行個體**|顯示主控 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的選定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 執行個體名稱。 在您連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體並選取資料庫之前，這會是空白的。|  
@@ -44,7 +44,7 @@ ms.locfileid: "52776990"
   
 ## <a name="enable-dqs-integration"></a>啟用 DQS 整合  
   
-|控制項名稱|Description|  
+|控制項名稱|描述|  
 |------------------|-----------------|  
 |**啟用與 Data Quality Services 的整合**|選取此選項可啟用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]中所提供的 Data Quality 功能。 如需相關資訊，請參閱 [啟用 Data Quality Services 與 Master Data Services 的整合](../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)。|  
   

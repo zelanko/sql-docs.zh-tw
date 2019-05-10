@@ -11,15 +11,15 @@ helpviewer_keywords:
 - entities [Master Data Services], permissions
 - permissions [Master Data Services], entities
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4030351db122190636292ccc84c574af95df76fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fda75488b170ebfbfc9cd2396d2478f3ae918f2e
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62517160"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483928"
 ---
 # <a name="entity-permissions-master-data-services"></a>實體權限 (Master Data Services)
 

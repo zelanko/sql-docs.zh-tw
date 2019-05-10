@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7eef632f4c38961176986d500b8f2ce134731f65
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 26e016369bf2498bce87e39fb05880712608184b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403863"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489659"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>檢視成員的所有註解或交易 (適用於 Excel 的 MDS 增益集)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52403863"
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您想要在一段時間之後檢視資料的更新時，請檢視資料列 (成員) 的註解和交易。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有包含 MDS 管理之資料的使用中工作表。  
@@ -40,6 +40,6 @@ ms.locfileid: "52403863"
 3.  [檢視交易] 對話方塊就會顯示交易的清單。 若要檢視與交易相關聯的所有註解，請按一下方格中的資料列。  
   
 ## <a name="see-also"></a>另請參閱  
- [概觀：從 Excel 匯入資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+ [概觀：從 Excel 匯入資料&#40;MDS 增益集的 Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

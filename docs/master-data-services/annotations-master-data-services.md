@@ -11,15 +11,15 @@ helpviewer_keywords:
 - annotations [Master Data Services]
 - annotations [Master Data Services], about annotations
 ms.assetid: 8c6401ef-17f0-41f5-be7a-01f49141f04c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4cb2992ca4ede1076d45286b4d6a2713ea84ef01
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: a59e5a9e31f9ea90fd112b11676b56e07c9fafa3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796358"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486429"
 ---
 # <a name="annotations-master-data-services"></a>註解 (Master Data Services)
 

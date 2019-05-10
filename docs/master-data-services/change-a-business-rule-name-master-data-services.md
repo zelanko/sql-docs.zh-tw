@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], changing name
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1aede5993fea74932e58e682e6efd89dec84671c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 8669a087dd2cd4459c4bdb35c7a808d6d7b665d5
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754630"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485381"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>變更商務規則名稱 (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52754630"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當指派的商務規則名稱不符合業務需求時，變更此名稱。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -51,7 +51,7 @@ ms.locfileid: "52754630"
   
 7.  輸入商務規則的新名稱。  
   
-8.  按一下 **[儲存]**。  
+8.  按一下 [儲存] 。  
   
 9. 按一下 [全部發行] 。  
   

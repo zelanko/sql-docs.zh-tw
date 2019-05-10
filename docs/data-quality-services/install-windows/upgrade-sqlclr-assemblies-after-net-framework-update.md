@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8bfd64d3707d5a750a797a38605babf2e90a3026
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 19a012c9aeb8a07a3da89d98bc0a589cfb6663c6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018980"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487584"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>在 .NET Framework 更新之後升級 SQLCLR 組件
 
@@ -32,7 +32,7 @@ A new version of .NET was installed on this machine. In order to continue to wor
   
  若要修正此問題，則必須升級 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中受影響的 SQLCLR 組件。 您可以透過使用 **upgradedlls** 命令列參數執行 DQSInstaller.exe 檔的方式略過重新建立 DQS 資料庫，而只升級受影響的組件。 這樣可確保您的知識庫、資料品質專案以及 DQS 中的任何其他資料都會保留下來。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
   
 -   您必須以 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 電腦上 Administrator 群組成員的身分登入。  
   

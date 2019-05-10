@@ -1,6 +1,6 @@
 ---
-title: Analysis Services 表格式模型 （1200年相容性層級） |Microsoft Docs
-ms.date: 05/07/2019
+title: Analysis Services Internet Sales 教學課程 （1200年相容性層級） |Microsoft Docs
+ms.date: 05/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7ae9dd208d151dc3b8fb8117ba6e672ada2aecdd
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
-ms.translationtype: HT
+ms.openlocfilehash: 06b3aace2320882d209e6a7ab0f67a16a6f8a6df
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65403350"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503624"
 ---
-# <a name="tabular-modeling-1200-compatibility-level"></a>表格式模型 （1200年相容性層級）
+# <a name="adventure-works-internet-sales-tutorial-1200"></a>教學課程中 adventure Works Internet Sales (1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 本教學課程提供有關如何建立在 Analysis Services 表格式模型的課程[1200年相容性層級](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)利用[SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)，並將模型部署到 Analysis Services伺服器在內部部署或 Azure 中。  
@@ -98,7 +98,7 @@ ms.locfileid: "65403350"
 |[設定 Power View 報表的報表屬性](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)|30 分鐘| 
 
   
-## <a name="next-step"></a>下一步  
+## <a name="next-steps"></a>後續步驟  
 若要開始本教學課程，請繼續進行第 1 課：[第 1 課：建立新的表格式模型專案](lesson-1-create-a-new-tabular-model-project.md)。  
   
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - attribute groups [Master Data Services], creating
 - creating attribute groups [Master Data Services]
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b53cff2104d5f510db446095a3a65c6be27be77d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b32182dd1d75a35d42587c839c3f46c89654511b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813300"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477136"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>建立屬性群組 (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52813300"
 
   當您想要在總管方格的個別索引標籤上顯示屬性時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中建立屬性群組。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -66,9 +66,9 @@ ms.locfileid: "52813300"
   
 11. 按一下 [可用群組] 方塊中的群組，然後按一下 [加入] 箭號。 若要加入全部的群組，請按一下 [全部加入] 箭號。  
   
-12. 按一下 **[儲存]**。  
+12. 按一下 [儲存] 。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
   
 -   [讓使用者看到屬性群組 &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
   

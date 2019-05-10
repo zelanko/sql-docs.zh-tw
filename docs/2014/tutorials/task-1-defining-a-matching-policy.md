@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 85a6ca52573bec3d7e6c19e68f809048ed0786db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222803"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481308"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>工作 1：定義比對原則
   在這項工作中，您會建立包含一個規則的比對原則。 此規則將會有一個必要條件：**Supplier ID**，也就是說，Supplier Id 必須符合才能使用規則中的其他定義域。 此規則會使用其他兩個定義域：**Supplier Name**與**相似度**值設定為**70%** 並**Contact Email**使用**相似度**值設定為**30%**。  

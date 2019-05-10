@@ -10,15 +10,15 @@ helpviewer_keywords:
 - entities [Master Data Services], deleting
 - deleting entities [Master Data Services]
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0767322f3adc8e8766c12ee963183c152f97767d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8bcadc041fd1f2c4fd708fbc79ab52d0c0472956
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765681"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479571"
 ---
 # <a name="delete-an-entity-master-data-services"></a>刪除實體 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除實體以刪除實體的所有成員和屬性。  

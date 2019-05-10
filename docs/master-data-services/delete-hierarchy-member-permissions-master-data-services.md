@@ -12,15 +12,15 @@ helpviewer_keywords:
 - members [Master Data Services], deleting permissions
 - permissions [Master Data Services], deleting member permissions
 ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f497495fbcef0bc0b34d6b1c354f5132001e17fc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: ab65b5361be1c5cdba4ab64cf58312b90d47ddb1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749251"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489795"
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>刪除階層成員權限 (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "52749251"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除模型物件權限，移除所做的任何指派。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  
@@ -58,7 +58,7 @@ ms.locfileid: "52749251"
     > [!NOTE]  
     >  如果權限繼承自群組，則無法從使用者移除權限。 您必須改為從群組移除權限。  
   
-10. 按一下 **[儲存]**。  
+10. 按一下 [儲存] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層成員權限 &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   

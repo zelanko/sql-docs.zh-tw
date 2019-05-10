@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], changing
 ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4a10b20332059c9cf1b9aed41caf462faf96414e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dd19b496c82fd8bc302f86de14894dbc7739166f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925856"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484024"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>變更系統管理員帳戶 (Master Data Services)
   您可以變更使用者帳戶指定為[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]系統管理員。  

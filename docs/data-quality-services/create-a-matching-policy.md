@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dqs.kb.kbmatchingpolicy.f1
 - sql13.dqs.kb.kbmatchingresults.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 87ef5477bcff01caec7027bb5aac713fbc0ccc8a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 98557d690edfcb3148dbc0b876e7ff26804de7db
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023731"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480460"
 ---
 # <a name="create-a-matching-policy"></a>建立比對原則
 
@@ -37,7 +37,7 @@ ms.locfileid: "56023731"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能建立比對原則。  
   
 ##  <a name="MatchingRules"></a> 如何設定比對規則參數  

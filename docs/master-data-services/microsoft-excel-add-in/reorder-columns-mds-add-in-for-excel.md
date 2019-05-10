@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ac00462e-c0f7-4b8d-86f2-d9eda2598a15
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b7b06a5f8816339772b6828d857d28c4b278aa5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 5394724845e66e1d51f0c48379f10df124a63e4d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669328"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486049"
 ---
 # <a name="reorder-columns-mds-add-in-for-excel"></a>重新排序資料行 (適用於 Excel 的 MDS 增益集)
 
@@ -26,7 +26,7 @@ ms.locfileid: "47669328"
   
  當您重新排序 **[篩選]** 對話方塊中的屬性時，會使用新的順序，將資料載入至 Excel。 不過，下次您篩選屬性資料時，此順序將會回復到原始設計的順序。 若要永久變更順序，管理員應該在主資料管理員的 **[系統管理]** 區域中變更順序。 如需相關資訊，請參閱 [Change the Order of Attributes](../../master-data-services/change-the-order-of-attributes.md)。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  

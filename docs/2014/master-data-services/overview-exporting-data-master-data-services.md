@@ -11,15 +11,15 @@ helpviewer_keywords:
 - subscription views [Master Data Services]
 - subscription views [Master Data Services], about subscription views
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 76a9133a013087d96f9acc102232b2340212d19f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f92a74caa74c5cf15e917cd6c15aef9506a60180
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62763835"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482844"
 ---
 # <a name="exporting-data-master-data-services"></a>匯出資料 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 您可以建立訂閱檢視，將  資料匯出至訂閱系統。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 然後，任何訂閱系統可以檢視  資料庫中的已發行資料。 如需檢視的詳細資訊，請參閱 [檢視](../relational-databases/views/views.md)。  

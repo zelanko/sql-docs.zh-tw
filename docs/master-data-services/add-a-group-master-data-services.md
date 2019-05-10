@@ -11,15 +11,15 @@ helpviewer_keywords:
 - groups [Master Data Services], adding
 - adding groups [Master Data Services]
 ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1ac283320d94cc77b26c09baf8e75ed7f19e6be4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 236596354139971c6fcceebff759a57f807cdefa
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63016953"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484867"
 ---
 # <a name="add-a-group-master-data-services"></a>加入群組 (Master Data Services)
 

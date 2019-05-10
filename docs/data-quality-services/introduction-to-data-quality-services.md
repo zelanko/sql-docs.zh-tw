@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ccf8b81bb7393f8268584bc78115cf6051f0901f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 72b0432b03640fed5051b8381c02da19db7c525f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038629"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487409"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 簡介
 

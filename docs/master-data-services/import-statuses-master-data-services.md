@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cc1a94e0677f0c9356f4fba43b7b6230759c9458
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 64368e9f68b62f61b84d0bcb45278870bfab8689
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62696292"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485863"
 ---
 # <a name="import-statuses-master-data-services"></a>匯入狀態 (Master Data Services)
 
