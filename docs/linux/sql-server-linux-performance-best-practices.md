@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: a9fdfb466f34e3eb40ad80d53c203f7ee8866f08
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7819d3dffbcfaef8a94a1644db1694d1f80ae060
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676899"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106284"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>效能最佳做法和 Linux 上的 SQL Server 組態指導方針
 
@@ -67,7 +67,7 @@ ms.locfileid: "51676899"
 | CPU 頻率管理員 | 效能 | 請參閱**cpupower**命令 |
 | ENERGY_PERF_BIAS | 效能 | 請參閱**x86_energy_perf_policy**命令 |
 | min_perf_pct | 100 | Intel p 狀態上看到您的文件 |
-| C 狀態 | 只有 C1 | 如何確保只有 C 狀態設為 C1 上看到您的 Linux 或 system 文件 |
+| C-States | 只有 C1 | 如何確保只有 C 狀態設為 C1 上看到您的 Linux 或 system 文件 |
 
 下表提供磁碟設定的建議：
 
