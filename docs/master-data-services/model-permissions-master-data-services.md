@@ -11,15 +11,15 @@ helpviewer_keywords:
 - models [Master Data Services], permissions
 - permissions [Master Data Services], models
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c63ffb3a8fcb32169d3ec35eabe1df1970022e19
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 1f42513c7f8fa52fddfa9d3f77f537d81a34c0bc
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819154"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484087"
 ---
 # <a name="model-permissions-master-data-services"></a>模型權限 (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52819154"
 > [!NOTE]  
 >  如果使用者是模型管理員，則使用者介面的所有功能區域中都會顯示此模型。 否則，此模型只會顯示在 [總管] 功能區域中。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
-|權限|Description|  
+|權限|描述|  
 |----------------|-----------------|  
 |**讀取**|使用者可以讀取成員、屬性、階層成員資格或集合成員資格。|  
 |**建立**|使用者可以建立成員，並在建立期間指派屬性值。|  

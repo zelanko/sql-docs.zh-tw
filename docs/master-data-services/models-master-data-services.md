@@ -11,15 +11,15 @@ helpviewer_keywords:
 - models [Master Data Services], about models
 - models [Master Data Services]
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d403794bbf5168427580ed6233ccdaeee78bfe89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5611508b77c2966fe9e8e76578cf1861f4c304eb
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62738940"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486018"
 ---
 # <a name="models-master-data-services"></a>模型 (Master Data Services)
 

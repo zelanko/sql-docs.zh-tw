@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1cbaacd23fcaa1e28d6cce6d64a168d0fab4befc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 57a5044ccee040ef1eba95925c689f48739c259f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63250240"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484664"
 ---
 # <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>工作 2：使用適用於 Excel 的 MDS 增益集將供應商資料上傳到 MDS
   在這個工作中，您已清理和供應商將資料發佈至**MDS**使用**MDS 增益集適用於 Excel**。 建立名為實體**供應商**中**供應商**您在上一課中建立的模型。 此實體將會針對 Excel 檔案中的每個資料行具有一個屬性。 Supplier 實體的 Code 和 Name 屬性等於**SupplierID**並**Supplier Name**在 Excel 中的資料行。  

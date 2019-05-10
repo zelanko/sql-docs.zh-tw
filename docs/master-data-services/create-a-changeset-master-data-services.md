@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bd8bd63f7fa3bb2d674076ae7780a132a916e7a1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 97cc3f748f5d5b94a65eddcbcb54b9d407c7bed6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753580"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484228"
 ---
 # <a name="create-a-changeset-master-data-services"></a>建立變更集 (Master Data Services)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52753580"
 
   變更集是對主要資料所做的暫止變更集合。 如果實體需要核准變更，則必須將暫止變更儲存至變更集，然後提交由系統管理員核准。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
   
 -   您必須擁有存取 [總管] 功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52753580"
   
 6.  若要使用現有的變更集，請按一下 [現有]，並從清單中選擇變更集。 只能使用已開啟或已拒絕狀態的變更集。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
  [套用及更新變更集 &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  

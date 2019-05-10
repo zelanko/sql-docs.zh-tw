@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ddb2ae5f0298a2f7d182bb5e1ef7057827617fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 18f13cbe1c5d7c3a281ee3c3ad542b2f5281a74f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62518212"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488335"
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services 開發人員文件
 

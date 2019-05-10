@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 05818605e5f8abb9a069f9ca3bcd5d09c00487c3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: a149ef46c4935a34aab3b618b74a5da0566785e3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814820"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488116"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>系統管理功能區域 (主資料管理員)
 

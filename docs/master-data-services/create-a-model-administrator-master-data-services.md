@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], creating
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6220e8670de28afaf2545638d5153726b1d34219
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 44bede292cb49ddcfd791b3e7d65605e1aa2399c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769690"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487498"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>建立模型管理員 (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52769690"
 > [!TIP]  
 >  若要簡化管理，請建立 Windows 或本機群組，然後將此群組設定為模型管理員。 然後不需存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]，您就可以在群組中加入及移除使用者。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [使用者及群組的權限] 功能區域的權限。  
@@ -56,7 +56,7 @@ ms.locfileid: "52769690"
   
 9. 針對您希望群組或使用者成為其管理員的每個模型，完成步驟 7 和 8。  
   
-10. 按一下 **[儲存]**。  
+10. 按一下 [儲存] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   

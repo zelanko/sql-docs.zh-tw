@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: 0ffb46d5d498ba04a6916e7e2d56ffccaaa71aef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7a2dbdccf92a52d5733a04915acc3f76dc3f033
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63137160"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105952"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Azure Data Studio 的 PowerShell 編輯器支援
 
@@ -85,13 +85,45 @@ $HOME/.azuredatastudio/extensions/ms-vscode.PowerShell-<version>/examples
 $HOME/.azuredatastudio/extensions/ms-vscode.powershell-preview-<version>/examples
 ```
 
-開啟/擴充功能的範例中檢視 Azure Data Studio，從 PowerShell 命令提示字元執行下列命令：
+開啟/擴充功能的範例中檢視 Azure Data Studio，請從 PowerShell 命令提示字元執行下列程式碼：
 
 ```powershell
 azuredatastudio (Get-ChildItem $Home\.azuredatastudio\extensions\ms-vscode.PowerShell-*\examples)[-1]
 ```
 
-### <a name="sql-powershell-examples"></a>SQL PowerShell 範例
+### <a name="creating-and-opening-files"></a>建立和開啟檔案
+
+若要建立並開啟新的檔案在編輯器內，使用 新增-EditorFile 從 PowerShell 整合式終端機中。
+
+```powershell
+PS C:\temp> New-EditorFile ExportData.ps1
+```
+
+此命令適用於任何檔案類型，而不只是 PowerShell 檔案。
+
+```powershell
+PS C:\temp> New-EditorFile ImportData.py
+```
+
+若要在 Azure 資料 Studio 中開啟一個或多個檔案，請使用`Open-EditorFile`命令。
+
+```powershell
+Open-EditorFile ExportData.ps1, ImportData.py
+```
+
+### <a name="no-focus-on-console-when-executing"></a>在主控台中執行時沒有焦點
+
+這些是用來使用 SSMS 所使用的使用者，你很習慣能夠執行查詢，以及能夠重新而不需要切換回 [查詢] 窗格中再次執行。  在此情況下，程式碼編輯器的預設行為可能會覺得奇怪，給您。  若要將焦點保持在編輯器中，當您執行與<kbd>F8</kbd>變更下列設定：
+
+```json
+"powershell.integratedConsole.focusConsoleOnExecute": false
+```
+
+預設值是`true`協助工具。
+
+請注意這項設定會防止焦點變更至主控台，即使您使用的命令，明確呼叫的輸入，例如`Get-Credential`。
+
+## <a name="sql-powershell-examples"></a>SQL PowerShell 範例
 若要使用這些範例中 （如下所示），您需要安裝 SqlServer 模組，從[PowerShell 資源庫](https://www.powershellgallery.com/packages/SqlServer)。
 
 ```powershell
@@ -115,16 +147,33 @@ Instance Name             Version    ProductLevel UpdateLevel  HostPlatform Host
 ServerA                   13.0.5233  SP2          CU4          Windows      Windows Server 2016 Datacenter
 ServerB                   14.0.3045  RTM          CU12         Linux        Ubuntu
 ```
+`SqlServer`模組包含名為提供者`SQLRegistration`可讓您以程式設計方式存取儲存的 SQL Server 連線的下列類型：
 
-在下列範例中，我們將進行`dir`(別名，以供`Get-ChildItem`) 來取得所有已註冊的伺服器檔案中所列的 SQL Server 執行個體的清單，然後使用`Get-SqlDatabase`cmdlet 來取得每個這些執行個體的資料庫清單。
++ 資料庫引擎伺服器 （已註冊的伺服器）
++ 中央管理伺服器 (CMS)
++ Analysis Services
++ Integration Services
++ Reporting Services
+
+ 在下列範例中，我們將進行`dir`(別名，以供`Get-ChildItem`) 以取得所有已註冊的伺服器檔案中所列的 SQL Server 執行個體的清單。
 
 ```powershell
-dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse |
-WHERE { $_.Mode -ne 'd' } |
-FOREACH {
-    Get-SqlDatabase -ServerInstance $_.Name
-}
+dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse 
 ```
+
+以下是範例，這方面的輸出如下所示：
+
+```powershell
+Mode Name
+---- ----
+-    ServerA
+-    ServerB
+-    localhost\SQL2017
+-    localhost\SQL2016Happy
+-    localhost\SQL2017
+```
+
+牽涉到資料庫或資料庫內物件的許多作業`Get-SqlDatabase`指令程式可用。  如果您同時提供值`-ServerInstance`和`-Database`會擷取參數，只有一個資料庫物件。  不過，如果您只有指定`-ServerInstance`參數，將會傳回該執行個體上的所有資料庫的完整清單。
 
 以下是範例，這方面的輸出看起來像：
 
@@ -143,7 +192,7 @@ tempdb               Normal       72.00 MB   61.25 MB Simple       140 sa
 WideWorldImporters   Normal         3.2 GB     2.6 GB Simple       130 sa
 ```
 
-這個範例會使用`Get-SqlDatabase`cmdlet 來擷取一份所有 ServerB 執行個體的資料庫，然後呈現方格/資料表 (使用`Out-GridView`cmdlet) 來選取應該備份的資料庫。  一旦使用者按一下 [確定] 按鈕，將會反白顯示的資料庫備份。
+下一個範例會使用`Get-SqlDatabase`cmdlet 來擷取一份所有 ServerB 執行個體的資料庫，然後呈現方格/資料表 (使用`Out-GridView`cmdlet) 來選取應該備份的資料庫。  一旦使用者按一下 [確定] 按鈕，將會反白顯示的資料庫備份。
 
 ```powershell
 Get-SqlDatabase -ServerInstance ServerB |
@@ -159,28 +208,6 @@ WHERE {$_.Mode -ne 'd' } |
 FOREACH {
     Get-SqlAgentJobHistory -ServerInstance  $_.Name -Since Midnight -OutcomesType Failed
 }
-```
-
-### <a name="sql-powershell-examples"></a>SQL PowerShell 範例
-若要使用這些範例中 （如下所示），您需要安裝 SqlServer 模組，從[PowerShell 資源庫](https://www.powershellgallery.com/packages/SqlServer)。
-
-```powershell
-Install-Module -Name SqlServer -AllowPrerelease
-```
-
-在此範例中，我們會使用`Get-SqlInstance`cmdlet 來取得 ServerA 與 ServerB Server SMO 物件。  預設輸出，此命令會包含執行個體的名稱，如版本、 Service Pack & CU 執行個體的更新層級。
-
-```powershell
-Get-SqlInstance -ServerInstance ServerA, ServerB
-```
-
-以下是範例，這方面的輸出看起來像：
-
-```
-Instance Name             Version    ProductLevel UpdateLevel
--------------             -------    ------------ -----------
-ServerA                   13.0.5233  SP2          CU4
-ServerB                   14.0.3045  RTM          CU12
 ```
 
 在此範例中，我們將進行`dir`(別名，以供`Get-ChildItem`) 來取得所有已註冊的伺服器檔案中所列的 SQL Server 執行個體的清單，然後使用`Get-SqlDatabase`cmdlet 來取得每個這些執行個體的資料庫清單。
@@ -208,24 +235,6 @@ PBIRSTempDB          Normal       16.00 MB    4.20 MB Simple       140 sa
 SSISDB               Normal      325.06 MB   26.21 MB Full         140 sa   
 tempdb               Normal       72.00 MB   61.25 MB Simple       140 sa   
 WideWorldImporters   Normal         3.2 GB     2.6 GB Simple       130 sa   
-```
-
-這個範例會使用`Get-SqlDatabase`cmdlet 來擷取一份所有 ServerB 執行個體的資料庫，然後呈現方格/資料表 (使用`Out-GridView`cmdlet) 來選取應該備份的資料庫。  一旦使用者按一下 [確定] 按鈕，將會反白顯示的資料庫備份。
-
-```powershell
-Get-SqlDatabase -ServerInstance ServerB |
-Out-GridView -PassThru |
-Backup-SqlDatabase -CompressionOption On
-```
-
-此範例中，同樣地，取得所有的 SQL Server 執行個體的清單檔案中列出您已註冊的伺服器，然後呼叫`Get-SqlAgentJobHistory`午夜，每個 SQL Server 執行個體所列報告每個失敗的 SQL Agent 作業。
-
-```powershell
-dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse |
-WHERE {$_.Mode -ne 'd' } |
-FOREACH {
-    Get-SqlAgentJobHistory -ServerInstance  $_.Name -Since Midnight -OutcomesType Failed
-}
 ```
 
 ## <a name="reporting-problems"></a>報告問題

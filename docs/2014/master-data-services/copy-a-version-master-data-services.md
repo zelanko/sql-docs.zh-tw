@@ -10,15 +10,15 @@ helpviewer_keywords:
 - versions [Master Data Services], copying
 - copying versions [Master Data Services]
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a42204b6cc095a5a285e5e68aa1aaf7a905668e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 70f328da53f2d346fe58f3416b0a3a0c331eb74c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925513"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479986"
 ---
 # <a name="copy-a-version-master-data-services"></a>複製版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，複製模型的版本，以建立新版本。  

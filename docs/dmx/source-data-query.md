@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: fdd0a3091440295e393d969f1b8161b83fb58d95
 ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38063958"
@@ -24,7 +24,7 @@ ms.locfileid: "38063958"
 ## <a name="query-types"></a>查詢類型  
  指定來源資料的三種最常見的方式為：  
   
- [OPENQUERY &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-openquery.md)  
+ [OPENQUERY &#40;DMX&#41;](../dmx/source-data-query-openquery.md)  
  這個陳述式會使用現有的資料來源，查詢 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體之外的資料。  
   
  雖然**OPENQUERY**是功能類似於**OPENROWSET**， **OPENQUERY**具有下列優點：  
@@ -33,10 +33,10 @@ ms.locfileid: "38063958"
   
 -   管理員對於伺服器上之資料的存取方式，有更大的控制權。 例如，管理員可以管理哪些提供者會載入伺服器，以及可以存取哪些外部資料。  
   
- [OPENROWSET &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-openrowset.md)  
+ [OPENROWSET &#40;DMX&#41;](../dmx/source-data-query-openrowset.md)  
  這個陳述式會使用現有的資料來源，查詢 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體之外的資料。  
   
- [圖形&AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-shape.md)  
+ [圖形&#40;DMX&#41;](../dmx/source-data-query-shape.md)  
  這個陳述式會查詢多重資料來源，以建立巢狀資料表。 藉由使用**圖形**，您可以將多個來源的資料合併成單一的階層式資料表。 這可以讓您利用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的能力將資料表內嵌在資料表中，建立巢狀資料表。  
   
  若要指定來源資料，您也可以使用下列選項：  

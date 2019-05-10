@@ -12,15 +12,15 @@ helpviewer_keywords:
 - e-mail [Master Data Services]
 - e-mail [Master Data Services], about e-mail notifications
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ac5fbbd7a2ea3988fab52aaf921a74ba36519c0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 54f8cdc55322144414be11dd837bd723b4ed3c10
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923297"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478974"
 ---
 # <a name="notifications-master-data-services"></a>通知 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 可以設定為傳送電子郵件通知商務規則驗證失敗時或模型版本狀態變更。  

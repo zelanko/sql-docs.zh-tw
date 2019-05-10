@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b4683e1cb859617481f235bbebcc128e812c7cf5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b938ee83469579e5440697205856de32ea41ea1f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62517563"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487019"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>編輯和刪除索引 (Master Data Services)
 

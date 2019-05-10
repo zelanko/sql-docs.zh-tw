@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 08f18fb3c97bbbc5ee3ee4afcd2bb942ddbfef58
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 11a6a5406ff60520ede71ee8d9325991719b6f50
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016631"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487342"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>在知識探索中匯入 Excel 檔案中的定義域
 
@@ -31,7 +31,7 @@ ms.locfileid: "56016631"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能從 Excel 檔案匯入定義域。  
   
 ##  <a name="Import"></a> 將 Excel 檔案中的定義域匯入知識庫  
@@ -56,7 +56,7 @@ ms.locfileid: "56016631"
   
 8.  選取資料行，然後將現有的定義域對應至此資料行，或是建立新的定義域，方法是按一下 **[建立定義域]** 圖示、在 **[建立定義域]** 對話方塊中建立定義域，然後將此定義域對應至此資料行。 此定義域的資料類型必須符合此資料行的資料類型。 針對試算表的所有資料行重複上述步驟。  
   
-9. 按 [下一步] 。  
+9. 按一下 [下一步] 。  
   
 10. 在 **[探索]** 頁面上，按一下 **[開始]** ，分析 Excel 試算表中的資料。  
   

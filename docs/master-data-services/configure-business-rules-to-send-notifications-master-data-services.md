@@ -12,15 +12,15 @@ helpviewer_keywords:
 - e-mail [Master Data Services], configuring business rules
 - notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 25de38d04af8b98b600422a843c6b6fb6260d514
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 56c7203db3e7c32383b59a85d2bc7cb16cba4d0a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783460"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484391"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>設定商務規則來傳送通知 (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "52783460"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您想要通知使用者屬性值變更時，請設定商務規則來傳送通知。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [系統管理] 和 [使用者及群組的權限] 功能區域的權限。 如果您沒有 [使用者及群組的權限] 功能區域的權限，就無法檢視傳送通知的目標使用者和群組清單。  
@@ -57,13 +57,13 @@ ms.locfileid: "52783460"
   
 7.  選取 [傳送通知] 核取方塊，然後從下拉式清單選取要向其傳送電子郵件通知的使用者或群組。  
   
-8.  按一下 **[儲存]**。  
+8.  按一下 [儲存] 。  
   
 9. 按一下 [全部發行] 。  
   
 10. 在確認對話方塊中按一下 **[確定]**。 [商務規則狀態] 資料行中的值變更為 [作用中]，[通知] 資料行會顯示要向其傳送通知的選取使用者或群組。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
   
 -   遵循下列其中一個程序，將商務規則套用至資料：  
   

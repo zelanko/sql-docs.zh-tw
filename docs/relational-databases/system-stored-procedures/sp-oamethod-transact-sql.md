@@ -18,12 +18,12 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 703b6464d035d06583193aedaa330257fc38fe34
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 25eccb27b75028fdebafaa7a855137946465676b
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530370"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450105"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_OAMethod objecttoken , methodname
   
  如果此方法會傳回單一值，指定區域變數*returnvalue*，它會傳回此方法傳回值，在本機變數，或不指定*returnvalue*，就會傳回方法會傳回給用戶端的值，做為單一資料行、 單一資料列結果集。  
   
- 如果方法傳回值是一個 OLE 物件， *returnvalue*必須是資料類型的區域變數**int**。物件 Token 儲存在本機變數中，這個物件 Token 可以搭配其他 OLE Automation 預存程序來使用。  
+ 如果方法傳回值是一個 OLE 物件， *returnvalue*必須是資料類型的區域變數**int**。物件 token 儲存在本機變數中，與這個物件 token 可以搭配其他 OLE Automation 預存程序。  
   
  當此方法傳回值是陣列，如果*returnvalue*指定時，它會設定為 NULL。  
   
@@ -93,7 +93,7 @@ sp_OAMethod objecttoken , methodname
   
  當資料行中的所有資料值都共用相同的資料類型時，整個資料行都會使用這個資料類型。 當資料行中的資料值是不同資料類型時，便會根據下表來選擇整個資料行的資料類型。  
   
-||ssNoversion|FLOAT|money|DATETIME|varchar|NVARCHAR|  
+||ssNoversion|FLOAT|money|datetime|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -106,7 +106,7 @@ sp_OAMethod objecttoken , methodname
  您也可以使用**sp_OAMethod**取得屬性值。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
+ 需要的成員資格**sysadmin**固定伺服器角色，或直接執行這個預存程序權限。 `Ole Automation Procedures` 組態必須是**啟用**使用 OLE Automation 與相關的任何系統程序。  
   
 ## <a name="examples"></a>範例  
   

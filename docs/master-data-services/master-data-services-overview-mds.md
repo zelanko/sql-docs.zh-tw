@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 66cee237e12729f494aa1ed0e915db145ff5d076
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3514f15156de2856be6e13b0df29affa23e78303
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62448117"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489748"
 ---
 # <a name="master-data-services-overview-mds"></a>Master Data Services 概觀 (MDS)
 

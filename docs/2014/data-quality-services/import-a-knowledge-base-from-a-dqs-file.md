@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 410bb163ba04d99ea8f71c262c8e671f8393c841
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f31f93ba468e6ffc91313e7ca653d122c1664ad2
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792926"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480658"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>從 .dqs 檔案匯入知識庫
   此主題描述如何從 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的 .dqs 資料檔匯入整個知識庫。 您從 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式匯出現有的知識庫來建立此資料檔 (請參閱＜ [將知識庫匯出到.dqs 檔案](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)＞)。  
