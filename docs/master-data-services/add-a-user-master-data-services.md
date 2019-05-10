@@ -11,15 +11,15 @@ helpviewer_keywords:
 - users [Master Data Services], adding
 - adding users [Master Data Services]
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 286647785defdb2391f2c9e7be4d1fc4c6d5599b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 11c4a53fc29e23a41ac2d7f16109bd41a0cc34c1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62634648"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484834"
 ---
 # <a name="add-a-user-master-data-services"></a>加入使用者 (Master Data Services)
 

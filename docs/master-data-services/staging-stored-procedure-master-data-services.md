@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 772c32ade01fc80a867da1cbc88dc4f7a3762e79
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 87578321618f87f1505c3d9163af1a9c8dedfd14
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779871"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488039"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>暫存預存程序 (Master Data Services)
 
@@ -35,7 +35,7 @@ ms.locfileid: "52779871"
 ## <a name="staging-process-stored-procedure-parameters"></a>暫存處理序預存程序參數  
  下表列出這些預存程序的參數。  
   
-|參數|Description|  
+|參數|描述|  
 |---------------|-----------------|  
 |**VersionName**<br /><br /> 必要項|版本的名稱。 是否區分大小寫取決於您的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 集合設定。|  
 |**LogFlag**<br /><br /> 必要項|決定是否在暫存處理序期間記錄交易。 可能的值為：<br /><br /> **0**:不記錄交易。<br /><br /> **1**:記錄交易。<br /><br /> <br /><br /> 如需交易的詳細資訊，請參閱[交易 &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)。|  

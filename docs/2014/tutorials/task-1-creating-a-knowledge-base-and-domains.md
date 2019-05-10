@@ -1,5 +1,5 @@
 ---
-title: 工作 1:建立知識庫和定義域 |Microsoft Docs
+title: 工作 1：建立知識庫和定義域 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: eeaebadd43fe1969ae1c728f8e2f8284ddf7f7ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 79edd8566f2b3c9b586bc8c8815e1d9bc586fb05
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822177"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481238"
 ---
-# <a name="task-1-creating-a-knowledge-base-and-domains"></a>工作 1:建立知識庫和定義域
+# <a name="task-1-creating-a-knowledge-base-and-domains"></a>工作 1：建立知識庫和定義域
   在這個工作中，您會建立**供應商**知識庫，並建立用來清理資料和比對資料以移除重複項的網域。  
   
 1.  啟動**Data Quality Client**。 按一下 **開始**，指向**所有程式**，按一下  **Microsoft SQL Server 2012**，按一下  **Data Quality Services**，然後按一下**Data Quality Client**。  

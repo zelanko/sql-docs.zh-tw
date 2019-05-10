@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmap.f1
 - sql12.dqs.kb.kbterms.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1577fbdfd4133e419ab5dfe6520efd5e19893cb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cc2eac8564c08831527d71ee5942c37b618aedcf
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792316"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481301"
 ---
 # <a name="perform-knowledge-discovery"></a>執行知識探索
   此主題描述如何透過知識探索來建立知識庫。 在探索程序中， [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 會透過電腦輔助的程序來分析範例資料來源中的資料，並將它所獲得的知識加入至知識庫。 您可以在知識探索活動或定義域管理活動的 **[管理定義域值]** 步驟中修改及增強這項知識。  

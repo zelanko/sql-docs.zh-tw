@@ -1,5 +1,5 @@
 ---
-title: 工作 7:檢視使用主資料管理員在 Excel 中進行的更新 |Microsoft Docs
+title: 工作 7：檢視使用主資料管理員在 Excel 中進行的更新 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -7,24 +7,24 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c2ff4972-cf18-4d5c-98cd-ec78861a63ce
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 544e61a95f4a2177e60c2b3fe11a91a5a23480e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b3ae997dfc2ea9b601a0d7a41a0d24c4cb9c426b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866144"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489681"
 ---
-# <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>工作 7:檢視使用主資料管理員在 Excel 中進行更新
+# <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>工作 7：檢視您在 Excel 中使用主資料管理員所做的更新
   在這項工作中，您會確認有在 Excel 中看到來自 MDS 的更新資料。  
   
 1.  現在，請切換到 excel 視窗具有**Cleansed and Matched Suppliers**開啟試算表。  
   
 2.  按一下 **重新整理**功能區上的按鈕。  
   
-     ![Excel-[重新整理] 按鈕，在主要資料] 索引標籤上](../../2014/tutorials/media/et-viewupdatesmadeusingmdminexcel-01.jpg "Excel-[重新整理] 按鈕，在主要資料] 索引標籤上")  
+     ![Excel-[重新整理] 按鈕，在主要資料 索引標籤上](../../2014/tutorials/media/et-viewupdatesmadeusingmdminexcel-01.jpg "Excel-[重新整理] 按鈕，在主要資料 索引標籤上")  
   
 3.  請注意，**名稱**(california、 New York 等等) 的**狀態**欄位連同其**代碼**。  
   

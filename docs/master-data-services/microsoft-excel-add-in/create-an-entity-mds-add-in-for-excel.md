@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 79a35e83a492a45f3683759445eafe815b43e789
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: ea995a4d0f188db2e958b3020da9646a6b069a21
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663736"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488238"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>建立實體 (適用於 Excel 的 MDS 增益集)
 
@@ -24,12 +24,12 @@ ms.locfileid: "47663736"
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，系統管理員可以建立新的實體來儲存資料。 當您建立實體時，應該至少載入要儲存的資料樣本。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [系統管理] 和總管功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 -   您必須有要在其中建立實體的現有模型。 如需詳細資訊，請參閱[建立模型 &#40;Master Data Services&#41;](../../master-data-services/create-a-model-master-data-services.md)。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "47663736"
   
 12. 按一下 [確定] 。 成功建立實體時，畫面上會顯示新標頭資料列，反白顯示資料格，而且更新工作表名稱以符合實體名稱。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
   
 -   若要檢視發生的錯誤，請按一下 [發行和驗證] 群組中的 [顯示狀態]。 ValidationStatus 和 InputStatus 資料行隨即顯示。 如需詳細資訊，請參閱[驗證資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)。  
   

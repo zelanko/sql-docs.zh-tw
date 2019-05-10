@@ -11,15 +11,15 @@ helpviewer_keywords:
 - collections [Master Data Services]
 - collections [Master Data Services], about collections
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9ac53be7804937985e2bca5f3c453e32468dd8e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 68586b63d77ceb1c4e84ef9e073812f61b56eb65
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63008516"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484354"
 ---
 # <a name="collections-master-data-services"></a>集合 (Master Data Services)
 

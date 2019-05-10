@@ -11,15 +11,15 @@ helpviewer_keywords:
 - business rules [Master Data Services], requiring attribute values
 - attributes [Master Data Services], requiring values
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3daebd23c88fe1865755fe4a24a672377fe077c8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: ae1eb0a03e7387c7985a4b05f9f0fba562d03d67
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765490"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485969"
 ---
 # <a name="require-attribute-values-master-data-services"></a>要求屬性值 (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52765490"
 > [!NOTE]  
 >  在以網域屬性關聯性為基礎的衍生階層中，不會顯示遺漏網域屬性值的成員。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -61,15 +61,15 @@ ms.locfileid: "52765490"
   
 11. 從 [屬性]  下拉式清單中，選取屬性。  
   
-12. 按一下 **[儲存]**。 新的資料列就會加入 [Then] (則)  方格中。  
+12. 按一下 [儲存] 。 新的資料列就會加入 [Then] (則)  方格中。  
   
-13. 按一下 **[儲存]**。  
+13. 按一下 [儲存] 。  
   
 14. 按一下 [全部發行] 。  
   
 15. 在確認對話方塊中按一下 **[確定]**。 [Business Rule State] (商務規則狀態)  資料行中的值是 [使用中] 。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
   
 -   遵循下列其中一個程序，將商務規則套用至資料：  
   

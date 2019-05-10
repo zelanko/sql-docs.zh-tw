@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ff4c4ae12021930ba447c3cb01a9830907fb3153
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 51724ea4c0adf1a98d7972898d15e20e626b7c98
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822912"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489519"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>建立及執行實體同步關係 (Master Data Services)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52822912"
 
   實體同步是實體版本間單向且可重複的同步處理。 它提供不同模型間共用實體資料的方法。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  建立實體同步關係的必要條件：  
   
 -   您必須擁有存取系統管理功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
@@ -81,7 +81,7 @@ ms.locfileid: "52822912"
   
 10. 選取 [隨需同步處理] ，或選取 [自動同步處理]  並設定頻率。  
   
-11. 按一下 **[儲存]**。  
+11. 按一下 [儲存] 。  
   
  **執行實體同步關係**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52822912"
 ## <a name="sync-relationship-information"></a>同步關係資訊  
  對於每個建立的同步關係，會新增含有十個資料行的資料列到方格。 下表描述該資料行。  
   
-|「資料行」|Description|  
+|「資料行」|描述|  
 |------------|-----------------|  
 |[狀態]|同步關係狀態。<br /><br /> 當您按一下 [儲存] 或執行同步關係時，會顯示![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")影像，表示正在更新同步關係。<br /><br /> 如果建立、編輯或執行同步關係時發生錯誤，則會顯示![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")影像。<br /><br /> 否則，狀態為正常，並顯示![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")影像。|  
 |來源模型|來源模型名稱。|  
@@ -121,7 +121,7 @@ ms.locfileid: "52822912"
   
 -   **於**：上次更新同步的日期和時間。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
  [編輯和刪除實體同步關係 &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   
   

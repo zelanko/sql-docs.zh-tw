@@ -11,15 +11,15 @@ helpviewer_keywords:
 - versions [Master Data Services], copying
 - copying versions [Master Data Services]
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ea81dff0f7c302395e4577d0b336b06f7c5d3fc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cc92e04a39fce48c25362a5db61d004420f4e959
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62678565"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484358"
 ---
 # <a name="copy-a-version-master-data-services"></a>複製版本 (Master Data Services)
 

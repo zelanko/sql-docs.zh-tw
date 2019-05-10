@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9af9e0eaf06fca60da515a16e7e6830dcb8462d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5d708a2e3daca372bc336e91886889b79909627a
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62659693"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357406"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Analysis Services 的全球化案例
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "62659693"
 |**功能**|**表格式**|**多維度**|  
 |[語言和定序 &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)|繼承自作業系統。|是繼承的，但能覆寫模型階層中主要物件的語言和定序。|  
 |翻譯支援的範圍|標題和描述。|可以為物件名稱、標題、識別碼和描述建立翻譯，也可以任何 Unicode 語言和指令碼表示。 即使工具和環境使用另一種語言，也是如此。 例如，在整個堆疊使用英文和拉丁文定序的開發環境中，您可以在模型中包含其名稱使用斯拉夫文字元的物件。|  
-|實作翻譯支援|使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 建立，以產生您填入並匯回模型中的翻譯檔案。<br /><br /> 如需詳細資訊，請參閱[表格式模型中的翻譯 &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)。|使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 建立，以定義標題和描述的翻譯，以及 Cube、量值、維度及屬性的帳戶類型。<br /><br /> 如需詳細資訊，請參閱[多維度模型中的翻譯 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)。 課程中的，有關如何使用這項功能可在[第 9 課：定義檢視方塊和翻譯](../analysis-services/lesson-9-defining-perspectives-and-translations.md)的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]教學課程。|  
+|實作翻譯支援|使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 建立，以產生您填入並匯回模型中的翻譯檔案。<br /><br /> 如需詳細資訊，請參閱[表格式模型中的翻譯 &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)。|使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 建立，以定義標題和描述的翻譯，以及 Cube、量值、維度及屬性的帳戶類型。<br /><br /> 如需詳細資訊，請參閱[多維度模型中的翻譯 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)。 |  
 |貨幣轉換|無法使用。|貨幣轉換是透過特製化的 MDX 指令碼，來轉換含有貨幣資料的量值。 您可以使用 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 中的 [商業智慧精靈] 來產生 MDX 指令碼，該指令碼使用維度、屬性和量值群組中的資料和中繼資料組合，來轉換含有貨幣資料的量值。 請參閱[貨幣轉換 &#40;Analysis Services&#41;](../analysis-services/currency-conversions-analysis-services.md)。|  
   
 ## <a name="see-also"></a>另請參閱  

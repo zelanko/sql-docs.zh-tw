@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 010b733826f55bed55a246297bd9b5aa08b9aadc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c80799d2e4f7325d9d1c529c3104004b505cd2e0
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62519292"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485146"
 ---
 # <a name="create-a-custom-workflow---example"></a>建立自訂工作流程 - 範例
 

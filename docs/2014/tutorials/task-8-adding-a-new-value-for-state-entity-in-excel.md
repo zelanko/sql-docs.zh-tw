@@ -1,5 +1,5 @@
 ---
-title: 工作 8:加入新的值為 State 實體，在 Excel 中 |Microsoft Docs
+title: 工作 8：加入新的值為 State 實體，在 Excel 中 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a763d76b-06a3-4d51-9614-01fc9fb1c158
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 04ed80887a2a81a2179dcec423b9e22b3f9d43ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 831d0b504a65d485413772ee3711e689e29ee2a3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866494"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489701"
 ---
-# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>工作 8:為在 Excel 中的 State 實體加入新的值
+# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>工作 8：在 Excel 中為 State 實體新增值
   在這項工作中，您會在 Excel 中加入 State 實體的值，並將變更發行到 MDS 伺服器。  
   
 1.  新增**工作表**在 Excel 中按一下底部的 [新增] 索引標籤。  

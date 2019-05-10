@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 54865b00-563a-4932-ad4d-cbfd36b1e6c5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 68ad3e3663527d6a3074d5196a9f418e092edb9d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3594c866e2b55d4ae6a7fb8b014b15a5378b531f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62763649"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482787"
 ---
 # <a name="technical-reference-master-data-services"></a>技術參考 (Master Data Services)
   尋找有關 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 元件的技術參考資訊。  

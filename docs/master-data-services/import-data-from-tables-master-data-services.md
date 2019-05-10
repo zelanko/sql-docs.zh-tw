@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 29d0b40b947bc9a19839005cfc81c9ed3446b318
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0d70710da66b60d84928ae6eaac2d85749e7b721
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62696272"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484254"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>從資料表匯入資料 (Master Data Services)
 

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dd7ac0496532ca0cd034d34fa44d922700c045a8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4e587d29d8e711fa3e61a7e80fa447566b2e1411
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62630737"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485043"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>升級資料庫精靈 (Master Data Services 組態管理員)
 

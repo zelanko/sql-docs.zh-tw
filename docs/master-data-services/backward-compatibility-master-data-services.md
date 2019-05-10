@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 3f2ae84c-6666-460b-befe-bd72405c0778
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 68e4b3d7ac53eb0c77451723b08ff7982f215320
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9ef06d2b37995b4669dd225fbfa065db4ea4ad82
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62637086"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485355"
 ---
 # <a name="backward-compatibility-master-data-services"></a>回溯相容性 (Master Data Services)
 

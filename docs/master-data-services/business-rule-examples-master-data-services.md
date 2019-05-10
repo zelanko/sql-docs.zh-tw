@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8e33c6aefcb1286e8550e539e1d403953aa6fa6b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5f2f1aa1dd763675d50ff9ea1961d6036c3ee73f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62518630"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485421"
 ---
 # <a name="business-rule-examples-master-data-services"></a>商務規則範例 (Master Data Services)
 

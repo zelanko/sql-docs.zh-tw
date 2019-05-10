@@ -3,17 +3,17 @@ title: 安裝 SQL Server Machine Learning 服務 （資料庫） 上 Windows-SQL
 description: SQL Server 或 SQL Server 2017 Machine Learning 服務在 Windows 上的 SQL Server 安裝步驟上的 Python 中的 R。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 05/03/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4cd076ae79db7537235aa2a57fe4992ac0993473
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 088a553b28e968c1241486040de3c628fd6299cc
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748670"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097295"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>安裝 SQL Server Machine Learning 在 Windows 上的服務
 
@@ -252,6 +252,7 @@ I will inform HeidiSteen  [GeneMi, 2019/01/17]
 * [啟用額外的網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [啟用遠端連接](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 * [建立登入 SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
+* [管理磁碟配額](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas)以避免執行耗盡磁碟空間的工作的外部指令碼
 
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 

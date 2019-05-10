@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies, changing name
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 26f744831fb551a896430f86716d96f08a4ca164
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5a8bec1ab4bd19fdf11310fb467035eab1ac34b4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62926033"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483615"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>變更衍生階層名稱 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以變更衍生階層的名稱。  

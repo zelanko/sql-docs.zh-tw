@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.dm.testcdrule.f1
 - sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 226998dccce432a2203782d667c35285860fa926
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c34b00785b0639be6f645d164c2896cffe08c98c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62862362"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486505"
 ---
 # <a name="create-a-cross-domain-rule"></a>建立跨定義域規則
 

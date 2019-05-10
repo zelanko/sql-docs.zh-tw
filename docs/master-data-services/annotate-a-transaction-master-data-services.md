@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - annotations [Master Data Services], for transactions
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bdc60f20e33a63da3819d9f920eea51fef8f1d6c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f6cfd7e6b263bf3d33bf06f7ae1a3396f2447f16
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62678655"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489735"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>為交易加上註解 (Master Data Services)
 

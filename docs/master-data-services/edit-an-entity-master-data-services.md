@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cbf39fc0f0988a624d5a472b8938e47e4aa78a48
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ddba17337d8b9ec3cda5e85b9e769ea88915ee91
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62517776"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488459"
 ---
 # <a name="edit-an-entity-master-data-services"></a>編輯實體 (Master Data Services)
 

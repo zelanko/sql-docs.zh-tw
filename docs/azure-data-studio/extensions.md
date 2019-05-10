@@ -2,21 +2,21 @@
 title: 新增擴充功能
 titleSuffix: Azure Data Studio
 description: 將擴充功能 Marketplace 的延伸模組新增到 Azure Data Studio
-ms.custom: seodec18
-ms.date: 09/24/2018
-ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a79732ba0a10121f4c4323e7f19bac009c64964d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 7cff38bc9c6a0738cea6ae2f713aa60f04c9de0d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237742"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105046"
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]的擴充模組
 

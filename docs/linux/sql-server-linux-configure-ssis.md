@@ -1,7 +1,7 @@
 ---
 title: 在 Linux 上設定 SSIS 以 ssis conf |Microsoft Docs
 description: 本文說明如何使用 ssis conf 公用程式在 Linux 上設定 SQL Server Integration Services (SSIS)。
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 600a40f0ff04d401cfddbdee0f214254b1d3f7a4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c22fed22e4d2c8d2a903f72c9a28763efd491ee0
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412505"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488360"
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>在 Linux 上設定 SQL Server Integration Services 使用 ssis conf
 
@@ -27,7 +27,7 @@ ms.locfileid: "52412505"
 
 | 命令 | 描述 |
 |-------------|---------------------------------------------------------------------|
-| 設定版本 | 設定 SQL Server 的版本                                       |
+| set-edition | 設定 SQL Server 的版本                                       |
 | 遙測   | 啟用或停用 SQL Server Integration Services 遙測服務 |
 | 安裝程式       | 初始化和設定 Microsoft SQL Server Integration Services      |
 |||
@@ -114,7 +114,7 @@ Send feature usage data to Microsoft. Feature usage data includes information ab
 
 若要執行`setup`命令和在語言中的提示，您希望，您可以指定地區設定。 例如，若要以中文收到提示，請執行下列命令： `sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`。
 
-## <a name="ssisconf-format"></a>ssis.conf 格式
+## <a name="ssisconf-format"></a>ssis.conf format
 
 下列`/var/opt/ssis/ssis.conf`檔案提供每個設定的範例。
 

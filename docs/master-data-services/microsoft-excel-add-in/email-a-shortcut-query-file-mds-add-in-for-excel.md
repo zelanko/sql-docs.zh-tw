@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ed28d44aaa89e89ca4769007a5057a97577d2a05
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 4e368a2957e8caf8b83541e8cf0e1fd158f8eeb8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419299"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488060"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>以電子郵件傳送捷徑查詢檔案 (適用於 Excel 的 MDS 增益集)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52419299"
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，當您想要確定其他人與您使用的資料相同時，請將捷徑查詢檔案以電子郵件傳送給其他人。 您應該共用查詢，而不是儲存工作表並以電子郵件傳送。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須已安裝 Outlook 2010 或更新版本。  
@@ -37,7 +37,7 @@ ms.locfileid: "52419299"
   
 2.  在 [儲存和傳送] 群組中，按一下 [傳送查詢]。 隨即開啟電子郵件，並附加捷徑查詢檔案。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
   
 -   若要開啟捷徑查詢檔案，電子郵件收件者必須已安裝 MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 。 收件者可以按兩下檔案，將它開啟。  
   

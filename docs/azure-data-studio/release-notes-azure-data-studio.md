@@ -10,17 +10,32 @@ ms.author: maghan
 manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 04/19/2019
-ms.openlocfilehash: d6be7d1f443884ffd37be472ec86fa417de44fcf
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
-ms.translationtype: HT
+ms.date: 05/08/2019
+ms.openlocfilehash: ee445dcf1a427adc23c38c40430965712c52d4e9
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65105857"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450033"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
 **[下載並安裝最新版的 ！](download.md)**
+
+## <a name="may-2019"></a>2019 年
+
+2019 5 月 8 日&nbsp;  /  &nbsp;版本：1.7.0 
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| :----- | :------ |
+| 版本的結構描述比較的擴充功能 | 結構描述比較是眾所周知的功能在 SQL Server Data Tools (SSDT)，以及其主要使用案例是比較，並以視覺化方式檢視資料庫和.dacpac 檔案之間的差異，並執行可讓相同的動作。 |
+| 移至 輸出 視窗的 工作檢視 | 使用者現在可以在 [輸出] 視窗中的 [工作] 檢視中檢視長時間執行的工作，例如備份、 還原及結構描述比較的狀態
+| 已新增的 歡迎使用頁面 | &bull; &nbsp; 常見的動作連結讓新的查詢，新的檔案，新的 Notebook <br/>&bull; &nbsp; 文件和 Github 連結 |
+| SQL Notebook 增強功能 | &bull; &nbsp; Markdown 轉譯功能改良，包括更好的支援資訊和資料表 <br/>&bull; &nbsp; 在工具列的使用性改進 <br/>&bull; &nbsp; 不再受信任的 notebook 的 markdown 連結需要 Cmd/Ctrl + 按一下，可以直接按一下 <br/>&bull; &nbsp; 改進後關閉 notebook，並減少錯誤，同時啟動多個筆記本時進行清除 Jupyter 程序 <br/>&bull; &nbsp; 針對相同的資料庫執行 2 個筆記本時不會發生 SQL notebook 連線，以確保錯誤的增強功能 <br/>&bull; &nbsp; 自動捲動到目前正在執行的資料格時按一下 [執行中的資料格] 按鈕從工具列的 notebook 的增強功能 <br/>&bull; &nbsp; 一般的穩定性和效能增強功能 |
+| 已解決的 bug 和問題。 | 請參閱[Bug 和問題，請在 GitHub 上的](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="april-2019"></a>2019 年 4 月
 
@@ -234,7 +249,7 @@ _0.32.8 包含幾個 0.32.7 中找到的迴歸修正 ([# 1971年](https://github
 ### <a name="bug-fixes-august-2018"></a>Bug 修正，2018 年 8 月
 
 - 剖析 SQL 查詢編輯器 視窗中的，使用`Parse Syntax`命令。
-- 修正[發出 #143](https://github.com/Microsoft/azuredatastudio/issues/143):按兩下 未選取變數名稱中的 []。
+- 修正[發出 #143](https://github.com/Microsoft/azuredatastudio/issues/143):按兩下 [未選取變數名稱中的 []。
 - 修正[問題 #387](https://github.com/Microsoft/azuredatastudio/issues/387):SQL 索引標籤 DB 圖示為紅色。
 - 修正[發出 #825](https://github.com/Microsoft/azuredatastudio/issues/825):要求：自動連接到目前的伺服器，做為指令碼之後... 
 - 修正[問題 1278](https://github.com/Microsoft/azuredatastudio/issues/1278): sqlops.desktop [桌面項目]-名稱和註解的備援值。

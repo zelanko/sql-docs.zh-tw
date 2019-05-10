@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4f2e680829f51664fc13116953298a281aae7679
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0ca7391a025cf0fe4477cc9008c51c0a06a59f00
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792704"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480539"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>在知識探索中匯入 Excel 檔案中的定義域
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 知識探索活動中匯入 Excel 檔案中的一個或多個定義域。 此匯入程序會簡化知識產生程序，以節省時間和精力。 此程序可讓擁有 Excel 檔案或文字檔資料的人建立包含該資料的知識庫 (如需將值匯入現有知識庫定義域的詳細資訊，請參閱[將 Excel 檔案中的值匯入定義域中](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md))。匯出至 Excel 檔案不受支援。  

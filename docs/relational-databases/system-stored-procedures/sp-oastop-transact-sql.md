@@ -1,5 +1,5 @@
 ---
-title: sp_OAStop (TRANSACT-SQL) |Microsoft Docs
+title: sp_OAStop (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac4989b43ca507fb1d24a36b6957bb774c69a90e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db70245ce97811be77c102753b422c639531507b
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634496"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450035"
 ---
 # <a name="spoastop-transact-sql"></a>sp_OAStop (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_OAStop
  使用 OLE Automation 預存程序的所有用戶端會共用單一執行環境。 如果一部用戶端呼叫**sp_OAStop**共用的執行環境將會停止所有用戶端。 已停止的執行環境之後，請先呼叫**sp_OACreate**重新啟動執行環境。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
+ 需要的成員資格**sysadmin**固定伺服器角色，或直接執行這個預存程序權限。 `Ole Automation Procedures` 組態必須是**啟用**使用 OLE Automation 與相關的任何系統程序。  
   
 ## <a name="examples"></a>範例  
  下列範例會停止共用的 OLE Automation 執行環境。  

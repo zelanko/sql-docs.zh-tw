@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -21,16 +20,17 @@ helpviewer_keywords:
 - search property lists [SQL Server], viewing registered properties
 - sys.registered_search_properties catalog view
 ms.assetid: 1b9a7a5c-8c05-4819-83c3-7487dd08fcf7
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac940ecd4d6c85a308e3a3495241222f1864245b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb85c0b4804a3b8b775b80649ed3d449eb307589
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718616"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946517"
 ---
 # <a name="sysregisteredsearchproperties-transact-sql"></a>sys.registered_search_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "47718616"
 |**property_list_id**|**int**|此屬性所屬搜尋屬性清單的識別碼。|  
 |**property_set_guid**|**uniqueidentifier**|全域唯一識別碼 (GUID)，識別搜尋屬性所屬的屬性集。|  
 |**property_int_id**|**int**|在屬性集內識別這個搜尋屬性的整數。 **property_int_id**屬性集內是唯一的。|  
-|**property_name**|**nvarchar(64)**|搜尋屬性清單中唯一識別這個搜尋屬性的名稱。<br /><br /> 注意： 若要搜尋的屬性，這個屬性中指定名稱[CONTAINS](../../t-sql/queries/contains-transact-sql.md)述詞。|  
+|**property_name**|**nvarchar(64)**|搜尋屬性清單中唯一識別這個搜尋屬性的名稱。<br /><br /> 注意:若要搜尋的屬性，這個屬性中指定名稱[CONTAINS](../../t-sql/queries/contains-transact-sql.md)述詞。|  
 |**property_description**|**nvarchar(512)**|屬性的描述。|  
-|**property_id**|**int**|所識別之搜尋屬性清單內之搜尋屬性內部屬性識別碼**property_list_id**值。<br /><br /> 當給定的屬性加入至給定搜尋屬性清單時，全文檢索引擎會註冊屬性，並為它指派該屬性清單特有的內部屬性識別碼。 對於給定的搜尋屬性清單來說，內部屬性識別碼 (本身為整數) 是唯一的。 如果給定屬性已在多個搜尋屬性清單中註冊，可能會為每個搜尋屬性清單指定不同的內部屬性識別碼。<br /><br /> 注意： 內部屬性識別碼是不同於將屬性加入至搜尋屬性清單時指定的屬性整數識別碼。 如需詳細資訊，請參閱 [使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。<br /><br /> 若要檢視全文檢索索引中的所有屬性相關內容： <br />                  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
+|**property_id**|**int**|所識別之搜尋屬性清單內之搜尋屬性內部屬性識別碼**property_list_id**值。<br /><br /> 當給定的屬性加入至給定搜尋屬性清單時，全文檢索引擎會註冊屬性，並為它指派該屬性清單特有的內部屬性識別碼。 對於給定的搜尋屬性清單來說，內部屬性識別碼 (本身為整數) 是唯一的。 如果給定屬性已在多個搜尋屬性清單中註冊，可能會為每個搜尋屬性清單指定不同的內部屬性識別碼。<br /><br /> 注意:內部屬性識別碼有所區別時將屬性加入至搜尋屬性清單所指定的屬性整數識別碼。 如需詳細資訊，請參閱 [使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。<br /><br /> 若要檢視全文檢索索引中的所有屬性相關內容： <br />                  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
   
 ## <a name="remarks"></a>備註  
  如需搜尋屬性清單的詳細資訊，請參閱[使用搜尋屬性清單搜尋文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
