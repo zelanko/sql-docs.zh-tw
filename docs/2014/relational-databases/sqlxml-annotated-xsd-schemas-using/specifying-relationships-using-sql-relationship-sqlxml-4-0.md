@@ -38,7 +38,7 @@ ms.locfileid: "62717905"
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>使用 sql:relationship 指定關聯性 (SQLXML 4.0)
   XML 文件中的元素可以是相關聯的。 元素可以是巢狀階層，而且在元素之間可以指定 ID、IDREF 或 IDREFS 關聯性。  
   
- 例如，在 XSD 結構描述**\<客戶 >** 項目包含**\<順序 >** 子項目。 當結構描述對應到 AdventureWorks 資料庫中， **\<客戶 >** 元素會對應到 Sales.Customer 資料表和**\<順序 >** 元素會對應到Sales.SalesOrderHeader 資料表。 Sales.Customer 和 Sales.SalesOrderHeader 這些基礎資料表是相關聯的，因為客戶下了訂單。 Sales.SalesOrderHeader 資料表中的 CustomerID 是外部索引鍵，參考 Sales.Customer 資料表中的 CustomerID 主索引鍵。 您可以使用 `sql:relationship` 註解，建立對應結構描述元素之間的關聯性。  
+ 例如，在 XSD 結構描述 **\<客戶>** 項目包含 **\<順序 >** 子項目。 當結構描述對應到 AdventureWorks 資料庫中， **\<客戶 >** 元素會對應到 Sales.Customer 資料表和 **\<順序 >** 元素會對應到Sales.SalesOrderHeader 資料表。 Sales.Customer 和 Sales.SalesOrderHeader 這些基礎資料表是相關聯的，因為客戶下了訂單。 Sales.SalesOrderHeader 資料表中的 CustomerID 是外部索引鍵，參考 Sales.Customer 資料表中的 CustomerID 主索引鍵。 您可以使用 `sql:relationship` 註解，建立對應結構描述元素之間的關聯性。  
   
  在註解式 XSD 結構描述中，會根據主索引鍵和基礎資料表之間元素所對應的外部索引鍵關聯性，使用 `sql:relationship` 註解以階層方式建立巢狀結構描述元素。 指定 `sql:relationship` 註解時，您必須識別下列項目：  
   
@@ -382,11 +382,11 @@ ms.locfileid: "62717905"
 ```  
   
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. 在多重元素中指定 sql:relationship  
- 在此範例中，包含註解式的 XSD 結構描述**\<客戶 >**， **\<順序 >**，以及 **\<OrderDetail >** 項目。  
+ 在此範例中，包含註解式的 XSD 結構描述 **\<客戶>** ， **\<順序>** ，以及 **\<OrderDetail>** 項目。  
   
- **\<順序 >** 項目是子元素**\<客戶 >** 項目。 **\<sql: relationship >** 上指定**\<順序 >** 子項目; 因此，客戶的訂單顯示為子項目的**\<客戶 >**.  
+ **\<順序 >** 項目是子元素 **\<客戶 >** 項目。 **\<sql: relationship >** 上指定 **\<順序 >** 子項目; 因此，客戶的訂單顯示為子項目的 **\<客戶 >** .  
   
- **\<順序 >** 項目包含 **\<OrderDetail >** 子項目。 **\<sql: relationship >** 上指定 **\<OrderDetail >** 子項目，因此，訂單的訂單詳細資料會顯示為該子項目**\<順序 >** 項目。  
+ **\<順序 >** 項目包含 **\<OrderDetail >** 子項目。 **\<sql: relationship >** 上指定 **\<OrderDetail >** 子項目，因此，訂單的訂單詳細資料會顯示為該子項目 **\<順序 >** 項目。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -524,7 +524,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- 在結構描述中，同時 **\<Emp1 >** 項目並 **\<Emp2 >** 項目都屬於型別`EmpType`。 型別`EmpType`描述**\<順序 >** 子項目和對應 **\<sql: relationship >**。 在此情況下，沒有可以識別在單一父系 **\<sql: relationship >** 利用**父**屬性。 在此情況下，您未指定**父代**屬性中 **\<sql: relationship >**;**父**屬性資訊取自結構描述中的階層。  
+ 在結構描述中，同時 **\<Emp1 >** 項目並 **\<Emp2 >** 項目都屬於型別`EmpType`。 型別`EmpType`描述 **\<順序 >** 子項目和對應 **\<sql: relationship >**。 在此情況下，沒有可以識別在單一父系 **\<sql: relationship >** 利用**父**屬性。 在此情況下，您未指定**父代**屬性中 **\<sql: relationship >**;**父**屬性資訊取自結構描述中的階層。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>針對結構描述測試範例 XPath 查詢  
   
