@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: f76729b419fccf3d17e66ddd8ab00e8b54b1b264
 ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/27/2018
 ms.locfileid: "52398071"
@@ -85,7 +85,7 @@ ms.locfileid: "52398071"
   
 |查詢類型|描述|  
 |----------------|-----------------|  
-|SELECT INTO *\<新模型 >*|建立採礦模型的副本。<br /><br /> 這個查詢類型的網域是資料採礦模型。<br /><br /> [SELECT INTO &AMP;#40;DMX&AMP;#41;](../dmx/select-into-dmx.md)|  
+|SELECT INTO *\<新模型 >*|建立採礦模型的副本。<br /><br /> 這個查詢類型的網域是資料採礦模型。<br /><br /> [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)|  
   
  [回到選取類型](#Select_Types)  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - creating collections [Master Data Services]
 - collections [Master Data Services], creating
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e17fe8627164132568be0b7447656cc02a221ea6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 32171c1bf82b0a46fd5a70c1ace2cb2004675e9d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62678013"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484194"
 ---
 # <a name="create-a-collection-master-data-services"></a>建立集合 (Master Data Services)
 

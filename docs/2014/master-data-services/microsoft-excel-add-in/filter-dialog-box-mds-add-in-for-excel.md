@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e18dbbd921fc4acfd75e61bbf402b754a22d22d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 757c70398afe0f88d535b6853abe29b79e9617bc
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923819"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482560"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>篩選對話方塊 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，若要在將 MDS 管理的資料載入 Excel 之前縮小資料的範圍，請使用 [篩選] 對話方塊。  

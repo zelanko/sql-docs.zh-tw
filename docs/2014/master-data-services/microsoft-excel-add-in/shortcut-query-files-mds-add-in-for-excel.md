@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 1ba0219a-6c40-41fa-aff9-8c8f41ef3220
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e966260ac9880ffbdc722abca8eef86c5409da6a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 11e875d5b171194c3ac8ba4ad33fad51cacacffe
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923603"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482663"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>捷徑查詢檔案 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，使用捷徑查詢檔案來快速連接及載入常用的資料。 當您想要將 MDS 資料與其他人分享時，也可以使用。 您應該儲存捷徑查詢檔案並以電子郵件送出，而不是儲存工作表並以電子郵件送出。 如此可確保您可連接到 MDS 儲存機制來取得最新的資料。  

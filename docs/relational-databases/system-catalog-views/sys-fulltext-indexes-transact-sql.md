@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -18,16 +17,17 @@ helpviewer_keywords:
 - sys.fulltext_indexes catalog view
 - full-text indexes [SQL Server], properties
 ms.assetid: 7fc10fdc-370f-4927-bba0-b76108a7508e
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a96249e8b1ba5d0fc6ac39fab7cf1f8ac00aba3f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b9d6f7aafe405b29db5457f470a99efac2e23e92
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007542"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64945680"
 ---
 # <a name="sysfulltextindexes-transact-sql"></a>sys.fulltext_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

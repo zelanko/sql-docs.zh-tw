@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 348a012b5915c6b02f04481673fc33128001ff73
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 5f3b3de71cb60a27613482255556bfbff6bcc8cf
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685405"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877624"
 ---
 # <a name="create-key-performance-indicators"></a>建立關鍵效能指標
 
@@ -23,7 +23,7 @@ ms.locfileid: "57685405"
 
 在這一課，您可以建立關鍵效能指標 (Kpi)。 Kpi 用來量測計所定義之值的效能*基底*量值、 針對*目標*由量值或絕對值定義的值。 在報表用戶端應用程式中，KPI 可為商務專業人士提供快速而簡便的方法來了解商務成就的摘要，或是找出趨勢。 若要進一步了解，請參閱[Kpi](../tabular-models/kpis-ssas-tabular.md)
   
-完成本課程的估計時間：**15 分鐘**  
+估計的時間才能完成這一課：**15 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 
@@ -40,7 +40,7 @@ ms.locfileid: "57685405"
 3.  在資料表上方的公式列中，輸入下列公式： 
  
     ```  
-    InternetCurrentQuarterSalesPerformance :=DIVIDE([InternetCurrentQuarterSales]/[InternetPreviousQuarterSalesProportionToQTD],BLANK())  
+    InternetCurrentQuarterSalesPerformance :=IF([InternetPreviousQuarterSalesProportionToQTD]<>0,([InternetCurrentQuarterSales]-[InternetPreviousQuarterSalesProportionToQTD])/[InternetPreviousQuarterSalesProportionToQTD],BLANK()) 
     ```
 
     此量值做為 kpi 基底量值。  

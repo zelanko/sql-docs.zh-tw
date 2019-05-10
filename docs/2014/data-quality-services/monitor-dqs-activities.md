@@ -12,15 +12,15 @@ helpviewer_keywords:
 - monitoring activity
 - activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a44434be6f3908ebf7837a80b188affe226d88f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 860842ee5c6c946e6631abac23b229ca67d86334
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792379"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484137"
 ---
 # <a name="monitor-dqs-activities"></a>監控 DQS 活動
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中集中監控下列活動：知識探索、定義域管理、比對原則、資料清理、資料比對和 SSIS 清理。  

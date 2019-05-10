@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dqs.kb.importselect.f1
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dc7272c9dbc60054509a37646a0d097bce0e8c31
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: ba86595524c825d328e16ea4a3e2d81a457026cf
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017219"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487475"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>將 Excel 檔案中的值匯入定義域中
 
@@ -41,10 +41,10 @@ ms.locfileid: "56017219"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_administrator 角色，才能從 Excel 檔案匯入定義域值。  
   
-##  <a name="Import"></a> 將值匯入 Excel 檔案中的網域  
+##  <a name="Import"></a> 將 Excel 檔案中的值匯入定義域中  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   

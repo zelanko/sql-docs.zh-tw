@@ -20,12 +20,12 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 346fea411891f04e4b4742ff50c2dd9cce6f1587
 ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/15/2018
 ms.locfileid: "49336247"
 ---
-# <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc。&lt;capture_instance&gt;_CT & Amp;#40;transact-SQL&AMP;#41;
+# <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc。&lt;capture_instance&gt;_CT & Amp;#40;transact-SQL&#41;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   這是在來源資料表啟用異動資料擷取時所建立的變更資料表。 此資料表會針對在來源資料表上執行的每個插入和刪除作業傳回一個資料列，而且會針對在來源資料表上執行的每個更新作業傳回兩個資料列。 如果在啟用來源資料表時沒有指定變更資料表的名稱，就會衍生此名稱。 名稱的格式為 cdc。*capture_instance*_CT 所在*capture_instance*是來源資料表的結構描述名稱和來源資料表名稱，格式*schema_table*。 例如，如果資料表**Person.Address**中**AdventureWorks**範例資料庫已啟用異動資料擷取，衍生的變更資料表名稱就是**cdc。Person_Address_CT**。  
@@ -83,7 +83,7 @@ ms.locfileid: "49336247"
  若為插入和刪除作業，就會設定更新遮罩中的所有位元。 若為更新作業，就會同時修改更新舊值與更新新值資料列中的更新遮罩，以便反映在更新期間變更的資料行。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.sp_cdc_enable_table &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys.sp_cdc_get_ddl_history &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
+ [sys.sp_cdc_enable_table &#40;-SQL&#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sys.sp_cdc_get_ddl_history &#40;-SQL&#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   
   

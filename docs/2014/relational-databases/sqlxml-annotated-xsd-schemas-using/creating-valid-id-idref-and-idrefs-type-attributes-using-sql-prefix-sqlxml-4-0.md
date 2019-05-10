@@ -52,9 +52,9 @@ ms.locfileid: "62650435"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. 指定 ID 和 IDREFS 類型  
- 在下列結構描述中， **\<客戶 >** 元素所組成**\<順序 >** 子項目。 **\<順序 >** 項目也具有子元素 **\<OrderDetail >** 項目。  
+ 在下列結構描述中， **\<客戶 >** 元素所組成 **\<順序 >** 子項目。 **\<順序 >** 項目也具有子元素 **\<OrderDetail >** 項目。  
   
- **OrderIDList**屬性**\<客戶 >** 為 IDREFS 類型屬性，是指**OrderID**屬性 **\<順序 >** 項目。  
+ **OrderIDList**屬性 **\<客戶 >** 為 IDREFS 類型屬性，是指**OrderID**屬性 **\<順序 >** 項目。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - entities [Master Data Services], about entities
 - entities [Master Data Services]
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bb54250b1be15916055dd59a3f2e6d37330d5d93
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 87e5446d4d6c9c0997dadbd2d3f9964b8d4271ab
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765520"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483898"
 ---
 # <a name="entities-master-data-services"></a>實體 (Master Data Services)
   實體是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 模型中包含的物件。 每個實體都含有會員，也就是您所管理之主要資料的資料列。  

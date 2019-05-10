@@ -43,7 +43,7 @@ ms.locfileid: "62743244"
   
  Backup 資料夾會針對載入本機電腦上之記憶體中的任何 PowerPivot 資料庫提供一般快取儲存。 如果您在伺服器陣列中定義多個 PowerPivot 服務應用程式，任何一個都可以使用本機伺服器來載入 PowerPivot 資料，並於隨後快取 PowerPivot 資料。 資料載入和快取都是 Analysis Services 伺服器作業。 因此，總磁碟空間使用量會在 Analysis Services 執行個體層級的 Backup 資料夾上進行管理。 因此，限制磁碟空間使用量的組態設定會在 SharePoint 應用程式伺服器上執行的單一 SQL Server Analysis Services 執行個體上設定。  
   
- 快取只包含 PowerPivot 資料庫。 PowerPivot 資料庫存放在單一父資料夾 (Backup 資料夾) 下的多個檔案中。 由於 PowerPivot 資料庫打算當做 Excel 活頁簿的內部資料使用，因此，資料庫名稱是以 GUID 為基礎，而非描述性的。 下的 GUID 資料夾**\<服務應用程式名稱 >** 是父資料夾是 PowerPivot 資料庫。 當 PowerPivot 資料庫在伺服器上載入時，系統會針對每個資料庫建立其他資料夾。  
+ 快取只包含 PowerPivot 資料庫。 PowerPivot 資料庫存放在單一父資料夾 (Backup 資料夾) 下的多個檔案中。 由於 PowerPivot 資料庫打算當做 Excel 活頁簿的內部資料使用，因此，資料庫名稱是以 GUID 為基礎，而非描述性的。 下的 GUID 資料夾 **\<服務應用程式名稱 >** 是父資料夾是 PowerPivot 資料庫。 當 PowerPivot 資料庫在伺服器上載入時，系統會針對每個資料庫建立其他資料夾。  
   
  由於 PowerPivot 資料可能會在伺服器陣列中的任何 Analysis Services 執行個體上載入，因此在伺服器陣列中的多部電腦上也可能會快取相同的資料。 這個作法是效能優先於磁碟空間使用量，但如果磁碟上已經有可用的資料，權衡取捨便是使用者可以更快速地存取資料。  
   

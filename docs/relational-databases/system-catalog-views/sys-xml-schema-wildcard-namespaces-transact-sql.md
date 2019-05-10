@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_wildcard_namespaces catalog view
 ms.assetid: a3caa932-41c7-48a9-9b2d-ff090afbb66b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a73e9854f6d190eabe8b6a1f38fc647e04a4e75
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bbe2404c77844d635ff7078809b3eae0e3259649
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62760243"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64945817"
 ---
 # <a name="sysxmlschemawildcardnamespaces-transact-sql"></a>sys.xml_schema_wildcard_namespaces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

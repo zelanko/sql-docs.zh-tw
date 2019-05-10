@@ -11,11 +11,11 @@ ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 000318716b07f58e94bd5c482d9c349e5d4e5481
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63473757"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775122"
 ---
 # <a name="sql-server-regex-java-sample"></a>SQL Server 的 Regex Java 範例
 

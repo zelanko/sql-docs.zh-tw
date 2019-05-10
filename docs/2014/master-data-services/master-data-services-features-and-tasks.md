@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7b614f31292999dd5424935d57e4cd1412dee864
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c648a1f48396a40db0451de14facd342a8bfa797
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62764839"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482895"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 功能及工作
   了解如何使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 來管理您組織的主資料。 了解如何建立與操作屬於資料容器的模型物件。 了解如何組織和維護主資料本身。 了解如何匯入和匯出主資料，以及在測試與實際執行環境之間共用模型。 最後，了解如何開發存取 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服務的自訂應用程式。  

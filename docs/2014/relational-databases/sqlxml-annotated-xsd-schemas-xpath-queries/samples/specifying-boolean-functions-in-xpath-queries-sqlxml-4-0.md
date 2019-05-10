@@ -29,7 +29,7 @@ ms.locfileid: "62637844"
 ## <a name="examples"></a>範例  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. 指定 not() 布林函數  
- 此查詢會傳回所有**\<客戶 >** 的內容節點的子項目沒有**\<順序 >** 子項目：  
+ 此查詢會傳回所有 **\<客戶 >** 的內容節點的子項目沒有 **\<順序 >** 子項目：  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -77,7 +77,7 @@ ms.locfileid: "62637844"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. 指定 true() 和 false() 布林函數  
- 此查詢會傳回所有**\<客戶 >** 項目子系內容節點沒有**\<順序 >** 子項目。 在關聯式詞彙中，此查詢會傳回尚未下任何訂單的所有客戶。  
+ 此查詢會傳回所有 **\<客戶 >** 項目子系內容節點沒有 **\<順序 >** 子項目。 在關聯式詞彙中，此查詢會傳回尚未下任何訂單的所有客戶。  
   
 ```  
 /child::Customer[child::Order=false()]  

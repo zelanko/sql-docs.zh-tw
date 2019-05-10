@@ -13,7 +13,7 @@ ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6160010d02482f9ffd4ed1a4306ae064607b7d75
 ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/19/2018
 ms.locfileid: "51947572"
@@ -197,7 +197,7 @@ ms.locfileid: "51947572"
    GO
    ```
    
-   如需詳細資訊，請參閱 < [CREATE AVAILABILITY GROUP & Amp;#40;transact-SQL&AMP;#41;](../t-sql/statements/create-availability-group-transact-sql.md)。
+   如需詳細資訊，請參閱 < [CREATE AVAILABILITY GROUP & Amp;#40;transact-SQL&#41;](../t-sql/statements/create-availability-group-transact-sql.md)。
 
 1. 在次要複本加入 AG。
 

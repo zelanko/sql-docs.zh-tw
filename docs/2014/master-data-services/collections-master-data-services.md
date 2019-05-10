@@ -10,15 +10,15 @@ helpviewer_keywords:
 - collections [Master Data Services]
 - collections [Master Data Services], about collections
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3533108054d1c65e73f3167d68a05727e95fa2d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0dbf84d6fd3253a3b4d945693090fdad00d077ab
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925607"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483538"
 ---
 # <a name="collections-master-data-services"></a>集合 (Master Data Services)
   集合是一組來自單一實體的分葉成員和合併成員。 當您不需要完整的階層，而且想要檢視成員的不同群組進行報告或分析時，或當您不需要建立分類時，請使用集合。  

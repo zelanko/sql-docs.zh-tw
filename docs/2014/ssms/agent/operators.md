@@ -25,7 +25,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
 ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/03/2018
 ms.locfileid: "52797988"
@@ -119,7 +119,7 @@ ms.locfileid: "52797988"
 |-|-|  
 |**工作**|**主題**|  
 |與建立操作員相關的工作|[建立操作員](create-an-operator.md)<br /><br /> [Designate a Fail-Safe Operator](designate-a-fail-safe-operator.md)|  
-|與指派警示相關的工作|[指派警示給操作員](assign-alerts-to-an-operator.md)<br /><br /> [定義對警示的回應 &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [指派警示給操作員](assign-alerts-to-an-operator.md)|  
+|與指派警示相關的工作|[指派警示給操作員](assign-alerts-to-an-operator.md)<br /><br /> [定義對警示的回應 &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;-SQL&#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [指派警示給操作員](assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  

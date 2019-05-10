@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], changing name
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 14d5a145bcf98c606bfebbc872c84a3b76a8d74b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2aba0d743c46416c3adf87542d2611c064db906e
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62637055"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485297"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>變更屬性群組名稱 (Master Data Services)
 

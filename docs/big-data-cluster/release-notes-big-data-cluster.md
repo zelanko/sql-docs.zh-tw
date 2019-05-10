@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a3148b9e3d7b2797684c2330e231640fb9ac2a1d
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 7bdd39fc4b66c0485b453a6541e1f4c22abb5242
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63473535"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775066"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>版本資訊適用於 SQL Server 上的巨量資料叢集
 
@@ -475,7 +475,7 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 
 #### <a name="admin-portal"></a>系統管理員入口網站
 
-- 當您[建立應用程式使用 msqlctl ctp 命令](big-data-cluster-create-apps.md)並將其部署巨量資料叢集，叢集系統管理員入口網站顯示 pod 已部署應用程式為 「 不明 」 的 Admin] 部分的 [控制器] 區段中的 SQL Server 上。
+- 當您[建立應用程式使用 msqlctl ctp 命令](big-data-cluster-create-apps.md)並將其部署巨量資料叢集，叢集系統管理員入口網站顯示 pod 已部署應用程式為 「 不明 」 的 Admin 部分的 [控制器] 區段中的 SQL Server 上。
 
 #### <a name="external-tables"></a>外部資料表
 

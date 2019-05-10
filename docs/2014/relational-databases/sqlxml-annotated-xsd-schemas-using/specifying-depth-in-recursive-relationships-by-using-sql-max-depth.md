@@ -281,9 +281,9 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  若要測試這個結構描述，請遵循本主題前面針對「範例 A」所提供的步驟。  
   
 ### <a name="nonrecursive-elements"></a>非遞迴元素  
- 如果您在結構描述中不會導致任何遞迴的元素上指定了 `sql:max-depth` 註解，系統就會忽略此註解。 在下列結構描述中，  **\<Emp >** 元素所組成**\<常數 >** 子元素，其具有 **\<Emp >** 子項目。  
+ 如果您在結構描述中不會導致任何遞迴的元素上指定了 `sql:max-depth` 註解，系統就會忽略此註解。 在下列結構描述中，  **\<Emp >** 元素所組成 **\<常數 >** 子元素，其具有 **\<Emp >** 子項目。  
   
- 在這個結構描述中，`sql:max-depth`上所指定的註釋**\<常數 >** 項目會被忽略，因為沒有任何遞迴之間 **\<Emp >** 父系和**\<常數 >** 子項目。 但沒有之間的遞迴 **\<Emp >** 祖系及 **\<Emp >** 子系。 此結構描述會同時在這兩個項目上指定 `sql:max-depth` 註解。 因此，`sql:max-depth`註釋所指定的上階 (**\<Emp >** 在監督員的角色) 的優先順序。  
+ 在這個結構描述中，`sql:max-depth`上所指定的註釋 **\<常數 >** 項目會被忽略，因為沒有任何遞迴之間 **\<Emp >** 父系和 **\<常數 >** 子項目。 但沒有之間的遞迴 **\<Emp >** 祖系及 **\<Emp >** 子系。 此結構描述會同時在這兩個項目上指定 `sql:max-depth` 註解。 因此，`sql:max-depth`註釋所指定的上階 (**\<Emp >** 在監督員的角色) 的優先順序。  
   
 #### <a name="example-c"></a>範例 C  
   
@@ -327,11 +327,11 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
  若要測試這個結構描述，請遵循本主題前面針對「範例 A」所提供的步驟。  
   
 ## <a name="complex-types-derived-by-restriction"></a>限制所衍生的複雜類型  
- 如果您擁有所衍生的複雜型別**\<限制 >**，對應的基底複雜類型的元素不能指定`sql:max-depth`註釋。 在這些情況下，您可以將 `sql:max-depth` 註解加入至衍生類型的元素。  
+ 如果您擁有所衍生的複雜型別 **\<限制 >** ，對應的基底複雜類型的元素不能指定`sql:max-depth`註釋。 在這些情況下，您可以將 `sql:max-depth` 註解加入至衍生類型的元素。  
   
- 另一方面，如果您擁有所衍生的複雜型別**\<擴充功能 >**，可以指定對應的基底複雜類型的項目`sql:max-depth`註釋。  
+ 另一方面，如果您擁有所衍生的複雜型別 **\<擴充功能 >** ，可以指定對應的基底複雜類型的項目`sql:max-depth`註釋。  
   
- 例如，下列 XSD 結構描述會產生錯誤，因為在基底類型上指定了 `sql:max-depth` 註解。 由衍生的類型不支援此註解**\<限制 >** 從另一個型別。 若要修正這個問題，您必須變更此結構描述並且在衍生類型的元素上指定 `sql:max-depth` 註解。  
+ 例如，下列 XSD 結構描述會產生錯誤，因為在基底類型上指定了 `sql:max-depth` 註解。 由衍生的類型不支援此註解 **\<限制 >** 從另一個型別。 若要修正這個問題，您必須變更此結構描述並且在衍生類型的元素上指定 `sql:max-depth` 註解。  
   
 #### <a name="example-d"></a>範例 D  
   
@@ -375,7 +375,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 </xsd:schema>   
 ```  
   
- 在此結構描述中，`sql:max-depth` 指定於 `CustomerBaseType` 複雜類型上。 結構描述也會指定**\<客戶 >** 類型的項目`CustomerType`，其係衍生自`CustomerBaseType`。 在這類結構描述上指定的 XPath 查詢將會產生錯誤，因為定義於限制基底類型中的元素不支援 `sql:max-depth`。  
+ 在此結構描述中，`sql:max-depth` 指定於 `CustomerBaseType` 複雜類型上。 結構描述也會指定 **\<客戶 >** 類型的項目`CustomerType`，其係衍生自`CustomerBaseType`。 在這類結構描述上指定的 XPath 查詢將會產生錯誤，因為定義於限制基底類型中的元素不支援 `sql:max-depth`。  
   
 ## <a name="schemas-with-a-deep-hierarchy"></a>具有深度階層的結構描述  
  您可能會擁有一個包括深度階層的結構描述，其中某個元素包含子元素，而後者又包含其他子元素，依此類推。 如果在這類結構描述中指定的 `sql:max-depth` 註解產生了包含超過 500 個層級之階層的 XML 文件 (最上層元素位於第 1 層，其子系位於第 2 層，依此類推)，系統就會傳回錯誤。  
