@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6aae15d10385a3668a247db8482615d0510155b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 531dc66411fc6d63751497a34b96417e9e51c9b1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62862662"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486442"
 ---
 # <a name="create-a-composite-domain"></a>建立複合定義域
 

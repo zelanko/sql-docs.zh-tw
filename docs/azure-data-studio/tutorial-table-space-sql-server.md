@@ -2,21 +2,21 @@
 title: 教學課程：啟用資料表的空間使用方式範例深入解析小工具
 titleSuffix: Azure Data Studio
 description: 本教學課程會示範如何啟用資料表空間使用方式範例深入解析小工具在 Azure Data Studio database 儀表板上。
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: tutorial
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ebd3b1af1bc9b342ad6b2d33596e69b487888ced
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 6594aea6a618e2b9c4bd28368462f85c94a5ff0a
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239526"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089675"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>教學課程：使用情況下啟用資料表空間使用方式範例深入解析小工具 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

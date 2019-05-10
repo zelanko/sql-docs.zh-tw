@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 45570669c6e1f0d42eb4af8960f84bf70adff891
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 107f23aaf788ca48b7682e5d0ba874623db15ec9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62862204"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486519"
 ---
 # <a name="building-a-knowledge-base"></a>建立知識庫
 

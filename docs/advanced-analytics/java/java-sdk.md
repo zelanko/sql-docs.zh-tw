@@ -10,12 +10,12 @@ ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fd050a5120f14b4727b93a74c1f46392ac24dd49
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: c244d67c7f1cd1636fcd2de0b80454c96927b5d7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759095"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101817"
 ---
 # <a name="microsoft-extensibility-sdk-for-java-for-sql-server"></a>Microsoft 擴充性 SDK for Java 的 SQL Server
 
@@ -82,6 +82,45 @@ public void init(String sessionId, int taskId, int numtask) {}
 ### <a name="abstractsqlserverextensionexecutor-source-code"></a>AbstractSqlServerExtensionExecutor 原始程式碼
 
 可以在原始程式碼中，找到更多詳細資料如下：
+
+```java
+package com.microsoft.sqlserver.javalangextension;
+
+import com.microsoft.sqlserver.javalangextension.AbstractSqlServerExtensionDataset;
+import java.lang.UnsupportedOperationException;
+import java.util.LinkedHashMap;
+
+/**
+ * Abstract class containing interface used by the Java extension
+ */
+public abstract class AbstractSqlServerExtensionExecutor {
+    /* Supported versions of the Java extension */
+    public final int SQLSERVER_JAVA_LANG_EXTENSION_V1 = 1;
+
+    /* Members used by the extension to determine application specifics */
+    protected int executorExtensionVersion;
+    protected String executorInputDatasetClassName;
+    protected String executorOutputDatasetClassName;
+
+    public AbstractSqlServerExtensionExecutor() { }
+
+    public void init(String sessionId, int taskId, int numTasks) {
+        /* Default implementation of init() is no-op */
+    }
+
+    public AbstractSqlServerExtensionDataset execute(AbstractSqlServerExtensionDataset input, LinkedHashMap<String, Object> params) {
+        throw new UnsupportedOperationException("AbstractSqlServerExtensionExecutor execute() is not implemented");
+    }
+
+    public void cleanup() {
+        /* Default implementation of cleanup() is no-op */
+    }
+}
+```
+
+### <a name="abstractsqlserverextensiondataset"></a>AbstractSqlServerExtensionDataset
+
+包含可處理 Java 延伸模組所使用的輸入和輸出資料的介面的抽象類別。
 
 ```java
 package com.microsoft.sqlserver.javalangextension;

@@ -1,5 +1,5 @@
 ---
-title: 工作 1:建立資料品質專案 |Microsoft Docs
+title: 工作 1：建立資料品質專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: dc7ef6bc-c03a-4dd1-9ca4-43c62f8761fe
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 41d6248743ceadf23a3a351a6599497dd8e5172b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 14f45ed2a07ddbc6f4fe7c227e29f34f6ea272ce
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62735800"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484898"
 ---
-# <a name="task-1-creating-a-data-quality-project"></a>工作 1:建立資料品質專案
+# <a name="task-1-creating-a-data-quality-project"></a>工作 1：建立資料品質專案
   在這項工作中，您會建立資料品質專案，針對您在本教學課程稍早建立的供應商知識庫來清理 Excel 檔案中的供應商資料。  
   
 1.  在 **資料品質專案** 窗格，在主要頁面上，按一下 **新增資料品質專案**。  

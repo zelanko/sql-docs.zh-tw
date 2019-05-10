@@ -11,15 +11,15 @@ helpviewer_keywords:
 - explicit hierarchies, deleting
 - deleting explicit hierarchies [Master Data Services]
 ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1164027ac041bacffdc442e460734b8e3d4be814
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 27f2da08eb5b1f9f7027d3e9747c7de8cab0ec1b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769890"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478205"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>刪除明確階層 (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52769890"
 > [!WARNING]  
 >  當您刪除明確階層時，此階層中的所有合併成員也會一併刪除。 如果您刪除實體的所有明確階層，則實體的所有集合也會一併刪除，而且將不再針對明確階層和集合啟用該實體。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  

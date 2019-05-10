@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 14f9ad5eb733db24f47acad192dbe89543831766
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97cc4c9955b64583571a63fa72df4663c1acd812
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765019"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479148"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>讓使用者看到屬性群組 (Master Data Services)
   當您希望使用者在總管 功能區域的方格上方有索引標籤時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中對使用者或群組顯示屬性群組。  

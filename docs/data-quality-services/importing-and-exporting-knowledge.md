@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d90cf40ff410f9e79c0d37450b5e50ff48fb4d0d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: bc5010ce0f0f6e096e5b1007c7ca7e25d4c23406
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016289"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487462"
 ---
 # <a name="importing-and-exporting-knowledge"></a>匯入和匯出知識
 

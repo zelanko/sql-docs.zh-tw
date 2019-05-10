@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0ae5e6ad40a9a4c071ca452d893ca6644dae133d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 879ee3d55a178e2ef5fc7feca3f6ef475e683a8c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403893"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477171"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>篩選對話方塊 (適用於 Excel 的 MDS 增益集)
 
@@ -24,12 +24,12 @@ ms.locfileid: "52403893"
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，若要在將 MDS 管理的資料載入 Excel 之前縮小資料的範圍，請使用 [篩選] 對話方塊。  
   
- 這個對話方塊包含三個區段：[資料行]、[資料列] 和 [摘要]。  
+ 此對話方塊包含三個區段：**資料行**，**資料列**，以及**摘要**。  
   
 ## <a name="columns"></a>[資料行]  
  使用 [資料行] 區段可決定您想要在 Excel 中顯示的屬性 (資料行)。  
   
-|控制項名稱|Description|  
+|控制項名稱|描述|  
 |------------------|-----------------|  
 |屬性類型|屬性類型會描述您想要使用的成員類型。 在大多數情況下，這種類型是 [分葉]。 如需成員類型的詳細資訊，請參閱[成員 &#40;Master Data Services&#41;](../../master-data-services/members-master-data-services.md)。|  
 |明確階層|如果您選擇 [合併] 屬性類型，請選擇這些合併成員所屬的階層。 如需詳細資訊，請參閱[明確階層 &#40;Master Data Services&#41;](../../master-data-services/explicit-hierarchies-master-data-services.md)。|  
@@ -41,9 +41,9 @@ ms.locfileid: "52403893"
 ## <a name="rows"></a>資料列  
  使用 [資料列] 區段可決定您想要在 Excel 中顯示的成員 (資料列)。 您可以透過定義準則進行此作業，以便篩選即將顯示的資料列。  
   
-|控制項名稱|Description|  
+|控制項名稱|描述|  
 |------------------|-----------------|  
-|attribute|顯示您想要據以篩選的屬性。 如果沒有列出任何屬性，這是因為尚未新增屬性。<br /><br /> 注意：您可以依照不想要在工作表中顯示的屬性來篩選。|  
+|屬性|顯示您想要據以篩選的屬性。 如果沒有列出任何屬性，這是因為尚未新增屬性。<br /><br /> 注意:您可以篩選由您不想要顯示工作表中的屬性。|  
 |運算子|顯示對應至已選取之屬性類型的運算子。 如需詳細資訊，請參閱[篩選運算子 &#40;Master Data Services&#41;](../../master-data-services/filter-operators-master-data-services.md)。|  
 |準則|您想要據以篩選的準則。|  
 |更新摘要|使用大型資料集時，按一下即可使用即將載入之資料量的詳細資料來更新 [摘要] 區段。|  
@@ -51,13 +51,13 @@ ms.locfileid: "52403893"
 |全部移除|從清單中移除所有篩選。|  
 |移除|從清單中移除選取的篩選。|  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>總結  
  使用 [摘要] 區段即可在載入之前檢視即將載入之資料量的相關詳細資料。  
   
-|控制項名稱|Description|  
+|控制項名稱|描述|  
 |------------------|-----------------|  
 |[模型]|模型的名稱。|  
-|Version|版本的名稱。|  
+|版本|版本的名稱。|  
 |實體|實體的名稱。|  
 |資料列|根據 [資料列] 區段中套用的篩選，即將載入 Excel 中的資料列數目。|  
 |[資料行]|根據 [資料行] 區段中選取的屬性，即將載入 Excel 中的資料行數目。|  

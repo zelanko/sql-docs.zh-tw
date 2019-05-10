@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e62c50026d391db37beca5844da24eae43f12014
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: feb215c24081d8f7c33e63369a24651b4008595c
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072445"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65356505"
 ---
 # <a name="dax-in-tabular-models"></a>表格式模型中的 DAX 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "53072445"
 |整數|64 位元 (八位元組) 整數值 <sup>1、2</sup>|沒有小數位數的數字。 整數可以是正數或負數，但必須是 -9,223,372,036,854,775,808 (-2^63) 到 9,223,372,036,854,775,807 (2^63-1) 之間的整數。|  
 |十進位數字|64 位元 (八位元組) 實數 <sup>1、2</sup>|實數是可以有小數位數的數字。 實數涵蓋極廣的值範圍：<br /><br /> 負值是從 -1.79E + 308 到 -2.23E - 308<br /><br /> 零 (0)<br /><br /> 正值是從 2.23E -308 到 1.79E + 308<br /><br /> 不過，有效位數的數目限制為 17 個小數位數。|  
 |布林|布林|True 或 False 值。|  
-|文字|String|Unicode 字元資料字串。 可以是字串或數字，或以文字格式表示的日期。|  
+|Text|String|Unicode 字元資料字串。 可以是字串或數字，或以文字格式表示的日期。|  
 |date|日期/時間|採用可接受之日期時間表示方式的日期和時間。<br /><br /> 有效日期為 1900 年 3 月 1 日之後的所有日期。|  
 |CURRENCY|CURRENCY|貨幣資料類型允許的值是從 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 且固定有效位數為四個小數位數。|  
 |N/A|空白|空白是 DAX 中表示和取代 SQL Null 的資料類型。 您可以使用 BLANK 函數建立空白，然後使用邏輯函數 ISBLANK 來測試空白。|  
@@ -382,7 +382,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  在前四種情況下，DAX 會針對包含無效公式的整個資料行加上旗標。 在最後一種情況下，DAX 會使資料行呈現灰色，表示該資料行處於尚未處理的狀態。  
   
 ##  <a name="bkmk_addional_resources"></a> 其他資源  
- [表格式模型化 &#40;Adventure Works 教學課程&#41;](../../analysis-services/tabular-modeling-adventure-works-tutorial.md) 對於如何建立在導出資料行、量值和資料列篩選中包含許多計算的表格式模型，提供逐步指示。 對於大部分的公式，則會提供該公式用途的描述。  
+ [表格式模型化 &#40;Adventure Works 教學課程&#41;](../tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md) 對於如何建立在導出資料行、量值和資料列篩選中包含許多計算的表格式模型，提供逐步指示。 對於大部分的公式，則會提供該公式用途的描述。  
   
  [Analysis Services 小組部落格](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409)提供最新的資訊、 提示、 新聞與公告。 
   

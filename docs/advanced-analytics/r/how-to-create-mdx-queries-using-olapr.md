@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 1bee5741d00e4043314c36800cd4fe5cf61aab48
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c0b9cb6e9b52ff1823a613c7e81f7b026c22948f
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62503743"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357519"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何在 R 中使用 olapR 建立 MDX 查詢
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "62503743"
 
 下列的範例以 AdventureWorks 資料超市和 cube 專案，因為該專案已普遍使用，在多個版本中，包括可以輕鬆地還原到 Analysis Services 的備份檔案。 如果您沒有現有的 cube，取得範例 cube 中使用其中一個選項：
 
-+ 建立在這些範例中的 cube 所使用的 Analysis Services 教學課程中的，直到第 4 課：[建立 OLAP cube](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ 建立在這些範例中的 cube 所使用的 Analysis Services 教學課程中的，直到第 4 課：[建立 OLAP cube](../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)
 
 + 下載現有的 cube 作為備份，並將它還原到 Analysis Services 的執行個體。 比方說，這個網站會提供完整處理的 cube，以壓縮格式：[Adventure Works 多維度模型 SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)。 檔案，然後再將它還原到 SSAS 執行個體。 如需詳細資訊，請參閱 <<c0> [ 備份和還原](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)，或[Restore-asdatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)。
 

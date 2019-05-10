@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9e1d315ca23b379238a19baf09ac2591d0085fad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aac86ed6438197bc788f08cf9bc618608a65475f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792359"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480377"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>在 Data Quality Client 中開啟 Integration Services 專案
   [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] 可讓您以批次模式執行清理專案。 但是，有時您可能會想要在 Integration Services 封裝中檢閱清理結果，類似於在 DQS 中，於資料品質專案中清理活動內的 **[管理和檢視結果]** 索引標籤中檢閱清理結果。 DQS 可讓您在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中開啟 Integration Services 專案，就像從 **[開啟專案]** 畫面開啟其他任何資料品質專案，並讓您擁有在 Integration Services 專案中清理結果的互動式清理體驗。  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - entities [Master Data Services], creating
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3597ac503684c84b10b9ce8025b8fddbb26f3947
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 686c3f487207a430136feac2588e4b4b2dda9b1f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755080"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476996"
 ---
 # <a name="create-an-entity-master-data-services"></a>建立實體 (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52755080"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立實體以包含成員及其屬性。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -65,16 +65,16 @@ ms.locfileid: "52755080"
   
 9. 選擇性。 選取 [啟用資料壓縮] 核取方塊。 依預設會開啟資料列壓縮。 如需詳細資訊，請參閱 [資料壓縮](../relational-databases/data-compression/data-compression.md)。  
   
-10. 按一下 **[儲存]**。  
+10. 按一下 [儲存] 。  
   
 ## <a name="grid-columns"></a>方格資料行  
  對於每個建立的實體，會將含有十三個資料行的資料列加入格線。 以下是資料行。  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[狀態]|實體狀態。 當您按一下 [儲存] 時，下列影像隨即顯示，指出正在更新實體。<br /><br /> ![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")<br /><br /> 如果建立或編輯實體時發生錯誤，則會顯示下列影像。<br /><br /> ![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")<br /><br /> 如果狀態正常，則會顯示下列影像。<br /><br /> ![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")|  
-|[屬性]|實體名稱。|  
-|Description|實體描述。|  
+|名稱|實體名稱。|  
+|描述|實體描述。|  
 |暫存資料表|此資料表的前置名稱用於儲存資料。|  
 |交易記錄類型|實體的交易記錄類型。|  
 |自動建立代碼|指定是否啟用自動建立程式碼。|  
@@ -86,7 +86,7 @@ ms.locfileid: "52755080"
 |更新者|使用者名稱，該使用者為最近一次更新模型的使用者。|  
 |更新於|實體的上次更新日期與時間。|  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
   
 -   [建立文字屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
