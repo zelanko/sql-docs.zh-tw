@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d8b32a8e9b6b61c2d108d3a9b8e63242854d0a63
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65de28bcf880fab6dc0546c5ed4c315978ad39f4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62763269"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478796"
 ---
 # <a name="staging-process-errors-master-data-services"></a>暫存處理序錯誤 (Master Data Services)
   當暫存處理序完成時，接移資料表中的所有處理記錄都有 ErrorCode 資料行的值。 這些值會列在下表中。  

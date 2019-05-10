@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ab3f97100c6e6c995e6eab749143ee02e6dbb51e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5d94a453e9eb5794bdd534f7aaf37ca2e1cc3177
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62924313"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483870"
 ---
 # <a name="filter-operators-master-data-services"></a>篩選運算子 (Master Data Services)
   篩選成員清單時，可以使用下列運算子。  

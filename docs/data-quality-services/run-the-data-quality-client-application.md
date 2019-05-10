@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.browseforservers.f1
 - sql13.dqs.connecttoserver.f1
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: add70b6a98a0246b2ad8ae8743ca57763e157f89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8df64b4dc6f703751ef68ea72a8bcf9238a365fc
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62469273"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487865"
 ---
 # <a name="run-the-data-quality-client-application"></a>執行 Data Quality Client 應用程式
 

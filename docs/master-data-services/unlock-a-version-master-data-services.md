@@ -11,15 +11,15 @@ helpviewer_keywords:
 - unlocking versions [Master Data Services]
 - versions [Master Data Services], unlocking
 ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8abefd83f46bc38e790615831e4325903e4a2626
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 26bbb1d9544c99dd600a512a96b7d5105b98cb65
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791410"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488399"
 ---
 # <a name="unlock-a-version-master-data-services"></a>解除鎖定版本 (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52791410"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，解除鎖定模型版本，以啟用模型成員及其屬性的變更。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  
@@ -48,7 +48,7 @@ ms.locfileid: "52791410"
   
 4.  在確認對話方塊中按一下 **[確定]**。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
   
 -   [鎖定版本 &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
   

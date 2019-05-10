@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: c24e4fa86c92a183c957c44a33a2d3524cdd1f8c
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 9feb60a7e3498bd940f97b8176375dc0f63133af
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63457371"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775756"
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
 
@@ -52,7 +52,7 @@ SQL Server 從 SQL Server 2017 開始，在 Linux 上執行。 它是相同的 S
 - [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)
 - [在 Ubuntu 上安裝](quickstart-install-connect-ubuntu.md)
 - [在 Docker 上執行](quickstart-install-connect-docker.md)
-- [在 Azure 中佈建 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+- [在 Azure 中佈建 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
 > [!NOTE]
 > Docker 本身會在執行多個平台，這表示您可以在 Linux、 Mac 和 Windows 上執行的 Docker 映像。

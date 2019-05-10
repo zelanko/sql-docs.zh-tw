@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.webconfigpg.f1
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f45eef12a81ada02a26a0f4c2318523de31cbf0d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 12ba4a2d03e98d5f2dac79917e23a93c0a24cdb0
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765401"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481213"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>Web 組態頁面 (Master Data Services 組態管理員)
   使用 **[Web 組態]** 頁面建立新的網站或 Web 應用程式。 當您選取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式後，可以指定應用程式的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫，並啟用 Data Quality Services。  

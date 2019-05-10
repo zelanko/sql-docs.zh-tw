@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmatchingmap.f1
 - sql12.dqs.kb.kbmatchingpolicy.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b5fff7c8804feab436271d60f3e5542b372ada60
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f0623f79c3d17f3e350c151d64bb00372e3ffe56
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793166"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481027"
 ---
 # <a name="create-a-matching-policy"></a>建立比對原則
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知識庫內建立比對原則。 您會針對取樣資料執行 [比對原則] 活動，以便在 DQS 中預備比對程序。 在這個活動中，您會在原則中建立及測試一個或多個比對規則，然後發行知識庫，定期讓比對規則可供公開使用。 知識庫中只能有一個比對原則，但是該原則可以包含多個比對規則。  

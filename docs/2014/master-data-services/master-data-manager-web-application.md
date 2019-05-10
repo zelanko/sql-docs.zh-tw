@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 20783b06559eab97cec56b527c5c8ab0f13518e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3c8777250946ad689c324314ecbbdff7bf9dcc9b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923879"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482898"
 ---
 # <a name="master-data-manager-web-application"></a>主資料管理員 Web 應用程式
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式主要是供管理員執行管理工作使用。 例如，只有管理員才能建立模型、商務規則或資料的版本。 如需管理員的詳細資訊，請參閱[管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)。  

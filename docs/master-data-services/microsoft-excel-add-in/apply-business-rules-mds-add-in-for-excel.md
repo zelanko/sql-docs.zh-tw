@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cd106345-f561-4966-88d3-a69139b2bd78
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 230553acbe808f8ddd70b18660643c19008ce3dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 26b3bedcd92729f2573cf82f944258f77faf14b2
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807316"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488935"
 ---
 # <a name="apply-business-rules-mds-add-in-for-excel"></a>套用商務規則 (適用於 Excel 的 MDS 增益集)
 
@@ -27,7 +27,7 @@ ms.locfileid: "47807316"
 > [!NOTE]  
 >  資料驗證會在您發行資料時自動進行。 如需詳細資訊，請參閱[驗證 &#40;Master Data Services&#41;](../../master-data-services/validation-master-data-services.md)。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有總管 功能區域的存取權。  
@@ -44,6 +44,6 @@ ms.locfileid: "47807316"
 2.  系統會根據商務規則驗證資料，並且顯示兩個狀態資料行。 如果未自動顯示這些資料行，請按一下 [發行和驗證] 群組中的 [顯示狀態] 檢視它們。  
   
 ## <a name="see-also"></a>另請參閱  
- [概觀：從 Excel 匯入資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+ [概觀：從 Excel 匯入資料&#40;MDS 增益集的 Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

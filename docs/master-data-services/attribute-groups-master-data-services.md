@@ -11,15 +11,15 @@ helpviewer_keywords:
 - attribute groups [Master Data Services]
 - attribute groups [Master Data Services], about attribute groups
 ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fab92b86d9df1ca0000fb762602280b14e6a1aa7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 63664133370cb001fd4ee20e54f57819bde4a500
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63012994"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478617"
 ---
 # <a name="attribute-groups-master-data-services"></a>屬性群組 (Master Data Services)
 

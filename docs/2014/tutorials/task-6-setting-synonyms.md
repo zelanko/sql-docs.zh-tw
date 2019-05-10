@@ -1,5 +1,5 @@
 ---
-title: 工作 6:設定同義字 |Microsoft Docs
+title: 工作 6：設定同義字 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a81a538e2cd15dd38a6c32993395cac20079b6f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 41c11138d00b4aea7332dac9984cbd609eba05e3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866328"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489088"
 ---
-# <a name="task-6-setting-synonyms"></a>工作 6:設定同義字
+# <a name="task-6-setting-synonyms"></a>工作 6：設定同義字
   在這個工作中，您可以設定兩個定義域值，**美國**並**美國**的**國家/地區**同義字的網域**美國**為前置值。 由於**使用前置值**建立時，已選取選項**國家/地區**網域中，任何**USA**值**國家/地區**網域將會輸出為**美國**（因為 United States 是前置值）。 請參閱[Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx)如需詳細資訊。  
   
 1.  選取 **國家/地區**從網域清單。  

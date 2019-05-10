@@ -1,6 +1,6 @@
 ---
-title: Analysis Services Adventure Works 教學課程 (1400) |Microsoft Docs
-ms.date: 03/08/2019
+title: Analysis Services Adventure Works Internet Sales 教學課程 (1400) |Microsoft Docs
+ms.date: 05/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,14 +10,14 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d4fae7f55543be52342692d344f250f8e08ba877
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 39d4c0e19d89438aa08ff2f7ead24184196d5412
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685485"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503279"
 ---
-# <a name="tabular-modeling-1400-compatibility-level"></a>表格式模型 (1400 相容性層級)
+# <a name="adventure-works-internet-sales-tutorial-1400"></a>Adventure Works Internet Sales 教學課程 (1400)
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 

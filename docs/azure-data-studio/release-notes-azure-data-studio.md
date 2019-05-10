@@ -2,21 +2,21 @@
 title: 版本資訊
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 版本資訊
-ms.custom: seodec18
-ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f142602efa4e2c0d7c12b4f5f7634f2a9b668cb3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: MT
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 04/19/2019
+ms.openlocfilehash: d6be7d1f443884ffd37be472ec86fa417de44fcf
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143707"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105857"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
@@ -86,7 +86,7 @@ ms.locfileid: "63143707"
 
 | 變更 | 詳細資料 |
 | :----- | :------ |
-| 新增**SQL Server 的管理組件**延伸模組套件。 | 這可讓您更輕鬆地安裝 SQL Server 系統管理擴充功能。 包括：<br/>&bull; &nbsp; [SQL Server 代理程式](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server 匯入](sql-server-import-extension.md?view=sql-server-2017) |
+| 新增**SQL Server 的管理組件**延伸模組套件。 | 這可讓您更輕鬆地安裝 SQL Server 系統管理擴充功能。 這包括：<br/>&bull; &nbsp; [SQL Server 代理程式](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server 匯入](sql-server-import-extension.md?view=sql-server-2017) |
 | 新增篩選擴充 Profiler 擴充功能中的事件支援。 | &nbsp; |
 | 已新增將儲存為 XML 功能，可以將 T-SQL 結果儲存為 XML。 | &nbsp; |
 | 已新增的資料層應用程式精靈增強功能。 | &bull; &nbsp; 新增的產生的指令碼 按鈕<br/>&bull; &nbsp; 加入的檢視，以在部署期間提供的資料可能會遺失的警告。 |
@@ -234,7 +234,7 @@ _0.32.8 包含幾個 0.32.7 中找到的迴歸修正 ([# 1971年](https://github
 ### <a name="bug-fixes-august-2018"></a>Bug 修正，2018 年 8 月
 
 - 剖析 SQL 查詢編輯器 視窗中的，使用`Parse Syntax`命令。
-- 修正[發出 #143](https://github.com/Microsoft/azuredatastudio/issues/143):按兩下 [未選取變數名稱中的 []。
+- 修正[發出 #143](https://github.com/Microsoft/azuredatastudio/issues/143):按兩下 未選取變數名稱中的 []。
 - 修正[問題 #387](https://github.com/Microsoft/azuredatastudio/issues/387):SQL 索引標籤 DB 圖示為紅色。
 - 修正[發出 #825](https://github.com/Microsoft/azuredatastudio/issues/825):要求：自動連接到目前的伺服器，做為指令碼之後... 
 - 修正[問題 1278](https://github.com/Microsoft/azuredatastudio/issues/1278): sqlops.desktop [桌面項目]-名稱和註解的備援值。
@@ -254,7 +254,7 @@ _0.32.8 包含幾個 0.32.7 中找到的迴歸修正 ([# 1971年](https://github
 - 修正[發出 # 1850年](https://github.com/Microsoft/azuredatastudio/issues/1850):輸入 N '會以 N' '。
 - 修正[發出 # 1985年](https://github.com/Microsoft/azuredatastudio/issues/1985):1 個資料行，將從查詢結果方格複製為關閉。
 - 修正[發出 # 1998年](htpts://github.com/Microsoft/azuredatastudio/pull/1998):加入至對話方塊相關的 VS Code 版本。
-- 修正[發出 # 2042年](https://github.com/Microsoft/azuredatastudio/pull/2042):代理程式:已啟用 按鈕，從 sql 檔案匯入查詢。
+- 修正[發出 # 2042年](https://github.com/Microsoft/azuredatastudio/pull/2042):Agent：已啟用 按鈕，從 sql 檔案匯入查詢。
 - 修正[發出 # 2091年](https://github.com/Microsoft/azuredatastudio/issues/2091):無法使用快速鍵 Ctrl + C 複製結果 窗格。
 - 修正[發出 # 2099年](https://github.com/Microsoft/azuredatastudio/pull/2099):新增更多的 saveAsCsv 選項。
 - 修正[發出 # 2107年](https://github.com/Microsoft/azuredatastudio/issues/2107):更新儀表板和 Profiler 的文件的文件圖示。
@@ -378,7 +378,7 @@ _0.32.8 包含幾個 0.32.7 中找到的迴歸修正 ([# 1971年](https://github
 ### <a name="fix-github-issues-april-2018"></a>修正 GitHub 問題，2018 年 4 月
 
 - 修正[發出 37](https://github.com/Microsoft/azuredatastudio/issues/37):當圖表檢視器擲回錯誤時，就會發生未預期的行為。
-- 修正[發出 462](https://github.com/Microsoft/azuredatastudio/issues/462):功能請求:根據預設展開伺服器群組的選項。
+- 修正[發出 462](https://github.com/Microsoft/azuredatastudio/issues/462):功能請求：根據預設展開伺服器群組的選項。
 - 修正[問題 606](https://github.com/Microsoft/azuredatastudio/issues/606): intellisense-'update' 命令的錯誤提供建議。
 - 修正[發出 967](https://github.com/Microsoft/azuredatastudio/issues/967):預期的查詢計劃時結果方格中選取 XML 執行程序。
 - 修正[發出 1023年](https://github.com/Microsoft/azuredatastudio/issues/1023):加入 flyfishingdba ms_foreachdb 呼叫的方括號。

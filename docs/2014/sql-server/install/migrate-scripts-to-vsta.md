@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Script task [Integration Services], converting scripts
 - SSIS Script component, converting scripts
 ms.assetid: d685098b-86a1-46bf-939a-63d56951e009
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ad248407922506e999c21480f8ce277f20d32b6b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7fe4d4baf37cc681844ee7180896409d07608edf
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63201330"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485995"
 ---
 # <a name="migrate-scripts-to-vsta"></a>將指令碼移轉到 VSTA
   當您升級[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]套件[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]移轉任何指令碼工作或指令碼元件中的指令碼[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)。 VSTA 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所使用的指令碼環境。 在  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，指令碼環境[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] for Applications (VSA)。  

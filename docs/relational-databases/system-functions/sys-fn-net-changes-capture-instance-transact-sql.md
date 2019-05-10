@@ -23,12 +23,12 @@ ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 081eaa3995507edf20be0b83f3e0ce766135139c
 ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/27/2018
 ms.locfileid: "52416319"
 ---
-# <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; & Amp;#40;transact-SQL&#41;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包裝函式**changes<** 查詢函數。 sys.sp_cdc_generate_wrapper_function 系統預存程序會產生建立這些函數所需的指令碼。  
@@ -120,7 +120,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
  異動資料擷取組態範本 '具現化的 CDC 包裝函式 tvf 」 結構描述' 示範如何使用 sp_cdc_generate_wrapper_function 預存程序，取得所有包裝函式的結構描述定義的查詢函數的 CREATE 指令碼。 然後，此範本會建立這些指令碼。 如需有關範本的詳細資訊，請參閱 <<c0> [ 範本總管](../../ssms/template/template-explorer.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.sp_cdc_generate_wrapper_function &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
+ [sys.sp_cdc_generate_wrapper_function &#40;-SQL&#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
  [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
   
   

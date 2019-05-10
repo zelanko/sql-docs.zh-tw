@@ -11,15 +11,15 @@ helpviewer_keywords:
 - business rules [Master Data Services], about business rules
 - business rules [Master Data Services]
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2ccf168740618085f07d0a5f6ce96a86321e0ca6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b02be45157036a9f29971b7e51447eb8b1c89361
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62637075"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485393"
 ---
 # <a name="business-rules-master-data-services"></a>商務規則 (Master Data Services)
 

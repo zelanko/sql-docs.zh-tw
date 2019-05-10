@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6d40e6b7574dbd532ad808cbcee93fab46bc3f69
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 60116af4eb2bc5abdaea5072d7d25337898dfe15
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038682"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480263"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services 功能及工作
 

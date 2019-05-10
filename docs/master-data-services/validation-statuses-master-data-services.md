@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9428a6462efac8643fcbb5343cb5cb3c8343aff9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8dc6f15406ae5d89c7aeb3d69d4f63806172b65e
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62629880"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485538"
 ---
 # <a name="validation-statuses-master-data-services"></a>驗證狀態 (Master Data Services)
 

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - annotations [Master Data Services]
 - annotations [Master Data Services], about annotations
 ms.assetid: 8c6401ef-17f0-41f5-be7a-01f49141f04c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 73be214576870a13b37b16c0774e645e77518bea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b9906aa967f98b41df8eabf63e11fe6e518a3734
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765991"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480058"
 ---
 # <a name="annotations-master-data-services"></a>註解 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，註解是指您輸入以提供交易之相關詳細資料的註解。  

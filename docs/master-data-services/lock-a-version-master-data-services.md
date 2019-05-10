@@ -11,15 +11,15 @@ helpviewer_keywords:
 - versions [Master Data Services], locking
 - locking versions [Master Data Services]
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dce19cfa521bcf14c2d42ef932083de8deea72fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4c2478cfa5753c094284f44c13cf0037bf927a5a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62465762"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488345"
 ---
 # <a name="lock-a-version-master-data-services"></a>鎖定版本 (Master Data Services)
 

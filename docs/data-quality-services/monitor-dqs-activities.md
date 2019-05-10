@@ -13,15 +13,15 @@ helpviewer_keywords:
 - monitoring activity
 - activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a9bc3aa9f703cc53b50bc499f44ffc6b7971dcfd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 308001ec4e6e903eadfcf203b6673e154de8faf7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020400"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489191"
 ---
 # <a name="monitor-dqs-activities"></a>監控 DQS 活動
 
@@ -36,7 +36,7 @@ ms.locfileid: "56020400"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
   
 -   您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_kb_operator 角色，才能檢視 DQS 活動。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "56020400"
     -   **分析工具**：顯示目前和歷程記錄活動的分析資訊。 若為目前活動，它會包含部分但一致的資訊。 當您將對應的活動詳細資料匯出至 Excel 檔案時，活動的分析資訊就會匯出至 Excel 檔案。 這項資訊會顯示在匯出之 Excel 檔案的 [分析工具 - 來源] 和 [分析工具 - 欄位] 工作表中。  
   
 ##  <a name="Export"></a> 匯出 DQS 活動詳細資料  
- 您可以將監控畫面中活動的活動屬性、活動處理序和分析資訊匯出至 Excel 檔案。 若要這樣做：  
+ 您可以將監控畫面中活動的活動屬性、活動處理序和分析資訊匯出至 Excel 檔案。 方法如下：  
   
 1.  在活動方格 (上方窗格) 中選取活動。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "56020400"
   
 3.  此時，系統會提示您指定要儲存之 Excel 檔案的名稱和位置。 匯出的 Excel 檔案包含下列工作表：  
   
-    |工作表名稱|Description|  
+    |工作表名稱|描述|  
     |----------------|-----------------|  
     |活動|包含活動的相關資訊 (資料行)，如活動方格所示。|  
     |處理序|包含活動中處理序的相關資訊 (資料行)，如 **[活動步驟]** 索引標籤所示。|  
@@ -160,6 +160,6 @@ ms.locfileid: "56020400"
   
 2.  按一下 **[停止選取的處理序]** 圖示。 或者，以滑鼠右鍵按一下活動詳細資料方格中的處理序，然後按一下快速鍵功能表中的 **[停止處理序]** 。  
   
-3.  此時，系統會顯示一則確認動作的訊息。 按一下 **[是]**。  
+3.  此時，系統會顯示一則確認動作的訊息。 按一下 [ **是**]。  
   
   

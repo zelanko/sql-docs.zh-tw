@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ebceefdc89494d65ea34d6c3d8f9ff81b71b139c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 58a542c8cbe72c420797f34280c2fb7422b82207
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62924720"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479539"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>建立自訂工作流程 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 使用商務規則建立基本工作流程解決方案，以便根據您所指定的條件，自動更新與驗證資料，並傳送電子郵件通知。 當您需要做的處理比內建工作流程動作所提供的處理還要複雜時，請使用自訂工作流程。 自訂工作流程是您所建立的 .NET 組件。 呼叫您的工作流程組件時，程式碼會採取您的情況所需的任何動作。 例如，如果您的工作流程需要自訂的事件處理 (例如多層審核或複雜決策樹)，可以設定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 啟動一個自訂工作流程，這個工作流程會分析資料並決定將該資料傳送至何處以待審核。  

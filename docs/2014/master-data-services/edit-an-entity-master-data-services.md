@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 31f3e298fb708d025bcbd3fccae5ada961a6ca0f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 49032dd9c8f57f1bb822720ae431098e911fbed1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765421"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483879"
 ---
 # <a name="change-an-entity-name-master-data-services"></a>變更實體名稱 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，您可以變更實體的名稱。  

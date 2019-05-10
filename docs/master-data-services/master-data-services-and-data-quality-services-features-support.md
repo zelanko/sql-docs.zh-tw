@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: a3e90ac3-69a6-47c9-aa18-8e9084717369
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9f49b71a6e6774c83f1573ff7b0d5d20e169a83d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 905d9c00776dc2c97b6772d6ea5ce0acfd4023fa
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62466847"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477344"
 ---
 # <a name="master-data-services-and-data-quality-services-features-support"></a>Master Data Services 和 Data Quality Services 功能支援
 

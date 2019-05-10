@@ -1,5 +1,5 @@
 ---
-title: 工作 7:建立複合定義域 |Microsoft Docs
+title: 工作 7：建立複合定義域 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ae778647-1df0-4952-9a69-0ef6177eea9c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c48144ca3720565c3c745ffd8aa39b0896e1fb66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bbc00117e10e48adbde37b9f0561610feff8f87e
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866275"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488959"
 ---
-# <a name="task-7-creating-a-composite-domain"></a>工作 7:建立複合定義域
+# <a name="task-7-creating-a-composite-domain"></a>工作 7：建立複合定義域
   在這個工作中，您建立複合定義域**地址驗證**，其中包括**地址行**，**縣 （市)**，**狀態**，以及**Zip**網域。 複合定義域可讓您定義在規則中涉及多個定義域的跨定義域規則。 複合定義域還有其他優點，例如能夠將欄位值剖析成多個定義域。  例如，[完整名稱] 欄位的值可以剖析成個別的名字、中間名和姓氏等定義域。 在本教學課程中，您只會定義跨定義域規則。 請參閱[管理複合定義域](https://msdn.microsoft.com/library/hh510399.aspx)如需詳細資訊。  
   
 1.  在左窗格中，按一下**建立複合定義域**工具列上的按鈕。  
