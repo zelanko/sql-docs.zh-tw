@@ -10,15 +10,15 @@ helpviewer_keywords:
 - creating date attributes [Master Data Services]
 - attributes [Master Data Services], creating date attributes
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7362431d33af429090497e9502daf1e1730fb768
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1284a15e16465962e2ce2c286bfb2897bb297622
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925197"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483354"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>建立日期屬性 (Master Data Services)
   當您想要讓使用者輸入日期做為屬性值時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中建立日期屬性。  

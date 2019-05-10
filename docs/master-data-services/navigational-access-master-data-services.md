@@ -11,15 +11,15 @@ helpviewer_keywords:
 - navigational access [Master Data Services]
 - security [Master Data Services], navigational access
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 670377e2a2a40c14fcdde2cc8f5691c867d705ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 942fe720fb4ba0e1dc65f2b6f918b3e5c1f985a8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813090"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488056"
 ---
 # <a name="navigational-access-master-data-services"></a>導覽存取權 (Master Data Services)
 

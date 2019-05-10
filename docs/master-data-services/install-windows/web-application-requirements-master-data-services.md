@@ -10,15 +10,15 @@ ms.topic: conceptual
 keywords:
 - Master Data Services
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cfad36590bc36e604efb563390f4e50442080676
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 99009d961baf3d1f870783f565cb93c628eb85c7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658252"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480164"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 應用程式需求 (Master Data Services)
 
@@ -59,7 +59,7 @@ ms.locfileid: "58658252"
   
 ||  
 |-|  
-|.NET Framework 3.5 (包括 .NET 2.0 和 3.0)<br /><br /> .NET Framework 4.5 進階服務<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP 啟用 [注意：這是必要的。]<br /><br /> TCP 連接埠共用<br /><br /> Windows 處理序啟用服務<br /><br /> 處理序模型<br /><br /> .NET 環境<br /><br /> 設定 API<br/><br/>動態內容壓縮|  
+|.NET Framework 3.5 (包括 .NET 2.0 和 3.0)<br /><br /> .NET Framework 4.5 進階服務<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP 啟用 [注意：這是必要。]<br /><br /> TCP 連接埠共用<br /><br /> Windows 處理序啟用服務<br /><br /> 處理序模型<br /><br /> .NET 環境<br /><br /> 設定 API<br/><br/>動態內容壓縮|  
   
  以下是要加入必要伺服器角色和功能的範例 PowerShell 指令碼。 必要伺服器角色和功能會因環境而異。  
   

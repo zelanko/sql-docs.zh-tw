@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f8c17463cd8882da5d51d54ae63b186510495ec0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a3de4051ff43ebf0155571235890a28a28d24788
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62517889"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487571"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>編輯和刪除實體同步關係 (Master Data Services)
 

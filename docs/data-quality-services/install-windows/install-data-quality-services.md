@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 677432f74ac67ecdcc835520cf4cfc208cbc33de
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 6834e3dd223f8b27a8c038e58f0e4121a670b9c3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024719"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487438"
 ---
 # <a name="install-data-quality-services"></a>安裝 Data Quality Services
 
@@ -24,7 +24,7 @@ ms.locfileid: "56024719"
 
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) 包含以下兩個元件： **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** 和 **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**。  
   
-|DQS 元件|Description|  
+|DQS 元件|描述|  
 |-------------------|-----------------|  
 |[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 會安裝在 [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] 資料庫引擎之上，且包含三個資料庫：DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA。 DQS_MAIN 包含 DQS 預存程序、DQS 引擎和已發行的知識庫。 DQS_PROJECTS 包含資料品質專資訊。 DQS_STAGING_DATA 是暫存區域，您可以從中複製來源資料以執行 DQS 作業，然後匯出已處理的資料。|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 是可以用於連接到 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]的獨立應用程式，其提供高直覺性的圖形化使用者介面，讓您可以執行資料品質作業，以及其他與 DQS 相關的管理工作。|  

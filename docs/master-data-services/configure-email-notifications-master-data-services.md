@@ -11,15 +11,15 @@ helpviewer_keywords:
 - e-mail [Master Data Services], configuring
 - notifications [Master Data Services], configuring notifications
 ms.assetid: 4241a6ab-7465-471b-9890-57c6b572037e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9bbad65583c79cc5ac1a3184f0ef6f83a5b7a73a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 58c88e60e4d4b4fa0b25cb5bdafe3ad248a794de
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62678576"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484446"
 ---
 # <a name="configure-email-notifications-master-data-services"></a>設定電子郵件通知 (Master Data Services)
 

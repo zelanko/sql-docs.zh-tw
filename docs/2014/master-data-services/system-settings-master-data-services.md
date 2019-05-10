@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Master Data Services, system settings
 - system settings [Master Data Services]
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6e8f239afa5d26ee4a3d6d97a24f58a46f1e3334
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a411290435a10e351c05e9dd1350bde597dbe449
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923177"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478823"
 ---
 # <a name="system-settings-master-data-services"></a>系統設定 (Master Data Services)
   針對與 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫相關聯的所有 Web 應用程式和 Web 服務，您可以設定系統設定。  

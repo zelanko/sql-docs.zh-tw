@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], changing name
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ab922142698101c276f59c9ca0d398f297eedee4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6037c1d31b52fba0f961020f1e514b3354e535b9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925826"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484038"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>變更版本旗標名稱 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以變更版本旗標的名稱。  

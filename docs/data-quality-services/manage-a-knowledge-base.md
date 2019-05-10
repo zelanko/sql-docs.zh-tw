@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 00c70154e06cd5e16b687a7d6a9848216456a26b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 9cfa9f3770c0a9ce5b5ac6ae176a33f92d9b79c9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028079"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488305"
 ---
 # <a name="manage-a-knowledge-base"></a>管理知識庫
 
@@ -31,7 +31,7 @@ ms.locfileid: "56028079"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能開啟知識庫。  
   
 ##  <a name="Manage"></a> 管理知識庫  
@@ -46,15 +46,15 @@ ms.locfileid: "56028079"
   
     1.  **開啟**：按一下即可開啟 [選取活動] 窗格中所選活動的知識庫。  
   
-    2.  **解除鎖定**：如果您是原本正在處理知識庫的使用者、進行了定義域管理、知識探索和比對原則活動的其中一個步驟，而且已關閉知識庫，就可以解除鎖定知識庫。 如果您解除鎖定知識庫，另一位人員就能夠開啟並處理知識庫。 如果知識庫並未處於活動的狀態，您就無法使用此命令。 如需詳細資訊，請參閱 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
+    2.  **解除鎖定**：如果您是原本正在處理知識庫中的一個步驟的 定義域管理、 知識探索和比對原則活動中，而且已關閉的使用者，您可以解除鎖定知識庫。 如果您解除鎖定知識庫，另一位人員就能夠開啟並處理知識庫。 如果知識庫並未處於活動的狀態，您就無法使用此命令。 如需詳細資訊，請參閱 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
   
-    3.  **捨棄工作**：當知識庫處於正在處理的狀態 (如資料表中 [狀態] 欄位的項目所示) 時，請按一下此命令。 如果知識庫並未處於活動的狀態，您就無法使用此命令。如果知識庫已鎖定，您也無法使用此命令。 如需詳細資訊，請參閱 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
+    3.  **捨棄工作**：按一下 當知識庫處於的狀態為正在進行，如資料表中的 狀態 欄位中的項目所示。 如果知識庫並未處於活動的狀態，您就無法使用此命令。如果知識庫已鎖定，您也無法使用此命令。 如需詳細資訊，請參閱 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
   
-    4.  **重新命名**：按一下即可針對您以滑鼠右鍵按一下的知識庫，讓其資料表的 [知識庫] 欄位變成可編輯狀態。 請變更名稱，然後按一下該知識庫和欄位中的另一個知識庫，接受名稱變更。  
+    4.  **重新命名**：按一下此選項，可讓資料表的知識庫 欄位上以滑鼠右鍵按一下的知識庫，您可以編輯。 請變更名稱，然後按一下該知識庫和欄位中的另一個知識庫，接受名稱變更。  
   
-    5.  **刪除**：按一下即可從 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 的 DQS_MAIN 資料庫中移除知識庫。  
+    5.  **刪除**：按一下即可移除 DQS_MAIN 資料庫中的知識庫，在[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]。  
   
-    6.  **屬性**：按一下即可將資料庫的屬性顯示在唯讀畫面中。  
+    6.  **屬性**：按一下即可在唯讀畫面中顯示資料庫的屬性。  
   
         1.  **來源知識庫**：做為此資料庫基礎的知識庫。 這是選擇性的。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "56028079"
   
         3.  **已鎖定**：如果知識庫已鎖定，則為 **True**；否則為 **False**  
   
-        4.  **包含未發佈的內容**：如果知識庫包含尚未透過發行所儲存的內容，則為 True，否則為 False  
+        4.  **包含未發佈的內容**：如果知識庫包含尚未儲存的發行，否則為 False 不的內容，則為 true。  
   
         5.  **鎖定者**：關閉知識庫並加以鎖定之使用者的名稱  
   

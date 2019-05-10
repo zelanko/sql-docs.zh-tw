@@ -11,15 +11,15 @@ helpviewer_keywords:
 - attributes [Master Data Services], deleting
 - deleting attributes [Master Data Services]
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6967178e237f62695bc4843087e8ff8fe676fba7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: fdf3b766e48843a15e73b7a41b7c434ba604e0af
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819115"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478218"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>刪除屬性 (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52819115"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，如果您想要永久刪除某個屬性以及所有關聯的屬性值，請刪除此屬性。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  

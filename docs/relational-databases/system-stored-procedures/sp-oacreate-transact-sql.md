@@ -18,12 +18,12 @@ ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a4d8a511fe163907de4cec6e12c6f884c7ad983
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 5b7a56afb2ffa11dbe4ec8937efb602c13c9599d
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589574"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450029"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  例如，{00026BA1-0000-0000-C000-000000000046} 是 SQL-DMO 的 CLSID **SQLServer**物件。  
   
  _objecttoken_ **輸出**  
- 為傳回的物件 token，且必須使用的資料型別區域變數**int**。這個物件 Token 會識別所建立的 OLE 物件，且用來呼叫其他 OLE Automation 預存程序。  
+ 為傳回的物件 token，且必須使用的資料型別區域變數**int**。這個物件 token 會識別建立的 OLE 物件，並會在呼叫其他 OLE Automation 預存程序。  
   
  *context*  
  指定執行新建立之 OLE 物件的執行內容。 如果指定的話，這個值必須是下列值之一：  
@@ -84,7 +84,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式批次結束時，會自動部署所建立的 OLE 物件。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
+ 需要的成員資格**sysadmin**固定伺服器角色，或直接執行這個預存程序權限。 `Ole Automation Procedures` 組態必須是**啟用**使用 OLE Automation 與相關的任何系統程序。  
   
 ## <a name="examples"></a>範例  
   

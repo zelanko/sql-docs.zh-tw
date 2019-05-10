@@ -12,15 +12,15 @@ helpviewer_keywords:
 - notifications,enable
 - notifications,disable
 ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 583ccac2604216c88f14aa9c460437a2aa24c03c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 22fe475935fdf1a17ac979b32aa6feb77459fa8d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022149"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487700"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>在 DQS 中啟用或停用分析通知
 
@@ -32,7 +32,7 @@ ms.locfileid: "56022149"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_administrator 角色，才能啟用通知。  
   
 ##  <a name="Enable"></a> 啟用或停用分析通知  

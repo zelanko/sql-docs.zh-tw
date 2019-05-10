@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 19e402f1b74f72ce962aaa95f5f48794ffb7c154
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 84c0acceb4953b819cb5696c4ef90c39e4376846
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222518"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481218"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>工作 1 (必要)：在 MDS 中移除供應商資料
   在這項工作中，您會移除儲存在 MDS 中的供應商資料。 使用以手動方式將資料上傳**MDS Excel 增益集**上一課。 您在這一課建立的 SSIS 封裝會將資料自動上傳至 MDS。 因此，在測試 SSIS 封裝之前，您必須從 MDS 中移除供應商資料、移除衍生階層、移除 supplier 和 state 實體，並且建立不含任何資料的 supplier 實體。  

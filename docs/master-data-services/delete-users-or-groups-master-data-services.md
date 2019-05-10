@@ -13,15 +13,15 @@ helpviewer_keywords:
 - users [Master Data Services], deleting
 - deleting users [Master Data Services]
 ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 43401193273de1ee72fd6209694b31ea09e2680f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 66ecbfa946b894b3dcfad9befb63f30645f9c77d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765250"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478095"
 ---
 # <a name="delete-users-or-groups-master-data-services"></a>刪除使用者或群組 (Master Data Services)
 
@@ -37,7 +37,7 @@ ms.locfileid: "52765250"
   
 -   對安全性的變更不會傳播至 MDS [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 20 分鐘。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  

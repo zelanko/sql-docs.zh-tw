@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 231c1111dbdb6a56419c25d5f467c2813156780a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: dcf52d8c69c59ca7318a2a20ce82ab2a8217c9c4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022082"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480419"
 ---
 # <a name="create-a-linked-domain"></a>建立連結的定義域
 
@@ -44,7 +44,7 @@ ms.locfileid: "56022082"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能建立連結的定義域。  
   
 ##  <a name="Create"></a> 建立連結的定義域  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - reserved words [Master Data Services]
 - Master Data Services, reserved words
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fe1e59c83160b3a6e5f21c9713d023b451e27dd5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f12b95a192535b037f01a601146a0bba544d8fae
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62704739"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485949"
 ---
 # <a name="reserved-words-master-data-services"></a>保留字 (Master Data Services)
 

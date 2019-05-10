@@ -11,15 +11,15 @@ helpviewer_keywords:
 - deployment packages [Master Data Services], deploying
 - models [Master Data Services], deploying a package
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: be5a8ecff530cfcc381ca8b6bd2d5c89bc2c46e8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 8cc48c9015edf14ebdf67d767ca7bb6c928a7d2f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790200"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477348"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>使用精靈部署模型部署封裝
 
@@ -30,7 +30,7 @@ ms.locfileid: "52790200"
 > [!IMPORTANT]  
 >  封裝只能部署到之前建立封裝所使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 這表示，在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中建立的封裝無法部署到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   在目標 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 環境中，您必須擁有存取 [系統管理] 功能區域的權限。  
@@ -51,7 +51,7 @@ ms.locfileid: "52790200"
   
 5.  尋找您的部署套件 (.pkg 檔案)，然後按一下 [開啟]。  
   
-6.  按 [下一步] 。  
+6.  按一下 [下一步] 。  
   
 7.  載入套件之後，按一下 [下一步]。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "52790200"
   
      更新模型時，如果此程序在前三個步驟的任何一個期間失敗，就不會繼續進行，但是，並不會回復已經進行的變更。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
  檔案屬性及使用者和群組的權限不包含在模型部署封裝中。 在部署模型之後，您必須手動更新這些項目。 如需詳細資訊，請參閱：  
   
 -   [指派模型物件權限 &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  

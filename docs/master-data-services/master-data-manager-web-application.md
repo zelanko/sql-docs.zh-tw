@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6fff6e1ab9f6394c34c60356fdd4f5eb76ab89c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 92b317b92800b1fe8bd6c691d1c2db8b1edd69b3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62465659"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484630"
 ---
 # <a name="master-data-manager-web-application"></a>主資料管理員 Web 應用程式
 

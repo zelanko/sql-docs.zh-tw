@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 2f2b2f9d-7744-460e-83cd-56d34ea70ff0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4eb84aad1f334d6fc564f07847eb5590201e2077
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 534d636aeb7c6b974ab98b8f651b5c21761ba934
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63002601"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488396"
 ---
 # <a name="connections-mds-add-in-for-excel"></a>連接 (適用於 Excel 的 MDS 增益集)
 

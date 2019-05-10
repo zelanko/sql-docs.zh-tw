@@ -20,12 +20,12 @@ ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb4ba702d540ccad7a976cc4045408d5e1d88766
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ca10614062a495de2c8f0ee80d7bbd5c0e675ad4
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63226413"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449753"
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 函數
 **合規性**  
@@ -212,11 +212,12 @@ struct DataBinding {
 void printStatementResult(SQLHSTMT hstmt) {  
    int bufferSize = 1024, i;  
    SQLRETURN retCode;  
-   SQLSMALLINT numColumn = 0, bufferLenUsed;  
+   SQLSMALLINT numColumn = 0, bufferLenUsed;
+   
+   retCode = SQLNumResultCols(hstmt, &numColumn);  
+   
    SQLPOINTER* columnLabels = (SQLPOINTER *)malloc( numColumn * sizeof(SQLPOINTER*) );  
    struct DataBinding* columnData = (struct DataBinding*)malloc( numColumn * sizeof(struct DataBinding) );  
-  
-   retCode = SQLNumResultCols(hstmt, &numColumn);  
   
    printf( "Columns from that table:\n" );  
    for ( i = 0 ; i < numColumn ; i++ ) {  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - permissions [Master Data Services], deleting model object permissions
 - models [Master Data Services], deleting object permissions
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9e05fe2b5001ce54681c8600f943f4fdb361ede5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 99e2008d7e49605b749ea4d2a768e217fafa2d68
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749280"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478237"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>刪除模型物件權限 (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "52749280"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除模型物件權限，移除所做的任何指派。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  
@@ -55,7 +55,7 @@ ms.locfileid: "52749280"
   
 8.  按一下樹狀節點，然後在操作功能表中按一下 [清除存取]。  
   
-9. 按一下 **[儲存]**。  
+9. 按一下 [儲存] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [模型物件權限 &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   

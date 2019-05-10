@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: af7e442c1465ac1f93a134ab00da6a9e31242da4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1707de1934ff6265268e40a3ab2a805629134e3d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62924231"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482939"
 ---
 # <a name="create-a-master-data-services-database"></a>建立 Master Data Services 資料庫
   當您需要新的資料庫支援 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 應用程式及 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服務時，請建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。  

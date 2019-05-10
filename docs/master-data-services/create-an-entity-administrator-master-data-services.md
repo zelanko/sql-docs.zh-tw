@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 14d2c5ca414281e8a3faf5b0fb627452503dd4d8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 0b0907b41aeaa27868e434e4d63d7ea11069de32
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822222"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477116"
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>建立實體管理員 (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52822222"
 > [!TIP]  
 >  若要簡化管理，請建立 Windows 或本機群組，然後將此群組設定為實體管理員。 然後不需存取 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，您就可以在群組中加入及移除使用者。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [使用者及群組的權限] 功能區域的權限。  
@@ -46,7 +46,7 @@ ms.locfileid: "52822222"
   
 5.  針對您希望群組或使用者成為其管理員的每個實體，完成步驟 4。  
   
-6.  按一下 **[儲存]**。  
+6.  按一下 [儲存] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   

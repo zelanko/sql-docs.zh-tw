@@ -12,15 +12,15 @@ helpviewer_keywords:
 - upgrading caching for Lookup transformation
 - upgrading Lookup transformation
 ms.assetid: d9b2c281-91ee-4e20-bdf0-0cd77d4a4241
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 159779bc43edf7d30182e86aee545e6e9db8135a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b58e50e12ce6631e9cb8a616434a0705f19af9a7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63192959"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489689"
 ---
 # <a name="upgrade-lookup-transformations"></a>升級查閱轉換
   當您從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 時，請考慮修改封裝，以利用查閱轉換中的新功能。 此轉換支援 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 中所提供的快取類型與資料輸出選項。 如需有關其他快取和資料輸出，請參閱[查閱 」 轉換](../../integration-services/data-flow/transformations/lookup-transformation.md)。  

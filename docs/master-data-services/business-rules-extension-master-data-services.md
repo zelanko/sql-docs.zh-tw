@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 49145808ae875b6c4fa66a52c4972a8f7a392a7a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 64f77ccc8a1e4fdc6bb2aa35aa2b4d4d7b0d5de0
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62637082"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485374"
 ---
 # <a name="business-rules-extension-master-data-services"></a>商務規則延伸模組 (Master Data Services)
 

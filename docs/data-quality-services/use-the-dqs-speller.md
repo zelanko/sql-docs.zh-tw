@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c2d852accb33b1667e5f2d0981d6f351543ee72a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e65925f0f8c2c2d5ae4e96b863df7eb214838bcd
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62469237"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487819"
 ---
 # <a name="use-the-dqs-speller"></a>使用 DQS 拼字檢查
 

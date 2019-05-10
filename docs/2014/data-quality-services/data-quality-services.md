@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4c9e337bfd091c02645119c1f8f4c81eb8daab29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1b9f30d90656977bc969987271896c4c548df80e
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793010"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480715"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) 是一個知識驅動的資料品質專案。 DQS 可讓您建立知識庫，然後使用該知識庫執行各種重要的資料品質工作，包括更正、充實、標準化及刪除重複資料。 DQS 可讓您使用參考資料提供者所提供的雲端式 Reference Data Services，執行資料清理。 DQS 也提供您整合到其資料品質工作的分析功能，讓您分析資料的完整性。  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - versions [Master Data Services], locking
 - locking versions [Master Data Services]
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 23e705dd936383db09b0a9eda37eb6d925dbffbb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e38a4c75ad6cf8c65d7120e0eb98163f7ee0fccc
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62924359"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482877"
 ---
 # <a name="lock-a-version-master-data-services"></a>鎖定版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，鎖定模型版本，以防止模型成員及其屬性的變更。  

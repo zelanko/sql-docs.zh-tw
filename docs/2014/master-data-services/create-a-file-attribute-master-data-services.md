@@ -10,15 +10,15 @@ helpviewer_keywords:
 - creating file attributes [Master Data Services]
 - attributes [Master Data Services], creating file attributes
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 435f68e67080bf006b0c0f121f565ced2339a705
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 387613e12af3435a2a8eb9e3f630f61acaf28a8d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765901"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479995"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>建立檔案屬性 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立檔案屬性，以使用檔案來擴展屬性值。  
