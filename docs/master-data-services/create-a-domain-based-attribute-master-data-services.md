@@ -12,15 +12,15 @@ helpviewer_keywords:
 - creating domain-based attributes [Master Data Services]
 - attributes [Master Data Services], creating domain-based attributes
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 23fe106f296860d121d7315daf669855c792b64d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 09d0b3b339a70b5d2ccae3c9edca11ddf942e95c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759210"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487589"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>建立網域屬性 (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "52759210"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立網域屬性，以使用實體成員來擴展屬性值。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -42,12 +42,12 @@ ms.locfileid: "52759210"
 ## <a name="attribute-information"></a>屬性資訊  
  針對每個建立的屬性，會將含有七個資料行的資料列加入方格中。 下表描述該資料行。  
   
-|「資料行」|Description|  
+|「資料行」|描述|  
 |------------|-----------------|  
 |[狀態]|屬性狀態。<br /><br /> 當您按一下 [儲存] 時，會顯示![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")影像，表示正在更新屬性。<br /><br /> 如果建立或編輯屬性時發生錯誤，則會顯示![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")影像。<br /><br /> 否則，狀態為正常，並顯示![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")影像。|  
-|[屬性]|屬性名稱。|  
+|名稱|屬性名稱。|  
 |顯示名稱|屬性的顯示名稱。|  
-|Description|屬性描述。|  
+|描述|屬性描述。|  
 |顯示像素寬度|屬性的寬度。|  
 |類型和屬性|屬性的類型和資料類型資訊。|  
 |啟用變更追蹤|指定屬性是否已啟用變更追蹤，並在括弧中顯示群組編號。|  
@@ -98,7 +98,7 @@ ms.locfileid: "52759210"
   
 12. **選擇性。** 選取 [啟用變更追蹤] 以追蹤屬性群組的變更。 如需詳細資訊，請參閱[將屬性加入至變更追蹤群組 &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。  
   
-13. 按一下 **[儲存]**。  
+13. 按一下 [儲存] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [網域屬性 &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   

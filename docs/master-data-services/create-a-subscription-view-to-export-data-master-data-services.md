@@ -11,15 +11,15 @@ helpviewer_keywords:
 - subscription views [Master Data Services], creating
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f9619bca36ec488fdd5e25b5b9eb9a82370d7049
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 62118034106187081ba41be91026ecd6d7330ec5
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754670"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485067"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>建立訂閱檢視以匯出資料 (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52754670"
 
   建立訂閱檢視，以將 Master Data Services 資料匯出至訂閱系統。 您正要建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中資料的檢視。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[整合管理]** 功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
@@ -61,17 +61,17 @@ ms.locfileid: "52754670"
   
 10. 如果您從 **[格式]** 清單中選擇 **[明確層級]** 或 **[衍生層級]** ，請輸入階層內要加入檢視中的層級數。  
   
-11. 按一下 **[儲存]**。  
+11. 按一下 [儲存] 。  
   
 ## <a name="view-information"></a>檢視資訊  
  對於每個建立的檢視，會將含十個資料行的資料列加入方格中。 下表描述該資料行。  
   
-|「資料行」|Description|  
+|「資料行」|描述|  
 |------------|-----------------|  
 |[狀態]|檢視狀態。<br /><br /> 當您按一下 [儲存] 時，會顯示![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")影像，表示正在更新檢視。<br /><br /> 如果建立或編輯檢視時發生錯誤，則會顯示![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")影像。<br /><br /> 否則，狀態為正常，並顯示![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")影像。|  
-|[屬性]|訂閱檢視名稱。|  
+|名稱|訂閱檢視名稱。|  
 |[模型]|模型名稱。|  
-|Version|版本名稱。|  
+|版本|版本名稱。|  
 |版本旗標|版本旗標名稱。|  
 |衍生階層|衍生階層名稱。|  
 |實體|實體名稱。|  
