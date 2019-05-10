@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3fa566c26c95d84544ecd2dbb9f54c815f677e02
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 9fbc474dbf7621b0da68edb7b310bb55ffcde7d5
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685705"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776095"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>補充課程 - 動態安全性
 
@@ -29,7 +29,7 @@ ms.locfileid: "57685705"
   
 例如此 Adventure Works 表格式模型案例專屬的工作就是這類工作，但不一定適用於真實案例。 每一項工作都包含描述工作目的的其他資訊。  
   
-完成本課程的估計時間：**30 分鐘**  
+估計的時間才能完成這一課：**30 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 
@@ -150,10 +150,9 @@ FactInternetSales、 DimGeography 和 DimSalesTerritory 資料表全都包含常
 9. 針對**DimSalesTerritory**資料表中，輸入下列公式：  
 
     ```  
-    ='Sales Territory'[Sales Territory Id]=LOOKUPVALUE('Employee Security'[Sales Territory Id], 
-      'Employee Security'[Login Id], USERNAME(), 
-      'Employee Security'[Sales Territory Id], 
-      'Sales Territory'[Sales Territory Id]) 
+    ='DimSalesTerritory'[SalesTerritoryKey]=LOOKUPVALUE('EmployeeSecurity'[SalesTerritoryId], 
+      'EmployeeSecurity'[LoginId], USERNAME(), 
+      'EmployeeSecurity'[SalesTerritoryId], 'DimSalesTerritory'[SalesTerritoryKey]) 
     ```
   
     在此公式中，LOOKUPVALUE 函數會傳回 DimEmployeeSecurity [SalesTerritoryId] 資料行，其中 EmployeeSecurity [LoginId] 等同於目前登入的 Windows 使用者名稱，而 EmployeeSecurity [SalesTerritoryId] 是所有的值與 DimSalesTerritory [SalesTerritoryId] 相同。  

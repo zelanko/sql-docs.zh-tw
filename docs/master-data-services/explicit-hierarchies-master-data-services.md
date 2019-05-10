@@ -12,15 +12,15 @@ helpviewer_keywords:
 - hierarchies [Master Data Services], explicit hierarchies
 - explicit hierarchies
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 845d69b539a0634c25f1402da503dd2f599ec442
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 13c8afda7e2a6ab1d59a2b271a4d508d4fc315a2
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62517107"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483974"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>明確階層 (Master Data Services)
 

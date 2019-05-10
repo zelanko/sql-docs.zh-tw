@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], excluding
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6285d32ca514cacef4b78b31336bb33866baf860
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8f18e047b11bee4093ce7a6e494c1ae1bf3d0ada
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765341"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483379"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>排除商務規則 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您不想要永久刪除商務規則，但是也不想使用它來驗證資料時，可排除此商務規則。  

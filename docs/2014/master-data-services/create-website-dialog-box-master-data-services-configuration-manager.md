@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createsite.f1
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 83fca35f8e67ebcefcf587cd0faf22ddbdd075d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c8dc3e4efaf4a2951dfaf4f5af9e9a850c20763d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925109"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479878"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>建立網站對話方塊 (Master Data Services 組態管理員)
   使用 **[建立網站]** 對話方塊可在本機電腦上建立新的網站。 當您在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中建立網站時，網站會新增至本機電腦上的 Internet Information Services (IIS)，而且包含設定為 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式的根應用程式。 也會建立新的應用程式集區，而 Web 應用程式會放在該應用程式集區內。  

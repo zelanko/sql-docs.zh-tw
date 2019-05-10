@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 8b7f256aec6fc01500f5c98709086a69815fd6ef
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7261d8b5b72b835c726a268477c44e4d0663f131
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516514"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376839"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>在 Docker 上設定 SQL Server 容器映像
 
@@ -83,11 +83,11 @@ docker run --name sqlenterprise `
       -d "store/microsoft/mssql-server-linux:2017-latest"
  ```
 
-      > [!IMPORTANT]
-      > By passing the value **Y** to the environment variable **ACCEPT_EULA** and an edition value to **MSSQL_PID**, you are expressing that you have a valid and existing license for the edition and version of SQL Server that you intend to use. You also agree that your use of SQL Server software running in a Docker container image will be governed by the terms of your SQL Server license.
+> [!IMPORTANT]
+> 傳遞的值，藉以**Y**環境變數**ACCEPT_EULA**和版本值以**MSSQL_PID**，您要表達您有有效的和現有的授權，版本和您想要使用的 SQL Server 版本。 您也同意在 Docker 容器映像中執行的 SQL Server 軟體的使用會受到您的 SQL Server 授權條款。
 
-      > [!NOTE]
-      > For a full list of possible values for **MSSQL_PID**, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
+> [!NOTE]
+> 如需完整的可能值清單**MSSQL_PID**，請參閱[環境變數，在 Linux 上設定 SQL Server 設定](sql-server-linux-configure-environment-variables.md)。
 
 ::: moniker-end
 

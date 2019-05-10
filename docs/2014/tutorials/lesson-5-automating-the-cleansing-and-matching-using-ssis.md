@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f068d4db-2d56-41b1-bed2-0cffa3ca411d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 92261bc69590bcc338bf18aa9d406964bfe42fcd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ec6f347cdbc6d14e8f621466a1708b8ee9fe7d36
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63137434"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489757"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>第 5 課：使用 SSIS 將清理和比對自動化
   在第 1 課方法，您可以建置供應商知識庫，並使用它來清理資料，在第 2 課和比對資料使用工具第 3 課**DQS 用戶端**。 在真實世界案例中，您可能要從來源 DQS 不支援，或者您想要自動化清理和比對程序中提取資料，而不需要使用**DQS 用戶端**工具。 SQL Server Integration Services (SSIS) 有可供您整合各種異質來源的資料的元件和 **[DQS 清理轉換](https://msdn.microsoft.com/library/ee677619.aspx)** 叫用清理元件DQS 所公開的功能。 目前，DQS 不會公開比對功能給 SSIS 使用，但您可以使用**[模糊群組轉換](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** 來識別資料中的重複項。  

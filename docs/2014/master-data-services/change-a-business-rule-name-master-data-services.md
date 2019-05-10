@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], changing name
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e849e093872952494ff6f3d5a9f74f5521b23057
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e8e2d7ca2f6ad28e7e1bd072bdeb238199471ad9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62926129"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480114"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>變更商務規則名稱 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當指派的商務規則名稱不符合業務需求時，變更此名稱。  

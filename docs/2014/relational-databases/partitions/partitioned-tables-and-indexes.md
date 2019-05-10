@@ -15,12 +15,12 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 946b447b974be9c24403957681f26df627094084
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5f96f82919b9f4a130ce8a533e6ffcf31e765f5f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249655"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65092045"
 ---
 # <a name="partitioned-tables-and-indexes"></a>分割資料表與索引
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援資料表和索引資料分割。 資料分割資料表和索引的資料，已分成可以在資料庫中的多個檔案群組之間分佈的單位。 資料是以水平方式分割，因此資料列的群組可對應至個別的資料分割。 單一索引或資料表的所有分割區必須在同一個資料庫中。 在資料上執行查詢或更新時，資料表或索引會被視為單一邏輯實體。 並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用資料分割資料表和索引。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
@@ -114,8 +114,6 @@ ms.locfileid: "63249655"
 -   [如何實作自動滑動視窗](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
 -   [大量載入至資料分割資料表](https://msdn.microsoft.com/library/cc966380.aspx)  
-  
--   [Project REAL:Data Lifecycle - Partitioning](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en) (專案 REAL：資料生命週期 - 資料分割)  
   
 -   [分割資料表和索引上的查詢處理增強功能](https://msdn.microsoft.com/library/ms345599.aspx)  
   

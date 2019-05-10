@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 55f67c71bfa1247d9b8df411889091527c95de48
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: be150cce4e4dcdec19f2369e058a9283d8d137a1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62695548"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488482"
 ---
 # <a name="installation-tasks-for-master-data-services"></a>Master Data Services 的安裝工作
 

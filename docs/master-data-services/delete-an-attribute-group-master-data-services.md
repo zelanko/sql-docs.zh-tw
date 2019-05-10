@@ -11,15 +11,15 @@ helpviewer_keywords:
 - deleting attribute groups [Master Data Services]
 - attribute groups [Master Data Services], deleting
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d9b308459c406555c81a89203fea5de768356a11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 243847e8ac2a1f3cb06a121b9ec42f556accc0e1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759900"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478595"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>刪除屬性群組 (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52759900"
   
 -   **注意**：當屬性群組存在時，[總管] 只會顯示屬於該屬性群組的屬性。 當屬性群組不存在時，則會顯示所有屬性。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  

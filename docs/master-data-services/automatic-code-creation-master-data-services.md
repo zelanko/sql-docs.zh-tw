@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 23ce631c2601c9c0c284314077b12e649b24ad79
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 1f7fce4e23fe4cb0d4c01fe216452e9b7461966c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764650"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484412"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>自動建立代碼 (Master Data Services)
 

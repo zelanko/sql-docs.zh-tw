@@ -1,5 +1,5 @@
 ---
-title: Cube、 分割區和維度處理的錯誤組態 |Microsoft 文件
+title: Cube、 分割區和維度處理的錯誤組態 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 57ad330c44f378dd71cad1e02f3a5b3e6c63f38f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d8883d72ec5fcb15dfb1b827ea7e053a14568a48
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025545"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357345"
 ---
-# <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Cube、 分割區和維度處理的錯誤組態
+# <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>設定 Cube、 資料分割和維度處理時發生錯誤
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Cube、資料分割或維度物件的錯誤組態屬性決定了在處理期間發生資料完整性錯誤時，伺服器的回應方式。 索引鍵重複、遺漏索引鍵和索引鍵資料行有 Null 值通常會觸發這類錯誤，而造成錯誤的記錄並不會加入至資料庫，您便可設定屬性以決定接下來將發生什麼情況。 依預設，處理作業會停止。 不過，在開發 Cube 期間，您可能希望錯誤發生時仍繼續進行處理，好讓您能夠使用匯入的資料測試 Cube 行為，就算未完全匯入也無妨。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "34025545"
   
  **伺服器對特定錯誤的回應方式**  
   
-|屬性|預設值|其他值|  
+|屬性|預設|其他值|  
 |--------------|-------------|------------------|  
 |**CalculationError**<br /><br /> 初始化錯誤組態時發生。|**IgnoreError** 既不會記錄錯誤，也未將錯誤算入計數，而只要錯誤計數低於上限，處理作業便會繼續。|**ReportAndContinue** 會記錄錯誤並將其算入計數。<br /><br /> **ReportAndStop** 會報告錯誤並立即停止處理，而無視於錯誤限制。|  
 |**KeyNotFound**<br /><br /> 事實資料表中的外部索引鍵在相關維度資料表中沒有相符的主索引鍵時發生 (例如，[銷售額] 事實資料表有一筆記錄，其產品識別碼不存在於 [產品] 維度資料表中)。 在資料分割處理或是雪花維度的維度處理期間，可能會發生此錯誤。|**ReportAndContinue** 會記錄錯誤並將其算入計數。|**ReportAndStop** 會報告錯誤並立即停止處理，而無視於錯誤限制。<br /><br /> **IgnoreError** 既不會記錄錯誤，也未將錯誤算入計數，而只要錯誤計數低於上限，處理作業便會繼續。 觸發此錯誤的記錄預設會轉換成未知的成員，但是您可以變更 **KeyErrorAction** 屬性改為捨棄這些記錄。|  
@@ -99,7 +99,7 @@ ms.locfileid: "34025545"
   
  您可以對任何能夠當成獨立作業處理的物件設定錯誤組態。  
   
-#### <a name="sql-server-management-studio"></a>Transact-SQL  
+#### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
   
 1.  在物件總管中，以滑鼠右鍵按一下以下任一物件的 [屬性]：維度、Cube 或資料分割。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "34025545"
   
 -   設定 **NullProcessing**=**Error** 以排除具有 Null 值的記錄。 這將產生 **NullKeyNotAllowed** 錯誤，而此錯誤會記錄下來且其計數將算入索引鍵錯誤限制。 您可以藉著將 **[不允許 Null 索引鍵]** 的錯誤組態屬性設為 **IgnoreError** ，讓處理作業能夠繼續。  
   
- Null 可能會對非索引鍵欄位構成問題，因為 MDX 查詢將視 Null 會解譯為零或空白而傳回不同的結果。 基於這個原因， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供 Null 處理選項讓您可預先定義所需的轉換行為。 如需詳細資訊，請參閱＜ [定義未知的成員和 Null 處理屬性](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) 和 <xref:Microsoft.AnalysisServices.NullProcessing> ＞。  
+ Null 可能會對非索引鍵欄位構成問題，因為 MDX 查詢將視 Null 會解譯為零或空白而傳回不同的結果。 基於這個原因， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供 Null 處理選項讓您可預先定義所需的轉換行為。  
   
 #### <a name="set-nullprocessing-property-on-a-dimension-attribute"></a>針對維度屬性設定 NullProcessing 屬性  
   
@@ -174,10 +174,10 @@ ms.locfileid: "34025545"
 ##  <a name="bkmk_next"></a> 下一步  
  決定錯誤將會致使停止處理，或是逕行忽略錯誤。 請記住，忽略的只限於錯誤本身。 系統不會忽略造成錯誤的記錄，而是將記錄捨棄或轉換成未知的成員。 違反資料完整性規則的記錄絕不會加入至資料庫。 依預設，處理作業會在第一個錯誤發生時停止，但您可以藉著提高錯誤限制變更此行為。 在開發 Cube 期間，放寬錯誤組態規則以使處理作業能夠繼續，好讓您有資料可進行測試是很實用的作法。  
   
- 決定是否要變更預設的 Null 處理行為。 依預設，字串資料行中的 Null 會視為空白值處理，而數值資料行中的 Null 將視為零處理。 如需有關針對屬性 (Attribute) 設定 Null 處理的指示，請參閱＜ [定義未知的成員和 Null 處理屬性](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) ＞。  
+ 決定是否要變更預設的 Null 處理行為。 依預設，字串資料行中的 Null 會視為空白值處理，而數值資料行中的 Null 將視為零處理。  
   
 ## <a name="see-also"></a>另請參閱  
- [記錄檔內容](../../analysis-services/server-properties/log-properties.md)   
- [定義未知的成員和 Null 處理屬性](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+ [記錄屬性](../../analysis-services/server-properties/log-properties.md)   
+ [定義未知的成員和 Null 處理屬性](../multidimensional-tutorial/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
   

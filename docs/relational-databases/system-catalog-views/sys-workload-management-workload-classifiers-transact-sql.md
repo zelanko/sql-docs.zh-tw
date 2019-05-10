@@ -1,7 +1,7 @@
 ---
 title: sys.workload_management_workload_classifiers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/13/2019
+ms.date: 05/01/2019
 ms.prod: ''
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -12,19 +12,16 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 3b023654728375aee76bfb0c4434a8413dc81e7d
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 43d8921f2135dbc1a343e8f3a604cc81f79b9faa
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582561"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089540"
 ---
-# <a name="sysworkloadmanagementworkloadclassifiers-transact-sql-preview"></a>sys.workload_management_workload_classifiers (TRANSACT-SQL) （預覽）
+# <a name="sysworkloadmanagementworkloadclassifiers-transact-sql"></a>sys.workload_management_workload_classifiers (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
-
-> [!Note]
-> 使用 SQL 資料倉儲 Gen2 上預覽工作負載分類。 工作負載管理分類和重要性的 preview 是組建與發行日期 2019 年 4 月 9 日，或更新版本。  使用者應該避免使用組建早於這個日期的工作負載管理測試。  若要判斷您的組建是否以工作負載管理功能，執行 select @@version時連線到您的 SQL 資料倉儲執行個體。
 
  傳回工作負載分類器的詳細資料。  
   

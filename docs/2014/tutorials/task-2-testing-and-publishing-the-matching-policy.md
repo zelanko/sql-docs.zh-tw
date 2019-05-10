@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e1ffb6d7-fbc5-4695-b538-cc2302d1a17d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 21f0cf5a4d096bfa0f4b673fdd716e2e48ee1396
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a9957625e09bde8bb733eca6e564dfdcfbb0bd98
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63250275"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484732"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>工作 2：測試和發行比對原則
   在這個工作中，您需要測試和發佈**移除重複的供應商**比對原則。  

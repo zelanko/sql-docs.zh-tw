@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 86c556fb4365df12d573294b0c937c36d91dffb3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 7d819d162269aa385f4103e349e8c0308157b2dc
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813330"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486062"
 ---
 # <a name="model-deployment-options-master-data-services"></a>模型部署選項 (Master Data Services)
 
@@ -36,7 +36,7 @@ ms.locfileid: "52813330"
   
  下表有助於您在使用系統管理模型部署精靈或 MDSModelDeploy 工具部署模型時，決定選擇。  
   
-|選項|Description|注意|  
+|選項|描述|注意|  
 |------------|-----------------|-----------|  
 |新增|建立具有唯一名稱的新模型。 將會建立所有模型物件的新識別碼。|如果建立具有新識別碼的新模型，稍後您無法使用模型部署工具將更新套用至此模型。 在 Web 應用程式中使用精靈來部署模型封裝時，只在已經有相同名稱或識別碼的模型時，您才可以選擇建立新的模型。|  
 |複製|建立新的模型，它是封裝中模型的完整複製。 只在此模型不存在於目標環境中 (依名稱或識別碼) 時才有效。 如果要在多個環境中具有相同的模型，且經過一段時間後要更新複製的模式，請使用 [複製]。|這是在 Web 應用程式中精靈的預設行為。 如果已經有相同名稱或識別碼的模型，系統會提示您改為建立新的模型。|  

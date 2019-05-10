@@ -2,21 +2,21 @@
 title: 教學課程：使用 TRANSACT-SQL 編輯器來建立資料庫物件
 titleSuffix: Azure Data Studio
 description: 本教學課程會示範在 Azure 資料 Studio 中的簡化使用 T-SQL 的主要功能。
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: tutorial
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 04e6e366d1fd0a5d710296353d6326022f716199
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 3d227d308ba05a4c9336e2f5dcb728e85c18d7ed
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240943"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089707"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>教學課程：使用 TRANSACT-SQL 編輯器來建立資料庫物件， [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -193,7 +193,7 @@ ms.locfileid: "63240943"
    ![將儲存為 JSON](./media/tutorial-sql-editor/save-as-json.png)
 
 4. 在編輯器中選取的 JSON 資料，並將它複製。
-5. 按下 **Ctrl + N** 開啟新的編輯器。 
+5. 按下 **Ctrl + N** 開啟新的編輯器。
 6. 先前的步驟顯示如何輕鬆地取得正確格式的資料，以便完成呼叫 *setCustomer* 程序。 如您所見，下列程式碼使用相同的 JSON 格式並具有新的客戶詳細資料，讓我們能測試 *setCustomer* 預存程序。  陳述式包含參數宣告和執行新的 Get 與 Set 程序語法。 您可以貼上從上一章節複製的資料並加以編輯，使之與下列範例相同，或直接將下列陳述式貼到查詢編輯器中。
 
    ```sql

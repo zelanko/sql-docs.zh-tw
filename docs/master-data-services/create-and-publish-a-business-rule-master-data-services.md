@@ -11,15 +11,15 @@ helpviewer_keywords:
 - business rules [Master Data Services], creating
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 401dc7a80db0a1499943802671866ebef0eef901
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 1ad1a0935c084aab515d6e91181695af55860773
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777340"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489609"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>建立及發行商務規則 (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52777340"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立商務規則，確保主要資料的正確性。 建立規則之後，您必須發行它，才能將它套用至資料。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -80,7 +80,7 @@ ms.locfileid: "52777340"
   
 19. 完成所有必要的欄位。  
   
-20. 按一下 **[儲存]**。 新的資料列就會新增至 [Then] 方格中。  
+20. 按一下 [儲存] 。 新的資料列就會新增至 [Then] 方格中。  
   
 21. 或者，若要新增 **Else** 動作，請完成下列步驟。  
   
@@ -92,9 +92,9 @@ ms.locfileid: "52777340"
   
     4.  完成所有必要的欄位。  
   
-    5.  按一下 **[儲存]**。 新的資料列就會新增至 [Else] 方格中。  
+    5.  按一下 [儲存] 。 新的資料列就會新增至 [Else] 方格中。  
   
-22. 按一下 **[儲存]**。 新的資料列就會加入商務規則方格中。  
+22. 按一下 [儲存] 。 新的資料列就會加入商務規則方格中。  
   
 23. 按一下 [全部發行] 。  
   
@@ -103,16 +103,16 @@ ms.locfileid: "52777340"
 ## <a name="grid-columns"></a>方格資料行  
  對於每個建立的商務規則，會將含有六個資料行的資料列加入方格中。 以下是資料行。  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[狀態]|當您按一下 [儲存]，下列影像隨即顯示，指出正在更新商務規則。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> 如果建立或編輯商務規則時發生錯誤，則會顯示下列影像。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 如果狀態正常，則會顯示下列影像。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|[屬性]|商務規則名稱。|  
-|Description|商務規則描述。|  
+|名稱|商務規則名稱。|  
+|描述|商務規則描述。|  
 |商務規則狀態|下列商務規則狀態之一：未定義規則、使用中、排除、暫止變更、暫止排除及暫止刪除。|  
 |已排除|指定商務規則是否已排除。|  
 |通知|指定選取傳送電子郵件通知的使用者或群組。|  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
   
 -   遵循下列其中一個程序，將商務規則套用至資料：  
   

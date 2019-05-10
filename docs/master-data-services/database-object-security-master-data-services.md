@@ -11,15 +11,15 @@ helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bbad98239ef2aabbea33a1874e5e6f3efad51c55
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: df262ea32662a160b0a0ebcadc26eb43676271b6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783610"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487734"
 ---
 # <a name="database-object-security-master-data-services"></a>資料庫物件安全性 (Master Data Services)
 
@@ -46,13 +46,13 @@ ms.locfileid: "52783610"
 ##  <a name="Staging"></a> 暫存資料  
  在下表中，每個安全物件都會有 "name" 作為名稱的一部分。 這表示建立實體時所指定的暫存資料表名稱。 如需詳細資訊，請參閱[概觀：從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
-|動作|[安全性實體]|[權限]|  
+|動作|[安全性實體]|Permissions|  
 |------------|----------------|-----------------|  
-|建立、更新和刪除分葉成員及其屬性。|stg.name_Leaf|必要：Insert<br /><br /> 選擇性:SELECT 和 UPDATE|  
+|建立、更新和刪除分葉成員及其屬性。|stg.name_Leaf|必要：Insert<br /><br /> 選擇性：SELECT 和 UPDATE|  
 |將資料從 [分葉] 暫存資料表載入至適當的 MDS 資料庫資料表。|stg.udp_name_Leaf|執行 CREATE 陳述式之前，請先執行|  
-|建立、更新和刪除合併成員及其屬性。|stg.name_Consolidated|必要：Insert<br /><br /> 選擇性:SELECT 和 UPDATE|  
+|建立、更新和刪除合併成員及其屬性。|stg.name_Consolidated|必要：Insert<br /><br /> 選擇性：SELECT 和 UPDATE|  
 |將資料從 [合併] 暫存資料表載入至適當的 MDS 資料庫資料表。|stg.udp_name_Consolidated|執行 CREATE 陳述式之前，請先執行|  
-|在明確階層中移動成員。|stg.name_Relationship|必要：Insert<br /><br /> 選擇性:SELECT 和 UPDATE|  
+|在明確階層中移動成員。|stg.name_Relationship|必要：Insert<br /><br /> 選擇性：SELECT 和 UPDATE|  
 |將資料從 [關聯性] 暫存資料表載入至適當的 MDS 資料表。|stg.udp_name_Relationship|執行 CREATE 陳述式之前，請先執行|  
 |檢視將資料從暫存資料表插入至 MDS 資料庫資料表時發生的錯誤。|stg.udp_name_Relationship|SELECT|  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52783610"
   
 ##  <a name="rules"></a> 依商務規則驗證資料  
   
-|動作|安全性實體|[權限]|  
+|動作|安全性實體|Permissions|  
 |------------|---------------|-----------------|  
 |依商務規則驗證資料版本|mdm.udpValidateModel|執行 CREATE 陳述式之前，請先執行|  
   
@@ -68,7 +68,7 @@ ms.locfileid: "52783610"
   
 ##  <a name="Versions"></a> 刪除版本  
   
-|動作|[安全性實體]|[權限]|  
+|動作|[安全性實體]|Permissions|  
 |------------|----------------|-----------------|  
 |決定要刪除之版本的識別碼|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
 |刪除模型的版本|mdm.udpVersionDelete|執行 CREATE 陳述式之前，請先執行|  
@@ -77,7 +77,7 @@ ms.locfileid: "52783610"
   
 ##  <a name="Hierarchy"></a> 立即套用階層成員權限  
   
-|動作|[安全性實體]|[權限]|  
+|動作|[安全性實體]|Permissions|  
 |------------|----------------|-----------------|  
 |立即套用成員權限|mdm.udpSecurityMemberProcessRebuildModel|執行 CREATE 陳述式之前，請先執行|  
   

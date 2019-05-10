@@ -10,15 +10,15 @@ helpviewer_keywords:
 - business rules [Master Data Services], requiring attribute values
 - attributes [Master Data Services], requiring values
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c635c6083c42be3d1e3eb84afc8f188b0bdf94a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 03f868d679f1d51dbb672cfdab5dbeaa2b4fc8a1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62763842"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478866"
 ---
 # <a name="require-attribute-values-master-data-services"></a>要求屬性值 (Master Data Services)
   當您想要確保主要資料完整時，在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中要求屬性值。  
