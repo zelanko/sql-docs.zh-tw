@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - web configuration file [Master Data Services]
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e5f87caf233c5b2a0f7bedc50f5ab9b9f6f392f5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: ef92aa3410ee12fd5edc4ea602e64a6fa06fdc9c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814250"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477224"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 組態參考 (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52814250"
 ## <a name="webconfig-elements"></a>Web.Config 元素  
  除了標準的 IIS、.NET Framework、ASP.NET 和 Windows Communication Foundation (WCF) 組態項目以外，Web.config 檔案還包含自訂的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 項目 (**\<masterDataServices>**)。 下表描述 Web.config 檔案中包含的元素。  
   
-|組態元素|Description|  
+|組態元素|描述|  
 |---------------------------|-----------------|  
 |**masterDataServices**|自訂元素。 將 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服務連接到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。|  
 |**connectionStrings**|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [connectionStrings 項目 (ASP.NET 設定結構描述)](https://go.microsoft.com/fwlink/?LinkId=178347) 。|  
@@ -56,7 +56,7 @@ ms.locfileid: "52814250"
   
 ### <a name="elements-and-attributes"></a>元素和屬性  
   
-|項目|Description|  
+|項目|描述|  
 |----------|-----------------|  
 |**執行個體**|子元素。 包含指定 Web 服務和資料庫連接字串之資訊的屬性。|  
 |**virtualPath**|屬性。 指定 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式和服務的路徑。 這對應於 IIS ApplicationHost.config 檔案中 **\<site>** 項目下之 **\<application>** 項目的 **path** 屬性。|  

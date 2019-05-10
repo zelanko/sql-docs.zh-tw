@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 67f58d5fea9da2df2e65d4085446f591ebd7ff25
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 697a1c06a2d30d5721c122c557f3e41836335b02
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147943"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449947"
 ---
 # <a name="data-mining-query-tools"></a>資料採礦查詢工具
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "50147943"
 |資料採礦查詢轉換|使用資料流程來源所提供的資料，在資料流程內執行預測查詢。<br /><br /> 工作編輯器提供預測查詢產生器，以及用來手動修改 DMX 查詢的文字方塊。<br /><br /> 轉換只能用於建立使用資料流程中之資料的查詢，也就是使用 PREDICTION JOIN 語法的查詢。 此元件不能用於執行內容查詢或其他類型的 DMX 陳述式。|  
   
 ##  <a name="bkmk_API"></a> 應用程式開發介面  
- 您可以搭配 OLE DB 或 Analysis Services ADOMD 用戶端等伺服器通訊協定使用各種程式語言，建立針對資料採礦模型執行查詢的自訂應用程式。 如需詳細資訊，請參閱 [資料採礦程式設計](../../analysis-services/data-mining-programming.md)。  
+ 您可以搭配 OLE DB 或 Analysis Services ADOMD 用戶端等伺服器通訊協定使用各種程式語言，建立針對資料採礦模型執行查詢的自訂應用程式。 如需詳細資訊，請參閱 [資料採礦程式設計](../../analysis-services/data-mining/data-mining-programming.md)。  
   
  不過，XMLA 會構成與 Analysis Service 伺服器之所有互動的基礎訊息格式。 在 XMLA 訊息內，查詢的表示方式會根據您傳送的是以 DMX 為基礎的預測查詢、內容查詢，或使用資料採礦結構描述資料列集擷取模型中繼資料的查詢而有所不同。  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a2ace569180006f54461631848ecbf5342b2c1e3
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 99e9c837250c6020bb91c376a6ec34c5e5847f2b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472037"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099487"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 在 Kubernetes 上的巨量資料叢集
 
@@ -133,12 +133,12 @@ mssqlctl cluster create
 
 ## <a id="env"></a> 環境變數
 
-下列環境變數用於不會儲存在 部署設定檔的安全性設定。
+下列環境變數用於不會儲存在 部署設定檔的安全性設定。 請注意，除了認證的 Docker 設定可以設定在組態檔中。
 
 | 環境變數 | 描述 |
 |---|---|---|---|
-| **DOCKER_REGISTRY** | 私用登錄中儲存用來部署叢集的映像。 |
-| **DOCKER_REPOSITORY** | 上述的登錄，影像都會儲存在私人存放庫。 |
+| **DOCKER_REGISTRY** | 私用登錄中儲存用來部署叢集的映像。 使用*私用 repo.microsoft.com*閘道公開預覽版的 ducration 的。|
+| **DOCKER_REPOSITORY** | 上述的登錄，影像都會儲存在私人存放庫。 使用*mssql 私人預覽*閘道公開預覽版的持續期間。|
 | **DOCKER_USERNAME** | 存取容器映像，如果它們儲存在私人存放庫的使用者名稱。 |
 | **DOCKER_PASSWORD** | 存取上述的私人存放庫的密碼。 |
 | **DOCKER_IMAGE_TAG** | 用來標記映像的標籤。 預設值為**最新**，但我們建議使用對應的發行版本的標記，以避免版本不相容的問題。 |
@@ -152,12 +152,12 @@ mssqlctl cluster create
 下列範例示範如何設定環境變數，適用於 Linux (bash) 和 Windows (PowerShell):
 
 ```bash
-export CONTROLLER_USERNAME=<controller_user>
+export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
-export DOCKER_REGISTRY=<docker-registry>
-export DOCKER_REPOSITORY=<docker-repository>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
+export DOCKER_REGISTRY=private-repo.microsoft.com
+export DOCKER_REPOSITORY=mssql-private-preview
 export DOCKER_USERNAME=<docker-username>
 export DOCKER_PASSWORD=<docker-password>
 export DOCKER_IMAGE_TAG=ctp2.5
@@ -166,10 +166,10 @@ export DOCKER_IMAGE_TAG=ctp2.5
 ```PowerShell
 SET CONTROLLER_USERNAME=admin
 SET CONTROLLER_PASSWORD=<password>
-SET DOCKER_REGISTRY=<docker-registry>
-SET DOCKER_REPOSITORY=<docker-repository>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
+SET DOCKER_REGISTRY=private-repo.microsoft.com
+SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
 SET DOCKER_IMAGE_TAG=ctp2.5

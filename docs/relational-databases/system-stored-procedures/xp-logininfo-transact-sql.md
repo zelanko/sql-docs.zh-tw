@@ -18,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5c214c8b061e2530c4dcf4b178b6028cbdca01fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 96dc11ebc246e42fb4b01b777b430c6aa9230b5e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62644811"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099962"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
  如果*account_name*並**成員**所指定，則傳回的下一個層級群組的成員的清單。 如果*account_name*是本機群組，則清單會包含本機使用者、 網域使用者和群組。 如果*account_name*是網域帳戶，清單由網域使用者所組成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須連接到網域控制器，才能擷取群組成員資格資訊。 如果伺服器無法連上網域控制器，就不會傳回任何資訊。  
   
- **xp_logininfo**只會傳回來自 Active Director 全域群組，非萬用群組的資訊。  
+ **xp_logininfo**只會傳回來自 Active Directory 全域群組非萬用群組的資訊。  
   
 ## <a name="permissions"></a>Permissions  
  需要的成員資格**sysadmin**固定伺服器角色或成員資格**公用**固定的資料庫角色中**主要**具有 EXECUTE 權限授與的資料庫。  

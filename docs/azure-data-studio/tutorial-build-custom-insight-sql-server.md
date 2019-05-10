@@ -2,21 +2,21 @@
 title: 教學課程：建置自訂的深入解析小工具
 titleSuffix: Azure Data Studio
 description: 本教學課程會示範如何建置自訂的深入解析小工具，並將它們新增至 Azure Data Studio 中的資料庫和伺服器儀表板。
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: tutorial
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ab545d4d058780503778fb470bc5802ecae9d077
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 4a2aee7f7ca9c61306e0241ff77a87c1c7dae112
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63157067"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089737"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>教學課程：建置自訂的深入解析小工具
 

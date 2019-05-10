@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 98ccb271-04da-4126-9729-67e9a479aaef
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3c80f719bd756a0ad241ef270507e638b08c2081
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 18789f5bc1d97e1531588d50e2430829f95912b8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222637"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485244"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>工作 12：新增衍生的資料行轉換來新增 MDS 需要的資料行
   在這項工作中，您會將衍生的資料行轉換加入至資料流程。 新增兩個衍生的資料行**ImportType**並**BatchTag**至記錄傳遞給這項轉換。 您應該先加入這兩個資料行，然後再將資料上傳至 MDS 中的暫存資料表。 這兩個是 MDS 中暫存資料表的必要資料行。 請參閱[分葉成員暫存資料表](../master-data-services/leaf-member-staging-table-master-data-services.md)如需詳細資訊。  

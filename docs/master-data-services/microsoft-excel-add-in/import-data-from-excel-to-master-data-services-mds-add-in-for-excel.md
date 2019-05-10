@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7e987ab75413334865b5e7d577860c498540adcd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: c134a2e540fd597c36f07bc312e2f67a73e07d28
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53200848"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476965"
 ---
 # <a name="import-data-from-excel-to-master-data-services-mds-add-in-for-excel"></a>將資料從 Excel 匯入 Master Data Services (適用於 Excel 的 MDS 增益集)
 
@@ -28,7 +28,7 @@ ms.locfileid: "53200848"
 >  -   當您發行變更時，系統會刪除 MDS 管理之資料格的註解。  
 > -   MDS 管理的資料格中不支援公式。 MDS 管理之資料格中的公式會處理為文字值。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
@@ -50,7 +50,7 @@ ms.locfileid: "53200848"
 > [!NOTE]  
 >  如果您要將新的成員 (資料列) 加入至工作表，但是無法順利將它們發行至 MDS 儲存機制，表示您可能沒有工作表中所有屬性的 [更新] 權限。 在 [檢閱] 索引標籤上，按一下 [變更] 群組中的 [取消保護工作表]，再次嘗試發行。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
  [套用商務規則 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>另請參閱  

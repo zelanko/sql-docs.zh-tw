@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 752eefde-8b87-4f54-878e-9963ccbadc8e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b8e309592588a38a57d2e5160845ad171346e758
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 525e0286d8d82f501981c9e936caca581886b9b4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222857"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481232"
 ---
 # <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>工作 10：設定複合定義域使用參考資料服務
   在這個工作中，您會設定**地址驗證**若要使用的複合定義域**Melissa Data – Address Check**服務。 在執行階段的清理活動期間，DQS 會將地址驗證定義域中的定義域值傳遞給服務以進行清理。 請參閱[對應至參考資料的定義域/複合定義域](https://msdn.microsoft.com/library/hh213030.aspx)如需詳細資訊。  

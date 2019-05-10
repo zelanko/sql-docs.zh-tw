@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.srvinfopg.f1
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8a65b9b50c3b57afc055022392681a946be605c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4d2fabec1bd022a1d73c3abc669995d04bfc9856
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62763411"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478848"
 ---
 # <a name="master-data-services-server-configuration-page-configuration-manager"></a>Master Data Services 伺服器組態頁面 (組態管理員)
   使用 [伺服器組態] 頁面可檢視本機伺服器電腦的組態資訊。  

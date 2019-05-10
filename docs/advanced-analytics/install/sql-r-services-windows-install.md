@@ -3,17 +3,17 @@ title: 安裝 SQL Server 2016 R Services （資料庫內）-SQL Server 機器學
 description: 新增 R 程式設計語言支援，可在 Windows 上 SQL Server 2016 R Services 上的資料庫引擎。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 05/03/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 787b26c401f825c6c74298a803a16d59f1a37d04
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 52935abf74fcf3ad7a4f7c8d78faa6b9b21d47e5
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748710"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095947"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安裝 SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -208,6 +208,7 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
 * [SQL Server Machine Learning 服務的防火牆設定](../../advanced-analytics/security/firewall-configuration.md)
 * [啟用額外的網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [啟用遠端連接](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
+* [管理磁碟配額](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas)以避免執行耗盡磁碟空間的工作的外部指令碼
 
 <a name="bkmk_configureAccounts"></a>
 <a name="bkmk_AllowLogon"></a>
