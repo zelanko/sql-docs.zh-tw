@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: e6411a69ba754cfc06f651224391ed41cf96fe07
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 492ae270cb4fb97cc0f236018b547d62591083eb
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62517783"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485543"
 ---
 # <a name="discontinued-master-data-services-features"></a>已停止的 Master Data Services 功能
 

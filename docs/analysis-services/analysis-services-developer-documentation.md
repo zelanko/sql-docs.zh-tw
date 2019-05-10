@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8822a85e39efde36a04b92e8a926adca6839cf58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 44be6e7ab0bb3598b2478f1a5f94e64fee48d05a
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62930334"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449977"
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services Developer 文件
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +48,7 @@ Analysis Services 提供許多方式可以自訂的解決方案，透過程式�
 - 雖然您可以建置的 XMLA 和 MDX 開放標準為基礎的解決方案，它是相當罕見，若要這樣做。 XMLA 以外沒有文件，以協助您，和大部分的社群和論壇支援 MDX 參考繪製從以.NET 或原生 (MSOLAP) 技術的經驗。
 
 ## <a name="programming-in-analysis-services"></a>Analysis Services 中的程式設計
-[資料採礦程式設計](../analysis-services/data-mining-programming.md)描述建置方案，包括資料採礦物件的方法。
+[資料採礦程式設計](../analysis-services/data-mining/data-mining-programming.md)描述建置方案，包括資料採礦物件的方法。
 
 [多維度模型程式設計](../analysis-services/multidimensional-models/multidimensional-model-programming.md)描述的開發工作與整合自訂方案中的多維度模型物件的方法。
 

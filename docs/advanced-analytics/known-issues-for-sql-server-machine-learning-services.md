@@ -2,17 +2,17 @@
 title: R 語言和 Python 整合-SQL Server Machine Learning 服務的已知的問題
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 04/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 19427de01c39dc4b4578fc31db1d610af829d770
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2b9ed73b2b4cb65696f9809d757eb901367dde63
+ms.sourcegitcommit: b6ca8596c040fa731efd397e683226516c9f8359
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650699"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64906157"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>在 Machine Learning 服務的已知的問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -406,6 +406,29 @@ R --max-ppsize=500000
 
 要求的因數會被視為與所有 RevoScaleR 分析函數中的因數相同，除了 `rxDTree`以外。
 
+### <a name="20-datatable-as-an-outputdataset-in-r"></a>20.在 R 中 OutputDataSet 做 Data.table
+
+使用`data.table`做為`OutputDataSet`在 R 中不支援在 SQL Server 2017 累積更新 13 (CU13) 及更早版本。 可能會出現下列訊息：
+
+```
+Msg 39004, Level 16, State 20, Line 2
+A 'R' script error occurred during execution of 
+'sp_execute_external_script' with HRESULT 0x80004004.
+Msg 39019, Level 16, State 2, Line 2
+An external script error occurred: 
+Error in alloc.col(newx) : 
+  Internal error: length of names (0) is not length of dt (11)
+Calls: data.frame ... as.data.frame -> as.data.frame.data.table -> copy -> alloc.col
+
+Error in execution.  Check the output for more information.
+Error in eval(expr, envir, enclos) : 
+  Error in execution.  Check the output for more information.
+Calls: source -> withVisible -> eval -> eval -> .Call
+Execution halted
+```
+
+`data.table` 為`OutputDataSet`在 R 中支援在 SQL Server 2017 累積更新 14 (CU14) 和更新版本。
+
 ## <a name="python-script-execution-issues"></a>Python 指令碼執行問題
 
 本節包含專屬於執行 SQL Server，以及由 Microsoft 發佈的 Python 套件相關的問題 Python 的已知的問題包括[revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)和[microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
@@ -465,8 +488,19 @@ go
 >  *~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
 > *SyntaxWarning: telemetry_state 是使用全域宣告之前*
 
-
 在 SQL Server 2017 累積更新 3 (CU3) 中已修正此問題。 
+
+### <a name="5-numeric-decimal-and-money-data-types-not-supported"></a>5.不支援的數值、 decimal 和 money 資料類型
+
+從 SQL Server 2017 累積更新 12 (CU12)，在 WITH RESULT SETS numeric、 decimal 和 money 資料類型時，不支援使用 Python 與`sp_execute_external_script`。 可能會出現下列訊息：
+
+> *[程式碼：39004 SQL 狀態：就會傳回 S1000] 'Python' 指令碼錯誤，HRESULT 0x80004004 'sp_execute_external_script' 的執行期間發生。*
+
+> *[程式碼：39019 SQL 狀態：就會傳回 S1000] 發生外部指令碼錯誤：*
+> 
+> *SqlSatelliteCall 錯誤：輸出結構描述中不支援的類型。支援的型別： bit、 smallint、 int、 datetime、 smallmoney、 實際和 float。char、 varchar 部分支援。*
+
+這個問題已修正在 SQL Server 2017 累積更新 14 (CU14)。
 
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise 和 Microsoft R Open
 

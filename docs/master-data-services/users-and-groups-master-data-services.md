@@ -13,15 +13,15 @@ helpviewer_keywords:
 - users [Master Data Services], about users
 - groups [Master Data Services], about groups
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 00c51ad3a3b3d428a9a89ef5aafed54c26db76cf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: bba9009365a4353a6fc5610fe97b6c859ea8910f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781780"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484951"
 ---
 # <a name="users-and-groups-master-data-services"></a>使用者和群組 (Master Data Services)
 

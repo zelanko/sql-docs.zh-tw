@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b8511efe6b567fad82ab45f7f5a53188b0f13643
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f25023f6a0191cb645134d327f40ea84ba64932f
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147073"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357316"
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>多維度模型中的翻譯 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,8 +36,6 @@ ms.locfileid: "50147073"
 4.  以滑鼠右鍵按一下任何欄位，然後選取 [瀏覽資料] 。 您會看到每個成員的英文、西班牙文和法文翻譯。  
   
  日期、時間和貨幣格式的實作未透過翻譯。 若要根據用戶端的地區設定，以動態方式提供特定文化特性的格式，請使用 [貨幣轉換精靈] 和 **FormatString** 屬性。 如需詳細資訊，請參閱[貨幣轉換 &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) 和 [FormatString 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl)。  
-  
- Analysis Services 教學課程中的[Lesson 9: Defining Perspectives and Translations](../../analysis-services/lesson-9-defining-perspectives-and-translations.md) 將逐步引導您完成建立及測試翻譯的步驟。  
   
 ## <a name="defining-translations"></a>定義翻譯  
   

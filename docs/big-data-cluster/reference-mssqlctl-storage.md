@@ -10,11 +10,11 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 120f230fad10c968590ab7e5c1430433598ddcd6
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63473193"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775895"
 ---
 # <a name="mssqlctl-storage"></a>mssqlctl storage
 

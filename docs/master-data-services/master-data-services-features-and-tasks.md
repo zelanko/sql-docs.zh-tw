@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d78afd9c3206a5b2b8cd04482ac891f9aae87f0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1fe37b8bf80f9fc3255dfcf38abf87f9c54f82a1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62466826"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484674"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 功能及工作
 

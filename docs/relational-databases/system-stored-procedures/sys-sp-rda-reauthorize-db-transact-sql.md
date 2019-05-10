@@ -71,7 +71,7 @@ EXEC sp_rda_reauthorize_db @credential = @credentialName, @with_copy = 1;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.sp_rda_deauthorize_db &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
+ [sys.sp_rda_deauthorize_db &#40;SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

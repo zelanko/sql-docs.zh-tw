@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1ed0aa7fad822748bfab2426ef22071a72ba1774
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 936006a3205d7ce043e664b68c5c8605253e4aa6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62637125"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485406"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>商務規則條件 (Master Data Services)
 

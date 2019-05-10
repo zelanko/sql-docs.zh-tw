@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 429608f066b0c99c9677a0e35f0b8925e58c7dff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63250056"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489275"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>工作 4 (選擇性)：結合、比對及發行新的資料集
   經過一段時間後，您需要將更多的資料加入至 MDS 儲存機制。 然後再新增資料，它可用來比較新資料與已在 MDS 中，以確保，您不會加入重複或不正確的資料中受管理的資料。 在適用於 Excel 的 Master Data Services 增益集中，您可以結合兩個工作表中的資料然後比較資料，以識別重複項並加以移除，之後再將資料發行到 MDS。 MDS Excel 增益集的比對功能會使用 DQS 比對功能來識別資料中的相符內容。 在這項工作中，您會將兩個工作表中的資料結合到一個工作表，然後執行比對活動來識別重複項並加以移除，之後再將資料發行到 MDS。 請參閱[資料品質比對 MDS 增益集中適用於 Excel](https://msdn.microsoft.com/library/hh548681.aspx)並[結合資料](https://msdn.microsoft.com/library/hh548680.aspx)主題以取得詳細資料。  

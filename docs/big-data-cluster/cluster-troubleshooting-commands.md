@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 0548176a191d5c2b16b113b5a931a1ed0435741c
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 51e6f11460e7a7c1f650b68624cc09d7cea76399
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472302"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877667"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>監視和疑難排解 SQL Server 的巨量資料叢集
 
@@ -244,7 +244,7 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 > [!Note]
 > 如果您收到下列錯誤：*無法接聽連接埠 8001 來：所有的接聽程式無法建立因下列錯誤：無法建立接聽程式：錯誤接聽 tcp4 127.0.0.1:8001: > 繫結：通常允許只有一個使用的每個通訊端位址 （網路通訊協定/位址/連接埠）。無法建立接聽程式：錯誤接聽 tcp6： 位址 [[:: 1]]: 8001： 遺漏中的連接埠 > 解決錯誤：無法在任何要求的連接埠上接聽: [{8001 9090}]*，請確定您沒有啟動儀表板已經從另一個視窗。
 
-當您在 在您的瀏覽器上啟動 儀表板時，您可能會因為在 AKS 叢集中，預設為啟用的 RBAC 權限警告而儀表板所使用的服務帳戶沒有足夠的權限存取的所有資源 (例如*禁止 pod:使用者"系統： serviceaccount:kube-系統： kubernetes-儀表板上 「 無法列出 「 預設 」 的命名空間中的 pod*)。 執行下列命令，以提供必要的權限`kubernetes-dashboard`，然後重新啟動儀表板：
+當您在 在您的瀏覽器上啟動 儀表板時，您可能會因為在 AKS 叢集中，預設為啟用的 RBAC 權限警告而儀表板所使用的服務帳戶沒有足夠的權限存取的所有資源 (例如*禁止 pod:使用者"系統： serviceaccount:kube-系統： kubernetes-儀表板 「 無法列出 「 預設 」 的命名空間中的 pod*)。 執行下列命令，以提供必要的權限`kubernetes-dashboard`，然後重新啟動儀表板：
 
 ```bash
 kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard

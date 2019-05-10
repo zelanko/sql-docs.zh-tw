@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 教學課程第 5 課：建立計算結果的欄 |Microsoft Docs
-ms.date: 03/08/2019
+ms.date: 04/25/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d1e2c4df54313ecc66e5e49904bdc40393c410f7
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: b56fe07237faa6570fd4b8c1adb31d3cce8e4540
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685555"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776066"
 ---
 # <a name="create-calculated-columns"></a>建立導出資料行
 
@@ -27,7 +27,7 @@ ms.locfileid: "57685555"
 
 這一課也是第一次使用 Data Analysis Expressions (DAX)。 DAX 是一種特殊的語言來建立高度自訂的表格式模型的公式運算式。 在本教學課程中，您可以使用 DAX 來建立導出資料行、 量值和角色篩選條件。 若要進一步了解，請參閱[表格式模型中的 DAX](../tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)。 
   
-完成本課程的估計時間：**15 分鐘**  
+估計的時間才能完成這一課：**15 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 
@@ -47,7 +47,7 @@ ms.locfileid: "57685555"
   
     名為 [Calculated Column 1] 的新資料行將會插入 [日曆季] 資料行的左側。  
   
-4.  在資料表上方的公式列中輸入下列 DAX 公式：「自動完成」可協助您輸入資料行和資料表的完整名稱，以及列出可用的函數。  
+4.  在資料表上方的公式列中輸入下列 DAX 公式：自動完成協助您輸入的資料行和資料表的完整格式的名稱，並列出可用的函式。  
   
     ```  
     =RIGHT(" " & FORMAT([MonthNumberOfYear],"#0"), 2) & " - " & [EnglishMonthName]  
@@ -85,7 +85,7 @@ DayOfWeek 計算結果欄提供可排序的星期幾名稱。
 #### <a name="create-a-productsubcategoryname-calculated-column-in-the-dimproduct-table"></a>在 DimProduct 資料表中建立 ProductSubcategoryName 計算結果的欄  
   
   
-1.  在  **DimProduct**資料表中，捲動到右邊的資料表。 您會發現，最右側的資料行命名為 [加入資料行] \(斜體)，請按一下該欄位標題。  
+1.  在  **DimProduct**資料表中，捲動到右邊的資料表。 請注意名為最右側資料行***加入資料行***，按一下 資料行標題。  
   
 2.  在公式列中，輸入下列公式：  
     

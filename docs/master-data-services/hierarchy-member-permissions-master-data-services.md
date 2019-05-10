@@ -11,15 +11,15 @@ helpviewer_keywords:
 - members [Master Data Services], permissions
 - permissions [Master Data Services], members
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c477fcb56fd8eeea68e44497b46be807a434d536
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 497bbda56028394547414aff5b360473445da9c1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62516506"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485891"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層成員權限 (Master Data Services)
 

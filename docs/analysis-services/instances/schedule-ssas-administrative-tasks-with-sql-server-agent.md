@@ -1,5 +1,5 @@
 ---
-title: 排程 SSAS 管理工作，與 SQL Server Agent |Microsoft 文件
+title: 排程 SSAS 管理工作，與 SQL Server Agent |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f0a8525196bacff6d0bf75b28a17c154a6eb919a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 171caf19d960533c1043cdbfaea7226207d277f5
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019115"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357515"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>使用 SQL Server Agent 排程 SSAS 管理工作
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,14 +24,14 @@ ms.locfileid: "34019115"
   
  本主題是一項逐步解說，其中示範了兩種使用 SQL Server Agent 來執行 XMLA 指令碼的方式。 第一則範例會示範如何排程單一維度的處理。 第二則範例會示範如何將處理工作結合成依照排程執行的單一指令碼。 若要完成此逐步解說，您必須符合下列必要條件。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  您必須安裝 SQL Server Agent 服務。  
   
  根據預設，作業會在此服務帳戶底下執行。 SQL Server Agent 的預設帳戶是 NT Service\SQLAgent$\<執行個體名稱 >。 若要執行備份或處理工作，此帳戶必須是 Analysis Services 執行個體的系統管理員。 如需詳細資訊，請參閱 [將伺服器系統管理員權限授與 Analysis Services 執行個體](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
   
- 您也應該擁有要使用的測試資料庫。 您可以部署 AdventureWorks 多維度範例資料庫或是要用於此逐步解說之 Analysis Services 多維度教學課程中的專案。 如需詳細資訊，請參閱 [安裝 Analysis Services 多維度模型化教學課程的範例資料和專案](../../analysis-services/install-sample-data-and-projects.md)。  
+ 您也應該擁有要使用的測試資料庫。 您可以部署 AdventureWorks 多維度範例資料庫或是要用於此逐步解說之 Analysis Services 多維度教學課程中的專案。 如需詳細資訊，請參閱 [安裝 Analysis Services 多維度模型化教學課程的範例資料和專案](../multidimensional-tutorial/install-sample-data-and-projects.md)。  
   
-## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>範例 1：在排程工作中處理維度  
+## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>範例 1：處理維度，以在排定的工作  
  這則範例會示範如何建立和排程處理維度的作業。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 排程工作是內嵌至 SQL Server Agent 作業中的 XMLA 指令碼。 這項作業已排程在所要的時間與頻率執行。 由於 SQL Server Agent 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的一部分，因此，您會同時使用 Database Engine 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 來建立並排程管理工作。  
@@ -83,13 +83,13 @@ ms.locfileid: "34019115"
   
 7.  在 [伺服器] 中，輸入 **localhost** (代表 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的預設執行個體) 和 **localhost\\**\<執行個體名稱> (代表具名執行個體)。  
   
-     如果您要從遠端電腦執行作業，請使用作業執行所在的伺服器名稱和執行個體名稱。 使用格式\<*伺服器名稱*> 預設執行個體，和\<*伺服器名稱*>\\<*執行個體名稱*> 的具名執行個體。  
+     如果您要從遠端電腦執行作業，請使用作業執行所在的伺服器名稱和執行個體名稱。 使用格式\<*伺服器名稱*> 的預設執行個體，並\<*伺服器名稱*>\\<*執行個體名稱*> 的具名執行個體。  
   
 8.  在 **[類型]** 中，選取 **[SQL Server Analysis Services 命令]**。  
   
 9. 在 [命令] 中，按一下滑鼠右鍵，然後選取 [貼上]。 您在上一個步驟中產生的 XMLA 指令碼應該就會出現在命令視窗中。  
   
-10. 按一下 **[確定]**。  
+10. 按一下 [確定] 。  
   
 11. 在 **[選取頁面]** 底下，按一下 **[排程]**，然後按一下 **[新增]**。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "34019115"
   
 15. 當作業完成時，請按一下 **[關閉]**。  
   
-## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>範例 2：在排程工作中批次處理維度和資料分割  
+## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>範例 2：批次處理維度和分割區在排定的工作  
  這則範例中的程序會示範如何建立和排程批次處理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫維度的作業，同時處理相依於此維度進行彙總的 Cube 資料分割。 如需批次處理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的詳細資訊，請參閱[批次處理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)。  
   
 ###  <a name="bkmk_BatchProcess"></a> 在 SQL Server Agent 作業中建立批次處理維度和資料分割的指令碼  
@@ -205,7 +205,7 @@ ms.locfileid: "34019115"
   
 10. 在 [命令] 中，按一下滑鼠右鍵，然後選取 [貼上]。  
   
-11. 按一下 **[確定]**。  
+11. 按一下 [確定] 。  
   
 12. 在 **[排程]** 頁面中，按一下 **[新增]**。  
   
