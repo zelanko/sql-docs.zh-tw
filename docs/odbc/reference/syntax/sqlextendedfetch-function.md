@@ -20,12 +20,12 @@ ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5e8844d3152f9465c8bb61acca9351f58834087f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 63030b34e4b607b850f25a67357d62a7184467c8
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982282"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537189"
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch 函式
 **合規性**  
@@ -39,7 +39,7 @@ ms.locfileid: "62982282"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLExtendedFetch(  
       SQLHSTMT         StatementHandle,  

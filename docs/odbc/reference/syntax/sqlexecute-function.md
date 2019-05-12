@@ -20,12 +20,12 @@ ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad8aec58fea182c080d55217db94ea2cda08184b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 08eb9db7645448157a76b3bcfdd302f6654f68f5
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259237"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537262"
 ---
 # <a name="sqlexecute-function"></a>SQLExecute 函式
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259237"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLExecute(  
      SQLHSTMT     StatementHandle);  

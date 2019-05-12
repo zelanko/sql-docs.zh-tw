@@ -20,12 +20,12 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 86386460c3abc9ab7b6463b01ee4388e9186ad2b
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982390"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536322"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 函式
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "62982390"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetPos(  
       SQLHSTMT        StatementHandle,  
@@ -315,7 +315,7 @@ SQLRETURN SQLSetPos(
 ## <a name="code-example"></a>程式碼範例  
  在下列範例中，應用程式可讓使用者瀏覽 「 訂單 」 資料表，並更新訂單狀態。 資料指標為索引鍵集導向資料列集大小為 20，並使用開放式並行存取控制比較資料列版本。 擷取每個資料列集之後，應用程式會將它列印，可讓使用者選取和更新的訂單狀態。 應用程式會使用**SQLSetPos**若要將游標放在選取的資料列，並執行定位的更新的資料列。 （為了清楚起見會忽略錯誤處理）。  
   
-```  
+```cpp  
 #define ROWS 20  
 #define STATUS_LEN 6  
   

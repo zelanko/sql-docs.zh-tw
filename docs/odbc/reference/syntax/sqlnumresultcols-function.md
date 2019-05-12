@@ -20,12 +20,12 @@ ms.assetid: d863179f-12a9-4b55-ac6b-7d84202d3da3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87f2e46c5b774983ecac2f4bbaf377b3e7260bef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 42d90172c9e0d0fafb836e5b917a88d52a994b86
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62465944"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536493"
 ---
 # <a name="sqlnumresultcols-function"></a>SQLNumResultCols 函數
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "62465944"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLNumResultCols(  
      SQLHSTMT        StatementHandle,  

@@ -20,12 +20,12 @@ ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2d5e05e62350d916e9c5fcf680af05717b39aa58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a0ae475ba4dc290f57eadf94d1e45e8a203a7ce5
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242332"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536601"
 ---
 # <a name="sqlinstallererror-function"></a>SQLInstallerError 函式
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63242332"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 RETCODE SQLInstallerError(  
      WORD      iError,  

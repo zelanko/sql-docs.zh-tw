@@ -20,12 +20,12 @@ ms.assetid: b96ab3b8-08d5-4fea-9ffe-e03043efbf2d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54c8dbed5599952778ca7651acbdb55a21b8f876
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7d9065d48e8b4af686e1ff64272fbe902e066cb6
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259284"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537278"
 ---
 # <a name="sqlgetconfigmode-function"></a>SQLGetConfigMode 函式
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259284"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL SQLGetConfigMode(  
      UWORD *   pwConfigMode);  

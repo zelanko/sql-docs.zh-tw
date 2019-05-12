@@ -20,12 +20,12 @@ ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f1c5bbfd2e2fbf91fd9e91acafe0bc72d006d3f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 948fc36da520777812c02e6e5d52a423eb9cc288
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63132756"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536541"
 ---
 # <a name="sqlgettranslator-function"></a>SQLGetTranslator 函式
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63132756"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL SQLGetTranslator(  
      HWND      hwndParent,  

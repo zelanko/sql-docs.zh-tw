@@ -20,12 +20,12 @@ ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 001238b4e5d47b22ca991efcd8b4ee28971d7af7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 15074b31b1c147ef78a898dbb8624f3b40358d13
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982302"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537133"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 函式
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "62982302"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLFetch(  
      SQLHSTMT     StatementHandle);  

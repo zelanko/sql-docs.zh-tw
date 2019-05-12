@@ -20,12 +20,12 @@ ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a680f5579b241f6b279f5ecc994d32c8fad784f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6cd3569425a862efd662c894c6839eb6df0f767e
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62465934"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536514"
 ---
 # <a name="sqlmoreresults-function"></a>SQLMoreResults 函數
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "62465934"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLMoreResults(  
      SQLHSTMT     StatementHandle);  

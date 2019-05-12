@@ -20,12 +20,12 @@ ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a10ec8f8fa6ef2b0e310680f58252f98628ff045
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b40da961e3e659bf4cd3e3692b4674399bce47a6
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62656056"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537203"
 ---
 # <a name="sqlsetconfigmode-function"></a>SQLSetConfigMode 函式
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "62656056"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL SQLSetConfigMode(  
      UWORD     wConfigMode);  

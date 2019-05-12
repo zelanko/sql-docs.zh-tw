@@ -20,12 +20,12 @@ ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9e0db81314355b987d139b678d292f5cfe293a7e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1aeaef9b120a0bd4be008adafe8e9a24724279a0
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982372"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537250"
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys 函數
 **合規性**  
@@ -42,7 +42,7 @@ ms.locfileid: "62982372"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLForeignKeys(  
      SQLHSTMT       StatementHandle,  
@@ -219,7 +219,7 @@ SQLRETURN SQLForeignKeys(
 |-------------------|--------------------|-------------------|--------------------|--------------|  
 |客戶|CUSTID|訂單|CUSTID|1|  
   
-```  
+```cpp  
 #define TAB_LEN SQL_MAX_TABLE_NAME_LEN + 1  
 #define COL_LEN SQL_MAX_COLUMN_NAME_LEN + 1  
   

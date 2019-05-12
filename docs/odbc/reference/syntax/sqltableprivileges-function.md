@@ -20,12 +20,12 @@ ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe1b3a3420ad882136b13b131938169dbdb224bd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 81659ae2cab2343a7fcf03327cbdc89c0db6c8c0
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63233560"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536311"
 ---
 # <a name="sqltableprivileges-function"></a>SQLTablePrivileges 函數
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63233560"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLTablePrivileges(  
      SQLHSTMT      StatementHandle,  

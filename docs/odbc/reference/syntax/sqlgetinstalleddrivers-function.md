@@ -20,12 +20,12 @@ ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 173346c990e388935c800d76069f97ee9cf3f399
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0ff675a184ea0804988972ef10e9a383cdd45230
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63132734"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537208"
 ---
 # <a name="sqlgetinstalleddrivers-function"></a>SQLGetInstalledDrivers 函式
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63132734"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL SQLGetInstalledDrivers(  
      LPSTR   lpszBuf,  

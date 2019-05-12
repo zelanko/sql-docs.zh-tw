@@ -20,12 +20,12 @@ ms.assetid: 985fcee1-f204-425c-bdd1-deb0e7d7bbd9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 794dc83a27d3c4882b5df4edbb4f2a645cd5ca1c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6a1c66c9ab423a6bb722c422450b99c1a47118f7
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63061506"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537193"
 ---
 # <a name="sqlexecdirect-function"></a>SQLExecDirect 函式
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63061506"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLExecDirect(  
      SQLHSTMT     StatementHandle,  

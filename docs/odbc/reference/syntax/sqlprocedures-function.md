@@ -20,12 +20,12 @@ ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 260406eddd6caef88035376a764c3e140547e6c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 76e1154e3cdf3cc52d311d0afa6372b4be9019c4
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63186138"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537217"
 ---
 # <a name="sqlprocedures-function"></a>SQLProcedures 函數
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63186138"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLProcedures(  
      SQLHSTMT       StatementHandle,  

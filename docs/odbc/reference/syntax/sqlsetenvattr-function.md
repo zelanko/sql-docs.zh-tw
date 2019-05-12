@@ -20,12 +20,12 @@ ms.assetid: 0343241c-4b15-4d4b-aa2b-2e8ab5215cd2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61b83ee255e580c557bfae9923d67735c63c3912
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 09e5483bd5d1a1e2cb7398ee73d456c46439893f
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982197"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536290"
 ---
 # <a name="sqlsetenvattr-function"></a>SQLSetEnvAttr 函數
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "62982197"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetEnvAttr(  
      SQLHENV      EnvironmentHandle,  

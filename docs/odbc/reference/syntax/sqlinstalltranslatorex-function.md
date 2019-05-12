@@ -20,12 +20,12 @@ ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 276b8627588bcd3472c12564db1e8c6e6af1ef2b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 57a2fb53226af9aeb6e546f6109a3e182ffc754f
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242319"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536560"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx 函式
 **合規性**  
@@ -38,7 +38,7 @@ ms.locfileid: "63242319"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL SQLInstallTranslatorEx(  
      LPCSTR    lpszTranslator,  

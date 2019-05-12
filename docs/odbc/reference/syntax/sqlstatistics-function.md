@@ -20,12 +20,12 @@ ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6cd0503b9f0169a19179bcee545132279903ea10
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f4277c6606392c91ffb3de40ace658cd68461f01
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851610"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536260"
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics 函數
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "62851610"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLStatistics(  
      SQLHSTMT        StatementHandle,  

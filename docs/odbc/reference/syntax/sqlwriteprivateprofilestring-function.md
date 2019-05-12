@@ -20,12 +20,12 @@ ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4f070b1494cb54d026d65f5a432c5faf834c38aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ff853976cf0d900cb24391ff6bf13838782ea876
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719715"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536763"
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>SQLWritePrivateProfileString 函式
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "62719715"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL SQLWritePrivateProfileString(  
      LPCSTR     lpszSection,  

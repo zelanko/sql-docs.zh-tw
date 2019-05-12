@@ -13,12 +13,12 @@ ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4dda69fa741555f4402bded930f68260b154fd30
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 297c856cc2481a6d3266d7654797f81b9b9f5c11
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63262255"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536612"
 ---
 # <a name="sqlpoolconnect-function"></a>SQLPoolConnect 函式
 **合規性**  
@@ -29,7 +29,8 @@ ms.locfileid: "63262255"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp
+  
 SQLRETURN  SQLPoolConnect(  
                 SQLHDBC              hDbc,  
                 SQLHDBC_INFO_TOKEN   hDbcInfoToken,  

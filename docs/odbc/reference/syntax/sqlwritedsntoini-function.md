@@ -20,12 +20,12 @@ ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 197c22a160b30fc9c1958e90470c174e3888a053
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c5a36be7a98a39cab8b9df428b8d4bd9a1d399a1
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63233364"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536783"
 ---
 # <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni 函式
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63233364"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL SQLWriteDSNToIni(  
      LPCSTR   lpszDSN,  

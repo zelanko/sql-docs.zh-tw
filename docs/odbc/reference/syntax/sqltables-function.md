@@ -20,12 +20,12 @@ ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dfe77cba535b78f387a786ddc56f65cf87172644
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2a69ffbde7ec4ff1d7eebbb73f0b60a619755c37
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63233357"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536799"
 ---
 # <a name="sqltables-function"></a>SQLTables 函數
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63233357"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLTables(  
      SQLHSTMT       StatementHandle,  
@@ -162,7 +162,7 @@ SQLRETURN SQLTables(
 ## <a name="example"></a>範例  
  下列範例程式碼不會釋放控制代碼和連線。 請參閱[SQLFreeHandle 函式](../../../odbc/reference/syntax/sqlfreehandle-function.md)並[SQLFreeStmt 函式](../../../odbc/reference/syntax/sqlfreestmt-function.md)來釋放控制代碼和陳述式的程式碼範例。  
   
-```  
+```cpp  
 // SQLTables.cpp  
 // compile with: user32.lib odbc32.lib  
 #include <windows.h>  

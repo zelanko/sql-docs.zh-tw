@@ -20,12 +20,12 @@ ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f44ae90a82e778bf8e8564b719aa6b9f0157a05a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c49e7fd827cfd48df07e5e5a01367977504f4511
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982381"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536266"
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 函數
 **合規性**  
@@ -40,7 +40,7 @@ ms.locfileid: "62982381"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLSpecialColumns(  
      SQLHSTMT      StatementHandle,  
