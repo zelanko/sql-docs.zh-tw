@@ -20,12 +20,12 @@ ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aad8baf55dc8960c533e1694309083952dece3d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 53ab6ddfb8253b1df877c6e20df43f8327f0f2e5
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62656046"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537392"
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr 函數
 **合規性**  
@@ -39,7 +39,7 @@ ms.locfileid: "62656046"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetConnectAttr(  
      SQLHDBC       ConnectionHandle,  

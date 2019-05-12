@@ -20,12 +20,12 @@ ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e91febb4b5b94b5a7f9df62347b4db5edcecf975
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 601c0cdab47c338b903514f2e2e47547551ef678
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259276"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537732"
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc 函式
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259276"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLCopyDesc(  
      SQLHDESC     SourceDescHandle,  
@@ -106,7 +106,7 @@ SQLRETURN SQLCopyDesc(
 ### <a name="code-example"></a>程式碼範例  
  在下列範例中，描述元作業用於複製到 PartsCopy 資料表的 PartsSource 表格的欄位。 PartsSource 資料表的內容提取到中的資料列集緩衝區*hstmt0*。 這些值做為參數的 INSERT 陳述式上*hstmt1*填入 PartsCopy 資料表的資料行。 若要這樣做的 IRD 欄位*hstmt0*複製到的 IPD 欄位*hstmt1*，與欄位的 ARD *hstmt0*會複製到APD欄位*hstmt1*。 使用**SQLSetDescField** IPD SQL_DESC_PARAMETER_TYPE 屬性設 SQL_PARAM_INPUT，當您從具有輸出參數的陳述式複製 IRD 欄位必須為輸入的參數的 IPD 欄位。  
   
-```  
+```cpp  
 #define ROWS 100  
 #define DESC_LEN 50  
 #define SQL_SUCCEEDED(rc) (rc == SQL_SUCCESS || rc == SQL_SUCCESS_WITH_INFO)  

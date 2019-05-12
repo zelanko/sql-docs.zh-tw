@@ -20,12 +20,12 @@ ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f8c585bc758b74c666c8da625c1e57af7af2582
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c737a9dfd6e7a33b5e160b3d952fac0b354148b4
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63258795"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538195"
 ---
 # <a name="sqlgetdescrec-function"></a>SQLGetDescRec 函式
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63258795"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetDescRec(  
       SQLHDESC        DescriptorHandle,  

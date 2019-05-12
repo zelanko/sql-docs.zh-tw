@@ -20,12 +20,12 @@ ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2b28b6380594150030e8f70a5b658a3bc18e258
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 20316f2a7932768951633ae24e1b1e180c1dfb49
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062356"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537582"
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver 函式
 **合規性**  
@@ -38,7 +38,7 @@ ms.locfileid: "63062356"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL SQLConfigDriver(  
      HWND     hwndParent,  

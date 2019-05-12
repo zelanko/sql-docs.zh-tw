@@ -13,12 +13,12 @@ ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ce48e7aa89451131b7ed483fa5132af22565c170
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c4d00fcff0b2fa1948f6b2f6f66b863501e12d97
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63252749"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537701"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID 函式
 **合規性**  
@@ -29,7 +29,8 @@ ms.locfileid: "63252749"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp
+  
 SQLRETURN  SQLCleanupConnectionPoolID (  
                 SQLHENV    EnvironmentHandle  
                 SQLPOOLID  PoolID );  

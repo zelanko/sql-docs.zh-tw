@@ -20,12 +20,12 @@ ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f63af414d59afed2bbe2e8eed3fba7a1362bb4bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e0ddaae66e60f77156b2d7c7e975875bb78d56cb
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63061476"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537324"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 函數
 **合規性**  
@@ -39,7 +39,7 @@ ms.locfileid: "63061476"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLFreeHandle(  
      SQLSMALLINT   HandleType,  
@@ -121,7 +121,7 @@ SQLRETURN SQLFreeHandle(
   
 ### <a name="code"></a>程式碼  
   
-```  
+```cpp  
 // SQLFreeHandle.cpp  
 // compile with: user32.lib odbc32.lib  
 #include <windows.h>  

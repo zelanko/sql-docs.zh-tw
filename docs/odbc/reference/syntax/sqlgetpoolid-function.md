@@ -13,12 +13,12 @@ ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39b3d3d1ecdc21acee8b238f56cede0a59146bd2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9fc6737530fdf151573a570eb83f777785ddb679
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63132699"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538082"
 ---
 # <a name="sqlgetpoolid-function"></a>SQLGetPoolID 函式
 **合規性**  
@@ -29,7 +29,8 @@ ms.locfileid: "63132699"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp
+  
 SQLRETURN  SQLGetPoolID (  
                 SQLHDBC_INFO_TOKEN    hDbcInfoToken,  
                 POOLID *              pPoolID );  

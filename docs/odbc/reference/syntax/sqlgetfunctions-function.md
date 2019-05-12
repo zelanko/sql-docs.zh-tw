@@ -20,12 +20,12 @@ ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e0a44320072f11a56b735502be3f1776f29cc1c0
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240242"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538014"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 函數
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63240242"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetFunctions(  
      SQLHDBC           ConnectionHandle,  
@@ -148,7 +148,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="code-example"></a>程式碼範例  
  下列三個範例顯示如何使用應用程式**SQLGetFunctions**決定了驅動程式是否支援**SQLTables**， **SQLColumns**，和**SQLStatistics**。 如果驅動程式不支援這些函式，應用程式中斷連線的驅動程式。 第一個範例會呼叫**SQLGetFunctions**一次，每個函式。  
   
-```  
+```cpp  
 SQLUSMALLINT TablesExists, ColumnsExists, StatisticsExists;  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
   
@@ -171,7 +171,7 @@ SQLDisconnect(hdbc);
   
  在第二個範例中，ODBC 3.x 應用程式會呼叫**SQLGetFunctions**並將它在其中傳遞陣列**SQLGetFunctions**傳回所有的 ODBC 的相關資訊 3.x 和先前的函式。  
   
-```  
+```cpp  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
 SQLUSMALLINT fExists[SQL_API_ODBC3_ALL_FUNCTIONS_SIZE];  
   
@@ -193,7 +193,7 @@ SQLDisconnect(hdbc);
   
  第三個範例是 ODBC 2.x 應用程式呼叫**SQLGetFunctions**並將它在其中傳遞的 100 個元素陣列**SQLGetFunctions**傳回資訊所有 ODBC 2.x 和先前的函式。  
   
-```  
+```cpp  
 #define FUNCTIONS 100  
   
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  

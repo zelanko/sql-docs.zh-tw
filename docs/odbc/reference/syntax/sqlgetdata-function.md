@@ -20,12 +20,12 @@ ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b42339c74102b86fe08c84b15da3266a1040dfd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0dc0e57356c972797cbd72fa4ce3427a0e473dad
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63258954"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537995"
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 函數
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63258954"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetData(  
       SQLHSTMT       StatementHandle,  
@@ -204,7 +204,7 @@ SQLRETURN SQLGetData(
   
  後續呼叫**SQLGetData**會從要求的最後一個資料行擷取資料; 先前的位移會變成無效。 例如，下列順序執行時：  
   
-```  
+```cpp  
 SQLGetData(icol=n), SQLGetData(icol=m), SQLGetData(icol=n)  
 ```  
   
@@ -218,7 +218,7 @@ SQLGetData(icol=n), SQLGetData(icol=m), SQLGetData(icol=n)
 ## <a name="code-example"></a>程式碼範例  
  在下列範例中，執行應用程式**選取**陳述式來傳回結果集的客戶識別碼、 名稱和電話號碼依名稱、 識別碼和電話號碼。 針對每個資料列，它會呼叫**SQLFetch**若要將游標移至下一個資料列位置。 它會呼叫**SQLGetData**擷取的已擷取的資料，針對資料而傳回的位元組數目的緩衝區中指定呼叫**SQLGetData**。 最後，它會列印每位員工的名稱、 識別碼和電話號碼。  
   
-```  
+```cpp  
 #define NAME_LEN 50  
 #define PHONE_LEN 50  
   

@@ -20,12 +20,12 @@ ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ef74d98102c424a71ac1728d664fddbeac2296c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 59b5cae9075d9d3c692d56e74edebabda8884fe2
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63258855"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537585"
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource 函數 (英文)
 **合規性**  
@@ -38,7 +38,7 @@ ms.locfileid: "63258855"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL SQLConfigDataSource(  
      HWND     hwndParent,  

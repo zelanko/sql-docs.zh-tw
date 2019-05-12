@@ -20,12 +20,12 @@ ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: faa88d18a5b682b98a56b6426ba6a94ee4687cab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 33e2d1f4630228d4c59487c2a5f9de891e87ece5
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63258827"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537382"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName 函數
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63258827"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetCursorName(  
      SQLHSTMT        StatementHandle,  

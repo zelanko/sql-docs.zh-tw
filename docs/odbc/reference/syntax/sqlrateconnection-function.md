@@ -13,12 +13,12 @@ ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d36224329fa29a54f7163cb4e1ce6228f460875
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9614ea6bb3de3475f651fe900589b6fa5a9c0f4b
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63262501"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537319"
 ---
 # <a name="sqlrateconnection-function"></a>SQLRateConnection 函式
 **合規性**  
@@ -29,7 +29,8 @@ ms.locfileid: "63262501"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp
+  
 SQLRETURN  SQLRateConnection(  
                 SQLHDBC_INFO_TOKEN   hRequest,  
                 SQLHDBC              hCandidateConnection,  

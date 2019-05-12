@@ -13,12 +13,12 @@ ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c344315764eac32e2e63663f07b7f797571a0e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4f9f9ae346e58c9ea5db95386fcc80264ec82e95
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63233433"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537533"
 ---
 # <a name="sqlsetdriverconnectinfo-function"></a>SQLSetDriverConnectInfo 函式
 **合規性**  
@@ -29,7 +29,8 @@ ms.locfileid: "63233433"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp
+  
 SQLRETURN SQLSetDriverConnectInfo(  
                 SQLHDBC_INFO_TOKEN   hDbcInfoToken,  
                 WCHAR *              InConnectionString,  

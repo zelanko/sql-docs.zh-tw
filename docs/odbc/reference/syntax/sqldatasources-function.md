@@ -20,12 +20,12 @@ ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b7b04dc2554b820fc6ac8344457754aae984d4b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9207dde54a14e345e99d3c04d4cb66622d85972e
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63258845"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537641"
 ---
 # <a name="sqldatasources-function"></a>SQLDataSources 函式
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63258845"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLDataSources(  
      SQLHENV          EnvironmentHandle,  

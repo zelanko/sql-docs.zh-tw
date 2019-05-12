@@ -15,12 +15,12 @@ ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91046e19e77d3074a8ecef2163e8d46ab528bec9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 736867be33531a73c0ada66a3be0f1245f1c483a
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259360"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537602"
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync 函式
 **合規性**  
@@ -39,7 +39,7 @@ ms.locfileid: "63259360"
   
 ## <a name="syntax"></a>語法  
   
-```vb  
+```cpp  
   
 SQLRETURN SQLCompleteAsync(  
       SQLSMALLINT HandleType,  

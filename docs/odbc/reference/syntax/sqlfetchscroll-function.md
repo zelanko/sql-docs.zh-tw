@@ -20,12 +20,12 @@ ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f7b7e5141a465249c818b50466b34a8155adc1d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 20a1580503ad141817edcf8e01772dfcc8dc39a3
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982172"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537361"
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll 函數
 **合規性**  
@@ -38,7 +38,7 @@ ms.locfileid: "62982172"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLFetchScroll(  
       SQLHSTMT      StatementHandle,  
@@ -259,7 +259,7 @@ SQLRETURN SQLFetchScroll(
   
  例如：  
   
-```  
+```cpp  
 // Fetch the next rowset.  
 SQLFetchScroll(hstmt, SQL_FETCH_NEXT, 0);  
 // Delete third row of the rowset. Does not modify the rowset buffers.  

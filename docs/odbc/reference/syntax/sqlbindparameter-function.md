@@ -21,12 +21,12 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc566c7cfd86e76df5389e56b7465dcd04b76f51
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 13f4c879f94118a2e2302a2032991e85551be0f7
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237889"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538131"
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 函數
 
@@ -41,7 +41,8 @@ ms.locfileid: "63237889"
   
 ## <a name="syntax"></a>語法  
   
-```cpp  
+```cpp
+  
 SQLRETURN SQLBindParameter(  
       SQLHSTMT        StatementHandle,  
       SQLUSMALLINT    ParameterNumber,  

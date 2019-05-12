@@ -20,12 +20,12 @@ ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61e32c11aafeaf693188a96b48ddd60728ba5bc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 444e41699c1a61acb82acc419a2f23db6142f7bb
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63061456"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537543"
 ---
 # <a name="sqldisconnect-function"></a>SQLDisconnect 函式
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63061456"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLDisconnect(  
      SQLHDBC     ConnectionHandle);  

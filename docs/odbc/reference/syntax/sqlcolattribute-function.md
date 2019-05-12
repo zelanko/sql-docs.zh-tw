@@ -20,12 +20,12 @@ ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca10614062a495de2c8f0ee80d7bbd5c0e675ad4
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.openlocfilehash: e23b7dd9ce81f02a822bece3546bf1c604030df1
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449753"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537561"
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 函數
 **合規性**  
@@ -39,7 +39,7 @@ ms.locfileid: "65449753"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLColAttribute (  
       SQLHSTMT        StatementHandle,  
@@ -192,7 +192,7 @@ SQLRETURN SQLColAttribute (
 ## <a name="example"></a>範例  
  下列範例程式碼不會釋放控制代碼和連線。 請參閱[SQLFreeHandle 函式](../../../odbc/reference/syntax/sqlfreehandle-function.md)， [ODBC 程式範例](../../../odbc/reference/sample-odbc-program.md)，並[SQLFreeStmt 函式](../../../odbc/reference/syntax/sqlfreestmt-function.md)來釋放控制代碼和陳述式的程式碼範例。  
   
-```  
+```cpp  
 // SQLColAttibute.cpp  
 // compile with: user32.lib odbc32.lib  
   

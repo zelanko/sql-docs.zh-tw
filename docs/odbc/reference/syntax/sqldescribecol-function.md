@@ -20,12 +20,12 @@ ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b8453d76dc2af0499dc8d8af2ca1ec3024aee83
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d179e7da0b53dbff66c8a3262f68fc4c3fa89df8
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63061856"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537720"
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol 函數
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63061856"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLDescribeCol(  
       SQLHSTMT       StatementHandle,  

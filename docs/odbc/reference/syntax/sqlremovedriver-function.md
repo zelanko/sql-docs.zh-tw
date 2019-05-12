@@ -20,12 +20,12 @@ ms.assetid: 9a3b4f8b-982b-44b9-ade6-754ff026dc90
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ef98000391ec6c39012603795b7f11a34c68183
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 274451cdd2d1c3d811e4105a6d646044537999f1
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185998"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537369"
 ---
 # <a name="sqlremovedriver-function"></a>SQLRemoveDriver 函式
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63185998"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL SQLRemoveDriver(  
      LPCSTR   lpszDriver,  

@@ -20,12 +20,12 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13ab95c762573be002782c06615fc6f01317499f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1446a999029b2c39bfbe4c6c43cf48ad3a09e58f
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63258806"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538114"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 函數
 
@@ -38,6 +38,7 @@ ms.locfileid: "63258806"
 ## <a name="syntax"></a>語法  
   
 ```cpp
+
 SQLRETURN SQLGetDiagField(  
      SQLSMALLINT     HandleType,  
      SQLHANDLE       Handle,  

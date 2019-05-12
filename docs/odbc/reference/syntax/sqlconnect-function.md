@@ -20,12 +20,12 @@ ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 530a5acf9cc7c0de375906279aff2bc6a05ec8a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3f2eabec895a0b56d396d5848c8f418451e0afb7
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259528"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537679"
 ---
 # <a name="sqlconnect-function"></a>SQLConnect 函數
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259528"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLConnect(  
      SQLHDBC        ConnectionHandle,  
@@ -193,7 +193,7 @@ SQLRETURN SQLConnect(
 ### <a name="code-example"></a>程式碼範例  
  在下列範例中，應用程式配置環境和連接控制代碼。 然後，它會連接到與使用者識別碼 JohnS SalesOrders 資料來源 」 和 「 密碼 Sesame 並處理資料。 當它完成處理資料時，它會從資料來源中斷連線的連線，並釋放控制代碼。  
   
-```  
+```cpp  
 // SQLConnect_ref.cpp  
 // compile with: odbc32.lib  
 #include <windows.h>  

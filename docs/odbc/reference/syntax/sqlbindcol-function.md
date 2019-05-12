@@ -20,12 +20,12 @@ ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab434e90f1b92911bfdfb9f66da67244e26ef776
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 17b907be3e2641fe1dcbbb8fbd96586132e054ca
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63129840"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538068"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 函數
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63129840"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLBindCol(  
       SQLHSTMT       StatementHandle,  
@@ -285,7 +285,7 @@ SQLRETURN SQLBindCol(
   
  如需更多的程式碼範例，請參閱 < [SQLBulkOperations 函式](../../../odbc/reference/syntax/sqlbulkoperations-function.md)， [SQLColumns 函式](../../../odbc/reference/syntax/sqlcolumns-function.md)， [SQLFetchScroll 函式](../../../odbc/reference/syntax/sqlfetchscroll-function.md)，和[SQLSetPos 函式](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
-```  
+```cpp  
 // SQLBindCol_ref.cpp  
 // compile with: odbc32.lib  
 #include <windows.h>  

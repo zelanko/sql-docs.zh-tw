@@ -20,12 +20,12 @@ ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4949d84f75483bd4379366621e4a8921d9b4de39
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e3413cf3c0e316e25ad52cc35ba348cab1694ae4
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63186032"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537410"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager 函式
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63186032"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL SQLRemoveDriverManager(  
      LPDWORD     pdwUsageCount);  

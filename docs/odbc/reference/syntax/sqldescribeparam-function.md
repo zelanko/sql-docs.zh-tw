@@ -20,12 +20,12 @@ ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62d61d43638c0ca6e3e43da83367dff461033463
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2e810d2e7ff3f69faea5fdcbccbb7f7ba276df48
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982298"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537619"
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam 函數
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "62982298"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLDescribeParam(  
       SQLHSTMT        StatementHandle,  
@@ -111,7 +111,7 @@ SQLRETURN SQLDescribeParam(
 ## <a name="code-example"></a>程式碼範例  
  下列範例會提示使用者輸入 SQL 陳述式，並接著準備該陳述式。 接著，它會呼叫**SQLNumParams**來判斷該陳述式是否包含任何參數。 如果陳述式包含參數，它會呼叫**SQLDescribeParam**來描述這些參數與**SQLBindParameter**來繫結它們。 最後，它會提示使用者提供任何參數的值，並接著執行陳述式。  
   
-```  
+```cpp  
 SQLCHAR       Statement[100];  
 SQLSMALLINT   NumParams, i, DataType, DecimalDigits, Nullable;  
 SQLUINTEGER   ParamSize;  

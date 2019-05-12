@@ -20,12 +20,12 @@ ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa1b2afec38116bef3ae90d75607d21c9a92cd80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 16b4bcfec2640c0dbd55d43be9df2391ed1f66c0
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062256"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538049"
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran 函數
 **合規性**  
@@ -39,7 +39,7 @@ ms.locfileid: "63062256"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLEndTran(  
      SQLSMALLINT   HandleType,  

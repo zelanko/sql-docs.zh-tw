@@ -20,12 +20,12 @@ ms.assetid: e321d460-e997-4527-aee6-207cf5a498e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d85f9fcf788dc5ccbba4b2675cbd7caa34dd242c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f6edec1b341855154e6df6ef24abb7da3d93ffc2
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63132764"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538007"
 ---
 # <a name="sqlgetstmtattr-function"></a>SQLGetStmtAttr 函數
 **合規性**  
@@ -39,7 +39,7 @@ ms.locfileid: "63132764"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetStmtAttr(  
      SQLHSTMT        StatementHandle,  

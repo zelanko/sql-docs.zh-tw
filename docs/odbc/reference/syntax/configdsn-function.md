@@ -20,12 +20,12 @@ ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d65b7f31010aeb768f7b04c06753f185d3cc792f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9387ffefe2fdcc9b30824018a763b87b81b831dc
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63232041"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538084"
 ---
 # <a name="configdsn-function"></a>ConfigDSN 函式
 **合規性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63232041"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL ConfigDSN(  
      HWND     hwndParent,  
