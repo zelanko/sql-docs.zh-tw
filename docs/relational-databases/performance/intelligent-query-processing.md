@@ -2,7 +2,7 @@
 title: Microsoft SQL 資料庫中的智慧查詢處理 | Microsoft Docs
 description: 可改善 SQL Server 和 Azure SQL Database 查詢效能的智慧查詢處理功能。
 ms.custom: ''
-ms.date: 03/05/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 230a3cb352dca689ee891eca6c6bfd6f516b6ebc
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: f9889ac45bff237ddb1e26e9dbbaffd12f3be556
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774573"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776032"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 資料庫中的智慧查詢處理
 
@@ -224,6 +224,7 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標設定。
 
 ## <a name="row-mode-memory-grant-feedback"></a>資料列模式記憶體授與意見反應
+
 **適用對象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]作為公開預覽功能
 
 > [!NOTE]
