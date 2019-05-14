@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a32bb1fef21b41fae6ef30dd011b5b7260203c94
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ccd9e4edc5a1238ba9c68f97de1d7f53fb899a74
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285986"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775539"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>運算式 (報表產生器及 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中從頭到尾都廣泛利用運算式來擷取、計算、顯示、分組、排序、篩選、參數化及格式化資料。 
@@ -56,13 +56,9 @@ ms.locfileid: "56285986"
   
  如需詳細資訊，請參閱 [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)(建立發票和表單的清單)。  
   
-### <a name="report-model-formulas"></a>報表模型公式  
- 當您針對使用報表模型當作資料來源的資料集設計查詢時，您可以建立「公式」。 公式是針對報表中的值所執行的計算，這些值是以報表模型中的資料為根據。  
-  
- 如需詳細資訊，請參閱[報表模型查詢中的公式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md)。  
-   
-##  <a name="DisplayText"></a> 了解簡單運算式中的字首符號  
- 簡單運算式會使用符號來指示參考是指向欄位、參數、內建集合還是報表項目集合。 下表顯示了顯示和運算式文字的範例：  
+## <a name="DisplayText"></a> 了解簡單運算式中的字首符號  
+
+簡單運算式會使用符號來指示參考是指向欄位、參數、內建集合還是報表項目集合。 下表顯示了顯示和運算式文字的範例：  
   
 |項目|顯示文字範例|運算式文字範例|  
 |----------|--------------------------|-----------------------------|  

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8c29bf1705343972bf8921bad1523f2ad5b19a8
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 9b65b89ea70d48991af89190c7577cd7dee2043a
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256113"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946348"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式檔案 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -257,7 +257,7 @@ ms.locfileid: "54256113"
 |----------------------|-----------------|------------------------------|  
 |SOURCE **="**_fieldID_**"**|指定對應到資料行的欄位識別碼。<br /><br /> \<資料行來源 **="**_fieldID_**"**/> 對應到 \<欄位識別碼 **="**_fieldID_**"**/>|必要項|  
 |NAME = "*columnName*"|指定資料列集中由格式檔案代表的資料行名稱。 此資料行名稱會用來識別結果集中的資料行，而且它不需要對應到用於目標資料表中的資料行名稱。|必要項|  
-|xsi **:** type **="**_ColumnType_**"**|這是識別元素執行個體之資料類型的 XML 建構 (如同屬性般使用)。 *ColumnType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。<br /><br /> 注意：[&lt;COLUMN&gt; 元素的 xsi:type 值](#XsiTypeValuesOfCOLUMN)一節的 \<COLUMN> 元素資料表列出了 *ColumnType* 的可能值及其相關屬性。|選擇性|  
+|xsi **:** type **="**_ColumnType_**"**|這是識別元素執行個體之資料類型的 XML 建構 (如同屬性般使用)。 *ColumnType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。<br /><br /> 注意:[&lt;COLUMN&gt; 元素的 xsi:type 值](#XsiTypeValuesOfCOLUMN)一節的 \<COLUMN> 元素資料表列出了 *ColumnType* 的可能值及其相關屬性。|選擇性|  
 |LENGTH **="**_n_**"**|定義固定長度資料類型的長度。 只有當 xsi:type 是字串資料類型時，才會使用 LENGTH。<br /><br /> *n* 的值必須為正整數。|選用 (只在 xsi:type 是字串資料類型時才可使用)|  
 |PRECISION **="**_n_**"**|指定數字中的位數。 例如，數字 123.45 的精確度是 5。<br /><br /> 其值必須為正整數。|選擇性 (唯有 xsi:type 是變數數字 (variable-number) 資料類型時才能使用)|  
 |SCALE **="**_int_**"**|指定數字中小數點右方的位數。 例如，數字 123.45 的小數位數是 2。<br /><br /> 值必須是整數。|選擇性 (唯有 xsi:type 是變數數字 (variable-number) 資料類型時才能使用)|  

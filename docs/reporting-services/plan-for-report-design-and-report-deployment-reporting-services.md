@@ -2,18 +2,18 @@
 title: 規劃報表設計與報表部署 | Reporting Services | Microsoft Docs
 ms.date: 09/12/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0910de2e41c28ea5faf61106e2fabb7d507d60e2
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 019a76f0df9884f788cb11de38ea14fdc723e701
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814231"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503686"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>規劃報表設計與報表部署 | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了數種撰寫與部署分頁報表的方法。 了解如何針對一起運作的報表撰寫和報表伺服器環境進行規劃。
@@ -51,8 +51,12 @@ ms.locfileid: "51814231"
 -   **報表產生器：** 從報表產生器將報表儲存至報表伺服器。  
   
 -   **入口網站** ：從 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]將報表上傳至原生模式報表伺服器。  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 -   **SharePoint：** 將報表上傳至以 SharePoint 模式報表伺服器設定的 SharePoint 網站。  
+
+::: moniker-end
   
 -   **程式設計方式：** 使用 SOAP API 介面，以程式設計的方式將報表發行至報表伺服器。 如需詳細資訊，請參閱 [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md)。  
   
@@ -66,7 +70,13 @@ ms.locfileid: "51814231"
   
  當您將報表定義上傳至報表伺服器，或升級包含現有報表的報表伺服器時，報表伺服器會以原始格式保留報表定義。 **第一次使用時**，報表伺服器會將報表伺服器資料庫中的報表升級為二進位格式，而這個格式在後續檢視時都會保留著。 報表定義 (.rdl) 本身不會升級。  
   
- 您可以從報表伺服器擷取報表定義檔案 (.rdl) 的唯讀複本。 在原生模式報表伺服器上，瀏覽至[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]，然後選取報表並按一下 [下載]。 在 SharePoint 模式部署中，瀏覽至文件庫，然後選取報表並按一下 **[下載複本]**。  
+ 您可以從報表伺服器擷取報表定義檔案 (.rdl) 的唯讀複本。 在原生模式報表伺服器上，瀏覽至[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]，然後選取報表並按一下 [下載]。 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
+在 SharePoint 模式部署中，瀏覽至文件庫，然後選取報表並按一下 **[下載複本]**。  
+
+::: moniker-end
   
  若要升級報表定義，您必須在報表撰寫環境 (例如 SQL Server Data Tools 或報表產生器) 下開啟報表，然後儲存報表。  
   

@@ -1,7 +1,7 @@
 ---
 title: PolyBase 向外延展群組 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: polybase
@@ -14,12 +14,13 @@ ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ad890736cf0536c5f4f776d2bd4949e195dd26d6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 6a07e7edf54e4cf83e33a59ae1e3a98d033cce8d
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205417"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774879"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 向外延展群組
 

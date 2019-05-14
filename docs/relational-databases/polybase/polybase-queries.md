@@ -1,7 +1,7 @@
 ---
 title: PolyBase 查詢情節 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: polybase
@@ -18,12 +18,13 @@ ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fb91a4603fa55fa967c51e25d24fcd33bc211218
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 1eb7c8cf10d263952a62a59fef9822142558f501
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099989"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774349"
 ---
 # <a name="polybase-query-scenarios"></a>PolyBase 查詢情節
 
