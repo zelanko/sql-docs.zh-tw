@@ -21,7 +21,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ca93ec5a3ef85cfef1b20f1266c00700cd027352
 ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/03/2018
 ms.locfileid: "52823282"

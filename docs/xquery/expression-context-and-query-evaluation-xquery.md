@@ -21,7 +21,7 @@ ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f8092182bff23580936e17923985739525309097
 ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/14/2019
 ms.locfileid: "54256873"
