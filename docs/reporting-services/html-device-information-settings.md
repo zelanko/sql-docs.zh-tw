@@ -2,21 +2,21 @@
 title: HTML 裝置資訊設定 | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - HTML [Reporting Services], rendering
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a8acf400f03ec77aff21d839dee132ba5258f54f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7c0d477364c4920e8220aef96629b24e34650ebb
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403633"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503105"
 ---
 # <a name="html-device-information-settings"></a>HTML 裝置資訊設定
 下表列出以 HTML 格式轉譯的裝置資訊設定。  

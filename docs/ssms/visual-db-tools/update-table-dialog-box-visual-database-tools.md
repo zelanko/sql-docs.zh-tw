@@ -11,15 +11,15 @@ f1_keywords:
 - vdt.dlgbox.updatetable
 - vdtsql.chm:69643
 ms.assetid: 174c7275-5b15-42a9-b172-5ff30de575a1
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 12369b0136b949409a81da44a5c40397c55aa53d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef55e7c73bf9aec256a2ec2d89a4734fe40b18a3
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752736"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098525"
 ---
 # <a name="update-table-dialog-box-visual-database-tools"></a>更新資料表對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

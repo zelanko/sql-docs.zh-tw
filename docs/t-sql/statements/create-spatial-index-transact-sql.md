@@ -23,12 +23,12 @@ ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d8cfcce92fc2eea73aa872720e8c758a7c26c097
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 9d7e9938c8132489bb18538aec6b8256dd2115fd
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542218"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503218"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ CREATE SPATIAL INDEX index_name
 [;]
   
 <object> ::=  
-    [ database_name. [ schema_name ] . | schema_name. ]  table_name  
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }  
   
 <geometry_tessellation> ::=  
 {

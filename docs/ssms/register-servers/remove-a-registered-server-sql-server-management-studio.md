@@ -1,9 +1,8 @@
 ---
 title: 移除已註冊的伺服器 (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
@@ -15,15 +14,14 @@ ms.assetid: 1f7f755f-7ed2-4572-aa18-13cdd92e350e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca56a7b636e1375bf78cdd3e061dff19ff2d4e3c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1940edae255d84d55a879479ef94cb14e87360a1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658366"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104304"
 ---
 # <a name="remove-a-registered-server-sql-server-management-studio"></a>移除已註冊的伺服器 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 [已註冊的伺服器] 移除伺服器。  
   
 ##  <a name="SSMSProcedure"></a>  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.checkforupdates.dialog
 ms.assetid: 40f942cc-8c87-45de-9456-44bd53b519e7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 11be673fabfbbbd6bbdd504d5d4d65d74aa4ea5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5aa56fa7c9a7f3c482cb9b8880cdb66fa3e3523
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626826"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65103264"
 ---
 # <a name="check-for-updates-dialog-box"></a>檢查更新檔對話方塊
 從 2012 年 11 月版的 SQL Server Data Tools 開始，您會在 [SQL] 功能表底下看到 [檢查更新] 功能表選項。  

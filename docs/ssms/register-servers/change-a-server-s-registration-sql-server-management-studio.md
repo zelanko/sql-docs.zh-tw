@@ -11,15 +11,15 @@ helpviewer_keywords:
 - modifying registered server connection information
 - Registered Servers [SQL Server], connection information changes
 ms.assetid: ce6d9d88-3ac8-4f5d-8ea9-e9b55ceca0f4
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 76fb544f7b522370884bfd6c7d8d87469418959d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5601719215e2196f1c2b94774468b07cd47ecc7f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815296"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104541"
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>變更伺服器的註冊 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

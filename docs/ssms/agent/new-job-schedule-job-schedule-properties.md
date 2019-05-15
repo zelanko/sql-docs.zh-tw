@@ -11,16 +11,16 @@ f1_keywords:
 - sql13.ag.job.scheduleproperties.f1
 - sql13.swb.maint.editrecurringjobsched.f1
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e1cc425cb817873d50966bf8c5fcbcc54864414c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cedcba1f41921a0e364a3e5419bec82cfa273920
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744646"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105505"
 ---
 # <a name="new-job-schedule---job-schedule-properties"></a>新增作業排程 - 作業排程屬性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "47744646"
 請指定排程將無限期地保持有效。  
   
 ## <a name="one-time-schedule-types-options"></a>僅執行一次的排程類型選項  
-**Date**  
+**日期**  
 選取作業要執行的日期。  
   
 **Time**  

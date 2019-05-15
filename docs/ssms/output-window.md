@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Activity Monitor [SQL Server Management Studio]
 - Object Explorer [SQL Server Management Studio]
 ms.assetid: a2ce1a07-b4e2-471c-87d2-b8de5e6c6864
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 38127390c049e2d5daef5b20aeb47eb727dcba53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a070121a50f056ad293bc4aec6af305587a9b6c3
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607396"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095675"
 ---
 # <a name="output-window-in-sql-server-management-studio"></a>SQL Server Management Studio 中的輸出視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

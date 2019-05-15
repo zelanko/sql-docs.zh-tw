@@ -1,4 +1,4 @@
-- name: SQL Server ++
+- name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: APS 的概觀
   href: ../analytics-platform-system/home-analytics-platform-system-aps-pdw.md

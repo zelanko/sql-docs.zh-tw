@@ -1,9 +1,9 @@
 ---
-title: 使用深入解析小工具來監視伺服器和資料庫
+title: 使用 Azure Data Studio 中的深入解析小工具，監視伺服器和資料庫
 titleSuffix: Azure Data Studio
 description: 深入了解 Azure Data Studio 中的深入解析小工具
-ms.custom: seodec18
-ms.date: 09/24/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,18 +11,18 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7fa7317d048d2bb9e19b6e82f5323a3b8ed15751
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5b52d54d60361b7572490da766b29eb5691efc0
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63238899"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620341"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 使用 insight 小工具管理資料庫與伺服器
 
-Insight 小工具採用您所用的 Transact-SQL (T-SQL) 查詢，以監控伺服器與資料庫並將它們轉換為可深入解析的視覺圖表。 
+Insight 小工具採用您所用的 Transact-SQL (T-SQL) 查詢，以監控伺服器與資料庫並將它們轉換為可深入解析的視覺圖表。
 
-Insights 是可以新增至伺服器與資料庫監控儀表板的客製圖表與圖形。 一目了然地檢視您的伺服器與資料庫，進而深入了解更多細節，並啟動您自定義的管理操作。 
+Insights 是可以新增至伺服器與資料庫監控儀表板的客製圖表與圖形。 一目了然地檢視您的伺服器與資料庫，進而深入了解更多細節，並啟動您自定義的管理操作。
 
 您可以建立類似下列範例的絕佳伺服器和資料庫管理儀表板：
 
@@ -33,11 +33,11 @@ Insights 是可以新增至伺服器與資料庫監控儀表板的客製圖表�
 
 - [建置自訂的 Insight 小工具](tutorial-build-custom-insight-sql-server.md)
 - *啟用內建的 Insight 小工具*
-   - [啟用效能監視 insight](tutorial-qds-sql-server.md)
-   - [啟用資料表空間使用量的深入解析](tutorial-table-space-sql-server.md)
+  - [啟用效能監視 insight](tutorial-qds-sql-server.md)
+  - [啟用資料表空間使用量的深入解析](tutorial-table-space-sql-server.md)
 
 
-## <a name="sql-queries"></a>SQL 查詢 
+## <a name="sql-queries"></a>SQL 查詢
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 會嘗試以避免產生但另一個語言或大量的使用者介面，如此它便會嘗試使用 T-SQL 盡可能以最低的 JSON 組態。 使用 T-SQL 設定深入解析小工具會利用現有的來源，可以轉換成具洞察力的小工具的實用 T-SQL 查詢的無數的數目。
 

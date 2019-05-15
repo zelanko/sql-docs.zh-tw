@@ -2,21 +2,21 @@
 title: 影像裝置資訊設定 | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - images [Reporting Services], rendering
 - device information settings [Reporting Services], IMAGE rendering
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b59fcf947a283ef60f5dd34f60e2cf365092cfa7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 295784ba9f2c14ce0f73f9639ec6ed129e447e76
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738726"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503084"
 ---
 # <a name="image-device-information-settings"></a>影像裝置資訊設定
   下表列出以 IMAGE 格式轉譯的裝置資訊設定。  

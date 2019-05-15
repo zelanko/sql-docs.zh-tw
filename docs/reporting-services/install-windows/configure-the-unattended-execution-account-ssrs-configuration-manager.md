@@ -13,14 +13,14 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ade8f4233e2cf830ecd17fe1626098f786312f01
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: cdaf6447080a82d5b58932e7e4987720a97963b6
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099909"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502938"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>設定自動執行帳戶 (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了一個特殊帳戶，它是用於自動報表處理和透過網路傳送連接要求。 以下是使用此帳戶的方式：  
@@ -75,6 +75,9 @@ ms.locfileid: "50099909"
  為了擷取影像檔，報表伺服器會自動使用此帳戶，而且您不需要採取特定的動作。 若要使用此帳戶連線到提供資料給報表的外部資料來源，您必須在報表資料來源或共用資料來源的資料來源屬性頁面上指定 [認證類型] 選項：  
   
 -   在 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]或 SharePoint 網站上，選取 [不需要認證] 選項。  
+
+> [!NOTE]
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
   
  自動報表處理帳戶主要是用來連接外部伺服器，而不是登入資料庫伺服器。 如果您想要使用此帳戶認證來登入資料庫，就必須在連接字串中指定認證。 如果資料庫伺服器支援 Windows 整合式安全性，而且自動報表處理所使用的帳戶擁有讀取資料庫的權限，您就可以指定 **Integrated Security=SSPI** 。 否則，您必須在連接字串中輸入使用者名稱和密碼，而此連接字串會以純文字格式顯示給有權編輯資料來源連接屬性的任何使用者查看。  
   

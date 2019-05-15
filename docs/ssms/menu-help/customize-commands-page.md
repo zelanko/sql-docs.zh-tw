@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.vs.customizecom.f1
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ccd1f0f6318aa5a81e9b824ecdd4ddd7a50bdd7a
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 38f4f27f87208614c5779cdecb070da3043b0472
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328328"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105194"
 ---
 # <a name="customize-commands-page"></a>自訂 (命令頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

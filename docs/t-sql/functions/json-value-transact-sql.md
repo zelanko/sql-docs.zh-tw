@@ -18,12 +18,12 @@ ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 2df74dbf5ee1205a801ea816c4bd48b255c6c80f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ed749535770a9cf0e0c4e9664b6f7c5be6e06cb4
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013389"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774894"
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -122,9 +122,10 @@ ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
 DECLARE @jsonInfo NVARCHAR(MAX)
 DECLARE @town NVARCHAR(32)
 
-SET @jsonInfo=N'<array of address info>'
+SET @jsonInfo=N'{"info":{"address":[{"town":"Paris"},{"town":"London"}]}';
 
-SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')
+SET @town=JSON_VALUE(@jsonInfo,'$.info.address[1].town'); -- Paris
+SET @town=JSON_VALUE(@jsonInfo,'$.info.address[1].town'); -- London
 ```  
   
 ### <a name="example-3"></a>範例 3  

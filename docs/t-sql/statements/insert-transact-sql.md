@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3a4da06849b245ba72d3ac87d5db04309f10823
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 7db64289b031851629c0627bd324eba752fd8554
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658382"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503478"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -97,8 +97,7 @@ INSERT
 INSERT   
 {  
     [BULK]  
-    [ database_name . [ schema_name ] . | schema_name . ]  
-    [ table_name | view_name ]  
+    { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
     ( <column_definition> )  
     [ WITH (  
         [ [ , ] CHECK_CONSTRAINTS ]  
@@ -124,7 +123,7 @@ INSERT
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
-INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name   
+INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ ( column_name [ ,...n ] ) ]  
     {   
       VALUES ( { NULL | expression } )  

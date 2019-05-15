@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Open With dialog box
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d1ae2df6aab71a5dc914260f19b13327e1e84a2a
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: fd2e27d4e7d9649b94c85a45c2fb3b67ef12756c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328158"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105055"
 ---
 # <a name="open-with-new-file"></a>開啟方式 (新增檔案)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
