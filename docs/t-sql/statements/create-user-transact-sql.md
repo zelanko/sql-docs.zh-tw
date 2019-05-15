@@ -1,7 +1,7 @@
 ---
 title: CREATE USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/03/2018
+ms.date: 05/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af33c0234ba1b8e6b92b5f1fee7f17f4d12dc667
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: ae453fa3cc9d51fae7402469989c3a25fc782e1c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042168"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488309"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "59042168"
   
 -   依據沒有登入之 Windows 使用者的使用者。 `CREATE USER [Contoso\Fritz];`    
 -   依據沒有登入之 Windows 群組的使用者。 `CREATE USER [Contoso\Sales];`  
--   具有 Azure Active Directory 使用者身分的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 使用者。 `CREATE USER [Contoso\Fritz] FROM EXTERNAL PROVIDER;`     
+-   具有 Azure Active Directory 使用者身分的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 使用者。 `CREATE USER [Fritz@contoso.com] FROM EXTERNAL PROVIDER;`     
 
 -   具有密碼之自主資料庫使用者。 (不適用於 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。) `CREATE USER Mary WITH PASSWORD = '********';`   
   

@@ -2,7 +2,7 @@
 title: 升級報表 (SSRS) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], upgrading
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - report definition files [Reporting Services]
 - .rdl files
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 072b8d78d0dcb70b56fe596bd3e994395bd6e64b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 04dacff6d9a7feed350c6f8e4417bbbd81b80b30
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028897"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502625"
 ---
 # <a name="upgrade-reports-ssrs"></a>升級報表 (SSRS)
 

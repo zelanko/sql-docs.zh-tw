@@ -13,15 +13,15 @@ helpviewer_keywords:
 - adding external tools
 - Tools menu
 ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1a81c4d80a63765ed7014104b0fe40679b4ca93b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed8edd7407ce83418379dbdd4a2a0f8baf2b2fef
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594546"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099510"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>將外部工具加入至工具功能表 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

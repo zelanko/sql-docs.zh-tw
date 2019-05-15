@@ -11,15 +11,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server], properties
 - diagrams [SQL Server], properties
 ms.assetid: 862b7c83-7878-49ad-84f0-67288d658ea8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b3090e9bea5af4205e125150d9cf94e4e6ff588d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70df13e2f61b5514e100163bafe9ae2b76fdacf5
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747526"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099943"
 ---
 # <a name="show-diagram-properties-visual-database-tools"></a>顯示圖表屬性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

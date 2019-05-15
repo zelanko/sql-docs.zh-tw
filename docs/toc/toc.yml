@@ -1,5 +1,5 @@
 - name: 歡迎使用
-  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: 概觀
   items:
     - name: SQL Server 的新功能
@@ -28,7 +28,7 @@
         - name: SQL Server 2019
           href: ../sql-server/sql-server-ver15-release-notes.md
         - name: SQL Server 2017
-          href: ../sql-server/sql-server-2017-release-notes.md?toc=..%2ftoc%2ftoc.json
+          href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
         - name: SQL Server 2016
           href: ../sql-server/sql-server-2016-release-notes.md
         - name: SQL Server 2014
@@ -61,20 +61,30 @@
               href: ../big-data-cluster/deploy-big-data-tools.md
             - name: 安裝 mssqlctl
               href: ../big-data-cluster/deploy-install-mssqlctl.md
-        - name: 部署指令碼
-          items:
-            - name: Azure Kubernetes Service
-              href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
-        - name: 部署指導
+        - name: 部署
           items:
             - name: 部署指導
               href: ../big-data-cluster/deployment-guidance.md
-            - name: Azure Kubernetes Service
-              href: ../big-data-cluster/deploy-on-aks.md
-            - name: Kubeadm
-              href: ../big-data-cluster/deploy-with-kubeadm.md
-            - name: Minikube
-              href: ../big-data-cluster/deploy-on-minikube.md
+            - name: 升級為新版本
+              href: ../big-data-cluster/deployment-upgrade.md
+            - name: 自訂部署
+              href: ../big-data-cluster/deployment-custom-configuration.md
+            - name: 設定儲存體
+              href: ../big-data-cluster/concept-data-persistence.md
+            - name: 離線部署
+              href: ../big-data-cluster/deploy-offline.md
+            - name: 部署目標
+              items:
+                - name: Azure Kubernetes Service
+                  href: ../big-data-cluster/deploy-on-aks.md
+                - name: Kubeadm
+                  href: ../big-data-cluster/deploy-with-kubeadm.md
+                - name: Minikube
+                  href: ../big-data-cluster/deploy-on-minikube.md
+            - name: 部署指令碼
+              items:
+                - name: Azure Kubernetes Service
+                  href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
     - name: 概念
       items:
         - name: 應用程式部署
@@ -89,8 +99,6 @@
           href: ../big-data-cluster/concept-storage-pool.md
         - name: 計算集區
           href: ../big-data-cluster/concept-compute-pool.md
-        - name: 資料持續性
-          href: ../big-data-cluster/concept-data-persistence.md
         - name: Security
           href: ../big-data-cluster/concept-security.md
     - name: 使用說明指南
@@ -111,6 +119,10 @@
                   href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
                 - name: HDFS 階層處理
                   href: ../big-data-cluster/hdfs-tiering.md
+                - name: 掛接 ADLS Gen2 進行 HDFS 階層處理
+                  href: ../big-data-cluster/hdfs-tiering-mount-adlsgen2.md
+                - name: 掛接 S3 進行 HDFS 階層處理
+                  href: ../big-data-cluster/hdfs-tiering-mount-s3.md
         - name: 資料擷取
           items:
             - name: 使用 curl 載入資料
@@ -141,6 +153,8 @@
               href: ../big-data-cluster/sparklyr-from-RStudio.md
             - name: GPU 支援與 TensorFlow
               href: ../big-data-cluster/spark-gpu-tensorflow.md
+            - name: 整合 Spark 與 SQL Server
+              href: ../big-data-cluster/spark-mssql-connector.md
         - name: 管理 SQL Server 巨量資料叢集
           items:
             - name: 連線至巨量資料叢集
@@ -167,6 +181,10 @@
               href: ../big-data-cluster/spark-history-server.md
     - name: 參考
       items:
+        - name: 部署參考
+          items:
+            - name: 部署組態檔
+              href: ../big-data-cluster/reference-deployment-config.md
         - name: mssqlctl 參考
           items:
             - name: mssqlctl
@@ -183,6 +201,8 @@
                   href: ../big-data-cluster/reference-mssqlctl-cluster.md
                 - name: mssqlctl cluster config
                   href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
+                - name: mssqlctl cluster config section
+                  href: ../big-data-cluster/reference-mssqlctl-cluster-config-section.md
                 - name: mssqlctl cluster debug
                   href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
             - name: 儲存體
@@ -471,7 +491,7 @@
                   href: ../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md
                 - name: PowerShell
                   href: ../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md
-                - name: Azure 虛擬機器 +
+                - name: Azure 虛擬機器 >
                   href: /azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
         - name: 操作方式
           href: ../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md
@@ -1926,9 +1946,9 @@
               href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: 部署
   items:
-    - name: 程式設計互動 ++
+    - name: 撰寫用戶端程式 >>
+      displayName: 'ADO, ADO.NET, connect, C#, C++, Java, Node.js, ODBC, OLE DB, PHP, Python, Ruby'
       href: ../connect/index.md
-      displayName: 'Connectivity, Connect, Connection'
     - name: 資料層應用程式
       href: ../relational-databases/data-tier-applications/data-tier-applications.md
       items:
@@ -4412,12 +4432,12 @@
               href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: 移轉與載入資料
   items:
-    - name: SQL Server Integration Services (SSIS) ++
+    - name: SQL Server Integration Services (SSIS) >>
       href: ../integration-services/index.md
     - name: 大量複製公用程式 (bcp)
       href: ../tools/bcp-utility.md
-    - name: Azure 移轉服務 +
-      displayName: 'DMS, Data Migration Service'
+    - name: Azure 移轉服務 >
+      displayName: 'DMS, Data Migration Service, Azure Data Migration Service'
       href: /azure/dms/dms-overview
     - name: Data Quality Services (DQS)
       items:
@@ -4945,7 +4965,7 @@
               items:
                 - name: 記憶體最佳化資料表訂閱者
                   href: ../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md
-                - name: 複寫至 SQL Database +
+                - name: 複寫至 SQL Database >
                   href: /azure/sql-database/replication-to-sql-database
                 - name: 重新發行資料
                   href: ../relational-databases/replication/republish-data.md
@@ -5295,7 +5315,7 @@
                     - name: 合併訂閱
                       href: ../relational-databases/replication/subscription-validation-options-merge-subscriptions.md
                 - name: 重新初始化訂閱
-                  itmes:
+                  items:
                     - name: 所有訂閱
                       href: ../relational-databases/replication/reinitialize-subscription-s-all-subscriptions.md
                     - name: 一個訂閱
@@ -5573,13 +5593,13 @@
                   href: ../sql-server/stretch-database/extended-events-for-stretch-database.md
         - name: 資源
           items:
-            - name: 定價 +
+            - name: 定價 >
               href: 'https://azure.microsoft.com/pricing/details/sql-server-stretch-database/'
-            - name: 部落格 +
+            - name: 部落格 >
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/tag/stretch-database/'
-            - name: 服務更新 +
+            - name: 服務更新 >
               href: 'https://azure.microsoft.com/updates/?product=sql-server-stretch-database'
-            - name: 影片 +
+            - name: 影片 >
               href: 'https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database'
     - name: 資料庫測試精靈
       href: ../dea/database-experimentation-assistant-overview.md
@@ -6958,180 +6978,173 @@
                     - name: 分析實際執行計劃
                       href: ../relational-databases/performance/analyze-an-actual-execution-plan.md
         - name: 記憶體內部 OLTP
-          href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
           items:
-            - name: 範例
-              items:
-                - name: 記憶體中 OLTP 程式碼範例
-                  href: ../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md
-                  items:
-                    - name: 示範：記憶體內部 OLTP 的效能改善
-                      href: ../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md
-                    - name: 建立記憶體最佳化資料表與原生編譯的預存程序
-                      href: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
-                    - name: 應用程式層級資料分割
-                      href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
-                    - name: 記憶體內部 OLTP 的範例資料庫
-                      href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
             - name: 概念
               items:
-                - name: 使用案例
+                - name: 記憶體內部概觀
                   href: ../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md
-                - name: 規劃功能的採用
-                  href: ../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md
-                - name: 需求
-                  href: ../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md
-                - name: 記憶體內部 OLTP 的純量使用者定義函數
-                  href: ../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md
-                - name: 索引
-                  href: ../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md
-                - name: 記憶體最佳化的資料表
-                  href: ../relational-databases/in-memory-oltp/memory-optimized-tables.md
                   items:
-                    - name: 概觀
+                    - name: 記憶體最佳化的資料表
                       href: ../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md
-                    - name: 原生編譯
+                    - name: 快速調查
+                      href: ../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
+                    - name: 影片、範例、資源
+                      href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
+                - name: 規劃記憶體內部
+                  href: ../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md
+                  items:
+                    - name: 需求
+                      href: ../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md
+                    - name: 評估優點
+                      href: ../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
+                    - name: 使用 PowerShell 評估
+                      href: ../relational-databases/in-memory-oltp/powershell-cmdlet-for-migration-evaluation.md
+                    - name: 記憶體最佳化建議程式
+                      href: ../relational-databases/in-memory-oltp/memory-optimization-advisor.md
+                    - name: 原生編譯建議程式
+                      href: ../relational-databases/in-memory-oltp/native-compilation-advisor.md
+                    - name: 資料表和資料列大小
+                      href: ../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md
+                    - name: 估計記憶體
+                      href: ../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md
+                    - name: 設定儲存體
+                      href: ../relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md
+                    - name: 移轉觸發程序
+                      href: ../relational-databases/in-memory-oltp/migrating-triggers.md
+                - name: 原生編譯
+                  href: ../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md
+                  items:
+                    - name: 資料表和預存程序
                       href: ../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md
-                    - name: 改變資料表
-                      href: ../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md
+                    - name: 不可部分完成的區塊
+                      href: ../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md
+                    - name: 純量使用者定義函式
+                      href: ../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md
+                    - name: 最佳做法
+                      href: ../relational-databases/in-memory-oltp/best-practices-for-calling-natively-compiled-stored-procedures.md
+                    - name: 解譯的記憶體內部資料表存取
+                      href: ../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
+                - name: 記憶體內部效能
+                  href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures-and-execution-set-options.md
+                  items:
+                    - name: 記憶體內部的硬體
+                      href: ../relational-databases/in-memory-oltp/blog-hardware-in-memory-oltp.md
+                    - name: Azure SQL Database 上的記憶體內部
+                      href: /azure/sql-database/sql-database-in-memory
+                - name: 記憶體內部管理
+                  href: ../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md
+                  items:
+                    - name: 還原和復原
+                      href: ../relational-databases/in-memory-oltp/restore-and-recovery-of-memory-optimized-tables.md
+                    - name: Backup
+                      href: ../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md
+                    - name: 檢查點
+                      href: ../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md
+                    - name: 高可用性
+                      href: ../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md
+                    - name: 延展性
+                      href: ../relational-databases/in-memory-oltp/scalability.md
+                    - name: IDENTITY 實作
+                      href: ../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md
+                - name: 記憶體內部架構
+                  href: ../relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md
+                  items:
+                    - name: 儲存體
+                      href: ../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md
+                    - name: 比較儲存體模式
+                      href: ../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
+                    - name: 耐久性
+                      href: ../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md
+                    - name: 記憶體回收
+                      href: ../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md
+                - name: 記憶體內部的 T-SQL
+                  href: ../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md
+                  items:
+                    - name: 支援的 T-SQL
+                      href: ../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md
+                    - name: 不支援的 T-SQL
+                      href: ../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md
+                    - name: 不支援的功能
+                      href: ../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md
+                    - name: 原生編譯的 DDL
+                      href: ../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md
+                    - name: 定義持久性
+                      href: ../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md
+                    - name: 資料類型
+                      href: ../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md
+                    - name: 記憶體內部的索引
+                      href: ../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md
+                - name: 記憶體內部的 SSIS
+                  href: ../relational-databases/in-memory-oltp/sql-server-integration-services-support-for-in-memory-oltp.md
+            - name: 教學課程
+              items:
+                - name: 建立記憶體最佳化的資料表和程序
+                  href: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
+                - name: 依經常性存取層日期排列的應用程式磁碟分割
+                  href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
+                - name: 效能示範
+                  href: ../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md
+                - name: 監視和疑難排解
+                  href: ../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md
+            - name: 範例
+              items:
+                - name: 記憶體內部範例資料庫
+                  href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
+                - name: 呼叫原生編譯的程序
+                  href: ../relational-databases/in-memory-oltp/calling-natively-compiled-stored-procedures-from-data-access-applications.md
+                - name: 資料表資料分割模式
+                  href: ../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md
+                - name: 原生編譯程序中的 MERGE
+                  href: ../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
+                - name: '記憶體內部的 SMO C#'
+                  href: ../relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md
+            - name: 使用說明指南
+              items:
+                - name: 記憶體最佳化資料表
+                  href: ../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md
+                  items:
+                    - name: 雜湊索引
+                      href: ../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md
+                - name: 原生編譯模組
+                  href: ../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md
+                  items:
+                    - name: ALTER 原生編譯模組
+                      href: ../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md
+                - name: T-SQL 因應措施
+                  href: ../relational-databases/in-memory-oltp/implementing-update-with-from-or-subqueries.md
+                  items:
+                    - name: 存取 TempDb 資料表
+                      href: ../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md
+                    - name: 跨資料庫查詢
+                      href: ../relational-databases/in-memory-oltp/cross-database-queries.md
+                    - name: 模擬 IF WHILE EXISTS
+                      href: ../relational-databases/in-memory-oltp/simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md
+                    - name: CASE 運算式
+                      href: ../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md
+                    - name: SQL_VARIANT 資料行
+                      href: ../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md
+                    - name: SQL 2016 中的計算資料行
+                      href: ../relational-databases/in-memory-oltp/migrating-computed-columns.md
                     - name: 交易
                       href: ../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md
-                    - name: 適用於資料分割的應用程式模式
-                      href: ../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md
-                    - name: 統計資料
-                      href: ../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md
-                    - name: 資料表與資料列大小
-                      href: ../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md
-                    - name: 查詢處理指南
-                      href: ../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md
-                    - name: 原生編譯的預存程序
-                      href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md
-                      items:
-                        - name: 建立原生編譯的預存程序
-                          href: ../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md
-                        - name: 更改原生編譯的 T-SQL 模組
-                          href: ../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md
-                        - name: 不可部分完成的區塊
-                          href: ../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md
-                        - name: 原生編譯的預存程序與執行 Set 選項
-                          href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures-and-execution-set-options.md
-                        - name: 呼叫原生編譯預存程序的最佳作法
-                          href: ../relational-databases/in-memory-oltp/best-practices-for-calling-natively-compiled-stored-procedures.md
-                        - name: 監視原生編譯預存程序的效能
-                          href: ../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md
-                        - name: 從資料存取應用程式呼叫原生編譯預存程序
-                          href: ../relational-databases/in-memory-oltp/calling-natively-compiled-stored-procedures-from-data-access-applications.md
-                    - name: 估計記憶體需求
-                      href: ../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md
-                      items:
-                        - name: 將資料庫繫結至資源集區
-                          href: ../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md
-                        - name: 監視記憶體使用量並為其進行疑難排解
-                          href: ../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md
-                        - name: 解決記憶體不足問題
-                          href: ../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md
-                        - name: 還原資料庫並將其繫結至資源集區
-                          href: ../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md
-                        - name: 記憶體回收
-                          href: ../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md
-                    - name: 建立與管理儲存體
-                      href: ../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md
-                      items:
-                        - name: 設定儲存
-                          href: ../relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md
-                        - name: 記憶體最佳化檔案群組
-                          href: ../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md
-                        - name: 耐久性
-                          href: ../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md
-                        - name: 檢查點作業
-                          href: ../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md
-                        - name: 定義持久性
-                          href: ../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md
-                        - name: 比較以磁碟為基礎的資料表儲存體和記憶體最佳化資料表儲存體
-                          href: ../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
-                        - name: 延展性
-                          href: ../relational-databases/in-memory-oltp/scalability.md
-                    - name: 備份資料庫
-                      href: ../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md
-                      items:
-                        - name: 分次還原
-                          href: ../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md
-                        - name: 還原與復原
-                          href: ../relational-databases/in-memory-oltp/restore-and-recovery-of-memory-optimized-tables.md
-                    - name: SQL Server 支援
-                      href: ../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md
-                      items:
-                        - name: 不支援的功能
-                          href: ../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md
-                        - name: 管理物件
-                          href: ../relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md
-                        - name: SQL Server Integration Services
-                          href: ../relational-databases/in-memory-oltp/sql-server-integration-services-support-for-in-memory-oltp.md
-                        - name: SQL Server Management Studio
-                          href: ../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md
-                        - name: 高可用性
-                          href: ../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md
-                        - name: T-SQL 支援
-                          href: ../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md
-                          items:
-                            - name: 資料型別
-                              href: ../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md
-                            - name: 使用解譯的 T-SQL 存取經記憶體最佳化的資料表
-                              href: ../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
-                            - name: 原生編譯的 T-SQL 模組支援的功能
-                              href: ../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md
-                            - name: 原生編譯 T-SQL 模組支援的 DDL
-                              href: ../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md
-                            - name: 記憶體內部 OLTP 不支援 T-SQL 建構
-                              href: ../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md
-                    - name: 移轉至 In-Memory OLTP
-                      href: ../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md
-                      items:
-                        - name: 判斷是否應將資料表或預存程序匯出至記憶體中 OLTP
-                          href: ../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
-                        - name: 記憶體最佳化 Advisor
-                          href: ../relational-databases/in-memory-oltp/memory-optimization-advisor.md
-                        - name: 原生編譯 Advisor
-                          href: ../relational-databases/in-memory-oltp/native-compilation-advisor.md
-                        - name: 用於移轉評估的 PowerShell Cmdlet
-                          href: ../relational-databases/in-memory-oltp/powershell-cmdlet-for-migration-evaluation.md
-                        - name: 在記憶體最佳化資料表中實作 SQL_VARIANT
-                          href: ../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md
-                        - name: 移轉計算資料行
-                          href: ../relational-databases/in-memory-oltp/migrating-computed-columns.md
-                        - name: 移轉觸發程序
-                          href: ../relational-databases/in-memory-oltp/migrating-triggers.md
-                        - name: 跨資料庫查詢
-                          href: ../relational-databases/in-memory-oltp/cross-database-queries.md
-                        - name: 在記憶體最佳化資料表中實作 IDENTITY
-                          href: ../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md
-                        - name: 原生編譯預存程序的移轉問題
-                          href: ../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md
-                          items:
-                            - name: 從原生編譯預存程序建立與存取 TempDB 中的資料表
-                              href: ../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md
-                            - name: 在原生編譯模組中模擬 IF-WHILE EXISTS 陳述式
-                              href: ../relational-databases/in-memory-oltp/simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md
-                            - name: 在原生編譯的預存程序中實作 MERGE 功能
-                              href: ../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
-                            - name: 在原生編譯的預存程序中實作 CASE 運算式
-                              href: ../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md
-                            - name: 以 FROM 或子查詢實作 UPDATE
-                              href: ../relational-databases/in-memory-oltp/implementing-update-with-from-or-subqueries.md
-                            - name: 實作外部聯結
-                              href: ../relational-databases/in-memory-oltp/implementing-an-outer-join.md
-            - name: 操作方式
-              items:
-                - name: 清查技術以提高效能
-                  href: ../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
-                - name: 使用記憶體最佳化加快暫存資料表與資料表變數的速度
-                  href: ../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md
-                - name: 針對雜湊索引進行疑難排解
-                  href: ../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md
-            - name: 參考
-              items:
-                - name: SQL Server 2016 技術白皮書內部人員
-                  href: ../relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md
+                - name: 管理，包括記憶體不足
+                  href: ../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md
+                  items:
+                    - name: 資源集區
+                      href: ../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md
+                    - name: 將資料庫還原到集區
+                      href: ../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md
+                    - name: 分階段還原
+                      href: ../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md
+                - name: 效能，包括統計資料
+                  href: ../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md
+                  items:
+                    - name: 監視效能
+                      href: ../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md
+                    - name: 加快暫存資料表
+                      href: ../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md
+                - name: 記憶體最佳化的 SSMS
+                  href: ../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md
         - name: 資料分割
           href: ../relational-databases/partitions/partitioned-tables-and-indexes.md
           items:
@@ -7247,6 +7260,8 @@
               items:
                 - name: 在 Windows 上安裝
                   href: ../relational-databases/polybase/polybase-installation.md
+                - name: 在 Linux 上安裝
+                  href: ../relational-databases/polybase/polybase-linux-setup.md
                 - name: 功能與限制
                   href: ../relational-databases/polybase/polybase-versioned-feature-summary.md
             - name: 設定外部資料來源
@@ -7291,17 +7306,19 @@
           items:
             - name: T-SQL 參考
               href: ../relational-databases/polybase/polybase-t-sql-objects.md
+            - name: 類型對應
+              href: ../relational-databases/polybase/polybase-type-mapping.md
         - name: 資源
           items:
-            - name: DBA Stack Exchange +
+            - name: DBA Stack Exchange >
               href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-            - name: Stack Overflow +
+            - name: Stack Overflow >
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: MSDN 論壇 +
+            - name: MSDN 論壇 >
               href: 'https://social.msdn.microsoft.com/Forums/home?category=sqlserver'
-            - name: 提交意見反應 +
+            - name: 提交意見反應 >
               href: 'https://feedback.azure.com/forums/908035-sql-server'
-            - name: Reddit +
+            - name: Reddit >
               href: 'https://www.reddit.com/r/SQLServer'
     - name: 連結的伺服器
       href: ../relational-databases/linked-servers/linked-servers-database-engine.md
@@ -7397,16 +7414,17 @@
           href: ../relational-databases/synonyms/create-synonyms.md
 - name: 報告與分析
   items:
-    - name: 進階分析與機器學習 ++
+    - name: 進階分析與機器學習 >>
       href: ../advanced-analytics/index.md
-    - name: Analytics Platform System ++
+    - name: Analytics Platform System >>
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: ../analytics-platform-system/index.md
-    - name: SQL Server Analysis Services (SSAS) ++
+    - name: SQL Server Analysis Services (SSAS) >>
       href: ../analysis-services/index.md
-    - name: SQL Server Reporting Services (SSRS) ++
+    - name: SQL Server Reporting Services (SSRS) >>
       href: ../reporting-services/index.md
     - name: Master Data Services
+      displayName: MDS
       href: ../master-data-services/master-data-services-overview-mds.md
       items:
         - name: 使用者入門
@@ -7891,6 +7909,8 @@
           items:
             - name: 選擇演算法
               href: ../relational-databases/security/encryption/choose-an-encryption-algorithm.md
+            - name: 針對 TDE 進行疑難排解
+              href: ../relational-databases/security/encryption/troubleshoot-tde.md
             - name: 設定具有安全記憶體保護區的 Always Encrypted
               href: ../relational-databases/security/encryption/configure-always-encrypted-enclaves.md
               items:
@@ -7932,11 +7952,11 @@
           items:
             - name: 附加密功能的 SQL Server 連接器
               href: ../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
-            - name: 攜帶您自己的金鑰 +
+            - name: 攜帶您自己的金鑰 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
-            - name: 輪替 TDE BYOK 金鑰
+            - name: 輪替 TDE BYOK 金鑰 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
-            - name: 移除 TDE 保護裝置 +
+            - name: 移除 TDE 保護裝置 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
             - name: 使用 Azure Key Vault 的 EKM
               href: ../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
@@ -7996,6 +8016,8 @@
               href: ../relational-databases/security/permissions-database-engine.md
             - name: 權限階層
               href: ../relational-databases/security/permissions-hierarchy-database-engine.md
+            - name: 使用服務 SID 授與對 SQL Server 服務的權限
+              href: ../relational-databases/security/using-service-sids-to-grant-permissions-to-services-in-sql-server.md
         - name: 加密
           href: ../relational-databases/security/encryption/sql-server-encryption.md
           items:
@@ -8003,10 +8025,10 @@
               href: ../relational-databases/security/encryption/encryption-hierarchy.md
             - name: 透明資料加密 (TDE)
               href: ../relational-databases/security/encryption/transparent-data-encryption.md
-            - name: 可用於 Azure SQL Database 的 TDE +
+            - name: 用於 Azure SQL Database 的 TDE >
               href: /azure/sql-database/transparent-data-encryption-azure-sql
               items:
-                - name: 攜帶您自己的金鑰 +
+                - name: 攜帶您自己的金鑰 >
                   href: /azure/sql-database/transparent-data-encryption-byok-azure-sql
             - name: Always Encrypted
               href: ../relational-databases/security/encryption/always-encrypted-database-engine.md
@@ -8132,13 +8154,13 @@
               href: ../azure-data-studio/extensibility-apis.md
         - name: 資源
           items:
-            - name: Azure Data Studio GitHub 存放庫 +
+            - name: Azure Data Studio GitHub 存放庫 >
               href: 'https://www.github.com/Microsoft/azuredatastudio'
-            - name: SQL Server 部落格 +
+            - name: SQL Server 部落格 >
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
             - name: 常見問題集
               href: ../azure-data-studio/faq.md
-            - name: 回報問題與提出建議 +
+            - name: 回報問題與提出建議 >
               href: 'https://github.com/microsoft/azuredatastudio/issues'
     - name: 命令提示字元公用程式
       href: ../tools/command-prompt-utility-reference-database-engine.md
@@ -9024,8 +9046,8 @@
                       href: ../ssms/agent/job-categories-manage-job-categories.md
                     - name: 新增作業類別目錄
                       href: ../ssms/agent/job-categories-properties-new-job-category.md
-                    - name: 作業屬性
-                      items: null
+                - name: 作業屬性
+                  items:
                     - name: 參考排程的作業
                       href: ../ssms/agent/jobs-that-reference-a-schedule.md
                     - name: 警示頁面
@@ -10019,7 +10041,7 @@
           href: ../linux/quickstart-install-connect-ubuntu.md
         - name: 執行與連線 - Docker
           href: ../linux/quickstart-install-connect-docker.md
-        - name: 在 Azure 中佈建 SQL VM +
+        - name: 在 Azure 中佈建 SQL VM >
           href: /azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine
         - name: 執行與連線 - 雲端
           href: ../linux/quickstart-install-connect-clouds.md
@@ -10104,8 +10126,10 @@
               href: ../linux/sql-server-linux-manage-ssms.md
             - name: 使用 Azure Data Studio 管理
               href: ../azure-data-studio/quickstart-sql-server.md
-            - name: 使用 PowerShell 來管理
+            - name: 使用 Windows PowerShell
               href: ../linux/sql-server-linux-manage-powershell.md
+            - name: 使用 PowerShell Core
+              href: ../linux/sql-server-linux-manage-powershell-core.md
             - name: 使用記錄傳送
               href: ../linux/sql-server-linux-use-log-shipping.md
             - name: 使用 DB Mail 與電子郵件警示
@@ -10231,63 +10255,63 @@
       items:
         - name: 疑難排解
           href: ../linux/sql-server-linux-troubleshooting-guide.md
-        - name: 如何授權
+        - name: 如何授權 >
           href: 'https://www.microsoft.com/sql-server/sql-server-2017-pricing'
-        - name: DBA Stack Exchange +
+        - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: Stack Overflow +
+        - name: Stack Overflow >
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN 論壇 +
+        - name: MSDN 論壇 >
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: 提交意見反應 +
+        - name: 提交意見反應 >
           href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: Reddit +
+        - name: Reddit >
           href: 'https://www.reddit.com/r/SQLServer'
 - name: Azure 上的 SQL
   items:
-    - name: Azure SQL Database +
+    - name: Azure SQL Database >
       href: /azure/sql-database/
-    - name: Azure SQL 資料倉儲 +
+    - name: Azure SQL 資料倉儲 >
       href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
-    - name: Azure VM 上的 SQL Server +
+    - name: Azure VM 上的 SQL Server >
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: 資源
   items:
     - name: 學習
       items:
-        - name: Microsoft Virtual Academy +
+        - name: Microsoft Virtual Academy >
           href: 'https://mva.microsoft.com/product-training/sql-server'
-        - name: Channel 9 上的 SQL +
+        - name: Channel 9 上的 SQL >
           href: 'https://channel9.msdn.com/Search'
     - name: 部落格
       items:
-        - name: SQL Server +
+        - name: SQL Server >
           href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: SQL Server 資料庫引擎
+        - name: SQL Server 資料庫引擎 >
           href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
-        - name: SQL Server 安全性 +
+        - name: SQL Server 安全性 >
           href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
-        - name: SQL Server Data Tools +
+        - name: SQL Server Data Tools >
           href: 'https://blogs.msdn.microsoft.com/ssdt/'
     - name: 意見反應與說明
       items:
         - name: 取得說明
           href: ../sql-server/sql-server-get-help.md
-        - name: 關於 SQL 文件的意見反應 +
+        - name: 關於 SQL 文件的意見反應 >
           href: 'https://aka.ms/sqldocsfeedback'
-        - name: 關於 SQL Server 的意見反應 (UserVoice) +
+        - name: 關於 SQL Server 的意見反應 (UserVoice) >
           href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: SQL 文件問卷 +
+        - name: SQL 文件問卷 >
           href: 'https://aka.ms/sqldocsurvey'
         - name: 參與編輯 SQL 文件！
           href: ../sql-server/sql-server-docs-contribute.md
-        - name: DBA Stack Exchange +
+        - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: Stack Overflow +
+        - name: Stack Overflow >
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN 論壇 +
+        - name: MSDN 論壇 >
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: Reddit +
+        - name: Reddit >
           href: 'https://www.reddit.com/r/SQLServer'
     - name: 合作夥伴
       items:
@@ -10305,14 +10329,14 @@
   items:
     - name: SQL 文件包含檔案
       href: ../sql-server/applies-to-includes.md
-    - name: 封存的內容 (SQL 2005 - 2012) +
-      displayName: '2005, 2008, 2008 r2, 2012'
+    - name: 封存的內容 (SQL 2005 - 2012) >
+      displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
       href: 'https://docs.microsoft.com/previous-versions/sql/'
     - name: 資料庫範例
       items:
         - name: 範例概觀
           href: ../samples/sql-samples-where-are.md
-        - name: 所有 Github 範例 +
+        - name: 所有 Github 範例 >
           href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
         - name: AdventureWorks
           items:
@@ -17095,6 +17119,8 @@
                   href: ../t-sql/statements/set-quoted-identifier-transact-sql.md
                 - name: REMOTE_PROC_TRANSACTIONS
                   href: ../t-sql/statements/set-remote-proc-transactions-transact-sql.md
+                - name: 結果集快取
+                  href: ../t-sql/statements/set-result-set-caching-transact-sql.md
                 - name: ROWCOUNT
                   href: ../t-sql/statements/set-rowcount-transact-sql.md
                 - name: SHOWPLAN_ALL

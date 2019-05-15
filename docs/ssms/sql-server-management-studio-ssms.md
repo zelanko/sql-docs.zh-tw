@@ -10,15 +10,15 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Management Studio
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 779597c0907760aa7f08c384d476ac3d3bcd63a9
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 731db49720b0d41c2316b3db32b51238698616ae
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56800952"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102625"
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

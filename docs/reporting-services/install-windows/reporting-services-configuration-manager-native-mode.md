@@ -9,14 +9,14 @@ helpviewer_keywords:
 - configuration options [Reporting Services]
 - report servers [Reporting Services], configuring
 - components [Reporting Services], Reporting Services Configuration tool
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fec3d74b5b6d4d4387249ba3e4d5254aebfa1bed
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c6ea2a8ad189f5973b6fa3bb761be5c8596de761
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029017"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503632"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 組態管理員 (原生模式)
 
@@ -27,7 +27,7 @@ ms.locfileid: "50029017"
 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式安裝。 如果您是利用僅限檔案安裝選項來安裝報表伺服器，就必須利用組態管理員來設定伺服器，才能使用該伺服器。 如果您使用預設組態安裝選項來安裝報表伺服器，則可以使用組態管理員來驗證或修改在安裝過程中所指定的設定。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員可用於設定本機或遠端報表伺服器執行個體。
 
 > [!NOTE]
-> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版開始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員並非設計成管理 SharePoint 模式的報表伺服器。 SharePoint 模式是使用 SharePoint 管理中心和 PowerShell 指令碼來管理並設定。  
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版開始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員並非設計成管理 SharePoint 模式的報表伺服器。 SharePoint 模式是使用 SharePoint 管理中心和 PowerShell 指令碼來管理並設定。  
   
 ##  <a name="bkmk_scenarios"></a> 使用 Reporting Services 組態管理員的案例  
  您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員執行下列工作：  

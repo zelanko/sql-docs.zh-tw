@@ -2,21 +2,21 @@
 title: MHTML 裝置資訊設定 | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - device information settings [Reporting Services], MHTML rendering
 - MHTML [Reporting Services]
 ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 170c97c2f01f58972fbcba1d8dc9e63045a1095f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 996a7f53b5969c9c1d8c39edcd23b62d45a7ff15
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659316"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502732"
 ---
 # <a name="mhtml-device-information-settings"></a>MHTML 裝置資訊設定
   下表列出以 Web 封存 (MHTML) 格式轉譯報表的裝置資訊設定。  

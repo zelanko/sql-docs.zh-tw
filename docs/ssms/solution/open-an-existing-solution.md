@@ -11,15 +11,15 @@ helpviewer_keywords:
 - opening solutions
 - solutions [SQL Server Management Studio], opening
 ms.assetid: 6cffd5ec-239a-4b21-a14c-15899ada3d27
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 16a4c6a42d3932434a9155bf60d41cd577573e9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8105dd55b8ad4d9eced6098068f25a414c55ce8e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776158"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102873"
 ---
 # <a name="open-an-existing-solution"></a>開啟現有的方案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

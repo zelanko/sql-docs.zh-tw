@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Diagram pane [Visual Database Tools]
 - names [SQL Server], columns
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 68ebbb8c9a4b0ed87e9ec522c9fa78eb75a84711
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9897c05fdba098ef336c1edb2b31bfc4c9219c9f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797326"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099798"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>在圖表窗格中顯示資料行名稱 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

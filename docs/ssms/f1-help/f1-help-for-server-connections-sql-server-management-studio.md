@@ -14,15 +14,15 @@ helpviewer_keywords:
 - connections [SQL Server Management Studio]
 - Connect to Server dialog box
 ms.assetid: 6a72e24f-9e11-4032-ab9e-5ecc6edd4890
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1539e3ed4c75ccb7837f1ea16717b9af8c5f3f59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db516c417a0ae1d98ac7a173f9bbfcc5c2bf8e76
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773918"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102786"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>伺服器連接的 F1 說明 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

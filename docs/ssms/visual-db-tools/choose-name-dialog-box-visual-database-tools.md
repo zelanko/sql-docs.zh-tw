@@ -12,15 +12,15 @@ f1_keywords:
 - vdt.dlgbox.newdatabaseview
 - vdt.dlgbox.newtablename
 ms.assetid: cd6b5527-c032-473e-b954-1a549e1cdf4a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6730d4a94075aca04e2001890fe35beaa2adb1b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b698549f37e0ffb9da390ff93c1ceb3c8218369f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682256"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090832"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>選擇名稱對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

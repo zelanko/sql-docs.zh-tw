@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Name Not Found dialog box
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c8ade324c8d3aab68ff0e762f621b9bd69d3b9ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 905d48ba3aeb81af4d2fe59467731003fa231e41
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740312"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095407"
 ---
 # <a name="name-not-found-dialog-box"></a>找不到名稱對話方塊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
