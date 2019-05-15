@@ -13,16 +13,16 @@ helpviewer_keywords:
 - job steps [PowerShell]
 - SQL Server Agent jobs, PowerShell steps
 ms.assetid: 50afcf84-fae0-4eb5-9b0f-f2cf144c1433
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 268f504a717769a3b7ac9836349eb12273b49f5b
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 2f98dfe69207b90c4564277ad9dc49e0752d087f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240356"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095589"
 ---
 # <a name="create-a-powershell-script-job-step"></a>Create a PowerShell Script Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

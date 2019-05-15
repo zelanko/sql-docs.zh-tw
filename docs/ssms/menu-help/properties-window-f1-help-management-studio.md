@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - SQL Server Management Studio Help [SQL Server], properties window
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 52ca965ad55ede40b3e5dc6daf1864b532604056
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad01e2691f76fea00a5531834918b7fbe5d2382e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682136"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096394"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>屬性視窗 F1 說明 (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -11,15 +11,15 @@ f1_keywords:
 - vdtsql.chm:65555
 - vdt.dlgbox.schema.addtable
 ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8ca667e010b150137f9a50ca1ed61ff0f233fba2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 666e492aa507e3a4ba79e1905eddc9885b12ec1c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793046"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099460"
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>加入資料表對話方塊 (資料庫設計工具) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

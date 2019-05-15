@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.agent.history.f1
 ms.assetid: dc73734c-b3c3-407f-bbd1-8714b4fa47b0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5e61393109ef05efbe1941d6a5bb56164928c8a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30426daee4c801ae0e8e338a88020434acda602d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632077"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089620"
 ---
 # <a name="sql-server-agent-properties-history-page"></a>SQL Server Agent 屬性 (記錄頁面)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

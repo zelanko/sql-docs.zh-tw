@@ -11,15 +11,15 @@ helpviewer_keywords:
 - arguments [SQL Server Management Studio]
 - external tools [SQL Server Management Studio]
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 748ea2906106fcd8b8f4b6c47f8df04a7e8ed541
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c3fe113514ba44a63bce8b07d14efda865626cf
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774026"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088730"
 ---
 # <a name="arguments-for-external-tools"></a>外部工具的引數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

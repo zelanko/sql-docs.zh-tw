@@ -14,15 +14,15 @@ helpviewer_keywords:
 - combining search conditions
 - AND, Criteria pane
 ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0778b56ca4c5047a15fd0478542d849e01d3e99d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e2df18e14fea713dae58fa080256210e97c3c7c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779658"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65093831"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>在 AND 具有優先權時結合條件 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

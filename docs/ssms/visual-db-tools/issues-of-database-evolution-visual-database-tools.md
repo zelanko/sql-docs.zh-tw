@@ -11,15 +11,15 @@ helpviewer_keywords:
 - compatibility [SQL Server], multuser database changes
 - database evolution [SQL Server]
 ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8c9d1218ce2c7e49306f8e1841747b721af35137
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9b40aabf488f0d0c294638c43153e8f384187781
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701853"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096689"
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>資料庫演進問題 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

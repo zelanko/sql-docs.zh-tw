@@ -15,16 +15,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, history
 - historical information [SQL Server], jobs
 ms.assetid: ddee1ce8-9d1b-4017-9894-bf7256aed95d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 64534d4f6dbf033dc4031a36343eaa0e12d21877
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f967e75ca73ce57acfb192f8b9093cf9f15a2a0c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620796"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088871"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47620796"
   
 -   **開始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目設定作業記錄的大小限制：**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47620796"
 ## <a name="BeforeYouBegin"></a>開始之前  
   
 ### <a name="Security"></a>安全性  
-如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
+如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
   

@@ -5,15 +5,15 @@ ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 87de35c23a89e49f376b41676462dd275f676871
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 582267d58a3e1ac87d64f52727bab7977882bb0a
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269462"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102718"
 ---
 # <a name="options-environment---startup-page"></a>選項 ([環境] - [啟動] 頁面)
 

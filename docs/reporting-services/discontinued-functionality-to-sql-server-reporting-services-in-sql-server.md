@@ -1,21 +1,21 @@
 ---
 title: 已中止的功能
-author: markingmyname
-ms.author: maghan
-manager: kfile
-ms.reviewer: ''
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
 ms.custom: seodec18
-ms.date: 12/14/2018
-ms.openlocfilehash: a40674afa51e52d3e84731711fc9edc013f69a46
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
-ms.translationtype: HT
+ms.date: 04/26/2019
+ms.openlocfilehash: 4ccadf456472b98a1ffc37f1d2988a161f86e375
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53552930"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503982"
 ---
 # <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中已中止的功能
 
@@ -29,14 +29,12 @@ ms.locfileid: "53552930"
 
 |功能|取代或因應措施|
 |-|-|
-|透過入口網站上傳報表模型|這仍然可以透過 SOAP API 來完成。|
-|透過入口網站管理報表模型|這仍然可以透過 SOAP API 來完成。|
 |自訂 HTML 檢視器及報表管理員的樣式表|您仍然可以[設定入口網站的品牌](branding-the-web-portal.md)。|
 
 ## <a name="next-steps"></a>後續步驟
 
-[Reporting Services 的新功能](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-[SQL Server 2016 中的 SQL Server Reporting Services 行為變更](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
-[SQL Server 2016 中 SQL Server Reporting Services 已被取代的功能](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
+* [Reporting Services 的新功能](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+* [SQL Server 2016 中的 SQL Server Reporting Services 行為變更](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
+* [SQL Server 2016 中 SQL Server Reporting Services 已被取代的功能](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

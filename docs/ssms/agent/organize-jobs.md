@@ -11,16 +11,16 @@ helpviewer_keywords:
 - job category
 - organize jobs
 ms.assetid: 629c3e06-f933-483b-8621-280dbb7a7bd1
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 45296a5f2e2d36e0e3e62938a0a2396c9a26a7fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1b7be315af4f9554019e094d7e82bf35fc71db8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661066"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088969"
 ---
 # <a name="organize-jobs"></a>組織作業
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], scheduling
 - schedules [SQL Server], jobs
 ms.assetid: 8c7ef3b3-c06d-4a27-802d-ed329dc86ef3
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 867c17d9b4b2cc1c324df936ca90dccc3b1fda03
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a1bf151afae55d96323bb387f38e7f61553744e1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703116"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095562"
 ---
 # <a name="create-a-schedule"></a>Create a Schedule
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "51703116"
   
 -   **開始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目建立排程：**  
   
-    [SQL Server Management Studio](#SSMS)  
+    [Transact-SQL](#SSMS)  
   
     [Transact-SQL](#TSQL)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "51703116"
 ## <a name="BeforeYouBegin"></a>開始之前  
   
 ### <a name="Security"></a>安全性  
-如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
+如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
   

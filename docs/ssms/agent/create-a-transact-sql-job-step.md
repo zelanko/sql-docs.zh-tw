@@ -12,16 +12,16 @@ helpviewer_keywords:
 - job steps [Transact-SQL]
 - SQL Server Agent jobs, Transact-SQL step
 ms.assetid: 69c571a7-debe-4063-9d38-e4b6a1e8e84c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fe1b2d834f5c7c71025f091f525146a11dfd5eaa
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1249027630830b768d5d0a08b539f71d5b4af00d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699608"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095548"
 ---
 # <a name="create-a-transact-sql-job-step"></a>Create a Transact-SQL Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "51699608"
   
 -   **開始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目建立 Transact-SQL 作業步驟：**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "51699608"
 ## <a name="BeforeYouBegin"></a>開始之前  
   
 ### <a name="Security"></a>安全性  
-如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
+如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - templates [Transact-SQL]
 - templates [SQL Server], Template Explorer
 ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 813196518f7fc3b258e9b9fbe39bdd4b88089241
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 7268e5c4b04688f055c0e9f7149446f836d17379
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416125"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102656"
 ---
 # <a name="template-explorer"></a>範本總管
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
