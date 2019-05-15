@@ -2,7 +2,7 @@
 title: PPTX 裝置資訊設定 | Microsoft Docs
 ms.date: 09/11/2015
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - pptx
 - export
 ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: eb658507dd7e28100338e1f300ff24ca0aeadf92
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 53f5e080a4ce654eb133aed340034e547f247737
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394851"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503335"
 ---
 # <a name="pptx-device-information-settings"></a>PPTX 裝置資訊設定
   下表列出以 PPTX 格式轉譯 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表的裝置資訊設定。  

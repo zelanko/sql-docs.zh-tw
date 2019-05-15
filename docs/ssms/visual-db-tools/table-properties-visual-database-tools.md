@@ -11,15 +11,15 @@ f1_keywords:
 - vdt.tabledesigner
 - vdt.designers.properties.Table
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3ff3399745161d0ddb95d77f0f2f03a4c10da8b3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5534fdf65543e651b52373629c81010d75cab449
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508859"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098124"
 ---
 # <a name="table-properties-visual-database-tools"></a>資料表屬性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "52508859"
 顯示選取資料表的資料來源名稱。  
   
 **說明**  
-顯示選取資料表的描述。 若要查看或編輯整個描述，請按一下 [描述]，然後按一下屬性右邊的省略符號 **(...)**。  
+顯示選取資料表的描述。 若要查看或編輯整個描述，請按一下 [描述]，然後按一下屬性右側的省略符號 **(...)**。  
   
 **結構描述**  
 顯示此資料表所屬結構描述的名稱 (只適用於 Microsoft SQL Server)。  

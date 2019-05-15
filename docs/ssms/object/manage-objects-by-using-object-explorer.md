@@ -14,15 +14,15 @@ helpviewer_keywords:
 - OE F1 Help
 - OE Help
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 234a31d2b3bc59a447b14691b45c1a2a323598b2
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b78502e3bc0701af0dd662455382ce7ad2432813
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696788"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102774"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>使用物件總管管理物件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

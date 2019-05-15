@@ -13,15 +13,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server], deleting
 - removing database diagrams
 ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2af935496249be7182c7843f0d20c423f164a658
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2930098c36a18ce74c23b6505c431e743c68e491
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674756"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095319"
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>刪除資料庫圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

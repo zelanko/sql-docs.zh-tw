@@ -12,15 +12,15 @@ helpviewer_keywords:
 - layouts [SQL Server]
 - appearance of database diagrams
 ms.assetid: 59ff07bd-a147-47e1-969f-3b260a9e2763
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: feed783dbc152907495f6a3edcb6beeb7f7115dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 102330726d95a8fd99f3cef1b39b7bfb94727b3b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828816"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104431"
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>使用圖表配置 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

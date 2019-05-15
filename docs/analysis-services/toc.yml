@@ -1,4 +1,4 @@
-- name: SQL Server ++
+- name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: 關於 SQL Server Analysis Services
   href: ../analysis-services/analysis-services.md
@@ -33,74 +33,78 @@
   items:
     - name: Analysis Services 教學課程概觀
       href: ../analysis-services/analysis-services-tutorials-ssas.md
-    - name: 表格式模型 (1400 相容性層級)
-      href: ../analysis-services/tutorial-tabular-1400/as-adventure-works-tutorial.md
+    - name: 表格式模型
       items:
-        - name: 1 - 建立表格式模型專案
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md
-        - name: 2 - 取得資料
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-2-get-data.md
-        - name: 3 - 標記為日期資料表
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md
-        - name: 4 - 建立關聯性
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-4-create-relationships.md
-        - name: 5 - 建立計算結果欄
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md
-        - name: 6 - 建立量值
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-6-create-measures.md
-        - name: 7 - 建立關鍵效能指標
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md
-        - name: 8 - 建立檢視方塊
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-8-create-perspectives.md
-        - name: 9 - 建立階層
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-9-create-hierarchies.md
-        - name: 10 - 建立資料分割
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-10-create-partitions.md
-        - name: 11 - 建立角色
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-11-create-roles.md
-        - name: 12 - 在 Excel 中進行分析
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md
-        - name: 13 - 部署
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-13-deploy.md
-        - name: 補充課程 - 詳細資料列
-          href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md
-        - name: 補充課程 - 動態安全性
-          href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md
-        - name: 補充課程 - 不完全階層
-          href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md
-    - name: 表格式模型 (1200 相容性層級)
-      href: ../analysis-services/tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md
-      items:
-        - name: 1 - 建立新的表格式模型專案
-          href: ../analysis-services/tutorial-tabular-1200/lesson-1-create-a-new-tabular-model-project.md
-        - name: 2 - 新增資料
-          href: ../analysis-services/tutorial-tabular-1200/lesson-2-add-data.md
-        - name: 3 - 標記為日期資料表
-          href: ../analysis-services/tutorial-tabular-1200/lesson-3-mark-as-date-table.md
-        - name: 4 - 建立關聯性
-          href: ../analysis-services/tutorial-tabular-1200/lesson-4-create-relationships.md
-        - name: 5 - 建立計算結果欄
-          href: ../analysis-services/tutorial-tabular-1200/lesson-5-create-calculated-columns.md
-        - name: 6 - 建立量值
-          href: ../analysis-services/tutorial-tabular-1200/lesson-6-create-measures.md
-        - name: 7 - 建立關鍵效能指標
-          href: ../analysis-services/tutorial-tabular-1200/lesson-7-create-key-performance-indicators.md
-        - name: 8 - 建立檢視方塊
-          href: ../analysis-services/tutorial-tabular-1200/lesson-8-create-perspectives.md
-        - name: 9 - 建立階層
-          href: ../analysis-services/tutorial-tabular-1200/lesson-9-create-hierarchies.md
-        - name: 10 - 建立資料分割
-          href: ../analysis-services/tutorial-tabular-1200/lesson-10-create-partitions.md
-        - name: 11 - 建立角色
-          href: ../analysis-services/tutorial-tabular-1200/lesson-11-create-roles.md
-        - name: 12 - 在 Excel 中進行分析
-          href: ../analysis-services/tutorial-tabular-1200/lesson-12-analyze-in-excel.md
-        - name: 13 - 部署
-          href: ../analysis-services/tutorial-tabular-1200/lesson-13-deploy.md
-        - name: 補充課程 - 使用資料列篩選實作動態安全性
-          href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
-        - name: 補充課程 - 設定 Power View 報表的報表屬性
-          href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
+        - name: Internet Sales 教學課程 (1400)
+          items:
+            - name: Internet Sales 教學課程概觀 (1400)
+              href: ../analysis-services/tutorial-tabular-1400/as-adventure-works-tutorial.md
+            - name: 1 - 建立表格式模型專案
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md
+            - name: 2 - 取得資料
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-2-get-data.md
+            - name: 3 - 標記為日期資料表
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md
+            - name: 4 - 建立關聯性
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-4-create-relationships.md
+            - name: 5 - 建立計算結果欄
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md
+            - name: 6 - 建立量值
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-6-create-measures.md
+            - name: 7 - 建立關鍵效能指標
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md
+            - name: 8 - 建立檢視方塊
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-8-create-perspectives.md
+            - name: 9 - 建立階層
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-9-create-hierarchies.md
+            - name: 10 - 建立資料分割
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-10-create-partitions.md
+            - name: 11 - 建立角色
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-11-create-roles.md
+            - name: 12 - 在 Excel 中進行分析
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md
+            - name: 13 - 部署
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-13-deploy.md
+            - name: 補充課程 - 詳細資料列
+              href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md
+            - name: 補充課程 - 動態安全性
+              href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md
+            - name: 補充課程 - 不完全階層
+              href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md
+        - name: Internet Sales 教學課程 (1200)
+          items:
+            - name: Internet Sales 教學課程概觀 (1200)
+              href: ../analysis-services/tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md
+            - name: 1 - 建立新的表格式模型專案
+              href: ../analysis-services/tutorial-tabular-1200/lesson-1-create-a-new-tabular-model-project.md
+            - name: 2 - 新增資料
+              href: ../analysis-services/tutorial-tabular-1200/lesson-2-add-data.md
+            - name: 3 - 標記為日期資料表
+              href: ../analysis-services/tutorial-tabular-1200/lesson-3-mark-as-date-table.md
+            - name: 4 - 建立關聯性
+              href: ../analysis-services/tutorial-tabular-1200/lesson-4-create-relationships.md
+            - name: 5 - 建立計算結果欄
+              href: ../analysis-services/tutorial-tabular-1200/lesson-5-create-calculated-columns.md
+            - name: 6 - 建立量值
+              href: ../analysis-services/tutorial-tabular-1200/lesson-6-create-measures.md
+            - name: 7 - 建立關鍵效能指標
+              href: ../analysis-services/tutorial-tabular-1200/lesson-7-create-key-performance-indicators.md
+            - name: 8 - 建立檢視方塊
+              href: ../analysis-services/tutorial-tabular-1200/lesson-8-create-perspectives.md
+            - name: 9 - 建立階層
+              href: ../analysis-services/tutorial-tabular-1200/lesson-9-create-hierarchies.md
+            - name: 10 - 建立資料分割
+              href: ../analysis-services/tutorial-tabular-1200/lesson-10-create-partitions.md
+            - name: 11 - 建立角色
+              href: ../analysis-services/tutorial-tabular-1200/lesson-11-create-roles.md
+            - name: 12 - 在 Excel 中進行分析
+              href: ../analysis-services/tutorial-tabular-1200/lesson-12-analyze-in-excel.md
+            - name: 13 - 部署
+              href: ../analysis-services/tutorial-tabular-1200/lesson-13-deploy.md
+            - name: 補充課程 - 使用資料列篩選實作動態安全性
+              href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
+            - name: 補充課程 - 設定 Power View 報表的報表屬性
+              href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
     - name: 多維度模型化
       href: ../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md
       items:
@@ -819,13 +823,13 @@
               href: ../analysis-services/multidimensional-models/create-a-report-data-source.md
             - name: 建立 Power View 報表
               href: ../analysis-services/multidimensional-models/create-a-power-view-report-with-a-multidimensional-data-source.md
-            - name: ADOMD.NET 伺服器功能 +
+            - name: ADOMD.NET 伺服器功能 >
               href: /bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality
-            - name: ADOMD.NET 伺服器物件架構 +
+            - name: ADOMD.NET 伺服器物件架構 >
               href: /bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture
-            - name: ADOMD.NET 伺服器程式設計 +
+            - name: ADOMD.NET 伺服器程式設計 >
               href: /bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming
-            - name: 使用者定義函式和預存程序 +
+            - name: 使用者定義函式和預存程序 >
               href: /bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures
         - name: 組件管理
           href: ../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md
@@ -1374,7 +1378,7 @@
               href: ../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
             - name: 效能計數器
               href: ../analysis-services/instances/performance-counters-ssas.md
-            - name: 追蹤事件 +
+            - name: 追蹤事件 >
               href: /bi-reference/trace-events/analysis-services-trace-events
             - name: 記錄作業
               href: ../analysis-services/instances/log-operations-in-analysis-services.md
@@ -1414,7 +1418,7 @@
           href: ../analysis-services/instances/disconnect-users-and-sessions-on-analysis-services-server.md
 - name: Developer
   items:
-    - name: Analysis Services Developer 文件
+    - name: 開發人員文件概觀
       href: ../analysis-services/analysis-services-developer-documentation.md
     - name: 表格式模型
       items:
@@ -1422,11 +1426,11 @@
           items:
             - name: 相容性層級 1200 及更高的表格式模型程式設計
               href: ../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
-            - name: 表格式模型指令碼語言 (TMSL) +
+            - name: 表格式模型指令碼語言 (TMSL) >
               href: /bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
-            - name: 表格式物件模型 (TOM) +
+            - name: 表格式物件模型 (TOM) >
               href: /bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo
-            - name: 分析管理物件 (AMO) +
+            - name: 分析管理物件 (AMO) >
               href: /bi-reference/amo/amo-classes-introduction
         - name: 表格式 1103 及更低
           items:
@@ -1439,7 +1443,7 @@
                   href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-attributes-for-report-design.md
                 - name: CSDLBI 概念
                   href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md
-                - name: 概念結構定義語言 (CSDL) 參考 +
+                - name: 概念架構定義語言 (CSDL) 參考 >
                   href: /bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
             - name: 表示法
               items:
@@ -1473,12 +1477,13 @@
       items:
         - name: 多維度模型程式設計
           href: ../analysis-services/multidimensional-models/multidimensional-model-programming.md
-        - name: 分析管理物件 (AMO) +
+        - name: 分析管理物件 (AMO) >
           href: /bi-reference/amo/developing-with-analysis-management-objects-amo
-        - name: 使用 Analysis Services 指令碼語言 (ASSL) 開發
-          href: ../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
+        - name: Analysis Services 指令碼語言 (ASSL)
           items:
-            - name: Analysis Services 指令碼語言 (ASSL for XMLA) 參考 +
+            - name: 使用 Analysis Services 指令碼語言 (ASSL) 開發
+              href: ../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
+            - name: Analysis Services 指令碼語言 (ASSL for XMLA) 參考 >
               href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
             - name: ASSL 物件和物件特性
               href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
@@ -1518,231 +1523,242 @@
               href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
             - name: ASSL XML 慣例
               href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md
-        - name: XML for Analysis (XMLA) +
+        - name: XML for Analysis (XMLA) 參考 >
           href: /bi-reference/xmla/xml-for-analysis-xmla-reference
-        - name: ADOMD.NET 伺服器程式設計
-          href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md
+        - name: ADOMD.NET
           items:
+            - name: ADOMD.NET 參考 >
+              href: /bi-reference/adomd/developing-with-adomd-net
+            - name: ADOMD.NET 伺服器程式設計
+              href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md
             - name: ADOMD.NET 伺服器功能
               href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality.md
             - name: ADOMD.NET 伺服器物件架構
               href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture.md
             - name: 使用者定義函數和預存程序
               href: ../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md
-            - name: ADOMD.NET 參考 +
-              href: /bi-reference/adomd/developing-with-adomd-net
-        - name: 資料庫物件 (Analysis Services - 多維度資料)
-          href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
-        - name: '中，使用 [維度設計師] 的'
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md
-        - name: 屬性和屬性階層
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md
-        - name: 資料庫維度屬性 - 類型
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md
-        - name: 資料庫維度屬性
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md
-        - name: 維度物件 (Analysis Services - 多維度資料)
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md
-        - name: 維度翻譯
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md
-        - name: 維度 - 簡介
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md
-        - name: 維度 - 儲存體
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md
-        - name: 維度 (Analysis Services - 多維度資料)
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md
-        - name: 主動式快取 (維度)
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md
-        - name: 使用者階層 - 層級屬性
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md
-        - name: 使用者階層 - 屬性
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md
-        - name: 使用者階層
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md
-        - name: 可寫入維度
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md
-        - name: 彙總和彙總設計
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md
-        - name: '[新增命名集]'
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md
-        - name: Cube 資料格 (Analysis Services - 多維度資料)
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-cells-analysis-services-multidimensional-data.md
-        - name: Cube 物件 (Analysis Services - 多維度資料)
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md
-        - name: Cube 屬性 - 多維度模型程式設計
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-properties-multidimensional-model-programming.md
-        - name: Cube 儲存體 (Analysis Services - 多維度資料)
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md
-        - name: Cube 翻譯
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md
-        - name: 維度關聯性
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md
-        - name: 資料分割 - 資料分割儲存模式及處理
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md
-        - name: 資料分割 - 主動式快取
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md
-        - name: 資料分割 - 遠端資料分割
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md
-        - name: 資料分割 - 可寫入的資料分割
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md
-        - name: 資料分割 (Analysis Services - 多維度資料)
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md
-        - name: 「檢視方塊」
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md
-        - name: 邏輯架構概觀 (Analysis Services - 多維度資料)
-          href: ../analysis-services/multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md
-        - name: 安全性角色 (Analysis Services - 多維度資料)
-          href: ../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md
-        - name: 伺服器物件 (Analysis Services - 多維度資料)
-          href: ../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md
-        - name: 了解 Microsoft OLAP 實體架構
-          href: ../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md
-        - name: Analysis Services 開發的用戶端架構需求
-          href: ../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
-        - name: Analysis Services 中的資料類型
-          href: ../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md
-        - name: 本機 Cube (Analysis Services - 多維度資料)
-          href: ../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md
-        - name: 最大容量規格 (Analysis Services)
-          href: ../analysis-services/multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md
-        - name: 物件命名規則 (Analysis Services)
-          href: ../analysis-services/multidimensional-models/olap-physical/object-naming-rules-analysis-services.md
-        - name: OLAP 引擎伺服器元件
-          href: ../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md
-        - name: 了解 Microsoft OLAP 架構
-          href: ../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md
-        - name: 了解 Microsoft OLAP 實體架構
-          href: ../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md
-        - name: Analysis Services 個人化延伸模組
-          href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
-        - name: 在預存程序中存取查詢內容
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/accessing-query-context-in-stored-procedures.md
-        - name: 呼叫預存程序
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md
-        - name: 建立預存程序
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/creating-stored-procedures.md
-        - name: 除錯預存程序
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/debugging-stored-procedures.md
-        - name: 定義預存程序
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md
-        - name: 設計預存程序
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/designing-stored-procedures.md
-        - name: 設定預存程序的安全性
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md
-        - name: 擴充 OLAP 功能
-          href: ../analysis-services/multidimensional-models/extending-olap/extending-olap-functionality.md
-        - name: 通過個人化擴充 OLAP
-          href: ../analysis-services/multidimensional-models/extending-olap/extending-olap-through-personalizations.md
-        - name: 使用 MDX 存取資料
-          href: ../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md
-        - name: 使用 MDX 查詢多維度資料
-          href: ../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md
-        - name: MDX 的關鍵概念
-          href: ../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md
+        - name: OLAP
           items:
-            - name: 自動存在
-              href: ../analysis-services/multidimensional-models/mdx/autoexists.md
-            - name: 計算內容
-              href: ../analysis-services/multidimensional-models/mdx/calculation-context.md
-            - name: 子選擇和 Subcube 中的導出成員
-              href: ../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md
-            - name: Cube 空間
-              href: ../analysis-services/multidimensional-models/mdx/cube-space.md
-            - name: 查詢中的子選擇
-              href: ../analysis-services/multidimensional-models/mdx/subselects-in-queries.md
-            - name: Tuples
-              href: ../analysis-services/multidimensional-models/mdx/tuples.md
-            - name: 視覺化總計和非視覺化總計
-              href: ../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md
-            - name: 使用成員、Tuple 和集合 (MDX)
-              href: ../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md
-        - name: MDX 查詢基礎概念
-          href: ../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md
+            - name: OLAP 邏輯
+              items:
+                - name: 資料庫物件 (Analysis Services - 多維度資料)
+                  href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
+                - name: '中，使用 [維度設計師] 的'
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md
+                - name: 屬性和屬性階層
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md
+                - name: 資料庫維度屬性 - 類型
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md
+                - name: 資料庫維度屬性
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md
+                - name: 維度物件 (Analysis Services - 多維度資料)
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md
+                - name: 維度翻譯
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md
+                - name: 維度 - 簡介
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md
+                - name: 維度 - 儲存體
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md
+                - name: 維度 (Analysis Services - 多維度資料)
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md
+                - name: 主動式快取 (維度)
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md
+                - name: 使用者階層 - 層級屬性
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md
+                - name: 使用者階層 - 屬性
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md
+                - name: 使用者階層
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md
+                - name: 可寫入維度
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md
+                - name: 彙總和彙總設計
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md
+                - name: '[新增命名集]'
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md
+                - name: Cube 資料格 (Analysis Services - 多維度資料)
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-cells-analysis-services-multidimensional-data.md
+                - name: Cube 物件 (Analysis Services - 多維度資料)
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md
+                - name: Cube 屬性 - 多維度模型程式設計
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-properties-multidimensional-model-programming.md
+                - name: Cube 儲存體 (Analysis Services - 多維度資料)
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md
+                - name: Cube 翻譯
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md
+                - name: 維度關聯性
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md
+                - name: 資料分割 - 資料分割儲存模式及處理
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md
+                - name: 資料分割 - 主動式快取
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md
+                - name: 資料分割 - 遠端資料分割
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md
+                - name: 資料分割 - 可寫入的資料分割
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md
+                - name: 資料分割 (Analysis Services - 多維度資料)
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md
+                - name: 「檢視方塊」
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md
+                - name: 邏輯架構概觀 (Analysis Services - 多維度資料)
+                  href: ../analysis-services/multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md
+                - name: 安全性角色 (Analysis Services - 多維度資料)
+                  href: ../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md
+                - name: 伺服器物件 (Analysis Services - 多維度資料)
+                  href: ../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md
+                - name: 了解 Microsoft OLAP 實體架構
+                  href: ../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md
+            - name: OLAP 實體
+              items:
+                - name: Analysis Services 開發的用戶端架構需求
+                  href: ../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
+                - name: Analysis Services 中的資料類型
+                  href: ../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md
+                - name: 本機 Cube (Analysis Services - 多維度資料)
+                  href: ../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md
+                - name: 最大容量規格 (Analysis Services)
+                  href: ../analysis-services/multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md
+                - name: 物件命名規則 (Analysis Services)
+                  href: ../analysis-services/multidimensional-models/olap-physical/object-naming-rules-analysis-services.md
+                - name: OLAP 引擎伺服器元件
+                  href: ../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md
+                - name: 了解 Microsoft OLAP 架構
+                  href: ../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md
+                - name: 了解 Microsoft OLAP 實體架構
+                  href: ../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md
+            - name: 擴充 OLAP
+              items:
+                - name: 擴充 OLAP 功能
+                  href: ../analysis-services/multidimensional-models/extending-olap/extending-olap-functionality.md
+                - name: 通過個人化擴充 OLAP
+                  href: ../analysis-services/multidimensional-models/extending-olap/extending-olap-through-personalizations.md
+                - name: Analysis Services 個人化延伸模組
+                  href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
+                - name: 在預存程序中存取查詢內容
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/accessing-query-context-in-stored-procedures.md
+                - name: 呼叫預存程序
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md
+                - name: 建立預存程序
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/creating-stored-procedures.md
+                - name: 除錯預存程序
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/debugging-stored-procedures.md
+                - name: 定義預存程序
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md
+                - name: 設計預存程序
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/designing-stored-procedures.md
+                - name: 設定預存程序的安全性
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md
+        - name: 多維度資料運算式 (MDX)
           items:
-            - name: MDX 查詢 - 基本查詢
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md
-            - name: MDX 查詢 - EXISTING 關鍵字
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md
-            - name: MDX 查詢與交叉分析篩選器軸 - 限制查詢
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md
-            - name: MDX 查詢與交叉分析篩選器軸 - 指定查詢軸的內容
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md
-            - name: MDX 查詢與交叉分析篩選器軸 - 指定交叉分析篩選器軸的內容
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md
-            - name: MDX 查詢與交叉分析篩選器軸 - 在簡單的範例中使用軸
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-using-axes-in-a-simple-example.md
-            - name: 建立查詢中的 Cube 內容
-              href: ../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md
-            - name: 在 MDX 中建立 Subcube
-              href: ../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md
-            - name: MDX 命名集 - 建立
-              href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md
-            - name: MDX 命名集 - 建立查詢範圍集
-              href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md
-            - name: MDX 命名集 - 建立工作階段範圍集
-              href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md
-            - name: MDX 導出成員 - 建立導出成員
-              href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md
-            - name: MDX 導出成員 - 查詢範圍
-              href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md
-            - name: MDX 導出成員 - 工作階段範圍
-              href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md
-            - name: MDX 資料格計算 - 建立
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md
-            - name: MDX 資料格計算 - 查詢範圍
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md
-            - name: MDX 資料格計算 - 工作階段範圍
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md
-            - name: MDX 建立量值
-              href: ../analysis-services/multidimensional-models/mdx/mdx-building-measures.md
-            - name: MDX 成員屬性
-              href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties.md
-            - name: MDX 成員屬性 - 內建
-              href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md
-            - name: MDX 成員屬性 - 使用者定義
-              href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md
-            - name: MDX 資料格屬性 - 使用
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md
-            - name: MDX 資料格屬性 - FORMAT_STRING 內容
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md
-            - name: MDX 資料格屬性 - FORE_COLOR 及 BACK_COLOR 內容
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md
-            - name: MDX 資料格屬性 - FORMATTED_VALUE
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md
-            - name: MDX 資料操作
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md
-            - name: MDX 資料操作 - 使用 DRILLTHROUGH 擷取來源資料
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-retrieve-source-data-using-drillthrough.md
-            - name: MDX 資料操作 - RollupChildren 函式
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-rollupchildren-function.md
-            - name: MDX 資料操作 - 了解行程和求解順序
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md
-            - name: MDX 資料修改
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md
-            - name: MDX 資料修改 - 使用 Cube 回寫
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-modification-using-cube-writebacks.md
-            - name: 使用變數與參數
-              href: ../analysis-services/multidimensional-models/mdx/using-variables-and-parameters-mdx.md
-        - name: MDX 指令碼基礎觀念
-          href: ../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md
-          items:
-            - name: 基本 MDX 指令碼
-              href: ../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md
-            - name: 管理範圍及內容
-              href: ../analysis-services/multidimensional-models/mdx/managing-scope-and-context-mdx.md
-            - name: 錯誤處理
-              href: ../analysis-services/multidimensional-models/mdx/error-handling-mdx.md
-            - name: 支援的 MDX
-              href: ../analysis-services/multidimensional-models/mdx/supported-mdx-mdx.md
+            - name: 使用 MDX 存取資料
+              href: ../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md
+            - name: 使用 MDX 查詢多維度資料
+              href: ../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md
+            - name: MDX 的關鍵概念
+              href: ../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md
+              items:
+                - name: 自動存在
+                  href: ../analysis-services/multidimensional-models/mdx/autoexists.md
+                - name: 計算內容
+                  href: ../analysis-services/multidimensional-models/mdx/calculation-context.md
+                - name: 子選擇和 Subcube 中的導出成員
+                  href: ../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md
+                - name: Cube 空間
+                  href: ../analysis-services/multidimensional-models/mdx/cube-space.md
+                - name: 查詢中的子選擇
+                  href: ../analysis-services/multidimensional-models/mdx/subselects-in-queries.md
+                - name: Tuples
+                  href: ../analysis-services/multidimensional-models/mdx/tuples.md
+                - name: 視覺化總計和非視覺化總計
+                  href: ../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md
+                - name: 使用成員、Tuple 和集合 (MDX)
+                  href: ../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md
+            - name: MDX 查詢基礎概念
+              href: ../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md
+              items:
+                - name: MDX 查詢 - 基本查詢
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md
+                - name: MDX 查詢 - EXISTING 關鍵字
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md
+                - name: MDX 查詢與交叉分析篩選器軸 - 限制查詢
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md
+                - name: MDX 查詢與交叉分析篩選器軸 - 指定查詢軸的內容
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md
+                - name: MDX 查詢與交叉分析篩選器軸 - 指定交叉分析篩選器軸的內容
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md
+                - name: MDX 查詢與交叉分析篩選器軸 - 在簡單的範例中使用軸
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-using-axes-in-a-simple-example.md
+                - name: 建立查詢中的 Cube 內容
+                  href: ../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md
+                - name: 在 MDX 中建立 Subcube
+                  href: ../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md
+                - name: MDX 命名集 - 建立
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md
+                - name: MDX 命名集 - 建立查詢範圍集
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md
+                - name: MDX 命名集 - 建立工作階段範圍集
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md
+                - name: MDX 導出成員 - 建立導出成員
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md
+                - name: MDX 導出成員 - 查詢範圍
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md
+                - name: MDX 導出成員 - 工作階段範圍
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md
+                - name: MDX 資料格計算 - 建立
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md
+                - name: MDX 資料格計算 - 查詢範圍
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md
+                - name: MDX 資料格計算 - 工作階段範圍
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md
+                - name: MDX 建立量值
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-building-measures.md
+                - name: MDX 成員屬性
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties.md
+                - name: MDX 成員屬性 - 內建
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md
+                - name: MDX 成員屬性 - 使用者定義
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md
+                - name: MDX 資料格屬性 - 使用
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md
+                - name: MDX 資料格屬性 - FORMAT_STRING 內容
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md
+                - name: MDX 資料格屬性 - FORE_COLOR 及 BACK_COLOR 內容
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md
+                - name: MDX 資料格屬性 - FORMATTED_VALUE
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md
+                - name: MDX 資料操作
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md
+                - name: MDX 資料操作 - 使用 DRILLTHROUGH 擷取來源資料
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-retrieve-source-data-using-drillthrough.md
+                - name: MDX 資料操作 - RollupChildren 函式
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-rollupchildren-function.md
+                - name: MDX 資料操作 - 了解行程和求解順序
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md
+                - name: MDX 資料修改
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md
+                - name: MDX 資料修改 - 使用 Cube 回寫
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-modification-using-cube-writebacks.md
+                - name: 使用變數與參數
+                  href: ../analysis-services/multidimensional-models/mdx/using-variables-and-parameters-mdx.md
+            - name: MDX 指令碼基礎觀念
+              href: ../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md
+              items:
+                - name: 基本 MDX 指令碼
+                  href: ../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md
+                - name: 管理範圍及內容
+                  href: ../analysis-services/multidimensional-models/mdx/managing-scope-and-context-mdx.md
+                - name: 錯誤處理
+                  href: ../analysis-services/multidimensional-models/mdx/error-handling-mdx.md
+                - name: 支援的 MDX
+                  href: ../analysis-services/multidimensional-models/mdx/supported-mdx-mdx.md
     - name: 資料採礦
       items:
         - name: 資料採礦程式設計
           href: ../analysis-services/data-mining/data-mining-programming.md
-        - name: 分析管理物件 (AMO) +
+        - name: 分析管理物件 (AMO) >
           href: /bi-reference/amo/amo-classes-introduction
-        - name: ADOMD.NET +
+        - name: ADOMD.NET >
           href: /bi-reference/adomd/developing-with-adomd-net
-        - name: XML for Analysis (XMLA) +
+        - name: XML for Analysis (XMLA) >
           href: /bi-reference/xmla/xml-for-analysis-xmla-reference
         - name: OLE DB for Data Mining
           href: ../analysis-services/data-mining/data-mining-programming-ole-db.md
@@ -1756,27 +1772,27 @@
       href: ../analysis-services/powershell/analysis-services-powershell-reference.md
     - name: 適用於 Power Pivot for SharePoint 的 PowerShell
       href: ../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md
-    - name: Data Analysis Expressions (DAX)
+    - name: Data Analysis Expressions (DAX) >
       href: /dax/data-analysis-expressions-dax-reference
-    - name: Power Query M
+    - name: Power Query M >
       href: /powerquery-m/power-query-m-reference
-    - name: 表格式模型指令碼語言 (TMSL)
+    - name: 表格式模型指令碼語言 (TMSL) >
       href: /bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
-    - name: 表格式物件模型 (TOM)
+    - name: 表格式物件模型 (TOM) >
       href: /bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo
-    - name: 分析管理物件 (AMO)
+    - name: 分析管理物件 (AMO) >
       href: /bi-reference/amo/developing-with-analysis-management-objects-amo
-    - name: 概念式結構定義語言 (CSDL)
+    - name: 概念架構定義語言 (CSDL) >
       href: /bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
-    - name: XML for Analysis (XMLA)
+    - name: XML for Analysis (XMLA) >
       href: /bi-reference/xmla/xml-for-analysis-xmla-reference
-    - name: ADOMD.NET
+    - name: ADOMD.NET >
       href: /bi-reference/adomd/developing-with-adomd-net
-    - name: Analysis Services 指令碼語言 (ASSL for XMLA)
+    - name: Analysis Services 指令碼語言 (ASSL for XMLA) >
       href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
-    - name: 結構描述資料列集
+    - name: 結構描述資料列集 >
       href: /bi-reference/schema-rowsets/analysis-services-schema-rowsets
-    - name: 追蹤事件
+    - name: 追蹤事件 >
       href: /bi-reference/trace-events/analysis-services-trace-events
     - name: 資料採礦延伸模組 (DMX) 參考
       href: ../dmx/data-mining-extensions-dmx-reference.md
@@ -2146,7 +2162,7 @@
                       href: ../mdx/comment-mdx-double-slash.md
                     - name: 所解碼的字元：(範圍)
                       href: ../mdx/range-mdx.md
-                    - name: + (加)"
+                    - name: + (加)
                       href: ../mdx/add-mdx.md
                     - name: + (正)
                       href: ../mdx/positive-mdx.md

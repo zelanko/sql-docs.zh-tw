@@ -3,22 +3,19 @@ title: 啟用及設定 FILESTREAM | Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: filestream
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-author: douglaslMS
-ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 14bdacd3cf156e2902d8fac54b08ec939da640e7
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.openlocfilehash: 6c01393866ae90c800afbbc7f55e5cb63bfb7554
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317788"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094280"
 ---
 # <a name="enable-and-configure-filestream"></a>啟用及設定 FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
