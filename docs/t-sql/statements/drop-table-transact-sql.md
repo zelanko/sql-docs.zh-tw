@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0bb145c668022c310a159455a77c9065635c99d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: af2982aa2f7955c5196ec445064c691a5f070259
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201523"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503467"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,15 +57,14 @@ ms.locfileid: "53201523"
 ```  
 -- Syntax for SQL Server and Azure SQL Database  
   
-DROP TABLE [ IF EXISTS ] [ database_name . [ schema_name ] . | schema_name . ]  
-table_name [ ,...n ]  
+DROP TABLE [ IF EXISTS ] { database_name.schema_name.table_name | schema_name.table_name | table_name } [ ,...n ]  
 [ ; ]  
 ```  
   
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
+DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 [;]  
 ```  
   
@@ -102,7 +101,7 @@ DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 > [!IMPORTANT]  
 >  DROP TABLE 和 CREATE TABLE 不得在相同批次的相同資料表上執行。 否則，系統可能會發生非預期的錯誤。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要資料表所屬結構描述的 ALTER 權限、資料表的 CONTROL 權限，或 **db_ddladmin** 固定資料庫角色成員資格。  
   
 ## <a name="examples"></a>範例  

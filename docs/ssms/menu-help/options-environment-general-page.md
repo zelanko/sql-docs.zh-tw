@@ -11,15 +11,15 @@ f1_keywords:
 - VS.ToolsOptionsPages.Environment.SQLEnvironmentOptions
 - DevLang-TSQL
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 31af4e73d3b4aec17ee029dd206c7516c573d3a9
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 417b3203cc6e09f3918e2156ac6f676cad381368
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221664"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104500"
 ---
 # <a name="options-environment---general-page"></a>選項 (環境 - 一般頁面)
 

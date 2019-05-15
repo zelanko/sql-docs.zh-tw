@@ -1,4 +1,4 @@
-- name: SQL Server ++
+- name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: 什麼是 SQL Server Reporting Services (SSRS)？
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
@@ -1592,7 +1592,7 @@
   items:
     - name: REST API
       href: ../reporting-services/developer/rest-api.md
-    - name: REST API 範例 +
+    - name: REST API 範例 >
       href: 'https://github.com/Microsoft/Reporting-Services'
     - name: 將 Reporting Services 整合到應用程式
       href: ../reporting-services/application-integration/integrating-reporting-services-into-applications.md
@@ -1909,7 +1909,7 @@
         - name: 第 9 課：建置及執行應用程式
           href: ../reporting-services/lesson-9-build-and-run-the-application.md
     - name: 報表產生器教學課程
-      href: ../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
+      href: ../reporting-services/report-builder-tutorials.md
       items:
         - name: 教學課程的必要條件
           href: ../reporting-services/prerequisites-for-tutorials-report-builder.md

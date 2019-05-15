@@ -11,15 +11,15 @@ helpviewer_keywords:
 - queries [Visual Database Tools]
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a735fdb4ae827cb81aad228f57ca6fcff8e183d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e592574431cc3b32e7c5dc1828afb472b1a8aff
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770906"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098361"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>執行查詢的基本作業 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
