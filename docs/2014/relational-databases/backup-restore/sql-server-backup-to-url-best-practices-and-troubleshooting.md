@@ -10,12 +10,12 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f54ae14c13d58c75da0ddd6eb69a9d9d7527991f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7f652d512f27b935b158a71a80b61c43ac6b7183
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877090"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619592"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 備份至 URL 的最佳作法和疑難排解
   本主題包含從 SQL Server 備份及還原至 Windows Azure Blob 服務的最佳作法和疑難排解提示。  
@@ -125,7 +125,7 @@ ms.locfileid: "62877090"
   
      備份資料庫正在異常結束。  
   
--   Backupiorequest: reportioerror： 備份裝置 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak '。 作業系統錯誤。備份至 URL 時收到來自遠端端點的例外狀況。 例外狀況訊息：無法從傳輸連線讀取資料：連線已關閉。  
+-   Backupiorequest: reportioerror： 備份裝置 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'。 作業系統錯誤。備份至 URL 時收到來自遠端端點的例外狀況。 例外狀況訊息：無法從傳輸連線讀取資料：連線已關閉。  
   
  如果您使用追蹤旗標 3051 開啟詳細資訊記錄，可能也會在記錄檔中看到下列資訊：  
   

@@ -1,7 +1,7 @@
 ---
-title: 執行分散式的交易 |Microsoft Docs
+title: 建立分散式的交易 |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,26 +18,65 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ac43d86c49f20a7e76958d2af8c1767518ddbc7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8ea6c4886a3c5397777b7a65afe96ab7e1b422bd
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62631966"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620539"
 ---
-# <a name="performing-transactions---distributed-transactions"></a>執行交易 - 分散式交易
+# <a name="create-a-distributed-transaction"></a>建立分散式的交易
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+<!--
+The following includes .md file is Empty, as of long before 2019/May/13.
+/includes/snac-deprecated.md
+-->
+
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Microsoft 分散式交易協調器 (MS DTC) 可讓應用程式在兩個或多個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之間擴充交易。 也可讓應用程式參與交易管理員所管理且符合 Open Group DTP XA 標準的交易。  
-  
- 一般來說，所有交易管理命令都是透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式傳送到伺服器。 藉由呼叫應用程式會啟動的交易[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)自動認可模式關閉。 接著，應用程式會執行交易，並呼叫中所包含的更新[SQLEndTran](../../../relational-databases/native-client-odbc-api/sqlendtran.md) SQL_COMMIT 或 SQL_ROLLBACK 選項。  
-  
- 當使用 MS DTC，不過，MS DTC 會變成交易管理員和應用程式不會再使用**SQLEndTran**。  
-  
- 當編列在分散式交易內，然後編列在第二個分散式交易內時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會從原始分散式交易脫離，並編列在新的交易中。 如需詳細資訊，請參閱 < [DTC 程式設計人員參考](https://msdn.microsoft.com/library/ms686108\(VS.85\).aspx)。  
-  
-## <a name="see-also"></a>另請參閱  
- [執行交易&#40;ODBC&#41;](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
-  
-  
+分散式的交易可以針對不同的 Microsoft SQL 系統中建立，以不同的方式。
+
+## <a name="odbc-driver-calls-the-msdtc-for-sql-server-on-premises"></a>ODBC 驅動程式會呼叫 SQL Server 內部 MSDTC
+
+Microsoft Distributed Transaction Coordinator (MSDTC) 可讓擴充的應用程式或_散發_跨兩個或多個執行個體的交易[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 即使兩個執行個體裝載於不同的電腦上的運作方式的分散式的交易。
+
+MSDTC 已安裝適用於 Microsoft SQL Server 內部部署，但不適用於 Microsoft Azure SQL Database 雲端服務。
+
+MSDTC 會呼叫 SQL Server Native Client 驅動程式 「 開放式資料庫連接 (ODBC)，當您C++計劃管理分散式的交易。 Native Client ODBC 驅動程式有相容以開啟群組分散式交易處理 (DTP) 標準的 XA 交易管理員。 此合規性所需的 MSDTC。 一般而言，所有交易管理命令會透過此 Native Client ODBC 驅動程式的方式都傳送。 順序如下所示：
+
+1. 您C++Native Client ODBC 應用程式會啟動交易，藉由呼叫[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)，以自動認可模式關閉。
+
+2. 應用程式會更新 SQL 伺服器 X 上的一些資料，在電腦 a。
+
+3. 應用程式會更新電腦 b 上的 SQL 伺服器 Y 上資料
+    - 如果在 SQL Server 的 y 軸上的更新失敗，會回復所有未認可的更新，這兩個 SQL Server 執行個體。
+
+4. 最後，應用程式藉由呼叫結束交易[SQLEndTran _(1)_](../../../relational-databases/native-client-odbc-api/sqlendtran.md)，使用 SQL_COMMIT 或 SQL_ROLLBACK 選項。
+
+_(1)_ 可以叫用 MSDTC，而不需要 ODBC。 在此情況下，MSDTC 會變成交易管理員，而應用程式不會再使用**SQLEndTran**。
+
+### <a name="only-one-distributed-transaction"></a>只能有一個分散式的交易
+
+假設您C++Native Client ODBC 應用程式登錄在分散式交易。 接下來應用程式會在第二個分散式交易中登記。 在此情況下， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會保留原始的分散式的交易中，並在新的分散式交易中登記。
+
+如需詳細資訊，請參閱 < [DTC 程式設計人員參考](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\))。
+
+## <a name="c-alternative-for-sql-database-in-the-cloud"></a>C#在雲端中的 SQL database 的替代方案
+
+Azure SQL Database 或 Azure SQL 資料倉儲不支援 MSDTC。
+
+不過，分散式的交易可以建立 SQL database 讓您C#程式使用.NET 類別[System.Transactions.TransactionScope](/dotnet/api/system.transactions.transactionscope)。
+
+### <a name="other-programming-languages"></a>其他程式設計語言
+
+下列其他程式設計語言與 SQL Database 服務的分散式交易可能會提供任何支援：
+
+- 原生C++使用 ODBC 驅動程式
+- 使用 TRANSACT-SQL 的連結的伺服器
+- JDBC 驅動程式
+
+## <a name="see-also"></a>另請參閱
+
+[執行交易 (ODBC)](performing-transactions-in-odbc.md)

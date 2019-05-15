@@ -2,8 +2,8 @@
 title: 快速入門：連線及查詢 Azure SQL database
 titleSuffix: Azure Data Studio
 description: 本快速入門示範如何使用 Azure Data Studio 來連接到 SQL database，然後執行查詢
-ms.custom: seodec18
-ms.date: 12/21/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: d368f38589530f27db98c3c61b9cec4610818ae4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a961cd08baab13b87241492df4adef52d5846daf
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63255926"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620348"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>快速入門：使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連線及查詢 Azure SQL database
 
@@ -39,7 +39,7 @@ ms.locfileid: "63255926"
 
 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連接 Azure SQL Database 伺服器。
 
-1. 第一次執行[!INCLUDE[name-sos](../includes/name-sos-short.md)]時應該會開啟**連接**頁面。 如果您沒有看到**連接**頁面上，選取**加入連接**，或**新連線**中的圖示**伺服器**提要欄位：
+1. 第一次執行[!INCLUDE[name-sos](../includes/name-sos-short.md)]**歡迎**頁面應該會開啟。 如果您沒有看到**歡迎**頁面上，選取**協助** > **歡迎**。 選取 **新的連線**來開啟**連線**窗格：
    
    ![新的 [連線] 圖示](media/quickstart-sql-database/new-connection-icon.png)
 

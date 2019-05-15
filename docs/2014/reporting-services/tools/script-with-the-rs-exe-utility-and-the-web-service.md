@@ -31,7 +31,7 @@ ms.locfileid: "63158292"
   
  如需指令碼範例，請參閱下列主題：  
   
- 第 1 課：建立 Windows Azure 儲存體物件[Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
+ 第 1 課：建立 Windows Azure 儲存體物件[在報表伺服器之間移轉內容的範例 Reporting Services rs.exe 指令碼](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
  [SQL Server Reporting Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
   
