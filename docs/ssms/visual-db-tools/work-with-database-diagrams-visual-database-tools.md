@@ -15,15 +15,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server]
 - diagrams [SQL Server]
 ms.assetid: 2dec7e0b-99cd-4185-8334-111795e52f45
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8f9b2f876b8f96f11875f5e865a2ab42bef14401
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b796fe7ce565af98e1670b404b76672917d1d8e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847496"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104738"
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>使用資料庫圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

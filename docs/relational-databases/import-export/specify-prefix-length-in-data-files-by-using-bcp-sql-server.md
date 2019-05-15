@@ -13,16 +13,16 @@ helpviewer_keywords:
 - lengths [SQL Server], prefix characters
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cdf2add41c7aec5a4044ea05271cfa723a8da2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0d0f760bcc31414dc6a6f69b62cdd28bb36741d
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607106"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946116"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>使用 bcp 指定資料檔的前置長度 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47607106"
   
  當您大量匯出資料並以原生資料類型或字元格式儲存時，請使用下表所示的前置詞長度。  
   
-|[SQL Server]<br /><br /> 資料類型|原生格式<br /><br /> NOT NULL|原生格式<br /><br /> NULL|字元格式<br /><br /> NOT NULL|字元格式<br /><br /> NULL|  
+|SQL Server<br /><br /> 資料類型|原生格式<br /><br /> NOT NULL|原生格式<br /><br /> NULL|字元格式<br /><br /> NOT NULL|字元格式<br /><br /> NULL|  
 |------------------------------|--------------------------------|----------------------------|-----------------------------------|-------------------------------|  
 |**char**|2|2|2|2|  
 |**varchar**|2|2|2|2|  

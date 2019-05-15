@@ -2,17 +2,18 @@
 title: 原生至 SharePoint 移轉 (SSRS) | Microsoft Docs
 ms.date: 08/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 620b936f976bca27ba1bb0c95e8b882d589e77d7
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: maggiesMSFT
+ms.author: maggies
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 39602493f5c64550f197fd2bee5f955820bd3453
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814031"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503636"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>原生至 SharePoint 移轉 (SSRS)
 
@@ -47,7 +48,7 @@ ms.locfileid: "51814031"
 |模型|是||  
 |資料集|是||  
 |報表組件||在移轉之後，驗證或更新報表組件的路徑。|  
-|排程|是|[Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)請參閱 ListSchedules 方法|  
+|[排程]|是| [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)請參閱 ListSchedules 方法|  
 |訂閱|是|請參閱 List Subscriptions 方法 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) 和 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> 方法。|  
 |快照集|||
 

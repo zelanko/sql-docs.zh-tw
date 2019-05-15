@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.target.status.f1
 ms.assetid: 010a4cab-d878-4889-8ac8-7d91db6345d6
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 00b908dc1162ea3c0392a2fdaaf48c405a32a9f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e40e3615932b0ff1615760d851d118173faa559
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805086"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097514"
 ---
 # <a name="target-servers-target-server-status-tab"></a>目標伺服器 (目標伺服器狀態索引標籤)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
