@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b8770ad0e7a5d04a2a1de96c15cb709b8321a5d6
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: fa363c2715057a0f81a691911a7e06b5104c5501
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421285"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088750"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>連線至 SQL Server 或 Azure SQL Database
 

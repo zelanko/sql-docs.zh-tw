@@ -14,16 +14,16 @@ helpviewer_keywords:
 - displaying alerts
 - status information [SQL Server], alerts
 ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ebe30c62faed65cddcda78a2095654e5f321d70
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e58b9b54de57225ee7e2c2ac2ff11afcba4a5a23
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695446"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089344"
 ---
 # <a name="view-information-about-an-alert"></a>檢視有關警示的資訊
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "51695446"
   
 -   **開始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目檢視有關警示的資訊：**  
   
-    [SQL Server Management Studio](#SSMSProcedure)  
+    [Transact-SQL](#SSMSProcedure)  
   
     [Transact-SQL](#TsqlProcedure)  
   

@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b332dbf2fe0876e324ff7c892588a0121a6b4e7c
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: c11900048bf7f32e39f993cb8369162a468be13d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744558"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090249"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>建立網域獨立的可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Windows Server 2016 引進以「已中斷連結 Active Directory 的叢集」為
 
 目前使用 SQL Server Management Studio 無法完整建立「網域獨立的可用性群組」。 雖然建立「網域獨立的可用性群組」基本上與建立一般可用性群組相同，但是某些方面 (例如建立憑證) 只有使用 Transact-SQL 才能達成。 下列範例假設可用性群組組態包含兩個複本：一個主要複本，一個次要複本。 
 
-1. [使用本連結的指示](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/)，部署 Workgroup 叢集以包含所有要參與可用性群組的伺服器。 設定 Workgroup 叢集之前，請確定已設定一般 DNS 尾碼。
+1. [使用本連結的指示](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059)，部署 Workgroup 叢集以包含所有要參與可用性群組的伺服器。 設定 Workgroup 叢集之前，請確定已設定一般 DNS 尾碼。
 2. 在要參與可用性群組的每個執行個體上[啟用 AlwaysOn 可用性群組](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server)功能。 這需要重新啟動每個 SQL Server 執行個體。
 3. 將裝載主要複本的每個執行個體都需要資料庫主要金鑰。 如果還沒有主索引鍵，請執行下列命令：
 
