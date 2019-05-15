@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 022113a9cabe678e3136d50beb3a87cd29fa07d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 740dcc22d53ff6cd60bbc491fb6bb7b7f44947a8
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62628155"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577992"
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,6 +70,10 @@ ms.locfileid: "62628155"
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
 在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+
+## <a name="notes-on-linux-version"></a>Linux 版本的注意事項
+
+由於 SQL 引擎如何在 Linux 中，有些資訊不符合 Linux 診斷資料。 例如，`os_thread_id`等工具的結果不符`ps`，`top` procfs 或 (/proc/`pid`)。  這是因為平台抽象層 (SQLPAL)，SQL Server 元件與作業系統之間的層。
 
 ## <a name="examples"></a>範例  
  在啟動時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會啟動執行緒，然後使工作者與這些執行緒產生關聯。 不過，外部元件 (例如擴充預存程序) 可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序之下啟動執行緒。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並沒有這些執行緒的控制權。 sys.dm_os_threads 可以提供資訊中取用資源之惡意執行緒[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程序。  

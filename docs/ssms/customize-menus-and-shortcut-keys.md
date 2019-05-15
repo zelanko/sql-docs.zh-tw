@@ -18,15 +18,15 @@ helpviewer_keywords:
 - customizing menus [SQL Server]
 - accelerator keys
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 05dbc7ae15ba70b4bb0133f8b02d9e57a4330046
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 931ecdb787e5dc3aeb62dd81d19357048987e82e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801302"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102912"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>自訂功能表與快速鍵
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

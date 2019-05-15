@@ -7,16 +7,16 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa36b331f42835a4b1bf6b25651a59669cb56ac9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b5c0cd5f10facf66c4f79ec1741d5cddcf3a3012
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390491"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946644"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>匯入和匯出 SQL Server 和 Azure SQL Database 的資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
