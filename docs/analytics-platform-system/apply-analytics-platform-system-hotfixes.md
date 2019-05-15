@@ -53,7 +53,7 @@ ms.locfileid: "63019043"
   
     2.  使用**系統管理員身分執行**選項來開啟命令提示字元。  
   
-    3.  執行下列命令，取代*<HotfixPackageName>* hotfix 可執行檔封裝，並取代的預留位置項目名稱取代 *< >* 適當的資訊。  
+    3.  執行下列命令，取代 *<HotfixPackageName>* hotfix 可執行檔封裝，並取代的預留位置項目名稱取代 *< >* 適當的資訊。  
   
         ```  
         <HotfixPackageName> /DomainAdminPassword="<password>"  
