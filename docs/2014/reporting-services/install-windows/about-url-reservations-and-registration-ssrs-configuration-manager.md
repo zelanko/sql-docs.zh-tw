@@ -103,7 +103,7 @@ ms.locfileid: "63225397"
 ##  <a name="URLlocalAdmin"></a> 用於本機管理的 URL  
  如果您指定了強式或弱式萬用字元作為 URL 保留項目，則可以使用 http://localhost/reportserver 或 http://localhost/reports。  
   
- http://localhost URL 會解譯成 http://127.0.0.1。 如果您將 URL 保留項目限制為電腦名稱或單一 IP 位址，則除非您針對本機電腦上的 127.0.0.1 建立其他保留項目，否則將無法使用 localhost。 同樣地，如果電腦上已停用 localhost 或 127.0.0.1，您將無法使用該 URL。  
+ http://localhost URL 會解譯成 http://127.0.0.1 。 如果您將 URL 保留項目限制為電腦名稱或單一 IP 位址，則除非您針對本機電腦上的 127.0.0.1 建立其他保留項目，否則將無法使用 localhost。 同樣地，如果電腦上已停用 localhost 或 127.0.0.1，您將無法使用該 URL。  
   
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 和 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 包含新的安全性功能，可讓意外使用更高權限執行程式的風險降到最低。 您需要其他步驟，才能在這些作業系統上啟用管理。 如需詳細資訊，請參閱 [設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
