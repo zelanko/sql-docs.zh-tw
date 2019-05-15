@@ -12,7 +12,7 @@ ms.reviewer: v-daveng
 ms.author: genemi
 ms.openlocfilehash: d773e05a3ed953e5210c0ade3226b4a32e82aeab
 ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/08/2018
 ms.locfileid: "51289898"
