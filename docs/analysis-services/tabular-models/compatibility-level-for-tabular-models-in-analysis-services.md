@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 中表格式模型的相容性層級 |Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fd70a673744d2e401e8a28f6ce2c533434e1c75e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 45ea2e048a7ea7ae7d041614d62a280ee3698131
+ms.sourcegitcommit: 4cb96c291529e9bdf0a95fb3610b350583eb36d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472304"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65709118"
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Analysis Services 表格式模型的相容性層級
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
   *相容性層級*指的是 Analysis Services 引擎中的特定版本的行為。 比方說，DirectQuery 和表格式物件中繼資料根據相容性層級上有不同的實作。 在一般，您應該選擇支援您的伺服器最新的相容性層級。
 
-  **最新的相容性層級是 1400** 
+  **最新支援的相容性層級是 1400** 
   
 在 1400年相容性層級中的主要功能包括：
 
@@ -38,8 +38,9 @@ ms.locfileid: "63472304"
 |||  
 |-|-|- 
 |**相容性層級**|**伺服器版本**| 
-|1400|Azure Analysis Services, SQL Server 2017 |  
-|1200|Azure Analysis Services, SQL Server 2017, SQL Server 2016| 
+|1470|SQL Server 2019 (CTP 2.3 和更新版本) | 
+|1400|Azure Analysis Services, SQL Server 2019, SQL Server 2017 |  
+|1200|Azure Analysis Services, SQL Server 2019, SQL Server 2017, SQL Server 2016| 
 |1103|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
 |1100|SQL Server 2017 *，SQL Server 2016、 2014年的 SQL Server、 SQL Server 2012 SP1、 SQL Server 2012| 
 

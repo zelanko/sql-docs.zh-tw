@@ -23,12 +23,12 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: fa7395141a040beb8fdc71aff5a5068bdfd7eb03
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+ms.openlocfilehash: c87f0fd65f5657d2885a2c7ea078ecaea7a2c717
+ms.sourcegitcommit: 4cb96c291529e9bdf0a95fb3610b350583eb36d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2019
-ms.locfileid: "65626781"
+ms.locfileid: "65709108"
 ---
 # <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -67,8 +67,8 @@ ms.locfileid: "65626781"
 
 ```sql
 SELECT
-    sys.all_objects.name AS TableName, sys.all_columns.name As ColumnName,
-    [Label], Label_ID, Information_Type, Information_Type_ID
+    sys.all_objects.name AS [TableName], sys.all_columns.name As [ColumnName],
+    [Label], [Label_ID], [Information_Type], [Information_Type_ID]
 FROM
           sys.sensitivity_classifications
 left join sys.all_objects on sys.sensitivity_classifications.major_id = sys.all_objects.object_id
