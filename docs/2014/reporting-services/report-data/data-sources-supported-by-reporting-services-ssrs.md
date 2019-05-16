@@ -161,7 +161,7 @@ ms.locfileid: "63461724"
   
  在 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]中，與此資料延伸模組相關聯的圖形化查詢設計工具是 [關聯式查詢設計工具使用者介面](../relational-query-designer-user-interface.md)，不是與 [Microsoft SQL Server](../../ssms/visual-db-tools/visual-database-tool-designers.md) 資料來源類型搭配使用的 **Visual Database Tools 設計工具** 。  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 會自動區分**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** 並**Microsoft SQL Server**資料來源類型，並開啟與資料來源類型相關聯的圖形化查詢設計工具。  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 會自動區分 **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** 並 **Microsoft SQL Server** 資料來源類型，並開啟與資料來源類型相關聯的圖形化查詢設計工具。  
   
  如果您在圖形化模式下使用查詢設計工具，則會分析查詢，而且可能會重寫查詢。 以文字為基礎的查詢設計工具也可用來編寫查詢。 當您想要控制用於查詢的確切 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法時，請使用以文字為基礎的查詢設計工具。 如需詳細資訊，請參閱[以文字為基礎的查詢設計工具使用者介面](../text-based-query-designer-user-interface.md)。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "63461724"
 ###  <a name="PWD"></a> Microsoft SQL Server 平行資料倉儲資料處理延伸模組  
  在 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]中，與此資料延伸模組相關聯的圖形化查詢設計工具是 [關聯式查詢設計工具使用者介面](../relational-query-designer-user-interface.md)，不是與 [Microsoft SQL Server](../../ssms/visual-db-tools/visual-database-tool-designers.md) 資料來源類型搭配使用的 **Visual Database Tools 設計工具** 。  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 會自動區分**SQL Server Parallel Data Warehouse**並**Microsoft SQL Server**資料來源類型，並開啟與資料來源類型相關聯的圖形化查詢設計工具。  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 會自動區分 **SQL Server Parallel Data Warehouse** 並 **Microsoft SQL Server** 資料來源類型，並開啟與資料來源類型相關聯的圖形化查詢設計工具。  
   
  如果您在圖形化模式下使用查詢設計工具，則會分析查詢，而且可能會重寫查詢。 以文字為基礎的查詢設計工具也可用來編寫查詢。 當您想要控制用於查詢的確切 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法時，請使用以文字為基礎的查詢設計工具。 如需詳細資訊，請參閱 [以文字為基礎的查詢設計工具使用者介面](../text-based-query-designer-user-interface.md)。  
   

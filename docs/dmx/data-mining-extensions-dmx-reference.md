@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: dcf3231fbff0ec4c3ea32e94f7b974a62faf05e6
 ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38032724"
@@ -96,7 +96,7 @@ ms.locfileid: "38032724"
   
  您可以使用 DMX 函數，取得在培訓模型過程中探索到的資訊，以及計算新資訊。 這些函數可以用於許多用途，包括傳回描述基礎資料或預測精確度的統計資料，以及傳回預測的擴充說明。  
   
- **如需詳細****資訊：** [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)，[一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)， [結構和 DMX 預測查詢的使用方式](../dmx/structure-and-usage-of-dmx-prediction-queries.md)，[資料採礦延伸模組&#40;DMX&#41;函式參考  ](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **如需詳細** **資訊：** [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)，[一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)， [結構和 DMX 預測查詢的使用方式](../dmx/structure-and-usage-of-dmx-prediction-queries.md)，[資料採礦延伸模組&#40;DMX&#41;函式參考  ](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
  [回到 DMX 陳述式](#BKMK_DMXStatements)  
   
