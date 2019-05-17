@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2018
+ms.date: 05/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ed6edb74cea3c96ae8791c28b23510222aa69ecc
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62690802"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805174"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +89,7 @@ GO
   
  下表列出工作會遇到的等候類型。  
 
-|型別 |描述| 
+|type |描述| 
 |-------------------------- |--------------------------| 
 |ABR |僅供參考之用。 不支援。 我們無法保證未來的相容性。| | 
 |AM_INDBUILD_ALLOCATION |TBD <br />**適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -778,6 +778,10 @@ GO
 |QUERY_TASK_ENQUEUE_MUTEX |TBD <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |QUERY_TRACEOUT |僅供參考之用。 不支援。 我們無法保證未來的相容性。| 
 |RBIO_WAIT_VLF |TBD <br /> **適用於**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|RBIO_RG_STORAGE |發生於在網頁伺服器的延後的記錄耗用量，而遭到節流超大規模資料庫的計算節點。 <br /> **適用於**：Azure SQL Database 的超大規模。|
+|RBIO_RG_DESTAGE |發生於超大規模資料庫的計算節點，而遭到節流延後的記錄耗用量的長期記錄儲存體。 <br /> **適用於**：Azure SQL Database 的超大規模。|
+|RBIO_RG_REPLICA |發生於資料庫計算節點正在進行節流，因為超大規模延遲讀取的次要複本節點記錄耗用量。 <br /> **適用於**：Azure SQL Database 的超大規模。|
+|RBIO_RG_LOCALDESTAGE |發生於超大規模資料庫的計算節點，而遭到節流延後的記錄取用記錄服務。 <br /> **適用於**：Azure SQL Database 的超大規模。|
 |RECOVER_CHANGEDB |在同步處理暖待命資料庫中的資料庫狀態時發生。| 
 |RECOVERY_MGR_LOCK |TBD <br /> **適用於**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |REDO_THREAD_PENDING_WORK |TBD <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 

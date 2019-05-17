@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d54bf1f21f0206d0f3e837e4fc8d9f636eb80b5b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63228392"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65818810"
 ---
 SQL Server Profiler
