@@ -8692,7 +8692,7 @@
               href: ../ssms/install-other-languages.md
             - name: SSMS 支援原則
               href: ../ssms/support-policy.md
-        - name: 教學課程：SQL Server Management Studio
+        - name: SQL Server Management Studio
           href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
           items:
             - name: 使用 SSMS 對 SQL Server 進行連線與查詢
@@ -9274,6 +9274,10 @@
                           items:
                             - name: 指令碼產生精靈支援的物件
                               href: ../ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
+        - name: 疑難排解
+          items:
+            - name: 取得完整記憶體傾印
+              href: ../ssms/troubleshoot/get-full-memory-dump.md
         - name: 參考
           items:
             - name: SSMS 環境
