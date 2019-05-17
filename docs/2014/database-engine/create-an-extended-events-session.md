@@ -34,7 +34,7 @@ ms.locfileid: "62807337"
 ## <a name="in-this-section"></a>本節內容  
  [使用查詢編輯器建立擴充事件工作階段](../../2014/database-engine/create-an-extended-events-session-using-query-editor.md)  
   
- [建立擴充的事件工作階段使用 [精靈]&#40;物件總管]&#41;](../ssms/object/object-explorer.md)  
+ [建立擴充的事件工作階段使用 [精靈]&#40;物件總管&#41;](../ssms/object/object-explorer.md)  
   
  [使用新增工作階段對話方塊建立擴充事件工作階段](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
   
