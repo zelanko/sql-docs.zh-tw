@@ -20,11 +20,11 @@ ms.locfileid: "65489072"
 # <a name="task-4-setting-domain-rules"></a>工作 4：設定定義域規則
   在這個工作中，您建立的規則**Contact Email**網域來驗證是否電子郵件地址結尾 **@adventure-works.com** 。 請參閱[建立定義域規則](https://msdn.microsoft.com/library/hh510397.aspx)如需詳細資料頁面上的主題。  
   
-1.  按一下 [ **Contact Email**中**定義域清單**。  
+1.  按一下  **Contact Email**中**定義域清單**。  
   
 2.  若要切換**定義域規則**右窗格中的索引標籤。  
   
-     ![加入新的定義域規則] 工具列按鈕](../../2014/tutorials/media/et-settingdomainrules-01.jpg "新增新的定義域規則] 工具列按鈕")  
+     ![加入新的定義域規則 工具列按鈕](../../2014/tutorials/media/et-settingdomainrules-01.jpg "新增新的定義域規則 工具列按鈕")  
   
 3.  在右窗格中，按一下**加入新的定義域規則**工具列上的按鈕 （請參閱映像） 新增規則。  
   
@@ -36,27 +36,27 @@ ms.locfileid: "65489072"
   
      ![電子郵件驗證規則](../../2014/tutorials/media/et-settingdomainrules-02.jpg "電子郵件驗證規則")  
   
-7.  按一下 [**測試資料上執行選取的定義域規則**測試規則針對取樣資料的右窗格的工具列上的按鈕。  
+7.  按一下 **測試資料上執行選取的定義域規則**測試規則針對取樣資料的右窗格的工具列上的按鈕。  
   
-     ![在 [測試資料] 工具列按鈕上執行定義域規則](../../2014/tutorials/media/et-settingdomainrules-03.jpg "測試資料] 工具列按鈕上執行定義域規則")  
+     ![在 [測試資料] 工具列按鈕上執行定義域規則](../../2014/tutorials/media/et-settingdomainrules-03.jpg "測試資料 工具列按鈕上執行定義域規則")  
   
 8.  在 [**測試定義域規則**] 對話方塊中，按一下**加入定義域規則的新測試詞彙**工具列上的按鈕。  
   
-     ![測試定義域規則] 對話方塊](../../2014/tutorials/media/et-settingdomainrules-04.jpg "測試定義域規則] 對話方塊")  
+     ![測試定義域規則 對話方塊](../../2014/tutorials/media/et-settingdomainrules-04.jpg "測試定義域規則 對話方塊")  
   
 9. 型別 **frank7@adventure-works.com** （有效的值） 中 **Contact Email** 資料行。  
   
 10. 重複上述兩個步驟來加入 **joe2@adventure-work.com** (含無效值的 ')。  
   
-11. 按一下最後一個按鈕 (**對所有詞彙測試定義域規則**) 測試輸入的資料依規則] 工具列上。  
+11. 按一下最後一個按鈕 (**對所有詞彙測試定義域規則**) 測試輸入的資料依規則 工具列上。  
   
-     ![測試定義域規則的所有詞彙] 工具列按鈕](../../2014/tutorials/media/et-settingdomainrules-05.jpg "測試定義域規則的所有詞彙] 工具列按鈕")  
+     ![測試定義域規則的所有詞彙 工具列按鈕](../../2014/tutorials/media/et-settingdomainrules-05.jpg "測試定義域規則的所有詞彙 工具列按鈕")  
   
 12. 請注意，第一個輸入顯示為有效的項目，第二個輸入則顯示為無效的項目。  
   
      ![測試定義域規則結果](../../2014/tutorials/media/et-settingdomainrules-06.jpg "測試定義域規則結果")  
   
-13. 按一下 [**關閉 [** 以關閉**測試定義域規則**] 對話方塊。  
+13. 按一下 **關閉 **以關閉**測試定義域規則** 對話方塊。  
   
 ## <a name="next-step"></a>下一個步驟  
  [工作 5:設定以詞彙為主的關聯性](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
