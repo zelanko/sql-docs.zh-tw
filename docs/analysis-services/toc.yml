@@ -105,14 +105,15 @@
               href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
             - name: 補充課程 - 設定 Power View 報表的報表屬性
               href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
-    - name: 多維度模型化
-      href: ../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md
+    - name: 多維度模型
       items:
+        - name: Adventure works 教學課程
+          href: ../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md
         - name: 教學課程案例
           href: ../analysis-services/multidimensional-tutorial/analysis-services-tutorial-scenario.md
         - name: 安裝 Analysis Services 多維度模型化教學課程的範例資料和專案
           href: ../analysis-services/multidimensional-tutorial/install-sample-data-and-projects.md
-        - name: 第 1 課：在 Analysis Services 專案內定義資料來源檢視
+        - name: 課程 1 - 在 Analysis Services 專案內定義資料來源檢視
           href: ../analysis-services/multidimensional-tutorial/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md
           items:
             - name: 課程 1-1 - 建立 Analysis Services 專案
@@ -123,7 +124,7 @@
               href: ../analysis-services/multidimensional-tutorial/lesson-1-3-defining-a-data-source-view.md
             - name: 課程 1-4 - 修改預設資料表名稱
               href: ../analysis-services/multidimensional-tutorial/lesson-1-4-modifying-default-table-names.md
-        - name: 第 2 課：定義和部署 Cube
+        - name: 課程 2 - 定義及部署 Cube
           href: ../analysis-services/multidimensional-tutorial/lesson-2-defining-and-deploying-a-cube.md
           items:
             - name: 課程 2-1 - 定義維度
@@ -138,7 +139,7 @@
               href: ../analysis-services/multidimensional-tutorial/lesson-2-5-deploying-an-analysis-services-project.md
             - name: 課程 2-6 - 瀏覽 Cube
               href: ../analysis-services/multidimensional-tutorial/lesson-2-6-browsing-the-cube.md
-        - name: 第 3 課：修改量值、屬性和階層
+        - name: 課程 3 - 修改量值、屬性和階層
           href: ../analysis-services/multidimensional-tutorial/lesson-3-modifying-measures-attributes-and-hierarchies.md
           items:
             - name: 課程 3-1 - 修改量值
@@ -151,7 +152,7 @@
               href: ../analysis-services/multidimensional-tutorial/lesson-3-4-modifying-the-date-dimension.md
             - name: 課程 3-5 - 瀏覽已部署的 Cube
               href: ../analysis-services/multidimensional-tutorial/lesson-3-5-browsing-the-deployed-cube.md
-        - name: 第 4 課：定義進階屬性和維度屬性
+        - name: 課程 4 - 定義進階屬性和維度屬性
           href: ../analysis-services/multidimensional-tutorial/lesson-4-defining-advanced-attribute-and-dimension-properties.md
           items:
             - name: 課程 4-1 - 使用 Analysis Services 教學課程專案的已修改版本
@@ -168,7 +169,7 @@
               href: ../analysis-services/multidimensional-tutorial/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
             - name: 課程 4-7 - 定義未知的成員和 Null 處理屬性
               href: ../analysis-services/multidimensional-tutorial/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
-        - name: 第 5 課：定義維度和量值群組之間的關聯性
+        - name: 課程 5 - 定義維度和量值群組之間的關聯性
           href: ../analysis-services/multidimensional-tutorial/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md
           items:
             - name: 課程 5-1 - 定義參考的關聯性
@@ -179,31 +180,31 @@
               href: ../analysis-services/multidimensional-tutorial/lesson-5-3-defining-a-many-to-many-relationship.md
             - name: 課程 5-4 - 定義量值群組內的維度資料粒度
               href: ../analysis-services/multidimensional-tutorial/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md
-        - name: 第 6 課：定義計算
+        - name: 課程 6 - 定義計算
           href: ../analysis-services/multidimensional-tutorial/lesson-6-defining-calculations.md
           items:
             - name: 課程 6-1 - 定義導出成員
               href: ../analysis-services/multidimensional-tutorial/lesson-6-1-defining-calculated-members.md
             - name: 課程 6-2 - 定義命名集
               href: ../analysis-services/multidimensional-tutorial/lesson-6-2-defining-named-sets.md
-        - name: 第 7 課：定義關鍵效能指標 (KPI)
+        - name: 課程 7 - 定義關鍵效能指標 (KPI)
           href: ../analysis-services/multidimensional-tutorial/lesson-7-defining-key-performance-indicators-kpis.md
           items:
             - name: 課程 7-1 - 定義和瀏覽 KPI
               href: ../analysis-services/multidimensional-tutorial/lesson-7-1-defining-and-browsing-kpis.md
-        - name: 第 8 課：定義動作
+        - name: 課程 8 - 定義動作
           href: ../analysis-services/multidimensional-tutorial/lesson-8-defining-actions.md
           items:
             - name: 課程 8-1 - 定義和使用鑽研動作
               href: ../analysis-services/multidimensional-tutorial/lesson-8-1-defining-and-using-a-drillthrough-action.md
-        - name: 第 9 課：定義檢視方塊和翻譯
+        - name: 課程 9 - 定義檢視方塊及翻譯
           href: ../analysis-services/multidimensional-tutorial/lesson-9-defining-perspectives-and-translations.md
           items:
             - name: 課程 9-1 - 定義和瀏覽檢視方塊
               href: ../analysis-services/multidimensional-tutorial/lesson-9-1-defining-and-browsing-perspectives.md
             - name: 課程 9-2 - 定義和瀏覽翻譯
               href: ../analysis-services/multidimensional-tutorial/lesson-9-2-defining-and-browsing-translations.md
-        - name: 第 10 課：定義系統管理角色
+        - name: 課程 10 - 定義系統管理角色
           href: ../analysis-services/multidimensional-tutorial/lesson-10-defining-administrative-roles.md
           items:
             - name: 課程 10-1 - 授與處理資料庫權限
@@ -219,7 +220,7 @@
         - name: 以 Power Pivot 模式安裝 Analysis Services
           href: ../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md
           items:
-            - name: 驗證 PowerPivot for SharePoint 安裝
+            - name: 驗證 Power Pivot for SharePoint 安裝
               href: ../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md
             - name: Power Pivot for SharePoint 2016 的最低權限組態範例
               href: ../analysis-services/instances/install-windows/power-pivot-minimum-privilege-example-sharepoint-2016.md
@@ -263,7 +264,7 @@
               href: ../analysis-services/instances/register-an-analysis-services-instance-in-a-server-group.md
             - name: 判斷伺服器模式
               href: ../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md
-            - name: 重新命名 Analysis Services 執行個體
+            - name: 為 Analysis Services 執行個體重新命名
               href: ../analysis-services/instances/rename-an-analysis-services-instance.md
     - name: 表格式模型
       items:

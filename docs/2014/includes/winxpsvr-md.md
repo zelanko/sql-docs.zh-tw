@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 1902f7430578d20b5a77144a5cf721a3c2fbe1de
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63201031"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65816566"
 ---
 Windows Server 2003
