@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: f4ddfdd276bb94433efccc8dc2830c6b85f8f3a8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62752978"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65818882"
 ---
- C:\\Program Files\\Microsoft SQL Server\\120\\SDK\\Assemblies\\ 
+C:\\Program Files\\Microsoft SQL Server\\120\\SDK\\Assemblies\\

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: ed72af6462fc70cb288a21e27870e3a0095b0597
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646330"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65820098"
 ---
 Windows 2000
