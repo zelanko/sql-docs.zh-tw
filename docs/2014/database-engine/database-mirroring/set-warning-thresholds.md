@@ -12,12 +12,12 @@ ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 09f9cc460368109e3e1a7fd7464602182bf188e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f1c7c05a02c67fda968ea26bd114d16b0b73925
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62754136"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805163"
 ---
 # <a name="set-warning-thresholds"></a>設定警告臨界值
   使用這個對話方塊可針對 **[資料庫鏡像監視器]** 對話方塊內導覽樹狀目錄中選取的資料庫，啟用並設定一或多個警告臨界值。  
@@ -30,7 +30,7 @@ ms.locfileid: "62754136"
   
 ## <a name="options"></a>選項。  
  *伺服器執行個體及其連接狀態*  
- 以 *SYSTEM***\\***INSTANCE_NAME* 格式顯示的夥伴伺服器執行個體名稱。 如果是預設伺服器執行個體，則只會顯示系統名稱。  
+ 以 _SYSTEM_**\\**_INSTANCE_NAME_格式顯示的夥伴伺服器執行個體名稱。 如果是預設伺服器執行個體，則只會顯示系統名稱。  
   
  這個欄位也會指出監視器目前是否已連接到這個伺服器執行個體。 可能的連接狀態如下：  
   
