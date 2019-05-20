@@ -2,7 +2,7 @@
 title: 使用 URL 存取搜尋報表 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - text searches [Reporting Services]
 - URL access [Reporting Services], report searches
 ms.assetid: 6f3410c4-7944-448f-bae8-bab3e8152d46
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a63f4c1c1ad925ee57def853c76f71ec52f9cb58
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b2568c2930080ddbb060f2c4d014c40476ab38f8
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813191"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570882"
 ---
 # <a name="search-a-report-using-url-access"></a>使用 URL 存取搜尋報表
   您可以使用 URL 存取來搜尋特定文字集的報表。 若要搜尋報表，請在 URL 上將 *rc:FindString* 參數的值設定為等於您要搜尋的文字。 此外，請使用 *rc:StartFind* 和 *rc:EndFind* 參數，將搜尋縮小到報表內的特定頁面。  

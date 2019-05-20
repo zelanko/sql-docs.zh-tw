@@ -2,18 +2,18 @@
 title: 開啟 SharePoint 追蹤記錄檔的 Reporting Services 事件 (ULS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 96e3049ecb5e222b6ced7fc6a2202c80e25a7028
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f25397d69f297c3cbd754de0cf19a8cb90cf872f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409535"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580942"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
 
@@ -42,8 +42,8 @@ ms.locfileid: "52409535"
 |--------------|-----------|-----------------|  
 |[資料庫]|「詳細資訊」|記錄涉及資料庫存取權的事件。|  
 |一般|「詳細資訊」|記錄涉及下列項目之存取權的事件：<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 網頁<br /><br /> 報表檢視器 HTTP 處理常式<br /><br /> 報表存取 (.rdl 檔)<br /><br /> 資料來源 (.rsds 檔)<br /><br /> SharePoint 網站的 URL (.smdl 檔)|  
-|Office Server 一般|Exception|記錄登入失敗。|  
-|拓撲|Verbose|記錄目前的使用者資訊。|  
+|Office Server 一般|例外狀況|記錄登入失敗。|  
+|拓撲|「詳細資訊」|記錄目前的使用者資訊。|  
 |Web 組件|「詳細資訊」|記錄涉及報表檢視器 Web 組件之存取權的事件。|  
   
 ##  <a name="bkmk_turnon"></a> 開啟和關閉 Reporting Services 類別目錄中的 Reporting Services 事件  

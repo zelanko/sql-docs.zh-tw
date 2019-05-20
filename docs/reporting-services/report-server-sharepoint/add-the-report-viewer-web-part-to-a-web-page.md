@@ -2,17 +2,17 @@
 title: 將報表檢視器網頁組件新增至網頁 | Microsoft Docs
 ms.date: 10/05/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7d8f2bce29ae9f9c3b876542e6a894c1439b00ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 562c762871db5c29476d10a81ac52dad46f65ad5
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849213"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579393"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>將報表檢視器網頁組件新增至網頁
 

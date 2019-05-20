@@ -2,18 +2,18 @@
 title: RsReportServer.config 組態檔 | Microsoft Docs
 ms.date: 06/12/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6ba83e5cb431b2bcc10c0ba195189fc570f14cb9
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a081c24a83c5b73e17d7db4e0ef034cd0aa1125e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591562"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579849"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 組態檔
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** 檔案會儲存報表伺服器 Web 服務和背景處理所使用的設定。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式都是在讀取 RSReportServer.config 檔中儲存之組態設定的單一處理序中執行。 原生模式和 SharePoint 模式的報表伺服器都使用 RSReportServer.config，不過，這兩個模式不會使用組態檔中的所有相同設定。 SharePoint 模式版本的檔案較小，因為 SharePoint 模式的許多設定是儲存在 SharePoint 組態資料庫中，而不是檔案中。 本主題描述針對原生模式和 SharePoint 模式所安裝的預設組態檔，以及由組態檔控制的部分重要設定和行為。  
@@ -131,13 +131,13 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 |設定|Description|[模式]|  
 |-------------|-----------------|----------|  
-|**AuthenticationTypes**|指定一或多種驗證類型。 有效值為：**RSWindowsNegotiate**、**RSWindowsKerberos**、**RSWindowsNTLM**、**RSWindowsBasic** 和 **Custom**。<br /><br /> **RSWindows** 類型和 **Custom** 互斥。<br /><br /> **RSWindowsNegotiate**、 **RSWindowsKerberos**、 **RSWindowsNTLM**和 **RSWindowsBasic** 是累計的，而且可以一起使用，如本節前面的預設值範例所示。<br /><br /> 如果您預期會收到來自各種使用不同驗證類型之用戶端應用程式或瀏覽器的要求，指定多種驗證類型就是必要的做法。<br /><br /> 請勿移除 **RSWindowsNTLM**，否則瀏覽器支援會限制在部分支援的瀏覽器類型。 如需詳細資訊，請參閱 [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。|N|  
+|**AuthenticationTypes**|指定一或多種驗證類型。 有效值為： **RSWindowsNegotiate**、 **RSWindowsKerberos**、 **RSWindowsNTLM**、 **RSWindowsBasic**和 **Custom**。<br /><br /> **RSWindows** 類型和 **Custom** 互斥。<br /><br /> **RSWindowsNegotiate**、 **RSWindowsKerberos**、 **RSWindowsNTLM**和 **RSWindowsBasic** 是累計的，而且可以一起使用，如本節前面的預設值範例所示。<br /><br /> 如果您預期會收到來自各種使用不同驗證類型之用戶端應用程式或瀏覽器的要求，指定多種驗證類型就是必要的做法。<br /><br /> 請勿移除 **RSWindowsNTLM**，否則瀏覽器支援會限制在部分支援的瀏覽器類型。 如需詳細資訊，請參閱 [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。|N|  
 |**RSWindowsNegotiate**|報表伺服器接受 Kerberos 或 NTLM 安全性 Token。 當報表伺服器在原生模式下執行，而且服務帳戶為網路服務時，此為預設值。 當報表伺服器在原生模式下執行，而且服務帳戶設定成網域使用者帳戶時，會省略此設定。<br /><br /> 如果網域帳戶設定成報表伺服器服務帳戶，而且服務主要名稱 (SPN) 未設定成報表伺服器，此設定可能會防止使用者登入伺服器。|N|  
 |**EnableAuthPersistance**|伺服器接受 NTLM 安全性 Token。<br /><br /> 如果您移除此設定，瀏覽器支援會受到某些支援之瀏覽器類型的限制。 如需詳細資訊，請參閱 [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。|N、S|  
 |**RSWindowsKerberos**|伺服器接受 Kerberos 安全性 Token。<br /><br /> 當您在限制委派驗證配置中使用 Kerberos 驗證時，請使用此設定或 RSWindowsNegotiate。|N|  
 |**RSWindowsBasic**|不使用認證建立連線時，伺服器會接受基本認證並發出挑戰/回應。<br /><br /> 基本驗證會以清楚的文字，將認證傳入 HTTP 要求中。 如果您使用基本驗證，請使用 SSL 加密進出報表伺服器的網路流量。 若要檢視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中基本驗證的範例組態語法，請參閱 [使用報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)。|N|  
 |**Custom**|如果您在報表伺服器電腦上部署了自訂安全性延伸模組，請指定這個值。 如需詳細資訊，請參閱＜ [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)＞。|N|  
-|**LogonMethod**|這個值會指定 **RSWindowsBasic**的登入類型。 如果您指定了 **RSWindowsBasic**，這個值就是必要項目。 有效值為 2 或 3，其中每個值代表下列項目：<br /><br /> **2** = 網路登入，用於驗證純文字密碼的高效能伺服器<br /><br /> **3** = 純文字登入，可將登入認證保存在隨著每個 HTTP 要求傳送的驗證封裝中，以便在連接至網路中的其他伺服器時，允許伺服器模擬使用者。<br /><br /> <br /><br /> 注意：[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 中不支援值 0 (用於互動式登入) 和 1 (用於批次登入)。|N|  
+|**LogonMethod**|這個值會指定 **RSWindowsBasic**的登入類型。 如果您指定了 **RSWindowsBasic**，這個值就是必要項目。 有效值為 2 或 3，其中每個值代表下列項目：<br /><br /> **2** = 網路登入，用於驗證純文字密碼的高效能伺服器<br /><br /> **3** = 純文字登入，可將登入認證保存在隨著每個 HTTP 要求傳送的驗證封裝中，以便在連接至網路中的其他伺服器時，允許伺服器模擬使用者。<br /><br /> <br /><br /> 注意： [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]中不支援值 0 (用於互動式登入) 和 1 (用於批次登入)。|N|  
 |**Realm**|這個值是用於 **RSWindowsBasic**。 它會指定資源分割區，其中包含用於控制組織中受保護資源之存取權的授權和驗證功能。|N|  
 |**DefaultDomain**|這個值是用於 **RSWindowsBasic**。 它可用於決定伺服器用以驗證使用者的網域。 雖然這個值是選擇性的，但是如果您省略它，報表伺服器將使用電腦名稱當做網域。 如果您在網域控制站上安裝了報表伺服器，則使用的網域就是電腦所控制的網域。|N|  
 |**RSWindowsExtendedProtectionLevel**|預設值是 **off**。 如需詳細資訊，請參閱＜ [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)＞|N|  

@@ -2,7 +2,7 @@
 title: 查詢設計工具 (SSRS) | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - semantic queries [Reporting Services]
 - Report Model Query Designer
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3b0d20ddfbc872429ecf47d001067f1e7f2738c9
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 840b964a8010ad7682a4d6d4d62a53192da9cfbb
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021232"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571213"
 ---
 # <a name="query-design-tools-ssrs"></a>查詢設計工具 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供各種查詢設計工具，您可以在報表設計師中利用這些工具來建立資料集查詢。 某些查詢設計工具還提供替代模式，讓您能夠選擇使用視覺化模式或直接使用查詢語言。 本主題簡介每個工具，並描述每個工具支援的資料來源類型。 本主題將描述下列工具：  
@@ -52,7 +52,7 @@ ms.locfileid: "50021232"
   
 -   **依查詢設計工具類型。** 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源同時支援圖形化查詢設計工具以及以文字為基礎的查詢設計工具。  
   
--   **依查詢語言變化。** 例如， [!INCLUDE[tsql](../../includes/tsql-md.md)] 這類的查詢語言在語法上可能會視資料來源類型而有所不同。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言和 Oracle SQL 語言在查詢命令的語法上有一些不同。  
+-   **依查詢語言變化。** 例如， [!INCLUDE[tsql](../../includes/tsql-md.md)] 這類的查詢語言在語法上可能會視資料來源類型而有所不同。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言和 Oracle SQL 語言在查詢命令的語法上有一些不同。  
   
 -   **依資料庫物件名稱的結構描述部分支援。** 當資料來源使用結構描述做為資料庫物件識別碼的一部分時，必須針對不使用預設結構描述的任何名稱，提供結構描述名稱做為查詢的一部分。 例如， `SELECT FirstName, LastName FROM [Person].[Person]`。  
   

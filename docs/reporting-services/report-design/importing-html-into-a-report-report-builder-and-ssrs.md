@@ -2,20 +2,20 @@
 title: 將 HTML 匯入至報表 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 12/06/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 description: 了解如何使用文字方塊，將擷取自資料集中欄位的 HTML 格式文字插入至報表。
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ff0e5bffdc0704894029a223c5d3c47d18d8ac80
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 54bd3d5acaf487909a4965c1f73a2e8c00aef82a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289476"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580225"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>將 HTML 匯入至報表 (報表產生器及 SSRS)
   您可以使用文字方塊來將從資料集的欄位所擷取的 HTML 格式文字插入至報表。 文字可以來自任何評估為正確格式之 HTML 的簡單或複雜運算式。 格式化的文字可以轉譯為所有受支援的輸出格式，包括 PDF 在內。  
@@ -27,7 +27,7 @@ ms.locfileid: "56289476"
 > [!NOTE]  
 >  當您匯入包含 HTML 標記的文字時，資料一定要先由文字方塊進行剖析。 因為只支援一部分的 HTML 標記，所以顯示在轉譯報表中的 HTML 可能會與原始的 HTML 不同。  
   
- 若要快速開始作業，請參閱[教學課程：格式化文字 &#40;報表產生器&#41;](../../reporting-services/tutorial-format-text-report-builder.md)。  
+ 若要快速開始使用，請參閱[教學課程：格式化文字 &#40;報表產生器&#41;](../../reporting-services/tutorial-format-text-report-builder.md)。  
   
 ## <a name="supported-html-tags"></a>支援的 HTML 標籤  
  下列是在定義為預留位置文字時，會轉譯為 HTML 的標記完整清單：  
@@ -36,7 +36,7 @@ ms.locfileid: "56289476"
   
 -   字型：\<FONT>  
   
--   標頭、樣式和區塊元素：\<H{n}>、\<DIV>、\<SPAN>、\<P>、\<DIV>、\<LI>、\<HN>  
+-   標頭、樣式和區塊項目：\<H{n}>、\<DIV>、\<SPAN>、\<P>、\<DIV>、\<LI>、\<HN>  
   
 -   文字格式：\<B>、\<I>、\<U>、\<S>  
   

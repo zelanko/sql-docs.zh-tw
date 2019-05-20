@@ -2,7 +2,7 @@
 title: rsconfig 公用程式 (SSRS) | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - command prompt utilities [Reporting Services]
 - command prompt utilities [SQL Server], rsconfig
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c8904d9cd03f8d9e7b7010f34f8bfde7e23f0475
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 38c2cd6242e9515872ef086ec4851bf6cec103ef
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213657"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571515"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 公用程式 (SSRS)
   **rsconfig.exe** 公用程式會加密連接和帳戶值，並會將它們儲存在 RSReportServer.config 檔中。 加密的值包括自動處理報表的程序所用的報表伺服器資料庫連接資訊和帳戶值。  
@@ -57,7 +57,7 @@ rsconfig {-?}
 |**-p** <密碼>|如果指定 **-u** ，則為必要。|指定要搭配 <使用者名稱> 引數使用的密碼。 如果帳戶不需要密碼，您可以將這個引數設為空白值。 網域帳戶的這個值會區分大小寫。|  
 |**-t**|選擇性。|在追蹤記錄中，輸出錯誤訊息。 此引數沒有取得值。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  您必須是主控您在設定的報表伺服器之電腦的本機管理員。  
   
 ## <a name="file-location"></a>檔案位置  

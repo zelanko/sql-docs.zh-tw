@@ -2,21 +2,21 @@
 title: 報表撰寫概念 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7357530ed6990c10ece43748c6ef7dd3a00c6454
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c6eb51dfb11ad9516da9d4231531d39152e97ea3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288726"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579853"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>報表撰寫概念 (報表產生器及 SSRS)
   本節將簡要定義用來描述報表產生器和報表設計師文件中之分頁報表的一些重要概念。 如需特定字詞或詞彙的定義，請參閱[詞彙 &#40;報表產生器&#41;](../../reporting-services/report-builder/glossary-report-builder.md)。  

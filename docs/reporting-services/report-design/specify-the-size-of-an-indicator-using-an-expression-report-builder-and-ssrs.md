@@ -2,18 +2,18 @@
 title: 使用運算式指定指標的大小 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5a6ded6b52da2105d324ba835f6a747eb024f97a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c35f87bdde9853d962e5cbb6fe68b0894ea64144
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298626"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578490"
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>使用運算式指定指標的大小 (報表產生器及 SSRS)
   除了色彩、方向和形狀之外，您還可以使用大小，將指標的視覺影像最大化。  

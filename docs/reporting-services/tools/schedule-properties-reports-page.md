@@ -2,20 +2,20 @@
 title: 排程屬性 (報表頁面) | Microsoft Docs
 ms.date: 06/30/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.scheduleproperties.reports.f1
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9724ec5d7b1d4746842b95c8219ff493ee1d3862
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0e8441dec655398ec530bc95049a339edd9e01ab
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712689"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571408"
 ---
 # <a name="schedule-properties-reports-page"></a>排程屬性 (報表頁面)
   使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中的 [ [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 排程屬性] 頁面來檢視使用特定共用排程的所有報表清單。 排程可用來重新整理報表快照集、產生報表記錄、觸發訂閱或使報表的快取副本過期。 若要了解如何使用排程，請檢視報表的屬性和訂閱資訊。  

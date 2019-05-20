@@ -2,20 +2,20 @@
 title: SQL Server Management Studio 中的 Reporting Services (SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], how-to topics
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f1ec33539e98a391c6de9cd61b5d2634c5f12187
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: de602e47f7c68c06fee042265b3f84d3d6d385f9
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031147"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581320"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>SQL Server Management Studio (SSRS) 中的 Reporting Services
   報表伺服器管理員可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行下列作業：  

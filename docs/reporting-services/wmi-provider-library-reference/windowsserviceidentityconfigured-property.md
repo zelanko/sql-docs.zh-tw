@@ -2,7 +2,7 @@
 title: WindowsServiceIdentityConfigured 屬性 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - WindowsServiceIdentityConfigured property
 ms.assetid: ebf8e559-7fe4-4a01-9810-85f18fc04596
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b7fa4c145fdbbd8aa58002bdd5687d38d986c79d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4787d704141f00c5f0b3c4bf4742bf26feacde60
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812936"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571035"
 ---
 # <a name="windowsserviceidentityconfigured-property"></a>WindowsServiceIdentityConfigured 屬性
   傳回上次設定報表伺服器 Windows 服務執行時所使用的識別。 唯讀。  

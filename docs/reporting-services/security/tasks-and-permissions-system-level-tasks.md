@@ -2,20 +2,20 @@
 title: 系統層級工作 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - system-level tasks [Reporting Services]
 ms.assetid: 7023b388-40b2-4590-b227-115cf380a1e7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f81807777e84d0f05181b25174896e5b4bc2bdd7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0f7ca906c8689c1bf8f40e79875acff5b7ab7c70
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835446"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570292"
 ---
 # <a name="tasks-and-permissions---system-level-tasks"></a>工作和權限 - 系統層級工作
   系統層級工作是權限的集合，而這些權限與套用至報表伺服器站台整體的作業相關。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 亦包含套用至特定項目的項目層級工作。 如需詳細資訊，請參閱 [項目層級工作](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)。 如需工作和權限的一般詳細資訊，請參閱 [工作和權限](../../reporting-services/security/tasks-and-permissions.md)。  
@@ -26,7 +26,7 @@ ms.locfileid: "47835446"
 ## <a name="permissions-in-system-level-tasks"></a>系統層級工作中的權限  
  下表識別每一個系統工作的權限集合。 列出的權限僅供參考之用，提供每一個工作可用之功能的更正確說明。  
   
-|工作|[權限]|  
+|工作|權限|  
 |----------|-----------------|  
 |執行報表定義|執行報表定義 (權限與工作名稱相同)|  
 |產生事件|產生事件|  

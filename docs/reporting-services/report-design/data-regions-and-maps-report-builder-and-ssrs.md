@@ -2,20 +2,20 @@
 title: 資料區域與地圖 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 helpviewer_keywords:
 - data regions
 ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6065e26f36561b446257825f7f953c5eeccc3b25
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4b9ed0e835bf8d2b926fc21acfd4edda3db9d04f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290896"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580881"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>資料區域與地圖 (報表產生器及 SSRS)
   資料區是報表中的一個物件，可顯示報表資料集中的資料。 報表資料可以顯示為資料表、矩陣或清單中的數字和文字。可以以圖形方式顯示在圖表或量測計中，也可以根據地圖中的地理背景顯示。 資料表、矩陣與清單都是以 *Tablix* 資料區為基礎，可在需要時擴充以顯示資料集中的所有資料。 Tablix 資料區支援多個資料列與資料行群組，而且同時支援靜態與動態資料列和資料行。 圖表會使用各種圖表格式顯示多個數列和類別目錄群組。 量測計則會顯示資料集的單一值或彙總值。 地圖會將空間資料顯示為地圖元素，其外觀會隨著資料集中的彙總資料而改變。  

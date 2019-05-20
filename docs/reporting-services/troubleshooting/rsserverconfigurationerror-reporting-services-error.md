@@ -2,20 +2,20 @@
 title: rsServerConfigurationError - Reporting Services 錯誤 | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 helpviewer_keywords:
 - rsServerConfigurationError
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a03e276df871e7949ac01b7e0f1698dafcb36bf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4291245b101799238412115ced8b114de5a551be
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793082"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65572138"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Reporting Services 錯誤
     
@@ -51,6 +51,6 @@ ms.locfileid: "47793082"
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態檔](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [修改 Reporting Services 設定檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
+ [修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
   
   

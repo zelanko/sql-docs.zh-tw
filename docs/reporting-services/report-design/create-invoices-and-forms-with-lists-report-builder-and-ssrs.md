@@ -2,23 +2,23 @@
 title: 建立發票和表單的清單 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 42804131c70b9a0077a3492b1c3532fb8de37a98
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b8ec0531056ea1a4ae3ff1850baed21dfb61df8e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298082"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581503"
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>建立發票和表單的清單 (報表產生器及 SSRS)
   清單資料區域會隨 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表資料集中的每一個群組或資料列重複。 清單可以用於建立自由形式的報表或表單 (如發票)，也可以與其他資料區域一起使用。 您可以定義包含任何數目之報表項目的清單。 清單可以是巢狀 WIT  
   
- 若要快速開始使用清單，請參閱[教學課程：建立自由格式報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)。  
+ 若要快速地開始使用清單，請參閱[教學課程：建立自由格式報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)。  
   
 > [!NOTE]  
 >  您可以將清單當做報表組件，與報表分開發行。 請深入了解 [報表組件 (報表產生器及 SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
@@ -38,7 +38,7 @@ ms.locfileid: "56298082"
 ##  <a name="DisplayingLayout"></a> 以自由形式的配置顯示資料  
  若要以自由形式配置而非方格組織報表資料，您可以將清單加入到設計介面中。 將欄位從 [報表資料] 窗格拖曳至資料格。 根據預設，資料格包含當做容器使用的矩形。 在容器中移動每個欄位，直到擁有所需的設計為止。 當您在矩形容器中拖曳文字方塊時使用對齊線可協助您以垂直和水平方式對齊邊緣。 調整資料格的大小來移除不想要的空白字元。 如需詳細資訊，請參閱[變更資料列高度或資料行寬度 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-row-height-or-column-width-report-builder-and-ssrs.md)。  
   
- 下圖中的清單會顯示訂單的相關資訊，包括以下欄位：Date、Order、Qty、Product、LineTota 和影像。  
+ 下圖顯示的清單可顯示有關順序的資訊，包括以下欄位：Date、Order、Qty、Product、LineTotal 和影像。  
   
  ![設計檢視中的清單、4 個欄位及映像](../../reporting-services/report-design/media/rs-basiclistformdesign.gif "設計檢視中的清單、4 個欄位及映像")  
   

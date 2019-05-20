@@ -1,22 +1,23 @@
 ---
 title: 列印報表 (SharePoint 模式的 Reporting Services) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 helpviewer_keywords:
 - printing reports, SharePoint Web application
 - printing reports
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 319e00685255e77c7afe17fc932467268e020873
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 407d20b06c6dccdb63f5455ffe24a3505d8bd823
+ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294356"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875195"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>列印報表 (SharePoint 模式的 Reporting Services)
   當報表伺服器以 SharePoint 模式執行時，您可以使用下列三種方法從 SharePoint Web 應用程式列印報表：  

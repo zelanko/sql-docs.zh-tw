@@ -2,18 +2,18 @@
 title: Lookup 函式 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0fc0d438272b892fc411bf1887cf1adb18dcf7f0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 333c75f3ca10d1ed6ecd738a3dc76a32a53305c6
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291846"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579576"
 ---
 # <a name="report-builder-functions---lookup-function"></a>報表產生器函式 - Lookup 函式
   從包含名稱/值組的資料集傳回第一個符合指定之名稱的值。  

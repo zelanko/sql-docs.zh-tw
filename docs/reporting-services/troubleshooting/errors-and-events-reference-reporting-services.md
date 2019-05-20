@@ -1,34 +1,33 @@
 ---
 title: 錯誤和事件參考 (Reporting Services) | Microsoft Docs
-ms.date: 03/18/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
-helpviewer_keywords:
-- messages [Reporting Services]
-- errors [Reporting Services]
-- Reporting Services, errors and events
-- troubleshooting [Reporting Services], errors
-- events [Reporting Services]
-ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ec1e9fc7ec041794b92b5372799678a22483b39e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: dc3b07d150e7992338a356030c2dd36d1edeff0c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021782"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574009"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>錯誤和事件參考 (Reporting Services)
-  本主題提供有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]錯誤和事件的資訊。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 記錄檔也包含錯誤資訊。 如需有關可用記錄檔類型及如何檢視記錄的詳細資訊，請參閱 [Reporting Services 記錄檔和來源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
-  
+
+本主題提供有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]錯誤和事件的資訊。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 記錄檔也包含錯誤資訊。 如需有關可用記錄檔類型及如何檢視記錄的詳細資訊，請參閱 [Reporting Services 記錄檔和來源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
+
 ## <a name="cause-and-resolution-for-reporting-services-error-messages"></a>Reporting Services 錯誤訊息的原因和解決方案  
- 此處提供最常在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 網站上搜尋之錯誤的原因和解決方案資訊。 如需詳細資訊，請參閱 [Reporting Services 錯誤的原因和解決方案](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)。  
+
+此處提供最常在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 網站上搜尋之錯誤的原因和解決方案資訊。 如需詳細資訊，請參閱 [Reporting Services 錯誤的原因和解決方案](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)。  
   
-## <a name="report-server-events"></a>報表伺服器事件  
- 下列報表伺服器事件會記錄在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄中。  
+## <a name="report-server-events"></a>報表伺服器事件
+
+下列報表伺服器事件會記錄在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄中。  
   
 |事件識別碼|類型|類別目錄|來源|Description|  
 |--------------|----------|--------------|------------|-----------------|  
@@ -62,9 +61,7 @@ ms.locfileid: "50021782"
 |133|錯誤|管理|報表伺服器<br /><br /> 報表管理員<br /><br /> 排程與傳遞處理器|組態檔上傳失敗。 如果 XML 無效就可能會發生此錯誤。|  
 |134|錯誤|管理|報表伺服器|報表伺服器加密組態檔設定的值失敗。|  
   
-## <a name="see-also"></a>另請參閱  
- [監視 Reporting Services 訂閱](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)   
- [Reporting Services 記錄檔和來源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)  
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+## <a name="see-also"></a>另請參閱
+
+- [監視 Reporting Services 訂閱](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)
+- [Reporting Services 記錄檔和來源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)

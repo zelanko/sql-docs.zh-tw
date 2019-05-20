@@ -2,20 +2,20 @@
 title: SQL Server Data Tools (SSDT) 中的 Reporting Services | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b57f42345b487867b5362e24963790e5f525f973
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f9e9884a8875d63ba9defcee5fa20dc121d595ca
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292326"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581351"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的 Reporting Services (SSDT)
 
@@ -175,7 +175,7 @@ ms.locfileid: "56292326"
   
 -   **報表屬性** ：選取即可開啟 **[報表屬性]** 對話方塊。 在這個對話方塊中，您可以指派一般報表屬性，例如作者名稱和方格間距，以及指定報表配置的屬性，例如資料行數和頁面大小。 您也可以包括自訂程式碼、組件和類別的參考、資料輸出元素的名稱、資料轉換和資料結構描述。  
   
--   **檢視**：在兩個報表設計師索引標籤之間切換：[設計] 和 [預覽]。  
+-   **檢視** ：在兩個報表設計師索引標籤之間切換：[設計] 和 [預覽]。  
   
 -   **頁首** ：在報表中加入或刪除頁首。 當您刪除頁首時，就會刪除頁首中的所有項目。  
   
@@ -237,7 +237,7 @@ ms.locfileid: "56292326"
   
 
 ##  <a name="bkmk_SourceControl"></a> 原始檔控制  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 可以與來源外掛程式整合。您可以使用 **[選項]** 對話方塊中的 [專案和方案] 頁面，以指定外掛程式，並設定屬性。  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 可以與來源外掛程式整合。您可以使用 [選項]** 對話方塊中的 [專案和方案] 頁面，以指定外掛程式，並設定屬性。  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> 自訂報表範本  
  若要使用自訂報表做為新報表的範本，您只需將自訂報表複製到裝有 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 之電腦上的 ReportProject 資料夾即可。 此資料夾預設位於下列位置： `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 將新項目加入報表專案時，您的自訂報表會顯示在 [範本] 窗格中。  

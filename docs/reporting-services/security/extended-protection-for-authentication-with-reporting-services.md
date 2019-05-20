@@ -2,18 +2,18 @@
 title: Reporting Services 的驗證擴充保護 | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8f096065d690044fdda42f71ebb0c423801b41bb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b273ef327b666c7c660349657fa9ca9eabe9f4a4
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212688"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570984"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>含有 Reporting Services 的驗證擴充保護
 
@@ -112,8 +112,8 @@ SSRS 支援並強制執行已在作業系統中啟用的擴充保護。 如果�
   
 |設定|Description|  
 |-------------|-----------------|  
-|**RSWindowsExtendedProtectionLevel**|指定擴充保護的強制執行程度。 有效值為：<br /><br /> **Off**：預設值。 不會指定通道繫結或服務繫結驗證。<br /><br /> **Allow** 支援擴充保護但其非必要。  指定：<br /><br /> 擴充保護將會針對在支援擴充保護之作業系統上執行的用戶端應用程式強制執行。 強制執行保護的方式取決於 **RsWindowsExtendedProtectionScenario**設定<br /><br /> - 對於在不支援擴充保護之作業系統上執行的應用程式，不允許執行驗證。<br /><br /> **Require** 指定下列項目︰<br /><br /> 擴充保護將會針對在支援擴充保護之作業系統上執行的用戶端應用程式強制執行。<br /><br /> - 對於在不支援擴充保護之作業系統上執行的應用程式， **不** 允許執行驗證。|  
-|**RsWindowsExtendedProtectionScenario**|指定要驗證的擴充保護的形式：通道繫結、服務繫結或兩者。 有效值為：<br /><br /> **Proxy**：預設值。 指定：<br /><br /> - Windows NTLM、Kerberos 和交涉驗證 (當通道繫結權杖存在時)。<br /><br /> - 服務繫結會強制執行。<br /><br /> **Any** 指定下列項目︰<br /><br /> - Windows NTLM、Kerberos 和交涉驗證，而不需要通道繫結。<br /><br /> - 服務繫結會強制執行。<br /><br /> **Direct** 指定下列項目︰<br /><br /> - Windows NTLM、Kerberos 和交涉驗證 (當 CBT 存在、目前服務的 SSL 連線存在，而且 SSL 連線的 CBT 與 NTLM、Kerberos 或交涉權杖的 CBT 相符時)。<br /><br /> - 服務繫結不會強制執行。<br /><br /> <br /><br /> 注意：注意︰如果 **RsWindowsExtendedProtectionLevel** 設為 **OFF**，則會忽略 **RsWindowsExtendedProtectionScenario** 設定。|  
+|**RSWindowsExtendedProtectionLevel**|指定擴充保護的強制執行程度。 有效值為：<br /><br /> **Off**︰預設值。 不會指定通道繫結或服務繫結驗證。<br /><br /> **Allow** 支援擴充保護但其非必要。  指定：<br /><br /> 擴充保護將會針對在支援擴充保護之作業系統上執行的用戶端應用程式強制執行。 強制執行保護的方式取決於 **RsWindowsExtendedProtectionScenario**設定<br /><br /> - 對於在不支援擴充保護之作業系統上執行的應用程式，不允許執行驗證。<br /><br /> **Require** 指定下列項目︰<br /><br /> 擴充保護將會針對在支援擴充保護之作業系統上執行的用戶端應用程式強制執行。<br /><br /> - 對於在不支援擴充保護之作業系統上執行的應用程式， **不** 允許執行驗證。|  
+|**RsWindowsExtendedProtectionScenario**|指定什麼擴充保護的形式要經過驗證：通道繫結、服務繫結，或兩者。 有效值為：<br /><br /> **Proxy**︰預設值。 指定：<br /><br /> - Windows NTLM、Kerberos 和交涉驗證 (當通道繫結權杖存在時)。<br /><br /> - 服務繫結會強制執行。<br /><br /> **Any** 指定下列項目︰<br /><br /> - Windows NTLM、Kerberos 和交涉驗證，而不需要通道繫結。<br /><br /> - 服務繫結會強制執行。<br /><br /> **Direct** 指定下列項目︰<br /><br /> - Windows NTLM、Kerberos 和交涉驗證 (當 CBT 存在、目前服務的 SSL 連線存在，而且 SSL 連線的 CBT 與 NTLM、Kerberos 或交涉權杖的 CBT 相符時)。<br /><br /> - 服務繫結不會強制執行。<br /><br /> <br /><br /> 注意︰如果 **RsWindowsExtendedProtectionLevel** 設為 **OFF** ，則會忽略 **RsWindowsExtendedProtectionScenario**設定。|  
   
  **rsreportserver.config** 組態檔中的範例項目︰  
   
@@ -166,7 +166,7 @@ SSRS 支援並強制執行已在作業系統中啟用的擴充保護。 如果�
 [使用擴充保護連接至 Database Engine](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
 [驗證擴充保護概觀](https://go.microsoft.com/fwlink/?LinkID=177943)   
 [Integrated Windows Authentication with Extended Protection](https://go.microsoft.com/fwlink/?LinkId=179922)   
-[Microsoft 資訊安全諮詢：驗證延伸保護](https://go.microsoft.com/fwlink/?LinkId=179923)   
+[Microsoft 安全性摘要報告：驗證擴充保護](https://go.microsoft.com/fwlink/?LinkId=179923)   
 [報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)   
 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [SetExtendedProtectionSettings 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

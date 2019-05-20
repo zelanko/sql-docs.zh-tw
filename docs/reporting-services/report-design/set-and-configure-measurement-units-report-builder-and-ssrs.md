@@ -2,18 +2,18 @@
 title: 設定和設定度量單位 （報表產生器及 SSRS） |Microsoft 文件
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dd636d02ebf64887438b952c5b32c2991f675bca
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 48700208f4ff67c9f6b6932537558c283df13ee6
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291066"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576658"
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>設定度量單位 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，指標使用下列兩個度量單位的其中一個︰百分比或數值。   

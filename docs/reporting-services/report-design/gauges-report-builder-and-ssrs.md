@@ -2,7 +2,7 @@
 title: 量測計 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -154,14 +154,14 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 57a871f330b3b3beae9ab371305b2d7887f955d8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b65ca56f0cb942f5cc5c9fc6b01d4a9df7e0b88e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287376"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580272"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>量測計 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，量測計資料區域會顯示資料集中的單一值。 個別量測計一定會放在量測計面板內，您可在其中加入子量測計或相鄰的量測計。 您可以在單一量測計面板內，建立多個量測計來共用篩選、群組或排序等常用功能。  
@@ -178,7 +178,7 @@ ms.locfileid: "56287376"
   
  ![量測計項目圖](../../reporting-services/report-design/media/gauge-elements-diagram.gif "量測計項目圖")  
   
- 如需使用量測計作為 KPI 的詳細資訊，請參閱[教學課程：將 KPI 新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
+ 如需使用量測計作為 KPI 的詳細資訊，請參閱[教學課程：將 KPI 加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
   
 > [!NOTE]  
 >  您可以將量測計當做報表組件，與報表分開發行。 深入了解 [報表組件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
@@ -198,13 +198,13 @@ ms.locfileid: "56287376"
   
  ![rs_RadialGauge](../../reporting-services/report-design/media/rs-radialgauge.gif "rs_RadialGauge")  
   
- 星形量測計選項：星形、星形附迷你量測計、雙標尺、右上 90 度、左上 90 度、左下 90 度、右下 90 度、上方 180 度、下方 180 度、左方 180 度、右方 180 度以及計量。  
+ 星形量測計選項：星形、星形附迷你量測計、雙標尺、右上 90 度、左上 90 度、左下 90 度、右下 90 度、上方 180 度、下方 180 度、左方 180 度、右方 180 度以及計量器。  
   
  **線性量測計**  
   
  ![rs_LinearGauge](../../reporting-services/report-design/media/rs-lineargauge.gif "rs_LinearGauge")  
   
- 線性量測計選項：水平、垂直、多橫條指標、雙標尺、三色範圍、對數、溫度計、華氏/攝氏溫度計以及子彈圖。  
+ 線性量測計選項：水平、垂直、多橫條指標、雙標尺、三色範圍、對數、溫度計、華氏/攝氏溫度計以及項目符號圖表。  
   
 ##  <a name="AddingData"></a> 將資料加入至量測計  
  將量測計加入至設計介面之後，將資料集欄位拖曳到量測計資料窗格中。 量測計預設會將欄位值彙總為量測計上顯示的一個值。 您可以使用 Value 屬性，將該值附加至指標中。 根據欄位的資料類型，量測計會使用 SUM 或 COUNT 彙總。 當您使用適合加法的數值資料時，量測計會使用 SUM 函數。 否則，它會使用 COUNT 彙總。 指標的值可以使用不同的彙總或不使用彙總。  

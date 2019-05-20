@@ -2,18 +2,18 @@
 title: 快取共用資料集 (SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fd9d5095b2d0361ec1da121b987d2a7d84944ad0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 428cb9e75e7023b8abee13927435b74e166baa07
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021488"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582221"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>快取共用資料集 (SSRS)
   共用資料集的查詢結果可以複製到快取，以便為多個報表提供一致的資料，並改善資料集查詢的回應時間。 跟報表一樣，您可以設定共用資料集在第一次使用時或指定排程進行快取。  

@@ -1,19 +1,21 @@
 ---
 title: 將資料加入從外部資料來源 (SSRS) |Microsoft 文件
-ms.date: 03/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
-ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 53644a3442280089309807b156ef4ef9c842494b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+reviewer: ''
+ms.custom: ''
+ms.date: 03/17/2017
+ms.openlocfilehash: 946d16e240bc8601f695cc4fd5269e046672f122
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028407"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578228"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>從外部資料來源加入資料 (SSRS)
   若要從外部資料來源擷取資料，可以使用資料連接。 資料連接資訊通常是由外部資料來源的擁有者提供，此擁有者負責授與權限和指定要使用的認證類型。 資料連接資訊會儲存為報表資料來源。 資料來源類型會指定要用來擷取資料的資料延伸模組。  
@@ -88,10 +90,9 @@ ms.locfileid: "50028407"
 |[OLE DB 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)|OLE DB|  
 |[ODBC 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md)|ODBC|  
 |[XML 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)|XML|  
-|[報表模型連接 &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)|.smdl 模型|  
   
-  
-##  <a name="Related"></a> 相關章節  
+##  <a name="Related"></a> 相關章節
+
  本文件集的這些章節會提供報表資料的深入概念性資訊，以及如何定義、自訂和使用與報表資料相關組件的程序資訊。  
   
 |主題|Description|  

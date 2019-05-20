@@ -2,7 +2,7 @@
 title: SMTPServer 屬性 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SMTPServer property
 ms.assetid: 8bcceeba-e1a0-44ef-bda1-600c6925e1db
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f296a548075462c14782921446921bd9b3929151
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d54f229624f211d4244224a9b6f4765fd9095542
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627006"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570216"
 ---
 # <a name="configurationsetting-property---smtpserver"></a>ConfigurationSetting 屬性 - SMTPServer
   從報表伺服器組態檔中取得 SMTP 伺服器屬性。 唯讀。  

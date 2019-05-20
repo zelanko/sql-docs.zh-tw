@@ -2,17 +2,17 @@
 title: 匯出報表 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2133fdc66f6dfe6ac4950b1fd9164a4de81f5b6c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0cb5c07545a719571c9fee26edc820006e9f0827
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289026"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580813"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>匯出報表 (報表產生器及 SSRS)
 
@@ -100,11 +100,11 @@ ms.locfileid: "56289026"
   
 -   **非強制分頁轉譯器延伸模組** ：非強制分頁轉譯延伸模組會維持報表配置和格式設定。 產生的檔案最適合使用螢幕檢視與傳遞，例如，使用網頁或 **ReportViewer** 控制項。  
   
-     支援下列非強制分頁轉譯延伸模組：[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 及網頁封存 (MHTML)。  
+     以下為支援的軟分頁轉譯延伸模組： [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 和網頁封存 (MHTML)。  
   
 -   **強制分頁轉譯延伸模組** ：強制分頁轉譯器延伸模組會維持報表配置和格式設定。 所產生的檔案最適合一致的列印結果，或者以書本格式線上檢視報表。  
   
-     支援下列強制分頁轉譯延伸模組：TIFF 和 PDF。  
+     以下為支援的手動分頁轉譯延伸模組：TIFF 和 PDF。  
   
 ##  <a name="ExportFormats"></a> 可在檢視報表時匯出的格式  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供轉譯延伸模組，可將報表轉譯成各種不同格式。 您應該針對所選的檔案格式進行報表設計最佳化。  下表列出您可以從使用者介面匯出的格式。  有一些額外格式可以與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱搭配使用，或者，從 URL 存取匯出時也會有一些額外格式。  請參閱本主題中的 [匯出報表的其他方式](#OtherWaysExportingReports)一節。  
@@ -116,7 +116,7 @@ ms.locfileid: "56289026"
 |CSV|data|逗號分隔值 (CSV) 轉譯延伸模組會將報表從多數應用程式都可輕易讀取與交換的標準化純文字格式報表，轉譯為扁平化表示的資料。<br /><br /> 如需詳細資訊，請參閱[匯出至 CSV 檔案](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)。|  
 |EXCELOPENXML|軟分頁|檢閱報表時，在匯出功能表中顯示為 "Excel"。 Excel 轉譯延伸模組會將報表轉譯成與 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013 相容的 Excel 文件 (.xlsx)。  如需詳細資訊，請參閱[匯出至 Microsoft Excel](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。|  
 |PowerPoint|手動分頁|PowerPoint 轉譯擴充功能會將報表轉譯成與 PowerPoint 2013 相容的 PowerPoint 文件 (.pptx)。|  
-|TIFF 檔案|手動分頁|影像轉譯延伸模組會將報表轉譯成點陣圖或中繼檔。 依預設，影像轉譯延伸模組會產生報表的 TIFF 檔，可在多個頁面中檢視。 當用戶端接收到影像時，可以在影像檢視器中顯示和列印影像。<br /><br /> 影像轉譯延伸模組可產生 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)] 支援的所有格式之檔案：BMP、EMF、EMFPlus、GIF、JPEG、PNG 及 TIFF。<br /><br /> 如需詳細資訊，請參閱[匯出至影像檔](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)。|  
+|TIFF 檔案|手動分頁|影像轉譯延伸模組會將報表轉譯成點陣圖或中繼檔。 依預設，影像轉譯延伸模組會產生報表的 TIFF 檔，可在多個頁面中檢視。 當用戶端接收到影像時，可以在影像檢視器中顯示和列印影像。<br /><br /> 影像轉譯延伸模組可產生 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]支援的任何格式檔案：BMP、EMF、EMFPlus、GIF、JPEG、PNG 和 TIFF。<br /><br /> 如需詳細資訊，請參閱[匯出至影像檔](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)。|  
 |網頁封存|軟分頁|HTML 轉譯延伸模組會轉譯 HTML 格式的報表。 轉譯延伸模組也可產生完整的 HTML 頁面，或內嵌在其他 HTML 頁面中的 HTML 片段。 所有 HTML 均以 UTF-8 編碼產生。<br /><br /> HTML 轉譯延伸模組是在報表產生器中預覽以及瀏覽器中檢視之報表的預設轉譯延伸模組，包括在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站中執行時。<br /><br /> 如需詳細資訊，請參閱[轉譯為 HTML](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)。|  
 |WORDOPENXML|軟分頁|檢閱報表時，在匯出功能表中顯示為 "Word"。 Word 轉譯延伸模組會將報表轉譯成與 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013 相容的 Word 文件 (.docx)。  如需詳細資訊，請參閱[匯出至 Microsoft Word](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)。|  
 |XML|資料|XML 轉譯延伸模組會傳回 XML 格式的報表。 報表 XML 的結構描述為報表特有的，且僅包含資料。 XML 轉譯延伸模組不會轉譯配置資訊，也不會維持分頁。 此延伸模組所產生的 XML 可以匯入資料庫中 (當做 XML 資料訊息使用)，或傳送到自訂應用程式。<br/><br/> 如需詳細資訊，請參閱[匯出至 XML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)。|  

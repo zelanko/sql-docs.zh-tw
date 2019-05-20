@@ -2,18 +2,18 @@
 title: 快取共用資料集 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0abfd4aba4f18f13fce580f5c73e98cf9ee7ffb5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7e98e5ffd8970806e2ed92e53c8e82da21387938
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029277"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574762"
 ---
 # <a name="cache-a-shared-dataset"></a>快取共用資料集
   改善效能的其中一種方式就是設定共用資料集的快取屬性。 快取共用資料集時，系統會在一段指定的時間內儲存查詢結果的副本。 要求使用共用資料集之報表的第一位使用者必須等候查詢結果以及所有處理都完成，然後才能檢視該報表。 在快取期間內要求該報表的後續使用者將會立即體驗到增進的效能，因為查詢和處理都已經進行了。 您也可以指定執行查詢的快取重新整理計劃，並在指定的快取逾期前快取結果。  

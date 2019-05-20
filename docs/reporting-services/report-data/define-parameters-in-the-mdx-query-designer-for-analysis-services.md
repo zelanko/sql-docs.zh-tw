@@ -2,7 +2,7 @@
 title: 為 Analysis Services 定義 MDX 查詢設計工具的參數 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - MDX [Reporting Services], defining parameters
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3fdf267ff11964314ad222e41872304aa70386da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 02b9884d4f1f9d7928db80091c68678dbc55fa10
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850387"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573658"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>在 Analysis Services 的 MDX 查詢設計工具中定義參數
   若要將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源的 MDX 查詢參數化，您必須將查詢參數加入查詢中。 在 MDX 查詢設計工具中，您可以透過指定篩選，在 [設計] 模式和 [查詢] 模式中加入查詢參數。 在您使用查詢參數來定義查詢之後，Reporting Services 會自動建立報表參數和資料集來提供有效值的清單。 如此可讓使用者指定直接傳遞給查詢的值。  
@@ -53,7 +53,7 @@ ms.locfileid: "47850387"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>在查詢模式下定義 MDX 中的查詢參數  
   
-1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源類型建立的資料集，然後按一下 [查詢]。 MDX 查詢設計工具會在 [設計] 模式中開啟。  
+1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源類型建立的資料集，然後按一下 **[查詢]**。 MDX 查詢設計工具會在 [設計] 模式中開啟。  
   
 2.  在工具列上按一下 **[設計]** ，切換至 [查詢] 模式。  
   

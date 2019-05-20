@@ -2,7 +2,7 @@
 title: DeleteEncryptionKey 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - DeleteEncryptionKey method
 ms.assetid: ed2f25b6-6a63-468d-9279-a577ca01b096
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bd67aa73ecb6ccc7bb9496542c818ef558349954
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e40c53c5c46d37a996805105563b809ad278b9a1
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630516"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570795"
 ---
 # <a name="configurationsetting-method---deleteencryptionkey"></a>ConfigurationSetting 方法 - DeleteEncryptionKey
   從報表伺服器資料庫中刪除加密金鑰。  

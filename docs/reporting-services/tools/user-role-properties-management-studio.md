@@ -2,20 +2,20 @@
 title: 使用者角色屬性 (Management Studio) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.userroleproperties.f1
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d87d7a3975cff4f2ac7b9afd65cc4250325feef2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f7c663f1a6d13b910492e21b1bd05145dc2a5833
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850526"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575780"
 ---
 # <a name="user-role-properties-management-studio"></a>使用者角色屬性 (Management Studio)
   您可以使用這個頁面來檢視項目層級角色定義中包含的工作。 您也可以使用這個頁面來變更工作清單或修改角色描述。  

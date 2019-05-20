@@ -2,18 +2,18 @@
 title: 針對 Reporting Services 報表的資料擷取問題進行疑難排解 | Microsoft Docs
 ms.date: 02/27/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 575335cc1d8952caee04159797275d5214f2c9c0
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 86f1b8bda63cf8e6436e0dd3d5823fdada53a9f3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905143"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574431"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>搭配 Reporting Services 報表為資料擷取問題疑難排解
 在報表處理期間，第一個步驟是執行資料集查詢以擷取各資料集的報表資料。 在本機預覽報表時，您的資料來源連接和認證必須使用足夠的權限，才能將資料擷取到電腦上。 在報表伺服器上執行報表時，資料來源連接和認證也必須使用足夠的權限，才能將資料擷取到報表伺服器上。 您可以使用本主題來協助疑難排解有關報表資料擷取的問題。   

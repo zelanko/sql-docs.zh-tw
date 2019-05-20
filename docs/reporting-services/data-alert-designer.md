@@ -2,7 +2,7 @@
 title: 資料警示設計工具 | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - updating, alerts
 - creating, data alerts
 - creating, alerts
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0ccb69e17c55f9b808cf71a1728863d49365eca8
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
-ms.translationtype: HT
+ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331538"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571598"
 ---
 # <a name="data-alert-designer"></a>資料警示設計工具
 

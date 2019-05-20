@@ -2,18 +2,18 @@
 title: Previous 函式 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 96b6267bb5e02d3173fb931f135a8b27dac126c1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b3a54bd68b1bac51581329224aa7e9405cee8e93
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286966"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577201"
 ---
 # <a name="report-builder-functions---previous-function"></a>報表產生器函式 - Previous 函式
   傳回某個項目在指定之範圍內上一個執行個體的值或指定的彙總值。  

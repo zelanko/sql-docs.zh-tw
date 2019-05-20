@@ -2,18 +2,18 @@
 title: 互動式排序 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4124b909cf35ea071aef5f57672ff8a3701a44ca
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d3f379c104b5b957fba197f9ed9317b2d5b23f16
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286366"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580194"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>互動式排序 (報表產生器及 SSRS)
   您可以加入互動式排序按鈕，讓使用者在資料表中切換資料列的遞增和遞減順序，或在矩陣中切換資料列及資料行的遞增和遞減順序。 互動式排序的常見用法為，將排序按鈕加入到每個資料行標頭。 接著，使用者可以選擇排序所依據的資料行。  
@@ -27,11 +27,11 @@ ms.locfileid: "56286366"
   
 -   **要排序的項目：** 資料列或資料行？  
   
--   **排序依據的項目：** 顯示在資料表資料行中的欄位？ 未顯示的欄位？  
+-   **排序的依據：** 顯示在資料表資料行中的欄位？ 未顯示的欄位？  
   
--   **要排序的內容：** 例如，您可以針對下列項目進行排序：與資料列群組建立關聯的資料列、與資料行群組建立關聯的資料行、詳細資料列、父群組內的子群組，或是父群組和子群組一起。  
+-   **要排序的內容：** 例如，您可以針對下列項目進行排序：與資料列群組相關聯的資料列、與資料行群組相關聯的資料行、詳細資料列、父群組內的子群組，或是父群組和子群組一起。  
   
--   **要新增排序按鈕的文字方塊：** 在資料行標頭或群組資料列標頭中？  
+-   **要加入排序按鈕的文字方塊：** 在資料行標頭或群組資料列標頭？  
   
 -   **是否要同步處理多個資料區的排序：** 您可以設計一份報表，讓使用者切換排序次序時，也排序具有相同上階的其他資料區。  
   

@@ -2,18 +2,18 @@
 title: 解決 Excel 2003 資料列限制 | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3ba814e194af423d18ecdd5ab9e94bf0fa6d3c2c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3898e4202d958c1d20d5436a143e80bb45c7490f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287036"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577786"
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>解決 Excel 2003 資料列限制
   本主題說明如何在您將分頁報表匯出至 Excel 時解決 Excel 2003 的資料列限制。 此因應措施適用於只包含資料表的報表。  

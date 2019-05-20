@@ -2,21 +2,21 @@
 title: RSReportDesigner 設定檔 | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dff986f9007e721521a2bc4ac7094d0a72c1d4f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a24b1a2f008c23adc5445ec5ed36c51ade181486
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836156"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581333"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 組態檔
   RSReportDesigner.config 檔會儲存有關 [報表設計師] 可用之轉譯和資料處理延伸模組的設定。 資料處理延伸模組資訊儲存在 **資料** 元素中。 轉譯延伸模組資訊儲存在 **轉譯** 元素中。 **設計工具** 元素列舉 [報表設計師] 中所使用的查詢產生器。  

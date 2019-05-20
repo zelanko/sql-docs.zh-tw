@@ -2,18 +2,18 @@
 title: 在資料區中排序資料 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6348f34a8c1e39a5c84635d7202039a817459310
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6ad5600def990457834d858b61ba3bad4a241158
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298142"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570748"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>在資料區中排序資料 (報表產生器及 SSRS)
   若要在資料區域中變更報表第一次執行時資料的排序次序，您必須針對資料區域或群組設定排序運算式。 根據預設，群組的排序運算式會自動設定為與群組運算式相同的值。  

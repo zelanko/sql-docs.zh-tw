@@ -2,17 +2,17 @@
 title: Reporting Services 報表伺服器 | Microsoft Docs
 ms.date: 09/25/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f5f5a449fc3bf87ce6999f424957466bae49ee38
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c432132f856d8c83b98f718351e1ef78be98360d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872228"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580579"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 報表伺服器
 

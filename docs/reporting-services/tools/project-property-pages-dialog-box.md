@@ -2,7 +2,7 @@
 title: 專案屬性頁對話方塊 | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: reference
 f1_keywords:
@@ -10,14 +10,14 @@ f1_keywords:
 helpviewer_keywords:
 - Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 37868fcc35bc5ba09339a24151f2d8d6e4c1f6ba
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712179"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578232"
 ---
 # <a name="project-property-pages-dialog-box"></a>專案屬性頁對話方塊
 
@@ -78,7 +78,7 @@ ms.locfileid: "52712179"
  發行至以 SharePoint 整合模式執行的報表伺服器時，請使用 SharePoint 頂層網站或子網站的 URL。 若未指定網站，則會使用預設的最上層網站。 例如： 
 + `http:\\<servername>`、 
 + `http:\\<servername\<site>` 
-+ `http:\\<servername>\<site>\<subsite>`(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
++ 第 1 課：建立 Windows Azure 儲存體物件`http:\\<servername>\<site>\<subsite>`。  
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -2,18 +2,18 @@
 title: 顯示參數值的隱藏資料集 - 多維度資料 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e2dde8a73ea04ed2f59bd234682a486c35b3a041
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e1e43951e4b6dcc4af97aaf8c96a783aae6830b5
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031227"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574933"
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>顯示參數值的隱藏資料集 - 多維度資料
   您的報表可能包含自動產生的資料集 (也稱為隱藏的資料集)，而這些資料集預設不會顯示在 [報表資料] 窗格中。 這些資料集是以下列方式建立的：  
