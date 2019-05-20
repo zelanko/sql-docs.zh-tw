@@ -24,14 +24,18 @@ ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c2e1bbc3dd3e4e4aeda45bc07161d04188c2dd52
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 138dd405df110c42e8f5b754ebd64a96b133bba9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279822"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724077"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>連接至指令碼工作中的資料來源
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   連接管理員會提供已在封裝中設定的資料來源存取權。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../../../integration-services/connection-manager/integration-services-ssis-connections.md)。  
   
  指令碼工作可以透過 **Dts** 物件的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> 屬性來存取這些連線管理員。 在 <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 集合中的每個連接管理員儲存有關如何連接至基礎資料來源的資訊。  

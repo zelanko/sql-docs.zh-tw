@@ -10,14 +10,18 @@ ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 106318f35e6cf4ee730b4cd2a6b0cb1831151041
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 04a7354fac044a835ab5d5649d56c01e72e6e995
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221932"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723876"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>連線至 Oracle 資料來源 (SQL Server 匯入和匯出精靈)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連線至 **Oracle** 資料來源。 您可以使用數個資料提供者來連線至 Oracle。
 
 > [!IMPORTANT]

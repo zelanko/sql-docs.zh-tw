@@ -14,14 +14,18 @@ ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1256bec97be65752d63b9d05c78e068e7d83d420
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3b3dec7a683bcebc28f9bfe90e4b4091a70892f8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270571"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728337"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 訂用帳戶連線管理員
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **Azure 訂用帳戶連線管理員**可讓 SSIS 套件使用您指定的屬性值連接到 Azure 訂用帳戶︰Azure 訂用帳戶識別碼及管理憑證。  
   
  **Azure 訂用帳戶連線管理員**是 [Azure SQL Server Integration Services (SSIS) Feature Pack](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) 的元件。

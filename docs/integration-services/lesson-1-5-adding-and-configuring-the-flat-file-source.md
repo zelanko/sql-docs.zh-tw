@@ -11,14 +11,18 @@ ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c28ee5f1ca3e5202cb62cef3b1a0f79ee3fcd69b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 66d5bda44de11bb28582442696b4feea41488703
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280022"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723076"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>課程 1-5：新增及設定一般檔案來源
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 在此工作中，您會在套件中新增及設定「一般檔案」來源。 「一般檔案」來源是一個資料流程元件，此元件會使用「一般檔案」連線管理員所定義的中繼資料。 此中繼資料會指定轉換程序要從一般檔案中擷取之資料的格式和結構。 「一般檔案」來源會使用「一般檔案」連線管理員中的格式定義，從單一一般檔案擷取資料。  
   
 針對此工作，您需設定「一般檔案」來源，以使用您先前建立的 [範例一般檔案來源資料] 連線管理員。  

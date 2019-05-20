@@ -1,5 +1,5 @@
 ---
-title: 步驟 1：複製部署配套 | Microsoft Docs
+title: 步驟 1:複製部署配套 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9fbe3f30d37bab783424deeefb5517cd6fa553a2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 153975d4b2a418c694188ca30c0ddb9fc19b0fc8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279462"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722391"
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>課程 3-1 - 複製部署配套
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 在這項工作中，您會將部署配套複製到目的地電腦。  
   
 要將部署配套複製到目的地電腦，最簡單的方式就是先在目的地電腦上建立一個公用共用區，再將磁碟機對應至此公用共用區，然後將部署配套複製到此共用區。 如果不知道如何建立和設定公用資料夾或對應磁碟機，請參閱 Windows 文件集。  

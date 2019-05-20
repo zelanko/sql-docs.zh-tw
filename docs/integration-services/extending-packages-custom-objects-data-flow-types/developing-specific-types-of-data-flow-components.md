@@ -18,14 +18,18 @@ ms.assetid: 348e219a-b8ff-425e-b9c6-811880101c54
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 378d6f83ff7f27748172c1768f1454c7a92de6c3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4850e6ef36dfae483180c25b8e1f1ec68f8d2b39
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280302"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724846"
 ---
 # <a name="developing-specific-types-of-data-flow-components"></a>開發特定類型的資料流程元件
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   本節涵蓋開發來源元件、具有同步輸出的轉換元件、具有非同步輸出的轉換元件以及目的地元件的細節。  
   
  如需元件開發的一般資訊，請參閱[開發自訂資料流程元件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  

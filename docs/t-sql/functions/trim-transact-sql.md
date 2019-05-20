@@ -18,25 +18,30 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: acce5dd1290f1e19efaf85e80aed5cdb76902cf6
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0bc2d3f4564438076f0f488b03368c335326ff02
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671184"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560039"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 從字串的開頭或結尾移除空白字元 `char(32)` 或其他指定的字元。  
 
 ## <a name="syntax"></a>語法
 
-```sql
+```
 -- Syntax for SQL Server and Azure SQL Database
 TRIM ( [ characters FROM ] string )
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse
+TRIM ( string )
 ```
 
 ## <a name="arguments"></a>引數

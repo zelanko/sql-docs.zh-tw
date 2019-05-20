@@ -17,14 +17,18 @@ ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 89643620c85dcd453d86a972f46156f11137ce3a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: badd4ab8580292b9a95d8700026d6d9a4c8334b2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290754"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727696"
 ---
 # <a name="execute-t-sql-statement-task"></a>執行 T-SQL 陳述式工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「執行 T-SQL 陳述式」工作會執行 Transact-SQL 陳述式。 如需詳細資訊，請參閱 [Transact-SQL 參考 &#40;資料庫引擎&#41;](../../t-sql/transact-sql-reference-database-engine.md) 和 [Integration Services &#40;SSIS&#41; 查詢](../../integration-services/integration-services-ssis-queries.md)。  
   
  此工作與執行 SQL 工作類似。 不過，「執行 T-SQL 陳述式」工作僅支援 Transact-SQL 版的 SQL 語言，而且您無法在使用其他 SQL 語言方言的伺服器上使用此工作執行陳述式。 如果您需要執行參數化查詢、將查詢結果儲存至變數，或使用屬性運算式，則應使用執行 SQL 工作而非「執行 T-SQL 陳述式」工作。 如需相關資訊，請參閱 [Execute SQL Task](../../integration-services/control-flow/execute-sql-task.md)。  

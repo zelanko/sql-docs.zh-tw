@@ -21,14 +21,18 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c50b86d2d5e96951b9bdeabf6750fbb8dd7a3d30
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 18150e08b06e1b8f919df98e8e10b4eb43cc4b64
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271475"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727475"
 ---
 # <a name="send-mail-task"></a>傳送郵件工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳送郵件工作會傳送電子郵件訊息。 藉由使用傳送郵件工作，封裝即可在封裝工作流程中的工作成功或失敗時傳送訊息，或傳送回應封裝在執行階段所引發事件的訊息。 例如，工作可通知資料庫管理員「備份資料庫」工作成功或失敗。  
   
  您可以利用下列方式設定傳送郵件工作：  

@@ -20,14 +20,18 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 273199612b1cf358ff82192c126b33c3fd2a94fd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f8373f860bfb9346f9df32649976ce53f1c9d8be
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277657"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724895"
 ---
 # <a name="use-property-expressions-in-packages"></a>在封裝中使用屬性運算式
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   屬性運算式是指派給屬性的運算式，用於在執行階段啟用該屬性的動態更新。 例如，屬性運算式可更新「收件者」欄位，傳送郵件工作透過插入儲存在變數中的電子郵件地址來使用該欄位。  
   
  運算式可加入封裝、工作、「Foreach 迴圈」、「For 迴圈」、「時序」、Foreach 列舉值、事件處理常式、封裝或專案層級的連接管理員或記錄提供者中。 此物件任何為讀取/寫入的屬性，都可以實作屬性運算式。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 也支援在資料流程元件的某些自訂屬性中，使用屬性運算式。 變數和優先順序條件約束不支援屬性運算式，但是它們包含您可以在其中使用運算式的特殊屬性。  

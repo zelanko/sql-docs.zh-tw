@@ -11,14 +11,18 @@ ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 65e004be009a1be3608ee867467ea12422d07438
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5a54e6ef3c7ede32f9a9d04a841e40d06667b5b0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270668"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726577"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>資料分割處理目的地自訂屬性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   資料分割處理目的地同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是資料分割處理目的地的自訂屬性。 所有屬性都是可讀寫的。  

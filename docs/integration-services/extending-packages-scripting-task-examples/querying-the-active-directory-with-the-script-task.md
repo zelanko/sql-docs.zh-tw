@@ -18,14 +18,18 @@ ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 078d028bb1f997e6a198c91b8019519f81460ae6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5bd648817edb921df46c73f341d02b9e389fa522
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270641"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724312"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>以指令碼工作查詢 Active Directory
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   企業資料處理應用程式 (例如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝) 通常需要根據儲存在 Active Directory 中的職等、工作職稱或是員工的其他特色，以不同的方式處理資料。 Active Directory 是一種 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 目錄服務，可集中儲存中繼資料，這些資料不僅有關使用者，而且還有關電腦與印表機等其他組織資產。 在 Microsoft .NET Framework 中的 **System.DirectoryServices** 命名空間提供使用 Active Directory 的類別，以協助您根據它所儲存的資訊來指示資料處理工作流程。  
   
 > [!NOTE]  
@@ -44,7 +48,7 @@ ms.locfileid: "58270641"
   
 4.  在指令碼專案中，加入 **System.DirectoryServices** 命名空間的參考。  
   
-5.  執行個體時提供 SQL Server 登入。 在程式碼中，使用 **Imports** 陳述式匯入 **DirectoryServices** 命名空間。  
+5.  。 在程式碼中，使用 **Imports** 陳述式匯入 **DirectoryServices** 命名空間。  
   
 > [!NOTE]  
 >  若要順利執行這個指令碼，您的公司必須在其網路上使用 Active Directory，並儲存這個範例所使用的員工資訊。  

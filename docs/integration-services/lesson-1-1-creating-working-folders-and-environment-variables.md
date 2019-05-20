@@ -1,5 +1,5 @@
 ---
-title: 步驟 1：建立工作資料夾與環境變數 | Microsoft Docs
+title: 步驟 1:建立工作資料夾與環境變數 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9cb42182c362f0ad71689098dc361ef470c36a00
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9a7f1437346baa2c54801af591a5f23a208d42c2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272627"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723450"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>課程 1-1 - 建立工作資料夾與環境變數
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 在這項工作中，您將建立工作資料夾 (C:\DeploymentTutorial) 和新的系統環境變數 (`DataTransfer` 與 `LoadXMLData`)，並稍後在教學課程工作中使用。  
   
 工作資料夾位於 C 磁碟的根目錄。 如果必須使用其他磁碟或位置，這是可行的。 不過必須記下這個位置，只要教學課程提到 DeploymentTutorial 工作資料夾時就會用到這個位置。  

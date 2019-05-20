@@ -14,14 +14,18 @@ ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac5843b20f43d1038c5a331d6fe4222185f00120
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ac9490abd45c37005fc77ed7733768fa6d7c35a9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270441"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725246"
 ---
 # <a name="ln-ssis-expression"></a>LN (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回數值運算式的自然對數。  
   
 ## <a name="syntax"></a>語法  

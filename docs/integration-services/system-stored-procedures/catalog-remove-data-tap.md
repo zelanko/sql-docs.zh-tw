@@ -11,14 +11,18 @@ ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 497c82ffc7a9bf0b6715a4d005145c73a19f7b78
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dab606451fc99c70b28999f2d2d8be93d1513a20
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270865"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65716042"
 ---
-# <a name="catalogremovedatatap"></a>catalog.remove_data_tap
+# <a name="catalogremovedatatap"></a>catalog.remove_data_tap 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   從執行中的元件輸出移除資料點選。 資料點選的唯一識別碼與執行的執行個體相關聯。  

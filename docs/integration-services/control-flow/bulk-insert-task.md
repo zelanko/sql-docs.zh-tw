@@ -19,14 +19,18 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 42e26d257b915aad5ffa457605fbb68c1b66fab9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f0a32d1d21cd5f3c42fcb91ece5b5a6792c94ce6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290704"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728013"
 ---
 # <a name="bulk-insert-task"></a>大量插入工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「大量插入」工作提供有效的方式，將大量資料複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或檢視。 例如，假設您的公司將百萬個資料列的產品清單儲存在大型電腦系統上，但公司的電子商務系統是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴展網頁。 您必須在晚上以大型電腦的主產品清單更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品資料表。 若要更新資料表，請以 Tab 分隔的格式儲存產品清單，並使用「大量插入」工作將資料直接複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。  
   
  為了確保高速資料複製，從來源檔案將資料搬移到資料表或檢視時，無法執行資料的轉換。  

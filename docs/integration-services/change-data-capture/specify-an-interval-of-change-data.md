@@ -13,14 +13,18 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7a249a9a155b64ff641197724e55129a6f2fc403
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8b5f187d7efb44997cf53a4064daee4a83206a82
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278007"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728577"
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定變更資料的間隔
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程中，第一個工作是計算變更間隔的端點。 這些端點是 **datetime** 值，而且將會以封裝變數儲存，以便稍後在封裝中使用。  
   
 > [!NOTE]  

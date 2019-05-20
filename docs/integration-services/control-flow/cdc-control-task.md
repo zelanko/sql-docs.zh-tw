@@ -14,14 +14,18 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 87815205efb5598dd2901b46d4220092f76cde4a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 875eada43d37add815b3e4f3c0634273be324174
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283032"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727916"
 ---
 # <a name="cdc-control-task"></a>CDC 控制工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC 控制工作是用來控制異動資料擷取 (CDC) 封裝的開發週期。 它會處理 CDC 封裝與初始載入封裝的同步處理，以及 CDC 封裝執行中所處理之記錄序號 (LSN) 範圍的管理。 此外，CDC 控制工作也會處理錯誤狀況和復原。  
   
  CDC 控制工作在 SSIS 封裝變數中維護 CDC 封裝的狀態，也可以將它保存在資料庫資料表中，以便於跨封裝啟動和在一起執行通用 CDC 處理序的多個封裝之間維護狀態 (例如某個工作可能負責初始載入，而另一個工作則負責滴漏式饋送更新)。  

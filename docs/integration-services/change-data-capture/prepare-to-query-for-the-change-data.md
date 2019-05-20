@@ -13,14 +13,18 @@ ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7b57e5b2bf98b60e80bf4eddbf1583a7abd24802
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c4d0fdc777715dc7077fc3396e533c5e6336a675
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279992"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728646"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>準備查詢變更資料
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程中，第三個工作 (也就是最後一個工作) 是準備查詢變更資料，並加入「資料流程」工作。  
   
 > [!NOTE]  

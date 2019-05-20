@@ -19,14 +19,18 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb26cf898282273ea94b07c7d3b6c618d476a35b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0e5ebfb5edbcbb0cc6ec47b063ffb11d87b01c55
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273004"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726237"
 ---
 # <a name="character-map-transformation"></a>字元對應轉換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「字元對應」轉換會套用字串函數，例如從小寫轉換成大寫、字元資料。 此轉換只能在字串資料類型的資料行資料上操作。  
   
  「字元對應」轉換可就地轉換資料行資料，或將資料行加入至轉換輸出，並將轉換的資料放入新的資料行。 您可以將不同組的對應作業套用至同一輸入資料行，並將結果放入不同的資料行。 例如，您可以將同一資料行轉換成大寫和小寫，並將結果放入兩個不同的資料行。  

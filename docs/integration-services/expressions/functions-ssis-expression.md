@@ -17,14 +17,18 @@ ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0b768e591f73d004959b728d055a9232043c594
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ba74954d0cf587161b02d1a37a09f222722f9f61
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272740"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725386"
 ---
 # <a name="functions-ssis-expression"></a>函數 (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   運算式語言包含一組可在運算式中使用的函數。 運算式可使用單一函數，但通常運算式會結合函數與運算子，並使用多個函數。  
   
  函數可分類成下列各群組：  
@@ -48,7 +52,7 @@ ms.locfileid: "58272740"
 |[LN &#40;SSIS 運算式&#41;](../../integration-services/expressions/ln-ssis-expression.md)|傳回數值運算式的自然對數。|  
 |[LOG &#40;SSIS 運算式&#41;](../../integration-services/expressions/log-ssis-expression.md)|傳回數值運算式以 10 為底的對數。|  
 |[POWER &#40;SSIS 運算式&#41;](../../integration-services/expressions/power-ssis-expression.md)|傳回數值運算式的乘冪結果。|  
-|[ROUND &#40;SSIS 運算式&#41;](../../integration-services/expressions/round-ssis-expression.md)|傳回已經進位到指定長度或有效位數的數值運算式。 執行個體時提供 SQL Server 登入。|  
+|[ROUND &#40;SSIS 運算式&#41;](../../integration-services/expressions/round-ssis-expression.md)|傳回已經進位到指定長度或有效位數的數值運算式。 。|  
 |[SIGN &#40;SSIS 運算式&#41;](../../integration-services/expressions/sign-ssis-expression.md)|傳回數值運算式的正 (+)、負 (-) 或零 (0) 符號。|  
 |[SQUARE &#40;SSIS 運算式&#41;](../../integration-services/expressions/square-ssis-expression.md)|傳回數值運算式的平方。|  
 |[SQRT &#40;SSIS 運算式&#41;](../../integration-services/expressions/sqrt-ssis-expression.md)|傳回數值運算式的平方根。|  

@@ -13,14 +13,18 @@ ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0fe7839e08e38096b4b942dc3119d3a560c0a0fa
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d316864d3dffb26680a503ad1b43bcb4b3ab94a8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277627"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728316"
 ---
 # <a name="data-sources"></a>資料來源
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 包含您可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中使用的設計階段物件：資料來源。  
   
  資料來源物件是連接的參考，且至少包含連接字串和資料來源識別碼。 它也可以包含描述、名稱、使用者名稱和密碼等其他中繼資料。  

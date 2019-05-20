@@ -16,14 +16,18 @@ ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 46fc751556c7e9e1ca9fc122bf8c80a2f5056fc8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f27e5f7a9227ee9792c45eca87dbef9f78c34df3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276356"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727256"
 ---
 # <a name="copy-package-objects"></a>複製封裝物件
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   此主題描述如何在某個封裝內或兩個封裝之間複製控制流程項目、資料流程項目和連接管理員。  
   
 ### <a name="to-copy-control-and-data-flow-items"></a>若要複製控制和資料流程項目  

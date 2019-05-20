@@ -20,14 +20,18 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0efefea6391b9c9da82dc3c960ea1c0774e1aaaf
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6fe2095d7e5bdd47a4442084b9d75c6880a64cfc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282679"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713707"
 ---
 # <a name="debugging-control-flow"></a>偵錯控制流程
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含您可用於疑難排解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中之控制流程的功能及工具。  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援容器及工作上的中斷點。  

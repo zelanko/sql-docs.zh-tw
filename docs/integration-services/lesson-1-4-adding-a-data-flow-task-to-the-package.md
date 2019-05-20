@@ -11,14 +11,18 @@ ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8ba4cadf966bdeec08cee922d091a3b01820e082
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d0572019dabc6d62a634022ebeac2cdcb295a9e1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277667"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723331"
 ---
 # <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>第 1-4 課：將資料流程工作新增至套件
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在建立來源和目的地資料的連線管理員之後，要將資料流程工作新增到套件。 資料流程工作會定義在來源和目的地之間移動資料的資料流程引擎，以及提供轉換、清理和修改移動中資料的功能。 資料流程工作是進行擷取、轉換和載入 (ETL) 處理序大部份工作之處。  
   

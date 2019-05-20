@@ -24,14 +24,18 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 38745dc80686129b73d087a2977231558c3904b7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 195291c878f0529d24fe05a1b806974f61fa6df9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272579"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719899"
 ---
 # <a name="execute-package-utility-dtexecui"></a>執行套件公用程式 (dtexecui)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   您可使用 **[執行封裝公用程式]** 來執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 此公用程式會執行儲存在下列三個位置之一的封裝： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統。 此使用者介面可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 開啟或藉由在命令提示字元輸入 **dtexecui** 加以開啟，作為使用 **DTExec** 命令提示字元工具執行封裝的替代方案。  
   
  封裝會在與 **dtexecui.exe** 公用程式相同的處理序中執行。 由於此公用程式是 32 位元工具，因此封裝會在 Windows on Win32 (WOW) 所執行的 64 位元環境中透過 **dtexecui.exe** 加以執行。 在 64 位元電腦上使用 dtexecui.exe 公用程式開發及測試命令時，應先使用 64 位元版本的 **dtexec.exe** 以 64 位元模式測試命令，然後才在實際伺服器上部署或為命令排程。  

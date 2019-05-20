@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d773d0d75c843c05b9e9273f1fbbe9eec9a16721
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 48055b6713eeab212859afe974df71e51c223010
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279682"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717728"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>在 .NET 應用程式中使用 C# 程式碼部署 SSIS 專案
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 本快速入門示範如何撰寫 C# 程式碼，來連線至資料庫伺服器並部署 SSIS 專案。
 
 若要建立 C# 應用程式，您可以使用 Visual Studio、Visual Studio Code 或您選擇的另一個工具。

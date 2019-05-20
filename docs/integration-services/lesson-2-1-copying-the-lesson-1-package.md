@@ -1,5 +1,5 @@
 ---
-title: 步驟 1：複製第 1 課套件 | Microsoft Docs
+title: 步驟 1:複製第 1 課套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db25f19e7815a0fc801801ac6ad619dbdfd66d43
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 66077bac6ef3ce7f52b03eb5a439aa24a89449a9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280422"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722719"
 ---
 # <a name="lesson-2-1-copy-the-lesson-1-package"></a>課程 2-1：複製第 1 課套件
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在此工作中，您會建立 **Lesson 1.dtsx**套件的複本。 如果您未完成第 1 課，可以使用本教學課程中所隨附已完成的第 1 課套件。 您將在第 2 課的其餘部分中，全程使用這個新的複本。  
   

@@ -15,14 +15,18 @@ ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fd0adbfc5f2e7ea27a39758e81c0afaed0186123
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c5692d8bb04c239e0cdb84531ff9fc7fec07cc31
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277168"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726836"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>使用 OLE DB 來源來擷取資料
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   若要加入及設定 OLE DB 來源，封裝必須已包含至少一個「資料流程」工作。  
   
 ### <a name="to-extract-data-using-an-ole-db-source"></a>若要使用 OLE DB 來源擷取資料  

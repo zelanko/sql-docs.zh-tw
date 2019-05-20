@@ -17,14 +17,18 @@ ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa02f74979843c43b5a495c608e3c8811f929237
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9161fe71f82d2ca0f2f31805dc07beba387bc28d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283002"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726296"
 ---
 # <a name="audit-transformation"></a>稽核轉換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   稽核轉換可讓封裝中的資料流程包含有關封裝執行的環境資料。 例如，可以將封裝、電腦與操作員的名稱加入資料流程。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括提供此資訊的系統變數。  
   
 ## <a name="system-variables"></a>系統變數  

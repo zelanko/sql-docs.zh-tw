@@ -12,14 +12,18 @@ ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a8a3624eeae89d520fb9e97e50af1d32de6dab55
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: fadf1fac6929433c217241039634a7af8658f4f6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222042"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723999"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>完成精靈 (SQL Server 匯入和匯出精靈)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 指定是否要立即執行複製作業之後，以及選擇性儲存精靈建立的套件之後，[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [完成精靈]。 在此頁面上，您可以檢閱在精靈中的選擇，然後按一下 [完成]  開始複製作業。
  
 ## <a name="screen-shot-of-the-complete-the-wizard-page"></a>[完成精靈] 頁面的螢幕擷取畫面 

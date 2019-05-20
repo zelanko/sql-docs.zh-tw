@@ -16,15 +16,16 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: eb345a2e34eb3b6088686e71b6ffa63329bae5d5
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017 ||= azure-sqldw-latest ||= sqlallproducts-allversions
+ms.openlocfilehash: c3601e341205cc41a2da3991b4de434166f246a1
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334395"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560187"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   將 *inputdate* 轉換成目標時區中對應的 *datetimeoffset* 值。 提供 *inputdate* 但未提供位移資訊時，此函式就會在假設 *inputdate* 位於目標時區的情況下，套用時區位移。 如果提供 *inputdate* 來作為 *datetimeoffset* 值，則 **AT TIME ZONE** 子句會使用時區轉換規則將它轉換成目標時區。  
   

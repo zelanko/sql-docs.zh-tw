@@ -15,14 +15,18 @@ ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f9919b376a6487ea87ef193c7a577feeeb01a160
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8cc976451c29c6d0b1656fec456b2a46b1f4f5f1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276710"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727477"
 ---
 # <a name="select-a-package"></a>選取封裝
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 **[選取封裝]** 對話方塊，即可指定訊息佇列工作可以接收訊息的來源封裝。  
   
 ## <a name="static-options"></a>靜態選項  

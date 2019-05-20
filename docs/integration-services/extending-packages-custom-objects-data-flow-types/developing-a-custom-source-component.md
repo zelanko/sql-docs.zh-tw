@@ -22,14 +22,18 @@ ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 169b815d9cbf09c2fc4ccf24e5585f4c2c8e5d56
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ca8e895537a518e7d18f16309acda34cb02aef44
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275756"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724816"
 ---
 # <a name="developing-a-custom-source-component"></a>開發自訂來源元件
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供開發人員撰寫來源元件的能力，這些元件可以連線至自訂資料來源，並將那些來源的資料提供給資料流程工作中的其他元件。 當您必須連接至無法使用其中一個現有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來源存取的資料來源時，能夠建立自訂來源的能力是很重要的。  
   
  來源元件具有一或多個輸出與零輸入。 在設計階段，來源元件是用以建立和設定連接、從外部資料來源讀取資料行中繼資料，以及設定以外部資料來源為基礎之來源的輸出資料行。 在執行期間，它們會連接至外部資料來源並將資料列加入輸出緩衝區。 資料流程工作會將這個緩衝區的資料列提供給下游元件。  

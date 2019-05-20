@@ -15,14 +15,18 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7626cff9ab80ef15d6cec283efd8a50a8d038ef1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 815eedc74e64a8c9e6ef38ba8cb9c8b0048aecbd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275178"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725085"
 ---
 # <a name="property-expressions-editor"></a>屬性運算式編輯器
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 **[屬性運算式編輯器]** 對話方塊，即可建立、編輯或刪除用來更新屬性值的屬性運算式。  
   
 ## <a name="options"></a>選項。  

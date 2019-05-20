@@ -11,14 +11,18 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5e1b4aef64ef4b7f0d99d7b5f44e88ca26d063c0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3cc37fe2dce76dd59baf776238e141a685c94cb3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281662"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722573"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>第 1 課：使用 SSIS 來建立專案和基本套件
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在本課程中，您將建立一個簡單的 ETL 套件，此套件會從單一一般檔案來源擷取資料、使用兩個查閱轉換來轉換資料，然後將轉換的資料寫入至 **AdventureWorksDW2012** 範例資料庫中 **FactCurrencyRate** 事實資料表的複本。 在本課程中，您會了解如何建立新套件、新增和設定資料來源與目的地連線，以及使用新的控制流程和資料流程元件。  
   

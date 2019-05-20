@@ -15,14 +15,18 @@ ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4309524aa80c09b92a486cbb210656a756ed18af
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b0b038e81c70e3368e9f66c6dfefc925e282b27d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290324"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713740"
 ---
 # <a name="debugging-script"></a>偵錯指令碼
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   您可以撰寫指令碼工作和指令碼元件在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 中使用的指令碼。  
   
  您可以在 VSTA 中設定中斷點和編寫中斷點指令碼。 您可以在 VSTA 中管理中斷點，但您也可以使用「[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」提供的 [設定中斷點] 對話方塊管理中斷點。 如需詳細資訊，請參閱[偵錯控制流程](../../integration-services/troubleshooting/debugging-control-flow.md)。  

@@ -11,14 +11,18 @@ ms.assetid: 8e861df6-d103-4d84-8438-e822533f6849
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ed8e50d4875a6992e407f51adad20a3b426762b8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4ee8e7d796016f07339f5ef083fe1fde23d859d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274127"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65716369"
 ---
-# <a name="catalogdeploypackages"></a>catalog.deploy_packages
+# <a name="catalogdeploypackages"></a>catalog.deploy_packages 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   將一或多個套件部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的資料夾，或更新先前已部署的現有套件。  

@@ -11,14 +11,18 @@ ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a66de9bcb28121eae0064c1f25ee691ea44fb322
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 543a4502199287432ca8a13220fa95223797340a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275803"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724040"
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>函式 - dm_execution_performance_counters
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   傳回 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上執行之執行的效能統計資料。  

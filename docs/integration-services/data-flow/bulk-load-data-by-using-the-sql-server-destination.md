@@ -17,14 +17,18 @@ ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 68902b0249fc40e8aa48a0bd6fc6f6eef47d4caa
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 81ab20c275fb4f42e37e8593d27f05d2d55acc00
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274358"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727162"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>使用 SQL Server 目的地來大量載入資料
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   若要加入及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，封裝至少必須包含一個「資料流程」工作及一個資料來源。  
   
 ### <a name="to-load-data-using-a-sql-server-destination"></a>使用 SQL Server 目的地載入資料  

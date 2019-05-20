@@ -13,14 +13,18 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0096e6ff64267e6568abd22729f250a4c76adc03
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8614217f7b8b081d43468d25707aa394c917b1ff
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281862"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725764"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>逐步解說：發行 SSIS 封裝做為 SQL 檢視
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   本逐步解說提供詳細的步驟來發行 SSIS 封裝，以做為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的 SQL 檢視。  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -30,7 +34,7 @@ ms.locfileid: "58281862"
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。  
   
-## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>步驟 1：建置 SSIS 專案並部署至 SSIS 目錄  
+## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>步驟 1:建置 SSIS 專案並部署至 SSIS 目錄  
  在此步驟中，您會建立 SSIS 封裝，從 SSIS 支援的資料來源 (在此範例中，我們使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫) 擷取資料，並使用資料流目的地元件輸出資料。 然後您會建置 SSIS 專案並部署至 SSIS 目錄。  
   
 1.  啟動 **SQL Server Data Tools**。 在 **[開始]** 功能表上，依序指向 **[所有程式]** 和 **[Microsoft SQL Server]**，然後按一下 **[SQL Server Data Tools]**。  
@@ -82,7 +86,7 @@ ms.locfileid: "58281862"
   
     2.  遵循精靈中的指示，將專案部署至本機資料庫伺服器中的 SSIS 目錄。 下列範例使用 **Power BI** 做為資料夾名稱，以及使用 **SSISPackagePublishing** 做為 SSIS 目錄中的專案名稱。  
   
-## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>步驟 2：使用 SSIS 資料摘要發行精靈將 SSIS 套件發佈為 SQL 檢視  
+## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>步驟 2:使用 SSIS 資料摘要發行精靈將 SSIS 套件發佈為 SQL 檢視  
  在此步驟中，您將使用 SQL Server Integration Services (SSIS) 資料摘要發行精靈，來發行 SSIS 封裝做為 SQL Server 資料庫中的檢視。 封裝的輸出資料可藉由查詢這個檢視來取用。  
   
  SSIS 資料摘要發行精靈會使用適用於 SSIS 的 OLE DB 提供者 (SSISOLEDB) 建立連結的伺服器，然後建立 SQL 檢視，其中包含連結伺服器上的查詢。 此查詢包括 SSIS 目錄中的資料夾名稱、專案名稱和封裝名稱。  

@@ -13,14 +13,18 @@ ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 31dd335814a54e44b7db90c26a13b4417734a384
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 34f07a3b0518e202cbbcba0f15d7782da56921d4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289644"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728594"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>處理插入、更新與刪除
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在執行累加式變更資料載入之 Integration Services 封裝的資料流程中，第二個工作是分隔插入、更新與刪除。 然後，您可以使用適當的命令，將其套用到目的地。  
   
 > [!NOTE]  

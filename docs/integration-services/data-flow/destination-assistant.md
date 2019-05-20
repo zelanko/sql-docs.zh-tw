@@ -14,14 +14,18 @@ ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea6bdfd015c59ffa6fcfceb4169f9a03bbe14e74
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 808738f9b391091ad019c0bcab40f1c9416503d0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290404"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726962"
 ---
 # <a name="destination-assistant"></a>Destination Assistant
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   目的地小幫手元件有助於建立目的地元件和連線管理員。 該元件位於 SSIS 工具箱的 **[我的最愛]** 區段中。  
   
 > [!NOTE]  

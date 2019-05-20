@@ -11,14 +11,18 @@ ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9537c8395c3c5d25112cd00b6157e03bc7ace334
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1879aef282f9e3d8e61767ba2808bf3dd2908b8d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276351"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715683"
 ---
 # <a name="catalogvalidateproject-ssisdb-database"></a>catalog.validate_project (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   以非同步方式驗證 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的專案。  

@@ -11,14 +11,18 @@ ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2eb654217e05004dab02c97941171e0725af5715
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 76c9fe5325f976d849f18314c54be3e9ffeaf626
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58288774"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723490"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>課程 1-3 - 加入封裝和其他檔案
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 在這項工作中，您會將現有的封裝、支援個別封裝的輔助檔案以及讀我檔案，加入至前一項工作所建立的「部署教學課程」專案中。 例如，您將會加入包含封裝資料的 XML 資料檔，還會加入一個文字檔，以提供有關專案中所有封裝的讀我資訊。  
   
 當您將封裝部署到測試或實際執行環境時，通常不會將資料檔包含在部署中，而是利用組態來更新資料來源的路徑，以存取資料檔或資料庫的測試版本或實際執行版本。 為了教學上的目的，這個教學課程會將資料檔包含在封裝部署中。  

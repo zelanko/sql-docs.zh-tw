@@ -14,14 +14,18 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d47462eeb7259b0289f7c554c0c6a4bd30dbb995
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5cf167278c898b71466379dc1e65d783ce2b710b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275241"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725660"
 ---
 # <a name="add-or-change-a-property-expression"></a>加入或變更屬性運算式
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   您可以為封裝、工作、「Foreach 迴圈」容器、「For 迴圈」容器、「時序」容器、事件處理常式、封裝和專案層級的連接管理員和記錄提供者建立屬性運算式。  
   
  若要建立或變更屬性運算式，您可以使用 [屬性運算式編輯器] 或 [運算式產生器]。 您可以從適用於工作的自訂編輯器或 [屬性] 視窗存取 [屬性運算式編輯器]。 您可以從 [屬性運算式編輯器] 內部存取 [運算式產生器]。 雖然您可以在 [屬性運算式編輯器] 或 [運算式產生器] 中撰寫運算式，但是 [運算式產生器] 會提供一組圖形工具，讓您輕鬆地建立複雜運算式。  

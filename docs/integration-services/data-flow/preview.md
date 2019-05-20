@@ -11,14 +11,18 @@ ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cc444ff27f948ac452e6da05c6ba33113fb62f39
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 70dcdbce74a138a9228928df86adc2405dee98e9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289914"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726553"
 ---
-# <a name="preview"></a>預覽
+# <a name="preview"></a>預覽 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 **[預覽]** 對話方塊可以預覽 SAP BW 來源即將擷取的資料。  
   
 > [!IMPORTANT]  

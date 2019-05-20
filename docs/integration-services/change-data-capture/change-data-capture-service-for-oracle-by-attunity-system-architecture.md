@@ -11,14 +11,18 @@ ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0142770f0cb097ea3d64ce6b934308fc4c3cb79c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c14818fc3a89800c681aa6eb4a527e281ed91957
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277727"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729025"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Attunity Oracle Change Data Capture (CDC) 服務系統架構
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC 服務會將一個或多個來源 Oracle 資料庫中選定資料表所做的變更擷取到位於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 資料庫中。 下圖顯示組成 Oracle CDC 服務的元件。  
   
  ![服務架構](../../integration-services/change-data-capture/media/service-architecture.gif "服務架構")  

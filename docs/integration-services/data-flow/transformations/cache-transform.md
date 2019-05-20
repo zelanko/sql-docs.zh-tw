@@ -17,14 +17,18 @@ ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a65a8be5dd71b6c1400dc325b34016e9df7f8192
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a33198113b770aff85a52a153272f019d4ffdca7
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275528"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726268"
 ---
 # <a name="cache-transform"></a>快取轉換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「快取轉換」轉換會藉由將資料從資料流程中連接的資料來源寫入至快取連接管理員的方式，產生「查閱轉換」的參考資料集。 「查閱轉換」會藉由聯結已連接資料來源輸入資料行中的資料與參考資料庫中的資料行來執行查閱。  
   
  當您想要設定「查閱轉換」以完整快取模式執行時，可以使用快取連接管理員。 在這個模式中，參考資料集會在「查閱轉換」執行之前載入快取中。  

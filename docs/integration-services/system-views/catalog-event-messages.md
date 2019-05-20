@@ -11,14 +11,18 @@ ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff792df1514336de298bbc452e95276a80425db2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4367b4e4ae9c315bd8462b72cbac020294fecdcb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275811"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715199"
 ---
-# <a name="catalogeventmessages"></a>catalog.event_messages
+# <a name="catalogeventmessages"></a>catalog.event_messages 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   顯示作業期間所記錄的訊息資訊。  

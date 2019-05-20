@@ -1,5 +1,5 @@
 ---
-title: 步驟 2：新增及設定記錄 | Microsoft Docs
+title: 步驟 2:新增及設定記錄 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/04/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a6ba2488aff0efdb6ed0d1c4ae03ec46ba6a6a25
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 80d2eb1ec30b4729deb4891c451fc5967bec9d54
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277907"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722067"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>課程 3-2：新增及設定記錄
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在此工作中，您會針對 Lesson 3.dtsx 套件中的資料流程啟用記錄。 然後，您會設定「文字檔」記錄提供者來記錄 PipelineExecutionPlan 和 PipelineExecuteTrees 事件。 「文字檔」記錄提供者會建立容易檢視及傳輸的記錄。 由於這些記錄檔的簡單性，使得它們在套件的基本測試階段相當有用。 您也可以在「[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計工具」的 [記錄事件] 視窗中檢視記錄項目。  
   

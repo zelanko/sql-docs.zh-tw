@@ -14,14 +14,18 @@ ms.assetid: 29d01bd9-8b38-43b1-b937-67f8aea57c0f
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: 1578b71f898f02450b90d9e6f7c20473f6ffed35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89bf14fb82516a9bd819431d92962169d56f68ae
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763286"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728365"
 ---
 # <a name="azure-hdinsight-connection-manager"></a>Azure HDInsight 連線管理員
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 **Azure HDInsight 連線管理員**可讓 SSIS 套件連線到 Azure HDInsight 叢集。
 
 **Azure HDInsight 連線管理員**是 [Azure SQL Server Integration Services (SSIS) Feature Pack](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) 的元件。

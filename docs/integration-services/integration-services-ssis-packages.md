@@ -21,14 +21,18 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e44feb2ee9355a5992de3063a669da5b7bb589e8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b04e493e6b78e140f62f43d7eb36ab73a9155a52
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272755"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723546"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 封裝
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   封裝是指經過組織的連接、控制流程元素、資料流程元素、事件處理常式、變數、參數以及組態的集合，您可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的圖形設計工具組裝或利用撰寫程式的方式建立封裝。  然後將完成的封裝儲存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區或檔案系統中，或者您可以將 ssISnoversion 專案部署到 [!INCLUDE[ssIS](../includes/ssis-md.md)] 伺服器。 封裝是所擷取、執行和儲存的工作單位。  
   
  當您初次建立封裝時，它是空的物件且沒有任何功能。 若要將功能加入至封裝，您可以加入控制流程，以及選擇性地將一或多項資料流程加入至封裝。  
@@ -87,8 +91,8 @@ ms.locfileid: "58272755"
   
 |記錄項目|Description|  
 |---------------|-----------------|  
-|**PackageStart**|指出封裝已經開始執行。<br /><br /> 注意：此記錄項目會自動寫入記錄檔中。 您無法排除它。|  
-|**PackageEnd**|指出封裝已經完成。<br /><br /> 注意：此記錄項目會自動寫入記錄檔中。 您無法排除它。|  
+|**PackageStart**|指出封裝已經開始執行。<br /><br /> 注意:此記錄項目會自動寫入記錄檔中。 您無法排除它。|  
+|**PackageEnd**|指出封裝已經完成。<br /><br /> 注意:此記錄項目會自動寫入記錄檔中。 您無法排除它。|  
 |**Diagnostic**|提供影響封裝執行之系統組態的相關資訊，例如可以同時執行的可執行檔數目。|  
   
 ## <a name="set-the-properties-of-a-package"></a>設定套件的屬性  

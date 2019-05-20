@@ -14,14 +14,18 @@ ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 14fd2981a20bea0aac3d5ab06cf1a1a55cadad6a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 60284ac8c7c1f99bac6b5eae20748b2d7f5308ce
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276837"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729196"
 ---
 # <a name="project-properties-dialog-box"></a>專案屬性對話方塊
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案是部署單位。 每個專案可以包含封裝、參數和環境參考。 專案為安全性物件，且可以定義資料庫主體的權限。 重新部署專案時，可以將舊版專案儲存到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中。  
   
  專案參數和封裝參數可以用來在執行時間將值指派給封裝內的屬性。 有些參數會在封裝執行前要求值。 參考環境變數的參數值會要求專案在執行前已具有對應的環境參考。  

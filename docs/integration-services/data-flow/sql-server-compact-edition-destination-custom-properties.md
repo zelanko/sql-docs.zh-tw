@@ -11,14 +11,18 @@ ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 82c4ae27d88ddafd24d0db0a87e2ca73ff60e9cd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1eaa38203d81cab931ab4ae1aa4ab120ae55bb83
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270361"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726327"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>SQL Server Compact Edition 目的地自訂屬性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 目的地同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 目的地的自訂屬性。 所有屬性都是可讀寫的。  

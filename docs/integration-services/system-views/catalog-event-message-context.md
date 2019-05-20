@@ -11,14 +11,18 @@ ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b074634cb838b81c6e5e544d2d1b0be87ba15d9d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d230b60b204d775e4a5329392960917c28b7c32d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272886"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715126"
 ---
-# <a name="catalogeventmessagecontext"></a>catalog.event_message_context
+# <a name="catalogeventmessagecontext"></a>catalog.event_message_context 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上的執行顯示與執行事件訊息相關聯之條件的詳細資訊。  

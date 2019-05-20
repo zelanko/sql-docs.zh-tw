@@ -11,14 +11,18 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc16bdad7012738fde65fbd695dae019d9d41f2c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4c843fa7af8e3390e820714886b7988edab878d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277067"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720817"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>第 6-4 課：部署第 6 課套件
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 部署套件時，需要將套件新增至 SQL Server 執行個體上 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的 SSISDB 目錄。 在本課程中，您會將第 6 課套件新增至 SSISDB 目錄、設定新的參數，並執行套件。 在本課程中，您會使用 SQL Server Management Studio 將第 6 課套件新增至 SSISDB 目錄，並部署套件。 部署套件之後，您可以修改參數以指向新位置，然後執行套件。   
 在此工作中，您會：  

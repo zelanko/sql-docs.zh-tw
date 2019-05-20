@@ -11,14 +11,18 @@ ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7f67b887e2f035e1ced192a967e2f8cfe2291ff7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 45df4518b935057e23e46b62583989bf98d0b0ab
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276464"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726897"
 ---
 # <a name="excel-custom-properties"></a>Excel 自訂屬性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **來源自訂屬性**  
   
  Excel 來源同時具有自訂屬性以及所有資料流程元件通用的屬性。  
@@ -48,11 +52,11 @@ ms.locfileid: "58276464"
 |屬性名稱|資料類型|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|整數 (列舉)|一個值，指定目的地如何存取其目的地資料庫。<br /><br /> 此屬性可以有下列其中一個值：<br /><br /> **OpenRowset** (0) - 您必須提供資料表或檢視表的名稱。<br /><br /> **從變數 OpenRowset** (1) - 您必須提供包含資料表或檢視表名稱之變數的名稱。<br /><br /> **使用 FastLoad OpenRowset** (3) - 您必須提供資料表或檢視表的名稱。<br /><br /> **從變數使用 FastLoad OpenRowset** (4) - 您必須提供包含資料表或檢視表名稱之變數的名稱。<br /><br /> **SQL 命令** (2) - 您要提供 SQL 陳述式。|  
-|CommandTimeout|Integer|逾時之前 SQL 命令可以執行的秒數上限。值為 **0** 指出無限的時間。 這個屬性的預設值為 **0**。<br /><br /> 注意：雖然您無法在 [Excel 目的地編輯器] 中使用這個屬性，但是可以使用 [進階編輯器] 來設定這個屬性。|  
+|CommandTimeout|Integer|逾時之前 SQL 命令可以執行的秒數上限。值為 **0** 指出無限的時間。 這個屬性的預設值為 **0**。<br /><br /> 注意:雖然您無法在 [Excel 目的地編輯器] 中使用這個屬性，但是可以使用 [進階編輯器] 來設定這個屬性。|  
 |FastLoadKeepIdentity|布林|一個值，指定載入資料時是否要複製識別值。 只有在您使用其中一個快速載入選項時，才能使用這個屬性。 此屬性的預設值為 **False**。|  
 |FastLoadKeepNulls|布林|一個值，指定載入資料時是否要複製 Null 值。 這個屬性只能搭配其中一個快速載入選項使用。 此屬性的預設值為 **False**。|  
 |FastLoadMaxInsertCommitSize|Integer|一個值，指定快速載入作業期間，Excel 目的地嘗試認可的批次大小。 預設值為 **2147483647**。 **0** 的值表示處理所有資料列之後的單一認可作業。|  
-|FastLoadOptions|String|快速載入選項的集合。 快速載入選項包括資料表的鎖定和條件約束的檢查。 您可以指定其中一個選項、兩個選項或不指定任何選項。<br /><br /> 注意：雖然您無法在 [Excel 目的地編輯器] 中使用這個屬性的某些選項，但是可以使用 [進階編輯器] 來設定這些選項。|  
+|FastLoadOptions|String|快速載入選項的集合。 快速載入選項包括資料表的鎖定和條件約束的檢查。 您可以指定其中一個選項、兩個選項或不指定任何選項。<br /><br /> 注意:雖然您無法在 [Excel 目的地編輯器] 中使用這個屬性的某些選項，但是可以使用 [進階編輯器] 來設定這些選項。|  
 |[OpenRowset]|String|當 AccessMode 為 **OpenRowset**時，就是 Excel 目的地所存取之資料表或檢視表的名稱。|  
 |OpenRowsetVariable|String|當 AccessMode 為 [從變數 OpenRowset] 時，就是包含 Excel 目的地所存取之資料表或檢視表名稱的變數名稱。|  
 |SqlCommand|String|當 AccessMode 為 [SQL 命令] 時，就是 Excel 目的地用來指定資料之目的地資料行的 Transact-SQL 陳述式。|  

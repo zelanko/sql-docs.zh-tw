@@ -11,14 +11,18 @@ ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a8d1d2a86effa392587a922f56b7e9bb11ff39b1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 592af27fb460f748dcf11b1463583a5d221402d9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272835"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715811"
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的參數值。 將值與環境變數建立關聯，或指派常值，在沒有指派其他值時預設會使用此常值。  

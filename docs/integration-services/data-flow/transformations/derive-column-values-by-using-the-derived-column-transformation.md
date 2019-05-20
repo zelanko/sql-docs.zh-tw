@@ -16,14 +16,18 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4dd066885e321a9233cae82769676c7c526322aa
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e51dd2b69e7b815134b156e0ff065c81aa8d4a63
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274245"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726156"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>使用衍生的資料行轉換來衍生資料行值
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   若要加入及設定「衍生的資料行」轉換，封裝中必須已包含至少一個「資料流程」工作和一個來源。  
   
  「衍生的資料行」轉換使用運算式更新現有的值或將值加入至新的資料行。 若您選擇將值加入至新的資料行， **[衍生的資料行轉換編輯器]** 對話方塊就會評估運算式並定義資料行的中繼資料。 例如，如果運算式串連兩個資料行 (兩個資料行都使用 DT_WSTR 資料類型且長度為 50)，而且兩個資料行值之間會有空格，新的資料行會具有 DT_WSTR 資料類型且長度為 101。 您可以更新新資料行的資料類型。 唯一的要求就是該資料類型必須與插入的資料相容。 舉例來說，若您指派日期值到整數資料類型的資料行， **[衍生的資料行轉換編輯器]** 對話方塊就會產生驗證錯誤。 視您選擇的資料類型而定，您可指定資料行的長度、有效位數、小數位數和字碼頁。  

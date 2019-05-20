@@ -12,14 +12,18 @@ ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 852e150955371d78fe8170a2f4fc3be037d35ccd
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 5f7b30970020963e83fa101971d6c30d9e76397a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222092"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723953"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>資料行對應 (SQL Server 匯入和匯出精靈)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   選取現有資料表和檢視，以複製或檢視您所提供的查詢之後，如果您按一下 [編輯對應]， [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [資料行對應]  對話方塊。 在此頁面上，您可以指定並設定目的地資料行以接收從來源資料行中複製的資料。 您通常不需要變更此頁面上的任何項目。
   
 如果您不想要複製所選取資料表中的所有資料行，則可以在此頁面上執行的動作是排除不想要的資料行。 針對您不想要複製的資料行，在 [對應] 清單的 [目的地] 資料行中選取 [忽略]。

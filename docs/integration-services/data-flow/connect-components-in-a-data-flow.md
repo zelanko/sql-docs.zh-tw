@@ -14,14 +14,18 @@ ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 70d7ba9d1828813c71cf88baab9709c10338c82d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8d353876938b3e64317f461240b2333e71217449
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271278"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727117"
 ---
 # <a name="connect-components-in-a-data-flow"></a>連接資料流程中的元件
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   此程序描述如何將資料流程中的元件輸出，連接到同一資料流程中的其他元件。  
 您可以在 **設計師中** [資料流程] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 索引標籤的設計介面上，建構封裝中的資料流程。 如果資料流程包含兩個資料流程元件，將來源或轉換的輸出連接到轉換或目的地的輸入，便可以連接這兩個元件。 兩個資料流程元件之間的連接子稱為路徑。  
   

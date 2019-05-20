@@ -12,14 +12,18 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 08baea2a92d21d9dca3a53dc17d6499f77e193d3
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 302cb0b4f041c674eda5af46bec91ca768d8f822
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222072"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724006"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>選擇資料來源 (SQL Server 匯入和匯出精靈)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在 [歡迎使用] 頁面之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈會顯示 [選擇資料來源]。 在此頁面上，您可以提供資料來源及其連接方式的相關資訊。
   
 如需您可以使用之資料來源的資訊，請參閱 [我可以使用哪些資料來源和目的地？](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)

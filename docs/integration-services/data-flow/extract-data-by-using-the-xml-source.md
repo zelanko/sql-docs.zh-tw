@@ -15,14 +15,18 @@ ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe29c2bff8c3eb45fc987993714a035f6d4889d5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 45e24864ad54d8b54dbf32c71e675e995217a18d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270626"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726825"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>使用 XML 來源來擷取資料
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   若要加入和設定 XML 來源，封裝必須至少含有一個「資料流程」工作。  
   
 ### <a name="to-extract-data-using-an-xml-source"></a>使用 XML 來源擷取資料  

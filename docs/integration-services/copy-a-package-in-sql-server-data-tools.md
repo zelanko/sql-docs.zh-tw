@@ -16,14 +16,18 @@ ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f267a838322b9e0380828ca926149426f0ce16e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 147452998a4ad9501d0a8cf50791d8e12c533a26
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289534"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727275"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中複製封裝
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   此主題描述如何透過複製現有的封裝來建立新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝，以及如何更新這個新封裝的 **Name** 和 **GUID** 屬性。  
   
 ### <a name="to-copy-a-package"></a>若要複製封裝  

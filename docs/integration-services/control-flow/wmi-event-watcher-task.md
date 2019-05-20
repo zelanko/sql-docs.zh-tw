@@ -18,14 +18,18 @@ ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dbbad401e6233478039786d24df0bd15ac21e805
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9941fcae545bdf641ff024b3884970b90e23350e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272602"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727318"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 事件監看員工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「WMI 事件監看員」工作使用 Management Instrumentation 查詢語言 (WQL) 事件查詢來監看 Windows Management Instrumentation (WMI) 事件，以指定感興趣的事件。 您可將「WMI 事件監看員」工作用於下列用途：  
   
 -   等待檔案已加入資料夾的通知，然後起始檔案的處理。  

@@ -11,14 +11,18 @@ ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1351229e2b9af018c5c61bd7f63d8463f8b8851d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 718605c140bcf6e44cd78c9b07b8b649e0f593bf
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272955"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714794"
 ---
-# <a name="catalogexecutioncomponentphases"></a>catalog.execution_component_phases
+# <a name="catalogexecutioncomponentphases"></a>catalog.execution_component_phases 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   顯示資料流程元件在每個執行階段所花費的時間。  

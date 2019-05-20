@@ -13,14 +13,18 @@ ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6737c03525d82c123b9c1b77bfad7ecdfb5c44ce
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 70fdb66a6d9b9e14d5f308532d07ddc16264614b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278067"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729083"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Attunity Oracle Change Data Capture (CDC) 設計工具 F1 說明參考
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Attunity Oracle Change Data Capture (CDC) 設計工具是用來建立及管理 Oracle CDC 執行個體。 本節的主題說明如何在 CDC 設計工具主控台中執行可用的工作。  
   
 ## <a name="what-do-you-want-to-do"></a>您想要做什麼事？  

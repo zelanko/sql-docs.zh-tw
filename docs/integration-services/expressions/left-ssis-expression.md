@@ -11,14 +11,18 @@ ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 36e48429057fed7e328b0e6fbe46019ee9435fef
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 303f2af2666520eff7f3b5899053a61186c081a3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272987"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725266"
 ---
 # <a name="left-ssis-expression"></a>LEFT (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回來自給定字元運算式最左邊部分的指定字元數。  
   
 ## <a name="syntax"></a>語法  

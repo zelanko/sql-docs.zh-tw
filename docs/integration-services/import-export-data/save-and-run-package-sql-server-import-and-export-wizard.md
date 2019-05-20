@@ -12,14 +12,18 @@ ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0299a7b8bc6f43989b83bb24fa7cc23833ed4c09
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8326920e557d6ed304414f96a7da040de0093dd0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276521"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723731"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>儲存並執行套件 (SQL Server 匯入和匯出精靈)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在您指定及設定資料來源和目的地之後，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [儲存並執行封裝] 。 在此頁面上，您可以指定是否要立即執行複製作業。 根據您的設定，也可以將設定儲存為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 套件進行自訂並在稍後重複使用。
   
 **什麼是套件？** 精靈使用 SQL Server Integration Services (SSIS) 複製資料。 在 SSIS 中，基本的單位就是封裝。 當您在精靈的頁面間移動並指定選項時，精靈會在記憶體中建立 SSIS 封裝。

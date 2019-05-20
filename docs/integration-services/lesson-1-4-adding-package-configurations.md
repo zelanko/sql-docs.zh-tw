@@ -11,14 +11,18 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 95469ad21694b0b086731986bfb27fc524f02b26
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 64c54d20ce6274ae0bb8bbf194cf12324e344d2f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282432"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723038"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>課程 1-4 - 新增套件設定
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 在這項工作中，您會為每個封裝加入組態。 組態會在執行階段更新封裝屬性和封裝物件的值。  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供各種組態類型。 您可以將組態儲存在環境變數、登錄項目、使用者自訂變數、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表和 XML 檔案中。 為了提供更大的彈性， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 還支援使用間接組態。 這表示您可以使用環境變數來指定組態的位置，進而指定實際的值。 「部署教學課程」專案中的封裝會使用 XML 組態檔和間接組態的組合。 XML 組態檔可以包含多個屬性的組態，而且在適當的情況下，可以由多個封裝參考。 在這個教學課程中，您會針對各個封裝使用不同的組態檔。  

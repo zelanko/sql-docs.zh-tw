@@ -13,14 +13,18 @@ ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33ac9a5d6804e98685a0c16b5572848d5a575b00
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0d550361063bd051e146b8fc350ae63b0b57c399
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279222"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728563"
 ---
 # <a name="select-oracle-tables-and-columns"></a>選取 Oracle 資料表和資料行
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 [選取 Oracle 資料表和資料行] 頁面，從擷取變更的 Oracle 來源資料庫選取資料表。 此頁面具有以下元素：  
   
 ## <a name="options"></a>選項。  

@@ -11,14 +11,18 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f926f1c1cb9c730401c220120c04ee679d005745
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ae385bd59de5f282ce383c6f819c6b5feb6521e6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272014"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721802"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>課程 4-3：新增錯誤流程重新導向
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在上一個工作中，當 [查閱貨幣索引鍵] 轉換試圖處理已損毀的範例一般檔案 (會產生錯誤) 時，無法產生相符項目。 因為轉換使用錯誤輸出的預設值，所以任何錯誤都會造成轉換失敗。 當轉換失敗時，封裝的其餘部分也會失敗。  
   

@@ -19,14 +19,18 @@ ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 61f4236d4bfe3578afc83bb9ac034e2ebc792928
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4db63681f489b0f375846272b7093545eb8fefa6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270006"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725934"
 ---
 # <a name="row-count-transformation"></a>資料列計數轉換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「資料列計數」轉換會在資料列通過資料流程時計算其數目，並將最後計數儲存到變數中。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 封裝可使用資料列計數更新指令碼、運算式和屬性運算式中使用的變數 (例如，儲存資料列計數的變數可更新電子郵件訊息中的訊息文字，以便加入資料列數)。「資料列計數」轉換使用的變數必須已存在，且必須在擁有「資料列計數」轉換的資料流程所屬的「資料流程」工作範圍內。  

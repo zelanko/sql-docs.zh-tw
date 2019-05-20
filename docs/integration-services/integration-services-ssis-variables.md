@@ -19,14 +19,18 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 06924024dca7eef1b6d1ff7f2ada916a84143628
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5f286a0cd957ed62ab3edb51eb96565431afb22a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281872"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723530"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 變數
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   變數會儲存 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝及其容器、工作和事件處理常式在執行階段可使用的值。 「指令碼」工作和「指令碼」元件中的指令碼也可以使用變數。 將工作和容器排序成工作流程的優先順序條件約束，可在其條件約束定義含有運算式時使用變數。  
   
  您可將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中的變數用於下列用途：  

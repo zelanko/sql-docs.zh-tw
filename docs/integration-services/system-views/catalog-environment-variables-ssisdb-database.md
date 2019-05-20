@@ -11,14 +11,18 @@ ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ec7fbb111e1c5cbc8e98117d3cb3be5d2bebab30
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7abae509ebd99757dcac51571353a38386f9e7d2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277877"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715235"
 ---
 # <a name="catalogenvironmentvariables-ssisdb-database"></a>catalog.environment_variables (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的所有環境顯示環境變數詳細資料。  

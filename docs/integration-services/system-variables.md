@@ -17,14 +17,18 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f1a8773a0c58b597f5a139346919c62d41968e79
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ed952b3e9d275d54c751aa64c6544653511667c3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272137"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715457"
 ---
 # <a name="system-variables"></a>系統變數
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一組儲存執行封裝及其物件之資訊的系統變數。 這些變數可以用於運算式及屬性運算式，以自訂封裝、容器、工作及事件處理常式。  
   
  所有的變數 (系統變數和使用者自訂變數) 都可在「執行 SQL」工作用來將變數對應至參數的參數繫結中使用。  
@@ -90,7 +94,7 @@ ms.locfileid: "58272137"
 |**ProgressCountHigh**|Int32|64 位元值的較高部份，指示 OnProgress 事件處理的作業總數。|OnProgress 事件處理常式|  
 |**ProgressCountLow**|Int32|64 位元值的較低部份，指示 OnProgress 事件處理的作業總數。|OnProgress 事件處理常式|  
 |**ProgressDescription**|String|進度的描述。|OnProgress 事件處理常式|  
-|**Propagate**|布林|指示是否將事件傳播至較高層級的事件處理常式。<br /><br /> 注意：驗證套件期間，系統會忽略 **Propagate** 變數的值。 如果您在子封裝中，將 **Propagate** 設為 [False]，這就無法防止事件向上擴展到父封裝。|所有事件處理常式|  
+|**Propagate**|布林|指示是否將事件傳播至較高層級的事件處理常式。<br /><br /> 注意:驗證套件期間，系統會忽略 **Propagate** 變數的值。 如果您在子封裝中，將 **Propagate** 設為 [False]，這就無法防止事件向上擴展到父封裝。|所有事件處理常式|  
 |**SourceDescription**|String|事件處理常式中引發事件之可執行檔的描述。|所有事件處理常式|  
 |**SourceID**|String|事件處理常式中引發事件之可執行檔的唯一識別碼。|所有事件處理常式|  
 |**SourceName**|String|事件處理常式中引發事件之可執行檔的名稱。|所有事件處理常式|  

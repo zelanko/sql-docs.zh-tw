@@ -12,14 +12,18 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33bde1142408b160317c74f23cb7636783e44390
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 163cdb0de7c41961e0646e38a5a208ec842f11b9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279882"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723756"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>儲存 SSIS 封裝 (SQL Server 匯入和匯出精靈)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   如果您在 [儲存並執行套件] 頁面上指定要將設定儲存為 SQL Server Integration Services (SSIS) 套件，[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [儲存 SSIS 套件]。 在此頁面上，您可以指定儲存精靈所建立套件的其他選項。  
 
 您之前在 [儲存並執行封裝]  頁面上為將封裝儲存到 SQL Server 或檔案系統所執行的選擇，決定您在 [儲存 SSIS 封裝]  頁面中看到的選項。 若要再次查看 [儲存並執行封裝]  頁面，請參閱 [儲存並執行封裝](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。

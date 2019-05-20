@@ -24,14 +24,18 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4e3de21943f0bdd50e05cb30a1d9b1774f41ab37
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a866d6224417898b9ed442cb656b9c62f4071297
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273296"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726003"
 ---
 # <a name="lookup-transformation"></a>查閱轉換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「查閱」轉換會藉由聯結輸入資料行中的資料與參考資料集中的資料行來執行查閱。 您可以使用查閱在相關資料表中存取以通用資料行中的值為基礎的其他資訊。  
   
  參考資料集可以是快取檔案、現有的資料表或檢視、新資料表或 SQL 查詢的結果。 「查閱」轉換會使用 OLE DB 連接管理員或快取連接管理員來連接到參考資料集。 如需詳細資訊，請參閱 [OLE DB 連線管理員](../../../integration-services/connection-manager/ole-db-connection-manager.md) 和 [快取連線管理員](../../../integration-services/data-flow/transformations/cache-connection-manager.md)  

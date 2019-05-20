@@ -15,14 +15,18 @@ ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5bcfe6062fc023c11025657605bfb1a428681025
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dc1f80c816ea2f4a964481682c8fbded50b16675
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280800"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726307"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>使用彙總轉換來彙總資料集中的值
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   若要加入及設定「彙總」轉換，封裝中必須已包含至少一個「資料流程」工作和一個來源。  
   
 ### <a name="to-aggregate-values-in-a-dataset"></a>若要彙總資料集中的值  

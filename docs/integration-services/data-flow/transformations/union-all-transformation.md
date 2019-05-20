@@ -19,14 +19,18 @@ ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d9069bffba5739a7eb53c12315ba3d28702e3398
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4173a5153dbd05977fcb8cd42b695d3654b1584
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273752"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725832"
 ---
 # <a name="union-all-transformation"></a>聯集全部轉換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「聯集全部」轉換會將多項輸入結合至單一輸出。 例如，五個不同的「一般檔案」來源的輸出，可做為「聯集全部」轉換的輸入並組合成一個輸出。  
   
 ## <a name="inputs-and-outputs"></a>輸入和輸出  

@@ -18,14 +18,18 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47c0bd557cede1a7ecc3fe287960267112293cd4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 683d3bcee8450a62a040663dacf30d337556529d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276313"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727678"
 ---
 # <a name="for-loop-container"></a>For 迴圈容器
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「For 迴圈」容器定義封裝中重複的控制流程。 迴圈實作與程式設計語言中 **For** 迴圈的結構類似。 在每次迴圈重複中，「For 迴圈」容器都會評估運算式並重複其工作流程，直到運算式評估為 **False**為止。  
   
  「For 迴圈」容器使用下列元素定義迴圈：  

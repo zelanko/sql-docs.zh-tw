@@ -12,14 +12,18 @@ ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bea5d30cb17920584c4d4eafdf888eeedbc014e6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 86a3db60a6eea2dce25394cab069d9ca9e1f9f8d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282942"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718382"
 ---
 # <a name="integration-services-ssis-scale-out"></a>Integration Services (SSIS) 相應放大
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out 透過將套件執行散佈到多部電腦，來提供 SSIS 套件的高效能執行。 設定 Scale Out 之後，您可以從 SQL Server Management Studio (SSMS)，透過相應放大模式來平行執行多個套件執行。
 
 ## <a name="components"></a>Components

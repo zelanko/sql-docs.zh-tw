@@ -15,14 +15,18 @@ ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74f1d8df75ae85367f57de01e9f8a60bab902242
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b4013b26e52c98566557d8195b5b401956d0721b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274313"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726206"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>使用緩時變維度精靈來設定輸出
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「緩時變維度精靈」做為「緩時變維度」轉換的編輯器使用。 為緩時變維度資料建立並設定資料流程會是一個複雜的工作。 「緩時變維度精靈」可引導您執行對應資料行、選取商務索引鍵資料行、設定資料行變更屬性，以及設定對推斷之維度成員的支援等步驟，為「緩時變維度」轉換輸出提供建立資料流程的最簡單方法。  
   
  您必須在維度資料表中選取至少一個商務索引鍵資料行，並將其對應到輸入資料行。 商務索引鍵值會將來源中的記錄連結到維度資料表中的記錄。 轉換會使用這個對應尋找維度資料表中的記錄，並判斷記錄是新的還是變更的。 通常，商務索引鍵是來源中的主索引鍵，但只要它會唯一識別記錄且其值不變更，就可以是替代索引鍵。 商務索引鍵也可以是包含多個資料行的複合索引鍵。 維度資料表中的主索引鍵通常是代理索引鍵，表示由識別欄位或自訂方案 (例如指令碼) 自動產生的數值。  

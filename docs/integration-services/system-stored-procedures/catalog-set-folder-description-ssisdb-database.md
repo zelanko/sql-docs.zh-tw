@@ -11,14 +11,18 @@ ms.assetid: 802416f6-5177-4db5-bca5-976dec5faf53
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 56852ab13402ba0cc3a13e1369b46a345ea7e5ae
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 631e838751ce47c19eb51b1f2a7158e89d57d6f6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279202"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715808"
 ---
 # <a name="catalogsetfolderdescription-ssisdb-database"></a>catalog.set_folder_description (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中資料夾的描述。  

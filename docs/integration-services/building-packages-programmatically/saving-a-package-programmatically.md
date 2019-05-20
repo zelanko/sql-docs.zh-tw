@@ -14,14 +14,18 @@ ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 993c9bcaeb92f7ec4eabc11beaf444e97622821f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 07c926a292c657eecceb13ca1cdc1d3f8dcc5a71
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271165"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729265"
 ---
 # <a name="saving-a-package-programmatically"></a>以程式設計方式儲存封裝
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在以程式設計方式建立新封裝或是修改現有封裝之後，通常會想要儲存變更。  
   
  本主題中用來儲存套件的所有方法，都需要 **Microsoft.SqlServer.ManagedDTS** 組件的參考。 在新專案中新增參考之後，請使用 **using** 或 **Imports** 陳述式匯入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空間。  

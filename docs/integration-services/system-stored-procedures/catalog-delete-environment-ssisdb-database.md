@@ -11,14 +11,18 @@ ms.assetid: d44b765f-9523-4e6a-bb17-37846d5e5334
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2fbed8331faae48739ba3740fc755d64421e9277
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ba16c8726963fcb355f1e6e424c15ec66601c126
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282312"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65716606"
 ---
 # <a name="catalogdeleteenvironment-ssisdb-database"></a>catalog.delete_environment (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的資料夾刪除環境。  

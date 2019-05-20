@@ -13,14 +13,18 @@ ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f8fcc687c49a573b40f052587bccde8210b65d65
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3ccaf1145b4d1c2b1f0c0c72adb67e6eecc4f1b8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272833"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728691"
 ---
 # <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>變更為了擷取變更所選取的資料表
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在此對話方塊中，您可以從要擷取變更的選定資料表中選取特定資料行。 您也可以編輯 **[安全性角色]** 和 **[擷取執行個體]** 資訊。  
   
  您可以針對您在此對話方塊中為了擷取變更所選取的資料表進行以下變更。  

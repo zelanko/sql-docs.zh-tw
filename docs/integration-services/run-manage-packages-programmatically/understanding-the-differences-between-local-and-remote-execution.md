@@ -15,14 +15,18 @@ ms.assetid: 610ee7d9-4fea-4aba-9395-57add826923b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b0379003ace2c693ab6c6734bc9dd4331872406
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5a276c1f387e8ebe4b9a2414fcc1d61e6c24a60e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290794"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718973"
 ---
 # <a name="understanding-the-differences-between-local-and-remote-execution"></a>了解本機和遠端執行之間的差異
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   封裝開發人員與系統管理員應了解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的執行位置有其限制。  
   
 -   **封裝會在其啟動程式的相同電腦上執行**。 即使當程式載入的封裝是儲存在遠端的另一台伺服器上，封裝仍然會在本機電腦上執行。  

@@ -1,5 +1,5 @@
 ---
-title: 步驟 2：執行套件安裝精靈 | Microsoft Docs
+title: 步驟 2:執行套件安裝精靈 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 740b85a52908437d2cdbca5e47e0797c1e0ba08b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 534daee6995cd5429878cfb3fca4ac5aea33e2fe
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290284"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721969"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>課程 3-2 - 執行套件安裝精靈
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 在這項工作中，您會執行「封裝安裝精靈」，將「部署教學課程」專案中的封裝部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的執行個體上。 只有封裝可以安裝在 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的 sysssispackages 資料表中，部署配套所包含的支援檔案則會部署到檔案系統中。  
   
 「封裝安裝精靈」會引導您完成安裝和設定封裝的步驟。 您會將封裝安裝到目的地電腦 (即複製部署配套所使用的電腦) 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體中。 此外，您還會建立一個 C:\DeploymentTutorialInstall 資料夾，讓精靈用來安裝非封裝檔案。  

@@ -11,14 +11,18 @@ ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 188dd47c28e0faae13e7b41ef09faca542f084bc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7c03018fefd6b4d09987a67ced7694d8f5e574db
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274152"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717222"
 ---
-# <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log
+# <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   清除作業記錄檔，以讓 SSISDB 資料庫進入可讓您變更 SERVER_OPERATION_ENCRYPTION_LEVEL 屬性值的狀態。  

@@ -17,14 +17,18 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b183ff23efd18a19e08033e64691b723d4b4f323
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 11414e0a669ea3169a610c98740b3fd35ff4e751
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276034"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727660"
 ---
 # <a name="ftp-task"></a>FTP 工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   FTP 工作會下載和上傳資料檔以及管理伺服器上的目錄。 例如，封裝可從遠端伺服器或網際網路位置下載資料檔，此工作可視為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝工作流程的一部分。 您可將 FTP 工作用於下列用途：  
   
 -   在移動資料之前或之後於目錄之間複製目錄和資料檔，以及將轉換套用至資料。  

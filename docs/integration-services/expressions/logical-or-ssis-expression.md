@@ -15,14 +15,18 @@ ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 771dea6d044fc797c5fe8bcc4a04e61679794ecd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4ea60751df8c27ba61c190a3f48d25e4dfce8cb1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290064"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725216"
 ---
 # <a name="-logical-or-ssis-expression"></a>|| (邏輯 OR) (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   執行邏輯 OR 運算。 如果其中一項或兩項條件均為 TRUE，則運算式的評估結果為 TRUE。  
   
 ## <a name="syntax"></a>語法  

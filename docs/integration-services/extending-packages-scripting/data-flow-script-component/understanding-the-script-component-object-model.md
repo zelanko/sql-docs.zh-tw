@@ -15,14 +15,18 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 64218cb8435f7bb30fc1a1309daeb93632d2bad9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f1109e0b7c86e03efe41c05b47af9e74c266edb3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277857"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724127"
 ---
 # <a name="understanding-the-script-component-object-model"></a>了解指令碼元件物件模型
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   如同[指令碼元件的程式碼撰寫和偵錯](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)中所討論，指令碼元件專案包含了三個專案項目：  
   
 1.  **ScriptMain** 項目，其中包含您用來撰寫程式碼的 **ScriptMain** 類別。 **ScriptMain** 類別繼承自 **UserComponent** 類別。  

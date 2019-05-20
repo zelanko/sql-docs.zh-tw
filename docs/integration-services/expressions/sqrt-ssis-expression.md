@@ -14,14 +14,18 @@ ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d0104fbb4c2778b5913b4409d69d8902d83a8e14
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e4ed42e0d75493bc609aee902ea3b46059724dc1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290394"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724956"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回數值運算式的平方根。  
   
 ## <a name="syntax"></a>語法  

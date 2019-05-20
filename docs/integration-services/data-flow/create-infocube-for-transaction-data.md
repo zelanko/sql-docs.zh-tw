@@ -11,14 +11,18 @@ ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cdca90b8cdde1e9995da7ec28d29191dd2a36200
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dc45f1e3c819caedea79e169c72cdc6b6245d854
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270717"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727099"
 ---
 # <a name="create-infocube-for-transaction-data"></a>建立交易資料的 InfoCube
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 [建立交易資料的 InfoCube] 對話方塊可以在 SAP Netweaver BW 系統中建立交易資料的新 InfoCube。  
   
  您可以從 [SAP BW 目的地編輯器] 的 [連線管理員] 頁面開啟 [建立交易資料的 InfoCube] 對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  

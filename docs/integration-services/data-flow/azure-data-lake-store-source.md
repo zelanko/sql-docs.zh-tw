@@ -14,14 +14,18 @@ ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8f37ede2738d9fd9da71b0b1e34411a099a42cbb
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 105bc5131a4c4c56bb7218de46c1bf6b6e86254c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281502"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727185"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store 來源
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **Azure Data Lake Store 來源** 元件可讓 SSIS 套件從 Azure Data Lake Store 讀取資料。 支援的檔案格式：文字和 Avro。
   
  **Azure Data Lake Store 來源**是 [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) 的元件。  

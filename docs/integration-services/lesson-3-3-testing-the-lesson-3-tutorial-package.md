@@ -11,14 +11,18 @@ ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c7e644744a53318ed1359bc0cdb47c3c896ed5ff
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5884506c83dfc0f3cbee6119ad9047807c35fbfe
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274845"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722089"
 ---
 # <a name="lesson-3-3-test-the-lesson-3-tutorial-package"></a>課程 3-3：測試第 3 課教學課程套件
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在此工作中，您會執行 **Lesson 3.dtsx**套件。 當套件執行時，[記錄事件] 視窗會列出 SSIS 寫入至記錄提供者所提供記錄檔的記錄項目。 在套件執行完成之後，您可以檢視記錄檔的內容。  
   

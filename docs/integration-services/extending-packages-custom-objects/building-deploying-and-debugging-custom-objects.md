@@ -13,14 +13,18 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7ed254b6dd9b9bca5216962f769a55db99823dff
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a6f96e795b44e936c4088e4ded571e76c33d4863
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271334"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724799"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>建立、部署和偵錯自訂物件
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   撰寫 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 之自訂物件的程式碼之後，必須建置和部署組件，並將其整合到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具，這樣才能在套件中使用，並對其進行測試和偵錯。  
   
 ##  <a name="top"></a> 針對 Integration Services 建置、部署和偵錯自訂物件的步驟  

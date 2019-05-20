@@ -11,14 +11,18 @@ ms.date: 08/20/2018
 ms.author: janinez
 author: janinezhang
 manager: craigg
-ms.openlocfilehash: dcbd6f7c70bebd84b7435d4371b38ee9cc8ef3d6
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: 73b77182cc8ed447f8540aed5010aeee704c0e97
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671264"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720556"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料載入 SQL Server 或 Azure SQL Database
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 建立 SQL Server Integration Services (SSIS) 套件，將資料載入 SQL Server 或 [Azure SQL Database](/azure/sql-database/)。 您也可以選擇在資料通過 SSIS 資料流程時，對它們進行架構重組、轉換及清理。
 

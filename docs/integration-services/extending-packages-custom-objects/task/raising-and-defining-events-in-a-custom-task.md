@@ -25,14 +25,18 @@ ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5241480a1c572085a2f931b22eb76eca9f207178
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 70fa79702aadcca09c43d1ca6d9fbeef0988d8f2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281932"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724427"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>引發並在自訂工作中定義事件
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段引擎提供事件的集合，可以顯示驗證與執行工作時的工作進度狀態。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 介面會定義這些事件，而且是以 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> 方法的參數提供給工作。  
   
  另一組定義在 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 介面的事件，是由 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 代表工作而引發。 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 會引發在驗證和執行前後發生的事件，而工作會引發在執行和驗證期間發生的事件。  

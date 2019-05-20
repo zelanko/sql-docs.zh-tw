@@ -11,14 +11,18 @@ ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a2f83708d8a384e6b010c816556bf3da187a5f86
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a1811d0e5fc203b9a97336933c3943a684fb5c9a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281042"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714857"
 ---
-# <a name="catalogexecutables"></a>catalog.executables
+# <a name="catalogexecutables"></a>catalog.executables 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   這個檢視會針對指定之執行中的每個可執行檔顯示一個資料列。  

@@ -1,5 +1,5 @@
 ---
-title: 步驟 1：建立新的 Integration Services 專案 | Microsoft Docs
+title: 步驟 1:建立新的 Integration Services 專案 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f39232dd7a1471d08eb283eea0819d909d1e8fca
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 82420ce073f65483043d44670fc538849a447d90
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281892"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723321"
 ---
 # <a name="lesson-1-1-create-a-new-integration-services-project"></a>第 1-1 課：建立新的 Integration Services 專案
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立封裝的第一步就是建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。 這個範例專案包含資料來源、資料來源檢視和套件的範本，這些是構成資料轉換解決方案的要件。  
   

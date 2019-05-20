@@ -12,14 +12,18 @@ ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 385ff11ddd79430f122a5390b45af77d8fba9205
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 28d2381c82bc8c1dfe324b396431397a8cea1694
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272442"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723804"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>預覽資料對話方塊 (SQL Server 匯入和匯出精靈)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   指定您想要複製的資料之後，即可選擇性地按一下 [預覽]  開啟 [預覽資料]  對話方塊。 在此頁面上，您最多可以預覽 200 筆資料來源的取樣資料列。 這會確認精靈即將複製您想要複製的資料。
   
 ## <a name="screen-shot-of-the-preview-data-page"></a>[預覽資料] 頁面的螢幕擷取畫面 

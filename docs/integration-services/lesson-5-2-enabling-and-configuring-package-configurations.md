@@ -1,5 +1,5 @@
 ---
-title: 步驟 2：啟用和設定套件設定 | Microsoft Docs
+title: 步驟 2:啟用和設定套件設定 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/08/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b65e44de58e2aeea21485b1a2875fa7f00349dc5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ee2c54b072cf9cd219bed10b0ade7f59fa8bc354
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271693"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721518"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>第 5-2 課：啟用和設定套件設定
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在此工作中，您會將專案轉換為套件部署模型，並使用 [套件設定精靈] 來啟用套件設定。 您會使用此精靈來產生 XML 設定檔，其中包含 Foreach 迴圈容器的 **Directory** 屬性組態設定。 **Directory** 屬性的值是由新套件層級變數提供，您可以在執行階段更新它。 您也會擴展一個要用於測試的新範例資料夾。  
   

@@ -14,14 +14,18 @@ ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8bc17975628068266c31bde014e6645dd6c61c7c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4d012b983c2114998def1104f7199f58a9e570b3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279252"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727216"
 ---
 # <a name="azure-blob-destination"></a>Azure Blob 目的地
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  [Azure Blob 目的地] 元件可讓 SSIS 封裝將資料寫入 Azure Blob。 支援的檔案格式：CSV 和 AVRO。 
    
  將 [Azure Blob 目的地] 拖放到資料流程設計師，然後在上面按兩下以查看編輯器)。  

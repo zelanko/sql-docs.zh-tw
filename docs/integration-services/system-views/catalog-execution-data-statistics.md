@@ -11,14 +11,18 @@ ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 90872764fd09ab78d9a98a0c9edc2c6e71479d26
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eafc03f9e9b12bf60e3b0bd13c727ddd51c6637b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272941"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714722"
 ---
-# <a name="catalogexecutiondatastatistics"></a>catalog.execution_data_statistics
+# <a name="catalogexecutiondatastatistics"></a>catalog.execution_data_statistics 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   每當資料流程元件傳送資料至特定封裝執行的下游元件，此檢視就會顯示一個資料列。 此檢視中的資訊可用來計算元件的資料輸送量。  

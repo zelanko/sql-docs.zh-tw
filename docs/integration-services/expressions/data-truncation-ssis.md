@@ -16,14 +16,18 @@ ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2542aeb97a3cc8c2ccd57a3e3b07445b085ed369
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7417f763aaff5d541f351848eb59b71e9a67a70f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290024"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725526"
 ---
 # <a name="data-truncation-ssis"></a>資料截斷 (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   將某個資料類型的值轉換成其他類型，可能會導致值被截斷。  
   
  發生截斷的狀況︰  

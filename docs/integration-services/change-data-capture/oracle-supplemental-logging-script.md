@@ -11,14 +11,18 @@ ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7715008903a51377a5819493a61d2cead90f604d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0f4d20c4a0eaaf573cdb9da6e9880df6d698a8f6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271664"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728635"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 補充記錄指令碼
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   此對話方塊會顯示 Oracle 補充記錄指令碼。  
   
  當您準備要使用的 CDC 執行個體時，CDC 設計工具會建立 Oracle SQL 指令碼，該指令碼會針對要擷取的資料表設定補充記錄。 補充記錄指令碼會告知 Oracle 何時更新特定資料表，而且它寫入交易記錄中的變更記錄應該包含所有相關之資料行的資料，而不只是變更的資料行。  

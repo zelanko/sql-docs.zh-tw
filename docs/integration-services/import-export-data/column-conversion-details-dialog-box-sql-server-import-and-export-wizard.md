@@ -12,14 +12,18 @@ ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac4a69a7aca5a1e354e345a47e23b413fc9d3422
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 8d2b65f4184ed599cd737cdbb14779f411d09808
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221912"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723934"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>資料行轉換詳細資訊對話方塊 (SQL Server 匯入和匯出精靈)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   如果您在 [檢閱資料類型對應]  頁面上按兩下個別資料行的資料列，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [資料行轉換詳細資訊]  對話方塊。 在此頁面上，您可以檢閱個別資料行的詳細轉換資訊。 此資訊包括下列項目。
 -   來源和目的地的資料行資料類型。
 -   如果需要轉換，則是精靈將會執行的資料類型轉換。

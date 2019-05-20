@@ -11,14 +11,18 @@ ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 75efe6688c1bc2efc000a5021ce97503a09b0306
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6d8660aa65699e6abd22c73e13c3673903ff6bfb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290804"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713540"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 中的 Integration Services 新功能
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 本主題說明 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中已新增或更新的功能。
 
 > [!NOTE]

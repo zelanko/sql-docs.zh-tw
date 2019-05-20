@@ -1,5 +1,5 @@
 ---
-title: 步驟 2：將專案轉換為專案部署模型 | Microsoft Docs
+title: 步驟 2:將專案轉換為專案部署模型 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d2dae52f3b8729e919f9ad653c02bc1023d2ed8c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e03317e9d37387e6c2482aea3bdf102a0b063b03
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276877"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721191"
 ---
 # <a name="lesson-6-2-convert-the-project-to-the-project-deployment-model"></a>第 6-2 課：將專案轉換為專案部署模型
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在此工作中，您會使用 [Integration Services 專案轉換精靈] 將專案轉換為專案部署模型。  
   

@@ -22,14 +22,18 @@ ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 65dad92f0d005e24e6cc7f5a1846c5c29cbd7d1c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7b460d01adfdc4a2282311c16b7c7a9acddb6542
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289974"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724452"
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>連接至自訂工作中的資料來源
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   工作會利用連接管理員連接至外部資料來源，以擷取或儲存資料。 在設計階段，連接管理員代表邏輯連接，並描述伺服器名稱與任何驗證屬性等主要資訊。 在執行階段，工作會呼叫連接管理員的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> 方法，以建立連至資料來源的實體連接。  
   
  因為封裝可以包含許多工作，每個工作都可能有連至不同資料來源的連接，所以封裝會追蹤在 <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 集合中的所有連接管理員。 工作會使用其封裝中的集合，以尋找它們在驗證和執行期間將使用的連接管理員。 <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 集合是 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Validate%2A> 與 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法的第一個參數。  

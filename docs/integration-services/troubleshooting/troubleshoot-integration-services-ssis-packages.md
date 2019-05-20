@@ -11,14 +11,18 @@ ms.assetid: ce2c0b78-e1f1-409a-9f4c-f90027c70c07
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f20ed8400c78d82010f46c584b16b08ee633e2d7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 772bb2a362efbe61dc3bd1b03a3bb049a5822980
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271017"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713884"
 ---
 # <a name="troubleshoot-integration-services-ssis-packages"></a>疑難排解 Integration Services (SSIS) 封裝
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 ## <a name="in-this-section"></a>本節內容
 -   [套件開發的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)
 -   [疑難排解封裝連接的工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity.md)

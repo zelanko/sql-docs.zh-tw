@@ -13,14 +13,18 @@ ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 232837ed4d42fe7c61036bcb5e4b2a80ec688b64
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 09a47653441bf4ac0ac7491a80aa9a92baa6f27b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273302"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728545"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>選取 Oracle 資料表來擷取變更
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用此對話方塊來選取 CDC 執行個體中所包含的資料表。 選取的資料表會加入至新增執行個體精靈中 **[選取資料表和資料行]** 頁面的清單中。 您可以在此對話方塊中執行下列動作。  
   
  根據預設，此對話方塊的資料表清單中不包含任何資料表。 您可以選取核取方塊資料行頂端的核取方塊，以選取所有資料表或是搜尋特定資料表。  

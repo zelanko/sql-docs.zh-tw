@@ -17,14 +17,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 072cf951eabd5d7d0ae2211427a66e63900cfb72
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: 0e2bcd19b705aa3dd0afb229d523b9ceb3725fc3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319309"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726575"
 ---
 # <a name="power-query-source-preview"></a>Power Query 來源 (預覽)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 本文說明如何在 SQL Server Integration Services (SSIS) 資料流程中設定 Power Query 來源的屬性。 Power Query 是一種技術，可讓您使用 Excel/Power BI Desktop 連線到各種資料來源並轉換資料。 如需詳細資訊，請參閱 [Power Query - 概觀與學習](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d) \(機器翻譯\) 一文。 Power Query 所產生的指令碼可以複製並貼到 SSIS 資料流程中的 Power Query 來源並加以設定。
   

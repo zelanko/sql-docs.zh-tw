@@ -11,14 +11,18 @@ ms.assetid: 3dda28d6-10d8-4294-9b5e-a6048c07faf9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 037f5403ec6cb77fe934f58b43ee7701197ca88b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 34c282905f5314772a11318bf7c3eb60650e96fe
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58288904"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714963"
 ---
-# <a name="catalogexecutablestatistics"></a>catalog.executable_statistics
+# <a name="catalogexecutablestatistics"></a>catalog.executable_statistics 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   針對每個執行的可執行檔 (包括可執行檔的每個反覆運算)，顯示一個資料列。  

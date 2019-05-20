@@ -14,14 +14,18 @@ ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: edb9df4406312c8711c895489a09b647ebd126c9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b2ff22b3a5dfde43e4202062cb40737fb7d4c02e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275218"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714848"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   顯示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中封裝的執行執行個體。 以 [封裝執行工作] 執行的封裝會使用與父封裝的相同執行執行個體來執行。  

@@ -10,14 +10,18 @@ ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d17b7115fb0a748c16fc7093100d67f377610268
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 17dad1100e0a4dc9df770ef781f8294198247af9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221885"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723858"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 的 [匯入及匯出精靈] 連線到資料來源
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 本節的這項主題會示範如何使用 SQL Server 的 [匯入及匯出精靈] 連線到許多常用的資料來源。 您必須在精靈的 [選擇資料來源] 與 [選擇目的地] 頁面提供資料來源連線資訊。
 
 本節的這項主題僅說明如何使用精靈的 [選擇資料來源] 與 [選擇目的地] 頁面**連線到資料來源**。 如需其他資訊，請參閱[相關的工作及內容](#related)。

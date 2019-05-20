@@ -15,14 +15,18 @@ ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c39db8b0bc318b9bf3adb117e72e8f8af3f62c6b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b7802a28926b9e81763bacc85d2623100bb480f1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279082"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725228"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (邏輯 AND) (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   執行邏輯 AND 運算。 如果所有條件均為 TRUE，則運算式的評估結果為 TRUE。  
   
 ## <a name="syntax"></a>語法  

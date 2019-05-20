@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: c498f71be24d3f9e26aa1f6854dc048e0c9d6b89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fd30ccac5cfb88d2b9258268ecc6844b78ddb53
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698116"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721287"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>連線至 Azure 中的 SSIS 目錄 (SSISDB)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 尋找連線至 Azure SQL Database 伺服器上裝載之 SSIS 目錄 (SSISDB) 所需的連線資訊。 您需要下列項目來進行連線：
 - 完整伺服器名稱

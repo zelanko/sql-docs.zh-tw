@@ -10,14 +10,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.reviewer: ''
-ms.openlocfilehash: b64cddbe6c786e488c1ba9b9d289e9e48f786cf3
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: c605d2f0e42f34a8f1b4c7a01ea7ffce43d23f9e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221954"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723182"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>課程 1-6：新增及設定查閱轉換
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在設定「一般檔案」來源以從來源檔案擷取資料之後，您需定義取得 **CurrencyKey** 和 **DateKey** 值所需的「查閱」轉換。 查閱轉換是藉由聯結指定輸入資料行中的資料與參考資料集內的資料行來執行查閱。 參考資料集可以是現有的資料表或檢視、新資料表，或 SQL 陳述式的結果。 在本教學課程中，「查閱」轉換會使用 OLE DB 連線管理員，以連線到包含參考資料集之來源資料的資料庫。  
   

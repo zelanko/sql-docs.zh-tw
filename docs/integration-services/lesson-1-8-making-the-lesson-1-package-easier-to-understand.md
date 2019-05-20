@@ -11,14 +11,18 @@ ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2b145bff827dfa60d6d5d232af8fb26816ebd873
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f830393b516ac583a6c0ae72332bef8ac8177714
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283122"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722836"
 ---
 # <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>課程 1-8：為第 1 課套件加上註解並設定格式 
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 既然您已完成第 1 課套件的設定，現在或許是整理套件配置的好時機。 如果控制流程配置與資料流程配置中的形狀大小不同，或形狀沒有平均配置，就會更難以理解套件。  
   

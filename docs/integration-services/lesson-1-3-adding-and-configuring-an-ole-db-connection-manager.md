@@ -11,14 +11,18 @@ ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f52d5b011e2932ceeadc7f81a564dd52ad503917
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e55427c2249a93d2a97bbc13b7385dd56fac5d01
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274995"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723502"
 ---
 # <a name="lesson-1-3-add-and-configure-an-ole-db-connection-manager"></a>課程 1-3：新增及設定 OLE DB 連線管理員
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在新增「一般檔案」連線管理員來連線到資料來源之後，您需新增 OLE DB 連線管理員來連線到目的地。 OLE DB 連接管理員可讓封裝從任何 OLE DB 相容資料來源擷取資料或載入資料至該處。 使用 OLE DB 連線管理員時，您可以為連線指定伺服器、驗證方法及預設的資料庫。  
   
