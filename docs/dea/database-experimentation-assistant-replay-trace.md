@@ -114,7 +114,7 @@ SQL Server 是一個可設定狀態的關聯式資料庫管理系統。 若要�
 
 ### <a name="what-trace-events-does-dea-collect-during-replay"></a>在重新執行期間將 DEA 收集在哪些追蹤事件？
 
-DEA 擷取包含與效能相關資訊的追蹤事件。 擷取組態是 StartReplayCaptureTrace.sql 指令碼中。 這些事件是一般的 SQL Server 追蹤事件中所列[sp_trace_setevent & Amp;#40;transact-SQL&AMP;#41; 參考文件](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)。
+DEA 擷取包含與效能相關資訊的追蹤事件。 擷取組態是 StartReplayCaptureTrace.sql 指令碼中。 這些事件是一般的 SQL Server 追蹤事件中所列[sp_trace_setevent &#40;transact-SQL&#41; 參考文件](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)。
 
 ## <a name="troubleshoot-trace-replay"></a>疑難排解 重新執行追蹤
 
