@@ -56,7 +56,7 @@ ms.locfileid: "63265921"
   
 -   SQL Server Agent 服務必須在執行中。  
   
--   包括參數的報表。 本教學課程採用您使用 `Sales Orders` 建立基本資料表報表 &#40;SSRS 教學課程&#41; [建立基本資料表報表 &amp;#40;SSRS 教學課程&amp;#41;](create-a-basic-table-report-ssrs-tutorial.md)中的資料。  
+-   包括參數的報表。 本教學課程採用您使用 `Sales Orders` 建立基本資料表報表 &#40;SSRS 教學課程&#41; [建立基本資料表報表 &#40;SSRS 教學課程&#41;](create-a-basic-table-report-ssrs-tutorial.md)中的資料。  
   
 -   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 範例資料庫，它會將資料提供給範例報表。  
   
