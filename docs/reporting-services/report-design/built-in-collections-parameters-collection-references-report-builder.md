@@ -2,23 +2,23 @@
 title: 參數集合參考 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d88a76bcba0350b39fed6b4e41d3b5ae80b2738f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 137eb9b9cf7a5a64843e163ece3b4767dd8e1852
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290136"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581796"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>內建集合 - 參數集合參考 (報表產生器)
   報表參數是您可以從運算式參考的其中一個內建集合。 您可以在運算式中包含參數，以根據使用者所做的選擇來自訂報表資料及外觀。 可以針對提供 (*Fx*) 或 \<**運算式**> 選項的任何報表項目屬性或文字方塊屬性使用運算式。 您也可以用其他方法來使用運算式控制報表的內容及外觀。 如需詳細資訊，請參閱[運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)。  
   
- 在執行階段比較參數值與資料集欄位值時，所比較的兩個項目的資料類型必須相同。 報表參數可以是下列類型的其中一種：布林值、DateTime、整數、浮點數或文字，代表基礎資料類型字串 (String)。 如有必要，也可以將參數值的資料類型轉換成符合資料集值。 如需詳細資訊，請參閱 [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)。  
+ 在執行階段比較參數值與資料集欄位值時，所比較的兩個項目的資料類型必須相同。 報表參數可以是以下其中一個類型：布林、日期時間、整數、浮點數或文字 (代表基礎資料類型「字串」)。 如有必要，也可以將參數值的資料類型轉換成符合資料集值。 如需詳細資訊，請參閱 [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)。  
   
  若要在運算式中包含參數參考，您必須了解如何指定參數參考的正確語法，此語法會根據參數是單一值或多重值參數而改變。  
   

@@ -2,18 +2,18 @@
 title: Max 函式 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 61c4d6ff-6435-456a-9cbd-5113d2113e8a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 80cb2ab575d6fdb4d8909ea10bf19feb32c103fc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0fbab9fbc037d2266d86a0af5c1919ee333e596e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288966"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577441"
 ---
 # <a name="report-builder-functions---max-function"></a>報表產生器函式 - Max 函式
   傳回運算式指定的所有非 Null 數值的最大值 (在給定範圍的內容中)。  

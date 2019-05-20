@@ -2,7 +2,7 @@
 title: 建立、修改和刪除共用排程 | Microsoft Docs
 ms.date: 07/01/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - schedules [Reporting Services], modifying
 - shared schedules [Reporting Services], deleting
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4ecb639dd907367a033ef48e15c86828fc908a6b
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4ce401f3e2376c1bd5fec360a8a58a7adae60bc2
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578138"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571328"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   使用本主題可讓您了解如何建立、修改和刪除 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 共用排程。  若要管理原生模式的共用排程，請使用 Web 入口網站中的 [排程] 頁面或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的 [共用排程] 資料夾。 如果是 SharePoint 模式，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面。  

@@ -2,20 +2,20 @@
 title: 建立 RSExecRole | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f08ddfed806f1b6476599b0d83ef3d795633cb0e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8596cf62ddf4212023841db003ec7936a2cb70c7
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029690"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577902"
 ---
 # <a name="create-the-rsexecrole"></a>建立 RSExecRole
 

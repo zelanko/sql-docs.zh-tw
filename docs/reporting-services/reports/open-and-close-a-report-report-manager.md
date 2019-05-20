@@ -2,7 +2,7 @@
 title: 開啟及關閉報表 (報表管理員) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - closing reports
 - reports [Reporting Services], opening
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f40b4f2e377881cd6788ca3fa8629b5f0f52333f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a505b2ed548f0fe7d90559d6a89b2f1c112af91e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021842"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576379"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>開啟及關閉報表 (報表管理員)
   您可以使用報表管理員來檢視已經發行至報表伺服器的報表。 根據預設，所有報表都會以 HTML 開啟。 開啟報表之後，您可以將它匯出，以便以其他應用程式格式檢視此報表。 如果此報表包含互動式功能，或者它是包含互動式資料的報表產生器報表，您就可以按一下連結，以便檢視其他報表或資料。  
