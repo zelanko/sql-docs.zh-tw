@@ -1,5 +1,5 @@
 ---
-title: sys.database_query_store_options & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.database_query_store_options (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2019
 ms.prod: sql

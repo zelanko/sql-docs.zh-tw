@@ -17,14 +17,18 @@ ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 20461216a802bde79005d7539ce2d09cd032c771
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7b683bf0183b7443106a46abc6d22578a66b5a90
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290644"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728265"
 ---
 # <a name="ftp-connection-manager"></a>FTP 連接管理員
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   FTP 連接管理員可讓封裝連接到「檔案傳輸通訊協定 (FTP)」伺服器。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含的 FTP 工作使用此連線管理員。  
   
  當您將 FTP 連線管理員加入封裝時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立在執行階段可解析為 FTP 連接的連線管理員、設定連線管理員屬性，並將連線管理員加入封裝上的 **Connections** 集合。  

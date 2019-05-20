@@ -20,14 +20,18 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c6df83cd3a7609097a6e27bd92c59daf24458548
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4d6daa4efcd865502429dad0cc8edd498e8a94f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283055"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727556"
 ---
 # <a name="precedence-constraints"></a>優先順序條件約束
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   優先順序條件約束可在控制流程中，連結封裝中的可執行檔、容器和工作，並指定判斷可執行檔是否執行的條件。 可執行檔可以是「For 迴圈」容器、「Foreach 迴圈」容器、「時序」容器、工作或事件處理常式。 事件處理常式也可使用優先順序條件約束，以將其可執行檔連結至控制流程。  
   
  優先順序條件約束會連結兩個可執行檔：優先順序可執行檔和受條件約束的可執行檔。 優先順序可執行檔在條件約束可執行檔之前執行，且優先順序可執行檔的執行結果可以決定條件約束可執行檔是否執行。 下圖顯示了由優先順序條件約束連結的兩個可執行檔。  

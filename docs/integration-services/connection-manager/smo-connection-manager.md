@@ -17,14 +17,18 @@ ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bbbc9ace1d7b142f80f3b2cc5c5ede10284f472a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 03373dc9714d992c36ca29611013979d1c62ecf6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281272"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728122"
 ---
 # <a name="smo-connection-manager"></a>SMO 連線管理員
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SMO 連接管理員可讓封裝連接到 SQL Management Object (SMO) 伺服器。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的傳送工作會使用 SMO 連線管理員。 例如，傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的「傳送登入」工作便使用 SMO 連線管理員。  
   
  當您將 SMO 連線管理員加入封裝時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立在執行階段解析為 SMO 連接的連線管理員、設定連線管理員屬性，並將連線管理員加入封裝上的 **Connections** 集合。 連線管理員的 **ConnectionManagerType** 屬性會設為 **SMOServer**。  

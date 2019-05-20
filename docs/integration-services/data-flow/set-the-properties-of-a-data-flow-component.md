@@ -13,14 +13,18 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cc77716e8df17175c0951645eb1034b6ecb9e183
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e2dcaff5b7b8ad834eb12277c587b222b8f782d4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282662"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726377"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>設定資料流程元件的屬性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   若要設定資料流程元件的屬性 (包括來源、目的地和轉換)，請使用下列其中一個功能：  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的元件編輯器。 這些編輯器僅包括每個資料流程元件的自訂屬性。  
@@ -155,7 +159,7 @@ ms.locfileid: "58282662"
 |IsSorted|布林|指示是否要排序輸入中的資料。|  
 |[屬性]|String|輸入的名稱。|  
 |SourceLocale|Integer|輸入資料的地區設定識別碼 (LCID)。|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 執行個體時提供 SQL Server 登入。 這些值包括 [失敗元件]、[忽略失敗] 和 [重新導向資料列]。|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 。 這些值包括 [失敗元件]、[忽略失敗] 和 [重新導向資料列]。|  
   
  目的地和某些轉換不支援錯誤輸出，而且這些元件的 ErrorRowDisposition 和 TruncationRowDisposition 屬性是唯讀的。  
   

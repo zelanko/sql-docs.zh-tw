@@ -14,7 +14,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dfaba668e4f2328610656db6a61f01960814bff0
 ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/03/2018
 ms.locfileid: "52784420"
@@ -119,6 +119,6 @@ ms.locfileid: "52784420"
   
 -   [sp_add_proxy &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-proxy-transact-sql)  
   
--   [sp_grant_proxy_to_subsystem &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql)  
+-   [sp_grant_proxy_to_subsystem &#40;-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql)  
   
   

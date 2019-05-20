@@ -24,7 +24,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62501593"
 ---
-# <a name="query-store-catalog-views-transact-sql"></a>查詢存放區目錄檢視 & Amp;#40;transact-SQL&AMP;#41
+# <a name="query-store-catalog-views-transact-sql"></a>查詢存放區目錄檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   此章節包含下列目錄檢視。  

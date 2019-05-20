@@ -48,7 +48,7 @@ ms.locfileid: "62790677"
 ##  <a name="WhereBuJobsRun"></a> 設定執行備份作業的位置  
  在次要複本執行備份，以便從主要實際執行伺服器卸載備份工作負載，是一極大的好處。 不過，在次要複本上執行備份會讓決定是否應該執行備份作業的程序複雜許多。 若要解決這個問題，請依照以下方式設定執行備份作業的位置：  
   
-1.  設定可用性群組來指定您想要在哪些可用性複本執行備份。 如需詳細資訊，請參閱 *CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;* 或 *ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;* 的 [CREATE AVAILABILITY GROUP &amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/create-availability-group-transact-sql) 或 [ALTER AVAILABILITY GROUP &amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)狀態。  
+1.  設定可用性群組來指定您想要在哪些可用性複本執行備份。 如需詳細資訊，請參閱 *CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;* 或 *ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;* 的 [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql) 或 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)狀態。  
   
 2.  在裝載可用性複本的每個伺服器執行個體，而此可用性複本是執行備份的候選複本，為每個可用性資料庫建立已編寫指令碼的備份作業。 如需詳細資訊，請參閱[設定可用性複本的備份 &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md) 的＜後續操作：設定次要複本的備份之後＞一節。  
   

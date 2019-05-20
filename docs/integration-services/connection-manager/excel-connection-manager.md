@@ -18,14 +18,18 @@ ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67b3b3446cc6890a802e972e9c12a93b3e58c6b0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a089ea233f99294c1e4a38a643e93607e5c56d13
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282352"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728298"
 ---
 # <a name="excel-connection-manager"></a>Excel 連接管理員
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Excel 連線管理員可讓套件連接至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 活頁簿檔案。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 Excel 來源和 Excel 目的地使用 Excel 連線管理員。  
  
 > [!IMPORTANT]

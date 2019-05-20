@@ -2,20 +2,20 @@
 title: 刪除目錄項目 (Management Studio) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.deleteitems.f1
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fc1cdce9ed2e26874eaa19cff7ad9634880fd1db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b8576a1946368c7adc1a32aa66ce44e28603616a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792116"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573940"
 ---
 # <a name="delete-catalog-items-management-studio"></a>刪除目錄項目 (Management Studio)
   您可以使用這個頁面刪除共用排程和角色定義。  
@@ -45,6 +45,6 @@ ms.locfileid: "47792116"
 ## <a name="see-also"></a>另請參閱  
  [刪除項目 &#40;Management Studio&#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
  [Management Studio F1 說明中的報表伺服器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [建立、修改和刪除排程](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
+ [建立、修改和刪除共用排程](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
   
   

@@ -134,7 +134,7 @@ ms.locfileid: "63131533"
   
 -   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
--   [sp_add_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
+-   [sp_add_jobserver &#40;-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
   
 ##  <a name="SMOProcedure"></a> 使用 SQL Server 管理物件  
  **若要建立 SQL Server Agent 作業**  

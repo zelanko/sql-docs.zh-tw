@@ -1,5 +1,5 @@
 ---
-title: sp_filestream_force_garbage_collection & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_filestream_force_garbage_collection (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
 ms.prod: sql
@@ -21,7 +21,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c8f202dd4f383d1ed2186e589b275afc0049fb50
 ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59542208"

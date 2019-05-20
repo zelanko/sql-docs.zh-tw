@@ -14,14 +14,18 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 25d76f4ad37b5fb8631dfacb526576c1fd52d2bf
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 81739ff18b8030194b3cb2d2245abb5983fd2725
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270841"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729306"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services (SSIS) 伺服器與目錄
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中設計和測試封裝之後，可以將含有那些封裝的專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器為主控 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 資料庫之 **ssDEnoversion** 的執行個體。 資料庫會儲存封裝、專案、參數、權限、伺服器屬性與作業歷程記錄等物件。  

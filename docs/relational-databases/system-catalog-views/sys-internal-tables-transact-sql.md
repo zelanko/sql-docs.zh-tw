@@ -1,5 +1,5 @@
 ---
-title: sys.internal_tables & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.internal_tables (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2019
 ms.prod: sql
