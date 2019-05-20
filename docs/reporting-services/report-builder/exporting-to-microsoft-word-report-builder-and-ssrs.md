@@ -2,20 +2,20 @@
 title: 匯出至 Microsoft Word (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 12/06/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 description: Word 轉譯延伸模組會將分頁報表轉譯成  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 格式 (.docx)。 此格式為 Office Open XML。
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0ed7b5a6081171f7f7271573cd83f029ad672a34
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b02a4b2776e39d7130bc47a42050b0f7be9af4d3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296596"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581230"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>匯出至 Microsoft Word (報表產生器及 SSRS)
 
@@ -72,9 +72,9 @@ ms.locfileid: "56296596"
   
  發生這種情形的原因是，Word 轉譯器剖析分頁相關之欄位 (例如 **PageNumber** 和 **TotalPages** ) 的報表時，只處理簡單參考，但不處理函數呼叫。 在此例中，運算式呼叫 **ToString** 函數。 下列兩個運算式是對等的，當您在報表產生器或報表設計師中預覽報表，或在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站或 SharePoint 文件庫中轉譯發行的報表時，這兩個運算式都會正確轉譯。 不過，Word 轉譯器只會成功剖析第二個運算式，轉譯正確的頁碼。  
   
--   **複雜運算式：** 運算式為 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **複雜運算式：**  運算式為 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **具有文字往返的運算式：** 文字 **Average Sales** 和運算式 `=Avg(Fields!YTDPurchase.Value, "Sales)`，以及文字 **Page Number** 和運算式 `=Globals!PageNumber`  
+-   **具有文字往返的運算式：** 文字 **Average Sales**、運算式  `=Avg(Fields!YTDPurchase.Value, "Sales)`、文字 **Page Number**和運算式 `=Globals!PageNumber`  
   
  為避免這個問題，當您在頁尾和頁首中使用運算式時，請使用多個文字往返來代替一個複雜運算式。 下列兩個運算式是對等的。 第一個是複雜運算式，而第二個使用文字往返。 Word 轉譯器僅成功剖析第二個運算式。  
   

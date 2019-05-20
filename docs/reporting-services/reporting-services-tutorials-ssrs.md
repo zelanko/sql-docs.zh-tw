@@ -2,20 +2,20 @@
 title: Reporting Services 教學課程 (SSRS) | Microsoft Docs
 ms.date: 11/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [Reporting Services]
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2496d85fc0c6aaf3cbcea1abe2893e5435d970d8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9158caf6a1c1e39578bf49bfc3f99e3b37633baf
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293796"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570873"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Reporting Services 教學課程 (SSRS)
 
@@ -40,7 +40,7 @@ ms.locfileid: "56293796"
 ## <a name="see-also"></a>另請參閱  
 * [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases)  
 * [TechNet Wiki 上的 Reporting Services 範例](https://go.microsoft.com/fwlink/?LinkId=198283)  
-* [TechNet Wiki：SQL Server 2012 Samples](https://go.microsoft.com/fwlink/?linkID=220734) (SQL Server 2012 範例)  
+* [TechNet Wiki：SQL Server 2012 範例](https://go.microsoft.com/fwlink/?linkID=220734)  
  
   
   

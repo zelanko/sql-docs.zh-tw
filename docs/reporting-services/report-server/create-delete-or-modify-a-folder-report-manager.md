@@ -2,7 +2,7 @@
 title: 建立、刪除或修改資料夾 (報表管理員) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - folders [Reporting Services], deleting
 - folders [Reporting Services], modifying
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 548c66c7e62f5197e27a633ea4f8325c1466cdd8
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1a4f0f068cea9e36b6be2ac3081e6399644f1c0a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021203"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580531"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>建立、刪除或修改資料夾 (報表管理員)
   您可以建立資料夾來組織與管理發行至報表伺服器的項目。 建立資料夾可以協助使用者尋找他們感興趣的報表。 對於內容管理員而言，資料夾會提供套用權限的架構。 您可以針對特定資料夾建立角色指派，以便限制在開發中或不應該廣為散發之報表的存取權。  
@@ -31,7 +31,7 @@ ms.locfileid: "50021203"
   
 2.  在報表管理員中，選取主資料夾，然後按一下 [新增資料夾]。 或者若要在現有資料夾下建立資料夾，請在 [內容] 頁面中巡覽到該資料夾，然後按一下資料夾以開啟資料夾。 接著按一下 [新增資料夾]。  
   
-     [新增資料夾] 頁面隨即開啟。  
+      [新增資料夾] 頁面隨即開啟。  
   
 3.  輸入資料夾名稱。 資料夾名稱可以包含空格，但是不能包含用於 URL 編碼的保留字元：\;\? \: \@ \& \= \+ \, \$ \/ \* \< \> \|。 您無法一次輸入一連串的資料夾名稱來建立數個資料夾。  
   
