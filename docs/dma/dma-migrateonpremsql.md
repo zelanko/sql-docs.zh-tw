@@ -2,7 +2,7 @@
 title: 升級內部部署 SQL Server 到 SQL Server 或 SQL Server Azure Vm 上使用資料移轉小幫手 |Microsoft Docs
 description: 了解如何使用 Data Migration Assistant 將升級至較新版的 SQL Server 或 Azure Vm 上的 SQL Server 的內部部署 SQL Server
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 05/18/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
 author: HJToland3
-ms.author: rajpo
+ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 6d90a661c160fbbe473e6c30a8e45e9ea4f75056
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 672473c4e4cfaf5314f53ae7d3a351cb82a93e6d
+ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62706942"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875183"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>在內部部署 SQL Server 升級至 SQL Server 或 SQL Server Azure Vm 上使用 Data Migration Assistant
 
 Data Migration Assistant 中提供無縫式的評估，SQL Server 內部部署和更新版本的 SQL Server 的升級或移轉至 SQL Server 的 Azure Vm 或 Azure SQL Database。
 
-本文提供使用 Data Migration Assistant 較新版本的 SQL Server 或 Azure Vm 上的 SQL Server 升級 SQL Server 內部部署的逐步指示。   
+本文提供使用 Data Migration Assistant 更新版的 SQL Server 或 Azure Vm 上的 SQL Server 升級 SQL Server 內部部署的逐步指示。
 
 ## <a name="create-a-new-migration-project"></a>建立新的移轉專案
 
