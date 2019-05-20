@@ -14,14 +14,18 @@ ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3bb02a98330a7ad93e7784ae9ce6d08284585ff9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0128172fa800cde1dafb0a127a1463e3295ce06f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275945"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724995"
 ---
 # <a name="round-ssis-expression"></a>ROUND (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回已經進位到指定長度或有效位數的數值運算式。 length 參數必須評估為整數。  
   
 ## <a name="syntax"></a>語法  

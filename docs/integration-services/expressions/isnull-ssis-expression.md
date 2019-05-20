@@ -14,14 +14,18 @@ ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f7cdee630de0a3827dd2a9b2ad4a1353efb2ff2d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f57f66c531619ab81b9e7cd6f7b49324efd7f09f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279702"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725295"
 ---
 # <a name="isnull-ssis-expression"></a>ISNULL (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   依據運算式是否為 Null 來傳回布林結果。  
   
 ## <a name="syntax"></a>語法  

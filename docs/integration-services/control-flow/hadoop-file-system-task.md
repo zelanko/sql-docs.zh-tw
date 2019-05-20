@@ -13,14 +13,18 @@ ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 87dd03cb63da117f3d754cdc9692310e9633e70d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ffb3559a379a8d1f64c76072f262b89d41164533
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290734"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727627"
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop 檔案系統工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Hadoop 檔案系統工作可讓 SSIS 封裝在 Hadoop 叢集內進行檔案複製。  
   
  若要加入 Hadoop 檔案系統工作，請將其拖放至設計工具。 然後在工作上按兩下，或按一下滑鼠右鍵，再按 編輯，以開啟 Hadoop 檔案系統工作編輯器) 對話方塊。  

@@ -25,14 +25,18 @@ ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bcc954457c38f8c9bcd8e038ce3461bb94335eb0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eeddd2924722cbcf152c4c55c33c126a19a0679a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274896"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729405"
 ---
 # <a name="adding-connections-programmatically"></a>以程式設計方式加入連接
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 類別代表外部資料來源的實體連接。 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 類別會將連接的實作詳細資料與執行階段隔離。 這可讓執行階段使用一致且可預測的方式與每個連接管理員互動。 連接管理員包含一組所有連接共有的內建屬性，例如 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> 以及 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>。 不過，<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> 與 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> 屬性通常是唯一需要設定連接管理員的屬性。 與其他程式設計範例不同的是，連線類別會公開像是 **Open** 或 **Connect** 等方法，以實體建立連至資料來源的連線，執行階段引擎則會在執行時管理套件的所有連線。  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 類別是一種已經加入該封裝的連接管理員集合，而且可供在執行階段使用。 您可以使用集合的 <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> 方法，並提供指出連接管理員類型的字串，將更多的連接管理員加入集合。 <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> 方法會傳回加入封裝的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 執行個體。  

@@ -16,14 +16,18 @@ ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 867822310e1eaef3bd1d715d2f026609d72d0272
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 15ba5f56b5a23b77fae66d8e4032e91a67f6a1f5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282712"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719567"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>使用控制流程封裝組件在封裝之間重複使用控制流程
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   將常用的控制流程工作或容器儲存到獨立的組件檔案 (".dtsxp" 檔案)，並使用控制流程封裝組件在一或多個封裝中多次重複使用。 這個再使用性讓 SSIS 封裝的設計和維護變得更容易。  
   
 ## <a name="create-a-new-control-flow-package-part"></a>建立新的控制流程封裝組件  

@@ -15,14 +15,18 @@ ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b5ba4c8a12c194eda57379c1fa382e70142bf8b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4a4ade06f7275007c17834fbee3d69e2d5583d7f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280512"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729187"
 ---
 # <a name="folder-properties-dialog-box"></a>資料夾屬性對話方塊
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   資料夾會包含 **SSISDB** 目錄中的專案和環境。 每個資料夾都會定義套用到資料夾內容的權限。 如需 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 權限的詳細資訊，請參閱 [catalog.grant_permission &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)。  
   
 ## <a name="to-set-folder-description-and-permissions"></a>若要設定資料夾描述和權限  

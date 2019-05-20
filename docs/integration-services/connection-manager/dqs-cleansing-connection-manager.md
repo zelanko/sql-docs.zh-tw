@@ -11,14 +11,18 @@ ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 21a01d4280b48dcb78466927d1872191e3d3fb67
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ceddb40eee5f5eafcc134e4ed434c2dabadd6896
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276857"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728284"
 ---
 # <a name="dqs-cleansing-connection-manager"></a>DQS 清理連接管理員
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   DQS 清理連線管理員可讓封裝連接到 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] 伺服器。 DQS 清理轉換會使用 DQS 清理連接管理員。  
   
  如需 Data Quality Services 的詳細資訊，請參閱 [Data Quality Services 概念](../../data-quality-services/data-quality-services-concepts.md)。  

@@ -11,14 +11,18 @@ ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cc4ef846f0ceafae295d3a7fffecdf7c42c63223
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 13f26adb51da59357eb3ede282c7761516087da3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276887"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728798"
 ---
 # <a name="how-to-create-the-sql-server-change-database-instance"></a>如何建立 SQL Server 變更資料庫執行個體
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   這個程序描述如何使用 CDC 設計工具主控台來建立 CDC 執行個體。  
   
 ### <a name="to-create-cdc-instances"></a>若要建立 CDC 執行個體  

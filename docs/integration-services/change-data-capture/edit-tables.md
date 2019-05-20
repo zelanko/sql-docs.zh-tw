@@ -13,14 +13,18 @@ ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 35b2aac2558a78133830d305abd587c7603e9ec9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2eaf455da969e1b8a50a2c174aefeec3aef40666
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281692"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728893"
 ---
 # <a name="edit-tables"></a>編輯資料表
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 **[資料表]** 索引標籤，以變更您從 Oracle 來源資料庫選取的資料表和資料行。 此索引標籤具有以下元素：  
   
  **資料表清單**  

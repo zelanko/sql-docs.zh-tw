@@ -15,14 +15,18 @@ ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4d10f76b319ac4190b80c394a2f77d8035641339
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2ba986e4aeacc122e613a804893dbf755a8df481
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279062"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724975"
 ---
 # <a name="sign-ssis-expression"></a>SIGN (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回數值運算式的正 (+1)、負 (-1) 或零 (0) 符號。  
   
 ## <a name="syntax"></a>語法  

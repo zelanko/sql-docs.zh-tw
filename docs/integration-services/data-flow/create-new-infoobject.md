@@ -11,14 +11,18 @@ ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3e5d0ac61e65618527d5da8c7a8bcf2b5808b143
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9d08b6058a6ef034a197cb259cc7e4d503e69ed8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290764"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727036"
 ---
 # <a name="create-new-infoobject"></a>建立新的 InfoObject
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 **[建立新的 InfoObject]** 對話方塊可以在 SAP Netweaver BW 系統中建立新的 InfoObject。  
   
  您可以從 **[SAP BW 目的地編輯器]** 的 **[連接管理員]** 頁面開啟 **[建立 InfoObject]** 對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  

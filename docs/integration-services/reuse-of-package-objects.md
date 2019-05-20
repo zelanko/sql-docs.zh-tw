@@ -17,14 +17,18 @@ ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cd98db30045ad2c6658d6d7d2df0b98f1abed192
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6844adf38e6139a050cf1f97200323704f8a8ff2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272361"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719339"
 ---
 # <a name="reuse-of-package-objects"></a>重複使用封裝物件
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   您要重複使用的常用封裝功能。 例如，如果建立了一組工作，您可能想要以群組方式重複使用這些項目，您也可能想重複使用單一項目，例如您在不同的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案中建立的連接管理員。  
   
 ## <a name="copy-and-paste"></a>複製與貼上  

@@ -13,14 +13,18 @@ ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3cb979449214daa1cf9d4d03a01cd53f72eabef0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 523fb8a446e6985efe3e632a2e1c2b9804b76f49
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276927"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729236"
 ---
 # <a name="browse-all-principals-dialog-box"></a>瀏覽所有主體對話方塊
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 [瀏覽所有主體] 對話方塊選取資料庫主體，以變更主體在所選專案或所選資料夾中包含之所有專案上的權限。  
   
  **您想要做什麼事？**  

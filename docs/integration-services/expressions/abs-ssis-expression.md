@@ -14,14 +14,18 @@ ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8fd89842bc2d3900b0fc36e5996c6d8c38b14f94
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 200c56054b3209f6f7f99dab657a8db73ad3f989
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279740"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725646"
 ---
 # <a name="abs-ssis-expression"></a>ABS (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回數值運算式的絕對正數值。  
   
 ## <a name="syntax"></a>語法  

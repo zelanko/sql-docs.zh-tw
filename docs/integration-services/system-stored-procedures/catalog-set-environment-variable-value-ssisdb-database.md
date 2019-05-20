@@ -11,14 +11,18 @@ ms.assetid: 1d493dad-9d9c-4f0a-87e2-20a2d4a35f99
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 352577a69ba10f7eb6e2ef6e5b4e5900bf0629f6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8140c8eaa6c8fb317265b470ccbd3712f3b2aa41
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274114"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715903"
 ---
 # <a name="catalogsetenvironmentvariablevalue-ssisdb-database"></a>catalog.set_environment_variable_value (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中環境變數的值。  

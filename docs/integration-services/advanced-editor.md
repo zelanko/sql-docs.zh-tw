@@ -17,14 +17,18 @@ ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5f5fd00c43d0b7279e000d3640b0c5d0aca3544a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: da17c68fa5195e836a9471479fdfe9e2ce70a0c4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276504"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729416"
 ---
 # <a name="advanced-editor"></a>進階編輯器
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 **[進階編輯器]** 對話方塊設定所選取之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件的屬性。  
   
  具有可設定屬性的大多數 **物件，都可以使用** [進階編輯器] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 。 針對未公開自訂使用者介面的物件，這是唯一可用的編輯器。  

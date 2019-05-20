@@ -17,14 +17,18 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2512be2c3fcac33c3bb87700f8925a0f4743a8a4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dfe740bfa0ec25d577565f310ebeb3ea5e5d9274
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275094"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727759"
 ---
 # <a name="data-profiling-task"></a>資料分析工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   資料分析工作會計算各種設定檔，協助您熟悉資料來源並在資料中識別必須修復的問題。  
   
  您可以使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中的資料分析工作，分析儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的資料並識別資料品質的潛在問題。  

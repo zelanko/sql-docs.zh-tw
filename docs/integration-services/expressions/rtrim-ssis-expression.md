@@ -14,14 +14,18 @@ ms.assetid: 529bd43e-3f8a-4682-a33e-569176aa7fc4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b7c127869ac19046ebd4b06aae051292636887c3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 94ce6e144df4bbc5b052b0b5ac895c0772030d31
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289464"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724976"
 ---
 # <a name="rtrim-ssis-expression"></a>RTRIM (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回移除尾端空白之後的字元運算式。  
   
 > [!NOTE]  

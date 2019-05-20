@@ -14,14 +14,18 @@ ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c5d887698263638a96d664edc549545f21a1a7c6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4182a358c422e3c9a11f76cb824f5386b88b350f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279242"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725134"
 ---
 # <a name="-multiply-ssis-expression"></a>* (乘) (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   將兩個數值運算式相乘。  
   
 ## <a name="syntax"></a>語法  

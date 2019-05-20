@@ -14,14 +14,18 @@ ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d3e5cc9790eea98dbad42daa9e117e631aa842ad
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f7e25feaf6e39ec586afe55c5a99f448573fa61f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280212"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725556"
 ---
 # <a name="codepoint-ssis-expression"></a>CODEPOINT (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回字元運算式最左邊字元的 Unicode 字碼指標。  
   
 ## <a name="syntax"></a>語法  

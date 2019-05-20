@@ -14,14 +14,18 @@ ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c69ce4ea1890048af41ccd081ea9d2204a6ac637
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b0b9c9c7ab5ed0067d86b3beaa69461ab6e90672
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275114"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725569"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回大於或等於數值運算式的最小整數。  
   
 ## <a name="syntax"></a>語法  

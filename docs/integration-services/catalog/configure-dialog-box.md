@@ -15,14 +15,18 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4df9d8299d7c423dc0fe96fb41222cc041a01146
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dbf1fba077d693b45cd20c0e9f683cda64bc03dd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283152"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729216"
 ---
 # <a name="configure-dialog-box"></a>設定對話方塊
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 **[設定]** 對話方塊來針對封裝和專案設定參數、連接管理員及環境的參考。  
   
  **您想要做什麼事？**  

@@ -21,14 +21,18 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b1a7e2f0320790959df4f29bfd586f70acec9de7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3d325033d1e315ce7b9175f812ae992316fa2f44
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271051"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726796"
 ---
 # <a name="flat-file-source"></a>一般檔案來源
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「一般檔案」來源會從文字檔讀取資料。 文字檔可以是使用分隔符號、固定寬度或混合的格式。  
   
 -   分隔符號格式會使用資料行和資料列分隔符號，來定義資料行和資料列。  

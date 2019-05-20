@@ -11,14 +11,18 @@ ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e799ce450bfca9301218fe1b2c29aaf9a49562d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d2342216a550b285454417be36da9e7f15b661af
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270785"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725962"
 ---
 # <a name="map-columns-to-composite-domains"></a>將資料行對應到複合定義域
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   複合定義域是由兩個以上的單一定義域所組成。 您可以將多個資料行對應到定義域，也可將具有分隔值的單一資料行對應到定義域。  
   
  當您有多個資料行時，資料行必須個別對應到複合定義域中的每一個單一定義域，以將複合定義域規則套用於資料清理。 您將在 Data Quality Client 中選取複合定義域內所容納的單一定義域。 如需相關資訊，請參閱 [建立複合定義域](../../../data-quality-services/create-a-composite-domain.md)。  

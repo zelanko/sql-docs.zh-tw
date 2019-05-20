@@ -15,14 +15,18 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6a340ece64bc69b012919bb57afd1b80690f3a59
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6301066549a8008512bef934f9d887349a6b765b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273053"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727766"
 ---
 # <a name="data-profiling-task-and-viewer"></a>資料分析工作和檢視器
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「資料分析」工作提供擷取、轉換和載入資料之處理內部的資料分析功能。 您可以使用「資料分析」工作來獲得下列好處：  
   
 -   更有效率地分析來源資料  

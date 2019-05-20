@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac5b1039e6424a66842fcd156fe3475d14826694
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 6ddb6a3b343e89f5f844e54788ce88658a1a76e6
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53329028"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65820740"
 ---
 # <a name="search-text-with-regular-expressions"></a>使用規則運算式搜尋文字
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "53329028"
   
 |運算式|語法|Description|  
 |----------------|------------|-----------------|  
-|任何字元|執行個體時提供 SQL Server 登入。|符合任何單一字元，分行符號除外。|  
+|任何字元|。|符合任何單一字元，分行符號除外。|  
 |零個或多個|*|符合零或多個前導運算式出現項目，會產生所有可能的相符項目。|  
 |一個或多個|+|符合至少一個前導運算式出現項目。|  
 |行首|^|將相符字串固定在行首。|  

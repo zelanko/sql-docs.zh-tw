@@ -16,14 +16,18 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0518701a8f776fbe625fa77d35bfcc4f961973b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8a0bef11a16b939c4d169a3b2ee967d6b374f2eb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289834"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726616"
 ---
 # <a name="odbc-source"></a>ODBC 來源
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ODBC 來源會使用資料庫資料表、檢視或 SQL 陳述式，從 ODBC 支援的資料庫中擷取資料。  
   
  ODBC 來源有下列資料存取模式可供擷取資料：  

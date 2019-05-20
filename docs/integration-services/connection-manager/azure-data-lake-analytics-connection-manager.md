@@ -15,14 +15,18 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: 3d544999b83645e40b7579d7c5e049cff2d36439
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 441c5d157be083baff6b3ae1810bc2da932f188e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782060"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728377"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Azure Data Lake Analytics 連線管理員
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SQL Server Integration Services (SSIS) 套件可使用 Azure Data Lake Analytics 連線管理員，連線至具有下列兩種驗證類型其中之一的 Data Lake Analytics 帳戶：
 -   Azure Active Directory (Azure AD) 使用者身分識別

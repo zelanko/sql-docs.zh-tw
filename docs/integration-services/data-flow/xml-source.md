@@ -20,14 +20,18 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 50775777118d9f276e744f2c8fd8aff06bf0f0fe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9e6c504b96e181a0362cf7d20daa95017d2140fa
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290624"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725707"
 ---
 # <a name="xml-source"></a>XML 來源
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   XML 來源會讀取 XML 資料檔案，並將資料填入來源輸出中的資料行。  
   
  XML 檔案中的資料經常會包括階層式關聯性。 例如，XML 資料檔案可代表目錄以及目錄中的項目。 在資料能夠進入資料程序之前，必須先決定 XML 資料檔案中各元素之間的關聯性，並且為檔案中各元素產生輸出。  

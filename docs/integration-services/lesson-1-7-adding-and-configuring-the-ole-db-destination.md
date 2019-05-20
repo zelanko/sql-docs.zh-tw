@@ -11,14 +11,18 @@ ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47ba9be2a6ff8a03f40cc6253b0dbd0674e1ec48
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 620314ec11154737dc6d35bcf1d3e2587aaab2a1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281822"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722991"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>課程 1-7：新增及設定 OLE DB 目的地
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 您的套件現在可以從一般檔案來源擷取資料，再將該資料轉換成與目的地相容的格式。 下一個工作是要將已轉換的資料載入到目的地。 為了載入資料，您需將 OLE DB 目的地新增到資料流程。 OLE DB 目的地可以使用資料庫資料表、檢視或 SQL 命令，將資料載入到各種 OLE DB 相容的資料庫中。  
   

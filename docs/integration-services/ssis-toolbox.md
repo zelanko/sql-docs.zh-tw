@@ -15,14 +15,18 @@ ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f1ae0a9f644234a7e887758cf56ebcbc89593ee4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: db042dd5722b2b1bc034364878ebf3cfb550e27c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289634"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717285"
 ---
 # <a name="ssis-toolbox"></a>SSIS 工具箱
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   所有自動安裝在本機電腦上的元件，都會列在 **SSIS 工具箱**中。 當您安裝其他元件時，在此工具箱內按一下滑鼠右鍵，然後按一下 [重新整理工具箱] 即可加入元件。  
  
  當您建立新的 SSIS 專案，或開啟現有的專案時，**SSIS 工具箱** 會自動開啟。 您也可以按一下位於套件設計介面右上角的工具箱按鈕開啟此工具箱，或是按一下 [檢視]-> [其他視窗]-> [SSIS 工具箱] 加以開啟。

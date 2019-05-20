@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3fe8e30ec548703a8210680bca10f75304cbc3c8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 77125f88ed8d378a0cc2dc60ae47db641a681a95
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282602"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720485"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 從 Excel 匯入資料，或將資料匯出至 Excel
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 本文說明您必須提供的連線資訊，以及必須使用 SQL Server Integration Services (SSIS) 設定以從 Excel 匯入資料，或將資料匯出至 Excel 的設定。
 

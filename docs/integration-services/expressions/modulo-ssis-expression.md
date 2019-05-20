@@ -15,14 +15,18 @@ ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 855e96dbc95b7b6b76fce213524705b289bce42b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1fada6d5b7d8599b1bdfbc67d47c2ac6c1553686
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277537"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725181"
 ---
 # <a name="modulo-ssis-expression"></a>(模數) (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   提供第一個數值運算式除以第二個數值運算式之後的整數餘數。  
   
 ## <a name="syntax"></a>語法  

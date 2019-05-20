@@ -15,14 +15,18 @@ ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5e8f03d8978056ecd0faefd247163d2806dc7988
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d6a8b8ce43caad05f56ac780a8c08997a217e288
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290484"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727782"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>資料分析工作編輯器 (一般頁面)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   您可以使用 [資料分析工作編輯器] 的 [一般] 頁面來設定下列選項：  
   
 -   指定設定檔輸出的目的地。  
@@ -53,8 +57,8 @@ ms.locfileid: "58290484"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**FileConnection**|將設定檔輸出儲存至檔案連線管理員中指定之位置的檔案。<br /><br /> 注意：您可以在 [目的地] 選項中指定要使用的檔案連線管理員。|  
-|**變數**|將設定檔輸出儲存至封裝變數。<br /><br /> 注意：您可以在 [目的地] 選項中指定要使用的封裝變數。|  
+|**FileConnection**|將設定檔輸出儲存至檔案連線管理員中指定之位置的檔案。<br /><br /> 注意:您可以在 [目的地] 選項中指定要使用的檔案連線管理員。|  
+|**變數**|將設定檔輸出儲存至封裝變數。<br /><br /> 注意:您可以在 [目的地] 選項中指定要使用的封裝變數。|  
   
  **目的地**  
  指定哪一個檔案連線管理員或封裝變數包含資料設定檔輸出：  

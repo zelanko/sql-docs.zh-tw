@@ -13,14 +13,18 @@ ms.assetid: 94a57ff1-f77f-4c04-8bf5-cdab691d3421
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 76135d7b32f0d75bb23abb065d133c467dc51e5a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d8ba67f262a735efbb8419a43cadd213e1845693
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280695"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728867"
 ---
-# <a name="finish"></a>[完成]
+# <a name="finish"></a>[完成] 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[完成]** 頁面會彙總此精靈程序。 按一下 **[完成]** 關閉精靈，並產生您在建立 CDC 執行個體精靈中所定義的所有資料表。  
   
 ## <a name="see-also"></a>另請參閱  

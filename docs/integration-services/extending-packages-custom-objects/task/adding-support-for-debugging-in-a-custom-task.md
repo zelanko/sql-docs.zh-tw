@@ -22,14 +22,18 @@ ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eea4ee60abf1f3bda30a464f506c5ffed23f4091
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: abb30ee26f5063c4a119b13c6891b53518d63b9e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282382"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724486"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>新增自訂工作中的偵錯支援
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段引擎允許在執行期間，使用中斷點暫停封裝、工作和其他類型的容器。 使用中斷點可讓您檢閱和修正妨礙應用程式或工作正確執行的錯誤。 中斷點架構可讓用戶端在定義的執行點暫停工作處理，以評估封裝中物件的執行階段值。  
   
  自訂工作開發人員可以使用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 介面及其父介面 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>，以利用此架構建立自訂中斷點目標。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 介面會定義執行階段引擎與工作之間的互動，以建立和管理自訂中斷點位置或目標。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 介面提供執行階段引擎呼叫的方法與屬性，通知工作暫停或是繼續其執行。  

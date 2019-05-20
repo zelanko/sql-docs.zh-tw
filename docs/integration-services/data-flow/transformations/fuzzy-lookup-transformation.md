@@ -34,14 +34,18 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1424df38f6ff0cc091e0f71a316a60e1388d7a33
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1c87b0167c4810c36e6d9579a501aff2a2954d25
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273602"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726088"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查閱轉換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「模糊查閱」轉換會執行資料清除工作，例如標準化資料、更正資料及提供遺漏值。  
   
 > [!NOTE]  

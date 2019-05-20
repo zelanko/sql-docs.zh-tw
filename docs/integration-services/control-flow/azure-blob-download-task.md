@@ -14,14 +14,18 @@ ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9a1a8c8c23519ca6f0ceb4ab1d2a3e587f7a86f8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dfde0bdb50c5f8fbb81a5eb7d9b88067999f1de4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283162"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728040"
 ---
 # <a name="azure-blob-download-task"></a>Azure Blob 下載工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Azure Blob 下載工作可讓 SSIS 封裝能從 Azure Blob 儲存體下載檔案。
 
 若要加入 **Azure Blob 下載工作**，請將其拖放至 SSIS 設計工具，然後按兩下或按一下滑鼠右鍵，再按一下 [編輯]，即可看到以下 [Azure Blob 下載工作編輯器] 對話方塊。  

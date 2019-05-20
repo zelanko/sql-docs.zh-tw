@@ -18,14 +18,18 @@ ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c8874015d91d377a46688f042599a8f2f98d1dc2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 767e94fe1a87973331ccae234bc85270a5cee800
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280942"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728141"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 連接管理員
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ODBC 連接管理員可使用「開放式資料庫連接 (ODBC)」規格，讓封裝連接到各種資料庫管理系統。  
   
  當您將 ODBC 連接加入封裝並設定連線管理員屬性時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立連線管理員，並將該連線管理員加入到封裝的 **Connections** 集合。 在執行階段，連接管理員會解析為實體 ODBC 連接。  

@@ -15,14 +15,18 @@ ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b7494eb9879c8ceb5e80e28b071d4ae6817bf75
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 251f3dbb12ac77bfd8a14d50bc10cb692947fd73
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283112"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726224"
 ---
 # <a name="convert-data-type-by-using-data-conversion-transformation"></a>使用資料轉換轉換資料類型
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   若要加入及設定「資料轉換」，封裝必須已包含至少一個「資料流程」工作及一個來源。  
   
 ### <a name="to-convert-data-to-a-different-data-type"></a>轉換資料至不同的資料類型  
