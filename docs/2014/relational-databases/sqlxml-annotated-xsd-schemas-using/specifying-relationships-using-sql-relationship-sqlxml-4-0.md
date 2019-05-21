@@ -76,9 +76,9 @@ ms.locfileid: "62717905"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. 在元素上指定 sql:relationship 註解  
- 下列的註解式的 XSD 結構描述包括**\<客戶 >** 並**\<順序 >** 項目。 **\<順序 >** 項目是子元素**\<客戶 >** 項目。  
+ 下列的註解式的 XSD 結構描述包括 **\<客戶 >** 並 **\<順序 >** 項目。 **\<順序 >** 項目是子元素 **\<客戶 >** 項目。  
   
- 在結構描述中，`sql:relationship`上指定註釋**\<順序 >** 子項目。 在 定義關聯性本身 **\<xsd: appinfo >** 項目。  
+ 在結構描述中，`sql:relationship`上指定註釋 **\<順序 >** 子項目。 在 定義關聯性本身 **\<xsd: appinfo >** 項目。  
   
  **\<關聯性 >** 元素 Sales.SalesOrderHeader 資料表中 CustomerID 識別為參考 Sales.Customer 資料表中的 CustomerID 主要索引鍵的外部索引鍵。 因此，客戶的訂單顯示為子項目， **\<客戶 >** 項目。  
   
@@ -196,11 +196,11 @@ ms.locfileid: "62717905"
 ...  
 ```  
   
- 針對 Sales.SalesOrderHeader 資料表中每筆訂單，XML 文件有一個**\<順序 >** 項目。 而且每個**\<順序 >** 項目有一份**\<產品 >** 子項目，一個用於每個要求在順序中的產品。  
+ 針對 Sales.SalesOrderHeader 資料表中每筆訂單，XML 文件有一個 **\<順序 >** 項目。 而且每個 **\<順序 >** 項目有一份 **\<產品 >** 子項目，一個用於每個要求在順序中的產品。  
   
  若要指定產生此階層的 XSD 結構描述，您必須指定兩個關聯性：OrderOD 和 ODProduct。 OrderOD 關聯性會在 Sales.SalesOrderHeader 和 Sales.SalesOrderDetail 資料表之間指定父子式關聯性。 ODProduct 關聯性會在 Sales.SalesOrderDetail 和 Production.Product 資料表之間指定關聯性。  
   
- 在下列結構描述中，`msdata:relationship`上的註釋**\<產品 >** 項目會指定兩個值：OrderOD 和 ODProduct。 指定這些值的順序很重要。  
+ 在下列結構描述中，`msdata:relationship`上的註釋 **\<產品 >** 項目會指定兩個值：OrderOD 和 ODProduct。 指定這些值的順序很重要。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -238,7 +238,7 @@ ms.locfileid: "62717905"
 </xsd:schema>  
 ```  
   
- 您可以指定匿名關聯性，而非指定具名關聯性。 在此案例中的整個內容**\<註釋 >**... **\</annotation >**，其中描述兩個關聯性時，顯示為的子元素**\<產品 >**。  
+ 您可以指定匿名關聯性，而非指定具名關聯性。 在此案例中的整個內容 **\<註釋 >** ... **\</annotation >**，其中描述兩個關聯性時，顯示為的子元素**\<產品 >**。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
