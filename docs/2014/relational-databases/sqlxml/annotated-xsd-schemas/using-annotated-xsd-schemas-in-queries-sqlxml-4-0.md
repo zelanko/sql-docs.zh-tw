@@ -31,7 +31,7 @@ ms.locfileid: "63131124"
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>在查詢中使用註解式 XSD 結構描述 (SQLXML 4.0)
   您可以針對 XSD 結構描述指定範本中的 XPath 查詢，藉以針對註解式結構描述指定查詢來擷取資料庫中的資料。  
   
-  **\<Sql:xpath-查詢 >** 元素可讓您指定 XPath 查詢針對註解式結構描述所定義的 XML 檢視。 針對所要執行的 XPath 查詢的註解式結構描述由使用`mapping-schema`的屬性 **\<sql:xpath-查詢 >** 項目。  
+ **\<Sql:xpath-查詢 >** 元素可讓您指定 XPath 查詢針對註解式結構描述所定義的 XML 檢視。 針對所要執行的 XPath 查詢的註解式結構描述由使用`mapping-schema`的屬性 **\<sql:xpath-查詢 >** 項目。  
   
  範本是包含一或多個查詢的有效 XML 文件。 FOR XML 和 XPath 查詢會傳回文件片段。 範本對於文件片段就像是容器一樣；因此，範本會提供一種方式來指定單一的上層元素。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "63131124"
   
  除了指定`mapping-schema`屬性 **\<sql:xpath-查詢 >** 項目在範本中 （當 XPath 查詢），或上 **\<updg:sync >** 在 updategram 中的項目，您可以執行下列作業：  
   
--   指定`mapping-schema`屬性**\<根 >** 範本中的項目 （全域宣告）。 接著，這個對應結構描述會變成沒有明確 `mapping-schema` 註解之所有 XPath 和 Updategram 節點使用的預設結構描述。  
+-   指定`mapping-schema`屬性 **\<根 >** 範本中的項目 （全域宣告）。 接著，這個對應結構描述會變成沒有明確 `mapping-schema` 註解之所有 XPath 和 Updategram 節點使用的預設結構描述。  
   
 -   使用 ADO `mapping schema` 物件指定 `Command` 屬性。  
   

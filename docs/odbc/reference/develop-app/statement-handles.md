@@ -36,6 +36,6 @@ A*陳述式*最容易想像成 SQL 陳述式，例如**選取\*從員工**。 �
   
 -   目前的設定，每個陳述式屬性  
   
- 陳述式控制代碼可用於大部分的 ODBC 函式。 值得注意的是，它們用在函式來繫結參數和結果集資料行 (**SQLBindParameter**並**SQLBindCol**)、 準備和執行陳述式 (**SQLPrepare****SQLExecute**，並**SQLExecDirect**)，擷取中繼資料 (**SQLColAttribute**並**SQLDescribeCol**)，擷取結果 (**SQLFetch**)，並擷取診斷 (**SQLGetDiagField**並**SQLGetDiagRec**)。 它們也會使用目錄函式中 (**SQLColumns**， **SQLTables**等等) 和一些其他功能。  
+ 陳述式控制代碼可用於大部分的 ODBC 函式。 值得注意的是，它們用在函式來繫結參數和結果集資料行 (**SQLBindParameter**並**SQLBindCol**)、 準備和執行陳述式 (**SQLPrepare** **SQLExecute**，並**SQLExecDirect**)，擷取中繼資料 (**SQLColAttribute**並**SQLDescribeCol**)，擷取結果 (**SQLFetch**)，並擷取診斷 (**SQLGetDiagField**並**SQLGetDiagRec**)。 它們也會使用目錄函式中 (**SQLColumns**， **SQLTables**等等) 和一些其他功能。  
   
  陳述式控制代碼被配置**SQLAllocHandle**和與釋放**SQLFreeHandle**。

@@ -84,7 +84,7 @@ ms.locfileid: "63152438"
 
 ![視覺效果時，橫條圖的軸](../dma/media/VisualizationsAxis.png)
 
-當您第一次來篩選特定的資料庫，然後向下鑽研至特定分類問題時，此檢視會變得更強大。 在下列範例中，HR 資料庫執行個體已選取**SQL01**若要檢視的所有物件，使移轉 （重大變更）。
+當您第一次來篩選特定的資料庫，然後向下鑽研至特定分類問題時，此檢視會變得更強大。 在下列範例中，HR 資料庫執行個體已選取 **SQL01** 若要檢視的所有物件，使移轉 （重大變更）。
 
 ![HR 資料庫的重大變更](../dma/media/BreakingChanges.png)
 
@@ -104,7 +104,7 @@ ms.locfileid: "63152438"
 
 您可以使用此報告來反白顯示可用的目標 SQL Server 版本中的資料庫的新功能。
 
-當您在漏斗圖中選取一項功能時，在下方的資料會反白顯示哪些物件會受此功能。 在下列範例中， **Stretch database，以節省儲存空間**選取功能，且資料表會列出可能會受益於這項功能。
+當您在漏斗圖中選取一項功能時，在下方的資料會反白顯示哪些物件會受此功能。 在下列範例中， **Stretch database，以節省儲存空間** 選取功能，且資料表會列出可能會受益於這項功能。
 
 ![Stretch Database 的功能建議](../dma/media/FeatureRecommend_StretchDatabase.png)
 
@@ -120,7 +120,7 @@ ms.locfileid: "63152438"
 
 使用此報告來反白顯示*執行個體層級的功能*，不支援的 Azure SQL Database V12。
 
-當您在漏斗圖中選取一項功能時，在下方的資料會列出的執行個體和資料庫不支援的功能。 在下列範例中，已選取這項功能：**Alwayson 可用性群組組態不支援 Azure SQL Database 中**。  
+當您在漏斗圖中選取一項功能時，在下方的資料會列出的執行個體和資料庫不支援的功能。 在下列範例中，已選取這項功能：**Alwayson 可用性群組組態不支援 Azure SQL Database 中** 。  
 
 ![Alwayson 可用性群組功能](../dma/media/Feature_AlwaysOnAvailability.png)
 
