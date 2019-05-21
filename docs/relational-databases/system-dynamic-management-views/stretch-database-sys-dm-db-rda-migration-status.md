@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_rda_migration_status dynamic management view
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 3027978ca57b5ea94c69dc2410b0d25d73ce3823
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 257d83e522b398cce8358c1e30f4966dd951739e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740976"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945460"
 ---
 # <a name="stretch-database---sysdmdbrdamigrationstatus"></a>Stretch Database-sys.dm_db_rda_migration_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

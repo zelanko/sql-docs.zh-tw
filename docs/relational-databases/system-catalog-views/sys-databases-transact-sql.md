@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26be52ca8c8b1b004038923a9a7fe835eba52216
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 01e767e1b49c0b901809c2699ce5c6fa94168673
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65560136"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949110"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -117,7 +117,7 @@ ms.locfileid: "65560136"
 |**is_temporal_retention_enabled**|**bit**|指出是否已啟用時態保留原則的清除工作。<br /> **適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|目錄定序設定：<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|目錄定序設定：<br />COLLATE<br />SQL_Latin_1_General_CP1_CI_AS<br /> **適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on is on</br>0 = is_result_set_caching_on is off</br>**適用於**：Azure SQL 資料倉儲 Gen2
+|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on is on</br>0 = is_result_set_caching_on is off</br>**適用於**：Azure SQL 資料倉儲 Gen2。 雖然此功能正推出到所有區域，請檢查部署至您的執行個體和最新版本[Azure SQL DW 版本資訊](/azure/sql-data-warehouse/release-notes-10-0-10106-0)功能可用性。|
   
 ## <a name="permissions"></a>Permissions  
  如果呼叫端`sys.databases`不是資料庫的擁有者，而且資料庫不是`master`或`tempdb`，請參閱對應的資料列所需的最低權限會`ALTER ANY DATABASE`或`VIEW ANY DATABASE`伺服器層級權限或`CREATE DATABASE`中的權限`master`資料庫。 呼叫端連接的資料庫可以永遠會被視為在`sys.databases`。  

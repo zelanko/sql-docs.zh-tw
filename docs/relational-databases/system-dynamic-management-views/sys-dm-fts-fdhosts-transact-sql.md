@@ -18,16 +18,16 @@ helpviewer_keywords:
 - sys.dm_fts_fdhosts dynamic management view
 - troubleshooting [SQL Server], full-text search
 ms.assetid: d42a6334-4362-4361-83da-f8324fe55ec7
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: faa79f48a4f3b8ac70984c3b02c8863d7d37e8ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4b986e726bb3e30847abd034337e3121970c6d7f
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63026720"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944390"
 ---
 # <a name="sysdmftsfdhosts-transact-sql"></a>sys.dm_fts_fdhosts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
