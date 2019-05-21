@@ -29,7 +29,7 @@ ms.locfileid: "63266049"
   
  如果要使用 SAN，必須在伺服器上註冊 SSL 憑證、必須簽署 SSL 憑證，且 SSL 憑證需有私密金鑰。 您不能使用自我簽署憑證。  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的 URL 可設定為使用 SSL 憑證。 憑證通常只有一個主體名稱，因此一個 SSL (安全通訊端層) 工作階段只允許一個 URL。 SAN 是憑證中的一個額外欄位，它可以允許 SSL 服務接聽、對許多 URL 皆有效，並可和其他應用程式共用 SSL 通訊埠。 SAN 看起來與下列類似：www.s2.com。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的 URL 可設定為使用 SSL 憑證。 憑證通常只有一個主體名稱，因此一個 SSL (安全通訊端層) 工作階段只允許一個 URL。 SAN 是憑證中的一個額外欄位，它可以允許 SSL 服務接聽、對許多 URL 皆有效，並可和其他應用程式共用 SSL 通訊埠。 SAN 看起來與下列類似： www.s2.com 。  
   
  如需 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SSL 設定的詳細資訊，請參閱 [在原生模式報表伺服器上設定 SSL 連接](security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
   

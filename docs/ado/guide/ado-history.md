@@ -52,7 +52,7 @@ ms.locfileid: "62695434"
 
  **CubDef.GetSchemaObject**_方法_從 ADO 2.6 開始，ADO MD 物件可以擷取使用唯一的名稱，必須按照[UniqueName 屬性 (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)。 不需要知道，父物件的名稱和父集合不需要填入，以擷取結構描述物件。 請參閱[GetSchemaObject 方法 (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)。
 
- *命令資料流***命令**物件使用的替代方式為資料流格式支援命令**CommandText**屬性。 [CommandStream 屬性 (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md)可用來指定 XML 範本或 updategram 做**命令**輸入 Microsoft OLE DB provider for SQL Server。
+ *命令資料流* **命令**物件使用的替代方式為資料流格式支援命令**CommandText**屬性。 [CommandStream 屬性 (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md)可用來指定 XML 範本或 updategram 做**命令**輸入 Microsoft OLE DB provider for SQL Server。
 
  **方言**_屬性_[方言](../../ado/reference/ado-api/dialect-property.md)是新的屬性，定義的語法和一般規則提供者會使用來剖析字串或資料流。
 
