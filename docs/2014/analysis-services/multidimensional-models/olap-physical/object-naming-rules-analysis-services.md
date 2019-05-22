@@ -12,12 +12,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dce01d84be7f2850f916b21ccb02fb7cd24a6cdc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 64e04754fd4bc4a404854eb5260daddf543e3c2c
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62698925"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65979965"
 ---
 # <a name="object-naming-rules-analysis-services"></a>物件命名規則 (Analysis Services)
   本主題將描述物件命名慣例以及任何物件名稱 (以 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的程式碼或指令碼形式) 中無法使用的保留字和字元。  
@@ -70,9 +70,9 @@ ms.locfileid: "62698925"
 |------------|------------------------|  
 |`Server`|在命名伺服器物件時要遵守 Windows 伺服器命名慣例。 請參閱[命名慣例 (Windows)](/windows/desktop/DNS/naming-conventions)如需詳細資訊。|  
 |`DataSource`|`: / \ * | ? " () [] {} <>`|  
-|`Level` 或 `Attribute`|```. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >```|  
-|`Dimension` 或 `Hierarchy`|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>```|  
-|所有其他物件|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >```|  
+|`Level` 或 `Attribute`|````. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >````|  
+|`Dimension` 或 `Hierarchy`|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>````|  
+|所有其他物件|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >````|  
   
  **例外狀況：當允許保留的字元**  
   

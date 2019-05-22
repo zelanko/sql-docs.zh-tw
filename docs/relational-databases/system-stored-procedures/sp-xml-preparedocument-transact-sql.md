@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_preparedocument
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e89ebe73f7bee6f44df353afca515aca4cbbdcf2
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: 50235db46a664d1507823c057dc0cb61eda90974
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947617"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980048"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ OUTPUT
  預設值是**\<根 xmlns:mp ="urn: schemas-microsoft-microsoft-schemas-microsoft-com:-xml-metaprop">**。 *xpath_namespaces*提供透過語式正確的 XML 文件在 OPENXML 中 XPath 運算式中使用的前置詞的命名空間 Uri。 *xpath_namespaces*宣告必須用來參考命名空間前置詞**urn: schemas-microsoft-microsoft-schemas-microsoft-com:-xml-metaprop**; 它提供有關已剖析之 XML 元素的中繼資料。 雖然您可以使用這個技巧來重新定義中繼屬性命名空間的命名空間前置詞，但不會失去這個命名空間。 前置詞**mp**仍適用於**urn: schemas-microsoft-microsoft-schemas-microsoft-com:-xml-metaprop**即使*xpath_namespaces*包含沒有這類宣告。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 0 (成功) 或 >0 (失敗)  
+ 0 （成功） 或 > 0 （失敗）  
   
 ## <a name="permissions"></a>Permissions  
  需要 **public** 角色的成員資格。  
@@ -157,7 +157,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespac
  <br>[XML 預存 Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
  <br>[系統預存 Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
  <br>[OPENXML(Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
- <br>[sys.dm_exec_xml_handles & Amp;#40;transact-SQL&AMP;#41;](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
- <br>[sp_xml_removedocument & Amp;#40;transact-SQL&AMP;#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
+ <br>[sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
+ <br>[sp_xml_removedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
   
   

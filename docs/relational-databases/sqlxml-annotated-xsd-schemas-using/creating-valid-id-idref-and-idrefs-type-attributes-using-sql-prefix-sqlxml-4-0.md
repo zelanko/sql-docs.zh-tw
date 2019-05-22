@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -21,15 +20,16 @@ helpviewer_keywords:
 - ID relationships [SQLXML]
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90b24662ab7e681cd2b762220556500da4a0d8a6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cdc0ccd97fd5998241432667c2e9c4729c970a23
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033009"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980949"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>使用 sql:prefix 建立 Valid ID、IDREF 和 IDREFS 類型屬性 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,9 +55,9 @@ ms.locfileid: "56033009"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. 指定 ID 和 IDREFS 類型  
- 在下列結構描述中， **\<客戶 >** 元素所組成**\<順序 >** 子項目。 **\<順序 >** 項目也具有子元素 **\<OrderDetail >** 項目。  
+ 在下列結構描述中， **\<客戶 >** 元素所組成 **\<順序 >** 子項目。 **\<順序 >** 項目也具有子元素 **\<OrderDetail >** 項目。  
   
- **OrderIDList**屬性**\<客戶 >** 為 IDREFS 類型屬性，是指**OrderID**屬性 **\<順序 >** 項目。  
+ **OrderIDList**屬性 **\<客戶 >** 為 IDREFS 類型屬性，是指**OrderID**屬性 **\<順序 >** 項目。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

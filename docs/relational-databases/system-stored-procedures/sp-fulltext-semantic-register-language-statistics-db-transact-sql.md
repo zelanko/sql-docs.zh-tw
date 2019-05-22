@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_semantic_register_language_statistics_db & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_fulltext_semantic_register_language_statistics_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_semantic_register_language_statistics_db
 ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b540d233eeb1eb52a86737372d3d3db6f77a7217
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: bb0dcefe09bba8f3df06ed5730ea5bdae2be27d0
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417729"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983008"
 ---
 # <a name="spfulltextsemanticregisterlanguagestatisticsdb-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ GO
 ```  
   
 ##  <a name="Arguments"></a> 引數  
- [ @dbname =] '*database_name*'  
+ [ @dbname = ] '*database_name*'  
  這是要在目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中註冊的語義語言統計資料庫名稱。 資料庫必須已附加。 *database_name*已**sysname**，和不可以是 NULL。  
   
 ## <a name="return-code-value"></a>傳回碼值  

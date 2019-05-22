@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalog_components
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 54c22d025ae809d035fe75a0b8fe89160bdfb84f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc3538ab8485b7fb9658c665d4ed7dddf53aba33
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720366"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983106"
 ---
 # <a name="sphelpfulltextcatalogcomponents-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ sp_help_fulltext_catalog_components
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**全文檢索目錄名稱**|**int**|全文檢索目錄的名稱。|  
-|**全文檢索目錄識別碼**|**sysname**|全文檢索目錄的識別碼。|  
+|**full-text catalog name**|**int**|全文檢索目錄的名稱。|  
+|**full-text catalog id**|**sysname**|全文檢索目錄的識別碼。|  
 |**componenttype**|**sysname**|這是元件的類型， 它有下列幾種：<br /><br /> 篩選<br /><br /> 通訊協定處理常式<br /><br /> 斷詞工具|  
 |**componentname**|**sysname**|元件的名稱。|  
 |**clsid**|**uniqueidentifier**|元件的類別識別碼。|  
@@ -61,7 +61,7 @@ sp_help_fulltext_catalog_components
 ## <a name="see-also"></a>另請參閱  
  [全文檢索搜尋和語意搜尋預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
- [sp_help_fulltext_system_components &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   
+ [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   
  [全文檢索搜尋](../../relational-databases/search/full-text-search.md)  
   
   

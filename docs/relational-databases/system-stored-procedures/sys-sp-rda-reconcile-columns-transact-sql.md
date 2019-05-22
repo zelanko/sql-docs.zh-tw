@@ -14,15 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_columns stored procedure
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c4d2a8377466876270bcedd07138cf9cf30ef211
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 83ac2322d39fba05ce75f50fcd9cf9e5005b72b4
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906318"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982981"
 ---
 # <a name="syssprdareconcilecolumns-transact-sql"></a>sys.sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_rda_reconcile_columns @objname = '@objname'
  已啟用 Stretch 的 SQL Server 資料表的名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 0 (成功) 或 >0 (失敗)  
+ 0 （成功） 或 > 0 （失敗）  
   
 ## <a name="permissions"></a>Permissions  
  需要 db_owner 權限。  

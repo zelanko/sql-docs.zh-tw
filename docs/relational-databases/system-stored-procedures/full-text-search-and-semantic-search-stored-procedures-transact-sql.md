@@ -15,15 +15,15 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], stored procedures
 - system stored procedures [SQL Server], full-text search
 ms.assetid: 0d185a16-2b16-4958-884f-efe675e2e551
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4fb0eaa3e99687341307ae7ae2914aa65e717101
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c3757941531eba0238df03c72b5653147496443b
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62858725"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983240"
 ---
 # <a name="full-text-search-and-semantic-search-stored-procedures-transact-sql"></a>全文檢索搜尋和語意搜尋預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

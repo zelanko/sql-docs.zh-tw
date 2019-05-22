@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -27,21 +26,22 @@ helpviewer_keywords:
 - named relationships [SQLXML]
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3baef0dec3d2c4817378cd23684f6012a8050212
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 7f3bbe0b7ebe9d516ab23339632e96db184db1e7
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013909"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980700"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>使用 sql:relationship 指定關聯性 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 文件中的元素可以是相關聯的。 元素可以是巢狀階層，而且在元素之間可以指定 ID、IDREF 或 IDREFS 關聯性。  
   
- 例如，在 XSD 結構描述**\<客戶 >** 項目包含**\<順序 >** 子項目。 當結構描述對應到 AdventureWorks 資料庫中， **\<客戶 >** 元素會對應到 Sales.Customer 資料表和**\<順序 >** 元素會對應到Sales.SalesOrderHeader 資料表。 Sales.Customer 和 Sales.SalesOrderHeader 這些基礎資料表是相關聯的，因為客戶下了訂單。 Sales.SalesOrderHeader 資料表中的 CustomerID 是外部索引鍵，參考 Sales.Customer 資料表中的 CustomerID 主索引鍵。 您可以建立使用對應結構描述元素之間的關聯性**sql: relationship**註釋。  
+ 例如，在 XSD 結構描述 **\<客戶>** 項目包含 **\<順序 >** 子項目。 當結構描述對應到 AdventureWorks 資料庫中， **\<客戶 >** 元素會對應到 Sales.Customer 資料表和 **\<順序 >** 元素會對應到Sales.SalesOrderHeader 資料表。 Sales.Customer 和 Sales.SalesOrderHeader 這些基礎資料表是相關聯的，因為客戶下了訂單。 Sales.SalesOrderHeader 資料表中的 CustomerID 是外部索引鍵，參考 Sales.Customer 資料表中的 CustomerID 主索引鍵。 您可以建立使用對應結構描述元素之間的關聯性**sql: relationship**註釋。  
   
  在註解式 XSD 結構描述中， **sql: relationship**註解用來以階層方式，巢狀結構描述項目，根據主要索引鍵和基礎元素所對應的資料表之間的外部索引鍵關聯性。 在指定**sql: relationship**註解，您必須識別下列：  
   
@@ -79,7 +79,7 @@ ms.locfileid: "56013909"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. 在元素上指定 sql:relationship 註解  
- 下列的註解式的 XSD 結構描述包括**\<客戶 >** 並**\<順序 >** 項目。 **\<順序 >** 項目是子元素**\<客戶 >** 項目。  
+ 下列的註解式的 XSD 結構描述包括 **\<客戶 >** 並 **\<順序 >** 項目。 **\<順序 >** 項目是子元素 **\<客戶 >** 項目。  
   
  在結構描述中， **sql: relationship**上指定註釋**\<順序 >** 子項目。 在 定義關聯性本身 **\<xsd: appinfo >** 項目。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "56013909"
 ...  
 ```  
   
- 針對 Sales.SalesOrderHeader 資料表中每筆訂單，XML 文件有一個**\<順序 >** 項目。 而且每個**\<順序 >** 項目有一份**\<產品 >** 子項目，一個用於每個要求在順序中的產品。  
+ 針對 Sales.SalesOrderHeader 資料表中每筆訂單，XML 文件有一個 **\<順序 >** 項目。 而且每個 **\<順序 >** 項目有一份 **\<產品 >** 子項目，一個用於每個要求在順序中的產品。  
   
  若要指定產生此階層的 XSD 結構描述，您必須指定兩個關聯性：OrderOD 和 ODProduct。 OrderOD 關聯性會在 Sales.SalesOrderHeader 和 Sales.SalesOrderDetail 資料表之間指定父子式關聯性。 ODProduct 關聯性會在 Sales.SalesOrderDetail 和 Production.Product 資料表之間指定關聯性。  
   
@@ -241,7 +241,7 @@ ms.locfileid: "56013909"
 </xsd:schema>  
 ```  
   
- 您可以指定匿名關聯性，而非指定具名關聯性。 在此案例中的整個內容**\<註釋 >**... **\</annotation >**，其中描述兩個關聯性時，顯示為的子元素**\<產品 >**。  
+ 您可以指定匿名關聯性，而非指定具名關聯性。 在此案例中的整個內容 **\<註釋 >** ... **\</annotation >**，其中描述兩個關聯性時，顯示為的子元素**\<產品 >**。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -385,11 +385,11 @@ ms.locfileid: "56013909"
 ```  
   
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. 在多重元素中指定 sql:relationship  
- 在此範例中，包含註解式的 XSD 結構描述**\<客戶 >**， **\<順序 >**，以及 **\<OrderDetail >** 項目。  
+ 在此範例中，包含註解式的 XSD 結構描述 **\<客戶>** ， **\<順序>** ，以及 **\<OrderDetail>** 項目。  
   
- **\<順序 >** 項目是子元素**\<客戶 >** 項目。 **\<sql: relationship >** 上指定**\<順序 >** 子項目; 因此，客戶的訂單顯示為子項目的**\<客戶 >**.  
+ **\<順序 >** 項目是子元素 **\<客戶 >** 項目。 **\<sql: relationship >** 上指定 **\<順序 >** 子項目; 因此，客戶的訂單顯示為子項目的 **\<客戶 >** .  
   
- **\<順序 >** 項目包含 **\<OrderDetail >** 子項目。 **\<sql: relationship >** 上指定 **\<OrderDetail >** 子項目，因此，訂單的訂單詳細資料會顯示為該子項目**\<順序 >** 項目。  
+ **\<順序 >** 項目包含 **\<OrderDetail >** 子項目。 **\<sql: relationship >** 上指定 **\<OrderDetail >** 子項目，因此，訂單的訂單詳細資料會顯示為該子項目 **\<順序 >** 項目。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

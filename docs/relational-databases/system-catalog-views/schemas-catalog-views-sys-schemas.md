@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a676eb3e9bf67d14e45ebc9973f5be7998e19cf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8519dc4846f148b1b4d1bc83589baf0cc6a81e12
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665787"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983140"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>結構描述目錄檢視-sys.schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -43,14 +43,20 @@ ms.locfileid: "51665787"
 |**principal_id**|**int**|擁有這個結構描述之主體的識別碼。|  
   
 ## <a name="remarks"></a>備註  
- 資料庫結構描述做為命名空間或容器物件，例如資料表、 檢視、 程序和函式，可以在中找到**sys.objects**目錄檢視。  
+資料庫結構描述做為命名空間或容器物件，例如資料表、 檢視、 程序和函式，可以在中找到**sys.objects**目錄檢視。  
+
+每個結構描述具有擁有者。 擁有者是安全[主體](../../relational-databases/security/authentication-access/principals-database-engine.md)。
   
 ## <a name="permissions"></a>Permissions  
  需要 **public** 角色的成員資格。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [結構描述目錄檢視&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+[主體](../../relational-databases/security/authentication-access/principals-database-engine.md)
+
+[目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+
+[結構描述目錄檢視&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
+
+[sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   

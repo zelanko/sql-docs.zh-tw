@@ -11,12 +11,12 @@ ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5833d918768d191302d477516faa1deb3acc57b4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: a77a3b1f6836af7ec639834326fc7fd802ba983f
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65489601"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982109"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和災害復原
 
@@ -302,8 +302,7 @@ AG 只能建立於現有資料庫上。 因此，您可以在一個節點上建�
 
     圖 17
 
-    針對每個複本，設定下列 [同步認可]、[自動容錯移轉] 和 [可讀取次要] 設定。 請參閱圖
-17.
+    針對每個複本，設定下列 [同步認可]、[自動容錯移轉] 和 [可讀取次要] 設定。 請參閱圖 17。
 
     **同步認可**：這確保如果在資料庫的主要複本上認可交易，則也會在所有其他同步複本上認可交易。 非同步認可不保證這點，而且可能會落後於主要複本。
 

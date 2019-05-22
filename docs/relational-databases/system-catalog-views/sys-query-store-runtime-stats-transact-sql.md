@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb8ac0d8af4c6180bb9851df793285d3bc17340c
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 9df0a31b6a15bfedd02e281b6e9bc5367144e9a9
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542248"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980050"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "59542248"
 |**runtime_stats_interval_id**|**bigint**|外部索引鍵。 加入[sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)。|  
 |**execution_type**|**tinyint**|判斷執行查詢的類型：<br /><br /> 0-定期執行 （成功完成）<br /><br /> 3-用戶端起始已中止執行<br /><br /> 4-例外狀況已中止執行|  
 |**execution_type_desc**|**nvarchar(128)**|文字執行的 [類型] 欄位的描述：<br /><br /> 0-一般<br /><br /> 3-已中止<br /><br /> 4-例外狀況|  
-|**first_execution_time**|**datetimeoffset**|第一個彙總間隔內的查詢計劃的執行時間。|  
-|**last_execution_time**|**datetimeoffset**|上次執行時間的查詢計劃的彙總間隔內。|  
+|**first_execution_time**|**datetimeoffset**|第一個彙總間隔內的查詢計劃的執行時間。 這是指查詢執行的結束時間。|  
+|**last_execution_time**|**datetimeoffset**|上次執行時間的查詢計劃的彙總間隔內。 這是指查詢執行的結束時間。|  
 |**count_executions**|**bigint**|執行查詢計劃的彙總間隔內的總計數。|  
 |**avg_duration**|**float**|平均持續時間 （以微秒為單位報告） 的彙總間隔內的查詢計劃。|  
 |**last_duration**|**bigint**|最後的持續時間的查詢計劃內彙總間隔 （以微秒為單位報告）。|  
