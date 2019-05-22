@@ -1,5 +1,5 @@
 ---
-title: 如何：針對預存程序進行偵錯 | Microsoft Docs
+title: 如何：對預存程序進行偵錯 | Microsoft Docs
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.EXECUTESTOREDPROCEDURE.DIALOG
 ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8b0aafe7ed2eddd189f57929b9d4ed971540dc57
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 727117a31fd1a2fc5f5a807de824a8ff61ebb5bd
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533428"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090201"
 ---
-# <a name="how-to-debug-stored-procedures"></a>如何：偵錯預存程序
+# <a name="how-to-debug-stored-procedures"></a>如何：針對預存程序進行偵錯
 Transact\-SQL 偵錯工具透過顯示 SQL 預存程序的 SQL 呼叫堆疊、區域變數和參數，讓您以互動方式針對預存程序進行偵錯。 就像在其他程式設計語言中偵錯一樣，您可以在針對 Transact\-SQL 指令碼進行偵錯時檢視及修改區域變數和參數、檢視全域變數，以及控制和管理中斷點。  
   
 這個範例會示範如何建立 Transact\-SQL 預存程序並以逐步執行方式針對它進行偵錯。  

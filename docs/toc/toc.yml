@@ -205,11 +205,15 @@
                   href: ../big-data-cluster/reference-mssqlctl-cluster-config-section.md
                 - name: mssqlctl cluster debug
                   href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
+                - name: mssqlctl cluster endpoint
+                  href: ../big-data-cluster/reference-mssqlctl-cluster-endpoint.md
+                - name: mssqlctl cluster status
+                  href: ../big-data-cluster/reference-mssqlctl-cluster-status.md
             - name: 儲存體
               items:
-                - name: mssqlctl storage
+                - name: mssqlctl cluster storage-pool
                   href: ../big-data-cluster/reference-mssqlctl-storage.md
-                - name: mssqlctl storage mount
+                - name: mssqlctl cluster storage-pool mount
                   href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
 - name: 商務持續性
   items:
@@ -2379,6 +2383,34 @@
               href: ../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md
             - name: 使用輸出
               href: ../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md
+    - name: 語言延伸模組
+      items:
+        - name: 概觀
+          items:
+            - name: 什麼是語言延伸模組？
+              href: ../language-extensions/language-extensions-overview.md
+            - name: 新功能
+              href: ../language-extensions/language-extensions-whats-new.md
+        - name: 安裝
+          items:
+            - name: 在 Windows 上安裝 語言延伸模組
+              href: ../language-extensions/install/install-sql-server-language-extensions-on-windows.md
+        - name: 教學課程
+          items:
+            - name: "在 Java\_中使用 RegEx 搜尋字串"
+              href: ../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md
+        - name: 概念
+          items:
+            - name: Extensibility Framework
+              href: ../language-extensions/concepts/extensibility-framework.md
+        - name: 使用說明指南
+          items:
+            - name: 從 SQL Server 呼叫 Java
+              href: ../language-extensions/how-to/call-java-from-sql.md
+            - name: Java 至 SQL 資料類型
+              href: ../language-extensions/how-to/java-to-sql-data-types.md
+            - name: 建立 Java jar 檔案
+              href: ../language-extensions/how-to/create-a-java-jar-file-from-class-files.md
     - name: SQL Server Native Client
       href: ../relational-databases/native-client/sql-server-native-client.md
       items:
@@ -4147,6 +4179,8 @@
           href: ../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md
         - name: 啟用鎖定記憶體分頁選項
           href: ../database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows.md
+        - name: 記憶體內資料庫
+          href: ../relational-databases/in-memory-database.md
         - name: 混合式緩衝集區
           href: ../database-engine/configure-windows/hybrid-buffer-pool.md
         - name: 變更伺服器驗證模式
@@ -10096,6 +10130,8 @@
               href: ../linux/sql-server-linux-setup-ssis.md
             - name: 安裝 SQL Server 機器學習服務
               href: ../linux/sql-server-linux-setup-machine-learning.md
+            - name: 安裝 SQL Server 語言延伸模組
+              href: ../linux/sql-server-linux-setup-language-extensions.md
             - name: 設定存放庫
               href: ../linux/sql-server-linux-change-repo.md
         - name: 設定
@@ -11708,6 +11744,10 @@
               href: ../relational-databases/system-catalog-views/sys-event-notification-event-types-transact-sql.md
             - name: sys.extended_procedures
               href: ../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md
+            - name: sys.external_language_files
+              href: ../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md
+            - name: sys.external_languages
+              href: ../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md
             - name: sys.external_libraries
               href: ../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md
             - name: sys.external_library_files
@@ -16502,6 +16542,8 @@
                   href: ../t-sql/statements/alter-event-session-transact-sql.md
                 - name: EXTERNAL DATA SOURCE
                   href: ../t-sql/statements/alter-external-data-source-transact-sql.md
+                - name: 外部語言
+                  href: ../t-sql/statements/alter-external-language-transact-sql.md
                 - name: EXTERNAL LIBRARY
                   href: ../t-sql/statements/alter-external-library-transact-sql.md
                 - name: EXTERNAL RESOURCE POOL
@@ -16662,6 +16704,8 @@
                   href: ../t-sql/statements/create-event-session-transact-sql.md
                 - name: EXTERNAL DATA SOURCE
                   href: ../t-sql/statements/create-external-data-source-transact-sql.md
+                - name: 外部語言
+                  href: ../t-sql/statements/create-external-language-transact-sql.md
                 - name: EXTERNAL LIBRARY
                   href: ../t-sql/statements/create-external-library-transact-sql.md
                 - name: EXTERNAL FILE FORMAT
@@ -16816,6 +16860,8 @@
                   href: ../t-sql/statements/drop-external-data-source-transact-sql.md
                 - name: EXTERNAL FILE FORMAT
                   href: ../t-sql/statements/drop-external-file-format-transact-sql.md
+                - name: 外部語言
+                  href: ../t-sql/statements/drop-external-language-transact-sql.md
                 - name: EXTERNAL LIBRARY
                   href: ../t-sql/statements/drop-external-library-transact-sql.md
                 - name: EXTERNAL RESOURCE POOL

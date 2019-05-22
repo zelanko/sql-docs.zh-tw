@@ -11,15 +11,15 @@ f1_keywords:
 - sql.data.tools.design.table.scriptpanel
 - sql.data.tools.design.table.context.view
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1b253e8b820652bf76771047e498dabd119bcb81
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6c48efccdb4d32d9b471aae758e31084c7b87a7b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396141"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098150"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>如何：使用資料表設計工具建立資料庫物件
 [SQL Server 物件總管] 中新的 [SQL Server] 節點不僅看上去非常類似於 SSMS，還能讓您透過作用有如 SSMS 對應介面的關聯式功能表建立新物件。  
@@ -57,7 +57,7 @@ ms.locfileid: "52396141"
 5.  加入其他新的資料行。 分別為 [名稱] 和 [資料類型] 欄位輸入 **Address** 和 **nvarchar (MAX)**，並取消選取 [允許 Null] 欄位。  
   
     > [!WARNING]  
-    > 從連接的資料庫編輯物件時，請不要將這些物件儲存到本機磁碟機。 若要將您的變更正確地儲存到資料庫，請遵循後續程序[如何：使用 Power Buffer 更新連接的資料庫](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)中的步驟。  
+    > 從連接的資料庫編輯物件時，請不要將這些物件儲存到本機磁碟機。 若要正確儲存對資料庫的變更，請遵循下一個程序中的步驟：[如何：使用 Power Buffer 更新連線的資料庫](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)程序中的步驟套用變更。  
   
 6.  重複前面的步驟，建立另一個名為 **Customer** 的資料表。 這次使用資料行格線，將下列資料行加入至 Customer 資料表。 而且，記得要變更指令碼，讓資料表名稱為 `[dbo].[Customer]`。  
   

@@ -1,6 +1,6 @@
 - name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
-- name: SQL Server ML 與程式設計延伸模組文件
+- name: SQL Server 機器學習服務文件
   href: ../advanced-analytics/home-advanced-analytics-r-machine-learning-sql-server.md
 - name: 機器學習延伸模組 (R、Python)
   items:
@@ -12,18 +12,6 @@
       href: ../advanced-analytics/r/sql-server-r-services.md
     - name: 獨立伺服器
       href: ../advanced-analytics/r/r-server-standalone.md
-- name: Java 延伸模組
-  items:
-    - name: 在 SQL 上執行 Java 程式碼
-      href: ../advanced-analytics/java/extension-java.md
-    - name: 如何從 SQL 呼叫 Java
-      href: ../advanced-analytics/java/howto-call-java-from-sql.md
-    - name: Java 範例
-      href: ../advanced-analytics/java/java-first-sample.md
-    - name: SDK for Java
-      href: ../advanced-analytics/java/java-sdk.md
-    - name: Java 與 SQL 資料類型
-      href: ../advanced-analytics/java/java-sql-datatypes.md
 - name: 安裝
   items:
     - name: SQL Server 2019 中的差異

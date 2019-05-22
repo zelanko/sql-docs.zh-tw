@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0b58d17340eeee18fdda5b6ea56f9aebd291ba1f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 52975d96b6db206b4cdd2b6b201bc55eb572131c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400032"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090260"
 ---
-# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>HOW TO：建立 SQL Server 單元測試設計工具的測試條件
+# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>如何：建立 SQL Server 單元測試設計工具的測試條件
 您可以使用可延伸的 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 類別，建立新的測試條件。 例如，您可以建立新的測試條件，驗證結果集中的資料行數目或值。  
   
 ## <a name="to-create-a-test-condition"></a>若要建立測試條件  
@@ -49,7 +49,7 @@ ms.locfileid: "52400032"
   
 10. 從 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 類別衍生您的類別。  
   
-11. 使用強式名稱簽署組件。 如需詳細資訊，請參閱[如何：使用強式名稱簽章組件](https://msdn.microsoft.com/library/xc31ft41.aspx)。  
+11. 使用強式名稱簽署組件。 如需詳細資訊，請參閱[如何：使用強式名稱簽署組件](https://msdn.microsoft.com/library/xc31ft41.aspx)。  
   
 12. 建置類別庫。  
   

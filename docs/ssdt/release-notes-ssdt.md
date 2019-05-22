@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 44229bbe0bd0a4df65e9dfbfe213c6a14cee0f42
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 80836cb5ab67f221ff3f9965d1980bcbc9c8378d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241882"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101906"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的版本資訊
 
@@ -46,6 +46,36 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+## <a name="1591nbsp-ssdt-for-vs-2017"></a>15.9.1，&nbsp;適用於 VS 2017 的 SSDT
+
+發行日期：&nbsp;2019 年 4 月 27 日  
+組建編號：&nbsp; 14.0.16191.0  
+適用於 Visual Studio 2017 的 SSDT。
+
+### <a name="whats-new"></a>新功能
+
+#### <a name="ssis"></a>SSIS
+
+| 新項目 | 詳細資料 |
+| :------- | :------ |
+| 修正瞄準先前 SQL Server 版本時套件組件無法正確保存的問題 | &nbsp; |
+| 修正使用套件組件時，無法將運算式新增到優先順序條件約束的問題 | &nbsp; |
+| 修正 Power Query 來源與連線管理員無法連結到正確文件的問題 | &nbsp; |
+| 修正 SSIS 組建版本不會在 VS 說明視窗中顯示的問題 | &nbsp; |
+| 新增 Ole DB 和一般檔案連線管理員的 "ConnectByProxy" 屬性，該屬性可啟用使用自我裝載 IR 和 Azure-SSIS IR 存取內部部署資料 | &nbsp; |
+| 修正 ODBC 元件不正確對應 DT_DBDATE 資料類型的問題 | &nbsp; |
+| 新增 ADO.NET 和 OLE DB 連線管理員的 "ConnectUsingManagedIdentity" 屬性，該屬性可啟用受控識別驗證來連線到 Azure-SSIS IR 中的資料來源 | &nbsp; |
+
+### <a name="known-issues"></a>已知問題
+
+| 已知問題 | 詳細資料 |
+| :---------- | :------ |
+| 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 | 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。 |
+| SSDT for Visual Studio 2017 (15.8 以上版本) 不支援設計包含 Teradata 來源/目的地的套件。 | 使用適用於 Visual Studio 2017 (15.8) 的 SSDT。 |
+| 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援 OData v4。 | &nbsp; |
+| 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援使用 ODBC 連接到 Oracle。 | &nbsp; |
+| Power Query 來源未當地語系化。 | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1590nbsp-ssdt-for-vs-2017"></a>15.9.0，&nbsp;適用於 VS 2017 的 SSDT
 

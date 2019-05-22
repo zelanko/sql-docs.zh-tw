@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2ead75f8b71227b1bd3831b650cc036a66b5b325
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e3175f523a0cc6b91fd1d5bd955e6872a5cf0064
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397090"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098409"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>如何：在專案中使用 Microsoft SQL Server 2012 物件
 在這個範例中，您會將一個序列物件加入至以 Microsoft SQL Server 2012 為目標的資料庫專案。  
@@ -44,9 +44,9 @@ ms.locfileid: "52397090"
     CACHE 10  
     ```  
   
-4.  如果專案的目標平台未設定為 Microsoft SQL Server 2012，則 [錯誤清單] 會顯示 `CREATE SEQUENCE` 陳述式有語法錯誤。 若要修正此問題，請遵循[如何：變更目標平台及發行資料庫專案](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主題來相應地變更目標平台。  
+4.  如果專案的目標平台未設定為 Microsoft SQL Server 2012，則 [錯誤清單] 會顯示 `CREATE SEQUENCE` 陳述式有語法錯誤。 若要修正此問題，請遵循[如何：變更目標平台及發佈資料庫專案](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主題來相應地變更目標平台。  
   
-5.  請遵循[如何：變更目標平台及發行資料庫專案](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)，將專案發佈至已連接的 Microsoft SQL Server 2012 伺服器中的資料庫。  
+5.  遵循[如何：變更目標平台及發佈資料庫專案](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)，將專案發佈至已連線 Microsoft SQL Server 2012 伺服器中的資料庫。  
   
 ### <a name="to-use-the-new-sequence-object"></a>若要使用新的序列物件  
   

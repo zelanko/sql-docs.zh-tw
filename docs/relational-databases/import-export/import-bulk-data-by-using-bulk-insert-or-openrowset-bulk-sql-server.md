@@ -19,16 +19,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - Transact-SQL bulk export/import operations
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c004a991872257baa045be6e0253d7d63979f2f7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c4fdd3b1512d64cb8c702e00ba89aed02d5abb0a
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542438"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946577"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>使用 BULK INSERT 或 OPENROWSET(BULK...) 匯入大量資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "52542438"
   
 -   [使用格式檔案將資料表資料行對應至資料檔案欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK…)函數  
+## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK...)函數  
  OPENROWSET BULK 資料列集提供者可透過呼叫 OPENROWSET 函數及指定 BULK 選項加以存取。 OPENROWSET(BULK…) 函數可讓您透過 OLE DB 提供者連接到遠端資料來源 (例如資料檔案)，以存取遠端資料。  
 
 **適用於︰**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 中無法使用 `OPENROWSET`。
@@ -77,7 +77,7 @@ ms.locfileid: "52542438"
   
  INSERT ...SELECT * FROM OPENROWSET(BULK...)  
   
- 當用於 INSERT 陳述式時，OPENROWSET(BULK...) 支援資料表提示。 除了一般的資料表提示 (例如 TABLOCK) 之外，BULK 子句也接受下列特定的資料表提示：IGNORE_CONSTRAINTS (僅忽略 CHECK 條件約束)、IGNORE_TRIGGERS、KEEPDEFAULTS 和 KEEPIDENTITY。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
+ 當用於 INSERT 陳述式時，OPENROWSET(BULK...) 支援資料表提示。 除了一般的資料表提示 (例如 TABLOCK) 之外，BULK 子句也接受下列特殊化資料表提示：IGNORE_CONSTRAINTS (僅忽略 CHECK 條件約束)、IGNORE_TRIGGERS、KEEPDEFAULTS 及 KEEPIDENTITY。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  如需 BULK 選項其他用法的資訊，請參閱 [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)。  
   

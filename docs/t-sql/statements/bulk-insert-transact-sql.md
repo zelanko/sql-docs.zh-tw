@@ -27,12 +27,12 @@ ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 27e3eefcb9a43d8063e9f72f18f76dd8ac7e3c94
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 131e5ee4436cc1cf1e5a5f2f979504e75c169d93
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802882"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503246"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -46,7 +46,7 @@ ms.locfileid: "56802882"
   
 ```
 BULK INSERT   
-   [ database_name . [ schema_name ] . | schema_name . ] [ table_name | view_name ]   
+   { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
       FROM 'data_file'   
      [ WITH   
     (   
@@ -224,7 +224,7 @@ LASTROW **=** _last_row_ 指定要載入之最後一個資料列的號碼。 預
  ROWS_PER_BATCH **=** _rows_per_batch_  
  指出資料檔案中大約有多少資料列。  
   
- 依預設，資料檔案中的所有資料都會當做單一交易來傳給伺服器，而且查詢最佳化工具並不知道批次中的資料列數。 如果您指定 ROWS_PER_BATCH (利用 > 0 的值)，伺服器會利用這個值來最佳化大量匯入作業。 ROWS_PER_BATCH 指定的值應該與實際的資料列數大約相同。 如需有關效能考量的詳細資訊，請參閱本主題稍後的「備註」。  
+ 依預設，資料檔案中的所有資料都會當做單一交易來傳給伺服器，而且查詢最佳化工具並不知道批次中的資料列數。 如果您指定 ROWS_PER_BATCH (值 > 0)，伺服器會使用這個值將大量匯入作業最佳化。 ROWS_PER_BATCH 指定的值應該與實際的資料列數大約相同。 如需有關效能考量的詳細資訊，請參閱本主題稍後的「備註」。  
   
  
  TABLOCK  
@@ -380,7 +380,7 @@ GO
   
  如需有關此安全性考量及其他使用 BULK INSERT 之安全性考量的詳細資訊，請參閱[使用 BULK INSERT 或 OPENROWSET&#40;BULK...&#41; 匯入大量資料 &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
 
  需要 INSERT 和 ADMINISTER BULK OPERATIONS 權限。 在 Azure SQL Database 中，需要 INSERT 和 ADMINISTER DATABASE BULK OPERATIONS 權限。 另外，如果以下一個或多個狀況成立，則需要 ALTER TABLE 權限：  
   

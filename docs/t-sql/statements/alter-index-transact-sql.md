@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e7779ffa5875e50040a0e066097b7eed852a97d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: a103a0a8681d5128b021783a5e5509c46c9fad32
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980414"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502873"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,8 +83,7 @@ ALTER INDEX { index_name | ALL } ON <object>
   
 <object> ::=   
 {  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
+    { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
 }  
   
 <rebuild_index_option > ::=  
@@ -735,8 +734,7 @@ ONLINE、MAXDOP 和 SORT_IN_TEMPDB 的值並未儲存在系統目錄中。 除�
    -    ALTER TABLE 使用索引重建  
    -    "RESUMABLE = ON" 的 DDL 命令無法在明確交易內部執行 (不能是 begin tran ... commit 區塊的一部分)
    -    重建已經計算或以 TIMESTAMP 資料行作為索引鍵資料行的索引。
--   如果基底資料表包含 LOB 資料行，可繼續的叢集索引重建就會在此作業開始時需要 Sch-M 鎖定
-   -    可繼續的索引不支援 SORT_IN_TEMPDB=ON 選項 
+-   如果基底資料表包含 LOB 資料行，可繼續的叢集索引重建就會在此作業開始時需要 Sch-M 鎖定 
 
 > [!NOTE]
 > DDL 命令會執行，直到完成、暫停或失敗為止。 如果命令暫停，將會發出錯誤指出作業已暫停，而且沒有完成索引建立。 您可以從 [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md) 取得目前索引狀態的詳細資訊。 和以前一樣，如果發生失敗，也會發出錯誤。 
@@ -764,13 +762,13 @@ ONLINE、MAXDOP 和 SORT_IN_TEMPDB 的值並未儲存在系統目錄中。 除�
 下列限制適用於分割區索引：  
   
 -   使用 ALTER INDEX ALL ... 時，您無法在資料表具有非對齊索引時變更單一分割區的壓縮設定。  
--   ALTER INDEX \<index> ...REBUILD PARTITION ... 語法會重建此索引的指定資料分割。  
--   ALTER INDEX \<index> ...REBUILD WITH ... 語法會重建此索引的所有資料分割。  
+-   ALTER INDEX \<index> ...REBUILD PARTITION ... 語法會重建此索引的指定分割區。  
+-   ALTER INDEX \<index> ...REBUILD WITH ... 語法會重建此索引的所有分割區。  
   
-## <a name="statistics"></a>Statistics  
+## <a name="statistics"></a>統計資料  
  當您針對資料表執行 **ALTER INDEX ALL ...** 時，只會更新與索引相關聯的統計資料。 針對資料表 (而非索引) 所建立的自動或手動統計資料不會進行更新。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要執行 ALTER INDEX，至少需要資料表或檢視表的 ALTER 權限。  
   
 ## <a name="version-notes"></a>版本資訊  

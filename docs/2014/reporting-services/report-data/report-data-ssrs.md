@@ -22,7 +22,7 @@ ms.locfileid: "62721412"
   
 ##  <a name="BkMk_ReportDataTerms"></a> 詞彙
 
- 如果您熟悉[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]概念，檢閱中的下列條款[Reporting Services 概念&#40;SSRS&#41;](../reporting-services-concepts-ssrs.md):*資料連接*，*內嵌資料來源*，*共用資料來源*，*內嵌資料集*，*共用資料集*，*資料集查詢**報表組件*，並*的資料警示*。  
+ 如果您熟悉[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]概念，檢閱中的下列條款[Reporting Services 概念&#40;SSRS&#41;](../reporting-services-concepts-ssrs.md):*資料連接*，*內嵌資料來源*，*共用資料來源*，*內嵌資料集*，*共用資料集*，*資料集查詢* *報表組件*，並*的資料警示*。  
   
 ##  <a name="BkMk_ReportDataTips"></a> 指定報表資料的秘訣
 

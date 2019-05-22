@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 832db366e3596b4e4b4f2ab1e930178986147923
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: b93af690fb15c7ab62084d7175612508b5a22445
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63202453"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -60,6 +60,8 @@ ms.locfileid: "59583381"
 ## <a name="sql-server"></a>SQL Server
 
 資料庫鏡像、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 和相容性層級為 `SET` 選項，但是礙於篇幅的因素，將會在個別的文章中描述。 如需詳細資訊，請參閱 [ALTER DATABASE 資料庫鏡像](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)、[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 和 [ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。
+
+資料庫範圍設定用來設定數個個別資料庫層級的資料庫設定。 如需詳細資訊，請參閱 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。
 
 > [!NOTE]
 > 目前工作階段的許多資料庫 SET 選項都可以使用 [SET 陳述式](../../t-sql/statements/set-statements-transact-sql.md)來設定，而且通常是在應用程式連線時由其加以設定。 工作階段層級 SET 選項會覆寫 **ALTER DATABASE SET** 值。 以下所述的資料庫選項皆為未明確提供其他 SET 選項值，因而可針對工作階段進行設定的值。
@@ -925,7 +927,7 @@ OFF 識別碼不能放在引號中，且必須遵循所有 [!INCLUDE[tsql](../..
 
   您可以檢查 sys.databases 目錄檢視中 is_quoted_identifier_on 資料行來判斷這個選項的狀態。 您也可以檢查 DATABASEPROPERTYEX 函式的 IsQuotedIdentifiersEnabled 屬性來判斷狀態。
 
-NUMERIC_ROUNDABORT { ON | OFF } ON 當運算式中遺失有效位數時，就會產生一個錯誤。
+NUMERIC_ROUNDABORT { ON | OFF } ON 當運算式中遺失有效位數時，就會產生一項錯誤。
 
 OFF 遺失有效位數並不會產生錯誤訊息，且結果會四捨五入到儲存結果的資料行或變數有效位數。
 
@@ -1141,7 +1143,7 @@ SET QUERY_STORE = ON
 - [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
 - [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
-- [使用查詢存放區的最佳做法](../../relational-databases/performance/best-practice-with-the-query-store.md)
+- [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)
 
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
@@ -1659,7 +1661,7 @@ OFF 識別碼不能放在引號中，且必須遵循所有 [!INCLUDE[tsql](../..
 
   您可以檢查 sys.databases 目錄檢視中 is_quoted_identifier_on 資料行來判斷這個選項的狀態。 您也可以檢查 DATABASEPROPERTYEX 函式的 IsQuotedIdentifiersEnabled 屬性來判斷狀態。
 
-NUMERIC_ROUNDABORT { ON | OFF } ON 當運算式中遺失有效位數時，就會產生一個錯誤。
+NUMERIC_ROUNDABORT { ON | OFF } ON 當運算式中遺失有效位數時，就會產生一項錯誤。
 
 OFF 遺失有效位數並不會產生錯誤訊息，且結果會四捨五入到儲存結果的資料行或變數有效位數。
 
@@ -1827,7 +1829,7 @@ SET QUERY_STORE = ON
 - [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
 - [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
-- [使用查詢存放區的最佳做法](../../relational-databases/performance/best-practice-with-the-query-store.md)
+- [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)
 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
@@ -2439,6 +2441,6 @@ SET QUERY_STORE = ON
 - [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
 - [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
-- [使用查詢存放區的最佳做法](../../relational-databases/performance/best-practice-with-the-query-store.md)
+- [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)
 
 ::: moniker-end

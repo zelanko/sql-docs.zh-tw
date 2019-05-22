@@ -2,7 +2,7 @@
 title: 變更報表伺服器上的時區和時鐘設定 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - schedules [Reporting Services], clock settings
 - schedules [Reporting Services], time zones
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bb822890e3a54be5c221c41a0c1489a4e2b252b5
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5c1e3a2b4fe468f3565dbf7ad47295ab8836315b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973475"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578371"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>變更報表伺服器上的時區和時鐘設定
   報表伺服器會永遠使用所安裝之電腦的本地時間。 您無法設定使用不同時區。 如果用戶端應用程式指向不同時區的報表伺服器，就會使用該報表伺服器的時區來執行排程作業。 在報表管理員和 SharePoint 管理頁面中，每個排程頁面都會顯示時區設定，好讓您確實知道已排程作業將發生的時候。 例如，用來建立自訂排程的頁面將會標示「時間是以 (UTC-08:00) 太平洋時間 (美國和加拿大) 格式表示」。
-報表伺服器會建立用來觸發排程的 SQL Server Agent 作業。 當報表伺服器與 SQL Server 代理程式位於不同的伺服器上時，時區必須在所有伺服器上相同。
+報表伺服器會建立用來觸發排程的 SQL Server Agent 作業。 當報表伺服器與 SQL Server Agent 位於不同的伺服器時，兩者的所在伺服器時區必須相同。
   
 ## <a name="changing-the-time-zone-native-mode"></a>變更時區 (原生模式)  
  如果您變更了主控報表伺服器之電腦上的時區，就必須重新啟動報表伺服器服務，才能使時區變更生效。  

@@ -10,18 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.editor.howto.navigate
 ms.assetid: 8664bde5-86ff-4e8b-b5a6-af003316f6ad
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e0627b9a4f0512c7e711212606b855c11011fff3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49c19d1109f6105f2f081b1f85c2f188d2c02539
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702876"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099668"
 ---
 # <a name="how-to-navigate-between-scripts"></a>如何：在指令碼之間巡覽
-適用於離線開發的 Transact\-SQL 編輯器提供兩個有用且 Visual Studio 使用者所熟悉的巡覽工具：[移至定義] 和 [尋找所有參考]。 例如，您可以用滑鼠右鍵按一下資料表名稱，然後用 [尋找所有參考] 列出專案中資料表的所有參考。 您可以按兩下搜尋結果以移至特定的程式碼檔案。 在這個檔案中，您可以再次用滑鼠右鍵按一下資料表名稱，然後選擇 [移至定義] 回到資料表定義。  
+適用於離線開發的 Transact\-SQL 編輯器提供兩個有用且 Visual Studio 使用者熟悉的瀏覽工具：[移至定義] 和 [尋找所有參考]。 例如，您可以用滑鼠右鍵按一下資料表名稱，然後用 [尋找所有參考] 列出專案中資料表的所有參考。 您可以按兩下搜尋結果以移至特定的程式碼檔案。 在這個檔案中，您可以再次用滑鼠右鍵按一下資料表名稱，然後選擇 [移至定義] 回到資料表定義。  
   
 > [!WARNING]  
 > 下列程序使用先前在[連接的資料庫開發](../ssdt/connected-database-development.md)和[專案導向的離線資料庫開發](../ssdt/project-oriented-offline-database-development.md)小節中的程序所建立的實體。  

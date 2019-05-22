@@ -12,17 +12,17 @@ f1_keywords:
 - sql.data.tools.datacompare.watermark.f1
 - sql.data.tools.datacompare.connection.objectselection.f1
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a481e5c603f5bf427b7d86dd19203fd899694b6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a7c0599cf45e822dfca7cef48414512fffa4a74
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685726"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090127"
 ---
-# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>HOW TO：比較和同步處理兩個資料庫的資料
+# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>如何：比較和同步處理兩個資料庫的資料
 您可以比較兩個資料庫包含的資料。 要比較的資料庫稱為「來源」和「目標」。  
   
 > [!NOTE]  
@@ -39,7 +39,7 @@ ms.locfileid: "47685726"
 如需詳細資訊，請參閱[使用參考資料庫中的資料比較和同步處理一個或多個資料表中的資料](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)。  
   
 > [!NOTE]  
-> 您也可以比較兩個資料庫或相同資料庫兩個版本的「結構描述」。 如需詳細資訊，請參閱[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)。  
+> 您也可以比較兩個資料庫或相同資料庫兩個版本的「結構描述」。 如需詳細資訊，請參閱[如何：使用結構描述比較以比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)。  
   
 ## <a name="CompareDatabaseData"></a>比較資料庫資料  
   

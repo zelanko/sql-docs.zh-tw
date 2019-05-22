@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datacompare.f1
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6c913ffa52c07091e4eec45f6013a3540edfe810
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 935a2671c2496cb6cbb996d25cddc123bc4d782d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614260"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095928"
 ---
 # <a name="how-to-view-data-differences"></a>如何：檢視資料差異
 當您比較兩個資料庫的資料之後，會看到所比較的每個資料庫物件及其狀態。 您也可以檢視每個物件內記錄的結果 (依狀態分組)。  
@@ -36,5 +36,5 @@ ms.locfileid: "47614260"
     -   若要檢視在特定物件內記錄的結果，請按一下主要結果窗格中的物件，然後按一下 [記錄檢視] 窗格中的索引標籤。 每個索引標籤會顯示該物件中具有特定狀態的所有記錄：不同、僅限於來源、僅限於目標和相同。 資料會以記錄和資料行顯示。  
   
 ## <a name="see-also"></a>另請參閱  
-[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[操作說明：使用結構描述比較以比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

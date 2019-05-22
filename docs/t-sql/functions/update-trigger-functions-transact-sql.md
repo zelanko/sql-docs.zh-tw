@@ -26,12 +26,12 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9677ef3717fb83bdaf6ea108279b98a6598adced
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: ae555bf3eaef4d7befd89a572ab926d189183e4e
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980344"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775998"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - 觸發程序函式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,6 +65,8 @@ UPDATE ( column )
 >  IF UPDATE(*column*) 子句的功能與 IF、IF...ELSE 或 WHILE 子句相同，可以使用 BEGIN...END 區塊。 如需詳細資訊，請參閱[流程控制語言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)。  
   
  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 觸發程序主體內的任何位置，都可以使用 UPDATE(*column*)。  
+ 
+如果觸發程序套用至資料行，則 `UPDATED` 值將會傳回 `true` 或 `1`，即使資料行的值維持不變也是如此。 這是根據設計的行為，且觸發程序應該實作商務邏輯，以決定是否可允許插入/更新/刪除作業。 
   
 ## <a name="examples"></a>範例  
  下列範例會建立一個當任何人試圖升級 `StateProvinceID` 資料表的 `PostalCode` 或 `Address` 資料行時，將訊息列印到用戶端的觸發程序。  

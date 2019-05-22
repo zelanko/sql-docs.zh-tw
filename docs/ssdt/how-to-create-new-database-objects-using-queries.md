@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bcf7fe3ad0b07b9f8a228318b5eea85b3d8526a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 383992f5e1fc9891fb570dec168d1648913f4254
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780346"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098172"
 ---
 # <a name="how-to-create-new-database-objects-using-queries"></a>如何：使用查詢建立新的資料庫物件
 如果您想要使用指令碼建立或編輯檢視表、預存程序、函式、觸發程序或使用者定義型別，可以使用 Transact\-SQL 編輯器。 Transact\-SQL 編輯器提供了 IntelliSense 和其他語言支援。 如需詳細資訊，請參閱[使用 Transact-SQL 編輯器，編輯及執行指令碼](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)。  

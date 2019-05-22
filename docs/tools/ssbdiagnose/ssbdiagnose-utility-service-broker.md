@@ -26,17 +26,21 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc67193013c0ea546f69aaa87fb1fb0aa0ad7cac
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: bae9ec6ddd1d3098c04dc1afaaebc189ae079959
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590542"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821097"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 公用程式 [Service Broker]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **ssbdiagnose** 公用程式會報告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務組態中的問題。 您可以針對兩個服務或單一服務進行組態檢查。 問題會在命令提示字元視窗中報告成人們可讀取的文字，或可重新導向至檔案或其他程式的格式化 XML。  
-  
+  **ssbdiagnose** 公用程式會報告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務組態中的問題。 您可以針對兩個服務或單一服務進行組態檢查。 問題會在命令提示字元視窗中報告成人們可讀取的文字，或可重新導向至檔案或其他程式的格式化 XML。
+
+> [!NOTE]
+> 最新版本的 SQL Server Management Studio (SSMS) 18.0 已不再會安裝 ssbdiagnose 公用程式。 若要安裝最新版的 ssbdiagnose，請安裝 [SSMS 17.9.1](../../ssms/release-notes-ssms.md#download-ssms-1791)。
+> 您必須安裝舊版的 SSMS，才能獲取後續版本中最新版的修補 ssbdiagnose。 SSMS 18.x 與 17.x 版會並存執行，因此兩者可以安裝在同一部電腦上。
+
 ## <a name="syntax"></a>語法  
   
 ```  
@@ -162,7 +166,7 @@ WHERE database_id = DB_ID();
   
  **OFF**：未設定任何對話安全性。 沒有部署任何憑證、沒有建立任何遠端服務繫結，而且起始端服務的 GRANT SEND 已指定了 **Public** 角色。  
   
- **ANONYMOUS**：已設定匿名對話安全性。 已經部署了一個憑證、遠端服務繫結已指定了匿名子句，而且目標服務的 GRANT SEND 已指定了 **Public** 角色。  
+ **ANONYMOUS**：已設定匿名的對話安全性。 已經部署了一個憑證、遠端服務繫結已指定了匿名子句，而且目標服務的 GRANT SEND 已指定了 **Public** 角色。  
   
  **RUNTIME**  
  要求導致 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談發生執行階段錯誤之問題的報表。 如未指定 **-NEW** 或 **-ID** ， **ssbdiagnose** 就會監視連線選項中指定之所有資料庫中的所有交談。 如果指定了 **-NEW** 或 **-ID** ， **ssbdiagnose** 就會建立參數中指定的識別碼清單。  
@@ -310,7 +314,7 @@ WHERE database_id = DB_ID();
 ## <a name="sqlcmd-environment-variables"></a>sqlcmd 環境變數  
  **ssbdiagnose** 公用程式支援 **sqlcmd** 公用程式也使用的 SQLCMDSERVER、SQLCMDUSER、SQLCMDPASSWORD 和 SQLCMDLOGINTIMOUT 環境變數。 您可以使用命令提示字元 SET 命令，或在用 **sqlcmd** 執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼中使用 **setvar**命令，來設定這些環境變數。 如需如何在 **sqlcmd** 中使用 **setvar**的詳細資訊，請參閱 [以指令碼變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  在每個 **connectionoptions** 子句中，使用 **-E** 或 **-U** 指定的登入，必須是以 **-S** 所指定之執行個體內 **系統管理員**固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  

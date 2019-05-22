@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 58d283ffaf2c8efd2b360a977af17d985117a2ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1eb77a0990d8f0e19458dd66ea7f73b933de961c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682224"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101845"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>SQL Server Data Tools 的必要權限
 在 Visual Studio 中若要對資料庫執行動作，您用來登入的帳戶必須對該資料庫具備特定的權限。 依您想要執行的動作而定，所需的特定權限將有所不同。 下列各節將描述您可能會執行的每一個動作，以及執行該動作所需要的特定權限。  
@@ -45,7 +45,7 @@ ms.locfileid: "47682224"
 |匯入伺服器物件和設定|您必須能夠連接至指定的伺服器上的 master 資料庫。<br /><br />如果伺服器執行 SQL Server 2005，您必須對該伺服器具備 **VIEW ANY DEFINITION** 權限。<br /><br />如果來源資料庫以 SQL Server 2008 或更新版本為基礎，您必須對伺服器具備 **VIEW ANY DEFINITION** 權限。 您的登入必須具備 **VIEW SERVER STATE** 權限 (用於資料庫加密金鑰)。|  
 |建立或更新資料庫專案|您不需要有任何的資料庫權限，就能建立或修改資料庫專案。|  
 |部署新的資料庫或在已設定 [永遠重新建立資料庫] 選項的情況下部署|您必須對目標伺服器具備 **CREATE DATABASE** 權限或是其 **dbcreator** 角色的成員。<br /><br />當您建立資料庫時，Visual Studio 會連接至 model 資料庫並複製此資料庫的內容。 用以連線到目標資料庫的初始登入 (例如 *yourLogin*) 必須具備 **db_creator** 和 **CONNECT SQL** 權限。 此登入必須在 model 資料庫上已有使用者對應。 如果您具備 **sysadmin** 權限，即可藉由發出下列 Transact\-SQL 陳述式以建立對應：<br /><br />`USE [model] CREATE USER yourUser FROM LOGIN yourLogin`<br /><br />使用者 (在本例中為 yourUser) 必須對模型資料庫具備 **CONNECT** 和 **VIEW DEFINITION** 權限。 如果您具備 **sysadmin** 權限，即可藉由發出下列 Transact\-SQL 陳述式以授與這些權限：<br /><br />`USE [model] GRANT CONNECT to yourUser GRANT VIEW DEFINITION TO yourUser`<br /><br />如果部署的資料庫包含未命名的限制式並已啟用 **CheckNewContraints** 選項 (預設為啟用)，您必須具備 **db_owner** 或 **sysadmin** 權限，否則部署將會失敗。 這只限於有未命名的條件約束時才會發生。 如需 **CheckNewConstraints** 選項的詳細資訊，請參閱[資料庫專案設定](../ssdt/database-project-settings.md)。|  
-|將更新部署至現有的資料庫|您必須是有效的資料庫使用者。 您也必須是 **db_ddladmin** 角色的成員、擁有結構描述，或者擁有目標資料庫上您想要建立或修改的物件。 在預先部署或部署後指令碼中運用更進階的概念 (例如登入或連結的伺服器) 時，您還需要額外的權限。<br /><br />**注意：** 如果部署至 master 資料庫，您也必須對部署的目標伺服器具備 **VIEW ANY DEFINITION** 權限。|  
+|將更新部署至現有的資料庫|您必須是有效的資料庫使用者。 您也必須是 **db_ddladmin** 角色的成員、擁有結構描述，或者擁有目標資料庫上您想要建立或修改的物件。 在預先部署或部署後指令碼中運用更進階的概念 (例如登入或連結的伺服器) 時，您還需要額外的權限。<br /><br />**注意：** 若部署至 master 資料庫，您也必須具備部署目標伺服器的 **VIEW ANY DEFINITION** 權限。|  
 |在資料庫專案中搭配 EXTERNAL_ACCESS 選項使用組件|您必須為資料庫專案設定 TRUSTWORTHY 屬性。 您的 SQL Server 登入必須具備 EXTERNAL ACCESS ASSEMBLY 權限。|  
 |將組件部署至新資料庫或現有的資料庫|您必須是目標部署伺服器上 sysadmin 角色的成員。|  
   

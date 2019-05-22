@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.testconditions
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 852651601ba7264c079a42c82a4bbb626d902328
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 923c6fc93418cf2e46bf3970632ae0454f5a611d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529882"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101886"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>在 SQL Server 單元測試中使用測試條件
 在 SQL Server 單元測試中，系統會執行一或多個 Transact\-SQL 測試指令碼。 您可以在 Transact\-SQL 指令碼內評估結果，也可以在測試中定義用來傳回錯誤及使測試失敗的 THROW 或 RAISERROR 或測試條件來評估結果。 測試會傳回 [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) 類別的執行個體。 這個類別的執行個體會包含一個或多個資料集、執行時間以及受指令碼影響的資料列。 所有這些資訊都會在執行指令碼期間收集。 可以使用測試條件來評估這些結果。 SQL Server Data Tools 會提供一組預先定義的測試條件。 您也可以建立及使用自訂條件；請參閱 [SQL Server 單元測試的自訂測試條件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)。  
@@ -28,7 +28,7 @@ ms.locfileid: "52529882"
   
 |**測試條件**|**測試條件描述**|  
 |----------------------|----------------------------------|  
-|資料總和檢查碼|如果從 Transact\-SQL 指令碼所傳回結果集的總和檢查碼與預期的總和檢查碼不符，則失敗。 如需詳細資訊，請參閱 [指定資料總和檢查碼](#SpecifyDataChecksum)。<br /><br />**注意**：如果傳回的資料在每個測試回合都不同，則不建議使用此測試條件。 例如，如果結果集包含產生的日期或時間，或包含識別資料行，則測試會因為每個回合的總和檢查碼不同而失敗。|  
+|資料總和檢查碼|如果從 Transact\-SQL 指令碼所傳回結果集的總和檢查碼與預期的總和檢查碼不符，則失敗。 如需詳細資訊，請參閱 [指定資料總和檢查碼](#SpecifyDataChecksum)。<br /><br />**注意：** 如果傳回的資料會在測試回合之間變更，則不建議使用此測試條件。 例如，如果結果集包含產生的日期或時間，或包含識別資料行，則測試會因為每個回合的總和檢查碼不同而失敗。|  
 |空白 ResultSet|如果從 Transact\-SQL 指令碼傳回的結果集不是空白，則失敗。|  
 |執行時間|如果 Transact\-SQL 測試指令碼執行時間超出預期，則失敗。 預設執行時間是 30 秒。<br /><br />執行時間只適用於測試指令碼，不適用於測試前指令碼或測試後指令碼。|  
 |預期的結構描述|如果結果集的資料行和資料型別不符合為測試條件指定的資料行和資料型別，則失敗。 您必須透過測試條件的屬性來指定結構描述。 如需詳細資訊，請參閱 [指定預期的結構描述](#SpecifyExpectedSchema)。|  
@@ -42,9 +42,9 @@ ms.locfileid: "52529882"
 >   
 > 報告的 [持續期間] 不包括產生資料和部署結構描述所用的時間，因為這些動作是在測試執行之前發生。 若要檢視測試持續期間，請在 [測試結果] 視窗中選取測試回合，按一下滑鼠右鍵，然後選擇 [檢視測試結果詳細資料]。  
   
-您可以使用 SQL Server 單元測試設計工具的 [測試條件] 窗格，將測試條件加入至 SQL Server 單元測試。 如需詳細資訊，請參閱[如何：將測試條件加入至 SQL Server 單元測試](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)。  
+您可以使用 SQL Server 單元測試設計工具的 [測試條件] 窗格，將測試條件加入至 SQL Server 單元測試。 如需詳細資訊，請參閱[如何：將測試條件新增至 SQL Server 單元測試](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)。  
   
-您也可以直接編輯測試方法程式碼，加入更多的功能。 如需詳細資訊，請參閱[如何：開啟要編輯的 SQL Server 單元測試](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)和[如何：撰寫在單一交易範圍內執行的 SQL Server 單元測試](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)。 例如，您可以加入 Assert 陳述式，將功能加入至測試方法。 如需詳細資訊，請參閱[在 SQL Server 單元測試中使用 Transact-SQL 判斷提示](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md)。  
+您也可以直接編輯測試方法程式碼，加入更多的功能。 如需詳細資訊，請參閱[如何：開啟要編輯的 SQL Server 單元測試](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)及[如何：撰寫在單一交易範圍內執行的 SQL Server 單元測試](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)。 例如，您可以加入 Assert 陳述式，將功能加入至測試方法。 如需詳細資訊，請參閱[在 SQL Server 單元測試中使用 Transact-SQL 判斷提示](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md)。  
   
 ## <a name="expected-failures"></a>預期的失敗  
 您可以建立 SQL Server 單元測試，測試不應成功的行為。 這些預期的失敗有時稱為負面測試。 一些例子如下：  
@@ -73,7 +73,7 @@ ms.locfileid: "52529882"
   
 任何未指定的參數都會被忽略。 可以將這些參數傳遞至資料庫程式碼中的 **THROW** 陳述式。 如果指定 MatchFirstError = false，此屬性會符合例外狀況中的任何 SqlErrors。 預設行為 (MatchFirstError = true) 是只符合第一個發生的錯誤。  
   
-如需如何使用預期的例外狀況和負面的 SQL Server 單元測試的範例，請參閱[逐步解說：建立及執行 SQL Server 單元測試](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)。  
+如需如何使用預期例外狀況以及負面 SQL Server 單元測試的範例，請參閱[逐步解說：建立及執行 SQL Server 單元測試](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)。  
   
 ## <a name="SpecifyDataChecksum"></a>指定資料總和檢查碼  
 若要顯示 SQL Server 單元測試設計工具，請在 [方案總管] 中按兩下單元測試原始程式碼檔。  
@@ -92,7 +92,7 @@ ms.locfileid: "52529882"
   
     [ **TestConditionName 的組態** ] 對話方塊隨即出現。  
   
-5.  指定要測試的資料庫連接。 如需詳細資訊，請參閱[如何：建立資料庫連接](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)。  
+5.  指定要測試的資料庫連接。 如需詳細資訊，請參閱[如何：建立資料庫連線](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)。  
   
 6.  根據預設，測試的 Transact\-SQL 主體會出現在 [編輯] 窗格中。 您可以視需要修改程式碼以產生預期的結果。 例如，如果您的測試有測試前程式碼，可能必須加入該程式碼。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "52529882"
   
     [ **TestConditionName 的組態** ] 對話方塊隨即出現。  
   
-5.  指定要測試的資料庫連接。 如需詳細資訊，請參閱[如何：建立資料庫連接](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)。  
+5.  指定要測試的資料庫連接。 如需詳細資訊，請參閱[如何：建立資料庫連線](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)。  
   
 6.  根據預設，測試的 Transact\-SQL 主體會出現在 [編輯] 窗格中。 您可以視需要修改程式碼以產生預期的結果。 例如，如果您的測試有測試前程式碼，可能必須加入該程式碼。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "52529882"
   
 8.  如果結果符合預期的測試結果，請按一下 [ **確定**]。 否則請修改 Transact\-SQL 主體並重複步驟 6、7 和 8，直到結果符合預期為止。  
   
-    測試條件的 [ **值** ] 資料行會顯示預期的結構描述資訊。 例如，它可能會是「必須是: 2 個資料表」。  
+    測試條件的 [ **值** ] 資料行會顯示預期的結構描述資訊。 例如，它可能會是「必須是：2 個資料表」。  
   
 ## <a name="extensible-test-conditions"></a>可延伸測試條件  
 除了六個預先定義的測試條件，您也可以自行撰寫新的測試條件。 這些測試條件會顯示在 SQL Server 單元測試設計工具的 [測試條件] 窗格中。 如需詳細資訊，請參閱 [SQL Server 單元測試的自訂測試條件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)。  

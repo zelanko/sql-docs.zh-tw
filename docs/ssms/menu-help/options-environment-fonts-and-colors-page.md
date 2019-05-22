@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: edb990e57f3f02db207959a4511d3b23069b0db4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 755cc08f8e431e062ce9fdf3049d99453d724be6
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507754"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098382"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>選項 (環境 - 字型和色彩頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52507754"
 |--------|--------------|  
 |文字編輯器|變更文字編輯器的字型樣式、大小，以及色彩顯示設定，會影響預設文字編輯器裡文字的外觀。 這些設定並不會影響文字編輯器在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的外部所開啟的文件。|  
 |印表機|變更印表機的字型樣式、大小，以及色彩顯示設定，會影響列印文件裡文字的外觀。<br /><br />注意：您可以針對列印目的選取不同於文字編輯器所顯示字型的預設字型。 當列印同時包含單一位元組和雙位元組字元的程式碼時，這就非常有用。|  
-|[所有文字工具視窗]|變更此項目的字型樣式、大小，以及色彩顯示設定，會影響 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中有輸出窗格之工具視窗裡文字的外觀。 例如，[輸出] 視窗、[文字結果] 視窗等等。<br /><br />注意：對 [所有文字工具視窗] 項目的文字所做的變更，在您進行變更的工作階段中並不會生效。 您可以開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的其他執行個體，來評估這些變更。|  
+|[所有文字工具視窗]|變更此項目的字型樣式、大小，以及色彩顯示設定，會影響 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中有輸出窗格之工具視窗裡文字的外觀。 例如，[輸出] 視窗、[文字結果] 視窗等等。<br /><br />注意:對 [所有文字工具視窗] 項目的文字所做的變更，在您進行變更的工作階段中並不會生效。 您可以開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的其他執行個體，來評估這些變更。|  
 |尋找結果視窗|變更此項目的字型樣式、大小，以及色彩顯示設定，會影響 [尋找結果] 視窗裡文字的外觀。|  
 |輸出視窗|變更此項目的字型樣式、大小，以及色彩顯示設定，會影響 [輸出] 視窗裡文字的外觀。|  
 |方格結果|變更此項目的字型樣式、大小，以及色彩顯示設定，會影響 [查詢] 視窗的 [方格結果] 區域裡文字的外觀。|  
@@ -57,7 +57,7 @@ ms.locfileid: "52507754"
   
 某些顯示項目包含：  
   
--   指標邊界：位於程式碼編輯器的左邊，且會顯示中斷點和書籤圖示的邊界。  
+-   指示區邊界：位於程式碼編輯器的左邊，顯示中斷點和書籤圖示的邊界。  
   
 -   可摺疊的文字：在程式碼編輯器內，可以切換顯示與否的文字或程式碼區塊 (僅限 XML)。  
   

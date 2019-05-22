@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 83fb5aa641537e99f7562f6c4fd7981b8e2233b5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 30d657ed93a0ff272370f340dbba59c9e72c0079
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532770"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484328"
 ---
 # <a name="install-sql-server-database-engine"></a>安裝 SQL Server Database Engine
 
@@ -37,7 +37,7 @@ ms.locfileid: "52532770"
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   複寫 (選擇性元件)  
+-   [SQL Server 複寫](../../relational-databases/replication/sql-server-replication.md) - 這是選擇性元件  
 
 -   [機器學習服務 (資料庫內) 含 R 與 Python](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) - 是選擇性元件
 
@@ -47,6 +47,9 @@ ms.locfileid: "52532770"
   
     > [!NOTE]  
     >  在這版的安裝程式中選取 [Data Quality Services] 核取方塊，並不會安裝 Data Quality Services (DQS) 伺服器。 您必須執行額外的安裝後步驟，才能安裝 DQS 伺服器。 如需詳細資訊，請參閱 [安裝 Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)。  
+    
+- [外部資料的 PolyBase 查詢服務](../../relational-databases/polybase/polybase-guide.md) - 這是選擇性元件 
+
   
  下列其他功能是許多典型使用者案例的選項：  
   

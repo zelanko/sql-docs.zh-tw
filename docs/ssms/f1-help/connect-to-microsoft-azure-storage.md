@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.swb.windowsazurestorage.connect.f1
 - SQL13.SWB.WINDOWSAZURESTORAGE.CONNECT.F1
 ms.assetid: ''
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cd9af00c06b2e999ec38d201e11fe305f7bb4e71
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2bcacf7ab799ef36ab0f28bcc78ad27be2afe67c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523575"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102707"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>連接到 Microsoft Azure 儲存體
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52523575"
    >
    >  其中一個 HTTP 標頭之值的格式不正確。 (Microsoft.SqlServer.StorageClient)。
    >
-   >  遠端伺服器傳回錯誤：(400) 錯誤的要求。 (系統)
+   >  遠端伺服器傳回錯誤：(400) 不正確的要求。 (系統)
 
 2.  **帳戶金鑰** - 針對指定的儲存體帳戶指定帳戶金鑰。  
   

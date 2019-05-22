@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0818f5ffbc75a296996e1cf3b5683dacbc0efa2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fb07dfb65055ff622e0142381743a15a8d29ad9d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63203048"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -72,6 +72,9 @@ ALTER DATABASE 目前文章會提供變更資料庫名稱和定序的語法與�
 [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 提供在 Always On 可用性群組的次要複本上設定次要資料庫的 ALTER DATABASE [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 選項語法與相關資訊。
 
 [ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 可為與資料庫相容性層級相關的 ALTER DATABASE SET 選項提供語法與相關資訊。
+
+[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
+提供與資料庫範圍設定 (用於個別的資料庫層級設定，例如查詢最佳化及查詢執行相關行為) 相關的語法。 
 
 ## <a name="syntax"></a>語法
 

@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e33e1602f98094c6085d179982a252aa6abc840b
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: f5cda166fdd343392f85f5537877cbc7da3e05ae
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478283"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503730"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -70,7 +70,7 @@ ms.locfileid: "58478283"
 ```
 --Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
-    [ database_name . [ schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name. | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
 [ ; ]
 ```
@@ -80,7 +80,7 @@ CREATE TABLE
 ```
 --Disk-Based CREATE TABLE Syntax
 CREATE TABLE
-    [ database_name . [ schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ AS FileTable ]
     ( {   <column_definition>
         | <computed_column_definition>
@@ -265,10 +265,9 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```
 
 ```
---Memory optimized
-LE Syntax
+--Memory optimized CREATE TABLE Syntax
 CREATE TABLE
-    [database_name . [schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition>
     | [ <table_constraint> ] [ ,... n ]
     | [ <table_index> ]
@@ -362,7 +361,7 @@ AS FileTable
 
 *column_name*      
 *computed_column_expression*    
-這是定義計算資料行值的運算式。 計算資料行是一個虛擬資料行，除非資料行標示了 PERSISTED，否則，並未實際儲存在資料表中。 這個資料行是從使用相同資料表之其他資料行的運算式得出的。 例如，計算資料行的定義可以是 **cost** AS **price** \* **qty**。這個運算式可以是非計算的資料行名稱、常數、函數、變數，以及一個或多個運算子所連接的這些項目的任何組合。 這個運算式不能是子查詢，也不能包含別名資料類型。
+這是定義計算資料行值的運算式。 計算資料行是一個虛擬資料行，除非資料行標示了 PERSISTED，否則，並未實際儲存在資料表中。 這個資料行是從使用相同資料表之其他資料行的運算式得出的。 例如，計算資料行的定義可以是 **cost** AS **price** \* **qty**。這個運算式可以是非計算的資料行名稱、常數、函式、變數，以及一或多個運算子所連接這些項目的任何組合。 這個運算式不能是子查詢，也不能包含別名資料類型。
 
 計算資料行可用在選取清單、WHERE 子句、ORDER BY 子句中，或任何能夠使用規則運算式的其他位置中，但下列狀況例外：
 
@@ -424,7 +423,7 @@ FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** }
 如需相關的 FILESTREAM 主題，請參閱[二進位大型物件 - Blob 資料](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。
 
 [ _type\_schema\_name_**.** ] *type_name*     
-指定資料行的資料類型及其所屬的結構描述。 針對磁碟基礎的資料表，資料類型可以是下列其中一項：
+指定資料行的資料類型及其所屬結構描述。 針對磁碟基礎的資料表，資料類型可以是下列其中一項：
 
 - 系統資料類型
 - 依據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型的別名資料類型。 別名資料類型是利用 `CREATE TYPE` 陳述式建立的，在這之後才能在資料表定義中使用它們。 在 `CREATE TABLE` 陳述式期間，可以覆寫別名資料類型的 NULL 或 NOT NULL 指派。 不過，長度規格無法變更；在 `CREATE TABLE` 陳述式中無法指定別名資料類型的長度。
@@ -460,10 +459,10 @@ DEFAULT
 指定在插入期間未明確提供值時，提供給資料行的值。 除了定義為 **timestamp** 或含有 `IDENTITY` 屬性的資料行之外，任何資料行都可以套用 DEFAULT 定義。 如果使用者定義的類型資料行指定了預設值，該類型應該支援將 *constant_expression* 隱含地轉換成使用者定義的類型。 當卸除資料表時，便會移除 DEFAULT 定義。 預設值只能使用常數值 (例如字元字串)、純量函數 (系統函數、使用者自訂函數或 CLR 函數) 或 NULL。 若要維護與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的相容性，您可以將條件約束名稱指派給 DEFAULT。
 
 *constant_expression*    
-這是用來做為資料行預設值的常數、NULL 或系統函數。
+這是用來作為資料行預設值的常數、NULL 或系統函數。
 
 *memory_optimized_constant_expression*     
-這是支援用來做為資料行預設值的常數、NULL 或系統函數。 必須在原生編譯的預存程序中受到支援。 如需原生編譯預存程序中的內建函數詳細資訊，請參閱[原生編譯的 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。
+這是支援用來作為資料行預設值的常數、NULL 或系統函數。 必須在原生編譯的預存程序中受到支援。 如需原生編譯預存程序中的內建函數詳細資訊，請參閱[原生編譯的 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。
 
 IDENTITY    
 指出新資料行是識別欄位。 當新資料列加入資料表時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會提供資料行的唯一累加值。 識別欄位通常用來搭配 PRIMARY KEY 條件約束一起使用，做為資料表的唯一資料列識別碼。 可以將 `IDENTITY` 屬性指派給 **tinyint**、**smallint**、**int**、**bigint**、**decimal(p,0)** 或 **numeric(p,0)** 資料行。 每份資料表都只能建立一個識別欄位。 繫結的預設值和 DEFAULT 條件約束無法搭配識別欄位使用。 您必須同時指定種子和遞增，或同時不指定這兩者。 如果同時不指定這兩者，預設值便是 (1,1)。
@@ -472,7 +471,7 @@ IDENTITY
 這是載入資料表的第一個資料列所用的值。
 
 *increment*    
-這是加入先前載入的資料列之識別值的累加值。
+這是新增至先前所載入資料列之識別值的累加值。
 
 NOT FOR REPLICATION    
 在 `CREATE TABLE` 陳述式中，可以為 IDENTITY 屬性、FOREIGN KEY 條件約束和 CHECK 條件約束指定 `NOT FOR REPLICATION` 子句。 如果為 `IDENTITY` 屬性指定了這個子句，當複寫代理程式執行插入時，值不會在識別欄位中累加。 如果條件約束指定了這個子句，當複寫代理程式執行插入、更新或刪除作業時，不會強制執行這個條件約束。
@@ -606,10 +605,10 @@ CONSTRAINT
 這是條件約束的名稱。 在資料表所屬的結構描述內，條件約束名稱必須是唯一的。
 
 NULL | NOT NULL     
-決定資料行中是否允許使用 NULL 值。 嚴格來說，NULL 並不算是條件約束，但是您可以如同指定 NOT NULL 一樣加以指定。 只有在也指定了 PERSISTED 時，計算資料行才能指定 NOT NULL。
+決定資料行中是否允許使用 Null 值。 嚴格來說，NULL 並不算是條件約束，但是您可以如同指定 NOT NULL 一樣加以指定。 只有在也指定了 PERSISTED 時，計算資料行才能指定 NOT NULL。
 
 PRIMARY KEY    
-這是一個條件約束，它利用唯一索引來強制執行一個或多個指定資料行的實體完整性。 每份資料表都只能建立一個 PRIMARY KEY 條件約束。
+這是一個條件約束，透過唯一索引來強制執行一或多個指定資料行的實體完整性。 每份資料表都只能建立一個 PRIMARY KEY 條件約束。
 
 UNIQUE     
 這是一項條件約束，它透過唯一索引為指定的一個或多個資料行提供實體完整性。 一份資料表可以有多個 UNIQUE 條件約束。
@@ -623,12 +622,12 @@ FOREIGN KEY REFERENCES
 這是一個條件約束，它提供一個或多個資料行中之資料的參考完整性。 FOREIGN KEY 條件約束要求資料行中的每個值存在於所參考之資料表中的一個或多個對應的被參考資料行中。 FOREIGN KEY 條件約束所參考的資料行，必須是所參考的資料表中的 PRIMARY KEY 或 UNIQUE 條件約束，或是所參考的資料表之 UNIQUE INDEX 中所參考的資料行。 計算資料行的外部索引鍵也必須標示為 PERSISTED。
 
 [ _schema\_name_**.**] *referenced_table_name*]      
-這是 FOREIGN KEY 條件約束所參考之資料表的名稱，及其所屬的結構描述。
+這是 FOREIGN KEY 條件約束所參考的資料表名稱，及其所屬的結構描述。
 
 **(** *ref_column* [ **,**... *n* ] **)** 這是 FOREIGN KEY 條件約束所參考資料表中的一個資料行或資料行清單。
 
 ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }         
-指定如果建立的資料表中之資料列有參考關聯性，且在父資料表中刪除了所參考的資料列，建立的資料表中之資料列會發生什麼動作。 預設值是 NO ACTION。
+指定如果建立的資料表中資料列有參考關聯性，且在父資料表中刪除了所參考的資料列，則這些資料列會發生什麼動作。 預設值是 NO ACTION。
 
 NO ACTION      
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會產生一則錯誤，且會回復父資料表中之資料列的刪除動作。
@@ -684,22 +683,22 @@ CHECK
 這是一個傳回 TRUE 或 FALSE 的邏輯運算式。 這個運算式不能含有別名資料類型。
 
 *column*     
-這是資料表條件約束中的一個資料行或一份資料行清單 (用括號括住)，用來指示條件約束定義中所用的各個資料行。
+這是資料表條件約束中的一個資料行或一份資料行清單 (用括弧括住)，用來指示條件約束定義中所用的各個資料行。
 
 [ **ASC** | DESC ]     
 指定一個或多個資料行參與資料表條件約束的排序順序。 預設值是 ASC。
 
 *partition_scheme_name*     
-這是分割區配置的名稱，這個分割區配置定義了分割區資料表的分割區所對應的檔案群組。 分割區配置必須在資料庫內。
+這是資料分割配置的名稱，這個資料分割配置定義資料分割資料表的分割區所對應的檔案群組。 分割區配置必須在資料庫內。
 
 [ _partition\_column\_name_**.** ]      
-指定分割區資料表將進行分割的資料行。 資料行必須符合資料分割函數中指定的資料行，因為 *partition_scheme_name* 正在以資料類型、長度及有效位數使用這個資料分割函數。 參與分割區函數的計算資料行必須明確地標示為 PERSISTED。
+指定資料分割資料表將進行分割的資料行。 資料行必須符合資料分割函數中指定的資料行，因為 *partition_scheme_name* 正在以資料類型、長度及有效位數使用這個資料分割函數。 參與分割區函數的計算資料行必須明確地標示為 PERSISTED。
 
 > [!IMPORTANT]
 > 我們建議您在分割區資料表的分割資料行上指定 NOT NULL，以及在非分割區資料表 (ALTER TABLE...SWITCH 作業的來源或目標) 上進行這項作業。 這樣做可以確保分割資料行上的任何 CHECK 條件約束都不需要檢查 Null 值。
 
 WITH FILLFACTOR **=**_fillfactor_     
-指定用來儲存索引資料的每個索引頁面，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 所應加以填滿的程度。 使用者指定的 *fillfactor* 可以是從 1 到 100 的值。 如果未指定值，預設值為 0。 填滿因數值 0 和 100 在各方面都是一樣的。
+指定用來儲存索引資料的每個索引頁，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 所應加以填滿的程度。 使用者指定的 *fillfactor* 可以是從 1 到 100 的值。 如果未指定值，預設值為 0。 填滿因數值 0 和 100 在各方面都是一樣的。
 
 > [!IMPORTANT]
 > 為了與舊版相容，我們保持將 WITH FILLFACTOR = *fillfactor* 記載為適用於 PRIMARY KEY 或 UNIQUE 條件約束的唯一索引選項，但未來版本的文件不會再依照這個方式來說明。
@@ -724,7 +723,7 @@ COMPRESSION_DELAY
 如需 `COMPRESSION_DELAY` 使用時機的建議，請參閱[開始使用資料行存放區進行即時作業分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
 
 \< table_option> ::=    
-指定一個或多個資料表選項。
+指定一或多個資料表選項。
 
 DATA_COMPRESSION     
 針對指定的資料表、分割區編號或分割區範圍指定資料壓縮選項。 選項如下：
@@ -774,7 +773,7 @@ WITH
 ```
 
 \<index_option> ::=      
-指定一個或多個索引選項。 如需這些選項的完整描述，請參閱 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)。
+指定一或多個索引選項。 如需這些選項的完整描述，請參閱 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)。
 
 PAD_INDEX = { ON | **OFF** }     
 當設為 ON 時，便會在索引的中繼層級頁面上，套用 FILLFACTOR 所指定的可用空間百分比。 當設為 OFF 或未指定 FILLFACTOR 值時，考慮到中繼頁面的各組索引鍵，中繼層級頁面容量的填滿程度，會保留至少足以容納一個資料列的空間，且資料列是索引所能擁有的大小上限。 預設值為 OFF。

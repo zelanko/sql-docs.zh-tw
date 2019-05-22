@@ -2,21 +2,21 @@
 title: 報表伺服器 ExecutionLog 和 ExecutionLog3 檢視 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 17819ebf76409602108fe6eaa656a44190a12ab0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414096"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619696"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>報表伺服器執行記錄和 ExecutionLog3 檢視
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]報表伺服器執行記錄包含有關在伺服器上執行，或在原生模式向外延展部署或 SharePoint 伺服器陣列中多個伺服器上執行之報表的資訊。 您可以使用報表執行記錄來了解要求報表的頻率、最常使用的輸出格式，以及每一個處理階段所花費處理時間的毫秒數。 此記錄會包含執行報表之資料集查詢所花費時間長度的資訊，以及處理資料所花費的時間。 如果您是報表伺服器管理員，可以檢閱記錄資訊、識別長時間執行工作，並且向報表作者提出有關他們能夠改善之報表區域 (資料集或處理) 的建議。  
@@ -260,8 +260,6 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 -   **ExternalImages**  
   
-     加入 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
      此值會以毫秒來表示。 此資料可用來診斷效能問題。 從外部 Web 伺服器擷取影像所需的時間可能會讓整體報表執行變慢。  
   
     ```  
@@ -272,9 +270,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **連接**  
-  
-     加入 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+-   **連線**  
   
      多層結構  
   
@@ -322,9 +318,9 @@ select * from ExecutionLog2 order by TimeStart DESC
  下表描述在報表執行記錄中擷取的資料。  
   
 |「資料行」|Description|  
-|------------|-----------------|  
+|------------|------------------------------------------------------------|  
 |InstanceName|處理要求的報表伺服器執行個體名稱。|  
-|ReportPath|報表的路徑結構。  例如，名為 "test" 且位於報表管理員根資料夾中報表會具有 "/test" 的 ReportPath。<br /><br /> 名為 "test" 且儲存在報表管理員 "samples" 資料夾中報表會具有 "/Samples/test/" 的 ReportPath|  
+|ReportPath|報表的路徑結構。 儲存在根資料夾中名為 "test" 的轉貼包含 "/test" 的 ReportPath。<br /><br /> 儲存在資料夾 "samples" 中名為 "test" 的報表，可能包含 "/Samples/test/" 的 ReportPath|  
 |UserName|使用者識別碼。|  
 |ExecutionID||  
 |RequestType|要求類型 (使用者或系統)。|  

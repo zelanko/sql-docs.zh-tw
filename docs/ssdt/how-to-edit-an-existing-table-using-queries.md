@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b9687226caec47161fb42038994be279a89becc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c988efd63982b2dc5ebd8e73f2291a19b3b9b76
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659576"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090229"
 ---
 # <a name="how-to-edit-an-existing-table-using-queries"></a>如何：使用查詢編輯現有的資料表
 您可以撰寫 Transact\-SQL 查詢，編輯資料表的定義或資料。 若要以視覺化方式在資料表中檢視或輸入資料，請使用資料編輯器，如[連接的資料庫開發](../ssdt/connected-database-development.md)所述。  
@@ -32,7 +32,7 @@ ms.locfileid: "47659576"
   
 3.  選取 [Address] 資料行的 [允許 Null] 方塊。 請注意，指令碼窗格中對應的程式碼會立即變更為 `NULL`。  
   
-4.  遵循[如何：使用 Power Buffer 更新連接的資料庫](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)主題中的步驟更新資料庫。  
+4.  遵循[如何：使用 Power Buffer 更新連線的資料庫](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)主題中的步驟更新資料庫。  
   
 ### <a name="to-populate-data-in-new-tables-using-a-transact-sql-query"></a>使用 Transact\-SQL 查詢在新資料表中填入資料  
   

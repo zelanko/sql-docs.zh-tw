@@ -16,7 +16,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 775e9ac76d6c3b16d2c9ba6ce688a2a3dfbf48d6
 ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63127703"
@@ -47,7 +47,7 @@ ms.locfileid: "63127703"
   
  本文件中， **\<客戶 >** 是元素節點， **cid**是屬性節點，和 **"Important"** 是文字節點。  
   
- XPath 是一種圖表導覽語言，可用來從 XML 文件中選取一組節點。 每個 XPath 運算子都會根據前一個 XPath 運算子所選取的節點集來選取節點集。 例如，提供一組**\<客戶 >** 節點，XPath 可以選取所有**\<順序 >** 節點**日期**屬性值 **"7/14/1999"**。 產生的節點集會包含訂單日期為 7/14/1999 的所有訂單。  
+ XPath 是一種圖表導覽語言，可用來從 XML 文件中選取一組節點。 每個 XPath 運算子都會根據前一個 XPath 運算子所選取的節點集來選取節點集。 例如，提供一組 **\<客戶>** 節點，XPath 可以選取所有 **\<順序>** 節點 **日期** 屬性值 **"7/14/1999"** 。 產生的節點集會包含訂單日期為 7/14/1999 的所有訂單。  
   
  全球資訊網協會 (W3C) 將 XPath 語言定義成標準導覽語言。 SQLXML 4.0 會實作 W3C XPath 規格中，位於子集 http://www.w3.org/TR/1999/PR-xpath-19991008.html。  
   

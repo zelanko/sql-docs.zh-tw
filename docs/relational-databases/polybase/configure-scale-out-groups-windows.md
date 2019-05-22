@@ -1,6 +1,6 @@
 ---
 title: 改善 Windows 上的 PolyBase 相應放大群組 | Microsoft Docs
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -9,12 +9,13 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 792791cf7ac6abebc56f1b59381fb5d18e83d237
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: ab93c4a4ea1a09fa9af8adea765b342d7ac9f340
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417479"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774717"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>改善 Windows 上的 PolyBase 相應放大群組
 
@@ -52,7 +53,7 @@ ms.locfileid: "52417479"
   
    - PQTH4A-CMP02  
   
-2. 網域帳戶︰*PQTH4A\PolyBaseUse*r  
+2. 網域帳戶：*PQTH4A\PolyBaseUse*r  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>在所有電腦上安裝包含 PolyBase 的 SQL Server
 

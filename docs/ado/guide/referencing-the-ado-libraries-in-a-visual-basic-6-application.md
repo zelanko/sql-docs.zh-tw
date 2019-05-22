@@ -33,11 +33,11 @@ ADO 程式庫匯入的 Microsoft Visual Basic 6 應用程式，您必須在 Visu
   
 2.  按一下 [**專案**功能表項目，然後選取**參考...** 從下拉式選單] 面板。  
   
-3.  從**可用的參考**，核取方塊**Microsoft ActiveX Data Objects *n.n*文件庫**，其中***n.n***代表最新版本號碼。 **位置**下方的欄位應該識別為自選 *$installDir\msado15.dll*，其中 *$installDir*表示在其中的目錄路徑的 ADO 程式庫已安裝。  
+3.  從 **可用的參考** ，核取方塊 **Microsoft ActiveX Data Objects *n.n* 文件庫** ，其中 ***n.n*** 代表最新版本號碼。 **位置**下方的欄位應該識別為自選 *$installDir\msado15.dll*，其中 *$installDir*表示在其中的目錄路徑的 ADO 程式庫已安裝。  
   
 4.  如果您想要使用 ADO MD，重複步驟 3 選取 **（多維度） 的 Microsoft ActiveX Data Objects *n.n*程式庫**。 **位置**欄位應該識別這項選擇作為 *$installDir\msadomd.dll*。  
   
-5.  如果您想要使用 ADOX，重複步驟 3 選取**Microsoft ADO 分機*n.n* DDL 和安全性**。 **位置**欄位應該識別這項選擇作為 *$installDir\msadox.dll*。  
+5.  如果您想要使用 ADOX，重複步驟 3 選取 **Microsoft ADO 分機*n.n* DDL 和安全性** 。 **位置**欄位應該識別這項選擇作為 *$installDir\msadox.dll*。  
   
 6.  按一下 **確定**完成設定的參考。  
   

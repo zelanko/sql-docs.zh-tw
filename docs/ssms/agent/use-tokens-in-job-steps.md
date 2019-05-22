@@ -14,16 +14,16 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 05e88dd8ce75875b44248916cd7bdb238f621e13
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+ms.openlocfilehash: c6a48d0eb6abae94ba6e3c54e0aa5b0b6b874371
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342876"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089445"
 ---
 # <a name="use-tokens-in-job-steps"></a>在作業步驟中使用 Token
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "58342876"
 |**(MSSA)**|主要 SQLServerAgent 服務名稱。|  
 |**(OSCMD)**|用於執行 **CmdExec** 作業步驟之程式的前置詞。|  
 |**(SQLDIR)**|安裝有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的目錄。 根據預設，此一值為 C:\Program Files\Microsoft SQL Server\MSSQL。|  
-|**(SQLLOGDIR)**|SQL Server 錯誤記錄檔資料夾路徑的取代 Token，例如 $(ESCAPE_SQUOTE(SQLLOGDIR))。|  
+|**(SQLLOGDIR)**|SQL Server 錯誤記錄檔資料夾路徑的取代 Token，例如 $(ESCAPE_SQUOTE(SQLLOGDIR))。 此 Token 僅適用於 SQL Server 2014 和更新版本。|  
 |**(STEPCT)**|此步驟已執行之次數的計數 (不包含重試)。 可利用步驟命令來強制結束多重步驟迴圈 (Loop)。|  
 |**(STEPID)**|步驟識別碼。|  
 |**(SRVR)**|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的電腦名稱。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是具名執行個體，這也包括執行個體名稱。|  

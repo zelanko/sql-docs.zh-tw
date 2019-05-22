@@ -2,18 +2,18 @@
 title: 在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼 | Microsoft Docs
 ms.date: 03/26/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 62048b27a917684188c8d8c47cfc67817ed63efa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ac4cd0cda54e3bb6c0f6723155f7be22b544a5a5
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528584"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571442"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼
 
@@ -49,7 +49,7 @@ ms.locfileid: "52528584"
 |項目|已移轉|SharePoint|Description|  
 |----------|--------------|----------------|-----------------|  
 |密碼|**否**|**否**|密碼 **不會** 移轉。 內容項目移轉之後，請更新目的地伺服器上的認證資訊。 例如，具有預存認證的資料來源。|  
-|我的報表|**否**|**否**|原生模式 [我的報表] 功能是以個別使用者登入為基礎，因此，除非使用 **-u** 參數執行 rss 指令碼，否則指令碼服務無法存取 [我的報表] 資料夾中使用者的內容。 此外，[我的報表] 不屬於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的功能，所以資料夾中的項目無法複製到 SharePoint 環境中。 因此，指令碼不會複製來源原生模式報表伺服器上 [我的報表] 資料夾中的報表項目<br /><br /> 若要使用這個指令碼移轉 [我的報表] 資料夾中的內容，請完成下列步驟：<br /><br /> 1.在報表管理員中建立新資料夾。 或者，您可以為每位使用者建立資料夾或子資料夾。<br />2.以其中一位具有 [我的報表] 內容的使用者身分登入。<br />3.在 [報表管理員] 中，按一下 [我的報表] 資料夾。<br />4.按一下資料夾的 [詳細資料] 檢視。<br />5.選取要複製的每個報表。<br />6.在 [報表管理員] 工具列中，按一下 [移動]。<br />7.選取所需的目的地資料夾。<br />8.對每位使用者重複步驟 2-7。<br />9.執行指令碼。|  
+|我的報表|**否**|**否**|原生模式 [我的報表] 功能是以個別使用者登入為基礎，因此，除非使用 **-u** 參數執行 rss 指令碼，否則指令碼服務無法存取 [我的報表] 資料夾中使用者的內容。 此外，[我的報表] 不屬於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的功能，所以資料夾中的項目無法複製到 SharePoint 環境中。 因此，指令碼不會複製來源原生模式報表伺服器上 [我的報表] 資料夾中的報表項目<br /><br /> 若要使用這個指令碼移轉 [我的報表] 資料夾中的內容，請完成下列步驟：<br /><br /> 1.在報表管理員中建立新資料夾。 或者，您可以為每位使用者建立資料夾或子資料夾。<br />2.以其中一位具有 [我的報表] 內容的使用者身分登入。<br />3.在 [報表管理員] 中，按一下 [我的報表] 資料夾。<br />4.按一下資料夾的 [詳細資料] 檢視。<br />5.選取要複製的每一份報表。<br />6.在 [報表管理員] 工具列中，按一下 [移動]。<br />7.選取所需的目的地資料夾。<br />8.對每位使用者重複步驟 2-7。<br />9.執行指令碼。|  
 |記錄|**否**|**否**||  
 |記錄設定|是|是|雖然記錄設定會移轉，但是記錄詳細資料「不會」移轉。|  
 |[排程]|是|是|若要移轉排程，則必須在目標伺服器上執行 SQL Server Agent。 如果 SQL Server Agent 未在目標上執行，您將會看見類似這句的錯誤訊息：<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  

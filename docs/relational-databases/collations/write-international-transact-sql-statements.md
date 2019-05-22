@@ -1,7 +1,7 @@
 ---
 title: 撰寫國際通用的 Transact-SQL 陳述式 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -19,20 +19,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fece5fabc394ff01175273378a2fb7c23ef483cf
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 8983d2dc82da8d923eb5b29b0626b20aae0eb853
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256563"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776109"
 ---
 # <a name="write-international-transact-sql-statements"></a>撰寫國際通用的 Transact-SQL 陳述式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   如果遵循下列的指導方針，使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的資料庫與資料庫應用程式將更能從一個語言移植至另一個語言，或可支援多種語言：  
+
+-   從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，使用：
+    -   **char**、**varchar** 及 **varchar(max)** 資料類型 (使用[支援 UTF-8 的定序](../../relational-databases/collations/collation-and-unicode-support.md#utf-8-support))。
+    -   **nchar**、**nvarchar** 及 **nvarchar(max)** 資料類型 (使用任何定序)。      
+
+    這可避免字碼頁轉換問題。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
+
+-   最多到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]，使用 **nchar**、**nvarchar** 及 **nvarchar(max)** 來取代所有使用的 **char**、**varchar** 及 **varchar(max)** 資料類型。 這可避免字碼頁轉換問題。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 
+    > [!IMPORTANT]
+    > **text** 資料類型已淘汰，不應用於新的開發工作。 計劃將 **text** 資料轉換為 **varchar(max)**。
   
--   使用 **nchar**、 **nvarchar**，和 **nvarchar(max)** 來取代所有 **char**、 **varchar**，和 **text**資料類型。 如此一來您就不需要考慮字碼頁轉換的問題。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
-  
--   當您執行月份和週中日的比較和運算時，請使用數值的日期部分，而不要使用名稱字串。 不同的語言設定會傳回不同的月份和週中日名稱。 例如，語言設定為「英文 (美國)」時，DATENAME(MONTH,GETDATE()) 會傳回 May；當語言設定為「德文」時，會傳回 Mai；而當語言設定為「法文」時，會傳回 mai。 請改用如 DATEPART 的函數，使用數字月份而不用名稱。 當您要將結果集顯示給使用者時，請使用 DATEPART 名稱，因為日期名稱通常比數值表示法來得有意義。 但是，不要根據特定語言的顯示名稱來撰寫程式碼邏輯。  
+-   您在執行月份和週中日的比較和運算時，請使用數值的日期部分，而不要使用名稱字串。 不同的語言設定會傳回不同的月份和週中日名稱。 例如，語言設定為「英文 (美國)」時，`DATENAME(MONTH,GETDATE())` 會傳回 `May`；當語言設定為「德文」時，會傳回 `Mai`；而當語言設定為「法文」時，會傳回 `mai`。 請改用如 [DATEPART](../../t-sql/functions/datepart-transact-sql.md) 的函式，使用數字月份而非名稱。 當您要將結果集顯示給使用者時，請使用 DATEPART 名稱，因為日期名稱通常比數值表示法來得有意義。 但是，不要根據特定語言的顯示名稱來撰寫任何程式碼邏輯。  
   
 -   當您在比較或輸入至 INSERT 或 UPDATE 陳述式中指定日期時，請使用所有語言設定都作相同解譯的常數：  
   
@@ -46,14 +54,15 @@ ms.locfileid: "54256563"
   
     -   使用其他 API 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼、預存程序和觸發程序的應用程式，應該使用未分隔的數值字串。 例如 *yyyymmdd* 為 19980924。  
   
-    -   使用其他 API 的應用程式，或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼、預存程序和觸發程序，都應該針對 **time**、 **date**、 **smalldate**、 **datetime**、 **datetime2**，和 **datetimeoffset** 資料類型以及字元字串資料類型之間的所有轉換使用明確樣式參數的 CONVERT 陳述式。 例如，下列陳述式在所有日期格式連接設定下的解譯都是一樣的：  
+    -   使用其他 API 的應用程式，或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼、預存程序及觸發程序，都應該針對 **time**、**date**、**smalldate**、**datetime**、**datetime2** 和 **datetimeoffset** 資料類型與字元字串資料類型之間的所有轉換，使用具有明確樣式參數的 [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) 陳述式。 例如，下列陳述式在所有日期格式連接設定下的解譯都是一樣的：  
   
-        ```  
+        ```sql  
         SELECT *  
         FROM AdventureWorks2012.Sales.SalesOrderHeader  
         WHERE OrderDate = CONVERT(DATETIME, '20060719', 101)  
         ```  
   
-         如需詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
-  
-  
+## <a name="see-also"></a>另請參閱
+[CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)     
+[DATEPART &#40;Transact-SQL&#41;](../../t-sql/functions/datepart-transact-sql.md)        
+[定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)      

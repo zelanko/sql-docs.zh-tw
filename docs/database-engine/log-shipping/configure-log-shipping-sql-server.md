@@ -13,12 +13,12 @@ ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20fc1e12f4aa3647016b4f39734eb0fa05cd7105
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d19670ec51172fc704d0387664f0c484315c7be7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703806"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105981"
 ---
 # <a name="configure-log-shipping-sql-server"></a>設定記錄傳送 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47703806"
   
      [必要條件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要設定記錄傳送，請使用：**  
   
@@ -70,7 +70,7 @@ ms.locfileid: "47703806"
   
 5.  在 **[到備份資料夾的網路路徑]** 方塊中，輸入您針對交易記錄檔備份資料夾所建立之共用的網路路徑。  
   
-6.  如果備份資料夾位於主要伺服器，請在 **[如果備份資料夾位於主要伺服器上，請輸入至該資料夾的本機路徑]** 方塊中，輸入備份資料夾的本機路徑 (如果備份資料夾不在主要伺服器，您可以將這個方塊留空)。  
+6.  **若備份資料夾位於主要伺服器上，請在 [備份資料夾] 方塊中鍵入本機路徑。** (如果備份資料夾不在主要伺服器，您可以將這個方塊留空)。  
   
     > [!IMPORTANT]  
     >  如果主要伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶是在本機系統帳戶下執行，您必須在主要伺服器上建立備份資料夾，並指定該資料夾的本機路徑。  
@@ -79,7 +79,7 @@ ms.locfileid: "47703806"
   
 8.  請注意 **[備份作業]** 之下 **[排程]** 方塊所列的備份排程。 如果您想要自訂安裝的排程，請按一下 **[排程]** ，並視需要調整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 排程。  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 在建立記錄傳送設定時，您可以選擇以下其中一個選項來控制記錄備份的備份壓縮行為： **[使用預設伺服器設定]**、 **[壓縮備份]** 或 **[不要壓縮備份]**。 如需詳細資訊，請參閱 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 在建立記錄傳送設定時，您可以透過選擇下列其中一個選項，來控制記錄備份的備份壓縮行為：[使用預設伺服器設定]、[壓縮備份]，或 [不要壓縮備份]。 如需詳細資訊，請參閱 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
   
 10. 按一下 [確定] 。  
   

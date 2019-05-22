@@ -11,15 +11,15 @@ f1_keywords:
 - sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog
 - sql.data.tools.SqlProjectImportSnapshotDialog.dialog
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c564788a1d77d9af83de28a2b4dbea022ea28ec1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4093d18cfce9e7a5632039cf819955762c84adc1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530790"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098074"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>如何：建立專案的快照集
 **資料層應用程式**檔案提供了資料庫結構描述建立當時的唯讀表示。 其本質上被視為資料庫結構描述，您可以從中將結構描述物件匯回專案。 您也可以將它與資料庫或專案的結構描述進行比較，然後更新資料庫或專案以反映快照集之中定義的結構描述。  
@@ -52,7 +52,7 @@ ms.locfileid: "52530790"
 3.  按一下 [摘要] 頁面中的 [完成]。 請注意，在 [方案總管] 中，被刪除的資料表已經還原至專案。  
   
     > [!WARNING]  
-    > 匯入快照集會將快照集結構描述中的所有資料庫實體都匯入至專案， 因此可能會建立重複的實體。 例如，每個資料表和檢視表現在都包含本身的額外複本，它的名稱為 <ObjectName_1>。 在 [方案總管] 中，以滑鼠右鍵按一下每一個重複的物件，再選取 [刪除] 將它從專案中移除。  
+    > 匯入快照集會將快照集結構描述中的所有資料庫實體都匯入至專案， 因此可能會建立重複的實體。 例如，每個資料表和檢視現在都包含本身的額外複本，它的名稱為 <ObjectName_1>。 在 [方案總管] 中，以滑鼠右鍵按一下每一個重複的物件，再選取 [刪除] 將它從專案中移除。  
   
 ### <a name="to-compare-snapshots"></a>若要比較快照集  
   
@@ -65,5 +65,5 @@ ms.locfileid: "52530790"
     使用 [結構描述比較]，您可以輕鬆地尋找不同快照集的差異。 在這種情況下，您可以找出專案在開發過程中的成長方式。  
   
 ## <a name="see-also"></a>另請參閱  
-[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[操作說明：使用結構描述比較以比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

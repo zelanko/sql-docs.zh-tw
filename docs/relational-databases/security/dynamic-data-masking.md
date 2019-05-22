@@ -1,8 +1,8 @@
 ---
 title: 動態資料遮罩 | Microsoft Docs
-ms.date: 04/23/2018
+ms.date: 05/02/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
@@ -10,45 +10,45 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82afdd3febbd85efc137cc8877f5759ad6428ede
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 06a6ef378e621d055d039d22ea023d8d0d68f25b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317778"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088980"
 ---
 # <a name="dynamic-data-masking"></a>動態資料遮罩
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 ![動態資料遮罩](../../relational-databases/security/media/dynamic-data-masking.png)
 
 動態資料遮罩 (DDM) 會對不具權限的使用者遮罩機密資料，從而限制其曝光。 它可用來大幅簡化您的應用程式中安全性的設計和編碼。  
 
-動態資料遮罩讓使用者能夠指定要顯示多少機密資料，藉此協助防止未經授權存取機密資料，同時盡可能減少對應用程式層的影響。 可以在資料庫上設定 DDM，隱藏在指定資料庫欄位查詢結果集內的機密資料，而資料庫中的資料則不會變更。 在現有應用程式使用動態資料遮罩相當容易，原因是遮罩規則已套用到查詢結果中。 許多應用程式都不需要修改現有查詢，就能遮罩機密資料。
+動態資料遮罩讓客戶能夠指定要顯示多少敏感性資料，藉此協助防止未經授權存取敏感性資料，同時盡可能減少對應用程式層的影響。 可以在指定資料庫欄位上設定 DDM，以隱藏查詢結果集中的敏感性資料。 使用 DDM 時，資料庫中的資料不會變更。 在現有應用程式使用動態資料遮罩相當容易，原因是遮罩規則已套用到查詢結果中。 許多應用程式都不需要修改現有查詢，就能遮罩機密資料。
 
 * 中央資料遮罩原則可直接作用於資料庫中的機密欄位上。
 * 指定無法存取敏感性資料之特殊權限的使用者或角色。
 * DDM 的特色在於完整遮罩和部分遮罩功能，以及數值資料的隨機遮罩。
 * 簡單的 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 命令可定義和管理遮罩。
 
-例如，話務中心支援人員可以從來電者的社會安全號碼或信用卡號碼其中幾個數字加以識別，但這些資料項目都不應該完全對支援人員曝光。 此時可以定義遮罩規則，使其遮罩任何查詢結果集內的任何社會安全號碼或信用卡號碼，只顯示最後四碼。 另一個例子是，開發人員可以使用適當的資料遮罩保護個人識別資訊 (PII) 資料，為疑難排解目的查詢生產環境，而不會違反法務遵循規定。
+例如，話務中心支援人員可以從來電者的社會安全號碼或信用卡號碼其中幾個數字加以識別。  社會安全號碼或信用卡號碼都不應該完全透露給支援人員。 此時可以定義遮罩規則，使其遮罩任何查詢結果集內的任何社會安全號碼或信用卡號碼，只顯示最後四碼。 另一個例子是，開發人員可以使用適當的資料遮罩保護個人識別資訊 (PII) 資料，為疑難排解目的查詢生產環境，而不會違反法務遵循規定。
 
 動態資料遮罩的目的在於限制機密限制的曝光，防止不該存取資料的使用者檢視該資料。 動態資料遮罩並不是用來防止資料庫使用者直接連接到資料庫，以及執行會讓機密資料片段曝光的全面查詢。 動態資料遮罩旨在補足其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性功能 (稽核、加密、資料列層級安全性...)，強烈建議您額外搭配這些功能使用此功能，讓資料庫中的敏感性資料獲得更妥善的保護。  
   
-動態資料遮罩提供於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]，並且使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令來設定。 如需使用 Azure 入口網站設定動態資料遮罩的其他資訊，請參閱 [開始使用 SQL Database 動態資料遮罩 (Azure 入口網站)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)。  
+動態資料遮罩提供於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]，並且使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令來設定。 如需使用 Azure 入口網站設定動態資料遮罩的詳細資訊，請參閱[開始使用 SQL 資料庫動態資料遮罩 (Azure 入口網站)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)。  
   
-## <a name="defining-a-dynamic-data-mask"></a>定義動態資料遮罩  
+## <a name="defining-a-dynamic-data-mask"></a>定義動態資料遮罩
  您可以在資料庫中的資料行定義遮罩規則，以模糊該資料行中的資料。 遮罩有四種類型。  
   
 |函數|Description|範例|  
 |--------------|-----------------|--------------|  
-|預設|請依據指定欄位的資料類型進行完整遮罩。<br /><br /> 對於字串資料類型，請使用 XXXX，或在欄位大小少於 4 個字元時使用較少的 X (**char**、**nchar**、**varchar**、**nvarchar**、**text**、**ntext**)。  <br /><br /> 對於數值資料類型，請使用零值 (**bigint**、**bit**、**decimal**、**int**、**money****numeric****smallint**、**smallmoney**、**tinyint**、**float**、**real**)。<br /><br /> 對於日期與時間資料類型，請使用 01.01.1900 00:00:00.0000000 (**date**、**datetime2**、**datetime**、**datetimeoffset**、**smalldatetime**、**time**)。<br /><br />對於二進位資料類型，請使用單一位元組的 ASCII 值 0 (**binary**、 **varbinary**、 **image**)。|範例資料行定義語法： `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> 範例替代語法： `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
-|Email|此遮罩方法可讓電子郵件地址的第一個字母和常數後置詞 ".com" 曝光，形式為電子郵件地址。 執行個體時提供 SQL Server 登入。 `aXXX@XXXX.com`。|範例定義語法： `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> 範例替代語法： `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
-|隨機|此隨機遮罩函數可用在任何數值類型，會以指定範圍內隨機的值遮罩原始值。|範例定義語法： `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> 範例替代語法： `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
-|自訂字串|此遮罩方法會讓第一個及最後一個字母曝光，並在中間加入自訂填補字串。 `prefix,[padding],suffix`<br /><br /> 注意：如果原始的值過短，而無法完成整個遮罩，一部分的前置詞或後置詞就不會曝光。|範例定義語法： `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> 範例替代語法： `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> 其他範例：<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
+|預設|請依據指定欄位的資料類型進行完整遮罩。<br /><br /> 對於字串資料類型，請使用 XXXX，或在欄位大小少於 4 個字元時使用較少的 X (**char**、**nchar**、**varchar**、**nvarchar**、**text**、**ntext**)。  <br /><br /> 對於數值資料類型，請使用零值 (**bigint**、**bit**、**decimal**、**int**、**money****numeric****smallint**、**smallmoney**、**tinyint**、**float**、**real**)。<br /><br /> 對於日期與時間資料類型，請使用 01.01.1900 00:00:00.0000000 (**date**、**datetime2**、**datetime**、**datetimeoffset**、**smalldatetime**、**time**)。<br /><br />對於二進位資料類型，請使用單一位元組的 ASCII 值 0 (**binary**、 **varbinary**、 **image**)。|範例資料行定義語法： `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> 替代語法的範例：`ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
+|Email|此遮罩方法會讓電子郵件地址的第一個字母和常數後置詞 ".com" 以形式為電子郵件地址形式來公開。 第 1 課：建立 Windows Azure 儲存體物件`aXXX@XXXX.com`。|範例定義語法： `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> 替代語法的範例：`ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
+|隨機|此隨機遮罩函數可用在任何數值類型，會以指定範圍內隨機的值遮罩原始值。|範例定義語法： `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> 替代語法的範例：`ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
+|自訂字串|此遮罩方法會公開第一個及最後一個字母，並在中間新增自訂填補字串。 `prefix,[padding],suffix`<br /><br /> 注意:如果原始的值過短，而無法完成整個遮罩，一部分的前置詞或後置詞就不會曝光。|範例定義語法： `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> 替代語法的範例：`ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> 其他範例：<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  您不需要任何特殊權限，只要有結構描述的標準 **CREATE TABLE** 和 **ALTER** 權限，就能建立含有動態資料遮罩的資料表。  
   
  新增、取代或移除資料行遮罩則需要資料表的 **ALTER ANY MASK** 權限和 **ALTER** 權限。 將 **ALTER ANY MASK** 授與資訊安全人員是適當作法。  
@@ -197,4 +197,4 @@ ALTER COLUMN LastName DROP MASKED;
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
- [開始使用 SQL 資料庫動態資料遮罩 (Azure Preview 入口網站)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+ [開始使用 SQL 資料庫動態資料遮罩 (Azure 入口網站)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  

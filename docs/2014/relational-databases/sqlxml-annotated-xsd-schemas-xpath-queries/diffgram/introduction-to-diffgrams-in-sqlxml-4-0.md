@@ -15,7 +15,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: f772e860509275c70ae4db05b2da0aa0b0d5418a
 ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63127716"
@@ -51,7 +51,7 @@ ms.locfileid: "63127716"
  這個元素的名稱**DataInstance**，用於說明用途，此文件中。 例如，如果從.NET Framework 中，windows 7 中的資料集所產生的 DiffGram**名稱**資料集屬性做為這個項目的名稱。 這個區塊包含變更之後的所有相關資料，可能包括尚未修改的資料。 DiffGram 處理邏輯會忽略此區塊中的項目， **diffgr: haschanges**未指定屬性。  
   
  **\<diffgr:before>**  
- 這個選擇性區塊包含必須更新或刪除的原始記錄執行個體 (元素)。 正在修改 （更新或刪除） 的所有資料庫都資料表 diffgram 必須顯示為最上層項目的**\<之前 >** 區塊。  
+ 這個選擇性區塊包含必須更新或刪除的原始記錄執行個體 (元素)。 正在修改 （更新或刪除） 的所有資料庫都資料表 diffgram 必須顯示為最上層項目的 **\<之前 >** 區塊。  
   
  **\<diffgr:errors>**  
  DiffGram 處理邏輯會忽略這個選擇性區塊。  
@@ -60,7 +60,7 @@ ms.locfileid: "63127716"
  DiffGram 命名空間中定義這些附註 **"urn: schemas-microsoft-microsoft-schemas-microsoft-com:-diffgram-01"**:  
   
  **id**  
- 此屬性用來在項目進行配對**\<之前 >** 並 **\<DataInstance >** 區塊。  
+ 此屬性用來在項目進行配對 **\<之前 >** 並 **\<DataInstance >** 區塊。  
   
  **hasChanges**  
  插入或更新作業，DiffGram 必須指定此屬性具有值**插入**或是**修改**。 如果這個屬性不存在中的對應項目 **\<DataInstance >** 忽略處理邏輯，而且沒有更新會執行。 如需實用範例，請參閱[DiffGram 範例&#40;SQLXML 4.0&#41;](diffgram-examples-sqlxml-4-0.md)。  

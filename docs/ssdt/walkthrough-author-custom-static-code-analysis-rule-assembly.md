@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3b5dcb7c6c40c17cf2cfa68d493217359511b93b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba52dfc0ff41cb1ee4a92fda4a37e368f0533474
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406235"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090159"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>為 SQL Server 編寫自訂靜態程式碼分析規則組件的逐步解說
 此逐步解說示範用來建立 SQL Server 程式碼分析規則的步驟。 在此逐步解說中建立的規則是用來避開預存程序、觸發程序和函數中的 WAITFOR DELAY 陳述式。  
@@ -539,7 +539,7 @@ ms.locfileid: "52406235"
   
 3.  按一下 [程式碼分析]。 您應該看到名稱為 RuleSamples.CategorySamples 的新分類。  
   
-4.  展開 RuleSamples.CategorySamples。 您應該看到 SR1004：避免在預存程序、觸發程序和函數中使用 WAITFOR DELAY 陳述式。  
+4.  展開 RuleSamples.CategorySamples。 您應該會看到 SR1004：避免在預存程序、觸發程序和函式中使用 WAITFOR DELAY 陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
 [資料庫程式碼分析規則的擴充性概觀](../ssdt/overview-of-extensibility-for-database-code-analysis-rules.md)  

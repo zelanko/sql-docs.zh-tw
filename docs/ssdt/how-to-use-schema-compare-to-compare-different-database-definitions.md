@@ -1,5 +1,5 @@
 ---
-title: 如何：使用結構描述比較，比較不同的資料庫定義 | Microsoft Docs
+title: 如何：使用結構描述比較來比較不同的資料庫定義 | Microsoft Docs
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -14,15 +14,15 @@ f1_keywords:
 - sql.data.tools.schemacompare.connectiondialog.f1
 - sql.data.tools.schemacompare.connectiondialog.error.f1
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2f8c03ebbb1b49258ae6a7f8744042f763fc7282
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd48c91bee175e3cc2bdb0031d70a9d8e68d95c4
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668546"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095935"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>如何：使用結構描述比較，比較不同的資料庫定義
 SQL Server Data Tools (SSDT) 包含結構描述比較公用程式，可讓您用來比較兩項資料庫定義。  比較的來源與目標可以是下列項目的任意組合：連接的資料庫、SQL Server 資料庫專案或快照集，或是 .dacpac 檔案。  比較的結果會顯示為必須對目標採取的一組動作，以讓目標能與來源相同。  比較完成之後，您就可以直接更新目標 (若目標為專案或資料庫) 或產生具有相同效果的更新指令碼。  
@@ -71,7 +71,7 @@ SQL Server Data Tools (SSDT) 包含結構描述比較公用程式，可讓您用
   
 7.  在 `Products` 群組中找到 `Tables` 資料表。 按一下該列，並注意此資料表顯示在 [物件定義] 窗格中的來源和目標定義已醒目提示差異。 您也可以展開 [結果] 窗格中的 `Products` 資料表所在當列，檢查此資料表有差異的特定元素。  
   
-8.  根據預設，所有差異都會包括在 [更新目標] 動作的範圍內。 您可以排除任何不想要同步處理的差異。 若要這麼做，請取消選取每一列中央 [動作] 欄內的方塊。 或者，以滑鼠右鍵按一下 [結構描述] 窗格中的任一列，然後選取 [排除]。 請注意，該列隨即呈現灰色。到了更新目標資料庫的時候，這一列的任何暫止變更都不會被列入考慮。  
+8.  根據預設，所有差異都會包括在 [更新目標] 動作的範圍內。 您可以排除任何不想要同步處理的差異。 若要這麼做，請取消選取每一列中央 [動作] 欄內的方塊。 或者，以滑鼠右鍵按一下 [結構描述] 窗格中的任一列，然後選取 [排除]。 請注意，該列隨即呈現灰色。到了更新目標資料庫的時候，這一列的任何暫止變更都不會列入考慮。  
   
     您也能以滑鼠右鍵按一下某個群組列，再選取 [全部排除] 或 [全部包含]，這相當於取消選取或選取隸屬該群組的所有差異。 當您是依結構描述將結果分組時，即可利用此快捷方法包含或排除對特定結構描述所做的一切變更。  
   

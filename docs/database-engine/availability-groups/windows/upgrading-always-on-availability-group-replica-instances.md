@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c7b3874277b1046233e4f728a19d3eee60aa851
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 18086e3f6fc0d49a269dc0a9b2d8ad65579faec5
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535850"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450094"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升級 AlwaysOn 可用性群組複本執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "58535850"
 - [檢查是否針對任何 AG 資料庫使用異動資料擷取或複寫](#special-steps-for-change-data-capture-or-replication)：如果啟用 AG 中的任何資料庫進行異動資料擷取 (CDC)，請完成這些[指示](#special-steps-for-change-data-capture-or-replication)。
 
 >[!NOTE]  
->在就地升級複本的輪流升級之外，不支援在相同 AG 中混用 SQL Server 執行個體版本。 較高版本的 SQL Server 執行個體無法作為新複本新增至現有的 AG。 例如，SQL Server 2017 複本無法新增至現有的 SQL Server 2016 AG。 若要使用 AG 移轉至新版本的 SQL Server 執行個體，唯一支援的方法是 SQL Server 2016 Enterprise Edition 或更新版本中的分散式 AG。
+>在輪流升級之外，不支援在相同 AG 中混用 SQL Server 執行個體的版本，且不應該長時間存在於該狀態，因為升級應該很快會發生。 升級 SQL Server 2016 和更新版本的另一個選項，是透過使用分散式的可用性群組。
 
 ## <a name="rolling-upgrade-basics-for-always-on-ags"></a>AlwaysOn AG 的輪流升級基本概念  
 當您執行伺服器升級或更新時，請遵循下列指導方針，好讓停機時間及 AG 的資料遺失情況降至最低：  

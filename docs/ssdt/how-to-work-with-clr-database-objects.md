@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.allowsqlclrdebugging
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8192bd6c074f5ed90868af9f256935e6222fc525
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9e0abe651d44c045f3ab92c5388aa740216cff0b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396881"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099587"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>如何：使用 CLR 資料庫物件
 除了使用 Transact\-SQL 程式語言以外，還可以使用 .NET Framework 語言來建立擷取及更新資料的資料庫物件。 以受控碼撰寫的資料庫物件稱為 SQL Server Common Language Runtime (CLR) 資料庫物件。 如需使用 SQL Server 中裝載的 CLR 資料庫物件之優點的說明，以及如何在 Transact\-SQL 與 CLR 之間擇一使用，請參閱 [CLR 整合的優點](../relational-databases/clr-integration/clr-integration-overview.md)和[使用受控碼來建立資料庫物件的優點](https://msdn.microsoft.com/library/k2e1fb36.aspx) \(機器翻譯\)。  
@@ -27,7 +27,7 @@ ms.locfileid: "52396881"
   
 [CLR] 和 [CLR 建置] 屬性頁包含許多在專案中使用 CLR 資料庫物件的設定。 具體來說，[CLR] 屬性頁含有權限等級設定，可設定對 CLR 組件的權限。 它還擁有 [產生 DDL] 設定，可以控制是否要產生已加入專案中之 CLR 資料庫物件的 DDL。 [CLR 建置] 屬性頁包含所有的編譯器選項，可用來設定專案中 CLR 程式碼的編譯組態。 您可以存取這些屬性頁，方法是以滑鼠右鍵按一下 [方案總管] 中的專案，再選取 [屬性]。  
   
-若要啟用 CLR 資料庫物件偵錯，請開啟 [SQL Server 物件總管]。 以滑鼠右鍵按一下含有您要偵錯之 CLR 資料庫成品的伺服器，然後選擇 [允許 SQL/CLR 偵錯]。 訊息方塊隨即出現，其中會顯示警告：「請注意，當偵錯時，此伺服器上的所有 Managed 執行緒都將停止。 是否要在此伺服器上啟用 SQL CLR 偵錯？」。 當您對 CLR 資料庫物件進行偵錯時，中斷執行就會中斷伺服器上的所有執行緒，並影響其他使用者。 因此，您不應在實際執行伺服器上偵錯 CLR 資料庫物件的應用程式。 您也應注意，一旦啟動偵錯之後，就無法再變更 [SQL Server 物件總管] 中的設定。 啟動下一個偵錯工作階段前，在 [SQL Server 物件總管] 中進行的變更不會生效。  
+若要啟用 CLR 資料庫物件偵錯，請開啟 [SQL Server 物件總管]。 以滑鼠右鍵按一下含有您要偵錯之 CLR 資料庫成品的伺服器，然後選擇 [允許 SQL/CLR 偵錯]。 訊息方塊隨即出現並顯示警告：「請注意，當偵錯時，此伺服器上的所有受控執行緒都將停止。 是否要在此伺服器上啟用 SQL CLR 偵錯？」。 當您對 CLR 資料庫物件進行偵錯時，中斷執行就會中斷伺服器上的所有執行緒，並影響其他使用者。 因此，您不應在實際執行伺服器上偵錯 CLR 資料庫物件的應用程式。 您也應注意，一旦啟動偵錯之後，就無法再變更 [SQL Server 物件總管] 中的設定。 啟動下一個偵錯工作階段前，在 [SQL Server 物件總管] 中進行的變更不會生效。  
   
 如需有關建置 CLR 資料庫物件之需求的詳細資訊，請參閱[利用 Common Language Runtime (CLR) 整合建立資料庫物件](https://msdn.microsoft.com/library/ms131046.aspx)。  
   

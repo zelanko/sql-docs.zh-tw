@@ -14,12 +14,12 @@ ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34d019792a898290c65371e32f83b49911cb27a3
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 9600287fb847dcea4f24c565a843e9757e364c5e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973825"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105237"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 可用性群組：互通性 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "57973825"
 |資料庫加密|[加密的資料庫與 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/encrypted-databases-with-always-on-availability-groups-sql-server.md)|
 |資料庫快照集|[資料庫快照集與 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)|
 |FILESTREAM 與 FileTable|[FILESTREAM 和 FileTable 與 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)|
-|全文檢索搜尋|注意：全文檢索索引與 Always On 次要資料庫同步。|
+|全文檢索搜尋|注意:全文檢索索引與 Always On 次要資料庫同步。|
 |記錄傳送|[從記錄傳送遷移至 AlwaysOn 可用性群組的必要條件 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)|
 |遠端 Blob 存放區 (RBS)|[遠端 Blob 存放區 &#40;RBS&#41; 及 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)|
 |複寫|[設定 AlwaysOn 可用性群組的複寫 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)<br /><br /> [維護 AlwaysOn 發行集資料庫 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)<br /><br /> [複寫、變更追蹤、異動資料擷取和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)<br /><br /> [複寫訂閱者及 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)|
@@ -52,6 +52,7 @@ ms.locfileid: "57973825"
 下列可與 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 相互溝通的功能有特定限制。 如需詳細資訊，請參閱連結主題。
 
 - 跨資料庫交易/分散式交易 ([!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 和 Windows Server 2016)。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組和資料庫鏡像的跨資料庫交易和分散式交易 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
+- [查詢統計資料系統資料收集器](../../../relational-databases/data-collection/system-data-collection-set-reports.md#Query)無法在具有不可讀取次要項目的環境中可靠地執行。 若要使用查詢統計資料系統資料收集器，請將所有次要可用性群組複本設為允許[讀取存取](configure-read-only-access-on-an-availability-replica-sql-server.md)。 
 
 ## <a name="NoInterop"></a> 不與 AlwaysOn 可用性群組互通的功能
 

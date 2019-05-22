@@ -1,7 +1,7 @@
 ---
 title: 還原和復原概觀 (SQL Server) | Microsoft 文件
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 013458c80692f4b7f31ba1302028585496a0cd25
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 6a358aacd5bbfe165b908a3c737d4809cf1555f0
+ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242039"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65461820"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>還原和復原概觀 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +155,22 @@ ms.locfileid: "54242039"
 -   [Recovery Advisor：簡介](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx) \(英文\)  
   
 -   [Recovery Advisor：使用 SSMS 來建立/還原分割備份](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx) \(英文\)  
-  
+
+## <a name="adr"></a> 加速資料庫復原
+
+SQL Server 2019 Preview CTP 2.3 引進適用於內部部署 SQL Server 的[加速資料庫復原](/azure/sql-database/sql-database-accelerated-database-recovery/)。 加速資料庫復原藉由重新設計 SQL Server 的資料庫引擎復原處理序來大幅提升資料庫可用性，尤其是針對長時間執行的交易。 [資料庫復原](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started)是一項 SQL Server 為了讓每個資料庫都能以交易一致 (或正常) 狀態啟動所使用的處理序。 啟用加速資料庫復原的資料庫，其在容錯移轉或其他非正常關機之後完成復原的速度會大幅加快。 
+
+您可以可以使用下列語法，為 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 或更新版本上的每個資料庫啟用加速資料庫復原：
+
+```sql
+ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
+```
+
+> [!NOTE]
+> 無須在 Azure SQL DB 中使用此語法也能利用這項功能，因為它預設為開啟。
+
+若您有可能進行大型交易的重要資料庫，請在預覽期間實驗這項功能。 請將意見反應提供給 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]小組](<https://aka.ms/sqlfeedback>)。
+
 ##  <a name="RelatedContent"></a> 相關內容  
  無。  
   

@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：加入與變更資料庫圖表 | Microsoft Docs
+title: 逐步解說：新增與變更資料庫圖表 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - database diagrams [SQL Server], designing
 - database diagrams [SQL Server], creating
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 177c3e0e4dcd6e632b82501441fdb240bcc19b42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e55163886d39fc59cd8ce8787088f3645fb7e51
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787496"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105595"
 ---
-# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>逐步解說：加入與變更資料庫圖表
+# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>逐步解說：新增及變更資料庫圖表
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 這個逐步解說將說明如何建立與修改資料庫圖表，以及透過資料庫圖表元件對資料庫進行變更。 您將看到如何將資料表加入至圖表、建立資料表之間的關聯性、建立資料行上的條件約束和索引，以及變更您查看每個資料表的資訊層級。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "47787496"
   
 3.  以滑鼠右鍵按一下 [資料庫圖表] 節點，再選擇 [新增資料庫圖表]。  
   
-    如果資料庫沒有建立圖表所需的物件，便會顯示下列訊息：**此資料庫沒有使用資料庫圖表所需的一或多個支援物件。要建立資料庫物件嗎?** 選擇 [ **是**]。  
+    若資料庫沒有建立圖表所需的物件，便會出現下列訊息：**此資料庫沒有使用資料庫圖表所需的一或多個支援物件。要建立資料庫物件嗎?** 選擇 [ **是**]。  
   
     出現 [新增資料表] 對話方塊。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47787496"
   
 1.  以滑鼠右鍵按一下 `Address` 資料表。 在快速鍵功能表上，指向 [資料表檢視]，然後按一下 [標準]。  
   
-    資料表方格會顯示三個資料行：[資料行名稱]、[資料類型] 和 [允許 Null]。  
+    資料表格線會顯示三個資料行：**資料行名稱**、**資料類型**，以及**允許 Null**。  
   
 2.  以滑鼠右鍵按一下 `Address` 資料表、按一下 [資料表檢視]，再選取 [索引鍵]。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47787496"
   
 2.  在 [選擇名稱] 對話方塊中，按一下 [確定]，接受預設名稱 **Table1**。  
   
-    隨即出現新的資料表方格，其中會有三個資料行：[資料行名稱]、[資料類型] 和 [允許 Null]。  
+    新的資料表格線隨即出現，並顯示三個資料行：**資料行名稱**、**資料類型**，以及**允許 Null**。  
   
 3.  將下列資訊新增至 **Table1**：  
   

@@ -14,22 +14,29 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a769ed13e8c95c3ae5a948f6a9bb1be577280e99
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 97eac599fd057d8a9ae335943e7e818df4b49ba4
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582762"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65372445"
 ---
-# <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection"></a>SQL Server 使用方式和診斷資料收集的本機稽核
+# <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server 使用狀況和診斷資料收集的本機稽核 (CEIP)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ## <a name="introduction"></a>簡介
 
-Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能可能會收集並傳送電腦或裝置的相關資訊。 這稱為「標準電腦資訊」。 [SQL Server 使用方式和診斷資料收集](https://support.microsoft.com/kb/3153756) \(英文\) 的本機稽核元件會將服務收集的資料寫入至指定的資料夾，代表將傳送給 Microsoft 的資料 (記錄)。 本機稽核的目的是要讓客戶看到 Microsoft 以此功能收集的所有資料，以用於相容性、法規或隱私權驗證的理由。  
+Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能可能會收集並傳送電腦或裝置的相關資訊。 這稱為「標準電腦資訊」。 [SQL Server 使用方式和診斷資料收集](usage-and-diagnostic-data-configuration-for-sql-server.md) \(英文\) 的本機稽核元件會將服務收集的資料寫入至指定的資料夾，代表將傳送給 Microsoft 的資料 (記錄)。 本機稽核的目的是要讓客戶看到 Microsoft 以此功能收集的所有資料，以用於相容性、法規或隱私權驗證的理由。  
 
 從 SQL Server 2016 CU2 開始，可以在 SQL Server 資料庫引擎和 Analysis Services (SSAS) 的執行個體層級設定。 在 SQL Server 2016 CU4 與 SQL Server 2016 SP1 中，也會啟用 SQL Server Integration Services (SSIS) 的本機稽核。 安裝程式執行期間所安裝的其他 SQL Server 元件，以及在安裝程式執行之後下載或安裝的 SQL Server 工具，沒有使用方式和診斷資料收集的本機稽核功能。
+
+## <a name="remarks"></a>Remarks
+
+ - 不支援移除或停用 SQL CEIP 服務。 
+ - 不支援從叢集群組移除 SQL CEIP 資源。 
+
+若要退出資料收集，請參閱[開啟或關閉本機稽核](#turning-local-audit-on-or-off)
 
 ## <a name="prerequisites"></a>Prerequisites 
 
@@ -190,7 +197,7 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 
 下面所列的資料行代表本機稽核檔案輸出的順序。 使用 SHA 256 的單向雜湊用於底下許多資料行的匿名值。  
 
-| [屬性] | 描述 | 範例值
+| [屬性] | Description | 範例值
 |-------|--------| ----------|
 |instanceUniqueID| 匿名的執行個體識別碼 | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
 |schemaVersion| SQLCEIP 結構描述版本 |  3 

@@ -24,7 +24,7 @@ Analysis Services 動態管理檢視 (DMV) 會傳回模型物件、 伺服器作
 
 DMV 查詢是執行 XML/A Discover 命令的替代方法。 對於大部分的系統管理員，撰寫 DMV 查詢比較簡單，因為語法以 SQL 為基礎。 此外，可以更輕鬆地讀取和複製以資料表格式傳回結果。 
   
-大多數 DMV 查詢會使用**選取 **陳述式並 **$System**結構描述搭配 XML/A 結構描述資料列集的範例：  
+大多數 DMV 查詢會使用 **選取** 陳述式並 **$System** 結構描述搭配 XML/A 結構描述資料列集的範例：  
   
 ```  
 SELECT * FROM $System.<schemaRowset>  

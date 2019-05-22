@@ -12,17 +12,17 @@ f1_keywords:
 - sql.data.tools.dropdatabaseconfirmation.dialog
 - sql.data.tools.dropmultipledatabasesconfirmation.dialog
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1c52b2bcd700d4b7399fe27c79063f4b27d4e68a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd4b8ab01b2b9f16938e9493d5e762cae59a6446
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676166"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090209"
 ---
-# <a name="how-to-delete-objects-and-resolve-dependencies"></a>如何：刪除物件及解析依存性
+# <a name="how-to-delete-objects-and-resolve-dependencies"></a>如何：刪除物件及解析相依性
 在 [SQL Server 物件總管] 中重新命名或刪除物件時，SQL Server Data Tools 會自動偵測該物件的所有相依性物件，並視需要準備 ALTER 指令碼以重新命名或卸除相依性。  
   
 > [!WARNING]  
@@ -47,7 +47,7 @@ ms.locfileid: "47676166"
     > [!WARNING]  
     > SSDT 不會自動更新以指令碼為主的相依性 (如從檢視表至資料表的參考) 或預存程序。 在重新命名之後，您可以使用 [錯誤清單] 窗格尋找所有其他相依性，再手動加以修正。  
   
-5.  遵循先前的[如何：使用 Power Buffer 更新連接的資料庫](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)程序中的步驟套用變更。  
+5.  遵循先前[如何：使用 Power Buffer 更新連線的資料庫](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)程序中的步驟套用變更。  
   
 6.  再次以滑鼠右鍵按一下 [SQL Server 物件總管] 中的 [Customers] 資料表，然後選取 [檢視資料]。 請注意，在重新命名作業之後資料表資料完整無損。  
   

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - target servers [SQL Server], encryption
 - multiserver environments [SQL Server], setting encryption options on target servers
 ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dd6e43157f8b822f62b915a5f09079ee8368cf25
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ea6458989062ef87ed113134c0984cab356f63d0
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699836"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099872"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>在目標伺服器上設定加密選項
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,5 +45,5 @@ ms.locfileid: "51699836"
 > [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
-[如何：啟用 Database Engine 的加密連接 (SQL Server 組態管理員)](https://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)  
+[操作說明：啟用資料庫引擎的加密連線 (SQL Server 組態管理員)](https://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)  
   

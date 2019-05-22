@@ -13,12 +13,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8573984e58f3442f1536dfd3c4deeabc4636fa2
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 773492f038339a561a1f73ff48f5d1a88b72cadc
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217816"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946436"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>將一般檔案匯入 SQL 精靈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,14 +54,14 @@ PROSE 會分析輸入檔中的資料模式，來推斷資料行名稱、類型�
 
 ![精靈 Excel](media/import-flat-file-wizard/importffexample.png)
 
-### <a name="step-1-access-wizard-and-intro-page"></a>步驟 1：存取精靈及簡介頁面
+### <a name="step-1-access-wizard-and-intro-page"></a>步驟 1:存取精靈及簡介頁面
 遵循[此處](#started)的說明存取精靈。
 
 精靈的第一頁是歡迎頁面。 若不想再看到此頁面，可按一下 [不要再顯示此開始頁面]。
 
 ![精靈簡介](media/import-flat-file-wizard/importffintro.png)
 
-### <a name="step-2-specify-input-file"></a>步驟 2：指定輸入檔
+### <a name="step-2-specify-input-file"></a>步驟 2:指定輸入檔
 按一下 [瀏覽] 以選取輸入檔。 依預設，該精靈會搜尋 .csv 與 .txt 檔案。 
 
 新的資料表名稱應為唯一，若名稱重複，精靈不會允許您前往下一步。

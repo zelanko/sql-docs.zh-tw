@@ -11,33 +11,17 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 04ccb88fd3df348b21f61b0a01d4e49ce944c81c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: b2157846fe2102a35412c82b0da24638298aafd2
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872318"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104916"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>監視 Always On 可用性群組的效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Always On 可用性群組的效能層面，對於維護關鍵任務資料庫的服務等級協定 (SLA) 來說非常重要。 了解可用性群組如何將記錄傳送至次要複本，可協助您 預估可用性實作的復原時間目標 (RTO) 與復原點目標 (RPO)，以及針對效能不佳的可用性群組或複本來識別其中的瓶頸。 本文章會說明同步處理程序，示範如何計算一些關鍵計量，並提供某些常見效能疑難排解案例的連結。  
-  
- 其中涵蓋下列主題：  
-  
--   [資料同步處理程序](#data-synchronization-process)  
-  
--   [流程控制閘道](#flow-control-gates)  
-  
--   [預估容錯移轉時間 (RTO)](#estimating-failover-time-rto)  
-  
--   [預估潛在資料遺失 (RPO)](#estimating-potential-data-loss-rpo)  
-  
--   [監視 RTO 和 RPO](#monitoring-for-rto-and-rpo)  
-  
--   [效能疑難排解案例](#BKMK_SCENARIOS)  
-  
--   [實用的擴充事件](#BKMK_XEVENTS)  
-  
+   
 ##  <a name="data-synchronization-process"></a>資料同步處理程序  
  若要預估完整同步處理的時間並找出瓶頸，您需要了解同步處理程序。 效能瓶頸可能會在程序中的任何位置，而找出瓶頸可以協助您挖掘更深入的底層問題。 下圖和下表說明資料同步處理程序：  
   
@@ -48,7 +32,7 @@ ms.locfileid: "58872318"
 |**序列**|**步驟描述**|**註解**|**實用的計量**|  
 |1|記錄檔產生|記錄檔資料會排清至磁碟。 此記錄檔必須複寫到次要複本。 記錄檔記錄會進入傳送佇列。|[SQL Server:Database > Log bytes flushed\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|擷取|這會擷取每個資料庫的記錄檔並傳送至對應的夥伴佇列 (每個資料庫複本組一個)。 只要已連接可用性複本且資料移動未因任何原因暫停，此擷取程序就會持續執行，且資料庫複本組會顯示為「同步處理中」或「已同步處理」兩者之一。 如果擷取程序掃描訊息並將它加入佇列的速度不夠快，則會建立記錄檔傳送佇列。|[SQL Server:Availability Replica > Bytes Sent to Replica\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)，這是針對該可用性複本排入佇列的所有資料庫訊息總和彙總。<br /><br /> 主要複本上為 [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) 和 [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/秒)。|  
-|3|Send|這會清除每個資料庫複本佇列中的訊息佇列，並跨線路傳送到個別的次要複本。|[SQL Server:Availability Replica > Bytes sent to transport\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) 和 [SQL Server:Availability Replica > Message Acknowledgement Time](~/relational-databases/performance-monitor/sql-server-availability-replica.md) (毫秒)|  
+|3|Send|這會清除每個資料庫複本佇列中的訊息佇列，並跨線路傳送到個別的次要複本。|[SQL Server：可用性複本 > 每秒傳送到傳輸的位元組](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |4|接收並快取|每個次要複本會接收並快取訊息。|效能計數器 [SQL Server:Availability Replica > Log Bytes Received/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |5|強行寫入|這會排清次要複本上的記錄檔，以進行強行寫入。 記錄檔排清之後，會將認可傳回到主要複本。<br /><br /> 一旦強行寫入記錄檔，可以避免資料遺失。|效能計數器 [SQL Server:Database > Log Bytes Flushed/sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> 等候類型 [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|取消復原|在次要複本上重做排清的分頁。 頁面等候重做時會保留在重做佇列中。|[SQL Server:Database Replica > Redone Bytes/sec](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) 和 [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。<br /><br /> 等候類型 [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
@@ -456,7 +440,7 @@ ms.locfileid: "58872318"
 ##  <a name="BKMK_SCENARIOS"></a> 效能疑難排解案例  
  下表列出常見的效能相關疑難排解案例。  
   
-|狀況|描述|  
+|狀況|Description|  
 |--------------|-----------------|  
 |[疑難排解：可用性群組已超過 RTO](troubleshoot-availability-group-exceeded-rto.md)|在自動容錯移轉或規劃的手動容錯移轉之後若未遺失資料，容錯移轉時間會超過您的 RTO。 或者，當您評估同步認可次要複本 (例如自動容錯移轉夥伴) 的容錯移轉時間時，發現它超過您的 RTO。|  
 |[疑難排解：可用性群組已超過 RPO](troubleshoot-availability-group-exceeded-rpo.md)|在您執行強制手動容錯移轉之後，遺失的資料超過您的 RPO。 或者，當您計算非同步認可次要複本的潛在資料遺失時，發現它超過您的 RPO。|  

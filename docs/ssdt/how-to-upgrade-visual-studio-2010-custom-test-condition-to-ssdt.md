@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 44c895a3-dee0-4032-a60f-812f5fe3c713
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 95ef5fb0ab3443abbaddd47794d7458d0308d5f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 887e43ef6bc4f3c8105cb51256f35f400368fec9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773956"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098389"
 ---
-# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>HOW TO：將 Visual Studio 2010 自訂測試條件從舊版升級至 SQL Server Data Tools
+# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>如何：將 Visual Studio 2010 自訂測試條件從舊版升級至 SQL Server Data Tools
 若要使用在早於 SQL Server Data Tools 的版本中建立的測試單元條件，必須將它升級：  
   
 -   [更新參考](#UpdateReferences)  

@@ -9,12 +9,12 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 39d1986d599233b9578fca32ff993ea6cfed4492
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 146b484e96dc35a48ffa5bfe22b0564262bce9e9
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282702"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376880"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>使用 PowerShell 部署 SSIS 專案
 本快速入門示範如何使用 PowerShell 指令碼連線至資料庫伺服器，並將 SSIS 專案部署到 SSIS 目錄。
@@ -43,6 +43,36 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
 4. 如果您忘記 Azure SQL Database 伺服器登入資訊，請巡覽至 [SQL Database 伺服器] 頁面來檢視伺服器管理員名稱。 如有需要，您可以重設密碼。
 5. 按一下 [顯示資料庫連接字串]。
 6. 檢閱完整 **ADO.NET** 連接字串。
+
+## <a name="ssis-powershell-provider"></a>SSIS PowerShell 提供者
+為下列指令碼上方的變數提供適當的值，然後執行指令碼部署 SSIS 專案。
+
+> [!NOTE]
+> 下列範例會使用 Windows 驗證來部署至內部部署的 SQL Server。 使用 `New-PSDive` Cmdlet，以 SQL Server 驗證建立連線。 如果要連線至 Azure SQL Database 伺服器，您無法使用 Windows 驗證。
+
+```powershell
+# Variables
+$TargetInstanceName = "localhost\default"
+$TargetFolderName = "Project1Folder"
+$ProjectFilePath = "C:\Projects\Integration Services Project1\Integration Services Project1\bin\Development\Integration Services Project1.ispac"
+$ProjectName = "Integration Services Project1"
+
+# Get the Integration Services catalog
+$catalog = Get-Item SQLSERVER:\SSIS\$TargetInstanceName\Catalogs\SSISDB\
+
+# Create the target folder
+New-Object "Microsoft.SqlServer.Management.IntegrationServices.CatalogFolder" ($catalog, 
+$TargetFolderName,"Folder description") -OutVariable folder
+$folder.Create()
+
+# Read the project file and deploy it
+[byte[]] $projectFile = [System.IO.File]::ReadAllBytes($ProjectFilePath)
+$folder.DeployProject($ProjectName, $projectFile)
+
+# Verify packages were deployed.
+dir "$($catalog.PSPath)\Folders\$TargetFolderName\Projects\$ProjectName\Packages" | 
+SELECT Name, DisplayName, PackageId
+```
 
 ## <a name="powershell-script"></a>PowerShell 指令碼
 為下列指令碼上方的變數提供適當的值，然後執行指令碼部署 SSIS 專案。

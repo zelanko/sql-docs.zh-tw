@@ -17,7 +17,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 17f63eed1b0bed67b8a6c7208e9de377cec59e43
 ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63288312"
@@ -30,7 +30,7 @@ ms.locfileid: "63288312"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. 使用 number() 明確轉換函數  
  `number()` 函數會將引數轉換成數字。  
   
- 假設的值**ContactID**是非數值，下列查詢會轉換**ContactID**的數字並比較它與 4 這個值。 然後查詢會傳回所有**\<員工 >** 的內容節點的項目子系**ContactID**數值的值為 4 的屬性：  
+ 假設的值**ContactID**是非數值，下列查詢會轉換**ContactID**的數字並比較它與 4 這個值。 然後查詢會傳回所有 **\<員工>** 的內容節點的項目子系**ContactID**數值的值為 4 的屬性：  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -79,7 +79,7 @@ ms.locfileid: "63288312"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. 使用 string() 明確轉換函數  
  `string()` 函數會將引數轉換成字串。  
   
- 下列查詢會轉換**ContactID**成字串並比較它與字串值"4"。 此查詢會傳回所有**\<員工 >** 的內容節點的項目子系**ContactID** "4"的字串值：  
+ 下列查詢會轉換**ContactID**成字串並比較它與字串值"4"。 此查詢會傳回所有 **\<員工>** 的內容節點的項目子系**ContactID** "4"的字串值：  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

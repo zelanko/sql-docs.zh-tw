@@ -30,7 +30,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1ae1037a8b04ad1a16b8d42485105927015359a1
 ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62717905"
@@ -238,7 +238,7 @@ ms.locfileid: "62717905"
 </xsd:schema>  
 ```  
   
- 您可以指定匿名關聯性，而非指定具名關聯性。 在此案例中的整個內容 **\<註釋 >** ... **\</annotation >**，其中描述兩個關聯性時，顯示為的子元素**\<產品 >**。  
+ 您可以指定匿名關聯性，而非指定具名關聯性。 在此案例中的整個內容 **\<註釋 >** ... **\</annotation >**，其中描述兩個關聯性時，顯示為的子元素 **\<產品 >** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

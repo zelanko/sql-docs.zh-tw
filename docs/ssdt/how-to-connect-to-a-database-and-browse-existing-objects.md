@@ -1,5 +1,5 @@
 ---
-title: 如何：連線到資料庫及瀏覽現有的物件 | Microsoft Docs
+title: 如何：連線到資料庫及瀏覽現有物件 | Microsoft Docs
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.connectionpicker.f1
 ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7b29eac3b080a78f2552a2558b3ab3278b89a1bf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 21096819ebd7a54ab8f4505ad980c0e6a5266d6f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670459"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098109"
 ---
-# <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>如何：連接到資料庫及瀏覽現有的物件
+# <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>如何：連線到資料庫及瀏覽現有物件
 資料庫管理員與開發人員經常需要連接到即時資料庫，設計或瀏覽其結構描述，並查詢其物件。 Visual Studio 的 [SQL Server 物件總管] 現在包含專用的 [SQL Server] 節點，在這個節點下所有連接的 SQL Server 執行個體及其資料庫都依照與 SSMS 類似的階層分組。 連接的 SQL Server 執行個體可以是內部部署執行個體 (例如執行中的 SQL Server 2008 伺服器)，或是外部部署 SQL Azure 執行個體。  
   
 下列程序假設您已經安裝 AdventureWorks 範例資料庫。 使用 [CodePlex](https://msftdbprodsamples.codeplex.com/) 尋找及安裝不同 SQL Server 版本適用的範例資料庫。 如有需要，您也可以依照下列步驟，使用伺服器中現有的資料庫。  

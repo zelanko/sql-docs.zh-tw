@@ -1,7 +1,7 @@
 ---
 title: 定序與 Unicode 支援 | Microsoft 文件
 ms.custom: ''
-ms.date: 10/24/2017
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89b07e80d9bb9c0a04fe3dd1829ab4b7180f1718
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 97e66c1c276131876a8a74ab49627f43374cb78f
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206437"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775034"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -147,15 +147,20 @@ Unicode 是將字碼指標對應到字元的標準用法。 由於 Unicode 主�
     
     -   版本 100 定序    
     
-    -   版本 140 定序    
+    -   版本 140 定序   
+    
+    -   BIN2<sup>1</sup> 二進位定序
     
 -   UTF8 旗標無法套用至：    
     
     -   不支援增補字元 (\_SC) 或區分變化選取器 (\_VSS) 的 90 版定序    
     
-    -   BIN 或 BIN2 二進位定序    
+    -   BIN 或 BIN2<sup>2</sup> 二進位定序    
     
-    -   SQL\* 定序       
+    -   SQL\* 定序  
+    
+<sup>1</sup> 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 開始     
+<sup>2</sup> 最高使用 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3
     
 若要評估與使用 Unicode 或非 Unicode 資料類型有關的議題，請測試自己的狀況，在您的環境中衡量效能差異。 建議您將組織內系統上使用的定序標準化，並盡量部署 Unicode 伺服器和用戶端。    
     
@@ -245,7 +250,17 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 所有新定序都內建增補字元支援，因此沒有且不需要 SC 旗標。
 
 資料庫引擎索引、記憶體最佳化資料表、資料行存放區索引和原生編譯的模組都支援這些定序。
-    
+
+<a name="ctp23"></a>
+
+## <a name="utf-8-support"></a>UTF-8 支援
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始完整支援廣泛使用 UTF-8 字元編碼作為匯入或匯出編碼，或作為文字資料的資料庫層級或資料行層級定序。 UTF-8 允許用於 `CHAR` 和 `VARCHAR` 資料類型，並且在建立物件定序或將其變更為具有 `UTF8` 尾碼的定序時啟用。 
+
+例如，`LATIN1_GENERAL_100_CI_AS_SC` 至 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`。 UTF-8 僅適用於支援增補字元的 Windows 定序，已於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中推出。 `NCHAR` 和 `NVARCHAR` 只允許 UTF-16 編碼，並維持不變。
+
+此功能可能會節省大量儲存空間 (視使用的字元集而定)。 例如，使用啟用 UTF-8 的定序，將具有 ASCII (拉丁文) 字串的現有資料行資料類型從 `NCHAR(10)` 變更為 `CHAR(10)`，會使儲存體需求減少 50%。 這項減少的原因是 `NCHAR(10)` 需要 20 個位元組作為儲存空間，而 `CHAR(10)` 針對相同的 Unicode 字串需要 10 個位元組。
+
 ##  <a name="Related_Tasks"></a> 相關工作    
     
 |工作|主題|    
@@ -260,6 +275,7 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ##  <a name="Related_Content"></a> 相關內容    
 [SQL Server 最佳做法定序變更](https://go.microsoft.com/fwlink/?LinkId=113891)    
 [使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
+[撰寫國際通用的 Transact-SQL 陳述式](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 [SQL Server 最佳做法：移轉至 Unicode](https://go.microsoft.com/fwlink/?LinkId=113890) - 不再維護   
 [Unicode Consortium 網站](https://go.microsoft.com/fwlink/?LinkId=48619)    
     

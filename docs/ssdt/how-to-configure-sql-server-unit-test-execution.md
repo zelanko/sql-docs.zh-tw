@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 45c7429dfc8824859b06ef16616b0b999a3f6fd0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a1c1d288b79d9058a9aff7609290d2381c715575
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666757"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090188"
 ---
-# <a name="how-to-configure-sql-server-unit-test-execution"></a>HOW TO：設定 SQL Server 單元測試執行
+# <a name="how-to-configure-sql-server-unit-test-execution"></a>如何：設定 SQL Server 單元測試執行
 您可以藉由設定測試專案，指定可控制如何執行 SQL Server 單元測試的數個設定。 這些組態設定會儲存在測試專案的 app.config 檔案中。 如果直接編輯這個檔案，新的值會出現在測試組態對話方塊中。  
   
 方案可以包含多個測試專案。 每個測試專案都會包含一個 app.config 檔案 (也就是一組組態設定)。 因此，方案可以包含幾組不同的單元測試 (每個測試專案各有一組)，設定以不同的方式執行。  

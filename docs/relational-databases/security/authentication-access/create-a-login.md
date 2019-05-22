@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b2e04e5b63000bcdd7100c297ecd9d90dd33f27
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 728981e3b05aa82d80138006c0f1a13648cbcd25
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125578"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105591"
 ---
 # <a name="create-a-login"></a>建立登入
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "54125578"
   
  登入做為安全性主體時，可以將權限授與登入。 登入的範圍是整個 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 若要連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體上的特定資料庫，則登入必須對應到資料庫使用者。 資料庫內的權限是對資料庫使用者授與或拒絕，而不是登入。 範圍包含整個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的權限 (例如 **CREATE ENDPOINT** 權限) 可以授與登入。  
   
-> **注意：** 當登入連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，身分識別會在 master 資料庫進行驗證。 使用自主資料庫使用者來驗證 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 資料庫層級的連線。 使用自主資料庫使用者時不需要登入。 「自主資料庫」(Contained Database) 是與其他資料庫和裝載資料庫的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 執行個體 (以及 master 資料庫) 隔離的資料庫。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援 Windows 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的自主資料庫使用者。 當使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]時，結合自主資料庫使用者與資料庫層級防火牆規則。 如需詳細資訊，請參閱 [自主的資料庫使用者 - 使資料庫可攜](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+> **注意：** 當登入連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，身分識別會在 master 資料庫進行驗證。 使用自主資料庫使用者來驗證 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 資料庫層級的連線。 使用自主資料庫使用者時不需要登入。 「自主資料庫」(Contained Database) 是與其他資料庫和裝載資料庫的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 執行個體 (以及 master 資料庫) 隔離的資料庫。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援 Windows 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的自主資料庫使用者。 當使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]時，結合自主資料庫使用者與資料庫層級防火牆規則。 如需詳細資訊，請參閱 [自主的資料庫使用者 - 使資料庫可攜](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
 ##  <a name="Security"></a> Security  
 
@@ -234,7 +234,7 @@ ms.locfileid: "54125578"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     -- Create a login for SQL Server by specifying a server name and a Windows domain account name.  
@@ -250,7 +250,7 @@ ms.locfileid: "54125578"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     -- Creates the user "shcooper" for SQL Server using the security credential "RestrictedFaculty"   
@@ -264,7 +264,7 @@ ms.locfileid: "54125578"
   
  如需詳細資訊，請參閱 [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)。  
   
-##  <a name="FollowUp"></a> 後續操作：建立登入之後所採取的步驟  
+##  <a name="FollowUp"></a> 後續操作：建立登入之後採取的步驟  
  建立登入之後，登入就可以連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，但是不一定有足夠的權限可以執行任何實際工作。 下列清單提供常用登入動作的連結。  
   
 -   若要讓登入加入角色，請參閱 [加入角色](../../../relational-databases/security/authentication-access/join-a-role.md)。  

@@ -1,5 +1,5 @@
 ---
-title: 設定 SQL Server 工具的使用方式和診斷資料收集 | Microsoft Docs
+title: 設定 SQL Server 工具的使用方式和診斷資料收集 (CEIP) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c60eb8cac357fba523196385e72a1b05a2c36f4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: b089fd59814e8439bee929fdbc4f01fbc0340f75
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59243512"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376857"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools"></a>設定 SQL Server 工具的使用方式和診斷資料收集
+# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>設定 SQL Server 工具的使用方式和診斷資料收集 (CEIP)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -29,7 +29,7 @@ ms.locfileid: "59243512"
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>選擇加入和退出 SQL Server Data Tools 的 CEIP  
 
- 客戶經驗改進計畫是設計來協助 Microsoft 在經過一段時間之後改進其產品的計畫。 此計畫會收集電腦硬體相關資訊以及使用者如何使用我們的產品，而不會中斷使用者在電腦上的工作。 所收集的資訊可協助 Microsoft 找出應改善的功能。 在本文件中，我們將討論如何針對 Visual Studio 2017、Visual Studio 2015 和 Visual Studio 2013 選擇加入或退出 SQL Server Data Tools (SSDT) 的 CEIP。  
+ 客戶經驗改進計畫是設計來協助 Microsoft 在經過一段時間之後改進其產品的計畫。 此計畫會收集電腦硬體相關資訊以及使用者如何使用我們的產品，而不會中斷使用者在電腦上的工作。 所收集的資訊可協助 Microsoft 找出應改善的功能。 在本文件中，我們將討論如何針對 Visual Studio 2017、Visual Studio 2015 和 Visual Studio 2013 選擇加入或退出 SQL Server Data Tools (SSDT) 的 CEIP。  如需針對 SQL Server 選擇退出 CEIP 的詳細資訊，請參閱[針對 SQL Server 關閉本機稽核](usage-and-diagnostic-data-in-local-audit.md#turning-local-audit-on-or-off)。
 
 ### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2017"></a>選擇與控制 CEIP 與 SQL Server Data Tools for Visual Studio 2017
 

@@ -15,7 +15,7 @@ ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 80fc86c4b3d9385dc056b0c0ea9633f9f5f26675
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47782066"
@@ -28,7 +28,7 @@ ms.locfileid: "47782066"
 ## <a name="installing-ssma"></a>安裝 SSMA  
 若要使用 SSMA，您必須先安裝 SSMA 用戶端程式可以存取來源 Oracle 資料庫和目標執行個體的電腦上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 接著必須安裝的延伸模組組件，以及至少其中一個 Oracle 提供者 (OLE DB 或[!INCLUDE[vstecado](../../includes/vstecado_md.md)]) 正在執行的電腦上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 這些元件支援的資料移轉和 Oracle 系統函數的模擬。 如需安裝指示，請參閱[安裝 SSMA for Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)。  
   
-若要啟動 SSMA，按一下**啟動**，指向**所有程式**，指向**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手，Oracle**，然後按一下 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手，Oracle**。  
+若要啟動 SSMA，按一下**啟動**，指向 **所有程式** ，指向**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手，Oracle** ，然後按一下 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手，Oracle**。  
   
 ## <a name="ssma-for-oracle-user-interface"></a>SSMA for Oracle 使用者介面  
 安裝 SSMA 之後，您可以將 Oracle 資料庫移轉至使用 SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 最好先熟悉 SSMA 使用者介面在開始之前。 下圖顯示的 SSMA，包括中繼資料瀏覽器、 中繼資料、 工具列、 輸出 窗格中，以及錯誤清單 窗格中的使用者介面：  

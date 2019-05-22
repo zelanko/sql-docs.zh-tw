@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf274779c038f6cb2111a1b01ca8315cbd0002e4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 5e2261b8bf307d7d735957d52006b5b0f75ae0cc
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606418"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570805"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>設定 max degree of parallelism 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,22 @@ ms.locfileid: "51606418"
 -   除了查詢作業和索引作業外，此選項也會控制 DBCC CHECKTABLE、DBCC CHECKDB 和 DBCC CHECKFILEGROUP 的平行處理原則。 您可以使用追蹤旗標 2528 來停用這些陳述式的平行執行計畫。 如需詳細資訊，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
 ###  <a name="Guidelines"></a> 指導方針  
-當您設定 **max degree of parallelism** 伺服器組態值時，請使用下列指導方針：
+從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，若 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 在服務啟動期間偵測到啟動時每個 NUMA 節點或通訊端有超過八個實體核心，則會根據預設自動建立軟體式 NUMA 節點。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會將來自相同實體核心的邏輯處理器放入不同軟體式 NUMA 節點。 下表中建議事項目標是使所有平行查詢的背景工作執行緒保持在相同軟體式 NUMA 節點內。 這會改善查詢效能及工作負載 NUMA 節點中的背景工作執行緒分佈。 如需詳細資訊，請參閱[軟體式 NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)。
+
+從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，請在您設定**最大平行處理程度**伺服器設定值時，使用下列方針：
+
+||||
+|----------------|-----------------|-----------------|
+|具有單一 NUMA 節點的伺服器|少於 16 個邏輯處理器|MAXDOP 保持在或低於 # 個邏輯處理器數目|
+|具有單一 NUMA 節點的伺服器|多於 16 個邏輯處理器|將 MAXDOP 保持在最大 (MAX) 值為 16 個邏輯伺服器數量的一半|
+|具有多個 NUMA 節點的伺服器|每個 NUMA 節點少於 16 個邏輯處理器|每個 NUMA 節點的 MAXDOP 保持在或低於 # 個邏輯處理器數目|
+|具有多個 NUMA 節點的伺服器|每個 NUMA 節點多於 16 個邏輯處理器|將 MAXDOP 保持在最大 (MAX) 值為每個 NUMA 節點 16 個邏輯伺服器數量的一半|
+  
+> [!NOTE]
+> 上表中的 NUMA 節點指的是由 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本自動建立的軟體式 NUMA 節點。   
+>  請在您為 Resource Governor 工作負載群組設定平行處理最大程度的選項時，使用這些相同的方針。 如需詳細資訊，請參閱 [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)。
+  
+從 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，請在您設定**最大平行處理程度**伺服器設定值時，使用下列方針：
 
 ||||
 |----------------|-----------------|-----------------|
@@ -59,7 +74,7 @@ ms.locfileid: "51606418"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -89,15 +104,15 @@ EXEC sp_configure 'show advanced options', 1;
 GO  
 RECONFIGURE WITH OVERRIDE;  
 GO  
-EXEC sp_configure 'max degree of parallelism', 8;  
+EXEC sp_configure 'max degree of parallelism', 16;  
 GO  
 RECONFIGURE WITH OVERRIDE;  
 GO  
 ```  
   
- 如需詳細資訊，請參閱 [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 待處理：設定 max degree of parallelism 選項之後  
+##  <a name="FollowUp"></a> 後續操作：在您設定完最大平行處理程度的選項後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

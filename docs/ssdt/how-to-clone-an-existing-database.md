@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 683d8f082a41b328f9cf86134cee0440e2ca3e4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4e95970acd0228c44e493c7fffd98c0d5abc908
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818753"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090116"
 ---
 # <a name="how-to-clone-an-existing-database"></a>如何：複製現有的資料庫
-這個工作將使用一些您在先前的程序中所學到的步驟，建立新的資料庫並移植現有的資料。 此外，它還使用[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)中所述的步驟，來同步處理來源和專案資料庫的結構描述。  
+這個工作將使用一些您在先前的程序中所學到的步驟，建立新的資料庫並移植現有的資料。 此外，它還使用[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)中所述步驟，來同步處理來源和專案資料庫的結構描述。  
   
 利用這些步驟，您可以輕鬆地從生產資料庫建立具有相同結構描述和資料的開發或測試資料庫。 然後，您可以繼續在連線模式下開發測試資料庫，或是建立資料庫專案供離線開發和測試使用，所有工作都不必中斷生產資料庫的作業。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "47818753"
   
 3.  將新的資料庫重新命名為 **TradeDev**。  
   
-4.  以滑鼠右鍵按一下 [SQL Server 物件總管] 中的 [Trade] 資料庫，再選取 [結構描述比較]。 遵循[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)主題中的步驟，選擇原始的 **Trade** 資料庫做為來源，新的 **TradeDev** 資料庫做為目標。 這會以 **Trade** 的結構描述來更新 **TradeDev**。  
+4.  以滑鼠右鍵按一下 [SQL Server 物件總管] 中的 [Trade] 資料庫，再選取 [結構描述比較]。 遵循[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)主題中步驟，選擇原始的 **Trade** 資料庫作為來源，並選擇新的 **TradeDev** 資料庫作為目標。 這會以 **Trade** 的結構描述來更新 **TradeDev**。  
   
 ### <a name="to-replicate-data"></a>若要複寫資料  
   
@@ -55,5 +55,5 @@ ms.locfileid: "47818753"
 7.  使用資料編輯器，確認新的 `TradeDev` 資料庫中的所有資料表全部都已填入。  
   
 ## <a name="see-also"></a>另請參閱  
-[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[操作說明：使用結構描述比較以比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

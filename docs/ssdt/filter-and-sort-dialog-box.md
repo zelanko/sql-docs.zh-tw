@@ -10,18 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datafilterdialog.dialog
 ms.assetid: f81ce28b-eaad-4c47-9efd-8f23f0f25870
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c230b7cbf3d9e3c4297acecc5262a4315af03578
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c56ca7cf78cce14c198d78121d175159d90a6aa7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846518"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096928"
 ---
 # <a name="filter-and-sort-dialog-box"></a>篩選與排序對話方塊
-在 SQL Server 物件總管中，您可以滑鼠右鍵按一下資料表或檢視表，並選取 [檢視資料] (如需詳細資訊，請參閱[如何：檢視和編輯資料表中的資料](../ssdt/how-to-view-and-edit-data-in-a-table.md))。 從 2014 年 3 月發行的 SQL Server Data Tools 開始，[資料編輯器] 在工具列中具有排序與篩選按鈕。 您可以修改資料表或檢視中顯示的資料。  
+在 SQL Server [物件總管] 中，您可以以滑鼠右鍵按一下資料表或檢視，並選取 [檢視資料] (如需詳細資訊，請參閱[如何：檢視及編輯資料表中的資料](../ssdt/how-to-view-and-edit-data-in-a-table.md)。 從 2014 年 3 月發行的 SQL Server Data Tools 開始，[資料編輯器] 在工具列中具有排序與篩選按鈕。 您可以修改資料表或檢視中顯示的資料。  
   
 在 [篩選與排序] 對話方塊中，您可以指定將在 [資料編輯器] 中顯示的資料：  
   

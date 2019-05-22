@@ -11,12 +11,13 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6783112203e5c63aae41749f942da6240265eea3
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: b3e6a0fc14137ca13e3539a7046edf576b4719ed
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872298"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775051"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安裝 PolyBase
 
@@ -40,15 +41,16 @@ ms.locfileid: "58872298"
    
 - 必須啟用 TCP/IP，PolyBase 才能正常運作。 預設會在 SQL Server Developer 和 Express 版本以外的所有 SQL Server 版本上啟用 TCP/IP。 若要讓 PolyBase 在 Developer 和 Express 版本上正常運作，您必須啟用 TCP/IP 連線。 請參閱[啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。
 
-- MSVC++ 2012。 
 
-> [!NOTE]
-> 
+>[!NOTE] 
 > 每部電腦只能在一個 SQL Server 執行個體上安裝 PolyBase。
-> 
-> [!IMPORTANT]
-> 
-> 若要針對 Hadoop 使用計算下推功能，目標 Hadoop 叢集必須具有 HDFS、YARN 和 MapReduce 的核心元件，並已啟用作業記錄伺服器。 PolyBase 透過 MapReduce 來提交下推查詢，並從作業記錄伺服器提取狀態。 如果沒有其中一個元件，則查詢會失敗。
+
+
+>[!NOTE]
+>若要使用 PolyBase，您必須在資料庫上具有系統管理員或 CONTROL SERVER 層級權限。
+
+>[!IMPORTANT]
+>若要針對 Hadoop 使用計算下推功能，目標 Hadoop 叢集必須具有 HDFS、YARN 和 MapReduce 的核心元件，並已啟用作業記錄伺服器。 PolyBase 透過 MapReduce 來提交下推查詢，並從作業記錄伺服器提取狀態。 如果沒有其中一個元件，則查詢會失敗。
   
 ## <a name="single-node-or-polybase-scale-out-group"></a>單一節點或 PolyBase 向外延展群組
 
@@ -74,11 +76,10 @@ ms.locfileid: "58872298"
    ![PolyBase 服務](../../relational-databases/polybase/media/install-wizard.png "PolyBase 服務")  
    
 4. 在 [伺服器設定] 頁面上，將 [SQL Server PolyBase 引擎服務] 和 [SQL Server PolyBase 資料移動服務] 設定為在同一個網域帳戶下執行。  
-   
-   > [!IMPORTANT] 
-   >
+
+   >[!IMPORTANT]
    >在 PolyBase 向外延展群組中，所有節點上的 PolyBase 引擎和 PolyBase 資料移動服務必須在同一個網域帳戶執行。 請參閱 [PolyBase 向外延展群組](#enable)。
-   
+
 5. 在 [PolyBase 設定] 頁面上，選取兩個選項的其中一個。 如需詳細資訊，請參閱 [PolyBase 向外延展群組](../../relational-databases/polybase/polybase-scale-out-groups.md)。  
    
    - 使用 SQL Server 執行個體作為已啟用 PolyBase 的獨立執行個體。  
@@ -91,8 +92,7 @@ ms.locfileid: "58872298"
    
 6. 在 [PolyBase 設定] 頁面上，指定至少具有六個連接埠的連接埠範圍。 SQL Server 安裝程式會配置該範圍內前六個可用的連接埠。  
 
-   > [!IMPORTANT]
-   >
+   >[!IMPORTANT]
    > 安裝完成後，您必須[啟用 PolyBase 功能](#enable)。
 
 

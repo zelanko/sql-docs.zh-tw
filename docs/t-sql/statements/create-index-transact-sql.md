@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbe34c0441e455fad18d87b5ddb5dfbc3081c378
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 0e53128745296653d3892947310d03d8acc2d780
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802308"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65504119"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -118,10 +118,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 [ ; ]
   
 <object> ::=
-{
-    [ database_name. [ schema_name ] . | schema_name. ]
-    table_or_view_name
-}
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
 
 <relational_index_option> ::=
 {
@@ -370,9 +367,9 @@ OFF 中繼排序結果會儲存在與用來儲存索引相同的資料庫中。
 
 IGNORE_DUP_KEY = { ON | **OFF** } 指定當插入操作嘗試將重複索引鍵值插入唯一索引時所產生的錯誤回應。 IGNORE_DUP_KEY 選項只適用於在建立或重建索引之後所發生的插入作業。 執行 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)、[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 或 [UPDATE](../../t-sql/queries/update-transact-sql.md) 時，這個選項沒有任何作用。 預設值為 OFF。
 
-ON 當重複的索引鍵值插入唯一索引時，便出現警告訊息。 只有違反唯一性條件約束的資料列才會失敗。
+ON 當重複索引鍵值插入唯一索引時，就會出現警告訊息。 只有違反唯一性條件約束的資料列才會失敗。
 
-OFF 當重複的索引鍵值插入唯一索引時，便出現錯誤訊息。 整個 INSERT 作業將會回復。
+OFF 當重複索引鍵值插入唯一索引時，就會出現錯誤訊息。 整個 INSERT 作業將會回復。
 
 若為針對檢視表所建立的索引、非唯一索引、XML 索引、空間索引和篩選索引，IGNORE_DUP_KEY 不得設為 ON。
 
@@ -752,12 +749,12 @@ INSERT INTO t1 VALUES (1, 0);
 下列限制適用於分割區索引：
 
 - 您無法在資料表具有非對齊索引時變更單一分割區的壓縮設定。
-- ALTER INDEX \<index> ...REBUILD PARTITION ... 語法會重建此索引的指定資料分割。
-- ALTER INDEX \<index> ...REBUILD WITH ... 語法會重建此索引的所有資料分割。
+- ALTER INDEX \<index> ...REBUILD PARTITION ... 語法會重建此索引的指定分割區。
+- ALTER INDEX \<index> ...REBUILD WITH ... 語法會重建此索引的所有分割區。
 
 若要評估變更壓縮狀態如何影響資料表、索引或分割區，請使用 [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 預存程序。
 
-## <a name="permissions"></a>[權限]
+## <a name="permissions"></a>權限
 
 需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。
 
@@ -820,7 +817,7 @@ WITH ( DROP_EXISTING = ON );
 
 ### <a name="e-create-a-unique-nonclustered-index"></a>E. 建立唯一的非叢集索引
 
-下列範例會在 `Name` 資料庫中 `Production.UnitMeasure` 資料表的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料行上建立唯一非叢集索引。 索引會強制將資料上的唯一性插入 `Name` 資料行中。
+下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Name` 資料表的 `Production.UnitMeasure` 資料行上建立唯一非叢集索引。 索引會強制將資料上的唯一性插入 `Name` 資料行中。
 
 ```sql
 CREATE UNIQUE INDEX AK_UnitMeasure_Name
@@ -985,7 +982,7 @@ GO
 
 ### <a name="j-create-a-partitioned-index"></a>J. 建立資料分割索引
 
-下列範例會在 `TransactionsPS1` 資料庫中現有的分割區配置 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 上建立非叢集分割區索引。 此範例假設您已安裝分割區索引範例。
+下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中現有的分割區配置 `TransactionsPS1` 上建立非叢集分割區索引。 此範例假設您已安裝分割區索引範例。
 
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 

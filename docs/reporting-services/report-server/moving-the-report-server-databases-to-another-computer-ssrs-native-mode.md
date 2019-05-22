@@ -2,18 +2,18 @@
 title: 將報表伺服器資料庫移至其他電腦 (SSRS 原生模式) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 94cdbe6358bd0361addd70d682a3d0d41e70bbba
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100219"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619680"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>將報表伺服器資料庫移至其他電腦 (SSRS 原生模式)
 
@@ -27,14 +27,14 @@ ms.locfileid: "50100219"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。 雖然您不需要將這些作業移至新的電腦，但是可能會想要刪除電腦上不再使用的作業。  
   
--   移動的資料庫會保留訂閱、快取報表以及快照集。 如果快照集並未在移動資料庫之後收取重新整理過的資料，請在報表管理員中清除快照集選項，然後按一下 [套用] 儲存變更、重新建立排程，再按一下 [套用] 儲存變更。  
+-   移動的資料庫會保留訂閱、快取報表以及快照集。 若快照集資料庫移動之後未取用重新整理過的資料，請清除快照集選項，然後選取 [套用] 儲存變更，再重新建立排程，最後再選取 [套用] 儲存變更。  
   
 -   當您移動 reportservertempdb 資料庫時，系統會保留儲存在該資料庫中的暫存報表和使用者工作階段。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供數種移動資料庫的方法，包括備份與還原、附加與卸離，以及複製。 並不是所有方法都適合用來將現有資料庫重新放置到新的伺服器執行個體上， 移動報表伺服器資料庫的最佳方法會因您的系統可用性需求而有所差異。 移動報表伺服器資料庫最簡單的方式就是附加與卸離， 但是，如果要採用這種方法，您必須在卸離資料庫時將報表伺服器設定為離線狀態。 如果您希望能將服務中斷的情況降到最少，備份與還原就是比較好的選擇，但是您必須執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令來執行這些作業。 我們不建議利用複製資料庫來移動報表伺服器 (特別是使用「複製資料庫精靈」)，因為複製資料庫不會保留資料庫中的權限設定。  
   
 > [!IMPORTANT]  
->  如果您對現有安裝所做的唯一變更是重新放置報表伺服器資料庫，就適用本主題中所提供的這些步驟。 移轉整個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝 (亦即，移動資料庫，並變更使用資料庫之報表伺服器 Windows 服務的識別) 需要重新設定連接和重設加密金鑰。  
+>  若現有的安裝只變更了重新放置報表伺服器資料庫的位置，建議您採取本文提供的步驟。 移轉整個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝 (亦即，移動資料庫，並變更使用資料庫之報表伺服器 Windows 服務的識別) 需要重新設定連接和重設加密金鑰。  
   
 ## <a name="detaching-and-attaching-the-report-server-databases"></a>卸離及附加報表伺服器資料庫  
  如果您可以將報表伺服器設定為離線狀態，就可以卸離資料庫，並將資料庫移動到您要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 這種方式可以保留資料庫中的權限。 如果您要使用 SQL Server 資料庫，就必須將它移至另一個 SQL Server 執行個體。 移動資料庫之後，您必須重新設定報表伺服器與報表伺服器資料庫間的連接。 如果執行的是向外延伸部署，您必須重新設定部署中每個報表伺服器的報表伺服器資料庫連接。  

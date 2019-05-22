@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5b5d26b38b4fef4f108a67194e4af775154d32a9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b838503365dde968f938efb46c940f3a66ce4357
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677877"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098461"
 ---
-# <a name="how-to-run-sql-server-unit-tests"></a>HOW TO：執行 SQL Server 單元測試
+# <a name="how-to-run-sql-server-unit-tests"></a>如何：執行 SQL Server 單元測試
 您可以使用數種方式的任何一種來執行 SQL Server 單元測試，例如使用各種視窗和 [命令提示字元] 視窗。  
   
 > [!NOTE]  
@@ -58,7 +58,7 @@ ms.locfileid: "51677877"
   
 ## <a name="see-also"></a>另請參閱  
 [執行 SQL Server 單元測試](../ssdt/running-sql-server-unit-tests.md)  
-[如何：從 Microsoft Visual Studio 2010 執行自動化測試](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
+[操作說明：從 Microsoft Visual Studio 2010 執行自動化的測試](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
 [從命令列執行自動化測試 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
 [測試應用程式 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182409.aspx)  
   

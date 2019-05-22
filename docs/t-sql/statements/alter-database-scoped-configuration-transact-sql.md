@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ccc25df3c3567907b50e37164d9090ca63fc58b6
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 31750fffc81fba1b22377578bddc09e1994e9b29
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582951"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64568347"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -49,6 +49,7 @@ ms.locfileid: "59582951"
 - 啟用或停用[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能。
 - 啟用或停用[輕量型查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。
 - 啟用或停用新的 `String or binary data would be truncated` 錯誤訊息。
+- 啟用或停用 [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 中最後一個實際執行計畫的集合。
 
 ![連結圖示](../../database-engine/configure-windows/media/topic-link.gif "連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -85,6 +86,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
+    | LAST_QUERY_PLAN_STATS = { ON | OFF }
 }
 ```
 
@@ -154,16 +156,16 @@ PRIMARY
 
 只有在資料庫位於主要端上時，此值才會在次要端上有效，並且指定所有次要端上此設定的值將採用針對主要端設定的值。 如果主要端的組態發生變更，次要端上的值將會相應地變更，而無須明確地設定次要端值。 [PRIMARY] 是次要端的預設設定。
 
-IDENTITY_CACHE **=** { **ON** | OFF }
+IDENTITY_CACHE **=** { **ON** | OFF }      
 
-**適用於**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 在資料庫層級啟用或停用識別快取。 預設值為 **ON**。 識別快取可用來改善含有識別資料行之資料表上的 INSERT 效能。 若要避免因伺服器意外重新啟動或容錯移轉至次要伺服器，而導致識別資料行值不連貫，請停用 IDENTITY_CACHE 選項。 此選項類似於現有的[追蹤旗標 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)差異在於此選項可以在資料庫層級設定，而不僅止於在伺服器層級設定。
 
 > [!NOTE]
 > 只能針對 PRIMARY 設定此選項。 如需詳細資訊，請參閱[識別資料行](create-table-transact-sql-identity-property.md)。
 
-INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
+INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }   
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -172,18 +174,18 @@ INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 > [!NOTE]
 > 針對資料庫相容性層級 130 或更低，這個資料庫範圍設定沒有任何作用。
 
-BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
+BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}    
 
-**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 可讓您在資料庫範圍啟用或停用批次模式記憶體授與回饋，同時仍保有 140 (含) 以上的資料庫相容性層級。 批次模式記憶體授與回饋是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 推出的[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)其中一項功能。
 
 > [!NOTE]
 > 針對資料庫相容性層級 130 或更低，這個資料庫範圍設定沒有任何作用。
 
-BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
+BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}   
 
-**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 可讓您在資料庫範圍啟用或停用批次模式自適性聯結，同時仍保有 140 (含) 以上的資料庫相容性層級。 批次模式自適性聯結是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 推出的[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)其中一項功能。
 
@@ -192,7 +194,7 @@ BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
 
 TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
-**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (功能目前為公開預覽版)
 
 可讓您在資料庫範圍啟用或停用 T-SQL 純量 UDF 內嵌，同時仍保有 150 (含) 以上的資料庫相容性層級。 T-SQL 純量 UDF 內嵌是[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能系列的一部分。
 
@@ -218,7 +220,7 @@ WHEN_SUPPORTED
 
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**適用於**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (功能目前為公開預覽版)
 
 可讓您選取選項，讓引擎自動將支援的作業提升至可繼續。 預設為 OFF，這表示除非在陳述式中指定，否則不會將作業提升至可繼續。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 會反映 ELEVATE_RESUMABLE 目前的值。 這些選項僅適用於可繼續支援的作業。
 
@@ -259,7 +261,7 @@ XTP_QUERY_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
-**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (功能目前為公開預覽版)
 
 可讓您在資料庫範圍啟用或停用資料列模式記憶體授與回饋，同時仍保有 150 (含) 以上的資料庫相容性層級。 資料列模式記憶體授與回饋是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 推出的[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)其中一項功能 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支援資料列模式)。
 
@@ -268,7 +270,7 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
 BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF}
 
-**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (功能目前為公開預覽版)
 
 可讓您在資料庫範圍啟用或停用資料列存放區上的批次模式，同時仍保有 150 (含) 以上的資料庫相容性層級。 資料列存放區上的批次模式是[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能系列的其中一項功能。
 
@@ -277,7 +279,7 @@ BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF}
 
 DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
 
-**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (功能目前為公開預覽版)
 
 可讓您在資料庫範圍啟用或停用資料表變數延遲編譯，同時仍保有 150 (含) 以上的資料庫相容性層級。 資料表變數延遲編譯是[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能系列的其中一項功能。
 
@@ -295,13 +297,15 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
-**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 可讓您啟用或停用[輕量型查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。 輕量型查詢分析基礎結構 (LWP) 提供比標準分析機制更具效率的查詢效能資料，預設會予以啟用。
 
+<a name="verbose-truncation"></a>
+
 VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
-**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
 
 可讓您啟用或停用新的 `String or binary data would be truncated` 錯誤訊息。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 針對此案例引進了更加特定的新錯誤訊息 (2628)：  
 
@@ -312,6 +316,12 @@ VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 在資料庫相容性層級 150 下設為 OFF 時，截斷錯誤會引發先前的錯誤訊息 8152。
 
 在資料庫相容性層級 140 或更低層級下，錯誤訊息 2628 會保有必須啟用[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 的選擇加入錯誤訊息，且此資料庫範圍的組態沒有任何作用。
+
+LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
+
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) (功能目前為公開預覽版)
+
+可讓您啟用或停用 [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 中最後一個查詢計畫統計資料 (相當於實際執行計畫) 的集合。
 
 ## <a name="Permissions"></a> 權限
 
@@ -474,6 +484,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
 ### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>K. 從計畫快取清除查詢計劃
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
 此範例會將特定計劃從程序快取清除 
 
 ```sql

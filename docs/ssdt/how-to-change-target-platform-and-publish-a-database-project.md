@@ -1,5 +1,5 @@
 ---
-title: 如何：變更目標平台及發行資料庫專案 | Microsoft Docs
+title: 如何：變更目標平台及發佈資料庫專案 | Microsoft Docs
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,17 +11,17 @@ f1_keywords:
 - sql.data.tools.publish.dialog
 - sql.data.tools.publishdacproject
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5dc61811562a8c9fb121d170d89b0b28806b29f4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3a95768fd863c7584c98a5135dccef826fabbc56
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516702"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090107"
 ---
-# <a name="how-to-change-target-platform-and-publish-a-database-project"></a>如何：變更目標平台及發行資料庫專案
+# <a name="how-to-change-target-platform-and-publish-a-database-project"></a>如何：變更目標平台及發佈資料庫專案
 您可以將您的 SQL Server Data Tools (SSDT) 資料庫專案的目標 SQL Server 版本變更為任何支援之 SQL Server (SQL Server 2005、2008、2008 R2、Microsoft SQL Server 2012 或 SQL Azure) 的執行個體。 如此一來，您就可以將資料庫開發工作集中於一個專案，但視需要再將它發行到多個 SQL Server 執行個體。  
   
 SSDT 透過對目標平台的認知以及自動偵測程式碼中的任何錯誤 (例如為即將發行到 SQL Azure 的專案使用未支援的功能)，也讓這項工作變得簡單一些。  
@@ -41,7 +41,7 @@ SSDT 透過對目標平台的認知以及自動偵測程式碼中的任何錯誤
   
 2.  將 `ON [PRIMARY]` 附加到 `CREATE TABLE` 陳述式結尾。  
   
-3.  請注意，下列錯誤顯示在 [錯誤清單] 窗格中：SQL70015: SQL Azure 不支援 '檔案群組參考和資料分割配置'。  
+3.  請注意，下列錯誤顯示在 [錯誤清單] 窗格中：SQL70015：SQL Azure 不支援「檔案群組參考和資料分割配置」。  
   
     SSDT 會自動根據目標平台來驗證指令碼。 在這種情況下，由於 SQL Azure 不支援檔案群組，SSDT 傳回錯誤。 如需在 SQL Azure 中不支援的 Transact\-SQL 陳述式清單，請參閱[部分支援的 Transact-SQL 陳述式 (Microsoft Azure SQL Database)](https://msdn.microsoft.com/library/ee336267.aspx)。  
   

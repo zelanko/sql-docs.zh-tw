@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2d02e13ea7ad1d74274f4412b6ab2bf476f452c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3a20544fb4f19611071f28b7cfc5f16fd7e462ce
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665423"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775946"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 功能和限制
 
@@ -61,6 +61,8 @@ ms.locfileid: "51665423"
 ## <a name="known-limitations"></a>已知限制
 
 PolyBase 具有下列限制：
+
+- 若要使用 PolyBase，您必須在資料庫上具有系統管理員或 CONTROL SERVER 層級權限。
 
 - 在 SQL Server 中最大資料列大小 (包括變數長度資料行的完整長度) 不能超過 32 KB，在 Azure SQL 資料倉儲中則不能超過 1 MB。
 

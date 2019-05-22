@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 23b3057a23737eb43206f9615ce2f83bad6f5610
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 567855c53848a354ec03c8de7fea1bb37c1c2a21
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745106"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105805"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>使用參考資料庫中的資料比較和同步處理一個或多個資料表中的資料
 您可以比較「來源」資料庫與「目標」資料庫的資料，以及指定應該比較的資料表。 您可以檢閱資料並決定要同步處理哪些變更。 然後您可以更新目標來同步處理資料庫，也可以將更新指令碼匯出至 Transact\-SQL 編輯器或檔案。  
@@ -27,9 +27,9 @@ ms.locfileid: "47745106"
   
 本節包含下列主題：  
   
--   [如何：比較和同步處理兩個資料庫的資料](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
+-   [操作說明：比較和同步處理兩個資料庫的資料](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
   
--   [如何：檢視資料差異](../ssdt/how-to-view-data-differences.md)  
+-   [操作說明：檢視資料差異](../ssdt/how-to-view-data-differences.md)  
   
 ## <a name="requirements"></a>需求  
 當您比較資料表或檢視表的資料時，來源資料庫的資料表或檢視表必須與目標資料庫的資料表或檢視表共用數個屬性。 不符合下列條件的資料表和檢視不會比較，也不會出現在 [新增資料比較] 精靈的第二個頁面：  
@@ -49,9 +49,9 @@ ms.locfileid: "47745106"
 ## <a name="common-tasks"></a>一般工作  
 在本節中，您可以找到支援此狀況的一般工作描述。  
   
-**設定選項來控制如何比較資料：** 當您比較資料時，可以放心略識別欄位，停用觸發程序和停用外部索引鍵。 您也可以從更新指令碼卸除主索引鍵、索引和唯一的條件約束。  
+**設定選項以控制比較資料的方式：** 當您比較資料時，可以安全地忽略識別欄位，停用觸發和停用外部索引鍵。 您也可以從更新指令碼卸除主索引鍵、索引和唯一的條件約束。  
   
-**比較資料表資料並選擇性地更新目標以符合來源：** 在指定要比較的來源和目標資料庫和執行比較之後，您可以在 [資料比較] 視窗中檢視結果。 您不只可以檢視差異的詳細資料，也可以檢視用來同步處理資料的更新指令碼。 在您識別兩個資料庫之間的差異之後，可以針對每個差異指定動作。 然後您可以更新目標，也可以將更新指令碼匯出至 Transact\-SQL 編輯器或檔案。 您可以匯出此指令碼，以便您或其他人在套用變更之前可以檢閱它。  
+**比較資料表中的資料並選擇性地更新目標以符合來源：** 在指定要比較的來源和目標資料庫並執行比較之後，您可以在 [資料比較] 視窗中檢視結果。 您不只可以檢視差異的詳細資料，也可以檢視用來同步處理資料的更新指令碼。 在您識別兩個資料庫之間的差異之後，可以針對每個差異指定動作。 然後您可以更新目標，也可以將更新指令碼匯出至 Transact\-SQL 編輯器或檔案。 您可以匯出此指令碼，以便您或其他人在套用變更之前可以檢閱它。  
   
 ## <a name="UnderstandingDataCompareResults"></a>了解比較結果  
 下表描述 [資料比較] 視窗的五個資料行。  
@@ -69,5 +69,5 @@ ms.locfileid: "47745106"
   
 ## <a name="see-also"></a>另請參閱  
 [SQL Server Data Tools](../ssdt/sql-server-data-tools.md)  
-[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[操作說明：使用結構描述比較以比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

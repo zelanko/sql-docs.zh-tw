@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6d1f2fba2b5c2c0f978973eb015674b9b83af806
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ef6cb6bce9173a849dbe406971028e3f452767c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664016"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090242"
 ---
 # <a name="how-to-fix-errors"></a>如何：修正錯誤
 [錯誤清單] 窗格會顯示任何的部署或建置錯誤。 編輯資料庫實體及其定義時，Transact\-SQL 編輯器或資料表設計工具中的編輯所造成的語法或語意錯誤也會顯示在這個清單中。 當您跨不同索引標籤編輯指令碼時，[錯誤清單] 會以動態方式更新。 然後，您可以追蹤識別的錯誤以進行進一步疑難排解。  
@@ -32,7 +32,7 @@ ms.locfileid: "47664016"
   
 3.  請注意，與下列訊息類似的警告與錯誤會立即顯示在畫面底部的 [錯誤清單] 中。  
   
-**警告 SQL71502: 函數: [dbo].[GetProductsBySupplier] 包含物件無法解析的參考。可能是物件不存在，或是該參考因為參考到下列任一個物件而模稜兩可: [dbo].[Product].[p]::[ShelfLife] 或 [dbo].[Product].[ShelfLife]。錯誤 SQL71501: 檢查條件約束: [dbo].[CK_Product_ShelfLife] 有參考到物件 [dbo].[Product].[ShelfLife] 的無法解析參考。**  
+**警告 SQL71502：函式：[dbo].[GetProductsBySupplier] 包含物件無法解析的參考。物件不存在或參考不明確，因為它可以參考下列任一個物件：[dbo].[Product].[p]::[ShelfLife] 或 [dbo].[Product].[ShelfLife]。錯誤 SQL71501：檢查限制：[dbo].[CK_Product_ShelfLife] 具有物件 [dbo].[Product].[ShelfLife] 無法解析的參考。**  
   
 4.  您可以用滑鼠右鍵按一下 [錯誤清單]，然後使用關聯式功能表排序結果，篩選要顯示的項目和每個項目要顯示的資訊欄。  
   

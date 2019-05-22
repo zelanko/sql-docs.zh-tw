@@ -1,6 +1,6 @@
 ---
 title: 資料庫檢查點 (SQL Server) | Microsoft Docs
-ms.date: 09/23/2016
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -28,18 +28,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d3b1b147bd954ce449315b9efb459767941b045
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a7d761a88d570cfe65c3660656adde6f90e93c21
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518093"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775376"
 ---
 # <a name="database-checkpoints-sql-server"></a>資料庫檢查點 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
- *「檢查點」* (Checkpoint) 會建立一個已知的恰當起點， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可以從這個點開始套用發生非預期的關機或損毀之後，於復原期間包含在記錄檔中的變更。  
- 
-  
+ *「檢查點」* (Checkpoint) 會建立一個已知的恰當起點， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可以從這個點開始套用發生非預期的關機或損毀之後，於復原期間包含在記錄檔中的變更。
+
 ##  <a name="Overview"></a> 概觀   
 基於效能的考量，[!INCLUDE[ssDE](../../includes/ssde-md.md)]會在緩衝區快取的記憶體內修改資料庫頁面，但並不會在每次變更之後都將這些頁面寫入磁碟中。 而是由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 定期在每一個資料庫上發出檢查點。 *「檢查點」* (Checkpoint) 會將目前記憶體中已修改的頁面 (稱為 *「中途分頁」*(Dirty Page)) 和交易記錄資訊從記憶體寫入磁碟上，也會記錄有關交易記錄的資訊。  
   
@@ -93,7 +92,8 @@ ms.locfileid: "52518093"
   
 如果您決定增加 **recovery interval** 設定，我們建議您逐漸少量增加此設定，並評估每次累加對於復原效能的影響。 這個方法非常重要，因為當 **recovery interval** 設定增加時，要多花許多倍的時間才能完成資料庫復原。 例如，如果您將 **recovery interval** 變更為 10 分鐘，則完成復原所花的時間要比 **recovery interval** 設定為 1 分鐘時大約多 10 倍的時間。  
   
-##  <a name="IndirectChkpt"></a> 間接檢查點  
+##  <a name="IndirectChkpt"></a> 間接檢查點
+  
 間接檢查點是在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引進，它會提供替代自動檢查點的可設定資料庫層級。 指定 [目標復原時間] 資料庫設定選項可設定此項目。 如需詳細資訊，請參閱 [變更資料庫的目標復原時間 &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)伺服器組態選項。
 萬一系統損壞，間接檢查點可能會提供比自動檢查點更快而且更可以預測的復原時間。 間接檢查點會提供以下優點：  
   
@@ -110,6 +110,10 @@ ms.locfileid: "52518093"
 > [!IMPORTANT]
 > 間接檢查點是在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中建立之新資料庫的預設行為，包括模型和 TempDB 資料庫。          
 > 除非明確地改變成使用間接檢查點，否則已就地升級或從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還原的資料庫會使用先前的自動檢查點行為。       
+
+### <a name="ctp23"></a> 改善的間接檢查點延展性
+
+在 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 之前，您可能會在資料庫產生大量中途分頁 (例如 `tempdb`) 時遇到沒有產量的排程器錯誤。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引進改善的間接檢查點延展性，有助於避免在具備大量 `UPDATE`/`INSERT` 工作負載的資料庫上發生這類錯誤。
   
 ##  <a name="EventsCausingChkpt"></a> 內部檢查點  
 內部檢查點是由各種伺服器元件產生，可保證磁碟映像符合目前的記錄檔狀態。 產生內部檢查點是為了回應以下事件：  
@@ -126,6 +130,7 @@ ms.locfileid: "52518093"
   
 -   讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 離線。      
   
+
 ##  <a name="RelatedTasks"></a> Related tasks  
  **若要變更伺服器執行個體的復原間隔**  
   

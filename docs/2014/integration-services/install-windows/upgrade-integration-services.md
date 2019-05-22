@@ -93,7 +93,7 @@ ms.locfileid: "62768066"
   
 -   為了控制封裝的存取權，建立三個新的固定資料庫層級角色：db_ssisadmin、db_ssisltduser 和 db_ssisoperator。 雖然不會移除 db_dtsadmin、db_dtsltduser 和 db_dtsoperator 的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 角色，但是它們會成為對應新角色的成員。  
   
--   如果[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝存放區 (也就是檔案系統所管理的位置[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服務) 是底下的預設位置**\SQL Server\90**， **\SQL Server\100**，或**\SQL Server\110**將這些封裝移至下新的預設位置**\SQL Server\120**。  
+-   如果[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝存放區 (也就是檔案系統所管理的位置[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服務) 是底下的預設位置 **\SQL Server\90** ， **\SQL Server\100** ，或 **\SQL Server\110** 將這些封裝移至下新的預設位置 **\SQL Server\120** 。  
   
 -   將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務組態檔更新為指向升級的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體。  
   

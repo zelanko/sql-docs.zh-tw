@@ -1,18 +1,18 @@
 ---
 title: 伺服器屬性 (進階頁面) - Reporting Services | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/15/2019
-ms.openlocfilehash: b041e4a7f672468f5c2959f8ecb86ddaa62f09fd
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
-ms.translationtype: HT
+ms.openlocfilehash: 490a21572d1a62bbf90754a8c33e0aa98bac0aea
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805744"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571342"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>伺服器屬性 (進階頁面) - Reporting Services
 

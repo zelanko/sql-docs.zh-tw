@@ -2,21 +2,21 @@
 title: 規劃報表 (報表產生器) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 - report design
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 48011d4f815df916236a60f2471c7ce45fe1f2f8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1e67d710530da43216873728ff5f1159ce8fa50f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297326"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581481"
 ---
 # <a name="planning-a-report-report-builder"></a>規劃報表 (報表產生器)
   報表產生器可讓您建立許多種類的分頁報表。 例如，您可以建立顯示摘要或詳細銷售資料、行銷和銷售趨勢、營運報表或儀表板的報表。 您也可以建立利用豐富文字格式 (例如銷售訂單、產品目錄或正式書信) 的報表。 所有這些報表都是使用報表產生器中相同基本建置組塊的不同組合而建立。 若要建立有用且易於了解的報表，先進行規劃是有效的方法。 以下是開始作業前可能要考量的部分事項：  
@@ -33,7 +33,7 @@ ms.locfileid: "56297326"
   
      報表產生器提供許多報表項目，可加入報表使其更易於讀取、反白顯示主要資訊、協助您的對象導覽報表等等。 知道報表將以何種方式呈現，有助於判斷您是否需要文字方塊、矩形、影像和線條等報表項目。 您可能也想要顯示或隱藏項目、加入文件引導模式、包含鑽研報表或子報表，或連結到其他報表。 如需詳細資訊，請參閱[影像、文字方塊、矩形和線條 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md) 和[互動式排序、文件引導模式及連結 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)。  
   
--   **要讀者看到什麼資料？應該要為不同的對象篩選資料或格式嗎？**  
+-   **您希望讓讀者看到哪些資料？應該要為不同的對象篩選資料或格式嗎？**  
   
      您可以將報表的範圍縮小為特定的使用者或地點，或限制為特定的時間週期。 若要篩選報表資料，請使用參數僅擷取及顯示所要的資料。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
   
