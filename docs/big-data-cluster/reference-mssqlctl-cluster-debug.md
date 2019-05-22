@@ -5,16 +5,16 @@ description: Mssqlctl 叢集偵錯 命令的參考文件。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5099a9ac611602e0c4c8d7f0103421e34b7fa8a2
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: c309817841bb0b3aeaacc613c327f9d446ccc8c2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774865"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993655"
 ---
 # <a name="mssqlctl-cluster-debug"></a>mssqlctl cluster debug
 
@@ -28,7 +28,7 @@ ms.locfileid: "64774865"
 [mssqlctl cluster debug copy-logs](#mssqlctl-cluster-debug-copy-logs) | 複製記錄檔。
 [mssqlctl 叢集偵錯傾印](#mssqlctl-cluster-debug-dump) | 觸發程序記錄傾印。
 ## <a name="mssqlctl-cluster-debug-copy-logs"></a>mssqlctl cluster debug copy-logs
-從叢集複製偵錯記錄檔。
+從叢集複製偵錯記錄檔-kube 設定需要您的系統上。
 ```bash
 mssqlctl cluster debug copy-logs --namespace -n 
                                  [--container -c]  
@@ -60,7 +60,7 @@ JMESPath 查詢字串。 請參閱[ http://jmespath.org/ ](http://jmespath.org/]
 #### `--verbose`
 增加記錄詳細程度。 使用--debug 取得完整的偵錯記錄。
 ## <a name="mssqlctl-cluster-debug-dump"></a>mssqlctl 叢集偵錯傾印
-觸發記錄傾印，並將它複製出來中，從容器。
+觸發記錄傾印，並將它複製出來中，從容器-kube 設定需要您的系統上。
 ```bash
 mssqlctl cluster debug dump --namespace -n 
                             --container -c  

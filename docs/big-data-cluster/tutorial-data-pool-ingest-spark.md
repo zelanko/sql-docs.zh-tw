@@ -5,17 +5,17 @@ description: 本教學課程會示範如何將資料內嵌到 Spark 作業在 St
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9d49cb6af93880fe1cec391e4464b813777f7109
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: dcdbee449f15e070920660d5470135f4f8ae93a0
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582751"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994170"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教學課程：將資料內嵌到 Spark 作業的 SQL Server 資料集區
 
@@ -56,7 +56,7 @@ ms.locfileid: "59582751"
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
    ```
 
 1. 建立名為外部資料表**web_clickstreams_spark_results**資料集區中。
@@ -74,13 +74,13 @@ ms.locfileid: "59582751"
       );
    ```
   
-1. 在 CTP 2.4，建立資料集區是非同步的但沒有任何方法來判斷當尚未完成。 等候兩分鐘，以確定資料集區建立後再繼續。
+1. 在 CTP 3.0 中，建立資料集區是非同步的但沒有任何方式可判斷當尚未完成。 等候兩分鐘，以確定資料集區建立後再繼續。
 
 ## <a name="start-a-spark-streaming-job"></a>啟動 Spark 串流作業
 
 下一個步驟是建立 Spark 串流作業，從存放集區 (HDFS) 載入 web 點選流資料到您建立資料集區中的外部資料表。
 
-1. 在 Azure Data Studio，連接到**HDFS/Spark 閘道**的巨量資料叢集。 如需詳細資訊，請參閱 <<c0> [ 連接到 HDFS/Spark 閘道](connect-to-big-data-cluster.md#hdfs)。
+1. 在 Azure Data Studio，連接到您的巨量資料叢集的主要執行個體。 如需詳細資訊，請參閱 <<c0> [ 連線至巨量資料叢集](connect-to-big-data-cluster.md)。
 
 1. 在 HDFS/Spark 閘道連按兩下**伺服器**視窗。 然後選取**新的 Spark 作業**。
 

@@ -6,17 +6,17 @@ author: yualan
 ms.author: alayu
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3e0f3c939f4d20e65262453e23ac127b02c6d212
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: d54e74bb5956b569adb605a94a56dfeb00b040cd
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472141"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994092"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>如何使用叢集系統管理入口網站來監視 SQL Server 的巨量資料叢集
 
@@ -38,7 +38,7 @@ ms.locfileid: "63472141"
 當控制器 pod 執行時，您可以使用叢集系統管理入口網站來監視部署。 您可以存取入口網站中使用的外部 IP 位址和連接埠號碼`mgmtproxy-svc-external`(例如： **https://\<ip 位址\>: 30777/入口網站**)。 認證為存取管理員入口網站的值`CONTROLLER_USERNAME`和`CONTROLLER_PASSWORD`上面提供的環境變數。
 
 > [!NOTE]
-> CTP 2.5 時的安全性警告存取網頁，因為它使用自動產生的 SSL 憑證。
+> 對於 CTP 3.0 中，沒有安全性警告時存取網頁，因為它使用自動產生的 SSL 憑證。
 
 ## <a name="overview"></a>總覽
 

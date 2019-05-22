@@ -5,17 +5,17 @@ description: 深入了解資料持續性中的 SQL Server 2019 巨量資料叢�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d095af731e3c62ce24dd3d8cbf059aa6278dd22c
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: d08d3607a2670a441cdd300ca25b95ad760e0ab5
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776164"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994062"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>在 Kubernetes 上的 SQL Server 巨量資料叢集使用的資料持續性
 
@@ -34,17 +34,22 @@ SQL Server 的巨量資料叢集會取用這些永續性磁碟區的方式是使
 ```json
     "storage": 
     {
-        "usePersistentVolume": true,
-        "className": "managed-premium",
+      "data": {
+        "className": "default",
+        "accessMode": "ReadWriteOnce",
+        "size": "15Gi"
+      },
+      "logs": {
+        "className": "default",
         "accessMode": "ReadWriteOnce",
         "size": "10Gi"
     }
 ```
 
-若要在部署期間使用永續性儲存體，設定的值**usePersistentVolume**機碼 *，則為 true*並**className**您所要使用的金鑰的儲存體類別的名稱個別的集區。 您也可以自訂部署的過程中建立的永續性磁碟區宣告的大小。 最佳做法，我們建議使用儲存體類別*保留*[收回原則](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy)。
+部署巨量資料叢集會使用永續性儲存體來儲存資料、 中繼資料和各種元件的記錄檔。 您可以自訂部署的過程中建立的永續性磁碟區宣告的大小。 最佳做法，我們建議使用儲存體類別*保留*[收回原則](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy)。
 
 > [!NOTE]
-> 在 CTP 2.5 中，您無法修改部署儲存體組態設定後。 此外，只有`ReadWriteOnce`支援整個叢集的存取模式。
+> 在 CTP 3.0 中，您無法修改儲存體組態設定後部署。 此外，只有`ReadWriteOnce`支援整個叢集的存取模式。
 
 > [!WARNING]
 > 執行而永續性儲存體不能在測試環境中，但它可能會導致非功能性的叢集。 在 pod 重新啟動時，叢集中繼資料及/或使用者資料會永久遺失。 我們不建議在此組態中執行。 
@@ -53,7 +58,7 @@ SQL Server 的巨量資料叢集會取用這些永續性磁碟區的方式是使
 
 ## <a name="aks-storage-classes"></a>AKS 儲存類別
 
-AKS 隨附[兩個內建的儲存體類別](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)**預設**並**管理 premium**以及它們的動態佈建程式。 您可以指定這些，或建立您自己的儲存類別啟用永續性儲存體，以部署巨量資料叢集。 根據預設，內建在 aks 叢集組態檔*aks-dev-test.json*隨附應使用的永續性儲存體組態**管理 premium**儲存類別。
+AKS 隨附[兩個內建的儲存體類別](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)**預設**並**管理 premium**以及它們的動態佈建程式。 您可以指定這些，或建立您自己的儲存類別啟用永續性儲存體，以部署巨量資料叢集。 根據預設，內建在 aks 叢集組態檔*aks-dev-test.json*隨附應使用的永續性儲存體組態**預設**儲存類別。
 
 > [!WARNING]
 > 使用內建的儲存體類別建立永續性磁碟區**預設**並**管理 premium**擁有的收回原則*刪除*。 時，您可以刪除 SQL Server 巨量資料叢集，因此永續性磁碟區宣告會取得已刪除，然後永續性磁碟區。 您可以建立使用自訂的儲存體類別**azure 磁碟**使用 privioner*保留*收回原則中所示[這](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes)文章。
@@ -68,7 +73,7 @@ Minikube 隨附內建的儲存體類別，稱為**標準**以及它的動態佈�
 Kubeadm 並未隨附於內建的儲存體類別。 您必須建立您自己的儲存體類別和永續性磁碟區，使用本機儲存體或您慣用的佈建程式，例如[城堡](https://github.com/rook/rook)。 在此情況下，您會設定**className**為您設定的儲存類別。 
 
 > [!NOTE]
-> 中的內建 kubeadm 的部署組態檔中*kubeadm-dev-test.json*，預設值**usePersistentVolume**索引鍵是 *，則為 true*，因此您必須設定的值針對**className**否則預先部署驗證將會失敗。 部署也會有驗證步驟，以檢查存在的儲存體類別，而不是必要的永續性磁碟區。 您必須確定您建立足夠的磁碟區，視您的叢集的規模而定。 在 CTP2.5，做為預設叢集大小您必須建立至少 23 的磁碟區。 [這裡](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)範例說明如何建立使用本機的佈建程式的永續性磁碟區。
+>  在 內建部署的組態檔中*kubeadm kubeadm 開發 test.json*沒有未指定的資料和記錄的儲存體的儲存體類別名稱。 再進行部署，您必須自訂設定檔，並設定的 className 否則將會失敗的部署前驗證的值。 部署也會有驗證步驟，以檢查存在的儲存體類別，而不是必要的永續性磁碟區。 您必須確定您建立足夠的磁碟區，視您的叢集的規模而定。 在 CTP 3.0 中，做為預設叢集大小您必須建立至少 23 的磁碟區。 [這裡](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)範例說明如何建立使用本機的佈建程式的永續性磁碟區。
 
 
 ## <a name="customize-storage-configurations-for-each-pool"></a>自訂每個集區的儲存體設定
@@ -85,16 +90,16 @@ mssqlctl cluster config init --src aks-dev-test.json --target custom.json
 
 根據預設，每個叢集中佈建的 pod 佈建永續性磁碟區宣告的大小為 10 GB。 您可以更新此值可容納您正在叢集部署之前自訂的組態檔中的工作負載。
 
-下列範例只會更新為 32 Gi 的存放集區中的永續性磁碟區宣告的大小：
+下列範例只會更新儲存在 100 Gi 儲存集區中資料的永續性磁碟區宣告的大小。 請注意儲存體 區段必須存在於存放集區的組態檔，然後再執行此命令：
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.size=32Gi"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=100Gi"
 ```
 
 下列範例會更新為 32 Gi 的永續性磁碟區宣告所有集區的大小：
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.storage.data.size=32Gi"
 ```
 
 ### <a id="config-samples"></a> 設定儲存體類別
@@ -102,7 +107,7 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.typ
 下列範例示範如何修改控制平面的儲存體類別：
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlace.spec.storage.className=<yourStorageClassName>"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.storage.data.className=<yourStorageClassName>"
 ```
 
 另一個選項是手動編輯自訂組態檔，或在下列範例中，以變更存放集區的儲存體類別使用 jsonpatch 等。 建立*patch.json*使用此內容的檔案：
@@ -111,19 +116,21 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlace.spec.
 {
   "patch": [
     {
-      "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "op": "add",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage",
       "value": {
-        "replicas": 2,
-        "type": "Storage",
-        "storage": {
-          "usePersistentVolume": true,
-          "accessMode": "ReadWriteOnce",
-          "className": "<yourStorageClassName>",
-          "size": "32Gi"
+          "data": {
+            "className": "default",
+            "accessMode": "ReadWriteOnce",
+            "size": "100Gi"
+          },
+          "logs": {
+            "className": "default",
+            "accessMode": "ReadWriteOnce",
+            "size": "32Gi"
+          }
         }
       }
-    }
   ]
 }
 ```
@@ -131,7 +138,7 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlace.spec.
 套用修補檔案。 使用*mssqlctl 叢集組態區段組*命令，以套用 JSON 修補程式檔案中的變更。 下列範例適用於目標部署組態檔案 custom.json patch.json 檔案。
 
 ```bash
-mssqlctl cluster config section set -f custom.json -p ./patch.json
+mssqlctl cluster config section set -c custom.json -p ./patch.json
 ```
 
 ## <a name="next-steps"></a>後續步驟

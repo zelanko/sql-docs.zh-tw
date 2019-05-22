@@ -5,17 +5,17 @@ description: 了解如何部署在 Kubernetes 上的 SQL Server 2019 巨量資�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 99e9c837250c6020bb91c376a6ec34c5e5847f2b
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 924d026c61275d5bc957ce1157e30381f27ef2d0
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65099487"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993991"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 在 Kubernetes 上的巨量資料叢集
 
@@ -137,11 +137,8 @@ mssqlctl cluster create
 
 | 環境變數 | 描述 |
 |---|---|---|---|
-| **DOCKER_REGISTRY** | 私用登錄中儲存用來部署叢集的映像。 使用*私用 repo.microsoft.com*閘道公開預覽版的 ducration 的。|
-| **DOCKER_REPOSITORY** | 上述的登錄，影像都會儲存在私人存放庫。 使用*mssql 私人預覽*閘道公開預覽版的持續期間。|
 | **DOCKER_USERNAME** | 存取容器映像，如果它們儲存在私人存放庫的使用者名稱。 |
 | **DOCKER_PASSWORD** | 存取上述的私人存放庫的密碼。 |
-| **DOCKER_IMAGE_TAG** | 用來標記映像的標籤。 預設值為**最新**，但我們建議使用對應的發行版本的標記，以避免版本不相容的問題。 |
 | **CONTROLLER_USERNAME** | 針對叢集系統管理員使用者名稱。 |
 | **CONTROLLER_PASSWORD** | 針對叢集系統管理員密碼。 |
 | **KNOX_PASSWORD** | Knox 使用者的密碼。 |
@@ -156,11 +153,8 @@ export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
-export DOCKER_REGISTRY=private-repo.microsoft.com
-export DOCKER_REPOSITORY=mssql-private-preview
 export DOCKER_USERNAME=<docker-username>
 export DOCKER_PASSWORD=<docker-password>
-export DOCKER_IMAGE_TAG=ctp2.5
 ```
 
 ```PowerShell
@@ -168,11 +162,8 @@ SET CONTROLLER_USERNAME=admin
 SET CONTROLLER_PASSWORD=<password>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
-SET DOCKER_REGISTRY=private-repo.microsoft.com
-SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
-SET DOCKER_IMAGE_TAG=ctp2.5
 ```
 
 設定環境變數，您必須執行`mssqlctl cluster create`觸發部署。 此範例會使用先前建立的叢集組態檔：
@@ -186,7 +177,6 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 - 在此階段中，私用 Docker 登錄的認證會提供給您時分級您[Early Adoption Program 註冊](https://aka.ms/eapsignup)。 早期的採用計劃註冊，才能測試 SQL Server 的巨量資料叢集。
 - 請確定您將包裝密碼雙引號括住，如果它包含任何特殊字元。 您可以設定**MSSQL_SA_PASSWORD**至任何您喜歡，但請確定密碼夠複雜，且不用`!`，`&`或`'`字元。 請注意，雙引號括住分隔符號僅適用於 bash 命令。
 - **SA**登入是在安裝期間建立的 SQL Server 主要執行個體上的系統管理員。 建立您的 SQL Server 容器之後, **MSSQL_SA_PASSWORD**執行您所指定的環境變數是可探索回應在容器中的 $MSSQL_SA_PASSWORD。 基於安全考量，變更您的 SA 密碼，根據所述的最佳作法[此處](../linux/quickstart-install-connect-docker.md#sapassword)。
-- **DOCKER_IMAGE_TAG**發行您的控制項安裝在此範例中。 在此範例中，它是 CTP 2.5 版。
 
 ## <a id="unattended"></a> 自動的安裝
 
@@ -227,37 +217,44 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 
 部署指令碼已順利完成之後，您可以取得使用下列步驟的巨量資料叢集的外部端點的 IP 位址。
 
-1. 從部署的輸出，複製**入口網站端點**，並移除`/portal/`結尾。 這是管理 Proxy URL (例如`https://<ip-address>:30777`)。
-
-   > [!TIP]
-   > 如果您還沒有部署輸出，您可以藉由查看外部 IP 的輸出下列管理 proxy 取得 IP 位址**kubectl**命令：
-   >
-   > ```bash
-   > kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
-   > ```
-
-1. 登入的巨量資料叢集**mssqlctl 登入**。 設定 **-端點**管理 Proxy 參數。
+1. 部署之後，請查看下列的外部 IP 輸出，控制器端點的 IP 位址尋找**kubectl**命令：
 
    ```bash
-   mssqlctl login --endpoint https://<ip-address>:30777
+   kubectl get svc controller-svc-external -n <your-cluster-name>
+   ```
+
+1. 登入的巨量資料叢集**mssqlctl 登入**。 設定 **-控制站端點**參數來控制站端點的外部 IP 位址。
+
+   ```bash
+   mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
    ```
 
    在部署期間指定的使用者名稱和您設定控制站 （CONTROLLER_USERNAME 和 CONTROLLER_PASSWORD） 的密碼。
 
-1. 執行**mssqlctl 叢集端點清單**來取得每個端點和其對應的 IP 位址和連接埠值的描述與清單。 例如，以下顯示的管理入口網站端點的輸出：
+1. 執行**mssqlctl 叢集端點清單**來取得每個端點和其對應的 IP 位址和連接埠值的描述與清單。 
 
-   ```output
-   {
-     "description": "Management Portal",
-     "endpoint": "https://<ip-address>:30777/portal",
-     "ip": "<ip-address>",
-     "name": "portal",
-     "port": 30777,
-     "protocol": "https"
-   },
+   ```bash
+   mssqlctl cluster endpoint list
    ```
 
-1. 所有的叢集端點也會概述於**服務端點**叢集管理入口網站中的索引標籤。 您可以存取入口網站上一個步驟中使用管理入口網站的端點 (例如`https://<ip-address>:30777/portal`)。 存取系統管理入口網站的認證是控制器名稱和密碼，您在部署期間指定的值。 您也可以使用叢集系統管理入口網站來監視部署。
+   下列清單顯示此命令的範例輸出：
+
+   ```output
+   Name               Description                                             Endpoint                                                   Ip              Port    Protocol
+   -----------------  ------------------------------------------------------  ---------------------------------------------------------  --------------  ------  ----------
+   gateway            Gateway to access HDFS files, Spark                     https://11.111.111.111:30443                               11.111.111.111  30443   https
+   spark-history      Spark Jobs Management and Monitoring Dashboard          https://11.111.111.111:30443/gateway/default/sparkhistory  11.111.111.111  30443   https
+   yarn-ui            Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  30443   https
+   app-proxy          Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  30778   https
+   management-proxy   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  30777   https
+   portal             Management Portal                                       https://11.111.111.111:30777/portal                        11.111.111.111  30777   https
+   log-search-ui      Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  30777   https
+   metrics-ui         Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  30777   https
+   controller         Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  30080   https
+   sql-server-master  SQL Server Master Instance Front-End                    11.111.111.111,31433                                       11.111.111.111  31433   tcp
+   webhdfs            HDFS File System Proxy                                  https://11.111.111.111:30443/gateway/default/webhdfs/v1    11.111.111.111  30443   https
+   livy               Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  30443   https
+   ```
 
 ### <a name="minikube"></a>Minikube
 

@@ -3,17 +3,17 @@ title: 安裝 SQL Server Machine Learning 服務 （資料庫） 上 Windows-SQL
 description: SQL Server 或 SQL Server 2017 Machine Learning 服務在 Windows 上的 SQL Server 安裝步驟上的 Python 中的 R。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/03/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 088a553b28e968c1241486040de3c628fd6299cc
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 6cb30c306c5cd2b426976aba4a873475639e4ba5
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65097295"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994218"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>安裝 SQL Server Machine Learning 在 Windows 上的服務
 
@@ -25,7 +25,7 @@ ms.locfileid: "65097295"
 
 ## <a name="bkmk_prereqs"> </a> 預先安裝檢查清單
 
-+ 如果您想要使用 R、 Python 或 Java 語言支援安裝 Machine Learning 服務需要 SQL Server 2017 （或更新版本） 安裝程式。 如果相反地，您有 SQL Server 2016 安裝媒體，您可以安裝[SQL Server 2016 R Services （資料庫）](sql-r-services-windows-install.md)取得 R 語言支援。
++ 如果您想要使用 R 或 Python 語言支援安裝 Machine Learning 服務需要 SQL Server 2017 （或更新版本） 安裝程式。 如果相反地，您有 SQL Server 2016 安裝媒體，您可以安裝[SQL Server 2016 R Services （資料庫）](sql-r-services-windows-install.md)取得 R 語言支援。
 
 + 需要資料庫引擎執行個體。 您無法安裝只是 R 或 Python 功能，雖然您可以將它們以累加方式加入現有的執行個體。
 
@@ -53,7 +53,7 @@ ms.locfileid: "65097295"
 
 如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。
 
-1. 啟動 SQL Server 2017 的安裝精靈。 您可以下載 
+1. 啟動 SQL Server 2017 的安裝精靈。 
   
 2. 在 **安裝**索引標籤上，選取**新的 SQL Server 獨立安裝或將功能加入到現有安裝**。
 
@@ -126,13 +126,13 @@ ms.locfileid: "65097295"
     > [!TIP]
     > 您可以下載並安裝適當版本，從這個頁面：[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
-    > 您也可以試試預覽版[Azure Data Studio](../../azure-data-studio/what-is.md)，其支援的系統管理工作和 SQL Server 查詢。
+    > 您也可以使用[Azure Data Studio](../../azure-data-studio/what-is.md)，其支援的系統管理工作和 SQL Server 查詢。
   
 2. 連接到您安裝 Machine Learning 服務的執行個體，請按一下**新的查詢**開啟查詢視窗中，並執行下列命令：
 
-   ```sql
-   sp_configure
-   ```
+    ```sql
+    sp_configure
+    ```
 
     屬性 `external scripts enabled` 的值目前應該為 **0**。 這是因為預設關閉的功能。 您可以執行 R 或 Python 指令碼之前，此功能，必須明確啟用由系統管理員。
     

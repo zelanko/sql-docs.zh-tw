@@ -5,16 +5,16 @@ description: Mssqlctl 叢集命令的參考文件。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3a4693c5ffb68ad555d97d02f983fadf4e6bbd9a
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 984a3c50ac691df3759edc161baabc533bd9456f
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774674"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993338"
 ---
 # <a name="mssqlctl-cluster-config"></a>mssqlctl cluster config
 
@@ -25,22 +25,26 @@ ms.locfileid: "64774674"
 ## <a name="commands"></a>命令
 |     |     |
 | --- | --- |
-[mssqlctl cluster config get](#mssqlctl-cluster-config-get) | 取得叢集設定-kube 組態需要您的系統上。
-[mssqlctl 叢集組態 init](#mssqlctl-cluster-config-init) | 初始化叢集組態。
+[mssqlctl 叢集 config show](#mssqlctl-cluster-config-show) | 取得 SQL Server 巨量資料叢集的目前組態。
+[mssqlctl 叢集組態 init](#mssqlctl-cluster-config-init) | 初始化可以搭配叢集的叢集組態設定檔建立。
 [mssqlctl 叢集組態清單](#mssqlctl-cluster-config-list) | 列出可用的設定檔選項。
-[mssqlctl 叢集組態區段](reference-mssqlctl-cluster-config-section.md) | 使用組態檔的個別區段的命令。
-## <a name="mssqlctl-cluster-config-get"></a>取得 mssqlctl 叢集組態
-取得 SQL Server 巨量資料叢集的目前組態檔。
+[mssqlctl 叢集組態區段](reference-mssqlctl-cluster-config-section.md) | 使用 叢集組態檔的個別區段的命令。
+## <a name="mssqlctl-cluster-config-show"></a>mssqlctl 叢集 config show
+取得 SQL Server 巨量資料叢集的目前組態檔，並將它輸出到目標檔案或很將它列印至主控台。
 ```bash
-mssqlctl cluster config get --name -n 
-                            [--output-file -f]
+mssqlctl cluster config show [--target -t] 
+                             [--force -f]
 ```
-### <a name="required-parameters"></a>必要參數
-#### `--name -n`
-Kubernetes 命名空間所使用的叢集名稱。
+### <a name="examples"></a>範例
+顯示在主控台中的叢集組態
+```bash
+mssqlctl cluster config show
+```
 ### <a name="optional-parameters"></a>選擇性參數
-#### `--output-file -f`
+#### `--target -t`
 若要將結果儲存在輸出檔。 預設值： 導向至 stdout。
+#### `--force -f`
+強制覆寫目標檔案。
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`
 增加記錄詳細程度以顯示所有偵錯記錄檔。
@@ -53,16 +57,28 @@ JMESPath 查詢字串。 請參閱[ http://jmespath.org/ ](http://jmespath.org/]
 #### `--verbose`
 增加記錄詳細程度。 使用--debug 取得完整的偵錯記錄。
 ## <a name="mssqlctl-cluster-config-init"></a>mssqlctl 叢集組態 init
-初始化使用者指定的預設型別為基礎的叢集組態檔。
+初始化可以搭配叢集的叢集組態設定檔建立。 可以從 3 個選項的引數中指定組態設定檔的特定來源。
 ```bash
 mssqlctl cluster config init [--target -t] 
-                             [--src -s]
+                             [--src -s]  
+                             [--force -f]
+```
+### <a name="examples"></a>範例
+引導式叢集組態 init 體驗-您將收到提示所需的值。
+```bash
+mssqlctl cluster config init
+```
+叢集使用的引數的組態初始化，則會建立 aks-開發 / 測試中的組態設定檔。 / custom.json。
+```bash
+mssqlctl cluster config init --src aks-dev-test.json --target custom.json
 ```
 ### <a name="optional-parameters"></a>選擇性參數
 #### `--target -t`
-您要用來放置，設定檔預設為使用自訂 config.json cwd 檔案路徑。
+您要用來放置，組態設定檔預設為使用自訂 config.json cwd 檔案路徑。
 #### `--src -s`
-組態來源: ['aks-dev-test.json'，' kubeadm-dev-test.json'，' minikube-dev-test.json']
+組態設定檔的來源: ['aks-dev-test.json'，' kubeadm-dev-test.json'，' minikube-dev-test.json']
+#### `--force -f`
+強制覆寫目標檔案。
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`
 增加記錄詳細程度以顯示所有偵錯記錄檔。
@@ -77,11 +93,20 @@ JMESPath 查詢字串。 請參閱[ http://jmespath.org/ ](http://jmespath.org/]
 ## <a name="mssqlctl-cluster-config-list"></a>mssqlctl 叢集組態清單
 列出可用的設定檔選擇用於叢集組態 init
 ```bash
-mssqlctl cluster config list [--config-file -f] 
+mssqlctl cluster config list [--config-file -c] 
                              
 ```
+### <a name="examples"></a>範例
+顯示所有可用的組態設定檔名稱。
+```bash
+mssqlctl cluster config list
+```
+顯示特定的組態設定檔的 json。
+```bash
+mssqlctl cluster config list --config-file aks-dev-test.json
+```
 ### <a name="optional-parameters"></a>選擇性參數
-#### `--config-file -f`
+#### `--config-file -c`
 預設組態檔中: ['aks-dev-test.json'，' kubeadm-dev-test.json'，' minikube-dev-test.json']
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`

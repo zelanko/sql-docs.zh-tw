@@ -3,30 +3,30 @@ title: SQL Server 2019-SQL Server Machine Learning 服務中的差異
 description: 了解 R 和 Python 的 SQL Server 機器學習服務擴充功能在 SQL Server 2019 的預覽版本的最新消息。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/08/2018
+ms.date: 05/22/2019
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: dphansen
+ms.author: davidph
+manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ef383a0f2c85525e408607c22513065dd5bcb50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3d549bdc96e09ed0b9b0235ada51274201f1b91a
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745898"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994228"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>在 SQL Server Machine Learning 服務安裝在 SQL Server 2019 的差異  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在 Windows、 SQL Server 2019 安裝程式會變更外部處理序隔離機制。 這項變更會取代本機的背景工作帳戶[AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)，隔離技術，在 Windows 上執行的用戶端應用程式。 
 
-沒有特定的動作項目，因為修改系統管理員。 在新的或已升級伺服器，所有外部指令碼和程式碼從執行[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)自動遵循新的隔離模型。 這適用於 R、 Python 和 SQL Server 2019 中導入的新 Java 語言擴充功能。
+沒有特定的動作項目，因為修改系統管理員。 在新的或已升級伺服器，所有外部指令碼和程式碼從執行[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)自動遵循新的隔離模型。 
 
 摘要說明，在此版本中的主要差異如下：
 
 + 本機使用者帳戶之下**SQL 限制使用者群組 (SQLRUserGroup)** 不會再建立或用來執行外部處理序。 AppContainers 取代它們。
-+ **SQLRUserGroup**成員資格有所變更。 而不是多個本機使用者帳戶，成員資格包含只是 SQL Server Launchpad 服務帳戶。 R、 Python 和 Java 程序現在在 Launchpad 服務身分識別，透過 AppContainers 隔離下執行。
++ **SQLRUserGroup**成員資格有所變更。 而不是多個本機使用者帳戶，成員資格包含只是 SQL Server Launchpad 服務帳戶。 R 和 Python 處理程序現在在 Launchpad 服務身分識別，透過 AppContainers 隔離下執行。
 
 雖然隔離模型已變更時，安裝精靈和命令列參數會保持相同的 SQL Server 2019。 如需安裝的說明，請參閱[安裝 SQL Server Machine Learning 服務](sql-machine-learning-services-windows-install.md)。
 
@@ -49,7 +49,7 @@ ms.locfileid: "62745898"
 
 ## <a name="program-file-permissions"></a>程式檔案的權限
 
-如同舊版本中， **SQLRUserGroup**會繼續提供讀取和執行 SQL Server 中的可執行檔的權限**Binn**， **R_SERVICES**，和**PYTHON_SERVICES**目錄。 在這一版的唯一成員**SQLRUserGroup**是 SQL Server Launchpad 服務帳戶。  Launchpad 服務啟動時 R、 Python 或 Java 執行環境，LaunchPad 服務會執行此程序。
+如同舊版本中， **SQLRUserGroup**會繼續提供讀取和執行 SQL Server 中的可執行檔的權限**Binn**， **R_SERVICES**，和**PYTHON_SERVICES**目錄。 在這一版的唯一成員**SQLRUserGroup**是 SQL Server Launchpad 服務帳戶。  Launchpad 服務啟動時 R 或 Python 執行環境，LaunchPad 服務會執行此程序。
 
 ## <a name="implied-authentication"></a>隱含驗證
 

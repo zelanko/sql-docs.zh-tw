@@ -1,7 +1,7 @@
 ---
 title: Master Data Services 安裝和組態 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/28/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f177e333353cb8fb48b86a320c8e77e37a8991ae
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 2d1cd12ff92b45c78eaf3dbe17a08c4e83d0f3b1
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488226"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994120"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 安裝和組態
 
@@ -128,8 +128,19 @@ ms.locfileid: "65488226"
   
 2.  按一下 [建立資料庫]，然後按一下 [建立資料庫精靈] 中的 [下一步]。  
   
-3.  在 [資料庫伺服器] 頁面上，選取 [驗證類型]，然後按一下 [測試連接] 確認您可以使用所選驗證類型的認證連接到資料庫。 按一下 [下一步] 。
-  
+3.  在 **資料庫伺服器**頁面上，指定 SQL Server 執行個體。 
+
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 新增支援 SQL Server 受控執行個體。 設定的值**SQL Server 執行個體**主應用程式的 Azure SQL Database 受控執行個體。 例如， `xxxxxx.xxxxxx.database.windows.net` 。
+
+4. 選取 **驗證類型**，然後按一下**測試連接**以確認您可以連線到資料庫所選取的驗證類型使用的認證。 按一下 [下一步] 。
+
+    >針對[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]、 連接到 Azure SQL Database 受控執行個體，請使用下列驗證類型其中一項：
+    >
+    >- Azure Active Directory 整合式的驗證：**目前使用者-整合了 Active Directory**
+    >- SQL Server 驗證：**SQL Server 帳戶**。
+    >
+    >在 Azure SQL Database 受控執行個體，使用者必須隸屬`sysadmin`固定的伺服器角色。
+
     > [!NOTE]  
     >  若您選取 [目前使用者 - 整合式安全性] 作為驗證類型，[使用者名稱] 方塊會是唯讀的，並顯示登入電腦的 Windows 使用者帳戶名稱。 如果您要在 Azure 虛擬機器 (VM) 上執行 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]，則 [使用者名稱] 方塊會顯示 VM 名稱以及 VM 上本機系統管理員帳戶的使用者名稱。 
 

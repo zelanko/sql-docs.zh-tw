@@ -9,12 +9,12 @@ ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd3e38cbcd927de25f4e072b8bdb1ac09331f739
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: 8004146499bd8b17c7705f7558de075dfece5813
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620320"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994173"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>在 SQL Server 巨量資料叢集中使用 sparklyr
 
@@ -49,7 +49,7 @@ Sparklyr 提供適用於 Apache Spark 的 R 介面。 Sparklyr 是使用 Spark �
 在 RStudio 中，建立 R 指令碼，並連線至 Spark，如下列範例所示：
 
 > [!TIP]
-> 針對`<USERNAME>`和`<PASSWORD>`值，會使用 （例如根） 的使用者名稱和您在巨量資料叢集部署期間設定的密碼。 針對`<IP>`並`<PORT>`的值，請參閱文件[HDFS/Spark 閘道](connect-to-big-data-cluster.md#hdfs)。
+> 針對`<USERNAME>`和`<PASSWORD>`值，會使用 （例如根） 的使用者名稱和您在巨量資料叢集部署期間設定的密碼。 針對`<IP>`並`<PORT>`的值，請參閱文件[連線到巨量資料叢集](connect-to-big-data-cluster.md)。
 
 ```r
 library(sparklyr)

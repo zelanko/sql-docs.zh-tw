@@ -5,16 +5,16 @@ description: Mssqlctl 叢集命令的參考文件。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c69aeced2378e018376172e1fb6370d56706ecb7
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: c3a15fb9658f25977542754d6479b09b97323f53
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775644"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993323"
 ---
 # <a name="mssqlctl-cluster"></a>mssqlctl cluster
 
@@ -28,18 +28,40 @@ ms.locfileid: "64775644"
 [mssqlctl 叢集建立](#mssqlctl-cluster-create) | 建立叢集。
 [mssqlctl 叢集刪除](#mssqlctl-cluster-delete) | 刪除叢集。
 [mssqlctl 叢集組態](reference-mssqlctl-cluster-config.md) | 叢集組態命令。
+[mssqlctl 叢集端點](reference-mssqlctl-cluster-endpoint.md) | 端點的命令。
+[mssqlctl 叢集狀態](reference-mssqlctl-cluster-status.md) | 狀態的命令。
 [mssqlctl 叢集偵錯](reference-mssqlctl-cluster-debug.md) | 偵錯命令。
+[mssqlctl cluster storage-pool](reference-mssqlctl-cluster-storage-pool.md) | 管理叢集的存放集區。
 ## <a name="mssqlctl-cluster-create"></a>mssqlctl 叢集建立
-建立 SQL Server 的巨量資料叢集。
+建立 SQL Server 巨量資料叢集-kube 設定需要您的系統，以及下列環境變數 ['CONTROLLER_USERNAME'、 'CONTROLLER_PASSWORD'、 'DOCKER_USERNAME'、 'DOCKER_PASSWORD'、 'MSSQL_SA_PASSWORD'、 'KNOX_PASSWORD']。
 ```bash
-mssqlctl cluster create [--config-file -f] 
-                        [--accept-eula -e]  
+mssqlctl cluster create [--config-file -c] 
+                        [--accept-eula -a]  
+                        [--node-label -l]  
+                        [--force -f]
+```
+### <a name="examples"></a>範例
+引導式叢集的部署體驗-您將收到提示所需的值。
+```bash
+mssqlctl cluster create
+```
+使用引數的叢集部署。
+```bash
+mssqlctl cluster create --accept-eula yes --config-file aks-dev-test.json
+```
+使用引數-沒有提示的叢集部署將會被授與--force 旗標用為。
+```bash
+mssqlctl cluster create --accept-eula yes --config-file aks-dev-test.json --force
 ```
 ### <a name="optional-parameters"></a>選擇性參數
-#### `--config-file -f`
+#### `--config-file -c`
 叢集組態設定檔，用來部署叢集: ['aks-dev-test.json'，' kubeadm-dev-test.json'，' minikube-dev-test.json']
-#### `--accept-eula -e`
-您接受授權條款嗎？ [是/否]。
+#### `--accept-eula -a`
+您接受授權條款嗎？ [是/否]。 如果您不要使用這個引數，您可以設定為 'yes' ACCEPT_EULA 環境變數
+#### `--node-label -l`
+叢集節點的標籤，用來指定要部署到哪些節點。
+#### `--force -f`
+強制建立的任何值，不提示使用者，所有的問題會列印為 stderr 的一部分。
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`
 增加記錄詳細程度以顯示所有偵錯記錄檔。
@@ -52,10 +74,15 @@ JMESPath 查詢字串。 請參閱[ http://jmespath.org/ ](http://jmespath.org/]
 #### `--verbose`
 增加記錄詳細程度。 使用--debug 取得完整的偵錯記錄。
 ## <a name="mssqlctl-cluster-delete"></a>mssqlctl 叢集刪除
-刪除 SQL Server 的巨量資料叢集。
+刪除 SQL Server 巨量資料叢集-kube 設定需要您的系統，以及下列環境變數 ['CONTROLLER_USERNAME'，'CONTROLLER_PASSWORD']。
 ```bash
 mssqlctl cluster delete --name -n 
                         [--force -f]
+```
+### <a name="examples"></a>範例
+其中的控制器的使用者名稱和密碼已設定系統環境中的叢集刪除。
+```bash
+mssqlctl cluster delete --name <cluster_name>
 ```
 ### <a name="required-parameters"></a>必要參數
 #### `--name -n`

@@ -1,35 +1,35 @@
 ---
-title: 安裝 SQL Server Machine Learning 在 Linux 上的 服務 (R、 Python、 Java) |Microsoft Docs
-description: 了解如何安裝 SQL Server Machine Learning 服務 （R、 Python、 Java），以在 Red Hat 和 Ubuntu 上。
-author: HeidiSteen
-ms.author: heidist
+title: 安裝 SQL Server Machine Learning 在 Linux 上的服務 （R、 Python） |Microsoft Docs
+description: 在 Red Hat、 Ubuntu 與 SUSE，了解如何安裝 SQL Server Machine Learning 服務 （R、 Python）。
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 85700f287b3725895fc3ca170fd182353a259737
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2232d56141984d03224967043f1977d178952bd1
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190391"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993434"
 ---
-# <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>安裝 SQL Server 2019 Machine Learning 在 Linux 上的服務 (R、 Python、 Java)
+# <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>安裝 SQL Server 2019 Machine Learning 服務 （R、 Python） 在 Linux 上
 
-[SQL Server Machine Learning 服務](../advanced-analytics/what-is-sql-server-machine-learning.md)可開始在此預覽版本中的 SQL Server 2019 的 Linux 作業系統上執行。 請遵循這篇文章，以安裝 Java 程式設計延伸模組或擴充功能適用於 machine learning R 和 Python 中的步驟。 
+[SQL Server Machine Learning 服務](../advanced-analytics/what-is-sql-server-machine-learning.md)可開始在此預覽版本中的 SQL Server 2019 的 Linux 作業系統上執行。 請遵循本文，以安裝擴充功能適用於 machine learning R 和 Python 中的步驟。 
 
 機器學習服務和程式設計延伸模組是 database engine 的附加元件。 雖然您可以[同時安裝 database engine 和 Machine Learning 服務](#install-all)，它是安裝和設定 SQL Server database engine 第一次，讓您能夠解決任何問題，然後再加入其他最佳作法元件。 
 
-R、 Python 和 Java 的延伸模組的封裝位置是在 SQL Server Linux 來源存放庫中。 如果您已經設定資料庫引擎安裝的來源存放庫，您可以執行**mssql mlservices**封裝使用相同的存放庫註冊的安裝命令。
+R 和 Python 的延伸模組的封裝位置是在 SQL Server Linux 來源存放庫中。 如果您已經設定資料庫引擎安裝的來源存放庫，您可以執行**mssql mlservices**封裝使用相同的存放庫註冊的安裝命令。
 
 Machine Learning 服務也支援在 Linux 容器。 我們不會提供預先建置的容器使用機器學習服務，但您可以從建立一個使用的 SQL Server 容器[可在 GitHub 上的範例範本](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)。
 
 ## <a name="uninstall-previous-ctp"></a>解除安裝先前的 CTP
 
-套件清單已變更透過最後幾個 CTP 版本中，導致較少的封裝。 我們建議您解除安裝 CTP 2.x 安裝 CTP 2.4 之前先移除所有先前的封裝。 不支援多個版本的並存安裝。
+套件清單已變更透過最後幾個 CTP 版本中，導致較少的封裝。 我們建議您解除安裝 CTP 2.x 安裝 CTP 3.0 之前先移除所有先前的封裝。 不支援多個版本的並存安裝。
 
 ### <a name="1-confirm-package-installation"></a>1.確認封裝安裝
 
@@ -45,15 +45,14 @@ ls /opt/microsoft/mssql/bin
 
   + R 整合，移除**microsoft r 開啟***
   + 對於 Python 整合移除**mssql-mlservices-python**
-  + Java 整合移除**mssql 伺服器擴充性-java**
 
 移除封裝的命令會顯示下表中。
 
 | 平台  | 套件移除命令 | 
 |-----------|----------------------------|
-| RHEL  | `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python`<br/>`sudo yum remove msssql-server-extensibility-java` |
-| SLES  | `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python`<br/>`sudo zypper remove msssql-server-extensibility-java` |
-| Ubuntu    | `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`<br/>`sudo apt-get remove msssql-server-extensibility-java`|
+| RHEL  | `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python` |
+| SLES  | `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python` |
+| Ubuntu    | `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`|
 
 > [!Note]
 > Microsoft R Open 被包含三個封裝。 如果任何這些套件仍移除 microsoft-r-開啟-mro-3.4.4 之後，您應該個別移除它們。
@@ -63,7 +62,7 @@ ls /opt/microsoft/mssql/bin
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-24-install"></a>3.繼續進行 CTP 2.4 安裝
+### <a name="3-proceed-with-ctp-30-install"></a>3.繼續進行 CTP 3.0 安裝
 
 在最高的封裝層級使用這篇文章中的指示，適用於您作業系統的安裝。
 
@@ -169,8 +168,7 @@ zypper update
 
 | 封裝名稱 | Applies-to | 描述 |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | All | 用來執行 R、 Python 或 Java 程式碼的擴充性架構。 |
-|mssql-server-extensibility-java | Java | 載入的 Java 執行環境的 Java 延伸模組。 沒有任何額外的程式庫或適用於 Java 的封裝。 |
+|mssql-server-extensibility  | All | 用來執行 R 和 Python 程式碼的擴充性架構。 |
 | microsoft-openmpi  | Python, R | 訊息傳遞介面 Revo * 程式庫用來在 Linux 上的平行處理。 |
 | mssql-mlservices-python | Python | Anaconda 和 Python 的開放原始碼散發套件。 |
 |mssql-mlservices-mlm-py  | Python | *完整安裝*。 提供 revoscalepy，microsoftml，預先定型的影像特徵化和文字情感分析模型。| 
@@ -183,7 +181,7 @@ zypper update
 
 <a name="RHEL"></a>
 
-## <a name="rhel-commands"></a>RHEL 命令
+## <a name="redhat-commands"></a>RedHat 命令
 
 您可以安裝語言支援在任何組合，您需要 （單一或多個語言）。 如需 R 和 Python，有可從中選擇的兩個套件。 其中一個提供所有可用的功能，具備的特性*完整安裝*。 替代的選擇排除預先定型的機器學習服務模型，而且會被視為*最小安裝*。
 
@@ -192,28 +190,26 @@ zypper update
 
 ### <a name="example-1----full-installation"></a>範例 1： 完整安裝 
 
-包含 R 和 Python 的開放原始碼 R 和 Python 擴充性架構，microsoft openmpi，延伸模組 （R、 Python、 Java），與機器學習程式庫和預先定型的模型。 
+包含 R 和 Python 的開放原始碼 R 和 Python 擴充性架構，microsoft openmpi，延伸模組 （R、 Python），與機器學習程式庫和預先定型的模型。 
 
 ```bash
 # Install as root or sudo
-# Add everything (all R, Python, Java)
+# Add everything (all R, Python)
 # Be sure to include -9.4.6* in mlsservices package names
 sudo yum install mssql-mlservices-mlm-py-9.4.6*
 sudo yum install mssql-mlservices-mlm-r-9.4.6* 
-sudo yum install mssql-server-extensibility-java
 ```
 
 ### <a name="example-2---minimum-installation"></a>範例 2-最小安裝 
 
-包含 R 和 Python 和 Java 延伸模組的開放原始碼 R 和 Python，extensibility framework、 microsoft-openmpi、 core Revo * 程式庫和機器學習程式庫。 排除預先定型的模型。
+包含 R 和 Python 的開放原始碼 R 和 Python，extensibility framework、 microsoft-openmpi、 core Revo * 程式庫和機器學習程式庫。 排除預先定型的模型。
 
 ```bash
 # Install as root or sudo
-# Minimum install of R, Python, Java extensions
+# Minimum install of R, Python extensions
 # Be sure to include -9.4.6* in mlsservices package names
 sudo yum install mssql-mlservices-packages-py-9.4.6*
 sudo yum install mssql-mlservices-packages-r-9.4.6*
-sudo yum install mssql-server-extensibility-java
 ```
 
 <a name="ubuntu"></a>
@@ -237,28 +233,26 @@ dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
 
 ### <a name="example-1----full-installation"></a>範例 1： 完整安裝 
 
-包含 R 和 Python 的開放原始碼 R 和 Python 擴充性架構，microsoft openmpi，延伸模組 （R、 Python、 Java），與機器學習程式庫和預先定型的模型。 
+包含 R 和 Python 的開放原始碼 R 和 Python 擴充性架構，microsoft openmpi，延伸模組 （R、 Python），與機器學習程式庫和預先定型的模型。 
 
 ```bash
 # Install as root or sudo
-# Add everything (all R, Python, Java)
+# Add everything (all R, Python)
 # There is no asterisk in this full install
 sudo apt-get install mssql-mlservices-mlm-py 
 sudo apt-get install mssql-mlservices-mlm-r 
-sudo apt-get install mssql-server-extensibility-java
 ```
 
 ### <a name="example-2---minimum-installation"></a>範例 2-最小安裝 
 
-包含 R 和 Python 和 Java 延伸模組的開放原始碼 R 和 Python，extensibility framework、 microsoft-openmpi、 core Revo * 程式庫和機器學習程式庫。 排除預先定型的模型。 
+包含 R 和 Python 的開放原始碼 R 和 Python，extensibility framework、 microsoft-openmpi、 core Revo * 程式庫和機器學習程式庫。 排除預先定型的模型。 
 
 ```bash
 # Install as root or sudo
-# Minimum install of R, Python, Java
+# Minimum install of R, Python
 # No aasterisk
 sudo apt-get install mssql-mlservices-packages-py
 sudo apt-get install mssql-mlservices-packages-r
-sudo apt-get install mssql-server-extensibility-java
 ```
 
 <a name="suse"></a>
@@ -269,28 +263,26 @@ sudo apt-get install mssql-server-extensibility-java
 
 ### <a name="example-1----full-installation"></a>範例 1： 完整安裝 
 
-包含 R 和 Python 的開放原始碼 R 和 Python 擴充性架構，microsoft openmpi，延伸模組 （R、 Python、 Java），與機器學習程式庫和預先定型的模型。 
+包含 R 和 Python 的開放原始碼 R 和 Python 擴充性架構，microsoft openmpi，延伸模組 （R、 Python），與機器學習程式庫和預先定型的模型。 
 
 ```bash
 # Install as root or sudo
-# Add everything (all R, Python, Java)
+# Add everything (all R, Python)
 # Be sure to include -9.4.6* in mlsservices package names
 sudo zypper install mssql-mlservices-mlm-py-9.4.6*
 sudo zypper install mssql-mlservices-mlm-r-9.4.6* 
-sudo zypper install mssql-server-extensibility-java
 ```
 
 ### <a name="example-2---minimum-installation"></a>範例 2-最小安裝 
 
-包含 R 和 Python 和 Java 延伸模組的開放原始碼 R 和 Python，extensibility framework、 microsoft-openmpi、 core Revo * 程式庫和機器學習程式庫。 排除預先定型的模型。 
+包含 R 和 Python 的開放原始碼 R 和 Python，extensibility framework、 microsoft-openmpi、 core Revo * 程式庫和機器學習程式庫。 排除預先定型的模型。 
 
 ```bash
 # Install as root or sudo
-# Minimum install of R, Python, Java extensions
+# Minimum install of R, Python extensions
 # Be sure to include -9.4.6* in mlsservices package names
 sudo zypper install mssql-mlservices-packages-py-9.4.6*
 sudo zypper install mssql-mlservices-packages-r-9.4.6*
-sudo zypper install mssql-server-extensibility-java
 ```
 
 ## <a name="post-install-config-required"></a>後續安裝組態 （必要）
@@ -351,8 +343,6 @@ R 程式庫 （MicrosoftML、 RevoScaleR，以及其他），請參閱`/opt/mssq
 
 （microsoftml 和 revoscalepy） 的 Python 程式庫，請參閱`/opt/mssql/mlservices/libraries/PythonServer`。
 
-Java 功能整合不包含程式庫，但您可以執行`grep -r JAVA_HOME /etc`確認建立 JAVA_HOME 環境變數。
-
 若要驗證安裝，執行的 T-SQL 指令碼執行系統預存程序叫用 R 或 Python。 您必須針對這項工作的查詢工具。 Azure Data Studio 是不錯的選擇。 其他常用於工具，例如 SQL Server Management Studio 或 PowerShell 是僅限 Windows。 如果您有使用這些工具的 Windows 電腦，請使用它來連接到 database engine 的 Linux 安裝。
 
 執行下列 SQL 命令來測試 SQL Server 中的 R 執行。 如果指令碼未執行，請嘗試重新啟動服務， `sudo systemctl restart mssql-server.service`。
@@ -384,22 +374,22 @@ GO
 
 ## <a name="chained-combo-install"></a>鏈結的 「 組合 」 安裝
 
-您可以安裝並在程序中設定 database engine 和 Machine Learning 服務，藉由附加 R、 Python 或 Java 的封裝和參數在命令中安裝資料庫引擎。 
+您可以安裝並在程序中設定 database engine 和 Machine Learning 服務，藉由附加 R 或 Python 的封裝和參數在命令中安裝資料庫引擎。 
 
 1. 針對 R 整合安裝[Microsoft R Open](#mro)做為必要條件。 如果您不想要安裝 R 功能，請略過此步驟。
 
 2. 提供命令列，其中包含資料庫引擎，再加上語言擴充功能。
 
-  您可以新增單一的功能，例如整合到 database engine 安裝的 Java。
+  您可以新增單一的功能，例如整合到 database engine 安裝的 Python。
 
   ```bash
-  sudo yum install -y mssql-server mssql-server-extensibility-java 
+  sudo yum install -y mssql-server mssql-mlservices-packages-r-9.4.6* 
   ```
 
-  或者，新增所有延伸模組 (Java、 R、 Python)。
+  或者，新增這兩個延伸模組 （R、 Python）。
 
   ```bash
-  sudo yum install -y mssql-server mssql-server-extensibility-java mssql-mlservices-packages-r-9.4.6* mssql-mlservices-packages-py-9.4.6*
+  sudo yum install -y mssql-server mssql-mlservices-packages-r-9.4.6* mssql-mlservices-packages-py-9.4.6*
   ```
 
 3. 接受授權合約，並完成後續安裝組態。 使用**mssql conf**這項工作的工具。
@@ -438,7 +428,7 @@ sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 #### <a name="download-site"></a>下載網站
 
-您可以從套件下載[ https://packages.microsoft.com/ ](https://packages.microsoft.com/)。 所有 R、 Python 和 Java 的 mlservices 套件都是共置於資料庫引擎套件。 Mlservices 套件的基底版本是 （適用於 CTP 2.0) 的 9.4.5 9.4.6 （CTP 2.1 和更新版本）。 提醒您，microsoft r 開放封裝位於[不同的存放庫](#mro)。
+您可以從套件下載[ https://packages.microsoft.com/ ](https://packages.microsoft.com/)。 所有 R 和 Python 的 mlservices 套件都是共置於資料庫引擎套件。 Mlservices 套件的基底版本是 （適用於 CTP 2.0) 的 9.4.5 9.4.6 （CTP 2.1 和更新版本）。 提醒您，microsoft r 開放封裝位於[不同的存放庫](#mro)。
 
 #### <a name="rhel7-paths"></a>RHEL/7 路徑
 
@@ -471,9 +461,6 @@ sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 mssql-server-15.0.1000
 mssql-server-extensibility-15.0.1000
 
-# Java
-mssql-server-extensibility-java-15.0.1000
-
 # R
 microsoft-openmpi-3.0.0
 microsoft-r-open-foreachiterators-3.4.4
@@ -490,17 +477,6 @@ mssql-mlservices-packages-py-9.4.6.523
 mssql-mlservices-mlm-py-9.4.6.523
 mssql-mlservices-mml-py-9.4.6.523
 ```
-
-#### <a name="package-list-for-original-ctp-20-and-21"></a>適用於原始的 CTP 2.0 和 2.1 的套件清單
-
-CTP 2.2 中移除**mssql mlservices-mlm py**並**mssql mlservices mlm-r**透過封裝彙總成**mssql mlservices 封裝-py**和**mssql mlservices 封裝-r**分別。
-
-如果您特別需要原始的 CTP 2.0 或 2.1 的套件，下載下列套件：
-
-* CTP 2.0 中，下載的套件版本 9.4.5
-
-* CTP 2.1 下載 9.4.6.237 的套件版本
-
 
 ## <a name="add-more-rpython-packages"></a>新增更多 R/Python 套件 
  
@@ -551,11 +527,9 @@ CTP 2.2 中移除**mssql mlservices-mlm py**並**mssql mlservices mlm-r**透過�
 
 ## <a name="limitations-in-ctp-releases"></a>在 CTP 版本中的限制
 
-在 Linux 上的 R、 Python 和 Java 整合是仍在作用中的開發。 預覽版中尚未啟用下列功能。
+在 Linux 上的 R 和 Python 整合是仍在作用中的開發。 預覽版中尚未啟用下列功能。
 
 + 隱含的驗證目前無法使用。 在 Linux 上的 Machine Learning 服務在此階段，這表示您無法從進行中 R 或 Python 指令碼來存取資料或其他資源連線至伺服器 
-
-+ [CREATE EXTERNAL LIBRARY](../t-sql/statements/create-external-library-transact-sql.md) （適用於在資料庫中儲存的 R 套件） 目前不是在 Linux 上使用，且不支援 Python。  
 
 ### <a name="resource-governance"></a>資源控管
 

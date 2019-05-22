@@ -5,16 +5,16 @@ description: Mssqlctl 命令的參考文件。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ebd3b63d641c77dae1afbff21264ec4fe34df4d0
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: dd9248c059cb4179bca7953e8a7d5bf721892fb8
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775496"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993315"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -27,36 +27,38 @@ ms.locfileid: "64775496"
 | --- | --- |
 |[mssqlctl 應用程式](reference-mssqlctl-app.md) | 建立、 刪除、 執行和管理應用程式。 |
 |[mssqlctl cluster](reference-mssqlctl-cluster.md) | 選取、 管理和操作叢集。 |
-[mssqlctl login](#mssqlctl-login) | 叢集登入。
+[mssqlctl login](#mssqlctl-login) | 登入叢集的控制站的端點。
 [mssqlctl logout](#mssqlctl-logout) | 記錄移出叢集。
-|[mssqlctl storage](reference-mssqlctl-storage.md) | 管理叢集存放裝置。 |
 ## <a name="mssqlctl-login"></a>mssqlctl 登入
-叢集登入。
+部署您的叢集時，它會列出控制器端點在部署期間，您應該用來登入。  如果您不知道控制器端點，您可能會讓您的叢集 kube 設定您的系統中的預設位置上的登入<user home>/.kube/config 或使用 KUBECONFIG 環境變數，也就是匯出 KUBECONFIG=path/to/.kube/config。
 ```bash
-mssqlctl login [--username -u] 
-               [--password -p]  
-               [--endpoint -e]
+mssqlctl login [--cluster-name -n] 
+               [--controller-username -u]  
+               [--controller-endpoint -e]  
+               [--accept-eula -a]
 ```
 ### <a name="examples"></a>範例
-以互動方式登入。
+以互動方式登入。 叢集名稱將一律會提示您輸入若未指定做為引數。 如果您有 CONTROLLER_USERNAME、 CONTROLLER_PASSWORD 和 ACCEPT_EULA 環境變數設定在您的系統上，這些不會提示的。 如果您 kube 設定您的系統上，或使用指定的路徑設定 KUBECONFIG 環境變數，互動式的體驗會先嘗試使用組態檔，然後提示您，如果組態失敗。
 ```bash
 mssqlctl login
 ```
-使用者名稱和密碼登入。
+（非互動方式），登入。 叢集名稱、 控制器的使用者名稱、 控制器端點和設定做為引數接受登入。 CONTROLLER_PASSWORD 必須設定環境變數。  如果您不要指定控制器的端點，請對 kube 設定您的電腦中的預設位置<user home>/.kube/config 或使用 KUBECONFIG 環境變數，也就是匯出 KUBECONFIG=path/to/.kube/config。
 ```bash
-mssqlctl login -u johndoe@contoso.com -p VerySecret
+mssqlctl login --cluster-name ClusterName --controller-user johndoe@contoso.com  --controller-endpoint https://<ip>:30080 --accept-eula yes
 ```
-登入使用者名稱、 密碼和叢集端點。
+登入機器，然後設定 CONTROLLER_USERNAME、 CONTROLLER_PASSWORD，和 ACCEPT_EULA 環境變數上的 kube 組態。
 ```bash
-mssqlctl login -u johndoe@contoso.com -p VerySecret --endpoint https://host.com:12800
+mssqlctl login -n ClusterName
 ```
 ### <a name="optional-parameters"></a>選擇性參數
-#### `--username -u`
-帳戶的使用者。
-#### `--password -p`
-密碼認證。
-#### `--endpoint -e`
-叢集主機和連接埠 （例如） 」 http://host:port"。
+#### `--cluster-name -n`
+叢集名稱。
+#### `--controller-username -u`
+帳戶的使用者。 如果您不要使用這個引數，您可以設定環境變數 CONTROLLER_USERNAME。
+#### `--controller-endpoint -e`
+叢集控制器端點 」 https://host:port"。 如果您不要使用這個引數，您可以使用 kube 設定您的電腦上。 請確定 組態的預設位置位於<user home>/.kube/config 或 使用 KUBECONFIG 環境變數。
+#### `--accept-eula -a`
+您接受授權條款嗎？ [是/否]。 如果您不要使用這個引數，您可以設定為 'yes' ACCEPT_EULA 環境變數
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`
 增加記錄詳細程度以顯示所有偵錯記錄檔。

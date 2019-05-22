@@ -5,16 +5,16 @@ description: Mssqlctl 應用程式命令的參考文件。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 850964adc9cd790a27cf69e3e0f5229cdaf589c8
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: fb0bd30eb591efbf43f2a4503ce6467bf79ccd60
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775225"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993391"
 ---
 # <a name="mssqlctl-app"></a>mssqlctl app
 

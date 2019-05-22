@@ -5,16 +5,16 @@ description: 了解如何使用組態檔來自訂部署巨量資料叢集。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7dd774d390587d0c2c0248ab9b419ad40f8f212b
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: ed86e7d293ba72eb178c65b53865b62ca419a6d2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759165"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993992"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>設定部署巨量資料叢集
 
@@ -46,7 +46,7 @@ ms.locfileid: "63759165"
 下列命令會傳送到索引鍵-值配對 **--json 值**若要變更的巨量資料叢集名稱的參數**測試叢集**:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j ".metadata.name=test-cluster"
+mssqlctl cluster config section set -c custom.json -j ".metadata.name=test-cluster"
 ```
 
 > [!IMPORTANT]
@@ -84,7 +84,7 @@ mssqlctl cluster config section set -f custom.json -j ".metadata.name=test-clust
 下列範例會使用內嵌 JSON，若要變更的連接埠**控制器**端點：
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
 ## <a id="replicas"></a> 設定集區的複本
@@ -102,11 +102,17 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlane.spec.
             "type": "Storage",
             "replicas": 2,
             "storage": {
-                "usePersistentVolume": true,
-                "className": "managed-premium",
-                "accessMode": "ReadWriteOnce",
-                "size": "10Gi"
-            }
+               "data": {
+                  "className": "default",
+                  "accessMode": "ReadWriteOnce",
+                  "size": "15Gi"
+               },
+               "logs": {
+                  "className": "default",
+                  "accessMode": "ReadWriteOnce",
+                  "size": "10Gi"
+               }
+           },
         }
     }
 ]
@@ -115,31 +121,17 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlane.spec.
 您可以在集區中設定的執行個體數目，藉由修改**複本**每個集區的值。 下列範例會使用內嵌 JSON 來變更這些值的儲存體和資料集區`10`和`4`分別：
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4'
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4'
 ```
-
-> [!IMPORTANT]
-> 在此版本中，您無法變更計算集區中的執行個體數目。
 
 ## <a id="storage"></a> 設定儲存體
 
-您也可以變更用於每個集區的特性與儲存體類別。 下列範例會將自訂的儲存體類別指派給存放集區：
+您也可以變更用於每個集區的特性與儲存體類別。 下列範例會將自訂的儲存體類別指派給存放集區，並更新的永續性磁碟區宣告，針對儲存 100gb 的資料大小。 若要使用更新設定的組態檔中必須有這一節*mssqlctl 叢集組態組*命令，請參閱下列如何使用修補程式檔案來新增此區段：
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec={""replicas"": 2,""storage"": {""className"": ""newStorageClass"",""size"": ""20Gi"",""accessMode"": ""ReadWriteOnce"",""usePersistentVolume"": true},""type"": ""Storage""}"
-```
-
-下列範例只會更新儲存體集區的大小`32Gi`:
-
-```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.size=32Gi"
-```
-
-下列範例會更新所有集區的大小`32Gi`:
-
-```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.className=storage-pool-class"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=32Gi"
 ```
 
 > [!NOTE]
@@ -170,7 +162,7 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.typ
 ```
 
 ```bash
-mssqlctl cluster config section set -f custom.json -p ./patch.json
+mssqlctl cluster config section set -c custom.json -p ./patch.json
 ```
 
 ## <a id="jsonpatch"></a> JSON 修補程式檔案
@@ -181,10 +173,10 @@ JSON 修補檔案一次設定多個設定。 如需有關 JSON 修補程式的�
 
 - 更新單一端點的連接埠。
 - 更新所有端點 (**連接埠**並**serviceType**)。
-- 更新控制項平面儲存體。
+- 更新控制項平面儲存體。 這些設定適用於所有叢集元件，除非在集區層級覆寫。
 - 更新控制項平面儲存體中的儲存體類別名稱。
-- 更新集區儲存體，包括複本 （儲存體集區）。
-- 更新特定的集區 （儲存體集區） 的 Spark 設定。
+- 更新存放集區的集區儲存體設定。
+- 更新存放集區的 Spark 設定。
 
 ```json
 {
@@ -222,30 +214,39 @@ JSON 修補檔案一次設定多個設定。 如需有關 JSON 修補程式的�
     },
     {
       "op": "replace",
-      "path": "spec.controlPlane.spec.storage",
+      "path": "spec.controlPlane.spec.controlPlane",
       "value": {
-        "usePersistentVolume":true,
-        "accessMode":"ReadWriteMany",
-        "className":"managed-premium",
-        "size":"10Gi"
-      }
+          "data": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "100Gi"
+          },
+          "logs": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "32Gi"
+          }
+        }
     },
     {
       "op": "replace",
-      "path": "spec.controlPlane.spec.storage.className",
-      "value": "default"
+      "path": "spec.controlPlane.spec.storage.data.className",
+      "value": "managed-premium"
     },
     {
-      "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "op": "add",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage",
       "value": {
-        "replicas": 2,
-        "type": "Storage",
-        "storage": {
-          "usePersistentVolume": true,
-          "accessMode": "ReadWriteOnce",
-          "className": "managed-premium",
-          "size": "10Gi"
+          "data": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "100Gi"
+          },
+          "logs": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "32Gi"
+          }
         }
       }
     },
@@ -270,7 +271,7 @@ JSON 修補檔案一次設定多個設定。 如需有關 JSON 修補程式的�
 使用**mssqlctl 叢集組態區段組**套用 JSON 修補程式檔案中的變更。 下列範例會套用**patch.json**目標部署的組態檔的檔案**custom.json**。
 
 ```bash
-mssqlctl cluster config section set -f custom.json -p ./patch.json
+mssqlctl cluster config section set -c custom.json -p ./patch.json
 ```
 
 ## <a name="next-steps"></a>後續步驟

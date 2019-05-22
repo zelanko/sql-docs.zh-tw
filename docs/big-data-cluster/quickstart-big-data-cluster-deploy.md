@@ -5,17 +5,17 @@ description: 逐步解說部署的 SQL Server 2019 巨量資料叢集 （預覽�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7ff31cac18eddcd45f310d78910ba83b783b1b1e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 2c0e00ab14cad3d300a09ecc697b2468f1d7d4ce
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776207"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993398"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入門：部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集
 
@@ -162,7 +162,7 @@ kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> 在 CTP 2.5，您會看到安全性警告時存取網頁，因為巨量資料叢集目前正在使用自動產生的 SSL 憑證。
+> 在 CTP 3.0 中，您會看到安全性警告時存取網頁，因為巨量資料叢集目前正在使用自動產生的 SSL 憑證。
 
 ## <a name="connect-to-the-cluster"></a>連線到叢集
 

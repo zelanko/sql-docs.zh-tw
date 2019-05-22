@@ -1,51 +1,37 @@
 ---
-title: R 與 Python 機器學習及程式設計延伸模組文件 - SQL Server 機器學習服務
+title: R 和 Python 的 machine learning 文件-SQL Server 機器學習服務
 description: SQL Server 中的 R 和 Python，內建資料科學模型和機器學習服務演算法，可大規模地進行企業資料分析。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/10/2019
+ms.date: 05/22/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 20acdf2789158bf067319930a5be65770eae67f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e93d9ad5fd6415b6d8c1b6208857e81d60de2bd0
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63126822"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994122"
 ---
-# <a name="sql-server-machine-learning"></a>SQL Server 機器學習服務
+# <a name="sql-server-machine-learning-services"></a>SQL Server 機器學習服務
+
+## <a name="sql-server-machine-learning-services-r-and-python-documentation"></a>SQL Server Machine Learning 服務 （R 和 Python） 文件
+
+使用我們的快速入門、教學課程和操作說明文章，了解如何在常駐的關聯式資料上使用 R 和 Python 外部程式庫和語言。 [SQL Server 機器學習服務](what-is-sql-server-machine-learning.md)中的 R 和 Python 程式庫包含基本發佈、資料科學模型、機器學習服務演算法，以及可大規模地進行高效能分析的函式，而不需要在網路之間傳輸資料。
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-
-## <a name="sql-server-machine-learning-and-programming-extensions-documentation"></a>SQL Server 機器學習服務與程式設計延伸模組文件
-
-使用我們的快速入門、教學課程和操作說明文章，了解如何在常駐的關聯式資料上使用 R 和 Python 外部程式庫和語言。 [SQL Server 機器學習服務](what-is-sql-server-machine-learning.md)中的 R 和 Python 程式庫包含基本發佈、資料科學模型、機器學習服務演算法，以及可大規模地進行高效能分析的函式，而不需要在網路之間傳輸資料。
-
-在 SQL Server 2019 中，Java 程式碼執行使用與 R 和 Python 相同的擴充性架構，但不包含資料科學與機器學習服務函數庫。 如需新功能的詳細資訊，請參閱 [SQL Server 機器學習服務的新功能](what-s-new-in-sql-server-machine-learning-services.md)。
-
-|   |   |
-|---|:--|
-| ![R 標誌](media/index/logo_r.png) | 開放原始碼 R，以 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) 和 [MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) 中的 Microsoft AI 演算法擴充。 這些程式庫提供您預估和預測模型、統計分析、視覺效果，並可大規模地進行資料操作。<br/>R 整合從 [SQL Server 2016](install/sql-r-services-windows-install.md) 開始，而且 [SQL Server 2017](install/sql-machine-learning-services-windows-install.md) 中也有提供。 |
-| ![Python 標誌](media/index/logo_python.png) | Python 開發人員可以使用 Microsoft [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) 和 [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) 程式庫大規模地執行預測性分析和機器學習服務。 Anaconda 和 Python 3.5 相容程式庫是基本發佈。<br/>Python 整合從 [SQL Server 2017](install/sql-machine-learning-services-windows-install.md) 開始。 |
-| ![Java 標誌](media/index/logo_java.png) | Java 開發人員可以使用 [Java 語言延伸模組](java/extension-java.md)，將程式碼包裝成預存程序或可透過 Transact-SQL 存取的二進位格式。<br/>Java 整合從 [SQL Server 2019 (預覽)](install/sql-machine-learning-services-ver15.md) 開始。 |
-| &nbsp; | &nbsp; |
+> [!NOTE]
+> 如需 Java 的文件，請參閱 < [SQL Server 語言擴充功能文件](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)。
 ::: moniker-end
-
-::: moniker range="=sql-server-2016||=sql-server-2017"
-
-## <a name="sql-server-machine-learning-r-and-python-documentation"></a>SQL Server 機器學習服務 R 和 Python 文件
-
-使用我們的快速入門、教學課程和操作說明文章，了解如何在常駐的關聯式資料上使用 R 和 Python 外部程式庫和語言。 [SQL Server 機器學習服務](what-is-sql-server-machine-learning.md)中的 R 和 Python 程式庫包含基本發佈、資料科學模型、機器學習服務演算法，以及可大規模地進行高效能分析的函式，而不需要在網路之間傳輸資料。
 
 |   |   |
 |---|:--|
 | ![R 標誌](media/index/logo_r.png) | 開放原始碼 R，以 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) 和 [MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) 中的 Microsoft AI 演算法擴充。 這些程式庫提供您預估和預測模型、統計分析、視覺效果，並可大規模地進行資料操作。<br/>R 整合從 [SQL Server 2016](install/sql-r-services-windows-install.md) 開始，而且 [SQL Server 2017](install/sql-machine-learning-services-windows-install.md) 中也有提供。 |
 | ![Python 標誌](media/index/logo_python.png) | Python 開發人員可以使用 Microsoft [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) 和 [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) 程式庫大規模地執行預測性分析和機器學習服務。 Anaconda 和 Python 3.5 相容程式庫是基本發佈。<br/>Python 整合從 [SQL Server 2017](install/sql-machine-learning-services-windows-install.md) 開始。 |
 | &nbsp; | &nbsp; |
-::: moniker-end
 
 ## <a name="5-minute-quickstarts"></a>5 分鐘快速入門
 

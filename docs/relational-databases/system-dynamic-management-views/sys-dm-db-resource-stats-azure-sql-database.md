@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_resource_stats (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/21/2019
+ms.date: 05/21/2019
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f3b8defbb43cd07afe38915c6a0c14cb226fbf2c
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 3ca0aa09718d8310ccb6ba304d8cc5595d8c5299
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58325501"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993892"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,6 +44,10 @@ ms.locfileid: "58325501"
 |max_session_percent|**decimal (5,2)**|最大並行工作階段的資料庫服務層限制百分比表示。|  
 |dtu_limit|**int**|目前最大資料庫 DTU 此資料庫設定在此間隔期間。 使用以 vCore 為基礎的模型資料庫，此資料行是 NULL。|
 |cpu_limit|**decimal (5,2)**|在此間隔期間此資料庫的 Vcore 的數目。 使用以 DTU 為基礎的模型資料庫，此資料行是 NULL。|
+|avg_instance_cpu_percent|**decimal (5,2)**|平均資料庫 CPU 使用量百分比。|
+|avg_instance_memory_percent|**decimal (5,2)**|資料庫平均記憶體使用量百分比。|
+|avg_login_rate_percent|**decimal (5,2)**|僅供參考之用。 不支援。 我們無法保證未來的相容性。|
+|replica_role|**int**|表示目前的複本角色為主要的 0、 1 與次要資料庫，以及 2 為轉寄站 （異地次要資料庫的主要）。 您會看到 「 1 」 時連接到所有的可讀取次要複本的唯讀意圖。 如果未指定唯讀意圖，以連接到異地次要資料庫，您應該會看到"2"（連線到轉寄站）。|
 |||
   
 > [!TIP]  

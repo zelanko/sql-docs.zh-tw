@@ -5,22 +5,22 @@ description: 了解如何在 Spark 中使用 MSSQL Spark 連接器，來讀取�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 54361f9a061169d51f11ccb130e78ba67c0a9a67
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 12343c2000bca3ae90e62c8702636859a808a580
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759215"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994183"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>如何讀取和寫入至 SQL Server 使用 MSSQL Spark 連接器從 Spark
 
 索引鍵的巨量資料使用模式是在 Spark 中，後面接著將資料寫入至 SQL Server 中，以存取特定業務應用程式的大量資料處理。 這些使用模式受益於使用重要的 SQL 最佳化，並提供有效率的寫入機制的連接器。
 
-CTP2.5 巨量資料叢集以提供新的 MSSQL Spark 連接器，並使用大量 Api 撰寫高效能 Spark SQL 寫入 SQL Server。 這篇文章提供如何讀取和寫入至 SQL Server 從 Spark 使用 MSSQL Spark 連接器的範例。 在此範例中，會從 HDFS 的巨量資料叢集，Spark 處理，以及接著會寫入至 SQL Server 主要執行個體在叢集中使用新 MSSQL Spark 連接器中讀取資料。
+巨量資料叢集提供新的 MSSQL Spark 連接器，並使用大量 Api 撰寫高效能 Spark SQL 寫入 SQL Server。 這篇文章提供如何讀取和寫入至 SQL Server 從 Spark 使用 MSSQL Spark 連接器的範例。 在此範例中，會從 HDFS 的巨量資料叢集，Spark 處理，以及接著會寫入至 SQL Server 主要執行個體在叢集中使用新 MSSQL Spark 連接器中讀取資料。
 
 ## <a name="mssql-spark-connector-interface"></a>MSSQL Spark 連接器介面
 

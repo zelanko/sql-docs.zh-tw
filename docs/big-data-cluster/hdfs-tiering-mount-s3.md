@@ -6,22 +6,22 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/15/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 79c09d5bcff26c9f5867e5b0fb38bd019b681b5c
-ms.sourcegitcommit: 89abd4cd4323ae5ee284571cd69a9fe07d869664
+ms.openlocfilehash: 4254c1c47e64013533574345c14518fdc2afcb7c
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64330609"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993953"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>如何掛接 S3 層的巨量資料叢集的 HDFS 的
 
 下列各節提供如何設定 HDFS 階層處理的 S3 儲存體資料來源的範例。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 - [已部署的巨量資料叢集](deployment-guidance.md)
 - [巨量資料工具](deploy-big-data-tools.md)
@@ -48,22 +48,22 @@ ms.locfileid: "64330609"
 
 既然您已備妥的認證檔案，以存取金鑰，您可以開始掛接。 下列步驟可裝載遠端 HDFS 中的儲存體 S3 到您的巨量資料叢集的本機 HDFS 儲存體。
 
-1. 使用**kubectl**若要尋找 IP 位址**mgmtproxy svc 外部**巨量資料叢集服務。 尋求**EXTERNAL-IP**。
+1. 使用**kubectl**若要尋找 IP 位址端點**控制站 svc 外部**巨量資料叢集服務。 尋求**EXTERNAL-IP**。
 
    ```bash
-   kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-cluster-name>
    ```
 
-1. 登入**mssqlctl**管理 proxy 端點的外部 IP 位址使用您的叢集使用者名稱和密碼：
+1. 登入**mssqlctl**控制器端點的外部 IP 位址使用您的叢集使用者名稱和密碼：
 
    ```bash
-   mssqlctl login -e https://<IP-of-mgmtproxy-svc-external>:30777/ -u <username> -p <password>
+   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. 掛接在 Azure 中使用遠端 HDFS 儲存體**mssqlctl 儲存體掛接建立**。 將預留位置值，再執行下列命令：
+1. 掛接在 Azure 中使用遠端 HDFS 儲存體**mssqlctl 叢集存放集區掛接建立**。 將預留位置值，再執行下列命令：
 
    ```bash
-   mssqlctl storage mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
+   mssqlctl cluster storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -76,21 +76,21 @@ ms.locfileid: "64330609"
 若要列出所有掛接在您的巨量資料叢集的狀態，請使用下列命令：
 
 ```bash
-mssqlctl storage mount status
+mssqlctl cluster storage-pool mount status
 ```
 
 若要列出在 HDFS 中的特定路徑掛上的狀態，請使用下列命令：
 
 ```bash
-mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> 刪除掛接
 
-若要刪除掛接，請使用**mssqlctl 儲存體掛接刪除**命令，並在 HDFS 中指定掛接路徑：
+若要刪除掛接，請使用**mssqlctl 叢集儲存體集區掛接刪除**命令，並在 HDFS 中指定掛接路徑：
 
 ```bash
-mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>後續步驟

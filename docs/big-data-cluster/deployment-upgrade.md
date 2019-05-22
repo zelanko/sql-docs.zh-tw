@@ -5,16 +5,16 @@ description: 了解如何升級至新版本的 SQL Server 2019 巨量資料叢�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 604947f1616509f7267450fb3d3ba94f8ce21a97
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 1f8291eeb292226b3dfcb2bd1a89816926c53d88
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759155"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993980"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>如何升級 SQL Server 的巨量資料叢集
 
@@ -51,7 +51,7 @@ ms.locfileid: "63759155"
    pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
    ```
 
-1. 安裝最新版**mssqlctl**。 下列命令會安裝**mssqlctl** CTP 2.5:
+1. 安裝最新版**mssqlctl**。 下列命令會安裝**mssqlctl**針對 CTP 3.0:
 
    **Windows:**
 

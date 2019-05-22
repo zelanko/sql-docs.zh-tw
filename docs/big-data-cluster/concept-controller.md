@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3084d9ecc80dcd8f283a52ca5559783626a7ca4e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 874648daaccdb3d16f54d7b976bac1ef2543bafe
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775594"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994081"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>什麼是 SQL Server 的巨量資料叢集上的控制站？
 
@@ -38,11 +38,7 @@ ms.locfileid: "64775594"
 
 ## <a name="deploying-the-controller-service"></a>部署控制器服務
 
-控制器會部署並裝載於相同的客戶，想要建置巨量資料叢集的 Kubernetes 命名空間。 此服務管理員安裝的 Kubernetes 叢集啟動程序，使用 mssqlctl 命令列公用程式期間：
-
-```bash
-mssqlctl cluster create --name <name of your cluster>
-```
+控制器會部署並裝載於相同的客戶，想要建置巨量資料叢集的 Kubernetes 命名空間。 此服務管理員安裝的 Kubernetes 叢集啟動程序，使用期間**mssqlctl**命令列公用程式。 如需詳細資訊，請參閱 <<c0> [ 開始使用 SQL Server 的巨量資料叢集](deploy-get-started.md)。
 
 增建工作流程會在 Kubernetes 上的版面配置功能完整的 SQL Server 巨量資料叢集，其中包含所述的所有元件[概觀](big-data-cluster-overview.md)文章。 啟動程序的工作流程首先會建立控制器服務，以及安裝和設定的主機、 計算、 資料和儲存體集區的服務一部分的其餘部分，這部署之後，將協調控制器服務。
 

@@ -5,30 +5,22 @@ description: 了解如何連接到 SQL Server 的主要執行個體和 SQL Serve
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8291f2a192868544fb34da95d537f7a8a6b0f004
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 3305990935c5d4c6077caa062184b0150aa83d6b
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774663"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994058"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>連線到 SQL Server 的巨量資料叢集使用 Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文說明如何從 Azure Data Studio 連接到 SQL Server 2019 巨量資料叢集 （預覽）。 有兩個用來與巨量資料叢集互動的主要端點：
-
-| 端點 | 描述 |
-|---|---|
-| SQL Server Master 執行個體 | SQL Server 主要執行個體在叢集中包含 SQL Server 的關聯式資料庫。 |
-| HDFS/Spark 閘道 | 存取叢集和執行 Spark 作業的能力中的 HDFS 儲存體。 |
-
-> [!TIP]
-> Azure Data Studio 2019 年 2 月版本中，會自動連接到 SQL Server 的主要執行個體提供 UI 存取 HDFS/Spark 閘道。
+本文說明如何從 Azure Data Studio 連接到 SQL Server 2019 巨量資料叢集 （預覽）。
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -72,37 +64,6 @@ Azure Data Studio 2019 年 2 月版本中，連接到 SQL Server 的主要執行
 - **Server 儀表板**連線也會包含索引標籤**巨量資料的 SQL Server 叢集**並**SQL Server 2019 （預覽）** 安裝擴充功能時。
 
    ![Azure Data Studio 資料服務 節點](./media/connect-to-big-data-cluster/connect-data-services-node.png)
-
-> [!IMPORTANT]
-> 如果您看到**未知的錯誤**在 UI 中，您可能要[直接連接到 HDFS/Spark 閘道](#hdfs)。 此錯誤的其中一個原因是 SQL Server 的主要執行個體與 HDFS/Spark 閘道不同的密碼。 Azure Data Studio 假設相同的密碼使用於兩者。
-  
-## <a id="hdfs"></a> 連線到 HDFS/Spark 閘道
-
-在大部分情況下，連接到 SQL Server 的主要執行個體可讓您存取的 HDFS 和 Spark 也透過**Data Services**節點。 不過，您仍然可以建立的專用的連接**HDFS/Spark 閘道**如有需要。 下列步驟說明如何使用 Azure Data Studio 來連線。
-
-1. 從命令列中，尋找您的 HDFS/Spark 閘道與其中一個下列的命令的 IP 位址。
-
-   ```
-   kubectl get svc gateway-svc-external -n <your-cluster-name>
-   ```
- 
-1. 在 Azure Data Studio，按下**F1** > **新連線**。
-
-1. 在 **連線類型**，選取**巨量資料的 SQL Server 叢集**。
-
-   > [!TIP]
-   > 如果您看不見**巨量資料的 SQL Server 叢集**連線類型，請確定您已安裝[SQL Server 2019 延伸模組](../azure-data-studio/sql-server-2019-extension.md)和您在完成的延伸模組後重新啟動 Azure Data Studio正在安裝。
-
-1. 輸入中的巨量資料叢集的 IP 位址**伺服器名稱**（不指定連接埠）。
-
-1. 請輸入`root`for**使用者**並指定**密碼**到您的巨量資料叢集。
-
-   ![連線到 HDFS/Spark 閘道](./media/connect-to-big-data-cluster/connect-to-cluster-hdfs-spark.png)
-
-   > [!TIP]
-   > 根據預設，使用者名稱是**根**和密碼對應至**KNOX_PASSWORD**在部署期間使用的環境變數。
-
-1. 按下**Connect**，而**Server 儀表板**應該會出現。
 
 ## <a name="next-steps"></a>後續步驟
 

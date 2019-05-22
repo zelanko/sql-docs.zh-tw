@@ -3,17 +3,17 @@ title: 安裝新的 R 語言套件-SQL Server Machine Learning 服務
 description: 將新的 R 套件新增至 SQL Server 2016 R Services 或 SQL Server 2017 Machine Learning 服務 （資料庫）
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f443113222181f0909bd72048e3c3f5c739df4ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b8c935400188ae6905a9915907fb097d02100ad2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62506931"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994202"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server 上安裝新的 R 套件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "62506931"
 
 R 套件程式庫實際上位於 SQL Server 執行個體，在具有限制存取的安全資料夾中的 [Program Files] 資料夾。 寫入此位置需要系統管理員權限。
 
-非系統管理員可以安裝套件，但這樣做需要 addititional 組態和功能在初始安裝中無法使用。 有兩種方法來進行非系統管理員套件安裝：RevoScaleR 使用版本 9.0.1 （英文） 和更新版本，或使用 CREATE EXTERNAL LIBRARY (只有 SQL Server 2017)。 在 SQL Server 2017 **dbo_owner**或另一個具有 CREATE EXTERNAL LIBRARY 權限的使用者可以將 R 套件安裝到目前的資料庫。
+非系統管理員可以安裝套件，但這麼做還需要額外的設定和功能在初始安裝中無法使用。 有兩種方法來進行非系統管理員套件安裝：RevoScaleR 使用版本 9.0.1 （英文） 和更新版本，或使用 CREATE EXTERNAL LIBRARY (只有 SQL Server 2017)。 在 SQL Server 2017 **dbo_owner**或另一個具有 CREATE EXTERNAL LIBRARY 權限的使用者可以將 R 套件安裝到目前的資料庫。
 
 R 開發人員習慣建立辦到中央程式庫時，所需的封裝的使用者程式庫。 這種做法是在 SQL Server 資料庫引擎執行個體中執行的 R 程式碼有問題。 SQL Server 無法從外部的程式庫載入封裝，即使該程式庫位於相同的電腦上。 只有從執行個體文件庫的封裝可以用於 SQL Server 中執行的 R 程式碼。
 
@@ -41,7 +41,6 @@ R 開發人員習慣建立辦到中央程式庫時，所需的封裝的使用者
 然後再安裝新的套件，請考慮是否適合在 SQL Server 環境中所指定的封裝啟用的功能。 在強化後的 SQL Server 環境中，您可能想要避免下列：
 
 + 需要網路存取的套件
-+ 需要 Java 或其他架構，通常不會使用 SQL Server 環境中的封裝
 + 需要提高權限的檔案系統存取權的套件
 + 封裝用於 web 開發 」 或 「 無益在 SQL Server 內執行其他工作
 
@@ -51,7 +50,7 @@ R 開發人員習慣建立辦到中央程式庫時，所需的封裝的使用者
 
 識別所有相依性變得複雜。 針對 R，我們建議您使用[miniCRAN 建立本機儲存機制](create-a-local-package-repository-using-minicran.md)然後將傳送到隔離的 SQL Server 執行個體的完整定義的存放庫。
 
-Alternativley，您可以執行此步驟以手動方式：
+或者，您也可以手動執行下列步驟：
 
 1. 找出所有套件相依性。 
 2. 請檢查是否在伺服器上已安裝任何必要的套件。 如果安裝套件時，請確認版本正確無誤。
