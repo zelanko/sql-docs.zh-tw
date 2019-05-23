@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 146b484e96dc35a48ffa5bfe22b0564262bce9e9
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.openlocfilehash: 78a74a6199bfa1db229451a323d417d623bfe1e4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65376880"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717622"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>使用 PowerShell 部署 SSIS 專案
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 本快速入門示範如何使用 PowerShell 指令碼連線至資料庫伺服器，並將 SSIS 專案部署到 SSIS 目錄。
 
 ## <a name="prerequisites"></a>Prerequisites
