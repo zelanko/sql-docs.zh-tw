@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.profiles.f1
@@ -13,12 +12,12 @@ ms.assetid: 1ebafa1f-74e9-4c05-b278-a690fa8543bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 663b12f2e83de016d3f1799536b8a3ed674ef544
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ebed4b2b7cc5c6496ab0c681450897a477e4707a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680861"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087864"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>叢集設定檔索引標籤 (採礦模型檢視器)
   使用 **[叢集設定檔]** 索引標籤以取得演算法在叢集模型中所發現之叢集的整體檢視。 索引標籤會顯示每一個屬性，以及該屬性在每一個叢集中的分佈。  

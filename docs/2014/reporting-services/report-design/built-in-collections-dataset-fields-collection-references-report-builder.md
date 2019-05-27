@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 906cda310ff4478854d2b308332571fa6dbdd155
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 659fade9e10edc32c2444bf024fd475ea78a5d1d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185809"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106444"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>資料集欄位集合參考 (報表產生器及 SSRS)
   報表中的每一個資料集都包含一個 Fields 集合。 Fields 集合是資料集查詢所指定的欄位加上您建立之任何其他導出欄位的集合。 當您建立資料集之後，欄位集合會出現在 **[報表資料]** 窗格中。  
