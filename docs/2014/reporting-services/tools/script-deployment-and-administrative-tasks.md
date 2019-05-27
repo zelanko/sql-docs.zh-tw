@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
@@ -23,12 +22,12 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 033e1852f076dde631a3ea1e9be1c8918eab042a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d37a00e0a4fb71672f3bedcfc0e1651a7c42ce71
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63158314"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099707"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>編寫部署和管理工作的指令碼
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援使用指令碼，以自動執行例行安裝、部署和管理工作。 部署報表伺服器是一個多步驟的程序， 您必須使用數個工具和程序來設定部署；並沒有單一程式或方法可用來自動化處理所有工作。  

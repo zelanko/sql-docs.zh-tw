@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidevstudio.assembly.registerassembly.f1
@@ -13,12 +12,12 @@ ms.assetid: 0c07cc87-fc94-456f-b878-7b23e39772b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aad57083bdcd8337e9320e81a662bef12888011e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 06647219ca5768495620bb1db60cf34910844f25
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748512"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070464"
 ---
 # <a name="register-database-assembly-dialog-box-analysis-services---multidimensional-data"></a>註冊資料庫組件對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [註冊伺服器組件] 對話方塊，即可設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中之組件參考的屬性。 在物件總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體或資料庫的 [組件] 資料夾，然後選取 [新增組件]，即可顯示 [註冊伺服器組件] 對話方塊。  

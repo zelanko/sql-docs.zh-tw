@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.conninformixdb.f1
@@ -13,12 +12,12 @@ ms.assetid: b01d537c-1c04-4d7d-9146-051c249b08e4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ca54a226097860e563fd439261e8ce1f2690cacd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 88849f85a5f2614961cb67db070f508c2c0718d0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680209"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087163"
 ---
 # <a name="connect-to-an-informix-database-ssas"></a>連接到 Informix 資料庫 (SSAS)
   **[資料表匯入精靈]** 的這個頁面可讓您指定連接到 Informix 資料庫的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  

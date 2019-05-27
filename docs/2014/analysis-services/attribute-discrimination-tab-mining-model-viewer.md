@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.discrimination.f1
@@ -13,19 +12,19 @@ ms.assetid: 68323f23-121e-44fc-be85-6f9915d6d3c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9f10fdf70b27f2bcea53ce32a1d64dec65e34893
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7e8d9593cd45ec5a92ea07051fe424698d8ece6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650752"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063126"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>屬性辨識索引標籤 (採礦模型檢視器)
   使用 [屬性辨識] 索引標籤，即可比較輸入屬性的狀態以及查看它們與結果屬性如何相關。 先列出造成兩個選取的可預測屬性狀態之間最大差異的屬性值。  
   
  **如需詳細資訊：**[Microsoft 貝氏機率分類演算法](data-mining/microsoft-naive-bayes-algorithm.md)，[瀏覽模型，使用 Microsoft 貝氏機率分類檢視器](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **重新整理檢視器內容**  
  在檢視器中重新載入採礦模型。  
   

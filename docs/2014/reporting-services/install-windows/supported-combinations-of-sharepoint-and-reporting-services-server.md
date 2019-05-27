@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint mode
@@ -14,12 +13,12 @@ ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 158110c1273c64cb9fdf86d1b9f4bc4a40d780a8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 05f0997cb73a156e54b22ad280fa5d6eb0ec7d73
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63144030"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108645"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server-and-add-in-sql-server-2014"></a>支援的 SharePoint 和 Reporting Services 伺服器與增益集 (SQL Server 2014) 的組合
   可以利用 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器，並且與 SharePoint 部署相整合。 在報表伺服器、適用 SharePoint 之 Reporting Services 增益集，以及 SharePoint 產品的所有組合中，並不支援所有功能。 本主題摘要所支援的組合。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，以下的組合會產生整合：  

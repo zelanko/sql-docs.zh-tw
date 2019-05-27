@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - device information settings [Reporting Services], PDF rendering
@@ -14,12 +13,12 @@ ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 29274efcc4bc88c13537d240efcbc9ce4b25ea58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 36def4705f6b2be9d5e1828f920ae41a51477272
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188187"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108091"
 ---
 # <a name="pdf-device-information-settings"></a>PDF 裝置資訊設定
   下表列出以 PDF 格式轉譯報表的裝置資訊設定。  

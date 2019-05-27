@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.finish.f1
@@ -13,12 +12,12 @@ ms.assetid: d430bc08-61b4-439f-956e-2e825ca7113b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1f226cc3db3d9f10292624c363d3f0cc04b13010
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 08d78fc30dbdafa8d65ac01943e729b6cf0d890d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266025"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109788"
 ---
 # <a name="complete-the-report-wizard"></a>完成報表精靈
   使用此頁面，即可命名報表和檢閱要套用至報表的選項。  

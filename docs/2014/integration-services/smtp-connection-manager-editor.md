@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.smtpconnection.f1
@@ -15,19 +14,19 @@ ms.assetid: 2693de0d-b04d-4325-a856-ce667d2b8aa1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4895a0fb7f3b64ff7db52aea9ab9319aeb8b9c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 527c8f647c963c2c1c03171eeb154a790ab1994a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766491"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055554"
 ---
 # <a name="smtp-connection-manager-editor"></a>SMTP 連接管理員編輯器
   使用 [SMTP 連線管理員編輯器] 對話方塊指定簡易郵件傳輸通訊協定 (SMTP) 伺服器。  
   
  若要深入了解 SMTP 連接管理員，請參閱＜ [SMTP Connection Manager](connection-manager/smtp-connection-manager.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  提供唯一的名稱給連接管理員。  
   

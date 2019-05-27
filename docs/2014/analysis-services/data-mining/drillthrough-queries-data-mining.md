@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - AllowDrillThrough property
@@ -15,12 +14,12 @@ ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 89900ccb182c58041af7b428af336ddab217d245
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ca74fe9ec36262130e01a58280f9d966c35c3485
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722470"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084544"
 ---
 # <a name="drillthrough-queries-data-mining"></a>鑽研查詢 (資料採礦)
   *「鑽研查詢」* (Drillthrough query) 可讓您傳送查詢至採礦模型，以擷取基礎案例或結構的詳細資料。 如果您想要檢視用來定型模型的案例與用來測試模型的案例，或者您想要查看案例資料的其他詳細資料，鑽研就很有用。  

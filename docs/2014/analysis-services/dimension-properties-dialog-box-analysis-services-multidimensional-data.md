@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.dimensionproperties.f1
@@ -15,12 +14,12 @@ ms.assetid: 7235d443-b2ce-4c53-b2eb-abceb28394bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cb71a47263b98100b37707b369ff1c89ad62d282
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 49513fd41e3167adcc9d39a8e680dd25bccb24a6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731834"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081840"
 ---
 # <a name="dimension-properties-dialog-box-analysis-services---multidimensional-data"></a>維度屬性對話方塊 (Analysis Services - 多維度資料)
   使用 **中的** [維度屬性] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中之維度的屬性。 您可以在 [物件總管] 中以滑鼠右鍵按一下維度，然後選取 [屬性]，來顯示 [維度屬性] 對話方塊。  

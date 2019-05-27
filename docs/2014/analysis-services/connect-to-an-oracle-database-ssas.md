@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connoracledb.f1
@@ -13,12 +12,12 @@ ms.assetid: 9bd177fb-8539-46cd-bf96-189ade52c2a1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 79808c965828844a467fc232a5432d1207b25c34
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8bc5a08d96dbef0bae412b75c9592e4893e12a0f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680189"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087015"
 ---
 # <a name="connect-to-an-oracle-database-ssas"></a>連接到 Oracle 資料庫 (SSAS)
   **[資料表匯入精靈]** 的這個頁面可讓您指定連接到 Oracle 資料庫的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  

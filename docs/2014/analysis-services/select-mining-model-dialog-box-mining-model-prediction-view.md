@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.selectminingmodel.f1
@@ -15,12 +14,12 @@ ms.assetid: a9d5c5b0-1beb-49bf-8df5-c659c8e7b390
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7c99a0f7d13b68987a74bb763a0d6b78d457f92
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d6e79a86b4438eeacf5c1184b73a5edf0e9ea9d7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747320"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069410"
 ---
 # <a name="select-mining-model-dialog-box-mining-model-prediction-view"></a>選取採礦模型對話方塊 (採礦模型預測檢視)
   使用 **[選取採礦模型]** 對話方塊，即可選取作為預測基礎的採礦模型。  

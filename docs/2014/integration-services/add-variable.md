@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.addvariable.f1
@@ -15,12 +14,12 @@ ms.assetid: d09b5d31-433f-4f7c-8c68-9df3a97785d5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5bf8cce4fec8bb0156155d5e2cb3ef6d7a9ea5a8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6799bc899a7e65082d83398f79996bea8d9dd2d3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62836878"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061790"
 ---
 # <a name="add-variable"></a>加入變數
   使用 [加入變數] 對話方塊，即可指定新變數的屬性。  

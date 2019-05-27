@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
@@ -13,12 +12,12 @@ ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b4e7850cb0c66b6acbc7be54178cbc9ace27ce72
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ca3437315803ff8435640bf58219fe93f96e242a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190889"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103402"
 ---
 # <a name="report-server-http-log"></a>報表伺服器 HTTP 記錄
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器 HTTP 記錄檔會保留報表伺服器所處理之每個 HTTP 要求與回應的記錄。 由於要求溢位和逾時錯誤不會送達報表伺服器，因此它們不會記錄在記錄檔中。  
@@ -61,7 +60,7 @@ ms.locfileid: "63190889"
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|此為選擇性的值。 預設值為 ReportServerServiceHTTP_。 如果您想要使用不同的檔案命名慣例 (例如，當您要將記錄檔儲存至集中位置時，若要包含伺服器名稱)，可以指定不同的值。|是|  
 |HTTPTraceSwitches|此為選擇性的值。 如果您指定了此欄位，就可以使用逗號分隔的格式來設定記錄檔中使用的欄位。|否|  
-|date|活動發生的日期。|否|  
+|Date|活動發生的日期。|否|  
 |Time|活動發生的時間。|否|  
 |ClientIp|存取報表伺服器之用戶端的 IP 位址。|是|  
 |UserName|存取報表伺服器之使用者的名稱。|否|  

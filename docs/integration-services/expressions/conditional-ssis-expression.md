@@ -14,14 +14,18 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43ba631d4b93e3f748afa0c64ff95d42609bd545
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e7b89ac833f428a098671cbf5eceaab0b338e2e4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272103"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725543"
 ---
 # <a name="--conditional-ssis-expression"></a>? 所解碼的字元：(條件) (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   依據布林運算式的評估傳回兩個運算式的其中一個。 如果布林運算式的評估結果為 TRUE，則會評估第一個運算式，且結果為運算式的結果。 如果布林運算式的評估結果為 FALSE，則會評估第二個運算式，且其結果為運算式的結果。  
   
 ## <a name="syntax"></a>語法  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], about Upgrade Advisor
@@ -14,12 +13,12 @@ ms.assetid: d52773fd-0e13-44a2-a5f2-69d6974bb08f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 61ad84ce632de0431a584d6ca53b2673d37207c2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 95d1ca08bcc92a8eeeebfcfbd1f8646cf5add4c1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62676418"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093535"
 ---
 # <a name="overview-of-upgrade-advisor"></a>Upgrade Advisor 的概觀
   此章節會提供升級程序的概觀，以及協助您了解和使用 Upgrade Advisor 分析精靈與 Upgrade Advisor 報表檢視器的資訊。  

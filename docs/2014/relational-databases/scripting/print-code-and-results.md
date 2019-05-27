@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], printing
@@ -16,12 +15,12 @@ ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ac6c8b8e45e63ccebd8ccc1cca2e1035d8f830d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 18cbed174a5be656079ef232ba70cba3599d2815
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63277007"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090285"
 ---
 # <a name="print-code-and-results"></a>列印程式碼與結果
   當您列印查詢或檔案時，如果您的印表機支援彩色列印，且印表機設定啟用了彩色列印，就會用彩色來列印彩色的元素。  

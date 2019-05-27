@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - size [SQL Server], fonts
@@ -18,12 +17,12 @@ ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ecba74cbaa5a03ddca94b7bc3a9fdd6dd52be43f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a4f7f2e80afd3f5f879813eeb5e19ce6eaa6e979
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209776"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064176"
 ---
 # <a name="change-font-color-size-and-style"></a>變更字型色彩、大小與樣式
   您可以自訂文字在編輯器及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的其他位置中之呈現方式。  

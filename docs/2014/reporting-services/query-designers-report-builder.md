@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - query designers
@@ -13,12 +12,12 @@ ms.assetid: 553f0d4e-8b1d-4148-9321-8b41a1e8e1b9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3cfaca7dcd5e72eb5ca540debac6c6723246354d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 58a7e1a9d5ae71d659cfd214b46f3a004ea71101
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62657445"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108004"
 ---
 # <a name="query-designers-report-builder"></a>查詢設計工具 (報表產生器)
   報表產生器提供了圖形化查詢設計工具以及以文字為基礎的查詢設計工具，可協助您為報表建立查詢。 每一種類型的資料來源都有關聯的查詢設計工具。 某些資料來源支援可協助您以互動方式建立查詢的圖形化設計工具。 其他資料來源則使用以文字為基礎的查詢設計工具。 SQL Server 資料來源同時支援圖形化查詢設計工具以及以文字為基礎的查詢設計工具。  

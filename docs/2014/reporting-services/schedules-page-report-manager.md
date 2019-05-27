@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ef19d96e-9f00-4434-950e-152dda9c1ced
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3c232740598e1c9d1f8911c5fa5662d4ef82d5b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 927a9fc96e11bffdcacf7a12f09ee93d25f153fd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237838"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102321"
 ---
 # <a name="schedules-page-report-manager"></a>排程頁面 (報表管理員)
   您可以使用 [排程] 頁面來建立、修改、刪除、暫停或繼續執行共用排程。 共用排程是具名的排程，可以和報表、訂閱及消耗排程資訊的其他處理序分開建立和管理。 使用者可以選取您提供的共用排程。  
@@ -37,7 +36,7 @@ ms.locfileid: "63237838"
   
 3.  選取 **[排程]** 索引標籤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **新的排程**  
  按一下即可開啟 [排程] 頁面，可用來指定頻率資訊。  
   

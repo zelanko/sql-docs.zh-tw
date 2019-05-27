@@ -1,23 +1,23 @@
 ---
 title: 檢視 Cube 結構描述 |Microsoft Docs
-ms.date: 05/02/2018
-ms.prod: sql
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
 ms.technology: analysis-services
-ms.custom: multidimensional-models
 ms.topic: conceptual
-ms.author: owend
-ms.reviewer: owend
+ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 93898e6ed8dc26e3b06fd6a583bfa4084dd4c5f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b094e27a8b7c51afec21fcc4807d3ee6e8b22c37
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740688"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072510"
 ---
 # <a name="view-the-cube-schema"></a>檢視 Cube 結構描述
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   **[Cube 設計師]** 之 **[Cube 結構]** 索引標籤的 **[資料來源檢視]** 窗格顯示 Cube 結構描述。 結構描述是一組衍生 Cube 量值和維度的來源資料表。 每一個 Cube 結構描述是由一個或多個事實資料表及一個或多個維度資料表所組成，Cube 中的量值和維度會以這些資料表為基礎。  
   
  **[Cube 結構]** 索引標籤的 **[資料來源檢視]** 窗格顯示做為 Cube 基礎之資料來源檢視的圖表。 此圖表是資料來源檢視主要圖表的子集。 您可以隱藏及顯示 **[資料來源檢視]** 窗格中的資料表，以及檢視任何現有的圖表。 但是，您無法變更基礎結構描述 (例如將新關聯性或具名查詢加入基礎結構描述)。 若要變更結構描述，請使用資料來源檢視設計工具。  

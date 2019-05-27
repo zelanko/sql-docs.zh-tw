@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.characteristics.f1
@@ -13,12 +12,12 @@ ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 156bd83662b9b6fa42eb99e8e5810bb4fc71d51a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a3a9121129ab0f7e4e185e35418132a4f1aa663f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747262"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069171"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>時序叢集的叢集特性索引標籤 (採礦模型檢視器)
   **[Microsoft 時序叢集檢視器]** 中的 **[叢集特性]** 索引標籤提供定義時序叢集之特性的詳細清單。 這些特性可包括簡單屬性/值組以及狀態之間的轉換。  
@@ -27,7 +26,7 @@ ms.locfileid: "62747262"
   
  **如需詳細資訊：**[Microsoft 時序群集演算法](data-mining/microsoft-sequence-clustering-algorithm.md)，[瀏覽模型，使用 Microsoft 時序叢集檢視器](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **重新整理檢視器內容**  
  在檢視器中重新載入採礦模型。  
   

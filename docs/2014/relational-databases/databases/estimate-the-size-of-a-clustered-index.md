@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - space allocation [SQL Server], index size
@@ -23,12 +22,12 @@ ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ebb0adc7d0aba7bd9da9a5026b5d0eaa3b770019
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fe7b988590de54a3cb02aa540b244e1f56f3ba24
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62916815"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054128"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>估計叢集索引的大小
   您可以使用下列步驟，估計在叢集索引中儲存資料所需的空間量：  

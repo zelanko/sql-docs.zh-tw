@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.models.algorithmparameters.f1
@@ -15,12 +14,12 @@ ms.assetid: 57f9f6f8-8ca4-4a6e-8f18-85f0571b7060
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc3d863889f7e5cb8ca1e79f78e920aedd79f979
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c72a3c52da21ca7af10103010500bb43fd46a10a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62473490"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062605"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>演算法參數對話方塊 (採礦模型檢視)
   使用 [演算法參數] 對話方塊，即可調整所選取模型特定的演算法參數。 當您變更演算法參數時，您通常會變更採礦模型的結果。 每一個參數影響結果的方式取決於您所使用的演算法和資料而定。 如需詳細資訊，請參閱[自訂採礦模型和結構](data-mining/customize-mining-models-and-structure.md)。  

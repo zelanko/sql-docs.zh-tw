@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10444"
@@ -13,12 +12,12 @@ ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2762e1057e7d6343310ff5ae98257e4e4e331913
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4e1f2aeda7b835c72d06372193c37baa858c603d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62656438"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105792"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>設定報表項目的格式 (報表產生器及 SSRS)
   對報表中的項目進行格式化，使報表更具吸引力並增強其可讀性。 當您在報表設計模式時，可以將文字方塊及文字方塊中的個別項目、影像、運算式和資料格式化。  

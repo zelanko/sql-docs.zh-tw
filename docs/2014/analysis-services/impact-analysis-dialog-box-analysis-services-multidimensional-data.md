@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.process.impactanalysisdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: 208268eb-4e14-44db-9c64-6f74b776adb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 79a356f8afe169c049cfcf55ceb2626a9e3c9ec1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730690"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080746"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>影響分析對話方塊 (Analysis Services - 多維度資料)
   如果 **[處理]** 對話方塊中所列出的物件已經處理，請使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 **[影響分析]** 對話方塊來識別及選擇性地處理受影響的相依物件。 在 **[處理]** 對話方塊中按一下 **[影響分析]** ，即可顯示 **[影響分析]** 對話方塊。  
@@ -26,7 +25,7 @@ ms.locfileid: "62730690"
 > [!NOTE]  
 >  如果物件受到一個以上的影響，物件就會出現一次以上。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **物件清單**  
  在方格中顯示相依性物件的清單。 方格包含下列資料行：  
   
@@ -39,7 +38,7 @@ ms.locfileid: "62730690"
  **影響類型**  
  顯示處理 [處理] 對話方塊中的物件時，會對相依物件造成的影響。 下表列出可能的處理效果，並註解每一個處理的結果是會導致警告或錯誤。  
   
-|影響|訊息|  
+|影響|Message|  
 |------------|-------------|  
 |將清除物件 (取消處理)|警告|  
 |物件將失效|錯誤|  

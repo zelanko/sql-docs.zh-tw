@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - syslockinfo
@@ -14,12 +13,12 @@ ms.assetid: b9892ae3-ac15-48be-8b52-78dbed6467ed
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4e2fa557efb6f09eae78180390c733f35bdc4a17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e8c6534449ffc4e89efcd49c943726bf6ecd9f26
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215000"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096650"
 ---
 # <a name="changes-to-behavior-in-syslockinfo-and-splock"></a>syslockinfo 與 sp_lock 中之行為的變更
   **syslockinfo**並**sp_lock**可能會傳回非預期的值。 它們可能也會傳回額外的資料列，而先前的版本**syslockinfo**並**sp_lock**傳回每個鎖定資源的兩個資料列的最大值。  

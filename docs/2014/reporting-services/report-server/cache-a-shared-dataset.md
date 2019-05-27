@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d1d495f8da0d05286a80ff8bdcf2e1c10da9b909
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c759eaf0fd18709e09eb64da6bfeb2d66a69f595
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63016886"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104262"
 ---
 # <a name="cache-a-shared-dataset"></a>快取共用資料集
   改善效能的其中一種方式就是設定共用資料集的快取屬性。 快取共用資料集時，系統會在一段指定的時間內儲存查詢結果的副本。 要求使用共用資料集之報表的第一位使用者必須等候查詢結果以及所有處理都完成，然後才能檢視該報表。 在快取期間內要求該報表的後續使用者將會立即體驗到增進的效能，因為查詢和處理都已經進行了。 您也可以指定執行查詢的快取重新整理計劃，並在指定的快取逾期前快取結果。  

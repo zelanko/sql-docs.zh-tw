@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10146"
@@ -14,12 +13,12 @@ ms.assetid: e4ef6cc0-ec84-4a89-86ed-a3f8523402d9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f6f6f0f1140b4cd46ecdea496ecb593bea7a0eb9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4797dd3535ff00511594110cd7f2668af2223d3e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62666848"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109964"
 ---
 # <a name="axis-title-properties-dialog-box-general-report-builder-and-ssrs"></a>軸標題屬性對話方塊、一般 (報表產生器及 SSRS)
   選取 [軸標題屬性] 對話方塊上的 [一般] 來定義軸標題。 軸標題會顯示在 X 軸之下，或 Y 軸旁邊。  

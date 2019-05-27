@@ -16,15 +16,15 @@ helpviewer_keywords:
 - GROUP BY clause, GROUPING_ID
 - GROUPING_ID function
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 91161ebc6e9f39f3b937b55961a2d8439f44a788
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbfbed6239d48cf01e65411250b163797d13333c
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836826"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943076"
 ---
 # <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  GROUPING_ID \<column_expression> 必須完全符合 GROUP BY 清單中的運算式。 例如，若您要根據 DATEPART (yyyy, \<*column name*>) 分組，請使用 GROUPING_ID (DATEPART (yyyy, \<資料行名稱>))。若您要根據 \<資料行名稱> 分組，請使用 GROUPING_ID (\<資料行名稱>)。  
   
 ## <a name="comparing-groupingid--to-grouping-"></a>比較 GROUPING_ID () 與 GROUPING ()  
- GROUPING_ID (\<column_expression> [ **,**...*n* ]) 針對每一個輸出資料列中資料行清單中的每一個資料行輸入等於 GROUPING (\<column_expression>) 傳回的項目 (當作一和零的字串)。 GROUPING_ID 會將此字串解譯為以 2 為基底的數字，並傳回對等的整數。 例如，假設有以下的陳述式：`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`。 下表顯示 GROUPING_ID () 輸入和輸出值。  
+ GROUPING_ID (\<column_expression> [ **,** ...*n* ]) 針對每一個輸出資料列中資料行清單中的每一個資料行輸入等於 GROUPING (\<column_expression>) 傳回的項目 (當作一和零的字串)。 GROUPING_ID 會將此字串解譯為以 2 為基底的數字，並傳回對等的整數。 例如，假設有以下的陳述式：`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`。 下表顯示 GROUPING_ID () 輸入和輸出值。  
   
 |彙總資料行|GROUPING_ID (a, b, c) 輸入 = GROUPING(a) + GROUPING(b) + GROUPING(c)|GROUPING_ID () 輸出|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  

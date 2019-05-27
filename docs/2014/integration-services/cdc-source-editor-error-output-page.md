@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.errorhandling.f1
@@ -13,12 +12,12 @@ ms.assetid: 8a4c2cb8-fd2f-4c45-824f-b93473a8981e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4a5a98644dc9c8f887b72cd5cc76c1d7c38ae174
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d3bf33d52b380e1ac05864c6e7402567b42df54a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62836027"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061034"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>CDC 來源編輯器 (錯誤輸出頁面)
   使用 [CDC 來源編輯器] 對話方塊的 [錯誤輸出] 頁面，即可選取錯誤處理選項。  

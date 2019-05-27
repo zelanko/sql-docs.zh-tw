@@ -14,16 +14,16 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: efaa2078b561c0c69fbcff2f83eed09f7d3c24ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7be26a9819fdaf5b50d6169a4d94d8c7c5b906ee
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669607"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935480"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>建立、修改及卸除空間索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "51669607"
   
 7.  若要指定您要建立索引的空間資料行，請按一下 [加入]。  
   
-8.  在 [從 *\<資料表名稱>* 選取資料行] 對話方塊中，選取對應的核取方塊來選取 **geometry** 或 **geography** 類型的資料行。 任何其他的空間資料行就會變成無法編輯。 如果您想要選取不同的空間資料行，就必須先清除目前選取的資料行。 完成後，請按一下 **[確定]**。  
+8.  在 [從 *\<資料表名稱>* 選取資料行] 對話方塊中，選取對應的核取方塊來選取 **geometry** 或 **geography** 類型的資料行。 任何其他的空間資料行就會變成無法編輯。 如果您想要選取不同的空間資料行，就必須先清除目前選取的資料行。 完成後，請按一下 **[確定]** 。  
   
 9. 在 [索引鍵資料行] 方格中確認您的資料行選取。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "51669607"
   
 11. 在 [空間] 頁面上，指定您想要用於索引之空間屬性的值。  
   
-     當您在 **geometry** 類型資料行上建立索引時，您必須指定週框方塊的 **(**_X-min_**,**_Y-min_**)** 和 **(**_X-max_**,**_Y-max_**)** 座標。 如果是 **geography** 類型資料行上的索引，在您指定**地理方格**鑲嵌式配置之後，週框方塊欄位會變成唯讀，因為地理方格鑲嵌式不會使用週框方塊。  
+     當您在 **geometry** 類型資料行上建立索引時，您必須指定週框方塊的 **(** _X-min_ **,** _Y-min_ **)** 和 **(** _X-max_ **,** _Y-max_ **)** 座標。 如果是 **geography** 類型資料行上的索引，在您指定**地理方格**鑲嵌式配置之後，週框方塊欄位會變成唯讀，因為地理方格鑲嵌式不會使用週框方塊。  
   
      您可以選擇性地針對 [每一物件的資料格] 欄位及鑲嵌式配置的任何方格密度等級指定非預設值。 每一物件的資料格預設數目為 16 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 或 8 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 或更高，而預設方格密度是 [中] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)])。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "51669607"
   
 3.  在 [Selected Spatial Index (選取的空間索引)] 資料行中，按一下要刪除的索引。  
   
-4.  按一下 **[刪除]**。  
+4.  按一下 **[刪除]** 。  
   
   
 ##  <a name="restrictions"></a> 空間索引的限制  

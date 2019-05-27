@@ -1,8 +1,7 @@
 ---
 title: 升級和移轉 Reporting Services | Microsoft Docs
 ms.prod: sql-server-2014
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, upgrading
@@ -15,12 +14,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 2ef6c53e1cb9fd11eb8cba6bb788de9b9b1fe10a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 95bf8da81caa71b3f095e7143292cd60e807b585
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63144570"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108628"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 

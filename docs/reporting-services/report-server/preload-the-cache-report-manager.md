@@ -13,7 +13,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9c92612f58461f1fc94551396b364087cb3c05c3
 ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/14/2019
 ms.locfileid: "65581461"

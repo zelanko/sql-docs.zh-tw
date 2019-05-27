@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 47ae04ce-7b9d-49c2-8dbc-bafcb73d4603
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: acf4484f9a868556ce998e39ff417c50b1ca3304
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 60d8599942db1c7f1ff679d92de496692ed2d58b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749444"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071395"
 ---
 # <a name="health-rules-reference-powerpivot-for-sharepoint"></a>健全狀況規則參考 (PowerPivot for SharePoint)
   本參考主題描述 PowerPivot for SharePoint 安裝所加入的 SharePoint 健全狀況規則。 這些規則是用來報告伺服器健全狀況、可用性或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服務應用程式組態或是其相關 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的問題。  

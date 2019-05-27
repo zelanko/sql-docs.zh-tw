@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.diagram.f1
@@ -13,12 +12,12 @@ ms.assetid: 180e6f48-5c4d-4160-b84d-608b98f7b840
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd66205c6f7a03d1bba0783aabbed3936b25e691
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 127ff0c386a1f93c00178624b54499e33cf9042a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62681026"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088011"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>叢集圖表索引標籤 (採礦模型檢視器)
   **[叢集圖表]** 索引標籤會提供叢集模型中，所有叢集的圖形化檢視。  

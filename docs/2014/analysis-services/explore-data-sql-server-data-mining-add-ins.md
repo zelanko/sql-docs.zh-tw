@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data preparation
@@ -15,12 +14,12 @@ ms.assetid: 714845a9-4c27-461a-9ba3-149e1e818386
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae3ac89f40c67a8097db676ba0628a25d260fbeb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0bad2a2e65a65bbafa8218a3e0afbedd4b9f13b6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731433"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081313"
 ---
 # <a name="explore-data-sql-server-data-mining-add-ins"></a>瀏覽資料 (SQL Server 資料採礦增益集)
   ![瀏覽資料精靈](media/dmc-explore.gif "瀏覽資料精靈")  

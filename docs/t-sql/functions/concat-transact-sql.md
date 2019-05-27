@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - CONCAT function
 ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e679c1c9090f189881ad9de3b1615d6ecfa5b72
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 819601e12f2e9b4179ffa966fb8e54962c9f31d4
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801272"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943865"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -55,7 +55,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 |輸入類型|輸出類型及長度|  
 |---|---|
 |1.下者的任何引數：<br><br />SQL-CLR 系統類型<br><br />SQL-CLR UDT<br><br />中的多個<br><br />`nvarchar(max)`|**nvarchar(max)**|  
-|2.否則，是下列類型的任何參數：<br><br />**varbinary(max)**<br><br />中的多個<br><br />**varchar(max)**|**varchar(max)**，除非其中一個參數是任何長度的 **nvarchar**。 在此情況下，`CONCAT` 會傳回 **nvarchar(max)** 類型的結果。|  
+|2.否則，是下列類型的任何參數：<br><br />**varbinary(max)**<br><br />中的多個<br><br />**varchar(max)**|**varchar(max)** ，除非其中一個參數是任何長度的 **nvarchar**。 在此情況下，`CONCAT` 會傳回 **nvarchar(max)** 類型的結果。|  
 |3.否則為 **nvarchar** 類型且最多 4000 個字元的任何引數<br><br />(**nvarchar**(<= 4000))|**nvarchar**(<= 4000)|  
 |4.在所有其他情況下|**varchar**(<= 8000) (最多 8000 個字元的 **varchar**)，除非其中一個參數是任何長度的 nvarchar。 在該情況下，`CONCAT` 會傳回 **nvarchar(max)** 類型的結果。|  
   

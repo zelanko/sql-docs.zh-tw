@@ -15,14 +15,18 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2dea9e83bcfeff2c3b5c208cc947f48f21b9f4a7
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.openlocfilehash: 659059130d63dd2f320dcbd9ec0364b249f0889b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877722"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713873"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 的新功能
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 本主題描述 SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中已新增或更新的功能。 它也包含 [Azure Feature Pack for Integration Services & #40;SSIS & #41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) 在SQL Server 2016 期間新增或更新的功能。  
 
@@ -284,7 +288,7 @@ ms.locfileid: "64877722"
  Excel 連線管理員、Excel 來源和 Excel 目的地現在明確支援 Excel 2016 資料來源。  
 
 ####  <a name="SAPBW"></a> 已發行 Connector for SAP BW for SQL Server 2016  
- 適用於 Microsoft SQL Server® 2016 的 Microsoft® Connector for SAP BW 已發行為 SQL Server 2016 Feature Pack 的一部分。 若要下載 Feature Pack 的元件，請參閱 [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)。
+ 適用於 Microsoft SQL ServerÂ® 2016 的 MicrosoftÂ® Connector for SAP BW 已作為 SQL Server 2016 Feature Pack 的一部分發行。 若要下載 Feature Pack 的元件，請參閱 [MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)。
  
 #### <a name="oracleteradata"></a> 已發行 Connectors v4.0 for Oracle and Teradata
 已發行 Microsoft Connectors v4.0 for Oracle and Teradata。 若要下載連接器，請參閱 [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)。
@@ -345,7 +349,7 @@ ms.locfileid: "64877722"
  [SQL Server 匯入和匯出精靈] 現在可以從 Azure Blob 儲存體匯入資料，並將資料儲存至其中。 如需詳細資訊，請參閱[選擇資料來源 &#40;SQL Server 匯入和匯出精靈&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) 和[選擇目的地 &#40;SQL Server 匯入和匯出精靈&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)。 
 
 ####  <a name="CDCOracle"></a> 已發行 Change Data Capture Designer and Service for Oracle for Microsoft SQL Server 2016  
- Attunity 所提供之適用於 Microsoft SQL Server® 2016 的 Microsoft® Change Data Capture Designer for Oracle 和 Change Data Capture Service for Oracle 已發行為 SQL Server 2016 Feature Pack 的一部分。  這些元件現在支援傳統安裝中的 Oracle 12c。 (不支援多租用戶安裝) 若要下載 Feature Pack 的元件，請參閱 [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)。  
+ 適用於 Microsoft SQL ServerÂ® 2016 的 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity 已作為 SQL Server 2016 Feature Pack 的一部分發行。  這些元件現在支援傳統安裝中的 Oracle 12c。 (不支援多租用戶安裝) 若要下載 Feature Pack 的元件，請參閱 [MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)。  
   
 ####  <a name="cdc2016"></a> 已針對 SQL Server 2016 更新 CDC 元件  
  CDC (異動資料擷取) 控制工作、來源和分隔器轉換元件已更新，可與 SQL Server 2016 完全相容。 沒有任何新功能，也沒有任何行為變更。  

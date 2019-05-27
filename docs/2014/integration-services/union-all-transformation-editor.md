@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.unionalltransformation.f1
@@ -15,12 +14,12 @@ ms.assetid: 32fbc1c1-da83-4684-9479-31fc3e2df98c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: def728a5b32970553d8bf639f58d4cfba96fc31e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b62fb5e33311f1011911c40fc858723b218bac55
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766081"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054825"
 ---
 # <a name="union-all-transformation-editor"></a>聯集全部轉換編輯器
   使用 **[聯集全部轉換編輯器]** 對話方塊，即可將數個輸入資料列集合併至單一輸出資料列集。 藉由在資料流程中包含聯集全部轉換，您可以合併多個資料流程中的資料、藉由巢狀聯集全部轉換來建立複雜資料集、以及更正資料中的錯誤之後重新合併資料列。  

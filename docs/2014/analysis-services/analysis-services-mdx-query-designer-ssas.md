@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.asmdxquerydes.f1
@@ -13,12 +12,12 @@ ms.assetid: a2fb0b79-802a-4dac-bd9a-32dfe2e8c4d4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0f76c8df695dcb4e49c707409243b6f1aa1d28e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 23bdc92e18a7f2cae351faddd69370c9e08a7371
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62643574"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062510"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Analysis Services MDX 查詢設計工具 (SSAS)
   Analysis Services 多維度運算式 (MDX) 查詢設計工具提供圖形化使用者介面，可協助您針對 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料來源建立 MDX 查詢。 MDX 圖形化查詢設計工具有兩種模式：設計模式和查詢模式。 每一種模式都會提供 [中繼資料] 窗格，您可以在這個窗格中，從選取的 Cube 中拖曳成員，以建立 MDX 查詢，擷取您要使用的資料。  

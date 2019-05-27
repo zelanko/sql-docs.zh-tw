@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.translations.translationspane.f1
@@ -13,12 +12,12 @@ ms.assetid: 51f33f3b-6b7f-41bf-a620-97fd5189e633
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 06982cef71c23936cef25ad273e6230e4780c8b3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e5f361679d7e2e57024f0ac6859dbc3b0aac32a8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756264"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065790"
 ---
 # <a name="translations-cube-designer-analysis-services---multidimensional-data"></a>翻譯 (Cube 設計工具) (Analysis Services - 多維度資料)
   使用 Cube 設計師中的 **[翻譯]** 索引標籤，即可為選取的 Cube 建立和修改檢視方塊。  

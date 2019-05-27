@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
@@ -15,12 +14,12 @@ ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b716b3854ec2fbf931facf3aa224a04055e9f73e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4996ba378319e442df07a4ff09af3404034474d9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62715355"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085723"
 ---
 # <a name="clustering-model-query-examples"></a>叢集模型查詢範例
   當您根據資料採礦模型建立查詢時，可以擷取有關模型的中繼資料或建立內容查詢，以提供有關在分析中所發現之模式的詳細資料。 或者，您可以建立預測查詢，這會使用模型中的模式對新資料進行預測。 每種查詢都會提供不同的資訊。 例如，內容查詢可能會提供有關所找到群集的詳細資料，預測查詢則會告訴您最可能包含新資料點的群集。  

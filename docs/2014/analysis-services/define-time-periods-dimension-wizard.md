@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.timefrequency.f1
@@ -13,12 +12,12 @@ ms.assetid: 6bda6b7e-d306-4e68-9acb-84de8f44d1b4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a8839c847d9c415a549ac829a3f24c351ed1cb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 98ed499f4f2b751ef092a4091076478338173e17
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732134"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081983"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>定義時間週期 (維度精靈)
   使用 **[定義時間週期]** 頁面，即可定義時間維度或伺服器時間維度中包含的日曆年度資訊和時間頻率。  

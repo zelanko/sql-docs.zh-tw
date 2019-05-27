@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -16,12 +15,12 @@ ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1a0fd00201f782bba8b06ddde8753a86aeb89046
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62660054"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064674"
 ---
 # <a name="browsing-a-clustering-model"></a>瀏覽群集模型
   當您開啟叢集模型使用**瀏覽**，會顯示此模型中的互動式檢視器中的群集檢視器類似[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 此檢視器可協助您探索已建立的叢集，並且了解叢集特性。 您也可以將個別的區段與其他區段或母體進行比較與對照。  

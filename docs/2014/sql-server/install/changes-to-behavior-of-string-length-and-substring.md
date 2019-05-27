@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 2119b7ba-2e52-44bf-ac57-82c2d46a48ff
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d793720638ee4a98d99e6a915457d8657a1c325
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0c29b1bd036debc4285f8b0fa0b3cc68bdeb3449
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215288"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096627"
 ---
 # <a name="changes-to-behavior-of-string-length-and-substring"></a>字串長度及子字串行為的變更
   [String-length 函式&#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-string-length)並[substring 函數&#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-substring)函式可能會傳回不同的結果與包含的 XML 資料庫搭配使用時surrogate 字元。  

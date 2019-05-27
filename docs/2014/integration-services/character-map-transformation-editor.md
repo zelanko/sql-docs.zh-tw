@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.charactermaptransformation.f1
@@ -15,12 +14,12 @@ ms.assetid: 3f1dbcf9-9cca-4606-bdcc-7ea6ad48cdf3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 847b05d76559cec2632b519a3b1cd3e0fbdb23ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62835131"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060976"
 ---
 # <a name="character-map-transformation-editor"></a>字元對應表轉換編輯器
   使用 [字元對應表轉換編輯器] 對話方塊，來選取要套用至資料行資料的字串函數，以及指定對應是就地變更或加入為新資料行。  

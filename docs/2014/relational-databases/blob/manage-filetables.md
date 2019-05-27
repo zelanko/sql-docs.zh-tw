@@ -10,20 +10,20 @@ helpviewer_keywords:
 - FileTables [SQL Server], security
 - FileTables [SQL Server], managing access
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2e8522cde5be0ccc34f858ce6bff945433af11ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b6653f2340dfbcf6265c527f85d87d60a3680f30
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62874792"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66009985"
 ---
 # <a name="manage-filetables"></a>管理 FileTable
   描述用於管理 FileTable 的常見管理工作。  
   
-##  <a name="HowToEnumerate"></a> 操作說明：取得 Filetable 和相關的物件的清單  
+##  <a name="HowToEnumerate"></a> 如何：取得 FileTable 和相關物件的清單  
  若要取得 FileTable 的清單，請查詢下列其中一個目錄檢視：  
   
 -   [sys.filetables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetables-transact-sql)  
@@ -79,7 +79,7 @@ GO
   
 -   如果您在執行個體層級停用 FILESTREAM，就不會顯示執行個體上的資料庫層級目錄。  
   
-###  <a name="HowToDisable"></a> 操作說明：停用並重新啟用資料庫層級的非交易式存取  
+###  <a name="HowToDisable"></a> 如何：停用並重新啟用資料庫層級的非交易式存取  
  如需詳細資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
   
  **停用完整的非交易式存取**  
@@ -106,7 +106,7 @@ ALTER DATABASE database_name
 GO  
 ```  
   
-###  <a name="visible"></a> 操作說明：請確定資料庫中 Filetable 的可見性  
+###  <a name="visible"></a> 如何：確保資料庫中 FileTable 的可見度  
  如果下列所有條件都成立，就會顯示資料庫層級目錄和其下的 FileTable 目錄 (如果有的話)：  
   
 1.  在執行個體層級啟用 FILESTREAM。  
@@ -138,7 +138,7 @@ GO
   
 -   FileTable 目錄及其所含的檔案及目錄會在檔案系統中顯示，而且可用於進行檔案 I/O 存取。  
   
-###  <a name="HowToEnableNS"></a> 操作說明：停用再重新啟用資料表層級的 FileTable 命名空間  
+###  <a name="HowToEnableNS"></a> 如何：停用並重新啟用資料表層級的 FileTable 命名空間  
  您可以使用 **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** 選項來呼叫 ALTER TABLE 陳述式。  
   
  **停用 FileTable 命名空間**  
@@ -161,7 +161,7 @@ GO
 > [!WARNING]  
 >  終止開啟檔案控制代碼，可能會導致使用者遺失未儲存的資料。 此行為與檔案系統本身的行為一致。  
   
-###  <a name="HowToListOpen"></a> 操作說明：取得與 FileTable 相關聯的開啟檔案控制代碼的清單  
+###  <a name="HowToListOpen"></a> 如何：取得與 FileTable 建立關聯的開啟檔案控制代碼清單  
  查詢 [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql) 目錄檢視。  
   
 ```sql  
@@ -169,7 +169,7 @@ SELECT * FROM sys.dm_filestream_non_transacted_handles;
 GO  
 ```  
   
-###  <a name="HowToKill"></a> 操作說明：終止與 FileTable 相關聯的開啟檔案控制代碼  
+###  <a name="HowToKill"></a> 如何：終止與 FileTable 建立關聯的開啟檔案控制代碼  
  使用適當的引數來呼叫預存程序 [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles)，可終止資料庫或 FileTable 中的所有開啟檔案控制代碼，或是終止特定控制代碼。  
   
 ```  
@@ -188,7 +188,7 @@ EXEC sp_kill_filestream_non_transacted_handles @handle_id = integer_handle_id;
 GO  
 ```  
   
-###  <a name="HowToIdentifyLocks"></a> 操作說明：識別鎖定 Filetable 所持有  
+###  <a name="HowToIdentifyLocks"></a> 如何：識別 FileTable 所持有的鎖定  
  FileTable 所採用的大部分鎖定都會對應至應用程式所開啟的檔案。  
   
  **識別開啟的檔案和相關聯的鎖定**  

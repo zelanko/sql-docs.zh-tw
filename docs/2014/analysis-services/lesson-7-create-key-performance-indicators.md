@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a6c8ac2b-64ba-456f-b418-7bf0afe145d1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 62b4102ba7a8b1ff2d5c833001b90dd74707fdc5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1d9d3145583670fb849321bac5b57928caacfbc2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728134"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078364"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>第 8 課：建立關鍵效能指標
   在這一課，您將建立關鍵效能指標 (KPI)。 KPI 會對照量值或絕對值所定義的「目標」值，量測由「基底」量值所定義之值的效能。 在報表用戶端應用程式中，KPI 可為商務專業人士提供快速而簡便的方法來了解商務成就的摘要，或是找出趨勢。 如需詳細資訊，請參閱 [KPI &#40;SSAS 表格式&#41;](tabular-models/kpis-ssas-tabular.md)。  

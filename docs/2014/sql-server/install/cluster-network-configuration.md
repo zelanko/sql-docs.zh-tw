@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - cluster network selection, Setup
@@ -14,12 +13,12 @@ ms.assetid: 579482ef-a023-45b2-9176-b4a4188adf9d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3cd117a9f873de13938d8a6946faf4f1c00d522d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 48dca8e9ce522f2520521441b2e7eea349ff099b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63064416"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096440"
 ---
 # <a name="cluster-network-configuration"></a>叢集網路組態
   使用 **[叢集網路選取]** 頁面，即可指定容錯移轉叢集執行個體的網路資源。  

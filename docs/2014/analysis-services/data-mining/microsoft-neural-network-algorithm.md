@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - training neural networks
@@ -24,12 +23,12 @@ ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 551a0cce8326c4727efcc1d348be5019809f0506
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a7330fab8b4c0ecdff296e0daa5e529442fd8b94
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62734890"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083864"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
   在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，則[!INCLUDE[msCoName](../../includes/msconame-md.md)]類神經網路演算法會將輸入屬性的每個可能狀態與可預測的屬性，每個可能狀態結合，並使用定型資料來計算機率。 稍後您可以使用這些機率來進行分類或迴歸，依據輸入屬性預測該預測屬性的結果。  

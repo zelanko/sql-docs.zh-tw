@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregationtransformation.aggregations.f1
@@ -15,12 +14,12 @@ ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db633e9afa480d03b31cf02a84db2813b1e30516
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 698e3757a32d9a2a9db95df495e33903dbdfed1f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62771944"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061574"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>彙總轉換編輯器 (彙總索引標籤)
   使用 [彙總轉換編輯器] 對話方塊的 [彙總] 索引標籤，即可指定彙總的資料行與彙總屬性。 您可以套用多個彙總。 此轉換不會產生錯誤輸出。  
@@ -32,7 +31,7 @@ ms.locfileid: "62771944"
   
  若要了解有關彙總轉換的詳細資訊，請參閱＜ [Aggregate Transformation](data-flow/transformations/aggregate-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **進階 / 基本**  
  顯示或隱藏設定多個輸出之多個彙總的選項。 依預設，會隱藏 [進階] 選項。  
   
