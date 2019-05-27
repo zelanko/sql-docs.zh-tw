@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10127"
@@ -13,17 +12,17 @@ ms.assetid: 0c030cab-6087-45a5-99f0-c7bd693f20a1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8aa1315ca0f4a69e234d627a415ba088bd45742b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 58381a9e56ed6ace1f8ff18109d9746072f76774
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266078"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109813"
 ---
 # <a name="column-visibility-dialog-box-report-builder"></a>資料行可見性對話方塊 (報表產生器)
   使用 **[資料行可見性]** 對話方塊在報表第一次執行時顯示或隱藏選取的資料行，或使用其他報表項目來切換資料行的可見性。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **一開始執行報表時**  
  選擇一個選項以指出報表項目最初顯示在報表中的方式。  
   

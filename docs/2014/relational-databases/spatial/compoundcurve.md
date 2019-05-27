@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 983711f4ac679cdb12fa7c31509725f13fba8bb3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e234b06917d77e68577e72fbdc7bca1ad033cef8
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62524433"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014335"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   `CompoundCurve` 是零個或多個屬於 geometry 或 geography 類型之連續 `CircularString` 或 `LineString` 執行個體的集合。  

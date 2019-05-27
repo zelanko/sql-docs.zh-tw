@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.savefileasdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: 8e2099ba-c5b0-4940-8e48-7d696485fa4c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a58daa6e66f591dee73f823b3a401ae9ac45d80a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 007e37c7e093828cb3ea452a2bea5972f9ee5b9a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748020"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070045"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>另存新檔對話方塊 (Analysis Services - 多維度資料)
   **[另存新檔]** 對話方塊會顯示 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體所定義之記錄與資料的資料夾內可用的檔案清單。 您可以選取一個列出的檔案，或者必要時可以指定其他的資料夾與檔案。 請執行下列動作來顯示 **[另存新檔]** 對話方塊：  

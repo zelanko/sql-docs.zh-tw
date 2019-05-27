@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], adding
@@ -17,12 +16,12 @@ ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 08531e4b0ecfcda02fa1dd1e2c3125b557e41cb7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 14d63345020fbe76b727d9276585b17bb3406846
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740758"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072593"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>加入或刪除使用者定義階層
   您會在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，維度設計師的 [維度結構] 索引標籤上，從維度中加入或移除使用者自訂階層。  

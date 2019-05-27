@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.replacetable.f1
@@ -15,12 +14,12 @@ ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17f87d063fd23ecc9ead9bfe097f21e74e011953
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b1ab26f596a669a5a0d13b6bb0c283a55851bd58
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748300"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070265"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>使用其他資料表取代對話方塊
   使用 **中的** [使用其他資料表取代] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可以尚未納入資料來源檢視中之基礎資料來源內的資料表，取代資料來源檢視中的現有資料表。 您可以在 [資料來源檢視設計師] 的 [圖表] 或 [資料表] 窗格中，以滑鼠右鍵按一下資料表的名稱，然後從 [取代資料表] 中選取 [使用其他資料表]，來顯示 [使用其他資料表取代] 對話方塊。  

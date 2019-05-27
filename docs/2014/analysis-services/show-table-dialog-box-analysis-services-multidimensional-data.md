@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.showtabledialog.f1
@@ -15,12 +14,12 @@ ms.assetid: 4c0bf4fa-5685-4269-bf7d-f0e9802ab4bf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7148ac75da5ec7184c771c2411750749c15fa192
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d21063bf403d9973ac4ff09725545e47e84a7cd2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746481"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068654"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>顯示資料表對話方塊 (Analysis Services - 多維度資料)
   使用 **中的** [顯示資料表] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，以包含與維度、Cube 或採礦結構相關聯之資料來源檢視的資料表。 您可以藉由下列方式在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中顯示此對話方塊：  
@@ -35,7 +34,7 @@ ms.locfileid: "62746481"
   
 -   在 [資料採礦模型設計師] 的 [採礦結構] 頁面上，以滑鼠右鍵按一下 [資料來源檢視] 窗格的背景，然後選取 [顯示資料表]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **選取要顯示的其他資料表**  
  選取要加入 [資料來源檢視] 窗格中的資料表。 此選項會顯示可用物件及其類型的方格，這些類型符合 [篩選] 中設定的篩選 (如果未設定 [篩選]，則為所有資料表)，且尚未在目前圖表中顯示。  
   

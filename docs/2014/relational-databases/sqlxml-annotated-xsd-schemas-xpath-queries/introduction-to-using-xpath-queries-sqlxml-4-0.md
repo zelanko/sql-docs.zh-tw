@@ -11,15 +11,15 @@ helpviewer_keywords:
 - W3C XPath specification
 - XPath queries [SQLXML], functionality
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 775e9ac76d6c3b16d2c9ba6ce688a2a3dfbf48d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+ms.openlocfilehash: 4ada9351eca0b068838b38e59c8e0833d5a9af61
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63127703"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012704"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>使用 XPath 查詢的簡介 (SQLXML 4.0)
   您可以將 XML 路徑語言 (XPath) 查詢指定成 URL 的一部分或在範本中指定此查詢。 對應結構描述會決定這個產生片段的結構，而且系統會從資料庫中擷取值。 這個程序在概念上類似於使用 CREATE VIEW 陳述式來建立檢視，然後針對它們撰寫 SQL 查詢。  

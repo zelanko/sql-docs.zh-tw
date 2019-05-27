@@ -13,15 +13,15 @@ helpviewer_keywords:
 - data formats [SQL Server], compatibility
 - bcp utility [SQL Server], compatibility
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b05f01a5c8100f4c06d8cc6b294bdb49e5baed71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f2fb27a109ec361b0287adfff4ba3e7abcaac062
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62712775"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011831"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>使用 bcp 指定相容性的資料格式 (SQL Server)
   本主題描述資料格式屬性、 欄位特定提示，並儲存欄位的欄位資料的非 xml 格式檔案[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`bcp`命令。 大量匯出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料以大量匯入至另一個程式 (例如另一個資料庫程式) 時，了解這些資訊十分有用。 在來源資料表中的預設資料格式 (原生、字元或 Unicode) 可能和另一個程式所預期的資料配置不相容。如果匯出資料時發生了不相容的狀況，您就必須描述資料配置的方式。  

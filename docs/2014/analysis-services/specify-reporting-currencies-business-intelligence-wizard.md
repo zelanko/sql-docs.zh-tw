@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.currenciestoreport.f1
@@ -13,12 +12,12 @@ ms.assetid: 41bbc3c4-92e0-4b2d-b303-ce62ff9d4348
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a66e94a9cdafc327737c71cd710847033011dcfa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1be12aae3f4b4907fe7464aab1ea4bef6ff5f8dd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746541"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068204"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>指定報表貨幣 (商業智慧精靈)
   使用 [定義報表貨幣] 頁面來定義貨幣轉換功能的報表貨幣，其中涵蓋 [選取轉換類型] 頁面上所指定的多對多或一對多轉換類型。 (報表貨幣是在 [選取量值] 頁面上所選取量值的值被轉換之後貨幣)。從貨幣維度中選取的成員可為由商業智慧精靈所產生的貨幣轉換定義報表貨幣維度。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1f753856fbec3fe521cf23e6506c3b43e5dec481
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b1a7cc26edb726952e71e25deb271ef1dd997d18
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749614"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071530"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>建立及自訂 PowerPivot 圖庫
   PowerPivot 圖庫是一種特殊類型的 SharePoint 文件庫，針對包含 PowerPivot 資料的已發行 Excel 活頁簿和 Reporting Services 報表，提供豐富的預覽與文件管理功能。  

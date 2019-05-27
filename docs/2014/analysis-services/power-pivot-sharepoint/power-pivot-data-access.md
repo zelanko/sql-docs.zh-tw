@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 75da2776f867ae89da049ba31a9180d21922cd84
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97f5d2045601f72c3536fbf2d4e469eb5eb20fbe
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749372"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071246"
 ---
 # <a name="powerpivot-data-access"></a>PowerPivot 資料存取
   本主題描述從發佈到 SharePoint 文件庫的 PowerPivot 活頁簿擷取資料的方法。  

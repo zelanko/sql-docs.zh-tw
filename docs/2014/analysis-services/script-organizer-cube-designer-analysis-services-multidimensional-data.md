@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.scriptorganizerpane.f1
@@ -13,12 +12,12 @@ ms.assetid: 92624ca4-de67-4ebd-aab2-8adb527d327e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93ca134e0e06e5197c680830d67e8220e5c9bf5d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c8c8484089bf3aa1f9c88b3b2163a49b445bf8d6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747812"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069927"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>指令碼組合管理 (計算索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   在 Cube 設計師的 [計算] 索引標籤上，使用 [指令碼組合管理] 窗格，即可存取和重新排列包含在指定 Cube 之 Cube 指令碼中的導出成員、命名集以及指令碼命令。  

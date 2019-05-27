@@ -11,15 +11,15 @@ helpviewer_keywords:
 - geodetic data type [SQL Server]
 - geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 0224f32fde76aa406d90c98fe7280237d09a04e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5dde7575a3f657b89d29fefa0da52002bcd6af28
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62524470"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014300"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>建立、建構並查詢地理位置執行個體
   地理位置空間資料類型 (`geography`) 代表圓形表面座標系統中的資料。 這種類型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中是實作為 .NET Common Language Runtime (CLR) 資料類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography`資料類型會儲存橢圓體 （圓形地球） 資料，例如 GPS 經緯度座標。  

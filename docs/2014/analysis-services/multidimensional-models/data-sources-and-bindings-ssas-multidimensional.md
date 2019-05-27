@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], bindings
@@ -34,12 +33,12 @@ ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 60b3e29ae94c4dcf5d136bcc01bf291a9a6118fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700088"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076076"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>資料來源和繫結 (SSAS 多維度)
   Cube、維度和其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件都可繫結至資料來源。 資料來源可為下列其中一個物件：  
@@ -61,8 +60,8 @@ ms.locfileid: "62700088"
 |---------------------------------|-----------------|  
 |BigInt|64 位元帶正負號的整數。 這個資料類型會對應至 Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Int64 資料類型和 OLE DB 內部的 DBTYPE_I8 資料類型。|  
 |Bool|布林值 (Boolean)。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Boolean 資料類型和 OLE DB 內部的 DBTYPE_BOOL 資料類型。|  
-|CURRENCY|貨幣值，範圍從 -263 (或 -922,337,203,685,477.5808) 到 263-1 (或 +922,337,203,685,477.5807)，正確率為貨幣單位的千分之十。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Decimal 資料類型和 OLE DB 內部的 DBTYPE_CY 資料類型。|  
-|date|儲存成雙精確度浮點數的日期資料。 整數部分為自 1899 年 12 月 30 日起的天數，而分數部分則為一天的分數部分。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 DateTime 資料類型和 OLE DB 內部的 DBTYPE_DATE 資料類型。|  
+|Currency|貨幣值，範圍從 -263 (或 -922,337,203,685,477.5808) 到 263-1 (或 +922,337,203,685,477.5807)，正確率為貨幣單位的千分之十。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Decimal 資料類型和 OLE DB 內部的 DBTYPE_CY 資料類型。|  
+|Date|儲存成雙精確度浮點數的日期資料。 整數部分為自 1899 年 12 月 30 日起的天數，而分數部分則為一天的分數部分。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 DateTime 資料類型和 OLE DB 內部的 DBTYPE_DATE 資料類型。|  
 |Double|在 -1.79E +308 到 1.79E +308 範圍中的雙精確度浮點數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Double 資料類型和 OLE DB 內部的 DBTYPE_R8 資料類型。|  
 |Integer|32 位元帶正負號的整數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Int32 資料類型和 OLE DB 內部的 DBTYPE_I4 資料類型。|  
 |Single|在 -3.40E +38 到 3.40E +38 範圍中的單精確度浮點數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Single 資料類型和 OLE DB 內部的 DBTYPE_R4 資料類型。|  

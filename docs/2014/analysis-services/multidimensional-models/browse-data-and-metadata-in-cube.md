@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c062137987a8ee1499449425d8e02df0d203050
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c2e82ff5158f64c95b0e66f327c6d57ebf2def29
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700942"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076762"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>瀏覽 Cube 中的資料和中繼資料
   使用 Cube 設計師的 [瀏覽器] 索引標籤瀏覽 Cube 資料。 您可以使用此檢視檢查 Cube 的結構，並檢查資料庫物件的資料、計算、格式及安全性。 您可以像是使用者在報表工具或其他用戶端應用程式檢視 Cube 一樣，快速檢查 Cube。 當您瀏覽 Cube 資料時，您可以檢視不同的維度、向下鑽研至成員，以及配量維度。  

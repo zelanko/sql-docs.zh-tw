@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - default configuration [Reporting Services]
@@ -15,12 +14,12 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9d4ed9d30be850df2ad18374790a91fd72f5e50a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f3a54650403458eec09826b51f1528a844e48791
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63262340"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108804"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>安裝 Reporting Services 原生模式報表伺服器
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式報表伺服器可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈或命令列安裝。 在安裝精靈中，您也可以選擇 1) 安裝檔案並以預設值設定伺服器，或 2) 僅安裝檔案但不要由安裝精靈設定伺服器。 本主題檢閱 *「原生模式的預設組態」* (Default Configuration for Native Mode)，其中安裝程式會安裝及設定報表伺服器執行個體。 當安裝程式完成之後，報表伺服器會執行及備妥使用。 原生模式報表伺服器會當做獨立的應用程式伺服器來執行。 原生模式為預設伺服器模式。  

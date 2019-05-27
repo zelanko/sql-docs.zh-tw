@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f199238c09be6409f9d8fe9266acd547738a0076
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7424a92ce4d8e4f6b0ca4c55238ede33d982933
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728603"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078703"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>依次要屬性來排序屬性成員
   在第 3 課，您學會如何根據名稱或索引鍵值排序屬性成員。 您也學會如何使用複合成員索引鍵來影響屬性成員和排序次序。 如需詳細資訊，請參閱 [修改 Date 維度](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)。 不過，如果屬性的名稱或索引鍵都無法提供想要的排序次序，您可以使用次要屬性來達成所需的排序次序。 藉由定義屬性之間的關聯性，您可以使用次要屬性排序第一個屬性的成員。  

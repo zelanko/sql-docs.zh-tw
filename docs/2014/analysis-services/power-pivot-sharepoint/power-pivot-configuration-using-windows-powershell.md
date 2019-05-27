@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4d83e53e-04f1-417d-9039-d9e81ae0483d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d3e0cdae7e9f57a7bfd62a3a0e947c43ced0b8c2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1b57ea1f69933d4d2c73ec12cc4cc18ff86d112d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749448"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071296"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>使用 Windows PowerShell 的 PowerPivot 組態
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包括您可以用來設定 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]安裝的 Windows PowerShell 指令程式。 若要使用 PowerShell 完整設定安裝，需要使用 SharePoint 指令程式和 PowerPivot for SharePoint 指令程式。 大部分組態都可以使用其中一項 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工具來完成。 如需有關這些工具的詳細資訊，請參閱[PowerPivot 組態工具](power-pivot-configuration-tools.md)。  

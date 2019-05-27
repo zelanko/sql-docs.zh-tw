@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionpropertiesdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: dfb5b7a0-7543-4e5e-8a30-4b734606e157
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d70903f580d55d674b099312c04a24632ac1d701
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bfc0de04be668ea3d1ab5633049e6f81d971b4cd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743577"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072163"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>資料分割屬性對話方塊 (SSMS)
   使用 SQL Server Management Studio 中的 [資料分割屬性] 對話方塊，即可針對 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中的 Cube 來設定資料分割的屬性。  

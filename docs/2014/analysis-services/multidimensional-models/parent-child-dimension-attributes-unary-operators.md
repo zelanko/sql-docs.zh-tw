@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - UnaryOperatorColumn property
@@ -15,12 +14,12 @@ ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e3ecd203bfce80ffe4c64dcf0ca274f7e50f6ff1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 25c1acf7a1fadbc79b7781488143ce57881c81fc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62736937"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073451"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>父子式維度中的一元運算子
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，您可以於包含父子式關聯性的維度內指定一元 (或自訂積存) 運算子資料行，以決定父屬性之所有非導出成員的自訂積存。 只要評估父成員的值時，就會將一元運算子套用至成員。 父屬性 ( **Usage** =Parent) 上的**UnaryOperatorColumn**，會在包含一元運算子的資料來源檢視中指定資料表的資料行。 儲存在此資料行之自訂積存運算子的值，會套用到屬性的每個成員。  

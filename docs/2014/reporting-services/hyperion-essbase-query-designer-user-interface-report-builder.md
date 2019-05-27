@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10013"
@@ -16,12 +15,12 @@ ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 098d44191563ee78cd80a1b2d6d1c7ee216eee73
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a4960524f7723f91a96790b579b588be73425502
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63064691"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108999"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Hyperion Essbase 查詢設計工具使用者介面 (報表產生器)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 會提供圖形化查詢設計工具，可用以建立 [!INCLUDE[extEssbase](../includes/extessbase-md.md)] 資料來源的多維度運算式 (MDX) 查詢。 MDX 圖形化查詢設計工具有兩種模式：設計模式和查詢模式。 每一種模式都會提供 [中繼資料] 窗格，而且您可以透過這個窗格，從資料來源上定義的 Cube 中拖曳成員，以便建立可在處理報表時擷取資料的 MDX 查詢。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9acdc193b608d42b21c69c380fb21db23ec3b89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 46504906b13323ac4881ca2289e87e31f1cea72f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748922"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071093"
 ---
 # <a name="powerpivot-usage-data-collection"></a>PowerPivot 使用量資料收集
   使用量資料收集是伺服陣列層級的 SharePoint 功能。 PowerPivot for SharePoint 會使用並擴充此系統來支援 PowerPivot 管理儀表板中的報表，以便顯示 PowerPivot 資料與服務的使用方式。 根據您安裝 SharePoint 的方式而定，可能會關閉伺服陣列的使用量資料收集。 伺服陣列管理員必須啟用使用量記錄，以建立會顯示在 PowerPivot 管理儀表板中的使用量資料。 如需有關如何啟用及設定 PowerPivot 的使用量資料收集事件請參閱[設定使用量資料收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  

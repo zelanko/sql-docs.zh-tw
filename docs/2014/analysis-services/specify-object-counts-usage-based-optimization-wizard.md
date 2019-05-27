@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.calculatingobjectcounts.f1
@@ -13,17 +12,17 @@ ms.assetid: 306c7c25-ae24-4852-ab8c-c82f68a4bc1f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a6f4bb5bcf2584cba8265fb175b7581b6b40ce08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e0503192c3c948110f8301c8eb375e1c8203e42f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746132"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068240"
 ---
 # <a name="specify-object-counts-usage-based-optimization-wizard"></a>指定物件計數 (基於使用方式的最佳化精靈)
   使用 **[指定物件計數]** 頁面，即可自動計算 Cube 中的物件計數，或者手動輸入估計的計數。 「基於使用方式的最佳化精靈」會使用物件計數來估計儲存需求。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Cube 物件**  
  顯示 Cube 中的維度及屬性。 不需要的屬性其`AggregationUsage`屬性設定為中的 無**檢閱彙總使用方式**精靈頁面會顯示出來，因為這些屬性是唯一需要指定計數。  
   

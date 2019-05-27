@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a6b4b76edb7eb7761511e39ba97b811dcf3d5e99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 23c920f436ae48c8eb4abd8ccd69097a06557907
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63260664"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109119"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>一般屬性頁面，資源 (報表管理員)
   使用資源的 [一般] 屬性頁面，即可重新命名、刪除、移動或取代資源。 有關誰新增資源或修改屬性的資訊顯示在頁面上方。  
@@ -34,7 +33,7 @@ ms.locfileid: "63260664"
   
 3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該資源的 [一般] 屬性頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  指定資源的名稱。 名稱必須至少包含一個英數字元。 它也可以包含空格和某些符號。 請勿使用 ; ? : \@ & = +，$ / * \< > |"或 / 來指定名稱。  
   

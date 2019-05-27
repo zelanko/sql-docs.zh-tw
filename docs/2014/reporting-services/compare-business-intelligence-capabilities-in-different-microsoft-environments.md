@@ -1,8 +1,7 @@
 ---
 title: 比較不同 Microsoft 環境中的商務智慧功能 |Microsoft Docs
 ms.prod: sql-server-2014
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -10,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/06/2017
-ms.openlocfilehash: 13ae9380cc3f034ace5f43d83640eea665cb3b02
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 00eb4dc7d90226f7d5c944ea3b878aefb4c8a105
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63267265"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109756"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>比較不同 Microsoft 環境中的商業智慧功能
 

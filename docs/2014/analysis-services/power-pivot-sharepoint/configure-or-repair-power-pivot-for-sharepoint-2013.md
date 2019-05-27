@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 616877e3-464a-4c97-bc74-1fa6f4faa756
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ff7c6dba835d12ed8b05500f037ee0d4ed1361c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 808543b2a9e0f770eaf47966bb8d6a08fecabcc8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749924"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071777"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>設定或修復 PowerPivot for SharePoint 2013 (PowerPivot 組態工具)
   若要設定或修復 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 的安裝，請使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 組態工具。 此組態工具一開始先掃描系統，然後傳回完成或修復安裝所需的動作清單。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈會安裝適用於 SharePoint 2010 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具，以及適用於 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具。 本主題描述適用於 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具。 如需有關 SharePoint 2010 的詳細資訊，請參閱 <<c0> [ 設定或修復 PowerPivot for SharePoint 2010 &#40;PowerPivot 組態工具&#41;](../configure-repair-powerpivot-sharepoint-2010.md)。</c0>  
@@ -108,7 +107,7 @@ ms.locfileid: "62749924"
   
  下表說明用於設定伺服器的值。  
   
-|頁面|輸入值|Source|描述|  
+|頁面|輸入值|`Source`|描述|  
 |----------|-----------------|------------|-----------------|  
 |**設定或修復 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint**|預設帳戶|目前使用者|預設帳戶是用於在伺服器陣列中佈建共用服務的網域 Windows 使用者帳戶。 它可用來佈建下列項目：<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式<br />Secure Store Service<br />Excel Services<br />Web 應用程式集區識別<br />網站集合管理員<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 自動資料重新整理帳戶。<br /><br /> 根據預設，它使用目前使用者的網域帳戶。 除非您是針對評估和非實際執行目的設定伺服器，否則建議您取代預設值。 您稍後可以使用管理中心變更服務識別。 (選擇性) 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具中，為下列項目指定專用帳戶：<br /><br /> Web 應用程式，使用 **[建立預設 Web 應用程式]** 頁面 (假設此工具正在為伺服器陣列建立 Web 應用程式)。<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 自動資料重新整理帳戶，使用此工具中的 **[建立無人看管的資料重新整理帳戶]** 頁面。|  
 ||資料庫伺服器|本機 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 具名執行個體 (如果有的話)|如果資料庫引擎執行個體安裝為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 具名執行個體，此工具會將這個執行個體名稱填入資料庫伺服器欄位。 如果您沒有安裝資料庫引擎，此欄位是空的。<br /><br /> **[資料庫伺服器]**  是必要參數。 此執行個體可以是 SharePoint 伺服器陣列所支援的任何 SQL Server 版本或版別。|  

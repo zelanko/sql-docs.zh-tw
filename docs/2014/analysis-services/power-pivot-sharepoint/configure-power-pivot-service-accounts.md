@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2883427b45cb408323db91935ebbccee0792825f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b90944c3260af69f29fbae8a93f5865c1f3c6d1e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749831"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071863"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>設定 PowerPivot 服務帳戶
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝包含兩個支援伺服器作業的服務。 **SQL Server Analysis Services (PowerPivot)** 服務是一種 Windows 服務，它會在應用程式伺服器上提供 PowerPivot 資料處理和查詢支援。 當您在 SharePoint 整合模式下安裝 Analysis Services 時，一定會在進行 SQL Server 安裝程式期間指定這個服務的登入帳戶。  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - constant elements [SQLXML]
 - annotated XSD schemas, constant elements
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 03e2d3d672d0bfa407a3fb553a1139d30696971e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bc100446eb6dff17125b0df7a60b8c2c82e46277
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63285604"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013940"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>使用 sql:is-constant 建立常數元素 (SQLXML 4.0)
   若要指定常數元素-也就是 XSD 結構描述沒有對應到任何資料庫資料表或資料行中的項目-您可以使用`sql:is-constant`註釋。 此註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。 `sql:is-constant` 註解可以在沒有任何屬性的元素上指定。 如果該註解是在值為 True (或 1) 的元素上指定，該元素不會對應到資料庫，但是仍會出現在 XML 文件中。  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b6dc03709ea16fb718ff93ed60f75ad4d1515eaf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fd5ced641ee8fc17f0be7d7b6e19aff17dcb69bd
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63273221"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011291"
 ---
 # <a name="get-started-with-full-text-search"></a>全文檢索搜尋使用者入門
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的資料庫預設會啟用全文檢索。 不過，若要針對資料表使用全文檢索索引，您必須在要以全文檢索引擎存取的資料表資料行中設定全文檢索索引功能。  

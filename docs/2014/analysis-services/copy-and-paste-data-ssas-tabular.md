@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.pastepreviewdb.f1
@@ -13,12 +12,12 @@ ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24d35372e81b131ce9053649bc964edd9251efa4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680123"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086973"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>複製及貼上資料 (SSAS 表格式)
   您可以從外部應用程式複製資料表的資料，並將其貼入模型設計師中新的資料表或現有的資料表。 您從 [剪貼簿] 貼入的資料必須是 HTML 格式，例如從 Excel 或 Word 複製的資料。 模型設計師將會自動偵測並套用資料類型至貼上的資料。 您也可以手動修改資料類型或資料行的顯示格式設定。  

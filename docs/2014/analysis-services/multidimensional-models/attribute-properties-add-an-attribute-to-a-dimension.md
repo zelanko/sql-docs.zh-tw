@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - adding attributes
@@ -17,12 +16,12 @@ ms.assetid: 25826ba1-2b38-4b34-bd3a-7eba116093ae
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c45184e5be13193dc8b77924bc05debdc1911361
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 70817c567b77af2bfdb7d715683ae6081fda442b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62701923"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077424"
 ---
 # <a name="add-an--attribute-to-a-dimension"></a>將屬性加入維度中
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以手動或自動將屬性加入至維度中。  

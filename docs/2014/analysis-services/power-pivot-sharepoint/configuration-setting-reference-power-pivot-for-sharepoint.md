@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a3ee6babe5048398f62cd335e0a121f32f4734ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 45ef593e13643ac38184f8b88cbe4cdf38f0126c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743364"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071886"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>組態設定參考 (PowerPivot for SharePoint)
   本主題提供 SharePoint 伺服器陣列中 PowerPivot 服務應用程式所使用的組態設定參考文件。 如果您使用 PowerShell 指令碼來設定伺服器，或者，如果想查閱特定設定的資訊，本主題中的資訊提供詳細的說明。  

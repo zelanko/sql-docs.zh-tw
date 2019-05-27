@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - instances of Analysis Services, connections
@@ -13,12 +12,12 @@ ms.assetid: 73ee8171-3379-4384-bfc8-071b3eebbc8f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c169795ceb4c16d7928a9cc55b9f9bc9b9917dda
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 654d659900d01ae9d5caf5188b9146510de483ec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730135"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080123"
 ---
 # <a name="connect-to-analysis-services"></a>連接到 Analysis Services
   請使用本節中的資訊，來了解連接字串屬性，用於連接的用戶端程式庫，Analysis Services 支援的驗證方法，以及如何設定或清除連接再讓伺服器離線。  

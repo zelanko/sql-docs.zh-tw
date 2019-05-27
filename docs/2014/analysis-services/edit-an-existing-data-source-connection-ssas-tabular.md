@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.selexistconn.f1
@@ -13,12 +12,12 @@ ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a177971e13a100044ccc40de44b93dbf6816478
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ffc45b255ef609d486f19cf18254ad9ed2937433
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731567"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081445"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>編輯現有的資料來源連接 (SSAS 表格式)
   本主題描述如何編輯表格式模型中現有資料來源連接的屬性。  

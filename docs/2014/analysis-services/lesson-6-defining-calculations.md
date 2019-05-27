@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7437296543aa762ce51f5a31592a724cd0004419
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0d8312019c5deeebb93185609433ae7e4925e3da
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728474"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078384"
 ---
 # <a name="lesson-6-defining-calculations"></a>第 6 課：定義計算
   在這一課中，您要學習定義計算，它們是多維度運算式 (MDX) 運算式或指令碼。 計算可讓您定義導出成員、命名集，以及執行其他指令碼命令，以便擴充 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube 的功能。 例如，您可以執行指令碼命令，先定義 Subcube，然後再將計算指派給 Subcube 中的資料格。  

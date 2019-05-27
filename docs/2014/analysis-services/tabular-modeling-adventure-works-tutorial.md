@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2693bd51da682e9af0133c8400f2cfeacd2737ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: af4d5dfa6d59338fb9640143b387b78421375e05
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795511"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067795"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>表格式模型化 (Adventure Works 教學課程)
   本教學課程提供如何使用 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 建立 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Analysis Services 表格式模型的課程。  
