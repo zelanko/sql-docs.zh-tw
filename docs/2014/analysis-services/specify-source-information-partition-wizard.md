@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.specifydsvandfacttables.f1
@@ -13,12 +12,12 @@ ms.assetid: b6c13587-c690-45d9-af90-b3d652afc55b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ef93edfe6e78dd86963c7e810d33ec413194746a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aca14c9462d847d91ae2b51dfdf179650ee06732
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746122"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068165"
 ---
 # <a name="specify-source-information-partition-wizard"></a>指定來源資訊 (資料分割精靈)
   使用 [指定來源資訊] 頁面，即可選取要在其中建立資料分割 (以及該資料分割的資料來源檢視和篩選資料表) 的量值群組。  
@@ -26,7 +25,7 @@ ms.locfileid: "62746122"
 > [!CAUTION]  
 >  如果您在另一個資料分割所用的 [可用的資料表] 中指定資料表，就必須在 [限制資料列] 頁面中提供查詢，或承擔 Cube 中有重複資料的風險。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **量值群組**  
  選取此分割區的量值群組。  
   

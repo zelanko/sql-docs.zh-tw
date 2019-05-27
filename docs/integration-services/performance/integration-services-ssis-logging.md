@@ -30,14 +30,18 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6ce4c2955896be6fc90063c220d2a33bd78901ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eca7e157593ff4ea9d40528b592f71227cc8cb0d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277506"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719587"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 記錄
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括可用於在封裝、容器和工作中實作記錄的記錄提供者。 使用記錄，可以擷取有關封裝的執行階段資訊，藉此幫助您在每次執行封裝時對其進行稽核和疑難排解。 例如，記錄可以擷取執行封裝之操作員的名稱，以及封裝開始和結束的時間。  
   
  您可以設定在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上的封裝執行期間發生的記錄範圍。 如需詳細資訊，請參閱 [在 SSIS 伺服器上啟用封裝執行的記錄功能](#server_logging)。  
@@ -102,7 +106,7 @@ ms.locfileid: "58277506"
 |運算子|啟動封裝之使用者的識別。|  
 |SourceName|發生記錄事件之容器或工作的名稱。|  
 |SourceID|封裝的唯一識別碼；「For 迴圈」、「Foreach 迴圈」或「時序」容器；或者發生記錄事件的工作。|  
-|ExecutionID|封裝執行執行個體的 GUID。<br /><br /> 注意：執行單一封裝可能會建立記錄項目，其中包含不同的 ExecutionID 元素值。 例如，當您在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中執行封裝時，驗證階段可能會建立記錄項目，其中包含了對應到 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 ExecutionID 元素。 但是，執行階段可能會建立記錄項目，其中包含了對應到 dtshost.exe 的 ExecutionID 元素。 在另一個範例中，當您執行包含「執行封裝」工作的封裝時，每一個工作都會執行子封裝。 這些子封裝可能會建立記錄項目，其中包含了與父封裝建立之記錄項目不同的 ExecutionID 元素。|  
+|ExecutionID|封裝執行執行個體的 GUID。<br /><br /> 注意:執行單一套件可能會建立記錄項目，其中包含 ExecutionID 項目的不同值。 例如，當您在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中執行封裝時，驗證階段可能會建立記錄項目，其中包含了對應到 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 ExecutionID 元素。 但是，執行階段可能會建立記錄項目，其中包含了對應到 dtshost.exe 的 ExecutionID 元素。 在另一個範例中，當您執行包含「執行封裝」工作的封裝時，每一個工作都會執行子封裝。 這些子封裝可能會建立記錄項目，其中包含了與父封裝建立之記錄項目不同的 ExecutionID 元素。|  
 |MessageText|與記錄項目相關聯的訊息。|  
 |DataBytes|記錄項目特定的位元組陣列。 此欄位的意義會因記錄項目的不同而不同。|  
   
@@ -134,7 +138,7 @@ ms.locfileid: "58277506"
 |**OnVariableValueChanged**|在變數的值變更時寫入記錄項目。|  
 |**OnWarning**|發生警告時寫入記錄項目。|  
 |**PipelineComponentTime**|針對每個資料流程元件，寫入每個驗證和執行階段的記錄項目。 記錄項目會指定每個階段的處理時間。|  
-|**Diagnostic**<br /><br /> **DiagnosticEx**|寫入提供診斷資訊的記錄項目。<br /><br /> 例如，您可以在每次呼叫外部資料提供者前後記錄訊息。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。<br /><br /> 當您想要在有錯誤的資料流程資料行中尋找資料行名稱時，請記錄 **DiagnosticEx** 事件。 此事件會將資料流程歷程對應寫入記錄檔。 您接著可以使用錯誤輸出所擷取的資料行識別碼，在此歷程對應中查詢資料行名稱。 如需詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> 請注意， **DiagnosticEx** 事件不會在其 XML 輸出中保留空白，以縮減記錄檔的大小。 若要改善可讀性，可將記錄檔複製到 XML 編輯器 (例如，在 Visual Studio 中)，該編輯器需支援 XML 格式設定和語法反白顯示。<br /><br /> 注意：如果使用 SQL Server 記錄提供者來記錄 **DiagnosticEx** 事件，輸出可能被截斷。 SQL Server 記錄提供者的 [訊息] 欄位類型是 nvarchar(2048)。 若要避免發生截斷，記錄 **DiagnosticEx** 事件時請使用不同的記錄提供者。|  
+|**Diagnostic**<br /><br /> **DiagnosticEx**|寫入提供診斷資訊的記錄項目。<br /><br /> 例如，您可以在每次呼叫外部資料提供者前後記錄訊息。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。<br /><br /> 當您想要在有錯誤的資料流程資料行中尋找資料行名稱時，請記錄 **DiagnosticEx** 事件。 此事件會將資料流程歷程對應寫入記錄檔。 您接著可以使用錯誤輸出所擷取的資料行識別碼，在此歷程對應中查詢資料行名稱。 如需詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> 請注意， **DiagnosticEx** 事件不會在其 XML 輸出中保留空白，以縮減記錄檔的大小。 若要改善可讀性，可將記錄檔複製到 XML 編輯器 (例如，在 Visual Studio 中)，該編輯器需支援 XML 格式設定和語法反白顯示。<br /><br /> 注意:如果使用 SQL Server 記錄提供者來記錄 **DiagnosticEx** 事件，輸出可能被截斷。 SQL Server 記錄提供者的 [訊息] 欄位類型是 nvarchar(2048)。 若要避免發生截斷，記錄 **DiagnosticEx** 事件時請使用不同的記錄提供者。|  
   
  封裝及許多工作都有可以啟用記錄功能的自訂記錄項目。 例如，[傳送郵件] 工作會提供 **SendMailTaskBegin** 自訂記錄項目，其會在 [傳送郵件] 工作開始執行時，但在工作傳送電子郵件訊息之前，記錄資訊。 如需詳細資訊，請參閱 [自訂訊息以進行記錄](#custom_messages)。  
   
@@ -223,7 +227,7 @@ ms.locfileid: "58277506"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在 **[SSIS]** 功能表上，按一下 **[記錄]**。  
+2.  在 **[SSIS]** 功能表上，按一下 **[記錄]** 。  
   
 3.  在 [提供者類型] 清單中選取記錄提供者，然後按一下 [加入]。  
   
@@ -357,7 +361,7 @@ ms.locfileid: "58277506"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在 **[SSIS]** 功能表上，按一下 **[記錄]**。  
+2.  在 **[SSIS]** 功能表上，按一下 **[記錄]** 。  
   
 3.  展開封裝樹狀檢視，並選取要設定的容器。  
   
@@ -528,7 +532,7 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
 |記錄項目|Description|  
 |---------------|-----------------|  
 |**ExecuteDTS80PackageTaskBegin**|指出工作已經開始執行 DTS 2000 封裝。|  
-|**ExecuteDTS80PackageTaskEnd**|指出工作已經完成。<br /><br /> 注意：DTS 2000 封裝可能會在工作結束之後繼續執行。|  
+|**ExecuteDTS80PackageTaskEnd**|指出工作已經完成。<br /><br /> 注意:DTS 2000 套件可能會在工作結束後繼續執行。|  
 |**ExecuteDTS80PackageTaskTaskInfo**|提供有關工作的描述性資訊。|  
 |**ExecuteDTS80PackageTaskTaskResult**|報告工作執行之 DTS 2000 封裝的執行結果。|  
   

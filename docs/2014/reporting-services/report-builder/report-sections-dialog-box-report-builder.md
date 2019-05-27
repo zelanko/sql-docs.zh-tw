@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10009"
@@ -13,12 +12,12 @@ ms.assetid: 56407152-a962-49dd-a080-aef11bb6f829
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a24b4a4dd0ffe0c4b4ba988460e10f6bf832766e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 295e5f0ab4747cfb06b86525a1649a5fa7a39068
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155559"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107666"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>報表區段對話方塊 (報表產生器)
   當您開啟報表時，報表產生器會驗證此報表只包含一個報表定義語言 (RDL) **\<Section>** 項目。 不支援開啟具有多個 **\<Section>** 項目的報表。  

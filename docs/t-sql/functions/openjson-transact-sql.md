@@ -18,15 +18,17 @@ ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: a9088b3502a010ce6b46f29516eefee5aa8934d1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 53739518c40221b752d63016faf369b9e3e71587
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012039"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576313"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 **OPENJSON** 是剖析 JSON 文字並將來自 JSON 輸入的物件和屬性以資料列和資料行傳回的資料表值函式。 換句話說，**OPENJSON** 提供了 JSON 文件的資料列集檢視。 您可以明確指定資料列集中的資料行，以及用來填入資料行的 JSON 屬性路徑。 因為 **OPENJSON** 會傳回一組資料列，所以您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 `FROM` 子句中使用 **OPENJSON**，其與您在其他資料表、檢視或資料表值函式中的用法相同。  
   
@@ -38,14 +40,14 @@ ms.locfileid: "56012039"
 > 您可以在 `sys.databases` 檢視或資料庫屬性中查看相容性層級。 您可以使用下列命令變更資料庫的相容性層級：  
 > 
 > `ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 130`
->   
+>
 > 即使是新的 Azure SQL Database，其預設的相容性層級也可能會是 120。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```
 OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 
 <with_clause> ::= WITH ( { colName type [ column_path ] [ AS JSON ] } [ ,...n ] )
@@ -65,8 +67,10 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 
 *with_clause* 包含資料行的清單，其中包含 **OPENJSON** 傳回每個資料行時的類型。 根據預設，**OPENJSON** 會比對 *jsonExpression* 中的索引鍵與 *with_clause* 中的資料行名稱 (在此案例中，相符的索引鍵表示其區分大小寫)。 若資料行名稱不符合索引鍵名稱，您可以選擇性的提供 *column_path*，其為參考 *jsonExpression* 中索引鍵的 [JSON 路徑運算式](../../relational-databases/json/json-path-expressions-sql-server.md)。 
 
-## <a name="arguments"></a>引數  
-### <a name="jsonexpression"></a>*jsonExpression*  
+## <a name="arguments"></a>引數
+
+### <a name="jsonexpression"></a>*jsonExpression*
+
 為包含 JSON 文字的 Unicode 字元運算式。  
   
 OPENJSON 會逐一查看陣列中的項目或 JSON 運算式中物件的屬性，並為每個項目或屬性傳回一個資料列。 下列範例會傳回以 *jsonExpression* 提供之每個物件的屬性：  
@@ -86,7 +90,7 @@ SELECT *
 FROM OPENJSON(@json)
 ```  
   
-**結果**  
+**結果**
   
 |索引鍵|value|型別|  
 |---------|-----------|----------|  
@@ -98,7 +102,8 @@ FROM OPENJSON(@json)
 |ArrayValue|["a","r","r","a","y"]|4|  
 |ObjectValue|{"obj":"ect"}|5|  
 
-### <a name="path"></a>*path*  
+### <a name="path"></a>*path*
+
 為選擇性的 JSON 路徑運算式，會參考 *jsonExpression* 中的物件或陣列。 **OPENJSON** 會在 JSON 文字中指定的位置搜尋，並只剖析參考的片段。 如需詳細資訊，請參閱 [JSON 路徑運算式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)。
 
 在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 及 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中，您可以將變數作為 *path* 的值提供。
@@ -127,12 +132,13 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 |2|de-AT|  
 |3|es-AR|  
 |4|sr-Cyrl|  
- 
+
 當 **OPENJSON** 剖析 JSON 陣列時，函式會將 JSON 文字中項目的索引作為索引鍵傳回。
 
 用來比對路徑步驟與 JSON 運算式屬性的比較會區分大小寫且為非識別定序 (即 BIN2 比較)。 
 
 ### <a name="withclause"></a>*with_clause*
+
 明確定義 **OPENJSON** 函式要傳回的輸出結構描述。 選擇性的 *with_clause* 可包含下列項目：
 
 *colName* 為輸出資料行的名稱。  
@@ -157,9 +163,9 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 *AS JSON*  
 在資料行定義中使用 **AS JSON** 選項來指定參考的屬性包含內部 JSON 物件或陣列。 若您指定 **AS JSON** 選項，則資料行的類型必須為 NVARCHAR(MAX)。
 
--   若您沒有為資料行指定 **AS JSON**，則函式會從指定路徑上的指定 JSON 屬性傳回純量值 (例如：int、string、true、false)。 若路徑代表物件或陣列，且在指定路徑中找不到屬性，則函式會傳回 null (lax 模式) 或錯誤 (strict 模式)。 此行為與 **JSON_VALUE** 函式的行為相似。  
+- 若您沒有為資料行指定 **AS JSON**，則函式會從指定路徑上的指定 JSON 屬性傳回純量值 (例如：int、string、true、false)。 若路徑代表物件或陣列，且在指定路徑中找不到屬性，則函式會傳回 null (lax 模式) 或錯誤 (strict 模式)。 此行為與 **JSON_VALUE** 函式的行為相似。  
   
--   若您為資料行指定 **AS JSON**，函式會從指定路徑上的指定 JSON 屬性傳回 JSON 片段。 若路徑代表純量值，且在指定路徑中找不到屬性，則函式會傳回 null (lax 模式) 或錯誤 (strict 模式)。 此行為與 **JSON_QUERY** 函式的行為相似。  
+- 若您為資料行指定 **AS JSON**，函式會從指定路徑上的指定 JSON 屬性傳回 JSON 片段。 若路徑代表純量值，且在指定路徑中找不到屬性，則函式會傳回 null (lax 模式) 或錯誤 (strict 模式)。 此行為與 **JSON_QUERY** 函式的行為相似。  
   
 > [!NOTE]  
 > 若您想要從 JSON 屬性傳回巢狀 JSON 片段，您必須提供 **AS_JSON** 旗標。 若沒有此選項，且找不到屬性，則 OPENJSON 會傳回 NULL 值，而非參考的 JSON 物件或陣列，或是傳回執行階段錯誤 (strict 模式下)。  
@@ -203,15 +209,14 @@ WITH (
  )
 ```  
   
-**結果**  
+**結果**
   
 |Number|date|客戶|Quantity|單|  
 |------------|----------|--------------|--------------|-----------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|{"Number":"SO43661","Date":"2011-06-01T00:00:00"}|  
   
-
-## <a name="return-value"></a>傳回值  
+## <a name="return-value"></a>傳回值
 OPENJSON 函式傳回的資料行取決於 WITH 選項。  
   
 1. 當您使用預設結構描述呼叫 OPENJSON 時 (即您沒有在 WITH 子句中指定明確的結構描述時)，函式會傳回具有下列資料行的資料表：  
@@ -236,8 +241,8 @@ OPENJSON 函式傳回的資料行取決於 WITH 選項。
 
 **OPENJSON** 的第二個引數或 *with_clause* 中的 *json_path* 開頭可為 **lax** 或 **strict** 關鍵字。
 
--   在 **lax** 模式中，**OPENJSON** 不會在指定路徑上找不到物件或值時引發錯誤。 若找不到路徑，**OPENJSON** 會傳回空的結果集或 NULL 值。
--   在 **strict** 模式中，**OPENJSON** 會在找不到路徑時傳回錯誤。
+- 在 **lax** 模式中，**OPENJSON** 不會在指定路徑上找不到物件或值時引發錯誤。 若找不到路徑，**OPENJSON** 會傳回空的結果集或 NULL 值。
+- 在 **strict** 模式中，**OPENJSON** 會在找不到路徑時傳回錯誤。
 
 此頁面上的一些範例會明確指定路徑模式 (lax 或 strict)。 路徑模式為選擇性。 若您沒有明確指定路徑模式，則預設值為 lax 模式。 如需路徑模式與路徑運算式的詳細資訊，請參閱 [JSON 路徑運算式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)。    
 
@@ -257,7 +262,8 @@ OPENJSON 函式傳回的資料行取決於 WITH 選項。
 
 ## <a name="examples"></a>範例  
   
-### <a name="example-1---convert-a-json-array-to-a-temporary-table"></a>範例 1 - 將 JSON 陣列轉換成暫存資料表  
+### <a name="example-1---convert-a-json-array-to-a-temporary-table"></a>範例 1 - 將 JSON 陣列轉換成暫存資料表
+
 下列範例以一個數字 JSON 陣列提供識別碼清單。 查詢會將 JSON 陣列轉換成識別碼資料表，並使用指定的識別碼篩選所有產品。  
   
 ```sql  
@@ -277,7 +283,8 @@ FROM products
 WHERE product.productTypeID IN (1,2,3,4)
 ```  
   
-### <a name="example-2---merge-properties-from-two-json-objects"></a>範例 2 - 合併來自兩個 JSON 物件的屬性  
+### <a name="example-2---merge-properties-from-two-json-objects"></a>範例 2 - 合併來自兩個 JSON 物件的屬性
+
 下列範例會選取兩個 JSON 物件的集合聯集。 兩個物件具有重複的 *name*屬性。 範例使用索引鍵值來從結果中排除重複的資料列。  
   
 ```sql  
@@ -295,7 +302,8 @@ FROM OPENJSON(@json2)
 WHERE [key] NOT IN (SELECT [key] FROM OPENJSON(@json1))
 ```  
   
-### <a name="example-3---join-rows-with-json-data-stored-in-table-cells-using-cross-apply"></a>範例 3 - 使用 CROSS APPLY 來使用儲存在表格儲存格中的 JSON 資料聯結資料列  
+### <a name="example-3---join-rows-with-json-data-stored-in-table-cells-using-cross-apply"></a>範例 3 - 使用 CROSS APPLY 來使用儲存在表格儲存格中的 JSON 資料聯結資料列
+
 在下列範例中，`SalesOrderHeader` 資料表有一個 `SalesReason` 文字資料行，其中包含以 JSON 格式儲存的 `SalesOrderReasons` 陣列。 `SalesOrderReasons` 物件包含如 *Quality* 和 *Manufacturer* 等屬性。 範例會建立將每個銷售訂單聯結到相關銷售原因的報表。 OPENJSON 運算子會展開銷售原因的 JSON 陣列，彷彿原因是儲存在個別的子資料表中一樣。 CROSS APPLY 運算子會聯結每個銷售訂單資料列與 OPENJSON 資料表值函式所傳回的資料列。  
   
 ```sql  
@@ -317,7 +325,8 @@ FROM Sales.SalesOrderHeader
   
 在此範例中，`$` 路徑會參考陣列中的每個項目。 若您想要明確轉換傳回的值，您可以使用這種類型的查詢。  
   
-### <a name="example-4---combine-relational-rows-and-json-elements-with-cross-apply"></a>範例 4 - 使用 CROSS APPLY 合併關聯式資料列和 JSON 項目  
+### <a name="example-4---combine-relational-rows-and-json-elements-with-cross-apply"></a>範例 4 - 使用 CROSS APPLY 合併關聯式資料列和 JSON 項目
+
 下列查詢會將關聯式資料列和 JSON 項目合併為在下列表格中顯示的結果。  
   
 ```sql  
@@ -329,14 +338,15 @@ CROSS APPLY OPENJSON(store.jsonCol, 'lax $.location')
      AS location
 ```  
   
-**結果**  
+**結果**
   
 |title|街道|postcode|lon|lat|  
 |-----------|------------|--------------|---------|---------|  
 |Whole Food Markets|17991 Redmond Way|WA  98052|47.666124|-122.10155|  
 |Sears|148th Ave NE|WA  98052|47.63024|-122.141246,17|  
   
-### <a name="example-5---import-json-data-into-sql-server"></a>範例 5 - 將 JSON 資料匯入 SQL Server  
+### <a name="example-5---import-json-data-into-sql-server"></a>範例 5 - 將 JSON 資料匯入 SQL Server
+
 以下範例會將整個 JSON 物件載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。  
   
 ```sql  
@@ -353,16 +363,16 @@ DECLARE @json NVARCHAR(max)  = N'{
   INSERT INTO Person  
   SELECT *   
   FROM OPENJSON(@json)  
-  WITH (id int,  
+  WITH id int,  
         firstName nvarchar(50), lastName nvarchar(50),   
         isAlive bit, age int,  
         dateOfBirth datetime2, spouse nvarchar(50))
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
+
  [JSON 路徑運算式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [使用 OPENJSON 將 JSON 資料轉換成資料列和資料行 &#40;SQL Server&#41;](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)   
  [搭配使用預設結構描述與 OPENJSON &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-the-default-schema-sql-server.md)   
  [搭配使用明確結構描述與 OPENJSON &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)  
-  
   

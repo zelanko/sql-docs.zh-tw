@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 34b1e95a-a80e-4aca-9201-abde47f2ca74
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 72feb645258f7e1521f3f0380ca9de42b85a1192
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e54caf8ec3e99fe4076ae50cb0b8015c8330ddb0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62807337"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065077"
 ---
 # <a name="create-an-extended-events-session"></a>建立擴充事件工作階段
   您可以使用查詢編輯器來建立擴充事件工作階段，也可以在物件總管中建立工作階段。 在 [物件總管] 中，擴充的事件會提供兩個使用者介面，可用來建立、 修改及檢視事件工作階段資料-一個精靈，引導您完成事件工作階段的建立程序，並提供更進階的組態選項的新工作階段 UI。 您可以建立擴充事件工作階段來診斷 SQL Server 追蹤，以便解決下列問題：  

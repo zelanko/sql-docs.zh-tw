@@ -11,14 +11,18 @@ ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1d4e6174317c2588a0c12b4ef6f1f2d0b1d09e44
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 358f85dfd404aecc712f44aae46dad84cf2713b1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290844"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728448"
 ---
 # <a name="user-roles"></a>使用者角色
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   本節描述 Attunity Oracle Change Data Capture (CDC) 服務的使用者角色。 描述的角色包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色、Windows 角色或 Oracle 資料庫角色。  
   
 ## <a name="windows-user-roles"></a>Windows 使用者角色  

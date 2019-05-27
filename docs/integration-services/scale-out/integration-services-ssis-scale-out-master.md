@@ -11,18 +11,22 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 35a3e6612516750e360e1e223e8e323d068daef1
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 51c2efbde3a87c85722022b9114354e8f57d8c9d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420083"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718552"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services (SSIS) 相應放大主機
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 Scale Out Master 透過 SSISDB 目錄和 Scale Out Master 服務來管理 Scale Out 系統。 
 
-SSISDB 目錄儲存 Scale Out Worker、套件和執行的所有資訊。 它提供介面，以啟用相應放大背景工作以及在相應放大中執行封裝。如需相關資訊，請參閱[Walkthrough:設定 Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md) 和[在 Integration Services 中執行套件](run-packages-in-integration-services-ssis-scale-out.md)。
+SSISDB 目錄儲存 Scale Out Worker、套件和執行的所有資訊。 它提供介面，以啟用相應放大背景工作以及在相應放大中執行封裝。如需詳細資訊，請參閱[逐步解說：設定 Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md) 和[在 Integration Services 中執行套件](run-packages-in-integration-services-ssis-scale-out.md)。
 
 Scale Out Master 服務是一種 Windows 服務，負責與 Scale Out Worker 通訊。 它會透過 HTTPS 傳回 Scale Out Worker 上的套件執行狀態，並在 SSISDB 上處理資料。 
 

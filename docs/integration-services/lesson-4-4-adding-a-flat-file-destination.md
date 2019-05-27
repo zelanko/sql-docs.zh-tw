@@ -11,14 +11,18 @@ ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 55c040385615c0bd7db750f7eb31a0f2eb7aa73b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c13a761087cb263983a8d99b27514fcb225d93a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273838"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721446"
 ---
 # <a name="lesson-4-4-add-a-flat-file-destination"></a>課程 4-4：新增一般檔案目的地
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 [查閱貨幣索引鍵] 轉換的錯誤輸出會將任何導致查閱失敗的資料列，重新導向到 [指令碼] 轉換作業。 為了提供有關所發生錯誤的詳細資訊，[指令碼] 轉換會執行一個可取得每個錯誤之描述的指令碼。  
   

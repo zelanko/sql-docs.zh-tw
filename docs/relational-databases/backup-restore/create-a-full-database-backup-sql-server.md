@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7f765607b179b9a53a32be356f1b4863c0f35988
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: 4529593459248b6cf0777019147ced855fc1c4fa
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671324"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65801378"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>建立完整資料庫備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "59671324"
   
 -   在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，無法還原較新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本所建立的備份。  
   
--   如需備份概念和工作的概觀及深入探討，請參閱 [備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md) 再繼續進行。  
+-   如需備份概念和工作的概觀及深入探討，請參閱[備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md) 再繼續進行。  
   
 ###  <a name="Recommendations"></a> 建議  
   
@@ -69,7 +69,7 @@ ms.locfileid: "59671324"
   
 2.  展開 [資料庫]，並選取使用者資料庫或展開 [系統資料庫]，然後選取系統資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，指向 **[工作]**，然後按一下 **[備份]**。 會出現 **[備份資料庫]** 對話方塊。  
+3.  以滑鼠右鍵按一下資料庫，指向 **[工作]** ，然後按一下 **[備份]** 。 會出現 **[備份資料庫]** 對話方塊。  
 
   #### <a name="general-page"></a>**一般頁面**
   
@@ -87,7 +87,7 @@ ms.locfileid: "59671324"
   
 9. 在 [目的地] 區段中，使用 [備份至] 下拉式清單選取備份目的地。 按一下 [新增] 新增其他備份物件和/或目的地。
   
-     若要移除備份目的地，請選取目的地，然後按一下 **[移除]**。 若要檢視現有備份目的地的內容，請選取目的地，然後按一下 [內容]。  
+     若要移除備份目的地，請選取目的地，然後按一下 **[移除]** 。 若要檢視現有備份目的地的內容，請選取目的地，然後按一下 [內容]。  
 
   #### <a name="media-options-page"></a>**媒體選項頁面**  
 10. 若要檢視或選取媒體選項，請按一下 **[選取頁面]** 窗格中的 **[媒體選項]** 。   
@@ -103,7 +103,7 @@ ms.locfileid: "59671324"
       > [!IMPORTANT]  
       >  如果您打算使用加密，請不要選取這個選項。 如果您選取這個選項， **[備份選項]** 頁面中的加密選項將會停用。 當附加至現有的備份組時，不支援加密。  
   
-         針對這個選項，按一下 **[附加至現有的備份組]** 或 **[覆寫所有現有的備份組]**。 如需詳細資訊，請參閱 [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)。  
+         針對這個選項，按一下 **[附加至現有的備份組]** 或 **[覆寫所有現有的備份組]** 。 如需詳細資訊，請參閱 [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)。  
   
          另外，也可以選取 **[檢查媒體集名稱及備份組是否逾期]** ，以讓備份作業確認媒體集及備份組逾期的日期和時間。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "59671324"
   
 14. 在 **[可靠性]** 區段中，選擇性核取：  
   
-    -   **[完成後驗證備份]**。  
+    -   **[完成後驗證備份]** 。  
   
     -   **寫入媒體之前執行總和檢查碼**。  如需總和檢查碼的相關資訊，請參閱[在備份和還原期間可能的媒體錯誤 &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。  
     
@@ -139,7 +139,7 @@ ms.locfileid: "59671324"
   
          預設值會在 [伺服器屬性] 對話方塊 ([資料庫設定] 頁面) 的 [預設備份媒體保留 (以天為單位)] 選項中設定。 若要存取，請以滑鼠右鍵按一下物件總管中的伺服器名稱並選取 [屬性]，然後選取 [資料庫設定] 頁面。  
   
-    -   若要讓備份組在特定日期過期，請按一下 **[於]**，然後輸入備份組將過期的日期。  
+    -   若要讓備份組在特定日期過期，請按一下 **[於]** ，然後輸入備份組將過期的日期。  
   
          如需備份到期日的詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。  
   
@@ -256,15 +256,15 @@ ms.locfileid: "59671324"
   
      BACKUP DATABASE *database*  
   
-     TO *backup_device* [ **,**...*n* ]  
+     TO *backup_device* [ **,** ...*n* ]  
   
-     [ WITH *with_options* [ **,**...*o* ] ] ;  
+     [ WITH *with_options* [ **,** ...*o* ] ] ;  
   
     |選項|[描述]|  
     |------------|-----------------|  
     |*database*|為要備份的資料庫。|  
-    |*backup_device* [ **,**...*n* ]|指定一份清單，列出備份作業可使用的 1 到 64 個備份裝置。 您可以指定實體備份裝置，或者指定對應的邏輯備份裝置 (若已經定義)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：<br /><br /> { DISK &#124; TAPE } **=**_physical\_backup\_device\_name_<br /><br /> 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。|  
-    |WITH *with_options* [ **,**...*o* ]|或者，也可以指定一個或多個其他選項 *o*。 如需有關選項基本概念的詳細資訊，請參閱步驟 2。|  
+    |*backup_device* [ **,** ...*n* ]|指定一份清單，列出備份作業可使用的 1 到 64 個備份裝置。 您可以指定實體備份裝置，或者指定對應的邏輯備份裝置 (若已經定義)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：<br /><br /> { DISK &#124; TAPE } **=**_physical\_backup\_device\_name_<br /><br /> 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。|  
+    |WITH *with_options* [ **,** ...*o* ]|或者，也可以指定一個或多個其他選項 *o*。 如需有關選項基本概念的詳細資訊，請參閱步驟 2。|  
   
 2.  選擇性地指定一或多個 WITH 選項。 這裡描述的是一些基本的 WITH 選項。 如需所有 WITH 選項的資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。  
   
@@ -276,10 +276,10 @@ ms.locfileid: "59671324"
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          只有在 SQL Server 2014 或更新的版本中，才能指定要使用的加密演算法以及憑證或非對稱金鑰來維護加密的安全。  
   
-         DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
+         DESCRIPTION **=** { **'** _text_ **'**  |  **@** _text\_variable_ }  
          指定描述備份組的自由形式文字。 這個字串最多可有 255 個字元。  
   
-         NAME **=** { *backup_set_name* | **@**_backup\_set\_name\_var_ }  
+         NAME **=** { *backup_set_name* |  **@** _backup\_set\_name\_var_ }  
          指定備份組的名稱。 名稱最多可有 128 個字元。 如果未指定 NAME，它就是空白。  
   
     -   基本備份組 WITH 選項：  
@@ -288,7 +288,7 @@ ms.locfileid: "59671324"
   
          另外，若要格式化備份媒體，請使用 FORMAT 選項：  
   
-         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@**_media\_name\_variable_ } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ } ]  
+         FORMAT [ **,** MEDIANAME**=** { *media_name* |  **@** _media\_name\_variable_ } ] [ **,** MEDIADESCRIPTION **=** { *text* |  **@** _text\_variable_ } ]  
          當您第一次使用媒體或是想要覆寫所有現有的資料時，請使用 FORMAT 子句。 選擇性地為新的媒體指派媒體名稱和描述。  
   
         > [!IMPORTANT]  

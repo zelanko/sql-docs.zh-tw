@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Secure Sockets Layer (SSL)
@@ -13,12 +12,12 @@ ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 173b8b5de6dd1a370073338ad13fb7eb065680c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7fb33e6ccb5afbdee1bf6c3673a24548d6fe9961
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242932"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102125"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>在原生模式報表伺服器上設定 SSL 連接
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式會使用 HTTP SSL (安全通訊端層) 服務來建立與報表伺服器的加密連接。 如果您在報表伺服器電腦的本機憑證存放區內有安裝憑證 (.cer) 檔案，您可以將此憑證繫結到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 保留項目，以便透過加密通道支援報表伺服器連接。  

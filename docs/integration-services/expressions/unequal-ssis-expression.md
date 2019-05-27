@@ -14,14 +14,18 @@ ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f8f00f51ee6db4b93ba56211755e067c008898c4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: bd00eff761b25182d39d7ac3e7630272429ebe16
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271393"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724843"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (不等於) (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   執行比較來決定兩個資料類型相容的運算式是否不相等。 運算式評估工具會在執行比較之前，自動轉換許多資料類型。  
   
  但是，某些資料類型要求運算式先包含明確轉換，才能成功評估運算式。 如需在資料類型間合法轉換的詳細資訊，請參閱[轉換 &#40;SSIS 運算式&#41;](../../integration-services/expressions/cast-ssis-expression.md)。  

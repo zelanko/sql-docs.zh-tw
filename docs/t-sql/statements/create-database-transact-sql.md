@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d63faad8a29853354e6187d963dc23ccd78b0252
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: dcf9d83589b94846778e65392dd2483593f5d3ad
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222142"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65771475"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -354,10 +354,10 @@ NAME *logical_file_name*
 *logical_file_name*     
 這是在參考檔案時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的邏輯名稱。 *Logical_file_name* 在資料庫中必須是唯一的，且必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 名稱可以是字元或 Unicode 常數，或是一般識別碼或分隔識別碼。
 
-FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** }      
+FILENAME { **'** _os\_file\_name_ **'**  |  **'** _filestream\_path_ **'** }      
 指定作業系統 (實體) 檔案名稱。
 
-**'** *os_file_name* **'**     
+**'** *os_file_name* **'**      
 這是當您建立檔案時作業系統所使用的路徑和檔案名稱。 該檔案必須位於下列其中一個裝置：從中安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本機伺服器、存放區域網路 [SAN] 或 iSCSI 型網路。 執行 CREATE DATABASE 陳述式之前，指定的路徑必須存在。 如需詳細資訊，請參閱＜備註＞一節中的「資料庫檔案和檔案群組」。
 
 當指定檔案的 UNC 路徑時，可以設定 SIZE、MAXSIZE 和 FILEGROWTH 參數。
@@ -366,7 +366,7 @@ FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** }
 
 除非檔案是唯讀次要檔案，或者，資料庫是唯讀的，否則資料檔案不應該放在壓縮的檔案系統中。 記錄檔永遠不應放在壓縮的檔案系統中。
 
-**'** *filestream_path* **'**      
+**'** *filestream_path* **'**       
 如果是 FILESTREAM 檔案群組，FILENAME 會參考儲存 FILESTREAM 資料所在的路徑。 到最後一個資料夾為止的路徑必須存在，而最後一個資料夾則不得存在。 例如，如果您指定 C:\MyFiles\MyFilestreamData 路徑，則在您執行 ALTER DATABASE 之前，C:\MyFiles 必須存在，但是 MyFilestreamData 資料夾不得存在。
 
 檔案群組和檔案 (`<filespec>`) 必須在相同的陳述式中建立。
@@ -439,7 +439,7 @@ DEFAULT
 *database_snapshot_name*    
 這是新資料庫快照集的名稱。 資料庫快照集名稱在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內必須是唯一的，且必須符合識別碼的規則。 *database_snapshot_name* 最多可有 128 個字元。
 
-ON **(** NAME **=**_logical\_file\_name_**,** FILENAME **='**_os\_file\_name_**')** [ **,**... *n* ]    
+ON **(** NAME **=**_logical\_file\_name_ **,** FILENAME **='** _os\_file\_name_ **')** [ **,** ... *n* ]    
 若要建立資料庫快照集，請在來源資料庫中指定檔案清單。 必須個別指定所有資料檔案，快照集才能運作。 不過，記錄檔不能用在資料庫快照集。 資料庫快照集不支援 FILESTREAM 檔案群組。 如果 FILESTREAM 資料檔案包含在 CREATE DATABASE ON 子句中，此陳述式將會失敗，並引發錯誤。
 
 如需 NAME 和 FILENAME 及其值的描述，請參閱對等之 \<filespec> 值的描述。
@@ -1042,7 +1042,7 @@ MAXSIZE
 
 以下規則會套用到 MAXSIZE 和 EDITION 引數：
 
-- 如果指定了 EDITION 但是未指定 MAXSIZE，就會使用版本的預設值。 例如，如果將 EDITION 設定為 Standard，而未指定 MAXSIZE，則 MAXSIZE 會自動設定為 500 MB。
+- 如果指定了 EDITION 但是未指定 MAXSIZE，就會使用版本的預設值。 例如，如果將 EDITION 設為 Standard，而未指定 MAXSIZE，則 MAXSIZE 會自動設定為 250 MB。
 - 如果 MAXSIZE 和 EDITION 皆未指定，則 EDITION 會設定為 Standard (S0) 而 MAXSIZE 則設定為 250 GB。
 
 SERVICE_OBJECTIVE     

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10020"
@@ -13,12 +12,12 @@ ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cbf7814d51fd0f726a60d3b177af18fbeba223d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b174f9ad33ee38c2f47ffc8a684cddd7ea4376bf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62696750"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107356"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>資料集屬性對話方塊、選項 (報表產生器)
   選取 [資料集屬性] 對話方塊上的 [選項] 來變更查詢的資料選項，例如定序選項以及將小計視為詳細資料。 如需定序的詳細資訊，請參閱《 [SQL Server 線上叢書](../../relational-databases/collations/collation-and-unicode-support.md) 》中的 [定序與 Unicode 支援](https://go.microsoft.com/fwlink/?linkid=98335)。  
@@ -29,7 +28,7 @@ ms.locfileid: "62696750"
   
  如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **定序**  
  選取決定排序資料所用之定序順序的地區設定。 **[預設值]** 指出報表伺服器應該在報表執行時，嘗試從資料提供者衍生此值。 如果無法衍生此值，則從電腦的地區設定衍生預設值。  
   

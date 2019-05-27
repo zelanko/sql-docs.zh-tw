@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
@@ -14,12 +13,12 @@ ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b29e5020cbe552fac66f7bb4e621ce0eda6779a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5ba4168f5417260b0857accdb9cf8fb3fa0f3c0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190787"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103341"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 組態檔
   RSReportDesigner.config 檔會儲存有關 [報表設計師] 可用之轉譯和資料處理延伸模組的設定。 資料處理延伸模組資訊儲存在 `Data` 元素中。 轉譯延伸模組資訊儲存在 `Render` 元素中。 `Designer` 元素列舉報表設計師中所使用的查詢產生器。  

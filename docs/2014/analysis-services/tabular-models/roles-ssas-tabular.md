@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d1b59b0e279d016d2fcaee9b0fcae6742c4ff87b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 77114194f36ac24ff34e48b580513a939d8a4467
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756901"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066633"
 ---
 # <a name="roles-ssas-tabular"></a>角色 (SSAS 表格式)
   表格式模型中的角色定義模型的成員權限。 每個角色都包含成員 (依 Windows 使用者名稱或 Windows 群組列出) 和權限 (讀取、處理、系統管理員)。 角色的成員可以依角色權限所定義，對模型執行動作。 以讀取權限定義的角色也可以使用資料列層級篩選，在資料列層級提供額外的安全性。  
