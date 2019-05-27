@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connflatfile.f1
@@ -13,12 +12,12 @@ ms.assetid: a365991e-eded-4cd8-89c0-0daf6d658d15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1b3fa68b63e9ccf1a11712192d675c46ece7a86b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b6eeb17662c0cac290a7a455d0925cd05560e5e0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680305"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087355"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>連接到一般檔案 (SSAS)
   [資料表匯入精靈] 的這個頁面可讓您連接到一般檔案 (.txt)、Tab 分隔的檔案 (.tab) 或逗號分隔的檔案 (.csv)。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  

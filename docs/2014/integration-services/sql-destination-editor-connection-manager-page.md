@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdestadapter.connection.f1
@@ -15,12 +14,12 @@ ms.assetid: 423e1654-54af-47c6-ab6f-98670534557d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 506ed2c0f672d769d5ffb739b1f5109f7a19cf51
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d3bffc98a14c1a8bc672e9f15a4bad8b6f5a7dbe
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766501"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055413"
 ---
 # <a name="sql-destination-editor-connection-manager-page"></a>SQL 目的地編輯器 (連接管理員頁面)
   使用 **[SQL 目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，即可指定資料來源資訊並預覽結果。  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 目的地會將資料載入到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的資料表或檢視。  

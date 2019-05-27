@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - SetSecureConnectionLevel (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,12 +18,12 @@ ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d78cd09c03f6507bdb87cda4c47e8132f2e1f9b6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ede290f794ab61dac62c39bc47b80516385474fa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646364"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097960"
 ---
 # <a name="setsecureconnectionlevel-method-wmi-msreportserverconfigurationsetting"></a>SetSecureConnectionLevel 方法 (WMI MSReportServer_ConfigurationSetting)
   設定報表伺服器的安全連接層級。  

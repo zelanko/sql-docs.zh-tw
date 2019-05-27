@@ -18,16 +18,16 @@ helpviewer_keywords:
 - augmented operators, &=
 - '&= (bitwise AND equals)'
 ms.assetid: f374c885-3fee-434a-93fb-dfe6e0bcd100
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a49fe5eeeab887425d3f8a5f47feb0a166dcc1f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ff077ff7e2b9dff766734b4d6023a97bba9438f
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668066"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981378"
 ---
 # <a name="amp-bitwise-and-assignment-transact-sql"></a>&amp;= (位元 AND 指派) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

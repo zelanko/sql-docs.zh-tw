@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
@@ -20,12 +19,12 @@ ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9cf1670325e0f40ddfb481f186ee3440aa5b9dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62734032"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083773"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft 時間序列演算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列演算法提供最適合用於預測連續值，例如產品銷售狀況經過一段時間的迴歸演算法。 雖然其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法 (如決策樹) 需要含有新資訊的其他資料行當做輸入來預測趨勢，但是時間序列模型則不需要。 時間序列模型可以只根據用於建立此模型的原始資料集來預測趨勢。 當您做出預測並將新的資料自動納入趨勢分析時，也可以將新的資料加入此模型中。  

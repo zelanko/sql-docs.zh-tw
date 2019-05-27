@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -17,12 +16,12 @@ ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 169b7b266ab8230c2cc669353b6e02f66b9f1c65
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3e4dcb323a309125695df6d3c483f8996d36fdfd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62660175"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088445"
 ---
 # <a name="browsing-a-neural-network-model"></a>瀏覽類神經網路模型
   當您使用 [瀏覽] 開啟類神經網路或羅吉斯迴歸模型時，該模型會在類似於 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 類神經網路檢視器的互動式檢視器中顯示。 此檢視器可協助您探索相互關聯，以及取得有關模型和基礎資料之模式的資訊。  

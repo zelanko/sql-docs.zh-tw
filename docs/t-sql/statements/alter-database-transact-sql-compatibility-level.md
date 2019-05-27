@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 相容性層級 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/15/2019
+ms.date: 05/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d535d50bde7c05629d23be85c2c64083dd455965
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: baa6f443215d5d1f221462e1d20d4bf1498ca899
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583371"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626694"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
 
@@ -213,7 +213,7 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 |已導入 SQL 2014 基數估計工具 **CardinalityEstimationModelVersion="120"**|進一步的基數估計 ( CE) 改進與可從查詢計畫中看到的基數估計模型 130。 **CardinalityEstimationModelVersion="130"**|
 |批次模式與資料列模式會隨資料行存放區索引而改變：<br /><ul><li>在具有資料行存放區索引的資料表上執行的排序會以資料列模式執行 <li>視窗型函式彙總會以資料列模式 (例如 `LAG` 或 `LEAD`) 運作 <li>使用多個不同子句在資料行存放區資料表上進行的查詢會以資料列模式運作 <li>在 MAXDOP 1 之下執行，或以資料列模式執行的序列計畫</li></ul>| 批次模式與資料列模式會隨資料行存放區索引而改變：<br /><ul><li>在具有資料行存放區索引的表格上進行的排序現在會以批次模式運作 <li>視窗型彙總現在會以批次模式 (例如`LAG` 或 `LEAD`) 運作 <li>使用多個不同子句在資料行存放區資料表上進行的查詢會以批次模式運作 <li>在 MAXDOP 1 下執行的查詢，或以批次模式執行序列計畫</li></ul>|
 |統計資料可以自動更新。 | 自動更新統計資料的邏輯在大型資料表上會更積極。 在實務上，這應該會減少客戶已經看到在查詢上發生效能問題的案例，其中的問題在於新插入的資料列會受到頻繁查詢，但統計資料卻尚未更新以包含那些值。 |
-|追蹤 2371 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中預設為「關閉」。 | [追蹤 2371](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/) 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中預設為「開啟」。 追蹤旗標 2371 會告知自動統計資料更新程式，在擁有很多資料列的資料表中，以較小但更聰明的資料列子集方式進行取樣。 <br/> <br/> 其中一個改進是在樣本中包含更多最近插入的資料列。 <br/> <br/> 另一個改進是讓查詢在更新統計資料程序執行時執行，而不是封鎖查詢。 |
+|追蹤 2371 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中預設為「關閉」。 | [追蹤 2371](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/) 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中預設為「開啟」。 追蹤旗標 2371 會告知自動統計資料更新程式，在擁有很多資料列的資料表中，以較小但更聰明的資料列子集方式進行取樣。 <br/> <br/> 其中一項改進是在樣本中包含更多最近插入的資料列。 <br/> <br/> 另一項改進是讓查詢在更新統計資料程序執行時執行，而不是封鎖查詢。 |
 |對於層級 120，統計資料會由*單一*執行緒程序進行取樣。|對於層級 130，統計資料則會由*多*執行緒程序進行取樣。 |
 |其限制為 253 個傳入外部索引鍵。| 指定資料表最多可由 10,000 個傳入外部索引鍵或類似參考進行參考。 相關限制，請參閱 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。 |
 |允許使用已被取代的 MD2、MD4、MD5、SHA 和 SHA1 雜湊演算法。|只允許使用 SHA2_256 和 SHA2_512 雜湊演算法。|
@@ -237,9 +237,9 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 |當資料庫內含項目設定為部分時，驗證 `MERGE` 陳述式的 `OUTPUT` 子句中的 `$action` 欄位可能會傳回定序錯誤。|`MERGE` 陳述式的 `$action` 子句所傳回值的定序是資料庫定序，而不是伺服器定序，且不會傳回定序衝突錯誤。|
 |`SELECT INTO` 陳述式永遠都會建立單一執行緒的插入作業。|`SELECT INTO` 陳述式可建立平行插入作業。 當插入大量資料列時，平行作業可以提升效能。|
 
-## <a name="differences-between-lower-compatibility-levels-and-levels-110-and-120"></a>更低相容性層級與層級 110 和 120 之間的差異
+## <a name="differences-between-lower-compatibility-levels-and-levels-100-and-110"></a>較低相容性層級與層級 100 和 110 之間的差異
 
-本章節描述相容性層級 110 所導入的新行為。 這一節也適用於層級 120。
+本章節描述相容性層級 110 所導入的新行為。 本節也適用於 110 以上的相容性層級。
 
 |相容性層級設定為 100 或更低|至少為 110 的相容性層級設定|
 |--------------------------------------------------|--------------------------------------------------|
@@ -295,7 +295,7 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 
 導入之後，關鍵字會維持保留狀態。 例如，相容性層級 90 所導入的保留關鍵字 PIVOT，也會保留在層級 100 和 110 和 120 中。
 
-如果應用程式使用的識別碼是其相容性層級的保留關鍵字，應用程式便會失敗。 若要解決這個問題，請用方括號 (**[]**) 或引號 (**""**) 來括住識別碼；例如，若要將使用識別碼 **EXTERNAL** 的應用程式升級到相容性層級 90，您可將識別碼改成 **[EXTERNAL]** 或 **"EXTERNAL"**。
+如果應用程式使用的識別碼是其相容性層級的保留關鍵字，應用程式便會失敗。 若要解決這個問題，請用方括號 ( **[]** ) 或引號 ( **""** ) 來括住識別碼；例如，若要將使用識別碼 **EXTERNAL** 的應用程式升級到相容性層級 90，您可將識別碼改成 **[EXTERNAL]** 或 **"EXTERNAL"** 。
 
 如需詳細資訊，請參閱[保留關鍵字](../../t-sql/language-elements/reserved-keywords-transact-sql.md)。
 

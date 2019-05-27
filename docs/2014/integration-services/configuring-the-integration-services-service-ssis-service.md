@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
@@ -16,12 +15,12 @@ ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bf81aa02bb85ca9d0941b384d6b9959e53bd7d28
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 600858e3d7b2ea29a30541c559aa764b4085f7cd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834399"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060502"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>設定 Integration Services 服務 (SSIS 服務)
     

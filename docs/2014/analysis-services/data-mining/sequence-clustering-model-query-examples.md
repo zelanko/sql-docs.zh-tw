@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f5776d2a7523f4d56bb48926a8f0bf0929e87f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d871ba87147f24fdd60c9effe5f279d9ea355db1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732881"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082916"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>時序叢集模型查詢範例
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關模型中排序之資訊的詳細資料，或是建立預測查詢來使用模型中的模式，根據所提供的新資料進行預測。 對於時序群集模型，內容查詢通常會提供找到之群集的其他詳細資料，或提供這些群集中的轉換。 您也可以使用查詢來擷取有關模型的中繼資料。  

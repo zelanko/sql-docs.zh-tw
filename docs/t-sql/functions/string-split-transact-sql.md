@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - STRING_SPLIT function
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 1c2fe6751662ece91fac02f026f36f1733f0d612
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: aab93a133a8dcfeaea96ffa1886ccfcb20936f95
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57988794"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947472"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -52,7 +52,7 @@ STRING_SPLIT ( string , separator )
  這是任何字元類型 (例如 **nvarchar**、**varchar**、**nchar** 或 **char**) 的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *separator*  
- 這是任何字元類型 (例如 **nvarchar(1)**、**varchar(1)**、**nchar(1)** 或 **char(1)**) 的單一字元[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，可作為串連子字串的分隔符號。  
+ 這是任何字元類型 (例如 **nvarchar(1)** 、**varchar(1)** 、**nchar(1)** 或 **char(1)** ) 的單一字元[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，可作為串連子字串的分隔符號。  
   
 ## <a name="return-types"></a>傳回類型  
 

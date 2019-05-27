@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e0841c3473baf73033f298cfd3c8402ffc3aa19
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7da373509d875057f4d1ff50884ec446feb6cd2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743341"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090717"
 ---
 # <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>第 8 課： 將資料庫還原至 Windows Azure 儲存體
   在這一課，您將學習如何在本機上建立備份檔案，然後將它還原到 Windows Azure 儲存體。 請注意，您的資料庫可以位於 Windows Azure 的內部部署或虛擬機器中。 進行這一課並不需要完成第 4、5、6 和 7 課。  

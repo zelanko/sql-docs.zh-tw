@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.newdimselection.f1
@@ -13,12 +12,12 @@ ms.assetid: 7241a3b3-bba9-4b4c-99d9-61ec92ab969a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ac4ccf95fb193f029fadc8e7d937bae8b85ffaeb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0362322d63e351ab7547a6bb19511c2c10d1df95
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747170"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069336"
 ---
 # <a name="select-new-dimensions-cube-wizard"></a>選取新維度 (Cube 精靈)
   使用 **[選取新維度]** 頁面，即可選取要建立的新維度。  

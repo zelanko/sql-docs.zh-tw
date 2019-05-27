@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - slice cubes [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 05dce7e1-2fe5-4500-bacf-c1a8a76e1424
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5c7d3208729ec225c25d1616e7a2052245e6ed25
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 74220f2385e27484c5cc511c84be5625290a28db
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731340"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081153"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>篩選採礦結構的來源 Cube
   當您建立多維度模型 (OLAP cube) 中的資料為基礎的採礦結構時，您可以*配量*採礦結構為基礎的 cube。 配量處理可讓您建立資料子集，當做用來定型採礦模型的一種資料篩選。  

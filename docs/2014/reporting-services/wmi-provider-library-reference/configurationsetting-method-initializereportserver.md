@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - InitializeReportServer (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,12 +18,12 @@ ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b4e01f1a0e6ab49939e3c8ad8339402a7d2b8431
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5ea9e6e4e36e62828f3036c3765ba42c202448c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62647101"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098350"
 ---
 # <a name="initializereportserver-method-wmi-msreportserverconfigurationsetting"></a>InitializeReportServer 方法 (WMI MSReportServer_ConfigurationSetting)
   初始化指定的報表服務執行個體。  

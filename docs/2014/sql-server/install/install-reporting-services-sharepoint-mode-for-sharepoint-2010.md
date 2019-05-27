@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 47efa72e-1735-4387-8485-f8994fb08c8c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cc0fe3bef02ebd50558c298ef8d9b3d8565744ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 524ad97d02192a19198891c79c07f875a738fc30
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63298673"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094524"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式
   本主題中的程序會引導您完成 SharePoint 模式之 Reporting Services 報表伺服器的單一伺服器安裝。 這些步驟包含執行 [SQL Server 安裝精靈]，以及使用 SharePoint 2010 管理中心的其他組態工作。 本主題也可以用於現有安裝的個別程序，例如建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 如需新增其他資訊[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]伺服器至現有的陣列，請參閱[加入伺服器陣列中的其他報表伺服器&#40;SSRS 向外延展&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)並[加入其他 Reporting Services Web加入伺服器陣列前端](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)。  

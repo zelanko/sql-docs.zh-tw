@@ -18,15 +18,15 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 890819799317034e4f89b372a0af742afa3422e5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: dfca4f9367a15cf5c418b8d671ae968260323898
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699773"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948500"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Text 和 Image 函式 - TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,10 +63,10 @@ TEXTPTR ( column )
   
 |函數或陳述式|Description|  
 |---------------------------|-----------------|  
-|PATINDEX<b>('</b>_%pattern%_**' ,** _expression_**)**|傳回指定字元字串在 **text** 或 **ntext** 資料行中的字元位置。|  
-|DATALENGTH<b>(</b>_expression_**)**|傳回 **text**、**ntext** 和 **image** 資料行中資料的長度。|  
+|PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|傳回指定字元字串在 **text** 或 **ntext** 資料行中的字元位置。|  
+|DATALENGTH<b>(</b>_expression_ **)**|傳回 **text**、**ntext** 和 **image** 資料行中資料的長度。|  
 |SET TEXTSIZE|傳回 SELECT 陳述式所要傳回的 **text**、**ntext** 或 **image** 資料的限制 (以位元組為單位)。|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_**)**|傳回指定的 *start* 位移和 *length* 所指定的 **varchar** 字串。 長度應該小於 8 KB。|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|傳回指定的 *start* 位移和 *length* 所指定的 **varchar** 字串。 長度應該小於 8 KB。|  
   
 ## <a name="examples"></a>範例  
   

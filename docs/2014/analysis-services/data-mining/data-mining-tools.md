@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70669026a7953ba1c2818ebc35b3d8fa7cb55427
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dd0e6b696e692a9e88edd234d22f41983acbe961
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722880"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084831"
 ---
 # <a name="data-mining-tools"></a>資料採礦工具。
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會提供您可用來建立資料採礦方案的以下工具：  

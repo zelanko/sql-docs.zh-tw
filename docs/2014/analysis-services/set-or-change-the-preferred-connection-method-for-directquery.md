@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f10d5678-d678-4251-8cce-4e30cfe15751
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f5c4e2c19fb768849c3418874b4f1a831fae858c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9737b829a5ccab1ddc0362f2d8ac81285f0f6e1c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746610"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068703"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>設定或變更 DirectQuery 的慣用連接方法
   當您建立要用於 DirectQuery 模式的模型時，必須先將設計環境設定為支援使用 DirectQuery。 若要這樣做，請參閱[啟用 DirectQuery 設計模式&#40;SSAS 表格式&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)。  

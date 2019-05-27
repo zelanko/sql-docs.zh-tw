@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 739723a42580c404d0529a6d84d907cf665f8270
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 16e691ab6c6a6fcff4cb59fe54884fbb1b52268e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731135"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080103"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>用於 Analysis Services 連接的資料提供者
   Analysis Services 會為伺服器和資料存取提供三個資料提供者。 所有連接到 Analysis Services 的應用程式都會使用其中一個提供者來進行存取。 其中兩個提供者 ADOMD.NET 和 Analysis Services 管理物件 (AMO) 為 Managed 資料提供者。 Analysis Services OLE DB 提供者 (MSOLAP DLL) 是原生資料提供者。  

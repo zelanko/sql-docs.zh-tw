@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.partprocessingtransformation.advanced.f1
@@ -15,12 +14,12 @@ ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e3eee8a69013975f7bfe9febcfa85d8143dcef68
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: de7c84a463d15e3260cc64c53ba1f82c6808dd93
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889967"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056780"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>資料分割處理目的地編輯器 (進階頁面)
   使用 **[資料分割處理目的地編輯器]** 對話方塊的 **[進階]** 頁面，來設定錯誤處理。  

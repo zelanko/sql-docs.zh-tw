@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.profiles.f1
@@ -13,12 +12,12 @@ ms.assetid: 44230895-0a42-4032-8d6c-0cdb8a2dbb8c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc1fd3f1b73d8b738f1ad8e38bc2be19e36b6fd1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4f277abea585715f6a3656fffe7672f347233507
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746810"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069099"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>時序叢集的叢集設定檔索引標籤 (採礦模型檢視器)
   [Microsoft 時序叢集檢視器] 中的 [叢集設定檔] 索引標籤提供每個叢集中所包含時序的色彩編碼檢視。  

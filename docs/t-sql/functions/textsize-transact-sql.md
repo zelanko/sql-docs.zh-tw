@@ -19,15 +19,15 @@ helpviewer_keywords:
 - '@@TEXTSIZE function'
 - text size returned [SQL Server]
 ms.assetid: 4308a7b9-8e8f-49e9-8246-8224e32f4953
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e185629b2b63e77c610390dc2233733505cb7ee4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e984427188eb90b751735de25d3b32039747e6b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668396"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948450"
 ---
 # <a name="x40x40textsize-transact-sql"></a>&#x40;&#x40;TEXTSIZE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: bd715d6b-f873-41d4-aa10-57b7098b61cc
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a49db54b71f3b7daf0a7a10cc1b4073f1b651fc5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 377ca16075a86c366fcfa8d9d96bcfa989efec4b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844189"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089909"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>選項 (文字編輯器 - 所有語言 - 定位點頁面)
   使用這個對話方塊可設定在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的全部五個編輯器中按下 Tab 鍵的移動行為。 若要顯示這些選項，請按一下 [工具] 功能表上的 [選項]。 選取 [文字編輯器] 資料夾，展開 [所有語言] 資料夾，然後按一下 [索引標籤]。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - geometry data type [SQL Server], UDTs
@@ -14,12 +13,12 @@ ms.assetid: a167ce3a-50b4-4e77-a884-adb23b586c72
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f93b179da229793c65db452e4f38bb1f08fbfad1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b5e7b5ed9d730eb51e9994a8bd068eefda9715a5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855881"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092937"
 ---
 # <a name="remove-udts-named-after-the-reserved-geometry-and-geography-data-types"></a>移除依據保留之 GEOMETRY 和 GEOGRAPHY 資料類型所命名的 UDT
   Upgrade Advisor 偵測到依據針對 `geometry` 或 `geography` 資料類型保留之詞彙所命名的使用者定義型別 (UDT)。 `geometry` 和 `geography` 資料類型屬於空間資料功能的一部分。  

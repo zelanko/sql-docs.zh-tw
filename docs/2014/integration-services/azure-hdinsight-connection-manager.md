@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 02/28/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.AFPHDICM.F1
@@ -14,12 +13,12 @@ ms.assetid: 850a978d-5dba-45b6-a10e-306aafbc353d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2dea61640bd155e58cef2d7c8261b2ca7733bd4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dfeade50b36e39f9a4bfa354f71a6bca53e03c16
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62836257"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061372"
 ---
 # <a name="azure-hdinsight-connection-manager"></a>Azure HDInsight 連線管理員
 **Azure HDInsight 連線管理員**可讓 SSIS 套件連線到 Azure HDInsight 叢集。

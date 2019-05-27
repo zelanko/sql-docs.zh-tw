@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.patheditor.metadata.f1
@@ -15,17 +14,17 @@ ms.assetid: b30bb9d7-ebc0-4b1a-8d0f-ee006b32e841
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9c58b3bffe2873cd412be0639ae9006252a4443e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d0a1897ded7e3d266d701bd4a587c03c252105bd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828439"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059993"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>資料流程路徑編輯器 (中繼資料頁面)
   使用 [資料流程路徑編輯器] 對話方塊的 [中繼資料] 頁面，即可檢視路徑資料行的中繼資料。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **路徑中繼資料**  
  列出資料行中繼資料。 按一下資料行標題來排序資料行資料。  
   

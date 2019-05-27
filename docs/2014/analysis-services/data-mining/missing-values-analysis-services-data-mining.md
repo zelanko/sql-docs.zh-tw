@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
@@ -18,12 +17,12 @@ ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 11356ea0e7bb5b8388867eab330d0849163b6257
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733348"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083361"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>遺漏值 (Analysis Services - 資料採礦)
   正確地處理  *「遺漏值」* (Missing value) 是有效模型中很重要的一部分。 本節描述何謂遺漏值，以及您在建立資料採礦結構及採礦模型時，可用來處理遺漏值的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 功能。  

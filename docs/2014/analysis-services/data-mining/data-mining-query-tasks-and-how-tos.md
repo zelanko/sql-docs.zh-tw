@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], how-to topics
@@ -13,12 +12,12 @@ ms.assetid: 1bc2a775-6e62-4c66-a53c-201f2ea66295
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cfa2d33d949aad49701e5294329349dc231965db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 24ccf065a393e9534f3f4a3f830f90e3d1d5e5cc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722839"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084952"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>資料採礦查詢工作和使用說明
   建立查詢的功能對於使用資料採礦模型十分重要。 本節提供一些範例連結，這些範例示範如何透過使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中提供的工具針對資料採礦模型建立查詢。 如果您需要有關資料採礦查詢的作用或者可建立之不同查詢類型的詳細資訊，請參閱 [資料採礦查詢](data-mining-queries.md)。  

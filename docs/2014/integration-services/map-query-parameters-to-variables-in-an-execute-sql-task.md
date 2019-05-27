@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Integration Services], parameter mapping
@@ -18,12 +17,12 @@ ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cc38f51ef997ea2100e356573af46c3d29aafd66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890878"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057800"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>在執行 SQL 工作中將查詢參數對應到變數
 

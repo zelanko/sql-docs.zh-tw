@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f8690c252ddb1b91cd939044ee4f0ccc3a6f4a60
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2bf1a8ee0d5dd3dde585a027fd08fd833fb40304
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62703634"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079905"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>以表格模式安裝 Analysis Services
   如果您安裝 Analysis Services 以使用新表格式模型功能，則必須在支援該模型類型的伺服器模式下安裝 Analysis Services。 此伺服器模式為表格式，並會在安裝期間設定。  

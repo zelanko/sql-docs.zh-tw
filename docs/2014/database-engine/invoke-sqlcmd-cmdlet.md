@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], Invoke-Sqlcmd
@@ -16,12 +15,12 @@ ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7a76646d1f80e388737f520d497db4d6697a543
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0079ca11eb6400b2bce524fd909acbaafd112323
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774592"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064711"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd 指令程式
   **Invoke-Sqlcmd** 是一種執行指令碼的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cmdlet，該指令碼包含了 **sqlcmd** 公用程式所支援之語言 ([!INCLUDE[tsql](../includes/tsql-md.md)] 及 XQuery) 與命令的陳述式。  
@@ -64,7 +63,7 @@ Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyI
 ## <a name="path-context-in-invoke-sqlcmd"></a>Invoke-Sqlcmd 中的路徑內容  
  如果您沒有使用 -Database 參數，Invoke-Sqlcmd 的資料庫內容就會由呼叫此指令程式時作用中的路徑所設定。  
   
-|路徑|資料庫內容|  
+|`Path`|資料庫內容|  
 |----------|----------------------|  
 |以磁碟機而非 SQLSERVER: 為開頭|本機電腦上預設執行個體中登入識別碼的預設資料庫。|  
 |SQLSERVER:\SQL|本機電腦上預設執行個體中登入識別碼的預設資料庫。|  

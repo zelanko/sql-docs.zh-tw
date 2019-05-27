@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], column properties
@@ -16,12 +15,12 @@ ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 61573352407d883df91327a1d27f3968ad1d1708
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: daa647673653280bfc4cf52398751aedfd65b9c8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732966"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083055"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>採礦結構和結構資料行的屬性
   您可以使用 [資料採礦設計師] 的 [採礦結構] 索引標籤，來設定或變更採礦結構及其相關聯資料行和巢狀資料表的屬性。 在此索引標籤中設定的屬性會傳播至與結構相關聯的每一個採礦模型。  

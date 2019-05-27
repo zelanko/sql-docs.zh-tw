@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 40b08c40b8b327ad26bb2974627e81000846a1b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e35ee4b59c77c3d1b47db360d11a9b838106c1b4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730320"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080295"
 ---
 # <a name="clear-the-analysis-services-caches"></a>清除 Analysis Services 快取
   Analysis Services 會快取資料以提高查詢效能。 此主題提供有關如何使用 XMLA ClearCache 命令，清除回應 MDX 查詢時所建立之快取的建議。 根據您使用的是表格式或多維度模型，執行 ClearCache 的影響有所不同。  

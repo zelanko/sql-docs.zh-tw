@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToGrid
@@ -13,12 +12,12 @@ ms.assetid: f88a0f5c-e800-473b-ae23-c3943de5ed63
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d8719a91fada156d74003231abea67f2ae55f35c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b67926706674abb116b4f3075089853e6fbb665e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844294"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089305"
 ---
 # <a name="options-query-results-sql-server-results-to-grid-page"></a>選項 (查詢結果-SQL Server-以結果格線頁）
   使用這個頁面即可指定選項，使查詢結果集以方格的格式顯示。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [查詢] 功能表上的 [查詢選項]，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗中按一下滑鼠右鍵，並選取 [查詢選項]。 在 [查詢選項] 對話方塊的左窗格中，於 [結果] 之下，按一下 [方格]。  

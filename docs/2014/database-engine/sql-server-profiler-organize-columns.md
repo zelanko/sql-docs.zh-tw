@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.organize.columns.f1
@@ -13,12 +12,12 @@ ms.assetid: bf5674f4-da5e-43f9-aeb2-76ca37993790
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cf6f979058fd1003440e17fb5c479e136413bcf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f0ad3d1204e8c27d91ecb3b586d56a27d45eeb4e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62773432"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089760"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>SQL Server Profiler - 組織資料行
   使用 **[組織資料行]** 對話方塊來選取在追蹤中所顯示的群組或彙總事件的資料行，讓您易於檢視和分析大型追蹤檔案或資料表。  

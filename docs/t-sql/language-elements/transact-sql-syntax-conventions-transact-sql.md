@@ -25,16 +25,16 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0580ed82ca6ab5d94b1411ba70ce1b0d2f3ff770
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: edc4bd43b27235a35b6c8ed213e2925523015fde
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154713"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981456"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 語法慣例 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "56154713"
 |&#124; (分隔號)|加上括號或大括號來分隔語法項目。 您只可以選擇其中一個項目。|  
 |`[ ]` (方括弧)|選擇性的語法項目。 不要鍵入方括弧。|  
 |{ } (大括號)|必要的語法項目。 不要鍵入大括弧。|  
-|[**,**..._n_]|指出先前項目可以重複 _n_ 次。 以逗號分開各次出現項目。|  
+|[ **,** ..._n_]|指出先前項目可以重複 _n_ 次。 以逗號分開各次出現項目。|  
 |[..._n_]|指出先前項目可以重複 _n_ 次。 以空白分開各次出現項目。|  
 |;|[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結束字元。 雖然在這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中大多數陳述式都不需要使用分號，但在未來的版本中將會需要。|  
 |\<label> ::=|語法區塊的名稱。 針對冗長語法的區段，或可用於陳述式中多個位置的語法單位，請使用這個慣例進行分組與標示。 每個能夠使用語法區塊的位置，都會以括在＞形箭號內的標籤來指示：\<標籤>。<br /><br /> set 是運算式的集合，例如 \<grouping set>。而 list 則是 set 的集合，例如 \<composite element list>。|  

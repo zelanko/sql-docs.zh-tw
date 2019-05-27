@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.AFPADLSCM.F1
@@ -14,12 +13,12 @@ ms.assetid: 7f1323f9-9dc3-4378-9c70-bbc65bfeabfd
 author: yualan
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dc1918bec6dc8f0cfa242341b59fefd477854887
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 01096d84c831a374cb2dd087a4fdf1b4d4d29a5c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62836888"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061441"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 連線管理員
   **Azure Data Lake Store 連線管理員**可讓 SSIS 套件連線到 Azure Data Lake Store 服務透過兩種驗證類型：Azure AD 使用者身分識別與 Azure AD 服務識別。  

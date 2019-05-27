@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], consolidated member attribute permissions
@@ -16,12 +15,12 @@ ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 86b20b7bbe0e9cf95805dd859c3c85bab60b61a9
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 66224262c88176fe0d0ddd1f4291b12213aed928
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65483500"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054104"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>合併的權限 (Master Data Services)
   合併的權限適用於某個實體所有合併成員的屬性值。  

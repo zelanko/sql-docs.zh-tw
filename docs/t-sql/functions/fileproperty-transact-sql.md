@@ -20,15 +20,15 @@ helpviewer_keywords:
 - FILEPROPERTY function
 - file names [SQL Server], FILEPROPERTY
 ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9a94068ab3532e4d35ade3494d11b49ec1b21672
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9811bc6f5571357b4dcbd834de39f74255299135
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824307"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945929"
 ---
 # <a name="fileproperty-transact-sql"></a>FILEPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ FILEPROPERTY ( file_name , property )
   
 ## <a name="arguments"></a>引數  
  *file_name*  
- 這是包含傳回屬性資訊所屬的目前資料庫之相關聯檔案名稱的運算式。 *file_name* 為 **nchar(128)**。  
+ 這是包含傳回屬性資訊所屬的目前資料庫之相關聯檔案名稱的運算式。 *file_name* 為 **nchar(128)** 。  
   
  *property*  
- 這是包含要傳回之檔案屬性名稱的運算式。 *property* 為 **varchar(128)**，而且可以是下列值之一。  
+ 這是包含要傳回之檔案屬性名稱的運算式。 *property* 為 **varchar(128)** ，而且可以是下列值之一。  
   
 |ReplTest1|Description|傳回的值|  
 |-----------|-----------------|--------------------|  

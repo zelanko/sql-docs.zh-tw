@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], processing
@@ -13,12 +12,12 @@ ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 584412e37754a9cf66a783c490931e351c6cf831
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fd2506e835f634937d5bf135ed7eec7cfa259b5f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733022"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083101"
 ---
 # <a name="process-a-mining-model"></a>處理採礦模型
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]資料採礦設計師的 [採礦模型] 索引標籤中，您可以處理與採礦結構相關聯的特定採礦模型，或處理與結構相關聯的所有模型。  

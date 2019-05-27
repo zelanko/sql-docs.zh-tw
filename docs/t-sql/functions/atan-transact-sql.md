@@ -17,16 +17,16 @@ helpviewer_keywords:
 - ATAN function
 - tangent
 ms.assetid: 6d3dd28e-4fa6-40ba-94cf-b33c0ff614ec
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6170fb3ecad233f913ad5e673c5e7cff48e29e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6682080b6514aad2aa0a742326729941552f6e08
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795036"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942934"
 ---
 # <a name="atan-transact-sql"></a>ATAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

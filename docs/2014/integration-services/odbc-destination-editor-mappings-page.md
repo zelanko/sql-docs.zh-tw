@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.columns.f1
@@ -13,12 +12,12 @@ ms.assetid: 8fa05dd4-316c-44ed-8383-e6e9ea1d3994
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d4237a49fe6c49078bf2ee8f1f1558092f9747ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6f5deb525654007248fbc5c97c07e3c368654ad5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890460"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057230"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>ODBC 目的地編輯器 (對應頁面)
   使用 [ODBC 目的地編輯器] 對話方塊的 [對應] 頁面，即可將輸入資料行對應至目的地資料行。  

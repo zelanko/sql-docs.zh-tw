@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - RADIANS function
 ms.assetid: e9f69951-ecda-45d9-8909-dcb716b1b1c0
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a14f440f8f38c2475d83aa6959e535150e0ac2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 105b1aea27bd37efd1394f9d158e7050ea71dfcc
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627056"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943236"
 ---
 # <a name="radians-transact-sql"></a>RADIANS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

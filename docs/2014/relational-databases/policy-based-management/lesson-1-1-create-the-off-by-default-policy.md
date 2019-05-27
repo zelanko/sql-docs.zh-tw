@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 73294cfc5d1a7e4b2693615692604ef991421169
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2fb48665fafc9c79856279c7460918b85334bfb8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63255303"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064299"
 ---
 # <a name="create-the-off-by-default-policy"></a>建立依預設為關閉的原則
   這項工作會建立名為 Mail Off 並且以介面區組態 Facet 為基礎的條件。 然後，它會建立名為 Off By Default 的原則。  

@@ -15,16 +15,16 @@ helpviewer_keywords:
 - summarizing functions
 - aggregate functions [SQL Server]
 ms.assetid: 0c06ae42-eb0a-4d77-9d74-aa1e7f344009
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3195259f2ea4c709b0e01011264dedfc88e538af
-ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
+ms.openlocfilehash: ea34866d4a0a95b9ab3a58e2ddd720f8364f6e45
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875209"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945115"
 ---
 # <a name="aggregate-functions-transact-sql"></a>彙總函式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

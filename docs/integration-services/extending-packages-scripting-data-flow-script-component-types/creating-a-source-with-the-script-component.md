@@ -17,14 +17,18 @@ ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b1f8c6ab40dc3ff5739500b5591bd08018fd6b52
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b636a0af28ad002de6b41a3d4dcdd78e38498e46
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273335"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65801368"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>以指令碼元件建立來源
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   您在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用來源元件，以從資料來源載入資料，進而將其傳遞至下游轉換與目的地。 通常您會透過現有的連接管理員來連接到資料來源。  
   
  如需指令碼元件的概觀，請參閱[使用指令碼元件擴充資料流程](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
@@ -72,7 +76,7 @@ ms.locfileid: "58273335"
 ### <a name="adding-variables"></a>加入變數  
  如果有任何要在指令碼中使用其值的現有變數，則可以在 [指令碼轉換編輯器] 的 [指令碼] 頁面上，將它們新增至 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性欄位中。  
   
- 當您在屬性欄位中輸入多個變數時，請用逗號分隔變數名稱。 您也可以按一下 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性欄位旁邊的省略符號 (**...**) 按鈕，然後在 [選取變數] 對話方塊中選取變數，以輸入多個變數。  
+ 當您在屬性欄位中輸入多個變數時，請用逗號分隔變數名稱。 您也可以按一下 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性欄位旁邊的省略符號 ( **...** ) 按鈕，然後在 [選取變數] 對話方塊中選取變數，以輸入多個變數。  
   
  如需如何利用指令碼元件使用變數的一般資訊，請參閱[在指令碼元件中使用變數](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   
@@ -135,7 +139,7 @@ ms.locfileid: "58273335"
   
 5.  在 [指令碼] 頁面上，按一下 [編輯指令碼]，並輸入以下指令碼。 然後關閉指令碼開發環境以及 [指令碼轉換編輯器]。  
   
-6.  建立和設定目的地元件，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，或是在[使用指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件，它需要 **AddressID** 和 **City** 資料行。 然後將來源元件連接到目的地  (不需要任何轉換，就可以直接將來源連接到目的地)。您可以在 **AdventureWorks** 資料庫中執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，以建立目的地資料表：  
+6.  建立和設定目的地元件，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，或是在[使用指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件，它需要 **AddressID** 和 **City** 資料行。 然後將來源元件連接到目的地  (您不需要進行任何轉換，就可以直接將來源連線到目的地。)您可以在 **AdventureWorks** 資料庫中執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，以建立目的地資料表：  
   
     ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -268,7 +272,7 @@ ms.locfileid: "58273335"
   
 6.  在 [指令碼] 頁面上，按一下 [編輯指令碼]，並輸入以下指令碼。 然後關閉指令碼開發環境以及 [指令碼轉換編輯器]。  
   
-7.  建立和設定目的地元件，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，或是在[使用指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件。 然後將來源元件連接到目的地  (不需要任何轉換，就可以直接將來源連接到目的地)。您可以在 **AdventureWorks** 資料庫中執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，以建立目的地資料表：  
+7.  建立和設定目的地元件，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，或是在[使用指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件。 然後將來源元件連接到目的地  (您不需要進行任何轉換，就可以直接將來源連線到目的地。)您可以在 **AdventureWorks** 資料庫中執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，以建立目的地資料表：  
   
     ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  

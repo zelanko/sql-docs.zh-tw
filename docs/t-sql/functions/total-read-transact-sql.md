@@ -19,15 +19,15 @@ helpviewer_keywords:
 - total read [SQL Server]
 - read activity since last started
 ms.assetid: b505fbe9-9569-4f3d-80b9-b64b5109ac98
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 000a6f432bb123ef4e2cb592acc96857af492452
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7225b0b28ad3cdb4d6bd8290e8b16ad9de19f137
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681946"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949053"
 ---
 # <a name="x40x40totalread-transact-sql"></a>&#x40;&#x40;TOTAL_READ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

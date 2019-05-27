@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f9160b48-3beb-439c-9694-f084e1afa625
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 91d39b174a0febed1aa6fd57140412828adc843b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65b8bb26a72903644b5985d69efc8adb362fe412
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62466158"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088474"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>瀏覽貝式機率分類模型
   當您開啟使用貝氏機率分類模型**瀏覽**，具有四個不同窗格的互動式檢視器中會顯示此模型。 您可以使用此檢視器來探索相互關聯，以及取得有關模型和基礎資料的資訊。  

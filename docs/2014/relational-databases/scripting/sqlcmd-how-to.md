@@ -4,18 +4,17 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 95905e0deea1dfb0d9e001b9e52056b297d314c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eac85390764c260b9823d53666966c1ee35e9e5b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63021358"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063697"
 ---
 # <a name="sqlcmd-how-to-topics"></a>sqlcmd 使用說明主題
 

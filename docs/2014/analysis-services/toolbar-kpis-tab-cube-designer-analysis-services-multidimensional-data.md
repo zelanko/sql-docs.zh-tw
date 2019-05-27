@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f21e1e4a-24c9-422f-a4be-84615a68095e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c4c8938944401ad03e2bcbf1188b21c67bdf7654
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7db4849a71644772f055059d18faa9f964603913
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756504"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066005"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (KPI 索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 [工具列] 窗格，即可執行 [Cube 設計師] 中 [KPI] 索引標籤上的一般動作。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **加入商業智慧**  
  按一下以顯示 **[商業智慧精靈]** ，並將商業智慧功能加入至 Cube。  
   

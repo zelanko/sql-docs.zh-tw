@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：設定 SQL Server Integration Services 相應放大 | Microsoft Docs
+title: 逐步解說：設定 SQL Server Integration Services Scale Out | Microsoft Docs
 description: 本文將引導您完成 SSIS Scale Out 的安裝和設定
 ms.custom: performance
 ms.date: 12/13/2017
@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 4f68e562884073761303b2450956ae4ebaca66ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3eb9f4bbf5a5c20d713b6d2e255900a88137b79c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620566"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718486"
 ---
-# <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>逐步解說︰設定 Integration Services (SSIS) Scale Out
+# <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>逐步解說：設定 Integration Services (SSIS) Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 完成下列工作，以設定 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out。 
 
 > [!TIP]
@@ -73,7 +77,7 @@ ms.locfileid: "47620566"
 
 ### <a name="install-scale-out-master-from-the-command-prompt"></a>從命令提示字元安裝 Scale Out Master
 
-請遵循[從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的指示進行。 執行下列動作，以設定 Scale Out Master 的參數：
+請遵循 [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)中的指示進行。 執行下列動作，以設定 Scale Out Master 的參數：
  
 1.  將 `IS_Master` 新增至參數 `/FEATURES`
 
@@ -128,7 +132,7 @@ ms.locfileid: "47620566"
 
 ### <a name="install-scale-out-worker-from-the-command-prompt"></a>從命令提示字元安裝 Scale Out Worker
 
-請遵循[從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的指示進行。 執行下列動作，以設定 Scale Out Worker 的參數：
+請遵循 [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)中的指示進行。 執行下列動作，以設定 Scale Out Worker 的參數：
 
 1.  將 IS_Worker 新增至 `/FEATURES` 參數。
 

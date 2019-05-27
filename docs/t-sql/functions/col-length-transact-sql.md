@@ -18,15 +18,15 @@ helpviewer_keywords:
 - column properties [SQL Server]
 - column length [SQL Server]
 ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07f040e9a44507c698a5a5066036038a1c103312
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cdcb4ff647328e4c217831a416ca512a4e957f0b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541131"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944029"
 ---
 # <a name="collength-transact-sql"></a>COL_LENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ COL_LENGTH ( 'table' , 'column' )
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示，如果使用者沒有物件的正確權限，則發出中繼資料的內建函式 (例如 COL_LENGTH) 可能會傳回 NULL。 如需詳細資訊，請參閱[中繼資料可見性設定](../../relational-databases/security/metadata-visibility-configuration.md)。
   
 ## <a name="remarks"></a>Remarks  
-對於使用 **max** 規範 (**varchar(max)**) 來宣告的 **varchar** 資料行，COL_LENGTH 會傳回值 -1。
+對於使用 **max** 規範 (**varchar(max)** ) 來宣告的 **varchar** 資料行，COL_LENGTH 會傳回值 -1。
   
 ## <a name="examples"></a>範例  
 此範例顯示 `varchar(40)` 類型之資料行以及 `nvarchar(40)` 類型之資料行的傳回值：

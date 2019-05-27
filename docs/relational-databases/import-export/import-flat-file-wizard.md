@@ -4,21 +4,21 @@ ms.custom: ''
 ms.date: 09/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: douglasl
 ms.technology: data-movement
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.importflatfile.f1
 author: yualan
 ms.author: alayu
+ms.reviewer: maghan
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 773492f038339a561a1f73ff48f5d1a88b72cadc
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.openlocfilehash: 3399262b9ea80c789f81b7b4e745b6c8f32d11f1
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "64946436"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012913"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>將一般檔案匯入 SQL 精靈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

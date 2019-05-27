@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10543"
@@ -13,12 +12,12 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bf1d75ce7f0bb99b84b59eba27934f8bd848ab55
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 5b07fb1c133bbed21fd74936a38b97fa1778e5ad
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953724"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104544"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>報表組件 (報表產生器及 SSRS)
   資料表、矩陣、圖表和影像等報表項目都可以當做 *「報表組件」*(Report Part) 發行。 報表組件是指已經個別發行至報表伺服器，而且可以在其他報表中重複使用的報表項目。 報表組件的副檔名為 .rsc。  

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SCROLL option
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 68d27a88ec604de05f8165f6c251982e53914794
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: e0c93242a047e261ae9d40c7ded9293653f7e287
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586211"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982327"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ FETCH
   
  `@@FETCH_STATUS` 函數會報告最後一個 `FETCH` 陳述式的狀態。 相同的資訊記錄在 sp_describe_cursor 傳回之資料指標的 fetch_status 資料行中。 試圖在 `FETCH` 陳述式傳回的資料上執行任何作業之前，您應該先利用這個狀態資訊來判斷該資料是否有效。 如需詳細資訊，請參閱 [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  `FETCH` 的權限預設會授與任何有效使用者。  
   
 ## <a name="examples"></a>範例  

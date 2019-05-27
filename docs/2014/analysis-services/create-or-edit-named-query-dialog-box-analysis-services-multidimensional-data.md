@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.createnamedquery.f1
@@ -15,12 +14,12 @@ ms.assetid: 8e192ad6-a0b1-4e21-bb3f-087c93e62941
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0cc03192d0deae00b9ace6f70e72ced4883d26b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97f01b0bbf3d1ddc54ea4db2b771723e12d168d7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679766"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086804"
 ---
 # <a name="create-or-edit-named-query-dialog-box-analysis-services---multidimensional-data"></a>建立或編輯具名查詢對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [建立/編輯具名查詢] 對話方塊，即可建立或編輯 [資料來源檢視設計師] 中的具名查詢。 具名查詢可以當成資料表處理，並以此作為其他 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件的基礎。 您可以執行下列動作來顯示 [建立/編輯具名查詢] 對話方塊：  
@@ -41,7 +40,7 @@ ms.locfileid: "62679766"
   
      對於進階使用者，一般查詢產生器檢視提供更簡單、更直接的使用者介面，可以用來建構及測試 SQL 查詢。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  鍵入查詢的名稱。  
   

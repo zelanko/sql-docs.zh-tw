@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configureerroroutput.f1
@@ -13,12 +12,12 @@ ms.assetid: 5f8da390-fab5-44f8-b268-d8fa313ce4b9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91e07bdf70954079e24b39bd345e33b348958ae0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 18318775c63cd7126686154dec2ee1f02733763f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834327"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060640"
 ---
 # <a name="configure-error-output"></a>設定錯誤輸出
   使用 [設定錯誤輸出] 對話方塊，即可為支援錯誤輸出的資料流程轉換設定錯誤處理選項。  

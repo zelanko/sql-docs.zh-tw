@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data mining
@@ -25,12 +24,12 @@ ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4bbc1e991787c9e2d98595ba61d4334dccf35f00
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4217c455433f2fec4ebbe64b77346c54a6d47827
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722971"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085064"
 ---
 # <a name="data-mining-concepts"></a>資料採礦概念
   資料採礦是從大型資料集探索可付諸行動之資訊的過程。 資料採礦使用數學分析衍生存在於資料中的模式和趨勢。 傳統資料瀏覽一般無法探索這些模式，因為這些關聯性太複雜或因為沒有太多資料。  

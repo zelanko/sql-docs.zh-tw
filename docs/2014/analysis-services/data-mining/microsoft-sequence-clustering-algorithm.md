@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc90c76792ae6eaaa21ba3e32bea66e4942c354f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3df71a2facc01abcb3ebdec57aaf243c0b7fda7d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733690"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083825"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 時序叢集演算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]時序群集演算法是時序分析演算法所提供[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 您可以使用此演算法來瀏覽包含事件可透過遵循路徑連結的資料或*序列*。 此演算法會透過分組或群集相同的時序來尋找最常見的時序。 以下是包含可能用於資料採礦之時序的一些資料範例，讓您得以深入了解常見問題或商務案例：  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - nodes [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dffcb63d5f8b89f4d777f7bdb07bc972cf5bff58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f27398948ed2c89578921bf6404244bcf5072652
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722490"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084380"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>在相依性網路中尋找特定節點
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 採礦模型中的相依性網路可包含許多節點，因此難以找到您感興趣的資料。 若要解決此問題，您可以使用資料採礦設計師之 **[相依性網路]** 索引標籤上的 **[尋找節點]** 對話方塊，來搜尋特定節點。  

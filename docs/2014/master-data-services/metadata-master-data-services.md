@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined metadata [Master Data Services], about user-defined metadata
@@ -16,12 +15,12 @@ ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5cb600690743a6340dd1d97bc50463e3ba137ba4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 2bbb98653dbbaad577f9a48d7a778b41d19fbf37
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65479389"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054041"
 ---
 # <a name="metadata-master-data-services"></a>中繼資料 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，使用者定義的中繼資料是用來描述模型物件的資訊。 例如，您可以追蹤特定模型或實體的擁有者，或追蹤提供資料給實體的來源系統。  

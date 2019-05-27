@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Tree Viewer [Analysis Services]
@@ -24,12 +23,12 @@ ms.assetid: 0c96d518-ed20-40b7-8d62-b26ad6244287
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f7b0d8a4c5e3403e326cd88d2a7eafa5726addb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5f7ac483e0883386f620a654d6257a49fa8baf52
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62689417"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085942"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>使用 Microsoft 樹狀檢視器瀏覽模型
    [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 樹狀檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法建立的決策樹。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法是同時支援分類與迴歸的混合式決策樹演算法。 因此，您也可以使用這個檢視器來檢視以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法為基礎的模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法可用於離散和連續屬性的預測模型。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)＞。  

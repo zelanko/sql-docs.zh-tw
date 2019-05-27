@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytask.query.f1
@@ -15,12 +14,12 @@ ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 361c1c06afb8c599e983751ea7d7deef656631e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ec0c3e2187bc0fb97af733021e39b405470fc373
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62899812"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059838"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>資料採礦查詢工作編輯器 (查詢索引標籤)
   使用 [資料採礦查詢工作] 對話方塊的 [查詢] 索引標籤，即可依據採礦模型建立預測查詢。 在此對話方塊中，您也可以將參數和結果集繫結到變數。  

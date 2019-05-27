@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MINIMUM_DEPENDENCY_PROBABILITY parameter
@@ -19,12 +18,12 @@ ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5d69af9ad01e001394836449f97c48b4dae8dab7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d3623e9cd841feb3a82828c12ba32e2e691482a7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62734821"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083903"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Microsoft 貝氏機率分類演算法技術參考
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所提供用於預測模型的分類演算法。 此演算法會計算輸入資料行和可預測資料行之間的條件式機率，並假設資料行是獨立的。 這種獨立性假設產生了貝氏機率分類這個名稱。  

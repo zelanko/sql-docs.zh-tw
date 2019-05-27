@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: fd22d285-0816-43de-ae1d-b7c49147614e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1aaa4dff60c2c4709286791405d5520db0fa67b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 819725e342f6718ec8e84428331bf2ee0e7d5786
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63198895"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092795"
 ---
 # <a name="repair-progress"></a>修復進度
   請使用 **安裝精靈的** [修復進度] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面來監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 修復的狀態。  

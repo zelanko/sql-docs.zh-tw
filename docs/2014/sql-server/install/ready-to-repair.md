@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 65cc22ce-53e9-49dc-8f40-cbf0159c9e54
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a87118acbfa2b4dc38fc8ba50fecc56e8c22b656
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d1dcc44c8d9892bb6dee31b5cebd4be73037cf0b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240186"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093295"
 ---
 # <a name="ready-to-repair"></a>已完成修復準備工作
   [已完成修復準備工作] 頁面會提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式之修復程序的摘要。  

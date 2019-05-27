@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
@@ -13,12 +12,12 @@ ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 05928a02a02680acb3a2a6e32dfdf1409fad8b19
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 95d18bdc96a8215f5050c3b8ecd68ec2b133e28f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63057556"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092670"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Reporting Services 組態管理員 F1 說明主題 (SSRS 原生模式)
   本節提供 Reporting Services 組態管理員的 F1 說明。  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - text-pointer values
 - verifying text pointers
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 840b1ae9924e2b582ee726f917e31a2922d84c18
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1ad4bc199c923c488e968740324c5f4d47766b96
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702566"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948440"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>Text 和 Image 函式 - TEXTVALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,8 +67,8 @@ TEXTVALID ( 'table.column' ,text_ ptr )
   
 |函數或陳述式|Description|  
 |---------------------------|-----------------|  
-|PATINDEX **(**'_%pattern%_'**,** _expression_**)**|傳回指定字元字串在 **text** 和 **ntext** 資料行中的字元位置。|  
-|DATALENGTH **(**_expression_**)**|傳回 **text**、**ntext** 和 **image** 資料行中資料的長度。|  
+|PATINDEX **(** ' _%pattern%_ ' **,** _expression_ **)**|傳回指定字元字串在 **text** 和 **ntext** 資料行中的字元位置。|  
+|DATALENGTH **(** _expression_ **)**|傳回 **text**、**ntext** 和 **image** 資料行中資料的長度。|  
 |SET TEXTSIZE|傳回 SELECT 陳述式所要傳回的 **text**、**ntext** 或 **image** 資料的限制 (以位元組為單位)。|  
   
 ## <a name="examples"></a>範例  

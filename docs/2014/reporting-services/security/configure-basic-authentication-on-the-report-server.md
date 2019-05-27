@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
@@ -14,12 +13,12 @@ ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 34ef8153b717c13b6fc5fdf2147b90339f8640e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 32b46265b5da376bc974b55c48bf54bad88917d8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242772"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102170"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>設定報表伺服器的基本驗證
   根據預設，Reporting Services 會接受可指定交涉式驗證或 NTLM 驗證的要求。 如果您的部署包含了使用基本驗證的用戶端應用程式或瀏覽器，您必須將基本驗證加入支援的類型清單中。 此外，如果您要使用報表產生器，必須啟用對報表產生器檔案的匿名存取。  

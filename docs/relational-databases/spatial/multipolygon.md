@@ -10,16 +10,16 @@ helpviewer_keywords:
 - MultiPolygon geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a40bf0e7f3758ca048f78f59177b7fc80a5e94ca
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: a66491bb68469ecaa8f9cde47f77566e6c31236a
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979284"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936433"
 ---
 # <a name="multipolygon"></a>MultiPolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

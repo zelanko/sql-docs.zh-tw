@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0686e519-67c2-4f9b-8cd2-84a4871499ee
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 27c22caf9c3b6dfebede60cd795496496562c19b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bcb3a1cbcabc66492bbd780be4716ce69f15de37
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730765"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080564"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>從資料摘要匯入 (SSAS 表格式)
   資料摘要是從線上資料來源產生並串流至目的地文件或應用程式的一個或多個 XML 資料流。 您可以使用 [資料表匯入精靈]，將資料從資料摘要匯入模型。  

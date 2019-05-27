@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
@@ -14,12 +13,12 @@ ms.assetid: e5fdbbcb-94ca-4912-aa7c-0d89cebbd308
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 605e9f2635ceef0546f4c8e37f74a04a2d27ece0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b2adc326ef2e0bb593b0532a51a9a677821ae0e2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834482"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060594"
 ---
 # <a name="configure-logging-by-using-a-saved-configuration-file"></a>使用已儲存的組態檔來設定記錄
   此程序描述如何透過載入先前儲存的記錄組態檔，為封裝中的新容器設定記錄。  

@@ -23,16 +23,16 @@ helpviewer_keywords:
 - identification numbers [SQL Server], logins
 - names [SQL Server], logins
 ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5333687cfd9a8e7c59d8a1c695af2e8015ce2a7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80defa93fb82a5a6b451acd00c8336a74a06ba34
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658326"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948195"
 ---
 # <a name="susersname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ SUSER_SNAME ( [ server_user_sid ] )
  *server_user_sid*  
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- 這是選擇性的登入安全性識別碼。 *server_user_sid* 為 **varbinary(85)**。 *server_user_sid* 可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者或群組的安全性識別碼。 如果未指定 *server_user_sid*，就會傳回目前使用者的相關資訊。 如果參數包含 NULL 一詞，就會傳回 NULL。  
+ 這是選擇性的登入安全性識別碼。 *server_user_sid* 為 **varbinary(85)** 。 *server_user_sid* 可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者或群組的安全性識別碼。 如果未指定 *server_user_sid*，就會傳回目前使用者的相關資訊。 如果參數包含 NULL 一詞，就會傳回 NULL。  
   
 ## <a name="return-types"></a>傳回類型  
  **nvarchar(128)**  

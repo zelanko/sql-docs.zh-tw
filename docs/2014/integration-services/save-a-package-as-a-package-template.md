@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - reusing packages
@@ -14,12 +13,12 @@ ms.assetid: efe66cec-3933-4f6e-8d35-fe3d300de66c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79652d50bb4df2bf80ec9f072e8828db9935368f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 76349c0ca91f24a6d8d7942a89eb9683a91b573d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766800"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056335"
 ---
 # <a name="save-a-package-as-a-package-template"></a>將封裝儲存為封裝範本
   本主題描述當您在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中建立新的 Integration Services 封裝時，如何指定及使用自訂封裝做為範本。 根據預設，當您將新封裝加入 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案中時， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會使用可建立空白封裝的封裝範本。 您不能置換這個預設範本，但是可以加入新的範本。  

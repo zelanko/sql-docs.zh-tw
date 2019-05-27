@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - DatabaseLogonType
@@ -19,12 +18,12 @@ ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cfe28e2cf9c47f3eebaddbcaa013ad492d715748
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b58c380b85e412554eb47315dfe356d3bff08d03
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62648980"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097815"
 ---
 # <a name="databaselogontype-property-wmi-msreportserverconfigurationsetting"></a>DatabaseLogonType 屬性 (WMI MSReportServer_ConfigurationSetting)
   指定報表伺服器會使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 服務帳戶、Windows 使用者帳戶或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入來存取報表伺服器資料庫。 唯讀。  

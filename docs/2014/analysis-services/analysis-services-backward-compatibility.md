@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Analysis Services, backward compatibility
@@ -19,12 +18,12 @@ ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 633bc51ed0ce4c25e30c2fd78ee7845c075cd094
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 16c8a1d9023e0bcbb852974f11ebe4b89d36d93b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62635214"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062643"
 ---
 # <a name="analysis-services-backward-compatibility"></a>Analysis Services Backward Compatibility
   本節中的主題描述  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]版本之間的行為變更。  

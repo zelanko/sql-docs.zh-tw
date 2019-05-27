@@ -25,24 +25,24 @@ helpviewer_keywords:
 - match whole word [SQL Server]
 - searches [SQL Server Management Studio], replacing
 ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d84304f1ba307a55273ddd24aa11686cbd9743e1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 869262f20b50e23a8e59f4a318fd70d73c339db9
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642844"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821950"
 ---
 # <a name="search-and-replace"></a>搜尋和取代
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  您可以利用多種不同的方式來尋找和取代文字。 在 **[編輯]** 功能表上， **[尋找和取代]** 提供了四個選項： **[快速尋找]**、 **[快速取代]**、 **[檔案中尋找]** 和 **[檔案中取代]**。 這些選項會開啟各個版本的 **[尋找和取代]** 對話方塊。 您也可以不用對話方塊，而利用累加搜尋鍵盤快速鍵來搜尋。 這些技術可讓您控制尋找和取代的範圍，以及選擇檢閱搜尋相符項目和取代項目的方法。  
+  您可以利用多種不同的方式來尋找和取代文字。 在 [編輯] 功能表上，[尋找和取代] 提供四個選擇：[快速尋找]、[快速取代]、[在檔案中尋找] 或 [在檔案中取代]。 這些選項會開啟各個版本的 **[尋找和取代]** 對話方塊。 您也可以不用對話方塊，而利用累加搜尋鍵盤快速鍵來搜尋。 這些技術可讓您控制尋找和取代的範圍，以及選擇檢閱搜尋相符項目和取代項目的方法。  
   
  當您搜尋和取代文字時，您應該考慮下列各點：  
   
--   **[尋找和取代]** 對話方塊所設定的選項會影響所有搜尋。 這些選項包括 **[大小寫須相符]**、 **[全字拼寫須相符]**、 **[向上搜尋]**、 **[搜尋隱藏文字]**、 **[萬用字元]**、 **[規則運算式]**、 **[查詢所有開啟的文件]** 和 **[查詢目前專案]**。 並非 **[尋找和取代]** 對話方塊的所有版本都提供了所有選項。  
+-   **[尋找和取代]** 對話方塊所設定的選項會影響所有搜尋。 這些選項包括 **[大小寫須相符]** 、 **[全字拼寫須相符]** 、 **[向上搜尋]** 、 **[搜尋隱藏文字]** 、 **[萬用字元]** 、 **[規則運算式]** 、 **[查詢所有開啟的文件]** 和 **[查詢目前專案]** 。 並非 **[尋找和取代]** 對話方塊的所有版本都提供了所有選項。  
   
 -   只有在取代作業之後維持開啟狀態的文件，才能夠使用 **[恢復]** 。  
   

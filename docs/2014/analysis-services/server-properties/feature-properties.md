@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQMSupportEnabled property
@@ -20,12 +19,12 @@ ms.assetid: a34d046a-6562-4d98-b827-37cebc6d77b4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7c9047bc6bae67b005d8ed93e4831557a0dac9b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1cc2d52bd942fe15eeabd72f1c37740637e692d2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746900"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069044"
 ---
 # <a name="feature-properties"></a>功能屬性
   與產品功能有關的功能屬性，大部分是進階屬性，包含控制伺服器執行個體間之連結的屬性。  

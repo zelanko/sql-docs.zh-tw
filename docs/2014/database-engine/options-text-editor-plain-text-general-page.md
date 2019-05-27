@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: e5cac4a24abcca8c6ae17b598ed3eba5ec9c1f4e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fd68ebe406fc7168746c804e585fa7465ee8c527
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774751"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089282"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>選項 (文字編輯器 - 純文字 - 一般頁面)
   使用這個對話方塊可變更文字編輯器的一般編輯行為，這個文字編輯器是用來編輯與特定開發語言沒有關聯的文件。 若要顯示這些設定，請按一下 **[工具]** 功能表上的 **[選項]** ，展開 **[文字編輯器]**，展開 **[純文字]** ，然後按一下 **[一般]**。  

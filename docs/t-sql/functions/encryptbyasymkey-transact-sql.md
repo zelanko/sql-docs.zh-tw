@@ -17,15 +17,15 @@ helpviewer_keywords:
 - encryption [SQL Server], asymmetric keys
 - asymmetric keys [SQL Server], ENCRYPTBYASYMKEY function
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d6b961d0390e7b327f24b70cdd5e780a7c13d895
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 3510c94a80f0ba7cf06817afd62d6d29e1878f1e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079374"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948903"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

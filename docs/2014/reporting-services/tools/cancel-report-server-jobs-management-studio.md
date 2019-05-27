@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.cancelreportserverjobs.f1
@@ -13,12 +12,12 @@ ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e4520e01f26435811c26b3f5c213b4e8b7e00c63
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ab7c4496465de8297f07dd18b3aa2acf26ab305d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63217825"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100495"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>取消報表伺服器作業 (Management Studio)
   您可以使用 [取消報表伺服器作業] 對話方塊來檢視或取消進行中的報表。 這個對話方塊會顯示目前正在報表伺服器上執行的所有作業。 雖然您無法暫停或重新啟動目前正在處理中的作業，但是如果完成作業需要花太長的時間，您就可以取消所有作業或個別作業。  

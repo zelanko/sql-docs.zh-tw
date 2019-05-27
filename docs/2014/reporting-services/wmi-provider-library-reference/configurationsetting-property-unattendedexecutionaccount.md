@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - UnattendedExecutionAccount
@@ -19,12 +18,12 @@ ms.assetid: ab5203ba-c01e-4020-8619-ee290cf9da07
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b8e3cab3ae78b43a5a37432e230c9bef6a8a383c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4f032cd8a9e8d5305f4eef82f815b4f0e328756a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646126"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097431"
 ---
 # <a name="unattendedexecutionaccount-property-wmi-msreportserverconfigurationsetting"></a>UnattendedExecutionAccount 屬性 (WMI MSReportServer_ConfigurationSetting)
   傳回自動執行報表時，報表伺服器模擬的使用者帳戶。 唯讀。  

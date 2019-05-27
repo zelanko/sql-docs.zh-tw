@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
@@ -13,12 +12,12 @@ ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b7ac547ffe8a4e102b4e3c4b0c29c6783e0c4857
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62715235"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085575"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>建立採礦模型內容查詢
   雖然您可以使用 AMO 或 XML/A，以程式設計方式查詢採礦模型內容，但是使用 DMX 來建立查詢是比較簡單的方式。 您也可以針對資料採礦結構描述資料列集建立查詢，方法是建立與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的連接，然後使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]所提供的 DMV 建立查詢。  

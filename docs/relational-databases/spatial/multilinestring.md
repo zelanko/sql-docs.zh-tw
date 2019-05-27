@@ -10,16 +10,16 @@ helpviewer_keywords:
 - MultiLineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04fdc9eb5b22a9c3f88ab635c456e3fa81cf88e4
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: f8df41184356f29e3037f36d519c9957f2f3e5b7
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979528"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936439"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

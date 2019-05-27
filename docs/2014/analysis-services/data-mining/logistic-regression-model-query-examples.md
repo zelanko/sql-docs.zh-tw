@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
@@ -14,12 +13,12 @@ ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 13afa5437c0628092ee5c0d09f1fc61e0298bb29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d156a8f015a45ca257bf4f988cf69d229eafe5f0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722180"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084225"
 ---
 # <a name="logistic-regression-model-query-examples"></a>羅吉斯迴歸模型查詢範例
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，也可以建立預測查詢來使用模型中的模式，透過新的資料進行預測。  

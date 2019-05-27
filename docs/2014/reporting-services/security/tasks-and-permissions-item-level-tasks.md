@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - item-level tasks [Reporting Services]
@@ -13,12 +12,12 @@ ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 62009c07a7b643a3a9d0a202588f64bded967acb
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 878e9a4bff1625042a08ec7e43699fa067dea532
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63460691"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101513"
 ---
 # <a name="item-level-tasks"></a>項目層級工作
   項目層級工作是與報表、資料夾、報表模型、資源或共用資料來源關聯的權限集合。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 也包括套用至整個報表伺服器網站的系統層級工作。 如需詳細資訊，請參閱 [系統層級工作](tasks-and-permissions-system-level-tasks.md)。 如需一般工作和權限的詳細資訊，請參閱 [工作和權限](tasks-and-permissions.md)。  

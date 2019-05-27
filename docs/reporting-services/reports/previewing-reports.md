@@ -1,28 +1,28 @@
 ---
 title: 預覽報表
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 4b7f822e9bc6d3a875f0b0049c68a6d3ee010327
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
-ms.translationtype: HT
+ms.openlocfilehash: 6bd9a273347aa2010cf670ea3a87622e92d69f82
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553000"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935887"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>在 SQL Server Reporting Services (SSRS) 中預覽報表
 
   設計 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表時，在尚未發佈至生產環境之前，您可能會想要先檢視該報表。 您可以利用數種方式進行檢視：在報表設計師中切換到 [預覽] 模式、使用報表設計師中的預覽視窗，以及在測試環境中將報表發行至報表伺服器。  
   
 > [!NOTE]  
-> 預覽報表時，報表的資料會快取至本機電腦上的檔案。 當您再次預覽同一份報表時 (使用相同的查詢、參數和認證)，報表設計師會擷取快取複本，而非重新執行查詢。 資料檔案儲存為 *\<reportname>*.rdl.data 與報表定義檔案相同的目錄中。 您關閉報表設計師時，不會刪除此檔案。  
+> 預覽報表時，報表的資料會快取至本機電腦上的檔案。 當您再次預覽同一份報表時 (使用相同的查詢、參數和認證)，報表設計師會擷取快取複本，而非重新執行查詢。 資料檔案儲存為 *\<reportname>* .rdl.data 與報表定義檔案相同的目錄中。 您關閉報表設計師時，不會刪除此檔案。  
   
 ## <a name="preview-mode"></a>預覽模式
 

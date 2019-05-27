@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6360770c57660ec62493b8ecd6c2aaea695289f7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0ad2e89a8862c4b51856d70ddb1dfd3b1e1fdb17
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756581"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066578"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>導出資料行 (SSAS 表格式)
   表格式模型中的導出資料行可讓您將新資料加入至模型。 不必貼上或匯入到資料行的值，您可以建立定義資料行的資料列層級值的 DAX 公式。 然後就可以像是其他任何資料行一樣，在報表、樞紐分析表或樞紐分析圖中使用導出資料行。  

@@ -19,16 +19,16 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - PATINDEX function
 ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9dc713f54c9383b240a392304c5c938cdea210b1
-ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
+ms.openlocfilehash: 05612e0b32a336b64614d6072169471fe0450d1b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875215"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943500"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ PATINDEX ( '%pattern%' , expression )
  這是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，通常是搜尋指定之模式的資料行。 *expression* 屬於字元字串資料類型類別目錄。  
   
 ## <a name="return-types"></a>傳回類型  
- 若 *expression* 的資料類型為 **varchar(max)** 或 **nvarchar(max)**，則為 **bigint**，否則為 **int**。  
+ 若 *expression* 的資料類型為 **varchar(max)** 或 **nvarchar(max)** ，則為 **bigint**，否則為 **int**。  
   
 ## <a name="remarks"></a>Remarks  
  如果 *pattern* 或 *expression* 為 NULL，則 PATINDEX 會傳回 NULL。  
@@ -63,7 +63,7 @@ PATINDEX ( '%pattern%' , expression )
 ## <a name="supplementary-characters-surrogate-pairs"></a>補充字元 (Surrogate 字組)  
  使用 SC 定序時，傳回值會將 *expression* 參數中的任何 UTF-16 代理字組計算為單一字元。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
- 0x0000 (**char(0)**) 是 Windows 定序中未定義的字元，而且不得包含在 PATINDEX 中。  
+ 0x0000 (**char(0)** ) 是 Windows 定序中未定義的字元，而且不得包含在 PATINDEX 中。  
   
 ## <a name="examples"></a>範例  
   

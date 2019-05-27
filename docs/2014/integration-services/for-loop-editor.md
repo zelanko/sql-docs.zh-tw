@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainer.f1
@@ -13,12 +12,12 @@ ms.assetid: c4db9df6-d2f4-44da-9f4d-628893e86956
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: da5e5c2a748a2bd38d0337b70e9d2a3da312df43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e450559355baf1242e5d822761256047f4790fe2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894472"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058571"
 ---
 # <a name="for-loop-editor"></a>For 迴圈編輯器
   使用 **[For 迴圈編輯器]** 對話方塊的 **[For 迴圈]** 頁面，即可設定迴圈，使工作流程重複到指定的條件評估為 False 為止。  

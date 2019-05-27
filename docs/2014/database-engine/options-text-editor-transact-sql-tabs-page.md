@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.Tabs
@@ -15,12 +14,12 @@ ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 7dd6e11704497bd37fa4eb78948376587ece1119
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cc649ee021012774a0f199b97ea3cbf6bae4adef
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844752"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089140"
 ---
 # <a name="options-text-editor---transact-sql---tabs-page"></a>選項 （文字編輯器 Transact SQL-定位點頁面）
   使用這個對話方塊可以變更在 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查詢編輯器中按下 Tab 鍵的移動行為，這個編輯器會用來撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼。 若要顯示這些設定，請按一下 [工具] 功能表上的 [選項]，並展開 [文字編輯器] 資料夾，再展開 [Transact-SQL] 子資料夾，然後按一下 [定位點]。  

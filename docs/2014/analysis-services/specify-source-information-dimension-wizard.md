@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensionmaintable.f1
@@ -13,12 +12,12 @@ ms.assetid: 0538b490-5185-49e1-a783-4ce3539a0de5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01ce74621f22da45807112a63f7f85d5849a620f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 30234275a724dddce95cdad66e5e37a382a25e62
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746162"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068183"
 ---
 # <a name="specify-source-information-dimension-wizard"></a>指定來源資訊 (維度精靈)
   使用 **[選取主維度資料表]** 頁面，即可針對要建立的維度，選取資料來源檢視、主維度資料表、索引鍵資料行和成員名稱資料行。  
@@ -27,7 +26,7 @@ ms.locfileid: "62746162"
   
 -   在方案總管的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的 [維度] 資料夾，然後按一下 [新增維度]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料來源檢視**  
  選取資料來源檢視。  
   

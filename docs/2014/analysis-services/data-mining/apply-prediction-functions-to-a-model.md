@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Mining Model Prediction [Analysis Services], selecting mining models
@@ -13,12 +12,12 @@ ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04b1afa7f9902d0e1510aaab5f84f96b4b01eacc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 41c7c447af3eb7e0f40c10b98be827caa59867e0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62691907"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086135"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>將預測函數套用至模型
   若要建立預測查詢，您必須先選取查詢所根據的採礦模型。 您可以選取存在於目前專案中的任何採礦模型。  

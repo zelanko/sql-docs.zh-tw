@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.traceproperties.eventsselection.f1
@@ -15,12 +14,12 @@ ms.assetid: e1892f24-7272-4d5d-8926-6150cc82b2c3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d86ae88fba4cb817ea7966daa60932238c7f0460
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 64896beeb2e815f22662cd7d16aaf263135f8122
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62842427"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089583"
 ---
 # <a name="trace-properties-events-selection-tab"></a>追蹤屬性 (事件選取範圍索引標籤)
   使用 **[追蹤屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤，來檢視或指定追蹤的事件和資料行。  

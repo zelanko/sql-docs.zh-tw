@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d255d798bc73d446c22dff112606165a1def8ea4
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
-ms.translationtype: HT
+ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449685"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619611"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>將報表伺服器的存取權授與使用者
 
@@ -53,24 +53,24 @@ ms.locfileid: "65449685"
 
 1. 啟動[入口網站](../web-portal-ssrs-native-mode.md)。
 
-2. 選取右上方的齒輪圖示。
+2. 選取左上方的**齒輪**圖示，然後從下拉式功能表選取 [網站設定]。
 
-3. 選取 [站台設定] 。
+    ![報表伺服器入口網站齒輪圖示和下拉式功能表](../../reporting-services/security/media/settings-icon-and-menu.png)
 
-4. 選取 [安全性] 。
+3. 選取 [安全性] 。
 
-5. 選取 [新增群組或使用者]。
+4. 選取 [新增群組或使用者]。
 
-6. 在 [群組或使用者] 中，使用下列格式來輸入 Windows 網域使用者或群組帳戶：\<網域>\\<帳戶\>。
+5. 在 [群組或使用者] 中，使用下列格式來輸入 Windows 網域使用者或群組帳戶：\<網域>\\<帳戶\>。
 
     > [!NOTE]
     > 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。
 
-7. 選取系統角色，然後選取 [確定]。
+6. 選取系統角色，然後選取 [確定]。
 
     由於角色是累計的，因此如果您同時選取「系統管理員」和「系統使用者」，則使用者或群組就能夠以這兩種角色來執行工作。
 
-8. 重複上述步驟，以便建立其他使用者或群組的指派。
+7. 重複上述步驟，以便建立其他使用者或群組的指派。
 
 ### <a name="to-add-a-user-or-group-to-an-item-role"></a>若要將使用者或群組加入至項目角色
 

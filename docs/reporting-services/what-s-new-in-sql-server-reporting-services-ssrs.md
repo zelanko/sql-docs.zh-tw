@@ -1,7 +1,7 @@
 ---
 title: Reporting Services (SSRS) 中的新功能 | Microsoft Docs
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
@@ -9,19 +9,19 @@ ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 02/28/2019
-ms.openlocfilehash: 77a3bdb162298cfaa972ccd7dacce02db9b5e48e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.date: 05/08/2019
+ms.openlocfilehash: d92275ebbccd90cc3a066ec58726c1db3c61c34b
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775104"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620587"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新功能
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
-了解 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的新功能。 這會涵蓋主要功能領域，並在發行新的項目時更新。
+了解 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的新功能。 本文章涵蓋主要功能領域，並會在發行新的項目時更新。
 
 如需取得目前的版本資訊，請參閱 [SQL Server 2017 版本資訊](../sql-server/sql-server-2017-release-notes.md)。 
 
@@ -52,7 +52,7 @@ ms.locfileid: "64775104"
 
 ### <a name="dax-queries-in-reporting-tools"></a>報告工具中的 DAX 查詢
 
-在最新版的報表產生器和 SQL Server Data Tools 中，您可以藉由在查詢設計工具中拖放所需的欄位，來對支援的 SQL Server Analysis Services 表格式資料模型建立原生 DAX 查詢。 請參閱 [Reporting Services 部落格](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)。
+在最新版本的報表產生器及 SQL Server Data Tools 中，您可對 SQL Server Analysis Services 表格式資料模型建立原生 DAX 查詢。 您可於查詢設計工具中拖放欄位。 請參閱 [Reporting Services 部落格](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)。
 
 ### <a name="rest-api-support"></a>REST API 支援
 
@@ -60,7 +60,7 @@ ms.locfileid: "64775104"
 
 ### <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>現在報表產生器及 SQL Server Data Tools 中支援 DAX 的查詢設計工具
 
-您現在可以在報表產生器及 SQL Server Data Tools 中，對支援的 SQL Server Analysis Services 表格式資料模型建立原生 DAX 查詢。 您可以在這兩個工具中使用查詢設計工具來拖放您想要的欄位，並為您產生 DAX 查詢，而不需要自行撰寫。  
+您現在可以在報表產生器及 SQL Server Data Tools 中，對支援的 SQL Server Analysis Services 表格式資料模型建立原生 DAX 查詢。 您可以在這兩個工具中使用查詢設計工具來拖放您想要的欄位。 DAX 查詢隨即會為您產生。
 
 請參閱 [Reporting Services 部落格](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)。
 
@@ -74,9 +74,16 @@ ms.locfileid: "64775104"
 
 ### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
 
-有新的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 可用。 這是更新過的新式入口網站，納入了 KPI、行動報表、編頁報表、Excel 和 Power BI Desktop 檔案。 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 取代舊版中的報表管理員。
+有新的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 可用。 更新的入口網站包含
+- KPI
+- 行動報表
+- 分頁的報表
+- Excel 檔案
+- Power BI Desktop 檔案
 
-若要建立行動報表，您將需要 [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short.md)]。 
+[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 取代舊版中的報表管理員。
+
+若要建立行動報表，您需要 [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short.md)]。
 
 如需 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]的詳細資訊，請參閱 [入口網站 (SSRS 原生模式)](../reporting-services/web-portal-ssrs-native-mode.md)。  
 
@@ -90,7 +97,7 @@ ms.locfileid: "64775104"
 
 #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]中的關鍵效能指標 (KPI) 
 
-您可以直接在 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 中，建立與所在資料夾內容相關的 KPI。 建立 KPI 時，您可以選擇資料集欄位並彙總這些值。 您也可以選取相關內容，以鑽研至更多詳細資料。
+您可以直接在 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 中，建立與目前資料夾內容相關的 KPI。 建立 KPI 時，您可以選擇資料集欄位並彙總它們的值。 您也可以選取相關內容，以鑽研至更多詳細資料。
 
 ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
 
@@ -98,7 +105,12 @@ ms.locfileid: "64775104"
 
 ### <a name="mobile-reports"></a>行動報表
 
-Reporting Services 行動報表是針對各種外形規格最佳化的專用報表，並為存取行動裝置上報表的使用者提供最佳體驗。 行動報表具備各種視覺效果，從時間、類別和比較圖表到矩形式樹狀結構圖和自訂的對應。 將行動報表連接到資料來源範圍，包括內部部署 SQL Server Analysis Services 多維度和表格式資料。 在設計介面上，使用可調式格線列和格線欄以及根據任何螢幕大小適當縮放的彈性行動報表元素，來配置行動報表。 然後將這些行動報表儲存至 Reporting Service 伺服器，在 iPad、iPhone、Android 手機及 Windows 10 裝置的瀏覽器或 Power BI 行動裝置應用程式中，檢視報表並與其互動。
+Reporting Services 行動報表是針對各種外形規格最佳化的專用報表，並為存取行動裝置上報表的使用者提供最佳體驗。 行動報表具備各種視覺效果，從時間、類別和比較圖表到矩形式樹狀結構圖和自訂的對應。 將行動報表連接到資料來源範圍，包括內部部署 SQL Server Analysis Services 多維度和表格式資料。 您可在設計界面上為行動報表放置方格列和欄會調整的欄位。 富彈性的行動報表元素會自動調整以符合任何畫面大小。 您可以將行動報表儲存至報表服務伺服器，並在瀏覽器或 Power BI 行動應用程式中加以檢視和互動。 支援的裝置包括：
+
+- iPad
+- iPhone
+- Android 手機
+- 或任何 Windows 10 裝置
 
 #### <a name="mobile-report-publisher"></a>行動報表發行工具  
 
@@ -130,7 +142,7 @@ iPad 和 iPhone 上適用於 iOS 的 Power BI 行動裝置應用程式現在可�
 
 ### <a name="microsoft-net-framework-4-support"></a>Microsoft .NET Framework 4 支援  
 
-[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 支援 Microsoft .NET Framework 4 的目前版本。 其中包括 4.0 和 4.5.1 版。 如果未安裝任何 .Net Framework 4.x 版本， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程式會在功能安裝步驟安裝 .NET 4.0。  
+[!INCLUDE[ssRSCurrent-md](../includes/ssrscurrent-md.md)] 支援 Microsoft .NET Framework 4 的目前版本，包含 4.0 和 4.5.1 版。 如果尚未安裝 .Net Framework 4.x 版本， [!INCLUDE[ssNoVersion-md](../includes/ssnoversion-md.md)] 安裝程式會在功能安裝步驟安裝 .NET 4.0。  
 
 ### <a name="report-improvements"></a>報表改進
 
@@ -144,7 +156,13 @@ iPad 和 iPhone 上適用於 iOS 的 Power BI 行動裝置應用程式現在可�
 
 **報表內嵌：** 您現在可以使用 iframe 及 URL 參數，將行動和分頁報表內嵌到其他網頁和應用程式中。  
 
-**將報表項目釘選到 Power BI 儀表板** ：當您在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中檢視報表時，可以選取報表項目，並將其釘選到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 儀表板。   可釘選的項目包括圖表、量測計面板、地圖和影像。 您可以 **(1)** 選取包含您要釘選之目的地儀表板的群組， **(2)** 選取您也要釘選項目的儀表板，以及 **(3)** 選取您要在儀表板中更新磚的頻率。   ![注意](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")：重新整理由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂用帳戶管理，而釘選項目之後，您可以編輯訂用帳戶和設定不同的重新整理排程。  
+**將報表項目釘選到 Power BI 儀表板** ：當您在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中檢視報表時，可以選取報表項目，並將其釘選到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 儀表板。   可釘選的項目包括圖表、量測計面板、地圖和影像。 您可以：
+
+1. 選取包含欲釘選之儀表板的群組。
+2. 選取要將項目釘選至的儀表板。
+3. 選取您儀表板更新磚的頻率。
+
+![注意](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")：重新整理由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂用帳戶管理，而釘選項目之後，您可以編輯訂用帳戶和設定不同的重新整理排程。
 
 ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
@@ -162,7 +180,9 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 如需詳細資訊，請參閱 [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)。
 
-**PDF 在遠端列印取代 ActiveX** ：新式 PDF 體驗已取代報表檢視器工具列 ActiveX 列印體驗，前者可跨支援的瀏覽器矩陣運作，包括 Microsoft Edge。 不再需要下載任何 ActiveX 控制項！ 根據您使用的瀏覽器以及已安裝的 PDF 檢視應用程式和服務， [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 會開啟 [列印] 對話方塊以列印您的報表，或提示您下載報表的 .PDF 檔案。  您身為系統管理員，仍然可以從 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 停用用戶端列印。 如需詳細資訊，請參閱 [啟用和停用 Reporting Services 的用戶端列印](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。
+**PDF 於遠端列印取代了 ActiveX：** 報表檢視器工具列現在會透過 PDF 列印，而非 ActiveX 控制項。 包含 Microsoft Edge 在內的大多數新式瀏覽器都支援新的報表檢視器。 不再需要下載任何 ActiveX 控制項！ 根據您使用的瀏覽器以及已安裝的 PDF 檢視應用程式和服務，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 或 [列印] 對話方塊會開啟以列印您的報表，或您會收到下載 .PDF 檔案的提示。 您身為系統管理員，仍然可以從 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 停用用戶端列印。
+
+如需詳細資訊，請參閱 [啟用和停用 Reporting Services 的用戶端列印](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。
 
 ![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
 
@@ -173,7 +193,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 |**啟用和停用訂閱**。 新的使用者介面選項可快速停用及啟用訂閱。 停用的訂閱會維持其中的其他組態屬性，例如排程，並且可以輕鬆啟用。<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> 如需詳細資訊，請參閱 [Disable or Pause Report and Subscription Processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)。|原生模式|  
 |**訂閱描述**。 您現在可以在建立新訂閱時，在訂閱屬性中加入報表的描述。 該描述會加到訂閱摘要頁面上。|SharePoint 與原生模式|  
 |**變更訂閱擁有者**。 加強的使用者介面可快速變更訂閱的擁有者。 舊版 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 可讓系統管理員使用指令碼變更訂閱擁有者。 從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 版本開始，您可以使用使用者介面或指令碼來變更訂閱擁有者。 有使用者離開或在組織中變更角色時，便需要進行變更訂閱擁有者這項一般管理工作。|SharePoint 與原生模式|  
-|**檔案共用訂閱的共用認證**。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 檔案共用訂閱現在同時存有兩個工作流程：<br /><br /> 您的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 系統管理員可以使用此版本的新功能，設定可供一到多個訂閱使用的單一檔案共用帳戶。 檔案共用帳戶是在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式組態管理員的 [指定檔案共用帳戶] 中設定，而使用者接著要在訂閱組態頁面上選取 [使用檔案共用帳戶] 。<br /><br /> 針對目的檔案共用，使用特定認證設定個別訂閱。<br /><br /> 您也可以混用兩種方法，讓某些檔案共用訂閱使用中央檔案共用帳戶，而其他訂閱則使用特定認證。|原生模式|  
+|**檔案共用訂閱的共用認證**。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 檔案共用訂閱現在同時存有兩個工作流程：<br /><br /> 您的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 系統管理員可以設定單一檔案共用帳戶，可供多個訂用帳戶使用。 檔案共用帳戶是在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式設定管理員的 [指定檔案共用帳戶] 中設定。 使用者在訂用帳戶設定頁面上選取 [使用檔案共用帳戶]。<br /><br /> 您針對目的檔案共用，使用特定認證設定個別訂閱。<br /><br /> 您也可以混用兩種方法，讓某些檔案共用訂閱使用中央檔案共用帳戶，而其他訂閱則使用特定認證。|原生模式|
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 
@@ -188,7 +208,7 @@ SSDT 的新版本包括 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]�
 |新增|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
-**自訂參數窗格** ：您現在可以自訂參數窗格。 使用報表產生器中的設計界面，您可以將參數拖曳到參數窗格中的特定資料行及資料列。 您可以新增及移除資料行以變更窗格配置。   如需詳細資訊，請參閱 [自訂報表中的參數窗格 &#40;報表產生器&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)中建立的行動報表。  
+**自訂參數窗格** ：您現在可以自訂參數窗格。 使用報表產生器中的設計界面，您可以將參數拖曳到參數窗格中的特定資料行及資料列。 您可以新增及移除資料行以變更窗格配置。 如需詳細資訊，請參閱 [自訂報表中的參數窗格 &#40;報表產生器&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)中建立的行動報表。  
 
 ![[報表資料] 窗格和參數窗格中的參數清單](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "[報表資料] 窗格和參數窗格中的參數清單")  
 
@@ -201,9 +221,9 @@ SSDT 的新版本包括 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]�
 ## <a name="next-steps"></a>後續步驟
 
 [Analysis Services 的新功能](https://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
-[回溯相容性](reporting-services-backward-compatibility.md)   
-[SQL Server 版本所支援的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)   
-[升級和移轉 Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+[回溯相容性](reporting-services-backward-compatibility.md)  
+[SQL Server 版本所支援的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
+[升級和移轉 Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

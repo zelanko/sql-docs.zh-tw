@@ -7,16 +7,16 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 422114f2a753327f34b105c4c6893b7c3f8d3c2b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3dc51511120b05c8f4a720a911da6c2b6480fb9d
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642857"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821946"
 ---
 # <a name="spatial-results-window"></a>空間結果視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "51642857"
  當查詢只有傳回 Point 執行個體時，就無法使用這個選項。  
   
  **選取投射**  
- 以四種投射的其中一種來顯示地理位置資料：Equirectangular、Mercator、Robinson 或 Bonne。  
+ 以四種投影方式中的其中一種顯示地理資料：等量矩形 (Equirectangular)、麥卡托 (Mercator)、羅賓森 (Robinson) 或彭納 (Bonne)。  
   
  幾何資料無法使用此選項。  
   

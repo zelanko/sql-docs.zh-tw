@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3e677d9923315acc27c2b2d96d5d4eddf2ba8b51
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: df37de909461ace62edbbf3cfe9e7b9dd8448b56
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855961"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099384"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>疑難排解報表組件 (報表產生器及 SSRS)
   這些提示可在您處理報表組件時協助您。  

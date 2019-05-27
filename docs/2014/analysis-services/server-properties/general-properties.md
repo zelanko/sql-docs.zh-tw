@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - IdleConnectionTimeout property
@@ -39,12 +38,12 @@ ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b854692aa00d953ebd8de783104869b784115277
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6b833fe2710ce04cb4a0c8b08fedc9a882c19add
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746880"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069024"
 ---
 # <a name="general-properties"></a>一般屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的伺服器屬性。 本主題記載 msmdsrv.ini 檔案中，不包含在特定章節中的伺服器屬性，例如 Security、Network 或 ThreadPool。 如需有關其他伺服器屬性及如何設定伺服器屬性的詳細資訊，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  

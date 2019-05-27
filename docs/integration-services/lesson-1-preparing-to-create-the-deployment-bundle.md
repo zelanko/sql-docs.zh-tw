@@ -11,14 +11,18 @@ ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 69d125ec70ea297edc4e02b9a2ee4b034a88a2c3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 196647a2c4f6dc872ec1aba7bb91d24c8809113c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289564"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722684"
 ---
-# <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>第 1 課：準備建立部署配套
+# <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>第 1 課：準備建立部署套件組合
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 在這一課中，您會建立支援教學課程的工作資料夾和環境變數、建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案、在專案中加入數個封裝及其支援檔案，以及在封裝中實作組態。  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會依照個別專案部署套件，因此，在建立部署配套的第一個步驟中，您必須將所有的套件和套件相依性全部收集到一個 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案中。 在部署的封裝中納入其他資訊，通常會很有用，例如，您也可以在專案中加入讀我檔案，以提供此封裝群組的基本文件集。  
