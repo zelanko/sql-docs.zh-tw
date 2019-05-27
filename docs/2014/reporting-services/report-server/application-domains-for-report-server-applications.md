@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - application domains [Reporting Services]
@@ -14,12 +13,12 @@ ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dd13835d00fc86b8acd98bdab33ff2612834c360
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: b3d7d2545cf22d17e947e29c7fe9963bc8ffa616
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933575"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104224"
 ---
 # <a name="application-domains-for-report-server-applications"></a>報表伺服器應用程式的應用程式網域
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，報表伺服器會實作成單一服務，其中包含報表伺服器 Web 服務、報表管理員和背景處理應用程式。 每個應用程式都會在單一報表伺服器處理序內部的應用程式網域中執行。 在大部分情況下，應用程式網域是在內部建立、設定和管理的。 不過，如果您要調查效能或記憶體問題或者疑難排解服務中斷，了解報表伺服器應用程式網域的回收作業如何發生可能會很有用。  
@@ -72,7 +71,7 @@ ms.locfileid: "59933575"
   
  下表將描述這些元素。  
   
-|項目|適用於|定義|  
+|元素|適用於|定義|  
 |-------------|----------------|----------------|  
 |`RecycleTime`|這三個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式網域|指定回收應用程式網域的頻率。 預設回收排程符合通常在 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式網域回收中所遵循的 12 小時制模式。 在排程的時間，所有新要求都會轉送至應用程式網域的新執行個體。 目前正在原始執行個體進行中的要求可以繼續執行到完成。 等到所有處理序都完成後，系統會刪除原始執行個體，而新執行個體將成為唯一使用中的應用程式網域執行個體。<br /><br /> 預設值為 720 分鐘。|  
 |`MaxAppDomainUnloadTime`|只有背景處理應用程式網域|根據預設，報表伺服器會配置 30 分鐘的等候時間，在這段時間內，允許在回收作業過程中關閉應用程式網域。 如果目前進行中的作業無法在指定的時間內完成 (或者作業所花的時間比等候時間所允許的還要久)，系統就會立即重新啟動應用程式網域執行個體。 所有未完成的作業都會結束。<br /><br /> 如需如何檢視或取消在報表伺服器上執行之作業的詳細資訊，請參閱[取消報表伺服器作業 &#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)。|  

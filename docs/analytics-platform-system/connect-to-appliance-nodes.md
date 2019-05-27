@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e8c61bebd6265d25e2c3fe0a14516e986f3ee414
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 873ce3cf5ad2707979d66068b3930d6f59f7057c
+ms.sourcegitcommit: 3b266dc0fdf1431fdca6b2ad34ae5fd38abe9f69
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63134391"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186801"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>連接至設備節點在 Analytics Platform System
 這篇文章說明連接到每個節點，Analytics Platform System 設備中的各種方式。  
@@ -26,6 +26,9 @@ ms.locfileid: "63134391"
 每個應用裝置節點直接存取時只能在特定使用案例下和由特定使用者類型。 下表列出每個應用裝置節點並在其下的使用者會直接連接到該節點的案例。  
   
 <!-- MISSING LINKS For information on the purpose of each node, see [Understanding SQL Server PDW &#40;SQL Server PDW&#41;](../sqlpdw/understanding-sql-server-pdw-sql-server-pdw.md).  -->  
+
+> [!WARNING]  
+> 變更資料庫或資料表的設定，而不需要明確的同意，產品小組或 AP 客戶支援小組的控制項或計算節點上可能會讓您的 APS 應用裝置，不受支援。
   
 |||  
 |-|-|  

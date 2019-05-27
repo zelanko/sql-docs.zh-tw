@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
@@ -14,12 +13,12 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e8e2f2a714aad9d1824f2ad922b63cd94f2a96d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190912"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103465"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>報表伺服器執行記錄和 ExecutionLog3 檢視
   報表伺服器執行記錄包含有關在伺服器上執行，或在原生模式向外延展部署或 SharePoint 伺服器陣列中多個伺服器上執行之報表的資訊。 您可以使用報表執行記錄來了解要求報表的頻率、最常使用的輸出格式，以及每一個處理階段所花費處理時間的毫秒數。 此記錄會包含執行報表之資料集查詢所花費時間長度的資訊，以及處理資料所花費的時間。 如果您是報表伺服器管理員，可以檢閱記錄資訊、識別長時間執行工作，並且向報表作者提出有關他們能夠改善之報表區域 (資料集或處理) 的建議。  
@@ -124,7 +123,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|擷取資料所花費的毫秒數。|  
 |TimeProcessing|處理報表所花費的毫秒數。|  
 |TimeRendering|轉譯報表所花費的毫秒數。|  
-|Source|報表執行的來源。 可能的值如下：<br /><br /> **Live**<br /><br /> **快取**:表示快取的執行，例如，查詢不會執行即時的資料集。<br /><br /> **快照式**<br /><br /> **記錄**<br /><br /> **臨機操作**:表示動態產生的報表基礎的模型鑽研報表，或者使用 處理與轉譯的報表伺服器的用戶端上預覽的報表產生器報表。<br /><br /> **工作階段**:表示已經建立的工作階段內的後續要求。  例如，初始要求是檢視頁面 1，而後續要求則是匯出到 Excel (包含目前的工作階段狀態)。<br /><br /> **Rdce**:表示報表定義自訂延伸模組。 RDCE 自訂延伸模組可以動態地自訂報表定義，然後在執行報表時將其傳遞至處理引擎。|  
+|`Source`|報表執行的來源。 可能的值如下：<br /><br /> **Live**<br /><br /> **快取**:表示快取的執行，例如，查詢不會執行即時的資料集。<br /><br /> **快照式**<br /><br /> **記錄**<br /><br /> **臨機操作**:表示動態產生的報表基礎的模型鑽研報表，或者使用 處理與轉譯的報表伺服器的用戶端上預覽的報表產生器報表。<br /><br /> **工作階段**:表示已經建立的工作階段內的後續要求。  例如，初始要求是檢視頁面 1，而後續要求則是匯出到 Excel (包含目前的工作階段狀態)。<br /><br /> **Rdce**:表示報表定義自訂延伸模組。 RDCE 自訂延伸模組可以動態地自訂報表定義，然後在執行報表時將其傳遞至處理引擎。|  
 |[狀態]|狀態 (不是 rsSuccess 就是錯誤碼；如果發生多個錯誤，就只會記錄第一個錯誤)。|  
 |ByteCount|轉譯報表的大小 (以位元組為單位)。|  
 |RowCount|從查詢傳回的資料列數目。|  
@@ -323,7 +322,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |TimeDataRetrieval|擷取資料、處理報表和轉譯報表所花費的毫秒數。|  
 |TimeProcessing||  
 |TimeRendering||  
-|Source|報表執行的來源 (1= 即時、2= 快取、3= 快照集、4= 記錄)。|  
+|`Source`|報表執行的來源 (1= 即時、2= 快取、3= 快照集、4= 記錄)。|  
 |[狀態]|狀態 (不是 rsSuccess 就是錯誤碼；如果發生多個錯誤，就只會記錄第一個錯誤)。|  
 |ByteCount|轉譯報表的大小 (以位元組為單位)。|  
 |RowCount|從查詢傳回的資料列數目。|  
@@ -353,7 +352,7 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeDataRetrieval|擷取資料、處理報表和轉譯報表所花費的毫秒數。|  
 |TimeProcessing||  
 |TimeRendering||  
-|Source|報表執行的來源。 可能的值如下：(1 = 即時、 2 = 快取、 3 = 快照集、 4 = 記錄、 5 = 特定、 6 = 工作階段、 7 = RDCE)。|  
+|`Source`|報表執行的來源。 可能的值如下：(1 = 即時、 2 = 快取、 3 = 快照集、 4 = 記錄、 5 = 特定、 6 = 工作階段、 7 = RDCE)。|  
 |[狀態]|可能的值如下：rsSuccess、rsProcessingAborted 或錯誤碼。 如果發生多個錯誤，只會記錄第一個錯誤。|  
 |ByteCount|轉譯報表的大小 (以位元組為單位)。|  
 |RowCount|從查詢傳回的資料列數目。|  

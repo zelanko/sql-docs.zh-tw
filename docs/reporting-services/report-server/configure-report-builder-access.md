@@ -1,19 +1,19 @@
 ---
 title: 設定報表產生器的存取 | Microsoft Docs
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.date: 03/14/2017
-ms.openlocfilehash: 2f99729717d291b241418b12142a5be8cfa67a03
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
-ms.translationtype: HT
+ms.openlocfilehash: 50703b76ddd67ca4d41cc42625eb6cd0e5ac993b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774434"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580378"
 ---
 # <a name="configure-report-builder-access"></a>設定報表產生器的存取
 報表產生器是一個隨選報表工具，它會與設定原生模式或 SharePoint 整合模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器一起安裝。  
@@ -110,9 +110,9 @@ ms.locfileid: "64774434"
 
 1. 啟動報表管理員。  
 
-2. 按一下 **[站台設定]**。  
+2. 按一下 **[站台設定]** 。  
 
-3. 按一下 **[安全性]**。  
+3. 按一下 **[安全性]** 。  
 
 4. 如果您想要設定報表產生器存取的使用者或群組已經有角色指派，請按一下 [編輯]。  
 否則請按一下 [新增角色指派]。 在群組或使用者中，使用下列格式來輸入 Windows 網域使用者或群組帳戶：\<網域>\\<帳戶\>。 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。  

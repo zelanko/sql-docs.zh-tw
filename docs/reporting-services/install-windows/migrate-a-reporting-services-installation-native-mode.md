@@ -7,12 +7,12 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.date: 11/06/2018
-ms.openlocfilehash: 96b55cafe46994f44f496679f2d66f887baf4dce
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
-ms.translationtype: HT
+ms.openlocfilehash: fe461a189bcf7a123db40674a5cd035621151999
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503592"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570719"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>移轉 Reporting Services 安裝 (原生模式)
 
@@ -106,13 +106,13 @@ ms.locfileid: "65503592"
   
 * [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 和 SQL Server Management Studio 已設計成移除重複的功能。 每個工具都支援不同組的工作。
   
-*  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援 ISAPI 篩選器。 如果您使用 ISAPI 篩選器，則必須在移轉之前重新設計報表方案。  
+* [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援 ISAPI 篩選器。 如果您使用 ISAPI 篩選器，則必須在移轉之前重新設計報表方案。  
   
-*  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援 IP 位址限制。 如果您使用 IP 位址限制，則必須在移轉之前重新設計報表方案，或使用防火牆、路由器或網路位址轉譯 (NAT) 之類的技術來設定受限不得存取報表伺服器的位址。  
+* [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援 IP 位址限制。 如果您使用 IP 位址限制，則必須在移轉之前重新設計報表方案，或使用防火牆、路由器或網路位址轉譯 (NAT) 之類的技術來設定受限不得存取報表伺服器的位址。  
   
-*  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援用戶端安全通訊端層 (SSL) 憑證。 如果您使用用戶端 SSL 憑證，則必須在移轉之前重新設計報表方案。  
+* [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援用戶端安全通訊端層 (SSL) 憑證。 如果您使用用戶端 SSL 憑證，則必須在移轉之前重新設計報表方案。  
   
-* 如果您使用 Windows 整合式驗證以外的驗證類型，則必須在 **RSReportServer.config** 檔案中，以受支援的驗證類型更新 `<AuthenticationTypes>` 項目。 受支援的驗證類型為 NTLM、Kerberos、Negotiate 和 Basic。  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援匿名、.NET Passport 和摘要式驗證。  
+* 如果您使用 Windows 整合式驗證以外的驗證類型，則必須在 **RSReportServer.config** 檔案中，以受支援的驗證類型更新 `<AuthenticationTypes>` 項目。 受支援的驗證類型為 NTLM、Kerberos、Negotiate 和 Basic。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援匿名、.NET Passport 和摘要式驗證。  
   
 * 如果您在報表環境中使用自訂的階層式樣式表，則這些樣式表無法移轉。 請以手動方式移動它們以進行移轉。
   
@@ -202,9 +202,9 @@ ms.locfileid: "65503592"
 
     * 自訂安全性延伸模組必須使用 [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx) 介面重新撰寫。
   
-    *  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的自訂轉譯延伸模組必須使用轉譯物件模型 (ROM) 重新撰寫。  
+    * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的自訂轉譯延伸模組必須使用轉譯物件模型 (ROM) 重新撰寫。  
   
-    *  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援 HTML 3.2 和 HTML OWC 轉譯器。  
+    * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援 HTML 3.2 和 HTML OWC 轉譯器。  
   
     * 其他自訂組件應該不需要重新編譯。  
   

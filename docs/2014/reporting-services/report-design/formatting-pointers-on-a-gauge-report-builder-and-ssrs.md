@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3254f7bbe4cfdd826b24c003b5b472535534dd54
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 294586f0d48ca96ca12d3e9eac70f5d2d288654f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654465"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105829"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>格式化量測計上的指標 (報表產生器及 SSRS)
   量測計指標會指出量測計目前的值。 根據預設，加入欄位時，包含在欄位中的值會彙總為量測計上之指標顯示的一個值。 您可以將多個指標加入到量測計中以便在相同的標尺上指出多個值，或者針對您已經加入的每個標尺加入多個標尺和一個指標。 將欄位加入到量測計之後，您必須在對應的標尺上設定最大值與最小值，以便將內容提供給指標值。 您也可以選擇在顯示標尺重要區域的範圍上，設定最小值與最大值。  

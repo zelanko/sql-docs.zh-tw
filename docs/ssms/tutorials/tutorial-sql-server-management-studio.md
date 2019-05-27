@@ -1,7 +1,7 @@
 ---
 title: 教學課程：SQL Server Management Studio (SSMS) | Microsoft Docs
-ms.custom: ''
-ms.date: 08/30/2017
+ms.custom: sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
@@ -23,17 +23,17 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d262e2d2a4c79a44f0b5a5245991f32b3676487
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: bf2776df77af8f4ba5fec9595d6ba9cddf927f7a
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56800972"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620510"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 教學課程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-SQL Server Management Studio (SSMS) 教學課程將為您介紹用來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基礎結構的整合式環境。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供設定、監視和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的圖形介面。 也讓您部署、監視以及升級應用程式所使用的資料層元件，例如資料庫。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 也提供用於編輯和偵錯指令碼的 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 和 XML 語言編輯器。  
+SQL Server Management Studio (SSMS) 教學課程會向您介紹整合式環境，讓您管理您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基礎結構。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供圖形化介面，可用來設定、監視及管理 Azure SQL Database、Azure SQL Database 受控執行個體、Azure SQL 資料倉儲和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 也讓您部署、監視以及升級應用程式所使用的資料層元件，例如資料庫。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 也提供用於編輯和偵錯指令碼的 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 和 XML 語言編輯器。  
   
 ## <a name="what-you-will-learn"></a>學習內容  
 
@@ -41,9 +41,9 @@ SQL Server Management Studio (SSMS) 教學課程將為您介紹用來管理 [!IN
   
 熟悉 SSMS 的最佳方式是實際練習。 本系列教學課程將讓您熟悉 SSMS 中可用的各項功能。  本系列教學課程會告訴您如何管理 SSMS 的元件及如何尋找您經常使用的功能。  
 
-以下是這些教學課程所涵蓋的內容： 
+以下是這些教學課程所涵蓋的內容：
 
-  
+
 - [教學課程：使用 SSMS 來連線及查詢 SQL Server](connect-query-sql-server.md)
 
     在本教學課程中，您將學習如何連線至您的 SQL Server 執行個體。 您也將學習一些基本的 Transact-SQL (T-SQL) 命令來建立和查詢新的資料庫。 
@@ -54,7 +54,7 @@ SQL Server Management Studio (SSMS) 教學課程將為您介紹用來管理 [!IN
 
 - [教學課程：使用 SSMS 中的範本](templates-ssms.md)
    
-    在本教學課程中，您將學習如何使用在 SSMS 中預先建立的範本。 範本是鮮為人知的功能，其中存放了各種資料庫系統管理工作的大量 Transact-SQL 程式碼片段。 
+    在本教學課程中，您將學習如何使用在 SSMS 中預先建立的範本。 範本是鮮為人知的功能，其存放各種資料庫系統管理工作的大量 Transact-SQL 程式碼片段。 
 
 - [教學課程：SSMS 設定](ssms-configuration.md)
 
@@ -63,7 +63,7 @@ SQL Server Management Studio (SSMS) 教學課程將為您介紹用來管理 [!IN
 
 - [教學課程：使用 SSMS 的其他祕訣與訣竅](ssms-tricks.md)
 
-    在本教學課程中，您將學習使用 SSMS 的其他秘訣與訣竅。 本教學課程包含下列項目：
+    在本教學課程中，您會學習使用 SSMS 的其他提示與訣竅。 本教學課程包含下列項目：
     - 註解、取消註解文字
     - 縮排文字
     - 在物件總管中篩選物件

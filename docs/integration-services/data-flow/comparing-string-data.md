@@ -17,14 +17,18 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8de2ce3e407de132869138a54d5a17559b6308bc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 578ff14516eb40aa32e401f06bad9c747e1f24bd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270701"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727132"
 ---
 # <a name="comparing-string-data"></a>比較字串資料
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   字串比較是由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]執行之許多轉換中的重要部分，此外在評估變數的運算式和屬性運算式時也會使用字串比較。 例如，「排序」轉換會比較資料集中的值，並以遞增或遞減的順序對資料進行排序。  
   
 ## <a name="configuring-transformations-for-string-comparisons"></a>設定字串比較的轉換  
@@ -64,7 +68,7 @@ ms.locfileid: "58270701"
  您也可以指定「一般檔案」連接管理員和「多個一般檔案」連接管理員的地區設定。  
   
 ## <a name="setting-comparison-options"></a>設定比較選項  
- 地區設定會提供比較字串資料的基本規則。 例如，地區設定指定字母表中每個字母的排序位置。 但是，這些規則對某些轉換執行的比較來說可能並不夠，而且 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 還支援一組超越地區設定之比較規則的進階比較選項。 這些比較選項可在資料行層級進行設定。 例如，其中一個比較選項可讓您忽略非空格字元。 此選項的作用是可以忽略變音 (例如腔調字)，這樣會使 "a" 和 "á" 在比較時被視為完全一樣。  
+ 地區設定會提供比較字串資料的基本規則。 例如，地區設定指定字母表中每個字母的排序位置。 但是，這些規則對某些轉換執行的比較來說可能並不夠，而且 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 還支援一組超越地區設定之比較規則的進階比較選項。 這些比較選項可在資料行層級進行設定。 例如，其中一個比較選項可讓您忽略非空格字元。 此選項的作用是可以忽略變音符號 (例如腔調符號)，在比較時將 "a" 和 "Ã¡" 視為完全相同。  
   
  下表描述比較選項和排序樣式。  
   
@@ -73,7 +77,7 @@ ms.locfileid: "58270701"
 |忽略大小寫|指定比較是否區分大寫與小寫字母。 如果設定此選項，則字串比較會忽略大小寫。 例如，「ABC」與「abc」視為一樣。|  
 |忽略假名類型|指定比較是否區分兩類日文的假名字元：平假名與片假名。 如果設定此選項，則字串比較會忽略假名類型。|  
 |忽略字元寬度|指定比較是否區分單一位元組字元和表示為雙位元組字元的相同字元。 如果設定此選項，則字串比較會將同一字元的單一位元組表示法和雙位元組表示法視為一樣。|  
-|忽略非空格字元|指定比較是否區分空格字元與變音。 如果設定此選項，則比較會忽略變音符號。 例如，"å" 等於 "a"。|  
+|忽略非空格字元|指定比較是否區分空格字元與變音。 如果設定此選項，則比較會忽略變音符號。 例如，"Ã¥" 等於 "a"。|  
 |忽略符號|指定比較是否區分字母字元與符號 (例如空白字元、標點符號、貨幣符號和數學符號)。 如果設定此選項，則字串比較會忽略符號。 例如，" New York" 與 "New York"，以及 "*ABC" 與 "ABC"' 均被視為一樣。|  
 |將標點符號當作符號來排序|指定比較是否對英數字元前面的所有標點符號進行排序 (連字號和撇號除外)。 例如，如果設定此選項，則「.ABC」將排在「ABC」前面。|  
   

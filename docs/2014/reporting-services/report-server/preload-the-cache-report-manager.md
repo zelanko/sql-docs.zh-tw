@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - cache [Reporting Services]
@@ -14,12 +13,12 @@ ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7813470269697b0df65715c6f114b5df635888c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 98ce4f723c0b4c04b166b01d17e8014567253518
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191082"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103592"
 ---
 # <a name="preload-the-cache-report-manager"></a>預先載入快取 (報表管理員)
   您可以為共用資料集建立快取重新整理計劃，為共用資料集預先載入快取。  
@@ -114,7 +113,7 @@ ms.locfileid: "63191082"
   
 17. 選擇下列兩個快取選項的其中之一並設定逾期，如下：  
   
-    -   若要使快取的副本在特定時間週期之後過期，按一下 [**快取報表的暫存副本。報表副本會在下列分鐘數後過期]。** 輸入報表過期的分鐘數。  
+    -   若要將快取副本設定在特定時段之後過期，請按一下 [快取報表的暫存副本。**報表副本會在下列分鐘數後過期]。** 輸入報表過期的分鐘數。  
   
     -   若要使快取副本依據排程過期，請按一下 [快取報表的暫存副本。**在下列排程上使報表的副本過期]。** 按一下 **[設定]**，或選取共用排程來設定報表過期的排程。  
   
