@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 112696db-3838-4b50-91bd-d2ce5fa04ee5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7976ba0779553824e78856d212933272b3cd452e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 74561047f149ae6a6bdcd0cd54347d842e49569f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729550"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079088"
 ---
 # <a name="defining-a-dimension"></a>定義維度
   在下列工作中，您將使用「維度精靈」來建立「日期」維度。  

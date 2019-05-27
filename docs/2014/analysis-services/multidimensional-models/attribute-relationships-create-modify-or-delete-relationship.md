@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Analysis Services], member properties
@@ -14,12 +13,12 @@ ms.assetid: 137b2f40-5dfb-4141-9110-70f961f259cb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6e67c33daecf94a9c903f3a2fb9a2d35d387a50e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 35e22807ed64cce3bc6f7c186978d4c9ee82c51d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62701288"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077085"
 ---
 # <a name="create-modify-or-delete-an-attribute-relationship"></a>建立、修改或刪除屬性關聯性
   您可以在 **中，使用 [維度設計師] 的** [屬性關聯性] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]索引標籤，建立、修改或刪除維度中各屬性之間的屬性關聯性。  

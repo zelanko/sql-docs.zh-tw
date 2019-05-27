@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connections
@@ -14,12 +13,12 @@ ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9ca50a030fef65c9de02bc93dcd970df2686b0a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3c9abd1b891d47f1711db21eec017ec755526e02
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680394"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087351"
 ---
 # <a name="connect-to-a-data-mining-server"></a>連接到資料採礦伺服器
   ![連接按鈕](media/misc-connection.gif "連接按鈕")  

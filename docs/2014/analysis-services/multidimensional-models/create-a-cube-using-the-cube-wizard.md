@@ -1,23 +1,25 @@
 ---
 title: 使用 Cube 精靈建立 Cube |Microsoft Docs
-ms.date: 05/02/2018
-ms.prod: sql
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
 ms.technology: analysis-services
-ms.custom: multidimensional-models
 ms.topic: conceptual
-ms.author: owend
-ms.reviewer: owend
+helpviewer_keywords:
+- cubes [Analysis Services], creating
+ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7545bc1e1ad37ff395f3e4c3f65b1cb4614e533e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 7ffd5880120184249d89c4d702b30c8d6e01e1f6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726892"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076496"
 ---
 # <a name="create-a-cube-using-the-cube-wizard"></a>使用 Cube 精靈來建立 Cube
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [Cube 精靈] 來建立新的 Cube。  
   
 ### <a name="to-create-a-new-cube"></a>建立新的 Cube  

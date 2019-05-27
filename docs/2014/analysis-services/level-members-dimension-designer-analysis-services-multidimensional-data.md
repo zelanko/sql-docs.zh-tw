@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.browsertab.levelsandmembers.f1
@@ -13,12 +12,12 @@ ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9a737b79944635af1a45dd4fc51a9ef2e2967a31
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728155"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078104"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>層級和成員 (瀏覽器索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用此頁面來瀏覽目前選取之階段和語言的成員。 若要選取要瀏覽的階層或語言，請使用 **[工具列]** 窗格上的 **[階層]** 和 **[語言]** 選項。 如需有關工具列窗格的詳細資訊，請參閱[工具列&#40;瀏覽器索引標籤，維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)。  
@@ -37,7 +36,7 @@ ms.locfileid: "62728155"
 |重新命名選取的成員。|以滑鼠右鍵按一下選取的成員，然後選取 [重新命名]，或按一下已經選取的成員。|  
 |編輯成員屬性值|針對選取的成員按兩下已選取成員屬性中的值，以編輯該值。|  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **目前層級**  
  顯示目前在 [樹狀] 中選取之成員所屬的層級。  
   

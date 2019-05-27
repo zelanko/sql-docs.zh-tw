@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], creating
@@ -13,12 +12,12 @@ ms.assetid: d84f66ae-7551-49bf-99d0-88368ca2dd0e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ad05272b38a2f3dec72c4be160f48981e4fd43a8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e23d4af96b5ce7c740f1b29893e6ee760104b871
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700312"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076430"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>使用維度精靈建立維度
   您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [維度精靈] 來建立新的維度。  

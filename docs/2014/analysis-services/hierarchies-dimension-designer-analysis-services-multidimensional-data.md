@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.hierarchieslevelspane.f1
@@ -13,12 +12,12 @@ ms.assetid: c37db6c1-b5a5-44e1-ae6d-a96fb9769e68
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 819d073ba286f0674dc3470a7e8d9d6469318b7f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a68cd859e93105c2fb4aa570dbf727fe7112bdab
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730719"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080793"
 ---
 # <a name="hierarchies-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>階層 (維度結構索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用 [階層] 窗格，即可管理目前選取之維度的階層和層級。 如需詳細資訊，請參閱[建立使用者定義階層](multidimensional-models/user-defined-hierarchies-create.md)。  
@@ -37,7 +36,7 @@ ms.locfileid: "62730719"
   
 2.  如果沒有選取，請按一下 **[維度結構]** 索引標籤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **階層**  
  顯示目前建立的階層。 在每個階層中，具有組成階層各層級的屬性。 屬性關聯性也會顯示出來，但是這些關聯性是唯讀的。  
   

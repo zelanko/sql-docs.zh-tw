@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bddbad8ebe91aaa57ab76fdd4f30a5ebb9e5ab3d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 84e134854770f0096cc99c94698cfd8d7e3e818a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700111"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076560"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>使用資料來源檢視建立 Cube
   如果您想使用現有的資料來源檢視，請使用此建立新 Cube 的方法。 透過此方法，您可以指定資料來源檢視，並選取要用於資料來源檢視的事實和維度資料表。 然後，您可以選擇要包含在 Cube 中的維度和量值。  

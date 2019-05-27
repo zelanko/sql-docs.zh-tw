@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 065fdc60-1791-4e27-9ed5-51d751b3f8c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8b6e7fca1013811f8a5a8b36e85970bd7a74b6d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 56b0a13c30100a12ce7307fc3896b5976e30ad59
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730269"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079355"
 ---
 # <a name="creating-an-analysis-services-project"></a>建立 Analysis Services 專案
   在下列工作中，您可以使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]來建立新[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案，命名為`Analysis Services Tutorial`根據[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案範本。 *「專案」* (Project) 是相關物件的集合。 專案存在於方案內，方案包括一或多個專案。 如需詳細資訊，請參閱[建立 Analysis Services 專案 &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)。  

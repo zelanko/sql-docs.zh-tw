@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.selectdimension.f1
@@ -13,12 +12,12 @@ ms.assetid: 42ce4c2b-e058-43ad-8d63-19ba07a31b67
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1adcc97430db480628b4b139ba12506766fe59fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7976b3a6711425aa9f0e0a454eee74cdfdfaf526
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732435"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082167"
 ---
 # <a name="define-account-intelligence-dimension-business-intelligence-wizard"></a>定義帳戶智慧 (維度) (商業智慧精靈)
   使用此頁面來選取帳戶智慧的維度，包含維度和屬性類型設定、局部加總量值的定義和其他要套用的功能。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - server architecture [Analysis Services]
@@ -14,12 +13,12 @@ ms.assetid: 25eeecf0-6e85-4527-b94d-5503d27edaed
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a147330733efe641b8baf844723e4027e7ada5bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 81c9ee3db0a05107913d3b75fba20ebe8607f941
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733229"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083203"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>實體架構 (Analysis Services – 資料採礦)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用伺服器和用戶端元件，為商業智慧應用程式提供資料採礦功能：  

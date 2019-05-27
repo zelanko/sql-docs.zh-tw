@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.miningstructureproperties.f1
@@ -15,12 +14,12 @@ ms.assetid: 6c7b5f3b-8808-433f-ad58-25e75b140604
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6d6a908fb7d309b9e41b7392f35efb25dadef04c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4ff5758d465703800cd4f847b03f87e1dd762043
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727864"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077656"
 ---
 # <a name="mining-structure-properties-dialog-analysis-services---data-mining"></a>採礦結構屬性對話方塊 (Analysis Services - 資料採礦)
   使用 **SQL Server Management Studio** 中的 **[採礦結構屬性]** 對話方塊，即可在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中設定採礦結構的屬性。 您可以在 [物件總管] 中以滑鼠右鍵按一下採礦結構，然後從內容功能表中選取 [屬性]，來顯示 [採礦結構屬性] 對話方塊。  

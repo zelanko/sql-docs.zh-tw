@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CONTINUE keyword
 - WHILE keyword
 ms.assetid: 0f1def4e-b0ca-4175-ad58-7c8c9153dab7
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 579005dc2386afdedce40da54bce42c74bfc1d86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7f5950677214623e5e8a51cf46035d48a0a4ecd
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794776"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982560"
 ---
 # <a name="continue-transact-sql"></a>CONTINUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

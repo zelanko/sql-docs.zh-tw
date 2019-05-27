@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - aggregate functions [Analysis Services]
@@ -13,12 +12,12 @@ ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3fcd41e9fafe72e0d7d87378f7cc8746a51ad28f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740728"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072720"
 ---
 # <a name="use-aggregate-functions"></a>使用彙總函式
   當維度用於配量量值時，量值會與該維度所含的階層一起彙總。 而總和行為則視指定給量值的彙總函式而定 對於大多數包含數值資料的量值而言，彙總函式是 `Sum`。 量值的值會依據所使用的階層層級而加總為不同的數量。  

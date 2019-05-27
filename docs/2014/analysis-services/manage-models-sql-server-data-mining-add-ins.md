@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, importing
@@ -18,12 +17,12 @@ ms.assetid: c11380f0-7c24-4668-9cdf-9c53e4aff665
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cb7fee7425db1e22cd8db59477fb0bf30ce1d01c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6d5f0619e7291cc08b1750c0b35f9639cb7a9872
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728179"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078043"
 ---
 # <a name="manage-models-sql-server-data-mining-add-ins"></a>管理模型 (SQL Server 資料採礦增益集)
   ![管理模型 按鈕，資料採礦功能區](media/dmc-manage.gif "管理模型] 按鈕，[資料採礦功能區")  

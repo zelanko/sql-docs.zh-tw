@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - formats [Analysis Services], string values
@@ -17,12 +16,12 @@ ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7035fb90d9cc84743fc484e020efd6a19a217a4b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4b80cfeae2957753cfe96d54dcbe0052e19db741
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725412"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074471"
 ---
 # <a name="formatstring-contents-mdx"></a>FORMAT_STRING 內容 (MDX)
   `FORMAT_STRING` 資料格屬性可格式化 `VALUE` 資料格屬性，建立 `FORMATTED_VALUE` 資料格屬性的值。 `FORMAT_STRING` 資料格屬性能處理原始的字串及原始數值，對該值套用格式運算式，以傳回格式化的 `FORMATTED_VALUE` 資料格屬性值。 下列資料表詳述了用來處理字串和數值的語法和格式字元。  
@@ -80,7 +79,7 @@ ms.locfileid: "62725412"
 |**:**|代表時間分隔符號，其會在格式化時間值的時候區隔時、分 和秒。<br /><br /> 注意:在某些地區設定中，您可能使用其他字元做為時間分隔符號。<br /><br /> 在格式化輸出中實際做為時間分隔符號使用的字元，是由電腦上的系統設定來決定。|  
 |**/**|代表日期分隔符號，其會在格式化日期值的時候區隔年、月、日。<br /><br /> 在格式化輸出中實際做為日期分隔符號使用的字元，是由電腦上的系統設定來決定。<br /><br /> 注意:在某些地區設定，可能會使用其他字元做為日期分隔符號。|  
 |**E- E+ e- e+**|代表科學格式。<br /><br /> 如果格式運算式在 **E-** **E+**, **e-** **e+** 的右邊含有至少一位數字預留位置 (**0** 或 **#**)，格式值會被顯示為科學格式，而 E 或 e 會被插入數值與數值的指數之間。 右邊預留位置的數字位數決定了指數的數字位數。 使用 **E-** 或 **e-** 會在負指數旁邊加上負號。 使用 **E+** 或 **e+** 會在正指數旁邊加上正號。|  
-|**- + $ ( )**|顯示實際字元。<br /><br /> 若要顯示未在以上列出的字元，請在該字元前面加上一個反斜線 **\\** ) 或以雙引號 (**" "**) 括住。|  
+|**- + $ ( )**|顯示實際字元。<br /><br /> 若要顯示未在以上列出的字元，請在該字元前面加上一個反斜線 **\\**) 或以雙引號 (**" "**) 括住。|  
 |**\\**|顯示格示字串中的下一個字元。<br /><br /> 若要以實際字元來顯示一個有特殊義意的字元，請在該字元前面加上一個反斜線 (**\\**)。 反斜線本身不會被顯示。 使用反斜線就和使用雙引號把反斜線後面的字元括起來是一樣的。 若要顯示一個反斜線，請使用兩個反斜線 (**\\\\**)。 無法顯示為實際字元的字元範例包括以下字元：<br /><br /> 格式化的日期和時間格式字元-， **c**， **d**， **h**， **m**， **n**， **p**， **q**， **s**， **t**， **w**， **y**， **/**，和 **:**<br /><br /> 數值格式字元-**#**， **0**， **%**， **E**， **e**，**逗號**，和**期間**<br /><br /> 字串格式字元-**@**， **&**， **\<**， **>**，和 **！**|  
 |**"ABC"**|顯示雙引號 (**" "**) 內的字串。<br /><br /> 若要在程式碼中包括格式中的字串，請使用 Chr(**34**) 來括住文字。 (雙引號的字元碼是 **34**。)|  
   

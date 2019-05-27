@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 81401eac-c619-4fad-ad3e-599e7a6f8493
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51cc5f71c3a3e7515238aef08e97316e549c0e70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 894e7d4fb5a0234643cf237e767a8ae999e67496
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680554"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087414"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>設定 PowerPivot 無人看管的資料重新整理帳戶 (PowerPivot for SharePoint)
   PowerPivot 無人看管的資料重新整理帳戶是一個指定的帳戶，可在 SharePoint 伺服器陣列中執行 PowerPivot 資料重新整理作業。 藉由設定此項，可讓**使用的資料重新整理帳戶系統管理員設定**選項，在資料重新整理排程頁面 （如下所示）。 若排程資料重新整理的活頁簿作者想要使用 PowerPivot 無人看管的資料重新整理帳戶執行資料重新整理作業，可以選擇此選項。 如需如何檢視資料重新整理排程中的認證選項的詳細資訊，請參閱[排程資料重新整理&#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)。  

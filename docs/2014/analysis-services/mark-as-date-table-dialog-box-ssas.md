@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.createdatetable.f1
@@ -13,12 +12,12 @@ ms.assetid: 698b5ef1-b79b-4d76-9847-39669b4f5bb9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7cb946a717399ee58b06ed4bf0af783170f6e4bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65c3dc2c084cdc426842cf822b1d65735030a9e9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728014"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077934"
 ---
 # <a name="mark-as-date-table-dialog-box-ssas"></a>標記為日期資料表對話方塊 (SSAS)
   當您依序按一下 **[資料表]** 功能表、 **[日期]** 和 **[標記為日期資料表]** 時，會出現 **[標記為日期資料表]** 對話方塊。 日期資料表搭配時間智慧函數一起使用。 若要建立與日期資料表的關聯性，您必須指定一個具有唯一值的資料行，做為該資料表的唯一識別碼。  

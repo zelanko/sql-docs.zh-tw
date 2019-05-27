@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.newmeasuredialog.f1
@@ -15,12 +14,12 @@ ms.assetid: 86dc9146-cc6d-4cef-b178-9a6b4cf616e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3124f6f173a0e232ad7943188baae0cbbb1bfcd9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 07970f55cea06e319ed937aa3937d49bc45363b7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743664"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072334"
 ---
 # <a name="new-measure-dialog-box-analysis-services---multidimensional-data"></a>新增量值對話方塊 (Analysis Services - 多維度資料)
   使用 **中的** [新增量值] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可將新量值加入至 Cube 設計師中的量值群組。 您可以藉由下列方式顯示 **[新增量值]** 對話方塊：  
@@ -29,7 +28,7 @@ ms.locfileid: "62743664"
   
 -   在 Cube 設計師的 [Cube 結構] 索引標籤上，以滑鼠右鍵按一下 [量值] 窗格中的量值群組或量值，然後從內容功能表中選取 [新增量值]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Usage**  
  選取新量值將使用的彙總函式。  
   

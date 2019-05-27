@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Analysis Services], creating
@@ -14,12 +13,12 @@ ms.assetid: 554ea10e-b0b0-4987-add8-19113d824787
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa8ea915e250afbaa0075ee51e09fc5ab0f5a53e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6618a7c5023f140fdaee0b512c797c01586c62ff
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732340"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082343"
 ---
 # <a name="define-a-new-attribute-manually"></a>手動定義新屬性
   此程序描述如何使用維度中建立新的屬性**屬性**維度設計師中的 窗格。  

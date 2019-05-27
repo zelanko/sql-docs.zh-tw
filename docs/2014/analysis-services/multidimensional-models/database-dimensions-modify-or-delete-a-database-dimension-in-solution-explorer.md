@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying dimensions
@@ -17,12 +16,12 @@ ms.assetid: be52b351-f376-42ee-adba-2dcaa0c0f69c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a994b87e8be4b8ca527cb3b0863af4a1a4a1e1a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b46e9e42d212ca8f92f905c241915fdccec679f6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726502"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075890"
 ---
 # <a name="modify-or-delete-a-database-dimension-in-solution-explorer"></a>在方案總管中修改或刪除資料庫維度
   您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中使用維度設計師修改或刪除維度。 修改維度時，必須等到您處理維度之後，使用者才可以使用變更後的維度。 如需詳細資訊，請參閱 <<c0> [ 多維度模型物件處理](processing-a-multidimensional-model-analysis-services.md)。  

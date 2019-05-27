@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - granularity attribute
@@ -14,12 +13,12 @@ ms.assetid: 840280d8-20c3-46c0-99ea-62479469c36b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e0f8c491696ea0ee8c8f8b613fa15110ffb7df69
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4c13fecba6b36a5a3ac6ac0c37f94416b612c69f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699918"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075745"
 ---
 # <a name="define-a-regular-relationship-and-regular-relationship-properties"></a>定義一般關聯性及一般關聯性屬性
   當您定義新的 Cube 維度或新的量值群組時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會嘗試偵測是否有一般關聯性，然後將維度使用方式設定設為 `Regular`。 在 Cube 設計師的 [維度使用方式] 索引標籤上，您可以檢視或編輯一般維度關聯性。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpiorganizerpane.f1
@@ -13,12 +12,12 @@ ms.assetid: b0f0388e-3d75-450d-b5fb-8a1d31cf8376
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 03395f35d42ee8ec3d4a69345d509432fbcdd485
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 85046febbaa348216a48e51860f7dbcf604f9f8c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729660"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079397"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 組合管理 (KPI 索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 [Cube 設計師] 之 [KPI] 索引標籤上的 [KPI 組合管理] 窗格，即可存取和記錄指定之 Cube 中所含的關鍵效能指標 (KPI)。  
@@ -26,7 +25,7 @@ ms.locfileid: "62729660"
 > [!NOTE]  
 >  表單檢視中不會顯示這個窗格。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **清單**  
  顯示 KPI 的名稱。  
   

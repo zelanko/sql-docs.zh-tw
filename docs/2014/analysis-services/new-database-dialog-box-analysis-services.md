@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.newdatabase.f1
@@ -13,17 +12,17 @@ ms.assetid: ddc7804b-acb0-4ae4-a88f-e8cdf704c341
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1bef5adba44a5202e3cc0fc7f2eb48fae08a0e3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ed652c47be4bfbe2783f5138bb80f8ed9c37dd32
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743715"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072310"
 ---
 # <a name="new-database-dialog-box-analysis-services"></a>新增資料庫對話方塊 (Analysis Services)
   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [新增資料庫] 對話方塊，即可建立空的新 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫。 在物件總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的 [資料庫] 資料夾，然後選取 [新增資料庫]，即可顯示[新增資料庫] 對話方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  

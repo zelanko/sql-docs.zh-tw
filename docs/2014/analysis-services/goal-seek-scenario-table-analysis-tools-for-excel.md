@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -15,12 +14,12 @@ ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85f0c099aba12fe9a4049fe787e248cfe580ff3b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d547c52bc5d4cb02870fc647469b5f63af9ab7cb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731996"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080742"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>搜尋目標狀況 (適用於 Excel 的資料表分析工具)
   ![目標資料表分析工具中的搜尋按鈕](media/tat-goalseek.gif "資料表分析工具中的 搜尋目標按鈕")  
