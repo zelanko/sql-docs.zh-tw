@@ -17,15 +17,15 @@ helpviewer_keywords:
 - encryption [SQL Server], symmetric keys
 - symmetric keys [SQL Server], ENCRYPTBYPASSPHRASE function
 ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1548684a3c2e749e20b6bd9b8a01be272fabb196
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 310c734a8b2bd72c0d2217540ce9fb303a87df77
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681146"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948870"
 ---
 # <a name="encryptbypassphrase-transact-sql"></a>ENCRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

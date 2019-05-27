@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Version property
@@ -13,12 +12,12 @@ ms.assetid: eea6bfe9-3130-4272-b3c2-c334349a7afd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ff82109bc54fb1360df0f9280a196c547e53039b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4b090e92912c67256034c3c634465fcb99f404f1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63020200"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097083"
 ---
 # <a name="version-property-wmi-msreportserverinstance"></a>Version 屬性 (WMI MSReportServer_Instance)
   以 Major.Minor.Build.Revision 的格式傳回報表伺服器的版本。 唯讀。  

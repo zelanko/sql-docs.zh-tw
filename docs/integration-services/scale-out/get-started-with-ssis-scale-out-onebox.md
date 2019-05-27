@@ -5,18 +5,18 @@ ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 5810202a45417f51ac539b4c5e892f0405040dd7
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 5ccfa6b0f2f45c53b790664f6dd5c7d6363d7864
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65718788"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66009784"
 ---
 # <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>在單一電腦上開始使用 Integration Services (SSIS) Scale Out
 

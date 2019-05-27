@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - time data type [SQL Server], UDTs
@@ -14,12 +13,12 @@ ms.assetid: 48f109af-b1d1-4f03-a7e3-8a0b05ed94e8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5471788d3e730c9694ea6394b7e3d1fc659eda96
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9692bcc5b3c7685e247730b0f203d273f585f1de
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855252"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092993"
 ---
 # <a name="remove-udt39s-named-after-the-reserved-date-and-time-data-types"></a>移除 UDT&#39;s 名為保留的日期和時間資料類型
   Upgrade Advisor 偵測到依據針對 `date` 或 `time` 資料類型保留之詞彙所命名的使用者定義型別 (UDT)。  

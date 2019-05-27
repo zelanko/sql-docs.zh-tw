@@ -10,16 +10,16 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
 - geometry data type [SQL Server], getting started
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a488bba170b9df5fd896b85c880bb26388e3d252
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: a160fd5ab5b263445eac0047bd128d82f6804aa2
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980194"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935496"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>建立、建構及查詢幾何執行個體
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ ms.locfileid: "53980194"
   
   
 ###  <a name="number"></a> 點數  
- 所有非空白的 **geometry** 執行個體都是由 *「點」*(point) 所組成。 這些點代表幾何繪製所在平面的 X 和 Y 座標。 **geometry** 提供許多內建方法來查詢執行個體的點。  
+ 所有非空白的 **geometry** 執行個體都是由 *「點」* (point) 所組成。 這些點代表幾何繪製所在平面的 X 和 Y 座標。 **geometry** 提供許多內建方法來查詢執行個體的點。  
   
  **傳回組成執行個體的點數**  
  [STNumPoints &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)  
@@ -226,7 +226,7 @@ ms.locfileid: "53980194"
   
   
 ###  <a name="simple"></a> Simple  
- 如果要讓執行個體的 **geometry** 為 *「簡單」*(simple)，它必須符合以下兩個需求：  
+ 如果要讓執行個體的 **geometry** 為 *「簡單」* (simple)，它必須符合以下兩個需求：  
   
 -   此例項的每一個圖形都不能自己相交 (除了在它的端點上以外)。  
   
@@ -266,7 +266,7 @@ SELECT @g.STBoundary().ToString();
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
    
 ###  <a name="envelope"></a> 範圍  
- *geometry* 執行個體的 **「範圍」** (Envelope) (也稱為 *「週框方塊」*(Bounding Box)) 是執行個體的最小和最大座標 (X,Y) 組成的座標軸對齊矩形。  
+ *geometry* 執行個體的 **「範圍」** (Envelope) (也稱為 *「週框方塊」* (Bounding Box)) 是執行個體的最小和最大座標 (X,Y) 組成的座標軸對齊矩形。  
   
  **傳回執行個體的範圍**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  

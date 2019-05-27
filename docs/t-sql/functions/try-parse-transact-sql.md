@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - TRY_PARSE function
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9968c95f42d2256054d472b53d5c9039c26c1865
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50c1c88525c096e5b573236c569b9e15d703a60f
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785545"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946875"
 ---
 # <a name="tryparse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 |類別目錄|類型|.NET 類型|使用的樣式|  
 |--------------|----------|---------------|-----------------|  
-|數值|bigint|Int64|NumberStyles.Number|  
+|數值|BIGINT|Int64|NumberStyles.Number|  
 |數值|ssNoversion|Int32|NumberStyles.Number|  
 |數值|SMALLINT|Int16|NumberStyles.Number|  
 |數值|TINYINT|Byte|NumberStyles.Number|  

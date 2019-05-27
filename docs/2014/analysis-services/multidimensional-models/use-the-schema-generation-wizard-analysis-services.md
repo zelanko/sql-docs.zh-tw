@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, steps
@@ -14,12 +13,12 @@ ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da833d9c71b93405369a1fee1d7947784d2a09e8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e434493813f0237533ca2e50ff089974f3556f34
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740738"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072649"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>使用結構描述產生精靈 (Analysis Services)
   結構描述產生精靈在產生階段，需要不多的資訊。 [結構描述產生精靈] 產生關聯式結構描述所需的大部分資訊，都是從您在專案中已建立的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 和維度中擷取。 此外，您可以自訂產生主題領域資料庫結構描述的方式，以及為結構描述中之物件命名的方式。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.deployment.f1
@@ -16,12 +15,12 @@ ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 337a90ea5068e405a97e44856be467ea478e5759
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e1246119b72890bc80125034c8ee23bcd0c221b5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757575"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067587"
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>設定預設的資料模型和部署屬性 (SSAS 表格式)
   本主題描述如何設定預設相容性層級、部署和工作空間資料庫屬性設定，這些設定可以針對您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立的新表格式模型專案預先定義。 建立新專案之後，這些屬性仍可依據您的特殊需求進行變更。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Surface Area Configuration Tool
@@ -26,12 +25,12 @@ ms.assetid: 15d9117e-e2fa-4985-99ea-66a117c1e9fd
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f112bc1a9928185fa5ecf15b953df8c982ff36f7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4619eeea35df4de16c3b980ecc0ea685488970eb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774435"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088581"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   下列章節包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件的回溯相容性資訊。 這個內容包含關於已被取代的功能、已停止的功能、重大變更和行為變更等資訊。  

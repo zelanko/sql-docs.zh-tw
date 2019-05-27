@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - service account configuration, SQL Server
@@ -13,19 +12,19 @@ ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f642458f8d30fab0d20eeaad427831c5dece964
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8435b0c677f80bf4f26acd4411d90ab63c7473d1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62659854"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092264"
 ---
 # <a name="server-configuration---service-accounts"></a>伺服器組態 - 服務帳戶
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 [伺服器組態] 頁面，即可為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務指派登入帳戶。 設定在這個頁面上的實際服務隨著您選取要安裝的功能而不同。  
   
  用來啟動並執行的啟動帳戶[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以是超連結"ms help://SQL11_I1033/s11sq_GetStart_I/html/309b9dac-0b3a-4617-85ef-c4519ce9d014.htm"\l"Domain_User 「 網域使用者帳戶、 本機使用者帳戶、 受管理的服務帳戶虛擬帳戶或內建系統帳戶。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  您可以將相同登入帳戶指派給所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務，或個別設定每一個服務帳戶。 此外，您也可以指定要自動啟動服務、手動啟動服務或停用服務。 大部分安裝都建議使用預設帳戶。  
   
  在 Windows 7 和 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 上，大部分帳戶都預設為虛擬帳戶。  

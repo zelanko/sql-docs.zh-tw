@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], DMX prediction queries
@@ -19,12 +18,12 @@ ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8b5d5ab4c6b62dd9afd4ac922b0604c6ffdbd075
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7c59d3a18c1fd36f82e8ea60e42d1b9f6e2f34c2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722908"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084974"
 ---
 # <a name="data-mining-query-interfaces"></a>資料採礦查詢介面
   資料採礦查詢是以資料採礦延伸模組 (DMX) 語言為基礎。 您可以針對所有預測和模型工作使用 DMX，包括分類、風險分析、產生建議及線性迴歸。 您也可以擷取處理模型時所產生的模式和統計資料。  

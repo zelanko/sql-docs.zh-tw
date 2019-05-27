@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowwindow.f1
@@ -13,12 +12,12 @@ ms.assetid: ffd7ab42-d7ae-4e7c-86a1-a4364a37c91e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fed53298272e4fddb33175c06a8b4b40452e3365
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 403100ddfbd78609ac0d98dd3ee387d2ecdeec61
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828721"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059902"
 ---
 # <a name="data-flow-tab"></a>資料流程索引標籤
   使用 **設計師的** [資料流程] [!INCLUDE[ssIS](../includes/ssis-md.md)] 索引標籤，即可建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中的資料流程。  

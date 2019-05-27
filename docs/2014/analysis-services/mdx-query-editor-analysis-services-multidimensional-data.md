@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.startpage.mdx.f1
@@ -16,12 +15,12 @@ ms.assetid: 777f2c23-1c1c-4b72-9d19-48a4866551f8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9c47ca70b7637096a18332866ba42561e2dd729
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 579af162998ffaa7c9483a6e6d29a87f98e96fac
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727994"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077883"
 ---
 # <a name="mdx-query-editor-analysis-services---multidimensional-data"></a>MDX 查詢編輯器 (Analysis Services - 多維度資料)
   使用 MDX 查詢編輯器即可設計和執行以多維度運算式 (MDX) 語言撰寫的陳述式和指令碼。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - snippets [Transact-SQL], surround with
@@ -15,12 +14,12 @@ ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80018ea80f80f7c17412572005b8e8fb43004285
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2afb9294fa75926b6f6a78ec8b889a2e38a851a4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143652"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090342"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>插入範圍陳述式 Transact-SQL 程式碼片段
   範圍陳述式片段是可讓您在 BEGIN、IF 或 WHILE 區塊中封入一組 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時當做起點使用的範本。  

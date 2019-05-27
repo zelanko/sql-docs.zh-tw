@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.cubeproperties.f1
@@ -13,12 +12,12 @@ ms.assetid: 97e367f9-f95a-4163-add1-c74fd22db249
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 404dd6cd6c47f89b3a8e12acd6048aecae0c7098
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6857ece2f81ffdba839ec1a7f0ef420ec5d0acdf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679568"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086595"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Cube 或模型屬性對話方塊 (SSAS)
   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [資料庫屬性] 對話方塊，即可設定 Cube 或模型資料庫的屬性。 您可以在**物件總管**中，以滑鼠右鍵按一下 Cube 或模型，然後選取 [屬性]，藉以顯示此對話方塊。  

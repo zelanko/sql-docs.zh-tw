@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - DatabaseName Property
@@ -19,12 +18,12 @@ ms.assetid: 0ec6ef80-3b48-40c1-9618-2326a1d167a5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 03ff8dfddd844a766172ff0f459a1fff5d984574
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5f1c639d3f70555d9b656d1d077a761f81ae953e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646387"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097760"
 ---
 # <a name="databasename-property-wmi-msreportserverconfigurationsetting"></a>DatabaseName 屬性 (WMI MSReportServer_ConfigurationSetting)
   指定主控報表伺服器資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 唯讀。  

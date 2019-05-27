@@ -15,14 +15,14 @@ f1_keywords:
 - sql14.ssis.designer.powerquerysource.connmgrs.f1
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
-ms.openlocfilehash: 0e2bcd19b705aa3dd0afb229d523b9ceb3725fc3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 3ca141c40420b4d2e71a660220075413d9ca8c64
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65726575"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015075"
 ---
 # <a name="power-query-source-preview"></a>Power Query 來源 (預覽)
 

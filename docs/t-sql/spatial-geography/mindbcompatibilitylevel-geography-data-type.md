@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - MinDbCompatibilityLevel method (geography)
 ms.assetid: a9e44748-4a9e-4179-abc4-7631597be5a7
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 2fbd22febcadf49726a4c2c4891db85417cbf787
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32d7df746e51612dd39360ff6702e9489111ce04
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744206"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937246"
 ---
 # <a name="mindbcompatibilitylevel-geography-data-type"></a>MinDbCompatibilityLevel (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

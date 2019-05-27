@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytransformation.query.f1
@@ -15,12 +14,12 @@ ms.assetid: f6d8958c-0a70-41ab-b6d9-b42cf3194d37
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5d752fbd5ec1cd82ce7d573bb68ddb8acd162adc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 431e01df40ab3a531af21977b85253d84768118f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769964"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059746"
 ---
 # <a name="data-mining-query-transformation-editor-query-tab"></a>資料採礦查詢轉換編輯器 (查詢索引標籤)
   使用 **[資料採礦查詢轉換編輯器]** 對話方塊的 **[查詢]** 索引標籤，即可建立預測查詢。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensionattributes.f1
@@ -13,12 +12,12 @@ ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7abb4560696dba21512066a7ff0ba3153ae2319a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 84f8612b4d420eed11308472c9c8fabfc56e23c0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748090"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069533"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>選取維度屬性 (維度精靈)
   使用 **[選取維度屬性]** 頁面，即可選取和修改要建立之維度的屬性。  

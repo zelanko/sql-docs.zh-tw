@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - binding attributes [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 467f0cf3-8691-476d-a7fb-a5df4e374eaf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4e4c55a1f55dc4a6a0e9e1c4844ffcc07e003804
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d0a08c191bfd8ec00a4e0181ad3960bf7644f93e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62701757"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077400"
 ---
 # <a name="bind-an-attribute-to-a-name-column"></a>繫結屬性與名稱資料行
   此程序描述如何使用維度設計師中的 **[屬性]** 窗格，及使用 **[物件繫結]** 對話方塊，手動繫結屬性與名稱資料行。  

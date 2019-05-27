@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 923467270901b91c35b40005c75207e7b1799194
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 89ba538c3ac3dfd7a262e4ae17cb9ddd6cf7265c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732591"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082604"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>資料集篩選器或模型篩選器對話方塊
   這個對話方塊可協助您建立能套用至資料集的篩選器。  資料集可以是用於字串的外部資料集，或採礦模型的案例資料。 對話方塊的名稱會根據篩選器是用於外部資料集或採礦模型而變更。  
@@ -34,7 +33,7 @@ ms.locfileid: "62732591"
   
  **如需詳細資訊：＜＞**[測試及驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **條件**  
  顯示資料表名稱，後面跟著資料行名稱及條件。  
   

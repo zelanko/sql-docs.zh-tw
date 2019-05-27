@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 653b15db-a984-4b4b-b224-81b0285b099b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 998ff700a63274c2a57f7e3dc9d6981b2e43bb53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3399c6e8c73916e613197aec2ee0499098a8fa86
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193104"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095392"
 ---
 # <a name="feature-rules-upgrade"></a>功能規則 (升級)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式作業完成之前，安裝程式會驗證您的電腦組態。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間，系統會掃描將安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦，並檢查妨礙 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝作業的狀況。 在安裝程式啟動升級精靈之前，會先擷取每個項目的狀態。 然後它會比較所需條件的結果，並提供解決封鎖問題的指引。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的作業完成之前，此安裝程式會驗證您的電腦組態。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間，系統會掃描將安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦，並檢查妨礙 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝作業的狀況。 在安裝程式啟動升級精靈之前，會先擷取每個項目的狀態。 然後它會比較所需條件的結果，並提供解決封鎖問題的指引。  
   
  系統組態檢查會產生報告，其中包含每個已執行規則以及執行狀態的簡短描述。 系統組態檢查報告位於 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< YYYYMMDD_HHMM&AMP;GT >\\。  
   

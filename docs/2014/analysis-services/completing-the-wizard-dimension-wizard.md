@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.finish.f1
@@ -13,12 +12,12 @@ ms.assetid: 1137740d-3063-4ab1-9cfe-8319194db937
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 520afc917b3ee91e7b41eb74c21d050127deed56
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4efca206c40c685f81c2c4629714e285ba6119af
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680492"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087600"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>正在完成精靈 (維度精靈)
   使用 **[正在完成精靈]** 頁面，即可進行下列程序：  

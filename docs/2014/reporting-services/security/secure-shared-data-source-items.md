@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
@@ -15,12 +14,12 @@ ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f96e9f1a52e7c64ce1efb99b70e73c0dedada292
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2e3c7b1ec37eea31aef0d381815e4286f993c827
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63306304"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101644"
 ---
 # <a name="secure-shared-data-source-items"></a>保護共用資料來源項目的安全
   您可以在共用資料來源項目上設定安全性，以啟用或停用它的存取權。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8930c63c-bc6f-46c2-b428-b3c29ee89a7d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99321c27fa28d16260ee3b27972d83a8b61cae59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 47f74d4510b46b984eb58706ff4ac159cb8b1352
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62898906"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059366"
 ---
 # <a name="enable-logging-for-package-execution-on-the-ssis-server"></a>在 SSIS 伺服器上啟用封裝執行的記錄功能
   此程序描述如何在執行已經部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器的封裝時，設定或變更封裝的記錄層次。 執行封裝時所設定的記錄層次會覆寫您使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 設定的封裝記錄。 如需詳細資訊，請參閱 [在 SQL Server Data Tools 中啟用封裝記錄功能](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md) 。  

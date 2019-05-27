@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - xs:date
@@ -16,12 +15,12 @@ ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e8ccc6581e48a44e636fad07891bd8ec51596fbf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0f631783aad92757edd4faae41cd43c06c431887
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063492"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096611"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>針對 xs:dateTime、xs:date 和 xs:time 類型之儲存格式所做的變更
   XMLDATETIME 規則會識別您的資料庫是否包含升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之後將成為無效的具類型 XML 資料。  

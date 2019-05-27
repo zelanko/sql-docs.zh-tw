@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sendmailtask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 5e60ebbf-8f2d-4d77-a859-e47e0f605cb2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 35b138d6d66d8f6c0b7edc78c9dd497622cd3214
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 50a054bbe83c7873d1da93909bc57331fcf4a635
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889221"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055863"
 ---
 # <a name="send-mail-task-editor-general-page"></a>傳送郵件工作編輯器 (一般頁面)
   使用 [傳送郵件工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述傳送郵件工作。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.jobproperties.f1
@@ -13,12 +12,12 @@ ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 90a5bba8daa52bee13c0bb4d42554c4b30680c2d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f00250011f3c325ca39c3c040e5252b804182d86
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63201116"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100219"
 ---
 # <a name="job-properties-management-studio"></a>作業屬性 (Management Studio)
   您可以使用 [作業屬性] 頁面來檢視有關進行中報表或訂閱的資訊，然後再加以取消。  

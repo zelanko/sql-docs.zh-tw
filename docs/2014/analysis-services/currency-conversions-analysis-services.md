@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - multiple currency conversions
@@ -19,12 +18,12 @@ ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 14ae3f58a8cfdef4dfde4d30e969e4386bd1dbc0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 48bbb9eeacc1e3ba2bd31ef10b47b058f0f57239
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679607"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086545"
 ---
 # <a name="currency-conversions-analysis-services"></a>貨幣轉換 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  僅限多維度  

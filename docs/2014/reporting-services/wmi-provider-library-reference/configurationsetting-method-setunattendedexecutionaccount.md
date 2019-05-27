@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - SetUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,12 +18,12 @@ ms.assetid: 1ba6be6f-b05c-4ea0-af98-cd0780290b70
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e3c0402d8ae19850c213355cb69cf452e5a3cc0f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 095929c60d586fa0ed6c857412a369171acdaa10
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646327"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097930"
 ---
 # <a name="setunattendedexecutionaccount-method-wmi-msreportserverconfigurationsetting"></a>SetUnattendedExecutionAccount 方法 (WMI MSReportServer_ConfigurationSetting)
   指定用來自動執行報表的帳戶。  

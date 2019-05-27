@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.finish.f1
@@ -13,17 +12,17 @@ ms.assetid: 63df4ff9-0f38-42e6-9113-ec20cfe83380
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc4a4431d3352ec0cd8135e2d7c44ad66cb4a88e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6491d0a73aa28d8dd396bf1befa321ed6f1cb9b9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680631"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087734"
 ---
 # <a name="completing-the-wizard-schema-generation-wizard-analysis-services---multidimensional-data"></a>正在完成精靈 (結構描述產生精靈) (Analysis Services - 多維度資料)
   使用 **[正在完成精靈]** 頁面，即可確認您的選擇並建立新的專案和資料來源檢視。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **摘要**  
  顯示您設定的選項。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.columns.f1
@@ -15,12 +14,12 @@ ms.assetid: 690ffef5-fd59-4e95-a27d-4fcf0d6b1c0b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 63410531bcb0af8a254b2d2a5c6c650423cb9a1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e1a32dcbcee6704cb4fecef7b58cbff8354b910a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890514"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057900"
 ---
 # <a name="lookup-transformation-editor-columns-page"></a>查閱轉換編輯器 (資料行頁面)
   使用 **[查閱轉換編輯器]** 對話方塊的 **[資料行]** 頁面，即可指定來源資料表和參考資料表之間的聯結，以及從參考資料表中選取查閱資料行。  

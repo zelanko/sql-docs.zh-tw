@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying variables
@@ -14,12 +13,12 @@ ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aaac5f66e8c01364419d8d2d9d5e853bf929ef7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aadfb7b53d22a00bf14699f611f20ce508a7ab5e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62878201"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055647"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>設定使用者定義變數的屬性
   若要在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中設定使用者定義變數的屬性，您可以使用下列其中一項功能：  

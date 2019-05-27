@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpisview.f1
@@ -13,12 +12,12 @@ ms.assetid: 3cd99acc-368d-4e21-ad18-298fff056acd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f3d99bf2af18b393275b68e7e56153fa1f49c2b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 88e48fb2bfae9711b6d8f303287f2e26dff18d9a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729635"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079431"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>KPI (Cube 設計工具) (Analysis Services - 多維度資料)
   使用 Cube 設計師中的 [KPI] 索引標籤，檢視及編輯所選取之 Cube 檢視的關鍵效能指標 (KPI)。  

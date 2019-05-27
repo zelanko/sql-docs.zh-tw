@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.existingdimselection.f1
@@ -13,17 +12,17 @@ ms.assetid: 3cb2551a-41a0-4af0-808f-050815428273
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 394738e72ce96b16648ece5b851e6b1974d9f076
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e02b4da19c3fe8cef9d31b304b1aeecdaa906bdd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747680"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069519"
 ---
 # <a name="select-existing-dimensions-cube-wizard"></a>選取現有維度 (Cube 精靈)
   使用 **[選取現有維度]** 頁面，即可選取要包含在 Cube 中的現有維度。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Dimensions**  
  選取要包含在 Cube 中的維度。  
   

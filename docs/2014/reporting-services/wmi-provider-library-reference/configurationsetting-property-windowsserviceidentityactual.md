@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - WindowsServiceIdentityActual
@@ -19,12 +18,12 @@ ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aed96c2288c7720f1f4995c9b0caf3d877ebe98e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65a440a189971f1515354c9c39215c27cc203d32
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62645624"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097410"
 ---
 # <a name="windowsserviceidentityactual-property-wmi-msreportserverconfigurationsetting"></a>WindowsServiceIdentityActual 屬性 (WMI MSReportServer_ConfigurationSetting)
   執行報表伺服器 Windows 服務所使用的識別。 唯讀。  

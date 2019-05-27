@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], adding
@@ -14,12 +13,12 @@ ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fdcc6285ba1a75827f91f856319d296c0cbbff5d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8b7d92800a2f5d55cf85ace3e7746d934b7474b6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62772264"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062004"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>加入、刪除或共用封裝中的連接管理員
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括用來連接到其他資料來源 (例如，關聯式資料庫、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫，以及 CSV 和 XML 格式的檔案) 的各種連線管理員類型。 您可以在封裝層級或專案層級建立連接管理員。 在專案層級建立的連接管理員可在專案中的所有封裝上使用。 而在封裝層級建立的連接管理員則可在該特定封裝上使用。  

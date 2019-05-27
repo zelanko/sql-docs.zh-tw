@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.calculationtoolspane.f1
@@ -13,12 +12,12 @@ ms.assetid: b1aa8a1a-6532-45d2-8f53-d3e211d7197a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 61aed2ac785c628d7a67df39af13aaf0a7c74914
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ff0f13ec91ef1e8796ed5ebd5ccf3cc37ff2f354
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62681108"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088283"
 ---
 # <a name="calculation-tools-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>計算工具 (計算索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 Cube 設計師之 **[計算]** 索引標籤上的 **[計算工具]** 窗格，即可瀏覽可在計算中使用的中繼資料、函數以及範本。  

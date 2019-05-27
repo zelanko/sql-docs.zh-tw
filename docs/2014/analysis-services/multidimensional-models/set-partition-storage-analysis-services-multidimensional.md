@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - low latency MOLAP
@@ -26,12 +25,12 @@ ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0738c0968606ea4f618f4d527db8c99cfff19296
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62741904"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072984"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>設定分割區儲存 (Analysis Services - 多維度)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會針對儲存模式和快取選項提供數個標準儲存組態。 這些會提供更新通知、延遲以及重建資料的常用組態。  

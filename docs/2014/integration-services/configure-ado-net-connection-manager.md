@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetconnection.f1
@@ -15,12 +14,12 @@ ms.assetid: 609f8354-e876-4fed-adab-ac8d57a94f1c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 75408785e3aad3a535b418983e2fbcd16df40429
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 51d115aaeebcedd102709b0e1f3fab81e439a521
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834485"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060842"
 ---
 # <a name="configure-adonet-connection-manager"></a>設定 ADO.NET 連接管理員
   使用 [設定 ADO.NET 連線管理員] 對話方塊加入資料來源的連接，可使用 .NET Framework 資料提供者 (例如 SqlClient 提供者) 來存取此資料來源。 連接管理員可以使用現有的連接，或者您也可以建立新的連接。  

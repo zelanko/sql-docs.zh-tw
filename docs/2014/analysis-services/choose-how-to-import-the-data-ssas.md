@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.choosehowtoimpdata.f1
@@ -13,12 +12,12 @@ ms.assetid: 17dc6903-c239-46aa-a3b0-6e3156accacc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de6a4bf18a6502eba733fd48728e846ba8d1d20f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 482d3b072eaa4db2c3aee84986590dd9d505b347
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62681136"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088136"
 ---
 # <a name="choose-how-to-import-the-data-ssas"></a>選擇如何匯入資料 (SSAS)
   **[資料表匯入精靈]** 的這個頁面可讓您選擇如何從選取的資料來源匯入資料。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  

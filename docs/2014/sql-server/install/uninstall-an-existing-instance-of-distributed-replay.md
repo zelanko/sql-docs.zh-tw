@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 418af5b3-b8d8-45ba-9219-24ac2a348c29
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2e288434b771b46323950972ad301b78f8d05c5a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 45fddb470ce7bee4dd84cbcc3c656e33d30e3166
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62988273"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091770"
 ---
 # <a name="uninstall-an-existing-instance-of-distributed-replay"></a>解除安裝 Distributed Replay 的現有執行個體
   解除安裝 Distributed Replay 元件 (控制器或用戶端) 將會移除下列項目：  

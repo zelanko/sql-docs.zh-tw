@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rpt.rptdesigner.projectpropertypages.general.f1
@@ -15,19 +14,19 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a76281eead6430ca0dafae8671c7990f3c6c2de3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a9d66e6e5317bef72be6bba254ccca0cc82aa026
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63201073"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100034"
 ---
 # <a name="project-property-pages-dialog-box"></a>專案屬性頁對話方塊
   使用專案屬性頁，即可設定報表伺服器專案的部署屬性。 若要開啟此對話方塊，請從 專案 功能表按一下 \<報表專案名稱>屬性。  
   
  在您定義組態屬性之後，可以從工具列的 [方案組態] 下拉式清單中選取組態。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Configuration**  
  選取要編輯的組態。 一開始，會提供下列的組態：**偵錯**， **DebugLocal**，以及**發行**。 使用中組態會先出現，例如 **Active(Debug)**。  
   

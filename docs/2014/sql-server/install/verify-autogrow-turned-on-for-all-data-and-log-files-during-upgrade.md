@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - log files [SQL Server], size
@@ -16,12 +15,12 @@ ms.assetid: a5860904-e2be-4224-8a51-df18a10d3fb9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ab29cc94071b95f6ff8cffb95902851d1796ed80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0217d959759a59e49ce76e4a841c5d52e958e9ce
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62985872"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091221"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>在升級過程中，確認已為所有資料和記錄檔開啟自動成長
   Upgrade Advisor 偵測到未設定為自動成長的資料或記錄檔。 全新和增強功能需要額外的磁碟空間供使用者資料庫和**tempdb**系統資料庫。 若要確保升級和後續實際執行作業期間，資源可以配合規模的增加，我們建議所有的使用者資料和記錄檔自動成長設定為 ON， **tempdb**升級前的資料和記錄檔。  

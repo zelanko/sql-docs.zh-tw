@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - objects [Integration Services]
@@ -13,12 +12,12 @@ ms.assetid: 3da1ee6e-489d-4436-9fcb-bb0a57f9ae9a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5a557fd57062bc6af301decffada45ffd5d38933
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b48b7b4f106b7be318777d6041c5574f9d6c3039
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877825"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054506"
 ---
 # <a name="view-package-objects-in-package-explorer"></a>在封裝總管中檢視封裝物件
   此程序描述如何使用 [封裝總管] 檢視 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中的物件。  

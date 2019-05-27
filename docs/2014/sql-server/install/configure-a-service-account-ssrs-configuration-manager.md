@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Web service, accounts
@@ -16,12 +15,12 @@ ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0ffc525e4d9ab516481eadf4cc303a704ce56da6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 84f6f2bdb4c5c512cb75dfea554b5ae28e3c3f02
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63033608"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096100"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>設定服務帳戶 (SSRS 組態管理員)
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝中，報表伺服器 Web 服務、報表管理員和背景處理應用程式會在單一服務中執行。 當您在 [服務識別] 頁面中指定此服務執行所用的帳戶時，安裝期間會定義此帳戶，但是如果您想要使用不同的帳戶或更新密碼，可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具。  

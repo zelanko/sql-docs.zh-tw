@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Wizard
@@ -13,12 +12,12 @@ ms.assetid: d765c89e-9512-40fb-984a-8200c2541df6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 71c4e3f36548ddd594b301a73f4032303e4ddea5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f09e8b4e31d9826d0988b293e2236676125fc7d9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700886"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076052"
 ---
 # <a name="start-the-business-intelligence-wizard-in-dimension-designer"></a>在維度設計師中啟動商業智慧精靈
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，您可以使用 [商業智慧精靈] 或維度設計師，建立自訂積存運算子和自訂成員公式，並設定回寫的維度。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，您可以從方案總管或 Cube 設計師啟動商業智慧精靈。 可以從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]存取維度設計師。  

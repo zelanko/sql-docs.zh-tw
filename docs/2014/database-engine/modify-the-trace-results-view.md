@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9bafb97065c86a4d227f79b62c3d388d45c1445f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 780772f7703e4499c13eb9373ccad4252097b536
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62845932"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089442"
 ---
 # <a name="modify-the-trace-results-view"></a>修改追蹤結果檢視
   本主題描述如何透過執行下列工作，在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中修改擴充事件工作階段的追蹤結果檢視。  

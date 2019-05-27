@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 01/09/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.AFPADLSTASK.F1
@@ -14,12 +13,12 @@ ms.assetid: 02b9edd7-6ef9-463e-abbf-e1830bcae875
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aeabdcfa1fd36adf9bd4291623c56fbfecf0520e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 69a521cb72e68141f5706f5187a0288a3f44f241
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62771874"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061380"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store 檔案系統工作
 

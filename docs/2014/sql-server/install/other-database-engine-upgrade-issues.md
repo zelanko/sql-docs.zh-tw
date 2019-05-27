@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], upgrading
@@ -13,12 +12,12 @@ ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4fe890744f546e02c91630c5bb0115f5b5c8cb9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f247f9addde6baa949f3260d7a9d9f86ce0c5bff
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62805630"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093703"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>其他 Database Engine 升級問題
   目前的 Upgrade Advisor 版本無法偵測到下列升級問題。 請檢閱下列問題，以便評估它們可能對您系統造成的影響。  

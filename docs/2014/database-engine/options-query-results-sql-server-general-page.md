@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - CUSTOMERID_TSQL
@@ -17,12 +16,12 @@ ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 32c476b904e52229a48b20c1a0ebc599d49a93b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 48261d5ff0290dd5042b6604d9e492871bf6da38
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62775018"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089330"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>選項 （查詢結果-SQL Server-一般頁面）
   使用此頁面來決定 [查詢結果] 窗格的預設行為。 若要顯示這些設定，請在 [工具] 功能表上按一下 [選項]，展開 [查詢結果] 資料夾，選取 [SQL Server]，然後按一下 [一般]。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [查詢] 功能表上的 [查詢選項]，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗中按一下滑鼠右鍵，並選取 [查詢選項]。  

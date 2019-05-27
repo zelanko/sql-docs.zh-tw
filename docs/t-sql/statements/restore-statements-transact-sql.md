@@ -37,16 +37,16 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e1e25d8d5709f409f504d85f7917b85c1e6f3886
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: b673b21eca837e9ccaacd3a47c819287a854e6f8
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828168"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947049"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 陳述式 (Transact-SQL)
 
@@ -69,7 +69,7 @@ ms.locfileid: "56828168"
 
 &nbsp;
 
-## <a name="sql-server"></a>[SQL Server]
+## <a name="sql-server"></a>SQL Server
 
 此命令可讓您執行以下還原案例：
 
@@ -435,7 +435,7 @@ REPLACE 選項會覆寫還原通常會執行的數項重要安全檢查。 會�
 > [!NOTE]
 > 如需使用 Microsoft Azure Blob 儲存體來進行 SQL Server 備份及還原的特定資訊，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。
 
-### <a name="permissions"></a>[權限]
+### <a name="permissions"></a>權限
 
 如果還原的資料庫不存在，使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。 如果資料庫存在，RESTORE 權限預設為 **系統管理員 (sysadmin)** 和 **資料庫建立者 (dbcreator)** 固定伺服器角色的成員以及資料庫的擁有者 (**dbo**) (對 FROM DATABASE_SNAPSHOT 選項而言，資料庫一律存在)。
 
@@ -810,7 +810,7 @@ FROM URL
 
 若要還原加密的資料庫，您必須能夠存取之前用來加密資料庫的憑證或非對稱金鑰。 如果沒有該憑證或非對稱金鑰，就無法還原資料庫。 因此，只要需要備份，就必須保留用來加密資料庫加密金鑰的憑證。 如需詳細資訊，請參閱 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。
 
-## <a name="permissions"></a>[權限]
+## <a name="permissions"></a>權限
 
 使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。
 
@@ -935,7 +935,7 @@ RESTORE HEADERONLY 指定只傳回一個使用者資料庫備份的標頭資訊�
 
 RESTORE HEADERONLY 結果會比照 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY 結果的模式。 此結果有超過 50 個資料行，這些資料行不會完全供[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]使用。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY 結果中資料行的描述，請參閱 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)。
 
-## <a name="permissions"></a>[權限]
+## <a name="permissions"></a>權限
 
 需要 **CREATE ANY DATABASE** 權限。
 

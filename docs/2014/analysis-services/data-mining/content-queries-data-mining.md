@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b500821dff03210d63007ef4831f93327b5e6bdb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f6b20c32ee955023ea24af2f70a83a7793ba1d64
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62715185"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085645"
 ---
 # <a name="content-queries-data-mining"></a>內容查詢 (資料採礦)
   內容查詢是一種擷取採礦模型之內部統計資料和結構相關資訊的方法。 內容查詢有時候可以提供檢視器中無法隨時取得的詳細資料。 您也可以使用內容查詢的結果，以程式設計的方式擷取其他用途的資訊。  

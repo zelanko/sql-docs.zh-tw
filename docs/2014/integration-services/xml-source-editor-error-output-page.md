@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsourceadapter.erroroutput.f1
@@ -15,12 +14,12 @@ ms.assetid: 2ddb97c2-1e43-478f-8872-b6efd41b931e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8369b2cb34c6355d9957e2a41ed382b25b11f537
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 19ebeac45f7596de42add894922838864f62546e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766001"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054304"
 ---
 # <a name="xml-source-editor-error-output-page"></a>XML 來源編輯器 (錯誤輸出頁面)
   使用 **[XML 來源編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  

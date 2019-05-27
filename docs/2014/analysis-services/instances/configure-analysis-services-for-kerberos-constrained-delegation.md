@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 20e8a9d7b360b9b161d994805ff713840962be41
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1374179c5bdac27bc7fda98d8a4675eab4ca9a18
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730895"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080225"
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>設定 Analysis Services 進行 Kerberos 限制委派
   將 Analysis Services 設定為 Kerberos 驗證時，若能獲致下列其中一項或兩項結果，對您來說可能最有用處：讓 Analysis Services 在查詢資料時模擬使用者識別，或是由 Analysis Services 將使用者識別委派給下層服務。 每一種情況的組態需求略有不同。 這兩種情況都需要驗證以確保組態設定正確。  

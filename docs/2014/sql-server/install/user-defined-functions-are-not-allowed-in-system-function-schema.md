@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - system functions [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35cc33df40c17e6dbc1935e205ed688615de0294
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62506206"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091325"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>system_function_schema 中不允許有使用者定義函數
   Upgrade Advisor 偵測到未記載之使用者所擁有的使用者定義函數**system_function_schema**。 您無法藉由指定這個使用者建立使用者定義的系統函數。 **System_function_schema**使用者名稱不存在，而且使用者識別碼與此名稱相關聯 (UID = 4) 是保留供**sys**結構描述和限制為僅供內部使用。  

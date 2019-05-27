@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.mapping.f1
@@ -13,12 +12,12 @@ ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f2d95909e76c6b5c3665926783fb42ff247d1ba9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 03488e4cfd3a0cc905a58166f381f68eb3292c49
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894056"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058529"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Foreach 迴圈編輯器 (變數對應頁面)
   使用 [Foreach 迴圈編輯器] 對話方塊的 [變數對應] 頁面，即可將變數對應至集合值。 會用迴圈之每個反覆運算上的集合值來更新變數的值。  
@@ -27,7 +26,7 @@ ms.locfileid: "62894056"
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教學課程中的＜建立簡易 ETL 封裝教學課程＞包含了一門教您加入和設定「Foreach 迴圈」的課程。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **變數**  
  選取現有的變數，或按一下 [\<新增變數...>] 以建立新的變數。  
   

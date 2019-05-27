@@ -11,14 +11,14 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
-ms.reviewer: douglasl
+ms.reviewer: mathoma
 manager: craigg
-ms.openlocfilehash: 901d410fc7aa954dcd39a852f240168f2a690e3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2d0e07e069754e961b290b33d77cb30b522c367f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294512"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015145"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant"></a>建立分析報告中資料庫測試助理
 

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a80e362c97df74773d303a4b022d376fff40fb70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 350aadcdd44dcc4424b94792286a7421e2613b2e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680468"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087391"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>設定或修復 PowerPivot for SharePoint 2010 (PowerPivot 組態工具)
   若要設定或修復 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 的安裝，請使用 PowerPivot 組態工具。 此組態工具一開始先掃描系統，然後傳回完成或修復安裝所需的動作清單。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 安裝精靈會安裝適用於 SharePoint 2010 的 PowerPivot 組態工具，以及適用於 SharePoint 2013 的 PowerPivot 組態工具。 本主題描述適用於 SharePoint 2010 的 PowerPivot 組態工具。 如需有關 SharePoint 2010 的詳細資訊，請參閱 <<c0> [ 設定或修復 PowerPivot for SharePoint 2013 &#40;PowerPivot 組態工具&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)。</c0>  
@@ -89,7 +88,7 @@ ms.locfileid: "62680468"
   
  下表說明用於設定伺服器的值。  
   
-|頁面|輸入值|Source|描述|  
+|頁面|輸入值|`Source`|描述|  
 |----------|-----------------|------------|-----------------|  
 |**設定或修復 PowerPivot for SharePoint**|預設帳戶|目前使用者|預設帳戶是用於在伺服器陣列中佈建共用服務的網域 Windows 使用者帳戶。 此帳戶用於佈建 PowerPivot 服務應用程式、Secure Store Service、Excel Services、Web 應用程式集區識別、網站集合管理員和 PowerPivot 無人看管的資料重新整理帳戶。<br /><br /> 根據預設，工具會輸入目前使用者的網域帳戶。 除非伺服器是設定做為評估之用，否則應該以其他網域使用者帳戶取代此預設帳戶。<br /><br /> 您之後也可以使用管理中心變更服務識別。<br /><br /> 您可以選擇在 PowerPivot 組態工具中為下列項目指定專用帳戶：<br /><br /> Web 應用程式，使用 **[建立預設 Web 應用程式]** 頁面 (假設此工具正在為伺服器陣列建立 Web 應用程式)。<br /><br /> PowerPivot 無人看管的資料重新整理帳戶，使用此工具中的 **[建立無人看管的資料重新整理帳戶]** 頁面。|  
 ||資料庫伺服器|本機 PowerPivot 具名執行個體 (如果有的話)|如果資料庫引擎執行個體安裝為 PowerPivot 具名執行個體，此工具會使用此執行個體擴展資料庫伺服器欄位。 如果您沒有安裝資料庫引擎，此欄位是空的。 您必須提供執行個體。 此執行個體可以是 SharePoint 伺服器陣列所支援的任何 SQL Server 版本或版別。|  

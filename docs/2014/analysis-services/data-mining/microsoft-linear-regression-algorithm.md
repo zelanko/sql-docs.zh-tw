@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
@@ -16,12 +15,12 @@ ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84a7ae52cf3556d7c79e3b9ca8d6027f8a5f14db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: df1b3616a85d93b4c5fa814ee759880077c03b8f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62734127"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084034"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 線性迴歸演算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法的變異形式，可幫助您計算相依與獨立變數之間的線性關聯性，然後使用該關聯性進行預測。  

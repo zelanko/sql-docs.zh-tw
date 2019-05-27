@@ -18,16 +18,16 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - starting point of expression in character string
 ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88f57c22df5b6a621b5133f56f79a16ede550d77
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: adfc98d7502f41b2408117ff0482e208d27834a8
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802285"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947081"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
 搜尋開始的 **integer** 或 **bigint** 運算式。 如果未指定 *start_location*，或者它是負數或零 (0) 值，則搜尋會從 *expressionToSearch* 開頭開始。
   
 ## <a name="return-types"></a>傳回類型
-如果 *expressionToSearch* 具有 **nvarchar(max)**、**varbinary(max)** 或 **varchar(max)** 資料類型，則為 **bigint**；否則為 **int**。
+如果 *expressionToSearch* 具有 **nvarchar(max)** 、**varbinary(max)** 或 **varchar(max)** 資料類型，則為 **bigint**；否則為 **int**。
   
 ## <a name="remarks"></a>Remarks  
 如果 *expressionToFind* 或 *expressionToSearch* 運算式具有 Unicode 資料類型 (**nchar** 或 **nvarchar**)，但另一個運算式沒有，則 CHARINDEX 函式會將這個其他運算式轉換成 Unicode 資料類型。 CHARINDEX 不得與 **image**、**ntext** 或 **text** 資料類型搭配使用。
@@ -66,7 +66,7 @@ CHARINDEX 會根據輸入定序來執行比較。 若要執行指定定序的比
   
 傳回的開始位置是以 1 為基準，而不是以 0 為基準。
   
-0x0000 (**char(0)**) 是 Windows 定序中未定義的字元，而且不得包含在 CHARINDEX 中。
+0x0000 (**char(0)** ) 是 Windows 定序中未定義的字元，而且不得包含在 CHARINDEX 中。
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補充字元 (Surrogate 字組)  
 使用 SC 定序時，*start_location* 和傳回值會將代理字組計算成一個字元，而不是兩個字元。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。

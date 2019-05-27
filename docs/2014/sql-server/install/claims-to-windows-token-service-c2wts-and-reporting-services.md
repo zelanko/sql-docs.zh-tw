@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - c2wts.exe.config
@@ -16,12 +15,12 @@ ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0f6443f8015d3b2a4c94c9470a35a5b1433691d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e08be032df493913cc6cebf5ae29d583f26c86ba
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206451"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096544"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>對 Windows Token 服務 (C2WTS) 和 Reporting Services 的宣告
   SharePoint 對 Windows Token Service 宣告 (c2WTS) 是必要項目[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 模式，如果您想要針對 SharePoint 伺服器陣列以外的資料來源使用 windows 驗證。 使用者若是利用 Windows 驗證存取資料來源也是如此，因為 Web 前端 (WFE) 與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共用服務之間的通訊皆會使用宣告驗證。  

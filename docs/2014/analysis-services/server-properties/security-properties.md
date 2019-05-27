@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services], properties
@@ -20,12 +19,12 @@ ms.assetid: 2fc7fe10-0cbb-49ac-aa8c-8ec3f7a7705f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a382b37b9b7e25c8cb42e42bf873a0ce7f2a4920
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9316827245adfbcf64bd798869f570dc5f0af14c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746700"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068913"
 ---
 # <a name="security-properties"></a>安全性屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的安全性伺服器屬性。 如需有關其他伺服器屬性及如何設定伺服器屬性的詳細資訊，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  
