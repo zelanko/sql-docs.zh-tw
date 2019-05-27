@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.finish.f1
@@ -13,12 +12,12 @@ ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 99cc8b42d30bd19e878283d0641d23c894d1abb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 95b1e9822296e26a187b333140ea89c47cb05466
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680611"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087704"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>正在完成精靈 (資料採礦精靈)
   使用 [正在完成精靈] 頁面，即可檢閱完成精靈時會建立的採礦結構。 您也可以設定採礦結構的名稱。  
@@ -30,7 +29,7 @@ ms.locfileid: "62680611"
   
  **如需詳細資訊：**[資料採礦精靈 &#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[資料採礦設計師](data-mining/data-mining-designer.md)，[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **採礦結構名稱**  
  鍵入 [資料採礦精靈] 所定義之採礦結構的名稱。  
   

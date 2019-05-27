@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 958f5d4c-d9c1-4b38-83c3-ebac60e2a9b6
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 782403569476d4eb7b25f0a19e70e0dad156da95
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8bca81e9e02cf7f2bfed14b05a5842ca52a6d44d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131028"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091037"
 ---
 # <a name="web-assistant-stored-procedures-have-been-removed"></a>已經移除了 Web 助理預存程序
   Upgrade Advisor 偵測到您使用了 Web 助理預存程序。  

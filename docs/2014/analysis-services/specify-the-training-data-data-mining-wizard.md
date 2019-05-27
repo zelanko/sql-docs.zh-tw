@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifytrainingdata.f1
@@ -13,12 +12,12 @@ ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c06fb99f8e2104e17d9f6d5f8016b3149ab62c76
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745848"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068070"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>指定培訓資料 (資料採礦精靈)
   使用 [指定定型資料] 頁面，即可識別要在採礦結構中包含什麼資料行。 您可以選取要包含在結構中的資料行，即使不會在所有模型中使用也是如此。 例如，如果想要從採礦模型鑽研資料行，則可將這些資料行包含在結構中 (而非模型中)。  
@@ -28,7 +27,7 @@ ms.locfileid: "62745848"
 > [!NOTE]  
 >  不同的採礦演算法會以不同的方式使用索引鍵。 若要深入了解不同種類的索引鍵，請參閱[內容類型 &#40;資料採礦&#41;](data-mining/content-types-data-mining.md)。  
   
- **如需詳細資訊：**[採礦結構&#40;Analysis Services-資料採礦&#41;](data-mining/mining-structures-analysis-services-data-mining.md)，[採礦模型資料行](data-mining/mining-model-columns.md)，[資料採礦精靈] &#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)， [建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
+ **如需詳細資訊：**[採礦結構&#40;Analysis Services-資料採礦&#41;](data-mining/mining-structures-analysis-services-data-mining.md)，[採礦模型資料行](data-mining/mining-model-columns.md)，[資料採礦精靈 &#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)， [建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>選項。  
  **資料表/資料行**  

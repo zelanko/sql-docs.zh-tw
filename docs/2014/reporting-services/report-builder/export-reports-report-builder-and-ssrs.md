@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10437"
@@ -13,12 +12,12 @@ ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 91d702b8b5b3402783fb47819bdd18d552682931
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d8b4fe6e791f84f0949b0657b890c79db99dfbf9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62987882"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107951"
 ---
 # <a name="exporting-reports-report-builder-and-ssrs"></a>匯出報表 (報表產生器及 SSRS)
   在您執行報表之後，可以將它匯出成另一種格式，例如 Excel 或 PDF，或是透過產生 Atom 服務文件，並且列出報表中所提供符合 Atom 規範的資料摘要，藉此匯出報表。  

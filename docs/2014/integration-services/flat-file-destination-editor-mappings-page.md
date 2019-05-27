@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledestadapter.mappings.f1
@@ -15,19 +14,19 @@ ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f758e70c4133c28182a4d8e0019dd1e568441025
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7f91b32a292975ec19b21dbd855f6c5c182738aa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768274"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058675"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>一般檔案目的地編輯器 (對應頁面)
   使用 [一般檔案目的地編輯器] 對話方塊的 [對應] 頁面，即可將輸入資料行對應到目的地資料行。  
   
  若要深入了解一般檔案目的地，請參閱[一般檔案目的地](data-flow/flat-file-destination.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可用的輸入資料行**  
  檢視可用的輸入資料行清單。 使用拖放作業，即可將可用的輸入資料行對應到目的地資料行。  
   

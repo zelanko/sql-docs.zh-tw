@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifycontentdatatype.f1
@@ -13,17 +12,17 @@ ms.assetid: 7061f674-e806-46f2-8c15-e260a3c69a17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc0fa58c45a49c6a2f09ca3e42df395cbaf20660
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 00113df9f330a2edfce0c75f69d45c1fcd9274ee
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745828"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068157"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>指定的資料行&#39;內容和資料類型 （資料採礦精靈）
   使用 [指定資料行的內容和資料類型] 頁面，即可修改精靈已經設定的資料行和內容類型。 精靈會使用來源資料行的資料類型和選取之演算法的功能，來決定每個資料行的預設資料和內容類型。  
   
- **如需詳細資訊：**[資料採礦精靈] &#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
+ **如需詳細資訊：**[資料採礦精靈 &#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>選項。  
  **資料行**  

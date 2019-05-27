@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], upgrade issues
@@ -13,12 +12,12 @@ ms.assetid: 40d245a2-0631-470e-81b3-1feb47e028cb
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6188ddab466ccbb27e121e5500a9af68ecbd71fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 93a971b82fa4bafd1d8fb51a148b7e488c7d6d20
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63067604"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093810"
 ---
 # <a name="obsolete-extensions-were-detected-on-the-report-server-computer-upgrade-advisor"></a>在報表伺服器電腦上偵測到過時的延伸模組 (Upgrade Advisor)
   Upgrade Advisor 偵測到一個或多個在目前版本中已經無法使用的轉譯延伸模組。  

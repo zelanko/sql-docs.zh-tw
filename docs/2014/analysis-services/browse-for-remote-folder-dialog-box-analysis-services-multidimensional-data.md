@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.browseforremotepartition.f1
@@ -13,12 +12,12 @@ ms.assetid: 1438c355-6a2c-4cf8-9b1d-19116fab45e7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 691214181386bb5ec82394dfb6aadc1b0b76bf1f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 23b0125ab578ebb4fb8837c95ec61db900880ec6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62658063"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064524"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>瀏覽遠端資料夾對話方塊 (Analysis Services - 多維度資料)
    **[瀏覽遠端資料夾]** 對話方塊會顯示為 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體定義之可用記錄和資料的資料夾清單。 您可以選取列出的資料夾，或視需要指定不同的資料夾。 執行下列其中一個步驟，即可顯示 **[瀏覽遠端資料夾]** 對話方塊：  

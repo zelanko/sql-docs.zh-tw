@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - DeleteEncryptedInformation (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,12 +18,12 @@ ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ee17ad2219bd39be10a72ff486c55aa5bb8684c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4ffe9834ea57f3f4a0d48387f631ae08a45182ad
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62647062"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098516"
 ---
 # <a name="deleteencryptedinformation-method-wmi-msreportserverconfigurationsetting"></a>DeleteEncryptedInformation 方法 (WMI MSReportServer_ConfigurationSetting)
   從報表伺服器資料庫中刪除加密的資訊。  

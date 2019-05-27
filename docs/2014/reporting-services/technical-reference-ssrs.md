@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, technical reference
@@ -17,12 +16,12 @@ ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 24e88abe61ef373cb93449d44d40c47742f95898
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c9d14f27e1b41bf2a636f53ecb13c4fd88a9e4bc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62631758"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100609"
 ---
 # <a name="technical-reference-ssrs"></a>技術參考 (SSRS)
   尋找工具及 PowerShell 參考文件以使用或管理 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。  

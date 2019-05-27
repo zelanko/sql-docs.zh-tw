@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 27e7fc46-689d-43a4-9647-1c27d182bdd6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 80b2705920b7793f7f89b323a16fa2f3618e4d1c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a633bd4c6a9ffe91a74858641b0b0305577922af
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62635630"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062803"
 ---
 # <a name="advanced-data-mining-query-editor"></a>進階資料採礦查詢編輯器
   **資料採礦進階查詢編輯器**是工具，可協助您建立自訂模型和查詢。  

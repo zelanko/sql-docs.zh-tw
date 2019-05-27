@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - MSReportServer_Instance Properties
@@ -19,12 +18,12 @@ ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0d9493824a6a4f34293ea56c2652b7f450ede4dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 27719888e994a9cfc9408901a7d89fcf28220c5c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63020203"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097030"
 ---
 # <a name="msreportserverinstance-properties"></a>MSReportServer_Instance 屬性
   MSReportServer_Instance 類別提供用戶端所需的基本資訊，以連接至安裝的報表伺服器。  

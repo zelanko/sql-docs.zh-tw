@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - event handlers [Integration Services], creating
@@ -13,12 +12,12 @@ ms.assetid: 5e56885d-8658-480a-bed9-3f2f8003fd78
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c64d535e7e712dde5dd98e8b4c14b3319d5947db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 589d90b52647241b22929473efc9c6e54eb3b75f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62772221"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062032"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>將事件處理常式加入封裝中
   在執行階段，容器及工作會引發事件。 藉由在引發事件時執行工作流程，您可以建立自訂事件處理常式，以回應這些事件。 例如，您可以建立在工作失敗時傳送電子郵件訊息的事件處理常式。  

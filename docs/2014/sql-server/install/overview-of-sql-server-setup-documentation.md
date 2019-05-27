@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 2620439a-f9d3-4b3c-9968-48f60b4bb9a5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 284c02898bb0ba51b7e99a2ba259f06d4092a23f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 39d3c0dbd23499072ddd0ca2cd21748d92103c8c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63010962"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093554"
 ---
 # <a name="overview-of-sql-server-setup-documentation"></a>SQL Server 安裝程式文件集的概觀
   您可以在安裝媒體上取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的文件集，也可以透過線上方式取得。  

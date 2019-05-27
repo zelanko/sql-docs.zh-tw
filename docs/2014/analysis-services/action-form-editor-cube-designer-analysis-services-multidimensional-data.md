@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionexpression.action.f1
@@ -13,12 +12,12 @@ ms.assetid: c363a29b-6099-473c-9625-460cc15b3d95
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 32d1389fcb780fab6a370e6a9043600461baec4b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7c0a9b232a30fbaa4358bf9b23eb28ff16d79b2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62626096"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062962"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>動作表單編輯器 (動作索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 [Cube 設計師] 中之 [動作] 索引標籤上的 [Action Form Editor (動作表單編輯器)] 窗格，即可建立和修改標準動作。  

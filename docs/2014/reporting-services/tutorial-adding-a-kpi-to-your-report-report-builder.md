@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5362e72fefa36102737e362a1b4ec8b11b96c77f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a1b158b6fc504a0917e0c268846da93be3aa59b9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62648225"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098981"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教學課程：將 KPI 新增至報表 (報表產生器)
   關鍵效能指標 (KPI) 是具有商務重要性的可測量值。 本教學課程將說明如何將 KPI 加入至報表。 在這個案例中，依產品子類別排列的銷售摘要便是 KPI。 KPI 的目前狀態會使用色彩、量測計和指標顯示。  

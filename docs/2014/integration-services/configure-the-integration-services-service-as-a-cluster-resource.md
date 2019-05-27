@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc6d8cfe6d77bd773317d2eae2ac98a9e200c70a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a9597686f4c9ca5a90a8344b425b6808cd96477a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834625"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060564"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>將 Integration Services 服務設定為叢集資源
   本節針對認為將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務設定為叢集資源的優點多於缺點的客戶，提供必要的設定指示。 不過， [!INCLUDE[msCoName](../includes/msconame-md.md)] 並不建議將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務設定為叢集資源。  

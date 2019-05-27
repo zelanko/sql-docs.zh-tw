@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 436b4c3d-3f2f-464a-be7e-5c051d9ffb8f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 27e6b4a1fb9726496ac4ae99a08b2e47a9136562
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 66c366bfe8dbf79d2f392627ad018747357e7da4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63195213"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095675"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>部署檢查清單：將 Reporting Services 安裝至現有的 SharePoint 伺服器陣列
   您可以將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 報表伺服器安裝至新的 SharePoint 伺服器陣列中，或安裝至現有的 SharePoint 伺服器陣列中。 此主題描述將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝至現有 SharePoint 伺服器陣列中的可能案例和最佳作法。  

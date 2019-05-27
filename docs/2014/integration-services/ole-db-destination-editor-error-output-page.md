@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdestadapter.errorhandling.f1
@@ -15,19 +14,19 @@ ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a24a8b6eb8c0f6cde72a6760270873c05c5de44a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3398a56ef3428376ca8c50b0fbd2b53e75b9491e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890391"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057115"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>OLE DB 目的地編輯器 (錯誤輸出頁面)
   使用 **[OLE DB 目的地編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，來指定錯誤處理選項。  
   
  若要深入了解 OLE DB 目的地，請參閱＜ [OLE DB Destination](data-flow/ole-db-destination.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **輸入/輸出**  
  檢視輸入的名稱。  
   

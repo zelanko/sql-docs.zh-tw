@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 1c220dcc-4014-4bfd-b997-6685902e6f67
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a677729f5c0f7a5ee1b6d10bbb3491937255b555
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a5056eda52064120164a25b270a5292951f71fa0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190607"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096506"
 ---
 # <a name="checklists-for-installing-bi-features-with-sharepoint"></a>安裝 BI 功能來搭配 SharePoint 的檢查清單
   本節提供用於以不同組合或在向外延展拓撲中安裝 SQL Server BI 功能的檢查清單。 如果您已經知道如何執行安裝程式來安裝 BI 功能，檢查清單是用於了解建議的安裝順序，以及啟用功能整合案例是否需要其他組態變更之下一步。  

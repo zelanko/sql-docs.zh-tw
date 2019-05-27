@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
@@ -17,12 +16,12 @@ ms.assetid: d13b38af-0ac3-4030-83cd-e7d7825dd09f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 90b9ca2879897bb427981e92d610a7f09916c68e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c0ae231e380530f11d4c97a917927ed62e99fb47
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294553"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094800"
 ---
 # <a name="how-to-view-an-upgrade-advisor-report"></a>HOW TO：檢視 Upgrade Advisor 報表
   Upgrade Advisor 會針對您選取要分析的每個元件建立報表。 此主題描述如何從 Upgrade Advisor 開始頁面檢視 Upgrade Advisor 報表。  

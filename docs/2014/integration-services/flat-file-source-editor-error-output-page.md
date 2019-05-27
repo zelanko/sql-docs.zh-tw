@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesourceadapter.errorhandling.f1
@@ -15,19 +14,19 @@ ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a47ce85dbd2979fe5ff9c1a048c60d0720ae32f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2008ec0db5612b7ceb95fe9a8bbf970e19a31a91
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894455"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058632"
 ---
 # <a name="flat-file-source-editor-error-output-page"></a>一般檔案來源編輯器 (錯誤輸出頁面)
   使用 [一般檔案來源編輯器] 對話方塊的 [錯誤輸出] 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
   
  若要深入了解一般檔案來源，請參閱＜ [Flat File Source](data-flow/flat-file-source.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **輸入/輸出**  
  檢視資料來源的名稱。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.ROWSAMPLINGTRANSFORMATION.COLUMNS.F1
@@ -16,19 +15,19 @@ ms.assetid: 544c7709-6de0-4c08-bda3-759985be9a05
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 13117cd751b093497b2faaacd42ff9558fac654d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 30163b4d65ac6a732efb3f7c67a018f433a42ac0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766810"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056451"
 ---
 # <a name="row-sampling-transformation-editor-sampling-page"></a>資料列取樣轉換編輯器 (取樣頁面)
   使用 **[資料列取樣轉換編輯器]** 對話方塊，即可將輸入的一部分分割為指定資料列數目的取樣。 這個轉換會將輸入分成兩個不同的輸出。  
   
  若要深入了解資料列取樣轉換，請參閱＜ [Row Sampling Transformation](data-flow/transformations/row-sampling-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料列數目**  
  指定輸入中的資料列數目作為取樣。  
   

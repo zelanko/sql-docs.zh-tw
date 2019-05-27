@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - IsWindowsServiceEnabled
@@ -19,12 +18,12 @@ ms.assetid: b1b75d72-6220-43fe-abfb-f967f3972d00
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c51ae5de2755711fa6721e874b4d621b66dd3532
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8014f107ca2b552bf5aef316b1aefcb283a645d6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646086"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097584"
 ---
 # <a name="iswindowsserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>IsWindowsServiceEnabled 屬性 (WMI MSReportServer_ConfigurationSetting)
   指出是否已啟用報表伺服器 Windows 服務。 唯讀。  

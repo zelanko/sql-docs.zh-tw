@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 99bb694ee30a85d0f2cf484dd0c80836d2201a12
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 86418fd892c4f403f1e0207073a28e7933eb4b58
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963084"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105420"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>準備要在 Tablix 資料區中顯示的資料 (報表產生器及 SSRS)
   Tablix 資料區域會顯示資料集中的資料。 您可以檢視針對資料集擷取的所有資料，或者您可以建立篩選，讓您僅能看到資料的子集。 您也可以加入條件式運算式來填入 Null 值，或修改資料集的查詢來包含定義現有資料行之排序次序的資料行。  

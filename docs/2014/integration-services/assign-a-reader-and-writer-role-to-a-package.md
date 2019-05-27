@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1c9c96ca-81cb-48e2-a71b-0657439a4c51
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 17e9fa90b66c2bdaad9f029614119f9b9faada37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 793df21782fd3bcb06ad8cbe91c3ba325b2f8a95
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62836520"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061514"
 ---
 # <a name="assign-a-reader-and-writer-role-to-a-package"></a>指派讀取器和寫入器角色給封裝
   您可將讀取器和寫入器角色指派給每個封裝。  

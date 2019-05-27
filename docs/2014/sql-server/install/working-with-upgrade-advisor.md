@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], when to use
@@ -15,12 +14,12 @@ ms.assetid: 5f26a7b9-1ac2-442c-8316-87b078db3baf
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b310b51c32e4a0b3254035311c7a10182c06e550
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8b80e11ffdf12037b466531b0d5b10a2b9f3a2e3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63154731"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090960"
 ---
 # <a name="working-with-upgrade-advisor"></a>使用 Upgrade Advisor
   為了確保能夠成功升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，Upgrade Advisor 提供了中央主控台，可識別在升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之前，安裝中需要處理的問題。  

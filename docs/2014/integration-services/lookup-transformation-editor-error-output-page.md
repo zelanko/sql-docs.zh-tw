@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.erroroutput.f1
@@ -13,12 +12,12 @@ ms.assetid: 15d53bb0-8be1-46fb-b459-04a397e75fac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c9d2417c844998547480a2f03f6dcf9409ff7656
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 12f1a73c1d21986d2089878bfe9d29dd4450f222
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767290"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057863"
 ---
 # <a name="lookup-transformation-editor-error-output-page"></a>查閱轉換編輯器 (錯誤輸出頁面)
   使用 **[查閱轉換編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，來指定錯誤處理選項。  

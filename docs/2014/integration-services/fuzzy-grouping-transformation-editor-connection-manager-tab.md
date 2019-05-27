@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtransformation.connection.f1
@@ -15,12 +14,12 @@ ms.assetid: 47b1446d-5331-473c-9cb5-a98b1f55bf5f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ae31e32645c902912b80545f599fd9d187f6b052
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7cfee2c2a79410d73eb6ca4da47f0fd361a24fb2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768254"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058334"
 ---
 # <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>模糊群組轉換編輯器 (連接管理員索引標籤)
   使用 **[模糊群組轉換編輯器]** 對話方塊的 **[連接管理員]** 索引標籤，來選取現有的連接或建立新的連接。  

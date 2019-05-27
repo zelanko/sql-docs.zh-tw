@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToText
@@ -13,12 +12,12 @@ ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2810a8738368f87651bc90d6cb15ae34195258ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 43e35c5de15aeeab5351b4d262db846840e5f6a0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774370"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090014"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>選項 (查詢結果-SQL Server-以結果文字頁面）
   使用此頁面，即可指定以文字格式顯示查詢結果集的選項。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [查詢] 功能表上的 [查詢選項]，或以滑鼠右鍵按一下 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢] 視窗，然後選取 [查詢選項]。 在 **[查詢選項]** 對話方塊中，於 **[結果]** 之下，按一下 **[文字]**。  

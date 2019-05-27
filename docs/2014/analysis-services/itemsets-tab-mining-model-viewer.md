@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.associationrules.itemsets.f1
@@ -13,19 +12,19 @@ ms.assetid: 95b2b805-b142-4064-9c80-4b1b3fe2fe63
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 60c5dc93ea10042ff87b48bdb8ca4c8d6de1108b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b34031f0554fd9743ba036c9ce0f1bebe2c3d44d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730210"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079563"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>項目集索引標籤 (採礦模型檢視器)
   您可以使用 [項目集] 窗格，檢視關聯規則採礦模型所包含的常見項目集。 因為關聯模型可包含許多項目集，所以檢視器中提供了一些控制項，協助您篩選在檢視器中顯示的項目集。  
   
  **如需詳細資訊：**[Microsoft 關聯分析演算法](data-mining/microsoft-association-algorithm.md)，[瀏覽模型，使用 Microsoft 關聯規則檢視器](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **重新整理檢視器內容**  
  在檢視器中重新載入採礦模型。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - drop system objects [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: cdfc3c50-c801-4039-a4bf-b35f876f1c61
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 68e5000e924c438a4611e2fa8c134f0dd822f930
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1d420e2dba1dfdb284b0002eca6d8408c4e019e8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294493"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093080"
 ---
 # <a name="remove-statements-that-drop-system-objects"></a>移除卸除系統物件的陳述式
   Upgrade Advisor 偵測到卸除系統物件的陳述式。 系統物件，包含擴充預存程序，部署在唯讀**資源**資料庫 (mssqlsystemresource) 中且無法卸除。 請修改您的應用程式，以便撤銷或拒絕系統物件的 EXECUTE 權限。  

@@ -3,19 +3,19 @@ title: 排程在 Linux 上的 SSIS 套件，使用 cron |Microsoft Docs
 description: 這篇文章描述如何排程的 cron 服務在 Linux 上的 SQL Server Integration Services (SSIS) 套件。
 author: lrtoyou1223
 ms.author: lle
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 32734698fffde10594513ad770b2129886e97b01
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 2e3c9f6ee7a02fcdfe1bb2888832b156669cbc11
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486041"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014994"
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>排程 SQL Server Integration Services 封裝執行在 Linux 上的使用 cron
 

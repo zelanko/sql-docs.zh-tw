@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - messages [Reporting Services]
@@ -17,12 +16,12 @@ ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb18f324ca3f4ed6111181d5f6ed2fd3ca58ce1f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2708c2609d23c6094cd69bddd08d958a85262d88
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190789"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099323"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>錯誤和事件參考 (Reporting Services)
   本主題提供有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]錯誤和事件的資訊。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 記錄檔也包含錯誤資訊。 如需有關可用記錄檔類型及如何檢視記錄的詳細資訊，請參閱 [Reporting Services 記錄檔和來源](../report-server/reporting-services-log-files-and-sources.md)。  
@@ -33,7 +32,7 @@ ms.locfileid: "63190789"
 ## <a name="report-server-events"></a>報表伺服器事件  
  下列報表伺服器事件會記錄在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄中。  
   
-|事件識別碼|類型|類別目錄|Source|描述|  
+|事件識別碼|類型|類別目錄|`Source`|描述|  
 |--------------|----------|--------------|------------|-----------------|  
 |106|錯誤|排程|報表伺服器|當您定義排程作業時 (例如，報表訂閱和傳遞)，必須執行 SQL Server Agent。|  
 |[107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|錯誤|啟動/關閉|報表伺服器<br /><br /> 排程與傳遞處理器|\<來源> 無法連線到報表伺服器資料庫。 如需詳細資訊，請參閱[報表伺服器 Windows 服務 &#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)。|  

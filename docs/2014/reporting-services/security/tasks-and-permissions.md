@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], tasks
@@ -19,12 +18,12 @@ ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5ec2030e94abbc568e2ea030c781e904a4ce459d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 01cbf00850c5dd57e7ca1575a1a0cb826c009714
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63306166"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101456"
 ---
 # <a name="tasks-and-permissions"></a>工作和權限
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，「工作」(Task) 是使用者或管理員可以執行的動作。 工作是預先定義的。 您無法建立自訂工作或修改以程式設計的方式或透過工具而提供的工作。 總共有 25 種工作。 這些工作構成以角色為基礎之安全性中，可以使用的整個作業集。 工作的範例包括「檢視報表」、「管理報表」以及「管理報表伺服器屬性」。  

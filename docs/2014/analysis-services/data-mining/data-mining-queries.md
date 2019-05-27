@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - prediction queries [Analysis Services]
@@ -17,12 +16,12 @@ ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 71704480c6c3258c2d6553c3328535ff4ea4a9cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2bfce63f3686f06c0289c818daac82f336fb2b17
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722780"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084964"
 ---
 # <a name="data-mining-queries"></a>資料採礦查詢
   資料採礦查詢有許多實用的用途。 您可以：  

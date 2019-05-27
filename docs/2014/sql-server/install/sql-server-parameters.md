@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine analysis [Upgrade Advisor]
@@ -16,12 +15,12 @@ ms.assetid: 44a18bfe-e593-47a5-995f-382c01d3f618
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b34f5fe42185bf280a62a7077e4fb29e3385c70d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e528b94e51238a06a9776e58693c3093f4bfb831
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211068"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091883"
 ---
 # <a name="sql-server-parameters"></a>SQL Server 參數
   在這個頁面上，您可以設定分析器將用於 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 分析的參數。 您可以分析一個、許多個或所有資料庫、分析使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 所建立的追蹤檔案，以及分析 SQL 批次檔。  

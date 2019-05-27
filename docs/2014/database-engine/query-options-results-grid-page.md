@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.grid.f1
@@ -13,17 +12,17 @@ ms.assetid: 764bf435-3aab-4c62-b4e0-64fe020a5a95
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a0351173100703b8b78f7b4b019fcd2c63688918
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7c50957f59ef4e4743ca1667d6eb7a97869bec18
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62843686"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089010"
 ---
 # <a name="query-options-results-grid-page"></a>查詢選項結果 (方格頁面)
   使用這個頁面即可指定選項，使查詢結果集以方格的格式顯示。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **在結果集裡包含查詢**  
  將查詢的文字當成結果集的一部分傳回。  
   

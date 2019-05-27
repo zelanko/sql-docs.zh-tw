@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - XML [Reporting Services], rendering
@@ -14,12 +13,12 @@ ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 404ab37f00cd738e619286a3133b906acbbcd06d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e642034d445e52485874c71df110bff81b9c1aaf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206236"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096940"
 ---
 # <a name="xml-device-information-settings"></a>XML 裝置資訊設定
   下表列出以 XML 格式轉譯的裝置資訊設定。  

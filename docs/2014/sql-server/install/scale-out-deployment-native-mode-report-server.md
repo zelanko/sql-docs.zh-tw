@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
@@ -13,12 +12,12 @@ ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c091c115f9e03fbc0f1243e1c2fcf3a075f3586f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f26787441fb93253b9ca944c479f9cf480ba0745
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62753300"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092424"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>向外延展部署 (原生模式報表伺服器)
   請使用 **組態管理員中的** [向外延展部署] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 頁面檢視向外延展部署的初始化狀態，或將報表伺服器聯結到向外延展部署。 *「向外延展部署」* (Scale-out Deployment) 是指共用單一報表伺服器資料庫的兩個或多個報表伺服器執行個體。  
@@ -37,7 +36,7 @@ ms.locfileid: "62753300"
   
  若要開啟此頁面，請啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並選取導覽窗格中的 **[向外延展部署]** 。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **SQL Server 名稱**  
  指定主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體名稱。  
   

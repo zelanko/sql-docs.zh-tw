@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.multiserverresultssettings
@@ -14,12 +13,12 @@ ms.assetid: d6768bd8-9cb5-4606-a726-a33a1df9e1bb
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 99b9192f2bf2b6e1fe00e1b0e367ff254219539c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6019a328463d27b4495ae0db70e844eb4e05d747
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774062"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089970"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>選項 (查詢結果-SQL Server-多伺服器)
   當您同時查詢多部伺服器時，使用這個頁面可指定用來顯示結果集的選項。 合併結果會將所有伺服器的結果集結合到單一結果集內。 合併結果時，要回應的第一部伺服器會設定結果集的結構描述。 若要合併結果集，此查詢必須傳回每一部伺服器中具有相同資料行名稱的相同資料行數。 當合併結果時，會針對不符合結構描述 (資料行計數和資料行名稱) 的每一部伺服器顯示一則訊息 (該結構描述是由第一部傳回結果的伺服器所傳回)。  

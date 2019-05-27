@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.connection.f1
@@ -15,19 +14,19 @@ ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bf5d6f0a92b18cc41f74d068686c3c8c9589228a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b6834a2a4cd75e70de253419cc42ec5904ce0793
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62771629"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061214"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>大量插入工作編輯器 (連接頁面)
   使用 [大量插入工作編輯器] 對話方塊的 [連接] 頁面，即可指定大量插入作業的來源和目的地，以及要使用的格式。  
   
  若要了解如何使用大量插入，請參閱[大量插入工作](control-flow/bulk-insert-task.md)和[匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[連接]**  
  在清單中選取 OLE DB 連線管理員，或按一下 [\<新增連接…>] 建立新的連接。  
   

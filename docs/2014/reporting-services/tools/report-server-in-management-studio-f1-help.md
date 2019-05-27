@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Object Explorer, help
@@ -13,12 +12,12 @@ ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c9876003e57a69b8a1eacddaa3e41b681c806e7f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e45e1e7f3c117609bd4e33611733c364b724b6a9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63200981"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100080"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Management Studio F1 說明中的報表伺服器
   此章節包含有關 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，可用來管理報表伺服器之對話方塊的主題。  

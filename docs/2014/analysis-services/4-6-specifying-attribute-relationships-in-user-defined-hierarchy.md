@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c6fd010dbf16468343b15eb383a5308d94b255da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 490d9f6e1cdaeab274290649d2bb7f5c691595ae
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62512622"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063025"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>在使用者定義階層的屬性之間指定屬性關聯性
   如同您在這個教學課程中已學到的，您可以將屬性階層組織成使用者階層內的層級，在 Cube 中為使用者提供導覽路徑。 使用者階層可代表自然階層，例如縣 (市)、省份和國家 (地區)，或只代表導覽路徑，例如員工姓名、職稱和部門名稱。 對於導覽階層的使用者而言，這兩種類型的使用者階層是一樣的。  

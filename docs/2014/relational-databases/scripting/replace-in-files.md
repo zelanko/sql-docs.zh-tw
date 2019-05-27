@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Replace in Files dialog box
@@ -13,12 +12,12 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1a59377a075d7db189b91543590aee8c2cb0013
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 997df4fb0756bc684c9d2ca3e3d08d074faf8f93
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63144437"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063903"
 ---
 # <a name="replace-in-files"></a>檔案中取代
   [尋找和取代] 視窗的 [檔案中取代] 索引標籤，可以讓您在指定檔案集的程式碼中搜尋字串或運算式，並變更部分或所有找到的相符結果。 找到的相符結果與採取的動作會列在 [結果選項] 所選取的 [尋找結果] 視窗中。  

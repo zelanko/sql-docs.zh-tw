@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtsserver.exportpackage.f1
@@ -15,17 +14,17 @@ ms.assetid: 3742fe8a-ef57-444d-b2fb-cb25d16bae97
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9e8943addabc92906bd0267d951fec5bda2113a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c1cca0a2761f87d6f4f3837df1e9a0bdcc5b91a4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769764"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058905"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>匯出封裝對話方塊 UI 參考
   使用 **[匯出封裝]** 對話方塊 (可以從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中存取)，即可匯出 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝到不同的位置，並選擇性地修改封裝的保護等級。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **封裝位置**  
  選取要用來儲存所匯出之封裝的儲存體類型。 下列是可以使用的選項：  
   

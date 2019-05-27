@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - schema rowsets [Analysis Services], data mining
@@ -18,12 +17,12 @@ ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8fef47b83e341e9c8fed6a4824da882550c9a892
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 30a4a503b16693a3774aa7f68771fb0f9dd70810
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722620"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084913"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>查詢資料採礦結構描述資料列集 (Analysis Services - 資料採礦)
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，許多現有的 OLE DB 資料採礦結構描述資料列集已經公開成一組系統資料表，而且您可以使用資料採礦延伸模組 (DMX) 陳述式來查詢它們。 透過針對資料採礦結構描述資料列集建立查詢，您可以識別可用的服務、取得模型和結構之狀態的更新，以及找出模型內容或參數的相關詳細資料。 如需資料採礦結構描述資料列集的描述，請參閱＜ [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)＞。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - installation [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 59de41e7-557f-462a-8914-53ec35496baa
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 79c3cf157bccf99aa732b7de60fe4ce8277aa07c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 20c42e7d57415875acd1aebeaa3a674285468dc0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63010856"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094370"
 ---
 # <a name="installation-how-to-topics"></a>安裝的使用說明主題
   使用下列主題來安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  

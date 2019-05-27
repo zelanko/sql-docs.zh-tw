@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], managing window behavior
@@ -21,12 +20,12 @@ ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 081e84289367d2fe5cf2ef2e35c8907cfce3882f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3333b41a4ff1c341f0ae0290f838cd2c76c6254e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143622"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063946"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>管理編輯器和檢視模式
   編輯器提供了許多用來控制程式碼檢視的方式。  

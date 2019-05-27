@@ -14,14 +14,18 @@ ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: c2073da82b19cc9e8d9d1fdbc87beb9b2ef89595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96be54415e3a2892da2ec892a0e90c02c5365e90
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710616"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727928"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上傳工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 **Azure SQL DW 上傳工作**可讓 SSIS 套件將表格式資料從檔案系統或 Azure Blob 儲存體複製到 Azure SQL 資料倉儲 (DW)。
 該工作會利用 PolyBase 來改善效能，如 [Azure SQL 資料倉儲上傳模式及策略](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)一文所述。
@@ -36,7 +40,7 @@ ms.locfileid: "47710616"
 
 **SourceType** 指定來源資料存放區的類型。 選取下列其中一種類型：
 
-* **檔案系統：** 來源資料所在的本機檔案系統。
+* **FileSystem：** 來源資料所在的本機檔案系統。
 * **BlobStorage：** 來源資料所在的 Azure Blob 儲存體。
 
 以下是每個來源類型的屬性。

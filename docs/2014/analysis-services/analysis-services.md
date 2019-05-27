@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, about Analysis Services - Multidimensional Data
@@ -19,12 +18,12 @@ ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b18efaacb7ab891402e84b851735870c4c47e883
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 241bb57ffd0ce05f1daa289cc7ae78c365a27cc9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62638801"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062334"
 ---
 # <a name="analysis-services"></a>Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 是用於決策支援和商業智慧 (BI) 方案的線上分析資料引擎，可提供報表和用戶端應用程式 (例如 Excel、Reporting Services 報表和其他協力廠商 BI 工具) 的分析資料。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的一般工作流程包括建立 OLAP 或表格式資料模型，將模型以資料庫方式部署到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體，處理資料庫以載入該資料庫及資料，然後指派權限以允許資料存取。 準備好開始執行時，任何支援 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 作為資料來源的用戶端應用程式，即可存取這個多用途資料模型。  

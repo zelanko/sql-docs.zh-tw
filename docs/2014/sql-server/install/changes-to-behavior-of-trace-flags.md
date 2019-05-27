@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - trace flags [SQL Server], behavior changes
@@ -13,12 +12,12 @@ ms.assetid: d739df96-2659-4383-8e10-194657632526
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 421420089526540929bfc4ade32799634a823391
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 447e6d4d35fa77f71f1a7a1b90a5a782e0ccebcc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215640"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096614"
 ---
 # <a name="changes-to-behavior-of-trace-flags"></a>追蹤旗標之行為的變更
   工作階段所設定的全域追蹤旗標會立即在其他工作階段中生效。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的某些追蹤旗標不存在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中。  

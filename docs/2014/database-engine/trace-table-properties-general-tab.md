@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetableproperties.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 16de6d72-0605-4264-891c-e275cd005a37
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70f96b0146dbb38827b028e55a241296a5443c1c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 79976111570e2f9cb153c853567f0f2091f77eb6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774090"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088734"
 ---
 # <a name="trace-table-properties-general-tab"></a>追蹤資料表屬性 (一般索引標籤)
   使用**一般**索引標籤**追蹤資料表屬性**對話方塊，即可檢視追蹤資料表的屬性。  

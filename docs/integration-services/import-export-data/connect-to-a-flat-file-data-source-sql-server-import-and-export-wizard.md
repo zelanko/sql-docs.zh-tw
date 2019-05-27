@@ -10,14 +10,18 @@ ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a071c773077832c15d41f73764b56c3bac9e5cf0
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: e1c2789d8d10928bcbe576fc57f630675fdbd405
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222132"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723896"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>連線至一般檔案資料來源 (SQL Server 匯入和匯出精靈)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連線至**一般檔案** (文字檔) 資料來源。 針對一般檔案，精靈的這兩個頁面會呈現不同的選項集，因此，本主題會分別描述一般檔案來源和一般檔案目的地。
 
 ## <a name="an-alternative-for-simple-text-import"></a>簡單文字匯入的替代方式
@@ -204,14 +208,14 @@ ms.locfileid: "58222132"
 |屬性|Description|  
 |--------------|-----------------|  
 |**名稱**|提供描述性資料行名稱。 如果您未輸入名稱，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會自動以 Column 0、Column 1 等等的格式建立名稱。|
-|**ColumnDelimiter**|從可用的資料行分隔符號清單中選取。 請選擇不太可能會在文字中出現的分隔符號。 固定寬度資料行將忽略這個值。<br /><br /> **{CR}{LF}**： 資料行是以歸位字元和換行字元的組合分隔。<br /><br /> **{CR}**： 資料行是以歸位字元分隔。<br /><br /> **{LF}**： 資料行是以換行字元分隔。<br /><br /> **分號 {;}**： 資料行是以分號分隔。<br /><br /> **冒號 {:}**： 資料行是以冒號分隔。<br /><br /> **逗號 {,}**. 資料行是以逗號分隔。<br /><br /> **定位字元 {t}**： 資料行是以定位字元分隔。<br /><br /> **分隔號 {&#124;}**： 資料行是以分隔號分隔。|
+|**ColumnDelimiter**|從可用的資料行分隔符號清單中選取。 請選擇不太可能會在文字中出現的分隔符號。 固定寬度資料行將忽略這個值。<br /><br /> **{CR}{LF}** ： 資料行是以歸位字元和換行字元的組合分隔。<br /><br /> **{CR}** ： 資料行是以歸位字元分隔。<br /><br /> **{LF}** ： 資料行是以換行字元分隔。<br /><br /> **分號 {;}** ： 資料行是以分號分隔。<br /><br /> **冒號 {:}** ： 資料行是以冒號分隔。<br /><br /> **逗號 {,}** . 資料行是以逗號分隔。<br /><br /> **定位字元 {t}** ： 資料行是以定位字元分隔。<br /><br /> **分隔號 {&#124;}** ： 資料行是以分隔號分隔。|
 |**ColumnType**|代表資料行是否為分隔的、固定寬度或不齊右。 此屬性是唯讀的。 不齊右檔案就是除了最後一個資料行之外，其他所有資料行都有固定寬度的檔案。 它是以資料列分隔符號分隔。|  
 |**InputColumnWidth**|指定儲存為位元組計數的值；針對 Unicode 檔案，此值是字元計數。 分隔資料行將忽略這個值。<br /><br /> **注意** ︰在物件模型中，這個屬性的名稱為 ColumnWidth。|
 |**DataPrecision**|指定數值資料的有效位數。 有效位數是指位數的數目。|
 |**DataScale**|指定數值資料的小數位數。 小數位數是指小數位數的數目。|
 |**DataType**|從可用的資料類型清單中選取。<br/>如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。|
 |**OutputColumnWidth**|指定儲存為位元組計數的值；針對 Unicode 檔案，此值將對應至字元計數。 在資料流程工作中，這個值將用來替一般檔案來源設定輸出資料行寬度。 在物件模型中，這個屬性的名稱為 MaximumWidth。|  
-|**TextQualified**|指出文字資料是否會由文字限定詞字元 (例如引號字元) 括住。<br /><br /> True：一般檔案中的文字資料是限定的。 False：一般檔案中的文字資料是「非」限定的。|  
+|**TextQualified**|指出文字資料是否會由文字限定詞字元 (例如引號字元) 括住。<br /><br /> True：一般檔案中文字資料是限定的。 False：一般檔案中的文字資料是「非」限定的。|  
   
 **新增**  
  按一下 [新增] 來加入新的資料行。 依預設，[新增] 按鈕會在清單結尾加入新的資料行。 此按鈕還有下列選項，可以在下拉式清單中使用。  

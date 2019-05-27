@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregationtransformation.advanced.f1
@@ -15,12 +14,12 @@ ms.assetid: 186a9736-2554-40a0-9cb2-877a8db5fde8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 605a92e00b21d64679076fabcb41068b94921779
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 419a63f9a98e51b9601d7d38f70528ff4ae05970
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62771934"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061586"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>彙總轉換編輯器 (進階索引標籤)
   使用 **[彙總轉換編輯器]** 對話方塊的 **[進階]** 索引標籤，即可設定元件屬性、指定彙總，以及設定輸入和輸出資料行的屬性。  

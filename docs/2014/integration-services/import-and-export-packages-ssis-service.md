@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], importing
@@ -16,12 +15,12 @@ ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0ff095819fc4bdd985ebd083eb09056aa5259322
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9a1d50afde56843942c470017a8534ffa797eb69
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768221"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058144"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>匯入和匯出封裝 (SSIS 服務)
     

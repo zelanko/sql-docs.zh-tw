@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.INSERTFUNCTIONDB.F1
@@ -13,12 +12,12 @@ ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7f35be763558ecfab37b799b776eb5661ea32ca8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e925358f8ce09ebdf2b2470e364016c951ef120b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729904"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080404"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>插入函數對話方塊 (SSAS)
   **[插入函數]** 對話方塊可讓您從函數清單選擇建立公式時可以使用的函數。 若要從模型設計師存取此對話方塊，在每個資料表上方的公式列中，按一下函數 (**fx**) 按鈕。 如需有關選擇於公式中使用之函數的詳細資訊，請參閱＜DAX 簡介＞和＜建立公式＞。  

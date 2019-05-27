@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 354e1dce8bfb11f7eefc0f90df0868ebc01757e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6efccad47f0d6670c87aeb1e9cc9ef9ec654a138
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748997"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070910"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>使用資料摘要 (PowerPivot for SharePoint)
   資料摘要是從線上資料來源產生，並串流至目的地文件或應用程式的一個或多個資料流。 如果您使用的是 PowerPivot for Excel，資料摘要可以協助您從任意資料來源取得現有的公司或商務資料，送到 Excel 2010 活頁簿的 PowerPivot 視窗中。 將資料摘要匯入活頁簿之後，您可以在 SharePoint 伺服器上排程的任何資料重新整理作業中參考該摘要。  
@@ -90,7 +89,7 @@ ms.locfileid: "62748997"
 6.  輸入 [資料表名稱]，每個摘要各使用一個資料表。 這是必要的值。 資料表名稱是由取用資料摘要的用戶端應用程式所使用。 在 PowerPivot for Excel 中，資料表名稱用來命名 PowerPivot 視窗中，將包含已匯入之資料的資料表。  
   
 ## <a name="see-also"></a>另請參閱  
- [為在 [管理中心] 的 [網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)   
+ [為在 [管理中心] 的 網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)   
  [使用資料摘要的庫共用資料摘要&#40;PowerPivot for SharePoint&#41;](share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   
   

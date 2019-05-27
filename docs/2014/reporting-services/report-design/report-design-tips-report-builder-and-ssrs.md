@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a3abfb7cbecbf496c7c2083d5d75b1833069d12c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ba5cdb309d277e751c2de7fcfbce5dfc02174366
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215630"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105094"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>報表設計提示 (報表產生器及 SSRS)
   請採用下列秘訣協助設計您的報表。  

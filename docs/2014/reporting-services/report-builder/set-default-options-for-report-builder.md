@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10427"
@@ -13,12 +12,12 @@ ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d4540cdd9d0d8c196e9f304508fd60edd99f2174
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156556"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107620"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>報表產生器選項對話方塊、設定 (報表產生器)
   按一下 **報表產生器**按鈕，然後按一下**選項**設定選項，以顯示最近使用的檔案和連線。 您也可以變更預設報表伺服器，或加入報表伺服器 (如果沒有預設值的話)。  

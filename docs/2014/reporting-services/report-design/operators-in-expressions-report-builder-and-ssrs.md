@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 076c9593a8f44d97de0f4856801f3864818d2a6e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cb4ea26e646453b3acd85a4f5e13ab9557f950fa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209080"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105494"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>運算式中的運算子 (報表產生器及 SSRS)
   運算子是一個符號，代表套用至運算式中一個或多個詞彙的動作。 在運算式中支援下列的運算子類別：算術、比較、串連、邏輯或位元，以及位元移位。  
@@ -48,7 +47,7 @@ ms.locfileid: "63209080"
 |>=|大於或等於。|  
 |=|等於。|  
 |<>|不等於。|  
-|相似|判斷特定字元字串是否符合指定的模式。 模式中可以包含一般字元及萬用字元。 在模式比對期間，一般字元必須與字元字串中所指定的字元完全相符。 不過，萬用字元可以符合任意字元字串片段。 使用萬用字元要比使用 = 與 != 字串比較運算子能讓 LIKE 運算子更有彈性。<br /><br /> 下列清單的字元可用來當做萬用字元：<br /><br /> **%**:任何含有零或多個字元的字串。<br /><br /> **_**:任何單一字元。<br /><br /> **[ ]**:任何單一字元指定的範圍內 (例如，[a-f]) 或集合 （例如 [aeiou]）。<br /><br /> **[^]**:任何單一字元不在指定的範圍內 (例如，[^-f]) 或設定 (例如，[^ aeiou])。|  
+|相似|判斷特定字元字串是否符合指定的模式。 模式中可以包含一般字元及萬用字元。 在模式比對期間，一般字元必須與字元字串中所指定的字元完全相符。 不過，萬用字元可以符合任意字元字串片段。 使用萬用字元要比使用 = 與 != 字串比較運算子能讓 LIKE 運算子更有彈性。<br /><br /> 下列清單的字元可用來當做萬用字元：<br /><br /> **%**：任何含有零或多個字元的字串。<br /><br /> **_**:任何單一字元。<br /><br /> **[ ]**:任何單一字元指定的範圍內 (例如，[a-f]) 或集合 （例如 [aeiou]）。<br /><br /> **[^]**:任何單一字元不在指定的範圍內 (例如，[^-f]) 或設定 (例如，[^ aeiou])。|  
 |Is|比較兩個物件參考。|  
   
 ### <a name="string-concatenation"></a>字串串連  

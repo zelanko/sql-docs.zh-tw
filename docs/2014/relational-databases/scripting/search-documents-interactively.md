@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - interactive searches [SQL Server Management Studio]
@@ -15,12 +14,12 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe26ee01517f23ba146b326c1e401496f05cc0c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 858724b4447c6602db14980a27225b3b8fe69eef
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63022320"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063790"
 ---
 # <a name="search-documents-interactively"></a>以互動方式搜尋文件
   您可以利用 [尋找和取代] 對話方塊，搜尋一或多個開啟的檔案或視窗，並逐一搜尋相符的項目。 這項技術可讓您在環繞相符項目的文字內容中，檢閱每項個別的搜尋相符項目。 您也可以選擇執行大量尋找作業，或利用 [尋找和取代] 對話方塊，以報表格式檢閱搜尋相符項目。  

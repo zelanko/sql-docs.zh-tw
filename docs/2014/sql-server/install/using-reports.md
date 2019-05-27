@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
@@ -36,12 +35,12 @@ ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb2537af2539854f0f66e3f6c39c3b6e5315ec6f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc3a08e707f6b51059145c69fdee15f78c933135
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62989761"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091224"
 ---
 # <a name="using-reports"></a>使用報表
   Upgrade Advisor 分析精靈會為伺服器上分析的每個元件和每個執行個體 (如有必要) 產生個別報表。 報表會提供影響升級之已知問題的詳細資料。 報表還會提供解決識別問題之資訊和建議動作的連結。  

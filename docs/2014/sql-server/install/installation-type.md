@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 0420c555-7a3b-42b9-8651-0b4f5bcb0008
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2d849a4ce57397e2031b9d347c3e9f7577035fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b8812bba6d87e29ed8a4533bb87e645f42120015
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539079"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094284"
 ---
 # <a name="installation-type"></a>安裝類型
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 [安裝類型] 頁面，即可指定要安裝新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體，或是將功能加入至現有的執行個體。  

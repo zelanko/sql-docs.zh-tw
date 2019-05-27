@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 02bcccd0-99e1-4a08-9401-f1f1147d184b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e009c9e498c28ee0b7f0efbd4571d9e50cb061a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9c0e42f289c5d5aa0aebf546e1adeb0a31683d82
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62640214"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062541"
 ---
 # <a name="analysis-services-features-and-tasks"></a>Analysis Services 功能及工作
   Analysis Services 基本文件集是依照模型和伺服器模式組織，因此您可以將焦點只放在已安裝之模式所提供的工具、工作和功能。 您可以在伺服器執行個體中找到跨越多個模式的伺服器管理工作。  

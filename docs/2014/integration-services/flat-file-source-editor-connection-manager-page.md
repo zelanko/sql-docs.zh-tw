@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesourceadapter.connection.f1
@@ -15,12 +14,12 @@ ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e486f089ca261cbe5ea09cf7c9d38bc8fcdedbc9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d3c729faa93cf445e7e0aff46fa94258bc7ea7a4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768264"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058686"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>一般檔案來源編輯器 (連接管理員頁面)
   使用 **[一般檔案來源編輯器]** 對話方塊的 **[連接管理員]** 頁面，以選取一般檔案來源將要使用的連接管理員。 一般檔案來源會從文字檔讀取資料，其格式可以是分隔、固定寬度或混合格式。  

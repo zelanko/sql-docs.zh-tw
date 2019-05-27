@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10226"
@@ -159,12 +158,12 @@ ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6da8262cd94a4e685f2baf5f1adb1692cfb3df25
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ec55d658da67c7d6ef7e9989f310c26ef11a20d3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225086"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105750"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>量測計 (報表產生器及 SSRS)
   量測計資料區是一維的資料區，可顯示資料集中的單一值。 個別量測計一定會放在量測計面板內，您可在其中加入子量測計或相鄰的量測計。 您可以使用量測計面板在單一量測計面板內建立多個量測計，這些量測計會共用篩選、群組或排序等通用功能。  

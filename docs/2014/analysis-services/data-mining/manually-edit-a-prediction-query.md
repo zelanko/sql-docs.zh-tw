@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying prediction queries
@@ -15,12 +14,12 @@ ms.assetid: 9f6a9298-49d5-4675-ad49-977a47dff5a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d8b561e7bfd1e791dee90d8076fef68f81d2ca8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ce2086e998704e893beaa92aabd2e51129a0450f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722020"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084205"
 ---
 # <a name="manually-edit-a-prediction-query"></a>手動編輯預測查詢
   在使用預測查詢產生器設計查詢之後，您可以切換到資料採礦設計師的 [採礦模型預測] 索引標籤上的 [查詢文字] 檢視來修改查詢。 文字編輯器會出現在畫面底端，以顯示查詢產生器建立的查詢。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Upgrade Advisor], filtering
@@ -14,12 +13,12 @@ ms.assetid: bc3dbe16-f6c1-4f07-8d88-2b8e86302c7e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8eb337798afec3311b6e31027b7acbff96b8d8a8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bad387683b2a093f680c00885a50b043e8a890cd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294845"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094890"
 ---
 # <a name="how-to-filter-reports"></a>HOW TO：篩選報表
   此主題描述如何使用 Upgrade Advisor 報表檢視器，將篩選套用至報表。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - cubes [Analysis Services], defining
@@ -13,12 +12,12 @@ ms.assetid: 579ca818-f33d-4060-906d-c8bfee93bf99
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2e84c49055a1fdb5b11487ab17af19762f86686c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6a6c5cb8c8ca0492edf9798f972b458054ae5b58
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726412"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075743"
 ---
 # <a name="define-cube-attribute-properties"></a>定義 Cube 屬性 (Attribute) 屬性 (Property)
   Cube 屬性 (Attribute) 的屬性 (Property) 可讓您根據同一個資料庫維度，為 Cube 維度中的維度屬性 (Attribute) 指定唯一的設定。 下表描述 Cube 屬性 (Attribute) 的屬性 (Property)。  

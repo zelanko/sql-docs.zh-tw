@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d155dd77380b202938476e7a34fdb51d212b4330
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 79563abac2c6a9ed64dff93667ff3d3966b70bc5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62649181"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098850"
 ---
 # <a name="tutorial-introducing-expressions"></a>教學課程：運算式簡介
   運算式可協助您建立強大而靈活的報表。 本教學課程將教您建立和實作使用一般函數和運算子的運算式。 您將使用**運算式**對話方塊，即可撰寫運算式以串連名稱值、 查閱值在不同的資料集中，顯示不同的圖片，根據欄位的值，並依此類推。  

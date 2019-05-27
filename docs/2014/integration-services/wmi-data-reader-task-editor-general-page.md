@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.general.f1
@@ -15,19 +14,19 @@ ms.assetid: 1ee4fd97-defc-4a63-adfe-5f2df548e62a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 214a633d438f4097ec08d7afdf53f62f48b6600f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d25a77fd9a3fce701f65eca580647b193a6c0276
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766021"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054410"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>WMI 資料讀取器工作編輯器 (一般頁面)
   使用 **[WMI 資料讀取器工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述 WMI 資料讀取器工作。  
   
  若要了解這個工作，請參閱＜ [WMI Data Reader Task](control-flow/wmi-data-reader-task.md)＞。 如需 WMI 查詢語言 (WQL) 的詳細資訊，請參閱 MSDN Library 中的 Windows Management Instrumentation 主題 [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)(使用 WQL 查詢)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  提供 WMI 資料讀取器工作的唯一名稱。 這個名稱是作為工作圖示中的標籤使用。  
   

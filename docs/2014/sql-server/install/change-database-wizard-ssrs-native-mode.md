@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.changedatabase.F1
@@ -16,12 +15,12 @@ ms.assetid: 1a2e8d18-5997-482f-a9c1-87d99f7407b8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 50870072259f89af43fc14ee23465f282f4c3e9d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bc07e94db985ce156fdd5cd59620c2e7fddc2d73
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215114"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096673"
 ---
 # <a name="change-database-wizard-ssrs-native-mode"></a>變更資料庫精靈 (SSRS 原生模式)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員提供了變更資料庫精靈，可引導您建立新的報表伺服器資料庫或是選取要搭配目前報表伺服器執行個體使用之現有報表伺服器資料庫的步驟。  

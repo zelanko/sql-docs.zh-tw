@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], modifying
@@ -14,12 +13,12 @@ ms.assetid: 54793114-2198-4d80-8091-e241d5a5d13c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 92ac3366a2473fb92fe33dcf884d3806c65e8609
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1e3d0780e761cb5b0cdd4fd267bdfb2662f55cf4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62884754"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055840"
 ---
 # <a name="set-the-properties-of-a-connection-manager"></a>設定連線管理員的屬性
   所有連接管理員都可以使用 [屬性] 視窗進行設定。  

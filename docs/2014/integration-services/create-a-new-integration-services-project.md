@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], creating
@@ -16,12 +15,12 @@ ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e08af39df21d7a1774e1d7eed5e0f7602fd3489
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d3a1d8542ba5cc689cef60fc81641c37c96ea790
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832298"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060218"
 ---
 # <a name="create-a-new-integration-services-project"></a>建立新的 Integration Services 專案
   此程序會建立新的專案和新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 方案。  

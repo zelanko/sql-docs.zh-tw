@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f7cc154a79a329bc18d02535e3f3332aa7e8b61
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 288f9e0d5a86e34db2fdd81163f229eff5275606
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62655824"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064340"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 中 Analysis Services 功能的行為變更
   本主題描述 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中多維度、表格式、資料採礦及 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 部署的行為變更。 行為變更會影響功能在目前版本中，與舊版 SQL Server 相較之下的運作或互動方式。  

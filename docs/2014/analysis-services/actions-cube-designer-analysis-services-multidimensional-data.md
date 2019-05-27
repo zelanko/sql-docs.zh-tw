@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionsview.f1
@@ -13,12 +12,12 @@ ms.assetid: 50e3afbc-7789-46b1-bcd3-50497f5b493f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5c2f29259028ad15605f3f71e1eba87f353e795b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 67c2def091fe6e1282e00c65c23e8d98544e970f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62512510"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062897"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>動作 (Cube 設計工具) (Analysis Services - 多維度資料)
   使用 Cube 設計師中的 **[動作]** 索引標籤來檢視和編輯動作，包含選取之 Cube 的鑽研動作和報表動作。  

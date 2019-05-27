@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.output.f1
@@ -15,12 +14,12 @@ ms.assetid: 73c83969-7b0e-479d-a436-0a46b2068d01
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4cfeac28676dc8134c7eedf1e4b27901e0f053dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7924570253bf2f805d91c4dfabc3d5facf44cccc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877581"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054464"
 ---
 # <a name="web-service-task-editor-output-page"></a>Web 服務工作編輯器 (輸出頁面)
   使用 [Web 服務工作編輯器] 對話方塊的 [輸出] 頁面，即可指定 Web 方法傳回的結果之儲存位置。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.rsconfigtool.reportmanagervirtualdirectory.f1
@@ -13,12 +12,12 @@ ms.assetid: 45768952-23a6-45a5-b541-e7bf192b4a78
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f5e472f0cb8cb1a2fc8ed9d85b73622617a3a70a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c2679abba1e452ec65b43ca16cc90fc7cb244436
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63282053"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092786"
 ---
 # <a name="report-manager-url-ssrs-native-mode"></a>報表管理員 URL (SSRS 原生模式)
   使用 [報表管理員 URL] 頁面可設定或修改用於存取報表管理員的 URL。 根據預設，報表管理員 URL 會繼承報表伺服器 Web 服務 URL 的前置詞、IP 位址和通訊埠。 這是因為報表管理員會提供在相同報表伺服器服務內執行之 Web 服務的前端存取權。 如果您要隔離服務應用程式並使用報表管理員來存取不同電腦上的報表伺服器 Web 服務，您必須編輯 RSReportServer.config 檔案，讓報表管理員指向不同的執行個體。 如需有關如何設定報表管理員連接到遠端報表伺服器的詳細資訊，請參閱 < [Reporting Services 組態管理員&#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  

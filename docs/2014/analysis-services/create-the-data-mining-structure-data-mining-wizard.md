@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectminingtechnique.f1
@@ -13,12 +12,12 @@ ms.assetid: d1ff17b2-fff3-4ed7-a5d6-42d131e59f93
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 06aa74bed451075f0b6749870fa25275703c3181
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 812a08d00fca0b3a61f5cb038e1585fee08c06d3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679673"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086754"
 ---
 # <a name="create-the-data-mining-structure-data-mining-wizard"></a>建立資料採礦結構 (資料採礦精靈)
   使用 [建立資料採礦結構] 頁面建立資料採礦結構，並選擇性地建立與該結構建立關聯的採礦模型。  

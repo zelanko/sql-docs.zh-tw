@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.copymaptransformation.f1
@@ -15,12 +14,12 @@ ms.assetid: d8e70541-d563-4ce4-bf66-bc888a0d3026
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d9340e85bd33dc4843c0bd7d948f51a62ba55d78
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 03d8cdb35372ed9850f3329f26e2647e018d9583
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829132"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060297"
 ---
 # <a name="copy-column-transformation-editor"></a>複製資料行轉換編輯器
   使用 **[複製資料行轉換編輯器]** 對話方塊，即可選取要複製的資料行，並為新的輸出資料行指派名稱。  

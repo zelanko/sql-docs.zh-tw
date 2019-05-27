@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], inactive
@@ -17,12 +16,12 @@ ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d93314c6cfe7f260422cfc1f0e4eb28d934bc305
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 998a7823721b8c978e2b8bfd21b6308507a8963c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63238307"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100755"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>監視 Reporting Services 訂閱
   您可以透過使用者介面、Windows PowerShell 或記錄檔來監視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱。 您可以使用的監視選項取決於正在執行的報表伺服器模式。  
@@ -99,7 +98,7 @@ ms.locfileid: "63238307"
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|date|處理|區域|Category|層級|Correlation|訊息|  
+|Date|處理|區域|Category|層級|Correlation|Message|  
 |5/21/2014 14:34:06:15|應用程式集區：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|報表伺服器電子郵件延伸模組|未預期|(空的)|**Error sending email.** 例外狀況：System.Net.Mail.SmtpException:信箱無法使用。 伺服器回應為：5.7.1 用戶端沒有傳送於 System.Net.Mail.DataStopCommand.CheckResponse （SmtpStatusCode statusCode，String serverResponse） 以此寄件者的權限於 System.Net.Mail.DataStopCommand.Send (SmtpConnection conn) 於System.Net.Mail.SmtpClient.Send (MailMessage message) 於 Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver (Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> 使用 PowerShell 監視訂閱  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - nested tables, in association models
@@ -14,12 +13,12 @@ ms.assetid: 4db6462f-93c7-443f-8ff7-39474dc7029e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5ee759c4a23ab2891597fd3a5c884ce7332ea4e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 15a86cc55e67b2000eabee62d02fa04de4874f59
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650775"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062311"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>關聯精靈 (適用於 Excel 的資料採礦用戶端)
   ![資料採礦功能區中的關聯精靈](media/dmc-associate.gif "資料採礦功能區中的關聯精靈")  

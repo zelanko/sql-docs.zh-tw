@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - technical reference [SQL Server Database Engine]
@@ -14,12 +13,12 @@ ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: de3e5f300c5e0c955989d8282a3a1c000c615299
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 67e79a107c47563e507ad27fb0bd14f703206b4c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62843072"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088784"
 ---
 # <a name="technical-reference-database-engine"></a>技術參考 (Database Engine)
   在 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中，尋找 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的工具、語言以及管理程式設計參考文件集。  

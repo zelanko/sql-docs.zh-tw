@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.datasourcepane.f1
@@ -13,17 +12,17 @@ ms.assetid: 1e39c910-5c10-4624-be27-ca02a461b46b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fd3d21c2371878c44accc4d7e9f501f47ce64646
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b5c5f1389e0761ba0665e37e842b23b58c70cfe2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732660"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082532"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>資料來源檢視 (Cube 結構索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 **[資料來源檢視]** 窗格，即可檢視來自與所選取 Cube 相關聯之資料來源檢視的資料表和資料行。 此窗格會用來建立量值群組和量值，方法是從 **[資料來源檢視]** 窗格中，將資料行拖曳至 **[量值]** 窗格中。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料來源檢視**  
  顯示與所選取 Cube 相關聯的資料來源檢視。  
   

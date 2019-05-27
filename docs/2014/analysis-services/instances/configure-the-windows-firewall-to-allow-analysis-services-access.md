@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1c5066a27097bb0919a6d0af0ffa9ad1c53e8624
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ac7570550cd256a5c65c82c9585b2baf7713c878
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730379"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080265"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>設定 Windows 防火牆以允許 Analysis Services 存取
   讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 在網路上可供使用的第一個必要步驟為判斷您是否需要在防火牆中解除封鎖通訊埠。 大部分安裝都要求您至少建立一個傳入防火牆規則來允許連接至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  

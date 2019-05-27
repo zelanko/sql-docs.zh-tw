@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimprocessingtransformation.mappings.f1
@@ -15,19 +14,19 @@ ms.assetid: bf98aa4b-10ba-4978-9fae-a5873ff88613
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3865407fce809380900408b079a026f3d1eba75d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6eaf39005e6c5d1d5cf401738fe82f3c97cdf693
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62898446"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059413"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>維度處理目的地編輯器 (對應頁面)
   使用 **[維度處理目的地編輯器]** 對話方塊的 **[對應]** 頁面，即可將輸入資料行對應至維度資料行。  
   
  若要深入了解維度處理目的地，請參閱＜ [Dimension Processing Destination](data-flow/dimension-processing-destination.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可用的輸入資料行**  
  檢視可用的輸入資料行清單。 使用拖放作業，即可將資料表中的可用輸入資料行對應到目的地資料行。  
   

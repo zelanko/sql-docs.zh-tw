@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.destinationassistant.f1
@@ -14,12 +13,12 @@ ms.assetid: 699d80d1-8b0e-4324-8f8d-5fefa3f2af00
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7d0764d865988d197d266ec143fce55478436194
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fa37f7c80f2aa3c371ad823bb7c22ee2ad4819ff
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62836868"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061854"
 ---
 # <a name="add-new-destination-dialog-box"></a>加入新目的地對話方塊
   下表列出可以在 [加入新目的地] 對話方塊中使用的選項。  

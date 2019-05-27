@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder, launching
@@ -16,18 +15,18 @@ ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 70ec1c794e86782551099b4fb5d8459c8bae6191
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6fc123be862320cd35ccf4aec76d8bc9cf7877af
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63157464"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107594"
 ---
 # <a name="start-report-builder-report-builder"></a>啟動報表產生器 (報表產生器)
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 包括單機和[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]版本的報表產生器。 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 版本可以搭配在原生模式或 SharePoint 整合模式下安裝的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用。  
   
 > [!NOTE]  
->  報表產生器無法安裝在 Itanium 64 型電腦上。 這適用於[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]和單機版本報表產生器。  
+>  報表產生器無法安裝在 Itanium 64 型電腦上。 這同樣適用於 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 和單機版本的報表產生器。  
   
  如果開啟之 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 版本的報表產生器為舊版的報表產生器，請連絡可以更新報表管理員和 SharePoint 網站的管理員來使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的報表產生器。  
   
@@ -69,7 +68,7 @@ ms.locfileid: "63157464"
   
 ### <a name="to-start-report-builder-stand-alone-from-the-start-menu"></a>若要從開始功能表獨立啟動報表產生器  
   
-1.  在 [開始] 功能表中，按一下 [**所有程式**，然後按一下[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]**報表產生器**。  
+1.  在 [開始] 功能表中，按一下 **所有程式**，然後按一下[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]**報表產生器**。  
   
 2.  按一下 [報表產生器]  。  
   

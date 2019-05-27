@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
@@ -13,12 +12,12 @@ ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76105982e4a1655fcb91e8432ea69bcee658a7fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6741660b7b7985356c59ffe47b53c376a55338e4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191822"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063905"
 ---
 # <a name="manage-bookmarks"></a>管理書籤
   使用程式碼編輯器時，[書籤] 視窗可讓您建立連結至文件內之程式碼的特定行。 您可以從 [檢視] 功能表顯示這個視窗。  

@@ -1,7 +1,7 @@
 ---
 title: 使用擴充保護連接至資料庫引擎 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/21/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d04f5e640f7622b5eab6106da29366f164fb6878
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7728a43645b2cd177bcc572a392481a7c5aa9510
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774543"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015013"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用擴充保護連接至 Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,15 +64,15 @@ ms.locfileid: "59774543"
   
 -   **強制加密**  
   
-     可能的值是 **[開啟]** 和 **[關閉]**。 若要使用通道繫結，[ **強制加密** ] 必須設定為 [ **開啟**]，而所有用戶端將會強制加密。 如果設定為 **[關閉]**，則只會保證服務繫結。 **[強制加密]** 位於 **組態管理員的** [MSSQLSERVER 的通訊協定屬性] ([旗標] 索引標籤) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+     可能的值是 **[開啟]** 和 **[關閉]** 。 若要使用通道繫結，[ **強制加密** ] 必須設定為 [ **開啟**]，而所有用戶端將會強制加密。 如果設定為 **[關閉]** ，則只會保證服務繫結。 **[強制加密]** 位於 **組態管理員的** [MSSQLSERVER 的通訊協定屬性] ([旗標] 索引標籤) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
 -   **擴充保護**  
   
-     可能的值是 **[關閉]**、 **[允許]** 和 **[必要]**。 **[擴充保護]** 變數可讓使用者設定每個 **執行個體的** 擴充保護層級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **[擴充保護]** 位於 **組態管理員的** [MSSQLSERVER 的通訊協定屬性] ([進階] 索引標籤) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+     可能的值是 **[關閉]** 、 **[允許]** 和 **[必要]** 。 **[擴充保護]** 變數可讓使用者設定每個 **執行個體的** 擴充保護層級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **[擴充保護]** 位於 **組態管理員的** [MSSQLSERVER 的通訊協定屬性] ([進階] 索引標籤) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
     -   當設定為 **[關閉]** 時，便會停用 **[擴充保護]** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體將會接受來自任何用戶端的連接，不論用戶端是否受到保護。 **[關閉]** 與舊版及未修補的作業系統相容，但是比較不安全。 當您知道用戶端作業系統不支援擴充保護時，請使用這個設定。  
   
-    -   當設定為 **[允許]** 時，支援 **[擴充保護]** 之作業系統的連接便需要 **[擴充保護]**。 如果是不支援 **[擴充保護]** 之作業系統所做的連接，便會忽略 **[擴充保護]**。 如果未受保護的用戶端應用程式在受保護的用戶端作業系統上執行，則會拒絕來自該應用程式的連接。 這個設定要比 **[關閉]** 安全，但不是最安全的設定。 請在某些作業系統支援 **[擴充保護]** 但某些不支援的混合式環境中使用這個設定。  
+    -   當設定為 **[允許]** 時，支援 **[擴充保護]** 之作業系統的連接便需要 **[擴充保護]** 。 如果是不支援 **[擴充保護]** 之作業系統所做的連接，便會忽略 **[擴充保護]** 。 如果未受保護的用戶端應用程式在受保護的用戶端作業系統上執行，則會拒絕來自該應用程式的連接。 這個設定要比 **[關閉]** 安全，但不是最安全的設定。 請在某些作業系統支援 **[擴充保護]** 但某些不支援的混合式環境中使用這個設定。  
   
     -   當設定為 **[必要]** 時，只會接受來自受保護之作業系統上的受保護應用程式的連接。 這個設定最安全，但是不支援 **[擴充保護]** 之作業系統或應用程式的連接將無法連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
@@ -81,19 +81,19 @@ ms.locfileid: "59774543"
      當一個以上的 SPN 知道伺服器時，便需要 **[接受的 NTLM SPN]** 變數。 當用戶端嘗試使用伺服器不知道的有效 SPN 連接到伺服器時，服務繫結將會失敗。 若要避免這個問題，使用者可以使用 **[接受的 NTLM SPN]** 來指定代表伺服器的數個 SPN。 **[接受的 NTLM SPN]** 是以分號分隔的一系列 SPN。 例如，若要允許 SPN **MSSQLSvc/ HostName1.Contoso.com** 和 **MSSQLSvc/ HostName2.Contoso.com**，請在 **[接受的 NTLM SPN]** 方塊中輸入 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** 。 此變數的最大長度為 2,048 個字元。 **[接受的 NTLM SPN]** 位於 **組態管理員的** [MSSQLSERVER 的通訊協定屬性] ([進階] 索引標籤) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>啟用 Database Engine 的擴充保護  
- 若要使用 **[擴充保護]**，伺服器和用戶端都必須擁有支援 **[擴充保護]** 的作業系統，而且必須在作業系統上啟用 **[擴充保護]** 。 如需有關如何針對作業系統啟用 **[擴充保護]** 的詳細資訊，請參閱 [驗證擴充保護](https://support.microsoft.com/kb/968389)。  
+ 若要使用 **[擴充保護]** ，伺服器和用戶端都必須擁有支援 **[擴充保護]** 的作業系統，而且必須在作業系統上啟用 **[擴充保護]** 。 如需有關如何針對作業系統啟用 **[擴充保護]** 的詳細資訊，請參閱 [驗證擴充保護](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)。  
   
- 從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 開始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就支援 [擴充保護]。 某些舊版**的未來更新中將可以使用** [擴充保護] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在伺服器電腦上啟用 **[擴充保護]** 之後，請使用下列步驟來啟用 **[擴充保護]**：  
+ 從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 開始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就支援 [擴充保護]。 某些舊版**的未來更新中將可以使用** [擴充保護] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在伺服器電腦上啟用 **[擴充保護]** 之後，請使用下列步驟來啟用 **[擴充保護]** ：  
   
-1.  在 **[開始]** 功能表上，選擇 **[所有程式]**，指向 **[Microsoft SQL Server]** ，然後按一下 **[SQL Server 組態管理員]**。  
+1.  在 **[開始]** 功能表上，選擇 **[所有程式]** ，指向 **[Microsoft SQL Server]** ，然後按一下 **[SQL Server 組態管理員]** 。  
   
-2.  展開 [SQL Server 網路組態]，然後在 [_\<_執行個體名稱*>* 的通訊協定] 上按一下滑鼠右鍵，再按一下 [屬性]。  
+2.  展開 [SQL Server 網路組態]，然後在 [_\<_執行個體名稱 *>* 的通訊協定] 上按一下滑鼠右鍵，再按一下 [屬性]。  
   
 3.  針對通道繫結和服務繫結，在 **[進階]** 索引標籤上將 **[擴充保護]** 設定為適當的設定值。  
   
 4.  當一個以上的 SPN 知道伺服器時，您也可以選擇在 **[進階]** 索引標籤上設定 **[接受的 NTLM SPN]** 欄位，如＜設定＞一節所述。  
   
-5.  如果是通道繫結，請在 **[旗標]** 索引標籤上將 **[強制加密]** 設定為 **[開啟]**。  
+5.  如果是通道繫結，請在 **[旗標]** 索引標籤上將 **[強制加密]** 設定為 **[開啟]** 。  
   
 6.  重新啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務。  
   

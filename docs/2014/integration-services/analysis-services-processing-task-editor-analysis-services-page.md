@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asprocessingtask.as.f1
@@ -15,12 +14,12 @@ ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 386854ec9a20931571ececf4bca943f95fc0dbf7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a6a114cba7caa1fa223f21de2aa8cc4a85979fe1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62836447"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061473"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Analysis Services 處理工作編輯器 (Analysis Services 頁面)
   使用 [Analysis Services 處理工作編輯器] 對話方塊的 [Analysis Services] 頁面，即可指定 Analysis Services 連接管理員、選取要處理的分析物件，以及設定處理與錯誤處理選項。  
@@ -37,7 +36,7 @@ ms.locfileid: "62836447"
   
  若要了解這個工作，請參閱 [Analysis Services 處理工作](control-flow/analysis-services-processing-task.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Analysis Services 連接管理員**  
  在清單中選取現有的 Analysis Services 連接管理員，或按一下 [新增] 以建立新的連接管理員。  
   

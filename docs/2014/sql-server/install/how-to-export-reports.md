@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - flat-file report versions [Upgrade Advisor]
@@ -18,12 +17,12 @@ ms.assetid: 3d8fd063-266d-49f1-bbf3-b3d53917c471
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bef2324110534811770a1ea7d433cf5f779d4d63
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e99cbf0f0154a7cda5f237256a8d60cf1ebb085d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294766"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094894"
 ---
 # <a name="how-to-export-reports"></a>HOW TO：匯出報表
   「Upgrade Advisor 報表檢視器」可以讓您匯出一般檔案版本的報表。 這樣做可讓您在試算表或文字處理文件中使用該項資訊，或將該項資訊以電子郵件寄給其他人。  

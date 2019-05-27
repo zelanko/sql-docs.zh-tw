@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.referencetable.f1
@@ -15,12 +14,12 @@ ms.assetid: e90d6b69-5a26-43c5-8433-5c3c9588e08c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f5c2971b1d4da669cadc57f0a557b32bf2b1adde
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7985f713093e839d258a0c9b80bb5d4e6e58f37f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767320"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057946"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>查閱轉換編輯器 (連接頁面)
   使用 **[查閱轉換編輯器]** 對話方塊的 **[連接]** 頁面，來選取連接管理員。 如果您選取 OLE DB 連接管理員，也可以選取查詢、資料表或檢視來產生參考資料集。  
