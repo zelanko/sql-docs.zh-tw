@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: dd7a2d2b-6327-4d77-ac5a-580d36073ad4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b16eb8fdfaf18bac628bf902427fed0edb1962c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fd9f9a5b786c5e1a928655276641e841cb3f43c8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62773504"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089595"
 ---
 # <a name="sqlcmd-how-to-topics"></a>sqlcmd 使用說明主題
   您可利用 [sqlcmd 公用程式](../tools/sqlcmd-utility.md) 在命令提示字元處、於 SQLCMD 模式的 [查詢編輯器] 中、在 Windows 指令碼檔案中，或是在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業的作業系統 (Cmd.exe) 作業步驟中，輸入 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式、系統程序與指令碼檔案。  

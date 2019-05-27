@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5fa6ad56-bf68-4aac-a226-52556173b7e2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4fd42458d59f7d591bf7de8279e983e30f754164
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc53b6ccc800e2986bf7a6bfdd01c0ef3c3208df
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794367"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066654"
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>排序資料表中的資料 (SSAS 表格式)
   您可以依一個或多個資料行中的文字 (A 到 Z 或 Z 到 A) 和數字 (最小到最大或最大到最小) 來排序資料。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.addreference.f1
@@ -16,17 +15,17 @@ ms.assetid: 457958c4-6baa-474d-99a0-34c195ceba09
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a2a44c1f7a37cc7e7e010ea15c72d35255b443e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 541b7371cdc05ee316e9fb9de9f50affc4f14fc7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62632951"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062856"
 ---
 # <a name="add-reference-dialog-box-analysis-services---multidimensional-data"></a>加入參考對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [加入參考] 對話方塊，即可將參考加入 [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework 組件或開發專案的另一個專案中。 您可以在方案總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的 [組件] 資料夾，然後從內容功能表中選取 [新增組件參考]，來顯示 [加入參考] 對話方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  

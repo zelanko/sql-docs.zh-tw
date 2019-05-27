@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - Sql12.ssms.XeWizard.Summary.f1
@@ -32,12 +31,12 @@ ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc69e3683656c5705e7e82df27b80a8a41cb81a9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cdc50e81bcc58722a3c04fc8516b9158072533cf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62807360"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065063"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>使用精靈建立擴充事件工作階段 (物件總管)
   為了幫助您選取及擷取伺服器上的事件，「擴充事件」包含了 [新增工作階段精靈]，可引導您建立「擴充事件」工作階段的步驟。 [新增工作階段精靈] 會公開大部分的擴充事件功能。 [新增工作階段對話方塊](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)也讓您定義擷取、顯示及分析資料的擴充事件工作階段。 [新增工作階段] 對話方塊會公開所有擴充事件功能。  

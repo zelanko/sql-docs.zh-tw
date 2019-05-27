@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmmtrainingtransformation.columns.f1
@@ -15,12 +14,12 @@ ms.assetid: 0891254c-74c2-4482-b41a-fd69b1677b23
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2c2dc53c1bd3644e1c7dfdb9a4ff1310f6caa7e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9c081064f3a0bcb2733f58df7e1b5550bf135c2d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62899726"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059884"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>資料採礦模型培訓編輯器 (資料行索引標籤)
   使用 **[資料採礦模型培訓編輯器]** 對話方塊的 **[資料行]** 頁面，即可將輸入資料行對應至採礦結構的資料行。  

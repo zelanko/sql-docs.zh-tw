@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - TRANSLATE function
 ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7734ce09ca33c1db8b0ab650509edeabe9e80a08
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: f2f278b257b1e14f88743a03098949712fa7a873
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59670854"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946664"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 

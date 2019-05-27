@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.finish.f1
@@ -13,17 +12,17 @@ ms.assetid: 68a4dd5d-94d9-4a02-be31-949a6da0ef51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 150007626cab59ab7905d369e8e50d7f1b001982
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7ab4ad7a819c18056ab5901f95caf1b74b23a25
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62681450"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087531"
 ---
 # <a name="completing-the-wizard-partition-wizard"></a>正在完成精靈 (資料分割精靈)
   使用 [正在完成精靈] 頁面，即可命名資料分割、定義資料分割的彙總設計，以及在完成資料分割精靈之後選擇性地部署和處理資料分割。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  輸入新資料分割的名稱。 如果您使用多個資料表，請輸入要和資料表名稱結合的前置詞，以建立每個資料分割名稱。  
   

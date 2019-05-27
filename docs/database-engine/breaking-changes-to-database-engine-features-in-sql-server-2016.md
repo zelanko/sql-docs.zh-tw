@@ -14,12 +14,12 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 581f6ee7daf4a208072b560c744e680ccfc5009e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 3074eb04df91d5284d5943b09a9c7c59bd9ef6f2
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872038"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983158"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中對於 Database Engine 的重大變更
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,15 +32,13 @@ ms.locfileid: "58872038"
   
 -   `sys.fn_virtualfilestats` 的 *TimeStamp* 資料行已經從 **int** 擴充到 **bigint** 資料類型。  
 
--   無法在相容性層級 130 之下使用 MD2、MD4、MD5、SHA 和 SHA1 演算法。 **不建議**使用 MD2、MD4、MD5、SHA 或 SHA1 雜湊演算法，但可藉由將資料庫相容性層級設為低於 130 的值來完成。  
-
 -   在資料庫相容性層級 130 下，藉由考量小數部分的毫秒從 **datetime** 隱含轉換至 **datetime2** 資料類型顯示改善的精確度，會導致不同的轉換值。 只要 datetime 和 datetime2 資料類型之間存在混合的比較案例，就明確轉換為 datetime2 資料類型。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/help/4010261)。
 
 -   在資料庫相容性層級 130 之下，在特定數值與日期時間資料類型之間執行隱含轉換的作業會顯示改善的精確度，而且可能導致不同的轉換值。 這包括使用需要計算的函數，例如 `DATEDIFF` 和 `ROUND`。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/help/4010261)。
 
 ## <a name="previous-versions"></a> 舊版  
 
-如需 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 和某些舊版的重大變更相關資訊，請參閱＜SQL Server 2014 中對於資料庫引擎功能的重大變更＞。
+如需 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 和某些舊版的重大變更相關資訊，請參閱 [SQL Server 2014 中對於資料庫引擎功能的重大變更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)。
 
 #### <a name="archived-documentation-for-very-old-versions-of-sql-server"></a>非常舊版的 SQL Server 封存文件
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.warnings.f1
@@ -13,12 +12,12 @@ ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d83620c0c6463bd6e752f65a97b2fb14e1d1c03f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 90eeca203c672c21551b8aff2e24feb164d8fda5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756013"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065432"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>警告 (資料庫設計工具) (Analysis Services - 多維度資料)
   使用 [警告] 索引標籤，即可檢視和解除全域規則，以及檢視和重新啟用已解除警告的特定執行個體。 **警告**索引標籤會顯示兩個方格：**設計警告規則**並**已解除警告**。  

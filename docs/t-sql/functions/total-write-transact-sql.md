@@ -19,15 +19,15 @@ helpviewer_keywords:
 - disks [SQL Server], number of disk writes
 - total write [SQL Server]
 ms.assetid: cd528126-51ee-4aa4-a21f-f32ce5c80fac
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4358cd07c271942252b060d3212009ac99f2a68f
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: a4d472077fd80a9637cdf72ba29d5a95b345ba0d
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980464"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946642"
 ---
 # <a name="x40x40totalwrite-transact-sql"></a>&#x40;&#x40;TOTAL_WRITE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

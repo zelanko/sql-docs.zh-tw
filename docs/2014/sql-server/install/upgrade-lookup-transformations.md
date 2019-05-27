@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation and upgrading
@@ -15,12 +14,12 @@ ms.assetid: d9b2c281-91ee-4e20-bdf0-0cd77d4a4241
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b58e50e12ce6631e9cb8a616434a0705f19af9a7
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: eae7433569972c217161f1681b2f7089c7604335
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65489689"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091513"
 ---
 # <a name="upgrade-lookup-transformations"></a>升級查閱轉換
   當您從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 時，請考慮修改封裝，以利用查閱轉換中的新功能。 此轉換支援 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 中所提供的快取類型與資料輸出選項。 如需有關其他快取和資料輸出，請參閱[查閱 」 轉換](../../integration-services/data-flow/transformations/lookup-transformation.md)。  

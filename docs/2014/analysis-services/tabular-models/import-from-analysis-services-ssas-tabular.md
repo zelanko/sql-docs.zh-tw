@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b9a21b23-3a06-4ef8-bc06-9c79cdc54870
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a698ddb598c4de51d4c30dde717176027f67e6d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9d864b2f8256bdd33cd2f595274a7894b4ea5e89
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757185"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067050"
 ---
 # <a name="import-from-analysis-services-ssas-tabular"></a>從 Analysis Services 匯入 (SSAS 表格式)
   本主題描述如何使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [從伺服器匯入] 專案範本，從現有的表格式模型匯入中繼資料，以建立新的表格式模型專案。  

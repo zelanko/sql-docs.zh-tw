@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 678f523c-e181-4456-9a54-7b7bf044b8d2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e07f6674df80b16abad45a6fece9aad582ec585d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f76d67d5e44fc700d4b889840ef2dcc07a0bfde0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756271"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065773"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>疑難排解處理資料 (SSAS 表格式)
   本主題提供有關使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]製作模型時，處理 (重新整理) 模型資料的詳細資訊。 本主題不會提供有關處理模型中已部署至 Analysis Services 伺服器執行個體之資料的詳細資訊。 如需在部署的模型中處理資料的詳細資訊，請參閱 [在 Analysis Services 中編寫管理工作的指令碼](script-administrative-tasks-in-analysis-services.md)。  

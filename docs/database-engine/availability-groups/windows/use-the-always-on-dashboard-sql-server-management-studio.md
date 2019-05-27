@@ -15,12 +15,12 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d70825317f2dbc7a59857bebf533d4b617b97e0
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: f1a82b21716db66c4eb2676ed51160519f99afd7
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120195"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982796"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>使用 Always On 可用性群組儀表板 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,12 @@ ms.locfileid: "49120195"
 -   同步處理模式和狀態    
 -   還原記錄的時間  
   
-##  <a name="before-you-begin"></a>開始之前  
   
-### <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisites  
  您必須連接到裝載可用性群組之主要複本或次要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (伺服器執行個體)。  
   
-### <a name="security"></a>Security  
-  
-#### <a name="permissions"></a>[權限]  
+ 
+### <a name="permissions"></a>權限  
  需要 CONNECT、VIEW SERVER STATE 和 VIEW ANY DEFINITION 權限。  
   
 ##  <a name="to-start-the-always-on-dashboard"></a>啟動 Always On 儀表板  
@@ -56,12 +54,12 @@ ms.locfileid: "49120195"
   
 2.  展開 [AlwaysOn 高可用性] 節點、以滑鼠右鍵按一下 [可用性群組] 節點，然後按一下 [顯示儀表板]。  
   
-###  <a name="change-always-on-dashboard-options"></a>變更 Always On 儀表板選項  
+##  <a name="change-always-on-dashboard-options"></a>變更 Always On 儀表板選項  
  您可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的 [選項] 對話方塊來設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 儀表板行為，以便進行自動重新整理並且啟用自動定義的 AlwaysOn 原則。  
   
-1.  在 **[工具]** 功能表中，按一下 **[選項]**。  
+1.  在 **[工具]** 功能表中，按一下 **[選項]** 。  
   
-2.  若要自動重新整理儀表板，請在 **[選項]** 對話方塊中，選取 **[開啟自動重新整理]**、輸入重新整理間隔 (以秒為單位)，然後輸入您想要重試連接的次數。  
+2.  若要自動重新整理儀表板，請在 **[選項]** 對話方塊中，選取 **[開啟自動重新整理]** 、輸入重新整理間隔 (以秒為單位)，然後輸入您想要重試連接的次數。  
   
 3.  若要啟用使用者定義的原則，請選取 [啟用使用者定義 AlwaysOn 原則]。  
   
@@ -191,7 +189,7 @@ ms.locfileid: "49120195"
 >  如需可用性複本效能計數器的相關資訊，請參閱 [SQLServer，可用性複本](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)。  
   
 ##  <a name="group-by-availability-group-information"></a>依可用性群組資訊分組  
- 若要將資訊分組，請按一下 **[群組依據]**，然後選取下列其中一項：  
+ 若要將資訊分組，請按一下 **[群組依據]** ，然後選取下列其中一項：  
   
 -   **可用性複本**    
 -   **可用性資料庫** 
@@ -216,8 +214,7 @@ ms.locfileid: "49120195"
     -   如果是次要資料庫，表示資料庫尚未開始記錄同步處理，原因是因為連接問題、處於暫停狀態，或在啟動或角色切換期間正在移轉狀態。  
   
 -   **正在同步處理**：
--   
-     在主要複本上：   
+- 在主要複本上：   
     - 在主要資料庫上，表示此資料庫準備好接受次要資料庫的掃描要求。  
     - 在次要複本上，表示該次要資料庫有進行中的資料移動作業。 
   
@@ -256,7 +253,7 @@ ms.locfileid: "49120195"
  如需所有 AlwaysOn 原則問題的清單，請參閱[AlwaysOn 可用性群組操作問題適用的 AlwaysOn 原則 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)。  
   
  **已暫停**  
- 指出資料庫 **[已暫停]** 或 **[已繼續]**。 預設隱藏此值。  
+ 指出資料庫 **[已暫停]** 或 **[已繼續]** 。 預設隱藏此值。  
   
  **暫停原因**  
  指出暫停狀態的原因。 預設隱藏此值。  

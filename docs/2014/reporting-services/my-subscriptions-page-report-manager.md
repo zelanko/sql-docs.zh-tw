@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d2d29838c371559c54163eb8e5488d198cf28345
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 75d662f677ee2b6bbab8e445804ca7f142b5c034
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188550"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108193"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>我的訂閱頁面 (報表管理員)
   使用 [我的訂閱] 頁面來檢視某個位置的所有訂閱。 從這個頁面中，您可以存取與修改或刪除擁有的任何訂閱。 您只擁有您所建立的訂閱。 您不可以存取其他使用者的訂閱，也不可以存取您有權使用但並未擁有的訂閱 (例如，如果您的名稱已經加入另一位使用者所定義的現有訂閱中)。 您不可以在此頁面建立訂閱。 如需建立訂用帳戶的詳細資訊，請參閱 <<c0> [ 新的訂用帳戶或編輯訂閱頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)。</c0>  

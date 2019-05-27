@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Help [PowerShell]
@@ -15,12 +14,12 @@ ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67633bcfad7c18679dae93de6e5541f3000a1ccc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3c9f297459b498276f84fa4fdfed5adf9941112d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62779100"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064880"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   有關使用適用於 Windows PowerShell 和指令程式之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者的資訊來源有幾個。 其中包括 Windows PowerShell 環境中可用的說明。  

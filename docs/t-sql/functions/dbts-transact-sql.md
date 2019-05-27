@@ -16,15 +16,15 @@ helpviewer_keywords:
 - '@@DBTS function'
 - timestamp data type
 ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 22d4089ac34ce7a1c4f08d1f289d2ea534ee221f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9fca5c54451d13a8496d20e453d0bd89bf27fed
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747446"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945631"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

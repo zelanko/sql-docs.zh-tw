@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - licensing
@@ -13,12 +12,12 @@ ms.assetid: 20f624c2-0036-4f44-a2a8-a041af0a0966
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ecea0b6803db3614ca797b0206d7932f3384c165
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 714dcdef73a48d80166b1888bc67e13e66303a44
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63195118"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093944"
 ---
 # <a name="licensing-considerations-for-sql-server"></a>SQL Server 的授權考量
   如需詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]授權選項，請參閱[這個 Microsoft SQL Server 」 網站](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)。  

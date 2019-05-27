@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
@@ -17,12 +16,12 @@ ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 268685c489d03f7e9055042ab613223146f89600
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a31052c0d239010407941141997fca8fc343f9cf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62689557"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086116"
 ---
 # <a name="association-model-query-examples"></a>關聯模型查詢範例
   在您針對資料採礦模型建立查詢時，可以建立內容查詢以提供有關在分析期間所發現的規則和項目集的詳細資料，或建立預測查詢以使用在資料中發現的關聯來進行預測。 對關聯模型而言，預測通常會以規則為基礎，而且可以用來進行推薦，而對內容所做的查詢則通常會探索項目集之間的關聯性。 您也可以擷取有關模型的中繼資料。  

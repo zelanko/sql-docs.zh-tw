@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.edittracetemplateproperties.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 2ab1a21d-3a0f-4ba4-92d8-7150b68e585e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c27057a5968ac9c415852d7cb934251056af9d99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 20f4376d6cd2eee3702596f5db60ae501d0ecc33
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62779684"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064894"
 ---
 # <a name="edit-trace-template-properties-general-tab"></a>編輯追蹤範本屬性 (一般索引標籤)
   使用 **[追蹤範本屬性]** 對話方塊的 **[一般]** 索引標籤，以使用下列選項來檢視或編輯現有的追蹤範本。 若要存取此對話方塊，請在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **[檔案]** 功能表上指向 **[範本]**，然後按一下 **[編輯範本]**。  

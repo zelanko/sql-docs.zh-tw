@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - Lat method
 ms.assetid: 051d66bc-04de-4c58-861c-760dc5b859b5
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: fda04401334546cde33ca14034d344c8b444e138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03e9aa242fd76579f17090c17257a865ebb927ef
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804308"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937669"
 ---
 # <a name="lat-geography-data-type"></a>Lat (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

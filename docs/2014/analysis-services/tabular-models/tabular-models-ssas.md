@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 80027288-c203-4667-a3e1-40fa572b4975
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 11a5a9332c7fa85fd6407523ffd9c7c48a2c0514
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 38ebc261b8d1c5a2a134de7085c2e6f34a704b34
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794572"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066293"
 ---
 # <a name="tabular-modeling-ssas-tabular"></a>表格式模型化 (SSAS 表格式)
   表格式模型是 Analysis Services 的記憶體中資料庫。 xVelocity 記憶體中分析引擎 (VertiPaq) 採用最先進的壓縮演算法和多執行緒查詢處理器，可透過 Microsoft Excel 和 Microsoft [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 等報表用戶端應用程式快速存取表格式模型物件和資料。  

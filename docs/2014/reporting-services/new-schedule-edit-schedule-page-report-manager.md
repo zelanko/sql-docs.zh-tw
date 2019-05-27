@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a43744243713fb522356814df8fa80a3e11197bd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ea1eed70c3eac8bac1c4141628e72ce0af8099c2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188361"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108152"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>新增排程：編輯排程頁面 （報表管理員）
   使用 [新增排程 / 編輯排程] 頁面，即可建立報表的排程。 排程可用於訂閱、重新整理快取報表，以及建立將快照集建立成獨立項目，或建立在報表歷程記錄中。  
@@ -73,7 +72,7 @@ ms.locfileid: "63188361"
   
 5.  在 **[訂閱處理選項]** 底下，按一下 **[新增排程]**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **排程詳細資料**  
  選取決定何時執行報表及其執行頻率的選項。 頻率選項有層次之分。 第一組選項指定頻率的類別 (每小時、每日、每週等)。 顯示的第二組選項是以您的初始選擇為基礎。  
   

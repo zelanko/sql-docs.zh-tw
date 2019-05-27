@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.erroroutput.f1
@@ -13,12 +12,12 @@ ms.assetid: 1a56c3cf-fb6a-416d-a62c-bb19fe441ae5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e8939bd266085dc34222184c624d3115d02c320d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f1a36537f8ca122a6fe9ae9521aa2f0713c94d01
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62836778"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061772"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>ADO NET 目的地編輯器 (錯誤輸出頁面)
   使用 **[ADO NET 目的地編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，即可指定錯誤處理選項。  

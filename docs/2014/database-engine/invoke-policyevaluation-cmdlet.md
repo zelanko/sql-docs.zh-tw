@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, Invoke-PolicyEvaluation
@@ -17,12 +16,12 @@ ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a7e24657764e16bf5b826019419dd57077276463
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c1239d2dea1a4f73b54f78345f769c9550c262b9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774103"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064687"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation 指令程式
   **Invoke-PolicyEvaluation** 是一項 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cmdlet，它會報告 SQL Server 物件的目標集是否符合在一或多個原則式管理原則中所指定的條件。  

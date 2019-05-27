@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Threads Window [Transact-SQL]
@@ -13,12 +12,12 @@ ms.assetid: e153f619-0049-4162-9076-c24a454f3278
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 713fa85a342613f261bb53aa393b8ff1504d256b
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: ad20bfbec71f08d694a5f6d7d3104538d9e19e93
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328728"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063413"
 ---
 # <a name="threads-window"></a>執行緒視窗
   [執行緒] 視窗會顯示有關所偵錯之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器工作階段使用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行緒資訊。 您必須在偵錯模式中，才能顯示執行緒資訊。  

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - relationships [SQL Server], assignment operators
 - column headings [SQL Server]
 ms.assetid: c3040db6-21d6-40ac-a783-82c98ec006cc
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 541fb750d6fa3975074a45b4668fabb6b56e5154
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 144185dfc0ce2a4318b29b2526bdba51ceb046ab
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642156"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980589"
 ---
 # <a name="-assignment-operator-transact-sql"></a>= (指派運算子) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.usagebasedoptimizationwizard.specifyquerycriteria.f1
@@ -13,12 +12,12 @@ ms.assetid: 3193adc2-af9f-4234-a4cc-dea0c280a724
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 088d53d1257c4b0d4b141b1e090ab1174416d397
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 41690da6a4a87bf79d411e2b467aeddfa56b5f00
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746142"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068216"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>指定查詢準則 (基於使用方式的最佳化精靈)
   使用 **[指定查詢準則]** 頁面選擇一個或多個篩選選項來識別要最佳化的查詢。  
@@ -26,7 +25,7 @@ ms.locfileid: "62746142"
 > [!NOTE]  
 >  如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 無法連接到查詢記錄，此頁面就會停用。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **查詢記錄統計資料**  
  顯示所選取資料分割的查詢記錄中，所儲存之查詢的相關資訊。 其中會顯示下列項目：  
   

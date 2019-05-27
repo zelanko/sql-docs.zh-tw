@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.editor.xmla.f1
@@ -16,12 +15,12 @@ ms.assetid: 14623019-7839-4038-9d12-2f8953d2ec04
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8d324657c6a405d090913909a7e5aaa756970734
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1939ea9e1de7b0b7858ad09ad26bc3b4fbf008c3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755913"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065304"
 ---
 # <a name="xmla-query-editor-analysis-services---multidimensional-data"></a>XMLA 查詢編輯器 (Analysis Services - 多維度資料)
   使用 XMLA 查詢編輯器，即可設計和執行以多維度運算式 (XMLA) 語言撰寫的陳述式和指令碼。  

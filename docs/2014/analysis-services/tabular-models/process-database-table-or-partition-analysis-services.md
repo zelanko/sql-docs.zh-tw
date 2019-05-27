@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1
@@ -13,12 +12,12 @@ ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6cfe1f291bd6a045bea635ea4501e76854d32e47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ea2d05c2862445737ea544fdab9c4ca8fc5e6c76
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794548"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066850"
 ---
 # <a name="process-database-table-or-partition"></a>處理資料庫、資料表或資料分割
   本主題中的工作描述如何使用手動處理表格式模型資料庫、 資料表或資料分割**程序\<物件 >**  對話方塊中的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  

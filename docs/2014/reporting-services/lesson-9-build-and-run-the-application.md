@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b87a8b4ba546c53dfd4e4e1819b3b01b4f5cf3bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 321075631a48570a80e8294f992e8ddb17d50bd3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278960"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108376"
 ---
 # <a name="lesson-9-build-and-run-the-application"></a>第 9 課：建置及執行應用程式
   建立資料表的資料篩選後，下一步是要建置和執行網站應用程式。  

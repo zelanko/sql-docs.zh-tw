@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 41f01eed-e50f-44c8-a8e0-97e01bd66bd3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a51f3daa31b65901f916bf61a3a734c66390b12c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 187e1755154dad23f1f21eb7b15400faa7cdea30
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756401"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066044"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具列 (維度結構索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用此工具列，即可在 **[維度設計師]** 的 **[維度結構]** 頁面內執行一般作業。  

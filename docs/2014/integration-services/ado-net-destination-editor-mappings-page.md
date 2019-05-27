@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.mappings.f1
@@ -13,12 +12,12 @@ ms.assetid: 842d075f-8b7a-457c-a1a1-a7acbe10e9b7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d538d3417e464df770415fb487ca7b2261a02317
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b722be21d3b2e2eb10fbd3cc351553df927dbef9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62836934"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061748"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>ADO NET 目的地編輯器 (對應頁面)
   使用 [ADO NET 目的地編輯器] 對話方塊的 [對應] 頁面，即可將輸入資料行對應至目的地資料行。  

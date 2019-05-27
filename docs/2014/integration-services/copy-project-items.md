@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Integration Services], copying
@@ -18,12 +17,12 @@ ms.assetid: 1606c54d-20f9-49f3-a4ef-caad83a772aa
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4185751f0aded344577acb6206f259debdb37642
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ef503e88e66bd6f89cac8d235f7175fb4cefe4e1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62831451"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060343"
 ---
 # <a name="copy-project-items"></a>複製專案項目
   本主題描述如何在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案內或在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案之間複製物件。 您也可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 專案的其他類型之間、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]之間複製物件。 若要在兩個專案之間進行複製，專案必須在同一個 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 方案中。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 專案](integration-services-ssis-projects-and-solutions.md)。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 979e379637f39bdcfb37c5b944ce6af45503f62a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756756"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066703"
 ---
 # <a name="relationships-ssas-tabular"></a>關聯性 (SSAS 表格式)
   在表格式模型中，關聯性是指兩個資料表之間的連接。 關聯性會建立兩個資料表中的資料相互關聯的方式。 例如，Customers 資料表和 Orders 資料表可以產生關聯，以便顯示彼此有關聯性的客戶名稱。  

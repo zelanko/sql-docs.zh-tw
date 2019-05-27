@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7225064a-4f6c-40d3-a026-34e757a966da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 82ca87476ff28066e1e4f2cf5ba9b60e4638ffdf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7c64e45800b168a45a674dc74a5f192e5e9f8389
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794163"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066087"
 ---
 # <a name="toolbar-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (資料分割索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 [工具列] 窗格，即可在 Cube 設計師的 [資料分割] 索引標籤上執行一般動作。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |選項|描述|  
 |------------|-----------------|  

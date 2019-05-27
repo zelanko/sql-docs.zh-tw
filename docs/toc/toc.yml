@@ -237,7 +237,7 @@
                   href: ../relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
                 - name: 刪除備份部落格檔案
                   href: ../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
-                - name: Restore
+                - name: 還原
                   href: ../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md
                 - name: 受控備份
                   items:
@@ -263,7 +263,7 @@
                   href: ../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md
                 - name: 至鏡像媒體集
                   href: ../relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md
-            - name: Restore
+            - name: 還原
               items:
                 - name: 使用 SQL Server Management Studio (SSMS)
                   href: ../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md
@@ -8715,306 +8715,117 @@
             - name: DAC Framework 相容性
               href: ../ssdt/dac-framework-compatibility.md
     - name: SQL Server Management Studio (SSMS)
-      href: ../ssms/sql-server-management-studio-ssms.md
       items:
-        - name: 下載 SSMS
+        - name: 下載
           href: ../ssms/download-sql-server-management-studio-ssms.md
+        - name: 版本資訊
+          href: ../ssms/release-notes-ssms.md
+        - name: 概觀
           items:
-            - name: SSMS 版本資訊和先前版本
-              href: ../ssms/release-notes-ssms.md
-            - name: 下載相關的版本資訊
-              href: '../ssms/download-sql-server-management-studio-ssms.md#release-notes'
-            - name: 安裝非英文版 SSMS
-              href: ../ssms/install-other-languages.md
-            - name: SSMS 支援原則
-              href: ../ssms/support-policy.md
-        - name: SQL Server Management Studio
-          href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
+            - name: SSMS
+              items:
+                - name: SQL Server Management Studio (SSMS)
+                  href: ../ssms/sql-server-management-studio-ssms.md
+                - name: BI 用 SSMS 的簡介
+                  href: ../ssms/introduction-to-sql-server-management-studio-for-business-intelligence.md
+                - name: 安裝非英文版 SSMS
+                  href: ../ssms/install-other-languages.md
+            - name: SQL Server Agent
+              items:
+                - name: SQL Server Agent
+                  href: ../ssms/agent/sql-server-agent.md
+                - name: 公佈下載指示
+                  href: ../ssms/agent/post-download-instructions.md
+                - name: 作業活動監視器
+                  href: ../ssms/agent/job-activity-monitor.md
+            - name: 註冊伺服器
+              items:
+                - name: 註冊伺服器
+                  href: ../ssms/register-servers/register-servers.md
+            - name: 指令碼
+              items:
+                - name: 指令碼
+                  href: ../ssms/scripting/database-engine-scripting.md
+                - name: 查詢與文字編輯器
+                  href: ../ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+                - name: Database Engine 查詢編輯器
+                  href: ../ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+                - name: XML 編輯器
+                  href: ../ssms/scripting/xml-editor-sql-server-management-studio.md
+                - name: 設定編輯器
+                  href: ../ssms/scripting/configure-editors-sql-server-management-studio.md
+                - name: 使副檔名與程式碼編輯器相關聯
+                  href: ../ssms/scripting/associate-file-extensions-to-a-code-editor.md
+                - name: 變更字型色彩、大小與樣式
+                  href: ../ssms/scripting/change-font-color-size-and-style.md
+                - name: 在 Management Studio 中使用屬性視窗
+                  href: ../ssms/scripting/use-the-properties-window-in-management-studio.md
+                - name: 開啟編輯器
+                  href: ../ssms/scripting/open-an-editor-sql-server-management-studio.md
+                - name: 管理編輯器與檢視模式
+                  href: ../ssms/scripting/manage-the-editor-and-view-mode.md
+                - name: 管理程式碼格式設定
+                  href: ../ssms/scripting/manage-code-formatting.md
+                - name: 巡覽程式碼與文字
+                  href: ../ssms/scripting/navigate-code-and-text.md
+                - name: 查詢編輯器中的色彩編碼
+                  href: ../ssms/scripting/color-coding-in-query-editors.md
+        - name: 快速入門
           items:
-            - name: 使用 SSMS 對 SQL Server 進行連線與查詢
-              href: ../ssms/tutorials/connect-query-sql-server.md
-            - name: 在 SSMS 中編寫物件指令碼
-              href: ../ssms/tutorials/scripting-ssms.md
-            - name: 在 SSMS 中使用範本
-              href: ../ssms/tutorials/templates-ssms.md
-            - name: SSMS 組態
-              href: ../ssms/tutorials/ssms-configuration.md
-            - name: 使用 SSMS 的祕訣與訣竅
-              href: ../ssms/tutorials/ssms-tricks.md
-        - name: 一般管理
+            - name: SSMS
+              items:
+                - name: 連線與查詢 SQL Server
+                  href: ../ssms/tutorials/connect-query-sql-server.md
+            - name: 註冊伺服器
+              items:
+                - name: 建立新的已註冊伺服器
+                  href: ../ssms/register-servers/create-a-new-registered-server-sql-server-management-studio.md
+        - name: 教學課程
           items:
-            - name: BI 用 SSMS 的簡介
-              href: ../ssms/introduction-to-sql-server-management-studio-for-business-intelligence.md
-            - name: 自訂功能表與快速鍵
-              href: ../ssms/customize-menus-and-shortcut-keys.md
-            - name: SSMS 中的工具視窗
-              href: ../ssms/tool-windows-in-sql-server-management-studio.md
-            - name: 使用 SSMS 建置資料庫專案
-              href: ../ssms/build-database-projects-by-using-sql-server-management-studio.md
-            - name: 了解 SSMS Windows 管理
-              href: ../ssms/understand-sql-server-management-studio-windows-management.md
-            - name: 使用 SSMS 管理伺服器
-              href: ../ssms/administer-servers-with-sql-server-management-studio.md
-            - name: 設定 WMI 在 SQL Server 工具中顯示伺服器狀態
-              href: ../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md
-            - name: 外部工具的引數
-              href: ../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md
-            - name: 將外部工具新增至工具功能表
-              href: ../ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
-            - name: 設定登入稽核
-              href: ../ssms/configure-login-auditing-sql-server-management-studio.md
-            - name: SSMS 公用程式
-              href: ../ssms/ssms-utility.md
-            - name: SSMS 鍵盤快速鍵
-              href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
-        - name: SQL Server Agent
-          href: ../ssms/agent/sql-server-agent.md
+            - name: SSMS
+              items:
+                - name: SQL Server Management Studio
+                  href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
+                - name: 連線與查詢 SQL Server
+                  href: ../ssms/tutorials/connect-query-sql-server.md
+                - name: 編寫物件的指令碼
+                  href: ../ssms/tutorials/scripting-ssms.md
+                - name: SSMS 中的範本
+                  href: ../ssms/tutorials/templates-ssms.md
+                - name: SSMS 組態
+                  href: ../ssms/tutorials/ssms-configuration.md
+            - name: 註冊伺服器
+              items:
+                - name: 註冊已連線的伺服器
+                  href: ../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md
+                - name: 建立中央管理伺服器與伺服器群組
+                  href: ../ssms/register-servers/create-a-central-management-server-and-server-group.md
+                - name: 同時對多部伺服器執行陳述式
+                  href: ../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md
+        - name: 概念
           items:
-            - name: 公佈下載指示
-              href: ../ssms/agent/post-download-instructions.md
-            - name: 設定
-              href: ../ssms/agent/configure-sql-server-agent.md
+            - name: SSMS
               items:
-                - name: 將作業指派至作業類別目錄
-                  href: ../ssms/agent/assign-a-job-to-a-job-category.md
-                - name: 指派警示給操作員
-                  href: ../ssms/agent/assign-alerts-to-an-operator.md
-                - name: Automatically Delete a Job
-                  href: ../ssms/agent/automatically-delete-a-job.md
-                - name: 自動啟動 SQL Server Agent
-                  href: ../ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md
-                - name: 變更操作員的可用性
-                  href: ../ssms/agent/change-an-operator-s-availability.md
-                - name: Change the Membership of a Job Category
-                  href: ../ssms/agent/change-the-membership-of-a-job-category.md
-                - name: 為多伺服器環境選擇適當的 Agent 服務帳戶
-                  href: ../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md
-                - name: Clear the Job History Log
-                  href: ../ssms/agent/clear-the-job-history-log.md
-                - name: 設定使用者以建立與管理 SQL Server Agent 作業
-                  href: ../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md
-                - name: 將目標伺服器編列至主要伺服器
-                  href: ../ssms/agent/enlist-a-target-server-to-a-master-server.md
-                - name: Force a Target Server to Poll the Master Server
-                  href: ../ssms/agent/force-a-target-server-to-poll-the-master-server.md
-                - name: Format Pager Addresses for Alerts
-                  href: ../ssms/agent/format-pager-addresses-for-alerts.md
-                - name: Give Others Ownership of a Job
-                  href: ../ssms/agent/give-others-ownership-of-a-job.md
-                - name: 處理多個作業步驟
-                  href: ../ssms/agent/handle-multiple-job-steps.md
-                - name: 列出作業類別目錄資訊
-                  href: ../ssms/agent/list-job-category-information.md
-                - name: Make a Master Server
-                  href: ../ssms/agent/make-a-master-server.md
-                - name: 設為目標伺服器
-                  href: ../ssms/agent/make-a-target-server.md
-                - name: 管理事件
-                  href: ../ssms/agent/manage-events.md
-                - name: 管理作業步驟
-                  href: ../ssms/agent/manage-job-steps.md
-                - name: 管理整個企業的作業
-                  href: ../ssms/agent/manage-jobs-across-an-enterprise.md
-                - name: 管理排程
-                  href: ../ssms/agent/manage-schedules.md
-                - name: Modify a Job
-                  href: ../ssms/agent/modify-a-job.md
-                - name: 修改 SQL Server Agent 主要作業
-                  href: ../ssms/agent/modify-a-sql-server-agent-master-job.md
-                - name: Modify a SQL Server Agent Proxy
-                  href: ../ssms/agent/modify-a-sql-server-agent-proxy.md
-                - name: 修改與 Agent 主要作業建立關聯的目標伺服器
-                  href: ../ssms/agent/modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md
-                - name: Modify the Target Servers for a Job
-                  href: ../ssms/agent/modify-the-target-servers-for-a-job.md
-                - name: 監視作業活動
-                  href: ../ssms/agent/monitor-job-activity.md
-                - name: 新增作業排程 - 作業排程屬性
-                  href: ../ssms/agent/new-job-schedule-job-schedule-properties.md
-                - name: Notify an Operator of Job Status
-                  href: ../ssms/agent/notify-an-operator-of-job-status.md
-                - name: 操作員
-                  href: ../ssms/agent/operators.md
-                - name: 組織作業
-                  href: ../ssms/agent/organize-jobs.md
-                - name: 作業的挑選排程
-                  href: ../ssms/agent/pick-schedule-for-job.md
-                - name: 輪詢伺服器
-                  href: ../ssms/agent/poll-servers.md
-                - name: Proxy 編輯器 - 新增主體
-                  href: ../ssms/agent/proxy-editor-add-principal.md
-                - name: Remove Steps from a SQL Server Agent Master Job
-                  href: ../ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md
-                - name: Resize the Job History Log
-                  href: ../ssms/agent/resize-the-job-history-log.md
-                - name: 執行作業
-                  href: ../ssms/agent/run-jobs.md
-                - name: Schedule a Job
-                  href: ../ssms/agent/schedule-a-job.md
-                - name: 選取 SQL Server Agent 服務的帳戶
-                  href: ../ssms/agent/select-an-account-for-the-sql-server-agent-service.md
-                - name: Send SQL Server Agent Error Messages
-                  href: ../ssms/agent/send-sql-server-agent-error-messages.md
-                - name: 指定目標伺服器的位置 (SSMS)
-                  href: ../ssms/agent/specify-a-target-server-s-location-sql-server-management-studio.md
-                - name: 指定作業回應
-                  href: ../ssms/agent/specify-job-responses.md
-                - name: SQL Server Agent 固定資料庫角色
-                  href: ../ssms/agent/sql-server-agent-fixed-database-roles.md
-                - name: 將目標伺服器的時鐘同步化 (SSMS)
-                  href: ../ssms/agent/synchronize-target-server-clocks-sql-server-management-studio.md
-                - name: 針對使用 Proxy 的多伺服器作業進行疑難排解
-                  href: ../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md
-                - name: 微調企業整體的自動化管理
-                  href: ../ssms/agent/tune-automated-administration-across-an-enterprise.md
-                - name: 使用效能物件
-                  href: ../ssms/agent/use-performance-objects.md
-                - name: 在作業步驟中使用 Token
-                  href: ../ssms/agent/use-tokens-in-job-steps.md
-                - name: 將作業狀態寫入到 Windows 應用程式記錄
-                  href: ../ssms/agent/write-the-job-status-to-the-windows-application-log.md
-            - name: 建立
+                - name: SSMS 中的工具視窗
+                  href: ../ssms/tool-windows-in-sql-server-management-studio.md
+                - name: 使用 SSMS 建置資料庫專案
+                  href: ../ssms/build-database-projects-by-using-sql-server-management-studio.md
+                - name: 了解 SSMS Windows 管理
+                  href: ../ssms/understand-sql-server-management-studio-windows-management.md
+                - name: 使用 SSMS 管理伺服器
+                  href: ../ssms/administer-servers-with-sql-server-management-studio.md
+                - name: 外部工具的引數
+                  href: ../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md
+                - name: 將外部工具新增至工具功能表
+                  href: ../ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
+                - name: SSMS 公用程式
+                  href: ../ssms/ssms-utility.md
+                - name: SSMS 鍵盤快速鍵
+                  href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
+            - name: SQL Server Agent
               items:
-                - name: CmdExec 作業步驟
-                  href: ../ssms/agent/create-a-cmdexec-job-step.md
-                - name: 作業類別目錄
-                  href: ../ssms/agent/create-a-job-category.md
-                - name: 作業
-                  href: ../ssms/agent/create-a-job.md
-                - name: 多伺服器環境
-                  href: ../ssms/agent/create-a-multiserver-environment.md
-                - name: PowerShell 指令碼作業步驟
-                  href: ../ssms/agent/create-a-powershell-script-job-step.md
-                - name: 排程
-                  href: ../ssms/agent/create-a-schedule.md
-                - name: SQL Server Agent 主要作業
-                  href: ../ssms/agent/create-a-sql-server-agent-master-job.md
-                - name: SQL Server Agent Proxy
-                  href: ../ssms/agent/create-a-sql-server-agent-proxy.md
-                - name: T-SQL 作業步驟
-                  href: ../ssms/agent/create-a-transact-sql-job-step.md
-                - name: 使用者定義事件
-                  href: ../ssms/agent/create-a-user-defined-event.md
-                - name: WMI 事件警示
-                  href: ../ssms/agent/create-a-wmi-event-alert.md
-                - name: ActiveX 指令碼作業步驟
-                  href: ../ssms/agent/create-an-activex-script-job-step.md
-                - name: 使用錯誤號碼的警示
-                  href: ../ssms/agent/create-an-alert-using-an-error-number.md
-                - name: 使用嚴重性層級的警示
-                  href: ../ssms/agent/create-an-alert-using-severity-level.md
-                - name: Analysis Services 作業步驟
-                  href: ../ssms/agent/create-an-analysis-services-job-step.md
-                - name: 操作員
-                  href: ../ssms/agent/create-an-operator.md
-                - name: 建立排程並附加至作業
-                  href: ../ssms/agent/create-and-attach-schedules-to-jobs.md
-                - name: 中稱為
-                  href: ../ssms/agent/create-jobs.md
-            - name: 脫離
-              items:
-                - name: 主要伺服器的一部目標伺服器
-                  href: ../ssms/agent/defect-a-target-server-from-a-master-server.md
-                - name: 主要伺服器的多部目標伺服器
-                  href: ../ssms/agent/defect-multiple-target-servers-from-a-master-server.md
-            - name: 定義
-              items:
-                - name: 對警示的回應 (SSMS)
-                  href: ../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md
-                - name: T-SQL 作業步驟選項
-                  href: ../ssms/agent/define-transact-sql-job-step-options.md
-            - name: DELETE
-              items:
-                - name: 作業類別目錄
-                  href: ../ssms/agent/delete-a-job-category.md
-                - name: 作業步驟記錄
-                  href: ../ssms/agent/delete-a-job-step-log.md
-                - name: SQL Server Agent Proxy
-                  href: ../ssms/agent/delete-a-sql-server-agent-proxy.md
-                - name: 警示
-                  href: ../ssms/agent/delete-an-alert.md
-                - name: 操作員
-                  href: ../ssms/agent/delete-an-operator.md
-                - name: 中稱為
-                  href: ../ssms/agent/delete-jobs.md
-                - name: 一或多個作業
-                  href: ../ssms/agent/delete-one-or-more-jobs.md
-                - name: 運算子
-                  href: ../ssms/agent/delete-operator.md
-            - name: 指定
-              items:
-                - name: 保全操作員
-                  href: ../ssms/agent/designate-a-fail-safe-operator.md
-                - name: 事件轉送伺服器 (SSMS)
-                  href: ../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md
-            - name: Disable
-              items:
-                - name: Disable or Enable a Job
-                  href: ../ssms/agent/disable-or-enable-a-job.md
-                - name: Disable or Reactivate an Alert
-                  href: ../ssms/agent/disable-or-reactivate-an-alert.md
-            - name: 編輯
-              items:
-                - name: Edit an Alert
-                  href: ../ssms/agent/edit-an-alert.md
-                - name: 編輯操作員
-                  href: ../ssms/agent/edit-an-operator.md
-            - name: 將
-              items:
-                - name: SQL Server Agent 服務的別名
-                  href: ../ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md
-                - name: CPU 閒置時間與持續時間 (SSMS)
-                  href: ../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md
-                - name: 目標伺服器上的加密選項
-                  href: ../ssms/agent/set-encryption-options-on-target-servers.md
-                - name: 作業執行關機 (SSMS)
-                  href: ../ssms/agent/set-job-execution-shutdown-sql-server-management-studio.md
-                - name: 作業步驟成功或失敗流程
-                  href: ../ssms/agent/set-job-step-success-or-failure-flow.md
-                - name: 目標伺服器的輪詢間隔
-                  href: ../ssms/agent/set-the-polling-interval-for-target-servers.md
-                - name: SQL Server Agent 的服務啟動帳戶
-                  href: ../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md
-                - name: Agent 服務的 SQL Server 連線
-                  href: ../ssms/agent/set-sql-server-connection-for-sql-server-agent-service-ssms.md
-                - name: 作業歷程記錄
-                  href: ../ssms/agent/set-up-the-job-history-log.md
-            - name: 啟動與停止
-              items:
-                - name: 啟動作業
-                  href: ../ssms/agent/start-a-job.md
-                - name: 'Start, Stop, or Pause the SQL Server Agent Service'
-                  href: ../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md
-                - name: 停止作業
-                  href: ../ssms/agent/stop-a-job.md
-            - name: 檢視
-              items:
-                - name: 作業
-                  href: ../ssms/agent/view-a-job.md
-                - name: 警示的相關資訊
-                  href: ../ssms/agent/view-information-about-an-alert.md
-                - name: 操作員的相關資訊
-                  href: ../ssms/agent/view-information-about-an-operator.md
-                - name: 作業活動
-                  href: ../ssms/agent/view-job-activity.md
-                - name: 作業步驟資訊
-                  href: ../ssms/agent/view-job-step-information.md
-                - name: 檢視或修改作業
-                  href: ../ssms/agent/view-or-modify-jobs.md
-                - name: 作業記錄
-                  href: ../ssms/agent/view-the-job-history.md
-            - name: 錯誤記錄檔
-              href: ../ssms/agent/sql-server-agent-error-log.md
-              items:
-                - name: 檢視 SQL Server Agent 錯誤記錄檔
-                  href: ../ssms/agent/view-sql-server-agent-error-log-sql-server-management-studio.md
-                - name: 重新命名 SQL Server Agent 錯誤記錄檔 (SSMS)
-                  href: ../ssms/agent/rename-a-sql-server-agent-error-log-sql-server-management-studio.md
-                - name: 要將執行追蹤訊息寫入 SQL Server Agent 錯誤記錄檔 (SSMS)
-                  href: ../ssms/agent/write-execution-trace-messages-to-sql-server-agent-log-ssms.md
-            - name: 自動化管理工作
-              href: ../ssms/agent/automated-administration-tasks-sql-server-agent.md
-              items:
+                - name: 自動化管理工作
+                  href: ../ssms/agent/automated-administration-tasks-sql-server-agent.md
                 - name: 實作 Agent 安全性
                   href: ../ssms/agent/implement-sql-server-agent-security.md
                 - name: 實作作業
@@ -9023,15 +8834,10 @@
                   href: ../ssms/agent/monitor-and-respond-to-events.md
                 - name: 將整個企業的管理自動化
                   href: ../ssms/agent/automated-administration-across-an-enterprise.md
-                  items:
-                    - name: Change Steps of a SQL Server Agent Master Job
-                      href: ../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md
-                    - name: 變更主要作業的排程詳細資料
-                      href: ../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md
-            - name: 參考
-              items:
-                - name: 作業活動監視器
-                  href: ../ssms/agent/job-activity-monitor.md
+                - name: Change Steps of a SQL Server Agent Master Job
+                  href: ../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md
+                - name: 變更主要作業的排程詳細資料
+                  href: ../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md
                 - name: F1 說明
                   href: ../ssms/agent/sql-server-agent-f1-help.md
                   items:
@@ -9122,60 +8928,436 @@
                       href: ../ssms/agent/proxy-account-properties-new-proxy-account-general-page.md
                     - name: 新增 Proxy 帳戶 (主體頁面)
                       href: ../ssms/agent/proxy-account-properties-new-proxy-account-principals-tab.md
-        - name: 註冊伺服器
-          href: ../ssms/register-servers/register-servers.md
-          items:
-            - name: 註冊已連線的伺服器
-              href: ../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md
-            - name: 建立新的已註冊伺服器
-              href: ../ssms/register-servers/create-a-new-registered-server-sql-server-management-studio.md
-            - name: 在 SQL Server Management Studio 中檢視已註冊的伺服器
-              href: ../ssms/register-servers/view-registered-servers-in-sql-server-management-studio.md
-            - name: 移除已註冊的伺服器
-              href: ../ssms/register-servers/remove-a-registered-server-sql-server-management-studio.md
-            - name: 變更伺服器的註冊
-              href: ../ssms/register-servers/change-a-server-s-registration-sql-server-management-studio.md
-            - name: 連線到已註冊的伺服器
-              href: ../ssms/register-servers/connect-to-a-registered-server-sql-server-management-studio.md
-            - name: 中斷與已註冊伺服器的連線
-              href: ../ssms/register-servers/disconnect-from-a-registered-server-sql-server-management-studio.md
-            - name: 移動已註冊的伺服器或已註冊的伺服器群組
-              href: ../ssms/register-servers/move-a-registered-server-or-registered-server-group.md
-            - name: 變更已註冊伺服器或已註冊伺服器群組的名稱
-              href: ../ssms/register-servers/change-the-name-of-registered-server-or-registered-server-group.md
-            - name: 建立或編輯伺服器群組
-              href: ../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md
-            - name: 移除伺服器群組
-              href: ../ssms/register-servers/remove-a-server-group-sql-server-management-studio.md
-            - name: 匯出已註冊的伺服器資訊
-              href: ../ssms/register-servers/export-registered-server-information-sql-server-management-studio.md
-            - name: 匯入已註冊的伺服器資訊
-              href: ../ssms/register-servers/import-registered-server-information-sql-server-management-studio.md
-            - name: 建立中央管理伺服器與伺服器群組
-              href: ../ssms/register-servers/create-a-central-management-server-and-server-group.md
-            - name: 同時對多部伺服器執行陳述式
-              href: ../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md
-            - name: 已註冊的伺服器 F1 說明
-              href: ../ssms/register-servers/registered-servers-f1-help.md
-        - name: 指令碼
-          href: ../ssms/scripting/database-engine-scripting.md
-          items:
-            - name: 查詢與文字編輯器
-              href: ../ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+            - name: 註冊伺服器
               items:
-                - name: Database Engine 查詢編輯器
-                  href: ../ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
-                - name: XML 編輯器
-                  href: ../ssms/scripting/xml-editor-sql-server-management-studio.md
+                - name: 已註冊的伺服器 F1 說明
+                  href: ../ssms/register-servers/registered-servers-f1-help.md
+            - name: 指令碼
+              items:
+                - name: 查詢與文字編輯器
+                  items:
+                    - name: 查詢與文字編輯器
+                      href: ../ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+                    - name: Database Engine 查詢編輯器
+                      href: ../ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+                    - name: XML 編輯器
+                      href: ../ssms/scripting/xml-editor-sql-server-management-studio.md
+                    - name: 查詢編輯器中的色彩編碼
+                      href: ../ssms/scripting/color-coding-in-query-editors.md
+                - name: 程式碼大綱
+                  href: ../ssms/scripting/code-outlining.md
+                - name: 拖放文字
+                  href: ../ssms/scripting/drag-and-drop-text.md
+                - name: 搜尋與取代
+                  href: ../ssms/scripting/search-and-replace.md
+                  items:
+                    - name: 以累加方式搜尋作用中的文件
+                      href: ../ssms/scripting/search-an-active-document-incrementally.md
+                    - name: 以互動方式搜尋文件
+                      href: ../ssms/scripting/search-documents-interactively.md
+                    - name: 使用結果清單搜尋文件
+                      href: ../ssms/scripting/search-documents-using-results-lists.md
+                    - name: 使用萬用字元搜尋文字
+                      href: ../ssms/scripting/search-text-with-wildcards.md
+                    - name: 使用規則運算式搜尋文字
+                      href: ../ssms/scripting/search-text-with-regular-expressions.md
+                    - name: 尋找與取代
+                      href: ../ssms/scripting/find-and-replace.md
+                    - name: 檔案中尋找
+                      href: ../ssms/scripting/find-in-files.md
+                    - name: 尋找結果視窗
+                      href: ../ssms/scripting/find-results-windows.md
+                    - name: 檔案中取代
+                      href: ../ssms/scripting/replace-in-files.md
+                - name: 管理書籤
+                  href: ../ssms/scripting/manage-bookmarks.md
+                  items:
+                    - name: 書籤 F1 說明
+                      href: ../ssms/scripting/bookmarks-f1-help.md
+                - name: 列印程式碼與結果
+                  href: ../ssms/scripting/print-code-and-results.md
+                - name: IntelliSense
+                  href: ../ssms/scripting/intellisense-sql-server-management-studio.md
+                  items:
+                    - name: 設定 IntelliSense
+                      href: ../ssms/scripting/configure-intellisense-sql-server-management-studio.md
+                    - name: 參數資訊 (IntelliSense)
+                      href: ../ssms/scripting/parameter-info-intellisense.md
+                    - name: 快速資訊 (IntelliSense)
+                      href: ../ssms/scripting/quick-info-intellisense.md
+                    - name: 自動完成文字 (IntelliSense)
+                      href: ../ssms/scripting/complete-word-intellisense.md
+                    - name: 語法組的自動比對
+                      href: ../ssms/scripting/automatic-matching-of-syntax-pairs.md
+                    - name: 對 IntelliSense 進行疑難排解 (SSMS)
+                      href: ../ssms/scripting/troubleshooting-intellisense.md
+                    - name: IntelliSense 支援的 T-SQL 語法
+                      href: ../ssms/scripting/transact-sql-syntax-supported-by-intellisense.md
+                - name: T-SQL 程式碼片段
+                  href: ../ssms/scripting/transact-sql-code-snippets.md
+                  items:
+                    - name: 插入 T-SQL 程式碼片段
+                      href: ../ssms/scripting/insert-transact-sql-snippets.md
+                    - name: 插入範圍陳述式 T-SQL 程式碼片段
+                      href: ../ssms/scripting/insert-surround-with-transact-sql-snippets.md
+                    - name: 完成 T-SQL 程式碼片段
+                      href: ../ssms/scripting/complete-transact-sql-snippets.md
+                    - name: 新增 T-SQL 程式碼片段
+                      href: ../ssms/scripting/add-transact-sql-snippets.md
+                - name: T-SQL 偵錯工具
+                  href: ../ssms/scripting/transact-sql-debugger.md
+                  items:
+                    - name: 先設定防火牆規則再執行 T-SQL 偵錯工具
+                      href: ../ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md
+                    - name: 執行 T-SQL 偵錯工具
+                      href: ../ssms/scripting/run-the-transact-sql-debugger.md
+                    - name: 逐步執行 T-SQL 程式碼
+                      href: ../ssms/scripting/step-through-transact-sql-code.md
+                    - name: T-SQL 中斷點
+                      href: ../ssms/scripting/transact-sql-breakpoints.md
+                      items:
+                        - name: 切換中斷點
+                          href: ../ssms/scripting/toggle-a-breakpoint.md
+                        - name: 啟用、停用與刪除中斷點
+                          href: ../ssms/scripting/enable-disable-and-delete-breakpoints.md
+                        - name: 指定中斷點條件
+                          href: ../ssms/scripting/specify-a-breakpoint-condition.md
+                        - name: 指定叫用計數
+                          href: ../ssms/scripting/specify-a-hit-count.md
+                        - name: 指定中斷點篩選條件
+                          href: ../ssms/scripting/specify-a-breakpoint-filter.md
+                        - name: 指定中斷點動作
+                          href: ../ssms/scripting/specify-a-breakpoint-action.md
+                        - name: 編輯中斷點位置
+                          href: ../ssms/scripting/edit-a-breakpoint-location.md
+                    - name: T-SQL 偵錯工具 - 資訊
+                      href: ../ssms/scripting/transact-sql-debugger-information.md
+                      items:
+                        - name: T-SQL 偵錯工具 - 錯誤清單視窗
+                          href: ../ssms/scripting/transact-sql-debugger-error-list-window.md
+                        - name: T-SQL 偵錯工具 - 中斷點視窗
+                          href: ../ssms/scripting/transact-sql-debugger-breakpoints-window.md
+                        - name: T-SQL 偵錯工具 - 呼叫堆疊視窗
+                          href: ../ssms/scripting/transact-sql-debugger-call-stack-window.md
+                        - name: T-SQL 偵錯工具 - 區域變數視窗
+                          href: ../ssms/scripting/transact-sql-debugger-locals-window.md
+                        - name: T-SQL 偵錯工具 - 執行緒視窗
+                          href: ../ssms/scripting/transact-sql-debugger-threads-window.md
+                        - name: T-SQL 偵錯工具 - 命令視窗
+                          href: ../ssms/scripting/transact-sql-debugger-command-window.md
+                        - name: T-SQL 偵錯工具 - 輸出視窗
+                          href: ../ssms/scripting/transact-sql-debugger-output-window.md
+                        - name: T-SQL 偵錯工具 - 監看式視窗
+                          href: ../ssms/scripting/transact-sql-debugger-watch-window.md
+                        - name: T-SQL 偵錯工具 - 快速監看式對話方塊
+                          href: ../ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md
+                    - name: 狀態列 (Database Engine 查詢編輯器)
+                      href: ../ssms/scripting/status-bar-database-engine-query-editor.md
+                    - name: 檢視物件總管中的空間資料
+                      href: ../ssms/scripting/view-spatial-data-in-object-explorer.md
+                      items:
+                        - name: 空間結果視窗
+                          href: ../ssms/scripting/spatial-results-window.md
+                        - name: 產生指令碼
+                          href: ../ssms/scripting/generate-scripts-sql-server-management-studio.md
+                          items:
+                            - name: 產生與發行指令碼精靈
+                              href: ../ssms/scripting/generate-and-publish-scripts-wizard.md
+                              items:
+                                - name: 指令碼產生精靈支援的物件
+                                  href: ../ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
+        - name: 使用說明指南
+          items:
+            - name: SSMS
+              items:
+                - name: 自訂功能表與快速鍵
+                  href: ../ssms/customize-menus-and-shortcut-keys.md
+                - name: 設定 WMI 在 SQL Server 工具中顯示伺服器狀態
+                  href: ../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md
+                - name: 設定登入稽核
+                  href: ../ssms/configure-login-auditing-sql-server-management-studio.md
+                - name: 疑難排解
+                  items:
+                    - name: 取得完整記憶體傾印
+                      href: ../ssms/troubleshoot/get-full-memory-dump.md
+            - name: SQL Server Agent
+              items:
+                - name: 設定
+                  items:
+                    - name: 設定
+                      href: ../ssms/agent/configure-sql-server-agent.md
+                    - name: 將作業指派至作業類別目錄
+                      href: ../ssms/agent/assign-a-job-to-a-job-category.md
+                    - name: 指派警示給操作員
+                      href: ../ssms/agent/assign-alerts-to-an-operator.md
+                    - name: Automatically Delete a Job
+                      href: ../ssms/agent/automatically-delete-a-job.md
+                    - name: 自動啟動 SQL Server Agent
+                      href: ../ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md
+                    - name: 變更操作員的可用性
+                      href: ../ssms/agent/change-an-operator-s-availability.md
+                    - name: Change the Membership of a Job Category
+                      href: ../ssms/agent/change-the-membership-of-a-job-category.md
+                    - name: 為多伺服器環境選擇適當的 Agent 服務帳戶
+                      href: ../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md
+                    - name: Clear the Job History Log
+                      href: ../ssms/agent/clear-the-job-history-log.md
+                    - name: 設定使用者以建立與管理 SQL Server Agent 作業
+                      href: ../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md
+                    - name: 將目標伺服器編列至主要伺服器
+                      href: ../ssms/agent/enlist-a-target-server-to-a-master-server.md
+                    - name: Force a Target Server to Poll the Master Server
+                      href: ../ssms/agent/force-a-target-server-to-poll-the-master-server.md
+                    - name: Format Pager Addresses for Alerts
+                      href: ../ssms/agent/format-pager-addresses-for-alerts.md
+                    - name: Give Others Ownership of a Job
+                      href: ../ssms/agent/give-others-ownership-of-a-job.md
+                    - name: 處理多個作業步驟
+                      href: ../ssms/agent/handle-multiple-job-steps.md
+                    - name: 列出作業類別目錄資訊
+                      href: ../ssms/agent/list-job-category-information.md
+                    - name: Make a Master Server
+                      href: ../ssms/agent/make-a-master-server.md
+                    - name: 設為目標伺服器
+                      href: ../ssms/agent/make-a-target-server.md
+                    - name: 管理事件
+                      href: ../ssms/agent/manage-events.md
+                    - name: 管理作業步驟
+                      href: ../ssms/agent/manage-job-steps.md
+                    - name: 管理整個企業的作業
+                      href: ../ssms/agent/manage-jobs-across-an-enterprise.md
+                    - name: 管理排程
+                      href: ../ssms/agent/manage-schedules.md
+                    - name: Modify a Job
+                      href: ../ssms/agent/modify-a-job.md
+                    - name: 修改 SQL Server Agent 主要作業
+                      href: ../ssms/agent/modify-a-sql-server-agent-master-job.md
+                    - name: Modify a SQL Server Agent Proxy
+                      href: ../ssms/agent/modify-a-sql-server-agent-proxy.md
+                    - name: 修改與 Agent 主要作業建立關聯的目標伺服器
+                      href: ../ssms/agent/modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md
+                    - name: Modify the Target Servers for a Job
+                      href: ../ssms/agent/modify-the-target-servers-for-a-job.md
+                    - name: 監視作業活動
+                      href: ../ssms/agent/monitor-job-activity.md
+                    - name: 新增作業排程 - 作業排程屬性
+                      href: ../ssms/agent/new-job-schedule-job-schedule-properties.md
+                    - name: Notify an Operator of Job Status
+                      href: ../ssms/agent/notify-an-operator-of-job-status.md
+                    - name: 操作員
+                      href: ../ssms/agent/operators.md
+                    - name: 組織作業
+                      href: ../ssms/agent/organize-jobs.md
+                    - name: 作業的挑選排程
+                      href: ../ssms/agent/pick-schedule-for-job.md
+                    - name: 輪詢伺服器
+                      href: ../ssms/agent/poll-servers.md
+                    - name: Proxy 編輯器 - 新增主體
+                      href: ../ssms/agent/proxy-editor-add-principal.md
+                    - name: Remove Steps from a SQL Server Agent Master Job
+                      href: ../ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md
+                    - name: Resize the Job History Log
+                      href: ../ssms/agent/resize-the-job-history-log.md
+                    - name: 執行作業
+                      href: ../ssms/agent/run-jobs.md
+                    - name: Schedule a Job
+                      href: ../ssms/agent/schedule-a-job.md
+                    - name: 選取 SQL Server Agent 服務的帳戶
+                      href: ../ssms/agent/select-an-account-for-the-sql-server-agent-service.md
+                    - name: Send SQL Server Agent Error Messages
+                      href: ../ssms/agent/send-sql-server-agent-error-messages.md
+                    - name: 指定目標伺服器的位置 (SSMS)
+                      href: ../ssms/agent/specify-a-target-server-s-location-sql-server-management-studio.md
+                    - name: 指定作業回應
+                      href: ../ssms/agent/specify-job-responses.md
+                    - name: SQL Server Agent 固定資料庫角色
+                      href: ../ssms/agent/sql-server-agent-fixed-database-roles.md
+                    - name: 將目標伺服器的時鐘同步化 (SSMS)
+                      href: ../ssms/agent/synchronize-target-server-clocks-sql-server-management-studio.md
+                    - name: 針對使用 Proxy 的多伺服器作業進行疑難排解
+                      href: ../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md
+                    - name: 微調企業整體的自動化管理
+                      href: ../ssms/agent/tune-automated-administration-across-an-enterprise.md
+                    - name: 使用效能物件
+                      href: ../ssms/agent/use-performance-objects.md
+                    - name: 在作業步驟中使用 Token
+                      href: ../ssms/agent/use-tokens-in-job-steps.md
+                    - name: 將作業狀態寫入到 Windows 應用程式記錄
+                      href: ../ssms/agent/write-the-job-status-to-the-windows-application-log.md
+                - name: 建立
+                  items:
+                    - name: CmdExec 作業步驟
+                      href: ../ssms/agent/create-a-cmdexec-job-step.md
+                    - name: 作業類別目錄
+                      href: ../ssms/agent/create-a-job-category.md
+                    - name: 作業
+                      href: ../ssms/agent/create-a-job.md
+                    - name: 多伺服器環境
+                      href: ../ssms/agent/create-a-multiserver-environment.md
+                    - name: PowerShell 指令碼作業步驟
+                      href: ../ssms/agent/create-a-powershell-script-job-step.md
+                    - name: 排程
+                      href: ../ssms/agent/create-a-schedule.md
+                    - name: SQL Server Agent 主要作業
+                      href: ../ssms/agent/create-a-sql-server-agent-master-job.md
+                    - name: SQL Server Agent Proxy
+                      href: ../ssms/agent/create-a-sql-server-agent-proxy.md
+                    - name: T-SQL 作業步驟
+                      href: ../ssms/agent/create-a-transact-sql-job-step.md
+                    - name: 使用者定義事件
+                      href: ../ssms/agent/create-a-user-defined-event.md
+                    - name: WMI 事件警示
+                      href: ../ssms/agent/create-a-wmi-event-alert.md
+                    - name: ActiveX 指令碼作業步驟
+                      href: ../ssms/agent/create-an-activex-script-job-step.md
+                    - name: 使用錯誤號碼的警示
+                      href: ../ssms/agent/create-an-alert-using-an-error-number.md
+                    - name: 使用嚴重性層級的警示
+                      href: ../ssms/agent/create-an-alert-using-severity-level.md
+                    - name: Analysis Services 作業步驟
+                      href: ../ssms/agent/create-an-analysis-services-job-step.md
+                    - name: 操作員
+                      href: ../ssms/agent/create-an-operator.md
+                    - name: 建立排程並附加至作業
+                      href: ../ssms/agent/create-and-attach-schedules-to-jobs.md
+                    - name: 中稱為
+                      href: ../ssms/agent/create-jobs.md
+                - name: 脫離
+                  items:
+                    - name: 主要伺服器的一部目標伺服器
+                      href: ../ssms/agent/defect-a-target-server-from-a-master-server.md
+                    - name: 主要伺服器的多部目標伺服器
+                      href: ../ssms/agent/defect-multiple-target-servers-from-a-master-server.md
+                - name: 定義
+                  items:
+                    - name: 對警示的回應 (SSMS)
+                      href: ../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md
+                    - name: T-SQL 作業步驟選項
+                      href: ../ssms/agent/define-transact-sql-job-step-options.md
+                - name: DELETE
+                  items:
+                    - name: 作業類別目錄
+                      href: ../ssms/agent/delete-a-job-category.md
+                    - name: 作業步驟記錄
+                      href: ../ssms/agent/delete-a-job-step-log.md
+                    - name: SQL Server Agent Proxy
+                      href: ../ssms/agent/delete-a-sql-server-agent-proxy.md
+                    - name: 警示
+                      href: ../ssms/agent/delete-an-alert.md
+                    - name: 操作員
+                      href: ../ssms/agent/delete-an-operator.md
+                    - name: 中稱為
+                      href: ../ssms/agent/delete-jobs.md
+                    - name: 一或多個作業
+                      href: ../ssms/agent/delete-one-or-more-jobs.md
+                    - name: 運算子
+                      href: ../ssms/agent/delete-operator.md
+                - name: 指定
+                  items:
+                    - name: 保全操作員
+                      href: ../ssms/agent/designate-a-fail-safe-operator.md
+                    - name: 事件轉送伺服器 (SSMS)
+                      href: ../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md
+                - name: Disable
+                  items:
+                    - name: Disable or Enable a Job
+                      href: ../ssms/agent/disable-or-enable-a-job.md
+                    - name: Disable or Reactivate an Alert
+                      href: ../ssms/agent/disable-or-reactivate-an-alert.md
+                - name: 編輯
+                  items:
+                    - name: Edit an Alert
+                      href: ../ssms/agent/edit-an-alert.md
+                    - name: 編輯操作員
+                      href: ../ssms/agent/edit-an-operator.md
+                - name: 將
+                  items:
+                    - name: SQL Server Agent 服務的別名
+                      href: ../ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md
+                    - name: CPU 閒置時間與持續時間 (SSMS)
+                      href: ../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md
+                    - name: 目標伺服器上的加密選項
+                      href: ../ssms/agent/set-encryption-options-on-target-servers.md
+                    - name: 作業執行關機 (SSMS)
+                      href: ../ssms/agent/set-job-execution-shutdown-sql-server-management-studio.md
+                    - name: 作業步驟成功或失敗流程
+                      href: ../ssms/agent/set-job-step-success-or-failure-flow.md
+                    - name: 目標伺服器的輪詢間隔
+                      href: ../ssms/agent/set-the-polling-interval-for-target-servers.md
+                    - name: SQL Server Agent 的服務啟動帳戶
+                      href: ../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md
+                    - name: Agent 服務的 SQL Server 連線
+                      href: ../ssms/agent/set-sql-server-connection-for-sql-server-agent-service-ssms.md
+                    - name: 作業歷程記錄
+                      href: ../ssms/agent/set-up-the-job-history-log.md
+                - name: 啟動與停止
+                  items:
+                    - name: 啟動作業
+                      href: ../ssms/agent/start-a-job.md
+                    - name: 'Start, Stop, or Pause the SQL Server Agent Service'
+                      href: ../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md
+                    - name: 停止作業
+                      href: ../ssms/agent/stop-a-job.md
+                - name: 檢視
+                  items:
+                    - name: 作業
+                      href: ../ssms/agent/view-a-job.md
+                    - name: 警示的相關資訊
+                      href: ../ssms/agent/view-information-about-an-alert.md
+                    - name: 操作員的相關資訊
+                      href: ../ssms/agent/view-information-about-an-operator.md
+                    - name: 作業活動
+                      href: ../ssms/agent/view-job-activity.md
+                    - name: 作業步驟資訊
+                      href: ../ssms/agent/view-job-step-information.md
+                    - name: 檢視或修改作業
+                      href: ../ssms/agent/view-or-modify-jobs.md
+                    - name: 作業記錄
+                      href: ../ssms/agent/view-the-job-history.md
+                - name: 錯誤記錄檔
+                  items:
+                    - name: 錯誤記錄檔
+                      href: ../ssms/agent/sql-server-agent-error-log.md
+                    - name: 檢視 SQL Server Agent 錯誤記錄檔
+                      href: ../ssms/agent/view-sql-server-agent-error-log-sql-server-management-studio.md
+                    - name: 重新命名 SQL Server Agent 錯誤記錄檔 (SSMS)
+                      href: ../ssms/agent/rename-a-sql-server-agent-error-log-sql-server-management-studio.md
+                    - name: 要將執行追蹤訊息寫入 SQL Server Agent 錯誤記錄檔 (SSMS)
+                      href: ../ssms/agent/write-execution-trace-messages-to-sql-server-agent-log-ssms.md
+            - name: 註冊伺服器
+              items:
+                - name: 在 SQL Server Management Studio 中檢視已註冊的伺服器
+                  href: ../ssms/register-servers/view-registered-servers-in-sql-server-management-studio.md
+                - name: 移除已註冊的伺服器
+                  href: ../ssms/register-servers/remove-a-registered-server-sql-server-management-studio.md
+                - name: 變更伺服器的註冊
+                  href: ../ssms/register-servers/change-a-server-s-registration-sql-server-management-studio.md
+                - name: 連線到已註冊的伺服器
+                  href: ../ssms/register-servers/connect-to-a-registered-server-sql-server-management-studio.md
+                - name: 中斷與已註冊伺服器的連線
+                  href: ../ssms/register-servers/disconnect-from-a-registered-server-sql-server-management-studio.md
+                - name: 移動已註冊的伺服器或已註冊的伺服器群組
+                  href: ../ssms/register-servers/move-a-registered-server-or-registered-server-group.md
+                - name: 變更已註冊伺服器或已註冊伺服器群組的名稱
+                  href: ../ssms/register-servers/change-the-name-of-registered-server-or-registered-server-group.md
+                - name: 建立或編輯伺服器群組
+                  href: ../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md
+                - name: 移除伺服器群組
+                  href: ../ssms/register-servers/remove-a-server-group-sql-server-management-studio.md
+                - name: 匯出已註冊的伺服器資訊
+                  href: ../ssms/register-servers/export-registered-server-information-sql-server-management-studio.md
+                - name: 匯入已註冊的伺服器資訊
+                  href: ../ssms/register-servers/import-registered-server-information-sql-server-management-studio.md
+            - name: 指令碼
+              items:
                 - name: 設定編輯器
                   href: ../ssms/scripting/configure-editors-sql-server-management-studio.md
-                  items:
-                    - name: 使副檔名與程式碼編輯器相關聯
-                      href: ../ssms/scripting/associate-file-extensions-to-a-code-editor.md
-                    - name: 變更字型色彩、大小與樣式
-                      href: ../ssms/scripting/change-font-color-size-and-style.md
-                    - name: 在 Management Studio 中使用屬性視窗
-                      href: ../ssms/scripting/use-the-properties-window-in-management-studio.md
+                - name: 使副檔名與程式碼編輯器相關聯
+                  href: ../ssms/scripting/associate-file-extensions-to-a-code-editor.md
+                - name: 變更字型色彩、大小與樣式
+                  href: ../ssms/scripting/change-font-color-size-and-style.md
+                - name: 在 Management Studio 中使用屬性視窗
+                  href: ../ssms/scripting/use-the-properties-window-in-management-studio.md
                 - name: 開啟編輯器
                   href: ../ssms/scripting/open-an-editor-sql-server-management-studio.md
                 - name: 管理編輯器與檢視模式
@@ -9184,141 +9366,20 @@
                   href: ../ssms/scripting/manage-code-formatting.md
                 - name: 巡覽程式碼與文字
                   href: ../ssms/scripting/navigate-code-and-text.md
-                - name: 查詢編輯器中的色彩編碼
-                  href: ../ssms/scripting/color-coding-in-query-editors.md
-            - name: 程式碼大綱
-              href: ../ssms/scripting/code-outlining.md
-            - name: 拖放文字
-              href: ../ssms/scripting/drag-and-drop-text.md
-            - name: 搜尋與取代
-              href: ../ssms/scripting/search-and-replace.md
-              items:
-                - name: 以累加方式搜尋作用中的文件
-                  href: ../ssms/scripting/search-an-active-document-incrementally.md
-                - name: 以互動方式搜尋文件
-                  href: ../ssms/scripting/search-documents-interactively.md
-                - name: 使用結果清單搜尋文件
-                  href: ../ssms/scripting/search-documents-using-results-lists.md
-                - name: 使用萬用字元搜尋文字
-                  href: ../ssms/scripting/search-text-with-wildcards.md
-                - name: 使用規則運算式搜尋文字
-                  href: ../ssms/scripting/search-text-with-regular-expressions.md
-                - name: 尋找與取代
-                  href: ../ssms/scripting/find-and-replace.md
-                - name: 檔案中尋找
-                  href: ../ssms/scripting/find-in-files.md
-                - name: 尋找結果視窗
-                  href: ../ssms/scripting/find-results-windows.md
-                - name: 檔案中取代
-                  href: ../ssms/scripting/replace-in-files.md
-            - name: 管理書籤
-              href: ../ssms/scripting/manage-bookmarks.md
-              items:
-                - name: 書籤 F1 說明
-                  href: ../ssms/scripting/bookmarks-f1-help.md
-            - name: 列印程式碼與結果
-              href: ../ssms/scripting/print-code-and-results.md
-            - name: 使用查詢編輯器編輯 SQLCMD 指令碼
-              href: ../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md
-            - name: IntelliSense
-              href: ../ssms/scripting/intellisense-sql-server-management-studio.md
-              items:
-                - name: 設定 IntelliSense
-                  href: ../ssms/scripting/configure-intellisense-sql-server-management-studio.md
-                - name: 參數資訊 (IntelliSense)
-                  href: ../ssms/scripting/parameter-info-intellisense.md
-                - name: 快速資訊 (IntelliSense)
-                  href: ../ssms/scripting/quick-info-intellisense.md
-                - name: 自動完成文字 (IntelliSense)
-                  href: ../ssms/scripting/complete-word-intellisense.md
-                - name: 語法組的自動比對
-                  href: ../ssms/scripting/automatic-matching-of-syntax-pairs.md
-                - name: 對 IntelliSense 進行疑難排解 (SSMS)
-                  href: ../ssms/scripting/troubleshooting-intellisense.md
-                - name: IntelliSense 支援的 T-SQL 語法
-                  href: ../ssms/scripting/transact-sql-syntax-supported-by-intellisense.md
-            - name: T-SQL 程式碼片段
-              href: ../ssms/scripting/transact-sql-code-snippets.md
-              items:
-                - name: 插入 T-SQL 程式碼片段
-                  href: ../ssms/scripting/insert-transact-sql-snippets.md
-                - name: 插入範圍陳述式 T-SQL 程式碼片段
-                  href: ../ssms/scripting/insert-surround-with-transact-sql-snippets.md
-                - name: 完成 T-SQL 程式碼片段
-                  href: ../ssms/scripting/complete-transact-sql-snippets.md
-                - name: 新增 T-SQL 程式碼片段
-                  href: ../ssms/scripting/add-transact-sql-snippets.md
-            - name: T-SQL 偵錯工具
-              href: ../ssms/scripting/transact-sql-debugger.md
-              items:
-                - name: 先設定防火牆規則再執行 T-SQL 偵錯工具
-                  href: ../ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md
-                - name: 執行 T-SQL 偵錯工具
-                  href: ../ssms/scripting/run-the-transact-sql-debugger.md
-                - name: 逐步執行 T-SQL 程式碼
-                  href: ../ssms/scripting/step-through-transact-sql-code.md
-                - name: T-SQL 中斷點
-                  href: ../ssms/scripting/transact-sql-breakpoints.md
-                  items:
-                    - name: 切換中斷點
-                      href: ../ssms/scripting/toggle-a-breakpoint.md
-                    - name: 啟用、停用與刪除中斷點
-                      href: ../ssms/scripting/enable-disable-and-delete-breakpoints.md
-                    - name: 指定中斷點條件
-                      href: ../ssms/scripting/specify-a-breakpoint-condition.md
-                    - name: 指定叫用計數
-                      href: ../ssms/scripting/specify-a-hit-count.md
-                    - name: 指定中斷點篩選條件
-                      href: ../ssms/scripting/specify-a-breakpoint-filter.md
-                    - name: 指定中斷點動作
-                      href: ../ssms/scripting/specify-a-breakpoint-action.md
-                    - name: 編輯中斷點位置
-                      href: ../ssms/scripting/edit-a-breakpoint-location.md
-                - name: T-SQL 偵錯工具 - 資訊
-                  href: ../ssms/scripting/transact-sql-debugger-information.md
-                  items:
-                    - name: T-SQL 偵錯工具 - 錯誤清單視窗
-                      href: ../ssms/scripting/transact-sql-debugger-error-list-window.md
-                    - name: T-SQL 偵錯工具 - 中斷點視窗
-                      href: ../ssms/scripting/transact-sql-debugger-breakpoints-window.md
-                    - name: T-SQL 偵錯工具 - 呼叫堆疊視窗
-                      href: ../ssms/scripting/transact-sql-debugger-call-stack-window.md
-                    - name: T-SQL 偵錯工具 - 區域變數視窗
-                      href: ../ssms/scripting/transact-sql-debugger-locals-window.md
-                    - name: T-SQL 偵錯工具 - 執行緒視窗
-                      href: ../ssms/scripting/transact-sql-debugger-threads-window.md
-                    - name: T-SQL 偵錯工具 - 命令視窗
-                      href: ../ssms/scripting/transact-sql-debugger-command-window.md
-                    - name: T-SQL 偵錯工具 - 輸出視窗
-                      href: ../ssms/scripting/transact-sql-debugger-output-window.md
-                    - name: T-SQL 偵錯工具 - 監看式視窗
-                      href: ../ssms/scripting/transact-sql-debugger-watch-window.md
-                    - name: T-SQL 偵錯工具 - 快速監看式對話方塊
-                      href: ../ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md
-                - name: 狀態列 (Database Engine 查詢編輯器)
-                  href: ../ssms/scripting/status-bar-database-engine-query-editor.md
-                - name: 檢視物件總管中的空間資料
-                  href: ../ssms/scripting/view-spatial-data-in-object-explorer.md
-                  items:
-                    - name: 空間結果視窗
-                      href: ../ssms/scripting/spatial-results-window.md
-                    - name: 產生指令碼
-                      href: ../ssms/scripting/generate-scripts-sql-server-management-studio.md
-                      items:
-                        - name: 產生與發行指令碼精靈
-                          href: ../ssms/scripting/generate-and-publish-scripts-wizard.md
-                          items:
-                            - name: 指令碼產生精靈支援的物件
-                              href: ../ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
-        - name: 疑難排解
-          items:
-            - name: 取得完整記憶體傾印
-              href: ../ssms/troubleshoot/get-full-memory-dump.md
+                - name: 使用查詢編輯器編輯 SQLCMD 指令碼
+                  href: ../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md
         - name: 參考
           items:
+            - name: SQL Server PowerShell
+              href: ../powershell/sql-server-powershell.md
+            - name: SQL Server 管理物件 (SMO)
+              href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
+            - name: Transact-SQL 參考 (資料庫引擎)
+              href: ../t-sql/language-reference.md
             - name: SSMS 環境
-              href: ../ssms/the-sql-server-management-studio-environment.md
               items:
+                - name: SSMS 環境
+                  href: ../ssms/the-sql-server-management-studio-environment.md
                 - name: 一般使用者介面元素
                   href: ../ssms/general-user-interface-elements.md
                 - name: 引數對話方塊
@@ -9337,9 +9398,10 @@
                   href: ../ssms/output-window.md
                 - name: 使用工具箱
                   href: ../ssms/use-the-toolbox.md
-            - name: 伺服器連線的 F1 說明 (SSMS)
-              href: ../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
+            - name: F1 說明
               items:
+                - name: 伺服器連線的 F1 說明 (SSMS)
+                  href: ../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
                 - name: 連接到 Microsoft Azure 儲存體
                   href: ../ssms/f1-help/connect-to-microsoft-azure-storage.md
                 - name: 從 SQL Server Management Studio 連接到任何 SQL Server 元件
@@ -9430,9 +9492,10 @@
                   href: ../ssms/object/object-explorer.md
                 - name: 將步驟加入至 SQL Server Agent 主要作業
                   href: ../ssms/object/add-steps-to-a-sql-server-agent-master-job.md
-            - name: 使用物件總管管理物件
-              href: ../ssms/object/manage-objects-by-using-object-explorer.md
+            - name: 管理物件
               items:
+                - name: 使用物件總管管理物件
+                  href: ../ssms/object/manage-objects-by-using-object-explorer.md
                 - name: 使用自訂報表搭配物件總管節點屬性
                   href: ../ssms/object/use-custom-reports-with-object-explorer-node-properties.md
                 - name: 物件相依性
@@ -9470,8 +9533,9 @@
                 - name: 取消隱藏執行自訂報表警告
                   href: ../ssms/object/unsuppress-run-custom-report-warnings.md
             - name: 方案總管
-              href: ../ssms/solution/solution-explorer.md
               items:
+                - name: 方案總管
+                  href: ../ssms/solution/solution-explorer.md
                 - name: 複製方案中的項目
                   href: ../ssms/solution/copy-items-in-a-solution.md
                 - name: 管理方案與專案的檔案
@@ -9517,15 +9581,17 @@
                 - name: 建立新方案
                   href: ../ssms/solution/create-a-new-solution.md
             - name: 範本總管
-              href: ../ssms/template/template-explorer.md
               items:
+                - name: 範本總管
+                  href: ../ssms/template/template-explorer.md
                 - name: 開啟範本
                   href: ../ssms/template/open-a-template.md
                 - name: 取代範本參數
                   href: ../ssms/template/replace-template-parameters.md
             - name: Visual Database Tools
-              href: ../ssms/visual-db-tools/visual-database-tools.md
               items:
+                - name: Visual Database Tools
+                  href: ../ssms/visual-db-tools/visual-database-tools.md
                 - name: 新增資料表對話方塊 (查詢與檢視表設計工具)
                   href: ../ssms/visual-db-tools/add-table-dialog-box-query-and-view-designers-visual-database-tools.md
                 - name: 儲存變更指令碼對話方塊
@@ -9818,7 +9884,7 @@
                   href: ../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md
                 - name: 排列圖表中的資料表
                   href: ../ssms/visual-db-tools/arrange-tables-in-diagrams-visual-database-tools.md
-                - name: 逐步解說：新增與變更資料庫圖表
+                - name: 新增與變更資料庫圖表
                   href: ../ssms/visual-db-tools/walkthrough-adding-and-changing-a-database-diagram.md
                 - name: 資料表值物件 (資料行) 屬性
                   href: ../ssms/visual-db-tools/table-valued-object-column-properties-visual-database-tools.md
@@ -9886,6 +9952,26 @@
                   href: ../ssms/visual-db-tools/print-query-results-visual-database-tools.md
         - name: 資源
           items:
+            - name: SQL Server Management Studio
+              href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
+            - name: SSMS 支援原則
+              href: ../ssms/support-policy.md
+            - name: 適用於商務使用者的支援選項
+              href: 'https://support.microsoft.com/gp/support-options-for-business'
+            - name: 連絡 Microsoft
+              href: 'https://support.microsoft.com/gp/contactus81?Audience=Commercial'
+            - name: 取得說明的所有方法
+              href: 'https://docs.microsoft.com/sql/sql-server/sql-server-get-help'
+            - name: UserVoice - 改善 SQL Server 的建議？
+              href: 'https://feedback.azure.com/forums/908035-sql-server'
+            - name: 安裝和升級 - MSDN 論壇
+              href: 'https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc'
+            - name: Transact-SQL - MSDN 論壇
+              href: 'https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql'
+            - name: Stack Overflow
+              href: 'https://stackoverflow.com/questions/tagged/sql-server'
+            - name: Microsoft SQL Server 授權條款及資訊
+              href: 'https://www.microsoft.com/download/details.aspx?id=39299'
             - name: SSMS 中的使用者協助
               href: ../ssms/user-assistance-in-sql-server-management-studio.md
             - name: 匿名的使用量資料
@@ -12278,8 +12364,6 @@
               href: ../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md
             - name: sys.dm_db_log_stats
               href: ../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md
-            - name: sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
-              href: ../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md
             - name: sys.dm_db_page_info
               href: ../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md
             - name: sys.dm_db_partition_stats
@@ -12292,14 +12376,20 @@
               href: ../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md
             - name: sys.dm_db_uncontained_entities
               href: ../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md
+            - name: sys.dm_database_copies (Azure SQL Database)
+              href: ../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md
+            - name: sys.dm_database_replica_states (Azure SQL Database)
+              href: ../relational-databases/system-dynamic-management-views/sys-dm-database-replica-states-azure-sql-database.md
+            - name: sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
+              href: ../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md
+            - name: sys.resource_stats (Azure SQL Database)
+              href: ../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md
             - name: sys.dm_db_wait_stats (Azure SQL Database)
               href: ../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md
             - name: sys.dm_operation_status (Azure SQL Database)
               href: ../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md
-            - name: sys.dm_database_copies (Azure SQL Database)
-              href: ../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md
-            - name: sys.resource_stats (Azure SQL Database)
-              href: ../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md
+            - name: sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
+              href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database.md
         - name: 資料庫鏡像
           items:
             - name: sys.dm_db_mirroring_auto_page_repair

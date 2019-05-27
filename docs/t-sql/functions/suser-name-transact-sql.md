@@ -21,16 +21,16 @@ helpviewer_keywords:
 - logins [SQL Server], names
 - names [SQL Server], logins
 ms.assetid: ae598d9f-9baa-49b8-b1c1-042854206de4
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b3de8ceac86cf0c08f1ff543c8d964a1960f615
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: 507e198a12ad613602ffe77295313851f72ecb60
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662632"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948000"
 ---
 # <a name="susername-transact-sql"></a>SUSER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]

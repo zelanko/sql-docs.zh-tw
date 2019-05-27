@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectsourcelocation.f1
@@ -13,12 +12,12 @@ ms.assetid: 429f146e-edb4-4401-a225-f2c8468971c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b83da069beee9440703b5dc0817668559c469d26
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1ba348d3a47945bf9bb4f375310c5c92e6be7705
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889332"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055936"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>選取來源位置 (SSIS 封裝升級精靈)
   使用 **[選取來源位置]** 頁面，指定升級封裝的來源。  

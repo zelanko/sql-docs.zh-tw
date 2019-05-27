@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: a19342a0-cd90-4825-aec5-d7c54275cc98
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6a580b50d804f4bee259bb9c1b582296087b91c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2a276850e7d570f16217e31eabaed17f6d4b6a45
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63241277"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093352"
 ---
 # <a name="ready-to-prepare-image"></a>準備好要預備映像
   **[準備開始預備映像]** 頁面會提供將由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式準備之功能的摘要。  

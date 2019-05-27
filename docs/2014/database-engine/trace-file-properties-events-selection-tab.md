@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracefileproperties.eventsselection.f1
@@ -15,12 +14,12 @@ ms.assetid: 158d442f-2225-4173-8545-fb1cf611b4d0
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 956316eb83291f71932c0ee70460274090b7069d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0a6c6da76bd89b4686791087e558ae1f329f57a3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62842447"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088794"
 ---
 # <a name="trace-file-properties-events-selection-tab"></a>追蹤檔案屬性 (事件選取範圍索引標籤)
   使用 **[追蹤檔案範本屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤，以檢視追蹤的資料行屬性，或者從追蹤移除資料行。  

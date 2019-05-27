@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 957657e71103b248cdafb645bf44a68a9b486a53
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fcd6e438327d88b79a88b5026f28e24e19fffb5e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756845"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066883"
 ---
 # <a name="perspectives-ssas-tabular"></a>檢視方塊 (SSAS 表格式)
   表格式模型中的檢視方塊會定義可檢視之模型子集，以提供具體的特定商務或應用程式模型視點。  

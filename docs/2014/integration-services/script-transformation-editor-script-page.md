@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.script.f1
@@ -15,12 +14,12 @@ ms.assetid: 4c6d1901-ef21-4aa7-9d0a-6bbeb7fadf1c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8d03f6d705707683195ad58b8562d2b964955b8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1628acc984433b1def07c63387b1630c902885aa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889308"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056063"
 ---
 # <a name="script-transformation-editor-script-page"></a>指令碼轉換編輯器 (指令碼頁面)
   使用 **[指令碼轉換編輯器]** 對話方塊的 **[指令碼]** 索引標籤，來指定指令碼和相關的屬性。  

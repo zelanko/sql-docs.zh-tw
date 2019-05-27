@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - indenting code [SQL Server]
@@ -27,12 +26,12 @@ ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1edd2b59d7a681fda1f18083b73f26aa3e38fbe3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 12d93e72a3b7dabc05a6b34e4c671a8ce1da028e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143327"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090403"
 ---
 # <a name="manage-code-formatting"></a>管理程式碼格式設定
   當使用編輯器時，您可以利用縮排、隱藏文字、URL...等，來建立程式碼的格式。 您也可以利用智慧型縮排 (Smart Indenting) 功能，在輸入程式碼的同時，自動建立程式碼的格式。  

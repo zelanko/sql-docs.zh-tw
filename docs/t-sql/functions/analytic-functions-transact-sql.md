@@ -10,16 +10,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 60fbff84-673b-48ea-9254-6ecdad20e7fe
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7285937a2cb8e6be975396cd7295391c19c5a356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebf74ab07a424612967f1482402928fc134d9e03
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807976"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945163"
 ---
 # <a name="analytic-functions-transact-sql"></a>分析函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

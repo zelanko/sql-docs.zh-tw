@@ -17,15 +17,15 @@ helpviewer_keywords:
 - DECRYPTBYASYMKEY function
 - decryption [SQL Server], asymmetric keys
 ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: cd2e34d7ceca82bf0fa9c0509092e276b1538414
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a46b3f19bc676b0b8e9f86db684328940b6e520
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740756"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945552"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
 ## <a name="remarks"></a>Remarks  
 相較於對稱式加密/解密，非對稱金鑰加密/解密具有較高的成本。 使用大型資料集時 (例如儲存在資料表中的使用者資料)，建議開發人員避免非對稱金鑰加密/解密。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 `DECRYPTBYASYMKEY` 需要非對稱金鑰的 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  

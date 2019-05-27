@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.General
@@ -15,12 +14,12 @@ ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 28559b6037fa6b0e95bb6748f85d3d0cecd2df8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774162"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089164"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>選項 （文字編輯器-Transact SQL 一般頁面）
   使用 **[一般]** 選項對話方塊可以變更 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查詢編輯器的一般編輯行為，這個編輯器會用來編輯 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼。 若要顯示這些設定，請在 [工具] 功能表上按一下 [選項]，展開 [Transact-SQL] 子資料夾，然後按一下 [一般]。  

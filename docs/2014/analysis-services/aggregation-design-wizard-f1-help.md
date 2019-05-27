@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Aggregation Design Wizard
@@ -13,12 +12,12 @@ ms.assetid: 39e23cf1-6405-4fb6-bc14-ba103314362d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9323f9b4fa6655fe72ae70457329c4ffc0d5dec2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9778bfde1e63163c8fae89b93d0673cbde16a8cf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62473566"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062744"
 ---
 # <a name="aggregation-design-wizard-f1-help"></a>彙總設計精靈 F1 說明
   彙總允許 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 直接從 Cube 儲存區擷取預先計算的總計，而不必針對每個查詢從基礎資料來源重新計算資料，藉此改善效能。  

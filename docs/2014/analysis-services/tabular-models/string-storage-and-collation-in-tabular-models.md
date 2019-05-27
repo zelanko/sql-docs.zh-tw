@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c9bc74d7ac6c1e3fb826e2a1b3ebdc0122fd2720
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 18601e43e8aea80350e297336174cce0b4ef7bc9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794249"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066430"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>表格式模型中的字串儲存和定序
   字串 (文字值) 以高度壓縮的格式儲存在表格式模型中；由於此壓縮，您在擷取整個或部分字串時可能會得到意外結果。 此外，因為字串地區設定和定序是繼承自階層結構上最接近的父物件，所以如果未明確定義字串語言，父物件的地區設定和定序可能會影響各字串的儲存方式以及字串是唯一還是與父定序所定義的相似字串合併。  

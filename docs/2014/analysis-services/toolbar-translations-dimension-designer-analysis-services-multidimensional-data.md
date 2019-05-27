@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c049ced5-55df-47dd-b855-b2da4b7ce17d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c5a40ad5418038aec31b64400932173117f17bef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9bf5f9fae501c019a7db3c9d78d578729cf1df42
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794183"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065994"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具列 (翻譯索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用工具列按鈕，即可執行 **[維度設計師]** 之 **[翻譯]** 檢視中的一般作業。  

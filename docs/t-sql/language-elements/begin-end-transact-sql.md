@@ -21,16 +21,16 @@ helpviewer_keywords:
 - executing Transact-SQL statements together [SQL Server]
 - statements [SQL Server], grouping
 ms.assetid: fc2c7f76-f1f9-4f91-beef-bc8ef0da2feb
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7fd8d98d15fc5b7ffd66e38755d5003fa2b7b4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe437571ead456c48b40c21735b5306f68a5eca4
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700446"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981146"
 ---
 # <a name="beginend-transact-sql"></a>BEGIN...END (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

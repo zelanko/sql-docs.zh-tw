@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - redeploying packages [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: 86806efb-8cf4-4f9d-9824-1152cb4c495c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 15d41b9c0e31fe4bfd86349888071721b7493661
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 14edf3c34278ce89686a390c5b69662753ae653d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766840"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056483"
 ---
 # <a name="redeployment-of-packages"></a>封裝的重新部署
   在部署專案後，您可能需要更新或擴充封裝功能，然後部署包含已更新封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。 做為重新部署封裝處理的一部分，您應該檢視包含在部署公用程式中的組態屬性。 例如，您可能不允許組態在重新部署封裝之後變更。  

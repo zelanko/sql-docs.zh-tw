@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, saving
@@ -17,12 +16,12 @@ ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c7e529850f1d6e476004409a3484f0627446bc24
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bdd8754ac3d4a63e038218c054d064f20485344b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889335"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056270"
 ---
 # <a name="save-a-copy-of-a-package"></a>儲存封裝的複本
   此程序描述如何將封裝的複本儲存至檔案系統、封裝存放區，或  中的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 當您指定儲存封裝副本的位置時，也可以更新封裝名稱。  

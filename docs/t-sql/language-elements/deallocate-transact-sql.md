@@ -19,15 +19,15 @@ helpviewer_keywords:
 - deleting cursor references
 - removing cursor references
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b189c99b2a225161eaa675e749464245cd830538
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: fb66fd1627907d0e9d26f3524835f5ad126c2b57
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586201"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982529"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ GO
   
 您不需要明確取消配置資料指標變數。 當變數離開範圍時，會隱含地取消配置。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  `DEALLOCATE` 的權限預設會授與任何有效使用者。  
   
 ## <a name="examples"></a>範例  

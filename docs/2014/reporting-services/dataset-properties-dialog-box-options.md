@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10130"
@@ -14,12 +13,12 @@ ms.assetid: 95299049-71ba-427f-b723-775cb696243f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3aded281e57e284253c5d0c122b377bddbe0eb0d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 778365e8fc7f40700b0f8c1683260f15c860a32a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63165009"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109405"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>資料集屬性對話方塊、選項
   選取 **選項**上**資料集屬性**對話方塊來變更資料的選項，例如定序選項和小計的查詢。 如需詳細資訊，請參閱 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  

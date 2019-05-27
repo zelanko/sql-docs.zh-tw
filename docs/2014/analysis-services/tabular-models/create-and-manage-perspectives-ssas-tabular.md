@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.perspectivedb.f1
@@ -13,12 +12,12 @@ ms.assetid: 2a411c2b-2820-4086-ad7f-ce6a941fefc7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 25f8de0649f82abbcc6ceb4ac6a92844de04b4b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b920446018c9199ed0bd436e67a65d43341f7f43
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795395"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067433"
 ---
 # <a name="create-and-manage-perspectives-ssas-tabular"></a>建立及管理檢視方塊 (SSAS 表格式)
   檢視方塊會定義可檢視之模型子集，對模型提供具體的商務特有或應用程式特有視點。 本主題中的工作會描述如何使用模型設計師中的 **[檢視方塊]** 對話方塊，建立及管理檢視方塊。  

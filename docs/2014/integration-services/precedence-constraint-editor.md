@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.precedenceconstraint.f1
@@ -15,12 +14,12 @@ ms.assetid: b10d4330-6e35-4037-b309-ef56efcd60c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 639436ec39301189ae172ce9cb7f58ea96c9cc11
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7d2046882eeed6b04cd1b1c4035b89eccbddc4f6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889450"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056691"
 ---
 # <a name="precedence-constraint-editor"></a>優先順序條件約束編輯器
   使用 **[優先順序條件約束編輯器]** 對話方塊，即可設定優先順序條件約束。  

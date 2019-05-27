@@ -17,16 +17,16 @@ helpviewer_keywords:
 - names [SQL Server], registry keys
 - registry keys [SQL Server]
 ms.assetid: 5b0b35be-50ae-411d-a607-bf7464b73624
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: df3b0b5047dcaf37a49afa55a937cd059a33e1c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79a135687c37ebf04fa7b6d9bed1e34b4ba66d68
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712126"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945261"
 ---
 # <a name="x40x40servicename-transact-sql"></a>&#x40;&#x40;SERVICENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

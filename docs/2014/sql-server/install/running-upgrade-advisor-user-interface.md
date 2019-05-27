@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Report Viewer
@@ -18,12 +17,12 @@ ms.assetid: 7f47c9b3-88d3-43d6-837e-f157b49a55ac
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c402516980f5cf3e1790f8a5fa6d594c93b0e500
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5aecaea9bef359ad24aebbd20dd5e9547497043b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63245963"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092451"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>執行 Upgrade Advisor (使用者介面)
   在升級規劃期間，您可以執行 Upgrade Advisor 來分析本機或遠端元件。 Upgrade Advisor 會針對分析的每個元件和執行個體產生一份報表。  

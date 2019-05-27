@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b8095d7358e86007abaead1887f4f8cb8bf5b4a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0da11d8f49c1de88297a9bf8876588c8b5aeb81b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766822"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056274"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>SAP BW 連接管理員編輯器
   使用 [SAP BW 連線管理員編輯器] 可以指定要用來連接到 SAP Netweaver BW 版本 7 系統的屬性。  
@@ -38,7 +37,7 @@ ms.locfileid: "62766822"
   
     -   以滑鼠右鍵按一下 SAP BW 連線管理員，然後選取 [編輯]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 > [!NOTE]  
 >  如果您不知道設定連接管理員的所有必要值，可能必須詢問 SAP 系統管理員。  

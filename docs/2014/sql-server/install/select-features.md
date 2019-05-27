@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 0badc544-c187-40f9-b0cc-14d6ebec345e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 808588f20a4d94fa3be885ee79853362071f7768
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 92c9ebe68f92a652e8f713ca73dedce6b54443c9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63270090"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092368"
 ---
 # <a name="select-features"></a>選取功能
   使用 [特徵選取] 頁面，即可選取要更新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件和功能。  

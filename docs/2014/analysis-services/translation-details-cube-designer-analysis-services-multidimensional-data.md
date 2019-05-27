@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.translations.translationspane.translationdetails.f1
@@ -13,17 +12,17 @@ ms.assetid: ba59fd0b-e2c5-4d42-ba99-eaf784b45975
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a48ac22eb47eca8e265958289fdb461d4dd7f032
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8905a7fbb075826f37b9d362fe82def3e9664109
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794279"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065863"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>翻譯詳細資料 (翻譯索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 Cube 設計師之 [翻譯] 索引標籤上的 [翻譯詳細資料] 窗格，即可定義和管理目前選取之 Cube 的翻譯。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **預設語言**  
  以預設語言設定 Cube 物件的名稱。  
   

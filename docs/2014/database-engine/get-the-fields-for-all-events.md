@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], getting fields
@@ -14,12 +13,12 @@ ms.assetid: 4e4ee03f-5bca-42ed-a37c-db1c82e3aad2
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b741f98dec0b2f6233f4c51c1c809c1a7baf4d81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c0838367ad699c1278bb6ec42f28161ba76c6fd5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778929"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064793"
 ---
 # <a name="get-the-fields-for-all-events"></a>取得所有事件的欄位
   完成此工作涉及在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中使用查詢編輯器。  

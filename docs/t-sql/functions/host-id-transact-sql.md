@@ -18,15 +18,15 @@ helpviewer_keywords:
 - workstation IDs [SQL Server]
 - identification numbers [SQL Server], workstations
 ms.assetid: 36ba56d4-20d7-4cd1-aa2a-e40a6c0a4e39
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c957a80753bb8f1be758a9af9f247e325de63490
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4dcadd318406f05c47d9073e65e5a72d766f659
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728573"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946498"
 ---
 # <a name="hostid-transact-sql"></a>HOST_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

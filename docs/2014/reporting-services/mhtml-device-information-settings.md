@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - device information settings [Reporting Services], MHTML rendering
@@ -14,12 +13,12 @@ ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 196afebcabea54fda1b315b1c2f17c0029842f07
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 076a0179871775984799fc8ce5366a220f812867
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63280389"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108255"
 ---
 # <a name="mhtml-device-information-settings"></a>MHTML 裝置資訊設定
   下表列出以 Web 封存 (MHTML) 格式轉譯報表的裝置資訊設定。  

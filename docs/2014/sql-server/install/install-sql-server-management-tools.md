@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Tools
@@ -13,12 +12,12 @@ ms.assetid: af68d59a-a04d-4f23-9967-ad4ee2e63381
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8298e0cf1e635d2adea47457d7d8827c9b530fcd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3831943533939f7b9f8e31f09b80c71cc61b8d3b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62657621"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094425"
 ---
 # <a name="install-sql-server-management-tools"></a>安裝 SQL Server 管理工具
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具包括下列元件：  

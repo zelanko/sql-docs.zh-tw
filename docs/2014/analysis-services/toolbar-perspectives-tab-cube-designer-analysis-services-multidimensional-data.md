@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 64744048-205f-4d4d-add8-ff0ca13943f3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c54ea201210b45e4d9f5214dc50bb6a3de05ce5b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8498f30b11a9b379d9cad0e98d7a5269fc60752a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756354"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065985"
 ---
 # <a name="toolbar-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (檢視方塊索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 [工具列] 窗格，即可執行 [Cube 設計師] 之 [檢視方塊] 索引標籤上的一般作業。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |選項|描述|  
 |------------|-----------------|  

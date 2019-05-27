@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldestadapter.mappings.f1
@@ -15,12 +14,12 @@ ms.assetid: ad44268b-d705-422c-a0c2-d532812502e1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 39c766acdd171db17c2b3f5ba0623b57a36ca145
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a79316eedb95a026d4869442a06ca1916b40ff3c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62898462"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059177"
 ---
 # <a name="excel-destination-editor-mappings-page"></a>Excel 目的地編輯器 (對應頁面)
   使用 **[Excel 目的地編輯器]** 對話方塊的 **[對應]** 頁面，將輸入資料行對應至目的地資料行。  

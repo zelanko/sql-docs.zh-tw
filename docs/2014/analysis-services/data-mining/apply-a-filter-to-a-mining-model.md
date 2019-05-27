@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
@@ -16,12 +15,12 @@ ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b26f246b85f708976fd792247996cfb2084af5e7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0370d4fceada5c0a287c4a071691ea20d5a28f6c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62692094"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086215"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>將篩選套用至採礦模型
   如果採礦結構包含巢狀資料表，則篩選可以套用至案例資料表、巢狀資料表或兩者。  

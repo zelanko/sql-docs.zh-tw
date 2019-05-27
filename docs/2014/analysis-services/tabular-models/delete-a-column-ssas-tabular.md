@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 703db83b-e554-450e-813e-23ad08c1cdad
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01060e5161071a06a0fb2c269af5f5a3e14c31b6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f0a95e8580aa30ce34ada1c77e198eb40d767304
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795295"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067265"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>刪除資料行 (SSAS 表格式)
   本主題描述的是如何從表格式模型資料表中刪除資料行。  

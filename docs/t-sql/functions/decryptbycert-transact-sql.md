@@ -17,15 +17,15 @@ helpviewer_keywords:
 - decryption [SQL Server], certificates
 - DECRYPTBYCERT function
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ff7cd9e82f2e70e39b02f10726acbae657ad670c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3021bfc31b6fe8e5681ca220434f8644b6a4afe9
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741196"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945531"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
 ## <a name="remarks"></a>Remarks  
 這個函數是利用憑證的私密金鑰為資料解密。 使用非對稱金鑰來轉換密碼編譯，會耗用大量資源。 因此，建議開發人員避免使用 [ENCRYPTBYCERT](./encryptbycert-transact-sql.md) 和 DECRYPTBYCERT 對常式使用者資料進行加密/解密。  
 
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 `DECRYPTBYCERT` 需要憑證的 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  

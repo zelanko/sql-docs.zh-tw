@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], dimensions
@@ -13,12 +12,12 @@ ms.assetid: 9f0c39e5-3516-43ab-b203-f3f6dbcff89a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: feff90d769016492f10c3699ebd563aac13a84b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b642d7a0bdf552d8944602761aa76eec1cf35306
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62715165"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085495"
 ---
 # <a name="create-a-data-mining-dimension"></a>建立資料採礦維度
   如果採礦結構是以 OLAP Cube 為基礎，您就可以建立一個包含採礦模型內容的維度。 然後您就可以將維度併入來源 Cube 中。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msmqconnectionmanager.f1
@@ -15,12 +14,12 @@ ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d532433c36f3b4c18b39d16dcbbe81a3d969acfc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 91b448a87408a830464b50f641e6eefa8cf3f12c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767230"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057636"
 ---
 # <a name="msmq-connection-manager-editor"></a>MSMQ 連線管理員編輯器
   使用 [MSMQ 連線管理員] 對話方塊，來指定 Message Queuing (又稱為 MSMQ) 訊息佇列的路徑。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 15358811-22a6-43b1-b1a7-9c974e8367b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 47cd197168b275762b5fa2faa4790a567171022f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 43ee3cc999d227931e53c6faa89465315f52e4e2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756601"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066336"
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>表格式模型專案 (SSAS 表格式)
   若要建立新的表格式模型，您必須先在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立新的表格式模型專案。 當您安裝 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]時，會提供三種商業智慧專案範本，供您建立表格式模型專案。 每個專案範本都提供一個架構，以便開始撰寫模型。 本節中的主題描述如何使用專案範本，建立新的表格式模型。  

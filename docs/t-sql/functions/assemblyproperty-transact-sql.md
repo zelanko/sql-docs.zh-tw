@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ASSEMBLYPROPERTY statement
 - assemblies [CLR integration], properties
 ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 468364203d169e6987322edbb99f0b2cea863fec
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cd700f44bb1b2a3fc42a964c87ce7a8891ac91b8
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695999"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944991"
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

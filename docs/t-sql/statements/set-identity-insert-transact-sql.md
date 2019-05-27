@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monkerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: d1318a4a3a72c0deb27e86487782ca835cd552e9
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 2ba70fdf917fba3a8dbd730db7e8d9b89cd1b094
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65094195"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949014"
 ---
 # <a name="set-identityinsert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -95,7 +95,8 @@ FROM dbo.Tool;
 GO  
   
 -- Try to insert an explicit ID value of 3;  
--- should return a warning.  
+-- should return an error:
+-- An explicit value for the identity column in table 'AdventureWorks2012.dbo.Tool' can only be specified when a column list is used and IDENTITY_INSERT is ON.
 INSERT INTO dbo.Tool (ID, Name) VALUES (3, 'Garden shovel');  
 GO  
 -- SET IDENTITY_INSERT to ON.  

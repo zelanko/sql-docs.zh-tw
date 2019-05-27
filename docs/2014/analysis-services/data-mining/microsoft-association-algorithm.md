@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MinimumProbability property
@@ -31,12 +30,12 @@ ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ce0fdddd09dd3145949d56727ae4c3e8b853602
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6a799f5a8aef79dec7cb951e95e6f252b3be2626
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722096"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084064"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft Association Algorithm
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所提供的關聯分析演算法，對於建議引擎很有用。 建議引擎會依據客戶已購買或感興趣的項目向客戶建議產品。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法對於購物籃分析也很有用。 如需購物籃分析的範例，請參閱[第 3 課：建立購物籃狀況&#40;中繼資料採礦教學課程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)在資料採礦教學課程。  

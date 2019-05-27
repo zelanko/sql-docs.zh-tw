@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - diagram, modifying
@@ -16,12 +15,12 @@ ms.assetid: 5841adea-6650-4fae-8526-26af33edbede
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7461464f1e55c9a762dd663e4c770663c10bb1c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c287e840c07d11a527e980f9f07fb39fb3852739
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756016"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065523"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>在 Visio 中檢視資料採礦模型 (資料採礦增益集)
   資料採礦的 Visio 圖形可讓您連接到伺服器並建立代表現有資料採礦模型的圖表。 然後，您可以使用 Visio 控制項來自訂圖表，但是也可以向下鑽研資料、公開部分基礎統計資料，以及使用基礎模型。  
