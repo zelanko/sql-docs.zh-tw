@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eda13c16caf3f123887da00e2c7896d36b8bf7ed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ee51a19d1dc169d2ae784d8a44403e021ff8b665
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63226047"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108511"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>第 3 課：定義資料驅動訂閱
   在這個課程中，您將利用資料驅動訂閱頁面來連接訂閱資料來源、建立擷取訂閱資料的查詢，以及將結果集對應至報表和傳遞選項。  

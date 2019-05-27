@@ -30,19 +30,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 829459fadb58ff24093d422c365089639e7b76b9
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: 7a6414ca219cbc2ca871a1100c4ff82570409873
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503816"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580632"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
 將資料列存放區資料表轉換為叢集資料行存放區索引或建立一個非叢集資料行存放區索引。 有效率地對 OLTP 工作負載執行即時作業分析，或是改善資料倉儲工作負載的資料壓縮和查詢效能，請使用資料行存放區索引。  
   
-> [!NOTE]  
+> [!NOTE]
 > 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，您可以建立資料表作為叢集資料行存放區索引。   您再也不用先建立資料列存放區資料表，然後將它轉換成叢集資料行存放區索引。  
 
 > [!TIP]
@@ -64,14 +64,15 @@ ms.locfileid: "65503816"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Create a clustered columnstore index on disk-based table.  
 CREATE CLUSTERED COLUMNSTORE INDEX index_name  
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( < with_option> [ ,...n ] ) ]  
-    [ ON <on_option> ]  
+    [ ON <on_option> ] 
+    [ORDER (column [,…n])]  --(Preview) 
 [ ; ]  
   
 --Create a non-clustered columnstore index on a disk-based table.  
@@ -80,7 +81,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
         ( column  [ ,...n ] )  
     [ WHERE <filter_expression> [ AND <filter_expression> ] ]
     [ WITH ( < with_option> [ ,...n ] ) ]  
-    [ ON <on_option> ]   
+    [ ON <on_option> ]
 [ ; ]  
   
 <with_option> ::=  
@@ -92,9 +93,9 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
       [ ON PARTITIONS ( { partition_number_expression | range } [ ,...n ] ) ]  
   
 <on_option>::=  
-      partition_scheme_name ( column_name )   
-    | filegroup_name   
-    | "default"   
+      partition_scheme_name ( column_name )
+    | filegroup_name
+    | "default"
   
 <filter_expression> ::=  
       column_name IN ( constant [ ,...n ]  
@@ -102,14 +103,14 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
   
 ```  
   
-```  
+```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name   
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
-```  
+```
   
 ## <a name="arguments"></a>引數  
 
@@ -124,7 +125,8 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 
 所有選項皆可在 Azure SQL Database 中使用。
 
-### <a name="create-clustered-columnstore-index"></a>CREATE CLUSTERED COLUMNSTORE INDEX  
+### <a name="create-clustered-columnstore-index"></a>CREATE CLUSTERED COLUMNSTORE INDEX
+
 建立叢集資料行存放區索引，由資料行將所有資料壓縮並儲存。 索引會包括資料表中的所有資料行，而且將儲存整個資料表。 如果現有的資料表是堆積或叢集索引，則該資料表會轉換成叢集資料行存放區索引。 如果資料表已儲存為叢集資料行存放區索引，將卸除並重建現有的索引。  
   
 *index_name*  
@@ -132,11 +134,14 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 如果資料表已經有叢集資料行存放區索引，則您可以指定與現有索引相同的名稱，或您可以使用 DROP EXISTING 選項來指定新名稱。  
   
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
-   指定要儲存為叢集資料行存放區索引之資料表的單部分、兩部分或三部分名稱。 如果資料表是堆積或叢集索引，則該資料表會從資料列存放區轉換成資料行存放區。 如果資料表已經是資料行存放區，此陳述式會重建叢集資料行存放區索引。  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
+
+指定要儲存為叢集資料行存放區索引之資料表的單部分、兩部分或三部分名稱。 如果資料表是堆積或叢集索引，則該資料表會從資料列存放區轉換成資料行存放區。 如果資料表已經是資料行存放區，此陳述式會重建叢集資料行存放區索引。 若要轉換成已排序的叢集資料行存放區索引，現有的索引必須是叢集資料行存放區索引。
   
-#### <a name="with-options"></a>WITH 選項  
-##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON  
+#### <a name="with-options"></a>WITH 選項
+
+##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON
+
    `DROP_EXISTING = ON` 指定要卸除現有的索引，並建立新的資料行存放區索引。  
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
@@ -156,6 +161,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
        WITH (MAXDOP = 2);
 ```
+
    如需詳細資訊，請參閱[設定平行處理原則的最大程度伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)和[設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
  
 ###### <a name="compressiondelay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *延遲* [ 分鐘 ]  
@@ -211,7 +217,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 *index_name*  
    指定索引的名稱。 *index_name* 在資料表中必須是唯一的，但在資料庫中不需要是唯一的。 索引名稱必須遵照[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
- **(** _column_  [ **,**...*n* ] **)**  
+ **(** _column_  [ **,** ...*n* ] **)**  
     指定要存放的資料行。 非叢集資料行存放區索引僅限 1024 個資料行。  
    每個資料行必須是資料行存放區索引支援的資料類型。 如需支援的資料類型清單，請參閱[限制](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)。  
 
@@ -285,7 +291,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 **"** default **"**  
 在預設的檔案群組上建立指定的索引。  
   
-在這個內容中，default 這個字不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，如 ON **"** default **"** 或 ON **[** default **]**。 如果指定了 "default"，目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
+在這個內容中，default 這個字不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，如 ON **"** default **"** 或 ON **[** default **]** 。 如果指定了 "default"，目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
 ##  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
@@ -742,3 +748,11 @@ WITH ( DROP_EXISTING = ON);
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  
 
+### <a name="f-create-an-ordered-clustered-columnstore-index"></a>F. 建立已排序的叢集資料行存放區索引
+
+建立已排序的叢集資料行存放區索引，根據 SHIPDATE 進行排序。
+
+```sql 
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+ORDER ( SHIPDATE );
+```

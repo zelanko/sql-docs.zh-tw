@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - technical reference [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: 69fe35ef-58df-4138-b0a5-9b1fb8c862d7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7134ae3080a4130a626ff79eb3c2df54745be4d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b6e66a3465c543879b2ff6115e9ea45a53f97312
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766371"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055274"
 ---
 # <a name="technical-reference-integration-services"></a>技術參考 (Integration Services)
   尋找工具、 語言和程式設計參考文件，如[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  

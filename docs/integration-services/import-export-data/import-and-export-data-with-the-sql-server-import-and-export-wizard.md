@@ -23,14 +23,18 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8159be3478fbf4d3e83de6a066a07104997c4ade
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: c540acdbda08d79f89b6bba3a016314609e6607f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222082"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723806"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 匯入和匯出精靈來匯入或匯出資料
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈是將資料從來源複製到目的地的簡單方式。 本概觀說明精靈可作為來源和目的地使用的資料來源，以及執行精靈所需的權限。
 
@@ -47,7 +51,7 @@ ms.locfileid: "58222082"
  
 | 資料來源 | 必須下載其他檔案嗎？ |
 |-------------|-----------------------------------------|
-|**企業資料庫**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、DB2 及其他。|SQL Server 或 SQL Server Data Tools (SSDT) 會安裝連線至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所需的檔案。 但是，SSDT 不會安裝連線至其他企業資料庫 (例如 Oracle 或 IBM DB2) 所需的所有檔案。<br/><br/>若要連線至企業資料庫，您通常必須具有兩項事物：<br/><br/>1.**用戶端軟體**。 企業資料庫系統如已安裝用戶端軟體，即已具備建立連接所需項目。 如未安裝用戶端軟體，請詢問資料庫管理員如何安裝已授權的複本。<br/><br/>2.**驅動程式或提供者**。 Microsoft 會安裝用來連線至 Oracle 的驅動程式和提供者。 若要連線至 IBM DB2，請從 [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676) 取得適用於 Microsoft SQL Server 的 Microsoft® OLEDB Provider for DB2 5.0 版。<br/><br/>如需詳細資訊，請參閱[連線至 SQL Server 資料來源](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)或[連線至 Oracle 資料來源](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)。|
+|**企業資料庫**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、DB2 及其他。|SQL Server 或 SQL Server Data Tools (SSDT) 會安裝連線至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所需的檔案。 但是，SSDT 不會安裝連線至其他企業資料庫 (例如 Oracle 或 IBM DB2) 所需的所有檔案。<br/><br/>若要連線至企業資料庫，您通常必須具有兩項事物：<br/><br/>1.**用戶端軟體**。 企業資料庫系統如已安裝用戶端軟體，即已具備建立連接所需項目。 如未安裝用戶端軟體，請詢問資料庫管理員如何安裝已授權的複本。<br/><br/>2.**驅動程式或提供者**。 Microsoft 會安裝用來連線至 Oracle 的驅動程式和提供者。 若要連線至 IBM DB2，請從 [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676) 取得適用於 Microsoft SQL Server 的 MicrosoftÂ® OLEDB Provider for DB2 v5.0。<br/><br/>如需詳細資訊，請參閱[連線至 SQL Server 資料來源](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)或[連線至 Oracle 資料來源](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)。|
 |**文字檔** (一般檔案)|不需要額外的檔案。<br/><br/>如需詳細資訊，請參閱[連線至一般檔案資料來源](connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)。|
 |**Microsoft Excel 和 Microsoft Access 檔案**|Microsoft Office 不會安裝連接至 Excel 和 Access 檔案以作為資料來源所需的全部檔案。 取得下列下載 - [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920) (Microsoft Access 資料庫引擎 2016 年可轉散發套件)。<br/><br/>如需詳細資訊，請參閱[連線至 Excel 資料來源](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)或[連線至 Access 資料來源](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)。|
 |**Azure 資料來源**<br/>目前僅 Azure Blob 儲存體。|SQL Server Data Tools 不會安裝連線至 Azure Blob 儲存體作為資料來源所需的檔案。 取得以下下載： [Azure 的 Microsoft SQL Server 2016 Integration Services 功能套件](https://www.microsoft.com/download/details.aspx?id=49492)。<br/><br/>如需詳細資訊，請參閱[連線至 Azure Blob 儲存體](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)。|

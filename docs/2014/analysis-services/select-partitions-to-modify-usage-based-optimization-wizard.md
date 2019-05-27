@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.selectpartitions.f1
@@ -13,12 +12,12 @@ ms.assetid: 1de6e214-5efa-4efa-9336-edbe2310cfbe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2dc3f38aec3ba41330e29aa8ac5fdea771d90da6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e98a7c30869428f4cc31428f35eaf6c6f86e97c6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747110"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069325"
 ---
 # <a name="select-partitions-to-modify-usage-based-optimization-wizard"></a>選取要修改的資料分割 (基於使用方式的最佳化精靈)
   使用 **[選取要修改的資料分割]** 頁面，即可選取您要設計彙總的資料分割。  

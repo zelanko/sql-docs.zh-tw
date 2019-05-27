@@ -17,16 +17,16 @@ helpviewer_keywords:
 - scalar functions
 - functions [SQL Server]
 ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d764bcfec14d14b1c1a3e6bf5a6f0af9b18687ce
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2ba2ae5f22967530a93def3d888b35cc5847ddb7
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701316"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946539"
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 資料庫函式是什麼？
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "51701316"
 |[資料指標函式](cursor-functions-transact-sql.md)|傳回資料指標的詳細資訊。|  
 |[日期與時間資料類型與函式](date-and-time-data-types-and-functions-transact-sql.md)|執行作業來處理日期和時間輸入值，以及傳回字串、數值，或日期和時間值。|  
 |[JSON 函式](json-functions-transact-sql.md)|驗證、查詢，或變更 JSON 資料。|  
-|[邏輯函式](https://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|執行邏輯運算。|  
+|[邏輯函式](logical-functions-choose-transact-sql.md)|執行邏輯運算。|  
 |[數學函式](mathematical-functions-transact-sql.md)|根據函數參數所提供的輸入值來執行計算，以及傳回數值。|  
 |[中繼資料函式](metadata-functions-transact-sql.md)|傳回資料庫和資料庫物件的相關資訊。|  
 |[安全性函式](security-functions-transact-sql.md)|傳回使用者和角色的相關資訊。|  

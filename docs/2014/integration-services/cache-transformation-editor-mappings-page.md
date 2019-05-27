@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetransmap.f1
@@ -13,12 +12,12 @@ ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b7d38fa3d3e6631f4284f9572f98a0dac1d05e61
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62771667"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061180"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>快取轉換編輯器 (對應頁面)
   使用 **[快取轉換編輯器]** 的 **[對應]** 頁面，將 [快取轉換] 轉換中的輸入資料行對應至快取連接管理員中的目的地資料行。  

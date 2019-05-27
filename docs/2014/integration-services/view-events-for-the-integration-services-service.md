@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - events [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 37e23946-10d1-4116-8568-8fd24067102e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8c00739cefe457575e6b05dee368d8965775a387
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4be91309e4feb34bd8dfd85aee8e3e0cd1f82ffd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766061"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054667"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>檢視 Integration Services 服務的事件
   目前有兩個工具可讓您用來檢視 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務的事件：  

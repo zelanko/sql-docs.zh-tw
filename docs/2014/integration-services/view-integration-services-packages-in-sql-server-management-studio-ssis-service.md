@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing packages
@@ -14,12 +13,12 @@ ms.assetid: 783e653c-0f1f-45ed-b3ef-5ba07b019f27
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c45b7feb32c9e85ac571f04a1c975c49b7211aee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0d8196a46437975a2b8e00bb2fbe8d183540025c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877934"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054604"
 ---
 # <a name="view-integration-services-packages-in-sql-server-management-studio-ssis-service"></a>在 SQL Server Management Studio 中檢視 Integration Services 封裝 (SSIS 服務)
     

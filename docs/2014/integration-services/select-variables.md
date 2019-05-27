@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.selectvariables.f1
@@ -15,17 +14,17 @@ ms.assetid: 7069a82b-905b-47a5-aee4-6fba24204979
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: afae34484d4513c9ef6a33435fb023dbb8190fd4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 89e166be7ee2100945cc430a78e725630b1e8f6d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766531"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055920"
 ---
 # <a name="select-variables"></a>選取變數
   使用 [選取變數] 對話方塊，即可指定在訊息佇列工作中用於傳送訊息作業的變數。 [可用的變數] 清單包含在訊息佇列工作或其父容器之範圍中的系統和使用者自訂變數。 此工作使用 [選取的變數] 清單中的變數。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可用的變數**  
  選取一個或多個變數。  
   

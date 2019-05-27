@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: c1afc1a2fbb8777df0c4bf5a488cde951fd4e32c
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 8de649eb8f6311270c64969981e78315cee29450
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206324"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718284"
 ---
 # <a name="troubleshoot-scale-out"></a>針對 Scale Out 進行疑難排解
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SSIS Scale Out 涉及 SSIS 目錄資料庫 `SSISDB`、Scale Out Master 服務與 Scale Out Worker 服務之間的通訊。 有時，這項通訊會因設定錯誤、沒有存取權限和其他原因而中斷。 本文可協助您針對 Scale Out 設定問題進行疑難排解。
 
@@ -62,7 +66,7 @@ SSIS Scale Out 涉及 SSIS 目錄資料庫 `SSISDB`、Scale Out Master 服務與
 
 ### <a name="symptoms"></a>徵狀
 
-*「System.ServiceModel.EndpointNotFoundException:沒有任何在 https://*[機器名稱]:[連接埠]*/ClusterManagement/ 上進行接聽的端點可以接受該訊息。」*
+*「System.ServiceModel.EndpointNotFoundException:沒有任何在 https://* [機器名稱]:[連接埠] */ClusterManagement/ 上進行接聽的端點可以接受該訊息。」*
 
 ### <a name="solution"></a>方案
 
@@ -154,7 +158,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>徵狀
 
-*「System.ServiceModel.CommunicationException:對 https://[機器名稱]:[連接埠]/ClusterManagement/ 發出 HTTP 要求時發生錯誤。這可能是因為在 HTTPS 的情況下，伺服器憑證未使用 HTTP.SYS 正確設定。也可能是用戶端與伺服器之間的安全性繫結不相符所造成。」*
+「System.ServiceModel.CommunicationException:對 https://[機器名稱]:[連接埠]/ClusterManagement/ 發出 HTTP 要求時發生錯誤。這可能是因為在 HTTPS 的情況下，伺服器憑證未使用 HTTP.SYS 正確設定。也可能是因為用戶端與伺服器之間的安全性繫結不相符所造成。」
 
 ### <a name="solution"></a>方案
 1.  執行下列命令，檢查主要節點上 Scale Out Master 憑證是否正確地繫結至主要端點中的連接埠：

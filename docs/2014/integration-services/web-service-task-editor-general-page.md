@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.general.f1
@@ -15,19 +14,19 @@ ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4890f4c56e207432a5b64cd04a0bfeac15135b1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877687"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054534"
 ---
 # <a name="web-service-task-editor-general-page"></a>Web 服務工作編輯器 (一般頁面)
   使用 [Web 服務工作編輯器] 對話方塊的 [一般] 頁面，來指定 HTTP 連接管理員、指定 Web 服務工作使用的 Web 服務描述語言 (WSDL) 檔案的位置、描述 Web 服務工作，以及下載 WSDL 檔案。  
   
  如需這項工作的詳細資訊，請參閱 [Web 服務工作](control-flow/web-service-task.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **HTTPConnection**  
  在清單中選取連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   

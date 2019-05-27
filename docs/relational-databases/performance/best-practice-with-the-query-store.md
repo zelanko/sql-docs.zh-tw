@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e83756e4520cf191f0e15750308ef58e3aa38dd
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 84a69542e43f108b1a1aa91bde8fb168ecb6a362
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542238"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65779247"
 ---
 # <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -247,7 +247,7 @@ FROM sys.database_query_store_options;
   
  如果問題持續發生，表示已損毀的查詢存放區資料會持續保存在磁碟上。
  
- 查詢存放區無法藉由執行受影響資料庫內的 **sp_query_store_consistency_check** 預存程序來復原。
+ 針對 SQL 2017 及更新版本，可透過在受影響的資料庫中執行 **sp_query_store_consistency_check** 預存程序來復原查詢存放區。 針對 2016，您將需要從查詢存放區清除資料，如下所示。
  
  如果沒有幫助，您可以嘗試在要求讀寫模式之前，先清除查詢存放區。  
   
@@ -339,7 +339,7 @@ WHERE is_forced_plan = 1;
   
 -  追蹤旗標 7745 會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能夠關閉前，防止查詢存放區將資料寫入磁碟中的預設行為。 這表示已收集但尚未保存到磁碟的查詢存放區資料將會遺失。 
   
--  追蹤旗標 7752 提供非同步載入查詢存放區的功能。 這讓資料庫能夠連線，並可在查詢存放區完全復原之前執行查詢。 預設行為是同步載入查詢存放區。 這個預設行為使得查詢無法在查詢存放區復原之前執行，但同時也防止資料收集過程遺漏任何查詢。
+-  追蹤旗標 7752 提供非同步載入查詢存放區的功能。 這讓資料庫能夠連線，並可在查詢存放區完全復原之前執行查詢。 預設行為是執行查詢存放區的同步載入。 這個預設行為使得查詢無法在查詢存放區復原之前執行，但同時也防止資料收集過程遺漏任何查詢。
 
 > [!IMPORTANT]
 > 若您只針對 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的 Just-In-Time 負載見解使用查詢存放區，請計畫儘快安裝 [KB 4340759](https://support.microsoft.com/help/4340759) 中的效能延展性修正程式。 

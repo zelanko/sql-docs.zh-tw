@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Master Data Services], moving members
@@ -16,12 +15,12 @@ ms.assetid: 049c9a15-89c1-478c-8438-028fffc9e187
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 160c3ab39c09d6c0ecd9517a270e770bde118751
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 58b39d2dc660fd51d1ba21308ff056874a239731
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65478954"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054084"
 ---
 # <a name="move-members-within-a-hierarchy-master-data-services"></a>在階層中移動成員 (Master Data Services)
   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中，移動階層中的成員來變更成員的位置或父系指派。  
