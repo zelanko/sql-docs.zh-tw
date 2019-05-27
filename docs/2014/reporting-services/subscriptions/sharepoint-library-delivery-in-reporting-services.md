@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], report delivery
@@ -15,12 +14,12 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dc84660b7ceea31aa7bebc774a07de7103e3dd9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 93a62ec076b9dc61cd01d18796f04bbaa04eb93b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654201"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100700"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services 中的 SharePoint 文件庫傳遞
   針對 SharePoint 整合所設定的報表伺服器包含您可以用來將報表傳送至 SharePoint 文件庫的傳遞延伸模組。  
@@ -74,7 +73,7 @@ ms.locfileid: "62654201"
  標題  
  在目標文件庫中，指定報表的選用 `Title` 屬性。 這是儲存在文件庫中之所有項目的標準屬性。 使用者可以在檢視 SharePoint 網站上的文件庫內容時，指定要顯示或隱藏此屬性。  
   
- 路徑  
+ `Path`  
  指定指向 SharePoint 文件庫的完整 URL，包括 SharePoint Web 應用程式和網站。 例如： <http://mySharePointWeb/MySite/MyDocLib>; 其中 「<http://mySharePointWeb>"指出的 Web 應用程式中，"MySite"是 SharePoint 網站，以及"MyDocLib"是 SharePoint 文件庫傳遞報表。  
   
  您無法指定頁面、網站或清單。 目標容器必須是相同網站或伺服陣列中的文件庫。  

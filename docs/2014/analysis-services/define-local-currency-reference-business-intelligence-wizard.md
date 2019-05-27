@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.localcurrency.f1
@@ -13,12 +12,12 @@ ms.assetid: 74993b0d-dfca-476b-acba-d66c593680a5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6d6616f5f09ce39682a24c74808ca90084ee775f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 558e2c7d62edcb9fb314b49d41fd7bd15413218d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732826"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082182"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>定義本地貨幣參考 (商業智慧精靈)
   使用 [定義本地貨幣參考] 頁面，即可定義貨幣轉換功能的本地貨幣，這會涵蓋 [選取轉換類型] 頁面上指定的多對多或多對一轉換類型。 本地貨幣為 **[選取量值]** 頁面中，選取之量值用於儲存交易的貨幣。  

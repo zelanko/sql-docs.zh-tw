@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d88f2dc9-2933-4be5-9bf3-48ffbc2d0a1a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c3f47ddcfab5df43104d3998822fdaf8bd504946
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0a0ca45681866e0ba96edaa81c21445a89f94275
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748782"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070694"
 ---
 # <a name="process-data-ssas-tabular"></a>處理資料 (SSAS 表格式)
   當您將資料匯入至快取模式的表格式模型時，您可以擷取該資料在匯入時的快照集。 在某些情況下，該資料可能永遠不會變更，因此不需要在模型中更新。 但是，您匯入的資料很有可能定期變更，因此為了讓模型可以反映資料來源的最新資料，您必須處理 (重新整理) 資料並重新計算導出資料。 若要更新模型中的資料，您可以在所有資料表上、在個別資料表上、透過資料分割或透過資料來源連接，來執行處理動作。  

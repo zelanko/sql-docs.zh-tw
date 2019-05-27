@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.process.incrementalupdate.f1
@@ -13,17 +12,17 @@ ms.assetid: d5a5ae27-44e7-4179-b9e2-efbf21d6c5f5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 354ec6968698dc5b6a7bbca8ffcd33a34db4389d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0948fda951bb415d9fe3f457729200752a8afaaf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730334"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080490"
 ---
 # <a name="incremental-update-dialog-box-analysis-services---multidimensional-data"></a>累加式更新對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [累加式更新] 對話方塊，即可定義累加更新量值群組與資料分割時使用的設定。 在 [處理] 對話方塊裡的 [物件清單] 方格中，按一下 [設定值] 資料行中的 [設定]，即可顯示 [累加式更新] 對話方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  

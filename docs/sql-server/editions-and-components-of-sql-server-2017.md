@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 69d8e217f4554a87348874621709f97309246446
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 3adc687a30c3f8f7e9f8564bfbbb3fec44ad4a20
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788095"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560115"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的版本及支援功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -156,7 +156,7 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 |AlwaysOn 可用性群組 <sup>3</sup>|是|否|否|否|否|
 |基本可用性群組 <sup>4</sup>|否|是|否|否|否|
 |線上頁面和檔案還原|是|否|否|否|否|
-|線上檢索索引|是|否|否|否|否|
+|線上索引建立與重建|是|否|否|否|否|
 |繼續線上索引重建|是|否|否|否|否|
 |線上結構描述變更|是|否|否|否|否|
 |快速復原|是|否|否|否|否|

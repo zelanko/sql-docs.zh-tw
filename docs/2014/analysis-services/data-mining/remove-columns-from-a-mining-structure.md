@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], columns
@@ -16,12 +15,12 @@ ms.assetid: 41073ffe-9351-416b-9f0c-62634bc213f9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5c48f659931fc1329df0a25afd74ff1e7bcc38cf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ebc79ed1221b729cfac3fb3d34ed5d9683dc6875
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733090"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082954"
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>從採礦結構中移除資料行
   在建立採礦結構之後，您可以使用資料採礦設計師，從採礦結構中移除資料行。 移除採礦結構資料行的原因可能包含下列：  

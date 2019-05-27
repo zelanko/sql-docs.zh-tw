@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - ListSSLCertificates method
@@ -13,12 +12,12 @@ ms.assetid: 88cd0936-b202-4ab8-90f2-d9c3f66d37f4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: adda71c5ee0a88eabd619280457421bbf5ec0a75
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f65926bf982574ee2ae856b5bc4138d065b534bf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646691"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098327"
 ---
 # <a name="listsslcertificates-method-wmi-msreportserverconfigurationsetting"></a>ListSSLCertificates 方法 (WMI MSReportServer_ConfigurationSetting)
   傳回報表伺服器電腦上的憑證清單。  

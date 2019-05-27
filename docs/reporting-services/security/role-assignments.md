@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 810dd88b7572ea6af6ed5c5ac8a669a9c598b695
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
-ms.translationtype: HT
+ms.openlocfilehash: a6fe3c0cd82d8ee8b92948d76d4f7cdb5fa4cf73
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449673"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570562"
 ---
 # <a name="role-assignments"></a>角色指派
 

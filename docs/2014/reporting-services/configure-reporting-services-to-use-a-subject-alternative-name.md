@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2c0d16d95709746d32323ab7a4e17c0b4405ba12
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 39cb8593351e97c47fff38ae2d1b6f2b326f49b4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266049"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109734"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>設定 Reporting Services 使用主體替代名稱
   此主題說明如何透過修改 rsreportserver.config 檔案和使用 Netsh.exe 工具來設定 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS)，以使用主體替代名稱 (SAN)。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.associationrules.rules.f1
@@ -13,12 +12,12 @@ ms.assetid: 705d5492-b58f-45d9-94d7-ed57b7025823
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 999ea0b432733fc3458cb6f50e964209c1313b54
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748010"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070094"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>規則索引標籤 (採礦模型檢視器)
   在關聯模型中使用 [規則] 窗格，即可檢視演算法從資料擷取的規則。 規則描述各項目之間相互關聯的方式，可用於建立建議。  

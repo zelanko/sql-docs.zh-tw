@@ -10,16 +10,16 @@ helpviewer_keywords:
 - geometry subtypes [SQL Server]
 - Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90f1ff1b99dbc5880909fb8387fc1b82d9b32df8
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 8818d5b8b97e6bef9df2a4e2d9b550e2cbbc980c
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979014"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936394"
 ---
 # <a name="polygon"></a>多邊形
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

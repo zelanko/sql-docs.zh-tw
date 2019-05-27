@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - examining the current structure of the employee
@@ -13,12 +12,12 @@ ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 38c16d837dd886785479e1e2994b5b0f19372cfe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b88c78a1a7f4244afe220585919a50ed06cd0ad9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62760865"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110134"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>檢查 Employee 資料表的目前結構
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫在 **HumanResources** 結構描述中包含一個 **Employee** 資料表。 為避免變更原始資料表，此步驟會製作一個名為 **EmployeeDemo** 的 **Employee**資料表複本。 若要簡化範例，您僅能從原始資料表複製五個資料行。 然後，您可以查詢**HumanResources.EmployeeDemo**資料表，檢閱如何將資料結構化資料表中不使用`hierarchyid`資料型別。  

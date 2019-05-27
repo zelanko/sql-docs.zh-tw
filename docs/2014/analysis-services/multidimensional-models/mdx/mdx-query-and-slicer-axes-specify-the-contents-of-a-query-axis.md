@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - cellsets [MDX]
@@ -14,12 +13,12 @@ ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 05555f9f3b90cbf0eaae410a2b97dc31a0ed17d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 892198c217918fd2b2a374261c6eac5e31d0a428
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699545"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074077"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>指定查詢座標軸的內容 (MDX)
   查詢座標軸指定多維度運算式 (MDX) SELECT 陳述式傳回的資料格集邊緣。 指定資料格集邊緣，您就可以限制用戶端能看見的傳回資料。  

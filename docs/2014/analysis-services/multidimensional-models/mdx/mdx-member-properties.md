@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - DIMENSION PROPERTIES keyword
@@ -16,12 +15,12 @@ ms.assetid: 26b5ad08-3799-4a5e-89f3-dca25e637d45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e650ee07183123f5c90e24129282820825cee652
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8c0326d45af68db966f120fa12e35eb59f30becc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725452"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074155"
 ---
 # <a name="using-member-properties-mdx"></a>使用成員屬性 (MDX)
   成員屬性包含每個 Tuple 中每個成員的基本資訊。 此基本資訊包括成員名稱、父層級、子系數目等等。 指定層級上的所有成員都能使用成員屬性。 就組織而言，會將成員屬性視為儲存在單一維度上，且以維度方式組織的資料。  

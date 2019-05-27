@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.dbconfigurationpane.f1
@@ -15,12 +14,12 @@ ms.assetid: 00c9c42b-db2b-4620-8fb6-1e165ff0cbdd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1a353d633287ad4b535a88b9ba76fa403a20c9e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731064"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081076"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>一般 (資料庫設計工具) (Analysis Services - 多維度資料)
   使用 **[一般]** 索引標籤，即可變更 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫的屬性。  

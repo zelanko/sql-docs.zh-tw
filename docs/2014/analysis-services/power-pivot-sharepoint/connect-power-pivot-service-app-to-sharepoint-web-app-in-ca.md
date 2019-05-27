@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 33d2f83b1b003e6be2fc5c47b8a0e12b440f537c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: da816635ab978e7baadfb810aed78fa0f3258dd8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749420"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071682"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>在管理中心將 PowerPivot 服務應用程式連接到 SharePoint Web 應用程式
   PowerPivot 服務應用程式可由伺服陣列中任何數目的 SharePoint Web 應用程式使用。 若要讓 PowerPivot 服務應用程式可用，請將它加入至服務關聯清單。  

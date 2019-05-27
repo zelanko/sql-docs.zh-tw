@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b75d3a772bfdb9b0d938691cd5bc92e3292a1e79
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 312afc0336405ca530f731ad4fec55a26a960e7a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749006"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071052"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>啟動或停止 PowerPivot for SharePoint 伺服器
   PowerPivot 系統服務和[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]執行個體一起運作，以支援 SharePoint 伺服陣列中的協調的要求和資料處理相同的本機應用程式伺服器上。  

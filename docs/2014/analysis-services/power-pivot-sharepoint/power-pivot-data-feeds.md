@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - XML data sources [Analysis Services with SharePoint]
@@ -15,12 +14,12 @@ ms.assetid: 6b1337c5-50a0-4fc2-b079-377dc241d2cc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7a3d1c457d44edac0fbc4c09060eb6c33a0353f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b3080996eca3395e8be3cab5e17eaea7305dbfa2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749243"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071266"
 ---
 # <a name="powerpivot-data-feeds"></a>PowerPivot 資料摘要
   資料摘要會視需要提供從線上資料來源到用戶端應用程式的資料串流。 在  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，您可以使用資料摘要將資料從 Atom 感知 Web 服務或應用程式中的 Excel 活頁簿的 PowerPivot 資料來源。  

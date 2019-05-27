@@ -15,14 +15,18 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1c338ab2dbbaa5437ef4650f79598b68069317f9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1f673ea96167b05326519bb9fe04345a87c81fd3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283202"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729168"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **SSISDB** 目錄是處理您已部署至 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 伺服器之 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 專案的中心點。 例如，您可以設定專案和封裝參數、設定環境以指定封裝的執行值、執行和疑難排解封裝，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 伺服器作業。  
  
 > [!NOTE]
@@ -122,7 +126,7 @@ ms.locfileid: "58283202"
   
  若要更新或重新部署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，請使用相同名稱將它部署到目錄中的相同資料夾。 根據預設，每當您重新部署專案時， **SSISDB** 目錄都會保留此專案的舊版。 為了維護作業資料的大小， **[SSIS Server 維護作業]** 會用來移除專案的舊版。  
  
-為執行 **SSIS Server 維護作業**，SSIS 會建立 SQL Server 登入 **##MS_SSISServerCleanupJobLogin##**。 此登入僅供 SSIS 內部使用。
+為執行 **SSIS Server 維護作業**，SSIS 會建立 SQL Server 登入 **##MS_SSISServerCleanupJobLogin##** 。 此登入僅供 SSIS 內部使用。
   
  以下 **[SSISDB]** 目錄屬性會定義此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的行為模式。 您可以使用 [目錄屬性] 對話方塊或使用 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 和 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md) 檢視及修改屬性。  
   
@@ -169,16 +173,16 @@ ms.locfileid: "58283202"
   
  下表列出 **[目錄屬性]** 對話方塊中所顯示的屬性名稱，以及資料庫檢視中的對應屬性。  
   
-|屬性名稱 (**[目錄屬性]** 對話方塊)|屬性名稱 (資料庫檢視)|  
+|屬性名稱 ( **[目錄屬性]** 對話方塊)|屬性名稱 (資料庫檢視)|  
 |---------------------------------------------------------|-------------------------------------|  
 |加密演算法名稱|ENCRYPTION_ALGORITHM|  
-|定期清除記錄檔|OPERATION_CLEANUP_ENABLED|  
+|定期清除記錄檔|OPERATION_CLEANUP_ENABLEDâ€‹|  
 |保留週期 (天)|RETENTION_WINDOW|  
 |定期移除舊版本|VERSION_CLEANUP_ENABLED|  
 |每一專案的版本數目上限|MAX_PROJECT_VERSIONS|  
 |全伺服器的預設記錄層次|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
  專案、環境和封裝會包含在屬於安全性實體物件的資料夾中。 您可以將權限授與資料夾，包括 MANAGE_OBJECT_PERMISSIONS 權限。 MANAGE_OBJECT_PERMISSIONS 可讓您將資料夾內容管理委派給使用者，而不必將使用者成員資格授與 ssis_admin 角色。 您還可以授與權限給專案、環境和作業。 作業包括初始化 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、部署專案、建立及啟動執行、驗證專案和封裝及設定 **SSISDB** 目錄。  
   
  如需資料庫角色的詳細資訊，請參閱 [資料庫層級角色](../../relational-databases/security/authentication-access/database-level-roles.md)。  
@@ -318,7 +322,7 @@ ms.locfileid: "58283202"
   
 3.  在 [物件總管] 中，展開伺服器節點，以滑鼠右鍵按一下 [Integration Services 目錄] 節點，然後按一下 [建立目錄]。  
   
-4.  按一下 **[啟用 CLR 整合]**。  
+4.  按一下 **[啟用 CLR 整合]** 。  
   
      目錄便會使用 CLR 預存程序。  
   
@@ -326,7 +330,7 @@ ms.locfileid: "58283202"
   
      預存程序會執行 SSISDB 目錄之作業狀態的維護。 如果 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 伺服器執行個體關閉，它就會修正任何執行中套件的狀態。  
   
-6.  輸入密碼，然後按一下 **[確定]**。  
+6.  輸入密碼，然後按一下 **[確定]** 。  
   
      此密碼保護用來加密目錄資料的資料庫主要金鑰。 請將密碼儲存在安全位置。 建議您同時備份資料庫主要金鑰。 如需相關資訊，請參閱 [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
   
@@ -606,7 +610,7 @@ ms.locfileid: "58283202"
   
 2.  在物件總管中，展開伺服器節點，以滑鼠右鍵按一下 [Integration Services 目錄]  節點，然後按一下 [建立目錄] 。  
   
-3.  按一下 **[啟用 CLR 整合]**。 目錄便會使用 CLR 預存程序。  
+3.  按一下 **[啟用 CLR 整合]** 。 目錄便會使用 CLR 預存程序。  
   
 4.  按一下 [在 SQL Server 啟動時允許自動執行 Integration Services 預存程序]  ，讓 [catalog.startup](../system-stored-procedures/catalog-startup.md) 預存程序會在每次 SSIS 伺服器執行個體重新啟動時執行。 預存程序會執行 SSISDB 目錄之作業狀態的維護。 它會在 SSIS 伺服器執行個體效能降低時，修正任何正在執行之封裝的狀態。  
   

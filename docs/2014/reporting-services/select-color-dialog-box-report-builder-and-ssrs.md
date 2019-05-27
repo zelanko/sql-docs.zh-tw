@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.selectcolor.f1
@@ -16,12 +15,12 @@ ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fdd07f8c0f8fba74432a08283c76341eb2707312
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6bcbbe828da811ace5df4feea5cfdf888e1e6ca5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63223449"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101376"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>選取色彩對話方塊 (報表產生器及 SSRS)
   使用 **Select Color** 對話方塊，可以指定資料區或文字方塊內，單一資料格或多個資料格的背景色彩選項或圖表色彩選項。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - re-creating encryption keys
@@ -18,12 +17,12 @@ ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 38547a2d48ecbe1887702d7be9b45b3166d75243
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c293b7007ccb8a42928c02ed37bcaacb898504f9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63224813"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108703"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>刪除和重新建立加密金鑰 (SSRS 組態管理員)
   刪除和重新建立加密金鑰是例行加密金鑰維護範圍之外的活動。 執行這些工作是為了因應報表伺服器所受的特定威脅，或者當您無法存取報表伺服器資料庫時的最後手段。  

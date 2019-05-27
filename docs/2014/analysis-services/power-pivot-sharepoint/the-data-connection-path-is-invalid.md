@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: bd22e41a-0931-4d32-888a-633a3046fc5e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6242e258c8516b4ebd6e46e9290dabe31cbaf168
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0cc18a2c7111c71b62f77f5f52727a4a50a661ba
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749093"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071040"
 ---
 # <a name="the-data-connection-path-in-the-workbook-points-to-a-file-on-the-local-drive-or-is-an-invalid-uri-the-following-connections-failed-to-refresh-powerpivot-data"></a>活頁簿中的資料連接路徑指向本機磁碟機上的檔案或者是無效的 URI。 下列連接無法重新整理：PowerPivot 資料
   如果是包含 PowerPivot 資料的 Excel 活頁簿，Excel Services 會在無法連接到內嵌資料來源時傳回這個錯誤。  

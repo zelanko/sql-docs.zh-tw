@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 31aeb271-47a1-433b-a8a5-120bcb4584d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aaac863432c5ba289be43f24a384d392f0b42697
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 765d983bcd3c9e12b29235eb5ee5dac91e3c2d8f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728124"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078423"
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>第 5 課：定義維度和量值群組之間的關聯性
   在這個教學課程的前面課程中，您已了解加入至 Cube 的資料庫維度可做為一或多個 Cube 維度的基礎。 在這一課，您將學習如何在 Cube 維度和量值群組之間定義不同類型的關聯性，以及指定這些關聯性的屬性。  

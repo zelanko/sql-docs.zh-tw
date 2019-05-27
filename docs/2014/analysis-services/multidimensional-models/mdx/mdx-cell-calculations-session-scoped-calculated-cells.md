@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - session-scoped calculated members [MDX]
@@ -13,12 +12,12 @@ ms.assetid: f2d14a89-6286-4e74-9afb-091076f93f21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17a132ea3a775104420640cab5f60cfdd0028fba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4388ef278c0762184859162dc55f656aae1c9a15
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725402"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074432"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>建立工作階段範圍導出資料格
     

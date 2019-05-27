@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - testing mining models
@@ -16,12 +15,12 @@ ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6e4cf182d303d2fc671b5b6003483781e2d3a4aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 34aefc2895057c499e54c572340ca63dc28ed68f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733473"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082740"
 ---
 # <a name="training-and-testing-data-sets"></a>定型和測試資料集
   將資料分成定型集和測試集是評估資料採礦模型中的一個重要部分。 一般來說，當您將資料集分成定型集和測試集時，大多數的資料會用於定型，小部分的資料會用於測試。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會隨機取樣資料，以確保測試集和定型集類似。 您可以透過針對定型和測試使用相同的資料，盡可能減少資料不一致的影響並有效了解模型的特性。  

@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - UnionAggregate method (geometry)
 ms.assetid: dc7929cc-55ca-4a2c-a4b9-f5452f95bde8
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 0544c554394cd69fe505a0596f653af29e637ebc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8426324815541bcce2268ebe8fac857fd8acaa7
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777082"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935547"
 ---
 # <a name="unionaggregate-geometry-data-type"></a>UnionAggregate (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

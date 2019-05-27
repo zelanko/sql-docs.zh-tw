@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.selectdatasource.f1
@@ -13,12 +12,12 @@ ms.assetid: 51282270-8ca8-42cf-8538-a6baf0006656
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: be709cb574d1dc7fac6f1b4948c6deb227dff100
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: be1ceb4135118197317e7b8a320c7a82d09ffda5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747690"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069855"
 ---
 # <a name="select-a-data-source-data-source-view-wizard-analysis-services"></a>選取資料來源 (資料來源檢視精靈) (Analysis Services)
   使用 **[選取資料來源]** 頁面，即可選取資料來源檢視的資料來源。  

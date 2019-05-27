@@ -18,15 +18,15 @@ helpviewer_keywords:
 - column testing [SQL Server]
 - updated columns
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0459812874f77493520c2c1f3ac794836147a2f0
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 1e436a03125559da522adc9fcc54df0866032698
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775019"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943991"
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

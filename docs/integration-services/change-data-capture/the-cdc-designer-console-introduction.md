@@ -11,20 +11,24 @@ ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f5b02db809cf8bb0d7d9b049cfec9fe895a3af3d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1dcacaf20a5216754992b28ab2e29460437fc0f2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276688"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728496"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC 設計工具主控台簡介
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   本節描述 Attunity Oracle Change Data Capture (CDC) 設計工具的安裝程序。  
   
 ## <a name="installation"></a>安裝  
  本節描述 Attunity Oracle Change Data Capture (CDC) 設計工具的安裝程序。  
   
- Attunity 所提供適用於 Microsoft SQL Server® 2016 的 Microsoft® Oracle 異動資料擷取設計工具及服務屬於 SQL Server 2016 Feature Pack 的一部分。 從 [SQL Server 2016 Feature Pack 網頁](https://go.microsoft.com/fwlink/?LinkId=746297)下載 Feature Pack 的元件。  
+ 適用於 Microsoft SQL ServerÂ® 2016 的 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity 是 SQL Server 2016 Feature Pack 的一部分。 從 [SQL Server 2016 Feature Pack 網頁](https://go.microsoft.com/fwlink/?LinkId=746297)下載 Feature Pack 的元件。  
   
 ## <a name="supported-windows-environments"></a>支援的 Windows 環境  
  CDC 設計工具主控台可在以下 Windows 環境中執行：  

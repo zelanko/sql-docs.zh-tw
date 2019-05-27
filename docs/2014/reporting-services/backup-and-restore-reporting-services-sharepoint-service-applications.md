@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0613234749c2bf419f3013226b3935782833e65e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e061ea2394c2fdad1e7d37f56016c73d7787eda0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237769"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109946"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>備份與還原 Reporting Services SharePoint 服務應用程式
   本主題描述如何使用 SharePoint 管理中心或 PowerShell 備份和還原 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式。 本主題包含：  

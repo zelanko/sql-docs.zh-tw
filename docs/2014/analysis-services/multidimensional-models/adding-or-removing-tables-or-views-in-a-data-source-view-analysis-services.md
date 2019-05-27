@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.tablespane.f1
@@ -20,12 +19,12 @@ ms.assetid: 98307d04-6548-4d7d-9244-2371dd165249
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc78ad1f8a1f49d1a42c5b2ded45a913cdd7e669
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: da7169cc95b768324e18f1ab5fd7b0a33615f99a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62701869"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077454"
 ---
 # <a name="adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services"></a>在資料來源檢視中加入或移除資料表或檢視 (Analysis Services)
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立資料來源檢視 (DSV) 之後，即可在資料來源檢視設計工具中，透過加入或移除資料表和資料行 (包括其他資料來源中的資料表和資料行) 來進行修改。  

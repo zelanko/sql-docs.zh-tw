@@ -9,16 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MultiPoint geometry subtype [SQL Server]
 ms.assetid: 2aaab211-3aba-4dbd-90b7-095d997b1f62
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f417e004ead7e089930a9c970a2eebf00e015ab2
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 5eaa5cd9458e6ec5d7f16030c72e64a961a775ec
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978848"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936424"
 ---
 # <a name="multipoint"></a>MultiPoint
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

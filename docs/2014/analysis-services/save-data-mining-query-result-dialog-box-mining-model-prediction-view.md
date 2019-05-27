@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dm.savedataminingqueryresult.f1
@@ -15,12 +14,12 @@ ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6b5c5f74ba8951bae27193b6796f09dcbdb8302
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97b391e24f98b230dbfe352e0cf1a574c7549984
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748000"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070014"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>儲存資料採礦查詢結果對話方塊 (採礦模型預測檢視)
   使用 **[儲存資料採礦查詢結果]** 對話方塊，即可將資料採礦查詢的結果儲存到新的資料表。  

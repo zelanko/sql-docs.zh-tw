@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
@@ -18,12 +17,12 @@ ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0bf91af4556694ea032dccd8d502e4480fc4c750
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 087322555ade5738ae3b4831488b6aa6e62b44a7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733769"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083444"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>採礦模型 (Analysis Services - 資料採礦)
   「採礦模型」透過將演算法套用至資料來建立，但是採礦模型不只是演算法或中繼資料容器，還是可以套用至新資料以產生預測並推斷關聯性的一組資料、統計資料及模式。  

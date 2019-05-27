@@ -11,12 +11,12 @@ ms.assetid: 005b6b2f-a5d9-4ea4-8d4e-beed6ab33c0d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6ca421c3d1cdd2be5cbfbc57a867339c2ce2a228
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 015c0f51b728ba3f601722d1d44c1e3b2f173973
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65715913"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198171"
 ---
 # <a name="catalogsetenvironmentvariableprotection-ssisdb-database"></a>catalog.set_environment_variable_protection (SSISDB 資料庫)
 
@@ -33,18 +33,18 @@ ms.locfileid: "65715913"
 catalog.set_environment_variable_protection [ @folder_name = ] folder_name  
     , [ @environment_name = ] environment_name  
     , [ @variable_name = ] variable_name  
-    , [ @is_sensitive = ] is_sensitive  
+    , [ @sensitive = ] sensitive  
 ```  
   
 ## <a name="arguments"></a>引數  
  [ @folder_name = ] *folder_name*  
- 包含環境之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
+ 包含環境之資料夾的名稱。 *folder_name* 是 **nvarchar(128)** 。  
   
  [ @environment_name = ] *environment_name*  
- 環境的名稱。 *environment_name* 是 **nvarchar(128)**。  
+ 環境的名稱。 *environment_name* 是 **nvarchar(128)** 。  
   
  [ @variable_name = ] *variable_name*  
- 環境變數的名稱。 *variable_name* 是 **nvarchar(128)**。  
+ 環境變數的名稱。 *variable_name* 是 **nvarchar(128)** 。  
   
  [ @sensitive = ] *sensitive*  
  指出變數是否包含機密值。 使用 `1` 值表示環境變數的值是機密值，或者，使用 `0` 值則表示該值不是機密值。 機密值會在儲存時加密。 非機密值則會儲存為純文字。 *sensitive* 參數是 **bit**。  

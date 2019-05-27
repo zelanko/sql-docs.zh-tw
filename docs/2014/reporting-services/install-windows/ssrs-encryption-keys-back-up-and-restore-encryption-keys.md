@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - backing up encryption keys [Reporting Services]
@@ -16,12 +15,12 @@ ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 43e705bf75e70b12c8201fb583462e2ee36c31c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6c5a28cbac2c13d0662f744a12f3041458d9b0bb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63144534"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108709"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>備份與還原 Reporting Services 加密金鑰
   在報表伺服器組態中，建立用於加密機密資訊的對稱金鑰備份副本是很重要的一部分。 許多例行作業都需要金鑰的備份副本，這備份副本可以讓您在新安裝中重複使用現有的報表伺服器資料庫。  

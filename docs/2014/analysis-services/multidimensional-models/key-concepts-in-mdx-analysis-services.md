@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], about MDX
@@ -17,12 +16,12 @@ ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: acd35ed9c39dc11b0ea60017b082d407f6c1b47d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b51c763987fdfe8bbaf08851094a5e6e6d267c36
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700618"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074854"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX 的關鍵概念 (Analysis Services)
   在您使用多維度運算式 (MDX) 查詢 Cube 中的多維度資料，或在 Cube 中建立 MDX 運算式之前，先了解多維度的概念與詞彙會相當有助益。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Reporting Services], backing up
@@ -20,12 +19,12 @@ ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a11b10ae1403911c7593e9f6cccd21d1fdb8fd16
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8c992148017f6a3ecb383e85ad5bbfcc3a3ec3c8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63261950"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108913"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 的備份與還原作業
   此主題提供所有用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝中資料檔案的概觀，並說明備份這些檔案的時機與方法。 復原策略中最重要的部分，就是訂定報表伺服器資料庫檔案的備份與還原計劃。 但是，更加完整的復原策略應該要包括加密金鑰、自訂組件或延伸模組、組態檔以及報表和模型之來源檔案的備份。  

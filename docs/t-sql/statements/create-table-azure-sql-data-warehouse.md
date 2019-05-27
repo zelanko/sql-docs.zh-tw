@@ -12,56 +12,61 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 52628b3742574bc4e3079750526a5424d65012fe
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 4a048347773b5bf9cba7288e482ed08ea3f4757c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579662"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574883"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中建立新的資料表。  
- 
+
 若要了解資料表和其使用方式，請參閱 [SQL 資料倉儲中的資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-overview/)。
 
-附註：除非另有說明，否則本文中和 SQL 資料倉儲有關的討論適用於 SQL 資料倉儲和平行處理資料倉儲。 
- 
+> [!NOTE]
+>  除非另有說明，否則本文中和 SQL 資料倉儲有關的討論適用於 SQL 資料倉儲和平行處理資料倉儲。
+
  ![文章連結圖示](../../database-engine/configure-windows/media/topic-link.gif "文章連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
-<a name="Syntax"></a>   
-## <a name="syntax"></a>語法  
+<a name="Syntax"></a>
+
+## <a name="syntax"></a>語法
   
 ```  
--- Create a new table. 
-CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
+-- Create a new table.
+CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
-      { column_name <data_type>  [ <column_options> ] } [ ,...n ]   
+      { column_name <data_type>  [ <column_options> ] } [ ,...n ]
     )  
     [ WITH ( <table_option> [ ,...n ] ) ]  
 [;]  
-   
+
 <column_options> ::=
     [ COLLATE Windows_collation_name ]  
     [ NULL | NOT NULL ] -- default is NULL  
     [ [ CONSTRAINT constraint_name ] DEFAULT constant_expression  ]
   
-<table_option> ::= 
-    {   
-        CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
-      | HEAP --default for Parallel Data Warehouse   
-      | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC 
+<table_option> ::=
+    {
+        <cci_option> --default for Azure SQL Data Warehouse
+      | HEAP --default for Parallel Data Warehouse
+      | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
-    { 
-        DISTRIBUTION = HASH ( distribution_column_name ) 
+    {
+        DISTRIBUTION = HASH ( distribution_column_name )
       | DISTRIBUTION = ROUND_ROBIN -- default for SQL Data Warehouse
       | DISTRIBUTION = REPLICATE -- default for Parallel Data Warehouse
-    }   
+    }
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
-        FOR VALUES ( [ boundary_value [,...n] ] ) )  
+        FOR VALUES ( [ boundary_value [,...n] ] ) )
+
+<cci_option> ::= [CLUSTERED COLUMNSTORE INDEX] [ORDER (column [,…n])]
   
-<data type> ::=   
+<data type> ::=
       datetimeoffset [ ( n ) ]  
     | datetime2 [ ( n ) ]  
     | datetime  
@@ -88,8 +93,9 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
     | uniqueidentifier  
 ```  
 
-<a name="Arguments"></a>   
-## <a name="arguments"></a>引數  
+<a name="Arguments"></a>
+## <a name="arguments"></a>引數
+
  *database_name*  
  將包含新資料表之資料庫的名稱。 預設為目前資料庫。  
   
@@ -98,10 +104,10 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
   
  *table_name*  
  新資料表的名稱。 若要建立本機暫存資料表，請在資料表名稱前面加上 #。  如需暫存資料表的說明和指導方針，請參閱 [Azure SQL 資料倉儲中的暫存資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/)。 
- 
+
  *column_name*  
  資料表資料行的名稱。
-   
+
 ### <a name="ColumnOptions"></a> 資料行選項
 
  `COLLATE` *Windows_collation_name*  
@@ -118,53 +124,71 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  | *constraint_name* | 條件約束的選擇性名稱。 條件約束名稱在資料庫中是唯一的。 名稱可以在其他資料庫中重複使用。 |
  | *constant_expression* | 資料行的預設值。 運算式必須是常值或常數。 例如，允許使用這些常數運算式：`'CA'`、`4`。 這些常數運算式不允許：`2+3`、`CURRENT_TIMESTAMP`。 |
   
-
 ### <a name="TableOptions"></a> 資料表結構選項
+
 如需選擇資料表類型的指導方針，請參閱 [Azure SQL 資料倉儲中的索引資料表](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/)。
   
- `CLUSTERED COLUMNSTORE INDEX`  
-將資料表儲存為叢集資料行存放區索引。 叢集資料行存放區索引適用於所有資料表資料。 這是 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的預設行為。   
+ `CLUSTERED COLUMNSTORE INDEX` 
  
- `HEAP`   
-  將資料表儲存為堆積。 這是 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的預設行為。  
+將資料表儲存為叢集資料行存放區索引。 叢集資料行存放區索引適用於所有資料表資料。 這是 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的預設行為。
+ 
+ `HEAP` 將資料表儲存為堆積。 這是 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的預設行為。  
   
  `CLUSTERED INDEX` ( *index_column_name* [ ,...*n* ] )  
  將資料表儲存為具有一或多個索引鍵資料行的叢集索引。 此行為會依資料列儲存資料。 使用 *index_column_name* 指定索引中一或多個索引鍵資料行的名稱。  如需詳細資訊，請參閱「一般備註」中的「資料列存放區資料表」。
  
- `LOCATION = USER_DB`   
- 這個選項已被取代。 在語法上仍會接受，但已不再需要且不會再影響行為。   
+ `LOCATION = USER_DB` 此選項已淘汰。 在語法上仍會接受，但已不再需要且不會再影響行為。   
   
 ### <a name="TableDistributionOptions"></a> 資料表散發選項
+
 若要了解如何選擇最佳散發方法及如何使用分散式資料表，請參閱 [Azure SQL 資料倉儲中的分散式資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/)。
 
-`DISTRIBUTION = HASH` ( *distribution_column_name* )   
-透過將 *distribution_column_name* 中儲存的值進行雜湊處理，將每個資料列指派給一個散發。 演算法具有確定性，這表示其一律會將相同值進行雜湊處理至相同的散發。  散發資料行應定義為 NOT NULL，因為擁有 NULL 的所有資料列都會指派給相同散發。
+`DISTRIBUTION = HASH` ( *distribution_column_name* ) 透過對儲存在 *distribution_column_name* 中的值進行雜湊處理，將每個資料列指派給一個發佈。 演算法具有確定性，這表示其一律會將相同值進行雜湊處理至相同的散發。  散發資料行應定義為 NOT NULL，因為擁有 NULL 的所有資料列都會指派給相同散發。
 
-`DISTRIBUTION = ROUND_ROBIN`   
-以循環配置資源方式將資料列均勻散發到所有散發中。 這是 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的預設行為。
+`DISTRIBUTION = ROUND_ROBIN` 以循環配置資源方式將資料列平均散發到所有發佈中。 這是 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的預設行為。
 
-`DISTRIBUTION = REPLICATE`    
-在每個計算節點上儲存一份資料表。 針對 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，資料表會儲存在每個計算節點的散發資料庫中。 針對 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，資料表會儲存在跨越計算節點的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案群組中。 這是 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的預設行為。
+`DISTRIBUTION = REPLICATE` 在每個計算節點上儲存一份資料表的複本。 針對 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，資料表會儲存在每個計算節點的散發資料庫中。 針對 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，資料表會儲存在跨越計算節點的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案群組中。 這是 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的預設行為。
   
 ### <a name="TablePartitionOptions"></a> 資料表資料分割選項
 如需使用資料表資料分割的指導方針，請參閱 [SQL 資料倉儲中的資料分割資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)。
 
  `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
 建立一或多個資料表資料分割。 這些資料分割是水平資料表配量，可讓您將作業套用至資料列子集，無論資料表是儲存為堆積、叢集索引，或叢集資料行存放區索引。 和散發資料行不同，資料表資料分割不會決定每個資料列儲存所在的散發。 反之，資料表資料分割會決定資料列在每個散發內的分組方式和儲存方式。  
- 
+
 | 引數 | 說明 |
 | -------- | ----------- |
 |*partition_column_name*| 指定 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 將用來分割資料列的資料行。 此資料行可以是任何資料類型。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 會以遞增順序排序資料分割資料行值。 從低到高順序會以 `RANGE` 規格由 `LEFT` 到 `RIGHT` 排序。 |  
 | `RANGE LEFT` | 指定屬於左邊 (較低的值) 資料分割的界限值。 預設值為 LEFT。 |
 | `RANGE RIGHT` | 指定屬於右邊 (較高的值) 資料分割的界限值。 | 
 | `FOR VALUES` ( *boundary_value* [,...*n*] ) | 指定資料分割的界限值。 *boundary_value* 是常數運算式。 不得為 NULL。 它必須符合或可以隱含轉換為 *partition_column_name* 的資料類型。 無法在進行隱含轉換期間截斷，因此值的大小和級別不會和 *partition_column_name* 的資料類型相符<br></br><br></br>如果指定 `PARTITION` 子句，但未指定界限值，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 將會建立包含一個資料分割的資料分割資料表。 如果適用，您隨後可以將資料表分割成兩個資料分割。<br></br><br></br>如果您指定一個界限值，產生的資料表會有兩個資料分割，一個用於低於界限值的值，一個用於高於界限值的值。 如果將資料分割移動到非資料分割資料表中，非資料分割資料表將會接收資料，但其中繼資料中將不會有資料分割界限。| 
- 
+
  請參閱＜範例＞一節中的[建立資料分割資料表](#PartitionedTable)。
 
+### <a name="ordered-clustered-columnstore-index-option-preview"></a>已排序的叢集資料行存放區索引選項 (預覽)
+
+叢集資料行存放區索引是在 Azure SQL 資料倉儲中建立資料表的預設。  ORDER 指定規格預設為 COMPOUND 索引鍵。  排序一律會以遞增排序進行。 若沒有指定任何 ORDER 子句，資料行存放區將不會進行排序。
+
+在預覽期間，您可以啟用 ORDER 來執行此查詢，以檢查資料行。  若在 ORDER 中指定多個資料行，則稍後將會提供目錄檢視，以提供此資訊和資料行序數。
+
+```sql
+SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.* 
+FROM sys.objects o 
+INNER JOIN sys.columns c ON o.object_id = c.object_id 
+INNER JOIN sys.partitions p ON o.object_id = p.object_id   
+INNER JOIN sys.column_store_segments s 
+    ON p.hobt_id = s.hobt_id AND s.column_id = c.column_id  
+WHERE o.name = 't1' and c.name = 'col1' 
+ORDER BY c.name, s.min_data_id, s.segment_id;
+```
+
 ### <a name="DataTypes"></a> 資料類型
+
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 支援最常使用的資料類型。 下方是所支援資料類型的清單，以及它們的詳細資料和儲存體位元組。 若要進一步了解資料類型和使用方式，請參閱 [SQL 資料倉儲中的資料表資料類型](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)。
 
 如需資料類型轉換表，請參閱 [CAST 和 CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/) 的＜隱含轉換＞一節。
+
+>[!NOTE]
+>請參閱[日期與時間資料類型及函式 &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql) 以取得詳細資料。
 
 `datetimeoffset` [ ( *n* ) ]  
  *n* 的預設值是 7。  
@@ -269,7 +293,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  這是 16 位元組的 GUID。  
    
 <a name="Permissions"></a>  
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  建立資料表時需要 `db_ddladmin` 固定資料庫角色的權限，或：
  - 資料庫的 `CREATE TABLE` 權限
  - 將包含資料表之結構描述的 `ALTER SCHEMA` 權限。 
@@ -292,11 +316,12 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 
 我們建議使用較少的資料表資料分割，以確保每個資料行存放區索引都有足夠的資料列，以充分利用資料行存放區索引的優點。 如需詳細資訊，請參閱 [SQL 資料倉儲中的資料分割資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)和 [SQL 資料倉儲中的索引資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 
-  
- ### <a name="rowstore-table-heap-or-clustered-index"></a>資料列存放區資料表 (堆積或叢集索引)  
- 資料列存放區資料表是以資料列逐列順序儲存的資料表。 是堆積或叢集索引。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 會建立具有頁面壓縮的所有資料列存放區資料表，使用者無法設定此行為。   
- 
- ### <a name="columnstore-table-columnstore-index"></a>資料行存放區資料表 (資料行存放區索引)
+### <a name="rowstore-table-heap-or-clustered-index"></a>資料列存放區資料表 (堆積或叢集索引)
+
+資料列存放區資料表是以資料列逐列順序儲存的資料表。 是堆積或叢集索引。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 會建立具有頁面壓縮的所有資料列存放區資料表，使用者無法設定此行為。
+
+### <a name="columnstore-table-columnstore-index"></a>資料行存放區資料表 (資料行存放區索引)
+
 資料行存放區資料表是以資料行逐行順序儲存的資料表。 資料行存放區索引是資料管理技術，可管理資料行存放區資料表中儲存的資料。  叢集資料行存放區索引不會影響資料散發方式，而會影響資料在每個散發內的儲存方式。
 
 若要將資料列存放區資料表變更為資料行存放區資料表，請卸除資料表中所有現有的索引，然後建立叢集資料行存放區索引。 如需範例，請參閱 [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)。
@@ -305,20 +330,22 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 - [資料行存放區索引建立版本功能摘要](https://msdn.microsoft.com/library/dn934994/)
 - [SQL 資料倉儲中的索引資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [資料行存放區索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md) 
- 
+
 <a name="LimitationsRestrictions"></a>  
 ## <a name="limitations-and-restrictions"></a>限制事項  
  您無法在散發資料行上定義預設條件約束。  
   
- ### <a name="partitions"></a>資料分割
- 使用資料分割時，資料分割資料行不能有僅限 Unicode 的定序。 例如，以下陳述式會失敗。  
+### <a name="partitions"></a>資料分割
+使用資料分割時，資料分割資料行不能有僅限 Unicode 的定序。 例如，以下陳述式會失敗。  
   
- `CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION (c1 RANGE FOR VALUES (N'')))`  
+ ```sql
+CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION (c1 RANGE FOR VALUES (N'')))
+```  
  
  如果 *boundary_value* 是一個必須隱含轉換成 *partition_column_name* 中資料類型的常值，就會發生不一致的情形。 常值會透過 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 系統檢視顯示，但轉換後的值會用於 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業。 
- 
-  
- ### <a name="temporary-tables"></a>暫存資料表
+
+### <a name="temporary-tables"></a>暫存資料表
+
  不支援開頭為 ## 的全域暫存資料表。  
   
  本機暫存資料表具有下列限制事項：  
@@ -341,38 +368,48 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="ColumnCollation"></a> A. 指定資料行定序 
  在以下範例中，資料表 `MyTable` 是使用兩個不同的資料行定序所建立的。 依照預設，資料行 `mycolumn1` 具有預設定序 Latin1_General_100_CI_AS_KS_WS。 資料行 `mycolumn2` 具有定序 Frisian_100_CS_AS。  
   
-```  
+```sql
 CREATE TABLE MyTable   
   (  
     mycolumnnn1 nvarchar,  
     mycolumn2 nvarchar COLLATE Frisian_100_CS_AS )  
 WITH ( CLUSTERED COLUMNSTORE INDEX )  
 ;  
-  
 ```  
   
-### <a name="DefaultConstraint"></a> B. 指定資料行的預設條件約束  
+### <a name="DefaultConstraint"></a> B. 指定資料行的預設條件約束
+
  以下範例說明指定資料行預設值的語法。 colA 資料行有名為 constraint_colA 的預設條件約束，且預設值為 0。  
   
-```  
-  
-CREATE TABLE MyTable   
+```sql
+CREATE TABLE MyTable
   (  
     colA int CONSTRAINT constraint_colA DEFAULT 0,  
-    colB nvarchar COLLATE Frisian_100_CS_AS   
+    colB nvarchar COLLATE Frisian_100_CS_AS
   )  
 WITH ( CLUSTERED COLUMNSTORE INDEX )  
 ;  
-```  
+```
+
+### <a name="OrderedClusteredColumnstoreIndex"></a> C. 建立已排序的叢集資料行存放區索引
+
+下列範例會示範如何建立已排序的叢集資料行存放區索引。 索引會根據 SHIPDATE 進行排序。
+
+```sql
+CREATE TABLE Lineitem  
+WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
+AS  
+SELECT * FROM ext_Lineitem
+```
 
 <a name="ExamplesTemporaryTables"></a> 
 ## <a name="examples-for-temporary-tables"></a>暫存資料表範例
 
 ### <a name="TemporaryTable"></a> C. 建立本機暫存資料表  
- 下列範例會建立一個名為 #myTable 的本機暫存資料表。 指定的資料表使用三部分名稱，開頭為 #。   
+ 下列範例會建立一個名為 #myTable 的本機暫存資料表。 指定的資料表使用三部分名稱，開頭為 #。
   
-```  
-CREATE TABLE AdventureWorks.dbo.#myTable   
+```sql
+CREATE TABLE AdventureWorks.dbo.#myTable
   (  
    id int NOT NULL,  
    lastName varchar(20),  
@@ -381,7 +418,7 @@ CREATE TABLE AdventureWorks.dbo.#myTable
 WITH  
   (   
     DISTRIBUTION = HASH (id),  
-    CLUSTERED COLUMNSTORE INDEX   
+    CLUSTERED COLUMNSTORE INDEX
   )  
 ;  
 ```
@@ -394,17 +431,16 @@ WITH
   
  叢集資料行存放區索引不會影響資料散發方式；資料一律由資料列散發。 叢集資料行存放區索引會影響資料在每個散發內的儲存方式。  
   
-```  
-  
-CREATE TABLE MyTable   
+```sql
+  CREATE TABLE MyTable
   (  
     colA int CONSTRAINT constraint_colA DEFAULT 0,  
-    colB nvarchar COLLATE Frisian_100_CS_AS   
+    colB nvarchar COLLATE Frisian_100_CS_AS
   )  
 WITH   
   (   
     DISTRIBUTION = HASH ( colB ),  
-    CLUSTERED COLUMNSTORE INDEX   
+    CLUSTERED COLUMNSTORE INDEX
   )  
 ;  
 ```  
@@ -415,8 +451,8 @@ WITH
 ### <a name="RoundRobin"></a> E. 建立 ROUND_ROBIN 資料表  
  以下範例會建立一個具有三個資料行且沒有資料分割的 ROUND_ROBIN 資料表。 資料會分散到所有散發。 資料表是使用 CLUSTERED COLUMNSTORE INDEX 所建立的，可提供比堆積或資料列存放區叢集索引更好的效能和資料壓縮。  
   
-```  
-CREATE TABLE myTable   
+```sql
+CREATE TABLE myTable
   (  
     id int NOT NULL,  
     lastName varchar(20),  
@@ -425,11 +461,12 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> F. 建立雜湊分散式資料表  
+### <a name="HashDistributed"></a> F. 建立雜湊分散式資料表
+
  以下範例會建立和上一個範例相同的資料表。 但是，針對這個資料表，資料列會被散發 (在 `id` 資料行上)，而不是像 ROUND_ROBIN 資料表一樣隨機分散。 資料表是使用 CLUSTERED COLUMNSTORE INDEX 所建立的，可提供比堆積或資料列存放區叢集索引更好的效能和資料壓縮。  
   
-```  
-CREATE TABLE myTable   
+```sql
+CREATE TABLE myTable
   (  
     id int NOT NULL,  
     lastName varchar(20),  
@@ -445,8 +482,8 @@ WITH
 ### <a name="Replicated"></a> G. 建立複寫資料表  
  以下範例會建立和上一個範例類似的複寫資料表。 複寫資料表會完整複製到每個計算節點。 當每個計算節點上都有此複本時，就可以在查詢時減少資料移動。 此範例使用叢集索引建立，提供比堆積更佳的資料壓縮。 堆積可能未包含足夠的資料列以達成良好叢集資料行存放區索引壓縮。  
   
-```  
-CREATE TABLE myTable   
+```sql
+CREATE TABLE myTable
   (  
     id int NOT NULL,  
     lastName varchar(20),  
@@ -454,7 +491,7 @@ CREATE TABLE myTable
   )  
 WITH  
   (   
-    DISTRIBUTION = REPLICATE,   
+    DISTRIBUTION = REPLICATE,
     CLUSTERED INDEX (lastName)  
   );  
 ```  
@@ -462,65 +499,68 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>資料表資料分割範例
 
-###  <a name="PartitionedTable"></a> H. 建立資料分割資料表  
+###  <a name="PartitionedTable"></a> H. 建立資料分割資料表
+
  以下範例會建立如範例 A 中所示的相同資料表，並在 `id` 資料行中加上 RANGE LEFT 資料分割。 它會指定四個資料分割界限值，結果會產生五個資料分割。  
   
-```  
-CREATE TABLE myTable   
+```sql
+CREATE TABLE myTable
   (  
     id int NOT NULL,  
     lastName varchar(20),  
     zipCode int)  
-WITH   
-  (   
+WITH
+  (
   
     PARTITION ( id RANGE LEFT FOR VALUES (10, 20, 30, 40 )),  
-    CLUSTERED COLUMNSTORE INDEX      
+    CLUSTERED COLUMNSTORE INDEX
   )  
 ;  
 ```  
   
  在這個範例中，資料將排序到下列資料分割中：  
   
--   資料分割 1：col <= 10   
--   分割區 2：10 < col <= 20   
--   分割區 3：20 < col <= 30   
--   分割區 4：30 < col <= 40   
--   分割區 5：40 < col  
+- 資料分割 1：col <= 10
+- 分割區 2：10 < col <= 20
+- 分割區 3：20 < col <= 30
+- 分割區 4：30 < col <= 40
+- 分割區 5：40 < col  
   
  如果這個相同的資料表分割為 RANGE RIGHT，而不是 RANGE LEFT (預設)，資料將排序到下列資料分割：  
   
--   資料分割 1：col < 10  
--   分割區 2：10 <= col < 20   
--   分割區 3：20 <= col < 30    
--   分割區 4：30 <= col < 40   
--   分割區 5：40 <= col  
+- 資料分割 1：col < 10  
+- 分割區 2：10 <= col < 20
+- 分割區 3：20 <= col < 30
+- 分割區 4：30 <= col < 40
+- 分割區 5：40 <= col  
   
-### <a name="OnePartition"></a> I. 建立具有一個資料分割的資料分割資料表  
+### <a name="OnePartition"></a> I. 建立具有一個資料分割的資料分割資料表
+
  以下範例會建立具有一個資料分割的資料分割資料表。 不會指定任何界限值，從而產生單一資料分割。  
   
-```  
+```sql
 CREATE TABLE myTable (  
     id int NOT NULL,  
     lastName varchar(20),  
     zipCode int)  
-WITH   
-    (   
+WITH
+    (
       PARTITION ( id RANGE LEFT FOR VALUES ( )),  
       CLUSTERED COLUMNSTORE INDEX  
     )  
 ;  
 ```  
   
-### <a name="DatePartition"></a> J. 建立具有日期資料分割的資料表  
+### <a name="DatePartition"></a> J. 建立具有日期資料分割的資料表
+
  以下範例會建立一個名為 `myTable` 新資料表，並在 `date` 資料行上具有資料分割。 透過使用 RANGE RIGHT 和日期作為界限值，它會在每個資料分割中放置一個月的資料。  
   
-```  
+```sql
 CREATE TABLE myTable (  
-    l_orderkey      bigint,       
-    l_partkey       bigint,                                             
-    l_suppkey       bigint,                                           
-    l_linenumber    bigint,        
+    l_orderkey      bigint,
+    l_partkey       bigint,
+    l_suppkey       bigint,
+    l_linenumber    bigint,
     l_quantity      decimal(15,2),  
     l_extendedprice decimal(15,2),  
     l_discount      decimal(15,2),  
@@ -533,11 +573,11 @@ CREATE TABLE myTable (
     l_shipinstruct  char(25),  
     l_shipmode      char(10),  
     l_comment       varchar(44))  
-WITH   
-  (   
+WITH
+  (
     DISTRIBUTION = HASH (l_orderkey),  
     CLUSTERED COLUMNSTORE INDEX,  
-    PARTITION ( l_shipdate  RANGE RIGHT FOR VALUES   
+    PARTITION ( l_shipdate  RANGE RIGHT FOR VALUES
       (  
         '1992-01-01','1992-02-01','1992-03-01','1992-04-01','1992-05-01',
         '1992-06-01','1992-07-01','1992-08-01','1992-09-01','1992-10-01',
@@ -551,8 +591,8 @@ WITH
   );  
 ```  
   
-<a name="SeeAlso"></a>    
-## <a name="see-also"></a>另請參閱 
+<a name="SeeAlso"></a>
+## <a name="see-also"></a>另請參閱
  
  [CREATE TABLE AS SELECT &#40;Azure SQL 資料倉儲&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
  [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   

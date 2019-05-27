@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Visio shapes, dependency network
@@ -19,12 +18,12 @@ ms.assetid: aac732a8-5262-4649-b7d7-3ccf6f9cfa8b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f8d69e97aa542d89291d81d60177e520e6a007b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: db069b243a0d06c142651ab4dcadd68e1e06657f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732174"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081973"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>相依性網路圖表逐步解說 (資料採礦增益集)
   許多不同類型的資料採礦模型都會使用網路圖形做為探索資料關聯性的方式。 您可以匯入這些模型使用 Visio**相依性網路**圖形，然後繼續自訂並增強配置。 **適用於 Visio 的資料採礦圖形**包含下列自訂控制項，用於處理相依性網路圖表：  

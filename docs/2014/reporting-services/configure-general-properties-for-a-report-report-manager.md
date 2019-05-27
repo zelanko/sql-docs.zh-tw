@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], properties
@@ -14,12 +13,12 @@ ms.assetid: 10b941b2-28e6-4408-9ee4-acebc63c8496
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 00980c22fc5a5d0b1c3f05352383953d69ae9f74
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cd0371497067f754166c33fb18022fe058cb88e4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266105"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109744"
 ---
 # <a name="configure-general-properties-for-a-report-report-manager"></a>設定報表的一般屬性 (報表管理員)
     

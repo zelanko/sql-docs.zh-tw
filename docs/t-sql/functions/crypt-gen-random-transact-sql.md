@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CRYPT_GEN_RANDOM function
 ms.assetid: b74bd9d4-758e-4b94-89a0-76dcda6d8c42
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 7fa0beb2e7b920e24e77ce9fbb498f7386f57847
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c386191c9e6dc9d8cf1836381e50f3a9d607c25
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850046"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944581"
 ---
 # <a name="cryptgenrandom-transact-sql"></a>CRYPT_GEN_RANDOM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
 ## <a name="returned-types"></a>傳回的類型  
 **varbinary(8000)**
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 這個函數是公用的，而且不需要任何特殊權限。
   
 ## <a name="examples"></a>範例  

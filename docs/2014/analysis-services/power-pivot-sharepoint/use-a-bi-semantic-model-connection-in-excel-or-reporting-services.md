@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1356eeaabf8de5d406e7fbc11d86cbb043f64be2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9a8e2b976fca00293d93cbf1e9987e115631bd81
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749228"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070925"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>在 Excel 或 Reporting Services 使用 BI 語意模型連接
   本主題說明如何使用透過其他主題的指示所建立的 BI 語意模型連接。 如果您尚未建立 BI 語意模型，請參閱[建立 PowerPivot 活頁簿的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)並[建立 BI 語意模型連接到表格式模型資料庫](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  

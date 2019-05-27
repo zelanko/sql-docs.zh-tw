@@ -21,14 +21,18 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e6238c07e4da7aa9b19a5264282a1c7c2733ecad
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a6be73e7253bc0be8d8dde9766f9fcb8be0a2dfa
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277277"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725755"
 ---
 # <a name="deploy-packages-with-ssis"></a>使用 SSIS 部署封裝
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供數個工具，可讓您輕鬆地將套件部署到另一部電腦。 部署工具也可以用來管理任何相依性，例如封裝所需的組態和檔案。 在這個教學課程中，您會學到如何使用這些工具，將封裝及其相依性安裝到目標電腦上。    
     
 首先，您會執行一些部署的準備工作。 您會在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立一個新的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 專案，並且將現有的封裝和資料檔加入至該專案中。 您不需要從頭開始建立新的封裝，而是使用針對這個教學課程所建立的已完成的封裝。 您在這個教學課程中並不會修改封裝的功能，不過，在您將封裝加入至專案之後，若能在 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中開啟封裝並檢閱各個封裝的內容，可能會很有幫助。 因為您可以藉由檢查封裝，而了解封裝的相依性 (例如記錄檔) 以及封裝的其他有趣功能。    

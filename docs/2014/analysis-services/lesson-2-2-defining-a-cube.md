@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 8aa4ac2d-857f-4048-baa0-0f314e207cf6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 47e1840318adf5e2b3638dd412de50144f7b2372
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 167121188939bcf82ed359ac3f8cf7e3aae47635
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729404"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079063"
 ---
 # <a name="defining-a-cube"></a>定義 Cube
   「Cube 精靈」可協助您定義 Cube 的量值群組和維度。 在下列工作中，您將使用「Cube 精靈」來建立 Cube。  

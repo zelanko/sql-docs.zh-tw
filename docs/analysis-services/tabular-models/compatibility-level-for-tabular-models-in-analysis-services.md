@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 中表格式模型的相容性層級 |Microsoft Docs
-ms.date: 05/14/2019
+ms.date: 05/23/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 45ea2e048a7ea7ae7d041614d62a280ee3698131
-ms.sourcegitcommit: 4cb96c291529e9bdf0a95fb3610b350583eb36d1
+ms.openlocfilehash: d2176b88f01808e1b84f409cb1f1c117774a220c
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65709118"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175130"
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Analysis Services 表格式模型的相容性層級
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -60,8 +60,11 @@ ms.locfileid: "65709118"
   
 ## <a name="check-supported-compatibility-level-for-a-server-in-ssms"></a>在 SSMS 中檢查伺服器支援的相容性層級  
  在 SSMS 中，以滑鼠右鍵按一下伺服器名稱 >**屬性** > **支援的相容性層級**。  
-  
- 此屬性指定的資料庫，將會在伺服器上執行的最高的相容性層級。 支援的相容性層級是唯讀且無法變更。  
+
+ 此屬性指定的資料庫，將會在伺服器上執行的最高的相容性層級。 支援的相容性層級是唯讀且無法變更。
+ 
+> [!NOTE]  
+>  在 SSMS 中，當連線到 SQL Server Analysis Services 伺服器、 Azure Analysis Services 伺服器或 Power BI Premium 工作區中，支援的相容性層級屬性會顯示 1200年。 這是已知的問題，並且會解決在即將推出的 SSMS 中更新。 當問題解決之後，此屬性會顯示最高支援的相容性層級。 
   
 ## <a name="see-also"></a>另請參閱  
  [多維度資料庫的相容性層級](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   

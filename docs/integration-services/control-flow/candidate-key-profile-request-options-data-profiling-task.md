@@ -13,14 +13,18 @@ ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db7471411d629dfb55de9f074a31e68d34e52bd3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e8ed8f3cdd8232cdf8fd66be1dce021f84d2e492
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276186"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727936"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>候選索引鍵設定檔要求選項 (資料分析工作)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [候選索引鍵設定檔要求] 設定選項。 候選索引鍵設定檔會報告資料行或資料行集合是否為選取之資料表的索引鍵或近似索引鍵。 這個設定檔也可協助您識別資料中的問題，例如潛在索引鍵資料行中重複的值。  
   
 > [!NOTE]  
@@ -104,7 +108,7 @@ ms.locfileid: "58276186"
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|指定比較是否區分大寫與小寫字母。 如果設定此選項，則字串比較會忽略大小寫。 例如，「ABC」與「abc」視為一樣。|  
-|**IgnoreNonSpace**|指定比較是否區分空格字元與變音。 如果設定此選項，則比較會忽略變音符號。 例如，"å" 等於 "a"。|  
+|**IgnoreNonSpace**|指定比較是否區分空格字元與變音。 如果設定此選項，則比較會忽略變音符號。 例如，"Ã¥" 等於 "a"。|  
 |**IgnoreKanaType**|指定比較是否區分兩類日文的假名字元：平假名與片假名。 如果設定此選項，則字串比較會忽略假名類型。|  
 |**IgnoreWidth**|指定比較是否區分單一位元組字元和表示為雙位元組字元的相同字元。 如果設定此選項，則字串比較會將同一字元的單一位元組表示法和雙位元組表示法視為一樣。|  
   

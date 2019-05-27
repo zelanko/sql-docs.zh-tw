@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f2dd3739d481162e7685b7021a120dd5d48e844a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e2b54bbbd6b989890c1d31a545c95117c4b6cbe2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266398"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109710"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>在資料警示設計工具中建立資料警示
   您可在 [資料警示設計工具] 中建立資料警示定義。 儲存警示定義之後，可以在 [資料警示設計工具] 中再次開啟、編輯，然後再次儲存警示定義。 如需編輯警示定義的相關資訊，請參閱 [在資料警示管理員中管理我的資料警示](manage-my-data-alerts-in-data-alert-manager.md) 和 [在警示設計工具中編輯資料警示](edit-a-data-alert-in-alert-designer.md)。  

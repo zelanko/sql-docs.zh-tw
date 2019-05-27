@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7904e42d9ffd82d2c8a5ec7f5c9226d01c5059ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 81e99fc17cb8f369967ff4c26699e67f0ed91d33
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749119"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070937"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>無法重新整理活頁簿中資料連接的資料。 請再試一次或連絡系統管理員。 下列連接無法重新整理：PowerPivot 資料
   如果是包含 PowerPivot 資料的 Excel 活頁簿，Excel Services 會在提交連接要求至 PowerPivot 伺服器而且該要求失敗時，傳回這個錯誤。  
@@ -33,7 +32,7 @@ ms.locfileid: "62749119"
 ## <a name="explanation-and-resolution"></a>說明與解決方法  
  Excel Services 無法連接或載入 PowerPivot 資料。 發生此錯誤的條件包括：  
   
- **案例 1:服務未啟動**  
+ **案例 1：服務未啟動**  
   
  未啟動 SQL Server Analysis Services (PowerPivot) 執行個體。 過期的密碼使伺服器停止執行。 如需變更密碼的詳細資訊，請參閱[設定 PowerPivot 服務帳戶](configure-power-pivot-service-accounts.md)並[啟動或停止 PowerPivot for SharePoint Server](start-or-stop-a-power-pivot-for-sharepoint-server.md)。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "62749119"
   
  執行 PowerPivot for SharePoint 的伺服器會自動取得更新的 OLE DB 資料提供者。 其他伺服器，例如執行 Excel Services 獨立執行個體但在相同電腦上並沒有 PowerPivot for SharePoint 的應用程式伺服器，則必須先安裝修補程式，以使用較新版的用戶端程式庫。 如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)。  
   
- **案例 3:網域控制站是無法使用**  
+ **案例 3：網域控制站是無法使用**  
   
  可能是無法使用網域控制站驗證使用者識別所致。 對 Windows Token Service 的宣告需要網域控制站，才能針對每個連接驗證 SharePoint 使用者。 對 Windows Token Service 的宣告無法使用快取認證。 它會針對每一個連接來驗證使用者識別。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "62749119"
   
  如果您的目標是在離線狀態下使用 PowerPivot for SharePoint，在電腦上安裝網域控制站相當實用。 如需如何離線使用 PowerPivot 的詳細的指示，請參閱部落格文章，以 「 採取您在網路的 PowerPivot 伺服器 」 [ http://www.powerpivotgeek.com ](https://go.microsoft.com/fwlink/?LinkId=184241)。  
   
- **案例 4:伺服器不穩定**  
+ **案例 4：伺服器不穩定**  
   
  可能有一項或多項服務處於不一致的狀態。 在某些情況下，執行 IISRESET 即可解決問題。  
   

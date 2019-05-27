@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.dependencynetwork.f1
@@ -13,12 +12,12 @@ ms.assetid: e58ce1b7-20d6-42cb-ade5-916da8471e09
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f907a03df66970d69fe4c6b0379d735af987102
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 819a69ad9c1b1415726d816e2cbc1faa92bd6cd1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732194"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081934"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>相依性網路索引標籤 (採礦模型檢視器)
   [相依性網路] 索引標籤會提供採礦模型所包含之所有屬性的圖形檢視，並顯示這些屬性彼此相關的情況。  

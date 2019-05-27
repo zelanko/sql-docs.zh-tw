@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9c69792d-d7c4-453b-ae2f-6d2d071d8606
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ae7f72240148291504654fffa304ebda252178ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 27942be9c32d4537f729adbd69df1c64a9c9ff6f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266064"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109863"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>檢查更新或關閉更新 (報表產生器及 SSRS)
   每當您開啟報表時，報表產生器都會檢查報表伺服器或與報表伺服器整合的 SharePoint 網站上是否已經更新該報表中已發行的報表組件執行個體。 它也會檢查報表組件的相依項目 (如資料集和參數) 是否有變更。 如果網站或伺服器上已經更新任何報表組件或其相依性，報表中的資訊列會顯示更新的組件數。 您可以選擇檢視並接受或拒絕更新，或是解除資訊列。  

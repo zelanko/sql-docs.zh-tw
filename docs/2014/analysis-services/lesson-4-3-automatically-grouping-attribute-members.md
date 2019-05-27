@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 029d4bdb21adfccbae5ad692669ab5d42964bfc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c521a3faf0c11cfab7bab337226de647e27cd060
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729122"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078649"
 ---
 # <a name="automatically-grouping-attribute-members"></a>自動分組屬性成員
   當您瀏覽 Cube 時，通常會按另一個屬性階層的成員建立一個屬性階層成員的維度。 例如，您可以按縣 (市)、按購買的產品或按性別將客戶銷售加以分組。 不過，對於特定類型的屬性，讓 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 依據屬性階層內成員的散發情形自動建立屬性成員的群組，很有幫助。 例如，您可以讓 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 為客戶建立年收入值的群組。 如此一來，瀏覽這個屬性階層的使用者會看到群組的名稱和值而不是成員本身。 這樣可限制使用者看到的層級數，對於分析更有幫助。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10153"
@@ -14,12 +13,12 @@ ms.assetid: 3a0bb42a-af1b-4228-bc9d-f9a02bb3b987
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2fdc0a6ee75b2d08b06d440a4d9dd6da48a6b6b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0a3cbe076564d1ce24cbe606485462cbfe012407
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266361"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109893"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>導出數列屬性對話方塊、標記 (報表產生器及 SSRS)
   選取 **[導出數列屬性]** 對話方塊上的 **[標記]** 來定義如何在每個數列的資料點上顯示標記。 標記僅適用於某些圖表類型。 下列圖表類型支援標記：區域中，列、 資料行、 極座標圖、 線條和散佈圖。 如需圖表功能的詳細資訊，請參閱[圖表類型 &#40;報表產生器及 SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md)。  

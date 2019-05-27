@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
@@ -14,12 +13,12 @@ ms.assetid: 151b899b-c27a-4a09-bcf5-5c9f0ec24168
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 18889a1dfded5f8653446c02a637502a75efd659
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b7f41394c2adb8cbaaee2011e52ba6155a24e2e2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733667"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082685"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>檢視或變更演算法參數
   您可以變更演算法所提供的參數，您會使用該演算法來建立資料採礦模型，以自訂模型的結果。  

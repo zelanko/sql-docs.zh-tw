@@ -5,16 +5,16 @@ ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services, sql-server
-ms.prod_service: reporting-services-native, reporting-services-sharepoint
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 7916d3b2afe514d576ba7ec99cd1a7edab244278
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: ff8293e5fa891ddcf0c5ab980e8c63799fbce9ce
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503893"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937936"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>使用 Microsoft 商業智慧 (BI) 工具進行分析和報告
 

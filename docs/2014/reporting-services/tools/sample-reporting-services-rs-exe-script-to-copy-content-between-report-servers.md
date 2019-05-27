@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 07/27/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bbb093ae1fdb2534f3de0f627d8041ecee1bb18f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 0f2731a89364dcf51f617c5490c0e46a16977ba2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962114"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099755"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>在報表伺服器之間移轉內容的範例 Reporting Services rs.exe 指令碼
   本主題包括並描述範例 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] RSS 指令碼，該指令碼會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server to another report server, using the **RS.exe** utility. 不論是原生或 SharePoint 模式，RS.exe 都會和 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]一起安裝。 這個指令碼會在伺服器之間複製 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 項目，例如報表和訂閱。 這個指令碼同時支援 SharePoint 模式和原生模式報表伺服器。  
@@ -101,7 +100,7 @@ ms.locfileid: "59962114"
 |資料夾|是|是|指令碼將不會覆寫目標伺服器上的現有項目。 如果目標伺服器上已存在相同名稱的項目，您將會看見類似下面的錯誤訊息：<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
 |報表|是|是|指令碼將不會覆寫目標伺服器上的現有項目。 如果目標伺服器上已存在相同名稱的項目，您將會看見類似下面的錯誤訊息：<br /><br /> `Migrating Report: /Reports/testThe item '/Reports/test' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports/test' already exists.`|  
 |參數|是|是||  
-|訂閱|是|是||  
+|Subscriptions|是|是||  
 |記錄設定|是|是|雖然記錄設定會移轉，但是記錄詳細資料「不會」移轉。|  
 |處理選項|是|是||  
 |快取重新整理選項|是|是|相依設定會隨目錄項目一起移轉。 以下範例將示範指令碼移轉報表 (.rdl) 以及相關的設定 (例如快取重新整理選項)：<br /><br /> 移轉報表 TitleOnly.rdl 的參數: 找到 0 個項目。<br /><br /> 移轉報表 TitleOnly.rdl 的訂閱：找到 1 個項目。<br /><br /> 移轉訂用帳戶儲存在\\\server\public\savedreports 為 titleonly 的訂閱...SUCCESS<br /><br /> 移轉報表 TitleOnly.rdl 的記錄設定...SUCCESS<br /><br /> 移轉報表 TitleOnly.rdl 的處理選項...找到 0 個項目。<br /><br /> 移轉報表 TitleOnly.rdl 的快取重新整理選項...SUCCESS<br /><br /> 移轉報表 TitleOnly.rdl 的快取重新整理計畫：找到 1 個項目。<br /><br /> 移轉的快取重新整理計劃 titleonly_refresh735amM2F...SUCCESS|  
@@ -116,7 +115,7 @@ ms.locfileid: "59962114"
   
 -   **SharePoint 模式的必要權限：** ViewListItems  
   
-|項目或資源|Source|目標|  
+|項目或資源|`Source`|目標|  
 |----------------------|------------|------------|  
 |目錄項目|<xref:ReportService2010.ReportingService2010.ListChildren%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetProperties%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemDataSources%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemReferences%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetDataSourceContents%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemLink%2A>|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A><br /><br /> <xref:ReportService2010.ReportingService2010.SetItemDataSources%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemReferences%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateDataSource%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateLinkedItem%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateFolder%2A>|  
 |角色|<xref:ReportService2010.ReportingService2010.ListRoles%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetRoleProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateRole%2A>|  

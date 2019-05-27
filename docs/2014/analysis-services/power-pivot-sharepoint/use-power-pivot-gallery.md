@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 91cc8740dfaeddcf489f3274b6766cdb803b1321
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4a36ad34a7f8636d5d13c8d914f8b90965ead65c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749197"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070876"
 ---
 # <a name="use-powerpivot-gallery"></a>使用 PowerPivot 圖庫
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫是一種特殊用途的 SharePoint 文件庫，針對包含 PowerPivot 資料的已發行 Excel 活頁簿和 Reporting Services 報表，提供豐富的預覽與文件管理功能。  

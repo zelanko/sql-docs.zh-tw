@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 03d108e015b831f44c84747b48afd110bf3fe2f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 73539ddcf9162cbedabfc0bad82da1fd9788d241
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733583"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083525"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>時間序列模型的採礦模型內容 (Analysis Services - 資料採礦)
   所有採礦模型都會使用相同的結構來儲存其內容。 這個結構是根據資料採礦內容結構描述資料列集所定義。 不過，在該標準結構內，包含資訊的節點會以不同的方式排列，以便代表各種樹狀結構。 本主題描述如何針對以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法為基礎的採礦模型組織節點，以及每個節點的意義。  
@@ -336,7 +335,7 @@ WHERE NODE_TYPE = 27
 |Forecasting|R750 Europe:Quantity|TA00000006|27|ARIMA (2,1,1) X (1,1,5)(6)|  
 |Forecasting|T1000 Europe:Quantity|TA00000009|27|ARIMA (1,0,1)|  
 |Forecasting|T1000 North America:Quantity|TA0000000a|27|ARIMA (1,1,1)|  
-|Forecasting|T1'000 太平洋： 數量 |TA0000000b | 27 |ARIMA (1,0,3)|  
+|Forecasting|T1`000 Pacific:Quantity|TA0000000b|27|ARIMA (1,0,3)|  
   
  根據這些結果 (您也可以使用 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](../microsoft-generic-content-tree-viewer-data-mining.md) 來瀏覽)，您可以立即判斷出哪些數列是完全線性、哪些具有多個週期結構，以及發現的週期性為何。  
   

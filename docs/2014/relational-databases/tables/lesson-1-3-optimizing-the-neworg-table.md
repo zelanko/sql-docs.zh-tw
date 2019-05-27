@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - optimizing tables
@@ -13,12 +12,12 @@ ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a031466e35fef90104ab81fec17010725f8f5c0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62761736"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110066"
 ---
 # <a name="optimizing-the-neworg-table"></a>最佳化 NewOrg 資料表
   **NewOrd**中所建立的資料表[使用現有的階層式資料填入資料表](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)工作包含所有員工資訊，並使用代表階層結構`hierarchyid`資料類型。 此工作會加入新索引以支援在 `hierarchyid` 資料行上進行搜尋。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
@@ -15,12 +14,12 @@ ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 58764334a6ee1902a09941e9fc9bb9723e517cdf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747950"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070005"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>排程資料重新整理 (PowerPivot for SharePoint)
   您可以排程資料重新整理，以取得已發行到 SharePoint 網站之 Excel 活頁簿內對 PowerPivot 資料的自動更新。  

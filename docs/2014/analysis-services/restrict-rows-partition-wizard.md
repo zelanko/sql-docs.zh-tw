@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.typefilterexpression.f1
@@ -13,12 +12,12 @@ ms.assetid: eec8da8f-eab4-4ac4-a81d-995c814f88ca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b86cfeedd76af51b5f9d8cc4633c73ed9cc17ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 59bff3eac690b7352b75d02bd7b266dfa8f303f8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748230"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070206"
 ---
 # <a name="restrict-rows-partition-wizard"></a>限制資料列 (資料分割精靈)
   使用 [限制資料列] 頁面，即可限制從指定之資料表中擷取且將彙總並納入資料分割中的資料列。  
@@ -29,7 +28,7 @@ ms.locfileid: "62748230"
 > [!CAUTION]  
 >  如果在其他分割區所使用的 [指定來源資訊] 頁面上，指定了 [可用的資料表] 中的某資料表，您就必須在 [限制資料列] 頁面中提供查詢，或者接受在 Cube 中可能會有重複資料的風險。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **指定查詢來限制資料列**  
  選取即可在 [查詢] 方塊中，輸入限制資料列的查詢。  
   

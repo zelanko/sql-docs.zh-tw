@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designtable.f1
@@ -13,12 +12,12 @@ ms.assetid: c64c659b-2926-4773-8cbb-0d8d22b640f3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 44b5a7950517990f7e2b1ef2afb2d17b5c4340dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 056e96963c9e8f6450861fb6a54e496b406d0daa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164593"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109275"
 ---
 # <a name="design-the-table-report-wizard"></a>設計資料表 (報表精靈)
   使用報表精靈的這個頁面，即可選取要放入報表的欄位。  

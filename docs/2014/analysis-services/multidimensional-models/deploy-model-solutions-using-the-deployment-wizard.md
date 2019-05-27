@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services Deployment Wizard
@@ -16,12 +15,12 @@ ms.assetid: ff711e8e-971c-43ba-b479-effc034af4a4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a0136631904a9f4bf8a0cdb7c22e7c9241ba3aff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e18b1786201be9ba671bc08fe7b24ba2207469e9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726264"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075382"
 ---
 # <a name="deploy-model-solutions-using-the-deployment-wizard"></a>Deploy Model Solutions Using the Deployment Wizard
   「 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈」使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案產生的 XML 輸出檔做為輸入檔。 這些輸入檔很容易進行修改，以自訂 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的部署。 產生的部署指令碼可以立即執行，或儲存供稍後進行部署使用。  

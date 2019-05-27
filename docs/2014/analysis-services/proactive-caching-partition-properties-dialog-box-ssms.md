@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.partitionproperties.proactivecaching.f1
@@ -13,12 +12,12 @@ ms.assetid: ecba72a3-703f-4ede-9d85-9a3318a749e5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 67ebcc8bcf5c3219d259e4b29eb5c2c737c11df1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cb486ec383ab6fa1684bd9d0e9b8f6bc67631eee
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748840"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070707"
 ---
 # <a name="proactive-caching-partition-properties-dialog-box-ssms"></a>主動式快取 (資料分割屬性對話方塊) (SSMS)
   在 SQL Server Management Studio 中，使用 **[資料分割屬性]** 對話方塊的 **[主動式快取]** 頁面，即可針對 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中的 Cube，設定量值群組中之資料分割的儲存與主動式快取屬性。  

@@ -1,5 +1,5 @@
 ---
-title: 在 Linux 上安裝 SQL Server 機器語言延伸模組 (Java) |Microsoft Docs
+title: 在 Linux 上安裝 SQL Server 語言延伸模組 (Java) |Microsoft Docs
 description: 在 Red Hat、 Ubuntu 與 SUSE，了解如何安裝 SQL Server 語言擴充功能 (Java)。
 author: dphansen
 ms.author: davidph
@@ -10,20 +10,20 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6d25739fb4f2ef104ba86c8e9124162e67fd8553
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: b694cde8784a1607c85ed9ab7dfcc4d770a6d938
+ms.sourcegitcommit: 3b266dc0fdf1431fdca6b2ad34ae5fd38abe9f69
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65995076"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186812"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>在 Linux 上安裝 SQL Server 2019 語言延伸模組 (Java)
 
-[SQL Server Machine Learning 服務](../advanced-analytics/what-is-sql-server-machine-learning.md)可開始在此預覽版本中的 SQL Server 2019 的 Linux 作業系統上執行。 請遵循這篇文章，若要安裝的 Java 語言擴充功能中的步驟。 
-
 語言擴充功能是 database engine 的附加元件。 雖然您可以[同時安裝 database engine 和語言擴充功能](#install-all)，它會安裝及設定 SQL Server database engine 第一次，以便您解決任何問題然後再加入更多元件的最佳作法。 
 
-Java 延伸套件位置是在 SQL Server Linux 來源存放庫中。 如果您已經設定資料庫引擎安裝的來源存放庫，您可以執行**mssql 伺服器擴充性-java**封裝使用相同的存放庫註冊的安裝命令。
+請遵循這篇文章，若要安裝的 Java 語言擴充功能中的步驟。
+
+Java 延伸模組的封裝位置是在 SQL Server Linux 來源存放庫中。 如果您已經設定資料庫引擎安裝的來源存放庫，您可以執行**mssql 伺服器擴充性-java**封裝使用相同的存放庫註冊的安裝命令。
 
 語言擴充功能也支援在 Linux 容器。 我們不會提供預先建置的容器具有語言擴充功能，但您可以從建立一個使用的 SQL Server 容器[可在 GitHub 上的範例範本](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)。
 
@@ -185,6 +185,8 @@ sudo zypper install mssql-server-extensibility-java
 
 6. 重新啟動`mssql-launchpadd`服務一次。
 
+7. 針對您想要使用的語言擴充功能，在每個資料庫，您需要註冊的外部語言[建立外部語言](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)。
+
 ## <a name="verify-installation"></a>確認安裝
 
 Java 功能整合不包含程式庫，但您可以執行`grep -r JRE_HOME /etc`確認建立 JAVA_HOME 環境變數。
@@ -195,7 +197,7 @@ Java 功能整合不包含程式庫，但您可以執行`grep -r JRE_HOME /etc`�
 
 ## <a name="full-install-of-sql-server-and-language-extensions"></a>SQL Server 和語言擴充功能的完整安裝
 
-您可以安裝並在程序中設定 database engine 和 Machine Learning 服務，藉由附加的 Java 套件和安裝 database engine 的命令的參數。
+您可以安裝並在程序中設定 database engine 和語言擴充功能，藉由附加的 Java 套件和安裝 database engine 的命令的參數。
 
 1. 提供命令列，其中包含資料庫引擎，再加上語言擴充功能。
 
@@ -235,7 +237,7 @@ Java 功能整合不包含程式庫，但您可以執行`grep -r JRE_HOME /etc`�
 
 #### <a name="download-site"></a>下載網站
 
-您可以從套件下載[ https://packages.microsoft.com/ ](https://packages.microsoft.com/)。 所有適用於 Java 的封裝都是共置於資料庫引擎套件。 
+您可以從套件下載[ https://packages.microsoft.com/ ](https://packages.microsoft.com/)。 所有適用於 Java 的套件會與資料庫引擎套件共置。 
 
 #### <a name="redhat7-paths"></a>RedHat/7 路徑
 

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - Z method
 ms.assetid: 9abc79c5-43c9-4cc2-b37f-d2ecdec7c234
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 0671ccc73643e365da6555bb1ea40df827c32bd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4fd1a39bef618b942e8a6cea6cbcac781a49521
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665186"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936174"
 ---
 # <a name="z-geography-data-type"></a>Z (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

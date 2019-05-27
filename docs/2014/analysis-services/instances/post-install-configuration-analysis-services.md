@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56430aacb7055f3d8ffa531d157ad3c4f65c0b4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6a339ee307ed7a10f2ff7d2b1ce51d2e2177ee37
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730106"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079660"
 ---
 # <a name="post-install-configuration-analysis-services"></a>後續安裝組態 (Analysis Services)
   安裝 Analysis Services 之後，還必須進一步設定才能讓伺服器可完整運作並可供一般使用。 本節將介紹完成安裝所需的這些額外設定工作。 視連接需求而定，您可能還必須設定驗證 (請參閱 [連接到 Analysis Services](connect-to-analysis-services.md))。  

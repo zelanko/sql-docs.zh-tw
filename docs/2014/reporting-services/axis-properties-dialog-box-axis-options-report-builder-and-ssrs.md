@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.axisproperties.axisoptions.f1
@@ -14,12 +13,12 @@ ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 553d1d4e2be366cc56ed37caad6a9db20850e856
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ff9f3281e47cf6dfdf8a189c653d0e061f4a761d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239340"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109954"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>軸屬性對話方塊、軸選項 (報表產生器及 SSRS)
   選取 **軸選項**上**水平**或是**垂直軸屬性**對話方塊來定義圖表之指定軸的外觀。 在舊版 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，圖表預設會顯示 X 軸上的所有標籤。 不過，在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 中，圖表會略過標籤，以便產生較清晰的圖表影像並避免標籤互相衝突。 如需詳細資訊，請參閱[格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  

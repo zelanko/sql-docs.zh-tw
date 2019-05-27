@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: fe13ce8b-9369-4126-928a-9426f9119424
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d3a4ec824c5681cdb5d76310ec67cd1b37ba6898
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b1fb1e718f8b2ab0257651ff47674d293a9e6a95
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62704707"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079879"
 ---
 # <a name="install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013"></a>安裝或解除安裝 PowerPivot for SharePoint 增益集 (SharePoint 2013)
   [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] 是應用程式伺服器元件及後端服務的集合，可以在 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器陣列中提供 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] 資料存取功能。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 增益集 (**spPowerpivot.msi**) 是用來安裝應用程式伺服器元件的安裝程式封裝。  

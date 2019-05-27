@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: fe4a56a4-5552-423c-85c1-895e2e212fee
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 815eff4ba68cb35a5f38b98514cc5359347a42e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bdbac1500063accf868d4b538b82ba9f3b5aebb0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237691"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109974"
 ---
 # <a name="atom-device-information-settings"></a>ATOM 裝置資訊設定
   Atom 轉譯延伸模組的裝置資訊設定支援提交 Atom 摘要名稱以及要使用的字元編碼。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - tuning databases [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 4abc0e10-96fd-4e46-93d6-d7ee03eec844
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad6b28f2e133abcc872186adc57fdd422687ddc5
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: bb3d7af1e6e9b54caddafc6c7327a4db2f730e32
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906248"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110206"
 ---
 # <a name="launching-database-engine-tuning-advisor"></a>啟動 Database Engine Tuning Advisor
   首先，請開啟 Database Engine Tuning Advisor 圖形化使用者介面 (GUI)。 在第一次使用時， **系統管理員** 固定伺服器角色的成員必須啟動 Database Engine Tuning Advisor 來初始化應用程式。 初始化之後， **db_owner** 固定資料庫角色的成員便可以利用 Database Engine Tuning Advisor 來微調他們擁有的資料庫。 如需初始化 Database Engine Tuning Advisor 的詳細資訊，請參閱 [啟動及使用 Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)。  

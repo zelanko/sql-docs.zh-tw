@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6196466246529521f356c193c3e8cc0ee688c197
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2f05edb30344b63781a89540ade8de4743bb715e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743374"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071849"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>設定及檢視 SharePoint 記錄檔與診斷記錄 (PowerPivot for SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器作業、事件與訊息都會記錄在 SharePoint 記錄檔中。 使用本主題的資訊來設定記錄層級及檢視記錄檔資訊。 您可以控制要記錄到檔案中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器事件。 您也可以控制所記錄之訊息的嚴重性。 如需詳細資訊，請參閱 <<c0> [ 設定使用量資料收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。</c0>  
@@ -117,7 +116,7 @@ ms.locfileid: "62743374"
 #### <a name="entries-for-powerpivot-services"></a>PowerPivot 服務的項目  
  下表描述很可能在 SharePoint 記錄檔中找到之 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器作業的項目。  
   
-|處理|區域|Category|層級|訊息|詳細資料|  
+|處理|區域|Category|層級|Message|詳細資料|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|[PowerPivot 服務]|[使用量]|「詳細資訊」|目前沒有要求統計資料，沒有要記錄的項目。|服務報表會在預先定義的間隔查詢回應統計資料，做為使用量資料集合系統的使用量事件。 此訊息表示沒有要報告的查詢統計資料。|  
 |w3wp.exe|[PowerPivot 服務]|Web 前端|「詳細資訊」|開始尋找資料來源的應用程式伺服器 =\<*路徑*>|當它收到連接要求時， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務會識別可用的 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 來處理要求。 如果伺服陣列中只有一個伺服器，在所有情況下本機伺服器都會接受要求。|  

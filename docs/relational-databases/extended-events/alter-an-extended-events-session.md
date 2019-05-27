@@ -1,7 +1,7 @@
 ---
 title: 更改擴充事件工作階段 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 07f79ea126998f5949d47dd8fb111d32b72841c6
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: cedb0addec5d6164b418b6bec0458de429dd6a82
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478023"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198204"
 ---
 # <a name="alter-an-extended-events-session"></a>更改擴充事件工作階段
 
@@ -47,14 +47,14 @@ ms.locfileid: "58478023"
   
 ## <a name="how-to-alter-an-extended-events-session-using-the-sql-server-extended-events-wizard"></a>如何使用 SQL Server 擴充事件精靈更改擴充事件工作階段  
   
--   在物件總管中，依序展開 **[管理]**、 **[擴充事件]** 和 **[工作階段]**。  
+-   在物件總管中，依序展開 **[管理]** 、 **[擴充事件]** 和 **[工作階段]** 。  
   
 -   以滑鼠右鍵按一下您要改變的工作階段，然後按一下 [屬性]。  
   
--   在 **[屬性]** 對話方塊中，進行適當的變更，然後按一下 **[確定]**。  
+-   在 **[屬性]** 對話方塊中，進行適當的變更，然後按一下 **[確定]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
- [使用查詢編輯器建立擴充事件工作階段](https://msdn.microsoft.com/library/cba0e02b-b201-4863-bf1b-9164e68e5fa8)  
+ [使用查詢編輯器建立擴充事件工作階段](quick-start-extended-events-in-sql-server.md)  
   
   

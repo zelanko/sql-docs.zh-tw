@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - slicer axis
@@ -14,12 +13,12 @@ ms.assetid: 85bcb26f-5971-4153-b334-61f8d8b475b5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8001fe4357bc7e17ce915f3d2d38c5e2e0f9cbb1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 53f48d8f23ef8809f9392b1a2c7ede65239e4985
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699499"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074032"
 ---
 # <a name="using-query-and-slicer-axes-in-a-simple-example-mdx"></a>在簡單的範例中使用查詢及 Slicer 軸 (MDX)
   本主題中的簡單範例說明指定和使用查詢及 Slicer 軸的基本知識。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - OrderBy property
@@ -18,12 +17,12 @@ ms.assetid: c42fbd58-244d-4e0a-b715-6f919cbc3ad9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 916663a7d667187acc6b881ec4ac3c68d406c987
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 05e75eb726d67e992a0a9320be8d23bbc547bedb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62701007"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076854"
 ---
 # <a name="define-the-ordering-for-a-dimension"></a>定義維度的排序方式
   將屬性排序方式增強功能加入至 Cube 或維度，即可指定如何排序屬性的成員。 您可以依名稱或屬性的索引鍵來排序成員，或是依名稱或另一個屬性 (根據屬性關聯性) 的索引鍵來排序成員。 依預設，會依名稱來排序成員。 這項增強功能會在維度中變更屬性的 `OrderBy` 和 `OrderByAttributeID` 屬性設定。  

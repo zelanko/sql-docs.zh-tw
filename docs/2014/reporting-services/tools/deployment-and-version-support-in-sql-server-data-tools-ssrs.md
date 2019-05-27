@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bfac4568659d03f62294bf6159604ce6230639d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c488316c1eaed822685577356e9df6f0cad9d174
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63218390"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100358"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>SQL Server 資料工具中的部署和版本支援 (SSRS)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 支援以下案例：  

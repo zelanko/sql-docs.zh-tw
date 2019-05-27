@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2aaf5cb8-294b-4031-94b3-fe605d7fc4c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 679658c7ffdc00a90cb485bb9f1892ddffde7775
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a62a05c8908391b9ce925ecfe08ae30540b8fa29
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731664"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081645"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>DirectQuery 部署案例 (SSAS 表格式)
   本主題提供 DirectQuery 模型設計和部署程序的逐步解說。 您可以設定 DirectQuery 只使用關聯式資料 (僅限 DirectQuery)，或者您可以將此模型設定為在使用快取資料與僅限關聯式資料之間切換 (混合模式)。 本主題說明這兩個模式的實作程序，並描述查詢結果中的可能差異 (視模型和安全性組態而定)。  

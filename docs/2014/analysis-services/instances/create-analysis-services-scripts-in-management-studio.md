@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services objects, scripts
@@ -15,12 +14,12 @@ ms.assetid: 4f1b965c-9ca6-427b-8f4d-0ce1eea7c0fe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d419a09c34998165f13fbc9e43c9b561602b69aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8e3cca216f7c2312b4e7b54f2236a5d1f7bafd9e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730209"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080105"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>在 Management Studio 中建立 Analysis Services 指令碼
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 包含指令碼產生功能、範本和編輯器，您可以使用它們來編寫 Analysis Services 物件和工作的指令碼。  

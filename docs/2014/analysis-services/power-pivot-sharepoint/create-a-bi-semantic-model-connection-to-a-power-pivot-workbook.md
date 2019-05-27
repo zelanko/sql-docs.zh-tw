@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ad60799fa8590609cabd2e1e1fdfd8d7493c282
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749574"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071640"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>建立與 PowerPivot 活頁簿的 BI 語意模型連接
   使用本主題中的資訊可設定 BI 語意模型連接，該連接會重新導向至相同伺服器陣列中的 PowerPivot 活頁簿。  

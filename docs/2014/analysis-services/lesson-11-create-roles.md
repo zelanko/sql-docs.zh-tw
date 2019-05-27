@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4eec5e4f93a085ab784135593c139410f5911e1e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ec4bad8ef036e8f19ce0a856f3d9c04bafd0e7c5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729621"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079273"
 ---
 # <a name="lesson-12-create-roles"></a>第 12 課：建立角色
   在這一課，您將建立角色。 角色會藉由僅限身為角色成員的 Windows 使用者存取的方式，提供模型資料庫物件和資料安全性。 每個角色定義單一權限：無、 讀取、 讀取和處理程序、 處理序或系統管理員。 您可以使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中的 [角色管理員] 對話方塊，在模型撰寫期間定義角色。 部署模型之後，您可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 管理角色。 如需詳細資訊，請參閱[角色 &#40;SSAS 表格式&#41;](tabular-models/roles-ssas-tabular.md)。  

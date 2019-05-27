@@ -13,14 +13,18 @@ ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b523b3653e7fff1ffba694c49056debaa6d64ec
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 078e7be919c9cefca45ac7676d5621bfb302f4eb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278087"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727336"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>值包含設定檔要求選項 (資料分析工作)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [值包含設定檔要求] 設定選項。 值包含設定檔會計算兩個資料行或資料行集合之間值的重疊。 因此，它也可以判斷資料行或資料行集合是否適合當做選取之資料表之間的外部索引鍵。 這個設定檔也可協助您識別資料中的問題，例如無效的值。 舉例來說，您使用了值包含設定檔來分析 Sales 資料表的 ProductID 資料行。 此設定檔發現該資料行包含在 Products 資料表之 ProductID 資料行中找不到的值。  
   
 > [!NOTE]  
@@ -114,7 +118,7 @@ ms.locfileid: "58278087"
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|指定比較是否區分大寫與小寫字母。 如果設定此選項，則字串比較會忽略大小寫。 例如，「ABC」與「abc」視為一樣。|  
-|**IgnoreNonSpace**|指定比較是否區分空格字元與變音。 如果設定此選項，則比較會忽略變音符號。 例如，"å" 等於 "a"。|  
+|**IgnoreNonSpace**|指定比較是否區分空格字元與變音。 如果設定此選項，則比較會忽略變音符號。 例如，"Ã¥" 等於 "a"。|  
 |**IgnoreKanaType**|指定比較是否區分兩類日文的假名字元：平假名與片假名。 如果設定此選項，則字串比較會忽略假名類型。|  
 |**IgnoreWidth**|指定比較是否區分單一位元組字元和表示為雙位元組字元的相同字元。 如果設定此選項，則字串比較會將同一字元的單一位元組表示法和雙位元組表示法視為一樣。|  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - default configuration [Reporting Services]
@@ -15,12 +14,12 @@ ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 656cf7489d4cc9d318a2ffce66bc1d0c8ff1d397
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ef049b4ded6408e651d5ec2c3db99c10bf7c27b6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63064645"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108770"
 ---
 # <a name="reporting-services-sharepoint-mode-installation-sharepoint-2010-and-sharepoint-2013"></a>Reporting Services SharePoint 模式安裝 (SharePoint 2010 和 SharePoint 2013)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在 SharePoint 模式是伺服器元件，可提供報表產生及傳遞，根據集合[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[msCoName](../../includes/msconame-md.md)]SharePoint 產品。  

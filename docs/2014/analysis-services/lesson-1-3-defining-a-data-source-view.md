@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ca6e9661c65098bed1175c7108b18a482b14a542
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730321"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079279"
 ---
 # <a name="defining-a-data-source-view"></a>定義資料來源檢視
   定義您在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案中使用的資料來源之後，下一個步驟通常是定義專案的資料來源檢視。 資料來源檢視是資料來源在專案中定義之指定資料表和檢視的中繼資料的單一統一檢視。 在資料來源檢視中儲存中繼資料可讓您在開發期間使用中繼資料，而不需要開啟與任何基礎資料來源的連接。 如需詳細資訊，請參閱 [多維度模型中的資料來源檢視](multidimensional-models/data-source-views-in-multidimensional-models.md)。  

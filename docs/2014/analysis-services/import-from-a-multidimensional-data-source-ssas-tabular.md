@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7f0793ea-a4c7-42e9-b722-2164a454ebca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eae0fe81f501ff83d81722ece541085b00ade44a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 666b7fdf5af10b6726a1e1d7a2aaafa075bf8777
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730694"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080560"
 ---
 # <a name="import-from-a-multidimensional-data-source-ssas-tabular"></a>從多維度資料來源匯入 (SSAS 表格式)
   您可以使用 Analysis Services Cube 資料庫做為表格式模型的資料來源。 您必須定義 MDX 查詢選取要匯入的資料，才可以從 Analysis Services Cube 匯入資料。  

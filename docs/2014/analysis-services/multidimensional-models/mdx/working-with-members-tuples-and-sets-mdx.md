@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], tuples
@@ -28,12 +27,12 @@ ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 570d812400a35a45d59f97901b9be698abc21863
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7a8532b20ae5b71a9ef2353893272c628b9a80b3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699129"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073675"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>使用成員、Tuple 和集合 (MDX)
   MDX 提供許多會傳回一或多個成員、Tuple 或集合的函數，或作用於成員、Tuple 或集合的函數。  

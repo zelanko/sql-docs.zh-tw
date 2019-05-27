@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Windows service, virtual directories
@@ -16,12 +15,12 @@ ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7f52194bca9b91e387f49e4fa082feb9fad2c68c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b086d067241606b61d733fc58c358195966a1345
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63144554"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108852"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>設定報表伺服器 URL (SSRS 組態管理員)
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，URL 是用來存取報表伺服器 Web 服務和報表管理員。 在您可以使用其中一個應用程式以前，您至少必須為此 Web 服務和報表管理員設定一個 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 將會針對在大多數部署方案下運作良好的這兩個應用程式 URL 提供預設值，其中包括與其他 Web 服務和應用程式並存的部署。  

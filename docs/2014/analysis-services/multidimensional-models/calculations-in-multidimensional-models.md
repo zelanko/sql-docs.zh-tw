@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - calculations [Analysis Services], creating
@@ -22,12 +21,12 @@ ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a132395bbd95997832e2a1df6948179cb2ffe8aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5b78f2d8fdc34743e4e74d1e27346651c7adc443
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726942"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076725"
 ---
 # <a name="calculations-in-multidimensional-models"></a>多維度模型中的計算
   使用 [Cube 設計師] 的 [計算] 索引標籤來建立導出成員、命名集，和其他多維度運算式 (MDX) 計算。  

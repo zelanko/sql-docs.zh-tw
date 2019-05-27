@@ -19,15 +19,15 @@ helpviewer_keywords:
 - displaying index keys
 - keys [SQL Server], index
 ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4107bfb27ad756d47a80257289cb05c62f1f99e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36471a1e20a150e39dedc866130d3373448573bf
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844030"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944501"
 ---
 # <a name="indexkeyproperty-transact-sql"></a>INDEXKEY_PROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

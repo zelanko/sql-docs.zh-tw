@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 44b0a20461df3214f605e68bbebb861cadf01849
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 48311ccaa22878fb5b17be75c3f12c64cb4a67e6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225306"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109055"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>將權限授與使用者及警示管理員
   使用者和警示系統管理員必須經過 SharePoint 權限的授與，才能建立、編輯、刪除及檢視資料警示。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料警示功能沒有特殊權限可供使用，您需使用內建的 SharePoint 權限。  

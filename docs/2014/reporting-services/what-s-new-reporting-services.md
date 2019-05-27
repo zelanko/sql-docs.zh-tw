@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [Reporting Services]
@@ -16,12 +15,12 @@ ms.assetid: bc909063-6b84-4b3a-80d2-e93fc04b4b9d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 22b0caaa33d25ec74b1f2e34a363461ddc364111
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 542caa127340e3f86295f4de8a41954feb4c7564
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62647343"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098622"
 ---
 # <a name="what39s-new-reporting-services"></a>什麼&#39;s 新 (Reporting Services)
   
