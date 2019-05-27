@@ -21,12 +21,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0cdd3d2a7a64ddc701a73a3b6c978bd9f0264e20
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.openlocfilehash: 6b17e6b799bf3ff35b441286fd1205ca5382b207
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877596"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836182"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文件集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,6 +38,8 @@ SQL Server 是 Microsoft 資料平台的核心。 SQL Server 是操作資料庫�
 ::: moniker range="= sql-server-2016"
 SQL Server 是 Microsoft 資料平台的核心。 SQL Server 是操作資料庫管理系統 (ODBMS) 的業界領導者。 本文件可協助您在 Windows 上安裝、設定及使用 SQL Server。 內容包括端對端範例、程式碼範例和視訊。 如需 SQL Server 語言主題，請參閱[語言參考](../t-sql/language-reference.md)。
 ::: moniker-end
+
+SQL Server 2014 及包括 SQL Server 2005 的較舊版本，可在[此處](#previous-versions-gm66)取得文件。
 
 <!-- Moniker assignments nicely designed so that exactly 1 of these next 3 little WhatsNew tables will be displayed
  at any one time, regardless of user's moniker choice.
@@ -137,6 +139,10 @@ SQL Server 是 Microsoft 資料平台的核心。 SQL Server 是操作資料庫�
 - [Wide World Importers 範例資料庫](https://docs.microsoft.com/sql/samples/wide-world-importers-what-is)
 - [SQL Server 2016 的 AdventureWorks 範例資料庫與指令碼](https://docs.microsoft.com/sql/samples/sql-samples-where-are) 
 - [GitHub 上的 SQL Server 範例](https://github.com/Microsoft/sql-server-samples)
+
+## <a name="previous-versions-gm66"></a> SQL Server 2014、2012、2008、2005
+
+[!INCLUDE[previous-versions](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

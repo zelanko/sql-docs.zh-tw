@@ -17,16 +17,16 @@ helpviewer_keywords:
 - indexes [SQL Server], viewing
 - indexes [SQL Server], properties
 ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b604dfaf700acf82b49934017121aa5749578ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 813b88f56d6017a9e20d8bce72925f9ee7ab552b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830096"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944464"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,10 +46,10 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  這是包含要提供的索引屬性資訊所屬之資料表或索引檢視之物件識別碼的運算式。 *object_ID* 為 **int**。  
   
  *index_or_statistics_name*  
- 這是包含傳回屬性資訊所屬之索引或統計資料名稱的運算式。 *index_or_statistics_name* 為 **nvarchar(128)**。  
+ 這是包含傳回屬性資訊所屬之索引或統計資料名稱的運算式。 *index_or_statistics_name* 為 **nvarchar(128)** 。  
   
  *property*  
- 這是包含要傳回之資料庫屬性名稱的運算式。 *property* 為 **varchar(128)**，並且可為下列其中一個值。  
+ 這是包含要傳回之資料庫屬性名稱的運算式。 *property* 為 **varchar(128)** ，並且可為下列其中一個值。  
   
 > [!NOTE]  
 >  除非另有說明，否則當 *property* 不是有效屬性的名稱、*object_ID* 不是有效的物件識別碼、*object_ID* 不是指定屬性所支援的物件類型，或呼叫者沒有檢視物件中繼資料的權限時，便會傳回 NULL。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3a44c98f-6750-48b9-90c7-82391b134c9d
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 6632aa6ebcf55234bc89a23f24edc7ff8ee11106
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d60e8cae564886109409eed2595a7ce1247b61a4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62773414"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089842"
 ---
 # <a name="server-properties-f1-help"></a>伺服器屬性 F1 說明
   此章節包含 SQL Server Management Studio 中 **[伺服器屬性]** 頁面的 F1 說明主題。  

@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - TRIM function
 ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bc2d3f4564438076f0f488b03368c335326ff02
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 7428ea1901f23e5357b12ec4adcc95beac57c06a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65560039"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946556"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 

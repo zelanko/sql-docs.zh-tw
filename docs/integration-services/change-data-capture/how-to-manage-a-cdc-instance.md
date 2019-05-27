@@ -11,19 +11,23 @@ ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7a7f15a409168c55e18da3585042715ac4aef898
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5fd3788cb31e7e3e6408cc7161f45ba008cf081c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270929"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728784"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   此程序描述如何使用 CDC 設計工具主控台，於執行階段管理 CDC 執行個體操作。  
   
 ### <a name="to-manage-cdc-instance-operations"></a>若要管理 CDC 執行個體操作  
   
-1.  從 **[開始]** 功能表選取 **[CDC 設計工具主控台]**。  
+1.  從 **[開始]** 功能表選取 **[CDC 設計工具主控台]** 。  
   
 2.  在左窗格中展開 **[異動資料擷取]** ，然後展開包含您要檢視之執行個體的服務。  
   
@@ -45,7 +49,7 @@ ms.locfileid: "58270929"
   
     -   **Oracle 記錄指令碼**：按一下 [Oracle 記錄指令碼] 可顯示 [Oracle 記錄指令碼] 對話方塊，其中包含 Oracle 補充記錄指令碼。 如需有關您可以在此對話方塊中執行之操作的詳細資訊，請參閱＜ [Oracle Supplemental Logging Script](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)＞。  
   
-         **注意**:當您執行補充記錄指令碼時，將會開啟 [執行指令碼的 Oracle 認證] 對話方塊，您可以在此提供有效的 Oracle 使用者名稱和密碼。 如需有關如何提供適當之 Oracle 認證的詳細資訊，請參閱＜ [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)＞。  
+         **注意**：當您執行補充記錄指令碼時，將會開啟 [執行指令碼的 Oracle 認證] 對話方塊，您可以在此提供有效的 Oracle 使用者名稱和密碼。 如需有關如何提供適當之 Oracle 認證的詳細資訊，請參閱＜ [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)＞。  
   
     -   **CDC 執行個體部署**：產生 CDC 執行個體的部署指令碼。 如需有關此對話方塊的詳細資訊，請參閱＜ [CDC Instance Deployment Script](../../integration-services/change-data-capture/cdc-instance-deployment-script.md)＞。  
   

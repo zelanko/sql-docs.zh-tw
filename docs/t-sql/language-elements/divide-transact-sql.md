@@ -17,16 +17,16 @@ helpviewer_keywords:
 - division [SQL Server]
 - divide operator (/)
 ms.assetid: 1d69893b-e5c3-441d-8dd8-0e5eb872ecfc
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25ce811a394ae46b955b5c53d03b1b4f62da6ae0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 7034cdc464d89c4ec2174037efe5ccf51f9a9751
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390864"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982405"
 ---
 # <a name="-division-transact-sql"></a>/ (除法) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

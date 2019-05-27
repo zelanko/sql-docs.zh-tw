@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services], mining structures
@@ -13,12 +12,12 @@ ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e183c1e25aa81b05c897674fc5c9f4a2dd8d0c5b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 033965a6152edaf3d62fcd8c29476651648c1697
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62718128"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085410"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>建立增益圖、收益圖或分類矩陣
   您可以使用五個基本步驟，為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料採礦模型建立精確度圖表：  

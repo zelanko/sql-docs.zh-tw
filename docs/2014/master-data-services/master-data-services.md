@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 79a6d9c2d3010043daddab14dcaae51e58914fbb
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 8185534f12c69e03cdb9dc711e9dc12690621d62
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65482770"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054064"
 ---
 # <a name="master-data-services"></a>Master Data Services
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) 是用於主要資料管理的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 方案。 主要資料管理 (MDM) 描述組織探索與定義非交易之資料清單所付出的心力，其目標在於編譯可維護的主要清單。 MDM 專案一般包含內部商業程序的評估與重組，以及 MDM 技術的實作。 成功的 MDM 方案結果是可以分析的可靠集中式資料，以進行更好的商業性決策。  

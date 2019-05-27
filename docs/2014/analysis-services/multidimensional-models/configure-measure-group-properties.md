@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - properties [Analysis Services], measure groups
@@ -13,12 +12,12 @@ ms.assetid: fa66bdb6-60b8-413c-ac2a-00e4d09f60a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1a87d594eb2837671a7fdc45bc48827a075440e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7571457847d8ffb0388608b7d634cc19261a609
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700518"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076664"
 ---
 # <a name="configure-measure-group-properties"></a>設定量值群組屬性
   量值群組有一些屬性可讓您定義量值群組的運作方式。  

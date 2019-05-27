@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - write-enabled partitions [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 54e2a0f5de93ee9f0d760adfd5a95551d19cc782
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3359e26ace467bbf8446aac6b68a0ef2716d09a4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62741380"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072899"
 ---
 # <a name="set-partition-writeback"></a>設定分割區回寫
   如果您啟用量值群組的寫入功能，使用者可以在瀏覽 Cube 資料時進行變更，系統會將變更儲存到另一個資料表 (稱為回寫資料表)，而不是在 Cube 資料或來源資料中儲存變更。 瀏覽可寫入分割區的使用者，會看到所有變更在分割區的回寫資料表中產生的結果。  

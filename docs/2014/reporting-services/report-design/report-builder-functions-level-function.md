@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a16e59709f3372a2460fa8847cdcc5c2c248bb2c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 35526e8928a98ccca2e2e61e88fb9361a6d00d6c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215408"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105242"
 ---
 # <a name="level-function-report-builder-and-ssrs"></a>Level 函數 (報表產生器及 SSRS)
   傳回遞迴階層中之目前所在的層級。  

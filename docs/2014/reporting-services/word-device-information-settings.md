@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Word [Reporting Services]
@@ -14,12 +13,12 @@ ms.assetid: 28146498-fae7-4b13-b47f-6ec05aa8e057
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 628b9775ecd7fa23a7f63f0738b5c39c5cca2d5b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ddd145c5073003a8dc189e3ed9b1bbb25dc11d09
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206276"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096925"
 ---
 # <a name="word-device-information-settings"></a>Word 裝置資訊設定
   下表列出以 [!INCLUDE[ofprword](../includes/ofprword-md.md)] 格式轉譯的裝置資訊設定。  

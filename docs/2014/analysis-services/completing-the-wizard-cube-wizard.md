@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.finish.f1
@@ -13,12 +12,12 @@ ms.assetid: f97a568c-dab4-4e3b-a70a-1aa9af186805
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 717e6ee640099b99e9ff4ec2484fdcc2a947ba1f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0c0d0f99ebd4fcd45d456cb25d256e230ec1194d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680571"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087722"
 ---
 # <a name="completing-the-wizard-cube-wizard"></a>正在完成精靈 (Cube 精靈)
   使用 **[正在完成精靈]** 頁面，即可命名並預覽在精靈完成後所建立的 Cube。  

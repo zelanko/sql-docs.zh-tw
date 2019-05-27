@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time data types [Integration Services]
@@ -16,12 +15,12 @@ ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a2f7e59f10b7a54e46e259fff8a4f60b42803a19
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769945"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059650"
 ---
 # <a name="date-and-time-formats"></a>日期和時間格式
   快速剖析提供一組快速、簡單的常式用以剖析資料。 快速剖析可支援下列格式的日期和時間資料類型。  

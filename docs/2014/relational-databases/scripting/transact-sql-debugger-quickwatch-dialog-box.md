@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.quickwatch
@@ -15,12 +14,12 @@ ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00f54c136441050a5e6e460e7578789f41a569d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9fcb20846ba21876044d50c80856600214eed354
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162708"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063390"
 ---
 # <a name="quickwatch-dialog-box"></a>快速監看式對話方塊
   使用 [快速監看式] 對話方塊可在偵錯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼時，快速檢視一個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式的資料類型和值，例如變數或參數。 若要監看多個運算式，您也可以將此運算式加入到 [監看式] 視窗。  
@@ -42,7 +41,7 @@ ms.locfileid: "48162708"
   
     -   透過將運算子套用至一或多個變數、參數或系統函式 (例如 @IntegerCounter + 1 或 FirstName + LastName) 的方式建立的運算式。  
   
-    -   傳回單一值的 Transact-SQL 陳述式，例如 SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1。  
+    -   傳回單一值的 Transact-SQL 陳述式，例如：SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1。  
   
 2.  按一下 [重新評估]。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "48162708"
   
 -   以滑鼠右鍵按一下運算式，然後選取 [編輯值]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **運算式清單**  
  顯示目前選取的運算式。 此下拉式清單包含您可以選擇顯示的一組運算式。 此清單中的運算式就是目前在 [呼叫堆疊] 視窗內選取之堆疊框架範圍內提供的運算式。 若要顯示不同的運算式，請輸入運算式或是從清單中選取。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具支援以下運算式：名稱以 @@ 開頭的變數、參數和系統函式。  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0e20da00-519e-40bb-a7b7-6233a0ec9a06
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 027422aaad1954afb4e30f29f924f2f30b77d31c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 35c862d89d5f98bee968f0e980c784e35c43e74d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62473500"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062660"
 ---
 # <a name="aggregations-cube-design"></a>彙總 (Cube 設計)
   使用 Cube 設計師中的 **[彙總]** 索引標籤，即可建立和修改彙總設計。  

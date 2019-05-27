@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Reporting Services]
@@ -18,12 +17,12 @@ ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 64e8ae49b9912579d6b3b483b7cb63bcfcb8662e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5e5f5225ef696a5477ef9d0aa4a67749bc5e4a88
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191137"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103448"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>報表伺服器資料庫 (SSRS 原生模式)
   報表伺服器是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 儲存中繼資料和物件定義的無狀態伺服器。 原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝會使用兩個資料庫來分隔永續性資料儲存與暫時儲存需求。 兩個資料庫會一起建立，並依名稱繫結。 根據預設，資料庫名稱分別為 **ReportServer** 和 **ReportServerTempdb**。  

@@ -11,14 +11,14 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
-ms.reviewer: douglasl
+ms.reviewer: mathoma
 manager: craigg
-ms.openlocfilehash: 09c3ffe6897107d2b3db0f53b0fdc895ee437efd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4430352babb69c58930755cf4ddae0e70b9d5a02
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63273964"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015114"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>重新執行追蹤，以在資料庫測試助理
 

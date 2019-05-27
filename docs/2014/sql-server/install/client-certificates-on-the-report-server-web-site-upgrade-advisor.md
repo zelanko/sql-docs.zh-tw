@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], upgrade issues
@@ -13,12 +12,12 @@ ms.assetid: 5ecce26b-99df-4109-8e51-d150d369dff7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 808bb63a527e8c08063d934fd6a378e1955b7617
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a0a8fb06eabb6fa07e503c00d3651020d52cff26
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63205086"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096480"
 ---
 # <a name="client-certificates-on-the-report-server-web-site-upgrade-advisor"></a>報表伺服器網站上的用戶端憑證 (Upgrade Advisor)
   Upgrade Advisor 在主控報表伺服器或報表管理員虛擬目錄的 IIS 網站上偵測到一或多個用戶端憑證。  

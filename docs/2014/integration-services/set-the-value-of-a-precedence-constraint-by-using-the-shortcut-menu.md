@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - precedence constraints [Integration Services], values
@@ -13,12 +12,12 @@ ms.assetid: ab9d8e8e-b7da-44b2-b89f-b215d799f032
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3bb07b6cc317e4d522e178751fe228fce69457fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4086ab60e4f9fab576ba2d28ab0bbe332435ba58
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62878231"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055663"
 ---
 # <a name="set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu"></a>使用快速鍵功能表來設定優先順序條件約束的值
   此程序描述如何使用快速鍵功能表設定優先順序條件約束的值。  

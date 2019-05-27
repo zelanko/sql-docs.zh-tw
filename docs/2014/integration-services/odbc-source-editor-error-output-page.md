@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.errorhandling.f1
@@ -13,12 +12,12 @@ ms.assetid: b2f6866c-db07-4cb3-9f38-889f8d2b03e6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 804431fea189d0dbe8e236591453571a5546cd5c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b19a94e71eaef45184c1777ce299809b2b2d7f8d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890573"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057133"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>ODBC 來源編輯器 (錯誤輸出頁面)
   使用 **[ODBC 來源編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，即可選取錯誤處理選項。  

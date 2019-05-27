@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.choosedeployment.f1
@@ -13,12 +12,12 @@ ms.assetid: 3b19b8a3-000d-48a4-b4a2-4f7da078a0c6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b73bd104663f8a6f79551e9ed2f0494703fd3c39
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e902d40a75e3034bb22f27711de325914d255435
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266203"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109832"
 ---
 # <a name="choose-the-deployment-location"></a>選擇部署位置
   使用報表精靈的這個頁面，即可設定報表伺服器專案的部署伺服器和資料夾。  

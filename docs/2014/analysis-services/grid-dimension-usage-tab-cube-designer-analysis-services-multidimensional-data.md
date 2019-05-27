@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04ba5a515c83bc17b858d463cd6718db47b07a24
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 294b40d07731f588267e94ff748adaf871a8ac3b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730771"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080813"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>方格 (維度使用方式索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   在 Cube 設計師中，使用 **[維度使用方式]** 索引標籤上的 **[方格]** 窗格，即可檢視及編輯 Cube 維度與量值群組之間的維度關聯性。 每一項維度關聯性都會以方格中的資料格來代表，其中的量值群組會顯示為資料行，而維度則顯示為資料列。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |選項|定義|  
 |------------|----------------|  

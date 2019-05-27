@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.deploymentwizard.confirminstallation.f1
@@ -22,12 +21,12 @@ ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 68f464d49680e3563f44768e9d8ad29d947a8b24
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890271"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056832"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>封裝安裝精靈 UI 參考
   使用 [封裝安裝精靈] 來部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，包括其內含的封裝和其他檔案，以及任何封裝的相依性。  
@@ -130,7 +129,7 @@ ms.locfileid: "62890271"
 ## <a name="specify-target-sql-server-page"></a>指定目標 SQL Server 頁面  
  使用 [指定目標 SQL Server] 頁面，即可指定將封裝部署至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的選項。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **伺服器名稱**  
  指定部署封裝目的地之伺服器的名稱。  
   

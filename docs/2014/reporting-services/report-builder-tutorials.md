@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a7d077ffdddaf88a004e5b1fc7e35c08fb3e2562
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3859dbf74d1def19b5f3aad405a884ae607fbca3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63195107"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107964"
 ---
 # <a name="tutorials-report-builder"></a>教學課程 (報表產生器)
   使用下列報表產生器教學課程，了解如何建立基本報表。  

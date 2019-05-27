@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - authentication [Reporting Services]
@@ -14,12 +13,12 @@ ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bff2f31eb321a24c184580a6b1565f4dbc76bb1d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 34f637ee2d0a8235f21167df78178c4de9292c8c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242532"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102051"
 ---
 # <a name="configure-report-manager-to-pass-custom-authentication-cookies"></a>設定報表管理員傳遞自訂驗證 Cookie
   如果您要使用自訂驗證延伸模組，您應配置報表管理員來傳送自訂驗證 Cookie。 否則，報表管理員只能透過報表伺服器特定的 HTTP 要求來傳送 Cookie。 如果您要傳送其他 Cookie，就必須修改 RSReportServer.Config 檔。  

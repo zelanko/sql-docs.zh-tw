@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -14,12 +13,12 @@ ms.assetid: d90a12f8-7bc3-4fdb-95a1-7c89058f0d9a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1fb3dcd1729805c9458b7cc882e1d33f6be918e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730757"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080758"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>反白顯示例外狀況 (適用於 Excel 的資料表分析工具)
   ![反白顯示功能區中的 [例外] 按鈕](media/tat-highlightex.gif "功能區中的反白顯示例外狀況按鈕")  

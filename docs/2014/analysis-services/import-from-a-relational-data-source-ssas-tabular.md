@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 043201cc-fbef-4ed0-bde8-dc5e3a3e8bea
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44c4f0a5fbdaa64f2145113bf5135dad9acbddbb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 61fb30ea21ea810eab8d30a3a040fac4a1bd2128
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730739"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080526"
 ---
 # <a name="import-from-a-relational-data-source-ssas-tabular"></a>從關聯式資料來源匯入 (SSAS 表格式)
   您可以使用 [資料表匯入精靈]，從各種關聯式資料庫匯入資料。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]提供此精靈，位於 [模型]  功能表。 若要連接至資料來源，您必須先在電腦上安裝適當的提供者。 如需支援的資料來源和提供者的詳細資訊，請參閱 [支援的資料來源 &#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)(支援的資料來源 (SSAS 表格式))。  

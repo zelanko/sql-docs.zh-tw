@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.filterpane.f1
@@ -13,12 +12,12 @@ ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1964b6562c34411201ce141c97c9df42103482ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d788a4957d7c6b3ea02e407f8b09fa80b957a4b5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748400"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070543"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>查詢和篩選 (瀏覽器索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   Cube 設計師中的 [瀏覽器] 索引標籤區域包含查詢和篩選區域，以協助您從 Cube 選擇用於瀏覽或查詢的資料。 您可以加入所需的 Cube 物件數，然後在資料區域中檢視結果，或者使用 [在 Excel 中進行分析] 將結果匯出至報表，以視覺化使用者檢使用者使用者檢視資料的方式。  
@@ -28,7 +27,7 @@ ms.locfileid: "62748400"
   
  根據預設，執行查詢時，目前使用者的認證 (而非在 [模擬資訊] 頁面中指定的認證) 會用來連接資料來源。 不過，您也可以按一下 [工具列] 上的 [變更使用者]，變更查詢或報表的使用者內容。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Dimension**  
  選取要配量 Subcube 的維度。  
   

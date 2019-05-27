@@ -14,16 +14,16 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 051d63bf71870766a0bf74364eee7545970d4393
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: fced8436279b5daa2751b0b4708a62b449d0bcd7
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642886"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821835"
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL 偵錯工具 - 資訊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "51642886"
 -   在 [偵錯] 工具列上，按一下 [中斷點]，然後選取您想要的視窗。  
   
 ## <a name="transact-sql-expressions"></a>Transact-SQL 運算式  
- 運算式是評估成單一純量值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句，例如變數或參數。 左側的偵錯工具視窗最多可以在五個索引標籤或視窗中顯示目前指派給運算式的資料值：[區域變數]、[監看式 1]、[監看式 2]、[監看式 3] 和 [監看式 4]。  
+ 運算式是評估成單一純量值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句，例如變數或參數。 左側偵錯工具視窗最多可以在五個索引標籤或視窗中顯示目前指派給運算式的資料值：[區域變數]、[監看式 1]、[監看式 2]、[監看式 3] 和 [監看式 4]。  
   
  [區域變數] 視窗會顯示有關 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具目前範圍中之區域變數的資訊。 [區域變數] 視窗中所列的這組運算式會隨著偵錯工具逐步執行不同的程式碼部分而變更。  
   

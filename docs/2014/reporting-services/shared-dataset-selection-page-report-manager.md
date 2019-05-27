@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a67dc03e-f838-4ec2-9ef6-f04895bab3c7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bbb2e4e671bf00016071bfe53a7b3e5f53acac2f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9b597f8aab58d2fd9a4dd44e9361469656bec32c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63223236"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101265"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>共用資料集選取頁面 (報表管理員)
   使用 [共用資料集選取] 頁面，即可檢閱及修改目前與報表關聯的共用資料集。  
@@ -36,7 +35,7 @@ ms.locfileid: "63223236"
   
 4.  選取 **[共用資料集]** 索引標籤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **瀏覽**  
  您可以針對報表中的每個共用資料集名稱，檢閱目標共用資料集的目前資料夾路徑與名稱。  
   

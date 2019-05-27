@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DATABASE_PRINCIPAL_ID function
 - IDs [SQL Server], principals
 ms.assetid: 908c7dd8-c10b-4658-92f6-0224f9835dd9
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1f7a6e3c5d0ef72858dae615485a9ccfb76568a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b65c8f0ed4679bcbf35d1e61483346647130ff3
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670016"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943802"
 ---
 # <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

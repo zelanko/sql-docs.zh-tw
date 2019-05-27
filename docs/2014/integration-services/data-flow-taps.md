@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 171bb649f5e4f91df947ed2a0a3113786755efe4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a1938f2389f64d7a869ae924690b8b22fa209f82
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828643"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059911"
 ---
 # <a name="data-flow-taps"></a>資料流程點選
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 導入了一項新功能，可讓您在執行階段於封裝的資料流程路徑上加入資料點選，然後從資料點選將輸出導向至外部檔案。 若要使用此功能，您必須使用專案部署模型將 SSIS 專案部署至 SSIS 伺服器。 將封裝部署至伺服器之後，您需要對 SSISDB 資料庫執行 T-SQL 指令碼先加入資料點選，然後再執行該封裝。 範例狀況如下：  

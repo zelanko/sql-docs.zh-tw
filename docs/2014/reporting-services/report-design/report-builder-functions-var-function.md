@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7b2018ce-c5f9-4f8b-bd44-4201379a584b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 920fc72443036328e4ac5c9181c479b2900d84fc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a10d92d8492f9f07f18d2edccd7f3074b7c584c5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215284"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105085"
 ---
 # <a name="var-function-report-builder-and-ssrs"></a>Var 函數 (報表產生器及 SSRS)
   傳回運算式指定的所有非 Null 數值的變異數 (在給定範圍中評估)。  

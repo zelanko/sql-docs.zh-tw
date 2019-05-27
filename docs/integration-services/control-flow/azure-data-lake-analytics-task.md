@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 05/18/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -14,12 +14,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: d8812b5cdaaf2271a0071d798ddd530266ebc8a9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: f68a57063f0619458d6961308bbaeeee9c22c323
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65728022"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014920"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics 工作
 
@@ -120,7 +120,7 @@ OUTPUT @rs1
       USING Outputters.Tsv(quoting:false, dateTimeFormat:null);
 ```
 
-請注意，輸入和輸出路徑會定義在 **\@in** 與 **\@out** 參數之中。 在 U-SQL 指令碼中，**\@in** 與 **\@out** 參數的值是透過「參數對應」設定來動態傳遞。
+請注意，輸入和輸出路徑會定義在 **\@in** 與 **\@out** 參數之中。 在 U-SQL 指令碼中， **\@in** 與 **\@out** 參數的值是透過「參數對應」設定來動態傳遞。
 
 |變數名稱|參數名稱|
 |-------------|--------------|

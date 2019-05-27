@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.advanced.f1
@@ -13,12 +12,12 @@ ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 7c598ca2dc2e1fd79e221c0c3d3fc1a5c3592dcb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f08758af9c75e36dbf8c8d4d62ae17352972b79d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844169"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089089"
 ---
 # <a name="query-options-execution-advanced-page"></a>查詢選項執行 (進階頁面)
   使用 **SET** 陳述式時，有許多選項可用。 使用此頁面來指定 **set** 選項，以執行 Microsoft SQL Server 查詢。 如需上述各選項的詳細資訊，請參閱《SQL Server 線上叢書》。  

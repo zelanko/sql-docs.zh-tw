@@ -1,7 +1,7 @@
 ---
 title: XML 資料類型和資料行 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/17/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,14 +11,15 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46a9dd3021f56292e56544fb1d688329b7456bc9
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6e0c0dbcb9f1cfea08ca1713f7ec46a698944255
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511575"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836153"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 資料類型和資料行 (SQL Server)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   本主題討論 **中** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型的優勢和限制，並幫助您選擇儲存 XML 資料的方式。  
   
@@ -54,7 +55,7 @@ ms.locfileid: "58511575"
   
 -   您想要利用資料庫伺服器的管理功能來管理您的 XML 資料。 例如，您想要備份、復原及複寫資料。  
   
- 如果沒有符合上述任一情況，可能比較適合將您的資料儲存成非 XML 的大型物件類型，例如 **[n]varchar(max)** 或 **varbinary(max)**。  
+ 如果沒有符合上述任一情況，可能比較適合將您的資料儲存成非 XML 的大型物件類型，例如 **[n]varchar(max)** 或 **varbinary(max)** 。  
   
 ## <a name="xml-storage-options"></a>XML 儲存選項  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 XML 儲存選項如下：  
@@ -175,6 +176,8 @@ ms.locfileid: "58511575"
 -   它無法當作 ISNULL、COALESCE 和 DATALENGTH 以外之任何純量、內建函數的參數。  
   
 -   它無法當作索引中的索引鍵資料行使用。 但是，在建立非叢集索引時使用 INCLUDE 關鍵字，可以將它包含在叢集索引中做為資料，或明確地將它加入非叢集索引中。  
+
+- XML 項目所建立的巢狀結構最多可以有 128 個層級。
   
 ## <a name="see-also"></a>另請參閱  
  [大量匯入與匯出 XML 文件的範例 &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  

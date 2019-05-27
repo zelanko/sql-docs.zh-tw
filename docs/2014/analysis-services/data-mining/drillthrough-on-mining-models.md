@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa70606a2edf735e7d8379dde51ba66b444d7f36
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b955ade0251f43d6a482abe346c286c6bafd0ce7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722430"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084600"
 ---
 # <a name="drillthrough-on-mining-models"></a>採礦模型的鑽研
   「鑽研」表示查詢採礦模型或採礦結構並取得模型中未公開之詳細資料的能力。  

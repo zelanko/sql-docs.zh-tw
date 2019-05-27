@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adddtsconnection.f1
@@ -15,12 +14,12 @@ ms.assetid: 8b85278a-aa1f-4587-9e13-db3b7fcbadfb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9b711562d966e0a28349b666505dff9542098fd4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 549ab9aa3a447c13939e352233acc42b974d92af
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62771964"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061822"
 ---
 # <a name="add-ssis-connection-manager"></a>加入 SSIS 連接管理員
   使用 [加入 SSIS 連線管理員] 對話方塊來選取要加入封裝的連接類型。  

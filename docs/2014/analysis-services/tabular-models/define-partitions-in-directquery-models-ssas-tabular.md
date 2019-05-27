@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f445b32e0c580cde10f38a22b3d26270d927c5a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1fe22de3cc0718647de84345260017a4dd4e477e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757315"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067313"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>資料分割和 DirectQuery 模式 (SSAS 表格式)
   本節說明如何在 DirectQuery 模型中使用資料分割。 如需表格式模型中之資料分割的更一般資訊，請參閱 [資料分割 &#40;SSAS 表格式&#41;](partitions-ssas-tabular.md)。  

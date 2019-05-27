@@ -9,14 +9,14 @@ ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
-ms.openlocfilehash: 1c5c97eca9553f209e559ddacd25af2618e84f71
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 2e832343dfd54dd08a71c2724eed4cb7b156c758
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65720857"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010505"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>教學課程：在 Azure 中部署和執行 SQL Server Integration Services (SSIS) 套件
 
@@ -102,7 +102,7 @@ ms.locfileid: "65720857"
     -   然後選取 [下一步] 開啟 [檢閱] 頁面。 (只有在您選取 [連線] 之後，才會啟用 [下一步] 按鈕。)
   
 4.  在 [檢閱] 頁面上，檢閱您選取的設定。
-    -   您可以選取 **[上一步]**，或選取左窗格中的任何步驟來變更您的選取項目。
+    -   您可以選取 **[上一步]** ，或選取左窗格中的任何步驟來變更您的選取項目。
     -   選取 [部署]  開始部署程序。
 
     > [!NOTE]

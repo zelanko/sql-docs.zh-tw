@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - features to upgrade
@@ -13,12 +12,12 @@ ms.assetid: 5e906e23-6638-410d-920b-fdf35b0d3cc4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 527d57daa253cdab0f9107b38e2e8de87c9b2b8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2d6265fd9d86b96c75fce63a265848f769253024
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62931603"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092363"
 ---
 # <a name="select-features-upgrade"></a>選取功能 (升級)
   使用 **安裝精靈的 [選取功能]**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 頁面，可檢視要升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的功能。  

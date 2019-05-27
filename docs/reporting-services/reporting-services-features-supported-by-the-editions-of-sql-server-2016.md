@@ -1,18 +1,18 @@
 ---
 title: SQL Server 版本所支援的 Reporting Services 功能
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 11/01/2018
-ms.openlocfilehash: 1b46c6cec15f3a229892116758fe7f147f24c9ac
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
-ms.translationtype: HT
+ms.openlocfilehash: b536d94f5dcfb332f39733f8e3a116294a7d40c3
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185034"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936552"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>SQL Server 版本所支援的 Reporting Services 功能
 
@@ -88,9 +88,9 @@ ms.locfileid: "54185034"
   
 |工具名稱|Enterprise|Standard|Web|Express with Advanced Services|Developer|  
 |---------------|----------------|--------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]、**.rdl** 和 **.rds**|是|是|是|是|是|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]、**.rsmobile**|是||||是|  
-|Power BI 行動裝置應用程式 (iOS、Windows 10 和 Android)、**.rsmobile**|是||||是|  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]、 **.rdl** 和 **.rds**|是|是|是|是|是|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]、 **.rsmobile**|是||||是|  
+|Power BI 行動裝置應用程式 (iOS、Windows 10 和 Android)、 **.rsmobile**|是||||是|  
   
 > [!NOTE]  
 > * 上表指出了啟用這些用戶端工具所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 不過，這些工具能夠存取裝載於任何 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本的資料。  

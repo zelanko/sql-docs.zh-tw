@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CollectionAggregate method (geometry)
 ms.assetid: b7c85d59-c841-4b7f-9d46-8b4b7f2a3afe
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 6a3235935a3ba312afb3d3fd82fd07a72b6ddbe0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47540d82abb349691f63fb9209010b42cefe4e2a
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766746"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935968"
 ---
 # <a name="collectionaggregate-geometry-data-type"></a>CollectionAggregate (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

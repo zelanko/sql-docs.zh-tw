@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 9a2575c8-06fc-4ef4-9f24-c19e52b1bbcf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2aa1133b9e23ea8f2174f73e9d8bf4a34ff0c824
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b2c6e28a8c328bd1e38cee2f4cad74802a981aa9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131202"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095635"
 ---
 # <a name="deployment-checklist-reporting-services-power-view-and-powerpivot-for-sharepoint"></a>部署檢查清單：Reporting Services、Power View 及 PowerPivot for SharePoint
   使用相同的 SharePoint 伺服器陣列中安裝這些 BI 功能的下列檢查清單：PowerPivot for SharePoint、 報表產生器和[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]。 雖然此檢查清單建議特定的安裝順序，但是在練習時，您可以幾乎任何順序來安裝這些功能。 此檢查清單假設已安裝下列產品或功能：  

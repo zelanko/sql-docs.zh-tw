@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - concepts
@@ -14,12 +13,12 @@ ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b7aa95480780c89dadcbcba4b4d08016adae50f4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 14ed49408c980b85e3a45902852f14f61534eec1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215434"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105304"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>報表撰寫概念 (報表產生器及 SSRS)
   本節將簡要定義報表產生器和報表設計師文件集中使用的重要概念。 如需特定字詞或詞彙的定義，請參閱[詞彙 &#40;報表產生器&#41;](../report-builder/glossary-report-builder.md)。  

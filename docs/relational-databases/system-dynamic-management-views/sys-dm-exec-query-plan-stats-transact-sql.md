@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 92e5aaf103c1c8d08b8527bf859415686fd5f4f8
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: c4d4f58161885519767e299683fe32b5197a045f
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993623"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198207"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
@@ -37,7 +37,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 
 ## <a name="arguments"></a>引數 
 *plan_handle*  
-可唯一識別查詢執行計畫，該批次已經執行的語彙基元且其計畫位於計畫快取，或正在執行。 *plan_handle*已**varbinary(64)**。   
+可唯一識別查詢執行計畫，該批次已經執行的語彙基元且其計畫位於計畫快取，或正在執行。 *plan_handle*已**varbinary(64)** 。   
 
 *Plan_handle*可以從下列動態管理物件取得：  
   
@@ -64,7 +64,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 ## <a name="remarks"></a>備註
 這個系統函數可從[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]CTP 2.4。
 
-這是選擇加入的功能，需要啟用[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451。 開頭[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]CTP 2.5 然後在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，以在資料庫層級完成這項作業，請參閱中的 LAST_QUERY_PLAN_STATS 選項[ALTER DATABASE SCOPED CONFIGURATION &#40;-&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。
+這是選擇加入的功能，需要啟用[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451。 開頭[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]CTP 2.5，若要這麼做的資料庫層級，請參閱中的 LAST_QUERY_PLAN_STATS 選項[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。
 
 這個系統函數運作**輕量級**查詢分析基礎結構的執行統計資料。 如需詳細資訊，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。  
 

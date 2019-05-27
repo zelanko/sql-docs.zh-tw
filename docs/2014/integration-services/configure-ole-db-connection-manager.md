@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbconnection.f1
@@ -15,12 +14,12 @@ ms.assetid: 66b60dda-1f1b-45d0-9818-8434ea1121eb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a21e362d870337420bec17f6210972a73055dc32
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cef2c37c2775b1b5bd46e04f214d8ae77ee7b56d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834138"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060545"
 ---
 # <a name="configure-ole-db-connection-manager"></a>設定 OLE DB 連接管理員
   使用 **[設定 OLE DB 連接管理員]** 對話方塊將連接加入資料來源，此連接可以是新的連接或是現有連接的副本。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.columnproperties.f1
@@ -15,12 +14,12 @@ ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0d15b3979209e4dba6983a845ae1752d3e136fb7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 33ad9ddda5b40abaafddbd6e31272ece1f8edaee
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889191"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056069"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>指令碼轉換編輯器 (輸入及輸出頁面)
   使用 **[指令碼轉換編輯器]** 對話方塊的 **[輸入及輸出]** 頁面，即可加入、移除和設定指令碼轉換的輸入及輸出。  

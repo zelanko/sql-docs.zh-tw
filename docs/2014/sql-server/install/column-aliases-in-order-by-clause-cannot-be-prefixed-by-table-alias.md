@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - aliases [SQL Server], columns
@@ -13,12 +12,12 @@ ms.assetid: fee7328f-6e8d-4005-930b-56fb6f17e0b2
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 815e4105ca65b6bcdaa36de0554b9f6e0d3b478a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1f4328c6a70c00766979a13bbcf8dc2b8bd77f42
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190769"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096323"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>ORDER BY 子句中資料行別名的前置詞不可以是資料表別名
   在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本中，ORDER BY 子句中資料行別名的前置詞不可以是資料表別名。  

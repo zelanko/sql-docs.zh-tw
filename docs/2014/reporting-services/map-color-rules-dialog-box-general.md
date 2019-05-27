@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10541"
@@ -14,12 +13,12 @@ ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 40c592cd753c5c6b4e88fbf66d9b81ebc4aa2fb5
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: e97de85cdd57fdb21aa82379243eb6954358ea38
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63461869"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108314"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>地圖色彩規則對話方塊、一般
   選取 **[色彩規則屬性]** 對話方塊上的 **[一般]** ，定義此圖層上地圖元素的色彩選項。 地圖元素包括多邊形、線條與點。 當您已經根據資料集欄位或空間資料來源欄位中的空間資料與分析資料建立地圖元素之間的關聯性時，可以套用色彩規則。  

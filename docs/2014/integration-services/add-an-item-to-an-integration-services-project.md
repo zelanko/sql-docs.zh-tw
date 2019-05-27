@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], items
@@ -18,12 +17,12 @@ ms.assetid: ba0bf4d1-c974-4c64-b916-3db2be854cde
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 829683a08a1611cae4bcb9ce8dca8e2e328f83f5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 66b23e65542cd4f87818d6cc719dca59a9a4adec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62837426"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062015"
 ---
 # <a name="add-an-item-to-an-integration-services-project"></a>將項目加入 Integration Services 專案
   此程序描述如何將新的和現有的項目加入 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  

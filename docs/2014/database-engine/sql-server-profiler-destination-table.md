@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.tools.destinationtable.f1
@@ -15,12 +14,12 @@ ms.assetid: 88ee6090-b2f5-4dc5-997a-1d45fa7e3e84
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6b48d02ff1ed38f2c2e49d509ef6c483af4cc44
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 802d39742b932b3721941e3d3c314b209b4e823c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62842739"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088932"
 ---
 # <a name="sql-server-profiler---destination-table"></a>SQL Server Profiler - 目的地資料表
   使用 **[目的地資料表]** 對話方塊，來指定您要儲存追蹤的資料表。  

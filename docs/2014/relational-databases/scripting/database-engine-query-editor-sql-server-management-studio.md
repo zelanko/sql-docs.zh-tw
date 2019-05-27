@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.tsqlquery.f1
@@ -23,12 +22,12 @@ ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3062b1acf67e8d47a70a7b3b3758a70ec1dbeda9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48a2fc741a13a0565ab49d1974b9c2798ad7b9ad
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192198"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064100"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Database Engine 查詢編輯器 (SQL Server Management Studio)
   使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器，建立及執行包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的指令碼。 此編輯器也支援執行包含 **sqlcmd** 命令的指令碼。  

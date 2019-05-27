@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10170"
@@ -14,17 +13,17 @@ ms.assetid: 53ac304f-7f7c-4f00-9b3b-9b563ec97917
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8a5c2dec966586c2245eadeaca42ca432d31204e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1ddca4b59219598ef6685b6d3529f84725a2f075
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62696978"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107343"
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>資料集屬性對話方塊、篩選
   選取 **[資料集屬性]** 對話方塊上的 **[篩選]** ，即可建立資料集的篩選。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[加入]**  
  將新的篩選子句加入到清單中。  
   

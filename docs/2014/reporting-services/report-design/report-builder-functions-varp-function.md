@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e4f86ab3-bdb3-4e4a-9a9d-7ae7abdf4dc4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5370eb821ed018e451fbb3f1992ccbb3df22c834
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b143f6e5b411a6e3f04509b2dc88459a92002428
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63216228"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105110"
 ---
 # <a name="varp-function-report-builder-and-ssrs"></a>VarP 函數 (報表產生器及 SSRS)
   傳回運算式指定的所有非 Null 數值的母體擴展變異數 (在給定範圍的內容中評估)。  

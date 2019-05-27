@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
@@ -22,12 +21,12 @@ ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722390"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084421"
 ---
 # <a name="feature-selection-data-mining"></a>特徵選取 (資料採礦)
   *特徵選取*指的是常用於資料採礦，以描述的工具和技術可供輸入降低至可管理的大小，用於處理和分析。 特徵選取隱含不僅*基數減少*，這表示強加任意或預先定義的截止，可以在建立模型，但也屬性，這表示的選擇時考量的屬性數目分析師或模型化工具主動選取或捨棄屬性根據對分析的實用性。  

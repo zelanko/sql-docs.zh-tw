@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 0b2daa20-c189-4b5b-9b43-bc9c34b08450
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8cbf36108db7eed47f9ef3a63bece8b03a727956
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 804e8ddca760be8734dd4862aed5c2edd6fc8caa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894076"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058514"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Foreach 迴圈編輯器 (一般頁面)
   使用 **[Foreach 迴圈編輯器]** 對話方塊的 **[一般]** 頁面，即可命名並描述 Foreach 迴圈容器，使用指定的列舉值為集合的每一個成員重複工作流程。  

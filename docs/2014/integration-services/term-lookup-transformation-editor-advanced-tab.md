@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookup.advanced.f1
@@ -15,12 +14,12 @@ ms.assetid: be3575dc-e79c-49f6-8243-ad270bce77d5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c8f5dd315e7a6a7122768d4ebc893d8d7ad5ec90
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 692cde14a9cc8add332a4bbf6abe9518d3de642f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766271"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055213"
 ---
 # <a name="term-lookup-transformation-editor-advanced-tab"></a>詞彙查閱轉換編輯器 (進階索引標籤)
   使用 [詞彙查閱轉換編輯器] 對話方塊的 [進階] 索引標籤，即可指定查閱是否應區分大小寫。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - SendUsingSMTPServer
@@ -19,12 +18,12 @@ ms.assetid: c4abf03a-7a0e-4087-8aa6-91e4277ab65c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d44c3aefaf3fc0b87f36da8f5b15c97555183612
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: db9ed11f79ccb21a7317b6c1b59c8dc012aed299
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646146"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097522"
 ---
 # <a name="sendusingsmtpserver-property-wmi-msreportserverconfigurationsetting"></a>SendUsingSMTPServer 屬性 (WMI MSReportServer_ConfigurationSetting)
   指定在報表伺服器的電子郵件組態中之 `SendUsing` 元素是否應該設定為 `true`。  

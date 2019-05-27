@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredtslogs.loggingdetails.f1
@@ -17,12 +16,12 @@ ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dbba1b7712bcbdccc821e419b3101065c3164913
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1f881435de01c7c21b80bff00b43c2399d0f7d75
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834564"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060584"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>設定 SSIS 記錄對話方塊
   使用 **[設定 SSIS 記錄]** 對話方塊定義封裝的記錄選項。  
@@ -84,7 +83,7 @@ ms.locfileid: "62834564"
 ##  <a name="detail"></a> 設定 [詳細資料] 索引標籤上的選項  
  使用 **[設定 SSIS 記錄]** 對話方塊的 **[詳細資料]** 索引標籤，即可指定要啟用記錄的事件以及要記錄的資訊詳細資料。 您選取的資訊適用於封裝中的所有記錄提供者。 例如，您無法寫入部份資訊到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，而寫入不同資訊到文字檔。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **事件**  
  啟用或停用記錄事件。  
   

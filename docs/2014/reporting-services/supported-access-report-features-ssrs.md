@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], Access reports
@@ -19,12 +18,12 @@ ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ae982257f0be29103803a7d036142f58a50f1a04
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9088ab3e90b4fb341cc8125e45d498783953039d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62631329"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100580"
 ---
 # <a name="supported-access-report-features-ssrs"></a>支援的 Access 報表功能 (SSRS)
   當您將報表匯入報表設計師時，匯入程序會將 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 報表轉換成 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表定義語言 (RDL) 檔案。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支援多種 Access 的功能；但因為 Access 及 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 之間的差異，會稍微修改或不支援某些項目。 此主題描述 Access 報表功能如何轉換成 RDL。  
@@ -157,7 +156,7 @@ ms.locfileid: "62631329"
   
 |||||  
 |-|-|-|-|  
-|date|Date$|DateAdd|DateDiff|  
+|Date|Date$|DateAdd|DateDiff|  
 |DatePart|DateSerial|DateValue|Day|  
 |Hour|Minute|Month|MonthName|  
 |現在|第二個|Time|Time$|  

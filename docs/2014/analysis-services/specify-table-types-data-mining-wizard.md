@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifytabletypes.f1
@@ -13,12 +12,12 @@ ms.assetid: 8209a707-faef-4ffc-8991-6c13bb350753
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84946cd0dadd467e7998106f89868a5e9d401f13
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6c5b38fdc684cce71e0910a8a576180ece3e48f8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746340"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068142"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>指定資料表類型 (資料採礦精靈)
   使用 [指定資料表類型] 頁面，即可識別要用來定義採礦結構的資料表。 如果未選取資料表，將不會使用它來定義採礦結構。  

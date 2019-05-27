@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - CERTPRIVATEKEY
 ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f58f6859c57a16f5715d8a0f54c30775277b0c8d
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: e409d5064cb0e807d12a76b42055a6a43c9cb7c1
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071822"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948823"
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ CERTPRIVATEKEY
 ## <a name="remarks"></a>Remarks  
 搭配使用 **CERTENCODED** 和 **CERTPRIVATEKEY**，以透過二進位格式傳回憑證的不同部分。
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 **CERTPRIVATEKEY** 可以公開使用。
   
 ## <a name="examples"></a>範例  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - Instance to upgrade, Setup
@@ -13,17 +12,17 @@ ms.assetid: 79d5989f-2fb1-424b-be50-d89c8e39c51b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87f2ed4ff5bac29d65e9fe6132b2593580aa6639
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e5e74eba3479bdc722fdd45c99eb78592d6e8007
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63270344"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092345"
 ---
 # <a name="select-instance"></a>選取執行個體
   請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 [選取執行個體] 頁面，指定您想要升級到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]執行個體。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  使用選項按鈕指定您要升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和它的共用元件，還是只升級共用元件。 此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的共用元件如下：  
   
 -   管理工具 - 基本  

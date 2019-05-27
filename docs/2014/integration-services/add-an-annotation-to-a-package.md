@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - self-documenting packages
@@ -15,12 +14,12 @@ ms.assetid: 8db31e78-e03b-44e6-a307-a1349f52b0c6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ae0775260a0f86ae79f91e3bdaa3773ef58976de
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5c407efc18790b4d8ed8912e47248f4d04de9fca
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62837147"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062096"
 ---
 # <a name="add-an-annotation-to-a-package"></a>將註解加入封裝
   此程序描述如何將註解加入封裝。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b0af16c21cb9fdf2c8ab41a931f955b46c29352
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 5db09273a26bd8dd596a6ae576b2f8f0cc414190
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956104"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106071"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>運算式中的資料類型 (報表產生器及 SSRS)
   資料類型代表不同種類的資料，以便讓系統能夠有效率地儲存和處理資料。 一般資料類型包括文字 (也稱為字串)、含與不含小數位數的數字、日期和時間，以及影像。 報表中的值必須是報表定義語言 (RDL) 資料類型。 當您在報表中顯示值時，可以根據您的喜好設定來格式化值。 例如，代表貨幣的欄位會當做浮點數儲存在報表定義中，但是可能會根據您選擇的格式屬性，以各種格式顯示此欄位。  
@@ -34,7 +33,7 @@ ms.locfileid: "59956104"
 |String|預設：String<br /><br /> Chart、GUID、Timespan|  
 |布林|預設：布林|  
 |Integer|預設：Int64<br /><br /> Int16、Int32、Uint16、Uint64、Byte、Sbyte|  
-|Datetime|預設：Datetime<br /><br /> DateTimeOffset|  
+|DateTime|預設：DateTime<br /><br /> DateTimeOffset|  
 |float|預設：Double<br /><br /> Single、Decimal|  
 |二進位|預設：Byte[]|  
 |變數|除了 Byte[] 之外，以上任何一種|  

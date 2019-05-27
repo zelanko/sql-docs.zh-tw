@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
@@ -14,12 +13,12 @@ ms.assetid: 3a8ad546-0f58-4b31-ab56-58d6313b1098
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b9382a04977fae7db3442cb58caba1850cbcc14f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c40ec2d7da7dc8f46644632d29b6fb8d1101ff9b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766623"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055642"
 ---
 # <a name="set-the-properties-of-the-integration-services-service"></a>設定 Integration Services 服務的屬性
     

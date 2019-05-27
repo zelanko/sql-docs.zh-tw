@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.characteristics.f1
@@ -13,12 +12,12 @@ ms.assetid: 8e33ed1d-1ce4-405d-895b-7e995b2c910d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cd78b9b59b69614958abb86febcd2bd290b9f302
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c0b4a798f9a395741ae831d3b22fc06a71f55607
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680808"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087984"
 ---
 # <a name="cluster-characteristics-tab-mining-model-viewer"></a>叢集特性索引標籤 (採礦模型檢視器)
   [叢集特性] 索引標籤可讓您瀏覽叢集模型中某個叢集的特性，或瀏覽該模型中所有案例集合的特性。 圖形會將每個屬性/值組的重要性顯示為定義叢集的特性 (相較於其他叢集)。  
