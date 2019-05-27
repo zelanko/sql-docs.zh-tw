@@ -17,15 +17,15 @@ helpviewer_keywords:
 - conjugating verbs [full-text search]
 - word breakers [full-text search]
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8be3cc7da791b9ea5f950d83bd0f570ca42e686f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eaa80c71dcc58cbd780a664d2466a3bf3cec2a4c
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140040"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011535"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>設定及管理搜尋的斷詞工具與字幹分析器
   斷詞工具及字幹分析器，會在所有全文檢索索引資料上執行語文分析。 語文分析包括找出文字分界 (斷詞) 以及動詞變化 (字根處理)。 斷詞工具與字幹分析器是語言特有的工具，而且語言分析的規則會因不同的語言而有所差異。 對於給定的語言而言， *「斷詞工具」* (Word Breaker) 會根據語言的語彙規則，判斷文字分界存在的位置，藉以識別個別單字。 每個單字 (也稱為 *Token*) 都會使用壓縮表示來插入全文檢索索引中，以便減少其大小。 *「字幹分析器」* (Stemmer) 會根據該語言的規則來產生特定單字的字形變化 (例如，"running"、"ran" 和 "runner" 是 "run" 單字的不同形態)。  

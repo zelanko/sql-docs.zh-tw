@@ -11,15 +11,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 29da5204dc5bd88ed2c92b93347358b9860fc5c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7e323d686d739f832a6ae70707e4393a22a78b27
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065789"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011561"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式檔案 (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供 XML 結構描述，以定義撰寫 *「XML 格式檔案」* (XML format file) 用於將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的語法。 XML 格式檔案必須遵守以 XML 結構描述定義語言 (XSDL) 定義的這個結構描述。 只有在同時安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 時，才能支援 XML 格式檔案。  

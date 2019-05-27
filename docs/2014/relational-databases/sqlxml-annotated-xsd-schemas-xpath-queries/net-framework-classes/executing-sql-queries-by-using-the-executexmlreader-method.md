@@ -13,15 +13,15 @@ helpviewer_keywords:
 - ExecuteXmlReader method
 - SQL queries [SQLXML]
 ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6b24bfdcd9f6b4634a5a66ab43223285b0e3f36
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dfbd321e56d1df3b985ed7b89dde3a4b29d36c27
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63127609"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012533"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>使用 ExecuteXMLReader 方法執行 SQL 查詢
   而不是使用 ExecuteToStream 方法，您可以使用 SqlXmlCommand 物件 ExecuteXmlReader 方法執行命令。 這個方法會傳回 XmlReader 物件，可用來進一步處理結果 （在此範例中列印元素或屬性名稱和值）。  

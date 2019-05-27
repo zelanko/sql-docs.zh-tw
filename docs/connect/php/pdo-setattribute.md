@@ -1,7 +1,7 @@
 ---
 title: PDO::setAttribute | Microsoft Docs
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 04/22/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 56f9ee96-e1d2-46cc-b137-38f06a251863
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b0109eef02bc3649617b4f1f414406665c16ba9
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: 87d572b8a0eff92cbdbadba1bec002970d1f7b20
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744648"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776116"
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,8 +25,7 @@ ms.locfileid: "56744648"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```
 bool PDO::setAttribute ( $attribute, $value );  
 ```  
   
@@ -40,7 +39,7 @@ bool PDO::setAttribute ( $attribute, $value );
   
 ## <a name="remarks"></a>Remarks  
   
-|attribute|處理者|支援的值|描述|  
+|attribute|處理者|支援的值|Description|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|指定資料行名稱的大小寫。<br /><br />PDO::CASE_LOWER 會產生小寫的資料行名稱。<br /><br />PDO::CASE_NATURAL (預設值) 會顯示資料庫所傳回的資料行名稱。<br /><br />PDO::CASE_UPPER 會使資料行名稱以大寫顯示。<br /><br />此屬性可以使用 PDO::setAttribute 來設定。|  
 |PDO::ATTR_DEFAULT_FETCH_MODE|PDO|請參閱 PDO 文件。|請參閱 PDO 文件。|  
@@ -48,13 +47,13 @@ bool PDO::setAttribute ( $attribute, $value );
 |PDO::ATTR_ORACLE_NULLS|PDO|請參閱 PDO 文件。|指定應如何傳回 Null。<br /><br />PDO::NULL_NATURAL 不會執行任何轉換。<br /><br />PDO::NULL_EMPTY_STRING 會將空字串轉換為 Null。<br /><br />PDO::NULL_TO_STRING 會將 Null 轉換為空字串。|  
 |PDO::ATTR_STATEMENT_CLASS|PDO|請參閱 PDO 文件。|設定衍生自 PDOStatement 的使用者提供陳述式類別。<br /><br />需要 `array(string classname, array(mixed constructor_args))`。<br /><br />如需詳細資訊，請參閱 PDO 文件。|  
 |PDO::ATTR_STRINGIFY_FETCHES|PDO|true 或 false|在擷取資料時，將數值轉換為字串。|  
-|PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|1 到 PHP 記憶體限制。|設定使用用戶端資料指標時，將保留結果集的緩衝區大小。<br /><br />如果未指定 php.ini 檔案中，則預設值為 10240 KB。<br /><br />不允許使用零和負數。<br /><br />如需建立用戶端資料指標之查詢的詳細資訊，請參閱[資料指標類型 &#40;PDO_SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。|  
-|PDO::SQLSRV_ATTR_DECIMAL_PLACES|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|介於 0 到 4 （含） 之間的整數|指定格式化時的小數位數提取貨幣值。<br /><br />將忽略任何負整數或值大於 4。<br /><br />此選項僅適用於 PDO::SQLSRV_ATTR_FORMAT_DECIMALS 為 true。<br /><br />此選項也可以設定在陳述式層級。 如果是這樣，陳述式層級的選項會覆寫它。<br /><br />如需詳細資訊，請參閱 <<c0> [ 格式化為十進位字串和貨幣值 （PDO_SQLSRV 驅動程式）](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。|
+|PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|1 到 PHP 記憶體限制。|設定使用用戶端資料指標時，將保留結果集的緩衝區大小。<br /><br />如果未在 php.ini 檔案中指定，則預設值為 10240 KB。<br /><br />不允許使用零和負數。<br /><br />如需建立用戶端資料指標之查詢的詳細資訊，請參閱[資料指標類型 &#40;PDO_SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。|  
+|PDO::SQLSRV_ATTR_DECIMAL_PLACES|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|介於 0 和 4 (含) 之間的整數|指定將擷取的貨幣值格式化時的小數位數。<br /><br />將忽略任何大於 4 的負整數或值。<br /><br />此選項只有在 PDO::SQLSRV_ATTR_FORMAT_DECIMALS 為 True 時適用。<br /><br />此選項也可在陳述式層級設定。 如果是，則陳述式層級選項會覆寫此選項。<br /><br />如需詳細資訊，請參閱[將十進位字串及貨幣值格式化 (PDO_SQLSRV 驅動程式)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true 或 false|指定直接或備妥的查詢執行。 如需詳細資訊，請參閱 [PDO_SQLSRV 驅動程式中的直接陳述式執行和已備妥的陳述式執行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。|  
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM.|設定驅動程式用來與伺服器通訊的字元集編碼。<br /><br />不支援 PDO::SQLSRV_ENCODING_BINARY。<br /><br />預設值為 PDO::SQLSRV_ENCODING_UTF8。|  
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true 或 false|指定是否要擷取日期和時間類型作為[PHP DateTime](http://php.net/manual/en/class.datetime.php)物件。 如果保留，則為 false，預設行為是以字串傳回它們。<br /><br />此選項也可以設定在陳述式層級。 如果是這樣，陳述式層級的選項會覆寫它。<br /><br />如需詳細資訊，請參閱 <<c0> [ 如何： 擷取日期和時間類型做為 PHP DateTime 物件使用 PDO_SQLSRV 驅動程式](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。|  
-|PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true 或 false|處理數值擷取從資料行和數值 SQL 型別 （位元、 整數、 smallint、 tinyint、 float、 或即時）。<br /><br />開啟連接選項旗標 ATTR_STRINGIFY_FETCHES 時，傳回的值會是字串，即使 SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 上。<br /><br />PDO_PARAM_INT 繫結資料行中傳回的 PDO 型別時，整數資料行的傳回值會是 int，即使 SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 已關閉。|  
-|PDO::SQLSRV_ATTR_FORMAT_DECIMALS|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true 或 false|指定是否要加入前置零，以適時的十進位字串。 如果設定這個選項可讓您格式化 money 類型的 PDO::SQLSRV_ATTR_DECIMAL_PLACES 選項。 如果保留，則為 false，則會使用傳回精確的有效位數，並省略前置字元小於 1 的值為零的預設行為。<br /><br />此選項也可以設定在陳述式層級。 如果是這樣，陳述式層級的選項會覆寫它。<br /><br />如需詳細資訊，請參閱 <<c0> [ 格式化為十進位字串和貨幣值 （PDO_SQLSRV 驅動程式）](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。| 
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true 或 false|指定是否要以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) \(英文\) 物件形式擷取日期和時間類型。 如果保留 false，則預設行為是以字串形式傳回它們。<br /><br />此選項也可在陳述式層級設定。 如果是，則陳述式層級選項會覆寫此選項。<br /><br />如需詳細資訊，請參閱[操作說明：使用 PDO_SQLSRV 驅動程式以 PHP DateTime 物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。|  
+|PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true 或 false|處理從數值 SQL 類型 (bit、integer、smallint、tinyint、float 及 real) 資料行擷取的數值。<br /><br />開啟連線選項旗標 ATTR_STRINGIFY_FETCHES 時，即使已開啟 SQLSRV_ATTR_FETCHES_NUMERIC_TYPE，傳回的值還是字串。<br /><br />若繫結資料行中傳回的 PDO 類型為 PDO_PARAM_INT，即使已關閉 SQLSRV_ATTR_FETCHES_NUMERIC_TYPE，整數資料行的傳回值還是 int。|  
+|PDO::SQLSRV_ATTR_FORMAT_DECIMALS|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true 或 false|指定是否要在適當時於十進位字串中新增前置零。 如果設定，此選項就會啟用 PDO::SQLSRV_ATTR_DECIMAL_PLACES 選項來將貨幣類型格式化。 如果保留 False，則使用傳回精確的有效位數，並針對小於 1 的值省略前置零的預設行為。<br /><br />此選項也可在陳述式層級設定。 如果是，則陳述式層級選項會覆寫此選項。<br /><br />如需詳細資訊，請參閱[將十進位字串及貨幣值格式化 (PDO_SQLSRV 驅動程式)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|設定查詢逾時 (以秒為單位)。<br /><br />預設值為 0，表示驅動程式將會無限期地等候結果。<br /><br />不允許使用負數。|  
   
 PDO 會處理一些預先定義的屬性，且需要驅動程式才能處理其他屬性。 驅動程式會處理所有的自訂屬性和連接選項。 不支援的屬性、連線選項或不支援的值會根據 PDO::ATTR_ERRMODE 的設定來報告。  

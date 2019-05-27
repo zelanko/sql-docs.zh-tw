@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9cf188964290652d9b98e55e3f646d83337dafe1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 21d79e84ca30283eab6fe788be940f712b2cd41f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188393"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108196"
 ---
 # <a name="new-folder-page-report-manager"></a>新增資料夾頁面 (報表管理員)
   使用 [新增資料夾] 頁面，即可在報表伺服器資料夾階層中建立新的資料夾。 您建立的資料夾是儲存在報表伺服器資料庫中的虛擬資料夾。 這個資料夾並不是在電腦的檔案系統中建立的。  

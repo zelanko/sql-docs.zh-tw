@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
@@ -14,12 +13,12 @@ ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aae7a7ed873a86096f1f203cc20b2bfecd379db6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8ae243786119823a7be4a093fcfef232f58d8492
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225764"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108681"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>建立原生模式報表伺服器資料庫 (SSRS 組態管理員)
   原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫進行內部儲存。 資料庫是必要元件，它是用來儲存已發行的報表、模型、共用資料來源、工作階段資料、資源和伺服器中繼資料。  

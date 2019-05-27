@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7a3b0bbb6f3220c554675d7fab028db46d2588c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278783"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108407"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>第 6 課：加入群組和總計 (Reporting Services)
   將群組和總計加入至報表以組織和摘要資料。  

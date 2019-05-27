@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services Deployment Wizard, configuration settings
@@ -17,12 +16,12 @@ ms.assetid: 953814a3-85ef-40cc-b46a-d532aa7a6569
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e3f0f24aec895c482ba357dbc4330baaf2798ba6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8addba32560e136f68e538240f4fce01f826355e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726252"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075270"
 ---
 # <a name="specifying-configuration-settings-for-solution-deployment"></a>指定方案部署的組態設定
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈 讀取的資料分割和角色部署選項，您在部署指令碼中，從\<*專案名稱*>.configsettings 檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會在您建立 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案時建立此檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 若要建立會使用目前專案的組態設定\<*專案名稱*>.configsettings 檔案。  

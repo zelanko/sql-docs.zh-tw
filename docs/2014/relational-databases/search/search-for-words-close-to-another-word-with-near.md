@@ -17,15 +17,15 @@ helpviewer_keywords:
 - full-text queries [SQL Server], proximity
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3493657fb537057f7c0ff8e126582ceb6faccc11
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63238416"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011070"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜尋靠近另一個單字的字詞
   您可以在 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 述詞或 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 函數中使用鄰近字詞 (NEAR)，以便搜尋彼此接近的單字或片語。 您也可以指定分隔第一個和最後一個搜尋詞彙之非搜尋詞彙的數目上限。 此外，您也可以依任何順序或是您所指定的順序來搜尋單字或片語。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援舊版[泛型相近詞彙](#Generic_NEAR)，這目前已被取代，而[自訂相近詞彙](#Custom_NEAR)，這是新功能[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  

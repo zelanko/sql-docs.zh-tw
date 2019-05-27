@@ -36,7 +36,7 @@ Set_Expression * Set_Expression
  包含兩個指定參數的交叉乘積的集合。  
   
 ## <a name="remarks"></a>備註  
-  **\* (Crossjoin)** 運算子相當於[Crossjoin](../mdx/crossjoin-mdx.md)函式。  
+ **\* (Crossjoin)** 運算子相當於[Crossjoin](../mdx/crossjoin-mdx.md)函式。  
   
 ## <a name="examples"></a>範例  
  以下範例示範此運算子的用法。  

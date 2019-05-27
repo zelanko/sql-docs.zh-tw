@@ -11,15 +11,15 @@ helpviewer_keywords:
 - adExecuteStream flag
 - SQLXMLOLEDB Provider, about SQLXMLOLEDB Provider
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ec13acbaa0025b871475675140e83363eb64b81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9826143c68b8c1bd3edc6472156d140a6141968b
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62865044"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014390"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 提供者簡介 (SQLXML 4.0)
   SQLXMLOLEDB 提供者是一種 OLE DB 提供者，可透過 ActiveX Data Objects (ADO) 來公開 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 功能。 但是，此提供者只能在 ADO 的「寫入到輸出資料流」模式中執行命令。 SQLXMLOLEDB 提供者不是資料列集提供者。 當您執行命令時，您必須指定 adExecuteStream 旗標，它會指引 ADO 使用您指定的輸出資料流。  

@@ -45,9 +45,9 @@ SSMA 支援下列版本的目標。
 - 在 Windows 和 Linux 上的 SQL Server 2017
 - 在 Windows 和 Linux 上的 SQL Server 2019
 - Azure SQL Database
-- Azure SQL 資料倉儲
+- Azure SQL 資料倉儲**
 
-* * 此目標，只有支援 SSMA for Oracle。
+** 此目標，只有支援 SSMA for Oracle。
  
 ## <a name="downloads"></a>下載
 - [SSMA for Access](https://aka.ms/ssmaforaccess)

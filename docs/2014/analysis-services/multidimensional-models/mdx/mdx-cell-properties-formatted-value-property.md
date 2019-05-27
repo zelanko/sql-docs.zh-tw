@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3ecdc453b6498463e431cbad555af738fde2da1d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725432"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074403"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>FORMATED_VALUE 上的 LANGUAGE 及 FORMAT_STRING
   FORMATTED_VALUE 屬性是根據資料格中 VALUE、FORMAT_STRING 和 LANGUAGE 屬性的互動而建立。 本主題將說明這些屬性如何互動，以便建立 FORMATTED_VALUE 屬性。  

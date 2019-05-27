@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.action.f1
@@ -34,12 +33,12 @@ ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 125b40193edca5dc60fa86fe5818f7722f5af91c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3d6069d5720121b02c627528ec772cb61ddb0a10
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63231186"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110074"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>動作屬性對話方塊 (報表產生器及 SSRS)
   **[動作]** 對話方塊可用於啟用支援連結之圖表、量測計與地圖元素的超連結選項。 定義動作，讓使用者可以按一下報表與 URL 的連結，便連結至相同報表伺服器或與報表伺服器整合之 SharePoint 網站上的不同報表，或連結至相同報表中的不同位置。  

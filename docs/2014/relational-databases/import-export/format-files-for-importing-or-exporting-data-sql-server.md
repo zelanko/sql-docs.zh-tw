@@ -11,15 +11,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - format files [SQL Server]
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70f595643870548c8952070338cd5318eed1045b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8089309c8abe94d392b073fc916b2b0b8fa9292f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63145303"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011945"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>匯入或匯出資料的格式檔案 (SQL Server)
   當您將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表，或從資料表大量匯出資料時，可以使用「格式檔案」來儲存大量匯出或大量匯入資料所需的所有格式資訊。 這包含相對於該資料表之資料檔中各欄位的格式資訊。  

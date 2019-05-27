@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e1d7b619cb711938f07ae7902dc1b9544adc5890
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 46d69f2bcc82ba1ff4ae49e9bfa5e3aa7a61ad2a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728839"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078461"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>在量值群組內定義維度資料粒度
   使用者希望維度事實資料基於不同的用途有不同的資料粒度或具體性。 例如可能記錄每一天轉售商的銷售資料或網際網路銷售，但銷售配額資訊可能只有當月或當季才有。 在這些案例中，使用者希望時間維度對每一個不同的事實資料表有不同的資料粒度或詳細層級。 雖然您能夠以這種不同的資料粒度將新資料庫維度定義為時間維度，但有更容易的方法，就是使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  

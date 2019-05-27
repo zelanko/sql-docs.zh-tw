@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data formats [SQL Server], character
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e25c975dca01ee2787a598afbe1a67f09fbab0ce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065757"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011673"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字元格式匯入或匯出資料 (SQL Server)
   若要將資料大量匯出到用於其他程式的文字檔，或是要從其他程式產生的文字檔大量匯入資料，建議您使用字元格式。  

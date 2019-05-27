@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ed99b26641b6d87fa6fe3bf07f47c21eacb96d89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 585ce68402e8922f6c9629d8f4e8cd517218106f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795315"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067279"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>支援的資料類型 (SSAS 表格式)
   本文描述可用於表格式模型中的資料類型，並討論在 Data Analysis Expressions (DAX) 公式中計算或使用資料時，隱含的資料類型轉換。  
@@ -43,8 +42,8 @@ ms.locfileid: "62795315"
 |十進位數字|64 位元 (八位元組) 實數 <sup>1、2</sup>|實數是可以有小數位數的數字。 實數涵蓋極廣的值範圍：<br /><br /> 負值是從 -1.79E + 308 到 -2.23E - 308<br /><br /> 零 (0)<br /><br /> 正值是從 2.23E -308 到 1.79E + 308<br /><br /> 不過，有效位數的數目限制為 17 個小數位數。|  
 |布林|布林|True 或 False 值。|  
 |Text|String|Unicode 字元資料字串。 可以是字串或數字，或以文字格式表示的日期。|  
-|date|日期/時間|採用可接受之日期時間表示方式的日期和時間。<br /><br /> 有效日期為 1900 年 3 月 1 日之後的所有日期。|  
-|CURRENCY|CURRENCY|貨幣資料類型允許的值是從 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 且固定有效位數為四個小數位數。|  
+|Date|日期/時間|採用可接受之日期時間表示方式的日期和時間。<br /><br /> 有效日期為 1900 年 3 月 1 日之後的所有日期。|  
+|Currency|Currency|貨幣資料類型允許的值是從 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 且固定有效位數為四個小數位數。|  
 |N/A|空白|空白是 DAX 中表示和取代 SQL Null 的資料類型。 您可以使用 BLANK 函數建立空白，然後使用邏輯函數 ISBLANK 來測試空白。|  
   
  <sup>1</sup> DAX 公式不支援小於資料表中所列的資料類型。  

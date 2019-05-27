@@ -2407,6 +2407,8 @@
           items:
             - name: 從 SQL Server 呼叫 Java
               href: ../language-extensions/how-to/call-java-from-sql.md
+            - name: 適用於 Java 的擴充性 SDK
+              href: ../language-extensions/how-to/extensibility-sdk-java-sql-server.md
             - name: Java 至 SQL 資料類型
               href: ../language-extensions/how-to/java-to-sql-data-types.md
             - name: 建立 Java jar 檔案

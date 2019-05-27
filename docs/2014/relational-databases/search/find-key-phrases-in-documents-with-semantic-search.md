@@ -9,22 +9,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], key phrase queries
 ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 81b43a14a2410fc24bcc1bcd6968b9d87181cefa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cfb769db0de0e962c52d042e19134b849b3c1c3d
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63218149"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011350"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>使用語意搜尋找到文件中的主要片語
   描述如何在設定為統計語意索引的文件或文字資料行中尋找主要片語。  
   
 ##  <a name="BasicsQueryKey"></a> 在 文件中尋找主要片語  
   
-###  <a name="howtofind"></a> 操作說明：使用 SEMANTICKEYPHRASETABLE 的文件中尋找主要片語  
+###  <a name="howtofind"></a> 如何：使用 SEMANTICKEYPHRASETABLE 的文件中尋找主要片語  
  若要在特定文件中識別主要片語，或識別包含特定主要片語的文件，請查詢 [semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql) 函數。  
   
  SEMANTICKEYPHRASETABLE 會傳回包含零個、一個或多個資料列的資料表，表示與指定之資料表資料行相關聯的主要片語。 您可以在 SELECT 陳述式的 FROM 子句中參考這個資料列集函數，就像是一般資料表名稱一樣。  

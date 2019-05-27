@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: fbfc160f495f9717645c8417f11f67f572271d9b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63157624"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175042"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader 平行處理資料倉儲的命令列載入器
 **dwloader**是 Parallel Data Warehouse (PDW) 的命令列工具，將資料表的資料列大量載入至現有的資料表。 載入時的資料列，您可以將所有資料列加入資料表的結尾 (*附加模式*或是*fastappend 模式*)、 附加新資料列，並更新現有的資料列 (*upsert 模式*)，或刪除所有現有之前載入的資料列，然後再將所有資料列插入空的資料表 (*重新載入模式*)。  
@@ -43,7 +43,7 @@ ms.locfileid: "63157624"
   
 5.  執行**dwloader**。  
   
-    載入伺服器登入，然後執行可執行檔**dwloader.exe**以適當的命令列選項。  
+    載入伺服器登入，並執行可執行檔**dwloader.exe**以適當的命令列選項。  
   
 6.  驗證結果。  
   
@@ -111,7 +111,8 @@ dwloader.exe
     [ -E ]  
     [ -m ]  
     [ -N ]  
-    [ -se ]   
+    [ -se ]
+    [ -l ]   
 }  
 ```  
   
@@ -143,7 +144,7 @@ For information about configuring Windows Authentication, see [Security - Config
   
 `rv=25`  
   
-**-S***target_appliance*  
+* *-S***target_appliance*  
 指定會接收載入的資料的 SQL Server PDW 應用裝置。  
   
 *Infiniband 連線*， *target_appliance*指定為 < 設備名稱 >-SQLCTL01。 若要設定該已命名的連線，請參閱[設定的 InfiniBand 網路介面卡](configure-infiniband-network-adapters.md)。  
@@ -156,10 +157,10 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.*[*schema*].*table_name*  
+**-T** *target_database_name.* [*schema*].*table_name*  
 在目的地資料表的三部分名稱。  
   
-**-I***source_data_location*  
+* *-I***source_data_location*  
 若要載入的一或多個來源檔案的位置。 每個原始程式檔必須是文字檔或以 gzip 壓縮的文字檔。 只有一個來源檔案可以壓縮到每個 gzip 檔案。  
   
 若要格式化的原始程式檔：  
@@ -174,7 +175,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 -   來源資料的位置可以是網路路徑或本機路徑來載入伺服器上的目錄。  
   
--   若要指定所有檔案的目錄中，輸入目錄路徑，後面加上 * 萬用字元。  載入器不會從來源資料的位置中的任何子目錄中載入檔案... 載入器時的錯誤的目錄存在於 gzip 檔案。  
+-   若要指定所有檔案的目錄中，輸入目錄路徑，後面加上 * 萬用字元。  載入器未載入從來源資料的位置中的任何子目錄中的檔案。 載入器時的錯誤的目錄存在於 gzip 檔案。  
   
 -   若要指定某些檔案的目錄中，使用字元的組合和 * 萬用字元。  
   
@@ -219,7 +220,7 @@ For more information about this install option, see [Install dwloader Command-Li
 指定資料要載入資料檔中的字元編碼類型。 選項為 ASCII （預設值）、 UTF8、 UTF16 或 UTF16BE，其中 UTF16 是稍微位元組由小到大而 UTF16BE 是 big endian。 這些選項是不區分大小寫。  
   
 **-t** *field_delimiter*  
-每個欄位 （資料行） 中的資料列分隔符號。 欄位分隔符號是一或多個這些 ASCII 逸出字元或十六進位的 ASCII 值...  
+每個欄位 （資料行） 中的資料列分隔符號。 欄位分隔符號是一或多個這些 ASCII 逸出字元或 ASCII 十六進位值。  
   
 |名稱|逸出字元|十六進位字元|  
 |--------|--------------------|-----------------|  
@@ -368,9 +369,9 @@ dym
 2010 年 3 月 04 日的輸入的檔範例：04-2010-03, 4/2010/3  
   
 *custom_date_format*  
-*custom_date_format*是自訂的日期格式 (例如，MM/dd/yyyy)，而且包含基於回溯相容性。 dwloader 會不 enfoce 自訂日期格式。 相反地，當您指定自訂日期格式**dwloader**會將它轉換成 ymd、 ydm、 mdy、 myd、 dym，或 dmy 對應的設定。  
+*custom_date_format*是自訂的日期格式 (例如，MM/dd/yyyy)，而且包含基於回溯相容性。 dwloader 不會強制使用的自訂日期格式。 相反地，當您指定自訂日期格式**dwloader**會將它轉換成 ymd、 ydm、 mdy、 myd、 dym，或 dmy 對應的設定。  
   
-例如，如果您指定-D MM/dd/yyyy，dwloader 預期所有輸入第一，排序使用月份的日期則日，然後年 (mdy)。 它不會強制執行 2 2 個字的日和 4 的二位數年份，自訂日期格式所指定的字元個月。 以下是一些範例舉出-D MM/dd/yyyy 的日期格式時，可以在輸入檔中設定日期：01/02/2013，Jan.02.2013，2013 年 1 月 2 日  
+例如，如果您指定-D MM/dd/yyyy，dwloader 預期所有輸入第一，排序使用月份的日期則日，然後年 (mdy)。 它不會強制執行 2 個字元的幾個月、 2 位數的天數和所指定的自訂日期格式的 4 位數年份。 以下是一些範例舉出-D MM/dd/yyyy 的日期格式時，可以在輸入檔中設定日期：01/02/2013，Jan.02.2013，2013 年 1 月 2 日  
   
 更廣泛的格式資訊，請參閱[資料類型轉換規則 dwloader](dwloader-data-type-conversion-rules.md)。  
   
@@ -481,7 +482,10 @@ upsert **-K**  *merge_column* [ ,...*n* ]
 確認目標應用裝置具有有效的 SQL Server PDW 憑證來自受信任的授權單位。 使用它來協助確保您的資料未由攻擊者攔截，並傳送給未經授權的位置。 在應用裝置上時，必須已安裝憑證。 支援的唯一方法，將憑證安裝為應用裝置系統管理員使用組態管理員工具進行安裝。 如果您不確定應用裝置是否受信任的憑證安裝要求您的應用裝置系統管理員。  
   
 **-se**  
-略過載入空白檔案。 這也會略過正在解壓縮空 gzip 檔案。  
+略過載入空白檔案。 這也會略過正在解壓縮空 gzip 檔案。
+
+**-l**  
+可用 CU7.4 更新中，指定可載入的最大資料列長度 （以位元組為單位）。 有效值為 32768 到 33554432 之間的整數。 只使用需要時載入大型資料列 （超過 32 KB），因為這將會配置更多的記憶體，在用戶端和伺服器上。
   
 ## <a name="return-code-values"></a>傳回碼值  
 0 （成功） 或其他的整數值 （失敗）  
@@ -542,7 +546,7 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
 -   **upsert** -Upsert 將資料載入至暫存資料表中，而再執行合併作業從暫存表格最終的資料表。 更新插入不需要最後一個資料表的獨佔鎖定。 使用插入時，效能可能會有所不同。 在您的環境中測試的行為。  
   
 ### <a name="locking-behavior"></a>鎖定行為  
-**附加模式鎖定**  
+**附加模式的鎖定**  
   
 附加可以在 （使用-m 引數） 的多個交易式模式執行，但是不安全的交易。 因此附加應該做為交易式作業 （不使用-m 引數）。 不幸的是，最終插入選取作業期間，交易式模式低於目前六倍多的交易式模式。  
   
@@ -600,7 +604,7 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-下列指令碼程式碼片段會使用 dwloader 載入到 DimAccount 和 DimCurrency 資料表的資料。 此指令碼會使用乙太網路位址。 如果它使用 InfiniBand，伺服器會 *< appliance_name >*`-SQLCTL01`。  
+下列指令碼程式碼片段會使用 dwloader 載入到 DimAccount 和 DimCurrency 資料表的資料。 此指令碼會使用乙太網路位址。 如果它使用 InfiniBand，伺服器會 *< appliance_name >* `-SQLCTL01`。  
   
 ```  
 set server=10.193.63.134  

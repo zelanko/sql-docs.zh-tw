@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.queryparameters.mdx.f1
@@ -13,12 +12,12 @@ ms.assetid: e69b9542-7b54-42bf-b2de-c091e81af7ee
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a1d9e03f71f1dbcf2f00cce5185ec0e2b237b4b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7ad326f5205aa7efc3be9aee79af3671d892130
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748502"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070533"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>查詢參數對話方塊 (MDX)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [查詢參數] 對話方塊即可將參數加入至用於定義集合、維度和 Subcube 的 MDX 查詢。 您可以在 [MDX 查詢產生器] 對話方塊中按一下 [參數] 圖示，藉以顯示 [查詢參數] 對話方塊。  

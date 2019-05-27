@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - replacing tables
@@ -17,12 +16,12 @@ ms.assetid: 60c2a018-1299-4915-b60e-e73316524def
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e95468d135cea8b3e9afd80c64dab43f70d7971d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b9f1863fc3d707614b7c957dc5ef49561272d6e6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62736623"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073133"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>取代資料來源檢視中的資料表或具名查詢 (Analysis Services)
   在資料來源檢視設計工具中，您可以將資料來源檢視 (DSV) 中的資料表、檢視表或具名查詢取代為相同或不同資料來源中的不同資料表或檢視表，或是 DSV 中已定義的具名查詢。 當您取代資料表時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫或專案中有參考該資料表的所有其他物件仍可繼續參考該資料表，因為 DSV 中資料表的物件識別碼不變。 仍然相關的所有關聯性 (依據名稱和資料行類型比對) 都會保留下來。 相對而言，如果您先刪除，再加入資料表，則會失去參考和關聯性，而且必須重新建立。  

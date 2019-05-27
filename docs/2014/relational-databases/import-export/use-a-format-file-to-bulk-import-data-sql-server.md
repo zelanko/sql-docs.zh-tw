@@ -10,15 +10,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - format files [SQL Server], importing data using
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fddec2033997a1b76f34fa9a2fe006d385bc0132
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 772dbb86188bf164a2e135f7bb9b71a1cc030745
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155844"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011772"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>使用格式檔案大量匯入資料 (SQL Server)
   此主題說明格式檔案在大量匯入作業中的用法。 格式檔案會將資料檔案的欄位對應到資料表的資料行。  您可以使用非 XML 或 XML 格式檔案來大量匯入資料，當您使用 **bcp** 命令或 BULK INSERT 或 INSERT ......SELECT * FROM OPENROWSET(BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令時，可以使用非 XML 或 XML 格式的檔案來大量匯入資料。  

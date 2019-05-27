@@ -15,15 +15,15 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df5907c3d61de7e3d1ce552c65fb5188f1ab33f9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63228889"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013812"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>使用 sql:limit-field 和 sql:limit-value 篩選值 (SQLXML 4.0)
   您可以根據特定的限制值來限制從資料庫查詢傳回的資料列。 `sql:limit-field` 和 `sql:limit-value` 註解用於識別包含限制值的資料庫資料行，以及指定篩選所傳回之資料所使用的特定限制值。  

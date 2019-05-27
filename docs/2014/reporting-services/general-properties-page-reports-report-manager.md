@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c44bc306aaa1e55aa5005663ecfcfbf261576593
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3b89d67636dd28514b8d5f34bee423e60abd9b81
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63260822"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109093"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>一般屬性頁面，報表 (報表管理員)
   使用報表的 [一般] 屬性頁面，即可重新命名、刪除、移動或取代報表定義。 您也可以使用此頁面來建立連結報表。 在頁面頂端指出有關建立或修改報表的人員，以及發生變更之時間的詳細資料。  

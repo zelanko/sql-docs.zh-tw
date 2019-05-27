@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - LingerTimeout property
@@ -36,12 +35,12 @@ ms.assetid: ef4251e2-abe5-4c5b-9868-7549782d0244
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b000357da2bfa2dac698bef0b500b2193c5f62e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 882b5fc60020423e19f68fda40273b7c944bd4f5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746710"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068880"
 ---
 # <a name="network-properties"></a>網路屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的伺服器屬性。 如需有關其他伺服器屬性及如何設定伺服器屬性的詳細資訊，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  
@@ -90,7 +89,7 @@ ms.locfileid: "62746710"
  `EnableCompression`  
  此為布林值屬性，指定是否針對要求啟用壓縮。  
   
-## <a name="responses"></a>回應  
+## <a name="responses"></a>Responses  
  `CompressionLevel`  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cf5feafd69cb16e1989496de90ce9e7af4df3687
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7bb8790496efb1701baf1636e5c16769e6430aa0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63165019"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109440"
 ---
 # <a name="data-source-selection-page-report-manager"></a>資料來源選擇頁面 (報表管理員)
   您可以使用 [資料來源選擇] 頁面來選取要搭配報表或報表模型使用的現有共用資料來源項目。 您也可以使用此頁面來選取不同的資料來源。 若要檢視資料來源類型或連接字串，您必須導覽到共用資料來源並開啟屬性頁面。  

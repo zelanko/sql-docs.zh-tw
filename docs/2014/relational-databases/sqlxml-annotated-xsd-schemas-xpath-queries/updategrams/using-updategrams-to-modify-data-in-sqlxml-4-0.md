@@ -21,15 +21,15 @@ helpviewer_keywords:
 - deleting data
 - inserting data
 ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afc6b0176145bdb1af499a5de4d0a36527a08de3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b615062ae70c5a7b7ee18869aaa20951dec29b2a
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131767"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014596"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>使用 Updategram 來修改 SQLXML 4.0 中的資料
   您可以修改 （插入、 更新或刪除） 中的資料庫[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]從現有的 XML 文件使用 updategram 或 OPENXML[!INCLUDE[tsql](../../../includes/tsql-md.md)]函式。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 809f893a38af6f269899e8e9d5913116b32864cc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 622fa9e74ca4195363220f00dfa7dd7875f5ba47
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164785"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109510"
 ---
 # <a name="data-alert-messages"></a>資料警示訊息
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料警示電子郵件傳遞兩種類型的資料警示訊息：資料警示結果以及含有錯誤描述的訊息。 包含結果的訊息會通知所有收件者共同感興趣以及對業務決策相當重要的報表資料變更。 如果由於某種原因發生錯誤而無法提供結果，則會改為傳送錯誤訊息。  

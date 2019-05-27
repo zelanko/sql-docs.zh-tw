@@ -11,15 +11,15 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], full-text search
 - troubleshooting [full-text search]
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 33fe6bd04e59f91588f651877295ea265d523635
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cd7ce157e831d32272f6ff2531c39f789a01e901
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63238333"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015084"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>疑難排解全文檢索索引
      

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - data providers [SQLXML], SQLOLEDB Provider
 - DiffGrams [SQLXML], ADO
 ms.assetid: 741fce82-de83-4923-86eb-30acb5b9a5e6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 302136888fe562161c6399a9ba75c50429e301ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ac11a4f5f697e2b2cd0c27a56940a7183c6231da
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63127747"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012474"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>使用 ADO 執行 DiffGram (SQLXML 4.0)
   這個 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 應用程式會使用 ADO 來建立 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接，然後執行 DiffGram。 在此應用程式中，DiffGram 和 XSD 結構描述會儲存在一個檔案中。 應用程式會從指定的檔案載入 DiffGram。 您可以使用任何 DiffGrams （及相關聯的 XSD 結構描述） 中所述[DiffGram 範例](diffgram-examples-sqlxml-4-0.md)。  

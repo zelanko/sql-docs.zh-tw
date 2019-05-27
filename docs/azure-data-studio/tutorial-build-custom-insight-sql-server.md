@@ -31,7 +31,7 @@ ms.locfileid: "65089737"
 
 ## <a name="prerequisites"></a>必要條件
 
-本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。  若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
+本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
 
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 SQL Server](quickstart-sql-server.md)
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 Azure SQL Database](quickstart-sql-database.md)

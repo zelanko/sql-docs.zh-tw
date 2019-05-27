@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8500bbb9946289eca10d126e1d06e1510ef738a8
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 1cc9093bb6d266bd70fe8f53d96b249bc6680324
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994152"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014952"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教學課程：將資料內嵌到 SQL Server 資料集區使用 TRANSACT-SQL
 
@@ -85,7 +85,7 @@ ms.locfileid: "65994152"
 
 下列步驟會將範例 web 點選流資料嵌入使用先前步驟中建立外部資料表的資料集區。
 
-1. 定義您想要將資料插入的資料集區使用之查詢的變數。 CTP 2.3 或更早版本，**模型...sp_data_pool_table_insert_data**需要預存程序。 CTP 2.4 和更新版本，您可以使用`INSERT INTO`陳述式來查詢的結果插入的資料集區 ( **web_clickstream_clicks_data_pool**外部資料表)。
+1. 使用`INSERT INTO`陳述式來查詢的結果插入的資料集區 ( **web_clickstream_clicks_data_pool**外部資料表)。
 
    ```sql
    INSERT INTO web_clickstream_clicks_data_pool

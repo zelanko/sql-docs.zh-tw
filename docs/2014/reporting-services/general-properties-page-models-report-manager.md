@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2523909f2719fb8316acecf8ad0b56ddbe086a36
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 815b8594977321ea8223c16fed166e110008a8b4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63260812"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109105"
 ---
 # <a name="general-properties-page-models-report-manager"></a>一般屬性頁面，模型 (報表管理員)
   您可以使用報表模型的 [一般屬性] 頁面來重新命名、刪除、移動或取代模型定義 (.smdl) 檔案。 有關模型建立者與修改者及變更日期的詳細資料都會顯示在頁面頂端。  

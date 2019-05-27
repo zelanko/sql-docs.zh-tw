@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
@@ -19,12 +18,12 @@ ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35aa267c22d5320ab7f7d912d091e72d00e9e48c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b54bfbdb03f6f2220cf66cb988456b2e6e6a0070
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726852"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076285"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Create a Time Dimension by Generating a Time Table
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，當來源資料庫中沒有任何可用的時間資料表時，您就可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的「維度精靈」來建立時間維度。 您可以透過在 **[選取建立方法]** 頁面上選取下列其中一個選項，完成此作業：  

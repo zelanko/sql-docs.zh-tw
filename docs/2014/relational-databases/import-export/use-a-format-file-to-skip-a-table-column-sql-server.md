@@ -10,15 +10,15 @@ helpviewer_keywords:
 - skipping columns when importing
 - format files [SQL Server], skipping columns
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9bf80986582802ad70c39d62ae0fbb835fcb360e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 80c5c5b2f4e6d4f691b7c3977ae2f715f5424e7f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065719"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011684"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>使用格式檔案以略過資料表資料行 (SQL Server)
   本主題將說明格式檔案。 當欄位不存在於資料檔案中時，您就可以使用格式檔案來略過資料表資料行的匯入。 只有在略過的資料行可為 Null 和/或有預設值時，資料檔案所包含的欄位才可以少於資料表中的資料行數目。  

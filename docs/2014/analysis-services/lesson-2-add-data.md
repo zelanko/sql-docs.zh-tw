@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 696b4e9402e58da6308e6746cadbc25d43396d8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 370e368843fa1e9584cc341397853fcdad26922a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729314"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078967"
 ---
 # <a name="lesson-2-add-data"></a>第 2 課：加入資料
   在這一課，您將會使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中的 [資料表匯入精靈] 連接 AdventureWorksDW SQL Database、選取資料、預覽及篩選資料，然後將資料匯入您的模型工作空間。  
@@ -61,7 +60,7 @@ ms.locfileid: "62729314"
   
     |來源名稱|易記名稱|  
     |-----------------|-------------------|  
-    |DimDate|date|  
+    |DimDate|Date|  
     |DimGeography|Geography|  
     |DimProduct|產品|  
     |DimProductCategory|Product Category|  
@@ -96,7 +95,7 @@ ms.locfileid: "62729314"
   
 4.  藉由清除每個資料表中下列資料行的核取方塊，篩選其餘資料表：  
   
-    |date|  
+    |Date|  
     |----------|  
     |**DateKey**|  
     |**SpanishDayNameOfWeek**|  

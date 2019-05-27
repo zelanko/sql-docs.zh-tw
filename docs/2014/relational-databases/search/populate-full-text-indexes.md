@@ -21,15 +21,15 @@ helpviewer_keywords:
 - full populations [full-text search]
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c8e9ea6b068f39e9e1e63bb5e9831f977619367f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63046150"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011182"
 ---
 # <a name="populate-full-text-indexes"></a>擴展全文檢索索引
   建立和維護全文檢索索引包括使用稱為「母體擴展」(Population) (也稱為「搜耙」(Crawl)) 的處理序來擴展索引。  

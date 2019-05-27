@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c923a239ad0eeb677b476665a4c99b45d430b421
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5a27cbad6803c2106c0af4cbe4060e72cc8ee970
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225656"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108670"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>疑難排解 Reporting Services 安裝
   如果您因為安裝期間發生的錯誤而無法安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，請使用本主題的指示來處理最有可能造成安裝錯誤的狀況。  

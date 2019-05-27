@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.reviewaggregationusage.f1
@@ -13,12 +12,12 @@ ms.assetid: 49ce2094-c4dc-4e46-8cef-c17c5db084ca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a50c241bc70d48577b558827a278d5423ee8344b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a58f7f8620924d4f707fe61c45ae87e19737471f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748250"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070164"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>檢閱彙總使用方式 (基於使用方式的最佳化精靈)
   使用 **[檢閱彙總使用方式]** 頁面，即可設定彙總使用方式設定。  

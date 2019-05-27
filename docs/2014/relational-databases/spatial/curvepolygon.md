@@ -6,15 +6,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 21b3e52c39cb2e1412a7bba468ffc1017a2438ed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62524214"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014244"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   `CurvePolygon` 是由一個外部週框環形以及零或多個內部環形所定義的拓撲封閉介面。  

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c87f0fd65f5657d2885a2c7ea078ecaea7a2c717
-ms.sourcegitcommit: 4cb96c291529e9bdf0a95fb3610b350583eb36d1
+ms.openlocfilehash: a47b311af70c58c36c8c467115c277f300092376
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65709108"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014426"
 ---
 # <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -67,6 +67,7 @@ ms.locfileid: "65709108"
 
 ```sql
 SELECT
+    SCHEMA_NAME(sys.all_objects.schema_id) as SchemaName,
     sys.all_objects.name AS [TableName], sys.all_columns.name As [ColumnName],
     [Label], [Label_ID], [Information_Type], [Information_Type_ID]
 FROM

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - sql:mapped
 - column mapping [SQLXML]
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14934b2b4c98b09a6596887dc2b4ced7ec04dd65
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4878ff0bc8e284af1515d5ea0d531c3a7471a113
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62717755"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013480"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
   XML 大量載入處理序`sql:mapped`是 XSD 結構描述，預期的註釋，如果對應結構描述指定`sql:mapped="false"`任何項目或屬性，XML 大量載入不會嘗試將相關聯的資料儲存在對應的資料行。  

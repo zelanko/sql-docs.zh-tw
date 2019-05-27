@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5418cadc533b5253e15f8677753dd0213319ef0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9c4b80f65b894ebe81ab440e4e7a8f2a7080d2e6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729337"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078912"
 ---
 # <a name="browsing-the-deployed-cube"></a>瀏覽已部署的 Cube
   在下列工作中，您將瀏覽 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube。 我們的分析會跨多個維度比較量值，因此您將使用 Excel 樞紐分析表瀏覽資料。 使用樞紐分析表可讓您將客戶、日期和產品資訊放在不同的軸上，讓您可以看到跨特定時間週期、客戶人口統計資料和產品線檢視時，[網際網路銷售] 如何變更。  

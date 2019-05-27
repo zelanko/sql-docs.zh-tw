@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -15,12 +14,12 @@ ms.assetid: 7e288eee-2d37-485e-a6a0-dbba5e041e26
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bca4cac495ab8076c46d1dc2b7da411e46eae5db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 456989b83877b0c94c07f9074719666ebac3a873
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63193092"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110000"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface-report-builder"></a>Analysis Services MDX 查詢設計工具使用者介面 (報表產生器)
   Report Builder 提供了圖形化查詢設計工具，可用來建立適用於 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料來源的多維度運算式 (MDX) 查詢。 MDX 圖形化查詢設計工具有兩種模式：設計模式和查詢模式。 每一種模式都會提供 [中繼資料] 窗格，您可以在這個窗格中，從選取的 Cube 中拖曳成員，以建立 MDX 查詢，在處理報表時擷取資料。  

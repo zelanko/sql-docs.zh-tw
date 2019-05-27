@@ -9,20 +9,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], table schema
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a5c2c2993b4c6ee002c2be0f8bbae28abaa2d87c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7341919e54a4f669c5251d578ae929f1f4f3e22f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62920129"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010114"
 ---
 # <a name="filetable-schema"></a>FileTable 結構描述
   描述 FileTable 預先定義且固定的結構描述。  
   
-|檔案屬性名稱|型別|大小|預設|描述|檔案系統可存取性|  
+|檔案屬性名稱|type|大小|預設|描述|檔案系統可存取性|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|`hierarchyid`|變數|識別此項目位置的 `hierarchyid`。|此節點在階層式 FileNamespace 中的位置。<br /><br /> 資料表的主索引鍵。|可透過設定 Windows 路徑值加以建立及修改。|  
 |**stream_id**|**[uniqueidentifier] rowguidcol**||`NEWID()` 函數所傳回的值。|FILESTREAM 資料的唯一識別碼。|不適用。|  

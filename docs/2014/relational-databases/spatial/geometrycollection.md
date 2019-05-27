@@ -9,15 +9,15 @@ helpviewer_keywords:
 - GeomCollection geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f19c99786a1b3bd6e219c0b2fd8c0d8258294b91
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5aceabe5a263cfa53572be6f818ddc905f9742a7
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62524567"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014224"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
   `GeometryCollection` 是零或多個 `geometry` 或 `geography` 執行個體的集合。 `GeometryCollection` 可以是空的。  

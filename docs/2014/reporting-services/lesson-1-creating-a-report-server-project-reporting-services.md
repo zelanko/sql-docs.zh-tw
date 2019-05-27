@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 52050b9513de2638cacc394309f7e87d6ba77709
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3f97834b5df61df836b7cfd4cc4d890877f8855a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143270"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108526"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>第 1 課：建立報表伺服器專案 (Reporting Services)
   若要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中建立報表，必須先建立報表伺服器專案，您將在其中儲存報表定義 (.rdl) 檔案以及報表所需的任何其他資源檔案。 然後，您將建立實際的報表定義檔案、定義報表的資料來源、定義資料集，以及定義報表配置。 當您執行報表時，會擷取實際資料並與配置結合，然後轉譯在您的螢幕上，再從螢幕上匯出、列印或儲存資料。  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - data formats [SQL Server], field length
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f5ed900eae974eb768223d534e6ac43025e9718c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: abb451611f7e102e9167561ef2c3a4b64e00fb12
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63154863"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011834"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>使用 bcp 指定欄位長度 (SQL Server)
   欄位長度會指出以字元格式表現資料所需的最大字元數。 如果是以原生格式儲存資料的話，欄位長度眾所皆知；例如，`int` 資料類型會佔用 4 個位元組。 如果指出前置長度為 0 **bcp**命令會提示您輸入欄位長度、 預設的欄位長度，以及欄位長度對包含的資料檔案中的資料儲存體的影響`char`資料。  

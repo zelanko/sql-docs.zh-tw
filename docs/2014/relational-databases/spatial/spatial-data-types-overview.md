@@ -11,15 +11,15 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 135541d4474ab68fc8bdbc294663c8d9bcbc7c14
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9ae74640557f7906ed237341d147926eb3296614
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62715017"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014050"
 ---
 # <a name="spatial-data-types-overview"></a>空間資料類型概觀
   空間資料有兩種類型： `geometry` 資料類型支援平面或 Euclidean (扁平表面) 資料。 `geometry` 資料類型同時符合開放式地理空間協會 (Open Geospatial Consortium，OGC) 的 SQL 簡單特徵規格 1.1.0 版，而且符合 SQL MM (ISO 標準)。  

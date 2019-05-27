@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.reportbody.fill.f1
@@ -20,12 +19,12 @@ ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c8feeb496948b34abd3bd4205e52854211cde5d5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 86f54b00e530e70d1952461ce7b98b9238e4c3f3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63261287"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109162"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>填滿對話方塊 (報表產生器及 SSRS)
   在 [填滿] 索引標籤上，您可以指定資料區或文字方塊內，單一資料格或多個資料格的背景選項。  

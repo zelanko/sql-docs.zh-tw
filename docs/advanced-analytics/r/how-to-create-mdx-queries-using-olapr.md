@@ -3,17 +3,17 @@ title: 如何使用 olapR-SQL Server Machine Learning 服務在 R 中建立 MDX 
 description: 使用 olapR 套件程式庫，在 SQL Server 中的 R 語言指令碼中撰寫 MDX 查詢。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c0b9cb6e9b52ff1823a613c7e81f7b026c22948f
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.openlocfilehash: dfae657f6ab7d8f0cefbdec729e6e836c4f7e4d8
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65357519"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175274"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何在 R 中使用 olapR 建立 MDX 查詢
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -97,7 +97,7 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>使用 olapR 中所提供的函式來建置此查詢
 
 ```R
-cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
+cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
 ocs <- OlapConnection(cnnstr)
 
 qry <- Query()
@@ -113,13 +113,13 @@ result1 <- executeMD(ocs, qry)
 具名的執行個體，請務必逸出任何可能會被視為在 r 中的控制字元的字元 例如，下列連接字串會參考名為 ContosoHQ 的伺服器上的執行個體 OLAP01:
 
 ```R
-cnnstr <- "Data Source=ContosoHQ\\OLAP01; Provider=MSOLAP;"
+cnnstr <- "Data Source=ContosoHQ\\OLAP01; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
 ```
 
 #### <a name="to-run-this-query-as-a-predefined-mdx-string"></a>執行這個查詢作為預先定義的 MDX 字串
 
 ```R
-cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
+cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
 ocs <- OlapConnection(cnnstr)
 
 mdx <- "SELECT {[Measures].[Internet Sales Count], [Measures].[InternetSales-Sales Amount]} ON COLUMNS, {[Product].[Product Line].[Product Line].MEMBERS} ON ROWS FROM [Analysis Services Tutorial] WHERE [Sales Territory].[Sales Territory Country].[Australia]"
@@ -150,7 +150,7 @@ SELECT {[Measures].[Internet Sales Count], [Measures].[Internet Sales-Sales Amou
 > 最後的結果是**不**cube;TRUE 僅表示中繼資料作業成功。 如果引數無效，則會擲回錯誤。
 
 ```R
-cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
+cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
 ocs <- OlapConnection(cnnstr)
 explore(ocs)
 ```
@@ -168,7 +168,7 @@ explore(ocs)
 若要檢視 Cube 或檢視方塊中的所有維度，請指定 Cube 或檢視方塊名稱。
 
 ```R
-cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
+cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
 ocs \<- OlapConnection(cnnstr)
 explore(ocs, "Sales")
 ```
@@ -185,8 +185,8 @@ explore(ocs, "Sales")
 定義來源並建立控制代碼之後，請指定要傳回的 Cube、維度和階層。 在傳回的結果中，前面會加上的項目**->** 代表上一個成員的子系。
 
 ```R
-cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
-ocs \<- OlapConnection(cnnstr)
+cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
+ocs <- OlapConnection(cnnstr)
 explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Category")
 ```
 

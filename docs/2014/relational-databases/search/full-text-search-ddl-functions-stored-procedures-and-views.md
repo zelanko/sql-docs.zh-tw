@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 98c36715-4195-482e-a4a3-d93ff65b75f1
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ae1c272603e410a45e9e6c4d51dab23d34c46a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7db9b0b31d619dc77b537989bfbf281c276e95e4
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62631372"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011304"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>全文檢索搜尋 DDL、函數、預存程序與檢視
   列出支援全文檢索搜尋的 Transact-SQL 陳述式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫物件，包含屬性搜尋功能。  

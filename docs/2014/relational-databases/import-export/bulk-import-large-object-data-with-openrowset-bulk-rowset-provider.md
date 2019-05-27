@@ -16,15 +16,15 @@ helpviewer_keywords:
 - large data, bulk imports
 - SINGLE_BLOB option
 ms.assetid: 171cdd5c-1e47-4bd7-b99a-4f0fd4e10526
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 441c13a725b69d70b4267ec90d7eaeeace2b3070
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f6fe945ea90a150397abecfd83f0ce1c945f217c
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140638"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012105"
 ---
 # <a name="bulk-import-large-object-data-by-using-the-openrowset-bulk-rowset-provider-sql-server"></a>使用 OPENROWSET BULK 資料列集提供者大量匯入大型物件資料 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET Bulk 資料列集提供者可讓您將資料檔案當做大型物件資料大量匯入。  

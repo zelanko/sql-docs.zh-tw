@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4195e8f17f822bc84bf72bb41420a477ab683017
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f8090c75108f7a384019030082699917fca915b6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795475"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067692"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>在 Excel 中進行分析 (SSAS 表格式)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [在 Excel 中進行分析] 功能，為表格式模型製作者提供了一個在開發期間可快速分析模型專案的方法。 [在 Excel 中進行分析] 功能可開啟 Microsoft Excel、建立模型工作空間資料庫的資料來源連接，以及自動將樞紐分析表加入工作表。 工作空間資料庫物件 (資料表、資料行及量值) 會包含在樞紐分析表欄位清單中做為欄位。 接著，即可在有效使用者或角色及檢視方塊的內容中檢視物件及資料。  

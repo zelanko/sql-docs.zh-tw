@@ -9,12 +9,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1f8291eeb292226b3dfcb2bd1a89816926c53d88
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 45c489d7bb2dc6f0fea5815dce4b2f0ef11ae5ad
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993980"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015190"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>如何升級 SQL Server 的巨量資料叢集
 
@@ -45,10 +45,10 @@ ms.locfileid: "65993980"
    pip3 uninstall mssqlctl
    ```
 
-   CTP 2.3 或更新版本，請執行下列命令。 取代`ctp-2.4`在命令中使用新版**mssqlctl**您要解除安裝：
+   CTP 2.3 或更新版本，請執行下列命令。 取代`ctp-2.5`在命令中使用新版**mssqlctl**您要解除安裝：
 
    ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
    ```
 
 1. 安裝最新版**mssqlctl**。 下列命令會安裝**mssqlctl**針對 CTP 3.0:
@@ -56,13 +56,13 @@ ms.locfileid: "65993980"
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
    ```
 
    **Linux:**
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

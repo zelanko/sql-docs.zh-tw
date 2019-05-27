@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10131"
@@ -14,12 +13,12 @@ ms.assetid: 7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5485a0b5ff39f8517ff6e73113f7405cab0a923c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6512f2523b1dc64c1f9505c59b727aad0f15ad2e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188194"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108103"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>預留位置屬性對話方塊、一般 (報表產生器及 SSRS)
   使用 **[預留位置屬性]** 對話方塊可變更文字方塊內某個預留位置的值、工具提示和標記選項。  

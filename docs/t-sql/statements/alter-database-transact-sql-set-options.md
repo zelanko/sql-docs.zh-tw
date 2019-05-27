@@ -29,17 +29,17 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b93af690fb15c7ab62084d7175612508b5a22445
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
+ms.openlocfilehash: 9fe393ecdbef5a515d0850b7d859c1c2a7e670a2
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63202453"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560186"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
-設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Azure SQL Database 中的資料庫選項。 如需其他 ALTER DATABASE 選項，請參閱 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)。
+設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Azure SQL Database 和 Azure SQL 資料倉儲中的資料庫選項。 如需其他 ALTER DATABASE 選項，請參閱 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)。
 
 按一下下列其中一個索引標籤，以查看您所使用之特定 SQL 版本的語法、引數、備註、權限和範例。
 
@@ -51,9 +51,9 @@ ms.locfileid: "63202453"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> |||
-> |---|---|
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||
+> |||||
+> |---|---|---|---|
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
 
 &nbsp;
 
@@ -1148,9 +1148,9 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> |||
-> |---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* SQL Database<br />單一資料庫/彈性集區 \*_**&nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
+> ||||
+> |---|---|---|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* SQL Database<br />單一資料庫/彈性集區 \*_**&nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -1834,9 +1834,9 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> |||
-> |---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL Database<br />受控執行個體 \*_**&nbsp;|
+> ||||
+> |---|---|---|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL Database<br />受控執行個體 \*_**&nbsp;||[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -2442,5 +2442,137 @@ SET QUERY_STORE = ON
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
 - [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
 - [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)
+
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> ||||
+> |---|---|---|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* SQL 資料<br />倉儲 \*_** &nbsp;||||
+
+&nbsp;
+
+## <a name="azure-sql-data-warehouse"></a>Azure SQL 資料倉儲
+
+> [!NOTE]
+> 目前工作階段的許多資料庫 SET 選項都可以使用 [SET 陳述式](../../t-sql/statements/set-statements-transact-sql.md)來設定，而且通常是在應用程式連線時由其加以設定。 工作階段層級 SET 選項會覆寫 **ALTER DATABASE SET** 值。 以下所述的資料庫選項皆為未明確提供其他 SET 選項值，因而可針對工作階段進行設定的值。
+
+## <a name="syntax"></a>語法
+
+```
+ALTER DATABASE { database_name | Current }
+SET
+{
+    <optionspec> [ ,...n ]
+}
+;
+
+<auto_option> ::=
+{}
+RESULT_SET_CACHING { ON | OFF}
+}
+```
+
+## <a name="arguments"></a>引數
+
+*database_name*：這是要修改的資料庫名稱。
+
+**\<auto_option> ::=**
+
+控制自動選項。
+
+**權限**：需要下列權限：
+
+- 由佈建程序建立的伺服器層級主體登入，或
+- dbmanager 資料庫角色的成員。
+
+除非資料庫擁有者是 dbmanager 角色的成員，否則無法變更資料庫。
+
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF } (Gen2 的預覽) 這是連線至 master 資料庫時必須執行的命令。  對此資料庫設定的變更會立即生效。  儲存體的費用會以快取查詢結果集的數目計算。 停用資料庫的結果快取後，會立即從 Azure SQL 資料倉儲儲存體中刪除先前保存的結果快取。 我們在 sys.databases 中導入了稱作 is_result_set_caching_on 的新欄位，來顯示資料庫的結果快取設定。  
+
+ON：指定從這個資料庫傳回的查詢結果集將快取至 Azure SQL 資料倉儲儲存體中。
+
+OFF：指定從這個資料庫傳回的查詢結果集將不會快取至 Azure SQL 資料倉儲儲存體中。
+使用者可以特定 request_id 查詢 sys.pdw_request_steps，來知道是否有結果為命中或遺漏的已執行查詢。   如果有快取命中，則查詢結果會具有包含以下詳細資料的單一步驟：
+
+|**資料行名稱** |**[運算子]** |**ReplTest1** |
+|----|----|----|
+| operation_type|=|ReturnOperation|
+|step_index|=|0|
+|location_type|=|Control|
+command|相似|%DWResultCacheDb%|
+| | |
+
+## <a name="examples"></a>範例
+
+### <a name="enable-result-set-caching-for-a-database"></a>啟用資料庫的結果集快取
+
+```sql
+ALTER DATABASE myTestDW  
+SET RESULT_SET_CACHING ON;
+```
+
+### <a name="disable-result-set-caching-for-a-database"></a>停用資料庫的結果集快取
+
+```sql
+ALTER DATABASE myTestDW  
+SET RESULT_SET_CACHING OFF;
+```
+
+### <a name="check-result-set-caching-setting-for-a-database"></a>檢查資料庫的結果集快取設定
+
+```sql
+SELECT name, is_result_set_caching  
+FROM sys.databases;
+```
+
+### <a name="check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>檢查具結果集快取命中和快取遺漏的查詢數
+
+```sql
+SELECT  
+Queries=CacheHits+CacheMisses,
+CacheHits,
+CacheMisses 
+CacheHitPct=CacheHits*1.0/(CacheHits+CacheMisses)
+FROM  
+(SELECT  
+CacheHits=count(distinct case when s.command like '%DWResultCacheDb%' and
+r.resource_class IS NULL and s.operation_type = 'ReturnOperation' and  
+s.step_index = 0 then s.request_id else null end) , 
+CacheMisses=count(distinct case when r.resource_class IS NOT NULL then  
+s.request_id else null end) 
+     FROM sys.dm_pdw_request_steps s  
+     JOIN sys.dm_pdw_exec_requests r  
+     ON s.request_id = r.request_id) A;
+```
+
+### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>檢查查詢的結果集快取命中或快取遺漏
+
+```sql
+If
+(SELECT step_index  
+FROM sys.dm_pdw_request_steps  
+WHERE request_id = 'QID58286' and operation_type = 'ReturnOperation' and command like '%DWResultCacheDb%') = 0
+SELECT 1 as is_cache_hit  
+ELSE 
+SELECT 0 as is_cache_hit;
+```
+
+### <a name="check-for-all-queries-with-result-set-cache-hits"></a>檢查所有具結果集快取命中的查詢
+
+```sql
+SELECT *  
+FROM sys.dm_pdw_request_steps  
+WHERE command like '%DWResultCacheDb%' and step_index = 0;
+```
+
+## <a name="see-also"></a>另請參閱
+
+- [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
+- [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
+- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
+- [Best practices for Azure SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-best-practices#maintain-statistics) (Azure SQL 資料倉儲的最佳做法)
+- [Designing tables in Azure SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-tables-overview#statistics) (在 Azure SQL 資料倉儲中設計資料表)
+- [SQL Data Warehouse language elements](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements) (SQL 資料倉儲語言元素)
 
 ::: moniker-end

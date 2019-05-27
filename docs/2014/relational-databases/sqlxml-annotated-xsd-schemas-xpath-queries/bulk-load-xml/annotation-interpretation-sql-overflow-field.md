@@ -12,15 +12,15 @@ helpviewer_keywords:
 - overflow data [SQLXML]
 - sql:overflow-field
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 935f1c9ea98c28b7f75e1665de7445f779af41d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 594ebdbad3968ba2efe7e255b28379194d2fb77f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62717765"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013464"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field (SQLXML 4.0)
   在結構描述中，您可以將資料行識別為溢位資料行，以便從 XML 文件中接收所有未耗用的資料。 請藉由使用 `sql:overflow-field` 註解，在結構描述中指定這個資料行。 具有多個溢位資料行是可行的。  

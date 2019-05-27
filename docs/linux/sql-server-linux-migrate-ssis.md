@@ -3,19 +3,19 @@ title: 擷取、 轉換和載入使用 SSIS 在 Linux 上的資料 |Microsoft Do
 description: 這篇文章說明 SQL Server Integration Services (SSIS) 的 Linux 電腦
 author: lrtoyou1223
 ms.author: lle
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
 ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 9790835dfa3f81105ac36818ecdda418c5433a84
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 085c688a71c8f301a06256d49afc4297e9cb0fac
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488351"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66009967"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>擷取、 轉換和載入使用 SSIS 在 Linux 上的資料
 

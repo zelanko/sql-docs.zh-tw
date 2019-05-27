@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Unicode [SQL Server], bulk importing and exporting
 - data formats [SQL Server], Unicode native
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d05e69dd4a094e3f361098583adf3aed7899a018
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b1d115dacc53cb074080931c2ebad88dcaf1c68d
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065676"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011570"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>使用 Unicode 原生格式匯入或匯出資料 (SQL Server)
   當必須從某個 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝將資訊複製到其他安裝時，Unicode 原生格式很有用。 對非字元的資料使用原生格式可節省時間，消除在資料類型與字元格式之間，不必要的來回轉換。 對所有字元資料使用 Unicode 字元格式，可以防止在使用不同字碼頁的伺服器之間大量傳送資料期間，失去任何擴充字元。 任何大量匯入方法都可以讀取以 Unicode 原生格式表示的資料檔。  

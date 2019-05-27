@@ -4,15 +4,15 @@ ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8e65d1f965b45d808ba68a9cdffc87fad6f08814
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.openlocfilehash: 1fb9daa74abd547f23bc78e76b8c0840e9c54af5
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712309"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775773"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>以 SharePoint 模式安裝第一部報表伺服器
 
@@ -410,7 +410,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  Reporting Services 資料警示功能會以電子郵件訊息傳送警示。 若要傳送電子郵件，您可能需要設定 Reporting Services 服務應用程式，以及修改服務應用程式的電子郵件傳遞延伸模組。 如果您計劃針對 Reporting Services 訂閱功能使用電子郵件傳遞延伸模組，則需要電子郵件設定。 如需詳細資訊，請參閱[設定 Reporting Services 服務應用程式的電子郵件 &#40;SharePoint 2013 和 SharePoint 2016&#41;](https://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f)。 
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>將 Reporting Services 內容類型新增至內容庫  
- Reporting Services 會提供預先定義的內容類型，可用來管理共用資料來源 (.rsds) 檔、報表模型 (.smdl) 檔，以及報表產生器的報表定義 (.rdl) 檔。 將 **[報表產生器報表]**、 **[報表模型]** 和 **[報表資料來源]** 內容類型加入至文件庫會啟用 **[新增]** 命令，讓您能夠建立該類型的新文件。 如需詳細資訊，請參閱 [將 Reporting Services 內容類型加入至 SharePoint 文件庫](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
+ Reporting Services 提供預先定義的內容類型，可用來管理共用資料來源 (.rsds) 檔案和報表產生器的報表定義 (.rdl) 檔案。 將 [報表產生器報表] 和 [報表資料來源] 內容類型新增至文件庫會啟用 [新增] 命令，讓您能夠建立該類型的新文件。 如需詳細資訊，請參閱 [將 Reporting Services 內容類型加入至 SharePoint 文件庫](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
   
 ### <a name="activate-the-report-server-file-sync-feature"></a>啟動報表伺服器檔案同步處理功能  
  如果使用者經常直接上傳已發行的報表項目至 SharePoint 文件庫， **[報表伺服器檔案同步處理]** 網站層級功能會很有協助。 檔案同步處理功能會更頻繁地同步處理報表伺服器目錄與文件庫中的項目。 如需詳細資訊，請參閱 [在 SharePoint 管理中心啟動報表伺服器檔案同步處理功能](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)。  

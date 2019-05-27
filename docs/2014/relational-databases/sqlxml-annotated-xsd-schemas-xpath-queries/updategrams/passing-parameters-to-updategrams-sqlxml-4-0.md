@@ -13,15 +13,15 @@ helpviewer_keywords:
 - updategrams [SQLXML], passing parameters
 - null values [SQLXML]
 ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d0d9c0ad613a4453fad62e387a0eb7b0fd67aaa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 92238e27c364c8f09721a55d00c750022b53a18f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131477"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014727"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>將參數傳遞至 Updategrams (SQLXML 4.0)
   Updategrams 是範本，所以您可以將參數傳遞給它們。 如需參數傳遞給範本的詳細資訊，請參閱[Updategram 安全性考量&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)。  

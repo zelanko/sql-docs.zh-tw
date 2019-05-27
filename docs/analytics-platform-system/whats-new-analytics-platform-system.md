@@ -9,17 +9,30 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cc64fdd430e64f7ad1b152234c2a203f453745c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b56791e9fd59aef57c2d107e21eb76896ebb4910
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63243773"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175051"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System，向外延展 MPP 資料倉儲中最新消息
 請參閱什麼是最新的應用裝置更新 Microsoft Analytics Platform System (APS) 的新功能。 APS 是裝載 MPP SQL Server Parallel Data Warehouse 的向外延展內部部署設備。 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.4"></a>
+## <a name="aps-cu74"></a>APS CU7.4
+版本日期-2019 年
+
+### <a name="loading-large-rows-with-dwloader"></a>Dwloader 載入大型資料列
+APS CU7.4 從開始，客戶將能夠使用新的 dwloader 載入大於 32 KB （32,768 個位元組） 的資料表中的資料列。 新的 dwloader 支援-l 參數接受介於 32768 到 33554432 （以位元組為單位） 之間的整數值，載入大於 32 KB 的資料列。 載入大型資料列 （超過 32 KB），因為此參數會配置更多的記憶體，用戶端和伺服器上，可能拖慢載入時，才使用此選項。 您可以下載從新的 dwloader[下載網站](https://www.microsoft.com/download/details.aspx?id=57472)。  
+
+### <a name="hdp-30-and-31-support-with-polybase"></a>HDP 3.0 和 3.1 支援使用 PolyBase
+AP 上的 PolyBase 現在支援 HDP 3.0 和 3.1，透過這項更新。 選項 7 適用於 HDP 3.x 版。 如需詳細資訊，請參閱 < [PolyBase 連線能力](https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql)頁面。
+
+### <a name="utf16-file-support-with-polybase"></a>使用 PolyBase 的 UTF16 檔案支援
+PolyBase 現在支援讀取 UTF16 (LE) 編碼的分隔的文字檔案。 請參閱[建立外部檔案格式](https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql)的設定詳細資料。 
+
 <a name="h2-aps-cu7.3"></a>
 ## <a name="aps-cu73"></a>APS CU7.3
 發行日期為 2018 年 12 月

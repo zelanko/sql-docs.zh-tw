@@ -12,15 +12,15 @@ helpviewer_keywords:
 - DiffGrams [SQLXML], accessing SQLXML functionality
 - .NET Framework [SQLXML], accessing SQLXML functionality
 ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d4235b86669ad6baff481d9e69166b9f22fcf26
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5d4055c52f8d7a9401bf3c9b89754db831d94bb3
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63127639"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012570"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>存取 .NET 環境中的 SQLXML 功能
   此範例顯示：  

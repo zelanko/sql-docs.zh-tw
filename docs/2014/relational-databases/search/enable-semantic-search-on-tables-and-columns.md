@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 46d9b46698e4416f2ad9ab15b2fb8a223ab7b7c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2cd0ea9764007784fb6f999c3115e0a2997d8e2f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62631719"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011376"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>在資料表和資料行上啟用語意搜尋
   描述如何針對包含文件或文字的選取資料行啟用或停用統計語意索引。  
@@ -50,7 +50,7 @@ ms.locfileid: "62631719"
   
 -   如果您針對語言模型無法使用的資料行指定了語言，索引的建立作業就會失敗並且傳回錯誤訊息。  
   
-###  <a name="HowToEnableCreate"></a> 操作說明：沒有全文檢索索引時建立語意索引  
+###  <a name="HowToEnableCreate"></a> 如何：沒有全文檢索索引時建立語意索引  
  當您使用 **CREATE FULLTEXT INDEX** 陳述式來建立新的全文檢索索引時，可以透過指定 **STATISTICAL_SEMANTICS** 關鍵字當作資料行定義的一部分，在資料行層級中啟用語意索引。 此外，當您使用 [全文檢索索引精靈] 來建立新的全文檢索索引時，也可以啟用語意索引。  
   
  **使用 TRANSACT-SQL 建立新的語意索引**  
@@ -115,7 +115,7 @@ GO
  **使用 SQL Server Management Studio 建立新的語意索引**  
  您可以針對想要建立語意索引的每個資料行執行 [全文檢索索引精靈]，並在 [選取資料表資料行] 頁面上啟用 [統計語意]。 如需詳細資訊，包含如何啟動 [全文檢索索引精靈] 的相關資訊，請參閱 [使用全文檢索索引精靈](use-the-full-text-indexing-wizard.md)。  
   
-###  <a name="HowToEnableAlter"></a> 操作說明：使用現有的全文檢索索引時建立語意索引  
+###  <a name="HowToEnableAlter"></a> 如何：使用現有的全文檢索索引時建立語意索引  
  當您使用 **ALTER FULLTEXT INDEX** 陳述式來改變現有的全文檢索索引時，可以加入語意索引。 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的各種對話方塊來加入語意索引。  
   
  **使用 TRANSACT-SQL 加入語意索引**  
@@ -152,7 +152,7 @@ GO
   
 ##  <a name="dropping"></a> 卸除語意索引  
   
-###  <a name="drophow"></a> 操作說明：卸除語意索引  
+###  <a name="drophow"></a> 如何：卸除語意索引  
  當您使用 **ALTER FULLTEXT INDEX** 陳述式來改變現有的全文檢索索引時，可以卸除語意索引。 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的各種對話方塊來卸除語意索引。  
   
  **使用 TRANSACT-SQL 卸除語意索引**  
@@ -191,7 +191,7 @@ GO
   
 ## <a name="checking-whether-semantic-search-is-enabled-on-database-objects"></a>檢查資料庫物件上是否啟用語意搜尋  
   
-###  <a name="HowToCheckEnabled"></a> 操作說明：檢查資料庫物件上是否啟用語意搜尋  
+###  <a name="HowToCheckEnabled"></a> 如何：檢查資料庫物件上是否啟用語意搜尋  
  **資料庫是否已啟用語意搜尋？**  
  查詢 [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/databasepropertyex-transact-sql) 中繼資料函數的 **IsFullTextEnabled** 屬性。  
   
@@ -239,7 +239,7 @@ GO
   
 ## <a name="determining-what-can-be-indexed-for-semantic-search"></a>判斷可建立索引供語意搜尋使用的項目  
   
-###  <a name="HowToCheckLanguages"></a> 操作說明：檢查語意搜尋所支援的語言  
+###  <a name="HowToCheckLanguages"></a> 如何：檢查語意搜尋所支援的語言  
   
 > [!IMPORTANT]  
 >  支援語意索引的語言比支援全文檢索索引的語言要少。 因此，可能會有可建立索引供全文檢索搜尋，但無法用於語意搜尋的資料行。  
@@ -266,7 +266,7 @@ GO
 |葡萄牙文 (葡萄牙)|2070|  
 |西班牙文|3082|  
   
-###  <a name="doctypes"></a> 操作說明：決定可以進行索引的文件類型  
+###  <a name="doctypes"></a> 如何：決定可以進行索引的文件類型  
  查詢目錄檢視 [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)。  
   
  如果您想要索引的文件類型不在支援的類型清單中，則可能必須尋找、下載並安裝其他篩選。 如需詳細資訊，請參閱 [檢視或變更已註冊的篩選與斷詞工具](view-or-change-registered-filters-and-word-breakers.md)。  

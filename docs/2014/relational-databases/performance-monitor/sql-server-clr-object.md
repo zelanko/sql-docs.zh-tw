@@ -21,7 +21,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "63250704"
 ---
 # <a name="sql-server-clr-object"></a>SQL Server 的 CLR 物件
-   **SQLServer:CLR** 物件提供用來監視在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中執行 Common Language Runtime (CLR) 的計數器。  
+  **SQLServer:CLR** 物件提供用來監視在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中執行 Common Language Runtime (CLR) 的計數器。  
   
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **CLR** 計數器。  
   

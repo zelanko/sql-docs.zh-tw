@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a103a0a8681d5128b021783a5e5509c46c9fad32
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: d29b524a3b4615bb6fa02ba6cdf889379b46a22f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65502873"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580128"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -173,8 +173,10 @@ ALTER INDEX { index_name | ALL }
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }  
 }  
   
-```    
-## <a name="arguments"></a>引數  
+```
+
+## <a name="arguments"></a>引數
+
  *index_name*  
  這是索引的名稱。 在資料表或檢視表內，索引名稱必須是唯一的，但在資料庫內就不一定要是唯一的。 索引名稱必須遵照[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
@@ -653,23 +655,28 @@ ONLINE、MAXDOP 和 SORT_IN_TEMPDB 的值並未儲存在系統目錄中。 除�
   
 為了重建叢集資料行存放區索引，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會進行以下作業：  
   
-1.  在進行重建時，取得資料表或分割區上的獨佔鎖定。 在重建期間，資料處於「離線」狀態而且無法使用。  
+1. 在進行重建時，取得資料表或分割區上的獨佔鎖定。 在重建期間，資料處於「離線」狀態而且無法使用。  
   
-2.  藉由實際刪除已經以邏輯方式從資料表刪除的資料列，以重組資料行存放區，而已刪除的位元組會在實體媒體上回收。  
+1. 藉由實際刪除已經以邏輯方式從資料表刪除的資料列，以重組資料行存放區，而已刪除的位元組會在實體媒體上回收。  
   
-3.  從原始資料行存放區索引讀取所有資料，包括差異存放區。 這會將資料合併成新的資料列群組，並將資料列群組壓縮到資料行存放區。  
+1. 從原始資料行存放區索引讀取所有資料，包括差異存放區。 這會將資料合併成新的資料列群組，並將資料列群組壓縮到資料行存放區。  
   
-4.  進行重建時，實體媒體上需要有空間可儲存資料行存放區索引的兩份副本。 當重建完成時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會刪除原始叢集資料行存放區索引。  
+1. 進行重建時，實體媒體上需要有空間可儲存資料行存放區索引的兩份副本。 當重建完成時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會刪除原始叢集資料行存放區索引。
+
+1. 若為具有已排序叢集資料行存放區索引的 Azure SQL 資料倉儲資料表，則 ALTER INDEX REBUILD 將重新排序資料。  
   
-## <a name="reorganizing-indexes"></a> 重新組織索引  
+## <a name="reorganizing-indexes"></a> 重新組織索引
 重新組織索引所用的系統資源最少。 它會實際重新排序分葉層級的頁面，使它們由左至右符合分葉節點的邏輯順序，以重新組織資料表和檢視表之叢集和非叢集索引的分葉層級。 重新組織也會壓縮索引頁面。 壓縮是以現有填滿因數值為基礎。 若要檢視填滿因數設定，請使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。  
   
 當指定 ALL 時，會重新組織資料表的叢集和非叢集關聯式索引及 XML 索引。 當指定 ALL 時，適用某些限制，請參閱本文＜引數＞一節中的 ALL 定義。  
   
 如需詳細資訊，請參閱 [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
- 
+
 > [!IMPORTANT]
 > 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中重新組織索引時，不會更新統計資料。
+
+>[!IMPORTANT]
+> 若為具有已排序叢集資料行存放區索引的 Azure SQL 資料倉儲資料表，則 `ALTER INDEX REORGANIZE` 不會重新排序資料。 若要重新排序資料，請使用 `ALTER INDEX REBUILD`。
   
 ## <a name="disabling-indexes"></a> 停用索引  
 停用索引可防止使用者存取索引，如果是叢集索引，則可防止使用者存取基礎資料表的資料。 索引定義會保留在系統目錄中。 停用檢視的非叢集索引或叢集索引時，會實際刪除索引資料。 停用叢集索引可防止存取資料，資料仍會保留在 B 型樹狀目錄中，但不進行維護，直到卸除或重建索引為止。 若要檢視已啟用或已停用索引的狀態，請查詢 **sys.indexes** 目錄檢視中的 **is_disabled** 資料行。  

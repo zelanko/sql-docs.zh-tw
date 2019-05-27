@@ -27,7 +27,7 @@ ms.locfileid: "63248905"
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>適用於 COM 的 ADO for Visual C++ 語法索引
 這個索引是根據 Microsoft Visual ADO 語言參考的交互參照C++。  
   
- 如果您使用 **#import**指示詞會在您的應用程式中，標頭檔將會產生可讓您使用類似到 Microsoft Visual Basic 語法。 屬性名稱的表單**get_**_PropertyName_並**put_**_PropertyName_可以視為如同它們宣告只是為*PropertyName*。 屬性可以被視為資料成員，而不是函式。  
+ 如果您使用 **#import**指示詞會在您的應用程式中，標頭檔將會產生可讓您使用類似到 Microsoft Visual Basic 語法。 屬性名稱的表單**get_** _PropertyName_ 並 **put_** _PropertyName_可以視為如同它們宣告只是為*PropertyName*。 屬性可以被視為資料成員，而不是函式。  
   
  所有方法、 屬性和事件都傳回的函式**HRESULT**，您可以測試會判斷如果函式執行成功。  
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - mapping-schema attribute
 - record deletions [SQLXML]
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 808cac0491d7a62ef6a7616745dfb56874299f6a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+ms.openlocfilehash: 444ef7d8c95b0cbd41ba3fbb55a6fbeb30870462
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294344"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014872"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 刪除資料 (SQLXML 4.0)
   當記錄執行個體中出現時，updategram 代表刪除作業 **\<之前>** 區塊中沒有對應記錄 **\<之後>** 區塊。 在此情況下，updategram 會刪除中的資料錄 **\<之前>** 從資料庫的區塊。  

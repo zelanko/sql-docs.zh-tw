@@ -1,8 +1,8 @@
 ---
 title: 將報表伺服器的存取權授與使用者 | Microsoft Docs
-ms.date: 05/15/2017
+ms.date: 05/6/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2baff221e28428daaf57deb8aaec7e8eb6d0d267
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d255d798bc73d446c22dff112606165a1def8ea4
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021852"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449685"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>將報表伺服器的存取權授與使用者
 
@@ -29,7 +29,7 @@ ms.locfileid: "50021852"
 
  **SharePoint 模式報表伺服器：** 若為針對 SharePoint 整合模式所設定的報表伺服器，您可以設定使用 SharePoint 權限從 SharePoint 網站存取的方式。 SharePoint 網站的權限等級會決定報表伺服器內容和作業的存取權。 您必須是網站管理員，才能授與 SharePoint 網站的權限。 如需詳細資訊，請參閱 [授與 SharePoint 網站上報表伺服器項目的權限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)。
 
- **原生模式報表伺服器：** 此主題的重點在於為原生模式所設定的報表伺服器，以及使用入口網站將使用者指派至角色。 目前有兩種角色類型：
+ **原生模式報表伺服器：** 本文的重點在於為原生模式所設定的報表伺服器，以及使用入口網站將使用者指派給角色。 目前有兩種角色類型：
 
 - 項目層級角色是用來檢視、加入和管理報表伺服器內容、訂閱、報表處理，以及報表記錄。 項目層級角色指派定義於根節點 ([主資料夾] 資料夾) 或階層中更低的特定資料夾或項目上。
 
@@ -61,7 +61,7 @@ ms.locfileid: "50021852"
 
 5. 選取 [新增群組或使用者]。
 
-6. 在 [群組或使用者] 中，使用下列格式來輸入 Windows 網域使用者或群組帳戶：\<網域>\\<帳戶\>。 
+6. 在 [群組或使用者] 中，使用下列格式來輸入 Windows 網域使用者或群組帳戶：\<網域>\\<帳戶\>。
 
     > [!NOTE]
     > 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。
@@ -95,10 +95,8 @@ ms.locfileid: "50021852"
 
 ## <a name="next-steps"></a>後續步驟
 
-[建立和管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[新增角色指派：編輯角色指派頁面 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[安全性屬性頁面，項目 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
-[角色指派](../../reporting-services/security/role-assignments.md)   
+[建立及管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)  
+[角色指派](../../reporting-services/security/role-assignments.md)  
 [角色定義](../../reporting-services/security/role-definitions.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

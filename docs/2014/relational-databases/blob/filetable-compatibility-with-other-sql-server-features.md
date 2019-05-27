@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8ab7963d83937c3572363ea921724cefb8b4adff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c8ea6a5fcfe99926c264fc2116a637f8d30c05df
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62920796"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010147"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable 與其他 SQL Server 功能的相容性
   描述 FileTable 如何搭配其他的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能一起運作。  

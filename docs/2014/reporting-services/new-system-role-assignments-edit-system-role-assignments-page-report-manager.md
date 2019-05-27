@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 18adcf15f92ded91a4bacc5342162b82b4aec375
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 661ae0cafe5b484839bbee2531f82f3b62f72c75
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188412"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108124"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>新增系統角色指派：編輯系統角色指派頁面 （報表管理員）
   使用 [新增系統角色指派] 或 [編輯系統角色指派] 頁面來定義報表伺服器的安全性。 所有的安全性都透過角色指派來定義，角色指派會對應特定使用者或群組至其可執行的工作。 以您在進行角色指派時選取的角色定義來表示工作清單。  
@@ -42,7 +41,7 @@ ms.locfileid: "63188412"
   
 4.  若要建立新的角色指派，請在工具列中，按一下 **[新增角色指派]** 。 若要編輯現有的角色指派，請在 [安全性] 屬性頁面上，按一下群組或使用者旁的 **[編輯]** 。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **群組或使用者**  
  輸入網域中之群組或使用者帳戶的名稱。 如果是以本機帳戶執行報表伺服器，您就必須指定本機群組或使用者。 如果是以網域帳戶執行報表伺服器，您就必須指定網域群組或使用者。 這種格式來輸入帳戶：\<網域 >\\< 帳戶\>。  
   

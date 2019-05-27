@@ -18,15 +18,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - Transact-SQL bulk export/import operations
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e8bbc4289a31d39c6e2801b39ec24039a69973d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e8b09ee01da2dde8e8bf50fbda21c1c8bca1689d
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63151638"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011940"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>使用 BULK INSERT 或 OPENROWSET(BULK...) 匯入大量資料 (SQL Server)
   本主題提供一個概觀，說明如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT 陳述式與 INSERT...SELECT * FROM OPENROWSET(BULK...) 陳述式，從資料檔案大量匯入資料到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。 本主題也將說明有關使用 BULK INSERT 和 OPENROWSET(BULK…)，以及使用這些方法從遠端資料來源大量匯入時的安全性考量。  
@@ -64,14 +64,14 @@ ms.locfileid: "63151638"
   
 -   [使用格式檔案將資料表資料行對應至資料檔案欄位 &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="openrowsetbulk-function"></a>OPENROWSET函數  
+## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK...)函數  
  OPENROWSET BULK 資料列集提供者可透過呼叫 OPENROWSET 函數及指定 BULK 選項加以存取。 OPENROWSET(BULK…) 函數可讓您透過 OLE DB 提供者連接到遠端資料來源 (例如資料檔案)，以存取遠端資料。  
   
  若要大量匯入資料，請從 INSERT 陳述式內的 SELECT…FROM 子句呼叫 OPENROWSET(BULK…)。 大量匯入資料的基本語法是：  
   
  INSERT ...SELECT * FROM OPENROWSET(BULK...)  
   
- 當用於 INSERT 陳述式時，OPENROWSET(BULK...) 支援資料表提示。 除了一般的資料表提示，例如 TABLOCK，BULK 子句可接受下列特殊化的資料表提示：（忽略 CHECK 條件約束） 的 IGNORE_CONSTRAINTS、 IGNORE_TRIGGERS、 KEEPDEFAULTS 和 KEEPIDENTITY。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)。  
+ 當用於 INSERT 陳述式時，OPENROWSET(BULK...) 支援資料表提示。 除了一般的資料表提示 (例如 TABLOCK) 之外，BULK 子句也接受下列特殊化資料表提示：IGNORE_CONSTRAINTS (僅忽略 CHECK 條件約束)、IGNORE_TRIGGERS、KEEPDEFAULTS 及 KEEPIDENTITY。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)。  
   
  如需 BULK 選項其他用法的資訊，請參閱 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)。  
   

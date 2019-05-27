@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - administering Report Builder
@@ -13,12 +12,12 @@ ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0272c7598e34d7ba920484b3d2b9c504587212cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 084d90ad20dbd1955894f20524e6f040231f5ae9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63261331"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108953"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>安裝、解除安裝和報表產生器支援
   報表產生器是一項報表撰寫工具，可用來建立、更新和共用報表、報表組件和共用資料集。 報表產生器有提供兩個版本：單機版和 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]。 單機版是由您或系統管理員安裝在電腦上。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本是隨 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 自動安裝，而且從報表管理員或與 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]整合的 SharePoint 網站下載到電腦。  

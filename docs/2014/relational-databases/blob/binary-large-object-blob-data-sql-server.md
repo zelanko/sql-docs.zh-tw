@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], design and implementation
 ms.assetid: 97509274-c3f8-43e5-a37c-52f1ffe0961a
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f954925cc33bccb5706c5609d8d45359282fd159
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7f549f1c851ff09b165dae055b8bb18f01a66fcb
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62920294"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010343"
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>二進位大型物件 (Blob) 資料 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供在資料庫中或遠端存放裝置上儲存檔案和文件的解決方案。  

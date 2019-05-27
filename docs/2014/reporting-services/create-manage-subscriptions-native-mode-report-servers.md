@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], managing
@@ -13,12 +12,12 @@ ms.assetid: 7f46cbdb-5102-4941-bca2-5e0ff9012c6b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f93148eed4b059a3c7f9a591b08b885c948ffd4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d6f18ff05cf6283e4358e8f8afd76a5858b0b41a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63265435"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109602"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>建立及管理原生模式報表伺服器的訂閱
   此章節包含有關訂閱處理、監視和控制的主題。 訂閱管理在標準訂閱和資料驅動訂閱不同。 標準訂閱通常為使用者所擁有並管理。 相對地，資料驅動訂閱通常由報表伺服器管理員建立和維護。  

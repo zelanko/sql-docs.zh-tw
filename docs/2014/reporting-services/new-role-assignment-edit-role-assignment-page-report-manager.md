@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fc4dd805faffb9fcf172f372f48d497a037fd16c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a9480b0729e7c08117ba5633c6934eca1903a61b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188403"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108159"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>新增角色指派：編輯角色指派頁面 （報表管理員）
   您可以使用 [新增角色指派] 或 [編輯角色指派] 頁面來授與報表伺服器項目和作業的權限。 每位需要存取報表伺服器的使用者至少都必須具有一個定義存取層級的角色指派。 您可以在根節點，或在特定的報表、模型、資料夾、資源或共用資料來源上，建立角色指派。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 透過您套用至項目的角色指派，可以強制執行安全性。 角色指派使群組或使用者符合角色定義，其中每一個角色定義識別群組或使用者可對特定項目執行的工作。  

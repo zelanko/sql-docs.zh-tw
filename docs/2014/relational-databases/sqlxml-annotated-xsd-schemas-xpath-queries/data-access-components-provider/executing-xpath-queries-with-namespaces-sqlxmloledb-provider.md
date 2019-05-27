@@ -14,15 +14,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], SQLXMLOLEDB Provider
 - namespaces [SQLXML], XPath queries
 ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3408a729c21f9e420d90e5e38a41b09b766b6b81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f72c5841989eb12f89eda34fbfb310e125612d1d
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62856547"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013074"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>執行含有命名空間的 XPath 查詢 (SQLXMLOLEDB 提供者)
   XPath 查詢可以包含命名空間。 如果結構描述元素會限定命名空間 (亦即，如果它們包含目標命名空間)，針對此結構描述進行的 XPath 查詢就必須指定此命名空間。  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], performance
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 88629dc1457d148b4a8e01537e35f2f5ccfbbdb3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 42aa89a111697f17f23613761eeeb462494bdd27
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63273153"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011254"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改善全文檢索索引的效能
   全文檢索索引與全文檢索查詢的效能會受硬體資源的影響，例如記憶體、磁碟速度、CPU 速度與電腦架構。  

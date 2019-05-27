@@ -14,15 +14,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4024ffd9bee842173998fed81c9bbf80152fa530
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe48b26960db591ce803b1f110e9293fd22d6554
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126775"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011518"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>設定及管理全文檢索搜尋的停用字詞與停用字詞表
   為精簡全文檢索索引， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有一種機制，可捨棄無助於搜尋卻經常出現的字串。 這些捨棄的字串稱為 *「停用字詞」*(Stopword)。 在索引建立期間，全文檢索引擎會從全文檢索索引省略停用字詞。 這代表全文檢索查詢不會搜尋停用字詞。  
@@ -144,7 +144,7 @@ ms.locfileid: "48126775"
   
 5.  在 [[全文檢索停用字詞表屬性]](../../database-engine/full-text-stoplist-properties.md) 對話方塊中：  
   
-    1.  在 **[動作]** 清單方塊中，選取下列其中一個動作： **[加入停用字詞]**、 **[刪除停用字詞]**、 **[刪除所有停用字詞]** 或 **[清除停用字詞表]**。  
+    1.  在 [動作] 清單方塊中，選取下列其中一個動作：[新停用字詞]、[刪除停用字詞]、[刪除所有停用字詞] 或 [清除停用字詞表]。  
   
     2.  如果已針對選定動作啟用 **[停用字詞]** 文字方塊，請輸入單一停用字詞。 這個停用字詞必須是唯一的，亦即，尚未存在您所選取之語言的這個停用字詞表中。  
   

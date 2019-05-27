@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ade92e15-dfbf-496b-9378-a00bd83ba750
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 16269f5c0d7b3d64c9639862995dee44146efb9e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 03411134eb1350adcd37badd458e7f7a0198a9ec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743930"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071923"
 ---
 # <a name="the-following-features-are-not-supported-by-excel-services-and-may-not-display-or-may-display-only-partially-comments-shapes-or-other-objects"></a>下列功能不受 Excel Services 的支援，而且可能不會顯示或是只顯示一部分：註解、形狀或其他物件
   當您從 PowerPivot 欄位清單將交叉分析篩選器加入到 PowerPivot 活頁簿時，將會發生這個錯誤。  

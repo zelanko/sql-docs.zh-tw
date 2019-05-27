@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.centerandzoom.f1
@@ -14,12 +13,12 @@ ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0e345ca44b152986e0e8c7eae87d8a2a50481c8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4a5c71344fe45df4265db72e9fd6dc41ac13bd98
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278993"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108284"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>地圖檢視區屬性對話方塊、置中與縮放
   選取 **[地圖檢視區屬性]** 對話方塊的 **[置中與縮放]** 來設定地圖的置中檢視與縮放因數。 指定地圖資料來源與您要包含在報表中之報表的界限之後，您可以指定檢視置中與縮放因數來進一步控制地圖顯示。 根據您用來指定置中與縮放值的方法，選項可能有所不同。 按一下 **[運算式]** (*fx*) 按鈕來編輯設定選項值的運算式。  

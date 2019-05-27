@@ -8,15 +8,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MultiPoint geometry subtype [SQL Server]
 ms.assetid: 2aaab211-3aba-4dbd-90b7-095d997b1f62
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 36c0268ef87eb4cd9996744f9ff0015bf499a9a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c06ed0be91d64e02f30d6ef4fbebb68e3b9a1272
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62659971"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014170"
 ---
 # <a name="multipoint"></a>MultiPoint
   `MultiPoint` 是零或多個點的集合。 `MultiPoint` 執行個體的界限是空的。  

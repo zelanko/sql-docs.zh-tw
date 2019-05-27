@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - translations [Analysis Services], client applications
@@ -17,12 +16,12 @@ ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8713ed58df138efbaacd8f6ff4b5d31ef0708d85
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4b94579317abf51f8545bce687ef6a8a882e7233
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730815"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080855"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>全球化秘訣和最佳作法 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  僅限多維度  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ca3448efc180a82363023106baf33f973e666fb6
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: a2f7f6c2929f1b16d0e845bc72a50cc50f3d8812
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993353"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014985"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>版本資訊適用於 SQL Server 上的巨量資料叢集
 
@@ -37,6 +37,7 @@ ms.locfileid: "65993353"
 | 儲存體的增強功能 | 支援不同的儲存體設定為記錄檔和資料。 此外，已減少的巨量資料叢集的永續性磁碟區宣告數。 |
 | 多個計算集區執行個體 | 支援多個計算集區執行個體。 |
 | 新的集區行為和功能 | 計算集區現在會依預設儲存體集區和資料集區中的作業**ROUND_ROBIN**只發佈。 資料集區現在可以使用新的新**複寫**散發類型，這表示相同的資料會出現在所有資料集區執行個體。 |
+| 外部資料表的增強功能 | 外部資料表的 HADOOP 資料來源類型現在支援讀取資料列大小上限為 1MB。 外部資料表 （ODBC、 存放集區、 資料集區） 現在支援的資料列的 SQL Server 資料表一樣寬。 |
 
 ### <a name="known-issues"></a>已知問題
 
@@ -131,12 +132,12 @@ ms.locfileid: "65993353"
 
 | 新功能或更新 | 詳細資料 |
 |:---|:---|
-| 部署設定檔 | 使用預設和自訂[部署組態 JSON 檔](deployment-guidance.md#configfile)適用於巨量資料叢集部署，而不是環境變數。 |
-| 提示的部署 | `mssqlctl cluster create` 現在會提示您輸入任何必要的設定預設部署。 |
-| 服務端點和 pod 名稱變更 | 下列的外部端點已變更名稱：<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
-| **mssqlctl** improvements | 使用**mssqlctl**要[列出外部端點](deployment-guidance.md#endpoints)，並檢查版本**mssqlctl**與`--version`參數。 |
+| 部署設定檔 | 將預設和自訂[部署設定 JSON 檔案](deployment-guidance.md#configfile)用於巨量資料叢集部署，而不是環境變數。 |
+| 提示的部署 | `mssqlctl cluster create` 現在會提示您輸入預設部署的任何必要設定。 |
+| 服務端點和 Pod 名稱變更 | 下列的外部端點已變更名稱：<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
+| **mssqlctl** 改善 | 使用 **mssqlctl** 來[列出外部端點](deployment-guidance.md#endpoints)，並使用 `--version` 參數檢查 **mssqlctl** 的版本。 |
 | 離線安裝 | 適用於離線的巨量資料叢集部署的指引。 |
-| HDFS 分層的增強功能 | S3 層，掛接快取和 OAuth 支援 ADLS Gen2。 |
+| HDFS 階層處理改善 | S3 層，掛接快取和 OAuth 支援 ADLS Gen2。 |
 | 新`mssql`Spark SQL Server 連接器 | |
 
 ### <a name="known-issues"></a>已知問題
@@ -220,10 +221,10 @@ ms.locfileid: "65993353"
 | 新功能或更新 | 詳細資料 |
 |:---|:---|
 | 說明在 Spark 中透過 TensorFlow 執行深度學習時的 GPU 支援。 | [部署具有 GPU 支援的巨量資料叢集並執行 TensorFlow](spark-gpu-tensorflow.md)。 |
-| **SqlDataPool**並**SqlStoragePool**預設不會再建立資料來源。 | 視需要手動建立這些。 請參閱[已知問題](#externaltablesctp24)。 |
-| 資料集區的 `INSERT INTO SELECT` 支援。 | 如需範例，請參閱[教學課程：將資料內嵌到 SQL Server 資料集區使用 TRANSACT-SQL](tutorial-data-pool-ingest-sql.md)。 |
-| `FORCE SCALEOUTEXECUTION` 和`DISABLE SCALEOUTEXECUTION`選項。 | 強制或停用外部資料表上的查詢集區的計算使用。 例如， `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)` 。 |
-| 已更新的 AKS 部署建議。 | 在 AKS 上的巨量資料叢集時，我們現在建議使用單一節點的大小**Standard_L8s**。 |
+| 預設不會再建立 **SqlDataPool** 和 **SqlStoragePool** 資料來源。 | 視需要手動建立這些資料來源。 請參閱[已知問題](#externaltablesctp24)。 |
+| 資料集區的 `INSERT INTO SELECT` 支援。 | 如需範例，請參閱[教學課程：使用 Transact-SQL 將資料內嵌到 SQL Server 資料集區](tutorial-data-pool-ingest-sql.md)。 |
+| `FORCE SCALEOUTEXECUTION` 和 `DISABLE SCALEOUTEXECUTION` 選項。 | 強制或停用外部資料表上的查詢集區的計算使用。 例如， `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)` 。 |
+| 更新的 AKS 部署建議。 | 評估 AKS 上的巨量資料叢集時，我們現在建議您使用大小為 **Standard_L8s** 的單一節點。 |
 | 將 Spark 執行階段升級至 Spark 2.4。 | |
 
 ### <a name="known-issues"></a>已知問題
@@ -350,17 +351,17 @@ make: *** [deploy-clean] Error 2
 
 | 新功能或更新 | 詳細資料 |
 | :---------- | :------ |
-| 將在 IntelliJ 中的巨量資料叢集上的 Spark 作業提交。 | [將 SQL Server 在 IntelliJ 中的巨量資料叢集上的 Spark 作業提交](spark-submit-job-intellij-tool-plugin.md) |
-| 適用於應用程式部署和叢集管理的常見 CLI。 | [如何部署 SQL Server 2019 巨量資料叢集 （預覽） 上的應用程式](big-data-cluster-create-apps.md) |
-| VS Code 延伸模組，巨量資料叢集來部署應用程式。 | [如何使用 VS Code 來部署應用程式到 SQL Server 的巨量資料叢集](app-deployment-extension.md) |
-| 若要變更**mssqlctl**工具命令使用方式。 | 如需詳細資訊，請參閱[mssqlctl 的已知問題](#mssqlctlctp23)。 |
+| 在 IntelliJ 中於巨量資料叢集上提交 Spark 作業。 | [在 IntelliJ 中於 SQL Server 巨量資料叢集上提交 Spark 作業](spark-submit-job-intellij-tool-plugin.md) |
+| 適用於應用程式部署和叢集管理的一般 CLI。 | [如何在 SQL Server 2019 巨量資料叢集 (預覽) 上部署應用程式](big-data-cluster-create-apps.md) |
+| 用來將應用程式部署到巨量資料叢集的 VS Code 延伸模組。 | [如何使用 VS Code 將應用程式部署到 SQL Server 巨量資料叢集](app-deployment-extension.md) |
+| **mssqlctl** 工具命令使用方式的變更。 | 如需詳細資料，請參閱 [ 的已知問題](#mssqlctlctp23)。 |
 | Sparklyr 用於巨量資料叢集 | [在 SQL Server 2019 巨量資料叢集中使用 Sparklyr](sparklyr-from-RStudio.md) |
-| 將外部 HDFS 相容儲存體裝載至具備 **HDFS 階層處理**的巨量資料叢集。 | 請參閱[HDFS 分層](hdfs-tiering.md)。 |
-| SQL Server 的主要執行個體與 HDFS/Spark 閘道的新統一的連線體驗。 | 請參閱[SQL Server 的主要執行個體和 HDFS/Spark 閘道](connect-to-big-data-cluster.md)。 |
-| 刪除與叢集**mssqlctl 叢集刪除**現在會刪除只物件命名空間中的巨量資料叢集的一部分。 | 命名空間不會刪除。 不過，在舊版中此命令並未刪除整個命名空間。 |
-| _安全性_端點名稱已變更和彙總。 | **服務-安全性-lb**並**服務-安全性-nodeport**已合併到**端點安全性**端點。 |
-| _Proxy_端點名稱已變更和彙總。 | **服務-proxy-lb**並**服務-proxy-nodeport**已合併到**端點服務 proxy**端點。 |
-| _控制器_端點名稱已變更和彙總。 | **服務-mssql-控制站-lb**並**服務-mssql-控制站-nodeport**已合併到**端點控制器**端點。 |
+| 將外部 HDFS 相容儲存體裝載至具備 **HDFS 階層處理**的巨量資料叢集。 | 請參閱 [HDFS 階層處理](hdfs-tiering.md)。 |
+| SQL Server 主要執行個體與 HDFS/Spark 閘道的新整合連線體驗。 | 請參閱 [SQL Server 主要執行個體與 HDFS/Spark 閘道](connect-to-big-data-cluster.md)。 |
+| 使用 **mssqlctl cluster delete** 刪除叢集，現在只會刪除命名空間中屬於巨量資料叢集一部分的物件。 | 不會刪除命名空間。 但是在舊版中，此命令確實會刪除整個命名空間。 |
+| _Security_ 端點名稱已變更並合併。 | **service-security-lb** 和 **service-security-nodeport** 已合併為 **endpoint-security** 端點。 |
+| _Proxy_ 端點名稱已變更並合併。 | **service-proxy-lb** 和 **service-proxy-nodeport** 已合併為 **endpoint-service-proxy** 端點。 |
+| _Controller_ 端點名稱已變更並合併。 | **service-mssql-controller-lb** 和 **service-mssql-controller-nodeport** 已合併為 **endpoint-controller** 端點。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知問題

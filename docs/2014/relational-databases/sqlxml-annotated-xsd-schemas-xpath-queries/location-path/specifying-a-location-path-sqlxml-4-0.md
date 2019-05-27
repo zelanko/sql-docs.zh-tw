@@ -13,15 +13,15 @@ helpviewer_keywords:
 - relative location path [SQLXML]
 - location path for XPath query
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c814d1b486a7ba7736cf19119a66ab0845d33c6b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+ms.openlocfilehash: 795e27c020c9ea4c80c858da734ebd315d56615c
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63127586"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012660"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>指定位置路徑 (SQLXML 4.0)
   XPath 查詢會以運算式的形式指定。 運算式有各種不同的類型。 位置路徑是一個運算式，可用來選取相對於內容節點的一組節點。 評估位置路徑的結果為節點集。  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cfb635287a0baa2d3a9e8f59d9590c278cbf28b2
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239365"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010940"
 ---
 # <a name="integrated-terminal"></a>整合式終端機
 
@@ -94,17 +94,17 @@ ms.locfileid: "63239365"
 
 以下是快速瀏覽整合式終端機中的鍵盤快速鍵：
 
-索引鍵|命令
----|---
-**Ctrl +'**|顯示整合式終端機
-**Ctrl + Shift +'**|建立新的終端機
-**Ctrl+Up**|向上捲動
-**Ctrl+Down**|向下捲動
-**Ctrl+PageUp**|向上捲動一頁
-**Ctrl+PageDown**|向下捲動一頁
-**Ctrl+Home**|捲動至上方
-**Ctrl+End**|捲動至底端
-**Ctrl+K**|清除 終端機
+|索引鍵|命令|  
+|---|---|  
+|**Ctrl+\`**|顯示整合式終端機|  
+|**Ctrl+Shift+\`**|建立新的終端機|  
+|**Ctrl+Up**|向上捲動|  
+|**Ctrl+Down**|向下捲動|  
+|**Ctrl+PageUp**|向上捲動一頁|  
+|**Ctrl+PageDown**|向下捲動一頁|  
+|**Ctrl+Home**|捲動至上方|  
+|**Ctrl+End**|捲動至底端|  
+|**Ctrl+K**|清除 終端機|  
 
 其他終端機命令可用，並可以繫結至您慣用的鍵盤快速鍵。
 

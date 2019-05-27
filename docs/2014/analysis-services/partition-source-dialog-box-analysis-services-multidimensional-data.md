@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionsourcedialog.f1
@@ -13,12 +12,12 @@ ms.assetid: c414dabe-9bad-49b7-9a3c-dfca87fef92b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f88f307f9cbace833a83603e0f24382b7e82e62f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2102d28a61a99ed9ed6786dd8f2dee196066045c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743564"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072153"
 ---
 # <a name="partition-source-dialog-box-analysis-services---multidimensional-data"></a>資料分割來源對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [資料分割來源] 對話方塊，即可指定資料分割之事實資料表資料的來源。 您可依下列方式顯示 [資料分割來源] 對話方塊：  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 10d6d79587051b78f212c5fbe4a9d866ee0c75e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143944"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108654"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>解除安裝單機版報表產生器 (報表產生器)
   您可以從控制台或命令列解除安裝單機版本的報表產生器。 如果沒有解除安裝 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]，您就不能解除安裝 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 版本的報表產生器。  

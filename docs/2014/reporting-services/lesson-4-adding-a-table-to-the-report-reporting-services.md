@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d6255750df935fd3112f0e3b41941983a4882a0b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3bb152b749041451cdb3a3294c24d8b172c49a99
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063399"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108444"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>第 4 課：將資料表新增至報表 (Reporting Services)
   定義資料集之後，您就可以開始設計報表。 您可以將資料區域、文字方塊、影像和您要包含在報表中的其他項目拖放至設計介面來建立報表配置。  

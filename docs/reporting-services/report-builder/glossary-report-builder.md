@@ -2,27 +2,26 @@
 title: 詞彙 (報表產生器) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: faf7a9e3279d8a2a5606d21c359d6a4a2697cbeb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3f4f8a9e97890f398c61210b6f00829b6add20c1
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296471"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580723"
 ---
 # <a name="glossary-report-builder"></a>詞彙 (報表產生器)
   
-  
 |詞彙|定義|  
 |----------|----------------|  
-|.NET Framework|不可或缺的 Windows 元件，可支援建立、部署及執行下一代的應用程式和 Web 服務。 它提供了高生產力、標準化的多語言環境，可將現有的投資與下一代應用程式和服務整合，而且可以靈活應付網際網路規模的應用程式在部署和作業方面所面臨的各種挑戰。 .NET Framework 是由三個主要部分組成：Common Language Runtime、一組階層式的統一類別庫，以及組件化的 ASP 版本 (稱為 ASP.NET)。 另請參閱：ASP.NET、通用語言執行平台、.NET Framework 類別庫。|  
+|.NET Framework|不可或缺的 Windows 元件，可支援建立、部署及執行下一代的應用程式和 Web 服務。 它提供了高生產力、標準化的多語言環境，可將現有的投資與下一代應用程式和服務整合，而且可以靈活應付網際網路規模的應用程式在部署和作業方面所面臨的各種挑戰。 .NET Framework 是由三個主要部分組成：Common Language Runtime、一組階層式的統一類別庫，以及組件化的 ASP 版本 (稱為 ASP.NET)。 請參閱：ASP.NET、Common Language Runtime 和 .NET Framework 類別庫。|  
 |ActiveX Data Objects|提供資料來源之存取權的元件物件模型物件。 這個 API 會提供 OLE DB 與 Visual Basic、Visual Basic for Applications、Active Server Pages 和 Microsoft Internet Explorer Visual Basic Scripting 等程式語言之間的中介層。|  
-|特定報表 (ad hoc report)|使用報表產生器 1.0 所建立的 .rdl 報表，用來存取報表模型。|  
+|特定報表 (ad hoc report)|  
 |裝飾 (adornment)|指附加在窗格或視窗邊緣的控制項或狀態區，例如工具列或尺規。|  
 |彙總 (aggregate)|由多個個別值組成的摘要值。|  
 |彙總函式 (aggregate function)|對多個值進行計算並傳回單一摘要值的函數。|  
@@ -42,7 +41,7 @@ ms.locfileid: "56296471"
 |備份 (back up)|指建立程式、磁碟或資料的重複副本。|  
 |備份 (backup)|已經複製而且儲存在檔案或一個或多個磁帶上的檔案、資料夾和其他資料集合。|  
 |基底資料表 (base table)|永久儲存在資料庫中的資料表。 檢視表、資料指標、SQL 陳述式和預存程序會參考基底資料表。|  
-|批次 (batch)|1.一起提交並以群組方式執行的一組 SQL 陳述式。  2. 在 Reporting Services 中，單一交易內所有 SOAP 方法呼叫的集合。|  
+|批次 (batch)|1.一起提交並以群組形式執行的一組 SQL 陳述式。  2. 在 Reporting Services 中，單一交易內所有 SOAP 方法呼叫的集合。|  
 |二進位大型物件 (BLOB) (binary large object (BLOB))|一段非常大的二進位資料，例如儲存成數位資料的影像、音效或多媒體曲目，或足以保留這類值的任何變數或資料表資料行。|  
 |位元運算 (bitwise operation)|操作單一位元或測試位元是開啟或關閉的運算。|  
 |書籤 (bookmark)|報表中的連結，可跳到報表內的另一個位置。|  
@@ -60,7 +59,6 @@ ms.locfileid: "56296471"
 |圖表資料區域 (chart data region)|在報表配置中以圖形格式顯示資料的報表項目。|  
 |child|在階層內下一個較低層級中，與目前成員直接相關的成員。|  
 |子句 (clause)|在 Transact-SQL 中，SQL 陳述式的子單位。 子句會以關鍵字為開頭。|  
-|點選連結報表 (clickthrough report)|您在轉譯的報表產生器報表內按一下資料時，會顯示相關報表模型資料的報表。|  
 |用戶端應用程式 (client application)|一種應用程式，它會從伺服器擷取資料，並從關聯式或多維度資料庫執行資料的本機分析和呈現。|  
 |用戶端資料指標 (client cursor)|在用戶端實作的資料指標。 整個結果集會先傳送到用戶端，然後用戶端 API 軟體會從這個快取的結果集中實作資料指標功能。|  
 |CLR|請參閱其他詞彙：Common Language Runtime|  
@@ -70,7 +68,7 @@ ms.locfileid: "56296471"
 |CLR 使用者定義型別 (CLR user-defined type)|針對 SQL Server 組件所建立的使用者定義資料類型，其實作定義在 .NET Framework Common Language Runtime 所建立的組件中。|  
 |程式碼存取安全性 (code access security)|由 Common Language Runtime 提供的機制，藉由這個機制即可依據安全性原則授與 Managed 程式碼權限並強制執行這些權限，以便限制允許程式碼執行的作業。|  
 |collation|一組決定如何比較、排序和呈現資料的規則。|  
-|集合 (collection)|1.包含了一組其他物件的物件。 2. 在 Master Data Services 中，來自明確階層與其他集合的階層式成員群組。|  
+|集合 (collection)|1.包含一組其他物件的物件。 2. 在 Master Data Services 中，來自明確階層與其他集合的階層式成員群組。|  
 |色彩規則 (color rules)|自動將色彩指派給地圖圖層上每個地圖元素的演算法。|  
 |色階 (color scale)|一種地圖圖例類型，用來解譯地圖上所代表的色彩。|  
 |Common Language Runtime|在 Managed 程式碼執行核心的引擎。 這個執行階段提供含有如跨語言整合、程式碼存取安全性、物件存留期間管理，以及偵錯和設定檔作業支援的 Managed 程式碼。|  
@@ -91,9 +89,9 @@ ms.locfileid: "56296471"
 |資料採礦|分析資料來識別模式或關聯性的程序。|  
 |資料點 (data point)|圖表中最小的個別實體。|  
 |資料處理延伸模組 (data processing extension)|在 Reporting Services 中用於從外部資料來源擷取報表資料的元件。|  
-|資料提供者 (data provider)|軟體的圖層，這個圖層可以處理每個外部資料來源類型專用之資料延伸模組與自訂軟體之間的通訊。 根據特定的資料來源，可以從 Microsoft 和協力廠商取得多個資料提供者。|  
+|資料提供者 (data provider)|軟體的圖層，這個圖層會處理資料延伸模組與每個外部資料來源類型專用之自訂軟體間的通訊。 根據特定的資料來源，可以從 Microsoft 和協力廠商取得多個資料提供者。|  
 |資料區 (data region)|在資料表、矩陣、清單或圖表中，用於顯示基礎資料集中重複之資料列的報表項目。|  
-|資料來源 (data source)|1.在 ADO 和 OLE DB 中，OLE DB 提供者所公開的資料來源位置。 2. Cube 或維度之類物件的資料來源。 它也是存取來源資料所需要之資訊的規格。 它有時是指 ClassType clsDataSource 的物件。 <br />3.在 Reporting Services 中，指定的資料來源類型、連接字串和認證，可以單獨地儲存在報表伺服器上，並且在報表專案之間共用，或是內嵌於報表定義 (.rdl) 檔案中。|  
+|資料來源 (data source)|1.在 ADO 和 OLE DB 中，OLE DB 提供者所公開的資料來源位置。 2. Cube 或維度之類物件的資料來源。 它也是存取來源資料所需要之資訊的規格。 它有時是指 ClassType clsDataSource 的物件。 <br />3.在 Reporting Services 中，指定的資料來源類型、連接字串和認證，可單獨地儲存至報表伺服器，並在報表專案之間共用，或內嵌於報表定義 (.rdl) 檔案中。|  
 |資料來源名稱 (data source name)|在報表中，資料來源物件的名稱。|  
 |資料類型|指定資料行、參數或變數可以儲存哪個資訊類型的屬性。|  
 |資料倉儲 (data warehouse)|專為查詢和分析而建構的資料庫。|  
@@ -110,21 +108,21 @@ ms.locfileid: "56296471"
 |資料庫指令碼 (database script)|用於建立資料庫物件的陳述式集合。|  
 |資料繫結影像 (data-bound image)|存在資料庫中的影像，例如資料庫中包含影像的欄位。|  
 |資料驅動訂閱 (data-driven subscription)|在 Reporting Services 的執行階段，利用查詢從外部資料來源擷取訂閱資料的一種訂閱。|  
-|資料集 (dataset)|1.在 OLE DB for OLAP 中，因為執行多維度運算式 (MDX) SELECT 陳述式而產生的多維度資料集。   <br />2.在 Reporting Services 中，包含了資料來源定義、查詢定義與選擇性參數值、導出欄位以及篩選和定序資訊的具名規格，當做報表定義 (.rdl) 檔案的一部分。 一個 .rdl 檔案可以有多個資料集。|  
+|資料集 (dataset)|1.在 OLE DB for OLAP 中，因為執行多維度運算式 (MDX) SELECT 陳述式而產生的多維度資料集。   <br />2.在 Reporting Services 中，包含資料來源定義、查詢定義與選擇性參數值、導出欄位，以及篩選和定序資訊的具名規格，可當做報表定義 (.rdl) 檔案的一部分。 一個 .rdl 檔案可以有多個資料集。|  
 |DBCS|雙位元組字集|  
-|預設|1.使用者並未指定值、設定、定序或名稱時，系統自動指派的資料值、選項設定、定序或名稱。 2. 另外，這也是在使用者未指定要採取之動作的情況下，在發生特定事件時，將自動採取的動作。|  
+|預設|1.如果使用者未指定值、設定、定序或名稱，即會由系統自動指派的資料值、選項設定、定序或名稱。 2. 另外，這也是在使用者未指定要採取之動作的情況下，在發生特定事件時，將自動採取的動作。|  
 |預設資料庫 (default database)|使用者在登入 SQL Server 之後，立即連接的資料庫。|  
 |預設執行個體|使用與安裝所在之電腦相同名稱的 SQL Server 執行個體。|  
-|分隔符號 (delimiter)|1.在 Transact-SQL 中，利用雙引號 ("") 或方括號 ([]) 來指示物件名稱開始和結束的字元。 2. 在 Integration Services 和 Reporting Services 中，用於分隔記錄、欄位或字串的字元。|  
+|分隔符號 (delimiter)|1.在 Transact-SQL 中，利用雙引號 ("") 或方括號 ([]) 來指出物件名稱開頭和結尾的字元。 2. 在 Integration Services 和 Reporting Services 中，用於分隔記錄、欄位或字串的字元。|  
 |傳遞延伸模組 (delivery extension)|在 Reporting Services 中，用於將報表散發到特定裝置或目標位置的元件。|  
 |傳遞通訊協定 (delivery protocol)|一組用於傳送通知訊息給外部傳遞系統的通訊規則。|  
 |相依項目 (dependent item)|在報表伺服器上，其他項目包含參考的報表目錄項目。 例如，當報表定義包含共用資料來源的參考時，資料來源就是相依項目。|  
 |距離標尺 (distance scale)|一種地圖圖例類型，用來顯示目前地圖資料解析度的距離單位。|  
 |散發 (distribution)|在地圖圖層中，用來將分析值分為不同子範圍的演算法。 您可以計算範圍間隔，以便在開始值與結束值之間提供等距的間隔 (EqualInterval)，或將範圍間隔設定為值，讓每個範圍間隔中都有相同數目的項目 (EqualDistribution)。|  
 |文件引導模式 (document map)|報表中的導覽面板，會以報表區段與群組之連結的階層排列。|  
-|domain|1.在 Windows 安全性中，為了檢視和管理用途而分組的電腦集合，它們共用相同的安全資料庫。 2. 在關聯式資料庫中，資料行所允許的一組有效值。|  
+|domain|1.在 Windows 安全性中，基於檢視和管理用途而分組的電腦集合，它們會共用相同的安全資料庫。 2. 在關聯式資料庫中，資料行所允許的一組有效值。|  
 |向下鑽研/向上鑽研 (drill down/drill up)|在最摘要性 (上) 到最詳細 (下) 的資料層級之間導覽。|  
-|鑽研 (drill through)|1.在 Analysis Services 中，指擷取 Cube 資料格的資料摘要之來源詳細資料。 2. 在 Reporting Services 中，指按一下主要鑽研報表中的超連結，開啟相關報表。|  
+|鑽研 (drill through)|1.在 Analysis Services 中，擷取 Cube 資料格之資料摘要的來源詳細資料。 2. 在 Reporting Services 中，指按一下主要鑽研報表中的超連結，開啟相關報表。|  
 |向下鑽研/向上鑽研 (drilldown/drillup)|在最摘要性 (上) 到最詳細 (下) 之資料層級之間導覽的技術。 透過加入切換 (加號和減號) 建立，可顯示和隱藏資料表或矩陣之階層的層級。|  
 |鑽研 (drillthrough)|1.在 Analysis Services 中，指擷取 Cube 資料格的資料摘要之來源詳細資料的技術。 2. 在 Reporting Services 中，指按一下主要鑽研報表中的超連結，開啟相關報表的方式。|  
 |鑽研報表 (drillthrough report)|鑽研報表是一種報表，可以針對其他報表中的報表項目，當做鑽研動作的結果開啟。 透過資料，鑽研報表通常會與主要報表或摘要報表相關。 鑽研報表的常見範例是月銷售報表，其中包含該月個別銷售訂單的連結。|  
@@ -144,9 +142,9 @@ ms.locfileid: "56296471"
 |ESRI 形狀檔 (ESRI Shapefile)|環境系統研究協會 (Environmental Systems Research Institute, Inc.，ESRI) 針對空間資料所開發的開放式規格。|  
 |event|任何發生在系統或應用程式中的重大事件，而且需要使用者收到通知或在記錄檔中加入項目。|  
 |事件處理常式 (event handler)|1.為了回應事件所執行的軟體常式。 2. 在 Integration Services 中，為了回應執行階段事件而執行的控制流程。|  
-|expression|1.在 SQL 中，會評估得出單一資料值的符號和運算子組合。 2. 在 Integration Services 中，會評估得出單一資料值的常值、常數、函數和運算子組合。|  
+|expression|1.在 SQL 中，要評估以得出單一資料值的符號和運算子組合。 2. 在 Integration Services 中，會評估得出單一資料值的常值、常數、函數和運算子組合。|  
 |欄位|1.視窗或記錄中用於儲存單一資料值的區域。  2. 在報表產生器中，資料集欄位代表資料連接的數值資料或非數值資料。 例如，銷售量、總銷售額、客戶名稱、資料庫識別碼、URL、影像和空間資料。 報表可以擁有三種類型的欄位：資料集欄位、資料集導出欄位和內建欄位。|  
-|filter|1.一組用於控制將做為結果集而傳回之記錄集的準則。  2. 在全文檢索搜尋中，在給定指定的副檔名之後，從 varbinary(max) 或 image 資料行所儲存的檔案中擷取文字的篩選。|  
+|filter|1.一組用於控制要當做結果集傳回之記錄集的準則。  2. 在全文檢索搜尋中，在給定指定的副檔名之後，從 varbinary(max) 或 image 資料行所儲存的檔案中擷取文字的篩選。|  
 |篩選運算式 (filter expression)|用於在篩選運算子中篩選資料的運算式。|  
 |一般檔案 (flat file)|包含單一記錄類型之記錄的檔案，其中沒有管理記錄之間關聯性的內嵌結構資訊。|  
 |外部索引鍵 (foreign key)|其值符合相同或另一份資料表中的主索引鍵 (PK) 或唯一索引鍵的資料行或資料行組合。 另外，也稱為參考索引鍵。|  
@@ -166,7 +164,7 @@ ms.locfileid: "56296471"
 |熱門地圖 (heat map)|一種地圖表示法，其中每個多邊形的色彩濃度都會對應到相關的分析資料。 例如，範圍中較小的值會以藍色 (冷門) 顯示，而較大的值則以紅色 (熱門) 顯示。|  
 |階層 (hierarchy)|一種邏輯樹狀結構，它將維度的各個成員組織起來，使每個成員都有一個父成員及零或多個子成員。|  
 |高可用性|指大部分時間都維持運作而且可供用戶端使用的資源狀態，中斷服務的失敗百分比非常低。|  
-|HTML|請參閱其他術語：超文字標記語言 (HTML) (Hypertext Markup Language)|  
+|HTML|請參閱其他詞彙：超文字標記語言 (HTML)|  
 |HTML 檢視器 (HTML Viewer)|由報表工具列以及其他用於處理報表之導覽元素所組成的使用者介面。|  
 |超文字標記語言 (HTML) (Hypertext Markup Language)|用於建立 Web 文件的文字標記語言。 HTML 會使用各種標記和屬性來定義 Web 文件的結構和配置。|  
 |識別碼 (identifier)|資料庫中的物件名稱。|  
@@ -177,12 +175,12 @@ ms.locfileid: "56296471"
 |執行個體|1.一個在電腦中執行的 SQL Server 複本。 2. 報表項目的特定複本，例如報表組件、子報表、動態成員或群組。|  
 |integer|包括 bigint、int、smallint 和 tinyint 等資料類型的數值資料類型類別目錄。|  
 |網際網路通訊協定安全性 (Internet Protocol security)|電腦透過網際網路通訊協定 (IP) 網路，利用密碼編譯安全性服務來提供安全的私人通訊時所必須遵守的規則。|  
-|IPsec|請參閱其他術語：網際網路通訊協定安全性 (Internet Protocol security)|  
+|IPsec|請參閱其他詞彙：網際網路通訊協定安全性|  
 |ISO|負責開發國際資料通訊標準的兩個國際標準組織的其中之一。 國際標準組織 (ISO) 與國際電子電機委員會 (IEC) 密切合作，共同定義運算的標準。 它們共同發行了 SQL 的 ISO/IEC SQL-92 標準。|  
 |項目層級角色指派 (item-level role assignment)|套用至報表伺服器資料夾中之項目的安全性原則。|  
 |項目層級角色定義 (item-level role definition)|定義用於控制報表伺服器資料夾命名空間中之項目存取權或互動方式之角色的安全性範本。|  
 |關鍵效能指標 (key performance indicator)|(KPI) 反映一段時間後所測量之重要商務變數 (例如，市場佔有率) 的可量化且標準化標準。|  
-|關鍵字 (keyword)|在 SQL Server 中用於執行特定功能 (例如定義、操作或存取資料庫物件) 的保留字。 例如：SELECT、FROM 和 AND。|  
+|關鍵字 (keyword)|在 SQL Server 中用於執行特定功能 (例如定義、操作或存取資料庫物件) 的保留字。 例如，SELECT、FROM 和 AND。|  
 |KPI|請參閱其他詞彙：關鍵效能指標|  
 |標籤欄位 (label field)|一種報表資料集欄位，可識別對應之索引鍵欄位的標籤。 參數和資料區可以顯示索引鍵欄位的標籤，而非值。|  
 |latency|從一部伺服器完成資料變更，到變更出現在另一部伺服器所經歷的時間量。|  
@@ -193,7 +191,7 @@ ms.locfileid: "56296471"
 |線條圖層 (line layer)|在地圖報表項目中，將空間資料顯示為線條 (例如，針對路徑或路線) 的圖層。|  
 |連結報表 (linked report)|會以一組不同的參數值或屬性來參考現有報表定義的一種報表。 連結報表是提供現有報表之存取點的報表伺服器項目。 它在概念上類似於您用來執行程式或開啟檔案的程式捷徑。|  
 |清單資料區域 (list data region)|報表配置上的資料區，這個資料區會隨報表資料集中的每一個群組或資料列重複。 清單可以用於建立自由形式的報表或表單 (如發票)，也可以與其他資料區域一起使用。|  
-|本機伺服器 (local server)|1.在 SQL Server 連接中，在相同電腦上當做應用程式執行的 SQL Server 執行個體。 <br />2.在 Transact-SQL 陳述式中，在解析對於資料庫物件的參考時，用於執行陳述式的 SQL Server 執行個體。 <br />3.在 SQL Server 分散式查詢中，執行分散式查詢的 SQL Server 執行個體。 之後，本機伺服器便會存取查詢所參考的任何連結的伺服器。|  
+|本機伺服器 (local server)|1.在 SQL Server 連線中，於相同電腦上當做應用程式執行的 SQL Server 執行個體。 <br />2.在 Transact-SQL 陳述式中，在解析資料庫物件的參考時，執行陳述式的 SQL Server 執行個體。 <br />3.在 SQL Server 分散式查詢中，執行分散式查詢的 SQL Server 執行個體。 之後，本機伺服器便會存取查詢所參考的任何連結的伺服器。|  
 |地區設定 (locale)|一個 Windows 作業系統屬性，用於定義與語言相關的特定行為。|  
 |地區設定識別碼 (LCID) (locale identifier (LCID))|用於識別 Windows 架構地區設定的號碼。|  
 |記錄檔 (log file)|包含資料庫修改記錄的檔案或檔案集合。|  
@@ -204,13 +202,13 @@ ms.locfileid: "56296471"
 |多對一關聯性 (many-to-one relationship)|兩份資料表之間的一種關聯性，一份資料表中的單一資料列可以關聯於另一份資料表中的多個資料列。|  
 |地圖 (map)|一種報表項目，這個報表項目是存放標題、各種圖例以及地圖圖層的容器。|  
 |地圖資料 (map data)|地圖資料是由多邊形、線條、點和 Bing 地圖底圖所組成。  地圖資料可以內嵌在報表中或從 ESRI 形狀檔 (.shp)、SQL Server 空間資料查詢或將影像當做 Microsoft Bing 地圖底圖傳回的 Web 服務匯入。|  
-|地圖檢視區 (map viewport)|顯示在地圖報表項目中的地圖區域。 例如，整個美國的地圖都可以內嵌在報表中，但只有西北洲區域會顯示出來。|  
+|地圖檢視區 (map viewport)|顯示在地圖報表項目中的地圖區域。 例如，可能會將整個美國的地圖內嵌於報表中，但只會顯示西北洲的區域。|  
 |marker|顯示在地圖點圖層之每個點位置上的符號。|  
 |master 資料庫 (master database)|用於記錄 SQL Server 執行個體所有系統層級資訊的系統資料庫。|  
 |主檔案|與舊版 SQL Server 一起安裝的檔案，可用於儲存 master、model 和 tempdb 系統資料庫與交易記錄，以及 pubs 範例資料庫與交易記錄。|  
 |比對欄位 (match fields)|一組欄位，用於建立分析資料和空間資料之間的關聯性。|  
 |矩陣資料區域 (matrix data region)|報表配置上的資料區，這個資料區所提供的功能類似於交叉資料表與樞紐分析表報表。 在執行階段，當報表資料和資料區域結合時，矩陣在頁面上會以水平和垂直方式成長。 矩陣資料格中的值會顯示資料格所屬資料列與資料行群組交集範圍內的彙總值。|  
-|MDX|請參閱其他術語：多維度運算式 (MDX)|  
+|MDX|請參閱其他詞彙：多維度運算式 (MDX)|  
 |Mercator 投射 (Mercator projection)|在地圖報表項目中，Gerardus Mercator 在 1569 年發明的圓柱地圖投射。|  
 |中繼資料|資料屬性的相關資訊，例如，資料行中的資料類型 (數值、文字等等) 或資料行的長度；檔案的相關資訊，例如，檔案標題、描述、建立日期與上次修改日期；或者資料結構相關資訊或指定物件設計的相關資訊，例如 Cube 或維度。|  
 |方法|利用 COM 物件來執行動作的函數，如在 SQL-DMO、OLE DB 和 ActiveX Data Objects (ADO) 中。|  
@@ -229,7 +227,7 @@ ms.locfileid: "56296471"
 |數值運算式 (numeric expression)|會評估得出數字的任何運算式。|  
 |物件 (object)|其中一種資料庫元件，例如資料表、索引或預存程序。|  
 |物件識別碼 (object identifier)|1.提供給物件的唯一名稱。 2. 在 Metadata Services 中，從全域唯一識別碼 (GUID) 和內部識別碼建構成的唯一識別碼。|  
-|ODBC 資料來源|1.一組可利用 ODBC 驅動程式來存取之資料的位置。 2. 包含 ODBC 應用程式連接到資料來源時所需要之所有連接資訊的預存定義。|  
+|ODBC 資料來源|1.一組可使用 ODBC 驅動程式來存取之資料的位置。 2. 包含 ODBC 應用程式連接到資料來源時所需要之所有連接資訊的預存定義。|  
 |ODBC 驅動程式 (ODBC driver)|啟用 ODBC 的應用程式 (如 Excel) 可用於存取 ODBC 資料來源的動態連結程式庫 (DLL)。|  
 |OGC|開放式地理空間協會 (Open Geospatial Consortium)|  
 |OLAP|請參閱其他詞彙：線上分析處理|  
@@ -248,7 +246,7 @@ ms.locfileid: "56296471"
 |參數化資料列篩選器|合併式複寫所能使用的資料列篩選器，它可讓您依據系統函數或使用者定義函數來限制複寫到訂閱者的資料。|  
 |父系 (parent)|在階層內下一個較高層級中，直接關聯於目前成員的成員。|  
 |權限 (permission)|與物件相關聯的規則，可管制哪些使用者能夠取得物件的存取權以及以何種方式取得。|  
-|樞紐 (pivot)|1.在交叉表格式資料瀏覽器中，將資料列旋轉成資料行，將資料行旋轉成資料列。 2. 從多維度資料結構的一組可用維度中選擇維度，以便顯示在交叉表格式結構的資料列和資料行中。|  
+|樞紐 (pivot)|1.在交叉表格式資料瀏覽器中，將資料列旋轉成資料行，並將資料行旋轉成資料列。 2. 從多維度資料結構的一組可用維度中選擇維度，以在交叉表格式結構的資料列和資料行中顯示。|  
 |預留位置 (placeholder)|一個字元或符號，用以取代實際值、文字或物件。 預留位置所代表的實際值目前不明或無法使用，或因為安全的緣故而未顯示。 在文字方塊內定義簡單或複雜運算式時，所產生的這個運算式表示法在設計檢視中稱為「預留位置」(Placeholder)。|  
 |平面資料 (planar data)|指定幾何平面上點、線條或區域的資料。|  
 |多邊形圖層 (polygon layer)|在地圖報表項目中，將空間資料顯示為線條區域 (例如，國家 (地區) 之類的地理區域) 的圖層。|  
@@ -261,14 +259,14 @@ ms.locfileid: "56296471"
 |protocol|一組讓電腦能夠交換資訊的標準格式和程序。|  
 |提供者|1.OLE DB 提供者。 2. 用於存取資料庫的同處理序動態連結程式庫 (DLL)。|  
 |查詢參數 (query parameters)|指定於資料集查詢中的參數，例如 Transact-SQL 查詢。|  
-|RDL|請參閱其他術語：報表定義語言|  
+|RDL|請參閱其他詞彙：報表定義語言|  
 |記錄 (record)|當做一個單元來處理的資訊之相關欄位 (資料行) 群組。 在關聯式資料庫中，記錄通常稱為資料列。|  
 |矩形 (rectangle)|可當做多個報表項目之容器使用或在報表上當做圖形元素使用的報表項目。|  
-|遞迴階層 (recursive hierarchy)|1.來自單一報表資料集的資料階層，其中在階層結構中包含多個階層層級，例如組織階層內經理-員工關聯性的回報結構。 2. 在 Master Data Services 中，包含遞迴關聯性的衍生階層。 當實體有基於實體本身的網域屬性時，就會有遞迴關聯性。|  
+|遞迴階層 (recursive hierarchy)|1.來自單一報表資料集的資料階層，會在階層結構中包含多個階層層級，例如，組織階層內經理-員工關聯性的報告結構。 2. 在 Master Data Services 中，包含遞迴關聯性的衍生階層。 當實體有基於實體本身的網域屬性時，就會有遞迴關聯性。|  
 |關聯式資料庫|一種資料庫或資料庫管理系統，它會將資料表中的資訊儲存成資料列和資料行，而且會使用某份資料表之指定資料行的資料來尋找另一份資料表之其他資料，藉以進行搜尋。|  
 |關聯式資料庫管理系統 (relational database management system)|將資料組織成相關資料列和資料行的系統。|  
 |關聯式 OLAP|利用關聯式資料庫中的資料表來儲存多維度結構的儲存模式。|  
-|關聯性 (relationship)|1.資料表之間的一項連結，它將一份資料表中的主索引鍵關聯到另一份資料表中的外部索引鍵。 在資料庫圖表中，如果強制執行資料表之間的參考完整性，便用實線來表示關聯性線條，如果並未強制執行 INSERT 和 UPDATE 交易的參考完整性，便用虛線來表示。 關聯性線條的端點會顯示一個主索引鍵符號來表示主索引鍵到外部索引鍵的關聯性，它們也可能顯示一個無限符號來表示一對多關聯性的外部索引鍵端。 <br />2.在 Metadata Services 中，關聯性是一對物件之間的關聯，其中一個物件是原點，另一個物件是目的地。 每對後續物件的關聯都重複，因此，一個關聯性的目的地會成為下個關聯性的原點。 依照這個方式，關聯性鏈結會在整個資訊模型中，從一個物件延伸到下一個物件，資訊模型中的所有物件都會透過關聯性鏈結而關聯起來。|  
+|關聯性 (relationship)|1.資料表之間的連結，會使一個資料表中的主索引鍵參考另一個資料表中的外部索引鍵。 在資料庫圖表中，如果強制執行資料表之間的參考完整性，便用實線來表示關聯性線條，如果並未強制執行 INSERT 和 UPDATE 交易的參考完整性，便用虛線來表示。 關聯性線條的端點會顯示一個主索引鍵符號來表示主索引鍵到外部索引鍵的關聯性，它們也可能顯示一個無限符號來表示一對多關聯性的外部索引鍵端。 <br />2.在 Metadata Service 中，關聯性是一對物件之間的關聯，其中一個物件是原點，而另一個物件則是目的地。 每對後續物件的關聯都重複，因此，一個關聯性的目的地會成為下個關聯性的原點。 依照這個方式，關聯性鏈結會在整個資訊模型中，從一個物件延伸到下一個物件，資訊模型中的所有物件都會透過關聯性鏈結而關聯起來。|  
 |轉譯報表 (rendered report)|一份經過完整處理的報表，其中包含資料和配置資訊，採用適合檢視的格式。|  
 |轉譯延伸模組 (rendering extension)|在 Reporting Services 中，用於處理報表輸出格式的元件。|  
 |轉譯延伸模組 (rendering extension(s))|將報表轉譯成特定格式的外掛程式。|  
@@ -283,12 +281,10 @@ ms.locfileid: "56296471"
 |報表配置 (report layout)|報表中資料區、報表項目和文字的放置，以及所套用的格式。|  
 |報表配置範本 (report layout template)|在報表產生器中預先設計的資料表、矩陣或圖表報表範本。|  
 |報表連結 (report link)|超連結報表的 URL。|  
-|報表模型|商務資料的中繼資料描述，可供報表產生器用於建立特定報表。|  
 |報表參數 (report parameter)|定義於報表定義內部的參數。 雖然所有查詢參數都具有報表參數，不過報表參數的建立與查詢無關。|  
 |報表組件 (report parts)|已經個別發行至報表伺服器，而且可以在其他報表中重複使用的報表項目。 諸如資料表、矩陣、圖表和影像等報表項目都可以發行為報表組件。 報表組件的副檔名維 .rsc，與結構描述 componentdefinition.xsd 相符。|  
 |報表處理延伸模組 (report processing extension)|在 Reporting Services 中，用於擴充報表處理邏輯的元件。|  
 |報表轉譯 (report rendering)|為了檢視報表而將報表配置與來自資料來源之資料結合的動作。|  
-|報表伺服器|網路上的一個位置，您可以從這個位置啟動報表產生器的 ClickOnce 版本，並儲存、管理和發行報表。|  
 |報表伺服器管理員|具有更高的權限能夠存取報表伺服器所有設定與內容的使用者。|  
 |報表伺服器資料庫|提供報表伺服器之內部儲存體的資料庫。|  
 |報表伺服器執行帳戶|報表伺服器 Web 服務和報表伺服器 Windows 服務執行時所使用的帳戶。|  
@@ -300,13 +296,13 @@ ms.locfileid: "56296471"
 |ReportViewer 控制項 (ReportViewer controls)|在 ASP.NET 和 Windows Form 應用程式中提供內嵌報表處理的 Web 伺服器控制項和 Windows Form 控制項。|  
 |resource|報表伺服器資料庫中不屬於報表、資料夾或共用資料來源項目的任何項目。|  
 |結果集 (result set)|SELECT 陳述式所傳回的一組資料列。|  
-|角色 (role)|1.獲得一組特定權限的使用者或群組。  <br />2.在 Analysis Services 中，角色會利用 Windows 安全性帳戶來限制使用者存取資料庫、Cube、維度和資料採礦模型時的存取範圍與權限。  <br />3.在資料庫鏡像工作階段中，主體伺服器和鏡像伺服器會扮演互補的主體與鏡像角色。 另外，也可以選擇由第三個伺服器執行個體扮演見證的角色。|  
+|角色 (role)|1.獲得一組特定權限的使用者或群組。  <br />2.在 Analysis Services 中，角色會使用 Windows 安全性帳戶，來限制使用者存取資料庫、Cube、維度和資料採礦模型時的存取範圍與權限。  <br />3.在資料庫鏡像工作階段中，主體伺服器和鏡像伺服器會扮演互補的主體與鏡像角色。 另外，也可以選擇由第三個伺服器執行個體扮演見證的角色。|  
 |角色指派 (role assignment)|一種安全性原則，可定義能夠存取特定項目並執行特定作業的使用者和群組。|  
 |角色定義 (role definition)|具名的工作集合，會定義使用者可以在報表伺服器上執行的作業。|  
 |資料列 (row)|在 SQL 資料表中，指依據資料表建立模型之物件的單一出現項目。|  
 |資料列彙總函式 (row aggregate function)|產生摘要值的函數，這些值會在查詢結果中顯示成其他資料列。|  
 |資料列篩選 (row filter)|限制資料列包含在資料集中的篩選。|  
-|資料列識別碼 (row identifier)|1.在資料表中用於區別任何一個資料列與所有其他資料列的一個或一組資料行。 2. 在堆積中，資料列的指標。|  
+|資料列識別碼 (row identifier)|1.一個或一組資料行，可在資料表中用來區別任何單一資料列與所有其他資料列。 2. 在堆積中，資料列的指標。|  
 |純量 (scalar)|相對於彙總的單一值欄位。|  
 |純量彙總 (scalar aggregate)|一個 MIN()、MAX() 或 AVG() 之類的彙總函式，指定在只含有彙總函式的 SELECT 陳述式資料行清單中。|  
 |結構描述|在 SQL-92 標準中，由單一使用者所擁有並且形成單一命名空間之資料庫物件的集合。 命名空間是一組不能有重複名稱的物件。|  
@@ -329,14 +325,14 @@ ms.locfileid: "56296471"
 |SKU|識別某項產品不同版本的方式。亦即，庫存單位 (Stock Keeping Unit) 的縮寫 (標準商務術語)。|  
 |配量 (slice)|Cube 中的資料子集，指定方式是依維度成員來限制一個或多個維度。|  
 |智慧標籤 (smart tag)|智慧標籤會直接在設計介面上公開重要組態，以增強 Visual Studio 2005 中整體設計階段的生產力。|  
-|SMDL|請參閱其他術語：語義模型定義語言 (SMDL) (Semantic Model Definition Language (SMDL))|  
+|SMDL|請參閱其他詞彙：語意模型定義語言 (SMDL)|  
 |snapshot|請參閱其他詞彙：報表快照集|  
 |排序次序 (sort order)|定序中的一組規則，用於定義字元在比較作業中的評估方式，以及字元的排序順序。|  
 |空間資料 (spatial data)|指定平面或曲面上物件位置的資料。 空間資料可以是點、線條或多邊形。|  
 |空間資料類型 (spatial data types)|指定代表幾何 (平面) 或地理 (地理) 資訊的資料。|  
-|SQL|請參閱其他術語：結構化查詢語言 (SQL) (Structured Query Language (SQL))|  
+|SQL|請參閱其他詞彙：結構化查詢語言 (SQL)|  
 |SQL 查詢 (SQL query)|SELECT、INSERT、UPDATE、DELETE 或 CREATE TABLE 之類的 SQL 陳述式。|  
-|SQL Server 驗證|指定 SQL Server 登入識別碼和密碼來驗證連接至 SQL Server 執行個體之嘗試行為的機制。|  
+|SQL Server 驗證|指定 SQL Server 登入識別碼和密碼，藉以驗證嘗試連線至 SQL Server 執行個體的機制。|  
 |SQL Server 登入|儲存在 SQL Server 中，允許使用者連接至 SQL Server 的帳戶。|  
 |SQL 陳述式|執行一些動作來處理資料的 SQL 或 Transact-SQL 命令，如 SELECT 或 DELETE。|  
 |靜態連接字串 (static connection string)|一組值，每當報表執行時，一定會使用這一組值來連接相同的資料來源。|  
@@ -348,26 +344,25 @@ ms.locfileid: "56296471"
 |系統角色指派 (system role assignment)|套用至整個網站的角色指派。|  
 |系統角色定義|傳達整個網站權限的角色定義。|  
 |系統預存程序 (system stored procedures)|一組 SQL Server 提供的預存程序，可供擷取系統目錄資訊或執行管理工作之類的動作使用。|  
-|資料表|1.由資料列和資料行組成的二維物件，會儲存關聯式資料庫中所建立實體的相關資料。 2. 在報表配置中以分欄格式顯示資料的資料區域。|  
+|資料表|1.由資料列和資料行組成的二維物件，其會儲存已在關聯式資料庫中模型化之實體的相關資料。 2. 在報表配置中以分欄格式顯示資料的資料區域。|  
 |資料表資料區域 (table data region)|在報表配置中以分欄格式顯示資料的報表項目。|  
 |Tablix|Reporting Services RDL 資料區，其中包含類似資料表或矩陣的資料列和資料行，可能會共用這兩者的特性。|  
-|工作 (task)|構成工作的權限的集合 (管理報表、管理資料夾等等)|  
+|工作 (task)|構成工作 (管理報表、管理資料夾等) 的權限集合。|  
 |Transact-SQL|包含用於管理 SQL Server 執行個體、建立和管理 SQL Server 執行個體中的所有物件，以及在 SQL Server 資料表中插入、擷取、修改和刪除所有資料之命令的語言。 Transact-SQL 是國際標準組織 (ISO) 和美國國家標準局 (ANSI) 發行的標準所定義之語言的延伸模組。|  
 |使用者執行個體 (user instance)|由父執行個體代表使用者所產生的 SQL Server Express 執行個體。|  
 |值 (y) 軸 (value (y) axis)|用來顯示圖表中之數值資料值的軸。 通常是垂直軸。 例外：在橫條圖中，這兩個軸是相反的，因此 y 軸會顯示群組資料。|  
 |值運算式 (value expression)|在多維度運算式 (MDX) 中，會傳回值的運算式。 值運算式可以處理集合、Tuple、成員、層級、數字或字串。|  
-|變數|1.在 Integration Services 中，變數是用於儲存可在指令碼、運算式和屬性運算式中使用的值，用以設定資料行值及封裝物件的屬性。 <br />2.已指派值的定義實體。 區域變數利用 DECLARE@localvariable 陳述式來定義，且會在利用 SELECT 或 SET@localvariable 陳述式來宣告區域變數的陳述式批次內指派初始值。|  
+|變數|1.在 Integration Services 中，儲存可在指令碼、運算式和屬性運算式中使用的值，以設定資料行值及套件物件的屬性。 <br />2.已指派值的定義實體。 區域變數利用 DECLARE@localvariable 陳述式來定義，且會在利用 SELECT 或 SET@localvariable 陳述式來宣告區域變數的陳述式批次內指派初始值。|  
 |可變間隔 (variable interval)|Reporting Services 圖表上的選項，可指定來根據圖表寬度或高度，自動計算某個軸上可放置的最佳標籤數目。|  
 |視覺效果 (visualization)|在地圖、圖表和量測計中，使用者選擇用來視覺化分析資料的方式。|  
 |Web 服務|在 Reporting Services 中，透過 HTTP 使用簡易物件存取通訊協定 (SOAP) 而且在用戶端程式與報表伺服器之間當做通訊介面的服務。|  
 |Windows Management Instrumentation|在 Managed 環境中，提供物件相關資訊的介面。|  
 |WKB|知名的二進位資料表示法，由開放式地理空間協會 (OGC) 指定。|  
 |WKT|知名的文字資料表示法，以開放式地理空間協會 (OGC) 指定。|  
-|WMI|請參閱其他術語：Windows Management Instrumentation|  
+|WMI|請參閱其他詞彙：Windows Management Instrumentation|  
 |X 軸 (x-axis)|請參閱其他詞彙：類別目錄 (x) 軸|  
 |Y 軸 (y-axis)|請參閱其他詞彙：值 (y) 軸|  
   
-## <a name="see-also"></a>另請參閱  
- [報表撰寫概念 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
-  
-  
+## <a name="see-also"></a>另請參閱
+
+ [報表撰寫概念 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)

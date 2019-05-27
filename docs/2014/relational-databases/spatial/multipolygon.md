@@ -9,15 +9,15 @@ helpviewer_keywords:
 - MultiPolygon geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: d941425b1faa2fcbc23b48555dce12846a7fd52e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ccb2689b24914a0a953c1b9f7325cd5aa9c75d0d
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62524197"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014115"
 ---
 # <a name="multipolygon"></a>MultiPolygon
   `MultiPolygon` 執行個體是零或多個 `Polygon` 執行個體的集合。  

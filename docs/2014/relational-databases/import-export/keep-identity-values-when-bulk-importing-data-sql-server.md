@@ -11,15 +11,15 @@ helpviewer_keywords:
 - data formats [SQL Server], identity values
 - bulk importing [SQL Server], identity values
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c994a04f41b548599deff4ff5a0a99ba89be6c7f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5bb2fbd3129475c5d712cd4d1fce8bbe29ea096f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63064578"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011910"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>大量匯入資料時保留識別值 (SQL Server)
   您可以將包含識別值的資料檔案大量匯入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體中。 根據預設，會忽略所匯入資料檔案中的識別欄位值， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動指定唯一值。 唯一值的依據是資料表建立期間所指定的初始值及累加值。  

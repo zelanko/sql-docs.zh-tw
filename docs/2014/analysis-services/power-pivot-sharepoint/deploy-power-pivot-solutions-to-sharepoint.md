@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: af3b98aab31aeaa3a01b1026eca8b3098ce97bef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6b568790f9a61c01054d4a7225e4a2dbf9a39887
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749256"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071510"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>將 PowerPivot 方案部署到 SharePoint
   利用下列指示手動部署兩個方案套件，將 PowerPivot 功能加入至 SharePoint Server 2010 環境。 部署方案是在 SharePoint 2010 伺服器上設定 PowerPivot for SharePoint 的必要步驟。 若要檢視必要步驟的完整清單，請參閱[管理中心的 PowerPivot 伺服器管理和組態](power-pivot-server-administration-and-configuration-in-central-administration.md)。  

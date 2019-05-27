@@ -1,36 +1,39 @@
 ---
 title: 升級和移轉 Reporting Services | Microsoft Docs
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 helpviewer_keywords:
 - SSRS, upgrading
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.topic: conceptual
 ms.date: 08/17/2017
-ms.openlocfilehash: e1c32d07408f9eaf2beeaff5d92865520b49f08d
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: dc205f966d0e5556f8dc6f722190d477b5d89327
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583361"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570741"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
   本主題概述 SQL Server Reporting Services 的升級與移轉選項。 升級 SQL Server Reporting Services 部署的一般方式有兩種：  
-  
+ 
 -   **升級：** 您可以在目前安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件的伺服器和執行個體上升級這些元件。 這種方式通常稱為「就地」升級。 不支援從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器的一種模式就地升級至另一種模式。 例如，您無法將原生模式報表伺服器升級至 SharePoint 模式報表伺服器。 您可以將報表項目從一個模式移轉至另一個模式。 如需詳細資訊，請參閱本文件稍後的＜原生至 SharePoint 移轉＞一節。  
   
 -   **移轉**：安裝和設定新的 SharePoint 環境、將報表項目和資源複製到新環境，然後設定新環境，以使用現有的內容。 較低層級的移轉形式為複製 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料庫、組態檔，如果您是使用 SharePoint 模式，則還有 SharePoint 內容資料庫。  
     
 > **[!INCLUDE[applies](../../includes/applies-md.md)]**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式
-  
+
+> [!NOTE]
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
+   
 ##  <a name="bkmk_known_issues"></a> 升級的已知問題和最佳作法  
  如需可支援版本與可升級版本的詳細清單，請參閱＜ [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)＞。  
   
@@ -220,7 +223,7 @@ ms.locfileid: "59583361"
   
 -   撰寫可呼叫 WMI 提供者的程式碼，以便在資料庫之間複製資料。 如需這種方法的詳細資訊，請參閱 [存取 Reporting Services WMI 提供者](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)。  
   
--   如果您只有少量的項目，可以從報表設計師、模型設計師和報表產生器將報表、報表模型和共用資料來源重新發行到新的報表伺服器。 您必須重新建立角色指派、訂閱、共用排程、報表快照集排程、您在報表或其他項目上設定的自訂屬性、模型項目安全性，以及您在報表伺服器上設定的屬性。 您將會遺失報表記錄和報表執行記錄資料。  
+-   如果您只有少量的項目，就可以從報表設計師、模型設計師和報表產生器來將報表和共用資料來源重新發行到新的報表伺服器。 您必須重新建立角色指派、訂閱、共用排程、報表快照集排程、您在報表或其他項目上設定的自訂屬性、模型項目安全性，以及您在報表伺服器上設定的屬性。 您將會遺失報表記錄和報表執行記錄資料。  
   
   
 ##  <a name="bkmk_additional_resources"></a> 其他資源  

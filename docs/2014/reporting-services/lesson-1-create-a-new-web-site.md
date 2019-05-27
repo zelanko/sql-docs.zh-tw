@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 95bd0257deae9d06870ccb75abd8f4f8b41910bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65426162fc7cd7ada9e66c591420ac64040a4391
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63224838"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108544"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>第 1 課：建立新網站
   在本課中，您將學習如何使用 Visual C# 的 ASP.NET 網站範本來建立新網站專案。  
