@@ -54,7 +54,7 @@ ms.locfileid: "65097234"
 ## <a id="createuser"></a> 建立 AD 使用者 （或 MSA）[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和設定的 SPN
 
 > [!NOTE]
-> 下列步驟會使用您[完整的網域名稱](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果您是在**Azure**，您必須**[建立一個](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** 再繼續進行。
+> 下列步驟會使用您[完整的網域名稱](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果您是在**Azure**，您必須 **[建立一個](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** 再繼續進行。
 
 1. 在您的網域控制站上執行[New-aduser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell 命令來建立新的 AD 使用者與密碼永不過期。 下列範例會命名為帳戶`mssql`，但帳戶名稱可以是任何您喜歡的項目。 系統會提示您輸入帳戶的新密碼。
 

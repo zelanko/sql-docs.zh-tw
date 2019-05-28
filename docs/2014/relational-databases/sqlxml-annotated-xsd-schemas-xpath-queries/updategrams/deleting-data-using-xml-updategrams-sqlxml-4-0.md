@@ -43,7 +43,7 @@ ms.locfileid: "66014872"
   
  您可以省略 **\<之後>** 標記如果 updategram 會執行刪除作業。 如果您未指定選擇性`mapping-schema`屬性， **\<項目名稱 >** 則 updategram 會對應至資料庫資料表和子元素或屬性對應到資料表中的資料行中指定。  
   
- 如果在 updategram 中指定的項目會符合資料表中的多個資料列，或者不符合任何資料列，updategram 會傳回錯誤，並取消整個**\<同步 >** 區塊。 Updategram 中的元素一次只能刪除一個記錄。  
+ 如果在 updategram 中指定的項目會符合資料表中的多個資料列，或者不符合任何資料列，updategram 會傳回錯誤，並取消整個 **\<同步 >** 區塊。 Updategram 中的元素一次只能刪除一個記錄。  
   
 ## <a name="examples"></a>範例  
  本章節中的範例會使用預設對應 (也就是說，Updategram 中不會指定任何對應結構描述)。 如需使用對應結構描述的 updategram 的範例，請參閱[在 Updategram 中指定註解式對應結構描述&#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  

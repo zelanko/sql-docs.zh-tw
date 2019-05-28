@@ -29,7 +29,7 @@ ms.locfileid: "66010623"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. 指定 OR 布林運算子  
- 此 XPath 查詢會傳回**\<客戶 >** 的內容節點的項目子系**CustomerID**屬性值為 13 / 31:  
+ 此 XPath 查詢會傳回 **\<客戶 >** 的內容節點的項目子系**CustomerID**屬性值為 13 / 31:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -41,7 +41,7 @@ ms.locfileid: "66010623"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- 述詞中`attribute`是軸和`CustomerID`是節點測試 (TRUE 如果**CustomerID**是**\<屬性 >** 節點，因為 **\<屬性 >** 節點是主要節點`attribute`軸)。 述詞篩選條件**\<客戶 >** 項目，並傳回只有符合條件的述詞中指定。  
+ 述詞中`attribute`是軸和`CustomerID`是節點測試 (TRUE 如果**CustomerID**是 **\<屬性 >** 節點，因為 **\<屬性 >** 節點是主要節點`attribute`軸)。 述詞篩選條件 **\<客戶 >** 項目，並傳回只有符合條件的述詞中指定。  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   

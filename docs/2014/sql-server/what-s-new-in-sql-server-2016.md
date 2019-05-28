@@ -27,7 +27,7 @@ ms.locfileid: "63295231"
 # <a name="what39s-new-in-sql-server-2014"></a>什麼&#39;SQL Server 2014 的新功能
   本主題摘要說明中的新功能的詳細的連結[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，並摘要說明適用於服務組件 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  
-**現在就試試看：**![Azure 虛擬機器小型](./media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png)有 Azure 帳戶嗎？  接著前往**[此處](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2014sp1EnterpriseWindowsServer2012R2)** 到已安裝 SQL Server 2014 Service Pack 1 (SP1) 的虛擬機器的加速。 
+**現在就試試看：** ![Azure 虛擬機器小型](./media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png)有 Azure 帳戶嗎？  接著前往 **[此處](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2014sp1EnterpriseWindowsServer2012R2)** 到已安裝 SQL Server 2014 Service Pack 1 (SP1) 的虛擬機器的加速。 
   
 -   [新功能&#40;Database Engine&#41;](../database-engine/whats-new-in-sql-server-2016.md)  
   
@@ -56,9 +56,9 @@ ms.locfileid: "63295231"
 
 ### <a name="performance-and-scalability-improvements"></a>改善效能和延展性 
 -   **自動軟體式 NUMA 資料分割：** 使用[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]SP2、 自動軟體式 NUMA 執行個體啟動期間開啟追蹤旗標 8079 時啟用。 在啟動期間，啟用追蹤旗標 8079 時[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]SP2 會質詢硬體配置和回報 8 個以上的 Cpu，每個 NUMA 節點的系統上的 自動設定軟體式 NUMA。 自動、 軟體 NUMA 會以超執行緒 （HT/邏輯處理器） 感知。 其他節點的分割和建立可藉由增加接聽程式數目、調整以及網路和加密功能，來調整背景處理的規模。 建議您使用第一項測試使用自動軟體式 NUMA 的效能工作負載之前在生產環境中開啟它。 [請參閱部落格以取得更多資訊](https://blogs.msdn.microsoft.com/psssql/2016/03/30/sql-2016-it-just-runs-faster-automatic-soft-numa/)。 
--  **動態記憶體物件調整：**[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 動態分割記憶體物件為基礎的節點及調整新式硬體上的核心數目。 動態升級的目標是要自動分割安全執行緒記憶體物件 (CMEMTHREAD)，如果它變成瓶頸。 不分割記憶體物件可動態升級成依節點 （NUMA 節點的分割區等於數字的數字），進行分割並依節點分割的物件可以藉由進一步的記憶體升級成依 CPU （分割區等於數字的數字進行分割Cpu)。 [請參閱部落格以取得更多資訊](https://blogs.msdn.microsoft.com/psssql/2016/04/06/sql-2016-it-just-runs-faster-dynamic-memory-object-cmemthread-partitioning/)。
+-  **動態記憶體物件調整：** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 動態分割記憶體物件為基礎的節點及調整新式硬體上的核心數目。 動態升級的目標是要自動分割安全執行緒記憶體物件 (CMEMTHREAD)，如果它變成瓶頸。 不分割記憶體物件可動態升級成依節點 （NUMA 節點的分割區等於數字的數字），進行分割並依節點分割的物件可以藉由進一步的記憶體升級成依 CPU （分割區等於數字的數字進行分割Cpu)。 [請參閱部落格以取得更多資訊](https://blogs.msdn.microsoft.com/psssql/2016/04/06/sql-2016-it-just-runs-faster-dynamic-memory-object-cmemthread-partitioning/)。
 -  **針對 DBCC CHECK 的 MAXDOP 提示\*命令：** 這項改善解決[connect 意見反應 (468694)](https://connect.microsoft.com/SQLServer/feedback/details/468694/maxdop-option-in-dbcc-checkdb)。 您現在可以執行的 DBCC CHECKDB 的 sp_configure 值以外的 MAXDOP 設定。 如果 MAXDOP 超過使用 Resource Governor 所設定的值，資料庫引擎就會使用 ALTER WORKLOAD GROUP (Transact-SQL) 中所描述的 Resource Governor MAXDOP 值。 當您使用 MAXDOP 查詢提示時，適用所有搭配 max degree of parallelism 組態選項使用的語意規則。 如需詳細資訊，請參閱 < [DBCC CHECKDB &#40;transact-SQL&#41;](https://msdn.microsoft.com/library/ms176064.aspx)。
--   **啟用 > 8 TB，緩衝集區：**[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 可讓 128 TB 的緩衝集區使用量的虛擬位址空間。 這項改善可讓 SQL Server 緩衝集區擴充到 8 tb 以上新式硬體上。
+-   **啟用 > 8 TB，緩衝集區：** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 可讓 128 TB 的緩衝集區使用量的虛擬位址空間。 這項改善可讓 SQL Server 緩衝集區擴充到 8 tb 以上新式硬體上。
 -   **SOS_RWLock spinlock 改進：** SOS_RWLock 是在整個 SQL Server 程式碼基底的不同位置同步處理原始物件。  如同名稱所暗示，程式碼可以有多個共用 （讀取器） 或單一 （編寫器） 的擁有權。 這項改善不需要 SOS_RWLock 的執行緒同步鎖定，並改為使用類似於記憶體內部 OLTP 的 無鎖定技術。 透過這項變更，多個執行緒可以讀取而不需要封鎖彼此，並藉此提供更好的延展性保護 SOS_RWLock 的平行資料結構。 之前這項變更，單一執行緒存取鎖實作允許只有一個執行緒取得 SOS_RWLock 一次，即使是要讀取的資料結構。  [請參閱部落格以取得更多資訊](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/)。
 -    **空間原生實作：** 空間查詢效能的重大改進在引進[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]SP2 至原生實作。 如需詳細資訊，請參閱 < [KB3107399 眭妎踱恅](https://support.microsoft.com/en-us/kb/3107399)。
 
@@ -77,7 +77,7 @@ ms.locfileid: "63295231"
 -   **擷取 SQL Server 中的輸入的緩衝區的新 DMF:** 現已提供可擷取工作階段/要求 (sys.dm_exec_input_buffer) 輸入緩衝區的新 DMF。 其功能相當於 DBCC INPUTBUFFER。 [請參閱部落格以取得更多資訊](https://blogs.msdn.microsoft.com/sql_server_team/new-dmf-for-retrieving-input-buffer-in-sql-server/)。
 -   **低估和 overestimated 記憶體授與的風險降低：** 已新增新查詢提示的 Resource Governor 透過 MIN_GRANT_PERCENT 和 MAX_GRANT_PERCENT。 這可讓您藉由將達到上限以防止記憶體競爭記憶體授與執行查詢時運用這些提示。 如需詳細資訊，請參閱[KB310740 眭妎踱恅](https://support.microsoft.com/en-us/kb/3107401)
 -   **更佳的記憶體授與/使用量診斷：** 新的擴充的事件已新增至 SQL Server (query_memory_grant_usage) 中的追蹤功能，來追蹤要求和授與的記憶體授與的清單。 這可提供更佳的追蹤和分析功能針對記憶體授與相關的查詢執行問題進行疑難排解。 如需詳細資訊，請參閱 < [KB3107173 眭妎踱恅](https://support.microsoft.com/en-us/kb/3107173)。
--   **查詢執行診斷，針對 tempdb 溢出：**-Hash Warning 和 Sort Warnings 現在有額外的資料行，以追蹤實體 I/O 統計資料、 使用的記憶體及受影響的資料列。 我們也引進了新的 hash_spill_details 擴充的事件。 現在您可以在您的雜湊和排序警告追蹤更細微的資訊 ([KB3107172](https://support.microsoft.com/en-us/kb/3107172))。 這項改進現在也會公開透過 XML 查詢計劃 」，SpillToTempDbType 複雜類型的新屬性的形式 ([KB3107400](https://support.microsoft.com/en-us/kb/3107400))。 現在會顯示排序工作資料表的統計資料，請在設定統計資料。 .
+-   **查詢執行診斷，針對 tempdb 溢出：** -Hash Warning 和 Sort Warnings 現在有額外的資料行，以追蹤實體 I/O 統計資料、 使用的記憶體及受影響的資料列。 我們也引進了新的 hash_spill_details 擴充的事件。 現在您可以在您的雜湊和排序警告追蹤更細微的資訊 ([KB3107172](https://support.microsoft.com/en-us/kb/3107172))。 這項改進現在也會公開透過 XML 查詢計劃 」，SpillToTempDbType 複雜類型的新屬性的形式 ([KB3107400](https://support.microsoft.com/en-us/kb/3107400))。 現在會顯示排序工作資料表的統計資料，請在設定統計資料。 .
 -   **針對涉及殘餘述詞下推的查詢執行計畫的改良的診斷：** 實際讀取的資料列現在會在查詢執行計畫，以協助改善查詢效能的疑難排解報告。 這應該不必個別擷取 SET STATISTICS IO 變換正負號。 這可讓您查看剩餘的述詞下推查詢計劃中的相關資訊。 如需詳細資訊，請參閱 < [KB3107397 眭妎踱恅](https://support.microsoft.com/en-us/kb/3107397)。
 
 

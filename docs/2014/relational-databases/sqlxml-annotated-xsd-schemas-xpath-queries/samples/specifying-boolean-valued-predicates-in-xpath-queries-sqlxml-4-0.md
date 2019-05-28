@@ -89,13 +89,13 @@ ms.locfileid: "66012456"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. 指定連續和巢狀述詞  
- 下列查詢顯示使用連續述詞。 此查詢會傳回所有**\<客戶 >** 的內容節點的子項目都有**SalesPersonID**屬性值為 277 和**TerritoryID**屬性值為 3:  
+ 下列查詢顯示使用連續述詞。 此查詢會傳回所有 **\<客戶 >** 的內容節點的子項目都有**SalesPersonID**屬性值為 277 和**TerritoryID**屬性值為 3:  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- 此查詢會傳回**\<客戶 >** 滿足述詞中指定這兩個條件的項目。  
+ 此查詢會傳回 **\<客戶 >** 滿足述詞中指定這兩個條件的項目。  
   
  您可以指定 `attribute` 軸的快速鍵 (@)，而且因為 `child` 軸是預設值，因此可從查詢省略：  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66012456"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 下列 XPath 查詢說明巢狀述詞的使用方式。 此查詢會傳回所有**\<客戶 >** 包含的子元素的內容節點**\<順序 >** 具有至少一個子元素 **\<順序 >** 具有項目**SalesPersonID**屬性值為 2。  
+ 下列 XPath 查詢說明巢狀述詞的使用方式。 此查詢會傳回所有 **\<客戶 >** 包含的子元素的內容節點 **\<順序 >** 具有至少一個子元素 **\<順序 >** 具有項目**SalesPersonID**屬性值為 2。  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -166,7 +166,7 @@ ms.locfileid: "66012456"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. 指定最上層述詞  
- 下列查詢會傳回**\<客戶 >** 子項目節點的內容節點為具有**\<順序 >** 元素子系。 此查詢會測試當做最上層述詞的位置路徑：  
+ 下列查詢會傳回 **\<客戶 >** 子項目節點的內容節點為具有 **\<順序 >** 元素子系。 此查詢會測試當做最上層述詞的位置路徑：  
   
 ```  
 /child::Customer[child::Order]  
