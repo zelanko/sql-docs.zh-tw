@@ -16,17 +16,17 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfc49e712e75a862c9c43ce99cc35b56c014cebc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d9b6f9426d4381f33d529e1efefa8afd6a1fc44b
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534650"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270159"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  在疑難排解期間，用來指定在訂閱者端的散發代理程式將套用之下一項交易的記錄序號 (LSN)，使代理程式略過失敗的交易。 這個預存程序執行於訂閱資料庫的訂閱者端。 不支援非 SQL Server 訂閱者使用這個項目。  
+  在疑難排解期間使用，以指定使用的記錄序號 (LSN)，讓散發代理程式，以開始下一個交易在上一個傳送的交易。 一旦重新啟動，散發代理程式會傳回交易大於此浮水印 (LSN) 從散發資料庫快取 (msrepl_commands)。 這個預存程序執行於訂閱資料庫的訂閱者端。 不支援非 SQL Server 訂閱者使用這個項目。  
   
 > [!CAUTION]  
 >  不正確使用這個預存程序或指定了不正確的 LSN 值，散發代理程式可能會還原訂閱者端先前所套用的變更，也可能會略過所有其餘變更。  
@@ -79,4 +79,6 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_setsubscriptionxactseqno**。  
   
-  
+## <a name="see-more"></a>查看更多
+
+[部落格：如何略過的交易](https://repltalk.com/2019/05/28/how-to-skip-a-transaction/)  

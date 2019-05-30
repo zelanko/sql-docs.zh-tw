@@ -1,6 +1,6 @@
 ---
 title: 快取共用資料集 (SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 428cb9e75e7023b8abee13927435b74e166baa07
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 097955ece70dfa411c12d1ee5d69af0de14831e6
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582221"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175595"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>快取共用資料集 (SSRS)
   共用資料集的查詢結果可以複製到快取，以便為多個報表提供一致的資料，並改善資料集查詢的回應時間。 跟報表一樣，您可以設定共用資料集在第一次使用時或指定排程進行快取。  
@@ -51,7 +51,7 @@ ms.locfileid: "65582221"
   
  特定參數組合的查詢結果在快取中時，啟動進行處理的所有報表，以及包含具有這些參數值之共用資料集參考的所有報表，都會使用快取的資料。  
   
- 您可以指定資料要在快取中保存到過期的時間。 如需詳細資訊，請參閱[快取頁面、共用資料集 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)。  
+ 您可以指定資料要在快取中保存到過期的時間。 如需詳細資訊，請參閱[使用共用快照集](../../reporting-services/work-with-shared-datasets-web-portal.md)。  
   
 ## <a name="preloading-the-cache"></a>預先載入快取  
  您可以透過建立快取重新整理計劃，以預先載入快取。 針對重新整理計劃，您可以使用項目特定排程或共用排程，指定重新整理的頻率。 若要避免產生多個相同項目的快取，您所指定的排程應該有足夠時間來處理外部資料來源的查詢。 例如，如果執行查詢需要 20 分鐘，則重新整理排程應該超過 20 分鐘。 如需詳細資訊，請參閱 [Schedules](../../reporting-services/subscriptions/schedules.md)。  
@@ -68,7 +68,7 @@ ms.locfileid: "65582221"
   
 -   您必須在共用資料集上擁有 ReadPolicy 和 UpdatePolicy 權限。  
   
- 快取重新整理計劃適用於共用資料集及報表。 如需詳細資訊，請參閱[快取重新整理選項 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)。  
+ 快取重新整理計劃適用於共用資料集及報表。 如需詳細資訊，請參閱 [快取報表 &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)的版本中預先載入快取的唯一方法。  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>造成快取逾期的條件  
  下列條件可能會導致共用資料集快取無效。  
@@ -93,7 +93,7 @@ ms.locfileid: "65582221"
   
  共用資料集的快取重新整理計劃更新不會影響已處理的報表。 更新快取重新整理計劃只會影響未來啟動而參考共用資料集的報表。  
   
-## <a name="see-also"></a>另請參閱  
- [管理共用資料集](../../reporting-services/report-data/manage-shared-datasets.md)  
+## <a name="see-also"></a>另請參閱
   
+ [管理共用資料集](../../reporting-services/report-data/manage-shared-datasets.md)  
   

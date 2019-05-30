@@ -1,6 +1,6 @@
 ---
 title: 管理 Reporting Services 原生模式報表伺服器 | Microsoft Docs
-ms.date: 03/17/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27588665db387c7812b1779fd71e3002b1b80e36
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: a516be313ddca5edd5d899ca05eeab6b1818b972
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581101"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175202"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>管理 Reporting Services 原生模式報表伺服器
   本節包含使用 Reporting Services 組態管理員來設定原生模式報表伺服器執行個體的程序。  
@@ -36,7 +36,7 @@ ms.locfileid: "65581101"
  說明如何手動為報表伺服器註冊 SPN，該伺服器會在使用 Kerberos 驗證之網路的網域使用者帳戶之下執行。  
   
  [設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
- 說明如何建立用來存取報表伺服器 Web 服務和報表管理員的一個或多個 URL。  
+ 說明如何建立用來存取報表伺服器 Web 服務和 Web 入口網站的一或多個 URL。  
   
  [建立原生模式報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
  提供建立報表伺服器資料庫的步驟。 這是部署 Reporting Services 安裝的必要步驟。  
@@ -52,7 +52,7 @@ ms.locfileid: "65581101"
  說明如何開啟用於來自報表伺服器之傳入要求和傳出回應的通訊埠。  
   
  [設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
- 描述使用 `https://localhost` 連線報表管理員或報表伺服器所需的其他步驟。  
+ 描述使用 `https://localhost` 連線到 Web 入口網站或報表伺服器所需的其他步驟。  
   
  [設定報表伺服器來進行遠端管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  說明如何設定遠端報表伺服器執行個體，好讓您可以從其他電腦連接及設定它。  

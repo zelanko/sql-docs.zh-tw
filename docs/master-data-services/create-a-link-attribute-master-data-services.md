@@ -14,21 +14,21 @@ ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 050256d488646425cd35580796e0fcfc771bea6d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 7d39dcfa1d3351434a6e35b1b74f7551648f2281
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487303"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354359"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>建立連結屬性 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  當您想要讓使用者輸入超連結作為屬性值 (例如 https://www.contoso.com) 時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中建立連結屬性。  
+  當您想要讓使用者輸入超連結作為屬性值 (例如 `https://www.contoso.com`) 時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中建立連結屬性。  
   
 > [!NOTE]  
->  當使用者輸入連結屬性的值時，字串開頭必須為 **https://**，否則將會顯示一個錯誤。  
+>  當使用者輸入連結屬性的值時，字串開頭必須為 **https://** ，否則將會顯示一個錯誤。  
   
 ## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
@@ -64,15 +64,15 @@ ms.locfileid: "65487303"
   
 ### <a name="to-create-a-link-attribute"></a>若要建立連結屬性  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 [管理模型]  頁面上，從方格中選取模型，然後按一下 [實體] 。  
+2.  在 [管理模型]  頁面上，從方格中選取模型，然後按一下 [實體]  。  
   
 3.  在 [管理實體]  頁面上，選取您要為其建立屬性之實體的資料列。  
   
-4.  按一下 **[屬性]**。  
+4.  按一下 **[屬性]** 。  
   
-5.  在 [管理屬性]  頁面上，執行下列其中一項動作，然後按一下 [加入] 。  
+5.  在 [管理屬性]  頁面上，執行下列其中一項動作，然後按一下 [加入]  。  
   
     -   如果是分葉成員的屬性，請選取 [成員類型]  清單方塊的 [分葉]  。  
   
@@ -86,15 +86,15 @@ ms.locfileid: "65487303"
   
 8.  在 **[顯示像素寬度]** 方塊中，輸入要在 **[總管]** 方格中顯示的屬性資料行寬度。  
   
-9. 從 [屬性類型] 清單中，選取 [自由格式]。  
+9. 從 [屬性類型]  清單中，選取 [自由格式]  。  
   
-10. 從 [資料類型] 清單中，選取 [連結]。  
+10. 從 [資料類型]  清單中，選取 [連結]  。  
   
-11. 在 [長度] 方塊中，輸入允許的最大字元數。  
+11. 在 [長度]  方塊中，輸入允許的最大字元數。  
   
 12. (選擇性) 選取 **[啟用變更追蹤]** 以追蹤屬性群組的變更。 如需詳細資訊，請參閱[將屬性加入至變更追蹤群組 &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。  
   
-13. 按一下 [儲存] 。  
+13. 按一下 [儲存]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   

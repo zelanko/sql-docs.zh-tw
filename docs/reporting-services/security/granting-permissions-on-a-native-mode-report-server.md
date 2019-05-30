@@ -1,6 +1,6 @@
 ---
 title: 在原生模式報表伺服器上授與權限 | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d38bcdb965bc08aa4eb7cad1401bd9d77f42b4ed
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 26175cfea8af6686f8c15840c7e44a5bde191df5
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65579828"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175640"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>在原生模式報表伺服器上授與權限
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用以角色為基礎的授權和驗證子系統來決定能夠在報表伺服器上執行作業及存取項目的人員。 以角色為基礎的授權，將使用者或群組可以執行的動作集分類成角色。 驗證是以內建的 Windows 驗證或您提供的自訂驗證模組為基礎。 您可以使用預先定義或自訂的角色搭配任何一種驗證類型。  
@@ -41,9 +41,9 @@ ms.locfileid: "65579828"
   
 2.  確認哪些使用者和群組需要存取報表伺服器，以及所存取的層級。 多數使用者都應指派至 **[瀏覽者]** 角色或 **[報表產生器]** 角色。 **[發行者]** 角色則應指派給較少數的使用者。 只有非常少數的使用者才應指派至 **[內容管理員]**。  
   
-3.  您可以使用報表管理員，針對需要存取權的每個使用者或群組，指派 [主資料夾] 資料夾 (這是報表伺服器資料夾階層的最上層資料夾) 的角色。  
+3.  您可以使用 Web 入口網站，針對需要存取權的每個使用者或群組，指派 [主資料夾] 資料夾 (這是報表伺服器資料夾階層的最上層資料夾) 的角色。  
   
-4.  在網站層級，於報表管理員的 [網站設定] 頁面上，使用 **系統使用者** 和 **系統管理員**等預先定義的角色，為每個使用者或群組建立系統層級角色指派。  
+4.  在網站層級，於 Web 入口網站的 [網站設定] 頁面上，使用 [系統使用者] 和 [系統管理員] 等預先定義的角色，為每個使用者或群組建立系統層級角色指派。  
   
 5.  視需要針對特定資料夾、報表和其他項目建立其他角色指派。 請避免建立大量角色指派。 如果您建立過多角色指派，可能會難以針對每個使用者追蹤不同的權限層級。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "65579828"
 |工具|工作|  
 |----------|-----------|  
 |Management Studio - 用於檢視、修改、建立和刪除角色定義。|[建立、刪除或修改角色 &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
-|報表管理員 - 用於指派使用者和群組給角色。|[將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [修改或刪除角色指派 &#40;報表管理員&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
+|Web 入口網站 - 用於指派使用者與群組給角色。|[將報表伺服器的存取權授與使用者](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> [修改或刪除角色指派](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)   
