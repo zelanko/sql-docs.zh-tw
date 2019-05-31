@@ -16200,7 +16200,7 @@
                   href: ../t-sql/functions/session-context-transact-sql.md
                 - name: SESSION_ID
                   href: ../t-sql/functions/session-id-transact-sql.md
-                - name: 'XACT_STATE '
+                - name: XACT_STATE
                   href: ../t-sql/functions/xact-state-transact-sql.md
             - name: 系統統計
               href: ../t-sql/functions/system-statistical-functions-transact-sql.md
