@@ -3,17 +3,17 @@ title: SQL Server 累計更新 SQL Server Machine Learning 的 CAB 下載
 description: SQL Server 2017 Machine Learning 服務和 SQL Server 2016 R Services 的 R 和 Python CAB 及套件下載。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/01/2019
+ms.date: 05/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: db03da02344301043e144cdd5e1638c09000bb08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3c5c27186969db01cc90fa43a6cf4ec2774ab051
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745349"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403233"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>下載 SQL Server 資料庫內分析的累計更新的執行個體的封包
 
@@ -36,7 +36,7 @@ ms.locfileid: "62745349"
 
 |版本  |元件 | 下載連結  | 已解決的問題 | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)** |  |  |  |
+|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| 現在已簽署之套件內的二進位檔。 |
 | | R 伺服器      |[SRS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2069739&clcid=1033)| 現在已簽署之套件內的二進位檔。 |
 | | Microsoft Python Open     | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033)| 現在已簽署之套件內的二進位檔。 |

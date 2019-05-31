@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 1ea0afb015bb457b067f1011bd3b602bf4142e09
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: c67eca111ecd0a51bc8e70d747cb7b713fe54ca8
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65106093"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413636"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>識別您的內部部署資料庫權限的 Azure SQL Database/受控執行個體 SKU
 
@@ -41,7 +41,7 @@ ms.locfileid: "65106093"
 
 ## <a name="prerequisites"></a>先決條件
 
-- 下載並安裝最新版[DMA](https://aka.sm/get-dma)。 如果您已經有舊版的工具，開啟它，並將提示您升級 DMA。
+- 下載並安裝最新版[DMA](https://aka.ms/get-dma)。 如果您已經有舊版的工具，開啟它，並將提示您升級 DMA。
 - 請確定您的電腦已[PowerShell 版本 5.1](https://www.microsoft.com/download/details.aspx?id=54616)或更新版本中，所需執行所有指令碼。 Findoug 出您的電腦安裝的 PowerShell 版本的相關資訊，請參閱文章[下載並安裝 Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)。
 - 請確定您的電腦已安裝 Azure Powershell 模組。 如需詳細資訊，請參閱文章[安裝 Azure PowerShell 模組](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0)。
 - 確認 PowerShell 檔案**SkuRecommendationDataCollectionScript.ps1**，這必要項目收集效能計數器，安裝 DMA 資料夾中。

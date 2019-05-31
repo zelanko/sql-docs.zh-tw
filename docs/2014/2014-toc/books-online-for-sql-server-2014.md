@@ -19,12 +19,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: f8c8ac11c1dada747783a1edaac3d3b1c8b5c795
-ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
+ms.openlocfilehash: 33cc877dfb2b1789aa775981e8377cf66b4ee950
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65836201"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413211"
 ---
 # <a name="books-online-for-sql-server-2014"></a>SQL Server 2014 的線上叢書
 
@@ -33,7 +33,7 @@ ms.locfileid: "65836201"
 SQL Server 2016 和更新版本中，記載[此處](https://docs.microsoft.com/sql/sql-server/index)。 SQL Server 2012 和較舊版本，都記載[此處](#previous-versions-gm2014)。 <!-- ?view= defaults to the latest GA version, to resolve the https '/index' address ambiguity. So '2014' will always be too old to be the default. -->
 
  **現在就試試看：**  
- ![Azure 虛擬機器小型](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) 擁有 Azure 帳戶嗎？  接著前往**[此處](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 到已安裝 SQL Server 2014 Service Pack 1 (SP1) 的虛擬機器的加速。 如需有關 SQL Server 2014 (SP1) 的詳細資訊，請參閱 < [SQL Server 2014 Service Pack 1 版本資訊](https://support.microsoft.com/en-us/kb/3058865)。 
+ ![Azure 虛擬機器小型](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) 擁有 Azure 帳戶嗎？  接著前往 **[此處](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 到已安裝 SQL Server 2014 Service Pack 1 (SP1) 的虛擬機器的加速。 如需有關 SQL Server 2014 (SP1) 的詳細資訊，請參閱 < [SQL Server 2014 Service Pack 1 版本資訊](https://support.microsoft.com/en-us/kb/3058865)。 
   
 ## <a name="sql-server-technologies"></a>SQL Server 技術  
 
@@ -57,7 +57,7 @@ SQL Server 2016 和更新版本中，記載[此處](https://docs.microsoft.com/s
   
 -   [Microsoft.com 上的 SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)  
   
--   [SQL Server 資源中心](https://go.microsoft.com/fwlink/?linkid=218841)  
+-   [SQL Server 資源中心](https://www.microsoft.com/sql-server/sql-server-2017-resources)  
   
 -   [SQL Server TechCenter](https://go.microsoft.com/fwlink/?linkid=28107)  
   

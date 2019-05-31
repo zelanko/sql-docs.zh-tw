@@ -10,12 +10,12 @@ manager: craigg
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6ccc94acb42fa7043912099c4888834cf4ff3e71
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 758915364784f34b638af0e874873a417662d710
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59243582"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413347"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>加入 Active Directory 網域的 Linux 主機上的 SQL Server
 
@@ -139,7 +139,7 @@ ping contoso.com
 
 若要加入至 Active Directory 網域的 SQL Server 主機使用下列步驟：
 
-1. 使用[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.md)主機電腦加入 AD 網域。 您必須先安裝兩者**realmd**和 SQL Server 主機上使用您的 Linux 散發套件管理員的 Kerberos 用戶端套件：
+1. 使用[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join)主機電腦加入 AD 網域。 您必須先安裝兩者**realmd**和 SQL Server 主機上使用您的 Linux 散發套件管理員的 Kerberos 用戶端套件：
 
    **RHEL:**
 
@@ -179,7 +179,7 @@ ping contoso.com
 
    SQL Server 會使用 SSSD 和 NSS 對應使用者帳戶和群組安全性識別元 (Sid)。 SSSD 必須設定並執行 SQL Server 已成功建立 AD 登入。 **realmd**平常這會自動在加入網域，但在某些情況下，您必須分別執行此動作。
 
-   如需詳細資訊，請參閱如何[手動設定 SSSD](https://access.redhat.com/articles/3023951)，並[設定來使用 SSSD NSS](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)。
+   如需詳細資訊，請參閱如何[手動設定 SSSD](https://access.redhat.com/articles/3023951)，並[設定來使用 SSSD NSS](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)。
 
 1. 請確認您現在可以收集使用者資訊從網域，而且您可以取得 Kerberos 票證，以該使用者。 下列範例會使用**識別碼**， [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)，並[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)這個命令。
 
@@ -198,7 +198,7 @@ ping contoso.com
    ```
 
    > [!NOTE]
-   > - 如果**識別碼user@contoso.com**會傳回`No such user`，請確定已成功啟動 SSSD 服務： 執行命令`sudo systemctl status sssd`。 如果服務正在執行，而且您仍然看到錯誤，請嘗試啟用 SSSD 的詳細資訊記錄。 如需詳細資訊，請參閱 Red Hat 文件[疑難排解 SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting)。
+   > - 如果**識別碼user@contoso.com** 會傳回`No such user`，請確定已成功啟動 SSSD 服務： 執行命令`sudo systemctl status sssd`。 如果服務正在執行，而且您仍然看到錯誤，請嘗試啟用 SSSD 的詳細資訊記錄。 如需詳細資訊，請參閱 Red Hat 文件[疑難排解 SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting)。
    >
    > - 如果**kinit user@CONTOSO.COM** 會傳回`KDC reply did not match expectations while getting initial credentials`，請確定您以大寫指定領域。
 
