@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_function_stats & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 05/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c0064e35be2ab514e93b9119f7994849cf50cc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4f8305dbb894ff679d26702ddd877add9eeb4f76
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63013207"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428958"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -68,6 +68,10 @@ ms.locfileid: "63013207"
 |**last_elapsed_time**|**bigint**|經過時間，以百萬分之一秒為單位，最近完成執行此函式中。|  
 |**min_elapsed_time**|**bigint**|耗用時間下限，以百萬分之一秒為單位，任何在完成執行此函式。|  
 |**max_elapsed_time**|**bigint**|耗用時間上限，以百萬分之一秒為單位，任何在完成執行此函式。|  
+|**total_page_server_reads**|**bigint**|編譯以來執行所執行的這個函式的遠端網頁伺服器讀取總數。<br /><br /> **適用於：** Azure SQL Database 的超大規模。|  
+|**last_physical_reads**|**bigint**|上次執行函式已執行的遠端網頁伺服器讀取的次數。<br /><br /> **適用於：** Azure SQL Database 的超大規模。|  
+|**min_physical_reads**|**bigint**|所讀取的最小次數遠端網頁伺服器，在單次執行期間曾執行此函式。<br /><br /> **適用於：** Azure SQL Database 的超大規模。|  
+|**max_physical_reads**|**bigint**|所讀取的最大次數遠端網頁伺服器，在單次執行期間曾執行此函式。<br /><br /> **適用於：** Azure SQL Database 的超大規模。|
   
 ## <a name="permissions"></a>Permissions  
 

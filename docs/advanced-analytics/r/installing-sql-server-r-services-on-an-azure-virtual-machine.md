@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c88d4929d40af2dc0e61d5d7261fddb3bac2e74d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65c6afcf3f74e320237c1f345ad643752fde6ae0
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62506037"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454755"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>在 Azure 虛擬機器上安裝 SQL Server 機器學習服務 R 和 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "62506037"
 若要啟用從遠端資料科學用戶端存取：
 
 1. 在虛擬機器上，開啟 [具有進階安全性的 Windows 防火牆]。
-2. 選取 [輸出規則]
+2. 選取 [輸出規則] 
 3. 停用下列規則︰
   
      `Block network access for R local user accounts in SQL Server instance MSSQLSERVER`
@@ -44,7 +44,7 @@ ms.locfileid: "62506037"
 
 如果您預期呼叫伺服器的用戶端將會需要發出 ODBC 查詢做為其機器學習服務解決方案的一部分，您必須確定 Launchpad 可代表遠端用戶端的 ODBC 呼叫。 
 
-若要這樣做，您必須允許 Launchpad 所使用的 SQL 背景工作帳戶登入執行個體。 如需詳細資訊，請參閱 <<c0> [ 為資料庫使用者的新增 SQLRUserGroup](../security/add-sqlrusergroup-to-database.md)。
+若要這樣做，您必須允許 Launchpad 所使用的 SQL 背景工作帳戶登入執行個體。 如需詳細資訊，請參閱 <<c0> [ 為資料庫使用者的新增 SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md)。
 
 <a name="network"></a>
 

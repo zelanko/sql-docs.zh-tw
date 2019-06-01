@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 25bf5a7e7d18810c782d1ce2f4986fc433421395
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 09b96f6934fec9e24ca4a254a1d14c23327ebe5b
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57577928"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454713"
 ---
 # <a name="quickstart-verify-python-exists-in-sql-server"></a>快速入門：驗證 Python 存在於 SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -62,7 +62,7 @@ SQL Server 包含內建的 SQL Server 資料的資料科學分析的 Python 語�
 
 首先，排除任何安裝問題。 若要啟用外部程式碼程式庫需要後續安裝設定。 請參閱[安裝 SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)。 同樣地，請確定 Launchpad 服務正在執行。
 
-您也必須加入 Windows 使用者群組`SQLRUserGroup`做為登入執行個體，以確定 Launchpad 可提供 Python 和 SQL Server 之間的通訊上。 （相同的群組會用於這兩個 R 和 Python 程式碼執行）。如需詳細資訊，請參閱 <<c0> [ 已啟用隱含的驗證](../security/add-sqlrusergroup-to-database.md)。
+您也必須加入 Windows 使用者群組`SQLRUserGroup`做為登入執行個體，以確定 Launchpad 可提供 Python 和 SQL Server 之間的通訊上。 （相同的群組會用於這兩個 R 和 Python 程式碼執行）。如需詳細資訊，請參閱 < [SQLRUserGroup 建立登入](../security/create-a-login-for-sqlrusergroup.md)。
 
 此外，您可能需要啟用網路通訊協定已停用，或開啟防火牆，以便 SQL Server 可與外部用戶端通訊。 如需詳細資訊，請參閱 <<c0> [ 疑難排解安裝](../common-issues-external-script-execution.md)。
 

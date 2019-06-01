@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c9b1b4eca18a9d4d8d1819eee399676046cc9d78
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a53056f1f169224b222a07a062f6ddd88cb24b81
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62503832"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454683"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>管理並整合 SQL Server 上的機器學習工作負載
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,7 +59,7 @@ R 和 Python 整合會變成可透過一連串的步驟。 第一個是安裝程
 擔任 DBA 一，您可以使用 SQL Server 資料安全性，來指定誰有權限來執行指令碼，並在相同的安全性角色來控制下管理作業中使用的資料存取透過 T-SQL 查詢。 身為系統管理員，您可以明確拒絕**SQLRUserGroup**藉由建立 Acl 的本機伺服器上的機密資料的存取權。
 
 >[!NOTE]
-> 根據預設， **SQLRUserGroup**不會在 SQL Server 本身不需要登入或權限。 背景工作帳戶應該進行資料存取需要登入，您必須建立它自己。 明確呼叫登入建立的案例是當使用者識別 Windows 使用者，而且連接字串會指定信任的使用者時，在執行中，資料或資料庫引擎執行個體上的作業支援從指令碼的要求。 如需詳細資訊，請參閱 <<c0> [ 為資料庫使用者的新增 SQLRUserGroup](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)。
+> 根據預設， **SQLRUserGroup**不會在 SQL Server 本身不需要登入或權限。 背景工作帳戶應該進行資料存取需要登入，您必須建立它自己。 明確呼叫登入建立的案例是當使用者識別 Windows 使用者，而且連接字串會指定信任的使用者時，在執行中，資料或資料庫引擎執行個體上的作業支援從指令碼的要求。 如需詳細資訊，請參閱 <<c0> [ 為資料庫使用者的新增 SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)。
 
 ## <a name="disable-script-execution"></a>停用指令碼執行
 

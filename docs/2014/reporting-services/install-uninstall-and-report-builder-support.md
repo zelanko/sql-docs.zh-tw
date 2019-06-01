@@ -12,12 +12,12 @@ ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 084d90ad20dbd1955894f20524e6f040231f5ae9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: d35f6c7d77a43fe35ba78a88824309ffd72a5a44
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66108953"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454604"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>安裝、解除安裝和報表產生器支援
   報表產生器是一項報表撰寫工具，可用來建立、更新和共用報表、報表組件和共用資料集。 報表產生器有提供兩個版本：單機版和 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]。 單機版是由您或系統管理員安裝在電腦上。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本是隨 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 自動安裝，而且從報表管理員或與 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]整合的 SharePoint 網站下載到電腦。  
@@ -63,7 +63,7 @@ ms.locfileid: "66108953"
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本的報表產生器位於報表伺服器上，當您按一下報表管理員中的 **[報表產生器]** 按鈕，或是在 SharePoint 文件庫中按一下 **[新增文件]** 功能表上的 **[報表產生器報表]** 選項時，就會安裝在您的電腦上。  
   
 > [!NOTE]  
->  如果 **[新增文件]** 功能表未列出 **[報表產生器報表]**、 **[報表產生器模型]** 和 **[報表資料來源]** 選項，則必須將其內容類型加入至 SharePoint 文件庫。   
+>  如果 **[新增文件]** 功能表未列出 **[報表產生器報表]** 、 **[報表產生器模型]** 和 **[報表資料來源]** 選項，則必須將其內容類型加入至 SharePoint 文件庫。   
   
  您可以從報表管理員或 SharePoint 文件庫開啟報表產生器。 如需有關如何開啟報表產生器的詳細資訊，請參閱 <<c0> [ 啟動報表產生器&#40;報表產生器&#41;](report-builder/start-report-builder.md)。</c0>  
   
@@ -152,7 +152,7 @@ ms.locfileid: "66108953"
   
  不過，透過額外的設定，您可以將報表伺服器提供給報表產生器的使用者使用。 您可以將 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URL 加入至信任的網站。 根據預設，Windows Vista、Windows Server 2008 和 Windows 7 上的 Internet Explorer 7.0 或更新版本會在「受保護模式」下執行。 「受保護模式」功能會封鎖瀏覽器要求，使其無法到達相同電腦上執行的高層級處理序。 您可以為報表伺服器應用程式停用受保護模式，只要將這些應用程式加入為信任的網站即可。 您必須具有管理員權限才能進行此變更。  
   
- 如需設定的詳細資訊[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，請參閱 < [Reporting Services 組態管理員&#40;del&#41; ](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)中[Reporting Services 文件](https://go.microsoft.com/fwlink/?linkid=121312)msdn.microsoft.com 上。  
+ 如需設定的詳細資訊[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，請參閱 < [Reporting Services 組態管理員&#40;del&#41; ](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode)中[Reporting Services 文件](https://go.microsoft.com/fwlink/?linkid=121312)msdn.microsoft.com 上。  
   
   
 ##  <a name="SampleDatabases"></a> SQL Server 範例資料庫  

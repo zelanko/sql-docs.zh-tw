@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 52935abf74fcf3ad7a4f7c8d78faa6b9b21d47e5
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: bc9762470b6e2a836c29f53ebfc3ffeadbcc381f
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65095947"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454689"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安裝 SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,7 +71,7 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
 3. 在 **特徵選取**頁面上，選取下列選項：
 
    - 選取  **Database Engine Services**。 使用機器學習服務的每個執行個體中只需要 database engine。
-   - 選取  **R Services （資料庫）**。 安裝支援的資料庫中使用。
+   - 選取  **R Services （資料庫）** 。 安裝支援的資料庫中使用。
     
      ![R Services 的特徵選取](media/2016setup-rsvcs-features.png "選取這些功能的 R Services 資料庫")
 
@@ -216,7 +216,7 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
 在資料庫上，您可能需要將下列的組態更新：
 
 * [SQL Server Machine Learning 服務的權限授與使用者](../../advanced-analytics/security/user-permission.md)
-* [新增 SQLRUserGroup 作為資料庫使用者](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
+* [新增 SQLRUserGroup 作為資料庫使用者](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 
 > [!NOTE]
 > 並非所有列出的變更是必要的而且沒有任何可能需要。 需求取決於您的安全性結構描述，您可在此安裝 SQL Server，和您預期使用者會連線到資料庫並執行外部指令碼的方式。 其他疑難排解提示可以在這裡找到：[升級及安裝常見問題集](../r/upgrade-and-installation-faq-sql-server-r-services.md)

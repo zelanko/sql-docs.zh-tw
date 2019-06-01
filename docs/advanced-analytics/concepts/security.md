@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 5fd8850271ab4ebf7ac69ff32cfa0877394f1d89
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 1f19e3322b8aee78fdb5a76a29a719148cc6a0c7
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596569"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454543"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning 服務的擴充性架構的安全性概觀
 
@@ -71,7 +71,7 @@ SQL Server 的資料安全性模型的資料庫登入和角色將延伸到 R 和
 
 ## <a name="services-used-in-external-processing-launchpad"></a>外部處理 （啟動控制板） 中所用的服務
 
-擴充性架構新增一個新 NT 服務才[的服務清單](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)在 SQL Server 安裝中：[**SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad)。
+擴充性架構新增一個新 NT 服務才[的服務清單](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)在 SQL Server 安裝中：[**SQL Server Launchpad (MSSSQLSERVER)** ](extensibility-framework.md#launchpad)。
 
 Database engine 會使用 SQL Server Launchpad 服務，具現化的 R 或 Python 的工作階段做為個別的處理序。 此程序的帳戶下執行低權限;不同於 SQL Server、 啟動控制板本身，以及執行預存程序或主應用程式查詢使用者識別。 以個別的處理序，在低權限帳戶下執行指令碼是 R 和 Python 中 SQL Server 的安全性和隔離模型的基礎。
 
@@ -111,7 +111,7 @@ Database engine 會使用 SQL Server Launchpad 服務，具現化的 R 或 Pytho
 
 若要保護 SQL Server 上的敏感資源，您可以選擇性地定義會拒絕存取的存取控制清單 (ACL) **SQLRUserGroup**。 相反地，您也可以存在於主機電腦，除了 SQL Server 本身的本機資料資源的權限授與。 
 
-根據設計， **SQLRUserGroup**不具有資料庫登入或任何資料的權限。 在某些情況下，您可能想要建立以便迴圈後的連線，尤其是受信任的 Windows 身分識別會呼叫使用者的登入。 這項功能稱為[*隱含的驗證*](#implied-authentication)。 如需詳細資訊，請參閱 <<c0> [ 為資料庫使用者的新增 SQLRUserGroup](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)。
+根據設計， **SQLRUserGroup**不具有資料庫登入或任何資料的權限。 在某些情況下，您可能想要建立以便迴圈後的連線，尤其是受信任的 Windows 身分識別會呼叫使用者的登入。 這項功能稱為[*隱含的驗證*](#implied-authentication)。 如需詳細資訊，請參閱 <<c0> [ 為資料庫使用者的新增 SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)。
 
 ## <a name="identity-mapping"></a>識別對應
 
@@ -127,7 +127,7 @@ Database engine 會使用 SQL Server Launchpad 服務，具現化的 R 或 Pytho
 
 受信任的連線是可從 R 和 Python 指令碼，但僅限於有額外的設定。 在擴充性架構中，R 和 Python 程序則是背景工作帳戶，從父代繼承的權限下執行**SQLRUserGroup**。 當連接字串指定`Trusted_Connection=True`，連接要求時，也就是未知的 SQL Server 預設會顯示背景工作帳戶的身分識別。
 
-若要讓受信任的連線成功，您必須建立的資料庫登入**SQLRUserGroup**。 完成後，任何受信任連線的任何成員**SQLRUserGroup**具有 SQL Server 登入權限。 如需逐步指示，請參閱 <<c0> [ 資料庫登入的新增 SQLRUserGroup](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)。
+若要讓受信任的連線成功，您必須建立的資料庫登入**SQLRUserGroup**。 完成後，任何受信任連線的任何成員**SQLRUserGroup**具有 SQL Server 登入權限。 如需逐步指示，請參閱 <<c0> [ 資料庫登入的新增 SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)。
 
 信任的連接不是最廣泛使用的形式的連線要求。 當 R 或 Python 指令碼指定的連接時，它可以是較常使用 SQL 登入，或是完整指定的使用者名稱和密碼，如果連接至 ODBC 資料來源。
 
@@ -153,4 +153,4 @@ Database engine 會使用 SQL Server Launchpad 服務，具現化的 R 或 Pytho
 
 在本文中，您學到的元件，並內建的安全性架構的互動模型[擴充性架構](../../advanced-analytics/concepts/extensibility-framework.md)。 本文章涵蓋的重點包括用途的啟動列 」、 「 SQLRUserGroup 和 「 背景工作帳戶的 R 和 Python，以及如何將使用者身分識別對應至背景工作帳戶的處理序隔離。 
 
-下一個步驟中，檢閱的指示[授與權限](../../advanced-analytics/security/user-permission.md)。 使用 Windows 驗證的伺服器，您也應該檢閱[資料庫登入的新增 SQLRUserGroup](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)若要了解何時需要額外的設定。
+下一個步驟中，檢閱的指示[授與權限](../../advanced-analytics/security/user-permission.md)。 使用 Windows 驗證的伺服器，您也應該檢閱[資料庫登入的新增 SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)若要了解何時需要額外的設定。
