@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - Filter method
 ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: b38318d9ca38f5774f15cdac66b9407f2ce4a968
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24b145ec8bda61645521fcf69e6a40bba1659e54
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832599"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938075"
 ---
 # <a name="filter-geometry-data-type"></a>Filter (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47832599"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回類型：**SqlBoolean**  
+ CLR 傳回型別：**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  這個方法不具決定性或並非精確的。  

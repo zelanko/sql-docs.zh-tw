@@ -12,12 +12,12 @@ manager: craigg
 ms.reviewer: dineth, sstein
 ms.custom: ''
 ms.date: 05/17/2019
-ms.openlocfilehash: ff78af4ffcfe530ba28d47ec57852486523f859a
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.openlocfilehash: 2fbd0f4680c7a63a5390d93589f44b708f6c2629
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65822506"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983121"
 ---
 # <a name="get-full-memory-dump"></a>取得完整記憶體傾印
 
@@ -37,7 +37,7 @@ ms.locfileid: "65822506"
     <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
     ```
 
-    它應該會提示您接受授權合約，請選取 [同意]。
+    它應該會提示您接受授權合約，請選取 [同意]  。
 
 4. 啟動 SQL Server Management Studio (SSMS) (若尚未啟動的話)。
 
@@ -71,7 +71,7 @@ ms.locfileid: "65822506"
     <PathToProcDumpFolder>\procdump.exe -e 1 -f System.OutOfMemoryException -ma -w ssms.exe
     ```
 
-    它應該會提示您接受授權合約，請選取 [同意]。
+    它應該會提示您接受授權合約，請選取 [同意]  。
 
 4. 啟動 SQL Server Management Studio (若尚未啟動的話)。
 
@@ -88,6 +88,15 @@ ms.locfileid: "65822506"
     * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
 
 9. 壓縮資料夾。
+
+## <a name="share-the-information"></a>共用資訊
+
+1. 與 SSMS 小組共用資訊，將問題記錄在 https://aka.ms/sqlfeedback。
+
+2. 然後共用收集至 OneDrive (或相同工具) 的記憶體傾印檔案，這些檔案可從 OneDrive 收集。
+
+    > [!Important]
+    > 記憶體傾印檔案可能會包含敏感性資訊。
 
 ## <a name="next-steps"></a>後續步驟
 

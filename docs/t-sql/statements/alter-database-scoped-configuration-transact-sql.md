@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 31750fffc81fba1b22377578bddc09e1994e9b29
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 8932a3413923016783f50c3084658fa992e6c984
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64568347"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270166"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -71,8 +71,8 @@ ALTER DATABASE SCOPED CONFIGURATION
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
-    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
-    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | INTERLEAVED_EXECUTION_TVF = { ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
     | TSQL_SCALAR_UDF_INLINING = { ON | OFF }
     | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
@@ -122,7 +122,7 @@ PRIMARY
 
 LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }
 
-可讓您將查詢最佳化工具基數估計模型設定為 SQL Server 2012 和更舊版本，而不根據資料庫的相容性層級。 預設值為 **OFF**，這會根據資料庫的相容性層級來設定查詢最佳化工具基數估計模型。 將 LEGACY_CARDINALITY_ESTIMATION 設為 [ON] 相當於啟用[追蹤旗標 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
+可讓您將查詢最佳化工具基數估計模型設定為 SQL Server 2012 和更舊版本，而不根據資料庫的相容性層級。 預設值為 **OFF**，這會根據資料庫的相容性層級來設定查詢最佳化工具基數估計模型。 將 LEGACY_CARDINALITY_ESTIMATION 設為 [ON]  相當於啟用[追蹤旗標 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
 > [!TIP]
 > 若要在查詢層級完成此操作，請新增 **QUERYTRACEON** [查詢提示](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
@@ -173,6 +173,8 @@ INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 
 > [!NOTE]
 > 針對資料庫相容性層級 130 或更低，這個資料庫範圍設定沒有任何作用。
+>
+> 僅限 SQL Server 2017 (14.x)，選項 INTERLEAVED_EXECUTION_TVF 舊稱為 **DISABLE**_INTERLEAVED_EXECUTION_TVF。
 
 BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}    
 
@@ -294,6 +296,8 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 - 使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 單一資料庫和彈性集區，此選項可以在 SQL Database 伺服器的個別使用者資料庫中進行設定。
 - 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 受控執行個體中，此選項會在 `TempDB` 中設定，且個別使用者資料庫的設定不會有任何效果。
+
+<a name="lqp"></a>
 
 LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 

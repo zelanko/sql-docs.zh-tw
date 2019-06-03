@@ -17,16 +17,16 @@ helpviewer_keywords:
 - logarithm of expression
 - LOG function
 ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70bfded9597cd7e0d8d8f54ecc3fa636e2d41d3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24bc60e00fa628a0c984302a4d91c806eab09b4b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704886"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949160"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ LOG ( float_expression )
   
  自然對數是基數 **e** 的對數，其中 **e** 是大約等於 2.718281828 的無理常數。  
   
- 數字之指數的自然對數就是該數字本身：LOG( EXP( *n* ) ) = *n*。 而數字之自然對數的指數就是該數字本身：EXP( LOG( *n* ) ) = *n*。  
+ 一個數值的指數自然對數，也是該數值本身：LOG( EXP( *n* ) ) = *n*。 而一個數值的自然對數指數，也是該數值本身：EXP( LOG( *n* ) ) = *n*。  
   
 ## <a name="examples"></a>範例  
   

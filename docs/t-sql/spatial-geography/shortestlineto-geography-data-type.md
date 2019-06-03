@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - ShortestLineTo method (geography)
 ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: c495bd27ef5464b0fa56b94513c24eeb4641240e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c136de737c3cd3eec886ff2e5ce470ab4d67296e
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689206"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936274"
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47689206"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型：**SqlGeography**  
+ CLR 傳回型別：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  方法會傳回 **LineString** 執行個體，其端點在兩個非交集 **geography** 比較執行個體的框線上。 所傳回 **LineString** 的長度等於兩個 **geography** 執行個體之間的最短距離。 當兩個 **geography** 執行個體彼此交集時，會傳回空白 **LineString** 執行個體。  

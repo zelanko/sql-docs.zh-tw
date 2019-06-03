@@ -1,7 +1,7 @@
 ---
 title: ALTER SERVER CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: aad389a5b54918a65b7eedab225c35425e404bf8
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: 2de44a8eec9b2cf4428cb40db79f0c08f9a1afbf
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570791"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993462"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,6 +50,7 @@ SET <optionspec>
    | <hadr_cluster_context>  
    | <buffer_pool_extension>  
    | <soft_numa>  
+   | <memory_optimized>
 }  
   
 <process_affinity> ::=   
@@ -98,8 +99,17 @@ SET <optionspec>
         { size [ KB | MB | GB ] }  
   
 <soft_numa> ::=  
-    SET SOFTNUMA  
+    SOFTNUMA  
     { ON | OFF }  
+
+<memory-optimized> ::=   
+   MEMORY_OPTIMIZED   
+   {   
+     ON 
+   | OFF
+   | [ TEMPDB_METADATA = { ON [(RESOURCE_POOL='resource_pool_name')] | OFF }
+   | [ HYBRID_BUFFER_POOL = { ON | OFF }
+   }  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -186,8 +196,8 @@ SQL Server Database Engine 資源 DLL 在將 SQL Server 執行個體視為無回
   
 **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-HADR CLUSTER CONTEXT **=** { **'**_remote\_windows\_cluster_**'** | LOCAL }  
-將伺服器執行個體的 HADR 叢集內容切換至指定的 Windows Server 容錯移轉叢集 (WSFC)。 「HADR 叢集內容」可決定由哪個 WSFC 管理可用性複本 (由伺服器執行個體所裝載) 的中繼資料。 僅在跨叢集移轉 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 至新 WSFC 上的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或更新版本執行個體時，才使用 SET HADR CLUSTER CONTEXT 選項。  
+HADR CLUSTER CONTEXT **=** { **'** _remote\_windows\_cluster_ **'** | LOCAL }  
+將伺服器執行個體的 HADR 叢集內容切換至指定的 Windows Server 容錯移轉叢集 (WSFC)。 「HADR 叢集內容」  可決定由哪個 WSFC 管理可用性複本 (由伺服器執行個體所裝載) 的中繼資料。 僅在跨叢集移轉 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 至新 WSFC 上的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或更新版本執行個體時，才使用 SET HADR CLUSTER CONTEXT 選項。  
   
 您只能將 HADR 叢集內容從本機 WSFC 切換至遠端 WSFC。 然後，您可能選擇從遠端 WSFC 切換回本機 WSFC。 HADR 叢集內容只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體未裝載任何可用性複本時，才能切換至遠端叢集。  
   
@@ -245,14 +255,35 @@ OFF
 > 4) 啟動 SQL Server Agent 的執行個體。  
   
 **詳細資訊：** 如果您在 SQL Server 服務重新啟動之前搭配 SET SOFTNUMA 命令執行 ALTER SERVER CONFIGURATION，則在 SQL Server Agent 服務停止時，它會執行 T-SQL RECONFIGURE 命令，以便將 SOFTNUMA 設定還原回 ALTER SERVER CONFIGURATION 之前的情況。 
-  
+
+**\<memory_optimized> ::=**
+
+**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和更新版本
+
+ON <br>
+啟用所有屬於[記憶體內部資料庫](../../relational-databases/in-memory-database.md)功能系列的執行個體層級功能。 目前這包括[經記憶體最佳化的 tempdb 中繼資料](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)和[混合式緩衝集區](../../database-engine/configure-windows/hybrid-buffer-pool.md)。 需要重新開機才會生效。
+
+OFF <br>
+停用所有屬於記憶體內部資料庫功能系列的執行個體層級功能。 需要重新開機才會生效。
+
+TEMPDB_METADATA = ON | OFF <br>
+僅啟用或停用經記憶體最佳化的 TempDB 中繼資料。 需要重新開機才會生效。 
+
+RESOURCE_POOL='resource_pool_name' <br>
+與 TEMPDB_METADATA = ON 結合時，指定應用於 tempdb 之使用者定義的資源集區。 如未指定，則 tempdb 會使用預設集區。 集區必須已經存在。 如果重新啟動服務時集區尚不可用，則 tempdb 會使用預設集區。
+
+
+HYBRID_BUFFER_POOL = ON | OFF <br>
+啟用或停用執行個體層級的混合式緩衝集區。 需要重新開機才會生效。
+
+
 ## <a name="general-remarks"></a>一般備註  
 除非明確指定，否則此陳述式不需重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體，則不需重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 叢集資源。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
 此陳述式不支援 DDL 觸發程序。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要處理序相似性選項的 ALTER SETTINGS 權限。 診斷記錄檔和容錯移轉叢集屬性選項的 ALTER SETTINGS 與 VIEW SERVER STATE 權限，以及 HADR 叢集內容選項的 CONTROL SERVER 權限。  
   
 需要緩衝集區延伸模組選項的 ALTER SERVER STATE 權限。  
@@ -267,7 +298,9 @@ OFF
 |[設定診斷記錄檔選項](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  
 |[設定容錯移轉叢集屬性](#Failover)|HealthCheckTimeout|  
 |[變更可用性複本的叢集內容](#ChangeClusterContextExample)|**'** *windows_cluster* **'**|  
-|[設定緩衝集區延伸模組](#BufferPoolExtension)|BUFFER POOL EXTENSION|  
+|[設定緩衝集區延伸模組](#BufferPoolExtension)|BUFFER POOL EXTENSION| 
+|[設定記憶體內部資料庫選項](#MemoryOptimized)|MEMORY_OPTIMIZED|
+
   
 ###  <a name="Affinity"></a> 設定處理序相似性  
 本節的範例示範如何將處理序相似性設定為 CPU 和 NUMA 節點。 範例假設伺服器包含 256 個 CPU，而這些 CPU 排列成四個群組，總計有 16 個 NUMA 節點。 執行緒不會指派給任何 NUMA 節點或 CPU。  
@@ -404,7 +437,37 @@ SET BUFFER POOL EXTENSION ON
 GO  
   
 ```  
-  
+
+### <a name="MemoryOptimized"></a> 設定記憶體內部資料庫選項
+
+**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和更新版本
+
+#### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>A. 使用預設選項啟用所有記憶體內部資料庫功能
+
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED ON;
+GO
+```
+
+#### <a name="b-enable-memory-optimized-tempdb-metadata-using-the-default-resource-pool"></a>B. 使用預設資源集區啟用經記憶體最佳化的 tempdb 中繼資料
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON;
+GO
+```
+
+#### <a name="c-enable-memory-optimized-tempdb-metadata-with-a-user-defined-resource-pool"></a>C. 以使用者定義之資源集區啟用經記憶體最佳化的 tempdb 中繼資料
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = 'pool_name');
+GO
+```
+
+#### <a name="d-enable-hybrid-buffer-pool"></a>D. 啟用混合式緩衝集區
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = ON;
+GO
+```
+
+
 ## <a name="see-also"></a>另請參閱  
 [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)   
 [變更伺服器執行個體的 HADR 叢集內容 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)   

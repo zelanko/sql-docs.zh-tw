@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - Reduce method
 ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 4862760d8061ad21ac12ad2e2968b5bfde5ad706
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b89d42d050c32f10bac8c8796a4bfa4dd9355ba0
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612846"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935788"
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47612846"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型：**SqlGeography**  
+ CLR 傳回型別：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  如果是集合類型，這個演算法會在此執行個體包含的每一個 **geography** 上獨立運作。 此演算法不會修改 **Point** 執行個體。  
