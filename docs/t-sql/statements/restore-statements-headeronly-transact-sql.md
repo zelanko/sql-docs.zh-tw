@@ -20,16 +20,16 @@ helpviewer_keywords:
 - RESTORE HEADERONLY statement
 - backup header information [SQL Server]
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 818bd4150965f0a1e36c942f21d9446759c4ec04
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: c8296ca538f9daac6b0e05aae6f8124bfe2abb62
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242241"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947054"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 陳述式 - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -150,7 +150,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) 至目前的版本)。<br /><br /> 使用的加密程式類型：憑證或非對稱金鑰。 備份未加密時，這個值會是 NULL。|  
   
 > [!NOTE]  
->  如果定義了備份組的密碼，RESTORE HEADERONLY 只會顯示密碼符合命令指定的 PASSWORD 選項的備份組。 另外，RESTORE HEADERONLY 也只會顯示未受保護之備份組的完整資訊。 媒體上其他受密碼保護之備份組的 **BackupName** 資料行會設為 '**_Password Protected_**'，所有其他資料行則為 NULL。  
+>  如果定義了備份組的密碼，RESTORE HEADERONLY 只會顯示密碼符合命令指定的 PASSWORD 選項的備份組。 另外，RESTORE HEADERONLY 也只會顯示未受保護之備份組的完整資訊。 媒體上其他受密碼保護之備份組的 **BackupName** 資料行會設為 ' **_Password Protected_** '，所有其他資料行則為 NULL。  
   
 ## <a name="general-remarks"></a>一般備註  
  用戶端可以利用 RESTORE HEADERONLY 來擷取特定備份裝置上的所有備份之所有備份標頭資訊。 對於備份裝置中的每個備份，伺服器會將標頭資訊當做一個資料列來傳送。  
@@ -161,7 +161,7 @@ FROM <backup_device>
 > [!IMPORTANT]  
 >  這個密碼所提供的保護很弱。 這是為了防止已獲授權或未獲授權的使用者使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具進行不正確的還原。 它無法防止透過其他方式或以取代密碼的方式來讀取備份資料。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]保護備份的最佳做法是將備份磁帶存放在安全位置，或備份至受適當存取控制清單 (ACL) 保護的磁碟檔案中。 ACL 應該設在備份建立所在的根目錄下。  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
  取得有關備份組或備份裝置的資訊需要 CREATE DATABASE 權限。 如需詳細資訊，請參閱 [GRANT 資料庫權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  

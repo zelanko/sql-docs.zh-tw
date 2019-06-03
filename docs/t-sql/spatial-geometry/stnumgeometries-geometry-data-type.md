@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STNumGeometries (geometry Data Type)
 ms.assetid: 9402b03d-3039-42ca-ac59-f96b7f1a48de
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 1c48a3560f960c90e8426a67e5b1b85af933d2ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99e8dd51d546a7f65771a23fd8748d9d0b17d6fb
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804691"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938516"
 ---
 # <a name="stnumgeometries-geometry-data-type"></a>STNumGeometries (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47804691"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   
- CLR 傳回類型：**SqlInt32**  
+ CLR 傳回型別：**SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
  如果 **geometry** 執行個體不是 **MultiPoint**、**MultiLineString**、**MultiPolygon** 或 **GeometryCollection** 執行個體，則傳回 1，如果 **geometry** 執行個體為空，則傳回 0。  

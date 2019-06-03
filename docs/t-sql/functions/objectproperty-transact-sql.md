@@ -19,16 +19,16 @@ helpviewer_keywords:
 - schema-scoped objects [SQL Server]
 - objects [SQL Server], schema-scoped
 ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 157d307187333cdde730bfb6657ae9927db060c1
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 763ca67ef43b9e154f7a595c7b2b4c8bfcbe5ece
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100893"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948953"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -101,7 +101,7 @@ OBJECTPROPERTY ( id , property )
 |IsMSShipped|任何結構描述範圍物件|在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 期間所建立的物件。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsPrimaryKey|任何結構描述範圍物件|PRIMARY KEY 條件約束。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> NULL = 不是函數，或物件識別碼無效。|  
 |IsProcedure|任何結構描述範圍物件|程序。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsQuotedIdentOn|[!INCLUDE[tsql](../../includes/tsql-md.md)] 函數、[!INCLUDE[tsql](../../includes/tsql-md.md)] 程序、資料表、[!INCLUDE[tsql](../../includes/tsql-md.md)] 觸發程序、檢視、CHECK 條件約束、DEFAULT 定義|指定物件含引號的識別碼設定是 ON。 這表示用雙引號來分隔物件定義所涉及的所有運算式中之識別碼。<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
+|IsQuotedIdentOn|[!INCLUDE[tsql](../../includes/tsql-md.md)] 函數、[!INCLUDE[tsql](../../includes/tsql-md.md)] 程序、資料表、[!INCLUDE[tsql](../../includes/tsql-md.md)] 觸發程序、檢視、CHECK 條件約束、DEFAULT 定義|指定物件含引號的識別碼設定是 ON。 這表示用雙引號來分隔物件定義所涉及的所有運算式中之識別碼。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |IsQueue|任何結構描述範圍物件|Service Broker 佇列<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsReplProc|任何結構描述範圍物件|複寫程序。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsRule|任何結構描述範圍物件|繫結規則。<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -115,7 +115,7 @@ OBJECTPROPERTY ( id , property )
 |IsUniqueCnst|任何結構描述範圍物件|UNIQUE 條件約束。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|Table|使用者自訂資料表。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|檢視|檢視表。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|OwnerId|任何結構描述範圍物件|物件的擁有者。<br /><br /> **請注意：** 結構描述擁有者不一定是物件擁有者。 例如，子物件 (其 *parent_object_id* 非 Null) 一律會傳回與父系相同的擁有者識別碼。<br /><br /> 非 Null = 物件擁有者的資料庫使用者識別碼。|  
+|OwnerId|任何結構描述範圍物件|物件的擁有者。<br /><br /> **注意：** 結構描述擁有者不一定是物件擁有者。 例如，子物件 (其 *parent_object_id* 非 Null) 一律會傳回與父系相同的擁有者識別碼。<br /><br /> 非 Null = 物件擁有者的資料庫使用者識別碼。|  
 |TableDeleteTrigger|Table|資料表有 DELETE 觸發程序。<br /><br /> >1 = 屬於指定類型的第一個觸發程序識別碼。|  
 |TableDeleteTriggerCount|Table|資料表有指定數目的 DELETE 觸發程序。<br /><br /> >0 = DELETE 觸發程序的數目。|  
 |TableFullTextMergeStatus|Table|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 資料表是否具有目前正在合併的全文檢索索引。<br /><br /> 0 = 資料表沒有全文檢索索引，或是全文檢索索引並未合併。<br /><br /> 1 = 全文檢索索引正在合併。|  
@@ -153,7 +153,7 @@ OBJECTPROPERTY ( id , property )
 |TableIsMemoryOptimized|Table|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 資料表是記憶體最佳化的<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**<br /><br /> 如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。|  
 |TableIsPinned|Table|資料表固定保留在資料快取中。<br /><br /> 0 = False<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本中不支援這項功能。|  
 |TableTextInRowLimit|Table|text in row 所允許的最大位元組數目。<br /><br /> 如果未設定 text in row 選項，便是 0。|  
-|TableUpdateTrigger|Table|資料表有 UPDATE 觸發程序。<br /><br /> >1 = 含指定類型的第一個觸發程序的識別碼。|  
+|TableUpdateTrigger|Table|資料表有 UPDATE 觸發程序。<br /><br /> >1 = 具有指定類型之第一個觸發程序的識別碼。|  
 |TableUpdateTriggerCount|Table|資料表有指定數目的 UPDATE 觸發程序。<br /><br /> >0 = UPDATE 觸發程序的數目。|  
 |TableHasColumnSet|Table|資料表有資料行集。<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> 如需詳細資訊，請參閱 [使用資料行集](../../relational-databases/tables/use-column-sets.md)。|  
 |TableTemporalType|Table|**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指定資料表的類型。<br /><br /> 0 = 非時態表<br /><br /> 1 = 系統版本設定資料表的記錄資料表<br /><br /> 2 = 系統版本設定的時態表|  

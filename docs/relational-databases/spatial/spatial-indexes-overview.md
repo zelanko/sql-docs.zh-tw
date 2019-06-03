@@ -9,16 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 619f32c1a12e5a00a553cb41434dcf4802020c1c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6cad42165bfb79e411a6e1fe6edef0c1b2ef9caa
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659752"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939212"
 ---
 # <a name="spatial-indexes-overview"></a>空間索引概觀
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51659752"
 ##  <a name="about"></a> 關於空間索引  
   
 ###  <a name="decompose"></a> 將索引空間分解為方格階層  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空間索引是使用 B 型樹狀結構所建立，這表示這些索引必須代表 B 型樹狀結構線性順序中的 2 維度空間資料。 因此，將資料讀入空間索引之前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會實作空間的階層式統一分解。 索引建立程序會將空間 *「分解」* (Decompose) 成四層的 *「方格階層」*(Grid Hierarchy)。 這些層級稱為 *「層級 1」* (Level 1) (最上層)、 *「層級 2」*(Level 2)、 *「層級 3」*(Level 3) 和 *「層級 4」*(Level 4)。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空間索引是使用 B 型樹狀結構所建立，這表示這些索引必須代表 B 型樹狀結構線性順序中的 2 維度空間資料。 因此，將資料讀入空間索引之前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會實作空間的階層式統一分解。 索引建立程序會將空間 *「分解」* (Decompose) 成四層的 *「方格階層」* (Grid Hierarchy)。 這些層級稱為 *「層級 1」* (Level 1) (最上層)、 *「層級 2」* (Level 2)、 *「層級 3」* (Level 3) 和 *「層級 4」* (Level 4)。  
   
  每一個後續的層級都會進一步分解其上的層級，因此，每一個上層資料格都包含了下一層上的完整方格。 在給定的層級上，所有的方格沿著兩個座標軸會有相同的資料格數目 (例如 4x4 或 8x8)，而資料格都是同一大小。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "51659752"
  ![將多邊形和線條放到 4x4 層級 1 方格內](../../relational-databases/spatial/media/spndx-level-1-objects.gif "將多邊形和線條放到 4x4 層級 1 方格內")  
   
 #### <a name="grid-density"></a>方格密度  
- 沿著方格座標軸的資料格數目會決定它的 *「密度」*(Density)：數目越大，方格的密度就越高。 例如，8x8 方格 (會產生 64 個資料格) 的密度大於 4x4 方格 (會產生 16 個資料格)。 方格密度是依照每個層級而定義。  
+ 沿著方格座標軸的資料格數目會決定它的 *「密度」* (Density)：數目越大，方格的密度就越高。 例如，8x8 方格 (會產生 64 個資料格) 的密度大於 4x4 方格 (會產生 16 個資料格)。 方格密度是依照每個層級而定義。  
   
  [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式支援 GRIDS 子句，該子句可讓您在不同的層級上指定不同的方格密度。 給定層級的方格密度是使用下列其中一個關鍵字所指定。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "51659752"
 >  當資料庫相容性層級設定為 100 以下時，空間索引的方格密度會顯示在 [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) 目錄檢視的 level_1_grid、level_2_grid、level_3_grid 和 level_4_grid 資料行中。 **GEOMETRY_AUTO_GRID**/**GEOGRAPHY_AUTO_GRID** 鑲嵌式配置選項不會填入這些資料行。 使用自動方格選項時，sys.spatial_index_tessellations 目錄檢視的這些資料行會包含 **NULL** 值。  
   
 ###  <a name="tessellation"></a> 鑲嵌  
- 將索引空間分解成方格階層之後，空間索引會從空間資料行讀取資料 (逐列讀取)。 在讀取空間物件 (或執行個體) 的資料之後，空間索引會針對該物件執行 *「鑲嵌程序」* (Tessellation Process)。 鑲嵌程序會將此物件納入方格階層中，透過的方式是將此物件與它所接觸的一組方格資料格 (「接觸的資料格」(Touched Cell)) 建立關聯。 從方格階層的層級 1 開始，鑲嵌程序就會跨越此層級繼續進行 *「廣度優先」* (Breadth First)。 此程序可能繼續到所有的四個層級 (一次一個層級)。  
+ 將索引空間分解成方格階層之後，空間索引會從空間資料行讀取資料 (逐列讀取)。 在讀取空間物件 (或執行個體) 的資料之後，空間索引會針對該物件執行 *「鑲嵌程序」* (Tessellation Process)。 鑲嵌程序會將此物件納入方格階層中，透過的方式是將此物件與它所接觸的一組方格資料格 (「接觸的資料格」  (Touched Cell)) 建立關聯。 從方格階層的層級 1 開始，鑲嵌程序就會跨越此層級繼續進行 *「廣度優先」* (Breadth First)。 此程序可能繼續到所有的四個層級 (一次一個層級)。  
   
  鑲嵌程序的輸出是一組接觸的資料格，這些資料格會記錄在物件的空間索引內。 藉由參考這些記錄的資料格，空間索引就可以在同時儲存於索引內的空間資料行中，在相對於其他物件的空間內找出此物件。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "51659752"
   
 -   每一物件的資料格規則  
   
-     此規則會強制實施 *「每個物件的資料格限制」*(Cells-Per-Object Limit)，此限制可決定為每一個物件所計算的資料格數目 (除了層級 1 以外)。 在較低的層級上，每個物件的資料格規則會控制可記錄之物件相關的資訊數量。  
+     此規則會強制實施 *「每個物件的資料格限制」* (Cells-Per-Object Limit)，此限制可決定為每一個物件所計算的資料格數目 (除了層級 1 以外)。 在較低的層級上，每個物件的資料格規則會控制可記錄之物件相關的資訊數量。  
   
 -   最深的資料格規則  
   
@@ -101,7 +101,7 @@ ms.locfileid: "51659752"
   
  例如，以上圖為例，圖中顯示一個八邊形完全納入層級 1 方格的資料格 15。 在此圖中，已經鑲嵌資料格 15，將此八邊形分解成九個層級 2 的資料格。 這個圖假設每個物件的資料格限制為 9 以上 (含)。 但是，如果每個物件的資料格限制為 8 以下 (含)，將不會鑲嵌資料格 15，而且此物件只會計算該資料格 15。  
   
- 根據預設，每一物件的資料格限制為 16 個資料格，這會在大多數空間索引的空間和精確度之間提供令人滿意的取捨。 但是， [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式支援 CELLS_PER_OBJECT**=**_n_ 子句，該子句可讓您指定 1 和 8192 之間 (含) 的每個物件的資料格限制。  
+ 根據預設，每一物件的資料格限制為 16 個資料格，這會在大多數空間索引的空間和精確度之間提供令人滿意的取捨。 但是， [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式支援 CELLS_PER_OBJECT **=** _n_ 子句，該子句可讓您指定 1 和 8192 之間 (含) 的每個物件的資料格限制。  
   
 > [!NOTE]  
 >  空間索引的 **cells_per_object** 設定可以在 [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) 目錄檢視中看到。  
@@ -109,16 +109,16 @@ ms.locfileid: "51659752"
 #### <a name="deepest-cell-rule"></a>最深的資料格規則  
  最深的資料格規則利用了每一個較低層資料格都屬於其上方之資料格的事實：層級 4 資料格屬於層級 3 資料格、層級 3 資料格屬於層級 2 資料格，而層級 2 資料格則屬於層級 1 資料格。 例如，屬於資料格 1.1.1.1 的物件也屬於資料格 1.1.1、資料格 1.1 和資料格 1。 這類資料格階層關聯性的知識會內建在查詢處理器中。 因此，只有最深層的資料格才需要記錄在索引中，讓索引需要儲存的資訊減至最少。  
   
- 下圖中會鑲嵌相對較小的鑽石形多邊形。 此索引會使用每個物件的資料格預設限制 16，這個小型物件未達到這個限制。 因此，鑲嵌會繼續往下到層級 4。 此多邊形位於下列層級 1 到層級 3 的資料格內：4、4.4 及 4.4.10 和 4.4.14。 但是使用了最深的資料格規則時，鑲嵌只會計算十二個層級 4 資料格：4.4.10.13-15 及 4.4.14.1-3、4.4.14.5-7 和 4.4.14.9-11。  
+ 下圖中會鑲嵌相對較小的鑽石形多邊形。 此索引會使用每個物件的資料格預設限制 16，這個小型物件未達到這個限制。 因此，鑲嵌會繼續往下到層級 4。 此多邊形位於下列層級 1 到層級 3 的資料格中：4、4.4、4.4.10 和 4.4.14。 但是使用最深的資料格規則時，鑲嵌只會計算十二個層級 4 資料格：4.4.10.13-15 及 4.4.14.1-3、4.4.14.5-7 和 4.4.14.9-11。  
   
  ![最深的資料格最佳化](../../relational-databases/spatial/media/spndx-opt-deepest-cell.gif "最深的資料格最佳化")  
   
 ###  <a name="schemes"></a> 鑲嵌式配置  
- 空間索引的行為部分取決於它的 *「鑲嵌式配置」*(Tessellation Scheme)。 鑲嵌式配置是資料類型所特有。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空間索引支援兩個鑲嵌式配置：  
+ 空間索引的行為部分取決於它的 *「鑲嵌式配置」* (Tessellation Scheme)。 鑲嵌式配置是資料類型所特有。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空間索引支援兩個鑲嵌式配置：  
   
--   *「幾何方格鑲嵌」*(geometry grid tessellation)，這是 **geometry** 資料類型的配置。  
+-   *「幾何方格鑲嵌」* (geometry grid tessellation)，這是 **geometry** 資料類型的配置。  
   
--   *「地理位置方格鑲嵌」*(Geography Grid Tessellation)，這會套用到 **geography** 資料類型的資料行。  
+-   *「地理位置方格鑲嵌」* (Geography Grid Tessellation)，這會套用到 **geography** 資料類型的資料行。  
   
 > [!NOTE]  
 >  空間索引的 **tessellation_scheme** 設定可以在 [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) 目錄檢視中看到。  
@@ -130,7 +130,7 @@ ms.locfileid: "51659752"
 >  您可以使用 [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 子句來明確指定這個鑲嵌式配置。  
   
 ##### <a name="the-bounding-box"></a>週框方塊  
- 幾何資料會佔據可以是無限的平面。 但是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空間索引需要有限的空間。 若要建立要分解的有限空間，幾何方格鑲嵌式配置需要矩形 *「週框方塊」*(Bounding Box)。 週框方塊是由四個座標 **(**_x-min_**,**_y-min_**)** 和 **(**_x-max_**,**_y-max_**)** 所定義，這些會儲存為空間索引的屬性。 這些座標表示以下項目：  
+ 幾何資料會佔據可以是無限的平面。 但是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空間索引需要有限的空間。 若要建立要分解的有限空間，幾何方格鑲嵌式配置需要矩形 *「週框方塊」* (Bounding Box)。 週框方塊是由四個座標 **(** _x-min_ **,** _y-min_ **)** 和 **(** _x-max_ **,** _y-max_ **)** 所定義，這些會儲存為空間索引的屬性。 這些座標表示以下項目：  
   
 -   *x-min* 是週框方塊左下角的 X 座標。  
   
@@ -143,11 +143,11 @@ ms.locfileid: "51659752"
 > [!NOTE]  
 >  這些座標是由 [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 BOUNDING_BOX 子句所指定。  
   
- **(**_x-min_**,**_y-min_**)** 和 **(**_x-max_**,**_y-max_**)** 座標可決定週框方塊的位置和維度。 週框方塊外面的空間會視為編號 0 的單一資料格。  
+ **(** _x-min_ **,** _y-min_ **)** 和 **(** _x-max_ **,** _y-max_ **)** 座標可決定週框方塊的位置和維度。 週框方塊外面的空間會視為編號 0 的單一資料格。  
   
  空間索引會分解週框方塊內的空間。 方格階層的層級 1 方格會填滿此週框方塊。 若要將幾何物件放在方格階層中，空間索引會將此物件的座標與週框方塊座標相比較。  
   
- 下圖顯示由週框方塊的 **(**_x-min_**,**_y-min_**)** 和 **(**_x-max_**,**_y-max_**)** 座標所定義的點。 方格階層的最上層會顯示為 4x4 方格。 為了說明起見，較低的層級會予以忽略。 週框方塊外面的空間是由零 (0) 所指示。 請注意，物件 'A' 有一部分延伸到方塊外面，而物件 'B' 則完全位於資料格 0 的方塊內。  
+ 下圖顯示由週框方塊的 **(** _x-min_ **,** _y-min_ **)** 和 **(** _x-max_ **,** _y-max_ **)** 座標所定義的點。 方格階層的最上層會顯示為 4x4 方格。 為了說明起見，較低的層級會予以忽略。 週框方塊外面的空間是由零 (0) 所指示。 請注意，物件 'A' 有一部分延伸到方塊外面，而物件 'B' 則完全位於資料格 0 的方塊內。  
   
  ![顯示座標和資料格 0 的週框方塊。](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "顯示座標和資料格 0 的週框方塊。")  
   
@@ -207,7 +207,7 @@ ms.locfileid: "51659752"
 -   *geometry1*.[STWithin](../../t-sql/spatial-geometry/stwithin-geometry-data-type.md)(*geometry2*)= 1  
   
 ###  <a name="geography"></a> 空間索引支援的地理位置方法  
- 在某些條件下，空間索引可支援下列集合導向的地理位置方法：STIntersects()、STEquals() 和 STDistance()。 為了獲得空間索引的支援，這些方法必須在查詢的 WHERE 子句中使用，而且必須在下列一般形式的述詞內發生：  
+ 在某些條件下，空間索引支援下列集合導向的地理位置方法：STIntersects()、STEquals() 和 STDistance()。 為了獲得空間索引的支援，這些方法必須在查詢的 WHERE 子句中使用，而且必須在下列一般形式的述詞內發生：  
   
  *geography1*.*method_name*(*geography2*)*comparison_operator**valid_number*  
   

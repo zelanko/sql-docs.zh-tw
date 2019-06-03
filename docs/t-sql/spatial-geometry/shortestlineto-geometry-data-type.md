@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ShortestLineTo method (geometry)
 ms.assetid: 39a2d0e4-4f93-4e94-a27e-6ad9537cfe74
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f2d92d90c363cd17844d905a7d0108b0f148a007
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52f8a04ec251283655ef8d50037b2be8e09bb2c7
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631846"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937350"
 ---
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47631846"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型：**SqlGeometry**  
+ CLR 傳回型別：**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  方法會傳回 **LineString** 執行個體，其端點在兩個非交集 **geometry** 比較執行個體的框線上。 所傳回 **LineString** 的長度等於兩個 **geometry** 執行個體之間的最短距離。 當兩個 **geometry** 執行個體彼此交集時，會傳回空白 **LineString** 執行個體。  

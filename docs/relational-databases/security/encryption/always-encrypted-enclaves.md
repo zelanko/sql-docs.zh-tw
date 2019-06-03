@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9dfc5e2cf7bab164d650f2da1767b2a0e7c399aa
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 377c2d95564e7348bdfb5de9480c7c7f5004c7f7
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711179"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938156"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -24,11 +24,11 @@ ms.locfileid: "52711179"
 
 具有安全記憶體保護區的 Always Encrypted 可為 [Always Encrypted](always-encrypted-database-engine.md) 功能提供額外功能。
 
-Always Encrypted 已在 SQL Server 2016 中引進，可保護敏感性資料的機密性，免於遭受惡意程式碼和 SQL Server 高權限的「未經授權」使用者威脅。 高權限的未經授權使用者為 DBA、電腦系統管理員、雲端系統管理員，或是對伺服器執行個體、硬體等具有合法存取權，但不應該具有部分或所有實際資料存取權的其他人。 
+Always Encrypted 已在 SQL Server 2016 中引進，可保護敏感性資料的機密性，免於遭受惡意程式碼和 SQL Server 高權限的「未經授權」  使用者威脅。 高權限的未經授權使用者為 DBA、電腦系統管理員、雲端系統管理員，或是對伺服器執行個體、硬體等具有合法存取權，但不應該具有部分或所有實際資料存取權的其他人。 
 
 到目前為止，Always Encrypted 會透過下列方式保護資料：在用戶端將其加密，並且絕不允許資料或對應的密碼編譯金鑰以純文字形式出現在 SQL Server 引擎內部。 因此，資料庫內部的加密資料行功能受到嚴格限制。 SQL Server 可對加密資料執行相的唯一作業是相等比較 (而且相等比較僅適用於確定性加密)。 資料庫內部不支援所有其他作業，包括密碼編譯作業 (初始資料加密或金鑰輪替) 或豐富計算 (例如，模式比對)。 使用者需要將資料移出資料庫以在用戶端執行這些作業。
 
-具有安全記憶體保護區的 Always Encrypted 允許在伺服器端的安全記憶體保護區內部進行純文字資料計算，藉以解決這些限制。 安全記憶體保護區是 SQL Server 處理序內受保護的記憶體區域，並可作為受信任的執行環境來處理 SQL Server 引擎內部的敏感性資料。 安全記憶體保護區對於主控電腦上其餘部分的 SQL Server 和其他處理序會顯示為黑盒子。 即使使用偵錯工具，也沒有辦法從外部檢視記憶體保護區內部的任何資料或程式碼。  
+具有安全記憶體保護區的  Always Encrypted 允許在伺服器端的安全記憶體保護區內部進行純文字資料計算，藉以解決這些限制。 安全記憶體保護區是 SQL Server 處理序內受保護的記憶體區域，並可作為受信任的執行環境來處理 SQL Server 引擎內部的敏感性資料。 安全記憶體保護區對於主控電腦上其餘部分的 SQL Server 和其他處理序會顯示為黑盒子。 即使使用偵錯工具，也沒有辦法從外部檢視記憶體保護區內部的任何資料或程式碼。  
 
 
 Always Encrypted 會使用安全記憶體保護區，如下圖所示：
@@ -55,7 +55,7 @@ Always Encrypted 會使用安全記憶體保護區，如下圖所示：
 > [!IMPORTANT]
 > 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中，豐富計算會暫止數個效能最佳化 (包含無編製索引等這類有限功能)，而且目前預設會予以停用。 若要啟用豐富計算，請參閱[啟用豐富計算](configure-always-encrypted-enclaves.md#configure-a-secure-enclave)。
 
-在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中，具有安全記憶體保護區的 Always Encrypted 會使用[虛擬式安全性 (VBS)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) \(英文\) 來保護 Windows 中的記憶體保護區 (也稱為虛擬安全模式或 VSM 記憶體保護區)。
+在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中，具有安全記憶體保護區的 Always Encrypted 會使用[虛擬式安全性 (VBS)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) \(英文\) 來保護 Windows 中的記憶體保護區 (也稱為虛擬安全模式或 VSM 記憶體保護區)。
 
 ## <a name="secure-enclave-attestation"></a>安全記憶體保護區證明
 

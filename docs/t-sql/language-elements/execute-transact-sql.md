@@ -28,16 +28,16 @@ helpviewer_keywords:
 - switching execution context
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a729dac9bba3f8ace1f117b6317d24ec541fcc19
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 558dbcfa3556099877406d8082f3cb909d6a22a1
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641019"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982349"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -301,7 +301,7 @@ Execute a character string
   
 |詞彙|定義|  
 |----------|----------------|  
-|RECOMPILE|在執行模組之後，強制編譯、使用和捨棄新計畫。 如果該模組有現有的查詢計畫，這個計畫便會保留在快取中。<br /><br /> 如果您所提供的參數不合規則，或者如果資料已經大幅變更，請使用這個選項。 這個選項不適用於擴充預存程序。 我們建議您少用這個選項，因為它的成本很高。<br /><br /> **注意：** 呼叫使用 OPENDATASOURCE 語法的預存程序時，您無法使用 WITH RECOMPILE。 指定物件名稱四部分時，會忽略 WITH RECOMPILE 選項。<br /><br /> **注意：** RECOMPILE 不支援搭配原生編譯的純量使用者定義函數。 如果您需要重新編譯，請使用 [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)。|  
+|RECOMPILE|在執行模組之後，強制編譯、使用和捨棄新計畫。 如果該模組有現有的查詢計畫，這個計畫便會保留在快取中。<br /><br /> 如果您所提供的參數不合規則，或者如果資料已經大幅變更，請使用這個選項。 這個選項不適用於擴充預存程序。 我們建議您少用這個選項，因為它的成本很高。<br /><br /> **注意：** 呼叫使用 OPENDATASOURCE 語法的預存程序時，您無法使用 WITH RECOMPILE。 指定物件名稱四部分時，會忽略 WITH RECOMPILE 選項。<br /><br /> **注意：** RECOMPILE 不支援搭配原生編譯的純量使用者定義函式。 如果您需要重新編譯，請使用 [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)。|  
 |**RESULT SETS UNDEFINED**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 這個選項不保證會傳回何種結果 (如果有的話)，也不提供定義。 如果傳回任何結果或未傳回結果，陳述式會正確無誤地執行。 如果未提供 result_sets_option，RESULT SETS UNDEFINED 是預設行為。<br /><br /> 對於解譯的純量使用者定義函數和原生編譯的純量使用者定義函數，這個選項沒有作用，因為函數永遠不會傳回結果集。|  
 |RESULT SETS NONE|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保證 Execute 陳述式不會傳回任何結果。 如果傳回任何結果，會中止批次。<br /><br /> 對於解譯的純量使用者定義函數和原生編譯的純量使用者定義函數，這個選項沒有作用，因為函數永遠不會傳回結果集。|  
 |*\<result_sets_definition>*|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保證結果會依 result_sets_definition 中所指定傳回。 針對傳回多個結果集的陳述式，請提供多個 *result_sets_definition* 區段。 將每個 *result_sets_definition* 括在括號中，並以逗號分隔。 如需詳細資訊，請參閱本主題稍後的 \<result_sets_definition>。<br /><br /> 此選項對於原生編譯的純量使用者定義函數一律會產生錯誤，因為函數永遠不會傳回結果集。|
@@ -374,7 +374,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ### <a name="best-practices"></a>最佳作法  
  指定一個登入或使用者，它具有執行在陳述式或模組中定義的作業時所需要的最低權限。 例如，如果只需要資料庫層級權限，就不要指定具有伺服器層級權限的登入名稱；或者除非需要其權限，否則不要指定資料庫擁有者帳戶。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  執行 EXECUTE 陳述式不需要任何權限。 不過，您必須對 EXECUTE 字串內所參考的安全性實體具備權限。 例如，如果字串包含 INSERT 陳述式，EXECUTE 陳述式的呼叫端就必須有目標資料表的 INSERT 權限。 遇到 EXECUTE 陳述式時會檢查權限，即使模組內包含 EXECUTE 陳述式也一樣。  
   
  模組的 EXECUTE 權限預設會授與模組的擁有者，這位擁有者可以將這些權限轉讓給其他使用者。 當您執行某個模組來執行字串時，將會檢查執行此模組之使用者內容中的權限，不過不會檢查建立模組之使用者內容中的權限。 然而，如果同一位使用者擁有呼叫模組，而該模組正被呼叫時，第二個模組就不會再檢查一次 EXECUTE 權限。  
@@ -393,7 +393,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-execute-to-pass-a-single-parameter"></a>A. 使用 EXECUTE 傳遞單一參數  
- `uspGetEmployeeManagers` 資料庫中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 預存程序預期需要一個參數 (`@EmployeeID`)。 下列範例會將 `Employee ID 6` 當做參數值來執行 `uspGetEmployeeManagers` 預存程序。  
+ [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的 `uspGetEmployeeManagers` 預存程序預期需要一個參數 (`@EmployeeID`)。 下列範例會將 `Employee ID 6` 當做參數值來執行 `uspGetEmployeeManagers` 預存程序。  
   
 ```  
 EXEC dbo.uspGetEmployeeManagers 6;  
@@ -534,7 +534,7 @@ GO
 ```  
   
 ### <a name="i-using-execute-with-a-user-defined-function"></a>I. 使用 EXECUTE 與使用者定義函數  
- 下列範例會執行 `ufnGetSalesOrderStatusText` 資料庫中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 純量使用者定義函數。 它會使用變數 `@returnstatus` 來儲存該函數所傳回的值。 該函數會預期接受一個輸入參數 `@Status`。 它定義為 **tinyint** 資料類型。  
+ 下列範例會執行 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的 `ufnGetSalesOrderStatusText` 純量使用者定義函數。 它會使用變數 `@returnstatus` 來儲存該函數所傳回的值。 該函數會預期接受一個輸入參數 `@Status`。 它定義為 **tinyint** 資料類型。  
   
 ```  
 DECLARE @returnstatus nvarchar(15);  
@@ -701,7 +701,7 @@ SET @stringVar = N'SELECT name FROM' + ' sys.sql_logins';
 EXEC (@stringVar);  
 ```  
   
-### <a name="example-q-procedures-with-parameters"></a>範例 Q：有參數的程序  
+### <a name="example-q-procedures-with-parameters"></a>範例 Q：具參數的程序  
  下列範例建立有參數的程序，並示範 3 種執行程序的方式：  
   
 ```  

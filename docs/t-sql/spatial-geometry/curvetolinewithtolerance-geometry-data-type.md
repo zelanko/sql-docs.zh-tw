@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CurveToLineWithTolerance method (geometry)
 ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 5d265392606722f621d6a10e9d649340824596ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30264ebeef5a398d677abbb2bc380a68c69893d4
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824506"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938135"
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47824506"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型：**SqlGeometry**  
+ CLR 傳回型別：**SqlGeometry**  
   
 ## <a name="exceptions"></a>例外狀況  
  如果容錯設為 <= 0，則會擲回 `ArgumentOutOfRange` 例外狀況。  
@@ -59,7 +59,7 @@ ms.locfileid: "47824506"
 |空白 geometry 執行個體|空的 **GeometryCollection** 執行個體|  
 |**Point** 和 **MultiPoint**|**Point** 執行個體|  
 |**MultiPoint**|**Point** 或 **MultiPoint** 執行個體|  
-|**CircularString****CompoundCurve** 或 **LineString**|**LineString** 執行個體|  
+|**CircularString** **CompoundCurve** 或 **LineString**|**LineString** 執行個體|  
 |**MultiLineString**|**LineString** 或 **MultiLineString** 執行個體|  
 |**CurvePolygon** 和 **Polygon**|**Polygon** 執行個體|  
 |**MultiPolygon**|**Polygon** 或 **MultiPolygon** 執行個體|  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STBuffer (geometry Data Type)
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: fdb4a177f1d391877e6f1b9d0f7b37c9c001b955
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 8d49fa09e703c186664a46f1daa8fe0b6283d33b
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979474"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939082"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "53979474"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型：**SqlGeometry**  
+ CLR 傳回型別：**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  `STBuffer()` 會指定 *tolerance* = distance \* .001 且 *relative* = **false** 來計算緩衝，此計算方式與 [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md) 類似。  
@@ -71,7 +71,7 @@ ms.locfileid: "53979474"
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-calling-stbuffer-with-parametervalue--0-on-one-dimensional-geometry-instance"></a>A. 在一維幾何例項上，以 parameter_value < 0 呼叫 STBuffer()  
+### <a name="a-calling-stbuffer-with-parametervalue--0-on-one-dimensional-geometry-instance"></a>A. 在一維地理位置執行個體上，以 parameter_value < 0 呼叫 STBuffer()  
  下列範例會傳回空白 `GeometryCollection` 執行個體：  
   
 ```

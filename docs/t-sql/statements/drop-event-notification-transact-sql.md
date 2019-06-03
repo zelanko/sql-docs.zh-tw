@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DROP EVENT NOTIFICATION statement
 - removing event notifications
 ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
-author: CarlRabeler
-ms.author: carlrab
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 492ea717df3722e09b42e31cc8acf579658f082b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 852662f66b3989cfec15392218346d792be8b835
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839716"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270217"
 ---
 # <a name="drop-event-notification-transact-sql"></a>DROP EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
 ## <a name="remarks"></a>Remarks  
  如果在交易內引發事件通知，且在相同交易內卸除它，就會傳送事件通知執行個體，之後，再卸除事件通知。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要卸除資料庫層級範圍的事件通知，使用者至少必須是事件通知的擁有者，或有目前資料庫的 ALTER ANY DATABASE EVENT NOTIFICATION 權限。  
   
  若要卸除伺服器層級範圍的事件通知，使用者至少必須是事件通知的擁有者，或有伺服器中的 ALTER ANY EVENT NOTIFICATION 權限。  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STIntersection method
 ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: d1433cbbeb94c3027d8007914a67c113b42a0165
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1ee84ab21082193c50486f775a22caec4e0dbb4
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777006"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936826"
 ---
 # <a name="stintersection-geography-data-type"></a>STIntersection (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47777006"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型：**SqlGeography**  
+ CLR 傳回型別：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  傳回兩個 geography 執行個體的交集。  

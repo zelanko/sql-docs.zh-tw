@@ -27,16 +27,16 @@ helpviewer_keywords:
 - starting point marked for transactions
 - starting transactions
 ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edcf0a919c0bcf5dbcbd1490b016c49ab7e46d8a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 9c9a6c4debdb401524d4a06828b05e8909ddde51
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802245"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981125"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -134,13 +134,13 @@ COMMIT TRAN T1;
   
  "BEGIN TRAN M2 WITH MARK ...;"  
   
- "伺服器：訊息 3920，層級 16，狀態 1，行 3"  
+ "Server:Msg 3920, Level 16, State 1, Line 3"  
   
  "WITH MARK 選項只可套用至第一個 BEGIN TRAN WITH MARK。"  
   
  "已忽略選項。"  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 public 角色中的成員資格。  
   
 ## <a name="examples"></a>範例  

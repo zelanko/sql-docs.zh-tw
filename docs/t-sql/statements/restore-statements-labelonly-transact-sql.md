@@ -18,16 +18,16 @@ helpviewer_keywords:
 - RESTORE LABELONLY statement
 - backup media [SQL Server], content information
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9b6b7ba063a25df92335b5727c7c29fcb69a7221
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a4d9aee8f248dfdf9ce259442ae34a5107750610
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241559"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947095"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTORE 陳述式 - LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -90,7 +90,7 @@ FROM <backup_device>
 |**SoftwareName**|**nvarchar(128)**|寫入標籤的備份軟體名稱。|  
 |**SoftwareVendorId**|**int**|寫入備份的軟體供應商之唯一供應商識別碼。|  
 |**MediaDate**|**datetime**|標籤的寫入日期和時間。|  
-|**Mirror_Count**|**int**|媒體集中的鏡像數目 (1-4)。<br /><br /> 注意：針對相同媒體集中不同鏡像而寫入的標籤都相同。|  
+|**Mirror_Count**|**int**|媒體集中的鏡像數目 (1-4)。<br /><br /> 注意:針對相同媒體集中不同鏡像而寫入的標籤都相同。|  
 |**IsCompressed**|**bit**|備份是否經過壓縮：<br /><br /> 0 = 未壓縮<br /><br /> 1 = 已壓縮|  
   
 > [!NOTE]  
@@ -105,7 +105,7 @@ FROM <backup_device>
 > [!IMPORTANT]  
 >  這個密碼所提供的保護很弱。 這是為了防止已獲授權或未獲授權的使用者使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具進行不正確的還原。 它無法防止透過其他方式或以取代密碼的方式來讀取備份資料。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]保護備份的最佳做法是將備份磁帶存放在安全位置，或備份至受適當存取控制清單 (ACL) 保護的磁碟檔案中。 ACL 應該設在備份建立所在的根目錄下。  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本中，取得有關備份組或備份裝置的資訊需要 CREATE DATABASE 權限。 如需詳細資訊，請參閱 [GRANT 資料庫權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
   
 ## <a name="see-also"></a>另請參閱  

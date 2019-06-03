@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STSymDifference (geometry Data Type)
 ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 6625ea3cbd43996eda702832774220c35646f1ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd51f436a5899722cc759ef79c5ead212f345bf6
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621106"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935687"
 ---
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47621106"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型：**SqlGeometry**  
+ CLR 傳回型別：**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一律會傳回 Null。 只有當輸入執行個體包含圓弧線段時，結果才能包含圓弧線段。  

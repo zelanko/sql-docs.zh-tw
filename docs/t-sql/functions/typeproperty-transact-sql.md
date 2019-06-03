@@ -17,16 +17,16 @@ helpviewer_keywords:
 - data types [SQL Server], status information
 - TYPEPROPERTY function
 ms.assetid: bc311c80-bac5-46ab-a5c8-68b1c6bbf24a
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bfd001d10f7f0fd165bd797e84af9a57034676a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 796de66b6fdce95be5fe235219208a504cc8095e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799416"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946823"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ TYPEPROPERTY (type , property)
 |屬性|Description|傳回的值|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|允許 Null 值的資料類型。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 找不到資料類型。|  
-|**OwnerId**|類型的擁有者。<br /><br /> 注意：結構描述擁有者不一定是類型擁有者。|非 Null = 類型擁有者的資料庫使用者識別碼。<br /><br /> NULL = 不支援的類型，或類型識別碼無效。|  
+|**OwnerId**|類型的擁有者。<br /><br /> 注意:結構描述擁有者不一定是類型擁有者。|非 Null = 類型擁有者的資料庫使用者識別碼。<br /><br /> NULL = 不支援的類型，或類型識別碼無效。|  
 |**有效位數**|資料類型的有效位數。|位數或字元數。<br /><br /> -1 = **xml** 或大型數值資料類型<br /><br /> NULL = 找不到資料類型。|  
 |**小數位數**|資料類型的小數位數。|資料類型的小數位數數目。<br /><br /> NULL = 資料類型不是 **numeric**，或找不到。|  
 |**UsesAnsiTrim**|當建立資料類型時，ANSI 填補設定是 ON。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 找不到資料類型，或它不是二進位或字串資料類型。|  

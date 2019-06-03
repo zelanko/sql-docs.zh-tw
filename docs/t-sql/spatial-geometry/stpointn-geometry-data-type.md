@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPointN (geometry Data Type)
 ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 8e4f4c40b4607a354f6ef1c29bf3c7f1dc448f4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7bbaf25715275b14deda0f2a510b40934c6f33e
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727798"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938378"
 ---
 # <a name="stpointn-geometry-data-type"></a>STPointN (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "47727798"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型：**SqlGeometry**  
+ CLR 傳回型別：**SqlGeometry**  
   
- 開放地理空間協會 (OGC) 類型：**Point**  
+ 開放式地理空間協會 (OGC) 類型：**點**  
   
 ## <a name="remarks"></a>Remarks  
  如果 **geometry** 執行個體是使用者所建立的，`STPointN()` 會傳回 *expression* 所指定的點，其方式是依據原先輸入點的順序來排序這些點。  
