@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23ed71d50fc84c743f5574a3e3e96852b2e9bd21
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 14e32081c9cbe03d7336f4ee973b02737f1cda1d
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202657"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454588"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>資料庫引擎權限使用者入門
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "53202657"
  資料庫使用者  
  在資料庫中建立資料庫使用者，並將該資料庫使用者對應至登入，以針對登入授與資料庫存取權。 資料庫使用者名稱通常會與登入名稱相同，但這兩種名稱不一定非得相同。 每個資料庫使用者皆會對應至單一登入。 登入僅可對應至一個資料庫中的單一使用者，但其可對應做為數個不同資料庫中的資料庫使用者。  
   
- 您亦可建立未具備對應登入的資料庫使用者。 這些使用者稱為「自主資料庫使用者」 。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您使用自主資料庫使用者，原因在於其可更輕鬆地將資料庫移至不同的伺服器。 自主資料庫與登入相似，可使用 Windows 驗證或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證。 如需詳細資訊，請參閱 [自主的資料庫使用者 - 使資料庫可攜](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+ 您亦可建立未具備對應登入的資料庫使用者。 這些使用者稱為「自主資料庫使用者」  。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您使用自主資料庫使用者，原因在於其可更輕鬆地將資料庫移至不同的伺服器。 自主資料庫與登入相似，可使用 Windows 驗證或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證。 如需詳細資訊，請參閱 [自主的資料庫使用者 - 使資料庫可攜](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
  共有 12 個類型的使用者，其僅在驗證方式與顯示對象方面略有差異。 若要查看使用者清單，請參閱 [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)。  
   
@@ -126,7 +126,7 @@ GRANT UPDATE ON OBJECT::Production.Parts TO PartsTeam;
 -   若系統管理員未正確執行 `DENY SELECT ON OBJECT::OrderStatus TO Sales;` ，則 Ted 「銷售」角色成員的 `SELECT` 權限將會遭到拒絕，這是因為「銷售」的 `DENY` 會覆寫其個別的  `GRANT`。  
   
 > [!NOTE]  
->  您可使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]來設定權限。 在 [物件總管] 中找到安全性實體，以滑鼠右鍵按一下安全性實體，然後按一下 [屬性]。 選取 [權限]  頁面。 如需使用權限頁面的說明，請參閱 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)。  
+>  您可使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]來設定權限。 在 [物件總管] 中找到安全性實體，以滑鼠右鍵按一下安全性實體，然後按一下 [屬性]  。 選取 [權限]  頁面。 如需使用權限頁面的說明，請參閱 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)。  
   
 ## <a name="permission-hierarchy"></a>權限階層  
  權限具有父子式階層。 也就是說，若您在資料庫上授與 `SELECT` 權限，則該權限在資料庫中會包含所有 (子系) 結構描述的 `SELECT` 權限。 若您在結構描述上授與 `SELECT` 權限，則其在結構描述中會包含所有 (子系) 資料表的 `SELECT` 權限。 權限可轉移；亦即若您在資料庫上授與 `SELECT` 權限，則其會包含所有 (子系) 結構描述以及所有 (孫系) 資料表與檢視上的 `SELECT` 權限。  
@@ -229,7 +229,9 @@ JOIN sys.database_principals AS dRole
 ## <a name="next-steps"></a>Next Steps  
  如需更多關於快速入門的主題資訊，請參閱：  
   
--   [教學課程：Database Engine 使用者入門](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [建立資料庫 &#40;教學課程&#41;](../../../t-sql/lesson-1-creating-database-objects.md#)  
+-   [教學課程：資料庫引擎使用者入門](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
+
+-   [建立資料庫 &#40;教學課程&#41;](../../../t-sql/lesson-1-creating-database-objects.md)  
   
 -   [教學課程：SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   

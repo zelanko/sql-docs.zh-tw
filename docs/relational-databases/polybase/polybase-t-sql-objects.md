@@ -14,12 +14,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3dce0805933c63f6562b687a9a4be429ad6ab681
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: a7f8e0577a7edd885084e117bcac801970993caa
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776025"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428850"
 ---
 # <a name="polybase-transact-sql-reference"></a>PolyBase Transact-SQL 參考
 
@@ -319,7 +319,7 @@ CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)
     );
 ```
 
-**4.建立結構描述** 
+**3.建立結構描述** 
 
 ```sql
      CREATE SCHEMA sqlserver;

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 24768e1b230631009d94a1c449f08164157ed481
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 72f31c6f27590a9b44c0766c5379e90f9666d1a0
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65718423"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454575"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性的 Scale Out 支援
 
@@ -68,7 +68,7 @@ ms.locfileid: "65718423"
 此外，您還需要建立在其中新增 SSISDB 之可用性群組的可用性群組接聽程式。 請參閱[建立或設定可用性群組接聽程式](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。
 
 ## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5.更新 Scale Out Master 服務設定檔
-更新主要和次要節點上的 Scale Out Master 服務設定檔 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`。 將 **SqlServerName** 更新為 [可用性群組接聽程式 DNS 名稱],[連接埠]。
+更新主要和次要節點上的 Scale Out Master 服務設定檔 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`。 將 **SqlServerName** 更新為 [可用性群組接聽程式 DNS 名稱],[連接埠]  。
 
 ## <a name="6-enable-package-execution-logging"></a>6.啟用套件執行記錄
 
@@ -87,11 +87,11 @@ SSISDB 中的記錄是透過自動產生其密碼來登入 **##MS_SSISLogDBWorke
 
 ## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster"></a>7.設定 Windows 伺服器容錯移轉叢集的 Scale Out Master 服務角色
 
-1.  在容錯移轉叢集管理員中，連線至 Scale Out 的叢集。選取叢集。 選取功能表中的 [動作]，然後選取 [設定角色]。
+1.  在容錯移轉叢集管理員中，連線至 Scale Out 的叢集。選取叢集。 選取功能表中的 [動作]  ，然後選取 [設定角色]  。
 
-2.  在 [高可用性精靈] 對話方塊中，選取 [選取角色] 頁面上的 [泛型服務]。 在 [選取服務] 頁面上，選取 [SQL Server Integration Services Scale Out Master 14.0]。
+2.  在 [高可用性精靈]  對話方塊中，選取 [選取角色]  頁面上的 [泛型服務]  。 在 [選取服務]  頁面上，選取 [SQL Server Integration Services Scale Out Master 14.0]。
 
-3.  在 [用戶端存取點] 頁面上，輸入 Scale Out Master 服務的 DNS 主機名稱。
+3.  在 [用戶端存取點]  頁面上，輸入 Scale Out Master 服務的 DNS 主機名稱。
 
     ![HA 精靈 1](media/ha-wizard1.PNG)
 
@@ -99,7 +99,7 @@ SSISDB 中的記錄是透過自動產生其密碼來登入 **##MS_SSISLogDBWorke
 
 在 Azure 虛擬機器中，此設定步驟需要額外的步驟。 這些概念和步驟的完整說明不在本文範圍內。
 
-1.  您必須設定 Azure 網域。 Windows Server 容錯移轉叢集需要叢集中之所有電腦皆為相同網域中的成員。 如需詳細資訊，請參閱[使用 Azure 入口網站啟用 Azure Active Directory Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started)。
+1.  您必須設定 Azure 網域。 Windows Server 容錯移轉叢集需要叢集中之所有電腦皆為相同網域中的成員。 如需詳細資訊，請參閱[使用 Azure 入口網站啟用 Azure Active Directory Domain Services](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-instance)。
 
 2. 您必須設定 Azure Load Balancer。 這是可用性群組接聽程式的需求。 如需詳細資訊，請參閱[教學課程：在 Azure 入口網站中使用基本負載平衡器，將內部流量負載平衡到 VM](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)。
 

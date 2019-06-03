@@ -21,16 +21,16 @@ helpviewer_keywords:
 - greater than or equal to operator (>=)
 - '>= (greater than or equal to operator)'
 ms.assetid: 641ee28d-7536-46dd-a48a-6c63c2d59278
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f946a30bf575ab9217a1f97f07d2b8c21580d63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 721a7795f027e3641e3a8f5ab2c740e17c9cff57
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618546"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982287"
 ---
 # <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;= (大於或等於) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ expression >= expression
 ## <a name="remarks"></a>Remarks  
  當您在比較非 Null 運算式時，如果左運算元的值大於或等於右運算元，則結果為 TRUE，否則結果就是 FALSE。  
   
- 與 = (等於) 比較運算子不同的是，兩個 NULL 值的 >= 比較結果不受到 ANSI_NULLS 設定的影響。  
+ 與 = (等於) 比較運算子不同的是，兩個 NULL 值的 >= 比較結果不受 ANSI_NULLS 設定的影響。  
   
 ## <a name="examples"></a>範例  
   

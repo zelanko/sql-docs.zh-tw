@@ -2,7 +2,7 @@
 title: tempdb 資料庫 | Microsoft Docs
 description: 本主題提供有關在 SQL Server 和 Azure SQL Database 中設定和使用 tempdb 資料庫的詳細資料
 ms.custom: P360
-ms.date: 02/14/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -18,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65a1afa2bf72c53f2ce656afb7f397dd10be9ef6
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 86c030eabfe3b18f544ca43f3e493bcd90f5e5ca
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265365"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994233"
 ---
 # <a name="tempdb-database"></a>tempdb 資料庫
 
@@ -31,7 +31,7 @@ ms.locfileid: "56265365"
 
 **tempdb** 系統資料庫是全域資源，適用於所有連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或 SQL Database 的使用者。 Tempdb 用以保留：  
   
-- 明確建立的暫存「使用者物件」(例如：全域或本機暫存資料表與索引、暫存預存程序、資料表變數、資料表值函式中傳回的資料表，或資料指標)。  
+- 明確建立的暫存「使用者物件」  (例如：全域或本機暫存資料表與索引、暫存預存程序、資料表變數、資料表值函式中傳回的資料表，或資料指標)。  
 - 資料庫引擎建立的**內部物件**。 其中包括：
   - 用來儲存多工緩衝處理、資料指標、排序和暫存大型物件 (LOB) 儲存體中繼結果的工作資料表。
   - 用於雜湊聯結或雜湊彙總作業的工作檔案。
@@ -43,7 +43,7 @@ ms.locfileid: "56265365"
   > Azure SQL Database 單一資料庫和彈性集區支援儲存在 tempdb 中，只限於資料庫層級的全域暫存資料表和全域暫存預存程序。 在同一 Azure SQL 資料庫中的所有使用者工作階段，會共用全域暫存資料表和全域暫存預存程序。 其他 Azure SQL 資料庫的使用者工作階段無法存取全域暫存資料表。 如需詳細資訊，請參閱[限定資料庫範圍的全域暫存資料表 (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)。 [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) 與 SQL Server 支援相同的暫存物件。
   > 針對 Azure SQL Database 單一資料庫和彈性集區，只會套用 master 資料庫和 tempdb 資料庫。 如需詳細資訊，請參閱[什麼是 Azure SQL Database 伺服器](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server)。 如需 Azure SQL Database 單一資料庫和彈性集區內容中 tempdb 的討論，請參閱 [Azure SQL Database 單一資料庫和彈性集區中的 tempdb 資料庫](#tempdb-database-in-sql-database)。 針對 Azure SQL Database 受控執行個體，則會套用所有系統資料庫。
 
-- 「版本存放區」是保存資料列的資料頁集合；這些資料列是支援使用資料列版本設定功能的必要項目。 版本存放區有兩個：一個是一般版本存放區，一個是線上索引建立版本存放區。 版本存放區包含：
+- 「版本存放區」  是保存資料列的資料頁集合；這些資料列是支援使用資料列版本設定功能的必要項目。 版本存放區有兩個：一個是一般版本存放區，一個是線上索引建立版本存放區。 版本存放區包含：
   - 由資料庫中的資料修改交易所產生的資料列版本，該資料庫採用使用資料列版本設定隔離的讀取認可或快照集隔離交易。  
   - 由以下這類功能的資料修改交易所產生的資料列版本：線上索引作業、Multiple Active Result Set (MARS) 和 AFTER 觸發程序。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "56265365"
 - 將資料庫設定為 OFFLINE
 - 將資料庫或主要檔案群組設定為 READ_ONLY
   
-## <a name="permissions"></a>[權限]
+## <a name="permissions"></a>權限
 
 任何使用者都可以在 tempdb 中建立暫時物件。 除非收到其他權限，否則使用者只能存取自己的物件。 您可以撤銷 tempdb 的連線權限來阻止使用者使用 tempdb，不過不建議您這樣做，因為有些常式作業需要使用 tempdb。  
 
@@ -207,7 +207,7 @@ GO
 - 系統會快取暫存資料表和資料表變數。 快取允許卸除和建立暫存物件以極快速度執行的作業，並減少頁面配置競爭。  
 - 已改善配置頁面閂鎖通訊協定，減少所使用的 UP (更新) 閂鎖數量。  
 - **tempdb** 的記錄負荷已縮減，以降低 **tempdb** 記錄檔的磁碟 I/O 頻寬耗用量。  
-- 安裝程式會在新的執行個體安裝期間加入多個 tempdb 資料檔案。 可使用 [資料庫引擎設定] 區段上的新 UI 輸入控制項和命令列參數 /SQLTEMPDBFILECOUNT 完成此工作。 根據預設，安裝程式會新增與邏輯處理器計數一樣多的 tempdb 資料檔案 (或是 8 個)，以較低者為準。  
+- 安裝程式會在新的執行個體安裝期間加入多個 tempdb 資料檔案。 可使用 [資料庫引擎設定]  區段上的新 UI 輸入控制項和命令列參數 /SQLTEMPDBFILECOUNT 完成此工作。 根據預設，安裝程式會新增與邏輯處理器計數一樣多的 tempdb 資料檔案 (或是 8 個)，以較低者為準。  
 - 如果有多個 **tempdb** 資料檔案，則視成長設定而定，所有的檔案會都同時以相同數量自動成長。 不再需要追蹤旗標 1117。  
 - **tempdb** 中的所有配置都使用統一範圍。 不再需要[追蹤旗標 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
 - 主要檔案群組中，已開啟 AUTOGROW_ALL_FILES 屬性而且此屬性無法修改。
@@ -215,6 +215,43 @@ GO
 如需 tempdb 中效能改進的詳細資訊，請參閱下列部落格文章：
 
 [TEMPDB - 檔案與追蹤旗標及更新，太棒了！](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
+
+## <a name="memory-optimized-tempdb-metadata"></a>記憶體最佳化的 TempDB 中繼資料
+
+TempDB 中繼資料競爭一直以來都是在 SQL Server 上執行之許多工作負載的延展性瓶頸。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引進的新功能是[記憶體內部資料庫](../in-memory-database.md)功能系列的一部分，記憶體最佳化的 tempdb 中繼資料能有效移除此瓶頸，並解除鎖定大量 tempdb 工作負載的新層級延展性。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，涉及管理暫存資料表中繼資料的系統資料表，可以移至不需閂鎖之非持久性經記憶體最佳化的資料表。 請使用下列指令碼，選擇加入這項新功能：
+
+```sql
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
+```
+
+這項設定變更需要重新啟動服務才會生效。
+
+此實作有些限制請務必注意：
+
+1. 功能開關切換不是動態的。 因為內部變更需要作用於 tempdb 的結構，所以啟用或停用此功能都必須重新開機。
+2. 單筆交易不一定會存取多個資料庫中經記憶體最佳化的資料表。  這表示任何牽涉到使用者資料庫中經記憶體最佳化之資料表的交易，都不能存取相同交易中的 TempDB 系統檢視表。  如果您嘗試存取和使用者資料庫中經記憶體最佳化的資料表同一交易中的 TempDB 系統檢視表，您會收到下列錯誤：
+    ```
+    A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
+    ```
+    範例
+    ```
+    BEGIN TRAN
+    SELECT *
+    FROM tempdb.sys.tables  -----> Creates a user In-Memory OLTP Transaction on Tempdb
+    INSERT INTO <user database>.<schema>.<mem-optimized table>
+    VALUES (1)  ----> Attempts to create user In-Memory OLTP transaction but will fail
+    COMMIT TRAN
+    ```
+3. 針對經記憶體最佳化之資料表的查詢不支援鎖定和隔離提示，因此針對經記憶體最佳化之 TempDB 目錄檢視的查詢不支援鎖定和隔離提示。 至於 SQL Server 中的其他系統目錄檢視，針對系統檢視表的所有交易都會是 READ COMMITTED 隔離 (或在本例中為 READ COMMITTED SNAPSHOT)。
+4. 啟用經記憶體最佳化的 tempdb 中繼資料後，暫存資料表可能會有一些資料行存放區索引的問題。 在此預覽版本中，使用經記憶體最佳化的 tempdb 中繼資料時，最好避免在暫存資料表上使用資料行存放區索引。
+
+> [!NOTE] 
+> 這些限制僅適用於參考 TempDB 系統檢視表時，如有需要，您可在存取使用者資料庫中經記憶體最佳化的資料表時，在相同的交易中建立暫存資料表。
+
+您可以使用下列 T-SQL 命令驗證 TempDB 是否經記憶體最佳化：
+```
+SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
+```
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server 中的 tempdb 容量規劃
 

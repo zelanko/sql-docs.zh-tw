@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 04c7d8564b739bd593b84c3925e3d7491a1bbca8
-ms.sourcegitcommit: 1d66761e54490267be4d0a94efc0ad6790051ef2
+ms.openlocfilehash: 3139f841d1ef7c75decbc5a3dbab34fb333d289c
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65198076"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428995"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 版本資訊
 
@@ -54,7 +54,7 @@ SSMS 18.0 的正式運作 (GA) 版本已可供使用。 如果您需要舊版 SS
 
 | 新項目 | 詳細資料 |
 | :------- | :------ |
-|SQL Server 2019 支援|SSMS 18.0 是第一個完整「感知」SQL Server 2019 (compatLevel 150) 的版本。|
+|SQL Server 2019 支援|SSMS 18.0 是第一個完整「感知」  SQL Server 2019 (compatLevel 150) 的版本。|
 |SQL Server 2019 支援|支援 SQL Server 2019 中的 "BATCH_STARTED_GROUP" 和 "BATCH_COMPLETED_GROUP"，以及 SQL 受控執行個體。|
 |SQL Server 2019 支援|SMO：新增 UDF 內嵌支援。|
 |SQL Server 2019 支援|GraphDB：在 Graph TC 序列的執行程序表中新增旗標。|
@@ -64,7 +64,7 @@ SSMS 18.0 的正式運作 (GA) 版本已可供使用。 如果您需要舊版 SS
 |SSMS 是以 Visual Studio 2017 Isolated Shell 為基礎 |新 Shell (SSMS 是以 Visual Studio 2017 15.9.11 為基礎) 會解除鎖定所有修復 SSMS 和 Visual Studio 的協助工具修正程式，包括最新的安全性問題修正。|
 |SSMS 協助工具改善 | 為了解決所有工具 (SSMS、DTA 和分析工具) 中的協助工具問題，我們進行了大量的工作|
 |SSMS 現在可以安裝在自訂資料夾中 | 您可以從命令列 (適用於自動安裝) 和安裝程式 UI 存取這個選項。 從命令列，將這個額外的引數傳遞給 SSMS-Setup-ENU.exe：<br>   SSMSInstallRoot=C:\MySSMS18<br>   根據預設，新的 SSMS 安裝位置是：%ProgramFiles(x86)%\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe<br>這並不表示 SSMS 是多重執行個體。|
-|SSMS 允許以不同於作業系統語言的語言進行安裝|已解除封鎖混合語言安裝。 例如，您可以在法文版 Windows 上安裝 SSMS 德文版。 如果作業系統語言與 SSMS 語言不相符，使用者必須在 [工具] > [選項] > [國際設定] 下變更語言，否則 SSMS 會顯示英文的 UI。|
+|SSMS 允許以不同於作業系統語言的語言進行安裝|已解除封鎖混合語言安裝。 例如，您可以在法文版 Windows 上安裝 SSMS 德文版。 如果作業系統語言與 SSMS 語言不相符，使用者必須在 [工具]   > [選項]   > [國際設定]  下變更語言，否則 SSMS 會顯示英文的 UI。|
 |SSMS 不再與 SQL 引擎共用元件 |我們做了很多努力來避免與 SQL 引擎共用元件時，通常會導致某一方覆寫另一方所安裝檔案的服務性問題。|
 |SSMS 需要 NetFx 4.7.2 或更新版本|我們將最低需求從 NetFx4.6.1 升級至 NetFx4.7.2：這可讓我們善用新架構所公開的新功能。|
 |移轉 SSMS 設定的能力| 第一次啟動 SSMS 18 時，系統會提示使用者移轉 17.x 設定。 使用者設定檔案現在會儲存為純文字的 XML 檔案，因而提升可攜性並可能允許編輯。|
@@ -76,7 +76,7 @@ SSMS 18.0 的正式運作 (GA) 版本已可供使用。 如果您需要舊版 SS
 |一般 SSMS|在 SSMS 中公開檔案群組的 AUTOGROW_ALL_FILES 設定選項。|
 |一般 SSMS|從 SSMS GUI 移除具風險的 [輕量型共用] 和 [優先權提升] 選項。 如需詳細資料，請參閱 [Priority boost details - and why it’s not recommended](https://blogs.msdn.microsoft.com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended/) (優先權提升詳細資料 - 及不建議使用的原因)。
 |一般 SSMS|用來建立檔案的新功能表和按鍵繫結關係：**CTRL+ALT+N**。 **CTRL+N** 會繼續建立新的查詢。|
-|一般 SSMS|[新增防火牆規則] 對話方塊現在可讓使用者指定規則名稱，而不是代替使用者自動產生。|
+|一般 SSMS|[新增防火牆規則]  對話方塊現在可讓使用者指定規則名稱，而不是代替使用者自動產生。|
 |一般 SSMS|專為 v140+ T-SQL 改善了編輯器中的 IntelliSense。|
 |一般 SSMS|在 [定序] 對話方塊上新增 SSMS UI 的 UTF-8 支援。|
 |一般 SSMS|針對連線對話方塊的 MRU 密碼，切換到「Windows 認證管理員」。 這可解決密碼持續性向來不可靠的長時間待處理問題。|
@@ -100,14 +100,14 @@ SSMS 18.0 的正式運作 (GA) 版本已可供使用。 如果您需要舊版 SS
 |資料分類|在 SMO 中新增 [資料分類] 功能。 資料行物件公開了新的屬性：SensitivityLabelName、SensitivityLabelId、SensitivityInformationTypeName、SensitivityInformationTypeId，及 IsClassified (唯讀)。 如需詳細資訊，請參閱 [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql) |
 |資料分類|在 [資料分類] 飛出視窗中新增 [分類報告] 功能表項目。|
 |資料分類| 已更新建議。|
-|資料庫相容性層級升級|在 **<Database name>** > [工作] > [資料庫升級] 下新增選項。 這會啟動新的 **Query Tuning Assistant (QTA) (查詢調整小幫手)** 來引導使用者完成下列程序：<br>收集效能基準資料，再升級資料庫相容性層級。<br>升級至想要的資料庫相容性層級。<br>針對相同的工作負載，收集第二輪的效能資料。<br>偵測工作負載迴歸，並提供經過測試的建議來提升工作負載效能。<br>這類似於[查詢存放區使用案例](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade)中所述的資料庫升級程序，不同之處是在最後一個步驟中，QTA 不會依賴先前已知良好的狀態來產生建議。|
+|資料庫相容性層級升級|在 **<Database name>**  > [工作]   > [資料庫升級]  下新增選項。 這會啟動新的 **Query Tuning Assistant (QTA) (查詢調整小幫手)** 來引導使用者完成下列程序：<br>收集效能基準資料，再升級資料庫相容性層級。<br>升級至想要的資料庫相容性層級。<br>針對相同的工作負載，收集第二輪的效能資料。<br>偵測工作負載迴歸，並提供經過測試的建議來提升工作負載效能。<br>這類似於[查詢存放區使用案例](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade)中所述的資料庫升級程序，不同之處是在最後一個步驟中，QTA 不會依賴先前已知良好的狀態來產生建議。|
 |資料層應用程式精靈|新增使用圖形資料表匯入/匯出資料層應用程式的支援。|
 |一般檔案匯入精靈|新增邏輯，通知使用者匯入可能會導致重新命名資料行。|
 |Integration Services (SSIS)|新增支援，允許客戶對 Azure Government 雲端中 Azure-SSIS IR 上的 SSIS 套件進行排程。|
 |Integration Services (SSIS)|當您透過 SSMS 使用 Azure SQL 受控執行個體的 SQL Agent 時，您可以在 SSIS 代理程式作業步驟中設定參數和連線管理員。|
 |Integration Services (SSIS)|連線到 Azure SQL DB/受控執行個體時，您可以使用 *default* 作為初始資料庫來連線到它。|
-|Integration Services (SSIS)|在 [Integration Services 目錄] 節點下新增項目 [在 Azure Data Factory 中嘗試 SSIS]，該項目可用於啟動 [Integration Runtime 建立精靈]，並可快速建立 "Azure-SSIS Integration Runtime"。
-|Integration Services (SSIS)|在 [目錄建立精靈] 中新增 [建立 SSIS IR] 按鈕，該項目可用於啟動 [Integration Runtime 建立精靈]，並可快速建立 "Azure-SSIS Integration Runtime"。|
+|Integration Services (SSIS)|在 [Integration Services 目錄] 節點下新增項目 [在 Azure Data Factory 中嘗試 SSIS]  ，該項目可用於啟動 [Integration Runtime 建立精靈]，並可快速建立 "Azure-SSIS Integration Runtime"。
+|Integration Services (SSIS)|在 [目錄建立精靈] 中新增 [建立 SSIS IR]  按鈕，該項目可用於啟動 [Integration Runtime 建立精靈]，並可快速建立 "Azure-SSIS Integration Runtime"。|
 |Integration Services (SSIS)|ISDeploymentWizard 現在支援 SQL 驗證、Azure Active Directory 整合式驗證，以及命令列模式下的 Azure Active Directory 密碼驗證。|
 |Integration Services (SSIS)|[部署精靈] 現在支援建立並部署到 Azure Data Factory SSIS Integration Runtime。|
 |物件指令碼|為物件編寫指令碼時，新增功能表項目 [CREATE 或 ALTER]。|
@@ -231,7 +231,7 @@ SSMS 18.0 的正式運作 (GA) 版本已可供使用。 如果您需要舊版 SS
 |物件總管|將重新命名資料庫時要求確認的邏輯延伸到所有結構描述物件 (可進行設定)。|
 |物件總管|已在物件總管篩選中新增適當的逸出。 如需詳細資訊，請參閱 https://feedback.azure.com/forums/908035/suggestions/36678803。 |
 |物件總管|修正/改善 [物件總管詳細資料] 中的檢視，以正確的分隔符號顯示數字。 如需詳細資訊，請參閱 https://feedback.azure.com/forums/908035/suggestions/32900944。 |
-|物件總管|修正連線到 SQL Express 時的 [資料表] 節點操作功能表，其中遺漏 [新增] 飛出視窗、未正確列出圖形資料表，且遺漏由系統建立版本的資料表。 如需詳細資訊，請參閱 https://feedback.azure.com/forums/908035/suggestions/37245529。|
+|物件總管|修正連線到 SQL Express 時的 [資料表] 節點操作功能表，其中遺漏 [新增] 飛出視窗、未正確列出圖形資料表，且遺漏由系統建立版本的資料表。 如需詳細資訊，請參閱 https://feedback.azure.com/forums/908035/suggestions/37245529。 |
 |物件指令碼|整體效能改善 - 相較於 SSMS 17.7，產生 WideWorldImporters 指令碼只要一半的時間。|
 |物件指令碼|為物件編寫指令碼時，會省略具有預設值的資料庫範圍設定。|
 |物件指令碼|編寫指令碼時，不要產生動態 T-SQL。 請參閱＜ https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391＞。 |
@@ -271,8 +271,8 @@ SSMS 18.0 的正式運作 (GA) 版本已可供使用。 如果您需要舊版 SS
 |SSMS 編輯器|修正 IntelliSense 在使用 "ALTER TABLE...ADD CONSTRAINT...WITH(ONLINE=ON)" 時發出警告的問題。|
 |SSMS 編輯器|已修正有數個系統檢視和資料表值函式未正確以色彩標示的問題。|
 |SSMS 編輯器|修正按一下編輯器索引標籤時，可能造成索引標籤關閉而不是取得焦點的問題。 如需詳細資訊，請參閱 https://feedback.azure.com/forums/908035/suggestions/37291114。 |
-|SSMS 選項|修正 [工具] > [選項] > [SQL Server 物件總管] > [命令] 頁面未正確調整大小的問題。|
-|SSMS 選項|SSMS 現在預設會停用 XMLA 編輯器中的 DTD 自動下載功能 -- XMLA 指令碼編輯器 (使用 XML 語言服務) 現在預設會防止自動下載潛在惡意 XMLA 檔案的 DTD。 這可藉由在 [工具] > [選項] > [環境] > [文字編輯器] > [XML] > [其他] 中關閉 [自動下載 DTD 和結構描述] 設定進行控制。 |
+|SSMS 選項|修正 [工具]   > [選項]   > [SQL Server 物件總管]   > [命令]  頁面未正確調整大小的問題。|
+|SSMS 選項|SSMS 現在預設會停用 XMLA 編輯器中的 DTD 自動下載功能 -- XMLA 指令碼編輯器 (使用 XML 語言服務) 現在預設會防止自動下載潛在惡意 XMLA 檔案的 DTD。 這可藉由在 [工具]   > [選項]   > [環境]   > [文字編輯器]   > [XML]   > [其他]  中關閉 [自動下載 DTD 和結構描述] 設定進行控制。 |
 |SSMS 選項|將 **CTRL+D** 還原為舊版 SSMS 中所使用的快速鍵。 如需詳細資訊，請參閱 https://feedback.azure.com/forums/908035/suggestions/35544754。 |
 |資料表設計工具|修正「編輯 200 個資料列」的當機問題。|
 |資料表設計工具|修正設計工具在連線至 Azure SQL Database 時，允許新增至資料表的問題。|
@@ -416,7 +416,7 @@ Microsoft Azure 整合：
 
 
 ## <a name="downloadssdtmediadownloadpng-ssms-1781httpsgomicrosoftcomfwlinklinkid875802"></a>![下載](../ssdt/media/download.png) [SSMS 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)
-17.8 中發現一個與佈建 SQL 資料庫有關的 BUG，因此以 SSMS 17.8.1 取代 17.8。
+17.8 中發現一個與佈建 SQL 資料庫有關的 BUG，因此以 SSMS 17.8.1 取代 17.8。 
 
 組建編號：14.0.17277.0<br>
 發行日期：2018 年 6 月 26 日
@@ -475,8 +475,8 @@ Always Encrypted：
 
 ### <a name="known-issues"></a>已知問題
 
-- 在 [特性] 視窗中修改任何檔案群組特性之後按一下 [指令碼] 按鈕，會產生兩個指令碼：其中一個指令碼會包含 *USE <database>* 陳述式，另一個指令碼則會包含 *USE master* 陳述式。  產生包含 *USE master* 的指令碼是一項錯誤，而且應予捨棄。 執行包含 *USE <database>* 陳述式的指令碼。
-- 使用新的「一般目的」或「商務關鍵性」Azure SQL Database 版本時，某些對話方塊顯示版本無效錯誤。
+- 在 [特性]  視窗中修改任何檔案群組特性之後按一下 [指令碼]  按鈕，會產生兩個指令碼：其中一個指令碼會包含 *USE <database>* 陳述式，另一個指令碼則會包含 *USE master* 陳述式。  產生包含 *USE master* 的指令碼是一項錯誤，而且應予捨棄。 執行包含 *USE <database>* 陳述式的指令碼。
+- 使用新的「一般目的」  或「商務關鍵性」  Azure SQL Database 版本時，某些對話方塊顯示版本無效錯誤。
 - 可觀察到 XEvents 檢視器中的一些延遲。 這是 [.Net Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql) 中的已知問題。 請考慮升級到 NetFx 4.7.2。
 
 
@@ -523,7 +523,7 @@ Azure SQL 資料倉儲：
 - 已修正退出傳送遙測之後，嘗試連線到伺服器時 SSMS 損毀的問題。
  
 Azure SQL Database： 
-- 已修正使用者無法設定或變更相容性層級 (從空白下拉) 的問題。 若要將相容性層級設定為 150，使用者仍需要使用 [指令碼] 按鈕並手動編輯指令碼。 
+- 已修正使用者無法設定或變更相容性層級 (從空白下拉) 的問題。 若要將相容性層級設定為 150，使用者仍需要使用 [指令碼]  按鈕並手動編輯指令碼。 
  
 SMO： 
 - 在 SMO 中公開錯誤記錄檔大小設定。 如需詳細資料，請參閱 [Set the Maximum Size of the SQL Server Error Logs](https://feedback.azure.com/forums/908035-sql-server/suggestions/33624115) (設定 SQL Server 錯誤記錄檔大小上限)。  
@@ -537,7 +537,7 @@ SSMS 使用者設定：
 - 已修正 [選項] 畫面未正確調整大小的問題。
 
 其他：  
-- 已改善「統計資料詳細資料」頁面上的文字顯示方式。 
+- 已改善「統計資料詳細資料」  頁面上的文字顯示方式。 
 
 **Integration Services (IS)**
 
@@ -550,7 +550,7 @@ SSMS 使用者設定：
 
 ### <a name="known-issues"></a>已知問題
 
-使用新的「一般目的」或「商務關鍵性」Azure SQL Database 版本時，某些對話方塊顯示版本無效錯誤。
+使用新的「一般目的」  或「商務關鍵性」  Azure SQL Database 版本時，某些對話方塊顯示版本無效錯誤。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-176httpsgomicrosoftcomfwlinklinkid870039"></a>![下載](../ssdt/media/download.png) [SSMS 17.6](https://go.microsoft.com/fwlink/?linkid=870039)
 
@@ -593,14 +593,14 @@ SQL Database 受控執行個體：
 
 資料分類：
 
-- 修正「資料分類」中導致新增分類顯示為「資訊類型」和「敏感度標籤」的問題。
-- 已修正將伺服器設定為區分大小寫的定序時，「資料分類」無法正常運作的問題。
+- 修正「資料分類」中導致新增分類顯示為「資訊類型」  和「敏感度標籤」  的問題。
+- 已修正將伺服器設定為區分大小寫的定序時，「資料分類」  無法正常運作的問題。
         
 一律開啟：
 
-- 已修正 AG Show Dashboard 中的一個問題；當伺服器設定為區分大小寫的定序時，按一下「收集延遲資料」可能會導致錯誤。
-- 已修正在叢集服務關閉時，SSMS 錯誤地將 AG 報告為「分散式」的問題。
-- 在使用 [建立可用性群組] 對話方塊來建立 AG 時，已修正需要 *ReadOnlyRoutingUrl* 的問題。
+- 已修正 AG Show Dashboard 中的一個問題；當伺服器設定為區分大小寫的定序時，按一下「收集延遲資料」  可能會導致錯誤。
+- 已修正在叢集服務關閉時，SSMS 錯誤地將 AG 報告為「分散式」  的問題。
+- 在使用 [建立可用性群組]  對話方塊來建立 AG 時，已修正需要 *ReadOnlyRoutingUrl* 的問題。
 - 修正當主要伺服器關閉並手動容錯移轉至次要伺服器時，NullReferenceException 會擲回的問題。
 - 修正使用備份與還原來建立可用群性組以初始化資料庫時，會在次要複本中預設目錄上建立資料庫檔案的問題。 修正包含下列：
    - 新增資料與記錄檔目錄的驗證程式。
@@ -614,12 +614,12 @@ SMO：
 - 已修正 SQL Server 2016 及更新版本上的指令碼資料表撰寫可能需要長達 30 秒 (現在少於 1 秒) 的效能問題。
 
 物件總管：
-- 已修正當嘗試在物件總管中展開 [Management] 節點時，SSMS 可能會擲回的問題，如「物件無法從 DBNull 轉換為其他類型」。
-- 已修正當使用者定義的 PS 設定檔發出輸出時，「啟動 PowerShell」 未偵測到 SQLServer 模組的問題。
+- 已修正當嘗試在物件總管中展開 [Management]  節點時，SSMS 可能會擲回的問題，如「物件無法從 DBNull 轉換為其他類型」。
+- 已修正當使用者定義的 PS 設定檔發出輸出時，「啟動 PowerShell」  未偵測到 SQLServer 模組的問題。
 - 已修正在物件總管中以右鍵按一下資料表或索引節點時，可能發生的間歇性停止回應。
 
 Database Mail：
-- 已修正當嘗試顯示與管理超過 16 個設定檔時，[Database Mail 設定精靈] 會擲回的問題。
+- 已修正當嘗試顯示與管理超過 16 個設定檔時，[Database Mail 設定精靈]  會擲回的問題。
 
 
 **Analysis Services (AS)**
@@ -692,7 +692,7 @@ SMO：
 - 已修正受控壓縮針對索引失敗的問題 (https://feedback.azure.com/forums/908035-sql-server/suggestions/32610058-ssms-17-4-error-when-enabling-page-compression-o)。
 
 稽核：
-- 修正「合併稽核檔案」功能問題。
+- 修正「合併稽核檔案」  功能問題。
 <br>
 
 ### <a name="known-issues"></a>已知問題
@@ -873,8 +873,8 @@ XE 分析工具：
 - 使用具 MFA 之 UA 的 Azure AD 驗證不支援下列 SSMS 功能：
    - Azure AD 驗證不支援 Database Engine Tuning Advisor；有一個已知問題，亦即向使用者呈現不太容易了解的錯誤訊息：「無法載入檔案或組件 'Microsoft.IdentityModel.Clients.ActiveDirectory'...」，而非預期的：「Database Engine Tuning Advisor 不支援 Microsoft Azure SQL Database。 (DTAClient)」。
 - 嘗試分析 DTA 中的查詢會導致錯誤：「物件必須實作 IConvertible。 (mscorlib)」。
-- 物件總管中報表的 [查詢存放區] 清單遺漏「迴歸查詢」。
-   - 因應措施以滑鼠右鍵按一下 [查詢存放區] 節點，然後選取 [檢視迴歸查詢]。
+- 物件總管中報表的 [查詢存放區] 清單遺漏「迴歸查詢」  。
+   - 因應措施以滑鼠右鍵按一下 [查詢存放區]  節點，然後選取 [檢視迴歸查詢]  。
 
 **Integration Services (IS)**
 
@@ -909,10 +909,10 @@ XE 分析工具：
 - Azure SQL Database 的已啟用檢視表設計工具
 - SSMS 中從物件總管編寫物件指令碼的預設指令碼選項已變更：
   - 以前，新安裝上的預設值是讓產生的指令碼以最新版的 SQL Server (目前為 SQL Server 2017) 為目標。
-  - 在 SSMS 17.2 中，已新增一個選項：[使指令碼設定與來源相符]。 設定為 True 時，產生的指令碼是以與從中編寫物件指令碼之伺服器相同的版本、引擎類型和引擎版本為目標。
-  - [使指令碼設定與來源相符] 值預設為 *True*，讓新的 SSMS 安裝自動預設為一律將物件指令碼編寫成與原始伺服器相同的目標。
-  - [使指令碼設定與來源相符] 值設定為 *False* 時，會啟用一般指令碼目標選項，並且運作方式與以前一樣。
-此外，所有指令碼選項都已移至其專屬區段：[版本選項]。 它們不再位於 [一般指令碼選項] 下方。
+  - 在 SSMS 17.2 中，已新增一個選項：[使指令碼設定與來源相符]  。 設定為 True  時，產生的指令碼是以與從中編寫物件指令碼之伺服器相同的版本、引擎類型和引擎版本為目標。
+  - [使指令碼設定與來源相符]  值預設為 *True*，讓新的 SSMS 安裝自動預設為一律將物件指令碼編寫成與原始伺服器相同的目標。
+  - [使指令碼設定與來源相符]  值設定為 *False* 時，會啟用一般指令碼目標選項，並且運作方式與以前一樣。
+此外，所有指令碼選項都已移至其專屬區段：[版本選項]  。 它們不再位於 [一般指令碼選項]  下方。
 
 - [從 URL 還原] 中已新增國內雲端支援
 - QueryStoreUI 報表現在支援來自 sys.query_store_runtime_stats 的其他計量 (例如 RowCount、DOP、CLR 時間)。
@@ -951,10 +951,10 @@ The connection is broken and recovery is not possible. The client driver attempt
    重新執行查詢應該可通過錯誤並成功。
 
 - 使用具 MFA 之通用驗證的 Azure AD 驗證不支援下列 SSMS 功能：
-  - [新增資料表/檢視] 設計工具會顯示舊式登入提示，並不適用於 Azure AD 驗證。
-  - [編輯前 200 個資料列] 功能不支援 Azure AD 驗證。
-  - [已註冊的伺服器] 元件不支援 Azure AD 驗證。
-  - 不支援 **Database Engine Tuning Advisor** 進行 Azure AD 驗證。 有一個已知問題，亦即向使用者呈現不太有用的錯誤訊息：「無法載入檔案或組件 'Microsoft.IdentityModel.Clients.ActiveDirectory'...」，而非預期的「Database Engine Tuning Advisor 不支援 Microsoft Azure SQL Database。*(DTAClient)*.
+  - [新增資料表/檢視]  設計工具會顯示舊式登入提示，並不適用於 Azure AD 驗證。
+  - [編輯前 200 個資料列]  功能不支援 Azure AD 驗證。
+  - [已註冊的伺服器]  元件不支援 Azure AD 驗證。
+  - 不支援 **Database Engine Tuning Advisor** 進行 Azure AD 驗證。 有一個已知問題，亦即向使用者呈現不太有用的錯誤訊息：「無法載入檔案或組件 'Microsoft.IdentityModel.Clients.ActiveDirectory'...」  ，而非預期的「Database Engine Tuning Advisor 不支援 Microsoft Azure SQL Database。 *(DTAClient)* .
 
 **Analysis Services (AS)**
 
@@ -1192,7 +1192,7 @@ https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-mana
 
 * 使用 Always Encrypted 進行加密時，未正確處理加密後來自重新整理模組的錯誤。
 
-* 「開啟最近使用的項目」功能表未顯示最近儲存的檔案。 [Connect 識別碼 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
+* 「開啟最近使用的項目」  功能表未顯示最近儲存的檔案。 [Connect 識別碼 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
 
 * SSMS 在以右鍵按一下資料表索引時 (透過遠端 (網際網路) 連線) 很緩慢。 [Connect 識別碼 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection)
  
@@ -1209,7 +1209,7 @@ https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-mana
 
 如果您的 SSMS 安裝遇到問題，而且無法經由標準的解除並重新安裝來解決，您可以先嘗試[修復](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) Visual Studio 2015 IsoShell。 若修復 Visual Studio 2015 IsoShell 未解決問題，下列幾個步驟可以修正許多非特定的問題：
 
-1.  以您解除安裝任何應用程式的相同方式，解除安裝 SSMS (使用 [應用程式與功能]、[程式與功能]，取決於您的 Windows 版本)。
+1.  以您解除安裝任何應用程式的相同方式，解除安裝 SSMS (使用 [應用程式與功能]  、[程式與功能]  ，取決於您的 Windows 版本)。
 
 2.  **從提升權限的命令提示字元**解除安裝 Visual Studio 2015 IsoShell：
    

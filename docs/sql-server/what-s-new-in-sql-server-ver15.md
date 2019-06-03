@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 的新功能 | Microsoft Docs
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,34 +9,78 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 09e1a4203ef519fb9939df2ba1892b85509f1324
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: ad10f03e426298d3785feeba132979e647cb1a98
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775485"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198184"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 是以舊版本為基礎，可讓 SQL Server 成長為平台，以供您選擇開發語言、資料類型、內部部署或雲端以及作業系統。 本文摘要說明 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能。 
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 是以舊版本為基礎，可讓 SQL Server 成長為平台，以供您選擇開發語言、資料類型、內部部署或雲端以及作業系統。 本文摘要說明 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能。
 
 本文摘要說明每個版本的功能，並指向每項功能的其他詳細資料。 [詳細資料](#details) 區段提供核心文件中可能未提供的功能技術詳細資料。 本文的其他章節會詳盡說明為此 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 最新發行的所有功能。
 
 如需詳細資訊和已知問題，請參閱 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 版本資訊](sql-server-ver15-release-notes.md)。
 
-**請試用 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]！**
-
-- [![從評估中心下載](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [下載 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以安裝於 Windows](https://go.microsoft.com/fwlink/?LinkID=862101)。
-- 安裝於 Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md)、[SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) 和 [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)。
-- [在 Docker 上的 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 上執行](../linux/quickstart-install-connect-docker.md)。
-
 **使用[最新的工具](#tools)以獲得 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最佳體驗。**
 
-## <a name="ctp-25-april-2019"></a>CTP 2.5 2019 年 4 月
+## <a name="ctp-30-may-2019"></a>CTP 3.0 2019 年 5 月
 
-Community Technical Preview (CTP) 2.5 是 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最新公開版本。 這個版本對先前的 CTP 版本做了改進，以修正 Bug，提升安全性，以及將效能最佳化。 此外，也為 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.5 新增或強化了下列功能。
+Community Technical Preview (CTP) 3.0 是 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最新公開版本。 這個版本對先前的 CTP 版本做了改進，以修正 Bug，提升安全性，以及將效能最佳化。
+
+[!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
+
+如需從支援中排除之特定功能的資訊，請參閱[版本資訊](sql-server-ver15-release-notes.md)。
+
+此外，也為 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.0 新增或強化了下列功能。
+
+### <a name="big-data-clusters"></a>巨量資料叢集
+
+| 新功能或更新 | 詳細資料 |
+|:---|:---|
+| **mssqlctl** 更新 | 數個 **mssqlctl** [命令與參數更新](../big-data-cluster/reference-mssqlctl.md)。 這包含 **mssqlctl login** 命令的更新，此命令現在針對控制器使用者名稱和端點。 |
+| 儲存體增強功能 | 支援記錄檔和資料的不同儲存體設定。 此外，巨量資料叢集的永續性磁碟區宣告數已減少。 |
+| 多重計算集區執行個體 | 支援多重計算集區執行個體。 |
+| 新的集區行為和功能 | 根據預設，現在計算集區只會用於 **ROUND_ROBIN** 散發中的存放集區和資料集區作業。 資料集區現在可以使用新的 **REPLICATED** 散發類型，這表示相同的資料會出現在所有資料集區執行個體上。 |
+| 外部資料表改善 | HADOOP 資料來源類型的外部資料表，現在支援讀取最高 1 MB 的資料列。 外部資料表 (ODBC、存放集區、資料集區) 現在支援如 SQL Server 資料表寬度的資料列。 |
+| &nbsp; | &nbsp; |
+
+### <a name="database-engine"></a>資料庫引擎
+
+| 新功能或更新 | 詳細資料 |
+|:---|:---|
+|註冊外部語言|新的 DDL `CREATE EXTERNAL LANGUAGE` 在 SQL Server 中註冊外部語言，如同 Java。 請參閱[建立外部語言](../t-sql/statements/create-external-language-transact-sql.md)。 |
+|Java 的其他支援資料類型|請參閱 [Java 資料類型](../language-extensions/how-to/java-to-sql-data-types.md)。|
+|查詢存放區的自訂擷取原則|啟用後，即可在新的查詢存放區擷取原則設定下使用額外查詢存放區設定，來微調特定伺服器中的資料收集。 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項](../t-sql/statements/alter-database-transact-sql-set-options.md)。|
+|[記憶體中資料庫](../relational-databases/in-memory-database.md)新增新的 DDL 語法來控制混合式緩衝集區。 <sup>2</sup>|透過[混合式緩衝集區](../database-engine/configure-windows/hybrid-buffer-pool.md)，坐落在置於持續性記憶體 (PMEM) 裝置上之資料庫檔案上的資料庫頁面，可在必要時直接存取。|
+|已新增新的記憶體中資料庫功能：記憶體最佳化的 tempdb 中繼資料。|請參閱[記憶體最佳化的 TempDB 中繼資料](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)|
+|連結的伺服器支援 UTF-8字元編碼方式。 |[定序與 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md) |
+|`sys.dm_exec_query_plan_stats` 會傳回授與查詢計劃之平行處理原則程度和記憶體的詳細資訊。 |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
+| &nbsp; | &nbsp; |
+
+><sup>1</sup> 這是選擇加入的功能，需要啟用[追蹤旗標](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451。
+>
+><sup>2</sup> 不再需要追蹤旗標來啟用混合式緩衝集區。
+
+### [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+
+| 新功能或更新 | 詳細資料 |
+|:---|:---|
+|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] 支援 Azure SQL Database 受控執行個體資料庫。| 在受控執行個體上裝載 [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]。 請參閱 [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] 安裝和設定](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb)。
+| &nbsp; | &nbsp; |
+
+### <a name="analysis-services"></a>Analysis Services
+
+| 新功能或更新 | 詳細資料 |
+|:---|:---|
+|MDX 查詢支援具有計算群組的表格式模型。 |此版本移除[計算群組](#calc-ctp24)中較舊的限制。 |
+|使用計算群組之量值的動態格式。 |這項功能可讓您依條件變更具有[計算群組](#calc-ctp24)之量值的格式字串。 例如，透過貨幣轉換，量值可以使用不同的外幣格式顯示。|
+
+## <a name="ctp-25-april-2019"></a>CTP 2.5 2019 年 4 月
 
 ### <a name="big-data-clusters"></a>巨量資料叢集
 
@@ -125,7 +169,7 @@ Community Technical Preview (CTP) 2.5 是 [!INCLUDE[sql-server-2019](../includes
 |查詢存放區計畫強制支援向前快轉及靜態資料指標。|[查詢存放區計畫強制支援向前快轉及靜態資料指標](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23) |
 |使用多個範圍之暫存資料表減少對工作負載的重新編譯。 |[減少對工作負載的重新編譯](../relational-databases/tables/tables.md#ctp23) |
 |改善的間接檢查點延展性。 |[改善的間接檢查點延展性](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
-|UTF-8 支援：新增在 BIN2 定序 (`UTF8_BIN2`) 中使用 UTF-8 字元編碼的支援。 |[定序與 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md) |
+|新增在 BIN2 定序 (`UTF8_BIN2`) 中使用 UTF-8 字元編碼的支援。 |[定序與 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md) |
 |在圖表資料庫的邊緣條件約束中定義串聯刪除動作。 |[邊緣條件約束](../relational-databases/tables/graph-edge-constraints.md) |
 |使用新的資料庫範圍設定啟用或停用 `LIGHTWEIGHT_QUERY_PROFILING`。 |[`VERBOSE_TRUNCATION_WARNINGS`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation) |
 | &nbsp; | &nbsp; |
@@ -181,7 +225,7 @@ Community Technical Preview (CTP) 2.5 是 [!INCLUDE[sql-server-2019](../includes
 
 | 新功能或更新 | 詳細資料 |
 |:-----|:-----|
-|新增在  [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 安裝期間選取 UTF-8 定序作為預設的支援。 |[定序與 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
+|新增選取 UTF-8 定序作為預設值的支援 (在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 安裝期間)。 |[定序與 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
 |純量 UDF 內嵌會將純量使用者定義函式 (UDF) 自動轉換成關聯運算式，並將它們內嵌在呼叫 SQL 查詢中。 |[純量 UDF 內嵌](../relational-databases/user-defined-functions/scalar-udf-inlining.md) |
 |動態管理檢視 `sys.dm_exec_requests` 資料行 `command` 會在 `SELECT` 正在等候同步統計資料更新作業完成以繼續查詢執行的情況下，顯示 `SELECT (STATMAN)`。 | [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) |
 |新的等候類型 `WAIT_ON_SYNC_STATISTICS_REFRESH` 會顯示在 `sys.dm_os_wait_stats` 動態管理檢視中。 它會顯示花費在同步統計資料重新整理作業上的累積執行個體層級時間。|[`sys.dm_os_wait_stats`](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) |
@@ -276,7 +320,7 @@ Community Technical Preview (CTP) 2.5 是 [!INCLUDE[sql-server-2019](../includes
 |:-----|:-----|
 |[Azure Data Studio](../azure-data-studio/what-is.md) 支援連線及管理 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 巨量資料叢集。 |[什麼是 Azure Data Studio](../azure-data-studio/what-is.md)|
 |支援使用 SQL Server 巨量資料叢集的案例。 |[SQL Server 2019 延伸模組 (預覽)](../azure-data-studio/sql-server-2019-extension.md)|
-|[**SQL Server Management Studio (SSMS) 18.0 (預覽)**](../ssms/sql-server-management-studio-ssms.md)：支援 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。| |
+|[**SQL Server Management Studio (SSMS) 18.0 (預覽)** ](../ssms/sql-server-management-studio-ssms.md)：支援 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。| |
 |具有安全記憶體保護區的 Always Encrypted 支援。 |[具有安全記憶體保護區的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)|
 | &nbsp; | &nbsp; |
 
@@ -549,7 +593,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 #### <a id="programmability"></a> Java 語言可程式性延伸模組 (CTP 2.0)
 
-- **Java 語言延伸模組 (預覽)**：使用 Java 語言延伸模組在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中執行 Java 程式碼。 在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，當您將 [機器學習服務 (資料庫內)] 功能新增至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，會安裝此延伸模組。
+- **Java 語言延伸模組 (預覽)** ：使用 Java 語言延伸模組在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中執行 Java 程式碼。 在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，當您將 [機器學習服務 (資料庫內)] 功能新增至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，會安裝此延伸模組。
 
 #### <a id="sqlgraph"></a> SQL Graph 功能 (CTP 2.3)
 
@@ -559,7 +603,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 - **邊緣條件約束 (CTP 2.0)** 是針對 SQL Graph 中的邊緣資料表而導入的。 邊緣資料表可以將任何節點連線至資料庫中的任何其他節點。 引進邊緣條件約束時，您現在可以對此行為套用一些限制。 新的 `CONNECTION` 條件約束可以用來指定將允許指定邊緣資料表連線至結構描述的節點類型。 
 
-  **(CTP 2.3)**：進一步擴充這項功能，您便可以在邊緣條件約束上定義串聯刪除動作。 您可以定義資料庫引擎在使用者刪除指定邊緣連線的節點時，所要採取的動作。
+  **(CTP 2.3)** ：進一步擴充這項功能，您便可以在邊緣條件約束上定義串聯刪除動作。 您可以定義資料庫引擎在使用者刪除指定邊緣連線的節點時，所要採取的動作。
 
 #### <a name="database-scoped-default-setting-for-online-and-resumable-ddl-operations-ctp-20"></a>線上和可繼續 DDL 作業的資料庫範圍預設設定 (CTP 2.0)
 
@@ -605,7 +649,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 #### <a name="expanded-support-for-persistent-memory-devices-ctp-20"></a>持續性記憶體裝置的擴充支援 (CTP 2.0)
 
-任何放在持續性記憶體裝置上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 檔案現在可在「已啟用」模式中操作。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會直接存取裝置，並使用有效率的 memcpy 作業來略過作業系統的儲存體堆疊。 此模式會改善效能，因為它允許這類裝置的低延遲輸入/輸出。
+任何放在持續性記憶體裝置上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 檔案現在可在「已啟用」  模式中操作。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會直接存取裝置，並使用有效率的 memcpy 作業來略過作業系統的儲存體堆疊。 此模式會改善效能，因為它允許這類裝置的低延遲輸入/輸出。
     - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 檔案範例包含：
         - 資料庫檔案
         - 交易記錄檔
@@ -660,14 +704,14 @@ FROM sys.dm_exec_requests AS d
 
 ### <a id="sqllinux"></a> Linux 上的 SQL Server
 
-- **具有 Kubernetes 之 Docker 容器上的 Always On 可用性群組 (CTP 2.2)**：Kubernetes 可協調執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的容器，以提供一組具有 SQL Server Always On 可用性群組的高可用性資料庫。 Kubernetes 運算子會部署 StatefulSet，包括具有 **mssql-server 容器**和健康狀態監視的容器。
+- **具有 Kubernetes 之 Docker 容器上的 Always On 可用性群組 (CTP 2.2)** ：Kubernetes 可協調執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的容器，以提供一組具有 SQL Server Always On 可用性群組的高可用性資料庫。 Kubernetes 運算子會部署 StatefulSet，包括具有 **mssql-server 容器**和健康狀態監視的容器。
 
-- **新容器登錄 (CTP 2.1)**：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的所有容器映像現在都位於 Microsoft 容器登錄中。 Microsoft 容器登錄是散發 Microsoft 產品容器的官方容器登錄。 此外，現在已發佈認證的 RHEL 型映像。
+- **新容器登錄 (CTP 2.1)** ：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的所有容器映像現在都位於 Microsoft 容器登錄中。 Microsoft 容器登錄是散發 Microsoft 產品容器的官方容器登錄。 此外，現在已發佈認證的 RHEL 型映像。
 
   - Microsoft 容器登錄：`mcr.microsoft.com/mssql/server:vNext-CTP2.0`
   - 認證的 RHEL 型容器映像：`mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
 
-- **複寫支援 (CTP 2.0)**：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支援 Linux 上的 SQL Server 複寫。 具有 SQL Agent 的 Linux 虛擬機器可以是發行者、散發者或訂閱者。 
+- **複寫支援 (CTP 2.0)** ：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支援 Linux 上的 SQL Server 複寫。 具有 SQL Agent 的 Linux 虛擬機器可以是發行者、散發者或訂閱者。 
 
   建立下列類型的發行：
   - 異動
@@ -676,19 +720,19 @@ FROM sys.dm_exec_requests AS d
 
   設定複寫 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 或使用[複寫預存程序](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。
 
-- **支援 Microsoft Distributed Transaction Coordinator (MSDTC) (CTP 2.0)**：Linux 上的 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支援 Microsoft Distributed Transaction Coordinator (MSDTC)。 如需詳細資料，請參閱[如何在 Linux 上設定 MSDTC](../linux/sql-server-linux-configure-msdtc.md)。
+- **支援 Microsoft Distributed Transaction Coordinator (MSDTC) (CTP 2.0)** ：Linux 上的 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支援 Microsoft Distributed Transaction Coordinator (MSDTC)。 如需詳細資料，請參閱[如何在 Linux 上設定 MSDTC](../linux/sql-server-linux-configure-msdtc.md)。
 
-- **協力廠商 AD 提供者的 OpenLDAP 支援 (CTP 2.0)**：Linux 上的 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支援 OpenLDAP，可讓協力廠商提供者加入 Active Directory。
+- **協力廠商 AD 提供者的 OpenLDAP 支援 (CTP 2.0)** ：Linux 上的 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支援 OpenLDAP，可讓協力廠商提供者加入 Active Directory。
 
-- **Linux 上的機器學習 (CTP 2.0)**：Linux 現在支援 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 機器學習服務 (資料庫內)。 支援包含 `sp_execute_external_script` 預存程序。 如需如何在 Linux 上安裝機器學習服務的指示，請參閱[在 Linux 上安裝 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 機器學習服務 R 和 Python 支援](../linux/sql-server-linux-setup-machine-learning.md)。
+- **Linux 上的機器學習 (CTP 2.0)** ：Linux 現在支援 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 機器學習服務 (資料庫內)。 支援包含 `sp_execute_external_script` 預存程序。 如需如何在 Linux 上安裝機器學習服務的指示，請參閱[在 Linux 上安裝 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 機器學習服務 R 和 Python 支援](../linux/sql-server-linux-setup-machine-learning.md)。
 
 ### <a id="mds"></a> Master Data Services 
 
-- **Silverlight 控制項已取代為 HTML (CTP 2.0)**：Master Data Services (MDS) 入口網站已不再相依於 Silverlight。 所有先前的 Silverlight 元件已取代為 HTML 控制項。
+- **Silverlight 控制項已取代為 HTML (CTP 2.0)** ：Master Data Services (MDS) 入口網站已不再相依於 Silverlight。 所有先前的 Silverlight 元件已取代為 HTML 控制項。
 
 ### <a id="security"></a>安全性
 
-- **SQL Server 組態管理員中的憑證管理 (CTP 2.0)**：SSL/TLS 憑證普遍用來保護 SQL Server 執行個體的存取。 憑證管理現在整合至 SQL Server 組態管理員，並簡化一般工作，例如：
+- **SQL Server 組態管理員中的憑證管理 (CTP 2.0)** ：SSL/TLS 憑證普遍用來保護 SQL Server 執行個體的存取。 憑證管理現在整合至 SQL Server 組態管理員，並簡化一般工作，例如：
 
   - 檢視和驗證 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體中所安裝的憑證。 
   - 檢視即將到期的憑證。
@@ -723,7 +767,7 @@ FROM sys.dm_exec_requests AS d
   > [!TIP]
   > 針對 Azure Data Studio 的最新改善，請參閱 [Azure Data Studio 版本資訊](../azure-data-studio/release-notes-azure-data-studio.md)。
 
-- [**SQL Server Management Studio (SSMS) 18.0 (預覽)**](../ssms/sql-server-management-studio-ssms.md)：支援 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。
+- [**SQL Server Management Studio (SSMS) 18.0 (預覽)** ](../ssms/sql-server-management-studio-ssms.md)：支援 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。
 
   - 從 SSMS 啟動 Azure Data Studio。 (CTP 2.3)
   - 具有安全記憶體保護區的 Always Encrypted 支援。 (CTP 2.0)

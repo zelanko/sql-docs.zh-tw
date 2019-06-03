@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9759e2d623e2d9eca94ba7b5d17b7990c96366b
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 4018857b93a828e5ed756a80ba23f425a26790c8
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161638"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175024"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -171,7 +171,7 @@ PolyBase 只會使用自訂日期格式來匯入資料。 它不會使用自訂�
   
 -   DateTimeOffset：'yyyy-MM-dd HH:mm:ss'  
   
--   時間:'HH:mm:ss'  
+-   Time：'HH:mm:ss'  
   
 下表提供**範例日期格式**：
   
@@ -244,7 +244,7 @@ PolyBase 只會使用自訂日期格式來匯入資料。 它不會使用自訂�
  將所有遺漏值儲存為 NULL。 在分隔符號文字檔中使用 NULL 一字儲存的任何 NULL 值都會以 'NULL' 字串匯入。
   
    Encoding = {'UTF8' | 'UTF16'}  
- 在 Azure SQL 資料倉儲中，PolyBase 可以讀取 UTF8 及 UTF16-LE 編碼的分隔符號文字檔。 在 SQL Server 和 PDW 中，PolyBase 不支援讀取 UTF16 編碼的檔案。
+ 在 Azure SQL 資料倉儲和 PDW (APS CU7.4) 中，PolyBase 可以讀取 UTF8 及 UTF16-LE 編碼的分隔符號文字檔。 在 SQL Server 中，PolyBase 不支援讀取 UTF16 編碼的檔案。
   
  DATA_COMPRESSION = *data_compression_method*  
  指定外部資料的資料壓縮方法。 未指定 DATA_COMPRESSION 時，預設值為未經壓縮的資料。

@@ -44,18 +44,18 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70a528bcf2e6f714b4ded8128d3a0757f3016607
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.openlocfilehash: 2d6226b6b5c21f1c233c41157ac85b8cfb48c690
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65820803"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454774"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>[產生和發佈指令碼]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  您可以使用 [產生和發佈指令碼精靈] 建立指令碼，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 執行個體之間傳送資料庫。 您可以針對區域網路上 Database Engine 執行個體的資料庫產生指令碼，或是從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]產生指令碼。 產生的指令碼可以在另一個 Database Engine 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]執行個體上執行。 您也可以使用此精靈，將資料庫內容直接發行到使用資料庫發行服務所建立的 Web 服務。 您可以針對整個資料庫建立指令碼，或將它限制為特定物件。  
+  您可以使用 [產生和發佈指令碼精靈]  建立指令碼，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 執行個體之間傳送資料庫。 您可以針對區域網路上 Database Engine 執行個體的資料庫產生指令碼，或是從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]產生指令碼。 產生的指令碼可以在另一個 Database Engine 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]執行個體上執行。 您也可以使用此精靈，將資料庫內容直接發行到使用資料庫發行服務所建立的 Web 服務。 您可以針對整個資料庫建立指令碼，或將它限制為特定物件。  
 
-如需使用 [產生和發佈指令碼精靈] 的更詳細教學課程，請參閱[教學課程：產生指令碼精靈](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-database-using-generate-scripts-option)。
+如需使用 [產生和發佈指令碼精靈] 的更詳細教學課程，請參閱[教學課程：產生指令碼精靈](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases)。
 
 
   
@@ -96,7 +96,7 @@ ms.locfileid: "65820803"
 ###  <a name="Introduction"></a> 簡介頁面  
  此頁面描述用於產生或發佈指令碼的步驟。  
   
- [不要再顯示此頁面] - 下次啟動 [產生和發佈指令碼精靈] 時會略過此頁面。  
+ [不要再顯示此頁面]  - 下次啟動 [產生和發佈指令碼精靈]  時會略過此頁面。  
   
   ![簡介頁面](media/generate-and-publish-scripts-wizard/intro.png)
   
@@ -126,7 +126,7 @@ ms.locfileid: "65820803"
 
   ![儲存](media/generate-and-publish-scripts-wizard/save.png)   
   
--   **儲存至檔案** ：將指令碼儲存至一個或多個 .sql 檔案。 按一下瀏覽按鈕 ([...])，即可指定檔案的名稱和位置。 如果已經存在相同名稱的檔案，請選取 **[覆寫現有檔案]** 核取方塊來取代該檔案。 若要指定指令碼的產生方式，請按一下 **[單一檔案]** 或 **[每一物件單一檔案]** 。 若要指定指令碼中應該使用的文字種類，請按一下 **[Unicode 文字]** 或 **[ANSI 文字]** 。  
+-   **儲存至檔案** ：將指令碼儲存至一個或多個 .sql 檔案。 按一下瀏覽按鈕 ([...]  )，即可指定檔案的名稱和位置。 如果已經存在相同名稱的檔案，請選取 **[覆寫現有檔案]** 核取方塊來取代該檔案。 若要指定指令碼的產生方式，請按一下 **[單一檔案]** 或 **[每一物件單一檔案]** 。 若要指定指令碼中應該使用的文字種類，請按一下 **[Unicode 文字]** 或 **[ANSI 文字]** 。  
   
 -   **儲存至剪貼簿** ：將 Transact-SQL 指令碼儲存至 [剪貼簿]。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "65820803"
   
 -   **包含 if NOT EXISTS** ：設定為 **[True]** 時，此指令碼會包含檢查物件是否存在於資料庫的陳述式，而且如果該物件已經存在，就不會嘗試建立新物件。 預設值為 **False**。  
   
--   **包括系統條件約束名稱** ：設定為 [False] 時，會在目標資料庫上自動重新命名已在來源資料庫上自動命名之條件約束的預設值。 設定為 **[True]** 時，來源和目標資料庫的條件約束會具有相同的名稱。  
+-   **包括系統條件約束名稱** ：設定為 [False]  時，會在目標資料庫上自動重新命名已在來源資料庫上自動命名之條件約束的預設值。 設定為 **[True]** 時，來源和目標資料庫的條件約束會具有相同的名稱。  
   
 -   **包括不支援的陳述式** ：設定為 **[False]** 時，此指令碼不會包含所選取伺服器版本或引擎類型上不支援之物件的陳述式。 當設為 **[True]** 時，此指令碼包含不支援的物件。 對於不支援的物件而言，每個陳述式都會有陳述式必須編輯的註解，然後才可以針對選取的 SQL Server 版本或引擎類型來執行指令碼。 預設值為 **False**。  
   
@@ -173,11 +173,11 @@ ms.locfileid: "65820803"
   
 -   **指令碼繫結** ：產生用於繫結預設物件和規則物件的指令碼。 預設值為 **False**。 如需詳細資訊，請參閱 [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md) 和 [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)。  
   
--   [指令碼定序] - 在指令碼中包含定序資訊。 預設值為 **False**。 如需相關資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
+-   [指令碼定序]  - 在指令碼中包含定序資訊。 預設值為 **False**。 如需相關資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
 -   **編寫預設值的指令碼** ：包含用來在資料表資料行中設定預設值的預設物件。 預設值為 **True**。 如需詳細資訊，請參閱 [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)。  
   
--   [編寫 DROP 和 CREATE 的指令碼] - 設定為 [編寫 CREATE 指令碼] 時，會包含建立物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 設定為 **[編寫 DROP 指令碼]** 時，就會包含卸除物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 設定為 **[編寫 DROP 和 CREATE 的指令碼]** 時，就會針對每個編寫指令碼的物件，在指令碼中包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP 陳述式，後面接著 CREATE 陳述式。 預設值為 **編寫 CREATE 指令碼**。  
+-   [編寫 DROP 和 CREATE 的指令碼]  - 設定為 [編寫 CREATE 指令碼]  時，會包含建立物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 設定為 **[編寫 DROP 指令碼]** 時，就會包含卸除物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 設定為 **[編寫 DROP 和 CREATE 的指令碼]** 時，就會針對每個編寫指令碼的物件，在指令碼中包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP 陳述式，後面接著 CREATE 陳述式。 預設值為 **編寫 CREATE 指令碼**。  
   
 -   **編寫擴充屬性的指令碼** - 物件具有擴充屬性時，在指令碼中包含擴充屬性。 預設值為 **True**。  
   
@@ -191,9 +191,9 @@ ms.locfileid: "65820803"
   
 -   **編寫統計資料的指令碼** ：設定為 **[編寫統計資料的指令碼]** 時，此選項會包含 **CREATE STATISTICS** 陳述式以重新建立物件的統計資料。 **[編寫統計資料和長條圖的指令碼]** 選項也會建立長條圖資訊。 預設值為 **[不要編寫統計資料的指令碼]** 。 如需詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)。  
   
--   [編寫 USE DATABASE 的指令碼] - 在指令碼中加入 **USE DATABASE** 陳述式。 若要確保在正確的資料庫中建立資料庫物件，請包含 **USE DATABASE** 陳述式。 當指令碼要用於其他資料庫時，請選取 **False** 以省略 **USE DATABASE** 陳述式。 預設值為 **True**。 如需詳細資訊，請參閱 [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)。  
+-   [編寫 USE DATABASE 的指令碼]  - 在指令碼中加入 **USE DATABASE** 陳述式。 若要確保在正確的資料庫中建立資料庫物件，請包含 **USE DATABASE** 陳述式。 當指令碼要用於其他資料庫時，請選取 **False** 以省略 **USE DATABASE** 陳述式。 預設值為 **True**。 如需詳細資訊，請參閱 [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)。  
   
--   **要撰寫指令碼的資料類型** - 選取應撰寫為指令碼的內容：[僅限資料]，[僅限結構描述]，或兩者。 預設值為 **[僅限結構描述]** 。  
+-   **要撰寫指令碼的資料類型** - 選取應撰寫為指令碼的內容：[僅限資料]  ，[僅限結構描述]  ，或兩者。 預設值為 **[僅限結構描述]** 。  
   
  **資料表/檢視表選項** ：下列選項只適用於資料表或檢視表的指令碼。  
   
@@ -201,7 +201,7 @@ ms.locfileid: "65820803"
   
 -   **編寫 CHECK 條件約束的指令碼**：在指令碼中加入 **CHECK** 條件約束。 預設值為 **True**。 **CHECK** 條件約束會要求輸入資料表的資料必須符合某些指定的條件。 如需相關資訊，請參閱 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)。  
   
--   [編寫資料壓縮選項的指令碼] - 如果來源資料庫或來源資料庫中的資料表已設定資料壓縮選項，則會編寫資料壓縮選項的指令碼。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。 預設值為 **False**。  
+-   [編寫資料壓縮選項的指令碼]  - 如果來源資料庫或來源資料庫中的資料表已設定資料壓縮選項，則會編寫資料壓縮選項的指令碼。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。 預設值為 **False**。  
   
 -   **編寫外部索引鍵的指令碼** ：將外部索引鍵加入至指令碼。 預設值為 **True**。 外部索引鍵指出並強制執行資料表之間的關聯性。  
   
@@ -247,7 +247,7 @@ ms.locfileid: "65820803"
   
 3.  **發佈預設值** ：包含用來在資料表資料行中設定預設值的預設物件。 預設值為 **True**。 如需詳細資訊，請參閱 [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)。  
   
-4.  [發佈相依物件] - 發佈在執行所選取物件的指令碼時必須存在的物件。 預設值為 **True**。  
+4.  [發佈相依物件]  - 發佈在執行所選取物件的指令碼時必須存在的物件。 預設值為 **True**。  
   
 5.  **發佈擴充屬性** - 物件具有擴充屬性時，在傳送至提供者進行發佈的指令碼中會包含擴充屬性。 預設值為 **True**。  
   
@@ -257,13 +257,13 @@ ms.locfileid: "65820803"
   
 8.  **發佈統計資料** ：設定為 **[發佈統計資料]** 時，會包含重新建立物件之統計資料的 **CREATE STATISTICS** 陳述式。 **[發行統計資料和長條圖]** 選項也會建立長條圖資訊。 預設值為 **不要發行統計資料**。 如需詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)。  
   
-9. [發佈 Vardecimal 選項] - 在來源資料庫資料表上啟用 **vardecimal** 資料表格式時，會在目標資料庫資料表上啟用這種格式。 預設值為 **True**。  
+9. [發佈 Vardecimal 選項]  - 在來源資料庫資料表上啟用 **vardecimal** 資料表格式時，會在目標資料庫資料表上啟用這種格式。 預設值為 **True**。  
   
 10. **結構描述會限定物件名稱** - 在所建立物件的名稱中包含結構描述名稱。 預設值為 **True**。  
   
 11. **指令碼繫結** ：在傳送至提供者進行發佈的指令碼中包含預設物件和規則物件的繫結。 預設值為 **True**。 如需詳細資訊，請參閱 [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md) 和 [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)。  
   
-12. **要發佈的資料類型** - 選取應撰寫為指令碼的內容：[僅限資料]，[僅限結構描述] 或兩者。 預設值為 **[結構描述和資料]** 。  
+12. **要發佈的資料類型** - 選取應撰寫為指令碼的內容：[僅限資料]  ，[僅限結構描述]  或兩者。 預設值為 **[結構描述和資料]** 。  
   
  **發佈選項**：指定發佈到 Web 主機提供者時，是否要使用交易。  
   
@@ -287,7 +287,7 @@ ms.locfileid: "65820803"
   
 8.  **發行變更追蹤** ：如果來源資料庫或來源資料庫中的資料表已啟用變更追蹤，則會在發佈程序中包含變更追蹤。 預設值為 **False**。 如需詳細資訊，請參閱[關於變更追蹤 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)。  
   
-9. [Publish data compression options (發佈資料壓縮選項)] - 如果來源資料庫或來源資料庫中的資料表已設定資料壓縮選項，則會在發佈程序中包含資料壓縮選項。 預設值為 **True**。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
+9. [Publish data compression options (發佈資料壓縮選項)]  - 如果來源資料庫或來源資料庫中的資料表已設定資料壓縮選項，則會在發佈程序中包含資料壓縮選項。 預設值為 **True**。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
   
 ###  <a name="ProvConfig"></a> 提供者組態頁面  
  使用此對話方塊可以檢視或修改主控提供者設定。 您可以使用此對話方塊來執行下列動作：  
@@ -336,7 +336,7 @@ ms.locfileid: "65820803"
   
  **取消** ：在處理完成之前或是發生錯誤時，按一下即可關閉精靈。  
   
- [完成] - 在處理完成之後或是發生錯誤時，按一下即可關閉精靈。  
+ [完成]  - 在處理完成之後或是發生錯誤時，按一下即可關閉精靈。  
  
 ## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>在 Azure SQL 資料倉儲上產生指令碼  
 
@@ -346,23 +346,23 @@ ms.locfileid: "65820803"
 
 若要使用 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 語法編寫物件的指令碼，請將預設的指令碼選項設為 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]，如下所示︰  
 
-1. 依序按一下 [工具] 與 [選項]。  
-2. 在 [一般指令碼選項] 下方，設定下列項目：  
+1. 依序按一下 [工具]  與 [選項]  。  
+2. 在 [一般指令碼選項]  下方，設定下列項目：  
     1. 資料庫引擎類型的指令碼：**Microsoft Azure SQL Database**。  
     2. 資料庫引擎版本的指令碼：**Microsoft Azure SQL 資料倉儲版**。  
-3. 按一下 [確定] 。
+3. 按一下 [確定]  。
 
 ### <a name="how-to-generate-scripts-for-sql-data-warehouse-when-it-is-not-the-default-scripting-option"></a>如果適用於 SQL 資料倉儲的指令碼不是預設指令碼選項，該如何產生該指令碼  
 
 如果您將 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 設為預設指令碼選項 (如上所示)，即可忽略這些指示。 不過，如果您選擇使用不同的預設指令碼選項，則可能會遇到錯誤。 為了避免發生錯誤，請執行下列步驟以針對 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]產生和發佈指令碼：  
 
 1. 以滑鼠右鍵按一下您的 SQL 資料倉儲資料庫。  
-2. 選取 [產生指令碼...]。  
+2. 選取 [產生指令碼...]  。  
 3. 選擇您想要編寫指令碼的物件。  
-4. 在 [指令碼選項] 中，按一下 [進階]。 在 [一般] 下方，設定下列項目︰  
+4. 在 [指令碼選項]  中，按一下 [進階]  。 在 [一般]  下方，設定下列項目︰  
     1. 資料庫引擎類型的指令碼：**Microsoft Azure SQL Database**。  
     2. 資料庫引擎版本的指令碼：**Microsoft Azure SQL 資料倉儲版**。  
-5. 依序按一下 [儲存或發佈指令碼] 與 [完成]。  
+5. 依序按一下 [儲存或發佈指令碼]  與 [完成]  。  
 
 系統不會記憶步驟 4 所設定的選項。 如果您想要記憶這些選項，請遵循 **如何將預設指令碼選項設為 SQL 資料倉儲**中的指示。  
   

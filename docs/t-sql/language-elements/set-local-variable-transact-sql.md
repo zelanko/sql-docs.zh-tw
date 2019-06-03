@@ -15,16 +15,16 @@ helpviewer_keywords:
 - SET statement, @local_variable
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27fbb65a3fcdcdfd78fd825dc767e5f31590c0fb
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: 20febb0b33e0da08d8620232195e183c7c5162f3
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572821"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981759"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +68,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
 ## <a name="arguments"></a>引數  
 **@** _local_variable_  
-除了 **cursor**、**text**、**ntext**、**image** 或 **table** 以外的任何類型變數名稱。 變數名稱的開頭必須是 at 記號 (**@**)。 變數名稱必須遵照[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
+除了 **cursor**、**text**、**ntext**、**image** 或 **table** 以外的任何類型變數名稱。 變數名稱的開頭必須是 at 記號 ( **@** )。 變數名稱必須遵照[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
 *property_name*  
 使用者定義型別的屬性。  
@@ -80,9 +80,9 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 Common Language Runtime (CLR) 使用者定義型別的名稱。  
   
 `{ . | :: }`  
-指定 CLR 使用者自訂類型的方法。 對於執行個體 (非靜態) 方法，請使用句點 (**.**)。 對於靜態方法，請使用兩個冒號 (**::**)。 若要叫用 CLR 使用者自訂類型的方法、屬性或欄位，您必須具有類型的 EXECUTE 權限。  
+指定 CLR 使用者自訂類型的方法。 對於執行個體 (非靜態) 方法，請使用句點 ( **.** )。 對於靜態方法，請使用兩個冒號 ( **::** )。 若要叫用 CLR 使用者自訂類型的方法、屬性或欄位，您必須具有類型的 EXECUTE 權限。  
   
-_method_name_ **(** _argument_ [ **,**... *n* ] **)**  
+_method_name_ **(** _argument_ [ **,** ... *n* ] **)**  
 利用一個或多個引數來修改類型執行個體狀態的使用者定義型別方法。 靜態方法必須是公用的。  
   
 **@** _SQLCLR_local_variable_  
@@ -123,7 +123,7 @@ CURSOR
 指定 SET 陳述式包含資料指標的宣告。  
   
 SCROLL  
-指定資料指標支援所有提取選項：FIRST、LAST、NEXT、PRIOR、RELATIVE 和 ABSOLUTE。 當您也指定了 FAST_FORWARD 時，便不能指定 SCROLL。  
+指定資料指標支援所有擷取選項：FIRST、LAST、NEXT、PRIOR、RELATIVE 和 ABSOLUTE。 當您也指定了 FAST_FORWARD 時，便不能指定 SCROLL。  
   
 FORWARD_ONLY  
 指定資料指標只支援 FETCH NEXT 選項。 您只能依單一方向，從第一個到最後一個資料列擷取資料指標。 當您指定不含 STATIC、KEYSET 或 DYNAMIC 關鍵字的 FORWARD_ONLY 時，會將資料指標實作成 DYNAMIC。 如果您沒有指定 FORWARD_ONLY 或 SCROLL，除非指定了 STATIC、KEYSET 或 DYNAMIC 關鍵字，否則，預設值是 FORWARD_ONLY。 如果是 STATIC、KEYSET 和 DYNAMIC 資料指標，預設值便是 SCROLL。  
@@ -167,14 +167,14 @@ READ ONLY
 防止利用這個資料指標來更新。 UPDATE 或 DELETE 陳述式中的 WHERE CURRENT OF 子句無法參考這個資料指標。 這個選項會覆寫要更新之資料指標的預設功能。 這個關鍵字有別於先前的 READ_ONLY，READ 和 ONLY 之間是空格，而不是底線。  
   
 `UPDATE [OF column_name[ ,... n ] ]`  
-在資料指標內定義可更新的資料行。 如果提供 OF *column_name* [**,**...*n*]，則只允許修改所列出的資料行。 未提供任何清單時，除非資料指標已定義為 READ_ONLY，否則可以更新所有資料行。  
+在資料指標內定義可更新的資料行。 如果提供 OF *column_name* [ **,** ...*n*]，則只允許修改所列出的資料行。 未提供任何清單時，除非資料指標已定義為 READ_ONLY，否則可以更新所有資料行。  
   
 ## <a name="remarks"></a>Remarks  
 在宣告變數之後，會將它初始化成 NULL。 請使用 SET 陳述式，將非 NULL 值指派給宣告的變數。 將值指派給變數的 SET 陳述式會傳回單一值。 當您初始化多個變數時，每個區域變數都要使用個別的 SET 陳述式。  
   
 您只能在運算式中使用變數，而不能使用物件名稱或關鍵字。 若要建構動態 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，請使用 EXECUTE。  
   
-SET **@**_cursor_variable_ 的語法規則不包括 LOCAL 和 GLOBAL 關鍵字。 當您使用 SET **@**_cursor_variable_ = CURSOR... 語法時，會將資料指標建立成 GLOBAL 或 LOCAL，這會視 [預設為本機資料指標資料庫] 選項的設定而不同。  
+SET **@** _cursor_variable_ 的語法規則不包括 LOCAL 和 GLOBAL 關鍵字。 當您使用 SET **@** _cursor_variable_ = CURSOR... 語法時，會將資料指標建立成 GLOBAL 或 LOCAL，這會視 [預設為本機資料指標資料庫] 選項的設定而不同。  
   
 資料指標變數一律是區域變數，即使它們參考了全域資料指標也是如此。 當資料指標變數參考全域資料指標時，資料指標會同時有全域和本機資料指標參考。 如需詳細資訊，請參閱「範例 C」一節。  
   
@@ -184,8 +184,8 @@ SET **@**_cursor_variable_ 的語法規則不包括 LOCAL 和 GLOBAL 關鍵字�
   
 請勿在 SELECT 陳述式中使用變數來串連值 (也就是計算彙總值)。 可能會發生非預期的查詢結果。 因為 SELECT 清單中的所有運算式 (包括指派) 都不一定剛好針對每個輸出資料列執行一次。 如需詳細資訊，請參閱[這篇知識庫文章](https://support.microsoft.com/kb/287515)。  
   
-## <a name="permissions"></a>[權限]  
-需要 public 角色中的成員資格。 所有使用者都可以使用 SET **@**_local_variable_。  
+## <a name="permissions"></a>權限  
+需要 public 角色中的成員資格。 所有使用者都可以使用 SET **@** _local_variable_。  
   
 ## <a name="examples"></a>範例  
   

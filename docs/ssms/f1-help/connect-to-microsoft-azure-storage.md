@@ -14,24 +14,24 @@ ms.assetid: ''
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2bcacf7ab799ef36ab0f28bcc78ad27be2afe67c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 2c4381ddbbe0a218b6fc53d8e054017b66068b59
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65102707"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454550"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>連接到 Microsoft Azure 儲存體
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用 [Windows Azure 儲存體連接] 對話方塊可以指定儲存體帳戶並且驗證 Windows Azure 的連接。  
+使用 [Windows Azure 儲存體連接]  對話方塊可以指定儲存體帳戶並且驗證 Windows Azure 的連接。  
   
 ## <a name="options"></a>選項。  
-請指定有關 Windows Azure 帳戶的下列資訊，然後按一下 [下一步] 繼續進行。  
+請指定有關 Windows Azure 帳戶的下列資訊，然後按一下 [下一步]  繼續進行。  
   
 1.  **儲存體帳戶** - 指定儲存體帳戶名稱。
 
    >[!NOTE]
-   > 您只能連線到[一般目的儲存體帳戶](https://docs.microsoft.com/azure/storage/storage-introduction#introducing-the-azure-storage-services)。 連線到其他類型的儲存體帳戶可能會造成類似下面的錯誤：
+   > 您只能連線到[一般目的儲存體帳戶](https://docs.microsoft.com/azure/storage/storage-introduction#azure-storage-services)。 連線到其他類型的儲存體帳戶可能會造成類似下面的錯誤：
    >
    >  其中一個 HTTP 標頭之值的格式不正確。 (Microsoft.SqlServer.StorageClient)。
    >

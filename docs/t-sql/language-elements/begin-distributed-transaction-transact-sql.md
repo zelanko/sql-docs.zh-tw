@@ -24,15 +24,15 @@ helpviewer_keywords:
 - remote servers [SQL Server], distributed transactions
 - starting transactions
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 866b1e7f94645fb9336ce75e48afa8f8fb437895
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5866bee12907bbcd9765639fe6a54b94698b0a9c
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746762"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980570"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
  如需有關分散式交易環境和處理序的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器文件集。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 public 角色中的成員資格。  
   
 ## <a name="examples"></a>範例  

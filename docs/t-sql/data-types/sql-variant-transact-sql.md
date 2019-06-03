@@ -21,12 +21,12 @@ ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4baff479bdd7145cc2fd65f07fd2c476a20311a5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d809a311458cb1fbd3a92243f5daeabd34ebc99b
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013499"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982072"
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,9 @@ ODBC 不完全支援 **sql_variant**。 因此，當您使用 Microsoft OLE DB P
 |**image**|**rowversion** (**timestamp**)|  
 |**sql_variant**|**地理位置**|  
 |**hierarchyid**|**幾何**|  
-|使用者定義型別|**datetimeoffset**|  
+|使用者定義型別|**datetimeoffset**<sup>1</sup>| 
+
+<sup>1</sup> SQL Server 2012 和更新版本不會限制 **datetimeoffset**。
 
 ## <a name="examples"></a>範例  
 

@@ -18,16 +18,16 @@ helpviewer_keywords:
 - simple expressions [SQL Server]
 - complex expressions [SQL Server]
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55e3dda77a2b623ef50fe64ad82824b84a934f44
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 241da55ac2e4a0f0bf144bd0360767265f3258fd
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124098"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982334"
 ---
 # <a name="expressions-transact-sql"></a>運算式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "54124098"
 |----------|----------------|  
 |*constant*|這是代表單一特定資料值的符號。 如需詳細資訊，請參閱[常數 &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)。|  
 |*scalar_function*|這是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法的單位，可提供特定服務並傳回單一值。 *scalar_function* 可以是內建的純量函數 (例如 SUM、GETDATE 或 CAST 函數) 或純量使用者定義函數。|  
-|[ _table_name_**.** ]|這是資料表的名稱或別名。|  
+|[ _table_name_ **.** ]|這是資料表的名稱或別名。|  
 |*column*|這是資料行的名稱。 運算式中只能使用資料行的名稱。|  
 |*variable*|這是變數或參數的名稱。 如需詳細資訊，請參閱 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。|  
 |**(** _expression_  **)**|這是符合這個主題所定義的任何有效運算式。 括號是分組運算子，可確保會先評估運算式在括號內的所有運算子之後，才組合各個產生的運算式。|  
@@ -118,7 +118,7 @@ ms.locfileid: "54124098"
   
  評估得出字元字串的任何運算式之定序，是由下列定序優先順序規則來設定的。 如需詳細資訊，請參閱[定序優先順序 &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)。  
   
- 在 C 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 之類的程式設計語言中，運算式一律會評估得出單一結果。 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 清單中的運算式會遵循這個規則的變化：會針對結果集中的每個資料列來個別評估此運算式。 在結果集的每個資料列中，單一運算式可以有不同的值，但每個資料列只能有運算式的單一值。 例如，在下列 `SELECT` 陳述式中，選取清單中的 `ProductID` 參考和 `1+2` 一詞都是運算式：  
+ 在 C 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 之類的程式設計語言中，運算式一律會評估得出單一結果。 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 清單中運算式會遵循這個規則的變化：會針對結果集中的每個資料列來個別評估此運算式。 在結果集的每個資料列中，單一運算式可以有不同的值，但每個資料列只能有運算式的單一值。 例如，在下列 `SELECT` 陳述式中，選取清單中的 `ProductID` 參考和 `1+2` 一詞都是運算式：  
   
 ```  
 USE AdventureWorks2012;  

@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ad8f8aca9577023d3170fc0c1b6e7e4099129a90
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 850f0bac65f0c8955c50514145fb0d2998d6139a
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872308"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413608"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>資料庫引擎的新功能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "58872308"
 
 #### <a name="try-it-out"></a>現在就試試看
 
-- 若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往 **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**![下載](../analysis-services/media/download.png "下載")。
+- 若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往 **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** ![下載](../analysis-services/media/download.png "下載")。
 
 - 有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/services/virtual-machines/sql-server/)** ，來加速已安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虛擬機器。
 
@@ -444,7 +444,7 @@ AlwaysOn 現在支援加密的資料庫。 當您建立新的可用性群組時�
 ### <a name="upgrade-advisor"></a>Upgrade Advisor
 SQL Server 2016 Upgrade Advisor Preview 是獨立的工具，可讓舊版使用者對其 SQL Server 資料庫執行一組升級規則，以指出重大行為變更和已被取代的功能，以及協助新功能 (例如 Stretch Database) 採用。
 
- 您可以在 [這裡](https://www.microsoft.com/download/details.aspx?id=48119) 下載 Upgrade Advisor Preview，或使用 Web Platform Installer 進行安裝。
+ 您可以在 [這裡](https://docs.microsoft.com/sql/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades#how-to-install-and-run-upgrade-advisor) 下載 Upgrade Advisor Preview，或使用 Web Platform Installer 進行安裝。
 
 ## <a name="see-also"></a>另請參閱
 [SQL Server 2016 的新功能](../sql-server/what-s-new-in-sql-server-2016.md)
