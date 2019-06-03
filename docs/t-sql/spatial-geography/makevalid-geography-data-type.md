@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MakeValid method (geography)
 ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: b97058d2c023d07d0c7375beae6fc1c7fe47e229
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4d60632de0ccc60d2c07f501334a64d31692fed
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783526"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937640"
 ---
 # <a name="makevalid-geography-data-type"></a>MakeValid (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47783526"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型：**SqlGeography**  
+ CLR 傳回型別：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  這個方法可變更 **geography** 執行個體的類型。 此外，**geography** 執行個體的點可能會稍微移動。 來自某些方法 (如 NumPoint()) 的結果可能會變更。  
@@ -49,7 +49,7 @@ ms.locfileid: "47783526"
  當無效的空間執行個體與赤道交集，且 EnvelopeAngle() = 180 時，將會傳回 **FullGlobe** 執行個體。 `MakeValid()`**geography** 資料類型方法將會盡可能地嘗試傳回有效執行個體，但無法保證其結果是否準確或精確。  
   
 > [!NOTE]  
->  無效的物件可以儲存在資料庫中。 可以在無效執行個體 (也就是 STIsValid() 會傳回 False 的執行個體) 上執行的方法為用來檢查有效性或允許匯出的方法：STIsValid()、MakeValid()、STAsText()、STAsBinary()、ToString()、AsTextZM() 和 AsGml()。  
+>  無效的物件可以儲存在資料庫中。 可以在無效執行個體 (也就是 STIsValid() 會傳回 False 的執行個體) 上執行之方法為用來檢查有效性或允許匯出的方法：STIsValid()、MakeValid()、STAsText()、STAsBinary()、ToString()、AsTextZM() 和 AsGml()。  
   
  這個方法並不精確。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - FULLTEXTCATALOGPROPERTY function
 - status information [SQL Server], full-text catalogs
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e9b590e2a1ba1c3362b86b195c4b1a5fcb7d63bd
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: d337e1eb7d67da892d3588d6ffafd28205565b19
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662792"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948979"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ _property_
 |**AccentSensitivity**|區分腔調字設定。<br /><br /> 0 = 不區分腔調字<br /><br /> 1 = 區分腔調字|  
 |**IndexSize**|顯示全文檢索目錄的邏輯大小，以 MB 為單位。 包括語意關鍵片語和文件相似度索引的大小。<br /><br /> 如需詳細資訊，請參閱此主題稍後的「備註」。|  
 |**ItemCount**|索引項目的數目，包括目錄中的所有全文檢索、關鍵片語和文件相似度索引|  
-|**LogSize**|支援這個項目的目的，只是為了與舊版相容。 一律傳回 0。<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 搜尋服務全文檢索目錄的相關錯誤記錄組合集大小 (以位元組為單位)。|  
+|**LogSize**|支援這個項目的目的，只是為了與舊版相容。 永遠傳回 0。<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 搜尋服務全文檢索目錄的相關錯誤記錄組合集大小 (以位元組為單位)。|  
 |**MergeStatus**|指出主要合併是否正在進行中。<br /><br /> 0 = 主要合併不在進行中<br /><br /> 1 = 主要合併正在進行中|  
 |**PopulateCompletionAge**|前次全文檢索索引擴展完成和 01/01/1990 00:00:00 之間的時差 (以秒為單位)。<br /><br /> 只更新完整和累加搜耙的這個項目。 如果未進行擴展，便傳回 0。|  
 |**PopulateStatus**|0 = 閒置<br /><br /> 1 = 完整擴展進行中<br /><br /> 2 = 已暫停<br /><br /> 3 = 調整執行速度<br /><br /> 4 = 復原中<br /><br /> 5 = 已關閉<br /><br /> 6 = 累加擴展進行中<br /><br /> 7 = 正在建立索引<br /><br /> 8 = 磁碟已滿， 已暫停。<br /><br /> 9 = 變更追蹤|  

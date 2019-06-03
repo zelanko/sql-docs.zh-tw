@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPolyFromText (geometry Data Type)
 ms.assetid: a7c1c9f0-1dd5-493b-b206-83bbfa33452b
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: e1e77f46cac63b5c4c88376bb536366e994d86d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8f772e429b7d22c7403b618064c7f33e4d43a5a
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740616"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938356"
 ---
 # <a name="stpolyfromtext-geometry-data-type"></a>STPolyFromText (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型：**SqlGeometry**  
+ CLR 傳回型別：**SqlGeometry**  
   
- OGC 類型：**Polygon**  
+ OGC 類型：**多邊形**  
   
 ## <a name="remarks"></a>Remarks  
  如果輸入的格式不正確，這個方法將會擲回 **FormatException**。  

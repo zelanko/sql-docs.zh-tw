@@ -20,16 +20,16 @@ helpviewer_keywords:
 - BETWEEN operator
 - range to test [SQL Server]
 ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e384d2835bcb28487757384543298d5a20144cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ff89056c2e96a815312314e84b5118b7b48726f
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768469"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980084"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +69,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
  如果 *test_expression* 的值小於 *begin_expression* 的值或大於 *end_expression* 的值，NOT BETWEEN 就會傳回 **TRUE**。  
   
 ## <a name="remarks"></a>Remarks  
- 若要指定獨佔範圍，請使用大於 (>) 和小於運算子 (<)。 如果 BETWEEN 或 NOT BETWEEN 述詞的任何輸入是 NULL，結果就是 UNKNOWN。  
+ 若要指定獨佔範圍，請使用大於 (>) 和小於 (<) 運算子。 如果 BETWEEN 或 NOT BETWEEN 述詞的任何輸入是 NULL，結果就是 UNKNOWN。  
   
 ## <a name="examples"></a>範例  
   
@@ -113,7 +113,7 @@ principal_id    name
 16390           db_datareader
 ```  
   
-### <a name="b-using--and--instead-of-between"></a>B. 利用 > 和 < 來取代 BETWEEN  
+### <a name="b-using--and--instead-of-between"></a>B. 使用 > 和 < 來取代 BETWEEN  
  下列範例使用大於 (`>`) 和小於 (`<`) 運算子，因為這些運算子頭尾不包括在內，因此，不像前一個範例傳回 10 個資料列，它只會傳回 9 個資料列。  
   
 ```sql  

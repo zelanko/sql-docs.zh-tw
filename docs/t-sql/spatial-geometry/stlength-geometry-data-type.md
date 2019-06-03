@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STLength (geometry Data Type)
 ms.assetid: e34dc620-2a65-4248-b099-fff91830ab98
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 309b74e21d131b47e94f4890ace0072f0b85e64e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f48007f8a782731b5a4348a3c9bae470e23588f3
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678117"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938729"
 ---
 # <a name="stlength-geometry-data-type"></a>STLength (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47678117"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**float**  
   
- CLR 傳回類型：**SqlDouble**  
+ CLR 傳回型別：**SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  如果 **geometry** 執行個體為封閉式，它的長度會計算為此執行個體周圍的總長度；任何多邊形的長度即是其周長，點的長度則為 0。 任何 **geometrycollection** 類型的長度即是其包含之 **geometry** 執行個體的長度總和。  

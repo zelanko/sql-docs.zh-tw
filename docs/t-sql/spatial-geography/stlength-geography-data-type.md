@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STLength method
 ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: a07da59b2ed5d6da4ee6cf6180cfb65470ee5793
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56a0c72b86e6dcb671b0f18197e7d0046cb2f36e
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764756"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936737"
 ---
 # <a name="stlength-geography-data-type"></a>STLength (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47764756"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**float**  
   
- CLR 傳回類型：**SqlDouble**  
+ CLR 傳回型別：**SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  如果 **geography** 執行個體為封閉式的，它的長度會計算為此執行個體周圍的總長度；任何多邊形的長度就是它的周長，而且點的長度為 0。 **GeometryCollection** 長度的計算方式是加總集合所包含之所有 **geography** 執行個體的長度。  

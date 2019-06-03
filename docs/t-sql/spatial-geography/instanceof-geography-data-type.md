@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - InstanceOf method
 ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: e0ef6816efa98d3e9b2da27525d700fb4eba2501
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 52ec2695b24a2a900e84b6a186802024d47b7613
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852993"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937723"
 ---
 # <a name="instanceof-geography-data-type"></a>InstanceOf (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "56852993"
 ## <a name="return-types"></a>傳回類型  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
-CLR 傳回類型：**SqlBoolean**  
+CLR 傳回型別：**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
 如果 **geography** 執行個體的類型與指定的類型相同，或是指定的類型是此執行個體類型的上階，則會傳回 1，否則會傳回 0。  

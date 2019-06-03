@@ -18,16 +18,16 @@ helpviewer_keywords:
 - DECLARE statement
 - declaring variables
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01de83dc56a14fca265bd73b5d5df357f869a50a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 9191be9659f2cbdb42d0b92adef23972292070ed
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801862"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980180"
 ---
 # <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -119,7 +119,7 @@ CURSOR
  指定資料行是一種純量資料類型。  
   
  *computed_column_expression*  
- 這是定義計算資料行值的運算式。 它是從運算式中，利用相同資料表中其他資料行計算而得。 例如，計算資料行的定義可以是 **cost** AS **price \* qty**。運算式可以是非計算的資料行名稱、常數、內建函數、變數，或是一個或多個運算子所連接之這些項目的任何組合。 運算式不能是子查詢或使用者定義函數。 運算式不能參考 CLR 使用者定義類型。  
+ 這是定義計算資料行值的運算式。 它是從運算式中，利用相同資料表中其他資料行計算而得。 例如，計算資料行的定義可以是 **cost** AS **price \* qty**。運算式可以是非計算的資料行名稱、常數、內建函式、變數，或這些項目由一或多個運算子連接的任何組合。 運算式不能是子查詢或使用者定義函數。 運算式不能參考 CLR 使用者定義類型。  
   
  [ COLLATE *collation_name*]  
  指定資料行的定序。 *collation_name* 可以是 Windows 定序名稱，也可以是 SQL 定序名稱，而且只適用於 **char**、**varchar**、**text**、**nchar**、**nvarchar** 和 **ntext** 等資料類型的資料行。 若未指定，便會將使用者定義資料類型的定序指派給這個資料行 (如果資料行是使用者定義資料類型)，否則，便會指派目前資料庫的定序。  

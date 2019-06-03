@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithTolerance (geometry Data Type)
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: ec055010a1769a8a5595ae17f4b3ea1d00c5d26d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 30d79fb58a59d98e2e83aea97cecfb0371af7114
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979924"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935955"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "53979924"
  *tolerance*  
  這是 **float** 運算式，用來指定緩衝距離的容錯。  
   
- 「容錯」係指所傳回線性近似值之理想緩衝距離的最大變異。  
+ 「容錯」  係指所傳回線性近似值之理想緩衝距離的最大變異。  
   
  例如，點的理想緩衝距離是圓形，但是這必須由多邊形來模擬。 當容錯越小時，多邊形就會有越多的點，這樣會增加結果的複雜度，但是會減少錯誤。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "53979924"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型：**SqlGeometry**  
+ CLR 傳回型別：**SqlGeometry**  
   
 ## <a name="exceptions"></a>例外狀況  
  *tolerance* 參數必須大於零。 如果 *tolerance* <= 0，則會擲回 `System.ArgumentOutOfRangeException`。  

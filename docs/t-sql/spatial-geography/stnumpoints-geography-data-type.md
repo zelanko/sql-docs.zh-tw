@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STNumPoints method
 ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: aaa1556f32bf7b04040327df178da9b7e7a9d2f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92fa22099ef88861986be34832d3bde1165d2d77
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762646"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935742"
 ---
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47762646"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   
- CLR 傳回類型：**SqlInt32**  
+ CLR 傳回型別：**SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
  此方法會算入 **geography** 執行個體描述中的點。 重複的點都會被算入；但是，區段之間的連接點只計算一次。 如果此執行個體為集合，這個方法會傳回集合內的總點數。  

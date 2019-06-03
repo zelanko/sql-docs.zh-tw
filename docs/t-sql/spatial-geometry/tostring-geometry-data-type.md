@@ -14,15 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - ToString (geometry Data Type)
 ms.assetid: 2e55fa98-aa22-4baa-a516-7c233a33e212
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: eeced3c31c813eff21d7e9189e87fd51a8b2691d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a73ce5417b61ced97ee3aad555d56257c99ad763
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629299"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935556"
 ---
 # <a name="tostring-geometry-data-type"></a>ToString (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47629299"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**nvarchar(max)**  
   
- CLR 傳回類型：**SqlString**  
+ CLR 傳回型別：**SqlString**  
   
 ## <a name="remarks"></a>Remarks  
  這個方法在 Null 例項上呼叫時，將會傳回 "Null" 字串。  
