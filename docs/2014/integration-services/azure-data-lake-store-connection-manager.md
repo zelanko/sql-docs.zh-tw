@@ -13,12 +13,12 @@ ms.assetid: 7f1323f9-9dc3-4378-9c70-bbc65bfeabfd
 author: yualan
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9fe7c7cf04767e0536be8d04d99387a091962375
-ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
+ms.openlocfilehash: c835f42fdbcc43309a0235f8ad862bee9c230e33
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66429006"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462694"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 連線管理員
   **Azure Data Lake Store 連線管理員**可讓 SSIS 套件連線到 Azure Data Lake Store 服務透過兩種驗證類型：Azure AD 使用者身分識別與 Azure AD 服務識別。  
@@ -35,7 +35,7 @@ ms.locfileid: "66429006"
 
         1. 指定使用者的 [使用者名稱]  和 [密碼]  欄位的值。 
     
-        2. 按一下 [測試連接]  按鈕來測試連接。 如果您和您的租用戶系統管理員先前不同意 SSIS 存取您的 Azure Data Lake Store 資料，則需要按一下快顯對話方塊的 [接受]  按鈕，同意 SSIS 存取 Azure Data Lake Store 資料。 如需此同意體驗的詳細資訊，請參閱[整合應用程式與 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application)。
+        2. 按一下 [測試連接]  按鈕來測試連接。 如果您和您的租用戶系統管理員先前不同意 SSIS 存取您的 Azure Data Lake Store 資料，則需要按一下快顯對話方塊的 [接受]  按鈕，同意 SSIS 存取 Azure Data Lake Store 資料。 如需此同意體驗的詳細資訊，請參閱[整合應用程式與 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad)。
     
         > [!NOTE] 
         > [Azure AD 使用者識別] 驗證選項「不」支援多重要素驗證和 Microsoft 帳戶。

@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_trigger_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2018
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cfd6485955cbdee7bece7ae8ab18c5138a5529f3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 42fc6848b89c57e6bfab40f1af96013fc73271f6
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403533"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462709"
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,6 +68,11 @@ ms.locfileid: "52403533"
 |**last_spills**|**bigint**|頁數溢出最後一個觸發程序執行的時間。<br /><br /> **適用於**：從開始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**min_spills**|**bigint**|此觸發程序曾經有在單次執行期間溢出的頁面最小數目。<br /><br /> **適用於**：從開始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**max_spills**|**bigint**|此觸發程序曾經有在單次執行期間溢出的頁面數目上限。<br /><br /> **適用於**：從開始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**total_page_server_reads**|**bigint**|編譯以來執行所執行的此觸發程序的網頁伺服器讀取總數。<br /><br /> **適用於**：Azure SQL Database 的超大規模|  
+|**last_page_server_reads**|**bigint**|最後一個觸發程序執行的時間執行的網頁伺服器讀取數目。<br /><br /> **適用於**：Azure SQL Database 的超大規模|  
+|**min_page_server_reads**|**bigint**|網頁伺服器的最小數目會讀取此觸發程序，在單次執行期間曾執行。<br /><br /> **適用於**：Azure SQL Database 的超大規模|  
+|**max_page_server_reads**|**bigint**|網頁伺服器的最大數目會讀取此觸發程序，在單次執行期間曾執行。<br /><br /> **適用於**：Azure SQL Database 的超大規模|  
+
   
 ## <a name="remarks"></a>備註  
  在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，動態管理檢視不可以公開可能會影響資料庫內含項目的資訊或公開有關使用者可存取之其他資料庫的資訊。 若要避免公開此資訊，每個資料列，其中包含不屬於連接租用戶的資料會被篩選掉。  
@@ -96,7 +101,7 @@ ORDER BY [total_worker_time] DESC;
 [執行相關動態管理檢視和函式&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
 [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
 [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
-[sys.dm_exec_procedure_stats &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   
+[sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   
 [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 05/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0221361bb3b2bb33748b20353c71931e07568f3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 74e3de1c32cb1ca1833121b4de1cef4db66f9e49
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63025098"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462652"
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,19 +34,19 @@ ms.locfileid: "63025098"
   針對目前資料庫中的每個資料分割，各傳回其頁面和資料列計數資訊。  
   
 > [!NOTE]  
->  若要呼叫這個屬性從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或是[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_db_partition_stats**。  
+>  若要呼叫這個屬性從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或是[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_db_partition_stats**。 在 sys.dm_pdw_nodes_db_partition_stats sys.partitions 不同於 sys.partitions sys.partitions 目錄檢視，適用於 Azure SQL 資料倉儲中。
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|資料分割的識別碼。 在資料庫中，這是唯一的。 這是相同的值**sys.partitions**中**sys.partitions**目錄檢視|  
+|**partition_id**|**bigint**|資料分割的識別碼。 在資料庫中，這是唯一的。 這是相同的值**sys.partitions**中**sys.partitions**目錄檢視，除了 Azure SQL 資料倉儲。|  
 |**object_id**|**int**|資料分割所屬資料表或索引檢視的物件識別碼。|  
 |**index_id**|**int**|資料分割所屬之堆積或索引的識別碼。<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集索引。<br /><br /> > 1 = 非叢集索引|  
 |**partition_number**|**int**|在索引或堆積內，以 1 為基底的資料分割編號。|  
 |**in_row_data_page_count**|**bigint**|這個資料分割中用來儲存同資料列資料的頁數。 如果資料分割屬於堆積，這個值是堆積中的資料頁數。 如果資料分割屬於索引，這個值是分葉層級中的頁數。 （B 型樹狀目錄中的非分葉頁面不會包含在計數）。在任一情況下，都不包含 IAM （索引配置對應） 頁數。 xVelocity 記憶體最佳化的資料行存放區索引之 Always 0。|  
 |**in_row_used_page_count**|**bigint**|這個資料分割中用來儲存和管理同資料列資料的總頁數。 這個計數包括非分葉 B 型樹狀目錄頁數、 IAM 頁數，以及包含在所有網頁**in_row_data_page_count**資料行。 永遠是 0，表示資料行存放區索引。|  
 |**in_row_reserved_page_count**|**bigint**|這個資料分割中為儲存和管理同資料列資料所保留的總頁數，不管這些頁面是否正在使用中。 永遠是 0，表示資料行存放區索引。|  
-|**lob_used_page_count**|**bigint**|儲存和管理資料列外的使用中的頁數**文字**， **ntext**，**映像**， **varchar （max)**， **nvarchar(max)**， **varbinary （max)**，以及**xml**分割區內的資料行。 IAM 頁數包括在內。<br /><br /> 資料分割中用來儲存和管理資料行存放區索引的 LOB 總數。|  
-|**lob_reserved_page_count**|**bigint**|儲存和管理資料列外保留的分頁總數**文字**， **ntext**，**映像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，以及**xml**資料分割，不論頁面是否正在使用中或未內的資料行。 IAM 頁數包括在內。<br /><br /> 保留在資料分割中儲存和管理資料行存放區索引的 LOB 總數。|  
+|**lob_used_page_count**|**bigint**|儲存和管理資料列外的使用中的頁數**文字**， **ntext**，**映像**， **varchar （max)** ， **nvarchar(max)** ， **varbinary （max)** ，以及**xml**分割區內的資料行。 IAM 頁數包括在內。<br /><br /> 資料分割中用來儲存和管理資料行存放區索引的 LOB 總數。|  
+|**lob_reserved_page_count**|**bigint**|儲存和管理資料列外保留的分頁總數**文字**， **ntext**，**映像**， **varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，以及**xml**資料分割，不論頁面是否正在使用中或未內的資料行。 IAM 頁數包括在內。<br /><br /> 保留在資料分割中儲存和管理資料行存放區索引的 LOB 總數。|  
 |**row_overflow_used_page_count**|**bigint**|用來儲存和管理資料列溢位中的頁數**varchar**， **nvarchar**， **varbinary**，以及**sql_variant**資料行資料分割。 IAM 頁數包括在內。<br /><br /> 永遠是 0，表示資料行存放區索引。|  
 |**row_overflow_reserved_page_count**|**bigint**|儲存和管理資料列溢位所保留的分頁總數**varchar**， **nvarchar**， **varbinary**，以及**sql_variant**資料分割，不論頁面是否正在使用中或未內的資料行。 IAM 頁數包括在內。<br /><br /> 永遠是 0，表示資料行存放區索引。|  
 |**used_page_count**|**bigint**|資料分割的總使用頁數。 計算方式為**in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**。|  

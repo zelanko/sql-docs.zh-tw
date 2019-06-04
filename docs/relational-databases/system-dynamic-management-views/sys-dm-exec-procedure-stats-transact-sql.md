@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_procedure_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2018
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e472d6f8b7b18bb7e73613a8c60a27461bb49b43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7f4622eec6b7c5d3a3cc206b43cd31253fe7ee2
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63013409"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462670"
 ---
 # <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,6 +77,10 @@ ms.locfileid: "63013409"
 |**min_spills**|**bigint**|這個預存程序的頁面的最小數目曾經有在單次執行期間溢出。<br /><br /> **適用於**：從開始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**max_spills**|**bigint**|這個預存程序最大頁數曾經有在單次執行期間溢出。<br /><br /> **適用於**：從開始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**pdw_node_id**|**int**|這個分佈是在節點的識別碼。<br /><br />**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**total_page_server_reads**|**bigint**|編譯以來執行所執行的這個預存程序的網頁伺服器讀取總數。<br /><br /> **適用於**：Azure SQL Database 的超大規模|  
+|**last_page_server_reads**|**bigint**|執行預存程序的最後一個時間執行的網頁伺服器讀取數目。<br /><br /> **適用於**：Azure SQL Database 的超大規模|  
+|**min_page_server_reads**|**bigint**|所讀取的頁面伺服器最小次數，在單次執行期間曾執行這個預存程序。<br /><br /> **適用於**：Azure SQL Database 的超大規模|  
+|**max_page_server_reads**|**bigint**|網頁伺服器的最大數目讀取，在單次執行期間曾執行這個預存程序。<br /><br /> **適用於**：Azure SQL Database 的超大規模|  
   
  <sup>1</sup>原生編譯的預存程序啟用統計資料收集時，會收集的工作者時間 （毫秒）。 若查詢的執行時間少於一毫秒，其值將會是 0。  
   

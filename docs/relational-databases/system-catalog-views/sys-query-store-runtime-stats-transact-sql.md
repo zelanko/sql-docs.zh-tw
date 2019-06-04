@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_runtime_stats & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
-ms.date: 01/23/2019
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9df0a31b6a15bfedd02e281b6e9bc5367144e9a9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: dd25f70c7cf3d34a4411cc15802437d97f5f8190
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65980050"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462730"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -93,7 +93,12 @@ ms.locfileid: "65980050"
 |**last_log_bytes_used**|**bigint**|中彙總間隔內的查詢計畫上次執行所使用的資料庫記錄檔的位元組數目。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零 (0)。|
 |**min_log_bytes_used**|**bigint**|最小彙總間隔內的查詢計畫所使用的資料庫記錄檔中的位元組數目。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零 (0)。|
 |**max_log_bytes_used**|**bigint**|中彙總間隔內的查詢計畫所使用的資料庫記錄檔的位元組數目上限。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零 (0)。|
-|**stdev_log_bytes_used**|**float**|標準差的查詢計畫，彙總間隔內所使用的資料庫記錄中的位元組數目。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零 (0)。|
+|**stdev_log_bytes_used**|**float**|標準差的查詢計畫，彙總間隔內所使用的資料庫記錄中的位元組數目。<br/>**注意：** Azure SQL 資料倉儲一律會傳回零 (0)。|  
+|**avg_page_server_io_reads**|**float**|頁面的平均數目 server IO 讀取彙總間隔內的查詢計劃。 （以 8 KB 的分頁讀取數表示）。<br><br/>**注意：** 適用於：Azure SQL Database 的超大規模</br> Azure SQL 資料倉儲、 Azure SQL DB、 英哩 （非超大規模） 一定會傳回零 (0)。|
+|**last_page_server_io_reads**|**bigint**|最後一個數字的網頁伺服器 IO 讀取彙總間隔內的查詢計劃。 （以 8 KB 的分頁讀取數表示）。<br><br/>**注意：** 適用於：Azure SQL Database 的超大規模 </br> Azure SQL 資料倉儲、 Azure SQL DB、 英哩 （非超大規模） 一定會傳回零 (0)。|
+|**min_page_server_io_reads**|**bigint**|頁面的最小數目 server IO 讀取彙總間隔內的查詢計劃。 （以 8 KB 的分頁讀取數表示）。<br><br/>**注意：** 適用於：Azure SQL Database 的超大規模 </br> Azure SQL 資料倉儲、 Azure SQL DB、 英哩 （非超大規模） 一定會傳回零 (0)。|
+|**max_page_server_io_reads**|**bigint**|頁面的最大數目 server IO 讀取彙總間隔內的查詢計劃。（以 8 KB 的分頁讀取數表示）。<br><br/>**注意：** 適用於：Azure SQL Database 的超大規模 </br> Azure SQL 資料倉儲、 Azure SQL DB、 英哩 （非超大規模） 一定會傳回零 (0)。|
+|**stdev_page_server_io_reads**|**float**|標準差的查詢計劃的彙總間隔內讀取的頁面伺服器 IO 的數目。 （以 8 KB 的分頁讀取數表示）。<br><br/>**注意：** 適用於：Azure SQL Database 的超大規模 </br> Azure SQL 資料倉儲、 Azure SQL DB、 英哩 （非超大規模） 一定會傳回零 (0)。|
   
 ## <a name="permissions"></a>Permissions  
  需要**VIEW DATABASE STATE**權限。  

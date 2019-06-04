@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2c0e00ab14cad3d300a09ecc697b2468f1d7d4ce
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 5725b00d3925a9b2589884e1e2bf8e7200844e1d
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993398"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462801"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入門：部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集
 
@@ -87,7 +87,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **控制器的使用者** | 控制器的使用者的使用者名稱 (預設值： **admin**)。 |
 
    > [!IMPORTANT]
-   > 預設值**Standard_L8s**機器大小可能無法使用每個 Azure 區域中。 如果您選取不同的機器大小，請確定磁碟可連接到叢集中的節點總數大於或等於 24。 在叢集中的每個永續性磁碟區宣告需要連接的磁碟。 目前，巨量資料叢集需要 24 的永續性磁碟區宣告。 例如， [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series)機器大小支援 32 個附加的磁碟，因此您能夠評估此機器大小的單一節點的巨量資料叢集。
+   > 預設值**Standard_L8s**機器大小可能無法使用每個 Azure 區域中。 如果您選取不同的機器大小，請確定磁碟可連接到叢集中的節點總數大於或等於 24。 在叢集中的每個永續性磁碟區宣告需要連接的磁碟。 目前，巨量資料叢集需要 24 的永續性磁碟區宣告。 例如， [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series)機器大小支援 32 個附加的磁碟，因此您能夠評估此機器大小的單一節點的巨量資料叢集。
 
    > [!NOTE]
    > `sa`帳戶是在安裝期間建立的 SQL Server 主要執行個體上的系統管理員。 建立部署之後,`MSSQL_SA_PASSWORD`環境變數是可探索執行`echo $MSSQL_SA_PASSWORD`主要執行個體的容器中。 基於安全考量，變更您`sa`在部署後的主要執行個體上的密碼。 如需詳細資訊，請參閱 <<c0> [ 變更 SA 密碼](../linux/quickstart-install-connect-docker.md#sapassword)。
