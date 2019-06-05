@@ -1,5 +1,7 @@
 - name: 歡迎使用
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
+- name: 舊版 2014-2005
+  href: ../toc/previous-versions-sql-server.md
 - name: 概觀
   items:
     - name: SQL Server 的新功能
@@ -7951,47 +7953,47 @@
               href: ../relational-databases/security/authentication-access/create-a-credential.md
         - name: 加密
           items:
-            - name: 選擇演算法
-              href: ../relational-databases/security/encryption/choose-an-encryption-algorithm.md
             - name: 針對 TDE 進行疑難排解
               href: ../relational-databases/security/encryption/troubleshoot-tde.md
-            - name: 設定具有安全記憶體保護區的 Always Encrypted
-              href: ../relational-databases/security/encryption/configure-always-encrypted-enclaves.md
+            - name: 設定 Always Encrypted
               items:
-                - name: SQL Server Management Studio
+                - name: 設定具有安全記憶體保護區的 Always Encrypted
+                  href: ../relational-databases/security/encryption/configure-always-encrypted-enclaves.md
+                - name: 使用 SQL Server Management Studio 設定
                   href: ../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md
-                - name: PowerShell
+                - name: 使用 PowerShell 設定
                   href: ../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md
+                  items:
+                    - name: 設定 Always Encrypted 金鑰
+                      href: ../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
+                    - name: 輪替 Always Encrypted 金鑰
+                      href: ../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
+                    - name: 設定資料行加密
+                      href: ../relational-databases/security/encryption/configure-column-encryption-using-powershell.md
                 - name: 建立及儲存資料行主要金鑰
                   href: ../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
-                - name: 設定金鑰
-                  href: ../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
-                - name: 輪替金鑰
-                  href: ../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
-                - name: 設定資料行加密
-                  href: ../relational-databases/security/encryption/configure-column-encryption-using-powershell.md
                 - name: 移轉敏感性資料
                   href: ../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
                 - name: 使用 .NET Framework 開發應用程式
                   href: ../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
-                - name: 移動 TDE 受保護的資料庫
-                  href: ../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
-                - name: 使用 EKM 啟用 TDE
-                  href: ../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
-                - name: 備份服務主要金鑰
-                  href: ../relational-databases/security/encryption/back-up-the-service-master-key.md
-                - name: 還原服務主要金鑰
-                  href: ../relational-databases/security/encryption/restore-the-service-master-key.md
-                - name: 建立資料庫主要金鑰
-                  href: ../relational-databases/security/encryption/create-a-database-master-key.md
-                - name: 備份資料庫主要金鑰
-                  href: ../relational-databases/security/encryption/back-up-a-database-master-key.md
-                - name: 還原資料庫主要金鑰
-                  href: ../relational-databases/security/encryption/restore-a-database-master-key.md
-                - name: 在兩部伺服器上建立相同的對稱金鑰
-                  href: ../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md
-                - name: 加密資料的資料行
-                  href: ../relational-databases/security/encryption/encrypt-a-column-of-data.md
+            - name: 移動 TDE 受保護的資料庫
+              href: ../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
+            - name: 使用 EKM 啟用 TDE
+              href: ../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
+            - name: 備份服務主要金鑰
+              href: ../relational-databases/security/encryption/back-up-the-service-master-key.md
+            - name: 還原服務主要金鑰
+              href: ../relational-databases/security/encryption/restore-the-service-master-key.md
+            - name: 建立資料庫主要金鑰
+              href: ../relational-databases/security/encryption/create-a-database-master-key.md
+            - name: 備份資料庫主要金鑰
+              href: ../relational-databases/security/encryption/back-up-a-database-master-key.md
+            - name: 還原資料庫主要金鑰
+              href: ../relational-databases/security/encryption/restore-a-database-master-key.md
+            - name: 在兩部伺服器上建立相同的對稱金鑰
+              href: ../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md
+            - name: 加密資料的資料行
+              href: ../relational-databases/security/encryption/encrypt-a-column-of-data.md
         - name: 保護 Azure SQL Database 安全
           items:
             - name: 附加密功能的 SQL Server 連接器
@@ -8065,6 +8067,8 @@
         - name: 加密
           href: ../relational-databases/security/encryption/sql-server-encryption.md
           items:
+            - name: 選擇演算法
+              href: ../relational-databases/security/encryption/choose-an-encryption-algorithm.md
             - name: 階層
               href: ../relational-databases/security/encryption/encryption-hierarchy.md
             - name: 透明資料加密 (TDE)
@@ -8088,8 +8092,6 @@
             - name: 加密金鑰
               href: ../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md
               items:
-                - name: 服務主要金鑰
-                  href: ../relational-databases/security/encryption/service-master-key.md
                 - name: 可延伸金鑰管理 (EKM)
                   href: ../relational-databases/security/encryption/extensible-key-management-ekm.md
                 - name: 使用 Azure Key Vault 的 EKM
@@ -16533,7 +16535,7 @@
                   href: ../t-sql/queries/select-order-by-clause-transact-sql.md
                 - name: SELECT - OVER 子句
                   href: ../t-sql/queries/select-over-clause-transact-sql.md
-            - name: FROM
+            - name: FROM 加上 JOIN、APPLY、PIVOT
               href: ../t-sql/queries/from-transact-sql.md
               items:
                 - name: FROM - 使用 PIVOT 與 UNPIVOT
