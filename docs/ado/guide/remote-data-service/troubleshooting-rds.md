@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1f80f07576caebe8f4612958edae2afa42fdf0d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 58cbba2bb39807dd242cee925ce23b2f953624e9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955877"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718587"
 ---
 # <a name="troubleshooting-rds"></a>對 RDS 進行疑難排解
 > [!IMPORTANT]

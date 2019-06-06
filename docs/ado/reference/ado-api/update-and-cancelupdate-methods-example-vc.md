@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8094271c765b9e211f724b7c18a72862f70a1d04
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0650528989bf4544b921ff37ebad02e9afd76de5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63042274"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710495"
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Update 和 CancelUpdate 方法範例 (VC++)
 此範例示範[更新](../../../ado/reference/ado-api/update-method.md)方法搭配[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法。  

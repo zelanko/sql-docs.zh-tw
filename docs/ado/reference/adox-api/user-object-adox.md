@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3acdea5ae284b2e9a0ac9c28fe8430a11de8fbd4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6fb3ebf1921bf0e61fe9d5a8dcf9fc2cd0dce6c1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281583"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705651"
 ---
 # <a name="user-object-adox"></a>User 物件 (ADOX)
 代表可受保護的資料庫內的存取權限的使用者帳戶。  

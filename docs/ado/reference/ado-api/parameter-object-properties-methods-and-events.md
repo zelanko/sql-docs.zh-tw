@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45cf2031d9b87b569f206364f984db17633b7a5e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 83de81b055d337c5e68e67dc7128fc5c910cfa1b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62865757"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703431"
 ---
 # <a name="parameter-object-properties-methods-and-events"></a>Parameter 物件屬性、 方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

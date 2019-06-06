@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1b89a12f-96bc-48b3-a88d-4da74780ea40
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f652c8d4e00535f69cb4694a1095f266d65ac057
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4242698409de26264c83e04ae95daa277f517689
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281350"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705621"
 ---
 # <a name="users-collection-properties-methods-and-events"></a>Users 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

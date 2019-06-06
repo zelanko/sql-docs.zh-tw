@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: eaf6f4e7-2ea0-49a3-89ee-e219e025257c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 860c51ecc5d282f1c2ab957b190c8cb8f66e2b9c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: cc95d911207fb6c69caa90f893e6d073207c53ae
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63280372"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709460"
 ---
 # <a name="dimensions-collection-ado-md"></a>Dimensions 集合 (ADO MD)
 包含[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)構成 cube 物件。  

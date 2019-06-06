@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: d1b002df5c526c4b888bac1b203b54af4e21a3e0
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: b3917f086361128ee0c3e0a73f44f2c7cc4049b6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044974"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713465"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux VDI 用戶端 SDK 規格上的 SQL Server
 
@@ -26,7 +25,7 @@ ms.locfileid: "55044974"
 - Windows 共用的記憶體會變成 POSIX 共用記憶體。
 - Windows 號誌成為 POSIX 號誌。
 - Windows 型別，例如 HRESULT 和 DWORD 都會變更為整數對等項目。
-- 移除和取代 c + + 類別的一組 COM 介面。
+- 會移除 COM 介面，並將其取代為一組C++類別。
 - 在 Linux 上的 SQL Server 不支援具名執行個體，因此已移除執行個體名稱的參考。 
 - 在安裝於 /opt/mssql/lib/libsqlvdi.so libsqlvdi.so 中實作共用程式庫
 

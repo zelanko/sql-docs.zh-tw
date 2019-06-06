@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2d10136a9074be9ffa9f0465c0856bd9d669e24
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 620da1d2d9e63d0f9699328892b87cdd3d3cb807
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281020"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701763"
 ---
 # <a name="cancelupdate-method-example-vbscript"></a>CancelUpdate 方法範例 (VBScript)
 > [!IMPORTANT]
