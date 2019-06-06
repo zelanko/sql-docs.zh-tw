@@ -382,6 +382,8 @@
               items:
                 - name: 建立及管理量值
                   href: ../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md
+            - name: 計算群組
+              href: ../analysis-services/tabular-models/calculation-groups.md
             - name: KPI
               href: ../analysis-services/tabular-models/kpis-ssas-tabular.md
               items:
