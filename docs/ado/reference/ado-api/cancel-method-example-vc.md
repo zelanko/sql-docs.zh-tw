@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7e0eaa39-0c24-4d8c-87e8-f9c4fd3455e7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 32751ae891da27602dc80aa9dc3b54990b3e27a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a8dd06dd603d37c8099d5f0ce30036cef1290aec
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239911"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698849"
 ---
 # <a name="cancel-method-example-vc"></a>Cancel 方法範例 (VC++)
 這個範例會使用[取消](../../../ado/reference/ado-api/cancel-method-ado.md)方法來取消上一個執行的命令[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件的連接是否忙碌中。  

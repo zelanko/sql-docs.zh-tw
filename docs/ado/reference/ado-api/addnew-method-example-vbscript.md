@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e5d6db633a5c718ea38d2b8959fa54305ec02883
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d1409dda550c13c296d0b11e7fa5dd1d63d6f09d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065176"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698854"
 ---
 # <a name="addnew-method-example-vbscript"></a>AddNew 方法範例 (VBScript)
 這個範例會使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法用來建立具有指定名稱的新記錄。  

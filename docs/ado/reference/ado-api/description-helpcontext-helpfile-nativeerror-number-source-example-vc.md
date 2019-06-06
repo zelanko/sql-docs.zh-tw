@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 5321fc0f-cd0c-4e2a-a5bc-0008fba86b59
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ccbfb4a7d4fa40fc4c905beca8d24ac49bc78ec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: bf87fb09d27ae47ab8a3b952f30443629356581c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63226136"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695311"
 ---
 # <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vc"></a>描述、 HelpContext、 HelpFile、 NativeError、 數目、 來源和 SQLState 屬性範例 （VC + +）
 這個範例會觸發錯誤、 設陷，並顯示[描述](../../../ado/reference/ado-api/description-property.md)， [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)， [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)， [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)， [數字](../../../ado/reference/ado-api/number-property-ado.md)，[來源](../../../ado/reference/ado-api/source-property-ado-error.md)，和[SQLState](../../../ado/reference/ado-api/sqlstate-property.md)內容產生[錯誤](../../../ado/reference/ado-api/error-object.md)物件。  

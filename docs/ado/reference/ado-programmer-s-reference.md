@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6dc27c85-84e1-472a-b057-d1854b8c98a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4d434cf2afaecd7f088df3b4a8b771a1e370440d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0648b6a2b572b5ed92df42b2cda567681634d42e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309194"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708680"
 ---
 # <a name="ado-programmer39s-reference"></a>ADO 程式設計&#39;參考
 此章節包含下列主題。  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00eaea347c379a64863b095a17f9518e5d1897a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4197583cd1fa4b5fe5e425f1d49f0888d6039248
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62802657"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698952"
 ---
 # <a name="activecommand-property-example-vc"></a>ActiveCommand 屬性範例 (VC++)
 此範例示範[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)屬性。  

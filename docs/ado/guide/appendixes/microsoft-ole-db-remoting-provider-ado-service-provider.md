@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 29addb89a5713b32b98df374a673fff4d549d771
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 794e71013b552cbd4e17b9cb37e4c8c261aeeae6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62853451"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702699"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 遠端處理提供者概觀
 Microsoft OLE DB 遠端服務提供者可讓用戶端電腦上的本機使用者叫用遠端電腦上的資料提供者。 如果您在遠端電腦上的本機使用者一樣，請指定遠端電腦的資料提供者參數。 然後指定用來存取遠端電腦的遠端服務提供者的參數。 然後，您可以如同是本機使用者存取遠端電腦。

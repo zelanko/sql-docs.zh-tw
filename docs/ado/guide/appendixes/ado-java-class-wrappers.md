@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddcbba246f0bdcfb5c3a22766f5d335a2bd5893e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 34a4ab7327edfb6f6f4204fb457ade97be4f5975
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719970"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702922"
 ---
 # <a name="ado-java-class-wrappers"></a>ADO Java 類別包裝函式
 此程式碼會宣告執行個體的 ADO[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)類別包裝函式和初始化，全部在同一行程式碼。 此外，它會宣告變數中的引數的每個[開放](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法，特別是針對[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)並[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) （因為 Java 不支援列舉型別）。 它會開啟並關閉**資料錄集**物件。 只設定為 NULL 的 Rs1 排程 Java 執行其系統化和間歇性版未使用的物件時釋放該變數。  

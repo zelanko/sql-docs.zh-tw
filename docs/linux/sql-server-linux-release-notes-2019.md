@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8d041e9554b976f46b121f2c39d8170183b85c6e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 8645fc41b518618194a62f24e3826b31a56596ad
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66110214"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705270"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>在 Linux 上的 SQL Server 2019 preview 版本資訊
 

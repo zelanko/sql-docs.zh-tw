@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 04/19/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 0db8a92539f83e543623f28067d0408b476c37a6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5643a1d8421f74c7a12861cef3b47f43382b0cf7
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531280"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712825"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>開始使用 Linux 上的記錄傳送
 

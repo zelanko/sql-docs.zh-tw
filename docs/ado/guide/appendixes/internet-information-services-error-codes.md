@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3c9223de-d953-436a-bddc-dbdd9dc3e685
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 24eccf2dee8eb8f72b75d568e31d200c337b2fdf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: cd25f6abf4c7cade7edbd35780cc191bce9c003d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719745"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702792"
 ---
 # <a name="internet-information-services-error-codes-for-remote-data-service"></a>Internet Information Services 的遠端資料服務的錯誤碼
 下表列出遠端資料服務使用量的相關的 Microsoft® 網際網路資訊服務 (IIS) 錯誤碼。 低的兩個位元組的十進位正轉譯，會顯示完整的錯誤程式碼和十六進位值的負值的十進位轉譯。

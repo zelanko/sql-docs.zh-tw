@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c940fbdc48d900da77d03dfb3b806080cff0c04e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2ad6c2804b70011380a12b5b9e0cd1f52fd56398
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249044"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696862"
 ---
 # <a name="ado-dynamic-properties"></a>ADO 動態屬性
 動態屬性可以新增至[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)的集合[連線](../../../ado/reference/ado-api/connection-object-ado.md)，[命令](../../../ado/reference/ado-api/command-object-ado.md)，或[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 這些屬性的來源是任一個資料提供者，例如[OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)，或服務提供者，例如[Microsoft OLE DB 的資料指標服務](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)。 請參閱適當的資料提供者或服務提供者文件，如需特定的動態屬性。  
@@ -41,7 +41,7 @@ ms.locfileid: "63249044"
  [ADO API 參考](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 列舉常數](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [附錄 b:ADO 錯誤](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [附錄 B：ADO 錯誤](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO 事件](../../../ado/reference/ado-api/ado-events.md)   
  [ADO 方法](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)   

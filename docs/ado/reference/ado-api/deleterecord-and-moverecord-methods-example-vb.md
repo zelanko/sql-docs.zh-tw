@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f0db2028840491a448cb0bf3bd07cbb6dfe10fe8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 08e201db8406354662948e4da3d2047746780eba
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140290"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695362"
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>DeleteRecord 和 MoveRecord 方法範例 (VB)
 此範例示範如何複製、 移動、 編輯及刪除文字檔案發行到 Web 資料夾的內容。 其他屬性和方法使用包含[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)， [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)，[來源](../../../ado/reference/ado-api/source-property-ado-record.md)，以及[排清](../../../ado/reference/ado-api/flush-method-ado.md)。  

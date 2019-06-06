@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab4aaed1cfd661d38476c81f8bdc3dcab3aa0f88
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 84c342150d00c399c4ab41c20d513b84f7be36db
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63199742"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701160"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>使用 Microsoft SDK for Java
 

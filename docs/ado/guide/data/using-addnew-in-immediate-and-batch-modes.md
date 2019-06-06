@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ed314bb9-e188-4658-a68c-a2abc49610be
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6295e4499a6f6f25f9111497012f2e9f1d6dc421
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7bcd9d42ef214d7b1a2a40d2f00eeba85f9399b7
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184938"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704630"
 ---
 # <a name="using-addnew-in-immediate-and-batch-modes"></a>在即時和批次模式中使用 AddNew
 行為**AddNew**方法取決於的更新模式**資料錄集**物件和是否傳遞*FieldList*並*值*引數。  

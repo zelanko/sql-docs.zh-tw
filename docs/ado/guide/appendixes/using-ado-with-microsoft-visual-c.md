@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 07d25fc0-4958-4e12-b616-36257ead812b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5c01c1b764ad09243ce20d25997036c38d167b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b665cb1a0694a6798131606e031f165b255066f4
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63199849"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701164"
 ---
 # <a name="using-ado-with-microsoft-visual-c"></a>搭配使用 ADO 與 Microsoft Visual C++
 如需搭配使用 ADO 與視覺效果C++，請參閱下列各節：  

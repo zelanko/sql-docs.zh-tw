@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ed02b621b79ebf46dbb0dc6e66a2e5366610a19d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ff7c5a2a2817fbe93d626ca7883107103edc58cd
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62864402"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694721"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile 方法 (ADO)
 將現有檔案的內容載入[Stream](../../../ado/reference/ado-api/stream-object-ado.md)。  

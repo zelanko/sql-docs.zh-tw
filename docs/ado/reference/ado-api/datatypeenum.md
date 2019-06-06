@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc18212852954accfddd9f3082b5c8f8a5485b58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7cb3e56d0219973be97b694ee2b22dbbb58eb0d8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140278"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698525"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 指定的資料型別[欄位](../../../ado/reference/ado-api/field-object.md)，[參數](../../../ado/reference/ado-api/parameter-object.md)，或[屬性](../../../ado/reference/ado-api/property-object-ado.md)。 下表描述資料行中的括號會顯示對應的 OLE DB 類型指標。  

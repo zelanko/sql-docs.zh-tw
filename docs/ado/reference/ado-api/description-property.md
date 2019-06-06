@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9a97e1e63e3896cd451c68d6198baa991945e7a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7b743a5fb6673baf886c4b9327bd8ad93b00d3b1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63180755"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698331"
 ---
 # <a name="description-property"></a>Description 屬性
 描述[錯誤](../../../ado/reference/ado-api/error-object.md)物件。  

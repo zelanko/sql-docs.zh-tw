@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: bf53939f-5543-40ac-a707-aa35e9bde1dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44559731867f2c2c1cd4ba397e5558c540e65f48
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 31b4edac079f8b05868b1ed7b16a7c71fa7aa39c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63033225"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708743"
 ---
 # <a name="schemaobjecttypeenum"></a>SchemaObjectTypeEnum
 指定要擷取之物件的型別[GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)方法。  

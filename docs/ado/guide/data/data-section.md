@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6a06b2291d07378b63907b4a195fa3902930078
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 76cd14b8ee1c5a55e0312993090bfaf098c7e219
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472545"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702132"
 ---
 # <a name="data-section"></a>資料區段
 [資料] 區段會定義以及任何暫止的更新、 插入或刪除資料列集的資料。 [資料] 區段可以包含零個或多個資料列。 它只能包含結構描述所定義的資料列所在的一個資料列集的資料。 此外，如先前所述，就可以省略資料行沒有任何資料。 如果屬性或子元素會在 [資料] 區段，該建構尚未定義在結構描述區段中，它會以無訊息方式忽略。  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 366892f51207e7d89f643510f9becb664bb098c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: aea36947856b26d33a0d777374eccf02a7cddb6a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027932"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694761"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 指定的交易隔離層級[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件。  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7263e9b320eb84d0f8ae9aaba6005a454a4b5838
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7f045fdb6299fa61d69a44a9a93a5bac740efaf9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281075"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696990"
 ---
 # <a name="converttostring-method-example-vbscript"></a>ConvertToString 方法範例 (VBScript)
 > [!IMPORTANT]

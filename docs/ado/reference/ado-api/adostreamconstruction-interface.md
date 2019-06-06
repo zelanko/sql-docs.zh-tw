@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cf21be88854837ab2dff1a8bc8bc73f44a6e20c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4bc15042a0f8f1cf08abadb0ee4a5fe1d5f36631
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248824"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696565"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 介面
 **ADOStreamConstruction**介面用來建構 ADO **Stream**的 OLE DB 物件**IStream** C 中的物件 /C++應用程式。  

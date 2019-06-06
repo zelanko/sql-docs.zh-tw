@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 35646314a5c52e86284326ee91776b5afe2a0d17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 69b9b44fc20fe832bffdd4c03536117a626916ac
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62864133"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697301"
 ---
 # <a name="marshaloptions-property-ado"></a>MarshalOptions 屬性 (ADO)
 指出哪些記錄[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)要封送處理至伺服器。  

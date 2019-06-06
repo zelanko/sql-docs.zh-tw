@@ -7,14 +7,14 @@ manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.custom: sql-linux,mvc
+ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: 13bd39a2d5334c2d343fdbc6c77a697a5d6a8403
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 236ae198b77f8fdc63a6c4d5069e3b335a44a472
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516604"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704846"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>部署 Kubernetes 使用 Azure Kubernetes Service (AKS) 中的 SQL Server 容器
 

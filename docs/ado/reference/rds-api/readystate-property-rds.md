@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c575683b5ec23c6739a37eae177be004efea0a57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e71447143e08ebf117b6fe0eab002569ec48d020
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63255724"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694875"
 ---
 # <a name="readystate-property-rds"></a>ReadyState 屬性 (RDS)
 表示進度[DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件，它會擷取資料到其[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  

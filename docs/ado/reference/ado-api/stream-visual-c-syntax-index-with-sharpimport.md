@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: e59d0687-1f5a-45c5-9d0a-c1f27079495d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9b66a3549fde85f7806443a0cf5fa1299739e6f7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 842aba9aea6ece34996fc9c5864150c5ab326646
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63180712"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710727"
 ---
 # <a name="stream-visual-c-syntax-index-with-import"></a>Stream (VisualC++含 #import 語法索引)
 ## <a name="methods"></a>方法  

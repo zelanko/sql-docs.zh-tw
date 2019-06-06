@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 80988ca7-f514-438d-bf6f-9390dfe93fc3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 31bdc1249a82660ef7fa7c73a25fb0806c8c0744
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a76a4fd596e4728e9b2cfc07332cb0dd52c3d6df
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027709"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702933"
 ---
 # <a name="property-visual-c-syntax-index-with-import"></a>屬性 (VisualC++含 #import 語法索引)
 ## <a name="properties"></a>屬性  

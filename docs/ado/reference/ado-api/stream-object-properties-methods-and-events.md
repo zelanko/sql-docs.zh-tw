@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7f775bf1d77ed23e153610f7b6d6cbf5c17ce544
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ebd95ace4abbdfe2b69eef63fc41f94624bffe73
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63181022"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710751"
 ---
 # <a name="stream-object-properties-methods-and-events"></a>Stream 物件屬性、 方法和事件
 ## <a name="properties"></a>屬性  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d7ea0244-596a-404e-8f30-71cadab8d8fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ecc581d8aaa3822a571d93f6c134e19a8a7b510
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9fb207d7ba30c12b1d694bbef5337c51e1062440
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63183861"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703330"
 ---
 # <a name="create-method-example-vb"></a>Create 方法範例 (VB)
 下列程式碼示範如何建立新的 Microsoft Jet 資料庫與[建立](../../../ado/reference/adox-api/create-method-adox.md)方法。  

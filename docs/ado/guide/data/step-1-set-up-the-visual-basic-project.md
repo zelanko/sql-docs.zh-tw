@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 77d3bfa5-fc9f-4a72-93b4-790c7d227988
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce9e337a1ea45db851bafd32e0af476ae33fd3c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b5f6379eb6cfc1d0f9020019d543cda180d9d88b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062804"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700607"
 ---
 # <a name="step-1-set-up-the-visual-basic-project"></a>步驟 1:設定 Visual Basic 專案
 在此案例中，假設您有 Microsoft Visual Basic 6.0 ADO 2.5 或更新版本，Microsoft OLE DB Provider for Internet Publishing 安裝在您的系統上。 您會先建立新的專案，並再將某些控制項新增至專案中的預設表單。  

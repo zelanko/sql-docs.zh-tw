@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7fba3296-5bd0-4f9e-8f63-9565fe1ee15f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22fe9f04ea03769cbdc2f100ec6284d17deff097
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 3ff6ebb1de980fb53c103735ba1af07938b11079
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63043843"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709182"
 ---
 # <a name="levels-collection-properties-methods-and-events"></a>Levels 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

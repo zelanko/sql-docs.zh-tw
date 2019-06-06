@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7be1a190773483e198a005b91470dbdbcfc50663
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9ba223de6cbfa7227ce35130629744fb17475f70
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027995"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703148"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared 屬性範例 (VC++)
 此範例示範[已準備](../../../ado/reference/ado-api/prepared-property-ado.md)藉由開啟兩個屬性[命令](../../../ado/reference/ado-api/command-object-ado.md)物件-一個已備妥，另一個尚未備妥。  

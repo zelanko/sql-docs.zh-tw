@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 375ebc025368551ccf9fda9dfba299027e6225ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 56a695f742b2fb4ed324c7767a6191239378c6e6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63217758"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707155"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Open 和 Close 方法範例 (VBScript)
 這個範例會使用[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)並[關閉](../../../ado/reference/ado-api/close-method-ado.md)方法兩者[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)和[連接](../../../ado/reference/ado-api/connection-object-ado.md)已開啟的物件。  

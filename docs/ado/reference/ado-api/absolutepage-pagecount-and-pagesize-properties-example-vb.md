@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5aaada64-5115-4adc-8668-827348f32566
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4e290e124b0c4c08905edc62838605112f1acf38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 65046de337461faa834cce239f5395b7f0283392
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156546"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699283"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vb"></a>AbsolutePage、 PageCount、 和 PageSize 屬性範例 (VB)
 ```  

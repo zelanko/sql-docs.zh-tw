@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
-ms.openlocfilehash: cbbd10ce9bc41ef7149f319077030e982ae6fcc0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1f0274a8eb84f9700378d266729afbdc91aebaf1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664597"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713211"
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>連線程式庫和 Microsoft SQL server 的架構
 

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 249616f2f08b8b8f6138ce13621d26c5f7af9e1e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b17bdd7204ec52ef5a2fc27d7bc364be7f017189
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63213341"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706501"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
 指定物件會列印文件的繼承，請使用設定的權限[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)。  

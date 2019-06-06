@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 31731e4f-3c0c-451e-8cbc-c9df28fabf6c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01b032aa98e4e8887722521016c95d99b7b58a7a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 57edd53ca1f347a39ebafd823a1ad4eb2b8ea32d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309106"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695701"
 ---
 # <a name="converttostring-method-example-vb"></a>ConvertToString 方法範例 (VB)
 ```  

@@ -1,21 +1,20 @@
 ---
 title: 操作容錯移轉叢集執行個體-在 Linux 上的 SQL Server |Microsoft Docs
-description: ''
+description: 這篇文章說明如何操作的 SQL Server 容錯移轉叢集執行個體 (FCI) 在 Linux 上。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: fa7d516484f7950c63c9455cae81ed31fa981f75
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: 86ba2672ee1ddb7d7c801556c817d93e6d2e0ceb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65982815"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712918"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>操作容錯移轉叢集執行個體 - Linux 上的 SQL Server
 

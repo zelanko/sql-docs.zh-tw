@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7cc7a22d72e282bfe84d9a63dac8382a380eebe7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ea4614191ea8be88f801f92f1ca90eb5110b7dec
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309115"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698609"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord、 CopyTo 和 SaveToFile 方法範例 (VB)
 此範例示範如何建立檔案，使用的複本[Stream](../../../ado/reference/ado-api/stream-object-ado.md)或是[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件。 一個複本進行，以適用於網際網路發佈的 Web 資料夾。 其他屬性和方法，顯示包含[Stream 型別](../../../ado/reference/ado-api/type-property-ado-stream.md)，**開啟**， [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)，以及[記錄開啟](../../../ado/reference/ado-api/open-method-ado-record.md)。  

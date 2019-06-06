@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17146ee01a2e4b99dbe50b1d81aedaf0ad7e0b94
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+manager: jroth
+ms.openlocfilehash: f083f62a67a2255b59fe9ca7cffc03e5aaf5f0a1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65095881"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701190"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server 概觀
 Microsoft OLE DB Provider for SQL Server，SQLOLEDB，可讓 ADO 存取 Microsoft SQL Server。
@@ -64,7 +64,7 @@ User ID=MyUserID;Password=MyPassword;"
 
 |參數|描述|
 |---------------|-----------------|
-|Trusted_Connection|表示使用者驗證模式。 這可以設為 **[是]** 或是**No**。 預設值是**No**。 如果這個屬性設定為 **[是]**，SQLOLEDB 會使用 Microsoft Windows NT 驗證模式來授權使用者存取所指定的 SQL Server 資料庫**位置**和[資料來源](../../../ado/reference/ado-api/datasource-property-ado.md)屬性值。 如果這個屬性設定為**No**，SQLOLEDB 會使用混合的模式，來授與 SQL Server 資料庫的使用者存取權。 中指定的 SQL Server 登入和密碼**使用者識別碼**並**密碼**屬性。|
+|Trusted_Connection|表示使用者驗證模式。 這可以設為 **[是]** 或是**No**。 預設值是**No**。 如果這個屬性設定為 **[是]** ，SQLOLEDB 會使用 Microsoft Windows NT 驗證模式來授權使用者存取所指定的 SQL Server 資料庫**位置**和[資料來源](../../../ado/reference/ado-api/datasource-property-ado.md)屬性值。 如果這個屬性設定為**No**，SQLOLEDB 會使用混合的模式，來授與 SQL Server 資料庫的使用者存取權。 中指定的 SQL Server 登入和密碼**使用者識別碼**並**密碼**屬性。|
 |目前的語言|表示 SQL Server 的語言名稱。 識別系統訊息選取與格式所使用的語言。 語言必須安裝在 SQL Server 中，否則為開啟連接會失敗。|
 |網路位址|指出所指定的 SQL 伺服器的網路位址**位置**屬性。|
 |網路程式庫|表示用來與 SQL Server 通訊的網路程式庫 (DLL) 名稱。 名稱不得包含路徑或 .dll 副檔名。 SQL Server 用戶端組態會提供預設值。|

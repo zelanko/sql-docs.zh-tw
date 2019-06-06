@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7644a596eed74c400444034fe16303886e1edb19
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2d01beffb328c26bdd0faf18ac22e73adb4dbcbb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281304"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697005"
 ---
 # <a name="views-collection-adox"></a>Views 集合 (ADOX)
 包含所有[檢視](../../../ado/reference/adox-api/view-object-adox.md)的目錄物件。  

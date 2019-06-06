@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4432c125b0c860775911aa753984806a472a64ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ccd783bdb7bf266bfdc83c3a02520345d707ceea
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62864495"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702629"
 ---
 # <a name="visual-c-extensions-for-ado"></a>Visual C++ Extensions for ADO
 慣用的程式設計視覺效果的 ADO 方法C++使用 **#import**指示詞中所述[Microsoft Visual C++ ADO 程式設計](../../../ado/guide/appendixes/visual-c-ado-programming.md)。 不過，舊版 ADO 隨附程式設計使用視覺效果的替代方法C++： 視覺效果C++延伸模組。 本節提供這項功能的人必須維護視覺效果C++擴充功能的程式碼，但新的 ADO 程式碼應該使用來撰寫 #**匯入**。

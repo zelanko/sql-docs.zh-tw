@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4b1f11919ab6dcc89da188601867f8a49a1aa48f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f8d11e97fd31745752449c5649e1096d0bb667a8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740078"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709024"
 ---
 # <a name="member-object-ado-md"></a>Member 物件 (ADO MD)
 代表在 cube 中，層級成員的層級、 成員或成員的資料格集沿著座標軸的位置的子系。  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a3b13402f20c149c438aa5a2c678afb068fb0f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 701ced4f5e0ad511f4a1c5b39c9775e285d1f751
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140220"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695785"
 ---
 # <a name="connection-object-ado"></a>Connection 物件 (ADO)
 表示資料來源的開啟連接。  
@@ -100,4 +100,4 @@ cnn. "parameter"
  [Errors 集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [附錄 a:提供者](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)

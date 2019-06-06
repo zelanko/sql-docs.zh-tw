@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 25a076118df9f85ff2449c35dc0273db8a499fac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: acd7c73926e996100511569df3a5693068894b10
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855186"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702729"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 服務的 Microsoft OLE DB 提供者
 Active Directory 服務介面 (ADSI) 提供者可讓 ADO 連接到異質的 directory services 透過 ADSI。 這可讓 ADO 應用程式唯讀存取 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 directory 服務，除了任何 LDAP 相容目錄服務和 Novell Directory Services。 ADSI 本身為基礎提供者模型，因此如果有新的提供者提供存取至另一個目錄，ADO 應用程式將能夠順暢地存取它。 ADSI 提供者是無限制執行緒，並啟用 Unicode。  

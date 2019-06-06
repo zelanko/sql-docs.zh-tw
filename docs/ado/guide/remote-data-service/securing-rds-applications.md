@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d41a1150a2562779f233454ae32949310cde600e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b2afe6074f115c1d9770251c51e6288e9d92ee3b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191772"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699332"
 ---
 # <a name="securing-rds-applications"></a>保護 RDS 應用程式
 本主題提供 RDS 的安全性資訊  

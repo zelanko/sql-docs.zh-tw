@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b27b5c37-3db2-4831-a447-ee6442e24d87
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e5b0efd474debf81d7d61c9228beadb95beea16a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 55081a05169ac91da2a54e27ea5869a19bd5b329
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63213452"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706592"
 ---
 # <a name="indexes-collection-properties-methods-and-events"></a>Indexes 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f3de2bb729e2096e1b30aab12c402803036914b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6bf2120468a00de2150f6105f4d79ec5a2ed4278
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62911357"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700453"
 ---
 # <a name="preparing-and-executing-commands"></a>準備和執行命令
 命令會執行某些作業，針對基礎資料來源發行至提供者的指示。 SQL 陳述式，比方說，是 Microsoft SQL 資料提供者的命令。 在 ADO 中，命令通常會以所**命令**物件，雖然也可以透過發出簡單的命令**連線**或是**資料錄集**物件。  

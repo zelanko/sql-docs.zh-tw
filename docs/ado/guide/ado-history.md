@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e3e491ccb659d8739cb93d72e0c923fce480015
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7fcdee5d45cffb14af2f1e0dc73941689c7fda4d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62695434"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702832"
 ---
 # <a name="ado-features-for-each-release"></a>針對每個發行項 ADO 功能
 

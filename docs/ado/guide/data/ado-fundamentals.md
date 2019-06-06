@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 448eda8c3c77f410bedd88d1193f2302c926ee95
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 155e1e810309ee4efa40badac55ca749a4329182
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062924"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702335"
 ---
 # <a name="ado-fundamentals"></a>ADO 基本概念
 ADO 提供開發人員一種功能強大的邏輯物件模型以程式設計方式存取、 編輯和更新資料從各種資料來源，透過系統的 OLE DB 介面。 ADO 的最常見的用法是查詢關聯式資料庫中資料表或資料表，請擷取和結果顯示在應用程式，並可能讓使用者進行變更和儲存的資料。 其他工作包括下列各項：  

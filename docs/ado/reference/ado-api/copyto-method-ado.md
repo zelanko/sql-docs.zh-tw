@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01b2e7dc8b70c109fc6cf998cec2bbad1147692c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: cbfdff7c22152acfd0deb97a6e278bd5fd3f553f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308913"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698434"
 ---
 # <a name="copyto-method-ado"></a>CopyTo 方法 (ADO)
 複製指定的字元或位元組數 (取決於[型別](../../../ado/reference/ado-api/type-property-ado-stream.md)) 中[Stream](../../../ado/reference/ado-api/stream-object-ado.md)到另一個**Stream**物件。  

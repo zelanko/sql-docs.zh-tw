@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 13e0fc40945e6cd8c68591a8f94cd9a052cda76e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1f118f4234e1939855b76afc6b6f3d1f45718908
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065292"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698991"
 ---
 # <a name="addnew-method-example-jscript"></a>AddNew 方法範例 (JScript)
 這個範例會使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法用來建立具有指定名稱的新記錄。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**AddNewJS.asp**。  

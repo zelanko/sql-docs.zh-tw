@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 75fc5d3ac1aecebca938e55c29a80bf5270bbd4f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 987dbf95c4db08d5ac88d56dbd7097b8a45afe77
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249124"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696647"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>視覺效果的 ADOC++含 #import 語法索引
 這個索引是根據 Microsoft Visual ADO 語言參考的交互參照C++和 **#import**指示詞。  

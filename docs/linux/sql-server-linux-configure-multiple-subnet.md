@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 4d142c1b97d6e0643a44c200db032babbef30412
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4c8116462266386457270b16ebcdb684252f5dcf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020549"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713253"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>設定子網路的多個 Always On 可用性群組和容錯移轉叢集執行個體
 

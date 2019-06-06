@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c94b6c03cebb720fae7a64fe8c06ccea96e710f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 93c4c97699e8b58f8d5576b6edaa41ce8316524f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140217"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698735"
 ---
 # <a name="connection-object-properties-methods-and-events"></a>連接物件屬性、 方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

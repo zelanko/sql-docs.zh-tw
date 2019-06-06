@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43e615d29c10553ef52f536320266abb3d28f542
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0dab0712b05b1ef21f07e86d854f5ee63d388277
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308590"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698446"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType、 LockType、 和 EditMode 屬性範例 （VC + +）
 此範例示範如何設定[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)並[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)的屬性，才能開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它也會顯示的值[EditMode](../../../ado/reference/ado-api/editmode-property.md)在各種情況下的屬性。 若要執行此程序需要 EditModeOutput 函式。  
@@ -158,9 +158,9 @@ void PrintComError(_com_error &e) {
   
   **AddNew： 之後**   
  **EditMode = adEditAdd**  
-**之後更新：**   
+**之後更新：**    
  **EditMode = adEditNone**  
-**之後編輯：**   
+**之後編輯：**    
  **EditMode = adEditInProgress**   
 ## <a name="see-also"></a>另請參閱  
  [CursorType 屬性 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   

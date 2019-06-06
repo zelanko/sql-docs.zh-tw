@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5ca88f95882da8e900e7695f81570b46977db9c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: bbdd7f6b663fb1c6c2ee12b7a6e4c843eb16d42d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63183855"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703361"
 ---
 # <a name="create-method-adox"></a>Create 方法 (ADOX)
 建立新的目錄。  

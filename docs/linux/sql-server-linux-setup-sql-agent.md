@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: 72a4242373af16ffcdc8f749b899747801d2002c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cb2a630dab67875db8a9731fe98895599f3290a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819518"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705054"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>在 Linux 上安裝 SQL Server 代理程式
 
@@ -67,7 +66,7 @@ sudo yum update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果您需要離線安裝時，找出在 SQL Server 代理程式套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用相同的離線安裝步驟，本文所述[安裝 SQL Server](sql-server-linux-setup.md#offline)。
+如果您需要離線安裝時，找出在 SQL Server 代理程式套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
 
 ### <a name="ubuntu">在 Ubuntu 上安裝</a>
 
@@ -87,7 +86,7 @@ sudo apt-get install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果您需要離線安裝時，找出在 SQL Server 代理程式套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用相同的離線安裝步驟，本文所述[安裝 SQL Server](sql-server-linux-setup.md#offline)。
+如果您需要離線安裝時，找出在 SQL Server 代理程式套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
 
 ### <a name="SLES">在 SLES 上安裝</a>
 
@@ -108,7 +107,7 @@ sudo zypper update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果您需要離線安裝時，找出在 SQL Server 代理程式套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用相同的離線安裝步驟，本文所述[安裝 SQL Server](sql-server-linux-setup.md#offline)。
+如果您需要離線安裝時，找出在 SQL Server 代理程式套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
 
 ## <a name="next-steps"></a>後續步驟
 如需有關如何使用 SQL Server Agent 來建立、 排程及執行工作的詳細資訊，請參閱 <<c0> [ 在 Linux 上執行的 SQL Server Agent 作業](sql-server-linux-run-sql-server-agent-job.md)。

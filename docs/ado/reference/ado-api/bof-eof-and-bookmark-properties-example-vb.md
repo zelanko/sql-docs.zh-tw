@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef1ab4199de6b0249173f13c607e6cb1816ccbc5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0ccaa2b12229077d21cd50ce73d55ff287507f0d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63316845"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696323"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF、EOF 和 Bookmark 屬性範例 (VB)
 這個範例會使用[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)並[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)屬性，以顯示一則訊息，如果使用者嘗試移動超過的第一個或最後一筆資料錄[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它會使用[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)屬性，讓使用者加上旗標中的記錄**資料錄集**並於稍後返回。  

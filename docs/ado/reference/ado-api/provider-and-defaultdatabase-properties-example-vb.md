@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad9e2566af4f320ce3bf12d00421b40e5c41d661
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 43909f1dd324a9e8ddfcbd6364b2c11d80f3bfbb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278653"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703104"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provider 和 DefaultDatabase 屬性範例 (VB)
 此範例示範[提供者](../../../ado/reference/ado-api/provider-property-ado.md)藉由開啟三個屬性[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件，使用不同的提供者。 它也會使用[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) Microsoft ODBC 提供者設定的預設資料庫的屬性。  

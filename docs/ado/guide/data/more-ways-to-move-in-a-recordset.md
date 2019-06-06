@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e648bd9dcb3c6a073419cde42587f1be706fff4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8cb2edebfd0a23f7b626dfdc4cb55eab9684a2c0
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161528"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700812"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>更多可以在資料錄集中移動的方法
 下列四種方法來移動，或在捲動**資料錄集**:[MoveFirst、 MoveLast、 MoveNext 和 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)。 （其中某些方法是在順向資料指標上無法使用）。  

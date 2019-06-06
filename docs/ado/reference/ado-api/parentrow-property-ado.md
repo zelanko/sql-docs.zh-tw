@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9ea31baf4b215a6a516c13b438b526b8e9d8b612
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 180ab01d28cb5c6f7715480459eeb12ab6ea81be
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027882"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703288"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow 屬性 (ADO)
 設定 OLE DB 的容器**資料列**物件上**ADORecordConstruction**物件，使資料列的父代變成 ADO**記錄**物件。  

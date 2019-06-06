@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 71ecb8c981bafad0bcbc2c53b27140adad9281ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9728a5c0ea70e4b5a3da1e5c10a35dc0d29bd23d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62710373"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706353"
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>Column 物件的 NumericScale 和 Precision 屬性範例 (VC++)
 此範例示範[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)並[有效位數](../../../ado/reference/adox-api/precision-property-adox.md)的屬性[資料行](../../../ado/reference/adox-api/column-object-adox.md)物件。 此程式碼會顯示其值**訂單詳細資料**一覽表*Northwind*資料庫。  

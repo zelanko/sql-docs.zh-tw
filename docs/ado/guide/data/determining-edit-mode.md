@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4c7e010d-08cd-4e22-9b32-23c36f02f88c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e638cda03d7dc0f0bd580c3ca29c126568d1595a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7345f75d43d302c71db91aefa9097a4d34e72d94
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472339"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700962"
 ---
 # <a name="determining-edit-mode"></a>判斷編輯模式
 ADO 會維護一個編輯與目前記錄相關聯的緩衝區。 **EditMode**屬性會指出是否已變更到這個緩衝區，或是否會建立新的記錄。 使用**EditMode**來判斷目前的資料錄的編輯狀態。 您可以測試暫止的變更如果編輯程序已中斷，並判斷是否需要使用**更新**或是**CancelUpdate**方法。  

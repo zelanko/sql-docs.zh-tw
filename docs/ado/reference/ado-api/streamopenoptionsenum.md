@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a1e7e685e9d3f23d4d1c3317e24f63d7bdac23db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 091c640ab09cf70cff5e6f7ce3d7bf1dc9dd34ab
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63180739"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710712"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
 指定選項，開啟[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。 值可以結合 OR 運算。  

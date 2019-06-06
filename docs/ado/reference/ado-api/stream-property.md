@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddeaadb1f25c3ea50e59c20d48f14e31831f2639
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0fecd8a1bfed75bd922ed39bd57144b9f32b6bb6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63180719"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710735"
 ---
 # <a name="stream-property"></a>Stream 屬性
 取得或設定 OLE DB **Stream**物件上的往返**ADOStreamConstruction**物件。  

@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: adfd7ad72fcc9f9e3e619c7798d68c536e4370e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 00ae511095e046623df080e7cc6f9704aedc87ef
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62635676"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712931"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>設定容錯移轉叢集執行個體-SQL Server 上 Linux (RHEL)
 

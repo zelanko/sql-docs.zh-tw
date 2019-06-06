@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.custom: sql-linux
-ms.openlocfilehash: ca8a5f92c3ee4c9ee1e9e45ec7fd23b8a3341835
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 428af4498fc45a32909e424aecc99b8f6fc3aadb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742386"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705272"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>匯出和匯入使用 SSMS 或 SqlPackage.exe 在 Windows 上的 Linux 上的資料庫
 
@@ -42,7 +41,7 @@ ms.locfileid: "47742386"
 
 5. 根據預設，會匯出資料庫中的所有物件。 按一下 [**進階] 索引標籤**並選擇您想要匯出的資料庫物件。
 
-6. 按一下 [下一步]，然後按一下 [完成]。
+6. 按一下 [下一步]  ，然後按一下 [完成]  。
 
 *。在您選擇的位置成功建立 BACPAC 檔案，您已準備好匯入目標資料庫。
 

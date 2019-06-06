@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db77de95e83e596a8a301fa65885ee640c742a71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 717229c9645384477b89e67b569c15179e9f3bc5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472310"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704903"
 ---
 # <a name="types-of-cursors-ado"></a>資料指標的類型 (ADO)
 一般而言，您的應用程式應該使用最簡單的資料指標，提供所需的資料存取。 進階功能 （順向、 唯讀、 靜態、 捲動、 未緩衝處理） 每個其他資料指標特性有價格-在用戶端記憶體、 網路負載或效能。 在許多情況下，預設資料指標選項會產生比應用程式真正需要更複雜資料指標。  

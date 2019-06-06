@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e80a0bbb70a626ff01043592896ecfbe3c21f189
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8e5ef2215725382650540d24f90e7cbd61102a71
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184819"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704429"
 ---
 # <a name="xml-security-considerations"></a>XML 安全性考量
 ADO 儲存及開啟資料錄集物件上的方法較不安全的作業，在 Internet Explorer 中執行。 因此，如果在應用程式或控制項裝載於瀏覽器中執行指令碼中使用這些方法，則瀏覽器的安全性組態會有影響其行為。  

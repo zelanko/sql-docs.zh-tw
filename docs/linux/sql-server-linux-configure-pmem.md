@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: ba2ed69239313a7933840d7a99ccbf3ce0864bfd
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 5421d42933660843ac51be3d942a94cf47866200
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828418"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713239"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>如何設定 Linux 上的 SQL Server 持續性記憶體 (PMEM)
 

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9a8f9b0c-8452-4e95-a561-cfc4b7165c5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4fd09586dc50326e64aa603a76fb10580e138489
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 74974451ffcc04f8ea2f63bfdc84c1cbc9ac33a5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63297703"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697174"
 ---
 # <a name="datacontrol-object-rds-properties-methods-and-events"></a>DataControl 物件 (RDS) 屬性、方法和事件
 > [!IMPORTANT]

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7512f456d1423caf6318903119c2ad55c1938dec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 589519e7c4a075d5fb06b5f2640d48e5d4ed898d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63301286"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695269"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 指定提供者執行命令的方式。  

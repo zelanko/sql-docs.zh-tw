@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: dd052d36-7730-4400-822b-0544fb1992b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a75f086a4e86ec88888967879c5dca119769ffbd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0b588b245956b75af0ff0dffa9387a70edb5f120
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140078"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698722"
 ---
 # <a name="connectionevents-visual-c-syntax-index-with-import"></a>ConnectionEvents (VisualC++含 #import 語法索引)
 ## <a name="events"></a>事件  

@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3a5bc7dfcfd36c16b6f281db8eb57e74e97601b6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 07d0929dbdf60c31f1518a19a2999f0845d7d2e2
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63231404"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713113"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>部署 SQL Server Always On 可用性群組上的 Kubernetes 叢集
 

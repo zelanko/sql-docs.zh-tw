@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76fbb95117b1aae982242f24dc2cb1e815bc2356
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0a72cf80f9fee9c887e7805f3a2a5bd542d7f47c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063094"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702431"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>彙總函式、CALC 函式和 NEW 關鍵字
 資料成形支援下列函數。 指派給包含的資料行的章節，以操作的名稱是*章別名*。  

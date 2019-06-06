@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f9508b85bc73ebbec82ad7d3bea5af5148d7c674
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 88718c492702018b77e89597faec8897aa8f51f1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184804"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697929"
 ---
 # <a name="execute-method-ado-command"></a>Execute 方法 (ADO 命令)
 執行查詢、 SQL 陳述式或預存程序中指定[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或是[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)屬性[命令物件](../../../ado/reference/ado-api/command-object-ado.md)。  
@@ -53,7 +53,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 ## <a name="remarks"></a>備註  
  使用**Execute**方法**命令**物件執行查詢中指定**CommandText**屬性或**CommandStream**物件的屬性。  
   
- 結果會傳回**資料錄集**（依預設） 或資料流的二進位資訊。 若要取得二進位資料流，請指定**adExecuteStream**中*選項*，然後藉由設定中提供的資料流**Command.Properties (「 輸出 Stream")**。 ADO **Stream**物件可以指定要接收結果，或者可以指定另一個資料流物件，例如 IIS 回應物件。 如果沒有資料流指定再呼叫**Execute**具有**adExecuteStream**，就會發生錯誤。 在傳回時從資料流的位置**Execute**是特定提供者。  
+ 結果會傳回**資料錄集**（依預設） 或資料流的二進位資訊。 若要取得二進位資料流，請指定**adExecuteStream**中*選項*，然後藉由設定中提供的資料流**Command.Properties (「 輸出 Stream")** 。 ADO **Stream**物件可以指定要接收結果，或者可以指定另一個資料流物件，例如 IIS 回應物件。 如果沒有資料流指定再呼叫**Execute**具有**adExecuteStream**，就會發生錯誤。 在傳回時從資料流的位置**Execute**是特定提供者。  
   
  如果命令不會用來傳回結果 （例如，SQL 更新查詢） 提供者會傳回**Nothing**只要選項**adExecuteNoRecords**指定，否則執行傳回關閉**資料錄集**。 某些應用程式語言，可讓您忽略此傳回值，如果沒有**資料錄集**想要使用。  
   

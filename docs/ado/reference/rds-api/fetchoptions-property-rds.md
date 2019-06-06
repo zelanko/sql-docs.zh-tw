@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 19b266474c348af50db26fddafeea79d4cf33ade
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a85f6938ec0f97ff69eab1782c0a24b78a5a6e8b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308194"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712688"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions 屬性 (RDS)
 表示非同步擷取的類型。  

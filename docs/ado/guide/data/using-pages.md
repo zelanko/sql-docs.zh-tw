@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c1eced0fae443a67c85cc1f3f8ec9b44867ce464
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6afd68ddf99799288939eeb0c6522275ec4d273f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184920"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704535"
 ---
 # <a name="using-pages"></a>使用頁面
 使用**PageCount**屬性來判斷多少頁的資料是在**資料錄集**物件。 *頁面*是一組的記錄，其大小等於**PageSize**屬性設定。 即使最後一頁是不完整，因為有較少的記錄，比**PageSize**的值，它會計算為中的其他頁面**PageCount**值。 如果**Recordset**物件不支援這個屬性， **PageCount**會是-1 表示**PageCount**不確定。  

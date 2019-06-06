@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17cf661e092e253e206b595dec5d807a35b895fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a5dc84c5bacca8951576e572b90fa28a8408e48d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161464"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700731"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>產生階層式資料錄集
 下列範例示範如何使用資料成形文法定義父系、 子節點及孫系的資料行建立階層式資料錄集，而不需要基礎資料來源**資料錄集**。  

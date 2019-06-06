@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2a52ca419f3f06e4156c278cb0ba8999c24e09ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0489bb43ee3b41ebf4334da0d6b8045e117acc39
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63071134"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695372"
 ---
 # <a name="execute-method-ado-connection"></a>Execute 方法 (ADO Connection)
 執行指定的查詢，SQL 陳述式、 預存程序或提供者特定的文字。  

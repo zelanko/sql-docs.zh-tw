@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 31cf9104ea47bdf8086e8676312d9ac8d8085184
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f688a95135716a41ae37cb86b50bcb90fc6cce5e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62468926"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712813"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>在 Linux Docker 容器中的 SQL Server 資料庫還原
 

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1474eeb0ac4df68b72406379f5edaada5cc83dbc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ee346a4f73a959f42b4b74967a6f08338775c144
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63183907"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703371"
 ---
 # <a name="command-property-adox"></a>Command 屬性 (ADOX)
 指定 ADO[命令](../../../ado/reference/ado-api/command-object-ado.md)可用來建立或執行程序的物件。  

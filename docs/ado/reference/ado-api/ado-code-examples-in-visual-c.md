@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1f03d615bf17cf4086482d02dfca001230276b1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5a727eaf511e65d46fb5c297c65bb1517cfb72c5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249016"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696891"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual C++ 中的 ADO 程式碼範例
 若要了解如何使用 ADO 方法、 屬性和事件時寫入 Microsoft 視覺效果中使用下列程式碼範例C++。  
@@ -149,4 +149,4 @@ ms.locfileid: "63249016"
 ## <a name="see-also"></a>另請參閱  
  [在 Visual Basic 中的 ADO 程式碼範例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO 程式碼範例 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
- [附錄 d:ADO 範例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [附錄 D：ADO 範例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

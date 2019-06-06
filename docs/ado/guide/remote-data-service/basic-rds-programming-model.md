@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be7123595b823434dd6b9f4a369115d83c0d68ec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4b8f08cda158c21d556b251d3e141b333418ca38
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214802"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704355"
 ---
 # <a name="basic-rds-programming-model"></a>基本 RDS 程式設計模型
 > [!IMPORTANT]

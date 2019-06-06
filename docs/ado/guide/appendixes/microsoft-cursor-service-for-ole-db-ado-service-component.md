@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 500a3e38599b0041b036eb148f837afc67260849
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d8b52f2cf665232c5e16677a257465d020c227c1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719830"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702741"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB 概觀的 Microsoft 資料指標服務
 OLE DB 的 Microsoft 資料指標服務來補充資料提供者的資料指標支援函式。 如此一來，使用者察覺到相當一致的功能，從所有資料提供者。

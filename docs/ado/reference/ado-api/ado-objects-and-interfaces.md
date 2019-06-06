@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f0bba8402bb49d481886e4c81071443873834c8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 48b1f3794828af7f60c1d00313506fa9f9c522c8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248902"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696639"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO 物件和介面
 在中表示這些物件之間的關聯性[ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "63248902"
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 動態屬性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO 列舉常數](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [附錄 b:ADO 錯誤](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [附錄 B：ADO 錯誤](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO 事件](../../../ado/reference/ado-api/ado-events.md)   
  [ADO 方法](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)   

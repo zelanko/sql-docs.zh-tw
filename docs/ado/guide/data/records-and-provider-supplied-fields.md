@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c64555e0035de8a06d3bb9227262f4202f73f9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2b7ce62ebedbd5d0622c8b69720f7153d7711a48
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910462"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700451"
 ---
 # <a name="records-and-provider-supplied-fields"></a>記錄和提供者提供的欄位
 當[記錄](../../../ado/reference/ado-api/record-object-ado.md)開啟物件、 其來源可以是已開啟的目前資料列[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，絕對 URL 或開啟搭配的相對 URL[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件.  
@@ -79,4 +79,4 @@ ms.locfileid: "62910462"
   
 ## <a name="see-also"></a>另請參閱  
  [Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [附錄 a:提供者](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)

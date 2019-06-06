@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 33858c9cc0778e550bf90f574e4443dff033c5d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: bc17df7bad00205803b33cb4af17cb3c6ddaac56
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63199761"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701291"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 簡單提供者概觀
 Microsoft OLE DB 簡單提供者 (OSP) 允許存取的提供者已經使用任何資料的 ADO [OLE DB 簡單提供者 (OSP) 工具組](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)。 簡單的提供者被用來存取需要唯一基本的 OLE DB 支援，例如記憶體中陣列或 XML 文件的資料來源。

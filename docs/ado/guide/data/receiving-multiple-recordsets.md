@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e70dc047456549b625a1e66250d413009293f4a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 78e6ed78e8c61a9ce14e30f0eb286d55da0e63b9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910817"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700743"
 ---
 # <a name="receiving-multiple-recordsets"></a>接收多個資料錄集
 [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)支援傳回多個**Recordset**物件的單一命令，其中包含多個 SQL 陳述式，一個**資料錄集**每個 SQL 陳述式。 順序**資料錄集**會傳回如下的 SQL 陳述式會置於命令文字的順序。  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45e8e37d8bb85e727771072abda9249b8155076f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: bb09e954640554c5375539b4104ab58ae71ddaab
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62802669"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700403"
 ---
 # <a name="schema-section"></a>結構描述區段
 需要結構描述一節。 如先前範例所示，ADO 會為了保留資料值的語意盡可能更新每個資料行的相關寫出詳細的中繼資料。 不過，若要載入在 XML 中，ADO 只需要資料行和其所屬的資料列集的名稱。 最小的結構描述的範例如下：  

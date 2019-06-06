@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 874c22fa4625ba78af44f19ad328a39d854eb8de
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0b3a5428fafd2429791b39d8c343024f9348ca22
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63316493"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698673"
 ---
 # <a name="command-visual-c-syntax-index-with-import"></a>命令 (VisualC++含 #import 語法索引)
 ## <a name="methods"></a>方法  

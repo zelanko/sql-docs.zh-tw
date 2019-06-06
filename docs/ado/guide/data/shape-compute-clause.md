@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b78abac5ccbade0b686176f432618b4abc35ccab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e1e268da5eb4c53b6270e474987c69b88383cd9b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062814"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700361"
 ---
 # <a name="shape-compute-clause"></a>Shape COMPUTE 子句
 Shape COMPUTE 子句會產生父代**資料錄集**，其資料行所組成的參考子系**資料錄集**; 選擇性資料行的內容是一章，新的或導出資料行，或對子系執行彙總函式的結果**Recordset**或先前的圖形化**資料錄集**; 以及從子系的任何資料行**資料錄集**中所列選擇性的 BY 子句。  

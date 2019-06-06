@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5c16f76e086dfc78ffed967ef33300a09630a798
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+manager: jroth
+ms.openlocfilehash: 8638449e89701638e215ebfd79eae2ab216a56e4
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63464965"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697124"
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize 屬性範例 (VC++)
 此範例示範[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)屬性[資料行](../../../ado/reference/adox-api/column-object-adox.md)。 程式碼會重新定義的 FirstName 資料行的大小**員工**一覽表*Northwind*資料庫。 然後，FirstName 的值的變更[欄位](../../../ado/reference/ado-api/field-object.md)的[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)根據**員工**資料表會顯示。 請注意，根據預設，[FirstName] 欄位會變成填補空格之後您重新定義**DefinedSize**屬性。  

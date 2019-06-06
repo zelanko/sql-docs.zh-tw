@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: e57930a6-46c4-4a17-a3b6-f79e94d5c9c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c33b8a757e699a78c699cc87e7fd7dba26006b5d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 28e08e6a62eaa631e5a1e476207b47e39cf75032
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240088"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706943"
 ---
 # <a name="pagesize-property-ado"></a>PageSize 屬性 (ADO)
 表示構成的多少筆記錄中的每一頁[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

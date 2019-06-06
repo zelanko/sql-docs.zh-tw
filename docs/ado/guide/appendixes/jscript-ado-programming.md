@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: da87199347052189e5af8b881154b37723408d1f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5e53f1d6e30497282cce8e895f458d81660240d9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720355"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701299"
 ---
 # <a name="jscript-ado-programming"></a>JScript ADO 程式設計
 ## <a name="creating-an-ado-project"></a>建立 ADO 專案  

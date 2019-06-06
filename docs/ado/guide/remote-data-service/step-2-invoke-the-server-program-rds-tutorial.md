@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a64e45f68003948f0d0f45d3932c1edf9b94972a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4a1653f2ff0c8cae39b9eecd78aad7a83b03062c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62675818"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699315"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>步驟 2:叫用伺服器程式 (RDS 教學課程)
 當您叫用方法，以在用戶端*proxy*，實際的程式，在伺服器上執行的方法。 在此步驟中，您會在伺服器上執行查詢。  

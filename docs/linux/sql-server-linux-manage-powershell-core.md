@@ -4,18 +4,17 @@ description: 這篇文章提供與 Linux 上的 SQL Server 中使用 PowerShell 
 ms.date: 04/22/2019
 ms.reviewer: jroth
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: craigg
-ms.openlocfilehash: 17858877efbb3f421f95b19e4b2eb66bfde5dbb4
-ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
+ms.openlocfilehash: 242e3ab70d41df4d774400034f361b31289d97c9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66265339"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713150"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>管理與 PowerShell Core 在 Linux 上的 SQL Server
 

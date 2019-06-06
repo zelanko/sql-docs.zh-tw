@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf4a56ea4efa8e9b5c29e9e4bdd10f8867817d61
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 76e619e3bcdc4dc45fd8929aa1046d895b86f013
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027765"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703180"
 ---
 # <a name="properties-collection-ado"></a>Properties 集合 (ADO)
 包含所有[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件的特定執行個體的物件。  
@@ -42,4 +42,4 @@ ms.locfileid: "63027765"
   
 ## <a name="see-also"></a>另請參閱  
  [Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [附錄 a:提供者](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)

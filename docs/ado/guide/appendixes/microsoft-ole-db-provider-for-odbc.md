@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fd8374eaa97ffc08528c245569ec7bff8499747a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62853325"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701325"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概觀
 ADO 或 RDS 程式設計人員，理想的世界就是每個資料來源會公開 OLE DB 介面，可讓 ADO 無法呼叫直接將資料來源。 雖然有更多資料庫廠商實作的 OLE DB 介面，但某些資料來源不是尚未公開這種方式。 不過，大部分的 DBMS 系統目前使用中可以透過 ODBC 存取。
@@ -65,7 +65,7 @@ MSDASQL
 
  提供者不支援任何特定的連接參數，除了 ADO 所定義。 不過，提供者會將任何非 ADO 連接參數傳遞至 ODBC 驅動程式管理員。
 
- 因為您可以省略**提供者**參數，您可以因此撰寫等同於相同的資料來源的 ODBC 連接字串的 ADO 連接字串。 使用相同的參數名稱 (**驅動程式 =**， **DATABASE =**， **DSN =** 等等)，值，以及與您的語法會撰寫的 ODBC 連接字串時。 您可以在包含或不含預先定義的資料來源名稱 (DSN) 或 FileDSN 連接。
+ 因為您可以省略**提供者**參數，您可以因此撰寫等同於相同的資料來源的 ODBC 連接字串的 ADO 連接字串。 使用相同的參數名稱 (**驅動程式 =** ， **DATABASE =** ， **DSN =** 等等)，值，以及與您的語法會撰寫的 ODBC 連接字串時。 您可以在包含或不含預先定義的資料來源名稱 (DSN) 或 FileDSN 連接。
 
 ## <a name="syntax-with-a-dsn-or-filedsn"></a>使用資料來源名稱或 FileDSN 語法：
 
@@ -84,11 +84,11 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="remarks"></a>備註
  如果您使用**DSN**或是**FileDSN**，它必須定義透過 ODBC 資料來源管理員在 Windows 控制台中。 在 Microsoft Windows 2000 中，ODBC 管理員位於 系統管理工具。 在舊版的 Windows 中，名為 ODBC 管理員圖示**32 位元 ODBC**或簡稱**ODBC**。
 
- 設定替代**DSN**，您可以指定 ODBC 驅動程式 (**驅動程式 =**)，例如"SQL Server"; 伺服器名稱 (**SERVER =**); 和資料庫名稱 (**DATABASE =**)。
+ 設定替代**DSN**，您可以指定 ODBC 驅動程式 (**驅動程式 =** )，例如"SQL Server"; 伺服器名稱 (**SERVER =** ); 和資料庫名稱 (**DATABASE =** )。
 
- 您也可以指定使用者帳戶名稱 (**UID =**)，以及使用者帳戶的密碼 (**PWD =**) 或標準 ODBC 特有的參數中 ADO 定義*使用者*和*密碼*參數。
+ 您也可以指定使用者帳戶名稱 (**UID =** )，以及使用者帳戶的密碼 (**PWD =** ) 或標準 ODBC 特有的參數中 ADO 定義*使用者*和*密碼*參數。
 
- 雖然**DSN**已定義指定的資料庫，您可以指定 *資料庫*參數，除了**DSN**連線不同的資料庫。 最好一律包括 *資料庫*當您使用的參數**DSN**。 這可確保您連線到正確的資料庫，如果另一位使用者變更預設資料庫參數，因為您上次檢查**DSN**定義。
+ 雖然**DSN**已定義指定的資料庫，您可以指定  *資料庫*參數，除了**DSN**連線不同的資料庫。 最好一律包括  *資料庫*當您使用的參數**DSN**。 這可確保您連線到正確的資料庫，如果另一位使用者變更預設資料庫參數，因為您上次檢查**DSN**定義。
 
 ## <a name="provider-specific-connection-properties"></a>提供者特定連接屬性
  OLE DB provider for ODBC 數個將屬性加入至[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)的集合**連線**物件。 下表列出這些屬性與對應的 OLE DB 屬性名稱括號括住。

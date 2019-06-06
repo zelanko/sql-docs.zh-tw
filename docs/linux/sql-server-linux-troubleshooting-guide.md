@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 05/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: ee1b1e45970be6501f8ab40dcc92c6675c0bc10b
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+ms.openlocfilehash: 6ff0e1eb50f7e7af831ed58b4de05b520fd3f06a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65626666"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712861"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>疑難排解 SQL Server on Linux
 

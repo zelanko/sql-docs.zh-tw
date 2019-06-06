@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8aa90cb0-f588-4141-9dc9-3b22918394ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 601573a34082f386bfee238308a8f97c41743e4b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 37d1fe31524d245da2a6bac9b90ab2e680fab450
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239770"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696151"
 ---
 # <a name="chapter-property-ado"></a>Chapter 屬性 (ADO)
 取得或設定 OLE DB**一章**物件上的往返[ADORecordsetConstruction 介面](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)物件。 當您使用**put_Chapter**來設定**章**物件，資料列的子集會轉換成 ADO [Recordset 物件](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 這會將目前的章節**資料列集**物件。 這是可讀寫的屬性。  

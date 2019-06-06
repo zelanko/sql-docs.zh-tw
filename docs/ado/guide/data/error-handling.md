@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d8f96b28a15258df4b7d093ce14f227f28ad9b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 56d41b8c8fddff4d49cdb213834f45eac7fd5462
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161743"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700752"
 ---
 # <a name="error-handling"></a>錯誤處理
 ADO 使用多種不同的方法來通知發生之錯誤的應用程式。 本節討論當您使用 ADO 和您的應用程式接收通知的方式可能會發生的錯誤類型。 它做出結論，提出有關如何處理這些錯誤的建議。  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 059d6bb8e621839ccf21bb4eb4251db08f427523
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: dd3469b826ac4f577ff0e883b1a92a3acec4a981
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308605"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698541"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
 指定資料指標中所使用的型別[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6a5e9581a2a236eab869e74825ee97e7e289d44
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9d1322d872d5e05de4c7f142804fe2f1390b9859
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472694"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700891"
 ---
 # <a name="command-streams"></a>命令資料流
 ADO 向來都支援指定的字串格式的命令輸入**CommandText**屬性。 或者，使用 ADO 2.7 或更新版本，您也可以使用資訊的資料流命令輸入藉由指定的資料流**CommandStream**屬性。 您可以指派 ADO **Stream**物件或任何支援 COM 的物件**IStream**介面。  

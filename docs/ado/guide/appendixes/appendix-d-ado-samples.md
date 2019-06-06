@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a274985583d2b0d4403a567f57c3bf1a8eb3f144
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0299d3ca7ab96b8e054a6fd8ddc99d9ce4ed0139
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719778"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702812"
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>附錄 D：Windows SDK 中的 ADO 範例
 Windows SDK 包含數個示範如何使用 ADO 和 RDS 程式碼的範例應用程式。 這些範例用來協助您了解如何使用 ADO 和 RDS，但不是適合在實際執行伺服器上部署。

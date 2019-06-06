@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fb62318b9f8eb03fbd3c9732dc8ad0caa9127d17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 90904154f324a86088fac0d637301193464feb2c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294433"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701239"
 ---
 # <a name="adding-multiple-fields-and-values"></a>新增多個欄位和值
 有時候，可能會將陣列的欄位和其對應的值，以更有效率**AddNew**方法，而不是設定**值**多次的每個新的欄位。 如果*FieldList*屬於陣列、*值*也必須是陣列具有相同成員數目，否則會發生錯誤。 欄位名稱的順序必須符合每個陣列中的欄位值的順序。 下列程式碼會將陣列的欄位和值的陣列傳遞**AddNew**方法。

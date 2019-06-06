@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 68b1a34a5d23d9aab32b6216eda3b3ef8f977e79
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0be4014809500c4d83b2019dc16bd083b8ed6452
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63010723"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701198"
 ---
 # <a name="adding-records-using-addnew-method"></a>新增記錄使用 AddNew 方法
 這是基本語法**AddNew**方法：

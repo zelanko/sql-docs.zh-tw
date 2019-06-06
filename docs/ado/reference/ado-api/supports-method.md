@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 97c0e4660c14845ddfb59ce4f5f509a0954d98f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1d1df1d780cf9e1e631f6b146e45cc0a34da9438
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63268157"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710688"
 ---
 # <a name="supports-method"></a>Supports 方法
 判斷指定[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件支援特定類型的功能。  

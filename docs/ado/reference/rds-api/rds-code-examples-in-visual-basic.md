@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d9cb84a1-4ec2-4d41-8f92-dec2e17cde67
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 96bc78d2d05cf03e13751b02efde6f76d3e2b5f9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d512759827820a69fcbff44fe69d9f7b9eb55b66
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062566"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694771"
 ---
 # <a name="rds-code-examples-in-visual-basic"></a>Visual Basic 中的 RDS 程式碼範例
 > [!IMPORTANT]

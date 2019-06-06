@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8481d843ce49227c343b71111c0f56a8af00a5e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d780c6140c1c1d09a21f7d643d7c274986b0268d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63134342"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697270"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize 方法 (RDS)
 使用 ADO 2.5 及更新版本中使用的連接字串所指定的資料庫，同步處理指定的資料錄集。  

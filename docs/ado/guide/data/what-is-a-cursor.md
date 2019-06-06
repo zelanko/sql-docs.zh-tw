@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0d5704a43e1ede850a225c4ec2b4df9a3563606b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9ad683af9cea8ca4f5bc1736a48f0662656b6ef1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184876"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704512"
 ---
 # <a name="what-is-a-cursor"></a>什麼是資料指標？
 關聯式資料庫中的作業會針對完整的資料列集運作。 由 SELECT 陳述式所傳回的資料列集包括所有滿足陳述式 WHERE 子句之條件的資料列。 由陳述式傳回的完整資料列稱為結果集。 應用程式，尤其是互動式並上線，不一定有效能夠運用整個結果集視為一個單位。 這些應用程式需要一個機制，一次運用一個資料列或小型資料列區塊。 資料指標就是一種結果集的擴充，提供此種機制。  

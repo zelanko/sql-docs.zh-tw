@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8ec0b00e-0e18-4f1b-9bbf-42168670bf5f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1bc1e778dcba4520148b56f2c0aca168c1744bbd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ef9547c1c6364b9799ad6eccade905783966b6c7
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740258"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709170"
 ---
 # <a name="hierarchy-object-properties-methods-and-events"></a>Hierarchy 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

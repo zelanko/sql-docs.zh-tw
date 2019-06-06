@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0994c4ee4c96e5ed9c373ec4bdc94b02ccddff7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 05cc5d08785b116f4e4dd27b8a0a61b34a14d473
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156264"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699394"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 

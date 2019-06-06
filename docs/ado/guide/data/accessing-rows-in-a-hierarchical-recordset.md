@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 83b8334b4891d0b12cac59030ebf7fced871c5dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ed329c1ddab0f8f3b6481bb0b001599528534aeb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294354"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701093"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>存取階層式資料錄集 （範例） 中的資料列
 下列範例顯示中的步驟需要存取的資料列階層[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md):

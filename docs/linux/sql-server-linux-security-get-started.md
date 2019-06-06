@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: sql-linux
-ms.openlocfilehash: c3d3c4a6ac5d5d49e880fc2af1546bdcf9a73779
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 655aebb0c07c812a7aa6c81e7c7033d85e8b7ce2
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211737"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705202"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的安全性功能的逐步解說
 
@@ -138,9 +137,9 @@ Create a security policy adding the function as both a filter and a block predic
 
 ```
 建立安全性原則 SalesFilter   
-新增篩選器述詞 Security.fn_securitypredicate(SalesPersonID)    
+ADD FILTER PREDICATE Security.fn_securitypredicate(SalesPersonID)    
   在 Sales.SalesOrderHeader，   
-加入區塊述詞 Security.fn_securitypredicate(SalesPersonID)    
+ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)    
   在 Sales.SalesOrderHeader   
 WITH (STATE = ON);   
 ```
@@ -148,12 +147,12 @@ WITH (STATE = ON);
 Execute the following to query the `SalesOrderHeader` table as each user. Verify that `SalesPerson280` only sees the 95 rows from their own sales and that the `Manager` can see all the rows in the table.  
 
 ```    
-EXECUTE AS 使用者 = 'SalesPerson280';   
-選取 * 從 Sales.SalesOrderHeader;    
+EXECUTE AS USER = 'SalesPerson280';   
+SELECT * FROM Sales.SalesOrderHeader;    
 還原; 
  
-EXECUTE AS 使用者 = 'Manager';   
-選取 * 從 Sales.SalesOrderHeader;   
+EXECUTE AS USER = 'Manager';   
+SELECT * FROM Sales.SalesOrderHeader;   
 還原;   
 ```
  
@@ -161,7 +160,7 @@ Alter the security policy to disable the policy.  Now both users can access all 
 
 ```
 改變安全性原則 SalesFilter   
-使用 (狀態 = 關閉);    
+WITH (STATE = OFF);    
 ``` 
 
 
@@ -172,18 +171,18 @@ Alter the security policy to disable the policy.  Now both users can access all 
 Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
  
 ```
-使用 AdventureWorks2014;移的 ALTER 資料表 Person.EmailAddress     ALTER 資料行 EmailAddress    
-新增遮罩與 (函式 = ' email()');
+USE AdventureWorks2014; GO ALTER TABLE Person.EmailAddress     ALTER COLUMN EmailAddress    
+ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
  
 Create a new user `TestUser` with `SELECT` permission on the table, then execute a query as `TestUser` to view the masked data:   
 
 ```  
 建立使用者 TestUser 沒有登入;   
-GRANT SELECT ON Person.EmailAddress 至 TestUser;    
+GRANT SELECT ON Person.EmailAddress TO TestUser;    
  
-EXECUTE AS 使用者 = 'TestUser';   
-選取 EmailAddressID，EmailAddress 從 Person.EmailAddress;       
+EXECUTE AS USER = 'TestUser';   
+SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;       
 還原;    
 ```
  
@@ -224,16 +223,16 @@ The following example illustrates encrypting and decrypting the `AdventureWorks2
 USE master;  
 GO  
 
-建立主要金鑰加密的密碼 = ' * ';  
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';  
 GO  
 
-建立憑證 MyServerCert 主體 = '我資料庫加密金鑰憑證';  
+CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
 GO  
 
-使用 AdventureWorks2014; 移
+USE AdventureWorks2014;   GO
   
 CREATE DATABASE ENCRYPTION KEY  
-演算法 = AES_256  
+WITH ALGORITHM = AES_256  
 ENCRYPTION BY SERVER 憑證 MyServerCert;  
 GO
   
@@ -265,8 +264,8 @@ The following example creates a certificate, and then creates a backup protected
   壓縮，  
   ENCRYPTION   
    (  
-   演算法 = AES_256，  
-   伺服器憑證 = BackupEncryptCert  
+   ALGORITHM = AES_256,  
+   SERVER CERTIFICATE = BackupEncryptCert  
    ),  
   STATS = 10  
 GO  

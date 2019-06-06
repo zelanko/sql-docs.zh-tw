@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: bc8f710d-0621-4673-8d8e-0361e44abed0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f1f28a5dfc7e8abb15d1adf2f457ab49b4fbdd9c
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+manager: jroth
+ms.openlocfilehash: a52b007cedf85ae02ca103297e70aa133d5d6599
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63459881"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695889"
 ---
 # <a name="compareenum"></a>CompareEnum
 指定兩筆記錄由其書籤的相對位置。  

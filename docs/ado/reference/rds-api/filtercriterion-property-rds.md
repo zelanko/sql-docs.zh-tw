@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a707ddc2fdf7d3c651cc383de758de0bef9a54a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 60f66b1ff2fa7ad7424342da6b92e7d44d0e6444
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62630678"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712711"
 ---
 # <a name="filtercriterion-property-rds"></a>FilterCriterion 屬性 (RDS)
 表示要在篩選值中使用的評估運算子。  

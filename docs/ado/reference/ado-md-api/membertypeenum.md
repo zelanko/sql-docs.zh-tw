@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5d8132c0-7ca2-4f86-8336-1b34213869ad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aef3e65c8368b7e979094b876b0f4c9b8d0957c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 10d96f7c89198b2267654073570fdfdbac38257b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62659257"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708895"
 ---
 # <a name="membertypeenum"></a>MemberTypeEnum
 指定的設定[型別](../../../ado/reference/ado-md-api/type-property-ado-md.md)屬性[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)物件。  

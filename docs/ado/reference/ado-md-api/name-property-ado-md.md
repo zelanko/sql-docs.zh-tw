@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5c6c9ba7f2981fd4162f93f37e6ad0eb2cbae882
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 56c1e6492cab9e89ded64a99a3d37939e5086ba0
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63311910"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708909"
 ---
 # <a name="name-property-ado-md"></a>Name 屬性 (ADO MD)
 表示物件的名稱。  

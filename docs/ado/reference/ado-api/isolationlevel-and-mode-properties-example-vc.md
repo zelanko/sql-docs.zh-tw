@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 928be152faec37ed1f954561a7f14f176c92cfbc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 14e1012530745e0e695c70efaf8b1b1e16b8a064
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027909"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694778"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 和 Mode 屬性範例 （VC + +）
 這個範例會使用[模式](../../../ado/reference/ado-api/mode-property-ado.md)屬性，以開啟專屬的連線，而[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)開啟執行的交易中的其他交易隔離。  

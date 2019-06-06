@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db2065bd599b1aca1542318bfab0d0ce57e2a938
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0f9efa743e6e5f9efe99e08001980ab87bf13247
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63070921"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695231"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 指定 ADO 執行階段錯誤的類型。  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c8f0268a91b66f6f26eec1d87502355a1c9795a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 572738c966651e35f2980ea75c3770ddc4bd029d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239784"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696175"
 ---
 # <a name="cancelbatch-method-ado"></a>CancelBatch 方法 (ADO)
 取消擱置中的批次更新。  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8904a403-1383-4b4b-b53d-5c01d6f5deac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b5cb3e6e1cc4266551bfeabf09bde1a65fea032f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 594c96d73302b907f5bc9b2167f69c8b33047aab
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140264"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698640"
 ---
 # <a name="connectiontimeout-property-ado"></a>ConnectionTimeout 屬性 (ADO)
 表示要在終止嘗試並產生錯誤前建立連接時的等候的時間。  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bfae67a14fb312f1b396cfc60f69e8cbe8babdf7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9ffc34dd95ac2f5ef6e26e796c4c05cd91b28ae0
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063084"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700395"
 ---
 # <a name="sample-recordset-for-examining-data"></a>用於檢查資料的範例資料錄集
 首先，讓我們看看**資料錄集**物件傳回使用下列 SQL 查詢，針對 Microsoft SQL Server 中的基底的 Northwind 範例資料執行。  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d409f874e9fcec059c01ddef91d83d8a70fdeb47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: abbdbeec81a029716ac6516f9436373e91365a23
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62864514"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702780"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>應用程式搭配使用 ADO 與 Microsoft Visual Basic 和 Visual Basic
 設定 ADO 專案，並撰寫 ADO 程式碼很類似您是否使用 Visual Basic 或 Visual Basic 應用程式。 本主題說明使用 Visual Basic 和 Visual Basic 中使用 ADO 的應用程式，並資訊的任何差異。
@@ -31,7 +31,7 @@ ms.locfileid: "62864514"
 
 #### <a name="to-reference-ado-from-microsoft-visual-basic"></a>若要從 Microsoft Visual Basic 參考 ADO
 
-1.  在 Visual Basic 中從**專案**功能表上，選取**參考...**.
+1.  在 Visual Basic 中從**專案**功能表上，選取**參考...** .
 
 2.  選取 **程式庫的 Microsoft ActiveX Data Objects x.x**從清單中。 確認至少下列的程式庫也會一併選取：
 
@@ -43,7 +43,7 @@ ms.locfileid: "62864514"
 
     -   OLE Automation
 
-3.  按一下 [確定] 。
+3.  按一下 [確定]  。
 
  您可以使用 ADO 輕鬆地使用 Visual Basic 應用程式，例如使用 Microsoft Access。
 
@@ -51,7 +51,7 @@ ms.locfileid: "62864514"
 
 1.  在 Microsoft Access 中，選取或建立的模組**模組**索引標籤中**資料庫**視窗。
 
-2.  在 **工具**功能表上，選取**參考...**.
+2.  在 **工具**功能表上，選取**參考...** .
 
 3.  選取 **程式庫的 Microsoft ActiveX Data Objects x.x**從清單中。 確認至少下列的程式庫也會一併選取：
 
@@ -61,7 +61,7 @@ ms.locfileid: "62864514"
 
     -   Microsoft DAO 3.5 物件程式庫 （或更新版本）
 
-4.  按一下 [確定] 。
+4.  按一下 [確定]  。
 
 ## <a name="creating-ado-objects-in-visual-basic"></a>在 Visual Basic 中建立 ADO 物件
  若要建立自動化變數和物件，該變數的執行個體，您可以使用兩種方法：**Dim**或是**CreateObject**。

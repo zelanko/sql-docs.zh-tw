@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.custom: sql-linux
-ms.openlocfilehash: 874fd8948d4098e9003fb2c54e1feb8b5cbbe4e3
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: fafec68510e2c9214ed77294314b2ff06e456ff2
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "52750360"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713282"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 來建立 Linux 上的 SQL Server 資料庫
 
@@ -51,7 +50,7 @@ SSDT 17.0 RC 或更新版本的版本支援在 Linux 上的 SQL Server。
 
     <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
 
-3. 按一下 [建立] 。 建立本機 Git 存放庫之後，按兩下**SSDTRepo**。
+3. 按一下 [建立]  。 建立本機 Git 存放庫之後，按兩下**SSDTRepo**。
 
 4. 按一下 **的新**中**解決方案**一節。 選取  **SQL Server**下方**其他語言**節點中的**新專案**對話方塊。
 

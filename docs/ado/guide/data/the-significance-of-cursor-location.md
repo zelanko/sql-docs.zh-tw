@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7be2574e700e15373d57bf4132ee2c3dd955112b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ed59dc8c4dd2cc53c4ad86992e5b778f0f8b17ac
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63228383"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704835"
 ---
 # <a name="the-significance-of-cursor-location"></a>資料指標位置的精確度
 每個資料指標會使用暫存的資源，來保留資料。 這些資源可以是記憶體、 磁碟分頁檔案、 暫存磁碟的檔案或甚至是暫時儲存在資料庫中。 資料指標稱為*用戶端*時這些資源位於用戶端電腦上的資料指標。 資料指標稱為*伺服器端*時這些資源位於伺服器上的資料指標。  

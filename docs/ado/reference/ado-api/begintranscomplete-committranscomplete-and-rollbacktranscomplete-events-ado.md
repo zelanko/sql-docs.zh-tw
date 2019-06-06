@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: afd8b9d4a45bdc98388f1133b3478a1cfbe51e4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8239a5f9069212b9413216bc3535e3c90e2d5316
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63316805"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696361"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete、 CommitTransComplete 和 RollbackTransComplete 事件 (ADO)
 這些事件將在上呼叫相關聯的作業之後[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件完成執行。  

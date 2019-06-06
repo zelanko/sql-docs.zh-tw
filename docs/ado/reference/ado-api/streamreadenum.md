@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 26ccabf3e73a67c14e7201f26e4ebf739a6352cb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 37d2ba0834d2a4469d97a36f39677f407a5e61be
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63311858"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710679"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
 指定的整個資料流] 或 [下一列是否應該從讀取[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。  

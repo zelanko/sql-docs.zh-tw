@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 65d346cb9394613a92f95f7466e429b10c54b1a8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6babeebec1eac78949f0a80eb0701b5b5ba1dcc2
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027943"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694835"
 ---
 # <a name="getrows-method-ado"></a>GetRows 方法 (ADO)
 擷取的多筆記錄[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)成陣列的物件。  

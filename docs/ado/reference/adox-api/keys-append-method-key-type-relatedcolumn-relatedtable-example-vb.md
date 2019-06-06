@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0fa2c7b7b7b2ad58042f46f8a1cffb0a3706f26
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2bb7a08ab3159fa63024c7bc761c8ccec2563a78
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281653"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706463"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Keys Append 方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule 屬性範例 (VB)
 下列程式碼示範如何建立在兩個現有的資料表，名為新的外部索引鍵關係**客戶**並**訂單**。  

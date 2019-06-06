@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7a71b651df387bfe28992d426fd2080587e439ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 05be5b1b9f3b23971017c74b5a6491f20ce4e49e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063074"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702790"
 ---
 # <a name="ado-errors"></a>ADO 錯誤
 **ErrorValueEnum**常數描述 ADO 錯誤值。 如需完整清單，這些列舉的常數，包括值，請參閱[附錄 b:ADO 錯誤](../../../ado/guide/appendixes/appendix-b-ado-errors.md)。 本節會檢查一些更有趣的錯誤，並說明某些特定的情況下，可能會引發，或若要修正此問題的解決方案。 這兩個**ErrorValueEnum**列出常數及簡短的正面十進位數字。

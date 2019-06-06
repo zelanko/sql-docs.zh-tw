@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0d25c44883c7f04f1543639ecc870c00ad5beb9d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e9a576220d7771ed539765da2947f6a7cc750f64
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240001"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706923"
 ---
 # <a name="originalvalue-property-ado"></a>OriginalValue 屬性 (ADO)
 值會指出[欄位](../../../ado/reference/ado-api/field-object.md)，存在於記錄中進行任何變更之前。  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9819567ebe48a7654ee7a90f516ba14c8062bdcf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 59bfebe5885d0f18811b6b6c8df0f12634ed316f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027860"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703245"
 ---
 # <a name="precision-property-ado"></a>Precision 屬性 (ADO)
 表示數值有效位數的程度[參數](../../../ado/reference/ado-api/parameter-object.md)物件或數值[欄位](../../../ado/reference/ado-api/field-object.md)物件。  

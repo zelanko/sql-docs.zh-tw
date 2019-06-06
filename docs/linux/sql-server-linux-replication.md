@@ -8,15 +8,14 @@ ms.date: 10/17/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ccba701efd1b74076c0eccb083a66382e8ac74b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ac812b8f39e9332f8bfcc22e91a6f575ef2873d7
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805470"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705105"
 ---
 # <a name="sql-server-replication-on-linux"></a>在 Linux 上的 SQL Server 複寫
 

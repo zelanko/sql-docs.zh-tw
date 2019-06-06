@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4913009226232f1359fbba25d50bcaf0d095da17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2b733230abfe7d9fc3c9e73831f097955cd056b0
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642487"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694750"
 ---
 # <a name="rds-methods"></a>RDS 方法
 > [!IMPORTANT]

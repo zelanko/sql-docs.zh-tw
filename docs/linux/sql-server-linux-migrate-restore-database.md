@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 08/16/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: ef9ee77366b5087ea0beda81eb756d281f495b78
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 7d31490369b1562db91820d0e47f5935b5b42911
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398982"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713132"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>從 Windows 的 SQL Server 資料庫移轉至 Linux 使用備份與還原
 
@@ -54,7 +53,7 @@ SQL Server 的備份和還原功能會從在 Windows 上的 SQL Server 的資料
 
 1. 在 [物件總管] 中，展開**資料庫**。
 
-1. 以滑鼠右鍵按一下您的目標資料庫中，選取**任務**，然後按一下 **備份...**.
+1. 以滑鼠右鍵按一下您的目標資料庫中，選取**任務**，然後按一下 **備份...** .
 
    ![使用 SSMS 來建立備份檔案](./media/sql-server-linux-migrate-restore-database/ssms-create-backup.png)
 

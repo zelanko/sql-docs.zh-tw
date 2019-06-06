@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 291ef7f063ef8c5fb0769ea8430eacef946797bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5ab2bf3b3a4f956672e80e38c45f51a03354c098
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240436"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707022"
 ---
 # <a name="parameter-ado-for-visual-c-syntax"></a>Parameter (ADO for Visual C++ 語法)
 ## <a name="methods"></a>方法  

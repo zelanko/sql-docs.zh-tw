@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 72954cb199976f05eacd7c79ba0e89cab0a45bbc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9a449c0e635c7fe0e63bc1f4d8b1b0b91712135d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62821439"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696285"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF、EOF 屬性 (ADO)
 -   **BOF**指出目前的記錄位置位於第一筆記錄之前[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
@@ -50,8 +50,8 @@ ms.locfileid: "62821439"
   
 ||MoveFirst、<br /><br /> MoveLast|MovePrevious，<br /><br /> 移動 < 0|移動 0|MoveNext，<br /><br /> 移動 > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**，則為 True**， **EOF**=**False**|Allowed|錯誤|錯誤|Allowed|  
-|**BOF**=**False**， **EOF**=**，則為 True**|Allowed|Allowed|錯誤|錯誤|  
+|**BOF**= **，則為 True**， **EOF**=**False**|Allowed|錯誤|錯誤|Allowed|  
+|**BOF**=**False**， **EOF**= **，則為 True**|Allowed|Allowed|錯誤|錯誤|  
 |兩者 **，則為 True**|錯誤|錯誤|錯誤|錯誤|  
 |兩者**False**|Allowed|Allowed|Allowed|Allowed|  
   

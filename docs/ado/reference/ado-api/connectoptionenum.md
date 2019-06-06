@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f9df3fd695e9bf281133dabf436e5e8b5de7e0b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5cecd58998e84b608c5bece462bf58d7f376e237
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309145"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698622"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
 指定是否[開放](../../../ado/reference/ado-api/open-method-ado-connection.md)方法[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件應該會傳回 （同步） 建立連線之後或之前 （非同步）。  

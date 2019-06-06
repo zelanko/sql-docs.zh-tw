@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cec3e79e3d37f064cb742588519a374737e01319
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ce22c31c4924c050baff2f7d96c224a8c5c3403b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191804"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699362"
 ---
 # <a name="required-client-settings"></a>必要用戶端設定
 > [!IMPORTANT]

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b89f05822ee23f5ad62c627b8bc6d67ebe401a2e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0f2d47229b7383c11740ca3d7a20ad8e420931a5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63130203"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700481"
 ---
 # <a name="persisting-data"></a>保存資料
 可攜式電腦運算 （例如，使用膝上型電腦），已產生可以在連線或中斷連線的狀態下執行的應用程式的需求。 ADO 已新增這個的支援，讓開發人員能夠儲存用戶端資料指標**資料錄集**到磁碟，稍後再重新載入它。  

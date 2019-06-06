@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 802634ff8a62134433185913fd1fd3374df1680a
-ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
+ms.openlocfilehash: 7a8df4121fa71580af9596c855e0f0d6199fca46
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66265579"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712863"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>設定容錯移轉叢集執行個體-SMB-Linux 上的 SQL Server
 

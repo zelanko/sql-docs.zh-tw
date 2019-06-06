@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1ee59754-59c8-48e2-a4fb-242fa788c1f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3a8bf1b5817156bb21b9ceddf9d68400d85d7b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a1b4172efbccf5fb86ce1c8251c8a3d0bd4c400b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63276255"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697995"
 ---
 # <a name="error-visual-c-syntax-index-with-import"></a>錯誤 (VisualC++含 #import 語法索引)
 ## <a name="properties"></a>屬性  

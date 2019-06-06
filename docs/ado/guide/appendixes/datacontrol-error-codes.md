@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7cf56b6614587c333f473136f1cafc72128846a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fe2a6cc350291ac2304e2f00825bef76e37e75cf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719763"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701272"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl 物件錯誤代碼
 下表列出[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件錯誤代碼。 低的兩個位元組的十進位正轉譯，會顯示完整的錯誤程式碼和十六進位值的負值的十進位轉譯。

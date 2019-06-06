@@ -4,18 +4,17 @@ description: 本文包含的版本資訊，並在 Linux 上執行的 SQL Server 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/25/2019
+ms.date: 06/25/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: e272187ae3e634246f9f32323438d81d633c3fbc
-ms.sourcegitcommit: 8aa51bc0bc54b266145c96f6451b59f369822160
+ms.openlocfilehash: da7d92fd1fa15deb83dbca9a1710b967d660b99f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66036911"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705151"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 的版本資訊
 
@@ -48,6 +47,7 @@ ms.locfileid: "66036911"
 
 | 版本               | 版本       | 發行日期 |
 |-----------------------|---------------|--------------|
+| [CU15](#CU15)         | 14.0.3162.1   | 2019-05-23   |
 | [CU14](#CU14)         | 14.0.3076.1   | 2019-03-25   |
 | [CU13](#CU13)         | 14.0.3048.4   | 2018-12-18   |
 | [CU12](#CU12)         | 14.0.3045.24  | 2018-10-24   |
@@ -77,6 +77,20 @@ ms.locfileid: "66036911"
 - [安裝全文檢索搜尋套件](sql-server-linux-setup-full-text-search.md)
 - [安裝 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [啟用 SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU15"></a> CU15 (2018 年)
+
+這是累計更新 15 (CU15) 發行[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]這一版的版本是 14.0.3162.1。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/en-us/help/4498951 ](https://support.microsoft.com/en-us/help/4498951)。
+
+### <a name="package-details"></a>套件詳細資料
+
+若為手動或離線套件安裝，您可以下載 RPM 和 Debian 套件使用下表中的資訊：
+
+| 套件 | 套件版本 | 下載 |
+|-----|-----|-----|
+| Red Hat RPM 套件 | 14.0.3162.1-1 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3162.1-1.x86_64.rpm)</br>[高可用性的 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3162.1-1.x86_64.rpm)</br>[全文檢索搜尋的 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3162.1-1.x86_64.rpm)</br>[SSIS 封裝](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 套件 | 14.0.3162.1-1 | [mssql server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3162.1-1.x86_64.rpm)</br>[高可用性的 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3162.1-1.x86_64.rpm)</br>[全文檢索搜尋的 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3162.1-1.x86_64.rpm) | 
+| Ubuntu 16.04 的 Debian 套件 | 14.0.3162.1-1 | [引擎的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3162.1-1_amd64.deb)</br>[高可用性的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3162.1-1_amd64.deb)</br>[全文檢索搜尋中的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3162.1-1_amd64.deb)<br/>[SSIS 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU14"></a> CU14 (Mar 2018)
 

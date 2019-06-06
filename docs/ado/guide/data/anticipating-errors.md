@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 91741ef8d6b0f7f984958837df3234b0bbc1e009
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6e555f00964ae6bdc7eb91a8701f2447d91b37d3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472862"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702406"
 ---
 # <a name="anticipating-errors"></a>預期的錯誤
 錯誤預防是至少和錯誤處理一樣重要。 最後一節中包含一份您的應用程式可以為了讓比較不可能出現的錯誤所採取的預防措施。  

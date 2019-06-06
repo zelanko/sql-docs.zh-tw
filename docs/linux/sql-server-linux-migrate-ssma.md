@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
-ms.custom: sql-linux
-ms.openlocfilehash: c3558e4a9ebf8c8ea2c46fbb7925781b6e81f2e5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: eac6c206fe34af59ba7e5f6e5a7eb2508b842766
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662984"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713231"
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>自動化與 SQL Server Migration Assistant 的資料庫移轉到 Linux
 

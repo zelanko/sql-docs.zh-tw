@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4bca5485634769322ce41ea85b4e08801af507d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ddced3c6e81a9284328a927509c30d1cc0ccb448
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281113"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707021"
 ---
 # <a name="connect-property-example-vbscript"></a>Connect 屬性範例 (VBScript)
 > [!IMPORTANT]

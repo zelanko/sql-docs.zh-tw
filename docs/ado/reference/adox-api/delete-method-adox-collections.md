@@ -30,13 +30,13 @@ helpviewer_keywords:
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 90f9aa6a788296ff5fef05e96b7f46b56729ded9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 185c5cad38b19ca3f2aea83ec3a5216e83182fda
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63298475"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697121"
 ---
 # <a name="delete-method-adox-collections"></a>Delete 方法 (ADOX Collections)
 從集合移除的物件。  

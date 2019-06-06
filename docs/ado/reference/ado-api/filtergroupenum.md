@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 89cab313736a8d5acf2f7796ea79fb5649f85ab2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: db586609b90ba023e2a1700642cb678e8f08a8b2
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028126"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694900"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 指定要從篩選的記錄群組[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

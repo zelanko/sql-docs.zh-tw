@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c61852c847231b412d3c4f63ee5b54f5d5947465
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 051e91d54a1f0311d5a8aeb69b4ea4672234a8f8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239809"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696141"
 ---
 # <a name="cancel-method-example-vb"></a>Cancel 方法範例 (VB)
 這個範例會使用[取消](../../../ado/reference/ado-api/cancel-method-ado.md)方法來取消上一個執行的命令[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件的連接是否忙碌中。  

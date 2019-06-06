@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
-ms.custom: sql-linux
-ms.openlocfilehash: bdd59db3c2b034c2cd861501b1690d71770c2500
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2443611a63bee3f62ae8225384d79d34dfcb18e0
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683056"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705300"
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>將資料庫和結構化的資料移轉至 Linux 上的 SQL Server 
 

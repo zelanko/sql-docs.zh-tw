@@ -8,14 +8,13 @@ manager: craigg
 ms.date: 06/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: c2e26f7a5a239a4fa25d2e2a7deb71677ac856cb
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: fdf6542f64549233dd5d4ef15dc39a53fefa49a3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66014973"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712832"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>限制與已知的問題適用於 Linux 上的 SSIS
 

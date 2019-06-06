@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c8145b4000a621ecb09abff074e4b5e06aea7c80
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142967"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702615"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ ADO 程式設計
 ADO API 參考說明 ADO 應用程式開發介面 (API) 的語法類似到 Microsoft Visual Basic 的功能。 ADO 程式設計人員適用的對象是所有使用者，但採用不同的語言，例如 Visual Basic、 Visual C++ (包含或不含 **#import**指示詞)，和 Visual J + + （與 ADO/WFC 類別封裝）。  
@@ -65,7 +65,7 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- 編譯器會產生適當**取得**_-_，**放**-，或**PutRef**_屬性_呼叫會根據宣告哪些替代語法，因此屬性是否正在讀取或寫入。  
+ 編譯器會產生適當**取得** _-_ ，**放**-，或**PutRef**_屬性_呼叫會根據宣告哪些替代語法，因此屬性是否正在讀取或寫入。  
   
  **__Declspec(property...)** 編譯器指示詞只能宣告**取得**，**放**，或**取得**並**放**函式的替代語法。 唯讀作業只能有**取得**宣告; 僅限寫入的作業只有**放**宣告; 兩者都讀取和寫入同時擁有的作業**取得**和**put**宣告。  
   
@@ -85,7 +85,7 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```
   
- 例如，將值指派的欄位**資料錄集**物件，名為 **_rs_** 衍生自**作者**資料表**pubs**資料庫。 使用**item**屬性來存取第三個**欄位**的**資料錄集**物件**欄位**（集合編製索引的集合零，假設名為第三個欄位 **_au\_fname_**)。 然後呼叫**value （)** 方法**欄位**指派字串值的物件。  
+ 例如，將值指派的欄位**資料錄集**物件，名為 **_rs_** 衍生自**作者**資料表**pubs**資料庫。 使用**item**屬性來存取第三個**欄位**的**資料錄集**物件**欄位**（集合編製索引的集合零，假設名為第三個欄位 **_au\_fname_** )。 然後呼叫**value （)** 方法**欄位**指派字串值的物件。  
   
  這可以表示在 Visual Basic 中以下列四種方法 （Visual basic 獨有的最後兩個表單; 其他語言中沒有對等項目）：  
   

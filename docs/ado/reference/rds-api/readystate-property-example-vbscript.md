@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb3da04956a0306453bbbeab057a381fc5d136ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7614e6b8065d095014d5e34ed12a0386082ca895
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62760890"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694654"
 ---
 # <a name="readystate-property-example-vbscript"></a>ReadyState 屬性範例 (VBScript)
 > [!IMPORTANT]

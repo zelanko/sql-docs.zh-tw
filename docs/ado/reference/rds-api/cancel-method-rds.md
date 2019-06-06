@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 560b5b3d-fba9-4275-8920-9c3e186134f7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 391287674153beffc82716995fa5f49443f77239
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 13ebe9f58be71a4bf7396e7305a94375dbcfd41b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281171"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697021"
 ---
 # <a name="cancel-method-rds"></a>Cancel 方法 (RDS)
 取消執行暫止狀態，非同步方法呼叫。  

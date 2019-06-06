@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0b6fca30201a93b84f59e9356c5201e1070053d5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b6fd63de0b6147b86aa0d6b548669c56aefdcf20
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63311792"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706713"
 ---
 # <a name="index-object-adox"></a>Index 物件 (ADOX)
 表示從資料庫資料表的索引。  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 78bb9a95-7ac4-44b6-818b-d1787f952ed7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0db3b07328e4b528ed923ea10e0b74550345b0d5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: df85810e45ff63de0b12cb8995294e4de6dc4349
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249192"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696900"
 ---
 # <a name="ado-code-examples-vbscript"></a>ADO 程式碼範例 VBScript
 若要了解如何使用 ADO 方法，在 Microsoft® Visual Basic® Scripting Edition (VBScript) 中撰寫時，使用下列程式碼範例。  
@@ -48,4 +48,4 @@ ms.locfileid: "63249192"
 ## <a name="see-also"></a>另請參閱  
  [在 Visual Basic 中的 ADO 程式碼範例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [視覺效果中的 ADO 程式碼範例C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [附錄 d:ADO 範例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [附錄 D：ADO 範例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

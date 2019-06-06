@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 56091fcb-71e1-463a-b8ae-c09108eece2f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 629a193253eac34b99accad3c17ccfb861ea398d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2acf613e7fade721522f7b10b7c6478c9acf302f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63033215"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708733"
 ---
 # <a name="positions-collection-properties-methods-and-events"></a>Positions 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

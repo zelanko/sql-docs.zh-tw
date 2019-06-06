@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: bc9e1a37-e969-47e9-8382-0bbfffa2034f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: afaadf62c38c318c759be1c452ff0953ba19c7d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6ae4a8adbadc97ad2ea5e3659187481fa71e81b0
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065276"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698866"
 ---
 # <a name="adcpropupdateresyncenum"></a>ADCPROP_UPDATERESYNC_ENUM
 指定是否[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法後面隱含[重新同步處理](../../../ado/reference/ado-api/resync-method.md)方法作業，如果是的話，該作業的範圍。  
