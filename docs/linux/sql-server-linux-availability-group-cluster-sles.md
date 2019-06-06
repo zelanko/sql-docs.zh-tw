@@ -8,15 +8,14 @@ manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 72ca07a14495261d61601c4acd503790697ce6a4
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: f69a4c0d98807d11b0ef2b01fb2995a0eeaddf21
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658092"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705592"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 SLES 叢集
 
@@ -123,7 +122,7 @@ ms.locfileid: "58658092"
 
    b. 輸入多點傳送的位址。 指令碼建議為預設值，您可以使用隨機位址。 
 
-   c.  輸入多點傳送連接埠。 指令碼建議 5405 為預設值。 
+   c. 輸入多點傳送連接埠。 指令碼建議 5405 為預設值。 
 
    d. 若要設定`SBD ()`，輸入您想要使用 SBD 的區塊裝置的分割區的持續性的路徑。 在叢集中的所有節點之間必須一致的路徑。 
    最後，指令碼會啟動 Pacemaker 服務，若要讓單一節點叢集上線，並啟用 Web 管理介面 Hawk2。 要用於 Hawk2 URL 會顯示在螢幕上。 

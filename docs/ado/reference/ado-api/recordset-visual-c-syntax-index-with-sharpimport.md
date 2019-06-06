@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6718825c2a7d98541a5fcbcb9a48036332c62f12
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 172582f6beb703f818b6f363099b7ba0cea7dd77
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63033440"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711931"
 ---
 # <a name="recordset-visual-c-syntax-index-with-import"></a>資料錄集 (VisualC++含 #import 語法索引)
 ## <a name="methods"></a>方法  

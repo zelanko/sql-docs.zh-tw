@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b7021f11-8242-4e9f-92e9-1a4472673fb1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8c13d577dbe818038af51a9b736595eb83328b6b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f5b8da9f851e6171b2149d57da200d093d98d0ee
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63033430"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711706"
 ---
 # <a name="recordsetevents-visual-c-syntax-index-with-import"></a>RecordsetEvents (VisualC++含 #import 語法索引)
 ## <a name="events"></a>事件  

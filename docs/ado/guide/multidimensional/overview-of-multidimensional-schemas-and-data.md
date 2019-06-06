@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f06f62768637ebb48ffa6e1cfd2560ff3b53c383
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5c3aa056447bd6e2eb7451db4d9af8090edc54d3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63194910"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699670"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多維度結構描述和資料的概觀
 ## <a name="understanding-multidimensional-schemas"></a>了解多維度的結構描述  

@@ -8,16 +8,15 @@ ms.author: jroth
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: a4411f8ff8b1eae7fa7a28615e34d0711829d081
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 906dd961bcfbb7ea6d8868fdf6eb51cc7bc814aa
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955084"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713600"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的 active Directory 驗證
 

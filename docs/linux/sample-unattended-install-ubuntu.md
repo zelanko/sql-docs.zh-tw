@@ -8,14 +8,13 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: 878eda9c8816e400c873154f1c1cf3d613f8fea3
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: caa08ab4780defb1ddcd6dedd49e261ea9c45625
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579048"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713547"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>範例：適用於 Ubuntu 的自動安裝的 SQL Server 安裝指令碼
 

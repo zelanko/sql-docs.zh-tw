@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d70cf7e3fe370556a3be480a561c9ca9733ed6aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2d879720ed3ee338adcf4bf5b9d6feb5d54e28de
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642495"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710290"
 ---
 # <a name="value-property-example-vc"></a>Value 屬性範例 (VC++)
 此範例示範[值](../../../ado/reference/ado-api/value-property-ado.md)屬性[欄位](../../../ado/reference/ado-api/field-object.md)並[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件顯示欄位和屬性值的***員工***資料表。  

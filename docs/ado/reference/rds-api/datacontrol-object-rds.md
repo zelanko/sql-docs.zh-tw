@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aa05b8b4be3c155c7ca59132892e0863dda60a5f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fdd88251e3d41954dcee6ed3c88612941688cbbb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63134412"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707762"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl 物件 (RDS)
 繫結資料的查詢[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)至一或多個控制項 （例如，文字方塊中，方格控制項或下拉式方塊） 來顯示**資料錄集**網頁上的資料。  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 57b570b93d4e8a6cf10d879659f0886e1c6f0c8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 52ede9c21077c81dd1bd90f12acbfc3dff796d50
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62469293"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709492"
 ---
 # <a name="cellset-object-ado-md"></a>Cellset 物件 (ADO MD)
 表示多維度查詢的結果。 它是從 cube 或其他資料格集中選取的儲存格的集合。  

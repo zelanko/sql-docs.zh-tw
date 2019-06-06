@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1738c7432dce6538fe15c4b23f15f5ab7fe6f219
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 162cac52920b076e4388a74a251cd347137f49cd
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161541"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702013"
 ---
 # <a name="handling-ado-events"></a>處理 ADO 事件
 ADO 事件模型支援發出特定同步和非同步 ADO operations*事件*，或在作業啟動之前或之後完成的通知。 事件是實際的事件處理常式，您在您的應用程式中定義的呼叫。  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0df3ce437d97f2111aa4f980ce926b1fdaccbded
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: dd090be8fb038a3be827d1e03a41117d1033f04e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184020"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707935"
 ---
 # <a name="clustered-property-example-vc"></a>Clustered 屬性範例 (VC++)
 此範例示範[Clustered](../../../ado/reference/adox-api/clustered-property-adox.md)屬性[Index](../../../ado/reference/adox-api/index-object-adox.md)。 請注意，Microsoft Jet 資料庫不支援叢集的索引，因此這個範例會傳回**False** for **Clustered**屬性中的所有索引*Northwind*資料庫。  

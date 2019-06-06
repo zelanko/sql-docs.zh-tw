@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 333b06ef76ae6407ca8a5605f1917dc0bb609aca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7b777179ad83250d9707f7717b5833bbbff4fec7
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027825"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703409"
 ---
 # <a name="position-property-ado"></a>Position 屬性 (ADO)
 指出目前的位置內[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。  

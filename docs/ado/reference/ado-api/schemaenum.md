@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c95ec9525fe0890d241fd6a99a6c298f6ef7568e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4aa145a3c42c5ed807a63dc551e67afe6af95cde
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63315803"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711311"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 指定的結構描述型別**Recordset**可[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法擷取。  

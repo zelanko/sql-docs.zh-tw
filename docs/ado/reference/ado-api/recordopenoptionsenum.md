@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab648d7fe60a27d36e55cd3d859d0a8c442eef50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c0ed637d8e77ef7fc152f994da81db010fa80900
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240339"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712158"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 指定選項，開啟[記錄](../../../ado/reference/ado-api/record-object-ado.md)。 這些值可能會合併使用或者。  

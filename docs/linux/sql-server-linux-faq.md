@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 01/10/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: eafc21d079561b6024d23b3e90bd24dbf7b369fc
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 50397d605b8cb34d1093aec573b973cdbc301da5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774742"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719407"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux 上的 SQL Server 常見問題集 (Faq)
 

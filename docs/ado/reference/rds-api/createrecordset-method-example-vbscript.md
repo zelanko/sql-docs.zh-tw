@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30fcb14c39385c6e7e39ec8ac1556118a4d09f73
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 67dbe13a2fc13e168d5c8ddb535c08d98a82da0f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63297727"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712572"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>CreateRecordset 方法範例 (VBScript)
 > [!IMPORTANT]

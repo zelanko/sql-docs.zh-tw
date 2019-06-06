@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6f46bc9aceeec0e03329572814653a94ea64aa50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0dbbe360864c401d5d8378d2e5c816cfe1a4120c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62708810"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705971"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>Procedures Refresh 方法範例 (VB)
 下列程式碼示範如何重新整理[程序](../../../ado/reference/adox-api/procedures-collection-adox.md)的集合[目錄](../../../ado/reference/adox-api/catalog-object-adox.md)。 這必要的前[程序](../../../ado/reference/adox-api/procedure-object-adox.md)物件從**目錄**可以存取。  

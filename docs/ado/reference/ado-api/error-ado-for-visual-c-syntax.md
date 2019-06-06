@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1c3fafe1-8bcc-4c04-b8d1-f5ffebac00dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21b9527105eeb78fb7e62bd344af1775f2cbfac7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a203e3737ab6157f7aa40db57817404e370e97bd
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63180576"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719298"
 ---
 # <a name="error-ado-for-visual-c-syntax"></a>Error (ADO for Visual C++ 語法)
 ## <a name="properties"></a>屬性  

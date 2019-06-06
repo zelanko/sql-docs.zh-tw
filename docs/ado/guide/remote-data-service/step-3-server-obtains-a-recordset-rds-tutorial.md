@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5dc57cd55667691433515319762f9c4727060cdf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: eb0afbbe470a1cc9cddbf9e9f2f892deb7ce0864
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63316767"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704162"
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>步驟 3：伺服器會取得資料錄集 (RDS 教學課程)
 伺服器程式會使用連接字串和命令文字，來查詢所需的資料列的資料來源。 ADO 通常用來擷取這**資料錄集**，不過，其他 Microsoft 資料存取介面，例如 OLE DB 中，無法使用。  

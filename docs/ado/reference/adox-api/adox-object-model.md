@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 334f96c221e87188bc830c868170852d690e3269
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 035f4ae31a364055cee18ac4026b2c2760d3661d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308373"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708393"
 ---
 # <a name="adox-object-model"></a>ADOX 物件模型
 下圖說明表示和 ADOX 中相關物件的方式。 如需特定物件或集合的詳細資訊，請參閱特定的參考主題中，或是[ADOX 物件](../../../ado/reference/adox-api/adox-objects.md)並[ADOX Collections](../../../ado/reference/adox-api/adox-collections.md)。  

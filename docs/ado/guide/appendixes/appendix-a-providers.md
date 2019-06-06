@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 14194998e699fa3d16ab50ab488c8d1577660dcc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 3f31e5522fdac506e31ffe0bbaa5ad76e3fae87b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719915"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701555"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>附錄 A：資料和服務提供者
 本節說明三種類型的提供者： 資料提供者、 服務提供者，以及服務元件。 提供者分為兩類： 提供與資料提供服務。 A*資料提供者*擁有它自己的資料，且會公開在表格式的格式，您的應用程式。 A*服務提供者*封裝所產生和取用資料，擴充功能，ADO 應用程式中的服務。 服務提供者可能也會進一步定義成*服務元件*，這必須與其他服務提供者或元件搭配運作。

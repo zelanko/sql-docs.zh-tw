@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 02f018052567a82a87d4a541c23ae1ee5ed9e1b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 26c1220a2c8a2db89cd0b70e08df959270f5d839
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184154"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708091"
 ---
 # <a name="catalog-object-properties-methods-and-events"></a>Catalog 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

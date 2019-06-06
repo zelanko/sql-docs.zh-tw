@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ed7273b2fd24690956fa5c5ffe317ad9c00c40ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4239cd2e62db43b4316bad5edbf989f29709213a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62710274"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706241"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 指定要設定權限或擁有權的資料庫物件的類型。  

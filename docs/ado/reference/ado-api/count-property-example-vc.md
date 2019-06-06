@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4dcaa288df7b6e232c187ae50dac3e4ac51d8be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 08ef2f2f9989f9b8dc8dc33b94c73f6ab579eab5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308583"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695531"
 ---
 # <a name="count-property-example-vc"></a>Count 屬性範例 (VC++)
 此範例示範[計數](../../../ado/reference/ado-api/count-property-ado.md)屬性中的兩個集合***員工***資料庫。 屬性會取得每個集合中的物件數目，並設定列舉這些集合的迴圈的上限。  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 49456201-b085-4851-9686-e814136b07be
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 885d201736adb3cd16efbea4f3907cd0aa324128
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 659701a984a675418b8654e9f747efe5d9e07762
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062824"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700330"
 ---
 # <a name="specifying-connection-properties"></a>指定連線屬性
 您可以提供所指定的資訊的大部分[連接字串](../../../ado/guide/data/creating-a-connection-string.md)藉由設定屬性**連線**之前開啟連接的物件。 例如，您可以達到相同的效果中的連接字串所述[建立的連接字串](../../../ado/guide/data/creating-a-connection-string.md)使用下列程式碼。  

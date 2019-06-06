@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8d3ff679af7a577433a8191d3beca10eed1d22cf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fcc44037ac746621c044bca755fd9b957356dc38
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281903"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705800"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions 方法 (ADOX)
 指定的權限[群組](../../../ado/reference/adox-api/group-object-adox.md)或是[使用者](../../../ado/reference/adox-api/user-object-adox.md)物件上。  

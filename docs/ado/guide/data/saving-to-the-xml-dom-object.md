@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4d20fd28-aaf8-4232-83ce-f9d1e5f93dae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6f47f3c40ed85cf0b38615176309f47bfb6ce542
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 47462e323e77e23b70a85321764413c40494f3f5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63067544"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701611"
 ---
 # <a name="saving-to-the-xml-dom-object"></a>儲存到 XML DOM 物件
 下列 Visual Basic 程式碼所示，您可以在 MSXML DOM 物件的執行個體的 XML 格式儲存資料錄集：  

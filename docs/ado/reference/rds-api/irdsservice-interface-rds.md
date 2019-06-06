@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 01044c3a-ed38-4144-bc43-fe38a6d22d04
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7341f69d500274367c5c0a853d3fadf1261b9ee4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 3a479604c52579fe3ad367993158767bbe4d1778
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63315863"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712531"
 ---
 # <a name="irdsservice-interface-rds"></a>IRDSService 介面 (RDS)
 會公開[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)方法，用來將指標傳回物件的功能更強大的版本中的要求的介面。  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 832372ee3f8e80a9da4a758c759d9b5399a20a57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 43c2043917d6b21293fea71566dfdf1202b6f59e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309723"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695659"
 ---
 # <a name="cursorlocationenum"></a>CursorLocationEnum
 指定資料指標服務的位置。  

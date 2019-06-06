@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: be459530-6f28-458f-ad70-759eae3ae08c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9c0a06fbd2d76712eff6c6aac0e97e09b4338c5f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 30111c664368f0fc30df866045a021b96b671e1c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184229"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709971"
 ---
 # <a name="axes-collection-properties-methods-and-events"></a>Axes 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 806780c69be45983a4021a6e62c8dab15aa61f20
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d72dff94e1e88040edb6710b5f26a342100a8170
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240011"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711952"
 ---
 # <a name="recordset-ado-for-visual-c-syntax"></a>Recordset (ADO for Visual C++ 語法)
 ## <a name="methods"></a>方法  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0440b793-99c7-49a2-b3e2-ec5b1a7e3e60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6aaf41bcc3759fe52cc1d15abb980227055f2de5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 65abf4dfcd8db39a312640fe4d863d6fb01852fc
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62864635"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697769"
 ---
 # <a name="lineseparatorsenum"></a>LineSeparatorsEnum
 指定做為文字行分隔符號的字元[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。  

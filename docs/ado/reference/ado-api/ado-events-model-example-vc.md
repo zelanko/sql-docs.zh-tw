@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e9f40c4a5810ab712c4b6f67737fd308594de97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8a79d6e39cb71c7dd7c5e055d9aa71cba23bc9c1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248974"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718562"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 事件模型範例 (VC++)
 視覺效果C++一節[ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)提供如何具現化 ADO 事件模型的一般描述。 以下是具現化所建立的環境內的事件模型的特定範例 **#import**指示詞。  
@@ -29,7 +29,7 @@ ms.locfileid: "63248974"
   
 -   **#Import**指示詞會解析**typedef**的方法簽章資料類型和修飾詞，以其基本形式。  
   
--   必須覆寫的純虛擬方法都會全部加上"**raw_**"。  
+-   必須覆寫的純虛擬方法都會全部加上"**raw_** "。  
   
  部分程式碼只會反映程式碼撰寫樣式。  
   

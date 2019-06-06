@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: d6f3d0b7fd60a39ce81a8464abdb6f2908f54239
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 266982731cc98121e6456d10fb93c7ccffaa4b22
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774754"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719337"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的最新消息
 

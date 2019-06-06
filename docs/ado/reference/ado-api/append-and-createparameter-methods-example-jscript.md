@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f9bd0c28d481ef107dc31e36e13582fba459b502
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 982c379f24731f80f30249b98ed2a571111de1f4
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248805"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718143"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>附加和 CreateParameter 方法範例 (JScript)
 這個範例會使用[Append](../../../ado/reference/ado-api/append-method-ado.md)並[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)執行預存程序輸入參數的方法。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**AppendJS.asp**。  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01b7a1b7829ace46cac7be21d33d9837845db9a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f654bc1ccd913c5fc31f81cae67ffdb84e80f952
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955768"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704161"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>步驟 5：DataControl 會設為可用 (RDS 教學課程)
 傳回**資料錄集**物件是可供使用。 您可以檢查、 瀏覽，或進行編輯，就像其他任何**資料錄集**。 您可以執行與**資料錄集**取決於您的環境。 Visual Basic 和 VisualC++有可用的視覺控制項**資料錄集**直接或間接與啟用的資料控制項的協助。  

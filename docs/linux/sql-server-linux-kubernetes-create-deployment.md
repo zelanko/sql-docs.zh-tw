@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6541cae5271e35fd5ad0030ffc8625fc97a46149
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 70a83efa128d8d58776907541fef9d6888af51e1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63231133"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705680"
 ---
 # <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>建立部署指令碼以 SQL Server Always On 可用性群組
 

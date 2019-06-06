@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8646fba41809fe3ed6a062e7a066ed0dce5c007
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e0ac86f4ceac4c806bfa3f6df5cc9e2024b4d03d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63298920"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712590"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
 建立空的中斷[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8dc465261748c1efd340e78ddc2f3e12d601e931
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: bbf05e0b177cc61ed9de757db46f8950aaa7dccd
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281613"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705623"
 ---
 # <a name="users-collection-adox"></a>Users 集合 (ADOX)
 包含所有預存[使用者](../../../ado/reference/adox-api/user-object-adox.md)的物件[類別目錄](../../../ado/reference/adox-api/catalog-object-adox.md)或是[群組](../../../ado/reference/adox-api/group-object-adox.md)。  

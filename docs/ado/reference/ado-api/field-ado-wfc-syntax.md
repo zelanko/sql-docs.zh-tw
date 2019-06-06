@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ea2245c3f57b5ad3b14847f15791575afde1043c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 274b8c2c04688e3c14325189c0a9aacdf56920e4
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63031966"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697875"
 ---
 # <a name="field-ado---wfc-syntax"></a>Field (ADO - WFC 語法)
 ## <a name="package-commswfcdata"></a>package com.ms.wfc.data  

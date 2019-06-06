@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2bf4b00d-045c-444e-8af7-8af6297ed418
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 46c6017f7b0c9bbeeb654c2cf6aa3965aafff8e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c2f20cbad4a83d17ae4255962d613652e4fb3794
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281590"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718941"
 ---
 # <a name="datecreated-property-adox"></a>DateCreated 屬性 (ADOX)
 表示物件的建立的日期。  

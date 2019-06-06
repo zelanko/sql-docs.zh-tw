@@ -40,13 +40,13 @@ helpviewer_keywords:
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10d6715a19212c87ece9c890ee99516571713d4f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c146e53379f1a81948135d9d993150f4e1e4046e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62710340"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706347"
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog 屬性 (ADOX)
 指定的父目錄的資料表、 使用者或資料行的物件，來提供提供者特定屬性的存取權。  

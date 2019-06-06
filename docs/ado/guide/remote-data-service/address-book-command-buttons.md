@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5e3b29fd5f4fab7e487be5be18752ac7de892537
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 731189838918a04ec211ec0bcac3f66843658177
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222004"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699641"
 ---
 # <a name="address-book-command-buttons"></a>通訊錄命令按鈕
 通訊錄應用程式包含下列的命令按鈕：  

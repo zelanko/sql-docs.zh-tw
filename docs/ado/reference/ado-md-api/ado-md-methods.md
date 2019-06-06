@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 78bfa2f0-358b-40bb-be2e-16262752d676
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9c80535cb6482bb6e339998843a6476813430f40
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c8d3680b73ffebd7c01aa3ec10b32ee78ca0975e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63288275"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709869"
 ---
 # <a name="ado-md-methods"></a>ADO MD 方法
 

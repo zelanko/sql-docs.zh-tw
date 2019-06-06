@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 627bbbafd272b6bb7682b776132445041207f8e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c9ec47ffb89724e8a7991dae1d2296aa813e0c5e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281943"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704319"
 ---
 # <a name="customization-file-connect-section"></a>自訂檔案 Connect 區段
 處理常式的預設行為是拒絕所有連線。 **連線**區段會指定該行為的例外狀況。 例如，如果要將所有**連線**區段已不存在或空的則預設無法建立任何連線。  

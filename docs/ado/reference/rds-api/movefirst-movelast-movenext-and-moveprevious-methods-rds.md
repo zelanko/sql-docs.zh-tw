@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3afc55ca26a8462eb5662287288ee885f9104a8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7d3a46791d81557b3e93da4a0d330d118e5b00b5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225828"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712538"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (RDS)
 移至 [first、 last、 下一步]，或上一個記錄中指定[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  

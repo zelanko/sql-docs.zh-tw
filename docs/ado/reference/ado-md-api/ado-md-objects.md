@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 42b0aed3c63b1303e4d8743ea441348c351be822
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c06214d23441782cbe5e14433b16928224d5d48c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062657"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709846"
 ---
 # <a name="ado-md-objects"></a>ADO MD 物件
 

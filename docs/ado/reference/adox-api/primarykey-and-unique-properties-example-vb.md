@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10f5a1a5c1436181a75329bfb0371c8836d7ac6e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 543eb6d96d2666d6395960c06a1c41727eb1f414
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62709866"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706132"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey 和 Unique 屬性範例 (VB)
 此範例示範[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)並[Unique](../../../ado/reference/adox-api/unique-property-adox.md)的屬性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 程式碼會建立新的資料表，兩個資料行。 **PrimaryKey**並**Unique**屬性用來讓一個資料行不允許重複的值是主索引鍵。  

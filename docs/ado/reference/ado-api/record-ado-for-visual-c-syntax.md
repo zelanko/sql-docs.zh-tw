@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c4ce8532-a4d8-4f74-9488-9389b6695958
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 87b4460293e3824232c6115f5ef1829466f4c871
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5c34c7d72a1cbc1a035f8b1232f894017422c010
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63280405"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719151"
 ---
 # <a name="record-ado-for-visual-c-syntax"></a>Record (ADO for Visual C++ 語法)
 ## <a name="methods"></a>方法  

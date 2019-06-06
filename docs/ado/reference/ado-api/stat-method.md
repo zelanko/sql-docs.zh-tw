@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 127aab5e00247ce5550f25e2a281e190472b0186
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5f19d1b9ef0dc3b200a895d05728f6985544203b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740338"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719075"
 ---
 # <a name="stat-method"></a>Stat 方法
 擷取有關的資訊[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。  

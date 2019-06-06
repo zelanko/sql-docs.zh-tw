@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: c4a1f2e7-19ff-465e-9d9a-275ac0f4dc6a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb74f32ba6eb464707721b5529cb0478d1b4ceb2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: bd734f9cc74a00ac3556f142ec5a6922513429da
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63134332"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712600"
 ---
 # <a name="dataspace-object-rds-properties-methods-and-events"></a>DataSpace 物件 (RDS) 屬性、方法和事件
 > [!IMPORTANT]

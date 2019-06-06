@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3d9ec89a-cc85-4091-b6f0-2bb6a6826d5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 70e0fc63ac67b9e475e1e9fb65a81fadd3293c59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 95247fbbe7da9ce39acbf6cb709a7400ead770ea
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184097"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703943"
 ---
 # <a name="columns-collection-properties-methods-and-events"></a>Columns 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

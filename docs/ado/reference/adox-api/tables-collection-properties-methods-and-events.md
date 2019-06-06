@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 98101a52-53a6-4287-a8d9-2a7c76c3e0b9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d55a8ab4bce917f417e0a99a0ce7c176463484f4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9329ec79f61458700a2d7604b039aad290730e7e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281475"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718833"
 ---
 # <a name="tables-collection-properties-methods-and-events"></a>Tables 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

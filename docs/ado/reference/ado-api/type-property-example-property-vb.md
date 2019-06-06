@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 487f32fa2ec374d08589766b75ce97a1b35e2aac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a6c9482b1c295769465aec1a063aeac017fe79c8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910477"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710543"
 ---
 # <a name="type-property-example-property-vb"></a>Type 屬性範例 (Property) (VB)
 此範例示範[型別](../../../ado/reference/ado-api/type-property-ado.md)屬性。 它是用於列出集合中的類型與名稱類似的公用程式模型[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)，[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)，依此類推。  

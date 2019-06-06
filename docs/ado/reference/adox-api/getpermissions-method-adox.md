@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6517b09e682853492cd129e0c43abfd7164ed2e7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8bff406485266af99a1c2538a4df237fd5bf43bb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63313266"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712088"
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions 方法 (ADOX)
 傳回的權限[群組](../../../ado/reference/adox-api/group-object-adox.md)或是[使用者](../../../ado/reference/adox-api/user-object-adox.md)物件或物件容器上。  

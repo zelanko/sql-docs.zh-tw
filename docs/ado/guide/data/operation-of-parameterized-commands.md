@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: faa4d4887079064ac6ccbe9536ac6c36fe8b9f79
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4001ac5b449609683293cd3174dc4410cabf4c4b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302344"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701871"
 ---
 # <a name="operation-of-parameterized-commands"></a>參數化命令的作業
 如果您正在使用大型的子系**資料錄集**，特別是相較於父代的大小**資料錄集**，但需要存取只有少數子章節中，您可能會發現它使用更有效率參數化的命令。  

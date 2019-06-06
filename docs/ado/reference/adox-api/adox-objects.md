@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dab1a748eeda5f1b192010203bd59760942b3611
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 89c414c684ee41e7b7607acc1142d01c961566a1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309191"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708420"
 ---
 # <a name="adox-objects"></a>ADOX 物件
 ## <a name="adox-object-summary"></a>ADOX 物件摘要  

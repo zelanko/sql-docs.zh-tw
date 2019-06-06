@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: bef0fcb1-8060-4faa-84f0-3d52e9c4526f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d41f639dce72e0d424f0c8f61593cca870aa82ed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f26ce2abdc80f1f59cc355aae61c19cec25e7daf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63295413"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709225"
 ---
 # <a name="hierarchies-collection-ado-md"></a>Hierarchies 集合 (ADO MD)
 包含一組[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)維度中的物件。  

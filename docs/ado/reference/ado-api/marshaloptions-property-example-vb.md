@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aad4088e8a102ea3afbf2cd8e75e3fe605c268cc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b4571eae744998c287b7388bc6b098f11a4543bb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62864153"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707695"
 ---
 # <a name="marshaloptions-property-example-vb"></a>MarshalOptions 屬性範例 (VB)
 這個範例會使用[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)屬性來指定哪些資料列會傳送至伺服器的所有資料列或僅修改資料列。  

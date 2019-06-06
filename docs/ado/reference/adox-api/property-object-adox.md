@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2502dcdab170102f526aa1ea0fe67235e6bf3048
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2f07d14d30f3fd87be8fc61552716a931ed86d68
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281905"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705961"
 ---
 # <a name="property-object-adox"></a>Property 物件 (ADOX)
 表示 ADOX 物件的特性。  

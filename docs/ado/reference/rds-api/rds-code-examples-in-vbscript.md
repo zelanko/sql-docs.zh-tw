@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 73d316eaedaaa8eab1b68fba6edd04772d935e4b
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+manager: jroth
+ms.openlocfilehash: 0dcfa547b880f58b86c34bd80c313ee4adfaad7c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63458636"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701635"
 ---
 # <a name="rds-code-examples-in-vbscript"></a>VBScript 中的 RDS 程式碼範例
 > [!IMPORTANT]

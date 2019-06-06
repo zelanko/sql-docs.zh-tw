@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 31434e08443bc533c7e2ae14ed70d6962aea04cf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 52cb60fc8d0c214bbc3d827617cf088a89b2aa83
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214752"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704296"
 ---
 # <a name="datafactory-customization"></a>DataFactory 自訂
 遠端資料服務 (RDS) 可用來輕鬆地在三層式用戶端/伺服器系統執行資料存取。 用戶端資料控制項指定遠端資料來源或連接字串上執行查詢的連接和命令字串參數和[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件執行更新的參數。  

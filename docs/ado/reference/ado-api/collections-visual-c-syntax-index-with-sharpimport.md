@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1fa18eeacad58195c42d03b12f03332c332b0a35
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9f761a0d65954e104be0849f10c786cc709085a1
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155222"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718245"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>集合 (VisualC++含 #import 語法索引)
 您最好知道集合繼承某些常用的方法和屬性。  

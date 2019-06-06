@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d2740c7fb25b71e3588bebb924ea9d5f907e3560
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7225f8a7612f08947720eb2912722dc92b7a2a96
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910897"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710803"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
 擷取時指定的格式[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)做為字串。  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 078b48c36d0ee2a1b3f368b8e6baf7346ed343fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f08d007395c85ef6b423c7db6c1aed5b39cb27ca
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248927"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718545"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 介面
 **ADORecordsetConstruction**介面用來建構 ADO **Recordset**的 OLE DB 物件**資料列集**C 中的物件 /C++應用程式。  

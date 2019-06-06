@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 851106109d195ae6f5d6f66d3944e486d58504c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7167067d0dc5942bc898c4cc2f01cad2a44ec559
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027833"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703481"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
 指定要儲存的格式[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

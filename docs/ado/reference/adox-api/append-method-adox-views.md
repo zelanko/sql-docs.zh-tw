@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 584c3d0144197425b307f2d4a04bd8a09f27a36c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f5f58ff2f38ff80d90750901b8943efc00f389c6
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184214"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718950"
 ---
 # <a name="append-method-adox-views"></a>Append 方法 (ADOX Views)
 建立新[檢視](../../../ado/reference/adox-api/view-object-adox.md)物件，並將其附加至[檢視](../../../ado/reference/adox-api/views-collection-adox.md)集合。  

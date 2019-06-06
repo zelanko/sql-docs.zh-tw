@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d75a5dcd8a09388c031e4e01c8bb8b9c1d62bb80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 069e8d2bbc85027c0c0deab6bf05c9da7b0d1f17
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63134482"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707722"
 ---
 # <a name="dataspace-object-rds"></a>DataSpace 物件 (RDS)
 > [!IMPORTANT]

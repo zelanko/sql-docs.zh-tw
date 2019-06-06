@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4bb98bb7c23d20baf696c553a088cd03f2aa76e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f528ef5c83f0a9922c32fb06955d0ff921bfae6c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63315790"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711432"
 ---
 # <a name="rowset-property-ado"></a>Rowset 屬性 (ADO)
 取得或設定 OLE DB**資料列集**物件上的往返**ADORecordsetConstruction**物件。 當您使用 put_Rowset 時，要將資料列集轉換成 ADO**資料錄集**物件。  

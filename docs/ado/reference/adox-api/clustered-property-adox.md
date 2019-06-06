@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f273509d8080a3f02a624e77001bb14569730ddc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5ffb6fd01ebd565921a23a42c2ea0c2eced20a0b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184140"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707929"
 ---
 # <a name="clustered-property-adox"></a>Clustered 屬性 (ADOX)
 指出是否為叢集索引。  
@@ -34,7 +34,7 @@ ms.locfileid: "63184140"
  設定，並傳回**布林**值。  
   
 ## <a name="remarks"></a>備註  
- 預設值為 **[False]**。  
+ 預設值為 **[False]** 。  
   
  這個屬性是唯讀[Index](../../../ado/reference/adox-api/index-object-adox.md)已經附加到集合的物件。  
   

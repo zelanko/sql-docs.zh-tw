@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f58c6d22ff5a76836c9e348cc387eadd1dc8cf15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a1ecd6dce77a1e8ad04313707c62e4f20460be15
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62469518"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709491"
 ---
 # <a name="cellset-object-properties-methods-and-events"></a>Cellset 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

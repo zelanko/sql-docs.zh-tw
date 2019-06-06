@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0c8bfe0781af1bf3ca5dcd4ae642ffb49ef81817
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: cf814281f2700cac9158f66dee9a44187817ea5e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63314694"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711279"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Seek 方法和 Index 屬性範例 (VC++)
 這個範例會使用[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[Seek](../../../ado/reference/ado-api/seek-method.md)方法並[索引](../../../ado/reference/ado-api/index-property.md)搭配屬性指定***員工識別碼***，以找出員工的姓名***員工***Nwind.mdb 資料庫資料表。  

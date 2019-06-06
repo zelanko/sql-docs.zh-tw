@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 0025687e-e20d-4c36-8242-b9ab56e50706
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aa0f3ba93c2af34a76d91ebe05ef6612554a687f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0a52fcccbe9f1ba3423f39f5ca3be61b09089d42
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63280630"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718976"
 ---
 # <a name="dimensions-collection-properties-methods-and-events"></a>Dimensions 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

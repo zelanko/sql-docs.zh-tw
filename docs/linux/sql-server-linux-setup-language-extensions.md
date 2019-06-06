@@ -7,15 +7,14 @@ manager: cgronlun
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b694cde8784a1607c85ed9ab7dfcc4d770a6d938
-ms.sourcegitcommit: 3b266dc0fdf1431fdca6b2ad34ae5fd38abe9f69
+ms.openlocfilehash: 8c796d8f445f4cc1b02a0f49d12cde55e0a7ab4b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66186812"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719375"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>在 Linux 上安裝 SQL Server 2019 語言延伸模組 (Java)
 

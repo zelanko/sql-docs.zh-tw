@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 822430c56070bb459e36ca3a3310d186258aea34
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9992b0f7e7281ec318f978ff487107fc832c961f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63298224"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697530"
 ---
 # <a name="refresh-method-rds"></a>Refresh 方法 (RDS)
 重新查詢中指定的資料來源[Connect](../../../ado/reference/rds-api/connect-property-rds.md)屬性和更新查詢結果。  

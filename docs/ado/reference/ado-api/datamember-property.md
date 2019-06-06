@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b7a1bb2d55fbf4e8d2030c612a1d000b93ca1110
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9de69478469a6bd177d12beab96e199b4720f3f5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308740"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695491"
 ---
 # <a name="datamember-property"></a>DataMember 屬性
 表示將會從擷取的資料成員名稱[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)所參考[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)屬性。  

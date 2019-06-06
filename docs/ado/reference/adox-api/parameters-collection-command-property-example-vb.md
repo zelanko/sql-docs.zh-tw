@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 84091a0d01f23fe870f6f0dbfb01bced2bff3e0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8d4aa41707757b42fb33e918b0d1465a884a14bb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62710225"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706255"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Parameters 集合、Command 屬性範例 (VB)
 下列程式碼示範如何使用[命令](../../../ado/reference/adox-api/command-property-adox.md)屬性[命令](../../../ado/reference/ado-api/command-object-ado.md)擷取程序的參數資訊的物件。  

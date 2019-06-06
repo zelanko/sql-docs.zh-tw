@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e39b7094b4b4543b60431f847ed792f18ace31f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 11c930efdffe5eb685494843f2b0abe7b753ea3d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63040814"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710412"
 ---
 # <a name="updatebatch-method"></a>UpdateBatch 方法
 寫入磁碟中的所有暫止的批次更新。  

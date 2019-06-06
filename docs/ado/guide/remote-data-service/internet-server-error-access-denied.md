@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e5b43cfa-da8d-430d-a2ab-5443dda47a16
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b7c562e57341dd027a4cd9bdc3a0fa4bbe51ae5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1a7dbb125c3a320ac380d91b71aff7826c17e15d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62634379"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718322"
 ---
 # <a name="internet-server-error-access-denied"></a>網際網路伺服器錯誤：拒絕存取
 如果您收到這個錯誤，通常表示 Microsoft 網際網路資訊服務 (IIS) 會傳回下列狀態：  

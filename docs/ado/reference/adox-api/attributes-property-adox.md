@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ecced3970d5f0bebff4ad0b7a6ae6f7798cdc3e8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f70187036c644490361a0ad7528aa935619b4002
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184190"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708055"
 ---
 # <a name="attributes-property-adox"></a>Attributes 屬性 (ADOX)
 描述資料行的特性。  

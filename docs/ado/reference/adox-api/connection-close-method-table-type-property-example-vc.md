@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 133e0c86db9216d4959d8ee81fdc48f62c64d4fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6f244c40ec005f07b6b310f01f3027f80d7862bc
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63183880"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703562"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Connection Close 方法、Table Type 屬性範例 (VC++)
 設定[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)屬性設**Nothing**應該 「 關閉 」 目錄。 相關聯的集合是空的。 從目錄中的結構描述物件所建立的任何物件會被遺棄。 任何已快取這些物件的屬性仍然可以使用，但嘗試讀取屬性需要呼叫提供者將會失敗。  

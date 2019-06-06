@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d221287fc0a945b0325ef9bbb92c89888e130c7b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6d0c9af0bf459c77414c5c7f63d176d396b9e671
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281417"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712268"
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Views 和 Fields 集合範例 (VB)
 下列程式碼示範如何使用[命令](../../../ado/reference/adox-api/command-property-adox.md)屬性並[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)来擷取之檢視的欄位資訊物件。  

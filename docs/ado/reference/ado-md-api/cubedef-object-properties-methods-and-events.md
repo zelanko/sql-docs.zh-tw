@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 5dac737a-b77e-47d3-9228-cd52b7a97b0a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b0f5877343246a6328e9e709b7f205ef82f0922
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 19ac2cb367e076448e4831a3fd5825dfdf17d65e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955752"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709399"
 ---
 # <a name="cubedef-object-properties-methods-and-events"></a>CubeDef 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

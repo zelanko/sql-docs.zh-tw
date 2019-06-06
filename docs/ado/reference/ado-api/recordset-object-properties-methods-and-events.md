@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 038797e8376b8bff6b0e521ef8b2753d41706fd8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1feb7d741a867f729df83442ba4d9f407a062710
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63033450"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711969"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>資料錄集物件屬性、 方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

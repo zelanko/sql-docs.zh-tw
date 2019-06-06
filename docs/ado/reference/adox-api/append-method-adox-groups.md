@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 171aaa250930d5563d8ce6ec3b08b5939710b881
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b6b9740b58ef53fd4fcc2becda50f73609a1bf5c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206350"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708360"
 ---
 # <a name="append-method-adox-groups"></a>Append 方法 (ADOX Groups)
 加入新[群組](../../../ado/reference/adox-api/group-object-adox.md)物件[群組](../../../ado/reference/adox-api/groups-collection-adox.md)集合。  

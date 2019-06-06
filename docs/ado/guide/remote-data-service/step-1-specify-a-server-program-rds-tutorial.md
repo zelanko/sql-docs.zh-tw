@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5583f9b2c5093859e9bb5d3fd0eb9444828cb4bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 03d60a00a116f771e3854a4fe1b6b5ec512c0708
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62675855"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704175"
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>步驟 1:指定伺服器程式 (RDS 教學課程)
 在最常見的案例中，使用[rds。DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)物件[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法，以指定預設 server 計畫[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)，或您自己自訂的伺服器程式 （商務物件）。 伺服器程式具現化伺服器和伺服器程式的參考或*proxy*，則會傳回。  

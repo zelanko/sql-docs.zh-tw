@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e544c3f373f5e85254d40915e6b6f241a6b70379
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5fc38ed5f4c7fb7e2d12eaa1853b57eb0cdbc13a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225892"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712561"
 ---
 # <a name="onreadystatechange-event-rds"></a>onReadyStateChange 事件 (RDS)
 **OnReadyStateChange**事件會被呼叫時的值[ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)屬性變更。  

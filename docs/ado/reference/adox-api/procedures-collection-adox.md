@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 60d967c6ace03180ae596a3e7f45c830d4bec54b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 101cb855ea4d73b5f537e8738ab3177b7f618fbe
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62709155"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706060"
 ---
 # <a name="procedures-collection-adox"></a>Procedures 集合 (ADOX)
 包含所有[程序](../../../ado/reference/adox-api/procedure-object-adox.md)的目錄物件。  

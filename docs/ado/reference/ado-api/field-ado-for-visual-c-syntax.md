@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 04631b08-3937-440b-ac09-cd166f239908
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e65d9922a040fa1a24442c98e9d16b57d29188db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 923bdec6d0a3bae9f826d83db31fa9311b2101cf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63267192"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697888"
 ---
 # <a name="field-ado-for-visual-c-syntax"></a>Field (ADO for Visual C++ 語法)
 ## <a name="methods"></a>方法  

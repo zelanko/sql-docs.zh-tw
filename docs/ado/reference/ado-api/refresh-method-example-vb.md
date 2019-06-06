@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ecf2064576a9124a34d8ab70873f8848e9bfd6d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c44797b663007600b66db3d40d910d7f2459ad89
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63033370"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711695"
 ---
 # <a name="refresh-method-example-vb"></a>Refresh 方法範例 (VB)
 此範例示範如何使用[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)方法，以重新整理[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)預存程序的集合[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  

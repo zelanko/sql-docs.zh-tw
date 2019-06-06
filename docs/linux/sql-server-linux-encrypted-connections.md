@@ -7,17 +7,16 @@ ms.author: vinsonyu
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 9506c8c27e17f59c95a1cfeff5cd3885d1657b79
-ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
+ms.openlocfilehash: 97714d09839c873c96684579e70e3269f96b0e31
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52826083"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705665"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>將 Linux 上的 SQL Server 連線加密
 
@@ -30,7 +29,7 @@ ms.locfileid: "52826083"
 - 目前的系統時間必須晚 [有效期自] 屬性的憑證和之前的有效憑證的屬性。
 - 憑證必須是為了伺服器驗證而準備的。 這需要指定伺服器驗證 (1.3.6.1.5.5.7.3.1) 憑證的增強金鑰使用方法屬性。
 - 必須可以使用 AT_KEYEXCHANGE KeySpec 選項來建立憑證。 通常，憑證的金鑰使用方法屬性 (KEY_USAGE) 也包括金鑰編密 (CERT_KEY_ENCIPHERMENT_KEY_USAGE)。
-- 憑證的 Subject 屬性必須指出，一般名稱 (CN) 為相同的主機名稱或伺服器電腦的完整的網域名稱 (FQDN)。 注意：支援萬用字元憑證。
+- 憑證的 Subject 屬性必須指出，一般名稱 (CN) 為相同的主機名稱或伺服器電腦的完整的網域名稱 (FQDN)。 注意:支援萬用字元憑證。
 
 ## <a name="configuring-the-openssl-libraries-for-use-optional"></a>設定 （選擇性） 使用 OpenSSL 程式庫
 您可以建立中的符號連結`/opt/mssql/lib/`參考其中的目錄`libcrypto.so`和`libssl.so`程式庫應該用於加密。 這非常有用，如果您想要強制使用 OpenSSL 系統所提供的預設值以外的特定版本的 SQL Server。 如果這些符號連結不存在，SQL Server 就會載入系統上的預設設定 OpenSSL 程式庫。
@@ -69,7 +68,7 @@ TLS 用來加密從用戶端應用程式的連線[!INCLUDE[ssNoVersion](../inclu
         - **RHEL**:將憑證複製到```/etc/pki/ca-trust/source/anchors/```使用```update-ca-trust```以便讓它成為系統 CA 憑證。
         - **SUSE**:將憑證複製到```/usr/share/pki/trust/anchors/```使用```update-ca-certificates```以便讓它成為系統 CA 憑證。
         - **Windows**：為目前使用者憑證的.pem 檔案]-> [匯入信任的根憑證授權單位]-> [憑證
-        - **macOS**: 
+        - **macOS**： 
            - 複製到憑證 ```/usr/local/etc/openssl/certs```
            - 執行下列命令，以取得雜湊值： ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
            - 將憑證重新命名的值。 例如： ```mv mssql.pem dc2dd900.0```＞。 請確定 dc2dd900.0 位於 ```/usr/local/etc/openssl/certs```
@@ -135,5 +134,5 @@ TLS 用來加密從用戶端應用程式的連線[!INCLUDE[ssNoVersion](../inclu
 |--- |--- |
 |不受信任的授權單位所核發的憑證鏈結。  |當用戶端無法驗證 SQL Server 在 TLS 信號交換期間提供之憑證的簽章時，就會發生此錯誤。 請確定用戶端所信任是[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]直接，憑證或 CA 簽署的 SQL Server 憑證。 |
 |目標主體名稱不正確。  |請確定 SQL Server 的憑證上的 [一般名稱] 欄位符合用戶端的連接字串中指定的伺服器名稱。 |  
-|遠端主機已強制關閉現有的連接。 |當用戶端不支援所需的 SQL Server 的 TLS 通訊協定版本時，會發生此錯誤。 例如，如果[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]已設定為需要 TLS 1.2，請確定您的用戶端也支援 TLS 1.2 通訊協定。 |
+|遠端主機已強制關閉一個現有連線。 |當用戶端不支援所需的 SQL Server 的 TLS 通訊協定版本時，會發生此錯誤。 例如，如果[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]已設定為需要 TLS 1.2，請確定您的用戶端也支援 TLS 1.2 通訊協定。 |
 | | |   

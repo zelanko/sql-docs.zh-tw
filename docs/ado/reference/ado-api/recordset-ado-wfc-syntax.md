@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: bd1f571e-007f-432e-ada1-5c3e436c1a22
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e97cc3c5e758cd105fb01a471124fee4cd46665e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9d2b9a08dd6c9951d9603c1c27bc56c6691433cf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239542"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711949"
 ---
 # <a name="recordset-ado---wfc-syntax"></a>Recordset (ADO - WFC 語法)
 ## <a name="package-commswfcdata"></a>package com.ms.wfc.data  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e1c5cfeece57c200763402a1300a0f00afb92aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: abe24492388b832d3e6e27ea33f36c47fc79a97f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062689"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709860"
 ---
 # <a name="ado-md-object-model"></a>ADO MD 物件模型
 本主題描述表示和 ADO MD 中相關物件的方式  

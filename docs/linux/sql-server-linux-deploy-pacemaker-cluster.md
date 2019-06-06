@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 49f5e3fd6250d3a9bb20ff68927bc66fa1e5d426
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: be1bae381cf9eb07180299130917cb6cbf3bfec3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211537"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705548"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>部署在 Linux 上的 SQL server 的 Pacemaker 叢集
 

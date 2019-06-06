@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7450e2e64d7054749aa4b980e1e36b7cf09ff022
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 26e9578ad14ea35f386ce61345f5b95e20d714ec
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308236"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707678"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions 和 FetchOptions 屬性範例 (VBScript)
 > [!IMPORTANT]

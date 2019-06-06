@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a64a4f1a51d678e70516f277c08071f5884492c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 92247a31eeb5f3e70b54edfaff33ae15340b9df1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225846"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712430"
 ---
 # <a name="query-method-rds"></a>Query 方法 (RDS)
 會使用有效的 SQL 查詢字串傳回[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 23302543e43ca3f378e2d7915007490186ce6ec0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b7235d0b950c068380e60d08969b84806e3354d4
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63217678"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718775"
 ---
 # <a name="rds-code-examples"></a>RDS 程式碼範例
 > [!IMPORTANT]

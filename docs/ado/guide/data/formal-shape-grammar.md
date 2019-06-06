@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3b26eaeb804f8d92a7122814641cadf5889b77b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0af2421a0d1f80922560be556062c89074c21838
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161411"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701995"
 ---
 # <a name="formal-shape-grammar"></a>正式 Shape 文法
 這是用於建立任何圖形命令的正式文法：  

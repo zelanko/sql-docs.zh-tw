@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4ff9e4c7f1903a187869f15573893d9f7d0c2fe7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b8c271409657aa48ea1187c719254f2eef6b89b8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027510"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711038"
 ---
 # <a name="stayinsync-property-example-vb"></a>StayInSync 屬性範例 (VB)
 此範例示範如何[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)屬性可協助存取的資料列，以階層[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

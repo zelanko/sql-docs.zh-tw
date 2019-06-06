@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c9426757-9cdd-4a95-b506-d3d011569109
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ff3e82608c83646198bbf74f537ca76be427d4bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 50e0aeae082ad3ad70462c172a3dfaa157047411
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63288193"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712050"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>Groups 和 Users Append、ChangePassword 方法範例 (VB)
 此範例示範[Append](../../../ado/reference/adox-api/append-method-adox-groups.md)方法[群組](../../../ado/reference/adox-api/groups-collection-adox.md)，以及[附加](../../../ado/reference/adox-api/append-method-adox-users.md)方法[使用者](../../../ado/reference/adox-api/users-collection-adox.md)藉由新增新的[群組](../../../ado/reference/adox-api/group-object-adox.md)和新[使用者](../../../ado/reference/adox-api/user-object-adox.md)系統。 新**群組**附加至**群組**的新集合**使用者**。 因此，新**使用者**新增至**群組**。 此外， [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)方法用來指定**使用者**密碼。  

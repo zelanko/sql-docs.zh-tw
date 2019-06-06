@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f948febd-c885-4621-823b-421e116fec4e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 54c051e50c1973a711782a8e355629e9c7b05c3f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 437780d182c8c9c3a5a82844f11ab29156a21038
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065071"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708541"
 ---
 # <a name="actionenum"></a>ActionEnum
 指定當執行動作的類型[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)呼叫。  

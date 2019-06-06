@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 557ee99f-3cc8-4578-9694-6b1b0788cfdd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d778f2e005003a0ab3cb50b6a25823c2d711441f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5d3132a1ac1ca146ecd4920ed907b3489da2354f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222000"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699601"
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>使用 ADO 文件的必要條件
 若要使用這份文件，您應該有，最少，因為大部分的指南中的範例以這個語言開發應用程式使用 Microsoft Visual Basic 中，一些經驗。 另外還有以 Microsoft Visual 撰寫一些範例C++、 Java、 Visual Basic Scripting Edition (VBScript) 和 Microsoft JScript。  

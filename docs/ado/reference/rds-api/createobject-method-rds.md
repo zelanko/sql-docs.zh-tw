@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d220a9abc0e2dc72d7ab65306b514a9925b4fc43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 918836e949593672417240c1b91026e1e02c4788
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281063"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712318"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 方法 (RDS)
 建立目標商務物件的 proxy，並傳回的指標。 要透過網際網路傳送要求和資料與商務物件通訊的伺服器端 stub proxy 封裝和封送處理資料。 同處理序元件物件會使用任何 proxy，只是物件的指標會提供。  

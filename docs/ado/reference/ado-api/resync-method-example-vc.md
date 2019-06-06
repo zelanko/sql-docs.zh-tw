@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: abd354021f589260304681ebc45634e7406e538d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 899cf7a819d486bd48abfc13debb2cecbc46a0dc
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062446"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711741"
 ---
 # <a name="resync-method-example-vc"></a>Resync 方法範例 (VC++)
 此範例示範如何使用[Resync](../../../ado/reference/ado-api/resync-method.md)方法，以重新整理靜態的資料錄集中的資料。  

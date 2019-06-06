@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 951594b22cbae817c2fa7a968794a25f2cba2451
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1badd8074c010ec4e87a92412dd41a6918921e4e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065205"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704117"
 ---
 # <a name="addnew-method-example-vc"></a>AddNew 方法範例 (VC++)
 這個範例會使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法用來建立具有指定名稱的新記錄。  

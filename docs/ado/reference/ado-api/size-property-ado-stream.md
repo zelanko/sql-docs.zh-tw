@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d35af0315460af8b110c7af38934e5d196a5c895
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 42a4725efde507112d51b4f9c41af4ba83f63da4
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63192800"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719093"
 ---
 # <a name="size-property-ado-stream"></a>Size 屬性 (ADO Stream)
 表示資料流中的位元組數目的大小。  

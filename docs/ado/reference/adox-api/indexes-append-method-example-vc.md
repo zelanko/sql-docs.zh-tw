@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 33c559c4-4db7-4850-9309-2743a7ae5521
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cf72b40a6a1e4caf5f630298dd57cc4055fe41f5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9f14056ed4dac8ae8e8fa1f489dd1a7cbfd6a507
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63217694"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718903"
 ---
 # <a name="indexes-append-method-example-vc"></a>Indexes Append 方法範例 (VC++)
 下列程式碼示範如何建立新的索引。 索引是在資料表中的兩個資料行上。  

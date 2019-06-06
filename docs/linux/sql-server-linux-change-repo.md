@@ -7,26 +7,25 @@ manager: craigg
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 65147a78fe616f83854b155f903d346aa52d69d5
-ms.sourcegitcommit: c0e1db7cd1081e94a3a526136a5e166df646c9ba
+ms.openlocfilehash: 5e21110eb8a24c736b08833d10b509b5494adc48
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56444233"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713332"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>設定存放庫進行安裝及升級 Linux 上的 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ::: zone pivot="ld2-rhel"
-本文說明如何在 Linux 上設定正確的存放庫的 SQL Server 2017 和 SQL Server 2019 的安裝和升級。 在頂端，您目前的選取範圍是**Red Hat (RHEL)**。
+本文說明如何在 Linux 上設定正確的存放庫的 SQL Server 2017 和 SQL Server 2019 的安裝和升級。 在頂端，您目前的選取範圍是**Red Hat (RHEL)** 。
 ::: zone-end
 
 ::: zone pivot="ld2-sles"
-本文說明如何在 Linux 上設定正確的存放庫的 SQL Server 2017 和 SQL Server 2019 的安裝和升級。 在頂端，您目前的選取範圍是**SUSE (SLES)**。
+本文說明如何在 Linux 上設定正確的存放庫的 SQL Server 2017 和 SQL Server 2019 的安裝和升級。 在頂端，您目前的選取範圍是**SUSE (SLES)** 。
 ::: zone-end
 
 ::: zone pivot="ld2-ubuntu"
@@ -51,7 +50,7 @@ ms.locfileid: "56444233"
 
 請務必請注意，有兩種類型的每個散發的存放庫：
 
-- **累計更新 (CU)**:累計更新 (CU) 存放庫包含自從該版本的基底的 SQL Server 版本，以及任何錯誤修正或改進的套件。 累計更新特有的發行版本，例如 SQL Server 2017。 在一般的步調發行。
+- **累計更新 (CU)** :累計更新 (CU) 存放庫包含自從該版本的基底的 SQL Server 版本，以及任何錯誤修正或改進的套件。 累計更新特有的發行版本，例如 SQL Server 2017。 在一般的步調發行。
 
 - **GDR**:GDR 存放庫包含自從該版本的基底的 SQL Server 版本及只有重大修正程式和安全性更新的封裝。 這些更新也會新增至下一步 的 CU 版本。
 

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: fed09266-1547-4bda-9088-c254d81cc738
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 02731da2b023b7230b3407e0eb386fe8e5aaaf87
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5d0cd8a6196bdc0f933470a52dbb3567f64df05e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281557"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718917"
 ---
 # <a name="datemodified-property-adox"></a>DateModified 屬性 (ADOX)
 表示上次修改物件的日期。  

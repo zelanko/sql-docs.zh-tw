@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 32b87f7ddcd871748adbba66eb0a64a10204f0c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0ee24eb54db193aa16f15f550de66b92cf9b896c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214860"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699782"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>為安全或不受限制模式設定 DataFactory
 > [!IMPORTANT]

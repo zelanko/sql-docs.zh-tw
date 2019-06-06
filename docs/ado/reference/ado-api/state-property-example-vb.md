@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9da6db50-d9bb-47e1-ae8b-be3c9b88cf9a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a834754a83339a989484ea6c0c0b94e313699023
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8b52a60f9d2a026d0bb8d934a6cb1af6af23824a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027630"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711049"
 ---
 # <a name="state-property-example-vb"></a>State 屬性範例 (VB)
 這個範例會使用[狀態](../../../ado/reference/ado-api/state-property-ado.md)屬性，以顯示一則訊息，而非同步連接所開啟，並執行非同步命令。  

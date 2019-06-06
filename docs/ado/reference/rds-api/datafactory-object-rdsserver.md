@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 189dc8604883d8d91a8bc223c54dd3cb5c14969e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6848dc441e4a163149296f83b85a3c639ffbe331
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63134357"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707749"
 ---
 # <a name="datafactory-object-rdsserver"></a>DataFactory 物件 (RDSServer)
 > [!IMPORTANT]

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: bf39dd36-fc7a-4f6e-86c0-fa71430c0d86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9021ce8b3ad4f7442650731cb60b70cd4376d78a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 83db7cfc6cac6dde34ca8d2a974c9d926ba9f086
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63280505"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709443"
 ---
 # <a name="drilleddown-property-ado-md"></a>DrilledDown 屬性 (ADO MD)
 指出是否子系緊接[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)軸上。  

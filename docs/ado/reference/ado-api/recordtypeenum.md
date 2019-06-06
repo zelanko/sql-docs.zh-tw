@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f557e537-015d-4ba7-8a41-a6f00b366a91
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 195f76043cf65801289d081e497e28a41aff3209
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: eb33d68fcaf32fa92ae9a65e2ca216a86792a1be
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63033410"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711778"
 ---
 # <a name="recordtypeenum"></a>RecordTypeEnum
 指定的型別[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件。  

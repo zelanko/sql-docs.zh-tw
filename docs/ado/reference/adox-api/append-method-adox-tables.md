@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5471b641ad261515101aea39b6c51bdf23be14fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 75a5405ef51ea8bfe2d365796b311cbaa36b2d0c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63207174"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708365"
 ---
 # <a name="append-method-adox-tables"></a>Append 方法 (ADOX Tables)
 加入新[表格](../../../ado/reference/adox-api/table-object-adox.md)物件[資料表](../../../ado/reference/adox-api/tables-collection-adox.md)集合。  

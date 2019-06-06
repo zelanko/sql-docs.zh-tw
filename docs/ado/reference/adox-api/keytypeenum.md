@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3e597c52-caf4-4341-8471-d1ade563dbf7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d203e1539b42cd2ba1b785fd394a9126ef37713f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 726e23868b8e2efe4c567e35af89b58b2716bb5b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62710321"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706272"
 ---
 # <a name="keytypeenum"></a>KeyTypeEnum
 指定的型別[金鑰](../../../ado/reference/adox-api/key-object-adox.md)： 主要、 外部索引鍵，或唯一。  

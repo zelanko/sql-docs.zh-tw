@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9d9a3984e956cd9e742bcc8a29accb7fe012b9e8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 22abaf8785b1509b0e992d99e5e0f57adb6a1e00
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63043383"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707760"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>DataFactory 物件、Query 方法和 CreateObject 方法範例 (VBScript)
 > [!IMPORTANT]

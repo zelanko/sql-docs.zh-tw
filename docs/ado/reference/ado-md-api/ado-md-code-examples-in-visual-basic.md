@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: bfb52e8c-cb06-47a0-931c-03b8bdb1a05a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f2860db43c5b336ce0259d721e4adccfb8ad17d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9b50581b2c6c5d1be1223599bef65bf9fbe99bb6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206303"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710191"
 ---
 # <a name="ado-md-code-examples-in-visual-basic"></a>Visual Basic 中的 ADO MD 程式碼範例
 下列範例會要求 Microsoft Visual Basic 版本 5.0 Service Pack 3 或 Visual Basic 6.0 版。  

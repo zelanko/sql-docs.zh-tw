@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1d9d8715-e4ad-4ff3-bf7f-f1dc0532d8c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9ef187cd2ae291413fccf10e2af51642c50e06e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: dccaa1974b685c7d889f287cf4a1b0312aa87acd
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62670874"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697520"
 ---
 # <a name="sortdirection-property-rds"></a>SortDirection 屬性 (RDS)
 表示排序順序為遞增或遞減。  

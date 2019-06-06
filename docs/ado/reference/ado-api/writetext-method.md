@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3b50db388151de1f5b99d8d9a3f48904e6d7c2c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ea485d3afaf5785cca18f76be9b093dcc051dffe
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642958"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710003"
 ---
 # <a name="writetext-method"></a>WriteText 方法
 將指定的文字字串來寫入[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。  

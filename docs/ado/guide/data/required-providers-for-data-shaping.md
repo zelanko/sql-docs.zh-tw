@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7edd3b3cacd097380b5d14ad55ed115ff93cf072
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b95d6e42174cbce4357562ac3b866f49f0b58fef
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63280500"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701792"
 ---
 # <a name="required-providers-for-data-shaping"></a>資料成形所需的提供者
 資料成形時，通常會需要兩個提供者。 服務提供者[OLE db Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)提供的資料成形功能，並為資料提供者，例如 OLE DB Provider for SQL Server，提供資料列的資料來填入形狀[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  服務提供者 (MSDataShape) 的名稱可以指定的值為[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件[提供者](../../../ado/reference/ado-api/provider-property-ado.md)屬性或連接字串關鍵字"Provider = MSDataShape; 」。  
   
- 資料提供者的名稱可以指定的值為**資料提供者**動態屬性，它會新增至**連線**物件[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合Data Shaping Service 的 OLE DB 或連接字串關鍵字 」**資料提供者 =**_提供者_"。  
+ 資料提供者的名稱可以指定的值為**資料提供者**動態屬性，它會新增至**連線**物件[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合Data Shaping Service 的 OLE DB 或連接字串關鍵字 」**資料提供者 =** _提供者_"。  
   
  如果任何資料提供者，則需要**資料錄集**不會擴展 (例如，就像製作**資料錄集**會建立資料行使用新的關鍵字)。 在此情況下，指定 「**資料提供者 =** none;"。  
   

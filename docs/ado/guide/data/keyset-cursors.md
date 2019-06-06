@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a2ff246d01254ceb2b526b5118553d72cc499046
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b349838788a3c442ea9c32fc5b8a7ebbd0240e37
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161639"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702083"
 ---
 # <a name="keyset-cursors"></a>索引鍵集資料指標
 索引鍵集資料指標偵測變更的能力提供靜態和動態資料指標之間的功能。 如同靜態資料指標，它不一定會偵測結果集的成員資格和順序變更。 如同動態資料指標，它會偵測結果集中的資料列值變更。  

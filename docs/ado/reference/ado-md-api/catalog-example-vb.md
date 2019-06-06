@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3aae1107-2f81-413c-8eda-ef96c3df1b8a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7cd049d17c3050937d288aca7b6a353c15421386
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: cf8feed39632d7d69f54aa8dee28e0d74c73b831
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062676"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709811"
 ---
 # <a name="catalog-example-vb"></a>Catalog 範例 (VB)
 此 Visual Basic 專案會建立新的 cube 使用 MDX。 然後，它會說明 Microsoft Word 文件中之 cube 的結構。  

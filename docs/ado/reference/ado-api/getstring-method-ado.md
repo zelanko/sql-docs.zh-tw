@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1570918c423291b6c4fdd212fcb82f518dfb766e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 14bb7fd2e4a6dd8e6eb8f369342923ce1a9728c9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028195"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697621"
 ---
 # <a name="getstring-method-ado"></a>GetString 方法 (ADO)
 傳回[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)做為字串。  

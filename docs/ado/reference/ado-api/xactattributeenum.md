@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2098830a06f8e5c2ddc38b12f0c035ec513433ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5bf3c4b8a7cbbee1e384c08746f32d6a7e550ddd
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206304"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710132"
 ---
 # <a name="xactattributeenum"></a>XactAttributeEnum
 指定的交易屬性[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件。  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21c4eae0608e433ed3ca7888091a7c658726192d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7fed7d31e0ee52e3f9691913b06f9a9ffede51e7
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214788"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704290"
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>將來賓權限授與網頁伺服器電腦
 匿名的 Web 伺服器帳戶 (iusr_< 電腦*ComputerName*) 必須新增至本機來賓在 Web 伺服器電腦上使用 RDS  
@@ -38,6 +38,6 @@ ms.locfileid: "63214788"
   
 5.  如果匿名的 Web 伺服器帳戶未出現在清單中**選取使用者或群組**對話方塊方塊中輸入其名稱 (iusr_< 電腦*ComputerName*) 到下方的空白方塊，，然後按一下 **新增**.  
   
-6.  按一下 [確定] 。
+6.  按一下 [確定]  。
 
 

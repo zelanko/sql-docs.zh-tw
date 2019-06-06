@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c02447379b713a7d3b1c6dd72af8c3860098a68c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6f139965c4235b84c66c460767d5c6d1695b68ba
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63298134"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701829"
 ---
 # <a name="ado-glossary-terms"></a>ADO 詞彙
 本主題會定義與 ADO 的詞彙。
@@ -41,7 +41,7 @@ ms.locfileid: "63298134"
 ## <a name="b"></a>B
  資料表中的欄位與變數之間的繫結項目的對應。 在 ADO VisualC++延伸模組**資料錄集**欄位會對應至 C /C++變數。
 
- 位元遮罩的數值適用於與其他數字的值，通常要在參數中的旗標選項或傳回值的位元值比較。 通常這項比較是使用位元的邏輯運算子，例如**和**並**或者**在 Visual Basic 中**&** 並 **&#124;** 在C++。
+ 位元遮罩的數值適用於與其他數字的值，通常要在參數中的旗標選項或傳回值的位元值比較。 通常這項比較是使用位元的邏輯運算子，例如**和**並**或者**在 Visual Basic 中 **&** 並 **&#124;** 在C++。
 
  例如，ADO **FieldAttributeEnum**值可用來當做位元遮罩來決定欄位的屬性。 假設您想要判斷欄位是否可更新。 您可以測試這個，與 Visual Basic 中的下列運算式：`Field.Attributes AND adFldUpdatable`
 

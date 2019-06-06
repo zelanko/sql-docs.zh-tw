@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aaf396e8969d490933e26652e18c0c070e030785
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2bc43e772ab8f1e330d393461944cb2ecd585149
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63060963"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711571"
 ---
 # <a name="resyncenum"></a>ResyncEnum
 指定基礎值會覆寫呼叫[Resync](../../../ado/reference/ado-api/resync-method.md)。  

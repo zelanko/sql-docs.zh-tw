@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5567bf3cc460aac6abfc2979a14e124bfd9d4cac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5acaaa20667ac13f89b41391c1cc1d567eccf580
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63061932"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711662"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command 動態屬性 (ADO)
 指定使用者所提供的命令字串[Resync](../../../ado/reference/ado-api/resync-method.md)方法來重新整理中所命名的資料表中資料的問題[唯一資料表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)動態屬性。  

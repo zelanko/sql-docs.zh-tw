@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d16ef9737201956d80c5ad70f3e9281bf7fb6edc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: eba72bf4ddf9a67b85435cec924897b0d0fbc17c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065366"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704021"
 ---
 # <a name="actualsize-and-definedsize-properties-example-jscript"></a>ActualSize 和 DefinedSize 屬性範例 (JScript)
 這個範例會使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)並[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)来顯示的已定義的大小和實際大小 欄位的屬性。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**ActualSizeJS.asp**。  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d53891b4e82b3ae391d095e8cbca2189fb201d29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b251da97fe14abb8b10abe974c40b9adf0b37898
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142957"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699893"
 ---
 # <a name="updating-and-persisting-data"></a>更新和保存資料
 上述的章節討論如何使用 ADO 以在資料來源取得資料、 如何在資料中四處移動以及如何甚至編輯資料。 當然，如果您的應用程式的目標是允許使用者對資料進行變更，您必須了解如何儲存這些變更。 您可能可以保存**資料錄集**變更為檔案，使用**儲存**方法，或者您可以將變更傳回的資料來源使用儲存體**Update**或**UpdateBatch**方法。  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a0655a76463f7a0a1507fa2767eade3cb37c48a8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e35b5c2939c01fa0e8a10995ebcc620eae66fe56
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62710198"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718729"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 方法 (RDS)
 提交暫止的變更以及與在本機快取可更新[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)中所指定的資料來源[Connect](../../../ado/reference/rds-api/connect-property-rds.md)屬性或有[URL](../../../ado/reference/rds-api/url-property-rds.md)屬性。  

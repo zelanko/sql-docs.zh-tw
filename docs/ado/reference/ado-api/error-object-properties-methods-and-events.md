@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: cd69e4b7-82bf-4ffc-bc53-c535ba20161f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 27d81c35e01da846982be46a606a6274eefdc0d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7a58fbca8f9b47e271881f636cabfc0e54a528e7
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63057023"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719287"
 ---
 # <a name="error-object-properties-methods-and-events"></a>Error 物件屬性、方法和事件
 ## <a name="properties"></a>屬性  

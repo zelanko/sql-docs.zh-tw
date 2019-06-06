@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb86b01a42a097210801fd3654ff2af80df24e39
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8119b553ba7d85b9a3e1cabc49975967a0a751af
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242452"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719192"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 指定的行為[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件[MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)方法。  

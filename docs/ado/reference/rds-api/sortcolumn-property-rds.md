@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e11588900c963576d4fec31545b27c6fdb480ab8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 93b8bd226ca5b29af534c856e394c98b4466ec25
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63272815"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697651"
 ---
 # <a name="sortcolumn-property-rds"></a>SortColumn 屬性 (RDS)
 指出哪些資料行來排序記錄。  

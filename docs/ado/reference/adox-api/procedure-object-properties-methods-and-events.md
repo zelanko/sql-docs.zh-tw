@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 522f6447-ba9e-45f5-a185-37b312e126d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 73d3eec4f68fbf43481f604b352c8daa92da1356
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 913cbb549632383c239d6f7049e448b5ba5de6f4
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62709440"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706162"
 ---
 # <a name="procedure-object-properties-methods-and-events"></a>Procedure 物件屬性、方法和事件
 ## <a name="properties"></a>屬性  

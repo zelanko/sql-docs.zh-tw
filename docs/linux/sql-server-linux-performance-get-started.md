@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.custom: sql-linux
-ms.openlocfilehash: 3288bb18a4bc8d87b9be1eb8f57bbc66555b9db5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a340b3b8ded0824947cc242538ad19159b4abb4d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401346"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713327"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的效能功能的逐步解說
 

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 9c656963-531e-4cd1-b698-d5f42a9b7ba3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5015888cfafcce56c97f2369d418ed7be842dd28
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: cd7300a493067ced23a38e423befe0e77e6f0512
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63295364"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709322"
 ---
 # <a name="filteraxis-property-ado-md"></a>FilterAxis 屬性 (ADO MD)
 指出目前的篩選資訊[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)。  

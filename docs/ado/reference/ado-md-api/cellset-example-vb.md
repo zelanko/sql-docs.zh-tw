@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9c637d3bcb56a3e2b5e581b3348271f50adb9fd7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d98c465bdf3890cde10a405b7f2d139330fe9c05
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62469353"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709511"
 ---
 # <a name="cellset-example-vb"></a>Cellset 範例 (VB)
 此 Visual Basic 專案會示範使用 ADO MD 來存取 cube 資料的基本概念。 它會顯示成員標題資料行和資料列的標頭，然後顯示格式的資料格集內的特定資料格的值。  

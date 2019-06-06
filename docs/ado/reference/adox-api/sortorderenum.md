@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e192b5ea817654ff382482e2ef466ddbdaf63fec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0c8b2730b1c90e289bf653e4c8c303ad67eddf5e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281473"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705763"
 ---
 # <a name="sortorderenum"></a>SortOrderEnum
 指定索引的資料行的排序順序。  

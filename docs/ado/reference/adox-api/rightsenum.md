@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1904a77ae104576f2a9f82fc09d8728e2ec88c11
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a34cbd8ee3d274d3b3d45049611ca9cc99fa7758
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281880"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718834"
 ---
 # <a name="rightsenum"></a>RightsEnum
 指定物件的權限或群組或使用者的權限。  

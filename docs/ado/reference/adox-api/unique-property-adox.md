@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 85fd4bd0-393b-4dc1-9d73-80dced4f2fbe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6069d7891e7f21dcd24cfbf4f5392912e8bc8ad8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d126bcd26a74c091193bcff14154a34188b4a5d8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281443"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705652"
 ---
 # <a name="unique-property-adox"></a>Unique 屬性 (ADOX)
 表示索引鍵是否必須是唯一的。  
@@ -32,7 +32,7 @@ ms.locfileid: "63281443"
  設定，並傳回**布林**值。  
   
 ## <a name="remarks"></a>備註  
- 預設值為 **[False]**。  
+ 預設值為 **[False]** 。  
   
  這個屬性是唯讀[Index](../../../ado/reference/adox-api/index-object-adox.md)已經附加到集合的物件。  
   

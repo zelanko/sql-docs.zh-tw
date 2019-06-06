@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e7e2d3c0c306cf9004f42b7d58beb160e8180516
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 210ac2e22c56e6bb8ebfa1dc21e968e979e1c7c6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63219146"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697831"
 ---
 # <a name="find-method-example-vb"></a>Find 方法範例 (VB)
 這個範例會使用[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法，以找出並計算中的公司職稱數目***Pubs***資料庫。 此範例假設基礎提供者不支援類似的功能。  

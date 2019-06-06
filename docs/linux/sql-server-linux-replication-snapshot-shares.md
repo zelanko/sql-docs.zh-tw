@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 37b2aeb0ad03f0762fc593f5d9b4d2a0fec7a6a4
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: 7569eaf92484038e998595405df42dd1f2d31b3d
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319129"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718162"
 ---
 # <a name="configure-replication-snapshot-folder-with-shares"></a>設定透過共用的複寫快照集資料夾
 

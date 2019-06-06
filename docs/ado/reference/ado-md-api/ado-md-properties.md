@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 522c563a113bab599481821dbb5d79422126a901
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6e4b7d4f79b3ba3572a20cb8876909f90e4e5870
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062576"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709993"
 ---
 # <a name="ado-md-properties"></a>ADO MD 屬性
 

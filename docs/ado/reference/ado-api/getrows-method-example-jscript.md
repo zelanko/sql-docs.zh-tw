@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f53eec72ed95a453b8343998ef438fded10f87b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d8103da63d91c5d59d1bfc4ac5b738ba8f333d1e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62630663"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719202"
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows 方法範例 (JScript)
 這個範例會使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法來擷取的所有資料列*Custiomers*資料表中[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)和要使用產生的資料填入的陣列。 **GetRows**方法會傳回所需的資料列數目少於兩種情況： 如果任一[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)已達到，或如果**GetRows**嘗試擷取已記錄刪除由其他使用者。 此函數會傳回**False**只有當第二個案例，就會發生。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**GetRowsJS.asp**。  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 75b774a5-fa94-490a-b521-b2b8f7d48919
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2142b11c477db480d2a1b905d83e118317dfb391
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0a87d4be3956fb27b695f94b0bbd17e0e2d05dd7
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239902"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699820"
 ---
 # <a name="ado-multidimensional-ado-md"></a>ADO (多維度) (ADO MD)
 本章節包含下列主題。  

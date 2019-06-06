@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: cf12cbd1-25f7-4bb5-aa94-0fe823b3b6d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1c97a8495b1877c8c72dcacba25943c04934abca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 3c6565712d2cf567ef7ff2c61fd397463185bc17
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302535"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718503"
 ---
 # <a name="command-ado-for-visual-c-syntax"></a>Command (ADO for Visual C++ 語法)
 ## <a name="methods"></a>方法  

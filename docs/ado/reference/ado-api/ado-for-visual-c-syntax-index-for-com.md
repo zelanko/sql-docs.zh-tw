@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ae03c7dccdc702ccb4deae068013a69d7852d623
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 265b274a76e1cf88b5d039a1296090e4fa4c6324
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248905"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718567"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>適用於 COM 的 ADO for Visual C++ 語法索引
 這個索引是根據 Microsoft Visual ADO 語言參考的交互參照C++。  

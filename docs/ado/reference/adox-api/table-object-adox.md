@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f5af59dbc50f6e1a2cd95cbdf99874d860eceeb1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 43679897bf49e9a2505dad1540f3b494b66f180d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281597"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705859"
 ---
 # <a name="table-object-adox"></a>Table 物件 (ADOX)
 代表資料庫資料表中的資料行、 索引和索引鍵。  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cbeb85edfcfbbf58746cb5d366c679e6928258c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: cfeb9b5965c61977ab8d152c67a626534bb88910
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63134432"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718797"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>DataFactory 物件 (RDSServer) 屬性、方法和事件
 > [!IMPORTANT]

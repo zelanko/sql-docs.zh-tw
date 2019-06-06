@@ -7,21 +7,20 @@ manager: craigg
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: ee4550d9b86c5969bdf930391090e06c54988063
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 42401590745985baa207fa0db3ac9da774041ff4
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657903"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713461"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>在 Linux 上的 always On 可用性群組容錯移轉
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-在可用性群組 (AG) 的內容中，主要角色和次要可用性複本的角色是在稱為容錯移轉的程序中通常可以互換。 容錯移轉共有三種形式，包括自動容錯移轉 (不會遺失資料)、規劃的手動容錯移轉 (不會遺失資料)，以及強制手動容錯移轉 (可能會遺失資料)，這種形式通常稱為「強制容錯移轉」。 自動及經過規劃的手動容錯移轉會保留您所有的資料。 AG 容錯移轉的可用性複本層級。 也就是 AG 容錯移轉到其中一個次要複本 （目前的容錯移轉目標）。 
+在可用性群組 (AG) 的內容中，主要角色和次要可用性複本的角色是在稱為容錯移轉的程序中通常可以互換。 容錯移轉共有三種形式，包括自動容錯移轉 (不會遺失資料)、規劃的手動容錯移轉 (不會遺失資料)，以及強制手動容錯移轉 (可能會遺失資料)，這種形式通常稱為「強制容錯移轉」  。 自動及經過規劃的手動容錯移轉會保留您所有的資料。 AG 容錯移轉的可用性複本層級。 也就是 AG 容錯移轉到其中一個次要複本 （目前的容錯移轉目標）。 
 
 如需容錯移轉的背景資訊，請參閱[容錯移轉和容錯移轉模式](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)。
 

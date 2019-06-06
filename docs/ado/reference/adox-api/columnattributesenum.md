@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: cd0db27a-1080-40af-a491-3893e7bef9cd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aba6b8a983b831919987417cd8faef66b08b8e8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: dbc8e32f55de5311e6ab2d12994ebf90d3c6c922
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63183961"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718973"
 ---
 # <a name="columnattributesenum"></a>ColumnAttributesEnum
 指定的特性[資料行](../../../ado/reference/adox-api/column-object-adox.md)。  

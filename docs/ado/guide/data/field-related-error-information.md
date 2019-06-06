@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ba956d2e442c914ddc50f2f023f225252fb1295
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e18698d7fba50ce6a63938df574408367b8b20cf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161563"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702019"
 ---
 # <a name="field-related-error-information"></a>欄位相關的錯誤資訊
 如果錯誤直接與相關欄位-比方說，如果資料遺失，或者它是錯誤的類型，欄位-您可以擷取問題的原因的詳細資訊藉由檢查**欄位**物件的**狀態**屬性。 這個屬性已經過增強，以提供特定問題的相關資訊。 因此，例如，當呼叫**UpdateBatch**失敗，問題的原因可以檢查來判斷**狀態**屬性**欄位**中每個受影響的功能記錄。 這個屬性會包含在值的其中一個**FieldStatusEnum**常數。 下表包含發生錯誤時，會特別感興趣的那些值。  

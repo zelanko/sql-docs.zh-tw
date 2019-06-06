@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5cd13809703c14022b6e2a1e7dbb87716c4778c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4bdb60a6d174ab82df7529b6e26d8d5b2c031107
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184009"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703957"
 ---
 # <a name="columns-collection-adox"></a>Columns 集合 (ADOX)
 包含所有[資料行](../../../ado/reference/adox-api/column-object-adox.md)資料表、 索引或索引鍵的物件。  

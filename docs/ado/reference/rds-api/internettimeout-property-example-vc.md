@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6465432962ad02d4bc4035197f7fc04a30036b92
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7a3e8d6252ffb405d7dfb28905cef06bb483d1c1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63125971"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712546"
 ---
 # <a name="internettimeout-property-example-vc"></a>InternetTimeout 屬性範例 (VC++)
 > [!IMPORTANT]

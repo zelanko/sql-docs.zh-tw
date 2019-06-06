@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2330703450e42e8ddf9bfeed536dd3649d65edf8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 49a3c276aa17d8f2bd7f48296eeecb69ad91d04d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184842"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718373"
 ---
 # <a name="xml-persistence-format"></a>XML 保存格式
 ADO 使用 utf-8 編碼方式，它會保存為 XML 資料流。  

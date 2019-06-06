@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 707c18ca-6a56-4970-bbd6-ae1fb86a0b8a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0db8c7972d6b647cdd021d43dbb3cdee1ba0452
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 027468926d444b25e60ede18bbfb26ff7cedf729
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63314740"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711406"
 ---
 # <a name="seteos-method"></a>SetEOS 方法
 設定為資料流結尾的位置。  

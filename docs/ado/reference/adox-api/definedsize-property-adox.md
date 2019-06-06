@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 54b2607a2754e8e1663cce15eea19274fdd7b4e0
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+manager: jroth
+ms.openlocfilehash: 617fe93f27351d8524a29da93c077b96fd2f6639
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63464991"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718905"
 ---
 # <a name="definedsize-property-adox"></a>DefinedSize 屬性 (ADOX)
 指出資料行指定最大大小。  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddbb675214f537054e608e10854cedf74e0f39be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 75f2784c9d144cdb33bb4062d08c3a855413e0ad
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719875"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701463"
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>Internet Explorer 錯誤碼，遠端資料服務
 下表列出遠端資料服務使用量的相關的 Microsoft® Internet Explorer 錯誤碼。 低的兩個位元組的十進位正轉譯，會顯示完整的錯誤程式碼和十六進位值的負值的十進位轉譯。

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e84a14b1-3c2a-4f7d-a966-9e08a93948df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 808c63575b93f9e4fa3b6459d2111637021218c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d9dd8315945d07aa4c6e99dc8661c26c7d92fb95
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472717"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718463"
 ---
 # <a name="command-object-overview"></a>Command 物件概觀
 具有**命令**物件時，您可以執行下列動作：  

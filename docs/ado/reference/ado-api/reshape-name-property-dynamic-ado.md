@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6a07ec878b1198fbf23bfb251460d83869313c83
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f9b8898a3cc75cf47ae783a1dd2a120c8954ab8f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062126"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711661"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Reshape Name 動態屬性 (ADO)
 指定的名稱[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  

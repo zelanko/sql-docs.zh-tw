@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 81c93601dbc47033618fdc72106d91e1b670fd8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 77d488bd128f4f5cfa905586f2130cd90be6354c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281885"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705836"
 ---
 # <a name="ruleenum"></a>RuleEnum
 指定要時遵循的規則[金鑰](../../../ado/reference/adox-api/key-object-adox.md)會被刪除。  
