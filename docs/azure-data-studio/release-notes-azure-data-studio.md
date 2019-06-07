@@ -10,17 +10,51 @@ ms.author: maghan
 manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 05/08/2019
-ms.openlocfilehash: d3451fcc6ca506e038ab614183007aad81880231
-ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
-ms.translationtype: MT
+ms.date: 06/06/2019
+ms.openlocfilehash: d835ff875aa37b3c1fb7e7c4229604e5d90039eb
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454732"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744121"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
 **[下載並安裝最新版的 ！](download.md)**
+
+## <a name="june-2019"></a>2019 年 6 月
+
+2019 年 6 月 6 日&nbsp;  /  &nbsp;版本：1.8.0 
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| :----- | :------ |
+| 中央管理伺服器 (CMS) 延伸模組的版本 | 中央管理伺服器存放區會組織成一或多個中央管理伺服器群組的 SQL Server 執行個體的清單。 使用者可以連線到自己現有的 CMS 伺服器，並管理其伺服器，例如新增和移除伺服器。 若要深入了解，您可以閱讀[這裡](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers) |
+| 版本的 Windows 的資料庫管理工具擴充功能 | 此延伸模組會啟動兩個 SQL Server Management Studio，從 Azure Data Studio 中最常使用的體驗。 使用者可以在許多不同的物件 （例如資料庫、 資料表、 資料行、 檢視等等） 上按一下滑鼠右鍵，並選取要檢視 [SSMS 屬性] 對話方塊，該物件的屬性。 此外，使用者可以在資料庫上按一下滑鼠右鍵並選取 產生指令碼來啟動已知 SSMS 產生指令碼精靈。 
+| 結構描述比較增強功能 | &bull; &nbsp; 已新增排除/包含選項 <br/>&bull; &nbsp; 產生後所產生的指令碼會開啟指令碼 <br/>&bull; &nbsp; 移除雙重捲軸  <br/>&bull; &nbsp; 格式與版面配置的增強功能 <br/>&bull; &nbsp; 可以找到完整的變更[這裡](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
+| 移動的訊息至自己的索引標籤 區段 | 當使用者執行 SQL 查詢時，結果和訊息是在堆疊面板上。 現在它們位於不同的索引標籤，例如在 SSMS 中的某個面板中。 |
+| SQL Notebook 增強功能 | &bull; &nbsp; 使用者現在可以選擇在 notebook 中使用自己的 Python 3 或 Anaconda 安裝 <br/>&bull; &nbsp; 多個穩定性 + 符合/完成修正&bull;&nbsp;檢視的增強功能的完整清單[這裡](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
+| Visual Studio 程式碼可能會發行合併 1.34 | 您可以找到最新的改良[這裡](https://code.visualstudio.com/updates/v1_34) |
+| 已解決的 bug 和問題。 | 請參閱[Bug 和問題，請在 GitHub 上的](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>已知問題
+- Windows 的資料庫管理工具擴充功能
+    - 無法啟動從已中斷連線的伺服器節點的屬性
+        - 這需要一些額外的工作，因此現在我已停用該功能啟用
+    - 無法啟動 Azure 伺服器的屬性
+        - SSMS 屬性對話方塊尚不支援 Azure
+    - 並非所有的物件具有屬性對話方塊
+        - 此處支援大部分的對話方塊在 SSMS 的物件。 如果您認為應該確實有一個，但不會讓我知道物件
+    - 對話方塊需要一些時間才能啟動
+        - 我正在處理上改善-，但在是的它的時間最多可能需要 30 秒鐘啟動的對話方塊
+    - 啟動對某些類型的連線 （例如 AAD) 的伺服器錯誤
+        - 工作於修正這些，但讓我知道您在執行，因此我可以追蹤的任何我可能會遺失
+- 筆記型電腦
+    - [5838](https://github.com/microsoft/azuredatastudio/issues/5838)允許使用者使用系統 Python notebook
+- 結構描述比較
+    - [5804](https://github.com/microsoft/azuredatastudio/issues/5804)結構描述比較工作顯示預設不執行任何動作的 [取消] 操作功能表
 
 ## <a name="may-2019"></a>2019 年 5 月
 
@@ -32,8 +66,8 @@ ms.locfileid: "66454732"
 | :----- | :------ |
 | 版本的結構描述比較的擴充功能 | 結構描述比較是眾所周知的功能在 SQL Server Data Tools (SSDT)，以及其主要使用案例是比較，並以視覺化方式檢視資料庫和.dacpac 檔案之間的差異，並執行可讓相同的動作。 |
 | 移至 輸出 視窗的 工作檢視 | 使用者現在可以在 [輸出] 視窗中的 [工作] 檢視中檢視長時間執行的工作，例如備份、 還原及結構描述比較的狀態
-| 已新增的 歡迎使用頁面 | &bull; &nbsp; 常見的動作連結讓新的查詢，新的檔案，新的 Notebook <br/>&bull; &nbsp; 文件和 Github 連結 |
-| SQL Notebook 增強功能 | &bull; &nbsp; Markdown 轉譯功能改良，包括更好的支援資訊和資料表 <br/>&bull; &nbsp; 在工具列的使用性改進 <br/>&bull; &nbsp; 不再受信任的 notebook 的 markdown 連結需要 Cmd/Ctrl + 按一下，可以直接按一下 <br/>&bull; &nbsp; 改進後關閉 notebook，並減少錯誤，同時啟動多個筆記本時進行清除 Jupyter 程序 <br/>&bull; &nbsp; 針對相同的資料庫執行 2 個筆記本時不會發生 SQL notebook 連線，以確保錯誤的增強功能 <br/>&bull; &nbsp; 自動捲動到目前正在執行的資料格時按一下 [執行中的資料格] 按鈕從工具列的 notebook 的增強功能 <br/>&bull; &nbsp; 一般的穩定性和效能增強功能 |
+| 已新增的 歡迎使用頁面 | &bull; &nbsp; 常見的動作連結讓新的查詢，新的檔案，新的 Notebook <br/>&bull; &nbsp; 文件和 GitHub 連結 |
+| SQL Notebook 增強功能 | &bull; &nbsp; Markdown 轉譯功能改良，包括更好的支援資訊和資料表 <br/>&bull; &nbsp; 在工具列的使用性改進 <br/>&bull; &nbsp; 不再受信任的 notebook 的 markdown 連結需要 Cmd/Ctrl + 按一下，可以直接按一下 <br/>&bull; &nbsp; 改進後關閉 notebook，並減少錯誤，同時啟動多個筆記本時進行清除 Jupyter 程序 <br/>&bull; &nbsp; 針對相同的資料庫執行 2 個筆記本時不會發生 SQL notebook 連線，以確保錯誤的增強功能 <br/>&bull; &nbsp; 到目前正在執行的資料格時按一下 [執行中的資料格] 按鈕從工具列的筆記本自動捲動功能的增強功能 <br/>&bull; &nbsp; 一般的穩定性和效能增強功能 |
 | 已解決的 bug 和問題。 | 請參閱[Bug 和問題，請在 GitHub 上的](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1)。 |
 | &nbsp; | &nbsp; |
 
@@ -249,7 +283,7 @@ _0.32.8 包含幾個 0.32.7 中找到的迴歸修正 ([# 1971年](https://github
 ### <a name="bug-fixes-august-2018"></a>Bug 修正，2018 年 8 月
 
 - 剖析 SQL 查詢編輯器 視窗中的，使用`Parse Syntax`命令。
-- 修正[發出 #143](https://github.com/Microsoft/azuredatastudio/issues/143):按兩下 未選取變數名稱中的 []。
+- 修正[發出 #143](https://github.com/Microsoft/azuredatastudio/issues/143):按兩下 [未選取變數名稱中的 []。
 - 修正[問題 #387](https://github.com/Microsoft/azuredatastudio/issues/387):SQL 索引標籤 DB 圖示為紅色。
 - 修正[發出 #825](https://github.com/Microsoft/azuredatastudio/issues/825):要求：自動連接到目前的伺服器，做為指令碼之後... 
 - 修正[問題 1278](https://github.com/Microsoft/azuredatastudio/issues/1278): sqlops.desktop [桌面項目]-名稱和註解的備援值。
