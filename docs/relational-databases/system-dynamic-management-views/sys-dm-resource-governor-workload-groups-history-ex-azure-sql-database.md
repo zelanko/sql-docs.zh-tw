@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: joesackmsft
 ms.author: josack
 manager: craigg
-ms.openlocfilehash: a177d3bcb81e17bb3a3accf6e1fade02132a58fa
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: 1a2123c3da5945fb42184631e43fe27d83972375
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66213759"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744018"
 ---
 # <a name="sysdmresourcegovernorworkloadgroupshistoryex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "66213759"
 
 ## <a name="permissions"></a>Permissions
 
-此檢視需要 VIEW DATABASE STATE 權限。
+此檢視需要 VIEW SERVER STATE 權限。
 
 ## <a name="remarks"></a>備註
 

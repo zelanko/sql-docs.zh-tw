@@ -9,12 +9,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3305990935c5d4c6077caa062184b0150aa83d6b
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: d247d50b40129d47600de6fb2d943d7e1e1ac777
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994058"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743988"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>連線到 SQL Server 的巨量資料叢集使用 Azure Data Studio
 
@@ -37,14 +37,17 @@ ms.locfileid: "65994058"
 1. 從命令列中，找出 IP 主要執行個體使用下列命令：
 
    ```
-   kubectl get svc master-svc-external -n <your-cluster-name>
+   kubectl get svc master-svc-external -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > 巨量資料叢集名稱預設為**mssql 叢集**除非您自訂部署設定檔中的名稱。 如需詳細資訊，請參閱 <<c0> [ 巨量資料叢集的部署設定](deployment-custom-configuration.md#clustername)。
 
 1. 在 Azure Data Studio，按下**F1** > **新連線**。
 
 1. 在 **連線類型**，選取**Microsoft SQL Server**。
 
-1. 輸入中的 SQL Server 主要執行個體的 IP 位址**伺服器名稱**(例如：**\<IP 位址\>31433、**)。
+1. 輸入中的 SQL Server 主要執行個體的 IP 位址**伺服器名稱**(例如： **\<IP 位址\>31433、** )。
 
 1. 輸入 SQL 登入**使用者名**並**密碼**。
 

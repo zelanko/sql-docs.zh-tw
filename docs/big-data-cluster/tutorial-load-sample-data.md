@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a270274d252a657d5eac8935b6f5d1b2e8b7f71e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: e84b43b4aeeaff97d5b625eed0f4e30a0e6907f0
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63473522"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743833"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>教學課程：將範例資料載入 SQL Server 的巨量資料叢集
 
@@ -71,7 +71,7 @@ ms.locfileid: "63473522"
    | <KNOX_PASSWORD> | HDFS/Spark 閘道的密碼。 |
 
    > [!TIP]
-   > 使用[kubectl](cluster-troubleshooting-commands.md)來尋找 IP 位址的 SQL Server 的主要執行個體和 Knox。 執行`kubectl get svc -n <your-cluster-name>`並查看主要執行個體的外部 IP 位址 (**主要 svc 外部**) 和 Knox (**閘道 svc 外部**)。
+   > 使用[kubectl](cluster-troubleshooting-commands.md)來尋找 IP 位址的 SQL Server 的主要執行個體和 Knox。 執行`kubectl get svc -n <your-big-data-cluster-name>`並查看主要執行個體的外部 IP 位址 (**主要 svc 外部**) 和 Knox (**閘道 svc 外部**)。 在叢集的預設名稱是**mssql 叢集**。
 
 1. 執行啟動程序的指令碼。
 
@@ -107,7 +107,7 @@ ms.locfileid: "63473522"
    | <KNOX_PASSWORD> | HDFS/Spark 閘道的密碼。 |
 
    > [!TIP]
-   > 使用[kubectl](cluster-troubleshooting-commands.md)來尋找 IP 位址的 SQL Server 的主要執行個體和 Knox。 執行`kubectl get svc -n <your-cluster-name>`並查看主要執行個體的外部 IP 位址 (**主要 svc 外部**) 和 Knox (**閘道 svc 外部**)。
+   > 使用[kubectl](cluster-troubleshooting-commands.md)來尋找 IP 位址的 SQL Server 的主要執行個體和 Knox。 執行`kubectl get svc -n <your-big-data-cluster-name>`並查看主要執行個體的外部 IP 位址 (**主要 svc 外部**) 和 Knox (**閘道 svc 外部**)。 在叢集的預設名稱是**mssql 叢集**。
 
 1. 執行啟動程序的指令碼。
 

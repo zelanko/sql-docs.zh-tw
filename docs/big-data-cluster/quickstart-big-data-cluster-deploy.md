@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5725b00d3925a9b2589884e1e2bf8e7200844e1d
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.openlocfilehash: a385a2691d37bf31186a3530e91bdf937ac4dc05
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66462801"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744203"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入門：部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集
 
@@ -82,7 +82,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **Azure 區域** | 新的 AKS 叢集的 Azure 區域 (預設值**westus**)。 |
    | **機器大小** | [機器大小](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)用於 AKS 叢集中的節點 (預設**Standard_L8s**)。 |
    | **背景工作角色節點** | 在 AKS 叢集中的背景工作節點數目 (預設值**1**)。 |
-   | **叢集名稱** | AKS 叢集與巨量資料叢集的名稱。 只有大小寫英數字元，而且沒有空格，必須是叢集的名稱。 (預設值**sqlbigdata**)。 |
+   | **叢集名稱** | AKS 叢集與巨量資料叢集的名稱。 只有大小寫英數字元，而且沒有空格，必須是您的巨量資料叢集的名稱。 (預設值**sqlbigdata**)。 |
    | **密碼** | 控制器、 HDFS/Spark 閘道和主要執行個體的密碼 (預設值**MySQLBigData2019**)。 |
    | **控制器的使用者** | 控制器的使用者的使用者名稱 (預設值： **admin**)。 |
 
@@ -118,7 +118,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="inspect-the-cluster"></a>檢查叢集
 
-隨時都在部署期間，您可以使用 kubectl 或叢集的系統管理入口網站來檢查 狀態 和 執行巨量資料叢集的相關詳細資料。
+隨時都在部署期間，您可以使用**kubectl**或是**mssqlctl**檢查 狀態 和 執行巨量資料叢集的相關詳細資料。
 
 ### <a name="use-kubectl"></a>使用 kubectl
 
@@ -127,42 +127,32 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 1. 執行下列命令，以取得整個叢集的狀態摘要：
 
    ```
-   kubectl get all -n <your-cluster-name>
+   kubectl get all -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > 如果您未變更的巨量資料叢集名稱，指令碼會預設為**sqlbigdata**。
 
 1. 檢查 kubernetes 服務，以及其內部和外部端點，以下列**kubectl**命令：
 
    ```
-   kubectl get svc -n <your-cluster-name>
+   kubectl get svc -n <your-big-data-cluster-name>
    ```
 
 1. 您也可以檢查狀態的 kubernetes pod，使用下列命令：
 
    ```
-   kubectl get pods -n <your-cluster-name>
+   kubectl get pods -n <your-big-data-cluster-name>
    ```
 
 1. 找出特定的 pod，使用下列命令的詳細資訊：
 
    ```
-   kubectl describe pod <pod name> -n <your-cluster-name>
+   kubectl describe pod <pod name> -n <your-big-data-cluster-name>
    ```
 
 > [!TIP]
 > 如需有關如何監視和疑難排解部署的詳細資訊，請參閱 <<c0> [ 監視和疑難排解 SQL Server 的巨量資料叢集](cluster-troubleshooting-commands.md)。
-
-### <a name="use-the-cluster-administration-portal"></a>使用叢集系統管理入口網站
-
-當控制器 pod 執行時，您也可以使用叢集系統管理入口網站來監視部署。 您可以存取入口網站中使用的外部 IP 位址和連接埠號碼`mgmtproxy-svc-external`(例如： **https://\<ip 位址\>: 30777/入口網站**)。 用來登入入口網站的認證比對的值**Controller 使用者**並**密碼**您在部署指令碼中指定。
-
-您可以取得的 IP 位址**mgmtproxy svc 外部**服務中的 bash 或 cmd 視窗執行下列命令：
-
-```bash
-kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
-```
-
-> [!NOTE]
-> 在 CTP 3.0 中，您會看到安全性警告時存取網頁，因為巨量資料叢集目前正在使用自動產生的 SSL 憑證。
 
 ## <a name="connect-to-the-cluster"></a>連線到叢集
 

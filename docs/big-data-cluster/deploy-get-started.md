@@ -9,12 +9,12 @@ ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5aeb6f5f92eba1bad828455b472d25561570901a
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 48ba1bfe2a90fdb1ea2464d404ba851a8ca30992
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774774"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743987"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>開始使用 SQL Server 的巨量資料叢集
 
@@ -39,7 +39,7 @@ ms.locfileid: "64774774"
 
 為一系列的相互關聯的容器中管理部署巨量資料叢集[Kubernetes](https://kubernetes.io/docs/home)。 您可以裝載 Kubernetes 的各種不同的方式。 即使您已經有現有的 Kubernetes 環境，您應該檢閱巨量資料叢集的相關的需求。
 
-- **Azure Kubernetes Service (AKS)**:AKS 可讓您部署在 Azure 中受管理的 Kubernetes 叢集。 您只能管理和維護代理程式節點。 有了 AKS，您不需要佈建您自己的硬體叢集。 它也很容易使用巨量資料叢集[部署指令碼](quickstart-big-data-cluster-deploy.md)建立 AKS 叢集，並部署在一個步驟中的巨量資料叢集。 如需使用 AKS 使用巨量資料叢集的詳細資訊，請參閱[適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署中設定 Azure Kubernetes Service](deploy-on-aks.md)。
+- **Azure Kubernetes Service (AKS)** :AKS 可讓您部署在 Azure 中受管理的 Kubernetes 叢集。 您只能管理和維護代理程式節點。 有了 AKS，您不需要佈建您自己的硬體叢集。 它也很容易使用巨量資料叢集[部署指令碼](quickstart-big-data-cluster-deploy.md)建立 AKS 叢集，並部署在一個步驟中的巨量資料叢集。 如需使用 AKS 使用巨量資料叢集的詳細資訊，請參閱[適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署中設定 Azure Kubernetes Service](deploy-on-aks.md)。
 
 - **多部機器**:您也可以部署到多部 Linux 電腦，這可能是實體伺服器或虛擬機器的 Kubernetes。 [Kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/)工具可用來建立 Kubernetes 叢集。 這個方法適用於您已經有您想要用於您的巨量資料叢集的現有基礎結構。 如需使用詳細資訊**kubeadm**部署巨量資料叢集，請參閱[適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署的多部電腦上設定的 Kubernetes](deploy-with-kubeadm.md)。
 
@@ -51,7 +51,7 @@ ms.locfileid: "64774774"
 
 - 如果您要部署到開發 / 測試環境，您可以選擇使用其中一種[預設組態](deployment-guidance.md#deploy)所提供**mssqlctl**。
 
-- 若要自訂您的部署，您可以建立並使用您自己[部署設定檔案](deployment-guidance.md#configfile)。 
+- 若要自訂您的部署，您可以建立並使用您自己[部署設定檔案](deployment-guidance.md#configfile)。
 
 - 完全自動的安裝，您可以傳遞環境變數中的所有其他設定。 如需詳細資訊，請參閱 <<c0> [ 自動的部署](deployment-guidance.md#unattended)。
 

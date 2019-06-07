@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 924d026c61275d5bc957ce1157e30381f27ef2d0
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 34290ebdb92468687ae5f252c0ebdfef05dd11ff
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993991"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743934"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 在 Kubernetes 上的巨量資料叢集
 
@@ -92,8 +92,10 @@ kubectl config view
 mssqlctl cluster create
 ```
 
-> [!TIP]
-> 在此範例中，系統會提示您提供不是預設設定，例如密碼的一部分的任何設定。 請注意，Docker 資訊 Microsoft 提供給您的 SQL Server 2019 一部分[Early Adoption Program](https://aka.ms/eapsignup)。
+在此案例中，系統會提示您提供不是預設設定，例如密碼的一部分的任何設定。 請注意，Docker 資訊 Microsoft 提供給您的 SQL Server 2019 一部分[Early Adoption Program](https://aka.ms/eapsignup)。
+
+> [!IMPORTANT]
+> 巨量資料叢集的預設名稱是**mssql 叢集**。 這是一定要知道若要執行的任何**kubectl**命令指定將 Kubernetes 命名空間與`-n`參數。
 
 ## <a id="customconfig"></a> 自訂設定
 
@@ -220,8 +222,11 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 1. 部署之後，請查看下列的外部 IP 輸出，控制器端點的 IP 位址尋找**kubectl**命令：
 
    ```bash
-   kubectl get svc controller-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > 如果您沒有在部署期間變更預設名稱，使用`-n mssql-cluster`中前一個命令。 **mssql 叢集**是巨量資料叢集的預設名稱。
 
 1. 登入的巨量資料叢集**mssqlctl 登入**。 設定 **-控制站端點**參數來控制站端點的外部 IP 位址。
 
@@ -267,7 +272,7 @@ minikube ip
 無論平台 Kubernetes 叢集上執行，以取得部署的叢集，請執行下列命令的所有服務端點：
 
 ```bash
-kubectl get svc -n <your-cluster-name>
+kubectl get svc -n <your-big-data-cluster-name>
 ```
 
 ## <a id="connect"></a> 連線到叢集
