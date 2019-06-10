@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f16d39d738149d10a58dde8c01d8b447393ef9c6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 34218bbe7e8ac2e94acbb55ceb8bd64008e67c1e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487535"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776340"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>執行 DQSInstaller.exe 完成 Data Quality Server 安裝
 
@@ -36,9 +36,9 @@ ms.locfileid: "65487535"
   
 1.  在您選擇要安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]的電腦上，使用下列任一適用的方法執行 DQSInstaller.exe 檔案：  
   
-    -   **開始畫面**：在 [開始] 畫面上，按一下 [資料品質伺服器安裝程式]。  
+    -   **開始畫面**：在 [開始]  畫面上，按一下 [資料品質伺服器安裝程式]  。  
   
-    -   **開始功能表**：在工作列上，按一下 [開始]，並指向 [所有程式]，然後按一下 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]。 在 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 底下按一下 [Data Quality Services]，然後按一下 [Data Quality Server Installer]。  
+    -   **開始功能表**：在工作列上，按一下 [開始]  ，並指向 [所有程式]  ，然後按一下 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]。 在 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 底下按一下 [Data Quality Services]  ，然後按一下 [Data Quality Server Installer]  。  
   
     -   **Windows 檔案總管**：找出 DQSInstaller.exe 檔案。 如果已經安裝了 SQL Server 的預設執行個體，DQSInstaller.exe 檔會位於 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn。 按兩下 DQSInstaller.exe 檔案。  
   

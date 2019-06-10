@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b12f9e95163df4a090ddfb2e4061930438947802
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 50a46b004a14358e7832edb16d57f11783a683a2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487511"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776350"
 ---
 # <a name="grant-dqs-roles-to-users"></a>對使用者授與 DQS 角色
 
@@ -34,17 +34,17 @@ ms.locfileid: "65487511"
   
 1.  啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-2.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展開您的 SQL Server 執行個體，然後展開 **[安全性]**。  
+2.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展開您的 SQL Server 執行個體，然後展開 **[安全性]** 。  
   
-3.  以滑鼠右鍵按一下 [安全性] 資料夾，並指向 [新增]，然後按一下 [登入]。  
+3.  以滑鼠右鍵按一下 [安全性]  資料夾，並指向 [新增]  ，然後按一下 [登入]  。  
   
-4.  在 [登入 - 新增] 對話方塊的 [登入名稱] 方塊中，指定 Windows 使用者的名稱，指定 [Windows 驗證] 做為驗證類型，然後按一下 [搜尋] 驗證使用者。  
+4.  在 [登入 - 新增]  對話方塊的 [登入名稱]  方塊中，指定 Windows 使用者的名稱，指定 [Windows 驗證]  做為驗證類型，然後按一下 [搜尋]  驗證使用者。  
   
 5.  使用者驗證完成後，按一下左窗格中的 **[使用者對應]** 頁面。  
   
-6.  在右窗格中，從 **DQS_MAIN** 資料庫的 [對應] 資料行底下選取該核取方塊，然後選取 **dqs_administrator**、**dqs_kb_editor** 或 **dqs_kb_operator** 核取方塊，這些核取方塊位於 [資料庫角色成員資格對象: DQS_MAIN] 窗格中，且根據使用者所需的存取層級來選取。 如需有關三個 DQS 角色的詳細資訊，請參閱＜ [DQS 安全](../../data-quality-services/dqs-security.md)＞。  
+6.  在右窗格中，從 **DQS_MAIN** 資料庫的 [對應]  資料行底下選取該核取方塊，然後選取 **dqs_administrator**、**dqs_kb_editor** 或 **dqs_kb_operator** 核取方塊，這些核取方塊位於 [資料庫角色成員資格對象: DQS_MAIN]  窗格中，且根據使用者所需的存取層級來選取。 如需有關三個 DQS 角色的詳細資訊，請參閱＜ [DQS 安全](../../data-quality-services/dqs-security.md)＞。  
   
-7.  在 [登入 - 新增] 對話方塊中，按一下 [確定] 套用變更。  
+7.  在 [登入 - 新增]  對話方塊中，按一下 [確定]  套用變更。  
   
     > [!NOTE]  
     >  如果您對使用者授與 **dqs_administrator** 角色並套用了變更，然後重新檢查使用者的權限，也會同時選取另外兩個 DQS 角色核取方塊 (**dq_kb_editor** 和 **dqs_kb_operator**)。  

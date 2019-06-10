@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 11a6a5406ff60520ede71ee8d9325991719b6f50
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 0256881ffbf3a1729c89cd3a82522fd3e684ebf6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487342"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776499"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>在知識探索中匯入 Excel 檔案中的定義域
 
@@ -40,15 +40,15 @@ ms.locfileid: "65487342"
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，執行下列其中一項作業：  
   
-    -   若要建立新的知識庫，以便將資料匯入其中，請按一下 **[新增知識庫]**、輸入知識庫的名稱、為 **[建立知識庫來源]** 選取 **[無]**、選取 **[知識探索]** 活動，然後按一下 **[建立]**。  
+    -   若要建立新的知識庫，以便將資料匯入其中，請按一下 **[新增知識庫]** 、輸入知識庫的名稱、為 **[建立知識庫來源]** 選取 **[無]** 、選取 **[知識探索]** 活動，然後按一下 **[建立]** 。  
   
-    -   若要開啟現有知識庫，以便將資料匯入其中，請按一下 **[開啟知識庫]**、選取知識庫、選取 **[知識探索]**，然後按 **[下一步]**。  
+    -   若要開啟現有知識庫，以便將資料匯入其中，請按一下 **[開啟知識庫]** 、選取知識庫、選取 **[知識探索]** ，然後按 **[下一步]** 。  
   
-3.  在 [對應]  頁面上，針對 [資料來源]  選取 [Excel 檔案] 。  
+3.  在 [對應]  頁面上，針對 [資料來源]  選取 [Excel 檔案]  。  
   
 4.  在 **[Excel 檔案]** 行上按一下 **[瀏覽]** 。  
   
-5.  在 **[選取 Excel 檔案]** 對話方塊中，移至您想要匯入之來源 Excel 檔案所在的資料夾，並選取此 Excel 檔案，然後按一下 **[開啟]**。  
+5.  在 **[選取 Excel 檔案]** 對話方塊中，移至您想要匯入之來源 Excel 檔案所在的資料夾，並選取此 Excel 檔案，然後按一下 **[開啟]** 。  
   
 6.  從 **[工作表]** 下拉式清單中，選取您想要匯入之來源 Excel 檔案中的工作表。  
   
@@ -56,20 +56,20 @@ ms.locfileid: "65487342"
   
 8.  選取資料行，然後將現有的定義域對應至此資料行，或是建立新的定義域，方法是按一下 **[建立定義域]** 圖示、在 **[建立定義域]** 對話方塊中建立定義域，然後將此定義域對應至此資料行。 此定義域的資料類型必須符合此資料行的資料類型。 針對試算表的所有資料行重複上述步驟。  
   
-9. 按一下 [下一步] 。  
+9. 按一下 [下一步]  。  
   
 10. 在 **[探索]** 頁面上，按一下 **[開始]** ，分析 Excel 試算表中的資料。  
   
     > [!NOTE]  
     >  如果您在資料上傳完畢之前離開頁面，檔案上傳程序將會終止。  
   
-11. 確認分析已順利完成，然後按 **[下一步]**。  
+11. 確認分析已順利完成，然後按 **[下一步]** 。  
   
 12. 在 **[管理定義域值]** 頁面中，確認正確的定義域已列在 **[定義域]** 清單中，而且值已輸入定義域資料表中。  
   
-13. 按一下 **[完成]**，然後按一下 **[發行]** 發行知識庫，或是按一下 **[否]** ，不發行。  
+13. 按一下 **[完成]** ，然後按一下 **[發行]** 發行知識庫，或是按一下 **[否]** ，不發行。  
   
-14. 確認知識庫已發行，然後按一下 **[確定]**。  
+14. 確認知識庫已發行，然後按一下 **[確定]** 。  
   
 ##  <a name="FollowUp"></a> 後續操作：從 Excel 檔案匯入定義域之後  
  當您從 Excel 檔案匯入定義域之後，您可以將知識加入至定義域，或是在清理或比對專案時使用定義域 (根據定義域的內容而定)。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)、[管理複合定義域](../data-quality-services/managing-a-composite-domain.md)、[建立比對原則](../data-quality-services/create-a-matching-policy.md)、[資料清理](../data-quality-services/data-cleansing.md)或[資料比對](../data-quality-services/data-matching.md)。  
