@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: de7325ccf703866355f7b1cc2699ea7ac5587fc0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 728c028236bf14d00b36b4ce32551a29c47ce2c0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65489267"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776126"
 ---
 # <a name="manage-dqs-log-files"></a>管理 DQS 記錄檔
 
@@ -50,7 +50,7 @@ ms.locfileid: "65489267"
   
 -   類別和方法  
   
--   `Message`  
+-   Message  
   
  除了這些項目以外，記錄檔也會顯示有關應用程式版本、電腦名稱、使用者名稱和作業系統的資訊。  
   

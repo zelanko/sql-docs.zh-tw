@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 本教學課程會示範如何將資料內嵌到 Spark 作業在 Studio 中使用 Azure 資料的 SQL Server 2019 巨量資料叢集 （預覽） 的資料集區。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: dcdbee449f15e070920660d5470135f4f8ae93a0
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: aa38de6e488c71109758d26481a8487f574f6451
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994170"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770893"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教學課程：將資料內嵌到 Spark 作業的 SQL Server 資料集區
 
@@ -108,7 +108,7 @@ ms.locfileid: "65994170"
    |---|---|
    | 伺服器名稱 (server name) | SQL Server 使用，來讀取資料表的結構描述 |
    | 連接埠編號 | SQL Server 連接埠 （預設值 1433年） 上接聽 |
-   | username | SQL Server 登入使用者名稱 |
+   | userName | SQL Server 登入使用者名稱 |
    | 密碼 | SQL Server 登入密碼 |
    | 資料庫名稱 | 目標資料庫 |
    | 外部資料表名稱 | 使用查詢結果的資料表 |

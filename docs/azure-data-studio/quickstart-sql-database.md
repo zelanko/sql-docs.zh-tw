@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: a961cd08baab13b87241492df4adef52d5846daf
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+manager: jroth
+ms.openlocfilehash: efff2a0ac451afb869451735545be6cc50ad15f7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620348"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778290"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>快速入門：使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連線及查詢 Azure SQL database
 
@@ -57,7 +57,7 @@ ms.locfileid: "65620348"
 
    ![新的 [連線] 圖示](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. 選取 [連接]。
+3. 選取 [連接]  。
 
 4. 如果您的伺服器沒有防火牆規則來允許連線，Azure Data Studio**建立新的防火牆規則**表單隨即開啟。 請完成表單，以建立新的防火牆規則。 如需詳細資訊，請參閱[防火牆規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
 

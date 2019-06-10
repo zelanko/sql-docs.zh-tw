@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 7cff38bc9c6a0738cea6ae2f713aa60f04c9de0d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: b2ed90bc8760cf31bda9685e66abe7bcef29536e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65105046"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770966"
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]的擴充模組
 
@@ -35,7 +35,6 @@ ms.locfileid: "65105046"
 3. 選取您想要的延伸模組並**安裝**它。
 4. 選取**重新載入**以啟用該擴充功能 (只有第一次安裝擴充功能時需要)。
 5. 透過滑鼠右鍵點選伺服器或資料庫並點選**管理**，瀏覽您的管理儀表板。
-
 6. 已安裝的擴充功能會以索引標籤方式顯示在您的管理儀表板上：
 
    ![擴充管理員](media/extensions/dashboard-extensions.png)
