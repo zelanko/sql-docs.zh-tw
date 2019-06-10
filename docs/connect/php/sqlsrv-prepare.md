@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8716f57c208eeb38992cf6122509a36b29b858aa
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+manager: jroth
+ms.openlocfilehash: 8029d83fd51d126a4ca6bdc8ae69e61536c2aa3d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582891"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802359"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

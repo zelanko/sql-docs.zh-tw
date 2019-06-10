@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c60b0c86d1356dd4d15d2854184d0116316b823c
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+manager: jroth
+ms.openlocfilehash: bebfb6270d334305ae5684d7cca0c9e6571217e1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671254"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781826"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC Driver 常見問題集 (FAQ)
 

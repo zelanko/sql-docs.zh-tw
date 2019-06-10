@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ea9eade200b31b532d3970b19a21477ee7d66d65
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+manager: jroth
+ms.openlocfilehash: a48be9266522ca1c18834c22bcae7090110a50c6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59670986"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781909"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>下載 Microsoft JDBC Driver for SQL Server
 

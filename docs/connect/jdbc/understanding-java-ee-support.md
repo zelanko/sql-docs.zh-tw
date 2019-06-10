@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7d7d1867c8c6d9311736124cf74e30b748a9de68
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+manager: jroth
+ms.openlocfilehash: bd082fbbc6aadbbef2ec8778b61a68c659949e74
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671224"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788473"
 ---
 # <a name="understanding-java-ee-support"></a>了解 Java EE 支援
 
