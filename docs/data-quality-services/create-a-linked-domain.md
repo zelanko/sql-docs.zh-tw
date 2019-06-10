@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dcf52d8c69c59ca7318a2a20ce82ab2a8217c9c4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: a7ad04719883f6674d3656d56ce8df6519c0d29e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480419"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761844"
 ---
 # <a name="create-a-linked-domain"></a>建立連結的定義域
 
@@ -51,9 +51,9 @@ ms.locfileid: "65480419"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]**。 如需相關資訊，請參閱 [建立知識庫](../data-quality-services/create-a-knowledge-base.md) 或 [開啟知識庫](../data-quality-services/open-a-knowledge-base.md)。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]** 。 如需相關資訊，請參閱 [建立知識庫](../data-quality-services/create-a-knowledge-base.md) 或 [開啟知識庫](../data-quality-services/open-a-knowledge-base.md)。  
   
-3.  從 **[定義域管理]** 頁面的 **[定義域清單]** 中，以滑鼠右鍵按一下您想要與新的定義域連結的定義域，然後按一下 **[建立連結的定義域]**。  
+3.  從 **[定義域管理]** 頁面的 **[定義域清單]** 中，以滑鼠右鍵按一下您想要與新的定義域連結的定義域，然後按一下 **[建立連結的定義域]** 。  
   
     > [!NOTE]  
     >  並沒有專門用來建立連結的定義域的圖示。 若要這樣做，您只能使用內容功能表中的命令。  
@@ -84,9 +84,9 @@ ms.locfileid: "65480419"
   
 -   您可以變更連結的定義域的名稱和描述。  
   
--   若要針對 **[資料類型]**、 **[使用前置值]** 或 **[設定輸出格式為]** 屬性變更定義域屬性，請選取您連結到的定義域，並在 **[定義域屬性]** 索引標籤中針對該定義域變更這些設定。 您不能在連結的定義域的屬性中變更這些設定。 如需相關資訊，請參閱 [建立定義域](../data-quality-services/create-a-domain.md)。  
+-   若要針對 **[資料類型]** 、 **[使用前置值]** 或 **[設定輸出格式為]** 屬性變更定義域屬性，請選取您連結到的定義域，並在 **[定義域屬性]** 索引標籤中針對該定義域變更這些設定。 您不能在連結的定義域的屬性中變更這些設定。 如需相關資訊，請參閱 [建立定義域](../data-quality-services/create-a-domain.md)。  
   
--   [定義域管理] 頁面上 **[參考資料]**、 **[定義域規則]**、 **[定義域值]** 和 **[以詞彙為主的關聯]** 索引標籤中的設定可以針對連結的定義域或是連結到的定義域來變更，而且另一個定義域將會繼承變更。  
+-   [定義域管理] 頁面上 **[參考資料]** 、 **[定義域規則]** 、 **[定義域值]** 和 **[以詞彙為主的關聯]** 索引標籤中的設定可以針對連結的定義域或是連結到的定義域來變更，而且另一個定義域將會繼承變更。  
   
  連結的定義域具有下列特性：  
   
