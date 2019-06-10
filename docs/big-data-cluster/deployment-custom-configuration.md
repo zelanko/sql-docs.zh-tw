@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: 了解如何使用組態檔來自訂部署巨量資料叢集。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 105b69b8326b29a5515da38304fb8ba455ac136a
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.openlocfilehash: 61e6d50de66ca7fe4a9b5f3e1c5511fc19b8cffe
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66743939"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782258"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>設定部署巨量資料叢集
 

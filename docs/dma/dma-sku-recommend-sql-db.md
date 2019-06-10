@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: craigg
-ms.openlocfilehash: c67eca111ecd0a51bc8e70d747cb7b713fe54ca8
-ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
+manager: jroth
+ms.openlocfilehash: 5effd31d37af5fbe119f1ad23781b994fa89c240
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66413636"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794314"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>識別您的內部部署資料庫權限的 Azure SQL Database/受控執行個體 SKU
 

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: craigg
-ms.openlocfilehash: 53b5564cbcae177842fe79a9c11bec346eeb8dae
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 25e60b4c51e6a4a5ac38a1b7f0e3268a0cee3e3b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63152348"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794338"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>移轉 SQL Server 登入，使用 Data Migration Assistant
 

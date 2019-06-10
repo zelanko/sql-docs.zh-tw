@@ -5,18 +5,18 @@ description: 使用 SQL Server 2019 巨量資料叢集使用 RESTful web 服務 
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
-manager: craigg
+manager: jroth
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4d299f364b4d67e1f31ce7c0e70d6ba062933f37
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: a3894ccbd8ffda7cfe00d61a7a47622f7f481c8b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860539"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801897"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>使用 SQL Server 使用 RESTful web 服務的巨量資料叢集上部署的應用程式
 
