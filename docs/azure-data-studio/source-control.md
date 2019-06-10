@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 7adcae568e97d4bbecd5f901a76dc465dad53ba7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 6431b869af8abc91a9de319f32c0576b82428a0a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089728"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798027"
 ---
 #  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中使用原始檔控制
 
@@ -31,8 +31,8 @@ ms.locfileid: "65089728"
 
 ## <a name="open-an-existing-git-repository"></a>開啟現有的 Git 存放庫
 
-1. 在 [檔案] 功能表下方，選取 [開啟資料夾]
-2. 瀏覽包含由 Git 追蹤之檔案的資料夾，然後按一下 [選取資料夾]。 您可以選擇本機存放庫中的子資料夾。
+1. 在 [檔案]  功能表下方，選取 [開啟資料夾] 
+2. 瀏覽包含由 Git 追蹤之檔案的資料夾，然後按一下 [選取資料夾]  。 您可以選擇本機存放庫中的子資料夾。
 
 
 ## <a name="initialize-a-new-git-repository"></a>初始化新的 git 儲存機制

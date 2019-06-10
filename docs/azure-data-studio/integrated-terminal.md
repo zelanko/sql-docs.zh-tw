@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: cfb635287a0baa2d3a9e8f59d9590c278cbf28b2
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: d29234810e30efd204f498e2f7c63ba6571cbfe7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66010940"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797530"
 ---
 # <a name="integrated-terminal"></a>整合式終端機
 

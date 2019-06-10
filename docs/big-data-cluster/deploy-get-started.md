@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: 了解的步驟和部署 SQL Server 2019 巨量資料叢集 （預覽） 的資源。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48ba1bfe2a90fdb1ea2464d404ba851a8ca30992
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.openlocfilehash: 31f8b94693ad7c6d242249300a21d051a7afe859
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66743987"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797910"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>開始使用 SQL Server 的巨量資料叢集
 

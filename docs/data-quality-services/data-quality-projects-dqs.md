@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e6a58554d045ab907820016c8d51782fa7f02e8e
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: eeaef98e2bd5ae195cb8a15b9c82a2946807d90d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480309"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797692"
 ---
 # <a name="data-quality-projects-dqs"></a>資料品質專案 (DQS)
 

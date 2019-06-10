@@ -10,13 +10,13 @@ ms.reviewer: achatter; alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 9aad778475649280e5472f80ad96973d09803375
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6ac15dcd6b440a8c3bcca0c468a79548469fe059
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63312680"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798038"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>如何在 Azure Data Studio 中使用 notebook
 
@@ -126,7 +126,7 @@ SQL 核心也可用來連線到 PostgreSQL 伺服器執行個體。 如果您是
 
 選擇`PySpark Kernel`在下列程式碼中的資料格類型。
 
-按一下 **[執行]**。
+按一下 **[執行]** 。
 
 Spark 應用程式已啟動，並傳回下列輸出：
 
