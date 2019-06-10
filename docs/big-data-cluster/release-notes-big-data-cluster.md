@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 本文說明 SQL Server 2019 巨量資料叢集 （預覽） 的已知的問題與最新的更新。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a2f7f6c2929f1b16d0e845bc72a50cc50f3d8812
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: d3967da74969556cd96483d4a9c3afa3135fa342
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66014985"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779214"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>版本資訊適用於 SQL Server 上的巨量資料叢集
 
@@ -33,11 +33,11 @@ ms.locfileid: "66014985"
 
 | 新功能或更新 | 詳細資料 |
 |:---|:---|
-| **mssqlctl** updates | 數個**mssqlctl** [命令與參數更新](../big-data-cluster/reference-mssqlctl.md)。 這包含的更新**mssqlctl 登入**命令，現在的目標是控制器的使用者名稱和端點。 |
-| 儲存體的增強功能 | 支援不同的儲存體設定為記錄檔和資料。 此外，已減少的巨量資料叢集的永續性磁碟區宣告數。 |
-| 多個計算集區執行個體 | 支援多個計算集區執行個體。 |
-| 新的集區行為和功能 | 計算集區現在會依預設儲存體集區和資料集區中的作業**ROUND_ROBIN**只發佈。 資料集區現在可以使用新的新**複寫**散發類型，這表示相同的資料會出現在所有資料集區執行個體。 |
-| 外部資料表的增強功能 | 外部資料表的 HADOOP 資料來源類型現在支援讀取資料列大小上限為 1MB。 外部資料表 （ODBC、 存放集區、 資料集區） 現在支援的資料列的 SQL Server 資料表一樣寬。 |
+| **mssqlctl** 更新 | 數個 **mssqlctl** [命令與參數更新](../big-data-cluster/reference-mssqlctl.md)。 這包含 **mssqlctl login** 命令的更新，此命令現在針對控制器使用者名稱和端點。 |
+| 儲存體增強功能 | 支援記錄檔和資料的不同儲存體設定。 此外，巨量資料叢集的永續性磁碟區宣告數已減少。 |
+| 多重計算集區執行個體 | 支援多重計算集區執行個體。 |
+| 新的集區行為和功能 | 根據預設，現在計算集區只會用於 **ROUND_ROBIN** 散發中的存放集區和資料集區作業。 資料集區現在可以使用新的 **REPLICATED** 散發類型，這表示相同的資料會出現在所有資料集區執行個體上。 |
+| 外部資料表改善 | HADOOP 資料來源類型的外部資料表，現在支援讀取最高 1 MB 的資料列。 外部資料表 (ODBC、存放集區、資料集區) 現在支援如 SQL Server 資料表寬度的資料列。 |
 
 ### <a name="known-issues"></a>已知問題
 
@@ -497,7 +497,7 @@ make: *** [deploy-clean] Error 2
 叢集系統管理入口網站不會顯示 SQL Server 的主要執行個體的端點。 若要尋找主要執行個體的 IP 位址和連接埠，使用下列項目**kubectl**命令：
 
 ```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
+kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 ```
 
 #### <a name="external-tables"></a>外部資料表

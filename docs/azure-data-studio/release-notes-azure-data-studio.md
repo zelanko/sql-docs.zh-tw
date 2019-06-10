@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: d835ff875aa37b3c1fb7e7c4229604e5d90039eb
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
-ms.translationtype: HT
+ms.openlocfilehash: 453c00715e68a648e9cdfc2010810ce701358cf6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744121"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798101"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
@@ -42,15 +42,10 @@ ms.locfileid: "66744121"
 ### <a name="known-issues"></a>已知問題
 - Windows 的資料庫管理工具擴充功能
     - 無法啟動從已中斷連線的伺服器節點的屬性
-        - 這需要一些額外的工作，因此現在我已停用該功能啟用
     - 無法啟動 Azure 伺服器的屬性
-        - SSMS 屬性對話方塊尚不支援 Azure
     - 並非所有的物件具有屬性對話方塊
-        - 此處支援大部分的對話方塊在 SSMS 的物件。 如果您認為應該確實有一個，但不會讓我知道物件
     - 對話方塊需要一些時間才能啟動
-        - 我正在處理上改善-，但在是的它的時間最多可能需要 30 秒鐘啟動的對話方塊
     - 啟動對某些類型的連線 （例如 AAD) 的伺服器錯誤
-        - 工作於修正這些，但讓我知道您在執行，因此我可以追蹤的任何我可能會遺失
 - 筆記型電腦
     - [5838](https://github.com/microsoft/azuredatastudio/issues/5838)允許使用者使用系統 Python notebook
 - 結構描述比較
@@ -283,7 +278,7 @@ _0.32.8 包含幾個 0.32.7 中找到的迴歸修正 ([# 1971年](https://github
 ### <a name="bug-fixes-august-2018"></a>Bug 修正，2018 年 8 月
 
 - 剖析 SQL 查詢編輯器 視窗中的，使用`Parse Syntax`命令。
-- 修正[發出 #143](https://github.com/Microsoft/azuredatastudio/issues/143):按兩下 [未選取變數名稱中的 []。
+- 修正[發出 #143](https://github.com/Microsoft/azuredatastudio/issues/143):按兩下 [未選取變數名稱中的 ]。
 - 修正[問題 #387](https://github.com/Microsoft/azuredatastudio/issues/387):SQL 索引標籤 DB 圖示為紅色。
 - 修正[發出 #825](https://github.com/Microsoft/azuredatastudio/issues/825):要求：自動連接到目前的伺服器，做為指令碼之後... 
 - 修正[問題 1278](https://github.com/Microsoft/azuredatastudio/issues/1278): sqlops.desktop [桌面項目]-名稱和註解的備援值。
