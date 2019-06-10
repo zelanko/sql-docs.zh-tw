@@ -13,36 +13,20 @@ helpviewer_keywords:
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bbbc8122105df6a9911357734a00c7c633e63687
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: d191a506f688b1c1f79751f4aa652a719000a564
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59367236"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793619"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>設定 Always On 可用性群組的複寫
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫和 AlwaysOn 可用性群組包含七個步驟。 下列各節將詳細說明每個步驟。  
-  
-1.  [設定資料庫發行集和訂閱。](#step1)  
-  
-2.  [設定 AlwaysOn 可用性群組。](#step2)  
-  
-3.  [確定所有次要複本主機都設定為複寫。](#step3)  
-  
-4.  [將次要複本主機設定為複寫發行者。](#step4)  
-  
-5.  [將原始發行者重新導向至可用性群組接聽程式名稱。](#step5)  
-  
-6.  [執行驗證預存程序以確認組態。](#step6)  
-  
-7.  [將原始發行者加入至複寫監視器。](#step7)  
-  
- 您可以按照任何順序執行步驟 1 和 2。  
   
 ##  <a name="step1"></a> 1.設定資料庫發行集和訂閱  
  **設定散發者**  

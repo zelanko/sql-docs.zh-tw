@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 975423cab6fb7b00baf279a9a4186336120e08c2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 62af44faa45892be9af08a4fbd282ddfa4c7c757
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537919"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772111"
 ---
 # <a name="remote-servers"></a>遠端伺服器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52537919"
   
  大部份的情況下，您不需要設定遠端伺服器的組態選項。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在本機和遠端電腦上設定預設值，以允許遠端伺服器的連接。  
   
- 若要讓遠端伺服器存取可以進行，在本機與遠端電腦上的 [遠端存取] 組態選項都必須設定為 1  (這是預設值)。[遠端存取] 會控制遠端伺服器的登入。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** 預存程序或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]重設此組態選項。 若要重設 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的選項，請使用 [伺服器屬性連接] 頁面的 [允許此伺服器的遠端連接]。 若要存取 [伺服器屬性連接] 頁面，請在物件總管中以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]。 在 [伺服器屬性] 頁面上，按一下 [連接] 頁面。  
+ 若要讓遠端伺服器存取可以進行，在本機與遠端電腦上的 [遠端存取]  組態選項都必須設定為 1 (這是預設值)。[遠端存取]  會控制遠端伺服器的登入。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** 預存程序或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]重設此組態選項。 若要重設 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的選項，請使用 [伺服器屬性連接]  頁面的 [允許此伺服器的遠端連接]  。 若要存取 [伺服器屬性連接]  頁面，請在物件總管中以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]  。 在 [伺服器屬性]  頁面上，按一下 [連接]  頁面。  
   
  您可以從本機伺服器來停用遠端伺服器組態，以防止其配對遠端伺服器上的使用者存取本機伺服器。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52537919"
 >  盡可能使用 Windows 驗證。  
   
 ### <a name="remote-server-security-example"></a>遠端伺服器安全性的範例  
- 請考量這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝： **serverSend** 和 **serverReceive**。 **serverReceive** 的設定是將來自 **serverSend** 的內送登入 (稱為 **Sales_Mary**) 對應到 **serverReceive** 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入 (稱為 **Alice**)。 另一個來自 **serverSend** 的內送登入 (稱為 **Joe**)，則會對應到 **serverReceive** 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入 (稱為 **Joe**)。  
+ 請考量這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝： **serverSend** 和 **serverReceive**。 **serverReceive** 的設定是將來自 **serverSend** 的內送登入 (稱為 **Sales_Mary**) 對應到 **serverReceive** 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入 (稱為 **Alice**)。 另一個來自 **serverSend** 的內送登入 (稱為 **Joe**)，則會對應到 **serverReceive** 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入 (稱為 **Joe**)  。  
   
  下列的 Transact-SQL 程式碼範例會將 `serverSend` 設定為對 `serverReceive` 執行 RPC。  
   

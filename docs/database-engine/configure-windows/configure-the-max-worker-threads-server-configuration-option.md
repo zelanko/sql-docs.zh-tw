@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6088e603405a41d5bffbc1425b9f6f5495096f18
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 2865144d47dd316204d088cb98c9c0c99b71334e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59429334"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767715"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>設定 max worker threads 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "59429334"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定 max worker threads 選項之後](#FollowUp)  
+-   **後續操作：** [設定 max worker threads 選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -84,7 +84,7 @@ ms.locfileid: "59429334"
   
 -   當所有的工作者執行緒都在進行長時間執行的查詢時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會反應遲緩，直到工作者執行緒完成並恢復為可用狀態為止。 雖然這不算是瑕疵，但有時卻讓人困擾。 若處理序反應遲緩，而且無法處理新查詢，請使用專用管理員連接 (DAC) 來連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，然後清除處理序。 若要避免這個問題，請增加 max worker threads 的最大數目。  
   
- [最大工作者執行緒] 伺服器設定選項不會限制系統中可能繁衍的所有執行緒。 可用性群組、Service Broker、鎖定管理員等工作所需的執行緒，或在此限制外繁衍的執行緒。 如果超過設定的執行緒數目，下列查詢會提供已繁衍其他執行緒之系統工作的相關資訊。  
+ [最大工作者執行緒]  伺服器設定選項不會限制系統中可能繁衍的所有執行緒。 可用性群組、Service Broker、鎖定管理員等工作所需的執行緒，或在此限制外繁衍的執行緒。 如果超過設定的執行緒數目，下列查詢會提供已繁衍其他執行緒之系統工作的相關資訊。  
   
  ```sql  
  SELECT  s.session_id, r.command, r.status,  
@@ -110,11 +110,11 @@ ms.locfileid: "59429334"
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>設定 max worker threads 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
   
 2.  按一下 **[處理器]** 節點。  
   
-3.  在 [最大背景工作執行緒] 方塊中，鍵入或選取 128 到 32,767 之間的任一數值。  
+3.  在 [最大背景工作執行緒]  方塊中，鍵入或選取 128 到 32,767 之間的任一數值。  
   
 > [!TIP]
 > **Max worker threads** 選項可用來設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序可使用的工作者執行緒數目。 **max worker threads** 的預設值對大部份系統而言都是最合適的。 但依系統組態而定，將 **max worker threads** 設為較小的值有時候可提高效能。
@@ -126,9 +126,9 @@ ms.locfileid: "59429334"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `max worker threads` 選項設定為 `900`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `max worker threads` 選項設定為 `900`。  
   
 ```sql  
 USE AdventureWorks2012 ;  

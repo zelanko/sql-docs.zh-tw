@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 850f0bac65f0c8955c50514145fb0d2998d6139a
-ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
+manager: jroth
+ms.openlocfilehash: 65d7c56f399a9bd8ba6fb4d68311fe7823fa2eab
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66413608"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794530"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>資料庫引擎的新功能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ab82bbc42ba6dc031a6187f728d4b451e41c3702
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: a56193f453781bf25dc34079c9845a7d0566f820
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480449"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785698"
 ---
 # <a name="create-a-knowledge-base"></a>建立知識庫
 
@@ -41,7 +41,7 @@ ms.locfileid: "65480449"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，按一下 **[新增知識庫]**。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，按一下 **[新增知識庫]** 。  
   
 3.  輸入新知識庫的名稱和描述。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "65480449"
   
     -   如果您不想要使用現有的知識庫或資料檔案做為新知識庫的基礎，請選取 **[無]** 。  
   
-    -   若要使用已經在 **上建立的知識庫或預設知識庫做為新知識庫的基礎，請選取** [現有知識庫] [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]。 從 **[選取知識庫]** 下拉式清單中選取知識庫，或按一下 **[瀏覽]** 顯示 **[選取知識庫]** 對話方塊、選取要做為新知識庫基礎的現有知識庫，然後按一下 **[確定]**。 當您從資料表中選取知識庫時，該知識庫的定義域和比對規則就會顯示在對話方塊的右窗格中。 您也可以選取 [DQS 資料]  知識庫，這是預設知識庫，其中包含與美國公司、地址和政黨資料有關的一般現成定義域及知識。  
+    -   若要使用已經在 **上建立的知識庫或預設知識庫做為新知識庫的基礎，請選取** [現有知識庫] [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]。 從 **[選取知識庫]** 下拉式清單中選取知識庫，或按一下 **[瀏覽]** 顯示 **[選取知識庫]** 對話方塊、選取要做為新知識庫基礎的現有知識庫，然後按一下 **[確定]** 。 當您從資料表中選取知識庫時，該知識庫的定義域和比對規則就會顯示在對話方塊的右窗格中。 您也可以選取 [DQS 資料]  知識庫，這是預設知識庫，其中包含與美國公司、地址和政黨資料有關的一般現成定義域及知識。  
   
-    -   選取 **[從 DQS 檔案匯入]** ，即可使用 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上的 DQS 檔案做為新知識庫的基礎。 按一下 **[瀏覽]**、選取副檔名為 .dqs 的 DQS 資料檔案，然後按一下 **[確定]**。  
+    -   選取 **[從 DQS 檔案匯入]** ，即可使用 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上的 DQS 檔案做為新知識庫的基礎。 按一下 **[瀏覽]** 、選取副檔名為 .dqs 的 DQS 資料檔案，然後按一下 **[確定]** 。  
   
 5.  在 **[選取活動]** 中，選取您想要在新知識庫上執行的活動：  
   
@@ -61,7 +61,7 @@ ms.locfileid: "65480449"
   
     -   選取 **[比對原則]** 建立比對原則，並將其加入至知識庫。  
   
-6.  按一下 [建立] 。  
+6.  按一下 [建立]  。  
   
 ##  <a name="FollowUp"></a> 後續操作：建立知識庫之後  
  建立知識庫之後，系統會顯示可用來執行知識探索的精靈、建立比對原則的精靈或是執行定義域管理的頁面。 如需有關知識探索、定義域管理或比對原則的詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  

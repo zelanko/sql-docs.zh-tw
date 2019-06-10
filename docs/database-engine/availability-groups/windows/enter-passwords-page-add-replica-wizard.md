@@ -12,19 +12,19 @@ f1_keywords:
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7472049d96abf98f55dcc90486012b33ba13ba66
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 59a4e60fa68223939a595be96c9adb872e01202a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215039"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769069"
 ---
 # <a name="enter-passwords-page-add-replica-wizard-for-always-on-availability-groups"></a>Always On 可用性群組的輸入密碼頁面 (新增複本精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本說明主題描述 [輸入密碼] 頁面的選項。 本主題適用於 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]。  
+  本說明主題描述 [輸入密碼]  頁面的選項。 本主題適用於 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]。  
   
- 如果您在 [指定複本] 頁面上選取的複本包含具有資料庫主要金鑰的資料庫，則會顯示 [輸入密碼] 頁面。  
+ 如果您在 [指定複本]  頁面上選取的複本包含具有資料庫主要金鑰的資料庫，則會顯示 [輸入密碼] 頁面。  
   
 ## <a name="enter-passwords-options"></a>輸入密碼選項  
  **[這個 SQL Server 執行個體上的使用者資料庫]** 方格會列出每個本機使用者資料庫。 資料行如下：  
@@ -36,12 +36,12 @@ ms.locfileid: "53215039"
  顯示資料庫大小 (如果精靈可使用大小)。  
   
  **狀態**  
- 針對具有資料庫主要金鑰的資料庫指出 [需要密碼]。 在 [密碼] 資料行中輸入資料庫主要金鑰的密碼之後，按一下 [重新整理]。 如果您已正確地輸入密碼，[狀態] 資料行會指出 [已輸入密碼]。  
+ 針對具有資料庫主要金鑰的資料庫指出 [需要密碼]  。 在 [密碼]  資料行中輸入資料庫主要金鑰的密碼之後，按一下 [重新整理]  。 如果您已正確地輸入密碼，[狀態]  資料行會指出 [已輸入密碼]  。  
   
- 如果資料庫沒有資料庫主要金鑰，[狀態] 資料行會指出 [不需要密碼]。  
+ 如果資料庫沒有資料庫主要金鑰，[狀態]  資料行會指出 [不需要密碼]  。  
   
  **密碼**  
- 如果 [狀態] 資料行指出 [需要密碼]，請輸入資料庫主要金鑰的密碼。  
+ 如果 [狀態]  資料行指出 [需要密碼]  ，請輸入資料庫主要金鑰的密碼。  
   
  **[重新整理]**  
  按一下以重新整理方格。 輸入必要的密碼之後，這非常有用。  

@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1591a4d23221526159a5ff9577997b199fd7f99c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bd28758b2f5cb0c5e98ea8b24784369386e7bdce
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597718"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799540"
 ---
 # <a name="client-network-configuration"></a>用戶端網路組態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  用戶端軟體可讓用戶端電腦連接到網路上的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 「用戶端」是前端應用程式，它會使用伺服器 (如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]) 所提供的服務。 主控這個應用程式的電腦稱為「用戶端電腦」。  
+  用戶端軟體可讓用戶端電腦連接到網路上的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 「用戶端」是前端應用程式，它會使用伺服器 (如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]) 所提供的服務。 主控這個應用程式的電腦稱為「用戶端電腦」  。  
   
  在最簡單的層級中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端可以與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體位在相同的機器上。 不過，用戶端通常會透過網路連接到一或多個遠端伺服器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的用戶端/伺服器架構可供完美無缺地管理網路上的多個用戶端及伺服器。 預設用戶端組態在大部分情況下都會足夠。  
   

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d14cb0b60074ce7cd2c11c80817ec5f0043651a0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 12d36899d27e73d2176e0ad3c5c40c80119406ab
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209427"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779164"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>監視可用性群組 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,27 +32,8 @@ ms.locfileid: "53209427"
 > [!TIP]  
 >  許多這些檢視可在單一查詢中聯結，透過檢視識別碼資料行從多個檢視傳回資訊。  
   
- **本主題內容：**  
   
--   [Permissions](#Permissions)  
-  
--   **使用 Transact-SQL 以監視：**  
-  
-     [伺服器執行個體上的 AlwaysOn 可用性群組功能](#AoAgFeatureOnSI)  
-  
-     [WSFC 叢集中的可用性群組](#WSFC)  
-  
-     [可用性群組](#AvGroups)  
-  
-     [可用性複本](#AvReplicas)  
-  
-     [可用性資料庫](#AvDbs)  
-  
-     [可用性群組接聽程式](#AGlisteners)  
-  
--   [相關工作](#RelatedTasks)  
-  
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 目錄檢視需要伺服器執行個體的 VIEW ANY DEFINITION 權限。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 動態管理檢視需要伺服器的 VIEW SERVER STATE 權限。  
   
 ##  <a name="AoAgFeatureOnSI"></a> 監視伺服器執行個體上的 AlwaysOn 可用性群組功能  
@@ -189,7 +170,7 @@ ms.locfileid: "53209427"
 >  主要複本位置是可用性群組的授權來源。  
   
 > [!NOTE]  
->  如需可用性資料庫 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 效能計數器 ( **SQLServer:Database Replica** 效能物件) 的相關資訊，請參閱 [SQL Server、資料庫複本](../../../relational-databases/performance-monitor/sql-server-database-replica.md)。 此外，若要監視可用性資料庫上的交易記錄活動，請使用 **SQLServer:Databases** 效能物件的下列計數器：**Log Flush Write Time (ms)**、**Log Flushes/sec**、**Log Pool Cache Misses/sec**、**Log Pool Disk Reads/sec** 和 **Log Pool Requests/sec**。如需詳細資訊，請參閱 [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)。  
+>  如需可用性資料庫 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 效能計數器 ( **SQLServer:Database Replica** 效能物件) 的相關資訊，請參閱 [SQL Server、資料庫複本](../../../relational-databases/performance-monitor/sql-server-database-replica.md)。 此外，若要監視可用性資料庫上的交易記錄活動，請使用 **SQLServer:Databases** 效能物件的下列計數器：**Log Flush Write Time (ms)** 、**Log Flushes/sec**、**Log Pool Cache Misses/sec**、**Log Pool Disk Reads/sec** 和 **Log Pool Requests/sec**。如需詳細資訊，請參閱 [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)。  
   
 ##  <a name="AGlisteners"></a> 監視可用性群組接聽程式  
  若要監視 WSFC 叢集子網路上的可用性群組接聽程式，請使用下列檢視：  

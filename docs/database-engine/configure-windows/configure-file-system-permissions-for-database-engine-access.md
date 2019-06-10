@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f8139bec00a512a9be6d5805e17f09671135eadb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ef8e2fd80accc21e3497d3c2f3671116f824902f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640136"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799442"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>設定 Database Engine 對檔案系統的存取權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,18 +30,18 @@ ms.locfileid: "47640136"
   
 ## <a name="to-grant-file-system-permission-to-the-per-service-sid"></a>若要將檔案系統權限授與個別服務 SID  
   
-1.  使用 [Windows 檔案總管]，導覽到資料庫檔案儲存所在的檔案系統位置。 以滑鼠右鍵按一下檔案系統資料夾，然後按一下 [內容]。  
+1.  使用 [Windows 檔案總管]，導覽到資料庫檔案儲存所在的檔案系統位置。 以滑鼠右鍵按一下檔案系統資料夾，然後按一下 [內容]  。  
   
-2.  在 [安全性] 索引標籤上，按一下 [編輯]，然後按一下 [新增]。  
+2.  在 [安全性]  索引標籤上，按一下 [編輯]  ，然後按一下 [新增]  。  
   
-3.  在 [選取使用者、電腦、服務帳戶或群組] 對話方塊中，按一下 [位置]，並從位置清單頂端選取您的電腦名稱，然後按一下 [確定]。  
+3.  在 [選取使用者、電腦、服務帳戶或群組]  對話方塊中，按一下 [位置]  ，並從位置清單頂端選取您的電腦名稱，然後按一下 [確定]  。  
   
-4.  在 [輸入要選取的物件名稱] 方塊中，輸入線上叢書主題[**設定 Windows 服務帳戶與權限**](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)所列個別服務 SID 的名稱  ([!INCLUDE[ssDE](../../includes/ssde-md.md)] 的個別服務 SID 名稱是使用 **NT SERVICE\MSSQLSERVER** 代表預設執行個體，使用 **NT SERVICE\MSSQL$InstanceName** 代表具名執行個體)。  
+4.  在 [輸入要選取的物件名稱]  方塊中，輸入線上叢書主題[**設定 Windows 服務帳戶與權限**](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)所列個別服務 SID 的名稱 ([!INCLUDE[ssDE](../../includes/ssde-md.md)] 的個別服務 SID 名稱是使用 **NT SERVICE\MSSQLSERVER** 代表預設執行個體，使用 **NT SERVICE\MSSQL$InstanceName** 代表具名執行個體)。  
   
-5.  按一下 [檢查名稱]，驗證輸入項  (如果驗證失敗，可能是找不到名稱的緣故)。 當您按一下[確定] 時，[找到多個相符名稱] 對話方塊隨即出現。 這時，請選取個別服務 SID 名稱 (即 [MSSQLSERVER] 或 [NT SERVICE\MSSQL$InstanceName])，然後按一下 [確定]。  再按一次 [確定] 返回 [權限] 對話方塊。   
-6.  在 [群組或使用者名稱] 方塊中，選取個別服務 SID 名稱，然後在 [\<名稱> 權限] 方塊中為 [完全控制] 選取 [允許] 核取方塊。  
+5.  按一下 [檢查名稱]  ，驗證輸入項 (如果驗證失敗，可能是找不到名稱的緣故)。 當您按一下[確定]  時，[找到多個相符名稱]  對話方塊隨即出現。 這時，請選取個別服務 SID 名稱 (即 [MSSQLSERVER]  或 [NT SERVICE\MSSQL$InstanceName]  )，然後按一下 [確定]  。  再按一次 [確定]  返回 [權限]  對話方塊。   
+6.  在 [群組或使用者名稱]  方塊中，選取個別服務 SID 名稱，然後在 [\<名稱> 權限]  方塊中為 [完全控制]  選取 [允許]  核取方塊。  
   
-7. 按一下 [套用]，再按兩次 [確定] 退出。  
+7. 按一下 [套用]  ，再按兩次 [確定]  退出。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理 Database Engine Services](../../database-engine/configure-windows/manage-the-database-engine-services.md)   

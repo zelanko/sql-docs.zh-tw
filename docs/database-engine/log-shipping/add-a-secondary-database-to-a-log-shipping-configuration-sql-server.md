@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6d91061db6626f70d765a6c5fb98d3371cb5b085
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 48f99b048474372ead6cdcef1f6988418b93c5b6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672896"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794661"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>將次要資料庫加入至記錄傳送組態 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47672896"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要加入記錄傳送次要資料庫，請使用：**  
   
@@ -51,11 +51,11 @@ ms.locfileid: "47672896"
   
 #### <a name="to-add-a-log-shipping-secondary-database"></a>若要加入記錄傳送次要資料庫  
   
-1.  以滑鼠右鍵按一下記錄傳送組態中要作為主要資料庫的資料庫，然後按一下 [屬性]。  
+1.  以滑鼠右鍵按一下記錄傳送組態中要作為主要資料庫的資料庫，然後按一下 [屬性]  。  
   
-2.  在 **[選取頁面]** 下，按一下 **[交易記錄傳送]**。  
+2.  在 **[選取頁面]** 下，按一下 **[交易記錄傳送]** 。  
   
-3.  在 **[次要伺服器執行個體與資料庫]** 下，按一下 **[新增]**。  
+3.  在 **[次要伺服器執行個體與資料庫]** 下，按一下 **[新增]** 。  
   
 4.  按一下 **[連接]** ，連接到您要做為次要伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "47672896"
   
 13. 請注意 **[還原作業]** 下之 **[排程]** 方塊中所列的還原排程。 如果您要自訂安裝的排程，請按一下 **[排程]** ，然後視需要調整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 排程。 這個排程應接近備份排程。  
   
-14. 按一下 [確定] 。  
+14. 按一下 [確定]  。  
   
 15. 按一下 [資料庫屬性] 對話方塊上的 **[確定]** ，開始執行組態處理序。  
   

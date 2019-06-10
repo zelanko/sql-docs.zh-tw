@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7bf0e948dd5f6e6334e9eb66b4e395bad5fde52c
-ms.sourcegitcommit: 6ab60b426fc6ec7bb9e727323f520c0b05a20d06
+manager: jroth
+ms.openlocfilehash: 2608097cb5b0ca626c8776c6a7312552a181342d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "63049008"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780189"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>檢視可用性複本屬性 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,11 +29,11 @@ ms.locfileid: "63049008"
   
 1.  在 [物件總管] 中，連接到裝載主要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
   
-2.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
+2.  依序展開 [Always On 高可用性]  節點和 [可用性群組]  節點。  
   
 3.  展開可用性複本所屬的可用性群組，然後展開 **[可用性複本]** 節點。  
   
-4.  以滑鼠右鍵按一下要檢視其屬性的可用性複本，然後選取 [屬性] 命令。  
+4.  以滑鼠右鍵按一下要檢視其屬性的可用性複本，然後選取 [屬性]  命令。  
   
 5.  在 **[可用性複本屬性]** 對話方塊中，使用 **[一般]** 頁面檢視此複本的屬性。 如果您連接至主要複本，可以變更下列屬性：可用性模式、容錯移轉模式、主要角色的連接存取、次要角色的唯讀存取 (可讀取的次要)，以及工作階段逾時值。 如需詳細資訊，請參閱[可用性複本屬性 &#40;一般頁面&#41;](../../../database-engine/availability-groups/windows/availability-replica-properties-general-page.md)。  
 

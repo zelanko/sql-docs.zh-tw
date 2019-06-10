@@ -5,18 +5,18 @@ description: 將 Python 或 R 指令碼部署為 SQL Server 2019 巨量資料叢
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6c8f4aea32ba409a00dd1d8f3fb5487e2a4a9d90
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.openlocfilehash: aa95621178b26becd5985fd60b7b2d3588607d17
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66743971"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801865"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>如何部署 SQL Server 的巨量資料叢集 （預覽） 上的應用程式
 

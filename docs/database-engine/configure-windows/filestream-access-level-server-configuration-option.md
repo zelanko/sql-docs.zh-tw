@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b88f6ff2-795e-4730-bfb8-dbc6a958f2ad
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d80151d60b14bc582b8be7c8fbf229cc795a74d3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 81d5627c46f12a033de5dab881f2c6de7f99e2f4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606302"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785328"
 ---
 # <a name="filestream-access-level-server-configuration-option"></a>檔案資料流存取層級伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

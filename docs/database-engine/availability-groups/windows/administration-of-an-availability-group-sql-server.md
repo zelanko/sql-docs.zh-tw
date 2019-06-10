@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3190fba7fd3e09e19236340659e4a43bf252f4ab
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 379511e36b7e6a680b9971ace79b269a9df0db86
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973057"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789676"
 ---
 # <a name="administration-of-an-availability-group"></a>可用性群組的管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "57973057"
 -   加入或移除次要副本。    
 -   加入或移除資料庫。    
 -   暫停或恢復資料庫。   
--   執行已規劃的手動容錯移轉 ( *「手動容錯移轉」*(Manual Failover)) 或強制手動容錯移轉 ( *「強制容錯移轉」*(Forced Failover))。    
+-   執行已規劃的手動容錯移轉 ( *「手動容錯移轉」* (Manual Failover)) 或強制手動容錯移轉 ( *「強制容錯移轉」* (Forced Failover))。    
 -   建立或設定可用性群組接聽程式。    
 -   管理給定可用性群組之 [可讀取的次要複本](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) 。 這項作業包括以次要角色執行時，將一個或多個複本設定為唯讀存取，以及設定唯讀路由。    
 -   管理給定可用性群組之 [次要複本上的備份](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 。 這項作業包括設定您希望執行備份作業的位置，然後編寫備份作業的指令碼以實作您的備份喜好設定。 您必須為裝載可用性複本的每一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上之可用性群組中的每一個資料庫，編寫備份作業的指令碼。    

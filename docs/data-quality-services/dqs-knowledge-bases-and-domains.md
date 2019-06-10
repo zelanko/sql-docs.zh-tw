@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 91e8be0b2c07a846c2ff52f548e364eb0a536028
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 201b9aee27b8a9e267c51588b5178c7c2c6394b1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487353"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796644"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 知識庫與定義域
 
@@ -69,7 +69,7 @@ ms.locfileid: "65487353"
 ### <a name="case-insensitivity-in-dqs"></a>DQS 不區分大小寫  
  DQS 中的值不區分大小寫。 也就是說，當 DQS 執行知識探索、定義域管理或比對時，不會以大小寫區分至值。 如果您在值管理中加入只有大小寫不同於其他值的某個值，這兩個值將會被視為相同的值，而非同義字。 如果只有大小寫不同的兩個值在比對程序中進行比較，將會被視為完全相符。  
   
- 不過，您可以控制您在清理結果中匯出之值的大小寫。 您可以透過設定 [設定輸出格式為] 定義域屬性 (請參閱[設定定義域屬性](../data-quality-services/set-domain-properties.md))，並在匯出清理結果時使用 [標準化輸出] 核取方塊 (請參閱[使用 DQS &#40;內部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)) 來進行。  
+ 不過，您可以控制您在清理結果中匯出之值的大小寫。 您可以透過設定 [設定輸出格式為]  定義域屬性 (請參閱[設定定義域屬性](../data-quality-services/set-domain-properties.md))，並在匯出清理結果時使用 [標準化輸出]  核取方塊 (請參閱[使用 DQS &#40;內部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)) 來進行。  
   
 ##  <a name="Domains"></a> 定義域管理  
  定義域管理可讓資料管理人以互動方式變更及增加電腦輔助的知識探索活動所產生的中繼資料。 您所做的每個變更都可供知識庫定義域使用。 在定義域管理活動中，您可以執行下列操作：  

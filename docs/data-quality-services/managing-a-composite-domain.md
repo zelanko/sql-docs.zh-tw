@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 30b5286770957323bb79200b1cc6c74db0c5a210
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 98c803e53b0d0fd4cbf9676670c14509a8fb4746
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65489219"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776145"
 ---
 # <a name="managing-a-composite-domain"></a>管理複合定義域
 

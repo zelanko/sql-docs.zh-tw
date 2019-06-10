@@ -10,13 +10,13 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: c8cc018a1c9fddd35c80f73ce4f141b0b526ad4f
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+manager: jroth
+ms.openlocfilehash: 3eb1ff10fbf0af49cd698537af915378cc1ddb87
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306216"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794929"
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安裝 SQL Server
 
@@ -290,9 +290,9 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
   
 1.  在伺服器上，啟動 [工作管理員]。  
   
-2.  在 [應用程式] 索引標籤上，按一下 [新工作]。  
+2.  在 [應用程式]  索引標籤上，按一下 [新工作]  。  
   
-3.  在 [建立新工作] 對話方塊的 [開啟] 欄位中輸入 **sqlps.exe**，然後按一下 [確定]。 隨即開啟 [[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell] 視窗。  
+3.  在 [建立新工作]  對話方塊的 [開啟]  欄位中輸入 **sqlps.exe**，然後按一下 [確定]  。 隨即開啟 [[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]  視窗。  
   
 4.  在 [**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**] 視窗中，執行下列指令碼以啟用 TCP/IP 通訊協定：  
   
@@ -324,8 +324,8 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
 如果您不小心關閉命令提示字元，您可以遵循下列步驟啟動新的命令提示字元：  
  
 1.  按 Ctrl+Shift+Esc 鍵顯示 [工作管理員]。  
-2.  在 [應用程式] 索引標籤上，按一下 [新工作]。  
-3.  在 [建立新工作] 對話方塊的 [開啟] 欄位中，輸入 **cmd**，然後[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
+2.  在 [應用程式]  索引標籤上，按一下 [新工作]  。  
+3.  在 [建立新工作]  對話方塊的 [開啟]  欄位中，輸入 **cmd**，然後[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用組態檔安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   

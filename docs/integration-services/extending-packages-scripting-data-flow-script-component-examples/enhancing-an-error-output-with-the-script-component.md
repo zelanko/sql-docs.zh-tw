@@ -16,12 +16,12 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a9d1cc86315446a7744693a39105ea5e542f6885
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 3c9a7827c70f99db24c50704f2591b8288124d45
+ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65724395"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469673"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>使用指令碼元件增強錯誤輸出
 
@@ -48,15 +48,15 @@ ms.locfileid: "65724395"
   
 3.  從上游元件將錯誤輸出連接至新指令碼元件。  
   
-4.  開啟**指令碼轉換編輯器**，然後在 [指令碼] 頁面上選取 **ScriptLanguage** 屬性的指令碼語言。  
+4.  開啟**指令碼轉換編輯器**，然後在 [指令碼]  頁面上選取 **ScriptLanguage** 屬性的指令碼語言。  
   
-5.  按一下 [編輯指令碼] 開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，並新增以下所示的範例程式碼。  
+5.  按一下 [編輯指令碼]  開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，並新增以下所示的範例程式碼。  
   
 6.  關閉 VSTA。  
   
-7.  在指令碼轉換編輯器的 [輸入資料行] 頁面上，選取 ErrorCode 和 ErrorColumn 資料行。  
+7.  在指令碼轉換編輯器的 [輸入資料行]  頁面上，選取 ErrorCode 和 ErrorColumn 資料行。  
   
-8.  在 [輸入及輸出] 頁面上新增兩個新的資料行。  
+8.  在 [輸入及輸出]  頁面上新增兩個新的資料行。  
   
     -   新增新的輸出資料行，類型為**字串**名稱為 **ErrorDescription**。 將新資料行的預設長度增加至 255，以支援長訊息。  
   
@@ -80,9 +80,12 @@ Public Class ScriptMain      ' VB
 
         If componentMetaData130 IsNot Nothing Then
 
-            If 0 = Row.ErrorColumn Then
+            If Row.ErrorColumn = 0 Then
                 ' 0 means no specific column is identified by ErrorColumn, this time.
                 Row.ColumnName = "Check the row for a violation of a foreign key constraint."
+            ELSE If Row.ErrorColumn = -1 Then
+                ' -1 means you are using Table Lock for a Memory Optimised destination table which is not supported.
+                Row.ColumnName = "Table lock is not compatible with Memory Optimised tables."
             Else
                 Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn)
             End If
@@ -106,6 +109,11 @@ public class ScriptMain:      // C#
             if (Row.ErrorColumn == 0)
             {
                 Row.ColumnName = "Check the row for a violation of a foreign key constraint.";
+            }
+            // -1 means you are using Table Lock for a Memory Optimised destination table which is not supported.
+            else if (Row.ErrorColumn == -1)
+            {
+                Row.ColumnName = "Table lock is not compatible with Memory Optimised tables.";
             }
             else
             {

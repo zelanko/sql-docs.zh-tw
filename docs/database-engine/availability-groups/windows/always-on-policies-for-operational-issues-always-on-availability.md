@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 07cc3b6b11d4f40792ede3c0d2a9668c5ada0db6
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+manager: jroth
+ms.openlocfilehash: c08bd2303f08470fd7a7cab65c5fd669ca36d9be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226555"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789527"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Always On 可用性群組操作問題的原則式管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "54226555"
  提供資料庫鏡像之企業級替代方案的高可用性與災害復原解決方案。  
   
  可用性群組  
- 一組一起容錯移轉之離散化使用者資料庫 (稱為 *「可用性資料庫」*(Availability Database)) 的容器。  
+ 一組一起容錯移轉之離散化使用者資料庫 (稱為 *「可用性資料庫」* (Availability Database)) 的容器。  
   
  可用性複本  
- 特定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所裝載之可用性群組的具現化，其中維護屬於可用性群組之每個可用性資料庫的本機副本。 有兩種類型的可用性複本存在：單一 *「主要複本」* (Primary Replica) 以及一到四個 *「次要複本」*(Secondary Replica)。 針對給定可用性群組裝載可用性複本的伺服器執行個體必須位於單一 Windows Server 容錯移轉叢集 (WSFC) 叢集的不同節點上。  
+ 特定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所裝載之可用性群組的具現化，其中維護屬於可用性群組之每個可用性資料庫的本機副本。 有兩種類型的可用性複本存在：單一 *「主要複本」* (Primary Replica) 以及一到四個 *「次要複本」* (Secondary Replica)。 針對給定可用性群組裝載可用性複本的伺服器執行個體必須位於單一 Windows Server 容錯移轉叢集 (WSFC) 叢集的不同節點上。  
   
  可用性資料庫  
- 屬於可用性群組的資料庫。 對於每個可用性資料庫而言，可用性群組會維護單一讀寫複本 ( *「主要資料庫」*(Primary Database)) 以及一到四個唯讀複本 (*「次要資料庫」*(Secondary Database))。  
+ 屬於可用性群組的資料庫。 對於每個可用性資料庫而言，可用性群組會維護單一讀寫複本 ( *「主要資料庫」* (Primary Database)) 以及一到四個唯讀複本 ( *「次要資料庫」* (Secondary Database))。  
   
  AlwaysOn 儀表板  
  提供可用性群組健全狀況之摘要檢視的 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 儀表板。 如需詳細資訊，請參閱本主題稍後的 [AlwaysOn 儀表板](#Dashboard)。  
@@ -78,7 +78,7 @@ ms.locfileid: "54226555"
   
 -   提供疑難排解案例的啟動點。  
   
--   針對給定的操作問題，將特定 AlwaysOn 健全狀況原則違規的相關資訊以及矯正說明的連結填入 [原則評估結果] 對話方塊中。  
+-   針對給定的操作問題，將特定 AlwaysOn 健全狀況原則違規的相關資訊以及矯正說明的連結填入 [原則評估結果]  對話方塊中。  
   
 -   提供健全狀況擴充事件檢視器，以便顯示 AlwaysOn 特定問題的先前事件。  
   

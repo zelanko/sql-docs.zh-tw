@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f5b8e4848f42cbca03bb47c6cac2400068e54765
-ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
+manager: jroth
+ms.openlocfilehash: 7f0f2c7bf602e0280f7d38147d3d7924712d90eb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832110"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772632"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>為 Always On 可用性群組設定分散式交易
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "55832110"
 >
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 和 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 的組態步驟相同。
 
-在分散式交易中，用戶端應用程式使用 Microsoft Distributed Transaction Coordinator (MS DTC 或 DTC) 保證跨多個資料來源的交易一致性。 DTC 是受支援的 Windows Server 型作業系統上提供的服務。 就分散式交易而言，DTC 是「交易協調器」。 一般而言，SQL Server 執行個體是「資源管理員」。 當資料庫位在可用性群組中時，每個資料庫都需要是自己的資源管理員。 
+在分散式交易中，用戶端應用程式使用 Microsoft Distributed Transaction Coordinator (MS DTC 或 DTC) 保證跨多個資料來源的交易一致性。 DTC 是受支援的 Windows Server 型作業系統上提供的服務。 就分散式交易而言，DTC 是「交易協調器」  。 一般而言，SQL Server 執行個體是「資源管理員」  。 當資料庫位在可用性群組中時，每個資料庫都需要是自己的資源管理員。 
 
 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 不能防止可用性群組中的資料庫分散式交易，即使未針對分散式交易設定可用性群組。 但是當未針對分散式交易設定可用性群組時，容錯移轉在某些情況下可能不會成功。 特別是新的主要複本 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 執行個體可能無法從 DTC 取得交易結果。 若要在容錯移轉之後，讓 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 執行個體從 DTC 取得可疑交易的結果，請針對分散式交易設定可用性群組。 
 

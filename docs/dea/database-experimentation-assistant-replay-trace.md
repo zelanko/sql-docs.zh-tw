@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 4430352babb69c58930755cf4ddae0e70b9d5a02
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: 7db0e6a83997a3be7b204f780f3c0a7ad856b0d8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015114"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794448"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>重新執行追蹤，以在資料庫測試助理
 
@@ -45,14 +45,14 @@ ms.locfileid: "66015114"
 1. 依序展開**Microsoft.biztalk.deployment.deployercomponent** > **電腦** > **我的電腦** > **DCOM 設定** >  **DReplayController**。
 1. 以滑鼠右鍵按一下**DReplayController**，然後選取**屬性**。
 1. 在 **安全性**索引標籤上，選取**編輯**來新增使用者帳戶。
-1. 選取 [確定]。
+1. 選取 [確定]  。
 
 ### <a name="verify-setup"></a>確認設定
 
 1.  **SQL Server 安裝路徑**:若要安裝 SQL Server 中輸入的路徑。 例如，c:\\Program Files (x86)\\Microsoft SQL Server\\120。
 1.  **控制器電腦名稱**:輸入已為控制器設定機器的名稱。 這部電腦執行名為 SQL Server Distributed Replay controller 的 Windows 服務。 Distributed Replay controller 會協調 Distributed Replay client 的動作。 每個 Distributed Replay 環境都只能有一個 Controller 執行個體。
 1.  **用戶端的電腦名稱**:輸入每個用戶端電腦，並以逗號分隔的名稱。 範例： client1，client2。 您可以有最多五個用戶端控制站。 用戶端會將一或多個機器，不論是實體或虛擬的執行名為 SQL Server Distributed Replay 用戶端的 Windows 服務。 Distributed Replay Client 會共同運作以模擬 SQL Server 執行個體的工作負載。 每個 Distributed Replay 環境中可以有一個或多個用戶端。
-1.  選取 **[下一步]**。
+1.  選取 **[下一步]** 。
 
 ### <a name="select-a-trace"></a>選取 [追蹤]
 
@@ -60,15 +60,15 @@ ms.locfileid: "66015114"
 1.  **路徑來儲存重新執行前置處理輸出**:  
     \- 如果您還沒有 IRF 檔案，請輸入您想要用來儲存 IRF 檔案的位置的路徑和其他前置處理輸出。  
     \- 如果您已經有 IRF 檔案中，輸入 IRF 檔案的路徑。
-1. 選取 **[下一步]**。
+1. 選取 **[下一步]** 。
 
 ### <a name="replay-a-trace"></a>重新執行追蹤
 
 1.  **追蹤檔案名稱**:輸入追蹤檔案名稱。
-1.  **最大檔案大小 (MB)**:輸入追蹤檔案換用大小值。 預設值為 200 MB。 您可以輸入自訂值。
+1.  **最大檔案大小 (MB)** :輸入追蹤檔案換用大小值。 預設值為 200 MB。 您可以輸入自訂值。
 1.  **路徑來儲存重新執行追蹤輸出**:輸入輸出.trc 檔案的路徑。
 1.  **SQL Server 執行個體名稱**:輸入用來重新執行追蹤的 SQL Server 執行個體的名稱。
-1.  選取 [開始]。
+1.  選取 [開始]  。
 
 如果您輸入的資訊是有效的會啟動 Distributed Replay 程序。 否則，有不正確的資訊文字 boses 會反白顯示紅色。 請確定您輸入的值都正確無誤，然後選取**啟動**。
 

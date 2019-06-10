@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9cfa9f3770c0a9ce5b5ac6ae176a33f92d9b79c9
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: f23bdacdb3ddef9bd87187a5e7c3c9cc1b54d2af
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488305"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776202"
 ---
 # <a name="manage-a-knowledge-base"></a>管理知識庫
 
@@ -38,13 +38,13 @@ ms.locfileid: "65488305"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，按一下 **[開啟知識庫]**。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，按一下 **[開啟知識庫]** 。  
   
 3.  以滑鼠右鍵按一下知識庫資料表中的知識庫。  
   
 4.  在內容功能表中，您可以進行下列作業：  
   
-    1.  **開啟**：按一下即可開啟 [選取活動] 窗格中所選活動的知識庫。  
+    1.  **開啟**：按一下即可開啟 [選取活動]  窗格中所選活動的知識庫。  
   
     2.  **解除鎖定**：如果您是原本正在處理知識庫中的一個步驟的 定義域管理、 知識探索和比對原則活動中，而且已關閉的使用者，您可以解除鎖定知識庫。 如果您解除鎖定知識庫，另一位人員就能夠開啟並處理知識庫。 如果知識庫並未處於活動的狀態，您就無法使用此命令。 如需詳細資訊，請參閱 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "65488305"
   
         1.  **來源知識庫**：做為此資料庫基礎的知識庫。 這是選擇性的。  
   
-        2.  **狀態**：指出知識庫是否處於 [工作中] 狀態，以及它是否正在進行特定的知識管理活動，由上次關閉時所處的狀態決定。 此狀態可能是 **[工作中]**(表示已在知識管理工作階段中開啟知識庫，但是並未進行特定活動)，或是 **[工作中]** 再加上知識管理活動 (表示已在知識管理工作階段中開啟知識庫，而且正在進行特定活動)。  
+        2.  **狀態**：指出知識庫是否處於 [工作中]  狀態，以及它是否正在進行特定的知識管理活動，由上次關閉時所處的狀態決定。 此狀態可能是 **[工作中]** (表示已在知識管理工作階段中開啟知識庫，但是並未進行特定活動)，或是 **[工作中]** 再加上知識管理活動 (表示已在知識管理工作階段中開啟知識庫，而且正在進行特定活動)。  
   
         3.  **已鎖定**：如果知識庫已鎖定，則為 **True**；否則為 **False**  
   

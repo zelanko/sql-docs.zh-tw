@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 53b55ce0449dfd4eb415ee49ac29ac3cb493e111
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 562119dd258c996b070cdd2c16fd60ca27ffc424
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59779508"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794106"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -34,10 +34,10 @@ LocalDB 安裝會複製啟動 [!INCLUDE[ssDEnoversion](../../includes/ssdenovers
 
 ## <a name="try-it-out"></a>現在就試試看！ 
 
-- 若要下載並安裝 SQL Server Express LocalDB，請移至 **[SQL Server 下載](https://www.microsoft.com/sql-server/sql-server-downloads)**。 LocalDB 是您在安裝期間選取的功能，而且可以在下載媒體時使用。 如果您下載媒體，請選擇 **Express Advanced** 或 LocalDB 套件。 在 Visual Studio 安裝程式中，您可以安裝 SQL Server Express LocalDB 作為 **.NET 桌面開發**工作負載的一部分，或是作為個別的元件。
+- 若要下載並安裝 SQL Server Express LocalDB，請移至 **[SQL Server 下載](https://www.microsoft.com/sql-server/sql-server-downloads)** 。 LocalDB 是您在安裝期間選取的功能，而且可以在下載媒體時使用。 如果您下載媒體，請選擇 **Express Advanced** 或 LocalDB 套件。 在 Visual Studio 安裝程式  中，您可以安裝 SQL Server Express LocalDB 作為 **.NET 桌面開發**工作負載的一部分，或是作為個別的元件。
 
  >[!TIP]
- > 您也可以安裝 LocalDB 作為 Visual Studio 的一部分。 在 Visual Studio 安裝期間，選取 [.NET 桌面開發] 工作負載，它包含了 SQL Server Express LocalDB。
+ > 您也可以安裝 LocalDB 作為 Visual Studio 的一部分。 在 Visual Studio 安裝期間，選取 [.NET 桌面開發]  工作負載，它包含了 SQL Server Express LocalDB。
 
 - 有 Azure 帳戶嗎？ [開始使用](https://azure.microsoft.com/services/virtual-machines/sql-server/)並啟動已安裝 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的虛擬機器。
 
@@ -45,13 +45,13 @@ LocalDB 安裝會複製啟動 [!INCLUDE[ssDEnoversion](../../includes/ssdenovers
 
 透過安裝精靈或使用 SqlLocalDB.msi 程式來安裝 LocalDB。 LocalDB 是安裝 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] 時的選項。 
  
-在安裝期間，在 [功能選取]/[共用功能] 頁面上選取 [LocalDB]。 每個主要 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]版本都只能有 LocalDB 二進位檔案的一個安裝。 多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理序可以啟動，而且全部都會使用相同的二進位檔案。 以 LocalDB 形式啟動的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體，其限制與 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 相同。
+在安裝期間，在 [功能選取]/[共用功能]  頁面上選取 [LocalDB]。 每個主要 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]版本都只能有 LocalDB 二進位檔案的一個安裝。 多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理序可以啟動，而且全部都會使用相同的二進位檔案。 以 LocalDB 形式啟動的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體，其限制與 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 相同。
 
 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB 的執行個體是使用 `SqlLocalDB.exe` 公用程式來管理。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB 應該用來取代已過時的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 使用者執行個體功能。
 
-## <a name="description"></a>描述
+## <a name="description"></a>Description
 
-LocalDB 安裝程式使用 `SqlLocalDB.msi` 程式在電腦上安裝必要的檔案。 在安裝後，LocalDB 就是可建立及開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 執行個體。 資料庫的系統資料庫檔案儲存在本機上通常處於隱藏狀態的 AppData 路徑中。 例如，`C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`。 使用者資料庫檔案會儲存在使用者指定的位置，通常位於 `C:\Users\<user>\Documents\` 資料夾中。
+LocalDB 安裝程式使用 `SqlLocalDB.msi` 程式在電腦上安裝必要的檔案。 在安裝後，LocalDB 就是可建立及開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 執行個體。 資料庫的系統資料庫檔案儲存在本機上通常處於隱藏狀態的 AppData 路徑中。 例如， `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`。 使用者資料庫檔案會儲存在使用者指定的位置，通常位於 `C:\Users\<user>\Documents\` 資料夾中。
 
 如需在應用程式中包含 LocalDB 的詳細資訊，請參閱 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [本機資料概觀](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110))、[在 Visual Studio 中建立資料庫並新增資料表](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)。
 
@@ -113,17 +113,17 @@ REM Gather information about the instance of LocalDB
 
 |||
 |-|-|
-|名稱|`LocalDBApp1`|
-|版本|\<目前版本>|
+|[屬性]|`LocalDBApp1`|
+|Version|\<目前版本>|
 |共用名稱|""|
-|擁有者|"\<您的 Windows 使用者>"|
+|[擁有者]|"\<您的 Windows 使用者>"|
 |自動建立|否|
-|狀態|執行中|
+|State|執行中|
 |上次啟動時間|\<日期和時間>|
 |執行個體管道名稱|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 
 >[!NOTE]
->如果應用程式使用 .NET 4.0.2 之前的版本，您必須直接連線到 LocalDB 的具名管道。 執行個體管道名稱值是 LocalDB 執行個體接聽的具名管道。 執行個體管道名稱中 LOCALDB# 後面的部分會隨著每次 LocalDB 執行個體啟動而變更。 若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 連線到 LocalDB 執行個體，請在 [連線到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]] 對話方塊的 [伺服器名稱] 方塊中，輸入執行個體管道名稱。 從您的自訂程式，您可以使用類似於 `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");` 的連接字串來建立對 LocalDB 執行個體的連線
+>如果應用程式使用 .NET 4.0.2 之前的版本，您必須直接連線到 LocalDB 的具名管道。 執行個體管道名稱值是 LocalDB 執行個體接聽的具名管道。 執行個體管道名稱中 LOCALDB# 後面的部分會隨著每次 LocalDB 執行個體啟動而變更。 若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 連線到 LocalDB 執行個體，請在 [連線到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]]  對話方塊的 [伺服器名稱]  方塊中，輸入執行個體管道名稱。 從您的自訂程式，您可以使用類似於 `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");` 的連接字串來建立對 LocalDB 執行個體的連線
 
 ### <a name="connect-to-a-shared-instance-of-localdb"></a>連線到 LocalDB 共用執行個體
 

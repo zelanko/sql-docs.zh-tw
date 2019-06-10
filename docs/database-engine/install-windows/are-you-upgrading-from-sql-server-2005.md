@@ -10,13 +10,13 @@ ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 27e7285fe95307c6ce6308dc27e0076146e86223
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+manager: jroth
+ms.openlocfilehash: 4813ca33bca9f03d94fe6f926a7af612b217fd90
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657762"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795026"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005-2008-or-2008r2"></a>從 SQL Server 2005、2008 或 2008 R2 升級嗎？
 

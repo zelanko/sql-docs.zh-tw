@@ -14,13 +14,13 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 99d1b87ac5584f05911ebfb16387babc408e26f5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 029643d80f98f22e49e567bde8a2fb6e85073e50
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600928"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794748"
 ---
 # <a name="upgrade-database-engine"></a>升級 Database Engine
 

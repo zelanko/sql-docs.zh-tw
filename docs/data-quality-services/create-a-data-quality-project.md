@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fb7b3f6a0932df1490eade1e3745182b05071da9
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 139a8317b934ac262f57cb4025deb15d05dadc20
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486346"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785810"
 ---
 # <a name="create-a-data-quality-project"></a>建立資料品質專案
 
@@ -43,7 +43,7 @@ ms.locfileid: "65486346"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[新增資料品質專案]**。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[新增資料品質專案]** 。  
   
 3.  在 **[新增資料品質專案]** 畫面中：  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65486346"
   
     2.  (選擇性) 在 **[描述]** 方塊中，輸入新資料品質專案的描述。  
   
-    3.  在 **[使用知識庫]** 清單中，按一下以選取要用於資料品質專案的知識庫。 右側的 [知識庫詳細資料: <知識庫名稱>] 區域會顯示所選知識庫中可用的定義域名稱。  
+    3.  在 **[使用知識庫]** 清單中，按一下以選取要用於資料品質專案的知識庫。 右側的 [知識庫詳細資料: <知識庫名稱>]  區域會顯示所選知識庫中可用的定義域名稱。  
   
     4.  在 **[選取活動]** 區域中，按一下您想要使用此資料品質專案來執行的活動：  
   

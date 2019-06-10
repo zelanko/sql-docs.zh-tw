@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: overview
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
-ms.openlocfilehash: e93c417f286246f6db25d0463cec97eba8541c1c
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 1484d0bf2598cc3db8314c088b081ccd9327f5fe
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993842"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801923"
 ---
 # <a name="what-is-azure-data-studio"></a>什麼是 Azure Data Studio？
 

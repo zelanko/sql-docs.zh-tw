@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2943b98f4c0e75102d7d044476904e194a375dbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 27b2070ec6b8c4ccc71e0e1f05fc0faefae29384
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770966"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771720"
 ---
 # <a name="server-properties---filestream-page"></a>伺服器屬性 - FILESTREAM 頁面
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

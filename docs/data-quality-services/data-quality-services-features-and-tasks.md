@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 60116af4eb2bc5abdaea5072d7d25337898dfe15
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 8380d03cedbfbfaa16f5ee3ec49af7557e9009d9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480263"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785441"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services 功能及工作
 

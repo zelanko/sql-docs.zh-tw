@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7bb2a0c9582fcf5e0092ef23009b9270a7b0d010
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+manager: jroth
+ms.openlocfilehash: 979061055a0d48af7c2eec809e3499a1e672ec9d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419963"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777574"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性群組資料庫層級健全狀況偵測容錯移轉選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "54419963"
 
 有幾種簡單的方法可以啟用資料庫層級健全狀況偵測設定：
 
-1. 在 SQL Server Management Studio 中，連接到 SQL Server 資料庫引擎。 使用 [物件總管] 視窗，並以滑鼠右鍵按一下 [AlwaysOn 高可用性] 節點，然後執行 [新增可用性群組精靈]。 核取 [指定名稱] 頁面上的 [資料庫層級健全狀況偵測] 核取方塊。 然後完成精靈中頁面的其餘部分。
+1. 在 SQL Server Management Studio 中，連接到 SQL Server 資料庫引擎。 使用 [物件總管] 視窗，並以滑鼠右鍵按一下 [AlwaysOn 高可用性] 節點，然後執行 [新增可用性群組精靈]  。 核取 [指定名稱] 頁面上的 [資料庫層級健全狀況偵測]  核取方塊。 然後完成精靈中頁面的其餘部分。
 
    ![AlwaysOn 啟用資料庫健全狀況核取方塊](../../../database-engine/availability-groups/windows/media/always-on-enable-database-health-checkbox.png)
 
-2. 在 SQL Server Management Studio 中檢視現有可用性群組的 [屬性]。 連接到 SQL Server。 使用 [物件總管] 視窗，展開 [AlwaysOn 高可用性] 節點。 展開 [可用性群組]。 以滑鼠右鍵按一下可用性群組，然後選擇 [屬性]。 核取 [資料庫層級健全狀況偵測] 選項，然後按一下 [確定] 或 [Script the change]\(指令碼變更)。
+2. 在 SQL Server Management Studio 中檢視現有可用性群組的 [屬性]  。 連接到 SQL Server。 使用 [物件總管] 視窗，展開 [AlwaysOn 高可用性] 節點。 展開 [可用性群組]。 以滑鼠右鍵按一下可用性群組，然後選擇 [屬性]。 核取 [資料庫層級健全狀況偵測]  選項，然後按一下 [確定] 或 [Script the change]\(指令碼變更)。
 
    ![AlwaysOn AG 屬性資料庫層級健全狀況偵測](../../../database-engine/availability-groups/windows/media/always-on-ag-properties-database-level-health-detection.png)
 

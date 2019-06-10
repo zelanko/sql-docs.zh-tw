@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d049d012c9447eeb79cd2d64435d37223540adb5
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+manager: jroth
+ms.openlocfilehash: 2f8fb49b90a0da28a4961806c7ace46bcb10f5db
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044604"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789450"
 ---
 # <a name="evaluate-health-of-the-always-on-availability-group-using-group-policies"></a>使用群組原則評估 Always On 可用性群組的健全狀況
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "55044604"
 ## <a name="view-or-evaluate-availability-groups-system-policies"></a>檢視或評估可用性群組的系統原則  
  若要在 SQL Server Management Studio (SSMS) 中檢視或執行可用性群組的系統原則，請執行以下作業：  
   
-1.  在 [物件總管] 中，依序展開 [管理]、[原則管理]、[原則]，然後 [系統原則]。  
+1.  在 [物件總管]  中，依序展開 [管理]  、[原則管理]  、[原則]  ，然後 [系統原則]  。  
   
-2.  以滑鼠右鍵按一下其中一個原則，然後按一下 [評估]。 如果您想要評估所選取的原則，那麼您已完成。 您可以在 [目標詳細資料] 方塊中按一下 [檢視]，以查看評估結果的詳細資料。  
+2.  以滑鼠右鍵按一下其中一個原則，然後按一下 [評估]  。 如果您想要評估所選取的原則，那麼您已完成。 您可以在 [目標詳細資料]  方塊中按一下 [檢視]  ，以查看評估結果的詳細資料。  
   
-3.  若要在 [選取頁面] 窗格中檢視所有可用性群組系統原則，按一下 [原則選取]。  
+3.  若要在 [選取頁面]  窗格中檢視所有可用性群組系統原則，按一下 [原則選取]  。  
   
 ## <a name="next-steps"></a>後續步驟  
  [The Always On health model, part 2:Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (Always On 健全狀況模型第 2 部分：擴充健全狀況模型)。   

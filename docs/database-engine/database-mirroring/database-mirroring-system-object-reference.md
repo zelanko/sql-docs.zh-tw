@@ -9,13 +9,13 @@ ms.technology: high-availability
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f45b0a5b792f3fb8de9f2ee46fb15984ed520b24
-ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
+manager: jroth
+ms.openlocfilehash: 6f43477ebb45812fb4e71ca501296518ed3950c9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59533391"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795504"
 ---
 # <a name="database-mirroring-system-object-reference"></a>資料庫鏡像系統物件參考
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

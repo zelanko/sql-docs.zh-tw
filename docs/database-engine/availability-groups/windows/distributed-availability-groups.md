@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e9e05ab2dd5eeb0511838cd0c1540b2c1ba964d4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 076d1522ccb34aed7cccabd8ec1ec8369eb4e595
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860739"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765832"
 ---
 # <a name="distributed-availability-groups"></a>分散式可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 分散式可用性群組是 SQL Server 2016 中引進的新功能，為現有 AlwaysOn 可用性群組功能的變異。 本文釐清分散式可用性群組的某些層面，並補充現有 [SQL Server 文件](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)。
 
 > [!NOTE]
-> "DAG" 不是「分散式可用性群組」的官方縮寫，因為這個縮寫已用於「Exchange 資料庫可用性群組」功能。 此 Exchange 功能與 SQL Server 可用性群組或分散式可用性群組無關。
+> "DAG" 不是「分散式可用性群組」  的官方縮寫，因為這個縮寫已用於「Exchange 資料庫可用性群組」功能。 此 Exchange 功能與 SQL Server 可用性群組或分散式可用性群組無關。
 
 若要設定分散式可用性群組，請參閱[設定分散式可用性群組](configure-distributed-availability-groups.md)。
 
@@ -42,7 +42,7 @@ ms.locfileid: "58860739"
 
 ![分散式可用性群組的高階檢視](./media/distributed-availability-group/dag-01-high-level-view-distributed-ag.png)
 
-您可以將分散式可用性群組中的資料移動設定為同步或非同步。 不過，相較於傳統可用性群組，資料移動在分散式可用性群組內略有不同。 雖然每個可用性群組都有主要複本，但是參與可接受插入、更新和刪除之分散式可用性群組的資料庫只能有一個複本。 如下圖所示，AG 1 是主要可用性群組。 其主要複本會將交易傳送至次要複本 AG 1 和主要複本 AG 2。 AG 2 的主要複本也稱為「轉寄站」。 轉寄站是分散式可用性群組的次要可用性群組中的主要複本。 轉寄站會接收來自主要可用性群組中主要複本的交易，並將它們轉寄至其專屬可用性群組中的次要複本。  轉寄站接著會持續更新 AG 2 的次要複本。 
+您可以將分散式可用性群組中的資料移動設定為同步或非同步。 不過，相較於傳統可用性群組，資料移動在分散式可用性群組內略有不同。 雖然每個可用性群組都有主要複本，但是參與可接受插入、更新和刪除之分散式可用性群組的資料庫只能有一個複本。 如下圖所示，AG 1 是主要可用性群組。 其主要複本會將交易傳送至次要複本 AG 1 和主要複本 AG 2。 AG 2 的主要複本也稱為「轉寄站」  。 轉寄站是分散式可用性群組的次要可用性群組中的主要複本。 轉寄站會接收來自主要可用性群組中主要複本的交易，並將它們轉寄至其專屬可用性群組中的次要複本。  轉寄站接著會持續更新 AG 2 的次要複本。 
 
 ![分散式可用性群組和其資料移動](./media/distributed-availability-group/dag-02-distributed-ag-data-movement.png)
 

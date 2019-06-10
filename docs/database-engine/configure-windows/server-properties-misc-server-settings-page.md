@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e72286c63ef8721d68817a4a0347f4124630b2cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c127e58188b5b2f3487b243b89788bc304d915ad
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739316"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783218"
 ---
 # <a name="server-properties---misc-server-settings-page"></a>伺服器屬性 - 其他伺服器設定頁面
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
