@@ -1,24 +1,24 @@
 ---
 title: Power BI 報表伺服器整合 (設定管理員) | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 61f72b2676e2c3c92dd82febc70d2e00d3363baf
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: c99eb7091cd72be40f2acb45e5e7bebf8a71526e
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59506555"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499612"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 報表伺服器整合 (組態管理員)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員中的 [Power BI 整合] 頁面是用來向所需的 Azure Active Directory (AD) 受管理租用戶註冊報表伺服器，以允許報表伺服器的使用者將支援的報表項目釘選到 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板。 如需您可以釘選的支援項目清單，請參閱 [將 Reporting Services 項目釘選到 Power BI 儀表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)。
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員中的 [Power BI 整合]  頁面是用來向所需的 Azure Active Directory (AD) 受管理租用戶註冊報表伺服器，以允許報表伺服器的使用者將支援的報表項目釘選到 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板。 如需您可以釘選的支援項目清單，請參閱 [將 Reporting Services 項目釘選到 Power BI 儀表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)。
 
 ## <a name="bkmk_requirements"></a> Power BI 整合的需求
 
@@ -50,22 +50,22 @@ ms.locfileid: "59506555"
 
 1. 選取 [ [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 整合] 頁面。
 
-2. 選取 [向 Power BI 註冊]。
+2. 選取 [向 Power BI 註冊]  。
 
     >[!Note]
     > 確定未封鎖連接埠 443。
 
 3. 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 登入對話方塊中，輸入您用來登入 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]的認證。
 
-4. 註冊完成之後，[Power BI 註冊詳細資料] 區段將記下 Azure 租用戶識別碼和重新導向 URL。  在 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板登入和通訊過程中會使用這些 URL，來向後與已註冊的報表伺服器通訊。
+4. 註冊完成之後，[Power BI 註冊詳細資料]  區段將記下 Azure 租用戶識別碼和重新導向 URL。  在 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板登入和通訊過程中會使用這些 URL，來向後與已註冊的報表伺服器通訊。
 
-5. 在 [結果] 視窗中選取 [複製] 按鈕，將註冊詳細資料複製到 Windows 剪貼簿，以便您加以儲存供日後參考。
+5. 在 [結果]  視窗中選取 [複製]  按鈕，將註冊詳細資料複製到 Windows 剪貼簿，以便您加以儲存供日後參考。
 
 ## <a name="bkmk_unregister"></a> 取消註冊 Power BI
 
 **取消註冊︰** 從報表伺服器取消註冊 Azure Active Directory 會導致下列情形：
 
-- [我的設定] 連結將不再顯示於入口網站功能表列。
+- [我的設定]  連結將不再顯示於入口網站功能表列。
 
 - 已釘選的報表項目仍會釘選在儀表板上，不過儀表板上的磚將不再更新。
 
@@ -73,23 +73,23 @@ ms.locfileid: "59506555"
 
     **無法載入此訂閱的傳遞延伸模組**
 
-從組態管理員的 [Power BI] 頁面，選取 [向 Power BI 取消註冊] 按鈕。
+從組態管理員的 [Power BI]  頁面，選取 [向 Power BI 取消註冊]  按鈕。
 
 ##  <a name="bkmk_updateregistration"></a> 更新註冊
 
 若報表伺服器的組態已變更，則使用 [更新註冊]  。 例如，若您想要新增或移除使用者用來瀏覽至 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]的 URL。
 
-- 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定管理員中，選取 [入口網站 URL]
+- 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定管理員中，選取 [入口網站 URL] 
 
-     選取 [進階]。
+     選取 [進階]  。
 
-- 選取 [新增] 為 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 新增新的 HTTP 識別，然後選取 [確定]。
+- 選取 [新增]  為 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 新增新的 HTTP 識別，然後選取 [確定]  。
 
      [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 圖示會變更，指出已變更伺服器設定。  ![ssrs_powebi_icon_warning](../../reporting-services/install-windows/media/ssrs-powebi-icon-warning.png "ssrs_powebi_icon_warning")
 
-- 在 [Power BI 整合] 頁面上，選取 [更新註冊]。
+- 在 [Power BI 整合]  頁面上，選取 [更新註冊]  。
 
-     系統會提示您登入 Azure AD。 頁面會重新整理，您會看到 [重新導向 URL] 中所列的新 URL。
+     系統會提示您登入 Azure AD。 頁面會重新整理，您會看到 [重新導向 URL]  中所列的新 URL。
 
 ##  <a name="bkmk_integration_process"></a> Power BI 整合和釘選程序的摘要
 
@@ -97,7 +97,7 @@ ms.locfileid: "59506555"
 
  **整合︰**
 
-1. 在組態管理員中，當您選取 [向 Power BI 註冊] 按鈕時，系統將會提示您登入 Azure Active Directory。
+1. 在組態管理員中，當您選取 [向 Power BI 註冊]  按鈕時，系統將會提示您登入 Azure Active Directory。
 
 2. [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 用戶端應用程式已向您受管理的租用戶註冊。
 
@@ -113,7 +113,7 @@ ms.locfileid: "59506555"
 
 1. 使用者在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 中預覽報表，並首次按一下以從 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]釘選報表項目。
 
-2. 系統會將他們重新導向至 Azure AD 的登入頁面。 使用者也可以從[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] [我的設定] 頁面登入。 當使用者登入 Azure 受管理的租用戶時，其 Azure 帳戶與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 權限之間會建立關聯性。  如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。
+2. 系統會將他們重新導向至 Azure AD 的登入頁面。 使用者也可以從[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] [我的設定]  頁面登入。 當使用者登入 Azure 受管理的租用戶時，其 Azure 帳戶與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 權限之間會建立關聯性。  如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](../my-settings-for-power-bi-integration-web-portal.md)。
 
 3. 使用者安全性權杖會傳回到報表伺服器。
 
@@ -125,7 +125,7 @@ ms.locfileid: "59506555"
 
 7. 建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂用帳戶，以管理儀表板磚上報表項目排定的重新整理。 訂閱會採用使用者登入時所建立的安全性權杖。
 
-     權杖的期限為 **90 天**，使用者需在該期限過後再次登入以建立新的使用者權杖。 權杖到期時，已釘選的磚仍會顯示在儀表板上，但資料不會再重新整理。  為釘選的項目所使用的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱會發生錯誤，直到建立新的使用者權杖為止。 請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。 以取得詳細資訊。
+     權杖的期限為 **90 天**，使用者需在該期限過後再次登入以建立新的使用者權杖。 權杖到期時，已釘選的磚仍會顯示在儀表板上，但資料不會再重新整理。  為釘選的項目所使用的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱會發生錯誤，直到建立新的使用者權杖為止。 請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](../my-settings-for-power-bi-integration-web-portal.md)。 以取得詳細資訊。
 
 使用者再次釘選項目時，會略過步驟 1-4，改為從 ReportServer 資料庫中擷取應用程式識別碼與 URL，然後接續執行步驟 5。
 
@@ -153,7 +153,7 @@ ms.locfileid: "59506555"
 
 ## <a name="next-steps"></a>後續步驟
 
-[Power BI 整合的我的設定](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[Power BI 整合的我的設定 &#40;入口網站&#41;](../my-settings-for-power-bi-integration-web-portal.md)  
 [將 Reporting Services 項目釘選到 Power BI 儀表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
 [Power BI 中的儀表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 

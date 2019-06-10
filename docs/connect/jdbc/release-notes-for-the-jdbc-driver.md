@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5e75f732fc44ee339cb3d9d47518627f264cb8cc
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+manager: jroth
+ms.openlocfilehash: 8f5f520be226d74c2c6530aacee7916aa381dc06
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671334"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778149"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver 的版本資訊
 
@@ -52,7 +52,7 @@ ms.locfileid: "59671334"
 | 更多詳細資料及一個範例應用程式來使用此驗證模式。 | 請參閱[使用 Azure Active Directory 驗證連線](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-open-service-gateway-initiative-osgi-support"></a>引進「開放式服務閘道協議」(OSGi) 支援
+### <a name="introduces-open-service-gateway-initiative-osgi-support"></a>引進「開放式服務閘道協議」  (OSGi) 支援
 
 | OSGi 變更 | 詳細資料 |
 | :---------- | :------ |
@@ -68,7 +68,7 @@ ms.locfileid: "59671334"
 | 其他詳細資料。 | 請參閱[處理錯誤](../../connect/jdbc/handling-errors.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-163"></a>已更新「適用於 Java 的 Microsoft Azure Active Directory 驗證程式庫 (ADAL4J)」，1.6.3 版
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-163"></a>已更新「適用於 Java 的 Microsoft Azure Active Directory 驗證程式庫 (ADAL4J)」  ，1.6.3 版
 
 | ADAL4J 變更 | 詳細資料 |
 | :------------ | :------ |
@@ -77,11 +77,11 @@ ms.locfileid: "59671334"
 | 其他詳細資料。 | 請參閱 [Microsoft JDBC Driver for SQL Server 的功能相依性](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>已更新「適用於 Java 的 Microsoft Azure Key Vault SDK」1.2.0 版
+### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>已更新「適用於 Java 的 Microsoft Azure Key Vault SDK」  1.2.0 版
 
 | Key Vault SDK 變更 | 詳細資料 |
 | :------------------- | :------ |
-| 已將其在「適用於 Java 的 Microsoft Azure Key Vault SDK」上的 Maven 相依性更新為 1.2.0 版。 | &nbsp; |
+| 已將其在「適用於 Java 的 Microsoft Azure Key Vault SDK」  上的 Maven 相依性更新為 1.2.0 版。 | &nbsp; |
 | 引進 _Microsoft Azure SDK for Key Vault WebKey_ 作為 Maven 相依性，1.2.0 版。 | &nbsp; |
 | 其他詳細資料。 | 請參閱 [Microsoft JDBC Driver for SQL Server 的功能相依性](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。 |
 | &nbsp; | &nbsp; |

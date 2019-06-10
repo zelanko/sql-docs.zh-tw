@@ -33,13 +33,13 @@ helpviewer_keywords:
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e69f6fe697516588c46f51c52560c037ac6fcbce
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+manager: jroth
+ms.openlocfilehash: d9649b6c969a0b60b6d23ae3e44dc8c76bc37463
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65981151"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795045"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2016"></a>SQL Server 2016 中已停止的 Database Engine 功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

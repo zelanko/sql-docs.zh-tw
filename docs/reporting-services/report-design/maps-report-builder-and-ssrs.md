@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 28faf7047d9ba66116e15b4aa41307d90beacd2f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: c03db76d1c8ad67bf9db43c1b4acfa728396b703
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580092"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428979"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>地圖 (報表產生器及 SSRS)
   若要針對地理背景將商務資料視覺化，您可以將地圖加入 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表。 您選取的地圖類型取決於您想要在報表中傳達的資訊而定。 您可以加入只顯示位置的地圖，或是根據某區域住家數而變動泡泡大小的泡泡地圖，或者是根據每一家商店最有利潤的產品而變動標記樣式的標記地圖，或者是顯示商店之間之路線的線路地圖。  
@@ -57,7 +57,7 @@ ms.locfileid: "65580092"
  若要視覺化地圖上的資料，分析資料和空間資料必須擁有關聯性。 當空間資料與分析資料來自相同的來源時，關聯性是已知的。 當空間資料和分析資料來自不同的來源，您必須指定要將兩者產生關聯的符合欄位。  
   
 ### <a name="spatial-data"></a>空間資料  
- 空間資料由多組座標所組成。 資料來源中的空間資料可以是單一點、多個點、單一線條、多個線條，或一組多邊形。 每組座標都會定義一個 *「地圖元素」*(Map Element)，例如，表示某個縣市外框的多邊形、表示路段圖的線條，或是表示城市位置的點。  
+ 空間資料由多組座標所組成。 資料來源中的空間資料可以是單一點、多個點、單一線條、多個線條，或一組多邊形。 每組座標都會定義一個 *「地圖元素」* (Map Element)，例如，表示某個縣市外框的多邊形、表示路段圖的線條，或是表示城市位置的點。  
   
  空間資料以下列其中一個座標系統為基礎：  
   
@@ -70,10 +70,10 @@ ms.locfileid: "65580092"
 #### <a name="sources-of-spatial-data"></a>空間資料的來源  
  系統支援下列空間資料來源：  
   
--   **地圖庫報表：** 空間資料會內嵌在位於地圖庫中的報表內。 根據預設，地圖庫安裝在 \<磁碟機>:\Program Files\Microsoft SQL Server\Report Builder \MapGallery 中。  
+-   **地圖庫報表：** 空間資料會內嵌在位於地圖庫中的報表內。 根據預設，地圖庫安裝在 \<磁碟機>  :\Program Files\Microsoft SQL Server\Report Builder \MapGallery 中。  
   
     > [!NOTE]  
-    >  這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地圖功能會使用美國人口普查局 ([https://www.census.gov/](https://www.census.gov/)) 提供的 TIGER/Line Shapefiles 資料。 TIGER/Line 形狀檔是 Census MAF/TIGER 資料庫中選定地理和製圖資訊的擷取內容。 TIGER/Line 形狀檔是由美國人口普查局免費提供。 如需有關 TIGER/Line Shapefile 的詳細資訊，請參閱 [https://www.census.gov/geo/www/tiger](https://www.census.gov/geo/www/tiger) \(英文\)。 TIGER/Line 形狀檔中的界限資訊只能當做統計資料收集和表格製作的用途，其統計用途的描述和指定並不構成司法權或擁有權利的判定，也不屬於法律上的土地描述。 Census TIGER 與 TIGER/Line 是美國人口普查局的註冊商標。  
+    >  這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地圖功能會使用美國人口普查局 ([https://www.census.gov/](https://www.census.gov/)) 提供的 TIGER/Line Shapefiles 資料。 TIGER/Line 形狀檔是 Census MAF/TIGER 資料庫中選定地理和製圖資訊的擷取內容。 TIGER/Line 形狀檔是由美國人口普查局免費提供。 若要取得 TIGER/Line 形狀檔的詳細資料，請移至 [TIGER/Line 形狀檔和 TIGER/Line 檔案技術文件](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html) \(英文\)。 TIGER/Line 形狀檔中的界限資訊只能當做統計資料收集和表格製作的用途，其統計用途的描述和指定並不構成司法權或擁有權利的判定，也不屬於法律上的土地描述。 Census TIGER 與 TIGER/Line 是美國人口普查局的註冊商標。  
   
 -   **ESRI 形狀檔：** ESRI 形狀檔包含與環境系統研究協會 (Environmental Systems Research Institute, Inc.，ESRI)形狀檔空間資料格式相容的資料。 ESRI 形狀檔指的是一組檔案。 .shp 檔案中的資料會指定地理或幾何圖案。 .dbf 檔案中的資料會提供這些圖案的屬性。 若要在設計檢視中檢視地圖或是從報表伺服器執行地圖，這兩種檔案必須位於相同的資料夾。 當您從本機檔案系統的 .shp 檔案加入空間資料時，空間資料會內嵌在您的報表中。 若要在執行階段動態擷取空間資料，請將形狀檔上傳至報表伺服器，然後將其指定為空間資料的來源。 如需詳細資訊，請參閱 [尋找地圖的 ESRI 形狀檔](https://go.microsoft.com/fwlink/?linkid=178814)。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "65580092"
  當您指定圖層的規則，並選取分析資料欄位時，如果資料類型為數值，報表處理器會自動使用預設函數 Sum 來計算地圖元素的彙總值。 如果該欄位不是數值，則不會指定任何彙總函式，而且會使用隱含的彙總函式 First。 若要變更預設運算式，請針對圖層變更規則的選項。 如需詳細資訊，請參閱 [使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 ### <a name="match-fields"></a>符合欄位  
- 若要在圖層上讓分析資料和地圖元素產生關聯，您必須指定 *「符合欄位」*(Match Field)。 符合欄位用於建立地圖元素和分析資料之間的關聯性。 只要進行比對的欄位指定唯一的分析值給每個空間位置，您就可以使用一個或多個欄位。  
+ 若要在圖層上讓分析資料和地圖元素產生關聯，您必須指定 *「符合欄位」* (Match Field)。 符合欄位用於建立地圖元素和分析資料之間的關聯性。 只要進行比對的欄位指定唯一的分析值給每個空間位置，您就可以使用一個或多個欄位。  
   
  例如，對於依據城市人口數更改泡泡大小的泡泡地圖，需要下列資料：  
   
@@ -137,7 +137,7 @@ ms.locfileid: "65580092"
  在此範例中，光是城市名稱還不足以唯一識別人口數。 例如，在美國有很多稱為奧爾班尼的城市。 若要為特定城市命名，除了城市名稱之外，您還必須指定區域。  
   
 ##  <a name="Viewport"></a> 了解地圖檢視區  
- 指定報表的地圖資料之後，您可以指定地圖 *「檢視區」*(Viewport) 來限制地圖檢視區。 根據預設，檢視區與整個地圖的區域相同。 若要裁剪地圖，您可以指定定義您要包含在報表中之區域的中心、縮放層級，以及最大和最小座標。 若要改善地圖在報表中的顯示，您可以將圖例、距離標尺和色階移到檢視區外部。 下圖顯示檢視區：  
+ 指定報表的地圖資料之後，您可以指定地圖 *「檢視區」* (Viewport) 來限制地圖檢視區。 根據預設，檢視區與整個地圖的區域相同。 若要裁剪地圖，您可以指定定義您要包含在報表中之區域的中心、縮放層級，以及最大和最小座標。 若要改善地圖在報表中的顯示，您可以將圖例、距離標尺和色階移到檢視區外部。 下圖顯示檢視區：  
   
  ![rs_MapViewport](../../reporting-services/report-design/media/rs-mapviewport.gif "rs_MapViewport")  
   
