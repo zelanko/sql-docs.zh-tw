@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1a788a9d860f03e4a7ded3bb8d8f494debfcae01
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 998b07cdd8bbe2e01d2b550526b900e254b933e2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487831"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787997"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS 中的 Reference Data Services
 
@@ -67,7 +67,7 @@ ms.locfileid: "65487831"
   
 2.  **將知識庫中的定義域/複合定義域對應至參考資料服務**：將定義域/複合定義域對應至步驟 1 所訂閱/新增的適當參考資料服務。  
   
-3.  **在資料品質專案中將對應的定義域用於清理活動**：在針對 [清理] 活動建立資料品質專案時，請選取包含定義域/複合定義域的知識庫 (這些定義域與步驟 2 中的參考資料服務相對應)，並執行清理活動。  
+3.  **在資料品質專案中將對應的定義域用於清理活動**：在針對 [清理]  活動建立資料品質專案時，請選取包含定義域/複合定義域的知識庫 (這些定義域與步驟 2 中的參考資料服務相對應)，並執行清理活動。  
   
 ## <a name="related-tasks"></a>相關工作  
   

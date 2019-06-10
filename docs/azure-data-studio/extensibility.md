@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: ce80ae9ec15fc7e1fdf8c68b595c71b2ee3f0a64
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: ea432d05ea1fde8ec0d2585d0618ea6feba86ccc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65105035"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801933"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>開始使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]擴充性
 

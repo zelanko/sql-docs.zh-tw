@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b6c9ae9ad42efac5e922db0cf2edd15e231fb16f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 155e266cf3d12c964f2996943847f80ff8ac9903
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65489279"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776121"
 ---
 # <a name="managing-a-domain"></a>管理定義域
 

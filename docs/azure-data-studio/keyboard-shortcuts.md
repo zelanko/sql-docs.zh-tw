@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 9ce8b817a704e6bae6d56a47b49f78fd1c17a2d3
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: b5a07ce70b57f5d62d53bf8ae9b570edcc78d7e6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65104757"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800242"
 ---
 # <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>中的鍵盤快速鍵 [!INCLUDE[name-sos](../includes/name-sos.md)]
 
@@ -29,7 +29,7 @@ ms.locfileid: "65104757"
 
 若要檢視所有目前定義的鍵盤快速鍵：
 
-開啟**鍵盤快速鍵**從編輯器**檔案**功能表：**檔案** > **喜好設定** > **鍵盤快速鍵**(**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >  **偏好** > **鍵盤快速鍵**Mac 上)。
+開啟**鍵盤快速鍵**從編輯器**檔案**功能表：**檔案** > **喜好設定** > **鍵盤快速鍵**( **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >  **偏好** > **鍵盤快速鍵**Mac 上)。
 
 除了顯示目前的索引鍵繫結**鍵盤快速鍵**編輯器會列出可用的命令沒有定義的鍵盤快速鍵。 **鍵盤快速鍵**編輯器可讓您輕鬆地變更、 移除、 重設，並定義新的索引鍵繫結。  
 
@@ -46,7 +46,7 @@ ms.locfileid: "65104757"
 
    ![編輯鍵盤快速鍵](media/keyboard-shortcuts/change-keybinding.png)
 
-1. 按下所需的組合鍵，然後按下 **Enter** 儲存。  
+1. 按下所需的組合鍵，然後按下 **Enter** 儲存。 
 
    ![儲存鍵盤快速鍵](media/keyboard-shortcuts/save-keybinding.png)
 
@@ -58,6 +58,6 @@ ms.locfileid: "65104757"
 
    ![建立鍵盤快速鍵](media/keyboard-shortcuts/add-keybinding.png)
 
-1. 按下所需的組合鍵，然後按下 **Enter** 儲存。 
+1. 按下所需的組合鍵，然後按下 **Enter** 儲存。
 
 
