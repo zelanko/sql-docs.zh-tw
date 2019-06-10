@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 9ca284c5-f3e0-4a67-a132-fff376ff0ffe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e4264e97883665ddf845a95a98f3728527a48381
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7013f10dcc80faf6de0401cd0c251a8cbf411a88
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669176"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785323"
 ---
 # <a name="ft-notify-bandwidth-server-configuration-option"></a>全文檢索通知頻寬伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  使用 [全文檢索通知頻寬] 選項，指定小型記憶體緩衝集區可以成長到何種大小。 小型記憶體緩衝區的大小是 64 KB。 *max* 參數值會指定全文檢索記憶體管理員應該在小型緩衝集區中維持的最大緩衝區數目。 如果 **max** 值為零，則可以位於小型緩衝集區的緩衝區數目沒有上限。  
+  使用 [全文檢索通知頻寬]  選項，指定小型記憶體緩衝集區可以成長到何種大小。 小型記憶體緩衝區的大小是 64 KB。 *max* 參數值會指定全文檢索記憶體管理員應該在小型緩衝集區中維持的最大緩衝區數目。 如果 **max** 值為零，則可以位於小型緩衝集區的緩衝區數目沒有上限。  
   
  **min** 參數指定必須在小型記憶體緩衝集區中維持的最小記憶體緩衝區數目。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體管理員的要求下，所有額外緩衝集區都會釋放，但是仍會維護最小數目的緩衝區。 但是，如果指定的 **min** 值是零，則會釋放所有記憶體緩衝區。  
   

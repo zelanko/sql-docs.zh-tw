@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: af982fa485cb9fbcc394a063e0390b795e87e0b0
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+manager: jroth
+ms.openlocfilehash: 321c30632369500ce8e7a65cd12dba4f1e657860
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328948"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803493"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>交易 - 可用性群組和資料庫鏡像
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

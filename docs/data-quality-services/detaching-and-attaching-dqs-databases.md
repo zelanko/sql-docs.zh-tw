@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9067825db57574385e925d28e1b7badf049831df
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: c4f56ac8334be617e800c388158074f801f4aa98
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480227"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777712"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>卸離和附加 DQS 資料庫
 
@@ -46,13 +46,13 @@ ms.locfileid: "65480227"
 -   您必須擁有 DQS_MAIN 資料庫的 dqs_administrator 角色，才能在 DQS 中終止任何執行中的活動或停止任何執行中的處理序。  
   
 ##  <a name="Detach"></a> 卸離 DQS 資料庫  
- 當您使用 SQL Server Management Studio 卸離 DQS 資料庫時，卸離的檔案仍會保留在您的電腦上，可供您將其重新附加至相同的 SQL Server 執行個體，或是移到另一部伺服器並附加至該處。 DQS 資料庫檔案通常位於 Data Quality Services 電腦的下列位置：C:\Program Files\Microsoft SQL Server\MSSQL13.<執行個體名稱>\MSSQL\DATA。  
+ 當您使用 SQL Server Management Studio 卸離 DQS 資料庫時，卸離的檔案仍會保留在您的電腦上，可供您將其重新附加至相同的 SQL Server 執行個體，或是移到另一部伺服器並附加至該處。 DQS 資料庫檔案通常位於 Data Quality Services 電腦的下列位置：C:\Program Files\Microsoft SQL Server\MSSQL13.<執行個體名稱>  \MSSQL\DATA。  
   
 1.  啟動 Microsoft SQL Server Management Studio，並連接到適當的 SQL Server 執行個體。  
   
 2.  在 [物件總管] 中，展開 **[資料庫]** 節點。  
   
-3.  以滑鼠右鍵按一下 **[DQS_MAIN]** 資料庫，並指向 **[工作]**，然後按一下 **[卸離]**。 **[卸離資料庫]** 對話方塊隨即出現。  
+3.  以滑鼠右鍵按一下 **[DQS_MAIN]** 資料庫，並指向 **[工作]** ，然後按一下 **[卸離]** 。 **[卸離資料庫]** 對話方塊隨即出現。  
   
 4.  選取 **[卸除]** 資料行底下的核取方塊，然後按一下 **[確定]** 以卸離 DQS_MAIN 資料庫。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "65480227"
   
 1.  啟動 Microsoft SQL Server Management Studio，並連接到適當的 SQL Server 執行個體。  
   
-2.  在 [物件總管] 中，以滑鼠右鍵按一下 **[資料庫]**，然後按一下 **[附加]**。 **[附加資料庫]** 對話方塊隨即出現。  
+2.  在 [物件總管] 中，以滑鼠右鍵按一下 **[資料庫]** ，然後按一下 **[附加]** 。 **[附加資料庫]** 對話方塊隨即出現。  
   
-3.  若要指定欲附加的資料庫，請按一下 **[加入]**。 **[尋找資料庫檔案]** 對話方塊隨即出現。  
+3.  若要指定欲附加的資料庫，請按一下 **[加入]** 。 **[尋找資料庫檔案]** 對話方塊隨即出現。  
   
 4.  選取資料庫所在的磁碟機、展開目錄樹狀結構，尋找並選取資料庫的 .mdf 檔案。 以 DQS_MAIN 資料庫為例：  
   
@@ -75,7 +75,7 @@ ms.locfileid: "65480227"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  **[資料庫詳細資料]** (下方) 窗格會顯示要附加之檔案的名稱。 若要確認或變更檔案的路徑名稱，請按一下 [瀏覽] 按鈕 (...)。  
+5.  **[資料庫詳細資料]** (下方) 窗格會顯示要附加之檔案的名稱。 若要確認或變更檔案的路徑名稱，請按一下 [瀏覽]  按鈕 (...)。  
   
 6.  按一下 **[確定]** 以附加 DQS_MAIN 資料庫。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "65480227"
   
 8.  在您還原 DQS_MAIN 資料庫之後，還必須執行下一個步驟中的 Transact-SQL 陳述式，否則當您嘗試使用 Data Quality Client 應用程式連接到資料品質伺服器時，將會因為無法連接而出現錯誤訊息。 但是，如果您只附加了 DQS_PROJECTS 或 DQS_STAGING_DATA 資料庫而非 DQS_MAIN，便不需要執行步驟 9 和 10。  
   
-     若要執行 Transact-SQL 陳述式，請在 [物件總管] 中以滑鼠右鍵按一下伺服器，然後按一下 **[新增查詢]**。  
+     若要執行 Transact-SQL 陳述式，請在 [物件總管] 中以滑鼠右鍵按一下伺服器，然後按一下 **[新增查詢]** 。  
   
 9. 在 [查詢編輯器] 視窗中，複製下列 SQL 陳述式：  
   

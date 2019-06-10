@@ -12,13 +12,13 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 80de284e9ac06e7481848325db7c1557524dc166
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+manager: jroth
+ms.openlocfilehash: 163b725e61abc4795b1b4bc28ef202766b8ea900
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994201"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794904"
 ---
 # <a name="install-sql-server-database-engine"></a>安裝 SQL Server Database Engine
 

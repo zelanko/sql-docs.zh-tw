@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b687e376-ee33-470d-b65a-87246bfefe6f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b3d6e457d6ef07ff5401e2d6fe97241db9ca84cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0f13aaf724ef2b02b6f2ce844e2c6f19cdcd1359
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704426"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767615"
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client"></a>建立或刪除用戶端使用的伺服器別名
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,23 +31,23 @@ ms.locfileid: "47704426"
   
 #### <a name="to-create-an-alias"></a>若要建立別名  
   
-1.  在 SQL Server 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]，並以滑鼠右鍵按一下 [別名]，然後按一下 [新增別名]。  
+1.  在 SQL Server 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]  ，並以滑鼠右鍵按一下 [別名]  ，然後按一下 [新增別名]  。  
   
-2.  在 [別名名稱] 方塊中，輸入別名的名稱。 當用戶端應用程式連接時使用此名稱。  
+2.  在 [別名名稱]  方塊中，輸入別名的名稱。 當用戶端應用程式連接時使用此名稱。  
   
-3.  在 [伺服器] 方塊中，輸入伺服器的名稱或 IP 位址。 針對具名執行個體，請附加執行個體名稱。  
+3.  在 [伺服器]  方塊中，輸入伺服器的名稱或 IP 位址。 針對具名執行個體，請附加執行個體名稱。  
   
-4.  在 [通訊協定] 方塊中，選取用於此別名的通訊協定。 選取通訊協定，將選用屬性方塊的標題變更為「通訊埠編號」、「管道名稱」或「連接字串」。  
+4.  在 [通訊協定]  方塊中，選取用於此別名的通訊協定。 選取通訊協定，將選用屬性方塊的標題變更為「通訊埠編號」、「管道名稱」或「連接字串」。  
   
- ＜[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員說明＞中描述的連接字串，對於建立自己連接字串的程式設計人員會很有幫助。 若要存取此資訊，在 [新增別名] 對話方塊，按 F1，或按一下 [說明]。  
+ ＜[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員說明＞中描述的連接字串，對於建立自己連接字串的程式設計人員會很有幫助。 若要存取此資訊，在 [新增別名]  對話方塊，按 F1，或按一下 [說明]  。  
   
 > [!NOTE]  
 >  如果已設定的別名連接到錯誤的伺服器或執行個體，請停用再重新啟用相關的網路通訊協定。 這麼做可清除任何快取的連接資訊，讓用戶端能夠正確連接。  
   
 #### <a name="to-delete-an-alias"></a>若要刪除別名  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]，再按一下 [別名]。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]  ，再按一下 [別名]  。  
   
-2.  在詳細資料窗格中，以滑鼠右鍵按一下要刪除的別名，然後按一下 [刪除]。  
+2.  在詳細資料窗格中，以滑鼠右鍵按一下要刪除的別名，然後按一下 [刪除]  。  
   
   

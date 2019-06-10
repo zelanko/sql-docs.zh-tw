@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3074eb04df91d5284d5943b09a9c7c59bd9ef6f2
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+manager: jroth
+ms.openlocfilehash: b2fda344839ee7d885a11313d088140738dfb640
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65983158"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803412"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中對於 Database Engine 的重大變更
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
