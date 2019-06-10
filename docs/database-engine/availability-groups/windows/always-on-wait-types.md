@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 841da77e4aa71247e8b65b1a8534bca75ff25272
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: d56681623ab9ad47d2784fdd67d853c7e7102a21
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201847"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789518"
 ---
 # <a name="identify-waits-associated-with-availability-groups"></a>識別與可用性群組相關的等候
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

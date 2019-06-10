@@ -10,13 +10,13 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 41103374bdef2d292bfd5c3e22e3fab093309f42
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: ad2f10d767bc71cfdf3fc3e26cfe7a65354ea5b9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606778"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794784"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>修復失敗的 SQL Server 安裝
 
@@ -48,7 +48,7 @@ ms.locfileid: "51606778"
   
 - 您必須在個別的叢集節點上執行修復。 
   
-- 若要在失敗的「準備」作業之後修復容錯移轉叢集節點，請使用 [移除節點]，然後再次執行「準備」步驟。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。 
+- 若要在失敗的「準備」作業之後修復容錯移轉叢集節點，請使用 [移除節點]  ，然後再次執行「準備」步驟。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。 
   
 ## <a name="repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-from-the-installation-center"></a>從安裝中心修復失敗的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝 
   
@@ -56,18 +56,18 @@ ms.locfileid: "51606778"
   
 2. 驗證必要元件和系統之後，安裝程式將會顯示 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心] 頁面。 
   
-3. 按一下左側導覽區域中的 [維護]，然後按一下 [修復] 啟動修復作業。 
+3. 按一下左側導覽區域中的 [維護]  ，然後按一下 [修復]  啟動修復作業。 
   
    >[!TIP]  
    > 如果使用 [開始] 功能表啟動安裝中心，您將需要在這個階段提供安裝媒體的位置。 
   
 4. 安裝程式支援規則和檔案常式將會執行，以便確保您的系統已安裝必要元件而且電腦通過安裝程式驗證規則。 按一下 **[確定]** 或 **[安裝]** 繼續進行。 
   
-5. 在 [選取執行個體] 頁面上，選取要修復的執行個體，然後按一下 [下一步] 繼續進行。 
+5. 在 [選取執行個體] 頁面上，選取要修復的執行個體，然後按一下 [下一步]  繼續進行。 
   
-6. 修復規則將會執行，以便驗證作業。 若要繼續進行，請按 **[下一步]**。 
+6. 修復規則將會執行，以便驗證作業。 若要繼續進行，請按 **[下一步]** 。 
   
-7. [已完成修復準備工作] 頁面會指出作業準備繼續進行。 若要繼續，請按一下 [修復]。 
+7. [已完成修復準備工作] 頁面會指出作業準備繼續進行。 若要繼續，請按一下 [修復]  。 
   
 8. [修復進度] 頁面會顯示修復作業的狀態。 [完成] 頁面會指出作業已完成。 
   
