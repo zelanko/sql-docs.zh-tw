@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 本教學課程會示範您可以載入的方式執行的 SQL Server 2019 巨量資料叢集 （預覽） 上的 Spark notebook 範例。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ed1516c14a8a49269ea0768a2ddafb9e255c24a9
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 91daed271ca8e6a8eb04928a0806b287163143a8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994148"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770867"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>教學課程：SQL Server 的巨量資料叢集上執行 notebook 範例
 
@@ -71,7 +71,7 @@ ms.locfileid: "65994148"
 執行連續範例 notebook 中的每個資料格。 如需 SQL Server 的巨量資料叢集搭配使用 notebook 的詳細資訊，請參閱下列資源：
 
 - [如何在 SQL Server 2019 預覽中使用 notebook](notebooks-guidance.md)
-- [如何管理 Azure Data Studio 中的 notebook](notebooks-how-to-manage.md)
+- [如何管理 Azure Data Studio 中的 Notebook](notebooks-how-to-manage.md)
 
 ## <a name="next-steps"></a>後續步驟
 
