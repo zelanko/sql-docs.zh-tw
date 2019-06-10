@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8d93ae5e43a550cb1c7faaa9a05e57e4408bbd43
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: f272827a41af88663086946f0127ad1cc9a61726
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480307"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785433"
 ---
 # <a name="data-quality-client-home-screen"></a>Data Quality Client 首頁畫面
 

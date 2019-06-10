@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: feed1ad23a72ef00d264994373e0ef23f4d1c8bd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 9f3c6d70d107e5afbd168fc5152e3d46d150debf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203477"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802991"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>判斷為什麼來自主要複本的變更不會反映在 Always On 可用性群組次要複本上
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
