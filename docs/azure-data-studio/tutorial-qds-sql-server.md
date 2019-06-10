@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: dfd48e17e4d9216d0b0bd23c3395acfd69516c67
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 10795ae2e1836e018e103a51cb7bea718ec9299f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089667"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797929"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教學課程：新增*五個最慢的查詢*資料庫儀表板的範例小工具
 
@@ -32,7 +32,7 @@ ms.locfileid: "65089667"
 
 ## <a name="prerequisites"></a>必要條件
 
-本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。  若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
+本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
 
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 SQL Server](quickstart-sql-server.md)
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 Azure SQL Database](quickstart-sql-database.md)
@@ -129,7 +129,7 @@ ms.locfileid: "65089667"
 
 ## <a name="view-insight-details-for-more-information"></a>如需詳細資訊的 檢視深入解析詳細資料
 
-1. 若要檢視深入解析小工具的其他資訊，請按一下 省略符號 (**...**)，然後選取右上角**顯示詳細資料**。
+1. 若要檢視深入解析小工具的其他資訊，請按一下 省略符號 ( **...** )，然後選取右上角**顯示詳細資料**。
 2. 若要顯示的項目更多詳細資料，請選取 中的任何項目**圖表資料**清單。
 
    ![了解詳細資料 對話方塊](./media/tutorial-qds-sql-server/insight-details-dialog.png)

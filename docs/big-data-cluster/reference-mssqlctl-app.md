@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: Mssqlctl 應用程式命令的參考文件。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fb0bd30eb591efbf43f2a4503ce6467bf79ccd60
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 75ada3528ab287cf49f717f99efa2405e4aad1db
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993391"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800953"
 ---
 # <a name="mssqlctl-app"></a>mssqlctl app
 

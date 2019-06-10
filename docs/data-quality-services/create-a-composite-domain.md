@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 531dc66411fc6d63751497a34b96417e9e51c9b1
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: ef9a9a2ed3d91c3ce870580f35f09f069e9ef04a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486442"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793818"
 ---
 # <a name="create-a-composite-domain"></a>建立複合定義域
 
@@ -71,7 +71,7 @@ ms.locfileid: "65486442"
   
 6.  在 **[定義域清單]** 中，選取將屬於複合定義域之一部分的定義域，並按一下向右箭號，將其移到 **[複合定義域中的定義域]** 資料表。  
   
-7.  按一下 [確定] 。  
+7.  按一下 [確定]  。  
   
 ##  <a name="CompositeDomainProperties"></a> 設定複合定義域屬性  
   
@@ -79,7 +79,7 @@ ms.locfileid: "65486442"
   
 2.  在 **[定義域清單]** 中，選取將屬於複合定義域之一部分的定義域，並按一下向右箭號，將其移到 **[複合定義域中的定義域]** 資料表。 這是單一定義域的清單，您可將其加入至您所建立的複合定義域。 只有已經建立而且尚未加入至現有複合定義域的單一定義域才可使用。 單一定義域不能加入至知識庫內一個以上的複合定義域，而且複合定義域不能加入至另一個複合定義域。  
   
-3.  按一下 **[進階]**。  
+3.  按一下 **[進階]** 。  
   
 4.  針對 **[剖析方法]** 選取下列其中一項：  
   
@@ -87,9 +87,9 @@ ms.locfileid: "65486442"
   
     -   **依照順序**：根據複合定義域中的定義域順序來剖析欄位值。 第一個值將會併入第一個定義域，第二個值將會併入第二個定義域，依此類推。  
   
-    -   **分隔符號**：根據選取 [分隔符號] 時從所顯示選項按鈕選取的分隔符號來剖析欄位值。 這可以是 **[Tab 鍵]**、 **[分號]**、 **[逗號]**、 **[空格]** 或 **[其他]**。 如果是 **[其他]**，請輸入將會當做分隔符號的值。  
+    -   **分隔符號**：根據選取 [分隔符號] 時從所顯示選項按鈕選取的分隔符號來剖析欄位值。 這可以是 **[Tab 鍵]** 、 **[分號]** 、 **[逗號]** 、 **[空格]** 或 **[其他]** 。 如果是 **[其他]** ，請輸入將會當做分隔符號的值。  
   
-5.  如果您選取 **[分隔符號]** 當做剖析方法，您也可以選取 **[使用知識庫剖析]**。 如需詳細資訊，請參閱 [Knowledge-Based Parsing](#KnowledgeBaseParsing)。  
+5.  如果您選取 **[分隔符號]** 當做剖析方法，您也可以選取 **[使用知識庫剖析]** 。 如需詳細資訊，請參閱 [Knowledge-Based Parsing](#KnowledgeBaseParsing)。  
   
 6.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)＞中所述。  
   

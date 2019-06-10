@@ -10,13 +10,13 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 1d10e3c4e9c1e1b2a6ce316902d4f70bbfac3740
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+manager: jroth
+ms.openlocfilehash: 743bf6f78fa84f628a20bed23af0ace8cf23d06f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748471"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798018"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>SQL Server 中央管理伺服器擴充功能 （預覽）
 中央管理伺服器擴充功能可讓使用者存放區會組織成一或多個群組的 SQL Server 執行個體的清單。 會使用 CMS 群組的動作中的伺服器群組的所有伺服器上運作。

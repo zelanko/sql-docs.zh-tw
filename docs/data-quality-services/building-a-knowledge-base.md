@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 107f23aaf788ca48b7682e5d0ba874623db15ec9
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 051b96e608fdd4aece4e7e712e5cf8ef51f95c40
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486519"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802204"
 ---
 # <a name="building-a-knowledge-base"></a>建立知識庫
 

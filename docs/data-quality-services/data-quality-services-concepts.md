@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: aa45c544e459d7b0bf20cbad7a7f172ba05b1923
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 9981edd8cd0119332f3f2ec1740c1b63a8a72970
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480268"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801083"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
 
