@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 了解如何設定適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署 minikube 在單一電腦上。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: afa5c3bae6eb7898ccaedf534382c9aeb467f01c
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 5b7698cd439461a9ee9280571f49649fb03387a8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63473502"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803103"
 ---
 # <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>設定適用於 SQL Server 的巨量資料叢集部署的 minikube
 

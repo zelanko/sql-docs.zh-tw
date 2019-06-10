@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 了解如何設定多個 Ubuntu 16.04 上的 Kubernetes 或適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署的 18.04 機器 （實體或虛擬）。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4e79c74851dae2d86b74064799b053d57b1a17db
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: c48a8a8ad84a1378eed09727a3e51a51252b88c6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488277"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803073"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>設定適用於 SQL Server 的巨量資料叢集部署的多部電腦上的 Kubernetes
 
