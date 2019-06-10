@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 2c9e4b38fceedc9a2bfe7690cab759cdc77ea8f2
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 627608797eb287f9fcf36d8a00df3da1fc8eff75
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65105331"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803851"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>透過建立與使用程式碼片段，在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 內快速地建立 TRANSACT-SQL (T-SQL) 指令碼
 
@@ -100,7 +100,6 @@ ms.locfileid: "65105331"
 2. 輸入 **sql**，然後您會看到您剛加入的兩個使用者程式碼片段：*sqlCreateTable2* 和 *sqlSelectTop5*。
 
 選取其中一個新的程式碼片段，並進行測試 ！
-
 
 
 ## <a name="additional-resources"></a>其他資源
