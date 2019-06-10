@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 本文章提供有用的命令，來監視和疑難排解 SQL Server 2019 巨量資料叢集 （預覽）。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3914bc088ab8974c92a24131d69590b4353f068e
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 232c39e6a98f7f55fa3a653735f39c9607fbcbf4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994086"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800734"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>監視和疑難排解 SQL Server 的巨量資料叢集
 
@@ -242,7 +242,7 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
 
 > [!Note]
-> 如果您收到下列錯誤：*無法接聽連接埠 8001 來：所有的接聽程式無法建立因下列錯誤：無法建立接聽程式：錯誤接聽 tcp4 127.0.0.1:8001: > 繫結：通常允許只有一個使用的每個通訊端位址 （網路通訊協定/位址/連接埠）。無法建立接聽程式：錯誤接聽 tcp6： 位址 [[:: 1]]: 8001： 遺漏中的連接埠 > 解決錯誤：無法在任何要求的連接埠上接聽: [{8001 9090}]*，請確定您沒有啟動儀表板已經從另一個視窗。
+> 如果您收到下列錯誤：*無法接聽連接埠 8001 來：所有的接聽程式無法建立因下列錯誤：無法建立接聽程式：錯誤接聽 tcp4 127.0.0.1:8001: > 繫結：通常允許只有一個使用的每個通訊端位址 （網路通訊協定/位址/連接埠）。無法建立接聽程式：錯誤接聽 tcp6： 位址 [[:: 1]]: 8001： 遺漏中的連接埠 > 解決錯誤：無法在任何要求的連接埠上接聽: [{8001 9090}]* ，請確定您沒有啟動儀表板已經從另一個視窗。
 
 當您在 在您的瀏覽器上啟動 儀表板時，您可能會因為在 AKS 叢集中，預設為啟用的 RBAC 權限警告而儀表板所使用的服務帳戶沒有足夠的權限存取的所有資源 (例如*禁止 pod:使用者"系統： serviceaccount:kube-系統： kubernetes-儀表板 「 無法列出 「 預設 」 的命名空間中的 pod*)。 執行下列命令，以提供必要的權限`kubernetes-dashboard`，然後重新啟動儀表板：
 

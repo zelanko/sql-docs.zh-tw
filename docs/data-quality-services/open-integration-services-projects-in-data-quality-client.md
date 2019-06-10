@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ea719c85026c110329092a5dd243e84a1e1ef78c
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 0d31536e59004786acf85828ad256c2ed197c2bf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488240"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788006"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>在 Data Quality Client 中開啟 Integration Services 專案
 
@@ -47,19 +47,19 @@ ms.locfileid: "65488240"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[開啟資料品質專案]**。 **[開啟專案]** 畫面隨即出現。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[開啟資料品質專案]** 。 **[開啟專案]** 畫面隨即出現。  
   
 3.  在 **[開啟專案]** 畫面上，您可以依照以下其中一種方式來識別 Integration Services 專案：  
   
-    1.  **專案名稱**：Integration Services 專案會使用下列命名術語列出："Package.DQS Cleansing_*\<DATE>\<TIME>*_{GUID}"。 每次在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中成功執行相同的封裝時，新的專案會列在 [開啟專案]  畫面中。  
+    1.  **專案名稱**：Integration Services 專案會使用下列命名術語列出："Package.DQS Cleansing_ *\<DATE>\<TIME>* _{GUID}"。 每次在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中成功執行相同的封裝時，新的專案會列在 [開啟專案]  畫面中。  
   
-    2.  **專案類型**：Integration Services 專案在 [開啟專案] 畫面上擁有 [SSIS] 專案類型。  
+    2.  **專案類型**：Integration Services 專案在 [開啟專案]  畫面上擁有 [SSIS]  專案類型。  
   
-     選取專案，然後按 **[下一步]**。  
+     選取專案，然後按 **[下一步]** 。  
   
-4.  Integration Services 專案會在互動式清理階段開啟 (**[管理和檢視結果]** 索引標籤)。 您可以針對 Integration Services 專案中的資料執行互動式清理。 如需 [管理和檢視結果] 索引標籤的詳細資訊，請參閱[使用 DQS &#40;內部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中的[互動式清理階段](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Interactive)。  
+4.  Integration Services 專案會在互動式清理階段開啟 ( **[管理和檢視結果]** 索引標籤)。 您可以針對 Integration Services 專案中的資料執行互動式清理。 如需 [管理和檢視結果]  索引標籤的詳細資訊，請參閱[使用 DQS &#40;內部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中的[互動式清理階段](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Interactive)。  
   
-5.  按 **[下一步]** 移至 **[匯出]** 索引標籤，您可以在這裡將處理過的資料匯出到以下任何項目：SQL Server 資料庫中的新資料表、.csv 檔案或 Excel 檔案。 如需 [匯出] 索引標籤的詳細資訊，請參閱[使用 DQS &#40;內部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中的[匯出階段](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Export)。  
+5.  按 **[下一步]** 移至 **[匯出]** 索引標籤，您可以在這裡將處理過的資料匯出到以下任何項目：SQL Server 資料庫中的新資料表、.csv 檔案或 Excel 檔案。 如需 [匯出]  索引標籤的詳細資訊，請參閱[使用 DQS &#40;內部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中的[匯出階段](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Export)。  
   
 6.  在匯出資料之後，按一下 **[完成]** ，關閉 Integration Services 專案。  
 

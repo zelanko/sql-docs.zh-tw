@@ -5,18 +5,18 @@ description: 若要偵錯和診斷在 SQL Server 2019 巨量資料叢集上執�
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e7444a9f5bcdc480425ba02c8a068831c081b47a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 6bc310fc856a9f2fe4a100770a5af2eed6a189e3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860330"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782098"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>偵錯和診斷在 SQL Server 在 Spark 歷程記錄伺服器中的巨量資料叢集上的 Spark 應用程式
 

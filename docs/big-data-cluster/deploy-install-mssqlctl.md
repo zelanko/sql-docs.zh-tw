@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: 了解如何安裝以安裝和管理 SQL Server 2019 巨量資料叢集 （預覽） mssqlctl 工具。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 32beeaf5ee7dd12b4efb4792ab5e1c489868705e
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: e7ca0cec461a7eee36d7bfe22fbdc4e2e0c3cc61
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994030"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797900"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-big-data-clusters"></a>安裝 mssqlctl 來管理 SQL Server 的巨量資料叢集
 

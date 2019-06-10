@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 7f323042c8f33207478eadc4c61a235871644130
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: 25b5d051f6241919f34a60a42582e8a101052290
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015140"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794463"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>資料庫測試助理的概觀
 

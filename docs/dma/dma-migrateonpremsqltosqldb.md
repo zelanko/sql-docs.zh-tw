@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: craigg
-ms.openlocfilehash: d807396f7c8bd334de38cdc1744f6bee90d619e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 592b581ae4981e42bea2f6bf6f9135018917b002
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63152384"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794357"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>將內部部署 SQL Server 或 Azure Vm 上的 SQL Server 移轉至 Azure SQL Database 使用 Data Migration Assistant
 
@@ -34,7 +34,7 @@ Data Migration Assistant 中提供無縫式的評估，SQL Server 內部部署�
 
 2. 將來源類型設定為**SQL Server**和目標伺服器類型**Azure SQL Database**。
 
-3. 選取 [建立]。
+3. 選取 [建立]  。
 
    ![建立移轉專案](../dma/media/NewCreate1.png)
 
@@ -49,7 +49,7 @@ Data Migration Assistant 中提供無縫式的評估，SQL Server 內部部署�
 
     ![選取來源伺服器](../dma/media/select-source-server.png)
 
-3. 選取 [連接]。
+3. 選取 [連接]  。
 
 4. 選取要移轉至 Azure SQL Database 的單一來源資料庫。
 
@@ -58,7 +58,7 @@ Data Migration Assistant 中提供無縫式的評估，SQL Server 內部部署�
 
     ![選取來源資料庫](../dma/media/select-source-database.png)
 
-5. 選取 **[下一步]**。
+5. 選取 **[下一步]** 。
 
 ## <a name="specify-the-target-server-and-database"></a>指定目標伺服器和資料庫
 
@@ -71,7 +71,7 @@ Data Migration Assistant 中提供無縫式的評估，SQL Server 內部部署�
 
      ![選取目標伺服器](../dma/media/select-target-server.png)
 
-3. 選取 [連接]。
+3. 選取 [連接]  。
 
 4. 選取要移轉至單一目標資料庫。
 
@@ -80,7 +80,7 @@ Data Migration Assistant 中提供無縫式的評估，SQL Server 內部部署�
 
     ![選取目標資料庫](../dma/media/select-target-database.png)
 
-5. 選取 **[下一步]**。
+5. 選取 **[下一步]** 。
 
 ## <a name="select-schema-objects"></a>選取結構描述物件
 
