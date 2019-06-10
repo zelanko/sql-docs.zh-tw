@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2a50885411e37c82b1121607dfb8b4408c7f9d9f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: ed3ab4323780401226d58c1eaffd47616f1f42f2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526735"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783669"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>啟用鎖定記憶體分頁選項 (Windows)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,21 +31,21 @@ ms.locfileid: "52526735"
   
 ### <a name="to-enable-the-lock-pages-in-memory-option"></a>若要啟用鎖定記憶體分頁選項  
   
-1.  在 **[開始]** 功能表上，按一下 **[執行]**。 在 [開啟舊檔] 方塊中，輸入 **gpedit.msc**。  
+1.  在 **[開始]** 功能表上，按一下 **[執行]** 。 在 [開啟舊檔]  方塊中，輸入 **gpedit.msc**。  
   
-2.  在 [本機群組原則編輯器] 主控台中，依序展開 [電腦設定] 和 [Windows 設定]。  
+2.  在 [本機群組原則編輯器]  主控台中，依序展開 [電腦設定]  和 [Windows 設定]  。  
   
-3.  展開 [安全性設定]，然後展開 [本機原則]。  
+3.  展開 [安全性設定]  ，然後展開 [本機原則]  。  
   
-4.  選取 [使用者權限指派] 資料夾。  
+4.  選取 [使用者權限指派]  資料夾。  
   
      這些原則會顯示在詳細資料窗格中。  
   
-5.  在窗格中按兩下 [鎖定記憶體中的分頁]。  
+5.  在窗格中按兩下 [鎖定記憶體中的分頁]  。  
   
-6.  在 [本機安全性設定 - 鎖定記憶體中的分頁] 對話方塊中，按一下 [新增使用者或群組]。  
+6.  在 [本機安全性設定 - 鎖定記憶體中的分頁]  對話方塊中，按一下 [新增使用者或群組]  。  
   
-7.  在 [Select Users, Service Accounts, or Groups] \(選取使用者、服務帳戶或群組) 對話方塊方塊中，選取 SQL Server 服務帳戶。  
+7.  在 [Select Users, Service Accounts, or Groups] \(選取使用者、服務帳戶或群組)  對話方塊方塊中，選取 SQL Server 服務帳戶。  
   
 8.  重新啟動 SQL Server 服務，這項設定才會生效。
   

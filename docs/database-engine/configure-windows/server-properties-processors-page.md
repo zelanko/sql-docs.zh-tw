@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: cc1581a2-492b-41f0-bda5-17909b65c4f7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cdb31d9a58af20fa66be960d96d78b8b87f7779a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 82e3792b2c92565921f189b4c843e2bacd6e4b49
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755666"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783142"
 ---
 # <a name="server-properties---processors-page"></a>伺服器屬性 - 處理器頁面
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

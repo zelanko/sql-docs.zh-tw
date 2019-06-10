@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b4f60098f7410b847e2a420ef899e4abc8b2ef94
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 87e18202c821ee56c403150af246dfbc21ef207d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203767"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798215"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>AlwaysOn 可用性群組的 PowerShell Cmdlet 概觀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,22 +29,6 @@ ms.locfileid: "53203767"
   
 > [!NOTE]  
 >  PowerShell 指令程式可以透過順利起始動作來完成。 這並不表示預期的工作 (例如可用性群組的容錯移轉) 已經完成。 編寫一系列動作的指令碼時，您可能必須檢查動作的狀態，並且等候這些動作完成。  
-  
- 本主題將介紹下列各組工作的指令程式：  
-  
--   [設定 AlwaysOn 可用性群組的伺服器執行個體](#ConfiguringServerInstance)  
-  
--   [備份和還原資料庫與交易記錄](#BnRcmdlets)  
-  
--   [建立和管理可用性群組](#DeployManageAGs)  
-  
--   [建立和管理可用性群組接聽程式](#AGlisteners)  
-  
--   [建立和管理可用性複本](#DeployManageARs)  
-  
--   [加入和管理可用性資料庫](#DeployManageDbs)  
-  
--   [監視可用性群組健全狀況](#MonitorTblshtAGs)  
   
 > [!NOTE]  
 >  如需《 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 線上叢書》中描述如何使用指令程式來執行 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 工作的主題清單，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)的＜相關工作＞一節。  

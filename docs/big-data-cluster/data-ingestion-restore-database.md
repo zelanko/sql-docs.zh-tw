@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 這篇文章會示範如何將資料庫還原到 SQL Server 2019 巨量資料叢集 （預覽） 的主要執行個體。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 541aa292453b80eb92691061de3f2f9be2c7fd6a
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.openlocfilehash: d69476548d405ff9b04a010c76241c1f15934778
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66743998"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797947"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>將資料庫還原到 SQL Server 巨量資料叢集主要執行個體
 

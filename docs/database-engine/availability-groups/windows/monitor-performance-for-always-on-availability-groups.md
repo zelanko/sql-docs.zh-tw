@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b2157846fe2102a35412c82b0da24638298aafd2
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+manager: jroth
+ms.openlocfilehash: 480975d4bbcf0ec33a51509e2ca10b633cd8aef7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65104916"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782520"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>監視 Always On 可用性群組的效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,13 +90,13 @@ ms.locfileid: "65104916"
 在 Always On 可用性群組中，會針對次要複本上裝載的資料庫計算和顯示 RTO 和 RPO。 在主要複本的儀表板上，次要複本會將 RTO 和 RPO 群組在一起。 
 
 若要在儀表板內檢視 RTO 和 RPO，請執行下列作業：
-1. 在 SQL Server Management Studio 中，展開 [Always On 高可用性] 節點，並以滑鼠右鍵按一下您的可用性群組名稱，然後選取 [顯示儀表板]。 
-1. 選取 [群組依據] 索引標籤下方的 [新增/移除資料行]。檢查 [預估復原時間 (秒)] [RTO] 和 [估計的資料遺失 (時間)] [RPO]。 
+1. 在 SQL Server Management Studio 中，展開 [Always On 高可用性]  節點，並以滑鼠右鍵按一下您的可用性群組名稱，然後選取 [顯示儀表板]  。 
+1. 選取 [群組依據]  索引標籤下方的 [新增/移除資料行]  。檢查 [預估復原時間 (秒)]  [RTO] 和 [估計的資料遺失 (時間)]  [RPO]。 
 
    ![rto-rpo-dashboard.png](media/rto-rpo-dashboard.png)
 
 ### <a name="calculation-of-secondary-database-rto"></a>計算次要資料庫 RTO 
-復原時間計算可判斷在容錯移轉之後需要多少時間來復原「次要資料庫」。  容錯移轉時間通常簡短且一致。 偵測時間取決於叢集層級設定，而不是個別可用性複本。 
+復原時間計算可判斷在容錯移轉之後需要多少時間來復原「次要資料庫」  。  容錯移轉時間通常簡短且一致。 偵測時間取決於叢集層級設定，而不是個別可用性複本。 
 
 
 針對次要資料庫 (DB_sec)，其 RTO 的計算和顯示會根據其 **redo_queue_size** 和 **redo_rate**：
@@ -119,9 +119,9 @@ ms.locfileid: "65104916"
 
 ### <a name="performance-counters-used-in-rtorpo-formulas"></a>RTO/RPO 公式中使用的效能計數器
 
-- **redo_queue_size** (KB) [用於 RTO]：重做佇列大小是其 **last_received_lsn** 與 **last_redone_lsn** 之間的交易記錄大小。 **last_received_lsn** 是記錄檔區塊識別碼，可識別裝載此次要資料庫的次要複本已經接收所有記錄檔區塊到哪一點。 **last_redone_lsn** 是最後一個記錄檔記錄的記錄序號，而該記錄在次要資料庫上重做。 根據這兩個值，我們可以找出起始記錄區塊 (**last_received_lsn**) 和結尾記錄區塊 (**last_redone_lsn**) 的識別碼。 這兩個記錄區塊之間的空格接著可以代表尚未重做交易記錄區塊數目。 這是以 KB 來測量。
--  **redo_rate** (KB/秒) [用於 RTO]：累加值，在耗用期間，代表次要資料庫上已重做的交易記錄數量 (KB) (以KB/秒為單位)。 
-- **last_commit_time** (Datetime) [用於 RPO]：針對主要資料庫，**last_commit_time** 是認可最新交易的時間。 針對次要資料庫，**last_commit_time** 是主要資料庫上已在次要資料庫上成功強化的交易最新認可時間。 因為次要複本上的這個值應該與主要複本上的相同值同步，所以這兩個值之間的任何差距就是預估資料遺失 (RPO)。  
+- **redo_queue_size** (KB) [用於 RTO]  ：重做佇列大小是其 **last_received_lsn** 與 **last_redone_lsn** 之間的交易記錄大小。 **last_received_lsn** 是記錄檔區塊識別碼，可識別裝載此次要資料庫的次要複本已經接收所有記錄檔區塊到哪一點。 **last_redone_lsn** 是最後一個記錄檔記錄的記錄序號，而該記錄在次要資料庫上重做。 根據這兩個值，我們可以找出起始記錄區塊 (**last_received_lsn**) 和結尾記錄區塊 (**last_redone_lsn**) 的識別碼。 這兩個記錄區塊之間的空格接著可以代表尚未重做交易記錄區塊數目。 這是以 KB 來測量。
+-  **redo_rate** (KB/秒) [用於 RTO]  ：累加值，在耗用期間，代表次要資料庫上已重做的交易記錄數量 (KB) (以KB/秒為單位)。 
+- **last_commit_time** (Datetime) [用於 RPO]  ：針對主要資料庫，**last_commit_time** 是認可最新交易的時間。 針對次要資料庫，**last_commit_time** 是主要資料庫上已在次要資料庫上成功強化的交易最新認可時間。 因為次要複本上的這個值應該與主要複本上的相同值同步，所以這兩個值之間的任何差距就是預估資料遺失 (RPO)。  
  
 ## <a name="estimate-rto-and-rpo-using-dmvs"></a>使用 DMV 預估 RTO 和 RPO
 
@@ -333,9 +333,9 @@ ms.locfileid: "65104916"
 
 1.  [啟動 SQL Server Agent 服務](~/ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md) (如果尚未啟動)。  
   
-2.  在 SQL Server Management Studio 中，在 [工具] 功能表中，按一下 [選項]。  
+2.  在 SQL Server Management Studio 中，在 [工具]  功能表中，按一下 [選項]  。  
   
-3.  在 [SQL Server Always On] 索引標籤中，選取 [啟用使用者定義 Always On 原則] 並按一下 [確定]。  
+3.  在 [SQL Server Always On]  索引標籤中，選取 [啟用使用者定義 Always On 原則]  並按一下 [確定]  。  
   
      此設定可讓您在 Always On 儀表板中顯示已正確設定的自訂原則。  
   
@@ -347,7 +347,7 @@ ms.locfileid: "65104916"
   
     -   **欄位**：`Add(@EstimatedRecoveryTime, 60)`  
   
-    -   **運算子**：**<=**  
+    -   **運算子**： **<=**  
   
     -   **值**：`600`  
   
@@ -361,7 +361,7 @@ ms.locfileid: "65104916"
   
     -   **欄位**：`@EstimatedDataLoss`  
   
-    -   **運算子**：**<=**  
+    -   **運算子**： **<=**  
   
     -   **值**：`3600`  
   
@@ -375,7 +375,7 @@ ms.locfileid: "65104916"
   
     -   **欄位**：`@LocalReplicaRole`  
   
-    -   **運算子**：**=**  
+    -   **運算子**： **=**  
   
     -   **值**：`Primary`  
   
@@ -383,7 +383,7 @@ ms.locfileid: "65104916"
   
 7.  使用下列規格建立[以原則為基礎的管理原則](~/relational-databases/policy-based-management/create-a-policy-based-management-policy.md)：  
   
-    -   [一般] 頁面：  
+    -   [一般]  頁面：  
   
         -   **名稱**：`CustomSecondaryDatabaseRTO`  
   
@@ -399,7 +399,7 @@ ms.locfileid: "65104916"
   
         -   **已啟用**：**選取**  
   
-    -   [描述] 頁面：  
+    -   [描述]  頁面：  
   
         -   **類別**：**可用性資料庫警告**  
   
@@ -411,7 +411,7 @@ ms.locfileid: "65104916"
   
 8.  使用下列規格建立第二個[以原則為基礎的管理原則](~/relational-databases/policy-based-management/create-a-policy-based-management-policy.md)：  
   
-    -   [一般] 頁面：  
+    -   [一般]  頁面：  
   
         -   **名稱**：`CustomAvailabilityDatabaseRPO`  
   
@@ -425,7 +425,7 @@ ms.locfileid: "65104916"
   
         -   **已啟用**：**選取**  
   
-    -   [描述] 頁面：  
+    -   [描述]  頁面：  
   
         -   **類別**：**可用性資料庫警告**  
   

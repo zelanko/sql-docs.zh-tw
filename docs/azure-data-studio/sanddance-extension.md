@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 8fe968185f05c7a48415e5e158a20f4dc61b28c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 683aea4066c0b27db295cc07db31ecd07fb33245
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142190"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798078"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance 適用於 Azure 的資料 Studio （預覽）
 Azure Data Studio 現在提供一種方式建立快速的視覺效果，您正在使用的.csv 和.tsv 檔案。 這在您的 SQL Server 2019 巨量資料叢集，包括本機檔案或在 HDFS 上的檔案。 當您嘗試將快速查看資料，並了解發生什麼情況，此延伸模組會有幫助。 我們會使用來自 Microsoft Research，可以產生資料的就地視覺效果稱為 SandDance 的技術。

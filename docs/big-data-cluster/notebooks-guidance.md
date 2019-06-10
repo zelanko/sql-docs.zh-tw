@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 這篇文章說明如何在 Azure Data Studio 已連接到 SQL Server 2019 巨量資料叢集執行的 Jupyter Notebook。
 author: achatter
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6cc491ee2592ad68ff334e0c1b7287b5754220dc
-ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
+ms.openlocfilehash: e4b24b70a427e7ac3e3f058b1db332b899729034
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65462055"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802823"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>如何在 SQL Server 2019 預覽中使用 notebook
 
@@ -158,7 +158,7 @@ SQL 核心也可用來連線到 PostgreSQL 伺服器執行個體。 如果您是
 
 選擇`PySpark Kernel`在下列程式碼中的資料格類型。
 
-按一下 **[執行]**。
+按一下 **[執行]** 。
 
 Spark 應用程式已啟動，並傳回下列輸出：
 

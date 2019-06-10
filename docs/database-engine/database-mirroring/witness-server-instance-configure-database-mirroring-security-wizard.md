@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6f1ff26d20e549d3bba46409a3a85cee326e1d35
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: e8d038947ac511d9b271fc5b4e07ffabcc47cc96
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215727"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795065"
 ---
 # <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>見證伺服器執行個體 (設定資料庫鏡像安全性精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,14 +35,14 @@ ms.locfileid: "53215727"
   
 ## <a name="options"></a>選項。  
  **見證伺服器執行個體**  
- 如果已經指定見證伺服器執行個體 (在 [資料庫屬性] 對話方塊的 [鏡像] 頁面上)，就會顯示該執行個體 (如需詳細資訊，請參閱[資料庫屬性 &#40;鏡像頁面&#41;](../../relational-databases/databases/database-properties-mirroring-page.md))。  
+ 如果已經指定見證伺服器執行個體 (在 [資料庫屬性]  對話方塊的 [鏡像]  頁面上)，就會顯示該執行個體 (如需詳細資訊，請參閱[資料庫屬性 &#40;鏡像頁面&#41;](../../relational-databases/databases/database-properties-mirroring-page.md))。  
   
  否則，此清單方塊會顯示目前伺服器的名稱。 請注意，見證伺服器執行個體不可以與主體或鏡像伺服器執行個體相同。  
   
  **[連接]**  
- 如果未指定見證伺服器執行個體，請按一下 [連接]。 這會顯示 **[連接到伺服器]** 對話方塊，您可以在其中指定伺服器執行個體並建立連接。  
+ 如果未指定見證伺服器執行個體，請按一下 [連接]  。 這會顯示 **[連接到伺服器]** 對話方塊，您可以在其中指定伺服器執行個體並建立連接。  
   
- 如果已指定執行個體，但精靈缺少具備檢查端點是否存在之權限的連接，請按一下 **[連接]**。 隨即顯示已預先選取伺服器執行個體的 [連接到伺服器] 對話方塊，且無法變更。 指定具備足夠權限的網域帳戶，然後連接到伺服器執行個體。  
+ 如果已指定執行個體，但精靈缺少具備檢查端點是否存在之權限的連接，請按一下 **[連接]** 。 隨即顯示已預先選取伺服器執行個體的 [連接到伺服器]  對話方塊，且無法變更。 指定具備足夠權限的網域帳戶，然後連接到伺服器執行個體。  
   
 > [!NOTE]  
 >  連接到伺服器執行個體時，「設定資料庫鏡像安全性精靈」會使用 **[連接到伺服器]** 對話方塊中提供的認證。 這些認證與鏡像工作階段的認證不同，後者會使用以服務方式執行伺服器執行個體之啟動帳戶的認證。  
@@ -50,7 +50,7 @@ ms.locfileid: "53215727"
  **接聽程式通訊埠**  
  此選項的行為會視此伺服器執行個體的鏡像端點是否存在，如下：  
   
--   如果伺服器執行個體沒有接聽程式通訊埠，在 [通訊埠] 文字方塊中就會顯示通訊埠編號 5022。 您可以輸入任何可用的通訊埠編號，例如 7022。  
+-   如果伺服器執行個體沒有接聽程式通訊埠，在 [通訊埠]  文字方塊中就會顯示通訊埠編號 5022。 您可以輸入任何可用的通訊埠編號，例如 7022。  
   
 -   當鏡像端點已經存在時，會顯示來自端點的通訊埠編號。 如果您需要變更該通訊埠，請使用 ALTER ENDPOINT 陳述式。 如需詳細資訊，請參閱 [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)。  
   

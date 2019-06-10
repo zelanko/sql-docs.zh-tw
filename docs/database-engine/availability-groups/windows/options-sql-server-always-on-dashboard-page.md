@@ -12,28 +12,28 @@ f1_keywords:
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d19f811faffda3584287ec29a4e4c03349586949
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: c08b28bfd888345e1fa5a88ef2a0e3d8aa912ac7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214809"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798240"
 ---
 # <a name="options-sql-server-always-on-dashboard-page"></a>選項 (SQL Server AlwaysOn、儀表板頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  您可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] [選項] 對話方塊的 [SQL Server AlwaysOn 儀表板] 頁面來設定 AlwaysOn 儀表板。  
+  您可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] [選項]  對話方塊的 [SQL Server AlwaysOn 儀表板]  頁面來設定 AlwaysOn 儀表板。  
   
  **若要存取此頁面：**  
   
- 在 [工具] 功能表上按一下 [選項]，展開 [SQL Server Always] 資料夾，然後按一下 [儀表板]。  
+ 在 [工具]  功能表上按一下 [選項]  ，展開 [SQL Server Always]  資料夾，然後按一下 [儀表板]  。  
   
 ## <a name="on-this-page"></a>在此頁面上  
  **開啟自動重新整理**  
  按一下以啟用自動重新整理。 選項包括：  
   
--   [重新整理間隔 (秒)] 欄位顯示儀表板將會重新整理的間隔秒數。 預設值是 30。 已啟用自動重新整理時，您可以編輯此欄位變更重新整理間隔。  
+-   [重新整理間隔 (秒)]  欄位顯示儀表板將會重新整理的間隔秒數。 預設值是 30。 已啟用自動重新整理時，您可以編輯此欄位變更重新整理間隔。  
   
 -   **[連線重試次數]** 顯示儀表板嘗試連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的次數，此執行個體裝載儀表板正在監視之可用性群組的可用性複本。 預設值為 65535。 已啟用自動重新整理時，您可以編輯此欄位變更連線重試次數。  
   

@@ -13,26 +13,18 @@ helpviewer_keywords:
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 00de66d272688a7b61b4847e38a41f4738457d92
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+manager: jroth
+ms.openlocfilehash: 557bd9828979a4f2e0913e827b05f3805e9b4ef9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300145"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799273"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>管理屬於 Always On 可用性群組一部分的已複寫發行者資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主題將討論使用 AlwaysOn 可用性群組時維護發行集資料庫的特殊考量。  
-  
- **本主題內容：**  
-  
--   [在可用性群組中維護已發行的資料庫](#MaintainPublDb)  
-  
--   [從可用性群組中移除已發行的資料庫](#RemovePublDb)  
-  
--   [相關工作](#RelatedTasks)  
   
 ##  <a name="MaintainPublDb"></a> 在可用性群組中維護已發行的資料庫  
  維護 AlwaysOn 發行集資料庫基本上與維護標準發行集資料庫相同，但是具有下列考量事項：  

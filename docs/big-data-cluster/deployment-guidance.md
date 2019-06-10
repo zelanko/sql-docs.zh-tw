@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 了解如何部署在 Kubernetes 上的 SQL Server 2019 巨量資料叢集 （預覽）。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 34290ebdb92468687ae5f252c0ebdfef05dd11ff
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.openlocfilehash: 15cd412de1dda9d1245859c27d35a7c7f9f52710
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66743934"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782249"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 在 Kubernetes 上的巨量資料叢集
 

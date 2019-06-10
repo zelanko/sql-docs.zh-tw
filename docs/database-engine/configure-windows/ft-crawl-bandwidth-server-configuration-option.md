@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e5864ad9-92f5-43b5-95de-46d68ded8694
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 20b9bc67d9ba7e76f4bf99cdcc9ab1cedf44d7d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4624fb4f20f39f3e5b6a5505da20ce77aa877dbe
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611107"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783564"
 ---
 # <a name="ft-crawl-bandwidth-server-configuration-option"></a>全文檢索耙梳頻寬伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: f62d315991910fa89513425e5e41700e4effd059
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+manager: jroth
+ms.openlocfilehash: af00a85aa1515ae5d43e6842fede00880bf9a573
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620392"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800757"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入門：使用 SQL Server 連線及查詢 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 本快速入門示範如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連接到 SQL Server，然後使用 TRANSACT-SQL (T-SQL) 陳述式來建立*TutorialDB*，並用於[!INCLUDE[name-sos](../includes/name-sos-short.md)]教學課程。
@@ -36,7 +36,7 @@ ms.locfileid: "65620392"
 ## <a name="connect-to-a-sql-server"></a>連線到 SQL Server
 
    
-1. 啟動**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**。
+1. 啟動 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** 。
 1. 第一次執行[!INCLUDE[name-sos](../includes/name-sos-short.md)]**歡迎**頁面應該會開啟。 如果您沒有看到**歡迎**頁面上，選取**協助** > **歡迎**。 選取 **新的連線**來開啟**連線**窗格：
    
    ![新的 [連線] 圖示](media/quickstart-sql-server/new-connection-icon.png)
@@ -48,7 +48,7 @@ ms.locfileid: "65620392"
     - **使用者名稱：** 適用於 SQL Server 的使用者名稱  
     - **密碼：** 適用於 SQL Server 密碼  
     - **資料庫名稱：** 將此欄位保留空白 
-    - **伺服器群組：**\<預設值\>  
+    - **伺服器群組：** \<預設值\>  
 
    ![新的 [連線] 畫面](media/quickstart-sql-server/new-connection-screen.png)
 

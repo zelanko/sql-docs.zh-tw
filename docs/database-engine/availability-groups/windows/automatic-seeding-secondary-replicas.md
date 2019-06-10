@@ -13,29 +13,28 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b903c4e55940f4c941564f4f0d180f4f94d1ad58
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+manager: jroth
+ms.openlocfilehash: 510331bd244ced57494566c9508485d5dd4c90e3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306165"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789437"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>使用自動植入將 Always On 可用性群組的次要複本初始化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在 SQL Server 2012 和 2014 中，初始化 SQL Server AlwaysOn 可用性群組次要複本的唯一方式是使用備份、複製和還原。 SQL Server 2016 引進的新功能是初始化次要複本：「自動植入」。 自動植入使用記錄資料流傳輸，將使用 VDI 的備份串流到使用已設定端點的可用性群組的每個資料庫次要複本。 初始建立可用性群組期間，或將資料庫新增至某個可用性群組時，可以使用這項新功能。 所有支援 AlwaysOn 可用性群組的 SQL Server 版本都有自動植入功能，可以搭配傳統的可用性群組和[分散式可用性群組](distributed-availability-groups.md)使用。
+在 SQL Server 2012 和 2014 中，初始化 SQL Server AlwaysOn 可用性群組次要複本的唯一方式是使用備份、複製和還原。 SQL Server 2016 引進的新功能是初始化次要複本：「自動植入」  。 自動植入使用記錄資料流傳輸，將使用 VDI 的備份串流到使用已設定端點的可用性群組的每個資料庫次要複本。 初始建立可用性群組期間，或將資料庫新增至某個可用性群組時，可以使用這項新功能。 所有支援 AlwaysOn 可用性群組的 SQL Server 版本都有自動植入功能，可以搭配傳統的可用性群組和[分散式可用性群組](distributed-availability-groups.md)使用。
 
-## <a name="considerations"></a>考量
+## <a name="security"></a>Security
 
-使用自動植入的考量包括：
+安全性權限隨複本初始化的類型而不同：
 
-* [對主要複本的效能和交易記錄影響](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [磁碟配置](#disklayout)
-* [安全性](#security)
+* 若為傳統的可用性群組，權限必須授予次要複本上的可用性群組，因為它加入的是可用性群組。 在 Transact-SQL 中，使用命令 `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`。
+* 若為分散式可用性群組，它是正在建立複本資料庫的位置，且這些資料庫位在第二個可用性群組的主要複本上，則不需要任何額外的權限，因為它已經是主要複本。
+* 若為分散式可用性群組的第二個可用性群組上的次要複本，您必須使用命令 `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`。 這個次要複本是從第二個可用性群組的主要複本植入。
 
-
-### <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>對主要複本的效能和交易記錄影響
+## <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>對主要複本的效能和交易記錄影響
 
 自動植入對初始化次要複本可能實用，也可能不實用，視資料庫大小、網路速度和主要與次要複本之間的距離而定。 例如，假設：
 
@@ -49,7 +48,7 @@ ms.locfileid: "53306165"
 
 壓縮可用於自動植入，但預設停用。 開啟壓縮會減少網路頻寬，並可能加速程序，但代價是額外的處理器額外負荷。 若要在自動植入期間使用壓縮，請啟用追蹤旗標 9567，請參閱[微調可用性群組的壓縮](tune-compression-for-availability-group.md)。
 
-### <a name = "disklayout"></a> 磁碟配置
+## <a name = "disklayout"></a> 磁碟配置
 
 在 SQL Server 2016 和舊版中，自動植入所建立資料庫的資料夾必須已經存在，而且和主要複本位在同一路徑下。 
 
@@ -81,13 +80,6 @@ ms.locfileid: "53306165"
 
 若要還原到 SQL Server 2016 和舊版的行為，請啟用追蹤旗標 9571。 如需如何啟用追蹤旗標的資訊，請參閱 [DBCC TRACEON (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)。
 
-### <a name="security"></a>Security
-
-安全性權限隨複本初始化的類型而不同：
-
-* 若為傳統的可用性群組，權限必須授予次要複本上的可用性群組，因為它加入的是可用性群組。 在 Transact-SQL 中，使用命令 `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`。
-* 若為分散式可用性群組，它是正在建立複本資料庫的位置，且這些資料庫位在第二個可用性群組的主要複本上，則不需要任何額外的權限，因為它已經是主要複本。
-* 若為分散式可用性群組的第二個可用性群組上的次要複本，您必須使用命令 `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`。 這個次要複本是從第二個可用性群組的主要複本植入。
 
 ## <a name="create-an-availability-group-with-automatic-seeding"></a>使用自動植入建立可用性群組
 

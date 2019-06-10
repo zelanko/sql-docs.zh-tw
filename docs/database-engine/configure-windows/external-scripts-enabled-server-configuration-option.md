@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2108f68e6eb73ae447326eac0be008e042b05119
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8fbffdfde71435a8d7204db3535464bbbe29f18c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693324"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783624"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>啟用外部指令碼伺服器設定選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "47693324"
 
     [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 支援 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的 R 語言，以及一組 R 工作站工具和連線程式庫。
 
-    在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式期間安裝 [進階分析擴充功能] 功能，以啟用 R 指令碼的執行。 預設會安裝 R 語言。
+    在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式期間安裝 [進階分析擴充功能]  功能，以啟用 R 指令碼的執行。 預設會安裝 R 語言。
 
 + 針對 [[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 
     [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 使用與 SQL Server 2016 相同的結構，但支援 Python 語言。
 
-    在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式期間安裝 [進階分析擴充功能] 功能，以啟用外部指令碼的執行。 請務必在初始安裝期間選取至少一個語言：R、Python 或兩者。 
+    在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式期間安裝 [進階分析擴充功能]  功能，以啟用外部指令碼的執行。 請務必在初始安裝期間選取至少一個語言：R、Python 或兩者。 
 
 ## <a name="additional-requirements"></a>其他需求
 

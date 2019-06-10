@@ -24,20 +24,20 @@ helpviewer_keywords:
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 50c62db9ef3d635f8486285aef75f6e3d9bfc06c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0c976f3a2200294ca2a0577e01b9bd60084794d7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534842"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794669"
 ---
 # <a name="about-log-shipping-sql-server"></a>關於記錄傳送 (SQL Server)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄傳送可讓您將 *「主要伺服器」* 執行個體上 *「主要資料庫」* 中的交易記錄備份，自動傳送到個別的 *「次要伺服器」* 執行個體上的一個或多個 *「次要資料庫」* 。 交易記錄備份會個別套用到每一個次要資料庫。 第三部選擇性的伺服器執行個體，稱為 *「監視伺服器」*，負責記錄備份和還原作業的記錄與狀態，如果這些作業未依排程進行，還可以選擇性地發出警示。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄傳送可讓您將 *「主要伺服器」* 執行個體上 *「主要資料庫」* 中的交易記錄備份，自動傳送到個別的 *「次要伺服器」* 執行個體上的一個或多個 *「次要資料庫」* 。 交易記錄備份會個別套用到每一個次要資料庫。 第三部選擇性的伺服器執行個體，稱為 *「監視伺服器」* ，負責記錄備份和還原作業的記錄與狀態，如果這些作業未依排程進行，還可以選擇性地發出警示。  
   
  **本主題內容：**  
   
@@ -119,7 +119,7 @@ ms.locfileid: "52534842"
 ### <a name="a-typical-log-shipping-configuration"></a>典型記錄傳送組態  
  下圖顯示的記錄傳送組態含有主要伺服器執行個體、三個次要伺服器執行個體和一個監視伺服器執行個體。 此圖說明備份、複製和還原作業執行的步驟，如下所示：  
   
-1.  主要伺服器執行個體執行備份作業來備份主要資料庫上的交易記錄。 此伺服器執行個體將記錄備份放在主要記錄備份檔中，再將它傳送到備份資料夾。  在此圖中，備份資料夾位於共用目錄，亦即「備份共用」。  
+1.  主要伺服器執行個體執行備份作業來備份主要資料庫上的交易記錄。 此伺服器執行個體將記錄備份放在主要記錄備份檔中，再將它傳送到備份資料夾。  在此圖中，備份資料夾位於共用目錄，亦即「備份共用」  。  
   
 2.  三個次要伺服器執行個體的每一個都執行它自己的複製作業，將主要記錄備份檔複製到它自己的本機目的資料夾。  
   

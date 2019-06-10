@@ -14,20 +14,20 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 200f85cd1687289bfe0be2e47bf20b3cf10c1728
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2893160cf40ee338cc9445e1ea1167f53fa049f8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694416"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803523"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>摘要頁面 (AlwaysOn 可用性群組精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 <a name="Top"></a>  
   
-  本說明主題描述 **[摘要]** 頁面的選項。 本主題適用於 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 請使用此頁面上的方格來檢閱您為新可用性群組所做的選擇。 若要進行一個或多個變更，請按 **[上一步]** 返回相關頁面。 完成變更之後，請按 **[下一步]** 返回 **[摘要]** 頁面。 一旦您滿意所做的選擇之後，請按一下 **[完成]**。  
+  本說明主題描述 **[摘要]** 頁面的選項。 本主題適用於 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 請使用此頁面上的方格來檢閱您為新可用性群組所做的選擇。 若要進行一個或多個變更，請按 **[上一步]** 返回相關頁面。 完成變更之後，請按 **[下一步]** 返回 **[摘要]** 頁面。 一旦您滿意所做的選擇之後，請按一下 **[完成]** 。  
   
 ##  <a name="PageOptions"></a> 摘要頁面選項  
  **指令碼**  

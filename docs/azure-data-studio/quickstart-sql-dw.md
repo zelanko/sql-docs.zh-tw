@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 72e7e0e83757b52ba7fba6a24cc91499ca4863b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f98f6be4502254910b5c144f08a95181ccf1b2a7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143869"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800270"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>快速入門：使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連線及查詢 Azure SQL 資料倉儲中的資料
 
@@ -141,7 +141,7 @@ ms.locfileid: "63143869"
 
 ## <a name="clean-up-resources"></a>清除資源
 
-在此系列文章中其他的文章建立在本快速入門之上。 如果您打算繼續實作後續的快速入門，請勿清除本快速入門中建立的資源。  如果您不打算繼續，請使用下列步驟刪除本快速入門在 Azure 入口網站所建立的資源。
+在此系列文章中其他的文章建立在本快速入門之上。 如果您打算繼續實作後續的快速入門，請勿清除本快速入門中建立的資源。 如果您不打算繼續，請使用下列步驟刪除本快速入門在 Azure 入口網站所建立的資源。
 清除資源，藉由刪除您不再需要的資源群組。 如需詳細資訊，請參閱 <<c0> [ 清除資源](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)。
 
 

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: af1623d3fe6aa5f3784994a68b72c411c3a19f7d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 6c89f673f7fae82c451021724c07db8b66239e32
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486415"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793872"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching"></a>設定清理和比對的臨界值
 
@@ -41,7 +41,7 @@ ms.locfileid: "65486415"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[組態]**。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[組態]** 。  
   
 3.  接下來，按一下 **[一般設定]** 索引標籤。此索引標籤可讓您針對清理和比對活動指定臨界值。  
   

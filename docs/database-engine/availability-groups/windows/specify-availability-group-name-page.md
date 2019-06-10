@@ -13,17 +13,17 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ec4f98310707922abfe32a1fbd771d71da777907
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 10cf78a39c49f608950dbcad174bbe78ced2fcfe
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203554"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794267"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Always On 可用性群組的 [指定可用性群組選項] 頁面
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  此主題描述 [指定可用性群組名稱] 頁面的選項。 本主題同時適用於 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
+  此主題描述 [指定可用性群組名稱]  頁面的選項。 本主題同時適用於 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
 ##  <a name="PageOptions"></a> 指定可用性群組選項  
  **可用性群組名稱**  

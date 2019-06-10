@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dec0b9aa3c92cdefa82e3031546ea8200f70bb6e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 9dfc37d9dfb4cac8c30debf29890e2369cd8785b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042437"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798147"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 可用性群組的必要條件、限制和建議
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "59042437"
 > [!IMPORTANT]  
 >  還要確定您的環境已正確設定為連接到可用性群組。 如需詳細資訊，請參閱 [AlwaysOn 用戶端連接性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)。  
   
-###  <a name="ComputerRecommendations"></a> 對裝載可用性複本之電腦的建議 (Windows 系統)  
+##  <a name="ComputerRecommendations"></a> 對裝載可用性複本之電腦的建議 (Windows 系統)  
   
 -   **可比較的系統：** 對於指定的可用性群組而言，所有可用性複本都應該在可處理相同工作負載的可相比系統上執行。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "59042437"
   
 3.  使用 **Get-ClusterResource** Cmdlet 尋找網路名稱資源，再使用 **Set-ClusterParameter** Cmdlet 設定 **HostRecordTTL** 值，如下所示：  
   
-     Get-ClusterResource "*\<NetworkResourceName>*" | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
+     Get-ClusterResource " *\<NetworkResourceName>* " | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
   
      下列 PowerShell 範例會針對名為 `SQL Network Name (SQL35)` 的網路名稱資源將 HostRecordTTL 設定為 300 秒。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "59042437"
   
 
 ##  <a name="ServerInstance"></a> SQL Server 執行個體的必要條件和限制  
- 每個可用性群組都需要 *執行個體所裝載的一組容錯移轉夥伴，稱為*「可用性複本」 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](Availability Replica)。 給定的伺服器執行個體可以是「獨立執行個體」或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]「容錯移傳叢集執行個體」 (FCI)。  
+ 每個可用性群組都需要 *執行個體所裝載的一組容錯移轉夥伴，稱為*「可用性複本」 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](Availability Replica)。 給定的伺服器執行個體可以是「獨立執行個體」  或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]「容錯移傳叢集執行個體」  (FCI)。  
   
  **本節內容：**  
   
@@ -218,7 +218,7 @@ ms.locfileid: "59042437"
      此外，其他每個複本都必須由相同 Windows Server 容錯移轉叢集之不同叢集節點上的 SQL Server 2016 執行個體進行裝載。 唯一的例外狀況是在移轉至另一個叢集期間，可用性群組可以暫時跨兩個叢集。 
 
   >[!WARNING]
-  > 使用容錯移轉叢集管理員將裝載可用性群組的「容錯移轉叢集執行個體」移至「已」裝載相同可用性群組複本的節點時，可能會導致遺失可用性群組複本，使其無法在目標節點上線。 容錯移轉叢集的單一節點無法裝載相同可用性群組的多個複本。 如需如何發生這種情況以及如何復原的詳細資訊，請參閱部落格：[Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (在可用性群組中意外卸除複本)。 
+  > 使用容錯移轉叢集管理員將裝載可用性群組的「容錯移轉叢集執行個體」  移至「已」  裝載相同可用性群組複本的節點時，可能會導致遺失可用性群組複本，使其無法在目標節點上線。 容錯移轉叢集的單一節點無法裝載相同可用性群組的多個複本。 如需如何發生這種情況以及如何復原的詳細資訊，請參閱部落格：[Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (在可用性群組中意外卸除複本)。 
 
   
 -   **FCI 不支援依照可用性群組自動容錯移轉：** FCI 不支援依照可用性群組進行自動容錯移轉，因此任何由 FCI 裝載的可用性複本只能設定為手動容錯移轉。  
@@ -280,7 +280,7 @@ ms.locfileid: "59042437"
 ###  <a name="RequirementsAG"></a> 必要條件 (可用性群組)  
  在建立或重新設定可用性群組組態時，請務必遵守下列需求。  
   
-||必要條件|描述|  
+||必要條件|Description|  
 |-|------------------|-----------------|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|如果您計劃使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 來裝載可用性複本，請務必了解 FCI 限制且符合 FCI 需求。|[使用 SQL Server 容錯移轉叢集執行個體 (FCI) 裝載可用性複本的必要條件和限制](#FciArLimitations) (本文稍早所述)|  
   
@@ -356,7 +356,7 @@ ms.locfileid: "59042437"
   
 -   如果次要資料庫的檔案路徑 (包括磁碟機代號) 不同於對應主要資料庫的路徑，下列限制適用：  
   
-    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]：** 不支援 [完整] 選項 (在[選取初始資料同步處理頁面](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md))，  
+    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]：** 不支援 [完整]  選項 (在[選取初始資料同步處理頁面](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md))，  
   
     -   **RESTORE WITH MOVE：** 若要建立次要資料庫，在裝載次要複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上，資料庫檔案必須是 RESTORED WITH MOVE。  
   

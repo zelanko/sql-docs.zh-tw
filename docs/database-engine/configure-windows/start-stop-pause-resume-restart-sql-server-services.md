@@ -40,13 +40,13 @@ helpviewer_keywords:
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 49a5a5681093c9a4f39f843d713aa286c86fc818
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+manager: jroth
+ms.openlocfilehash: 9325820ea71c94bb1e43828998ebbf810fb11c10
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801992"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775261"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>啟動、停止、暫停、繼續、重新啟動 SQL Server 服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "56801992"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件是當做 Windows 服務執行的可執行程式。 當做 Windows 服務執行的程式可以繼續操作，而不會在電腦螢幕上顯示任何活動。  
   
  **[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務**  
- 當做 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的可執行處理序。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以是預設執行個體 (每部電腦只限一個執行個體)，或者可以是許多具名 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的其中一個。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來判斷哪些 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體會安裝在電腦上。 預設執行個體 (如果安裝的話) 會列為 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)**。 具名執行個體 (如果安裝的話) 會列為 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<執行個體名稱>)**。 依預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝為 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)**。  
+ 當做 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的可執行處理序。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以是預設執行個體 (每部電腦只限一個執行個體)，或者可以是許多具名 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的其中一個。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來判斷哪些 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體會安裝在電腦上。 預設執行個體 (如果安裝的話) 會列為 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)** 。 具名執行個體 (如果安裝的話) 會列為 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<執行個體名稱>)** 。 依預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝為 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)** 。  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務**  
  一種 Windows 服務，它會執行排程的管理工作 (稱為作業和警示)。 如需詳細資訊，請參閱 [SQL Server Agent](../../ssms/agent/sql-server-agent.md)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -117,7 +117,7 @@ ms.locfileid: "56801992"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  根據預設，只有本機 Administrators 群組的成員能夠啟動、停止、暫停、繼續或重新啟動服務。 若要將管理服務的能力授與非系統管理員，請參閱 [How to grant users rights to manage services in Windows Server 2003](https://support.microsoft.com/kb/325349)(如何在 Windows Server 2003 中，將管理服務的權限授與使用者)。 (其他 Windows 版本的程序都很相似)。  
   
  使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] SHUTDOWN [!INCLUDE[tsql](../../includes/tsql-md.md)]**命令停止** 需要 **sysadmin** 或 **serveradmin** 固定伺服器角色的成員資格，而且無法移轉。  
@@ -126,7 +126,7 @@ ms.locfileid: "56801992"
   
 #### <a name="starting-includessnoversionincludesssnoversion-mdmd-configuration-manager"></a>啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員  
   
-1.  指向 **[開始]** 功能表上的 **[所有程式]**，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
+1.  指向 **[開始]** 功能表上的 **[所有程式]** ，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]** ，再按一下 **[SQL Server 組態管理員]** 。  
   
      由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 程式的嵌入式管理單元，而不是獨立的程式，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員在較新版本的 Windows 中不會作為應用程式出現。 以下是將 Windows 安裝在 C 磁碟機時的最近四個版本路徑。  
   
@@ -141,11 +141,11 @@ ms.locfileid: "56801992"
   
 1.  使用上述指示啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態工具。  
   
-2.  如果出現 **[使用者帳戶控制]** 對話方塊，請按一下 **[是]**。  
+2.  如果出現 **[使用者帳戶控制]** 對話方塊，請按一下 **[是]** 。  
   
-3.  在 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員] 中，按一下左窗格中的 **[SQL Server 服務]**。  
+3.  在 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員] 中，按一下左窗格中的 **[SQL Server 服務]** 。  
   
-4.  在結果窗格中，以滑鼠右鍵按一下 [SQL Server (MSSQLServer)] 或具名執行個體，然後按一下 [啟動]、[停止]、[暫停]、[繼續] 或 [重新啟動]。  
+4.  在結果窗格中，以滑鼠右鍵按一下 [SQL Server (MSSQLServer)]  或具名執行個體，然後按一下 [啟動]  、[停止]  、[暫停]  、[繼續]  或 [重新啟動]  。  
   
 5.  按一下 **[確定]** ，即可關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。  
   
@@ -156,11 +156,11 @@ ms.locfileid: "56801992"
   
 1.  使用上述指示啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態工具。  
   
-2.  如果出現 **[使用者帳戶控制]** 對話方塊，請按一下 **[是]**。  
+2.  如果出現 **[使用者帳戶控制]** 對話方塊，請按一下 **[是]** 。  
   
-3.  在 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員] 中，按一下左窗格中的 **[SQL Server 服務]**。  
+3.  在 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員] 中，按一下左窗格中的 **[SQL Server 服務]** 。  
   
-4.  在結果窗格中，以滑鼠右鍵按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器] 或具名執行個體的 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent (MSSQLServer)] 或 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent (<執行個體名稱>)]，然後按一下 [啟動]、[停止]、[暫停]、[繼續] 或 [重新啟動]。  
+4.  在結果窗格中，以滑鼠右鍵按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器]  或具名執行個體的 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent (MSSQLServer)]  或 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent (<執行個體名稱>)]  ，然後按一下 [啟動]  、[停止]  、[暫停]  、[繼續]  或 [重新啟動]  。  
   
 5.  按一下 **[確定]** ，即可關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。  
   
@@ -171,21 +171,21 @@ ms.locfileid: "56801992"
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-includessdenoversionincludesssdenoversion-mdmd"></a>若要啟動、停止、暫停、繼續或重新啟動 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
   
-1.  在物件總管中，連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，並以滑鼠右鍵按一下您要啟動的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，然後按一下 [啟動]、[停止]、[暫停]、[繼續] 或 [重新啟動]。  
+1.  在物件總管中，連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，並以滑鼠右鍵按一下您要啟動的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，然後按一下 [啟動]  、[停止]  、[暫停]  、[繼續]  或 [重新啟動]  。  
   
-     或者在 [已註冊的伺服器] 中，以滑鼠右鍵按一下您要啟動的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體、並指向 [服務控制]，然後按一下 [啟動]、[停止]、[暫停]、[繼續] 或 [重新啟動]。  
+     或者在 [已註冊的伺服器] 中，以滑鼠右鍵按一下您要啟動的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體、並指向 [服務控制]  ，然後按一下 [啟動]  、[停止]  、[暫停]  、[繼續]  或 [重新啟動]  。  
   
-2.  如果出現 **[使用者帳戶控制]** 對話方塊，請按一下 **[是]**。  
+2.  如果出現 **[使用者帳戶控制]** 對話方塊，請按一下 **[是]** 。  
   
-3.  當系統提示您是否要執行動作時，請按一下 **[是]**。  
+3.  當系統提示您是否要執行動作時，請按一下 **[是]** 。  
   
 #### <a name="to-start-stop-or-restart-the-an-instance-of-the-includessnoversionincludesssnoversion-mdmd-agent"></a>若要啟動、停止或重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的執行個體  
   
-1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，並以滑鼠右鍵按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent]，然後按一下 [啟動]、[停止] 或 [重新啟動]。  
+1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，並以滑鼠右鍵按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent]  ，然後按一下 [啟動]  、[停止]  或 [重新啟動]  。  
   
-2.  如果出現 **[使用者帳戶控制]** 對話方塊，請按一下 **[是]**。  
+2.  如果出現 **[使用者帳戶控制]** 對話方塊，請按一下 **[是]** 。  
   
-3.  當系統提示您是否要執行動作時，請按一下 **[是]**。  
+3.  當系統提示您是否要執行動作時，請按一下 **[是]** 。  
   
 ##  <a name="CommandPrompt"></a> 從命令提示字元視窗使用 net 命令  
  可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net [!INCLUDE[msCoName](../../includes/msconame-md.md)] 命令來啟動、停止或暫停 **net** 服務。  
@@ -202,7 +202,7 @@ ms.locfileid: "56801992"
   
 ###  <a name="dbNamed"></a> 若要啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   從命令提示字元，輸入下列其中一個命令。 以您要管理之執行個體的名稱取代 \<執行個體名稱>。  
+-   從命令提示字元，輸入下列其中一個命令。 以您要管理之執行個體的名稱取代 \<執行個體名稱>  。  
   
      **net start "SQL Server (** *instancename* **)"**  
   

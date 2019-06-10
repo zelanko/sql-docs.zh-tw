@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d632a45f81658612c7c6f37e4de6dc535551fee4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 674af28b550a7c40837755a301f2c0c2594c8486
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212157"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798184"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>執行 Always On 可用性群組的已規劃手動容錯移轉 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，在不遺失資料的情況下針對 AlwaysOn 可用性群組執行手動容錯移轉 (*「已規劃的手動容錯移轉」*(Planned Manual Failover))。 可用性群組會在可用性複本層級容錯移轉。 規劃的手動容錯移轉和任何一個 AlwaysOn 可用性群組容錯移轉一樣，會將次要複本轉為主要角色。 同時，容錯移轉也會將先前的主要複本轉成次要角色。  
+本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，在不遺失資料的情況下針對 AlwaysOn 可用性群組執行手動容錯移轉 ( *「已規劃的手動容錯移轉」* (Planned Manual Failover))。 可用性群組會在可用性複本層級容錯移轉。 規劃的手動容錯移轉和任何一個 AlwaysOn 可用性群組容錯移轉一樣，會將次要複本轉為主要角色。 同時，容錯移轉也會將先前的主要複本轉成次要角色。  
   
 只有在主要複本和目標次要複本正在以同步認可模式執行且目前已同步時，才會支援規劃的手動容錯移轉。 規劃的手動容錯移轉會保留聯結至目標次要複本上可用性群組的次要資料庫中的所有資料。 之前的主要複本轉成次要角色之後，其資料庫會變成次要資料庫。 接著，這些資料庫會開始與新的主要資料庫同步。 在將它們全部轉換成 SYNCHRONIZED 狀態之後，新的次要複本就會變成有資格當做未來已規劃之手動容錯移轉的目標。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "53212157"
   
 ###  <a name="Security"></a> 安全性 
   
-####  <a name="Permissions"></a> Permissions 
+####  <a name="Permissions"></a> 權限 
  可用性群組需要 ALTER AVAILABILITY GROUP 權限。 同時也需要 CONTROL AVAILABILITY GROUP、ALTER ANY AVAILABILITY GROUP 或 CONTROL SERVER 權限。 
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio 
@@ -66,7 +66,7 @@ ms.locfileid: "53212157"
   
 2. 依序展開 **[AlwaysOn 高可用性]** 節點和 **[可用性群組]** 節點。 
   
-3. 以滑鼠右鍵按一下要容錯移轉的可用性群組，然後選取 [容錯移轉]。 
+3. 以滑鼠右鍵按一下要容錯移轉的可用性群組，然後選取 [容錯移轉]  。 
   
 4. 容錯移轉可用性群組精靈隨即啟動。 如需詳細資訊，請參閱[使用容錯移轉可用性群組精靈 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)。 
   

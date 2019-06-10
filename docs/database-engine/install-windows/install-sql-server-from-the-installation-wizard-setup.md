@@ -14,13 +14,13 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: dfe56c7b445353950529603ec2195e90457c35c9
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+manager: jroth
+ms.openlocfilehash: 1c907d719e139cd2d6d0cda3623cbaf668d09461
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993673"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794953"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>從安裝精靈安裝 SQL Server 2016 (安裝程式)
 
