@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 中表格式模型的相容性層級 |Microsoft Docs
-ms.date: 05/23/2019
+ms.date: 06/10/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,25 +9,25 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d2176b88f01808e1b84f409cb1f1c117774a220c
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.openlocfilehash: 19c69aa1a1ab27e7498d3c9d6a0d52c25b9f0020
+ms.sourcegitcommit: c2a5bed031b14f66562f792a3afaefab8c759fda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66175130"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826827"
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Analysis Services 表格式模型的相容性層級
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
-  *相容性層級*指的是 Analysis Services 引擎中的特定版本的行為。 比方說，DirectQuery 和表格式物件中繼資料根據相容性層級上有不同的實作。 在一般，您應該選擇支援您的伺服器最新的相容性層級。
+  *相容性層級*指的是 Analysis Services 引擎和表格式模型中繼資料中的功能和功能增強。 在一般，您應該選擇支援您的伺服器最新的相容性層級。 
 
   **最新支援的相容性層級是 1400** 
   
 在 1400年相容性層級中的主要功能包括：
 
 *  新的基礎結構進行資料連接，並匯入表格式模型支援 TOM Api 和 TMSL 指令碼。 這可讓其他資料來源，例如 Azure Blob 儲存體的支援。 其他資料來源會包含在未來更新中。
-*  資料轉換和資料混搭功能在 SSDT 中使用 Get Data 與 M 運算式。
-*  量值現在支援使用 DAX 運算式，啟用 BI 工具，例如 Microsoft Excel，向下鑽研到詳細資料，從彙總的報表的詳細資料列屬性。 例如，當使用者檢視區域和月份的總銷售額，他們可以檢視相關聯的訂單詳細資料。 
+*  資料轉換，並使用 Get Data 與 M 運算式中 SQL Server Data Tools (SSDT) 的資料混搭功能。
+*  測量現在支援，讓 BI 的 DAX 運算式的詳細資料列屬性工具，例如 Microsoft Excel 向下鑽研至詳細的彙總的報告資料。 例如，當使用者檢視區域和月份的總銷售額，他們可以檢視相關聯的訂單詳細資料。 
 *  資料表和資料行的名稱，其中的資料和物件層級安全性。
 *  不完全階層的增強的支援。
 *  效能和監控改善。
@@ -35,6 +35,8 @@ ms.locfileid: "66175130"
   
 ## <a name="supported-compatibility-levels-by-version"></a>版本所支援的相容性層級
   
+較低的相容性層級支援回溯相容性。 
+
 |||  
 |-|-|- 
 |**相容性層級**|**伺服器版本**| 
@@ -44,7 +46,7 @@ ms.locfileid: "66175130"
 |1103|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
 |1100|SQL Server 2017 *，SQL Server 2016、 2014年的 SQL Server、 SQL Server 2012 SP1、 SQL Server 2012| 
 
-\* SQL Server 2017 中已被取代 1100年和 1103年相容性層級。
+\* 在 SQL Server 2017 和更新版本，已被取代 1100年和 1103年相容性層級。
   
 ## <a name="set-compatibility-level"></a>設定相容性層級 
  當在 SQL Server Data Tools (SSDT) 建立新的表格式模型專案，您可以指定相容性層級上**表格式模型設計師**對話方塊。 
