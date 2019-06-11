@@ -7,14 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 13adf4e0-216a-4992-b13d-b7b1e1629e77
-ms.openlocfilehash: 1dc31f9b3df500e862236d4125fb1de99bc93eda
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.author: lle
+author: lrtoyou1223
+ms.openlocfilehash: 50b313f63ae434a96d6c0e38f3c8b600914c806d
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191832"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822990"
 ---
 # <a name="task-15-building-and-running-the-ssis-project"></a>工作 15：建置及執行 SSIS 專案
+
   在這項工作中，您會建立及執行 SSIS 專案。 如果您有 64 位元版本的電腦上安裝 Excel 2010，您應該設定的值**Run64BitRuntime**要**False**的 Excel 來源才能運作。  
   
 1.  在 [**方案總管] 中**] 視窗中，按一下**專案**功能表，然後按一下 [ **CleanseAndCurateSuppliers 屬性**。  

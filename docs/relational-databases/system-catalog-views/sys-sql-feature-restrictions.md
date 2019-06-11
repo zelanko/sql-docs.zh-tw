@@ -1,7 +1,7 @@
 ---
 title: sys.sql_feature_restrictions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 01/20/2016
+ms.date: 06/07/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ author: vainolo
 ms.author: arib
 manager: tomerw
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ffdcaaefe60c1972993501814cae555fb907f26
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.openlocfilehash: b583afef9f52da7801384d4a7a9c76deaf8d4ee4
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66506996"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822683"
 ---
 # <a name="syssqlfeaturerestrictions-transact-sql"></a>sys.sql_feature_restrictions & Amp;#40;transact-SQL&AMP;#41;
 

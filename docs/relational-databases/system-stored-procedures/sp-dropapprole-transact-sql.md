@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_dropapprole
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5cc9f79ab588a042894c199564820d06d9585bf1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+manager: jroth
+ms.openlocfilehash: 0928137201d9a731051ab95e603744f60c3a52e1
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533380"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822828"
 ---
 # <a name="spdropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   從目前資料庫移除應用程式角色。  
@@ -37,7 +39,6 @@ ms.locfileid: "58533380"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 sp_dropapprole [@rolename = ] 'role'  
 ```  
   
@@ -58,7 +59,7 @@ sp_dropapprole [@rolename = ] 'role'
 ## <a name="examples"></a>範例  
  下列範例會從目前資料庫移除 `SalesApp` 應用程式角色。  
   
-```  
+```sql
 EXEC sp_dropapprole 'SalesApp';  
 ```  
   

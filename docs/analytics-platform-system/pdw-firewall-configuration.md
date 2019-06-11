@@ -1,7 +1,7 @@
 ---
 title: PDW 防火牆設定-Analytics Platform System |Microsoft Docs
 description: 防火牆 頁面的 SQL Server PDW 組態管理員可讓您啟用或停用防火牆規則來允許或防止 Analytics Platform System appliance 的特定通訊埠存取。
-aauthor: mzaman1
+author: mzaman1
 manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,14 +9,15 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3195007b4346c6010b416fae833643f3a80136fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d92d92752b4de105857f5611fbe95262476a4e13
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62639525"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822438"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Analytics Platform System 中的平行資料倉儲防火牆組態
+
 **防火牆**頁面的 SQL Server PDW 組態管理員可讓您啟用或停用防火牆規則來允許或防止 Analytics Platform System appliance 的特定通訊埠存取。  
   
 ## <a name="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a>若要管理連接埠和防火牆應用裝置節點的規則  
@@ -45,6 +46,7 @@ ms.locfileid: "62639525"
 |SQL Server PDW 負載控制流程 Windows 認證|8002|CTL|  
 |_Kerberos|88|AD01 和 ad02 移，|  
 |_ldap|389|AD01 和 ad02 移|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="internal-ports"></a>內部連接埠  
 下列連接埠 pdw 用於內部通訊，但不是會開啟來自外部 PDW 應用裝置的連線。  
@@ -58,10 +60,12 @@ ms.locfileid: "62639525"
 |容錯移轉狀態 (Engine)|15001|CMP|  
 |動態 （暫時） 的連接埠範圍|20000-65535|CMP 的 CTL|  
 |SQL Server 連接埠範圍 (TDS)|1433, 1500-1508|CMP 的 CTL|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 > [!NOTE]  
 > 建立外部資料表或外部資料來源會使用預設的 TCP 連接埠 8020。 這些陳述式可以設定改為使用其他連接埠。 50300 為 Hortonworks JOB_TRACKER_LOCATION 預設連接埠。 與其他系統和工具整合，可能需要額外的連接埠。  
   
 <!-- MISSING LINKS ## See Also  
-[HDInsight Firewall Configuration &#40;Analytics Platform System&#41;](hdinsight-firewall-configuration.md)  -->  
+[HDInsight Firewall Configuration &#40;Analytics Platform System&#41;](hdinsight-firewall-configuration.md)
+-->
   

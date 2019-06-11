@@ -3,7 +3,7 @@ title: 教學課程：針對 Linux 上的 SQL Server 使用 AD 驗證
 titleSuffix: SQL Server
 description: 本教學課程提供在 Linux 上的 SQL Server 的 AD 驗證的設定步驟。
 author: Dylan-MSFT
-ms.author: Dylan.Gray
+ms.author: dygray
 ms.reviewer: rothja
 ms.date: 04/01/2019
 manager: craigg
@@ -13,12 +13,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 3ab6fd05b0cf9486ded5b0e550101a374669be11
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 5e9d7ee2c086f188041fbf6c42448d21953b008d
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65097234"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822782"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教學課程：使用 Linux 上的 SQL Server 的 Active Directory 驗證
 
@@ -361,4 +361,4 @@ CONTOSO.COM = {
 接下來，瀏覽其他安全性案例適用於 SQL Server on Linux。
 
 > [!div class="nextstepaction"]
->[將 Linux 上的 SQL Server 連線加密](sql-server-linux-encrypted-connections.md)
+> [將 Linux 上的 SQL Server 連線加密](sql-server-linux-encrypted-connections.md)

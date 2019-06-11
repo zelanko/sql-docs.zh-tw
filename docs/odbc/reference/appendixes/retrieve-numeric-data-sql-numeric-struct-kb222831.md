@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 07/13/2017
 ms.author: genemi
-authors: MightyPen
+author: MightyPen
 manager: craigg
-ms.openlocfilehash: 256a8f87445dd7bcc581e1bc0e5d55e9b5700ffb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b743b1b02a911c9132eab4a90c1f35b781895df2
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62629523"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822973"
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>擷取數值資料的 SQL\_數值\_結構
 
@@ -35,7 +35,7 @@ ms.locfileid: "62629523"
 SQL\_數值\_結構中定義 sqltypes.h 標頭檔，如下所示：
 
 
-``` C
+```c
 #define SQL_MAX_NUMERIC_LEN    16
 typedef struct tagSQL_NUMERIC_STRUCT
 {
@@ -64,7 +64,7 @@ typedef struct tagSQL_NUMERIC_STRUCT
 >
 > Microsoft 會提供這些程式碼範例，「 現狀 」 不含任何瑕疵責任擔保、 明示或默示擔保，包括但不是限於適售性和/或適合某特定用途之默示擔保責任。
 
-``` C
+```c
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
@@ -217,7 +217,7 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 ### <a name="interim-results"></a>暫時的結果：
 
 
-```
+```console
 //  C  ==> 12 * 1    =     12
 //  7  ==> 07 * 16   =    112
 //  2  ==> 02 * 256  =    512
@@ -240,7 +240,7 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 實作小小的位元組由小到大模式轉換成放大的整數的程式碼。 它是由應用程式開發人員實作這項功能。 下列程式碼範例是其中一個有許多可能的方法。
 
 
-``` C
+```c
 long strtohextoval()
 {
     long val=0,value=0;
@@ -283,7 +283,7 @@ long strtohextoval()
 您用來執行此程式的 ODBC 驅動程式必須支援 ODBC 3.0 功能。
 
 
-``` C
+```c
 #include <windows.h>
 #include <sql.h>
 #include <sqlext.h>

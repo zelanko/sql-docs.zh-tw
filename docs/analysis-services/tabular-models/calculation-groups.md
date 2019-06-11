@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 表格式模型中的計算群組 |Microsoft Docs
-ms.date: 06/05/2019
+ms.date: 06/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 58e845965bb9cd4eeba46ad30193c79b436da569
-ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
+ms.openlocfilehash: abc1f51d21613676fd94271f931e1a7692cc1efc
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66719861"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822697"
 ---
 # <a name="calculation-groups-preview"></a>計算群組 （預覽版）
  
-[!INCLUDE[ssas-appliesto-sql2019](../../includes/ssas-appliesto-sql2019.md)]
+[!INCLUDE[ssas-appliesto-sql2019-aas](../../includes/ssas-appliesto-sql2019-aas.md)]
 
-計算群組可以大幅降低備援的量值的數目，藉由群組為常用的量值運算式*計算項目*。 計算群組 1470年和更高版本支援在表格式模型中 SQL Server Analysis Services 2019[相容性層級](compatibility-level-for-tabular-models-in-analysis-services.md)。 1470 相容性層級的模型是目前**預覽**。  
+計算群組可以大幅降低備援的量值的數目，藉由群組為常用的量值運算式*計算項目*。 Azure Analysis Services 中支援計算群組和 SQL Server Analysis Services 2019 表格式模型在 1470年和更新版本[相容性層級](compatibility-level-for-tabular-models-in-analysis-services.md)。 1470 相容性層級的模型是目前**預覽**。  
 
 本文說明： 
 

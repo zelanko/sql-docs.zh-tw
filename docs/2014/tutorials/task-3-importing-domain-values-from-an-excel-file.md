@@ -7,14 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
-ms.openlocfilehash: 323f555337afa56b51ded0fb303f58960a52f310
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.author: lle
+author: lrtoyou1223
+ms.openlocfilehash: d86d71a3d62ca94eed2da5ad91fbdd60ee4989f4
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63250173"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822985"
 ---
 # <a name="task-3-importing-domain-values-from-an-excel-file"></a>工作 3：從 Excel 檔案匯入定義域值
+
   在這個工作中，您匯入的值**狀態**從工作表的 Excel 檔案的網域。  
   
 1.  按一下 **狀態**中的網域**定義域清單**。  
@@ -36,6 +39,6 @@ ms.locfileid: "63250173"
      ![在 定義域值上顯示只有新的核取方塊](../../2014/tutorials/media/et-importingdomainvaluesfromanexcelfile-03.jpg "只有新的核取方塊顯示定義域值")  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 4:設定定義域規則](../../2014/tutorials/task-4-setting-domain-rules.md)  
+ [工作 4：設定定義域規則](../../2014/tutorials/task-4-setting-domain-rules.md)  
   
   

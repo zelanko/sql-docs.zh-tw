@@ -16,16 +16,18 @@ helpviewer_keywords:
 - sp_droprolemember
 ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
-manager: craigg
+author: VanMSFT
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d01ad425d42c45b1e265fe25345b2d34ca8b4d7f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c235c23ac0be8dcaf6dc57dae14be9732f5c09f8
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526110"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822448"
 ---
 # <a name="spdroprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   從目前資料庫中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 角色移除安全性帳戶。  
@@ -36,17 +38,17 @@ ms.locfileid: "58526110"
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
-  
+
+### <a name="syntax-for-both-sql-server-and-azure-sql-database"></a>SQL Server 和 Azure SQL Database 的語法
+
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-  
 sp_droprolemember [ @rolename = ] 'role' ,   
      [ @membername = ] 'security_account'  
 ```  
-  
+
+### <a name="syntax-for-both-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Azure SQL 資料倉儲和平行處理資料倉儲的語法
+
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 sp_droprolemember 'role' ,  
      'security_account'  
 ```  
@@ -72,14 +74,14 @@ sp_droprolemember 'role' ,
 ## <a name="examples"></a>範例  
  下列範例會從角色 `JonB` 中移除使用者 `Sales`。  
   
-```  
+```sql
 EXEC sp_droprolemember 'Sales', 'Jonb';  
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會從角色 `JonB` 中移除使用者 `Sales`。  
   
-```  
+```sql
 EXEC sp_droprolemember 'Sales', 'JonB'  
 ```  
   

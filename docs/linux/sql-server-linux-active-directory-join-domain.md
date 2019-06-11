@@ -3,19 +3,19 @@ title: 加入至 Active Directory 的 Linux 上的 SQL Server
 titleSuffix: SQL Server
 description: ''
 author: Dylan-MSFT
-ms.author: Dylan.Gray
+ms.author: dygray
 ms.reviewer: rothja
 ms.date: 04/01/2019
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 758915364784f34b638af0e874873a417662d710
-ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
+ms.openlocfilehash: 50f2685b5b981cddfdba61f91b7ec04e9f6345d6
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66413347"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822522"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>加入 Active Directory 網域的 Linux 主機上的 SQL Server
 
