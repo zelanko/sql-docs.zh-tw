@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1de13581ce371ed843e9290274dfcfd1a13c53c2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: fb45d4df3ab054c320bb110c009e8fc4ea6edb59
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604968"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761671"
 ---
 # <a name="python-sql-driver---pyodbc"></a>Python SQL 驅動程式 - pyodbc
 

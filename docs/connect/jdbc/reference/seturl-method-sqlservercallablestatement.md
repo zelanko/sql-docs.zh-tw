@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 3d83675e-74ca-49d9-8461-6326773c5c8c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 203c579d9d4161da12d75c763b527eefdaefaa7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c5ef33d72a8d04d5c868d4673b3a2d52af1f346c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625306"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783383"
 ---
 # <a name="seturl-method-sqlservercallablestatement"></a>setURL 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ce8f9b35-c761-4b0c-9a46-985eef2c2e0b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47ad0a6d69ccf19b34ff0e15e7afa39b2dfcce41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8c5beda08263c98e519c9c8fc6c636d3aad550be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687418"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770211"
 ---
 # <a name="closing-objects-when-not-in-use"></a>不使用時關閉物件
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

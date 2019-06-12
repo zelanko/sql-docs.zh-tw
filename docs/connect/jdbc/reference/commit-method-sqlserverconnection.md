@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c7346165-51bf-4844-b64c-29833c147236
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6350dc135971f2f7d37154d4728c5d4922954047
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: dafb8b3c5016d0be191e06eefb5b5ca80b9ec0de
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819416"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777387"
 ---
 # <a name="commit-method-sqlserverconnection"></a>commit 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

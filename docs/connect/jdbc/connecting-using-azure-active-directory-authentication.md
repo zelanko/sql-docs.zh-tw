@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 62892cebe5c3c709cedee94b620b2c0e4cfeb258
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 802172caef018224403544aad5c3c4fd53778305
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737029"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775968"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證連線
 
@@ -39,7 +39,7 @@ ms.locfileid: "55737029"
     * **NotSpecified**
         * 使用`authentication=NotSpecified`或沒有任何一種驗證方法需要時將它保留為預設值。
 
-*   **/AccessToken:** 使用此連接屬性連接到 SQL Database 使用存取權杖。 accessToken 只可以使用 DriverManager 類別中的 getconnection （） 方法的 Properties 參數來設定。 它不能在連接 URL 中。  
+*   **accessToken**： 使用此連接屬性連接到 SQL Database 使用存取權杖。 accessToken 只可以使用 DriverManager 類別中的 getconnection （） 方法的 Properties 參數來設定。 它不能在連接 URL 中。  
 
 如需詳細資訊，請參閱 [驗證] 屬性上[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)頁面。  
 
@@ -164,7 +164,7 @@ You have successfully logged on as: <your domain user name>
 #### <a name="windows"></a>Windows
 JDK 隨附`kinit`，可用來取得 TGT 從金鑰發佈中心 (KDC) 網域加入同盟與 Azure Active Directory 的機器。
 
-##### <a name="step-1-ticket-granting-ticket-retrieval"></a>步驟 1：票證授權票證擷取
+##### <a name="step-1-ticket-granting-ticket-retrieval"></a>步驟 1： 票證授權票證擷取
 - **在上執行**: Windows
 - **動作**：
   - 使用命令`kinit username@DOMAIN.COMPANY.COM`從 KDC 取得 TGT，然後它會提示您輸入網域密碼。
@@ -178,7 +178,7 @@ JDK 隨附`kinit`，可用來取得 TGT 從金鑰發佈中心 (KDC) 網域加入
 ##### <a name="requirements"></a>需求
 若要查詢您的 Kerberos 網域控制站的 Windows 網域的機器存取。
 
-##### <a name="step-1-find-kerberos-kdc"></a>步驟 1：尋找 Kerberos KDC
+##### <a name="step-1-find-kerberos-kdc"></a>步驟 1： 尋找 Kerberos KDC
 - **在上執行**: Windows 命令列
 - **動作**: `nltest /dsgetdc:DOMAIN.COMPANY.COM` （其中"DOMAIN.COMPANY.COM"對應至您的網域名稱）
 - **範例輸出**
@@ -190,9 +190,9 @@ JDK 隨附`kinit`，可用來取得 TGT 從金鑰發佈中心 (KDC) 網域加入
   ```
 - **若要擷取的資訊**DC 名稱，在此情況下 `co1-red-dc-33.domain.company.com`
 
-##### <a name="step-2-configuring-kdc-in-krb5conf"></a>步驟 2：在 krb5.conf 設定 KDC
+##### <a name="step-2-configuring-kdc-in-krb5conf"></a>步驟 2： 設定 KDC 中 krb5.conf
 - **在上執行**: Linux/Mac
-- **動作**：編輯您選擇的編輯器中 /etc/krb5.conf。 設定下列金鑰
+- **動作**： 編輯您選擇的編輯器中 /etc/krb5.conf。 設定下列金鑰
   ```
   [libdefaults]
     default_realm = DOMAIN.COMPANY.COM
@@ -207,7 +207,7 @@ JDK 隨附`kinit`，可用來取得 TGT 從金鑰發佈中心 (KDC) 網域加入
 > [!NOTE]
 >  網域必須是全部大寫字。
 
-##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>步驟 3：測試票證授權票證擷取
+##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>步驟 3： 測試票證授權票證擷取
 - **在上執行**: Linux/Mac
 - **動作**：
   - 使用命令`kinit username@DOMAIN.COMPANY.COM`從 KDC 取得 TGT，然後它會提示您輸入網域密碼。

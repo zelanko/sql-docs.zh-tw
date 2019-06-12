@@ -1,5 +1,5 @@
 ---
-title: setString 方法 (long，java.lang.String) |Microsoft Docs
+title: setString 方法 (long, java.lang.String, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1b2190e9-5ace-497a-8554-0e913ea9b0cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a5fd1c9f0f876f024047fab5e28fb31ba29b687
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b23c0c5de87fc5df557d5d02958a72eaa336f8fb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839106"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771665"
 ---
 # <a name="setstring-method-long-javalangstring"></a>setString 方法 (long, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ public int setString(long pos,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- 這個 setString 方法是由 java.sql.Clob 介面中 setString 方法指定。  
+ 這個 setString 方法是由 java.sql.CallableStatement 介面中的 setString 方法指定。  
   
  字元資料會從指定的位置開始覆寫，而且可以超過 CLOB 的初始長度。 指定位置 + 1 的值將會附加字串。 指定位置 + 2 或更大 (或是零或零以下) 的值將會擲回位置錯誤。  
   

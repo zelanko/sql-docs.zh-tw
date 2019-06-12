@@ -14,13 +14,13 @@ helpviewer_keywords:
 - GetColumns method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 79aa1dcfd924dbe3e63989587afd6d706b1834de
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 61a913586bbba7dc9fc1d7d997ba33a9eddc8e0f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213530"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785952"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns (或 IRow::Open) 和 ISequentialStream 來提取資料行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "53213530"
   
 2.  執行命令 (在此範例中，**ICommandExecute::Execute()** 是使用 IID_IRow 來呼叫)。  
   
-3.  擷取資料行使用資料**Open**或是**IRow::GetColumns()**。  
+3.  擷取資料行使用資料**Open**或是**IRow::GetColumns()** 。  
   
     -   **Open**可以用來開啟**ISequentialStream**資料列。 指定 DBGUID_STREAM，表示資料行包含二進位資料的資料流 (然後 **ISteam** 或 **ISequentialStream** 就可用來讀取資料行中的資料)。  
   
-    -   如果使用 **IRow::GetColumns()**，DBCOLUMNACCESS 結構的 **pData** 項目就會設定為指向資料流物件。  
+    -   如果使用 **IRow::GetColumns()** ，DBCOLUMNACCESS 結構的 **pData** 項目就會設定為指向資料流物件。  
   
 4.  使用**ISequentialStream::Read()** 重複到指定的位元組數目讀入取用者緩衝區。  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 0a413e83-e0a4-41f8-9fe0-33ce4d368ee4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 88b5cc280dad46ceedee621b4d4f8aeb008f131c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 450450774bc5e0897150ea049deb5423d2304881
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700886"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783393"
 ---
 # <a name="setunicodestream-method-sqlserverpreparedstatement"></a>setUnicodeStream 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

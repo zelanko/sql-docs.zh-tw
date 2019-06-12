@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fceeefd7c9dd0d3bd7df761273f69355c4e6024a
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+manager: jroth
+ms.openlocfilehash: b3f7fc6d2d7ab6872bd7100fa51f05a9d9b957c8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342863"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770594"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>步驟 4︰使用 ADO.NET 彈性地連線到 SQL
 
@@ -65,7 +65,7 @@ ms.locfileid: "58342863"
   
 然後，您必須編輯伺服器名稱、 密碼和等等的字串。 您可以找到這些字串在方法中名為**GetSqlConnectionStringBuilder**。  
   
-注意： 伺服器名稱的連接字串專為 Azure SQL Database，因為它包含的四個字元前置詞**tcp:**。 但您可以調整伺服器字串以連線到 Microsoft SQL Server。  
+注意： 伺服器名稱的連接字串專為 Azure SQL Database，因為它包含的四個字元前置詞**tcp:** 。 但您可以調整伺服器字串以連線到 Microsoft SQL Server。  
   
   
 ```csharp

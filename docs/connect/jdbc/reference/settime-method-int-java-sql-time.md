@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1e3878dc-42fe-4fac-8fe3-22a7bd70c6da
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c481c064754d9c65ebf1bde31e2367560c08687
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 17e246084857088b2d923e95dac204530c96420d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768536"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66773251"
 ---
 # <a name="settime-method-int-javasqltime"></a>setTime 方法 (int, java.sql.Time)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

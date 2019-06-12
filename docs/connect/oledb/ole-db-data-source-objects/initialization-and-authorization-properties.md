@@ -16,13 +16,13 @@ helpviewer_keywords:
 - initialization properties [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: a2477e18f1ae9aa78d195a45f28494b4b909934d
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 6778b08e106416a009e854c3b88c3f7a13efc88a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744518"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768582"
 ---
 # <a name="initialization-and-authorization-properties"></a>初始化和授權屬性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "56744518"
 
   OLE DB Driver for SQL Server OLE DB 初始化和授權會將屬性解譯如下：  
   
-|屬性識別碼|描述|  
+|屬性識別碼|Description|  
 |-----------------|-----------------|  
 |DBPROP_AUTH_CACHE_AUTHINFO|OLE DB Driver for SQL Server 不會快取驗證資訊。<br /><br /> OLE DB Driver for SQL Server 在嘗試設定屬性值，傳回 DB_S_ERRORSOCCURRED。 DBPROP 結構的 *dwStatus* 成員表示 DBPROPSTATUS_NOTSUPPORTED。|  
 |DBPROP_AUTH_ENCRYPT_PASSWORD|OLE DB Driver for SQL Server 會使用標準[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安全性機制來隱藏密碼。<br /><br /> OLE DB Driver for SQL Server 在嘗試設定屬性值，傳回 DB_S_ERRORSOCCURRED。 DBPROP 結構的 *dwStatus* 成員表示 DBPROPSTATUS_NOTSUPPORTED。|  
@@ -57,7 +57,7 @@ ms.locfileid: "56744518"
   
  在提供者專屬的屬性集 DBPROPSET_SQLSERVERDBINIT 中，OLE DB Driver for SQL Server 會定義這些額外的初始化屬性。  
   
-|屬性識別碼|描述|  
+|屬性識別碼|Description|  
 |-----------------|-----------------|  
 |SSPROP_AUTH_ACCESS_TOKEN<a href="#table1_1"><sup>**1**</sup></a>|類型：VT_BSTR<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：VT_EMPTY<br /><br /> 描述： 用來向 Azure Active Directory 存取權杖。 <br/><br/>**注意：** 它會指定此屬性，也`UID`， `PWD`， `Trusted_Connection`，或`Authentication`連接字串關鍵字或其對應的屬性/關鍵字。|
 |SSPROP_AUTH_MODE<a href="#table1_1"><sup>**1**</sup></a>|類型：VT_BSTR<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：VT_EMPTY<br /><br /> 描述： 指定使用的 SQL 或 Active Directory 驗證。 有效值為：<br/><ul><li>`(not set)`： 驗證模式取決於其他關鍵字。</li><li>`(empty string)`： 取消設定先前設定驗證模式。</li><li>`ActiveDirectoryPassword:` 使用登入識別碼和密碼的 active Directory 驗證。</li><li>`ActiveDirectoryIntegrated:` 使用目前登入使用者的 Windows 帳戶認證的 Active directory 的整合式的驗證。</li><br/>**注意︰** 其**建議**使用該應用程式`Integrated Security`(或`Trusted_Connection`) 驗證關鍵字或其對應的屬性設定的值`Authentication`關鍵字 （或其對應的屬性） 來`ActiveDirectoryIntegrated`若要啟用新的加密和憑證驗證行為。<br/><br/><li>`SqlPassword:` 使用登入識別碼和密碼進行驗證。</li><br/>**注意：** 其**建議**使用該應用程式`SQL Server`驗證設定的值`Authentication`關鍵字 （或其對應的屬性） 到`SqlPassword`啟用新的加密和憑證驗證行為。</ul>|

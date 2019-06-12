@@ -1,8 +1,8 @@
 ---
 title: SQL Azure 連線類型 (SSRS) | Microsoft Docs
 description: SQL Azure 連線資料延伸模組支援多值參數、伺服器彙總，以及與連接字串分開管理的認證。
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
@@ -10,12 +10,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c096ce1edd6069cfa27185ee3146444a6a9872b
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
-ms.translationtype: HT
+ms.openlocfilehash: 02c3f95e00243a78fe2db70c587625e5a14d570d
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331518"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500182"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 連接類型 (SSRS)
 
@@ -42,9 +42,9 @@ ms.locfileid: "56331518"
 Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;  
 ```
   
-此外，您可以使用 [資料來源屬性] 對話方塊提供認證 (例如使用者名稱和密碼)。 `User Id` 和 `Password` 選項會自動附加至連接字串；您不需要隨連接字串鍵入這些選項。  
+此外，您可以使用 [資料來源屬性]  對話方塊提供認證 (例如使用者名稱和密碼)。 `User Id` 和 `Password` 選項會自動附加至連接字串；您不需要隨連接字串鍵入這些選項。  
   
-如需連接字串範例的詳細資訊，請參閱 [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
+如需連接字串範例的詳細資訊，請參閱 [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 ## <a name="Credentials"></a> 認證
 
@@ -58,7 +58,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 - 不需要認證。 若要使用這個選項，您先前必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱 msdn.microsoft.com 上 [Reporting Services 文件](https://go.microsoft.com/fwlink/?linkid=121312)中的[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
-如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[在報表產生器中指定認證](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+如需詳細資訊，請參閱 <<c0> [ 資料連接、 資料來源及連接字串&#40;報表產生器及 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或是[指定的認證及連接資訊，為報表資料來源](specify-credential-and-connection-information-for-report-data-sources.md).</c0>  
   
 ## <a name="Query"></a> 查詢
 
@@ -99,7 +99,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```
 
-按一下工具列上的 **[執行]** 按鈕 (**!**) 來執行查詢並顯示結果集。  
+按一下工具列上的 **[執行]** 按鈕 ( **!** ) 來執行查詢並顯示結果集。  
   
 若要將這個查詢參數化，請加入查詢參數。 例如，將 WHERE 子句變更為下列：  
 
@@ -185,7 +185,7 @@ WHERE EmployeeID = (@EmpID)
 [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
 提供存取報表資料的概觀。  
   
-[報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+[報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
 提供資料連接與資料來源的相關資訊。  
   
 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

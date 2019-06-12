@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b351e999-85bf-498b-915a-f91d89134bce
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8416de108cd4456599375f54c7afc0b4a5fefa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d99c9bf56a6856d953f30f7bd094b205d18bde8e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730496"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762844"
 ---
 # <a name="getnstring-method-javalangstring"></a>getNString 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

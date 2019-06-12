@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 9c6db315-e614-4604-b020-41af6a214cc1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b99e2f6f7bc289e123c36e3a528ec937e0f5f7ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 656672ad8ae1c852da2e1242f85cc6c0d5f90df3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605606"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765419"
 ---
 # <a name="rowdeleted-method-sqlserverresultset"></a>rowDeleted 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

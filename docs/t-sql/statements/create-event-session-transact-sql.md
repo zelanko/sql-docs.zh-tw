@@ -1,7 +1,7 @@
 ---
 title: CREATE EVENT SESSION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c2335efbd97872975fd6779081e7a5a693266e02
-ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
+ms.openlocfilehash: 482d6fd7062dfb0b733e3a3d50bae82f2f754f72
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54457671"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354510"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ON SERVER
  SET { *event_customizable_attribute*= \<value> [ ,...*n*] }  
  允許為此事件設定可自訂的屬性。 可自訂的屬性會出現在 sys.dm_xe_object_columns 檢視中當作 column_type 'customizable ' 和 object_name = *event_name*。  
   
- ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,**...*n*] })  
+ ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*n*] })  
  要關聯至事件工作階段的動作，其中：  
   
 -   *event_module_guid* 為包含此事件之模組的 GUID。  
@@ -240,7 +240,7 @@ ON SERVER
 ## <a name="remarks"></a>Remarks  
 邏輯運算子的優先順序是 `NOT` (最高)，後面依序接著 `AND` 和 `OR`。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要 `ALTER ANY EVENT SESSION` 權限。  
   
 ## <a name="examples"></a>範例  
@@ -259,7 +259,11 @@ ON SERVER
     WITH (MAX_MEMORY=4MB, MAX_EVENT_SIZE=4MB);  
 GO  
 ```  
-  
+
+### <a name="code-examples-can-differ-for-azure-sql-database"></a>適用於 Azure SQL Database 的程式碼範例可能有所不同
+
+[!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
+
 ## <a name="see-also"></a>另請參閱  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   

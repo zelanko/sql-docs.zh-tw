@@ -32,12 +32,12 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 41b6c0009c2cfc3c83a4326875c13083875166b3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: fc582f9328196233768e1fd7e7bd2bb81688c81d
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124578"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413438"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "54124578"
   
      在這個部分，您定義端點上支援的裝載。 裝載可以是下列數個支援類型之一：[!INCLUDE[tsql](../../includes/tsql-md.md)]、Service Broker 及資料庫鏡像。 在這個部分，您還會併入特定語言資訊。  
   
-> **注意：**[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 已移除原生 XML Web Services (SOAP/HTTP 端點)。  
+> **注意：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 已移除原生 XML Web Service (SOAP/HTTP 端點)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -73,7 +73,7 @@ FOR { TSQL | SERVICE_BROKER | DATABASE_MIRRORING } (
 <AS TCP_protocol_specific_arguments> ::=  
 AS TCP (  
   LISTENER_PORT = listenerPort  
-  [ [ , ] LISTENER_IP = ALL | ( 4-part-ip ) | ( "ip_address_v6" ) ]  
+  [ [ , ] LISTENER_IP = ALL | ( xx.xx.xx.xx IPv4 address ) | ( '__:__1' IPv6 address ) ]  
   
 )  
   
@@ -145,10 +145,10 @@ FOR DATABASE_MIRRORING (
   
  下列引數只適用於 TCP 通訊協定選項。  
   
- LISTENER_PORT **=**_listenerPort_  
+ LISTENER_PORT **=** _listenerPort_  
  指定 Service Broker TCP/IP 通訊協定用來接聽連接時所用的通訊埠編號。 依慣例會使用 4022，但介於 1024 和 32767 之間的任何數字都有效。  
   
- LISTENER_IP **=** ALL | **(**_4-part-ip_ **)** | **(** "*ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(** _4-part-ip_ **)**  |  **(** "*ip_address_v6*" **)**  
  指定端點將接聽的 IP 位址。 預設值是 ALL。 這表示接聽程式會接受與任何有效 IP 位址的連接。  
   
  如果您使用 IP 位址來設定資料庫鏡像，而不是使用完整網域名稱 (`ALTER DATABASE SET PARTNER = partner_IP_address` 或 `ALTER DATABASE SET WITNESS = witness_IP_address`)，則當您建立鏡像端點時，您必須指定 `LISTENER_IP =IP_address` 而非 `LISTENER_IP=ALL`。  
@@ -204,7 +204,7 @@ FOR DATABASE_MIRRORING (
  指定端點必須使用 RC4 演算法。 這是透過 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的預設值。  
   
 > [!NOTE]  
->  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料  (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本中使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。  
+>  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料 (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本中使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。  
   
  AES RC4  
  指定這兩個端點必須與這個偏好 AES 演算法的端點針對加密演算法進行交涉。  
@@ -230,7 +230,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  捨棄適用於其他位置的服務之訊息。 這是預設值。  
   
- MESSAGE_FORWARD_SIZE **=**_forward_size_  
+ MESSAGE_FORWARD_SIZE **=** _forward_size_  
  指定當儲存即將要轉送的訊息時，配置給端點使用的最大儲存體數量 (以 MB 為單位)。  
   
  **DATABASE_MIRRORING 選項**  
@@ -268,7 +268,7 @@ FOR DATABASE_MIRRORING (
   
 -   已被授與端點之 CONNECT 權限的使用者或群組  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 CREATE ENDPOINT 權限或 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格。 如需詳細資訊，請參閱 [GRANT 端點權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
   
 ## <a name="example"></a>範例  
@@ -276,7 +276,7 @@ FOR DATABASE_MIRRORING (
 ### <a name="creating-a-database-mirroring-endpoint"></a>建立資料庫鏡像端點  
  下列範例建立資料庫鏡像端點。 該端點使用的是通訊埠編號 `7022` (雖然任何可用通訊埠編號都適用)。 該端點設定為只利用 Kerberos 來使用 Windows 驗證。 `ENCRYPTION` 選項設定為非預設值 `SUPPORTED`，來支援加密或未加密資料。 該端點設定為同時支援夥伴和見證角色。  
   
-```  
+```sql  
 CREATE ENDPOINT endpoint_mirroring  
     STATE = STARTED  
     AS TCP ( LISTENER_PORT = 7022 )  
@@ -286,6 +286,36 @@ CREATE ENDPOINT endpoint_mirroring
        ROLE=ALL);  
 GO  
 ```  
+
+### <a name="create-a-new-endpoint-pointing-to-a-specific-ipv4-address-and-port"></a>建立指向特定 IPv4 位址和連接埠的新端點
+
+```sql
+CREATE ENDPOINT ipv4_endpoint_special
+STATE = STARTED
+AS TCP (
+    LISTENER_PORT = 55555, LISTENER_IP = (10.0.75.1)
+)
+FOR TSQL ();
+
+GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] TO public; -- Keep existing public permission on default endpoint for demo purpose
+GRANT CONNECT ON ENDPOINT::ipv4_endpoint_special
+TO login_name;
+```
+
+### <a name="create-a-new-endpoint-pointing-to-a-specific-ipv6-address-and-port"></a>建立指向特定 IPv6 位址和連接埠的新端點
+
+```sql
+CREATE ENDPOINT ipv6_endpoint_special
+STATE = STARTED
+AS TCP (
+    LISTENER_PORT = 55555, LISTENER_IP = ('::1')
+)
+FOR TSQL ();
+
+GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] TO public;
+GRANT CONNECT ON ENDPOINT::ipv6_endpoint_special
+
+```
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   

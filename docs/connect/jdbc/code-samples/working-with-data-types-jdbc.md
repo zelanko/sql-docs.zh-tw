@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7c9a73695508dc7648499cdaa08d4065968ed815
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2c7f00b7f908a7b13f388df6dfd745a29000e4ac
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798406"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769691"
 ---
 # <a name="working-with-data-types-jdbc"></a>使用資料類型 (JDBC)
 

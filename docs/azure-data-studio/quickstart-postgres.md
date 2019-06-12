@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-manager: craigg
-ms.openlocfilehash: dbf7b427c8c978538370a576aa50c35dd15417cf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: be8683ae563e4e0676f53203cb40386cf8aa4840
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63252947"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778328"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>快速入門：使用 PostgreSQL 連線及查詢 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 本快速入門示範如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連接到 Postgres，並再使用 SQL 陳述式來建立資料庫*tutorialdb*並查詢它。
@@ -31,9 +31,9 @@ ms.locfileid: "63252947"
 
 ## <a name="connect-to-postgresql"></a>連線至 PostgreSQL
 
-1. 啟動**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**。
+1. 啟動 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** 。
 
-2. 首次啟動[!INCLUDE[name-sos](../includes/name-sos-short.md)]**連線**] 對話方塊隨即開啟。 如果**連接**對話方塊未開啟，按一下**伺服器**頁面中的**新增連線**圖示：
+2. 首次啟動[!INCLUDE[name-sos](../includes/name-sos-short.md)]**連線** 對話方塊隨即開啟。 如果**連接**對話方塊未開啟，按一下**伺服器**頁面中的**新增連線**圖示：
 
    ![新的 [連線] 圖示](media/quickstart-postgresql/new-connection-icon.png)
 
@@ -54,7 +54,7 @@ ms.locfileid: "63252947"
    | **伺服器群組** | \<預設值\> | 此選項可讓您將此連線指派給您所建立的特定伺服器群組。 | 
    | **名稱 （選擇性）** | *保留空白* | 此選項可讓您指定您的伺服器的易記名稱。 | 
 
-5. 選取 [連接]。 
+5. 選取 [連接]  。 
 
 成功連線之後，您的伺服器會在中開啟**伺服器**資訊看板。
 

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ffbc4a02-e851-431c-bc1a-7ab381d982bb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d9beb1e335faa29dc83e727e2366208172713909
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 38cc11c791666ebefadf71a412ea5a5858c03f34
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726796"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786146"
 ---
 # <a name="gettype-method-sqlserverresultset"></a>getType 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +48,7 @@ public int getType()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getType 方法是由 java.sql.ResultSet 介面中將 getType 方法指定。  
+ 這個 getTime 方法是由 java.sql.ResultSet 介面中的 getTime 方法指定。  
   
  這個方法可用來決定實際的資料指標類型。 如果應用程式選取 TYPE_FORWARD_ONLY 或使用預設資料指標類型，將會傳回 TYPE_FORWARD_ONLY。  
   

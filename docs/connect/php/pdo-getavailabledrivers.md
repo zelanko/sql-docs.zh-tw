@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: getavailabledrivers |Microsoft Docs'
+title: PDO::getAvailableDrivers | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eab561e6-1229-401a-9482-008c23f9a4e6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8e34675ccd92ae714117a41198518cb7ec28afb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 52df84278079a9d1c7f7e7c23e4c86b5413758e9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604848"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762197"
 ---
 # <a name="pdogetavailabledrivers"></a>PDO::getAvailableDrivers
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

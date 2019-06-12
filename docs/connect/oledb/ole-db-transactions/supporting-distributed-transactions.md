@@ -1,6 +1,6 @@
 ---
 title: 支援分散式的交易 |Microsoft Docs
-description: 在 OLE DB Driver for SQL Server 的分散式的交易
+description: OLE DB Driver for SQL Server 中的交易
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - MS DTC, about distributed transaction support
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 058c7755468551ff94da7e7b8eb9d1993d92a07a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 97c7c4744d21697620740d2a865e5e6a66558a0f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621956"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766117"
 ---
 # <a name="supporting-distributed-transactions"></a>支援分散式交易
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -144,6 +144,6 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Transactions](../../oledb/ole-db-transactions/transactions.md)  
+ [交易](../../oledb/ole-db-transactions/transactions.md)  
   
   

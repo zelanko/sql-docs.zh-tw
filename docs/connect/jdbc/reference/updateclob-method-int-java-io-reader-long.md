@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5c958ccb-386a-4dd5-901d-5a106dac2683
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 42ea206399243d9844245b885f0a5c5fda95cbed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b541c2662572aa18932af89d4a206ac3ca951782
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724622"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778514"
 ---
 # <a name="updateclob-method-int-javaioreader-long"></a>updateClob 方法 (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public void updateClob(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- UpdateClob 方法 java.sql.ResultSet 介面中所指定這個 updateClob 方法。  
+ 這個 getNClob 方法是由 java.sql.ResultSet 介面中的 getNClob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [updateClob 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   

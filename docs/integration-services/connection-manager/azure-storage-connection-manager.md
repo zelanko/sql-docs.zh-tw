@@ -1,7 +1,7 @@
 ---
 title: Azure 儲存體連線管理員 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,34 +14,30 @@ ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 509e51243f7de4e6871bedf18c7ce7aa84d3e8c6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 03acf5db82c21a66e2fbd8337713b6989ce36a31
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65728334"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403064"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 儲存體連線管理員
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
-  **Azure 儲存體連線管理員**可讓 SSIS 套件使用您指定的屬性值連接到 Azure 儲存體帳戶︰儲存體帳戶名稱和帳戶金鑰。  
+  **Azure 儲存體連線管理員**可讓 SSIS 套件連線到 Azure 儲存體帳戶。
    
  **Azure 儲存體連線管理員**是 [Azure SQL Server Integration Services (SSIS) Feature Pack](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) 的元件。 
   
-1.  在 [加入 SSIS 連線管理員] 對話方塊中，選取 [AzureStorage]，然後按一下 [加入]。  
+在 [加入 SSIS 連線管理員]  對話方塊中，選取 [AzureStorage]  ，然後按一下 [加入]  。  
   
-2.  在 [Azure 儲存體連線管理員編輯器] 對話方塊中，選擇 [使用 Azure 帳戶] 透過網際網路連接至 Azure 儲存體服務，或選擇 [使用本機開發人員帳戶] 連接至 Azure 儲存體模擬器裝載的本機服務。  
-  
-3.  如已選取 [使用 Azure 帳戶] 選項，請執行下列動作︰  
-  
-    1.  指定 [儲存體帳戶名稱] 和 [帳戶金鑰] 欄位的值。 這些值會儲存為 SSIS 封裝中的機密資料。  
-  
-    2.  如果您想要使用 HTTPS 而非 HTTP連接到 Azure 儲存體服務，請選取 [使用 HTTPS]。  
-  
-4.  按一下 **[確定]** ，關閉對話方塊。  
-  
-5.  您可以在 [屬性]  視窗中看到您建立的連線管理員屬性。  
-  
-  
+有下列屬性可供使用。
+
+- **服務：** 指定要連線的目標儲存體服務。
+- **帳戶名稱：** 指定儲存體帳戶名稱。
+- **驗證：** 指定要使用的驗證方法。 支援 **AccessKey** 和 **ServicePrincipal** 驗證。
+    - **AccessKey：** 針對這種驗證方法，指定**帳戶金鑰**。
+    - **ServicePrincipal：** 針對這種驗證方法，指定服務主體的**應用程式識別碼**、**應用程式金鑰**、**租用戶識別碼**。
+      您應該將儲存體帳戶的**儲存體 Blob 資料參與者**角色指派給服務主體。
+      如需詳細資料，請參閱[此](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) \(部分機器翻譯\) 頁面。
+- **環境：** 指定裝載儲存體帳戶的雲端環境。

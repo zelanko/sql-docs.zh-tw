@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b81937878a4c9e733b6a7c23a6156221c356e512
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: df92d111897336fdcb40fad59cb5aafec3a52b6f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860639"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803359"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>搭配 JDBC Driver 使用大量複製
 
@@ -575,17 +575,17 @@ public class BulkCopyExistingTransactions {
   
 1. 開啟 **SQL Server Management Studio**，並連線到具有 AdventureWorks 資料庫的 SQL Server。  
   
-2. 展開此資料庫，以滑鼠右鍵按一下 AdventureWorks 資料庫，選取 [工作] 和 [匯出資料]…  
+2. 展開此資料庫，以滑鼠右鍵按一下 AdventureWorks 資料庫，選取 [工作]  和 [匯出資料]  …  
   
-3. 針對該 [資料來源]，請選取 [資料來源]，這可讓您連線到 SQL Server (例如 SQL Server Native Client 11.0)，然後檢查設定並按一下 [下一步]  
+3. 針對該 [資料來源]，請選取 [資料來源]  ，這可讓您連線到 SQL Server (例如 SQL Server Native Client 11.0)，然後檢查設定並按一下 [下一步]   
   
-4. 針對該 [目的地]，請選取 [一般檔案目的地]，然後輸入 [檔案名稱] 為目的地，例如 C:\Test\TestBulkCSVExample.csv。 請檢查 [格式] 為 [分隔]，且 [文字限定詞] 為 [無]，並啟用 [第一個資料列的資料行名稱]，然後選取 [下一步]  
+4. 針對該 [目的地]，請選取 [一般檔案目的地]  ，然後輸入 [檔案名稱]  為目的地，例如 C:\Test\TestBulkCSVExample.csv。 請檢查 [格式]  為 [分隔]，且 [文字限定詞]  為 [無]，並啟用 [第一個資料列的資料行名稱]  ，然後選取 [下一步]   
   
-5. 選取 [寫入查詢來指定要傳送的資料]，然後按一下 [下一步]。  輸入 [SQL 陳述式] 如：SELECT ProductID, Name, ProductNumber FROM Production.Product，然後按一下 [下一步]  
+5. 選取 [寫入查詢來指定要傳送的資料]  ，然後按一下 [下一步]  。  輸入 [SQL 陳述式]  如：SELECT ProductID, Name, ProductNumber FROM Production.Product，然後按一下 [下一步]   
   
-6. 檢查設定：您可以將資料列分隔符號保留為 {CR}{LF}，並將資料行分隔符號保留為逗號 {,}。  選取 [編輯對應]，然後檢查資料 [類型] 對於每個資料行是否都正確 (例如檢查 ProductID 是否為整數，以及檢查其他資料行是否為 Unicode 字串)。  
+6. 檢查設定：您可以將資料列分隔符號保留為 {CR}{LF}，並將資料行分隔符號保留為逗號 {,}。  選取 [編輯對應]  ，然後檢查資料 [類型]  對於每個資料行是否都正確 (例如檢查 ProductID 是否為整數，以及檢查其他資料行是否為 Unicode 字串)。  
   
-7. 直接跳到 [完成] 並執行匯出。  
+7. 直接跳到 [完成]  並執行匯出。  
 
 ```java
 import java.sql.Connection;

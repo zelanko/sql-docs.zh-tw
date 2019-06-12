@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 834ec3118685da8059999b3986af3edb39dc3e58
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 27bfc5a5654042be3dde68a2a03c1dd4e6a6d4a3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042247"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801755"
 ---
 # <a name="using-integrated-authentication"></a>使用整合式驗證
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -120,7 +120,7 @@ forwardable = yes
 .zzzz.corp.contoso.com = ZZZZ.CORP.CONTOSO.COM  
 ```  
   
-如果您的 Linux 或 macOS 電腦設定為使用動態主機設定通訊協定 (DHCP)，且 Windows DHCP 伺服器提供 DNS 伺服器來使用，則您可以使用 **dns_lookup_kdc=true**。 現在，您可以發出命令 `kinit alias@YYYY.CORP.CONTOSO.COM`，使用 Kerberos 登入您的網域。 傳遞至 `kinit` 的參數會區分大小寫，且設定要在網域中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 電腦必須新增該使用者 `alias@YYYY.CORP.CONTOSO.COM` 以供登入之用。 現在，您可以使用信任連接 (連接字串中的 、**bcp -T** 或 **sqlcmd -E**)。  
+如果您的 Linux 或 macOS 電腦設定為使用動態主機設定通訊協定 (DHCP)，且 Windows DHCP 伺服器提供 DNS 伺服器來使用，則您可以使用 **dns_lookup_kdc=true**。 現在，您可以發出命令 `kinit alias@YYYY.CORP.CONTOSO.COM`，使用 Kerberos 登入您的網域。 傳遞至 `kinit` 的參數會區分大小寫，且設定要在網域中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 電腦必須新增該使用者 `alias@YYYY.CORP.CONTOSO.COM` 以供登入之用。 現在，您可以使用信任連接 (連接字串中的  、**bcp -T** 或 **sqlcmd -E**)。  
   
 Linux 或 macOS 電腦上時間與 Kerberos 金鑰發佈中心 (KDC) 上的時間必須很接近。 請確認您的系統時間設定正確，例如使用 Network Time Protocol (NTP)。  
 

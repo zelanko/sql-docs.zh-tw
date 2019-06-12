@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 329d9b5e-1c5d-40b0-9127-1051d0646fc7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 46b6c9be6566b3b4857f58d779838356fe3b689e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+manager: jroth
+ms.openlocfilehash: 8c58b4c59140feb37e339930b1b045c2512d5b23
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774983"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799127"
 ---
 # <a name="pdostatementsetattribute"></a>PDOStatement::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

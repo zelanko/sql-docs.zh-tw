@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 95fc7b07-2498-4a7e-8f7f-ee0d86b598b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fa85b61a67655fbf363c1927b48cd79f8ff841ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5725da0138ecec2e24f93e16af97a1d3c8a67681
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774416"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776030"
 ---
 # <a name="sqlserverxadatasource-class"></a>SQLServerXADataSource 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47774416"
   
  **套件：** com.microsoft.sqlserver.jdbc  
   
- **擴充：**[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  
+ **擴充：** [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  
   
  **實作：** javax.sql.XADataSource  
   

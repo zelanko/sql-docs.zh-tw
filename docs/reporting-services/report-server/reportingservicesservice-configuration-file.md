@@ -1,6 +1,6 @@
 ---
 title: ReportingServicesService 設定檔 | Microsoft Docs
-ms.date: 03/15/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c78156832d2e66d95e4a9868bef2336c4769d9bc
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: dfb0f48bb35e6341e2b2a9a72007ef4eb09c2b9b
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581322"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506626"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 組態檔
 
@@ -26,12 +26,17 @@ ms.locfileid: "65581322"
 ReportingServicesService.exe.config 檔包括設定追蹤的設定。  
   
 ## <a name="file-location"></a>檔案位置  
- 此檔案位於 \Reporting Services\Report Server\Bin 資料夾中。  
-  
+這個檔案可能位於其中一個下列路徑：  
+
+``` Paths  
+\Reporting Services\Report Server\Bin  
+\Program Files\Microsoft SQL Server Reporting Services\SSRS\ReportServer\bin  
+```  
+ 
 ## <a name="editing-guidelines"></a>編輯指導方針  
  您可以修改此檔案以重新命名記錄檔，或者增加或減少追蹤層級。 請勿修改其他任何設定。 如需指示，請參閱[修改 Reporting Services 設定檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 如需追蹤紀錄的詳細資訊，請參閱 [報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
-## <a name="example-configuration"></a>範例組態  
+## <a name="example-configuration"></a>範例設定  
  下列範例顯示 ReportingServicesService.exe.config 檔中的設定和預設值。  
   
 ```  
@@ -86,7 +91,6 @@ ReportingServicesService.exe.config 檔包括設定追蹤的設定。
 |**執行階段**|指定支援與前版回溯相容的組態設定。 執行階段設定是用來重新導向以新版為前版 Microsoft.ReportingServices.Interfaces 之目標的要求。<br /><br /> 本節中的所有組態設定會在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 產品文件集中加以描述。 如需詳細資訊，請在 MSDN 網站上或 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 文件集中搜尋「執行階段結構描述設定」。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 組態檔](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)  
-  
+[Reporting Services 設定檔](../../reporting-services/report-server/reporting-services-configuration-files.md)  
+[報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)  
   

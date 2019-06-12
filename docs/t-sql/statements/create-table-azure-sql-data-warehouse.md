@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4a048347773b5bf9cba7288e482ed08ea3f4757c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 328a0aaeed34bd03e33f480ea0b0ea6afc7e940d
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574883"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413337"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
 
@@ -36,7 +36,7 @@ ms.locfileid: "65574883"
 
 ## <a name="syntax"></a>語法
   
-```  
+```
 -- Create a new table.
 CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
@@ -166,12 +166,12 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="ordered-clustered-columnstore-index-option-preview"></a>已排序的叢集資料行存放區索引選項 (預覽)
 
-叢集資料行存放區索引是在 Azure SQL 資料倉儲中建立資料表的預設。  ORDER 指定規格預設為 COMPOUND 索引鍵。  排序一律會以遞增排序進行。 若沒有指定任何 ORDER 子句，資料行存放區將不會進行排序。
+叢集資料行存放區索引是在 Azure SQL 資料倉儲中建立資料表的預設。  ORDER 指定規格預設為 COMPOUND 索引鍵。  排序一律會以遞增排序進行。 若沒有指定任何 ORDER 子句，資料行存放區將不會進行排序。 由於排序流程，若資料表具有已排序的叢集資料行存放區索引，則該資料表所經歷的資料載入時間可能比未排序的叢集資料行存放區索引還長。 如果您在載入資料時需要更多 tempdb 空間，您可以減少每個插入的資料量。
 
 在預覽期間，您可以啟用 ORDER 來執行此查詢，以檢查資料行。  若在 ORDER 中指定多個資料行，則稍後將會提供目錄檢視，以提供此資訊和資料行序數。
 
 ```sql
-SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.* 
+SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.*
 FROM sys.objects o 
 INNER JOIN sys.columns c ON o.object_id = c.object_id 
 INNER JOIN sys.partitions p ON o.object_id = p.object_id   

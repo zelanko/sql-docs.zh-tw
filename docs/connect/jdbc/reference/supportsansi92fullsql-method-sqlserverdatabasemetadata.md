@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8877dc8c-26cd-4374-8ae8-ff7d20621130
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9ba80c1efd21e90e94d1fb86bbe891b36df928c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2bdc41599faef3446c95162e833222aa1961082b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853906"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766583"
 ---
 # <a name="supportsansi92fullsql-method-sqlserverdatabasemetadata"></a>supportsANSI92FullSQL 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6f368df5-e88a-4088-b0de-2b5ab655ebaa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5cd51f9e0c58ca4fda42d6bf50bbf5063d6adee3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 362fa3a9ba38e65ffc686dedadfc8c671013c3cc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827756"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764335"
 ---
 # <a name="supportsgroupby-method-sqlserverdatabasemetadata"></a>supportsGroupBy 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

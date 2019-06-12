@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: quote |Microsoft Docs'
+title: PDO::quote | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3b14ce7da2a7cb7fbc59de41fc7a651c6e67c86c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: b08ead32ba3c31f8f928c6e6dda051df1204073c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604729"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762015"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

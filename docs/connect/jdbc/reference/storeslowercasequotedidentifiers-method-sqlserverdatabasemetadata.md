@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 3e104c9e-66d4-436b-8b5b-a00ff667c95b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 502de6978195dd323cad23944ab9c3c9d47cf7eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f6b356b45ab1bc8ae2903e3b9ac7aa5bfe367584
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736126"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766809"
 ---
 # <a name="storeslowercasequotedidentifiers-method-sqlserverdatabasemetadata"></a>storesLowerCaseQuotedIdentifiers 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

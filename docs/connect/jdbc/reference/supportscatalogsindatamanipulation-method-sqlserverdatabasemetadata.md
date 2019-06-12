@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ee1af47a-4c04-4391-83a5-54ced80218c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c35d0f312dde450f33c9c295e092d9bc594b87f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 03e938e89241c95af88a35b616791318a1b4c979
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826916"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766510"
 ---
 # <a name="supportscatalogsindatamanipulation-method-sqlserverdatabasemetadata"></a>supportsCatalogsInDataManipulation 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

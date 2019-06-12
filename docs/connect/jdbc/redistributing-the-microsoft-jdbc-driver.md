@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 625d64d3-6e7c-41c2-912a-38fdf6695922
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c9bd82cc6b6de3fed5acfe9fd496e457f2cef381
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: af922c074a303f73b157cd8fb744e5b0ca315393
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736859"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772451"
 ---
 # <a name="redistributing-the-microsoft-jdbc-driver"></a>轉散發 Microsoft JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "55736859"
   
  [Microsoft JDBC Driver 4.0 for SQL Server 的轉散發授權](https://msdn.microsoft.com/sqlserver/jj589698)  
   
- 注意：Microsoft 會使用 Microsoft 帳戶進行安全的驗證和註冊。 當您透過 Microsoft 帳戶註冊 SQL Server JDBC Driver 的轉散發權限時，系統會提示您提供作為您安全設定檔一部分的資訊。  
+ 注意： Microsoft 在安全的驗證和註冊使用 Microsoft 帳戶。 當您透過 Microsoft 帳戶註冊 SQL Server JDBC Driver 的轉散發權限時，系統會提示您提供作為您安全設定檔一部分的資訊。  
   
  如果您沒有已，您可以取得[Microsoft 帳戶](https://signup.live.com/)  
   

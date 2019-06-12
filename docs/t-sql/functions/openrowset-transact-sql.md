@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3a6e2d51b9a2926f6d542ce3da5fc1c916881918
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: d29e39a10b71a58878a7a8bcb00ffd274f253b50
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65944811"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413577"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -413,8 +413,17 @@ SELECT * FROM OPENROWSET(
    SINGLE_CLOB) AS DATA;
 ```
 
+```sql
+select *
+from openrowset('MSDASQL'
+                ,'Driver={Microsoft Access Text Driver (*.txt, *.csv)}'
+                ,'select * from E:\Tlog\TerritoryData.csv') 
+;
+```
+
 > [!IMPORTANT]
-> Azure SQL Database 不支援從 Windows 檔案讀取。
+> - ODBC 驅動程式應該是 64 位元。 在 Windows 中，開啟 [OBDC 資料來源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) 應用程式的 [驅動程式]  索引標籤來確認這一點。 32 位元的 `Microsoft Text Driver (*.txt, *.csv)` 將無法與 64 位元版本的 sqlservr.exe 一起運作。 
+> - Azure SQL Database 不支援從 Windows 檔案讀取。
 
 
 ### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>I. 從儲存在 Azure Blob 儲存體上的檔案存取資料   

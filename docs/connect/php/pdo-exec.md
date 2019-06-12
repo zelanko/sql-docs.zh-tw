@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: exec |Microsoft Docs'
+title: PDO::exec | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 359a87c6-c13a-4518-8f23-a922e7f3b171
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 96b3597c8b8d4fa61b76a96278697f2678b7d9aa
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 5b6d3341dd3ade106495c606896b6496a9bc2f6c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600358"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762132"
 ---
 # <a name="pdoexec"></a>PDO::exec
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

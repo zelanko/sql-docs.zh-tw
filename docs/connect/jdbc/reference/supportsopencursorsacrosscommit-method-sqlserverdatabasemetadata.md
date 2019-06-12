@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b7eed108-64cc-4be6-b297-8af6c1e3dc72
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 23c200252fc2c4e66b60cab39b12ee3a7ff688ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2bf1e1b24295a491fdd17df45c126f5c3151403e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610987"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764051"
 ---
 # <a name="supportsopencursorsacrosscommit-method-sqlserverdatabasemetadata"></a>supportsOpenCursorsAcrossCommit 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

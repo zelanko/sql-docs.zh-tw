@@ -7,14 +7,14 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
-manager: craigg
+manager: jroth
 author: MightyPen
-ms.openlocfilehash: ab53bcc4885ab91c3c9d022ffc3ba3bd72e2c5be
-ms.sourcegitcommit: 1d66761e54490267be4d0a94efc0ad6790051ef2
+ms.openlocfilehash: aff69606c81a1ee93a01a8467299ba2155da770d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65198031"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801743"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>搭配使用 Always Encrypted 與 ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -52,7 +52,7 @@ SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer
 
 請注意，啟用 Always Encrypted 並不足以確保加密或解密成功；您還必須確定：
 
-- 應用程式要有 [檢視任何資料行的主要金鑰定義] 和 [檢視任何資料行的加密金鑰定義] 資料庫權限，才能存取資料庫中永遠加密金鑰的相關中繼資料。 如需詳細資料，請參閱[資料庫權限](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions)。
+- 應用程式要有 [檢視任何資料行的主要金鑰定義]  和 [檢視任何資料行的加密金鑰定義]  資料庫權限，才能存取資料庫中永遠加密金鑰的相關中繼資料。 如需詳細資料，請參閱[資料庫權限](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions)。
 
 - 應用程式可以存取保護所查詢加密資料行之 CEK 的 CMK。 這取決於儲存 CMK 的金鑰存放區提供者。 如需詳細資訊，請參閱[使用資料行主要金鑰存放區](#working-with-column-master-key-stores)。
 
@@ -268,11 +268,11 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 `SQLSetPos` API 可讓應用程式使用與 SQLBindCol 繫結的緩衝區來更新資料集內的資料列，並且更新到先前擷取資料列資料的位置中。 由於加密的固定長度類型有非對稱的填補行為，因此有可能在於資料列中的其他資料行上執行更新時，意外地改變資料。 使用 AE 時，如果值小於緩衝區大小，就會填補固定長度字元值。
 
-若要減輕此行為造成的影響，請使用 `SQL_COLUMN_IGNORE` 旗標來忽略不會在 `SQLBulkOperations` 過程中更新的資料行，以及不會在使用 `SQLSetPos` 進行資料指標型更新時更新的資料行。  為了效能考量，以及避免將繫結至比其實際 (DB) 大小「還要小」之緩衝區的資料行截斷，應該忽略所有不會由應用程式直接修改的資料行。 如需詳細資訊，請參閱 [SQLSetPos 函式參考](https://msdn.microsoft.com/library/ms713507(v=vs.85).aspx) \(部分機器翻譯\)。
+若要減輕此行為造成的影響，請使用 `SQL_COLUMN_IGNORE` 旗標來忽略不會在 `SQLBulkOperations` 過程中更新的資料行，以及不會在使用 `SQLSetPos` 進行資料指標型更新時更新的資料行。  為了效能考量，以及避免將繫結至比其實際 (DB) 大小「還要小」  之緩衝區的資料行截斷，應該忽略所有不會由應用程式直接修改的資料行。 如需詳細資訊，請參閱 [SQLSetPos 函式參考](https://msdn.microsoft.com/library/ms713507(v=vs.85).aspx) \(部分機器翻譯\)。
 
 #### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults 和 SQLDescribeCol
 
-應用程式可以呼叫 [SQLDescribeCol](https://msdn.microsoft.com/library/ms716289(v=vs.85).aspx) 來傳回準備陳述式中資料行的相關中繼資料。  已啟用 Always Encrypted 時，在呼叫 `SQLDescribeCol`「之前」先呼叫 `SQLMoreResults` 會導致呼叫 [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)，這不會正確地傳回加密資料行的純文字中繼資料。 若要避免此問題，請在呼叫 `SQLMoreResults`「之前」先呼叫 `SQLDescribeCol`。
+應用程式可以呼叫 [SQLDescribeCol](https://msdn.microsoft.com/library/ms716289(v=vs.85).aspx) 來傳回準備陳述式中資料行的相關中繼資料。  已啟用 Always Encrypted 時，在呼叫 `SQLDescribeCol`「之前」  先呼叫 `SQLMoreResults` 會導致呼叫 [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)，這不會正確地傳回加密資料行的純文字中繼資料。 若要避免此問題，請在呼叫 `SQLMoreResults`「之前」  先呼叫 `SQLDescribeCol`。
 
 ## <a name="controlling-the-performance-impact-of-always-encrypted"></a>控制 Always Encrypted 的效能影響
 
@@ -294,7 +294,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 若要控制陳述式的 Always Encrypted 行為，請呼叫 SQLSetStmtAttr 以將 `SQL_SOPT_SS_COLUMN_ENCRYPTION` 陳述式屬性設定為下列其中一個值：
 
-|值|描述|
+|ReplTest1|Description|
 |-|-|
 |`SQL_CE_DISABLED` (0)|針對陳述式停用 Always Encrypted|
 |`SQL_CE_RESULTSETONLY` (1)|僅解密。 將結果集和傳回值解密，但不將參數解密|
@@ -347,7 +347,7 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 
 ODBC Driver for SQL Server 隨附下列內建的金鑰存放區提供者：
 
-| 名稱 | 描述 | 提供者 (中繼資料) 名稱 |可用性|
+| [屬性] | Description | 提供者 (中繼資料) 名稱 |可用性|
 |:---|:---|:---|:---|
 |Azure 金鑰保存庫 |將 CMK 儲存在 Azure Key Vault 中 | `AZURE_KEY_VAULT` |Windows、macOS、Linux|
 |Windows 憑證存放區|將 CMK 儲存在本機 Windows 金鑰存放區中| `MSSQL_CERTIFICATE_STORE`|Windows|
@@ -373,7 +373,7 @@ Azure 金鑰保存庫是存放和管理永遠加密資料行主要金鑰的方�
 
 |認證類型| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
-|使用者名稱/密碼| `KeyVaultPassword`|使用者主體名稱|密碼|
+|使用者名稱/密碼| `KeyVaultPassword`|使用者主體名稱|[密碼]|
 |用戶端識別碼/祕密| `KeyVaultClientSecret`|用戶端識別碼|祕密|
 
 #### <a name="example-connection-strings"></a>範例連接字串
@@ -418,7 +418,7 @@ ODBC Driver for SQL Server 也支援使用 CEKeystoreProvider 介面來自訂協
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
 
-| 引數 | 描述 |
+| 引數 | Description |
 |:---|:---|
 |`ConnectionHandle`|[輸入] 連線控制代碼。 必須是有效的連線控制代碼，但提供者若是透過一個連線控制代碼載入的，則從相同處理序中的任何其他提供者都可存取這些提供者。|
 |`Attribute`|[輸入] 要設定的屬性：`SQL_COPT_SS_CEKEYSTOREPROVIDER` 常數。|
@@ -427,7 +427,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 驅動程式會使用平台定義的動態程式庫載入機制 (在 Linux 和 macOS 上是 `dlopen()`，在 Windows 上是 `LoadLibrary()`) 來嘗試載入 ValuePtr 參數所識別的程式庫，然後將該處定義的任何提供者新增至驅動程式已知的提供者清單。 以下是可能發生的錯誤：
 
-| 錯誤 | 描述 |
+| 錯誤 | Description |
 |:--|:--|
 |`CE203`|無法載入動態程式庫。|
 |`CE203`|在程式庫中找不到 "CEKeyStoreProvider" 匯出的符號。|
@@ -438,7 +438,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 > [!NOTE]
 > 應用程式程式設計人員必須確保在透過任何連線傳送需要任何自訂提供者的任何查詢之前，先載入這些提供者。 無法執行這項操作時，會導致發生錯誤：
 
-| 錯誤 | 描述 |
+| 錯誤 | Description |
 |:--|:--|
 |`CE200`|找不到金鑰存放區提供者 %1。 請確定已載入適當的金鑰存放區提供者程式庫。|
 
@@ -453,7 +453,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
 
-| 引數 | 描述 |
+| 引數 | Description |
 |:---|:---|
 |`ConnectionHandle`|[輸入] 連線控制代碼。 必須是有效的連線控制代碼，但提供者若是透過一個連線控制代碼載入的，則從相同處理序中的任何其他提供者都可存取這些提供者。|
 |`Attribute`|[輸入] 要擷取的屬性：`SQL_COPT_SS_CEKEYSTOREPROVIDER` 常數。|
@@ -480,7 +480,7 @@ char data[];
 } CEKEYSTOREDATA;
 ```
 
-| 引數 | 描述 |
+| 引數 | Description |
 |:---|:---|
 |`name`|[輸入] 進行 Set 時，要作為資料傳送對象的提供者名稱。 進行 Get 時會忽略。 以 Null 結尾的寬字元字串。|
 |`dataSize`|[輸入] 接在結構之後的資料陣列大小。|
@@ -493,7 +493,7 @@ char data[];
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
 
-| 引數 | 描述 |
+| 引數 | Description |
 |:---|:---|
 |`ConnectionHandle`| [輸入] 連線控制代碼。 必須是有效的連線控制代碼，但提供者若是透過一個連線控制代碼載入的，則從相同處理序中的任何其他提供者都可存取這些提供者。|
 |`Attribute`|[輸入] 要設定的屬性：`SQL_COPT_SS_CEKEYSTOREDATA` 常數。|
@@ -507,13 +507,13 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 #### <a name="reading-data-from-a-provider"></a>從提供者讀取資料
 
-使用 `SQL_COPT_SS_CEKEYSTOREDATA` 屬性的 `SQLGetConnectAttr` 呼叫會從「上次寫入的」提供者讀取資料「封包」。 如果沒有任何提供者，就會發生「函數順序錯誤」。 建議金鑰存放區提供者實施者支援使用 0 位元組的「虛擬寫入」作為一種選取讀取作業之提供者而不會造成其他副作用的方式 (如果這麼做有意義的話)。
+使用 `SQL_COPT_SS_CEKEYSTOREDATA` 屬性的 `SQLGetConnectAttr` 呼叫會從「上次寫入的」  提供者讀取資料「封包」。 如果沒有任何提供者，就會發生「函數順序錯誤」。 建議金鑰存放區提供者實施者支援使用 0 位元組的「虛擬寫入」作為一種選取讀取作業之提供者而不會造成其他副作用的方式 (如果這麼做有意義的話)。
 
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
 
-| 引數 | 描述 |
+| 引數 | Description |
 |:---|:---|
 |`ConnectionHandle`|[輸入] 連線控制代碼。 必須是有效的連線控制代碼，但提供者若是透過一個連線控制代碼載入的，則從相同處理序中的任何其他提供者都可存取這些提供者。|
 |`Attribute`|[輸入] 要擷取的屬性：`SQL_COPT_SS_CEKEYSTOREDATA` 常數。|
@@ -555,9 +555,9 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 下表提供在加密資料行上操作時的動作摘要：
 
-|`ColumnEncryption`|BCP 方向|描述|
+|`ColumnEncryption`|BCP 方向|Description|
 |----------------|-------------|-----------|
-|`Disabled`|OUT (至用戶端)|擷取加密文字。 觀察到的資料類型是 **varbinary(max)**。|
+|`Disabled`|OUT (至用戶端)|擷取加密文字。 觀察到的資料類型是 **varbinary(max)** 。|
 |`Enabled`|OUT (至用戶端)|擷取純文字。 驅動程式會將資料行資料解密。|
 |`Disabled`|IN (至伺服器)|插入加密文字。 這是用來以隱含方式移動加密資料，而不要求將其解密。 如果未在使用者上設定 `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` 選項，或未在連線控制代碼上設定 BCPMODIFYENCRYPTED，此作業就會失敗。 如需詳細資訊，請參閱下方內容。|
 |`Enabled`|IN (至伺服器)|插入純文字。 驅動程式會將資料行資料加密。|
@@ -572,7 +572,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ### <a name="connection-string-keywords"></a>連接字串關鍵字
 
-|名稱|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |`ColumnEncryption`|接受的值為 `Enabled`/`Disabled`。<br>`Enabled` -- 啟用連線的 Always Encrypted 功能。<br>`Disabled` -- 停用連線的 Always Encrypted 功能。 <br><br>預設值為 `Disabled`。|  
 |`KeyStoreAuthentication` | 有效的值：`KeyVaultPassword`、`KeyVaultClientSecret` |
@@ -582,7 +582,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ### <a name="connection-attributes"></a>連接屬性
 
-|名稱|類型|描述|  
+|[屬性]|類型|Description|  
 |----------|-------|----------|  
 |`SQL_COPT_SS_COLUMN_ENCRYPTION`|連線前|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- 停用 Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- 啟用 Always Encrypted|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|連線後|[Set] 嘗試載入 CEKeystoreProvider<br>[Get] 傳回 CEKeystoreProvider 名稱|
@@ -592,19 +592,19 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ### <a name="statement-attributes"></a>陳述式屬性
 
-|名稱|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0) -- 針對陳述式停用 Always Encrypted <br>`SQL_CE_RESULTSETONLY` (1) -- 僅解密。 將結果集和傳回值解密，但不將參數解密 <br>`SQL_CE_ENABLED` (3) -- 同時針對參數和結果啟用並使用 Always Encrypted|
 
 ### <a name="descriptor-fields"></a>描述項欄位
 
-|IPD 欄位|大小/類型|預設值|描述|
+|IPD 欄位|大小/類型|預設值|Description|
 |-|-|-|-|  
 |`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 個位元組)|0|若為 0 (預設)：加密此參數的決定會取決於加密中繼資料的可用性。<br><br>若不為 0：如果有加密中繼資料可供此參數使用，就會加密。 否則，要求會因以下錯誤而失敗：[CE300] [Microsoft][ODBC Driver 13 for SQL Server]已為參數指定了強制加密，但伺服器沒有提供任何加密中繼資料。|
 
 ### <a name="bcpcontrol-options"></a>bcp_control 選項
 
-|選項名稱|預設值|描述|
+|選項名稱|預設值|Description|
 |-|-|-|
 |`BCPMODIFYENCRYPTED` (21)|FALSE|若為 TRUE，允許將 varbinary(max) 值插入至加密資料行。 若為 FALSE，除非提供正確的類型和加密中繼資料，否則會防止插入。|
 

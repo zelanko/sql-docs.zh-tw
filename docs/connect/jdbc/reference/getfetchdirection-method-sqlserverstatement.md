@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ceb4ae68-decc-46d3-83f1-0bbd23aaf58c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3944990d8b6f551ba70545e5cacf42179e7b68ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 402aa6188af49690582c34e9883218cccf8e03a2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617086"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768903"
 ---
 # <a name="getfetchdirection-method-sqlserverstatement"></a>getFetchDirection 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

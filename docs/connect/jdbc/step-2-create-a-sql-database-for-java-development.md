@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7c9bfbc8-3ba6-491f-a7eb-380bb3d98b86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dab5eeefccaba484c610c923c1660b0a2c1514a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f0b35194a2000a1b415433027e7b769c5e1bde9f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768433"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798296"
 ---
 # <a name="step-2-create-a-sql-database-for-java-development"></a>步驟 2︰建立 Java 開發的 SQL 資料庫
 [!INCLUDE[CreateDatabase](../../includes/createdatabase.md)]

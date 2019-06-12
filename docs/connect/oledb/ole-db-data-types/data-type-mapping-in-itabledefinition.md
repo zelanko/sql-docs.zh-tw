@@ -18,13 +18,13 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 4101c458b066ec34f010a5733510fb21e25e6840
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5dcd4b33121d5459120572b2b31de413106aeeda
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834186"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775596"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition 中的資料類型對應
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47834186"
   
  使用 DBCOLUMNDESC 結構 *wType* 成員來指定具有 OLE DB 資料類型的新資料行資料類型時，OLE DB Driver for SQL Server 會依照下列方式對應 OLE DB 資料類型。  
   
-|OLE DB 資料類型|[SQL Server]<br /><br /> 資料類型|其他資訊|  
+|OLE DB 資料類型|SQL Server<br /><br /> 資料類型|其他資訊|  
 |----------------------|------------------------------|----------------------------|  
 |DBTYPE_BOOL|**bit**||  
 |DBTYPE_BYTES|**binary**、**varbinary**、**image** 或 **varbinary(max)**|OLE DB Driver for SQL Server 會檢查*ulColumnSize* DBCOLUMNDESC 結構的成員。 根據值和新版[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體，OLE DB Driver for SQL Server 將對應的型別**映像**。<br /><br /> 如果 *ulColumnSize* 的值小於 **binary** 資料類型資料行的最大長度，OLE DB Driver for SQL Server 就會檢查 DBCOLUMNDESC *rgPropertySets* 成員。 如果 DBPROP_COL_FIXEDLENGTH 是 VARIANT_TRUE，OLE DB Driver for SQL Server 會將對應的型別**二進位**。 如果屬性的值是 VARIANT_FALSE，OLE DB Driver for SQL Server 會將對應的型別**varbinary**。 不論是哪一種情況，DBCOLUMNDESC *ulColumnSize* 成員都會決定所建立之 SQL Server 資料行的寬度。|  

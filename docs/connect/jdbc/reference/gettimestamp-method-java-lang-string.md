@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 4d5174db-365c-4476-9472-7871578ef34c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b2bc525c760bfdfafc019cf54e1a3c5da3106b61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 239f8618d1324d3b9ebd11546d882df6e10c87eb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835366"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767286"
 ---
 # <a name="gettimestamp-method-javalangstring"></a>getTimestamp 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

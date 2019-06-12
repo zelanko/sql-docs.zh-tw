@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a4b2cdefeecc56c331224cd7453e861defafb8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d4e49d0ee7ccc62ab9e253436b5763ac4bdd1763
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687962"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761632"
 ---
 # <a name="working-with-a-connection"></a>使用連接
 
@@ -40,7 +40,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 此技術將使用驅動程式清單中第一個可用的驅動程式 (可與指定之 URL 順利進行連接)，以建立資料庫連接。
 
 > [!NOTE]  
-> 使用 sqljdbc4.jar 類別庫時，應用程式不需要使用 Class.forName 方法來明確註冊或載入此驅動程式。 呼叫 DriverManager 類別的 getConnection 方法時，就有一個適當的驅動程式所在的已註冊的 JDBC 驅動程式集中。 如需詳細資訊，請參閱＜使用 JDBC Driver＞。
+> 使用 sqljdbc4.jar 類別庫時，應用程式不需要使用 Class.forName 方法來明確註冊或載入此驅動程式。 呼叫 DriverManager 類別的 getConnection 方法時，系統會從已註冊的 JDBC 驅動程式集合中找出適當的驅動程式。 如需詳細資訊，請參閱＜使用 JDBC Driver＞。
 
 ## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>使用 SQLServerDriver 類別建立連接
 

@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 80ef78038cad742dbe2105b6999d021ec41e8a3a
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+manager: jroth
+ms.openlocfilehash: 3ceea73eba8f1c01590218c106f3b2b10237408e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342887"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770573"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>步驟 3︰使用 ADO.NET 連線到 SQL 的概念證明
 
 - 上一篇文章：&nbsp;&nbsp;&nbsp;[步驟 2：針對 ADO.NET 開發建立 SQL 資料庫](step-2-create-a-sql-database-for-ado-net-development.md)  
-- 下一篇文章：&nbsp;&nbsp;&nbsp;[步驟 4︰使用 ADO.NET 彈性地連線到 SQL](step-4-connect-resiliently-to-sql-with-ado-net.md)  
+- 下一篇文章：&nbsp;&nbsp;&nbsp;[步驟 4︰使用 ADO.NET 彈性地連接到 SQL](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
 這個 C# 程式碼範例應該考慮只概念證明。 範例程式碼為了清楚起見，已簡化，並不一定代表 Microsoft 建議的最佳作法。  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 638e8148-8ca0-4e1f-9ec2-04a11bc9809b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 298e169fe2b67b16b55d607f504446c48893fc1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b0572ed756bd8b347c01e05168873ac543a0ea7e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616936"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783556"
 ---
 # <a name="absolute-method-sqlserverresultset"></a>absolute 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public boolean absolute(int row)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個絕對的方法是由 java.sql.ResultSet 介面中的絕對方法所指定。  
+ 這個 getDate 方法是由 java.sql.ResultSet 介面中的 getDate 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

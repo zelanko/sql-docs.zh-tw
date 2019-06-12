@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a1fc3f50-3635-4fc5-b570-94d2c5a1873c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5eec79d83a1e9fbc2888fb5a187b41ddeda9b3d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 81ad2209ae8d155274df62ac9dd1c88c761359f8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804886"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763504"
 ---
 # <a name="getcolumncount-method-sqlserverresultsetmetadata"></a>getColumnCount 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

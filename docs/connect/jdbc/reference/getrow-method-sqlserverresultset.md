@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a266e3bc-05c2-44e2-9346-125ae6780216
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 784ae37816977e08bb52290249d4ee47526cc527
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 034378c7e5f8624fa945bcf696ee521606963063
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782766"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762582"
 ---
 # <a name="getrow-method-sqlserverresultset"></a>getRow 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public int getRow()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getRow 方法是由 java.sql.ResultSet 介面中的 getRow 方法指定。  
+ 這個 getInt 方法是由 java.sql.ResultSet 介面中的 getInt 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

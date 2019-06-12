@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c239a16728538acece726c1d0b4722d9c2977765
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8c71218c709921cd9180bff2b9a6b5997ae7450c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734696"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771199"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>getProcedureColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
   
  包含目錄名稱的 **String**。 提供 null 給這個參數，將指出不需要使用目錄名稱。  
   
- *s*  
+ *sSchema*  
   
  包含結構描述名稱模式的 **String**。 提供 null 給這個參數，將指出不需要使用結構描述名稱。  
   
@@ -80,7 +80,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |SCALE|**short**|小數點右側的位數。|  
 |RADIX|**short**|數值類型的基底。|  
 |NULLABLE|**short**|指出資料行是否能包含 null 值。 它可能是下列其中一個值：<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
-|REMARKS|**String**|程序資料行的描述。<br /><br /> <br /><br /> **注意：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
+|REMARKS|**String**|程序資料行的描述。<br /><br /> <br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
 |COLUMN_DEF|**String**|資料行的預設值。|  
 |SQL_DATA_TYPE|**smallint**|除了 **datetime** 和 **ISO interval** 資料類型，這個資料行與 **DATA_TYPE** 資料行相同。|  
 |SQL_DATETIME_SUB|**smallint**|**datetime** ISO **interval** 子代碼 (如果 **SQL_DATA_TYPE** 的值是 **SQL_DATETIME** 或 **SQL_INTERVAL**)。 資料類型以外**datetime**和 ISO**間隔**，此資料行是 NULL。|  

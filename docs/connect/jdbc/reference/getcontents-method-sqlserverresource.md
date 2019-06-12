@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7f25b8e0-a9fb-496f-aa05-84c5fdc9b49f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 953c12847f9b5552c3a66fa1015f78cd3914fd6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: dc0c113f0f72b818ec5155cf4a88b1ae2b574336
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780117"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763056"
 ---
 # <a name="getcontents-method-sqlserverresource"></a>getContents 方法 (SQLServerResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

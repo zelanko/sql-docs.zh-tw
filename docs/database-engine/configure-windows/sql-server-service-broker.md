@@ -22,22 +22,69 @@ helpviewer_keywords:
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+manager: jroth
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 70487916496caa4cb2fba5a472262d22c7c123bd
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: ebad80ec47c9d66e4079c76c1ca06e805ca259ec
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154653"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775406"
 ---
-# <a name="sql-server-service-broker"></a>SQL Server Service Broker
+# <a name="service-broker"></a>Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] 提供在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 這讓開發人員更容易建立使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 元件在不同資料庫間進行通訊的複雜應用程式。 開發人員可以使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 輕鬆地建立可靠的分散式應用程式。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] 提供在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)中進行傳訊和佇列的原生支援。 開發人員能夠輕易地建立使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 元件的複雜應用程式，以便在不同資料庫間進行通訊，並建置可靠的分散式應用程式。  
   
- 使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 的應用程式開發人員不需要撰寫複雜的通訊和傳訊間隔程式，即可將資料工作負載分散在多個資料庫。 這可減少開發和測試工作，因為 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會處理交談內容中的通訊路徑。 此外，還可提升效能。 例如，支援網站的前端資料庫可記錄資訊，並將具有大量處理序的工作傳送到後端資料庫的佇列中。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 可確保所有工作都在交易內容中管理，以確保可靠性和技術一致性。  
+## <a name="when-to-use-service-broker"></a>使用 Service Broker 的時機
+
+ 使用 Service Broker 元件來實作資料庫內原生的非同步訊息處理功能。 使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 的應用程式開發人員不需要撰寫複雜的通訊和傳訊間隔程式，即可將資料工作負載分散在多個資料庫。 Service Broker 可減少開發和測試工作，因為 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會處理對話內容中的通訊路徑。 此外，還可提升效能。 例如，支援網站的前端資料庫可記錄資訊，並將具有大量處理序的工作傳送到後端資料庫的佇列中。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 可確保所有工作都在交易內容中管理，以確保可靠性和技術一致性。  
   
+## <a name="overview"></a>概觀
+
+  Service Broker 是一種訊息傳遞架構，可讓您建立資料庫內原生的服務導向應用程式。 不同於傳統查詢處理功能 (其會在查詢生命週期過程中，從資料表持續讀取資料並加以處理)，在服務導向的應用程式中，您的資料庫服務會交換訊息。 每個服務都有一個佇列，訊息在處理之前均放置於其中。
+  
+![Service Broker](media/service-broker.png)
+  
+  佇列中的訊息可以使用 Transact-SQL `RECEIVE` 命令，或透過每當訊息抵達佇列時將呼叫的啟用程序來擷取。
+  
+### <a name="creating-services"></a>建立服務
+ 
+  資料庫服務會使用 [CREATE SERVICE](../../t-sql/statements/create-service-transact-sql.md) Transact SQL 陳述式來建立。 服務可以使用 [CREATE QUEUE](../../t-sql/statements/create-queue-transact-sql.md) 陳述式來與訊息佇列建立產生關聯：
+  
+```sql
+CREATE QUEUE dbo.ExpenseQueue;
+GO
+CREATE SERVICE ExpensesService
+    ON QUEUE dbo.ExpenseQueue; 
+```
+
+### <a name="sending-messages"></a>傳送訊息
+  
+  訊息會使用 [SEND](../../t-sql/statements/send-transact-sql.md) Transact-SQL 陳述式，在服務之間的對話上進行傳送。 對話是使用 `BEGIN DIALOG` Transact-SQL 陳述式，在服務之間建立的通訊通道。 
+  
+```sql
+DECLARE @dialog_handle UNIQUEIDENTIFIER;
+
+BEGIN DIALOG @dialog_handle  
+FROM SERVICE ExpensesClient  
+TO SERVICE 'ExpensesService';  
+  
+SEND ON CONVERSATION @dialog_handle (@Message) ;  
+```
+   訊息將傳送至 `ExpenssesService` 並放置於 `dbo.ExpenseQueue`。 因為沒有任何與此佇列相關聯的啟用程序，所以，訊息將保留於佇列中，直到有人讀取它為止。
+
+### <a name="processing-messages"></a>處理訊息
+
+   放置於佇列的訊息均可使用標準的 `SELECT` 查詢來選取。 `SELECT` 陳述式將不會修改佇列和移除訊息。 若要從佇列中讀取及提取訊息，您可以使用 [RECEIVE](../../t-sql/statements/receive-transact-sql.md) Transact-SQL 陳述式。
+
+```sql
+RECEIVE conversation_handle, message_type_name, message_body  
+FROM ExpenseQueue; 
+```
+
+  一旦您處理來自佇列的所有訊息之後，您應該使用 [END CONVERSATION](../../t-sql/statements/end-conversation-transact-sql.md) Transact-SQL 陳述式來關閉對話。
+
 ## <a name="where-is-the-documentation-for-service-broker"></a>Service Broker 的文件集在哪裡？  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 的參考文件集包含在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 文件集內。 此參考文件集包含下列章節：  
   

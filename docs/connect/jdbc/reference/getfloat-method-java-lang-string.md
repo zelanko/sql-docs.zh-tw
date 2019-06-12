@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b6492341-fdc2-449c-9d03-95a5dadf1bb0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 471fc44de47f89438cff96ac6d3189f6224664eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f34ed33a7951ef15762829a08f6669e6bdc5c7b8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711866"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761639"
 ---
 # <a name="getfloat-method-javalangstring"></a>getFloat 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

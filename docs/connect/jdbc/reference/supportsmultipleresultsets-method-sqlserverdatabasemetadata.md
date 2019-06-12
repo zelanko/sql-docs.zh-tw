@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: cb4d0b91-db1d-4a6f-a87c-8ea125215afc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a17e40bc921dc730ae997d83d97e81707099b0f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c6abf07e5ff18fba6fd68e8c109388f82bc5eae4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732366"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764141"
 ---
 # <a name="supportsmultipleresultsets-method-sqlserverdatabasemetadata"></a>supportsMultipleResultSets 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

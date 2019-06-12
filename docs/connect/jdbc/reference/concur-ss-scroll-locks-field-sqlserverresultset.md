@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 0fd5d34a-c323-4e9c-a1ef-6288c4a0b4ca
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 91cdf0029a75f756e92764e83616dfafba6745f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9660647681d02e5cd5230930a8cec9f3a9c176be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775566"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777179"
 ---
 # <a name="concurssscrolllocks-field-sqlserverresultset"></a>CONCUR_SS_SCROLL_LOCKS 欄位 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

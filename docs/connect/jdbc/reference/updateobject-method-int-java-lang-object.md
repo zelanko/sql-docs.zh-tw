@@ -1,5 +1,5 @@
 ---
-title: updateObject 方法 （int，java.lang.Object） |Microsoft Docs
+title: setObject 方法 (int, java.lang.Object) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 4993dfe1-2232-4b3c-b931-dfdb35dd225a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e02962f257116a32cfb14112b2f51c5c643cd252
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 99a6b4c7ba565b9a77400f3ccb4e887367030a7a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784182"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778204"
 ---
 # <a name="updateobject-method-int-javalangobject"></a>updateObject 方法 (int, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

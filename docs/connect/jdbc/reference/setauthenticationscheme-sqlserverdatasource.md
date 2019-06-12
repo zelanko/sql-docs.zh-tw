@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b942f78e-7ce1-44ef-923d-a7c3d7c76b83
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d513ac4f8ca0e2cbdda575c9e110dcae3b1d45c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0bd0977488c5d70c2288135ece965dea081d2a38
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736166"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764939"
 ---
 # <a name="setauthenticationscheme-sqlserverdatasource"></a>setAuthenticationScheme (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ public void setAuthenticationScheme(String authenticationScheme);
 #### <a name="parameters"></a>參數  
  *authenticationScheme*  
   
- 值為 **"JavaKerberos 」** ，預設值 **"NativeAuthentication"**。 如需詳細資訊，請參閱[使用 Kerberos 整合式驗證連接到 SQL Server](../../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。  
+ 值為 **"JavaKerberos 」** ，預設值 **"NativeAuthentication"** 。 如需詳細資訊，請參閱[使用 Kerberos 整合式驗證連接到 SQL Server](../../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

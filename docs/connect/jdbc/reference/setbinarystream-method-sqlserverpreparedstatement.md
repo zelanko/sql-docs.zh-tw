@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2adb2b88-96d6-4645-86d0-0388c8186691
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5e89a14d09ac173acb54f45b74325a0f0e5a01cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 37184416f0bd1a103270b31841719f0bbc5df142
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716266"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764623"
 ---
 # <a name="setbinarystream-method-sqlserverpreparedstatement"></a>setBinaryStream 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

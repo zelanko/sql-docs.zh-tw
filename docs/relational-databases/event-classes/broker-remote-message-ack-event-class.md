@@ -1,7 +1,7 @@
 ---
 title: Broker:Remote Message Ack 事件類別 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -12,17 +12,19 @@ ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 400de29cec4be8fc882860c777d6dcd5fa765243
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7eb9cc127650d2fb6faacabcd30ce0ecb2ae3588
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748786"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265478"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **傳送或接收訊息收條時，會產生** Broker:Remote Message Ack [!INCLUDE[ssSB](../../includes/sssb-md.md)] 事件。  
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **傳送或接收訊息收條時，會產生** Broker:Remote Message Ack [!INCLUDE[ssSB](../../includes/sssb-md.md)] 事件。  
   
 ## <a name="brokerremote-message-ack-event-class-data-columns"></a>Broker:Remote Message Ack 事件類別資料行  
   
@@ -37,7 +39,7 @@ ms.locfileid: "47748786"
 |**EventSequence**|**int**|此事件的序號。|51|否|  
 |**EventSubClass**|**nvarchar**|事件子類別的類型，可為每個事件類別提供詳細的資訊。 此資料行可包含下列值：<br /><br /> **Message With Acknowledgement Sent**：<br />                    [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將收條當做標準循序訊息的一部分傳送。<br /><br /> **Acknowledgement Sent**：<br />                    [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在標準循序訊息的外面傳送收條。<br /><br /> **Message With Acknowledgement Received**：<br />                  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將收條當做標準循序訊息的一部分接收。<br /><br /> **Acknowledgement Received**：<br />                  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在循序訊息的外面接收收條。|21|是|  
 |**GUID**|**uniqueidentifier**|對話的交談識別碼。 此識別碼是以訊息的一部份傳送，並在交談的兩端之間共用。|54|否|  
-|**HonorBrokerPriority**|**Int**|資料庫 HONOR_BROKER_PRIORITY 選項目前的值為：0 = OFF，1 = ON。|32|是|  
+|**HonorBrokerPriority**|**整數**|資料庫 HONOR_BROKER_PRIORITY 選項目前的值為：0 = OFF、1 = ON。|32|是|  
 |**HostName**|**nvarchar**|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |**IntegerData**|**int**|包含收條之訊息的片段編號。|25|否|  
 |**IntegerData2**|**int**|所認可之訊息的片段編號。|55|否|  
@@ -50,7 +52,7 @@ ms.locfileid: "47748786"
 |**ServerName**|**nvarchar**|所追蹤的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。|26|否|  
 |**SPID**|**int**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端相關之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|**StarvationElevation**|**int**|傳送訊息時，使用的優先權高於原本為交談所設定的優先權：0 = false，1 = true。|33|是|  
+|**StarvationElevation**|**int**|傳送訊息時，使用的優先權高於原本為對話所設定的優先權：0 = false、1 = true。|33|是|  
 |**TransactionID**|**bigint**|系統指派的交易識別碼。|4|否|  
   
   

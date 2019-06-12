@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 652ec06981996e9ef17b955c58f27b975c6e3946
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 66c9072f10165b520120b80a9264a828a4e037db
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581068"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499877"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>停用或暫停報表與訂閱處理
   有好幾種方法，您可以用來停用或暫停 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表和訂閱處理。 本主題中的方法涵蓋了停用訂閱、中斷資料來源連接等範圍。 並非所有的方法都適用於兩種 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器模式。下表摘要說明這些方法和支援的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器模式：  
@@ -47,7 +47,7 @@ ms.locfileid: "65581068"
   
  ![eporting Services 訂閱功能區](../../reporting-services/subscriptions/media/ssrs-subscription-ribbon.png "Reporting Services 訂閱功能區")  
   
- 在原生模式的報表管理員中，瀏覽至個別訂閱的 [我的訂閱]  頁面或 [管理]  頁面。 選取一或多個訂閱，然後按一下功能區上的停用按鈕 ![停用 Reporting Services 訂閱](../../reporting-services/subscriptions/media/ssrs-disable-subscription.png "停用 Reporting Services 訂閱")或啟用按鈕 ![啟用 Reporting Services 訂閱](../../reporting-services/subscriptions/media/ssrs-enable-subscription.png "啟用 Reporting Services 訂閱")。 已停用的訂閱會標示警告圖示 ![Reporting Services 訂閱的狀態警告](../../reporting-services/subscriptions/media/ssrs-subscription-warning.png "eporting Services 訂閱的狀態警告")，而狀態會列為 [已停用]。  
+ 在原生模式的報表管理員中，瀏覽至個別訂閱的 [我的訂閱]  頁面或 [管理]  頁面。 選取一或多個訂閱，然後按一下功能區上的停用按鈕 ![停用 Reporting Services 訂閱](../../reporting-services/subscriptions/media/ssrs-disable-subscription.png "停用 Reporting Services 訂閱")或啟用按鈕 ![啟用 Reporting Services 訂閱](../../reporting-services/subscriptions/media/ssrs-enable-subscription.png "啟用 Reporting Services 訂閱")。 已停用的訂閱會標示警告圖示 ![Reporting Services 訂閱的狀態警告](../../reporting-services/subscriptions/media/ssrs-subscription-warning.png "eporting Services 訂閱的狀態警告")，而狀態會列為 [已停用]  。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 記錄中寫入一行資料列，而在啟用訂閱時寫入另一個項目。 例如，在報表伺服器記錄檔中：  
   
@@ -120,23 +120,23 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="bkmk_pause_schedule"></a> 暫停共用排程  
  如果報表或訂閱從共用排程執行，您可以暫停排程來禁止處理。 由排程驅動的所有報表與訂閱處理，會被延遲至排程繼續為止。  
   
--   **SharePoint 模式：** ![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定") 在 [網站設定] 中，選取 [管理共用排程]。 選取排程，然後按一下 [暫停選取的排程] 。  
+-   **SharePoint 模式：** ![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定") 在 [網站設定]  中，選取 [管理共用排程]  。 選取排程，然後按一下 [暫停選取的排程]  。  
   
--   **原生模式：** 在報表管理員中，按一下 [網站設定] 。 選取排程，然後按一下 [暫停] 。  
+-   **原生模式：** 在報表管理員中，按一下 [網站設定]  。 選取排程，然後按一下 [暫停]  。  
   
 ##  <a name="bkmk_disable_shared_datasource"></a> 停用共用資料來源  
  使用共用資料來源的優點之一是您可以停用它，禁止執行報表或資料驅動訂閱。 停用共用資料來源會中斷報表與其外部來源的連接。 停用時，資料來源無法供所有使用它的報表與訂閱使用。  
   
  請注意，即使資料來源無法使用，報表仍然會載入。 報表不包含資料，但具備適當權限的使用者可以存取與報表相關聯的屬性頁面、安全性設定、報表記錄，以及訂閱資訊。  
   
--   **SharePoint 模式︰** 若要停用 SharePoint 模式報表伺服器中的共用資料來源，請瀏覽至包含資料來源的文件庫。 ![共用資料來源圖示](../../reporting-services/report-data/media/hlp-16datasource.png "共用資料來源圖示") 按一下資料來源，然後清除 [啟用此資料來源] 核取方塊。  
+-   **SharePoint 模式︰** 若要停用 SharePoint 模式報表伺服器中的共用資料來源，請瀏覽至包含資料來源的文件庫。 ![共用資料來源圖示](../../reporting-services/report-data/media/hlp-16datasource.png "共用資料來源圖示") 按一下資料來源，然後清除 [啟用此資料來源]  核取方塊。  
   
 -   **原生模式：** 若要停用原生模式報表伺服器中的共用資料來源，請在報表管理員中開啟資料來源，並清除 [啟用此資料來源]  核取方塊。  
   
 ##  <a name="bkmk_modify_role_assignment"></a> 修改角色指派來禁止存取報表 (原生模式)  
  讓報表無法使用的一個方法，是暫時移除可以提供存取報表的角色指派。 無論建立資料來源連接的方式為何，此方法可以用於所有報表。 此方法僅會以報表為目標，不會影響其他報表或項目的作業。  
   
- 若要移除角色指派，請在報表管理員中，開啟報表的 [安全性屬性] 頁面。 如果報表從父系繼承安全性，您可以按一下 [編輯項目安全性] 來建立嚴格的安全性原則，省略提供普遍存取權的角色指派 (例如，您可以移除提供 Everyone 存取權的角色指派，保留提供一小組使用者存取權的角色指派，例如系統管理員)。  
+ 若要移除角色指派，請在報表管理員中，開啟報表的 [安全性屬性] 頁面。 如果報表從父系繼承安全性，您可以按一下 [編輯項目安全性]  來建立嚴格的安全性原則，省略提供普遍存取權的角色指派 (例如，您可以移除提供 Everyone 存取權的角色指派，保留提供一小組使用者存取權的角色指派，例如系統管理員)。  
   
 ##  <a name="bkmk_remove_manage_subscriptions_permission"></a> 移除角色的管理訂閱權限 (原生模式)  
  若要讓使用者無法建立訂閱，請從角色中清除「管理個別訂閱」  工作。 當您移除這個工作後，[訂閱] 頁面就無法使用。 在報表管理員中，即使 [我的訂閱] 頁面原先含有訂閱，此時也會顯示空白 (無法刪除這個頁面)。 移除訂閱相關的工作會讓使用者無法建立與修改訂閱，但是不會刪除現有的訂閱。 現有的訂閱會繼續執行，直到刪除為止。 若要移除權限：  
@@ -156,9 +156,9 @@ ForEach ($subscription in $subscriptions)
   
 -   SharePoint 文件庫 (只能從與 SharePoint 整合模式報表伺服器整合的 SharePoint 網站使用)  
   
- 您必須先設定電子郵件傳遞，然後才能使用它。 如果您沒有設定它，便無法使用它。 如需詳細資訊，請參閱[為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) \(機器翻譯\)。  
+ 您必須先設定電子郵件傳遞，然後才能使用它。 如果您沒有設定它，便無法使用它。 如需詳細資訊，請參閱 <<c0> [ 電子郵件設定-Reporting Services 原生模式 （組態管理員）](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。  
   
- 如果您想要關閉特定延伸模組，可以在 **RSReportServer.config** 檔中移除延伸模組項目。 如需詳細資訊，請參閱 [Reporting Services 組態檔](../../reporting-services/report-server/reporting-services-configuration-files.md) 和 [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)。  
+ 如果您想要關閉特定延伸模組，可以在 **RSReportServer.config** 檔中移除延伸模組項目。 如需詳細資訊，請參閱 < [Reporting Services 組態檔](../../reporting-services/report-server/reporting-services-configuration-files.md)並[電子郵件設定-Reporting Services 原生模式 （組態管理員）](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。  
   
  在您移除傳遞延伸模組之後，就無法再於報表管理員或 SharePoint 網站中使用它。 移除傳遞延伸模組可能會產生非使用中訂閱。 移除延伸模組之前，請務必刪除訂閱，或將它們設定為使用不同的傳遞延伸模組。  
   

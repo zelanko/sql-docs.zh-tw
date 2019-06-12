@@ -10,12 +10,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
-ms.openlocfilehash: ad914ce3b446ce9c660f96caa1c0548b7ed2944d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 8592d3dfc16f0dd9d13a6445f0d8290f9ad507e4
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65576683"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499623"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>報表參數 (報表產生器和報表設計師)
 
@@ -83,7 +83,7 @@ ms.locfileid: "65576683"
   
 5. **@CategoryQuota 參數** @CategoryQuota 參數的資料類型為 **Float**，因此接受數值。  @CategoryQuota 設為允許多個值。  
   
-6. **檢視報表**：輸入參數值之後，您可以按一下 [檢視報表] 以執行報表。 如果所有參數都有預設值，則報表會在第一次檢視時自動執行。  
+6. **檢視報表**：輸入參數值之後，您可以按一下 [檢視報表]  以執行報表。 如果所有參數都有預設值，則報表會在第一次檢視時自動執行。  
   
 ## <a name="bkmk_Create_Parameters"></a> 建立參數
 
@@ -159,7 +159,7 @@ ms.locfileid: "65576683"
 |內部|選取此選項來隱藏報表參數。 已發行報表中的報表參數只能在報表定義中檢視。|  
 |可用的值|如果您已為參數指定可用的值，則有效值會固定顯示為下拉式清單。 例如，如果您為 **DateTime** 參數提供可用的值，則參數窗格中會出現日期的下拉式清單，而不是行事曆控制項。<br /><br /> 為確保報表和子報表之間的值清單一致，您可以在資料來源上設定一個選項，針對與資料來源相關聯的資料集中的所有查詢使用單一交易。<br /><br /> **安全性注意事項**：在任何包含 **Text** 資料類型之參數的報表中，務必使用可用的值清單 (也稱為有效值清單)，並且確認任何執行報表的使用者僅擁有檢視報表中資料所需的權限。 如需詳細資訊，請參閱 [安全性 &#40;報表產生器&#41;](../../reporting-services/report-builder/security-report-builder.md)中建立的行動報表。|  
 |預設值|設定來自查詢或靜態清單的預設值。<br /><br /> 如果每個參數都有預設值，則報表會在第一次檢視時自動執行。|  
-|進階|設定報表定義屬性 **UsedInQuery**，其值指出此參數直接或間接影響報表中的資料。<br /><br /> **自動判斷何時重新整理**<br /> 當您想要讓報表處理器判斷此值的設定時，請選擇此選項。 如果報表處理器偵測到一個資料集查詢，且其中包含一個這個參數的直接或間接參照，或者如果報表中有子報表，則此值為 **True** 。<br /><br /> **永遠重新整理**<br /> 在資料集查詢或參數運算式中直接或間接使用報表參數時，請選擇此選項。 此選項會將 **UsedInQuery** 設定為 True。<br /><br /> **永不重新整理**<br /> 不在資料集查詢或參數運算式中直接或間接使用報表參數時，請選擇此選項。 此選項會將 **UsedInQuery** 設定為 False。<br /><br /> **警告**：請小心使用 [永不重新整理]。 在報表伺服器上， **UsedInQuery** 用於協助控制報表資料與已轉譯之報表的快取選項，以及快照集報表的參數選項。 如果未正確設定 **[永不重新整理]** ，您可能會快取不正確的報表資料或報表，或者使快照集報表的資料不一致。 如需詳細資訊，請參閱[報表定義語言 &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)。|  
+|進階|設定報表定義屬性 **UsedInQuery**，其值指出此參數直接或間接影響報表中的資料。<br /><br /> **自動判斷何時重新整理**<br /> 當您想要讓報表處理器判斷此值的設定時，請選擇此選項。 如果報表處理器偵測到一個資料集查詢，且其中包含一個這個參數的直接或間接參照，或者如果報表中有子報表，則此值為 **True** 。<br /><br /> **永遠重新整理**<br /> 在資料集查詢或參數運算式中直接或間接使用報表參數時，請選擇此選項。 此選項會將 **UsedInQuery** 設定為 True。<br /><br /> **永不重新整理**<br /> 不在資料集查詢或參數運算式中直接或間接使用報表參數時，請選擇此選項。 此選項會將 **UsedInQuery** 設定為 False。<br /><br /> **警告**：請小心使用 [永不重新整理]  。 在報表伺服器上， **UsedInQuery** 用於協助控制報表資料與已轉譯之報表的快取選項，以及快照集報表的參數選項。 如果未正確設定 **[永不重新整理]** ，您可能會快取不正確的報表資料或報表，或者使快照集報表的資料不一致。 如需詳細資訊，請參閱[報表定義語言 &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)。|  
   
 ##  <a name="bkmk_Dataset_Parameters"></a> 資料集查詢  
  若要篩選資料集查詢中的資料，您可以加入限制子句，透過指定結果集中要包含或排除的值限制擷取的資料。  
@@ -168,7 +168,7 @@ ms.locfileid: "65576683"
   
 -   如果是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，不同的資料來源會支援不同的參數語法。 支援的範圍是查詢中依據位置或名稱識別的參數。 如需詳細資訊，請參閱[報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) 中特定外部資料來源類型的主題。 在關聯式查詢設計工具中，您必須為篩選選取參數選項，才能建立參數化查詢。 如需詳細資訊，請參閱[關聯式查詢設計工具使用者介面 &#40;報表產生器&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)。  
   
--   針對依據多維資料來源 (例如 Microsoft SQL Server Analysis Services、SAP NetWeaver BI 或 Hyperion Essbase) 的查詢，您可以指定是否根據您在查詢設計工具中指定的篩選建立參數。 如需詳細資訊，請參閱[查詢設計工具 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) 中對應於資料延伸模組的查詢設計工具主題。  
+-   針對依據多維資料來源 (例如 Microsoft SQL Server Analysis Services、SAP NetWeaver BI 或 Hyperion Essbase) 的查詢，您可以指定是否根據您在查詢設計工具中指定的篩選建立參數。 如需詳細資訊，請參閱[查詢設計工具 &#40;報表產生器&#41;](../report-data/query-design-tools-ssrs.md) 中對應於資料延伸模組的查詢設計工具主題。  
   
 ##  <a name="bkmk_Manage_Parameters"></a> 在發行的報表上管理參數  
  當您設計報表時，報表參數會儲存在報表定義中。 當您發行報表時，報表參數會儲存，並且與報表定義分開管理。  

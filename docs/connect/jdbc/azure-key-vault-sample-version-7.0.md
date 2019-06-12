@@ -9,13 +9,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8fa94368a4242e7a02781a5283d5cbf15f25b2a2
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+manager: jroth
+ms.openlocfilehash: 3dc2ea73b7def7bb1e91f56b094bc34af594700b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58567537"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770360"
 ---
 # <a name="azure-key-vault-sample"></a>Azure 金鑰保存庫範例
 

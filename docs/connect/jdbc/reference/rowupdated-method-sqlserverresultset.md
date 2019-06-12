@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 29303550-294e-4d43-b892-312b42e21271
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40afdf8854e40050e718b9c456eaf0a41f7430b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b827ebb9740c9d88017c5d47626b9a1cef493143
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614919"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765267"
 ---
 # <a name="rowupdated-method-sqlserverresultset"></a>rowUpdated 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
