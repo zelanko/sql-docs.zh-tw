@@ -46,9 +46,9 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @rulename = ] 'rule'` 是 CREATE RULE 陳述式所建立之規則的名稱。 *規則*已**nvarchar(776)**，沒有預設值。  
+`[ @rulename = ] 'rule'` 是 CREATE RULE 陳述式所建立之規則的名稱。 *規則*已**nvarchar(776)** ，沒有預設值。  
   
-`[ @objname = ] 'object_name'` 是的資料表和資料行或別名資料類型的規則是繫結。 規則無法繫結到 **text**、**ntext****image**、**varchar (max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、CLR 使用者定義型別或 **timestamp** 資料行。 規則無法繫結到計算資料行。  
+`[ @objname = ] 'object_name'` 是的資料表和資料行或別名資料類型的規則是繫結。 規則無法繫結到 **text**、 **ntext** **image**、**varchar (max)** 、**nvarchar(max)** 、**varbinary(max)** 、**xml**、CLR 使用者定義型別或 **timestamp** 資料行。 規則無法繫結到計算資料行。  
   
  *object_name*已**nvarchar(776)** 沒有預設值。 如果*object_name*是單部分名稱，它會解析成別名資料類型。 如果它是兩部分或三部分的名稱，就會先將它解析成資料表和資料行；如果這項解析失敗，就會將它解析成別名資料類型。 根據預設，現有的資料行別名資料類型的繼承*規則*除非規則有直接繫結資料行。  
   
