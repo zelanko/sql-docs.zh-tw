@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a778c4a65b9e3f4cbf4ed77cff46e9061d4b6a8a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: fe60197671e40317f56a62ad98ea364a238df174
+ms.sourcegitcommit: c3de32efeee3095fcea0d3faebb8f2ff1b56d229
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583221"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67033399"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>快速入門：處理輸入及輸出在 SQL Server 中使用 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,9 +56,9 @@ SELECT * FROM PythonTestData
 
 讓我們看看預設值的 sp_execute_external_script 的輸入和輸出變數：`InputDataSet`和`OutputDataSet`。
 
-1. 您可以從資料表取得資料，做為 R 指令碼輸入。 執行以下陳述式。 從資料表取得資料、 進行來回在 R 執行階段，以及傳回的資料行名稱的值*NewColName*。
+1. 您可以從資料表取得資料，做為您的 Python 指令碼輸入。 執行以下陳述式。 從資料表取得資料、 進行來回透過 Python 執行階段，以及傳回的資料行名稱的值*NewColName*。
 
-    查詢所傳回的資料會傳遞至 R 執行階段，傳回的資料到 SQL Database 做為資料框架。 WITH RESULT SETS 子句會定義傳回的資料表的結構描述，SQL database。
+    查詢所傳回的資料會傳遞至 Python 執行階段，傳回至 SQL Database 的資料，當做 pandas 資料框架。 WITH RESULT SETS 子句會定義傳回的資料表的結構描述，SQL database。
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -72,7 +72,7 @@ SELECT * FROM PythonTestData
 
     ![從資料表傳回資料的 Python 指令碼輸出](./media/python-output-pythontestdata.png)
 
-2. 讓我們變更輸入或輸出變數的名稱。 上述指令碼使用預設的輸入和輸出變數名稱， _InputDataSet_並_OutputDataSet_。 若要定義輸入的資料與相關聯_InputDatSet_，您使用*@input_data_1*變數。
+2. 讓我們變更輸入或輸出變數的名稱。 上述指令碼使用預設的輸入和輸出變數名稱， _InputDataSet_並_OutputDataSet_。 若要定義輸入的資料與相關聯_InputDataSet_，您使用 *@input_data_1* 變數。
 
     此指令碼，在預存程序的輸出和輸入的變數名稱已變更為*SQL_out*並*SQL_in*:
 
@@ -92,7 +92,7 @@ SELECT * FROM PythonTestData
 
     `WITH RESULT SETS`陳述式在 SQL Server 中定義資料用的結構描述。 您需要提供 SQL 相容的資料類型，您即可從 Python 傳回每個資料行。 您可以使用的結構描述定義來提供新的資料行名稱太，因為您不需要使用 Python data.frame 的資料行名稱。
 
-3. 您也可以使用 Python 指令碼產生值，並保留中的輸入的查詢字串_@input_data_1_空白。
+3. 您也可以使用 Python 指令碼產生值，並保留中的輸入的查詢字串 _@input_data_1_ 空白。
 
     ```sql
     EXECUTE sp_execute_external_script
