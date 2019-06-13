@@ -9367,8 +9367,6 @@
                   href: ../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md
         - name: 參考
           items:
-            - name: SQL Server PowerShell
-              href: ../powershell/sql-server-powershell.md
             - name: SQL Server 管理物件 (SMO)
               href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
             - name: SSMS 環境
