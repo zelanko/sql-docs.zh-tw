@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1572e9fba00672b32a104cf8b8c9f5cfab66d97a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109300"
 ---
 # <a name="design-the-matrix"></a>設計矩陣
@@ -24,7 +24,7 @@ ms.locfileid: "66109300"
   
 ## <a name="options"></a>選項  
  **可用的欄位**  
- 選擇出現在矩陣上方頁面上的欄位，如資料列群組、資料行群組或詳細資料。 若要將欄位從 **[欄位]** 移至 **[頁面]**、 **[資料行]**、 **[資料列]** 或 **[詳細資料]**，請選取該欄位，然後按一下 **[頁面]**、 **[資料行]**、 **[資料列]** 或 **[詳細資料]** 按鈕。 或者，您可以將欄位拖曳至適當的方塊。  
+ 選擇出現在矩陣上方頁面上的欄位，如資料列群組、資料行群組或詳細資料。 若要將欄位從 **[欄位]** 移至 **[頁面]** 、 **[資料行]** 、 **[資料列]** 或 **[詳細資料]** ，請選取該欄位，然後按一下 **[頁面]** 、 **[資料行]** 、 **[資料列]** 或 **[詳細資料]** 按鈕。 或者，您可以將欄位拖曳至適當的方塊。  
   
  **顯示的欄位**  
  顯示已經指派至頁面、群組或詳細資料的欄位。 按一下 **[移除]** ，即可從清單中刪除欄位。  

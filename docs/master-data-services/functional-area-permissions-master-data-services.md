@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 87af739d7e1b2d45d226c32c7a2fd99fa0ae37bd
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485897"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>功能區域權限 (Master Data Services)
@@ -42,12 +42,12 @@ ms.locfileid: "65485897"
   
  當您將權限指派給功能區域時，您會讓使用者或群組看到 UI 的區域。  
   
- 在總管功能區域中，指派給模型物件和階層成員的其他權限會決定使用者可以存取的資料。 在所有其他功能區域中，使用者必須是模型管理員，才能檢視及操作模型。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+ 在總管  功能區域中，指派給模型物件和階層成員的其他權限會決定使用者可以存取的資料。 在所有其他功能區域中，使用者必須是模型管理員，才能檢視及操作模型。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 > [!IMPORTANT]  
 >  具有進階使用者權限的使用者實際上具有所有模型的系統管理員權限，而且具有所有其他功能權限。  
   
- 使用者或群組至少必須擁有 [模型] 索引標籤上的一個功能區域和一個模型的權限，才能存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]。  
+ 使用者或群組至少必須擁有 [模型]  索引標籤上的一個功能區域和一個模型的權限，才能存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]。  
   
 ## <a name="see-also"></a>另請參閱  
  [指派功能區域權限 &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)   

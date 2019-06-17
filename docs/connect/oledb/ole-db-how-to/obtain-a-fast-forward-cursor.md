@@ -12,13 +12,13 @@ helpviewer_keywords:
 - fast forward-only cursors
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 63eea442ea07dfa7562a51b758b0cecec11edfbe
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 30c108b0b4f7d8022e5fccf1738b059a15abd687
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603869"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791394"
 ---
 # <a name="obtain-a-fastforward-cursor"></a>取得 FAST_FORWARD 資料指標
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

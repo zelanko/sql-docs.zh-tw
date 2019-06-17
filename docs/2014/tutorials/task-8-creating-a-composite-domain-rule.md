@@ -11,18 +11,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7e40ec982a9b2c43c3d55ec60179ac9a0b80e8a1
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489634"
 ---
 # <a name="task-8-creating-a-composite-domain-rule"></a>工作 8：建立複合定義域規則
   在這個工作中，您建立的規則**地址驗證**複合定義域。 您會定義跨定義域規則： 如果**城市**是**Los Angeles**，**狀態**必須是**CA**其中**縣 （市)** 並**狀態**是兩個網域。  
   
-1.  在右窗格中，切換至**CD 規則**] 索引標籤。  
+1.  在右窗格中，切換至**CD 規則** 索引標籤。  
   
-2.  按一下 [**加入新的定義域規則**從工具列。  
+2.  按一下 **加入新的定義域規則**從工具列。  
   
 3.  型別**City-State Rule** for**名稱**然後按**ENTER**。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "65489634"
   
      ![複合定義域規則](../../2014/tutorials/media/et-creatingacompositedomainrule.jpg "複合定義域規則")  
   
-6.  按一下 [**關閉**頁面，即可切換到 DQS 用戶端的主頁面底部的按鈕。 您將會在下一課發行知識庫。 請注意，知識庫處於鎖定狀態 (鎖定圖示)。  
+6.  按一下 **關閉**頁面，即可切換到 DQS 用戶端的主頁面底部的按鈕。 您將會在下一課發行知識庫。 請注意，知識庫處於鎖定狀態 (鎖定圖示)。  
   
 ## <a name="next-step"></a>下一個步驟  
  [工作 9:設定參考資料服務](../../2014/tutorials/task-9-configuring-a-reference-data-service.md)  

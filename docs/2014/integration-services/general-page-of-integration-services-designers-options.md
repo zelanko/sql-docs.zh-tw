@@ -13,22 +13,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f27ec0c9fe8078bb11a48114a3d456793271853d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768284"
 ---
 # <a name="general-page"></a>一般頁面
-  在 [選項] 對話方塊上使用 [Integration Services 設計師] 頁面上的 [一般] 頁面，指定用來載入、顯示及升級封裝的選項。  
+  在 [選項]  對話方塊上使用 [Integration Services 設計師]  頁面上的 [一般]  頁面，指定用來載入、顯示及升級封裝的選項。  
   
- 若要開啟 [一般] 頁面，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [工具] 功能表上按一下 [選項]，然後展開 [商業智慧設計師]，再選取 [Integration Services 設計師]。  
+ 若要開啟 [一般]  頁面，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [工具]  功能表上按一下 [選項]  ，然後展開 [商業智慧設計師]  ，再選取 [Integration Services 設計師]  。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **載入封裝時檢查數位簽章**  
  選取即可讓 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 在載入封裝時檢查數位簽章。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 只會檢查數位簽章是否存在、是否有效，以及是否來自信任的來源。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 將不會檢查此封裝在簽署之後是否已經變更。  
   
- 如果您設定 **BlockedSignatureStates** 登錄值，此登錄值會覆寫 [載入封裝時檢查數位簽章] 選項。 如需詳細資訊，請參閱[透過設定登錄值實作簽署原則](implement-a-signing-policy-by-setting-a-registry-value.md)。  
+ 如果您設定 **BlockedSignatureStates** 登錄值，此登錄值會覆寫 [載入封裝時檢查數位簽章]  選項。 如需詳細資訊，請參閱[透過設定登錄值實作簽署原則](implement-a-signing-policy-by-setting-a-registry-value.md)。  
   
  如需詳細資訊，請參閱 [使用數位簽章來識別封裝的來源](security/identify-the-source-of-packages-with-digital-signatures.md)。  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1a09bbf9-6f8f-4a21-85d2-2182111b5ce7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 31c5f9fa24baf0c7bc451dada8be744888d331bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fbddeef54d5deef75cc7ae87bbb03fd010d2d19c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677922"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796764"
 ---
 # <a name="setref-method-sqlserverpreparedstatement"></a>setRef 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

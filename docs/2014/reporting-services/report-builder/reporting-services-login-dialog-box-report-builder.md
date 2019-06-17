@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 16da6af99af021185c8965dccd087e1c8420e50a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107663"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Reporting Services 登入對話方塊 (報表產生器)
   使用 **[Reporting Services 登入]** 對話方塊，即可提供發行報表至報表伺服器的認證。 如需這些認證的說明，請連絡報表伺服器管理員。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **Server**  
  顯示報表伺服器的名稱。 例如， `http://localhost/reportserver`。 如果報表伺服器使用的是預設通訊埠 80 以外的通訊埠，請加入該通訊埠號碼。 例如， `http://localhost:8080/reportserver` 。  
   

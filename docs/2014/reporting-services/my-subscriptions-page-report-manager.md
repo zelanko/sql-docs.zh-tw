@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75d662f677ee2b6bbab8e445804ca7f142b5c034
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108193"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>我的訂閱頁面 (報表管理員)
@@ -37,9 +37,9 @@ ms.locfileid: "66108193"
     > [!NOTE]  
     >  [我的訂閱] 永遠可以使用，即使您沒有建立訂閱的權限。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **刪除**  
- 選取您要刪除的每一個訂閱旁邊的核取方塊，然後按一下 **[刪除]**。  
+ 選取您要刪除的每一個訂閱旁邊的核取方塊，然後按一下 **[刪除]** 。  
   
  **編輯**  
  按一下即可檢視或編輯訂閱。  

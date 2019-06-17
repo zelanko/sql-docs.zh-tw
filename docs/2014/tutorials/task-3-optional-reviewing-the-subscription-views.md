@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5fa153b16e8fd978cab74838c9e0cee8a17cf72f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489254"
 ---
 # <a name="task-3-optional-reviewing-the-subscription-views"></a>工作 3 (選擇性)：檢閱訂閱檢視
@@ -22,7 +22,7 @@ ms.locfileid: "65489254"
   
 1.  啟動**SQL Server Management Studio**。 按一下 **開始**按鈕，再按一下**所有程式**，按一下  **Microsoft SQL Server 2012**，然後按一下**SQL Server Management Studio**。  
   
-2.  在**連接到伺服器**視窗中，將**伺服器類型**來**Database Engine**，型別**伺服器名稱**(或選取 **(local)**，然後選取適當**驗證**，然後按一下**Connect**。  
+2.  在**連接到伺服器**視窗中，將**伺服器類型**來**Database Engine**，型別**伺服器名稱**(或選取 **(local)** ，然後選取適當**驗證**，然後按一下**Connect**。  
   
 3.  中**物件總管**窗格中，展開**資料庫**，展開**MDS**，然後展開**檢視**。  
   
@@ -31,4 +31,4 @@ ms.locfileid: "65489254"
      ![SQL Server Management Studio-mdm。供應商檢視](../../2014/tutorials/media/et-reviewingthesubscriptionviews.jpg "SQL Server Management Studio-mdm。供應商檢視")  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 4:建立 SSIS 專案使用 SQL Server Data Tools](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)
+ [工作 4：建立 SSIS 專案使用 SQL Server Data Tools](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 75b29477c7ead402f06c9df2505a84636b906978
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63163955"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>指定搜尋條件 (Visual Database Tools)
@@ -37,9 +37,9 @@ ms.locfileid: "63163955"
   
 1.  如果尚未這麼做，請將想要在搜尋條件中使用的資料行或運算式加入至 [準則] 窗格中。  
   
-     如果您正在建立選取查詢，而不想讓搜尋資料行或運算式出現在查詢輸出中，請清除每一個搜尋資料行或運算式的 [輸出] 欄位，將它們當成輸出資料行而加以移除。  
+     如果您正在建立選取查詢，而不想讓搜尋資料行或運算式出現在查詢輸出中，請清除每一個搜尋資料行或運算式的 [輸出]  欄位，將它們當成輸出資料行而加以移除。  
   
-2.  尋找包含想要搜尋之資料行或運算式的資料列，然後在 [篩選條件] 欄位中輸入搜尋條件。  
+2.  尋找包含想要搜尋之資料行或運算式的資料列，然後在 [篩選條件]  欄位中輸入搜尋條件。  
   
     > [!NOTE]  
     >  如果尚未輸入運算子，[查詢和檢視設計師] 會自動插入相等運算子「=」。  

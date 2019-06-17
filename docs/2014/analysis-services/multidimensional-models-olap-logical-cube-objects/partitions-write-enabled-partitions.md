@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 13864dba5cac0274204050a8c78730de29f3321e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62727172"
 ---
 # <a name="write-enabled-partitions"></a>可寫入的資料分割
   Cube 中的資料通常是唯讀的； 但是在某些狀況下，您可能會希望資料分割是可寫入的。 可寫入的資料分割可讓商務使用者藉由變更資料格值及分析變更對 Cube 資料的影響，以瀏覽一些狀況。 當您啟用資料分割的寫入功能時，用戶端應用程式可在資料分割中記錄資料的變更。 這些變更稱為回寫資料，是儲存在個別資料表中，不會覆寫量值群組中任何現有的資料。 不過，它們會併入到查詢結果中，就好像它們是 Cube 資料的一部分。  
   
- 您可以啟用整個 Cube 或是只有 Cube 中某些資料分割的寫入功能； 可寫入維度是不同但互補的功能。 可寫入的資料分割讓使用者得以更新資料分割資料格，而可寫入維度則讓使用者得以更新維度成員， 您也可以搭配使用這兩項功能。 例如，可寫入的 Cube 或可寫入的資料分割不需要包含任何可寫入的維度。 **相關的主題：**[Write-Enabled 維度](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)。  
+ 您可以啟用整個 Cube 或是只有 Cube 中某些資料分割的寫入功能； 可寫入維度是不同但互補的功能。 可寫入的資料分割讓使用者得以更新資料分割資料格，而可寫入維度則讓使用者得以更新維度成員， 您也可以搭配使用這兩項功能。 例如，可寫入的 Cube 或可寫入的資料分割不需要包含任何可寫入的維度。 **相關的主題：** [Write-Enabled 維度](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)。  
   
 > [!NOTE]  
 >  如果您想要啟用 Cube 的寫入功能，而這個 Cube 將 Microsoft Access 資料庫當成資料來源，請勿在 Cube、其資料分割或其維度的資料來源定義中使用 Microsoft OLE DB Provider for ODBC Drivers。 而是使用 Microsoft Jet 4.0 OLE DB Provider，或任何含有 Jet 4.0 OLE 的 Jet Service Pack 版本。 如需詳細資訊，請參閱 Microsoft 知識庫文件[濆爧髍孮 Microsoft Jet 4.0 資料庫引擎的最新 service pack](https://support.microsoft.com/?kbid=239114)。  

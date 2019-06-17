@@ -31,10 +31,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63139014"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>轉換 Access 資料庫物件 (AccessToSQL)
@@ -111,7 +111,7 @@ ms.locfileid: "63139014"
   
     將游標移出已變更的屬性資料格中。 您可以按一下另一個資料列，或按下 Tab 鍵來這樣做。  
   
-3.  按一下 **[套用]**。  
+3.  按一下 **[套用]** 。  
   
 您現在可以在檢視中的程式碼的變更**SQL**  索引標籤。  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e120762a84929ed58d163efb26faa6f28eb50dc3
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+manager: jroth
+ms.openlocfilehash: 2eef48c472ee9b23d941be88ae76cb0349067739
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306126"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789331"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>連接到 Azure SQL Database
 
@@ -81,7 +81,7 @@ shutdown /r /t 1
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>使用加密需要設定 hostNameInCertificate
 
-7.2 版之前[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，當連接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，您應該指定**hostNameInCertificate**如果您指定 **encrypt=true** （如果在連接中的伺服器名稱字串是*shortName*。*domainName*，將**hostNameInCertificate**屬性設\*。*domainName*。)。 這是選擇性屬性 7.2 版驅動程式。
+7\.2 版之前[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，當連接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，您應該指定**hostNameInCertificate**如果您指定**加密 = true** （如果在連接中的伺服器名稱字串是*shortName*。*domainName*，將**hostNameInCertificate**屬性設\*。*domainName*。)。 這是選擇性屬性 7.2 版驅動程式。
 
 例如：
 

@@ -12,22 +12,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4934ed875a427e68938ed09d4353b7fe14f3aee2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181298"
 ---
 # <a name="odbc-appendixes"></a>ODBC 附錄
 在下列附錄中包含的 Microsoft ODBC 介面與相關的技術詳細資料：  
   
--   [附錄 a:ODBC 錯誤碼](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
+-   [附錄 A：ODBC 錯誤碼](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
   
--   [附錄 b:狀態轉換資料表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
+-   [附錄 B：狀態轉換資料表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
   
--   [附錄 c:SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
+-   [附錄 C：SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
   
--   [附錄 d:資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
+-   [附錄 D：資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
   
 -   [附錄 e:純量函式](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)  
   

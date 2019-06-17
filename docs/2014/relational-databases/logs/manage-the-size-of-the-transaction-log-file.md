@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144329"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理交易記錄檔的大小
@@ -36,7 +36,7 @@ ms.locfileid: "63144329"
 > [!NOTE]  
 >  像長時間執行的交易之類的因素，使虛擬記錄檔保持作用中一段很長的時間，可能限制記錄檔壓縮，甚至完全阻止記錄檔壓縮。 如需延遲記錄截斷可能因素的相關資訊，請參閱[交易記錄 &#40;SQL Server&#41;](the-transaction-log-sql-server.md)。  
   
- 壓縮記錄檔時，會移除一個或多個未保留邏輯記錄任何部分的虛擬記錄檔 (即 *「非使用中虛擬記錄檔」*(Inactive virtual log file))。 當交易記錄檔壓縮之後，就會從記錄檔的結尾移除將記錄縮減至大約目標大小所需的非使用中虛擬記錄檔。  
+ 壓縮記錄檔時，會移除一個或多個未保留邏輯記錄任何部分的虛擬記錄檔 (即 *「非使用中虛擬記錄檔」* (Inactive virtual log file))。 當交易記錄檔壓縮之後，就會從記錄檔的結尾移除將記錄縮減至大約目標大小所需的非使用中虛擬記錄檔。  
   
  **若要壓縮記錄檔 （但不壓縮資料庫檔案）**  
   

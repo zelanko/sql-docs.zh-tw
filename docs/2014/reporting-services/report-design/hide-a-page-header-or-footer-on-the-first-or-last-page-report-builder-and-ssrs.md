@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6f3033ea0c95841d15b1b71068c9a566abbfac98
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105709"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>隱藏第一頁或最後一頁的頁首或頁尾 (報表產生器及 SSRS)
@@ -27,11 +27,11 @@ ms.locfileid: "66105709"
   
 1.  在 [設計] 檢視中，開啟報表。  
   
-2.  以滑鼠右鍵按一下頁首，然後按一下 [頁首屬性]。 [報表頁首屬性] 對話方塊隨即開啟。  
+2.  以滑鼠右鍵按一下頁首，然後按一下 [頁首屬性]  。 [報表頁首屬性]  對話方塊隨即開啟。  
   
-3.  確認未選取 [Display header for this report] (顯示這個報表的頁首)。  
+3.  確認未選取 [Display header for this report] (顯示這個報表的頁首)  。  
   
-4.  在 [列印選項] 區段中，清除每個選項的核取方塊可以在報表的第一頁或最後一頁隱藏顯示。  
+4.  在 [列印選項]  區段中，清除每個選項的核取方塊可以在報表的第一頁或最後一頁隱藏顯示。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -39,11 +39,11 @@ ms.locfileid: "66105709"
   
 1.  在 [設計] 檢視中，開啟報表。  
   
-2.  以滑鼠右鍵按一下頁尾，然後按一下 [頁尾屬性]。 [報表頁尾屬性] 對話方塊隨即開啟。  
+2.  以滑鼠右鍵按一下頁尾，然後按一下 [頁尾屬性]  。 [報表頁尾屬性]  對話方塊隨即開啟。  
   
-3.  確認未選取 [Display footer for this report] (顯示這個報表的頁尾)。  
+3.  確認未選取 [Display footer for this report] (顯示這個報表的頁尾)  。  
   
-4.  在 [列印選項] 區段中，清除每個選項的核取方塊可以在報表的第一頁或最後一頁隱藏顯示。  
+4.  在 [列印選項]  區段中，清除每個選項的核取方塊可以在報表的第一頁或最後一頁隱藏顯示。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

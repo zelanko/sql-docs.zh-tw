@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 57b6bd92ded85345dc1b716df2fa395df17fff02
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62690513"
 ---
 # <a name="sysdmpdwerrors-transact-sql"></a>sys.dm_pdw_errors (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "62690513"
 |-----------------|---------------|-----------------|-----------|  
 |error_id|**nvarchar(36)**|此檢視的索引鍵。<br /><br /> 與錯誤相關聯的唯一數值識別碼。|在系統中的所有查詢錯誤是唯一的。|  
 |來源|**nvarchar(64)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|型別|**nvarchar(4000)**|發生的錯誤類型。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|type|**nvarchar(4000)**|發生的錯誤類型。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |create_time|**datetime**|發生錯誤的時間。|小於或等於目前的時間。|  
 |pwd_node_id|**int**|相關，如果有任何特定節點的識別碼。 如需有關節點識別碼的詳細資訊，請參閱[sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)。||  
 |session_id|**nvarchar(32)**|相關，如果有任何工作階段的識別碼。 如需其他有關的工作階段識別碼的詳細資訊，請參閱[sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。||  

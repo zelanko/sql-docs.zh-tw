@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5394724845e66e1d51f0c48379f10df124a63e4d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65486049"
 ---
 # <a name="reorder-columns-mds-add-in-for-excel"></a>重新排序資料行 (適用於 Excel 的 MDS 增益集)
@@ -35,15 +35,15 @@ ms.locfileid: "65486049"
   
 1.  開啟 Excel，然後在 **[主要資料]** 索引標籤上，連接到 MDS 儲存機制。 如需詳細資訊，請參閱[連接到 MDS 儲存機制 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)。  
   
-2.  在 [主資料總管] 窗格中，選取模型和版本。 系統就會填入實體的清單。  
+2.  在 [主資料總管]  窗格中，選取模型和版本。 系統就會填入實體的清單。  
   
-    -   如果沒有顯示 **[主資料總管]** 窗格，請按一下 **[連接和載入]** 群組中的 **[顯示總管]**。  
+    -   如果沒有顯示 **[主資料總管]** 窗格，請按一下 **[連接和載入]** 群組中的 **[顯示總管]** 。  
   
     -   如果 **[主資料總管]** 窗格已停用，這是因為現有的工作表已經包含 MDS 管理的資料。 若要啟用此窗格，請開啟新的工作表。  
   
 3.  在 **[主資料總管]** 窗格中，按一下實體。  
   
-4.  按一下 **[連接和載入]** 群組中的 **[篩選]**。  
+4.  按一下 **[連接和載入]** 群組中的 **[篩選]** 。  
   
 5.  在 **[篩選]** 對話方塊中，於 **[資料行]** 區段的屬性清單中，按一下您想要移動的屬性。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65486049"
   
 7.  針對每個屬性重複步驟 7，直到由上至下順序代表您想要在工作表中呈現的由左至右順序為止。  
   
-8.  按一下 **[載入資料]**。 工作表就會填入 MDS 管理的資料，而且資料行會依照您所指定的順序顯示。  
+8.  按一下 **[載入資料]** 。 工作表就會填入 MDS 管理的資料，而且資料行會依照您所指定的順序顯示。  
   
 ## <a name="see-also"></a>另請參閱  
  [概觀：將資料匯出至 Excel &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  

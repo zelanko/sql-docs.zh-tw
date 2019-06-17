@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7ac049dd49c447925a0205c50691465035abb5f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150465"
 ---
 # <a name="change-the-name-of-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>變更已註冊的伺服器或已註冊的伺服器群組名稱 (SQL Server Management Studio)
@@ -30,15 +30,15 @@ ms.locfileid: "63150465"
   
 #### <a name="to-change-the-name-of-a-server"></a>變更伺服器的名稱  
   
-1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器或伺服器群組，指向 [編輯]，然後按一下 [伺服器註冊屬性]。  
+1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器或伺服器群組，指向 [編輯]  ，然後按一下 [伺服器註冊屬性]  。  
   
-2.  在 **[已註冊的伺服器名稱]** 方塊中，輸入伺服器註冊的新名稱，再按一下 **[儲存]**。  
+2.  在 **[已註冊的伺服器名稱]** 方塊中，輸入伺服器註冊的新名稱，再按一下 **[儲存]** 。  
   
 #### <a name="to-change-the-name-of-a-server-group"></a>若要變更伺服器群組名稱  
   
-1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器或伺服器群組，指向 [編輯]，然後按一下 [伺服器群組屬性]。  
+1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器或伺服器群組，指向 [編輯]  ，然後按一下 [伺服器群組屬性]  。  
   
-2.  在 **[伺服器群組名稱]** 方塊中，輸入伺服器群組的新名稱，再按一下 **[儲存]**。  
+2.  在 **[伺服器群組名稱]** 方塊中，輸入伺服器群組的新名稱，再按一下 **[儲存]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [變更伺服器的註冊 &#40;SQL Server Management Studio&#41;](change-a-server-s-registration-sql-server-management-studio.md)

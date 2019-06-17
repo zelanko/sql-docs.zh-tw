@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63312493"
 ---
 # <a name="positioned-update-and-delete-statements"></a>定點更新和刪除陳述式
@@ -34,7 +34,7 @@ ms.locfileid: "63312493"
   
  [**何處** *搜尋條件*]  
   
- **FOR UPDATE OF** [*資料行名稱*[**，** *資料行名稱*]...]  
+ **FOR UPDATE OF** [*資料行名稱*[ **，** *資料行名稱*]...]  
   
  接著，應用程式會將游標置於要更新或刪除的資料列。 它可以執行這項操作藉由呼叫**SQLFetchScroll**擷取資料列集包含所需的資料列，然後呼叫**SQLSetPos**將資料列集資料指標置於該資料列上。 接著，應用程式不同的陳述式，比使用結果集的陳述式上，執行定位的 update 或 delete 陳述式。 這些陳述式的語法是：  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63312493"
   
  **設定** *資料行識別碼*  **=** {*運算式* &#124; **NULL**}  
   
- [**，** *資料行識別碼*  **=** {*運算式* &#124; **NULL**}]...  
+ [ **，** *資料行識別碼*  **=** {*運算式* &#124; **NULL**}]...  
   
  **WHERE CURRENT OF** *資料指標名稱*  
   

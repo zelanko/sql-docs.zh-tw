@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721156"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>第 1 課：建立 Windows 帳戶的複寫
@@ -35,11 +35,11 @@ ms.locfileid: "62721156"
   
 ### <a name="to-create-local-windows-accounts-for-replication-agents-at-the-publisher"></a>在發行者端建立複寫代理程式的本機 Windows 帳戶  
   
-1.  在發行者端，從 [控制台] 中的 [系統管理工具] 開啟 [電腦管理]。  
+1.  在發行者端，從 [控制台] 中的 [系統管理工具]  開啟 [電腦管理]  。  
   
-2.  在 [系統工具] 中，展開 [本機使用者和群組]。  
+2.  在 [系統工具]  中，展開 [本機使用者和群組]  。  
   
-3.  以滑鼠右鍵按一下 [使用者]，然後按一下 [新增使用者]。  
+3.  以滑鼠右鍵按一下 [使用者]  ，然後按一下 [新增使用者]  。  
   
 4.  請輸入`repl_snapshot`中**使用者名稱**方塊中，提供密碼和其他相關資訊，，然後按一下**建立**以建立 repl_snapshot 帳戶。  
   
@@ -49,11 +49,11 @@ ms.locfileid: "62721156"
   
 ### <a name="to-create-local-windows-accounts-for-replication-agents-at-the-subscriber"></a>在訂閱者端建立複寫代理程式的本機 Windows 帳戶  
   
-1.  在訂閱者端，從 [控制台] 中的 [系統管理工具] 開啟 [電腦管理]。  
+1.  在訂閱者端，從 [控制台] 中的 [系統管理工具]  開啟 [電腦管理]  。  
   
-2.  在 [系統工具] 中，展開 [本機使用者和群組]。  
+2.  在 [系統工具]  中，展開 [本機使用者和群組]  。  
   
-3.  以滑鼠右鍵按一下 [使用者]，然後按一下 [新增使用者]。  
+3.  以滑鼠右鍵按一下 [使用者]  ，然後按一下 [新增使用者]  。  
   
 4.  請輸入`repl_distribution`中**使用者名稱**方塊中，提供密碼和其他相關資訊，，然後按一下**建立**以建立 repl_distribution 帳戶。  
   

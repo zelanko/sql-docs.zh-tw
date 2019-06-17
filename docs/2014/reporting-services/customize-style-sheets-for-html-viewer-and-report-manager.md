@@ -1,24 +1,20 @@
 ---
 title: 自訂 HTML 檢視器和報表管理員的樣式表 |Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
-helpviewer_keywords:
-- style sheets [Reporting Services]
-ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d9c4a57413db37c8f93b1a311542398417bfeff0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: 7c7745d69e234f81c2a331d214789e93e9fd4014
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63264858"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64568261"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>自訂 HTML 檢視器及報表管理員的樣式表
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供預設的階層式樣式表 (.css) 檔案會定義樣式**報表**工具列在 HTML 檢視器和報表管理員。 如果您是 Web 開發者，或您有建立階層式樣式表的專業知識，您可以修改預設樣式 (自行負責風險)，來變更工具列或報表管理員的色彩、字型和配置。 此版本未收錄預設樣式表或樣式表的修改指示。  
@@ -37,9 +33,6 @@ ms.locfileid: "63264858"
 |-----------------|-----------------|  
 |Htmlviewer.css|提供範例樣式表做為範本，讓您用來建立 HTML 檢視器中 **[報表]** 工具列的自訂樣式。<br /><br /> HTML 檢視器所使用的預設樣式會編譯至報表伺服器中。 Htmlviewer.css 檔提供檢視器使用的樣式範例。|  
 |ReportingServices.css|定義報表管理員的樣式。|  
-  
-> [!NOTE]  
->  下列樣式表用於報表管理員線上文件，並永遠不應修改：Sql.css 和 Mailto.css。 其他樣式表會為 SharePoint Web 組件中開啟的報表和報表管理員定義樣式。 這些樣式表包括 Rswebparts.css、Sp_full.css 和 Sp_small.css。 不建議您修改 SharePoint 樣式表。 如需如何使用 Web 組件的詳細資訊，請參閱[檢視和瀏覽原生模式報表使用 SharePoint Web 組件&#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)。  
   
 ## <a name="configuring-reporting-services-to-use-a-custom-style-sheet"></a>設定 Reporting Services 來使用自訂樣式表  
  樣式表必須是有效的階層式樣式表 (.css) 檔案，且必須位於 [Styles] 資料夾中。 根據預設，[Styles] 資料夾是位於\<*磁碟機*>: \Program Files\Microsoft SQL Server\MSSQL。*n*\Reporting Services\ReportServer\Styles。  

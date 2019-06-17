@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6dd54475ee63b2f6ef5e1b56b94c11aafd5996ff
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484687"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>工作 12：探索知識 (知識探索)
@@ -58,7 +58,7 @@ ms.locfileid: "65484687"
   
      ![定義域值，並更正為 值](../../2014/tutorials/media/et-discoveringknowledge-06.jpg "網域值，並更正為 值")  
   
-13. 按一下 **[完成]**。  
+13. 按一下 **[完成]** 。  
   
 14. 在 [ **SQL Server Data Quality Services** ] 對話方塊中，按一下**發佈**。  
   
