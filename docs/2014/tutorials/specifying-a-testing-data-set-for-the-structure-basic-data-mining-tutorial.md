@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 21eaa86fb1ff594e8b9d2b779b787276ee13ab4b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62720104"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>為結構指定測試資料集 (基本資料採礦教學課程)
@@ -29,7 +29,7 @@ ms.locfileid: "62720104"
   
 2.  針對**的情況下，在測試資料集內的最大數目**，輸入`1000`。  
   
-3.  按一下 [下一步] 。  
+3.  按一下 [下一步]  。  
   
 ## <a name="specifying-drillthrough"></a>指定鑽研  
  可以在模型和結構上啟用鑽研。 此對話方塊中的核取方塊允許在具名模型上鑽研。 此模型經過處理之後，您將能夠從定型資料 中擷取用來建立模型的詳細資訊。  
@@ -46,7 +46,7 @@ ms.locfileid: "62720104"
   
 4.  檢閱**預覽**窗格。 請注意，只有選取做為這些資料行**金鑰**，**輸入**或是**可預測**列示如下。 您所選的其他資料行 (例如 AddressLine1) 不會用於建立模型，但是可在基礎結構中使用，而且可在處理及部署模型之後加以查詢。  
   
-5.  按一下 **[完成]**。  
+5.  按一下 **[完成]** 。  
   
 ## <a name="previous-task-in-lesson"></a>本課程的前一項工作  
  [指定資料類型和內容類型&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 47a46bfd482463de2377470cd11186bd3bfbd5db
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077055"
 ---
 # <a name="define-attribute-relationships"></a>定義屬性關聯性
@@ -37,7 +37,7 @@ ms.locfileid: "66077055"
     >  如需有關之重要性與含意的定義和設定屬性關聯性的詳細資訊，請參閱區段、 < 強化查詢效能 」 中[SQL Server 2005 Analysis Services 效能指南](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)。  
   
 ## <a name="attribute-relationship-considerations"></a>屬性關聯性考量  
- 當基礎資料支援屬性關聯性時，您也應該定義屬性之間的唯一屬性關聯性。 若要定義唯一屬性關聯性，使用 [維度設計師] 的 [屬性關聯性] 索引標籤。  
+ 當基礎資料支援屬性關聯性時，您也應該定義屬性之間的唯一屬性關聯性。 若要定義唯一屬性關聯性，使用 [維度設計師] 的 [屬性關聯性]  索引標籤。  
   
  具有輸出關聯性的屬性必須具備相對於其相關聯屬性的唯一索引鍵。 換句話說，來源屬性中的成員在相關聯的屬性中，必須識別一個 (而且只能識別一個) 成員。 例如，請考量 City -> State 的關聯性。 在此關聯性中，來源屬性為 [City]，而相關聯的屬性為 [State]。 來源屬性是在 「 多 」 端和相關聯的部分是多對一關聯性的 「 一 」 端。 來源屬性的索引鍵將是 City + State。 如需詳細資訊，請參閱 [建立、修改或刪除屬性關聯性](attribute-relationships-create-modify-or-delete-relationship.md)。  
   

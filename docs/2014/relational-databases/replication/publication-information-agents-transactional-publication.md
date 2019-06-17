@@ -13,23 +13,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a4542370eff5ad631701f0bf988929ad56e8799
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63021803"
 ---
 # <a name="publication-information-agents-transactional-publication"></a>發行集資訊，代理程式 (交易式發行集)
   **[代理程式]** 索引標籤會顯示所選取發行集之代理程式的摘要資訊。 所有的交易式發行集，都會顯示快照集代理程式與記錄讀取器代理程式的資訊。 已啟用佇列更新訂閱的交易式發行集，才會顯示佇列讀取器代理程式的資訊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  如需代理程式的詳細資訊及其相關的工作，請以滑鼠右鍵按一下該代理程式的資料列，然後按一下捷徑功能表上的選項。 若要變更方格顯示資料的方式，請以滑鼠右鍵按一下方格，然後按一下下列其中一個選項：  
   
--   **排序**：在 [排序資料行] 對話方塊中排序一個或多個資料行。  
+-   **排序**：在 [排序資料行]  對話方塊中排序一個或多個資料行。  
   
--   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及這些資料行在 [選擇資料行] 對話方塊中的顯示順序。  
+-   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及這些資料行在 [選擇資料行]  對話方塊中的顯示順序。  
   
--   **篩選**：根據 [篩選設定] 對話方塊中的資料行值，篩選方格中的資料列。  
+-   **篩選**：根據 [篩選設定]  對話方塊中的資料行值，篩選方格中的資料列。  
   
 -   **清除篩選**：清除所有篩選設定方格。  
   

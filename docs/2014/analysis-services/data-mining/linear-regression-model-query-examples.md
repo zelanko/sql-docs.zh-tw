@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 917e41f6053aa499c7d3d7ca51a32b033591bdc1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084303"
 ---
 # <a name="linear-regression-model-query-examples"></a>線性迴歸模型查詢範例
@@ -71,7 +71,7 @@ WHERE MODEL_NAME = 'TM_PredictIncome'
 ###  <a name="bkmk_Query2"></a> 範例查詢 2:擷取模型的迴歸公式  
  下列查詢會針對利用＜ [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)＞中所使用之相同目標郵寄資料來源所建立的線性迴歸模型，傳回採礦模型內容。 此模型會根據年齡預測客戶收入。  
   
- 查詢會傳回包含迴歸公式之節點的內容。 每個變數和係數都儲存在 NODE_DISTRIBUTION 資料表的個別資料列中。 如果您要檢視完整的迴歸公式，使用 [Microsoft 樹狀檢視器](browse-a-model-using-the-microsoft-tree-viewer.md)，按一下 **(All)** 節點，然後開啟 **[採礦圖例]**。  
+ 查詢會傳回包含迴歸公式之節點的內容。 每個變數和係數都儲存在 NODE_DISTRIBUTION 資料表的個別資料列中。 如果您要檢視完整的迴歸公式，使用 [Microsoft 樹狀檢視器](browse-a-model-using-the-microsoft-tree-viewer.md)，按一下 **(All)** 節點，然後開啟 **[採礦圖例]** 。  
   
 ```  
 SELECT FLATTENED NODE_DISTRIBUTION as t  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035056"
 ---
 # <a name="sqllogship-application"></a>sqllogship 應用程式
@@ -64,10 +64,10 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 |4|輸出所有偵錯和追蹤訊息。|  
   
  **-logintimeout** _timeout_value_  
- 指定嘗試登入伺服器執行個體的逾時時間。預設為 15 秒。 *timeout_value* 是 **int**_。_  
+ 指定嘗試登入伺服器執行個體的逾時時間。預設為 15 秒。 *timeout_value* 是 **int** _。_  
   
  **-querytimeout** _timeout_value_  
- 指定啟動執行作業的嘗試逾時時間。預設沒有逾時期限。 *timeout_value* 是 **int**_。_  
+ 指定啟動執行作業的嘗試逾時時間。預設沒有逾時期限。 *timeout_value* 是 **int** _。_  
   
 ## <a name="remarks"></a>備註  
  建議您盡可能使用備份、複製和還原作業來執行備份、複製和還原。 若要從批次作業或其他應用程式執行這些作業，請呼叫 [sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql) 預存程序。  

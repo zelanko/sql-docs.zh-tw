@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab9eca571a9cf9381e7c6a18207155ddf86ce272
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035958"
 ---
 # <a name="command-prompt-utility-reference-database-engine"></a>命令提示字元公用程式參考 (資料庫引擎)
@@ -51,7 +51,7 @@ ms.locfileid: "63035958"
   
  **存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員的方式 [!INCLUDE[win8](../includes/win8-md.md)]**  
   
- 由於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 程式的嵌入式管理單元，而不是單獨的程式，在執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時並不會出現 [!INCLUDE[win8](../includes/win8-md.md)]組態管理員這樣的應用程式。 若要開啟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員，請在 [搜尋] 常用鍵的 [應用程式] 下，輸入 **SQLServerManager12.msc** (適用於 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]) 或 **SQLServerManager11.msc** (適用於 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)])，然後按 **Enter**。  
+ 由於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 程式的嵌入式管理單元，而不是單獨的程式，在執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時並不會出現 [!INCLUDE[win8](../includes/win8-md.md)]組態管理員這樣的應用程式。 若要開啟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員，請在 [搜尋]  常用鍵的 [應用程式]  下，輸入 **SQLServerManager12.msc** (適用於 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]) 或 **SQLServerManager11.msc** (適用於 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)])，然後按 **Enter**。  
   
 ## <a name="command-prompt-utilities-syntax-conventions"></a>命令提示字元公用程式語法慣例  
   

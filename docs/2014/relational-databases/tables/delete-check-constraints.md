@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b4110d6a03e9e0b4d7aeca01c62a74a64b26c3ed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62761697"
 ---
 # <a name="delete-check-constraints"></a>刪除檢查條件約束
@@ -51,11 +51,11 @@ ms.locfileid: "62761697"
   
 1.  在 **[物件總管]** 中，展開含有檢查條件約束的資料表。  
   
-2.  展開  **[條件約束]**。  
+2.  展開  **[條件約束]** 。  
   
-3.  以滑鼠右鍵按一下條件約束，然後按一下 [刪除]。  
+3.  以滑鼠右鍵按一下條件約束，然後按一下 [刪除]  。  
   
-4.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]**。  
+4.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -63,9 +63,9 @@ ms.locfileid: "62761697"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     ALTER TABLE dbo.DocExc   

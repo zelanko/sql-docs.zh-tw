@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a62d937a733ea41b85a83224a043ff4ad7ecdd29
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087926"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>分類精靈 (適用於 Excel 的資料採礦增益集)
@@ -29,7 +29,7 @@ ms.locfileid: "66087926"
   
 ## <a name="using-the-classify-wizard"></a>使用分類精靈  
   
-1.  在 [**資料採礦**功能區中，按一下**分類**，然後按一下**下一步]**。  
+1.  在 [**資料採礦**功能區中，按一下**分類**，然後按一下**下一步]** 。  
   
 2.  在 **選取來源資料**頁面上，選擇要分析的資料。  
   

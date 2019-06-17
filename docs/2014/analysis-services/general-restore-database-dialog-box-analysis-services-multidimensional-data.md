@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ebc1bc72a15545412adcc71d10feb08f3f05b16
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080949"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>一般 (還原資料庫對話方塊) (Analysis Services - 多維度資料)
@@ -30,9 +30,9 @@ ms.locfileid: "66080949"
   
  **若要顯示在 還原資料庫對話方塊中的 一般 頁面**  
   
--   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的 [資料庫] 資料夾或物件總管中的資料庫、按一下 [還原]，然後按一下 [選取頁面] 底下的 [一般]。  
+-   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的 [資料庫]  資料夾或物件總管  中的資料庫、按一下 [還原]  ，然後按一下 [選取頁面]  底下的 [一般]  。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **指令碼**  
  根據在對話方塊中選取的選項，建立還原指令碼。 此還原指令碼是以 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 指令碼語言 (ASSL) 撰寫而成。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66080949"
  選取備份檔案，從該備份檔案中還原選取的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫。  
   
  **瀏覽**  
- 按一下即可顯示 [尋找資料庫檔案] 對話方塊，並選取要使用之備份檔案的路徑和檔案名稱。 如需 [尋找資料庫檔案] 對話方塊的詳細資訊，請參閱[尋找資料庫檔案對話方塊 &#40;Analysis Services - 多維度資料&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md)。  
+ 按一下即可顯示 [尋找資料庫檔案]  對話方塊，並選取要使用之備份檔案的路徑和檔案名稱。 如需 [尋找資料庫檔案]  對話方塊的詳細資訊，請參閱[尋找資料庫檔案對話方塊 &#40;Analysis Services - 多維度資料&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md)。  
   
  **允許資料庫覆寫**  
  選取即可允許 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 還原所選取備份檔案的內容，並覆寫所選取 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中的任何現有物件。  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ca0e9ae2-86e3-4763-8225-07d36acf8a18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4f031afbbaa2efa7e4de0be2c30abcfb3ef5a7ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 609809e932eb69d38ff4a008364bd479c8b7615d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729056"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780719"
 ---
 # <a name="updatenull-method-sqlserverresultset"></a>updateNull 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

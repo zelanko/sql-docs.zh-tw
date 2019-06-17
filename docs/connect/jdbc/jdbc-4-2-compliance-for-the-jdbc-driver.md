@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cdb0e888276c2c9b08eb99b6972b645ac9b46607
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: f52dd4a9fe86b9c4ab94ddbca2b00872244a4345
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602049"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781631"
 ---
 # <a name="jdbc-42-compliance-for-the-jdbc-driver"></a>適用於 JDBC 驅動程式的 JDBC 4.2 相容性
 

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3bbf6c9640882ffca2bbdbf82b2ef2667c394096
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090688"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>訂閱和檢查 Finance Name 原則
@@ -58,9 +58,9 @@ ms.locfileid: "66090688"
   
 ### <a name="to-apply-the-policy-to-the-whole-server"></a>將原則套用至整個伺服器  
   
-1.  目前，只有 Finance 資料庫訂閱 Finance 原則類別目錄。 在許多情況下，將原則類別目錄套用至整個伺服器是比較簡單的方式。 在物件總管中，展開 [管理]，以滑鼠右鍵按一下 [原則管理]，然後按一下 [管理類別目錄]。  
+1.  目前，只有 Finance 資料庫訂閱 Finance 原則類別目錄。 在許多情況下，將原則類別目錄套用至整個伺服器是比較簡單的方式。 在物件總管中，展開 [管理]  ，以滑鼠右鍵按一下 [原則管理]  ，然後按一下 [管理類別目錄]  。  
   
-2.  在 [管理原則類別目錄] 對話方塊中，找出 Finance 類別目錄，然後針對 Finance 類別目錄選取 [託管資料庫訂閱] 核取方塊。  
+2.  在 [管理原則類別目錄]  對話方塊中，找出 Finance 類別目錄，然後針對 Finance 類別目錄選取 [託管資料庫訂閱]  核取方塊。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 此時，Finance 類別目錄會套用至所有資料庫，但是您已建立的條件會將 Finance Name 原則限制為 Finance 資料庫。 這點就說明了如何以將在許多伺服器上正確套用的方式，使用複雜的條件組合來建立原則的目標。  
   

@@ -11,17 +11,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4df53093cf7d7dff00a8a5e16fb4bef58442213
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092384"
 ---
 # <a name="select-a-prepared-instance"></a>選取備妥的執行個體
-  使用 [選取備妥的執行個體] 頁面，即可指定您想要完成的備妥執行個體。  
+  使用 [選取備妥的執行個體]  頁面，即可指定您想要完成的備妥執行個體。  
   
 ## <a name="options"></a>選項。  
- [選取執行個體識別碼] 方塊會列出您可以完成的備妥執行個體。 請選取您想要完成的備妥執行個體。  
+ [選取執行個體識別碼]  方塊會列出您可以完成的備妥執行個體。 請選取您想要完成的備妥執行個體。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **選取執行個體識別碼**  

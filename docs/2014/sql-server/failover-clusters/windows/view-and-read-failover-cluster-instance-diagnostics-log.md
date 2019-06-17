@@ -11,20 +11,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19308ee2838238f0dea6cfdaeb228a250591613b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049334"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>檢視及閱讀容錯移轉叢集執行個體診斷記錄檔
   SQL Server 資源 DLL 的所有重大錯誤和警告事件都會寫入 Windows 事件記錄檔。 SQL Server 的特定診斷資訊執行記錄檔是由 [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) 系統預存程序所擷取，並且會寫入 SQL Server 容錯移轉叢集診斷 (也稱為 *SQLDIAG* 記錄) 記錄檔。  
   
--   **開始之前：**[建議](#Recommendations)，[安全性](#Security)  
+-   **開始之前：** [建議](#Recommendations)，[安全性](#Security)  
   
--   **若要檢視診斷記錄檔中，使用：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **若要檢視診斷記錄檔中，使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
--   **若要設定診斷記錄設定，請使用：**[Transact-SQL](#TsqlConfigure)  
+-   **若要設定診斷記錄設定，請使用：** [Transact-SQL](#TsqlConfigure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -43,13 +43,13 @@ ms.locfileid: "63049334"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要檢視診斷記錄檔：**  
   
-1.  從 **[檔案]** 功能表中，依序選取 **[開啟]** 和 **[檔案]**，然後選擇想要檢視的診斷記錄檔。  
+1.  從 **[檔案]** 功能表中，依序選取 **[開啟]** 和 **[檔案]** ，然後選擇想要檢視的診斷記錄檔。  
   
 2.  事件在右窗格中會顯示為資料列，而且依預設只會顯示 **[name]** 和 **[timestamp]** 這兩個資料行。  
   
      這也會啟動 **[ExtendedEvents]** 功能表。  
   
-3.  若要查看其他資料行，請前往 **[ExtendedEvents]** 功能表，並選取 **[選擇資料行]**。  
+3.  若要查看其他資料行，請前往 **[ExtendedEvents]** 功能表，並選取 **[選擇資料行]** 。  
   
      隨即開啟對話方塊，內含可讓您選取資料行進行顯示的可用資料行。  
   

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64c13b9fed062b73de7ab35ef5048ae4b68e5618
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090003"
 ---
 # <a name="modify-a-trace-template-sql-server-profiler"></a>修改追蹤範本 (SQL Server Profiler)
@@ -26,19 +26,19 @@ ms.locfileid: "66090003"
   
 ### <a name="to-modify-a-trace-template"></a>若要修改追蹤範本  
   
-1.  在 [檔案] 功能表上，指向 [範本]，再按一下 [編輯範本]。  
+1.  在 [檔案]  功能表上，指向 [範本]  ，再按一下 [編輯範本]  。  
   
-2.  在 [追蹤範本屬性] 對話方塊的 [一般] 索引標籤上，您可以修改伺服器類型和範本名稱，或選擇使用該伺服器類型的預設範本。  
+2.  在 [追蹤範本屬性]  對話方塊的 [一般]  索引標籤上，您可以修改伺服器類型和範本名稱，或選擇使用該伺服器類型的預設範本。  
   
-3.  在 [事件選取範圍]索引標籤上，使用方格控制項，在追蹤檔案中新增或移除事件和資料行，如下所示：  
+3.  在 [事件選取範圍]  索引標籤上，使用方格控制項，在追蹤檔案中新增或移除事件和資料行，如下所示：  
   
     -   若要加入事件，請在 **[事件]** 資料行中展開適當的事件類別目錄，然後選取事件名稱。  
   
     -   當您加入事件時，依預設將包含所有有關的資料行。 若要從追蹤中移除某個事件的資料行，請清除該事件在資料行中的核取方塊。  
   
-    -   若要加入篩選，在 **[編輯篩選]** 對話方塊中按一下資料行名稱，然後指定篩選準則。 您也可以用滑鼠右鍵按一下資料行名稱，然後按一下 [編輯資料行篩選] 以啟動 [編輯篩選] 對話方塊。 按一下 **[確定]** 以加入篩選。  
+    -   若要加入篩選，在 **[編輯篩選]** 對話方塊中按一下資料行名稱，然後指定篩選準則。 您也可以用滑鼠右鍵按一下資料行名稱，然後按一下 [編輯資料行篩選]  以啟動 [編輯篩選]  對話方塊。 按一下 **[確定]** 以加入篩選。  
   
-4.  按一下 [儲存]，或按一下 [另存新檔]，以另一個名稱儲存追蹤範本。  
+4.  按一下 [儲存]  ，或按一下 [另存新檔]  ，以另一個名稱儲存追蹤範本。  
   
 ## <a name="see-also"></a>另請參閱  
  [指定追蹤檔案的事件及資料行 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   

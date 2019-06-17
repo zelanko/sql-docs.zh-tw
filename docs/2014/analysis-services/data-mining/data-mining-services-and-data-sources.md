@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 048f737266e815a02058a51ebebce0b0f1ff46af
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084920"
 ---
 # <a name="data-mining-services-and-data-sources"></a>資料採礦服務與資料來源
@@ -23,7 +23,7 @@ ms.locfileid: "66084920"
  此主題將提供一些在您連接至 SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體來建立、處理、部署或查詢資料採礦模型時所需要了解的資訊。  
   
 ## <a name="data-mining-services"></a>資料採礦服務  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的伺服器元件是 msmdsrv.exe 應用程式，這個應用程式通常是當做 Windows 服務來執行。 這個應用程式是由安全性元件、XML for Analysis (XMLA) 接聽程式元件、查詢處理器元件及執行下列功能的許多其他內部元件所組成：  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的伺服器元件是 msmdsrv.exe 應用程式，這個應用程式通常是當做 Windows 服務來執行。 這個應用程式是由安全性元件、XML for Analysis (XMLA) 接聽程式元件、查詢處理器元件及執行下列功能的許多其他內部元件所組成：  
   
 -   剖析從用戶端收到的陳述式  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66084920"
  您也可以設定屬性，以便微調伺服器以及控制用戶端使用量的安全性。 如需詳細資訊，請參閱 [功能屬性](../server-properties/feature-properties.md)。  
   
 > [!NOTE]  
->  如需支援版本的外掛程式演算法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2012 的版本功能](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473)。  
+>  如需支援版本的外掛程式演算法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2012 的版本功能](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>以程式設計方式存取資料採礦物件  
  您可以使用下列物件模型來建立 Analysis Services 資料庫的連接以及使用資料採礦物件：  

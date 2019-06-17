@@ -12,13 +12,13 @@ helpviewer_keywords:
 - ICommand [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 0b11b890f89ba136de9f22a9256acd1069b97a49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9622dfa505fd00bca639d1cfd8919aef4145a85a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721096"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790670"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

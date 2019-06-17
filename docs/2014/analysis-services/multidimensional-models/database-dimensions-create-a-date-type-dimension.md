@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 76b5027f19eade18aa07187c1673f6ad27079391
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075943"
 ---
 # <a name="create-a-date-type-dimension"></a>建立日期類型維度
@@ -42,7 +42,7 @@ ms.locfileid: "66075943"
   
  伺服器時間維度中的屬性具有特定的時間屬性繫結。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用與日期相關的屬性類型 (例如年、月或日) 來定義時間維度中的屬性成員。  
   
- 在 Cube 中包含伺服器時間維度之後，您可以在 Cube 精靈的 [定義維度使用方式] 頁面上指定關聯性，來設定量值群組和伺服器時間維度之間的關聯性。  
+ 在 Cube 中包含伺服器時間維度之後，您可以在 Cube 精靈的 [定義維度使用方式]  頁面上指定關聯性，來設定量值群組和伺服器時間維度之間的關聯性。  
   
 ### <a name="calendars"></a>日曆  
  在時間維度或伺服器時間維度中，會在階層中將時間週期屬性加以分組。 這種階層通常稱為日曆。  

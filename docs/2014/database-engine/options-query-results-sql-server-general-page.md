@@ -17,14 +17,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 48261d5ff0290dd5042b6604d9e492871bf6da38
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089330"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>選項 （查詢結果-SQL Server-一般頁面）
-  使用此頁面來決定 [查詢結果] 窗格的預設行為。 若要顯示這些設定，請在 [工具] 功能表上按一下 [選項]，展開 [查詢結果] 資料夾，選取 [SQL Server]，然後按一下 [一般]。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [查詢] 功能表上的 [查詢選項]，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗中按一下滑鼠右鍵，並選取 [查詢選項]。  
+  使用此頁面來決定 [查詢結果] 窗格的預設行為。 若要顯示這些設定，請在 [工具]  功能表上按一下 [選項]  ，展開 [查詢結果]  資料夾，選取 [SQL Server]  ，然後按一下 [一般]  。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [查詢]  功能表上的 [查詢選項]  ，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗中按一下滑鼠右鍵，並選取 [查詢選項]  。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **結果的預設目的地**  

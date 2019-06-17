@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1db346ba-a3bd-4387-a423-72e227346318
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a5043c08af385b09d21758c04a6fe9e524deb70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6d6e901073cebe4d470d608a6cd93e2e19e73dac
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597566"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778766"
 ---
 # <a name="gettime-method-sqlserverresultset"></a>getTime 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9095c1fa767e1854c300df1ad08bf5d1900af860
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071931"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者
@@ -28,13 +28,13 @@ ms.locfileid: "66071931"
   
 ## <a name="add-a-trusted-provider-to-excel-services"></a>將受信任的提供者加入至 Excel Services  
   
-1.  在 [管理中心]，按一下 **[管理服務應用程式]**，然後按一下 Excel Services 服務應用程式。  
+1.  在 [管理中心]，按一下 **[管理服務應用程式]** ，然後按一下 Excel Services 服務應用程式。  
   
-2.  按一下 **[信任的資料提供者]**。  
+2.  按一下 **[信任的資料提供者]** 。  
   
 3.  確認 MSOLAP.5 出現在清單中。 根據您設定 PowerPivot for SharePoint 的方式，MSOLAP.5 可能已經是受信任的提供者。  
   
-4.  如果未列出，請按一下 **[新增信任的資料提供者]**。  
+4.  如果未列出，請按一下 **[新增信任的資料提供者]** 。  
   
 5.  在 [提供者識別碼] 中，輸入 `MSOLAP.5`。  
   

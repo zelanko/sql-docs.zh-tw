@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081593"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>記錄採礦模型 (適用於 Excel 的資料採礦增益集)
@@ -37,7 +37,7 @@ ms.locfileid: "66081593"
   
 4.  在 **選取 文件詳細資料**對話方塊方塊中，選擇其中一個選項：**填妥資訊**或是**摘要資訊**。  
   
-5.  按一下 **[完成]**。  
+5.  按一下 **[完成]** 。  
   
 6.  精靈會自動建立新的工作表，其中包含指定的報表稱為**模型文件**，  
   

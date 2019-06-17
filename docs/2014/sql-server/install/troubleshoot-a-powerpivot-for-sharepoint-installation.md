@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fc6e01ff69850cb4faf9240c9dc0247ba0d01f11
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66091776"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>疑難排解 PowerPivot for SharePoint 安裝
@@ -33,12 +33,12 @@ ms.locfileid: "66091776"
   
 1.  在 PowerPivot 圖庫文件庫中，按一下**站台設定**從齒輪圖示![SharePoint 設定](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")或**首頁**清單。  
   
-2.  在 **[網站集合管理]** 區段中，按一下 **[網站集合功能]**。  
+2.  在 **[網站集合管理]** 區段中，按一下 **[網站集合功能]** 。  
   
-3.  按一下 **[網站集合功能]**。  
+3.  按一下 **[網站集合功能]** 。  
   
-4.  確認 **[網站集合的 PowerPivot 功能整合]** 為 **[使用中]**。  
+4.  確認 **[網站集合的 PowerPivot 功能整合]** 為 **[使用中]** 。  
   
- 此問題的其他原因，請參閱 < [PowerPivot 圖庫顯示為紅色 x 圖示](https://support.microsoft.com/kb/2361559)(https://support.microsoft.com/kb/2361559)。  
+ 此問題的其他原因，請參閱 < [PowerPivot 圖庫顯示為紅色 x 圖示](https://support.microsoft.com/kb/2361559)(https://support.microsoft.com/kb/2361559) 。  
   
   

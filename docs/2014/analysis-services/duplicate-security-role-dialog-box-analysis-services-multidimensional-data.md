@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 596011e40eb6ed7ca2276da58dbbc1379e5b032c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081502"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>Analysis Services 重複安全性角色對話方塊 (Analysis Services - 多維度資料)
-  使用**Analysis Services 重複安全性角色-\<資料庫名稱 >-\<從角色名稱複製 >**  對話方塊中的[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的現有角色[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫。 在物件總管中以滑鼠右鍵按一下角色並選取 [複製]，即可顯示 [複製角色] 對話方塊。  
+  使用**Analysis Services 重複安全性角色-\<資料庫名稱 >-\<從角色名稱複製 >**  對話方塊中的[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的現有角色[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫。 在物件總管中以滑鼠右鍵按一下角色並選取 [複製]  ，即可顯示 [複製角色]  對話方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  

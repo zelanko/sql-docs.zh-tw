@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 973d14a238f109def82cf49f223a1ce2f37888b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62787030"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>設定 two digit year cutoff 伺服器組態選項
@@ -37,7 +37,7 @@ ms.locfileid: "62787030"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定 two digit year cutoff 選項之後](#FollowUp)  
+-   **後續操作：** [設定 two digit year cutoff 選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -56,11 +56,11 @@ ms.locfileid: "62787030"
   
 #### <a name="to-configure-the-two-digit-year-cutoff-option"></a>若要設定 two digit year cutoff 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
   
 2.  按一下 **[其他伺服器設定]** 節點。  
   
-3.  在 [Two digit year support (兩位數年份支援)] 下的 [當輸入兩位數年份時，解譯為下列之間的年份] 方塊中，輸入或選取一個值作為時間範圍的結束年份。  
+3.  在 [Two digit year support (兩位數年份支援)]  下的 [當輸入兩位數年份時，解譯為下列之間的年份]   方塊中，輸入或選取一個值作為時間範圍的結束年份。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -68,9 +68,9 @@ ms.locfileid: "62787030"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `two digit year cutoff` 選項的值設定為 `2030`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `two digit year cutoff` 選項的值設定為 `2030`。  
   
 ```sql  
 USE AdventureWorks2012 ;  

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7605f4e5fd2fd6601cf1d132b438187edeeb29fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62792038"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>將次要複本加入至可用性群組 (SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "62792038"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **後續操作：**[加入次要複本之後](#FollowUp)  
+-   **後續操作：** [加入次要複本之後](#FollowUp)  
   
 ## <a name="before-you-begin"></a>開始之前  
  我們強烈建議您先閱讀本節內容，然後再嘗試建立您的第一個可用性群組。  
