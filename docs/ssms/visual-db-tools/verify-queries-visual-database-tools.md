@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ceb12a0510cd11c515c5398b4cc4051940720dd2
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105557"
 ---
 # <a name="verify-queries-visual-database-tools"></a>驗證查詢 (Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "65105557"
   
 關於驗證查詢的注意事項：  
   
--   即使在 [圖表] 窗格和 [準則] 窗格中無法表示陳述式，其語法也可以是正確的，因此能夠成功地驗證。  
+-   即使在 [圖表]  窗格和 [準則]  窗格中無法表示陳述式，其語法也可以是正確的，因此能夠成功地驗證。  
   
 -   [SQL 驗證] 能夠偵測某些，但不是所有的 SQL 錯誤。 如果查詢中包含在 SQL 驗證期間未偵測到的錯誤，當您執行查詢時，資料庫會偵測到錯誤。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "65105557"
   
 ### <a name="to-verify-an-sql-statement"></a>若要驗證 SQL 陳述式  
   
--   在 [SQL] 窗格按一下滑鼠右鍵，然後從快速鍵功能表選取 [驗證 SQL 語法]。  
+-   在 [SQL]  窗格按一下滑鼠右鍵，然後從快速鍵功能表選取 [驗證 SQL 語法]  。  
   
 ## <a name="see-also"></a>另請參閱  
 [執行查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 054ec6e7520cb7c3b779bb6699dad45038278f75
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65719854"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>使用檢查點來重新啟動封裝
@@ -64,7 +64,7 @@ ms.locfileid: "65719854"
 |CheckpointUsage|指定是否使用檢查點。|  
 |SaveCheckpoints|指出封裝是否儲存檢查點。 必須將此屬性設為 True，才能從失敗點重新啟動封裝。|  
   
- 另外，如果想要將封裝中的容器識別為重新啟動點，則必須將這些容器的 FailPackageOnFailure 屬性設為 [true]。  
+ 另外，如果想要將封裝中的容器識別為重新啟動點，則必須將這些容器的 FailPackageOnFailure 屬性設為 [true]  。  
   
  可以使用 ForceExecutionResult 屬性來測試封裝中檢查點的使用。 將工作或容器的 ForceExecutionResult 設為 [Failure]，可以模擬即時失敗。 當重新執行封裝時，會重新執行失敗的工作和容器。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "65719854"
 |**IfExists**|指定如果存在檢查點檔案，就使用該檔案。 如果存在檢查點檔案，則封裝會從上一個執行失敗點重新啟動，否則，封裝會從封裝工作流程的開始點執行。|  
   
 > [!NOTE]  
->  dtexec 的 **/CheckPointing on** 選項相當於將封裝的 **SaveCheckpoints** 屬性設定為 [True]，以及將 **CheckpointUsage** 屬性設定為 Always。 如需詳細資訊，請參閱 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。  
+>  dtexec 的 **/CheckPointing on** 選項相當於將封裝的 **SaveCheckpoints** 屬性設定為 [True]  ，以及將 **CheckpointUsage** 屬性設定為 Always。 如需詳細資訊，請參閱 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。  
   
 ## <a name="securing-checkpoint-files"></a>保護檢查點檔案  
  封裝等級保護並不包括檢查點檔案的保護，因此您必須個別保護這些檔案。 檢查點資料只能儲存在檔案系統中，而且您應該使用作業系統存取控制清單 (ACL) 來保護儲存檔案之位置或資料夾的安全。 請務必保護檢查點檔案的安全，因為它們包含有關封裝狀態的資訊，包括變數目前的值。 例如，變數包含的資料錄集可能具有許多私密資料 (例如電話號碼) 的資料列。 如需詳細資訊，請參閱 [對封裝使用之檔案的存取權](../../integration-services/security/security-overview-integration-services.md#files)。  
@@ -94,7 +94,7 @@ ms.locfileid: "65719854"
   
 3.  按一下 **[控制流程]** 索引標籤。  
   
-4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]。  
+4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]  。  
   
 5.  將 SaveCheckpoints 屬性設定為 **True**。  
   
@@ -102,16 +102,16 @@ ms.locfileid: "65719854"
   
 7.  將 CheckpointUsage 屬性設定為下列兩個值的其中一個：  
   
-    -   選取 [永遠]，永遠從檢查點重新啟動封裝。  
+    -   選取 [永遠]  ，永遠從檢查點重新啟動封裝。  
   
         > [!IMPORTANT]  
         >  如果檢查點檔案不可用，則會產生錯誤。  
   
-    -   選取 [如有]，只有當檢查點檔案可用時才會重新啟動封裝。  
+    -   選取 [如有]  ，只有當檢查點檔案可用時才會重新啟動封裝。  
   
 8.  設定封裝可重新啟動的工作和容器。  
   
-    -   以滑鼠右鍵按一下工作或容器，然後按一下 [屬性]。  
+    -   以滑鼠右鍵按一下工作或容器，然後按一下 [屬性]  。  
   
     -   將每個所選取之工作和容器的 FailPackageOnFailure 屬性設定為 **True** 。  
     

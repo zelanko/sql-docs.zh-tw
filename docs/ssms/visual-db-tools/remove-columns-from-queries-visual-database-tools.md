@@ -17,22 +17,22 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9a59362473ad977da4a29ab03bdd158da7825425
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098135"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>移除查詢的資料行 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-如果您不想再使用查詢中的資料行，可以將其移除。 一旦移除了，查詢和檢視設計師會移除選取清單、排序規格、搜尋準則、[SQL 窗格] 和所有群組規則中有關此資料行的參考。  
+如果您不想再使用查詢中的資料行，可以將其移除。 一旦移除了，查詢和檢視設計師會移除選取清單、排序規格、搜尋準則、[SQL 窗格]  和所有群組規則中有關此資料行的參考。  
   
 > [!NOTE]  
 > 如果只是要從選取查詢的輸出中移除資料行，您不需將資料行一併從查詢中移除就可以完成此作業。 如需詳細資訊，請參閱[移除查詢結果的資料行 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md)。  
   
 ### <a name="to-remove-a-column-from-the-query"></a>若要從查詢中移除資料行  
   
--   在 [準則窗格] 中，選取包含要移除之資料行的方格資料列，然後按下 DELETE。  
+-   在 [準則窗格]  中，選取包含要移除之資料行的方格資料列，然後按下 DELETE。  
   
     -或-  
   

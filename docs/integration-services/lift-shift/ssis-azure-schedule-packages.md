@@ -12,10 +12,10 @@ ms.author: sawinark
 ms.reviewer: maghan
 manager: craigg
 ms.openlocfilehash: d879833ee055d857627890471a68cbbaf4263abb
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012843"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>排程部署於 Azure 中的 SQL Server Integration Services (SSIS) 套件執行
@@ -39,7 +39,7 @@ ms.locfileid: "66012843"
 
 ## <a name="ssms"></a> 使用 SSMS 排程套件
 
-在 SQL Server Management Studio (SSMS) 中，您可以在部署到 SSIS 目錄資料庫 (SSISDB) 的套件上按一下滑鼠右鍵，然後選取 [排程] 以開啟 [新增排程] 對話方塊。 如需詳細資訊，請參閱[在 Azure 中以 SSMS 排程 SSIS 套件](ssis-azure-schedule-packages-ssms.md)。
+在 SQL Server Management Studio (SSMS) 中，您可以在部署到 SSIS 目錄資料庫 (SSISDB) 的套件上按一下滑鼠右鍵，然後選取 [排程]  以開啟 [新增排程]  對話方塊。 如需詳細資訊，請參閱[在 Azure 中以 SSMS 排程 SSIS 套件](ssis-azure-schedule-packages-ssms.md)。
 
 此功能需要 SQL Server Management Studio 17.7 版或更高版本。 若要取得最新版的 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
 
@@ -136,13 +136,13 @@ EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
 
 1.  在 SQL Server Management Studio 中，連線至您要在其上建立作業的內部部署 SQL Server 資料庫。
 
-2.  以滑鼠右鍵按一下 [SQL Server Agent] 節點，並選取 [新增]，然後選取 [作業] 開啟 [新增作業] 對話方塊。
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  節點，並選取 [新增]  ，然後選取 [作業]  開啟 [新增作業]  對話方塊。
 
-3.  在 [新增作業] 對話方塊中，選取 [步驟] 頁面，然後選取 [新增] 開啟 [新增作業步驟] 對話方塊。
+3.  在 [新增作業]  對話方塊中，選取 [步驟]  頁面，然後選取 [新增]  開啟 [新增作業步驟]  對話方塊。
 
-4.  在 [新增作業步驟] 對話方塊中，選取 `SSISDB` 作為 [資料庫]。
+4.  在 [新增作業步驟]  對話方塊中，選取 `SSISDB` 作為 [資料庫]  。
 
-5.  在 [命令] 欄位中，輸入與下列範例中所示指令碼類似的 Transact-SQL 指令碼：
+5.  在 [命令]  欄位中，輸入與下列範例中所示指令碼類似的 Transact-SQL 指令碼：
 
     ```sql
     -- T-SQL script to create and start SSIS package execution using SSISDB stored procedures

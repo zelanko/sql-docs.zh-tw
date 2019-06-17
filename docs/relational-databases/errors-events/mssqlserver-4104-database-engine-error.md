@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 55bbf20609dc364fdb79c0c785ccffb691da991e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814386"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63018670"
 ---
 # <a name="mssqlserver4104"></a>MSSQLSERVER_4104
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47814386"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|4104|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -34,7 +34,7 @@ ms.locfileid: "47814386"
 |訊息文字|無法繫結多重部分 (Multi-Part) 識別碼 "%.*ls"。|  
   
 ## <a name="explanation"></a>說明  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中實體的名稱也稱為 *「識別碼」*(Identifier)。 每當參考實體 (例如在查詢中指定資料行和資料表名稱) 時，您就可以使用識別碼。 多重部分識別碼包含一個或多個限定詞，當做識別碼的前置詞。 例如，資料表識別碼的前置詞可能是包含此資料表之資料庫名稱和結構描述等限定詞，或者資料行識別碼的前置詞可能是資料表名稱或資料表別名等限定詞。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中實體的名稱也稱為 *「識別碼」* (Identifier)。 每當參考實體 (例如在查詢中指定資料行和資料表名稱) 時，您就可以使用識別碼。 多重部分識別碼包含一個或多個限定詞，當做識別碼的前置詞。 例如，資料表識別碼的前置詞可能是包含此資料表之資料庫名稱和結構描述等限定詞，或者資料行識別碼的前置詞可能是資料表名稱或資料表別名等限定詞。  
   
 錯誤 4104 表示指定的多重部分識別碼無法對應至現有的實體。 這項錯誤可能會在下列情況下傳回：  
   

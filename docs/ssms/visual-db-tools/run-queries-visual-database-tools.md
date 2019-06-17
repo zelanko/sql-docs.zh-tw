@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fcc0232a9556ae62888c631bd1961dc7c4c03822
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099890"
 ---
 # <a name="run-queries-visual-database-tools"></a>執行查詢 (Visual Database Tools)
@@ -29,7 +29,7 @@ ms.locfileid: "65099890"
   
 1.  開啟或建立要執行的查詢。  
   
-2.  在查詢視窗的任何位置上按一下滑鼠右鍵，然後從快速鍵功能表中選取 [執行 SQL]。  
+2.  在查詢視窗的任何位置上按一下滑鼠右鍵，然後從快速鍵功能表中選取 [執行 SQL]  。  
   
     -或-  
   

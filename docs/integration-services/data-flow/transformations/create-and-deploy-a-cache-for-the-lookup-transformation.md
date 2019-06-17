@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b374b8dc5ef942bd5c7e16329e0b226befb668d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726248"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>針對查閱轉換來建立及部署快取
@@ -39,26 +39,26 @@ ms.locfileid: "65726248"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，開啟包含所要封裝的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 專案，然後再開啟封裝。  
   
-2.  在 [控制流程] 索引標籤上，加入資料流程工作。  
+2.  在 [控制流程]  索引標籤上，加入資料流程工作。  
   
-3.  在 [資料流程] 索引標籤上，將「快取轉換」轉換加入至資料流程，然後將該轉換連接到資料來源。  
+3.  在 [資料流程]  索引標籤上，將「快取轉換」轉換加入至資料流程，然後將該轉換連接到資料來源。  
   
      視需要設定資料來源。  
   
-4.  按兩下快取轉換，然後在 [快取轉換編輯器] 中，按一下 [連線管理員] 頁面上的 [新增]，建立新的快取連線管理員。  
+4.  按兩下快取轉換，然後在 [快取轉換編輯器]  中，按一下 [連線管理員]  頁面上的 [新增]  ，建立新的快取連線管理員。  
   
-5.  在 [快取連線管理員編輯器] 的 [一般] 索引標籤上，藉由設定下列選項，將快取連線管理員設定為儲存快取：  
+5.  在 [快取連線管理員編輯器]  的 [一般]  索引標籤上，藉由設定下列選項，將快取連線管理員設定為儲存快取：  
   
-    1.  選取 [使用檔案快取]。  
+    1.  選取 [使用檔案快取]  。  
   
-    2.  針對 [檔案名稱]，輸入檔案路徑。  
+    2.  針對 [檔案名稱]  ，輸入檔案路徑。  
   
      系統會在執行封裝時建立該檔案。  
   
     > [!NOTE]  
     >  封裝保護等級不會套用至快取檔案。 如果快取檔案包含機密資訊，請使用存取控制清單 (ACL) 限制對其中儲存檔案的位置或資料夾的存取權。 您應該只啟用特定帳戶的存取權。 如需詳細資訊，請參閱 [對封裝使用之檔案的存取權](../../../integration-services/security/security-overview-integration-services.md#files)。  
   
-6.  按一下 [資料行] 索引標籤，然後使用 [索引位置] 選項，指定哪些資料行是索引資料行。  
+6.  按一下 [資料行]  索引標籤，然後使用 [索引位置]  選項，指定哪些資料行是索引資料行。  
   
      如果是非索引資料行，索引位置為 0。 如果是索引資料行，則索引位置是循序的正數。  
   
@@ -83,15 +83,15 @@ ms.locfileid: "65726248"
   
     1.  在 [方案總管] 中，選取在步驟 1 中開啟的專案。  
   
-    2.  在 [專案] 功能表上，按一下 [加入現有項目]。  
+    2.  在 [專案]  功能表上，按一下 [加入現有項目]  。  
   
-    3.  選取快取檔案，然後按一下 [加入]。  
+    3.  選取快取檔案，然後按一下 [加入]  。  
   
-     檔案便會出現在方案總管的 [其他] 資料夾中。  
+     檔案便會出現在方案總管的 [其他]  資料夾中。  
   
 4.  將專案設定為建立部署公用程式，然後建立專案。 如需詳細資訊，請參閱 [建立部署公用程式](../../../integration-services/packages/create-a-deployment-utility.md)。  
   
-     資訊清單檔 \<專案名稱>.SSISDeploymentManifest.xml 會建立，並列出專案中的其他檔案、封裝以及封裝組態。  
+     資訊清單檔 \<專案名稱  >.SSISDeploymentManifest.xml 會建立，並列出專案中的其他檔案、封裝以及封裝組態。  
   
 5.  將封裝部署到檔案系統。 如需詳細資訊，請參閱 [使用部署公用程式來部署封裝](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md)。  
   

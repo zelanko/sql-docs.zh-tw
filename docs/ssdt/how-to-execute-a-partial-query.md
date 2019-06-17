@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0dff2087286035b078f59ac1673a733fb3cc8358
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090169"
 ---
 # <a name="how-to-execute-a-partial-query"></a>如何：執行部分查詢
@@ -26,9 +26,9 @@ Transact\-SQL 編輯器可讓您反白顯示指令碼的特定區段，並且將
   
 ### <a name="to-partially-execute-a-query"></a>若要部分執行查詢  
   
-1.  在 [SQL Server 物件總管] 中，按兩下 [檢視表] 下的 **PerishableFruits**，在 Transact\-SQL 編輯器中打開它。  
+1.  在 [SQL Server 物件總管]  中，按兩下 [檢視表]  下的 **PerishableFruits**，在 Transact\-SQL 編輯器中打開它。  
   
-2.  反白顯示程式碼中的 `SELECT p.Id, p.Name FROM dbo.Product p` 區段，按一下滑鼠右鍵選取 [執行查詢]。  
+2.  反白顯示程式碼中的 `SELECT p.Id, p.Name FROM dbo.Product p` 區段，按一下滑鼠右鍵選取 [執行查詢]  。  
   
-3.  請注意，`Products` 資料表中具有指定之欄位的所有資料列傳回於 [結果] 窗格中。  
+3.  請注意，`Products` 資料表中具有指定之欄位的所有資料列傳回於 [結果]  窗格中。  
   

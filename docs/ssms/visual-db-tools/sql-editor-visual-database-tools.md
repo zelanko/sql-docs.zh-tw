@@ -23,10 +23,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 64702cde504d2c79d96297649799c2205b01725c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105705"
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 編輯器 (Visual Database Tools)
@@ -41,7 +41,7 @@ SQL 編輯器提供許多實用的 SQL 文字編輯功能，包括：
   
 -   提供有用的編輯功能，包括剪下、複製、貼上和拖曳作業。  
   
--   變更編輯器的行為 (藉由選取 [工具] 功能表上的 [選項])，以修改虛擬空間、自動換行、行號，以及定位點大小。  
+-   變更編輯器的行為 (藉由選取 [工具]  功能表上的 [選項]  )，以修改虛擬空間、自動換行、行號，以及定位點大小。  
   
 -   協助管理偵錯時的中斷點。  
   

@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: d27da0678e993047ffb71a2000a497d282d6dc63
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66799294"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>連線到 Always On 可用性群組接聽程式 
@@ -84,7 +84,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  您仍然可以選擇直接參考主要或次要複本的 SQL Server 執行個體名稱，而不使用可用性群組接聽程式名稱，不過如果選擇這樣做，便無法享有新連接自動導向至目前主要複本的好處。  此外，也無法享有唯讀路由的好處。  
   
 ##  <a name="ConnectToSecondary"></a> 使用接聽程式連接到唯讀次要複本 (唯讀路由)  
- 「唯讀路由」是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的功能，可將對可用性群組接聽程式的內送連接路由至設為允許唯讀工作負載的次要複本。 只有在下列條件成立時，參考可用性群組接聽程式名稱的內送連接才會自動路由至唯讀複本：  
+ 「唯讀路由」  是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的功能，可將對可用性群組接聽程式的內送連接路由至設為允許唯讀工作負載的次要複本。 只有在下列條件成立時，參考可用性群組接聽程式名稱的內送連接才會自動路由至唯讀複本：  
   
 -   至少一個次要複本設定為唯讀存取，而且每個唯讀次要複本和主要複本都設定為支援唯讀路由。 如需詳細資訊，請參閱本節稍後的 [若要將可用性複本設定為唯讀路由](#ConfigureARsForROR)。  
 
@@ -120,7 +120,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- 在這個連接字串範例中，用戶端嘗試透過通訊埠 1433 (如果可用性群組接聽程式是在 1433 上接聽，也可以省略此通訊埠編號) 上名為 `AGListener` 的可用性群組接聽程式，連線到 AdventureWorks 資料庫。  若連接字串的 **ApplicationIntent** 屬性設定為 **ReadOnly**，會將此字串設為「讀取意圖的連接字串」。  如果沒有此設定，伺服器就不會嘗試唯讀路由連接。  
+ 在這個連接字串範例中，用戶端嘗試透過通訊埠 1433 (如果可用性群組接聽程式是在 1433 上接聽，也可以省略此通訊埠編號) 上名為 `AGListener` 的可用性群組接聽程式，連線到 AdventureWorks 資料庫。  若連接字串的 **ApplicationIntent** 屬性設定為 **ReadOnly**，會將此字串設為「讀取意圖的連接字串」  。  如果沒有此設定，伺服器就不會嘗試唯讀路由連接。  
   
  可用性群組的主要資料庫會處理內送唯讀路由要求，並嘗試找出已聯結至主要複本並設定為唯讀路由的線上唯讀複本。  用戶端會從主要複本伺服器接收連接資訊，並連接到已識別的唯讀複本。  
   
@@ -144,7 +144,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 ##  <a name="DbmConnectionString"></a> 資料庫鏡像連接字串與可用性群組搭配使用  
  如果可用性群組只擁有一個次要複本，並且已針對次要複本設定 ALLOW_CONNECTIONS = READ_ONLY 或 ALLOW_CONNECTIONS = NONE，則用戶端可以使用資料庫鏡像連接字串連接至主要複本。 從資料庫鏡像將現有的應用程式移轉到可用性群組時，這種方法會很實用，前提是您要將可用性群組限制為只能有兩個可用性複本 (一個主要複本和一個次要複本)。 如果您加入其他次要複本，您需要為可用性群組建立可用性群組接聽程式，並更新您的應用程式使用可用性群組接聽程式 DNS 名稱。  
   
- 當使用資料庫鏡像連接字串時，用戶端可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 或 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 用戶端提供的連接字串至少必須提供一個伺服器執行個體名稱，也就是 *「初始夥伴名稱」*，以識別一開始裝載您打算連接之可用性複本的伺服器執行個體。 此連接字串也可以選擇性地提供另一個伺服器執行個體的名稱，也就是 *「容錯移轉夥伴名稱」*(Failover Partner Name)，以識別一開始將次要複本裝載為容錯移轉夥伴名稱的伺服器執行個體。  
+ 當使用資料庫鏡像連接字串時，用戶端可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 或 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 用戶端提供的連接字串至少必須提供一個伺服器執行個體名稱，也就是 *「初始夥伴名稱」* ，以識別一開始裝載您打算連接之可用性複本的伺服器執行個體。 此連接字串也可以選擇性地提供另一個伺服器執行個體的名稱，也就是 *「容錯移轉夥伴名稱」* (Failover Partner Name)，以識別一開始將次要複本裝載為容錯移轉夥伴名稱的伺服器執行個體。  
   
  如需資料庫鏡像連接字串的詳細資訊，請參閱 [將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   

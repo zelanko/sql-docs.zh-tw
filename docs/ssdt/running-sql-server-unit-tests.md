@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ddc31964a018bec7dc0829d21e85283db5f069e1
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101876"
 ---
 # <a name="running-sql-server-unit-tests"></a>執行 SQL Server 單元測試
@@ -26,22 +26,22 @@ ms.locfileid: "65101876"
 ## <a name="ways-to-run-sql-server-unit-tests"></a>執行 SQL Server 單元測試的方式  
 您可以根據已安裝的軟體，透過幾種不同的方法執行 SQL Server 單元測試，如下所示：  
   
--   使用 Visual Studio 2010 中的 [測試檢視] 視窗執行測試。 如需詳細資訊，請參閱[如何：執行 SQL Server 單元測試](../ssdt/how-to-run-sql-server-unit-tests.md)及[如何：從 Microsoft Visual Studio 2010 執行自動化的測試](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)。 針對 Visual Studio 2012，請參閱[如何：從 Microsoft Visual Studio 2012 執行自動化的測試](https://msdn.microsoft.com/library/ms182470.aspx)。  
+-   使用 Visual Studio 2010 中的 [測試檢視]  視窗執行測試。 如需詳細資訊，請參閱[如何：執行 SQL Server 單元測試](../ssdt/how-to-run-sql-server-unit-tests.md)及[如何：從 Microsoft Visual Studio 2010 執行自動化的測試](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)。 針對 Visual Studio 2012，請參閱[如何：從 Microsoft Visual Studio 2012 執行自動化的測試](https://msdn.microsoft.com/library/ms182470.aspx)。  
   
 -   在命令提示字元上使用 MSTest.exe 命令以執行測試。 如需詳細資訊，請參閱[如何：使用 MSTest (Visual Studio 2010) 從命令列執行自動化的測試](https://msdn.microsoft.com/library/ms182487(VS.100).aspx)或[如何：使用 MSTest (Visual Studio 2012) 從命令列執行自動化的測試](https://msdn.microsoft.com/library/ms182487.aspx)。  
   
--   執行測試專案，從 [方案總管] 執行測試。 如需詳細資訊，請參閱[如何：從 Microsoft Visual Studio 2010 執行自動化的測試](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)或[如何：從 Microsoft Visual Studio 2012 執行自動化的測試](https://msdn.microsoft.com/library/ms182470.aspx)。  
+-   執行測試專案，從 [方案總管]  執行測試。 如需詳細資訊，請參閱[如何：從 Microsoft Visual Studio 2010 執行自動化的測試](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)或[如何：從 Microsoft Visual Studio 2012 執行自動化的測試](https://msdn.microsoft.com/library/ms182470.aspx)。  
   
--   從 [測試結果] 視窗重新執行測試。 如需詳細資訊，請參閱[如何：重新執行測試 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx)。  
+-   從 [測試結果]  視窗重新執行測試。 如需詳細資訊，請參閱[如何：重新執行測試 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx)。  
   
--   從 [測試清單編輯器] 視窗執行個別測試或測試清單 (Visual Studio 2010)。 如需詳細資訊，請參閱[如何：從 Microsoft Visual Studio 2010 執行自動化的測試](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)或[如何：從 Microsoft Visual Studio 2012 執行自動化的測試](https://msdn.microsoft.com/library/ms182470.aspx)。  
+-   從 [測試清單編輯器]  視窗執行個別測試或測試清單 (Visual Studio 2010)。 如需詳細資訊，請參閱[如何：從 Microsoft Visual Studio 2010 執行自動化的測試](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)或[如何：從 Microsoft Visual Studio 2012 執行自動化的測試](https://msdn.microsoft.com/library/ms182470.aspx)。  
   
 -   在 Team Foundation Build 中建置專案時，執行測試。 如需詳細資訊，請參閱[如何：在建置應用程式之後設定和執行排程測試 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182465(VS.100).aspx) 或[如何：在建置應用程式之後設定和執行排程測試 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182465.aspx)。  
   
 您可以使用已排序的測試，按照特定的順序執行 SQL Server 單元測試。 如需詳細資訊，請參閱[如何：建立已排序的測試 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182631(VS.100).aspx) 或[如何：建立已排序的測試 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182631.aspx)。  
   
 ## <a name="interpreting-tests-results"></a>解譯測試結果  
-執行測試後，[測試結果] 視窗中會顯示哪些測試成功，哪些失敗。 如需詳細資訊，請參閱[解譯 SQL Server 單元測試結果](../ssdt/interpreting-sql-server-unit-test-results.md)。 如需如何診斷未預期失敗的詳細資訊，請參閱[如何：針對資料庫物件進行偵錯](../ssdt/how-to-debug-database-objects.md)。  
+執行測試後，[測試結果]  視窗中會顯示哪些測試成功，哪些失敗。 如需詳細資訊，請參閱[解譯 SQL Server 單元測試結果](../ssdt/interpreting-sql-server-unit-test-results.md)。 如需如何診斷未預期失敗的詳細資訊，請參閱[如何：針對資料庫物件進行偵錯](../ssdt/how-to-debug-database-objects.md)。  
   
 ## <a name="topics-in-this-section"></a>本節主題  
 本節包含下列主題：  

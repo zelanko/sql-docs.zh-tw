@@ -22,10 +22,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 93d36f922d3cd66cd8b617afbdb3e9bf80d79e22
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66744167"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文件集

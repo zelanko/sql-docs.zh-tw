@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 36f74a3e4ca4806260f71353cee4d53bd629526e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66799288"
 ---
 # <a name="join-a-secondary-replica-to-an-always-on-availability-group"></a>將次要複本聯結至 Always On 可用性群組
@@ -46,15 +46,15 @@ ms.locfileid: "66799288"
   
 1.  在 [物件總管] 中，連接到裝載次要複本的伺服器執行個體，然後按一下伺服器名稱以展開伺服器樹狀目錄。  
   
-2.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
+2.  依序展開 [Always On 高可用性]  節點和 [可用性群組]  節點。  
   
 3.  選取所連接之次要複本的可用性群組。  
   
-4.  以滑鼠右鍵按一下次要複本，然後按一下 [加入可用性群組]。  
+4.  以滑鼠右鍵按一下次要複本，然後按一下 [加入可用性群組]  。  
   
 5.  這會開啟 **[將複本加入至可用性群組]** 對話方塊。  
   
-6.  若要將次要複本聯結至可用性群組，請按一下 **[確定]**。  
+6.  若要將次要複本聯結至可用性群組，請按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要將可用性複本聯結至可用性群組**  
@@ -63,9 +63,9 @@ ms.locfileid: "66799288"
   
 2.  使用 [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) 陳述式，如下所示：  
   
-     ALTER AVAILABILITY GROUP <群組名稱> JOIN  
+     ALTER AVAILABILITY GROUP <群組名稱>  JOIN  
   
-     其中 <群組名稱> 是可用性群組的名稱。  
+     其中 <群組名稱>  是可用性群組的名稱。  
   
      下列範例會將次要複本加入至 `MyAG` 可用性群組。  
   

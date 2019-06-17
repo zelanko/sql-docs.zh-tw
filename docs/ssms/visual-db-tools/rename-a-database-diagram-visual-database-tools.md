@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 35d97032f2764ffe128665472fa7369452c1746e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099279"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>重新命名資料庫圖表 (Visual Database Tools)
@@ -29,11 +29,11 @@ ms.locfileid: "65099279"
   
 ### <a name="to-rename-a-database-diagram"></a>若要為資料庫圖表重新命名  
   
-1.  在物件總管中，展開 [資料庫圖表] 資料夾。  
+1.  在物件總管中，展開 [資料庫圖表]  資料夾。  
   
 2.  在準備重新命名的資料庫圖表上，按一下滑鼠右鍵。  
   
-3.  在快速鍵功能表上選擇 [重新命名]。  
+3.  在快速鍵功能表上選擇 [重新命名]  。  
   
     在 [物件總管] 的圖表名稱四週，會開啟某個編輯方塊。  
   

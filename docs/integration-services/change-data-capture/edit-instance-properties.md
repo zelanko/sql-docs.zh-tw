@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5efde857036053b6ff31499a2ea6d889e34dfb25
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728915"
 ---
 # <a name="edit-instance-properties"></a>編輯執行個體屬性
@@ -43,9 +43,9 @@ ms.locfileid: "65728915"
   
 2.  選取您要編輯屬性的 CDC 執行個體。  
   
-3.  從 CDC 設計工具主控台右側的 **[動作]** 窗格中，按一下 **[屬性]**。  
+3.  從 CDC 設計工具主控台右側的 **[動作]** 窗格中，按一下 **[屬性]** 。  
   
-     您也可以用滑鼠右鍵按一下左窗格中的服務，然後選取 [屬性]。  
+     您也可以用滑鼠右鍵按一下左窗格中的服務，然後選取 [屬性]  。  
   
 ### <a name="or"></a>或  
   
@@ -53,8 +53,8 @@ ms.locfileid: "65728915"
   
 2.  從 CDC 設計工具主控台中央的清單中，選取您要編輯屬性的 CDC 執行個體。  
   
-3.  從 CDC 設計工具主控台右側的 **[動作]** 窗格中，按一下 **[屬性]**。  
+3.  從 CDC 設計工具主控台右側的 **[動作]** 窗格中，按一下 **[屬性]** 。  
   
-     您也可以在 CDC 設計工具主控台中央的清單中，以滑鼠右鍵按一下服務，然後選取 [屬性]。  
+     您也可以在 CDC 設計工具主控台中央的清單中，以滑鼠右鍵按一下服務，然後選取 [屬性]  。  
   
   

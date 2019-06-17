@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 52975d96b6db206b4cdd2b6b201bc55eb572131c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090260"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>如何：建立 SQL Server 單元測試設計工具的測試條件
@@ -26,17 +26,17 @@ ms.locfileid: "65090260"
   
 1.  在 Visual Studio 中，建立類別庫專案。  
   
-2.  在 [專案] 功能表上，按一下 [加入參考]。  
+2.  在 [專案]  功能表上，按一下 [加入參考]  。  
   
-3.  按一下 [.NET] 索引標籤。  
+3.  按一下 [.NET]  索引標籤。  
   
-4.  在 [元件名稱] 清單中，選取 [System.ComponentModel.Composition]，然後按一下 [確定]。  
+4.  在 [元件名稱]  清單中，選取 [System.ComponentModel.Composition]  ，然後按一下 [確定]  。  
   
-5.  加入必要的組件參考。 以滑鼠右鍵按一下專案節點，然後按一下 [加入參考]。 按一下 [瀏覽] 並巡覽至 C:\Program Files (x86)\\MicrosoftSQL Server\110\DAC\Bin 資料夾。 選擇 Microsoft.Data.Tools.Schema.Sql.dll，並按一下 [加入]，然後按一下 [確定]。  
+5.  加入必要的組件參考。 以滑鼠右鍵按一下專案節點，然後按一下 [加入參考]  。 按一下 [瀏覽]  並巡覽至 C:\Program Files (x86)\\MicrosoftSQL Server\110\DAC\Bin 資料夾。 選擇 Microsoft.Data.Tools.Schema.Sql.dll，並按一下 [加入]，然後按一下 [確定]。  
   
-6.  按一下 [專案] 功能表上的 [卸載專案]。  
+6.  按一下 [專案]  功能表上的 [卸載專案]  。  
   
-7.  在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選擇 [編輯 <project name>.csproj]。  
+7.  在 [方案總管]  中，以滑鼠右鍵按一下專案，然後選擇 [編輯 <project name>.csproj]  。  
   
 8.  匯入 Microsoft.CSharp.targets 之後，加入下列 Import 陳述式：  
   
@@ -45,7 +45,7 @@ ms.locfileid: "65090260"
     <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(VisualStudioVersion)' != ''" />  
     ```  
   
-9. 儲存並關閉檔案。 在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選擇 [重新載入專案]。  
+9. 儲存並關閉檔案。 在 [方案總管]  中，以滑鼠右鍵按一下專案，然後選擇 [重新載入專案]  。  
   
 10. 從 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 類別衍生您的類別。  
   
@@ -179,7 +179,7 @@ namespace Ssdt.Samples.SqlUnitTesting
 |屬性參數|位置|Description|  
 |-----------------------|------------|---------------|  
 |DisplayName|1|識別 [測試條件] 下拉式方塊中的字串。 這個名稱必須是唯一的。 如果兩個條件有相同的顯示名稱，第一個找到的條件會向使用者顯示，並在 Visual Studio 錯誤管理員中顯示警告。|  
-|ImplementingType|2|這個參數是用來唯一識別擴充功能。 您必須變更它，以符合屬性放置所在的型別。 此範例會使用 **ResultSetColumnCountCondition** 類型，因此請使用 **typeof(ResultSetColumnCountCondition)**。 如果您的類型是 **NewTestCondition**，則使用 **typeof(NewTestCondition)**。|  
+|ImplementingType|2|這個參數是用來唯一識別擴充功能。 您必須變更它，以符合屬性放置所在的型別。 此範例會使用 **ResultSetColumnCountCondition** 類型，因此請使用 **typeof(ResultSetColumnCountCondition)** 。 如果您的類型是 **NewTestCondition**，則使用 **typeof(NewTestCondition)** 。|  
   
 在這個範例中，您加入兩個屬性。 自訂測試條件的使用者可以使用 ResultSet 屬性，指定要驗證哪個結果集的資料行計數。 然後，使用者可以使用 Count 屬性來指定預期的資料行計數。  
   

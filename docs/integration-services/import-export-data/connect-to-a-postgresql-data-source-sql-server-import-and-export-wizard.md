@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 168e53dde51641d79569eb3ef6a1930d0084d10f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723978"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>連線至 PostgreSQL 資料來源 (SQL Server 匯入和匯出精靈)
@@ -22,7 +22,7 @@ ms.locfileid: "65723978"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連線至 **PostgreSQL** 資料來源。 
+本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源]  或 [選擇目的地]  頁面，連線至 **PostgreSQL** 資料來源。 
 
 > [!IMPORTANT]
 > 這一篇 Microsoft 文章範圍未涵蓋連線至 PostgreSQL 資料庫的詳細需求和必要條件。 本文假設您已安裝 PostgreSQL 用戶端軟體，並已成功連線至目標 PostgreSQL 資料庫。 如需詳細資訊，請參閱 PostgreSQL 資料庫管理員或 PostgreSQL 文件。
@@ -38,7 +38,7 @@ ms.locfileid: "65723978"
 或者，直接從下列 FTP 網站，下載適用於最新版 PostgreSQL ODBC 驅動程式 (psqlODBC) 的 Windows 安裝程式：[https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/)。 從 .zip 檔解壓縮檔案，並執行 .msi 檔案。
 
 ## <a name="connect-to-postgresql-with-the-postgresql-odbc-driver-psqlodbc"></a>使用 PostgreSQL ODBC 驅動程式 (psqlODBC) 連線至 PostgreSQL
-ODBC 驅動程式未列在資料來源的下拉式清單中。 若要使用 ODBC 驅動程式連線，請先在 [選擇資料來源] 或 [選擇目的地] 頁面上，將 [.NET Framework Data Provider for ODBC] 選取為資料來源。 此提供者作用為 ODBC 驅動程式的包裝函式。
+ODBC 驅動程式未列在資料來源的下拉式清單中。 若要使用 ODBC 驅動程式連線，請先在 [選擇資料來源]  或 [選擇目的地]  頁面上，將 [.NET Framework Data Provider for ODBC]  選取為資料來源。 此提供者作用為 ODBC 驅動程式的包裝函式。
 
 以下是您選取 .NET Framework Data Provider for ODBC 之後立即看到的一般畫面。
 
@@ -47,7 +47,7 @@ ODBC 驅動程式未列在資料來源的下拉式清單中。 若要使用 ODBC
 ### <a name="options-to-specify-postgresql-odbc-driver"></a>要指定的選項 (MySQL ODBC 驅動程式)
 
 > [!NOTE]
-> 不論 PostgreSQL 是您的來源還是目的地，此資料提供者和 ODBC 驅動程式的連線選項都會相同。 也就是，您在精靈的 [選擇資料來源] 和 [選擇目的地] 頁面上看到的選項會相同。
+> 不論 PostgreSQL 是您的來源還是目的地，此資料提供者和 ODBC 驅動程式的連線選項都會相同。 也就是，您在精靈的 [選擇資料來源]  和 [選擇目的地]  頁面上看到的選項會相同。
 
 若要使用 PostgreSQL ODBC 驅動程式連線至 PostgreSQL，請組合包含下列設定和其值的連接字串。 完整連接字串的格式緊接在設定清單後面。
 
@@ -55,7 +55,7 @@ ODBC 驅動程式未列在資料來源的下拉式清單中。 若要使用 ODBC
 > 取得組合正確連接字串的說明。 或者，您可以提供現有 DSN (資料來源名稱) 或建立新的 DSN，而不提供連接字串。 如需這些選項的詳細資訊，請參閱[連線至 ODBC 資料來源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。
 
 **驅動程式**  
-ODBC 驅動程式的名稱，為 **PostgreSQL ODBC Driver(UNICODE)** 或 **PostgreSQL ODBC Driver(ANSI)**。
+ODBC 驅動程式的名稱，為 **PostgreSQL ODBC Driver(UNICODE)** 或 **PostgreSQL ODBC Driver(ANSI)** 。
 
 **Server**  
 PostgreSQL 伺服器的名稱。 
@@ -77,7 +77,7 @@ PostgreSQL 資料庫的名稱。
     ```
 
 ### <a name="enter-the-connection-string"></a>輸入連接字串
-在 [選擇資料來源] 或 [選擇目的地] 頁面上，於 [ConnectionString] 欄位中輸入連接字串，或在 [Dsn] 欄位中輸入 DSN 名稱。 輸入連接字串之後，精靈會剖析字串，並在清單中顯示個別屬性和其值。
+在 [選擇資料來源]  或 [選擇目的地]  頁面上，於 [ConnectionString]  欄位中輸入連接字串，或在 [Dsn]  欄位中輸入 DSN 名稱。 輸入連接字串之後，精靈會剖析字串，並在清單中顯示個別屬性和其值。
 
 下列範例使用此連接字串。
 

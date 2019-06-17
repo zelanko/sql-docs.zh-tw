@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af878e23862e791443ad0057997cf93d0eab8ca1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715986"
 ---
 # <a name="catalogrestoreproject-ssisdb-database"></a>catalog.restore_project (SSISDB 資料庫)
@@ -38,10 +38,10 @@ catalog.restore_project [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>引數  
  [ @folder_name = ] *folder_name*  
- 包含專案之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
+ 包含專案之資料夾的名稱。 *folder_name* 是 **nvarchar(128)** 。  
   
  [ @project _name = ] *project_name*  
- 專案的名稱。 *project_name* 是 **nvarchar(128)**。  
+ 專案的名稱。 *project_name* 是 **nvarchar(128)** 。  
   
  [ @object_version_lsn = ] *object_version_lsn*  
  專案的版本。 *object_version_lsn* 是 **bigint**。  

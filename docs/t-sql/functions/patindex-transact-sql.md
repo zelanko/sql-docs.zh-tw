@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0a6f6f8c8699cc911d747d07edd9655fd363d667
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66696975"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
@@ -51,7 +51,7 @@ PATINDEX ( '%pattern%' , expression )
  這是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，通常是搜尋指定之模式的資料行。 *expression* 屬於字元字串資料類型類別目錄。  
   
 ## <a name="return-types"></a>傳回類型  
-若 *expression* 的資料類型為 **varchar(max)** 或 **nvarchar(max)**，則為 **bigint**，否則為 **int**。  
+若 *expression* 的資料類型為 **varchar(max)** 或 **nvarchar(max)** ，則為 **bigint**，否則為 **int**。  
   
 ## <a name="remarks"></a>Remarks  
 如果 *pattern* 或 *expression* 為 NULL，則 PATINDEX 會傳回 NULL。  
@@ -63,7 +63,7 @@ PATINDEX 會以輸入的定序為基礎來執行比較。 若要執行指定定�
 ## <a name="supplementary-characters-surrogate-pairs"></a>補充字元 (Surrogate 字組)  
 使用 SC 定序時，傳回值會將 *expression* 參數中的任何 UTF-16 代理字組計算為單一字元。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
-0x0000 (**char(0)**) 是 Windows 定序中未定義的字元，而且不得包含在 PATINDEX 中。  
+0x0000 (**char(0)** ) 是 Windows 定序中未定義的字元，而且不得包含在 PATINDEX 中。  
   
 ## <a name="examples"></a>範例  
   

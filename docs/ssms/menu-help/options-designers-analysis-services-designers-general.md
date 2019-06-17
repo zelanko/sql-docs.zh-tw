@@ -14,15 +14,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: a2af1a0d0c5ec1a36b1cd34d65ab853bae2bcae1
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104855"
 ---
 # <a name="options-designers---analysis-services-designers---general"></a>選項 (設計工具 - Analysis Services 設計工具 - 一般)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用 [設計師]、[維護計畫]、[Analysis Services]、[一般] 頁面，來決定 Analysis Services 設計師的預設行為。  
+使用 [設計師]  、[維護計畫]  、[Analysis Services]  、[一般]  頁面，來決定 Analysis Services 設計師的預設行為。  
   
 ## <a name="connectivity"></a>連接性  
 查詢逾時  

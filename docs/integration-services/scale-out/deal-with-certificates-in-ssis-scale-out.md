@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: 12f67e7a17ba253ab49b1e61fe3de33a45e0cb55
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718730"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>管理 SQL Server Integration Services Scale Out 的憑證
@@ -30,13 +30,13 @@ ms.locfileid: "65718730"
 
 在大部分情況下，系統會在 Scale Out Master 安裝期間設定 Scale Out Master 憑證。
 
-在 [SQL Server 安裝精靈] 的 [Integration Services 相應放大設定 - 主要節點] 頁面中，您可以選擇建立新的自我簽署 SSL 憑證，或使用現有的 SSL 憑證。
+在 [SQL Server 安裝精靈] 的 [Integration Services 相應放大設定 - 主要節點]  頁面中，您可以選擇建立新的自我簽署 SSL 憑證，或使用現有的 SSL 憑證。
 
 ![主機設定](media/master-config.PNG)
 
 **新憑證**。 如果您對憑證沒有特殊需求，可以選擇建立新的自我簽署 SSL 憑證。 您可以進一步在憑證中指定 CN。 請確定 CN 中包含 Scale Out Worker 稍後要使用的主要端點主機名稱。 預設會包含主要節點的電腦名稱和 IP 位址。 
 
-**現有憑證**。 如果您選擇使用現有的憑證，請按一下 [瀏覽] 從本機電腦的**根**憑證存放區中選取 SSL 憑證。
+**現有憑證**。 如果您選擇使用現有的憑證，請按一下 [瀏覽]  從本機電腦的**根**憑證存放區中選取 SSL 憑證。
 
 ### <a name="change-the-scale-out-master-certificate"></a>變更 Scale Out Master 憑證
 

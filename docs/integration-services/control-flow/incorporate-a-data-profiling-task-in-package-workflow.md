@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a0b1b7e7a0cecb2f71d8e326615bb25259ca0fcf
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727636"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>在封裝工作流程中納入資料分析工作
@@ -107,9 +107,9 @@ ms.locfileid: "65727636"
   
 -   在 **[變數]** 視窗中，加入並設定下列兩個封裝變數：  
   
-    -   為其中一個變數輸入 **ProfileConnectionName**名稱，然後將這個變數的類型設定為 [String] 。  
+    -   為其中一個變數輸入 **ProfileConnectionName**名稱，然後將這個變數的類型設定為 [String]  。  
   
-    -   為另一個變數輸入 **AddressLine2NullRatio**名稱，然後將這個變數的類型設定為 [Double] 。  
+    -   為另一個變數輸入 **AddressLine2NullRatio**名稱，然後將這個變數的類型設定為 [Double]  。  
   
 ### <a name="configure-the-data-profiling-task"></a>設定資料分析工作  
  您必須以下列方式來設定資料分析工作：  
@@ -298,7 +298,7 @@ ms.locfileid: "65727636"
   
 -   在將指令碼工作連接至工作流程中下游分支的優先順序條件約束中，撰寫使用變數值來導向工作流程的運算式。  
   
-     例如，您可能會將優先順序條件約束的 **[評估作業]** 設定為 **[運算式與條件約束]**。 然後，您可能會使用 `@AddressLine2NullRatio < .90` 當做運算式的值。 當先前的工作成功，而且選取資料行中 Null 值的百分比小於 90% 時，這樣做會導致工作流程遵循選取的路徑。  
+     例如，您可能會將優先順序條件約束的 **[評估作業]** 設定為 **[運算式與條件約束]** 。 然後，您可能會使用 `@AddressLine2NullRatio < .90` 當做運算式的值。 當先前的工作成功，而且選取資料行中 Null 值的百分比小於 90% 時，這樣做會導致工作流程遵循選取的路徑。  
   
 ## <a name="connecting-the-data-profiling-task-to-transformed-data-from-the-data-flow"></a>將資料分析工作連接至資料流程的已轉換資料  
  除了分析直接來自資料來源的資料以外，您也可以分析已經在資料流程中載入並轉換的資料。 不過，資料分析工作只能針對保存的資料運作，無法針對記憶體中的資料運作。 因此，您必須先使用目的地元件，將已轉換的資料儲存至臨時資料表。  

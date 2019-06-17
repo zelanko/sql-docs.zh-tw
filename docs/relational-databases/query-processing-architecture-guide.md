@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40dac2df410456b0f3db7aff931e523fe350960b
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462721"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
@@ -34,13 +34,13 @@ ms.locfileid: "66462721"
 - 批次模式執行
 
 ### <a name="row-mode-execution"></a>資料列模式執行
-「資料列模式執行」是可搭配傳統 RDMBS 資料表使用的查詢處理方法，其中資料是以資料列格式儲存。 當查詢執行並存取資料列存放區資料表中的資料時，執行樹狀目錄運算子和子運算子會在資料表結構描述中指定的所有資料行之間，讀取每個必要的資料列。 從所讀取的每個資料列，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會接著擷取結果集所需的資料行，以供 SELECT 陳述式、聯結述詞或篩選述詞參考。
+「資料列模式執行」  是可搭配傳統 RDMBS 資料表使用的查詢處理方法，其中資料是以資料列格式儲存。 當查詢執行並存取資料列存放區資料表中的資料時，執行樹狀目錄運算子和子運算子會在資料表結構描述中指定的所有資料行之間，讀取每個必要的資料列。 從所讀取的每個資料列，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會接著擷取結果集所需的資料行，以供 SELECT 陳述式、聯結述詞或篩選述詞參考。
 
 > [!NOTE]
 > 資料列模式執行針對 OLTP 案例非常有效率，但在掃描大量資料時 (例如在資料倉儲案例中) 可能比較沒有效率。
 
 ### <a name="batch-mode-execution"></a>批次模式執行  
-「批次模式執行」是用來同時處理多個資料列的查詢處理方法 (如批次一詞所指)。 批次內的每個資料行會儲存為不同記憶體區域中的向量，因此批次模式處理是以向量為基礎。 批次模式處理也會使用演算法，這些演算法已針對現代硬體上發現的多核心 CPU 和增加的記憶體輸送量進行最佳化。      
+「批次模式執行」  是用來同時處理多個資料列的查詢處理方法 (如批次一詞所指)。 批次內的每個資料行會儲存為不同記憶體區域中的向量，因此批次模式處理是以向量為基礎。 批次模式處理也會使用演算法，這些演算法已針對現代硬體上發現的多核心 CPU 和增加的記憶體輸送量進行最佳化。      
 
 批次模式執行與資料行存放區儲存格式緊密整合，並以其為中心進行最佳化。 當情況允許時，批次模式處理會在壓縮的資料上作業，並排除資料列模式執行所使用的 [Exchange 運算子](../relational-databases/showplan-logical-and-physical-operators-reference.md#exchange)。 結果會是較佳的平行處理原則與更快的效能。    
 
@@ -753,7 +753,7 @@ WHERE ProductID = 63;
 >   如需資料指標的詳細資訊，請參閱 [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)。
 > - **遞迴查詢**    
 >   如需遞迴的詳細資訊，請參閱[定義和使用遞迴通用資料表運算式的方針](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)和 [T-SQL 中的遞迴](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)。
-> - **資料表值函式 (TVFs)**    
+> - **資料表值函式 (TVFs)**     
 >   如需 TVF 的詳細資訊，請參閱[建立使用者定義函式 (資料庫引擎)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
 > - **TOP 關鍵字**    
 >   如需詳細資訊，請參閱 [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md)。
@@ -984,7 +984,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>在查詢執行計畫中顯示資料分割資訊
 
-資料分割資料表和索引上的查詢執行計畫可以使用 [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` 陳述式 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或是使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio 中的圖形化執行計畫輸出進行檢查。 例如，您可以在查詢編輯器工具列上，按一下 [顯示估計執行計畫]  來顯示編譯時間執行計畫，以及按一下 [包括實際執行計畫] 來顯示執行階段計畫。 
+資料分割資料表和索引上的查詢執行計畫可以使用 [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` 陳述式 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或是使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio 中的圖形化執行計畫輸出進行檢查。 例如，您可以在查詢編輯器工具列上，按一下 [顯示估計執行計畫]  來顯示編譯時間執行計畫，以及按一下 [包括實際執行計畫]  來顯示執行階段計畫。 
 
 您可以使用這些工具來確定以下資訊：
 

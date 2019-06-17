@@ -17,10 +17,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 70d6be59845433719cc462326d1135c77d34beee
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64776154"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>監視 PolyBase 並進行疑難排解
@@ -136,13 +136,13 @@ PolyBase 查詢會分成 sys.dm_exec_distributed_request_steps 內的一系列�
 
 ## <a name="to-view-the--polybase-query-plan-to-be-changed"></a>檢視 PolyBase 查詢計劃 (即將變更) 
 
-1. 在 SSMS 中，啟用 [包括實際執行計畫] \(Ctrl + M) 並執行查詢。
+1. 在 SSMS 中，啟用 [包括實際執行計畫]  \(Ctrl + M) 並執行查詢。
 
-2. 按一下 [執行計劃] 索引標籤。
+2. 按一下 [執行計劃]  索引標籤。
 
    ![PolyBase 查詢計畫](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase 查詢計畫")  
 
-3. 在 [遠端查詢運算子] 上按一下滑鼠右鍵，然後選取 [屬性]。
+3. 在 [遠端查詢運算子]  上按一下滑鼠右鍵，然後選取 [屬性]  。
 
 4. 複製遠端查詢值，並將其貼至文字編輯器，以檢視 XML 遠端查詢計劃。 下列為範例。
 

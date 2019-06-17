@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: SQL Server Management Studio components and configuration'
+title: 教學課程：SQL Server Management Studio 元件和設定
 description: 描述 SQL Server Management Studio 環境之元件和基本設定選項的教學課程。
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -11,14 +11,15 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 173123f180047c35ce93a64928770f55525f651b
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: 10be7a0bcc588961321713e365819a5f699bcbc9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662682"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822278"
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>教學課程：SQL Server Management Studio 元件和設定
+
 本教學課程介紹 SQL Server Management Studio (SSMS) 中的各種視窗元件，以及工作區中的一些基本設定選項。 在本文中，您將學會如何： 
 
 > [!div class="checklist"]
@@ -38,14 +39,14 @@ ms.locfileid: "56662682"
 本節描述工作區中可用的各種視窗元件，以及如何使用它們。 
 
 - 若要關閉視窗，請選取標題列右上角的 **X**。 
-- 若要重新開啟視窗，請選取 [檢視] 功能表中的視窗。 
+- 若要重新開啟視窗，請選取 [檢視]  功能表中的視窗。 
 
     ![[檢視] 功能表](media/ssms-configuration/viewmenu.png)
 
 - **物件總管** (F8)：物件總管是含有伺服器中所有資料庫物件的樹狀檢視。 該檢視包含 SQL Server 資料庫引擎、SQL Server Analysis Services、SQL Server Reporting Services 和 SQL Server Integration Services 的資料庫。 [物件總管] 含有它所連線之所有伺服器的資訊。 
     
     ![物件總管](media/ssms-configuration/objectexplorer.png)
-- **查詢視窗** (Ctrl+N)：選取 [新增查詢] 之後，在這個視窗中輸入 Transact-SQL (T-SQL) 查詢。 此處也會顯示您的查詢結果。
+- **查詢視窗** (Ctrl+N)：選取 [新增查詢]  之後，在這個視窗中輸入 Transact-SQL (T-SQL) 查詢。 此處也會顯示您的查詢結果。
     
     ![新增查詢視窗](media/ssms-configuration/newquery.png)
 
@@ -87,11 +88,11 @@ ms.locfileid: "56662682"
 
       ![垂直索引標籤群組的範例](media/ssms-configuration/verticaltabgroup.png)
         
-    - 若要合併索引標籤，請以滑鼠右鍵按一下查詢標題，然後選取 [移至上一個索引標籤群組] 或 [移至下一個索引標籤群組]：
+    - 若要合併索引標籤，請以滑鼠右鍵按一下查詢標題，然後選取 [移至上一個索引標籤群組]  或 [移至下一個索引標籤群組]  ：
     
       ![合併查詢索引標籤](media/ssms-configuration/mergetabgroups.png)
 
-- 若要還原預設環境配置，請在 [視窗] 功能表中選取 [重設視窗配置]：
+- 若要還原預設環境配置，請在 [視窗]  功能表中選取 [重設視窗配置]  ：
  
     ![還原視窗配置](media/ssms-configuration/resetwindowlayout.png)
     
@@ -106,27 +107,27 @@ ms.locfileid: "56662682"
 
 
 ## <a name="change-basic-settings"></a>變更基本設定
-本節描述如何從 [工具] 功能表中修改 SSMS 的某些基本設定。
+本節描述如何從 [工具]  功能表中修改 SSMS 的某些基本設定。
 
   ![工具功能表](media/ssms-configuration/tools.png)
 
 
-- 若要修改反白顯示的工具列，請選取 [工具] > [自訂]：
+- 若要修改反白顯示的工具列，請選取 [工具]   > [自訂]  ：
 
     ![自訂工具列](media/ssms-configuration/toolbar.png)
 
 ### <a name="change-the-font"></a>變更字型
-- 若要變更字型，請選取 [工具] > [選項] > [字型和色彩]：
+- 若要變更字型，請選取 [工具]   > [選項]   > [字型和色彩]  ：
 
      ![變更字型和色彩](media/ssms-configuration/fontsandcolors.png)
 
 ### <a name="change-startup-options"></a>變更啟動選項
-- 啟動選項會決定您首次開啟 SSMS 時的工作區外觀。 若要變更啟動選項，請選取 [工具] > [選項] > [啟動]：
+- 啟動選項會決定您首次開啟 SSMS 時的工作區外觀。 若要變更啟動選項，請選取 [工具]   > [選項]   > [啟動]  ：
  
     ![變更啟動選項](media/ssms-configuration/startup.png)
 
 ### <a name="reset-settings-to-the-default"></a>將設定重設為預設值
-- 您可以從功能表中匯出並匯入所有的這些設定。 若要匯入或匯出設定，或還原預設設定，請選取 [工具] > [匯入和匯出設定] 
+- 您可以從功能表中匯出並匯入所有的這些設定。 若要匯入或匯出設定，或還原預設設定，請選取 [工具]   > [匯入和匯出設定]  
 
     ![匯入和匯出設定](media/ssms-configuration/settings.png)
 

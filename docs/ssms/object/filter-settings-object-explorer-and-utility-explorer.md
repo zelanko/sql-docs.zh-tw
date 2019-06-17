@@ -15,15 +15,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 72fff7180d260197f56b6506092e6b5353f125d7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095358"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>篩選設定 (物件總管與公用程式總管)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用此對話方塊來指定篩選。 篩選可以讓您將 [物件總管] 與 [公用程式總管] 設定為僅顯示符合特定準則的項目。 例如，您可以使用篩選，僅顯示名稱中包含單字「Maintenance」的作業。 [篩選設定] 對話方塊的標頭包含伺服器的名稱，也可以包含資料庫的名稱。  
+使用此對話方塊來指定篩選。 篩選可以讓您將 [物件總管] 與 [公用程式總管] 設定為僅顯示符合特定準則的項目。 例如，您可以使用篩選，僅顯示名稱中包含單字「Maintenance」的作業。 [篩選設定]  對話方塊的標頭包含伺服器的名稱，也可以包含資料庫的名稱。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
 **屬性**  
@@ -62,11 +62,11 @@ ms.locfileid: "65095358"
   
 -   **介於**  
   
-    適用於日期，此篩選會顯示日期介於所提供之兩個日期之間的項目。 選取 [介於] 並按下 TAB 鍵新增另一個資料列，以輸入第二個日期。  
+    適用於日期，此篩選會顯示日期介於所提供之兩個日期之間的項目。 選取 [介於]  並按下 TAB 鍵新增另一個資料列，以輸入第二個日期。  
   
 -   **不介於**  
   
-    適用於日期，此篩選會顯示日期早於或晚於所提供之兩個日期的項目。 選取 [不介於] 並按下 TAB 鍵跳離 [運算子] 資料行，即可新增另一個資料列，以輸入第二個日期。  
+    適用於日期，此篩選會顯示日期早於或晚於所提供之兩個日期的項目。 選取 [不介於]  並按下 TAB 鍵跳離 [運算子]  資料行，即可新增另一個資料列，以輸入第二個日期。  
   
 **ReplTest1**  
 輸入要和屬性比較的值。 針對日期，按一下向下鍵以顯示用來選取日期的日曆。  

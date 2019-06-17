@@ -29,10 +29,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: aede830ed407fcd7dddba4d2d9446b6510e84c8a
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64774943"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
@@ -151,7 +151,7 @@ CREATE CERTIFICATE certificate_name
  指定用來加密私密金鑰的密碼。 請只在您要利用密碼來加密憑證時才使用這個選項。 如果省略這個子句，則會使用資料庫主要金鑰加密此私密金鑰。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。 如需詳細資訊，請參閱＜ [Password Policy](../../relational-databases/security/password-policy.md)＞。  
   
  SUBJECT ='*certificate_subject_name*'  
- 「主旨」一詞是指憑證中繼資料的欄位，如 X.509 標準所定義。 主旨不應超過 64 個字元，並會對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Linux 強制執行這項限制。 若是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Windows，主旨長度最多可達 128 個字元。 超過 128 個字元的主旨在儲存至目錄時會被截斷，但包含憑證的二進位大型物件 (BLOB) 會保留完整的主旨名稱。  
+ 「主旨」  一詞是指憑證中繼資料的欄位，如 X.509 標準所定義。 主旨不應超過 64 個字元，並會對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Linux 強制執行這項限制。 若是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Windows，主旨長度最多可達 128 個字元。 超過 128 個字元的主旨在儲存至目錄時會被截斷，但包含憑證的二進位大型物件 (BLOB) 會保留完整的主旨名稱。  
   
  START_DATE ='*datetime*'  
  這是憑證生效的日期。 若未指定，會將 START_DATE 設為等於目前的日期。 START_DATE 為 UTC 時間，可以用任何可轉換成日期和時間的格式指定。  

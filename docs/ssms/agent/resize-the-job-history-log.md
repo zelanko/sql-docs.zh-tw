@@ -20,10 +20,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f967e75ca73ce57acfb192f8b9093cf9f15a2a0c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088871"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
@@ -53,9 +53,9 @@ ms.locfileid: "65088871"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後按一下 [屬性]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後按一下 [屬性]  。  
   
-3.  選取 [記錄] 頁面，然後確認已選取 [限制作業記錄大小]。  
+3.  選取 [記錄]  頁面，然後確認已選取 [限制作業記錄大小]  。  
   
 4.  在 **[最大作業記錄大小]** 方塊中，輸入作業記錄所允許的最大資料列數。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "65088871"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後按一下 [屬性]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後按一下 [屬性]  。  
   
-3.  選取 **[記錄]** 頁面，然後按一下 **[自動移除代理程式記錄]**。  
+3.  選取 **[記錄]** 頁面，然後按一下 **[自動移除代理程式記錄]** 。  
   
-4.  選取適當的 [天]、[週] 或 [月] 數。  
+4.  選取適當的 [天]  、[週]  或 [月]  數。  
   

@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5233d1bf98d332187e38f3806a9483fee38355d0
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506624"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
@@ -125,23 +125,23 @@ ms.locfileid: "66506624"
 ####  <a name="BKMK_dynamic_ports"></a> 動態通訊埠  
  根據預設，具名執行個體 (包括 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) 會使用動態通訊埠。 這表示每次 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 啟動時，它就會識別可用的通訊埠並使用該通訊埠編號。 如果具名執行個體是唯一安裝的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，它可能會使用 TCP 通訊埠 1433。 如果安裝了其他 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，它可能會使用不同的 TCP 通訊埠。 由於選取的通訊埠可能會在每次 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 啟動時變更，所以很難將防火牆設定成允許存取正確的通訊埠編號。 因此，如果已使用防火牆，我們建議您將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 重新設定成每次都使用相同的通訊埠編號。 這個通訊埠就稱為固定通訊埠或靜態通訊埠。 如需詳細資訊，請參閱[設定伺服器接聽特定 TCP 通訊埠 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   
- 另一種設定具名執行個體接聽固定通訊埠的方法，是在防火牆中為 **sqlservr.exe** (適用於[!INCLUDE[ssDE](../../includes/ssde-md.md)]) 一類的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式建立例外狀況。 雖然這樣很方便，但當您使用具有進階安全性的 Windows 防火牆 MMC 嵌入式管理單元時，通訊埠編號將不會顯示在 [輸入規則] 頁面的 [本機通訊埠] 資料行中。 如此一來可能會讓您更難以稽核哪些通訊埠已開啟。 其他考量是 Service Pack 或累積更新可能會變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可執行檔的路徑，因而使防火牆規則失效。  
+ 另一種設定具名執行個體接聽固定通訊埠的方法，是在防火牆中為 **sqlservr.exe** (適用於[!INCLUDE[ssDE](../../includes/ssde-md.md)]) 一類的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式建立例外狀況。 雖然這樣很方便，但當您使用具有進階安全性的 Windows 防火牆 MMC 嵌入式管理單元時，通訊埠編號將不會顯示在 [輸入規則]  頁面的 [本機通訊埠]  資料行中。 如此一來可能會讓您更難以稽核哪些通訊埠已開啟。 其他考量是 Service Pack 或累積更新可能會變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可執行檔的路徑，因而使防火牆規則失效。  
   
 ##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-firewall-with-advanced-security"></a>使用具有進階安全性的 Windows 防火牆，將程式例外新增至防火牆
   
-1. 從 [開始] 功能表，鍵入 *wf.msc*。 選取 [具有進階安全性的 Windows 防火牆]。
-1. 在左窗格中，選取 [輸入規則]。
-1. 在右窗格的 [動作] 下方，選取 [新增規則]。[新增輸入規則精靈] 隨即開啟。
-1. 在 [規則類型] 上，選取 [程式]。 選取 **[下一步]**。
-1. 在 [程式] 上，選取 [這個程式路徑]。 選取 [瀏覽] 以找出您的 SQL Server 執行個體。 此程式稱為 sqlservr.exe。 它通常位於：
+1. 從 [開始] 功能表，鍵入 *wf.msc*。 選取 [具有進階安全性的 Windows 防火牆]  。
+1. 在左窗格中，選取 [輸入規則]  。
+1. 在右窗格的 [動作]  下方，選取 [新增規則]  。[新增輸入規則精靈]  隨即開啟。
+1. 在 [規則類型]  上，選取 [程式]  。 選取 **[下一步]** 。
+1. 在 [程式]  上，選取 [這個程式路徑]  。 選取 [瀏覽]  以找出您的 SQL Server 執行個體。 此程式稱為 sqlservr.exe。 它通常位於：
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
 
-   選取 **[下一步]**。
+   選取 **[下一步]** 。
 
-1. 在 [動作] 上，按一下 [允許連線]。  
-1. 在 [設定檔] 中，加入所有三個設定檔。 選取 **[下一步]**。
-1. 在 [名稱] 上，輸入規則的名稱。 選取 [完成]。
+1. 在 [動作]  上，按一下 [允許連線]  。  
+1. 在 [設定檔] 中，加入所有三個設定檔。 選取 **[下一步]** 。
+1. 在 [名稱]  上，輸入規則的名稱。 選取 [完成]  。
 
 如需端點的詳細資訊，請參閱[設定 Database Engine 接聽多個 TCP 通訊埠](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)和[端點目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)。 
   
@@ -171,8 +171,8 @@ ms.locfileid: "66506624"
   
 |功能|通訊埠|註解|  
 |-------------|----------|--------------|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 服務|TCP 通訊埠 80|用於透過 URL 進行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 HTTP 連接。 建議您不要使用預先設定的規則 **World Wide Web 服務 (HTTP)**。 如需詳細資訊，請參閱下面的「 [與其他防火牆規則的互動](#BKMK_other_rules) 」一節。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定成可透過 HTTPS 使用|TCP 通訊埠 443|用於透過 URL 進行 HTTPS 連接。 HTTPS 是使用安全通訊端層 (SSL) 的 HTTP 連接。 建議您不要使用預先設定的規則 **Secure World Wide Web 服務 (HTTPS)**。 如需詳細資訊，請參閱下面的「 [與其他防火牆規則的互動](#BKMK_other_rules) 」一節。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 服務|TCP 通訊埠 80|用於透過 URL 進行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 HTTP 連接。 建議您不要使用預先設定的規則 **World Wide Web 服務 (HTTP)** 。 如需詳細資訊，請參閱下面的「 [與其他防火牆規則的互動](#BKMK_other_rules) 」一節。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定成可透過 HTTPS 使用|TCP 通訊埠 443|用於透過 URL 進行 HTTPS 連接。 HTTPS 是使用安全通訊端層 (SSL) 的 HTTP 連接。 建議您不要使用預先設定的規則 **Secure World Wide Web 服務 (HTTPS)** 。 如需詳細資訊，請參閱下面的「 [與其他防火牆規則的互動](#BKMK_other_rules) 」一節。|  
   
 當 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體時，您也必須針對這些服務開啟適當的通訊埠。 如需設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Windows 防火牆的逐步指示， [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)(設定報表伺服器存取的防火牆)。  
   
@@ -190,10 +190,10 @@ ms.locfileid: "66506624"
   
 |狀況|通訊埠|註解|  
 |--------------|----------|--------------|  
-|Windows Management Instrumentation<br /><br /> 如需有關 WMI 的詳細資訊，請參閱＜ [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)＞。|WMI 會使用透過 DCOM 所指派的通訊埠，當做共用服務主機執行。 WMI 可能正在使用 TCP 通訊埠 135。<br /><br /> 請參閱「 [通訊埠 135 的特殊考量](#BKMK_port_135)」|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員會使用 WMI 來列出並管理服務。 建議您使用預先設定的規則群組 **Windows Management Instrumentation (WMI)**。 如需詳細資訊，請參閱下面的「 [與其他防火牆規則的互動](#BKMK_other_rules) 」一節。|  
+|Windows Management Instrumentation<br /><br /> 如需有關 WMI 的詳細資訊，請參閱＜ [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)＞。|WMI 會使用透過 DCOM 所指派的通訊埠，當做共用服務主機執行。 WMI 可能正在使用 TCP 通訊埠 135。<br /><br /> 請參閱「 [通訊埠 135 的特殊考量](#BKMK_port_135)」|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員會使用 WMI 來列出並管理服務。 建議您使用預先設定的規則群組 **Windows Management Instrumentation (WMI)** 。 如需詳細資訊，請參閱下面的「 [與其他防火牆規則的互動](#BKMK_other_rules) 」一節。|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC)|TCP 通訊埠 135<br /><br /> 請參閱「 [通訊埠 135 的特殊考量](#BKMK_port_135)」|如果應用程式使用分散式交易，您可能必須將防火牆設定成允許 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 傳輸在個別 MS DTC 執行個體之間，以及在 MS DTC 與資源管理員 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 之間流動。 我們建議您使用預先設定的規則群組 **[分散式交易協調器]** 。<br /><br /> 針對個別資源群組中的整個叢集設定單一共用 MS DTC 時，您應該將 sqlservr.exe 當成例外新增至防火牆。|  
 |[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的瀏覽按鈕會使用 UDP 來連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務。 如需詳細資訊，請參閱 [SQL Server Browser 服務 &#40;Database Engine and SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)。|UDP 通訊埠 1434|UDP 是一種無連接的通訊協定。<br /><br /> 防火牆有一個設定 ([INetFwProfile 介面的 UnicastResponsesToMulticastBroadcastDisabled 屬性](https://go.microsoft.com/fwlink/?LinkId=118371) \(英文\))，可在廣播 (或多點傳送) UDP 要求的單點傳送回應方面控制防火牆的行為。  它有兩種行為：<br /><br /> 如果此設定為 TRUE，就完全不允許廣播的任何單點傳送回應。 列舉服務將會失敗。<br /><br /> 如果此設定為 FALSE (預設值)，就允許單點傳送回應 3 秒。 您無法設定時間的長度。 在擁塞或高延遲的網路中，或針對負載繁重的伺服器，嘗試列舉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體可能會傳回部分清單，因而誤導使用者。|  
-|<a name="BKMK_IPsec"></a> IPsec 傳輸|UDP 通訊埠 500 和 UDP 通訊埠 4500|如果網域原則要求透過 IPsec 完成網路通訊，您也必須將 UDP 通訊埠 4500 和 UDP 通訊埠 500 加入至例外清單。 IPsec 是在 Windows 防火牆嵌入式管理單元中使用 [新增輸入規則精靈] 的選項。 如需詳細資訊，請參閱稍後的 [使用具有進階安全性嵌入式管理單元的 Windows 防火牆](#BKMK_WF_msc) 。|  
+|<a name="BKMK_IPsec"></a> IPsec 傳輸|UDP 通訊埠 500 和 UDP 通訊埠 4500|如果網域原則要求透過 IPsec 完成網路通訊，您也必須將 UDP 通訊埠 4500 和 UDP 通訊埠 500 加入至例外清單。 IPsec 是在 Windows 防火牆嵌入式管理單元中使用 [新增輸入規則精靈]  的選項。 如需詳細資訊，請參閱稍後的 [使用具有進階安全性嵌入式管理單元的 Windows 防火牆](#BKMK_WF_msc) 。|  
 |使用 Windows 驗證搭配信任的網域|防火牆必須設定成允許驗證要求。|如需詳細資訊，請參閱＜ [如何設定網域和信任的防火牆](https://support.microsoft.com/kb/179442/)＞。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 叢集|叢集需要與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]沒有直接相關的其他通訊埠。|如需詳細資訊，請參閱＜ [啟用可供叢集使用的網路](https://go.microsoft.com/fwlink/?LinkId=118372)＞。|  
 |保留在 HTTP 伺服器 API (HTTP.SYS) 中的 URL 命名空間|可能是 TCP 通訊埠 80，但是可以設定成其他通訊埠。 如需一般資訊，請參閱＜ [設定 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=118373)＞。|如需有關使用 HttpCfg.exe 保留 HTTP.SYS 端點的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定資訊，請參閱[關於 URL 保留項目和註冊 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)。|  
@@ -234,24 +234,24 @@ ms.locfileid: "66506624"
  您加入至防火牆的例外可以限制針對來自特定電腦或區域子網路的內送連接開啟通訊埠。 這種通訊埠開啟範圍的限制可以減少電腦遭受惡意使用者攻擊的風險，而且建議使用這種限制。  
   
 > [!NOTE]  
->  使用 [控制台] 中的 [Windows 防火牆] 項目只會設定目前的防火牆設定檔。  
+>  使用 [控制台] 中的 [Windows 防火牆]  項目只會設定目前的防火牆設定檔。  
   
 ### <a name="to-change-the-scope-of-a-firewall-exception-using-the-windows-firewall-item-in-control-panel"></a>使用控制台中的 Windows 防火牆項目來變更防火牆例外的範圍  
   
-1.  在 [控制台] 的 **[Windows 防火牆]** 中，選取 **[例外]** 索引標籤上的程式或通訊埠，然後按一下 **[內容]** 或 **[編輯]**。  
+1.  在 [控制台] 的 **[Windows 防火牆]** 中，選取 **[例外]** 索引標籤上的程式或通訊埠，然後按一下 **[內容]** 或 **[編輯]** 。  
   
-2.  在 **[編輯程式]** 或 **[編輯連接埠]** 對話方塊中，按一下 **[變更領域]**。  
+2.  在 **[編輯程式]** 或 **[編輯連接埠]** 對話方塊中，按一下 **[變更領域]** 。  
   
 3.  選擇下列其中一個選項：  
   
-    -   **任何電腦 (包括在網際網路上的)**：不建議使用。 這個選項會允許可設定您電腦位址的任何電腦連接至指定的程式或通訊埠。 雖然您可能需要這項設定才能將資訊呈現給網際網路上的匿名使用者，不過這樣做會增加遭受惡意使用者攻擊的風險。 如果您啟用了這項設定，而且也允許網路位址轉譯 (NAT) 周遊 (例如 [允許邊緣周遊] 選項)，就會進一步增加遭受攻擊的風險。  
+    -   **任何電腦 (包括在網際網路上的)** ：不建議使用。 這個選項會允許可設定您電腦位址的任何電腦連接至指定的程式或通訊埠。 雖然您可能需要這項設定才能將資訊呈現給網際網路上的匿名使用者，不過這樣做會增加遭受惡意使用者攻擊的風險。 如果您啟用了這項設定，而且也允許網路位址轉譯 (NAT) 周遊 (例如 [允許邊緣周遊] 選項)，就會進一步增加遭受攻擊的風險。  
   
-    -   **只有我的網路 (子網路)**：這是比 **[任何電腦]** 更安全的設定。 只有位於網路之區域子網路的電腦才能連接至程式或通訊埠。  
+    -   **只有我的網路 (子網路)** ：這是比 **[任何電腦]** 更安全的設定。 只有位於網路之區域子網路的電腦才能連接至程式或通訊埠。  
   
-    -   **自訂清單**：只有具備已列出 IP 位址的電腦才能連線。 這可能是比 [只有我的網路 (子網路)] 更安全的設定。不過，使用 DHCP 的用戶端電腦可能偶爾會變更其 IP 位址。 接著，預期的電腦將無法連接。 您不想要授權的其他電腦可能會接受列出的 IP 位址，然後就能夠連接。 [自訂清單] 選項可能適用於列出已設定為使用固定 IP 位址的其他伺服器；不過，入侵者可能會假冒這些 IP 位址。 限制性防火牆規則只會與您的網路基礎結構同樣強固。  
+    -   **自訂清單**：只有具備已列出 IP 位址的電腦才能連線。 這可能是比 [只有我的網路 (子網路)]  更安全的設定。不過，使用 DHCP 的用戶端電腦可能偶爾會變更其 IP 位址。 接著，預期的電腦將無法連接。 您不想要授權的其他電腦可能會接受列出的 IP 位址，然後就能夠連接。 [自訂清單]  選項可能適用於列出已設定為使用固定 IP 位址的其他伺服器；不過，入侵者可能會假冒這些 IP 位址。 限制性防火牆規則只會與您的網路基礎結構同樣強固。  
   
 ##  <a name="BKMK_WF_msc"></a> 使用具有進階安全性的 Windows 防火牆嵌入式管理單元  
- 您可以使用具有進階安全性的 Windows 防火牆 MMC 嵌入式管理單元來設定其他進階的防火牆設定。 此嵌入式管理單元包含規則精靈，而且它會公開 [控制台] 中 [Windows 防火牆] 項目無法使用的額外設定。 這些設定包括：  
+ 您可以使用具有進階安全性的 Windows 防火牆 MMC 嵌入式管理單元來設定其他進階的防火牆設定。 此嵌入式管理單元包含規則精靈，而且它會公開 [控制台] 中 [Windows 防火牆]  項目無法使用的額外設定。 這些設定包括：  
   
 -   加密設定  
 -   服務限制   
@@ -264,8 +264,8 @@ ms.locfileid: "66506624"
   
 ### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>使用新增規則精靈來建立新的防火牆規則  
   
-1.  在 [開始] 功能表上，選取 [執行]、輸入 **WF.msc**，然後選取 [確定]。    
-2.  在 [具有進階安全性的 Windows 防火牆] 的左窗格中，以滑鼠右鍵按一下 [輸入規則]，然後選取 [新增規則]。   
+1.  在 [開始] 功能表上，選取 [執行]  、輸入 **WF.msc**，然後選取 [確定]  。    
+2.  在 [具有進階安全性的 Windows 防火牆]  的左窗格中，以滑鼠右鍵按一下 [輸入規則]  ，然後選取 [新增規則]  。   
 3.  使用您想要的設定來完成 **[新增輸入規則精靈]** 。  
   
 ##  <a name="BKMK_troubleshooting"></a> 疑難排解防火牆設定  

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5aec8974f2b21bd28869b2c06be9eadbf5cd239c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728702"
 ---
 # <a name="how-to-use-the-cdc-service-command-line-interface"></a>如何使用 CDC 服務命令列介面
@@ -27,7 +27,7 @@ ms.locfileid: "65728702"
   
 ### <a name="to-use-the-command-line"></a>若要使用命令列  
   
-1.  從 [開始] 功能表開啟命令列主控台。 在執行或搜尋方塊中輸入 **cmd** ，開啟主控台。  
+1.  從 [開始]  功能表開啟命令列主控台。 在執行或搜尋方塊中輸入 **cmd** ，開啟主控台。  
   
 2.  在命令提示字元輸入 **cd** 以及安裝 Oracle CDC 服務之資料夾的完整路徑。  
   

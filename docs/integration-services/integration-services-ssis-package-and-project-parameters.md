@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97c652c257b6d2aea6eec532c14ffebb6044ed45
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723596"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 套件和專案參數
@@ -119,7 +119,7 @@ ms.locfileid: "65723596"
   
      ![新增工具列按鈕](../integration-services/media/denali-parameter-add.gif "新增工具列按鈕")  
   
-3.  在清單本身或 **[屬性]** 視窗中，輸入 **[名稱]**、 **[資料類型]**、 **[值]**、 **[區分]** 以及 **[必要]** 屬性的值。 下表描述這些屬性。  
+3.  在清單本身或 **[屬性]** 視窗中，輸入 **[名稱]** 、 **[資料類型]** 、 **[值]** 、 **[區分]** 以及 **[必要]** 屬性的值。 下表描述這些屬性。  
   
     |屬性|Description|  
     |--------------|-----------------|  
@@ -134,15 +134,15 @@ ms.locfileid: "65723596"
   
 4.  儲存專案以儲存參數的變更。 參數值會儲存在專案檔案中。  
   
-    > **警告！！** 您可以在清單中就地編輯，也可以使用 [屬性] 視窗來修改參數屬性的值。 您可以使用 [刪除] **(X)** 工具列按鈕來刪除參數。 您可以使用最後一個工具列按鈕，為僅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中執行包時使用的參數指定值。  
+    > **警告！！** 您可以在清單中就地編輯，也可以使用 [屬性]  視窗來修改參數屬性的值。 您可以使用 [刪除] **(X)** 工具列按鈕來刪除參數。 您可以使用最後一個工具列按鈕，為僅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中執行包時使用的參數指定值。  
   
-    > **注意：** 如果您在沒有開啟 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中專案的情況下重新開啟封裝檔案，[參數] 索引標籤將會是空的，而且遭到停用。  
+    > **注意：** 如果您在沒有開啟 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中專案的情況下重新開啟封裝檔案，[參數]  索引標籤將會是空的，而且遭到停用。  
   
 ### <a name="create-project-parameters"></a>建立專案參數  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中開啟專案。  
   
-2.  以滑鼠右鍵按一下方案總管中的 **Project.params**，然後按一下 [開啟] \(或) 按兩下 **Project.params** 來開啟它。  
+2.  以滑鼠右鍵按一下方案總管中的 **Project.params**，然後按一下 [開啟]  \(或) 按兩下 **Project.params** 來開啟它。  
   
      ![專案參數視窗](../integration-services/media/denali-project-parameters.gif "專案參數視窗")  
   
@@ -150,7 +150,7 @@ ms.locfileid: "65723596"
   
      ![新增工具列按鈕](../integration-services/media/denali-parameter-add.gif "新增工具列按鈕")  
   
-4.  輸入 **[名稱]**、 **[資料類型]**、 **[值]**、 **[區分]** 以及 **[必要]** 屬性的值。  
+4.  輸入 **[名稱]** 、 **[資料類型]** 、 **[值]** 、 **[區分]** 以及 **[必要]** 屬性的值。  
   
     |屬性|Description|  
     |--------------|-----------------|  
@@ -163,10 +163,10 @@ ms.locfileid: "65723596"
   
 5.  儲存專案以儲存參數的變更。 參數值儲存在專案檔案的組態中。 儲存專案檔案即可將參數值的任何變更認可到磁碟。  
   
-    > **警告！！！** 您可以在清單中就地編輯，也可以使用 [屬性] 視窗來修改參數屬性的值。 您可以使用 [刪除] **(X)** 工具列按鈕來刪除參數。 使用最後一個工具列按鈕開啟 **[管理參數值]** 對話方塊，針對僅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中執行封裝時使用的參數指定值。  
+    > **警告！！！** 您可以在清單中就地編輯，也可以使用 [屬性]  視窗來修改參數屬性的值。 您可以使用 [刪除] **(X)** 工具列按鈕來刪除參數。 使用最後一個工具列按鈕開啟 **[管理參數值]** 對話方塊，針對僅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中執行封裝時使用的參數指定值。  
     
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
-[參數化] 對話方塊可讓您將新的或現有的參數與工作屬性建立關聯。 您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，以滑鼠右鍵按一下工作或 [控制流程] 索引標籤，然後按一下 [參數化] 即可開啟此對話方塊。 下列清單描述對話方塊中的 UI 元素。 如需參數的詳細資訊，請參閱 [Integration Services (SSIS) 參數](https://msdn.microsoft.com/library/hh213214.aspx)。
+[參數化]  對話方塊可讓您將新的或現有的參數與工作屬性建立關聯。 您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，以滑鼠右鍵按一下工作或 [控制流程] 索引標籤，然後按一下 [參數化]  即可開啟此對話方塊。 下列清單描述對話方塊中的 UI 元素。 如需參數的詳細資訊，請參閱 [Integration Services (SSIS) 參數](https://msdn.microsoft.com/library/hh213214.aspx)。
   
 ### <a name="options"></a>選項。  
  **屬性**  
@@ -191,7 +191,7 @@ ms.locfileid: "65723596"
  指定參數的預設值。 這也稱作設計預設值，以後在部署時可以覆蓋該值。  
   
  **範圍。**  
- 選取 [專案] 或 [封裝] 選項來指定參數的範圍。 專案參數可用於向專案中的一個或多個封裝提供專案接收的任何外部輸入。 封裝參數可讓您修改封裝執行，而不需要編輯和重新部署封裝。  
+ 選取 [專案]  或 [封裝]  選項來指定參數的範圍。 專案參數可用於向專案中的一個或多個封裝提供專案接收的任何外部輸入。 封裝參數可讓您修改封裝執行，而不需要編輯和重新部署封裝。  
   
  **區分**  
  透過檢查或清除該核取方塊來指定參數是否敏感。 敏感性參數值會在目錄中加密，以 Transact-SQL 或 SQL Server Management Studio 來檢視時，會顯示為 NULL 值。  
@@ -204,13 +204,13 @@ ms.locfileid: "65723596"
   
 ### <a name="set-server-defaults-with-ssms-object-explorer"></a>使用 SSMS 物件總管設定伺服器預設值  
   
-1.  選取並以滑鼠右鍵按一下 [Integration Services] 節點底下的專案。  
+1.  選取並以滑鼠右鍵按一下 [Integration Services]  節點底下的專案。  
   
 2.  按一下 **[屬性]** ，以開啟 **[專案屬性]** 對話方塊視窗。  
   
-3.  按一下 **[選取頁面]** 底下的 **[參數]**，以開啟參數頁面。  
+3.  按一下 **[選取頁面]** 底下的 **[參數]** ，以開啟參數頁面。  
   
-4.  在 **[參數]** 清單選取所需的參數。 注意:[容器] 資料行有助於區分專案參數與封裝參數。  
+4.  在 **[參數]** 清單選取所需的參數。 注意:[容器]  資料行有助於區分專案參數與封裝參數。  
   
 5.  在 **[值]** 資料行中，指定所需的伺服器預設參數值。  
 

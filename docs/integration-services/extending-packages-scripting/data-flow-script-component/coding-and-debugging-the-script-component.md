@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78ca74bfb07a8dcc8fa83c6d60a2571edd938c2c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724244"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>指令碼元件的程式碼撰寫和偵錯
@@ -34,14 +34,14 @@ ms.locfileid: "65724244"
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中，指令碼元件有中繼資料設計與程式碼設計兩種模式。 當您開啟 [指令碼轉換編輯器] 時，元件就會進入中繼資料設計模式，您可在其中設定中繼資料及元件屬性。 在您於中繼資料設計模式設定好指令碼元件的屬性和輸入及輸出後，就可以切換到程式碼設計模式編寫自訂的指令碼。 如需中繼資料設計模式和程式碼設計模式的詳細資訊，請參閱[在指令碼元件編輯器中設定指令碼元件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。  
+  在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中，指令碼元件有中繼資料設計與程式碼設計兩種模式。 當您開啟 [指令碼轉換編輯器]  時，元件就會進入中繼資料設計模式，您可在其中設定中繼資料及元件屬性。 在您於中繼資料設計模式設定好指令碼元件的屬性和輸入及輸出後，就可以切換到程式碼設計模式編寫自訂的指令碼。 如需中繼資料設計模式和程式碼設計模式的詳細資訊，請參閱[在指令碼元件編輯器中設定指令碼元件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。  
   
 ## <a name="writing-the-script-in-code-design-mode"></a>在程式碼設計模式中撰寫指令碼  
   
 ### <a name="script-component-development-environment"></a>指令碼元件開發環境  
- 若要撰寫指令碼，請在 [指令碼轉換編輯器] 的 [指令碼] 頁面上按一下 [編輯指令碼]，開啟 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE。 VSTA IDE 包含 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 環境的所有標準功能，例如色彩編碼的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 編輯器、IntelliSense 和物件瀏覽器。  
+ 若要撰寫指令碼，請在 [指令碼轉換編輯器]  的 [指令碼]  頁面上按一下 [編輯指令碼]  ，開啟 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE。 VSTA IDE 包含 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 環境的所有標準功能，例如色彩編碼的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 編輯器、IntelliSense 和物件瀏覽器。  
   
- 指令碼是以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 撰寫。 您可以在 [指令碼轉換編輯器] 中，藉由設定 **ScriptLanguage** 屬性來指定指令碼語言。 如果想要使用其他的程式語言，可以用您所選的語言開發自訂組件，然後在指令碼元件中，從程式碼呼叫其功能。  
+ 指令碼是以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 撰寫。 您可以在 [指令碼轉換編輯器]  中，藉由設定 **ScriptLanguage** 屬性來指定指令碼語言。 如果想要使用其他的程式語言，可以用您所選的語言開發自訂組件，然後在指令碼元件中，從程式碼呼叫其功能。  
   
  您在指令碼元件中建立的指令碼會儲存在封裝定義中， 而沒有個別的指令碼檔案。 因此，使用指令碼元件並不會影響封裝部署。  
   
@@ -64,9 +64,9 @@ ms.locfileid: "65724244"
   
     -   **Connections** 集合類別，這個類別包含 [指令碼轉換編輯器] 的 [連線管理員] 頁面上所選取連線的參考。  
   
-    -   **Variables** 集合類別，這個類別包含 [指令碼轉換編輯器] 的 [指令碼] 頁面上在 **ReadOnlyVariable** 和 **ReadWriteVariables** 屬性中所輸入變數的參考。  
+    -   **Variables** 集合類別，這個類別包含 [指令碼轉換編輯器]  的 [指令碼]  頁面上在 **ReadOnlyVariable** 和 **ReadWriteVariables** 屬性中所輸入變數的參考。  
   
--   **BufferWrapper** 專案項目所包含的類別，會針對 [指令碼轉換編輯器] 的 [輸入及輸出] 頁面上所設定的每個輸入和輸出，從 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 進行繼承。 這其中每個類別所包含的類型存取子屬性，都與設定的輸入和輸出資料行以及包含這些資料行的資料流緩衝區相對應。  
+-   **BufferWrapper** 專案項目所包含的類別，會針對 [指令碼轉換編輯器]  的 [輸入及輸出]  頁面上所設定的每個輸入和輸出，從 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 進行繼承。 這其中每個類別所包含的類型存取子屬性，都與設定的輸入和輸出資料行以及包含這些資料行的資料流緩衝區相對應。  
   
  如需如何使用這些物件、方法和屬性的資訊，請參閱[了解指令碼元件物件模型](../../../integration-services/extending-packages-scripting/data-flow-script-component/understanding-the-script-component-object-model.md)。 如需如何在特定的指令碼元件類型中使用這些類別的方法和屬性的資訊，請參閱[其他指令碼元件範例](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)。 範例主題也包含完整的程式碼範例。  
   
@@ -161,10 +161,10 @@ public class ScriptMain : UserComponent
  所有您加入的項目都會保存在封裝內。  
   
 #### <a name="references-in-the-script-component-project"></a>指令碼元件專案中的參考  
- 您可以在 [專案總管] 中以滑鼠右鍵按一下「指令碼」工作專案，再按 [新增參考]，新增 Managed 組件的參考。 如需詳細資訊，請參閱[參考指令碼解決方案中的其他組件](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)。  
+ 您可以在 [專案總管]  中以滑鼠右鍵按一下「指令碼」工作專案，再按 [新增參考]  ，新增 Managed 組件的參考。 如需詳細資訊，請參閱[參考指令碼解決方案中的其他組件](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)。  
   
 > [!NOTE]  
->  您可以在 VSTA IDE 中的 [類別檢視] 或 [專案總管] 中，檢視專案參考。 您可以從 [檢視] 功能表中開啟任一個視窗。 您可以從 [專案] 功能表、[專案總管] 或 [類別檢視] 新增參考。  
+>  您可以在 VSTA IDE 中的 [類別檢視]  或 [專案總管]  中，檢視專案參考。 您可以從 [檢視]  功能表中開啟任一個視窗。 您可以從 [專案]  功能表、[專案總管]  或 [類別檢視]  新增參考。  
   
 ## <a name="interacting-with-the-package-in-the-script-component"></a>與指令碼元件中的封裝互動  
  在指令碼元件中撰寫的自訂指令碼可以在自動產生的基底類別中，透過強型別 (Strongly-Typed) 的存取子從包含的封裝存取及使用變數和連接管理員。 不過，如果想要在指令碼中使用變數和連接管理員，則必須先設定變數和連接管理員，才能進入程式碼設計模式。 您也可以從指令碼元件程式碼引發事件和執行記錄。  
@@ -191,7 +191,7 @@ public class ScriptMain : UserComponent
   
 -   使用 **System.Windows.Forms** 命名空間中的 **MessageBox.Show** 方法中斷執行，並顯示強制回應訊息。 (請在完成偵錯程序之後移除此程式碼)。  
   
--   引發資訊訊息、警告和錯誤的事件。 FireInformation、FireWarning 和 FireError 方法會在 Visual Studio [輸出] 視窗中顯示事件描述。 不過，FireProgress 方法、Console.Write 方法和 Console.WriteLine 方法不會在 [輸出] 視窗中顯示任何資訊。 FireProgress 事件的訊息會顯示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師的 [進度] 索引標籤上。 如需詳細資訊，請參閱[在指令碼元件中引發事件](../../../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md)。  
+-   引發資訊訊息、警告和錯誤的事件。 FireInformation、FireWarning 和 FireError 方法會在 Visual Studio [輸出]  視窗中顯示事件描述。 不過，FireProgress 方法、Console.Write 方法和 Console.WriteLine 方法不會在 [輸出]  視窗中顯示任何資訊。 FireProgress 事件的訊息會顯示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師的 [進度]  索引標籤上。 如需詳細資訊，請參閱[在指令碼元件中引發事件](../../../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md)。  
   
 -   將事件或使用者定義的訊息記錄到啟用的記錄提供者。 如需詳細資訊，請參閱[在指令碼元件中記錄](../../../integration-services/extending-packages-scripting/data-flow-script-component/logging-in-the-script-component.md)。  
   

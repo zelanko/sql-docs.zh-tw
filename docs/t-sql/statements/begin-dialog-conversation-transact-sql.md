@@ -32,11 +32,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f26eace7208ce0ec251707a34e964f718fcc1d09
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124788"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051729"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
  FROM SERVICE *initiator_service_name*  
  指定起始對話的服務。 指定的名稱必須是目前資料庫中服務的名稱。 指定給起始端服務的佇列會接收目標服務傳回的訊息及 Service Broker 為了這項交談所建立的訊息。  
   
- TO SERVICE **'**_target_service_name_**'**  
+ TO SERVICE **'** _target_service_name_ **'**  
  指定起始對話時所指向的目標服務。 *target_service_name* 是 **nvarchar(256)** 類型。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 使用逐位元組的比較方式來比對 *target_service_name* 字串。 換言之，這項比較會區分大小寫，且不會考慮目前的定序。  
   
  *service_broker_guid*  
@@ -92,17 +92,17 @@ WHERE database_id = DB_ID() ;
  ON CONTRACT *contract_name*  
  指定這項交談遵照的合約。 合約必須在目前的資料庫中。 如果目標服務不接受指定合約的新交談，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在交談上傳回錯誤訊息。 當省略這個子句時，交談會遵照名稱為 **DEFAULT** 的合約。  
   
- RELATED_CONVERSATION **=**_related_conversation_handle_  
+ RELATED_CONVERSATION **=** _related_conversation_handle_  
  指定新對話要加入其中的現有交談群組。 當出現這個子句時，新對話與 *related_conversation_handle* 指定的對話屬於同一個交談群組。 *related_conversation_handle* 的類型必須可以隱含地轉換成 **uniqueidentifier** 類型。 如果 *related_conversation_handle* 並未參考現有的對話，陳述式將會失敗。  
   
- RELATED_CONVERSATION_GROUP **=**_related_conversation_group_id_  
+ RELATED_CONVERSATION_GROUP **=** _related_conversation_group_id_  
  指定新對話要加入其中的現有交談群組。 當出現這個子句時，新對話將會加入 *related_conversation_group_id* 指定的交談群組。 *related_conversation_group_id* 的類型必須可以隱含地轉換成 **uniqueidentifier** 類型。 如果 *related_conversation_group_id* 並未參考現有的交談群組，Service Broker 會利用指定的 *related_conversation_group_id* 來建立新交談群組，並使新對話與該交談群組產生關聯。  
   
- LIFETIME **=**_dialog_lifetime_  
+ LIFETIME **=** _dialog_lifetime_  
  指定對話維持開啟狀態的最大時間量。 為了使對話順利完成，兩個端點必須在存留期間過期之前明確地結束對話。 *dialog_lifetime* 值必須以秒為單位來表示。 存留期間的類型是 **int**。當沒有指定 LIFETIME 子句時，對話存留期間是 **int** 資料類型的最大值。  
   
  ENCRYPTION  
- 指定當這個對話所傳送和接收的訊息在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之外傳送時，是否必須加密。 必須加密的對話是「安全的對話」。 當 ENCRYPTION = ON 且未設定支援加密所需要的憑證時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在交談上傳回錯誤訊息。 當 ENCRYPTION = OFF 時，如果設定 *target_service_name* 的遠端服務繫結，便會使用加密；否則，會以不加密的方式來傳送訊息。 如果沒有這個子句，預設值便是 ON。  
+ 指定當這個對話所傳送和接收的訊息在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之外傳送時，是否必須加密。 必須加密的對話是「安全的對話」  。 當 ENCRYPTION = ON 且未設定支援加密所需要的憑證時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在交談上傳回錯誤訊息。 當 ENCRYPTION = OFF 時，如果設定 *target_service_name* 的遠端服務繫結，便會使用加密；否則，會以不加密的方式來傳送訊息。 如果沒有這個子句，預設值便是 ON。  
   
 > [!NOTE]  
 >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的相同執行個體中各項服務之間交換的訊息，絕對不會加密。 不過，如果交談服務在不同資料庫中，使用加密的交談仍需要資料庫主要金鑰以及用於加密的憑證。 如此一來，當進行交談時，如果其中一個資料庫移到不同的執行個體，仍可以繼續交談。  
@@ -122,7 +122,7 @@ WHERE database_id = DB_ID() ;
   
  在使用者自訂函數中，BEGIN DIALOG CONVERSATION 無效。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要開始一段對話，目前的使用者必須有命令的 FROM 子句所指定服務佇列的 RECEIVE 權限，以及指定合約的 REFERENCES 權限。  
   
 ## <a name="examples"></a>範例  

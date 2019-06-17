@@ -14,15 +14,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: b6c9bf93c92bb7797f179e0b6647993dff71e6b7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105115"
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>選項 (設計工具 - 資料表和資料庫設計工具頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用此頁面來決定設計師的預設行為。 若要存取設定，請在 [工具] 功能表上按一下 [選項]、展開 [設計工具] 資料夾，然後按一下 [資料表設計工具]。  
+使用此頁面來決定設計師的預設行為。 若要存取設定，請在 [工具]  功能表上按一下 [選項]  、展開 [設計工具]  資料夾，然後按一下 [資料表設計工具]  。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
 **覆寫資料表設計師更新的連接字串逾時值**  
@@ -80,5 +80,5 @@ ms.locfileid: "65105115"
     允許您選擇要檢視的資料行。  
   
 **在新圖表上啟動加入資料表對話方塊**  
-在開啟設計師時自動開啟 [新增資料表] 對話方塊。  
+在開啟設計師時自動開啟 [新增資料表]  對話方塊。  
   

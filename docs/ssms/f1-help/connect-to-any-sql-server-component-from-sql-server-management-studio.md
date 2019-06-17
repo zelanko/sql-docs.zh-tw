@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 8ce85a190288adeb02f19d71a76cc5a0d6c8605b
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102695"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>從 SQL Server Management Studio 連接到任何 SQL Server 元件
@@ -35,7 +35,7 @@ ms.locfileid: "65102695"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]之各項元件所需的功能。  
   
-雖然 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可讓您在沒有先建立資料來源連接的情況下，直接使用查詢，但大部分其他工作都需要連接。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供 [連接到伺服器] 對話方塊，可讓您設定對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的連線屬性。 當 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 啟動時，便會開啟 [連接到伺服器] 對話方塊，提示您連線到伺服器。 [連接到伺服器] 對話方塊會保留上次使用的連線設定。  
+雖然 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可讓您在沒有先建立資料來源連接的情況下，直接使用查詢，但大部分其他工作都需要連接。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供 [連接到伺服器]  對話方塊，可讓您設定對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的連線屬性。 當 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 啟動時，便會開啟 [連接到伺服器]  對話方塊，提示您連線到伺服器。 [連接到伺服器]  對話方塊會保留上次使用的連線設定。  
   
 > [!NOTE]  
 > 您可以關閉這項功能，因此，不會自動起始任何連接。 如需詳細資訊，請參閱 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
@@ -47,7 +47,7 @@ ms.locfileid: "65102695"
 當您註冊伺服器時， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會在已註冊的伺服器中儲存連接資訊。 若要連接到已註冊的伺服器，請在 [已註冊的伺服器] 中，按兩下這個伺服器名稱。 之後，[物件總管] 就會開啟通往伺服器的連接。  
   
 ### <a name="saving-connections-in-solution-explorer"></a>在 [方案總管] 中儲存連接  
-[方案總管] 可讓您在專案中儲存相關的查詢、指令碼、連接和其他相關的資訊。 每個指令碼專案都包含名為**連線**的節點，讓您可以從中儲存一或多個連線。 若要新增連接，請在 [連線]滑鼠右鍵，然後按一下 [新增連線]。 若要存取儲存的連線，請展開 [連線]，再按兩下該連線。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會開啟該連線所關聯的查詢視窗。 儲存好之後，指令碼會保留它們與特定連接的關聯。  
+[方案總管] 可讓您在專案中儲存相關的查詢、指令碼、連接和其他相關的資訊。 每個指令碼專案都包含名為**連線**的節點，讓您可以從中儲存一或多個連線。 若要新增連接，請在 [連線]  滑鼠右鍵，然後按一下 [新增連線]  。 若要存取儲存的連線，請展開 [連線]  ，再按兩下該連線。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會開啟該連線所關聯的查詢視窗。 儲存好之後，指令碼會保留它們與特定連接的關聯。  
   
 ## <a name="see-also"></a>另請參閱  
 [使用 SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  

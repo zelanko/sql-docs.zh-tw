@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6fd9f7ffc5c07fdfb310984426b57cd84e521137
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716978"
 ---
 # <a name="catalogcreateexecutiondump"></a>catalog.create_execution_dump 
@@ -25,7 +25,7 @@ ms.locfileid: "65716978"
 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  導致執行中的封裝暫停，並建立傾印檔案。 此檔案儲存於 \<磁碟機>:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps 資料夾。  
+  導致執行中的封裝暫停，並建立傾印檔案。 此檔案儲存於 \<磁碟機>  :\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps 資料夾。  
   
 ## <a name="syntax"></a>語法  
   

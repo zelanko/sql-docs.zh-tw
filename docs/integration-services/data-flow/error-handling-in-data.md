@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28f2c5ecd2e25e9e3bbdd59cd8ea79b58b756cb7
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726912"
 ---
 # <a name="error-handling-in-data"></a>處理資料中的錯誤
@@ -59,7 +59,7 @@ ms.locfileid: "65726912"
  如需詳細資訊，請參閱 [資料流程](../../integration-services/data-flow/data-flow.md) 和 [Integration Services 路徑](../../integration-services/data-flow/integration-services-paths.md)。  
 
 ## <a name="configure-error-output-dialog-box"></a>[設定錯誤輸出] 對話方塊
-使用 [設定錯誤輸出] 對話方塊，即可為支援錯誤輸出的資料流程轉換設定錯誤處理選項。  
+使用 [設定錯誤輸出]  對話方塊，即可為支援錯誤輸出的資料流程轉換設定錯誤處理選項。  
   
  若要深入了解如何使用錯誤輸出，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。  
   
@@ -73,12 +73,12 @@ ms.locfileid: "65726912"
  **錯誤**  
  如果適用的話，請指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題：**[資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相關主題：** [資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截斷**  
  如果適用的話，請指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題：**[資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相關主題：** [資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **說明**  
  檢視作業的描述。  
@@ -112,7 +112,7 @@ ms.locfileid: "65726912"
   
  這兩項數值若無對應的錯誤描述和資料行名稱，則用途有限。 以下是一些方法，以取得錯誤描述和資料行名稱。  
   
--   您可以藉由附加至錯誤輸出的資料檢視器看到錯誤描述和資料行名稱。 在 [SSIS 設計師] 中，以滑鼠右鍵按一下連至錯誤輸出的紅色箭頭，然後選取 [啟用資料檢視器]。  
+-   您可以藉由附加至錯誤輸出的資料檢視器看到錯誤描述和資料行名稱。 在 [SSIS 設計師] 中，以滑鼠右鍵按一下連至錯誤輸出的紅色箭頭，然後選取 [啟用資料檢視器]  。  
   
 -   您可以啟用記錄並選取 **DiagnosticEx** 事件，找到資料行名稱。 此事件會將資料流程資料行對應寫入記錄檔。 接著從這個資料行對應中的資料行識別項，查閱資料行名稱。 請注意， **DiagnosticEx** 事件不會在其 XML 輸出中保留空白，以縮減記錄檔的大小。 若要改善可讀性，可將記錄檔複製到 XML 編輯器 (例如，在 Visual Studio 中)，該編輯器需支援 XML 格式設定和語法反白顯示。 如需記錄的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   

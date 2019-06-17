@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cce0b8606b398d1c72b70c161bb8ccdf0d779167
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728057"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services 執行 DDL 工作
@@ -237,7 +237,7 @@ ms.locfileid: "65728057"
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask>  
   
 ## <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Analysis Services 執行 DDL 工作編輯器 (一般頁面)
-  使用 [Analysis Services 執行 DDL 工作編輯器] 對話方塊的 [一般] 頁面，即可命名並描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL 工作。  
+  使用 [Analysis Services 執行 DDL 工作編輯器]  對話方塊的 [一般]  頁面，即可命名並描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL 工作。  
   
 ### <a name="options"></a>選項。  
  **名稱**  
@@ -250,20 +250,20 @@ ms.locfileid: "65728057"
  輸入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL 工作的描述。  
   
 ## <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Analysis Services 執行 DDL 工作編輯器 (DDL 頁面)
-  使用 [Analysis Services 執行 DDL 工作編輯器] 對話方塊的 [DDL] 頁面，即可指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的連接，並提供資料定義語言 (DDL) 陳述式來源的相關資訊。  
+  使用 [Analysis Services 執行 DDL 工作編輯器]  對話方塊的 [DDL]  頁面，即可指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的連接，並提供資料定義語言 (DDL) 陳述式來源的相關資訊。  
   
 ### <a name="static-options"></a>靜態選項  
  **[連接]**  
- 選取清單中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連線管理員，或是按一下 [\<新增連線...>] 並使用 [新增 Analysis Services 連線管理員] 對話方塊，即可建立新的連線。  
+ 選取清單中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連線管理員，或是按一下 [\<新增連線...>]  並使用 [新增 Analysis Services 連線管理員]  對話方塊，即可建立新的連線。  
   
- **相關主題：**[加入 Analysis Services 連線管理員對話方塊 UI 參考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、[Analysis Services 連線管理員](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+ **相關主題：** [加入 Analysis Services 連線管理員對話方塊 UI 參考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、[Analysis Services 連線管理員](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
  **SourceType**  
  指定 DDL 陳述式的來源類型。 此屬性具有下表所列的選項：  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**直接輸入**|將來源設定為 [SourceDirect] 文字方塊中所儲存的 DDL 陳述式。 選取這個值就會顯示在下列章節中的動態選項。|  
+|**直接輸入**|將來源設定為 [SourceDirect]  文字方塊中所儲存的 DDL 陳述式。 選取這個值就會顯示在下列章節中的動態選項。|  
 |**檔案連接**|將來源設定為包含 DDL 陳述式的檔案。 選取這個值就會顯示在下列章節中的動態選項。|  
 |**變數**|將來源設定為變數。 選取這個值就會顯示在下列章節中的動態選項。|  
   
@@ -271,17 +271,17 @@ ms.locfileid: "65728057"
   
 #### <a name="sourcetype--direct-input"></a>SourceType = 直接輸入  
  **Source**  
- 鍵入 DDL 陳述式或按一下省略符號 **(...)**，然後在 [DDL 陳述式] 對話方塊中鍵入陳述式。  
+ 鍵入 DDL 陳述式或按一下省略符號 **(...)** ，然後在 [DDL 陳述式]  對話方塊中鍵入陳述式。  
   
 #### <a name="sourcetype--file-connection"></a>SourceType = 檔案連接  
  **Source**  
- 選取清單中的 [檔案連線]，或是按一下 [\<新增連線...>] 再使用 [檔案連線管理員] 對話方塊，即可建立新的連線。  
+ 選取清單中的 [檔案連線]，或是按一下 [\<新增連線...>]  再使用 [檔案連線管理員]  對話方塊，即可建立新的連線。  
   
- **相關主題：**[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
+ **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
   
 #### <a name="sourcetype--variable"></a>SourceType = 變數  
  **Source**  
- 在清單中選取變數，或按一下 [\<新增變數...>] 並使用 [新增變數] 對話方塊，以建立新的變數。  
+ 在清單中選取變數，或按一下 [\<新增變數...>]  並使用 [新增變數]  對話方塊，以建立新的變數。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)  
+ **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)  
   

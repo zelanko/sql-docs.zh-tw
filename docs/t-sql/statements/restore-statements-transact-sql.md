@@ -42,10 +42,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: b673b21eca837e9ccaacd3a47c819287a854e6f8
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947049"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 陳述式 (Transact-SQL)
@@ -64,7 +64,7 @@ ms.locfileid: "65947049"
 
 ||||
 |-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+|** _\* SQL Server \*_ ** &nbsp;|[SQL Database<br />受控執行個體](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
 ||||
 
 &nbsp;
@@ -322,7 +322,7 @@ RESTORE 陳述式利用 [ RECOVERY | NORECOVERY ] 選項來控制回復：
 
 - RECOVERY (預設值) 表示在完成目前備份的向前復原之後，應該執行回復。
 
-  復原資料庫時，會要求要還原的整組資料 (向前復原集) 與資料庫一致。 如果向前復原集尚未向前復原到足以與資料庫一致的範圍，且指定了 RECOVERY，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會發出錯誤。
+  復原資料庫時，會要求要還原的整組資料 (向前復原集  ) 與資料庫一致。 如果向前復原集尚未向前復原到足以與資料庫一致的範圍，且指定了 RECOVERY，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會發出錯誤。
 
 ## <a name="compatibility-support"></a>相容性支援
 
@@ -410,7 +410,7 @@ REPLACE 選項會覆寫還原通常會執行的數項重要安全檢查。 會�
 
 ## <a name="reverting-a-database-to-a-database-snapshot"></a>將資料庫還原為資料庫快照集
 
-「還原資料庫作業」(使用 DATABASE_SNAPSHOT 選項來指定) 會藉由將整個來源資料庫還原至資料庫快照集的時間，也就是使用在所指定資料庫快照集中維護的時間點資料來覆寫來源資料庫，讓整個來源資料庫回到過去的時間。 目前能存在的快照集只限於您要還原的目標快照集。 之後，還原作業會重建記錄檔 (因此，您無法稍後再將還原的資料庫向前復原到發生使用者錯誤的那個時間點)。
+「還原資料庫作業」  (使用 DATABASE_SNAPSHOT 選項來指定) 會藉由將整個來源資料庫還原至資料庫快照集的時間，也就是使用在所指定資料庫快照集中維護的時間點資料來覆寫來源資料庫，讓整個來源資料庫回到過去的時間。 目前能存在的快照集只限於您要還原的目標快照集。 之後，還原作業會重建記錄檔 (因此，您無法稍後再將還原的資料庫向前復原到發生使用者錯誤的那個時間點)。
 
 您只會失去建立快照集之後的資料庫更新資料。 還原資料庫的中繼資料與建立快照集時的中繼資料相同。 不過，還原為快照集會卸除所有全文檢索目錄。
 
@@ -736,7 +736,7 @@ RESTORE DATABASE Sales
 
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />受控執行個體 \*_**|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|** _\* SQL Database<br />受控執行個體 \*_ **|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -877,7 +877,7 @@ WHERE r.command = 'RESTORE DATABASE'
 
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|[SQL Database<br />受控執行個體](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System (PDW) \*_**
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|[SQL Database<br />受控執行個體](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System (PDW) \*_ **
 
 &nbsp;
 

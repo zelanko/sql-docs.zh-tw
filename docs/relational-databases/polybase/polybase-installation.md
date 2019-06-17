@@ -13,10 +13,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: b3e6a0fc14137ca13e3539a7046edf576b4719ed
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64775051"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安裝 PolyBase
@@ -69,13 +69,13 @@ ms.locfileid: "64775051"
    
 1. 執行 SQL Server setup.exe。   
    
-2. 選取 [安裝]，然後選取 [新的獨立 SQL Server 安裝或新增功能]。  
+2. 選取 [安裝]  ，然後選取 [新的獨立 SQL Server 安裝或新增功能]  。  
    
-3. 在 [功能選取] 頁面上，選取 [適用於外部資料的 PolyBase 查詢服務]。  
+3. 在 [功能選取] 頁面上，選取 [適用於外部資料的 PolyBase 查詢服務]  。  
 
    ![PolyBase 服務](../../relational-databases/polybase/media/install-wizard.png "PolyBase 服務")  
    
-4. 在 [伺服器設定] 頁面上，將 [SQL Server PolyBase 引擎服務] 和 [SQL Server PolyBase 資料移動服務] 設定為在同一個網域帳戶下執行。  
+4. 在 [伺服器設定] 頁面上，將 [SQL Server PolyBase 引擎服務]  和 [SQL Server PolyBase 資料移動服務]  設定為在同一個網域帳戶下執行。  
 
    >[!IMPORTANT]
    >在 PolyBase 向外延展群組中，所有節點上的 PolyBase 引擎和 PolyBase 資料移動服務必須在同一個網域帳戶執行。 請參閱 [PolyBase 向外延展群組](#enable)。
@@ -190,13 +190,13 @@ SQL Server PolyBase 安裝程式會在電腦上建立下列防火牆規則：
    
 #### <a name="to-enable-the-firewall-rules"></a>啟用防火牆規則  
 
-1. 開啟 [控制台]。  
+1. 開啟 [控制台]  。  
 
-2. 選取 [系統及安全性]，然後選取 [Windows 防火牆]。  
+2. 選取 [系統及安全性]  ，然後選取 [Windows 防火牆]  。  
    
-3. 選取 [進階設定]，然後選取 [輸入規則]。  
+3. 選取 [進階設定]  ，然後選取 [輸入規則]  。  
    
-4. 以滑鼠右鍵按一下已停用的規則，然後選取 [啟用規則]。  
+4. 以滑鼠右鍵按一下已停用的規則，然後選取 [啟用規則]  。  
    
 ### <a name="polybase-service-accounts"></a>PolyBase 服務帳戶
 

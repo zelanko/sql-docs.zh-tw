@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 51332c1d9d5076752a3897a12e5e6a1e5a2b6ee2
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102862"
 ---
 # <a name="move-items-in-a-solution"></a>移動方案中的項目
@@ -30,11 +30,11 @@ ms.locfileid: "65102862"
   
 1.  在 [方案總管] 中，選取您要移動的項目。  
   
-2.  在 [編輯] 功能表上，按一下 [剪下]。  
+2.  在 [編輯]  功能表上，按一下 [剪下]  。  
   
 3.  在 [方案總管] 中，選取目的地。  
   
-4.  在 [編輯] 功能表上，按一下 [貼上]。  
+4.  在 [編輯]  功能表上，按一下 [貼上]  。  
   
 您可以在 [方案總管] 內拖曳「查詢」和「其他」檔案來移動項目。 拖曳可讓您查看拖曳作業的結果。 在專案類型之間移動查詢，可能會造成在目標專案中，將查詢視為其他檔案。  
   

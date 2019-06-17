@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0a6a198d252f2363fc55e38677518ec02724e3e2
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102024"
 ---
 # <a name="troubleshooting-sql-server-database-unit-testing-issues"></a>疑難排解 SQL Server 資料庫單元測試的問題
@@ -28,7 +28,7 @@ ms.locfileid: "65102024"
 -   [執行資料庫單元測試發生逾時](#TimeoutsDuringUnitTests)  
   
 ## <a name="UnitTestingAndAppConfigChanges"></a>執行單元測試後，單元測試以及 App.Config 的變更遭到忽略  
-如果您已修改測試專案中的 App.Config 檔案，就必須重建測試專案，這些變更才會生效， 其中包括了使用 [SQL Server 測試組態] 對話方塊對 App.Config 所做的變更。 若您並未重建測試專案，執行單元測試時便不會套用任何變更。  
+如果您已修改測試專案中的 App.Config 檔案，就必須重建測試專案，這些變更才會生效， 其中包括了使用 [SQL Server 測試組態]  對話方塊對 App.Config 所做的變更。 若您並未重建測試專案，執行單元測試時便不會套用任何變更。  
   
 ## <a name="DatabaseDeploymentInUnitTests"></a>執行單元測試後，資料庫部署至非預期的目標  
 如果您是從執行單元測試的資料庫專案來部署資料庫，該資料庫將會使用單元測試組態中所指定的連接字串資訊進行部署。 這項作業並未採用資料庫專案的 [偵錯] 屬性所指定的連接資訊，以便讓您能夠對同一個資料庫的不同執行個體執行 SQL Server 單元測試。  

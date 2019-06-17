@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae385bd59de5f282ce383c6f819c6b5feb6521e6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721802"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>課程 4-3：新增錯誤流程重新導向
@@ -34,29 +34,29 @@ ms.locfileid: "65721802"
   
 ## <a name="configure-an-error-output"></a>設定錯誤輸出  
   
-1.  在 **[SSIS 工具箱]** 中，展開 **[通用]**，然後將 **[指令碼元件]** 拖曳至 **[資料流程]** 索引標籤的設計介面中。將 **[指令碼]** 放到 **[查閱貨幣索引鍵]** 轉換的右邊。  
+1.  在 **[SSIS 工具箱]** 中，展開 **[通用]** ，然後將 **[指令碼元件]** 拖曳至 **[資料流程]** 索引標籤的設計介面中。將 **[指令碼]** 放到 **[查閱貨幣索引鍵]** 轉換的右邊。  
   
-2.  在 [選取指令碼元件類型] 對話方塊中，選取 [轉換]，然後選取 [確定]。  
+2.  在 [選取指令碼元件類型]  對話方塊中，選取 [轉換]  ，然後選取 [確定]  。  
   
-3.  若要連接兩個元件，請選取 [查閱貨幣索引鍵] 轉換，然後將其紅色箭頭拖曳至新的 [指令碼]。  
+3.  若要連接兩個元件，請選取 [查閱貨幣索引鍵]  轉換，然後將其紅色箭頭拖曳至新的 [指令碼]  。  
   
     紅色箭頭代表 **[查閱貨幣索引鍵]** 轉換的錯誤輸出。 藉由使用紅色箭頭將轉換連接到「指令碼」元件，即可將任何處理錯誤重新導向到該「指令碼」元件，然後由它處理這些錯誤並傳送到目的地。  
   
-4.  在 [設定錯誤輸出] 對話方塊的 [錯誤] 資料行中，選取 [重新導向資料列]，然後選取 [確定]。  
+4.  在 [設定錯誤輸出]  對話方塊的 [錯誤]  資料行中，選取 [重新導向資料列]  ，然後選取 [確定]  。  
   
-5.  在 [資料流程] 設計介面上，於新的 **ScriptComponent** 中選取 [指令碼元件] 名稱，然後將該名稱變更為**取得錯誤描述**。  
+5.  在 [資料流程]  設計介面上，於新的 **ScriptComponent** 中選取 [指令碼元件]  名稱，然後將該名稱變更為**取得錯誤描述**。  
   
-6.  按兩下 [取得錯誤描述] 轉換。  
+6.  按兩下 [取得錯誤描述]  轉換。  
   
 7.  在 **[指令碼轉換編輯器]** 對話方塊的 **[輸入資料行]** 頁面上，選取 **[ErrorCode]** 資料行。  
   
-8.  在 [輸入及輸出] 頁面上，展開 [輸出 0]，選取 [輸出資料行]，然後選取 [加入資料行]。  
+8.  在 [輸入及輸出]  頁面上，展開 [輸出 0]  ，選取 [輸出資料行]  ，然後選取 [加入資料行]  。  
   
-9. 在 [Name] 屬性中，輸入 *ErrorDescription*，然後將 [DataType] 屬性設定為 [Unicode 字串 [DT_WSTR]]。  
+9. 在 [Name]  屬性中，輸入 *ErrorDescription*，然後將 [DataType]  屬性設定為 [Unicode 字串 [DT_WSTR]]  。  
   
-10. 在 [指令碼] 頁面上，確認 [LocaleID] 屬性是設定為 [英文 (美國)]。
+10. 在 [指令碼]  頁面上，確認 [LocaleID]  屬性是設定為 [英文 (美國)]  。
   
-11. 選取 [編輯指令碼] 以開啟 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA)。 在 **Input0_ProcessInputRow** 方法中，輸入或貼上下列程式碼：  
+11. 選取 [編輯指令碼]  以開啟 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA)。 在 **Input0_ProcessInputRow** 方法中，輸入或貼上下列程式碼：  
   
     [Visual Basic]  
   
@@ -95,9 +95,9 @@ ms.locfileid: "65721802"
         }  
     ```  
   
-12. 在 [建置] 功能表上，選取 [建置方案] 以建置指令碼並儲存您的變更，然後關閉 VSTA。  
+12. 在 [建置]  功能表上，選取 [建置方案]  以建置指令碼並儲存您的變更，然後關閉 VSTA。  
   
-13. 選取 [確定] 以關閉 [指令碼轉換編輯器] 對話方塊。  
+13. 選取 [確定]  以關閉 [指令碼轉換編輯器]  對話方塊。  
   
 ## <a name="go-to-next-task"></a>移至下一個工作
 [步驟 4：新增一般檔案目的地](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  

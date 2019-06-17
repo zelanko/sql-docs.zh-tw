@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a8d607e528164e71d1e771d497ff7660cb7ecf66
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132988"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62669663"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>可更新訂閱 - 異動複寫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "54132988"
   
 -   因為訂閱者無法從複寫變更追蹤觸發器中所插入或刪除的資料表中讀取 **text**、 **ntext** 或 **image** 值，所以訂閱者無法更新或插入這些值。 因為資料會由發行者所覆寫，所以訂閱者也同樣無法使用 **WRITETEXT** 或 **UPDATETEXT** 更新或插入 **text** 或 **image** 值。 您反而可以將 **text** 及 **image** 資料行分割到不同的資料表，並在交易中修改這兩個資料表。  
   
-     若要更新訂閱者中的大型物件，請使用資料類型 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)** ，而不要個別使用 **text**、 **ntext**及 **image** 資料類型。  
+     若要更新訂閱者中的大型物件，請使用資料類型 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** ，而不要個別使用 **text**、 **ntext**及 **image** 資料類型。  
   
 -   若更新專用索引鍵 (包含主索引鍵) 會造成重複 (例如更新格式 `UPDATE <column> SET <column> =<column>+1` )，將無法執行此作業，而且會因為違反不重複原則而遭到拒絕。 這是因為在訂閱者進行的設定更新，會在每個資料列受到影響時，透過複寫方式個別的 **UPDATE** 陳述式進行傳播。  
   

@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9e6c504b96e181a0362cf7d20daa95017d2140fa
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725707"
 ---
 # <a name="xml-source"></a>XML 來源
@@ -77,7 +77,7 @@ ms.locfileid: "65725707"
   
  XML 來源支援多項規則輸出和多項錯誤輸出。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括用來設定 XML 來源的 [XML 來源編輯器] 對話方塊。 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中即提供此對話方塊。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括用來設定 XML 來源的 [XML 來源編輯器]  對話方塊。 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中即提供此對話方塊。  
   
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
@@ -108,22 +108,22 @@ ms.locfileid: "65725707"
  指定 XML 來源資料本身是否包含定義及驗證其結構和資料的 XSD 結構描述。  
   
  **XSD 位置**  
- 輸入 XSD 結構描述檔案的路徑和檔案名稱，或按一下 [瀏覽] 來找出檔案。  
+ 輸入 XSD 結構描述檔案的路徑和檔案名稱，或按一下 [瀏覽]  來找出檔案。  
   
  **瀏覽**  
- 使用 [開啟] 對話方塊來找出 XSD 結構描述檔案。  
+ 使用 [開啟]  對話方塊來找出 XSD 結構描述檔案。  
   
  **產生 XSD**  
- 使用 [另存新檔] 對話方塊，來選取自動產生之 XSD 結構描述檔案的位置。 編輯器會從 XML 資料的結構中推斷結構描述。  
+ 使用 [另存新檔]  對話方塊，來選取自動產生之 XSD 結構描述檔案的位置。 編輯器會從 XML 資料的結構中推斷結構描述。  
   
 ### <a name="data-access-mode-dynamic-options"></a>資料存取模式動態選項  
   
 #### <a name="data-access-mode--xml-file-location"></a>資料存取模式 = XML 檔案位置  
  **XML 位置**  
- 輸入 XML 資料檔的路徑和檔案名稱，或按一下 [瀏覽] 來找出檔案。  
+ 輸入 XML 資料檔的路徑和檔案名稱，或按一下 [瀏覽]  來找出檔案。  
   
  **瀏覽**  
- 使用 [開啟] 對話方塊來找出 XML 資料檔。  
+ 使用 [開啟]  對話方塊來找出 XML 資料檔。  
   
 #### <a name="data-access-mode--xml-file-from-variable"></a>資料存取模式 = 來自變數的 XML 檔案  
  **變數名稱**  
@@ -134,7 +134,7 @@ ms.locfileid: "65725707"
  選取包含 XML 資料的變數。  
   
 ## <a name="xml-source-editor-columns-page"></a>XML 來源編輯器 (資料行頁面)
-  使用 [XML 來源編輯器] 對話方塊的 [資料行] 節點，即可將輸出資料行對應至外部 (來源) 資料行。  
+  使用 [XML 來源編輯器]  對話方塊的 [資料行]  節點，即可將輸出資料行對應至外部 (來源) 資料行。  
   
 ### <a name="options"></a>選項。  
  **可用的外部資料行**  
@@ -154,12 +154,12 @@ ms.locfileid: "65725707"
  檢視資料來源的名稱。  
   
  **資料行**  
- 檢視您在 [XML 來源編輯器] 對話方塊的 [連線管理員] 頁面上所選取的外部 (來源) 資料行。  
+ 檢視您在 [XML 來源編輯器]  對話方塊的 [連線管理員]  頁面上所選取的外部 (來源) 資料行。  
   
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題：**[資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相關主題：** [資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截斷**  
  指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  

@@ -1,5 +1,5 @@
 ---
-Title: 使用 SQL Server Management Studio 中的範本
+title: 使用 SQL Server Management Studio 中的範本
 description: 在 SSMS 中使用範本的教學課程。
 keywords: SQL Server, SSMS, SQL Server Management Studio, 範本
 author: MashaMSFT
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 7d93874f237585dd53f1783e4abcf2fae7ba9cc0
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 30b40d10ec7a4da7df0bfc9e4ba1f3aa6bb68ef5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500690"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822948"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>使用 SQL Server Management Studio 中的範本
 
@@ -44,13 +44,13 @@ ms.locfileid: "66500690"
 
 1. 開啟 SQL Server Management Studio。
 
-2. 在 [檢視] 功能表中，選取 [範本瀏覽器] (Ctrl+Alt+T)：
+2. 在 [檢視]  功能表中，選取 [範本瀏覽器]  (Ctrl+Alt+T)：
 
     ![開啟範本瀏覽器](media/templates-ssms/templatebrowser.png)
 
     您可以在範本瀏覽器底部查看最近使用過的範本。
 
-3. 展開您感興趣的節點。 以滑鼠右鍵按一下範本，然後選取 [開啟]。
+3. 展開您感興趣的節點。 以滑鼠右鍵按一下範本，然後選取 [開啟]  。
 
     ![開啟範本](media/templates-ssms/opentemplate.png)
 
@@ -58,7 +58,7 @@ ms.locfileid: "66500690"
 
 4. 隨即開啟 [新增查詢] 視窗。 已填入 T-SQL 指令碼。
 
-5. 修改範本以符合您的需求，然後選取 [執行] 來執行查詢：
+5. 修改範本以符合您的需求，然後選取 [執行]  來執行查詢：
 
     ![建立資料庫範本](media/templates-ssms/createdbtemplate.png)
 
@@ -68,13 +68,13 @@ ms.locfileid: "66500690"
 
 1. 在範本瀏覽器中，移至您想要使用的範本。
 
-2. 以滑鼠右鍵按一下範本，然後選取 [編輯]：
+2. 以滑鼠右鍵按一下範本，然後選取 [編輯]  ：
 
     ![編輯範本](media/templates-ssms/edittemplate.png)
 
 3. 在開啟的查詢視窗中，進行您想要的變更。
 
-4. 選取 [檔案] > [儲存] (Ctrl + S) 以儲存範本。
+4. 選取 [檔案]   > [儲存]  (Ctrl + S) 以儲存範本。
 
 5. 關閉查詢視窗。
 
@@ -84,9 +84,9 @@ ms.locfileid: "66500690"
 
 開啟範本時，您可以找出磁碟上的範本。
 
-1. 在範本瀏覽器中選取範本，然後選取 [編輯]。
+1. 在範本瀏覽器中選取範本，然後選取 [編輯]  。
 
-2. 以滑鼠右鍵按一下 [查詢標題]，然後選取 [開啟所屬資料夾]。 總管應該會開啟範本儲存在磁碟上的位置： 
+2. 以滑鼠右鍵按一下 [查詢標題]  ，然後選取 [開啟所屬資料夾]  。 總管應該會開啟範本儲存在磁碟上的位置： 
 
    ![磁碟上的範本](media/templates-ssms/templatesondisk.png)
   
@@ -96,21 +96,21 @@ ms.locfileid: "66500690"
 
 1. 開啟範本瀏覽器。
 
-2. 以滑鼠右鍵按一下 [SQL Server 範本]，然後選取 [新增] > [資料夾]。
+2. 以滑鼠右鍵按一下 [SQL Server 範本]  ，然後選取 [新增]   > [資料夾]  。
 
 3. 將此資料夾命名為**自訂範本**：
 
     ![建立自訂範本資料夾](media/templates-ssms/creatingcustomtemplate.png)
 
-4. 以滑鼠右鍵按一下新建立的 [自訂範本] 資料夾，然後選取 [新增] > [範本]。 輸入您的範本名稱：
+4. 以滑鼠右鍵按一下新建立的 [自訂範本] 資料夾，然後選取 [新增]   > [範本]  。 輸入您的範本名稱：
 
     ![建立自訂範本](media/templates-ssms/createnewtemplate.png)
 
-5. 以滑鼠右鍵按一下您建立的範本，然後選取 [編輯]。 隨即開啟 [新增查詢] 視窗。
+5. 以滑鼠右鍵按一下您建立的範本，然後選取 [編輯]  。 隨即開啟 [新增查詢] 視窗。
 
 6. 輸入您想要儲存的 T-SQL 文字。 
 
-7. 在 [檔案] 功能表中，選取 [儲存]。
+7. 在 [檔案]  功能表中，選取 [儲存]  。
 
 8. 關閉現有查詢視窗，然後開啟您的新自訂範本。 
 

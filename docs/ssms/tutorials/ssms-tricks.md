@@ -21,10 +21,10 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 03/13/2018
 ms.openlocfilehash: 4c6585e8e2c467c6e0a4a288107fd59cae64f84b
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66499425"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>教學課程：使用 SSMS 的其他祕訣與訣竅
@@ -48,7 +48,7 @@ ms.locfileid: "66499425"
 
 ## <a name="commentuncomment-your-t-sql-code"></a>註解與取消註解您的 T-SQL 程式碼
 
-透過使用工具列中的 [註解] 按鈕，可以對部分文字進行註解與取消註解。 標記為註解的文字將不會執行。
+透過使用工具列中的 [註解]  按鈕，可以對部分文字進行註解與取消註解。 標記為註解的文字將不會執行。
 
 1. 開啟 SQL Server Management Studio。
 
@@ -79,26 +79,26 @@ ms.locfileid: "66499425"
         GO
    ```
 
-5. 反白顯示文字中的 **Alter Database** 部分，然後選取工具列上的 [註解] 按鈕： 
+5. 反白顯示文字中的 **Alter Database** 部分，然後選取工具列上的 [註解]  按鈕： 
 
     ![[註解] 按鈕](media/ssms-tricks/comment.png)
-6. 選取 [執行] 來執行文字中未註解的部分。 
+6. 選取 [執行]  來執行文字中未註解的部分。 
 
-7. 反白顯示除了 **Alter Database** 命令的所有項目，然後選取 [註解] 按鈕：
+7. 反白顯示除了 **Alter Database** 命令的所有項目，然後選取 [註解]  按鈕：
 
     ![註解所有項目](media/ssms-tricks/commenteverything.png)
 
     > [!NOTE]
     > 加上文字註解的鍵盤快速鍵為 **CTRL + K、CTRL + C**。
 
-8. 反白顯示文字中的 **Alter Database** 部分，然後選取 [取消註解] 按鈕，將它取消註解：
+8. 反白顯示文字中的 **Alter Database** 部分，然後選取 [取消註解]  按鈕，將它取消註解：
 
     ![取消註解文字](media/ssms-tricks/uncomment.png)
 
     > [!NOTE]
     > 取消文字註解的鍵盤快速鍵為 **CTRL + K、CTRL + U**。
 
-9. 選取 [執行] 來執行文字中未註解的部分。
+9. 選取 [執行]  來執行文字中未註解的部分。
 
 ## <a name="indent-your-text"></a>縮排文字
 
@@ -129,11 +129,11 @@ ms.locfileid: "66499425"
       GO
     ```
 
-3. 反白文字中的 **Alter Database** 部分，然後選取工具列上的 [增加縮排] 按鈕，將這段文字向前移動：
+3. 反白文字中的 **Alter Database** 部分，然後選取工具列上的 [增加縮排]  按鈕，將這段文字向前移動：
 
     ![增加縮排](media/ssms-tricks/increaseindent.png)
 
-4. 再一次反白顯示文字中的 **Alter Database** 部分，然後選取 [減少縮排] 按鈕，將這段文字向後移動。
+4. 再一次反白顯示文字中的 **Alter Database** 部分，然後選取 [減少縮排]  按鈕，將這段文字向後移動。
 
     ![減少縮排](media/ssms-tricks/decreaseindent.png)
 
@@ -143,13 +143,13 @@ ms.locfileid: "66499425"
 
 1. 連線到 SQL Server。
 
-2. 展開 [資料庫] > [AdventureWorks] > [資料表]。 資料庫中的所有資料表都會出現。
+2. 展開 [資料庫]   > [AdventureWorks]   > [資料表]  。 資料庫中的所有資料表都會出現。
 
-3. 以滑鼠右鍵按一下 [資料表]，然後選取 [篩選] > [篩選設定]：
+3. 以滑鼠右鍵按一下 [資料表]  ，然後選取 [篩選]   > [篩選設定]  ：
 
     ![篩選設定](media/ssms-tricks/filtersettings.png)
 
-4. 在 [篩選設定] 視窗中，您可以修改下列部分篩選設定：
+4. 在 [篩選設定]  視窗中，您可以修改下列部分篩選設定：
     * 依名稱篩選： 
 
       ![依名稱篩選](media/ssms-tricks/filterbyname.png)
@@ -158,7 +158,7 @@ ms.locfileid: "66499425"
 
       ![依結構描述篩選](media/ssms-tricks/filterbyschema.png)
 
-5. 若要清除篩選，以滑鼠右鍵按一下 [資料表]然後選取 [移除篩選]。
+5. 若要清除篩選，以滑鼠右鍵按一下 [資料表]  然後選取 [移除篩選]  。
 
     ![移除篩選](media/ssms-tricks/removefilter.png)
 
@@ -170,9 +170,9 @@ ms.locfileid: "66499425"
 
 1. 連線到 SQL Server。  
 
-2. 展開 [管理] > [SQL Server 記錄檔]。 
+2. 展開 [管理]   > [SQL Server 記錄檔]  。 
 
-3. 以滑鼠右鍵按一下 [目前] 錯誤記錄檔，然後選取 [檢視 SQL Server 記錄檔]：
+3. 以滑鼠右鍵按一下 [目前]  錯誤記錄檔，然後選取 [檢視 SQL Server 記錄檔]  ：
 
     ![在 SSMS 中檢視錯誤記錄檔](media/ssms-tricks/viewerrorloginssms.png)
 
@@ -200,7 +200,7 @@ ms.locfileid: "66499425"
 
 2. 開啟 [新增查詢] 視窗。
 
-3. 在查詢視窗中貼上以下 T-SQL 程式碼，然後選取 [執行]：
+3. 在查詢視窗中貼上以下 T-SQL 程式碼，然後選取 [執行]  ：
 
      ```sql
         SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
@@ -216,15 +216,15 @@ ms.locfileid: "66499425"
 
 1. 開啟 [SQL Server 設定管理員]。
 
-2. 展開 [服務]。
+2. 展開 [服務]  。
 
-3. 以滑鼠右鍵按一下您的 SQL Server 執行個體，然後選取 [屬性]：
+3. 以滑鼠右鍵按一下您的 SQL Server 執行個體，然後選取 [屬性]  ：
 
     ![設定管理員伺服器屬性](media/ssms-tricks/serverproperties.PNG)
 
-4. 選取 [啟動參數] 索引標籤。
+4. 選取 [啟動參數]  索引標籤。
 
-5. 在 [現有參數] 區域中，"-e" 後面的路徑是錯誤記錄檔位置： 
+5. 在 [現有參數]  區域中，"-e" 後面的路徑是錯誤記錄檔位置： 
 
     ![錯誤記錄檔](media/ssms-tricks/errorlog.png)
 
@@ -242,7 +242,7 @@ ms.locfileid: "66499425"
 
 2. 在 [記事本] 中開啟 errorlog.log 檔案。
 
-3. 搜尋文字「伺服器名稱是」。
+3. 搜尋文字「伺服器名稱是」  。
 
     在單引號中列出的任何內容，就是您將要連線到的 SQL Server 執行個體名稱：
 
@@ -260,8 +260,8 @@ ms.locfileid: "66499425"
 2. 伺服器名稱將會列在查詢視窗中：
 
     ![查詢視窗中的 SQL Server 執行個體名稱](media/ssms-tricks/nameinquerywindow.png)
-3. 伺服器名稱將會列在 [屬性] 中。
-    * 在 [檢視] 功能表，選取 [屬性視窗]。
+3. 伺服器名稱將會列在 [屬性]  中。
+    * 在 [檢視]  功能表，選取 [屬性視窗]  。
 
       ![屬性視窗中的 SQL Server 執行個體名稱](media/ssms-tricks/nameinproperties.png)
 

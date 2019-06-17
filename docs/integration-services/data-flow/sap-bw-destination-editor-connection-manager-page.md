@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41ded5a5e97d34b09a655d37557b75d5a90a7717
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726458"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 目的地編輯器 (連接管理員頁面)
@@ -36,7 +36,7 @@ ms.locfileid: "65726458"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 目的地的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件。  
   
-2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 目的地。  
+2.  在 [資料流程]  索引標籤上，按兩下 SAP BW 目的地。  
   
 3.  在 **[SAP BW 目的地編輯器]** 中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
@@ -46,10 +46,10 @@ ms.locfileid: "65726458"
 >  如果您不知道設定目的地的所有必要值，可能必須詢問 SAP 系統管理員。  
   
  **SAP BW 連接管理員**  
- 從清單中選取現有的連線管理員，或按一下 [新增] 來建立新的連線。  
+ 從清單中選取現有的連線管理員，或按一下 [新增]  來建立新的連線。  
   
  **新增**  
- 使用 [SAP BW 連線管理員] 對話方塊來建立新的連線管理員。  
+ 使用 [SAP BW 連線管理員]  對話方塊來建立新的連線管理員。  
   
  **測試負載**  
  執行載入程序的測試，這項測試會使用您已選取的設定，但是不會載入任何資料列。  
@@ -77,7 +77,7 @@ ms.locfileid: "65726458"
  輸入與 InfoPackage 相關聯之邏輯系統的名稱。  
   
  **查閱**  
- 使用 [查閱 InfoPackage] 對話方塊來查閱 InfoPackage。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up InfoPackage](../../integration-services/data-flow/look-up-infopackage.md)＞。  
+ 使用 [查閱 InfoPackage]  對話方塊來查閱 InfoPackage。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up InfoPackage](../../integration-services/data-flow/look-up-infopackage.md)＞。  
   
 ### <a name="rfc-destination-options"></a>RFC 目的地選項  
  您不需要事先了解並輸入這些值。 使用 **[查閱]** 按鈕，即可尋找並選取適當的 RFC 目的地。 在您選取 RFC 目的地之後，此元件就會針對這些選項輸入適當的值。  
@@ -92,7 +92,7 @@ ms.locfileid: "65726458"
  輸入與 RFC 目的地相關聯的程式識別碼。  
   
  **查閱**  
- 使用 [查閱 RFC 目的地] 對話方塊來查閱 RFC 目的地。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)＞。  
+ 使用 [查閱 RFC 目的地]  對話方塊來查閱 RFC 目的地。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)＞。  
   
 ### <a name="create-sap-bw-objects-options"></a>建立 SAP BW 物件選項  
  **選取 物件類型**  

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27c6b863ac563b0814ac1d5e483f6b62e667b3e5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723849"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>連接到 Azure Blob 儲存體 (SQL Server 匯入和匯出精靈)
@@ -22,7 +22,7 @@ ms.locfileid: "65723849"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連接到 **Azure Blob 儲存體**資料來源。
+本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源]  或 [選擇目的地]  頁面，連接到 **Azure Blob 儲存體**資料來源。
 
 > [!NOTE]
 > 若要使用 Azure Blob 來源或目的地，您必須安裝適用於 SQL Server Integration Services 的 Azure Feature Pack。
@@ -37,7 +37,7 @@ ms.locfileid: "65723849"
 ## <a name="options-to-specify"></a>要指定的選項
 
 > [!NOTE]
-> 不論 Azure Blob 儲存體是您的來源還是目的地，此資料提供者的連接選項都會相同。 也就是，您在精靈的 [選擇資料來源] 和 [選擇目的地] 頁面上看到的選項會相同。
+> 不論 Azure Blob 儲存體是您的來源還是目的地，此資料提供者的連接選項都會相同。 也就是，您在精靈的 [選擇資料來源]  和 [選擇目的地]  頁面上看到的選項會相同。
 
  **使用 Azure 帳戶**  
  指定是否要使用線上帳戶。

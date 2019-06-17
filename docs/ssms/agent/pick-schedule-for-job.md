@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ce303fcf282a25515e87005ac9e8225e612e17fd
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088851"
 ---
 # <a name="pick-schedule-for-job"></a>作業的挑選排程
@@ -48,7 +48,7 @@ ms.locfileid: "65088851"
 列出附加至排程的作業編號。 按一下某個編號以檢視該作業的屬性。  
   
 **屬性**  
-啟動 [作業排程屬性] 對話方塊，您可以在其中檢視排程的相關資訊。  
+啟動 [作業排程屬性]  對話方塊，您可以在其中檢視排程的相關資訊。  
   
 ## <a name="see-also"></a>另請參閱  
 [建立及附加排程至作業](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  

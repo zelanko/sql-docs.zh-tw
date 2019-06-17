@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 401d146241bae341db981f207f877c18919eaaa2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728187"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>多個一般檔案連接管理員
@@ -175,7 +175,7 @@ ms.locfileid: "65728187"
 |**分隔號 {&#124;}**|資料行是以分隔號分隔。|  
   
  **重設資料行**  
- 按一下 [重設資料行]，即可將原始資料行以外的資料行全部移除。  
+ 按一下 [重設資料行]  ，即可將原始資料行以外的資料行全部移除。  
   
 #### <a name="format--fixed-width"></a>格式 = 固定寬度  
  **字型**  
@@ -188,7 +188,7 @@ ms.locfileid: "65728187"
  為個別資料行加入分隔符號之前，請先指定資料列的長度。 或者，在預覽視窗中拖曳垂直線來標示資料列結尾。 資料列寬度值會自動更新。  
   
  **重設資料行**  
- 按一下 [重設資料行]，即可將原始資料行以外的資料行全部移除。  
+ 按一下 [重設資料行]  ，即可將原始資料行以外的資料行全部移除。  
   
 #### <a name="format--ragged-right"></a>格式 = 不齊右  
   
@@ -216,10 +216,10 @@ ms.locfileid: "65728187"
 |**分隔號 {&#124;}**|資料列是以分隔號分隔。|  
   
  **重設資料行**  
- 按一下 [重設資料行]，即可將原始資料行以外的資料行全部移除。  
+ 按一下 [重設資料行]  ，即可將原始資料行以外的資料行全部移除。  
   
 ## <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>多個一般檔案連接管理員編輯器 (進階頁面)
-  使用 [多個一般檔案連線管理員編輯器] 對話方塊的 [進階] 頁面，來設定各種屬性，例如一般檔案連線管理員所連接的文字檔中，每個資料行的資料類型和分隔符號。  
+  使用 [多個一般檔案連線管理員編輯器]  對話方塊的 [進階]  頁面，來設定各種屬性，例如一般檔案連線管理員所連接的文字檔中，每個資料行的資料類型和分隔符號。  
   
  字串資料行的長度預設為 50 個字元。 您可以評估範例資料，並自動重新調整這些資料行的長度，以避免截斷資料或資料行寬度過大。 您也可更新其他中繼資料，以啟用與目的地資料行的相容性。 例如，您可能會將只包含整數資料之資料行的資料類型變更成數值資料類型 (例如 DT_I2)。  
   
@@ -227,7 +227,7 @@ ms.locfileid: "65728187"
   
 ### <a name="options"></a>選項。  
  **連線管理員名稱**  
- 提供唯一的名稱給工作流程中的多個一般檔案連接管理員。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [連線管理員] 區域內。  
+ 提供唯一的名稱給工作流程中的多個一般檔案連接管理員。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [連線管理員]  區域內。  
   
  **說明**  
  描述連接管理員。 最佳作法是以其用途描述連接管理員，使封裝可以自我記錄並易於維護。  
@@ -248,7 +248,7 @@ ms.locfileid: "65728187"
 |**InputColumnWidth**|指定將儲存為位元組計數的值；針對 Unicode 檔案，這將會顯示為字元計數。 分隔資料行將忽略這個值。<br /><br /> **注意** ︰在物件模型中，這個屬性的名稱為 ColumnWidth。|  
   
  **新增**  
- 按一下 [新增] 來加入新的資料行。 [新增] 按鈕預設會在清單結尾加入新資料行。 此按鈕還有下列選項，可以在下拉式清單中使用。  
+ 按一下 [新增]  來加入新的資料行。 [新增]  按鈕預設會在清單結尾加入新資料行。 此按鈕還有下列選項，可以在下拉式清單中使用。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -257,19 +257,19 @@ ms.locfileid: "65728187"
 |**插在後面**|在選取的資料行之後插入新資料行。|  
   
  **刪除**  
- 選取資料行，然後按一下 [刪除] 將其移除。  
+ 選取資料行，然後按一下 [刪除]  將其移除。  
   
  **建議類型**  
- 使用 [建議資料行類型] 對話方塊，可評估第一個選定檔案中的範例資料，並取得對每個資料行之資料類型和長度的建議。 如需詳細資訊，請參閱 [建議資料行類型對話方塊 UI 參考](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
+ 使用 [建議資料行類型]  對話方塊，可評估第一個選定檔案中的範例資料，並取得對每個資料行之資料類型和長度的建議。 如需詳細資訊，請參閱 [建議資料行類型對話方塊 UI 參考](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
   
 ## <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>多個一般檔案連接管理員編輯器 (預覽頁面)
-  使用 [多個一般檔案連線管理員編輯器] 對話方塊的 [預覽] 頁面，即可根據您定義的資料行分隔，來檢視第一個所選取來源檔的內容。  
+  使用 [多個一般檔案連線管理員編輯器]  對話方塊的 [預覽]  頁面，即可根據您定義的資料行分隔，來檢視第一個所選取來源檔的內容。  
   
  若要深入了解多個一般檔案連接管理員，請參閱＜ [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)＞。  
   
 ### <a name="options"></a>選項。  
  **連線管理員名稱**  
- 提供唯一的名稱給工作流程中的多個一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [連線管理員] 區域內。  
+ 提供唯一的名稱給工作流程中的多個一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [連線管理員]  區域內。  
   
  **說明**  
  描述連接。 最佳作法是以其用途描述連接，使封裝可以自我記錄並易於維護。  

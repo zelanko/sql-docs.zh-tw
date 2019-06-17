@@ -12,10 +12,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 60bcbca88f2d75e062a45fc21103ece8631f9503
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821356"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>開啟編輯器 (SQL Server Management Studio)
@@ -68,12 +68,12 @@ ms.locfileid: "65821356"
 ### <a name="using-object-explorer"></a>使用物件總管  
  從 **[物件總管]** ：  
   
--   以滑鼠右鍵按一下與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的伺服器節點，然後選取 [新增查詢]。 這樣會開啟與相同 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的 [[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗，並將此視窗的資料庫內容設定為登入的預設資料庫。  
+-   以滑鼠右鍵按一下與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的伺服器節點，然後選取 [新增查詢]  。 這樣會開啟與相同 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的 [[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗，並將此視窗的資料庫內容設定為登入的預設資料庫。  
   
--   以滑鼠右鍵按一下資料庫節點，然後選取 [新增查詢]。 這樣會開啟與相同 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的 [[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗，並將此視窗的資料庫內容設定為相同資料庫。  
+-   以滑鼠右鍵按一下資料庫節點，然後選取 [新增查詢]  。 這樣會開啟與相同 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體連接的 [[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗，並將此視窗的資料庫內容設定為相同資料庫。  
   
 ### <a name="using-solution-explorer"></a>使用方案總管  
- 從方案總管中，展開一個資料夾，然後以滑鼠右鍵按一下資料夾內的項目，再按一下 [開啟] 或按兩下項目或檔案。  
+ 從方案總管  中，展開一個資料夾，然後以滑鼠右鍵按一下資料夾內的項目，再按一下 [開啟]  或按兩下項目或檔案。  
   
 ### <a name="using-template-browser-to-open-the-database-engine-query-editor"></a>使用範本瀏覽器來開啟 Database Engine 查詢編輯器  
   
@@ -81,6 +81,6 @@ ms.locfileid: "65821356"
   
 -   **[範本瀏覽器]** 視窗即會顯示在右窗格中。  
   
--   按兩下範本，即可開啟含有範本文字的 [Database Engine 查詢] 視窗。 例如，若要開啟 CREATE DATABASE 範本，請開啟 [SQL Server 範本] 資料夾、開啟 [資料庫] 資料夾，然後按兩下 [建立資料庫]。  
+-   按兩下範本，即可開啟含有範本文字的 [Database Engine 查詢] 視窗。 例如，若要開啟 CREATE DATABASE 範本，請開啟 [SQL Server 範本]  資料夾、開啟 [資料庫]  資料夾，然後按兩下 [建立資料庫]  。  
   
   

@@ -26,10 +26,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8d7aef10ba6a593217b4bba1c2cb984b8074b77a
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088959"
 ---
 # <a name="operators"></a>操作員
@@ -80,9 +80,9 @@ ms.locfileid: "65088959"
   
         **主旨：**  
   
-        副本：  
+        副本：   
   
-        收件者：  
+        收件者：   
   
     > [!NOTE]  
     > 如果使用低容量的英數字元呼叫系統，您可以將呼叫器通知中的錯誤文字排除，以縮短所傳送的文字。 例如，有一種低容量英數字元呼叫系統，每頁限制為 64 個字元。  

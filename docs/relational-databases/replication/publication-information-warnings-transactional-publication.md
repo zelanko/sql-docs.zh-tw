@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95074e741823747ba861efcfa6c025b5fb2c9e53
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130758"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704399"
 ---
 # <a name="publication-information-warnings-transactional-publication"></a>發行集資訊，警告 (交易式發行集)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "54130758"
   
     -   嚴重  
   
- 您啟用警告時，也會設定臨界值。 例如，若您啟用警告 **[若延遲超過臨界值，就發出警告]**，請選取發行者端認可交易和訂閱者端認可交易之間允許的時間。  
+ 您啟用警告時，也會設定臨界值。 例如，若您啟用警告 **[若延遲超過臨界值，就發出警告]** ，請選取發行者端認可交易和訂閱者端認可交易之間允許的時間。  
   
  除了在複寫監視器顯示警告外，達到臨界值也會觸發警示。 定義警示的方式，是按一下 **[設定警示]** ，並在 **[設定複寫警示]** 對話方塊中提供資訊。  
   

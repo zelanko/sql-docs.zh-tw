@@ -24,11 +24,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: df21774185b2289cbd9a045c28368555ca2d01ac
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361388"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051384"
 ---
 # <a name="close-master-key-transact-sql"></a>CLOSE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ CLOSE MASTER KEY
 ## <a name="remarks"></a>Remarks  
  這個陳述式會反轉 OPEN MASTER KEY 執行的作業。 僅當使用 OPEN MASTER KEY 陳述式在目前工作階段中開啟資料庫主要金鑰時，執行 CLOSE MASTER KEY 才會成功。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  不需要任何權限。  
   
 ## <a name="examples"></a>範例  

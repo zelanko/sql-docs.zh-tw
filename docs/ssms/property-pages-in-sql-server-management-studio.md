@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 5dfcb81955409e2435373e3257ae4e1002ab5e1e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097386"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio 中的屬性頁
@@ -32,5 +32,5 @@ ms.locfileid: "65097386"
 |**字母順序**|依字母順序排序來列出所選物件的所有屬性和屬性值。|  
 |屬性名稱|方格的第一個資料行列出屬性名稱。|  
 |屬性|方格的第二個資料行列出屬性值。|  
-|描述窗格|描述窗格在頁面底端，它會顯示屬性類型和屬性的簡短描述。 您可以使用快速鍵功能表上的 [描述] 命令，來關閉和開啟屬性的描述。|  
+|描述窗格|描述窗格在頁面底端，它會顯示屬性類型和屬性的簡短描述。 您可以使用快速鍵功能表上的 [描述]  命令，來關閉和開啟屬性的描述。|  
   

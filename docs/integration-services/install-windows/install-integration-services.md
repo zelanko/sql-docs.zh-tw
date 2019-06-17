@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c0439c5230d39ae9dc856c9e1c5c5553e250c42
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723672"
 ---
 # <a name="install-integration-services"></a>安裝 Integration Services
@@ -64,14 +64,14 @@ ms.locfileid: "65723672"
      
 使用 [安裝精靈] 安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 時，您會使用一連串的頁面來指定元件和選項。
 
--   在 [功能選取] 頁面中，選取 [共用功能] 底下的 **Integration Services**。
+-   在 [功能選取]  頁面中，選取 [共用功能]  底下的 **Integration Services**。
 
--   在 [執行個體功能] 下方，選擇性選取 **Database Engine Services** 來裝載 SSIS 目錄資料庫 (`SSISDB`)，以便儲存、管理、執行與監視 SSIS 套件。
+-   在 [執行個體功能]  下方，選擇性選取 **Database Engine Services** 來裝載 SSIS 目錄資料庫 (`SSISDB`)，以便儲存、管理、執行與監視 SSIS 套件。
 
--   若要安裝用於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程式設計的受控組件，另請選取 [共用功能] 下方的 [用戶端工具 SDK]。
+-   若要安裝用於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程式設計的受控組件，另請選取 [共用功能]  下方的 [用戶端工具 SDK]  。
 
 > [!NOTE]
-> [安裝精靈] 的 [功能選取] 頁面上提供一些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件供您選取安裝，以安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的部分元件。 這些元件適用於特定的工作，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能有限。 例如，[Database Engine Services] 選項會安裝 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 所需的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件。 為了確保 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 能完整安裝，您必須在 [功能選擇] 頁面上選取 [Integration Services]。
+> [安裝精靈] 的 [功能選取]  頁面上提供一些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件供您選取安裝，以安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的部分元件。 這些元件適用於特定的工作，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能有限。 例如，[Database Engine Services]  選項會安裝 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 所需的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件。 為了確保 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 能完整安裝，您必須在 [功能選擇]  頁面上選取 [Integration Services]  。
 
 ### <a name="installing-a-dedicated-server-for-etl-processes"></a>安裝 ETL 的專用伺服器程序
 

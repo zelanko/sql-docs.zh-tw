@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fadf1fac6929433c217241039634a7af8658f4f6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723999"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>完成精靈 (SQL Server 匯入和匯出精靈)
@@ -24,10 +24,10 @@ ms.locfileid: "65723999"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-指定是否要立即執行複製作業之後，以及選擇性儲存精靈建立的套件之後，[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [完成精靈]。 在此頁面上，您可以檢閱在精靈中的選擇，然後按一下 [完成]  開始複製作業。
+指定是否要立即執行複製作業之後，以及選擇性儲存精靈建立的套件之後，[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [完成精靈]  。 在此頁面上，您可以檢閱在精靈中的選擇，然後按一下 [完成]  開始複製作業。
  
 ## <a name="screen-shot-of-the-complete-the-wizard-page"></a>[完成精靈] 頁面的螢幕擷取畫面 
- 下列螢幕擷取畫面顯示精靈 [完成精靈] 頁面的簡單範例。  
+ 下列螢幕擷取畫面顯示精靈 [完成精靈]  頁面的簡單範例。  
   
  ![[匯入和匯出精靈] 的 [完成精靈] 頁面](../../integration-services/import-export-data/media/complete.png "[匯入和匯出精靈] 的 [完成精靈] 頁面")  
   
@@ -40,7 +40,7 @@ ms.locfileid: "65723999"
 -   是否立即執行套件。  
   
 ## <a name="whats-next"></a>下一步  
- 檢閱在精靈中的選擇並按一下 [完成] 之後，下一頁是 [正在執行作業] 。 在此頁面上，您會看到在前幾頁設定之作業的進度和結果。 如需詳細資訊，請參閱 [執行作業](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md)。
+ 檢閱在精靈中的選擇並按一下 [完成]  之後，下一頁是 [正在執行作業]  。 在此頁面上，您會看到在前幾頁設定之作業的進度和結果。 如需詳細資訊，請參閱 [執行作業](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md)。
  
 ## <a name="see-also"></a>另請參閱
 [透過匯入和匯出精靈的簡單範例開始使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)

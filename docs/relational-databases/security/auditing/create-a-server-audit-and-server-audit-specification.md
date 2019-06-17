@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 650c5bd55365fbf1729fe3514bd31b6af73f6981
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978814"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716238"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>建立伺服器稽核與伺服器稽核規格
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "53978814"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
   
 -   若要建立、更改或卸除伺服器稽核，主體需要使用 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 權限。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "53978814"
   
 1.  在 [物件總管] 中，展開 **[安全性]** 資料夾。  
   
-2.  以滑鼠右鍵按一下 [稽核] 資料夾，然後選取 [新增稽核]。  
+2.  以滑鼠右鍵按一下 [稽核]  資料夾，然後選取 [新增稽核]  。  
   
      下列選項可從 **[建立稽核]** 對話方塊的 **[一般]** 頁面取得。  
   
@@ -90,14 +90,14 @@ ms.locfileid: "53978814"
     > [!IMPORTANT]  
     >  當稽核處於失敗狀態時，專用管理員連接可以繼續執行稽核事件。  
   
-     [稽核目的地] 清單  
+     [稽核目的地]  清單  
      指定稽核資料的目標。 可用的選項有二進位檔案、Windows 應用程式記錄檔或 Windows 安全性記錄檔。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就無法寫入 Windows 安全性記錄檔。 如需詳細資訊，請參閱 [將 SQL Server Audit 事件寫入安全性記錄檔](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。  
   
      **檔案路徑**  
-     指定當 [稽核目的地] 為檔案時，要寫入稽核資料的資料夾位置。  
+     指定當 [稽核目的地]  為檔案時，要寫入稽核資料的資料夾位置。  
   
      **省略符號 (...)**  
-     開啟 [尋找資料夾 -_server\_name_] 對話方塊，指定檔案路徑或建立要寫入稽核檔案的資料夾。  
+     開啟 [尋找資料夾 -_server\_name_]  對話方塊，指定檔案路徑或建立要寫入稽核檔案的資料夾。  
   
      **稽核檔案最大限制:**  
      **輪用檔案數量上限**  
@@ -106,27 +106,27 @@ ms.locfileid: "53978814"
      **檔案上限**  
      指定在達到最大稽核檔案數目時，導致系統產生其他稽核事件的任何動作都將失敗並發生錯誤。  
   
-     [無限制] 核取方塊  
-     若已選取 [最大換用檔案] 底下的 [無限制] 核取方塊，則要建立的稽核檔案數目就不受限制。 **[無限制]** 核取方塊預設為已選取，並套用至 **[輪用檔案數量上限]** 和 **[檔案數量上限]** 選項。  
+     [無限制]  核取方塊  
+     若已選取 [最大換用檔案]  底下的 [無限制]  核取方塊，則要建立的稽核檔案數目就不受限制。 **[無限制]** 核取方塊預設為已選取，並套用至 **[輪用檔案數量上限]** 和 **[檔案數量上限]** 選項。  
   
-     [檔案數目] 方塊  
+     [檔案數目]  方塊  
      指定要建立的稽核檔案數目，上限為 2,147,483,647。 只有未核取 **[無限制]** 時，才能使用此選項。  
   
      **檔案大小上限**  
      指定稽核檔案的大小上限，以 MB、GB 或 TB 為單位。 您可以指定介於 1024 MB 和 2,147,483,647 TB 之間的值。 選取 **[無限制]** 核取方塊並不會限制檔案大小。 指定低於 1024 MB 的值將會失敗並傳回錯誤。 依預設， **[無限制]** 核取方塊已選取。  
   
-     [保留磁碟空間] 核取方塊  
+     [保留磁碟空間]  核取方塊  
      指定在磁碟上預先配置的空間等於指定的檔案大小上限。 只有未選取 **[檔案大小上限]** 底下的 **[無限制]** 核取方塊時，才能使用此設定。 依預設，這個核取方塊未選取。  
   
 3.  選擇性地在 **[篩選]** 頁面上，對伺服器稽核輸入述詞或 `WHERE` 子句，以指定 **[一般]** 頁面上未提供的其他選項。 將述詞包含在括號內，例如 `(object_name = 'EmployeesTable')`。  
   
-4.  當您完成選取選項之後，按一下 **[確定]**。  
+4.  當您完成選取選項之後，按一下 **[確定]** 。  
   
 #### <a name="to-create-a-server-audit-specification"></a>若要建立伺服器稽核規格  
   
 1.  在 [物件總管] 中，按一下加號展開 **[安全性]** 資料夾。  
   
-2.  以滑鼠右鍵按一下 [伺服器稽核規格] 資料夾，然後選取 [新增伺服器稽核規格]。  
+2.  以滑鼠右鍵按一下 [伺服器稽核規格]  資料夾，然後選取 [新增伺服器稽核規格]  。  
   
      **[建立伺服器稽核規格]** 對話方塊有下列選項。  
   
@@ -140,21 +140,21 @@ ms.locfileid: "53978814"
      指定要擷取之伺服器層級的稽核動作群組和稽核動作。 如需資料庫層級的稽核動作群組和稽核動作清單以及其所包含的事件描述，請參閱 [SQL Server Audit 動作群組和動作](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
      **物件結構描述**  
-     顯示指定之 [物件名稱] 的結構描述。  
+     顯示指定之 [物件名稱]  的結構描述。  
   
      **Object Name**  
      要稽核的物件名稱。 這只適用於稽核動作，不適用於稽核群組。  
   
      **省略符號 (...)**  
-     開啟 **[選取物件]** 對話方塊來瀏覽及選取可用的物件 (根據指定的 **[稽核動作類型]**)。  
+     開啟 **[選取物件]** 對話方塊來瀏覽及選取可用的物件 (根據指定的 **[稽核動作類型]** )。  
   
      **主體名稱**  
      依據所稽核的物件來篩選稽核的帳戶。  
   
      **省略符號 (...)**  
-     開啟 **[選取物件]** 對話方塊來瀏覽及選取可用的物件 (根據指定的 **[物件名稱]**)。  
+     開啟 **[選取物件]** 對話方塊來瀏覽及選取可用的物件 (根據指定的 **[物件名稱]** )。  
   
-3.  完成後，請按一下 **[確定]**。  
+3.  完成後，請按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -162,9 +162,9 @@ ms.locfileid: "53978814"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
@@ -176,9 +176,9 @@ ms.locfileid: "53978814"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     /*Creates a server audit specification called "HIPAA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPAA_Audit" created above.  

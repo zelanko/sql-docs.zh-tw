@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 49408bfe22bf05e6315b9598c0b65f5c02b791de
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096553"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Force a Target Server to Poll the Master Server
@@ -37,9 +37,9 @@ ms.locfileid: "65096553"
 > [!NOTE]  
 > 如果當目標伺服器嘗試上傳作業狀態時無法存取主要伺服器，作業狀態會被多工緩衝處理，直到可以存取主要伺服器為止。  
   
--   **開始之前：**[限制事項](#Restrictions)、[安全性](#Security)  
+-   **開始之前：** [限制事項](#Restrictions)、[安全性](#Security)  
   
--   **若要強制目標伺服器輪詢主要伺服器，請使用：**[SQL Server Management Studio](#SSMS)  
+-   **若要強制目標伺服器輪詢主要伺服器，請使用：** [SQL Server Management Studio](#SSMS)  
   
 ## <a name="BeforeYouBegin"></a>開始之前  
   
@@ -54,7 +54,7 @@ ms.locfileid: "65096553"
   
 1.  在 **[物件總管]** 中展開主要伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，指向 [多重伺服器管理]，然後按一下 [管理目標伺服器]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，指向 [多重伺服器管理]  ，然後按一下 [管理目標伺服器]  。  
   
-3.  按一下目標伺服器，然後按一下 **[強制輪詢]**。  
+3.  按一下目標伺服器，然後按一下 **[強制輪詢]** 。  
   

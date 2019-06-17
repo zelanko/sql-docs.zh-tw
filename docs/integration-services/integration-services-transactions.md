@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9ed63abe0ea2c96461409e964b232abce6e1b103
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723510"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 交易
@@ -61,13 +61,13 @@ ms.locfileid: "65723510"
   
 3.  按一下 **[控制流程]** 索引標籤。  
   
-4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]。  
+4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]  。  
   
-5.  在 [屬性] 視窗中，將 TransactionOption 屬性設定為 **Required**。  
+5.  在 [屬性]  視窗中，將 TransactionOption 屬性設定為 **Required**。  
   
-6.  在 [控制流程] 索引標籤的設計介面上，以滑鼠右鍵按一下您要在交易中註冊的工作或容器，然後按一下 [屬性]。  
+6.  在 [控制流程]  索引標籤的設計介面上，以滑鼠右鍵按一下您要在交易中註冊的工作或容器，然後按一下 [屬性]  。  
   
-7.  在 [屬性] 視窗中，將 TransactionOption 屬性設定為 **Supported**。  
+7.  在 [屬性]  視窗中，將 TransactionOption 屬性設定為 **Supported**。  
   
     > [!NOTE]  
     >  若要在交易中編列連接，請註冊在交易中使用連接的工作。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../integration-services/connection-manager/integration-services-ssis-connections.md)。  
@@ -85,20 +85,20 @@ ms.locfileid: "65723510"
   
 3.  按一下 **[控制流程]** 索引標籤。  
   
-4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]。  
+4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]  。  
   
-5.  在 [屬性] 視窗中，將 TransactionOption 屬性設定為 **Supported**。  
+5.  在 [屬性]  視窗中，將 TransactionOption 屬性設定為 **Supported**。  
   
     > [!NOTE]  
     >  封裝支援交易，但交易是由封裝中的工作或容器所啟動。  
   
-6.  在 [控制流程] 索引標籤的設計介面上，以滑鼠右鍵按一下要啟動其交易之封裝內的工作或容器，然後按一下 [屬性]。  
+6.  在 [控制流程]  索引標籤的設計介面上，以滑鼠右鍵按一下要啟動其交易之封裝內的工作或容器，然後按一下 [屬性]  。  
   
-7.  在 [屬性] 視窗中，將 TransactionOption 屬性設定為 **Required**。  
+7.  在 [屬性]  視窗中，將 TransactionOption 屬性設定為 **Required**。  
   
-8.  如果交易由容器啟動，請以滑鼠右鍵按一下您要在交易中註冊的工作或容器，然後按一下 [屬性]。  
+8.  如果交易由容器啟動，請以滑鼠右鍵按一下您要在交易中註冊的工作或容器，然後按一下 [屬性]  。  
   
-9. 在 [屬性] 視窗中，將 TransactionOption 屬性設定為 **Supported**。  
+9. 在 [屬性]  視窗中，將 TransactionOption 屬性設定為 **Supported**。  
   
     > [!NOTE]  
     >  若要在交易中編列連接，請註冊在交易中使用連接的工作。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../integration-services/connection-manager/integration-services-ssis-connections.md)。  
@@ -139,7 +139,7 @@ ms.locfileid: "65723510"
   
  封裝和工作具有下列交易屬性：  
   
--   在封裝 A 和 C 上，**TransactionOption** 設為 **Required**   
+-   在封裝 A 和 C 上，**TransactionOption** 設為 **Required**  
   
 -   在封裝 B 和 D 上，以及在「執行封裝 B」、「執行封裝 D」和「執行封裝 F」工作上，**TransactionOption** 設為 **Supported** 。  
   

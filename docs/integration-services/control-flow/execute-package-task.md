@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47e228c3494c03e86ffa7208f7caf5c1fe150a95
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727736"
 ---
 # <a name="execute-package-task"></a>執行封裝工作
@@ -49,10 +49,10 @@ ms.locfileid: "65727736"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含執行工作流程作業的工作，例如執行可執行檔和批次檔。 如需詳細資訊，請參閱＜ [執行處理工作](../../integration-services/control-flow/execute-process-task.md)＞。  
   
 ## <a name="running-packages"></a>執行封裝  
- 「執行封裝」工作可以執行包含父封裝之相同專案中所含的子封裝。 您可以透過將 **[ReferenceType]** 屬性設定為 **[專案參考]**，然後設定 **[PackageNameFromProjectReference]** 屬性，以便從專案中選取子封裝。  
+ 「執行封裝」工作可以執行包含父封裝之相同專案中所含的子封裝。 您可以透過將 **[ReferenceType]** 屬性設定為 **[專案參考]** ，然後設定 **[PackageNameFromProjectReference]** 屬性，以便從專案中選取子封裝。  
   
 > [!NOTE]  
->  [ReferenceType] 選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]。 [部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+>  [ReferenceType]  選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]  。 [部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
  「執行封裝」工作也可執行儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 資料庫中的封裝，以及儲存在檔案系統中的封裝。 此工作使用 OLE DB 連接管理員連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，或使用檔案連接管理員存取檔案系統。 如需詳細資訊，請參閱＜ [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) ＞和＜ [般檔案連線管理員](../../integration-services/connection-manager/flat-file-connection-manager.md)＞。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "65727736"
  如需詳細資訊，請參閱 [在子封裝中使用變數和參數的值](../../integration-services/packages/legacy-package-deployment-ssis.md#child)。  
   
 ### <a name="accessing-parent-package-variables"></a>存取父封裝變數  
- 子封裝可藉由使用指令碼工作存取父封裝變數。 當你在 [指令碼工作編輯器] 的 [指令碼]頁面上輸入父封裝變數的名稱時，變數名稱中請勿加上 **User:**。 否則，在您執行父封裝時子封裝會找不到該變數。  
+ 子封裝可藉由使用指令碼工作存取父封裝變數。 當你在 [指令碼工作編輯器]  的 [指令碼]  頁面上輸入父封裝變數的名稱時，變數名稱中請勿加上 **User:** 。 否則，在您執行父封裝時子封裝會找不到該變數。  
   
 ## <a name="configuring-the-execute-package-task"></a>設定執行封裝工作  
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
@@ -142,7 +142,7 @@ ms.locfileid: "65727736"
   
 1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中開啟包含 [執行封裝] 工作的 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 專案。  
   
-2.  以滑鼠右鍵按一下 SSIS 設計師中的工作，然後按一下 [編輯]。  
+2.  以滑鼠右鍵按一下 SSIS 設計師中的工作，然後按一下 [編輯]  。  
   
 ###  <a name="general"></a> 設定 [一般] 頁面上的 [選項]  
  **名稱**  
@@ -156,16 +156,16 @@ ms.locfileid: "65727736"
   
 ###  <a name="package"></a> 設定 [封裝] 頁面上的 [選項]  
  **ReferenceType**  
- 為專案中的子封裝選取 [專案參考]。 為封裝外部的子封裝選取 [外部參考]  
+ 為專案中的子封裝選取 [專案參考]  。 為封裝外部的子封裝選取 [外部參考]   
   
 > [!NOTE]  
->  [ReferenceType] 選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]。 [部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+>  [ReferenceType]  選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]  。 [部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
  **密碼**  
  如果子封裝受到密碼保護，請提供子封裝的密碼，或按一下省略符號 ([...]) 按鈕，然後建立子封裝的新密碼。  
   
  **ExecuteOutOfProcess**  
- 指定子封裝是在父封裝的處理序中執行，還是在個別的處理序中執行。 依預設，[執行封裝] 工作的 ExecuteOutOfProcess 屬性會設定為 [False]，而且子封裝會在與父封裝的相同處理序中執行。 如果您將此屬性設定為 [True]，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 另外，如果此屬性設定為 [True]，則無法在僅限工具安裝中偵錯封裝；您必須安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 產品。 如需詳細資訊，請參閱[安裝 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
+ 指定子封裝是在父封裝的處理序中執行，還是在個別的處理序中執行。 依預設，[執行封裝] 工作的 ExecuteOutOfProcess 屬性會設定為 [False]  ，而且子封裝會在與父封裝的相同處理序中執行。 如果您將此屬性設定為 [True]  ，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 另外，如果此屬性設定為 [True]  ，則無法在僅限工具安裝中偵錯封裝；您必須安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 產品。 如需詳細資訊，請參閱[安裝 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
   
 #### <a name="referencetype-dynamic-options"></a>ReferenceType 動態選項  
   
@@ -192,18 +192,18 @@ ms.locfileid: "65727736"
   
 ##### <a name="location--sql-server"></a>位置 = SQL Server  
  **[連接]**  
- 在清單中選取 OLE DB 連線管理員，或按一下 [\<新增連線…>] 建立新的連線管理員。  
+ 在清單中選取 OLE DB 連線管理員，或按一下 [\<新增連線…>]  建立新的連線管理員。  
   
- **相關主題：**[OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ **相關主題：** [OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **PackageName**  
  輸入子封裝的名稱，或按一下省略符號 ([...])，然後找出該封裝。  
   
 ##### <a name="location--file-system"></a>位置 = 檔案系統  
  **[連接]**  
- 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。  
+ 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]  ，即可建立新的連線管理員。  
   
- **相關主題：**[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
+ **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
   
  **PackageNameReadOnly**  
  顯示封裝名稱。  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2026e33a9e31f437615e8270c61681ec95b287b2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728115"
 ---
 # <a name="odata-connection-manager"></a>OData 連接管理員
@@ -31,11 +31,11 @@ ms.locfileid: "65728115"
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>將 OData 連接管理員加入 SSIS 封裝中  
  您可以使用三種方式，將新的 OData 連線管理員新增至 SSIS 套件：  
   
--   按一下 [OData 來源編輯器] 中的 [新增...] 按鈕  
+-   按一下 [OData 來源編輯器]  中的 [新增...]  按鈕  
   
--   在 **方案總管** 中，以滑鼠右鍵按一下 [連線管理員] 資料夾，然後按一下 [新增連線管理員] 。 針對 [連線管理員類型]  選取 [ODATA] 。  
+-   在 **方案總管** 中，以滑鼠右鍵按一下 [連線管理員]  資料夾，然後按一下 [新增連線管理員]  。 針對 [連線管理員類型]  選取 [ODATA]  。  
   
--   以滑鼠右鍵按一下套件設計師底部的 [連線管理員] 窗格，然後選取 [新增連線…]。 針對 [連線管理員類型]  選取 [ODATA] 。  
+-   以滑鼠右鍵按一下套件設計師底部的 [連線管理員]  窗格，然後選取 [新增連線…]  。 針對 [連線管理員類型]  選取 [ODATA]  。  
   
 ## <a name="connection-manager-authentication"></a>連接管理員驗證  
  OData 連線管理員支援五種驗證模式。  
@@ -52,7 +52,7 @@ ms.locfileid: "65728115"
   
 如果是匿名存取，請選取 [Windows 驗證] 選項。  
 
-若要連線至 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM Online，您不能使用 [Microsoft Online Services] 驗證選項。 您也無法使用針對多重要素驗證設定的任何選項。
+若要連線至 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM Online，您不能使用 [Microsoft Online Services]  驗證選項。 您也無法使用針對多重要素驗證設定的任何選項。
   
 ### <a name="specifying-and-securing-credentials"></a>指定認證及維護認證安全  
  如果 OData 服務需要基本驗證，您可以在 [OData 連線管理員編輯器](../../integration-services/connection-manager/odata-connection-manager-editor.md)中指定使用者名稱和密碼。 您在編輯器中輸入的值會保存在封裝中。 密碼值會根據封裝保護等級進行加密。  
@@ -71,14 +71,14 @@ ms.locfileid: "65728115"
 |ConnectionString|包括連線管理員的其他屬性。|  
   
 ## <a name="odata-connection-manager-editor"></a>OData 連線管理員編輯器
-  使用 [OData 連線管理員編輯器] 對話方塊新增連線，或編輯現有的 OData 資料來源連線。  
+  使用 [OData 連線管理員編輯器]  對話方塊新增連線，或編輯現有的 OData 資料來源連線。  
   
 ### <a name="options"></a>選項。  
  **連線管理員名稱**  
  連接管理員的名稱。  
   
  **服務文件位置**  
- OData 服務的 URL。 例如： https://services.odata.org/V3/Northwind/Northwind.svc/＞。  
+ OData 服務的 URL。 例如： https://services.odata.org/V3/Northwind/Northwind.svc/ ＞。  
   
  **驗證**  
 選取下列其中一個選項：
@@ -90,7 +90,7 @@ ms.locfileid: "65728115"
 
 如果您選取 Windows 驗證以外的選項，請輸入**使用者名稱**和**密碼**。 
 
-若要連線至 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM Online，您不能使用 [Microsoft Online Services] 驗證選項。 您也無法使用針對多重要素驗證設定的任何選項。
+若要連線至 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM Online，您不能使用 [Microsoft Online Services]  驗證選項。 您也無法使用針對多重要素驗證設定的任何選項。
 
  **測試連接**  
  按一下此按鈕，測試 OData 來源的連線。  

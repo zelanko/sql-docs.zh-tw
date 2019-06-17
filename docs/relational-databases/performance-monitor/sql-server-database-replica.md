@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: e9f3a9a7a51bd0ca96a21806a11334df6f264753
-ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66749135"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server、資料庫複本

@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 86a6b43febf6e56797bd8b240389c14019464a40
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088669"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>從資料庫圖表移除資料表 (Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "65088669"
   
 1.  在資料庫圖表中，選取要移除的資料表。  
   
-2.  以滑鼠右鍵按一下資料表，然後從快速鍵功能表選擇 [從圖表中移除資料表]。  
+2.  以滑鼠右鍵按一下資料表，然後從快速鍵功能表選擇 [從圖表中移除資料表]  。  
   
     -或-  
   

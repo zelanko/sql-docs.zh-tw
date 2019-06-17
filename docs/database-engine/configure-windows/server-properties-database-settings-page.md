@@ -14,10 +14,10 @@ manager: jroth
 ms.custom: ''
 ms.date: 05/23/2019
 ms.openlocfilehash: bf30a65cf0390c5b8400fe7a390520e4bdb29994
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66771767"
 ---
 # <a name="server-properties---database-settings-page"></a>伺服器屬性 - 資料庫設定頁面
