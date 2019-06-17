@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ba3b64847e2f63a96533a0f57cee41208176a7b7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077813"
 ---
 # <a name="microsoft-generic-content-tree-viewer-data-mining"></a>Microsoft 一般內容樹狀檢視器 (資料採礦)
@@ -26,7 +26,7 @@ ms.locfileid: "66077813"
   
  檢視器中顯示的資訊會使用以採礦模型的內容結構描述資料列集為基礎的通用結構。 內容結構描述資料列集是一般架構，可用來儲存資料採礦模型的模式、統計資料和其他內容。 如需採礦模型的資料採礦結構描述資料列集中的資料行清單，請參閱 [DMSCHEMA_MINING_MODEL_CONTENT 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **節點標題 （唯一識別碼）**  
  此窗格顯示所選採礦模型中所有節點的清單。 樹狀目錄中排列節點的方式根據要檢視的模型類型而不同。  
   

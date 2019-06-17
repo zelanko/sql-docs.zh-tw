@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62743214"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>變更資料庫的目標復原時間 (SQL Server)
@@ -23,9 +23,9 @@ ms.locfileid: "62743214"
 > [!NOTE]  
 >  如果長時間執行的交易造成過多的復原次數，可能會超過目標復原時間設定針對給定資料庫所指定的上限。  
   
--   **開始之前：**[限制事項](#Restrictions)、[安全性](#Security)  
+-   **開始之前：** [限制事項](#Restrictions)、[安全性](#Security)  
   
--   **使用以下方式變更目標復原時間：**[SQL Server Management Studio](#SSMSProcedure) 或 [Transact-SQL](#TsqlProcedure)  
+-   **使用以下方式變更目標復原時間：** [SQL Server Management Studio](#SSMSProcedure) 或 [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62743214"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要變更目標復原時間**  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
+1.  在 [物件總管]  中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
 2.  以滑鼠右鍵按一下您想要變更的資料庫，然後按一下 [屬性]  命令。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62743214"
   
 2.  使用下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)陳述式，如下所示：  
   
-     TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
+     TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }  
   
      *目標復原時間*  
      如果大於 0 (預設值)，便指定發生損毀時，指定之資料庫的復原時間上限。  

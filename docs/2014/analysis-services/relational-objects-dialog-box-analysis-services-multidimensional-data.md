@@ -13,24 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0571271f347c2aebcc2a0e0e25f2fff09b98fa89
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070348"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>關聯式物件對話方塊 (Analysis Services - 多維度資料)
-  使用 **中的** [關聯式物件] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可從您要設定主動式快取的資料來源選取資料表、檢視或其他物件。 在 [儲存選項] 對話方塊的 [通知] 索引標籤上，按一下 [指定追蹤資料表] 選項中的省略符號按鈕 (**...**)，即可在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中顯示此對話方塊。  
+  使用 **中的** [關聯式物件] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可從您要設定主動式快取的資料來源選取資料表、檢視或其他物件。 在 [儲存選項]  對話方塊的 [通知]  索引標籤上，按一下 [指定追蹤資料表]  選項中的省略符號按鈕 ( **...** )，即可在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中顯示此對話方塊。  
   
 ## <a name="options"></a>選項  
  **選取您要設定主動式快取的關聯式物件**  
- 選取要追蹤的物件。此選項會顯示可用物件及其類型的方格，這些類型符合 [篩選] 中設定的篩選 (如果未設定 [篩選]，則為所有資料表)，且尚未在目前圖表中顯示。  
+ 選取要追蹤的物件。此選項會顯示可用物件及其類型的方格，這些類型符合 [篩選]  中設定的篩選 (如果未設定 [篩選]  ，則為所有資料表)，且尚未在目前圖表中顯示。  
   
  **篩選**  
- 輸入用來限制所列出物件的篩選，然後按一下按鈕來篩選 [選取想要設定主動式快取的關聯式物件] 中列出的資料表。  
+ 輸入用來限制所列出物件的篩選，然後按一下按鈕來篩選 [選取想要設定主動式快取的關聯式物件]  中列出的資料表。  
   
  **顯示系統物件**  
- 選取即可在 [選取想要設定主動式快取的關聯式物件] 中顯示資料來源的系統物件。  
+ 選取即可在 [選取想要設定主動式快取的關聯式物件]  中顯示資料來源的系統物件。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

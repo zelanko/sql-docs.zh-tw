@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e2bfa3fdf09dea1b088fb519b9782999bd20296b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768434"
 ---
 # <a name="understanding-the-script-component-object-model"></a>了解指令碼元件物件模型
@@ -113,9 +113,9 @@ public override void PreExecute()
 #### <a name="what-the-bufferwrapper-project-item-provides"></a>BufferWrapper 專案項目提供的內容  
  如果是您已設定的每一個輸入，`BufferWrapper` 專案項目都會包含一個衍生自 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 的類別，而且名稱與輸入相同。 每一個輸入緩衝區類別都包含下列屬性、函數和方法：  
   
--   每一個選定輸入資料行的具名、具類型存取子屬性。 這些屬性是唯讀或可讀寫，這取決於在 [指令碼轉換編輯器] 的 [輸入資料行] 頁面上針對資料行所指定的 [使用類型]。  
+-   每一個選定輸入資料行的具名、具類型存取子屬性。 這些屬性是唯讀或可讀寫，這取決於在 [指令碼轉換編輯器]  的 [輸入資料行]  頁面上針對資料行所指定的 [使用類型]  。  
   
--   每一個選定輸入資料行的 **\<資料行>_IsNull** 屬性。 這個屬性也是唯讀或可讀寫，這取決於針對資料行指定的 [使用類型] 而定。  
+-   每一個選定輸入資料行的 **\<資料行>_IsNull** 屬性。 這個屬性也是唯讀或可讀寫，這取決於針對資料行指定的 [使用類型]  而定。  
   
 -   每個已設定輸出的 **DirectRowTo\<輸出緩衝區>** 方法。 當您在相同的 `ExclusionGroup` 中將資料列篩選成數個輸出的其中一個時，您將會使用這些方法。  
   
@@ -149,7 +149,7 @@ public override void PreExecute()
   
 -   每一個輸出資料行的具名、具類型、唯寫的存取子屬性。  
   
--   唯**\<資料行 > _IsNull**可用來將資料行值設定為每一個選定的輸出資料行的屬性`null`。  
+-   唯 **\<資料行 > _IsNull**可用來將資料行值設定為每一個選定的輸出資料行的屬性`null`。  
   
 -   要將空白的新資料列加入到輸出緩衝區的 `AddRow` 方法。  
   

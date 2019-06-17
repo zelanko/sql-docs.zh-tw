@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ffdedf95865e2653ea434c30eb5c07f19ba8286f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013925"
 ---
 # <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
@@ -61,7 +61,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**is_nullable**|**bit**|如果資料行允許 NULL 則包含值 1，如果資料行不允許 NULL 則包含 0，此外，如果無法判別資料行是否允許 NULL，則為 1。|  
 |**system_type_id**|**int**|包含 sys.types 中所指定的資料行的資料類型的 system_type_id。 針對 CLR 類型，即使 system_type_name 資料行將傳回 NULL，這個資料行將會傳回值 240。|  
 |**system_type_name**|**nvarchar(256)**|包含資料類型名稱。 包含指定給資料行之資料類型的引數 (例如長度、有效位數、小數位數)。 如果資料類型是使用者定義的別名類型，這裡就會指定基礎系統類型。 如果它是 CLR 使用者定義類型，這個資料行就會傳回 NULL。|  
-|**max_length**|**smallint**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或**xml**。<br /><br /> 針對**文字**資料行**max_length**值會是 16，或是所設定的值**sp_tableoption 'text in row'**。|  
+|**max_length**|**smallint**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或**xml**。<br /><br /> 針對**文字**資料行**max_length**值會是 16，或是所設定的值**sp_tableoption 'text in row'** 。|  
 |**有效位數**|**tinyint**|如果以數值為基礎，就是資料行的有效位數。 否則傳回 0。|  
 |**scale**|**tinyint**|如果是以數值為基礎，便是資料行的小數位數。 否則傳回 0。|  
 |**collation_name**|**sysname**|如果是以字元為基礎，便是資料行的定序名稱。 否則，便傳回 NULL。|  

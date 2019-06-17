@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 627ab54ed35cbc0a43c5a0eac26a1397199edbd8
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014658"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>在 Updategram 中指定註解式對應結構描述 (SQLXML 4.0)
@@ -64,7 +64,7 @@ ms.locfileid: "66014658"
 </xsd:schema>  
 ```  
   
- 下列 updategram 會將一筆記錄插入 Sales.Customer 資料表，並依賴之前的對應結構描述，適當地將此資料對應至資料表。 請注意，updategram 會使用相同的項目名稱， **\<客戶>**，如結構描述中定義。 這是強制性的作法，因為 updategram 會指定特定的結構描述。  
+ 下列 updategram 會將一筆記錄插入 Sales.Customer 資料表，並依賴之前的對應結構描述，適當地將此資料對應至資料表。 請注意，updategram 會使用相同的項目名稱， **\<客戶>** ，如結構描述中定義。 這是強制性的作法，因為 updategram 會指定特定的結構描述。  
   
 ##### <a name="to-test-the-updategram"></a>若要測試 Updategram  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66014658"
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. 使用對應結構描述內指定的父子式關聯性插入記錄  
  結構描述元素可以產生關聯。 **\<Sql: relationship >** 項目會指定結構描述項目之間的父子式關聯性。 這項資訊是用來更新具有主索引鍵與外部索引鍵關聯性的對應資料表。  
   
- 下列對應結構描述 (SampleSchema.xml) 包含兩個元素， **\<順序>** 並 **\<OD>**:  
+ 下列對應結構描述 (SampleSchema.xml) 包含兩個元素， **\<順序>** 並 **\<OD>** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -275,9 +275,9 @@ ms.locfileid: "66014658"
   
  在此範例中，XSD 結構描述具有 **\<客戶>** 並 **\<順序>** 項目，而且它會指定兩個項目之間的父子式關聯性。 它會識別 **\<順序>** 父項目並 **\<客戶>** 作為子項目。  
   
- 此 updategram 處理邏輯會使用有關父子式關聯性的資訊來判斷哪些記錄會插入資料表中。 在此範例中，updategram 邏輯會先嘗試將記錄插入 Ord 資料表 (因為**\<順序>** 父系)，然後嘗試將記錄插入 Cust 資料表 (因為**\<客戶>** 是子系)。 但是，由於包含在資料庫資料表結構描述內之主索引鍵/外部索引鍵資訊的緣故，這項插入作業會造成資料庫中的外部索引鍵違規，而使得插入失敗。  
+ 此 updategram 處理邏輯會使用有關父子式關聯性的資訊來判斷哪些記錄會插入資料表中。 在此範例中，updategram 邏輯會先嘗試將記錄插入 Ord 資料表 (因為 **\<順序>** 父系)，然後嘗試將記錄插入 Cust 資料表 (因為 **\<客戶>** 是子系)。 但是，由於包含在資料庫資料表結構描述內之主索引鍵/外部索引鍵資訊的緣故，這項插入作業會造成資料庫中的外部索引鍵違規，而使得插入失敗。  
   
- 若要指示 updategram 邏輯在更新作業期間反轉父子式關聯性`inverse`上指定註釋**\<關聯性>** 項目。 因此，記錄會先加入到 Cust 資料表，然後再加入到 Ord 資料表，作業就會成功。  
+ 若要指示 updategram 邏輯在更新作業期間反轉父子式關聯性`inverse`上指定註釋 **\<關聯性>** 項目。 因此，記錄會先加入到 Cust 資料表，然後再加入到 Ord 資料表，作業就會成功。  
   
  下列 updategram 會使用指定的 XSD 結構描述，將訂單 (OrderID=2) 插入到 Ord 資料表，並將客戶 (CustomerID='AAAAA') 插入到 Cust 資料表：  
   

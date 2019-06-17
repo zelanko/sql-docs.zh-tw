@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a79df6d154b5b5f2363eb14af0a4ffae5c9cb618
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081360"
 ---
 # <a name="enable-dimension-writeback-business-intelligence-wizard"></a>啟用維度回寫 (商業智慧精靈)
   使用 **[啟用維度回寫]** 頁面，即可啟用或停用選取之維度的回寫功能。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **啟用維度回寫**  
  選取即可讓維度成為可寫入的維度。  
   

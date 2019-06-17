@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1cfda465f8d9b4e04e60985b9fbd0b9aa9f2aeff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63048502"
 ---
 # <a name="sqldatasources-visual-foxpro-odbc-driver"></a>SQLDataSources (Visual FoxPro ODBC Driver)

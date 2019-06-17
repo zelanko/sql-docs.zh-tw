@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 32facb58645e0fbb3750ca02da0d3a22b320fc67
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997040"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
@@ -52,7 +52,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
 `[ @property = ] 'property'` 是要變更名稱。 *屬性*已**sysname**，沒有預設值。  
   
-`[ @value = ] 'value'` 是指定之屬性的新值。 *值*已**nvarchar(1000)**，沒有預設值。  
+`[ @value = ] 'value'` 是指定之屬性的新值。 *值*已**nvarchar(1000)** ，沒有預設值。  
   
  下表描述發行項的屬性及這些屬性的值。  
   
@@ -85,7 +85,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="remarks"></a>備註  
  **sp_changemergefilter**用於合併式複寫中。  
   
- 如果快照集存在的話，變更合併發行項的篩選需要重新建立快照集。 這藉由設定**@force_invalidate_snapshot**要**1**。 另外，如果有這個發行項的訂閱，也必須重新初始化訂閱。 這是藉由設定**@force_reinit_subscription**要**1**。  
+ 如果快照集存在的話，變更合併發行項的篩選需要重新建立快照集。 這藉由設定 **@force_invalidate_snapshot** 要**1**。 另外，如果有這個發行項的訂閱，也必須重新初始化訂閱。 這是藉由設定 **@force_reinit_subscription** 要**1**。  
   
  若要使用邏輯記錄，發行集和發行項必須符合許多需求。 如需詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
   

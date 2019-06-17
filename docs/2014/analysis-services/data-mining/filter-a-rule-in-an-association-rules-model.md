@@ -15,23 +15,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b63a6d6da0cb1d489ecac418e2682590ea2164e5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084405"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>篩選關聯規則模型中的規則
   您可以在關聯模型中使用篩選，將結果限制為您所感興趣的關聯。 例如，您可以篩選規則，只顯示包含特定產品的規則。  
   
- 在資料採礦設計師中，您可以使用 **關聯規則檢視器 [規則]**[!INCLUDE[msCoName](../../includes/msconame-md.md)] 索引標籤上的控制項來篩選顯示的規則。  您還可以對模型建立查詢，只查看包含特定值的項目集。  
+ 在資料採礦設計師中，您可以使用 **關聯規則檢視器 [規則]** [!INCLUDE[msCoName](../../includes/msconame-md.md)] 索引標籤上的控制項來篩選顯示的規則。  您還可以對模型建立查詢，只查看包含特定值的項目集。  
   
 > [!NOTE]  
 >  這個選項僅適用於使用 Microsoft 關聯分析演算法所建立的採礦模型。  
   
 ### <a name="filter-a-rule-in-an-association-model"></a>篩選關聯模型中的規則  
   
-1.  使用 **[關聯規則檢視器]** 開啟此採礦模型。 若要在 SQL Server Management Studio 中進行這項處理，請以滑鼠右鍵按一下模型名稱，然後選取 **[瀏覽]**。 若要在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中進行這項處理，請按兩下包含此模型的採礦結構，然後按一下 [資料採礦設計師] 的 [採礦模型檢視器] 索引標籤。  
+1.  使用 **[關聯規則檢視器]** 開啟此採礦模型。 若要在 SQL Server Management Studio 中進行這項處理，請以滑鼠右鍵按一下模型名稱，然後選取 **[瀏覽]** 。 若要在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中進行這項處理，請按兩下包含此模型的採礦結構，然後按一下 [資料採礦設計師]  的 [採礦模型檢視器]  索引標籤。  
   
 2.  按一下 **[關聯規則檢視器]** 的 **[規則]** 索引標籤。  
   

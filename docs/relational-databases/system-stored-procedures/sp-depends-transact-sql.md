@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f20945b6c4dc8fc1dda398c3dc9e721ff8b44d07
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047163"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
@@ -56,7 +56,7 @@ sp_depends [ @objname = ] '<object>'
  這是物件所屬的結構描述名稱。  
   
  *object_name*  
- 這是要檢查相依性的資料庫物件。 這個物件可能是資料表、檢視表、預存程序、使用者定義函數或觸發程序。 o*bject_name*是**nvarchar(776)**，沒有預設值。  
+ 這是要檢查相依性的資料庫物件。 這個物件可能是資料表、檢視表、預存程序、使用者定義函數或觸發程序。 o*bject_name*是**nvarchar(776)** ，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -64,7 +64,7 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>結果集  
  **sp_depends**會顯示兩個結果集。  
   
- 下列結果集顯示的物件所在*\<物件 >* 而定。  
+ 下列結果集顯示的物件所在 *\<物件 >* 而定。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -74,7 +74,7 @@ sp_depends [ @objname = ] '<object>'
 |**selected**|**nvarchar(8)**|是否在 SELECT 陳述式中使用這個項目。|  
 |**column**|**sysname**|存在相依性的資料行或參數。|  
   
- 下列結果集會顯示相依於物件*\<物件 >*。  
+ 下列結果集會顯示相依於物件 *\<物件 >* 。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

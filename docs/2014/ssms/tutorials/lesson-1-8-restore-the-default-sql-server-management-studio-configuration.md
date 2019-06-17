@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1df89b0c8f9ee694fcb2a77b21c82c3d7839287d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63151538"
 ---
 # <a name="restore-the-default-sql-server-management-studio-configuration"></a>還原預設的 SQL Server Management Studio 組態
@@ -24,7 +24,7 @@ ms.locfileid: "63151538"
   
 #### <a name="to-restore-the-windows"></a>若要還原視窗  
   
-1.  若要還原視窗的原始位置，請在 [視窗] 功能表上，按一下 [重設視窗配置]。  
+1.  若要還原視窗的原始位置，請在 [視窗]  功能表上，按一下 [重設視窗配置]  。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [摘要：基本導覽](lesson-1-9-summary-basic-navigation.md)  

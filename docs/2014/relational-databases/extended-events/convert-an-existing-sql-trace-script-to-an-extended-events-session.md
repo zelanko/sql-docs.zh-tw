@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63015770"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段
@@ -79,7 +79,7 @@ ms.locfileid: "63015770"
   
     2.  針對您在上一個步驟所識別的每個 SQL 追蹤事件類別，尋找同等的「擴充事件」事件名稱 (如果您不確定同等的事件名稱，請使用 [檢視同等於 SQL 追蹤事件類別的擴充事件項目](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)主題中的查詢)。  
   
-    3.  使用下列查詢來識別正確的資料欄位，這些欄位用於您在上一個步驟所識別的事件。 此查詢會在 "event_field" 資料行中顯示「擴充事件」資料欄位。 在此查詢中，使用您在上一個步驟所指定的事件名稱來取代 <事件名稱>。  
+    3.  使用下列查詢來識別正確的資料欄位，這些欄位用於您在上一個步驟所識別的事件。 此查詢會在 "event_field" 資料行中顯示「擴充事件」資料欄位。 在此查詢中，使用您在上一個步驟所指定的事件名稱來取代 <事件名稱>  。  
   
         ```sql
         SELECT xp.name package_name, xe.name event_name  

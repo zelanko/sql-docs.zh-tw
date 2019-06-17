@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d8d2ad4c7df20b2b9649b1ad780dd40353a7796e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996806"
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
@@ -49,7 +49,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>引數  
 `[ @dbname = ] 'dbname'` 是要連接到伺服器之資料庫的名稱。 名稱必須是唯一的。 *dbname*已**sysname**，預設值是 NULL。  
   
-`[ @physname = ] 'physical_name'` 是實體的名稱，包括路徑之資料庫檔案。 *physical_name*已**nvarchar(260)**，預設值是 NULL。  
+`[ @physname = ] 'physical_name'` 是實體的名稱，包括路徑之資料庫檔案。 *physical_name*已**nvarchar(260)** ，預設值是 NULL。  
   
 > [!NOTE]  
 >  這個引數對應到 CREATE DATABASE 陳述式的 FILENAME 參數。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  

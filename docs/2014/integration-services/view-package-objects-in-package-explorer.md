@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b48b7b4f106b7be318777d6041c5574f9d6c3039
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054506"
 ---
 # <a name="view-package-objects-in-package-explorer"></a>在封裝總管中檢視封裝物件
@@ -30,17 +30,17 @@ ms.locfileid: "66054506"
   
 2.  按一下 **[封裝總管]** 索引標籤。  
   
-3.  若要檢視 **[變數]**、 **[優先順序條件約束]**、 **[事件處理常式]**、 **[連接管理員]**、 **[記錄提供者]** 或 **[可執行檔]** 資料夾的內容，請展開各個資料夾。  
+3.  若要檢視 **[變數]** 、 **[優先順序條件約束]** 、 **[事件處理常式]** 、 **[連接管理員]** 、 **[記錄提供者]** 或 **[可執行檔]** 資料夾的內容，請展開各個資料夾。  
   
 4.  視封裝結構而定，展開任何下一層級資料夾。  
   
 #### <a name="to-view-package-object-properties"></a>檢視封裝物件屬性  
   
--   以滑鼠右鍵按一下物件，然後按一下 [屬性]以開啟 [屬性] 視窗。  
+-   以滑鼠右鍵按一下物件，然後按一下 [屬性]  以開啟 [屬性]  視窗。  
   
 #### <a name="to-delete-an-object-in-a-package"></a>刪除封裝中的物件  
   
--   以滑鼠右鍵按一下物件，然後按一下 [刪除]。  
+-   以滑鼠右鍵按一下物件，然後按一下 [刪除]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視套件物件](view-package-objects.md)  

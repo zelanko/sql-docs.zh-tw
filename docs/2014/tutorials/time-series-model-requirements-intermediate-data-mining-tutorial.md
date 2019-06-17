@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5b3438e832f28329cb0fec764d3a4846bae18ede
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63043049"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>了解時間序列模型的需求 (中繼資料採礦教學課程)
@@ -31,7 +31,7 @@ ms.locfileid: "63043049"
   
 ### <a name="to-identify-the-time-key-for-the-forecasting-model"></a>識別預測模型的時間索引鍵  
   
-1.  在窗格中， **SalesByRegion.dsv [設計]**，以滑鼠右鍵按一下 vTimeSeries 資料表，並選取**瀏覽資料**。  
+1.  在窗格中， **SalesByRegion.dsv [設計]** ，以滑鼠右鍵按一下 vTimeSeries 資料表，並選取**瀏覽資料**。  
   
      新的索引標籤隨即開啟，標題為**瀏覽 vTimeSeries 資料表**。  
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 20d730ed2fd975d800b27882ecc218f7ce1868b3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62725122"
 ---
 # <a name="content-queries-data-mining"></a>內容查詢 (資料採礦)
@@ -135,7 +135,7 @@ ms.locfileid: "62725122"
  本節提供幾個範例，以便說明演算法的選擇如何影響模型內所儲存的資訊類型。 如需採礦模型內容以及每一個模型類型特有之內容的詳細資訊，請參閱 [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 ###  <a name="bkmk_Assoc"></a> 範例 1：關聯模型的內容查詢  
- `SELECT FROM <model>.CONTENT`陳述式會根據您所查詢的模型類型傳回不同種類的資訊。 如果是關聯模型，資訊的主要片段為 *「節點類型」*(Node Type)。 節點類似於模型內容中資訊的容器。 在關聯模型中，代表規則之節點的 NODE_TYPE 值為 8，而代表項目集之節點的 NODE_TYPE 值則為 7。  
+ `SELECT FROM <model>.CONTENT`陳述式會根據您所查詢的模型類型傳回不同種類的資訊。 如果是關聯模型，資訊的主要片段為 *「節點類型」* (Node Type)。 節點類似於模型內容中資訊的容器。 在關聯模型中，代表規則之節點的 NODE_TYPE 值為 8，而代表項目集之節點的 NODE_TYPE 值則為 7。  
   
  因此，下列查詢會傳回前 10 個項目集，並依照支援排序 (預設的排序)。  
   

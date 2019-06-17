@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35399614c69d63f3d7daae2a64f670d7ccfbaef0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63021658"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>發行集資訊，警告 (快照式發行集，SQL Server 2005 和更新的版本)

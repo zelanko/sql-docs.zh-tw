@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7539ae9426bfe480f7dbbe25ea1c3724815295e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768784"
 ---
 # <a name="property-expressions-editor"></a>屬性運算式編輯器
@@ -38,7 +38,7 @@ ms.locfileid: "62768784"
  按一下省略符號，即可開啟 **[運算式產生器]** 對話方塊。 如需詳細資訊，請參閱 [Expression Builder](expression-builder.md)。  
   
  **刪除**  
- 選取屬性，然後按一下 [刪除]。  
+ 選取屬性，然後按一下 [刪除]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [運算式頁面](expressions-page.md)   

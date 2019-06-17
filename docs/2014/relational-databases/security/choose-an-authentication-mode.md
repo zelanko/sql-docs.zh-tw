@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5e06e33048548baad245bee78b9989e9c4cc700b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011336"
 ---
 # <a name="choose-an-authentication-mode"></a>選擇驗證模式
@@ -65,11 +65,11 @@ ms.locfileid: "63011336"
   
 #### <a name="to-determine-the-password-policies-of-the-local-computer"></a>判斷本機電腦的密碼原則  
   
-1.  在 **[開始]** 功能表上，按一下 **[執行]**。  
+1.  在 **[開始]** 功能表上，按一下 **[執行]** 。  
   
-2.  在 [**執行**] 對話方塊中，輸入`secpol.msc`，然後按一下 **[確定]**。  
+2.  在 [**執行**] 對話方塊中，輸入`secpol.msc`，然後按一下 **[確定]** 。  
   
-3.  在 [本機安全性設定] 應用程式中，依序展開 [安全性設定] 和 [帳戶原則]，然後按一下 [密碼原則]。  
+3.  在 [本機安全性設定]  應用程式中，依序展開 [安全性設定]  和 [帳戶原則]  ，然後按一下 [密碼原則]  。  
   
      密碼原則就會描述在結果窗格中。  
   

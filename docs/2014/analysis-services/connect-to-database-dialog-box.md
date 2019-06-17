@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01862762cdea7ea0ef49c12a3c82ee1fd1c972cf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087075"
 ---
 # <a name="connect-to-database-dialog-box"></a>連接到資料庫對話方塊
   使用 **[連接到資料庫]** 對話方塊連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  

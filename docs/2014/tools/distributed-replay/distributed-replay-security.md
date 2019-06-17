@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c040bde90a54b9327023d1e1889efdd2930d81b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150344"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay 安全性
@@ -51,9 +51,9 @@ ms.locfileid: "63150344"
   
     -   按一下 **開始**，按一下**執行**，型別`services.msc`，然後按 ENTER 鍵。  
   
-2.  在 [服務] 對話方塊中，以滑鼠右鍵按一下您想要設定的服務，然後按一下 [內容]。  
+2.  在 [服務]  對話方塊中，以滑鼠右鍵按一下您想要設定的服務，然後按一下 [內容]  。  
   
-3.  在 [登入] 索引標籤上，按一下 [This account (這個帳戶)]。  
+3.  在 [登入]  索引標籤上，按一下 [This account (這個帳戶)]  。  
   
 4.  設定您想要使用的使用者帳戶。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "63150344"
   
 1.  **開啟 dcomcnfg.exe，[元件服務] 嵌入式管理單元**:這是用來設定 DCOM 權限的工具。  
   
-    1.  在 Controller 電腦上，按一下 [開始]。  
+    1.  在 Controller 電腦上，按一下 [開始]  。  
   
     2.  型別`dcomcnfg.exe`中**搜尋** 方塊中。  
   

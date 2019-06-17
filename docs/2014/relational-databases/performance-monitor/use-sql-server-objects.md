@@ -31,16 +31,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 67edebf9b4adcf40c12190446997dbd7c4b6e57b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63151185"
 ---
 # <a name="use-sql-server-objects"></a>使用 SQL Server 物件
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所提供的物件與計數器，可供「系統監視器」用來對執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的電腦監視其中的活動。 物件可以是任何一種 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定或 Windows 處理序。 每個物件都包含一個或多個計數器，可決定欲監視之物件的不同層面。 例如， **SQL Server Locks** 物件包含了稱為 **Number of Deadlocks/sec** 與 **Lock Timeouts/sec**的計數器。  
   
- 若給定類型的多個資源存在於電腦內，一些物件將擁有多個執行個體。 例如，若系統擁有多個處理器， **Processor** 物件類型將擁有多個執行個體。 **Databases** 物件類型對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的每個資料庫都擁有一個執行個體。 有些物件類型 (例如 **Memory Manager** 物件) 則只有一個執行個體。 若物件擁有多個執行個體，您可增加計數器來追蹤每個執行個體的統計資料，在許多狀況下，則可同時追蹤所有的執行個體。 預設執行個體的計數器會以 **SQLServer:**\<物件名稱> 格式顯示。 具名執行個體的計數器會以 **MSSQL$**\<執行個體名稱>**:**\<計數器名稱> 或 **SQLAgent$**\<執行個體名稱>**:**\<計數器名稱> 格式顯示。  
+ 若給定類型的多個資源存在於電腦內，一些物件將擁有多個執行個體。 例如，若系統擁有多個處理器， **Processor** 物件類型將擁有多個執行個體。 **Databases** 物件類型對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的每個資料庫都擁有一個執行個體。 有些物件類型 (例如 **Memory Manager** 物件) 則只有一個執行個體。 若物件擁有多個執行個體，您可增加計數器來追蹤每個執行個體的統計資料，在許多狀況下，則可同時追蹤所有的執行個體。 預設執行個體的計數器會以 **SQLServer:** \<物件名稱>  格式顯示。 具名執行個體的計數器會以 **MSSQL$** \<執行個體名稱>  **:** \<計數器名稱>  或 **SQLAgent$** \<執行個體名稱>  **:** \<計數器名稱>  格式顯示。  
   
  您可以在圖表中新增或移除計數器，並儲存圖表設定，藉以指定要在「系統監視器」啟動時監視的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件和計數器。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "63151185"
  如需 **SSIS Pipeline** 計數器的相關資訊，請參閱 [效能計數器](../../integration-services/performance/performance-counters.md)。  
   
 ##  <a name="RequiredPermissions"></a> 必要權限  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件時必須具備 Windows 權限，[SQLAgent:Alerts] 除外。 使用者必須是**系統管理員**固定伺服器角色的成員，才能使用 [SQLAgent:Alerts]。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件時必須具備 Windows 權限，[SQLAgent:Alerts]  除外。 使用者必須是**系統管理員**固定伺服器角色的成員，才能使用 [SQLAgent:Alerts]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用效能物件](../../ssms/agent/use-performance-objects.md)   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60d8599942db1c7f1ff679d92de496692ed2d58b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071395"
 ---
 # <a name="health-rules-reference-powerpivot-for-sharepoint"></a>健全狀況規則參考 (PowerPivot for SharePoint)
@@ -26,7 +26,7 @@ ms.locfileid: "66071395"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **注意：**[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 會針對不同版本的 SharePoint 安裝不同組的健全狀況規則。 請參閱下表中的 「 版本 」 資料行，或者您可以執行下列 Windows PowerShell 命令來查看已安裝的規則。  
+ **注意：** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 會針對不同版本的 SharePoint 安裝不同組的健全狀況規則。 請參閱下表中的 「 版本 」 資料行，或者您可以執行下列 Windows PowerShell 命令來查看已安裝的規則。  
   
 ```  
 Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like "*power*"}  | format-table -property * -autosize | out-default  
@@ -50,8 +50,8 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
 |PowerPivot:找不到在記錄檔目錄中，表示程式損毀的一或多個小型傾印檔案。|否|否|SharePoint 2013<br /><br /> SharePoint 2010|在程式損毀期間會產生小型傾印檔案，以擷取損毀之前有關 PowerPivot 服務應用程式狀態的資訊。 這項資訊可傳送給 Microsoft 並且用於疑難排解。 在伺服器上偵測到 .dmp 檔案時會觸發此規則。 此規則會提供該檔案的連結，您可以在 PowerPivot for SharePoint 執行個體的 \OLAP\Log 資料夾中找到此檔案。 請注意，您無法使用文字編輯器來檢視檔案內容。 檢視小型傾印檔案需要下載及安裝個別的偵錯工具。 如需詳細資訊，請參閱＜ [Windows 偵錯工具](/windows-hardware/drivers/debugger/)＞。|  
 |PowerPivot:磁碟空間不足的快取 PowerPivot 資料所在的磁碟機上。|是|否|SharePoint 2010|根據預設，當備份資料夾所在之磁碟機上的磁碟空間低於 5% 時，便會觸發此健全狀況規則。 如需有關設定此百分比的詳細資訊，請參閱 < [PowerPivot 健全狀況規則-設定](configure-power-pivot-health-rules.md)。 如需有關磁碟使用量的詳細資訊，請參閱 <<c0> [ 設定磁碟空間使用量&#40;PowerPivot for SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)。</c0>|  
 |PowerPivot:不是預期的頻率更新使用量資料。|是|否|SharePoint 2013<br /><br /> SharePoint 2010|PowerPivot for SharePoint 會使用內建的使用量資料收集系統來蒐集有關連接、資料重新整理以及查詢回應時間的度量。 它會將此使用量資料儲存在 PowerPivot 服務應用程式資料庫中，接著更新 PowerPivot 活頁簿 (PowerPivot Management Data.xlsx)，將資料提供給 PowerPivot 管理儀表板中的報表。 這個規則表示使用量資料並未以足夠的頻率移到 PowerPivot Management Data.xlsx 檔案中。 此規則會使用 .xlsx 檔案上的時間戳記當做檔案已更新的證明。 如果破壞資料精確度的使用量資料收集系統中有其他問題，這個規則將不會偵測到。 若要針對這個錯誤進行疑難排解，請檢查計時器工作以確認這些工作正在執行。 如需有關使用量資料收集的詳細資訊，請參閱 <<c0> [ 設定使用量資料收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。</c0>|  
-|PowerPivot:Midtier 處理帳戶應該對所有關聯 SPWebApplications 具有 「 完整讀取 」 權限。|否|是|SharePoint 2013<br /><br /> SharePoint 2010|PowerPivot 服務應用程式識別必須擁有**完整讀取**權限，才能存取 SharePoint 內容資料庫，代表擁有文件中的 僅檢視 」 權限的使用者。 若要判斷哪一個帳戶當做 PowerPivot 服務應用程式識別，請開啟**來設定服務帳戶**在 [管理中心] 頁面。 服務應用程式最有可能在 **[SharePoint Web 服務系統]** 服務應用程式集區或專用應用程式集區內執行。 雖然這項規則提供了自動修復選項，您會獲得更好的結果，如果您手動授與權限執行下列動作：<br /><br /> 1) 在管理中心按一下 [管理 Web 應用程式]。<br /><br /> 2) 選取網站，然後按一下 [使用者原則]。<br /><br /> 3) 按一下 [加入使用者]。<br /><br /> 4) 選取 [(所有區域)]，然後按一下 [下一步]。<br /><br /> 5） 在 [使用者] 中，輸入 PowerPivot 服務應用程式識別，然後按一下**完整讀取**核取方塊。 按一下 **[完成]**。<br /><br /> 6) 驗證修復。 在 [監視] 中，按一下 **[檢閱規則定義]**。 尋找然後開啟 PowerPivot 規則。 按一下 **[立即執行]**。 返回 **[檢閱問題與方案]** ，確認規則不再出現。|  
-|PowerPivot:Secondary Logon 服務 (seclogon) 已停用|否|否|SharePoint 2013<br /><br /> SharePoint 2010|Secondary Logon 服務可用來在 PowerPivot 圖庫中產生 PowerPivot 活頁簿的縮圖影像。 Secondary Logon 服務預設會設定為手動啟動。 如果停用服務，產生縮圖的作業會失敗。 此外，ULS 記錄檔會包含下列錯誤：「 錯誤 1058年可有因為根本原因的事實 Windows 服務"Secondary Logon"已停用。 」<br /><br /> 若要檢查服務組態，請使用 [服務] 主控台應用程式尋找 Secondary Logon，然後將其 **[啟動類型]** 變更為 **[手動]**。 如果無法啟用服務，您的組織可能具有停用服務的群組原則。 請與管理員聯繫，確定是否為此情況。<br /><br /> 啟用服務之後，縮圖或快照影像會每隔一段時間重新整理。 或者，您可以重新啟動服務，然後開啟再重新儲存特定報表的屬性頁面，藉此強制重新整理。 如需詳細資訊，請參閱 <<c0> [ 如何使用 PowerPivot 圖庫](https://go.microsoft.com/fwlink/?LinkId=246462)。|  
+|PowerPivot:Midtier 處理帳戶應該對所有關聯 SPWebApplications 具有 「 完整讀取 」 權限。|否|是|SharePoint 2013<br /><br /> SharePoint 2010|PowerPivot 服務應用程式識別必須擁有**完整讀取**權限，才能存取 SharePoint 內容資料庫，代表擁有文件中的 僅檢視 」 權限的使用者。 若要判斷哪一個帳戶當做 PowerPivot 服務應用程式識別，請開啟**來設定服務帳戶**在 [管理中心] 頁面。 服務應用程式最有可能在 **[SharePoint Web 服務系統]** 服務應用程式集區或專用應用程式集區內執行。 雖然這項規則提供了自動修復選項，您會獲得更好的結果，如果您手動授與權限執行下列動作：<br /><br /> 1) 在管理中心按一下 [管理 Web 應用程式]  。<br /><br /> 2) 選取網站，然後按一下 [使用者原則]  。<br /><br /> 3) 按一下 [加入使用者]  。<br /><br /> 4) 選取 [(所有區域)]，然後按一下 [下一步]  。<br /><br /> 5） 在 [使用者] 中，輸入 PowerPivot 服務應用程式識別，然後按一下**完整讀取**核取方塊。 按一下 **[完成]** 。<br /><br /> 6) 驗證修復。 在 [監視] 中，按一下 **[檢閱規則定義]** 。 尋找然後開啟 PowerPivot 規則。 按一下 **[立即執行]** 。 返回 **[檢閱問題與方案]** ，確認規則不再出現。|  
+|PowerPivot:Secondary Logon 服務 (seclogon) 已停用|否|否|SharePoint 2013<br /><br /> SharePoint 2010|Secondary Logon 服務可用來在 PowerPivot 圖庫中產生 PowerPivot 活頁簿的縮圖影像。 Secondary Logon 服務預設會設定為手動啟動。 如果停用服務，產生縮圖的作業會失敗。 此外，ULS 記錄檔會包含下列錯誤：「 錯誤 1058年可有因為根本原因的事實 Windows 服務"Secondary Logon"已停用。 」<br /><br /> 若要檢查服務組態，請使用 [服務] 主控台應用程式尋找 Secondary Logon，然後將其 **[啟動類型]** 變更為 **[手動]** 。 如果無法啟用服務，您的組織可能具有停用服務的群組原則。 請與管理員聯繫，確定是否為此情況。<br /><br /> 啟用服務之後，縮圖或快照影像會每隔一段時間重新整理。 或者，您可以重新啟動服務，然後開啟再重新儲存特定報表的屬性頁面，藉此強制重新整理。 如需詳細資訊，請參閱 <<c0> [ 如何使用 PowerPivot 圖庫](https://go.microsoft.com/fwlink/?LinkId=246462)。|  
 |PowerPivot:ADOMD.NET 不被安裝在獨立已針對中央管理 WFE 上|否|否|SharePoint 2013<br /><br /> SharePoint 2010|ADOMD.NET 是支援連接至 Analysis Services 資料庫的 Analysis Services 用戶端程式庫。 在 PowerPivot for SharePoint 部署中，ADOMD.NET 可從管理中心的 PowerPivot 管理儀表板存取內建報表。 內建報表實際上是包含內嵌 Analysis Services 資料的 PowerPivot 活頁簿。 管理儀表板使用 ADOMD.NET 將連接要求傳送至伺服器，以載入活頁簿中包含的資料。<br /><br /> 在其管理中心於獨立 Web 前端伺服器上執行的拓撲中，若要在管理儀表板中檢視這些報表，您必須手動安裝 ADOMD.NET。 如需詳細資訊，請參閱 [在執行管理中心的 Web 前端伺服器上安裝 ADOMD.NET](../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md)。|  
   
   

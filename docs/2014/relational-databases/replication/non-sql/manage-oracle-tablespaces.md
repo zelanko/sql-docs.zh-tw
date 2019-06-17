@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a6bf22c7649646506b65628f556b52fead23375
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022291"
 ---
 # <a name="manage-oracle-tablespaces"></a>管理 Oracle 資料表空間
@@ -37,9 +37,9 @@ ms.locfileid: "63022291"
   
     -   **@article** 參數的發行項名稱。  
   
-    -   參數 **@property**中的檔案群組。  
+    -   參數 **@property** 中的檔案群組。  
   
-    -   參數 **@value**中的檔案群組。  
+    -   參數 **@value** 中的檔案群組。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Oracle 發行者](configure-an-oracle-publisher.md)   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4409b44a04411357d0109fb643fd13fcff6451b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960849"
 ---
 # <a name="spinvalidatetextptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
@@ -40,7 +40,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @TextPtrValue = ] textptr_value` 在 資料列文字指標是即將失效。 *textptr_value*已**varbinary (** 16 **)**，預設值是 NULL。 如果是 NULL， **sp_invalidate_textptr**讓交易中所有的資料列文字指標失效。  
+`[ @TextPtrValue = ] textptr_value` 在 資料列文字指標是即將失效。 *textptr_value*已**varbinary (** 16 **)** ，預設值是 NULL。 如果是 NULL， **sp_invalidate_textptr**讓交易中所有的資料列文字指標失效。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

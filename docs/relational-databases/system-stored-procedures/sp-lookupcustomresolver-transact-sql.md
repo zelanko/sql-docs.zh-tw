@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7f1bfc868b34ac16e1c38aedc9193002d35d5b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62959618"
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
@@ -43,15 +43,15 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @article_resolver = ] 'article_resolver'` 指定要取消登錄的自訂商務邏輯名稱。 *article_resolver*已**nvarchar(255)**，沒有預設值。 如果移除的商務邏輯是 COM 元件，這個參數就是元件的易記名稱。 如果商務邏輯是一個 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 組件，這個參數就是組件的名稱。  
+`[ @article_resolver = ] 'article_resolver'` 指定要取消登錄的自訂商務邏輯名稱。 *article_resolver*已**nvarchar(255)** ，沒有預設值。 如果移除的商務邏輯是 COM 元件，這個參數就是元件的易記名稱。 如果商務邏輯是一個 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 組件，這個參數就是組件的名稱。  
   
-`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` 指定的自訂商務邏輯的名稱相關聯的 COM 物件的 CLSID 值*article_resolver*參數。 *resolver_clsid*已**nvarchar(50)**，預設值是 NULL。  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` 指定的自訂商務邏輯的名稱相關聯的 COM 物件的 CLSID 值*article_resolver*參數。 *resolver_clsid*已**nvarchar(50)** ，預設值是 NULL。  
   
 `[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` 指定要登錄的自訂商務邏輯的類型。 *is_dotnet_assembly*已**元**，預設值是 0。 **1**表示要登錄的自訂商務邏輯是商務邏輯處理常式組件。**0**表示它是 COM 元件。  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` 是實作商務邏輯處理常式的組件名稱。 *dotnet_assembly_name*已**nvarchar(255)**，預設值是 NULL。  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` 是實作商務邏輯處理常式的組件名稱。 *dotnet_assembly_name*已**nvarchar(255)** ，預設值是 NULL。  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` 覆寫的類別名稱<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>實作商務邏輯處理常式。 *dotnet_class_name*已**nvarchar(255)**，預設值是 NULL。  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` 覆寫的類別名稱<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>實作商務邏輯處理常式。 *dotnet_class_name*已**nvarchar(255)** ，預設值是 NULL。  
   
 `[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，預設值是 NULL。 當並未從發行者呼叫預存程序時，請使用這個參數。 若未指定，就假設本機伺服器是發行者。  
   

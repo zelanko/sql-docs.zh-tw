@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c028fe9a09ad1f0f0da06a75f8ac7e0cc02b8095
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62668957"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
@@ -54,7 +54,7 @@ ms.locfileid: "62668957"
 |column_id|**int**|資料行的識別碼。 在物件中，這是唯一的。<br /><br /> 資料行識別碼不一定會循序排列。|  
 |system_type_id|**tinyint**|資料行的系統類型識別碼。|  
 |user_type_id|**int**|使用者所定義的資料行類型識別碼。<br /><br /> 若要傳回之型別的名稱，加入[sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目錄檢視這個資料行。|  
-|max_length|**smallint**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或**xml**。<br /><br /> 針對**文字**資料行，max_length 值就是 16，或是由 sp_tableoption 'text in row' 所設定的值。|  
+|max_length|**smallint**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或**xml**。<br /><br /> 針對**文字**資料行，max_length 值就是 16，或是由 sp_tableoption 'text in row' 所設定的值。|  
 |有效位數|**tinyint**|如果是以數值為基礎，便是資料行的有效位數；否則，便是 0。|  
 |scale|**tinyint**|如果是以數值為基礎，便是資料行的小數位數；否則，便是 0。|  
 |collation_name|**sysname**|如果是以字元為基礎，便是資料行的定序名稱；否則，便是 NULL。|  

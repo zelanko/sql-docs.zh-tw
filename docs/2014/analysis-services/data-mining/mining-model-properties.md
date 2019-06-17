@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083506"
 ---
 # <a name="mining-model-properties"></a>採礦模型屬性
@@ -32,7 +32,7 @@ ms.locfileid: "66083506"
   
 -   在模型上定義篩選的屬性，可用來定型模型。  
   
- 採礦模型的屬性一開始是在您建立模型時所定義；但是，您之後可以更改大多數的屬性，包括演算法參數、篩選以及資料行使用方式屬性。 您可藉由使用資料採礦設計師的 [採礦模型] 索引標籤或使用 AMO 或 XMLA 來變更屬性。  
+ 採礦模型的屬性一開始是在您建立模型時所定義；但是，您之後可以更改大多數的屬性，包括演算法參數、篩選以及資料行使用方式屬性。 您可藉由使用資料採礦設計師的 [採礦模型]  索引標籤或使用 AMO 或 XMLA 來變更屬性。  
   
  每當您變更模型的任何屬性時，您都必須重新處理模型，才能在模型中反映變更。 即使變更只牽涉到中繼資料 (例如資料行別名或描述)，也需要重新處理。  
   

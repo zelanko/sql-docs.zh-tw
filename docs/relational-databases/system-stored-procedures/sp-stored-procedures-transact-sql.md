@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff94284ba1f60d40697ad5a1e209b284dfaaefdf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63005864"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
@@ -43,9 +43,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @sp_name = ] 'name'` 是用來傳回目錄資訊的程序的名稱。 *名稱*已**nvarchar(390)**，預設值是 NULL。 支援萬用字元的模式比對。  
+`[ @sp_name = ] 'name'` 是用來傳回目錄資訊的程序的名稱。 *名稱*已**nvarchar(390)** ，預設值是 NULL。 支援萬用字元的模式比對。  
   
-`[ @sp_owner = ] 'schema'` 是此程序所屬的結構描述名稱。 *結構描述*已**nvarchar(384)**，預設值是 NULL。 支援萬用字元的模式比對。 如果*擁有者*未指定，會套用基礎 DBMS 的預設程序可見性規則。  
+`[ @sp_owner = ] 'schema'` 是此程序所屬的結構描述名稱。 *結構描述*已**nvarchar(384)** ，預設值是 NULL。 支援萬用字元的模式比對。 如果*擁有者*未指定，會套用基礎 DBMS 的預設程序可見性規則。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前結構描述含有指定名稱的程序，就會傳回該程序。 如果指定的是非限定的預存程序，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會以下列順序搜尋該程序：  
   
@@ -55,7 +55,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   目前資料庫中的 **dbo** 結構描述。  
   
-`[ @qualifier = ] 'qualifier'` 為程序限定詞的名稱。 *限定詞*已**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的表單中的資料表命名 (_限定詞_**。**_結構描述_**。**_名稱_。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*限定詞*代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+`[ @qualifier = ] 'qualifier'` 為程序限定詞的名稱。 *限定詞*已**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的表單中的資料表命名 (_限定詞_ **。** _結構描述_ **。** _名稱_。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*限定詞*代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
 `[ @fUsePattern = ] 'fUsePattern'` 決定是否底線 (_)、 百分比 （%） 或方括號 []) 會解譯為萬用字元。 *fUsePattern*已**元**，預設值是 1。  
   

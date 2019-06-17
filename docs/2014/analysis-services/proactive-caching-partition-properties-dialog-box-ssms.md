@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb486ec383ab6fa1684bd9d0e9b8f6bc67631eee
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070707"
 ---
 # <a name="proactive-caching-partition-properties-dialog-box-ssms"></a>主動式快取 (資料分割屬性對話方塊) (SSMS)
@@ -24,7 +24,7 @@ ms.locfileid: "66070707"
   
 ## <a name="options"></a>選項。  
  **標準設定**  
- 選取以啟用 [標準設定滑桿]，並使用儲存模式與主動式快取功能的預先定義設定。  
+ 選取以啟用 [標準設定滑桿]  ，並使用儲存模式與主動式快取功能的預先定義設定。  
   
  **標準設定滑桿**  
  設定為下表所列的預先定義設定之一。  
@@ -43,7 +43,7 @@ ms.locfileid: "66070707"
  選取以明確地設定儲存模式、主動式快取和通知選項。  
   
  **選項。**  
- 按一下以顯示 [儲存選項] 對話方塊，以明確地設定儲存模式、主動式快取和通知選項。 如需 [儲存選項] 對話方塊的詳細資訊，請參閱[儲存選項對話方塊 &#40;Analysis Services - 多維度資料&#41;](storage-options-dialog-box-analysis-services-multidimensional-data.md)。  
+ 按一下以顯示 [儲存選項]  對話方塊，以明確地設定儲存模式、主動式快取和通知選項。 如需 [儲存選項]  對話方塊的詳細資訊，請參閱[儲存選項對話方塊 &#40;Analysis Services - 多維度資料&#41;](storage-options-dialog-box-analysis-services-multidimensional-data.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [主動式快取&#40;資料分割&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   

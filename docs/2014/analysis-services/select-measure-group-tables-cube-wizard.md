@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7eea2aaca722ed2621127120f21b2ec350392606
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069472"
 ---
 # <a name="select-measure-group-tables-cube-wizard"></a>選取量值群組資料表 (Cube 精靈)
   使用 **[選取量值群組資料表]** 頁面，即可識別資料來源檢視並選取 Cube 的量值群組資料表。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料來源檢視**  
  選取用於 Cube 的資料來源檢視。  
   

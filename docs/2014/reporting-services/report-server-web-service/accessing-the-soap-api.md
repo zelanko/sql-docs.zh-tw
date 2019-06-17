@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab8db976275a60cfbf1e0afb78457afad18fc366
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63012250"
 ---
 # <a name="accessing-the-soap-api"></a>存取 SOAP API
@@ -57,7 +57,7 @@ http://server/reportserver/ReportService2010.asmx?wsdl
 |*reportserver*|包含 XML Web 服務的資料夾。 這是在安裝期間設定的。|  
 |*\<端點名稱>.asmx*|Web 服務端點的名稱。|  
   
- 如需有關 WSDL 格式的詳細資訊，請參閱全球資訊網協會 (W3C) WSDL 規格，網址為 http://www.w3.org/TR/wsdl。  
+ 如需有關 WSDL 格式的詳細資訊，請參閱全球資訊網協會 (W3C) WSDL 規格，網址為 http://www.w3.org/TR/wsdl 。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 Web 服務和 .NET Framework 建置應用程式](net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

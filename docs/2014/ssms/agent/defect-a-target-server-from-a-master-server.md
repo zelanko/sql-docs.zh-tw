@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0b39605d4c1867d166ce3b6878de47273ad2072
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63162369"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>使目標伺服器脫離主要伺服器
@@ -53,7 +53,7 @@ ms.locfileid: "63162369"
   
 1.  在 **[物件總管]** 中，展開設定為目標伺服器的伺服器。  
   
-2.  以滑鼠右鍵按一下 **[SQL Server Agent]**，指向 **[多伺服器管理]**，然後按一下 **[脫離]**。  
+2.  以滑鼠右鍵按一下 **[SQL Server Agent]** ，指向 **[多伺服器管理]** ，然後按一下 **[脫離]** 。  
   
 3.  按一下 **[是]** 以確定您要從主要伺服器脫離這台目標伺服器。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "63162369"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
 ```  
 sp_msx_defect ;  

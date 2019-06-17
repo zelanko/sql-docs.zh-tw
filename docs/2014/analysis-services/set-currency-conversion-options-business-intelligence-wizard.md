@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97e44dc259c79c7bb1aef5cc5cbff8b06dc6c48e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068750"
 ---
 # <a name="set-currency-conversion-options-business-intelligence-wizard"></a>設定貨幣轉換選項 (商業智慧精靈)
@@ -25,7 +25,7 @@ ms.locfileid: "66068750"
 > [!NOTE]  
 >  如果 [商業智慧精靈] 是從 [維度設計師] 啟動，或是在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中方案總管的某維度上按一下滑鼠右鍵來啟動，則不會出現此頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **選取包含匯率的量值群組**  
  選取包含匯率的量值群組，這會由貨幣轉換計算參考。  
   

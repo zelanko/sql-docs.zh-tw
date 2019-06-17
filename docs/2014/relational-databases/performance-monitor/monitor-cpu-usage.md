@@ -1,9 +1,8 @@
 ---
 title: 監視 CPU 使用量 |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: database-engine
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
@@ -20,18 +19,17 @@ helpviewer_keywords:
 - CPU [SQL Server], monitoring
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
-author: julieMSFT
-ms.author: jrasnick
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e46610823432efde0cc757e3dff317227b7548ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032096"
 ---
 # <a name="monitor-cpu-usage"></a>監視 CPU 使用量
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   請定期監視 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，以判定 CPU 使用率是否在正常範圍內。 持續偏高的 CPU 使用量比率可能代表必須將 CPU 升級，或增加多個處理器。 此外，偏高的 CPU 使用率可能代表應用程式的微調或設計不良。 將應用程式最佳化後可降低 CPU 的使用率。  
   
  使用「系統監視器」中的 **Processor:% Processor Time** 計數器是判定 CPU 使用量的一種有效方法。 此計數器可監視 CPU 花費在執行非閒置執行緒上的時間量。 狀態維持在 80% 到 90%，可能代表必須將 CPU 升級或增加更多處理器。 使用多處理器系統時，可針對每個處理器監視此計數器的不同執行個體。 此值代表特定處理器上的處理器時間總和。 若要判定所有處理器的平均值，請改為使用 **System: %Total Processor Time** 計數器。  

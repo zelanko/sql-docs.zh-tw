@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58b39d2dc660fd51d1ba21308ff056874a239731
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054084"
 ---
 # <a name="move-members-within-a-hierarchy-master-data-services"></a>在階層中移動成員 (Master Data Services)
@@ -40,7 +40,7 @@ ms.locfileid: "66054084"
   
 2.  從 **[版本]** 清單中選取版本。  
   
-3.  按一下 **[總管]**。  
+3.  按一下 **[總管]** 。  
   
 4.  從功能表列指向**階層**然後按一下*hierarchy_name*。  
   

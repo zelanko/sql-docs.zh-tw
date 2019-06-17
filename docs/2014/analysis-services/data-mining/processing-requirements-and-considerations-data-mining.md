@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7bc06d5ece0b81ff3da9d41abb31e2c864a29f5e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083125"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>處理需求和考量 (資料採礦)
@@ -39,7 +39,7 @@ ms.locfileid: "66083125"
   
  當您處理模型時，模型並不會從資料來源重新讀取資料，而是從採礦結構取得資料摘要。 使用所建立的 Cube，連同快取索引及快取的案例資料之後，伺服器就會建立獨立的執行緒來定型模型。  
   
- 如需版本的詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，支援平行模型處理，請參閱 <<c2> [ 支援的 SQL Server 2012 的版本功能](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473)。  
+ 如需版本的詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，支援平行模型處理，請參閱 <<c2> [ 支援的 SQL Server 2012 的版本功能](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ##  <a name="bkmk_ProcessStructures"></a> 處理採礦結構  
  採礦結構可以與所有相依模型一起處理，也可以單獨處理。 在預期某些模型需要長時間來處理並且您想要延遲該作業時，分開處理採礦結構與模型可能會很有用。  
@@ -64,7 +64,7 @@ ms.locfileid: "66083125"
   
  **部署專案**:根據專案設定和專案的目前狀態，在專案中會處理採礦模型通常是完整部署專案時。  
   
- 除非 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器上已有先前處理的版本，且尚無任何結構性變更，否則，起始部署時會自動開始處理。 您可以從下拉式清單中選取 [部署方案]，或按 F5 鍵來部署專案。 您可以  
+ 除非 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器上已有先前處理的版本，且尚無任何結構性變更，否則，起始部署時會自動開始處理。 您可以從下拉式清單中選取 [部署方案]  ，或按 F5 鍵來部署專案。 您可以  
   
  如需如何設定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署屬性來控制採礦模型部署方式的詳細資訊，請參閱 [部署資料採礦方案](deployment-of-data-mining-solutions.md)。  
   

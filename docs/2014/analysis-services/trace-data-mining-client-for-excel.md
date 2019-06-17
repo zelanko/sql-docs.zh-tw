@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 576cb395f7f488eec8ebf28ab5bc7f226cb81809
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065889"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>追蹤 (適用於 Excel 的資料採礦用戶端)
@@ -29,7 +29,7 @@ ms.locfileid: "66065889"
   
  **追蹤**監視只為目前的連線，以及內容**追蹤**對話方塊不會儲存。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  追蹤窗格  
  列出從 Excel 用戶端傳送到伺服器的所有陳述式。  
   

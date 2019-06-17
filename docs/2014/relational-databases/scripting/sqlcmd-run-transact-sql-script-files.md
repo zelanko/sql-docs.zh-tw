@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0a55800ff1d707ce191d373a7348bf744ce5886
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063670"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>使用 sqlcmd 執行 Transact-SQL 指令碼檔案
@@ -24,7 +24,7 @@ ms.locfileid: "66063670"
   
  若要使用「記事本」建立簡單的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案，請遵循下列步驟：  
   
-1.  按一下 [開始]，依序指向 [所有程式] 和 [附屬應用程式]，然後按一下 [記事本]。  
+1.  按一下 [開始]  ，依序指向 [所有程式]  和 [附屬應用程式]  ，然後按一下 [記事本]  。  
   
 2.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼複製並貼到 [記事本] 中：  
   

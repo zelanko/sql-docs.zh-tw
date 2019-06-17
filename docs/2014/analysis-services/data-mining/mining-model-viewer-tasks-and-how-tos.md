@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3c99733ca6853a2e0a5503868e2270fa6585eae
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083476"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>採礦模型檢視器工作和使用說明
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的資料採礦設計師包含數個工具，您可以用來瀏覽採礦模型。 下列主題提供逐步指示，教您如何完成在設計師中使用 [採礦模型檢視器] 索引標籤的特定工作。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的資料採礦設計師包含數個工具，您可以用來瀏覽採礦模型。 下列主題提供逐步指示，教您如何完成在設計師中使用 [採礦模型檢視器]  索引標籤的特定工作。  
   
 ## <a name="in-this-section"></a>本節內容  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b67b5eaf0d6927a0ed009498fd1b81c3aabd3354
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061134"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>大量插入工作編輯器 (一般頁面)
@@ -26,7 +26,7 @@ ms.locfileid: "66061134"
   
  若要了解這個工作，請參閱＜ [Bulk Insert Task](control-flow/bulk-insert-task.md)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **名稱**  
  為大量插入工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  
   

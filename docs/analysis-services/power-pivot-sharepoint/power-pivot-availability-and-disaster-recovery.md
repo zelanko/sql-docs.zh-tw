@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 96b8703f18f7867ed57101f33e2ec1c4d31b35c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62956778"
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Power Pivot 可用性和災害復原
@@ -47,7 +47,7 @@ ms.locfileid: "62956778"
   
 -   **(3)** Excel Calculation Services 會在每部應用程式伺服器上執行，並允許服務應用程式跨應用程式伺服器來執行。 因此，如果單一應用程式伺服器離線，Excel Calculation Services 依然可以使用。  
   
--   **(4)** 和 **(6)** SharePoint 模式下的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體會在 SharePoint 伺服器陣列外部的伺服器上執行，其中包括 Windows 服務 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**。 這些執行個體都會向 Excel Services 註冊 **(3)**。 Excel Services 會管理傳送給 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 伺服器之要求的負載平衡。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 架構可讓您擁有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 適用的多部伺服器，好讓您可以視需要輕鬆地加入更多執行個體。 如需詳細資訊，請參閱 [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx)(管理 Excel Services 資料模型設定 (SharePoint Server 2013))。  
+-   **(4)** 和 **(6)** SharePoint 模式下的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體會在 SharePoint 伺服器陣列外部的伺服器上執行，其中包括 Windows 服務 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 。 這些執行個體都會向 Excel Services 註冊 **(3)** 。 Excel Services 會管理傳送給 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 伺服器之要求的負載平衡。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 架構可讓您擁有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 適用的多部伺服器，好讓您可以視需要輕鬆地加入更多執行個體。 如需詳細資訊，請參閱 [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx)(管理 Excel Services 資料模型設定 (SharePoint Server 2013))。  
   
 -   **(5)** 用於內容、組態和應用程式資料庫的 SQL Server 資料庫。 其中包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式資料庫。 您的 DR 計畫應該包括資料庫層。 在此設計中，資料庫會在其中一個 **執行個體上與** (4) [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 相同的伺服器上執行。 **(4)** 和 **(5)** 也可能會在不同的伺服器上。  
   

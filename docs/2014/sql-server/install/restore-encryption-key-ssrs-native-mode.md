@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: b537f8413ca460d8eb1991bdd71f1a73ac9ceba1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092523"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>還原加密金鑰 (SSRS 原生模式)
@@ -33,9 +33,9 @@ ms.locfileid: "66092523"
 ## <a name="restore-encryption-key-dialog"></a>[還原加密金鑰] 對話方塊  
  哪裡可以找到有關[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態管理員 中，請參閱[Reporting Services 組態管理員&#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
- 若要開啟 [還原加密金鑰] 對話方塊，請按一下 **組態管理員導覽窗格內的** [加密金鑰] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，然後按一下 **[還原]**。 當您使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員內的 [服務帳戶] 頁面來更新服務帳戶時，這個對話方塊也會出現。 如需詳細資訊  
+ 若要開啟 [還原加密金鑰] 對話方塊，請按一下 **組態管理員導覽窗格內的** [加密金鑰] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，然後按一下 **[還原]** 。 當您使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員內的 [服務帳戶] 頁面來更新服務帳戶時，這個對話方塊也會出現。 如需詳細資訊  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **檔案位置**  
  選取包含對稱金鑰副本的受密碼保護檔案。 預設的副檔名為 .snk。  
   

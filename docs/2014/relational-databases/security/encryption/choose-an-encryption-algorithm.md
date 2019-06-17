@@ -16,10 +16,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 853e85ea84b84f1ed0af040be5d8614feab193b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011388"
 ---
 # <a name="choose-an-encryption-algorithm"></a>選擇加密演算法
@@ -44,7 +44,7 @@ ms.locfileid: "63011388"
 -   加密的資料無法壓縮，但壓縮資料可以加密。 如果您使用壓縮，應該在加密之前先壓縮資料。  
   
 > [!IMPORTANT]  
->  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料  (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 和更新版本中使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。  
+>  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料 (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 和更新版本中使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。  
 >   
 >  在不同的資料區塊上重複使用相同的 RC4 或 RC4_128 KEY_GUID，結果會是相同的 RC4 金鑰，因為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會自動提供 Salt。 重複使用相同的 RC4 金鑰是已知的錯誤，此錯誤會造成加密變弱。 因此，我們取代了 RC4 和 RC4_128 關鍵字。 [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
   

@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e63ef1a2463f65e108ade9a43b748e02831da57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62725252"
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>安全性角色 (Analysis Services - 多維度資料)
@@ -34,7 +34,7 @@ ms.locfileid: "62725252"
   
 -   資料庫角色，這是管理員所定義的角色，用來控制非管理員使用者對物件和資料的存取。  
   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的安全性是使用角色和權限來管理。 角色是使用者的群組。 使用者 (也稱為成員) 可以在角色中加入或移除。 物件的權限是依角色指定，而角色中的所有成員都可以使用此角色具有權限的物件。 角色中的所有成員都具有物件的相同權限。 權限是物件所特有。 每一個物件都有權限集合 (包含該物件的授與權限)，可以對物件授與不同的權限集合。 每一個權限 (來自物件的權限集合) 都會被指派單一角色。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的安全性是使用角色和權限來管理。 角色是使用者的群組。 使用者 (也稱為成員) 可以在角色中加入或移除。 物件的權限是依角色指定，而角色中的所有成員都可以使用此角色具有權限的物件。 角色中的所有成員都具有物件的相同權限。 權限是物件所特有。 每一個物件都有權限集合 (包含該物件的授與權限)，可以對物件授與不同的權限集合。 每一個權限 (來自物件的權限集合) 都會被指派單一角色。  
   
 ## <a name="role-and-role-member-objects"></a>角色和角色成員物件  
  角色是使用者 (成員) 集合的包含物件。 角色定義會在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中建立使用者的成員資格。 由於權限是依角色指派，所以在使用者可存取任何物件之前，使用者必須是某個角色的成員。  

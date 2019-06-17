@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1aa03174d82c7319ce0c7b1cf455916e37a1b117
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072375"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>在資料來源檢視設計工具中使用圖表 (Analysis Services)
@@ -44,7 +44,7 @@ ms.locfileid: "66072375"
 ##  <a name="bkmk_add"></a> 加入圖表  
  DSV 圖表會在您建立 DSV 時自動建立。 DSV 存在之後，即可建立其他圖表、移除圖表或隱藏特定物件，以建立更容易管理的 DSV 表示法。  
   
- 若要建立新圖表，請以滑鼠右鍵按一下 [圖表組合管理] 窗格中的任何位置，然後按一下 [新增圖表]。  
+ 若要建立新圖表，請以滑鼠右鍵按一下 [圖表組合管理]  窗格中的任何位置，然後按一下 [新增圖表]  。  
   
  當您一開始會定義 Analysis Services 專案中的資料來源檢視 (DSV) 時，會將所有資料表和檢視都加入到資料來源檢視都加入至\<所有資料表 > 圖表。 這個圖表會出現在資料來源檢視設計師的 [圖表組合管理] 窗格內，而這個圖表中的資料表 (以及其資料行和關聯性) 會列在 [資料表] 窗格內，而且這個圖表中的資料表 (以及其資料行和關聯性) 會以圖形方式顯示在結構描述窗格內。 不過，當您將資料表、 檢視和具名的查詢，以\<所有資料表 > 圖表中，單單只有這個圖表中的物件數目很難視覺化關聯性-特別是當多個事實資料表都會加入到圖表，和維度多個事實資料表與資料表相關。  
   

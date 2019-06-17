@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 26cc445d3bad5c628628353d5c0c84ffa4755e97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63066330"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>比較用來預測模型的預測 (中繼資料採礦教學課程)

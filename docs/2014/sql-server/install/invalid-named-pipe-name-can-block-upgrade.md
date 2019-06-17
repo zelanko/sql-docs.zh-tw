@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dddd5da66f09226579a6366baa1a16a6ab00d6bf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094186"
 ---
 # <a name="invalid-named-pipe-name-can-block-upgrade"></a>無效的具名管道名稱，可能會防止升級
@@ -30,7 +30,7 @@ ms.locfileid: "66094186"
  在升級期間，安裝程式會啟動[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]具有共用的記憶體支援的執行個體，僅接受本機連接是具名的管道。 如果在伺服器上指定的管道名稱不是空白的它必須開始使用字串"\\\\。 \pipe\\」 為有效。 如果管道名稱無效，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就不會啟動，而且安裝會失敗。  
   
 ## <a name="corrective-action"></a>更正動作  
- 使用**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網路公用程式**來提供有效的管道名稱，然後執行安裝程式。  
+ 使用 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網路公用程式**來提供有效的管道名稱，然後執行安裝程式。  
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2259b19cec6674cdb1f5f4a0064334f78aa5300f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059440"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>維度處理目的地編輯器 (連接管理員頁面)
@@ -26,18 +26,18 @@ ms.locfileid: "66059440"
   
  若要深入了解維度處理目的地，請參閱＜ [Dimension Processing Destination](data-flow/dimension-processing-destination.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[ODBC 目的地編輯器]**  
- 從清單中選取現有的連接管理員，或按一下 [新增] 來建立新的連接管理員。  
+ 從清單中選取現有的連接管理員，或按一下 [新增]  來建立新的連接管理員。  
   
  **新增**  
- 使用 [加入 Analysis Services 連接管理員] 對話方塊來建立新的連接。  
+ 使用 [加入 Analysis Services 連接管理員]  對話方塊來建立新的連接。  
   
  **可用維度清單**  
  選取要處理的維度。  
   
  **處理方法**  
- 選取要套用至清單中選取之維度的處理方法。 此選項的預設值是 **[完整]**。  
+ 選取要套用至清單中選取之維度的處理方法。 此選項的預設值是 **[完整]** 。  
   
 |值|描述|  
 |-----------|-----------------|  

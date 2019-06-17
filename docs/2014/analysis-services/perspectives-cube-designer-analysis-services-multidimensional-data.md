@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8bc2e3bd77b0a5a7454bd136b7a0dc485180ba28
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072017"
 ---
 # <a name="perspectives-cube-designer-analysis-services---multidimensional-data"></a>檢視方塊 (Cube 設計師) (Analysis Services - 多維度資料)
@@ -29,7 +29,7 @@ ms.locfileid: "66072017"
  使用工具列來執行索引標籤上的一般動作。  
   
  **檢視方塊詳細資料**  
- 使用 [檢視方塊詳細資料] 窗格，即可為選取的 Cube 建立和修改檢視方塊。  
+ 使用 [檢視方塊詳細資料]  窗格，即可為選取的 Cube 建立和修改檢視方塊。  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視方塊](multidimensional-models-olap-logical-cube-objects/perspectives.md)  

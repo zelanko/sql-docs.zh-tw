@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084026"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 群集演算法技術參考
@@ -40,7 +40,7 @@ ms.locfileid: "66084026"
 -   [群集模型查詢範例](clustering-model-query-examples.md)  
   
 ## <a name="implementation-of-the-microsoft-clustering-algorithm"></a>Microsoft 群集演算法的實作  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法提供兩種方法來建立群集並將資料點指派給群集。 第一種方法是 *K-means* 演算法，這是一種硬式群集方法。 這代表資料點只能屬於一個群集，而且會針對該群集中每個資料點的成員資格而計算單一機率。 第二種方法是 *Expectation Maximization* (EM) 方法，這是一種軟式群集方法。 這代表資料點一定屬於多個群集，而且會針對資料點和群集的每個組合而計算機率。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法提供兩種方法來建立群集並將資料點指派給群集。 第一種方法是 *K-means* 演算法，這是一種硬式群集方法。 這代表資料點只能屬於一個群集，而且會針對該群集中每個資料點的成員資格而計算單一機率。 第二種方法是 *Expectation Maximization* (EM) 方法，這是一種軟式群集  方法。 這代表資料點一定屬於多個群集，而且會針對資料點和群集的每個組合而計算機率。  
   
  您可以設定 *CLUSTERING_METHOD* 參數以選擇要使用的演算法。 預設的群集方法是可擴充的 EM。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66084026"
  如需描述以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法實作之 EM 的技術報告，請參閱 [Scaling EM (Expectation Maximization) Clustering to Large Databases](https://go.microsoft.com/fwlink/?LinkId=45964)(將 EM (Expectation Maximization) 群集擴充為大型資料庫)。  
   
 ### <a name="k-means-clustering"></a>K-means 群集  
- K-means 群集是知名的群集成員資格指派方法，作業方式是將群集中項目之間的差異最小化，並將群集之間的距離最大化。 K-means 中的 "means" 是指群集的「距心」，這是任意選擇的資料點，在選擇後會反覆調整，直到能代表群集中所有資料點的真正平均值為止。 "k" 則是指用來植入群集程序的任意數目的資料點。 K-means 演算法會計算群集中資料記錄之間的歐氏距離平方 (Squared Euclidean Distance) 以及代表群集平均值的向量，然後在總和達到最小值時聚合於最終的一組 K 群集。  
+ K-means 群集是知名的群集成員資格指派方法，作業方式是將群集中項目之間的差異最小化，並將群集之間的距離最大化。 K-means 中的 "means" 是指群集的「距心」  ，這是任意選擇的資料點，在選擇後會反覆調整，直到能代表群集中所有資料點的真正平均值為止。 "k" 則是指用來植入群集程序的任意數目的資料點。 K-means 演算法會計算群集中資料記錄之間的歐氏距離平方 (Squared Euclidean Distance) 以及代表群集平均值的向量，然後在總和達到最小值時聚合於最終的一組 K 群集。  
   
  K-means 演算法會將每個資料點剛好指派給一個群集，而不允許成員資格有任何不確定性。 群集中的成員資格會以與距心的距離來表示。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66084026"
  K-means 演算法提供兩種資料集取樣的方法：一種是不可擴充的 K-means，這種方法會載入整個資料集，且進行一次群集行程；另一種則是可擴充的 K-means，其中演算法會使用前 50,000 個案例，且只有在需要更多資料才能達到更佳的模型與資料符合度時，才會讀取更多的案例。  
   
 ### <a name="updates-to-the-microsoft-clustering-algorithm-in-sql-server-2008"></a>SQL Server 2008 中的 Microsoft 群集演算法更新  
- 在 SQL Server 2008 中， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法的預設組態已變更為使用內部參數 NORMALIZATION = 1。 正規化是使用 Z-score 統計資料執行，採用常態分佈。 此預設行為變更的意圖是將可能有大範圍和許多極端值之屬性的影響降至最低。 不過，Z-score 正規化可能會在非常態分佈 (例如統一分佈) 上改變群集結果。 若要防止正規化，取得和 SQL Server 2005 中的 K-means 群集演算法相同的行為，您可以使用 [參數設定] 對話方塊加入自訂參數 NORMALIZATION，並將其值設定為 0。  
+ 在 SQL Server 2008 中， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法的預設組態已變更為使用內部參數 NORMALIZATION = 1。 正規化是使用 Z-score 統計資料執行，採用常態分佈。 此預設行為變更的意圖是將可能有大範圍和許多極端值之屬性的影響降至最低。 不過，Z-score 正規化可能會在非常態分佈 (例如統一分佈) 上改變群集結果。 若要防止正規化，取得和 SQL Server 2005 中的 K-means 群集演算法相同的行為，您可以使用 [參數設定]  對話方塊加入自訂參數 NORMALIZATION，並將其值設定為 0。  
   
 > [!NOTE]  
 >  NORMALIZATION 參數是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法的內部屬性，不受支援。 一般而言，建議在群集模型中使用正規化，以改善模型結果。  

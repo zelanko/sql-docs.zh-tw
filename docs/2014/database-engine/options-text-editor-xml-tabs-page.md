@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: ae595b42274e012032e79754650b573b5d80053b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089124"
 ---
 # <a name="options-text-editorxmltabs-page"></a>選項 (文字編輯器：XML：定位點頁面)
-  這個對話方塊可以讓您變更在 XML 編輯器中按下 Tab 鍵的移動行為，這個編輯器會用來編輯 XML 文件。 若要顯示這些設定，請按一下 **[工具]** 功能表上的 **[選項]** ，展開 **[文字編輯器]** 資料夾，展開 **[XML]** 子資料夾，然後按一下 **[定位點]**。  
+  這個對話方塊可以讓您變更在 XML 編輯器中按下 Tab 鍵的移動行為，這個編輯器會用來編輯 XML 文件。 若要顯示這些設定，請按一下 **[工具]** 功能表上的 **[選項]** ，展開 **[文字編輯器]** 資料夾，展開 **[XML]** 子資料夾，然後按一下 **[定位點]** 。  
   
 ## <a name="setting-options-in-multiple-locations"></a>在多個位置設定選項  
  XML 編輯器的選項也可以在 **[所有語言 - 一般]** 對話方塊中設定。 如果您使用 **[所有語言]** 對話方塊為其他 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 編輯器 (例如 DMX 或 MDX 編輯器) 設定不同的選項，則必須使用這個對話方塊重設 XML 編輯器選項。  

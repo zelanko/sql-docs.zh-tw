@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3df1a27d94c3da63e1760e890654dba4045b2f94
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060704"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>設定資料檢視器 (長條圖索引標籤)
   使用 **[設定資料檢視器]** 對話方塊的 **[長條圖]** 索引標籤，即可指定要顯示的資料行。 長條圖會將來自數值資料行的資料值顯示為數值分佈。 圖表只會反映一個緩衝區的內容。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **視覺化資料行**  
  選取要視覺化為長條圖的資料行。  
   

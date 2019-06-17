@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 269ab3c748557d1d2870195524310f2371b79c52
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62689145"
 ---
 # <a name="bcpcolptr"></a>bcp_colptr
@@ -54,7 +54,7 @@ idxServerCol
   
  如果*pData*設為 NULL，而且資料行對應至繫結的欄位不是大數值型別**bcp_colptr**失敗。  
   
- 如需有關大數值類型的詳細資訊，請參閱 < [bcp_bind](bcp-bind.md)**。**  
+ 如需有關大數值類型的詳細資訊，請參閱 < [bcp_bind](bcp-bind.md) **。**  
   
  *idxServerCol*  
  這是資料庫資料表中要將資料複製到其中之資料行的序數位置。 資料表中的第一個資料行是資料行 1。 資料行的序數位置由報告[SQLColumns](../native-client-odbc-api/sqlcolumns.md)。  

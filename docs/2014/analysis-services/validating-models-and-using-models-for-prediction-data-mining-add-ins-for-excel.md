@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97268dac1fef029bc35ff702ace0d422ee296d65
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065495"
 ---
 # <a name="validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel"></a>驗證模型及使用模型進行預測 (適用於 Excel 的資料採礦增益集)

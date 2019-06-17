@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b919289d49901f64b26db0aa2d4b71eeb0e132a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960814"
 ---
 # <a name="replication-agent-security-model"></a>複寫代理程式安全性模型
@@ -77,9 +77,9 @@ ms.locfileid: "62960814"
 |發送訂閱至非 SQL Server 訂閱者的散發代理程式|**\<發行者>-\<發行集資料庫>-\<發行集>-\<訂閱者>-\<整數>**|  
 |佇列讀取器代理程式|**[\<散發者>].\<整數>**|  
   
- <sup>1</sup>對於 Oracle 發行集的發送訂閱，作業名稱是**\<發行者 >-\<發行者**> 而非**\<發行者 >-\<發行集資料庫 >**。  
+ <sup>1</sup>對於 Oracle 發行集的發送訂閱，作業名稱是 **\<發行者 >-\<發行者**> 而非 **\<發行者 >-\<發行集資料庫 >** 。  
   
- <sup>2</sup>對於 Oracle 發行集的提取訂閱，作業名稱是**\<發行者 >-\<散發**> 而非**\<發行者 >-\<發行集資料庫 >**。  
+ <sup>2</sup>對於 Oracle 發行集的提取訂閱，作業名稱是 **\<發行者 >-\<散發**> 而非 **\<發行者 >-\<發行集資料庫 >** 。  
   
  在複寫設定期間，指定代理程式應在其下執行的帳戶。 但是，所有作業步驟均在 *Proxy*安全性內容下執行，因此複寫將為您指定的代理程式帳戶在內部執行下列對應：  
   

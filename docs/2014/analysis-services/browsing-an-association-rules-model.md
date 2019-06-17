@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30ff9705949be3fb9bf99d985d0db1aa17d93ab1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088473"
 ---
 # <a name="browsing-an-association-rules-model"></a>瀏覽關聯規則模型
@@ -150,7 +150,7 @@ ms.locfileid: "66088473"
   
 -   **項目集：** 當您建立模型時，您也可以控制的值指派到 MINIMUM_PROBABILITY 參數而產生的項目集數目。 此參數適用於 [演算法參數] 對話方塊。  
   
--   **規則：**[!INCLUDE[msCoName](../includes/msconame-md.md)]關聯規則演算法會使用機率值來限制所產生的規則數目。 您可以設定 `MINIMUM_PROBABILITY` 或 `MINIMUM _IMPORTANCE` 參數來控制規則數目。  
+-   **規則：** [!INCLUDE[msCoName](../includes/msconame-md.md)]關聯規則演算法會使用機率值來限制所產生的規則數目。 您可以設定 `MINIMUM_PROBABILITY` 或 `MINIMUM _IMPORTANCE` 參數來控制規則數目。  
   
  如需有關如何設定進階的參數的詳細資訊，請參閱 <<c0> [ 資料採礦演算法&#40;SQL Server 資料採礦增益集&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)。</c0>  
   

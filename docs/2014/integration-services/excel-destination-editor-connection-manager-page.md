@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c55b9daba7e8e1823e1ced43fc9958d4fe5892ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059234"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Excel 目的地編輯器 (連接管理員頁面)
@@ -31,10 +31,10 @@ ms.locfileid: "66059234"
   
 ## <a name="static-options"></a>靜態選項  
  **Excel 連接管理員**  
- 從清單中選取現有的 Excel 連線管理員，或按一下 [新增] 建立新的連線管理員。  
+ 從清單中選取現有的 Excel 連線管理員，或按一下 [新增]  建立新的連線管理員。  
   
  **新增**  
- 使用 [Excel 連線管理員] 對話方塊來建立新的連線管理員。  
+ 使用 [Excel 連線管理員]  對話方塊來建立新的連線管理員。  
   
  **資料存取模式**  
  從來源中指定選取資料的方法。  
@@ -46,16 +46,16 @@ ms.locfileid: "66059234"
 |SQL (命令)|使用 SQL 查詢將資料載入 Excel 目的地。|  
   
  **Excel 工作表的名稱**  
- 從下拉式清單中選取 Excel 目的地。 如果此清單為空，請按一下 **[新增]**。  
+ 從下拉式清單中選取 Excel 目的地。 如果此清單為空，請按一下 **[新增]** 。  
   
  **新增**  
- 按一下 [新增] 以啟動 [建立工資料表] 對話方塊。 按一下 **[確定]** 時，對話方塊會建立 **[Excel 連接管理員]** 指向的 Excel 檔案。  
+ 按一下 [新增]  以啟動 [建立工資料表]  對話方塊。 按一下 **[確定]** 時，對話方塊會建立 **[Excel 連接管理員]** 指向的 Excel 檔案。  
   
  **檢視現有的資料**  
- 使用 [預覽查詢結果] 對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  
+ 使用 [預覽查詢結果]  對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  
   
 > [!WARNING]  
->  如果您選取的 [Excel 連線管理員] 指向不存在的 Excel 檔，則在您按一下此按鈕時將看到一條錯誤消息。  
+>  如果您選取的 [Excel 連線管理員]  指向不存在的 Excel 檔，則在您按一下此按鈕時將看到一條錯誤消息。  
   
 ## <a name="data-access-mode-dynamic-options"></a>資料存取模式動態選項  
   
@@ -69,13 +69,13 @@ ms.locfileid: "66059234"
   
 ### <a name="data-access-mode--sql-command"></a>資料存取模式 = SQL 命令  
  **SQL 命令文字**  
- 輸入 SQL 查詢的文字，按一下 [建立查詢] 來建立查詢，或是按一下 [瀏覽] 以找出包含查詢文字的檔案。  
+ 輸入 SQL 查詢的文字，按一下 [建立查詢]  來建立查詢，或是按一下 [瀏覽]  以找出包含查詢文字的檔案。  
   
  **建立查詢**  
- 使用 [查詢產生器] 對話方塊，以視覺化的方式來建構 SQL 查詢。  
+ 使用 [查詢產生器]  對話方塊，以視覺化的方式來建構 SQL 查詢。  
   
  **瀏覽**  
- 使用 [開啟] 對話方塊來找出包含 SQL 查詢文字的檔案。  
+ 使用 [開啟]  對話方塊來找出包含 SQL 查詢文字的檔案。  
   
  **剖析查詢**  
  請確認查詢文字的語法。  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07a04fe26bbd47463d0564f7799698ab282a9979
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059490"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>維度處理目的地編輯器 (進階頁面)
@@ -26,7 +26,7 @@ ms.locfileid: "66059490"
   
  若要深入了解維度處理目的地，請參閱＜ [Dimension Processing Destination](data-flow/dimension-processing-destination.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **使用預設錯誤組態。**  
  指定是否要使用預設的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 錯誤處理。 依預設，此值為 `True`。  
   
@@ -45,10 +45,10 @@ ms.locfileid: "66059490"
  指定發生錯誤時，應該停止處理。  
   
  **錯誤數目**  
- 如果您已選取 [發生錯誤時停止]，則指定處理應該停止的錯誤臨界值。  
+ 如果您已選取 [發生錯誤時停止]  ，則指定處理應該停止的錯誤臨界值。  
   
  **發生錯誤時要執行的動作**  
- 如果您已選取 [發生錯誤時停止]，則指定到達錯誤臨界值時要採取的動作。  
+ 如果您已選取 [發生錯誤時停止]  ，則指定到達錯誤臨界值時要採取的動作。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -92,7 +92,7 @@ ms.locfileid: "66059490"
 |**ReportAndStop**|報告錯誤並停止處理。|  
   
  **錯誤記錄路徑**  
- 輸入錯誤記錄路徑，或者按一下 [瀏覽 (…)] 按鈕以選取目的地。  
+ 輸入錯誤記錄路徑，或者按一下 [瀏覽 (…)]  按鈕以選取目的地。  
   
  **瀏覽 (...)**  
  選取錯誤記錄的路徑。  

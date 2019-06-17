@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63157091"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>使用原則式管理來管理伺服器
@@ -75,7 +75,7 @@ ms.locfileid: "63157091"
     -   **變更時: 避免**。 這種自動模式會使用 DDL 觸發程序來防止原則違規。  
   
         > [!IMPORTANT]  
-        >  如果停用了巢狀觸發程序伺服器組態選項，[變更時: 避免]將無法正確運作。 以原則為基礎的管理會依賴 DDL 觸發程序來偵測及回復不符合使用此評估模式之原則的 DDL 作業。 移除以原則為基礎的管理 DDL 觸發程序或停用巢狀觸發程序時，將會造成這個評估模式失敗或以非預期的方式執行。  
+        >  如果停用了巢狀觸發程序伺服器組態選項，[變更時: 避免]  將無法正確運作。 以原則為基礎的管理會依賴 DDL 觸發程序來偵測及回復不符合使用此評估模式之原則的 DDL 作業。 移除以原則為基礎的管理 DDL 觸發程序或停用巢狀觸發程序時，將會造成這個評估模式失敗或以非預期的方式執行。  
   
     -   **變更時: 僅限記錄**。 這種自動模式會在發生相關變更時使用事件通知來評估原則。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "63157091"
 |描述如何確認伺服器執行個體、資料庫、伺服器物件或資料庫物件符合原則。|[根據物件評估原則式管理原則](evaluate-a-policy-based-management-policy-from-an-object.md)<br /><br /> [根據該原則評估原則式管理原則](evaluate-a-policy-based-management-policy-from-that-policy.md)<br /><br /> [依照排程評估原則式管理原則](evaluate-a-policy-based-management-policy-on-a-schedule.md)|  
 |描述如何檢視及複製原則式管理 Facet 狀態至檔案|[使用原則式管理 Facet](working-with-policy-based-management-facets.md)|  
 |提供一組原則檔可讓您將其做為最佳作法原則進行匯入，然後說明如何針對包含執行個體、執行個體物件、資料庫或資料庫物件的目標集，評估原則。|[使用原則式管理來監視和強制最佳做法](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
-|在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供物件總管的 [原則管理] 節點之 F1 說明主題。|[原則管理節點&#40;物件總管&#41;](../../ssms/object/object-explorer.md)|  
+|在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供物件總管的 [原則管理]  節點之 F1 說明主題。|[原則管理節點&#40;物件總管&#41;](../../ssms/object/object-explorer.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [以原則為基礎的管理檢視 &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  

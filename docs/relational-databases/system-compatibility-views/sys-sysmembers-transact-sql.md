@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5672c6b027e001e2aaf2a344c2710d2a28e62e9e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63018641"
 ---
 # <a name="syssysmembers-transact-sql"></a>sys.sysmembers (Transact-SQL)

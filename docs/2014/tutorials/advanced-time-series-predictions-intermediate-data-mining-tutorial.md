@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3db82b977725bdcb615ec67bd66e530b38f385c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62822447"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>進階時間序列預測 (中繼資料採礦教學課程)
@@ -103,7 +103,7 @@ ms.locfileid: "62822447"
   
      **選取資料表和檢視**:選取您剛才建立資料表，NewSalesData。  
   
-3.  按一下 **[完成]**。  
+3.  按一下 **[完成]** 。  
   
 4.  在資料來源檢視設計介面中，以滑鼠右鍵按一下 NewSalesData，，然後按**瀏覽資料**來確認資料。  
   
@@ -119,9 +119,9 @@ ms.locfileid: "62822447"
   
 1.  在 [**方案總管] 中**，以滑鼠右鍵按一下**資料來源檢視**，然後選取**新增資料來源檢視**。  
   
-2.  在精靈的歡迎頁面中，按 **[下一步]**。  
+2.  在精靈的歡迎頁面中，按 **[下一步]** 。  
   
-3.  在 **[選取資料來源]** 頁面上，選取 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]，然後按 **[下一步]**。  
+3.  在 **[選取資料來源]** 頁面上，選取 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]，然後按 **[下一步]** 。  
   
 4.  在頁面中，**選取資料表和檢視表**，不加入任何資料表，只要按一下**下一步**。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "62822447"
   
      **名稱**：`T1000 Pacific Region`  
   
-3.  按一下 **[完成]**。  
+3.  按一下 **[完成]** 。  
   
 4.  以滑鼠右鍵按一下空的設計介面，如**T1000 Pacific Region.dsv**，然後選取**新增具名查詢**。  
   

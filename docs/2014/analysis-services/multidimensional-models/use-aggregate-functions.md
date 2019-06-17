@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072720"
 ---
 # <a name="use-aggregate-functions"></a>使用彙總函式
@@ -29,7 +29,7 @@ ms.locfileid: "66072720"
  您可以使用 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 或 MDX 指派或變更任一個 Cube 定義的彙總方法。 如需進一步指示，請參閱[在多維度模型中建立量值和量值群組](create-measures-and-measure-groups-in-multidimensional-models.md)或 [Aggregate &#40;MDX&#41;](/sql/mdx/aggregate-mdx)。  
   
 ##  <a name="AggFunction"></a> 彙總函式  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 提供多種函數可以彙總量值群組中所含維度的量值。 彙總函式的「加總性」決定如何在 Cube 的所有維度中來彙總量值。 彙總函式分成三個加總性層級：  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 提供多種函數可以彙總量值群組中所含維度的量值。 彙總函式的「加總性」  決定如何在 Cube 的所有維度中來彙總量值。 彙總函式分成三個加總性層級：  
   
  加法  
  此為加總量值，也稱為完全加總量值，可將包含該量值的量值群組中，所包含的所有維度加以彙總，而且沒有限制。  
@@ -64,7 +64,7 @@ ms.locfileid: "66072720"
   
  此分析種類不需要限制為兩個維度； 事實上，相異計數量值可由 Cube 中的任何維度組合 (包括含有已計算成員的維度) 加以區隔及切割。  
   
- 計算成員的相異計數量值是以事實資料表中的外部索引鍵資料行為根據  (也就是說，此量值的**來源資料行**屬性會識別此資料行。)這個資料行會聯結可識別相異計數量值所計算之成員的維度資料表資料行。  
+ 計算成員的相異計數量值是以事實資料表中的外部索引鍵資料行為根據 (也就是說，此量值的**來源資料行**屬性會識別此資料行。)這個資料行會聯結可識別相異計數量值所計算之成員的維度資料表資料行。  
   
 ## <a name="see-also"></a>另請參閱  
  [量值和量值群組](measures-and-measure-groups.md)   

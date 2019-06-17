@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9d00be2992f9ad661736f65e4d1146a34fe1fad0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62827977"
 ---
 # <a name="data-mining-model-training-destination"></a>資料採礦模型定型目的地
@@ -39,7 +39,7 @@ ms.locfileid: "62827977"
   
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可在 [資料採礦模型培訓編輯器] 對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
+ 如需可在 [資料採礦模型培訓編輯器]  對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
   
 -   [資料採礦模型培訓編輯器 &#40;連接索引標籤&#41;](../data-mining-model-training-editor-connection-tab.md)  
   

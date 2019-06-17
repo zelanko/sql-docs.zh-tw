@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c8d483b6ed67c67b901fcd25a4eeb76a550ce385
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62666599"
 ---
 # <a name="delete-operator"></a>刪除操作員
   使用此頁面來刪除操作員。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **要刪除的物件**  
  顯示要刪除的操作員。  
   
