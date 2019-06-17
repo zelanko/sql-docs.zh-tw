@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 179551a0-3ca4-4816-8098-8195898c997f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ed4c800fb8b6c70e7aded588b74711d0b252bfd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c960a0ccd92eaba67ce1ef91625b148e5e24ca4b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677286"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799067"
 ---
 # <a name="typessscrollstatic-field-sqlserverresultset"></a>TYPE_SS_SCROLL_STATIC 欄位 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

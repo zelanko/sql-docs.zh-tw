@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f311458a8fb6b58f22a1ca4c23fa8d1f36dddc51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b635cfc7ecbe3e658a364a214d5c7cf744095492
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773788"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803214"
 ---
 # <a name="jdbc-driver-api-reference"></a>JDBC Driver API 參考
 
@@ -36,7 +36,7 @@ JavaDoc.io 具有開頭為 6.0 版 JDBC 參考文件。
 
 #### <a name="only-legacy-jdbc-documentation-is-here-on-docs"></a>僅舊版 JDBC 文件在此文件上
 
-JDBC API 參考文件文章以下**https://docs.microsoft.com/sql/connect/jdbc/reference/** 不再 JDBC 類別的新版本更新時正在更新。 不過，此處的文件，並包含 for JDBC 4.1 和 4.2 的所有參考。
+JDBC API 參考文件文章以下 **https://docs.microsoft.com/sql/connect/jdbc/reference/** 不再 JDBC 類別的新版本更新時正在更新。 不過，此處的文件，並包含 for JDBC 4.1 和 4.2 的所有參考。
 
 JDBC 版本 6.0 和一些更新的版本中，文件是也在這裡。 但任何版本 6.0 或更新版本中，使用 JavaDoc.io 網站。
 

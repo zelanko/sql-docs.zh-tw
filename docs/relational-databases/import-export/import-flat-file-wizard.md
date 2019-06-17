@@ -13,18 +13,18 @@ ms.author: alayu
 ms.reviewer: maghan
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3399262b9ea80c789f81b7b4e745b6c8f32d11f1
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: 9ebb00b758aa3291c453d6c48d548f2047c72530
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66012913"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836387"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>將一般檔案匯入 SQL 精靈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 > 如需 [匯入及匯出精靈] 的相關內容，請參閱 [SQL Server 匯入及匯出精靈](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
 
-[匯入一般檔案精靈] 是一個簡單的方法可將一般檔案 (.csv、.txt) 的資料複製到目的地。 本概觀將說明使用此精靈的理由、如何找到此精靈，並提供簡單的範例供您參考。
+[匯入一般檔案精靈] 是一個簡單的方法，可將一般檔案 (.csv、.txt) 的資料複製到您資料庫中的新資料表。 本概觀將說明使用此精靈的理由、如何找到此精靈，並提供簡單的範例供您參考。
 
 ## <a name="why-would-i-use-this-wizard"></a>為什麼要使用此精靈？
 建立此精靈的目的在於改善目前的匯入體驗，運用稱之為 Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)) 的智慧型架構。 對於缺乏專業網域知識的使用者來說，匯入資料往往是件複雜、容易出錯且沉悶的工作。 此精靈簡化了匯入程序，只要選取輸入檔與唯一的資料表名稱，PROSE 架構就會為您處理其餘的部分。
@@ -41,9 +41,9 @@ PROSE 會分析輸入檔中的資料模式，來推斷資料行名稱、類型�
 ## <a id="started"></a>使用者入門
 若要存取 [匯入一般檔案精靈]，請遵循這些步驟進行：
 
-1. 開啟 [SQL Server Management Studio]。
+1. 開啟 [SQL Server Management Studio]  。
 2. 連線至 SQL Server 資料庫引擎或 localhost 的執行個體。
-3. 展開 [資料庫]，在資料庫上按一下滑鼠右鍵 (下方範例中的測試)，指向 [工作]，然後按一下 [匯入資料] 上方的 [匯入一般檔案]。
+3. 展開 [資料庫]  ，在資料庫上按一下滑鼠右鍵 (下方範例中的測試)，指向 [工作]  ，然後按一下 [匯入資料] 上方的 [匯入一般檔案]  。
 
 ![精靈功能表](media/import-flat-file-wizard/importffmenu.png)
 
@@ -57,7 +57,7 @@ PROSE 會分析輸入檔中的資料模式，來推斷資料行名稱、類型�
 ### <a name="step-1-access-wizard-and-intro-page"></a>步驟 1:存取精靈及簡介頁面
 遵循[此處](#started)的說明存取精靈。
 
-精靈的第一頁是歡迎頁面。 若不想再看到此頁面，可按一下 [不要再顯示此開始頁面]。
+精靈的第一頁是歡迎頁面。 若不想再看到此頁面，可按一下 [不要再顯示此開始頁面]  。
 
 ![精靈簡介](media/import-flat-file-wizard/importffintro.png)
 

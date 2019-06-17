@@ -16,20 +16,20 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6f65e9b99b01f413c85ed61bbacc7a7aebfdb72a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0cc1f42d438c7216cf9b1f6f9ee9167747447e66
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700346"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800696"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 與 OLE 物件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 會公開 **ISequentialStream** 介面來支援取用者存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**、**text**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 以及 xml 資料類型，作為二進位大型物件 (BLOB)。 **ISequentialStream** 上的 **Read** 方法可讓取用者在可管理的區塊中擷取更多資料。  
+  OLE DB Driver for SQL Server 會公開 **ISequentialStream** 介面來支援取用者存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**、**text**、**image**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 以及 xml 資料類型，作為二進位大型物件 (BLOB)。 **ISequentialStream** 上的 **Read** 方法可讓取用者在可管理的區塊中擷取更多資料。  
   
  如需示範這項功能的範例，請參閱 <<c0> [ 大型資料集&#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)。</c0>  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47700346"
   
  針對大數值資料類型，OLE DB Driver for SQL Server 會在 **IRowset** 和 DDL 介面中檢查假設的類型大小。 資料類型為 **varchar**、**nvarchar** 和 **varbinary**，而且大小上限設定為無限的資料行將會透過結構描述資料列集和傳回資料行資料類型的介面，以 ISLONG 表示。  
   
- OLE DB Driver for SQL Server 會將 **varchar(max)**、**varbinary(max)** 和 **nvarchar(max)** 類型分別公開為 DBTYPE_STR、DBTYPE_BYTES 和 DBTYPE_WSTR。  
+ OLE DB Driver for SQL Server 會將 **varchar(max)** 、**varbinary(max)** 和 **nvarchar(max)** 類型分別公開為 DBTYPE_STR、DBTYPE_BYTES 和 DBTYPE_WSTR。  
   
  為了使用這些類型，應用程式具有下列選項：  
   

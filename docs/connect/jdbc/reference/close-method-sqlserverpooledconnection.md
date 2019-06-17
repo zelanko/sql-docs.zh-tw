@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: 8de23939-aa84-47a1-aeb9-b03c69c090dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb62fa568a327dff25ec7404270066d9dc91ef24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 468b1754bcd111188a82aff6cff378ebd0f6966d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776066"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803577"
 ---
 # <a name="close-method-sqlserverpooledconnection"></a>close 方法 (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  關閉這個 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 物件所代表的實體連線。  
+  關閉這個 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 物件所代表的實體連接。  
   
 ## <a name="syntax"></a>語法  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 767e3e17b67a36bca93bd8a85704d50338fdfd58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 94c7f34ebf66f4bf33acf51e44397a74de2367e0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610740"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801717"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>使用透明網路 IP 解析
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ TransparentNetworkIPResolution 是現有 MultiSubnetFailover 中, 可用功能�
 * 1： 嘗試以平行方式進行的所有 Ip
 * 2： 所有 Ip 會都嘗試逐一
 
-|transparentNetworkIPResolution|MultiSubnetFailover|行為|
+|TransparentNetworkIPResolution|MultiSubnetFailover|行為|
 |:-:|:-:|:-:|
 |(預設值)|(預設值)|0|
 |(預設值)|已啟用|1|

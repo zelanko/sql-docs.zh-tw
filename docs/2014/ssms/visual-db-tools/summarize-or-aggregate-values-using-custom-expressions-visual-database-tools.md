@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b679eac51bf6fd51d10a88816017f2b767a69041
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204637"
 ---
 # <a name="summarize-or-aggregate-values-using-custom-expressions-visual-database-tools"></a>使用自訂運算式摘要或彙總值 (Visual Database Tools)
@@ -31,11 +31,11 @@ ms.locfileid: "63204637"
   
 1.  為您的查詢指定群組。 如需詳細資訊，請參閱[群組查詢結果中的資料列 &#40;Visual Database Tools&#41;](visual-database-tools.md)。  
   
-2.  移至 [準則] 窗格的空白資料列，然後在 [資料行] 資料行輸入運算式。  
+2.  移至 [準則] 窗格的空白資料列，然後在 [資料行]  資料行輸入運算式。  
   
      [查詢和檢視表設計工具](query-and-view-designer-tools-visual-database-tools.md)會自動指派資料行別名給運算式，以便在查詢輸出中建立有用的資料行標題。 如需詳細資訊，請參閱[建立資料行別名 &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md)。  
   
-3.  在運算式的 [群組依據] 資料行中，選取 [Expression]。  
+3.  在運算式的 [群組依據]  資料行中，選取 [Expression]  。  
   
 4.  執行查詢。  
   

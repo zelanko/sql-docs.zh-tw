@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 823177f8fef91dda8cf879f6be84ef6706224fad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 49522e397789c5193ed8f218a5fdf776ba62f001
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600236"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799357"
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>步驟 1︰設定 Node.js 開發的開發環境
 您必須設定您的開發環境的先決條件，才能開發應用程式使用 Node.js Driver for SQL Server。  最常見的方法是使用 node package manager (npm) 安裝冗長乏味的模組，但是您可以下載該冗長乏味的模組，直接在[Github](https://github.com/pekim/tedious)如果您偏好。  

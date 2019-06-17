@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97e66c1c276131876a8a74ab49627f43374cb78f
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: a754607e4eb3af99216e5a11e9af50730279040e
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775034"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836382"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,12 +62,12 @@ ms.locfileid: "64775034"
     
 |選項|Description|    
 |------------|-----------------|    
-|區分大小寫 (_CS)|區分大寫和小寫字母。 如果選取此選項，小寫字母會排序在大寫字母的前面。 如果未選取此選項，定序就不會區分大小寫。 亦即，在排序用途上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將大寫和小寫字母視為相同。 指定 _CI，就可以明確地選取不區分大小寫。|    
-|區分腔調字 (_AS)|區分有腔調和無腔調的字元。 例如，'a' 不等於 'ấ'。 如果未選取此選項，定序就不會區分腔調。 亦即，在排序用途上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將有腔調和無腔調字母視為相同。 指定 _AI，就可以明確地選取不區分腔調字。|    
-|區分假名 (_KS)|區分兩種類型的日文假名字元：平假名與片假名。 如果未選取此選項，定序就不會區分假名。 亦即，在排序用途上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將平假名和片假名視為相同。 省略此選項，是指定不區分假名的唯一方法。|    
-|區分全半形 (_WS)|區分全形與半形字元。 如果未選取此選項，在排序用途上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將相同字元的全形和半形表示法視為相同。 省略此選項，是指定不區分全形與半形的唯一方法。|    
-|區分變化選取器 (_VSS) | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]中首次引進如何區分日文定序 Japanese_Bushu_Kakusu_140 和 Japanese_XJIS_140 中的各種不同表意字元變化選取器。 變化序列是由基底字元加上額外的變化選取器所組成。 如果未選取此 _VSS 選項，則定序不區分變化選取器，而且比較時不會考慮變化選取器。 換句話說，SQL Server 基於排序目的，會將建置在相同基底字元但使用不同變化選取器的字元視為相同。 另請參閱  [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/)。 <br/><br/> 全文檢索搜尋索引不支援區分 Variation Selector (_VSS) 定序。 全文檢索搜尋索引支援只區分腔調字 (_AS)、區分假名 (_KS) 和區分全半形 (_WS) 選項。 SQL Server XML 和 CLR 引擎不支援 (_VSS) Variation Selector。
-|UTF-8 (_UTF8)|讓 UTF-8 編碼資料儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果未選取此選項，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用適用資料類型的預設非 Unicode 編碼格式。| 
+|區分大小寫 (\_CS)|區分大寫和小寫字母。 如果選取此選項，小寫字母會排序在大寫字母的前面。 如果未選取此選項，定序就不會區分大小寫。 亦即，在排序用途上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將大寫和小寫字母視為相同。 指定 \_CI，就可以明確地選取不區分大小寫。|    
+|區分腔調字 (\_AS)|區分有腔調和無腔調的字元。 例如，'a' 不等於 'ấ'。 如果未選取此選項，定序就不會區分腔調。 亦即，在排序用途上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將有腔調和無腔調字母視為相同。 指定 \_AI，就可以明確地選取不區分腔調字。|    
+|區分假名 (\_KS)|區分兩種類型的日文假名字元：平假名與片假名。 如果未選取此選項，定序就不會區分假名。 亦即，在排序用途上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將平假名和片假名視為相同。 省略此選項，是指定不區分假名的唯一方法。|    
+|區分全半形 (\_WS)|區分全形與半形字元。 如果未選取此選項，在排序用途上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將相同字元的全形和半形表示法視為相同。 省略此選項，是指定不區分全形與半形的唯一方法。|    
+|區分變化選取器 (\_VSS) | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]中首次引進如何區分日文定序 Japanese_Bushu_Kakusu_140 和 Japanese_XJIS_140 中的各種不同表意字元變化選取器。 變化序列是由基底字元加上額外的變化選取器所組成。 如果未選取此 \_VSS 選項，則定序不區分變化選取器，而且比較時不會考慮變化選取器。 換句話說，SQL Server 基於排序目的，會將建置在相同基底字元但使用不同變化選取器的字元視為相同。 另請參閱  [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/)。 <br/><br/> 全文檢索搜尋索引不支援區分 Variation Selector (\_VSS) 定序。 全文檢索搜尋索引支援只區分腔調字 (\_AS)、區分假名 (\_KS) 和區分全半形 (\_WS) 選項。 SQL Server XML 和 CLR 引擎不支援 (\_VSS) Variation Selector。
+|UTF-8 (\_UTF8)|讓 UTF-8 編碼資料儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果未選取此選項，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用適用資料類型的預設非 Unicode 編碼格式。| 
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列定序集：    
     
@@ -180,7 +180,7 @@ Unicode 是將字碼指標對應到字元的標準用法。 由於 Unicode 主�
 |非 Unicode|非 Unicode|這是多國語言資料的限制狀況。 您只能使用單一字碼頁。|    
     
 ##  <a name="Supplementary_Characters"></a> 增補字元    
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供資料類型 (例如 **Nchar** 和 **nvarchar**) 將 Unicode (UTF-16) 資料儲存至任何定序下方，以及提供資料類型 (例如 **char** 和 **varchar**) 將 Unicode (UTF-8) 資料儲存至啟用 UTF-8 的定序 (\_UTF8) 下方。 這些資料類型分別使用稱為 *UTF-16* 和 *UTF-8* 的格式來編碼文字。 Unicode Consortium 會為每個字元配置唯一的字碼指標，其值介於 0x0000 到 0x10FFFF 的範圍。 最常用的字元具有可在記憶體和磁碟上納入 8 位元或 16 位元單字的字碼指標值，但是字碼指標值大於 0xFFFF 的字元需要兩個到四個連續 8 位元單字 (UTF-8) 或兩個連續 16 位元單字 (UTF-16)。 這些字元稱為「增補字元」，而其他連續的 8 位元或 16 位元單字則稱為「代理字組」。    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供資料類型 (例如 **Nchar** 和 **nvarchar**) 將 Unicode (UTF-16) 資料儲存至任何定序下方，以及提供資料類型 (例如 **char** 和 **varchar**) 將 Unicode (UTF-8) 資料儲存至啟用 UTF-8 的定序 (\_UTF8) 下方。 這些資料類型分別使用稱為 *UTF-16* 和 *UTF-8* 的格式來編碼文字。 Unicode Consortium 會為每個字元配置唯一的字碼指標，其值介於 0x0000 到 0x10FFFF 的範圍。 最常用的字元具有可在記憶體和磁碟上納入 8 位元或 16 位元單字的字碼指標值，但是字碼指標值大於 0xFFFF 的字元需要兩個到四個連續 8 位元單字 (UTF-8) 或兩個連續 16 位元單字 (UTF-16)。 這些字元稱為「增補字元」  ，而其他連續的 8 位元或 16 位元單字則稱為「代理字組」  。    
     
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中引進的全新系列增補字元 (\_SC) 定序可以與 **Nchar**、**nvarchar** 和 **sql_variant** 資料類型搭配使用。 例如： `Latin1_General_100_CI_AS_SC`或 `Japanese_Bushu_Kakusu_100_CI_AS_SC`(如果使用日文定序的話)。 
  

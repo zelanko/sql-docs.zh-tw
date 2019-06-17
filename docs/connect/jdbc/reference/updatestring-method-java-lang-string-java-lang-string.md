@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 3a9236bb-a307-45a8-b7d2-c4cbd9b3cb35
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c1873264a8965ef03a00a507723595ee1deea7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 09bb0a355a643f38b8ba9a2c1bb0cdbc0736b17e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672236"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801185"
 ---
 # <a name="updatestring-method-javalangstring-javalangstring"></a>updateString 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

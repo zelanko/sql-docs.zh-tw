@@ -7,17 +7,18 @@ ms.prod_service: connectivity
 ms.reviewer: craigg
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daveng
+author: MightyPen
+ms.author: genemi
 manager: kenvh
-ms.openlocfilehash: 8fb6ea7bf6abfb1f347d0541a01bae91aacf5f1c
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: d710bb6e83d6f9761f7926afac3280a2c33d2bec
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618275"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822230"
 ---
 # <a name="fips-mode"></a>FIPS 模式
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 Microsoft JDBC Driver for SQL Server 支援在執行中設定的 Jvm *FIPS 140 相容*。
@@ -91,6 +92,6 @@ private Certificate getCertificate(String pathName)
 |trustStore|String|null|您的 Java Keystore 檔案路徑您匯入您的憑證。 如果您在您的系統，則不需要傳遞任何項目上安裝憑證。 驅動程式會使用 cacerts 或 jssecacerts 檔案。||
 |trustStorePassword|String|null|用於檢查 trustStore 資料完整性的密碼。||
 |fips|boolean ["true / false"]|"false"|這個屬性應該是針對啟用 FIPS 的 JVM **，則為 true**|加入 6.1.4 (穩定版本 6.2.2)||
-|fipsProvider|String|null|FIPS 的 JVM 設定提供者。 例如，BCFIPS 或 SunPKCS11 NSS |6.1.2 中新增 (穩定版本 6.2.2)，在 6.4.0-已被取代，請參閱詳細資料[此處](https://github.com/Microsoft/mssql-jdbc/pull/460)。|
-|trustStoreType|String|JKS|FIPS 模式設定的信任存放區類型 PKCS12 或型別定義 FIPS 提供者 |6.1.2 中新增 (穩定版本 6.2.2)||
+|fipsProvider|String|null|FIPS 的 JVM 設定提供者。 例如，BCFIPS 或 SunPKCS11 NSS |6\.1.2 中新增 (穩定版本 6.2.2)，在 6.4.0-已被取代，請參閱詳細資料[此處](https://github.com/Microsoft/mssql-jdbc/pull/460)。|
+|trustStoreType|String|JKS|FIPS 模式設定的信任存放區類型 PKCS12 或型別定義 FIPS 提供者 |6\.1.2 中新增 (穩定版本 6.2.2)||
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |

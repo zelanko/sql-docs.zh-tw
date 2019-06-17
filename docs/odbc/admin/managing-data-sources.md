@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a1f8893351ceb68ebd7c42e3ac82c876c01c10b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198763"
 ---
 # <a name="managing-data-sources"></a>管理資料來源
@@ -30,7 +30,7 @@ ms.locfileid: "63198763"
 > [!NOTE]  
 >  若要管理的資料來源，連接到 32 位元驅動程式在 64 位元平台，使用 c:\windows\sysWOW64\odbcad32.exe。 若要管理的資料來源，連接到 64 位元驅動程式，請使用 c:\windows\system32\odbcad32.exe。 在 [**系統管理工具**64 位元 Windows 8 作業系統上有 32 位元和 64 位元圖示**ODBC 資料來源管理員**] 對話方塊。  
   
- 如果您要設定或移除 DSN 連線至 32 位元驅動程式，比方說，使用 64 位元 odbcad32.exe**驅動程式執行 Microsoft Access (\*.mdb)**，您會收到下列錯誤訊息：  
+ 如果您要設定或移除 DSN 連線至 32 位元驅動程式，比方說，使用 64 位元 odbcad32.exe**驅動程式執行 Microsoft Access (\*.mdb)** ，您會收到下列錯誤訊息：  
   
 ```  
 The specified DSN contains an architecture mismatch between the Driver and Application  

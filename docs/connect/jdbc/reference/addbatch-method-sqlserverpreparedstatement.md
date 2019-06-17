@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 134f1455-c98c-4112-ab2d-9205a0db73df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63c5c2b49e0ac600f5bccd27f241b9f1a2186d65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c0b95517753b593a0095a648a1405f72c5968838
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694036"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803748"
 ---
 # <a name="addbatch-method-sqlserverpreparedstatement"></a>addBatch 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

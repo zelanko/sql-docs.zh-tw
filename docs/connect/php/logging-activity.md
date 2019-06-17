@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf960ec912f51c5a39f8d07366174e1c0cd4f7b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8612874b351af1cfd9370b8ef29dae4a0c4235e2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600184"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800255"
 ---
 # <a name="logging-activity"></a>記錄活動
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

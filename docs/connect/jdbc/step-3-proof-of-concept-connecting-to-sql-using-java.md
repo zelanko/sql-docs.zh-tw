@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 305be93a342b66a18cae6de4f60ba9efa98e1738
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: af6fc51c3aba34e8118d5519b5acf2fc9583738f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736899"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798321"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>步驟 3︰使用 Java 連線到 SQL 的概念證明
   
@@ -100,7 +100,7 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-3-insert-a-row"></a>步驟 3：插入資料列  
+## <a name="step-3-insert-a-row"></a>步驟 3： 插入資料列  
 在此範例中，執行 INSERT 陳述式、 傳遞參數，以及擷取自動產生的主要金鑰值。   
   
 ```java  

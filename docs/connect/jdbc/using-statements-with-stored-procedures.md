@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d12b5d0940ea161e3650dc5126a10783c1afc3e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2dd4ead601700baefaf356840fba4184ab427ef2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812846"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798552"
 ---
 # <a name="using-statements-with-stored-procedures"></a>搭配預存程序使用陳述式
 

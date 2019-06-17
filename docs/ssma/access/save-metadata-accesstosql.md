@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: c5ce10a437ecba5e865ce1e2436ee5041839b7e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63299234"
 ---
 # <a name="save-metadata-accesstosql"></a>儲存中繼資料 (AccessToSQL)
@@ -22,7 +22,7 @@ ms.locfileid: "63299234"
   
 若要存取**儲存中繼資料**對話方塊中，儲存專案。 如果遺漏任何中繼資料，將會顯示 SSMA**儲存中繼資料** 對話方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **名稱**  
 在專案中的每個資料庫的名稱。  
   

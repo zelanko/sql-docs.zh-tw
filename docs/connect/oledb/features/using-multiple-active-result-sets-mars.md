@@ -17,13 +17,13 @@ helpviewer_keywords:
 - MARS [SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d8f59034d6826bd1af3f1c48c81674dfc039b85e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 37a2a695e93d8783e6fd0c88319fed9eda55d8cd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545466"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802867"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>使用 Multiple Active Result Sets (MARS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "52545466"
   
  MARS 可啟用單一連接內多個要求的交錯執行。 也就是說，它可允許批次執行，而且當它執行時，可允許其他要求執行。 但是請注意，MARS 是以交錯來定義，而不是以平行執行來定義。  
   
- MARS 基礎結構可讓多個批次以交錯方式執行，但是只能在定義良好的點上切換執行。 此外，大多數的陳述式都必須在批次內自動執行。 當資料列傳送給用戶端時，允許在完成前交錯執行傳回資料列給用戶端的陳述式 (有時也稱為「產生點」)，例如：  
+ MARS 基礎結構可讓多個批次以交錯方式執行，但是只能在定義良好的點上切換執行。 此外，大多數的陳述式都必須在批次內自動執行。 當資料列傳送給用戶端時，允許在完成前交錯執行傳回資料列給用戶端的陳述式 (有時也稱為「產生點」  )，例如：  
   
 -   SELECT  
   
@@ -78,7 +78,7 @@ ms.locfileid: "52545466"
   
  如需從 ADO 使用 MARS 的範例，請參閱 <<c0> [ 使用的 ADO 與 OLE DB Driver for SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)。  
   
-## <a name="in-memory-oltp"></a>In-Memory OLTP  
+## <a name="in-memory-oltp"></a>記憶體內部 OLTP  
  記憶體內部 OLTP 支援 MARS 使用查詢，而且原生編譯的預存程序。 MARS 可讓多個查詢，而不需要完全擷取的各結果集傳送要求，以從新的結果集提取資料列之前要求資料。 為了能夠成功讀取多個開啟的結果集，您必須使用啟用 MARS 的連接。  
   
  MARS 預設為停用因此，您必須明確啟用它藉由新增`MultipleActiveResultSets=True`的連接字串。 下列範例示範如何連接到 SQL server 執行個體，並指定已啟用 MARS:  

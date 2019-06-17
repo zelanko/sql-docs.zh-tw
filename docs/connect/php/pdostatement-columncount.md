@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8d89a568-0c7c-40dd-9f54-db7313600df3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eae5c8a8074cfbda6c1f3eb57e3f65b1ef0e4b67
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 4d1853852e9a2e8044504db45fb1a7ded9866503
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604148"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802675"
 ---
 # <a name="pdostatementcolumncount"></a>PDOStatement::columnCount
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

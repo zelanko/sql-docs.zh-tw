@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8c2973e6-d57f-4f64-b812-350ce4098ce6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 041866ac999d8a91487d0e68e2ac77a66724ad32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 51eaf47a34a11d813c096e77f61bead4ea142ef2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658736"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804041"
 ---
 # <a name="getbytes-method-int"></a>getBytes 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

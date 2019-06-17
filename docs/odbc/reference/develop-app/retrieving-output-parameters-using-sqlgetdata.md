@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ebb09b3118c2d16041d4ca60bf738d0fda561346
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63199087"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>使用 SQLGetData 擷取輸出參數
@@ -30,7 +30,7 @@ ms.locfileid: "63199087"
  這項功能可供 ODBC 3.8 應用程式，或重新編譯 ODBC 3.x 和 ODBC 2.x 應用程式，這些應用程式必須支援擷取輸出參數，使用 ODBC 3.8 驅動程式**SQLGetData**和 ODBC 3.8 驅動程式管理員。 如需如何啟用舊版應用程式使用 ODBC 的新功能的資訊，請參閱[相容性比較表](../../../odbc/reference/develop-app/compatibility-matrix.md)。  
   
 ## <a name="usage-example"></a>使用範例  
- 例如，請考慮執行預存程序， **{呼叫 sp_f(?,?)}**，其中這兩個參數繫結為 SQL_PARAM_OUTPUT_STREAM，而預存程序會傳回任何結果集 （在本主題稍後您會找到更複雜的案例）：  
+ 例如，請考慮執行預存程序， **{呼叫 sp_f(?,?)}** ，其中這兩個參數繫結為 SQL_PARAM_OUTPUT_STREAM，而預存程序會傳回任何結果集 （在本主題稍後您會找到更複雜的案例）：  
   
 1.  針對每個參數，呼叫**SQLBindParameter**具有*了*設 SQL_PARAM_OUTPUT_STREAM 並*ParameterValuePtr*設為 「 語彙基元，例如參數號碼資料指標或應用程式會使用繫結輸入的參數的結構的指標。 此範例會使用序數參數，做為權杖。  
   
