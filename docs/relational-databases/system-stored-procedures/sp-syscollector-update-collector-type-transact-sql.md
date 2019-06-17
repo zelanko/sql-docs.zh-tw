@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9d3529d01966c7f9780183d663823d8f4033f47a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63001354"
 ---
 # <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
@@ -62,7 +62,7 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
  需要的成員資格**dc_admin** （具有 EXECUTE 權限） 固定的資料庫角色。  
   
 ## <a name="example"></a>範例  
- 此範例會更新一般 T-SQL 查詢收集器型別  (在此範例中，將會使用一般 T-SQL 查詢收集器型別的預設結構描述)。  
+ 此範例會更新一般 T-SQL 查詢收集器型別 (在此範例中，將會使用一般 T-SQL 查詢收集器型別的預設結構描述)。  
   
 ```  
 USE msdb;  

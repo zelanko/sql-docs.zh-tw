@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 637d4e648d4d2b5c64d4635af8f96d0f2258b2f2
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479928"
 ---
 # <a name="create-a-model-master-data-services"></a>建立模型 (Master Data Services)
@@ -30,21 +30,21 @@ ms.locfileid: "65479928"
   
 ### <a name="to-create-a-model"></a>若要建立模型  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[模型]**。  
+2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[模型]** 。  
   
 3.  在 **模型維護**頁面上，按一下**Add model**。  
   
 4.  在 **模型名稱**方塊中，輸入模型的名稱。  
   
-5.  (選擇性) 選取 [建立與模型同名的實體]，建立與模型同名的實體。  
+5.  (選擇性) 選取 [建立與模型同名的實體]  ，建立與模型同名的實體。  
   
 6.  （選擇性） 選取**建立與模型同名的明確階層**來建立與模型同名的明確階層。 這個選項也會啟用集合的實體。  
   
 7.  （選擇性） 選取**強制階層 (已包含所有分葉成員**，明確階層建立為強制階層。  
   
-8.  按一下 **[儲存模型]**。  
+8.  按一下 **[儲存模型]** 。  
   
 ## <a name="next-steps"></a>後續步驟  
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d61c50c68033b3add4b52063980bf5caa042369
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667366"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>快取、重新整理和複寫監視器效能
@@ -39,7 +39,7 @@ ms.locfileid: "62667366"
   
 -   依預設，透過「複寫監視器」啟動的詳細資料視窗不會自動重新整理，正在同步處理的合併訂閱的相關視窗除外。 如果您將詳細資料視窗指定為應自動重新整理，則它們將按照與「複寫監視器」主視窗相同的排程重新整理。  
   
--   可以透過按 F5 或以滑鼠右鍵按一下「複寫監視器」樹狀目錄中的節點，再按一下 **[重新整理]**，手動重新整理所有視窗。 手動重新整理會強制重新整理快取。  
+-   可以透過按 F5 或以滑鼠右鍵按一下「複寫監視器」樹狀目錄中的節點，再按一下 **[重新整理]** ，手動重新整理所有視窗。 手動重新整理會強制重新整理快取。  
   
  如需詳細資訊，請參閱[在複寫監視器中重新整理資料](refresh-data-in-replication-monitor.md)。  
   

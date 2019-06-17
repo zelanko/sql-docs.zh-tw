@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62942971"
 ---
 # <a name="escape-sequences-in-odbc"></a>ODBC 中的逸出序列
@@ -47,9 +47,9 @@ ms.locfileid: "62942971"
  逸出序列會辨識並剖析驅動程式，逸出序列取代為特定 DBMS 的文法。 如需逸出序列語法的詳細資訊，請參閱[ODBC 逸出序列](../../../odbc/reference/appendixes/odbc-escape-sequences.md)附錄 c:SQL 文法。  
   
 > [!NOTE]  
->  在 ODBC 2。*x*，這是逸出序列的標準語法： **-(\*廠商 (**_廠商名稱_**)，產品 (** _產品名稱_**)**_擴充功能_  **\*)-**  
+>  在 ODBC 2。*x*，這是逸出序列的標準語法： **-(\*廠商 (** _廠商名稱_ **)，產品 (** _產品名稱_ **)** _擴充功能_  **\*)-**  
 >   
->  這個語法中，除了速記語法定義的格式： **{**_擴充功能_**}**  
+>  這個語法中，除了速記語法定義的格式： **{** _擴充功能_ **}**  
 >   
 >  在 ODBC 3。*x*、 逸出序列的完整格式已被取代，，和以獨佔方式使用簡短形式。  
   

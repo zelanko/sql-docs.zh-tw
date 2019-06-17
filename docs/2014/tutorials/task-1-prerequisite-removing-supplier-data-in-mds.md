@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 84c0acceb4953b819cb5696c4ef90c39e4376846
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481218"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>工作 1 (必要)：在 MDS 中移除供應商資料
   在這項工作中，您會移除儲存在 MDS 中的供應商資料。 使用以手動方式將資料上傳**MDS Excel 增益集**上一課。 您在這一課建立的 SSIS 封裝會將資料自動上傳至 MDS。 因此，在測試 SSIS 封裝之前，您必須從 MDS 中移除供應商資料、移除衍生階層、移除 supplier 和 state 實體，並且建立不含任何資料的 supplier 實體。  
   
-1.  啟動**主資料管理員**瀏覽至**http://localhost/MDS**或網站和應用程式時指定設定 MDS。 如果您保留**主資料管理員**開啟，再按**SQL Server 2012 Master Data Services**若要切換至頂端**首頁**。  
+1.  啟動**主資料管理員**瀏覽至 **http://localhost/MDS** 或網站和應用程式時指定設定 MDS。 如果您保留**主資料管理員**開啟，再按**SQL Server 2012 Master Data Services**若要切換至頂端**首頁**。  
   
 2.  按一下 [**系統管理]** 中**系統管理工作**一節。  
   
@@ -50,9 +50,9 @@ ms.locfileid: "65481218"
   
     1.  選取 [**建立新的連接**，然後按一下**新增**] 按鈕。  
   
-    2.  在 加入新連接 對話方塊中，輸入**本機 MDS 伺服器**如**描述**並**http://localhost/MDS**如**MDS 伺服器位址**，按一下 **確定**以關閉對話方塊。  
+    2.  在 加入新連接 對話方塊中，輸入**本機 MDS 伺服器**如**描述**並 **http://localhost/MDS** 如**MDS 伺服器位址**，按一下 **確定**以關閉對話方塊。  
   
-15. 在 **管理連接**對話方塊中，選取**本機 MDS 伺服器**(http://localhost/MDS)，按一下 **測試**來測試連線。 按一下 **確定**訊息方塊上。  
+15. 在 **管理連接**對話方塊中，選取**本機 MDS 伺服器**(http://localhost/MDS) ，按一下 **測試**來測試連線。 按一下 **確定**訊息方塊上。  
   
 16. 按一下  **Connect**連接到 MDS 伺服器。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "65481218"
   
 21. 確認**供應商**模型選取**模型**並**VERSION_1**選取**版本**。  
   
-22. 按一下 **[總管]**。 請注意，**供應商**實體的所有屬性會透過**沒有任何值**。  
+22. 按一下 **[總管]** 。 請注意，**供應商**實體的所有屬性會透過**沒有任何值**。  
   
 ## <a name="next-step"></a>下一個步驟  
  [工作 2&#40;選擇性&#41;:建立 MDS 訂閱檢視，使用主資料管理員](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  

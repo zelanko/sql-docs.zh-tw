@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b6cb2f56113487922866573caf3b5f8b67fff7c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63061576"
 ---
 # <a name="function-conformance"></a>函式一致性
@@ -82,7 +82,7 @@ ms.locfileid: "63061576"
 |**SQLSetDescField**|Core[1]|  
 |**SQLSetDescRec**|核心|  
 |**SQLSetEnvAttr**|Core[2]|  
-|**SQLSetPos**|層級 1] [1]|  
+|**SQLSetPos**|層級 1 [1]|  
 |**SQLSetStmtAttr**|Core[2]|  
 |**SQLSpecialColumns**|Core[1]|  
 |**SQLStatistics**|核心|  

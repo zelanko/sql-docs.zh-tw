@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f47054e2f0260db272ad25cbed549fd14df8c8e8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62695442"
 ---
-# <a name="job-properties-new-job-targets-page"></a>作業屬性：新增作業 （目標頁面）
+# <a name="job-properties-new-job-targets-page"></a>作業屬性：新增作業 (目標頁面)
   使用此頁面來管理作業的目標伺服器。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **目標本機伺服器**  
  在本機伺服器上執行作業。 如果沒有編列目標伺服器，這是唯一可用的選項。  
   

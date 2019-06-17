@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 71db7ba5246e151bbca8a52972a2ba835b80ddb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62855871"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>建立相關的時序群集採礦模型 (中繼資料採礦教學課程)
@@ -26,7 +26,7 @@ ms.locfileid: "62855871"
   
 ### <a name="to-make-a-copy-of-the-sequence-clustering-model"></a>若要製作時序群集模型的副本  
   
-1.  在  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，在 資料採礦設計師中，按一下 **採礦模型**] 索引標籤。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，在 資料採礦設計師中，按一下 [**採礦模型**] 索引標籤。  
   
 2.  以滑鼠右鍵按一下您想要複製，並選取的模型**新的採礦模型**。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62855871"
   
      本教學課程中，輸入 名稱`Sequence Clustering`。  
   
-4.  按一下 [確定] 。  
+4.  按一下 [確定]  。  
   
 ### <a name="to-remove-columns-from-the-mining-model"></a>若要從採礦模型移除資料行  
   

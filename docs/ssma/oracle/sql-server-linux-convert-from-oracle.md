@@ -10,10 +10,10 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
 ms.openlocfilehash: 312797b2b883f764fc65588e72cd67d7227e327a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62629839"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Oracle 結構描述移轉至 SQL Server 2017 Linux 上使用 SQL Server 移轉小幫手
@@ -71,13 +71,13 @@ SSMA for Oracle 不會使用預設的 Oracle 範例結構描述。 若要啟用 
 
    ![連接到 Oracle](./media/sql-server-linux-convert-from-oracle/ConnectToOracle.png)
 
-1. 然後，按一下 [連接] 。 幾分鐘後，SSMA for Oracle 連線到您的資料庫，並讀取其中繼資料。
+1. 然後，按一下 [連接]  。 幾分鐘後，SSMA for Oracle 連線到您的資料庫，並讀取其中繼資料。
 
 ## <a name="create-a-report"></a>建立報表
 
 您可以使用下列步驟來產生移轉報告。
 
-1. 在 [ **Oracle 中繼資料總管]**，展開您的伺服器節點。
+1. 在 [ **Oracle 中繼資料總管]** ，展開您的伺服器節點。
 
 1. 依序展開**結構描述**，以滑鼠右鍵按一下**HR**，然後選取**建立報表**。
 

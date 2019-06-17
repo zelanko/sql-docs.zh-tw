@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 012a2946ff931e1326dcd3fa6321472761d67c56
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62861702"
 ---
 # <a name="using-set-expressions"></a>使用集合運算式
@@ -54,7 +54,7 @@ ms.locfileid: "62861702"
   
  ([Product]。[產品類別目錄]。[Category]。 [1] 和 [日期]。[行事曆]。[Calendar Year]。 & [2003])，  
   
- ([Product]。[產品類別目錄]。[Category]。 [3] 與 [日期]。[行事曆]。[Calendar Year]。 year].&[2004])}  
+ ([Product]。[產品類別目錄]。[Category]。 [3] 與 [日期]。[行事曆]。[Calendar Year]。 year.&[2004])}  
   
  是由三個 tuple 所組成，每一個 tuple 都包含 Product 維度之 Product Category 階層上之成員及 Date 維度之 Calendar 階層上之成員的兩個明確參考。  
   

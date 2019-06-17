@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1aa0faafc6fb1cca693fe58665c7344db84c9f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62666785"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>傳送 SQL Server Agent 錯誤訊息
@@ -64,10 +64,10 @@ ms.locfileid: "62666785"
   
 1.  在 **[物件總管]** 中，按一下加號展開伺服器，此伺服器包含您要透過 Net Send 從中傳送錯誤訊息的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 錯誤記錄檔。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後選取 [屬性]  。  
   
-3.  在  **SQL Server Agent 屬性-**_server_name_對話方塊的 **錯誤記錄檔**上**一般**頁面上，輸入使用者名稱或中的電腦名稱，您要傳送錯誤訊息**Net send 收件者** 方塊中。  
+3.  在  **SQL Server Agent 屬性-** _server_name_對話方塊的 **錯誤記錄檔**上**一般**頁面上，輸入使用者名稱或中的電腦名稱，您要傳送錯誤訊息**Net send 收件者** 方塊中。  
   
-4.  按一下 [確定] 。  
+4.  按一下 [確定]  。  
   
   

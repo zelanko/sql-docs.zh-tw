@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3206052455ff1d1bd5db14f6c53507ec9f00a7eb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62877057"
 ---
 # <a name="back-up-database-general-page"></a>備份資料庫 (一般頁面)
@@ -25,7 +25,7 @@ ms.locfileid: "62877057"
  如需基本備份概念的詳細資訊，請參閱[備份概觀 &#40;SQL Server&#41;](backup-overview-sql-server.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您可以按下 [指令碼] 按鈕，然後選取指令碼的目的地，以產生相對應的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](/sql/t-sql/statements/backup-transact-sql) 指令碼。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您可以按下 [指令碼]  按鈕，然後選取指令碼的目的地，以產生相對應的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](/sql/t-sql/statements/backup-transact-sql) 指令碼。  
   
  **若要使用 SQL Server Management Studio 建立備份**  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62877057"
 |交易記錄|交易記錄|交易記錄備份無法使用於簡單復原模式。|  
   
  **只複製備份**  
- 選取此選項，即可建立只複製備份。 「只複製備份」是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](copy-only-backups-sql-server.md)。  
+ 選取此選項，即可建立只複製備份。 「只複製備份」  是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](copy-only-backups-sql-server.md)。  
   
 > [!NOTE]  
 >  選取 **[差異]** 選項時，您無法建立「只複製」備份。  
@@ -111,7 +111,7 @@ ms.locfileid: "62877057"
  選取用來驗證 Windows Azure 儲存體的 SQL 認證。 如果沒有現有可用的 SQL 認證，請按一下 **[建立]** 按鈕建立新的 SQL 認證。  
   
 > [!IMPORTANT]  
->  在您按一下 **[建立]** 時開啟的對話方塊需要管理憑證或訂閱的發行設定檔。 如果您無法存取管理憑證或發行設定檔，可以使用 Transact-SQL 或 SQL Server Management Studio 來指定儲存體帳戶名稱和存取金鑰資訊，藉以建立 SQL 認證。 請參閱中的範例程式碼中[來建立認證](../security/authentication-access/create-a-credential.md#Credential)主題，以使用 TRANSACT-SQL 建立認證。 或者，使用 SQL Server Management Studio，在資料庫引擎執行個體中，以滑鼠右鍵按一下 **[安全性]**、選取 **[新增]**，然後選取 **[認證]**。 針對 **[識別]** 指定儲存體帳戶名稱，並且在 **[密碼]** 欄位中指定存取金鑰。  
+>  在您按一下 **[建立]** 時開啟的對話方塊需要管理憑證或訂閱的發行設定檔。 如果您無法存取管理憑證或發行設定檔，可以使用 Transact-SQL 或 SQL Server Management Studio 來指定儲存體帳戶名稱和存取金鑰資訊，藉以建立 SQL 認證。 請參閱中的範例程式碼中[來建立認證](../security/authentication-access/create-a-credential.md#Credential)主題，以使用 TRANSACT-SQL 建立認證。 或者，使用 SQL Server Management Studio，在資料庫引擎執行個體中，以滑鼠右鍵按一下 **[安全性]** 、選取 **[新增]** ，然後選取 **[認證]** 。 針對 **[識別]** 指定儲存體帳戶名稱，並且在 **[密碼]** 欄位中指定存取金鑰。  
   
  **Azure 儲存體容器**  
  指定 Windows Azure 儲存體容器的名稱  

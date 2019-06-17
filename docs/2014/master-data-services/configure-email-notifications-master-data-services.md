@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9483e9a545d01196ad3d8f614a2135150ed47036
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480018"
 ---
 # <a name="configure-email-notifications-master-data-services"></a>設定電子郵件通知 (Master Data Services)
@@ -27,11 +27,11 @@ ms.locfileid: "65480018"
   
 1.  在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中的 **[資料庫]** 頁面上，選取您的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。  
   
-2.  在 **[系統設定]** 區段中，按一下 **[建立設定檔]**。  
+2.  在 **[系統設定]** 區段中，按一下 **[建立設定檔]** 。  
   
 3.  完成所有必要的欄位。 如需詳細資訊，請參閱[建立 Database Mail 設定檔和帳戶對話方塊 &#40;Master Data Services 組態管理員&#41;](../../2014/master-data-services/create-database-mail-profile-and-account-dialog-box.md)。  
   
-4.  按一下 [確定] 。  
+4.  按一下 [確定]  。  
   
     > [!NOTE]  
     >  當您設定通知之後，就無法使用 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 進行變更。 您必須直接在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中進行變更。 如需詳細資訊，請參閱 [Database Mail Configuration Objects](../relational-databases/database-mail/database-mail-configuration-objects.md)。  

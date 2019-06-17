@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fb3fa69a552dc00c85e1053cb230ba56ae840ac8
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484059"
 ---
 # <a name="task-11-publishing-the-knowledge-base"></a>工作 11：發行知識庫
@@ -24,7 +24,7 @@ ms.locfileid: "65484059"
   
 2.  按一下 [**發佈**中**SQL Server Data Quality Services** ] 對話方塊。  
   
-3.  按一下 [確定] 關閉訊息方塊。  
+3.  按一下 [確定]  關閉訊息方塊。  
   
 ## <a name="next-step"></a>下一個步驟  
  [工作 12:探索知識&#40;知識探索&#41;](../../2014/tutorials/task-12-discovering-knowledge-knowledge-discovery.md)  
