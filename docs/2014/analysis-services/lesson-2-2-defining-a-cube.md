@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 167121188939bcf82ed359ac3f8cf7e3aae47635
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079063"
 ---
 # <a name="defining-a-cube"></a>定義 Cube
@@ -22,21 +22,21 @@ ms.locfileid: "66079063"
   
 ### <a name="to-define-a-cube-and-its-properties"></a>若要定義 Cube 及其屬性  
   
-1.  在方案總管中，以滑鼠右鍵按一下 [Cube]，然後按一下 [新增 Cube]。 [Cube 精靈] 隨即出現。  
+1.  在方案總管中，以滑鼠右鍵按一下 [Cube]  ，然後按一下 [新增 Cube]  。 [Cube 精靈] 隨即出現。  
   
-2.  在 [歡迎使用 Cube 精靈] 頁面上，按一下 [下一步]。  
+2.  在 [歡迎使用 Cube 精靈]  頁面上，按一下 [下一步]  。  
   
-3.  在 [選取建立方法] 頁面上，確認已選取 [使用現有的資料表] 選項，然後按一下 [下一步]。  
+3.  在 [選取建立方法]  頁面上，確認已選取 [使用現有的資料表]  選項，然後按一下 [下一步]  。  
   
-4.  在 [選取量值群組資料表] 頁面上，確認已選取 [Adventure Works DW 2012] 資料來源檢視。  
+4.  在 [選取量值群組資料表]  頁面上，確認已選取 [Adventure Works DW 2012]  資料來源檢視。  
   
-5.  按一下 [建議]，讓 Cube 精靈建議用來建立量值群組的資料表。  
+5.  按一下 [建議]  ，讓 Cube 精靈建議用來建立量值群組的資料表。  
   
-     此精靈會檢查這些資料表並建議使用 [InternetSales] 當作量值群組資料表。 量值群組資料表 (也稱為事實資料表) 包含您感興趣的量值，例如銷售的單位數。  
+     此精靈會檢查這些資料表並建議使用 [InternetSales]  當作量值群組資料表。 量值群組資料表 (也稱為事實資料表) 包含您感興趣的量值，例如銷售的單位數。  
   
-6.  按一下 [下一步] 。  
+6.  按一下 [下一步]  。  
   
-7.  在 [選取量值] 頁面上，檢閱 [網際網路銷售] 量值群組中的所選取量值，再清除下列量值的核取方塊：  
+7.  在 [選取量值]  頁面上，檢閱 [網際網路銷售]  量值群組中的所選取量值，再清除下列量值的核取方塊：  
   
     -   **升級索引鍵**  
   
@@ -48,21 +48,21 @@ ms.locfileid: "66079063"
   
      根據預設，此精靈會選取事實資料表中所有未連結到維度的數值資料行當做量值。 不過，這 4 個資料行不是實際量值。 前 3 個是連結事實資料表與維度資料表的索引鍵值，它們不使用於這個 Cube 的初始版本。  
   
-8.  按一下 [下一步] 。  
+8.  按一下 [下一步]  。  
   
-9. 在 [選取現有維度] 頁面上，確定已選取您先前建立的 [Date] 維度，然後按一下 [下一步]。  
+9. 在 [選取現有維度]  頁面上，確定已選取您先前建立的 [Date]  維度，然後按一下 [下一步]  。  
   
-10. 在 [選取新維度] 頁面上，選取要建立的新維度。 若要執行這項操作，請確認已選取 [Customer]、[Geography] 和 [Product] 核取方塊，然後清除 [InternetSales] 核取方塊。  
+10. 在 [選取新維度]  頁面上，選取要建立的新維度。 若要執行這項操作，請確認已選取 [Customer]  、[Geography]  和 [Product]  核取方塊，然後清除 [InternetSales]  核取方塊。  
   
-11. 按一下 [下一步] 。  
+11. 按一下 [下一步]  。  
   
-12. 在 **完成精靈**頁面上，將 cube 名稱變更`Analysis Services Tutorial`。 在 [預覽] 窗格中，您可以看見 [InternetSales] 量值群組及其量值。 此外，您也可以看見 [Date]、[Customer] 和 [Product] 維度。  
+12. 在 **完成精靈**頁面上，將 cube 名稱變更`Analysis Services Tutorial`。 在 [預覽] 窗格中，您可以看見 [InternetSales]  量值群組及其量值。 此外，您也可以看見 [Date]  、[Customer]  和 [Product]  維度。  
   
-13. 按一下 [完成] 以完成精靈。  
+13. 按一下 [完成]  以完成精靈。  
   
-     在方案總管的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案中，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 會出現在 [Cube] 資料夾內，而 [Customer] 和 [Product] 資料庫維度則出現在 [維度] 資料夾內。 另外，在開發環境中心，[Cube 結構] 索引標籤會顯示 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube。  
+     在方案總管的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案中，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 會出現在 [Cube]  資料夾內，而 [Customer] 和 [Product] 資料庫維度則出現在 [維度]  資料夾內。 另外，在開發環境中心，[Cube 結構] 索引標籤會顯示 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube。  
   
-14. 在 [Cube 結構] 索引標籤的工具列上，將 [顯示比例] 層級變更為 50%，這樣就可以更容易看到 Cube 中的維度資料表和事實資料表。 請注意，事實資料表是黃色，維度資料表是藍色。  
+14. 在 [Cube 結構] 索引標籤的工具列上，將 [顯示比例]  層級變更為 50%，這樣就可以更容易看到 Cube 中的維度資料表和事實資料表。 請注意，事實資料表是黃色，維度資料表是藍色。  
   
 15. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   

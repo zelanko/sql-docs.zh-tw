@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a869d2033adaa57be0ace522787332c03a69bcb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66074994"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>授與資料來源物件的權限 (Analysis Services)
@@ -36,9 +36,9 @@ ms.locfileid: "66074994"
 ## <a name="set-read-permissions-to-a-data-source"></a>設定資料來源的讀取權限  
  資料庫角色可以不被授與資料來源物件的任何存取權限，也可以被授與讀取權限。  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，在物件總管中展開適當資料庫的 [角色]，然後按一下資料庫角色 (或建立新的資料庫角色)。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，在物件總管中展開適當資料庫的 [角色]  ，然後按一下資料庫角色 (或建立新的資料庫角色)。  
   
-2.  在 [資料來源存取] 窗格的 [資料來源] 清單中尋找資料來源物件，然後在該資料來源的 [存取] 清單中選取 [讀取]。 如果這個選項無法使用，請檢查 [一般] 窗格，以查看是否已選取 [完整控制權]。 [完整控制權] 已經提供權限，您無法覆寫資料來源的權限。  
+2.  在 [資料來源存取]  窗格的 [資料來源]  清單中尋找資料來源物件，然後在該資料來源的 [存取]  清單中選取 [讀取]  。 如果這個選項無法使用，請檢查 [一般]  窗格，以查看是否已選取 [完整控制權]。 [完整控制權] 已經提供權限，您無法覆寫資料來源的權限。  
   
 ## <a name="working-with-the-connection-string-used-by-a-data-source-object"></a>使用資料來源物件使用的連接字串  
  資料來源物件會包含用於連接到基礎資料來源的連接字串。 此連接字串可指定下列其中之一：  

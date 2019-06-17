@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b57ea1f69933d4d2c73ec12cc4cc18ff86d112d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071296"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>使用 Windows PowerShell 的 PowerPivot 組態
@@ -31,7 +31,7 @@ ms.locfileid: "66071296"
   
  使用 PowerShell 檢視 PowerPivot 指令程式的清單：  
   
-1.  使用 [以系統管理員身分執行] 選項，開啟 SharePoint 管理命令介面。  
+1.  使用 [以系統管理員身分執行]  選項，開啟 SharePoint 管理命令介面。  
   
 2.  輸入下列命令：  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66071296"
 ## <a name="enable-powerpivot-cmdlets-on-a-server"></a>在伺服器上啟用 PowerPivot 指令程式  
  在您安裝 PowerPivot for SharePoint 並部署伺服器陣列方案之後，可以使用 PowerPivot 指令程式。 這些方案會在您執行 PowerPivot 組態工具時部署。 請依照下列步驟啟用指令程式：  
   
-1.  使用 [以系統管理員身分執行] 選項，開啟 SharePoint 管理命令介面。  
+1.  使用 [以系統管理員身分執行]  選項，開啟 SharePoint 管理命令介面。  
   
 2.  執行第一個 Cmdlet：  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66071296"
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-4.  關閉視窗。 再次使用 [以系統管理員身分執行] 選項重新開啟該視窗。  
+4.  關閉視窗。 再次使用 [以系統管理員身分執行]  選項重新開啟該視窗。  
   
 ## <a name="related-content"></a>相關內容  
  [管理中心的 PowerPivot 伺服器管理和設定](power-pivot-server-administration-and-configuration-in-central-administration.md)  

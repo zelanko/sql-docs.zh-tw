@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fabb6cd5d089ba39c413ee12427b18f1bbee8bf6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62688589"
 ---
 # <a name="run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler"></a>在追蹤暫停或停止之後執行追蹤 (SQL Server Profiler)
@@ -29,7 +29,7 @@ ms.locfileid: "62688589"
   
 1.  選取包含停止或暫停之追蹤的視窗。  
   
-2.  在 **[檔案]** 功能表上，按一下 **[執行追蹤]**。  
+2.  在 **[檔案]** 功能表上，按一下 **[執行追蹤]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [[SQL Server Profiler]](sql-server-profiler.md)   

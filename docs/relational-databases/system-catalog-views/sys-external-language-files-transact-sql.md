@@ -20,16 +20,16 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0d1325311ef0b708f5a3abd5f4494e099863efc2
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65995086"
 ---
 # <a name="sysexternallanguagefiles-transact-sql"></a>sys.external_language_files & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-這份目錄檢視會提供資料庫中的外部語言延伸模組檔案的清單。 **R**並**Python**為保留的名稱，而且不需要外部的語言可以使用這些特定的名稱來建立。
+這份目錄檢視會提供資料庫中的外部語言延伸模組檔案的清單。 **R** 和 **Python** 為保留的名稱，且不能使用這些特定的名稱來建立任何外部語言。
 
 從 file_spec 建立外部的語言時，延伸模組本身和它的屬性會列在這個檢視中。 此檢視會包含每種語言，每個作業系統的一個項目。
 

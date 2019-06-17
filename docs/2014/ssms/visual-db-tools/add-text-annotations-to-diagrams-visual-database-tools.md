@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dc390d06ab21b295f0e5f7a2475d8c91671e843c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63298284"
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>將文字附註加入至圖表 (Visual Database Tools)
@@ -29,12 +29,12 @@ ms.locfileid: "63298284"
   
 2.  在 [圖表] 視窗的空白空間上按一下滑鼠右鍵。  
   
-3.  從快速鍵功能表按一下 [新增文字附註]。  
+3.  從快速鍵功能表按一下 [新增文字附註]  。  
   
 4.  將註記輸入至出現的文字欄位。  
   
 > [!NOTE]  
->  若要變更字型，請在文字欄位按一下滑鼠右鍵，再按一下 [設定文字附註的字型]。  
+>  若要變更字型，請在文字欄位按一下滑鼠右鍵，再按一下 [設定文字附註的字型]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用資料庫圖表 &#40;Visual Database Tools&#41;](visual-database-tools.md)  

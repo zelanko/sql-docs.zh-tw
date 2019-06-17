@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bb8790496efb1701baf1636e5c16769e6430aa0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109440"
 ---
 # <a name="data-source-selection-page-report-manager"></a>資料來源選擇頁面 (報表管理員)
@@ -29,14 +29,14 @@ ms.locfileid: "66109440"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該報表或模型的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該報表或模型的 [一般] 屬性頁面。  
   
 4.  選取 **[資料來源]** 索引標籤。  
   
-5.  在屬性窗格中，選取 **[共用資料來源]** ，然後按一下 **[瀏覽]**。  
+5.  在屬性窗格中，選取 **[共用資料來源]** ，然後按一下 **[瀏覽]** 。  
   
 ## <a name="options"></a>選項。  
- **位置**  
+ **Location**  
  指定共用資料來源項目的完整路徑，由根資料夾名稱開始。 您可以輸入路徑名稱，或使用樹狀檢視來瀏覽想要的共用資料來源。  
   
  **樹狀檢視**  

@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad05ca7d33e8c2d6d976ea57aace43ff2ab076f8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090373"
 ---
 # <a name="navigate-code-and-text"></a>導覽程式碼與文字
@@ -37,7 +37,7 @@ ms.locfileid: "66090373"
   
 -   滑鼠和導覽鍵。  
   
--   [移至] 命令。  
+-   [移至]  命令。  
   
 > [!NOTE]  
 >  如需完整的鍵盤快速鍵清單，請參閱 [SQL Server Management Studio 鍵盤快速鍵](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)。  
@@ -64,11 +64,11 @@ ms.locfileid: "66090373"
 -   利用 CTRL+向上鍵和 CTRL+向下鍵，在不移動插入點的情況下，捲動檢視。  
   
 ## <a name="go-to-command"></a>[移至] 命令  
- 請使用 [移至] 命令移至特定行號。 若要顯示行號，請在 選項 對話方塊中，依序按一下 文字編輯器所有語言一般，然後選取 行號。  
+ 請使用 [移至]  命令移至特定行號。 若要顯示行號，請在 選項  對話方塊中，依序按一下 文字編輯器  所有語言  一般  ，然後選取 行號  。  
   
  **移至特定行號**  
   
-1.  在 [編輯] 功能表上，按一下 [移至]  
+1.  在 [編輯]  功能表上，按一下 [移至]   
   
 2.  輸入您想檢視的行號  
   

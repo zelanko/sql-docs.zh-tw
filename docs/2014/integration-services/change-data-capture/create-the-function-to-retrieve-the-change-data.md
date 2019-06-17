@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771434"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>建立函數以擷取變更資料
@@ -219,6 +219,6 @@ go
 ## <a name="next-step"></a>下一個步驟  
  建立查詢變更資料的資料表值函式後，下一個步驟是開始在封裝中設計資料流程。  
   
- **下一個主題：**[擷取與了解變更資料](retrieve-and-understand-the-change-data.md)  
+ **下一個主題：** [擷取與了解變更資料](retrieve-and-understand-the-change-data.md)  
   
   

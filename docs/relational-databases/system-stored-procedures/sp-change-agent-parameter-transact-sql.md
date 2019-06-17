@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16de7ceaae80a2aebcf2ed40d2b06b9a6ccf0dc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997029"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
@@ -241,7 +241,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  若要查看已針對給定的設定檔定義哪些參數，執行**sp_help_agent_profile** ，並記下*profile_name*相關聯*profile_id*。 以適當*profile_id*，接下來執行**sp_help_agent_parameters**使用該*profile_id*查看設定檔相關聯的參數。 可以在設定檔中加入參數，藉由執行[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。  
   
-`[ @parameter_value = ] 'parameter_value'` 新的參數值。 *parameter_value*已**nvarchar(255)**，沒有預設值。  
+`[ @parameter_value = ] 'parameter_value'` 新的參數值。 *parameter_value*已**nvarchar(255)** ，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

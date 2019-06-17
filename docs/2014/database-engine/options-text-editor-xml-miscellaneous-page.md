@@ -11,22 +11,22 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb3422b859ce4e58fc05564357876c5fe09fcdff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089212"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>選項 (文字編輯器 - XML - 其他頁面)
 
-[選項] 對話方塊，可以讓您變更 XML 編輯器的自動完成和結構描述設定。 在 [工具] 功能表上，按一下 [選項]，展開 [文字編輯器] 資料夾，按一下 [XML]，然後按一下 [其他]，即可使用這些設定。  
+[選項]  對話方塊，可以讓您變更 XML 編輯器的自動完成和結構描述設定。 在 [工具]  功能表上，按一下 [選項]  ，展開 [文字編輯器]  資料夾，按一下 [XML]  ，然後按一下 [其他]  ，即可使用這些設定。  
   
 ## <a name="auto-insert"></a>自動插入  
  **結尾標記**  
  文字編輯器在撰寫 XML 元素時會加入結尾標記。 如果選取元素開始標記，編輯器會插入相符的結尾標記，包括相符的命名空間前置詞。 依預設，這個核取方塊為已選取。  
   
  **屬性引號**  
- 撰寫 XML 屬性時，編輯器會插入 `="``"` 字元，並將插入號 (**^)** 置於引號內。 依預設，這個核取方塊為已選取。  
+ 撰寫 XML 屬性時，編輯器會插入 `="``"` 字元，並將插入號 ( **^)** 置於引號內。 依預設，這個核取方塊為已選取。  
   
  **命名空間宣告**  
  編輯器在需要時會自動插入命名空間宣告。 依預設，這個核取方塊為已選取。  

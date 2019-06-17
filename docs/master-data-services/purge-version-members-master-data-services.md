@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9834e79746feb3e7890ab8b6d5bdd43bbfc36dbb
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65486025"
 ---
 # <a name="purge-version-members-master-data-services"></a>清除版本成員 [Master Data Services]
@@ -33,13 +33,13 @@ ms.locfileid: "65486025"
   
 ## <a name="to-purge-soft-deleted-members"></a>清除虛刪除的成員  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[版本管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[版本管理]** 。  
   
-2.  在 [管理版本] 頁面上，選取要清除之版本的模型。 模型版本清單隨即顯示。  
+2.  在 [管理版本]  頁面上，選取要清除之版本的模型。 模型版本清單隨即顯示。  
   
 3.  選取要清除之版本的資料列。  
   
-4.  按一下 [清除成員]。  
+4.  按一下 [清除成員]  。  
   
 5.  在確認提示中按一下 [確定]。  
   

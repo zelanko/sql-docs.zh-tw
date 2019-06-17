@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 866bdea710033a0cfa3bdadb34282c96c810d730
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072399"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>名稱比對 (資料來源檢視精靈) (Analysis Services)
@@ -25,7 +25,7 @@ ms.locfileid: "66072399"
 > [!NOTE]  
 >  只有當您選取的資料來源有多個資料表，但各個資料表間沒有任何外部索引鍵關聯性時，才會顯示這個頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **比對資料行來建立邏輯關聯性**  
  選取即可使用名稱比對準則，來偵測您選取要包含在資料來源檢視中的資料表，與結構描述中的其他資料表是否有邏輯相依性和關聯性。 如果您清除此核取方塊，就不會在資料來源中使用名稱比對準則來識別資料表之間的邏輯關聯性。  
   

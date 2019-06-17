@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871535"
 ---
 # <a name="move-system-databases"></a>移動系統資料庫
@@ -152,19 +152,19 @@ ms.locfileid: "62871535"
 ##  <a name="master"></a> 移動 master 資料庫  
  若要移動 master 資料庫，請遵循下列步驟。  
   
-1.  從 **[開始]** 功能表上，依序指向 **[程式集]**、 **[Microsoft SQL Server]** 和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
+1.  從 **[開始]** 功能表上，依序指向 **[程式集]** 、 **[Microsoft SQL Server]** 和 **[組態工具]** ，再按一下 **[SQL Server 組態管理員]** 。  
   
-2.  在 **[SQL Server 服務]** 節點中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體 (例如 **[SQL Server (MSSQLSERVER)]**)，然後選擇 **[屬性]**。  
+2.  在 **[SQL Server 服務]** 節點中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體 (例如 **[SQL Server (MSSQLSERVER)]** )，然後選擇 **[屬性]** 。  
   
-3.  在 [SQL Server (<執行個體名稱>) 屬性]**** 對話方塊中，按一下 [啟動參數] 索引標籤。  
+3.  在 [SQL Server (<執行個體名稱>) 屬性] **** 對話方塊中，按一下 [啟動參數]  索引標籤。  
   
-4.  在 [現有參數] 方塊中，選取 -d 參數來移動 master 資料檔案。 按一下 **[更新]** 來儲存變更。  
+4.  在 [現有參數]  方塊中，選取 -d 參數來移動 master 資料檔案。 按一下 **[更新]** 來儲存變更。  
   
-     在 [指定啟動參數] 方塊中，將參數變更為 master 資料庫的新路徑。  
+     在 [指定啟動參數]  方塊中，將參數變更為 master 資料庫的新路徑。  
   
-5.  在 [現有參數] 方塊中，選取 -l 參數來移動 master 記錄檔。 按一下 **[更新]** 來儲存變更。  
+5.  在 [現有參數]  方塊中，選取 -l 參數來移動 master 記錄檔。 按一下 **[更新]** 來儲存變更。  
   
-     在 [指定啟動參數] 方塊中，將參數變更為 master 資料庫的新路徑。  
+     在 [指定啟動參數]  方塊中，將參數變更為 master 資料庫的新路徑。  
   
      資料檔案的參數值必須遵照 `-d` 參數，而記錄檔的值則必須遵照 `-l` 參數。 下列範例顯示 master 資料檔案的預設位置參數值。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "62871535"
   
      `-lE:\SQLData\mastlog.ldf`  
   
-6.  以滑鼠右鍵按一下執行個體名稱並選擇 [停止]，即可停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
+6.  以滑鼠右鍵按一下執行個體名稱並選擇 [停止]  ，即可停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
 7.  將 master.mdf 和 mastlog.ldf 檔移至新位置。  
   
@@ -205,17 +205,17 @@ ms.locfileid: "62871535"
   
 #### <a name="change-the-sql-server-agent-log-path"></a>變更 SQL Server Agent 記錄路徑  
   
-1.  從 SQL Server Management Studio，在 [物件總管] 中展開 **[SQL Server Agent]**。  
+1.  從 SQL Server Management Studio，在 [物件總管] 中展開 **[SQL Server Agent]** 。  
   
-2.  以滑鼠右鍵按一下 **[錯誤記錄檔]** ，然後按一下 **[設定]**。  
+2.  以滑鼠右鍵按一下 **[錯誤記錄檔]** ，然後按一下 **[設定]** 。  
   
 3.  在 **[設定 SQL Server Agent 錯誤記錄檔]** 對話方塊中，指定 SQLAGENT.OUT 檔的新位置。 預設位置是 < instance_name > \MSSQL\Log\\。 C:\Program Files\Microsoft SQL Server\MSSQL12。  
   
 #### <a name="change-the-database-default-location"></a>變更資料庫預設位置  
   
-1.  從 SQL Server Management Studio，在 [物件總管] 中以滑鼠右鍵按一下 SQL Server 伺服器，然後按一下 **[屬性]**。  
+1.  從 SQL Server Management Studio，在 [物件總管] 中以滑鼠右鍵按一下 SQL Server 伺服器，然後按一下 **[屬性]** 。  
   
-2.  在 **[伺服器屬性]** 對話方塊中，選取 **[資料庫設定]**。  
+2.  在 **[伺服器屬性]** 對話方塊中，選取 **[資料庫設定]** 。  
   
 3.  在 **[資料庫預設位置]** 底下，瀏覽至資料和記錄檔的新位置。  
   

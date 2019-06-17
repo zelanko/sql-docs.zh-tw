@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3eb86615f0023ff5c2c65e02af5c597ed3c1fdf1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096254"
 ---
 # <a name="complete---installation"></a>完成 - 安裝
-  按一下 [關閉] 完成安裝。  
+  按一下 [關閉]  完成安裝。  
   
 ## <a name="see-also"></a>另請參閱  
  [驗證 SQL Server 安裝](../../database-engine/install-windows/validate-a-sql-server-installation.md)  

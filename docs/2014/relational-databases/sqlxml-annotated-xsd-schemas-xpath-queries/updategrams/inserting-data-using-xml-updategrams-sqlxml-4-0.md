@@ -34,10 +34,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb8058eacc2958327f1aa5649ed2dcfefe173b37
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014810"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 插入資料 (SQLXML 4.0)
@@ -65,7 +65,7 @@ ms.locfileid: "66014810"
 ```  
   
 ## <a name="before-block"></a>\<before> Block  
-  **\<之前 >** 區塊，則可以省略插入作業。 如果選擇性`mapping-schema`未指定屬性，則**\<項目名稱 >** ，則 updategram 會對應至資料庫資料表和子元素中指定，或屬性對應到資料表中的資料行。  
+ **\<之前 >** 區塊，則可以省略插入作業。 如果選擇性`mapping-schema`未指定屬性，則 **\<項目名稱 >** ，則 updategram 會對應至資料庫資料表和子元素中指定，或屬性對應到資料表中的資料行。  
   
 ## <a name="after-block"></a>\<之後 > 區塊  
  您可以指定在一或多個資料錄 **\<之後 >** 區塊。  
@@ -157,7 +157,7 @@ ms.locfileid: "66014810"
 ```  
   
 ### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. 使用 Updategram 插入多筆記錄  
- 這個 Updategram 會將兩筆新的值班記錄加入至 HumanResources.Shift 資料表。 Updategram 沒有指定選擇性**\<之前 >** 區塊。  
+ 這個 Updategram 會將兩筆新的值班記錄加入至 HumanResources.Shift 資料表。 Updategram 沒有指定選擇性 **\<之前 >** 區塊。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -285,7 +285,7 @@ ms.locfileid: "66014810"
 </ROOT>  
 ```  
   
- 如果想要傳回 `updg:at-identity` 屬性所產生的識別值，可以使用 `updg:returnid` 屬性。 下列是經過修改的 Updategram，會傳回這個識別值  (此 Updategram 會加入兩筆訂單記錄和兩筆訂單詳細資料的記錄，以稍微增加範例的複雜度)。  
+ 如果想要傳回 `updg:at-identity` 屬性所產生的識別值，可以使用 `updg:returnid` 屬性。 下列是經過修改的 Updategram，會傳回這個識別值 (此 Updategram 會加入兩筆訂單記錄和兩筆訂單詳細資料的記錄，以稍微增加範例的複雜度)。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

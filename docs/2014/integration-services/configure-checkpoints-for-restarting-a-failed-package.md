@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e22e47af568ecf723b54a35fb6b83bd5ce74e333
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060765"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>設定檢查點以重新啟動失敗的封裝
@@ -32,7 +32,7 @@ ms.locfileid: "66060765"
   
 3.  按一下 **[控制流程]** 索引標籤。  
   
-4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]。  
+4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]  。  
   
 5.  將 SaveCheckpoints 屬性設定為`True`。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66060765"
   
 8.  設定封裝可重新啟動的工作和容器。  
   
-    -   以滑鼠右鍵按一下工作或容器，然後按一下 [屬性]。  
+    -   以滑鼠右鍵按一下工作或容器，然後按一下 [屬性]  。  
   
     -   FailPackageOnFailure 屬性設為`True`每個所選工作和容器。  
   

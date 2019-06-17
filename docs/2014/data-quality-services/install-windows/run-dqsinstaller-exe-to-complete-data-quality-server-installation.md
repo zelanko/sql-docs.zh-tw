@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 88b80e0eeba26e1a2c03f795d7ae3ce6fa796f10
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480487"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>執行 DQSInstaller.exe 完成 Data Quality Server 安裝
@@ -32,9 +32,9 @@ ms.locfileid: "65480487"
   
 1.  在您選擇要安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]的電腦上，使用下列任一適用的方法執行 DQSInstaller.exe 檔案：  
   
-    -   **開始畫面**：在 [開始] 畫面上，按一下 [資料品質伺服器安裝程式]。  
+    -   **開始畫面**：在 [開始]  畫面上，按一下 [資料品質伺服器安裝程式]  。  
   
-    -   **開始功能表**：在工作列上，按一下**開始**，指向**所有程式**，按一下  **Microsoft SQL Server 2014**。 在 **[Microsoft SQL Server 2014]** 底下按一下 **[Data Quality Services]**，然後按一下 **[Data Quality Server Installer]**。  
+    -   **開始功能表**：在工作列上，按一下**開始**，指向**所有程式**，按一下  **Microsoft SQL Server 2014**。 在 **[Microsoft SQL Server 2014]** 底下按一下 **[Data Quality Services]** ，然後按一下 **[Data Quality Server Installer]** 。  
   
     -   **Windows 檔案總管**：找出 DQSInstaller.exe 檔案。 如果已經安裝了 SQL Server 的預設執行個體，DQSInstaller.exe 檔案將會位於 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn。 按兩下 DQSInstaller.exe 檔案。  
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 77df7902f5dd1673736f4a993c4e29c50d7accc0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814664"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-alwayson-availability-groups-sql-server-powershell"></a>Create a Database Mirroring Endpoint for AlwaysOn Availability Groups (SQL Server PowerShell)
@@ -26,9 +26,9 @@ ms.locfileid: "62814664"
   
  **本主題內容**  
   
--   **開始之前：**[安全性](#Security)  
+-   **開始之前：** [安全性](#Security)  
   
--   **使用下列項目建立資料庫鏡像端點：**[PowerShell](#PowerShellProcedure)  
+-   **使用下列項目建立資料庫鏡像端點：** [PowerShell](#PowerShellProcedure)  
   
 ## <a name="before-you-begin"></a>開始之前  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62814664"
 2.  使用 `New-SqlHadrEndpoint` 指令程式建立端點，然後使用 `Set-SqlHadrEndpoint` 啟動端點。  
   
 ###  <a name="PShellExample"></a> 範例 (PowerShell)  
- 下列 PowerShell 命令會在 SQL Server 執行個體 (機器\\執行個體) 上建立資料庫鏡像端點。 此端點使用通訊埠 5022。  
+ 下列 PowerShell 命令會在 SQL Server 執行個體 (機器  \\執行個體  ) 上建立資料庫鏡像端點。 此端點使用通訊埠 5022。  
   
 > [!IMPORTANT]  
 >  這個範例只適用於目前缺少資料庫鏡像端點的伺服器執行個體。  

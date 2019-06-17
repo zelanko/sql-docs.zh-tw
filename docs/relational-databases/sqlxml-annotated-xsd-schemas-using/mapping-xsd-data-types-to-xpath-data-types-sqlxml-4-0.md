@@ -22,17 +22,17 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f10134d4aa4d71c4471e5e3120b3f8fbd8ee1748
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980786"
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>將 XSD 資料類型對應到 XPath 資料類型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   當 XPath 查詢針對 XSD 結構描述執行，而且已在指定 XSD 類型**xsd: type**屬性，XPath 會使用處理查詢時指定的資料類型。  
   
- 節點的 XPath 資料類型衍生自結構描述中的 XSD 資料類型，如下表所示  (EmployeeID 節點用於提供說明)。  
+ 節點的 XPath 資料類型衍生自結構描述中的 XSD 資料類型，如下表所示 (EmployeeID 節點用於提供說明)。  
   
 |XSD 資料類型|XDR 資料類型|對等用法<br /><br /> XPath 資料類型|[SQL Server]<br /><br /> 所使用的轉換|  
 |-------------------|-------------------|------------------------------------|--------------------------------------------|  

@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db069b243a0d06c142651ab4dcadd68e1e06657f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081973"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>相依性網路圖表逐步解說 (資料採礦增益集)
@@ -45,7 +45,7 @@ ms.locfileid: "66081973"
   
      \<磁碟機 >: \Program 檔案 (x85) \Microsoft SQL Server 2012 DM Add-ins  
   
-2.  拖曳**相依性網路**圖形放入以啟動精靈頁面。 按一下 [下一步] 。  
+2.  拖曳**相依性網路**圖形放入以啟動精靈頁面。 按一下 [下一步]  。  
   
 3.  在 歡迎使用 頁面上**相依性網路 Visio 圖形精靈**，按一下**下一步**。  
   

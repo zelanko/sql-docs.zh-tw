@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 431e01df40ab3a531af21977b85253d84768118f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059746"
 ---
 # <a name="data-mining-query-transformation-editor-query-tab"></a>資料採礦查詢轉換編輯器 (查詢索引標籤)
@@ -31,7 +31,7 @@ ms.locfileid: "66059746"
  將資料採礦延伸模組 (DMX) 查詢直接輸入文字方塊中。  
   
  **建立新查詢**  
- 按一下 [建立新查詢]，即可使用圖形化查詢產生器建立資料採礦延伸模組 (DMX) 查詢。  
+ 按一下 [建立新查詢]  ，即可使用圖形化查詢產生器建立資料採礦延伸模組 (DMX) 查詢。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
