@@ -34,23 +34,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779858"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014 中已停止的 Database Engine 功能
   本主題描述 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中不再可用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  下表列出已在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中移除的功能。  
   
 |Category|已停止的功能|取代|  
 |--------------|--------------------------|-----------------|  
 |相容性層級|90 相容性層級|資料庫至少必須設定為相容性層級 100。 當相容性層級低於 100 的資料庫升級為 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]時，資料庫的相容性層級會在升級作業期間設定為 100。|  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  下表列出已在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中移除的功能。  
   
 |Category|已停止的功能|取代|  
@@ -75,7 +75,7 @@ ms.locfileid: "62779858"
 |系統資料表|sys.database_principal_aliases|請使用角色，而非別名。|  
 |Transact-SQL|`RAISERROR` 格式的 `RAISERROR integer 'string'` 已停止。|請使用目前的陳述式重寫**raiserror （...)** 語法。|  
 |Transact-SQL 語法|`COMPUTE / COMPUTE BY`|使用`ROLLUP`|  
-|Transact-SQL 語法|利用**\* =** 和 **=&#42;**|使用 ANSI 聯結語法。 如需詳細資訊，請參閱 [FROM (Transact-SQL)。](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|Transact-SQL 語法|利用 **\* =** 和 **=&#42;**|使用 ANSI 聯結語法。 如需詳細資訊，請參閱 [FROM (Transact-SQL)。](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvents|databases_data_file_size_changed databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|取代 database_file_size_change event，database_file_size_change<br /><br /> database_file_size_change event<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **其他 XEvent 變更**  

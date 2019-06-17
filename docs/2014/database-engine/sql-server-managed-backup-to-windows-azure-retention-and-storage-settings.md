@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f9f9db58c48e74a91ec85972befb206ed3fb07f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773537"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>SQL Server Managed Backup to Windows Azure - 保留和儲存體設定
@@ -83,7 +83,7 @@ ms.locfileid: "62773537"
   
 -   用於向 Windows Azure 儲存體帳戶進行驗證的 SQL 認證。  
   
--   指定不使用加密*@encryption_algorithm*  =  **NO_ENCRYPTION** ，或是指定支援的加密演算法。 如需加密的詳細資訊，請參閱＜ [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md)＞。  
+-   指定不使用加密 *@encryption_algorithm*  =  **NO_ENCRYPTION** ，或是指定支援的加密演算法。 如需加密的詳細資訊，請參閱＜ [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md)＞。  
   
  只能透過 Transact-SQL 支援資料庫層級設定的[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]。  
   
@@ -94,11 +94,11 @@ ms.locfileid: "62773537"
   
 -   **使用 TRANSACT-SQL:**  
   
-     如果您要啟用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]第一次，需要的參數包括： *@database_name*， *@credential_name*， *@encryption_algorithm*， *@enable_backup* *@storage_url*參數是選擇性的。 如果您未提供的值@storage_url參數，此值衍生使用 SQL 認證的儲存體帳戶資訊。 如有提供儲存體 URL，應只提供儲存體帳戶根目錄的 URL，而且必須符合所指定之 SQL 認證中的資訊。  
+     如果您要啟用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]第一次，需要的參數包括： *@database_name* ， *@credential_name* ， *@encryption_algorithm* ， *@enable_backup* *@storage_url* 參數是選擇性的。 如果您未提供的值@storage_url參數，此值衍生使用 SQL 認證的儲存體帳戶資訊。 如有提供儲存體 URL，應只提供儲存體帳戶根目錄的 URL，而且必須符合所指定之 SQL 認證中的資訊。  
   
     1.  連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
-    2.  在標準列中，按一下 **[新增查詢]**。  
+    2.  在標準列中，按一下 **[新增查詢]** 。  
   
     3.  複製並貼入查詢視窗中的下列範例，然後按一下  `Execute`。 這個範例會啟用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]資料庫 'TestDB'。 保留週期設為 30 天。 此範例會指定加密演算法和加密程式資訊來使用加密選項。  
   
@@ -135,26 +135,26 @@ ms.locfileid: "62773537"
 ##  <a name="InstanceConfigure"></a> 啟用及設定預設[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]執行個體設定  
  您可以啟用和設定預設[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]設定執行個體層級有兩種：使用系統預存程序`smart_backup.set_instance_backup`或是**SQL Server Management Studio**。 這兩種方法說明如下：  
   
- **smart_backup.set_instance_backup**： 透過指定的值**1** for *@enable_backup*參數，您可以啟用備份和設定預設組態。 套用在執行個體層級之後，這些預設設定值會套用至加入此執行個體的所有新資料庫。  第一次啟用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 時，除了啟用執行個體的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 之外，還必須提供下列資訊︰  
+ **smart_backup.set_instance_backup**： 透過指定的值**1** for *@enable_backup* 參數，您可以啟用備份和設定預設組態。 套用在執行個體層級之後，這些預設設定值會套用至加入此執行個體的所有新資料庫。  第一次啟用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 時，除了啟用執行個體的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 之外，還必須提供下列資訊︰  
   
 -   保留週期。  
   
 -   用於向 Windows Azure 儲存體帳戶進行驗證的 SQL 認證。  
   
--   加密選項。 指定不使用加密*@encryption_algorithm*  =  **NO_ENCRYPTION** ，或是指定支援的加密演算法。 如需加密的詳細資訊，請參閱＜ [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md)＞。  
+-   加密選項。 指定不使用加密 *@encryption_algorithm*  =  **NO_ENCRYPTION** ，或是指定支援的加密演算法。 如需加密的詳細資訊，請參閱＜ [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md)＞。  
   
  啟用之後，這些設定會保存。 如果要變更組態，只需要資料庫名稱和您要變更的設定。 如果未指定，[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會保留現有的值。  
   
 > [!IMPORTANT]  
 >  在設定執行個體的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 前，它對檢查現有的組態 (如果有的話) 也許會有幫助。 檢閱資料庫組態設定的步驟，於本節稍後說明。  
   
- **SQL Server Management Studio:** 若要執行此工作在 SQL Server Management Studio 中的，進入 [物件總管] 中，展開**管理**節點，然後以滑鼠右鍵按一下**Managed Backup**。 選取 **[設定]**。 這樣會開啟 **[Managed Backup]** 對話方塊。 使用此對話方塊可指定保留週期、SQL 認證、儲存體 URL 和加密設定。 如需使用此對話方塊的特定說明，請參閱[設定 Managed Backup &#40;SQL Server Management Studio&#41;](configure-managed-backup-sql-server-management-studio.md)。  
+ **SQL Server Management Studio:** 若要執行此工作在 SQL Server Management Studio 中的，進入 [物件總管] 中，展開**管理**節點，然後以滑鼠右鍵按一下**Managed Backup**。 選取 **[設定]** 。 這樣會開啟 **[Managed Backup]** 對話方塊。 使用此對話方塊可指定保留週期、SQL 認證、儲存體 URL 和加密設定。 如需使用此對話方塊的特定說明，請參閱[設定 Managed Backup &#40;SQL Server Management Studio&#41;](configure-managed-backup-sql-server-management-studio.md)。  
   
 #### <a name="using-transact-sql"></a>使用 Transact-SQL  
   
 1.  連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  複製並貼入查詢視窗中的下列範例，然後按一下  `Execute`。  
   
@@ -202,13 +202,13 @@ SELECT * FROM smart_admin.fn_backup_instance_config ();
 >  當您進行預設設定後，建立新的資料庫時，可能需要花費 15 分鐘對資料庫進行預設設定。 這也適用於從 **Simple** 變更至 **Full** 或 **Bulk-Logged** 復原模式的資料庫。  
   
 ##  <a name="DatabaseDisable"></a> 停用資料庫的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
- 您可以使用 `sp_set_db_backup` 系統預存程序來停用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]設定。 *@enableparameter*用來啟用和停用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]特定的資料庫，其中 1 會啟用而 0 會停用的組態設定的設定。  
+ 您可以使用 `sp_set_db_backup` 系統預存程序來停用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]設定。 *@enableparameter* 用來啟用和停用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]特定的資料庫，其中 1 會啟用而 0 會停用的組態設定的設定。  
   
 #### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmd-for-a-specific-database"></a>停用特定資料庫的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ：  
   
 1.  連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  複製並貼入查詢視窗中的下列範例，然後按一下  `Execute`。  
   
@@ -222,14 +222,14 @@ GO
   
 ```  
   
-##  <a name="DatabaseAllDisable"></a> 停用執行個體上所有資料庫的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]   
+##  <a name="DatabaseAllDisable"></a> 停用執行個體上所有資料庫的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
  從近期在執行個體上啟用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的所有資料庫中，若您要停用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 組態設定，可使用下列程序。  組態設定 (例如儲存體 URL、保留項目和 SQL 認證) 都會保留在中繼資料中，如果稍後啟用資料庫的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 即可使用。 如果您只是想暫停 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 服務，可使用主切換，本主題的以下章節會解釋。  
   
 #### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmdfor-all-the-databases"></a>停用所有資料庫的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]：  
   
 1.  連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  複製並貼入查詢視窗中的下列範例，然後按一下  `Execute`。 下列範例會指出是否已在執行個體層級設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]，以及該執行個體上，所有已經啟用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]的資料庫，並會執行系統預存程序 `sp_set_db_backup`，以停用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]。  
   
@@ -297,7 +297,7 @@ GO
   
 1.  連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  複製並貼入查詢視窗中的下列範例，然後按一下  `Execute`。  
   
@@ -328,7 +328,7 @@ GO
   
 1.  連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  複製並貼入查詢視窗中的下列範例，然後按一下 `Execute`  
   
@@ -355,7 +355,7 @@ Go
   
 1.  連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  複製並貼入查詢視窗中的下列範例，然後按一下`Execute`。  
   

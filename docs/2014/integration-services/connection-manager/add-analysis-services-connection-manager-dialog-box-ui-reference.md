@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9177dceefb03617a1837f7f051fb52aa805f33aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62833751"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>加入 Analysis Services 連接管理員對話方塊 UI 參考
@@ -26,12 +26,12 @@ ms.locfileid: "62833751"
   
  若要深入了解 Analysis Services 連接管理員，請參閱＜ [Analysis Services Connection Manager](analysis-services-connection-manager.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **建立執行 Analysis Services 之電腦的連接**  
- 使用執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之伺服器的預設連接，或按一下 [編輯] 建立新的連接。  
+ 使用執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之伺服器的預設連接，或按一下 [編輯]  建立新的連接。  
   
  **編輯**  
- 使用 [連線管理員] 對話方塊，來建立執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的伺服器連接，以及編輯連接屬性。  
+ 使用 [連線管理員]  對話方塊，來建立執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的伺服器連接，以及編輯連接屬性。  
   
  **在此方案中建立連接到 Analysis Services 專案**  
  指定連接將會在已開啟的方案中使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案。  

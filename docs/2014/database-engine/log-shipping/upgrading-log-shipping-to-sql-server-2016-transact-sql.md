@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775393"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>將記錄傳送升級至 SQL Server 2014 (Transact-SQL)
@@ -128,7 +128,7 @@ ms.locfileid: "62775393"
   
     4.  將用戶端從原始主要伺服器 (伺服器 A) 重新導向線上次要伺服器 (伺服器 B) 來容錯移轉資料庫。  
   
-    5.  請注意，當資料庫在線上時，次要資料庫的交易記錄並不會填滿。 若要避免交易記錄被填滿，您可能需要加以備份。 如果是這種情況，我們建議您將它備份到共用位置 ( *「備份共用」*(Backup Share))，讓備份可在其他伺服器執行個體上用來還原。  
+    5.  請注意，當資料庫在線上時，次要資料庫的交易記錄並不會填滿。 若要避免交易記錄被填滿，您可能需要加以備份。 如果是這種情況，我們建議您將它備份到共用位置 ( *「備份共用」* (Backup Share))，讓備份可在其他伺服器執行個體上用來還原。  
   
 #####  <a name="Procedure2"></a> 程序 2:原始主要伺服器執行個體升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  在您將原始主要伺服器執行個體升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，資料庫仍然會在離線狀態而且採用格式。  

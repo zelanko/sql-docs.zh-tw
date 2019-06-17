@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6950199a5da1f4aa773eaa12fee80edb98aba04f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62809415"
 ---
 # <a name="server-properties-memory-page"></a>伺服器屬性 (記憶體頁面)
   使用此頁面來檢視或修改伺服器記憶體選項。 **[最小伺服器記憶體]** 設定為 0 且 **[最大伺服器記憶體]** 設為 2147483647 MB 時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就可在任何特定時間利用最佳的記憶體數量，但受作業系統和其他應用程式目前所使用的記憶體數量所限制。 隨著電腦與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的負載有所變更，記憶體的配置也會變更。 您可以進一步將這個動態記憶體配置限制為下列所指定的最小值和最大值。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **最小伺服器記憶體 (以 MB 為單位)**  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 至少應使用最小配置記憶體數量來啟動，且不會釋放低於此值的記憶體。 根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的大小和活動來設定此值。 請一律將這個選項設定為合理的值，以確保作業系統不會向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要求太多記憶體，而影響 Windows 效能。  
   

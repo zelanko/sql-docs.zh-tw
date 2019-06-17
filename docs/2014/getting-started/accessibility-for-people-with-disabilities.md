@@ -22,10 +22,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3df8c5c308502e3e3e50e79c174f1ed96bbeacf9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62842749"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>行動不便人士的協助工具
@@ -101,7 +101,7 @@ ms.locfileid: "62842749"
  您可以連絡[!INCLUDE[msCoName](../includes/msconame-md.md)]以文字電話的撥號 (800) 892-5234 早上 6 點 30 之間的 Sales Information Center Sales Information Center。 服務時間為週一至週五，例假日除外。  
   
 ### <a name="technical-help"></a>技術協助  
- 如需在美國境內取得技術協助，您可以在早上 6 點到下午 6 點 (美國西岸時間) 之間撥 (800) 892-5234，以文字電話連絡「[!INCLUDE[msCoName](../includes/msconame-md.md)]  和 06:00:00 執行報表， 服務時間為週一至週五，例假日除外。 在加拿大請撥 (905) 568-9641，服務時間為上午 8 點 到下午 8 點 (東部時間)，週一至週五，例假日除外。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支援服務依使用服務時各地區的價格、條款及條件而異。  
+ 如需在美國境內取得技術協助，您可以在早上 6 點到下午 6 點 (美國西岸時間) 之間撥 (800) 892-5234，以文字電話連絡「[!INCLUDE[msCoName](../includes/msconame-md.md)] 和 06:00:00 執行報表， 服務時間為週一至週五，例假日除外。 在加拿大請撥 (905) 568-9641，服務時間為上午 8 點 到下午 8 點 (東部時間)，週一至週五，例假日除外。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支援服務依使用服務時各地區的價格、條款及條件而異。  
   
 ## <a name="getting-more-accessibility-information"></a>取得更多的協助工具資訊  
  [Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkID=8287) (Microsoft 協助工具) 網站提供有關可提升行動不便人士生活品質之輔助技術的資訊。  

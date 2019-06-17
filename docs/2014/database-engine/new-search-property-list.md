@@ -13,16 +13,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2aff15a42c8bffeb5a54e92b9ce7a09ace282ce4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774496"
 ---
 # <a name="new-search-property-list"></a>新增搜尋屬性清單
   使用這個對話方塊來建立搜尋屬性清單。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **搜尋屬性清單名稱**  
  請輸入搜尋屬性清單的名稱。  
   

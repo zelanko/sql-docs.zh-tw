@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f090cd6dbfaa0194bc02af581fc4765fca9eac0b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768974"
 ---
 # <a name="developing-a-custom-destination-component"></a>開發自訂目的地元件
@@ -38,7 +38,7 @@ ms.locfileid: "62768974"
  實作目的地元件的設計階段功能包括指定外部資料來源的連接，以及驗證元件是否已正確設定。 根據定義，目的地元件具有一個輸入，而且可能具有一個錯誤輸出。  
   
 ### <a name="creating-the-component"></a>建立元件  
- 目的地元件會使用在封裝中定義的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件，連接至外部資料來源。 目的地元件會將元素新增至 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 集合，以向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具和元件的使用者指出其連線管理員的需求。 這個集合有兩個目的：首先，它會向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師通告連接管理員的需求。然後，在使用者已選取或建立連接管理員之後，它會在封裝中保留元件所使用之連接管理員的參考。 將 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 新增至集合時，[進階編輯器] 會顯示 [連線屬性] 索引標籤，提示使用者在套件中選取或建立連線以供元件使用。  
+ 目的地元件會使用在封裝中定義的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件，連接至外部資料來源。 目的地元件會將元素新增至 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 集合，以向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具和元件的使用者指出其連線管理員的需求。 這個集合有兩個目的：首先，它會向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師通告連接管理員的需求。然後，在使用者已選取或建立連接管理員之後，它會在封裝中保留元件所使用之連接管理員的參考。 將 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 新增至集合時，[進階編輯器]  會顯示 [連線屬性]  索引標籤，提示使用者在套件中選取或建立連線以供元件使用。  
   
  下列程式碼範例會顯示 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 的實作，它加入輸入並將 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 物件加入至 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>。  
   

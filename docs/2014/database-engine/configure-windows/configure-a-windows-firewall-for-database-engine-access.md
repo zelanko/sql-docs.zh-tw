@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e0eafd8a8eb1d9d73f71ab069dc8bf0795a87bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62812290"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>設定用於 Database Engine 存取的 Windows 防火牆
@@ -62,34 +62,34 @@ ms.locfileid: "62812290"
   
 #### <a name="to-open-a-port-in-the-windows-firewall-for-tcp-access"></a>若要在 Windows 防火牆中開啟通訊埠以便 TCP 存取  
   
-1.  在 **[開始]** 功能表上、按一下 **[執行]**，輸入 **WF.msc**，然後按一下 **[確定]**。  
+1.  在 **[開始]** 功能表上、按一下 **[執行]** ，輸入 **WF.msc**，然後按一下 **[確定]** 。  
   
-2.  在 **[具有進階安全性的 Windows 防火牆]** 的左窗格中，以滑鼠右鍵按一下 **[輸入規則]**，然後按一下動作窗格中的 **[新增規則]** 。  
+2.  在 **[具有進階安全性的 Windows 防火牆]** 的左窗格中，以滑鼠右鍵按一下 **[輸入規則]** ，然後按一下動作窗格中的 **[新增規則]** 。  
   
-3.  在 **[規則類型]** 對話方塊中，選取 **[通訊埠]**，然後按 **[下一步]**。  
+3.  在 **[規則類型]** 對話方塊中，選取 **[通訊埠]** ，然後按 **[下一步]** 。  
   
-4.  在 **[通訊協定及連接埠]** 對話方塊中，選取 **[TCP]**。 選取 **特定本機連接埠**，然後輸入執行個體的連接埠號碼[!INCLUDE[ssDE](../../includes/ssde-md.md)]，例如`1433`預設執行個體。 按一下 [下一步] 。  
+4.  在 **[通訊協定及連接埠]** 對話方塊中，選取 **[TCP]** 。 選取 **特定本機連接埠**，然後輸入執行個體的連接埠號碼[!INCLUDE[ssDE](../../includes/ssde-md.md)]，例如`1433`預設執行個體。 按一下 [下一步]  。  
   
-5.  在 **[執行動作]** 對話方塊中，選取 **[允許連線]**，然後按 **[下一步]**。  
+5.  在 **[執行動作]** 對話方塊中，選取 **[允許連線]** ，然後按 **[下一步]** 。  
   
-6.  在 **[設定檔]** 對話方塊中，選取您想要連線至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]時，描述電腦連線環境的設定檔，然後按 **[下一步]**。  
+6.  在 **[設定檔]** 對話方塊中，選取您想要連線至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]時，描述電腦連線環境的設定檔，然後按 **[下一步]** 。  
   
-7.  在 **[名稱]** 對話方塊中，輸入此規則的名稱和描述，然後按一下 **[完成]**。  
+7.  在 **[名稱]** 對話方塊中，輸入此規則的名稱和描述，然後按一下 **[完成]** 。  
   
 #### <a name="to-open-access-to-sql-server-when-using-dynamic-ports"></a>若要在使用動態通訊埠時開放 SQL Server 的存取  
   
-1.  在 **[開始]** 功能表上、按一下 **[執行]**，輸入 **WF.msc**，然後按一下 **[確定]**。  
+1.  在 **[開始]** 功能表上、按一下 **[執行]** ，輸入 **WF.msc**，然後按一下 **[確定]** 。  
   
-2.  在 **[具有進階安全性的 Windows 防火牆]** 的左窗格中，以滑鼠右鍵按一下 **[輸入規則]**，然後按一下動作窗格中的 **[新增規則]** 。  
+2.  在 **[具有進階安全性的 Windows 防火牆]** 的左窗格中，以滑鼠右鍵按一下 **[輸入規則]** ，然後按一下動作窗格中的 **[新增規則]** 。  
   
-3.  在 **[規則類型]** 對話方塊中，選取 **[程式]**，然後按 **[下一步]**。  
+3.  在 **[規則類型]** 對話方塊中，選取 **[程式]** ，然後按 **[下一步]** 。  
   
-4.  在 **[程式]** 對話方塊中，選取 **[這個程式路徑]**。 按一下 **[瀏覽]**，並導覽至您想要透過防火牆存取的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後按一下 **[開啟]**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設位於 **C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**。 按一下 [下一步] 。  
+4.  在 **[程式]** 對話方塊中，選取 **[這個程式路徑]** 。 按一下 **[瀏覽]** ，並導覽至您想要透過防火牆存取的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後按一下 **[開啟]** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設位於 **C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**。 按一下 [下一步]  。  
   
-5.  在 **[執行動作]** 對話方塊中，選取 **[允許連線]**，然後按 **[下一步]**。  
+5.  在 **[執行動作]** 對話方塊中，選取 **[允許連線]** ，然後按 **[下一步]** 。  
   
-6.  在 **[設定檔]** 對話方塊中，選取您想要連線至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]時，描述電腦連線環境的設定檔，然後按 **[下一步]**。  
+6.  在 **[設定檔]** 對話方塊中，選取您想要連線至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]時，描述電腦連線環境的設定檔，然後按 **[下一步]** 。  
   
-7.  在 **[名稱]** 對話方塊中，輸入此規則的名稱和描述，然後按一下 **[完成]**。  
+7.  在 **[名稱]** 對話方塊中，輸入此規則的名稱和描述，然後按一下 **[完成]** 。  
   
   

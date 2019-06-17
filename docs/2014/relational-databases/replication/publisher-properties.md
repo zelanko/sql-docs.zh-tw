@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261981"
 ---
 # <a name="sql-server-replication-publisher-properties"></a>SQL Server 複寫發行者屬性
@@ -34,7 +34,7 @@ ms.locfileid: "63261981"
 ## <a name="distributor"></a>散發者
   **[發行者屬性]** 對話方塊可讓您檢視和修改與發行者及其散發者之間的關聯性相關聯的屬性。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **代理程式至發行者的連接**  
  指定下列代理程式用來從散發者連接到發行者的內容。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63261981"
   
 -   Oracle 發行集的快照集代理程式和記錄讀取器代理程式。  
   
- 選取 **[模擬代理程式處理帳戶]** 來使用執行這些代理程式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶連接到發行者，或指定 **[SQL Server 驗證]**，然後輸入 **[登入]** 和 **[密碼]** 的值。 建議您選取 **[模擬代理程式處理帳戶]**。 如需代理程式安全性的詳細資訊，請參閱[複寫代理程式安全性模型](security/replication-agent-security-model.md)。  
+ 選取 **[模擬代理程式處理帳戶]** 來使用執行這些代理程式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶連接到發行者，或指定 **[SQL Server 驗證]** ，然後輸入 **[登入]** 和 **[密碼]** 的值。 建議您選取 **[模擬代理程式處理帳戶]** 。 如需代理程式安全性的詳細資訊，請參閱[複寫代理程式安全性模型](security/replication-agent-security-model.md)。  
   
  執行這些代理程式的 Windows 帳戶會在新增發行集精靈中指定。 可以在下列位置變更這些帳戶：  
   
@@ -66,14 +66,14 @@ ms.locfileid: "63261981"
 
 ## <a name="subscribers"></a>訂閱者
 
-  [發行者屬性] 對話方塊的 [訂閱者] 頁面，是用於執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之發行者。 此頁面可讓您啟用訂閱者，以接收來自此發行者的發行集資料。 啟用訂閱者以接收來自此發行者的資料，並不會在此發行者上建立發行集的訂閱。 若要建立訂閱，您必須使用新增訂閱精靈。  
+  [發行者屬性]  對話方塊的 [訂閱者]  頁面，是用於執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之發行者。 此頁面可讓您啟用訂閱者，以接收來自此發行者的發行集資料。 啟用訂閱者以接收來自此發行者的資料，並不會在此發行者上建立發行集的訂閱。 若要建立訂閱，您必須使用新增訂閱精靈。  
   
 ### <a name="options"></a>選項。  
  **[發行者屬性]**  
- **[訂閱者]** 屬性方格，會顯示已啟用來接收此發行者之發行集資料的訂閱者。 按一下訂閱者旁的屬性按鈕 (**...**)，即可檢視和設定其他屬性。  
+ **[訂閱者]** 屬性方格，會顯示已啟用來接收此發行者之發行集資料的訂閱者。 按一下訂閱者旁的屬性按鈕 ( **...** )，即可檢視和設定其他屬性。  
   
  **[加入]**  
- 按一下 **[加入]** 即可加入訂閱者，然後按一下 **[加入 SQL Server 訂閱者]** 或 **[加入非 SQL Server 訂閱者]**。  
+ 按一下 **[加入]** 即可加入訂閱者，然後按一下 **[加入 SQL Server 訂閱者]** 或 **[加入非 SQL Server 訂閱者]** 。  
 
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改散發者和發行者屬性](view-and-modify-distributor-and-publisher-properties.md)   

@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: df2fa8df9af317bd76b2d7f10e50f7cc937e4660
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63254160"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>將 3.5 驅動程式升級至 3.8 驅動程式
@@ -26,7 +26,7 @@ ms.locfileid: "63254160"
   
 -   驅動程式應該支援 SQL_OV_ODBC3_80 SQL_ATTR_ODBC_VERSION，SQL_OV_ODBC2、 sql_ov_odbc3 時和 SQL_OV_ODBC3_80 以外的值傳回 SQL_ERROR。 未來版本的驅動程式管理員會假設驅動程式支援 ODBC 相容性層級，如果驅動程式傳回 SQL_SUCCESS，從[SQLSetEnvAttr 函式](../../../odbc/reference/syntax/sqlsetenvattr-function.md)。  
   
--   3.8 版的驅動程式應該會傳回從 03.80 **SQLGetInfo** SQL_DRIVER_ODBC_VER 時傳遞給*資訊類型*。 不過，較舊的驅動程式管理員，已包含在舊版的 Microsoft Windows 中，會視為 3.5 版驅動程式的驅動程式，並發出警告。  
+-   3\.8 版的驅動程式應該會傳回從 03.80 **SQLGetInfo** SQL_DRIVER_ODBC_VER 時傳遞給*資訊類型*。 不過，較舊的驅動程式管理員，已包含在舊版的 Microsoft Windows 中，會視為 3.5 版驅動程式的驅動程式，並發出警告。  
   
      在 Windows 7 中，驅動程式管理員版本會為 03.80。 在 Windows 8 中，驅動程式管理員版本是透過 SQLGetInfo SQL_DM_VER 03.81 (*資訊類型*參數)。 SQL_ODBC_VER 會回報為 03.80 Windows 7 和 Windows 8 中的版本。  
   
@@ -45,7 +45,7 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
   
  若要避免不必要的通訊，與伺服器，驅動程式可以延後的下一步 通訊與遠端伺服器，直到重設之後重複使用連接集區中, 的 「 連接 」 屬性。  
   
- 請注意 SQL_ATTR_RESET_CONNECTION 僅用於驅動程式管理員和驅動程式之間的通訊。 應用程式無法直接設定此屬性。 3.8 版的所有驅動程式應該實作此連接屬性。  
+ 請注意 SQL_ATTR_RESET_CONNECTION 僅用於驅動程式管理員和驅動程式之間的通訊。 應用程式無法直接設定此屬性。 3\.8 版的所有驅動程式應該實作此連接屬性。  
   
 ##### <a name="streamed-output-parameters"></a>資料流的輸出參數  
  ODBC 3.8 版引進了資料流的輸出參數，更有彈性的方式，擷取輸出參數。 (如需詳細資訊，請參閱 <<c0> [ 使用 SQLGetData 擷取輸出參數](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。)若要支援這項功能，驅動程式應該 SQL_GD_OUTPUT_PARAMS 中傳回的值時設定 SQL_GETDATA_EXTENSIONS*資訊類型*中**SQLGetInfo**呼叫。 支援資料流的輸出參數的 SQL 類型必須實作驅動程式中。 驅動程式管理員不會產生無效的 SQL 類型的錯誤。 支援資料流的輸出參數的 SQL 類型被定義在驅動程式。  

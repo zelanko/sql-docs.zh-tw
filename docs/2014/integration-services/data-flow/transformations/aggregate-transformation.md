@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770634"
 ---
 # <a name="aggregate-transformation"></a>彙總轉換
@@ -65,9 +65,9 @@ ms.locfileid: "62770634"
 ## <a name="performance-considerations"></a>效能考量  
  「彙總」轉換包含一組屬性，可讓您用來增強轉換的效能。  
   
--   當執行 [群組依據] 作業時，請設定元件的 Keys 或 KeysScale 屬性和元件輸出。 您可以使用 Keys，指定轉換預期要處理的確切索引鍵數目。 (在此內容中，Keys 會參考預期要從 [群組依據] 作業產生的群組數)。您可以使用 KeysScale，指定索引鍵的近似數目。 當您為 Keys 或 KeyScale 指定適當值時，您將會提高效能，因為轉換能夠針對轉換所快取的資料來配置足夠的記憶體。  
+-   當執行 [群組依據]  作業時，請設定元件的 Keys 或 KeysScale 屬性和元件輸出。 您可以使用 Keys，指定轉換預期要處理的確切索引鍵數目。 (在此內容中，Keys 會參考預期要從 [群組依據]  作業產生的群組數)。您可以使用 KeysScale，指定索引鍵的近似數目。 當您為 Keys 或 KeyScale 指定適當值時，您將會提高效能，因為轉換能夠針對轉換所快取的資料來配置足夠的記憶體。  
   
--   當執行 [相異計數] 作業時，請設定元件的 CountDistinctKeys 或 CountDistinctScale 屬性。 您可以使用 CountDistinctKeys，為相異計數作業指定轉換預期要處理的確切索引鍵數目。 (在此內容中，CountDistinctKeys 會參考預期要從 [相異計數] 作業產生的相異值數目)。您可以使用 CountDistinctScale，為相異計數作業指定索引鍵的近似數目。 當您為 CountDistinctKeys 或 CountDistinctScale 指定適當值時，您將會提高效能，因為轉換能夠針對轉換所快取的資料來配置足夠的記憶體。  
+-   當執行 [相異計數]  作業時，請設定元件的 CountDistinctKeys 或 CountDistinctScale 屬性。 您可以使用 CountDistinctKeys，為相異計數作業指定轉換預期要處理的確切索引鍵數目。 (在此內容中，CountDistinctKeys 會參考預期要從 [相異計數]  作業產生的相異值數目)。您可以使用 CountDistinctScale，為相異計數作業指定索引鍵的近似數目。 當您為 CountDistinctKeys 或 CountDistinctScale 指定適當值時，您將會提高效能，因為轉換能夠針對轉換所快取的資料來配置足夠的記憶體。  
   
 ## <a name="aggregate-transformation-configuration"></a>彙總轉換組態  
  您可以在轉換、輸出和資料行層級設定「彙總」轉換。  

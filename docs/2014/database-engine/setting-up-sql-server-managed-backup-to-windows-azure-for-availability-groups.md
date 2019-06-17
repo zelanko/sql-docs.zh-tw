@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6a67b2331959dbc3087f6282be05de90b42443c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62843564"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups"></a>針對可用性群組設定 SQL Server Managed Backup 到 Windows Azure
@@ -32,7 +32,7 @@ ms.locfileid: "62843564"
   
 -   需要的成員資格**db_backupoperator**資料庫角色，使用**ALTER ANY CREDENTIAL**權限，並`EXECUTE`的權限**sp_delete_backuphistory**預存程序。  
   
--   需要**選取 ** 權限 **smart_admin.fn_get_current_xevent_settings** 函式。  
+-   需要**選取** 權限 **smart_admin.fn_get_current_xevent_settings** 函式。  
   
 -   需要`EXECUTE`權限**smart_admin.sp_get_backup_diagnostics**預存程序。 除此之外，因為它會從內部呼叫其他需要此權限的系統物件，所以還需要 `VIEW SERVER STATE` 權限。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "62843564"
   
      預設會顯示已經啟用 Admin、Operational 和 Analytical 通道事件，且無法予以停用。 這應該足以監視需要手動介入的事件。  您可以啟用偵錯事件，不過這些通道包含[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]用來偵測及解決問題的資訊和偵錯事件。 如需詳細資訊，請參閱 <<c0> [ 監視 SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。  
   
-9. **啟用及設定健全狀態通知：**[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的預存程序會建立代理程式作業，以針對可能需要注意的錯誤或警告傳送電子郵件通知。  若要接收這類通知，必須啟用 [執行預存程序]，以建立 SQL Server Agent 工作。 下列步驟描述啟用及設定電子郵件通知的程序：  
+9. **啟用及設定健全狀態通知：** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的預存程序會建立代理程式作業，以針對可能需要注意的錯誤或警告傳送電子郵件通知。  若要接收這類通知，必須啟用 [執行預存程序]，以建立 SQL Server Agent 工作。 下列步驟描述啟用及設定電子郵件通知的程序：  
   
     1.  如果執行個體上尚未啟用，請設定 Database Mail。 如需詳細資訊，請參閱＜ [Configure Database Mail](../relational-databases/database-mail/configure-database-mail.md)＞。  
   

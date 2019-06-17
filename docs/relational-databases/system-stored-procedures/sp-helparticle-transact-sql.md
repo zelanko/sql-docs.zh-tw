@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43eada100fb1de531c0d16082bdf0977e479ccfb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017808"
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
@@ -44,7 +44,7 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="arguments"></a>引數  
 `[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
-`[ @article = ] 'article'` 是發行集中發行項的名稱。 *發行項*已**sysname**，預設值是**%**。 如果*文章*是未提供，會傳回指定之發行集的所有發行項的相關資訊。  
+`[ @article = ] 'article'` 是發行集中發行項的名稱。 *發行項*已**sysname**，預設值是 **%** 。 如果*文章*是未提供，會傳回指定之發行集的所有發行項的相關資訊。  
   
 `[ @returnfilter = ] returnfilter` 指定是否應該傳回篩選子句。 *returnfilter*已**位元**，預設值是**1**，它會傳回篩選子句。  
   

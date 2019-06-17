@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4896c9219632d816565fdd30c11aa82ccbf7fef1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62791892"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>可用性群組的管理 (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62791892"
   
 -   暫停或恢復資料庫。  
   
--   執行已規劃的手動容錯移轉 ( *「手動容錯移轉」*(Manual Failover)) 或強制手動容錯移轉 ( *「強制容錯移轉」*(Forced Failover))。  
+-   執行已規劃的手動容錯移轉 ( *「手動容錯移轉」* (Manual Failover)) 或強制手動容錯移轉 ( *「強制容錯移轉」* (Forced Failover))。  
   
 -   建立或設定可用性群組接聽程式。  
   

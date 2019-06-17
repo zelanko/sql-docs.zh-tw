@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97d6ab997a1ece36919a49243e0f1dc3cc6f3593
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779602"
 ---
 # <a name="edit-checked-in-files"></a>編輯簽入的檔案
@@ -27,7 +27,7 @@ ms.locfileid: "62779602"
   
 ### <a name="to-edit-checked-in-files"></a>編輯簽入的檔案  
   
-1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
 2.  在 **選項**對話方塊方塊中，展開**原始檔控制**l 資料夾，然後按一下**環境**。  
   

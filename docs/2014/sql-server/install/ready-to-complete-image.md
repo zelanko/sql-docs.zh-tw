@@ -11,22 +11,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 52407fbcdfd1f784128cf4c374ad18cc0255197b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66093314"
 ---
 # <a name="ready-to-complete-image"></a>準備好要完成映像
-  [準備開始完成映像] 頁面會提供套用至備妥執行個體之組態的組態設定摘要。  
+  [準備開始完成映像]  頁面會提供套用至備妥執行個體之組態的組態設定摘要。  
   
 ## <a name="options"></a>選項  
  這個頁面含有下列選項：  
   
--   若要繼續安裝，請按一下 **[安裝]**。  
+-   若要繼續安裝，請按一下 **[安裝]** 。  
   
--   若要變更安裝設定，請按 **[上一步]**。  
+-   若要變更安裝設定，請按 **[上一步]** 。  
   
--   若要結束安裝程式，請按一下 **[取消]**。  
+-   若要結束安裝程式，請按一下 **[取消]** 。  
   
   

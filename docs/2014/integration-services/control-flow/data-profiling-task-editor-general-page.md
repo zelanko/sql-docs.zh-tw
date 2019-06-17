@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8462f85dc6c804020f12b9bc989d683c5a4ad0ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832212"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>資料分析工作編輯器 (一般頁面)
-  您可以使用 [資料分析工作編輯器] 的 [一般] 頁面來設定下列選項：  
+  您可以使用 [資料分析工作編輯器]  的 [一般]  頁面來設定下列選項：  
   
 -   指定設定檔輸出的目的地。  
   
@@ -34,9 +34,9 @@ ms.locfileid: "62832212"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟具有資料分析工作的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [控制流程] 索引標籤中，按兩下資料分析工作。  
+2.  在 [控制流程]  索引標籤中，按兩下資料分析工作。  
   
-3.  在 [資料分析工作編輯器] 中，按一下 [一般]。  
+3.  在 [資料分析工作編輯器]  中，按一下 [一般]  。  
   
 ## <a name="data-profiling-options"></a>資料分析選項  
  **逾時**  
@@ -52,31 +52,31 @@ ms.locfileid: "62832212"
   
 |值|描述|  
 |-----------|-----------------|  
-|**FileConnection**|將設定檔輸出儲存至檔案連線管理員中指定之位置的檔案。<br /><br /> 注意:您可以在 [目的地] 選項中指定要使用的檔案連線管理員。|  
-|**變數**|將設定檔輸出儲存至封裝變數。<br /><br /> 注意:您可以在 [目的地] 選項中指定要使用的封裝變數。|  
+|**FileConnection**|將設定檔輸出儲存至檔案連線管理員中指定之位置的檔案。<br /><br /> 注意:您可以在 [目的地]  選項中指定要使用的檔案連線管理員。|  
+|**變數**|將設定檔輸出儲存至封裝變數。<br /><br /> 注意:您可以在 [目的地]  選項中指定要使用的封裝變數。|  
   
  **目的地**  
  指定哪一個檔案連線管理員或封裝變數包含資料設定檔輸出：  
   
--   如果 [DestinationType] 選項設定為 [FileConnection]，[目的地] 選項就會顯示可用的檔案連線管理員。 您可以選取其中一個連線管理員，或選取 [\<新增檔案連線>] 來建立新的檔案連線管理員。  
+-   如果 [DestinationType]  選項設定為 [FileConnection]  ，[目的地]  選項就會顯示可用的檔案連線管理員。 您可以選取其中一個連線管理員，或選取 [\<新增檔案連線>] 來建立新的檔案連線管理員。  
   
--   如果 [DestinationType] 選項設定為 [變數]，[目的地] 選項就會在 [目的地] 清單中顯示可用的封裝變數。 您可以選取其中一個變數，或選取 [\<新增變數>] 來建立新的變數。  
+-   如果 [DestinationType]  選項設定為 [變數]  ，[目的地]  選項就會在 [目的地]  清單中顯示可用的封裝變數。 您可以選取其中一個變數，或選取 [\<新增變數>] 來建立新的變數。  
   
  **OverwriteDestination**  
- 指定是否要覆寫輸出檔 (如果它已經存在的話)。 預設值為 **[False]**。 只有當 [DestinationType] 選項設定為 [FileConnection] 時，系統才會使用這個屬性的值。 當 [DestinationType] 選項設定為 [變數] 時，此工作永遠會覆寫變數的上一個值。  
+ 指定是否要覆寫輸出檔 (如果它已經存在的話)。 預設值為 **[False]** 。 只有當 [DestinationType] 選項設定為 [FileConnection] 時，系統才會使用這個屬性的值。 當 [DestinationType] 選項設定為 [變數] 時，此工作永遠會覆寫變數的上一個值。  
   
 > [!IMPORTANT]  
 >  如果您嘗試執行資料分析工作一次以上，但不變更輸出檔名稱或將 **OverwriteDestination** 屬性的值變更為 **True**，此工作便會失敗，並顯示輸出檔已經存在的訊息。  
   
 ## <a name="other-options"></a>其他選項  
  **快速分析**  
- 顯示 [單一資料表快速分析表單]。 這個表單會簡化使用預設設定來分析單一資料表或檢視表的工作。 如需詳細資訊，請參閱 [單一資料表快速分析表單 &#40;資料分析工作&#41;](single-table-quick-profile-form-data-profiling-task.md)。  
+ 顯示 [單一資料表快速分析表單]  。 這個表單會簡化使用預設設定來分析單一資料表或檢視表的工作。 如需詳細資訊，請參閱 [單一資料表快速分析表單 &#40;資料分析工作&#41;](single-table-quick-profile-form-data-profiling-task.md)。  
   
  **開啟設定檔檢視器**  
  開啟資料設定檔檢視器。 獨立資料設定檔檢視器會顯示資料分析工作的資料設定檔輸出。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部執行資料分析工作並計算資料設定檔後，您可以檢視資料設定檔輸出。  
   
 > [!NOTE]  
->  您也可以藉由執行 \<磁碟機>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾中的 DataProfileViewer.exe，開啟資料設定檔檢視器。  
+>  您也可以藉由執行 \<磁碟機>  :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾中的 DataProfileViewer.exe，開啟資料設定檔檢視器。  
   
 ## <a name="see-also"></a>另請參閱  
  [單一資料表快速分析表單 &#40;資料分析工作&#41;](single-table-quick-profile-form-data-profiling-task.md)   

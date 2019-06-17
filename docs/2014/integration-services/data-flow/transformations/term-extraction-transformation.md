@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62899931"
 ---
 # <a name="term-extraction-transformation"></a>詞彙擷取轉換
@@ -146,7 +146,7 @@ ms.locfileid: "62899931"
   
 -   數字、標點符號和字母字元的組合。 例如， *A23B#99* 會傳回詞彙 *A23B*。  
   
--   字元 %、@、&、$、#、\*、:、;、.、**,**、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、" 和 '。  
+-   字元 %、@、&、$、#、\*、:、;、.、 **,** 、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、" 和 '。  
   
     > [!NOTE]  
     >  包含一或多個句號 (.) 的縮寫字不會分隔為多個句子。  
@@ -171,7 +171,7 @@ ms.locfileid: "62899931"
   
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可在 [詞彙擷取轉換編輯器] 對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
+ 如需可在 [詞彙擷取轉換編輯器]  對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
   
 -   [詞彙擷取轉換編輯器 &#40;詞彙擷取索引標籤&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   

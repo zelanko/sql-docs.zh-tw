@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1c23f91f24f2da173280e54a544b00a1b4a6fd09
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806151"
 ---
 # <a name="connect-to-a-sql-server-utility"></a>連接至 SQL Server 公用程式
@@ -28,11 +28,11 @@ ms.locfileid: "62806151"
   
 2.  在 SSMS 中，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
-3.  按一下 [檢視]，然後按一下 [公用程式總管]。  
+3.  按一下 [檢視]  ，然後按一下 [公用程式總管]  。  
   
-4.  在公用程式總管瀏覽窗格中，按一下 [連接到公用程式] ![](../../database-engine/media/connect-to-utility.gif "Connect_to_Utility")。  
+4.  在公用程式總管瀏覽窗格中，按一下 [連接到公用程式]  ![](../../database-engine/media/connect-to-utility.gif "Connect_to_Utility")。  
   
-5.  在 [連接到伺服器] 對話方塊中，指定 UCP 執行個體名稱，然後按一下 [連接]。  
+5.  在 [連接到伺服器]  對話方塊中，指定 UCP 執行個體名稱，然後按一下 [連接]  。  
   
 6.  檢視公用程式總管導覽窗格，以查看 UCP 中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的樹狀檢視。  
   

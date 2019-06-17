@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f567c92632e99bef38fc1a6eb7a0179929f467c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871206"
 ---
 # <a name="shrink-a-file"></a>壓縮檔案
@@ -70,13 +70,13 @@ ms.locfileid: "62871206"
   
 2.  展開 **[資料庫]** ，然後以滑鼠右鍵按一下您要壓縮的資料庫。  
   
-3.  指向 **[工作]**，指向 **[壓縮]**，然後按一下 **[檔案]**。  
+3.  指向 **[工作]** ，指向 **[壓縮]** ，然後按一下 **[檔案]** 。  
   
      **[資料庫備份]**  
      顯示選取之資料庫的名稱。  
   
      **檔案類型**  
-     選取檔案的檔案類型。 可用的選擇為 **[資料]** 與 **[記錄]** 檔案。 預設的選取項目為 **[資料]**。 若選取不同的檔案群組類型，就會變更其他欄位中的選取項目。  
+     選取檔案的檔案類型。 可用的選擇為 **[資料]** 與 **[記錄]** 檔案。 預設的選取項目為 **[資料]** 。 若選取不同的檔案群組類型，就會變更其他欄位中的選取項目。  
   
      **檔案群組**  
      從與上面選取之 **[檔案類型]** 相關聯的檔案群組清單中選取檔案群組。 若選取不同的檔案群組，就會變更其他欄位中的選取項目。  
@@ -121,7 +121,7 @@ ms.locfileid: "62871206"
   
      選取此選項，使檔案群組中指定檔案內的所有資料都移到其他檔案內。 然後即可刪除空白檔案。 這個選項的作用與使用 EMPTYFILE 選項執行 DBCC SHRINKFILE 的作用相同。  
   
-9. 按一下 [確定] 。  
+9. 按一下 [確定]  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -129,9 +129,9 @@ ms.locfileid: "62871206"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 下列範例會使用 [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql) ，將 `UserDB` 資料庫中名為 `DataFile1` 之資料檔大小壓縮成 7 MB。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 下列範例會使用 [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql) ，將 `UserDB` 資料庫中名為 `DataFile1` 之資料檔大小壓縮成 7 MB。  
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkfile1)]  
   

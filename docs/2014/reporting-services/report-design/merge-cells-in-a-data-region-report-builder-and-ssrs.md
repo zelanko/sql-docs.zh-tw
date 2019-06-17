@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97e9280512b75aebfccb93c0e11e5402136fa6f8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105570"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>在資料區中合併資料格 (報表產生器及 SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66105570"
   
 1.  在報表設計介面的資料區中，按一下要合併的第一個資料格。 按住滑鼠左鍵，以垂直或水平方向拖曳來選取相鄰的資料格。 選取的資料格就會反白顯示。  
   
-2.  以滑鼠右鍵按一下選取的資料格，然後選取 [合併資料格]。 選取的資料格就會結合到單一的資料格中。  
+2.  以滑鼠右鍵按一下選取的資料格，然後選取 [合併資料格]  。 選取的資料格就會結合到單一的資料格中。  
   
 3.  重複步驟 1 和 2，在資料區域中合併其他相鄰的資料格。  
   

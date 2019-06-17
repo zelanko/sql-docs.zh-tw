@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779189"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>全文檢索目錄屬性 (資料表和檢視頁面)
@@ -46,7 +46,7 @@ ms.locfileid: "62779189"
 |**可用的資料行**|顯示已全文檢索索引的所有資料行。 選取核取方塊以將資料行加入全文檢索索引。|  
 |**斷詞工具的語言**|顯示斷詞工具的語言。|  
 |**資料類型資料行**|列出資料行文件類型中所列的資料行的資料表中的資料行的名稱**可用的資料行**資料行是否`varbinary(max)`或`image`資料行。|  
-|**統計語意**|選取是否要針對選取的資料行啟用語意索引。 如需詳細資訊，請參閱[語意搜尋 &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md)。<br /><br /> 如果您在選取 **[統計語意]** 之前選取 **[語言]**，而且選取的語言沒有相關聯的語意語言模型，則會停用 **[統計語意]** 核取方塊。 如果您在選取 [語言] 之前選取 [統計語意]，則下拉式方塊中提供的語言將受限為有語意語言模型支援的語言。|  
+|**統計語意**|選取是否要針對選取的資料行啟用語意索引。 如需詳細資訊，請參閱[語意搜尋 &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md)。<br /><br /> 如果您在選取 **[統計語意]** 之前選取 **[語言]** ，而且選取的語言沒有相關聯的語意語言模型，則會停用 **[統計語意]** 核取方塊。 如果您在選取 [語言]  之前選取 [統計語意]  ，則下拉式方塊中提供的語言將受限為有語意語言模型支援的語言。|  
   
 ## <a name="track-changes"></a>追蹤變更  
   

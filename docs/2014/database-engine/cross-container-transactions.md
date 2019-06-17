@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807422"
 ---
 # <a name="cross-container-transactions"></a>跨容器交易
@@ -82,7 +82,7 @@ commit
  穩定性會保證系統給出有關資料讀取的資訊給交易 T。  
  穩定性指的是交易的讀取是否可重複。 也就是說，如果讀取已重複，它們是否會傳回相同的資料列和資料列版本？  
   
- 特定保證指的是交易的邏輯結束時間。 一般而言，邏輯結束時間是資料庫認可交易的時間。 如果記憶體最佳化的資料表是由交易所存取，則邏輯結束時間在技術上為驗證階段的開始  (如需詳細資訊，請參閱中的交易存留期討論[Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 特定保證指的是交易的邏輯結束時間。 一般而言，邏輯結束時間是資料庫認可交易的時間。 如果記憶體最佳化的資料表是由交易所存取，則邏輯結束時間在技術上為驗證階段的開始 (如需詳細資訊，請參閱中的交易存留期討論[Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
   
  不論隔離等級為何，交易 (T) 永遠都會看到自己的更新：  
   

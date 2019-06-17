@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8d4858d55d9c37529e44cdf7759bf9fe6ce2630
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62791998"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)
@@ -76,7 +76,7 @@ ms.locfileid: "62791998"
  **可用性群組的容錯移轉原則設定適用於所有複本，無論複本裝載於獨立執行個體或 FCI 執行個體。  
   
 > [!NOTE]  
->  如需詳細資訊**的節點數目**中容錯移轉叢集並**AlwaysOn 可用性群組**針對不同版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請參閱[支援的功能SQL Server 2012 版本](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473)。  
+>  如需詳細資訊**的節點數目**中容錯移轉叢集並**AlwaysOn 可用性群組**針對不同版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請參閱[支援的功能SQL Server 2012 版本](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI 裝載可用性複本的考量  
   

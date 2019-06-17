@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3a5414e845d8e625c852d628bf0d965432bc72a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63136422"
 ---
 # <a name="create-an-operator"></a>建立操作員
@@ -62,9 +62,9 @@ ms.locfileid: "63136422"
   
 1.  在 **[物件總管]** 中，按一下加號展開要建立 SQL Server Agent 操作員的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
-3.  以滑鼠右鍵按一下 [操作員] 資料夾，然後選取 [新增操作員]。  
+3.  以滑鼠右鍵按一下 [操作員]  資料夾，然後選取 [新增操作員]  。  
   
      下列選項可從 **[新增操作員]** 對話方塊的 **[一般]** 頁面取得：  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63136422"
      **Net send**  
      使用 **net send**通知此操作員。  
   
-4.  完成建立新的操作員後，請按一下 **[確定]**。  
+4.  完成建立新的操作員後，請按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -126,9 +126,9 @@ ms.locfileid: "63136422"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- sets up the operator information for user 'danwi.' The operator is enabled.   

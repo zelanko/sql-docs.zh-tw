@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8d917f71d7cf7a36bb5d2c50b0cddd7893102a7e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960082"
 ---
 # <a name="splock-transact-sql"></a>sp_lock (Transact-SQL)
@@ -52,7 +52,7 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
  0 (成功)  
   
 ## <a name="result-sets"></a>結果集  
- **Sp_lock**結果集包含一個資料列中指定的工作階段所持有的每個鎖定**@spid1**並**@spid2**參數。 如果沒有**@spid1**也**@spid2**未指定，結果集會報告鎖定的所有工作階段目前作用中的執行個體[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+ **Sp_lock**結果集包含一個資料列中指定的工作階段所持有的每個鎖定 **@spid1** 並 **@spid2** 參數。 如果沒有 **@spid1** 也 **@spid2** 未指定，結果集會報告鎖定的所有工作階段目前作用中的執行個體[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

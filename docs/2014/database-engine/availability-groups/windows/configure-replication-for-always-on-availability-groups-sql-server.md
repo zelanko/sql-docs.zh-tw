@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 547ebeb6043345821d2b2a19b407599abfd14008
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814707"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>設定 AlwaysOn 可用性群組的複寫 (SQL Server)
@@ -70,7 +70,7 @@ ms.locfileid: "62814707"
   
  **在原始發行者端設定發行者**  
   
-1.  設定遠端散發。 如果預存程序正用於設定發行者，請執行 `sp_adddistributor`。 指定的相同值*@password*時所使用`sp_adddistrbutor`已執行的散發者端設定散發。  
+1.  設定遠端散發。 如果預存程序正用於設定發行者，請執行 `sp_adddistributor`。 指定的相同值 *@password* 時所使用`sp_adddistrbutor`已執行的散發者端設定散發。  
   
     ```  
     exec sys.sp_adddistributor  
@@ -133,7 +133,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- 在每個次要複本主機上，設定散發。 您可以將原始發行者的散發者識別為遠端散發者。 請使用當 `sp_adddistributor` 原本在散發者端執行時使用的相同密碼。 如果預存程序正用於設定散發， *@password*參數`sp_adddistributor`用來指定密碼。  
+ 在每個次要複本主機上，設定散發。 您可以將原始發行者的散發者識別為遠端散發者。 請使用當 `sp_adddistributor` 原本在散發者端執行時使用的相同密碼。 如果預存程序正用於設定散發， *@password* 參數`sp_adddistributor`用來指定密碼。  
   
 ```  
 EXEC sp_adddistributor   
