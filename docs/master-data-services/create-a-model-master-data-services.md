@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5c55db7072020f715882912b46cac0e9219cbbf9
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65477061"
 ---
 # <a name="create-a-model-master-data-services"></a>建立模型 (Master Data Services)
@@ -36,27 +36,27 @@ ms.locfileid: "65477061"
   
 ### <a name="to-create-a-model"></a>若要建立模型  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[模型]**。  
+2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[模型]** 。  
   
-3.  在 [管理模型] 頁面上，按一下 [加入]。 隨即會在右側顯示面板。  
+3.  在 [管理模型]  頁面上，按一下 [加入]  。 隨即會在右側顯示面板。  
   
-4.  在 [名稱] 方塊中，輸入模型的名稱。  
+4.  在 [名稱]  方塊中，輸入模型的名稱。  
   
-5.  (選擇性) 在 [描述] 欄位中，輸入模型描述。  
+5.  (選擇性) 在 [描述]  欄位中，輸入模型描述。  
   
-6.  在 [Log Retention Days] (記錄保留天數)  欄位中，選取其中一個選項來保留記錄資料。 預設值為 [系統設定] ，表示會從 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中的系統設定繼承值。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
+6.  在 [Log Retention Days] (記錄保留天數)  欄位中，選取其中一個選項來保留記錄資料。 預設值為 [系統設定]  ，表示會從 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中的系統設定繼承值。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
   
-     若要覆寫系統設定而不移除交易記錄資料，請選取 [否] 。 若只要保留今天的記錄資料並截斷過去幾天的所有記錄資料，請選取 [是]，然後將 [天數] 欄位設為 0。 若要保留指定天數的記錄資料，請選取 [是]  ，然後將 [天數]  欄位設為該天數。  
+     若要覆寫系統設定而不移除交易記錄資料，請選取 [否]  。 若只要保留今天的記錄資料並截斷過去幾天的所有記錄資料，請選取 [是]  ，然後將 [天數]  欄位設為 0。 若要保留指定天數的記錄資料，請選取 [是]  ，然後將 [天數]  欄位設為該天數。  
   
-7.  (選擇性) 選取 [建立與模型同名的實體]，建立與模型同名的實體。  
+7.  (選擇性) 選取 [建立與模型同名的實體]  ，建立與模型同名的實體。  
   
-8.  按一下 **[儲存模型]**。  
+8.  按一下 **[儲存模型]** 。  
   
  對於每個建立的模型，會將含有八個資料行的資料列加入方格中。 八個資料行如下：  
   
--   **狀態**：模型狀態。 當您按一下 [儲存模型] 按鈕時，會顯示![正在更新](../master-data-services/media/mds-model-status-updating.png "正在更新")影像，表示正在更新模型。 如果建立或編輯模型時發生錯誤，則會顯示![錯誤](../master-data-services/media/mds-model-status-error.png "錯誤")影像。 否則，狀態為正常並顯示 ![[確定]](../master-data-services/media/mds-model-status-ok.png "[確定]") 影像。  
+-   **狀態**：模型狀態。 當您按一下 [儲存模型]  按鈕時，會顯示![正在更新](../master-data-services/media/mds-model-status-updating.png "正在更新")影像，表示正在更新模型。 如果建立或編輯模型時發生錯誤，則會顯示![錯誤](../master-data-services/media/mds-model-status-error.png "錯誤")影像。 否則，狀態為正常並顯示 ![[確定]](../master-data-services/media/mds-model-status-ok.png "[確定]") 影像。  
   
 -   **名稱**：模型名稱。  
   

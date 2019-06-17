@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7be0980dcb50a861dd94a925070772b8d4ddb83e
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484318"
 ---
 # <a name="automatically-generate-code-attribute-values-master-data-services"></a>自動產生 Code 屬性值 (Master Data Services)
@@ -35,17 +35,17 @@ ms.locfileid: "65484318"
   
 ### <a name="to-automatically-generate-code-values"></a>若要自動產生值字碼  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 [管理模型]  頁面上，選取含有您想要編輯之實體的模型資料列，然後按一下 [實體] 。  
+2.  在 [管理模型]  頁面上，選取含有您想要編輯之實體的模型資料列，然後按一下 [實體]  。  
   
-3.  在 [管理實體]  頁面上，選取您要為其產生程式碼之實體的資料列，然後按一下 [編輯] 。  
+3.  在 [管理實體]  頁面上，選取您要為其產生程式碼之實體的資料列，然後按一下 [編輯]  。  
   
 4.  選取 **[自動建立字碼值]** 核取方塊。  
   
 5.  在 **[開始]** 方塊中，輸入開始遞增的數字。 如果成員已存在，則將根據最大的現有值設定 Code。 例如，若最大的現有 Code 值為 299，則下一個成員的 Code 值將設為 300。  
   
-6.  按一下 [儲存] 。  
+6.  按一下 [儲存]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [自動建立代碼 &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)   

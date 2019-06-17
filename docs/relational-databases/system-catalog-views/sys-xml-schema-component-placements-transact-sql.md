@@ -21,10 +21,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 ms.openlocfilehash: 05291044ba7b5e5b79b507c33a1f5f5bf31afa28
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64945934"
 ---
 # <a name="sysxmlschemacomponentplacements-transact-sql"></a>sys.xml_schema_component_placements (Transact-SQL)

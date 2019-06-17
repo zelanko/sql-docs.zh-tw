@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 2bcccb16-007f-4a34-a449-61fc89e99218
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ac7a9e3e71c13869b371247cddccc10044b54584
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c02ac0446784663a33aef71ff073cbd4019ee8f3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812566"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799754"
 ---
 # <a name="getbinarystream-method-sqlserverresultset"></a>getBinaryStream 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

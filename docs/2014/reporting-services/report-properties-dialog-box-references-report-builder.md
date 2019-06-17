@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99fe80a22f380bbe1406d357846c4103eeb0083e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104386"
 ---
 # <a name="report-properties-dialog-box-references-report-builder"></a>報表屬性對話方塊、參考 (報表產生器)
   選取 **[報表屬性]** 對話方塊上的 **[參考]** ，即可將參考加入報表定義中運算式所使用的自訂或其他外部組件以及自訂類別執行個體，或從中移除。 在報表產生器的本機模式中不支援自訂組件。 若要撰寫使用自訂組件的報表，請使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的報表設計師。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **新增或移除組件**  
  列出報表參考的組件。 組件必須可以在安裝設計報表所使用之工具的電腦和報表伺服器上使用。 參考的名稱必須符合的內容 **\<CodeModule >** 完全標記儲存在報表定義語言 (.rdl) 檔案。  
   

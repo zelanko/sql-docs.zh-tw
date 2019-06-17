@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6bcbbe828da811ace5df4feea5cfdf888e1e6ca5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101376"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>選取色彩對話方塊 (報表產生器及 SSRS)
   使用 **Select Color** 對話方塊，可以指定資料區或文字方塊內，單一資料格或多個資料格的背景色彩選項或圖表色彩選項。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **色彩選取器**  
  從指定如何選取色彩的三個選項選擇。  
   

@@ -16,16 +16,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99418b11eecdb3077e3def746eae56e43bab2d60
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096842"
 ---
 # <a name="accept-license-terms"></a>接受授權條款
   請使用 **安裝精靈的** [接受授權條款] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面來接受此版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的授權條款。  
   
- 您可以列印授權合約，或將它複製到剪貼簿。 若要繼續，請接受授權條款，然後按 **[下一步]**。 若要結束安裝，請按一下 **[取消]**。  
+ 您可以列印授權合約，或將它複製到剪貼簿。 若要繼續，請接受授權條款，然後按 **[下一步]** 。 若要結束安裝，請按一下 **[取消]** 。  
   
 ## <a name="customer-experience-improvement-program-ceip"></a>客戶經驗改進計劃 (CEIP)  
  如果您啟用 CEIP 報表，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會設定為定期傳送報表至 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 報表包含硬體組態及您如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和元件的相關資訊。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 將會使用功能使用方式資料來改進 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 這項功能所監視的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件包括：  
@@ -46,7 +46,7 @@ ms.locfileid: "66096842"
   
  關於功能使用方式的資訊會傳送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)](以限制存取的方式予以儲存)。  
   
- 若要在安裝程式完成之後停用 CEIP 報表，請使用 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態工具] 功能表中的 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤和使用方式報表] 工具。  
+ 若要在安裝程式完成之後停用 CEIP 報表，請使用 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態工具]  功能表中的 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤和使用方式報表]  工具。  
   
  對於安裝、升級、修復等等的安裝程式動作，僅會在執行安裝程式期間，收集並上傳資訊。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66096842"
 ## <a name="error-reporting"></a>錯誤報告  
  使用 **安裝精靈的** [錯誤和使用方式報表設定] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面，可啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的功能錯誤和使用方式報告功能。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及其元件會停用功能使用方式資料收集和錯誤報告功能。  
   
  錯誤報告  
@@ -99,7 +99,7 @@ ms.locfileid: "66096842"
   
  如果您啟用錯誤報告卻發生嚴重錯誤，您可能會在 Windows 事件記錄檔中看到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的回應，它會指向關於特定錯誤的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫文件。  
   
- 在安裝程式完成之後，若要對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有執行個體及其元件停用錯誤或功能使用方式報表，請到 **[錯誤和使用方式報表設定]** 對話方塊，清除 **[功能使用方式]** 的核取方塊。 如果已對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多個元件 ([!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和共用元件) 啟用 [錯誤報告]，您可以停用個別元件及共用元件 (以 [其他] 列出) 之每一個執行個體的錯誤報告。  
+ 在安裝程式完成之後，若要對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有執行個體及其元件停用錯誤或功能使用方式報表，請到 **[錯誤和使用方式報表設定]** 對話方塊，清除 **[功能使用方式]** 的核取方塊。 如果已對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多個元件 ([!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和共用元件) 啟用 [錯誤報告]  ，您可以停用個別元件及共用元件 (以 [其他]  列出) 之每一個執行個體的錯誤報告。  
   
 ## <a name="see-also"></a>另請參閱  
  [關於 SQL Server 授權條款](../../../2014/getting-started/about-the-sql-server-license-terms.md)  

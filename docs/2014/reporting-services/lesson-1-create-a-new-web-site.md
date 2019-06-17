@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 65426162fc7cd7ada9e66c591420ac64040a4391
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108544"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>第 1 課：建立新網站
@@ -24,7 +24,7 @@ ms.locfileid: "66108544"
   
 1.  開啟 Microsoft Visual Studio 2010 或 Microsoft Visual Studio 2012。  
   
-2.  在 [檔案] 功能表上，指向 [開新檔案]，然後選取 [網站]。  
+2.  在 [檔案]  功能表上，指向 [開新檔案]  ，然後選取 [網站]  。  
   
 3.  在**New Web Site**對話方塊中，於**已安裝的範本**窗格中，選取**Visual C#** ，然後選擇**ASP.NET 網站**。  
   

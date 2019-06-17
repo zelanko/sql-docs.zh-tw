@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5b9fdcac2499cdf33d98ba636596218c14704f9d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108213"
 ---
 # <a name="new-model-page-report-manager"></a>新增模型頁面 (報表管理員)
@@ -37,7 +37,7 @@ ms.locfileid: "66108213"
   
     -   按一下 **[管理]** 開啟報表的 [一般] 屬性頁面。 然後，按一下 **[產生報表模型]** 開啟 [新增模型] 頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  指定模型的名稱。 名稱必須至少包含一個英數字元。 它也可以包含空格和某些符號。 指定名稱時，請勿使用下列字元：  
   

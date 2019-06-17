@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: bd11fd50-f092-43a0-a6bc-c63e70cff8da
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7d90820c5fdcbc2376be732c409c265536ce2498
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c3f73a9fc5a6876bd0490fef73624664f84a0885
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785518"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799595"
 ---
 # <a name="setreadonly-method-sqlserverconnection"></a>setReadOnly 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

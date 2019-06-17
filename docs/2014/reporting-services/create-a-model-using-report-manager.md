@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b67e2a7048520d8a411789e501dbbe545d3cc02
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109666"
 ---
 # <a name="create-a-model-using-report-manager"></a>使用報表管理員建立模型
@@ -32,7 +32,7 @@ ms.locfileid: "66109666"
   
 1.  在網頁瀏覽器的網址列中，輸入報表伺服器的 URL。  
   
-2.  按一下 **[新增資料來源]**。  
+2.  按一下 **[新增資料來源]** 。  
   
 3.  在 **[名稱]** 方塊中，輸入資料來源的名稱。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66109666"
   
 2.  確認您要使用為資料來源指定的選項。  
   
-3.  按一下 **[產生模型]**。  
+3.  按一下 **[產生模型]** 。  
   
      就會顯示資料來源的 [一般] 頁面。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66109666"
   
 5.  在 **[描述]** 方塊中，輸入模型的簡短描述。  
   
-6.  若要指定儲存報表模型的新位置，請按一下 **[變更位置]**。  
+6.  若要指定儲存報表模型的新位置，請按一下 **[變更位置]** 。  
   
      依預設，報表模型是儲存在報表管理員的主資料夾。  
   

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 50235db46a664d1507823c057dc0cb61eda90974
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980048"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
@@ -72,7 +72,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  指定使用於 OPENXML 中之資料列和資料行 XPath 運算式中的命名空間宣告。 *xpath_namespaces*是文字參數： **char**， **nchar**， **varchar**， **nvarchar**，**文字**， **ntext**或是**xml**。  
   
- 預設值是**\<根 xmlns:mp ="urn: schemas-microsoft-microsoft-schemas-microsoft-com:-xml-metaprop">**。 *xpath_namespaces*提供透過語式正確的 XML 文件在 OPENXML 中 XPath 運算式中使用的前置詞的命名空間 Uri。 *xpath_namespaces*宣告必須用來參考命名空間前置詞**urn: schemas-microsoft-microsoft-schemas-microsoft-com:-xml-metaprop**; 它提供有關已剖析之 XML 元素的中繼資料。 雖然您可以使用這個技巧來重新定義中繼屬性命名空間的命名空間前置詞，但不會失去這個命名空間。 前置詞**mp**仍適用於**urn: schemas-microsoft-microsoft-schemas-microsoft-com:-xml-metaprop**即使*xpath_namespaces*包含沒有這類宣告。  
+ 預設值是 **\<根 xmlns:mp ="urn: schemas-microsoft-microsoft-schemas-microsoft-com:-xml-metaprop">** 。 *xpath_namespaces*提供透過語式正確的 XML 文件在 OPENXML 中 XPath 運算式中使用的前置詞的命名空間 Uri。 *xpath_namespaces*宣告必須用來參考命名空間前置詞**urn: schemas-microsoft-microsoft-schemas-microsoft-com:-xml-metaprop**; 它提供有關已剖析之 XML 元素的中繼資料。 雖然您可以使用這個技巧來重新定義中繼屬性命名空間的命名空間前置詞，但不會失去這個命名空間。 前置詞**mp**仍適用於**urn: schemas-microsoft-microsoft-schemas-microsoft-com:-xml-metaprop**即使*xpath_namespaces*包含沒有這類宣告。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 （成功） 或 > 0 （失敗）  

@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a3de4051ff43ebf0155571235890a28a28d24788
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487571"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>編輯和刪除實體同步關係 (Master Data Services)
@@ -61,29 +61,29 @@ ms.locfileid: "65487571"
   
  **編輯實體同步關係**  
   
-1.  在主資料管理員中，按一下 [系統管理] 。  
+1.  在主資料管理員中，按一下 [系統管理]  。  
   
-2.  在 [模型檢視]  頁面上，從功能表列指向 [管理]  ，然後按一下 [實體同步處理] 。  
+2.  在 [模型檢視]  頁面上，從功能表列指向 [管理]  ，然後按一下 [實體同步處理]  。  
   
 3.  在 [實體同步維護]  業面上，選取方格中的同步關係。  
   
-4.  按一下 **[編輯]**。 隨即會在右側顯示面板。  
+4.  按一下 **[編輯]** 。 隨即會在右側顯示面板。  
   
-5.  變更 [頻率]。 選取 [隨需同步處理] ，或選取 [自動同步處理]  並設定頻率。  
+5.  變更 [頻率]  。 選取 [隨需同步處理]  ，或選取 [自動同步處理]  並設定頻率。  
   
-6.  按一下 [儲存] 。  
+6.  按一下 [儲存]  。  
   
  **刪除實體同步關係**  
   
-1.  在主資料管理員中，按一下 [系統管理] 。  
+1.  在主資料管理員中，按一下 [系統管理]  。  
   
-2.  在 [模型檢視]  頁面上，從功能表列指向 [管理]  ，然後按一下 [實體同步處理] 。  
+2.  在 [模型檢視]  頁面上，從功能表列指向 [管理]  ，然後按一下 [實體同步處理]  。  
   
 3.  在 [實體同步維護]  業面上，選取方格中的同步關係。  
   
-4.  按一下 **[刪除]**。  
+4.  按一下 **[刪除]** 。  
   
-5.  在確認對話方塊中，按一下 [確定]。  
+5.  在確認對話方塊中，按一下 [確定]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立及執行實體同步關係 &#40;Master Data Services&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   

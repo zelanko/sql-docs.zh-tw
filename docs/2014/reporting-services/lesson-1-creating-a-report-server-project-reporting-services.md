@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3f97834b5df61df836b7cfd4cc4d890877f8855a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108526"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>第 1 課：建立報表伺服器專案 (Reporting Services)
@@ -26,13 +26,13 @@ ms.locfileid: "66108526"
   
 1.  按一下 **開始**，指向**所有程式**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，然後按一下**SQL Server Data Tools**。 如果這是第一次您開啟[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]，按一下**商業智慧設定**預設環境設定。  
   
-2.  在 [檔案]  功能表中，指向 [新增] ，然後按一下 [專案] 。  
+2.  在 [檔案]  功能表中，指向 [新增]  ，然後按一下 [專案]  。  
   
-3.  在 [已安裝的範本] 清單中，按一下 [商業智慧]。  
+3.  在 [已安裝的範本]  清單中，按一下 [商業智慧]  。  
   
 4.  按一下 **報表伺服器專案**。  
   
-5.  在 [名稱] 中，輸入 **Tutorial**。  
+5.  在 [名稱]  中，輸入 **Tutorial**。  
   
 6.  按一下 **[確定]** 建立專案。  
   
@@ -43,17 +43,17 @@ ms.locfileid: "66108526"
 1.  在 [方案總管] 中，以滑鼠右鍵按一下**報表**，指向**新增**，然後按一下**新項目**。  
   
     > [!NOTE]  
-    >  如果看不到方案總管視窗，請在 [檢視] 功能表上按一下方案總管。  
+    >  如果看不到方案總管  視窗，請在 [檢視]  功能表上按一下方案總管  。  
   
 2.  在 **加入新項目**對話方塊的 **範本**，按一下 **報表**。  
   
-3.  在 [名稱] 中，輸入 **Sales Orders.rdl** ，然後按一下 [新增] 。  
+3.  在 [名稱]  中，輸入 **Sales Orders.rdl** ，然後按一下 [新增]  。  
   
      報表設計師會在 [設計] 檢視中開啟並顯示新的 .rdl 檔案。  
   
- 報表設計師是一個在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中執行的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]元件。 它有兩個檢視：[設計] 和 [預覽]。 按一下各個索引標籤，即可變更檢視。  
+ 報表設計師是一個在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中執行的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]元件。 它有兩個檢視：[設計]  和 [預覽]  。 按一下各個索引標籤，即可變更檢視。  
   
- 您會在 [報表資料]  窗格中定義資料， 並在 [設計]  檢視中定義報表配置。 您可以執行報表，然後在 [預覽] 檢視中查看外觀。  
+ 您會在 [報表資料]  窗格中定義資料， 並在 [設計]  檢視中定義報表配置。 您可以執行報表，然後在 [預覽]  檢視中查看外觀。  
   
 ## <a name="next-task"></a>下一項工作  
  您已順利建立稱為 "Tutorial" 的報表專案，並將報表定義 (.rdl) 檔案加入至報表專案。 下一步，您將指定報表要用的資料來源。 請參閱[第 2 課：指定連線資訊 &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)。  

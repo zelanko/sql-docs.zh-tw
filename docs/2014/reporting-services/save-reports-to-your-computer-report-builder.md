@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 493e042e58c5a13bc94f299197ac8a75972f7ed6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102304"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>將報表儲存到您的電腦 (報表產生器)
@@ -22,10 +22,10 @@ ms.locfileid: "66102304"
   
 ### <a name="to-save-a-report"></a>若要儲存報表  
   
-1.  在報表產生器的按鈕中，按一下 **[儲存]**。 [另存為 \<報表項目>] 對話方塊隨即開啟。  
+1.  在報表產生器的按鈕中，按一下 **[儲存]** 。 [另存為 \<報表項目>  ]  對話方塊隨即開啟。  
   
     > [!NOTE]  
-    >  如果您重新儲存報表，報表會自動重新儲存到之前的位置。 使用 [另存新檔] 選項可變更位置。  
+    >  如果您重新儲存報表，報表會自動重新儲存到之前的位置。 使用 [另存新檔]  選項可變更位置。  
   
 2.  （選擇性） 按一下**桌面**，**我的文件**，或**我的電腦**將報表儲存至其中一個資料夾。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66102304"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>若要將報表儲存成不同的名稱  
   
-1.  在 [報表產生器] 按鈕中，按一下 **[另存新檔]**。 [另存為 \<報表項目>] 對話方塊隨即開啟。  
+1.  在 [報表產生器] 按鈕中，按一下 **[另存新檔]** 。 [另存為 \<報表項目>  ]  對話方塊隨即開啟。  
   
 2.  瀏覽至電腦上要儲存報表的位置。  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 87b04db9a25df8ddf7329ef3d2f0142875296c63
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 0c763cf3a1822548b1e107ecc7d619d8ef44d0a6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601208"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803917"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>SQLSRV 驅動程式 API 參考
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

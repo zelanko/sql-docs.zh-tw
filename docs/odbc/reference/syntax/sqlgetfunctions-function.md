@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0a44320072f11a56b735502be3f1776f29cc1c0
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538014"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 函數
@@ -46,7 +46,7 @@ SQLRETURN SQLGetFunctions(
   
 ## <a name="arguments"></a>引數  
  *ConnectionHandle*  
- [輸入]連接控制代碼。  
+ [輸入] 連線控制代碼。  
   
  *FunctionId*  
  [輸入]A **#define**識別感興趣; 的 ODBC 函數的值**SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**。 **SQL_API_ODBC3_ALL_FUNCTIONS**由 ODBC 3 *.x*應用程式，以判斷支援的 ODBC 3 *.x*和先前的函式。 **SQL_API_ALL_FUNCTIONS**由 ODBC 2 *.x*應用程式，以判斷支援的 ODBC 2 *.x*和先前的函式。  

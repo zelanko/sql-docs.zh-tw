@@ -25,17 +25,17 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cdc0ccd97fd5998241432667c2e9c4729c970a23
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980949"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>使用 sql:prefix 建立 Valid ID、IDREF 和 IDREFS 類型屬性 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   屬性可以指定為識別碼類型屬性。 然後可以使用指定為 IDREF 或 IDREFS 的屬性來參考 ID 類型屬性，啟用文件之間的連結。  
   
- ID、IDREF 和 IDREFS 會對應至 PK/FK (主索引鍵/外部索引鍵) 在資料庫中的關聯性，但是有一些差異。 在 XML 文件中，ID 類型屬性的值必須是相異的。 如果**CustomerID**並**OrderID**屬性會指定為 XML 文件中 ID 型別必須是相異的這些值。 然而在資料庫中，CustomerID 和 OrderID 資料行的值可以相同  (例如，CustomerID = 1 且 OrderID = 1 在資料庫中是有效的)。  
+ ID、IDREF 和 IDREFS 會對應至 PK/FK (主索引鍵/外部索引鍵) 在資料庫中的關聯性，但是有一些差異。 在 XML 文件中，ID 類型屬性的值必須是相異的。 如果**CustomerID**並**OrderID**屬性會指定為 XML 文件中 ID 型別必須是相異的這些值。 然而在資料庫中，CustomerID 和 OrderID 資料行的值可以相同 (例如，CustomerID = 1 且 OrderID = 1 在資料庫中是有效的)。  
   
  若要讓識別碼、IDREF 和 IDREFS 屬性是有效的：  
   
@@ -43,7 +43,7 @@ ms.locfileid: "65980949"
   
 -   針對每一個 IDREF 和 IDREFS，參考的識別碼值都必須在 XML 文件中。  
   
--   ID、IDREF 和 IDREFS 的值必須是具名 Token  (例如，整數值 101 不能是 ID 值)。  
+-   ID、IDREF 和 IDREFS 的值必須是具名 Token (例如，整數值 101 不能是 ID 值)。  
   
 -   ID、 IDREF 和 IDREFS 類型的屬性無法對應至類型的資料行**文字**， **ntext**，或**映像**或任何其他二進位資料類型 (例如**時間戳記**)。  
   

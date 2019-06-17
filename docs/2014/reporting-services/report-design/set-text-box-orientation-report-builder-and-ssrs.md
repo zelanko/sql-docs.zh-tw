@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6acffc286e913d35846b2eeb156cf1980b42fab3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104982"
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>設定文字方塊方向 (報表產生器及 SSRS)
@@ -36,9 +36,9 @@ ms.locfileid: "66104982"
 4.  找出的 WritingMode 屬性，在 [屬性] 窗格中，並在下拉式清單中選取要套用到文字方塊中的文字方向。  
   
     > [!NOTE]  
-    >  當 [屬性] 窗格中的屬性組織成類別目錄時，WritingMode 會位於 [當地語系化] 類別目錄中。  
+    >  當 [屬性] 窗格中的屬性組織成類別目錄時，WritingMode 會位於 [當地語系化]  類別目錄中。  
   
-5.  在清單方塊中，選取 **[Horizontal]**、 **[Vertical]** 或 **[Rotate270]**。  
+5.  在清單方塊中，選取 **[Horizontal]** 、 **[Vertical]** 或 **[Rotate270]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [文字方塊 &#40;報表產生器及 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   

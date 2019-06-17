@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8ea6c4886a3c5397777b7a65afe96ab7e1b422bd
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65620539"
 ---
 # <a name="create-a-distributed-transaction"></a>建立分散式的交易
@@ -53,7 +53,7 @@ MSDTC 會呼叫 SQL Server Native Client 驅動程式 「 開放式資料庫連�
 3. 應用程式會更新電腦 b 上的 SQL 伺服器 Y 上資料
     - 如果在 SQL Server 的 y 軸上的更新失敗，會回復所有未認可的更新，這兩個 SQL Server 執行個體。
 
-4. 最後，應用程式藉由呼叫結束交易[SQLEndTran _(1)_](../../../relational-databases/native-client-odbc-api/sqlendtran.md)，使用 SQL_COMMIT 或 SQL_ROLLBACK 選項。
+4. 最後，應用程式藉由呼叫結束交易[SQLEndTran _(1)_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md)，使用 SQL_COMMIT 或 SQL_ROLLBACK 選項。
 
 _(1)_ 可以叫用 MSDTC，而不需要 ODBC。 在此情況下，MSDTC 會變成交易管理員，而應用程式不會再使用**SQLEndTran**。
 

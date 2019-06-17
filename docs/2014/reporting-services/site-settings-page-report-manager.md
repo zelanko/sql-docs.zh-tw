@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07fc0207020887d7e3ceb8716ee76c78a55d2bac
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101115"
 ---
 # <a name="site-settings-page-report-manager"></a>站台設定頁面 (報表管理員)
@@ -30,7 +30,7 @@ ms.locfileid: "66101115"
   
 1.  開啟報表管理員。  
   
-2.  在頁面的頂端，按一下 **[站台設定]**。 這樣就會開啟該站台的 [一般] 屬性頁面。  
+2.  在頁面的頂端，按一下 **[站台設定]** 。 這樣就會開啟該站台的 [一般] 屬性頁面。  
   
      **注意：** 如果您看不見**站台設定**選項的功能表中，您沒有必要的權限，如需詳細資訊，請參閱 [站台設定] 區段的[設定原生模式報表伺服器進行本機管理&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099445"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>SharePoint 模式 (SSRS) 在報表伺服器上已發行報表項目的 URL 範例
@@ -33,7 +33,7 @@ ms.locfileid: "66099445"
   
 |Object|描述|  
 |------------|-----------------|  
-|SharePoint Web 應用程式|SharePoint Web 應用程式可以當做獨立的伺服器安裝，或安裝在包含虛擬伺服器集合的伺服器陣列下。 Web 應用程式具有一個 URL (例如， http://伺服器名稱)，而且可以包含多個網站。|  
+|SharePoint Web 應用程式|SharePoint Web 應用程式可以當做獨立的伺服器安裝，或安裝在包含虛擬伺服器集合的伺服器陣列下。 Web 應用程式具有一個 URL (例如， http://伺服器名稱  )，而且可以包含多個網站。|  
 |網站|網站可能是 Web 應用程式的上層網站或子網站。|  
 |SharePoint 文件庫|文件庫包含文件或資料夾。 文件庫或文件庫中的資料夾是可以儲存報表、報表模型、共用資料來源與外部影像的唯一站台物件。|  
 |項目|您可以在 URL 中參考的報表伺服器項目包括報表或子報表的報表定義、報表模型、共用資料來源或外部影像。|  
@@ -44,26 +44,26 @@ ms.locfileid: "66099445"
 ### <a name="url-for-a-sharepoint-server"></a>SharePoint 伺服器的 URL  
  當您將「報表伺服器」或「報表模型」專案從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 部署至報表伺服器時，您必須使用指向 SharePoint 伺服器的 URL。  
   
- 若要尋找欲使用之伺服器的名稱，開啟瀏覽器，然後找出您要發行報表的 SharePoint 文件庫。 伺服器名稱會出現在通訊協定前置詞的後面，例如， http://伺服器名稱。  
+ 若要尋找欲使用之伺服器的名稱，開啟瀏覽器，然後找出您要發行報表的 SharePoint 文件庫。 伺服器名稱會出現在通訊協定前置詞的後面，例如， http://伺服器名稱  。  
   
- 不支援使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL Proxy 端點。 Proxy 端點包含通訊埠編號，例如， http://伺服器名稱:8080/reportserver。  
+ 不支援使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL Proxy 端點。 Proxy 端點包含通訊埠編號，例如， http://伺服器名稱:8080/reportserver  。  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>SharePoint 伺服器網站或子網站的 URL  
- 當您部署報表或報表資料來源時，您必須使用指向 SharePoint 網站或子網站的 URL (如果有的話)。 在 URL 中，網站名稱會出現在伺服器名稱後面，例如， http://伺服器名稱/網站 或 http://伺服器名稱/網站/子網站。  
+ 當您部署報表或報表資料來源時，您必須使用指向 SharePoint 網站或子網站的 URL (如果有的話)。 在 URL 中，網站名稱會出現在伺服器名稱後面，例如， http://伺服器名稱/網站  或 http://伺服器名稱/網站/子網站  。  
   
- 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web 應用程式上，網站和子網站通常會對應到主要網站上的索引標籤。 若要尋找網站名稱或子網站名稱，按一下 [主資料夾]，然後按一下 [所有網站內容]。 捲動至底部，然後尋找 [網站與工作區]。 網站清單便會出現在此區段中。  
+ 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web 應用程式上，網站和子網站通常會對應到主要網站上的索引標籤。 若要尋找網站名稱或子網站名稱，按一下 [主資料夾]  ，然後按一下 [所有網站內容]  。 捲動至底部，然後尋找 [網站與工作區]  。 網站清單便會出現在此區段中。  
   
 ### <a name="url-for-a-sharepoint-library"></a>SharePoint 文件庫的 URL  
  當您將報表或相關項目部署至 SharePoint 文件庫時，您必須使用指向 SharePoint 文件庫的 URL。 要用於文件庫的 URL 會視您所使用的 SharePoint 版本而有所不同。  
   
  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 或 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]上，文件庫會出現在伺服器名稱後面，例如， http://*伺服器名稱/* Shared Documents。  
   
- 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 上，文件庫會出現在網站和子網站後面。 例如， http://伺服器名稱/網站/Documents。  
+ 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 上，文件庫會出現在網站和子網站後面。 例如， http://伺服器名稱/網站/  Documents。  
   
- 若要尋找新 SharePoint 文件庫或不熟悉之網站的路徑資訊，開啟瀏覽器，然後找出您要發行報表的 SharePoint 文件庫。 如果文件庫是空的，上傳任何檔案。 以滑鼠右鍵按一下檔案，然後選取 [屬性]，以開啟 [屬性] 視窗。 檔案的位址包含發行作業所需的 URL 值。  
+ 若要尋找新 SharePoint 文件庫或不熟悉之網站的路徑資訊，開啟瀏覽器，然後找出您要發行報表的 SharePoint 文件庫。 如果文件庫是空的，上傳任何檔案。 以滑鼠右鍵按一下檔案，然後選取 [屬性]  ，以開啟 [屬性]  視窗。 檔案的位址包含發行作業所需的 URL 值。  
   
 ### <a name="fully-qualified-urls-for-items-on-a-sharepoint-site"></a>SharePoint 網站上之項目的完整 URL  
- 儲存在 SharePoint 文件庫中的項目一定會透過完整的 URL 定址，該 URL 會以 Web 應用程式開始 (http://伺服器)，當作根節點，然後以您要參考之檔案的名稱結尾。  
+ 儲存在 SharePoint 文件庫中的項目一定會透過完整的 URL 定址，該 URL 會以 Web 應用程式開始 (http://伺服器  )，當作根節點，然後以您要參考之檔案的名稱結尾。  
   
  在 URL 中的檔案名稱包含副檔名。  
   
@@ -100,16 +100,16 @@ ms.locfileid: "66099445"
 |SharePoint 伺服器網站或子網站。|http://TestServer/toplevelsite/subsite|  
 |在 **或** 部署上， [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] Shared Documents [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 中的 Company Sales 範例報表。|http://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl|  
 |在 **或** 執行個體上， [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] Documents/Doc [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 資料夾中的 Company Sales 範例報表。|http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl|  
-|在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 執行個體上，[報告中心] 中的 Company Sales 範例報表。|http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl|  
+|在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 執行個體上，[報告中心]  中的 Company Sales 範例報表。|http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl|  
   
 ##  <a name="publishingToDocLib"></a> 從撰寫工具發行到 SharePoint 文件庫  
- 當您使用報表撰寫工具將報表和相關的檔案發行至文件庫時，加入這些檔案之前會先進行驗證。 如果您在 SharePoint 文件庫上使用 [上傳] 動作來上傳報表與相關檔案，則不會進行任何驗證檢查。 因此，在您藉由管理、編輯或執行檔案來存取報表前，將不會知道檔案是否有效。  
+ 當您使用報表撰寫工具將報表和相關的檔案發行至文件庫時，加入這些檔案之前會先進行驗證。 如果您在 SharePoint 文件庫上使用 [上傳]  動作來上傳報表與相關檔案，則不會進行任何驗證檢查。 因此，在您藉由管理、編輯或執行檔案來存取報表前，將不會知道檔案是否有效。  
   
 > [!NOTE]  
 >  為了將報表從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]發行到 SharePoint 網站，您可能需要將 SharePoint 網站加入您 Internet Explorer 瀏覽器的信任位置清單。  
   
 ### <a name="shared-data-sources"></a>共用資料來源  
- `TargetDataSourceFolder`當您從報表撰寫工具發行共用資料來源時，您可以設定專案屬性  目標資料來源資料夾必須是指向 SharePoint 文件庫的 URL。 不像在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式下，您無法指定相對資料夾，因為相對路徑無效。 如果在 Document Library 路徑下沒有資料夾存在，則會建立一個。  
+ `TargetDataSourceFolder`當您從報表撰寫工具發行共用資料來源時，您可以設定專案屬性 目標資料來源資料夾必須是指向 SharePoint 文件庫的 URL。 不像在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式下，您無法指定相對資料夾，因為相對路徑無效。 如果在 Document Library 路徑下沒有資料夾存在，則會建立一個。  
   
  當您將共用資料來源 (.rds) 檔發行到 SharePoint 網站時，這會將資料來源檔的副檔名變更為 .rsds。 .rsds 檔無法從 SharePoint 網站儲存到本機，也無法匯入到現有的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 專案中。 副檔名為 .rds 和 .rsds 的共用資料來源不可互換。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66099445"
  如果沒有為您要上傳到 SharePoint 網站的項目指定副檔名，則會發生 `rsInvalidDataSourceReference` 錯誤。 檔案名稱不得包含 SharePoint 應用程式不視為有效檔案名稱字元的字元。 不包含下列字元: # %& *: \< > 嗎？ / { | }。  
   
 ## <a name="differences-between-uploading-and-publishing"></a>上傳與發行之間的差異  
- 當您使用報表設計師或報表產生器，將報表和相關的檔案發行至文件庫時，加入這些檔案之前會先進行驗證。 如果您在 SharePoint 文件庫上使用 [上傳] 動作來上傳報表與相關檔案，則不會進行任何驗證檢查。 因此，在您藉由管理、編輯或執行檔案來存取報表前，將不會知道檔案是否有效。  
+ 當您使用報表設計師或報表產生器，將報表和相關的檔案發行至文件庫時，加入這些檔案之前會先進行驗證。 如果您在 SharePoint 文件庫上使用 [上傳]  動作來上傳報表與相關檔案，則不會進行任何驗證檢查。 因此，在您藉由管理、編輯或執行檔案來存取報表前，將不會知道檔案是否有效。  
   
 ## <a name="updating-a-published-item"></a>上傳已發行的項目  
  在您已經將項目發行或上傳到 SharePoint 文件庫後，您應該先將該項目從文件庫中簽出，然後再更新它。 如果報表簽出給您，則您將是具有變更報表權限的唯一使用者。 當您完成時，請將其簽入。  

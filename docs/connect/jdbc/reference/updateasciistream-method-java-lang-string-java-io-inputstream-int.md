@@ -1,5 +1,5 @@
 ---
-title: updateBinaryStream 方法 (java.io.InputStream, int) | Microsoft Docs
+title: updateAsciiStream 方法 (java.io.InputStream, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 4e2997a0-c18e-4114-bce9-0ab4b2b9f92c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a548e0b6beb1815052167d28d67d1228c0bf6dfc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 81e5350c53f1c55d825c658e6f678a98a6d96bcf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517304"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798937"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream-int"></a>updateAsciiStream 方法 (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,7 +56,7 @@ public void updateAsciiStream(java.lang.String columnName,
 ## <a name="remarks"></a>Remarks  
  這個 updateAsciiStream 方法是由 java.sql.ResultSet 介面中的 updateAsciiStream 方法指定。  
   
- 這個方法會從 InputStream 物件，將 ASCII 字元 (位元組) 傳遞到可轉換的字元資料行，這些是 Unicode 的 ASCII 範圍 [0x00 – 0x7F]，以及 874、932、936、949、950 和 1250 到 1258 的字碼頁。 這個方法會執行轉換，直到目的地定序頁面。 嘗試更新無法轉換的目的地資料行，將擲回例外狀況。 若是處理二進位資料行，則會傳遞未經處理位元組。  
+ 這個方法會從 InputStream 物件，將 ASCII 字元 (位元組) 傳遞到可轉換的字元資料行，這些是 Unicode 的 ASCII 範圍 [0x00 - 0x7F]，以及 874、932、936、949、950 和 1250 到 1258 的字碼頁。 這個方法會執行轉換，直到目的地定序頁面。 嘗試更新無法轉換的目的地資料行，將擲回例外狀況。 若是處理二進位資料行，則會傳遞未經處理位元組。  
   
  如果此資料流的長度與 *length* 參數中所指定的長度不同，JDBC 驅動程式就會在更新或插入資料列時擲回例外狀況。  
   

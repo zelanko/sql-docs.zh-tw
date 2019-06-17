@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dfce5e2bdf71dfb58481fedf05794d3603285449
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108415"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>第 6 課：將 ReportViewer 控制項新增至應用程式
@@ -22,13 +22,13 @@ ms.locfileid: "66108415"
   
 ### <a name="to-add-a-reportviewer-control-to-the-application"></a>若要將 ReportViewer 控制項加入至應用程式  
   
-1.  在**方案總管**中，以滑鼠右鍵按一下 **Default.aspx**，然後按一下 [檢視表設計師]。  
+1.  在**方案總管**中，以滑鼠右鍵按一下 **Default.aspx**，然後按一下 [檢視表設計師]  。  
   
 2.  從**AJAX Extensions**群組中**工具箱**視窗中，拖曳**ScriptManager**控制項至設計介面。  
   
-3.  從 [報表] 群組，將 **ReportViewer** 控制項拖曳至設計介面上的 **ScriptManager** 控制項下方。  
+3.  從 [報表]  群組，將 **ReportViewer** 控制項拖曳至設計介面上的 **ScriptManager** 控制項下方。  
   
-4.  按一下 **ReportViewer** 控制項右上角的箭頭，開啟 [ReportViewer 工作] 視窗。  
+4.  按一下 **ReportViewer** 控制項右上角的箭頭，開啟 [ReportViewer 工作]  視窗。  
   
 5.  在 **選擇報表**方塊中，選取您建立的父報表。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66108415"
   
 6.  在 [建置] 功能表上，按一下 [建置網站]。  
   
-     報表會進行編譯，而報表運算式中的任何錯誤 (像是語法錯誤) 都會出現在 [錯誤清單] 區域中。 按一下 Visual Studio 視窗底部的 [錯誤清單]，顯示 [錯誤清單] 區域。  
+     報表會進行編譯，而報表運算式中的任何錯誤 (像是語法錯誤) 都會出現在 [錯誤清單]  區域中。 按一下 Visual Studio 視窗底部的 [錯誤清單]  ，顯示 [錯誤清單]  區域。  
   
 ## <a name="next-task"></a>下一項工作  
  您已成功將 ReportViewer 控制項加入至網站應用程式。 接下來您將在父報表上加入鑽研動作。  

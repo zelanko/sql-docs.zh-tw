@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901abf5be70f0b3c70b89b0415c59f19a9327b29
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107440"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>在關聯式查詢設計工具中建立查詢 (報表產生器及 SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "66107440"
   
 ### <a name="to-build-a-query-for-an-embedded-dataset-in-report-design-view"></a>若要在報表設計檢視中建立內嵌資料集的查詢  
   
-1.  開啟查詢設計工具。 在 [報表資料] 窗格中，以滑鼠右鍵按一下資料集，然後按一下 [查詢]。  
+1.  開啟查詢設計工具。 在 [報表資料] 窗格中，以滑鼠右鍵按一下資料集，然後按一下 [查詢]  。  
   
      隨即開啟與資料來源相關聯的查詢設計工具。  
   
@@ -65,11 +65,11 @@ ms.locfileid: "66107440"
   
 1.  在關聯式查詢設計工具中，確認您已選取欄位，且欄位出現在 **[選取的欄位]** 窗格中。  
   
-2.  在 [套用的篩選器] 窗格工具列中，按一下 **[加入篩選]**。 新的篩選資料列隨即顯示。  
+2.  在 [套用的篩選器] 窗格工具列中，按一下 **[加入篩選]** 。 新的篩選資料列隨即顯示。  
   
-3.  在 [欄位名稱] 中，按一下以顯示欄位的下拉式清單，然後按一下要作為篩選依據的欄位名稱。 例如，若要依數量篩選，請按一下包含項目數的欄位。  
+3.  在 [欄位名稱]  中，按一下以顯示欄位的下拉式清單，然後按一下要作為篩選依據的欄位名稱。 例如，若要依數量篩選，請按一下包含項目數的欄位。  
   
-4.  在 [運算子] 中，按一下以顯示運算子的下拉式清單，然後選取要用於篩選的比較運算子。  
+4.  在 [運算子]  中，按一下以顯示運算子的下拉式清單，然後選取要用於篩選的比較運算子。  
   
 5.  在 **[值]** 中，輸入篩選所要依據的值。 例如，若要篩選出超過 100 的數量，請輸入 100。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66107440"
   
 ### <a name="to-view-a-query-result-set"></a>若要檢視查詢結果集  
   
-1.  在查詢設計工具工具列上，按一下 [執行查詢 (!)]。  
+1.  在查詢設計工具工具列上，按一下 [執行查詢 (!)]  。  
   
     > [!NOTE]  
     >  查詢設計工具會使用設計階段認證執行查詢和擷取結果集。 如需詳細資訊，請參閱 [在報表產生器中指定認證](../specify-credentials-in-report-builder.md)。  

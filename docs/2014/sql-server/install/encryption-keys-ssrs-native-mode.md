@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 16ac264f89c541f0a864f8b47ed008fa254f181c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095420"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>加密金鑰 (SSRS 原生模式)
@@ -44,7 +44,7 @@ ms.locfileid: "66095420"
   
  若要開啟此頁面，請啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並在導覽窗格中選取此連結。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **備份**  
  將對稱金鑰複製到您指定的檔案。 對稱金鑰絕不會以純文字的方式儲存。 您必須輸入密碼來保護該檔案。  
   

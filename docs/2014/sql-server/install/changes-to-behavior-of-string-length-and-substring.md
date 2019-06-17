@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 18643dfc11d2b1b1d875a19c478f9ec8cbdd5be6
-ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66428843"
 ---
 # <a name="changes-to-behavior-of-string-length-and-substring"></a>字串長度及子字串行為的變更

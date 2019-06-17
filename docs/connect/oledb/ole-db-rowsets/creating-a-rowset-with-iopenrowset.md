@@ -15,13 +15,13 @@ helpviewer_keywords:
 - OLE DB rowsets, creating
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 1450bac50120d81c4bf8e2ac3ae96ab85eb9b5b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 78b08a3da3da89e0db0d801945416dcdb1ff9c03
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728472"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799205"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>以 IOpenRowset 建立資料列集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

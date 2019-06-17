@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 916ea06221ffd6ff33427a26870cd3005ec79e67
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109845"
 ---
 # <a name="choose-the-table-layout"></a>選擇資料表配置
   使用報表精靈的這個頁面，即可選取報表中的資料表配置。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Stepped**  
  建立每個欄位包含一個資料行的報表，讓群組欄位顯示在詳細資料欄位資料行左邊的群組首中。 這種資料表沒有群組尾。  
   

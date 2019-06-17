@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dab4c978bc9309564d8d2f32410ae798becc4d8d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105535"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地圖精靈與地圖圖層精靈 (報表產生器及 SSRS)
@@ -44,7 +44,7 @@ ms.locfileid: "66105535"
   
 -   當您第一次開啟報表產生器時，請在設計介面的中央按一下 **[地圖]** 精靈圖示。  
   
--   在 **[插入]** 索引標籤上，按一下 **[地圖]**，然後按一下 **[地圖精靈]**。  
+-   在 **[插入]** 索引標籤上，按一下 **[地圖]** ，然後按一下 **[地圖精靈]** 。  
   
  若要開啟「地圖圖層精靈」，請進行下列動作：  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66105535"
  您可以在每個圖層上使用空間資料的相同來源或不同來源，但是您必須指定每次您加入圖層時的來源。 當空間資料來自地圖庫或 ESRI 形狀檔時，空間資料來源不是個別的報表項目， 因此不會出現在 [報表資料] 窗格中。  
   
 ###  <a name="SpatialData"></a> 何謂空間資料？  
- 空間資料包含可定義地理或幾何元素的座標軸。 在地圖中，空間資料會定義 *「地圖元素」*(Map Element)：定義區域或形狀的多邊形、定義路線或路徑的線條，以及定義標記或圖釘的點。 空間資料會以二進位格式儲存在資料來源中，並指定為座標位置組。 例如，點是 X 和 Y 座標 (X Y)、線條是兩組座標位置 ((X1 Y1), (X2 Y2))、多邊形是四組以上的座標位置，其中第一組和最後一組座標位置相同 ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1))。  
+ 空間資料包含可定義地理或幾何元素的座標軸。 在地圖中，空間資料會定義 *「地圖元素」* (Map Element)：定義區域或形狀的多邊形、定義路線或路徑的線條，以及定義標記或圖釘的點。 空間資料會以二進位格式儲存在資料來源中，並指定為座標位置組。 例如，點是 X 和 Y 座標 (X Y)、線條是兩組座標位置 ((X1 Y1), (X2 Y2))、多邊形是四組以上的座標位置，其中第一組和最後一組座標位置相同 ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1))。  
   
  如需詳細資訊，請參閱您使用之空間資料類型的文件集。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66105535"
  若要擴充地圖庫，您可以從地圖庫目錄加入或移除報表，也可以加入資料夾來組織地圖。 如需詳細資訊，請參閱 [地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)。  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
- ESRI 形狀檔是一組檔案，其中包含符合 Environmental Systems Research Institute, Inc. (ESRI) 形狀檔空間資料格式的資料。 這組檔案通常包括內含空間資料的 \<檔名>.shp 檔案以及支援檔案 \<檔名>。  
+ ESRI 形狀檔是一組檔案，其中包含符合 Environmental Systems Research Institute, Inc. (ESRI) 形狀檔空間資料格式的資料。 這組檔案通常包括內含空間資料的 \<檔名>  .shp 檔案以及支援檔案 \<檔名>  。  
   
  當您將形狀檔指定為您本機電腦上的空間資料來源時，會將空間資料自動內嵌至報表中。 若要以動態方式使用 ESRI 檔案中的空間資料，您必須執行下列操作：  
   

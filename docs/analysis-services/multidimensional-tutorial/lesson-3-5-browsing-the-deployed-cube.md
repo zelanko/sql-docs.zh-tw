@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 979a84b026b6d5399133ef9709e6908fdecb4aca
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403710"
 ---
 # <a name="lesson-3-5---browsing-the-deployed-cube"></a>課程 3-5-瀏覽已部署的 Cube
@@ -23,23 +23,23 @@ ms.locfileid: "65403710"
   
 ### <a name="to-browse-the-deployed-cube"></a>瀏覽已部署的 Cube  
   
-1.  若要切換至 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中的 [Cube 設計師]，請在方案總管的 [Cube] 節點中，按兩下 [[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 教學課程] Cube。  
+1.  若要切換至 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中的 [Cube 設計師]，請在方案總管的 [Cube]  節點中，按兩下 [[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 教學課程]  Cube。  
   
-2.  開啟 [瀏覽器] 索引標籤，然後按一下設計師工具列上的 [重新連接] 按鈕。  
+2.  開啟 [瀏覽器]  索引標籤，然後按一下設計師工具列上的 [重新連接]  按鈕。  
   
-3.  按一下 Excel 圖示，啟動 Excel，並使用工作空間資料庫做為資料來源。 出現啟用連接的提示時，按一下 [啟用]。  
+3.  按一下 Excel 圖示，啟動 Excel，並使用工作空間資料庫做為資料來源。 出現啟用連接的提示時，按一下 [啟用]  。  
   
-4.  在樞紐分析表欄位清單中，展開 [網際網路銷售]，然後將 [銷售量] 量值拖曳至 [值] 區域中。  
+4.  在樞紐分析表欄位清單中，展開 [網際網路銷售]  ，然後將 [銷售量]  量值拖曳至 [值]  區域中。  
   
-5.  在樞紐分析表欄位清單中，展開 [產品]。  
+5.  在樞紐分析表欄位清單中，展開 [產品]  。  
   
-6.  將 [產品型號線] 使用者階層拖曳至 [資料行] 區域。  
+6.  將 [產品型號線]  使用者階層拖曳至 [資料行]  區域。  
   
-7.  在樞紐分析表欄位清單中，依序展開 [客戶] 和 [位置]，然後從 [客戶] 維度的 [位置] 顯示資料夾，將 [客戶地理位置] 階層拖曳到 [資料列] 區域。  
+7.  在樞紐分析表欄位清單中，依序展開 [客戶]  和 [位置]  ，然後從 [客戶] 維度的 [位置] 顯示資料夾，將 [客戶地理位置]  階層拖曳到 [資料列]  區域。  
   
-8.  在樞紐分析表欄位清單中，展開 [訂購日期]，然後將 [Order Date.Calendar Date] 階層拖曳到 [報表篩選] 區域。  
+8.  在樞紐分析表欄位清單中，展開 [訂購日期]  ，然後將 [Order Date.Calendar Date]  階層拖曳到 [報表篩選]  區域。  
   
-9. 按一下資料窗格中 [Order Date.Calendar Date] 篩選右邊的箭頭、清除 [(全部)] 層級的核取方塊、依序展開 [2006]、[H1 CY 2006] 和 [Q1 CY 2006]、選取 [February 2006] 的核取方塊，然後按一下 [確定]。  
+9. 按一下資料窗格中 [Order Date.Calendar Date]  篩選右邊的箭頭、清除 [(全部)]  層級的核取方塊、依序展開 [2006]  、[H1 CY 2006]  和 [Q1 CY 2006]  、選取 [February 2006]  的核取方塊，然後按一下 [確定]  。  
   
     此時會出現按區域的網際網路銷售量和 2006 年 2 月的當月產品線，如下圖所示。  
   

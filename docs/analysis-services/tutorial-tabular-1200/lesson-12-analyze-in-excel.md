@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8a558dafb4619ef9c4d66884f1fea9fd98e0881c
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404100"
 ---
 # <a name="lesson-12-analyze-in-excel"></a>第 12 課：在 Excel 中分析
@@ -35,7 +35,7 @@ ms.locfileid: "65404100"
   
 1.  按一下 **模型**功能表 >**在 Excel 中的進行分析**。  
   
-2.  於 [在 Excel 中進行分析] 對話方塊中，按一下 [確定]。  
+2.  於 [在 Excel 中進行分析]  對話方塊中，按一下 [確定]  。  
   
     Excel 將會開啟，並顯示一個新的活頁簿。 系統會使用目前的使用者帳戶建立資料來源連接，並將預設檢視方塊用於定義可檢視的欄位。 樞紐分析表會自動加入至工作表。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "65404100"
   
 1.  按一下 **模型**功能表，然後再按一下**在 Excel 中的進行分析**。  
   
-2.  於 [在 Excel 中進行分析] 對話方塊中，將 [目前的 Windows 使用者] 維持在選取狀態，並在 [檢視方塊] 下拉式清單方塊中，選取 [網際網路銷售]，然後按一下 [確定]。 
+2.  於 [在 Excel 中進行分析]  對話方塊中，將 [目前的 Windows 使用者]  維持在選取狀態，並在 [檢視方塊]  下拉式清單方塊中，選取 [網際網路銷售]  ，然後按一下 [確定]  。 
     
     ![as-tabular-lesson12-perspective](media/as-tabular-lesson12-perspective.png)
     

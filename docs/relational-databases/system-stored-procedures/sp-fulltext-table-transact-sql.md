@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 870f12fa569eb0c6046377472a6122d69cd35d6e
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982959"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
@@ -50,9 +50,9 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @tabname = ] 'qualified_table_name'` 這是一或兩部分資料表名稱。 資料表必須在目前的資料庫中。 *qualified_table_name&lt*已**nvarchar(517)**，沒有預設值。  
+`[ @tabname = ] 'qualified_table_name'` 這是一或兩部分資料表名稱。 資料表必須在目前的資料庫中。 *qualified_table_name&lt*已**nvarchar(517)** ，沒有預設值。  
   
-`[ @action = ] 'action'` 是要執行的動作。 *動作*已**nvarchar(50)**，沒有預設值，它可以是下列值之一。  
+`[ @action = ] 'action'` 是要執行的動作。 *動作*已**nvarchar(50)** ，沒有預設值，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  

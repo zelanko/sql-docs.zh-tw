@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fda75488b170ebfbfc9cd2396d2478f3ae918f2e
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483928"
 ---
 # <a name="entity-permissions-master-data-services"></a>實體權限 (Master Data Services)
@@ -36,7 +36,7 @@ ms.locfileid: "65483928"
  當您擁有實體的權限時，您可從實體、實體的明確階層和集合中加入及移除成員。  
   
 > [!NOTE]  
->  這些權限只適用於使用者介面的 [總管] 功能區域。  
+>  這些權限只適用於使用者介面的 [總管]  功能區域。  
   
 |權限|描述|  
 |----------------|-----------------|  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0f2731a89364dcf51f617c5490c0e46a16977ba2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099755"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>在報表伺服器之間移轉內容的範例 Reporting Services rs.exe 指令碼
@@ -335,18 +335,18 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
   
  **SharePoint 模式：**  
   
-1.  瀏覽至 **[網站設定]**。  
+1.  瀏覽至 **[網站設定]** 。  
   
-2.  在 **[Reporting Services]** 群組中，按一下 **[管理共用排程]**。  
+2.  在 **[Reporting Services]** 群組中，按一下 **[管理共用排程]** 。  
   
 ### <a name="roles-and-groups"></a>角色和群組  
  **Native Mode**  
   
 1.  開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 並連接至您的原生模式報表伺服器。  
   
-2.  在 **[物件總管]** 中按一下 **[安全性]**。  
+2.  在 **[物件總管]** 中按一下 **[安全性]** 。  
   
-3.  按一下 **[角色]**。  
+3.  按一下 **[角色]** 。  
   
 ##  <a name="bkmk_troubleshoot"></a> 疑難排解  
  使用追蹤旗標 **-t** 取得詳細資訊。 例如，如果您執行指令碼並且看到類似下面的訊息  

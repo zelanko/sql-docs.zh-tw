@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7429694f469071b2383911314bd7e78e8808fdfc
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65486478"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>將多個條件加入至商務規則 (Master Data Services)
@@ -40,36 +40,36 @@ ms.locfileid: "65486478"
   
 ### <a name="to-add-multiple-conditions-to-a-business-rule"></a>若要將多個條件加入至商務規則  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]**。  
+2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]** 。  
   
-3.  在 [商務規則] 頁面上，從 [模型] 下拉式清單選取模型。  
+3.  在 [商務規則]  頁面上，從 [模型]  下拉式清單選取模型。  
   
 4.  從 [實體]  下拉式清單選取實體。  
   
-5.  從 [成員類型] 下拉式清單中，選取成員的類型。  
+5.  從 [成員類型]  下拉式清單中，選取成員的類型。  
   
 6.  按一下您想要編輯之商務規則的資料列。  
   
-7.  按一下 **[編輯]**。  
+7.  按一下 **[編輯]** 。  
   
-8.  在 [If] 區塊下，從左側的邏輯運算子下拉式清單中選取 [AND/OR/ NOT]。  
+8.  在 [If]  區塊下，從左側的邏輯運算子下拉式清單中選取 [AND/OR/ NOT]  。  
   
-9. 按一下 **[加入]**。 面板隨即顯示。  
+9. 按一下 **[加入]** 。 面板隨即顯示。  
   
 10. 從 [屬性]  下拉式清單中，選取屬性。  
   
-11. 從 [運算子] 下拉式清單中選取條件。  
+11. 從 [運算子]  下拉式清單中選取條件。  
   
 12. 完成所有必要的欄位。  
   
-13. 按一下 [儲存] 。 新的資料列就會新增至 [If] 方格中。  
+13. 按一下 [儲存]  。 新的資料列就會新增至 [If]  方格中。  
   
 14. 或者若要加入更多條件，請完成步驟 8-13。  
   
     > [!TIP]  
-    >  若要刪除條件，請選取條件並以滑鼠右鍵按一下它，然後按一下 [刪除]。  
+    >  若要刪除條件，請選取條件並以滑鼠右鍵按一下它，然後按一下 [刪除]  。  
   
     > [!TIP]  
     >  您可以選取多個條件，並按一下滑鼠右鍵將它們集合在邏輯運算子內，或取消群組特定邏輯運算子內的條件。  

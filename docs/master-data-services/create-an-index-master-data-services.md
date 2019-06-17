@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 008c1915c793eedb27d70cac27e135c2c7e753c4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65477075"
 ---
 # <a name="create-an-index-master-data-services"></a>建立索引 (Master Data Services)
@@ -33,27 +33,27 @@ ms.locfileid: "65477075"
   
  **建立索引**  
   
-1.  在主資料管理員中，按一下 [系統管理] 。  
+1.  在主資料管理員中，按一下 [系統管理]  。  
   
-2.  在 [管理模型] 頁面上，從方格中選取模型，然後按一下 [實體]。  
+2.  在 [管理模型]  頁面上，從方格中選取模型，然後按一下 [實體]  。  
   
-3.  在 [管理實體] 頁面上，從 [方格] 中選取含有您想要為其建立索引之實體的資料列。  
+3.  在 [管理實體]  頁面上，從 [方格]  中選取含有您想要為其建立索引之實體的資料列。  
   
-4.  按一下 [索引]。  
+4.  按一下 [索引]  。  
   
-5.  在 [名稱] 方塊中，輸入此索引的名稱。  
+5.  在 [名稱]  方塊中，輸入此索引的名稱。  
   
-6.  若您想要建立唯一索引，請選取 [是唯一的]。 如需索引類型的詳細資訊，請參閱[自訂索引 &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)。  
+6.  若您想要建立唯一索引，請選取 [是唯一的]  。 如需索引類型的詳細資訊，請參閱[自訂索引 &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)。  
   
-7.  按一下 [可用屬性] 方塊中的屬性，然後按一下 [加入] 箭號。 若要加入所有屬性，請按一下 [全部加入] 箭號。  
+7.  按一下 [可用屬性]  方塊中的屬性，然後按一下 [加入]  箭號。 若要加入所有屬性，請按一下 [全部加入]  箭號。  
   
-8.  按一下 [儲存] 。  
+8.  按一下 [儲存]  。  
   
  對於每個建立的索引，含有四個資料行的資料列會加入格線中。 下表描述該資料行。  
   
 |資料行名稱|描述|  
 |-----------------|-----------------|  
-|[狀態]|索引狀態。<br /><br /> 當您按一下 [儲存] 時，會顯示![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")影像，表示正在更新索引。<br /><br /> 如果建立或編輯索引時發生錯誤，則會顯示![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")影像。<br /><br /> 否則，狀態為正常，並顯示![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")影像。|  
+|[狀態]|索引狀態。<br /><br /> 當您按一下 [儲存]  時，會顯示![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")影像，表示正在更新索引。<br /><br /> 如果建立或編輯索引時發生錯誤，則會顯示![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")影像。<br /><br /> 否則，狀態為正常，並顯示![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")影像。|  
 |名稱|索引名稱。|  
 |是唯一的|指定索引是否是唯一的。|  
 |依據屬性|顯示定義索引的屬性顯示名稱。|  

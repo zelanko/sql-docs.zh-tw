@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 577145b2a844a95480d8e250a87cce0a15877e20
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095723"
 ---
 # <a name="database-ssrs-native-mode"></a>資料庫 (SSRS 原生模式)
@@ -30,7 +30,7 @@ ms.locfileid: "66095723"
   
  若要開啟此頁面，請啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並按一下導覽窗格中的 **[資料庫]** 。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **SQL Server 名稱**  
  在目前的報表伺服器資料庫中， **[SQL Server 名稱]** 會指定執行報表伺服器資料庫的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 名稱。 也可以在本機或遠端電腦上使用預設或具名的執行個體。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66095723"
  指定報表伺服器用來連接到報表伺服器資料庫的認證。 您可以指定的認證類型包括服務帳戶、Windows 網域使用者、Windows 本機使用者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫登入。 如需有關選取認證的詳細資訊，請參閱 <<c0> [ 設定報表伺服器資料庫連接&#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。</c0>  
   
  **使用者名稱**  
- 如果您是使用 Windows 認證，請指定網域使用者帳戶；如果您是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，請指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 如果您要使用 Windows 認證，會將它們指定格式如下： *\<網域 >\\< 帳戶\>*。  
+ 如果您是使用 Windows 認證，請指定網域使用者帳戶；如果您是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，請指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 如果您要使用 Windows 認證，會將它們指定格式如下： *\<網域 >\\< 帳戶\>* 。  
   
  **密碼**  
  指定帳戶的密碼。  

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b987dd46f6a60a0d0cadc95cf187566eafa4f527
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109266"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>內嵌和共用資料連接或資料來源 (報表產生器及 SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66109266"
   
 -   **共用資料來源。** 報表伺服器或 SharePoint 網站上提供的資料來源，可供多個報表使用。  
   
--   **內嵌資料來源。** 也稱為 *「報表特定資料來源」*(report-specific data source)。 在報表中定義而且僅供該報表使用的資料來源。  
+-   **內嵌資料來源。** 也稱為 *「報表特定資料來源」* (report-specific data source)。 在報表中定義而且僅供該報表使用的資料來源。  
   
 -   **認證。** 認證是驗證資訊，您必須提供這項資訊才能存取外部資料。  
   

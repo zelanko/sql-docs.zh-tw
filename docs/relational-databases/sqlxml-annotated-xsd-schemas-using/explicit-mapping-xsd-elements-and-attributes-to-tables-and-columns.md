@@ -31,10 +31,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a9d363d4e2efd5d288128d6d1a428ddcb00fa54c
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980906"
 ---
 # <a name="explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns"></a>XSD 項目和屬性對資料表和資料行的明確對應
@@ -61,7 +61,7 @@ ms.locfileid: "65980906"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. 指定 sql:relation 和 sql:field 註解  
- 在此範例中，XSD 結構描述所組成**\<連絡人 >** 複雜類型元素 **\<FName >** 並 **\<LName >** 子項目和**ContactID**屬性。  
+ 在此範例中，XSD 結構描述所組成 **\<連絡人 >** 複雜類型元素 **\<FName >** 並 **\<LName >** 子項目和**ContactID**屬性。  
   
  **Sql: relation**註解 maps **\<連絡人 >** 至 AdventureWorks 資料庫中的 Person.Contact 資料表的項目。 **Sql: field**註解 maps  **\<FName >** FirstName 資料行的項目與 **\<LName >** LastName 的項目資料行。  
   

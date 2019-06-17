@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ca7c735f00f4fa5c7baf102b26edb6634f57b90f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489235"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>工作 3：建立及執行資料品質專案以進行比對
@@ -30,9 +30,9 @@ ms.locfileid: "65489235"
   
      ![新增資料品質專案-比對所選](../../2014/tutorials/media/et-creatingandrunningadqpformatching.jpg "新增資料品質專案-比對所選")  
   
-5.  按一下 [下一步] 。  
+5.  按一下 [下一步]  。  
   
-6.  在 [對應]  頁面上，針對 [資料來源]  選取 [Excel 檔案] 。  
+6.  在 [對應]  頁面上，針對 [資料來源]  選取 [Excel 檔案]  。  
   
 7.  按一下 **瀏覽**，然後選取**Cleansed Supplier List.xls**，這是清理活動的輸出檔案。  
   
@@ -47,6 +47,6 @@ ms.locfileid: "65489235"
 12. 按一下 **下一步**轉為**匯出**頁面。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 4:將結果匯出比對活動到 Excel 檔案](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)  
+ [工作 4：將結果匯出比對活動到 Excel 檔案](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)  
   
   

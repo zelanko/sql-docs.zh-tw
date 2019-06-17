@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b3c722c5774a333773f4bcffc41c408d19ae28be
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480524"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>存取用於 DQS 作業的資料
@@ -34,9 +34,9 @@ ms.locfileid: "65480524"
   
 1.  啟動 Microsoft SQL Server Management Studio。  
   
-2.  在 Microsoft SQL Server Management Studio 中，展開您的 SQL Server 執行個體及 **[安全性]**，然後展開 **[登入]**。  
+2.  在 Microsoft SQL Server Management Studio 中，展開您的 SQL Server 執行個體及 **[安全性]** ，然後展開 **[登入]** 。  
   
-3.  以滑鼠右鍵按一下 SQL 登入，然後按一下 **[屬性]**。  
+3.  以滑鼠右鍵按一下 SQL 登入，然後按一下 **[屬性]** 。  
   
 4.  在 **[登入屬性]** 對話方塊的左窗格中，按一下 **[使用者對應]** 頁面。  
   

@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 68d8ad9408a0630493e907ca1e9628a2d17f6efe
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489759"
 ---
 # <a name="approve-or-reject-a-changeset-master-data-services"></a>核准或拒絕變更集 (Master Data Services)
@@ -38,17 +38,17 @@ ms.locfileid: "65489759"
   
 ## <a name="to-approve-or-reject-a-changeset"></a>核准或拒絕變更集  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下 [總管]。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下 [總管]  。  
   
 2.  按一下 [實體]  功能表中的實體。  
   
-3.  在右窗格中，選取 [變更集]，然後按兩下您要核准或拒絕的變更集。  
+3.  在右窗格中，選取 [變更集]  ，然後按兩下您要核准或拒絕的變更集。  
   
-4.  按一下 [套用] 套用變更集，並檢閱暫止的變更。  
+4.  按一下 [套用]  套用變更集，並檢閱暫止的變更。  
   
-5.  按一下 [拒絕] 拒絕變更集，並將其送回給擁有者。  
+5.  按一下 [拒絕]  拒絕變更集，並將其送回給擁有者。  
   
-6.  按一下 [核准] 核准變更集。 系統會自動認可變更集。  
+6.  按一下 [核准]  核准變更集。 系統會自動認可變更集。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立變更集 &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   

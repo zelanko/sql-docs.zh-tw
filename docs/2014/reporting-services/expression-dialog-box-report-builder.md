@@ -15,21 +15,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6f12a39c1456c179187654445947de9ee7d87a9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109150"
 ---
 # <a name="expression-dialog-box-report-builder"></a>運算式對話方塊 (報表產生器)
   使用**運算式**對話方塊，即可撰寫[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]運算式的報表項目屬性。 您可以使用運算式來設定許多屬性，包含色彩、字型和框線等。 在執行階段，報表處理器會評估運算式並取代屬性值的結果。  
   
- [運算式] 對話方塊包含程式碼視窗、類別目錄樹狀結構、類別目錄項目、描述窗格和範例窗格。 **運算式**對話方塊會區分內容; 類別目錄項目和描述您正在使用的運算式類別目錄中的變更。 如需詳細資訊，請參閱 <<c0> [ 運算式範例&#40;報表產生器及 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)，[運算式&#40;報表產生器及 SSRS&#41;</c0>](report-design/expressions-report-builder-and-ssrs.md)  
+ [運算式]  對話方塊包含程式碼視窗、類別目錄樹狀結構、類別目錄項目、描述窗格和範例窗格。 **運算式**對話方塊會區分內容; 類別目錄項目和描述您正在使用的運算式類別目錄中的變更。 如需詳細資訊，請參閱 <<c0> [ 運算式範例&#40;報表產生器及 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)，[運算式&#40;報表產生器及 SSRS&#41;</c0>](report-design/expressions-report-builder-and-ssrs.md)  
   
 ## <a name="expression-constructs"></a>運算式建構  
  運算式是以等號 (=) 開始，可以包含常數、常值、運算子，以及內建欄位、內建集合、內建函數、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 執行階段程式庫函數、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Common Language Runtime 類別和自訂函數的參考。 下列清單描述可加入運算式的類別目錄和值。  
   
- **設定運算式對象：**_\<PropertyName>_  
+ **設定運算式對象：** _\<PropertyName>_  
  為其定義運算式的屬性名稱。 您也可以在 [屬性] 窗格中依名稱設定這個屬性。  
   
  **常數**  
@@ -44,7 +44,7 @@ ms.locfileid: "66109150"
  提供報表參數清單。  
   
  **Fields(** _\<selected Dataset>_ **)**  
- 顯示在 [資料集] 類別目錄中所選取之資料集的欄位清單。 按兩下欄位，即可將欄位複製至 [運算式] 方塊。  
+ 顯示在 [資料集] 類別目錄中所選取之資料集的欄位清單。 按兩下欄位，即可將欄位複製至 [運算式]  方塊。  
   
  **資料集**  
  提供可用資料集的清單，並顯示做為資料集之成員的欄位。  
@@ -62,7 +62,7 @@ ms.locfileid: "66109150"
   
 ## <a name="options"></a>選項  
  程式碼視窗  
- 使用上方窗格中的程式碼視窗，來輸入運算式。 當您開啟 [運算式] 對話方塊時，程式碼視窗會包含運算式。 您可以取代或修訂運算式。 您可以加入函數呼叫、運算子、常數、欄位、參數、全域集合的項目以及自訂程式碼的參考。 程式碼視窗會在您進行變更時顯示出變更。  
+ 使用上方窗格中的程式碼視窗，來輸入運算式。 當您開啟 [運算式]  對話方塊時，程式碼視窗會包含運算式。 您可以取代或修訂運算式。 您可以加入函數呼叫、運算子、常數、欄位、參數、全域集合的項目以及自訂程式碼的參考。 程式碼視窗會在您進行變更時顯示出變更。  
   
  波浪式紅色底線指出發生語法錯誤。 把滑鼠游標暫留在加底線文字上方，以查看錯誤訊息。  
   

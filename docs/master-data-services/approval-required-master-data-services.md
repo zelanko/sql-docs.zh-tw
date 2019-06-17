@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6bda48b3645260ed3886316a0ba478aad214b593
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65486387"
 ---
 # <a name="approval-required-master-data-services"></a>需要核准 (Master Data Services)
@@ -42,13 +42,13 @@ ms.locfileid: "65486387"
   
 ## <a name="to-enable-approval-required-for-an-entity"></a>啟用實體所需的核准  
   
-1.  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，按一下 [系統管理]。  
+1.  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，按一下 [系統管理]  。  
   
-2.  在 [管理模型] 頁面上，從方格中選取模型，然後按一下 [實體]。  
+2.  在 [管理模型]  頁面上，從方格中選取模型，然後按一下 [實體]  。  
   
-3.  在 [管理實體] 頁面上，從方格中選取含有您想要啟用 [需要核准] 之實體的資料列。  
+3.  在 [管理實體]  頁面上，從方格中選取含有您想要啟用 [需要核准]  之實體的資料列。  
   
-4.  按一下 [編輯]，並選取 [需要核准]，然後按一下 [儲存]。  
+4.  按一下 [編輯]  ，並選取 [需要核准]  ，然後按一下 [儲存]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [變更集 &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)  

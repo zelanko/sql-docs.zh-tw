@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0114aa3ca6f6744303c3053003a622185d33f547
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479904"
 ---
 # <a name="delete-users-or-groups-master-data-services"></a>刪除使用者或群組 (Master Data Services)
@@ -42,15 +42,15 @@ ms.locfileid: "65479904"
   
 ### <a name="to-delete-users-or-groups"></a>若要刪除使用者或群組  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]** 。  
   
-2.  若要刪除使用者，請停留在 **[使用者]** 頁面。 若要刪除群組，請按一下功能表列上的 [管理群組]。  
+2.  若要刪除使用者，請停留在 **[使用者]** 頁面。 若要刪除群組，請按一下功能表列上的 [管理群組]  。  
   
 3.  在方格中，選取要刪除之使用者或群組的資料列。  
   
-4.  按一下 **[刪除選取的使用者]** 或 **[刪除選取的群組]**。  
+4.  按一下 **[刪除選取的使用者]** 或 **[刪除選取的群組]** 。  
   
-5.  在確認對話方塊中按一下 **[確定]**。  
+5.  在確認對話方塊中按一下 **[確定]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [安全性 &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  

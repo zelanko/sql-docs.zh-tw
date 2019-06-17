@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 999e1c1434bd727fe0ac889c2041145a5c1ec750
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404090"
 ---
 # <a name="install-sample-data-and-multidimensional-projects"></a>安裝範例資料和多維度專案 
@@ -41,7 +41,7 @@ SQL Server Management Studio (SSMS) 是下載並與其他 SQL Server 功能分�
 
 [下載 SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)  
 
-或者，當您進行教學課程時，考慮安裝 Excel 來瀏覽多維度資料。 安裝 Excel 時會啟用 [在 Excel 中進行分析] 功能，此功能會使用 [樞紐分析表] 欄位清單啟動 Excel，而這份清單會連接至您要建立的 Cube。 建議使用 Excel 瀏覽資料，因為您可以快速建立一個可讓您與資料互動的樞紐分析報表。  
+或者，當您進行教學課程時，考慮安裝 Excel 來瀏覽多維度資料。 安裝 Excel 時會啟用 [在 Excel 中進行分析]  功能，此功能會使用 [樞紐分析表] 欄位清單啟動 Excel，而這份清單會連接至您要建立的 Cube。 建議使用 Excel 瀏覽資料，因為您可以快速建立一個可讓您與資料互動的樞紐分析報表。  
   
 或者，您可以使用內建到 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的內建 MDX 查詢設計工具來瀏覽資料。 查詢設計工具會傳回相同的資料，但以一般資料列集呈現的資料除外。  
   
@@ -72,13 +72,13 @@ Analysis Services 多維度模型使用您從關聯式資料庫管理系統匯�
   
 2.  在 Management Studio 中，連接到 Database Engine 執行個體。  
   
-3.  展開 [安全性] 資料夾，以滑鼠右鍵按一下 [登入]，然後選取 [新增登入]。  
+3.  展開 [安全性] 資料夾，以滑鼠右鍵按一下 [登入]，然後選取 [新增登入]  。  
   
 4.  在 [一般] 頁面的 [登入名稱] 中，輸入 **NT Service\MSSQLServerOLAPService** (或執行服務所使用的帳戶)。  
   
-5.  按一下 [使用者對應]。  
+5.  按一下 [使用者對應]  。  
   
-6.  選取此核取方塊旁**AdventureWorksDW**資料庫。 角色成員資格應該會自動包含 **db_datareader** 和 **public**。 按一下 [確定]，接受預設值。  
+6.  選取此核取方塊旁**AdventureWorksDW**資料庫。 角色成員資格應該會自動包含 **db_datareader** 和 **public**。 按一下 [確定]  ，接受預設值。  
   
 ## <a name="step-5-install-projects"></a>步驟 5：安裝專案  
 
@@ -90,15 +90,15 @@ Analysis Services 多維度模型使用您從關聯式資料庫管理系統匯�
   
 2.  將 .zip 檔案移至根磁碟機的正下方資料夾 (例如 C:\Tutorial)。 此步驟中可以降低 「 路徑太長 」 錯誤，有時候就會發生，如果您嘗試解壓縮 [下載] 資料夾中的檔案。  
   
-3.  解壓縮範例專案、以滑鼠右鍵按一下該檔案，然後選取 [全部解壓縮]。 之後將檔案解壓縮，您應該會有資料夾第 1 課 2、 3、 5、 6、 7、 8、 9、 10 完成和 Lesson 4 Start。 
+3.  解壓縮範例專案、以滑鼠右鍵按一下該檔案，然後選取 [全部解壓縮]  。 之後將檔案解壓縮，您應該會有資料夾第 1 課 2、 3、 5、 6、 7、 8、 9、 10 完成和 Lesson 4 Start。 
   
-4.  移除這些檔案的唯讀權限。 以滑鼠右鍵按一下父資料夾中，選取**屬性**，並清除的核取方塊**唯讀**。 按一下 [確定] 。 將變更套用到此資料夾、子資料夾和檔案。  
+4.  移除這些檔案的唯讀權限。 以滑鼠右鍵按一下父資料夾中，選取**屬性**，並清除的核取方塊**唯讀**。 按一下 [確定]  。 將變更套用到此資料夾、子資料夾和檔案。  
 
 5.  開啟對應於您是在本課程的方案 (.sln) 檔案。 例如，在名為 "Lesson 1 Complete" 的資料夾中，您會開啟 Analysis Services Tutorial.sln 檔案。  
   
 6.  部署解決方案，以驗證的資料庫權限和伺服器位置資訊已正確設定。  
   
-    如果 Analysis Services 和 Database Engine 是當做預設執行個體 (MSSQLServer) 安裝，而且所有軟體都在相同的電腦上執行，則您可以按一下 [組建] 功能表上的 [部署方案]，以建立範例專案，並將其部署至本機 Analysis Services 執行個體。 在部署期間，資料處理 （或匯入） 從**AdventureWorksDW**本機 Database Engine 執行個體上的資料庫。 包含從 Database Engine 擷取的資料的 Analysis Services 執行個體上建立新的 Analysis Services 資料庫。  
+    如果 Analysis Services 和 Database Engine 是當做預設執行個體 (MSSQLServer) 安裝，而且所有軟體都在相同的電腦上執行，則您可以按一下 [組建] 功能表上的 [部署方案]  ，以建立範例專案，並將其部署至本機 Analysis Services 執行個體。 在部署期間，資料處理 （或匯入） 從**AdventureWorksDW**本機 Database Engine 執行個體上的資料庫。 包含從 Database Engine 擷取的資料的 Analysis Services 執行個體上建立新的 Analysis Services 資料庫。  
   
     如果出現錯誤，請檢閱先前有關設定資料庫權限的步驟。 另外，您可能也需要變更伺服器名稱。 預設伺服器名稱為 localhost。 如果您的伺服器是安裝在遠端電腦上，或是安裝成具名執行個體，則必須覆寫預設值，改為使用對您的安裝有效的伺服器名稱。 此外，如果伺服器位於遠端電腦上，您可能需要設定 Windows 防火牆，以允許存取伺服器。  
   

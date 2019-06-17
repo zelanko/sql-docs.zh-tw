@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e08be032df493913cc6cebf5ae29d583f26c86ba
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096544"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>對 Windows Token 服務 (C2WTS) 和 Reporting Services 的宣告
@@ -54,7 +54,7 @@ ms.locfileid: "66096544"
   
      您用於 c2WTS 的帳戶也必須設有通訊協定轉換之限制委派設定，且需要委派給它，才能與 （也就是 SQL Server 引擎、 SQL Server Analysis Services） 進行通訊之服務的權限。若要設定委派，您可以使用 Active Directory 使用者和電腦嵌入式管理單元。  
   
-    1.  以滑鼠右鍵按一下各服務帳戶，以開啟屬性對話方塊。 按一下對話方塊中的 [委派] 索引標籤。  
+    1.  以滑鼠右鍵按一下各服務帳戶，以開啟屬性對話方塊。 按一下對話方塊中的 [委派]  索引標籤。  
   
         > [!NOTE]  
         >  注意：物件必須指派有 SPN，才會顯示委派索引標籤。 c2WTS 不需要 c2WTS 帳戶的 SPN，但無 SPN，**委派** 索引標籤就不會顯示。 另一種設定限制委派的方法是使用 **ADSIEdit**這類的公用程式。  
@@ -96,7 +96,7 @@ ms.locfileid: "66096544"
   
     2.  將啟動類型變更為 「**自動**」 並啟動服務。  
   
-4.  啟動 SharePoint 對 Windows Token Service 的宣告':從 [管理伺服器上的服務] 上的 SharePoint 管理中心啟動對 Windows Token 服務的宣告。 您應在要執行動作的伺服器上啟動該服務。 例如您有一部 WFE 伺服器及另一部執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共用服務的應用程式伺服器，就只需在應用程式伺服器上啟動 c2WTS。 WFE 並不需要 c2WTS。  
+4.  啟動 SharePoint 對 Windows Token Service 的宣告':從 [管理伺服器上的服務]  上的 SharePoint 管理中心啟動對 Windows Token 服務的宣告。 您應在要執行動作的伺服器上啟動該服務。 例如您有一部 WFE 伺服器及另一部執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共用服務的應用程式伺服器，就只需在應用程式伺服器上啟動 c2WTS。 WFE 並不需要 c2WTS。  
   
 ## <a name="see-also"></a>另請參閱  
  [宣告對 Windows Token Service (c2WTS) 概觀 （ https://msdn.microsoft.com/library/ee517278.aspx)](https://msdn.microsoft.com/library/ee517278.aspx)   

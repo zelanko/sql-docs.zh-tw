@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2df7517a8043269efe40d21b112100edaf9e847f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489450"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>工作 4：管理和檢視結果
@@ -52,7 +52,7 @@ ms.locfileid: "65489450"
   
     1.  請注意， **A.Datum Corp.** 更正為**A.Datum Corporation**並**原因**設為**詞彙為主的關聯。A.datum Corporation**是 DQS 已知的定義域值，因為它已在知識探索程序期間探索到。 因此，DQS 就**100%的信心**這項更正。  
   
-    2.  請注意， **Lazy Country Storex**更正為**Lazy Country Store**，**信心層級**設定為**100%**，以及**原因**設定為**定義域值**。 在您設定在知識探索程序期間**Lazy Country Storex**為錯誤而**Lazy Country Store**作為**更正**，因此，DQS **100%有信心**有關進行這項更正。  
+    2.  請注意， **Lazy Country Storex**更正為**Lazy Country Store**，**信心層級**設定為**100%** ，以及**原因**設定為**定義域值**。 在您設定在知識探索程序期間**Lazy Country Storex**為錯誤而**Lazy Country Store**作為**更正**，因此，DQS **100%有信心**有關進行這項更正。  
   
     3.  DQS 不熟悉的其他值，在清單中，但它找到使用這些值的更正**拼字檢查工具**以及建議適當的修正。 DQS 是**不是 100%** 十分熟悉這些修正，但信心層級高於 80%，也就是進行修正，因此 DQS 提議更正的臨界值層級。  
   
@@ -87,6 +87,6 @@ ms.locfileid: "65489450"
 25. 按一下 **下一步**轉為**匯出**頁面。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 5:匯出清理結果到 Excel 檔案](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
+ [工作 5：匯出清理結果到 Excel 檔案](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 678a7d6ce075e6a1082856aa7962bb3f6eec522d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489712"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>第 4 課：在 MDS 中儲存供應商資料
@@ -49,6 +49,6 @@ ms.locfileid: "65489712"
 8.  建立及使用衍生的階層之間的網域屬性關聯性**供應商**實體並**狀態**實體 （Supplier 實體的 State 屬性為 State 實體的類型) 使用**主資料管理員**。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 1:建立使用主資料管理員的供應商模型](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
+ [工作 1：建立使用主資料管理員的供應商模型](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
   
   

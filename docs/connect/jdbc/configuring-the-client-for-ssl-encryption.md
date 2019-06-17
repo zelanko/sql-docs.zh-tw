@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d80c9d8103e7a0a0eeea766487e1fc013ae5e100
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9f5ec4a56beb5595353671c0f2aab18bf30e5f87
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726626"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797466"
 ---
 # <a name="configuring-the-client-for-ssl-encryption"></a>設定 SSL 加密的用戶端
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -66,7 +66,7 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
   
  此範例使用名稱為 "caCert.cer" 的檔案當做憑證檔案。 您必須從伺服器取得此憑證檔案。 下列步驟說明如何將伺服器憑證匯出到檔案：  
   
-1.  按一下 [開始]、[執行]，然後輸入 MMC  (MMC 是 Microsoft Management Console 的縮寫字)。  
+1.  按一下 [開始]、[執行]，然後輸入 MMC (MMC 是 Microsoft Management Console 的縮寫字)。  
   
 2.  在 MMC 中，開啟 [憑證]。  
   

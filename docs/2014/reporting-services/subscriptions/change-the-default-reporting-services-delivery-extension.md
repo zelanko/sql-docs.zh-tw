@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5f7b7b6e12e6905492a1ea7d48a75ebc6be0e689
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101034"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>變更預設 Reporting Services 傳遞延伸模組
@@ -96,7 +96,7 @@ ms.locfileid: "66101034"
   
 #### <a name="configure-the-default-delivery-extension"></a>設定預設傳遞延伸模組  
   
-1.  開啟 **[SharePoint 管理命令介面]**。  
+1.  開啟 **[SharePoint 管理命令介面]** 。  
   
 2.  如果您已知道 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務應用程式的名稱，您可以略過此步驟。 使用下列 PowerShell，列出您 SharePoint 伺服器陣列中的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務應用程式。  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 356ad7ed670ee13bbc6b4e2d7a86cb6095e79e10
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108400"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>第 7 課：在父報表上新增鑽研動作
@@ -28,9 +28,9 @@ ms.locfileid: "66108400"
   
 3.  以滑鼠右鍵按一下 [] 文字方塊中，然後按一下**文字方塊內容**。  
   
-4.  移至 [動作] 索引標籤，然後選取 [移至報表] 選項。  
+4.  移至 [動作]  索引標籤，然後選取 [移至報表]  選項。  
   
-5.  在 [指定報表] 區段中輸入子報表的名稱。  
+5.  在 [指定報表]  區段中輸入子報表的名稱。  
   
 6.  按一下 **新增**下方**使用這些參數執行報表**一節。  
   

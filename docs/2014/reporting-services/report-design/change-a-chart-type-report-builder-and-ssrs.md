@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e20363b7d26b2b668ca52d44615488e06573f730
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106381"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>變更圖表類型 (報表產生器及 SSRS)
@@ -29,12 +29,12 @@ ms.locfileid: "66106381"
   
 ### <a name="to-change-the-chart-type"></a>變更圖表類型  
   
-1.  在 [設計] 檢視中，以滑鼠右鍵按一下圖表，然後按一下 [變更圖表類型]。  
+1.  在 [設計] 檢視中，以滑鼠右鍵按一下圖表，然後按一下 [變更圖表類型]  。  
   
     > [!NOTE]  
     >  當圖表上有多個數列時，您必須以滑鼠右鍵按一下您想要變更的數列，而非圖表。  
   
-2.  在 [選取圖表類型] 對話方塊中，從清單中選取圖表類型。  
+2.  在 [選取圖表類型]  對話方塊中，從清單中選取圖表類型。  
   
 ## <a name="see-also"></a>另請參閱  
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   

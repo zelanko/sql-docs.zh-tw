@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8d8e6a882899993ef91659d44456ca95fbb19094
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478897"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>以電子郵件傳送捷徑查詢檔案 (適用於 Excel 的 MDS 增益集)
@@ -31,7 +31,7 @@ ms.locfileid: "65478897"
   
 1.  確定工作表中的資料是使用您想要共用的格式。 如需有關篩選的資料和重新排序資料行的詳細資訊，請參閱 <<c0> [ 載入之前篩選資料&#40;MDS 增益集適用於 Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md)並[重新排序資料行&#40;MDS 增益集適用於 Excel&#41; ](reorder-columns-mds-add-in-for-excel.md).</c0>  
   
-2.  在 [儲存和傳送] 群組中，按一下 [傳送查詢]。 隨即開啟電子郵件，並附加捷徑查詢檔案。  
+2.  在 [儲存和傳送]  群組中，按一下 [傳送查詢]  。 隨即開啟電子郵件，並附加捷徑查詢檔案。  
   
 ## <a name="next-steps"></a>後續步驟  
   

@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21303e8b4fbf6f1d03fa2487a31457355febc2a7
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487449"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>使用精靈建立模型部署封裝
@@ -31,7 +31,7 @@ ms.locfileid: "65487449"
 ## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中，您必須擁有存取 [系統管理] 功能區域的權限。  
+-   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中，您必須擁有存取 [系統管理]  功能區域的權限。  
   
 -   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
@@ -39,17 +39,17 @@ ms.locfileid: "65487449"
   
 ### <a name="to-create-a-model-deployment-package"></a>若要建立模型部署封裝  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 [模型檢視] 頁面上，從功能表列指向 [系統]，然後按一下 [部署]。  
+2.  在 [模型檢視]  頁面上，從功能表列指向 [系統]  ，然後按一下 [部署]  。  
   
-3.  按一下 [模型部署精靈] 上的 [建立]。  
+3.  按一下 [模型部署精靈]  上的 [建立]  。  
   
-4.  在 [建立封裝] 頁面上，選取 [模型] 清單中的模型。  
+4.  在 [建立封裝]  頁面上，選取 [模型]  清單中的模型。  
   
-5.  按一下 [下一步] 。  
+5.  按一下 [下一步]  。  
   
-6.  按一下 [下載]。  
+6.  按一下 [下載]  。  
   
 7.  儲存檔案。  
   

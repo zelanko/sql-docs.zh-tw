@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 459d0160e9977ed58ebafe5feb9e58eaa5939f72
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488379"
 ---
 # <a name="task-2-adding-domain-values-manually"></a>工作 2：手動新增定義域值
@@ -33,6 +33,6 @@ ms.locfileid: "65488379"
      ![定義域值的 United States](../../2014/tutorials/media/et-addingdomainvaluesmanually-02.jpg "United States 的定義域值")  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 3:從 Excel 檔案匯入定義域值](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
+ [工作 3：從 Excel 檔案匯入定義域值](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
   
   

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f9f6eff58d5d9c536dd6c6c9f40d389bab1532e3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101785"
 ---
 # <a name="predefined-roles"></a>Predefined Roles
@@ -28,7 +28,7 @@ ms.locfileid: "66101785"
   
 1.  檢閱預先定義的角色來判斷您是否能夠依原狀使用它們。 如果您需要調整工作或定義其他角色，就應該先進行這些作業，然後再指派使用者至特定角色。  
   
-2.  確認哪些使用者和群組需要存取報表伺服器，以及所存取的層級。 多數使用者都應指派至 **[瀏覽者]** 角色或 **[報表產生器]** 角色。 **[發行者]** 角色則應指派給較少數的使用者。 只有非常少數的使用者才應指派至 **[內容管理員]**。  
+2.  確認哪些使用者和群組需要存取報表伺服器，以及所存取的層級。 多數使用者都應指派至 **[瀏覽者]** 角色或 **[報表產生器]** 角色。 **[發行者]** 角色則應指派給較少數的使用者。 只有非常少數的使用者才應指派至 **[內容管理員]** 。  
   
 3.  當您準備要將使用者和群組帳戶指派至特定角色時，請使用報表管理員。 如需這些預先定義角色的詳細資訊，請參閱 [將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](grant-user-access-to-a-report-server.md)。  
   

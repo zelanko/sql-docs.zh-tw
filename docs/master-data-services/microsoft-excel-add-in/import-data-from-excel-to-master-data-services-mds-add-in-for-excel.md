@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c134a2e540fd597c36f07bc312e2f67a73e07d28
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65476965"
 ---
 # <a name="import-data-from-excel-to-master-data-services-mds-add-in-for-excel"></a>將資料從 Excel 匯入 Master Data Services (適用於 Excel 的 MDS 增益集)
@@ -39,16 +39,16 @@ ms.locfileid: "65476965"
   
 ### <a name="to-publish-data-to-the-mds-repository"></a>若要將資料發行至 MDS 儲存機制  
   
-1.  按一下 [發行和驗證] 群組中的 [發行]。  
+1.  按一下 [發行和驗證]  群組中的 [發行]  。  
   
-2.  選擇性。 如果顯示 [發行並註解] 對話方塊，請選擇要針對所有更新共用相同的註解，還是個別註解每個變更。  
+2.  選擇性。 如果顯示 [發行並註解]  對話方塊，請選擇要針對所有更新共用相同的註解，還是個別註解每個變更。  
   
-3.  選擇性。 選取 [不要再顯示這個對話方塊] 核取方塊。 未來，您隨時都可以透過選擇 [設定] 並選取 [發行時顯示發行和註解對話方塊] 核取方塊，顯示此對話方塊。  
+3.  選擇性。 選取 [不要再顯示這個對話方塊]  核取方塊。 未來，您隨時都可以透過選擇 [設定]  並選取 [發行時顯示發行和註解對話方塊]  核取方塊，顯示此對話方塊。  
   
-4.  按一下 [發行]。  
+4.  按一下 [發行]  。  
   
 > [!NOTE]  
->  如果您要將新的成員 (資料列) 加入至工作表，但是無法順利將它們發行至 MDS 儲存機制，表示您可能沒有工作表中所有屬性的 [更新] 權限。 在 [檢閱] 索引標籤上，按一下 [變更] 群組中的 [取消保護工作表]，再次嘗試發行。  
+>  如果您要將新的成員 (資料列) 加入至工作表，但是無法順利將它們發行至 MDS 儲存機制，表示您可能沒有工作表中所有屬性的 [更新]  權限。 在 [檢閱]  索引標籤上，按一下 [變更]  群組中的 [取消保護工作表]  ，再次嘗試發行。  
   
 ## <a name="next-steps"></a>後續步驟  
  [套用商務規則 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)  

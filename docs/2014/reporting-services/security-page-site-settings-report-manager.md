@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6c0b0cc68c73c66dabb237d859aba641fb234647
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102174"
 ---
 # <a name="security-page-site-settings-report-manager"></a>安全性頁面 (站台設定， 報表管理員)
@@ -31,7 +31,7 @@ ms.locfileid: "66102174"
   
 1.  開啟報表管理員。  
   
-2.  在頁面的頂端，按一下 **[站台設定]**。 這樣就會開啟該站台的 [一般] 屬性頁面。  
+2.  在頁面的頂端，按一下 **[站台設定]** 。 這樣就會開啟該站台的 [一般] 屬性頁面。  
   
 3.  選取 **[安全性]** 索引標籤。  
   

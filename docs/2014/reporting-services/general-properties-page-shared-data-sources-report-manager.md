@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1de9a0091fa072fccea4825d31deb50463f6cd8c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109080"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>一般屬性頁面、共用資料來源 (報表管理員)
@@ -29,7 +29,7 @@ ms.locfileid: "66109080"
   
 2.  將滑鼠停留在該資料來源上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該共用資料來源的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該共用資料來源的 [一般] 屬性頁面。  
   
 ## <a name="options"></a>選項。  
  **名稱**  

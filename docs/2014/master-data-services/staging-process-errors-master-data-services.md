@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 65de28bcf880fab6dc0546c5ed4c315978ad39f4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478796"
 ---
 # <a name="staging-process-errors-master-data-services"></a>暫存處理序錯誤 (Master Data Services)
@@ -38,8 +38,8 @@ ms.locfileid: "65478796"
 |210011|當 **RelationshipType** 為 **1**時， **ParentCode** 不可以是分葉成員。|確定 **ParentCode** 值是合併成員的代碼。|關聯性|  
 |210015|在階層或批次的暫存資料表中，此成員代碼出現多次。|若為明確階層，則您在相同的批次中多次指定了相同成員的位置。|關聯性|  
 |210016|無法建立關聯性，因為它會造成循環參考。|當您嘗試將子項指派為父項時，就會發生這個問題。|關聯性|  
-|210046|成員不可以是 [根] 的同層級。|當 **RelationshipType** = **2** (同層級)，且 **ParentCode** 或 **ChildCode** 為 [根] 時，就會發生這個問題。 成員不得與根節點位於相同層級；它們僅能為子系。|關聯性|  
-|210047|成員不可以是 [未使用] 的同層級。|當 **RelationshipType** = **2** (同層級)，且 **ParentCode** 或 **ChildCode** 為 [未使用] 時，就會發生這個問題。 成員只能是 [未使用] 節點的子項。|關聯性|  
+|210046|成員不可以是 [根] 的同層級。|當 **RelationshipType** = **2** (同層級)，且 **ParentCode** 或 **ChildCode** 為 [根]  時，就會發生這個問題。 成員不得與根節點位於相同層級；它們僅能為子系。|關聯性|  
+|210047|成員不可以是 [未使用] 的同層級。|當 **RelationshipType** = **2** (同層級)，且 **ParentCode** 或 **ChildCode** 為 [未使用]  時，就會發生這個問題。 成員只能是 [未使用] 節點的子項。|關聯性|  
 |210048|**ParentCode** 與 **ChildCode** 不可以相同。|**ParentCode** 值與 **ChildCode** 值相同。 這些值都必須不同。|關聯性|  
   
 ## <a name="see-also"></a>另請參閱  

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ea4397bddf9ab1c08c099df4c473a5e43c54c9ec
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489072"
 ---
 # <a name="task-4-setting-domain-rules"></a>工作 4：設定定義域規則
@@ -56,9 +56,9 @@ ms.locfileid: "65489072"
   
      ![測試定義域規則結果](../../2014/tutorials/media/et-settingdomainrules-06.jpg "測試定義域規則結果")  
   
-13. 按一下 **關閉 **以關閉**測試定義域規則** 對話方塊。  
+13. 按一下 **關閉** 以關閉**測試定義域規則** 對話方塊。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 5:設定以詞彙為主的關聯性](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
+ [工作 5：設定以詞彙為主的關聯性](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
   
   

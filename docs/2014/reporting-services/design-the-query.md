@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f09964013bdc8675e5d4701bd86421317c33fc97
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109289"
 ---
 # <a name="design-the-query"></a>設計查詢
@@ -29,7 +29,7 @@ ms.locfileid: "66109289"
  輸入查詢，以擷取要在報表中使用的資料。  
   
  **查詢產生器**  
- 按一下 [查詢產生器] 即可為資料來源開啟查詢設計工具，或從其他報表匯入查詢。  
+ 按一下 [查詢產生器]  即可為資料來源開啟查詢設計工具，或從其他報表匯入查詢。  
   
  如需有關查詢設計工具的詳細資訊，請參閱＜ [Reporting Services Query Designers](../../2014/reporting-services/reporting-services-query-designers.md)＞。  
   

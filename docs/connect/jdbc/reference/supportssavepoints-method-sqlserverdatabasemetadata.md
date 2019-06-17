@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: cd2418c9-e95d-4820-82bd-944287387b60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e74ea8eb858f2ee7651d1539f2e0580aee99ddb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a23a3487b759392329ba22284fba532d797ca53a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759336"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797374"
 ---
 # <a name="supportssavepoints-method-sqlserverdatabasemetadata"></a>supportsSavepoints 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

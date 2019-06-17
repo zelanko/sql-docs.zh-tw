@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dce53a4b4ae5a64a898eec2b30921fe7a7f2e242
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404250"
 ---
 # <a name="lesson-10-create-partitions"></a>第 10 課：建立資料分割
@@ -76,7 +76,7 @@ ms.locfileid: "65404250"
   
     這個陳述式會指定資料分割應包含 OrderDate 為 2010 日曆年度之資料列中的所有資料，如 WHERE 子句中所指定。  
   
-6.  按一下 **[驗證]**。  
+6.  按一下 **[驗證]** 。  
   
   
 #### <a name="to-create-a-partition-for-the-2011-year"></a>建立 2011 年的資料分割  
@@ -133,13 +133,13 @@ ms.locfileid: "65404250"
   
 3.  在 [處理資料分割] 對話方塊中，確認**模式**設為**處理預設**。  
   
-4.  在 [處理] 資料行中選取您所建立的五個資料分割各自的核取方塊，然後按一下 [確定]。  
+4.  在 [處理]  資料行中選取您所建立的五個資料分割各自的核取方塊，然後按一下 [確定]  。  
 
     ![as-tabular-lesson10-process-partitions](media/as-tabular-lesson10-process-partitions.png)
   
     如果系統提示您輸入模擬認證時，輸入 Windows 使用者名稱和您在第 2 課中指定的密碼。  
   
-    [資料處理] 對話方塊隨即出現，並顯示每個資料分割的處理詳細資料。 您會發現每個資料分割傳送了不同數目的資料列。 這是因為每個資料分割只包含 SQL 陳述式中的 WHERE 子句所指定年度的資料列。 處理完成時，請繼續並關閉 [資料處理] 對話方塊。  
+    [資料處理]  對話方塊隨即出現，並顯示每個資料分割的處理詳細資料。 您會發現每個資料分割傳送了不同數目的資料列。 這是因為每個資料分割只包含 SQL 陳述式中的 WHERE 子句所指定年度的資料列。 處理完成時，請繼續並關閉 [資料處理] 對話方塊。  
   
     ![as-tabular-lesson10-process-complete](media/as-tabular-lesson10-process-complete.png)
   

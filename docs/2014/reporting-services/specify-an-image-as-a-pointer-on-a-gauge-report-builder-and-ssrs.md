@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c7a57987a5d1cd0ac7984db3b716521d9c7a09af
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101151"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>將影像指定為量測計的指標 (報表產生器及 SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66101151"
   
 2.  （選擇性）如果在量測計上不存在任何指標，以滑鼠右鍵按一下量測計，然後選取**加入指標**。 指標就會加入至量測計。  
   
-3.  按一下 **插入**功能區上索引標籤，然後按兩下影像圖示。 [影像屬性] 對話方塊隨即開啟。  
+3.  按一下 **插入**功能區上索引標籤，然後按兩下影像圖示。 [影像屬性]  對話方塊隨即開啟。  
   
 4.  將影像加入至報表。 如需詳細資訊，請參閱 <<c0> [ 將影像內嵌在報表中&#40;報表產生器及 SSRS&#41;](report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)。</c0>  
   

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f96ab2cb9c2076d36ae36d3aa3358ae4886a1b23
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483436"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
@@ -39,19 +39,19 @@ ms.locfileid: "65483436"
   
 2.  從 **[版本]** 清單中選取版本。  
   
-3.  按一下 **[總管]**。  
+3.  按一下 **[總管]** 。  
   
 4.  從功能表列指向 **[階層]** ，然後按一下要加入合併成員的階層名稱。  
   
 5.  在方格上方，選取 **[合併成員]** 或 **[階層中的所有合併成員]** 選項。  
   
-6.  按一下 **[新增]**。  
+6.  按一下 **[新增]** 。  
   
 7.  填完右邊窗格中的欄位。  
   
 8.  選擇性。 在 **[註解]** 方塊中，輸入有關加入此成員之原因的註解。 可存取成員的所有使用者都可以檢視註解。  
   
-9. 按一下 [確定] 。  
+9. 按一下 [確定]  。  
   
 ## <a name="next-steps"></a>後續步驟  
   

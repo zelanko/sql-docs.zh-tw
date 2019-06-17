@@ -22,10 +22,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a52ce206eee69fa585a72788e46f8f7174d936a8
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980821"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>使用 targetNamespace 屬性來指定目標命名空間 (SQLXML 4.0)
@@ -38,7 +38,7 @@ ms.locfileid: "65980821"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-a-target-namespace"></a>A. 指定目標命名空間  
- 下列 XSD 結構描述使用指定的目標命名空間**xsd: targetnamespace**屬性。 結構描述也會設定**elementFormDefault**並**attributeFormDefault**屬性的值即可 **"unqualified"** （這些屬性的預設值）。 這是全域宣告，而且會影響所有本機元素 (**\<順序 >** 結構描述中) 和屬性 (**CustomerID**， **ContactName**，以及**OrderID**結構描述中)。  
+ 下列 XSD 結構描述使用指定的目標命名空間**xsd: targetnamespace**屬性。 結構描述也會設定**elementFormDefault**並**attributeFormDefault**屬性的值即可 **"unqualified"** （這些屬性的預設值）。 這是全域宣告，而且會影響所有本機元素 ( **\<順序 >** 結構描述中) 和屬性 (**CustomerID**， **ContactName**，以及**OrderID**結構描述中)。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -78,7 +78,7 @@ ms.locfileid: "65980821"
   
  在此結構描述中：  
   
--   **CustomerType**並**OrderType**型別宣告是全域的因此會包含在結構描述的目標命名空間中。 如此一來，當這些型別中所參考的宣告**\<客戶 >** 項目及其**\<順序 >** 子元素，指定前置詞相關聯具有目標命名空間中。  
+-   **CustomerType**並**OrderType**型別宣告是全域的因此會包含在結構描述的目標命名空間中。 如此一來，當這些型別中所參考的宣告 **\<客戶 >** 項目及其 **\<順序 >** 子元素，指定前置詞相關聯具有目標命名空間中。  
   
 -   **\<客戶 >** 因為它是結構描述中的全域項目，在結構描述的目標命名空間也包含項目。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "65980821"
   </ROOT>  
 ```  
   
- 這個執行個體文件定義 urn: MyNamespace 的命名空間，並將相關聯的前置詞 (y0) 它。 前置詞只會套用至**\<客戶 >** 全域項目。 (此元素為全域的因為它被宣告為子系 **\<2&gt;xsd:schema&lt;2} >** 結構描述中的項目。)  
+ 這個執行個體文件定義 urn: MyNamespace 的命名空間，並將相關聯的前置詞 (y0) 它。 前置詞只會套用至 **\<客戶 >** 全域項目。 (此元素為全域的因為它被宣告為子系 **\<2&gt;xsd:schema&lt;2} >** 結構描述中的項目。)  
   
  前置詞不會套用到本機元素和屬性因為值**elementFormDefault**並**attributeFormDefault**屬性設為 **"unqualified"** 結構描述中。 請注意， **\<順序 >** 項目是本機的因為它的宣告會顯示為子系 **\<complexType >** 項目，定義 **\<CustomerType >** 項目。 同樣地，屬性 (**CustomerID**， **OrderID**，並**ContactName**) 是本機，而非全域。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "65980821"
     </ROOT>  
     ```  
   
-     在範本中的 XPath 查詢會傳回**\<客戶 >** CustomerID 為 1 的客戶的項目。 請注意，XPath 查詢會針對此查詢中的元素 (而不是屬性) 來指定命名空間前置詞  (如同結構描述中所指定，本機屬性並未限定)。  
+     在範本中的 XPath 查詢會傳回 **\<客戶 >** CustomerID 為 1 的客戶的項目。 請注意，XPath 查詢會針對此查詢中的元素 (而不是屬性) 來指定命名空間前置詞 (如同結構描述中所指定，本機屬性並未限定)。  
   
      針對對應結構描述 (targetNamespace.xml) 所指定的目錄路徑相對於儲存範本的目錄。 您也可以指定絕對路徑，例如：  
   
@@ -132,7 +132,7 @@ ms.locfileid: "65980821"
   
      如需詳細資訊，請參閱 [使用ADO執行SQLXML查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
- 如果指定了結構描述**elementFormDefault**並**attributeFormDefault**屬性值 **"qualified"**，執行個體文件將會擁有所有的本機限定的項目和屬性。 您可以變更要包含這些屬性在先前的結構描述 **\<2&gt;xsd:schema&lt;2} >** 項目，再重新執行範本。 因為這些屬性現在也會在此執行個體中限定，所以 XPath 查詢將會變更為可包含命名空間前置詞。  
+ 如果指定了結構描述**elementFormDefault**並**attributeFormDefault**屬性值 **"qualified"** ，執行個體文件將會擁有所有的本機限定的項目和屬性。 您可以變更要包含這些屬性在先前的結構描述 **\<2&gt;xsd:schema&lt;2} >** 項目，再重新執行範本。 因為這些屬性現在也會在此執行個體中限定，所以 XPath 查詢將會變更為可包含命名空間前置詞。  
   
  這是修改過的 XPath 查詢：  
   

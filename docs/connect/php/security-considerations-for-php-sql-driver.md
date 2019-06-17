@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 501eb13a137b82adad1190f990d29760c43119b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 50c0d6bf2b9c413e6085451383f2ae4a6791442a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622356"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797055"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>安全性考量的 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47622356"
   
 如需如何使用 Windows 驗證連接到伺服器的相關資訊，請參閱 [如何：使用 Windows 驗證進行連接](../../connect/php/how-to-connect-using-windows-authentication.md)。  
   
-當您使用 Windows 驗證進行連接時，建議您設定您的環境，讓 SQL Server 可以使用 Kerberos 驗證通訊協定。 如需詳細資訊，請參閱[對 SQL Server 2005 的執行個體建立遠端連線時如何確實使用 Kerberos 驗證](https://support.microsoft.com/en-ca/help/909801/how-to-make-sure-that-you-are-using-kerberos-authentication-when-you-c)或 [Kerberos 驗證和 SQL Server](https://msdn.microsoft.com/library/cc280744.aspx)。  
+當您使用 Windows 驗證進行連接時，建議您設定您的環境，讓 SQL Server 可以使用 Kerberos 驗證通訊協定。 如需詳細資訊，請參閱 [對 SQL Server 2005 的執行個體建立遠端連接時如何確實使用 Kerberos 驗證](https://support.microsoft.com/en-ca/help/909801/how-to-make-sure-that-you-are-using-kerberos-authentication-when-you-c) 或 [Kerberos 驗證和 SQL Server](https://msdn.microsoft.com/library/cc280744.aspx)。  
   
 ## <a name="use-encrypted-connections-when-transferring-sensitive-data"></a>在傳送敏感性資料時使用加密連接  
 在每次要對 SQL Server 傳送或擷取敏感性資料時，均應使用加密連接。 如需如何啟用加密連線的資訊，請參閱[如何啟用 Database Engine 的加密連線 (SQL Server 設定管理員)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。 若要使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]建立安全連接，請在連接到伺服器時使用 Encrypt 連接屬性。 如需連接屬性的詳細資訊，請參閱 [Connection Options](../../connect/php/connection-options.md)。  
@@ -42,7 +42,7 @@ ms.locfileid: "47622356"
 ## <a name="use-parameterized-queries"></a>使用參數化查詢  
 使用參數化查詢，可降低 SQL 資料隱碼攻擊的風險。 如需執行參數化查詢的範例，請參閱 [How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md)。  
   
-如需 SQL 插入式攻擊和相關安全性考量的詳細資訊，請參閱 [SQL 插入式攻擊](https://msdn.microsoft.com/library/ms161953.aspx)。  
+如需 SQL 資料隱碼攻擊和相關安全性考量的詳細資訊，請參閱 [SQL 資料隱碼](https://msdn.microsoft.com/library/ms161953.aspx)。  
   
 ## <a name="do-not-accept-server-or-connection-string-information-from-end-users"></a>不接受來自一般使用者的伺服器或連接字串資訊  
 所撰寫的應用程式，應讓使用者無法將伺服器或連接字串資訊提交至應用程式。 對伺服器和連接字串資訊保有嚴格的控制，能夠減少惡意活動的接觸區域。  

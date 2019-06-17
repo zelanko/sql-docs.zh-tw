@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d9f5c70e0457009f71c3b9087ecf9f1354a8835
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106931"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 連接類型 (SSRS)
@@ -128,7 +128,7 @@ ms.locfileid: "66106931"
 ##  <a name="Parameters"></a> 參數  
  系統不會分析查詢來識別參數。  
   
- 若要加入參數，您必須透過 [[資料集屬性](../dataset-properties-dialog-box-parameters-report-builder.md)] 對話方塊上的 [參數] 頁面手動建立參數。  
+ 若要加入參數，您必須透過 [[資料集屬性](../dataset-properties-dialog-box-parameters-report-builder.md)] 對話方塊上的 [參數]  頁面手動建立參數。  
   
 ##  <a name="Remarks"></a> 備註  
  XML 資料延伸模組支援從表格式而非階層式 XML 資料進行報告的功能。 如需詳細資訊，請參閱[從外部資料來源新增資料 &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)。  

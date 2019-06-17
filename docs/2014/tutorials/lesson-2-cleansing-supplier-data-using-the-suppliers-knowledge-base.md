@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b99676a9f51bf76dc9db294365a5a628dd25fa2e
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488477"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>第 2 課：使用供應商知識庫清理供應商資料
@@ -43,6 +43,6 @@ ms.locfileid: "65488477"
 6.  清理專案值匯網域來增強知識庫中的知識與新的規則、 值、 更正等...  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 1:建立資料品質專案](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  
+ [工作 1：建立資料品質專案](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  
   
   

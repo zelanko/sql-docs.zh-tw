@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8587cedde63352f7027e573092c6e8ae02dc218d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 7acbf53f3a77252d00d3ad5de65ffb221afe3b7a
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580116"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499890"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地圖精靈與地圖圖層精靈 (報表產生器及 SSRS)
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，[地圖精靈] 與 [地圖圖層精靈] 會將建立地圖、加入地圖圖層，或變更現有圖層上之地圖圖層選項的程序自動化。  
@@ -36,7 +36,7 @@ ms.locfileid: "65580116"
   
 -   當您第一次開啟報表產生器時，請在設計介面的中央按一下 **[地圖]** 精靈圖示。  
   
--   在 **[插入]** 索引標籤上，按一下 **[地圖]**，然後按一下 **[地圖精靈]**。  
+-   在 **[插入]** 索引標籤上，按一下 **[地圖]** ，然後按一下 **[地圖精靈]** 。  
   
  若要開啟「地圖圖層精靈」，請進行下列動作：  
   
@@ -106,7 +106,7 @@ ms.locfileid: "65580116"
  您可以在每個圖層上使用空間資料的相同來源或不同來源，但是您必須指定每次您加入圖層時的來源。 當空間資料來自地圖庫或 ESRI 形狀檔時，空間資料來源不是個別的報表項目， 因此不會出現在 [報表資料] 窗格中。  
   
 ###  <a name="SpatialData"></a> 何謂空間資料？  
- 空間資料包含可定義地理或幾何元素的座標軸。 在地圖中，空間資料會定義 *「地圖元素」*(Map Element)：定義區域或形狀的多邊形、定義路線或路徑的線條，以及定義標記或圖釘的點。 空間資料會以二進位格式儲存在資料來源中，並指定為座標位置組。 例如，點是 X 和 Y 座標 (X Y)、線條是兩組座標位置 ((X1 Y1), (X2 Y2))、多邊形是四組以上的座標位置，其中第一組和最後一組座標位置相同 ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1))。  
+ 空間資料包含可定義地理或幾何元素的座標軸。 在地圖中，空間資料會定義 *「地圖元素」* (Map Element)：定義區域或形狀的多邊形、定義路線或路徑的線條，以及定義標記或圖釘的點。 空間資料會以二進位格式儲存在資料來源中，並指定為座標位置組。 例如，點是 X 和 Y 座標 (X Y)、線條是兩組座標位置 ((X1 Y1), (X2 Y2))、多邊形是四組以上的座標位置，其中第一組和最後一組座標位置相同 ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1))。  
   
  如需詳細資訊，請參閱您使用之空間資料類型的文件集。  
   
@@ -114,12 +114,12 @@ ms.locfileid: "65580116"
  地圖庫包含的地圖來自報表撰寫環境之地圖庫資料夾中的報表。 地圖庫中的地圖可讓您快速開始將地圖加入至報表中。 地圖庫中預先定義的地圖是由地圖提供者所提供。  
   
 > [!NOTE]  
->  這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地圖功能會使用美國人口普查局 ([https://www.census.gov/](https://www.census.gov/)) 提供的 TIGER/Line Shapefiles 資料。 TIGER/Line 形狀檔是 Census MAF/TIGER 資料庫中選定地理和製圖資訊的擷取內容。 TIGER/Line 形狀檔是由美國人口普查局免費提供。 如需有關 TIGER/Line Shapefile 的詳細資訊，請參閱 [https://www.census.gov/geo/www/tiger](https://www.census.gov/geo/www/tiger) \(英文\)。 TIGER/Line 形狀檔中的界限資訊只能當做統計資料收集和表格製作的用途，其統計用途的描述和指定並不構成司法權或擁有權利的判定，也不屬於法律上的土地描述。 Census TIGER 與 TIGER/Line 是美國人口普查局的註冊商標。  
+>  這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地圖功能會使用美國人口普查局 ([https://www.census.gov/](https://www.census.gov/)) 提供的 TIGER/Line Shapefiles 資料。 TIGER/Line 形狀檔是 Census MAF/TIGER 資料庫中選定地理和製圖資訊的擷取內容。 TIGER/Line 形狀檔是由美國人口普查局免費提供。 若要取得 TIGER/Line 形狀檔的詳細資料，請移至 [TIGER/Line 形狀檔和 TIGER/Line 檔案技術文件](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html) \(英文\)。 TIGER/Line 形狀檔中的界限資訊只能當做統計資料收集和表格製作的用途，其統計用途的描述和指定並不構成司法權或擁有權利的判定，也不屬於法律上的土地描述。 Census TIGER 與 TIGER/Line 是美國人口普查局的註冊商標。  
   
  若要擴充地圖庫，您可以從地圖庫目錄加入或移除報表，也可以加入資料夾來組織地圖。 如需詳細資訊，請參閱 [地圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
- ESRI 形狀檔是一組檔案，其中包含符合 Environmental Systems Research Institute, Inc. (ESRI) 形狀檔空間資料格式的資料。 這組檔案通常包括內含空間資料的 \<檔名>.shp 檔案以及支援檔案 \<檔名>。  
+ ESRI 形狀檔是一組檔案，其中包含符合 Environmental Systems Research Institute, Inc. (ESRI) 形狀檔空間資料格式的資料。 這組檔案通常包括內含空間資料的 \<檔名>  .shp 檔案以及支援檔案 \<檔名>  。  
   
  當您將形狀檔指定為您本機電腦上的空間資料來源時，會將空間資料自動內嵌至報表中。 若要以動態方式使用 ESRI 檔案中的空間資料，您必須執行下列操作：  
   
@@ -134,7 +134,7 @@ ms.locfileid: "65580116"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空間查詢是一種資料集查詢，可以指定來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫之 SQLGeometry 或 SQLGeography 資料類型的資料。  
   
 > [!NOTE]  
->  當您在精靈中定義資料來源時，您會在 [設計查詢] 頁面看到不同的查詢設計工具，端視您所連接的資料來源類型而定。 如需詳細資訊，請參閱[查詢設計工具 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)。  
+>  當您在精靈中定義資料來源時，您會在 [設計查詢] 頁面看到不同的查詢設計工具，端視您所連接的資料來源類型而定。 如需詳細資訊，請參閱 <<c0> [ 查詢設計工具&#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)。</c0>  
   
  當您在查詢設計工具中執行查詢時，結果集會顯示一個資料行，其中包含顯示為文字的空間資料。 例如，一個資料列可能包含單一點的空間資料，而下一個資料列則可能包含定義一組點的空間資料。 每個資料列都會變成一個地圖元素。 您可以將每個地圖元素的顯示變更為個別的單位。  
   

@@ -26,10 +26,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a05c9dccabcf9b937ebd67fb264022761b1ca249
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098711"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>檢視或刪除報表記錄 (報表管理員)
@@ -41,7 +41,7 @@ ms.locfileid: "66098711"
   
 2.  在報表管理員中，導覽至 **[內容]** 頁面。 導覽至您要建立或檢視記錄快照集的報表，然後按一下報表以開啟報表。  
   
-3.  按一下 [記錄] 索引標籤。記錄快照集所示**時執行**資料行。  
+3.  按一下 [記錄]  索引標籤。記錄快照集所示**時執行**資料行。  
   
 4.  若要檢視記錄快照集，請按一下快照集。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66098711"
   
 1.  在報表管理員中，導覽至 **[內容]** 頁面。 導覽至您要建立記錄快照集的報表，然後按一下報表以開啟報表。  
   
-2.  按一下 [記錄] 索引標籤。記錄快照集所示**時執行**資料行。  
+2.  按一下 [記錄]  索引標籤。記錄快照集所示**時執行**資料行。  
   
 3.  選取您想要刪除此項目，然後按一下 歷程記錄快照集旁邊的核取方塊**刪除**。  
   

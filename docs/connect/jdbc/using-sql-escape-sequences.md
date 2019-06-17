@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f4c26b94f4aa681d5042b728c5c44e50269fbc31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d029bf6b0a1e50bec104879a64d9411774ffeda5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841723"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798605"
 ---
 # <a name="using-sql-escape-sequences"></a>使用 SQL 逸出序列
 

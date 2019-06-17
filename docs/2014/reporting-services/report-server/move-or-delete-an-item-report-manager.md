@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aafd2ff32e8c554186d18a6329649081e8babe6b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103730"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>移動或刪除項目 (報表管理員)
@@ -43,19 +43,19 @@ ms.locfileid: "66103730"
   
 1.  啟動 [報表管理員&#40;SSRS 原生模式&#41;].../ 報表-manager-ssrs-原生-mode.md）。  
   
-2.  在報表管理員中，巡覽至 [內容] 頁面，然後找出您要移動的項目。  
+2.  在報表管理員中，巡覽至 [內容]  頁面，然後找出您要移動的項目。  
   
 3.  將滑鼠停留在該項目上，然後按一下下拉箭號。  
   
-4.  在下拉式功能表中，按一下 **[移動]**。  
+4.  在下拉式功能表中，按一下 **[移動]** 。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  針對 [位置]，請指定您要移動項目的目標資料夾。 您可以輸入完整資料夾名稱，或使用樹狀目錄控制項導覽至資料夾。  
+6.  針對 [位置]  ，請指定您要移動項目的目標資料夾。 您可以輸入完整資料夾名稱，或使用樹狀目錄控制項導覽至資料夾。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- 或者，您可以巡覽至要移動的物件、按一下 [屬性]，然後按一下頁面頂端的 [移動]。  
+ 或者，您可以巡覽至要移動的物件、按一下 [屬性]  ，然後按一下頁面頂端的 [移動]  。  
   
 ## <a name="delete-an-item"></a>刪除項目  
  刪除某個項目之前，請判斷是否有其他項目使用該項目。 例如，如果您刪除了某個共用資料來源，使用該資料來源的報表和模型將無法再執行。 如果您刪除了某份報表，就會一併刪除與該報表相關聯的訂閱和報表記錄。 若要尋找的項目相依項目，請參閱 [相依項目頁面&#40;報表管理員&#41;].../ 相依的項目-頁面-報表-manager.md）。  
@@ -64,11 +64,11 @@ ms.locfileid: "66103730"
   
 1.  啟動 [報表管理員&#40;SSRS 原生模式&#41;].../ 報表-manager-ssrs-原生-mode.md）。  
   
-2.  在報表管理員中，巡覽至 [內容] 頁面，然後找出您要刪除的項目。  
+2.  在報表管理員中，巡覽至 [內容]  頁面，然後找出您要刪除的項目。  
   
 3.  將滑鼠停留在該項目上，然後按一下下拉箭號。  
   
-4.  在下拉式功能表中，按一下 [刪除]。  
+4.  在下拉式功能表中，按一下 [刪除]  。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

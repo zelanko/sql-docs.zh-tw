@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a316174a4550260a7ed6243a9e1ae93127ef510b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484456"
 ---
 # <a name="commit-or-submit-a-changeset-master-data-services"></a>認可或提交變更集 (Master Data Services)
@@ -35,24 +35,24 @@ ms.locfileid: "65484456"
 ## <a name="to-commit-a-local-changeset"></a>認可本機變更集  
  認可選項只適用於實體系統管理員尚未啟用需要核准之實體上的本機變更集。  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下總管。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下總管  。  
   
 2.  按一下 [實體]  功能表中的實體。  
   
-3.  在右窗格中，選取 [變更集]，然後按兩下您要認可的變更集。  
+3.  在右窗格中，選取 [變更集]  ，然後按兩下您要認可的變更集。  
   
-4.  按一下 [認可]。  
+4.  按一下 [認可]  。  
   
 ## <a name="to-submit-a-changeset"></a>提交本機變更集  
  提交選項只適用於實體系統管理員已啟用需要核准之實體上的變更集。  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下總管。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下總管  。  
   
 2.  按一下 [實體]  功能表中的實體。  
   
-3.  在右窗格中，選取 [變更集]，然後按兩下您要提交的變更集。  
+3.  在右窗格中，選取 [變更集]  ，然後按兩下您要提交的變更集。  
   
-4.  按一下 [提交]。  
+4.  按一下 [提交]  。  
   
 ## <a name="next-steps"></a>後續步驟  
  [核准或拒絕變更集 &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  

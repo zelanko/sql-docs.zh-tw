@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c759eaf0fd18709e09eb64da6bfeb2d66a69f595
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104262"
 ---
 # <a name="cache-a-shared-dataset"></a>快取共用資料集
@@ -30,18 +30,18 @@ ms.locfileid: "66104262"
   
 2.  在報表管理員中，導覽至您想要設定快取屬性的共用資料集、將滑鼠停留在該項目上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。  
+3.  在下拉式功能表中，按一下 **[管理]** 。  
   
-4.  在左框架內，按一下 **[快取]**。  
+4.  在左框架內，按一下 **[快取]** 。  
   
     > [!NOTE]  
     >  如果您看到「 **尚未儲存用來執行共用資料集的認證**」這個錯誤，將會停用快取共用資料集選項。 您需要修改資料來源來儲存認證，或修改共用資料集來使用與儲存認證不同的資料來源。  
   
-5.  選取 **[快取共用資料集]**。  
+5.  選取 **[快取共用資料集]** 。  
   
 6.  選取快取於 30 分鐘後過期的選項。 您也可以選擇讓快取在指定的排程時間過期。  
   
-7.  按一下 **[套用]**。  
+7.  按一下 **[套用]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理共用資料集](../report-data/manage-shared-datasets.md)  

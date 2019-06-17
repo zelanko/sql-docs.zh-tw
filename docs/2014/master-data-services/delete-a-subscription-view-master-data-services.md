@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3ae447196ebef455406202615ce4aff50d3749c8
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479474"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>刪除訂閱檢視 (Master Data Services)
@@ -32,15 +32,15 @@ ms.locfileid: "65479474"
   
 ### <a name="to-delete-a-subscription-view"></a>若要刪除訂閱檢視  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，按一下 **[整合管理]**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，按一下 **[整合管理]** 。  
   
-2.  按一下功能表列上的 **[建立檢視表]**。  
+2.  按一下功能表列上的 **[建立檢視表]** 。  
   
 3.  在 **[訂閱檢視]** 頁面中，選取您要刪除之檢視表的資料列。  
   
 4.  按一下 **刪除訂用帳戶檢視**。  
   
-5.  在確認對話方塊中按一下 **[確定]**。  
+5.  在確認對話方塊中按一下 **[確定]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立訂閱檢視&#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d862ac509af3936a9f09cadd01667cbe81a679c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104853"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定軸間隔 (報表產生器及 SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66104853"
   
 ### <a name="to-show-all-category-labels-on-the-x-axis"></a>若要在 X 軸上顯示所有類別目錄標籤  
   
-1.  以滑鼠右鍵按一下類別目錄軸，然後按一下 **[軸屬性]**。 **[軸屬性]** 對話方塊隨即開啟。  
+1.  以滑鼠右鍵按一下類別目錄軸，然後按一下 **[軸屬性]** 。 **[軸屬性]** 對話方塊隨即開啟。  
   
 2.  在 **軸選項**，將`Interval`要**1**。 每個類別目錄群組標籤隨即顯示。 如果想要在 X 軸上每隔一個類別目錄群組標籤進行顯示，請輸入 **2**。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66104853"
   
 ### <a name="to-enable-a-variable-interval-calculation-on-an-axis"></a>在軸上啟用可變間隔計算  
   
-1.  以滑鼠右鍵按一下要變更的圖表軸，然後按一下 **[軸屬性]**。 **[軸屬性]** 對話方塊隨即開啟。  
+1.  以滑鼠右鍵按一下要變更的圖表軸，然後按一下 **[軸屬性]** 。 **[軸屬性]** 對話方塊隨即開啟。  
   
 2.  在 **軸選項**，將`Interval`要**自動**。圖表將顯示可納入軸的最佳類別目錄標籤數目。  
   

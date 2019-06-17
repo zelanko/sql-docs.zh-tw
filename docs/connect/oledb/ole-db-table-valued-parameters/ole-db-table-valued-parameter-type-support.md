@@ -12,13 +12,13 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (OLE DB)
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: e9e90a70089f3a9c2dcca20cbfe9deea43ca97b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fd7b37d6f23aeecc9c9405cd2e31f23173db7809
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813486"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801133"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB 資料表值參數類型支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

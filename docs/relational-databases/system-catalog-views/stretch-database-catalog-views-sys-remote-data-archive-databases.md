@@ -20,10 +20,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 ms.openlocfilehash: 74a44e8c3e6b0be026ac716d43b539869345b3b9
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64945615"
 ---
 # <a name="stretch-database-catalog-views---sysremotedataarchivedatabases"></a>Stretch Database 目錄檢視-sys.remote_data_archive_databases

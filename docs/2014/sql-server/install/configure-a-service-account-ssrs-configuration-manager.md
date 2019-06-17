@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 84f6f2bdb4c5c512cb75dfea554b5ae28e3c3f02
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096100"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>設定服務帳戶 (SSRS 組態管理員)
@@ -44,13 +44,13 @@ ms.locfileid: "66096100"
   
      如果在支援 Kerberos 驗證的網路中部署報表伺服器，您就必須使用您剛剛指定的網域使用者帳戶來註冊報表伺服器的「服務主要名稱」(SPN)。 如需詳細資訊，請參閱[為報表伺服器註冊服務主體名稱 &#40;SPN&#41;](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)。  
   
-4.  按一下 **[套用]**。  
+4.  按一下 **[套用]** 。  
   
-5.  如果出現提示要求備份對稱金鑰，請輸入對稱金鑰備份的檔案名稱和位置，然後輸入用來鎖定和解除檔案鎖定的密碼，再按一下 **[確定]**。  
+5.  如果出現提示要求備份對稱金鑰，請輸入對稱金鑰備份的檔案名稱和位置，然後輸入用來鎖定和解除檔案鎖定的密碼，再按一下 **[確定]** 。  
   
-6.  如果報表伺服器使用此服務帳戶來連接報表伺服器資料庫，將會更新連接資訊來使用新的帳戶或密碼。 更新連接資訊時，將需要連接到資料庫。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **[資料庫連接]** 對話方塊出現，請輸入有權連接此資料庫的認證，然後按一下 **[確定]**。  
+6.  如果報表伺服器使用此服務帳戶來連接報表伺服器資料庫，將會更新連接資訊來使用新的帳戶或密碼。 更新連接資訊時，將需要連接到資料庫。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **[資料庫連接]** 對話方塊出現，請輸入有權連接此資料庫的認證，然後按一下 **[確定]** 。  
   
-7.  當系統提示您還原對稱金鑰時，請輸入您在步驟 5 中指定的密碼，然後按一下 **[確定]**。  
+7.  當系統提示您還原對稱金鑰時，請輸入您在步驟 5 中指定的密碼，然後按一下 **[確定]** 。  
   
 8.  檢閱 [結果] 窗格中的狀態訊息，以確認所有工作都已順利完成。  
   

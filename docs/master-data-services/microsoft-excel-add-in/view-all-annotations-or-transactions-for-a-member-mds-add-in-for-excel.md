@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 26e016369bf2498bce87e39fb05880712608184b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489659"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>檢視成員的所有註解或交易 (適用於 Excel 的 MDS 增益集)
@@ -29,15 +29,15 @@ ms.locfileid: "65489659"
   
 -   您必須擁有包含 MDS 管理之資料的使用中工作表。  
   
--   實體 [交易記錄類型] 必須是 [成員] 或 [屬性]。  
+-   實體 [交易記錄類型]  必須是 [成員]  或 [屬性]  。  
   
 ### <a name="to-view-annotations-or-transactions"></a>若要檢視註解或交易  
   
 1.  在包含您想要檢視之交易的資料列中，按一下資料格。  
   
-2.  按一下滑鼠右鍵，然後在顯示的功能表中，按一下 [檢視交易] 或 [檢視歷程記錄]。  
+2.  按一下滑鼠右鍵，然後在顯示的功能表中，按一下 [檢視交易]  或 [檢視歷程記錄]  。  
   
-3.  [檢視交易] 對話方塊就會顯示交易的清單。 若要檢視與交易相關聯的所有註解，請按一下方格中的資料列。  
+3.  [檢視交易]  對話方塊就會顯示交易的清單。 若要檢視與交易相關聯的所有註解，請按一下方格中的資料列。  
   
 ## <a name="see-also"></a>另請參閱  
  [概觀：從 Excel 匯入資料&#40;MDS 增益集的 Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b12f87b5abcceed4ae4557c8db1e4476760f72ae
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108064"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>教學課程的必要條件 (報表產生器)
@@ -25,7 +25,7 @@ ms.locfileid: "66108064"
 ## <a name="requirements"></a>需求  
  您必須擁有下列必要元件，才能完成報表產生器教學課程：  
   
--    [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 報表產生器的存取權。 您可以使用獨立版的報表產生器，或者報表管理員或 SharePoint 網站提供的 ClickOnce 版本來執行報表產生器。 只有第一個步驟「如何開啟報表產生器」與 ClickOnce 版本不同。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 報表產生器的存取權。 您可以使用獨立版的報表產生器，或者報表管理員或 SharePoint 網站提供的 ClickOnce 版本來執行報表產生器。 只有第一個步驟「如何開啟報表產生器」與 ClickOnce 版本不同。  
   
      若要使用報表管理員中，開啟報表管理員，然後按一下**報表產生器**。 根據預設，報表管理員 URL 是 http://\<*servername*> / 報告。  
   
