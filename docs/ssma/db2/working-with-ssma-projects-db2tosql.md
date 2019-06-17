@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d3ccc9fe24d770fa64b2bef86feabab0dd2e7fba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63244660"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>使用 SSMA 專案 (DB2ToSQL)
@@ -96,7 +96,7 @@ SSMA 會包含數個設定的轉換和載入資料庫物件、 移轉資料，�
   
         儲存中繼資料，可能需要幾分鐘的時間。 如果您不想儲存中繼資料，但不選取任何核取方塊。  
   
-    2.  按一下 [儲存] 按鈕。  
+    2.  按一下 [儲存]  按鈕。  
   
         SSMA 會剖析 DB2 結構描述，並將中繼資料儲存到專案檔。  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 3eb5c384-6751-4d50-be23-0c2ccc35593c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e661a6ed2dbc3f6503ca566ea8052edde735e415
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d22447f58578646b7e383ebc524e2c1d8e6f077a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804826"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802103"
 ---
 # <a name="registeroutparameter-method-int-int-javalangstring"></a>registerOutParameter 方法 (int, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

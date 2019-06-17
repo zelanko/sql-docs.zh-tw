@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e8fea8d2a7b92ccca9b139b62d429fafe3a9bc4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083370"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>模型篩選語法和範例 (Analysis Services - 資料採礦)
@@ -109,7 +109,7 @@ ms.locfileid: "66083370"
 -   篩選語法不支援非布林運算子，例如加號或減號。  
   
 ## <a name="examples-of-filters"></a>篩選的範例  
- 下列範例將示範套用至採礦模型之篩選的使用方式。 如果您使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 來建立篩選運算式，在 [篩選] 對話方塊的 [屬性] 視窗和 [運算式] 窗格中，您只會看見顯示在 WITH FILTER 關鍵字之後的字串。 在該處加入採礦結構定義的目的是為了讓人更容易了解資料行類型和使用方式。  
+ 下列範例將示範套用至採礦模型之篩選的使用方式。 如果您使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 來建立篩選運算式，在 [篩選] 對話方塊的 [屬性]  視窗和 [運算式]  窗格中，您只會看見顯示在 WITH FILTER 關鍵字之後的字串。 在該處加入採礦結構定義的目的是為了讓人更容易了解資料行類型和使用方式。  
   
 ###  <a name="bkmk_Ex1"></a> 範例 1：一般的案例層級篩選  
  這則範例會顯示一個簡易篩選，它可將模型中使用的案例限制為職業是建築師而且年齡超過 30 歲的客戶。  

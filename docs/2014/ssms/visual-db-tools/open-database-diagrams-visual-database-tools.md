@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da26fc9274e68cd5233766af7e7c15550412db38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63254468"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>開啟資料庫圖表 (Visual Database Tools)
@@ -26,13 +26,13 @@ ms.locfileid: "63254468"
   
 ### <a name="to-open-a-database-diagram"></a>若要開啟資料庫圖表  
   
-1.  在物件總管中，展開 [資料庫圖表] 資料夾。  
+1.  在物件總管中，展開 [資料庫圖表]  資料夾。  
   
 2.  在要開啟的資料庫圖表名稱上按兩下。  
   
      -或-  
   
-     在要開啟的資料庫圖表名稱上按一下滑鼠右鍵，然後選擇 [設計資料庫圖表]。  
+     在要開啟的資料庫圖表名稱上按一下滑鼠右鍵，然後選擇 [設計資料庫圖表]  。  
   
  資料庫圖表將在 [資料庫圖表設計工具] 中開啟，您可在其中編輯圖表。  
   

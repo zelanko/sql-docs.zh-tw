@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 6cb30c306c5cd2b426976aba4a873475639e4ba5
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65994218"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>安裝 SQL Server Machine Learning 在 Windows 上的服務
@@ -81,7 +81,7 @@ ms.locfileid: "65994218"
 
         > [!NOTE]
         > 
-        > 未選取的選項**Machine Learning Server （獨立式）**。 安裝 Machine Learning Server 下的選項**共用功能**適用於一部電腦上。
+        > 未選取的選項**Machine Learning Server （獨立式）** 。 安裝 Machine Learning Server 下的選項**共用功能**適用於一部電腦上。
 
 4. 在 **同意安裝 R**頁面上，選取**接受**。 此授權合約涵蓋 Microsoft R Open，其中包含開放原始碼 R 基底套件和工具，以及增強型的 R 套件和 Microsoft 開發小組的連線提供者的散發套件。
 

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057800"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>在執行 SQL 工作中將查詢參數對應到變數
@@ -47,7 +47,7 @@ ms.locfileid: "66057800"
   
     -   使用直接輸入，並在 SQLStatement 屬性中輸入 SQL 命令。  
   
-    -   使用直接輸入，按一下 [建立查詢]，然後使用「查詢產生器」提供的圖形工具來建立 SQL 命令。  
+    -   使用直接輸入，按一下 [建立查詢]  ，然後使用「查詢產生器」提供的圖形工具來建立 SQL 命令。  
   
     -   使用檔案連接，然後參考包含 SQL 命令的檔案。  
   
@@ -72,11 +72,11 @@ ms.locfileid: "66057800"
   
      如需使用參數搭配預存程序的範例，請參閱[執行 SQL 工作中的參數和傳回碼](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)。  
   
-7.  按一下 [參數對應]。  
+7.  按一下 [參數對應]  。  
   
-8.  若要加入參數對應，請按一下 [加入]。  
+8.  若要加入參數對應，請按一下 [加入]  。  
   
-9. 在 [參數名稱] 方塊中提供名稱。  
+9. 在 [參數名稱]  方塊中提供名稱。  
   
      您所使用的參數名稱需視「執行 SQL」工作所使用的連接類型而定。  
   
@@ -87,11 +87,11 @@ ms.locfileid: "66057800"
     |ODBC|1, 2, 3, ...|  
     |EXCEL 和 OLE DB|0, 1, 2, 3, ...|  
   
-10. 從 [變數名稱] 清單中，選取一個變數。 如需詳細資訊，請參閱[加入、刪除、變更封裝中使用者定義變數的範圍](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)。  
+10. 從 [變數名稱]  清單中，選取一個變數。 如需詳細資訊，請參閱[加入、刪除、變更封裝中使用者定義變數的範圍](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)。  
   
-11. 在 [方向] 清單中，指定參數是輸入、輸出還是傳回值。  
+11. 在 [方向]  清單中，指定參數是輸入、輸出還是傳回值。  
   
-12. 在 [資料類型] 清單中，設定參數的資料類型。  
+12. 在 [資料類型]  清單中，設定參數的資料類型。  
   
     > [!IMPORTANT]  
     >  參數的資料類型必須與變數的資料類型相容。  
@@ -101,7 +101,7 @@ ms.locfileid: "66057800"
     > [!IMPORTANT]  
     >  參數對應的順序必須與參數在 SQL 陳述式中出現的順序相同。  
   
-14. 按一下 [確定] 。  
+14. 按一下 [確定]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行 SQL 工作](control-flow/execute-sql-task.md)   

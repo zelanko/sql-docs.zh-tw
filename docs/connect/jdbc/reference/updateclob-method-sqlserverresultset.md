@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e841f9a6-e94f-4552-a0e2-aefe3d84faf0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 53dd68bc36a7d08140b5a831e5fa534c1f4212c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bfd8ac962579bd267cea300783dc35411d321a10
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751216"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804268"
 ---
 # <a name="updateclob-method-sqlserverresultset"></a>updateClob 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

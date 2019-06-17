@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 432438fe9a6e1b39c849188050b67f816d895187
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250212"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX 資料定義 - CREATE MEMBER
@@ -58,7 +58,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
   
  如需 OLE DB 定義之成員屬性的詳細資訊，請參閱 OLE DB 文件集。  
   
-## <a name="scope"></a>範圍。  
+## <a name="scope"></a>`Scope`  
  導出成員可發生在下表列出的其中一個範圍內。  
   
  查詢範圍  

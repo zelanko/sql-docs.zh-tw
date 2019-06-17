@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63213377"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>使用平行處理資料倉儲的 Integration Services 載入資料
@@ -56,7 +56,7 @@ Integration services 的完整文件，請參閱 < [SQL Server Integration Servi
 ### <a name="run-from-powershell"></a>從 PowerShell 執行  
 若要執行封裝，從 Windows PowerShell，使用**dtexec**公用程式： `dtexec /FILE <packagePath>`  
   
-例如： `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`   
+例如： `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>執行從 Windows 命令提示字元 
 若要執行封裝，從 Windows 命令提示字元中，使用**dtexec**公用程式： `dtexec /FILE <packagePath>`  
@@ -77,7 +77,7 @@ Integration services 的完整文件，請參閱 < [SQL Server Integration Servi
 |DATETIME|DT_DATE、DT_DBDATE、DT_DBTIMESTAMP、DT_DBTIMESTAMP2|  
 |DATETIME2|DT_DATE、DT_DBDATE、DT_DBTIMESTAMP、DT_DBTIMESTAMP2|  
 |DATETIMEOFFSET|DT_WSTR|  
-|DECIMAL|DT_DECIMAL、DT_I1、DT_I2、DT_I4、DT_I4、DT_I8、DT_NUMERIC、DT_UI1、DT_UI2、DT_UI4、DT_UI8|  
+|Decimal|DT_DECIMAL、DT_I1、DT_I2、DT_I4、DT_I4、DT_I8、DT_NUMERIC、DT_UI1、DT_UI2、DT_UI4、DT_UI8|  
 |FLOAT|DT_R4、DT_R8|  
 |INT|DT_I1、DTI2、DT_I4、DT_UI1、DT_UI2|  
 |MONEY|DT_CY|  
@@ -184,7 +184,7 @@ id,city,lastUpdateDate,orderDate
   
 首先，建立 Integration Services 封裝，執行下列步驟：  
   
-1.  在 SQL Server Data Tools \(SSDT\)，選取**檔案**，**新增**，然後**專案**。 選取  **Integration Services 專案**從所列的選項。 此專案的名稱， `ExampleLoad`，然後按一下 **[確定]**。  
+1.  在 SQL Server Data Tools \(SSDT\)，選取**檔案**，**新增**，然後**專案**。 選取  **Integration Services 專案**從所列的選項。 此專案的名稱， `ExampleLoad`，然後按一下 **[確定]** 。  
   
 2.  按一下 **控制流程**索引標籤，然後將**Data Flow Task**從**工具箱**至**控制流程**窗格。  
   
@@ -216,17 +216,17 @@ id,city,lastUpdateDate,orderDate
   
 4.  選取 **建立新的連接**。  
   
-5.  填寫您的應用裝置的特定資訊的伺服器、 使用者、 密碼和目的地資料庫的資訊。 （範例如下所示）。 然後按一下 [確定]。  
+5.  填寫您的應用裝置的特定資訊的伺服器、 使用者、 密碼和目的地資料庫的資訊。 （範例如下所示）。 然後按一下 [確定]  。  
   
     InfiniBand 連線**伺服器名稱**:輸入 < 設備名稱 >-SQLCTL01，接著 17001。  
   
     為乙太網路連線**伺服器名稱**:輸入控制節點的叢集、 逗點和連接埠接著 17001 的 IP 位址。 比方說，10.192.63.134,17001。  
   
-    **使用者：**`user1`  
+    **使用者：** `user1`  
   
-    **密碼：**`password1`  
+    **密碼：** `password1`  
   
-    **目的地資料庫：**`LoadExampleDB`  
+    **目的地資料庫：** `LoadExampleDB`  
   
 6.  選取目的地資料表： `Orders`。  
   

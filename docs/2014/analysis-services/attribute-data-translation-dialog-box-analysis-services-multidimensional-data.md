@@ -15,20 +15,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063070"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>屬性資料翻譯對話方塊 (Analysis Services - 多維度資料)
-  使用 [屬性資料翻譯] 對話方塊，即可設定包含翻譯標題資料的資料行，以及要用於翻譯資料的定序和排序次序。 您可依下列方式顯示 [屬性資料翻譯] 對話方塊：  
+  使用 [屬性資料翻譯]  對話方塊，即可設定包含翻譯標題資料的資料行，以及要用於翻譯資料的定序和排序次序。 您可依下列方式顯示 [屬性資料翻譯]  對話方塊：  
   
--   從 [維度設計師] 之 [翻譯] 索引標籤上的 [工具列] 窗格，按一下 [新增標題資料行] 或 [編輯標題資料行]。  
+-   從 [維度設計師]  之 [翻譯]  索引標籤上的 [工具列]  窗格，按一下 [新增標題資料行]  或 [編輯標題資料行]  。  
   
--   以滑鼠右鍵按一下 [維度設計師] 之 [翻譯] 索引標籤上的 [翻譯詳細資料] 窗格，然後選取 [新增標題資料行] 或 [編輯標題資料行]。  
+-   以滑鼠右鍵按一下 [維度設計師]  之 [翻譯]  索引標籤上的 [翻譯詳細資料]  窗格，然後選取 [新增標題資料行]  或 [編輯標題資料行]  。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Attribute**  
  顯示選取的屬性。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66063070"
  如果沒有選取此選項， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會遵循相關聯之語言或字母字典中所定義的排序和比較規則。  
   
 > [!NOTE]  
->  如果選取此選項，會停用 [區分大小寫]、[區分腔調字]、[區分假名] 和 [區分全半形] 等選項。  
+>  如果選取此選項，會停用 [區分大小寫]  、[區分腔調字]  、[區分假名]  和 [區分全半形]  等選項。  
   
  **區分大小寫**  
  選取此選項，即可根據為關聯之語言或字母提供的字典規則來排序和比較資料，以及區別大寫和小寫字母。  

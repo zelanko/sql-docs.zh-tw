@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fc746413-bdbf-4109-aee0-385a1270c847
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f568c4139dd1301bf510502183044dbd7e93ba2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7ba829563b81584e14d713be0ca91d4d48124ce2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598805"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798479"
 ---
 # <a name="updatencharacterstream-method-int-javaioreader"></a>updateNCharacterStream 方法 (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public void updateNCharacterStream(int columnIndex,
 ## <a name="remarks"></a>Remarks  
  UpdateNCharacterStream 方法 java.sql.ResultSet 介面中所指定這個 updateNCharacterStream 方法。  
   
- 這個方法會傳遞到選取的讀取器物件的 Unicode 字元**nchar**， **nvarchar （max)**， **ntext**並**xml**資料行。 在其他資料類型資料行上使用這個方法，將會擲回例外狀況。  
+ 這個方法會傳遞到選取的讀取器物件的 Unicode 字元**nchar**， **nvarchar （max)** ， **ntext**並**xml**資料行。 在其他資料類型資料行上使用這個方法，將會擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱  
  [updateNCharacterStream 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   

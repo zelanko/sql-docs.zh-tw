@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b561de7d655001e2c62f7c85e57cc7eb098af12d
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014744"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>在 Updategram (SQLXML 4.0) 中處理資料庫並行的問題
@@ -55,7 +55,7 @@ ms.locfileid: "66014744"
   
  您可以藉由指定主索引鍵資料行和資料行中，您要更新取得這個保護等級 **\<之前 >** 區塊。  
   
- 例如，這個 Updategram 為 ContactID 為 1 的連絡人，變更了 Person.Contact 資料表 Phone 資料行中的值。  **\<之前 >** 區塊指定 **Phone** 屬性，以確保這個屬性值符合資料庫中的對應資料行中的值，再套用更新的值.  
+ 例如，這個 Updategram 為 ContactID 為 1 的連絡人，變更了 Person.Contact 資料表 Phone 資料行中的值。 **\<之前 >** 區塊指定 **Phone** 屬性，以確保這個屬性值符合資料庫中的對應資料行中的值，再套用更新的值.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -79,7 +79,7 @@ ms.locfileid: "66014744"
   
      如果您指定中的其他資料行 **\<之前 >** 區塊中，updategram 會比較針對這些資料行在套用更新之前已在資料庫中的值所指定的值。 如果任何記錄資料行在您的交易讀取記錄之後變更的話，則 Updategram 不會執行更新。  
   
-     比方說，下列 updategram 更新排班表名稱中，但指定額外的資料行 （StartTime、 EndTime） 中**\<之前 >** 區塊，藉此要求較高的層級的保護，防止並行更新。  
+     比方說，下列 updategram 更新排班表名稱中，但指定額外的資料行 （StartTime、 EndTime） 中 **\<之前 >** 區塊，藉此要求較高的層級的保護，防止並行更新。  
   
     ```  
     <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -97,7 +97,7 @@ ms.locfileid: "66014744"
     </ROOT>  
     ```  
   
-     這個範例藉由指定之資料錄中的所有資料行值會指定最高層級的保護**\<之前 >** 區塊。  
+     這個範例藉由指定之資料錄中的所有資料行值會指定最高層級的保護 **\<之前 >** 區塊。  
   
 -   在指定時間戳記資料行 （如果有的話） **\<之前 >** 區塊。  
   

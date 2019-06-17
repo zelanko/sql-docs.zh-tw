@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8e22375e660e6bcd55c8075edaaba067160279d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058058"
 ---
 # <a name="inherited-transactions"></a>繼承的交易
@@ -37,7 +37,7 @@ ms.locfileid: "66058058"
   
  封裝和工作具有下列交易屬性：  
   
--   在封裝 A 和 C 上，**TransactionOption** 設為 **Required**   
+-   在封裝 A 和 C 上，**TransactionOption** 設為 **Required**  
   
 -   在封裝 B 和 D 上，以及在「執行封裝 B」、「執行封裝 D」和「執行封裝 F」工作上，**TransactionOption** 設為 **Supported** 。  
   

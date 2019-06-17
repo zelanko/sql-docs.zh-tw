@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 60c44d2771033c86814cb9dbc0a18aab7c79c483
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261625"
 ---
 # <a name="monitoring-traces-xmla"></a>監視追蹤 (XMLA)
@@ -48,7 +48,7 @@ ms.locfileid: "63261625"
 |ObjectReference|String|以 XML 表示法呈現 ObjectName 中指定之物件的物件參考。|  
 |NestLevel|Integer|發生事件的交易等級。|  
 |NumSegments|長整數|發生事件的命令所影響或是存取的資料區段數目。|  
-|Severity|Integer|事件例外狀況的嚴重性層級。 此資料行可包含下列其中一個值：<br /><br /> <br /><br /> 0：成功<br /><br /> <br /><br /> 1:[資訊]<br /><br /> <br /><br /> 2:警告<br /><br /> <br /><br /> 3:錯誤|  
+|Severity|Integer|事件例外狀況的嚴重性層級。 此資料行可包含下列其中一個值：<br /><br /> <br /><br /> 0：成功<br /><br /> <br /><br /> 1：[資訊]<br /><br /> <br /><br /> 2：警告<br /><br /> <br /><br /> 3:錯誤|  
 |成功|布林|指出命令是成功或失敗。|  
 |錯誤|長整數|事件的錯誤號碼 (如果適用的話)。|  
 |ConnectionID|String|發生事件的連接識別碼。|  

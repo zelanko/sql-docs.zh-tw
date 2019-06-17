@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee8ee5b2113d6fda6aaac72b407c899a610960bd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055846"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>設定或變更封裝的保護等級
@@ -46,7 +46,7 @@ ms.locfileid: "66055846"
   
      如果您選取了需要密碼的保護等級，請輸入密碼作為 **PackagePassword** 屬性的值。  
   
-6.  在 [檔案] 功能表上，選取 [儲存選取項目] 以儲存修改過的封裝。  
+6.  在 [檔案]  功能表上，選取 [儲存選取項目]  以儲存修改過的封裝。  
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>在命令提示字元設定或變更封裝的保護等級  
   

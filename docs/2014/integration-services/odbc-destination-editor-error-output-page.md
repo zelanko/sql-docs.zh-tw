@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 972357372fe6d0281aedb57d49dd8d50682085b5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057194"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>ODBC 目的地編輯器 (錯誤輸出頁面)
@@ -30,11 +30,11 @@ ms.locfileid: "66057194"
   
 -   在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，開啟具有 ODBC 目的地的 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 封裝。  
   
--   在 [資料流程] 索引標籤中，按兩下 ODBC 目的地。  
+-   在 [資料流程]  索引標籤中，按兩下 ODBC 目的地。  
   
--   在 **[ODBC 目的地編輯器]** 中，按一下 **[錯誤輸出]**。  
+-   在 **[ODBC 目的地編輯器]** 中，按一下 **[錯誤輸出]** 。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 ### <a name="inputoutput"></a>輸入/輸出  
  檢視資料來源的名稱。  

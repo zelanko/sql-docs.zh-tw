@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e0c4f543f349d166962e65ea91338595d25308ce
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66800963"
 ---
 # <a name="mssqlctl-cluster-config-section"></a>mssqlctl cluster config section
@@ -46,7 +46,7 @@ mssqlctl cluster config section show --config-file custom-config.json  --json-pa
 ```
 ### <a name="required-parameters"></a>必要參數
 #### `--json-path -j`
-您想從組態檔，也就是 key1.key2.key3 通往區段或值的 json 路徑。 使用 jsonpath 查詢語言， https://github.com/h2non/jsonpath-ng，例如:-j ' $。 spec.pools [嗎？ (@.spec.type = ="Master")]...端點 '
+您想從組態檔，也就是 key1.key2.key3 通往區段或值的 json 路徑。 使用 jsonpath 查詢語言， https://github.com/h2non/jsonpath-ng ，例如:-j ' $。 spec.pools [嗎？ (@.spec.type = ="Master")]...端點 '
 #### `--config-file -c`
 叢集設定檔的路徑。
 ### <a name="optional-parameters"></a>選擇性參數
@@ -113,7 +113,7 @@ mssqlctl cluster config section set --config-file custom-config.json --patch ./p
 #### `--json-values -j`
 值的 json 路徑的機碼值組清單： key1.subkey1=value1,key2.subkey2=value2。 您可能會提供內嵌的 json 值這類： 機碼 ='{「 類型 」: 「 叢集 」，"name": [測試叢集]}' 或提供檔案路徑，例如 key=./values.json。 如果您想要設定值，需要條件，請使用 jsonpath 標記法，以開始您的路徑為 $。 This will allow you to do a conditional such as -j $.key1.key2[?(@.key3=='someValue'].key4=value. 您可能會看到下列的範例。 如需其他協助，請參閱： https://jsonpath.com/
 #### `--patch-file -p`
-Jsonpatch 程式庫都根據修補程式 json 檔案的路徑： http://jsonpatch.com/。 您必須使用金鑰，稱為 「 修補 」，其值是您想要進行修補作業的陣列，來啟動您修補程式的 json 檔案。 修補作業的路徑，您可以使用點標記法，例如 key1.key2 進行大部分的操作。 如果您想要執行取代作業，而且您要取代需要條件式陣列中的值，請使用 jsonpath 標記法，以開始您的路徑為 $。 This will allow you to do a conditional such as $.key1.key2[?(@.key3=='someValue'].key4. 請參閱下面的範例。 如需其他協助，請參閱： https://jsonpath.com/。
+Jsonpatch 程式庫都根據修補程式 json 檔案的路徑： http://jsonpatch.com/ 。 您必須使用金鑰，稱為 「 修補 」，其值是您想要進行修補作業的陣列，來啟動您修補程式的 json 檔案。 修補作業的路徑，您可以使用點標記法，例如 key1.key2 進行大部分的操作。 如果您想要執行取代作業，而且您要取代需要條件式陣列中的值，請使用 jsonpath 標記法，以開始您的路徑為 $。 This will allow you to do a conditional such as $.key1.key2[?(@.key3=='someValue'].key4. 請參閱下面的範例。 如需其他協助，請參閱： https://jsonpath.com/ 。
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`
 增加記錄詳細程度以顯示所有偵錯記錄檔。

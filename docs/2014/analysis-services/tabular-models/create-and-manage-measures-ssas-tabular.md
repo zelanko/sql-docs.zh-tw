@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6087d5fa39dd023d13ce3f49fbdfb855f12b921c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067444"
 ---
 # <a name="create-and-manage-measures-ssas-tabular"></a>建立及管理量值 (SSAS 表格式)
@@ -33,11 +33,11 @@ ms.locfileid: "66067444"
 -   [刪除量值](#bkmk_delete)  
   
 ## <a name="tasks"></a>工作  
- 若要建立及管理量值，您將使用資料表的量值方格。 您只能在模型設計師的 [資料檢視] 中，檢視資料表的量值方格。 您無法在 [圖表檢視] 中建立量值或檢視量值方格；但是，您可以在 [圖表檢視] 中檢視現有的量值。 若要顯示資料表的量值方格，請按一下 **[資料表]** 功能表，然後按一下 **[顯示量值方格]**。  
+ 若要建立及管理量值，您將使用資料表的量值方格。 您只能在模型設計師的 [資料檢視] 中，檢視資料表的量值方格。 您無法在 [圖表檢視] 中建立量值或檢視量值方格；但是，您可以在 [圖表檢視] 中檢視現有的量值。 若要顯示資料表的量值方格，請按一下 **[資料表]** 功能表，然後按一下 **[顯示量值方格]** 。  
   
 ###  <a name="bkmk_create_stand"></a> 使用標準彙總公式建立量值  
   
--   依序按一下您要建立量值的資料行及 **[資料行]** 功能表，指向 **[自動加總]**，然後按一下彙總類型。  
+-   依序按一下您要建立量值的資料行及 **[資料行]** 功能表，指向 **[自動加總]** ，然後按一下彙總類型。  
   
      隨即會以預設名稱自動建立量值，後面接著量值方格中資料行正下方之第一個資料格的公式。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66067444"
   
 ###  <a name="bkmk_delete"></a> 刪除量值  
   
--   在量值方格的量值上按一下滑鼠右鍵，然後按一下 [刪除]。  
+-   在量值方格的量值上按一下滑鼠右鍵，然後按一下 [刪除]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [量值 &#40;SSAS 表格式&#41;](measures-ssas-tabular.md)   

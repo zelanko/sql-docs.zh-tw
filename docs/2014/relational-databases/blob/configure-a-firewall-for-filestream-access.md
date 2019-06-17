@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fff59c773e4c96b8d14cf604c1a9a3e2b31869f4
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010304"
 ---
 # <a name="configure-a-firewall-for-filestream-access"></a>為 FILESTREAM 存取設定防火牆
@@ -25,16 +25,16 @@ ms.locfileid: "66010304"
   
 ### <a name="to-open-the-windows-file-sharing-ports-on-a-computer-that-is-running-windows-7"></a>在執行 Windows 7 的電腦上開啟 Windows 檔案共用通訊埠  
   
-1.  在 [控制台] 中，開啟 [Windows 防火牆]。  
+1.  在 [控制台] 中，開啟 [Windows 防火牆]  。  
   
-2.  在左窗格中，按一下 [進階設定]。 若是系統提示需要管理員密碼或確認，請輸入密碼或提供確認。  
+2.  在左窗格中，按一下 [進階設定]  。 若是系統提示需要管理員密碼或確認，請輸入密碼或提供確認。  
   
-3.  在 [具有進階安全性的 Windows 防火牆] 對話方塊的左窗格中，按一下 [輸入規則]，然後按一下右窗格中的 [新增規則]。  
+3.  在 [具有進階安全性的 Windows 防火牆]  對話方塊的左窗格中，按一下 [輸入規則]  ，然後按一下右窗格中的 [新增規則]  。  
   
 4.  遵循 [新增輸入規則精靈] 中的指示以加入 TCP 通訊埠 139。  
   
 5.  重複上一個步驟以加入 TCP 通訊埠 445。  
   
-6.  關閉 [具有進階安全性的 Windows 防火牆] 對話方塊。  
+6.  關閉 [具有進階安全性的 Windows 防火牆]  對話方塊。  
   
   

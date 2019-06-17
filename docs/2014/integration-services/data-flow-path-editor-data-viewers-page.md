@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 39d263d85b8956da4366134393d48405ebe104ae
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060075"
 ---
 # <a name="data-flow-path-editor-data-viewers-page"></a>資料流程路徑編輯器 (資料檢視器頁面)
@@ -32,13 +32,13 @@ ms.locfileid: "66060075"
  列出資料檢視器的類型。  
   
  **[加入]**  
- 按一下即可使用 [設定資料檢視器] 對話方塊加入資料檢視器。  
+ 按一下即可使用 [設定資料檢視器]  對話方塊加入資料檢視器。  
   
  **刪除**  
  按一下即可刪除選取的資料檢視器。  
   
  **設定**  
- 按一下即可使用 [設定資料檢視器] 對話方塊，來設定選取的資料檢視器。  
+ 按一下即可使用 [設定資料檢視器]  對話方塊，來設定選取的資料檢視器。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流程路徑編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   

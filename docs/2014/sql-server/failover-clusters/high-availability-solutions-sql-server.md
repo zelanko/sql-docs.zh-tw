@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43727e0c7795fbd1f2f0c6a56693c2f06fdf4536
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63193048"
 ---
 # <a name="high-availability-solutions-sql-server"></a>高可用性解決方案 (SQL Server)
@@ -48,10 +48,10 @@ ms.locfileid: "63193048"
  > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我們建議您改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 。  
   
- 資料庫鏡像是支援近乎瞬間的容錯移轉，進而提高資料庫可用性的方案。 資料庫鏡像可用以維護實際執行的資料庫 (稱為 *「主體資料庫」*) 所對應的單一待命資料庫 (或稱 *「鏡像資料庫」*)。 如需詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
+ 資料庫鏡像是支援近乎瞬間的容錯移轉，進而提高資料庫可用性的方案。 資料庫鏡像可用以維護實際執行的資料庫 (稱為 *「主體資料庫」* ) 所對應的單一待命資料庫 (或稱 *「鏡像資料庫」* )。 如需詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
  記錄傳送  
- 記錄傳送就像 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 與資料庫鏡像一樣，都是在資料庫層級運作。 您可以使用記錄傳送來針對單一實際執行資料庫 (稱為「主要資料庫」) 維護一個或多個暖待命資料庫 (稱為「次要資料庫」)。 如需記錄傳送作業的相關資訊，請參閱[關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
+ 記錄傳送就像 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 與資料庫鏡像一樣，都是在資料庫層級運作。 您可以使用記錄傳送來針對單一實際執行資料庫 (稱為「主要資料庫」  ) 維護一個或多個暖待命資料庫 (稱為「次要資料庫」  )。 如需記錄傳送作業的相關資訊，請參閱[關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
 ##  <a name="RecommendedSolutions"></a> 使用 SQL Server 保護資料的建議方案  
  為您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境提供資料保護的建議如下：  

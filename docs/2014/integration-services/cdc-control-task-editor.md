@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a87af3febdab1e98dac0b1546b8b2b8939b739d6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061120"
 ---
 # <a name="cdc-control-task-editor"></a>CDC 控制工作編輯器
@@ -28,28 +28,28 @@ ms.locfileid: "66061120"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，開啟具有 CDC 控制工作的 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 封裝。  
   
-2.  在 [控制流程] 索引標籤中，按兩下 CDC 控制工作。  
+2.  在 [控制流程]  索引標籤中，按兩下 CDC 控制工作。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **SQL Server CDC 資料庫 ADO.NET 連接管理員**  
- 從清單中選取現有的連接管理員，或按一下 [新增] 建立新的連接。 此連接必須指向啟用 CDC 而且包含選取之變更資料表的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。  
+ 從清單中選取現有的連接管理員，或按一下 [新增]  建立新的連接。 此連接必須指向啟用 CDC 而且包含選取之變更資料表的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。  
   
  **CDC 控制作業**  
  選取要針對此工作執行的作業。 所有作業都會使用儲存在 SSIS 封裝變數中的狀態變數，這個變數會儲存狀態並且在封裝中的不同元件之間傳遞狀態。  
   
 -   **標記初始載入開始**：此作業是在從不含快照集的使用中資料庫執行初始載入時使用。 初始載入封裝開始讀取來源資料表之前，系統會在初始載入封裝的開頭叫用此作業，以便在來源資料庫中記錄目前的 LSN。 這需要來源資料庫的連接。  
   
-     如果您在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] CDC (亦即非 Oracle) 上工作時選取了 [標記初始載入開始]，連接管理員中指定的使用者就必須是 **db_owner** 或**系統管理員**。  
+     如果您在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] CDC (亦即非 Oracle) 上工作時選取了 [標記初始載入開始]  ，連接管理員中指定的使用者就必須是 **db_owner** 或**系統管理員**。  
   
 -   **標記初始載入結束**：此作業是在從不含快照集的使用中資料庫執行初始載入時使用。 初始載入封裝讀取來源資料表完成之後，系統會在初始載入封裝的結尾叫用此作業，以便在來源資料庫中記錄目前的 LSN。 這個 LSN 的決定方式如下：記錄進行此作業時的目前時間，然後在 CDC 資料庫中查詢 `cdc.lsn_time_`mapping 資料表，尋找該時間之後發生的變更。  
   
-     如果您在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] CDC (亦即非 Oracle) 上工作時選取了 [標記初始載入結束]，連接管理員中指定的使用者就必須是 **db_owner** 或**系統管理員**。  
+     如果您在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] CDC (亦即非 Oracle) 上工作時選取了 [標記初始載入結束]  ，連接管理員中指定的使用者就必須是 **db_owner** 或**系統管理員**。  
   
 -   **標記 CDC 開始**：此作業會在從快照集資料庫或靜止資料庫進行初始載入時使用。 系統會在初始載入封裝中的任何時間點叫用此作業。 此作業所接受的參數可以是快照集 LSN、快照集資料庫的名稱 (從中自動衍生快照集 LSN)，也可以保留空白 (在此情況中，目前資料庫 LSN 就會當做變更處理封裝的啟始 LSN 使用)。  
   
      此作業是用來取代「標記初始載入開始/結束」作業。  
   
-     如果您在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] CDC (亦即非 Oracle) 上工作時選取了 [標記 CDC 開始]，連接管理員中指定的使用者就必須是 **db_owner** 或**系統管理員**。  
+     如果您在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] CDC (亦即非 Oracle) 上工作時選取了 [標記 CDC 開始]  ，連接管理員中指定的使用者就必須是 **db_owner** 或**系統管理員**。  
   
 -   **取得處理範圍**：此作業是在叫用使用 CDC 來源資料流程的資料流程之前用於變更處理封裝中。 叫用此作業時，它會建立 CDC 來源資料流程所讀取的 LSN 範圍。 此範圍會儲存在資料流程處理期間 CDC 來源所使用的 SSIS 封裝變數中。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66061120"
      此作業使用時機的範例如下：當您只想要處理新建立的變更記錄，而忽略所有舊的變更記錄時。  
   
  **包含 CDC 狀態的變數**  
- 選取儲存工作作業之狀態資訊的 SSIS 封裝變數。 您應該在開始之前定義變數。 如果您選取 **[自動狀態持續性]**，系統就會自動載入並儲存狀態變數。  
+ 選取儲存工作作業之狀態資訊的 SSIS 封裝變數。 您應該在開始之前定義變數。 如果您選取 **[自動狀態持續性]** ，系統就會自動載入並儲存狀態變數。  
   
  如需定義狀態變數的詳細資訊，請參閱 [定義狀態變數](data-flow/define-a-state-variable.md)。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66061120"
  只有當您已選取 **[自動狀態持續性]** 時，才能使用這個選項，而且它是必要參數。  
   
  **要用於儲存狀態的資料表**  
- 輸入要用於儲存 CDC 狀態之狀態資料表的名稱。 指定的資料表必須具有兩個名為 **name** 和 **state** 的資料行，而且這兩個資料行的資料類型都必須是 **varchar (256)**。  
+ 輸入要用於儲存 CDC 狀態之狀態資料表的名稱。 指定的資料表必須具有兩個名為 **name** 和 **state** 的資料行，而且這兩個資料行的資料類型都必須是 **varchar (256)** 。  
   
  您可以選擇性地選取 **[新增]** 取得 SQL 指令碼，以便建置含有必要資料行的新狀態資料表。 選取 **[自動狀態持續性]** 時，開發人員必須根據上述需求建立狀態資料表。  
   

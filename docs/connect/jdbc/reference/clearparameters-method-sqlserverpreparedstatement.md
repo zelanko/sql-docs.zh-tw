@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: cb1d0f36-d2de-4685-b97a-626608e50e5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 584cd784eaef24405d77f6d6f11157c12fc0a364
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 88c8af0e8bcfa7e29263c660567480a2c358ba88
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773608"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803632"
 ---
 # <a name="clearparameters-method-sqlserverpreparedstatement"></a>clearParameters 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

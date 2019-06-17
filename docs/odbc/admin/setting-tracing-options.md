@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ccf5afd559d4d3716c22b42665c516aa230fafe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198531"
 ---
 # <a name="setting-tracing-options"></a>設定追蹤選項
@@ -51,7 +51,7 @@ ms.locfileid: "63198531"
   
 6.  若要傳回以每位使用者進行追蹤，請清除核取方塊。  
   
-7.  按一下 **[套用]**。  
+7.  按一下 **[套用]** 。  
   
 > [!NOTE]  
 >  如果您已有一種模式中啟動追蹤，您必須停止追蹤，並切換至 已成功變更模式的其他模式。  

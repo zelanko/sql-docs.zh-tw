@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 37ea46f7cae616e39b4d2b459c2d0768a03117b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63297557"
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>自動調整圖表中所選資料表的大小 (Visual Database Tools)
@@ -29,7 +29,7 @@ ms.locfileid: "63297557"
   
 1.  選取您要調整大小的資料表。  
   
-2.  在選取的資料表上按一下滑鼠右鍵，然後從快速鍵功能表中選取 [自動調整選取資料表的大小]。  
+2.  在選取的資料表上按一下滑鼠右鍵，然後從快速鍵功能表中選取 [自動調整選取資料表的大小]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用資料庫圖表 &#40;Visual Database Tools&#41;](visual-database-tools.md)  
