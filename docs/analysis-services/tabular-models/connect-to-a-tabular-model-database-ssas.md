@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 239559dc7d5bfdabe3a3f9060bc92059982c8dae
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62469476"
 ---
 # <a name="connect-to-a-tabular-model-database"></a>連線到表格式模型資料庫  
@@ -46,11 +46,11 @@ ms.locfileid: "62469476"
   
      在下列步驟中，您會將這些帳戶加入至 Analysis Services 執行個體上的伺服器角色。  
   
-3.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，以滑鼠右鍵按一下此伺服器執行個體，然後選取 [屬性]。 在物件總管中，以滑鼠右鍵按一下 [角色]，然後選取 [新增角色]。  
+3.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，以滑鼠右鍵按一下此伺服器執行個體，然後選取 [屬性]  。 在物件總管中，以滑鼠右鍵按一下 [角色]  ，然後選取 [新增角色]  。  
   
-4.  在 [Analysis Services 屬性] 頁面中，按一下 [安全性]。  
+4.  在 [Analysis Services 屬性] 頁面中，按一下 [安全性]  。  
   
-5.  按一下 [加入]，然後輸入 Excel Service 所使用的帳戶，後面接著 Reporting Services 所使用的帳戶。  
+5.  按一下 [加入]  ，然後輸入 Excel Service 所使用的帳戶，後面接著 Reporting Services 所使用的帳戶。  
   
 ##  <a name="bkmk_excelconn"></a> 從 Excel 或 SharePoint 連接  
  提供 Analysis Services 資料庫存取權的用戶端程式庫可以用來連接到在表格式模式伺服器上執行的模型資料庫。 程式庫包含 Analysis Services OLE DB 提供者、ADOMD.NET 和 AMO。  
@@ -67,17 +67,17 @@ ms.locfileid: "62469476"
   
 #### <a name="connect-from-excel"></a>從 Excel 連接  
   
-1.  在 Excel 的 [資料] 索引標籤上，按一下 [取得外部資料] 中的 [從其他來源]。  
+1.  在 Excel 的 [資料]  索引標籤上，按一下 [取得外部資料]  中的 [從其他來源]  。  
   
-2.  選取 [從 Analysis Services]。  
+2.  選取 [從 Analysis Services]  。  
   
-3.  在 [伺服器名稱] 中，指定裝載資料庫的 Analysis Services 執行個體。 伺服器名稱通常是執行伺服器軟體之電腦的名稱。 如果伺服器安裝成具名執行個體，您必須以此格式指定名稱：\<伺服器名稱 >\\< 執行個體名稱\>。  
+3.  在 [伺服器名稱]  中，指定裝載資料庫的 Analysis Services 執行個體。 伺服器名稱通常是執行伺服器軟體之電腦的名稱。 如果伺服器安裝成具名執行個體，您必須以此格式指定名稱：\<伺服器名稱 >\\< 執行個體名稱\>。  
   
      您必須針對獨立的表格式部署設定伺服器執行個體，而且伺服器執行個體必須有允許存取的輸入規則。 如需詳細資訊，請參閱[判斷 Analysis Services 執行個體的伺服器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)和[設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
-4.  對於登入認證，如果您有資料庫的讀取權限，請選擇 [使用 Windows 驗證]。 否則，請選擇 [使用下列的使用者名稱和密碼]，然後輸入具有資料庫權限之 Windows 帳戶的使用者名稱和密碼。 按一下 [下一步] 。  
+4.  對於登入認證，如果您有資料庫的讀取權限，請選擇 [使用 Windows 驗證]  。 否則，請選擇 [使用下列的使用者名稱和密碼]  ，然後輸入具有資料庫權限之 Windows 帳戶的使用者名稱和密碼。 按一下 [下一步]  。  
   
-5.  選取資料庫。 有效的選項將會針對資料庫顯示一個 [模型] Cube。 按一下 [下一步]，然後按一下 [完成]。  
+5.  選取資料庫。 有效的選項將會針對資料庫顯示一個 [模型]  Cube。 按一下 [下一步]  ，然後按一下 [完成]  。  
   
  建立連接之後，您可以使用資料來建立樞紐分析表或樞紐分析圖。 如需詳細資訊，請參閱 <<c0> [ 在 Excel 中的進行分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62469476"
   
  **嘗試建立與活頁簿中所使用之外部資料來源間的連接時，發生錯誤。**  
   
- 在 SharePoint 上，當您嘗試使用模型資料之樞紐分析表中的資料互動 (如篩選資料) 時，就會發生這個 Microsoft Excel 錯誤。 此錯誤的發生，是因為使用者在活頁簿上沒有足夠的 SharePoint 權限。 使用者必須具有 [讀取] (含) 以上的權限。 [僅供檢視] 權限不足以進行資料存取。  
+ 在 SharePoint 上，當您嘗試使用模型資料之樞紐分析表中的資料互動 (如篩選資料) 時，就會發生這個 Microsoft Excel 錯誤。 此錯誤的發生，是因為使用者在活頁簿上沒有足夠的 SharePoint 權限。 使用者必須具有 [讀取]  (含) 以上的權限。 [僅供檢視]  權限不足以進行資料存取。  
   
 ## <a name="see-also"></a>另請參閱  
  [表格式模型解決方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  

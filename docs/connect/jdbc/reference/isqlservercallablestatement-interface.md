@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 030a1631-cfcd-41e0-beb5-47f93c01e8e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0a6d016f51dc5e651475cb5c6c58ed6cd0761b00
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: aea9ddeb1dcf1ad558ed11ce0e5bd9fec80ef6e8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774638"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796486"
 ---
 # <a name="isqlservercallablestatement-interface"></a>ISQLServerCallableStatement 介面
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

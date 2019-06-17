@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 13c8afda7e2a6ab1d59a2b271a4d508d4fc315a2
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483974"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>明確階層 (Master Data Services)
@@ -46,7 +46,7 @@ ms.locfileid: "65483974"
  強制的明確階層是一種階層，其中的所有分葉成員都必須包括在階層樹狀結構中。 根據預設，所有成員都會包含在樹狀結構的根。 您可以視需要重新排列成員。  
   
 ### <a name="non-mandatory-explicit-hierarchy"></a>非強制的明確階層  
- 非強制的明確階層是一種階層，其所有分葉成員都是位於系統建立的 [未使用] 節點。 您可以在需要時，將成員移出這個節點。 其餘的成員可以保留在 [未使用] 節點中。  
+ 非強制的明確階層是一種階層，其所有分葉成員都是位於系統建立的 [未使用]  節點。 您可以在需要時，將成員移出這個節點。 其餘的成員可以保留在 [未使用]  節點中。  
   
  當您使用非強制的明確階層時，在此階層上所做的任何報告或分析可能不會符合強制的階層上所做的報告或分析。  
   

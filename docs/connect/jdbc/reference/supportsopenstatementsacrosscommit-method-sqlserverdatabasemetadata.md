@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e733586c-9222-43cb-92ea-ba474f442a43
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f194f036a35541aab9678b1da8804ba863b3b41e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 003829ffe09782693f7d69f2c8b055c66252dbc4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757986"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797453"
 ---
 # <a name="supportsopenstatementsacrosscommit-method-sqlserverdatabasemetadata"></a>supportsOpenStatementsAcrossCommit 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

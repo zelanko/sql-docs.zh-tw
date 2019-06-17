@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632476"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE、DELETE 以及 INSERT 陳述式
@@ -33,15 +33,15 @@ ms.locfileid: "62632476"
   
  **設定** _資料行識別碼_  **=** {*運算式* &#124; **NULL**}  
   
- [**，** _資料行識別碼_  **=** {*運算式* &#124; **NULL**}]...  
+ [ **，** _資料行識別碼_  **=** {*運算式* &#124; **NULL**}]...  
   
  [**何處** _搜尋條件_]  
   
  **DELETE FROM** _table-name_[**WHERE** _search-condition_]  
   
- **INSERT INTO** _table-name_[**(** _column-identifier_ [**,** _column-identifier_]...**)**]  
+ **INSERT INTO** _table-name_[ **(** _column-identifier_ [ **,** _column-identifier_]... **)** ]  
   
- {*query-specification* &#124; **VALUES (** _insert-value_ [**,** _insert-value_]...**)**}  
+ {*query-specification* &#124; **VALUES (** _insert-value_ [ **,** _insert-value_]... **)** }  
   
  請注意，*查詢規格*項目是只有在核心和 Extended SQL 文法，而且有效*運算式*並*搜尋條件*項目變得更複雜的核心和 Extended SQL 文法。  
   

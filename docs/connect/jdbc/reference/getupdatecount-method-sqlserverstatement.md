@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e9570228-4500-44b6-b2f1-84ac050b5112
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7c4dadcaa4bfb0c2bf4698cf7b4e0be02a7d4ccf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6f05796220e305a0d6e06e15a58f780048d49a53
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633736"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790533"
 ---
 # <a name="getupdatecount-method-sqlserverstatement"></a>getUpdateCount 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

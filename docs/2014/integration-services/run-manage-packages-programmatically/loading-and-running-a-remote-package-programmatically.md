@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62889620"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>以程式設計方式載入和執行遠端封裝
@@ -166,7 +166,7 @@ namespace LaunchSSISPackageAgent_CS
   
 2.  將參考加入`Microsoft.SqlServer.ManagedDTS`並新增`Imports`或是`using`陳述式的程式碼檔案來**Microsoft.SqlServer.Dts.Runtime**命名空間。  
   
-3.  將 LaunchPackage Web 服務方法的範例程式碼貼到類別中  (範例顯示程式碼視窗的整個內容)。  
+3.  將 LaunchPackage Web 服務方法的範例程式碼貼到類別中 (範例顯示程式碼視窗的整個內容)。  
   
 4.  藉由為 LaunchPackage 方法的輸入引數提供一組指向現有封裝的有效值，建立並測試 Web 服務。 例如，如果 package1.dtsx 是儲存在伺服器上的 C:\My Packages 中，則傳遞 "file" 以做為 sourceType 的值，傳遞 "C:\My Packages" 做為 sourceLocation 的值，並傳遞 "package1" (沒有副檔名) 做為 packageName 的值。  
   
@@ -341,7 +341,7 @@ public class LaunchSSISPackageServiceCS : System.Web.Services.WebService
   
 3.  加入 Web 服務專案的 Web 參考。 若有需要，請在範例程式碼中，為指派到 Web 服務 Proxy 物件的名稱，調整變數宣告。  
   
-4.  將 Main 常式與私用列舉的範例程式碼貼到程式碼中  (範例顯示程式碼視窗的整個內容)。  
+4.  將 Main 常式與私用列舉的範例程式碼貼到程式碼中 (範例顯示程式碼視窗的整個內容)。  
   
 5.  編輯呼叫 LaunchPackage 方法的程式碼行，為其輸入引數提供一組指向現有封裝的有效值。 例如，如果 package1.dtsx 是儲存在伺服器上的 C:\My Packages 中，則傳遞 "file" 以做為 `sourceType` 的值，傳遞 "C:\My Packages" 做為 `sourceLocation` 的值，並傳遞 "package1" (沒有副檔名) 做為 `packageName` 的值。  
   

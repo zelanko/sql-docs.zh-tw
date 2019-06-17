@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62900221"
 ---
 # <a name="lookup-transformation"></a>查閱轉換
@@ -53,7 +53,7 @@ ms.locfileid: "62900221"
   
 -   DB2  
   
- 「查閱」轉換會嘗試在轉換輸入的值與參考資料集的值之間執行等聯結 (Equi-Join)  (等聯結表示轉換輸入中的各資料列，必須至少符合參考資料集中的某個資料列)。如果無法執行等聯結，則「查閱」轉換會執行下列其中一項動作：  
+ 「查閱」轉換會嘗試在轉換輸入的值與參考資料集的值之間執行等聯結 (Equi-Join) (等聯結表示轉換輸入中的各資料列，必須至少符合參考資料集中的某個資料列)。如果無法執行等聯結，則「查閱」轉換會執行下列其中一項動作：  
   
 -   如果參考資料集中沒有相符的項目，則不會發生聯結。 根據預設，「查閱」轉換會將沒有相符項目的資料列視為錯誤； 不過，您可以設定「查閱」轉換，以將這些資料列重新導向至無相符結果輸出。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;一般頁面&#41;](../../lookup-transformation-editor-general-page.md) 和[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../lookup-transformation-editor-error-output-page.md)。  
   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec1ec91705dfb9194f42c079cb7b3d5100c9d396
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090112"
 ---
 # <a name="start-the-sqlcmd-utility"></a>啟動 sqlcmd 公用程式
@@ -30,7 +30,7 @@ ms.locfileid: "66090112"
   
 ### <a name="to-start-the-sqlcmd-utility-and-connect-to-a-default-instance-of-sql-server"></a>啟動 sqlcmd 公用程式和連接 SQL Server 的預設執行個體  
   
-1.  在 [開始] 功能表上，按一下 [執行]。 在 [開啟] 方塊中，輸入 **cmd**，然後按一下 [確定] 開啟 [命令提示字元] 視窗。  
+1.  在 [開始]  功能表上，按一下 [執行]  。 在 [開啟]  方塊中，輸入 **cmd**，然後按一下 [確定]  開啟 [命令提示字元] 視窗。  
   
 2.  在命令提示字元中，輸入 `sqlcmd`。  
   

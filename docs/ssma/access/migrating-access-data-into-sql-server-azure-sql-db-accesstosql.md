@@ -20,10 +20,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d15d7608879d9116832e083654cc07717c72e23e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63453490"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>將 Access 資料移轉到 SQL Server-Azure SQL DB (AccessToSQL)

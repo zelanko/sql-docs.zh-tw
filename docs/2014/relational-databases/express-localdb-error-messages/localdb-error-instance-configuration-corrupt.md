@@ -1,8 +1,8 @@
 ---
 title: LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: sql
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
@@ -11,14 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40e660cc41724310e7462b2d78b7d3d8787784ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62519272"
 ---
 # <a name="localdberrorinstanceconfigurationcorrupt"></a>LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>詳細資料  
   

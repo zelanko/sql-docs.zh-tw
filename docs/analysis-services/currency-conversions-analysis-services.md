@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e5e23e81f4f22ea7a31fdf09d46a1ccfdae52bf6
-ms.sourcegitcommit: 6ab60b426fc6ec7bb9e727323f520c0b05a20d06
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65527395"
 ---
 # <a name="currency-conversions-in-analysis-services"></a>Analysis Services 中的貨幣轉換

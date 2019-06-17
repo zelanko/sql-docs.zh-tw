@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57fe740bdd02c96eb21994f5996c734620793616
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079835"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>升級活頁簿和排程的資料重新整理 (SharePoint 2013)
@@ -152,13 +152,13 @@ PS C:\Windows\system32> Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefres
 ###  <a name="bkmk_msolapxslx"></a> 如何檢查 PowerPivot 活頁簿中的 MSOLAP 資料提供者資訊  
  請利用下列指示，檢查 PowerPivot 活頁簿中使用哪一個 OLE DB 提供者。 檢查資料連接資訊不需要安裝 [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 增益集。  
   
-1.  在 Excel 中的 [資料] 索引標籤上，按一下 **[連接]**。 按一下 **[屬性]**。  
+1.  在 Excel 中的 [資料] 索引標籤上，按一下 **[連接]** 。 按一下 **[屬性]** 。  
   
 2.  在 **[定義]** 索引標籤上，提供者版本會出現在連接字串的開頭。  
   
-     [] 表示活頁簿為 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
+     []  表示活頁簿為 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
   
-     [] 則是指 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]。  
+     []  則是指 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]。  
   
      **資料來源 = $Embedded$** 表示活頁簿的 PowerPivot 活頁簿中，使用內嵌的資料庫。  
   

@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 017292aa073c0b5745f313b61592a5c57199567c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106953"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML 報表資料的 XML 查詢語法 (SSRS)
-  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可以建立 XML 資料來源的資料集。 當您定義資料來源之後，要建立此資料集的查詢。 根據資料來源所指向的 XML 資料類型而定，您可藉由加入 XML `Query` 或元素路徑來建立資料集查詢。 XML`Query`開頭**\<查詢 >** 標記，並且包含命名空間和資料來源而異的 XML 項目。 元素路徑與命名空間無關，而且會指定當搭配類似 XPath 語法使用基礎 XML 資料時，要使用哪些節點和節點屬性。 如需項目路徑的詳細資訊，請參閱 [XML 報表資料的項目路徑語法 &#40;SSRS&#41;](report-data-ssrs.md)。  
+  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可以建立 XML 資料來源的資料集。 當您定義資料來源之後，要建立此資料集的查詢。 根據資料來源所指向的 XML 資料類型而定，您可藉由加入 XML `Query` 或元素路徑來建立資料集查詢。 XML`Query`開頭 **\<查詢 >** 標記，並且包含命名空間和資料來源而異的 XML 項目。 元素路徑與命名空間無關，而且會指定當搭配類似 XPath 語法使用基礎 XML 資料時，要使用哪些節點和節點屬性。 如需項目路徑的詳細資訊，請參閱 [XML 報表資料的項目路徑語法 &#40;SSRS&#41;](report-data-ssrs.md)。  
   
  您可以針對下列 XML 資料類型建立 XML 資料來源：  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66106953"
   
 -   針對 URL 要求，查詢參數會包含為標準 URL 參數。  
   
--   針對 Web 服務要求，查詢參數會傳遞至 Web 服務方法。 若要定義查詢參數，請使用 [資料集屬性] 對話方塊的 [參數] 頁面。 如需詳細資訊，請參閱 [資料集屬性對話方塊、參數](dataset-properties-dialog-box-parameters.md)。  
+-   針對 Web 服務要求，查詢參數會傳遞至 Web 服務方法。 若要定義查詢參數，請使用 [資料集屬性]  對話方塊的 [參數]  頁面。 如需詳細資訊，請參閱 [資料集屬性對話方塊、參數](dataset-properties-dialog-box-parameters.md)。  
   
 ### <a name="example"></a>範例  
  下表中的範例會說明如何從報表伺服器 Web 服務、XML 文件和內嵌 XML 資料中擷取資料。  
@@ -88,10 +88,10 @@ ms.locfileid: "66106953"
 |XML 查詢元素|在資料集中產生欄位|  
 |-----------------------|-------------------------------------|  
 |\<Query/>|值 a: https://schemas.microsoft.com/..<br /><br /> 值 b: https://schemas.microsoft.com/..<br /><br /> 值 c: https://schemas.microsoft.com/..|  
-|\<xmldp:Query xmlns:xmldp ="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery"xmlns:ns ="https://schemas.microsoft.com/.. 」><br /><br /> \<xmldp:ElementPath>Root {}/ns:Element2/Node\</xmldp:ElementPath><br /><br /> \</xmldp:Query>|D 值<br /><br /> E 值<br /><br /> F 值|  
+|\<xmldp:Query xmlns:xmldp ="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery "xmlns:ns ="https://schemas.microsoft.com/.. 」><br /><br /> \<xmldp:ElementPath>Root {}/ns:Element2/Node\</xmldp:ElementPath><br /><br /> \</xmldp:Query>|D 值<br /><br /> E 值<br /><br /> F 值|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML 文件：DPNamespace.xml  
- 您可以複製這段 XML，並將它儲存為報表設計師可以使用的 URL，以便當做 XML 資料來源使用；例如 http://localhost/DPNamespace.xml。  
+ 您可以複製這段 XML，並將它儲存為報表設計師可以使用的 URL，以便當做 XML 資料來源使用；例如 http://localhost/DPNamespace.xml 。  
   
 ```  
 <Root xmlns:ns="https://schemas.microsoft.com/...">  

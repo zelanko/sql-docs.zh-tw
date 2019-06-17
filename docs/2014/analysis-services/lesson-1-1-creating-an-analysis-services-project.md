@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 56b0a13c30100a12ce7307fc3896b5976e30ad59
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079355"
 ---
 # <a name="creating-an-analysis-services-project"></a>建立 Analysis Services 專案
@@ -22,13 +22,13 @@ ms.locfileid: "66079355"
   
 ### <a name="to-create-a-new-analysis-services-project"></a>若要建立新的 Analysis Services 專案  
   
-1.  按一下 **[開始]**、依序指向 **[所有程式]** 和 **[Microsoft SQL Server 2012]**，然後按一下 **[SQL Server 資料工具]**。  
+1.  按一下 **[開始]** 、依序指向 **[所有程式]** 和 **[Microsoft SQL Server 2012]** ，然後按一下 **[SQL Server 資料工具]** 。  
   
-      [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 開發環境隨即開啟。  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 開發環境隨即開啟。  
   
-2.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的起始頁面上，按一下 **[新增專案]**。  
+2.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的起始頁面上，按一下 **[新增專案]** 。  
   
-3.  在 **[新增專案]** 對話方塊的 **[已安裝的範本]** 窗格中，展開 **[Business Intelligence]**，然後選取 **[Analysis Services]**。 選擇 **[Analysis Services 多維度和資料採礦專案]** 範本。  
+3.  在 **[新增專案]** 對話方塊的 **[已安裝的範本]** 窗格中，展開 **[Business Intelligence]** ，然後選取 **[Analysis Services]** 。 選擇 **[Analysis Services 多維度和資料採礦專案]** 範本。  
   
      請注意，對話方塊底端會產生預設專案名稱、位置和預設方案名稱。 根據預設，會為方案建立新目錄。  
   

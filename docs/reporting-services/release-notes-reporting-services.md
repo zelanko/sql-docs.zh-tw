@@ -1,20 +1,20 @@
 ---
 title: 版本資訊 (SSRS) 2017年和更新版本 |Microsoft Docs
-ms.date: 09/01/2018
+ms.date: 02/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-ms.reviewer: maghan
+ms.reviewer: maggies
 author: casualoak
-ms.author: RhysSchmidtke
+ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: c85d3811fc467d94dc1841b871964e3bb594e2df
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cd2f9dec39075b332b2ae38c622f3970faf8d331
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283289"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037849"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SQL Server Reporting Services (SSRS) 2017 與更新版本的版本資訊
 
@@ -86,7 +86,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | 若 pageHeight 小於 0.5 英吋，則不會縮放文字大小。 | &nbsp; |
 | CRM 搭配使用時，就會在 SSRS 類別目錄資料庫中發生死結。 | &nbsp; |
 | 當在報告中向下捲動時，垂直對齊資料行標頭不正確地顯示。 | &nbsp; |
-| 被新增到 SCOM 回報角色的使用者將無法存取 SSRS Web 入口網站。 | &nbsp; |
+| 新增至 System Center Operations Manager 報表的角色的使用者可以封鎖至 SSRS web 入口網站的存取。 | &nbsp; |
 | 泰文字元未正確匯出至 PDF。 | &nbsp; |
 | 瀏覽器角色行為變更。 | &nbsp; |
 | rc:Toolbar=false 無法在 Express 版本中使用。 | &nbsp; |
@@ -111,7 +111,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | 編輯報表參數的屬性之後，它在連結的報表中的可見性會被還原。 | &nbsp; |
 | URL 參數 rc:Toolbar=false 無法在 Express 版本中使用。 | &nbsp; |
 | 需要運算式在文字方塊中的 cangrow 屬性設定為未顯示的值，則為 false 的結果。 | &nbsp; |
-| 在安裝程式中新增產品金鑰的 [深入了解] 連結。 | &nbsp; |
+| 在安裝程式中新增產品金鑰的 [深入了解]  連結。 | &nbsp; |
 | 含自訂表單驗證的 Web 入口網站會忽略變動到期 Cookie。 | &nbsp; |
 | 如果資料列的內容是空的，匯出到 Word 會建立不相等的資料列高度。 | &nbsp; |
 | &nbsp; | &nbsp; |

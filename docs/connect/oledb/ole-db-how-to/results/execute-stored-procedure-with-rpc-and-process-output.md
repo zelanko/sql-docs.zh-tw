@@ -13,13 +13,13 @@ helpviewer_keywords:
 - stored procedures [SQL Server], RPC syntax
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8443504fdbd79d73273436c376743021bafa73e3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 4a0691795bdca0ec24b307362c6b2137c5741362
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203498"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791273"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>使用 RPC 及處理輸出執行預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

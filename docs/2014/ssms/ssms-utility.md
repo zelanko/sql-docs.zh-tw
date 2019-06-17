@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: edb7ea682ebef5d99cee7a248681be80fc433312
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126997"
 ---
 # <a name="ssms-utility"></a>Ssms 公用程式
@@ -51,32 +51,32 @@ ms.locfileid: "63126997"
  *solutionfile*  
  指定要開啟的方案。 這個參數必須包含方案檔的完整路徑。  
   
- [**-S** _servername_]  
+ [ **-S** _servername_]  
  伺服器名稱  
   
- [**-d** _databasename_]  
+ [ **-d** _databasename_]  
  資料庫名稱  
   
- [**-U** _username_]  
+ [ **-U** _username_]  
  利用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證來連接時的使用者名稱  
   
- [**-P** _password_]  
+ [ **-P** _password_]  
  利用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證來連接時的密碼  
   
- [**-E**]  
+ [ **-E**]  
  使用 Windows 驗證進行連接  
   
- [**-nosplash**]  
+ [ **-nosplash**]  
  在開啟時，使 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 不呈現開頭顯示畫面。 當您利用頻寬有限的連接，透過「終端機服務」來連接執行 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的電腦時，請使用這個選項。 這個引數不區分大小寫，可出現在其他引數的前後。  
   
- [**-log**_[filename]?_]  
+ [ **-log** _[filename]?_ ]  
  將 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 活動記錄到指定的檔案以利於進行疑難排解  
   
- [**-?**]  
+ [ **-?** ]  
  顯示命令列說明  
   
 ## <a name="remarks"></a>備註  
- 所有參數都是選擇性的，除了用逗號來分隔的檔案之外，您必須用空格來分隔它們。 如果您沒有指定任何參數，**Ssms** 會依照 [工具] 功能表上，[選項] 設定中所指定的內容來開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 例如，如果 [環境/一般] 頁面的 [啟動時] 選項指定 [開啟新增查詢視窗]，**Ssms** 會以空白的查詢編輯器開啟。  
+ 所有參數都是選擇性的，除了用逗號來分隔的檔案之外，您必須用空格來分隔它們。 如果您沒有指定任何參數，**Ssms** 會依照 [工具]  功能表上，[選項]  設定中所指定的內容來開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 例如，如果 [環境/一般]  頁面的 [啟動時]  選項指定 [開啟新增查詢視窗]  ，**Ssms** 會以空白的查詢編輯器開啟。  
   
  **-log** 參數必須出現在命令列結尾，位於所有其他參數之後。 檔名引數是選擇性的。 如果指定了檔名，但該檔案不存在，便會建立檔案。 若因寫入權限不足等緣故而無法建立檔案，則會改將記錄寫入未當地語系化的 APPDATA 位置 (請參閱下文)。 如果未指定檔名引數，便會將兩個檔案寫入至目前使用者的未當地語系化應用程式儲存資料夾。 SQL Server 的未當地語系化應用程式儲存資料夾可以由 APPDATA 環境變數查知。 例如，SQL Server 2012 的資料夾是 \<系統磁碟機>:\Users\\<使用者名稱\>\AppData\Roaming\Microsoft\AppEnv\10.0\\。 兩個檔案依預設將名為 ActivityLog.xml 和 ActivityLog.xsl。 前者包含活動記錄資料，後者則是 XML 樣式表以讓您更方便檢視此 XML 檔案。 請使用下列步驟，在您的預設 XML 檢視器 (如 Internet Explorer) 中檢視記錄檔：按一下 [開始]，再按一下 [執行...]，然後在提供的欄位內鍵入 "\<系統磁碟機>:\Users\\<使用者名稱\>\AppData\Roaming\Microsoft\AppEnv\10.0\ActivityLog.xml"，然後按 Enter。  
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff882caf0ce5d9ef7d2e9f059daed89ed4b50d82
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126101"
 ---
 # <a name="delete-a-data-source-odbc"></a>刪除資料來源 (ODBC)
@@ -24,7 +24,7 @@ ms.locfileid: "63126101"
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>使用 ODBC 管理員刪除資料來源  
   
-1.  在**控制台中**，開啟**系統管理工具**，然後按兩下**資料來源 (ODBC)**。 或者，您也可以從命令提示字元執行 odbcad32.exe。  
+1.  在**控制台中**，開啟**系統管理工具**，然後按兩下**資料來源 (ODBC)** 。 或者，您也可以從命令提示字元執行 odbcad32.exe。  
   
 2.  按一下 [**使用者 DSN**，**系統 DSN**，或**檔案 DSN** ] 索引標籤。  
   

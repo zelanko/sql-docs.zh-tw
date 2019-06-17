@@ -10,12 +10,12 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2df295b62ca76dfb46e767ed206180a52493255a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 5030feecab11ed0c7727424ae49bde788c1f55f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66102966"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046739"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
   本主題提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 概念的簡短摘要。  
@@ -47,7 +47,7 @@ ms.locfileid: "66102966"
  報表伺服器項目包含報表、模型、共用資料來源、共用資料集，以及其他可發行、上傳或儲存至報表伺服器的項目。 組織原生報表伺服器之報表伺服器階層資料夾結構中的項目，或是組織 SharePoint 網站之 SharePoint 內容庫中的項目。 如需詳細資訊，請參閱[報表伺服器內容管理 &#40;SSRS 原生模式&#41;](report-server/report-server-content-management-ssrs-native-mode.md)。  
   
  **資料夾**  
- 在原生報表伺服器上，資料夾提供儲存在報表伺服器中所有可定址項目的階層式導覽結構和路徑。 您可以使用資料夾階層和網站以及資料夾權限，協助控制對報表伺服器項目的存取權，這稱為 *「項目層級安全性」*(Item-level security)。 資料夾階層中的子資料夾預設會繼承您對特定資料夾所定義的角色指派。 若您將特定的角色指派給資料夾，則繼承規則將不再適用。 資料夾結構包含一個稱為 **[主資料夾]** 的根節點以及多個支援選擇性 **[我的報表]** 功能的保留資料夾。 在瀏覽器中，根節點是報表伺服器虛擬目錄的名稱 (例如， http://myreportserver/reports)。 如需詳細資訊，請參閱 [Folders](report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)。  
+ 在原生報表伺服器上，資料夾提供儲存在報表伺服器中所有可定址項目的階層式導覽結構和路徑。 您可以使用資料夾階層和網站以及資料夾權限，協助控制對報表伺服器項目的存取權，這稱為 *「項目層級安全性」* (Item-level security)。 資料夾階層中的子資料夾預設會繼承您對特定資料夾所定義的角色指派。 若您將特定的角色指派給資料夾，則繼承規則將不再適用。 資料夾結構包含一個稱為 **[主資料夾]** 的根節點以及多個支援選擇性 **[我的報表]** 功能的保留資料夾。 在瀏覽器中，根節點是報表伺服器虛擬目錄的名稱 (例如， http://myreportserver/reports )。 如需詳細資訊，請參閱 [Folders](report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)。  
   
  在 SharePoint 網站上，使用文件庫和內容庫中的 SharePoint 資料夾來組織項目。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66102966"
  **報表與報表定義**  
  **RDL.** 報表定義符合 XML 文法 (稱為報表定義語言 (RDL)) 的 XML 檔案。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，您可以使用報表產生器或報表設計師這類工具以建立報表定義。 它所含的元素可定義資料來源連接、用以擷取資料的查詢、運算式、參數、影像、文字方塊、資料表以及任何其他設計階段配置。 如需詳細資訊，請參閱[報表定義語言 &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)。  
   
- **RDLX.** RDLX 中的報表定義是一種 RDL 檔案，具有內部延伸模組可啟用 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 視覺效果經驗。 如需詳細資訊，請參閱 [Power View 概觀](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx)(英文)。  
+ **RDLX.** RDLX 中的報表定義是一種 RDL 檔案，具有內部延伸模組可啟用 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 視覺效果經驗。 如需詳細資訊，請參閱 [Power View 概觀](https://support.office.com/article/power-view-explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e#__toc328127684)(英文)。  
   
  **RDLC.** Visual Studio 報表設計師會產生 XML 格式的用戶端報表定義 (.rdlc) 檔案，以與 ReportViewer 控制項搭配使用。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "66102966"
   
      在報表設計師中，您無法瀏覽至報表伺服器上的共用資料來源。 您可以在 [方案總管] 中建立共用資料來源做為專案的一部分，並且選擇是否將它們部署到報表伺服器。 您可能因為電腦所需的認證和報表伺服器所需的認證不同，而選擇只在本機上使用這些共用資料來源。  
   
--   **內嵌資料來源。** 也稱為 *「報表特定資料來源」*(Report-specific data source)，內嵌資料來源是定義在報表中，而且只能供該報表使用。  
+-   **內嵌資料來源。** 也稱為 *「報表特定資料來源」* (Report-specific data source)，內嵌資料來源是定義在報表中，而且只能供該報表使用。  
   
      內嵌資料來源是儲存在報表定義中的資料連接。 內嵌資料來源連接資訊只能用於內嵌該資訊的報表中。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66102966"
  如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
  **報表參數**  
- 報表參數是報表定義的一部分。 您可以將參數加入至報表，以便連結相關報表、控制報表外觀、篩選報表資料，或是將報表的範圍縮小至特定使用者或位置。 將報表發行至原生報表伺服器或 SharePoint 網站時，會將報表參數儲存為個別的報表伺服器項目。 參數可以獨立管理，與報表定義無關。 若要為相同的報表建立多組參數，請建立 *「連結報表」*(Linked report)。  
+ 報表參數是報表定義的一部分。 您可以將參數加入至報表，以便連結相關報表、控制報表外觀、篩選報表資料，或是將報表的範圍縮小至特定使用者或位置。 將報表發行至原生報表伺服器或 SharePoint 網站時，會將報表參數儲存為個別的報表伺服器項目。 參數可以獨立管理，與報表定義無關。 若要為相同的報表建立多組參數，請建立 *「連結報表」* (Linked report)。  
   
  **報表項目**  
  報表項目是報表定義中一種內部但基本的概念。 報表項目的屬性會套用至資料區、地圖、文字方塊、影像，以及您加入至報表中的其他設計元素。 了解報表項目的屬性可協助您設計自訂的報表內容及外觀。 例如，所有報表項目都具有隱藏屬性，以控制可見性。  

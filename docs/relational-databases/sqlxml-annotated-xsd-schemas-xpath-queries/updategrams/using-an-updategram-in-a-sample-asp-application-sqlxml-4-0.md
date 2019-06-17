@@ -17,10 +17,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df2b73b8c3289844f8660d46629449d570a44ec5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025525"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>在範例 ASP 應用程式中使用 Updategram (SQLXML 4.0)
@@ -79,7 +79,7 @@ ms.locfileid: "63025525"
 </ROOT>  
 ```  
   
- 下列程式碼是 ASP 應用程式 (SampleASP.asp)。 請將它儲存在與您使用網際網路服務管理員公用程式所建立之虛擬根目錄相關聯的目錄中  (這個虛擬根目錄並非使用 IIS Virtual Directory Management for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 公用程式所建立，因為 IIS Virtual Directory Management for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 無法存取或識別 ASP 應用程式)。  
+ 下列程式碼是 ASP 應用程式 (SampleASP.asp)。 請將它儲存在與您使用網際網路服務管理員公用程式所建立之虛擬根目錄相關聯的目錄中 (這個虛擬根目錄並非使用 IIS Virtual Directory Management for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 公用程式所建立，因為 IIS Virtual Directory Management for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 無法存取或識別 ASP 應用程式)。  
   
 > [!NOTE]  
 >  在此程式碼中，您必須將 "ServerName" 取代成執行 Microsoft Internet Information Services (IIS) 之伺服器的名稱。  

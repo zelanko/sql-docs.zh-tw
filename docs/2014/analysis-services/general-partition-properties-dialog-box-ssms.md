@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05d840d4e43d9856dedeb3fd446c8158f23275b4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081067"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>一般 (資料分割屬性對話方塊) (SSMS)
-  在 SQL Server Management Studio 中，使用 [資料分割屬性] 對話方塊的 [一般] 頁面，即可針對 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中的 Cube，設定量值群組中之資料分割的一般屬性。  
+  在 SQL Server Management Studio 中，使用 [資料分割屬性]  對話方塊的 [一般]  頁面，即可針對 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中的 Cube，設定量值群組中之資料分割的一般屬性。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  

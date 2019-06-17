@@ -3,17 +3,17 @@ title: 安裝新的 R 語言套件-SQL Server Machine Learning 服務
 description: 將新的 R 套件新增至 SQL Server 2016 R Services 或 SQL Server 2017 Machine Learning 服務 （資料庫）
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/22/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b8c935400188ae6905a9915907fb097d02100ad2
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: fb8e5512a9b623a3e97d80289b928d66314f9d72
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994202"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140592"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server 上安裝新的 R 套件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -88,8 +88,7 @@ R 和 Python 功能包含多項 Microsoft 產品，全部都可能共存於同�
 
 如果您安裝 SQL Server 2017 Microsoft Machine Learning Server （獨立式） 或 SQL Server 2016 R Server （獨立式），除了 （SQL Server 2017 Machine Learning 服務和 SQL Server 2016 R Services） 的資料庫內分析，您的電腦有不同所有的 R 工具和程式庫的重複項的每個 R 安裝。
 
-會安裝到 R_SERVER 程式庫的套件僅供在獨立伺服器，且無法存取 SQL Server （資料庫內） 執行個體。 一律使用`R_SERVICES`安裝您想要使用 SQL Server 上的資料庫中的封裝時的程式庫。 如需路徑的詳細資訊，請參閱 <<c0> [ 封裝程式庫位置](installing-and-managing-r-packages.md#package-library-location)。
-
+會安裝到 R_SERVER 程式庫的套件僅供在獨立伺服器，且無法存取 SQL Server （資料庫內） 執行個體。 一律使用`R_SERVICES`安裝您想要使用 SQL Server 上的資料庫中的封裝時的程式庫。 如需路徑的詳細資訊，請參閱 <<c0> [ 封裝程式庫位置](../package-management/default-packages.md)。
 
 ## <a name="see-also"></a>另請參閱
 

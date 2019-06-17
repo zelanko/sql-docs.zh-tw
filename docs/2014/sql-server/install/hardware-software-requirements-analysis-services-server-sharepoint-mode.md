@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: ae38efa69921a2edf94f0e40c4505e345ca0015a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094947"
 ---
 # <a name="hardware-and-software-requirements-for-analysis-services-server-in-sharepoint-mode-sql-server-2014"></a>Analysis Services SharePoint 模式伺服器的硬體和軟體需求 (SQL Server 2014)
@@ -34,9 +34,9 @@ ms.locfileid: "66094947"
 ##  <a name="bkmk_sqllicense"></a> SQL Server 授權  
  如需有關 SQL Server 授權的詳細資訊，請參閱下列主題：  
   
--   [SQL Server 2014 授權資料表](https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf)(https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf)。  
+-   [SQL Server 2014 授權資料表](https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf)(https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf) 。  
   
--   [如何購買：SQL Server 的授權模型支援](https://www.microsoft.com/licensing/product-licensing/sql-server-2014?activetab=sql-server-2014-pivot%3aprimaryr2)(https://www.microsoft.com/licensing/product-licensing/sql-server-2014?activetab=sql-server-2014-pivot%3aprimaryr2)。  
+-   [如何購買：SQL Server 的授權模型支援](https://www.microsoft.com/licensing/product-licensing/sql-server-2014?activetab=sql-server-2014-pivot%3aprimaryr2)(https://www.microsoft.com/licensing/product-licensing/sql-server-2014?activetab=sql-server-2014-pivot%3aprimaryr2) 。  
   
 ##  <a name="bkmk_ssas__sharepoint_2013"></a> 在 SharePoint 2013 上安裝 analysis Services  
  如果您將 SharePoint 模式的 Analysis Services 伺服器單獨安裝在某部伺服器上，則最低系統需求是以 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 而非 SharePoint Server 需求為基礎。  
@@ -78,4 +78,4 @@ ms.locfileid: "66094947"
   
 ## <a name="additional-information"></a>其他資訊  
 
-如需 SharePoint 變更的詳細資訊，請參閱[SharePoint 2013 會從 SharePoint 2010 變成](https://technet.microsoft.com/library/ff607742\(office.15\).aspx)(https://technet.microsoft.com/library/ff607742(office.15).aspx)。
+如需 SharePoint 變更的詳細資訊，請參閱[SharePoint 2013 會從 SharePoint 2010 變成](https://technet.microsoft.com/library/ff607742\(office.15\).aspx)(https://technet.microsoft.com/library/ff607742(office.15).aspx) 。

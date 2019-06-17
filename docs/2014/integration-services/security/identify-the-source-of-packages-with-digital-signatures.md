@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 714ede33a89a3ab4e44dae682887ee0c21c9f363
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62766650"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用數位簽章來識別封裝的來源
@@ -32,7 +32,7 @@ ms.locfileid: "62766650"
 ## <a name="setting-an-option-to-check-the-package-signature"></a>設定檢查封裝簽章的選項  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 **dtexec** 公用程式都具有一個選項，可設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來檢查已簽署封裝的數位簽章。 您應該使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 **dtexec** 公用程式，取決於您想要檢查所有封裝或只檢查特定封裝：  
   
--   若要在設計階段載入封裝之前檢查所有封裝的數位簽章，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中設定 [載入封裝時檢查數位簽章] 選項。 這個選項是 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中所有封裝的全域設定。 如需相關資訊，請參閱 [General Page](../general-page-of-integration-services-designers-options.md)。  
+-   若要在設計階段載入封裝之前檢查所有封裝的數位簽章，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中設定 [載入封裝時檢查數位簽章]  選項。 這個選項是 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中所有封裝的全域設定。 如需相關資訊，請參閱 [General Page](../general-page-of-integration-services-designers-options.md)。  
   
 -   若要檢查個別封裝的數位簽章，請指定`/VerifyS[igned]`選項使用時**dtexec**執行封裝公用程式。 如需詳細資訊，請參閱 [dtexec Utility](../packages/dtexec-utility.md)。  
   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e8682d8bf38dc32f9eddc50c8bf32113ebf9e516
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+manager: jroth
+ms.openlocfilehash: 0b34c2398fceb8ea59744234d3bbd889a749804b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397527"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796186"
 ---
 # <a name="example-application-sqlsrv-driver"></a>範例應用程式 (SQLSRV 驅動程式)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

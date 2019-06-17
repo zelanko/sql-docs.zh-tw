@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 285eae7ea20d5919fa73bd0d514c755fe73d9de0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484717"
 ---
 # <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>工作 17：檢閱 SSIS 封裝所建立的 DQS 清理專案
@@ -34,19 +34,19 @@ ms.locfileid: "65484717"
   
 6.  按一下 [ **Profiler** ] 索引標籤以查看 SSIS 封裝執行清理活動的分析工具統計資料的下方窗格中。  
   
-7.  按一下 **關閉 **以關閉**管理**螢幕。  
+7.  按一下 **關閉** 以關閉**管理**螢幕。  
   
 8.  中的主頁面**DQS 用戶端**，按一下**開啟資料品質專案**中**資料品質專案**窗格。  
   
-9. 在專案清單中，選取 SSIS DQS 清理元件所建立的專案。 專案的名稱應該採用格式：**CleanseAndCurate.Cleanse Supplier Data.GUID (紅色）**。 您可能需要根據清單排序**建立日期**資料行並尋找最新的記錄。  
+9. 在專案清單中，選取 SSIS DQS 清理元件所建立的專案。 專案的名稱應該採用格式：**CleanseAndCurate.Cleanse Supplier Data.GUID (紅色）** 。 您可能需要根據清單排序**建立日期**資料行並尋找最新的記錄。  
   
-10. 按一下 [下一步] 。  
+10. 按一下 [下一步]  。  
   
 11. **管理和檢視結果**頁面應該很熟悉從您稍早在本教學課程中執行互動式清理。  
   
 12. 檢閱清理結果。 您也可以執行互動式清理，並在下一頁將結果匯出到 Excel 檔案或資料庫。  
   
-13. 按一下 [下一步] 。 在此**匯出** 頁面上，您可以將結果匯出到 excel 檔案中，CSV 檔案，或 SQL database。  
+13. 按一下 [下一步]  。 在此**匯出** 頁面上，您可以將結果匯出到 excel 檔案中，CSV 檔案，或 SQL database。  
   
 14. 按一下 **完成**完成的活動。  
   

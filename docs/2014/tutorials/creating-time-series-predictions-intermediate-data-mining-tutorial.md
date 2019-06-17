@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63313893"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>建立時間序列預測 (中繼資料採礦教學課程)
@@ -172,7 +172,7 @@ ms.locfileid: "63313893"
   
 3.  在 **資料表名稱**資料行中輸入新的暫存資料表名稱，例如**Test Predictions**。  
   
-4.  按一下 [儲存] 。  
+4.  按一下 [儲存]  。  
   
     > [!NOTE]  
     >  若要檢視您所建立的資料表，請建立與您儲存資料之執行個體的資料庫引擎之間的連接，並建立查詢。  

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 88290b9598ffdbbcfc90a738654a9485107da464
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62717575"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>物件和作業的存取權授權 (Analysis Services)
@@ -51,7 +51,7 @@ ms.locfileid: "62717575"
   
  **步驟 3：啟用查詢和處理工作負載的 cube 或模型存取**  
   
- 根據預設，只有伺服器和資料庫系統管理員可以存取 Cube 或表格式模型。 讓組織中的其他人員可以使用這些資料結構，需要其他角色指派來將 Windows 使用者和群組帳戶對應到 Cube 或模型，以及指定 [讀取] 權限 (Privilege) 的權限 (Permission)。 如需詳細資訊，請參閱[授與 Cube 或模型權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
+ 根據預設，只有伺服器和資料庫系統管理員可以存取 Cube 或表格式模型。 讓組織中的其他人員可以使用這些資料結構，需要其他角色指派來將 Windows 使用者和群組帳戶對應到 Cube 或模型，以及指定 [讀取]  權限 (Privilege) 的權限 (Permission)。 如需詳細資訊，請參閱[授與 Cube 或模型權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
   
  處理工作可以和其他系統管理功能分開進行，因此，伺服器和資料庫系統管理員可將此工作委派給他人，或透過指定執行排程軟體的服務帳戶設定自動處理。 如需詳細資訊，請參閱[授與處理權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)。  
   

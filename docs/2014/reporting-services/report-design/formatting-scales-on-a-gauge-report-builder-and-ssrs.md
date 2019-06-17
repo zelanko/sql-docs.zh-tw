@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6b7d4b7abc3070aa712316995c1d924fd73cbe8e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105781"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>格式化量測計上的標尺 (報表產生器及 SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66105781"
   
  當您在已經包含一個標尺的量測計上加入另一個標尺時，第一個標尺的外觀屬性會被複製到第二個標尺上。  
   
- 您可以用滑鼠右鍵按一下標尺標籤或刻度，然後選取 [星形標尺屬性] 或 [線性標尺屬性]，以便在標尺上設定屬性。 每個量測計類型至少都包含一個具有相同屬性集的標尺。 每個量測計類型也都有唯一的屬性：  
+ 您可以用滑鼠右鍵按一下標尺標籤或刻度，然後選取 [星形標尺屬性]  或 [線性標尺屬性]  ，以便在標尺上設定屬性。 每個量測計類型至少都包含一個具有相同屬性集的標尺。 每個量測計類型也都有唯一的屬性：  
   
 -   在星形量測計上，您可以指定星形標尺的半徑、開始角度與掃掠角度。  
   

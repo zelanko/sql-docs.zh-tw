@@ -17,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0259f14bb814fd4157af95e4ce92f462d1fab68a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62877265"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>系統資料庫的備份與還原 (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會維護一組系統層級資料庫，即「系統資料庫」，這對伺服器執行個體的運作而言是不可或缺的。 在每次重大更新之後，有幾個系統資料庫必須加以備份。 您一定要備份的系統資料庫包括 **msdb**、 **master**和 **model**。 如果有任何資料庫在伺服器執行個體上使用複寫，您還必須備份 **distribution** 系統資料庫。 這些系統資料庫的備份可讓您在發生系統失敗 (如硬碟故障) 時還原和復原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會維護一組系統層級資料庫，即「系統資料庫」  ，這對伺服器執行個體的運作而言是不可或缺的。 在每次重大更新之後，有幾個系統資料庫必須加以備份。 您一定要備份的系統資料庫包括 **msdb**、 **master**和 **model**。 如果有任何資料庫在伺服器執行個體上使用複寫，您還必須備份 **distribution** 系統資料庫。 這些系統資料庫的備份可讓您在發生系統失敗 (如硬碟故障) 時還原和復原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統。  
   
  下表摘要列出所有系統資料庫。  
   

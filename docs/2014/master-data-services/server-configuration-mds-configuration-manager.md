@@ -13,14 +13,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4d2fabec1bd022a1d73c3abc669995d04bfc9856
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478848"
 ---
 # <a name="master-data-services-server-configuration-page-configuration-manager"></a>Master Data Services 伺服器組態頁面 (組態管理員)
-  使用 [伺服器組態] 頁面可檢視本機伺服器電腦的組態資訊。  
+  使用 [伺服器組態]  頁面可檢視本機伺服器電腦的組態資訊。  
   
 ## <a name="server-configuration"></a>伺服器組態  
   

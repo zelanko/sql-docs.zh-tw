@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2edb8e994b43e5704d88417384e547e0cd0a183f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489552"
 ---
 # <a name="manage-changesets-master-data-services"></a>管理變更集 (Master Data Services)
@@ -36,16 +36,16 @@ ms.locfileid: "65489552"
   
 ## <a name="to-manage-the-changesets"></a>管理變更集  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中，選取模型和版本，然後按一下總管。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中，選取模型和版本，然後按一下總管  。  
   
-2.  按一下 [變更集]。 會顯示您選取之模型和版本可以管理的所有變更集。  
+2.  按一下 [變更集]  。 會顯示您選取之模型和版本可以管理的所有變更集。  
   
-3.  按一下 [套用] 以檢視變更集詳細資料。  
+3.  按一下 [套用]  以檢視變更集詳細資料。  
   
-4.  按一下 [刪除] 以刪除變更集。 您只能刪除不是處於暫止或已核准狀態的變更集。  
+4.  按一下 [刪除]  以刪除變更集。 您只能刪除不是處於暫止或已核准狀態的變更集。  
   
-5.  按一下 [加入] 以加入變更集。  
+5.  按一下 [加入]  以加入變更集。  
   
-6.  按一下 [編輯] 以編輯變更集。  
+6.  按一下 [編輯]  以編輯變更集。  
   
   

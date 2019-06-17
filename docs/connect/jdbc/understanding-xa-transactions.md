@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d88840ef429258ad425e867efc4b744f6a5d3c5
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: e61d9fbb562bda9ea400024598b1c7107ce5542e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736939"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788433"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 交易
 
@@ -72,21 +72,21 @@ ms.locfileid: "55736939"
 
 ### <a name="running-the-ms-dtc-service"></a>執行 MS DTC 服務
 
-應該在服務管理員中將 MS DTC 服務標示為 [自動]，以確定啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務時，便執行該服務。 若要啟用 MS DTC 以用於 XA 交易，您必須遵循下列步驟：  
+應該在服務管理員中將 MS DTC 服務標示為 [自動]  ，以確定啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務時，便執行該服務。 若要啟用 MS DTC 以用於 XA 交易，您必須遵循下列步驟：  
   
 在 Windows Vista 及更新的版本上：  
   
-1. 按一下 [開始] 按鈕、在 [開始搜尋] 方塊中鍵入 **dcomcnfg**，然後按下 ENTER 開啟 [元件服務]。 您也可以在 [開始搜尋] 方塊中鍵入 %windir%\system32\comexp.msc，開啟 [元件服務]。  
+1. 按一下 [開始]  按鈕、在 [開始搜尋]  方塊中鍵入 **dcomcnfg**，然後按下 ENTER 開啟 [元件服務]  。 您也可以在 [開始搜尋]  方塊中鍵入 %windir%\system32\comexp.msc，開啟 [元件服務]  。  
   
 2. 依序展開 [元件服務]、[電腦]、[我的電腦] 和 [分散式交易協調器]。  
   
-3. 以滑鼠右鍵按一下 [本機 DTC]，然後選取 [內容]。  
+3. 以滑鼠右鍵按一下 [本機 DTC]  ，然後選取 [內容]  。  
   
-4. 按一下 [本機 DTC 內容] 對話方塊中的 [安全性] 索引標籤。  
+4. 按一下 [本機 DTC 內容]  對話方塊中的 [安全性]  索引標籤。  
   
-5. 選取 [啟用 XA 交易] 核取方塊，然後按一下 [確定]。 MS DTC 服務會隨即重新啟動。
+5. 選取 [啟用 XA 交易]  核取方塊，然後按一下 [確定]  。 MS DTC 服務會隨即重新啟動。
   
-6. 再按一下 [確定] 關閉 [內容] 對話方塊，然後關閉 [元件服務]。  
+6. 再按一下 [確定]  關閉 [內容]  對話方塊，然後關閉 [元件服務]  。  
   
 7. 停止然後重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，以確保其與 MS DTC 變更保持同步。  
 
@@ -111,7 +111,7 @@ ms.locfileid: "55736939"
   
 2. 開啟將參與分散式交易之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦的 Binn 目錄。 選取 sqljdbc_xa.dll 組件。
 
-    - 在 Windows Vista 或更新版本上：以滑鼠右鍵按一下 sqljdbc_xa.dll，然後選取 [內容]。 然後，按一下 [詳細資料] 索引標籤。[檔案版本] 欄位就會顯示目前安裝在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的 sqljdbc_xa.dll 版本。  
+    - 在 Windows Vista 或更新版本上：以滑鼠右鍵按一下 sqljdbc_xa.dll，然後選取 [內容]。 然後，按一下 [詳細資料]  索引標籤。[檔案版本]  欄位就會顯示目前安裝在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的 sqljdbc_xa.dll 版本。  
   
 3. 依照下一節的程式碼範例所示，設定記錄功能。 在輸出記錄檔案中搜尋 "Server XA DLL version:..." 片語。  
 
@@ -160,7 +160,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
 > [!IMPORTANT]  
 > 您應利用維護時段，或沒有任何 MS DTC 交易正在進行時，升級 sqljdbc_xa.dll。
   
-1. 卸載使用 sqljdbc_xa.dll[!INCLUDE[tsql](../../includes/tsql-md.md)]命令**DBCC sqljdbc_xa （免費）**。  
+1. 卸載使用 sqljdbc_xa.dll[!INCLUDE[tsql](../../includes/tsql-md.md)]命令**DBCC sqljdbc_xa （免費）** 。  
   
 2. 將新的 sqljdbc_xa.dll 從 JDBC 驅動程式安裝目錄複製到將參與分散式交易之每一部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦的 Binn 目錄。  
   

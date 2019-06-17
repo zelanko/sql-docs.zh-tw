@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1f84f5331946a5887f833f7e579eb078a8854662
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 963c225d70429a9f1f45902f9edf554753a78c15
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581190"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037867"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>鍵盤快速鍵 (報表產生器)
   當您在報表產生器中建立及編輯分頁的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表時，可以存取 Windows 環境提供之所有用於導覽的快速鍵。 您可以從許多標準鍵盤對應配置中選取。  
@@ -92,6 +92,5 @@ ms.locfileid: "65581190"
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [報表設計檢視 &#40;報表產生器&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [詞彙 &#40;報表產生器&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
-  
+
   

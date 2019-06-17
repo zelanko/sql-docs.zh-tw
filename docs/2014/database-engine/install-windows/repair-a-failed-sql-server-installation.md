@@ -1,5 +1,5 @@
 ---
-title: 卸除 SQL Server 2014 安裝 |Microsoft Docs
+title: 修復 SQL Server 2014 安裝 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cea01c7e32248354cf745ed56186d246636d5b28
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0d9486134e0a9103239853d8378e29aea688c7fb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046661"
 ---
 # <a name="drop-a-sql-server-2014-installation"></a>卸除 SQL Server 2014 安裝
   下列情況下可以使用修復作業：  
@@ -44,7 +44,7 @@ ms.locfileid: "62774942"
   
 -   您必須在個別的叢集節點上執行修復。  
   
--   若要在失敗的「準備」作業之後修復容錯移轉叢集節點，請使用 [移除節點]，然後再次執行「準備」步驟。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
+-   若要在失敗的「準備」作業之後修復容錯移轉叢集節點，請使用 [移除節點]  ，然後再次執行「準備」步驟。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
 ### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-from-the-installation-center"></a>若要從安裝中心修復失敗的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝  
   
@@ -52,18 +52,18 @@ ms.locfileid: "62774942"
   
 2.  驗證必要元件和系統之後，安裝程式將會顯示 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心] 頁面。  
   
-3.  按一下左側導覽區域中的 [維護]，然後按一下 [修復] 啟動修復作業。  
+3.  按一下左側導覽區域中的 [維護]  ，然後按一下 [修復]  啟動修復作業。  
   
     > [!TIP]  
     >  如果使用 [開始] 功能表啟動安裝中心，您將需要在這個階段提供安裝媒體的位置。  
   
 4.  安裝程式支援規則和檔案常式將會執行，以便確保您的系統已安裝必要元件而且電腦通過安裝程式驗證規則。 按一下 **[確定]** 或 **[安裝]** 繼續進行。  
   
-5.  在 [選取執行個體] 頁面上，選取要修復的執行個體，然後按一下 [下一步] 繼續進行。  
+5.  在 [選取執行個體] 頁面上，選取要修復的執行個體，然後按一下 [下一步]  繼續進行。  
   
-6.  修復規則將會執行，以便驗證作業。 若要繼續進行，請按 **[下一步]**。  
+6.  修復規則將會執行，以便驗證作業。 若要繼續進行，請按 **[下一步]** 。  
   
-7.  [已完成修復準備工作] 頁面會指出作業準備繼續進行。 若要繼續，請按一下 [修復]。  
+7.  [已完成修復準備工作] 頁面會指出作業準備繼續進行。 若要繼續，請按一下 [修復]  。  
   
 8.  [修復進度] 頁面會顯示修復作業的狀態。 [完成] 頁面會指出作業已完成。  
   

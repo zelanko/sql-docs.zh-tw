@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: f74158bcb8a83b65842d016f3dd8aeacf73f0427
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485068"
 ---
 # <a name="tracing-master-data-services"></a>追蹤 (Master Data Services)
@@ -66,7 +66,7 @@ ms.locfileid: "65485068"
     |CorrelationID|每個要求會指派一個相互關聯識別碼。 此要求觸發的所有追蹤會共用相同的相互關聯識別碼。<br /><br /> 當 UI 中發生錯誤時，相互關聯識別碼會出現在錯誤訊息中。|  
     |運算|要求作業名稱。 如果要求是 Web UI 要求，作業名稱會是 URL。 如果要求是 API 要求，作業名稱會是服務名稱。|  
     |層級|此追蹤項目的層級。|  
-    |`Message`|追蹤的訊息主體|  
+    |Message|追蹤的訊息主體|  
   
 ## <a name="external-resources"></a>外部資源  
  msdn.com 上的部落格文章： [疑難排解記錄改進](https://go.microsoft.com/fwlink/p/?LinkId=615377)。  
