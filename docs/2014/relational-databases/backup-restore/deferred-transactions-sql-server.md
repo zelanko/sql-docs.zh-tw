@@ -16,14 +16,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e36b6c114e7e5f2f95c0747d6e36e4dabc118daa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62876211"
 ---
 # <a name="deferred-transactions-sql-server"></a>延遲交易 (SQL Server)
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 中，如果在資料庫啟動期間，回復 (復原) 所需的資料已離線，就會延期損毀的交易。 「延遲交易」是在向前復原階段完成時尚未認可，而發生無法回復之錯誤的交易。 因為交易無法回復，所以會延期。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 中，如果在資料庫啟動期間，回復 (復原) 所需的資料已離線，就會延期損毀的交易。 「延遲交易」  是在向前復原階段完成時尚未認可，而發生無法回復之錯誤的交易。 因為交易無法回復，所以會延期。  
   
 > [!NOTE]  
 >  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 才會延期損毀的交易。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的其他版本中，損毀的交易會造成啟動失敗。  

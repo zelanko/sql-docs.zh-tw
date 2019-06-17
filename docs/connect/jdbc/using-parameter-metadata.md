@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 54afa3bf0df1c0c4df3865ab28e7b085bb032919
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e2c0e9f7589f58a1ef3c1cc5ee4026dd9eea5076
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623646"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798573"
 ---
 # <a name="using-parameter-metadata"></a>使用參數中繼資料
 

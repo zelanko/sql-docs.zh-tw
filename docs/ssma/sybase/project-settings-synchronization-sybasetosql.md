@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0a221d5c24606707ba9876e0980e6c28d2dacc67
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667979"
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>專案設定 (同步處理) (SybaseToSQL)
@@ -26,7 +26,7 @@ ms.locfileid: "62667979"
   
 -   若要指定目前的專案中，設定**工具**功能表上，選取**專案設定**，然後選取**同步處理**左窗格的底部。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **嘗試**  
 指定載入物件時，應該要 SSMA 的嘗試次數[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 物件，不會載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中目前嘗試將會重試，直到 SSMA 到達目前的同步處理程序中的嘗試次數上限。  
   

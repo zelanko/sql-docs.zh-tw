@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a1938f2389f64d7a869ae924690b8b22fa209f82
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059911"
 ---
 # <a name="data-flow-taps"></a>資料流程點選
@@ -41,13 +41,13 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  除了輸入 SQL 陳述式之外，執行下列步驟也可以產生執行封裝指令碼：  
   
-1.  以滑鼠右鍵按一下 [Package.dtsx]，然後按一下 [執行]。  
+1.  以滑鼠右鍵按一下 [Package.dtsx]  ，然後按一下 [執行]  。  
   
 2.  按一下 **[指令碼]** 工具列按鈕以產生指令碼。  
   
 3.  接著，在 start_execution 呼叫前面加入 add_data_tap 陳述式。  
   
- add_data_tap 預存程序的 task_package_path 參數對應到 Visual Studio 中，資料流程工作的 PackagePath 屬性。 在 Visual Studio 中，以滑鼠右鍵按一下 [資料流程工作]，然後按一下 [屬性] 啟動 [屬性] 視窗。  請記下 **PackagePath** 屬性的值，其將做為 add_data_tap 預存程序呼叫的 task_package_path 參數值使用。  
+ add_data_tap 預存程序的 task_package_path 參數對應到 Visual Studio 中，資料流程工作的 PackagePath 屬性。 在 Visual Studio 中，以滑鼠右鍵按一下 [資料流程工作]  ，然後按一下 [屬性]  啟動 [屬性] 視窗。  請記下 **PackagePath** 屬性的值，其將做為 add_data_tap 預存程序呼叫的 task_package_path 參數值使用。  
   
  add_data_tap 預存程序的 dataflow_path_id_string 參數對應到您要在其上加入資料點選之資料流程路徑的 IdentificationString 屬性。 若要取得 dataflow_path_id_string，請按一下資料流程路徑 (資料流程中位於工作之間的箭號)，並記下 [屬性] 視窗所示 **IdentificationString** 屬性的值。  
   

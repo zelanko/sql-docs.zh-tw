@@ -10,13 +10,13 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 863e28c5a2545523161135821c420c1711ebf4e5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: fb7ccf97443bf95187918fc92dcc9f2c7d03ef83
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513766"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794881"
 ---
 # <a name="install-sql-server-with-sysprep"></a>使用 SysPrep 安裝 SQL Server
 
@@ -154,7 +154,7 @@ ms.locfileid: "52513766"
   
 7. 在 **[選取備妥的執行個體]** 頁面上，從下拉式方塊選取您想要完成的備妥執行個體。 從 [執行個體識別碼] 清單中選取尚未設定的執行個體。 
   
-     **安裝的執行個體** ：此方格會顯示所有執行個體，包括這部電腦上任何已備妥的執行個體。 
+     **已安裝的執行個體：** 此方格會顯示所有執行個體，包括這部電腦上任何已備妥的執行個體。 
   
 8. 在 **[功能檢閱]** 頁面上，您將會在準備步驟期間看到安裝所包含的選定功能和元件。 如果您想要將更多功能加入至已備妥之執行個體中並未包含的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，您必須先完成這個步驟，才能完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後從 **[安裝中心]** 上的 **[加入功能]** 來加入功能。 
   

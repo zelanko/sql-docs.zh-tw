@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6eb81944ae4c3abab1d20fb203ee400cb8c01245
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755244"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>連接到伺服器 (連接屬性頁面) Integration Services
-  連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 或在 [已註冊的伺服器] 中註冊 [!INCLUDE[ssIS](../includes/ssis-md.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接時，[連接] 和 [選項] 才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssIS](../includes/ssis-md.md)] 時，[測試] 和 [儲存] 才會出現在這個對話方塊中。  
+  連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 或在 [已註冊的伺服器]  中註冊 [!INCLUDE[ssIS](../includes/ssis-md.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接時，[連接]  和 [選項]  才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssIS](../includes/ssis-md.md)] 時，[測試]  和 [儲存]  才會出現在這個對話方塊中。  
   
 ## <a name="options"></a>選項。  
  **通訊埠編號**  
@@ -43,9 +43,9 @@ ms.locfileid: "62755244"
  按一下即可變更對話方塊，並隱藏其他伺服器連接選項，例如記住密碼。  
   
  **測試**  
- 在 [已註冊的伺服器] 中註冊 [!INCLUDE[ssIS](../includes/ssis-md.md)] 時，請按一下以測試連接。  
+ 在 [已註冊的伺服器]  中註冊 [!INCLUDE[ssIS](../includes/ssis-md.md)] 時，請按一下以測試連接。  
   
  **儲存**  
- 儲存 [已註冊的伺服器] 中的設定。  
+ 儲存 [已註冊的伺服器]  中的設定。  
   
   

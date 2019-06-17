@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ff2fee26c6f71cc398f8dbacf91f3ad8dbdb3358
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092155"
 ---
 # <a name="specify-the-with-keyword-when-using-table-hints-in-90-compatibility-mode"></a>在 90 相容性模式中，使用資料表提示時，請指定 WITH 關鍵字

@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 616e4241c6d28e846a56116a70e79254e13dd5fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63224561"
 ---
 # <a name="constructing-searched-statements"></a>建構搜尋的陳述式
@@ -37,7 +37,7 @@ ms.locfileid: "63224561"
   
  如果定位的 update 或 delete 陳述式會影響多個資料列，資料指標程式庫會更新資料列狀態陣列，只會針對資料列的資料指標的位置，傳回 SQL_SUCCESS_WITH_INFO 和 SQLSTATE 01001 （資料指標作業衝突）。 如果陳述式不會識別任何資料列，資料指標程式庫不會更新資料列狀態陣列，並傳回 SQL_SUCCESS_WITH_INFO 和 SQLSTATE 01001 （資料指標作業衝突）。 應用程式可以呼叫**SQLRowCount**來判斷已更新或刪除資料列數目。  
   
- 如果**選取 **子句用來定位資料指標來呼叫**SQLGetData**識別一個以上的資料列**SQLGetData**不保證會傳回正確的資料。 如果它不會識別任何資料列， **SQLGetData**傳回 sql_no_data 為止。  
+ 如果**選取** 子句用來定位資料指標來呼叫**SQLGetData**識別一個以上的資料列**SQLGetData**不保證會傳回正確的資料。 如果它不會識別任何資料列， **SQLGetData**傳回 sql_no_data 為止。  
   
  如果應用程式符合下列指導方針中，**其中**資料指標程式庫所建構的子句應專門用於識別目前的資料列，除非這是不可能的例如當資料來源包含重複資料列。  
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fee60fa1a78c2d6d0becb63b2319105016adf1c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754670"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>從資料庫鏡像工作階段移除見證 (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "62754670"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[移除見證之後](#FollowUp)  
+-   **後續操作：** [移除見證之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -51,14 +51,14 @@ ms.locfileid: "62754670"
   
 1.  連接到主體伺服器執行個體，在 **[物件總管]** 窗格中按一下伺服器名稱，以展開伺服器樹狀目錄。  
   
-2.  展開 **[資料庫]**，然後選取要移除見證的資料庫。  
+2.  展開 **[資料庫]** ，然後選取要移除見證的資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，選取 [工作]，然後按一下 [鏡像]。 這將會開啟在 **[資料庫屬性]** 對話方塊中的 **[鏡像]** 頁面。  
+3.  以滑鼠右鍵按一下資料庫，選取 [工作]  ，然後按一下 [鏡像]  。 這將會開啟在 **[資料庫屬性]** 對話方塊中的 **[鏡像]** 頁面。  
   
 4.  若要移除見證，請從 **[見證]** 欄位刪除其伺服器網路位址。  
   
     > [!NOTE]  
-    >  如果從具有自動容錯移轉的高安全性模式切換到高效能模式，則會自動清除 [見證] 欄位。  
+    >  如果從具有自動容錯移轉的高安全性模式切換到高效能模式，則會自動清除 [見證]  欄位。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62754670"
   
 1.  連接到任一夥伴伺服器執行個體上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  發出下列陳述式：  
   

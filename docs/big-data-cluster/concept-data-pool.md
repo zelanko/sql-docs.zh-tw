@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: ba296a504ae4a6656941c408e7b7a0c96a83c97d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66783090"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>在 SQL Server 的巨量資料叢集中的資料集區有哪些？

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63224612"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>探索購物籃模型 (中繼資料採礦教學課程)
@@ -137,7 +137,7 @@ ms.locfileid: "63224612"
 ##  <a name="bkmk_Rules"></a> 規則索引標籤  
  **規則**索引標籤會顯示此演算法會尋找的規則相關的下列資訊。  
   
--   **機率：***可能性*的規則，定義為給定左邊項目右邊項目的機率。  
+-   **機率：** *可能性*的規則，定義為給定左邊項目右邊項目的機率。  
   
 -   **重要性：** 規則的實用性的量值。 較大的值表示較好的規則。  
   

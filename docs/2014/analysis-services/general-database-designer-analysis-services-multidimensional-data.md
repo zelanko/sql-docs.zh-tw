@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081076"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>一般 (資料庫設計工具) (Analysis Services - 多維度資料)
@@ -28,7 +28,7 @@ ms.locfileid: "66081076"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中開啟 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案。  
   
-2.  在方案總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案，再按一下 [編輯資料庫]，然後按一下 [一般] 索引標籤。  
+2.  在方案總管  中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案，再按一下 [編輯資料庫]  ，然後按一下 [一般]  索引標籤。  
   
 ## <a name="basic-options"></a>基本選項  
  展開 **[基本]** 區段來修改資料庫的基本資訊。 此區段包含下列選項：  
@@ -37,7 +37,7 @@ ms.locfileid: "66081076"
  顯示資料庫的名稱。  
   
 > [!NOTE]  
->  若要重新命名資料庫，請在方案總管視窗中以滑鼠右鍵按一下專案，然後按一下 [屬性]。 在資料庫的 **[屬性頁]** 對話方塊中，於 **[部署]** 頁面上，將 **[資料庫]** 屬性的值變更為新的資料庫名稱。  
+>  若要重新命名資料庫，請在方案總管  視窗中以滑鼠右鍵按一下專案，然後按一下 [屬性]  。 在資料庫的 **[屬性頁]** 對話方塊中，於 **[部署]** 頁面上，將 **[資料庫]** 屬性的值變更為新的資料庫名稱。  
   
  **說明**  
  鍵入資料庫的描述。  
@@ -48,7 +48,7 @@ ms.locfileid: "66081076"
  **語言**  
  選取指定交易的語言。  
   
- 若要將新翻譯加入方格中，按一下**\<加入新翻譯 >**。  
+ 若要將新翻譯加入方格中，按一下 **\<加入新翻譯 >** 。  
   
  **已翻譯的標題**  
  以適當的翻譯語言鍵入資料庫的標題。 如果空白，則會使用資料庫的預設標題。  
@@ -67,7 +67,7 @@ ms.locfileid: "66081076"
  **名稱**  
  鍵入帳戶類型的名稱。  
   
- 若要新增新的帳戶類型，請按一下**\<加入新的帳戶類型 >**。  
+ 若要新增新的帳戶類型，請按一下 **\<加入新的帳戶類型 >** 。  
   
  **別名**  
  設定供商業智慧精靈使用之帳戶類型的預設名稱。 如果此資料行保留空白，則會使用 **[名稱]** 資料行中的預設值。  

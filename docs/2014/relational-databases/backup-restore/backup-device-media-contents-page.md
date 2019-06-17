@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 524e6d8e5ec987a20d693cb1f7e06b30bc27c0b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62876690"
 ---
 # <a name="backup-device-media-contents-page"></a>備份裝置 (媒體內容頁面)
@@ -28,7 +28,7 @@ ms.locfileid: "62876690"
   
 -   [檢視邏輯備份裝置的屬性和內容 &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  檢視有關個別媒體、媒體集和備份組的資訊。  
   
  **媒體**  
@@ -58,7 +58,7 @@ ms.locfileid: "62876690"
 |標頭|值|  
 |------------|------------|  
 |**名稱**|備份組的名稱。|  
-|**型別**|備份的物件：資料庫檔案，或*\<空白 >* （針對交易記錄）。|  
+|**型別**|備份的物件：資料庫檔案，或 *\<空白 >* （針對交易記錄）。|  
 |**元件**|執行的備份類型：完整、 差異或交易記錄檔。|  
 |**Server**|執行備份作業之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的名稱。|  
 |**[資料庫備份]**|已備份資料庫的名稱。|  

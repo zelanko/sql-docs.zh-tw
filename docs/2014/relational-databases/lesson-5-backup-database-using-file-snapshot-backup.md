@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1a5787a3f5aecd746ac9aafd5850e6109ebcd999
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090684"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>第 6 課：在 Windows Azure 中將資料庫從內部部署來源電腦移轉至目的地電腦
@@ -126,9 +126,9 @@ ms.locfileid: "66090684"
   
  若要使用 SQL Server Management Studio 使用者介面建立資料庫，且其中資料和記錄檔指向 Windows Azure 儲存體中現有的檔案，請執行下列步驟：  
   
-1.  在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。  
+1.  在物件總管  中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [資料庫]，然後按一下 [新增資料庫]。 然後，以滑鼠右鍵按一下 [TestDB1]。 按一下 [工作]，然後按一下 [卸離]。 在 [卸離] 對話方塊視窗中，選取 [卸除連接]。 按一下 [確定] 。  
+2.  以滑鼠右鍵按一下 [資料庫]  ，然後按一下 [新增資料庫]  。 然後，以滑鼠右鍵按一下 [TestDB1]。 按一下 [工作]，然後按一下 [卸離]。 在 [卸離] 對話方塊視窗中，選取 [卸除連接]。 按一下 [確定]  。  
   
 3.  連接到具有 SQL Server 2014 CTP2 或更新版本的目的地電腦。 若要準備目的地電腦，您需要在目的地電腦上建立 SQL Server 認證，並指向放置 TestDB1 的相同容器。 如果您要在同一部電腦上重新附加，則不需要建立另一個認證。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66090684"
   
      檔案名稱 中輸入： `TestDB1Data.mdf`。  
   
-6.  按一下 [確定] 。  
+6.  按一下 [確定]  。  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-6-7.gif "SQL 14 CTP2")  
   

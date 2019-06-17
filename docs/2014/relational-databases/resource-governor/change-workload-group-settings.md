@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2bcb3cfa20948e6bb0964d29331ca1d426b8916
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63199910"
 ---
 # <a name="change-workload-group-settings"></a>變更工作負載群組設定
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來變更工作負載群組設定。  
   
--   **開始之前：**[限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
+-   **開始之前：** [限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **若要變更工作負載群組的設定，請使用下列方式：**[SQL Server Management Studio](#ChgWGProp)、[Transact-SQL](#ChgWGTSQL)  
+-   **若要變更工作負載群組的設定，請使用下列方式：** [SQL Server Management Studio](#ChgWGProp)、[Transact-SQL](#ChgWGTSQL)  
   
 ## <a name="before-you-begin"></a>開始之前  
   
@@ -46,13 +46,13 @@ ms.locfileid: "63199910"
   
 1.  在 [物件總管] 中，遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 資料夾，此資料夾包含要修改的工作負載群組。  
   
-2.  以滑鼠右鍵按一下要修改的工作負載群組，然後選取 [屬性]。  
+2.  以滑鼠右鍵按一下要修改的工作負載群組，然後選取 [屬性]  。  
   
 3.  在 **[資源管理員屬性]** 頁面的 **[資源集區的工作負載群組]** 方格中，選取工作負載群組的資料列 (如果系統沒有自動選取的話)。  
   
 4.  在資料列中按一下或按兩下要變更的資料格，然後輸入新值。  
   
-5.  若要儲存變更，請按一下 **[確定]**。  
+5.  若要儲存變更，請按一下 **[確定]** 。  
   
 ##  <a name="ChgWGTSQL"></a> 使用 Transact-SQL 變更工作負載群組設定  
  **若要使用 Transact-SQL 來變更工作負載群組設定**  

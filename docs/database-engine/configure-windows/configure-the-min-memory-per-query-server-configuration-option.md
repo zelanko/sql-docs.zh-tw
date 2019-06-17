@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9748ef0f82fc62fd194efa9093f00032fd1d8cdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8e704a75a25849009e51a3e7f2c03fee535b7bbf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789706"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780739"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>設定 min memory per query 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47789706"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法設定 min memory per query 選項：**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47789706"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **待處理**  [設定 min memory per query 選項之後](#FollowUp)  
+-   **後續操作：**[設定每個查詢的最小記憶體選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -101,7 +101,7 @@ RECONFIGURE;
 GO    
 ```  
   
-##  <a name="FollowUp"></a> 待處理：設定 min memory per query 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定每個查詢的最小記憶體選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

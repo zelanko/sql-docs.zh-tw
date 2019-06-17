@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 80c5c5b2f4e6d4f691b7c3977ae2f715f5424e7f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011684"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>使用格式檔案以略過資料表資料行 (SQL Server)
@@ -59,7 +59,7 @@ GO
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
 ```  
   
- 上述命令會建立非 XML 格式檔案 `myTestSkipCol_Default.fmt`。 這個格式檔案稱為「預設格式檔案」(Default Format File)，因為它是 **bcp** 所產生的格式。 一般而言，預設格式檔案描述資料檔欄位與資料表資料行之間的一對一對應。  
+ 上述命令會建立非 XML 格式檔案 `myTestSkipCol_Default.fmt`。 這個格式檔案稱為「預設格式檔案」  (Default Format File)，因為它是 **bcp** 所產生的格式。 一般而言，預設格式檔案描述資料檔欄位與資料表資料行之間的一對一對應。  
   
 > [!IMPORTANT]  
 >  您可能需要指定您要連接的伺服器執行個體的名稱。 此外，也可能需要指定使用者名稱和密碼。 如需相關資訊，請參閱 [bcp Utility](../../tools/bcp-utility.md)。  

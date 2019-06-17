@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922433"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>備份與還原：互通性與共存性 (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "62922433"
   
  如果在資料庫啟動期間發生問題，復原會失敗，且會將資料庫標示為 SUSPECT。 如果將問題隔離到檔案，資料庫管理員就可以使檔案離線，並嘗試重新啟動資料庫。 若要使檔案離線，您可以使用下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 陳述式：  
   
- ALTER DATABASE *database_name* MODIFY FILE (名稱 **='*`filename`*'**、 離線)  
+ ALTER DATABASE *database_name* MODIFY FILE (名稱 **=' *`filename`* '** 、 離線)  
   
  如果啟動成功，任何包含離線檔案的檔案群組都會保持離線。  
   
