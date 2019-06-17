@@ -11,10 +11,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: daf3ed025405b753116bba267ce6f4c50d350601
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678459"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>SQL Server 屬性 (AlwaysOn 高可用性索引標籤)
@@ -41,7 +41,7 @@ ms.locfileid: "62678459"
  **啟用 AlwaysOn 可用性群組**  
  使用此核取方塊，在這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上啟用或停用 AlwaysOn 可用性群組，如下所示：  
   
--   如果此核取方塊是空的，表示 AlwaysOn 可用性群組目前停用。 若要啟用 AlwaysOn 可用性群組，請選取此核取方塊，按一下 **[確定]**，然後手動重新啟動[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務。  
+-   如果此核取方塊是空的，表示 AlwaysOn 可用性群組目前停用。 若要啟用 AlwaysOn 可用性群組，請選取此核取方塊，按一下 **[確定]** ，然後手動重新啟動[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務。  
   
 -   如果已選取此核取方塊，表示 AlwaysOn 可用性群組目前啟用。 若要停用 AlwaysOn 可用性群組，請取消核取此核取方塊，按一下**確定**。 這樣伺服器執行個體就會重新啟動。  
   

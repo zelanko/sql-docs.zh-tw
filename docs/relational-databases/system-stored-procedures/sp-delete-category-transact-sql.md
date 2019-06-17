@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2574cdb06b82c6ebc89c54b70ade59694f5811e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62715785"
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
@@ -41,7 +41,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @class = ] 'class'` 分類的類別。 *類別*已**varchar(8)**，沒有預設值，而且必須具有下列值之一。  
+`[ @class = ] 'class'` 分類的類別。 *類別*已**varchar(8)** ，沒有預設值，而且必須具有下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  

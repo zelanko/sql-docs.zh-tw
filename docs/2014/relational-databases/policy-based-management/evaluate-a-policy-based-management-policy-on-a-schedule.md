@@ -1,27 +1,25 @@
 ---
 title: 依照排程評估原則式管理原則 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: sql
-ms.prod_service: database-engine
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, evaluate policy
 ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
-author: VanMSFT
-ms.author: vanto
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4355245af62817b7ab675241f5df9db77500daa3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705147"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>依照排程評估原則式管理原則
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中依照排程評估原則式管理原則。  
   
  **本主題內容**  
@@ -49,16 +47,16 @@ ms.locfileid: "62705147"
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  按一下加號展開 **[原則管理]**。  
+3.  按一下加號展開 **[原則管理]** 。  
   
 4.  按一下加號展開 **[原則]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要評估其排程的原則，然後選取 [屬性]。  
+5.  以滑鼠右鍵按一下您想要評估其排程的原則，然後選取 [屬性]  。  
   
-6.  在 [開啟原則 -_policy_name_] 對話方塊的 [評估模式] 清單中，選取 [按排程時間]。  
+6.  在 [開啟原則 -_policy_name_]  對話方塊的 [評估模式]  清單中，選取 [按排程時間]  。  
   
 7.  在 **[排程]** 底下，按一下 **[挑選]** 指定現有的排程，或按一下 **[新增]** 建立新的排程。  
   
-8.  完成後，請按一下 **[確定]**。  
+8.  完成後，請按一下 **[確定]** 。  
   
   

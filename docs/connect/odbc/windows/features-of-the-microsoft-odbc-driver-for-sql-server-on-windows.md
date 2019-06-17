@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db5c3e2e8265e88d49025ffd65894623fc5c5f85
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: cab19268fe8cdc3bac7acf5ad76d64dc41a75d29
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202237"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797754"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows 的功能
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

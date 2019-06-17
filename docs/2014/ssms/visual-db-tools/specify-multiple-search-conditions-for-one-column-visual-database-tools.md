@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 176d5a6586008d49ece1430ec03e2c54278eebce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62695399"
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>指定單一資料行的多重搜尋條件 (Visual Database Tools)
@@ -45,9 +45,9 @@ ms.locfileid: "62695399"
   
 1.  在[準則窗格](visual-database-tools.md)中，新增要搜尋的資料行。  
   
-2.  在剛新增的資料行的 [篩選條件] 資料行中，指定第一個條件。  
+2.  在剛新增的資料行的 [篩選條件]  資料行中，指定第一個條件。  
   
-3.  在相同資料行的 [**或...**] 資料行中，指定第二個條件。  
+3.  在相同資料行的 [**或...** ] 資料行中，指定第二個條件。  
   
  [查詢和檢視表設計工具] 會建立包含 OR 條件的 WHERE 子句，如下所示：  
   
@@ -67,11 +67,11 @@ WHERE (salary < 30000) OR (salary > 100000)
   
 1.  在 [準則] 窗格中，加入要搜尋的資料行。  
   
-2.  在剛新增的資料行的 [篩選條件] 資料行中，指定第一個條件。  
+2.  在剛新增的資料行的 [篩選條件]  資料行中，指定第一個條件。  
   
 3.  再將相同的資料行加入 [準則] 窗格，將它放在方格的空資料列中。  
   
-4.  在資料行的第二個執行個體的 [篩選條件] 欄位中，指定第二個條件。  
+4.  在資料行的第二個執行個體的 [篩選條件]  欄位中，指定第二個條件。  
   
  查詢設計工具會建立 WHERE 子句，其中包含 AND 條件，如下所示：  
   

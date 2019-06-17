@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6dc56d020af182d657ec2766d996601e5442686
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: de58a006717a64d400e40ba2126eebcdb138aa3f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624986"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796238"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>連接共用 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47624986"
 如果在連接字串中省略 *ConnectionPooling* 屬性，或是將該屬性設定為 **true** (或 1)，則只有在連線集區中沒有相同的連線存在時，驅動程式才會建立新的連線。  
   
 如需其他連接屬性的相關資訊，請參閱 [Connection Options](../../connect/php/connection-options.md)。  
-### <a name="linux-and-macos"></a>Linux 和 macOS
+### <a name="linux-and-macos"></a>Linux 與 macOS
 *ConnectionPooling*屬性不能啟用/停用連接共用。 
 
 連接共用可以啟用/停用編輯 odbcinst.ini 組態檔。 驅動程式應重新載入，變更才會生效。

@@ -8,10 +8,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 392a6da09827355e6bc9a901b0e4580e5eb72bf5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62642674"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R services 的效能： 結果和資源
@@ -58,7 +58,7 @@ ms.locfileid: "62642674"
 6. 主控台輸出也被導向到輸出目錄中的檔案。
 7. 測試指令碼處理這些檔案，以透過執行計算的平均時間的時間。
 
-例如，下列的結果會是從單一測試的時間。 主要的相關時間為「總讀取時間」(IO 時間) 和「轉換時間」(在設定處理序以進行計算方面的負擔)。
+例如，下列的結果會是從單一測試的時間。 主要的相關時間為「總讀取時間」  (IO 時間) 和「轉換時間」  (在設定處理序以進行計算方面的負擔)。
 
 **範例時間**
 
@@ -145,7 +145,7 @@ metric time pct
 |           | 6      | 3.47 秒 |              |
 |           |        |              | 3.5075       |
 
-「平衡」電源選項：
+「平衡」  電源選項：
 
 | 測試名稱 | 執行 \# | 經過時間 | 平均時間 |
 |-----------|--------|--------------|--------------|

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3bd621890bad3bc42fb2d4d5289d71efcbdbcc2b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721658"
 ---
 # <a name="initialize-a-subscription-manually"></a>手動初始化訂閱
@@ -48,7 +48,7 @@ ms.locfileid: "62721658"
   
 1.  確定訂閱資料庫上有結構描述和資料存在。 如需詳細資訊，請參閱 [不使用快照集初始化交易式訂閱](initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
   
-2.  在發行集資料庫的「發行者」上，執行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication**、 **@subscriber**，並針對 **@destination_db**指定在訂閱者上包含已發行資料的資料庫名稱、針對 **@subscription_type** 指定 **@subscription_type**的值及針對 **@sync_type** 指定 **@sync_type**中手動初始化訂閱。 如需詳細資訊，請參閱 [建立提取訂閱](create-a-pull-subscription.md)。  
+2.  在發行集資料庫的「發行者」上，執行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication** 、 **@subscriber** ，並針對 **@destination_db** 指定在訂閱者上包含已發行資料的資料庫名稱、針對 **@subscription_type** 指定 **@subscription_type** 的值及針對 **@sync_type** 指定 **@sync_type** 中手動初始化訂閱。 如需詳細資訊，請參閱 [建立提取訂閱](create-a-pull-subscription.md)。  
   
 3.  在訂閱者上，執行 [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)。 如需更新訂閱，請參閱＜ [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)＞。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62721658"
   
 1.  確定訂閱資料庫上有結構描述和資料存在。 如需詳細資訊，請參閱 [不使用快照集初始化交易式訂閱](initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
   
-2.  在發行集資料庫的「發行者」上，執行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 針對 **@destination_db**指定在訂閱者上包含已發行資料的資料庫名稱、針對 **@subscription_type** 指定 **@subscription_type**的值及針對 **@sync_type** 指定 **@sync_type**中手動初始化訂閱。 如需更新訂閱，請參閱＜ [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)＞。  
+2.  在發行集資料庫的「發行者」上，執行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 針對 **@destination_db** 指定在訂閱者上包含已發行資料的資料庫名稱、針對 **@subscription_type** 指定 **@subscription_type** 的值及針對 **@sync_type** 指定 **@sync_type** 中手動初始化訂閱。 如需更新訂閱，請參閱＜ [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)＞。  
   
 3.  在發行集資料庫的「發行者」上，執行 [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)。 如需詳細資訊，請參閱 [建立發送訂閱](create-a-push-subscription.md)。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "62721658"
   
 1.  確定訂閱資料庫上有結構描述和資料存在。 這項處理可以藉由在訂閱者上還原發行集資料庫的備份來完成。  
   
-2.  在發行者上，執行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)。 指定 **@publication**、 **@subscriber**、 **@subscriber_db**的值及針對 **@subscription_type** 指定 **@subscription_type**中手動初始化訂閱。 如此會註冊提取訂閱。  
+2.  在發行者上，執行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)。 指定 **@publication** 、 **@subscriber** 、 **@subscriber_db** 的值及針對 **@subscription_type** 指定 **@subscription_type** 中手動初始化訂閱。 如此會註冊提取訂閱。  
   
-3.  在包含已發行資料之資料庫的訂閱者上，執行 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)。 針對 **@sync_type** 指定 **@sync_type**中手動初始化訂閱。  
+3.  在包含已發行資料之資料庫的訂閱者上，執行 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)。 針對 **@sync_type** 指定 **@sync_type** 中手動初始化訂閱。  
   
 4.  在訂閱者上，執行 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。 如需詳細資訊，請參閱 [建立提取訂閱](create-a-pull-subscription.md)。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62721658"
   
 1.  確定訂閱資料庫上有結構描述和資料存在。 這項處理可以藉由在訂閱者上還原發行集資料庫的備份來完成。  
   
-2.  在發行集資料庫的發行者上，執行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)。 針對 **@subscriber_db**指定在訂閱者上包含已發行資料的資料庫名稱、針對 **@subscription_type** 指定 **@subscription_type**的值及針對 **@sync_type** 指定 **@sync_type**中手動初始化訂閱。  
+2.  在發行集資料庫的發行者上，執行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)。 針對 **@subscriber_db** 指定在訂閱者上包含已發行資料的資料庫名稱、針對 **@subscription_type** 指定 **@subscription_type** 的值及針對 **@sync_type** 指定 **@sync_type** 中手動初始化訂閱。  
   
 3.  在發行集資料庫的「發行者」上，執行 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)。 如需詳細資訊，請參閱 [建立發送訂閱](create-a-push-subscription.md)。  
   

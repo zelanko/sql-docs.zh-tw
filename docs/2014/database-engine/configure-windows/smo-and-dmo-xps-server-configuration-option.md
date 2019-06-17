@@ -1,9 +1,8 @@
 ---
 title: SMO 和 DMO XPs 伺服器組態選項 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2017
-ms.prod: sql
-ms.prod_service: high-availability
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
@@ -12,15 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d55bd667909721a68d51bcd1db7128b809118843
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755283"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>SMO 和 DMO XPs 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
   使用 SMO 和 DMO XP 選項可啟用此伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object (SMO) 擴充預存程序。  
   
  請注意，從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始，已經從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中移除 DMO。  

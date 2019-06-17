@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62812928"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>在停機時間和資料遺失最少的情況下升級及更新可用性群組伺服器

@@ -16,10 +16,10 @@ author: HJToland3
 ms.author: rajpo
 manager: jroth
 ms.openlocfilehash: 2766005287a522a84d209d995be0de9a94e45c02
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794353"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant 的概觀

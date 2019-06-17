@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 2bb0319e-12cb-4604-a7e3-b22a24b02296
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab21b064b119e46c2d96d8b2cc5f67f13038308f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 84a72e9d41272680ed7b3c9d30340bde4da17245
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632768"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797176"
 ---
 # <a name="updateint-method-sqlserverresultset"></a>updateInt 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

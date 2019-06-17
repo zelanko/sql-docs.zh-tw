@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1e596e99-11ce-4a57-b247-e40078922036
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2627346946fe7ebcb7d361eeaf28cb0fe56df16e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bf09ae400b5241325a15badeced22367e81ed486
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813288"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797553"
 ---
 # <a name="updateshort-method-javalangstring-short"></a>updateShort 方法 (java.lang.String, short)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

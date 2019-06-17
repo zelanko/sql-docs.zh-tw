@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 751e70345876967a534df0fb234ee8511cc09fe1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62694600"
 ---
 # <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>使用 Visual FoxPro ODBC Driver 與 C 或 VisualC++應用程式

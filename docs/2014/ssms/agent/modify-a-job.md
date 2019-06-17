@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 614c35992be2f85ef15afd0645140746041d083d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62656369"
 ---
 # <a name="modify-a-job"></a>Modify a Job
@@ -26,7 +26,7 @@ ms.locfileid: "62656369"
   
  **本主題內容**  
   
--   **開始之前：**   
+-   **開始之前：**  
   
      [限制事項](#Restrictions)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62656369"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 [SQL Server Agent]，展開 [作業]，以滑鼠右鍵按一下要修改的作業，然後按一下 [屬性]。  
+2.  展開 [SQL Server Agent]  ，展開 [作業]  ，以滑鼠右鍵按一下要修改的作業，然後按一下 [屬性]  。  
   
 3.  在 **[作業屬性]** 對話方塊中，利用相對應的頁面更新作業的屬性、步驟、排程、警示及通知。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62656369"
   
 1.  在 [物件總管] 中，連接到 Database Engine 的執行個體，然後展開該執行個體。  
   
-2.  在工具列上，按一下 **[新增查詢]**。  
+2.  在工具列上，按一下 **[新增查詢]** 。  
   
 3.  在查詢視窗中，使用下列系統預存程序修改作業。  
   

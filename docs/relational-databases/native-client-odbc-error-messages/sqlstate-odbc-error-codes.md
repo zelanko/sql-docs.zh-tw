@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 18f7ebab7d6463c419d31464c1343d6fd03d4cec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62738815"
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (ODBC 錯誤碼)
@@ -33,7 +33,7 @@ ms.locfileid: "62738815"
   
  如需有關狀態錯誤碼的詳細資訊，請查看下列主題：  
   
--   [附錄 a:ODBC 錯誤碼](https://go.microsoft.com/fwlink/?LinkId=89356)  
+-   [附錄 A：ODBC 錯誤碼](https://go.microsoft.com/fwlink/?LinkId=89356)  
   
 -   [SQLSTATE 對應](https://go.microsoft.com/fwlink/?LinkId=89355)  
   

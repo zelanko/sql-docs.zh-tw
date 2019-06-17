@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4fde67fc6b38e81c7367ee1e298439810b0b35c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754564"
 ---
 # <a name="principal-server-instance-configure-database-mirroring-security-wizard"></a>主體伺服器執行個體 (設定資料庫鏡像安全性精靈)
@@ -28,7 +28,7 @@ ms.locfileid: "62754564"
   
 -   [啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **主體伺服器執行個體**  
  因為 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的資料庫鏡像一律從主體伺服器設定，所以目前的伺服器執行個體一律為主體伺服器執行個體。  
   

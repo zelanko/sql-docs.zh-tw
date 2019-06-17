@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: jroth
 ms.openlocfilehash: 34218bbe7e8ac2e94acbb55ceb8bd64008e67c1e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66776340"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>執行 DQSInstaller.exe 完成 Data Quality Server 安裝

@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-manager: craigg
-ms.openlocfilehash: 58248a2772377ccecba0c701d03276025785c964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2d7cf1f31ce5cf42b9c2e4c7b72938b8def2ed4f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698056"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797739"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>SQL Server 登入對話方塊 (ODBC)
 
-當您呼叫 ODBC 連接，但卻沒有為驅動程式指定足夠的資訊以連接至 SQL Server 時，ODBC 驅動程式就會顯示 [SQL Server 登入] 對話方塊。
+當您呼叫 ODBC 連接，但卻沒有為驅動程式指定足夠的資訊以連接至 SQL Server 時，ODBC 驅動程式就會顯示 [SQL Server 登入]  對話方塊。
 
 ## <a name="options"></a>選項。
 
 ### <a name="server"></a>[伺服器]
 
-您的網路上的 SQL Server 執行個體名稱。 從清單中選取伺服器或執行個體名稱，或在 [伺服器] 方塊中鍵入伺服器或執行個體名稱。 (選擇性) 您可以在用戶端電腦上使用 [SQL Server 設定管理員] 建立伺服器別名，並在 [伺服器] 方塊中鍵入該名稱。
+您的網路上的 SQL Server 執行個體名稱。 從清單中選取伺服器或執行個體名稱，或在 [伺服器]  方塊中鍵入伺服器或執行個體名稱。 (選擇性) 您可以在用戶端電腦上使用 [SQL Server 設定管理員]  建立伺服器別名，並在 [伺服器]  方塊中鍵入該名稱。
 
 如果您使用的電腦與 SQL Server 的相同，則可輸入 "(local)"。 接著，即使執行的是非網路版的 SQL Server，您也可連接到 SQL Server 的本機執行個體。
 
@@ -57,11 +57,11 @@ ms.locfileid: "47698056"
 
 ### <a name="options"></a>選項。
 
-顯示或隱藏 [選項] 群組。 如果 [伺服器] 具有值，即會啟用 [選項] 按鈕。
+顯示或隱藏 [選項]  群組。 如果 [伺服器]  具有值，即會啟用 [選項]  按鈕。
 
 ### <a name="change-password"></a>變更密碼
 
-選取此方塊時，會顯示 [新密碼] 和 [確認新密碼] 方塊。
+選取此方塊時，會顯示 [新密碼]  和 [確認新密碼]  方塊。
 
 ### <a name="new-password"></a>新密碼
 

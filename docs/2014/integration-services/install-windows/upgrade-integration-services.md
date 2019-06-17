@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1e40954a5a5eb7a69ba4f70b798356f38175fed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768066"
 ---
 # <a name="upgrade-integration-services"></a>升級 Integration Services
@@ -50,7 +50,7 @@ ms.locfileid: "62768066"
 ## <a name="upgrading-integration-services"></a>升級 Integration Services  
  您可以使用以下其中一個方法來升級：  
   
--   執行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安裝程式並選取選項**從 SQL Server 2005，SQL Server 2008 或 SQL Server 2008 R2 升級**，或**[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**。  
+-   執行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安裝程式並選取選項**從 SQL Server 2005，SQL Server 2008 或 SQL Server 2008 R2 升級**，或 **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]** 。  
   
 -   執行**setup.exe**在命令提示字元，並指定`/ACTION=upgrade`選項。 如需詳細資訊，請參閱 區段中，「 安裝指令碼 > [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，「 在[從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   

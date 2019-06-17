@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62831907"
 ---
 # <a name="execute-package-task"></a>執行封裝工作
@@ -41,10 +41,10 @@ ms.locfileid: "62831907"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含執行工作流程作業的工作，例如執行可執行檔和批次檔。 如需詳細資訊，請參閱＜ [執行處理工作](execute-process-task.md)＞。  
   
 ## <a name="running-packages"></a>執行封裝  
- 「執行封裝」工作可以執行包含父封裝之相同專案中所含的子封裝。 您可以透過將 **[ReferenceType]** 屬性設定為 **[專案參考]**，然後設定 **[PackageNameFromProjectReference]** 屬性，以便從專案中選取子封裝。  
+ 「執行封裝」工作可以執行包含父封裝之相同專案中所含的子封裝。 您可以透過將 **[ReferenceType]** 屬性設定為 **[專案參考]** ，然後設定 **[PackageNameFromProjectReference]** 屬性，以便從專案中選取子封裝。  
   
 > [!NOTE]  
->  [ReferenceType] 選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]。 如需轉換的詳細資訊，請參閱 [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md) (將專案部署至 Integration Services 伺服器)。  
+>  [ReferenceType]  選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]  。 如需轉換的詳細資訊，請參閱 [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md) (將專案部署至 Integration Services 伺服器)。  
   
  「執行封裝」工作也可執行儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 資料庫中的封裝，以及儲存在檔案系統中的封裝。 此工作使用 OLE DB 連接管理員連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，或使用檔案連接管理員存取檔案系統。 如需詳細資訊，請參閱＜ [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md) ＞和＜ [般檔案連線管理員](../connection-manager/flat-file-connection-manager.md)＞。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "62831907"
  如需詳細資訊，請參閱 [在子封裝中使用變數和參數的值](../use-the-values-of-variables-and-parameters-in-a-child-package.md)。  
   
 ### <a name="accessing-parent-package-variables"></a>存取父封裝變數  
- 子封裝可藉由使用指令碼工作存取父封裝變數。 當你在 [指令碼工作編輯器] 的 [指令碼]頁面上輸入父封裝變數的名稱時，變數名稱中請勿加上 **User:**。 否則，在您執行父封裝時子封裝會找不到該變數。 如需使用指令碼工作存取父封裝變數的詳細資訊，請參閱此部落格文章中， [SSIS:存取父封裝中的變數](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)。  
+ 子封裝可藉由使用指令碼工作存取父封裝變數。 當你在 [指令碼工作編輯器]  的 [指令碼]  頁面上輸入父封裝變數的名稱時，變數名稱中請勿加上 **User:** 。 否則，在您執行父封裝時子封裝會找不到該變數。 如需使用指令碼工作存取父封裝變數的詳細資訊，請參閱此部落格文章中， [SSIS:存取父封裝中的變數](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)。  
   
 ## <a name="configuring-the-execute-package-task"></a>設定執行封裝工作  
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  

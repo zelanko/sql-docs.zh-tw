@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47403e17df946ada2fe5a5ed913d9e16c8b62271
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9284b6148fecd96f881778ef82dec45b40acf178
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640726"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796887"
 ---
 # <a name="sqlsrverrors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -71,7 +71,7 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
   
 |索引鍵|Description|  
 |-------|---------------|  
-|SQLSTATE|若為源自 ODBC 驅動程式的錯誤，則為 ODBC 所傳回的 SQLSTATE。 如需 ODBC 之 SQLSTATE 值的資訊，請參閱 [ODBC 錯誤碼](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。<br /><br />若為源自 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的錯誤，則為 IMSSP 的 SQLSTATE。<br /><br />若為源自 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的警告，則為 01SSP 的 SQLSTATE。|  
+|SQLSTATE|若為源自 ODBC 驅動程式的錯誤，則為 ODBC 所傳回的 SQLSTATE。 如需 ODBC 之 SQLSTATE 值的相關資訊，請參閱 [ODBC 錯誤碼](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。<br /><br />若為源自 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的錯誤，則為 IMSSP 的 SQLSTATE。<br /><br />若為源自 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的警告，則為 01SSP 的 SQLSTATE。|  
 |代碼|若為源自 SQL Server 的錯誤，則為原生 SQL Server 錯誤碼。<br /><br />若為源自 ODBC 驅動程式的錯誤，則為 ODBC 所傳回的錯誤碼。<br /><br />對於源自 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的錯誤，則為 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 錯誤碼。 如需詳細資訊，請參閱 [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md)。|  
 |message|錯誤的描述。|  
   

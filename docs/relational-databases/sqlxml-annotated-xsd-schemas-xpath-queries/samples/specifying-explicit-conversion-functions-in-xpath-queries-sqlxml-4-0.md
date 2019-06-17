@@ -18,10 +18,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 543f0d0234c6f4bc2f34904bda0cd6b0019aaaa0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737417"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定明確轉換函數 (SQLXML 4.0)
@@ -33,7 +33,7 @@ ms.locfileid: "62737417"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. 使用 number() 明確轉換函數  
  **Number （)** 函式會將引數轉換為數字。  
   
- 假設的值**ContactID**是非數值，下列查詢會轉換**ContactID**的數字並比較它與 4 這個值。 然後查詢會傳回所有**\<員工 >** 的內容節點的項目子系**ContactID**數值的值為 4 的屬性：  
+ 假設的值**ContactID**是非數值，下列查詢會轉換**ContactID**的數字並比較它與 4 這個值。 然後查詢會傳回所有 **\<員工>** 的內容節點的項目子系**ContactID**數值的值為 4 的屬性：  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -82,7 +82,7 @@ ms.locfileid: "62737417"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. 使用 string() 明確轉換函數  
  **String （)** 函式會將引數轉換為字串。  
   
- 下列查詢會轉換**ContactID**成字串並比較它與字串值"4"。 此查詢會傳回所有**\<員工 >** 的內容節點的項目子系**ContactID** "4"的字串值：  
+ 下列查詢會轉換**ContactID**成字串並比較它與字串值"4"。 此查詢會傳回所有 **\<員工>** 的內容節點的項目子系**ContactID** "4"的字串值：  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

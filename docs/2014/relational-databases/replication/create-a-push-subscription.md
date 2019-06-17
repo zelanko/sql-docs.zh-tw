@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721730"
 ---
 # <a name="create-a-push-subscription"></a>建立發送訂閱
@@ -59,7 +59,7 @@ ms.locfileid: "62721730"
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您要建立一個或多個訂閱的發行集，然後按一下 **[新增訂閱]**。  
+3.  以滑鼠右鍵按一下您要建立一個或多個訂閱的發行集，然後按一下 **[新增訂閱]** 。  
   
 4.  在新增訂閱精靈中完成頁面。  
   
@@ -69,9 +69,9 @@ ms.locfileid: "62721730"
   
 2.  展開 **[複寫]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 **[區域訂閱]** 資料夾，然後按一下 **[新增訂閱]**。  
+3.  以滑鼠右鍵按一下 **[區域訂閱]** 資料夾，然後按一下 **[新增訂閱]** 。  
   
-4.  在 [新增訂閱精靈] 的 [發行集] 頁面上，從 [發行者] 下拉式清單中選取 [\<尋找 SQL Server 發行者>] 或 [\<尋找 Oracle 發行者>]。  
+4.  在 [新增訂閱精靈] 的 [發行集]  頁面上，從 [發行者]  下拉式清單中選取 [\<尋找 SQL Server 發行者>]  或 [\<尋找 Oracle 發行者>]  。  
   
 5.  連接到 **[連接到伺服器]** 對話方塊中的發行者。  
   
@@ -91,20 +91,20 @@ ms.locfileid: "62721730"
   
     -   如果 **allow_push** 的值為 **1**，則發送訂閱受到支援。  
   
-    -   如果值**allow_push**是**0**，執行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，並指定**allow_push**如 **@property**並`true`for **@value**。  
+    -   如果值**allow_push**是**0**，執行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，並指定**allow_push**如 **@property** 並`true`for **@value** 。  
   
-2.  在發行集資料庫的「發行者」上，執行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication**或 Replication Management Objects (RMO) 來建立 **@subscriber** ，並將 **@destination_db**＞。 將 **@subscription_type** 指定為 **@subscription_type**＞。 如需有關如何更新訂用帳戶的資訊，請參閱[建立交易式發行集的可更新訂閱](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+2.  在發行集資料庫的「發行者」上，執行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication** 或 Replication Management Objects (RMO) 來建立 **@subscriber** ，並將 **@destination_db** ＞。 將 **@subscription_type** 指定為 **@subscription_type** ＞。 如需有關如何更新訂用帳戶的資訊，請參閱[建立交易式發行集的可更新訂閱](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 3.  在發行集資料庫的「發行者」上，執行 [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定下列項目：  
   
-    -   將 **@subscriber**或 Replication Management Objects (RMO) 來建立 **@subscriber_db**和 **@publication** 參數。  
+    -   將 **@subscriber** 或 Replication Management Objects (RMO) 來建立 **@subscriber_db** 和 **@publication** 參數。  
   
-    -   將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認證，「散發者」上的「散發代理程式」執行時會針對 **@job_login** ，並將 **@job_password**＞。  
+    -   將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認證，「散發者」上的「散發代理程式」執行時會針對 **@job_login** ，並將 **@job_password** ＞。  
   
         > [!NOTE]  
-        >  使用「Windows 整合式驗證」建立的連接一律使用由 **@job_login** 及 **@job_password**中針對非 SQL Server 訂閱者建立訂閱。 散發代理程式一律使用「Windows 整合式驗證」建立與散發者的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
+        >  使用「Windows 整合式驗證」建立的連接一律使用由 **@job_login** 及 **@job_password** 中針對非 SQL Server 訂閱者建立訂閱。 散發代理程式一律使用「Windows 整合式驗證」建立與散發者的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
   
-    -   (選擇性) **0** 指定為 **@subscriber_security_mode** ，以及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@subscriber_login** ，並將 **@subscriber_password**＞。 如果您在連接到「訂閱者」時需要使用「SQL Server 驗證」，請指定這些參數。  
+    -   (選擇性) **0** 指定為 **@subscriber_security_mode** ，以及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@subscriber_login** ，並將 **@subscriber_password** ＞。 如果您在連接到「訂閱者」時需要使用「SQL Server 驗證」，請指定這些參數。  
   
     -   此訂閱之散發代理程式作業的排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](specify-synchronization-schedules.md)。  
   
@@ -117,30 +117,30 @@ ms.locfileid: "62721730"
   
     -   如果 **allow_push** 的值為 **1**，則發行集支援發送訂閱。  
   
-    -   如果值**allow_push**不是**1**，執行[sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，並指定**allow_push**如**@property** 並`true`如**@value**。  
+    -   如果值**allow_push**不是**1**，執行[sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，並指定**allow_push**如 **@property** 並`true`如 **@value** 。  
   
 2.  在發行集資料庫的「發行者」上，執行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)並指定下列參數：  
   
-    -   **@publication**＞。 這是發行集的名稱。  
+    -   **@publication** ＞。 這是發行集的名稱。  
   
-    -   **@subscriber_type**＞。 將客訂閱指定為 **local** ，並將主訂閱指定為 **global**。  
+    -   **@subscriber_type** ＞。 將客訂閱指定為 **local** ，並將主訂閱指定為 **global**。  
   
-    -   **@subscription_priority**＞。 指定主訂閱的訂閱優先權 (從**0.00** 到 **99.99**)。  
+    -   **@subscription_priority** ＞。 指定主訂閱的訂閱優先權 (從**0.00** 到 **99.99**)。  
   
          如需詳細資訊，請參閱 [進階合併式複寫衝突偵測與解決](merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
 3.  在發行集資料庫的「發行者」上，執行 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)。 指定下列項目：  
   
-    -   將 **@subscriber**或 Replication Management Objects (RMO)，在 **@subscriber_db**和 **@publication** 參數。  
+    -   將 **@subscriber** 或 Replication Management Objects (RMO)，在 **@subscriber_db** 和 **@publication** 參數。  
   
-    -   Windows 認證，「散發者」上的「合併代理程式」執行時會針對 **@job_login** ，並將 **@job_password**＞。  
+    -   Windows 認證，「散發者」上的「合併代理程式」執行時會針對 **@job_login** ，並將 **@job_password** ＞。  
   
         > [!NOTE]  
-        >  使用「Windows 整合式驗證」建立的連接一律使用由 **@job_login** 及 **@job_password**中針對非 SQL Server 訂閱者建立訂閱。 「合併代理程式」一律使用「Windows 整合式驗證」建立到「散發者」的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
+        >  使用「Windows 整合式驗證」建立的連接一律使用由 **@job_login** 及 **@job_password** 中針對非 SQL Server 訂閱者建立訂閱。 「合併代理程式」一律使用「Windows 整合式驗證」建立到「散發者」的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
   
-    -   (選擇性) **0** 指定為 **@subscriber_security_mode** ，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@subscriber_login** ，並將 **@subscriber_password**＞。 如果您在連接到「訂閱者」時需要使用「SQL Server 驗證」，請指定這些參數。  
+    -   (選擇性) **0** 指定為 **@subscriber_security_mode** ，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@subscriber_login** ，並將 **@subscriber_password** ＞。 如果您在連接到「訂閱者」時需要使用「SQL Server 驗證」，請指定這些參數。  
   
-    -   (選擇性) **0** 指定為 **@publisher_security_mode** ，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** ，並將 **@publisher_password**＞。 如果您在連接到「發行者」時需要使用「SQL Server 驗證」，請指定這些值。  
+    -   (選擇性) **0** 指定為 **@publisher_security_mode** ，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** ，並將 **@publisher_password** ＞。 如果您在連接到「發行者」時需要使用「SQL Server 驗證」，請指定這些值。  
   
     -   此訂閱之「合併代理程式」作業的排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](specify-synchronization-schedules.md)。  
   

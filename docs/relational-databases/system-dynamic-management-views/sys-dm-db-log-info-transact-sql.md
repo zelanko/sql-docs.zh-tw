@@ -21,10 +21,10 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50549b10793346331d2e5cb8668243db615a443b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62719524"
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
@@ -60,7 +60,7 @@ sys.dm_db_log_info ( database_id )
 |vlf_parity|**tinyint** |同位檢查[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。內部用來判斷 VLF 中的記錄檔的結尾。|
 |vlf_first_lsn|**nvarchar(48)** |[記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)第一筆記錄中的[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
 |vlf_create_lsn|**nvarchar(48)** |[記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)記錄檔記錄建立[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
-|vlf_encryptor_thumbprint|**varbinary(20)**| **適用於：**[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> 顯示的 VLF 的加密程式指模的 VLF 使用來加密[透明資料加密](../../relational-databases/security/encryption/transparent-data-encryption.md)，否則為 NULL。 |
+|vlf_encryptor_thumbprint|**varbinary(20)**| **適用於：** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> 顯示的 VLF 的加密程式指模的 VLF 使用來加密[透明資料加密](../../relational-databases/security/encryption/transparent-data-encryption.md)，否則為 NULL。 |
 
 ## <a name="remarks"></a>備註
 `sys.dm_db_log_info`動態管理函數會取代`DBCC LOGINFO`陳述式。    

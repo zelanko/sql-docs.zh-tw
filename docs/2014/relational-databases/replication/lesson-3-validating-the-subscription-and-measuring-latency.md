@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 6968331bc7699334f61997ec6a16e521c158078a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721054"
 ---
 # <a name="lesson-3-validating-the-subscription-and-measuring-latency"></a>第 3 課：驗證訂閱及測量延遲
@@ -24,7 +24,7 @@ ms.locfileid: "62721054"
   
 ### <a name="to-insert-a-tracer-token-and-view-information-on-the-token"></a>插入追蹤 Token 並檢視 Token 上的資訊  
   
-1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的「發行者」，展開伺服器節點，再以滑鼠右鍵按一下 [複寫] 資料夾，然後按一下 [啟動複寫監視器]。  
+1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的「發行者」，展開伺服器節點，再以滑鼠右鍵按一下 [複寫]  資料夾，然後按一下 [啟動複寫監視器]  。  
   
      複寫監視器隨即啟動。  
   
@@ -32,9 +32,9 @@ ms.locfileid: "62721054"
   
 3.  按一下 **[追蹤 Token]** 索引標籤。  
   
-4.  按一下 **[插入追蹤]**。  
+4.  按一下 **[插入追蹤]** 。  
   
-5.  檢視下列資料行中之追蹤 token 的經過時間：[發行者到散發者]、[散發者到訂閱者]、[延遲總計]。 **[暫止]** 表示 Token 尚未到達給定點。  
+5.  檢視下列資料行中之追蹤 token 的經過時間：[發行者到散發者]  、[散發者到訂閱者]  、[延遲總計]  。 **[暫止]** 表示 Token 尚未到達給定點。  
   
 ## <a name="next-steps"></a>後續步驟  
  在這一課，您已順利使用追蹤 Token，驗證資料變更正從「發行者」複寫至「訂閱者」。 您也可以在「發行者」端插入、更新或刪除 **Product** 資料表中的資料，並在複寫之後，在「訂閱者」端查詢 **Product** 資料表，檢視這些變更。  

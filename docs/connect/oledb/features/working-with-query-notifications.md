@@ -21,13 +21,13 @@ helpviewer_keywords:
 - consumer notification for rowset changes [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d65583e80dc367e974e68a70dc36990b4a80278d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 7139e6a80e05fbe3671acc9246d42a1354da714f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602708"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796038"
 ---
 # <a name="working-with-query-notifications"></a>使用查詢通知
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

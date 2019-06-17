@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0ac8dc45-373c-4ac6-92fc-34b8455e5654
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 37b8b530fca8ecef3fb3462614d0a321a4d5ba96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 159e3967dd63d4cc0a6142c41740d17cd2a292ad
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694916"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797501"
 ---
 # <a name="jdbc-specification-compliance"></a>JDBC 規格相容性
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

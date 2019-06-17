@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e07d71e77fc3de250ca01bb4e7fb2fb0bf15817
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767520"
 ---
-# <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>步驟 2:加入和設定 Foreach 迴圈容器
+# <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>步驟 2:新增和設定 Foreach 迴圈容器
   在這項工作中，您將加入功能，於一般檔案的資料夾中形成迴圈，並對每個一般檔案套用在第 1 課使用的相同資料流程轉換。 您的作法是在控制流程中加入和設定 Foreach 迴圈容器。  
   
  您加入的 Foreach 迴圈容器必須能夠連接到資料夾的每個一般檔案。 由於資料夾的所有檔案都具有相同格式，所以 Foreach 迴圈容器可以使用相同的一般檔案連接管理員來連接每一個檔案。 容器要使用的一般檔案連接管理員與您在第 1 課建立的一般檔案連接管理員相同。  
@@ -37,27 +37,27 @@ ms.locfileid: "62767520"
   
 ### <a name="to-add-a-foreach-loop-container"></a>若要加入 Foreach 迴圈容器  
   
-1.  在 SQL Server Data Tools 中，請按一下 [控制流程] 索引標籤。  
+1.  在 SQL Server Data Tools  中，請按一下 [控制流程]  索引標籤。  
   
-2.  在 [SSIS 工具箱] 中，展開 [容器]，然後將 [Foreach 迴圈容器] 拖曳至 [控制流程] 索引標籤的設計介面中。  
+2.  在 [SSIS 工具箱]  中，展開 [容器]  ，然後將 [Foreach 迴圈容器]  拖曳至 [控制流程]  索引標籤的設計介面中。  
   
-3.  以滑鼠右鍵按一下剛新增的 [Foreach 迴圈容器]，並選取 [編輯]。  
+3.  以滑鼠右鍵按一下剛新增的 [Foreach 迴圈容器]  ，並選取 [編輯]  。  
   
-4.  在  **Foreach 迴圈編輯器**對話方塊的 **一般**頁面上，如**名稱**，輸入`Foreach File in Folder`。 按一下 [確定] 。  
+4.  在  **Foreach 迴圈編輯器**對話方塊的 **一般**頁面上，如**名稱**，輸入`Foreach File in Folder`。 按一下 [確定]  。  
   
-5.  以滑鼠右鍵按一下 「 Foreach 迴圈 」 容器，請按一下**屬性**，然後在 [屬性] 視窗中，確認`LocaleID`屬性設定為**英文 （美國）**。  
+5.  以滑鼠右鍵按一下 「 Foreach 迴圈 」 容器，請按一下**屬性**，然後在 [屬性] 視窗中，確認`LocaleID`屬性設定為**英文 （美國）** 。  
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>若要設定 Foreach 迴圈容器的列舉值  
   
-1.  按兩下 [資料夾的 Foreach 檔案]，來重新開啟 [Foreach 迴圈編輯器]。  
+1.  按兩下 [資料夾的 Foreach 檔案]，來重新開啟 [Foreach 迴圈編輯器]  。  
   
-2.  按一下 [集合]。  
+2.  按一下 [集合]  。  
   
-3.  在 [集合] 頁面上，選取 [Foreach 檔案列舉值]。  
+3.  在 [集合]  頁面上，選取 [Foreach 檔案列舉值]  。  
   
-4.  在 [列舉值組態] 群組中，按一下 [瀏覽]。  
+4.  在 [列舉值組態]  群組中，按一下 [瀏覽]  。  
   
-5.  在 [瀏覽資料夾] 對話方塊中，尋找電腦上包含 Currency_*.txt 檔案的資料夾。  
+5.  在 [瀏覽資料夾]  對話方塊中，尋找電腦上包含 Currency_*.txt 檔案的資料夾。  
   
      此範例資料隨附在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 課程封裝中。 若要下載範例資料和課程封裝，請執行下列動作。  
   
@@ -67,22 +67,22 @@ ms.locfileid: "62767520"
   
     3.  按一下此超連結"http://msftisprodsamples.codeplex.com/downloads/get/578097"SQL2012。Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 檔案。  
   
-6.  在 [檔案] 方塊中，輸入 **Currency_\*.txt**。  
+6.  在 [檔案]  方塊中，輸入 **Currency_\*.txt**。  
   
 ### <a name="to-map-the-enumerator-to-a-user-defined-variable"></a>若要將列舉值對應至使用者自訂變數  
   
-1.  按一下 [變數對應]。  
+1.  按一下 [變數對應]  。  
   
-2.  在 [變數對應] 頁面的 [變數] 資料行中，按一下空白資料格，然後選取 [\<新增變數...>]。  
+2.  在 [變數對應]  頁面的 [變數]  資料行中，按一下空白資料格，然後選取 [\<新增變數...>]  。  
   
 3.  在 [**加入變數**] 對話方塊中，如**名稱**，型別`varFileName`。  
   
     > [!IMPORTANT]  
     >  變數名稱會區分大小寫。  
   
-4.  按一下 [確定] 。  
+4.  按一下 [確定]  。  
   
-5.  再按一下 [確定] 來結束 [Foreach 迴圈編輯器] 對話方塊。  
+5.  再按一下 [確定]  來結束 [Foreach 迴圈編輯器]  對話方塊。  
   
 ### <a name="to-add-the-data-flow-task-to-the-loop"></a>若要將資料流程工作加入迴圈中  
   

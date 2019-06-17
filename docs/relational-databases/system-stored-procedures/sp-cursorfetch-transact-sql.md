@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7b07ccf7641f0529d03b2b37650e2ac8afbc9d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724566"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
@@ -109,7 +109,7 @@ sp_cursorfetch cursor
   
  如果是 KEYSET 資料指標，這表示索引鍵集資料表具有上一次非略過 FETCH 期間所設定的值 (如果已經執行的話)。 如果沒有的話，它的值會是擴展期間所設定。  
   
- 如果是 DYNAMIC 資料指標，這表示如果執行略過及重新整理，它會產生與 KEYSET 相同的結果。 如果是其他任何提取類型，索引鍵集資料表會遭到截斷。 這表示正在插入資料列，但是不會定義時間戳記資料行的值。  因此，當您針對 DYNAMIC 資料指標執行 sp_cursorfetch 時，請避免針對 REFRESH 以外的任何作業使用 SKIP_UPDT_CNCY。  
+ 如果是 DYNAMIC 資料指標，這表示如果執行略過及重新整理，它會產生與 KEYSET 相同的結果。 如果是其他任何提取類型，索引鍵集資料表會遭到截斷。 這表示正在插入資料列，但是不會定義時間戳記資料行的值。 因此，當您針對 DYNAMIC 資料指標執行 sp_cursorfetch 時，請避免針對 REFRESH 以外的任何作業使用 SKIP_UPDT_CNCY。  
   
  如果提取作業失敗，因為要求的資料指標位置超出結果集，資料指標位置會剛好設定在最後一個資料列的後面。 如果提取作業失敗，因為要求的資料指標位置在結果集前面，資料指標位置會設定在第一個資料列的前面。  
   

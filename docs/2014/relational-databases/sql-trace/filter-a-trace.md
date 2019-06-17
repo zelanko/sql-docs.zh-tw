@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714715"
 ---
 # <a name="filter-a-trace"></a>篩選追蹤
@@ -137,7 +137,7 @@ ms.locfileid: "62714715"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup>如果追蹤事件，從**osql**公用程式或**sqlcmd**公用程式，附加**%** 篩選**TextData**資料行。  
+ <sup>1</sup>如果追蹤事件，從**osql**公用程式或**sqlcmd**公用程式，附加 **%** 篩選**TextData**資料行。  
   
  基於安全機制，「SQL 追蹤」會自動把任何與安全性相關、會影響密碼的預存程序的資訊從追蹤省略。 此安全機制無法設定，也永遠有效。 如此可預防有權限追蹤 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上所有活動的使用者擷取到密碼。  
   

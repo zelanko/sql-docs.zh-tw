@@ -1,23 +1,23 @@
 ---
 title: 資料表表示法 （表格式） |Microsoft Docs
-ms.date: 05/07/2018
-ms.prod: sql
+ms.custom: ''
+ms.date: 04/27/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
 ms.technology: analysis-services
-ms.custom: tabular-models
 ms.topic: reference
-ms.author: owend
-ms.reviewer: owend
+ms.assetid: a636fc13-4054-4cea-bce1-192ec4796063
 author: minewiskan
-manager: kfile
+ms.author: owend
+manager: craigg
 ms.openlocfilehash: c733fbf1e8a075d0d240f5cb69d888310fc6009f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62757695"
 ---
 # <a name="tables-representation-tabular"></a>資料表表示法 (表格式)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   在表格式模型中，資料表是資料的基本表示法。  
   
 ## <a name="tables-representation"></a>資料表表示法  

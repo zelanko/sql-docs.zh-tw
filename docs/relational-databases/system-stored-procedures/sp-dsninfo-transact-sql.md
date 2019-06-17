@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e6eacb453fc2f66f4b87790770fa50916916a27c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724014"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
@@ -42,9 +42,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @dsn = ] 'dsn'` 是 ODBC DSN 或 OLE DB 連結伺服器的名稱。 *dsn*已**varchar(128)**，沒有預設值。  
+`[ @dsn = ] 'dsn'` 是 ODBC DSN 或 OLE DB 連結伺服器的名稱。 *dsn*已**varchar(128)** ，沒有預設值。  
   
-`[ @infotype = ] 'info_type'` 是要傳回類型。 如果*info_type*未指定或指定 NULL，則會傳回所有資訊類型。 *info_type*已**varchar(128)**，預設值是 NULL，而且可以是下列值之一。  
+`[ @infotype = ] 'info_type'` 是要傳回類型。 如果*info_type*未指定或指定 NULL，則會傳回所有資訊類型。 *info_type*已**varchar(128)** ，預設值是 NULL，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -53,9 +53,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**DATABASE_NAME**|指定資料庫名稱。|  
 |**SQL_SUBSCRIBER**|指定資料來源可以是訂閱者。|  
   
-`[ @login = ] 'login'` 是資料來源的登入。 如果資料來源包括登入，請指定 NULL 或省略這個參數。 *登入*已**varchar(128)**，預設值是 NULL。  
+`[ @login = ] 'login'` 是資料來源的登入。 如果資料來源包括登入，請指定 NULL 或省略這個參數。 *登入*已**varchar(128)** ，預設值是 NULL。  
   
-`[ @password = ] 'password'` 這是登入密碼。 如果資料來源包括登入，請指定 NULL 或省略這個參數。 *密碼*已**varchar(128)**，預設值是 NULL。  
+`[ @password = ] 'password'` 這是登入密碼。 如果資料來源包括登入，請指定 NULL 或省略這個參數。 *密碼*已**varchar(128)** ，預設值是 NULL。  
   
 `[ @dso_type = ] dso_type` 是資料來源類型。 *dso_type*已**int**，而且可以是下列值之一。  
   

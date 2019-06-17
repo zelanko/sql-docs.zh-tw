@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dccae9216609e80b0eb87582a78b94cd6e7b2f0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767683"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 封裝
@@ -98,7 +98,7 @@ ms.locfileid: "62767683"
 |`Diagnostic`|提供影響封裝執行之系統組態的相關資訊，例如可以同時執行的可執行檔數目。|  
   
 ## <a name="configuration-of-packages"></a>封裝的組態  
- 您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性] 視窗中，或以程式設計方式設定屬性。  
+ 您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性]  視窗中，或以程式設計方式設定屬性。  
   
  如需如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]來設定這些屬性的詳細資訊，請參閱 [設定封裝屬性](set-package-properties.md)。  
   

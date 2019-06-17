@@ -15,10 +15,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4f5df8d27f39918cb8ddac4dd46dd8b3ca4449c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62704472"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>從伺服器到用戶端執行的轉換
@@ -32,7 +32,7 @@ ms.locfileid: "62704472"
   
 |到-><br /><br /> 來源|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|date|1,7|[確定]|-|-|1|1,3|1,7|-|[確定] \(VT_BSTR)|[確定]|[確定]|4|4|  
+|Date|1,7|[確定]|-|-|1|1,3|1,7|-|[確定] \(VT_BSTR)|[確定]|[確定]|4|4|  
 |Time|5,6,7|-|9|[確定]|6|3,6|5,6|-|[確定] \(VT_BSTR)|[確定]|[確定]|4|4|  
 |Smalldatetime|7|8|9,10|10|[確定]|3|7|-|7 (VT_DATE)|[確定]|[確定]|4|4|  
 |Datetime|5,7|8|9,10|10|[確定]|3|7|-|7 (VT_DATE)|[確定]|[確定]|4|4|  

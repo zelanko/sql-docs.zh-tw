@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fd972acc-57e5-4971-9744-0e8fca5f05a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 03bd1bab1fc2cc380c35dbc8e138b9a40ae7bdad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 96abba219b27b33522733a82ba5182d2e53f48a4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679766"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800377"
 ---
 # <a name="setnclob-method-sqlservercallablestatement"></a>setNClob 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

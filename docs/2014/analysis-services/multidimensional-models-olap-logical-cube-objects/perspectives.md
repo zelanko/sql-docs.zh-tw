@@ -1,23 +1,31 @@
 ---
 title: 檢視方塊 |Microsoft Docs
-ms.date: 05/02/2018
-ms.prod: sql
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
 ms.technology: analysis-services
-ms.custom: olap
-ms.topic: conceptual
-ms.author: owend
-ms.reviewer: owend
+ms.topic: reference
+helpviewer_keywords:
+- ready-only cube view
+- OLAP objects [Analysis Services], perspectives
+- storing data [Analysis Services], perspectives
+- perspectives [Analysis Services]
+- cubes [Analysis Services], perspectives
+- visibility [Analysis Services]
+- storage [Analysis Services], perspectives
+ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
 author: minewiskan
-manager: kfile
+ms.author: owend
+manager: craigg
 ms.openlocfilehash: 2856bca26e8a49ffdb2ed5187479434c7762015b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62702631"
 ---
 # <a name="perspectives"></a>「檢視方塊」
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   檢視方塊是可讓使用者以更簡單的方式查看 Cube 的定義。 檢視方塊是 Cube 功能的子集。 檢視方塊可讓管理員建立 Cube 的檢視，幫助使用者將焦點放在最相關的資料上。 檢視方塊包含了 Cube 中所有物件的子集。 檢視方塊不能包含父 Cube 中未定義的元素。  
   
  簡單的 <xref:Microsoft.AnalysisServices.Perspective> 物件是由以下項目所組成：基本資訊、維度、量值群組、計算、KPI 和動作。 基本資訊包括檢視方塊的名稱和預設量值。 維度是 Cube 維度的子集。 量值群組是 Cube 量值群組的子集。 計算是 Cube 計算的子集。 KPI 是 Cube KPI 的子集。 動作是 Cube 動作的子集。  

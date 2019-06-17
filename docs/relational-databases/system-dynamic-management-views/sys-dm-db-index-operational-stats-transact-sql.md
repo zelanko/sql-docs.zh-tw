@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62684300"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
@@ -102,11 +102,11 @@ sys.dm_db_index_operational_stats (
 |**range_scan_count**|**bigint**|在索引或堆積啟動的範圍和資料表掃描累計計數。|    
 |**singleton_lookup_count**|**bigint**|從索引或堆積擷取單資料列的累計計數。|    
 |**forwarded_fetch_count**|**bigint**|透過轉送記錄提取的資料列計數。<br /><br /> 0 = 索引|    
-|**lob_fetch_in_pages**|**bigint**|從 LOB_DATA 配置單位擷取的大型物件 (LOB) 頁面累加計數。 這些頁面包含儲存在類型的資料行的資料**文字**， **ntext**，**映像**， **varchar （max)**， **nvarchar (max)**， **varbinary （max)**，以及**xml**。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。|    
+|**lob_fetch_in_pages**|**bigint**|從 LOB_DATA 配置單位擷取的大型物件 (LOB) 頁面累加計數。 這些頁面包含儲存在類型的資料行的資料**文字**， **ntext**，**映像**， **varchar （max)** ， **nvarchar (max)** ， **varbinary （max)** ，以及**xml**。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。|    
 |**lob_fetch_in_bytes**|**bigint**|所擷取的 LOB 資料位元組累計。|    
 |**lob_orphan_create_count**|**bigint**|針對大量作業所建立的孤立 LOB 值累計。<br /><br /> 0 = 非叢集索引|    
 |**lob_orphan_insert_count**|**bigint**|在大量作業時插入的孤立 LOB 值累計計數。<br /><br /> 0 = 非叢集索引|    
-|**row_overflow_fetch_in_pages**|**bigint**|從 ROW_OVERFLOW_DATA 配置單位擷取的資料列溢位資料頁累計計數。<br /><br /> 這些頁面包含類型的資料行中儲存的資料**varchar （n)**， **nvarchar （n)**， **varbinary**，以及**sql_variant**已經從資料列發送。|    
+|**row_overflow_fetch_in_pages**|**bigint**|從 ROW_OVERFLOW_DATA 配置單位擷取的資料列溢位資料頁累計計數。<br /><br /> 這些頁面包含類型的資料行中儲存的資料**varchar （n)** ， **nvarchar （n)** ， **varbinary**，以及**sql_variant**已經從資料列發送。|    
 |**row_overflow_fetch_in_bytes**|**bigint**|所擷取的資料列溢位資料位元組累計計數。|    
 |**column_value_push_off_row_count**|**bigint**|為了讓插入或更新資料列容納在一頁中，而被排除為非資料列的 LOB 資料和資料列溢位資料的資料行值累計計數。|    
 |**column_value_pull_in_row_count**|**bigint**|被納入成為同資料列的 LOB 資料和資料列溢位資料的資料行值累加計數。 這項作業是在更新作業釋出記錄空間，讓您有機會將 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位的一個或多個非資料列值納入 IN_ROW_DATA 配置單位時發生。|    

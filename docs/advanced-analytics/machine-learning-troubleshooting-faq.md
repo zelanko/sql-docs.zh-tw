@@ -8,10 +8,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 4a62dd0710a97a33f5a4703f194df2c6bcef2a54
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62650325"
 ---
 # <a name="troubleshoot-machine-learning-in-sql-server"></a>疑難排解 SQL Server 中的機器學習服務
