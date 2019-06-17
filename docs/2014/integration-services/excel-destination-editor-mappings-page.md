@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a79316eedb95a026d4869442a06ca1916b40ff3c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059177"
 ---
 # <a name="excel-destination-editor-mappings-page"></a>Excel 目的地編輯器 (對應頁面)
@@ -26,7 +26,7 @@ ms.locfileid: "66059177"
   
  若要深入了解 Excel 目的地，請參閱＜ [Excel Destination](data-flow/excel-destination.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可用的輸入資料行**  
  檢視可用的輸入資料行清單。 使用拖放作業，即可將資料表中的可用輸入資料行對應到目的地資料行。  
   

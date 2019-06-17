@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01542ee3219a7fda68330d19b88161de25f14329
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922913"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>使用 SQL Server PowerShell 路徑
@@ -22,7 +22,7 @@ ms.locfileid: "62922913"
   
 1.  [開始之前](#BeforeYouBegin)  
   
-2.  **若要處理路徑節點上：**[列出方法與屬性](#ListPropMeth)，[使用方法與屬性](#UsePropMeth)  
+2.  **若要處理路徑節點上：** [列出方法與屬性](#ListPropMeth)，[使用方法與屬性](#UsePropMeth)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  當您導覽至 [!INCLUDE[ssDE](../includes/ssde-md.md)] 提供者路徑中的節點之後，可以執行兩種動作：  
@@ -69,7 +69,7 @@ Get-Item . | Get-Member -Type Properties
  若要從 [!INCLUDE[ssDE](../includes/ssde-md.md)] 提供者路徑對物件進行工作，可以使用 SMO 方法與屬性。  
   
 ### <a name="examples-using-methods-and-properties"></a>範例:使用方法與屬性  
- 此範例會使用 SMO [結構描述] 屬性來取得 AdventureWorks2012中 Sales 結構描述內的資料表清單：  
+ 此範例會使用 SMO [結構描述]  屬性來取得 AdventureWorks2012中 Sales 結構描述內的資料表清單：  
   
 ```  
 Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables  

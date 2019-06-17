@@ -18,10 +18,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 49e14c0a68ad901e8d22388c7edd993744c9afc7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737534"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定關係運算子 (SQLXML 4.0)
@@ -31,13 +31,13 @@ ms.locfileid: "62737534"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-specify-relational-operator"></a>A. 指定關係運算子  
- 此 XPath 查詢傳回的子系的項目**\<客戶 >** 項目其中**CustomerID**屬性值是"1"，其中任何子**\<順序>** 項目包含 **\<OrderDetail >** 子項**OrderQty**屬性大於 3 的值：  
+ 此 XPath 查詢傳回的子系的項目 **\<客戶 >** 項目其中**CustomerID**屬性值是"1"，其中任何子 **\<順序>** 項目包含 **\<OrderDetail >** 子項**OrderQty**屬性大於 3 的值：  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- 指定在方括號篩選器述詞**\<客戶 >** 項目。 只有**\<客戶 >** 至少有一個項目 **\<OrderDetail >** 包含 OrderQty 屬性值大於 3 會傳回的孫系。  
+ 指定在方括號篩選器述詞 **\<客戶 >** 項目。 只有 **\<客戶 >** 至少有一個項目 **\<OrderDetail >** 包含 OrderQty 屬性值大於 3 會傳回的孫系。  
   
  **子系**軸是預設值。 因此，此查詢可以指定為：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62737534"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. 在 XPath 查詢中指定關係運算子並使用布林函數來比較結果  
- 此查詢會傳回所有**\<順序 >** 具有的內容節點的項目子系**SalesPersonID**屬性是小於 270 的值：  
+ 此查詢會傳回所有 **\<順序 >** 具有的內容節點的項目子系**SalesPersonID**屬性是小於 270 的值：  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  

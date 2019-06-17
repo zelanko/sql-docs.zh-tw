@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 33618c019e59c044e681c45130130adc79d53122
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62472197"
 ---
 # <a name="data-types-supported-in-tabular-models"></a>支援表格式模型中的資料類型
@@ -35,8 +35,8 @@ ms.locfileid: "62472197"
 |十進位數字|64 位元 (八位元組) 實數*<br /><br /> 注意:<br />         DAX 公式不支援小到無法容納描述列示之最小值的資料類型。|實數是可以有小數位數的數字。 實數涵蓋極廣的值範圍：<br /><br /> 負值是從 -1.79E + 308 到 -2.23E - 308<br /><br /> 零 (0)<br /><br /> 正值是從 2.23E -308 到 1.79E + 308<br /><br /> 不過，有效位數的數目限制為 17 個小數位數。|  
 |布林|布林|True 或 False 值。|  
 |Text|String|Unicode 字元資料字串。 可以是字串、 數字或以文字格式表示的日期。|  
-|date|日期/時間|採用可接受之日期時間表示方式的日期和時間。<br /><br /> 有效日期為 1900 年 3 月 1 日之後的所有日期。|  
-|CURRENCY|CURRENCY|貨幣資料類型允許的值是從 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 且固定有效位數為四個小數位數。|  
+|Date|日期/時間|採用可接受之日期時間表示方式的日期和時間。<br /><br /> 有效日期為 1900 年 3 月 1 日之後的所有日期。|  
+|Currency|Currency|貨幣資料類型允許的值是從 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 且固定有效位數為四個小數位數。|  
 |N/A|空白|空白是 DAX 中表示和取代 SQL Null 的資料類型。 您可以使用 BLANK 函數建立空白，然後使用邏輯函數 ISBLANK 來測試空白。|  
   
  \* 如果您嘗試匯入有大數值的資料，匯入可能會失敗，發生下列錯誤：  

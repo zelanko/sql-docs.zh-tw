@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ef92aa3410ee12fd5edc4ea602e64a6fa06fdc9c
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65477224"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 組態參考 (Master Data Services)
@@ -27,7 +27,7 @@ ms.locfileid: "65477224"
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 在 Web.config 檔案中包含讓 Internet Information Services (IIS) 主控 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式和 Web 服務的組態設定。 這個 Web.config 檔案位於 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 安裝路徑的 WebApplication 資料夾。 如需路徑和權限的詳細資訊，請參閱[資料夾和檔案的權限 &#40;Master Data Services&#41;](../master-data-services/folder-and-file-permissions-master-data-services.md)。  
   
 ## <a name="webconfig-elements"></a>Web.Config 元素  
- 除了標準的 IIS、.NET Framework、ASP.NET 和 Windows Communication Foundation (WCF) 組態項目以外，Web.config 檔案還包含自訂的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 項目 (**\<masterDataServices>**)。 下表描述 Web.config 檔案中包含的元素。  
+ 除了標準的 IIS、.NET Framework、ASP.NET 和 Windows Communication Foundation (WCF) 組態項目以外，Web.config 檔案還包含自訂的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 項目 ( **\<masterDataServices>** )。 下表描述 Web.config 檔案中包含的元素。  
   
 |組態元素|描述|  
 |---------------------------|-----------------|  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63125998"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>重新命名 SQL Server 容錯移轉叢集執行個體
@@ -63,7 +63,7 @@ ms.locfileid: "63125998"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>重新命名作業之後的其他考量  
  將容錯移轉叢集的網路名稱重新命名之後，我們必須確認並執行下列指示，才能啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中的所有案例。  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]：** 變更網路名稱之後[!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)]容錯移轉叢集執行個體使用 Windows 叢集系統管理員工具，未來的升級或解除安裝作業可能會失敗。 若要解決此問題的更新**ClusterName**登錄項目中的解決方法章節的指示[這](https://go.microsoft.com/fwlink/?LinkId=244002)(https://go.microsoft.com/fwlink/?LinkId=244002)。  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]：** 變更網路名稱之後[!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)]容錯移轉叢集執行個體使用 Windows 叢集系統管理員工具，未來的升級或解除安裝作業可能會失敗。 若要解決此問題的更新**ClusterName**登錄項目中的解決方法章節的指示[這](https://go.microsoft.com/fwlink/?LinkId=244002)(https://go.microsoft.com/fwlink/?LinkId=244002) 。  
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理程式服務：** 確認並執行下列其他動作的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理程式服務：  
   

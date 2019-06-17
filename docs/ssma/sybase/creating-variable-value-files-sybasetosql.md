@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7afced10f0be71310edc4b42ea0158ca996f3aa3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63069663"
 ---
 # <a name="creating-variable-value-files-sybasetosql"></a>建立變數值檔案 (SybaseToSQL)
@@ -25,7 +25,7 @@ ms.locfileid: "63069663"
   
 > [!NOTE]  
 > 1.  變數名稱會做為前置詞和後置字元為 $ （美元） 符號。 如果變數未指派的變數值檔案中的值，您就會導致懸置在主控台執行程序的指令碼檔案剖析期間發生錯誤。  
-> 2.  逸出字元 **$** 是 **$$**。 如果變數或靜態值的參數值包含 **$** （貨幣） 符號，然後 **$$** 必須指定將它視為一個字元，而不是變數。  
+> 2.  逸出字元 **$** 是 **$$** 。 如果變數或靜態值的參數值包含 **$** （貨幣） 符號，然後 **$$** 必須指定將它視為一個字元，而不是變數。  
 > 3.  基於可維護性，變數可以宣告內`'variable-group'`邏輯區隔使用者的項目定義的變數。  這個元素的使用方式不是必要的。  
   
 **範例：**  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f09f33f4f153f21cfe7a3c8c538c2f272b3df77b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62507342"
 ---
 # <a name="spcursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
@@ -86,7 +86,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- 因為要求的選項不適用於所定義的資料指標的可能性 *\<stmt >*，此參數會當做輸入和輸出。 在這類情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會指派適合的類型並修改這個值。  
+ 因為要求的選項不適用於所定義的資料指標的可能性 *\<stmt >* ，此參數會當做輸入和輸出。 在這類情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會指派適合的類型並修改這個值。  
   
  *ccopt*  
  並行控制選項。 *ccopt*是選擇性參數，它需要下列其中一項**int**輸入值。  

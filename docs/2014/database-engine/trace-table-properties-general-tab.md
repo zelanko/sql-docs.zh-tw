@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 79976111570e2f9cb153c853567f0f2091f77eb6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088734"
 ---
 # <a name="trace-table-properties-general-tab"></a>追蹤資料表屬性 (一般索引標籤)
@@ -26,7 +26,7 @@ ms.locfileid: "66088734"
   
  若要檢視此視窗，請使用[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]來開啟追蹤資料表，然後在**檔案**功能表上，按一下**屬性**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料表名稱**  
  顯示伺服器、資料庫、結構描述以及顯示的追蹤資料表名稱。  
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cfce32afdb334ecba55f082dce80af580a73178
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054553"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>檢視 Integration Services 伺服器的報表
@@ -22,9 +22,9 @@ ms.locfileid: "66054553"
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>若要檢視 Integration Services 伺服器的報表  
   
-1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，於物件總管中展開 [Integration Services 目錄] 節點。  
+1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，於物件總管中展開 [Integration Services 目錄]  節點。  
   
-2.  以滑鼠右鍵按一下 [SSISDB]，按一下 [報表]，然後按一下 [標準報表]。  
+2.  以滑鼠右鍵按一下 [SSISDB]  ，按一下 [報表]  ，然後按一下 [標準報表]  。  
   
 3.  按一下下列其中一項或多項，以檢視報表。  
   

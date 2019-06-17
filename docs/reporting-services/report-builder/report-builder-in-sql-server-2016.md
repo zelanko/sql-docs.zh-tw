@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d77b35851144967c9cfed408617fe5551debf37f
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: aa1dd3517002405a93185ea55adcdc5ecd808e6f
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620606"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037848"
 ---
 # <a name="report-builder-in-sql-server"></a>SQL Server 的報表產生器
 
@@ -81,7 +81,7 @@ ms.locfileid: "65620606"
  [規劃報表 &#40;報表產生器&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  提供有關開始建立報表之前應該考量之事項的資訊。  
   
- [報表撰寫概念 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md)  
  定義整個 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 文件集中使用的重要概念。  
   
  [報表設計檢視 &#40;報表產生器&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  

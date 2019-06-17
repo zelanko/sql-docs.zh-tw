@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: dfae657f6ab7d8f0cefbdec729e6e836c4f7e4d8
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175274"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何在 R 中使用 olapR 建立 MDX 查詢
@@ -80,7 +80,7 @@ ms.locfileid: "66175274"
 
 ### <a name="1-basic-mdx-with-slicer"></a>1.交叉分析篩選器的基本 MDX
 
-這個 MDX 查詢會選取「量值」表示網際網路銷售計數和銷售量的計數和數量，並將它們放在 [資料行] 座標軸上。 它會將 SalesTerritory 維度成員新增為「交叉分析篩選器」 來篩選查詢，僅在計算中使用來自澳洲的銷售量。
+這個 MDX 查詢會選取「量值」  表示網際網路銷售計數和銷售量的計數和數量，並將它們放在 [資料行] 座標軸上。 它會將 SalesTerritory 維度成員新增為「交叉分析篩選器」  來篩選查詢，僅在計算中使用來自澳洲的銷售量。
 
 ```MDX
 SELECT {[Measures].[Internet Sales Count], [Measures].[InternetSales-Sales Amount]} ON COLUMNS, 
@@ -182,7 +182,7 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>傳回所指定維度和階層的所有成員
 
-定義來源並建立控制代碼之後，請指定要傳回的 Cube、維度和階層。 在傳回的結果中，前面會加上的項目**->** 代表上一個成員的子系。
+定義來源並建立控制代碼之後，請指定要傳回的 Cube、維度和階層。 在傳回的結果中，前面會加上的項目 **->** 代表上一個成員的子系。
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"

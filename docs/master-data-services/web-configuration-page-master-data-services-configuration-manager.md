@@ -14,24 +14,24 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8e9036bbff7302a0580bcbc5370ba8c6e9f7835a
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485523"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>Web 組態頁面 (Master Data Services 組態管理員)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  使用 [Web 組態] 頁面來設定網站和 Web 應用程式。 您也可以啟用 Data Quality Services。  
+  使用 [Web 組態]  頁面來設定網站和 Web 應用程式。 您也可以啟用 Data Quality Services。  
   
 ## <a name="configure-the-web-application"></a>設定 Web 應用程式  
   
 |控制項名稱|描述|  
 |------------------|-----------------|  
 |**網站**|建立新網站、選取預設網站，或選取其他可用的網站 (如有列出)。 此清單會顯示本機電腦上的 Internet Information Services (IIS) 中所定義的網站。 建立新網站時，會自動建立新的 Web 應用程式。 選取預設或其他現有的網站時，您必須手動建立應用程式。|  
-|**Web 應用程式**|選取要進行組態設定的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式。 這個方塊只會顯示選定網站中的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式。<br /><br /> 如果未顯示任何項目，請按一下 [建立] 來建立網站。|  
+|**Web 應用程式**|選取要進行組態設定的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式。 這個方塊只會顯示選定網站中的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式。<br /><br /> 如果未顯示任何項目，請按一下 [建立]  來建立網站。|  
 |**建立**|開啟 **[建立 Web 應用程式]** 對話方塊，您可以從這個對話方塊建立選定網站中的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式。 只有當選取的網站沒有任何根 Web 應用程式設定為 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式時，這個按鈕才會啟用。|  
   
 ## <a name="associate-application-with-database"></a>將應用程式與資料庫產生關聯  

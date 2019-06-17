@@ -1,17 +1,17 @@
 ---
 title: srv_senddone (擴充預存程序 API) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: sql
-ms.prod_service: database-engine
+ms.date: 04/27/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: stored-procedures
 ms.topic: reference
-apiname:
+api_name:
 - srv_senddone
-apilocation:
+api_location:
 - opends60.dll
-apitype: DLLExport
+topic_type:
+- apiref
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,14 +21,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2bce064ee38082861e9b6c5d4f2c6e28bf41dded
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62745519"
 ---
 # <a name="srvsenddone-extended-stored-procedure-api"></a>srv_senddone (擴充預存程序 API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
@@ -84,6 +83,6 @@ count
  請勿從 SRV_CONNECT 處理常式呼叫 **srv_senddone**。  
   
 > [!IMPORTANT]  
->  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
+>  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
   
   

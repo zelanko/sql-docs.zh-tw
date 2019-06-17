@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: da54f9fc21b74be790ac86c9690738b71fd3e1c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62628543"
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>移除 SSMA for Oracle 元件 (OracleToSQL)
@@ -46,7 +46,7 @@ ms.locfileid: "62628543"
   
 4.  在 公用程式資料庫指令碼頁面的執行個體，請選取執行個體，然後按一下 **下一步**。  
   
-5.  在 [連接參數] 頁面中，選取驗證方法，，然後按一下 [**下一步]**。  
+5.  在 [連接參數] 頁面中，選取驗證方法，，然後按一下 [**下一步]** 。  
   
     Windows 驗證將用來嘗試登入的執行個體的 Windows 認證[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果您選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證，您必須輸入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入名稱和密碼。  
   

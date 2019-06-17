@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 248adc8dcbf3f3c016ff861be124ccde9e461db5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103708"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>MSRS 2014 Web 服務和 MSRS 2014 Windows 服務效能物件的效能計數器 (原生模式)
@@ -32,7 +32,7 @@ ms.locfileid: "66103708"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 原生模式  
   
- Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件，[執行階段分析](https://msdn.microsoft.com/library/w4bz2147.aspx)(https://msdn.microsoft.com/library/w4bz2147.aspx)。  
+ Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件，[執行階段分析](https://msdn.microsoft.com/library/w4bz2147.aspx)(https://msdn.microsoft.com/library/w4bz2147.aspx) 。  
   
  如需有關 SharePoint 模式效能計數器的資訊，請參閱[MSRS 2014 Web 服務 SharePoint 模式和 MSRS 2014 Windows 服務 SharePoint 模式效能物件的效能計數器&#40;SharePoint 模式&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md).  
   

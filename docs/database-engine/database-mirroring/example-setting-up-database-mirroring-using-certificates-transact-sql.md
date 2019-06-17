@@ -1,5 +1,5 @@
 ---
-title: 範例：使用憑證設定資料庫鏡像 (Transact-SQL) | Microsoft Docs
+title: 範例使用憑證設定資料庫鏡像 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e095d56a6b68e581a7d6f9184581575fac9f6c4d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 06d8ddd5710b41a80a41643bc2df194ad9c3981c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542727"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795478"
 ---
-# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>範例：使用憑證設定資料庫鏡像 (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>範例使用憑證設定資料庫鏡像 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此範例會顯示使用以憑證為基礎的驗證建立資料庫鏡像工作階段所需的所有階段。 此主題中的範例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 除非您可保證網路的安全無虞，否則建議您對資料庫鏡像連接使用加密。  
   

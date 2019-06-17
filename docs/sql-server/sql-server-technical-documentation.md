@@ -18,20 +18,24 @@ helpviewer_keywords:
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6b17e6b799bf3ff35b441286fd1205ca5382b207
-ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
+ms.author: jroth
+manager: craigg
+monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 93d36f922d3cd66cd8b617afbdb3e9bf80d79e22
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65836182"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744167"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文件集
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
+> [!div class="nextstepaction"]
+> [請提供您對 SQL Docs 中樞頁面的意見反應！](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
+
+::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017 || = sqlallproducts-allversions"
 SQL Server 是 Microsoft 資料平台的核心。 SQL Server 是操作資料庫管理系統 (ODBMS) 的業界領導者。 本文件可協助您在 Windows 和 Linux 上安裝、設定及使用 SQL Server。 內容包括端對端範例、程式碼範例和視訊。 如需 SQL Server 語言主題，請參閱[語言參考](../t-sql/language-reference.md)。
 ::: moniker-end
 
@@ -52,6 +56,7 @@ SQL Server 2014 及包括 SQL Server 2005 的較舊版本，可在[此處](#prev
 |[SQL Server 2019 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md)     | [SQL Server 2019 版本資訊](../sql-server/sql-server-ver15-release-notes.md)        |
 |[SQL Server 2017 的新功能](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 版本資訊](../sql-server/sql-server-2017-release-notes.md)        |
 |[SQL Server 2016 的新功能](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 版本資訊](../sql-server/sql-server-2016-release-notes.md)        |
+| &nbsp; | &nbsp; |
 
 ![info_tip](../sql-server/media/info-tip.png) SQL Server **2014**文件可在[這裡](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014)取得。
 ::: moniker-end
@@ -61,6 +66,7 @@ SQL Server 2014 及包括 SQL Server 2005 的較舊版本，可在[此處](#prev
 |新功能  | 版本資訊  |
 |---------|---------|
 |[SQL Server 2019 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md)     | [SQL Server 2019 版本資訊](../sql-server/sql-server-ver15-release-notes.md)        |
+| &nbsp; | &nbsp; |
 
 ::: moniker-end
 
@@ -69,6 +75,7 @@ SQL Server 2014 及包括 SQL Server 2005 的較舊版本，可在[此處](#prev
 |新功能  | 版本資訊  |
 |---------|---------|
 |[SQL Server 2017 的新功能](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 版本資訊](../sql-server/sql-server-2017-release-notes.md)        |
+| &nbsp; | &nbsp; |
 
 > [!NOTE]
 > SQL Server 2019 現已提供預覽。 如需詳細資訊，請參閱 [SQL Server 2019 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)。
@@ -79,6 +86,7 @@ SQL Server 2014 及包括 SQL Server 2005 的較舊版本，可在[此處](#prev
 |新功能  | 版本資訊  |
 |---------|---------|
 |[SQL Server 2016 的新功能](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 版本資訊](../sql-server/sql-server-2016-release-notes.md)        |
+| &nbsp; | &nbsp; |
 
 ::: moniker-end
 
@@ -140,9 +148,13 @@ SQL Server 2014 及包括 SQL Server 2005 的較舊版本，可在[此處](#prev
 - [SQL Server 2016 的 AdventureWorks 範例資料庫與指令碼](https://docs.microsoft.com/sql/samples/sql-samples-where-are) 
 - [GitHub 上的 SQL Server 範例](https://github.com/Microsoft/sql-server-samples)
 
-## <a name="previous-versions-gm66"></a> SQL Server 2014、2012、2008、2005
+## <a name="previous-versions-gm66"></a> SQL Server 2014、2012、2008、2005 之前的版本
 
 [!INCLUDE[previous-versions](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
+<!--
+The following includes/ files contain their own H2 headers.
+-->
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

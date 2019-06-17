@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f6677fad3df1d1f99e2f78257ea85551f8ae8db3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057334"
 ---
 # <a name="odata-source-editor-columns-page"></a>OData 來源編輯器 (資料行頁面)
-  使用 [OData 來源編輯器] 對話方塊的 [資料行] 頁面，選取要包含在輸出中的外部 (來源) 資料行，並將其對應到輸出資料行。  
+  使用 [OData 來源編輯器]  對話方塊的 [資料行]  頁面，選取要包含在輸出中的外部 (來源) 資料行，並將其對應到輸出資料行。  
   
 ## <a name="options"></a>選項。  
  **可用的外部資料行**  

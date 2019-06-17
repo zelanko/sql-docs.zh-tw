@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 42c7b7e876f244831920be390d97c88412eed63f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071670"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>無法載入檔案或組件&#39;Microsoft.AnalysisServices.SharePoint.Integration&#39;
@@ -35,15 +35,15 @@ ms.locfileid: "66071670"
 ## <a name="user-action"></a>使用者動作  
  部署方案套件。  
   
-1.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器陣列方案]**。  
+1.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器陣列方案]** 。  
   
-2.  按一下 [Powerpivotwebapp]。  
+2.  按一下 [Powerpivotwebapp]  。  
   
-3.  按一下 **[部署方案]**。  
+3.  按一下 **[部署方案]** 。  
   
 4.  選擇發生這個錯誤的 Web 應用程式。 如果有一個以上的 Web 應用程式，請針對所有應用程式重新部署此方案。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [將 PowerPivot 方案部署到 SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)  

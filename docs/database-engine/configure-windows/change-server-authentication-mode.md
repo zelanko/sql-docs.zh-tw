@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b70487d9d9f89defb77eeed4adc9633b734cc40a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a4a038d29aeaacdfd75b71600443df8ea0c3f1db
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733236"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799412"
 ---
 # <a name="change-server-authentication-mode"></a>變更伺服器驗證模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47733236"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目變更伺服器驗證模式：**  
   
@@ -73,15 +73,27 @@ ms.locfileid: "47733236"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 下列範例會啟用 sa 登入並設定新密碼。  
+3.  將下列其中一個範例複製並貼到查詢視窗中，然後按一下 **[執行]**。 
+
+
+    -  下列範例會啟用 sa 登入並設定新密碼。  
   
-    ```  
-    ALTER LOGIN sa ENABLE ;  
-    GO  
-    ALTER LOGIN sa WITH PASSWORD = '<enterStrongPasswordHere>' ;  
-    GO  
-  
-    ```  
+       ```sql  
+       ALTER LOGIN sa ENABLE ;  
+       GO  
+       ALTER LOGIN sa WITH PASSWORD = '<enterStrongPasswordHere>' ;  
+       GO  
+       ```  
+    -  下列範例會將伺服器驗證從混合模式 (Windows + SQL) 變更為只有 Windows。
+
+       ```sql
+       USE [master]
+       GO
+       EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE', 
+                                 N'Software\Microsoft\MSSQLServer\MSSQLServer',      
+                                 N'LoginMode', REG_DWORD, 1
+       GO
+       ```
   
 ## <a name="see-also"></a>另請參閱  
  [增強式密碼](../../relational-databases/security/strong-passwords.md)   

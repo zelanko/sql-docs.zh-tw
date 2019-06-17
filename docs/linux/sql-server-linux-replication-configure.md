@@ -11,10 +11,10 @@ ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 29c8dd4ef4898796722e1c54eeaff94afef1c0c6
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66705332"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>在 Linux 上設定 SQL Server 複寫

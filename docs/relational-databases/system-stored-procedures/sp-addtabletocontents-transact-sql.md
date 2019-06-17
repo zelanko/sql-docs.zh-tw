@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 991ee7139ae4a323a1d426d1882e4f6b3a4df871
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049718"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
@@ -44,7 +44,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
   
 `[ @owner_name = ] 'owner_name'` 為資料表的擁有者的名稱。 *owner_name*已**sysname**，預設值是 NULL。  
   
-`[ @filter_clause = ] 'filter_clause'` 指定一個篩選子句來控制哪些新載入的資料的資料列應該加入合併追蹤資料表。 *filter_clause*已**nvarchar(4000)**，預設值是 NULL。 如果*filter_clause*是**null**，所有的大量載入的資料列會加入。  
+`[ @filter_clause = ] 'filter_clause'` 指定一個篩選子句來控制哪些新載入的資料的資料列應該加入合併追蹤資料表。 *filter_clause*已**nvarchar(4000)** ，預設值是 NULL。 如果*filter_clause*是**null**，所有的大量載入的資料列會加入。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

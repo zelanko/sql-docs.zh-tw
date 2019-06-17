@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a78b177b1fb429535a4bb9b271d0b1dbc4eedc79
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921937"
 ---
 # <a name="file-restores-full-recovery-model"></a>檔案還原 (完整復原模式)
@@ -39,13 +39,13 @@ ms.locfileid: "62921937"
   
 -   離線檔案還原  
   
-     在 *「離線檔案還原」*(Offline File Restore) 中，還原損毀的檔案或檔案群組時，資料庫處於離線狀態。 在還原順序結束後，資料庫會恢復上線。  
+     在 *「離線檔案還原」* (Offline File Restore) 中，還原損毀的檔案或檔案群組時，資料庫處於離線狀態。 在還原順序結束後，資料庫會恢復上線。  
   
      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的所有版本都支援離線檔案還原。  
   
 -   線上檔案還原  
   
-     在 *「線上檔案還原」*(Online File Restore) 中，如果資料庫在還原期間處於線上，則在檔案還原期間也會處於線上。 不過，在還原作業期間，包含正在還原之檔案的每個檔案群組都會離線。 離線檔案群組中的所有檔案都復原後，檔案群組就會自動回到線上。  
+     在 *「線上檔案還原」* (Online File Restore) 中，如果資料庫在還原期間處於線上，則在檔案還原期間也會處於線上。 不過，在還原作業期間，包含正在還原之檔案的每個檔案群組都會離線。 離線檔案群組中的所有檔案都復原後，檔案群組就會自動回到線上。  
   
      如需線上頁面和檔案還原支援的相關資訊，請參閱 [SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如需線上還原的詳細資訊，請參閱[線上還原 &#40;SQL Server&#41;](online-restore-sql-server.md)。  
   

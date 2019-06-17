@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62472928"
 ---
 # <a name="pick-schedule-for-job"></a>作業的挑選排程
@@ -41,7 +41,7 @@ ms.locfileid: "62472928"
  列出附加至排程的作業編號。 按一下某個編號以檢視該作業的屬性。  
   
  **屬性**  
- 啟動 [作業排程屬性] 對話方塊，您可以在其中檢視排程的相關資訊。  
+ 啟動 [作業排程屬性]  對話方塊，您可以在其中檢視排程的相關資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立及附加排程至作業](create-and-attach-schedules-to-jobs.md)  

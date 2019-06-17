@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcc3d02505a1bd568d440d5b70fc06bcfff93ae9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62688363"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
@@ -44,10 +44,10 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>引數  
  [ @table_name= ] '*table_name*'  
- 這是用來傳回目錄資訊的資料表。 *table_name*已**nvarchar (** 384 **)**，沒有預設值。 支援萬用字元的模式比對。  
+ 這是用來傳回目錄資訊的資料表。 *table_name*已**nvarchar (** 384 **)** ，沒有預設值。 支援萬用字元的模式比對。  
   
  [ @table_owner= ] '*table_owner*'  
- 這是用來傳回目錄資訊之資料表的資料表擁有者。 *table_owner*已**nvarchar (** 384 **)**，預設值是 NULL。 支援萬用字元的模式比對。 如果未指定擁有者，就會套用基礎 DBMS 的預設資料表可見性規則。  
+ 這是用來傳回目錄資訊之資料表的資料表擁有者。 *table_owner*已**nvarchar (** 384 **)** ，預設值是 NULL。 支援萬用字元的模式比對。 如果未指定擁有者，就會套用基礎 DBMS 的預設資料表可見性規則。  
   
  如果目前使用者擁有一份含指定名稱的資料表，就會傳回該資料表的資料行。 如果*擁有者*未指定且目前使用者並未擁有指定的資料表*名稱*，此程序會尋找具有指定的資料表*table_name*所擁有資料庫擁有者。 如果資料表存在，就會傳回這份資料表的資料行。  
   

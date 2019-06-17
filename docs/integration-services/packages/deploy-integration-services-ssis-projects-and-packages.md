@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0759d5da7af3cfd50ff32b500050b90affa70c5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 97feadfea27ee4957e71940dbbf773e215e61418
+ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65720046"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469658"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 專案和封裝
 
@@ -36,7 +36,7 @@ ms.locfileid: "65720046"
 如需舊版封裝部署模型的詳細資訊，請參閱[舊版封裝部署 &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]引進專案部署模型。 在此部署模型中，您無法在未部署整個專案的情況下部署一或多個套件。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 引進套件部署模型，可讓您在未部署整個專案的情況下部署一或多個套件。  
+>  [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]引進專案部署模型。 在此部署模型中，您無法在未部署整個專案的情況下部署一或多個套件。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 引進累加套件部署功能，可讓您部署一或多個套件，而不需部署整個專案。  
 
 > [!NOTE]
 > 本文描述如何在一般情況下部署 SSIS 套件，以及如何在內部部署部署套件。 您也可以將 SSIS 套件部署到下列平台：
@@ -345,7 +345,7 @@ static void Main()
 > [!IMPORTANT]  
 >  對於某個特定執行，封裝只能藉由單一伺服器環境中包含的值執行。  
   
- 您可以透過查詢檢視表，取得伺服器環境、環境參考和環境變數的清單。 您也可以呼叫預存程序來加入、刪除及修改環境、環境參考和環境變數。 如需詳細資訊，請參閱 [SSIS 目錄](../../integration-services/catalog/ssis-catalog.md)中的＜伺服器環境、伺服器變數和伺服器環境參考＞一節。  
+ 您可以透過查詢檢視表，取得伺服器環境、環境參考和環境變數的清單。 您也可以呼叫預存程序來新增、刪除及修改環境、環境參考和環境變數。 如需詳細資訊，請參閱 [SSIS 目錄](../../integration-services/catalog/ssis-catalog.md)中的＜伺服器環境、伺服器變數和伺服器環境參考＞一節。  
   
 ### <a name="to-create-and-use-a-server-environment"></a>若要建立和使用伺服器環境  
   

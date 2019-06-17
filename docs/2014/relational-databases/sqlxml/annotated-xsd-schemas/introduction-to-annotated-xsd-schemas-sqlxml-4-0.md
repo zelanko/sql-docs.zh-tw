@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d8813d34f2c669e9646b899230388fca649e4488
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014463"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>註解式 XSD 結構描述簡介 (SQLXML 4.0)
@@ -108,7 +108,7 @@ ms.locfileid: "66014463"
 </xsd:schema>  
 ```  
   
- 在對應結構描述**\<連絡人 >** 元素會對應至 Person.Contact 資料表，在範例 AdventureWorks 資料庫中使用`sql:relation`註釋。 ConID、FName 和 LName 屬性會使用 `sql:field` 註解來對應至 Person.Contact 資料表中的 ContactID、FirstName 和 LastName 資料行。  
+ 在對應結構描述 **\<連絡人 >** 元素會對應至 Person.Contact 資料表，在範例 AdventureWorks 資料庫中使用`sql:relation`註釋。 ConID、FName 和 LName 屬性會使用 `sql:field` 註解來對應至 Person.Contact 資料表中的 ContactID、FirstName 和 LastName 資料行。  
   
  此註解式 XSD 結構描述會提供關聯式資料的 XML 檢視。 您可以使用 XPath 語言來查詢這個 XML 檢視。 XPath 查詢會傳回 XML 文件當做結果，而不是 SQL 查詢所傳回的資料列集。  
   

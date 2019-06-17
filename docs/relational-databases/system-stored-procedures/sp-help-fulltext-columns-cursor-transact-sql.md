@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6d158c0703190e78209c9a9550040f9bc667b371
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983049"
 ---
 # <a name="sphelpfulltextcolumnscursor-transact-sql"></a>sp_help_fulltext_columns_cursor (Transact-SQL)
@@ -47,7 +47,7 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ## <a name="arguments"></a>引數  
 `[ @cursor_return = ] @cursor_variable OUTPUT` 這類型的輸出變數**游標**。 產生的資料指標是可捲動的唯讀動態資料指標。  
   
-`[ @table_name = ] 'table_name'` 是全文檢索索引資訊要求的一或兩部分資料表名稱。 *table_name*已**nvarchar(517)**，預設值是 NULL。 如果*table_name*省略，則每個全文檢索索引的資料表擷取全文檢索索引資料行資訊。  
+`[ @table_name = ] 'table_name'` 是全文檢索索引資訊要求的一或兩部分資料表名稱。 *table_name*已**nvarchar(517)** ，預設值是 NULL。 如果*table_name*省略，則每個全文檢索索引的資料表擷取全文檢索索引資料行資訊。  
   
 `[ @column_name = ] 'column_name'` 是全文檢索索引中繼資料所需的資料行的名稱。 *column_name*已**sysname**預設值是 NULL。 如果*column_name*省略或是 NULL，傳回的每個全文檢索索引資料行的全文檢索資料行資訊*table_name*。 如果*table_name*也會省略，則為 NULL，每個全文檢索索引資料行的資料庫中的所有資料表傳回全文檢索索引資料行資訊。  
   

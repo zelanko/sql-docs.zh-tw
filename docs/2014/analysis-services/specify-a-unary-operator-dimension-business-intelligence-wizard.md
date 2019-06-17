@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72807eca5fb43c81bf51c20a93cd69f4d618c241
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068609"
 ---
 # <a name="specify-a-unary-operator-dimension-business-intelligence-wizard"></a>指定一元運算子 (維度) (商業智慧精靈)
@@ -25,7 +25,7 @@ ms.locfileid: "66068609"
 > [!NOTE]  
 >  如果 [商業智慧精靈] 是從維度設計師啟動，或是以滑鼠右鍵按一下 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]之方案總管中的某個維度來啟動，則不會出現此頁面。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **Dimension**  
  選取包含父屬性的維度，讓精靈套用一元運算子至此維度。  
   

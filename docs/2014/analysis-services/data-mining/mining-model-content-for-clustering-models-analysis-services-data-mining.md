@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a733b434e428f7486c235f4efc923adfa4b14949
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083674"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>叢集模型的採礦模型內容 (Analysis Services - 資料採礦)
@@ -45,7 +45,7 @@ ms.locfileid: "66083674"
 |Gender|F|6350|0.490764355823479|0|4 (離散)|  
 |Gender|M|6589|0.509235644176521|0|4 (離散)|  
   
- 從這些結果可以看到建置模型時使用了 12939 個案例、男女比率約為 50-50，平均年齡則為 44。 描述性統計資料是根據報告的屬性是否為連續的數值資料類型 (例如 age) 或離散值類型 (例如 gender) 而定。 連續資料類型會計算統計量值「平均值」和「變異數」，離散資料類型則會計算「機率」和「支援」。  
+ 從這些結果可以看到建置模型時使用了 12939 個案例、男女比率約為 50-50，平均年齡則為 44。 描述性統計資料是根據報告的屬性是否為連續的數值資料類型 (例如 age) 或離散值類型 (例如 gender) 而定。 連續資料類型會計算統計量值「平均值」  和「變異數」  ，離散資料類型則會計算「機率」  和「支援」  。  
   
 > [!NOTE]  
 >  變異數代表叢集的總變異數。 當變異數的值很小時，代表資料行中大多數的值都相當接近平均值。 若要取得標準差，請計算變異數的平方根。  
@@ -103,7 +103,7 @@ ms.locfileid: "66083674"
  NODE_DESCRIPTION  
  節點的描述。  
   
- **父節點** ：永遠為 **(All)**。  
+ **父節點** ：永遠為 **(All)** 。  
   
  **叢集節點** ：將叢集與其他叢集加以區分之主要屬性的逗號分隔清單。  
   

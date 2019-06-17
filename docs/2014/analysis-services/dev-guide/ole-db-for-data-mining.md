@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7662514939526bd8cdc12d19e5b53e3a4a2f913d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62732033"
 ---
 # <a name="ole-db-for-data-mining"></a>OLE DB for Data Mining
@@ -25,7 +25,7 @@ ms.locfileid: "62732033"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 已經擴充此規格，其方式是加入新的結構描述資料列集、在現有的結構描述資料列集中加入資料行，以及在資料採礦延伸模組 (DMX) 語言中加入語法來建立及管理採礦結構。  
   
- **如需詳細資訊：**[資料採礦結構描述資料列](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)，[建立採礦結構&#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)，[改變採礦結構&#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx)，[卸除採礦結構&#40;DMX&#41;](/sql/dmx/drop-mining-structure-dmx)  
+ **如需詳細資訊：** [資料採礦結構描述資料列](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)，[建立採礦結構&#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)，[改變採礦結構&#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx)，[卸除採礦結構&#40;DMX&#41;](/sql/dmx/drop-mining-structure-dmx)  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 結構描述資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)   

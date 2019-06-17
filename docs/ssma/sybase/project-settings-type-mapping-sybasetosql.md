@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 148180d95bcbff1626069e72fb66dd9a3ca859c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667918"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>專案設定 (類型對應) (SybaseToSQL)
@@ -26,7 +26,7 @@ ms.locfileid: "62667918"
   
 -   若要指定目前的專案中，設定**工具**功能表上，選取**專案設定**，然後選取**型別對應**左窗格的底部。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **來源類型**  
 對應的資料類型 ASE。  
   

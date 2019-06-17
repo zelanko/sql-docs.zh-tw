@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 331a7c4df759114e18fd47007058ddc38b2f77d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724889"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 時序群集演算法技術參考
@@ -35,7 +35,7 @@ ms.locfileid: "62724889"
   
  Microsoft 時序叢集演算法支援模型額外的非循序屬性。 也就是說，這些額外的屬性會結合時序屬性，就像在一般叢集模型般建立具有類似屬性之案例的群集。  
   
- 時序群集模型傾向於建立比一般叢集模型還要更多的叢集。 因此，Microsoft 時序群集演算法會根據時序及其他屬性執行 *「群集分解」*(Cluster Decomposition) 來分割群集。  
+ 時序群集模型傾向於建立比一般叢集模型還要更多的叢集。 因此，Microsoft 時序群集演算法會根據時序及其他屬性執行 *「群集分解」* (Cluster Decomposition) 來分割群集。  
   
 ### <a name="feature-selection-in-a-sequence-clustering-model"></a>時序叢集模型中的特徵選取  
  特徵選取不會在建立時序時叫用，但是特徵選取會在群集階段套用。  
@@ -130,7 +130,7 @@ ms.locfileid: "62724889"
   
 ## <a name="remarks"></a>備註  
   
--   請使用 [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) 函數以預測時序。 如需版本的詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，支援時序預測，請參閱 <<c2> [ 支援的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
+-   請使用 [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) 函數以預測時序。 如需版本的詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，支援時序預測，請參閱 <<c2> [ 支援的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序叢集演算法不支援使用預測模型標記語言 (PMML) 來建立採礦模型。  
   

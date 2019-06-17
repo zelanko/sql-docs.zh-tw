@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 3f3f717f-ef07-4300-8286-1cfe73619a5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 886fec81fb93afe92fd06a7f383bb18bff5a6de2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3bd9fe65cd1632c2f631ea7a2573162ca7da0d43
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835336"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779825"
 ---
 # <a name="getdrivermajorversion-method-sqlserverdatabasemetadata"></a>getDriverMajorVersion 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

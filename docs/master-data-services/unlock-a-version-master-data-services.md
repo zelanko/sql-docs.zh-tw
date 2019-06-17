@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 26bbb1d9544c99dd600a512a96b7d5105b98cb65
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488399"
 ---
 # <a name="unlock-a-version-master-data-services"></a>解除鎖定版本 (Master Data Services)
@@ -34,19 +34,19 @@ ms.locfileid: "65488399"
   
 -   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
--   版本的狀態必須是 [已鎖定]。 如需詳細資訊，請參閱[鎖定版本 &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)。  
+-   版本的狀態必須是 [已鎖定]  。 如需詳細資訊，請參閱[鎖定版本 &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)。  
   
 -   您必須擁有存取 [版本管理] 功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
 ### <a name="to-unlock-a-version"></a>若要解除鎖定版本  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[版本管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[版本管理]** 。  
   
-2.  在 [管理版本] 頁面上，選取要解除鎖定之版本的資料列。  
+2.  在 [管理版本]  頁面上，選取要解除鎖定之版本的資料列。  
   
-3.  按一下 [解除鎖定]。  
+3.  按一下 [解除鎖定]  。  
   
-4.  在確認對話方塊中按一下 **[確定]**。  
+4.  在確認對話方塊中按一下 **[確定]** 。  
   
 ## <a name="next-steps"></a>後續步驟  
   

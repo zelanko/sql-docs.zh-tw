@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62797820"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
@@ -43,7 +43,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @class = ] 'class'` 了解哪種要求之資訊的類別。 *類別*已**varchar(8)**，預設值是**作業**。 *類別*可以是下列值之一。  
+`[ @class = ] 'class'` 了解哪種要求之資訊的類別。 *類別*已**varchar(8)** ，預設值是**作業**。 *類別*可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -51,7 +51,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**ALERT**|提供警示類別目錄的相關資訊。|  
 |**運算子**|提供操作員類別目錄的相關資訊。|  
   
-`[ @type = ] 'type'` 要求資訊的類別目錄的類型。 *型別*已**varchar(12)**，預設值是 NULL，而且可以是下列值之一。  
+`[ @type = ] 'type'` 要求資訊的類別目錄的類型。 *型別*已**varchar(12)** ，預設值是 NULL，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -67,7 +67,7 @@ sp_help_category [ [ @class = ] 'class' ]
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 當**@suffix**是**0**， **sp_help_category**會傳回下列結果集：  
+ 當 **@suffix** 是**0**， **sp_help_category**會傳回下列結果集：  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -75,7 +75,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|類別目錄類型：<br /><br /> **1** = 本機<br /><br /> **2** = 多伺服器<br /><br /> **3** = 無|  
 |**name**|**sysname**|類別目錄名稱|  
   
- 當**@suffix**是**1**， **sp_help_category**會傳回下列結果集：  
+ 當 **@suffix** 是**1**， **sp_help_category**會傳回下列結果集：  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

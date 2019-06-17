@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011270"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>改善全文檢索查詢的效能
@@ -34,7 +34,7 @@ ms.locfileid: "66011270"
   
 -   如果您只需要全文檢索索引鍵或次序資訊，請分別使用 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 或 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) ，而不要使用 CONTAINS 或 FREETEXT。  
   
--   若要限制結果並提升效能，請使用 FREETEXTTABLE 和 CONTAINSTABLE 函數的 *top_n_by_rank* 參數。 *top_n_by_rank* 可讓您僅重新叫用最相關的叫用。 只有當您的商務狀況不需要重新叫用所有可能的叫用 (亦即，不需要「全部重新叫用」) 時，才應該使用這個參數。  
+-   若要限制結果並提升效能，請使用 FREETEXTTABLE 和 CONTAINSTABLE 函數的 *top_n_by_rank* 參數。 *top_n_by_rank* 可讓您僅重新叫用最相關的叫用。 只有當您的商務狀況不需要重新叫用所有可能的叫用 (亦即，不需要「全部重新叫用」  ) 時，才應該使用這個參數。  
   
     > [!NOTE]  
     >  全部重新叫用通常是法律狀況的必要項目，但是其重要性可能低於商務狀況的效能，例如電子商務。  

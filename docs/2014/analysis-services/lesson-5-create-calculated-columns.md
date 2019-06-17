@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078554"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>第 6 課：建立導出資料行
@@ -31,11 +31,11 @@ ms.locfileid: "66078554"
   
 #### <a name="create-a-month-calendar-calculated-column-in-the-date-table"></a>在日期資料表中建立 Month Calendar 導出資料行  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，按一下 [模型] 功能表，然後指向 [模型檢視]，再按一下 [資料檢視]。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，按一下 [模型]  功能表，然後指向 [模型檢視]  ，再按一下 [資料檢視]  。  
   
      導出資料行只能使用模型設計師在「資料檢視」中建立。  
   
-2.  在模型設計師中，按一下 [Date] 資料表 (索引標籤)。  
+2.  在模型設計師中，按一下 [Date]  資料表 (索引標籤)。  
   
 3.  以滑鼠右鍵按一下**日曆季**資料行，然後再按一下**插入資料行**。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66078554"
   
 #### <a name="create-a-day-of-week-calculated-column-in-the-date-table"></a>在日期資料表中建立 Day of Week 導出資料行  
   
-1.  在 [日期] 資料表仍為使用中狀態時，按一下 [資料行] 功能表，然後按一下 [加入資料行]。  
+1.  在 [日期]  資料表仍為使用中狀態時，按一下 [資料行]  功能表，然後按一下 [加入資料行]  。  
   
      新的資料行就會加入資料表的最右側。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66078554"
   
 3.  重新命名的資料行`Day of Week`。  
   
-4.  按一下欄位標題，然後將資料行拖曳到 [Day Name] 資料行和 [Day of Month] 資料行之間。  
+4.  按一下欄位標題，然後將資料行拖曳到 [Day Name]  資料行和 [Day of Month]  資料行之間。  
   
     > [!TIP]  
     >  移動資料表中的資料行可使導覽更方便。  
@@ -79,9 +79,9 @@ ms.locfileid: "66078554"
   
 #### <a name="create-a-product-subcategory-name-calculated-column-in-the-product-table"></a>在產品資料表中建立 Product Subcategory Name 導出資料行  
   
-1.  在模型設計師中，選取 [產品] 資料表。  
+1.  在模型設計師中，選取 [產品]  資料表。  
   
-2.  捲動到資料表的最右側。 您會發現，最右側的資料行命名為 [加入資料行] (斜體)，請按一下該欄位標題。  
+2.  捲動到資料表的最右側。 您會發現，最右側的資料行命名為 [加入資料行]  (斜體)，請按一下該欄位標題。  
   
 3.  在公式列中，輸入下列公式。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66078554"
   
 #### <a name="create-a-product-category-name-calculated-column-in-the-product-table"></a>在產品資料表中建立 Product Category Name 導出資料行  
   
-1.  在 [產品] 資料表仍為使用中狀態時，按一下 [資料行] 功能表，然後按一下 [加入資料行]。  
+1.  在 [產品]  資料表仍為使用中狀態時，按一下 [資料行]  功能表，然後按一下 [加入資料行]  。  
   
 2.  在公式列中，輸入下列公式：  
   
@@ -109,7 +109,7 @@ ms.locfileid: "66078554"
   
 #### <a name="create-a-margin-calculated-column-in-the-internet-sales-table"></a>在網際網路銷售資料表中建立 Margin 導出資料行  
   
-1.  在模型設計師中，選取 [網際網路銷售] 資料表。  
+1.  在模型設計師中，選取 [網際網路銷售]  資料表。  
   
 2.  加入新資料行。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "66078554"
   
 4.  重新命名的資料行`Margin`。  
   
-5.  將這個資料行拖曳至 [Sales Amount] 資料行和 [Tax Amt] 資料行之間。  
+5.  將這個資料行拖曳至 [Sales Amount]  資料行和 [Tax Amt]  資料行之間。  
   
  [Margin] 導出資料行可用來分析每個 (產品) 資料列的利率。  
   

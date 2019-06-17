@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62670916"
 ---
 # <a name="about-change-tracking-sql-server"></a>關於變更追蹤 (SQL Server)

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 56a9c380b8cc88202cdcb4c4dca54aab2d1fa4a6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102400"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>上傳檔案或報表 (報表管理員)
@@ -38,13 +38,13 @@ ms.locfileid: "66102400"
   
 2.  在報表管理員中，導覽至 **[內容]** 頁面。 導覽至您要加入項目的資料夾。  
   
-3.  按一下 [上傳檔案]。  
+3.  按一下 [上傳檔案]  。  
   
-4.  按一下 [瀏覽] 選取要上傳的檔案。 您可以上傳報表定義檔案、影像、文件，或要在報表伺服器上提供使用的任何檔案。  
+4.  按一下 [瀏覽]  選取要上傳的檔案。 您可以上傳報表定義檔案、影像、文件，或要在報表伺服器上提供使用的任何檔案。  
   
 5.  輸入新項目的名稱。 項目名稱可以包含空格，但是不能包含保留字元：; ? : \@ & = + , $ / * \< > |.  
   
-6.  如果您要以新項目取代現有的項目，請選取 [如果項目存在則覆寫]。  
+6.  如果您要以新項目取代現有的項目，請選取 [如果項目存在則覆寫]  。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

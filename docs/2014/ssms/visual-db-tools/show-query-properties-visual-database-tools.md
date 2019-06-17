@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 35092821d2407e90e550a4351f186de6a585cd64
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63071793"
 ---
 # <a name="show-query-properties-visual-database-tools"></a>顯示查詢屬性 (Visual Database Tools)
@@ -27,9 +27,9 @@ ms.locfileid: "63071793"
   
 ### <a name="to-display-properties-for-a-query"></a>若要顯示查詢的屬性  
   
--   在查詢和檢視表設計工具中開啟查詢，然後按一下 [檢視] 功能表中的 [屬性視窗]。  
+-   在查詢和檢視表設計工具中開啟查詢，然後按一下 [檢視]  功能表中的 [屬性視窗]  。  
   
- 此時查詢的屬性便會顯示在 [屬性] 視窗中。  
+ 此時查詢的屬性便會顯示在 [屬性]  視窗中。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用查詢執行基本作業 &#40;Visual Database Tools&#41;](visual-database-tools.md)  

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0ae32391bd2f10525b89015272d11bcdb6468298
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62877833"
 ---
 # <a name="define-a-logical-backup-device-for-a-disk-file-sql-server"></a>定義磁碟檔案的邏輯備份裝置 (SQL Server)
@@ -65,17 +65,17 @@ ms.locfileid: "62877833"
   
 1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱展開伺服器樹狀目錄。  
   
-2.  展開 [伺服器物件]，然後以滑鼠右鍵按一下 [備份裝置]。  
+2.  展開 [伺服器物件]  ，然後以滑鼠右鍵按一下 [備份裝置]  。  
   
-3.  按一下 **[新增備份裝置]**。 會開啟 **[備份裝置]** 對話方塊。  
+3.  按一下 **[新增備份裝置]** 。 會開啟 **[備份裝置]** 對話方塊。  
   
 4.  輸入裝置名稱。  
   
 5.  若要指定目的地，請按一下 **[檔案]** 並指定檔案的完整路徑。  
   
-6.  若要定義新裝置，請按一下 **[確定]**。  
+6.  若要定義新裝置，請按一下 **[確定]** 。  
   
- 若要備份至這個新裝置，請將它加入 [備份資料庫] ([一般]) 對話方塊中的 [備份至:] 欄位。 如需詳細資訊，請參閱 [建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)中建立差異資料庫備份。  
+ 若要備份至這個新裝置，請將它加入 [備份資料庫]  ([一般]  ) 對話方塊中的 [備份至:]  欄位。 如需詳細資訊，請參閱 [建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)中建立差異資料庫備份。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -83,9 +83,9 @@ ms.locfileid: "62877833"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例示範如何使用 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql) ，定義磁碟檔案的邏輯備份裝置。 範例會加入名稱為 `mydiskdump`的磁碟備份裝置，實體名稱是 `c:\dump\dump1.bak`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例示範如何使用 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql) ，定義磁碟檔案的邏輯備份裝置。 範例會加入名稱為 `mydiskdump`的磁碟備份裝置，實體名稱是 `c:\dump\dump1.bak`。  
   
 ```sql  
 USE AdventureWorks2012 ;  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9274cd7423df9dea1dad8febee2a49871c24f296
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 4d804c41803824f0bc7d69873677984dfba6a729
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974307"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780290"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>使用可用性群組精靈 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "57974307"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要系統管理員 ( **sysadmin** ) 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
  如果您想要允許 [可用性群組精靈] 管理資料庫鏡像端點，也需要 CONTROL ON ENDPOINT 權限。  
@@ -97,7 +97,7 @@ ms.locfileid: "57974307"
     |索引標籤|簡短描述|  
     |---------|-----------------------|  
     |**複本**|使用此索引標籤可指定將裝載次要複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 請注意，您目前所連接的伺服器執行個體必須裝載主要複本。|  
-    |**端點**|使用此索引標籤可驗證任何現有的資料庫鏡像端點，此外，如果在其服務帳戶使用 Windows 驗證的伺服器執行個體上缺少此端點，則可自動建立該端點。<br /><br /> 注意：如果有任何伺服器執行個體在非網域使用者帳戶之下執行，您需要對伺服器執行個體進行手動變更，然後才可以在精靈中繼續執行。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#Prerequisites)＞。|  
+    |**端點**|使用此索引標籤可驗證任何現有的資料庫鏡像端點，此外，如果在其服務帳戶使用 Windows 驗證的伺服器執行個體上缺少此端點，則可自動建立該端點。<br /><br /> 注意:如果有任何伺服器執行個體在非網域使用者帳戶之下執行，您需要對伺服器執行個體進行手動變更，才可以在精靈中繼續執行。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#Prerequisites)＞。|  
     |**備份喜好設定**|使用此索引標籤可指定整個可用性群組的備份喜好設定，以及個別可用性複本的備份優先權。|  
     |**接聽程式**|使用此索引標籤可建立可用性群組接聽程式。 根據預設，精靈不會建立接聽程式。|  
   

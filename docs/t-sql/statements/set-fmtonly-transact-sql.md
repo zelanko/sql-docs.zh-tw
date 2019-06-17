@@ -1,7 +1,7 @@
 ---
 title: SET FMTONLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,21 +23,27 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f15a6d81f064e417726fe7b4efe6987f7b96fa85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbc4cb3569573b8558edcf7335c0515da16d750c
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666076"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500549"
 ---
 # <a name="set-fmtonly-transact-sql"></a>SET FMTONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss-all-md](../../includes/tsql-appliesto-ss-all-md.md)]
 
   只將中繼資料傳回用戶端。 可以用來測試回應的格式，而不需實際執行查詢。  
-  
-> [!NOTE]  
->  請勿使用這個功能。 這項功能已由 [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)、[sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)、[sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) 及 [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) 取代。  
-  
+
+> [!NOTE]
+> 請勿使用這個功能。 這項功能已由下列項目取代：
+>
+> - [sp_describe_first_result_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)
+> - [sp_describe_undeclared_parameters (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)
+> - [sys.dm_exec_describe_first_result_set (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)
+> - [sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
@@ -45,50 +51,104 @@ ms.locfileid: "47666076"
 ```  
 SET FMTONLY { ON | OFF }   
 ```  
-  
-## <a name="remarks"></a>Remarks  
- 當 SET FMTONLY 設為 ON 時，不會因為要求而處理任何資料列或將任何資料列傳給用戶端。  
-  
- SET FMTONLY 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
-  
-## <a name="permissions"></a>[權限]  
+
+## <a name="remarks"></a>Remarks
+
+當 `FMTONLY` 是 `ON` 時，會傳回一個含資料行名稱的資料列集，但不含任何資料列。
+
+剖析 Transact-SQL 批次時，`SET FMTONLY ON` 沒有任何作用； 在執行階段的執行期間才會發生效果。
+
+預設值是 `OFF`。
+
+## <a name="permissions"></a>權限  
  需要 public 角色中的成員資格。  
-  
-## <a name="examples"></a>範例  
-  
-### <a name="a-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>A. 檢視查詢的資料行標頭資訊，而不實際執行查詢。  
- 下列範例會將 `SET FMTONLY` 設定改成 `ON`，且會執行 `SELECT` 陳述式。 這項設定會使陳述式只傳回資料行資訊；不會傳回任何資料列。  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-SET FMTONLY ON;  
-GO  
-SELECT *   
-FROM HumanResources.Employee;  
-GO  
-SET FMTONLY OFF;  
-GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="b-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>B. 檢視查詢的資料行標頭資訊，而不實際執行查詢。  
- 下列範例會示範如何只傳回查詢的資料行標頭 (中繼資料) 資訊。 批次一開始會將 FMTONLY 設為 OFF，並在 SELECT 陳述式之前將 FMTONLY 變更為 ON。 這可讓 SELECT 陳述式只傳回資料行資訊，而不會傳回任何資料列。  
-  
-```  
--- Uses AdventureWorks  
-  
-BEGIN  
-    SET FMTONLY OFF;  
-    SET DATEFORMAT mdy;  
-    SET FMTONLY ON;  
-    SELECT * FROM dbo.DimCustomer;  
-    SET FMTONLY OFF;  
-END  
-  
-```  
-  
+
+## <a name="examples"></a>範例
+
+下列 Transact-SQL 程式碼範例會將 `FMTONLY` 設為 `ON`。 此設定會導致 SQL Server 僅傳回所選資料行的中繼資料資訊。 具體來說，它會傳回資料行名稱， 而不會傳回任何資料列。
+
+在範例中，測試執行預存程序 `prc_gm29` 時會傳回下列項目：
+
+- 多個資料列集。
+- 多個資料表的資料行 (在它的其中一個 `SELECT` 陳述式中)。
+
+<!--
+Issue 2246 inspired this code example, and the replacement of the two pre-existing examples. 2019/June/03, GM.
+-->
+
+```sql
+go
+SET NoCount ON;
+
+go
+DROP PROCEDURE IF EXISTS prc_gm29;
+
+DROP Table IF EXISTS #tabTemp41;
+DROP Table IF EXISTS #tabTemp42;
+go
+
+CREATE TABLE #tabTemp41
+(
+   KeyInt41        int           not null,
+   Name41          nvarchar(16)  not null,
+   TargetDateTime  datetime      not null  default GetDate()
+);
+
+CREATE TABLE #tabTemp42
+(
+   KeyInt42 int          not null,   -- JOIN-able to KeyInt41.
+   Name42   nvarchar(16) not null
+);
+go
+
+INSERT into #tabTemp41 (KeyInt41, Name41) values (10, 't41-c');
+INSERT into #tabTemp42 (KeyInt42, Name42) values (10, 't42-p');
+go
+
+CREATE PROCEDURE prc_gm29
+AS
+begin
+SELECT * from #tabTemp41;
+SELECT * from #tabTemp42;
+
+SELECT t41.KeyInt41, t41.TargetDateTime, t41.Name41, t42.Name42
+   from
+                 #tabTemp41 as t41
+      INNER JOIN #tabTemp42 as t42 on t42.KeyInt42 = t41.KeyInt41
+end;
+go
+
+SET DATEFORMAT mdy;
+
+SET FMTONLY ON;
+EXECUTE prc_gm29;   -- Returns multiple tables.
+SET FMTONLY OFF;
+go
+DROP PROCEDURE IF EXISTS prc_gm29;
+
+DROP Table IF EXISTS #tabTemp41;
+DROP Table IF EXISTS #tabTemp42;
+go
+
+/****  Actual Output:
+[C:\JunkM\]
+>> osql.exe -S myazuresqldb.database.windows.net -U somebody -P secret -d MyDatabase -i C:\JunkM\Issue-2246-a.SQL 
+
+ KeyInt41    Name41           TargetDateTime
+ ----------- ---------------- -----------------------
+
+ KeyInt42    Name42
+ ----------- ----------------
+
+ KeyInt41    TargetDateTime          Name41           Name42
+ ----------- ----------------------- ---------------- ----------------
+
+
+[C:\JunkM\]
+>>
+****/
+```
+
 ## <a name="see-also"></a>另請參閱  
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   

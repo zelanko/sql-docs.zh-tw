@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4992e50f3daeb7d131e8cfb98be3700366550f3f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: d27099c54497eadecf38af33f8f3b0c12f4ccc7b
+ms.sourcegitcommit: 90b0e0a524df1d1dac18251397973ffd1eb6515f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582831"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046698"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "59582831"
 ###  <a name="security"></a> 安全性  
  以下是備份至 Microsoft Azure Blob 儲存體服務或從中還原時的安全性考量和需求。  
   
--   建立 Microsoft Azure Blob 儲存體服務的容器時，建議您將存取權設為 [私用] 。 將存取權設定為 [私用] 可將存取對象限制為能夠提供必要資訊來驗證 Windows Azure 帳戶的使用者或帳戶。  
+-   建立 Microsoft Azure Blob 儲存體服務的容器時，建議您將存取權設為 [私用]  。 將存取權設定為 [私用] 可將存取對象限制為能夠提供必要資訊來驗證 Windows Azure 帳戶的使用者或帳戶。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證中儲存 Windows Azure 帳戶名稱和存取金鑰驗證或共用存取簽章和存取 Token。 當 Windows Azure 帳戶執行備份或還原作業時，這項資訊就會用來驗證該帳戶。  
@@ -87,7 +87,7 @@ ms.locfileid: "59582831"
   
  以下是 URL 值範例：http[s]://ACCOUNTNAME.blob.core.windows.net/\<容器>/\<.bak>。 HTTPS 不是必要項目，但是建議使用。  
   
- **認證：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是用來儲存連線到 SQL Server 外部資源所需之驗證資訊的物件。 此處， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原程序會使用認證，向 Microsoft Azure Blob 儲存體服務及其容器和 Blob 物件驗證。 認證會儲存儲存體帳戶名稱和儲存體帳戶 **存取金鑰** 值，或容器 URL 及其共用存取簽章 Token。 一旦建立認證，BACKUP/RESTORE 陳述式的語法就會決定 Blob 類型和所需的認證。  
+ **認證：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是用來儲存連線到 SQL Server 外部資源所需之驗證資訊的物件。 此處， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原程序會使用認證，向 Microsoft Azure Blob 儲存體服務及其容器和 Blob 物件驗證。 認證會儲存儲存體帳戶名稱和儲存體帳戶 **存取金鑰** 值，或容器 URL 及其共用存取簽章 Token。 一旦建立認證，BACKUP/RESTORE 陳述式的語法就會決定 Blob 類型和所需的認證。  
   
  如需如何建立共用存取簽章的範例，請參閱本主題稍後的 [建立共用存取簽章](../../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) 範例，若要建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，請參閱本主題稍後的 [建立認證](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) 範例。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "59582831"
   
 -   不支援備份至進階儲存體。  
   
--   SQL Server 會將使用分頁 Blob 支援的備份大小上限限制為 1 TB。 使用區塊 Blob 支援的備份大小上限則會限制為大約 200 MB (50,000 個區塊 * 4MB 的 MAXTRANSFERSIZE)。 區塊 Blob 支援等量分割，以支援實質上較大的備份大小。  
+-   SQL Server 會將使用分頁 Blob 支援的備份大小上限限制為 1 TB。 使用區塊 Blob 支援的備份大小上限則會限制為大約 200 GB (50,000 個區塊 * 4MB 的 MAXTRANSFERSIZE)。 區塊 Blob 支援等量分割，以支援實質上較大的備份大小。  
   
 -   您可以使用 TSQL、SMO、PowerShell Cmdlet、SQL Server Management Studio [備份精靈] 或 [還原精靈] 發出 Backup 或 Restore 陳述式。   
   
@@ -115,7 +115,7 @@ ms.locfileid: "59582831"
   
 -   不支援指定備份組選項 - **RETAINDAYS** 和 **EXPIREDATE** 。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份裝置名稱大小上限為 259 個字元。 BACKUP TO URL 會用 36 個字元的必要項目指定 URL - 'https://.blob.core.windows.net//.bak'，而保留 223 個字元供帳戶、容器和 Blob 名稱共用。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份裝置名稱大小上限為 259 個字元。 BACKUP TO URL 會用 36 個字元的必要項目指定 URL - 'https://.blob.core.windows.net//.bak '，而保留 223 個字元供帳戶、容器和 Blob 名稱共用。  
   
 ###  <a name="Support"></a> 支援 Backup/Restore 陳述式  
   
@@ -214,11 +214,11 @@ ms.locfileid: "59582831"
   
  下列步驟說明在 SQL Server Management Studio 中對備份資料庫工作進行變更，以允許備份至 Windows Azure 儲存體：  
   
-1.  在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
+1.  在物件總管  中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
 
-2.  展開 [資料庫]，以滑鼠右鍵按一下所需的資料庫，指向 [工作]，然後按一下 [備份...]。
+2.  展開 [資料庫]  ，以滑鼠右鍵按一下所需的資料庫，指向 [工作]  ，然後按一下 [備份...]  。
   
-3.  [一般] 頁面之 [目的地] 區段的 [備份至:] 下拉式清單中提供 [URL] 選項。  [URL] 選項可用以建立備份至 Microsoft Azure 儲存體。 按一下 [加入]，[選取備份目的地] 對話方塊隨即開啟：
+3.  [一般]  頁面之 [目的地]  區段的 [備份至:]  下拉式清單中提供 [URL]  選項。  [URL]  選項可用以建立備份至 Microsoft Azure 儲存體。 按一下 [加入]  ，[選取備份目的地]  對話方塊隨即開啟：
    
     1.  **Azure 儲存體容器：** 儲存備份檔案的 Microsoft Azure 儲存體容器名稱。  從下拉式清單中選取現有的容器，或手動輸入容器。 
   
@@ -231,7 +231,7 @@ ms.locfileid: "59582831"
 > [!NOTE] 
 >  **加入**單一媒體集有多個備份檔案和儲存體容器的支援。
   
- 當您選取 **URL** 作為目的地時，[媒體選項] 頁面中的某些選項會停用。  下列主題包含有關備份資料庫對話方塊的詳細資訊：  
+ 當您選取 **URL** 作為目的地時，[媒體選項]  頁面中的某些選項會停用。  下列主題包含有關備份資料庫對話方塊的詳細資訊：  
   
  [備份資料庫 &#40;一般頁面&#41;](../../relational-databases/backup-restore/back-up-database-general-page.md)  
   
@@ -250,13 +250,13 @@ ms.locfileid: "59582831"
 ##  <a name="RestoreSSMS"></a> 使用 SQL Server Management Studio 從 Microsoft Azure 儲存體還原  
 還原資料庫工作會包含 **URL** 作為還原裝置的來源。  下列步驟說明使用還原工作，從 Microsoft Azure Blob 儲存體服務還原︰ 
   
-1.  以滑鼠右鍵按一下 [資料庫]，然後選取 [還原資料庫...]。 
+1.  以滑鼠右鍵按一下 [資料庫]  ，然後選取 [還原資料庫...]  。 
   
-2.  在 [一般] 頁面上，選取 [來源] 區段下的 [裝置]。
+2.  在 [一般]  頁面上，選取 [來源]  區段下的 [裝置]  。
   
-3.  按一下瀏覽 (...) 按鈕，開啟 [選取備份裝置] 對話方塊。 
+3.  按一下瀏覽 (...) 按鈕，開啟 [選取備份裝置]  對話方塊。 
 
-4.  從 [備份媒體類型:] 下拉式清單中選取 [URL]。  按一下 [加入] 開啟 [選取備份檔案位置] 對話方塊。
+4.  從 [備份媒體類型:]  下拉式清單中選取 [URL]  。  按一下 [加入]  開啟 [選取備份檔案位置]  對話方塊。
 
     1.  **Azure 儲存體容器：** 包含備份檔案之 Microsoft Azure 儲存體容器的完整名稱。  從下拉式清單中選取現有的容器，或手動輸入完整容器名稱。
       
@@ -264,7 +264,7 @@ ms.locfileid: "59582831"
       
     3.  **新增：** 用來註冊您沒有共用存取簽章的現有容器。  請參閱 [連接到 Microsoft Azure 訂用帳戶](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
       
-    4.  **確定：** SQL Server 會使用您提供的 SQL 認證資訊連線到 Microsoft Azure 儲存體，並開啟 [在 Microsoft Azure 中尋找備份檔案] 對話方塊。 位於儲存體容器中的備份檔案，會顯示在此頁面上。 選取您要用以還原的檔案，並按一下 **[確定]**。 如此會讓您回到 [選取備份裝置] 對話方塊，而按一下此對話方塊中的 [確定]，會帶您回到您可完成還原的主要 [還原] 對話方塊。 
+    4.  **確定：** SQL Server 會使用您提供的 SQL 認證資訊連線到 Microsoft Azure 儲存體，並開啟 [在 Microsoft Azure 中尋找備份檔案]  對話方塊。 位於儲存體容器中的備份檔案，會顯示在此頁面上。 選取您要用以還原的檔案，並按一下 **[確定]** 。 如此會讓您回到 [選取備份裝置]  對話方塊，而按一下此對話方塊中的 [確定]  ，會帶您回到您可完成還原的主要 [還原]  對話方塊。 
   
      [還原資料庫 &#40;一般頁面&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
@@ -349,7 +349,7 @@ Write-Host $tSql
 成功執行指令碼之後，請將 `CREATE CREDENTIAL` 命令複製到查詢工具，再連線到 SQL Server 執行個體，然後執行命令以建立含共用存取簽章的認證。 
 
 ###  <a name="credential"></a> 建立認證  
- 下列範例會建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，以向 Microsoft Azure Blob 儲存體服務驗證。 執行下列其中一個動作。 
+ 下列範例會建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，以向 Microsoft Azure Blob 儲存體服務驗證。 執行下列其中一項動作。 
   
 1.  **使用共用存取簽章**  
 

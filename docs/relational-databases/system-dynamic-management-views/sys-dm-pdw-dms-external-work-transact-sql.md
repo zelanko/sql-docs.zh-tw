@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: d02a1d50e9c7a5f906e78fa6753d594edced341f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62691043"
 ---
 # <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "62691043"
 |step_index|**int**|查詢會叫用這個 DMS 背景工作的步驟。<br /><br /> request_id、 step_index 和 dms_step_index 形成這個檢視的索引鍵。|相同中 step_index [sys.dm_pdw_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)。|  
 |dms_step_index|**int**|目前在 DMS 計劃中的步驟。<br /><br /> request_id、 step_index 和 dms_step_index 形成這個檢視的索引鍵。|相同中 dms___step_index [sys.dm_pdw_dms_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md)。|  
 |pdw_node_id|**int**|執行 DMS 背景工作角色的節點。|相同的 node_id [sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)。|  
-|型別|**nvarchar(60)**|此節點正在執行的外部作業類型。<br /><br /> 分割檔案是已分割成多個較小的落在外部 Hadoop 檔案上作業。|' 檔案分割 '|  
+|type|**nvarchar(60)**|此節點正在執行的外部作業類型。<br /><br /> 分割檔案是已分割成多個較小的落在外部 Hadoop 檔案上作業。|' 檔案分割 '|  
 |work_id|**int**|分割的檔案識別碼。|大於或等於 0。<br /><br /> 每個計算節點是唯一的。|  
 |input_name|**nvarchar(60)**|正在讀取的輸入名稱的字串。|Hadoop 檔案，這是 Hadoop 檔案名稱。|  
 |read_location|**bigint**|讀取位置的位移。||  

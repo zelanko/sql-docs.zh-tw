@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8de36a4d7929ddba4fcb2a7e046ee81db8d08520
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482704"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>檢視成員的所有註解或交易 (適用於 Excel 的 MDS 增益集)
@@ -31,7 +31,7 @@ ms.locfileid: "65482704"
   
 2.  以滑鼠右鍵按一下並從顯示的功能表上，按一下**檢視交易**。  
   
-3.  [檢視交易] 對話方塊就會顯示交易的清單。 若要檢視與交易相關聯的所有註解，請按一下方格中的資料列。  
+3.  [檢視交易]  對話方塊就會顯示交易的清單。 若要檢視與交易相關聯的所有註解，請按一下方格中的資料列。  
   
 ## <a name="see-also"></a>另請參閱  
  [發行資料&#40;MDS 增益集的 Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  

@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d2a4ef9c25607226c3898c10c0ec9ff245de8a18
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104452"
 ---
 # <a name="report-properties-dialog-box-code-report-builder"></a>報表屬性對話方塊、程式碼 (報表產生器)
   選取 **[報表屬性]** 對話方塊上的 **[程式碼]** ，即可定義報表內之運算式要使用的自訂程式碼。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **自訂程式碼**  
  輸入報表內要使用的方法。 程式碼必須以 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]撰寫。  
   

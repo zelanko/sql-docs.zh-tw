@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b42d01b097483d9088bd76257cd30ac37158f889
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62467404"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>部署資料採礦方案
@@ -44,14 +44,14 @@ ms.locfileid: "62467404"
 ##  <a name="bkmk_Reqs"></a> 部署資料採礦方案的需求  
  部署解決方案的目標 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體必須在支援多維度物件和資料採礦物件的模式下執行；也就是說，您不能將資料採礦物件部署到裝載表格式模型或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的執行個體。  
   
- 因此，當您在 Visual Studio 中建立資料採礦方案時，請務必使用 [Analysis Services 多維度和資料採礦專案] 範本。  
+ 因此，當您在 Visual Studio 中建立資料採礦方案時，請務必使用 [Analysis Services 多維度和資料採礦專案]  範本。  
   
  當您部署方案時，用於資料採礦的物件會在指定的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體中建立 (位於與方案檔同名的資料庫中)。  
   
 ###  <a name="bkmk_RelationalSltn"></a> 部署關聯式方案  
- 當您部署關聯式資料採礦方案時，將會在新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中建立必要的資料採礦物件，而且預設會處理這些物件。 您可以使用 [處理選項] 組態屬性來變更處理選項。 如需詳細資訊，請參閱[設定 Analysis Services 專案屬性 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
+ 當您部署關聯式資料採礦方案時，將會在新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中建立必要的資料採礦物件，而且預設會處理這些物件。 您可以使用 [處理選項]  組態屬性來變更處理選項。 如需詳細資訊，請參閱[設定 Analysis Services 專案屬性 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
   
- 根據預設，每次只會部署累加變更。 換句話說，您可以修改採礦模型，而且當您重新部署專案時，只會更新該採礦模型。 但是，如果您有多個用戶端正在編輯 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，這可能會導致錯誤發生。 若要變更預設部署模式，好讓您部署方案時重新整理整個資料庫，請變更 [部署模式] 屬性  
+ 根據預設，每次只會部署累加變更。 換句話說，您可以修改採礦模型，而且當您重新部署專案時，只會更新該採礦模型。 但是，如果您有多個用戶端正在編輯 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，這可能會導致錯誤發生。 若要變更預設部署模式，好讓您部署方案時重新整理整個資料庫，請變更 [部署模式]  屬性  
   
  在關聯式資料採礦方案中，必須部署的物件只有資料來源定義、任何已使用的資料來源檢視、採礦結構，以及所有相依的採礦模型。  
   

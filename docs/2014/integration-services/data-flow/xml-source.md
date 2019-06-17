@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62899941"
 ---
 # <a name="xml-source"></a>XML 來源
@@ -69,11 +69,11 @@ ms.locfileid: "62899941"
   
  XML 來源支援多項規則輸出和多項錯誤輸出。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括用來設定 XML 來源的 [XML 來源編輯器] 對話方塊。 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中即提供此對話方塊。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括用來設定 XML 來源的 [XML 來源編輯器]  對話方塊。 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中即提供此對話方塊。  
   
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需 [XML 來源編輯器] 對話方塊中可設定屬性的詳細資訊，請按一下下列其中一個主題：  
+ 如需 [XML 來源編輯器]  對話方塊中可設定屬性的詳細資訊，請按一下下列其中一個主題：  
   
 -   [XML 來源編輯器 &#40;[連線管理員] 頁面&#41;](../xml-source-editor-connection-manager-page.md)  
   

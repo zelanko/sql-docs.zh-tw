@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 648b9d561ae340b67ed5e2d1aa878969e5a3bc47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62822773"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>加入具有巢狀資料表的資料來源檢視 (中繼資料採礦教學課程)
@@ -45,9 +45,9 @@ ms.locfileid: "62822773"
   
      此時會開啟資料來源檢視精靈。  
   
-2.  在 [歡迎使用資料來源檢視精靈] 頁面上，按一下 [下一步]。  
+2.  在 [歡迎使用資料來源檢視精靈]  頁面上，按一下 [下一步]  。  
   
-3.  在上**Zdroj Dat**頁面的 **關聯式資料來源**，選取[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]您在資料採礦基本教學課程中建立的資料來源。 按一下 [下一步] 。  
+3.  在上**Zdroj Dat**頁面的 **關聯式資料來源**，選取[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]您在資料採礦基本教學課程中建立的資料來源。 按一下 [下一步]  。  
   
 4.  在 **選取資料表和檢視**頁面上，選取下列資料表，然後按一下向右箭號，將它們包含在新的資料來源檢視：  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62822773"
   
     -   `vAssocSeqLineItems`  
   
-5.  按一下 [下一步] 。  
+5.  按一下 [下一步]  。  
   
 6.  在 [**完成精靈]** 頁面上，依預設名稱的資料來源檢視是[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]。 將名稱變更為`Orders`，然後按一下**完成**。  
   

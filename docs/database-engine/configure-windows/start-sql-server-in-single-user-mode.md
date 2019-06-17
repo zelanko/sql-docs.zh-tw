@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9178ee0cbb010f55cf7438c345112c95f3d2b3fb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 34e5533d442dbbc91807a533ba53ebcc8b115d19
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508697"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775340"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>以單一使用者模式啟動 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63019225"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>在 DirectQuery 模式中的 DAX 公式相容性 
@@ -39,7 +39,7 @@ ms.locfileid: "63019225"
 
 
 ### <a name="non-optimized-for-directquery"></a>未針對 DirectQuery 最佳化
-這些函式有尚未最佳化，以使用 DirectQuery。 導出資料行和資料列層級安全性公式完全「不」支援這些函數。 不過， 量值和查詢公式「支援」這些函數，隨然效能並不確定。
+這些函式有尚未最佳化，以使用 DirectQuery。 導出資料行和資料列層級安全性公式完全「不」  支援這些函數。 不過， 量值和查詢公式「支援」  這些函數，隨然效能並不確定。
 
  我們不會在此列出所有的函數。 基本上，如果不是上述列出的其中一種最佳化函數，它就不是針對 DirectQuery 的最佳化功能。
 
@@ -107,7 +107,7 @@ ms.locfileid: "63019225"
 -   進行比較而且搭配 EXACT、AND、OR、 &amp;&amp;或 || 使用時，布林值一定會被視為邏輯值。  
   
 **從字串轉換成布林值**  
-在記憶體中和 DirectQuery 模型中，僅允許轉換成布林值從這些字串： **""** （空字串）、 **"true"**， **"false"**; 其中空字串轉換 （cast) 成 false 值。  
+在記憶體中和 DirectQuery 模型中，僅允許轉換成布林值從這些字串： **""** （空字串）、 **"true"** ， **"false"** ; 其中空字串轉換 （cast) 成 false 值。  
   
 轉換成任何其他字串的布林資料類型會產生錯誤。  
   

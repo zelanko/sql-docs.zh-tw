@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 392b683ac3213f51f4a263f6643adf34d76c133c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: c40755122775faa3b67fb0f46f5f13b3a789bb32
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606868"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803474"
 ---
-# <a name="troubleshoot-availability-group-exceeded-rto"></a>疑難排解：可用性群組超過 RTO
+# <a name="troubleshoot-availability-group-exceeded-rto"></a>疑難排解：可用性群組已超過 RTO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   在可用性群組上進行自動容錯移轉或規劃的手動容錯移轉之後沒有資料遺失，您可能會發現容錯移轉時間超過您的復原時間目標 (RTO)。 或者，當您在使用[監視 Always On 可用性群組的效能](monitor-performance-for-always-on-availability-groups.md)中的方法評估同步認可次要複本的容錯移轉時間時，發現它超過您的 RTO。  
   

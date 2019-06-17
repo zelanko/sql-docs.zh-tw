@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b0604d33ec26d959d4f319f05fa625951e69c4a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: af3854159c60f175ff80b1d0aaf778e5eab53055
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764996"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783789"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>設定 recovery interval 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47764996"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目設定 recovery interval 伺服器組態選項：**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47764996"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作**  [設定 recovery interval 選項之後](#FollowUp)  
+-   **後續操作：**[設定復原間隔項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -106,7 +106,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 後續操作：設定 recovery interval 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定復原間隔選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

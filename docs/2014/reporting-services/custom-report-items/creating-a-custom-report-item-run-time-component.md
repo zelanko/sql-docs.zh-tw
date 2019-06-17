@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 719e7a24efa2b0c68d4984d8b16f957a268fdafb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63265863"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>建立自訂報表項目執行階段元件
@@ -40,7 +40,7 @@ ms.technology: reporting-services
  如需完全實作的自訂報表項目的範例，請參閱 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
   
 ## <a name="definition-and-instance-objects"></a>定義和執行個體物件  
- 在實作自訂報表項目之前，了解「定義物件」和「執行個體物件」之間的差異很重要。 定義物件提供自訂報表項目的 RDL 表示法，而執行個體物件是定義物件的評估版本。 報表上每個項目只有一個定義物件。 在包含運算式的定義物件上存取屬性時，您會取得未評估過的運算式字串。 執行個體物件包含已評估的定義物件版本，而且與項目的定義物件可能具有一對多的關聯性。 例如，如果報表具有 <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix> 資料區，而該資料區在詳細資料列中包含 <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem>，則只會有一個定義物件，但資料區中的每個資料列都會有一個執行個體物件。  
+ 在實作自訂報表項目之前，了解「定義物件」  和「執行個體物件」  之間的差異很重要。 定義物件提供自訂報表項目的 RDL 表示法，而執行個體物件是定義物件的評估版本。 報表上每個項目只有一個定義物件。 在包含運算式的定義物件上存取屬性時，您會取得未評估過的運算式字串。 執行個體物件包含已評估的定義物件版本，而且與項目的定義物件可能具有一對多的關聯性。 例如，如果報表具有 <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix> 資料區，而該資料區在詳細資料列中包含 <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem>，則只會有一個定義物件，但資料區中的每個資料列都會有一個執行個體物件。  
   
 ## <a name="implementing-the-icustomreportitem-interface"></a>實作 ICustomReportItem 介面  
  若要建立 `CustomReportItem` 執行階段元件，您需要實作定義於 Microsoft.ReportingServices.ProcessingCore.dll 的 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> 介面：  

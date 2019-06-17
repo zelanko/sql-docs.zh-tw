@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3eadc5efc471f44998abddc596f1acc5c6e378ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62506966"
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (Transact-SQL)
@@ -55,8 +55,8 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|DBMS 相依資料類型。|  
 |DATA_TYPE|**smallint**|這個類型的所有資料行所對應之 ODBC 類型的代碼。|  
 |PRECISION|**int**|資料來源的資料類型最大有效位數。 有效位數不適用的資料類型會傳回 NULL。 PRECISION 資料行的傳回值為十進位數。|  
-|LITERAL_PREFIX|**varchar(** 32 **)**|常數前面所用的一或多個字元。 例如，單引號 (**'**) 用於字元類型，0x 用於二進位。|  
-|LITERAL_SUFFIX|**varchar(** 32 **)**|用來結束常數的一或多個字元。 例如，單引號 (**'**) 用於字元類型，而二進位不用引號。|  
+|LITERAL_PREFIX|**varchar(** 32 **)**|常數前面所用的一或多個字元。 例如，單引號 ( **'** ) 用於字元類型，0x 用於二進位。|  
+|LITERAL_SUFFIX|**varchar(** 32 **)**|用來結束常數的一或多個字元。 例如，單引號 ( **'** ) 用於字元類型，而二進位不用引號。|  
 |CREATE_PARAMS|**varchar(** 32 **)**|這個資料類型之建立參數的描述。 例如，**十進位**是"precision，scale"， **float**是 NULL，並**varchar**是"max_length"。|  
 |NULLABLE|**smallint**|指定 Null 屬性。<br /><br /> 1 = 允許 Null 值。<br /><br /> 0 = 不允許 Null 值。|  
 |CASE_SENSITIVE|**smallint**|指定是否區分大小寫。<br /><br /> 1 = 這類型的所有資料行都會區分大小寫 (用於定序)。<br /><br /> 0 = 這個類型的所有資料行都不區分大小寫。|  

@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd79fb3d5860847fbd522d7fb200e1138787e19d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63255240"
 ---
 # <a name="validate-subscriptions"></a>驗證多個訂閱
   使用 **[驗證訂閱]** 對話方塊即可指定交易式發行集的訂閱，需要在訂閱的散發代理程式下次執行時進行驗證。 驗證的結果會在複寫監視器中顯示。 如需詳細資訊，請參閱 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **驗證所有的 SQL Server 訂閱**  
  選取即可驗證此發行集之所有 SQL Server 訂閱的資料。  
   

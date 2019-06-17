@@ -17,10 +17,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a32f7f321baa17dbcdaf557bb7de033422a02dbc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740977"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>對應來源和目標資料類型 (AccessToSQL)
@@ -86,7 +86,7 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
   
     1.  在 [類型對應] 窗格中，選取包含您想要移除的資料類型對應的類型對應清單中的資料列。  
   
-    2.  按一下 **[移除]**。  
+    2.  按一下 **[移除]** 。  
   
 ## <a name="next-steps"></a>後續步驟  
 移轉程序的下一個步驟是[將 access 資料庫物件轉換成 SQL Server 物件](converting-access-database-objects-accesstosql.md)  

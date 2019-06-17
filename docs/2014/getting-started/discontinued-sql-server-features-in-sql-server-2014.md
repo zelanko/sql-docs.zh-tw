@@ -11,19 +11,19 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9aadb14004ff3e73c4678f08b8aafa3cdab53b28
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088634"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>在 SQL Server 2014 中停止 SQL Server 的功能
   本主題描述升級至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 之後無法再使用的功能。  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中沒有已停止的功能。  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="discontinued-active-directory-helper-service"></a>不再提供的 Active Directory Helper 服務  
  已移除 Active Directory Helper 服務和相關元件。 下表列出因此一併移除的相關聯元件：  

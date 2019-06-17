@@ -1,44 +1,47 @@
 - name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
-- name: SQL Server 機器學習服務文件
-  href: ../advanced-analytics/home-advanced-analytics-r-machine-learning-sql-server.md
-- name: 機器學習延伸模組 (R、Python)
+- name: SQL Server 機器學習服務
+  href: ../advanced-analytics/sql-server-machine-learning-services.md
+- name: 概觀
   items:
-    - name: 新功能
-      href: ../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md
-    - name: SQL ML 服務 (R、Python)
+    - name: 機器學習服務 (R、Python)
       href: ../advanced-analytics/what-is-sql-server-machine-learning.md
     - name: R Services
       href: ../advanced-analytics/r/sql-server-r-services.md
     - name: 獨立伺服器
       href: ../advanced-analytics/r/r-server-standalone.md
+    - name: 新功能
+      href: ../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md
 - name: 安裝
   items:
     - name: SQL Server 2019 中的差異
-      href: ../advanced-analytics/install/sql-machine-learning-services-ver15.md
-    - name: 安裝 ML 服務 (R、Python)
+      href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
+    - name: 在 Windows 上安裝 ML 服務
       href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
+    - name: 在 Linux 上安裝 ML 服務 >>
+      href: ../linux/sql-server-linux-setup-machine-learning.md?toc=../toc/toc.json
     - name: 安裝 R 服務
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
     - name: 安裝獨立伺服器 (R、Python)
       href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
     - name: 安裝已訓練的模型
       href: ../advanced-analytics/install/sql-pretrained-models-install.md
-    - name: 離線安裝程式 (不連線到網際網路)
-      href: ../advanced-analytics/install/sql-ml-component-install-without-internet-access.md
+    - name: 離線安裝 (無網際網路)
       items:
-        - name: CAB 下載 (離線安裝程式)
+        - name: 在沒有網際網路存取的情況下安裝
+          href: ../advanced-analytics/install/sql-ml-component-install-without-internet-access.md
+        - name: CAB 下載
           href: ../advanced-analytics/install/sql-ml-cab-downloads.md
     - name: 命令提示字元設定
       href: ../advanced-analytics/install/sql-ml-component-commandline-install.md
     - name: 升級 R 與 Python
-      href: ../advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
+      href: ../advanced-analytics/install/upgrade-r-and-python.md
     - name: 設定 R 用戶端
       href: ../advanced-analytics/r/set-up-a-data-science-client.md
     - name: 設定 Python 用戶端
       href: ../advanced-analytics/python/setup-python-client-tools-sql.md
-    - name: 設定虛擬伺服器
-      href: ../advanced-analytics/r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
+    - name: 在 Azure VM 安裝
+      href: ../advanced-analytics/install/sql-machine-learning-azure-virtual-machine.md
 - name: 快速入門
   items:
     - name: R
@@ -70,8 +73,9 @@
         - name: 訓練並使用您的第一個模型
           href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
 - name: 教學課程
-  href: ../advanced-analytics/tutorials/machine-learning-services-tutorials.md
   items:
+    - name: 教學課程概觀
+      href: ../advanced-analytics/tutorials/machine-learning-services-tutorials.md
     - name: 範例資料
       items:
         - name: 航空公司資料集
@@ -81,80 +85,86 @@
         - name: NYC 計程車資料集
           href: ../advanced-analytics/tutorials/demo-data-nyctaxi-in-sql.md
     - name: R
-      href: ../advanced-analytics/tutorials/sql-server-r-tutorials.md
       items:
+        - name: R 教學課程
+          href: ../advanced-analytics/tutorials/sql-server-r-tutorials.md
         - name: 建立資料分割型模型
           href: ../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md
-        - name: 適用於 SQL 的 R 開發人員
-          href: ../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md
+        - name: 在 T-SQL 中使用 R
           items:
-            - name: 1 - 資料探索
+            - name: 1. 簡介
+              href: ../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md
+            - name: 2. 資料探索
               href: ../advanced-analytics/tutorials/sqldev-explore-and-visualize-the-data.md
-            - name: 2 - 特徵工程
+            - name: 3. 特徵工程
               href: ../advanced-analytics/tutorials/sqldev-create-data-features-using-t-sql.md
-            - name: 3 - 訓練及部署
+            - name: 4. 定型及部署
               href: ../advanced-analytics/tutorials/sqldev-train-and-save-a-model-using-t-sql.md
-            - name: 4 - 預測
+            - name: 5. 預測
               href: ../advanced-analytics/tutorials/sqldev-operationalize-the-model.md
-        - name: 適用於 R 的 SQL 資料科學家
-          href: ../advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough.md
+        - name: 在 R 工具中使用 SQL ML
           items:
-            - name: 1 - 資料探索
+            - name: 1. 簡介
+              href: ../advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough.md
+            - name: 2. 資料探索
               href: ../advanced-analytics/tutorials/walkthrough-view-and-summarize-data-using-r.md
-            - name: 2 - 圖表及繪圖
+            - name: 3. 圖形和繪圖
               href: ../advanced-analytics/tutorials/walkthrough-create-graphs-and-plots-using-r.md
-            - name: 3 - 特徵工程
+            - name: 4. 特徵工程
               href: ../advanced-analytics/tutorials/walkthrough-create-data-features.md
-            - name: 4 - 建置及儲存模型
+            - name: 5. 建立及儲存模型
               href: ../advanced-analytics/tutorials/walkthrough-build-and-save-the-model.md
-            - name: 5 - 部署及使用模型
+            - name: 6. 部署及使用模型
               href: ../advanced-analytics/tutorials/walkthrough-deploy-and-use-the-model.md
         - name: RevoScaleR 深入探討
-          href: ../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
           items:
-            - name: 建立資料庫與權限
+            - name: 1. 簡介
+              href: ../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
+            - name: 2. 建立資料庫與權限
               href: ../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md
-            - name: 建立 RxSqlServerData 物件
+            - name: 3. 建立 RxSqlServerData 物件
               href: ../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
-            - name: 查詢及修改資料
+            - name: 4. 查詢及修改資料
               href: ../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md
-            - name: 定義計算內容
+            - name: 5. 定義計算內容
               href: ../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md
-            - name: 計算摘要統計資料
+            - name: 6. 計算摘要統計資料
               href: ../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md
-            - name: 將資料視覺化
+            - name: 7. 將資料視覺化
               href: ../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md
-            - name: 建立模型
+            - name: 8. 建立模型
               href: ../advanced-analytics/tutorials/deepdive-create-models.md
-            - name: 為新資料評分
+            - name: 9. 為新資料評分
               href: ../advanced-analytics/tutorials/deepdive-score-new-data.md
-            - name: 轉換資料
+            - name: 10. 轉換資料
               href: ../advanced-analytics/tutorials/deepdive-transform-data-using-r.md
-            - name: 使用 rxImport 載入資料
+            - name: 11. 使用 rxImport 載入資料
               href: ../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md
-            - name: 使用 rxDataStep 建立資料表
+            - name: 12. 使用 rxDataStep 建立資料表
               href: ../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
-            - name: 執行區塊化分析
+            - name: 13. 執行區塊化分析
               href: ../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
-            - name: 在 SQL Server 與 XDF 檔案之間移動資料
+            - name: 14. 在 SQL Server 與 XDF 檔案之間移動資料
               href: ../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
-            - name: 使用 rxExec 傳送自訂 R
+            - name: 15. 使用 rxExec 傳送自訂 R
               href: ../advanced-analytics/tutorials/r-tutorial-custom-r-functions.md
     - name: Python
-      href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
       items:
+        - name: Python 教學課程
+          href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
         - name: 使用 revoscalepy 建立 Python 模型
           href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
         - name: 適用於 SQL 的 Python 開發人員
-          href: ../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md
           items:
-            - name: 1 - 資料探索
+            - name: 1 - 簡介
+              href: ../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md
+            - name: 2 - 資料探索
               href: ../advanced-analytics/tutorials/sqldev-py3-explore-and-visualize-the-data.md
-            - name: 2 - 特徵工程
+            - name: 3 - 特徵工程
               href: ../advanced-analytics/tutorials/sqldev-py4-create-data-features-using-t-sql.md
-            - name: 3 - 訓練及部署
+            - name: 4 - 定型及部署
               href: ../advanced-analytics/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-            - name: 4 - 預測
+            - name: 5 - 預測
               href: ../advanced-analytics/tutorials/sqldev-py6-operationalize-the-model.md
 - name: 範例 >
   href: 'https://github.com/Microsoft/sql-server-samples'
@@ -171,50 +181,31 @@
     - name: Security
       href: ../advanced-analytics/concepts/security.md
 - name: 使用說明指南
-  href: ../advanced-analytics/r/sql-server-machine-learning-tasks.md
   items:
-    - name: 套件管理
+    - name: 連線
       items:
-        - name: 預設套件
-          href: ../advanced-analytics/r/installing-and-managing-r-packages.md
-        - name: 取得套件資訊
-          href: ../advanced-analytics/r/determine-which-packages-are-installed-on-sql-server.md
-        - name: 安裝新的 R 套件
-          href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
+        - name: 從 R 連線至 OLAP
           items:
-            - name: 使用 R 套件管理員
-              href: ../advanced-analytics/r/use-r-package-managers-on-sql-server.md
-            - name: 使用 T-SQL
-              href: ../advanced-analytics/r/install-r-packages-tsql.md
-            - name: 使用 RevoScaleR
-              href: ../advanced-analytics/r/use-revoscaler-to-manage-r-packages.md
-              items:
-                - name: 啟用遠端 R 套件管理
-                  href: ../advanced-analytics/r/r-package-how-to-enable-or-disable.md
-                - name: 同步 R 套件
-                  href: ../advanced-analytics/r/package-install-uninstall-and-sync.md
-            - name: 建立 miniCRAN 存放庫
-              href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
-            - name: 使用 R 套件的祕訣
-              href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
-        - name: 安裝新的 Python 套件
-          href: ../advanced-analytics/python/install-additional-python-packages-on-sql-server.md
+            - name: 在 R 中使用 OLAP Cube 的資料
+              href: ../advanced-analytics/r/using-data-from-olap-cubes-in-r.md
+            - name: 如何使用 olapR 建立 MDX 查詢
+              href: ../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md
     - name: 資料探索及模型化
       items:
-        - name: R 到 SQL 的資料類型轉換
+        - name: R
+          items:
+            - name: 使用 ODBC 載入 R 物件
+              href: ../advanced-analytics/r/save-and-load-r-objects-from-sql-server-using-odbc.md
+            - name: R 預測模型
+              href: ../advanced-analytics/r/data-exploration-and-predictive-modeling-with-r.md
+            - name: 使用 rxExecBy 建立多個模型
+              href: ../advanced-analytics/r/creating-multiple-models-using-rxexecby.md
+    - name: 資料類型轉換
+      items:
+        - name: R 轉換為 SQL
           href: ../advanced-analytics/r/r-libraries-and-data-types.md
-        - name: Python 到 SQL 的資料類型轉換
+        - name: Python 轉換為 SQL
           href: ../advanced-analytics/python/python-libraries-and-data-types.md
-        - name: 使用 ODBC 載入 R 物件
-          href: ../advanced-analytics/r/save-and-load-r-objects-from-sql-server-using-odbc.md
-        - name: 在 R 中使用 OLAP Cube 的資料
-          href: ../advanced-analytics/r/using-data-from-olap-cubes-in-r.md
-        - name: 如何使用 olapR 建立 MDX 查詢
-          href: ../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md
-        - name: R 預測模型
-          href: ../advanced-analytics/r/data-exploration-and-predictive-modeling-with-r.md
-        - name: 使用 rxExecBy 建立多個模型
-          href: ../advanced-analytics/r/creating-multiple-models-using-rxexecby.md
     - name: 部署
       items:
         - name: 使用預存程序進行可運作化
@@ -233,18 +224,60 @@
           href: ../advanced-analytics/real-time-scoring.md
         - name: 使用 PREDICT T-SQL 的原生評分
           href: ../advanced-analytics/sql-native-scoring.md
-    - name: 效能
+    - name: 套件管理
       items:
-        - name: R 中的效能微調概觀
-          href: ../advanced-analytics/r/sql-server-r-services-performance-tuning.md
-        - name: 效能微調伺服器設定
-          href: ../advanced-analytics/r/sql-server-configuration-r-services.md
-        - name: 效能微調 - R 中的資料最佳化
-          href: ../advanced-analytics/r/r-and-data-optimization-r-services.md
-        - name: R 中的結果效能微調
-          href: ../advanced-analytics/r/performance-case-study-r-services.md
-        - name: 使用 R 程式碼剖析函式
-          href: ../advanced-analytics/r/using-r-code-profiling-functions.md
+        - name: 預設套件
+          href: ../advanced-analytics/package-management/default-packages.md
+        - name: 取得套件資訊
+          href: ../advanced-analytics/package-management/installed-package-information.md
+        - name: 安裝新的 R 套件
+          items:
+            - name: 安裝 R 套件
+              href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
+            - name: 使用 T-SQL
+              href: ../advanced-analytics/r/install-r-packages-tsql.md
+            - name: 使用套件管理員
+              href: ../advanced-analytics/r/use-r-package-managers-on-sql-server.md
+            - name: 使用 RevoScaleR
+              items:
+                - name: 使用 RevoScaleR 安裝
+                  href: ../advanced-analytics/r/use-revoscaler-to-manage-r-packages.md
+                - name: 啟用遠端 R 套件管理
+                  href: ../advanced-analytics/r/r-package-how-to-enable-or-disable.md
+                - name: 同步 R 套件
+                  href: ../advanced-analytics/r/package-install-uninstall-and-sync.md
+            - name: 建立 miniCRAN 存放庫
+              href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
+            - name: 使用 R 套件的祕訣
+              href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
+        - name: 安裝新的 Python 套件
+          items:
+            - name: 使用套件管理員
+              href: ../advanced-analytics/python/install-additional-python-packages-on-sql-server.md
+    - name: 系統管理
+      items:
+        - name: 管理整合
+          href: ../advanced-analytics/r/managing-and-monitoring-r-solutions.md
+        - name: 監視器
+          items:
+            - name: 使用 SSMS 報告來監視
+              href: ../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md
+            - name: 使用 DMV 來監視
+              href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
+            - name: 擴充事件
+              items:
+                - name: 擴充事件
+                  href: ../advanced-analytics/r/extended-events-for-sql-server-r-services.md
+                - name: 延伸的事件 PREDICT T-SQL
+                  href: ../advanced-analytics/xe-event-predict-tsql.md
+        - name: 調整指令碼執行規模
+          href: ../advanced-analytics/administration/modify-user-account-pool.md
+        - name: 資源管理員
+          items:
+            - name: 使用資源管理員
+              href: ../advanced-analytics/administration/resource-governance.md
+            - name: 建立資源集區
+              href: ../advanced-analytics/administration/how-to-create-a-resource-pool.md
     - name: Security
       items:
         - name: 授與使用者權限
@@ -255,24 +288,20 @@
           href: ../advanced-analytics/security/firewall-configuration.md
         - name: 為 SQLRUserGroup 建立登入
           href: ../advanced-analytics/security/create-a-login-for-sqlrusergroup.md
-    - name: 系統管理
+    - name: 效能
       items:
-        - name: 管理整合
-          href: ../advanced-analytics/r/managing-and-monitoring-r-solutions.md
-        - name: 使用 SSMS 報告來監視
-          href: ../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md
-        - name: 使用 DMV 來監視
-          href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
-        - name: 調整指令碼執行規模
-          href: ../advanced-analytics/administration/modify-user-account-pool.md
-        - name: 使用資源治理
-          href: ../advanced-analytics/administration/resource-governance.md
-        - name: 建立資源集區
-          href: ../advanced-analytics/administration/how-to-create-a-resource-pool.md
-        - name: 擴充事件
-          href: ../advanced-analytics/r/extended-events-for-sql-server-r-services.md
-        - name: 延伸的事件 PREDICT T-SQL
-          href: ../advanced-analytics/xe-event-predict-tsql.md
+        - name: R
+          items:
+            - name: R 中的效能微調概觀
+              href: ../advanced-analytics/r/sql-server-r-services-performance-tuning.md
+            - name: 效能微調伺服器設定
+              href: ../advanced-analytics/r/sql-server-configuration-r-services.md
+            - name: 效能微調 - R 中的資料最佳化
+              href: ../advanced-analytics/r/r-and-data-optimization-r-services.md
+            - name: R 中的結果效能微調
+              href: ../advanced-analytics/r/performance-case-study-r-services.md
+            - name: 使用 R 程式碼剖析函式
+              href: ../advanced-analytics/r/using-r-code-profiling-functions.md
 - name: 參考
   items:
     - name: R 套件
@@ -296,8 +325,9 @@
     - name: 版本資訊 >>
       href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
     - name: 疑難排解
-      href: ../advanced-analytics/machine-learning-troubleshooting-faq.md
       items:
+        - name: 疑難排解概觀
+          href: ../advanced-analytics/machine-learning-troubleshooting-faq.md
         - name: 已知問題
           href: ../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md
         - name: 資料收集

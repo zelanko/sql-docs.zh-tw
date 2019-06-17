@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9e5f746ed9aeea4356b619cff2439292d73384a7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 9b9bf633e4014197dcf92d730806b669540f6403
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212477"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777627"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>指定複本頁面 (新增可用性群組精靈：新增複本精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "53212477"
  如果 [可用性複本] 方格未列出您要用來裝載次要複本的伺服器執行個體，請按一下 [新增複本] 按鈕。 如果您在混合式 IT 環境設定可用性群組 (請參閱 [SQL Server 在 Windows Azure 虛擬機器的高可用性和災害復原](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx))，您可以按一下 [加入 Azure 複本] 按鈕，以在 Windows Azure 中建立包含次要複本的虛擬機器。  
   
  **初始角色**  
- 指出新的複本一開始執行的角色：[主要] 或 [次要]。  
+ 指出新複本一開始執行的角色：[主要] 或 [次要]。  
   
  **自動容錯移轉 (最多 3 個)**  
  只有在您希望此可用性複本成為自動容錯移轉夥伴時，才選取這個核取方塊。 若要設定自動容錯移轉，您必須為初始主要複本和一個次要複本選擇這個選項。 這兩個複本都會使用同步認可可用性模式。 只有三個複本可以支援自動容錯移轉。  

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df2eb8317f90a96b35fc886e2158000e0f57d09d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62469480"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>查詢用於建立採礦模型的參數
@@ -26,10 +26,10 @@ ms.locfileid: "62469480"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟包含所要查詢之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體。  
   
-2.  以滑鼠右鍵按一下執行個體名稱，選取 [新增查詢]，然後選取 [DMX]。  
+2.  以滑鼠右鍵按一下執行個體名稱，選取 [新增查詢]  ，然後選取 [DMX]  。  
   
     > [!NOTE]  
-    >  您也可以使用 [MDX] 範本針對資料採礦模型建立查詢。  
+    >  您也可以使用 [MDX]  範本針對資料採礦模型建立查詢。  
   
 3.  如果執行個體包含多個資料庫，請從工具列中的 **[可用的資料庫]** 清單選取包含您要查詢之模型的資料庫。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62469480"
   
 2.  在 [物件總管] 中，選取所要的採礦模型，然後將它拖曳到 [DMX 查詢] 窗格內的單引號中。  
   
-3.  按 F5, 或按一下 **[執行]**。  
+3.  按 F5, 或按一下 **[執行]** 。  
   
 ## <a name="example"></a>範例  
  下列程式碼會傳回用來建立您在 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中所建立之採礦模型的參數清單。 這些參數所包含的明確值，會用於伺服器的提供者所提供之採礦服務使用的任何預設值。  

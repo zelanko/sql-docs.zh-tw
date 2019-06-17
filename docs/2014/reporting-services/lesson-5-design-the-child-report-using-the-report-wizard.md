@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661b4f3cc63eb0c19fddb53f872e940d1f9976e2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108443"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>第 5 課：使用報表精靈設計子報表
@@ -24,7 +24,7 @@ ms.locfileid: "66108443"
   
 1.  請確認已在 **方案總管**中選取頂層網站。  
   
-2.  以滑鼠右鍵按一下網站，然後選取 [新增項目]。  
+2.  以滑鼠右鍵按一下網站，然後選取 [新增項目]  。  
   
 3.  在 [**加入新項目**] 對話方塊中，按一下**報表精靈**，輸入報表檔的名稱，然後按一下**新增**。  
   
@@ -32,15 +32,15 @@ ms.locfileid: "66108443"
   
 4.  在 **資料集屬性**頁面上，於**資料來源**方塊中，按一下**DataSet2**。  
   
-     [可用資料集] 方塊會自動更新為您所建立的 DataTable。  
+     [可用資料集]  方塊會自動更新為您所建立的 DataTable。  
   
-5.  按一下 [下一步] 。  
+5.  按一下 [下一步]  。  
   
-6.  在 [排列欄位] 頁面中執行下列操作：  
+6.  在 [排列欄位]  頁面中執行下列操作：  
   
-    1.  將 **ProductID**、**PurchaseOrderID**、**PurchaseOrderDetailID**、**OrderQty**、**ReceivedQty**、**RejectedQty** 和 **StockedQty** 從 [可用欄位] 拖曳至 [值] 方塊。  
+    1.  將 **ProductID**、**PurchaseOrderID**、**PurchaseOrderDetailID**、**OrderQty**、**ReceivedQty**、**RejectedQty** 和 **StockedQty** 從 [可用欄位]  拖曳至 [值]  方塊。  
   
-    2.  按一下箭號旁**sum （productid)**， **sum （purchaseorderid)**， **sum （purchaseorderdetailid)**， **sum （orderqty)**， **Sum （receivedqty)**， **sum （rejectedqty)**，以及**sum （stockedqty)** 清除**總和**選取項目。  
+    2.  按一下箭號旁**sum （productid)** ， **sum （purchaseorderid)** ， **sum （purchaseorderdetailid)** ， **sum （orderqty)** ， **Sum （receivedqty)** ， **sum （rejectedqty)** ，以及**sum （stockedqty)** 清除**總和**選取項目。  
   
 7.  按一下 [**下一步]** 兩次，然後按一下**完成**以關閉**報表精靈**。  
   
@@ -50,11 +50,11 @@ ms.locfileid: "66108443"
   
     1.  按一下 **參數**中**報表資料**窗格中，然後再按一下**將參數加入**。  
   
-    2.  在 [名稱] 方塊中，輸入 **productid**。  
+    2.  在 [名稱]  方塊中，輸入 **productid**。  
   
-    3.  確認已在 [資料類型] 清單方塊中，選取 [整數]。  
+    3.  確認已在 [資料類型]  清單方塊中，選取 [整數]  。  
   
-    4.  按一下 [確定] 。  
+    4.  按一下 [確定]  。  
   
 9. 儲存 .rdlc 檔。  
   

@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62762424"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>資料庫卸離與附加 (SQL Server)
@@ -92,7 +92,7 @@ ms.locfileid: "62762424"
 > [!NOTE]  
 >  如果附加的主要資料檔是唯讀的，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會假設該資料庫也是唯讀的。  
   
- 當加密的資料庫第一次附加至執行個體的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，資料庫擁有者必須執行下列陳述式來開啟資料庫主要金鑰：開啟主要金鑰解密密碼 = **'*`password`*'**。 我們建議您執行下列陳述式來啟用主要金鑰自動解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 如需詳細資訊，請參閱 [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) 和 [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)。  
+ 當加密的資料庫第一次附加至執行個體的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，資料庫擁有者必須執行下列陳述式來開啟資料庫主要金鑰：開啟主要金鑰解密密碼 = **' *`password`* '** 。 我們建議您執行下列陳述式來啟用主要金鑰自動解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 如需詳細資訊，請參閱 [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) 和 [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)。  
   
  要不要附加記錄檔，其需求有一部分視資料庫是可讀寫或唯讀而定，如下所示：  
   

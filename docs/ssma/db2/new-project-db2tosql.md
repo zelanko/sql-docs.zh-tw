@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 05ef20ebb3458e32cda4cc1f0bbe9a924ed8e422
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63281694"
 ---
 # <a name="new-project-db2tosql"></a>新的專案 (DB2ToSQL)
@@ -24,7 +24,7 @@ ms.locfileid: "63281694"
 **名稱**  
 輸入專案的名稱。 SSMA 會將附加檔案的副檔名。  
   
-**位置**  
+**Location**  
 輸入或瀏覽至資料夾或網路位置，以儲存專案。  
   
 **移轉至**  

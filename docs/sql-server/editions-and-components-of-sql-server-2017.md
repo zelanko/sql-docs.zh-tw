@@ -34,16 +34,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3adc687a30c3f8f7e9f8564bfbbb3fec44ad4a20
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 660b9d8ea0d0ebd0f0ef1ea83c225cd74f71080b
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65560115"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744176"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的版本及支援功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
+> [!div class="nextstepaction"]
+> [請提供您對 SQL Docs 中樞頁面的意見反應！](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
 
 本主題提供各種 SQL Server 2017 版本支援的功能的詳細資料。 
 
@@ -196,7 +198,7 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 |多個檔案資料流容器|是|是|是|是|是|
 |NUMA 感知大型分頁記憶體和緩衝區陣列配置|是|否|否|否|否|
 |緩衝集區擴充|是|是|否|否|否|
-|IO 資源管理|是|否|否|否|否|  
+|I/O 資源管理|是|否|否|否|否|  
 |預先讀取|是|否|否|否|否|
 |進階掃描|是|否|否|否|否|
 |延遲持久性|是|是|是|是|是|

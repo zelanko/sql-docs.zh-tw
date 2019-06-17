@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3d1953d29d718edebbdae18677d240395d0b710f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 630dee3126fe6c122f3e2d034252260769e3ed03
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838116"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774947"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>建立 Windows 驗證的資料庫鏡像端點 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "47838116"
   
  **本主題內容**  
   
--   **開始之前**  [安全性](#Security)  
+-   **開始之前：**[安全性](#Security)  
   
--   **使用下列項目，建立資料庫鏡像端點**  [Transact-SQL](#TsqlProcedure)  
+-   **使用下列項目建立資料庫鏡像端點：**[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -108,7 +108,7 @@ ms.locfileid: "47838116"
         > [!IMPORTANT]  
         >  每個伺服器執行個體都需要一個且唯一的接聽程式通訊埠。  
   
-    -   若為 Windows 驗證，除非您想要端點只使用 NTLM 或 Kerberos 來驗證連接，否則 AUTHENTICATION 是選擇性選項。 \<授權方法> 將用來驗證連線的方法指定為下列其中一項：NTLM、KERBEROS 或 NEGOTIATE。 預設值 NEGOTIATE，將導致端點使用 Windows 交涉通訊協定來選擇 NTLM 或 Kerberos。 視相對端點的驗證層級而定，交涉可讓連接需要或不需要驗證。  
+    -   若為 Windows 驗證，除非您想要端點只使用 NTLM 或 Kerberos 來驗證連接，否則 AUTHENTICATION 是選擇性選項。 \<授權方法> 指定用來驗證連線的下列其中一項方法：NTLM、KERBEROS 或 NEGOTIATE。 預設值 NEGOTIATE，將導致端點使用 Windows 交涉通訊協定來選擇 NTLM 或 Kerberos。 視相對端點的驗證層級而定，交涉可讓連接需要或不需要驗證。  
   
     -   依預設，ENCRYPTION 是設定為 REQUIRED。 這表示此端點的所有連接都必須使用加密。 不過，您可以停用加密或使其在端點上為選擇性的。 替代方案如下所示：  
   

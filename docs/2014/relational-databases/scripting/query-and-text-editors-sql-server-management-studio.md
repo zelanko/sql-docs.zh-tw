@@ -26,10 +26,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 39476a5bc6c1f115595c529e56090f7dda31aba2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063883"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>查詢與文字編輯器 (SQL Server Management Studio)
@@ -65,7 +65,7 @@ ms.locfileid: "66063883"
  這個視窗用來檢視查詢結果。 這個視窗能夠以方格或文字來顯示結果，或者將結果導向至檔案。 結果方格可以顯示為個別的索引標籤視窗。  
   
  **IntelliSense**  
- 在編輯器的 [編輯] 功能表上，指向 [IntelliSense] 來檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項。  
+ 在編輯器的 [編輯]  功能表上，指向 [IntelliSense]  來檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項。  
   
  **色彩編碼**  
  顯示每種語法元素類型的不同色彩，改進了複雜陳述式的可讀性。  

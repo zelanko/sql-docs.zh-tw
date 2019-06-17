@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 832e49db5221c2e978cac584e8f1e406d33be30f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63134960"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
@@ -60,13 +60,13 @@ ms.locfileid: "63134960"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]。 如需建立作業的詳細資訊，請參閱[建立作業](create-jobs.md)。  
+2.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]  。 如需建立作業的詳細資訊，請參閱[建立作業](create-jobs.md)。  
   
-3.  在 **[作業屬性]** 對話方塊中，按一下 **[步驟]** 頁面，然後按一下 **[新增]**。  
+3.  在 **[作業屬性]** 對話方塊中，按一下 **[步驟]** 頁面，然後按一下 **[新增]** 。  
   
 4.  在 **[新增作業步驟]** 對話方塊中，輸入作業 **步驟名稱**。  
   
-5.  在 **[類型]** 清單中，按一下 **[SQL Server Analysis Services 命令]**。  
+5.  在 **[類型]** 清單中，按一下 **[SQL Server Analysis Services 命令]** 。  
   
 6.  在 **[執行身分]** 清單中，選取已定義為使用「Analysis Services 命令」子系統的 Proxy。 身為 **系統管理員 (sysadmin)** 固定伺服器角色成員的使用者，也可以選取 **[SQL 代理程式服務帳戶]** 來執行這個作業步驟。  
   
@@ -80,13 +80,13 @@ ms.locfileid: "63134960"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]。 如需建立作業的詳細資訊，請參閱 [建立作業](create-jobs.md)。  
+2.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]  。 如需建立作業的詳細資訊，請參閱 [建立作業](create-jobs.md)。  
   
-3.  在 **[作業屬性]** 方塊中，按一下 **[步驟]** 頁面，然後按一下 **[新增]**。  
+3.  在 **[作業屬性]** 方塊中，按一下 **[步驟]** 頁面，然後按一下 **[新增]** 。  
   
 4.  在 **[新增作業步驟]** 對話方塊中，輸入一個作業 **步驟名稱**。  
   
-5.  在 **[類型]** 清單中，按一下 **[SQL Server Analysis Services 查詢]**。  
+5.  在 **[類型]** 清單中，按一下 **[SQL Server Analysis Services 查詢]** 。  
   
 6.  在 **[執行身分]** 清單中，選取已定義為使用「Analysis Services 查詢」子系統的 Proxy。 身為 **系統管理員 (sysadmin)** 固定伺服器角色成員的使用者，也可以選取 **[SQL 代理程式服務帳戶]** 來執行這個作業步驟。  
   
@@ -102,9 +102,9 @@ ms.locfileid: "63134960"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
   
@@ -141,9 +141,9 @@ ms.locfileid: "63134960"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
   

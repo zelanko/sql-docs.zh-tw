@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62831766"
 ---
 # <a name="execute-sql-task"></a>執行 SQL 工作
@@ -56,7 +56,7 @@ ms.locfileid: "62831766"
   
  如果 SQL 陳述式儲存在檔案中，則工作會使用「檔案」連接管理員連接到該檔案。 如需相關資訊，請參閱 [File Connection Manager](../connection-manager/file-connection-manager.md)。  
   
- 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中，您可以使用 [執行 SQL 工作編輯器] 對話方塊輸入 SQL 陳述式，或使用圖形化使用者介面 [查詢產生器] 建立 SQL 查詢。 如需詳細資訊，請參閱[執行 SQL 工作編輯器 &#40;一般頁面&#41;](../execute-sql-task-editor-general-page.md) 和[查詢產生器](../query-builder.md)。  
+ 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中，您可以使用 [執行 SQL 工作編輯器]  對話方塊輸入 SQL 陳述式，或使用圖形化使用者介面 [查詢產生器]  建立 SQL 查詢。 如需詳細資訊，請參閱[執行 SQL 工作編輯器 &#40;一般頁面&#41;](../execute-sql-task-editor-general-page.md) 和[查詢產生器](../query-builder.md)。  
   
 > [!NOTE]  
 >  「執行 SQL」工作可能無法成功剖析在「執行 SQL」工作外部撰寫的有效 SQL 陳述式。  
@@ -93,7 +93,7 @@ ms.locfileid: "62831766"
  如需在「執行 SQL」工作中從 SQL 命令擷取結果集的資訊，請參閱[執行 SQL 工作中的結果集](../result-sets-in-the-execute-sql-task.md)。  
   
 ## <a name="troubleshooting-the-execute-sql-task"></a>疑難排解執行 SQL 工作  
- 您可以記錄執行 SQL 工作對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，疑難排解執行 SQL 工作所執行的 SQL 命令。 若要記錄「執行 SQL」工作對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+ 您可以記錄執行 SQL 工作對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，疑難排解執行 SQL 工作所執行的 SQL 命令。 若要記錄「執行 SQL」工作對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷]  事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
  有時 SQL 命令或預存程序會傳回多個結果集。 這些結果集不只包括屬於 `SELECT` 查詢結果的資料列集，也包括屬於 `RAISERROR` 或 `PRINT` 陳述式之錯誤結果的單一值。 工作是否忽略發生在第一個結果集之後之結果集中的錯誤，將取決於所使用的連接管理員類型：  
   

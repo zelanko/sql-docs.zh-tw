@@ -15,10 +15,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 5dde7575a3f657b89d29fefa0da52002bcd6af28
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014300"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>建立、建構並查詢地理位置執行個體
@@ -105,7 +105,7 @@ ms.locfileid: "66014300"
 ###  <a name="gml"></a> 從 GML 文字輸入建構地理位置執行個體  
  `geography`資料類型提供的方法，會產生`geography`執行個體，GML 的 XML 表示法`geography`執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可支援 GML 的子集。  
   
- 如需有關地理標記語言的詳細資訊，請參閱 OGC 規格：[OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629) (OGC 規格，地理標記語言)。  
+ 如需地理標記語言的詳細資訊，請參閱 OGC 規格：[OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629) (OGC 規格，地理標記語言)。  
   
  **從 GML 輸入建構任何類型的地理位置執行個體**  
  [GeomFromGML &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  

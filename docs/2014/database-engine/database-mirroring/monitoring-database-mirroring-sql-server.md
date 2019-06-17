@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755370"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>監視資料庫鏡像 (SQL Server)
-  本節介紹「資料庫鏡像監視器」和 **sp_dbmmonitor** 系統預存程序、說明資料庫鏡像監視功能 (包括 [資料庫鏡像監視器作業] ) 的運作方式，以及摘要說明您可以監視的資料庫鏡像工作階段相關資訊。 另外，本節還會介紹如何為一組預先定義的資料庫鏡像事件定義警告臨界值，以及如何在任何資料庫鏡像事件上設定警示。  
+  本節介紹「資料庫鏡像監視器」和 **sp_dbmmonitor** 系統預存程序、說明資料庫鏡像監視功能 (包括 [資料庫鏡像監視器作業]  ) 的運作方式，以及摘要說明您可以監視的資料庫鏡像工作階段相關資訊。 另外，本節還會介紹如何為一組預先定義的資料庫鏡像事件定義警告臨界值，以及如何在任何資料庫鏡像事件上設定警示。  
   
  您可以在鏡像工作階段期間監視鏡像資料庫，以便確認資料流程是否正常。 若要針對伺服器執行個體上的一個或多個鏡像資料庫設定並管理監視作業，您可以使用「資料庫鏡像監視器」或 **sp_dbmmonitor** 系統預存程序。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62755370"
   
  系統管理員可以自動或手動更新狀態資料表，而且最小更新間隔為 15 秒。 15 秒的下限可防止伺服器執行個體因狀態要求而超過負載。  
   
- 此狀態資料表會自動由 [資料庫鏡像監視器] 和資料庫鏡像監視器作業更新 (如果有執行的話)。 [資料庫鏡像監視器作業] 預設會每分鐘更新資料表一次 (系統管理員可以指定介於 1 至 120 分鐘的更新週期)。 不過，[資料庫鏡像監視器] 則會每隔 30 秒自動更新資料表。 進行這些更新作業時，[資料庫鏡像監視器作業]  和「資料庫鏡像監視器」都會呼叫 **sp_dbmmonitorupdate**。  
+ 此狀態資料表會自動由 [資料庫鏡像監視器] 和資料庫鏡像監視器作業更新 (如果有執行的話)。 [資料庫鏡像監視器作業]  預設會每分鐘更新資料表一次 (系統管理員可以指定介於 1 至 120 分鐘的更新週期)。 不過，[資料庫鏡像監視器] 則會每隔 30 秒自動更新資料表。 進行這些更新作業時，[資料庫鏡像監視器作業]  和「資料庫鏡像監視器」都會呼叫 **sp_dbmmonitorupdate**。  
   
  **sp_dbmmonitorupdate** 初次執行時，會建立 **資料庫鏡像狀態** 資料表，並在 **msdb** 資料庫中建立 **dbm_monitor** 固定資料庫角色。 **sp_dbmmonitorupdate** 通常會針對伺服器執行個體上每個鏡像資料庫的狀態資料表插入新資料列，以更新鏡像狀態；如需詳細資訊，請參閱本主題稍後的＜資料庫鏡像狀態資料表＞。 這個程序也會評估新資料列中的效能標準，並截斷晚於目前保留期限 (預設為 7 天) 的資料列。 如需詳細資訊，請參閱 [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)。  
   
@@ -130,12 +130,12 @@ ms.locfileid: "62755370"
      系統管理員可以使用 **sp_dbmmonitorresults** 系統預存程序來檢視並選擇性地更新狀態資料表 (如果在前 15 秒內未更新過的話)。 此程序會呼叫 **sp_dbmmonitorupdate** 程序並根據程序呼叫中要求的數量，傳回一個或多個記錄資料列。 如需結果集中狀態的資訊，請參閱 [sp_dbmmonitorresults &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql)。  
   
 #### <a name="monitoring-database-mirroring-status-by-dbmmonitor-members"></a>監視資料庫鏡像狀態 (dbm_monitor 成員)  
- 如上所述，首次執行 **sp_dbmmonitorupdate** 時，它會在 **msdb** 資料庫中建立 **dbm_monitor** 固定資料庫角色。 **dbm_monitor** 固定資料庫角色的成員可以使用「資料庫鏡像監視器」或 **sp_dbmmonitorresults** 預存程序，檢視現有的鏡像狀態。 但是這些使用者無法更新狀態資料表。 若要了解顯示狀態的時間，使用者可以在 [狀態] 頁面上查看 [主體記錄 (\<時間>)]**** 和 [鏡像記錄 (\<時間>)]**** 標籤中的時間。  
+ 如上所述，首次執行 **sp_dbmmonitorupdate** 時，它會在 **msdb** 資料庫中建立 **dbm_monitor** 固定資料庫角色。 **dbm_monitor** 固定資料庫角色的成員可以使用「資料庫鏡像監視器」或 **sp_dbmmonitorresults** 預存程序，檢視現有的鏡像狀態。 但是這些使用者無法更新狀態資料表。 若要了解顯示狀態的時間，使用者可以在 [狀態]  頁面上查看 [主體記錄 (\<時間>)] **** 和 [鏡像記錄 (\<時間>)] **** 標籤中的時間。  
   
  **dbm_monitor** 固定資料庫角色的成員會仰賴 [資料庫鏡像監視器作業]  來定期更新狀態資料表。 如果此作業不存在或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 已停止，狀態就會逐漸成為過時，而且不再反映鏡像工作階段的組態。 例如，在容錯移轉之後，夥伴可能看起來像是共用相同的角色 (主體或鏡像)，或者目前的主體伺服器可能會顯示為鏡像，而目前的鏡像伺服器則顯示為主體。  
   
 #### <a name="dropping-the-database-mirroring-monitor-job"></a>卸除資料庫鏡像監視器作業  
- 資料庫鏡像監視器作業 **[資料庫鏡像監視器作業]** 會維持到卸除為止。 此監視作業必須由系統管理員管理。 若要卸除 [資料庫鏡像監視器作業] ，請使用 **sp_dbmmonitordropmonitoring**。 如需詳細資訊，請參閱 [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql)。  
+ 資料庫鏡像監視器作業 **[資料庫鏡像監視器作業]** 會維持到卸除為止。 此監視作業必須由系統管理員管理。 若要卸除 [資料庫鏡像監視器作業]  ，請使用 **sp_dbmmonitordropmonitoring**。 如需詳細資訊，請參閱 [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql)。  
   
 ###  <a name="perf_metrics_of_dbm_monitor"></a> 資料庫鏡像監視器顯示的狀態  
  [資料庫鏡像監視器] 的 **[狀態]** 頁面會描述夥伴，還有鏡像工作階段的狀態。 狀態會包括效能標準，如交易記錄狀態和其他資訊，目的是要在工作階段沒有同步時，協助您估計目前完成容錯移轉所需的時間以及遺失資料的可能性。 此外， **[狀態]** 頁面還會顯示鏡像工作階段的一般狀態和相關資訊。  

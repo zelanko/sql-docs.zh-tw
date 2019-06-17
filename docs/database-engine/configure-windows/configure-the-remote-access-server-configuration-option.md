@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 80c8b1690a4a0e38b591fe0614bb13e4ab028e1a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: ce926bbfbefce529a5d01607408818676f6d46f5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605148"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783819"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>設定 remote access 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主題是關於「遠端存取」功能。 這個組態選項是即將淘汰的模糊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通訊功能，建議您不要使用這項功能。 如果您因為無法連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而到達此頁面，請改為參閱下列其中一項主題：  
   
--   [教學課程：Database Engine 使用者入門](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
+-   [教學課程：資料庫引擎使用者入門](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
 -   [登入 SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md)  
   
@@ -41,11 +41,11 @@ ms.locfileid: "51605148"
   
  程式設計人員可能會對下列主題感興趣︰  
   
--   [如何：使用 ASP.NET 2.0 中的 SQL 驗證連接到 SQL Server](https://msdn.microsoft.com/library/ff648340.aspx)  
+-   [How To:Connect to SQL Server Using SQL Authentication in ASP.NET 2.0](https://msdn.microsoft.com/library/ff648340.aspx) (如何：使用 ASP.NET 2.0 中的 SQL 驗證連接到 SQL Server)  
   
 -   [連接到 SQL Server 的執行個體](../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)  
   
--   [如何︰建立與 SQL Server 資料庫的連線](https://msdn.microsoft.com/library/s4yys16a.aspx)  
+-   [操作說明：建立 SQL Server 資料庫的連線](https://msdn.microsoft.com/library/s4yys16a.aspx)  
   
  **從這裡開始是本主題的主要內文。**  
   
@@ -60,15 +60,15 @@ ms.locfileid: "51605148"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法設定 remote access 選項：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **待處理**  [設定 remote access 選項之後](#FollowUp)  
+-   **後續操作：**[設定遠端存取選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -78,7 +78,7 @@ ms.locfileid: "51605148"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -111,7 +111,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 待處理：設定 remote access 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定遠端存取選項之後  
  此設定在您重新啟動 SQL Server 後才會生效。  
   
 ## <a name="see-also"></a>另請參閱  

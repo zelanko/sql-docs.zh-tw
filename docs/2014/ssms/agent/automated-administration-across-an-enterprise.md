@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62473142"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>將整個企業的管理自動化
-  將多個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之間的管理自動化，稱為「多伺服器管理」(Multiserver Administration)。 使用多伺服器管理，可進行以下工作：  
+  將多個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之間的管理自動化，稱為「多伺服器管理」  (Multiserver Administration)。 使用多伺服器管理，可進行以下工作：  
   
 -   管理二或多部伺服器。  
   

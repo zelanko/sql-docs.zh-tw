@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 00d213bf8ca554b60edc8dc3de3f1290cd00f538
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62766890"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>以程式設計的方式載入和執行本機封裝
@@ -57,7 +57,7 @@ ms.locfileid: "62766890"
   
 1.  啟動 Visual Studio 開發環境，並以慣用的開發語言建立新應用程式。 此範例使用主控台應用程式，不過，您也可以從 Windows Form 應用程式、ASP.NET Web 表單或 Web 服務或是 Windows 服務執行封裝。  
   
-2.  在 [專案] 功能表上，按一下 [新增參考]，然後新增 **Microsoft.SqlServer.ManagedDTS.dll** 的參考。 按一下 [確定] 。  
+2.  在 [專案]  功能表上，按一下 [新增參考]  ，然後新增 **Microsoft.SqlServer.ManagedDTS.dll** 的參考。 按一下 [確定]  。  
   
 3.  使用 Visual Basic`Imports`陳述式或 C#`using`陳述式匯入**Microsoft.SqlServer.Dts.Runtime**命名空間。  
   

@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: d08fd9bbb91a3783cf176f150fc966d1b44a2fc4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485287"
 ---
 # <a name="deprecated-master-data-services-features"></a>取代的 Master Data Services 功能
@@ -33,7 +33,7 @@ ms.locfileid: "65485287"
   
 -   在總管中，衍生階層頁面現在會顯示每個階層層級未指派 (未使用) 的成員。 未使用的節點會依階層層級分組。 可以藉由拖放或剪下及貼上的方式，在未使用節點和根節點間移動成員。  
   
-     在 [系統管理] 中，未使用的節點會顯示在 [預覽] 窗格中。 在 [安全性] 中，未使用的節點會顯示在 [階層成員權限] 窗格中。 可以將權限指派給位在 [根] 節點或 [未使用] 節點下的成員。 也可以將權限指派給 [根]、[未使用] 和 [未使用] 虛擬成員。  
+     在 [系統管理] 中，未使用的節點會顯示在 [預覽]  窗格中。 在 [安全性] 中，未使用的節點會顯示在 [階層成員權限]  窗格中。 可以將權限指派給位在 [根]  節點或 [未使用]  節點下的成員。 也可以將權限指派給 [根]  、[未使用]  和 [未使用]  虛擬成員。  
   
 -   預存程序 mdm.udpConvertCollectionAndConsolidatedMembersToLeaf 將明確階層轉換為遞迴衍生階層，並將合併成員和集合成員轉換為分葉成員。  
   

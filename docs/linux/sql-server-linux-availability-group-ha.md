@@ -10,10 +10,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 35897b388e9bd026b643acbc6fbccda6c944c559
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66705589"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性群組組態的高可用性和資料保護

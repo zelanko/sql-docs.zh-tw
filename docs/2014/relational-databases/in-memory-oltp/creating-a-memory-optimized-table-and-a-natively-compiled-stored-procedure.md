@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 927a89c36019ebc7232a110f5a10fcbf2cfa74af
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63157982"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>建立記憶體最佳化資料表和原生編譯的預存程序

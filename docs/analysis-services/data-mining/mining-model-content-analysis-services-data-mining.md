@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5fe10a98910f54e4317d0191753d40b9b6b0b94f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62736079"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  當您已經使用基礎採礦結構中的資料來設計及處理採礦模型之後，該採礦模型會是完整的，並包含 *「採礦模型內容」*(Mining Model Content)。 您可以使用此內容來進行預測或分析資料。  
+  當您已經使用基礎採礦結構中的資料來設計及處理採礦模型之後，該採礦模型會是完整的，並包含 *「採礦模型內容」* (Mining Model Content)。 您可以使用此內容來進行預測或分析資料。  
   
  採礦模型內容包含有關模型的中繼資料、有關資料的統計資料及採礦演算法所找到的模式。 根據所使用的演算法而定，模型內容可能會包含迴歸公式、規則和項目集的定義，或是加權和其他統計資料。  
   
@@ -37,9 +37,9 @@ ms.locfileid: "62736079"
  [查詢採礦模型內容的工具](#bkmk_Querying)  
   
 ##  <a name="bkmk_Structure"></a> 採礦模型內容的結構  
- 每一個模型的內容都會呈現為一系列的 *「節點」*(Node)。 節點是採礦模型內的一個物件，其中包含有關此模型之一部分的中繼資料和資訊。 節點會排列在階層中。 階層中節點的精確管理和階層的意義取決於您所使用的演算法而定。 例如，如果您建立決策樹模型，此模型可包含多個樹狀結構，全都連接到模型根；如果您建立類神經網路模型，此模型可包含一或多個其他網路，再加上統計資料節點。  
+ 每一個模型的內容都會呈現為一系列的 *「節點」* (Node)。 節點是採礦模型內的一個物件，其中包含有關此模型之一部分的中繼資料和資訊。 節點會排列在階層中。 階層中節點的精確管理和階層的意義取決於您所使用的演算法而定。 例如，如果您建立決策樹模型，此模型可包含多個樹狀結構，全都連接到模型根；如果您建立類神經網路模型，此模型可包含一或多個其他網路，再加上統計資料節點。  
   
- 每一個模型中的第一個節點稱為 *「根節點」*(Root Node) 或 *「模型父節點」* (Model Parent Node)。 每個模型都有根節點 (NODE_TYPE = 1)。 根節點通常包含了有關模型的一些中繼資料及子節點數目，但是很少包含此模型所找到之模式的其他相關資訊。  
+ 每一個模型中的第一個節點稱為 *「根節點」* (Root Node) 或 *「模型父節點」* (Model Parent Node)。 每個模型都有根節點 (NODE_TYPE = 1)。 根節點通常包含了有關模型的一些中繼資料及子節點數目，但是很少包含此模型所找到之模式的其他相關資訊。  
   
  根據您用來建立模型的演算法而定，根節點具有各種不同的子節點數目。 子節點則具有不同的意義且包含了不同的內容 (根據演算法及資料的深度和複雜度而定)。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62736079"
 ### <a name="node-id-name-caption-and-description"></a>節點識別碼、名稱、標題和描述  
  任何模型的根節點一定會有唯一識別碼 (**NODE_UNIQUE_NAME**) 0。 所有節點識別碼都是由 Analysis Services 自動指派，而且無法修改。  
   
- 每一個模型的根節點也包含了有關此模型的一些基本中繼資料。 此中繼資料包含模型儲存所在的 Analysis Services 資料庫 (**MODEL_CATALOG**)、結構描述 (**MODEL_SCHEMA)**) 和模型的名稱 (**MODEL_NAME**)。 但是，此資訊會在模型的所有節點內重複，好讓您不需要查詢根節點，也可以取得此中繼資料。  
+ 每一個模型的根節點也包含了有關此模型的一些基本中繼資料。 此中繼資料包含模型儲存所在的 Analysis Services 資料庫 (**MODEL_CATALOG**)、結構描述 (**MODEL_SCHEMA)** ) 和模型的名稱 (**MODEL_NAME**)。 但是，此資訊會在模型的所有節點內重複，好讓您不需要查詢根節點，也可以取得此中繼資料。  
   
  除了當做唯一識別碼使用的名稱以外，每一個節點都有 *名稱* (**NODE_NAME**)。 此名稱是由演算法為了顯示所自動建立的，而且無法編輯。  
   

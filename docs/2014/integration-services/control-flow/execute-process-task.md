@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b21aa5d2834143ab012b90e0fa6f8a1e22a8314
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62831858"
 ---
 # <a name="execute-process-task"></a>執行處理工作
@@ -50,7 +50,7 @@ ms.locfileid: "62831858"
 ### <a name="property-settings"></a>屬性設定  
  當「執行處理」工作執行自訂應用程式時，此工作會透過下列一個或兩個方法提供輸入給應用程式：  
   
--   您在 [StandardInputVariable] 屬性設定中指定的變數。 如需變數的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)和[在封裝中使用變數](../use-variables-in-packages.md)。  
+-   您在 [StandardInputVariable]  屬性設定中指定的變數。 如需變數的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)和[在封裝中使用變數](../use-variables-in-packages.md)。  
   
 -   您在 **Arguments** 屬性設定中指定的引數。 (例如，如果工作使用 Word 開啟文件，則引數可能命名為 .doc 檔)。  
   

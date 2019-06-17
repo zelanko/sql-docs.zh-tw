@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 832ea48478eb28b94caf292067344a3754040b2b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62901790"
 ---
 # <a name="integration-services-paths"></a>Integration Services 路徑
@@ -29,17 +29,17 @@ ms.locfileid: "62901790"
  如果您在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中執行封裝，則可將資料檢視器附加到路徑，來檢視資料流程中的資料。 資料檢視器可以設定為在方格中顯示資料。 資料檢視器是一種有用的偵錯工具。 如需詳細資訊，請參閱 [偵錯資料流程](../troubleshooting/debugging-data-flow.md)。  
   
 ## <a name="configuration-of-the-path"></a>設定路徑  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師提供 [資料流程路徑編輯器] 對話方塊，用以設定路徑屬性、檢視通過該路徑之資料行的中繼資料，並設定資料檢視器。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師提供 [資料流程路徑編輯器]  對話方塊，用以設定路徑屬性、檢視通過該路徑之資料行的中繼資料，並設定資料檢視器。  
   
  可設定的路徑屬性包括名稱、描述及路徑的註解。 您還可以程式設計方式設定路徑。 如需詳細資訊，請參閱[以程式設計方式連接資料流程元件](../building-packages-programmatically/connecting-data-flow-components-programmatically.md)。  
   
- 路徑註解顯示路徑來源的名稱，或在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中 [資料流程] 索引標籤設計介面上的路徑名稱。 路徑註解與您可加入資料流程、控制流程和事件處理常式的註解相似。 唯一不同之處在於路徑註解是附加到路徑上的，而其他註解則顯示於 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [資料流程]、[控制流程] 和 [事件處理常式] 索引標籤上。  
+ 路徑註解顯示路徑來源的名稱，或在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中 [資料流程]  索引標籤設計介面上的路徑名稱。 路徑註解與您可加入資料流程、控制流程和事件處理常式的註解相似。 唯一不同之處在於路徑註解是附加到路徑上的，而其他註解則顯示於 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [資料流程]  、[控制流程]  和 [事件處理常式]  索引標籤上。  
   
  中繼資料顯示上一個元件輸出中之每個資料行的名稱、資料類型、有效位數、小數位數、長度、字碼頁和來源元件。 來源元件是建立資料行的資料流程元件。 但不一定是資料流程中的第一個元件。 例如，「聯集全部」和「排序」轉換都會建立自己的資料行，因此它們是其輸出資料行的來源。 相反地，「複製資料行」轉換可以通過資料行而不對其進行變更，或可以藉由複製輸入資料行來建立新的資料行。 因此「複製資料行」轉換僅是新資料行的來源元件。  
   
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可在 [資料流程路徑編輯器] 對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
+ 如需可在 [資料流程路徑編輯器]  對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
   
 -   [資料流程路徑編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   

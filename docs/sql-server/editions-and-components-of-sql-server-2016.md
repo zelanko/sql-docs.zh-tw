@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2016 的版本及支援功能 | Microsoft Docs
-ms.custom: ''
-ms.date: 05/24/2017
+ms.custom: sqlfreshmay19
+ms.date: 05/29/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -29,21 +29,22 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
+- CPSA
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12b7a440b8f100ff383deda7ad5c1dbc4c8a4578
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: cb908e8ff5af27e58fa97da1ce6b6626c8ed91db
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658432"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701619"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 的版本及支援功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-本主題提供 SQL Server 版本所支援功能的詳細資料。  此時 SQL Server 2017 各版本所支援的功能沒有任何變更。  
+本主題提供 SQL Server 版本所支援功能的詳細資料。 此時，SQL Server 2017 各版本所支援的功能沒有任何變更。  
   
 安裝需求根據應用程式的需要而異。 不同的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本可配合組織和個人的獨特效能、執行階段和價格需求。 安裝的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件也將取決於您的特定需求。 下列章節幫助您了解如何在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的可用版本和元件之間做出最好的選擇。  
 
@@ -66,16 +67,17 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|定義|  
 |---------------------------------------|----------------|  
-|Enterprise|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise Edition 這套頂級供應項目不但提供完整的高階資料中心功能，而且具備急速效能、不受限制的虛擬化以及端對端商業智慧 - 為關鍵任務工作負載提供最高的服務等級，並且讓使用者獲得資料洞察能力。|  
+|Enterprise|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise Edition 這套頂級供應項目不但提供完整的高階資料中心功能，而且具備急速效能、不受限制的虛擬化，以及端對端商業智慧 - 為任務關鍵性工作負載提供最高的服務等級，並讓終端使用者獲得資料洞察能力。|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard Edition 針對部門和小型組織提供基本的資料管理與商業智慧資料庫來執行應用程式，並且支援內部部署和雲端的一般開發工具 - 以最少的 IT 資源提供最有效率的資料庫管理。|  
-|Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition 對於 Web 主控者和 Web VAP 而言是一個整體擁有成本很低的選擇，可針對小型到大型規模的 Web 屬性提供可擴充、負擔輕鬆而且管理方便的功能。|  
+|Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition 對於 Web 主機服務提供者和 Web VAP 而言是一個擁有權總成本低廉的選項，可針對小型到大型規模的 Web 資產提供具延展性、負擔輕鬆且管理方便的功能。|  
 |Developer|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition 可讓開發人員在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上建立任何類型的應用程式。 其中包含 Enterprise Edition 的所有功能，但是只授權做為開發和測試系統使用，而不做為實際伺服器使用。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 對於建置 [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 和測試應用程式的人員來說是理想的選擇。|  
-|Express 版本|Express Edition 是入門級免費伺服器，非常適合用來學習及建置桌上型電腦和小型伺服器資料驅動應用程式。 這個版本是獨立軟體廠商、開發人員及建置用戶端應用程式之愛好者的最佳選擇。 如果您需要更進階的資料庫功能， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 可以順利地升級為其他更高階的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB 是輕量版 Express，其中包含所有程式設計功能但是以使用者模式執行，並配備快速的零設定安裝，而且所需必要條件很少。|  
+|Express 版本|Express Edition 是入門級免費伺服器，非常適合用來學習及建置桌上型電腦和小型伺服器資料驅動應用程式。 這個版本是獨立軟體廠商、開發人員及建置用戶端應用程式之愛好者的最佳選擇。 如果您需要更進階的資料庫功能， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 可以順利地升級為其他更高階的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB 是輕量版的 Express，其中包含所有程式設計功能，但卻可以使用者模式執行，並配備快速的零設定安裝，而且所需的必要條件很少。|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>搭配網際網路伺服器使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  在網際網路伺服器中，例如執行 Internet Information Services (IIS) 的伺服器，您通常會安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用戶端工具。 用戶端工具包括連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的應用程式所使用的用戶端連接元件。  
   
-> **注意：** 雖然您可以在執行 IIS 的電腦上安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，但通常只會對具有單一伺服器電腦的小型網站這樣做。 大部分網站會將它們的中介層 IIS 系統放在一部伺服器或伺服器叢集上，並將其資料庫放在另一部伺服器或伺服器聯盟上。  
+> [!NOTE]
+> 雖然您可以在執行 IIS 的電腦上安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，但通常只會對具有單一伺服器電腦的小型網站這樣做。 大部分網站會將它們的中介層 IIS 系統放在一部伺服器或伺服器叢集上，並將其資料庫放在另一部伺服器或伺服器聯盟上。  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>搭配用戶端/伺服器應用程式使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  您可以在執行用戶端/伺服器應用程式的電腦上只安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用戶端元件，這些應用程式會直接連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的執行個體。 如果您要在資料庫伺服器上管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，或您打算開發 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 應用程式，則用戶端元件安裝也是一個不錯的選項。  
@@ -112,7 +114,7 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
 
 **Developer 和 Evaluation 版本**  
 如需 Developer 和 Evaluation 版本所支援的功能，請參閱下列各表中針對 SQL Server Enterprise Edition 列出的功能。
-如需已新增至 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 之 Developer 版本的功能清單，請參閱 [SQL Server 2016 SP1 版本 (英文)](https://aka.ms/uw6cw4)。  
+
 
 Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md) 用戶端。 
   
@@ -131,7 +133,7 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
   
 <sup>1</sup> 新合約不適用的 Enterprise Edition (含伺服器 + 用戶端存取授權 (CAL)) 授權限制為每個 SQL Server 執行個體最多 20 個核心。 核心伺服器授權模式之下沒有任何限制。 如需詳細資訊，請參閱 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
-<sup>2</sup> 適用於 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1。 
+<sup>2</sup> 在跨版本建立常見程式設計介面區 (CPSA) 的過程中，套用至 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1。 
 
 ##  <a name="RDBMSHA"></a> RDBMS High Availability  
   
@@ -159,7 +161,7 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
 
 <sup>2</sup> 如需基本可用性群組的詳細資訊，請參閱 [基本可用性群組](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。  
 
-<sup>3</sup> 適用於 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1。
+<sup>3</sup> 在跨版本建立常見程式設計介面區 (CPSA) 的過程中，套用至 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1。 
   
 ##  <a name="RDBMSSP"></a> RDBMS Scalability and Performance  
   
@@ -177,18 +179,18 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
 |多個檔案資料流容器|是|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|
 |NUMA 感知大型分頁記憶體和緩衝區陣列配置|是|否 <sup>4</sup>|否|否|否|
 |緩衝集區擴充|是|是|否|否|否|
-|IO 資源管理|是|否|否|否|否|
+|I/O 資源管理|是|否|否|否|否|
 |預先讀取|是|否|否|否|否|
 |進階掃描|是|否|否|否|否|
 |延遲持久性|是|是|是|是|是|
 
 <sup>1</sup> 記憶體內部 OLTP 資料大小和資料行存放區區段快取都限制為版本「縮放限制」區段指定的記憶體數量。 平行處理原則的最大程度是有限的。 索引建置的平行處理原則 (DOP) 程度限制為 2 DOP (Standard Edition) 和 1 DOP (Web Edition 和 Express Edition)。 這會參考以磁碟式資料表和記憶體最佳化資料表建立的資料行存放區索引。
 
-<sup>2</sup> 適用於 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1。 
+<sup>2</sup> 在跨版本建立常見程式設計介面區 (CPSA) 的過程中，套用至 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1。  
 
 <sup>3</sup> 這項功能不會納入 LocalDB 安裝選項。
 
-<sup>4</sup> Standard Edition 與 SQL Server + CAL 型授權可以限制 SQL Server Standard 可使用的處理器數目，但 SQL Server Standard 是 NUMA 感知。 
+<sup>4</sup> Standard Edition 與 SQL Server + CAL 型授權可以限制 SQL Server Standard 可使用的處理器數目，但 SQL Server Standard 是 NUMA 感知的。 
 ##  <a name="RDBMSS"></a> RDBMS Security  
   
 |功能|Enterprise|Standard|Web|Express|Express with Advanced Services|  
@@ -204,7 +206,8 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
 |自主資料庫|是|是|是|是|是| 
 |備份的加密|是|是|否|否|否|  
 
-<sup>1</sup> 適用於 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1。  
+<sup>1</sup> 在跨版本建立常見程式設計介面區 (CPSA) 的過程中，套用至 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1。      
+
 ##  <a name="Replication"></a> Replication  
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|   
@@ -264,7 +267,7 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
   
  <sup>1</sup> 如需詳細資訊，請參閱 [使用 SysPrep 安裝 SQL Server 的考量](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。  
  
-<sup>2</sup> 適用於 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1。 
+<sup>2</sup> 在跨版本建立常見程式設計介面區 (CPSA) 的過程中，套用至 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1。      
   
 ##  <a name="DevTools"></a> Development Tools  
   
@@ -302,7 +305,7 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
 
 <sup>1</sup> 使用多個運算節點向外延展時需要標題節點。
 
-<sup>2</sup> 適用於 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1。
+<sup>2</sup> 在跨版本建立常見程式設計介面區 (CPSA) 的過程中，套用至 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1。     
   
 ## <a name="IS"></a> Integration Services
 
@@ -324,7 +327,8 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
 |分割區資料表和索引上的查詢平行處理|是|否|否|否|否|   
 |全域批次彙總|是|否|否|否|否| 
 
-<sup>1</sup> 適用於 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] SP1。  
+<sup>1</sup> 在跨版本建立常見程式設計介面區 (CPSA) 的過程中，套用至 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1。     
+
 ##  <a name="SSAS"></a> Analysis Services  
   
 如需 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 版本所支援之 Analysis Services 功能的資訊，請參閱 [SQL Server 版本支援的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。 
@@ -379,7 +383,6 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
 > [![Download SSMS](../analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**      
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 的產品規格](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
  [SQL Server 安裝](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  
   

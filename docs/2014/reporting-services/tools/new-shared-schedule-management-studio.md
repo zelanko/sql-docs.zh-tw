@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 083fa7998e347b3aa3abe7aacbf9585a18047b20
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100230"
 ---
 # <a name="new-shared-schedule-management-studio"></a>新增共用排程 (Management Studio)
@@ -26,10 +26,10 @@ ms.locfileid: "66100230"
   
  排程處理是以主控和處理排程之報表伺服器的本機時間為基礎。  
   
- 若要開啟此頁面，請啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、連線至報表伺服器、以滑鼠右鍵按一下 [共用排程]，然後選取 [新增排程]。 若要儲存排程，SQL Server Agent 服務必須正在執行。  
+ 若要開啟此頁面，請啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、連線至報表伺服器、以滑鼠右鍵按一下 [共用排程]  ，然後選取 [新增排程]  。 若要儲存排程，SQL Server Agent 服務必須正在執行。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供此功能。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供此功能。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ## <a name="options"></a>選項  
  **名稱**  

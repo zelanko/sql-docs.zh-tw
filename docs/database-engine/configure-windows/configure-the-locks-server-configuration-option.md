@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d8681bfa94a859e5ce63a74e26960c64db3b7528
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 06ce19dba1624455bdc470cfeec7b16655ec3d3b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755346"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794191"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>設定 locks 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47755346"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法設定 locks 選項：**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47755346"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **待處理**  [設定 locks 選項之後](#FollowUp)  
+-   **後續操作：**[設定鎖定選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -100,7 +100,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 待處理：設定 locks 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定鎖定選項之後  
  伺服器必須重新啟動之後，設定才能生效。  
   
 ## <a name="see-also"></a>另請參閱  

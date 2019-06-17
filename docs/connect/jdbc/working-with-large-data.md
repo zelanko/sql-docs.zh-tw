@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 193139b324122fc4fb7f429d082e533c4f7741d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e81fbaeaae269cb43825ad270d45c2f319c662d7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642216"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781034"
 ---
 # <a name="working-with-large-data"></a>使用大型資料
 

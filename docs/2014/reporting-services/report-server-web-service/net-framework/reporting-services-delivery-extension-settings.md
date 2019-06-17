@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d356bc1cb981479de8a4b1baa3bdaaf45b6145ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63260753"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 傳遞延伸模組設定

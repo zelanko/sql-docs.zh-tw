@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ab1a5e0e9838975b8c0e4912a8179784f488d43e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921096"
 ---
 # <a name="specify-a-disk-or-tape-as-a-backup-destination-sql-server"></a>指定磁碟或磁帶做為備份目的地 (SQL Server)
@@ -60,13 +60,13 @@ ms.locfileid: "62921096"
   
 1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱展開伺服器樹狀目錄。  
   
-2.  展開 **[資料庫]**，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
+2.  展開 **[資料庫]** ，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，指向 **[工作]**，然後按一下 **[備份]**。 會出現 **[備份資料庫]** 對話方塊。  
+3.  以滑鼠右鍵按一下資料庫，指向 **[工作]** ，然後按一下 **[備份]** 。 會出現 **[備份資料庫]** 對話方塊。  
   
-4.  在 **[一般]** 頁面的 **[目的地]** 區段中，按一下 **[磁碟]** 或 **[磁帶]**。 若要選取包含單一媒體集的磁碟或磁帶機 (最多 64 個) 的路徑，請按一下 **[加入]**。  
+4.  在 **[一般]** 頁面的 **[目的地]** 區段中，按一下 **[磁碟]** 或 **[磁帶]** 。 若要選取包含單一媒體集的磁碟或磁帶機 (最多 64 個) 的路徑，請按一下 **[加入]** 。  
   
-     若要移除備份目的地，請選取目的地，然後按一下 **[移除]**。 若要檢視備份目的地的內容，請選取目的地，然後按一下 **[內容]**。  
+     若要移除備份目的地，請選取目的地，然後按一下 **[移除]** 。 若要檢視備份目的地的內容，請選取目的地，然後按一下 **[內容]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62921096"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  在 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 陳述式中，指定檔案或裝置及其實體名稱。 這個範例會將 `AdventureWorks2012` 資料庫備份到磁碟檔案 `Z:\SQLServerBackups\AdventureWorks2012.Bak`。  
   

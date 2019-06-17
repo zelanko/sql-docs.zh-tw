@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4afd51b971a0f1a00a65758b76edc449101fdf9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bc4bb6bbea3f8f6577e79d819317a0a89b5cbdc9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611266"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795497"
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>資料庫鏡像 - 使用傳出連接的憑證
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -168,9 +168,9 @@ GO
 > [!IMPORTANT]  
 >  在設定傳出連接後，您必須在每個伺服器執行個體上設定其他一或多個伺服器執行個體的傳入連接。 如需詳細資訊，請參閱[允許資料庫鏡像端點使用傳入連接的憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)。  
   
- 如需建立鏡像資料庫的資訊，包括 Transact-SQL 範例在內，請參閱[準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
+ 如需建立鏡像資料庫的相關資訊，包括 Transact-SQL 範例在內，請參閱[準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
- 如需建立高效能模式工作階段的 Transact-SQL 範例，請參閱 [範例：使用憑證設定資料庫鏡像 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
+ 如需建立高效能模式工作階段的 Transact-SQL 範例，請參閱[範例：使用憑證設定資料庫鏡像 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  除非您可保證網路的安全無虞，否則建議您對資料庫鏡像連接使用加密。  

@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bf1b08abe58c8f46cc8f48d87115281d3d72bad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63070878"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>排序及群組查詢結果 (Visual Database Tools)

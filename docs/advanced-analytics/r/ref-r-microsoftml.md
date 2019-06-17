@@ -3,17 +3,17 @@ title: MicrosoftML R 函式程式庫-SQL Server Machine Learning 服務
 description: 在 SQL Server 2016 R Services 和 SQL Server 2017 Machine Learning 服務與 r 的 MicrosoftML 函式程式庫簡介
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/04/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 73d9dcf56c0eb5e69704adf169946f6aa28a432c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0266f6288e0b28ebd56c2aff634dc27a1ec72b06
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62641820"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140491"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML （SQL Server 中的 R 程式庫）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -140,7 +140,7 @@ ms.locfileid: "62641820"
 
 中的函式**MicrosoftML**封裝在預存程序中的 R 程式碼中呼叫。 大部分的開發人員建置**MicrosoftML**解決方案在本機，然後將完成的 R 程式碼移轉到預存程序中，部署練習變更。
 
-**MicrosoftML** R 是已安裝 「--現成的 「 SQL Server 2017 中的封裝。 如果您升級執行個體的 R 元件，它是也適用於 SQL Server 2016:[使用繫結的 SQL Server 執行個體進行升級](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+**MicrosoftML** R 是已安裝 「--現成的 「 SQL Server 2017 中的封裝。 如果您升級執行個體的 R 元件，它是也適用於 SQL Server 2016:[使用繫結的 SQL Server 執行個體進行升級](../install/upgrade-r-and-python.md)
 
 預設不會載入封裝。 第一個步驟中，載入**MicrosoftML**套件，並接著載入**RevoScaleR**如果您要使用遠端計算內容或相關的連線或資料來源物件。 然後，參考您需要個別的函式。
 

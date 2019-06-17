@@ -10,10 +10,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 79ffc57fd8d8dffbda0afd623b652e0d05764f98
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705433"
 ---
 # <a name="backup-files-must-be-on-separate-devices-from-the-database-files"></a>備份檔案必須位在與資料庫檔案不同的裝置上

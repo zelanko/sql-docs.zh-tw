@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e4b972abd2674d88274545d1ce4394be88f43c65
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983067"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
@@ -48,14 +48,14 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @tabname = ] 'qualified_table_name'` 這是一或兩部分資料表名稱。 資料表必須在目前的資料庫中。 資料表必須具有全文檢索索引。 *qualified_table_name&lt*已**nvarchar(517)**，沒有預設值。  
+`[ @tabname = ] 'qualified_table_name'` 這是一或兩部分資料表名稱。 資料表必須在目前的資料庫中。 資料表必須具有全文檢索索引。 *qualified_table_name&lt*已**nvarchar(517)** ，沒有預設值。  
   
 `[ @colname = ] 'column_name'` 中的資料行名稱*qualified_table_name&lt*。 這個資料行必須是 character **varbinary （max)** 或是**映像**資料行，不能是計算資料行。 *column_name*已**sysname**，沒有預設值。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以建立全文檢索索引中的資料行所儲存之文字資料**varbinary （max)** 或是**映像**資料型別。 影像和圖片沒有索引。  
   
-`[ @action = ] 'action'` 是要執行的動作。 *動作*已**varchar （20)**，沒有預設值，它可以是下列值之一。  
+`[ @action = ] 'action'` 是要執行的動作。 *動作*已**varchar （20)** ，沒有預設值，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  

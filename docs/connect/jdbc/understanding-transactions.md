@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d3e0414c-6809-4bb1-93b1-4960507faecc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3c5e05c40ffcdcffed884cd5d10dc5219b59f25f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ad6ccc7f65d6d4c65fb1bb63b58e0b13269ea351
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812007"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788389"
 ---
 # <a name="understanding-transactions"></a>了解交易
 

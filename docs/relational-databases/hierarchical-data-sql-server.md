@@ -1,7 +1,7 @@
 ---
 title: 階層式資料 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/01/2017
+ms.date: 09/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,15 +19,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cf997219044de427ed968ca39928e1449f73e60
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b4cca30125bd6b8fb69893332924d18fbb461cd9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659477"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706920"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層式資料 (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   內建 **hierarchyid** 資料類型讓儲存與查詢階層式資料更容易。 **hierarchyid** 最適合表示樹狀目錄，這是階層式資料最常見的類型。  
   
  階層式資料的定義為一組資料項目，這些資料項目會依據階層式關聯性，彼此相關。 階層式關聯性表示資料的一個項目是另一個項目的父代。 通常儲存在資料庫的階層式資料範例包含下列：  
@@ -82,7 +84,7 @@ ms.locfileid: "51659477"
 ### <a name="parentchild"></a>父子式  
  使用父子式方式時，每個資料列都包含一個父系的參考。 下表定義在父子關聯性中包含父系和子系資料列時所使用的一般資料表：  
   
-```  
+```sql
 USE AdventureWorks2012 ;  
 GO  
   
@@ -115,7 +117,7 @@ GO
   
      如果非分葉子樹經常移動且效能非常重要，但是大部分的移動都是在定義良好的階層層級進行時，請考慮將較高和較低的層級分割為兩個階層。 這樣會全部移到較高階層的分葉層級中。 例如，請考慮由服務主控之網站的階層。 網站包含許多以階層方式排列的頁面。 主控的網站可能會移到網站階層的其他位置，但是從屬的頁面很少會重新排列。 這可能會透過下列方式表示：  
   
-    ```  
+    ```sql
     CREATE TABLE HostedSites   
        (  
         SiteId hierarchyid, PageId hierarchyid  
@@ -137,7 +139,7 @@ GO
   
  例如，如果應用程式追蹤多個組織，務必儲存與擷取完整的組織階層，而且不要在單一組織中查詢，下列表單的資料表才可能有意義：  
   
-```  
+```sql
 CREATE TABLE XMLOrg   
     (  
     Orgid int,  
@@ -162,14 +164,14 @@ GO
   
      在廣度優先的索引中，節點的所有直接子系都會位於相同位置。 因此，廣度優先的索引在回應關於下層子系的查詢 (例如，「尋找直接回報給此經理的所有員工」) 時很有效率。  
   
- 不論是讓深度優先、廣度優先，或是兩者，還是那個要產生叢集索引鍵 (如果有的話)，都取決於上述查詢類型的相對重要性，以及 SELECT 和DML 作業的相對重要性。 如需索引策略的詳細範例，請參閱＜ [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)＞。  
+ 不論是讓深度優先、廣度優先，或是兩者，還是那個要產生叢集索引鍵 (如果有的話)，都取決於上述查詢類型的相對重要性，以及 SELECT 和DML 作業的相對重要性。 如需索引策略的詳細範例，請參閱[教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)。  
   
   
 ### <a name="creating-indexes"></a>建立索引  
  GetLevel() 方法可以用來建立廣度優先排序。 在下列範例中，會同時建立廣度優先和深度優先的索引：  
   
-```wmimof  
-USE AdventureWorks2012 ;   
+```sql
+USE AdventureWorks2012 ;   -- wmimof
 GO  
   
 CREATE TABLE Organization  
@@ -181,11 +183,11 @@ CREATE TABLE Organization
 GO  
   
 CREATE CLUSTERED INDEX Org_Breadth_First   
-ON Organization(OrgLevel,BusinessEntityID) ;  
+    ON Organization(OrgLevel,BusinessEntityID) ;  
 GO  
   
 CREATE UNIQUE INDEX Org_Depth_First   
-ON Organization(BusinessEntityID) ;  
+    ON Organization(BusinessEntityID) ;  
 GO  
 ```  
   
@@ -195,18 +197,20 @@ GO
 ### <a name="simple-example"></a>簡單範例  
  下列範例有意經過簡化以協助您開始使用。 首先，建立資料表以保留一些地理資料。  
   
-```  
+```sql
 CREATE TABLE SimpleDemo  
-(Level hierarchyid NOT NULL,  
-Location nvarchar(30) NOT NULL,  
-LocationType nvarchar(9) NULL);  
+(
+    Level hierarchyid NOT NULL,  
+    Location nvarchar(30) NOT NULL,  
+    LocationType nvarchar(9) NULL
+);
 ```  
   
  現在，插入一些大陸、國家/地區、州和城市的資料。  
   
-```  
+```sql
 INSERT SimpleDemo  
-VALUES   
+    VALUES   
 ('/1/', 'Europe', 'Continent'),  
 ('/2/', 'South America', 'Continent'),  
 ('/1/1/', 'France', 'Country'),  
@@ -223,9 +227,9 @@ VALUES
   
  選取資料，並加入資料行以將層級資料轉換為容易了解的文字值。 此查詢也會依 **hierarchyid** 資料類型來排序結果。  
   
-```  
+```sql
 SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], *   
-FROM SimpleDemo ORDER BY Level;  
+    FROM SimpleDemo ORDER BY Level;  
 ```  
   
  [!INCLUDE[ssResult](../includes/ssresult-md.md)]  
@@ -250,9 +254,9 @@ Converted Level  Level     Location         LocationType
   
  加入另一個資料列並選取結果。  
   
-```  
+```sql
 INSERT SimpleDemo  
-VALUES ('/1/3/1/', 'Kyoto', 'City'), ('/1/3/1/', 'London', 'City');  
+    VALUES ('/1/3/1/', 'Kyoto', 'City'), ('/1/3/1/', 'London', 'City');  
 SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], * FROM SimpleDemo ORDER BY Level;  
 ```  
   
@@ -260,15 +264,15 @@ SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], * FROM SimpleDemo ORDE
   
  此外，此資料表未使用階層 `'/'`的頂端。 由於所有大陸沒有共同的父系，因此已省略。 您可以加入整個地球，以加入一個父系。  
   
-```  
+```sql
 INSERT SimpleDemo  
-VALUES ('/', 'Earth', 'Planet');  
+    VALUES ('/', 'Earth', 'Planet');  
 ```  
   
 ##  <a name="tasks"></a> 相關工作  
   
 ###  <a name="migrating"></a> 從父子式移轉到 hierarchyid  
- 大部分的樹狀目錄都是使用 [父子式] 代表。 從 [父子式] 結構遷移到使用 **hierarchyid** 的資料表最簡單的方式，就是使用暫存資料行或暫存資料表來追蹤每個階層層級的節點數。 如需遷移 [父子式] 資料表的範例，請參閱 [教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 課。  
+ 大部分的樹狀目錄都是使用 [父子式] 代表。 從 [父子式] 結構遷移到使用 **hierarchyid** 的資料表最簡單的方式，就是使用暫存資料行或暫存資料表來追蹤每個階層層級的節點數。 如需移轉父子式資料表的範例，請參閱[教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 課。  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> 使用 hierarchyid 管理樹狀結構  
@@ -290,7 +294,7 @@ VALUES ('/', 'Earth', 'Planet');
 #### <a name="example-using-error-detection"></a>使用錯誤偵測的範例  
  在下列範例中，範例程式碼會計算新子系的 **EmployeeId** 值，然後偵測任何索引鍵違規，並傳回 **INS_EMP** 標記，以便為新的資料列重新計算 **EmployeeId** 值：  
   
-```  
+```sql
 USE AdventureWorks ;  
 GO  
   
@@ -302,18 +306,18 @@ CREATE TABLE Org_T1
    ) ;  
 GO  
   
-CREATE INDEX Org_BreadthFirst ON Org_T1(OrgLevel, EmployeeId)  
+CREATE INDEX Org_BreadthFirst ON Org_T1(OrgLevel, EmployeeId);
 GO  
   
 CREATE PROCEDURE AddEmp(@mgrid hierarchyid, @EmpName nvarchar(50) )   
 AS  
 BEGIN  
-    DECLARE @last_child hierarchyid  
+    DECLARE @last_child hierarchyid;
 INS_EMP:   
     SELECT @last_child = MAX(EmployeeId) FROM Org_T1   
-    WHERE EmployeeId.GetAncestor(1) = @mgrid  
-INSERT Org_T1 (EmployeeId, EmployeeName)  
-SELECT @mgrid.GetDescendant(@last_child, NULL), @EmpName   
+        WHERE EmployeeId.GetAncestor(1) = @mgrid;
+    INSERT INTO Org_T1 (EmployeeId, EmployeeName)  
+        SELECT @mgrid.GetDescendant(@last_child, NULL), @EmpName;
 -- On error, return to INS_EMP to recompute @last_child  
 IF @@error <> 0 GOTO INS_EMP   
 END ;  
@@ -324,7 +328,7 @@ GO
 #### <a name="example-using-a-serializable-transaction"></a>使用序列化交易的範例  
  **Org_BreadthFirst** 索引可確定判斷 **@last_child** 會使用範圍搜尋。 除了應用程式可能想要檢查的其他錯誤情況之外，插入後的重複索引鍵違規會指出新增多個具有相同識別碼之員工的嘗試，因此必須重新計算 **@last_child** 。 下列程式碼使用序列化交易與廣度優先索引來計算新的節點值：  
   
-```  
+```sql
 CREATE TABLE Org_T2  
     (  
     EmployeeId hierarchyid PRIMARY KEY,  
@@ -351,7 +355,7 @@ END ;
   
  下列程式碼會使用三個資料列擴展資料表，然後傳回結果：  
   
-```  
+```sql
 INSERT Org_T2 (EmployeeId, EmployeeName)   
     VALUES(hierarchyid::GetRoot(), 'David') ;  
 GO  
@@ -376,7 +380,7 @@ EmployeeId LastChild EmployeeName
 ###  <a name="BKMK_EnforcingTrees"></a> 強制執行樹狀結構  
  以上的範例說明應用程式可以如何確保樹狀結構的維護。 若要透過條件約束強制執行樹狀結構，定義每個節點之父系的計算資料行可以使用傳回主要索引鍵識別碼的外部索引鍵條件約束建立。  
   
-```  
+```sql
 CREATE TABLE Org_T3  
 (  
    EmployeeId hierarchyid PRIMARY KEY,  
@@ -396,17 +400,17 @@ GO
   
  使用下列的 CLR 程式碼，列出上階並尋找最低通用上階：  
   
-```  
+```csharp
 using System;  
 using System.Collections;  
 using System.Text;  
-using Microsoft.SqlServer.Server;  
-using Microsoft.SqlServer.Types;  
+using Microsoft.SqlServer.Server;  // SqlFunction Attribute
+using Microsoft.SqlServer.Types;   // SqlHierarchyId
   
 public partial class HierarchyId_Operations  
 {  
-    [SqlFunction(FillRowMethodName = "FillRow_ListAncestors")]  
-    public static IEnumerable ListAncestors(SqlHierarchyId h)  
+    [SqlFunction(FillRowMethodName = "FillRow_ListAncestors")]
+    public static IEnumerable ListAncestors(SqlHierarchyId h)
     {  
         while (!h.IsNull)  
         {  
@@ -414,14 +418,20 @@ public partial class HierarchyId_Operations
             h = h.GetAncestor(1);  
         }  
     }  
-    public static void FillRow_ListAncestors(Object obj, out SqlHierarchyId ancestor)  
+    public static void FillRow_ListAncestors(
+        Object obj,
+        out SqlHierarchyId ancestor
+        )
     {  
         ancestor = (SqlHierarchyId)obj;  
     }  
   
-    public static HierarchyId CommonAncestor(SqlHierarchyId h1, HierarchyId h2)  
+    public static HierarchyId CommonAncestor(
+        SqlHierarchyId h1,
+        HierarchyId h2
+        )  
     {  
-        while (!h1.IsDescendant(h2))  
+        while (!h1.IsDescendantOf(h2))  
             h1 = h1.GetAncestor(1);  
   
         return h1;  
@@ -431,9 +441,9 @@ public partial class HierarchyId_Operations
   
  若要在下列 **範例中使用** ListAncestor **和** CommonAncestor [!INCLUDE[tsql](../includes/tsql-md.md)] 方法執行類似如下的程式碼，請在 **中建置 DLL 並建立** HierarchyId_Operations [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組件：  
   
-```  
+```sql
 CREATE ASSEMBLY HierarchyId_Operations   
-FROM '<path to DLL>\ListAncestors.dll'  
+    FROM '<path to DLL>\ListAncestors.dll';
 GO  
 ```  
   
@@ -443,7 +453,7 @@ GO
   
  使用 [!INCLUDE[tsql](../includes/tsql-md.md)]：  
   
-```  
+```sql
 CREATE FUNCTION ListAncestors (@node hierarchyid)  
 RETURNS TABLE (node hierarchyid)  
 AS  
@@ -453,7 +463,7 @@ GO
   
  使用範例：  
   
-```  
+```sql
 DECLARE @h hierarchyid  
 SELECT @h = OrgNode   
 FROM HumanResources.EmployeeDemo    
@@ -470,7 +480,7 @@ GO
 ###  <a name="lowestcommon"></a> 尋找最低通用上階  
  使用以上定義的 **HierarchyId_Operations** 類別建立下列的 [!INCLUDE[tsql](../includes/tsql-md.md)] 函數，尋找與階層中兩個節點相關的最低通用上階：  
   
-```  
+```sql
 CREATE FUNCTION CommonAncestor (@node1 hierarchyid, @node2 hierarchyid)  
 RETURNS hierarchyid  
 AS  
@@ -480,16 +490,16 @@ GO
   
  使用範例：  
   
-```  
-DECLARE @h1 hierarchyid, @h2 hierarchyid  
+```sql
+DECLARE @h1 hierarchyid, @h2 hierarchyid;
   
 SELECT @h1 = OrgNode   
 FROM  HumanResources.EmployeeDemo   
-WHERE LoginID = 'adventure-works\jossef0' -- Node is /1/1/3/  
+WHERE LoginID = 'adventure-works\jossef0'; -- Node is /1/1/3/  
   
 SELECT @h2 = OrgNode   
 FROM HumanResources.EmployeeDemo    
-WHERE LoginID = 'adventure-works\janice0' -- Node is /1/1/5/2/  
+WHERE LoginID = 'adventure-works\janice0'; -- Node is /1/1/5/2/  
   
 SELECT OrgNode.ToString() AS LogicalNode, LoginID   
 FROM HumanResources.EmployeeDemo    
@@ -502,7 +512,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
 ###  <a name="BKMK_MovingSubtrees"></a> 移動子樹  
  另一個常見的作業是移動子樹。 以下的程序使用 **@oldMgr** 的樹狀子目錄，並讓其 (包括 **@oldMgr**) 成為 **@newMgr**進行子樹查詢時，速度明顯加快。  
   
-```  
+```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  
 AS  
 BEGIN  
@@ -520,7 +530,7 @@ UPDATE HumanResources.EmployeeDemo
 SET OrgNode = OrgNode.GetReparentedValue(@nold, @nnew)  
 WHERE OrgNode.IsDescendantOf(@nold) = 1 ;  
   
-COMMIT TRANSACTION  
+COMMIT TRANSACTION;
 END ;  
 GO  
 ```  
@@ -528,7 +538,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [Hierarchyid 資料類型方法參考](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

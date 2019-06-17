@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: ae3cc8d39ec9c181d6e99a41acb3a0590ebc77ee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860629"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789650"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>設定 Always On 可用性群組的延伸事件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,13 +25,7 @@ ms.locfileid: "58860629"
 ```sql  
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
-  
- [Alwayson_health 工作階段](always-on-extended-events.md#BKMK_alwayson_health)  
-  
- [偵錯的擴充事件](always-on-extended-events.md#BKMK_Debugging)  
-  
- [Always On 可用性群組擴充事件參考](always-on-extended-events.md#BKMK_Reference)  
-  
+   
 ##  <a name="BKMK_alwayson_health"></a> Alwayson_health 工作階段  
  Alwayson_health 擴充事件工作階段是在您建立可用性群組時自動建立，會擷取可用性群組相關事件的子集。 此工作階段已預先設定為實用且方便的工具，可協助您對可用性群組進行疑難排解時快速開始。 「建立可用性群組精靈」會自動在精靈中設定的每個參與可用性複本上啟動工作階段。  
   
@@ -91,7 +85,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 |「資料行」|Description|  
 |------------|-----------------|  
 |[屬性]|availability_replica_state_change|  
-|類別目錄|alwayson|  
+|類別目錄|永遠開啟|  
 |通路|作業|  
   
 #### <a name="event-fields"></a>事件欄位  
@@ -122,7 +116,7 @@ GO
 |「資料行」|Description|  
 |------------|-----------------|  
 |[屬性]|availability_group_lease_expired|  
-|類別目錄|alwayson|  
+|類別目錄|永遠開啟|  
 |通路|作業|  
   
 #### <a name="event-fields"></a>事件欄位  
@@ -150,7 +144,7 @@ GO
 |[屬性]|Description|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
-|類別目錄|alwayson|  
+|類別目錄|永遠開啟|  
 |通路|分析|  
   
 #### <a name="event-fields"></a>事件欄位  
@@ -250,7 +244,7 @@ GO
 |「資料行」|Description|  
 |------------|-----------------|  
 |[屬性]|data_movement_suspend_resume|  
-|類別目錄|Alwayson|  
+|類別目錄|永遠開啟|  
 |通路|作業|  
   
 #### <a name="event-fields"></a>事件欄位  
@@ -293,7 +287,7 @@ GO
 |「資料行」|Description|  
 |------------|-----------------|  
 |[屬性]|alwayson_ddl_execution|  
-|類別目錄|alwayson|  
+|類別目錄|永遠開啟|  
 |通路|分析|  
   
 #### <a name="event-fields"></a>事件欄位  
@@ -326,7 +320,7 @@ GO
 |「資料行」|Description|  
 |------------|-----------------|  
 |[屬性]|availability_replica_manager_state_change|  
-|類別目錄|alwayson|  
+|類別目錄|永遠開啟|  
 |通路|作業|  
   
 #### <a name="event-fields"></a>事件欄位  

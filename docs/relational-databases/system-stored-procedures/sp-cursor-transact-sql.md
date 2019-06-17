@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3277e64e4c4e04e270298d3532ebc0c2b1f93c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724203"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
@@ -159,7 +159,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  如果插入*\<資料表名稱 >* 指定，則指定的任何值*表格*參數將會被忽略。  
+>  如果插入 *\<資料表名稱 >* 指定，則指定的任何值*表格*參數將會被忽略。  
   
  當使用多個參數時，第一個參數必須是以下格式的字串：  
   

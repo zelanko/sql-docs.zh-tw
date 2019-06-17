@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 57eb4f021a25fa2fa559fa7ff21d12bb621cc53a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126907"
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>設定警示以便向原則管理員通知原則失敗
@@ -45,7 +45,7 @@ ms.locfileid: "63126907"
 ## <a name="additional-considerations-about-alerts"></a>關於警示的其他考量  
  請注意下列關於警示的其他考量：  
   
--   系統只會針對啟用的原則引發警示。 由於無法啟用 [視需要] 原則，因此無法針對視需要執行的原則引發警示。  
+-   系統只會針對啟用的原則引發警示。 由於無法啟用 [視需要]  原則，因此無法針對視需要執行的原則引發警示。  
   
 -   如果您想要採取的動作包含傳送電子郵件訊息，就必須設定郵件帳戶。 我們建議您使用 Database Mail。 如需設定 Database Mail 的詳細資訊，請參閱 [建立 Database Mail 帳戶](../database-mail/create-a-database-mail-account.md)。  
   

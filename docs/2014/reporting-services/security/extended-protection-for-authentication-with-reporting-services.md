@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1ce348edd9b4d4b6260a0eea56fe28656b03985
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101950"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>含有 Reporting Services 的驗證擴充保護
@@ -113,7 +113,7 @@ ms.locfileid: "66101950"
 |設定|描述|  
 |-------------|-----------------|  
 |`RSWindowsExtendedProtectionLevel`|指定擴充保護的強制執行程度。 有效值為 `Off`、`Allow` 及 `Require`。<br /><br /> 預設值是 `Off`。<br /><br /> 值為 `Off` 時，不會指定通道繫結或服務繫結驗證。<br /><br /> 值為 `Allow` 時，則支援擴充保護但並不需要它。 Allow 這個值會指定：<br /><br /> 擴充保護將會針對在支援擴充保護之作業系統上執行的用戶端應用程式強制執行。 您可以設定 `RsWindowsExtendedProtectionScenario` 來決定強制執行保護的方式。<br /><br /> 對於在不支援擴充保護之作業系統上執行的應用程式，不允許執行驗證。<br /><br /> `Require` 這個值會指定：<br /><br /> 擴充保護將會針對在支援擴充保護之作業系統上執行的用戶端應用程式強制執行。<br /><br /> 驗證會**不**允許不支援擴充的保護之作業系統執行的應用程式。|  
-|`RsWindowsExtendedProtectionScenario`|指定驗證擴充保護的何種形式：通道繫結、 服務繫結，或兩者。 有效值為 `Any`、`Proxy` 及 `Direct`。<br /><br /> 預設值是 `Proxy`。<br /><br /> `Any` 這個值會指定：<br /><br /> - Windows NTLM、Kerberos 和交涉驗證，而不需要通道繫結。<br /><br /> - 服務繫結會強制執行。<br /><br /> `Proxy` 這個值會指定：<br /><br /> - Windows NTLM、Kerberos 和交涉驗證 (當通道繫結權杖存在時)。<br /><br /> - 服務繫結會強制執行。<br /><br /> `Direct` 這個值會指定：<br /><br /> - Windows NTLM、Kerberos 和交涉驗證 (當 CBT 存在、目前服務的 SSL 連線存在，而且 SSL 連線的 CBT 與 NTLM、Kerberos 或交涉權杖的 CBT 相符時)。<br /><br /> - 服務繫結不會強制執行。<br /><br /> <br /><br /> 注意:如果這項設定就會忽略`RsWindowsExtendedProtectionLevel`設為`OFF`。|  
+|`RsWindowsExtendedProtectionScenario`|指定驗證擴充保護的何種形式：通道繫結、 服務繫結，或兩者。 有效值為 `Any`、`Proxy` 及 `Direct`。<br /><br /> 預設值是 `Proxy`。<br /><br /> `Any` 這個值會指定：<br /><br /> \- Windows NTLM、Kerberos 和交涉驗證，而不需要通道繫結。<br /><br /> \- 服務繫結會強制執行。<br /><br /> `Proxy` 這個值會指定：<br /><br /> \- Windows NTLM、Kerberos 和交涉驗證 (當通道繫結權杖存在時)。<br /><br /> \- 服務繫結會強制執行。<br /><br /> `Direct` 這個值會指定：<br /><br /> \- Windows NTLM、Kerberos 和交涉驗證 (當 CBT 存在、目前服務的 SSL 連線存在，而且 SSL 連線的 CBT 與 NTLM、Kerberos 或交涉權杖的 CBT 相符時)。<br /><br /> \- 服務繫結不會強制執行。<br /><br /> <br /><br /> 注意:如果這項設定就會忽略`RsWindowsExtendedProtectionLevel`設為`OFF`。|  
   
  `rsreportserver.config` 組態檔中的範例項目：  
   

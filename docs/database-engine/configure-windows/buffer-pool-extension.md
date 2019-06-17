@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43423c8db03d27c26558672d287415fa5e12d638
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: 0f0736e2a0a0824187d3a3ba8bac9573efe6bb9f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255953"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786805"
 ---
 # <a name="buffer-pool-extension"></a>緩衝集區擴充
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "54255953"
   
  資料與索引頁面都會從磁碟讀入緩衝集區，而修改的頁面 (也稱為中途分頁) 則會重新寫入磁碟。 伺服器和資料庫檢查點的記憶體壓力會導致緩衝區快取中使用頻繁 (使用中) 的中途分頁從快取收回並寫入機械磁碟，然後再重新讀入快取中。 這些 I/O 作業通常是很小的隨機讀取和寫入 (4 到 16 KB 的資料順序)。 小型隨機 I/O 模式會產生頻繁的搜尋、競爭機械磁碟臂、增加 I/O 延遲，並降低系統的彙總 I/O 輸送量。  
   
- 解決這些 I/O 瓶頸的一般方法是加入更多 DRAM，或者加入高效能的 SAS 主軸。 雖然這些選項很有用，但是有很大的缺點：DRAM 比資料存放磁碟更為昂貴，而且增加主軸會增加硬體採購的資本支出，而且也會因為增加用電量和元件故障機率而增加營運成本。  
+ 解決這些 I/O 瓶頸的一般方法是加入更多 DRAM，或者加入高效能的 SAS 主軸。 雖然這些選項很有用，但是有很大的缺點：DRAM 比資料存放磁碟更為昂貴，且增加主軸會增加硬體採購的資本支出，且也會因為增加用電量和元件故障機率而增加營運成本。  
   
  緩衝集區擴充功能可透過非動態儲存 (通常是 SSD) 延伸緩衝集區快取。 因為有了這個延伸模組，緩衝集區可以容納更大的資料庫工作集，強制將 RAM 與 SSD 之間的 I/O 分頁。 這樣可有效地將機械磁碟中的小型隨機 I/O 卸載到 SSD。 由於 SSD 的延遲較低而且隨機 I/O 效能更好，所以緩衝集區擴充會大幅提高 I/O 輸送量。  
   

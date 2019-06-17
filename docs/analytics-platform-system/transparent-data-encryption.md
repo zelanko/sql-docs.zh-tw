@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: e9067416365e56dccf9c09f2e826c01fb3ecfa3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63156957"
 ---
 # <a name="transparent-data-encryption"></a>透明資料加密
@@ -244,7 +244,7 @@ Tempdb 系統資料庫會加密啟用加密時使用[sp_pdw_database_encryption]
   
 `setup.exe /Action=ReplaceVM ... DMKPassword='**********'`  
   
-在升級期間，如果使用者資料庫已加密，而且未提供 DMK 密碼，將會失敗的升級動作。 期間取代，如果未提供正確的密碼則 DMK 存在時，則作業會略過 DMK 復原步驟。 所有其他的步驟會完成取代 VM 動作中，結尾，但此動作會報告失敗結尾，表示不需要額外的步驟。 安裝程式記錄檔中 (位於**\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\< 時間戳記 > \Detail-Setup**)，將會顯示下列警告，即將結束。  
+在升級期間，如果使用者資料庫已加密，而且未提供 DMK 密碼，將會失敗的升級動作。 期間取代，如果未提供正確的密碼則 DMK 存在時，則作業會略過 DMK 復原步驟。 所有其他的步驟會完成取代 VM 動作中，結尾，但此動作會報告失敗結尾，表示不需要額外的步驟。 安裝程式記錄檔中 (位於 **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\< 時間戳記 > \Detail-Setup**)，將會顯示下列警告，即將結束。  
   
 `*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 6cca10f2a54a70e91e46bb8b98e9799885b5f175
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740988"
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>安裝 SSMA for Sybase (SybaseToSQL)
@@ -56,7 +56,7 @@ SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server Mig
   
 4.  在 [選擇安裝類型] 頁面上，按一下**典型**。  
   
-5.  按一下 **[安裝]**。  
+5.  按一下 **[安裝]** 。  
   
 > [!IMPORTANT]  
 > 1.  請解除安裝所有舊版的 SSMA for Sybase 才能安裝新版本。  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0f359c66250d11fa01c74567e1faeab3ff064ac
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 49925570b878bc442e10ab89e3eb9ef6694232d5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602248"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797515"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>設定 java.sql.Time 值如何傳送給伺服器
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 63fbb097bf1ca926223ce7c0114c8da5d10cd969
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62639946"
 ---
 # <a name="password-reset---analytics-platform-system"></a>密碼重設-Analytics Platform System
@@ -40,7 +40,7 @@ ms.locfileid: "62639946"
 網域系統管理員認證和系統管理員認證遵守每種類型的認證的密碼強度原則。 新的密碼變更時的網域系統管理員認證，會更新網域在需要時在 SQL Server PDW。  
   
 > [!IMPORTANT]  
-> SQL Server PDW 不支援的貨幣符號字元 (**$**) 中的網域系統管理員或本機系統管理員密碼。 字元 **^ %&** 允許使用密碼，不過，PowerShell 會將這些特殊字元。 如果下列任何字元的密碼中使用的系統管理員或 SQL Server**sa**帳戶 ( **AdminPassword**並**PdwSAPassword**期間的參數安裝程式） 就設定，包括安裝、 升級、 REPLACENODE 和修補，將會失敗。 若要確保升級成功，目前的密碼包含不支援的字元時，請變更這些密碼，使它們不包含這類字元執行升級之前。 升級完成之後，您可以設定這些密碼回其原始值。 如需有關密碼需求的詳細資訊，請參閱[ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)。  
+> SQL Server PDW 不支援的貨幣符號字元 ( **$** ) 中的網域系統管理員或本機系統管理員密碼。 字元 **^ %&** 允許使用密碼，不過，PowerShell 會將這些特殊字元。 如果下列任何字元的密碼中使用的系統管理員或 SQL Server**sa**帳戶 ( **AdminPassword**並**PdwSAPassword**期間的參數安裝程式） 就設定，包括安裝、 升級、 REPLACENODE 和修補，將會失敗。 若要確保升級成功，目前的密碼包含不支援的字元時，請變更這些密碼，使它們不包含這類字元執行升級之前。 升級完成之後，您可以設定這些密碼回其原始值。 如需有關密碼需求的詳細資訊，請參閱[ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)。  
   
 ## <a name="to-reset-a-password"></a>若要重設密碼  
   

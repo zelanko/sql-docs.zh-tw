@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 997d637d109c04dbecb3105538f51fa6ece0518f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092435"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>執行 Upgrade Advisor (命令提示字元)
@@ -56,10 +56,10 @@ where <server_info> is any combination of the following:
  **-執行個體** _執行個體名稱_  
  指定要分析之執行個體的名稱。 沒有預設值。 如果您沒有指定這個參數，就不會掃描 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 代表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設執行個體的值為 MSSQLSERVER。 若為具名執行個體，請使用執行個體名稱。  
   
- **-ASInstance**  _AS_instance_name_   
+ **-ASInstance**  _AS_instance_name_  
  指定要分析之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的名稱。 沒有預設值。 如果您沒有指定這個值，就不會掃描 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 代表 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預設執行個體的值為 MSSQLServerOLAPService。 若為具名執行個體，請使用執行個體名稱。  
   
- **-RSInstance**  _RS_instance_name_   
+ **-RSInstance**  _RS_instance_name_  
  指定要分析之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體的名稱。 沒有預設值。 如果您沒有指定這個值，就不會掃描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 代表 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設執行個體的值為 ReportServer。 若為具名執行個體，請使用執行個體名稱。  
   
  **-SqlUser** _login_id_  

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d9c0b0a2c6ca3c12ca020dcc79b5aa4cad46c825
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105823"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的資料點 (報表產生器及 SSRS)
@@ -83,7 +83,7 @@ ms.locfileid: "66105823"
 ## <a name="increasing-readability-in-a-chart-with-multiple-data-points"></a>在圖表中以多個資料點增加可讀性  
  如果您在圖表上有多個數列，可能會降低圖表資料點的可讀性。 將多個數列加入到圖表時，請考慮使用可區別如何在圖表中有效讀取及了解每個數列的技術。 如需詳細資訊，請參閱 [圖表上的多個數列 &#40;報表產生器及 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)：  
   
- 為了簡化的目的，當您使用形狀圖時，請考慮僅加入一個資料欄位和一個類別目錄欄位。 如需詳細資訊，請參閱[形狀圖 &#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)。 如果您的圖表需要一個以上的資料欄位和類別目錄欄位，請考慮變更圖表類型。 您可以用滑鼠右鍵按一下此數列，並選取 **[變更圖表類型]**。  
+ 為了簡化的目的，當您使用形狀圖時，請考慮僅加入一個資料欄位和一個類別目錄欄位。 如需詳細資訊，請參閱[形狀圖 &#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)。 如果您的圖表需要一個以上的資料欄位和類別目錄欄位，請考慮變更圖表類型。 您可以用滑鼠右鍵按一下此數列，並選取 **[變更圖表類型]** 。  
   
 ## <a name="inserting-data-point-markers"></a>插入資料點標記  
  資料點標記是一種視覺指標，用於吸引使用者注意數列中的每個資料點。 在散佈圖上，標記用於決定個別資料點的形狀與大小。 標記的大小會根據圖表類型而指定。 您可以變更標記的大小、色彩或樣式。 標記不適用於範圍和形狀圖表類型，也不適用於任何堆疊子類型。  

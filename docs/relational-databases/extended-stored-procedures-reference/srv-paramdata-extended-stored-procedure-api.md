@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8740e97d1c12cc0fc9198048ea58c12e01e6771c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998277"
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata (擴充預存程序 API)

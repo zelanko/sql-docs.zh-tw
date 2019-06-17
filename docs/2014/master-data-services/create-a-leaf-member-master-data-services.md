@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a113803c9d6e5c688ea6eddca9446d96d79e82be
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483418"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>建立分葉成員 (Master Data Services)
@@ -35,19 +35,19 @@ ms.locfileid: "65483418"
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 **[模型]** 清單中的模型。  
   
-2.  如果您是使用者，請從 [版本] 清單中選取開啟的版本。 如果您是系統管理員，請從 [版本] 清單中選取狀態為開啟或鎖定的版本。  
+2.  如果您是使用者，請從 [版本]  清單中選取開啟的版本。 如果您是系統管理員，請從 [版本]  清單中選取狀態為開啟或鎖定的版本。  
   
-3.  按一下 **[總管]**。  
+3.  按一下 **[總管]** 。  
   
-4.  從功能表列指向 [實體]，然後按一下要新增成員的實體名稱。  
+4.  從功能表列指向 [實體]  ，然後按一下要新增成員的實體名稱。  
   
-5.  按一下 [加入成員]。  
+5.  按一下 [加入成員]  。  
   
-6.  填妥 [詳細資料] 窗格中的欄位。  
+6.  填妥 [詳細資料]  窗格中的欄位。  
   
 7.  選擇性。 在 **[註解]** 方塊中，輸入有關加入此成員之原因的註解。 可存取成員的所有使用者都可以檢視註解。  
   
-8.  按一下 [確定] 。  
+8.  按一下 [確定]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [載入或更新 Master Data Services 中的成員，使用暫存處理序](add-update-and-delete-data-master-data-services.md)   

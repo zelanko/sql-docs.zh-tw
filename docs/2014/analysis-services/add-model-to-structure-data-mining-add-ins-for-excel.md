@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce68071f27897e181063299e561dfaa7d9f8aab7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062881"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>將模型加入結構 (適用於 Excel 的資料採礦增益集)
@@ -44,7 +44,7 @@ ms.locfileid: "66062881"
   
 4.  我們建議您也按一下**參數** 按鈕以開啟**演算法參數**對話方塊方塊中，並自訂演算法的參數。 這個選項是建立自訂採礦模型的最簡單的方式。  
   
-5.  按一下 [下一步] 。  
+5.  按一下 [下一步]  。  
   
 6.  在 [**選取資料行**] 對話方塊中，檢閱資料行清單，並如有必要，將使用資料行變更為下列值之一：  
   

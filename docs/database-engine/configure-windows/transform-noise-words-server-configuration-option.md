@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6dac3da0a6072986a3b2e7661be1cda751e5c5ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 57c63cde99dc8319e998277ab1d4c1120c8bf73f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817326"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775256"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>轉換非搜尋字伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47817326"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|0|不轉換非搜尋字 (或停用字詞)。 當全文檢索查詢包含非搜尋字時，此查詢會傳回零個資料列，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會引發警告。 這是預設行為。<br /><br /> 注意：這項警告是執行階段的警告。 因此，如果查詢中的全文檢索子句並未執行，就不會引發此警告。 若為本機查詢，只會引發一則警告，即使有多個全文檢索查詢子句也一樣。 若為遠端查詢，連結的伺服器可能不會轉送錯誤。因此，可能不會引發此警告。|  
+|0|不轉換非搜尋字 (或停用字詞)。 當全文檢索查詢包含非搜尋字時，此查詢會傳回零個資料列，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會引發警告。 這是預設行為。<br /><br /> 注意:這項警告是執行階段的警告。 因此，如果查詢中的全文檢索子句並未執行，就不會引發此警告。 若為本機查詢，只會引發一則警告，即使有多個全文檢索查詢子句也一樣。 若為遠端查詢，連結的伺服器可能不會轉送錯誤。因此，可能不會引發此警告。|  
 |1|轉換非搜尋字 (或停用字詞)。 忽略這些字，並評估查詢的其餘部分。<br /><br /> 如果非搜尋字指定在鄰近詞彙中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將其移除。 例如，非搜尋字 `is` 會從 `CONTAINS(<column_name>, 'NEAR (hello,is,goodbye)')`中移除，將搜尋查詢轉換為 `CONTAINS(<column_name>, 'NEAR(hello,goodbye)')`。 請注意， `CONTAINS(<column_name>, 'NEAR(hello,is)')` 只會轉換成 `CONTAINS(<column_name>, hello)` ，因為只有一個有效的搜尋詞彙。|  
   
 ## <a name="effects-of-the-transform-noise-words-setting"></a>轉換非搜尋字設定效果  

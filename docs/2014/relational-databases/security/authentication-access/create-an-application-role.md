@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 032c371fd37bb66392761fff24bd30efb2bd5b37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011941"
 ---
 # <a name="create-an-application-role"></a>建立應用程式角色
@@ -56,11 +56,11 @@ ms.locfileid: "63011941"
   
 3.  展開 **[角色]** 資料夾。  
   
-4.  以滑鼠右鍵按一下 [應用程式角色] 資料夾，然後選取 [新增應用程式角色]。  
+4.  以滑鼠右鍵按一下 [應用程式角色]  資料夾，然後選取 [新增應用程式角色]  。  
   
-5.  在 [應用程式角色 - 新增] 對話方塊，於 [一般] 頁面上的 [角色名稱] 方塊中輸入新應用程式角色的名稱。  
+5.  在 [應用程式角色 - 新增]  對話方塊，於 [一般]  頁面上的 [角色名稱]  方塊中輸入新應用程式角色的名稱。  
   
-6.  在 **[預設結構描述]** 方塊中，透過輸入物件名稱，指定擁有此角色建立的物件之結構描述。 或者，按一下省略符號 **(...)**，開啟 [尋找結構描述] 對話方塊。  
+6.  在 **[預設結構描述]** 方塊中，透過輸入物件名稱，指定擁有此角色建立的物件之結構描述。 或者，按一下省略符號 **(...)** ，開啟 [尋找結構描述]  對話方塊。  
   
 7.  在 **[密碼]** 方塊中，輸入新角色的密碼。 在 **[確認密碼]** 方塊中重新輸入該密碼。  
   
@@ -81,9 +81,9 @@ ms.locfileid: "63011941"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- Creates an application role called "weekly_receipts" that has the password "987Gbv876sPYY5m23" and "Sales" as its default schema.  

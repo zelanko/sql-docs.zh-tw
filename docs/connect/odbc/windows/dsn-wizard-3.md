@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5261e3bd3c114961533b60431b6d0e1b9a313fc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d8220eebb82a5c0e513e14fc9b582b10183d293f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615246"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797782"
 ---
 # <a name="data-source-wizard-screen-3"></a>資料來源精靈畫面 3
 
@@ -26,19 +26,19 @@ ms.locfileid: "47615246"
 
 ### <a name="change-the-default-database-to"></a>變更預設資料庫為
 
-指定預設資料庫的名稱，以用於使用此資料來源所建立的任何連接。 清除此方塊時，連接會使用為該伺服器之登入 ID 所定義的預設資料庫。 選取此方塊時，方塊中所命名的資料庫會覆寫為該登入識別碼定義的預設資料庫。 如果 [附加資料庫檔案名稱] 方塊具有主要檔案的名稱，則主要檔案所描述之資料庫會附加為使用 [變更預設資料庫為] 方塊中所指定資料庫名稱的資料庫。
+指定預設資料庫的名稱，以用於使用此資料來源所建立的任何連接。 清除此方塊時，連接會使用為該伺服器之登入 ID 所定義的預設資料庫。 選取此方塊時，方塊中所命名的資料庫會覆寫為該登入識別碼定義的預設資料庫。 如果 [附加資料庫檔案名稱] 方塊具有主要檔案的名稱，則主要檔案所描述之資料庫會附加為使用 [變更預設資料庫為] 方塊中所指定資料庫名稱的資料庫。  
 
 使用登入 ID 的預設資料庫比在 ODBC 資料來源中指定預設資料庫更有效。
 
 ### <a name="mirror-server"></a>鏡像伺服器
 
-指定要鏡像處理之資料庫的容錯移轉夥伴名稱。 如果資料庫名稱未顯示在 [變更預設資料庫為] 方塊中，或顯示的名稱為預設資料庫，則 [鏡像伺服器] 會變成灰色。
+指定要鏡像處理之資料庫的容錯移轉夥伴名稱。 如果資料庫名稱未顯示在 [變更預設資料庫為] 方塊中，或顯示的名稱為預設資料庫，則 [鏡像伺服器] 會變成灰色。  
 
 (選擇性) 您可以指定鏡像伺服器的伺服器主體名稱 (SPN)。 鏡像伺服器的 SPN 會用於用戶端與伺服器之間的相互驗證。
 
 ### <a name="attach-database-filename"></a>附加資料庫檔案名稱
 
-為可附加的資料庫指定主要檔案的名稱。 此資料庫會附加並且當做資料來源的預設資料庫使用。 指定主要檔案的完整路徑及檔名。 [變更預設資料庫為] 方塊中所指定資料庫名稱會作為附加資料庫的名稱使用。
+為可附加的資料庫指定主要檔案的名稱。 此資料庫會附加並且當做資料來源的預設資料庫使用。 指定主要檔案的完整路徑及檔名。 [變更預設資料庫為] 方塊中所指定資料庫名稱會作為附加資料庫的名稱使用。 
 
 ### <a name="use-ansi-quoted-identifiers"></a>使用 ANSI 引號識別項
 
@@ -72,7 +72,7 @@ WHERE "LastName" = 'O''Brien'
 
 ### <a name="transparent-network-ip-resolution"></a>透明網路 IP 解析。
 
-改變的行為**多重子網路容錯移轉**以便在容錯移轉期間更快的重新連線。 請參閱[使用透明網路 IP 解析](../../../connect/odbc/using-transparent-network-ip-resolution.md)如需詳細資訊。
+改變的行為**多重子網路容錯移轉**以便在容錯移轉期間更快的重新連線。 如需詳細資訊，請參閱[使用透明網路 IP 解析](../../../connect/odbc/using-transparent-network-ip-resolution.md)。
 
 ### <a name="column-encryption"></a>資料行加密。
 

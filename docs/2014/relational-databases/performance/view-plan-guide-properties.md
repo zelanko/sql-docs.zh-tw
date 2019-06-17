@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b49b24db5dfa3c9b522247024e0cbb8dbd1a81d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63151268"
 ---
 # <a name="view-plan-guide-properties"></a>檢視計畫指南屬性
@@ -52,7 +52,7 @@ ms.locfileid: "63151268"
   
 2.  按一下加號展開 **[計畫指南]** 資料夾。  
   
-3.  以滑鼠右鍵按一下要檢視其屬性的計劃指南，然後選取 [屬性]。  
+3.  以滑鼠右鍵按一下要檢視其屬性的計劃指南，然後選取 [屬性]  。  
   
      下列屬性會在 **[計畫指南屬性]** 對話方塊中顯示。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "63151268"
      **Statement**  
      顯示對照套用計畫指南的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
-4.  按一下 [確定] 。  
+4.  按一下 [確定]  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -91,9 +91,9 @@ ms.locfileid: "63151268"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- If a plan guide named "Guide1" already exists in the AdventureWorks2012 database, delete it.  

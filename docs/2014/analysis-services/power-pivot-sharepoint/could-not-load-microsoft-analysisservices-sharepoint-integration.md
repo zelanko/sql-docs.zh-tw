@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b33e09d4dc7471f6447f1205f5c39746bc247ae7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071626"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>無法載入檔案或組件&#39;Microsoft.Data.Services，version=3.5.0.0，Culture = neutral，publickeytoken=b77a5c561934e089&#39;或其中一個相依性。 系統找不到指定的檔案。
@@ -36,9 +36,9 @@ ms.locfileid: "66071626"
   
 ## <a name="user-action"></a>使用者動作  
   
-1.  移至適用於 SharePoint 2010 的硬體和軟體需求文件[判斷硬體和軟體需求 (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734) (https://go.microsoft.com/fwlink/?LinkId=169734)。  
+1.  移至適用於 SharePoint 2010 的硬體和軟體需求文件[判斷硬體和軟體需求 (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734) (https://go.microsoft.com/fwlink/?LinkId=169734) 。  
   
-2.  在 [Installing software prerequisites] 中，尋找對應到您所使用之作業系統的 ADO.NET Data Services 3.5 連結。  
+2.  在 [Installing software prerequisites]  中，尋找對應到您所使用之作業系統的 ADO.NET Data Services 3.5 連結。  
   
 3.  按一下該連結，並執行安裝程式來安裝服務。  
   
