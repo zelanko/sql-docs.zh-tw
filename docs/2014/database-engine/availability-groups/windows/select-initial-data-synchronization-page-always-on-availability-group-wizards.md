@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 329bc7fb351406f0c53c69e4addb4513dca1c556
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789466"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>選取初始資料同步處理頁面 (AlwaysOn 可用性群組精靈)
   使用 AlwaysOn **[選取初始資料同步處理]** 頁面，指定新次要資料庫之初始資料同步處理的喜好設定。 此頁面由三個精靈所共用：[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]、[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 和 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]。  
   
- 可能的選項包含 **[完整]**、 **[僅聯結]** 或 **[略過初始資料同步處理]**。 選取 **[完整]** 或 **[僅聯結]** 之前，請確認您的環境符合必要條件。  
+ 可能的選項包含 **[完整]** 、 **[僅聯結]** 或 **[略過初始資料同步處理]** 。 選取 **[完整]** 或 **[僅聯結]** 之前，請確認您的環境符合必要條件。  
   
 
   
@@ -74,7 +74,7 @@ ms.locfileid: "62789466"
 ##  <a name="Joinonly"></a> [僅聯結]  
  只有在裝載可用性群組之次要複本的每個伺服器執行個體上已經有新次要資料庫時，才選取此選項。 如需有關準備次要資料庫的詳細資訊，請參閱本節稍後的 [手動準備次要資料庫](#PrepareSecondaryDbs)。  
   
- 如果您選取 **[僅聯結]**，精靈會嘗試將每個現有的次要資料庫聯結至可用性群組。  
+ 如果您選取 **[僅聯結]** ，精靈會嘗試將每個現有的次要資料庫聯結至可用性群組。  
   
 ## <a name="skip-initial-data-synchronization"></a>[略過初始資料同步處理]  
  只有在您要對每個主要資料庫執行您自己的資料庫和記錄備份、將它們手動還原到裝載次要複本的每個伺服器執行個體時，才選取此選項。 結束精靈之後，您需要聯結每個次要複本上的每個次要資料庫。  

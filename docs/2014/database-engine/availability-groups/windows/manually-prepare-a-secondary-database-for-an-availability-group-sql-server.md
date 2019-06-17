@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2fd8058518d59e5eb3fcf8a8514425c69339dfb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62792078"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>針對可用性群組手動準備次要資料庫 (SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "62792078"
   
 -   [相關備份和還原工作](#RelatedTasks)  
   
--   **後續操作：**[準備次要資料庫之後](#FollowUp)  
+-   **後續操作：** [準備次要資料庫之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62792078"
   
 3.  在裝載次要複本的伺服器執行個體上，還原主要資料庫的完整資料庫備份 (並選擇性地還原差異備份)，接著還原任何後續記錄備份。  
   
-     在 [**還原 DATABASEOptions**頁面上，選取**讓資料庫保持不運作，且不回復未認可的交易。可以還原其他交易記錄。(RESTORE WITH NORECOVERY)]**。  
+     在 [**還原 DATABASEOptions**頁面上，選取**讓資料庫保持不運作，且不回復未認可的交易。可以還原其他交易記錄。(RESTORE WITH NORECOVERY)]** 。  
   
      如果主要資料庫與次要資料庫的檔案路徑不同 (例如，主要資料庫位於磁碟機 'F:' 而裝載次要複本的伺服器執行個體缺少 F: 磁碟機)，請在您的 WITH 子句中加入 MOVE 選項。  
   

@@ -277,7 +277,7 @@
           href: ../../sql-server/install/install-powerpivot-for-sharepoint-2010.md
         - name: 在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者
           href: ../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md
-        - name: '如何：安裝 ADO.NET Data Services 以支援 SharePoint 清單的資料摘要匯出  '
+        - name: 如何：安裝 ADO.NET Data Services 以支援 SharePoint 清單的資料摘要匯出
           href: ../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md
         - name: 在執行管理中心的 Web 前端伺服器上安裝 ADOMD.NET
           href: ../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md

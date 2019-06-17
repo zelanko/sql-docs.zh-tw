@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 410f3a317a9d3ad2f8cab52d9f57fd4a63c1c36c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62865097"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>將原則匯入至單一執行個體
@@ -31,7 +31,7 @@ ms.locfileid: "62865097"
   
 3.  以滑鼠右鍵按一下**原則**，然後按一下**匯入原則**。  
   
-4.  在 [**匯入**] 對話方塊中的 [下一步**要匯入檔案**方塊中，按一下省略符號 (**...**)] 按鈕。  
+4.  在 [**匯入**] 對話方塊中的 [下一步**要匯入檔案**方塊中，按一下省略符號 ( **...** )] 按鈕。  
   
 5.  在 **查看**清單中，瀏覽至下列資料夾，其中包含最佳作法原則：  
   

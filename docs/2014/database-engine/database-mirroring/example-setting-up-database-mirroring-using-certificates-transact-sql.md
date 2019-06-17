@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806749"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>範例設定資料庫鏡像使用憑證 & Amp;#40;transact-SQL&AMP;#41
@@ -257,7 +257,7 @@ ms.locfileid: "62806749"
     ```  
   
     > [!NOTE]  
-    >  如果您想要在具有自動容錯移轉的高安全性模式下執行，保持交易安全性設定為 FULL （預設值），並執行第二個 SET PARTNER 後儘快新增見證 **'*`partner_server`*'** 陳述式。 請注意，必須先為傳入與傳出設定見證。  
+    >  如果您想要在具有自動容錯移轉的高安全性模式下執行，保持交易安全性設定為 FULL （預設值），並執行第二個 SET PARTNER 後儘快新增見證 **' *`partner_server`* '** 陳述式。 請注意，必須先為傳入與傳出設定見證。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   

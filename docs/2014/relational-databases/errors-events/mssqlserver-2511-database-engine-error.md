@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_2511 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 2511 (Database Engine error)
 ms.assetid: 9a00c0ed-eb4b-4fae-8016-192396006c37
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1748e8b483eecee43da921bd268d419408924af3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62868959"
 ---
 # <a name="mssqlserver2511"></a>MSSQLSERVER_2511
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>詳細資料  
   
 |||  
@@ -34,8 +33,9 @@ ms.locfileid: "62868959"
 |訊息文字|資料表錯誤：物件識別碼 %d，索引識別碼 %d，分割區識別碼 %I64d，配置單位識別碼 %I64d (類型 %.*ls)。 頁面 %S_PGID，位置 %d 和 %d 的索引鍵次序不對。|  
   
 ## <a name="explanation"></a>說明  
-在指定的索引中偵測到次序不對的索引鍵。 包含索引鍵的頁面可能已損毀。  
+ 在指定的索引中偵測到次序不對的索引鍵。 包含索引鍵的頁面可能已損毀。  
   
 ## <a name="user-action"></a>使用者動作  
-使用 ALTER INDEX REBUILD 陳述式來重建指定的索引。  
+ 使用 ALTER INDEX REBUILD 陳述式來重建指定的索引。  
+  
   

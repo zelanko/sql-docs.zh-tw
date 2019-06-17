@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5f77df0a2e5322687f5724e7921932a551d07ed
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107164"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>報表產生器中的報表組件和資料集
-  在報表產生器中，在報表內包含資料最簡單的方式，就是從報表組件庫加入報表組件。 報表組件包含相依的資料集，稱為 *「相依資料集」*(Dependent Dataset)。 相依資料集是以共用資料來源為基礎，而且可以是內嵌資料集或共用資料集。  
+  在報表產生器中，在報表內包含資料最簡單的方式，就是從報表組件庫加入報表組件。 報表組件包含相依的資料集，稱為 *「相依資料集」* (Dependent Dataset)。 相依資料集是以共用資料來源為基礎，而且可以是內嵌資料集或共用資料集。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  

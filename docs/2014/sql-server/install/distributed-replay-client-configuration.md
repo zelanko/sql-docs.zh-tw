@@ -11,18 +11,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3eb00922b4f6e21dd4cfc8a46d8c0c27ed9a5be1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095480"
 ---
 # <a name="distributed-replay-client-configuration"></a>Distributed Replay Client 組態
-  您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 [Distributed Replay Client 組態] 頁面來指定您想要授與 Distributed Replay Client 服務之管理權限的使用者。  
+  您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 [Distributed Replay Client 組態]  頁面來指定您想要授與 Distributed Replay Client 服務之管理權限的使用者。  
   
  擁有管理權限的使用者將可不受限制地存取 Distributed Replay Client 服務。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **控制器名稱**  
  這是選擇性參數，而且預設值是\<*空白*>。  
   
@@ -37,11 +37,11 @@ ms.locfileid: "66095480"
  **工作目錄**  
  指定 Distributed Replay Client 服務的工作目錄。  
   
- 預設工作目錄為 \<磁碟機代號>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\。  
+ 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\。  
   
  **結果目錄**  
  指定 Distributed Replay Client 服務的結果目錄。  
   
- 預設工作目錄為 \<磁碟機代號>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\。  
+ 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\。  
   
   

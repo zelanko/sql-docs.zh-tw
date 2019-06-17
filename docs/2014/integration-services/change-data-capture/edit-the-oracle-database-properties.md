@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9ebad419585de0136708ea85e522f890dceac38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62835574"
 ---
 # <a name="edit-the-oracle-database-properties"></a>編輯 Oracle 資料庫屬性
@@ -34,11 +34,11 @@ ms.locfileid: "62835574"
  電腦與您使用之 Oracle 資料庫之間的 Oracle 連接字串。 這個欄位是唯讀的，而且您無法編輯此資訊。 這是因為連接字串的某些變更可能會讓 Oracle CDC 執行個體完全指向另一個 Oracle 資料庫，因而損毀 **cdc.xdbcdc_config** 資料表中儲存的 CDC 執行個體狀態。 如果需要少量的變更，您可以直接在組態資料表中使用 SQL Server Management Studio 變更連接字串。  
   
  **Oracle 記錄採礦驗證**  
- 若要針對包含記錄採礦者的 Oracle 資料庫輸入驗證認證，請在 [驗證] 底下選取下列其中一項：  
+ 若要針對包含記錄採礦者的 Oracle 資料庫輸入驗證認證，請在 [驗證]  底下選取下列其中一項：  
   
 -   **Windows 驗證**：選取此選項可使用目前的 Windows 網域認證。 只有當設定 Oracle 資料庫使用 Windows 驗證時，才可使用這個選項。  
   
--   **Oracle 驗證**：如果您選取這個選項，您必須在您所連接的 Oracle 資料庫中鍵入使用者的 [使用者名稱] 和 [密碼]。  
+-   **Oracle 驗證**：如果您選取這個選項，您必須在您所連接的 Oracle 資料庫中鍵入使用者的 [使用者名稱]  和 [密碼]  。  
   
  您可以在檢視器中檢視 Oracle 資料庫屬性。 當使用檢視器時，此資訊是唯讀的。 檢視器也包括資料表中擷取的資料行清單。 如需有關如何存取此檢視器的詳細資訊，請參閱＜ [How to Manage a CDC Instance](manage-a-cdc-instance.md)＞。  
   

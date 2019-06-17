@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 3d6decae-2570-4ca5-8ff6-57a2cc3e921f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58e3144664f3f331d8bc3135d229c2eaeda80c88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2903508d7dc59d293402374637792e8d23c3726c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839602"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779864"
 ---
 # <a name="getwarnings-method-sqlserverstatement"></a>getWarnings 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 08eb9db7645448157a76b3bcfdd302f6654f68f5
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537262"
 ---
 # <a name="sqlexecute-function"></a>SQLExecute 函式
@@ -105,7 +105,7 @@ SQLRETURN SQLExecute(
 ## <a name="comments"></a>註解  
  **SQLExecute**執行陳述式的備妥**SQLPrepare**。 應用程式處理或捨棄在呼叫的結果之後**SQLExecute**，應用程式可以呼叫**SQLExecute**再次使用新的參數值。 如需備妥的執行的詳細資訊，請參閱[已備妥執行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)。  
   
- 若要執行**選取 **不止一次的陳述式，呼叫應用程式必須**SQLCloseCursor**之前重新**選取**陳述式。  
+ 若要執行**選取** 不止一次的陳述式，呼叫應用程式必須**SQLCloseCursor**之前重新**選取**陳述式。  
   
  如果資料來源是在手動認可模式 （需要明確的交易初始），而且已經尚未起始交易，此驅動程式傳送的 SQL 陳述式之前，就會起始交易。 如需詳細資訊，請參閱 <<c0> [ 交易](../../../odbc/reference/develop-app/transactions-odbc.md)。  
   

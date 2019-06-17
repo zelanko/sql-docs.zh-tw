@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916964"
 ---
 # <a name="shrink-a-database"></a>壓縮資料庫
@@ -67,9 +67,9 @@ ms.locfileid: "62916964"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 [資料庫]，然後以滑鼠右鍵按一下您要壓縮的資料庫。  
+2.  展開 [資料庫]  ，然後以滑鼠右鍵按一下您要壓縮的資料庫。  
   
-3.  指向 **[工作]** 的 **[壓縮]**，然後按一下 **[資料庫]**。  
+3.  指向 **[工作]** 的 **[壓縮]** ，然後按一下 **[資料庫]** 。  
   
      **[資料庫]**  
      顯示選取之資料庫的名稱。  
@@ -86,7 +86,7 @@ ms.locfileid: "62916964"
      **壓縮後檔案的最大可用空間**  
      輸入在資料庫壓縮後，資料庫檔案中剩餘可用空間的最大百分比。 允許值介於 0 和 99 之間。  
   
-4.  按一下 [確定] 。  
+4.  按一下 [確定]  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -94,9 +94,9 @@ ms.locfileid: "62916964"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例會使用 [DBCC SHRINKDATABASE](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql) 縮小 `UserDB` 資料庫中的資料和記錄檔大小，使資料庫中能有 `10` % 的可用空間。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行]  。 這個範例會使用 [DBCC SHRINKDATABASE](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql) 縮小 `UserDB` 資料庫中的資料和記錄檔大小，使資料庫中能有 `10` % 的可用空間。  
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
   

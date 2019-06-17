@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873812"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 整合程式設計模型限制
@@ -37,7 +37,7 @@ ms.locfileid: "62873812"
   
 -   此組件是其中一個支援的組件。 如需詳細資訊，請參閱 <<c0> [ 支援的.NET Framework 程式庫](supported-net-framework-libraries.md)。  
   
--   您使用`CREATE ASSEMBLY FROM` *\<位置 >，* 且所有參考的組件和其相依性都在*\<位置 >*。  
+-   您使用`CREATE ASSEMBLY FROM` *\<位置 >，* 且所有參考的組件和其相依性都在 *\<位置 >* 。  
   
 -   您使用`CREATE ASSEMBLY FROM` *\<位元組...>，* ，但所有參考指定空間透過以位元組為單位。  
   

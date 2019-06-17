@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 51724ea4c0adf1a98d7972898d15e20e626b7c98
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489519"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>建立及執行實體同步關係 (Master Data Services)
@@ -61,11 +61,11 @@ ms.locfileid: "65489519"
   
  **建立實體同步關係**  
   
-1.  在主資料管理員中，按一下 [系統管理] 。  
+1.  在主資料管理員中，按一下 [系統管理]  。  
   
-2.  在 [模型檢視]  頁面上，從功能表列指向 [管理]  ，然後按一下 [實體同步處理] 。  
+2.  在 [模型檢視]  頁面上，從功能表列指向 [管理]  ，然後按一下 [實體同步處理]  。  
   
-3.  按一下 [實體同步維護]  頁面上的 [加入] 。 隨即會在右側顯示面板。  
+3.  按一下 [實體同步維護]  頁面上的 [加入]  。 隨即會在右側顯示面板。  
   
 4.  從來源 [模型]  清單中選取模型。  
   
@@ -79,26 +79,26 @@ ms.locfileid: "65489519"
   
 9. 如果您想要同步現有實體，請選擇 [現有實體]  然後從 [實體] 清單中選取實體，或如果您想要同步新實體，請選擇 [新實體]  ，然後輸入目標實體的名稱  
   
-10. 選取 [隨需同步處理] ，或選取 [自動同步處理]  並設定頻率。  
+10. 選取 [隨需同步處理]  ，或選取 [自動同步處理]  並設定頻率。  
   
-11. 按一下 [儲存] 。  
+11. 按一下 [儲存]  。  
   
  **執行實體同步關係**  
   
-1.  在主資料管理員中，按一下 [系統管理] 。  
+1.  在主資料管理員中，按一下 [系統管理]  。  
   
-2.  在 [模型檢視]  頁面上，從功能表列指向 [管理]  ，然後按一下 [實體同步處理] 。  
+2.  在 [模型檢視]  頁面上，從功能表列指向 [管理]  ，然後按一下 [實體同步處理]  。  
   
 3.  在 [實體同步維護]  業面上，選取方格中的同步關係。  
   
-4.  按一下 **[執行]**。  
+4.  按一下 **[執行]** 。  
   
 ## <a name="sync-relationship-information"></a>同步關係資訊  
  對於每個建立的同步關係，會新增含有十個資料行的資料列到方格。 下表描述該資料行。  
   
 |「資料行」|描述|  
 |------------|-----------------|  
-|[狀態]|同步關係狀態。<br /><br /> 當您按一下 [儲存] 或執行同步關係時，會顯示![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")影像，表示正在更新同步關係。<br /><br /> 如果建立、編輯或執行同步關係時發生錯誤，則會顯示![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")影像。<br /><br /> 否則，狀態為正常，並顯示![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")影像。|  
+|[狀態]|同步關係狀態。<br /><br /> 當您按一下 [儲存]  或執行同步關係時，會顯示![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")影像，表示正在更新同步關係。<br /><br /> 如果建立、編輯或執行同步關係時發生錯誤，則會顯示![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")影像。<br /><br /> 否則，狀態為正常，並顯示![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")影像。|  
 |來源模型|來源模型名稱。|  
 |來源版本|來源版本名稱。|  
 |來源實體|來源實體名稱。|  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 63c9f56894ede1002b358c624ab763935fd42fc1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789890"
 ---
 # <a name="flexible-failover-policy-for-automatic-failover-of-an-availability-group-sql-server"></a>可用性群組自動容錯移轉的彈性容錯移轉原則 (SQL Server)
@@ -33,13 +33,13 @@ ms.locfileid: "62789890"
   
   
 ##  <a name="HCtimeout"></a> 健全狀況檢查逾時臨界值  
- 可用性群組的 WSFC 資源 DLL 會在裝載主要複本的 SQL Server 執行個體上呼叫 [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) 預存程序，藉以執行主要複本的「健全狀況檢查」。 **sp_server_diagnostics** 會以等於可用性群組之健全狀況檢查逾時臨界值 1/3 的間隔傳回結果。 預設的健全狀況檢查逾時臨界值為 30 秒，因此 **sp_server_diagnostics** 會以 10 秒的間隔傳回結果。 如果 **sp_server_diagnostics** 變慢或未傳回資訊，資源 DLL 會先等候健全狀況檢查逾時臨界值的完整間隔，然後再判斷主要複本是否沒有回應。 如果主要複本沒有回應，就會起始自動容錯移轉 (如果目前支援的話)。  
+ 可用性群組的 WSFC 資源 DLL 會在裝載主要複本的 SQL Server 執行個體上呼叫 [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) 預存程序，藉以執行主要複本的「健全狀況檢查」  。 **sp_server_diagnostics** 會以等於可用性群組之健全狀況檢查逾時臨界值 1/3 的間隔傳回結果。 預設的健全狀況檢查逾時臨界值為 30 秒，因此 **sp_server_diagnostics** 會以 10 秒的間隔傳回結果。 如果 **sp_server_diagnostics** 變慢或未傳回資訊，資源 DLL 會先等候健全狀況檢查逾時臨界值的完整間隔，然後再判斷主要複本是否沒有回應。 如果主要複本沒有回應，就會起始自動容錯移轉 (如果目前支援的話)。  
   
 > [!IMPORTANT]  
 >  **sp_server_diagnostics** 不會在資料庫層級執行健全狀況檢查。  
   
 ##  <a name="FClevel"></a> 失敗狀況層級  
- **sp_server_diagnostics** 所傳回的診斷資料和健全狀況資訊是否保證自動容錯移轉主要取決於可用性群組的失敗狀況層級。 「失敗狀況層級」會指定觸發自動容錯移轉的失敗狀況。 失敗狀況層級共有五層，範圍從最低限制 (第一層級) 到最高限制 (第五層級)。 給定的層級包含較低限制的層級。 因此，最嚴格的層級 (五) 包括了四個較低限制的狀況，依此類推。  
+ **sp_server_diagnostics** 所傳回的診斷資料和健全狀況資訊是否保證自動容錯移轉主要取決於可用性群組的失敗狀況層級。 「失敗狀況層級」  會指定觸發自動容錯移轉的失敗狀況。 失敗狀況層級共有五層，範圍從最低限制 (第一層級) 到最高限制 (第五層級)。 給定的層級包含較低限制的層級。 因此，最嚴格的層級 (五) 包括了四個較低限制的狀況，依此類推。  
   
 > [!IMPORTANT]  
 >  任何失敗狀況層級不會偵測到損毀的資料庫和可疑的資料庫。 因此，損毀或可疑的資料庫 (不論是因為硬體故障、資料損毀或其他問題) 都絕對不會觸發自動容錯移轉。  

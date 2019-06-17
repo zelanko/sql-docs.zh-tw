@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62844096"
 ---
 # <a name="new-full-text-catalog-general-page"></a>新增全文檢索目錄 (一般頁面)
@@ -38,7 +38,7 @@ ms.locfileid: "62844096"
  選取即可將此目錄設定為新全文檢索目錄的預設目錄。  
   
  **區分腔調字**  
- 表示目錄會區分或不區分變音符號，例如波狀符號 (**~**)、尖重音符號 (**´**) 或母音變化 (**¨**)。 如果您選取 **[不區分]**，在與此全文檢索目錄相關的全文檢索索引中會忽略變音符號。 變音符號標記的相關資訊，請參閱[變音符號記號](https://www.merriam-webster.com/dictionary/diacritic)Merriam Webster 網站中。  
+ 表示目錄會區分或不區分變音符號，例如波狀符號 ( **~** )、尖重音符號 (**´**) 或母音變化 (**¨**)。 如果您選取 **[不區分]** ，在與此全文檢索目錄相關的全文檢索索引中會忽略變音符號。 變音符號標記的相關資訊，請參閱[變音符號記號](https://www.merriam-webster.com/dictionary/diacritic)Merriam Webster 網站中。  
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  

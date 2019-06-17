@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/08/2017
 ms.openlocfilehash: 11441e0866904742985c55d535e8398802b206fa
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64775036"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>運算式範例 (報表產生器及 SSRS)
@@ -178,7 +178,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 
 如果文字方塊中只包含日期或數字，您應該使用文字方塊的 Format 屬性來套用格式，而非`Format`文字方塊內的函式。  
 
--   `Right`， `Len`，並`InStr`函式是用來傳回子字串，例如修剪*網域*\\*username*成只有使用者名稱。 下列運算式會從名為\\User *的參數傳回字串中反斜線 (*) 字元右邊的字串部分：  
+-   `Right`， `Len`，並`InStr`函式是用來傳回子字串，例如修剪*網域*\\*username*成只有使用者名稱。 下列運算式會從名為\\User *的參數傳回字串中反斜線 (* ) 字元右邊的字串部分：  
 
 ```  
 =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  

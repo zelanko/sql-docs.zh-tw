@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26ab429a5f2abeda9a811e85dc5113121380e999
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62892476"
 ---
 # <a name="integration-services-ssis-projects"></a>Integration Services (SSIS) 專案
@@ -74,7 +74,7 @@ ms.locfileid: "62892476"
  雖然 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 會在您新建專案時自動建立解決方案，但是您也可以建立空白的解決方案，並在稍後加入專案。  
   
 > [!NOTE]  
->  依預設，當您在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中建立新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案時，此解決方案不會顯示在 [專案總管] 窗格中。 若要變更這個預設行為，請按一下 [工具] 功能表上的 [選項]。 在 [選項] 對話方塊中，展開 [專案和方案]，然後按一下 [一般]。 在 [一般] 頁面上，選取 [永遠顯示方案]。  
+>  依預設，當您在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中建立新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案時，此解決方案不會顯示在 [專案總管]  窗格中。 若要變更這個預設行為，請按一下 [工具]  功能表上的 [選項]  。 在 [選項]  對話方塊中，展開 [專案和方案]  ，然後按一下 [一般]  。 在 [一般]  頁面上，選取 [永遠顯示方案]  。  
   
 ## <a name="related-tasks"></a>相關工作  
  [在方案中新增或移除 Integration Services 專案](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  

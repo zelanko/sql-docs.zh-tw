@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: fa60fd6db3da59de9d833c488811b5921ae53987
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66699309"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>步驟 6：步驟 6：變更會傳送到伺服器 (RDS 教學課程)

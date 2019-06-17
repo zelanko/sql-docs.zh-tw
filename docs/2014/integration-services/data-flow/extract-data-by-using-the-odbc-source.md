@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8ecb517174c8cd8189ad2f7382c774df3545620
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62864945"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>使用 ODBC 來源來擷取資料
@@ -36,7 +36,7 @@ ms.locfileid: "62864945"
   
          此清單只包含前 1000 個資料表。 如果您的資料庫包含超過 1000 個資料表，您可以輸入資料表名稱的開頭或使用 (*) 萬用字元來輸入名稱的任何部分，以便顯示您想要使用的資料表。  
   
-    -   **SQL 命令**：輸入 SQL 命令，或按一下 [瀏覽] 從文字檔載入 SQL 查詢。  
+    -   **SQL 命令**：輸入 SQL 命令，或按一下 [瀏覽]  從文字檔載入 SQL 查詢。  
   
 6.  您可以按一下 **[預覽]** ，以檢視 ODBC 來源擷取的最多 200 個資料列。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "62864945"
   
 8.  如有需要，藉由編輯 **[輸出資料行]** 清單中的值，更新輸出資料行的名稱。  
   
-9. 若要設定錯誤輸出，請按一下 **[錯誤輸出]**。  
+9. 若要設定錯誤輸出，請按一下 **[錯誤輸出]** 。  
   
-10. 按一下 [確定] 。  
+10. 按一下 [確定]  。  
   
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   

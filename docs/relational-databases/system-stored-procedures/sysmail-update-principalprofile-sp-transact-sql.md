@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a2af55b8c5354dd90e80a0a2a9d149f56abdef27
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63472144"
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
@@ -63,7 +63,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
  關聯的主體名稱時**公開金鑰**關聯的主體識別碼是否**0**，這個預存程序變更公用設定檔。 只能有一個預設公用設定檔。  
   
- 當**@is_default**是 '**1**' 且主體為多個設定檔相關聯，指定的設定檔會成為主體的預設設定檔。 先前是預設設定檔的設定檔仍會關聯於這個主體，但已不再是預設設定檔。  
+ 當 **@is_default** 是 '**1**' 且主體為多個設定檔相關聯，指定的設定檔會成為主體的預設設定檔。 先前是預設設定檔的設定檔仍會關聯於這個主體，但已不再是預設設定檔。  
   
  預存程序**sysmail_update_principalprofile_sp**處於**msdb**資料庫中，擁有者**dbo**結構描述。 此程序必須利用三部分名稱來執行，如果目前的資料庫不是**msdb**。  
   

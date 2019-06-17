@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814054"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>複寫、變更追蹤、變更資料擷取和 AlwaysOn 可用性群組 (SQL Server)
@@ -156,7 +156,7 @@ ms.locfileid: "62814054"
   
      可用性群組接聽程式名稱或明確節點名稱都可用於找出次要複本。 如果使用可用性群組接聽程式名稱，則存取會導向至任何合適的次要複本。  
   
-     當`sp_addlinkedserver`用來建立連結的伺服器，以存取次要複本時， *@datasrc*參數會用於可用性群組接聽程式名稱或明確伺服器名稱，而 *@provstr*參數用來指定唯讀意圖。  
+     當`sp_addlinkedserver`用來建立連結的伺服器，以存取次要複本時， *@datasrc* 參數會用於可用性群組接聽程式名稱或明確伺服器名稱，而 *@provstr* 參數用來指定唯讀意圖。  
   
     ```  
     EXEC sp_addlinkedserver   

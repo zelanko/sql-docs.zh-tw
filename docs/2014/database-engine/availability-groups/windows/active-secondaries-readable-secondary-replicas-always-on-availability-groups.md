@@ -18,21 +18,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 86340f1bdb9b178c23295c61378d781e2d4a83cc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789850"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>使用中的次要複本：可讀取的次要複本 (Always On 可用性群組）
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 使用中次要功能包含對一個或多個次要複本進行唯讀存取的支援 (*「可讀取的次要複本」*(Readable Secondary Replicas))。 可讀取的次要複本允許對其所有次要資料庫進行唯讀存取。 但可讀取的次要資料庫並不會設定為唯讀。 這些資料庫是動態的。 隨著對應主要資料庫變更而衍生的給定次要資料庫變更，會套用至次要資料庫。 對於一般次要複本而言，次要資料庫中的資料 (包含持久記憶體最佳化資料表) 幾近即時。 此外，全文檢索索引會與次要資料庫進行同步處理。 在許多情況下，主要資料庫和對應次要資料庫之間的資料延遲只在幾秒鐘內。  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 使用中次要功能包含對一個或多個次要複本進行唯讀存取的支援 ( *「可讀取的次要複本」* (Readable Secondary Replicas))。 可讀取的次要複本允許對其所有次要資料庫進行唯讀存取。 但可讀取的次要資料庫並不會設定為唯讀。 這些資料庫是動態的。 隨著對應主要資料庫變更而衍生的給定次要資料庫變更，會套用至次要資料庫。 對於一般次要複本而言，次要資料庫中的資料 (包含持久記憶體最佳化資料表) 幾近即時。 此外，全文檢索索引會與次要資料庫進行同步處理。 在許多情況下，主要資料庫和對應次要資料庫之間的資料延遲只在幾秒鐘內。  
   
  主要資料庫中進行的安全性設定會保存到次要資料庫。 其中包括使用者、資料庫角色和應用程式角色，連同其各自的權限，以及透明資料加密 (TDE) (如果主要資料庫上已啟用)。  
   
 > [!NOTE]  
 >  雖然您無法將資料寫入次要資料庫，但是您可以寫入裝載次要複本的伺服器執行個體上的讀寫資料庫，包括使用者資料庫和系統資料庫 (例如 **tempdb**)。  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 也可將讀取意圖的連接要求重新路由到可讀取的次要複本 (*「唯讀路由」*(Read-Only Routing))。 如需唯讀路由的相關資訊，請參閱 [使用接聽程式連接到唯讀次要複本 (唯讀路由)](../../listeners-client-connectivity-application-failover.md#ConnectToSecondary)。  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 也可將讀取意圖的連接要求重新路由到可讀取的次要複本 ( *「唯讀路由」* (Read-Only Routing))。 如需唯讀路由的相關資訊，請參閱 [使用接聽程式連接到唯讀次要複本 (唯讀路由)](../../listeners-client-connectivity-application-failover.md#ConnectToSecondary)。  
   
  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62789850"
   
 -   **可用性群組接聽程式**  
   
-     若要支援唯讀路由，可用性群組必須具有 [可用性群組接聽程式](../../listeners-client-connectivity-application-failover.md)。 唯讀用戶端必須將其連接要求導向至此接聽程式，且用戶端的連接字串必須將應用程式的意圖指定為「唯讀」。 換句話說必須是 *「讀取意圖的連接要求」*(Read-Intent Connection Request)。  
+     若要支援唯讀路由，可用性群組必須具有 [可用性群組接聽程式](../../listeners-client-connectivity-application-failover.md)。 唯讀用戶端必須將其連接要求導向至此接聽程式，且用戶端的連接字串必須將應用程式的意圖指定為「唯讀」。 換句話說必須是 *「讀取意圖的連接要求」* (Read-Intent Connection Request)。  
   
 -   **唯讀路由**  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62789850"
  這表示，主要複本和次要複本之間會有一些延遲 (通常只有幾秒鐘)。 但在很少見的情況下 (例如網路問題減少輸送量的狀況下)，延遲可能會比較長。 在發生 I/O 瓶頸和資料移動暫停時，會增加延遲。 若要監視暫停的資料移動，您可以使用 [AlwaysOn 儀表板](use-the-always-on-dashboard-sql-server-management-studio.md) 或 [sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) 動態管理檢視。  
   
 ####  <a name="bkmk_LatencyWithInMemOLTP"></a> 具有記憶體最佳化資料表之資料庫的資料延遲  
- 為讀取工作負載存取次要複本上的記憶體最佳化資料表時，會使用「安全時間戳記」  ，從早於「安全時間戳記」 認可的交易傳回資料列。 安全時間戳記是記憶體回收執行緒所使用之最舊的時間戳記提示，可在主要複本上進行資料列的記憶體回收。 當記憶體最佳化資料表上的 DML 交易數目超出上次更新時的內部臨界值，就會更新此時間戳記。 每當主要複本上最舊的交易時間戳記更新時，持久記憶體最佳化資料表上的下一個 DML 交易會將要傳送到次要複本的時間戳記，做為特定記錄檔記錄的一部分傳送。 次要複本上的 REDO 執行緒會在處理此記錄檔記錄時，更新安全時間戳記。  
+ 為讀取工作負載存取次要複本上的記憶體最佳化資料表時，會使用「安全時間戳記」  ，從早於「安全時間戳記」  認可的交易傳回資料列。 安全時間戳記是記憶體回收執行緒所使用之最舊的時間戳記提示，可在主要複本上進行資料列的記憶體回收。 當記憶體最佳化資料表上的 DML 交易數目超出上次更新時的內部臨界值，就會更新此時間戳記。 每當主要複本上最舊的交易時間戳記更新時，持久記憶體最佳化資料表上的下一個 DML 交易會將要傳送到次要複本的時間戳記，做為特定記錄檔記錄的一部分傳送。 次要複本上的 REDO 執行緒會在處理此記錄檔記錄時，更新安全時間戳記。  
   
 #### <a name="the-impact-of-safe-timestamp-on-latency"></a>安全時間戳記對延遲的影響  
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a878a61678fcad2fe15ac71d8ed7d29f24057852
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62829363"
 ---
 # <a name="xml-task"></a>XML 工作
@@ -84,7 +84,7 @@ ms.locfileid: "62829363"
 ### <a name="xpath-operation"></a>XPath 作業  
  可以將 XPath 作業設定為使用不同類型的 XPath 功能。  
   
--   選取 [評估] 選項以實作 XPath 函數，例如 sum()。  
+-   選取 [評估]  選項以實作 XPath 函數，例如 sum()。  
   
 -   選取 **[節點清單]** 選項，將選取的節點當做 XML 片段傳回。  
   
@@ -141,6 +141,6 @@ ms.locfileid: "62829363"
   
 -   agilebi.com 上的部落格文章： [XML 目的地指令碼元件](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)  
   
--   www.codeplex.com 上的 CodePlex 範例： [處理 XML 資料封裝範例](http://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)   
+-   www.codeplex.com 上的 CodePlex 範例： [處理 XML 資料封裝範例](http://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)  
   
   
