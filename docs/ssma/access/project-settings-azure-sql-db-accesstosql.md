@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2307a62c05503a231c3ee16b79efb25e964f55bd
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63453465"
 ---
 # <a name="project-settings-azure-sql-db-accesstosql"></a>專案設定 (Azure SQL DB) (AccessToSQL)
@@ -29,7 +29,7 @@ SQL Azure 窗格位於**專案設定**並**預設專案設定**對話方塊。
   
 -   使用 [預設專案設定] 對話方塊中設定的所有專案的組態選項。 若要存取 SQL Azure 設定 中，在**工具**功能表上，選取**DefaultProject 設定**，在中，選取專案類型為 「 SQL Azure"**移轉目標版本**下拉式方塊存取 SQL Azure 窗格中的設定，請按一下**一般**底部的左的窗格中，然後選取**SQL Azure**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 ## <a name="connectivity"></a>連接性  
 **活動訊號間隔時間**  

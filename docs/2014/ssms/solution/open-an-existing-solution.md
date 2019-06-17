@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80f13a2818810c71703fb5cccb82a1066361c3c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63154639"
 ---
 # <a name="open-an-existing-solution"></a>開啟現有的方案
@@ -25,9 +25,9 @@ ms.locfileid: "63154639"
   
 ### <a name="to-open-an-existing-solution"></a>開啟現有的方案  
   
-1.  在 [檔案] 功能表上，指向 [開啟舊檔]，再按一下 [專案/方案]。  
+1.  在 [檔案]  功能表上，指向 [開啟舊檔]  ，再按一下 [專案/方案]  。  
   
-2.  在 [開啟專案] 對話方塊中，導覽到您想要的方案，按一下這個方案，再按一下 [開啟]。  
+2.  在 [開啟專案]  對話方塊中，導覽到您想要的方案，按一下這個方案，再按一下 [開啟]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [方案總管](solution-explorer.md)   

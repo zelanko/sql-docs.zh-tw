@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 13faac66894298c4d08cd40a1eab9d3d823fd0ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62900842"
 ---
 # <a name="convert-data-to-a-different-data-type-by-using-the-data-conversion-transformation"></a>使用資料轉換將資料轉換至不同的資料類型
@@ -36,7 +36,7 @@ ms.locfileid: "62900842"
   
 5.  按兩下 [資料轉換]。  
   
-6.  在 [資料轉換編輯器] 對話方塊中，於 [可用的輸入資料行] 資料表中，選取您要轉換其資料類型之資料行旁邊的核取方塊。  
+6.  在 [資料轉換編輯器]  對話方塊中，於 [可用的輸入資料行]  資料表中，選取您要轉換其資料類型之資料行旁邊的核取方塊。  
   
     > [!NOTE]  
     >  您可以對輸入資料行套用多個資料轉換。  
@@ -45,11 +45,11 @@ ms.locfileid: "62900842"
   
 8.  在 **[資料類型]** 清單中，選取資料行的新資料類型。 預設資料類型是輸入資料行的資料類型。  
   
-9. (選擇性) 視所選取資料類型而定，更新 **[長度]**、 **[有效位數]**、 **[小數位數]** 及 **[字碼頁]** 資料行中的值。  
+9. (選擇性) 視所選取資料類型而定，更新 **[長度]** 、 **[有效位數]** 、 **[小數位數]** 及 **[字碼頁]** 資料行中的值。  
   
-10. 若要設定錯誤輸出，請按一下 **[設定錯誤輸出]**。 如需詳細資訊，請參閱 [在資料流程元件中設定錯誤輸出](../../configure-an-error-output-in-a-data-flow-component.md)。  
+10. 若要設定錯誤輸出，請按一下 **[設定錯誤輸出]** 。 如需詳細資訊，請參閱 [在資料流程元件中設定錯誤輸出](../../configure-an-error-output-in-a-data-flow-component.md)。  
   
-11. 按一下 [確定] 。  
+11. 按一下 [確定]  。  
   
 12. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   

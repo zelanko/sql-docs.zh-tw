@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63065699"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層式資料 (SQL Server)
@@ -50,7 +50,7 @@ ms.locfileid: "63065699"
   
 -   比較是按照深度優先順序  
   
-     假設有兩個`hierarchyid`值並**b**， **< b**表示在樹狀目錄的深度優先周遊中 a 在 b 前面。 `hierarchyid` 資料類型的索引採用深度優先順序，而且在深度優先周遊中彼此接近的節點會以彼此接近的方式儲存。 例如，某筆記錄的子系會儲存在該記錄旁。  
+     假設有兩個`hierarchyid`值  並**b**， **< b**表示在樹狀目錄的深度優先周遊中 a 在 b 前面。 `hierarchyid` 資料類型的索引採用深度優先順序，而且在深度優先周遊中彼此接近的節點會以彼此接近的方式儲存。 例如，某筆記錄的子系會儲存在該記錄旁。  
   
 -   支援任意插入和刪除  
   
@@ -497,7 +497,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> 移動子樹  
- 另一個常見的作業是移動子樹。 以下的程序使用 **@oldMgr** 的樹狀子目錄，並讓其 (包括 **@oldMgr**) 成為 **@newMgr**進行子樹查詢時，速度明顯加快。  
+ 另一個常見的作業是移動子樹。 以下的程序使用 **@oldMgr** 的樹狀子目錄，並讓其 (包括 **@oldMgr** ) 成為 **@newMgr** 進行子樹查詢時，速度明顯加快。  
   
 ```  
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

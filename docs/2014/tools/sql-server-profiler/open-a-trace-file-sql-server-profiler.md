@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9c49ff9295904d8149f6050c0cb25de4d68cfe24
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63240550"
 ---
 # <a name="open-a-trace-file-sql-server-profiler"></a>開啟追蹤檔案 (SQL Server Profiler)
@@ -24,7 +24,7 @@ ms.locfileid: "63240550"
   
 ### <a name="to-open-a-trace-file"></a>若要開啟追蹤檔案  
   
-1.  在 **[檔案]** 功能表上，按一下 **[開啟]**，然後按一下 **[追蹤檔案]**。  
+1.  在 **[檔案]** 功能表上，按一下 **[開啟]** ，然後按一下 **[追蹤檔案]** 。  
   
 2.  在 **[開啟檔案]** 對話方塊中，選取您要開啟的追蹤檔案。  
   
