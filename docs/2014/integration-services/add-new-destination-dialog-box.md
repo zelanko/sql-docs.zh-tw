@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa37f7c80f2aa3c371ad823bb7c22ee2ad4819ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061854"
 ---
 # <a name="add-new-destination-dialog-box"></a>加入新目的地對話方塊
@@ -26,7 +26,7 @@ ms.locfileid: "66061854"
 |選項|描述|  
 |------------|-----------------|  
 |類型|選取您要連接的目的地類型。|  
-|連接管理員|選取現有的連線管理員，或按一下 [\<新增>] 以建立新的連線管理員。|  
+|連接管理員|選取現有的連線管理員，或按一下 [\<新增>]  以建立新的連線管理員。|  
 |僅顯示已安裝|指定是否只要檢視已安裝的目的地。|  
 |[確定]|按一下以儲存您的變更，並開啟任何後續的對話方塊設定其他選項。|  
   

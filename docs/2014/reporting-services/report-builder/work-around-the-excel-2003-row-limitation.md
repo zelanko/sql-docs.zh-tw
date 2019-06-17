@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f01e85a0a93ef1f2a14b2b01b4180143153865
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107545"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>解決 Excel 資料列限制
@@ -26,11 +26,11 @@ ms.locfileid: "66107545"
   
 1.  在 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 或報表管理員中開啟報表。  
   
-2.  以滑鼠右鍵按一下資料表中的資料列，然後按一下 [加入群組] > [父群組] 來加入外部資料表群組。  
+2.  以滑鼠右鍵按一下資料表中的資料列，然後按一下 [加入群組]   > [父群組]  來加入外部資料表群組。  
   
      ![選取父群組](../media/datarow-selectparentgroup.png "選取父群組")  
   
-3.  在 [群組依據] 運算式方塊中輸入下列公式，然後按一下 [確定] 來加入父群組。  
+3.  在 [群組依據]  運算式方塊中輸入下列公式，然後按一下 [確定]  來加入父群組。  
   
      =Int((RowNumber(Nothing)-1)/65000)  
   
@@ -38,19 +38,19 @@ ms.locfileid: "66107545"
   
      加入外部資料表群組會將群組資料行加入至報表中。  
   
-4.  以滑鼠右鍵按一下群組資料行標頭來刪除群組資料行，再按一下 [刪除資料行]，並選取 [只刪除資料行]，然後按一下 [確定]。  
+4.  以滑鼠右鍵按一下群組資料行標頭來刪除群組資料行，再按一下 [刪除資料行]  ，並選取 [只刪除資料行]  ，然後按一下 [確定]  。  
   
      ![刪除群組資料行](../media/groupcolumn-delete-updated.png "刪除群組資料行")  
   
-5.  以滑鼠右鍵按一下 [資料列群組] 區段中的 [群組 1]，然後按一下 [群組屬性]。  
+5.  以滑鼠右鍵按一下 [資料列群組]  區段中的 [群組 1]  ，然後按一下 [群組屬性]  。  
   
      ![檢視群組屬性](../media/groupproperties-updated.png "檢視群組屬性")  
   
-6.  在 [群組屬性] 對話方塊的 [排序] 頁面上，選取預設排序選項，然後按一下 [刪除]。  
+6.  在 [群組屬性]  對話方塊的 [排序]  頁面上，選取預設排序選項，然後按一下 [刪除]  。  
   
      ![刪除預設排序](../media/groupproperties-sorting-updated.png "刪除預設排序")  
   
-7.  在 [分頁符號] 頁面上，按一下 [在群組的每個執行個體之間]，然後按一下 [確定]。  
+7.  在 [分頁符號]  頁面上，按一下 [在群組的每個執行個體之間]  ，然後按一下 [確定]  。  
   
      ![設定分頁符號](../media/groupproperties-pagebreaks-updated.png "設定分頁符號")  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c16001cf0b96c42ed2f14c3d63dc0ecd7c456988
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62650494"
 ---
 # <a name="proxy-editor-and--add-principal"></a>Proxy 編輯器及新增主體
@@ -30,7 +30,7 @@ ms.locfileid: "62650494"
  列出所選類型的主體。  
   
  **名稱**  
- 選取要授與存取權給該主體的主體名稱，或選取 [名稱] 將存取權授與清單中的所有主體。  
+ 選取要授與存取權給該主體的主體名稱，或選取 [名稱]  將存取權授與清單中的所有主體。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立 SQL Server Agent Proxy](create-a-sql-server-agent-proxy.md)  

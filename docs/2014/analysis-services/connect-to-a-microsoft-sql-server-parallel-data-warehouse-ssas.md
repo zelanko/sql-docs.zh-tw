@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ab10518ff976562665317a75574ee2070be0d8f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087194"
 ---
 # <a name="connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas"></a>連接到 Microsoft SQL Server Parallel Data Warehouse (SSAS)
-  [資料表匯入精靈] 的這個頁面可讓您指定連接到 Microsoft SQL Server 平行處理資料倉儲 (PDW) 的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
+  [資料表匯入精靈]  的這個頁面可讓您指定連接到 Microsoft SQL Server 平行處理資料倉儲 (PDW) 的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]** 。  
   
  SQL Server PDW 是具有高擴充性的應用裝置，以極低成本透過大量平行處理提供效能。 如需有關 SQL Server PDW 的詳細資訊，請參閱 [SQL Server 2008 R2 Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895)網站。 您可以使用 SQL Server 驗證連接到資料倉儲。 若要連接至資料來源，您必須先在電腦上安裝適當的提供者。  
   

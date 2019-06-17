@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 835057cdef6b7d2a336b64480515a5046cfde070
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62875761"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>復原到記錄序號 (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62875761"
   
  交易記錄中的每一筆記錄都由記錄序號 (LSN) 加以唯一識別。 LSN 是經過排序的，因此如果 LSN2 大於 LSN1，表示 LSN2 所參考記錄中描述的變更，發生在記錄 LSN1 所描述的變更之後。  
   
- 發生重大事件時的記錄 LSN，有助於建構正確的還原順序。 因為 LSNs 經過排序，所以可以進行相等和不等比較 (亦即， **\<**、 **>**、 **=**、 **\<=**、 **>=**)。 要建構還原順序時，這種比較很有用。  
+ 發生重大事件時的記錄 LSN，有助於建構正確的還原順序。 因為 LSNs 經過排序，所以可以進行相等和不等比較 (亦即， **\<** 、 **>** 、 **=** 、 **\<=** 、 **>=** )。 要建構還原順序時，這種比較很有用。  
   
 > [!NOTE]  
 >  LSN 是資料類型 `numeric`(25,0) 的值。 數學運算 (例如：加、減) 在此沒有意義，且絕不能搭配 LSN 使用。  
@@ -64,11 +64,11 @@ ms.locfileid: "62875761"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>還原至 LSN 所用的 Transact-SQL 語法  
  使用 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 陳述式，您可以在 LSN 上或剛好就在它之前停止，如下所述：  
   
--   使用 WITH STOPATMARK **='** lsn:_<lsn_number>_**'** 子句，其中 lsn:*\<lsnNumber>* 是會指定包含所指定的 LSN 的記錄檔記錄為復原點的字串。  
+-   使用 WITH STOPATMARK **='** lsn: _<lsn_number>_ **'** 子句，其中 lsn: *\<lsnNumber>* 是會指定包含所指定的 LSN 的記錄檔記錄為復原點的字串。  
   
      STOPATMARK 會向前復原到 LSN，並且將該筆記錄納入向前復原中。  
   
--   使用 WITH STOPBEFOREMARK **='** lsn:_<lsn_number>_**'** 子句，其中 lsn:*\<lsnNumber>* 是會指定緊接在包含指定的 LSN 號碼的記錄檔記錄之前的記錄檔記錄為復原點的字串。  
+-   使用 WITH STOPBEFOREMARK **='** lsn: _<lsn_number>_ **'** 子句，其中 lsn: *\<lsnNumber>* 是會指定緊接在包含指定的 LSN 號碼的記錄檔記錄之前的記錄檔記錄為復原點的字串。  
   
      STOPBEFOREMARK 會向前復原到 LSN，並且從向前復原中排除該筆記錄。  
   

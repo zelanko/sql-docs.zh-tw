@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd4c6f3729d4d090854a48a65ce6d6a2465a98e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721215"
 ---
 # <a name="filter-settings"></a>篩選設定
@@ -27,7 +27,7 @@ ms.locfileid: "62721215"
  選取您想要用來篩選的資料行名稱。 您可以讓篩選以一個或多個資料行為基礎。  
   
  **[等於]**  
- 選取篩選的運算子，例如 **[小於或等於]**。  
+ 選取篩選的運算子，例如 **[小於或等於]** 。  
   
  **值1** 和 **值2**  
  輸入或選取篩選的值。 大部分運算子只需要 **[值1]** 資料行的值，但 **[介於]** 和 **[不介於]** 運算子則需要 **[值2]** 資料行的值。  

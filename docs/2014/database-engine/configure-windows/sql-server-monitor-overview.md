@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 889e0c5a54477a1532aa9ec2760fad890a671618
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755186"
 ---
 # <a name="sql-server-monitor-overview"></a>SQL Server 監視器概觀
@@ -45,7 +45,7 @@ ms.locfileid: "62755186"
  下列是與「SQL Server 監視器」相關的功能表選項：  
   
  **檔案**  
- 這個功能表包含 [結束] 命令。  
+ 這個功能表包含 [結束]  命令。  
   
  **動作**  
  包含導覽樹狀目錄中選取之節點的內容功能表。  

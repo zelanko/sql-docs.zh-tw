@@ -14,23 +14,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 371c7c605b5415654c01f3faa66fbd0801202785
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482958"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層成員權限 (Master Data Services)
-  階層成員權限為選擇性，而且只有當您希望使用者擁有特定成員的受限存取權時，才應該使用。 如果您未在 [階層成員] 索引標籤上指派權限，則使用者的權限完全是根據 [模型] 索引標籤上指派的權限。  
+  階層成員權限為選擇性，而且只有當您希望使用者擁有特定成員的受限存取權時，才應該使用。 如果您未在 [階層成員]  索引標籤上指派權限，則使用者的權限完全是根據 [模型]  索引標籤上指派的權限。  
   
- 階層成員權限會在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 使用者介面 (UI) 中，[使用者及群組的權限] 功能區域的 [階層成員] 索引標籤上指派。這些權限會決定使用者可以在此 UI 的總管功能區域中存取哪些成員。  
+ 階層成員權限會在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 使用者介面 (UI) 中，[使用者及群組的權限]  功能區域的 [階層成員]  索引標籤上指派。這些權限會決定使用者可以在此 UI 的總管  功能區域中存取哪些成員。  
   
- 在 [階層成員] 索引標籤上，每一個階層會表示為一個樹狀結構。 當您將權限指派給樹狀結構中的節點時，所有子項都會繼承該權限，除非在較低層級明確指派權限。  
+ 在 [階層成員]  索引標籤上，每一個階層會表示為一個樹狀結構。 當您將權限指派給樹狀結構中的節點時，所有子項都會繼承該權限，除非在較低層級明確指派權限。  
   
 > [!NOTE]  
 >  當您指派權限給階層中的節點時，相同層級或更高層級的其他節點中的所有成員都會以隱含方式遭到拒絕。  
   
- 在總管中，成員權限會套用到顯示成員的每一個地方。 例如，具有成員**唯讀**權限為唯讀，而與其所屬任何實體、 階層和集合中。  
+ 在總管  中，成員權限會套用到顯示成員的每一個地方。 例如，具有成員**唯讀**權限為唯讀，而與其所屬任何實體、 階層和集合中。  
   
  階層成員權限會套用到您指派的模型版本以及該版本的任何將來複本。 它們不會套用到早於您所指派的版本。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "65482958"
 |**Update**|顯示成員，而且使用者可加以變更。 使用者也可以在任何明確階層或成員所屬的集合中移動成員。|  
 |**拒絕**|不顯示成員。|  
   
- 在 [階層成員] 索引標籤上，您指派的權限不會立即生效。 權限套用的頻率取決於 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中 [系統設定] 資料表內的 [成員安全性處理間隔設定]。 遵循[立即套用成員權限 &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md) 中的步驟，可以立即套用成員權限。  
+ 在 [階層成員]  索引標籤上，您指派的權限不會立即生效。 權限套用的頻率取決於 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中 [系統設定] 資料表內的 [成員安全性處理間隔設定]  。 遵循[立即套用成員權限 &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md) 中的步驟，可以立即套用成員權限。  
   
 > [!NOTE]  
 >  您無法將階層成員權限指派給遞迴階層、具有明確頂層的衍生階層，以及具有隱藏層級的衍生階層。  

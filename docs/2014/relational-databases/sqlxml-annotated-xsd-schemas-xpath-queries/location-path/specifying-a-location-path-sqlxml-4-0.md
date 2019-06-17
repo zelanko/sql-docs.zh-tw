@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 795e27c020c9ea4c80c858da734ebd315d56615c
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012660"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>指定位置路徑 (SQLXML 4.0)
@@ -38,7 +38,7 @@ ms.locfileid: "66012660"
      相對位置路徑會從文件中的內容節點開始。 位置路徑包含一或多個位置步驟的序列，而且每個位置步驟都以斜線 (/) 分隔。 每個步驟都會選取相對於內容節點的一組節點。 步驟的初始序列會選取一組相對於內容節點的節點。 該集合中的每個節點都會當做下列步驟的內容節點使用。 系統會加入由該步驟識別的節點集合。 例如， **child:: order/child:: orderdetail**選取 **\<OrderDetail>** 的元素子系 **\<順序>** 項目內容節點的子系。  
   
     > [!NOTE]  
-    >  在 XPath 的 SQLXML 4.0 實作中，即使 XPath 明顯地不是絕對的，每個 XPath 查詢都會從根內容開始。 例如，系統會將 "Customer" 開頭的 XPath 查詢視為 "/Customer"。 在 XPath 查詢**Customer [Order]**，客戶根內容開始，但順序開始在客戶內容。 如需詳細資訊，請參閱 <<c0> [ 簡介使用 XPath 查詢&#40;SQLXML 4.0&#41;](../introduction-to-using-xpath-queries-sqlxml-4-0.md)。</c0>  
+    >  在 XPath 的 SQLXML 4.0 實作中，即使 XPath 明顯地不是絕對的，每個 XPath 查詢都會從根內容開始。 例如，系統會將 "Customer" 開頭的 XPath 查詢視為 "/Customer"。 在 XPath 查詢**Customer [Order]** ，客戶根內容開始，但順序開始在客戶內容。 如需詳細資訊，請參閱 <<c0> [ 簡介使用 XPath 查詢&#40;SQLXML 4.0&#41;](../introduction-to-using-xpath-queries-sqlxml-4-0.md)。</c0>  
   
 ## <a name="location-steps"></a>位置步驟  
  位置路徑 (絕對或相對) 是由包含三個部分的位置步驟所組成：  
@@ -49,7 +49,7 @@ ms.locfileid: "66012660"
   
 -   **節點測試**  
   
-     節點測試會指定位置步驟所選取的節點類型。 每個軸 (`child`、`parent`、`attribute` 和 `self`) 都有一個主體節點類型。 針對`attribute`軸的主要節點類型是 **\<屬性 >**。 針對`parent`， `child`，並`self`軸的主要節點類型會 **\<項目 >**。  
+     節點測試會指定位置步驟所選取的節點類型。 每個軸 (`child`、`parent`、`attribute` 和 `self`) 都有一個主體節點類型。 針對`attribute`軸的主要節點類型是 **\<屬性 >** 。 針對`parent`， `child`，並`self`軸的主要節點類型會 **\<項目 >** 。  
   
      例如，如果指定的位置路徑**child:: customer**，則 **\<客戶>** 會選取內容節點的項目子系。 因為`child`座標軸 **\<項目>** 做為其主體節點類型中，節點測試 Customer 為 TRUE 客戶是否 **\<項目 >** 節點。  
   

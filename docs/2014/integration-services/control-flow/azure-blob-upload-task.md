@@ -14,15 +14,15 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 392fcbf3a46b48b2032b5792321e9a22b3027341
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832773"
 ---
 # <a name="azure-blob-upload-task"></a>Azure Blob 上傳工作
   Azure Blob 上傳工作可讓 SSIS 封裝將檔案上傳至 Azure blob 儲存體。   
-若要加入 **Azure Blob 上傳工作**，請將其拖放至 SSIS 設計工具，然後按兩下或在其上按一下滑鼠右鍵，再按一下 [編輯]，即可看到以下 [Azure Blob 上傳工作編輯器] 對話方塊。  
+若要加入 **Azure Blob 上傳工作**，請將其拖放至 SSIS 設計工具，然後按兩下或在其上按一下滑鼠右鍵，再按一下 [編輯]  ，即可看到以下 [Azure Blob 上傳工作編輯器]  對話方塊。  
   
  下表提供此對話方塊中欄位的描述。  
   

@@ -15,10 +15,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: a1f175de4b205b6af98ea9bcc29e7679711b0943
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63192379"
 ---
 # <a name="generating-reports-oracletosql"></a>產生報表 (OracleToSQL)
@@ -26,7 +26,7 @@ ms.locfileid: "63192379"
   
 您可以使用下列程序來產生報表：  
   
-1.  指定**寫入-摘要-報表-以**參數。 （如果有指定），將會儲存為檔案名稱的相關的報表，或在您指定的資料夾中。 檔案名稱是系統預先定義的位置，如下表所述**&lt;n&gt;** 是唯一的檔案數目，以每次執行相同的命令數字會遞增。  
+1.  指定**寫入-摘要-報表-以**參數。 （如果有指定），將會儲存為檔案名稱的相關的報表，或在您指定的資料夾中。 檔案名稱是系統預先定義的位置，如下表所述 **&lt;n&gt;** 是唯一的檔案數目，以每次執行相同的命令數字會遞增。  
   
     報表 vis-相對-vis 命令如下：  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63192379"
 ```  
   
 ### <a name="synchronize-target"></a>同步處理目標：  
-命令**同步處理目標**已**報告錯誤至**參數，指定同步處理作業的錯誤報表的位置。 然後，依名稱的檔案**TargetSynchronizationReport&lt;n&gt;。XML**會建立在指定的位置，其中**&lt;n&gt;** 是唯一的檔案數目，以每次執行相同的命令數字會遞增。  
+命令**同步處理目標**已**報告錯誤至**參數，指定同步處理作業的錯誤報表的位置。 然後，依名稱的檔案**TargetSynchronizationReport&lt;n&gt;。XML**會建立在指定的位置，其中 **&lt;n&gt;** 是唯一的檔案數目，以每次執行相同的命令數字會遞增。  
   
 **注意：** 如果指定的資料夾路徑，則 '報表-錯誤-to' 參數會變成命令' 同步處理目標 ' 的選擇性屬性。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "63192379"
 -   fail-script  
   
 ### <a name="refresh-from-database"></a>重新整理從-資料庫：  
-命令**從資料庫重新整理**已**報告錯誤至**參數，指定重新整理作業的錯誤報表的位置。 然後，依名稱的檔案**SourceDBRefreshReport&lt;n&gt;。XML**會建立在指定的位置，其中**&lt;n&gt;** 是唯一的檔案數目，以每次執行相同的命令數字會遞增。  
+命令**從資料庫重新整理**已**報告錯誤至**參數，指定重新整理作業的錯誤報表的位置。 然後，依名稱的檔案**SourceDBRefreshReport&lt;n&gt;。XML**會建立在指定的位置，其中 **&lt;n&gt;** 是唯一的檔案數目，以每次執行相同的命令數字會遞增。  
   
 **注意：** 如果指定的資料夾路徑，則 '報表-錯誤-to' 參數會變成命令' 同步處理目標 ' 的選擇性屬性。  
   

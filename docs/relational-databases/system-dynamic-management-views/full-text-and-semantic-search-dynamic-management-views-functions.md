@@ -16,10 +16,10 @@ author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: 62263adb604cc4a9f3c73dade3fc02d9132aa909
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946252"
 ---
 # <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>全文檢索和語意搜尋動態管理檢視函式

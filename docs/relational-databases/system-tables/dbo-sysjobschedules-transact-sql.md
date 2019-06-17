@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d055e9b76d248319bddb37241b1b79428ee5f3b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62470806"
 ---
 # <a name="dbosysjobschedules-transact-sql"></a>dbo.sysjobschedules (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "62470806"
 
   包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 要執行之作業的排程資訊。 這份資料表儲存在**msdb**資料庫。  
   
-> **注意：****Sysjobschedules**資料表會每隔 20 分鐘，可能會影響所傳回的值重新整理**sp_help_jobschedule**預存程序。  
+> **注意：** **Sysjobschedules**資料表會每隔 20 分鐘，可能會影響所傳回的值重新整理**sp_help_jobschedule**預存程序。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

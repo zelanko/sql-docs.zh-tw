@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810419"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>資料庫管理員的診斷連接
@@ -43,7 +43,7 @@ ms.locfileid: "62810419"
   
  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員 (sysadmin) 角色的成員可以使用 DAC 進行連接。  
   
- DAC 的存取與支援是使用特殊的系統管理員參數 ( **-A** )，透過**sqlcmd**命令提示字元公用程式來執行。 如需使用 **sqlcmd** 的詳細資訊，請參閱[以指令碼變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 您也可以連接前面加上`admin:`格式的執行個體名稱**sqlcmd-Sadmin:**_< instance_name >。_ 您也可以起始從 DAC[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]藉由連接到查詢編輯器`admin:` \< *instance_name*>。  
+ DAC 的存取與支援是使用特殊的系統管理員參數 ( **-A** )，透過**sqlcmd**命令提示字元公用程式來執行。 如需使用 **sqlcmd** 的詳細資訊，請參閱[以指令碼變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 您也可以連接前面加上`admin:`格式的執行個體名稱**sqlcmd-Sadmin:** _< instance_name >。_ 您也可以起始從 DAC[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]藉由連接到查詢編輯器`admin:` \< *instance_name*>。  
   
 ## <a name="restrictions"></a>限制  
  由於 DAC 僅在少數的情況下才會為了診斷伺服器問題而建立，因此這項連接有某些限制：  
@@ -76,7 +76,7 @@ ms.locfileid: "62810419"
   
 -   基本 DBCC 命令，例如 DBCC FREEPROCCACHE、DBCC FREESYSTEMCACHE、DBCC DROPCLEANBUFFERS`,` 及 DBCC SQLPERF。 請勿執行需要大量資源的命令，例如 **DBCC** CHECKDB、DBCC DBREINDEX 或 DBCC SHRINKDATABASE。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL*\<spid>* 命令。 根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的狀態而定，KILL 命令可能不會每次都成功，這時只能選擇重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下面是部分一般方針：  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL *\<spid>* 命令。 根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的狀態而定，KILL 命令可能不會每次都成功，這時只能選擇重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下面是部分一般方針：  
   
     -   藉由查詢 `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`，來確認是否已確實清除 SPID。 若未傳回資料列，表示已清除工作階段。  
   

@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fe825b4f42f8899774cf0a33510ce095ca67939
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63283183"
 ---
 # <a name="options-designers-maintenance-plans-page"></a>選項 （設計工具-維護計畫頁面）
-  使用 [選項] 對話方塊以決定將新形狀新增至設計介面時，設計工具的預設行為。 在 [工具] 功能表上按一下 [選項]，展開 [設計工具]，然後選取 [維護計畫]。  
+  使用 [選項]  對話方塊以決定將新形狀新增至設計介面時，設計工具的預設行為。 在 [工具]  功能表上按一下 [選項]  ，展開 [設計工具]  ，然後選取 [維護計畫]  。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **依預設，會將新形狀連接到選取的形狀**  

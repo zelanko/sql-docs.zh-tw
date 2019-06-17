@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d9b4a0e07f32e074ff7e8875c263615bcebc12d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62874873"
 ---
 # <a name="select-backup-destination"></a>選取備份目的地
-  使用 [選取備份目的地] 對話方塊，即可選取裝置作為備份目的地。 備份目的地可以是磁碟或是邏輯備份裝置。  
+  使用 [選取備份目的地]  對話方塊，即可選取裝置作為備份目的地。 備份目的地可以是磁碟或是邏輯備份裝置。  
   
  **若要使用 SQL Server Management Studio 備份資料庫**  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62874873"
   
 -   [備份交易記錄 &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  此對話方塊的選項，會視您選取的目的地是磁碟還是磁帶而定。  
   
  **磁碟上的目的地**  

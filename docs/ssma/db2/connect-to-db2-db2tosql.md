@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ab734e93743d3a3158feb16dba044b58e7f48f23
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63299157"
 ---
 # <a name="connect-to-db2-db2tosql"></a>連接到 DB2 (DB2ToSQL)
@@ -22,7 +22,7 @@ ms.locfileid: "63299157"
   
 若要存取此對話方塊中，在**檔案**功能表上，選取**連接到 DB2**。 如果您先前曾經連線，則命令是**重新連接至 DB2**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **提供者**  
 選取您的連線到 DB2 資料庫的資料存取提供者。 可用的提供者是 DB2 用戶端提供者和 OLE DB 提供者。 預設值是 DB2 用戶端提供者。  
   

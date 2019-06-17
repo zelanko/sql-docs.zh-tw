@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c7ac7238d643165bc093a8a1cabd5d1dac662dfc
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011135"
 ---
 # <a name="install-and-configure-semantic-search"></a>安裝及設定語意搜尋
@@ -36,7 +36,7 @@ GO
 ```  
   
 ###  <a name="BasicsSemanticSearch"></a> 如何：安裝語意搜尋  
- 若要安裝語意搜尋，請在安裝期間選取 [要安裝的功能] 頁面上的 [搜尋的全文檢索和語意擷取]。  
+ 若要安裝語意搜尋，請在安裝期間選取 [要安裝的功能]  頁面上的 [搜尋的全文檢索和語意擷取]  。  
   
  統計語意搜尋相依於全文檢索搜尋。 這兩個選擇性功能會同時安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   

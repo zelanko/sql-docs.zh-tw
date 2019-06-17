@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 618a155390d8719e639d0e12d241b2f824e5375d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62835986"
 ---
 # <a name="edit-the-table-properties"></a>編輯資料表屬性
@@ -42,11 +42,11 @@ ms.locfileid: "62835986"
   
     -   **新的擷取執行個體**：此情況下會儲存新的擷取執行個體，而且不會刪除舊的擷取執行個體。  
   
-         **請注意**:每一個資料表不能有兩個以上的擷取執行個體。 如果已經有兩個擷取執行個體，就無法使用這個選項。  
+         **注意**：每一個資料表不能有兩個以上的擷取執行個體。 如果已經有兩個擷取執行個體，就無法使用這個選項。  
   
     -   **取代現有的**：此情況下會刪除目前的擷取執行個體，並由您建立的擷取執行個體取代。 如果已經為此資料表定義兩個擷取執行個體，您必須選取其中一個來替換。  
   
- **請注意**:您可以從 [資料表] 索引標籤的資料表清單中移除擷取執行個體。  
+ **注意**：您可以從 [資料表]  索引標籤的資料表清單中移除擷取執行個體。  
   
  在此對話方塊中輸入資訊完畢後，請按一下 **[確定]** 接受變更。  
   

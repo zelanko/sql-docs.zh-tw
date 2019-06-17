@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec38404a32751330d7fefd974fafe3d571d3b11b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66074776"
 ---
 # <a name="linked-measure-groups"></a>連結量值群組
@@ -57,13 +57,13 @@ ms.locfileid: "66074776"
   
 2.  在 [方案總管] 中，按兩下要將連結量值群組加入至哪一個 Cube。 這個步驟會在 Cube 設計師中開啟 Cube。  
   
-3.  在 Cube 設計師的 [量值] 窗格或 [維度] 窗格中，以滑鼠右鍵按一下其中一個窗格的任何地方，然後選取 [新增連結物件]。 這樣會啟動連結物件精靈。  
+3.  在 Cube 設計師的 [量值] 窗格或 [維度] 窗格中，以滑鼠右鍵按一下其中一個窗格的任何地方，然後選取 [新增連結物件]  。 這樣會啟動連結物件精靈。  
   
 4.  在第一個頁面上，指定資料來源。 這個步驟會建立原始量值群組的位置。 預設值為目前資料庫中現有的 Cube，但是您也可以選擇不同的 Analysis Services 資料庫。  
   
 5.  在下一頁選擇您想要連結的量值群組或維度。 維度和 Cube 物件 (例如量值群組) 會個別列出。 只有尚未在目前 Cube 中的物件才可使用。  
   
-6.  按一下 [完成] 即可建立連結物件。 連結物件會出現在 [量值和維度] 窗格中 (以連結圖示指示)。  
+6.  按一下 [完成]  即可建立連結物件。 連結物件會出現在 [量值和維度] 窗格中 (以連結圖示指示)。  
   
 ## <a name="secure-a-linked-measure"></a>維護連結量值的安全  
  定義連結之後，管理連結量值群組中量值的存取權方式，就和管理其他量值群組存取權的方式一樣。 連結物件會連同其非連結的對應項目一起出現在角色設計工具中。 如需管理量值群組之安全性的詳細資訊，請參閱[授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)。  

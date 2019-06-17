@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 80be0aea6705ed98fd12ea3481af59e289b94604
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482579"
 ---
 # <a name="security-master-data-services"></a>安全性 (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "65482579"
   
 -    在 [總管] 功能區域中存取資料的使用者。  
   
--   可在 [總管] 以外的區域中執行管理工作的使用者。 這些使用者即稱為[管理員 &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)。  
+-    可在 [總管] 以外的區域中執行管理工作的使用者。 這些使用者即稱為[管理員 &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)。  
   
 ## <a name="how-to-set-security"></a>如何設定安全性  
  若要提供存取 MDS 之資料或功能的使用者或群組權限，您必須指派：  

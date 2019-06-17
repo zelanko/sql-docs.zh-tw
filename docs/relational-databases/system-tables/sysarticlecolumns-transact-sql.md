@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d31293e6e6b562e8ccfbb624a9ea9e226205ef2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714185"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "62714185"
 |**colid**|**smallint**|識別發行項中的資料行。|  
 |**is_udt**|**bit**|指出資料行是否為使用者自訂資料類型 (UDT) 資料行。 值為**1**表示 UDT 資料行。|  
 |**is_xml**|**bit**|指出資料行是否**xml**資料行。 值為**1**表示的 xml 資料行。|  
-|**is_max**|**bit**|指出資料行是否為大數值資料類型資料行**varchar （max)**， **nvarchar （max)**，並**varbinary （max)**。 值為**1**表示大數值資料行。|  
+|**is_max**|**bit**|指出資料行是否為大數值資料類型資料行**varchar （max)** ， **nvarchar （max)** ，並**varbinary （max)** 。 值為**1**表示大數值資料行。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

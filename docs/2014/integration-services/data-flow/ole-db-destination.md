@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d9b75cc79f1f127858ce8547aa222524614ac09
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62901482"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目的地
@@ -45,13 +45,13 @@ ms.locfileid: "62901482"
 > [!NOTE]  
 >  OLE DB 目的地不支援參數。 如果需要執行參數化 INSERT 陳述式，請考慮 OLE DB 命令轉換。 如需相關資訊，請參閱 [OLE DB Command Transformation](transformations/ole-db-command-transformation.md)。  
   
- 當 OLE DB 目的地載入使用雙位元組字元集 (DBCS) 的資料時，如果資料存取模式未使用快速載入選項，而 OLE DB 連接管理員使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，則資料可能會損毀。 若要確定 DBCS 資料的完整性，您應該將 OLE DB 連線管理員設定為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，或使用下列其中一個快速載入存取模式：[資料表或檢視表 - 快速載入] 或 [資料表名稱或檢視表名稱變數 - 快速載入]。 兩個選項都可從 [OLE DB 目的地編輯器] 對話方塊使用。 當程式設計[!INCLUDE[ssIS](../../includes/ssis-md.md)]物件模型中，您應該將 AccessMode 屬性設`OpenRowset Using FastLoad`，或`OpenRowset Using FastLoad From Variable`。  
+ 當 OLE DB 目的地載入使用雙位元組字元集 (DBCS) 的資料時，如果資料存取模式未使用快速載入選項，而 OLE DB 連接管理員使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，則資料可能會損毀。 若要確定 DBCS 資料的完整性，您應該將 OLE DB 連線管理員設定為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，或使用下列其中一個快速載入存取模式：[資料表或檢視表 - 快速載入]  或 [資料表名稱或檢視表名稱變數 - 快速載入]  。 兩個選項都可從 [OLE DB 目的地編輯器]  對話方塊使用。 當程式設計[!INCLUDE[ssIS](../../includes/ssis-md.md)]物件模型中，您應該將 AccessMode 屬性設`OpenRowset Using FastLoad`，或`OpenRowset Using FastLoad From Variable`。  
   
 > [!NOTE]  
->  如果使用「[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中的 [OLE DB 目的地編輯器] 對話方塊來建立 OLE DB 目的地插入資料的目的地資料表，則您可能必須手動選取新建立的資料表。 當 OLE DB 提供者 (例如 DB2 的 OLE DB 提供者) 自動將結構描述識別碼加入資料表名稱時，需進行手動選取。  
+>  如果使用「[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中的 [OLE DB 目的地編輯器]  對話方塊來建立 OLE DB 目的地插入資料的目的地資料表，則您可能必須手動選取新建立的資料表。 當 OLE DB 提供者 (例如 DB2 的 OLE DB 提供者) 自動將結構描述識別碼加入資料表名稱時，需進行手動選取。  
   
 > [!NOTE]  
->  視目的地類型而定，[OLE DB 目的地編輯器] 對話方塊產生的 CREATE TABLE 陳述式可能需要進行修改。 例如，某些目的地並不支援 CREATE TABLE 陳述式所使用的資料類型。  
+>  視目的地類型而定，[OLE DB 目的地編輯器]  對話方塊產生的 CREATE TABLE 陳述式可能需要進行修改。 例如，某些目的地並不支援 CREATE TABLE 陳述式所使用的資料類型。  
   
  此目的地使用 OLE DB 連接管理員連接到資料來源，且連接管理員會指定要使用的 OLE DB 提供者。 如需相關資訊，請參閱 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)。  
   
@@ -81,25 +81,25 @@ ms.locfileid: "62901482"
 > [!NOTE]  
 >  目的地的任何條件約束失敗都會使 FastLoadMaxInsertCommitSize 所定義的整個資料列批次失敗。  
   
- 除了 [OLE DB 目的地編輯器] 對話方塊中公開的快速載入選項以外，您還可以在 [進階編輯器] 對話方塊的 FastLoadOptions 屬性中輸入選項，將 OLE DB 目的地設定為使用下列大量載入選項。  
+ 除了 [OLE DB 目的地編輯器]  對話方塊中公開的快速載入選項以外，您還可以在 [進階編輯器]  對話方塊的 FastLoadOptions 屬性中輸入選項，將 OLE DB 目的地設定為使用下列大量載入選項。  
   
 |快速載入選項|描述|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|指定要插入的大小 (以 KB 為單位)。 選項有表單`KILOBYTES_PER_BATCH`  = \<正整數值**>**。|  
+|KILOBYTES_PER_BATCH|指定要插入的大小 (以 KB 為單位)。 選項有表單`KILOBYTES_PER_BATCH`  = \<正整數值 **>** 。|  
 |FIRE_TRIGGERS|指定是否要針對插入資料表上引發觸發程序。 選項的格式為 **FIRE_TRIGGERS**。 選項的存在代表觸發程序會引發。|  
-|ORDER|指定如何儲存輸入資料。 選項的格式為 ORDER \<資料行名稱> ASC&#124;DESC。 可以列出任何數目的資料行，也可以選擇包含排序順序。 如果省略排序順序，大量插入作業會假設資料沒有排序。<br /><br /> 注意:如果您使用 ORDER 選項依照資料表的叢集索引來輸入的資料進行排序，則可以改善效能。|  
+|ORDER|指定如何儲存輸入資料。 選項的格式為 ORDER \<資料行名稱> ASC&#124;DESC。 可以列出任何數目的資料行，也可以選擇包含排序順序。 如果省略排序順序，大量插入作業會假設資料沒有排序。<br /><br /> 注意:如果您使用 ORDER 選項依照資料表的叢集索引來排序輸入資料，將可改善效能。|  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 關鍵字通常是以大寫字母輸入，但是這些關鍵字並不區分大小寫。  
   
  若要深入了解有關快速載入選項的詳細資訊，請參閱 [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)。  
   
 ## <a name="troubleshooting-the-ole-db-destination"></a>疑難排解 OLE DB 目的地  
- 您可以記錄 OLE DB 目的地對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，針對 OLE DB 目的地所執行的將資料儲存至外部資料來源的作業進行疑難排解。 若要記錄 OLE DB 目的地對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+ 您可以記錄 OLE DB 目的地對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，針對 OLE DB 目的地所執行的將資料儲存至外部資料來源的作業進行疑難排解。 若要記錄 OLE DB 目的地對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷]  事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
 ## <a name="configuring-the-ole-db-destination"></a>設定 OLE DB 目的地  
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需有關可以在 [OLE DB 目的地編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
+ 如需有關可以在 [OLE DB 目的地編輯器]  對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [OLE DB 目的地編輯器 &#40;連線管理員頁面&#41;](../ole-db-destination-editor-connection-manager-page.md)  
   

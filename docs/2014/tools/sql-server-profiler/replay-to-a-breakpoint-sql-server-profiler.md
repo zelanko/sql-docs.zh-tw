@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33860d4e84e828b404236527dbe3c8c8cf6becc2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63183511"
 ---
 # <a name="replay-to-a-breakpoint-sql-server-profiler"></a>重新執行至中斷點 (SQL Server Profiler)
@@ -33,17 +33,17 @@ ms.locfileid: "63183511"
   
     -   按 F9 鍵。  
   
-    -   在 **[重新執行]** 功能表上，按一下 **[切換中斷點]**。  
+    -   在 **[重新執行]** 功能表上，按一下 **[切換中斷點]** 。  
   
-    -   以滑鼠右鍵按一下事件，然後按一下 [切換中斷點]。  
+    -   以滑鼠右鍵按一下事件，然後按一下 [切換中斷點]  。  
   
      選取的追蹤事件旁邊會出現紅色項目符號，表示此為追蹤中斷點。  
   
      重複這個步驟來設定多個中斷點。  
   
-3.  在 **[重新執行]** 功能表，按一下 **[開始]**，連接到您要重新執行追蹤的伺服器。  
+3.  在 **[重新執行]** 功能表，按一下 **[開始]** ，連接到您要重新執行追蹤的伺服器。  
   
-4.  在 **[重新執行組態]** 對話方塊中確認設定，然後按一下 **[確定]**。  
+4.  在 **[重新執行組態]** 對話方塊中確認設定，然後按一下 **[確定]** 。  
   
      開始重新執行，到達中斷點時會暫停。  
   

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd3c7f0bb394025581e4a2dffc8eb79a43acb498
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63036211"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>將現有的索引移至不同的檔案群組
@@ -61,19 +61,19 @@ ms.locfileid: "63036211"
   
 2.  按一下加號展開 **[資料表]** 資料夾。  
   
-3.  以滑鼠右鍵按一下包含您要移動之索引的資料表，然後選取 [設計]。  
+3.  以滑鼠右鍵按一下包含您要移動之索引的資料表，然後選取 [設計]  。  
   
-4.  在 [資料表設計工具] 功能表上，按一下 [索引/索引鍵]。  
+4.  在 [資料表設計工具]  功能表上，按一下 [索引/索引鍵]  。  
   
 5.  選取您要移動的索引。  
   
-6.  在主要方格中，展開 **[資料空間規格]**。  
+6.  在主要方格中，展開 **[資料空間規格]** 。  
   
 7.  選取 **[檔案群組或分割區配置名稱]** ，然後從清單中選取要將索引移至其中的檔案群組或分割區配置。  
   
 8.  按一下 [ **關閉**]。  
   
-9. 在 [檔案] 功能表上，選取 [儲存 _table_name_]。  
+9. 在 [檔案]  功能表上，選取 [儲存 _table_name_]  。  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>若要在物件總管中將現有的索引移到不同的檔案群組  
   
@@ -85,9 +85,9 @@ ms.locfileid: "63036211"
   
 4.  按一下加號展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您要移動的索引，然後選取 [屬性]。  
+5.  以滑鼠右鍵按一下您要移動的索引，然後選取 [屬性]  。  
   
-6.  在 **[選取頁面]** 底下，選取 **[儲存體]**。  
+6.  在 **[選取頁面]** 底下，選取 **[儲存體]** 。  
   
 7.  選取要移動索引的檔案群組。  
   
@@ -97,9 +97,9 @@ ms.locfileid: "63036211"
   
      在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的多處理器電腦上，您可以指定平行處理原則的最大程度值，藉以設定用來執行索引陳述式的處理器數目。 並非每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本都可使用平行索引作業功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如需平行索引作業的詳細資訊，請參閱 [設定平行索引作業](configure-parallel-index-operations.md)。  
   
-8.  按一下 [確定] 。  
+8.  按一下 [確定]  。  
   
- 下列資訊可從 [索引屬性 - _index_name_] 對話方塊的 [儲存體] 頁面取得：  
+ 下列資訊可從 [索引屬性 - _index_name_]  對話方塊的 [儲存體]  頁面取得：  
   
  **檔案群組**  
  在指定的檔案群組中儲存索引。 清單僅顯示標準 (資料列) 檔案群組。 預設清單選取項目為資料庫的 PRIMARY 檔案群組。  
@@ -147,9 +147,9 @@ ms.locfileid: "63036211"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  

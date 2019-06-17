@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c534fc23e2bc4938349d7874c1ce1fbd9b374dd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064482"
 ---
 # <a name="attributes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>屬性 (屬性關聯性設計師索引標籤，維度設計師) (Analysis Services - 多維度資料)
@@ -24,7 +24,7 @@ ms.locfileid: "66064482"
   
  **若要檢視 [屬性] 窗格**  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的方案總管中，按兩下維度即可開啟 [維度設計師]，然後按一下 [屬性關聯性] 索引標籤。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的方案總管中，按兩下維度即可開啟 [維度設計師]，然後按一下 [屬性關聯性]  索引標籤。  
   
 2.  在工具列上，按一下 **[顯示清單檢視]** 圖示。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66064482"
   
 ### <a name="shortcut-menu-options"></a>快速鍵功能表選項  
  **新增屬性關聯性**  
- 開啟 [建立屬性關聯性] 對話方塊，而且您可以在其中定義新的屬性關聯性。  
+ 開啟 [建立屬性關聯性]  對話方塊，而且您可以在其中定義新的屬性關聯性。  
   
  如需詳細資訊，請參閱[建立屬性關聯性和編輯屬性關聯性對話方塊 &#40;屬性關聯性設計師索引標籤，維度設計師&#41; &#40;Analysis Services - 多維度資料&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) 和[定義屬性關聯性](multidimensional-models/attribute-relationships-define.md)。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66064482"
  在清單中反白顯示屬性的名稱，然後讓您修改此文字。  
   
  **屬性**  
- 在 [屬性] 視窗中顯示屬性 (Attribute) 的屬性 (Property)。  
+ 在 [屬性]  視窗中顯示屬性 (Attribute) 的屬性 (Property)。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性關聯性&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   

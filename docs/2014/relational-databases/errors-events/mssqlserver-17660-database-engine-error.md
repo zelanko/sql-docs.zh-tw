@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_17660 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 17660 (Database Engine error)
 ms.assetid: da30e8a7-1c5a-4140-98ee-f84528ac3140
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65a1a6ef73336a8e47db19984be62e3c132bfaa6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62869603"
 ---
 # <a name="mssqlserver17660"></a>MSSQLSERVER_17660
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>詳細資料  
   
 |||  
@@ -34,8 +33,9 @@ ms.locfileid: "62869603"
 |訊息文字|正在啟動而未復原。 此為參考用訊息， 使用者不必採取任何動作。|  
   
 ## <a name="explanation"></a>說明  
-診斷輸出。  
+ 診斷輸出。  
   
 ## <a name="user-action"></a>使用者動作  
-無。  
+ 無。  
+  
   

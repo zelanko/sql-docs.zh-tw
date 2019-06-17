@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85a713bb9da24a67ebe8fdd097535c5a9d5ac98e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086230"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>將資料行加入至採礦結構
@@ -31,7 +31,7 @@ ms.locfileid: "66086230"
   
 1.  選取資料採礦設計師中的 **[採礦結構]** 索引標籤。  
   
-2.  以滑鼠右鍵按一下採礦結構，並選取 [加入資料行]。  
+2.  以滑鼠右鍵按一下採礦結構，並選取 [加入資料行]  。  
   
      就會開啟 **[選取資料行]** 對話方塊。  
   

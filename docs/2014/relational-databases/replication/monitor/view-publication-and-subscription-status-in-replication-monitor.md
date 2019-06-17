@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62666928"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>在複寫監視器中檢視發行集和訂閱狀態
@@ -67,9 +67,9 @@ ms.locfileid: "62666928"
 |[確定]|無|  
   
 ## <a name="subscription-status-values"></a>訂閱狀態值  
- 下列各資料表按優先權順序顯示訂閱狀態值及其對應的圖示。 訂閱可同時處於兩種狀態，例如 **「即將過期/已過期」** 和 **「正在重試失敗的命令」**；此時會顯示最高優先權的狀態。  
+ 下列各資料表按優先權順序顯示訂閱狀態值及其對應的圖示。 訂閱可同時處於兩種狀態，例如 **「即將過期/已過期」** 和 **「正在重試失敗的命令」** ；此時會顯示最高優先權的狀態。  
   
- **「效能嚴重不足」**、 **「即將過期/已過期」** 和 **「未初始化」** 等狀態值都是警告。 當顯示警告時，「複寫監視器」也會顯示是否有代理程式正在執行。 例如，狀態可能是 **[執行中，效能嚴重不足]**。  
+ **「效能嚴重不足」** 、 **「即將過期/已過期」** 和 **「未初始化」** 等狀態值都是警告。 當顯示警告時，「複寫監視器」也會顯示是否有代理程式正在執行。 例如，狀態可能是 **[執行中，效能嚴重不足]** 。  
   
 ### <a name="transactional-subscriptions"></a>交易式訂閱  
   

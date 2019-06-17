@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebe159aed7b27bf00ef47a110de1c7ec5ee70adb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062993"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>精確度圖表 (SQL Server 資料採礦增益集)
@@ -49,12 +49,12 @@ ms.locfileid: "66062993"
   
 2.  在 **精確度和驗證**群組中，按一下**精確度圖表**。  
   
-3.  在 **選取結構或模型**對話方塊方塊中，選擇您想要評估的模型。 按一下 [下一步] 。  
+3.  在 **選取結構或模型**對話方塊方塊中，選擇您想要評估的模型。 按一下 [下一步]  。  
   
     > [!NOTE]  
     >  您必須選擇緊密符合您所要測試之資料的模型。  
   
-4.  在 **預測及要預測的值指定資料行**對話方塊方塊中，選擇您想要預測的資料行和目標值，如果適用的話。 按一下 [下一步] 。  
+4.  在 **預測及要預測的值指定資料行**對話方塊方塊中，選擇您想要預測的資料行和目標值，如果適用的話。 按一下 [下一步]  。  
   
      例如，在以上的範例中，您可能選擇模型化客戶回應的資料行，並將目標值指定為 "Probably Will Buy"。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66062993"
   
      如果資料行名稱相似，精靈便會自動加以對應。 雖然輸入資料中的某些資料行可能與分析無關而且可以忽略，但是還需要某些資料行，資料採礦模型才能處理輸入。 這類資料行可能包含交易識別碼、目標值或用於預測的資料行。 如果您無法對應所需的資料行，此精靈將會提供一則警告訊息。  
   
-7.  按一下 **[完成]**。  
+7.  按一下 **[完成]** 。  
   
      精靈會建立報表，其中包含增益圖和基礎資料。  
   

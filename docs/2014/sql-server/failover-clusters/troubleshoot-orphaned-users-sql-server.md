@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035653"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>被遺棄使用者疑難排解 (SQL Server)
@@ -63,7 +63,7 @@ GO;
 ## <a name="to-resolve-an-orphaned-user"></a>若要解析被遺棄使用者  
  若要解析被遺棄使用者，請使用以下程序：  
   
-1.  下列命令會重新連結伺服器登入帳戶所指定 *< login_name >* 與所指定的資料庫使用者 *< database_user >*。  
+1.  下列命令會重新連結伺服器登入帳戶所指定 *< login_name >* 與所指定的資料庫使用者 *< database_user >* 。  
   
     ```  
     USE <database_name>;  

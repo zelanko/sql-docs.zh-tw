@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63016070"
 ---
 # <a name="execute-a-stored-procedure"></a>執行預存程序
@@ -129,11 +129,11 @@ ms.locfileid: "63016070"
   
 #### <a name="to-execute-a-stored-procedure"></a>若要執行預存程序  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，展開該執行個體，然後展開 [資料庫] 。  
+1.  在 [物件總管]  中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，展開該執行個體，然後展開 [資料庫]  。  
   
-2.  依序展開您要的資料庫、 **[可程式性]** 和 **[預存程序]**。  
+2.  依序展開您要的資料庫、 **[可程式性]** 和 **[預存程序]** 。  
   
-3.  以滑鼠右鍵按一下您要的使用者定義預存程序，然後按一下 [執行預存程序]。  
+3.  以滑鼠右鍵按一下您要的使用者定義預存程序，然後按一下 [執行預存程序]  。  
   
 4.  在 **[執行程序]** 對話方塊中，指定每個參數的值，以及是否應傳遞 null 值。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "63016070"
      **值**  
      呼叫程序時輸入參數的值。  
   
-5.  若要執行預存程序，請按一下 **[確定]**。  
+5.  若要執行預存程序，請按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -160,9 +160,9 @@ ms.locfileid: "63016070"
   
 1.  連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何執行需要一個參數的預存程序。 此範例會執行 `uspGetEmployeeManagers` 預存程序，並指定值  `6` 做為 `@EmployeeID` 參數。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何執行需要一個參數的預存程序。 此範例會執行 `uspGetEmployeeManagers` 預存程序，並指定值  `6` 做為 `@EmployeeID` 參數。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -175,9 +175,9 @@ GO
   
 1.  連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) 設定自動執行程序。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) 設定自動執行程序。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -191,9 +191,9 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 1.  連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) 設定停止自動執行程序。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) 設定停止自動執行程序。  
   
 ```sql  
 USE AdventureWorks2012;  

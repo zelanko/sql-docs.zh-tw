@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b7b7b6cc8127b339a45a5f651af6db4d0b595b80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62844534"
 ---
 # <a name="monitor-sql-server-managed-backup-to-windows-azure"></a>監視 SQL Server Managed Backup 到 Windows Azure
@@ -30,9 +30,9 @@ ms.locfileid: "62844534"
   
 1.  連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 這樣會傳回擴充事件的現有組態，以及電子郵件通知。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。 這樣會傳回擴充事件的現有組態，以及電子郵件通知。  
   
 ```  
 Use msdb  

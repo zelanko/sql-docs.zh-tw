@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: edc42dc5746e551913395249cd029e41132f8f0e
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65486409"
 ---
 # <a name="administrators-master-data-services"></a>管理員 (Master Data Services)
@@ -29,9 +29,9 @@ ms.locfileid: "65486409"
   本文說明 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的系統管理員類型：模型系統管理員、實體系統管理員和進階使用者。  
   
 ## <a name="model-administrators"></a>模型管理員  
- 在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，模型系統管理員是在 [模型物件] 索引標籤上獲派最上層模型物件之 [Admin (系統管理員)] 權限。當使用者在特定模型上具有系統管理員權限時，任何其他模型子物件的權限 (模型物件和成員的權限) 將由模型**系統管理員**權限取代，並且會被忽略。  
+ 在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，模型系統管理員是在 [模型物件]  索引標籤上獲派最上層模型物件之 [Admin (系統管理員)]  權限。當使用者在特定模型上具有系統管理員權限時，任何其他模型子物件的權限 (模型物件和成員的權限) 將由模型**系統管理員**權限取代，並且會被忽略。  
   
--   如果使用者可以存取總管 功能區域，即可加入、刪除及更新此區域中的所有主要資料。  
+-   如果使用者可以存取總管  功能區域，即可加入、刪除及更新此區域中的所有主要資料。  
   
 -   如果使用者可以存取其他功能區域，即可執行該功能區域中的所有管理工作。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "65486409"
 ## <a name="entity-administrators"></a>實體系統管理員  
  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，實體系統管理員是在模型物件索引標籤上獲派實體物件系統管理員權限的使用者。當使用者擁有實體的統管理員權限時，實體子物件上的任何其他權限 (模型物件和成員的權限) 將由系統管理員權限取代，而且會被忽略。  
   
--   如果使用者可以存取總管 功能區域，即可加入、刪除及更新此區域中的所有主要資料。  
+-   如果使用者可以存取總管  功能區域，即可加入、刪除及更新此區域中的所有主要資料。  
   
 -   如果實體變更所需的系統管理員核准，則實體系統管理員可以檢閱，然後核准或拒絕變更集。  
   
@@ -53,13 +53,13 @@ ms.locfileid: "65486409"
 ## <a name="master-data-services-super-user"></a>Master Data Services 進階使用者  
  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以將 [進階使用者] 功能區域的權限指派給使用者。 具有 [進階使用者] 功能區域權限的使用者實際上具有所有模型的 [Admin (系統管理員)] 權限，而且具有所有其他功能區域權限。 如需功能區域權限的相關資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
- 當您使用[建立資料庫精靈 &#40;Master Data Services 組態管理員&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md) 建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫時，會為 [系統管理員帳戶] 指定這個預設進階使用者。  
+ 當您使用[建立資料庫精靈 &#40;Master Data Services 組態管理員&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md) 建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫時，會為 [系統管理員帳戶]  指定這個預設進階使用者。  
   
  進階使用者可以執行下列作業：  
   
 -   存取所有功能區域。  
   
--   在總管功能區域中，新增、刪除和更新所有模型的所有主要資料。  
+-   在總管  功能區域中，新增、刪除和更新所有模型的所有主要資料。  
   
  您可以將進階使用者權限指派給多個使用者和 (或) 使用者群組。  
   

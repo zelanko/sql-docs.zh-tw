@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b385e6b02807ed79e2becb127a16e76d04329764
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62473129"
 ---
 # <a name="alerts"></a>警示
@@ -74,7 +74,7 @@ ms.locfileid: "62473129"
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會在指定事件的事件訊息中含有特定的文字字串時發出警示。 例如，您可以定義警示來回應含有特定資料表名稱或特定條件約束名稱的訊息。  
   
 ## <a name="selecting-a-performance-condition"></a>選取效能條件  
- 您可以指定一個為回應特定效能條件而產生的警示。 此時您必須指定所要監視的效能計數器、警示的臨界值以及計數器在警示產生時必須顯示的行為。 若要設定效能條件，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 [一般] 頁面上定義 [新增警示] 或 [警示屬性] 對話方塊中的下列項目：  
+ 您可以指定一個為回應特定效能條件而產生的警示。 此時您必須指定所要監視的效能計數器、警示的臨界值以及計數器在警示產生時必須顯示的行為。 若要設定效能條件，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 [一般]  頁面上定義 [新增警示]  或 [警示屬性]  對話方塊中的下列項目：  
   
 -   **物件**  
   
@@ -88,17 +88,17 @@ ms.locfileid: "62473129"
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體可為要監視的屬性定義特定的執行個體 (如果有的話)。  
   
--   **如果是計數器和值則發出警示**  
+-   **如果是計數器和值則發出警示**   
   
-     警示的臨界值和產生警示的行為。 臨界值是一個數值。 此行為是下列其中一項：低於、變成等於或高於在 [值] 中指定的數值。 [值] 是一個描述效能行況計數器的數值。 例如，若要設定警示在效能物件 **SQLServer:Locks** 的 **Lock Wait Time** 超過 30 分鐘時產生，您就必須選擇 [高於]，並指定 30 為 [值]。  
+     警示的臨界值和產生警示的行為。 臨界值是一個數值。 此行為是下列其中一項：低於  、變成等於  或高於在 [值] 中指定的數值  。 [值]  是一個描述效能行況計數器的數值。 例如，若要設定警示在效能物件 **SQLServer:Locks** 的 **Lock Wait Time** 超過 30 分鐘時產生，您就必須選擇 [高於]  ，並指定 30 為 [值]  。  
   
-     至於另一個範例，您可以指定效能物件 **SQLServer:Transactions** 在 **tempdb** 中的可用空間低於 1000 KB 時發出警示。 若要進行此設定，您必須選擇計數器 **Free space in tempdb (KB)**、低於，並在 [值] 中指定 **1000**。  
+     至於另一個範例，您可以指定效能物件 **SQLServer:Transactions** 在 **tempdb** 中的可用空間低於 1000 KB 時發出警示。 若要進行此設定，您必須選擇計數器 **Free space in tempdb (KB)** 、低於  ，並在 [值]  中指定 **1000**。  
   
     > [!NOTE]  
     >  效能資料是定期取樣的，因此在到達臨界值與發出效能警示之間可能會有一點延遲 (幾秒鐘)。  
   
 ## <a name="selecting-a-wmi-event"></a>選取 WMI 事件  
- 您可以指定一個為回應特定 WMI 事件而產生的警示。 若要選取 WMI 事件，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 [一般] 頁面上定義 [新增警示] 或 [警示屬性] 對話方塊中的下列項目：  
+ 您可以指定一個為回應特定 WMI 事件而產生的警示。 若要選取 WMI 事件，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 [一般]  頁面上定義 [新增警示]  或 [警示屬性]  對話方塊中的下列項目：  
   
 -   **Namespace**  
   

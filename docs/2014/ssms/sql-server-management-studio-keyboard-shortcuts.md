@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127041"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 鍵盤快速鍵
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 為使用者提供了兩種鍵盤配置。 根據預設，它會使用 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 配置，其鍵盤快速鍵是以 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 為基礎。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 也提供了類似於 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]中標準配置的鍵盤配置。 若要變更鍵盤配置或加入其他鍵盤快速鍵，請在 [工具] 功能表上，按一下 [選項]。 請在 [環境]、[鍵盤] 頁面上，選取所需要的鍵盤配置。  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 為使用者提供了兩種鍵盤配置。 根據預設，它會使用 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 配置，其鍵盤快速鍵是以 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 為基礎。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 也提供了類似於 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]中標準配置的鍵盤配置。 若要變更鍵盤配置或加入其他鍵盤快速鍵，請在 [工具]  功能表上，按一下 [選項]  。 請在 [環境]  、[鍵盤]  頁面上，選取所需要的鍵盤配置。  
   
 > [!NOTE]  
->  若要只顯示標題，請按一下這個頁面頂端的 [全部摺疊]。  
+>  若要只顯示標題，請按一下這個頁面頂端的 [全部摺疊]  。  
   
 ## <a name="menu-activation-keyboard-shortcuts"></a>功能表啟用鍵盤快速鍵  
   
@@ -40,12 +40,12 @@ ms.locfileid: "63127041"
 |移到 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 功能表列|ALT|ALT|  
 |啟動工具元件的功能表|ALT+連字號|ALT+連字號|  
 |顯示操作功能表|SHIFT+F10|SHIFT+F10|  
-|顯示 [新增檔案] 對話方塊來建立檔案|CTRL+N|CTRL+N|  
-|顯示 [新增專案] 對話方塊來建立新專案|CTRL+SHIFT+N|CTRL+SHIFT+N|  
-|顯示 [開啟檔案] 對話方塊來開啟現有的檔案|CTRL+O<br /><br /> 中的多個<br /><br /> CTRL+SHIFT+G|CTRL+O|  
-|顯示 [開啟專案] 對話方塊來開啟現有的專案|CTRL+SHIFT+O|CTRL+SHIFT+O|  
-|顯示 [加入新項目] 對話方塊來將新檔案加入目前的專案|CTRL+SHIFT+A|CTRL+SHIFT+A|  
-|顯示 [加入現有項目] 對話方塊來將現有檔案加入目前的專案|SHIFT+ALT+A|SHIFT+ALT+A|  
+|顯示 [新增檔案]  對話方塊來建立檔案|CTRL+N|CTRL+N|  
+|顯示 [新增專案]  對話方塊來建立新專案|CTRL+SHIFT+N|CTRL+SHIFT+N|  
+|顯示 [開啟檔案]  對話方塊來開啟現有的檔案|CTRL+O<br /><br /> 中的多個<br /><br /> CTRL+SHIFT+G|CTRL+O|  
+|顯示 [開啟專案]  對話方塊來開啟現有的專案|CTRL+SHIFT+O|CTRL+SHIFT+O|  
+|顯示 [加入新項目]  對話方塊來將新檔案加入目前的專案|CTRL+SHIFT+A|CTRL+SHIFT+A|  
+|顯示 [加入現有項目]  對話方塊來將現有檔案加入目前的專案|SHIFT+ALT+A|SHIFT+ALT+A|  
 |顯示查詢設計工具|CTRL+SHIFT+Q|CTRL+SHIFT+Q|  
 |關閉功能表或對話方塊，取消動作|ESC|ESC|  
   
@@ -79,8 +79,8 @@ ms.locfileid: "63127041"
 |顯示方案總管|CTRL+ALT+L|CTRL+ALT+L|  
 |顯示摘要視窗|F7|F7|  
 |顯示屬性視窗|F4|F4|  
-|顯示 [輸出] 視窗|CTRL+ALT+O|沒有對等項目|  
-|顯示 [工作清單] 視窗|CTRL+\\、T<br /><br /> 中的多個<br /><br /> CTRL+\\、CTRL+T|CTRL+ALT+K|  
+|顯示 [輸出]  視窗|CTRL+ALT+O|沒有對等項目|  
+|顯示 [工作清單]  視窗|CTRL+\\、T<br /><br /> 中的多個<br /><br /> CTRL+\\、CTRL+T|CTRL+ALT+K|  
 |在 [物件總管詳細資料] 清單檢視與 [物件總管詳細資料] 屬性窗格之間切換。|F6|F6|  
 |控制分隔 [物件總管詳細資料] 清單檢視與 [物件總管詳細資料] 屬性窗格的分隔列，以便調整顯示窗格的大小。|TAB，然後按向上鍵或向下鍵|TAB，然後按向上鍵或向下鍵|  
 |顯示工具箱|CTRL+ALT+X|CTRL+ALT+X|  
@@ -189,8 +189,8 @@ ms.locfileid: "63127041"
 |結束|ALT+F4|ALT+F4|  
 |在瀏覽器中開啟目前的檔案|CTRL+SHIFT+W|沒有對等項目|  
 |刪除目前檔案中的所有文字|CTRL+SHIFT+DEL|CTRL+SHIFT+DEL|  
-|顯示 [移至行] 對話方塊|CTRL+G|CTRL+G|  
-|顯示 [巡覽至] 對話方塊。|CTRL+加號 (+)|沒有對等項目|  
+|顯示 [移至行]  對話方塊|CTRL+G|CTRL+G|  
+|顯示 [巡覽至]  對話方塊。|CTRL+加號 (+)|沒有對等項目|  
 |增加行縮排|TAB|TAB|  
 |減少行縮排|SHIFT+TAB|SHIFT+TAB|  
 |使所選的文字成為大寫|CTRL+SHIFT+U|CTRL+SHIFT+U|  
@@ -218,15 +218,15 @@ ms.locfileid: "63127041"
 |執行 `sp_help` 系統預存程序|ALT+F1|ALT+F1|  
 |執行 `sp_who` 系統預存程序|CTRL+1|CTRL+1|  
 |執行 `sp_lock` 系統預存程序|CTRL+2|CTRL+2|  
-|在 [工具]、[選項]、[鍵盤]、[查詢快速鍵] 對話方塊中執行針對這個快速鍵設定的預存程序|CTRL+3|CTRL+3|  
-|在 [工具]、[選項]、[鍵盤]、[查詢快速鍵] 對話方塊中執行針對這個快速鍵設定的預存程序|CTRL+4|CTRL+4|  
-|在 [工具]、[選項]、[鍵盤]、[查詢快速鍵] 對話方塊中執行針對這個快速鍵設定的預存程序|CTRL+5|CTRL+5|  
-|在 [工具]、[選項]、[鍵盤]、[查詢快速鍵] 對話方塊中執行針對這個快速鍵設定的預存程序|CTRL+6|CTRL+6|  
-|在 [工具]、[選項]、[鍵盤]、[查詢快速鍵] 對話方塊中執行針對這個快速鍵設定的預存程序|CTRL+7|CTRL+7|  
-|在 [工具]、[選項]、[鍵盤]、[查詢快速鍵] 對話方塊中執行針對這個快速鍵設定的預存程序|CTRL+7|CTRL+7|  
-|在 [工具]、[選項]、[鍵盤]、[查詢快速鍵] 對話方塊中執行針對這個快速鍵設定的預存程序|CTRL+8|CTRL+8|  
-|在 [工具]、[選項]、[鍵盤]、[查詢快速鍵] 對話方塊中執行針對這個快速鍵設定的預存程序|CTRL+9|CTRL+9|  
-|在 [工具]、[選項]、[鍵盤]、[查詢快速鍵] 對話方塊中執行針對這個快速鍵設定的預存程序|CTRL+0|CTRL+0|  
+|在 [工具]  、[選項]  、[鍵盤]  、[查詢快速鍵]  對話方塊中執行針對這個快速鍵設定的預存程序|CTRL+3|CTRL+3|  
+|在 [工具]  、[選項]  、[鍵盤]  、[查詢快速鍵]  對話方塊中執行針對這個快速鍵設定的預存程序|CTRL+4|CTRL+4|  
+|在 [工具]  、[選項]  、[鍵盤]  、[查詢快速鍵]  對話方塊中執行針對這個快速鍵設定的預存程序|CTRL+5|CTRL+5|  
+|在 [工具]  、[選項]  、[鍵盤]  、[查詢快速鍵]  對話方塊中執行針對這個快速鍵設定的預存程序|CTRL+6|CTRL+6|  
+|在 [工具]  、[選項]  、[鍵盤]  、[查詢快速鍵]  對話方塊中執行針對這個快速鍵設定的預存程序|CTRL+7|CTRL+7|  
+|在 [工具]  、[選項]  、[鍵盤]  、[查詢快速鍵]  對話方塊中執行針對這個快速鍵設定的預存程序|CTRL+7|CTRL+7|  
+|在 [工具]  、[選項]  、[鍵盤]  、[查詢快速鍵]  對話方塊中執行針對這個快速鍵設定的預存程序|CTRL+8|CTRL+8|  
+|在 [工具]  、[選項]  、[鍵盤]  、[查詢快速鍵]  對話方塊中執行針對這個快速鍵設定的預存程序|CTRL+9|CTRL+9|  
+|在 [工具]  、[選項]  、[鍵盤]  、[查詢快速鍵]  對話方塊中執行針對這個快速鍵設定的預存程序|CTRL+0|CTRL+0|  
   
 ## <a name="text-manipulation-in-code-editor-keyboard-shortcuts"></a>在程式碼編輯器鍵盤快速鍵中操作文字  
   
@@ -248,7 +248,7 @@ ms.locfileid: "63127041"
 |刪除游標左側的單字|CTRL+空白鍵|CTRL+空白鍵|  
 |在游標的任何一側調換單字 (不適用於 SQL 編輯器)。|CTRL+SHIFT+T|CTRL+SHIFT+T|  
 |將包含游標的那一行移到下一行底下|SHIFT+ALT+T|沒有對等項目|  
-|在 [選項] 對話方塊的 [文字編輯器] 區段中，針對語言的 [格式化] 窗格上所指定的語言套用縮排和空格格式。 只適用於文字編輯器。|CTRL+K、CTRL+D|沒有對等項目|  
+|在 [選項]  對話方塊的 [文字編輯器]  區段中，針對語言的 [格式化]  窗格上所指定的語言套用縮排和空格格式。 只適用於文字編輯器。|CTRL+K、CTRL+D|沒有對等項目|  
 |根據程式碼周圍的行，讓選取的程式碼行正確縮排|CTRL+K、CTRL+F|沒有對等項目|  
 |設定或移除目前這一行的捷徑|CTRL+K、CTRL+H|沒有對等項目|  
 |從目前這一行移除註解語法|CTRL+K、CTRL+U|沒有對等項目|  
@@ -277,27 +277,27 @@ ms.locfileid: "63127041"
 |逐步執行特定陳述式|SHIFT+ALT+F11|沒有對等項目|  
 |設定下一個陳述式|Ctrl+3 0|沒有對等項目|  
 |顯示下一個陳述式|ALT+NUM|沒有對等項目|  
-|實作 [執行至資料指標處] 命令|CTRL+F10|CTRL+F10|  
-|顯示 [快速監看式] 對話方塊|CTRL+ALT+Q<br /><br /> 中的多個<br /><br /> SHIFT+F9|CTRL+ALT+Q|  
+|實作 [執行至資料指標處]  命令|CTRL+F10|CTRL+F10|  
+|顯示 [快速監看式]  對話方塊|CTRL+ALT+Q<br /><br /> 中的多個<br /><br /> SHIFT+F9|CTRL+ALT+Q|  
 |切換中斷點|F9|F9|  
 |啟用中斷點|CTRL+F9|沒有對等項目|  
-|刪除中斷點。 只能在 [中斷點] 視窗中使用|ALT+F9、D|沒有對等項目|  
-|開啟 [編輯中斷點標籤] 對話方塊。 只能在 [中斷點] 視窗中使用|ALT+F9、L|沒有對等項目|  
+|刪除中斷點。 只能在 [中斷點]  視窗中使用|ALT+F9、D|沒有對等項目|  
+|開啟 [編輯中斷點標籤]  對話方塊。 只能在 [中斷點]  視窗中使用|ALT+F9、L|沒有對等項目|  
 |刪除所有中斷點|CTRL+SHIFT+F9|CTRL+SHIFT+F9|  
-|顯示 [中斷點] 視窗|CTRL+ALT+B|CTRL+ALT+B|  
+|顯示 [中斷點]  視窗|CTRL+ALT+B|CTRL+ALT+B|  
 |全部中斷|CTRL+ALT+BREAK|CTRL+ALT+BREAK|  
 |遇到函數時中斷|CTRL+B|沒有對等項目|  
-|顯示 [監看式 1] 視窗|CTRL+ALT+W、1|沒有對等項目|  
-|顯示 [監看式 2] 視窗|CTRL+ALT+W、2|CTRL+ALT+W、1|  
-|顯示 [監看式 3] 視窗|CTRL+ALT+W、3|CTRL+ALT+W、3|  
-|顯示 [監看式 4] 視窗|CTRL+ALT+W、4|CTRL+ALT+W、4|  
-|顯示 [自動變數] 視窗|CTRL+ALT+V、A|CTRL+ALT+V、A|  
-|顯示 [區域變數] 視窗|CTRL+ALT+V、L|CTRL+ALT+V、L|  
-|顯示 [即時運算] 視窗|CTRL+ALT+I|CTRL+ALT+I|  
-|顯示 [呼叫堆疊] 視窗|CTRL+ALT+C|CTRL+ALT+C|  
-|顯示 [執行緒] 視窗|CTRL+ALT+H|CTRL+ALT+H|  
-|顯示 [平行堆疊] 視窗。|CTRL+SHIFT+D、S|沒有對等項目|  
-|顯示 [平行工作] 視窗|CTRL_SHIFT+D、K|沒有對等項目|  
+|顯示 [監看式 1]  視窗|CTRL+ALT+W、1|沒有對等項目|  
+|顯示 [監看式 2]  視窗|CTRL+ALT+W、2|CTRL+ALT+W、1|  
+|顯示 [監看式 3]  視窗|CTRL+ALT+W、3|CTRL+ALT+W、3|  
+|顯示 [監看式 4]  視窗|CTRL+ALT+W、4|CTRL+ALT+W、4|  
+|顯示 [自動變數]  視窗|CTRL+ALT+V、A|CTRL+ALT+V、A|  
+|顯示 [區域變數]  視窗|CTRL+ALT+V、L|CTRL+ALT+V、L|  
+|顯示 [即時運算]  視窗|CTRL+ALT+I|CTRL+ALT+I|  
+|顯示 [呼叫堆疊]  視窗|CTRL+ALT+C|CTRL+ALT+C|  
+|顯示 [執行緒]  視窗|CTRL+ALT+H|CTRL+ALT+H|  
+|顯示 [平行堆疊]  視窗。|CTRL+SHIFT+D、S|沒有對等項目|  
+|顯示 [平行工作]  視窗|CTRL_SHIFT+D、K|沒有對等項目|  
   
 ## <a name="microsoft-intellisense-keyboard-shortcuts"></a>Microsoft IntelliSense 鍵盤快速鍵  
   
@@ -314,8 +314,8 @@ ms.locfileid: "63127041"
 |重新整理本機快取|CTRL+SHIFT+R|CTRL+SHIFT+R|  
 |啟動範圍陳述式片段選擇器|CTRL+K、CTRL+S|CTRL+K、CTRL+S|  
 |顯示程式碼片段管理員|CTRL+K、CTRL+B|沒有對等項目|  
-|將 IntelliSense 篩選層級從 [通用] 索引標籤變更為 [全部] 索引標籤。|ALT+加號 (+)|沒有對等項目|  
-|將 IntelliSense 篩選層級從 [全部] 索引標籤變更為 [通用] 索引標籤。|ALT+句號 (.)|沒有對等項目|  
+|將 IntelliSense 篩選層級從 [通用]  索引標籤變更為 [全部]  索引標籤。|ALT+加號 (+)|沒有對等項目|  
+|將 IntelliSense 篩選層級從 [全部]  索引標籤變更為 [通用]  索引標籤。|ALT+句號 (.)|沒有對等項目|  
   
 ## <a name="document-window-and-browser-keyboard-shortcuts"></a>文件視窗和瀏覽器鍵盤快速鍵  
   
@@ -334,9 +334,9 @@ ms.locfileid: "63127041"
 |動作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |顯示方案總管|CTRL+ALT+L|CTRL+ALT+L|  
-|顯示 [新增檔案] 對話方塊來建立新檔案|CTRL+N|CTRL+N|  
-|顯示 [新增專案] 對話方塊來建立新專案|CTRL+SHIFT+N|CTRL+SHIFT+N|  
-|顯示 [開啟檔案] 對話方塊來開啟現有的檔案|CTRL+O|CTRL+O|  
+|顯示 [新增檔案]  對話方塊來建立新檔案|CTRL+N|CTRL+N|  
+|顯示 [新增專案]  對話方塊來建立新專案|CTRL+SHIFT+N|CTRL+SHIFT+N|  
+|顯示 [開啟檔案]  對話方塊來開啟現有的檔案|CTRL+O|CTRL+O|  
 |變更選定物件的名稱|F2|沒有對等項目|  
   
 ## <a name="help-and-books-online-keyboard-shortcuts"></a>說明和線上叢書鍵盤快速鍵  
@@ -359,22 +359,22 @@ ms.locfileid: "63127041"
   
 |動作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|顯示 [尋找] 對話方塊|CTRL+F|CTRL+F|  
-|顯示 [尋找] 對話方塊的 [檔案中尋找] 索引標籤。|||  
+|顯示 [尋找]  對話方塊|CTRL+F|CTRL+F|  
+|顯示 [尋找]  對話方塊的 [檔案中尋找]  索引標籤。|||  
 |顯示選定符號的定義。|F12|沒有對等項目|  
 |顯示選定符號的參考清單。|SHIFT+F12|沒有對等項目|  
-|顯示 [取代] 對話方塊|CTRL+H|CTRL+H|  
+|顯示 [取代]  對話方塊|CTRL+H|CTRL+H|  
 |啟動累加搜尋。 請輸入要搜尋的字元，或按 CTRL+I 鍵來搜尋上一次搜尋中的字元|CTRL+I|CTRL+I|  
 |尋找上一個搜尋文字的下一個出現項目|F3|F3|  
 |尋找搜尋文字的上一個出現項目|SHIFT+F3|SHIFT+F3|  
 |尋找目前選取之文字的下一個出現項目|CTRL+F3|CTRL+F3|  
 |尋找目前選取之文字的上一個出現項目|CTRL+SHIFT+F3|CTRL+SHIFT+F3|  
-|顯示 [檔案中取代] 對話方塊|CTRL+SHIFT+H|CTRL+SHIFT+H|  
+|顯示 [檔案中取代]  對話方塊|CTRL+SHIFT+H|CTRL+SHIFT+H|  
 |反向累加搜尋，使它從檔案底端開始，向上搜尋到頂端|CTRL+SHIFT+I|CTRL+SHIFT+I|  
-|選取或清除 [尋找和取代] 中的 [向上搜尋] 選項|ALT+F3、B|ALT+F3、B|  
-|停止 [檔案中尋找] 的搜尋動作|ALT+F3、S|ALT+F3、S|  
-|選取或清除 [尋找和取代] 中的 [全字拼寫須相符] 選項|ALT+F3、W|ALT+F3、W|  
-|選取或清除 [尋找和取代] 中的 [萬用字元] 選項|ALT+F3、P|ALT+F3、P|  
+|選取或清除 [尋找和取代]  中的 [向上搜尋]  選項|ALT+F3、B|ALT+F3、B|  
+|停止 [檔案中尋找]  的搜尋動作|ALT+F3、S|ALT+F3、S|  
+|選取或清除 [尋找和取代]  中的 [全字拼寫須相符]  選項|ALT+F3、W|ALT+F3、W|  
+|選取或清除 [尋找和取代]  中的 [萬用字元]  選項|ALT+F3、P|ALT+F3、P|  
 |將插入號放在標準工具列的 [尋找]/[命令] 方塊中|CTRL+/|沒有對等項目|  
   
 ## <a name="cut-and-paste-keyboard-shortcuts"></a>剪下和貼上鍵盤快速鍵  
@@ -392,8 +392,8 @@ ms.locfileid: "63127041"
 |動作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |重新整理|沒有對等項目|F5|  
-|在 [選取記錄] 窗格和 [記錄檔摘要] 窗格之間移動|沒有對等項目|F6|  
-|移到 [記錄檔摘要] 窗格|沒有對等項目|ALT+S|  
+|在 [選取記錄]  窗格和 [記錄檔摘要]  窗格之間移動|沒有對等項目|F6|  
+|移到 [記錄檔摘要]  窗格|沒有對等項目|ALT+S|  
 |載入新記錄|沒有對等項目|CTRL+SHIFT+L|  
 |匯出記錄|沒有對等項目|CTRL+SHIFT+E|  
 |篩選記錄|沒有對等項目|CTRL+SHIFT+F|  
@@ -435,13 +435,13 @@ ms.locfileid: "63127041"
 |動作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |取消或停止目前正在執行的查詢|CTRL+T|CTRL+T|  
-|顯示 [查詢設計工具] 的圖表窗格|CTRL+1|CTRL+1|  
-|顯示 [查詢設計工具] 的準則窗格|CTRL+2|CTRL+2|  
-|顯示 [查詢設計工具] 的 SQL 窗格|CTRL+3|CTRL+3|  
-|顯示 [查詢設計工具] 的結果窗格|CTRL+4|CTRL+4|  
-|執行 [查詢設計工具] 中指定的查詢|CTRL+R|CTRL+R|  
+|顯示 [查詢設計工具]  的圖表窗格|CTRL+1|CTRL+1|  
+|顯示 [查詢設計工具]  的準則窗格|CTRL+2|CTRL+2|  
+|顯示 [查詢設計工具]  的 SQL 窗格|CTRL+3|CTRL+3|  
+|顯示 [查詢設計工具]  的結果窗格|CTRL+4|CTRL+4|  
+|執行 [查詢設計工具]  中指定的查詢|CTRL+R|CTRL+R|  
 |在結果窗格中，將焦點移到設計工具底部停駐的工具帶|CTRL+G|CTRL+G|  
-|在 [查詢設計工具] 中啟用 JOIN 模式|CTRL+SHIFT+J|CTRL+SHIFT+J|  
+|在 [查詢設計工具]  中啟用 JOIN 模式|CTRL+SHIFT+J|CTRL+SHIFT+J|  
   
 ## <a name="designer-keyboard-shortcuts"></a>設計工具鍵盤快速鍵  
   

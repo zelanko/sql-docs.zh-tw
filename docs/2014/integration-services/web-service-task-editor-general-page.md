@@ -15,25 +15,25 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054534"
 ---
 # <a name="web-service-task-editor-general-page"></a>Web 服務工作編輯器 (一般頁面)
-  使用 [Web 服務工作編輯器] 對話方塊的 [一般] 頁面，來指定 HTTP 連接管理員、指定 Web 服務工作使用的 Web 服務描述語言 (WSDL) 檔案的位置、描述 Web 服務工作，以及下載 WSDL 檔案。  
+  使用 [Web 服務工作編輯器]  對話方塊的 [一般]  頁面，來指定 HTTP 連接管理員、指定 Web 服務工作使用的 Web 服務描述語言 (WSDL) 檔案的位置、描述 Web 服務工作，以及下載 WSDL 檔案。  
   
  如需這項工作的詳細資訊，請參閱 [Web 服務工作](control-flow/web-service-task.md)。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **HTTPConnection**  
- 在清單中選取連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
+ 在清單中選取連線管理員，或按一下 [\<新增連線...>]  建立新的連線管理員。  
   
 > [!IMPORTANT]  
 >  HTTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
   
- **相關主題：**[HTTP 連接管理員](connection-manager/http-connection-manager.md)， [HTTP 連接管理員編輯器&#40;伺服器 頁面&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **相關主題：** [HTTP 連接管理員](connection-manager/http-connection-manager.md)， [HTTP 連接管理員編輯器&#40;伺服器 頁面&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
  鍵入本機電腦的 WSDL 檔案完整路徑，或按一下瀏覽按鈕 **(...)** 並找出此檔案。  
@@ -42,14 +42,14 @@ ms.locfileid: "66054534"
   
 -   建立副檔名為 ".wsdl" 的空白檔案。  
   
--   在 [WSDLFile] 選項中選取此空白檔案。  
+-   在 [WSDLFile]  選項中選取此空白檔案。  
   
 -   設定的值**OverwriteWSDLFile**到`True`啟用實際的 WSDL 檔案可以覆寫此空白檔案。  
   
--   按一下 [下載 WSDL]，下載實際的 WSDL 檔案並覆寫空白檔案。  
+-   按一下 [下載 WSDL]  ，下載實際的 WSDL 檔案並覆寫空白檔案。  
   
     > [!NOTE]  
-    >  您必須先在 [WSDLFile] 方塊中提供現有的本機檔案名稱，才能啟用 [下載 WSDL] 選項。  
+    >  您必須先在 [WSDLFile]  方塊中提供現有的本機檔案名稱，才能啟用 [下載 WSDL]  選項。  
   
  **OverwriteWSDLFile**  
  指出是否可以覆寫 Web 服務工作的 WSDL 檔案。  
@@ -68,7 +68,7 @@ ms.locfileid: "66054534"
  **下載 WSDL**  
  下載 WSDL 檔案。  
   
- 您必須先在 [WSDLFile] 方塊中提供現有的本機檔案名稱，才能啟用此按鈕。  
+ 您必須先在 [WSDLFile]  方塊中提供現有的本機檔案名稱，才能啟用此按鈕。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

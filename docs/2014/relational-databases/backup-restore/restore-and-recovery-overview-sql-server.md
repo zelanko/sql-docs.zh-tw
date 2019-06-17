@@ -21,24 +21,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 254b05afdaa08483117c07660630b3120527a3fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921013"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>還原和復原概觀 (SQL Server)
   若要從失敗復原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，資料庫管理員必須依邏輯正確和有意義的還原順序來還原一組 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還原及復原，可從一整個資料庫、單一資料檔或資料頁面的備份還原資料，如下所示：  
   
--   資料庫 ( *「完整資料庫還原」*(Complete database restore))  
+-   資料庫 ( *「完整資料庫還原」* (Complete database restore))  
   
      將會還原並復原整個資料庫，且在還原與復原作業期間，資料庫會離線。  
   
--   資料檔 ( *「檔案還原」*)  
+-   資料檔 ( *「檔案還原」* )  
   
      還原與復原一個資料檔或一組檔案。 在檔案還原過程中，包含該檔案的檔案群組會在還原的持續時間內自動離線。 任何存取離線檔案群組的嘗試都會產生錯誤。  
   
--   資料頁 ( *「分頁還原」*(Page restore))  
+-   資料頁 ( *「分頁還原」* (Page restore))  
   
      在完整復原模式或大量記錄復原模式下，您可以還原各個資料庫。 不論檔案群組的數目為何，在任何資料庫上都可以執行分頁還原。  
   
@@ -88,9 +88,9 @@ ms.locfileid: "62921013"
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |資料復原|完整復原 (如果有記錄可以使用)。|有損失部分資料的風險。|自上次完整或差異備份之後的任何資料，都會遺失。|  
 |時間點還原|記錄備份涵蓋的任何時間。|如果記錄備份含有大量記錄變更，則不允許。|不支援。|  
-|File restore **\***|完整支援。|有時。**\*\***|僅適用於唯讀的次要檔案。|  
-|Page restore **\***|完整支援。|有時。**\*\***|無。|  
-|分次 (檔案群組-等級) 還原 **\***|完整支援。|有時。**\*\***|僅適用於唯讀的次要檔案。|  
+|File restore **\***|完整支援。|有時。 **\*\***|僅適用於唯讀的次要檔案。|  
+|Page restore **\***|完整支援。|有時。 **\*\***|無。|  
+|分次 (檔案群組-等級) 還原 **\***|完整支援。|有時。 **\*\***|僅適用於唯讀的次要檔案。|  
   
  **\*** 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   

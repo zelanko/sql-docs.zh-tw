@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f849394a4a77091f92ee66857b4d5263875fdea3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63021690"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>發行集資訊，警告 (合併式發行集，SQL Server 2005 和更新的版本)
@@ -47,7 +47,7 @@ ms.locfileid: "63021690"
   
      如果達到或超出指定的臨界值，訂閱狀態會顯示為 **[效能嚴重不足]** (除非必須顯示更高優先權的問題)。  
   
- 您啟用警告時，也會設定臨界值。 例如，若您啟用警告 **[若 LAN 連接的合併長度超過臨界值，就發出警告]**，請設定合併同步允許的時間長度上限。  
+ 您啟用警告時，也會設定臨界值。 例如，若您啟用警告 **[若 LAN 連接的合併長度超過臨界值，就發出警告]** ，請設定合併同步允許的時間長度上限。  
   
  除了在複寫監視器顯示警告外，達到臨界值也會觸發警示。 定義警示的方式，是按一下 **[設定警示]** ，並在 **[設定複寫警示]** 對話方塊中提供資訊。  
   

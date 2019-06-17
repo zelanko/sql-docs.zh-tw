@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0a7393a3b0547d37c5f69f4e75915f8706acf12
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705616"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>針對擴充事件使用 PowerShell 提供者
@@ -26,12 +26,12 @@ ms.locfileid: "62705616"
   
 -   在命令提示字元中輸入 `sqlps`，然後按下 ENTER。 輸入 `cd xevent`，然後按 ENTER。 從該處，您可以使用**cd**並`dir`命令 (或**Set-location**並**Get-childitem** cmdlet) 瀏覽至伺服器名稱和執行個體名稱。  
   
--   在物件總管中，展開執行個體名稱、展開 [管理]、以滑鼠右鍵按一下 [擴充事件]，然後按一下 [啟動 PowerShell]。 這樣就會在下列路徑中啟動 PowerShell：  
+-   在物件總管中，展開執行個體名稱、展開 [管理]  、以滑鼠右鍵按一下 [擴充事件]  ，然後按一下 [啟動 PowerShell]  。 這樣就會在下列路徑中啟動 PowerShell：  
   
-     PS SQLSERVER:\XEvent\\伺服器名稱\\執行個體名稱>  
+     PS SQLSERVER:\XEvent\\伺服器名稱  \\執行個體名稱  >  
   
     > [!NOTE]  
-    >  您可以從 [擴充事件] 底下的任何節點啟動 PowerShell。 例如，您可以用滑鼠右鍵按一下 [工作階段]，然後按一下 [啟動 PowerShell]。 這樣就會在下一個層級 (Sessions 資料夾) 啟動 PowerShell。  
+    >  您可以從 [擴充事件]  底下的任何節點啟動 PowerShell。 例如，您可以用滑鼠右鍵按一下 [工作階段]  ，然後按一下 [啟動 PowerShell]  。 這樣就會在下一個層級 (Sessions 資料夾) 啟動 PowerShell。  
   
  您可以瀏覽 XEvent 資料夾樹狀目錄來檢視現有的擴充事件工作階段及其相關聯的事件、目標和述詞。 例如，從 PS sqlserver: \xevent\\*ServerName*\\*執行個體名稱*> 路徑中，如果您輸入`cd sessions`，按 ENTER、 輸入`dir`，然後按下 ENTER，您可以查看儲存在該執行個體的工作階段的清單。 您也可以檢視工作階段是否正在執行 (如果有，執行的時間長度)，以及工作階段是否設定為在執行個體啟動時啟動。  
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a15613c61db7469b242bbd5b76e5d1e51912e6be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270554"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>自訂圖表中顯示的資料數量 (Visual Database Tools)
@@ -49,9 +49,9 @@ ms.locfileid: "63270554"
   
 1.  在 [資料庫圖表設計工具] 中的資料表上按一下滑鼠右鍵。  
   
-2.  從快速鍵功能表中，指向 [資料表檢視] 再按 [修改自訂]。  
+2.  從快速鍵功能表中，指向 [資料表檢視]  再按 [修改自訂]  。  
   
-3.  在 [資料行選取] 對話方塊中，選擇當從 [資料表檢視] 功能表選擇 [自訂] 時，想要顯示的屬性。  
+3.  在 [資料行選取]  對話方塊中，選擇當從 [資料表檢視]  功能表選擇 [自訂]  時，想要顯示的屬性。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用資料庫圖表 &#40;Visual Database Tools&#41;](visual-database-tools.md)  

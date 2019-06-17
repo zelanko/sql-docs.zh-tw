@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9bff6ec41cc2437c6083e150eb391470cb5a5ab
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105433"
 ---
 # <a name="plot-data-on-a-secondary-axis-report-builder-and-ssrs"></a>繪製次要座標軸上的資料 (報表產生器及 SSRS)
@@ -31,9 +31,9 @@ ms.locfileid: "66105433"
   
 ### <a name="to-plot-a-series-on-the-secondary-axis"></a>若要在次要座標軸上繪製數列  
   
-1.  以滑鼠右鍵按一下圖表中的數列，或以滑鼠右鍵按一下要在次要軸上顯示之 **[值]** 區域中的欄位，然後按一下 **[數列屬性]**。 **[數列屬性]** 對話方塊便會出現。  
+1.  以滑鼠右鍵按一下圖表中的數列，或以滑鼠右鍵按一下要在次要軸上顯示之 **[值]** 區域中的欄位，然後按一下 **[數列屬性]** 。 **[數列屬性]** 對話方塊便會出現。  
   
-2.  按一下 **[軸和圖表區域]**，然後選取要啟用的次要軸、值軸或類別目錄軸。  
+2.  按一下 **[軸和圖表區域]** ，然後選取要啟用的次要軸、值軸或類別目錄軸。  
   
 ## <a name="see-also"></a>另請參閱  
  [格式化圖表上的軸標籤 &#40;報表產生器和 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

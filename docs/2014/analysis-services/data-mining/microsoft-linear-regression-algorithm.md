@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df1b3616a85d93b4c5fa814ee759880077c03b8f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084034"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 線性迴歸演算法
@@ -53,7 +53,7 @@ ms.locfileid: "66084034"
  如需詳細資訊，請參閱的 [Microsoft 線性迴歸演算法技術參考](microsoft-linear-regression-algorithm-technical-reference.md)的＜需求＞一節。  
   
 ## <a name="viewing-a-linear-regression-model"></a>檢視線性迴歸模型  
- 若要瀏覽此模型，您可使用 [Microsoft 樹狀檢視器]。 線性迴歸模型的樹狀結構非常簡單，其中包含有關單一節點內所包含之迴歸方程式的所有資訊。 如需詳細資訊，請參閱 [使用 Microsoft 樹狀檢視器瀏覽模型](browse-a-model-using-the-microsoft-tree-viewer.md)。  
+ 若要瀏覽此模型，您可使用 [Microsoft 樹狀檢視器]  。 線性迴歸模型的樹狀結構非常簡單，其中包含有關單一節點內所包含之迴歸方程式的所有資訊。 如需詳細資訊，請參閱 [使用 Microsoft 樹狀檢視器瀏覽模型](browse-a-model-using-the-microsoft-tree-viewer.md)。  
   
  如果您想要知道此方程式的詳細資料，也可以使用 [Microsoft 一般內容樹狀檢視器](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)來檢視係數和其他詳細資料。  
   

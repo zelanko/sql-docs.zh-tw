@@ -16,10 +16,10 @@ author: HJToland3
 ms.author: rajpo
 manager: jroth
 ms.openlocfilehash: 592b581ae4981e42bea2f6bf6f9135018917b002
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794357"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>將內部部署 SQL Server 或 Azure Vm 上的 SQL Server 移轉至 Azure SQL Database 使用 Data Migration Assistant

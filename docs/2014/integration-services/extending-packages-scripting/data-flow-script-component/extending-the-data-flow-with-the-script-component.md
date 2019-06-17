@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 051f2ed14e8218a3909a43052f08e0e339138dab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62894802"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Extending the Data Flow with the Script Component
@@ -44,7 +44,7 @@ ms.locfileid: "62894802"
  下列主題提供有關指令碼元件的詳細資訊。  
   
  [在指令碼元件編輯器中設定指令碼元件](configuring-the-script-component-in-the-script-component-editor.md)  
- 您在 [指令碼轉換編輯器] 中設定的屬性會影響指令碼元件程式碼的功能和效能。  
+ 您在 [指令碼轉換編輯器]  中設定的屬性會影響指令碼元件程式碼的功能和效能。  
   
  [程式碼撰寫和偵錯指令碼元件](coding-and-debugging-the-script-component.md  
  您可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 開發環境來開發包含在指令碼元件中的指令碼。  

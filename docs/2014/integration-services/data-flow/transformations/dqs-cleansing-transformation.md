@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c06abe4d6adb3916028b3501c16b68d2491af47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62900395"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 清理轉換
@@ -31,7 +31,7 @@ ms.locfileid: "62900395"
   
 -   資料行對應至具有相容資料類型的定義域。  
   
- 轉換還包括您設定來處理資料列層級錯誤的錯誤輸出。 若要設定錯誤輸出，請使用 **[DQS 清理轉換編輯器]**。  
+ 轉換還包括您設定來處理資料列層級錯誤的錯誤輸出。 若要設定錯誤輸出，請使用 **[DQS 清理轉換編輯器]** 。  
   
  您可以在資料流程中包括 [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md) ，用於識別資料中可能重複的資料列。  
   

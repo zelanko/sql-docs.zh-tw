@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fdf3b766e48843a15e73b7a41b7c434ba604e0af
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478218"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>刪除屬性 (Master Data Services)
@@ -36,15 +36,15 @@ ms.locfileid: "65478218"
   
 ### <a name="to-delete-an-attribute"></a>若要刪除屬性  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 [管理模型]  頁面上，從方格中選取模型，然後按一下 [實體] 。  
+2.  在 [管理模型]  頁面上，從方格中選取模型，然後按一下 [實體]  。  
   
 3.  在 [管理實體]  頁面上，選取您要為其建立屬性之實體的資料列。  
   
-4.  按一下 **[屬性]**。  
+4.  按一下 **[屬性]** 。  
   
-5.  在 [管理屬性] 頁面上，執行下列其中一項動作。  
+5.  在 [管理屬性]  頁面上，執行下列其中一項動作。  
   
     -   如果是分葉成員的屬性，請選取 [成員類型]  清單方塊的 [分葉]  。  
   
@@ -57,9 +57,9 @@ ms.locfileid: "65478218"
     > [!NOTE]  
     >  您不能刪除 Name 或 Code 屬性。  
   
-7.  按一下 **[刪除]**。  
+7.  按一下 **[刪除]** 。  
   
-8.  在確認對話方塊中按一下 **[確定]**。  
+8.  在確認對話方塊中按一下 **[確定]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   

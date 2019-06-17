@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e19dfcdc284f048cffbb3a95e076b6e3a57294d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083590"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
@@ -37,7 +37,7 @@ ms.locfileid: "66083590"
   
 -   第一個節點 (NODE_TYPE = 18) 永遠代表輸入層的最上層節點。 在這個最上層節點之下，您可以找到包含實際輸入屬性及其值的輸入節點 (NODE_TYPE = 21)。  
   
--   每個後續節點都包含不同的「子網路」 (NODE_TYPE = 17)。 每個子網路永遠包含一個隱藏層 (NODE_TYPE = 19)，以及一個該子網路的輸出層 (NODE_TYPE = 20)。  
+-   每個後續節點都包含不同的「子網路」  (NODE_TYPE = 17)。 每個子網路永遠包含一個隱藏層 (NODE_TYPE = 19)，以及一個該子網路的輸出層 (NODE_TYPE = 20)。  
   
  ![類神經網路模型內容結構](../media/modelcontentstructure-nn.gif "的類神經網路模型內容結構")  
   

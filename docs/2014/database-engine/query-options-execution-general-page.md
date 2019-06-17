@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: b3ecf106315fa88fdfb68599cfce71a77be975dd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089036"
 ---
 # <a name="query-options-execution-general-page"></a>查詢選項執行 (一般頁面)
-  使用此頁面來指定執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢的選項。 若要存取此對話方塊，請以滑鼠右鍵按一下查詢編輯器視窗的主體，然後按一下 [查詢選項]。  
+  使用此頁面來指定執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢的選項。 若要存取此對話方塊，請以滑鼠右鍵按一下查詢編輯器視窗的主體，然後按一下 [查詢選項]  。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **SET ROWCOUNT**  
@@ -36,7 +36,7 @@ ms.locfileid: "66089036"
  鍵入您用來將 Transact-SQL 陳述式分隔成批次的文字。 預設為 GO。  
   
  **預設會以 SQLCMD 模式開啟新查詢**  
- 選取此核取方塊，即可以 SQLCMD 模式開啟新查詢。 只有在透過 [工具] 功能表開啟此對話方塊時，才可以看見此核取方塊。  
+ 選取此核取方塊，即可以 SQLCMD 模式開啟新查詢。 只有在透過 [工具]  功能表開啟此對話方塊時，才可以看見此核取方塊。  
   
  當您選取此選項時，請注意以下限制：  
   

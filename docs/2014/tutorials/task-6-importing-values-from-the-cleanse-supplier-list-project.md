@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489089"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>工作 6：從清理供應商清單專案匯入值
@@ -60,7 +60,7 @@ ms.locfileid: "65489089"
   
 12. 按一下 **完成**完成的活動。  
   
-13. 按一下 [發行] 。  
+13. 按一下 [發行]  。  
   
 14. 按一下 **確定**訊息方塊上。  
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: fd8374eaa97ffc08528c245569ec7bff8499747a
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66701325"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概觀
@@ -222,7 +222,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Update](../../../ado/reference/ado-api/update-method.md)|是|是|是|是|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|是|是|是|是|
 
- * 不支援針對 Microsoft Access 資料庫。
+ \* 不支援針對 Microsoft Access 資料庫。
 
 ## <a name="dynamic-properties"></a>動態屬性
  Microsoft OLE DB Provider for ODBC 插入到數個動態屬性**屬性**未開啟的集合[連線](../../../ado/reference/ado-api/connection-object-ado.md)，[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，以及[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。

@@ -11,14 +11,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bcfc0dea167b972f4e463333ab6851b038a284ed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922239"
 ---
 # <a name="configure-backup-compression-sql-server"></a>設定備份壓縮 (SQL Server)
-  進行安裝時，備份壓縮預設是關閉的。 備份壓縮的預設行為是透過 [備份壓縮預設] 伺服器層級組態選項所定義。 不過，您可以在建立單一備份或排程一系列例行備份時，覆寫此伺服器層級預設值。 若要變更伺服器層級的預設值，請參閱 [檢視或設定備份壓縮預設伺服器組態選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。  
+  進行安裝時，備份壓縮預設是關閉的。 備份壓縮的預設行為是透過 [備份壓縮預設]  伺服器層級組態選項所定義。 不過，您可以在建立單一備份或排程一系列例行備份時，覆寫此伺服器層級預設值。 若要變更伺服器層級的預設值，請參閱 [檢視或設定備份壓縮預設伺服器組態選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。  
   
 ## <a name="override-the-backup-compression-default"></a>覆寫備份壓縮預設  
  您可以針對個別的備份、備份作業或記錄傳送組態來變更備份壓縮行為。  
@@ -33,7 +33,7 @@ ms.locfileid: "62922239"
   
      如需如何檢視或設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之 [備份壓縮預設] 選項的資訊，請參閱[檢視或設定備份壓縮預設伺服器組態選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。  
   
-     在下列任何對話方塊中指定 [壓縮備份] 或 [不要壓縮備份]，就可以在建立備份時覆寫伺服器備份壓縮預設：  
+     在下列任何對話方塊中指定 [壓縮備份]  或 [不要壓縮備份]  ，就可以在建立備份時覆寫伺服器備份壓縮預設：  
   
     -   [備份資料庫 (選項頁面)](back-up-database-backup-options-page.md)  
   

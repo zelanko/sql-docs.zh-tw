@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0ca3bf0e120cfe76aa3b58be1ca6a50991b9fb06
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106651"
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>將自訂位置加入至地圖 (報表產生器及 SSRS)
@@ -36,23 +36,23 @@ ms.locfileid: "66106651"
   
 1.  在報表設計介面上，按一下地圖來選取它，然後顯示 [地圖] 窗格。  
   
-2.  在工具列上，按一下 [新增圖層]。  
+2.  在工具列上，按一下 [新增圖層]  。  
   
-3.  從下拉式清單中，按一下 [新增點圖層]。 不含點的點圖層便會加入至地圖中。 根據預設，內嵌點的點圖層已經準備就緒。  
+3.  從下拉式清單中，按一下 [新增點圖層]  。 不含點的點圖層便會加入至地圖中。 根據預設，內嵌點的點圖層已經準備就緒。  
   
 ### <a name="to-add-a-custom-point"></a>加入自訂點  
   
 1.  在報表設計介面上，按一下地圖來選取它，然後顯示 [地圖] 窗格。  
   
-2.  在 [地圖] 窗格中，以滑鼠右鍵按一下 [內嵌] 類型的點圖層，然後按一下 [新增點]。 游標會變更為十字形狀。  
+2.  在 [地圖] 窗格中，以滑鼠右鍵按一下 [內嵌]  類型的點圖層，然後按一下 [新增點]  。 游標會變更為十字形狀。  
   
 3.  若要加入點，按一下地圖上的某個位置。 內嵌點就會加入至您所按之位置的選定圖層。  
   
 ### <a name="to-customize-the-display-for-an-embedded-point"></a>若要自訂內嵌點的顯示  
   
-1.  以滑鼠右鍵按一下點，然後按一下 [點屬性]。 [地圖內嵌點屬性] 對話方塊隨即開啟。  
+1.  以滑鼠右鍵按一下點，然後按一下 [點屬性]  。 [地圖內嵌點屬性]  對話方塊隨即開啟。  
   
-2.  按一下 [覆寫此圖層的點選項]。 多個屬性頁面隨即出現在左窗格。  
+2.  按一下 [覆寫此圖層的點選項]  。 多個屬性頁面隨即出現在左窗格。  
   
 3.  按一下這些頁面，然後設定您要套用到這個點的顯示屬性。  
   

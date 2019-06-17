@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067963"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>設定 Power View 報表的報表屬性
@@ -42,11 +42,11 @@ ms.locfileid: "66067963"
   
 -   **加入新資料**-加入導出資料行中的新資料，透過使用 DAX 公式在圖表中顯示的工作變得更容易的格式建立日期資訊。  
   
--   **隱藏對使用者無用的資料表和資料行** - [隱藏] 屬性會控制資料表和資料表資料行是否會顯示在報表用戶端。 隱藏的項目依然是模型的一部分，而且可供查詢和計算。  
+-   **隱藏對使用者無用的資料表和資料行** - [隱藏]  屬性會控制資料表和資料表資料行是否會顯示在報表用戶端。 隱藏的項目依然是模型的一部分，而且可供查詢和計算。  
   
 -   **啟用單鍵資料表**-根據預設，會發生任何動作如果使用者按一下欄位清單中的資料表。 若要變更這個行為，使得按一下資料表時會將資料表加入至報表中，請在每一個要併入資料表的資料行上設定 [預設欄位集]。 這個屬性會在使用者最可能想要使用的資料表資料行上設定。  
   
--   **視需要設定群組** - [保留唯一資料列] 屬性會決定資料行中的值是否應該依據另一個欄位 (如識別碼欄位) 中的值來分組。 如果是包含類似客戶名稱之重複值的資料行 (例如，有多位客戶命名為 John Smith)，一定要在 [資料列識別碼] 欄位上分組 (保留唯一資料列)，才能為使用者提供正確的結果。  
+-   **視需要設定群組** - [保留唯一資料列]  屬性會決定資料行中的值是否應該依據另一個欄位 (如識別碼欄位) 中的值來分組。 如果是包含類似客戶名稱之重複值的資料行 (例如，有多位客戶命名為 John Smith)，一定要在 [資料列識別碼]  欄位上分組 (保留唯一資料列)，才能為使用者提供正確的結果。  
   
 -   **設定資料類型和資料格式** - 根據預設，Power View 會根據資料行資料類型套用規則，以判斷此欄位是否可以當做量值使用。 因為 Power View 中的每一個資料視覺效果皆具有量值與非量值放置位置的相關規則，所以請務必在模型中設定資料類型或是覆寫預設值，以便達成您希望使用者具備的行為。  
   
@@ -57,16 +57,16 @@ ms.locfileid: "66067963"
   
 #### <a name="to-hide-the-product-category-and-product-subcategory-tables"></a>若要隱藏 [Product Category] 和 [Product Subcategory] 資料表  
   
-1.  在模型設計師中，以滑鼠右鍵按一下 [Product Category] 資料表 (索引標籤)，然後按一下 [在用戶端工具中隱藏]。  
+1.  在模型設計師中，以滑鼠右鍵按一下 [Product Category]  資料表 (索引標籤)，然後按一下 [在用戶端工具中隱藏]  。  
   
-2.  以滑鼠右鍵按一下 [Product Subcategory] 資料表 (索引標籤)，然後按一下 [在用戶端工具中隱藏]。  
+2.  以滑鼠右鍵按一下 [Product Subcategory]  資料表 (索引標籤)，然後按一下 [在用戶端工具中隱藏]  。  
   
 ## <a name="create-new-data-for-charts"></a>為圖表建立新的資料  
  有時您可能需要在模型中使用 DAX 公式建立新的資料。 在此工作中，您會將兩個新的導出資料行加入至 [Date] 資料表。 這些新的資料行將會以便於在圖表中使用的格式提供日期欄位。  
   
 #### <a name="to-create-new-data-for-charts"></a>若要為圖表建立新的資料  
   
-1.  在 [Date] 資料表中，捲動到最右邊，然後按一下 [加入資料行]。  
+1.  在 [Date]  資料表中，捲動到最右邊，然後按一下 [加入資料行]  。  
   
 2.  在公式列使用以下公式加入兩個新的導出資料行：  
   
@@ -82,15 +82,15 @@ ms.locfileid: "66067963"
   
 #### <a name="to-set-default-field-set-for-tables"></a>若要為資料表設定預設欄位集  
   
-1.  在模型設計師中，按一下 [Customer] 資料表 (索引標籤)。  
+1.  在模型設計師中，按一下 [Customer]  資料表 (索引標籤)。  
   
-2.  在 [屬性] 視窗的 [報表屬性] 底下，按一下 [預設欄位集] 屬性中的 [按一下可編輯]，即可開啟 [預設欄位集] 對話方塊。  
+2.  在 [屬性]  視窗的 [報表屬性]  底下，按一下 [預設欄位集]  屬性中的 [按一下可編輯]  ，即可開啟 [預設欄位集]  對話方塊。  
   
-3.  在 [預設欄位集] 對話方塊的 [資料表中的欄位] 清單方塊內按 Ctrl 鍵，並選取以下欄位，然後按一下 [新增]：  
+3.  在 [預設欄位集]  對話方塊的 [資料表中的欄位]  清單方塊內按 Ctrl 鍵，並選取以下欄位，然後按一下 [新增]  ：  
   
-     [Birth Date]、[Customer Alternate Id]、[First Name]、[Last Name]。  
+     [Birth Date]  、[Customer Alternate Id]  、[First Name]  、[Last Name]  。  
   
-4.  在 [預設欄位，依照順序] 視窗中，使用上移和下移按鈕進行以下排序：  
+4.  在 [預設欄位，依照順序]  視窗中，使用上移和下移按鈕進行以下排序：  
   
      **Customer Alternate Id**  
   
@@ -100,15 +100,15 @@ ms.locfileid: "66067963"
   
      **Birth Date**  
   
-5.  按一下 [確定]，關閉 [Customer] 資料表的 [預設欄位集] 對話方塊。  
+5.  按一下 [確定]  ，關閉 [Customer]  資料表的 [預設欄位集]  對話方塊。  
   
-6.  針對 [Geography] 資料表執行以上相同步驟，選取以下欄位並依照以下順序排列：  
+6.  針對 [Geography]  資料表執行以上相同步驟，選取以下欄位並依照以下順序排列：  
   
      **城市**， **State Province Code**，**狀態區域碼**。  
   
-7.  最後，針對 [Product] 資料表執行以上相同步驟，選取以下欄位並依照以下順序排列。  
+7.  最後，針對 [Product]  資料表執行以上相同步驟，選取以下欄位並依照以下順序排列。  
   
-     [Product Alternate Id]、[Product Name]。  
+     [Product Alternate Id]  、[Product Name]  。  
   
 ## <a name="table-behavior"></a>資料表行為  
  您可以使用 [資料表行為] 屬性來變更不同視覺效果類型的預設行為，以及變更 Power View 報表中使用之資料表的群組行為。 如此可讓識別資訊 (如名稱、影像或標題) 在圖格、卡片和圖表版面配置中有更好的預設位置。  
@@ -117,23 +117,23 @@ ms.locfileid: "66067963"
   
 #### <a name="to-set-table-behavior-for-tables"></a>若要為資料表設定資料表行為  
   
-1.  在模型設計師中，按一下 [Customer] 資料表 (索引標籤)。  
+1.  在模型設計師中，按一下 [Customer]  資料表 (索引標籤)。  
   
-2.  在 [屬性] 視窗中，按一下 [資料表行為] 屬性的 [按一下可編輯]，即可開啟 [資料表行為] 對話方塊。  
+2.  在 [屬性]  視窗中，按一下 [資料表行為]  屬性的 [按一下可編輯]  ，即可開啟 [資料表行為]  對話方塊。  
   
-3.  在 [資料表行為] 對話方塊的 [資料列識別碼] 下拉式清單方塊中，選取 [Customer Id] 資料行。  
+3.  在 [資料表行為]  對話方塊的 [資料列識別碼]  下拉式清單方塊中，選取 [Customer Id]  資料行。  
   
-4.  在 [保留唯一資料列] 清單方塊中，選取 [First Name] 和 [Last Name]。  
+4.  在 [保留唯一資料列]  清單方塊中，選取 [First Name]  和 [Last Name]  。  
   
      這個屬性設定會指定哪些資料行提供應視為唯一的值，即使是重複值也一樣 (例如，當兩位或多位員工同名時)。  
   
-5.  在 [預設標籤] 下拉式清單方塊中，選取 [Last Name] 資料行。  
+5.  在 [預設標籤]  下拉式清單方塊中，選取 [Last Name]  資料行。  
   
      這個屬性設定會指定哪個資料行提供代表資料列資料的顯示名稱。  
   
-6.  請針對 [Geography] 資料表重複以上步驟，選取 [Geography Id] 資料行當做資料列識別碼，並在 [保留唯一資料列] 清單方塊中選取 [City] 資料行。 您不需要為這個資料表設定預設標籤。  
+6.  請針對 [Geography]  資料表重複以上步驟，選取 [Geography Id]  資料行當做資料列識別碼，並在 [保留唯一資料列]  清單方塊中選取 [City]  資料行。 您不需要為這個資料表設定預設標籤。  
   
-7.  請針對 [Product] 資料表重複以上步驟，選取 [Product Id] 資料行當做資料列識別碼，並在 [保留唯一資料列] 清單方塊中選取 [Product Name] 資料行。 為 [預設標籤] 選取 [Product Alternate Id]。  
+7.  請針對 [Product]  資料表重複以上步驟，選取 [Product Id]  資料行當做資料列識別碼，並在 [保留唯一資料列]  清單方塊中選取 [Product Name]  資料行。 為 [預設標籤]  選取 [Product Alternate Id]  。  
   
 ## <a name="reporting-properties-for-columns"></a>資料行的報表屬性  
  在資料行上可設定許多基本資料行屬性和特定報表屬性來改善模型報表體驗。 例如，使用者可能不需要看到每一個資料表中的每一個資料行。 就像您隱藏 Product Category 和 Product Subcategory 資料表更早版本，使用資料行的 Hidden 屬性，您可以隱藏特定的資料行，否則會顯示資料表中。 其他屬性 (例如 [資料格式] 和 [依資料行排序]) 也會影響資料行資料出現在報表中的方式。 您現在即將在特定資料行上設定部分屬性。 有一些資料行不需要任何動作，所以不會顯示在底下。  
@@ -142,11 +142,11 @@ ms.locfileid: "66067963"
   
 #### <a name="to-set-properties-for-columns"></a>若要設定資料行的屬性  
   
-1.  在模型設計師中，按一下 [Customer] 資料表 (索引標籤)。  
+1.  在模型設計師中，按一下 [Customer]  資料表 (索引標籤)。  
   
-2.  按一下 [Customer Id] 資料行，在 [屬性] 視窗中顯示資料行屬性。  
+2.  按一下 [Customer Id]  資料行，在 [屬性]  視窗中顯示資料行屬性。  
   
-3.  在 [屬性] 視窗中，將 [Hidden] 屬性設定為 True。 然後 [Customer Id] 資料行就會在模型設計師中呈現灰色。  
+3.  在 [屬性]  視窗中，將 [Hidden]  屬性設定為 True。 然後 [Customer Id]  資料行就會在模型設計師中呈現灰色。  
   
 4.  針對每一個指定的資料表重複以上步驟，設定以下資料行和報表屬性。 保留所有其他屬性的預設設定。  
   
@@ -214,9 +214,9 @@ ms.locfileid: "66067963"
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>若要重新部署 Adventure Works Internet Sales 表格式模型  
   
--   在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，按一下 [建立] 功能表，然後按一下 [Deploy Adventure Works Internet Sales Model (部署 Adventure Works Internet Sales Model)]。  
+-   在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，按一下 [建立]  功能表，然後按一下 [Deploy Adventure Works Internet Sales Model (部署 Adventure Works Internet Sales Model)]  。  
   
-     [部署] 對話方塊隨即出現，並且顯示中繼資料以及模型中每個資料表的部署狀態。  
+     [部署]  對話方塊隨即出現，並且顯示中繼資料以及模型中每個資料表的部署狀態。  
   
 ## <a name="next-steps"></a>後續步驟  
  您現在可以使用 Power View 將模型中的資料視覺化。 請確定 SharePoint 網站上的 Analysis Services 和 Reporting Services 帳戶具有模型部署所在之 Analysis Services 執行個體的讀取權限。  

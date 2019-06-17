@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3a7e3496d005ded5fa935db828501a71c922c261
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478828"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>反轉交易 (Master Data Services)
@@ -30,19 +30,19 @@ ms.locfileid: "65478828"
   
 ### <a name="to-reverse-a-transaction"></a>若要反轉交易  
   
-1.  在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]首頁上，按一下 [版本管理]。  
+1.  在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]首頁上，按一下 [版本管理]  。  
   
-2.  在功能表列上，按一下 [交易]。  
+2.  在功能表列上，按一下 [交易]  。  
   
-3.  在 [交易] 頁面上，選取 [模型] 清單中的模型。  
+3.  在 [交易]  頁面上，選取 [模型]  清單中的模型。  
   
 4.  從 **[版本]** 清單中選取版本。  
   
 5.  針對您想要反轉的交易，按一下方格中的資料列。  
   
-6.  按一下 [反轉交易]。  
+6.  按一下 [反轉交易]  。  
   
-7.  在確認對話方塊中按一下 **[確定]**。 如此就會將另一個交易加入至方格，以便記錄反轉的交易。  
+7.  在確認對話方塊中按一下 **[確定]** 。 如此就會將另一個交易加入至方格，以便記錄反轉的交易。  
   
 ## <a name="see-also"></a>另請參閱  
  [交易 &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)   

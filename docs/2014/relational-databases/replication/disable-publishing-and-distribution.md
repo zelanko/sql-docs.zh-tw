@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 46cdf7ad91de4eacae513399dc7b0c88ad9831fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721455"
 ---
 # <a name="disable-publishing-and-distribution"></a>停用發行和散發
@@ -63,7 +63,7 @@ ms.locfileid: "62721455"
   
 1.  連接到您要在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中停用的「發行者」或「散發者」，然後展開伺服器節點。  
   
-2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[停用發行與散發]**。  
+2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[停用發行與散發]** 。  
   
 3.  完成「停用散發暨發行精靈」中的步驟。  
   

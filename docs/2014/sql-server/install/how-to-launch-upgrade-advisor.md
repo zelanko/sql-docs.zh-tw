@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59936989a63e702eba78bca834498f530efdae17
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094910"
 ---
 # <a name="how-to-launch-upgrade-advisor"></a>HOW TO：啟動 Upgrade Advisor
@@ -27,7 +27,7 @@ ms.locfileid: "66094910"
   
 ### <a name="to-launch-upgrade-advisor"></a>啟動 Upgrade Advisor  
   
--   若要啟動 Upgrade Advisor，請按一下**開始**，按一下**所有程式**，按一下  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**，然後按一下 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
+-   若要啟動 Upgrade Advisor，請按一下**開始**，按一下**所有程式**，按一下  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** ，然後按一下 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
   
 ## <a name="see-also"></a>另請參閱  
  [執行 Upgrade Advisor&#40;使用者介面&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   

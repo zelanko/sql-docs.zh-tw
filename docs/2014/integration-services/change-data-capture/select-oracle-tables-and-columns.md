@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe951cb7811bb8cc92414564fda466657d2fae8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771054"
 ---
 # <a name="select-oracle-tables-and-columns"></a>選取 Oracle 資料表和資料行
@@ -39,15 +39,15 @@ ms.locfileid: "62771054"
      您可以在此資料行中按一下任何資料格，手動編輯 **security_role**。  
   
  **加入資料表**  
- 按一下 [加入資料表] 開啟 [資料表選取範圍] 對話方塊，您可以在這裡[選取 Oracle 資料表來擷取變更](select-oracle-tables-for-capturing-changes.md)。  
+ 按一下 [加入資料表]  開啟 [資料表選取範圍] 對話方塊，您可以在這裡[選取 Oracle 資料表來擷取變更](select-oracle-tables-for-capturing-changes.md)。  
   
  **編輯**  
- 從清單中選取資料表，並選取 [編輯]，開啟該資料表的 [屬性] 對話方塊，您可以在這裡[變更為了擷取變更所選取的資料表](make-changes-to-the-tables-selected-for-capturing-changes.md)。  
+ 從清單中選取資料表，並選取 [編輯]  ，開啟該資料表的 [屬性]  對話方塊，您可以在這裡[變更為了擷取變更所選取的資料表](make-changes-to-the-tables-selected-for-capturing-changes.md)。  
   
  **移除**  
- 從清單中選取資料表，並按一下 [移除]，從 CDC 執行個體中移除此資料表。  
+ 從清單中選取資料表，並按一下 [移除]  ，從 CDC 執行個體中移除此資料表。  
   
- 在您使用正確的對話方塊[選取 Oracle 資料表來擷取變更](select-oracle-tables-for-capturing-changes.md)及/或[變更為了擷取變更所選取的資料表](make-changes-to-the-tables-selected-for-capturing-changes.md)之後，請按一下 [下一步] [產生及執行補充記錄指令碼](generate-and-run-the-supplemental-logging-script.md)。  
+ 在您使用正確的對話方塊[選取 Oracle 資料表來擷取變更](select-oracle-tables-for-capturing-changes.md)及/或[變更為了擷取變更所選取的資料表](make-changes-to-the-tables-selected-for-capturing-changes.md)之後，請按一下 [下一步]  [產生及執行補充記錄指令碼](generate-and-run-the-supplemental-logging-script.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [如何建立 SQL Server 變更資料庫執行個體](how-to-create-the-sql-server-change-database-instance.md)   

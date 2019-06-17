@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ccb53d47b44ce70b8a84baa784decef74c8367fb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067625"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>建立新的表格式模型專案 (SSAS 表格式)
@@ -22,11 +22,11 @@ ms.locfileid: "66067625"
   
 #### <a name="to-create-a-new-blank-tabular-model-project"></a>若要建立新的空白表格式模型專案  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 **[檔案]** 功能表上，按一下 **[新增]**，然後再按一下 **[專案]**。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 **[檔案]** 功能表上，按一下 **[新增]** ，然後再按一下 **[專案]** 。  
   
-2.  在 **[新增專案]** 對話方塊的 **[已安裝的範本]** 下，按一下 **[商業智慧]**，然後按一下 **[表格式模型專案]**。  
+2.  在 **[新增專案]** 對話方塊的 **[已安裝的範本]** 下，按一下 **[商業智慧]** ，然後按一下 **[表格式模型專案]** 。  
   
-3.  在 **[名稱]** 中，輸入專案的名稱，並指定位置和方案名稱，然後按一下 **[確定]**。  
+3.  在 **[名稱]** 中，輸入專案的名稱，並指定位置和方案名稱，然後按一下 **[確定]** 。  
   
  建立新的專案後，請務必設定專案和模型屬性。 如需詳細資訊，請參閱 [專案屬性 &#40;SSAS 表格式&#41;](properties-ssas-tabular.md) (專案屬性 (SSAS 表格式)) 和 [模型屬性 &#40;SSAS 表格式&#41;](model-properties-ssas-tabular.md)中建立一個新的空白表格式模型專案。  
   

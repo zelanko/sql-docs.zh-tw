@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4d1ecf24b8bde6ed02557a2a0d4de722240f754
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62523924"
 ---
 # <a name="delete-a-job-category"></a>刪除作業類別目錄
@@ -46,17 +46,17 @@ ms.locfileid: "62523924"
   
 1.  在 **[物件總管]** 中，按一下加號展開要刪除作業類別目錄所在的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
-3.  以滑鼠右鍵按一下 [作業] 資料夾，然後選取 [管理作業類別目錄]。  
+3.  以滑鼠右鍵按一下 [作業]  資料夾，然後選取 [管理作業類別目錄]  。  
   
-4.  在 [管理作業類別目錄 <伺服器名稱>] 對話方塊中，選取所要刪除的作業類別目錄。  
+4.  在 [管理作業類別目錄 <伺服器名稱>]   對話方塊中，選取所要刪除的作業類別目錄。  
   
-5.  按一下 **[刪除]**。  
+5.  按一下 **[刪除]** 。  
   
-6.  在 **[作業類別目錄]** 對話方塊中，按一下 **[是]**。  
+6.  在 **[作業類別目錄]** 對話方塊中，按一下 **[是]** 。  
   
-7.  關閉 [管理作業類別目錄 <伺服器名稱>] 對話方塊。  
+7.  關閉 [管理作業類別目錄 <伺服器名稱>]   對話方塊。  
   
 
   
@@ -66,9 +66,9 @@ ms.locfileid: "62523924"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- deletes the job category named AdminJobs.  

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 15ef45a4f3bfb0b74de2472a5b2f0d8e483edab1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62856943"
 ---
 # <a name="excel-source"></a>Excel 來源
@@ -80,7 +80,7 @@ ms.locfileid: "62856943"
 ## <a name="excel-source-configuration"></a>Excel 來源組態  
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可在 [Excel 來源編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
+ 如需可在 [Excel 來源編輯器]  對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [Excel 來源編輯器 &#40;連線管理員頁面&#41;](../excel-source-editor-connection-manager-page.md)  
   

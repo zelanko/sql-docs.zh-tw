@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67c2def091fe6e1282e00c65c23e8d98544e970f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062897"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>動作 (Cube 設計工具) (Analysis Services - 多維度資料)
@@ -27,19 +27,19 @@ ms.locfileid: "66062897"
  使用工具列來執行此索引標籤上的一般動作。如需有關這個窗格的詳細資訊，請參閱 <<c0> [ 工具列&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)。</c0>  
   
  **動作組合管理**  
- 使用表單檢視中的 [動作組合管理]，依排序的格式來顯示 Cube 中包含的動作。 如需有關這個窗格的詳細資訊，請參閱 <<c0> [ 動作組合管理&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)。</c0>  
+ 使用表單檢視中的 [動作組合管理]  ，依排序的格式來顯示 Cube 中包含的動作。 如需有關這個窗格的詳細資訊，請參閱 <<c0> [ 動作組合管理&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)。</c0>  
   
  **計算工具**  
  使用表單檢視中的 **[計算工具]** 窗格，來顯示 Cube 可以使用的中繼資料、函數和工具。 如需有關這個窗格的詳細資訊，請參閱 <<c0> [ 計算工具&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)。</c0>  
   
  **動作表單編輯器**  
- 使用表單檢視中的 [動作表單編輯器] 窗格，即可編輯 Cube 中包含的標準動作。 如需有關這個窗格的詳細資訊，請參閱 <<c0> [ 動作表單編輯器&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)。</c0>  
+ 使用表單檢視中的 [動作表單編輯器]  窗格，即可編輯 Cube 中包含的標準動作。 如需有關這個窗格的詳細資訊，請參閱 <<c0> [ 動作表單編輯器&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)。</c0>  
   
  **鑽研動作表單編輯器**  
- 使用 [鑽研動作表單編輯器] 窗格，即可編輯 Cube 中包含的鑽研動作。 如需有關這個窗格的詳細資訊，請參閱 <<c0> [ 鑽研動作表單編輯器&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)。</c0>  
+ 使用 [鑽研動作表單編輯器]  窗格，即可編輯 Cube 中包含的鑽研動作。 如需有關這個窗格的詳細資訊，請參閱 <<c0> [ 鑽研動作表單編輯器&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)。</c0>  
   
  **報表動作表單編輯器**  
- 使用 [報表動作表單編輯器] 窗格，即可編輯 Cube 中包含的報表動作。 如需有關這個窗格的詳細資訊，請參閱 <<c0> [ 報表動作表單編輯器&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)。</c0>  
+ 使用 [報表動作表單編輯器]  窗格，即可編輯 Cube 中包含的報表動作。 如需有關這個窗格的詳細資訊，請參閱 <<c0> [ 報表動作表單編輯器&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [動作&#40;Analysis Services-多維度資料&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   

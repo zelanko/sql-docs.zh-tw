@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d1546f9f708a32f6467b0f01c8b0644b610505e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069971"
 ---
 # <a name="script-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>指令碼編輯器 (計算索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
-  在 Cube 設計師中，使用 [計算] 索引標籤上的 [指令碼編輯器] 窗格，即可修改指令碼命令的運算式 (於表單檢視中)，或修改整個 Cube 指令碼 (於指令碼檢視中)。  
+  在 Cube 設計師中，使用 [計算]  索引標籤上的 [指令碼編輯器]  窗格，即可修改指令碼命令的運算式 (於表單檢視中)，或修改整個 Cube 指令碼 (於指令碼檢視中)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  
-|**運算式**|針對 [中繼資料] 窗格中所選取的指令碼命令 (於表單檢視中)，或整個 Cube 指令碼 (於指令碼檢視中)，鍵入多維度運算式 (MDX) 的運算式和陳述式。<br /><br /> 從 **[計算工具]** 窗格中，將選取的元素拖曳到這個選項，以包括所選元素的 MDX 語法。|  
+|**運算式**|針對 [中繼資料]  窗格中所選取的指令碼命令 (於表單檢視中)，或整個 Cube 指令碼 (於指令碼檢視中)，鍵入多維度運算式 (MDX) 的運算式和陳述式。<br /><br /> 從 **[計算工具]** 窗格中，將選取的元素拖曳到這個選項，以包括所選元素的 MDX 語法。|  
   
 ## <a name="see-also"></a>另請參閱  
  [多維度運算式 &#40;MDX&#41 參考](/sql/mdx/multidimensional-expressions-mdx-reference)   

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9692bcc5b3c7685e247730b0f203d273f585f1de
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092993"
 ---
 # <a name="remove-udt39s-named-after-the-reserved-date-and-time-data-types"></a>移除 UDT&#39;s 名為保留的日期和時間資料類型

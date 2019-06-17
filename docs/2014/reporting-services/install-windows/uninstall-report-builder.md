@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108654"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>解除安裝單機版報表產生器 (報表產生器)
@@ -26,19 +26,19 @@ ms.locfileid: "66108654"
   
 ### <a name="to-uninstall-report-builder-from-the-control-panel"></a>若要從控制台解除安裝報表產生器  
   
-1.  在 **[開始]** 功能表上，按一下 **[控制台]**。  
+1.  在 **[開始]** 功能表上，按一下 **[控制台]** 。  
   
-2.  在 [控制台] 中，按一下 **[程式和功能]**。  
+2.  在 [控制台] 中，按一下 **[程式和功能]** 。  
   
-3.  在 [名稱] 清單中找出 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 報表產生器，然後按一下它。  
+3.  在 [名稱]  清單中找出 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 報表產生器，然後按一下它。  
   
-4.  按一下 **[解除安裝]**。  
+4.  按一下 **[解除安裝]** 。  
   
-5.  如果出現確認解除安裝報表產生器的提示，請按一下 **[是]**。  
+5.  如果出現確認解除安裝報表產生器的提示，請按一下 **[是]** 。  
   
 ### <a name="to-uninstall-report-builder-from-the-command-line"></a>若要從命令列解除安裝報表產生器  
   
-1.  在 **[開始]** 功能表上，按一下 **[執行]**。  
+1.  在 **[開始]** 功能表上，按一下 **[執行]** 。  
   
 2.  在 **開啟**文字方塊中，輸入 `cmd.`  
   

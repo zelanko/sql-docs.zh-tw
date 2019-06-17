@@ -18,10 +18,10 @@ ms.author: arib
 manager: tomerw
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: b583afef9f52da7801384d4a7a9c76deaf8d4ee4
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822683"
 ---
 # <a name="syssqlfeaturerestrictions-transact-sql"></a>sys.sql_feature_restrictions & Amp;#40;transact-SQL&AMP;#41;
@@ -42,8 +42,8 @@ ms.locfileid: "66822683"
 
 | 功能          | 描述 |
 |------------------|-------------|
-| N'ErrorMessages' | 限制時，將會遮罩處理的錯誤訊息中的任何使用者資料。 |
-| N'Waitfor'       | 限制時，此命令會立即傳回且沒有任何延遲。 |
+| N'ErrorMessages' | 限制時，會遮罩錯誤訊息中的任何使用者資料。 |
+| N'Waitfor'       | 限制時，此命令會立即傳回，毫無延遲。 |
   
 ## <a name="permissions"></a>Permissions
 

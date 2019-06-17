@@ -1,24 +1,23 @@
 ---
 title: 驗證對話方塊 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: sql
-ms.prod_service: integration-services
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
-- sql13.ssis.ssms.isprojectvalidate.f1
-- sql13.ssis.ssms.ispackagevalidate.f1
+- sql12.ssis.ssms.ispackagevalidate.f1
+- sql12.ssis.ssms.isprojectvalidate.f1
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8380b3ff1502088e0131b182149e90e31d2be42c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771646"
 ---
 # <a name="validate-dialog-box"></a>驗證對話方塊
@@ -44,7 +43,7 @@ ms.locfileid: "62771646"
   
 4.  展開包含您要驗證之專案或封裝的資料夾。  
   
-5.  以滑鼠右鍵按一下封裝，然後按一下 [驗證]。  
+5.  以滑鼠右鍵按一下封裝，然後按一下 [驗證]  。  
   
 ##  <a name="general"></a> 設定 [一般] 頁面上的選項  
  **環境**  

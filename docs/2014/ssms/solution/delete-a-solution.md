@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a16d7565bb36eb7895db94da088927be7595f5d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63043943"
 ---
 # <a name="delete-a-solution"></a>刪除方案
@@ -35,7 +35,7 @@ ms.locfileid: "63043943"
   
 3.  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 的 [檔案總管] 中，尋找和選取您要刪除之方案的相關檔案。  
   
-4.  在 [檔案] 功能表上，按一下 [刪除]。  
+4.  在 [檔案]  功能表上，按一下 [刪除]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [方案總管](solution-explorer.md)   

@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af4b2b5546e8b084afbdd769fb93c416964b0c13
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537976"
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo 函數
@@ -48,7 +48,7 @@ SQLRETURN SQLGetInfo(
   
 ## <a name="arguments"></a>引數  
  *ConnectionHandle*  
- [輸入]連接控制代碼。  
+ [輸入] 連線控制代碼。  
   
  *InfoType*  
  [輸入]資訊類型。  
@@ -354,7 +354,7 @@ SQLRETURN SQLGetInfo(
  字元字串："Y"(如果使用者可以執行所傳回的所有程序**SQLProcedures**;"N"(如果可能有程序會傳回該使用者無法執行。  
   
  SQL_ACCESSIBLE_TABLES(ODBC 1.0)  
- 字元字串："Y"(如果使用者是否保證**選取 **所傳回的所有資料表的權限**SQLTables**;如果可能有資料表"N"會傳回使用者無法存取。  
+ 字元字串："Y"(如果使用者是否保證**選取** 所傳回的所有資料表的權限**SQLTables**;如果可能有資料表"N"會傳回使用者無法存取。  
   
  SQL_ACTIVE_ENVIRONMENTS(ODBC 3.0)  
  指定使用中環境的驅動程式可支援的最大數目的 SQLUSMALLINT 值。 如果沒有指定的限制或限制是未知的這個值會設定為零。  
@@ -519,7 +519,7 @@ SQLRETURN SQLGetInfo(
   
  下列的位元遮罩用來決定要在其中使用目錄中：  
   
- SQL_CU_DML_STATEMENTS = 支援目錄中所有的資料操作語言陳述式：**選取 **，**插入**，**更新**，**刪除**，如果支援，並**選取用於更新**和定位的 update 和 delete陳述式。  
+ SQL_CU_DML_STATEMENTS = 支援目錄中所有的資料操作語言陳述式：**選取** ，**插入**，**更新**，**刪除**，如果支援，並**選取用於更新**和定位的 update 和 delete陳述式。  
   
  SQL_CU_PROCEDURE_INVOCATION = ODBC 程序引動過程陳述式中支援目錄。  
   
@@ -785,7 +785,7 @@ SQLRETURN SQLGetInfo(
   
  最後四位數字一組是驅動程式管理員的次要組建編號。  
   
- 03.80 為 Windows 7 驅動程式管理員版本。 03.81 為 Windows 8 驅動程式管理員版本。  
+ 03\.80 為 Windows 7 驅動程式管理員版本。 03\.81 為 Windows 8 驅動程式管理員版本。  
   
  SQL_DRIVER_AWARE_POOLING_SUPPORTED (ODBC 3.8)  
  SQLUINTEGER 值，指出如果驅動程式支援可感知驅動程式共用。 (如需詳細資訊，請參閱 <<c0> [ 感知驅動程式的連接共用](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)。  
@@ -975,7 +975,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CA2_MAX_ROWS_CATALOG = SQL_ATTR_MAX_ROWS 陳述式屬性會影響**目錄**時資料指標是動態資料指標結果集。  
   
- SQL_CA2_MAX_ROWS_AFFECTS_ALL = SQL_ATTR_MAX_ROWS 陳述式屬性會影響**選取 **，**插入**，**刪除**，以及**更新**陳述式，並**目錄**結果集，資料指標是動態資料指標時。  
+ SQL_CA2_MAX_ROWS_AFFECTS_ALL = SQL_ATTR_MAX_ROWS 陳述式屬性會影響**選取** ，**插入**，**刪除**，以及**更新**陳述式，並**目錄**結果集，資料指標是動態資料指標時。  
   
  SQL_CA2_CRC_EXACT = 的確切資料列計數時，使用 SQL_DIAG_CURSOR_ROW_COUNT 診斷欄位中的資料指標是動態資料指標。  
   
@@ -1232,7 +1232,7 @@ SQLRETURN SQLGetInfo(
  FIPS 項目層級符合標準驅動程式會傳回至少為 100。 FIPS 中繼層級符合標準的驅動程式會傳回至少 250。  
   
  SQL_MAX_CONCURRENT_ACTIVITIES(ODBC 1.0)  
- 指定作用中陳述式，此驅動程式可支援連接的最大數目的 SQLUSMALLINT 值。 如果有暫止狀態，使用詞彙 「 結果 」 意義中的資料列的結果，將會定義為作用中的陳述式**選取 **作業或受影響的資料列**插入**，**更新**，或**刪除**作業 （例如資料列計數），或如果它是在 NEED_DATA 狀態。 此值可反映出驅動程式或資料來源所加諸的限制。 如果沒有指定的限制或限制是未知的這個值會設定為零。  
+ 指定作用中陳述式，此驅動程式可支援連接的最大數目的 SQLUSMALLINT 值。 如果有暫止狀態，使用詞彙 「 結果 」 意義中的資料列的結果，將會定義為作用中的陳述式**選取** 作業或受影響的資料列**插入**，**更新**，或**刪除**作業 （例如資料列計數），或如果它是在 NEED_DATA 狀態。 此值可反映出驅動程式或資料來源所加諸的限制。 如果沒有指定的限制或限制是未知的這個值會設定為零。  
   
  這*資訊類型*具有已將它重新命名，以從 ODBC 2.0 ODBC 3.0*資訊類型*SQL_ACTIVE_STATEMENTS。  
   
@@ -1425,7 +1425,7 @@ SQLRETURN SQLGetInfo(
  SQL_SCHEMA_USAGE(ODBC 2.0)  
  SQLUINTEGER 位元遮罩列舉可以在其中使用結構描述的陳述式：  
   
- SQL_SU_DML_STATEMENTS = 支援結構描述中所有的資料操作語言陳述式：**選取 **，**插入**，**更新**，**刪除**，如果支援，並**選取用於更新**和定位的 update 和 delete陳述式。  
+ SQL_SU_DML_STATEMENTS = 支援結構描述中所有的資料操作語言陳述式：**選取** ，**插入**，**更新**，**刪除**，如果支援，並**選取用於更新**和定位的 update 和 delete陳述式。  
   
  SQL_SU_PROCEDURE_INVOCATION = ODBC 程序引動過程陳述式中支援結構描述。  
   
@@ -1670,7 +1670,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_TC_NONE = 不支援交易。 ODBC (1.0)  
   
- SQL_TC_DML = 交易可以包含僅資料操作語言 (DML) 陳述式 (**選取 **，**插入**， **UPDATE**，**刪除**). 資料定義語言 (DDL) 陳述式的交易原因發生錯誤。 ODBC (1.0)  
+ SQL_TC_DML = 交易可以包含僅資料操作語言 (DML) 陳述式 (**選取** ，**插入**， **UPDATE**，**刪除**). 資料定義語言 (DDL) 陳述式的交易原因發生錯誤。 ODBC (1.0)  
   
  SQL_TC_DDL_COMMIT = 交易可以包含僅 DML 陳述式。 DDL 陳述式 (**CREATE TABLE**， **DROP INDEX**，依此類推) 發生在交易的原因要認可的交易。 ODBC (2.0)  
   
@@ -1712,7 +1712,7 @@ SQLRETURN SQLGetInfo(
  字元字串："Y"(如果使用者可以執行所傳回的所有程序**SQLProcedures**;"N"(如果可能有程序會傳回該使用者無法執行。  
   
  SQL_ACCESSIBLE_TABLES(ODBC 1.0)  
- 字元字串："Y"(如果使用者是否保證**選取 **所傳回的所有資料表的權限**SQLTables**;如果可能有資料表"N"會傳回使用者無法存取。  
+ 字元字串："Y"(如果使用者是否保證**選取** 所傳回的所有資料表的權限**SQLTables**;如果可能有資料表"N"會傳回使用者無法存取。  
   
  SQL_ACTIVE_ENVIRONMENTS(ODBC 3.0)  
  指定使用中環境的驅動程式可支援的最大數目的 SQLUSMALLINT 值。 如果沒有指定的限制或限制是未知的這個值會設定為零。  

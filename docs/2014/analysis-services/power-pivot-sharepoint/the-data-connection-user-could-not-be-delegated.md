@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0b11e1510213aefa98c6bf2c0c779cebaeed85e5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071025"
 ---
 # <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>資料連接是使用 Windows 驗證，而且無法委派使用者認證。 下列連接無法重新整理：PowerPivot 資料
@@ -49,9 +49,9 @@ ms.locfileid: "66071025"
   
 #### <a name="enable-claims-to-windows-token-service"></a>啟用對 Windows Token Service 的宣告  
   
-1.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器上的服務]**。  
+1.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器上的服務]** 。  
   
-2.  選取 [對 Windows Token 服務的宣告]，然後按一下 [啟動]。  
+2.  選取 [對 Windows Token 服務的宣告]  ，然後按一下 [啟動]  。  
   
 3.  確認該服務也在服務主控台中執行：  
   

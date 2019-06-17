@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079614"
 ---
 # <a name="rename-an-analysis-services-instance"></a>重新命名 Analysis Services 執行個體
@@ -37,11 +37,11 @@ ms.locfileid: "66079614"
   
 1.  啟動**Instance Rename**工具**asinstancerename.exe**，從 C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio。  
   
-2.  在 [重新命名執行個體] 對話方塊的 [要重新命名的執行個體] 清單中，選取您要重新命名的執行個體。  
+2.  在 [重新命名執行個體]  對話方塊的 [要重新命名的執行個體]  清單中，選取您要重新命名的執行個體。  
   
-3.  在 [新執行個體名稱] 方塊中，輸入執行個體的新名稱。  
+3.  在 [新執行個體名稱]  方塊中，輸入執行個體的新名稱。  
   
-4.  確認使用者名稱和密碼正確，然後按一下 [重新命名]。  
+4.  確認使用者名稱和密碼正確，然後按一下 [重新命名]  。  
   
      Analysis Services 執行個體將會停止，並在名稱變更時重新啟動。  
   

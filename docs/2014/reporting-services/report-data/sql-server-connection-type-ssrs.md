@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27e4057ed11d2f7f0bab32faa3e4a19e9adb890b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106992"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>SQL Server 連接類型 (SSRS)
@@ -88,7 +88,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```  
   
- 按一下工具列上的 **[執行]** 按鈕 (**!**) 來執行查詢並顯示結果集。  
+ 按一下工具列上的 **[執行]** 按鈕 ( **!** ) 來執行查詢並顯示結果集。  
   
  若要將這個查詢參數化，請加入查詢參數。 例如，將 WHERE 子句變更為下列：  
   
@@ -128,7 +128,7 @@ WHERE EmployeeID = (@EmpID)
   
  報表參數是透過預設屬性值建立，您可能會需要修改這些值。 例如：  
   
--   根據預設，每一個報表參數的資料類型都是 **[文字]**。 如果基礎資料是不同的資料類型，則必須變更參數資料類型。  
+-   根據預設，每一個報表參數的資料類型都是 **[文字]** 。 如果基礎資料是不同的資料類型，則必須變更參數資料類型。  
   
 -   如果您為多值參數選取此選項，則必須使用 `IN` 運算子手動變更查詢，測試值是否為集合的一部分，例如 `WHERE EmployeeID IN (@EmpID)`。  
   

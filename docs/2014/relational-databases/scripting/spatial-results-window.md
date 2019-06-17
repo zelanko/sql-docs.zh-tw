@@ -11,17 +11,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 606ac348ce4ee7bed65a7bcbe6d7ebbbd0a7f87d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063803"
 ---
 # <a name="spatial-results-window"></a>空間結果視窗
-  [空間結果] 視窗會提供檢視空間資料的視覺化對應工具。 若要檢視空間結果，您的查詢結果必須包含一個具有幾何或地理位置資料的空間資料行。  
+  [空間結果]  視窗會提供檢視空間資料的視覺化對應工具。 若要檢視空間結果，您的查詢結果必須包含一個具有幾何或地理位置資料的空間資料行。  
   
 > [!NOTE]  
->  只有當您的結果傳回至 [結果] 視窗中的方格時，才能使用 [空間結果] 視窗。 如果您指定要將結果傳回成文字，就無法使用這個視窗。  
+>  只有當您的結果傳回至 [結果]  視窗中的方格時，才能使用 [空間結果]  視窗。 如果您指定要將結果傳回成文字，就無法使用這個視窗。  
   
 ## <a name="options"></a>選項。  
  **選取空間資料行**  
@@ -33,7 +33,7 @@ ms.locfileid: "66063803"
  當查詢只有傳回 Point 執行個體時，就無法使用這個選項。  
   
  **選取投射**  
- 顯示四種投射的其中一個地理位置資料：Equirectangular、 Mercator、 Robinson 或 Bonne。  
+ 以四種投影方式中的其中一種顯示地理資料：等量矩形 (Equirectangular)、麥卡托 (Mercator)、羅賓森 (Robinson) 或彭納 (Bonne)。  
   
  幾何資料無法使用此選項。  
   

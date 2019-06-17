@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bddb70c6c79ab983d1931bb17c741ff0dd531857
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047592"
 ---
 # <a name="atomization-xquery"></a>自動化 (XQuery)
@@ -50,7 +50,7 @@ SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')
   
 -   在建構 OrignialLaborHours 屬性時，自動化會隱含套用至 (`$WC/@LaborHours`) 所傳回的單一序列。 LaborHours 屬性具類型的值會指派給 OrignialLaborHours。  
   
--   在建構 UpdatedLaborHoursV1 屬性時，算術運算子需要不可部份完成值。 因此， **data （)** 會隱含套用至所傳回的 LaborHours 屬性 (`$WC/@LaborHours`)。 接著就會在屬性中加入不可部份完成值 1。 屬性 UpdatedLaborHoursV2 的建構會顯示明確的應用程式的**data （)**，但並非必要。  
+-   在建構 UpdatedLaborHoursV1 屬性時，算術運算子需要不可部份完成值。 因此， **data （)** 會隱含套用至所傳回的 LaborHours 屬性 (`$WC/@LaborHours`)。 接著就會在屬性中加入不可部份完成值 1。 屬性 UpdatedLaborHoursV2 的建構會顯示明確的應用程式的**data （)** ，但並非必要。  
   
 ```  
 SELECT Instructions.query('  

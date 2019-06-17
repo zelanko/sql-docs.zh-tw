@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d8f11bb819073ef054582a55620b553865469466
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62825881"
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>多維度資料庫的相容性層級 (Analysis Services)
@@ -59,7 +59,7 @@ ms.locfileid: "62825881"
   
 2.  使用 SQL Server Management Studio 連接至裝載資料庫的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。  
   
-3.  以滑鼠右鍵按一下資料庫名稱，依序指向 [編寫資料庫的指令碼為] 和 [ALTER 至]，然後選取 [新增查詢編輯器視窗]。 資料庫的 XMLA 表示法將會在新視窗中開啟。  
+3.  以滑鼠右鍵按一下資料庫名稱，依序指向 [編寫資料庫的指令碼為]  和 [ALTER 至]  ，然後選取 [新增查詢編輯器視窗]  。 資料庫的 XMLA 表示法將會在新視窗中開啟。  
   
 4.  複製下面 XML 元素：  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62825881"
   
 6.  儲存檔案。  
   
-7.  若要執行指令檔，按一下 [查詢] 功能表上的 [執行]，或按 F5 鍵。  
+7.  若要執行指令檔，按一下 [查詢] 功能表上的 [執行]  ，或按 F5 鍵。  
   
 ## <a name="supported-operations-that-require-the-same-compatibility-level"></a>支援且需要相同相容性層級的作業  
  以下作業要求來源資料庫共用相同的相容性層級。  

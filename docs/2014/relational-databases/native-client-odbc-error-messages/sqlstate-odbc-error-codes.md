@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 253841e26ab7ecbeafb2cfeeed8c090c91650d14
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62805862"
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (ODBC 錯誤碼)
@@ -28,7 +28,7 @@ ms.locfileid: "62805862"
   
  如需有關狀態錯誤碼的詳細資訊，請查看下列主題：  
   
--   [附錄 a:ODBC 錯誤碼](https://go.microsoft.com/fwlink/?LinkId=89356)  
+-   [附錄 A：ODBC 錯誤碼](https://go.microsoft.com/fwlink/?LinkId=89356)  
   
 -   [SQLSTATE 對應](https://go.microsoft.com/fwlink/?LinkId=89355)  
   

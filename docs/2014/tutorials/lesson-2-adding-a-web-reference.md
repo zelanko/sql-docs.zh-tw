@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63316013"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>第 2 課：新增 Web 參考
@@ -32,7 +32,7 @@ ms.locfileid: "63316013"
   
 3.  在 [**服務參考設定**] 對話方塊中，按一下**加入 Web 參考**。  
   
-4.  在  **URL**的方塊**加入 Web 參考**方塊中，輸入可取得服務描述的報表伺服器 Web 服務，例如 URL http://localhost/reportserver/reportservice2010.asmx。 然後按一下**移** 按鈕，擷取 Web 服務的相關資訊。  
+4.  在  **URL**的方塊**加入 Web 參考**方塊中，輸入可取得服務描述的報表伺服器 Web 服務，例如 URL http://localhost/reportserver/reportservice2010.asmx 。 然後按一下**移** 按鈕，擷取 Web 服務的相關資訊。  
   
      \-或-  
   

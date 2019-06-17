@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ab65b5361be1c5cdba4ab64cf58312b90d47ddb1
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489795"
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>刪除階層成員權限 (Master Data Services)
@@ -37,28 +37,28 @@ ms.locfileid: "65489795"
   
 ### <a name="to-delete-hierarchy-member-permissions"></a>若要刪除階層成員權限  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]** 。  
   
 2.  在 **[使用者]** 或 **[群組]** 頁面上，選取要編輯之使用者或群組的資料列。  
   
-3.  按一下 **[編輯選取的使用者]**。  
+3.  按一下 **[編輯選取的使用者]** 。  
   
-4.  按一下 [階層成員] 索引標籤。  
+4.  按一下 [階層成員]  索引標籤。  
   
-5.  從 [模型] 清單中選取模型。  
+5.  從 [模型]  清單中選取模型。  
   
 6.  從 **[版本]** 清單中選取版本。  
   
-7.  按一下 **[編輯]**。  
+7.  按一下 **[編輯]** 。  
   
-8.  在 [階層成員權限] 面板中，尋找擁有權限的樹狀節點。  
+8.  在 [階層成員權限]  面板中，尋找擁有權限的樹狀節點。  
   
-9. 按一下樹狀節點，然後在操作功能表中按一下 [節點]。  
+9. 按一下樹狀節點，然後在操作功能表中按一下 [節點]  。  
   
     > [!NOTE]  
     >  如果權限繼承自群組，則無法從使用者移除權限。 您必須改為從群組移除權限。  
   
-10. 按一下 [儲存] 。  
+10. 按一下 [儲存]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層成員權限 &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d156a8f015a45ca257bf4f988cf69d229eafe5f0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084225"
 ---
 # <a name="logistic-regression-model-query-examples"></a>羅吉斯迴歸模型查詢範例
@@ -145,24 +145,24 @@ NATURAL PREDICTION JOIN
   
 ##### <a name="to-create-a-discretized-version-of-the-call-center-mining-structure-and-models"></a>建立離散化版本的客服中心採礦結構和模型  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的方案總管中，展開 [採礦結構]。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的方案總管中，展開 [採礦結構]  。  
   
-2.  以滑鼠右鍵按一下 Call Center.dmm，然後選取 [複製]。  
+2.  以滑鼠右鍵按一下 Call Center.dmm，然後選取 [複製]  。  
   
-3.  以滑鼠右鍵按一下 [採礦結構] 並選取 [貼上]。 如此就會加入名為「話務中心 1」的新採礦結構。  
+3.  以滑鼠右鍵按一下 [採礦結構]  並選取 [貼上]  。 如此就會加入名為「話務中心 1」的新採礦結構。  
   
-4.  以滑鼠右鍵按一下新的採礦結構並選取 [重新命名]。 輸入新的名稱：**話務中心離散化**。  
+4.  以滑鼠右鍵按一下新的採礦結構並選取 [重新命名]  。 輸入新的名稱：**話務中心離散化**。  
   
 5.  按兩下新採礦結構，以在設計師中開啟。 請注意，所有的採礦模型都已進行複製，而且都具有延伸模組 1。 請暫時保留這些名稱。  
   
-6.  在 [採礦結構] 索引標籤中，以滑鼠右鍵按一下 Service Grade 的資料行，然後選取 [屬性]。  
+6.  在 [採礦結構]  索引標籤中，以滑鼠右鍵按一下 Service Grade 的資料行，然後選取 [屬性]  。  
   
 7.  變更`Content`屬性從**連續**要**Discretized**。 變更`DiscretizationMethod`屬性，以**叢集**。 針對 DiscretizationBucketCount 輸入 **3**。  
   
     > [!NOTE]  
     >  這些參數只用來說明此程序，並不一定會產生有效的模型。  
   
-8.  在 [採礦模型] 功能表中，選取 [處理採礦結構和所有模型]。  
+8.  在 [採礦模型]  功能表中，選取 [處理採礦結構和所有模型]  。  
   
  下列範例查詢是以這個離散化模型為基礎，並且預測一週內指定之日期的服務等級，以及每個預測結果的機率。  
   

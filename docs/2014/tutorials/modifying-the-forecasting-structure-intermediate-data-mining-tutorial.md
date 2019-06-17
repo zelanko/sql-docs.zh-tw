@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a86ddf0a715fc3a2313f555e898b3bd94cf66d8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63301296"
 ---
 # <a name="modifying-the-forecasting-structure-intermediate-data-mining-tutorial"></a>修改預測結構 (中繼資料採礦教學課程)

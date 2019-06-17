@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a4b9cd5eaad7b51f7cc3d2a0c73bea3f23fd542
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767170"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>封裝的 SQL Server Agent 作業
@@ -37,9 +37,9 @@ ms.locfileid: "62767170"
 ##  <a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所安裝的服務，可讓您透過執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，以自動化並排程工作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務必須先執行，作業才能自動執行。 如需詳細資訊，請參閱 [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)。  
   
- 當您連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體時，[SQL Server Agent] 節點會出現在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中。  
+ 當您連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體時，[SQL Server Agent]  節點會出現在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中。  
   
- 若要自動化週期性工作，請使用 [新增作業] 對話方塊建立作業。 如需詳細資訊，請參閱[實作作業](../../ssms/agent/implement-jobs.md)。  
+ 若要自動化週期性工作，請使用 [新增作業]  對話方塊建立作業。 如需詳細資訊，請參閱[實作作業](../../ssms/agent/implement-jobs.md)。  
   
  建立作業後，您必須加入至少一個步驟。 作業可以包含多個步驟，且每個步驟都能執行不同的工作。 如需詳細資訊，請參閱 [Manage Job Steps](../../ssms/agent/manage-job-steps.md)。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "62767170"
  透過設定通知選項可以加強作業，例如，指定作業完成時要向其傳送電子郵件的操作員，或加入警示。 如需詳細資訊，請參閱 [警示](../../ssms/agent/alerts.md)。  
   
 ##  <a name="packages"></a> Scheduling Integration Services Packages  
- 當您建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業來排程 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝時，必須加入至少一個步驟，並將該步驟的類型設為 [SQL Server Integration Services 封裝]。 作業可以包含多個步驟，且每個步驟都能執行不同的封裝。  
+ 當您建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業來排程 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝時，必須加入至少一個步驟，並將該步驟的類型設為 [SQL Server Integration Services 封裝]  。 作業可以包含多個步驟，且每個步驟都能執行不同的封裝。  
   
- 從作業步驟執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，如同使用 **dtexec** (dtexec.exe) 和 **DTExecUI** (dtexecui.exe) 公用程式來執行封裝。 但不是透過使用命令列選項或 [執行封裝公用程式] 對話方塊來設定封裝的執行階段選項，而是在 [新增作業步驟] 對話方塊設定執行階段選項。 如需執行封裝之選項的詳細資訊，請參閱 [dtexec 公用程式](dtexec-utility.md)。  
+ 從作業步驟執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，如同使用 **dtexec** (dtexec.exe) 和 **DTExecUI** (dtexecui.exe) 公用程式來執行封裝。 但不是透過使用命令列選項或 [執行封裝公用程式]  對話方塊來設定封裝的執行階段選項，而是在 [新增作業步驟]  對話方塊設定執行階段選項。 如需執行封裝之選項的詳細資訊，請參閱 [dtexec 公用程式](dtexec-utility.md)。  
   
  如需詳細資訊，請參閱 [使用 SQL Server Agent 排程封裝](../schedule-a-package-by-using-sql-server-agent.md)。  
   
@@ -65,17 +65,17 @@ ms.locfileid: "62767170"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟啟動封裝後，封裝執行可能失敗，也可能會成功，但產生非預期的結果。 您可以使用下列工具對這些問題進行疑難排解。  
   
--   對於儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MSDB 資料庫、[!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區，或是本機電腦上資料夾中的封裝，您可以使用 [記錄檔檢視器]，以及在封裝執行期間所產生的任何記錄檔和偵錯傾印檔案。  
+-   對於儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MSDB 資料庫、[!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區，或是本機電腦上資料夾中的封裝，您可以使用 [記錄檔檢視器]  ，以及在封裝執行期間所產生的任何記錄檔和偵錯傾印檔案。  
   
      **若要使用記錄檔檢視器，請執行下列操作。**  
   
-    1.  在物件總管中以滑鼠右鍵按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業]，然後按一下 [檢視記錄]。  
+    1.  在物件總管中以滑鼠右鍵按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業]，然後按一下 [檢視記錄]  。  
   
-    2.  利用 [訊息] 資料行中的 [作業失敗] 訊息，尋找 [記錄檔摘要] 方塊中的作業執行。  
+    2.  利用 [訊息]  資料行中的 [作業失敗]  訊息，尋找 [記錄檔摘要]  方塊中的作業執行。  
   
-    3.  展開作業節點，然後按一下作業步驟，檢視 [記錄檔摘要] 方塊下方區域中訊息的詳細資料。  
+    3.  展開作業節點，然後按一下作業步驟，檢視 [記錄檔摘要]  方塊下方區域中訊息的詳細資料。  
   
--   對於儲存在 SSISDB 資料庫中的封裝，您也可以使用 [記錄檔檢視器]，以及在封裝執行期間所產生的任何記錄檔和偵錯傾印檔案。 此外，您可以使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的報表。  
+-   對於儲存在 SSISDB 資料庫中的封裝，您也可以使用 [記錄檔檢視器]  ，以及在封裝執行期間所產生的任何記錄檔和偵錯傾印檔案。 此外，您可以使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的報表。  
   
      **若要在報表中尋找與作業執行相關聯之封裝執行的資訊，請執行下列操作。**  
   
@@ -87,7 +87,7 @@ ms.locfileid: "62767170"
   
     4.  以滑鼠右鍵按一下 [SSISDB]，然後依序指向 [報表]、[標準報表]，再按一下 [所有執行]。  
   
-    5.  在 [所有執行] 報表中，於 [識別碼] 資料行中尋找執行識別碼。 按一下 [概觀]、[所有訊息] 或 [執行效能]，檢視此封裝執行的相關資訊。  
+    5.  在 [所有執行]  報表中，於 [識別碼]  資料行中尋找執行識別碼。 按一下 [概觀]  、[所有訊息]  或 [執行效能]  ，檢視此封裝執行的相關資訊。  
   
          如需 [概觀]、[所有訊息] 和 [執行效能] 報告的詳細資訊，請參閱 [Integration Services 伺服器的報表](../reports-for-the-integration-services-server.md)。  
   

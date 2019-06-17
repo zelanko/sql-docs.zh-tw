@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0c465a50547d8ca45947dc5db5c56221a8a4538
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100815"
 ---
 # <a name="manage-a-running-process"></a>管理執行中的處理序
@@ -79,7 +79,7 @@ ms.locfileid: "66100815"
   
 2.  開啟 **[作業]** 資料夾。  
   
-3.  以滑鼠右鍵按一下報表，然後按一下 [取消作業]。  
+3.  以滑鼠右鍵按一下報表，然後按一下 [取消作業]  。  
   
 ### <a name="how-to-cancel-a-data-driven-subscription"></a>如何取消資料驅動訂閱  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66100815"
   
 4.  儲存檔案。  
   
-5.  在報表管理員中，從報表的 [訂閱] 索引標籤或 [我的訂閱] 中刪除資料驅動訂閱。  
+5.  在報表管理員中，從報表的 [訂閱] 索引標籤或 [我的訂閱]  中刪除資料驅動訂閱。  
   
 6.  刪除訂閱之後，請在 RSReportServer.config 檔中，尋找 `IsNotificationService`，然後將它設為 `True`。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66100815"
   
 #### <a name="to-manage-jobs-in-sharepoint-mode"></a>若要管理 SharePoint 模式下的作業  
   
-1.  在 SharePoint 管理中心中，按一下 **[管理服務應用程式]**。  
+1.  在 SharePoint 管理中心中，按一下 **[管理服務應用程式]** 。  
   
 2.  找出並按一下 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的名稱，以開啟 [管理應用程式] 頁面。  
   

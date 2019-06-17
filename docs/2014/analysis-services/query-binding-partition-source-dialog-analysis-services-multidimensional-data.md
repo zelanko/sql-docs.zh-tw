@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 604a42cc0b3519f1034733e12f72dc1a7c969ce6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070569"
 ---
 # <a name="query-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>查詢繫結詳細資料 (資料分割來源對話方塊) (Analysis Services - 多維度資料)
@@ -33,7 +33,7 @@ ms.locfileid: "66070569"
 >  指定 WHERE 子句，就可以在這個資料分割使用記錄的子集。 當有多個分割區以單一事實資料表為基礎時，這是防止資料重複所必要的。 如需詳細資訊，請參閱 <<c0> [ 資料分割來源對話方塊&#40;Analysis Services-多維度資料&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)。</c0>  
   
  **檢查**  
- 按一下即可確認 [查詢] 中的陳述式是否為有效的 SQL 陳述式。  
+ 按一下即可確認 [查詢]  中的陳述式是否為有效的 SQL 陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料分割來源對話方塊&#40;Analysis Services-多維度資料&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  

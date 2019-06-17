@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 588e656ca71bc5843e3483879f5a58951373aff5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916575"
 ---
 # <a name="sql-server-data-files-in-windows-azure"></a>Windows Azure 中的 SQL Server 資料檔案
@@ -99,7 +99,7 @@ ON
   
 -   在目前版本的功能中，不支援將 `FileStream` 資料儲存在 Windows Azure 儲存體中。 您可以將 `Filestream` 資料儲存在 Windows Azure 儲存體整合的本機資料庫中，但是無法使用 Windows Azure 儲存體，在電腦之間移動 Filestream 資料。 對於 `FileStream` 資料，我們建議您繼續使用傳統的技術，在不同的電腦之間移動與 Filestream 相關聯的檔案 (.mdf 和 .ldf)。  
   
--   目前，這項新的增強功能不支援多個 SQL Server 執行個體同時存取 Windows Azure 儲存體中的相同資料庫檔案。 如果 ServerA 在線上且具有作用中的資料庫檔案，而 ServerB 意外啟動，而且也有指向相同資料檔案的資料庫，則第二部伺服器將無法啟動資料庫，錯誤碼為 **5120 無法開啟實體檔案 "%.\*ls"。作業系統錯誤 %d: "%ls"**。  
+-   目前，這項新的增強功能不支援多個 SQL Server 執行個體同時存取 Windows Azure 儲存體中的相同資料庫檔案。 如果 ServerA 在線上且具有作用中的資料庫檔案，而 ServerB 意外啟動，而且也有指向相同資料檔案的資料庫，則第二部伺服器將無法啟動資料庫，錯誤碼為 **5120 無法開啟實體檔案 "%.\*ls"。作業系統錯誤 %d: "%ls"** 。  
   
 -   透過使用 Windows Azure 功能中的 SQL Server 資料檔案，僅能將 .mdf、.ldf 和 .ndf 檔案儲存在 Windows Azure 儲存體中。  
   
@@ -125,7 +125,7 @@ ON
  從 SQL Server 2014 開始，已加入新的 SQL Server 物件，以用於 Windows Azure 儲存體功能中的 SQL Server 資料檔案。 這個新的 SQL Server 物件稱為 [SQL Server:HTTP_STORAGE_OBJECT](../performance-monitor/sql-server-http-storage-object.md)，而且系統監視器可以在使用 Windows Azure 儲存體執行 SQL Server 時，使用此物件來監視活動。  
   
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 支援  
- SQL Server Management Studio 可讓您經由許多對話方塊視窗使用此功能。 例如，您可以在許多對話方塊視窗 (例如 [新增資料庫] `https://teststorageaccnt.blob.core.windows.net/testcontainer/` 、 **[附加資料庫]** 和 **[還原資料庫]**) 中，輸入儲存體容器的 URL 路徑 (例如 ) 做為 **[路徑]**。 如需詳細資訊，請參閱[教學課程：Windows Azure 儲存體服務中的 SQL Server 資料檔案](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
+ SQL Server Management Studio 可讓您經由許多對話方塊視窗使用此功能。 例如，您可以在許多對話方塊視窗 (例如 [新增資料庫] `https://teststorageaccnt.blob.core.windows.net/testcontainer/` 、 **[附加資料庫]** 和 **[還原資料庫]** ) 中，輸入儲存體容器的 URL 路徑 (例如  ) 做為 **[路徑]** 。 如需詳細資訊，請參閱[教學課程：Windows Azure 儲存體服務中的 SQL Server 資料檔案](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
 ### <a name="sql-server-management-objects-support"></a>SQL Server 管理物件支援  
  使用 Windows Azure 功能中的 SQL Server 資料檔案時，可支援所有 SQL Server 管理物件 (SMO)。 如果 SMO 物件需要檔案路徑，請使用 BLOB URL 格式而非本機檔案路徑，例如 `https://teststorageaccnt.blob.core.windows.net/testcontainer/`。 如需 SQL Server 管理物件 (SMO) 的詳細資訊，請參閱《SQL Server 線上叢書》中的 [SQL Server 管理物件 &#40;SMO&#41; 程式設計指南](../server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)。  
@@ -142,14 +142,14 @@ ON
   
  **驗證錯誤**  
   
--   *無法卸除認證 '%.\*ls'，因為作用中的資料庫檔案正在使用它。*   
+-   *無法卸除認證 '%.\*ls'，因為作用中的資料庫檔案正在使用它。*    
     解決方案：當您嘗試卸除 Windows Azure 儲存體中的作用中資料庫檔案仍在使用中的認證時，您會看到此錯誤。 若要卸除認證，您必須先刪除具有此資料庫檔案的相關聯 Blob。 若要刪除擁有使用中租用的 Blob，您必須先中斷租用。  
   
--   *尚未在容器上正確建立共用存取簽章。*   
+-   *尚未在容器上正確建立共用存取簽章。*    
      解決方案：請確定您具有共用存取簽章的容器上正確建立。 請檢閱以下連結中第 2 課所提供的指示：[教學課程：Windows Azure 儲存體服務中的 SQL Server 資料檔案](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
--   *尚未正確建立 SQL Server 認證。*   
-    解決方案：請確定您已經針對 [識別] 欄位使用「共用存取簽章」，並正確建立密碼。 請檢閱以下連結中第 3 課所提供的指示：[教學課程：Windows Azure 儲存體服務中的 SQL Server 資料檔案](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
+-   *尚未正確建立 SQL Server 認證。*    
+    解決方案：請確定您已經針對 [識別]  欄位使用「共用存取簽章」，並正確建立密碼。 請檢閱以下連結中第 3 課所提供的指示：[教學課程：Windows Azure 儲存體服務中的 SQL Server 資料檔案](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
  **租用 Blob 錯誤：**  
   
@@ -163,8 +163,8 @@ ON
 2.  *執行 Alter 陳述式時發生錯誤*   
     解決方案：請務必在資料庫上線時執行 Alter Database 陳述式。 將資料檔案複製到 Windows Azure 儲存體時，一定要建立分頁 Blob 而非區塊 Blob。 否則，ALTER Database 將會失敗。 請檢閱以下連結中第 7 課所提供的指示：[教學課程：Windows Azure 儲存體服務中的 SQL Server 資料檔案](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
-3.  *錯誤碼 5120 無法開啟實體檔案 "%.\*ls"。作業系統錯誤 %d: "%ls"*   
-    解決方案：目前，這項新的增強功能不支援多個 SQL Server 執行個體同時存取 Windows Azure 儲存體中的相同資料庫檔案。 如果 ServerA 在線上且具有作用中的資料庫檔案，而 ServerB 意外啟動，而且也有指向相同資料檔案的資料庫，則第二部伺服器將無法啟動資料庫，錯誤碼為 *5120 無法開啟實體檔案 "%.\*ls"。作業系統錯誤 %d: "%ls"*。  
+3.  *錯誤碼 5120 無法開啟實體檔案 "%.\*ls"。作業系統錯誤 %d: "%ls"*    
+    解決方案：目前，這項新的增強功能不支援多個 SQL Server 執行個體同時存取 Windows Azure 儲存體中的相同資料庫檔案。 如果 ServerA 在線上且具有作用中的資料庫檔案，而 ServerB 意外啟動，而且也有指向相同資料檔案的資料庫，則第二部伺服器將無法啟動資料庫，錯誤碼為 *5120 無法開啟實體檔案 "%.\*ls"。作業系統錯誤 %d: "%ls"* 。  
   
      若要解決此問題，請先判斷您是否需要讓 Server A 存取 Windows Azure 儲存體中的資料庫檔案。 如果不需要，只要移除 Server A 與 Windows Azure 儲存體中資料庫檔案之間的任何連接即可。 若要這樣做，請遵循下列步驟：  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63217876"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>建立用於撥接中心模型的預測 (中繼資料採礦教學課程)
@@ -37,7 +37,7 @@ ms.locfileid: "63217876"
   
 5.  展開採礦結構 [撥接中心預設值]，然後選取類神經網路模型 [撥接中心 – LR]。  
   
-6.  從 [採礦模型] 功能表中選取 [單一查詢]。  
+6.  從 [採礦模型]  功能表中選取 [單一查詢]  。  
   
      **單一查詢輸入**對話方塊隨即出現，其中資料行會對應到採礦模型中的資料行。  
   
@@ -112,11 +112,11 @@ ms.locfileid: "63217876"
   
 2.  在 **採礦模型**窗格中，按一下**選取模型**，，然後選擇 撥接中心-LR，從可用模型的清單。  
   
-3.  從**採礦模型**功能表上，清除選項**單一查詢**。 此時會出現一個警告，告知您將會失去單一查詢輸入。 按一下 [確定] 。  
+3.  從**採礦模型**功能表上，清除選項**單一查詢**。 此時會出現一個警告，告知您將會失去單一查詢輸入。 按一下 [確定]  。  
   
      **單一查詢輸入** 對話方塊會取代**選取輸入資料表** 對話方塊。  
   
-4.  按一下 [選取案例資料表] 。  
+4.  按一下 [選取案例資料表]  。  
   
 5.  在 **選取資料表**對話方塊中，從清單中的資料來源的 selectShifts。 在 **資料表/檢視名稱**清單中，選取 Shifts for Call Center （它可能會自動選取） 和  **確定。**  
   

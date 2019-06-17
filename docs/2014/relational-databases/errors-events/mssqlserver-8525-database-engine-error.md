@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_8525 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 f1_keywords:
 - "8525"
 helpviewer_keywords:
@@ -15,15 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f0e254e38eabc62ab3e11e7d8ab1a3396c465470
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62913233"
 ---
 # <a name="mssqlserver8525"></a>MSSQLSERVER_8525
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>詳細資料  
   
 |||  
@@ -36,9 +35,9 @@ ms.locfileid: "62913233"
 |訊息文字|分散式交易完成。 請在新的交易或是 NULL 交易中編列這個工作階段。|  
   
 ## <a name="explanation"></a>說明  
-在將分散式交易協調器搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一起使用的程式設計模型中，應用程式必須明確編列至分散式交易，並從分散式交易脫離。  
+ 在將分散式交易協調器搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一起使用的程式設計模型中，應用程式必須明確編列至分散式交易，並從分散式交易脫離。  
   
-當符合下列四個條件時，就會發生此錯誤：  
+ 當符合下列四個條件時，就會發生此錯誤：  
   
 -   應用程式已編列到分散式交易中。  
   
@@ -48,8 +47,9 @@ ms.locfileid: "62913233"
   
 -   應用程式嘗試進行脫離現有分散式交易或編列到新的分散式交易以外的其他任何作業，例如發出查詢或啟動本機交易。  
   
-當應用程式執行建立本機交易的作業時，會使用錯誤狀態 1，而當應用程式嘗試編列到繫結工作階段時，則會使用狀態 2。  
+ 當應用程式執行建立本機交易的作業時，會使用錯誤狀態 1，而當應用程式嘗試編列到繫結工作階段時，則會使用狀態 2。  
   
 ## <a name="user-action"></a>使用者動作  
-在應用程式編列到分散式交易之後，應用程式必須明確脫離該分散式交易或編列到另一個分散式交易。 這個動作會隱含脫離先前編列的交易。 如需脫離或編列到分散式交易的正確語法，請參閱應用程式的程式設計介面手冊。  
+ 在應用程式編列到分散式交易之後，應用程式必須明確脫離該分散式交易或編列到另一個分散式交易。 這個動作會隱含脫離先前編列的交易。 如需脫離或編列到分散式交易的正確語法，請參閱應用程式的程式設計介面手冊。  
+  
   

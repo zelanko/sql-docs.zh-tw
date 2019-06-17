@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b11844e6b184099a9c6146d290a0dc081429f5d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273402"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>建立資料來源檢視 (基本資料採礦教學課程)
@@ -24,9 +24,9 @@ ms.locfileid: "63273402"
   
 1.  中**方案總管**，以滑鼠右鍵按一下**資料來源檢視**，然後選取**新增資料來源檢視**。  
   
-2.  在 [歡迎使用資料來源檢視精靈] 頁面上，按一下 [下一步]。  
+2.  在 [歡迎使用資料來源檢視精靈]  頁面上，按一下 [下一步]  。  
   
-3.  在  **Zdroj Dat**頁面的 **關聯式資料來源**，選取您在前一項工作中建立的 Adventure Works DW 2012 資料來源。 按一下 [下一步] 。  
+3.  在  **Zdroj Dat**頁面的 **關聯式資料來源**，選取您在前一項工作中建立的 Adventure Works DW 2012 資料來源。 按一下 [下一步]  。  
   
     > [!NOTE]  
     >  如果您想要建立資料來源，以滑鼠右鍵按一下**資料來源**，然後按一下**新的資料來源**來啟動資料來源精靈。  
@@ -37,7 +37,7 @@ ms.locfileid: "63273402"
   
     -   **vTargetMail (dbo)** -有關過去自行車買主的歷程記錄資料檢視  
   
-5.  按一下 [下一步] 。  
+5.  按一下 [下一步]  。  
   
 6.  在 [**完成精靈]** 頁面上，預設的資料來源檢視名為 Adventure Works DW 2012。 將名稱變更為`Targeted Mailing`，然後按一下**完成**。  
   

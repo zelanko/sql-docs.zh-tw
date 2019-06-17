@@ -33,10 +33,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187965"
 ---
 # <a name="password-policy"></a>密碼原則
@@ -75,7 +75,7 @@ ms.locfileid: "63187965"
   
     -   密碼記錄會使用目前密碼雜湊的值來初始化。  
   
-    -   [帳戶鎖定期間]、[帳戶鎖定閾值] 和 [重設帳戶鎖定計數器的時間] 也會啟用。  
+    -   [帳戶鎖定期間]  、[帳戶鎖定閾值]  和 [重設帳戶鎖定計數器的時間]  也會啟用。  
   
 -   當 CHECK_POLICY 改為 OFF 時，會發生下列行為：  
   

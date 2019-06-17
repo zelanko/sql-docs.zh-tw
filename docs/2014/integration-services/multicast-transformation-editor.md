@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c4013483838f81e9147eb45c84598c9cc73016fd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057614"
 ---
 # <a name="multicast-transformation-editor"></a>多點傳送轉換編輯器
@@ -31,7 +31,7 @@ ms.locfileid: "66057614"
  在左方選取輸出，即可在右方檢視其在資料表中的屬性。  
   
  **屬性**  
- 除了 [名稱] 和 [描述] 以外，所有列出的輸出屬性都是唯讀的。  
+ 除了 [名稱]  和 [描述]  以外，所有列出的輸出屬性都是唯讀的。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

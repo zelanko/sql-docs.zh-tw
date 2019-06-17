@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032002"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>開啟活動監視器 (SQL Server Management Studio)
@@ -35,7 +35,7 @@ ms.locfileid: "63032002"
   
      [Transact-SQL](#SSMSProcedure)  
   
--   **若要設定重新整理間隔使用：**[SQL Server Management Studio](#Refresh)  
+-   **若要設定重新整理間隔使用：** [SQL Server Management Studio](#Refresh)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  [活動監視器] 會在監視的執行個體上執行查詢，以便取得 [活動監視器] 顯示窗格的資訊。 當重新整理間隔的設定小於 10 秒時，用來執行這些查詢的時間就可能會影響伺服器效能。  
@@ -51,9 +51,9 @@ ms.locfileid: "63032002"
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>若要在 SQL Server Management Studio 中開啟活動監視器  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 標準工具列上，按一下 **[活動監視器]**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 標準工具列上，按一下 **[活動監視器]** 。  
   
-2.  在 **[連接到伺服器]** 對話方塊中，選取伺服器名稱和驗證模式，然後按一下 **[連接]**。  
+2.  在 **[連接到伺服器]** 對話方塊中，選取伺服器名稱和驗證模式，然後按一下 **[連接]** 。  
   
  您也可以隨時按下 CTRL+ALT A，藉以開啟 [活動監視器]。  
   
@@ -63,11 +63,11 @@ ms.locfileid: "63032002"
   
 #### <a name="to-open-activity-monitor-when-opening-sql-server-management-studio"></a>若要在開啟 SQL Server Management Studio 時開啟活動監視器  
   
-1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-2.  在 **[選項]** 對話方塊中，展開 **[環境]**，然後選取 **[一般]**。  
+2.  在 **[選項]** 對話方塊中，展開 **[環境]** ，然後選取 **[一般]** 。  
   
-3.  在 **[啟動時]** 方塊中，選取 **[開啟物件總管和活動監視器]**。  
+3.  在 **[啟動時]** 方塊中，選取 **[開啟物件總管和活動監視器]** 。  
   
 4.  若要啟動這些變更，請關閉並重新開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
@@ -75,6 +75,6 @@ ms.locfileid: "63032002"
   
 -   開啟 [活動監視器]。  
   
--   以滑鼠右鍵按一下 [概觀]，選取 [重新整理間隔]，然後選取活動監視器應該用來取得新執行個體資訊的間隔。  
+-   以滑鼠右鍵按一下 [概觀]  ，選取 [重新整理間隔]  ，然後選取活動監視器應該用來取得新執行個體資訊的間隔。  
   
   

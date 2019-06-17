@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 91a19eebfb03019fdbd928a340c139a23d9f27d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814074"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>將次要複本從可用性群組移除 (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "62814074"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **後續操作：**[移除次要複本之後](#PostBestPractices)  
+-   **後續操作：** [移除次要複本之後](#PostBestPractices)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -75,9 +75,9 @@ ms.locfileid: "62814074"
   
     -   若要移除單一複本，請在 **[物件總管]** 窗格或 **[物件總管詳細資料]** 窗格中選取它。  
   
-5.  以滑鼠右鍵按一下選取的一或多個次要複本，然後在命令功能表中選取 [從可用性群組移除]。  
+5.  以滑鼠右鍵按一下選取的一或多個次要複本，然後在命令功能表中選取 [從可用性群組移除]  。  
   
-6.  在 **[從可用性群組移除次要複本]** 對話方塊中，若要移除所有列出的次要複本，按一下 **[確定]**。 如果您不要移除所有列出的複本，請按一下 **[取消]**。  
+6.  在 **[從可用性群組移除次要複本]** 對話方塊中，若要移除所有列出的次要複本，按一下 **[確定]** 。 如果您不要移除所有列出的複本，請按一下 **[取消]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要移除次要複本**  

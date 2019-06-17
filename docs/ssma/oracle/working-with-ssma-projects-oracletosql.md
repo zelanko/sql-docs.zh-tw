@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 3ec3a2f9bcdf43657649263d77eff3b31c9a57a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63283556"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>使用 SSMA 專案 (OracleToSQL)
@@ -100,7 +100,7 @@ SSMA 會包含數個設定來轉換和載入資料庫物件移轉資料和同步
   
         儲存中繼資料，可能需要幾分鐘的時間。 如果您不想儲存中繼資料，但不選取任何核取方塊。  
   
-    2.  按一下 [儲存] 按鈕。  
+    2.  按一下 [儲存]  按鈕。  
   
         SSMA 會剖析 Oracle 結構描述，並將中繼資料儲存到專案檔。  
   
