@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2b3b550ec7eb42597862c5b20e557aabdc909f13
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922119"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
@@ -67,7 +67,7 @@ ms.locfileid: "62922119"
  資料庫的備份。 完整資料庫備份代表備份完成時的整個資料庫。 差異資料庫備份僅包含自其最近的完整資料庫備份以來，對資料庫所做的變更。  
   
  [差異備份](full-database-backups-sql-server.md)  
- 一種資料備份，是以整個或部分資料庫或一組資料檔案或檔案群組 (「差異基底」) 的最新完整備份為基礎，而且只包含自差異基底以來變更的資料範圍。  
+ 一種資料備份，是以整個或部分資料庫或一組資料檔案或檔案群組 (「差異基底」  ) 的最新完整備份為基礎，而且只包含自差異基底以來變更的資料範圍。  
   
  差異部分備份僅記錄自上一次部分備份後在檔案群組中變更過的資料範圍，稱為差異基底。  
   

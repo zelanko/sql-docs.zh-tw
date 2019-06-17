@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7c85d021-d466-4732-85f9-53903d297041
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e5f2528fc47c2196cd542f51abbe86f673d14f6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3c92158c28ab8e5023300f561667a1e41415c909
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827774"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792577"
 ---
 # <a name="getmaxindexlength-method-sqlserverdatabasemetadata"></a>getMaxIndexLength 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

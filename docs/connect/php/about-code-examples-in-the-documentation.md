@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1520106fa39e850bf09d78a5eeee955fba1260fb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: e2b9178b057d7f8a2a4c9c663101c99df1d468df
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606738"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795849"
 ---
 # <a name="about-code-examples-in-the-documentation"></a>關於文件中的程式碼範例
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

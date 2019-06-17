@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e11eea40558a8e44232eed22f08d9a60bcd7742b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771084"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Attunity Oracle Change Data Capture 服務的使用者角色

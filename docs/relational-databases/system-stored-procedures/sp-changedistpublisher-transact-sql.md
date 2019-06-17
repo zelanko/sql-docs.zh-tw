@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 06a0e5e2edb793a94e8d8542ca17734f23824121
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997827"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
@@ -45,7 +45,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` 是要變更之給定發行者的屬性。 *屬性*已**sysname**而且可以是下列值之一。  
   
-`[ @value = ] 'value'` 是指定之屬性的值。 *值*已**nvarchar(255)**，預設值是 NULL。  
+`[ @value = ] 'value'` 是指定之屬性的值。 *值*已**nvarchar(255)** ，預設值是 NULL。  
   
 `[ @storage_connection_string = ] 'storage_connection_string'` 需要 SQL Database 受控執行個體，應該符合 Azure SQL Database 的存放磁碟區的存取金鑰。 
 

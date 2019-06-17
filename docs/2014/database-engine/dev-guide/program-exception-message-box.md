@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62780691"
 ---
 # <a name="program-exception-message-box"></a>程式例外狀況訊息方塊
@@ -99,7 +99,7 @@ ms.locfileid: "62780691"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNo> -顯示 **[是]** 並**No**按鈕。  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNoCancel> -顯示 **[是]**， **No**，並**取消**按鈕。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNoCancel> -顯示 **[是]** ， **No**，並**取消**按鈕。  
   
 5.  (選擇性) 如果您使用自訂按鈕，請呼叫 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.SetButtonText%2A> 方法的其中一個多載來指定最多五個自訂按鈕的文字。  
   

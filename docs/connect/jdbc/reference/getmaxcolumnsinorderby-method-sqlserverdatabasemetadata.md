@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: d6af9bb4-c55d-41f4-a266-d10ebee61194
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 442c9acd655e8651cb01072bc076c32ece833f54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0dd929584857b714b37be7d75f648411515e1865
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687516"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792810"
 ---
 # <a name="getmaxcolumnsinorderby-method-sqlserverdatabasemetadata"></a>getMaxColumnsInOrderBy 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

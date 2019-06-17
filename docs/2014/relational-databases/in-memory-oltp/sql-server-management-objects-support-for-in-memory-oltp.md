@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7591cff38ac08d9fd36d7b39f180613fbdd12961
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63066436"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>記憶體中 OLTP 的 SQL Server 管理物件支援

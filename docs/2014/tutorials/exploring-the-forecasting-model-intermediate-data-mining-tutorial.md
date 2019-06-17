@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62992255"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>探索預測模型 (中繼資料採礦教學課程)
@@ -147,7 +147,7 @@ ms.locfileid: "62992255"
   
 2.  在 [ **Caption>** ] 窗格中，按一下最頂端的 (All) 節點。  
   
-3.  在  ** 節點詳細資料** 窗格中，檢視 ATTRIBUTE_NAME 的值。  
+3.  在   **節點詳細資料** 窗格中，檢視 ATTRIBUTE_NAME 的值。  
   
      這個值顯示這個節點包含哪一個序列或產品與區域組合。 在 AdventureWorks 範例中，最頂端的節點屬於 M200 Europe 序列。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "62992255"
   
 6.  在 [ **Caption>** ] 窗格中，按一下最頂端的 ARIMA 節點，然後展開節點，直到所有的子節點會顯示。  
   
-7.  在  ** 節點詳細資料** 窗格中，檢視 ATTRIBUTE_NAME 的值。  
+7.  在   **節點詳細資料** 窗格中，檢視 ATTRIBUTE_NAME 的值。  
   
      這個值會告訴您這個節點包含哪一個時間序列。 ARIMA 區段中最頂端的節點應該符合 (All) 區段中最頂端的節點。 在 AdventureWorks 範例中，這個節點包含 M200 Europe 序列的 ARIMA 分析。  
   

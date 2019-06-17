@@ -15,16 +15,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0c2c543343bd602be75d600a489edfd84663790b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62911400"
 ---
 # <a name="set-breakpoints"></a>[設定中斷點]
   使用 **[設定中斷點]** 對話方塊，即可指定要啟用中斷點的事件並控制中斷點的行為。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **已啟用**  
  選取即可在事件上啟用中斷點。  
   

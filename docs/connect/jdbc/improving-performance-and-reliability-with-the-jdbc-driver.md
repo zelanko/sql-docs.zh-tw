@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7650a51e21cd6d1b6a8d4bbacddf6cabdb9cc1e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b7cbadb13e5a14fe86a409cedfbffe98bb437e57
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627906"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781666"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>增進 JDBC 驅動程式的效能與可靠性
 

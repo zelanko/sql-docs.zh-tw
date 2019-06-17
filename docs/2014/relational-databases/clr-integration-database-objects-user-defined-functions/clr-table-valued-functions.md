@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a0fa6b877b0c4f9dd2754301c9b2e47964b1ad9e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62874542"
 ---
 # <a name="clr-table-valued-functions"></a>CLR 資料表值函式

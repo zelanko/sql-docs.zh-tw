@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 379877d3a08c60a293b96c5c57d55a2894ba0a79
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63074046"
 ---
 # <a name="handle-multiple-job-steps"></a>處理多個作業步驟
-  如果您的作業有多重作業步驟，則必須指定這些作業步驟的執行順序。 這就叫做「流程控制」。 您可以加入新的作業步驟，並可隨時重新排列作業步驟的流程；變更內容將會在下次執行作業時生效。 下圖顯示資料庫備份作業的流程控制。  
+  如果您的作業有多重作業步驟，則必須指定這些作業步驟的執行順序。 這就叫做「流程控制」。  您可以加入新的作業步驟，並可隨時重新排列作業步驟的流程；變更內容將會在下次執行作業時生效。 下圖顯示資料庫備份作業的流程控制。  
   
  ![SQL Server Agent 作業步驟流程控制](../../database-engine/media/dbflow01.gif "SQL Server Agent 作業步驟流程控制")  
   

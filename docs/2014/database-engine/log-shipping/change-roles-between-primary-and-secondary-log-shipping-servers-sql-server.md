@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 08467118608db6b222bea2a41351eac951449a16
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774559"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>變更主要與次要記錄傳送伺服器間的角色 (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62774559"
   
     2.  新增次要資料庫時，請在 **[次要資料庫設定]** 對話方塊的 **[次要資料庫]** 方塊中，輸入原始的資料庫名稱。  
   
-    3.  在 **[次要資料庫設定]** 對話方中，選取 **[否，次要資料庫已初始化]**。  
+    3.  在 **[次要資料庫設定]** 對話方中，選取 **[否，次要資料庫已初始化]** 。  
   
 4.  如果您先前的記錄傳送組態已啟用記錄傳送監視，請將記錄傳送監視重新設定為監視新的記錄傳送組態。  執行下列命令，以資料庫的名稱取代 *database_name* ：  
   

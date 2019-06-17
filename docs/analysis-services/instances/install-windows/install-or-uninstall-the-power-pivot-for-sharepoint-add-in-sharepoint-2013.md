@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1fdc41aaaad19317db3b3795cc63d137b19600c2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63055261"
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013"></a>安裝或解除安裝 PowerPivot for SharePoint 增益集 (SharePoint 2013)
@@ -58,7 +58,7 @@ ms.locfileid: "63055261"
 > [!NOTE]  
 >  您必須使用 **spPowerPivot.msi**，在 SharePoint 2013 伺服器上安裝 Analysis Services 資料提供者。 不支援 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 功能套件中的其他安裝程式套件，因為這些套件不包含資料提供者在此環境中需要的 SharePoint 2013 支援檔案。  
   
- **組態工具：**[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]適用於 SharePoint 2013 組態工具必須只有其中一個 SharePoint 伺服器上。 不過在多伺服器的伺服器陣列中，建議的最佳作法是在至少兩個伺服器上安裝組態工具，如此一來，即使其中一個伺服器已離線，您也可以存取組態工具。  
+ **組態工具：** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]適用於 SharePoint 2013 組態工具必須只有其中一個 SharePoint 伺服器上。 不過在多伺服器的伺服器陣列中，建議的最佳作法是在至少兩個伺服器上安裝組態工具，如此一來，即使其中一個伺服器已離線，您也可以存取組態工具。  
   
 ##  <a name="bkmk_prereq"></a> 需求和必要條件  
   
@@ -82,11 +82,11 @@ ms.locfileid: "63055261"
   
 2.  在 [歡迎使用] 頁面上，按 **[下一步]** 。  
   
-3.  檢閱並接受授權條款，然後按 **[下一步]**。  
+3.  檢閱並接受授權條款，然後按 **[下一步]** 。  
   
 4.  在 **[特徵選取]** 頁面上，已預設選取所有功能。  
   
-5.  按一下 [下一步] 。  
+5.  按一下 [下一步]  。  
   
 6.  按一下 **[安裝]** 完成安裝。  
   
@@ -157,13 +157,13 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
   
  **Or**  
   
-1.  移至 **[開始]**、 **[所有程式]**。  
+1.  移至 **[開始]** 、 **[所有程式]** 。  
   
 2.  按一下 [ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]。  
   
-3.  按一下 **[組態工具]**。  
+3.  按一下 **[組態工具]** 。  
   
-4.  按一下 [[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 組態]。  
+4.  按一下 [[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 組態]  。  
   
  如需組態工具的詳細資訊，請參閱 [PowerPivot 組態工具](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   
@@ -174,7 +174,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
   
  您可以使用下列其中一個方法來解除安裝或修復 [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] ：  
   
-1.  **Windows 控制台：** 選取  [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013**。 按一下 **[解除安裝]** 或 **[修復]**。  
+1.  **Windows 控制台：** 選取  [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013**。 按一下 **[解除安裝]** 或 **[修復]** 。  
   
 2.  執行 spPowerPivot.msi，然後選取 **[移除]** 選項或 **[修復]** 選項。  
   

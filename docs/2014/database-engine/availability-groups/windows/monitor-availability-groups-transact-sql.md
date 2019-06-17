@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789817"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>監視可用性群組 (Transact-SQL)
@@ -169,7 +169,7 @@ ms.locfileid: "62789817"
 >  主要複本位置是可用性群組的授權來源。  
   
 > [!NOTE]  
->  如需可用性資料庫 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 效能計數器 ( **SQLServer:Database Replica** 效能物件) 的相關資訊，請參閱 [SQL Server、資料庫複本](../../../relational-databases/performance-monitor/sql-server-database-replica.md)。 此外，若要監視可用性資料庫上的交易記錄活動，請使用 **SQLServer:Databases** 效能物件的下列計數器：**Log Flush Write Time (ms)**、**Log Flushes/sec**、**Log Pool Cache Misses/sec**、**Log Pool Disk Reads/sec** 和 **Log Pool Requests/sec**。如需詳細資訊，請參閱 [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)。  
+>  如需可用性資料庫 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 效能計數器 ( **SQLServer:Database Replica** 效能物件) 的相關資訊，請參閱 [SQL Server、資料庫複本](../../../relational-databases/performance-monitor/sql-server-database-replica.md)。 此外，若要監視可用性資料庫上的交易記錄活動，請使用 **SQLServer:Databases** 效能物件的下列計數器：**Log Flush Write Time (ms)** 、**Log Flushes/sec**、**Log Pool Cache Misses/sec**、**Log Pool Disk Reads/sec** 和 **Log Pool Requests/sec**。如需詳細資訊，請參閱 [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)。  
   
 ##  <a name="AGlisteners"></a> 監視可用性群組接聽程式  
  若要監視 WSFC 叢集子網路上的可用性群組接聽程式，請使用下列檢視：  

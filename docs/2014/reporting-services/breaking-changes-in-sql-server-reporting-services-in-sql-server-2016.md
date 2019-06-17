@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d86c9bb07a52aba0cd93b006fc33edf4d1aa885
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109925"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014 中 SQL Server Reporting Services 的重大變更
@@ -47,7 +47,7 @@ ms.locfileid: "66109925"
  `http://<Server Name>/sites/videos/_vti_bin/ReportServer`  
   
 ### <a name="changes-to-sharepoint-mode-command-line-installation"></a>SharePoint 模式命令列安裝的變更  
- 輸入設定 **/RSINSTALLMODE** 只能搭配原生模式安裝運作，無法針對 SharePoint 模式安裝運作。 例如，下列不支援[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]: **/RSINSTALLMODE ="DefaultSharePointMode"**。 為取代該輸入設定，請使用 **/RSSHPINSTALLMODE="DefaultSharePointMode"**。  
+ 輸入設定 **/RSINSTALLMODE** 只能搭配原生模式安裝運作，無法針對 SharePoint 模式安裝運作。 例如，下列不支援[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]: **/RSINSTALLMODE ="DefaultSharePointMode"** 。 為取代該輸入設定，請使用 **/RSSHPINSTALLMODE="DefaultSharePointMode"** 。  
   
  下列陳述式是完整安裝命令與參數集的範例： **setup /ACTION = install /FEATURES = SQL，RS / = instancename=denali_inst1.../RSSHPINSTALLMODE ="DefaultSharePointMode"**  
   

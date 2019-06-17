@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 88a8e89e-8817-4161-85b1-9a9a2fd01cdb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1705a738f327ec07641d6d6dbf960ab37c30b9f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 79cb8dd94e3c3c2ad8f5462e7ca984df3726479a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639666"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795707"
 ---
 # <a name="setcharacterstream-method-javalangstring-javaioreader-int"></a>setCharacterStream 方法 (java.lang.String, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public final void setCharacterStream(java.lang.String parameterName,
   
  *value*  
   
- 包含 Unicode 資料的 Reader 物件。  
+ Reader 物件，包含 Unicode 資料。  
   
  *length*  
   
