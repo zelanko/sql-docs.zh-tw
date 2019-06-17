@@ -15,14 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eaed6350c6a6dde394e2ccff1617ac3bab2ba19c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088702"
 ---
 # <a name="trace-template-properties-general-tab"></a>追蹤範本屬性 (一般索引標籤)
-  使用 **[追蹤範本屬性]** 對話方塊的 **[一般]** 索引標籤，以使用下列選項來建立新的追蹤範本。 若要存取此對話方塊，請在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **[檔案]** 功能表上，指向 **[範本]**，然後按一下 **[新增範本]**。  
+  使用 **[追蹤範本屬性]** 對話方塊的 **[一般]** 索引標籤，以使用下列選項來建立新的追蹤範本。 若要存取此對話方塊，請在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **[檔案]** 功能表上，指向 **[範本]** ，然後按一下 **[新增範本]** 。  
   
 ## <a name="options"></a>選項。  
  **選取伺服器類型**  

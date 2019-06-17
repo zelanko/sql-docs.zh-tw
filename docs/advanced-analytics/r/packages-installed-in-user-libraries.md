@@ -2,17 +2,17 @@
 title: 使用 R 套件安裝在使用者程式庫-SQL Server Machine Learning 服務的秘訣
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/30/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ee5dc9dc8b1730f26bada915d739f164a884801d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bb354e1a0a7f7f22a39b690fdd0c0f4ae7778b8f
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642291"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140506"
 ---
 # <a name="tips-for-using-r-packages-in-sql-server"></a>SQL Server 中使用 R 套件的秘訣
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ R 套件通常取決於多個其他封裝，其中有些可能無法使用的執
 
 如果您先前已修改 R 環境的電腦上，安裝任何項目之前，確定 R 環境變數`.libPath`會使用一個路徑。
 
-這個路徑應該指向的執行個體的 R_SERVICES 資料夾。 如需詳細資訊，包括如何判斷已安裝的套件，請參閱 < [SQL Server 中的預設 R 和 Python 套件](installing-and-managing-r-packages.md)。
+這個路徑應該指向的執行個體的 R_SERVICES 資料夾。 如需詳細資訊，包括如何判斷已安裝的套件，請參閱 < [SQL Server 中的預設 R 和 Python 套件](../package-management/default-packages.md)。
 
 ## <a name="new-to-sql-server"></a>SQL server
 
@@ -73,7 +73,7 @@ library("c:/Users/<username>/R/win-library/packagename")
 
 + 更新您的程式碼，若要移除的 R 套件或 R 程式庫路徑的直接參考。 
 
-+ 知道哪一個套件程式庫的執行個體相關聯。 如需詳細資訊，請參閱 < [SQL Server 中的預設 R 和 Python 套件](installing-and-managing-r-packages.md)。
++ 知道哪一個套件程式庫的執行個體相關聯。 如需詳細資訊，請參閱 < [SQL Server 中的預設 R 和 Python 套件](../package-management/default-packages.md)。
 
 ## <a name="see-also"></a>另請參閱
 

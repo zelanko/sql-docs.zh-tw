@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a59cac14-32f5-4fa3-ad38-81a3e1e9d29c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 64cd3fc21a318d0e617cfeeff858c87648501bf5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8ea17177547fef29153fce02d8ac8a1443c5016b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615236"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798311"
 ---
 # <a name="step-1-configure-development-environment-for-java-development"></a>步驟 1︰設定 Java 開發的開發環境
   

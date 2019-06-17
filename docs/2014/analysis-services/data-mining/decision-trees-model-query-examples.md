@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 009e8d203d9262ee14702b99ad7d0e31d8a16dbb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084760"
 ---
 # <a name="decision-trees-model-query-examples"></a>決策樹模型查詢範例
@@ -212,7 +212,7 @@ NATURAL PREDICTION JOIN
 |Mountain Tire Tube|  
 |Touring Tire Tube|  
   
- 結果告訴您建議已經購買 Patch Kit 產品的客戶來購買的三件最佳產品。 當您做出建議時，也可以提供多個產品當作輸入，其方式是輸入值，或是使用 [單一查詢輸入] 對話方塊以及加入或移除值。 下列範例查詢會示範如何提供多個值，根據這些值進行預測。 定義輸入值之 SELECT 陳述式中的 UNION 子句會用來連接值。  
+ 結果告訴您建議已經購買 Patch Kit 產品的客戶來購買的三件最佳產品。 當您做出建議時，也可以提供多個產品當作輸入，其方式是輸入值，或是使用 [單一查詢輸入]  對話方塊以及加入或移除值。 下列範例查詢會示範如何提供多個值，根據這些值進行預測。 定義輸入值之 SELECT 陳述式中的 UNION 子句會用來連接值。  
   
 ```  
 SELECT PredictAssociation([DT_Association].[v Assoc Seq Line Items],3)  

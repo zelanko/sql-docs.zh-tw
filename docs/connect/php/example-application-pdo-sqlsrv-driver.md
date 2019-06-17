@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66e8ddb357c33998960b2a9a10d3d874d231676b
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+manager: jroth
+ms.openlocfilehash: 281799b3a7e7015e9fd2a545fb47840a5c62e5b4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419863"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801457"
 ---
 # <a name="example-application-pdosqlsrv-driver"></a>範例應用程式 (PDO_SQLSRV 驅動程式)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

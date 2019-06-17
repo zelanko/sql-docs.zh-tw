@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 50818393a81cf3c6db1b54a0752e6fa098277709
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087377"
 ---
 # <a name="connect-to-a-db2-database-ssas"></a>連接到 DB2 資料庫 (SSAS)
-  [資料表匯入精靈] 的這個頁面可讓您指定連接到 DB2 資料庫的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
+  [資料表匯入精靈]  的這個頁面可讓您指定連接到 DB2 資料庫的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]** 。  
   
  若要連接至資料來源，您必須先在電腦上安裝適當的提供者。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66087377"
  為選取的資料庫指定預設結構描述名稱。  
   
  **進階**  
- 使用 [設定進階屬性] 對話方塊設定其他連接屬性。  
+ 使用 [設定進階屬性]  對話方塊設定其他連接屬性。  
   
  **測試連接**  
  嘗試使用目前的設定建立與資料來源之間的連接。 顯示一則訊息，指出連接是否成功。  

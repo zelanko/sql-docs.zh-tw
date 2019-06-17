@@ -3,17 +3,17 @@ title: 升級及安裝常見問題集 (FAQ)-SQL Server Machine Learning 服務
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/15/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
 manager: cgronlun
-ms.openlocfilehash: 3a4a0c740268a8e2d6691e3c8a87634cc05f9ab1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8a53069195ee351630f2ef79f56069f013137d9b
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642313"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140372"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server Machine Learning 或 R Server 的升級及安裝常見問題集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "62642313"
 
 - 在舊版的 SQL Server 2016 R Services 中，包含的工作目錄的磁碟機上需要 8.3 標記法。 如果您安裝發行前版本，則升級至 SQL Server 2016 Service Pack 1 應該修正此問題。 這項需求不適用於發行 SP1 之後。
 
-- 目前，您無法安裝[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]的容錯移轉叢集。 不過，SQL Server 2019 預覽未提供容錯移轉支援，如果您想要評估這個 capablity 在測試環境。 如需詳細資訊，請參閱 < [What's New](../what-s-new-in-sql-server-machine-learning-services.md)。
+- 目前，您無法安裝[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]的容錯移轉叢集。 不過，SQL Server 2019 預覽未提供容錯移轉支援，如果您想要評估測試環境中的這項功能。 如需詳細資訊，請參閱 < [What's New](../what-s-new-in-sql-server-machine-learning-services.md)。
 
 - 在 Azure VM 上可能需要一些額外的設定。 例如，您可能需要建立防火牆例外，以便支援遠端存取。
 
@@ -63,7 +63,7 @@ SQL Server 2016 的早期發行版本無法在沒有網際網路連線的離線�
 + [使用安裝精靈升級 SQL Server](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 
 您可以升級只是 machine learning 元件使用稱為繫結程序： 
-+ [使用 SqlBindR 升級機器學習服務元件](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
++ [使用 SqlBindR 升級機器學習服務元件](../install/upgrade-r-and-python.md)
 
 ### <a name="end-of-support-for-in-place-upgrades-from-prerelease-versions"></a>結束支援從發行前版本的就地升級
 
@@ -95,11 +95,11 @@ SQL Server 2016 的早期發行版本無法在沒有網際網路連線的離線�
 
 如已安裝 Microsoft R Server 發行前版本，您必須先解除安裝它，才能升級至較新版本。
 
-1.  在 [控制台] 中，按一下 [新增/移除程式] 並選取 [ `Microsoft SQL Server 2016 <version number>`]。
+1.  在 [控制台]  中，按一下 [新增/移除程式]  並選取 [ `Microsoft SQL Server 2016 <version number>`]。
 
-2.  在有 [新增] 、[修復] 或 [移除]  元件選項的對話方塊中，選取 [移除] 。
+2.  在有 [新增]  、[修復]  或 [移除]  元件選項的對話方塊中，選取 [移除]  。
   
-3.  在 [選取功能]  頁面下的 [共用功能] 中，選取 [R Server (獨立式)] 。 按一下 [下一步] ，然後按一下 [完成]  只解除安裝選取的元件。
+3.  在 [選取功能]  頁面下的 [共用功能]  中，選取 [R Server (獨立式)]  。 按一下 [下一步]  ，然後按一下 [完成]  只解除安裝選取的元件。
 
 ## <a name="r-services-and-r-server-standalone-side-by-side-errors"></a>R Services 和 R Server （獨立式） 並排顯示錯誤 
 
@@ -123,7 +123,7 @@ SQL Server 2016 的早期發行版本無法在沒有網際網路連線的離線�
 
 3. 重新啟動伺服器。
 
-4. 執行 SQL Server 安裝程式，並將 R Services （資料庫） 功能只新增。 請勿選取**R Server （獨立式）**。
+4. 執行 SQL Server 安裝程式，並將 R Services （資料庫） 功能只新增。 請勿選取**R Server （獨立式）** 。
 
 一般而言，我們建議不要安裝 R Services （資料庫） 和 R Server （獨立式） 在相同電腦上。 不過，假設伺服器有足夠的容量，您可能會發現 R Server （獨立式） 可能會很有用，作為開發工具。 另一個可能的情況是，您需要使用的 R Server 運算化功能，但也想要存取 SQL Server 資料，而不移動資料。
 

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 286b37195b200761ce8cd8e941076c8a27e61011
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62836791"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>以程式設計方式加入資料流程元件
@@ -35,7 +35,7 @@ ms.locfileid: "62836791"
 ## <a name="adding-a-managed-component"></a>加入 Managed 元件  
  您無法使用 CLSID 或 PROGID 將 Managed 資料流程元件加入資料流程，因為這些值會指向包裝函數，而不是元件本身。 您可以改用 `CreationName` 屬性或是 `AssemblyQualifiedName` 屬性，如下列範例所示。  
   
- 如果您打算使用 `AssemblyQualifiedName` 屬性，則必須在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 專案中加入含有 Managed 元件之組件的參考。 這些組件不會列在 [新增參考] 對話方塊的 [.NET] 索引標籤上。 通常必須在 **C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** 資料夾中瀏覽以找出組件。  
+ 如果您打算使用 `AssemblyQualifiedName` 屬性，則必須在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 專案中加入含有 Managed 元件之組件的參考。 這些組件不會列在 [新增參考]  對話方塊的 [.NET] 索引標籤上。 通常必須在 **C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** 資料夾中瀏覽以找出組件。  
   
  內建的 Managed 資料流程元件包括：  
   

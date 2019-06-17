@@ -11,10 +11,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: b1cf8c6f8442fc69669c10106f671040733e48ef
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092226"
 ---
 # <a name="setup-role"></a>安裝程式角色
@@ -22,7 +22,7 @@ ms.locfileid: "66092226"
   
  `setup role` 是實作預先定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態所需之所有功能與共用元件的固定選項。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能安裝**  
  選擇此選項來選取個別功能與共用元件。 執行個體功能包括 Database Engine Services、Analysis Services (原生模式) 和 Reporting Services。  
   

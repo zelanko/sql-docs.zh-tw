@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 238cf52a52e53aa4ee2712e0bd6abf43a6c5e128
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479378"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>建立主資料管理員 Web 應用程式 (Master Data Services)
@@ -46,13 +46,13 @@ ms.locfileid: "65479378"
   
 1.  開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-2.  按一下左窗格中的 **[Web 組態]**。  
+2.  按一下左窗格中的 **[Web 組態]** 。  
   
-3.  在 **[Web 組態]** 頁面上的網站清單中，選取 **[建立新網站]**。  
+3.  在 **[Web 組態]** 頁面上的網站清單中，選取 **[建立新網站]** 。  
   
 4.  在 **[建立網站]** 對話方塊中，指定新網站的資訊。 如需此對話方塊之使用者介面 (UI) 選項的詳細資訊，請參閱[建立網站對話方塊 &#40;Master Data Services 組態管理員&#41;](../create-website-dialog-box-master-data-services-configuration-manager.md)。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
 ## <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>在現有網站上建立主資料管理員 Web 應用程式  
  當您在現有網站上建立 Web 應用程式時，可以選擇 Web 應用程式的虛擬路徑及別名。 此 Web 應用程式會加入至新的應用程式集區。  
@@ -61,15 +61,15 @@ ms.locfileid: "65479378"
   
 1.  開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-2.  按一下左窗格中的 **[Web 組態]**。  
+2.  按一下左窗格中的 **[Web 組態]** 。  
   
 3.  在 **[Web 組態]** 頁面的 **[網站]** 清單中，選取建立 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式所在的網站。  
   
-4.  按一下 **[建立應用程式]**。  
+4.  按一下 **[建立應用程式]** 。  
   
 5.  在 **[建立 Web 應用程式]** 對話方塊中，指定新 Web 應用程式的資訊。 如需此對話方塊之使用者介面 (UI) 選項的詳細資訊，請參閱[建立 Web 應用程式對話方塊 &#40;Master Data Services 組態管理員&#41;](../create-web-application-dialog-box-master-data-services-configuration-manager.md)。  
   
-6.  按一下 [確定] 。  
+6.  按一下 [確定]  。  
   
 ## <a name="next-steps"></a>後續步驟  
   

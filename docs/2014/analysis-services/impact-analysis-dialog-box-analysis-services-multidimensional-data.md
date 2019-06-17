@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080746"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>影響分析對話方塊 (Analysis Services - 多維度資料)
@@ -25,7 +25,7 @@ ms.locfileid: "66080746"
 > [!NOTE]  
 >  如果物件受到一個以上的影響，物件就會出現一次以上。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **物件清單**  
  在方格中顯示相依性物件的清單。 方格包含下列資料行：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66080746"
  顯示可能需要處理之相依性物件的類型。  
   
  **影響類型**  
- 顯示處理 [處理] 對話方塊中的物件時，會對相依物件造成的影響。 下表列出可能的處理效果，並註解每一個處理的結果是會導致警告或錯誤。  
+ 顯示處理 [處理]  對話方塊中的物件時，會對相依物件造成的影響。 下表列出可能的處理效果，並註解每一個處理的結果是會導致警告或錯誤。  
   
 |影響|Message|  
 |------------|-------------|  

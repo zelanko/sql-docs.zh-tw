@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 93f8af2203496e385ceaede559c99c337cf9651a
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485300"
 ---
 # <a name="change-a-version-name-master-data-services"></a>變更版本名稱 (Master Data Services)
@@ -37,9 +37,9 @@ ms.locfileid: "65485300"
   
 ### <a name="to-change-the-version-name"></a>若要變更版本名稱  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[版本管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[版本管理]** 。  
   
-2.  在 [管理版本] 頁面的方格中，按兩下 [名稱] 資料行中的資料格。  
+2.  在 [管理版本]  頁面的方格中，按兩下 [名稱]  資料行中的資料格。  
   
 3.  輸入新的名稱。  
   

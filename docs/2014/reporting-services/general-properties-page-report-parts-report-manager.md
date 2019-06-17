@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa3f8b6ec0cd81f1a29ea3262bd3ec52dd8158ae
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109092"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>一般屬性頁面、報表組件 (報表管理員)
@@ -31,7 +31,7 @@ ms.locfileid: "66109092"
   
 2.  將滑鼠停留在該報表組件上方，然後按下拉式箭號。  
   
-3.  在下拉式清單中，按一下 **[管理]**， 就會開啟 [一般] 屬性頁面。  
+3.  在下拉式清單中，按一下 **[管理]** ， 就會開啟 [一般] 屬性頁面。  
   
 ## <a name="options"></a>選項。  
  **修改的日期**  

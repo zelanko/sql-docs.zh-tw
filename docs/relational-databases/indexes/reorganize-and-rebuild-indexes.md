@@ -32,12 +32,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85ccb9573cb1a8a283e6deec7a52b0e9c5857da7
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: c1ff17941e837474d2d27919dcbd821d241d8394
+ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802602"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749186"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>重新組織與重建索引
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,8 +93,14 @@ ms.locfileid: "56802602"
   
 ### <a name="Security"></a> 安全性  
   
-#### <a name="Permissions"></a> Permissions  
-需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
+#### <a name="Permissions"></a> 權限  
+需要資料表或檢視表的 ALTER 權限。 使用者至少必須是下列角色的成員之一：
+
+* **db_ddladmin** 資料庫角色 <sup>1</sup> 
+* **db_owner** 資料庫角色
+* **sysadmin** 伺服器角色  
+
+<sup>1</sup>**db_ddladmin** 資料庫角色具有[最低權限](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models)。
   
 ## <a name="SSMSProcedureFrag"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 檢查索引片段  
   
@@ -161,7 +167,7 @@ ms.locfileid: "56802602"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```sql  
     USE AdventureWorks2012;  
@@ -255,7 +261,7 @@ ms.locfileid: "56802602"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -275,7 +281,7 @@ ms.locfileid: "56802602"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -292,7 +298,7 @@ ms.locfileid: "56802602"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例會在 `Employee` 資料表上重建單一索引。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會在 `Employee` 資料表上重建單一索引。  
   
      [!code-sql[IndexDDL#AlterIndex1](../../relational-databases/indexes/codesnippet/tsql/reorganize-and-rebuild-i_1.sql)]  
   

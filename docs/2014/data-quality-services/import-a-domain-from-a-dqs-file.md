@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d0e5ffc088918924ae08d4fde2cc7064de1abcbb
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484265"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>從 .dqs 檔案匯入定義域
@@ -42,9 +42,9 @@ ms.locfileid: "65484265"
   
 3.  按一下 **[從資料檔匯入定義域]** 圖示。  
   
-4.  在 **[從資料檔匯入]** 對話方塊中，移至包含您要匯入之檔案的資料夾，然後選取檔案 (檔案類型為 DQS 檔案)，再按一下 **[開啟]**。  
+4.  在 **[從資料檔匯入]** 對話方塊中，移至包含您要匯入之檔案的資料夾，然後選取檔案 (檔案類型為 DQS 檔案)，再按一下 **[開啟]** 。  
   
-5.  在 **[匯入定義域]** 對話方塊中，按一下 **[確定]**。  
+5.  在 **[匯入定義域]** 對話方塊中，按一下 **[確定]** 。  
   
     > [!NOTE]  
     >  只有當匯入的來源 .dqs 檔案只包含一個單一定義域或是一個複合定義域 (包含多個單一定義域) 時，匯入作業才會成功。  

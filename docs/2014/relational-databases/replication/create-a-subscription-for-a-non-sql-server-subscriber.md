@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721670"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>為非 SQL Server 訂閱者建立訂閱
@@ -39,13 +39,13 @@ ms.locfileid: "62721670"
   
 2.  使用「新增發行集精靈」建立發行集。 如需建立發行集的詳細資訊，請參閱[建立發行集](publish/create-a-publication.md)和[從 Oracle 資料庫建立發行集](publish/create-a-publication-from-an-oracle-database.md)。 在「新增發行集精靈」中指定下列選項：  
   
-    -   在 **[發行集類型]** 頁面上，選取 **[快照集發行集]** 或 **[交易式發行集]**。  
+    -   在 **[發行集類型]** 頁面上，選取 **[快照集發行集]** 或 **[交易式發行集]** 。  
   
-    -   在 **[快照集代理程式]** 頁面上，清除 **[立即建立快照集]**。  
+    -   在 **[快照集代理程式]** 頁面上，清除 **[立即建立快照集]** 。  
   
          為非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者啟用發行集後建立快照集，以確定「快照集代理程式」會產生適用於非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的快照集與初始化指令碼。  
   
-3.  使用 [發行集屬性 - \<發行集名稱>] 對話方塊，啟用非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發行集。 如需有關此步驟的詳細資訊，請參閱＜ [Publication Properties, Subscription Options](publication-properties-subscription-options.md) ＞。  
+3.  使用 [發行集屬性 - \<發行集名稱>]  對話方塊，啟用非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發行集。 如需有關此步驟的詳細資訊，請參閱＜ [Publication Properties, Subscription Options](publication-properties-subscription-options.md) ＞。  
   
 4.  使用「新增訂閱精靈」建立訂閱。 本主題提供有關這個步驟的詳細資訊。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62721670"
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。  
   
-3.  以滑鼠右鍵按一下發行集，然後再按一下 **[屬性]**。  
+3.  以滑鼠右鍵按一下發行集，然後再按一下 **[屬性]** 。  
   
 4.  在 **[訂閱選項]** 頁面中，為 **[允許非 SQL Server 訂閱者]** 選項選取 **[True]** 值。 選取此選項會變更某些屬性，使發行集能與非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者相容。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "62721670"
   
 1.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。  
   
-2.  以滑鼠右鍵按一下適當的發行集，然後再按一下 **[新增訂閱]**。  
+2.  以滑鼠右鍵按一下適當的發行集，然後再按一下 **[新增訂閱]** 。  
   
 3.  在 **[散發代理程式位置]** 頁面中，確定已選取 **[在散發者端執行所有代理程式]** 。 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者不支援在「訂閱者」端執行代理程式。  
   
-4.  在 **[訂閱者]** 頁面中，按一下 **[加入訂閱者]** 然後按一下 **[加入非 SQL Server 訂閱者]**。  
+4.  在 **[訂閱者]** 頁面中，按一下 **[加入訂閱者]** 然後按一下 **[加入非 SQL Server 訂閱者]** 。  
   
 5.  在 **[加入非 SQL Server 訂閱者]** 對話方塊中，選取「訂閱者」類型。  
   
@@ -96,15 +96,15 @@ ms.locfileid: "62721670"
   
     -   對於 IBM DB2，在 DB2 連接字串的 **初始資料目錄** 屬性中指定資料庫，可在這個處理稍後描述的 **[其他連接選項]** 欄位中輸入。  
   
-8.  在 [散發代理程式安全性] 頁面中，按一下「訂閱者」旁的屬性按鈕 ([...])，以存取 [散發代理程式安全性] 對話方塊。  
+8.  在 [散發代理程式安全性]  頁面中，按一下「訂閱者」旁的屬性按鈕 ([...]  )，以存取 [散發代理程式安全性]  對話方塊。  
   
 9. 在 **[散發代理程式安全性]** 對話方塊中：  
   
-    -   在 **[處理帳戶]**、 **[密碼]** 及 **[確認密碼]** 欄位中，輸入「散發代理程式」應執行並與「訂閱者」建立本機連接所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶和密碼。  
+    -   在 **[處理帳戶]** 、 **[密碼]** 及 **[確認密碼]** 欄位中，輸入「散發代理程式」應執行並與「訂閱者」建立本機連接所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶和密碼。  
   
          帳戶要求具有以下最小權限：散發資料庫中 **db_owner** 固定資料庫角色的成員；發行集存取清單 (PAL) 的成員；快照集共用的讀取權限；以及對 OLE DB 提供者之安裝目錄的讀取權限。 如需 PAL 的詳細資訊，請參閱[保護發行者](security/secure-the-publisher.md)。  
   
-    -   在 **[連接到訂閱者]** 下的 **[登入]**、 **[密碼]** 及 **[確認密碼]** 欄位中，輸入用來連接到「訂閱者」的登入和密碼。 此登入必須已經設定，還必須具有在訂閱資料庫中建立物件的足夠權限。  
+    -   在 **[連接到訂閱者]** 下的 **[登入]** 、 **[密碼]** 及 **[確認密碼]** 欄位中，輸入用來連接到「訂閱者」的登入和密碼。 此登入必須已經設定，還必須具有在訂閱資料庫中建立物件的足夠權限。  
   
     -   在 **[其他連接選項]** 欄位中，以連接字串形式指定「訂閱者」的任何連接選項 (Oracle 不需要其他選項)。 每個選項應以分號分隔。 以下為 DB2 連接字串的範例 (分行符號僅為便於閱讀)：  
   
@@ -115,9 +115,9 @@ ms.locfileid: "62721670"
         Persist Security Info=False;Connection Pooling=True;  
         ```  
   
-         字串中的大多數選項是您設定之 DB2 伺服器的專用選項，但 **將二進位當作字元處理** 選項，應一律設定為 [False] 。 需要為 **初始目錄** 選項指定值，以便識別訂閱資料庫。  
+         字串中的大多數選項是您設定之 DB2 伺服器的專用選項，但 **將二進位當作字元處理** 選項，應一律設定為 [False]  。 需要為 **初始目錄** 選項指定值，以便識別訂閱資料庫。  
   
-10. 在 **[同步排程]** 頁面中，從 **[代理程式排程]** 功能表中選取「散發代理程式」的排程 (排程通常為 **[連續執行]**)。  
+10. 在 **[同步排程]** 頁面中，從 **[代理程式排程]** 功能表中選取「散發代理程式」的排程 (排程通常為 **[連續執行]** )。  
   
 11. 在 **[初始化訂閱]** 頁面中，指定是否應初始化訂閱以及初始化的時間 (如果是的話)：  
   
@@ -135,9 +135,9 @@ ms.locfileid: "62721670"
   
 1.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。  
   
-2.  以滑鼠右鍵按一下發行集，然後再按一下 **[檢視快照集代理程式的狀態]**。  
+2.  以滑鼠右鍵按一下發行集，然後再按一下 **[檢視快照集代理程式的狀態]** 。  
   
-3.  在 [檢視快照集代理程式的狀態 - \<發行集>] 對話方塊中，按一下 [啟動]。  
+3.  在 [檢視快照集代理程式的狀態 - \<發行集>]  對話方塊中，按一下 [啟動]  。  
   
  「快照集代理程式」完成產生快照集後，會顯示一個訊息，例如「[100%] 已產生了 17 個發行項的快照集」。  
   
@@ -155,27 +155,27 @@ ms.locfileid: "62721670"
   
     -   如果 `enabled_for_het_sub` 的值為 1，表示支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。  
   
-    -   如果的值`enabled_for_het_sub`為 0，執行[sp_changepublication &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，並指定`enabled_for_het_sub`如**@property**並`true`的**@value**.  
+    -   如果的值`enabled_for_het_sub`為 0，執行[sp_changepublication &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，並指定`enabled_for_het_sub`如 **@property** 並`true`的 **@value** .  
   
         > [!NOTE]  
         >  在將 `enabled_for_het_sub` 變更為 `true` 之前，您必須先卸除此發行集的任何現有訂閱。 當此發行集同時支援更新訂閱時，您無法將 `enabled_for_het_sub` 設定為 `true`。 變更 `enabled_for_het_sub` 會影響其他發行集屬性。 如需詳細資訊，請參閱 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)。  
   
-3.  在發行集資料庫的發行者端，執行 [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication**、 **@subscriber**、 **[訂閱資料庫]** @property **@destination_db**、 **@subscription_type** @property **@subscription_type**值，以及 **@subscriber_type** (指定 OLE DB 提供者) 的值 3。  
+3.  在發行集資料庫的發行者端，執行 [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication** 、 **@subscriber** 、 **[訂閱資料庫]** @property **@destination_db** 、 **@subscription_type** @property **@subscription_type** 值，以及 **@subscriber_type** (指定 OLE DB 提供者) 的值 3。  
   
 4.  在發行集資料庫的發行者端，執行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定下列項目：  
   
     -   **@subscriber** 和 **@publication** 參數。  
   
-    -   (選擇性) **[訂閱資料庫]** @property **@subscriber_db**、  
+    -   (選擇性) **[訂閱資料庫]** @property **@subscriber_db** 、  
   
-    -   針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] @subscriber_provider **@subscriber_provider**、 **@subscriber_datasrc**、 **@subscriber_location**、 **@subscriber_provider_string**及 **@subscriber_catalog**中針對非 SQL Server 訂閱者建立訂閱。  
+    -   針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] @subscriber_provider **@subscriber_provider** 、 **@subscriber_datasrc** 、 **@subscriber_location** 、 **@subscriber_provider_string** 及 **@subscriber_catalog** 中針對非 SQL Server 訂閱者建立訂閱。  
   
-    -   將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認證，「散發者」上的「散發代理程式」執行時會針對 **@job_login** ，並將 **@job_password**＞。  
+    -   將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認證，「散發者」上的「散發代理程式」執行時會針對 **@job_login** ，並將 **@job_password** ＞。  
   
         > [!NOTE]  
-        >  使用「Windows 整合式驗證」建立的連接一律使用由 **@job_login** 及 **@job_password**中針對非 SQL Server 訂閱者建立訂閱。 散發代理程式一律使用「Windows 整合式驗證」建立與散發者的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
+        >  使用「Windows 整合式驗證」建立的連接一律使用由 **@job_login** 及 **@job_password** 中針對非 SQL Server 訂閱者建立訂閱。 散發代理程式一律使用「Windows 整合式驗證」建立與散發者的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
   
-    -   (選擇性) **@subscriber_security_mode** @property **@subscriber_security_mode** ，以及 **@subscriber_login** 及 **@subscriber_password**中針對非 SQL Server 訂閱者建立訂閱。  
+    -   (選擇性) **@subscriber_security_mode** @property **@subscriber_security_mode** ，以及 **@subscriber_login** 及 **@subscriber_password** 中針對非 SQL Server 訂閱者建立訂閱。  
   
     -   此訂閱之散發代理程式作業的排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](specify-synchronization-schedules.md)。  
   

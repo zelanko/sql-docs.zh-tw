@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22fae65a5e62be579f751dd3d6d3d0c9a73e7409
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63316400"
 ---
 # <a name="script-a-table"></a>編寫資料表的指令碼
@@ -26,9 +26,9 @@ ms.locfileid: "63316400"
   
 #### <a name="to-create-the-insert-script-for-a-table"></a>建立資料表的插入指令碼  
   
-1.  在物件總管中，展開您的伺服器，依序展開 [資料庫]、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 和 [資料表]，並以滑鼠右鍵按一下 [HumanResources.Employee]，然後指向 [產生資料表的指令碼為]。  
+1.  在物件總管中，展開您的伺服器，依序展開 [資料庫]  、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 和 [資料表]  ，並以滑鼠右鍵按一下 [HumanResources.Employee]  ，然後指向 [產生資料表的指令碼為]  。  
   
-2.  快速鍵功能表有七個可用的指令碼選項：**若要建立**，**拖放到**， **DROP 並 CREATE 至**，**選取**，**插入到**，**更新**，並**刪除**。 指向 [UPDATE To]，然後按一下 [新增查詢編輯器視窗]。  
+2.  快速鍵功能表有七個可用的指令碼選項：**若要建立**，**拖放到**， **DROP 並 CREATE 至**，**選取**，**插入到**，**更新**，並**刪除**。 指向 [UPDATE To]  ，然後按一下 [新增查詢編輯器視窗]  。  
   
 3.  此時會開啟新的 [查詢編輯器] 視窗、建立連接，並提供完整的 UPDATE 陳述式。  
   

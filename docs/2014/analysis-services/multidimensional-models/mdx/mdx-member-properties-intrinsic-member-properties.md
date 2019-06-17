@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66074211"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>內建成員屬性 (MDX)
@@ -34,7 +34,7 @@ ms.locfileid: "66074211"
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 以外的提供者可支援其他內建成員屬性。 如需其他提供者支援之內建成員屬性的詳細資訊，請參閱這些提供者提供的文件。  
   
 ## <a name="types-of-member-properties"></a>成員屬性類型  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支援的內建成員屬性有兩種類型：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支援的內建成員屬性有兩種類型：  
   
  區分內容的成員屬性  
  這些成員屬性必須用於特定階層或層級的內容，而且要將值提供給指定維度或層級的每個成員。  

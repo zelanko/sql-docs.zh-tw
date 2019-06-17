@@ -15,13 +15,13 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8c78c56d08535b5d9947b5bd215afaf2f8e23e44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c3bb95de560e0e4ec6b5e01fda8623858a73aaf4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754826"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803809"
 ---
 # <a name="rowset-properties-and-behaviors"></a>資料列集屬性和行為
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47754826"
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：設定變更可見度屬性會使 OLE DB Driver for SQL Server 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料指標來支援資料列集。 如需詳細資訊，請參閱[資料列集和 SQL Server 資料指標](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)。|  
 |DBPROP_QUICKRESTART|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述： 設定為 VARIANT_TRUE 時，OLE DB Driver for SQL Server 會嘗試使用伺服器資料指標的資料列集。|  
 |DBPROP_REENTRANTEVENTS|R/W：唯讀<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述：如果取用者嘗試從通知回呼存取不可重新進入的資料列集方法，OLE DB Driver for SQL Server 資料列集可重新進入，而且可以傳回 DB_E_NOTREENTRANT。|  
-|DBPROP_REMOVEDELETED|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：OLE DB Driver for SQL Server 會根據資料列集所公開之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料變更的可見度，變更屬性的值。<br /><br /> VARIANT_TRUE：重新整理資料列集時，取用者或其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用者刪除的資料列會從資料列集移除。 DBPROP_OTHERINSERT 為 VARIANT_TRUE。<br /><br /> VARIANT_FALSE：重新整理資料列集時，取用者或其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用者刪除的資料列不會從資料列集移除。 在資料列集中，已刪除之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料列的資料列狀態值為 DBROWSTATUS_E_DELETED。 DBPROP_OTHERINSERT 為 VARIANT_TRUE。<br /><br /> 此屬性僅擁有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料指標所支援的資料列集值。 如需詳細資訊，請參閱[資料列集和 SQL Server 資料指標](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)。<br /><br /> 當 DBPROP_REMOVEDELETED 屬性在索引鍵集資料指標資料列集上實作時，已刪除的資料列會在擷取階段移除，而且資料列擷取的方法 (例如 **GetNextRows** 和 **GetRowsAt,**) 可能會同時傳回 S_OK 以及比要求還少的資料列。 請注意，此行為不表示 DB_S_ENDOFROWSET 條件，而且如果有任何剩餘的資料列，所傳回的資料列數目絕不會為零。|  
+|DBPROP_REMOVEDELETED|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：OLE DB Driver for SQL Server 會根據資料列集所公開之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料變更的可見度，變更屬性的值。<br /><br /> VARIANT_TRUE：重新整理資料列集時，取用者或其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用者刪除的資料列會從資料列集移除。 DBPROP_OTHERINSERT 為 VARIANT_TRUE。<br /><br /> VARIANT_FALSE：重新整理資料列集時，取用者或其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用者刪除的資料列不會從資料列集移除。 在資料列集中，已刪除之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料列的資料列狀態值為 DBROWSTATUS_E_DELETED。 DBPROP_OTHERINSERT 為 VARIANT_TRUE。<br /><br /> 此屬性僅擁有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料指標所支援的資料列集值。 如需詳細資訊，請參閱[資料列集和 SQL Server 資料指標](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)。<br /><br /> 當 DBPROP_REMOVEDELETED 屬性在索引鍵集資料指標資料列集上實作時，已刪除的資料列會在擷取階段移除，而且資料列擷取的方法 (例如 **GetNextRows** 和 **GetRowsAt,** ) 可能會同時傳回 S_OK 以及比要求還少的資料列。 請注意，此行為不表示 DB_S_ENDOFROWSET 條件，而且如果有任何剩餘的資料列，所傳回的資料列數目絕不會為零。|  
 |DBPROP_REPORTMULTIPLECHANGES|這個資料列集屬性未實作的 OLE DB Driver for SQL Server。 嘗試讀取或寫入屬性值會產生錯誤。|  
 |DBPROP_RETURNPENDINGINSERTS|R/W：唯讀<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：呼叫擷取資料列的方法時，OLE DB Driver for SQL Server 不會傳回暫止的插入資料列。|  
 |DBPROP_ROWRESTRICT|R/W：唯讀<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述： OLE DB Driver for SQL Server 資料列集不支援根據的資料列的存取權限。 如果在資料列集上公開 **IRowsetChange** 介面，取用者可以呼叫 **SetData** 方法。|  

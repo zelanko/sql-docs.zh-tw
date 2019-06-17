@@ -21,10 +21,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 ms.openlocfilehash: f1acc995223ba9785055839beb5e12b11ea7494f
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64945666"
 ---
 # <a name="sysfulltextsemanticlanguages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)

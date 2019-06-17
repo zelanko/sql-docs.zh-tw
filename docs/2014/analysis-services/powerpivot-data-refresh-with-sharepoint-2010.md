@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04dea4a32303e06d7f0e6c015eef38ba6d267a30
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070844"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>SharePoint 2010 中的 PowerPivot 資料重新整理
@@ -65,7 +65,7 @@ ms.locfileid: "66070844"
 > [!NOTE]  
 >  您必須是伺服器陣列管理員才能設定 Secure Store Service，或是將 Secure Store Service 管理委派給其他使用者。 您必須是服務應用程式管理員，才能在啟用後設定或修改設定值。  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]** 。  
   
 2.  在服務應用程式 功能區的 建立 中，按一下**新增**。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66070844"
   
 14. 輸入複雜密碼，然後進行確認。 此複雜密碼將用於加入其他安全存放共用服務應用程式。  
   
-15. 按一下 [確定] 。  
+15. 按一下 [確定]  。  
   
  可供疑難排解之用的 Store Service 作業稽核記錄必須在作業開始之前啟用。 如需如何啟用記錄的詳細資訊，請參閱[設定 Secure Store Service (SharePoint 2010)](https://go.microsoft.com/fwlink/p/?LinkID=223294)。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "66070844"
   
  **停用在資料重新整理排程中的任意 Windows 認證使用**  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [管理服務應用程式]。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [管理服務應用程式]  。  
   
 2.  按一下 PowerPivot 服務應用程式名稱。 隨即出現 PowerPivot 管理儀表板。  
   
@@ -204,7 +204,7 @@ ms.locfileid: "66070844"
   
  如果您看到**Integrated Security = SSPI**在連接字串中，您無法覆寫連接字串中的認證。 連接一律會使用目前使用者， 並忽略您所提供的任何認證。  
   
- 如果您看到**Persist Security Info = False，Password =\* \* \* \* \* \* \* \* \* \* \*，UserID =\<userlogin >**，則您可以覆寫認證的連接字串。 連接字串中所出現的認證 (如使用者識別碼及密碼) 並非 Windows 認證，而是資料庫登入或其他對目標資料來源有效的登入帳戶。  
+ 如果您看到**Persist Security Info = False，Password =\* \* \* \* \* \* \* \* \* \* \*，UserID =\<userlogin >** ，則您可以覆寫認證的連接字串。 連接字串中所出現的認證 (如使用者識別碼及密碼) 並非 Windows 認證，而是資料庫登入或其他對目標資料來源有效的登入帳戶。  
   
  **如何覆寫連接字串中的認證**  
   
@@ -244,7 +244,7 @@ ms.locfileid: "66070844"
   
  在下班期間執行的資料重新整理要求會依收到要求的順序加入佇列。 個別的要求會在伺服器資源可使用的情況下進行處理。  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [管理服務應用程式]。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [管理服務應用程式]  。  
   
 2.  按一下 PowerPivot 服務應用程式名稱。 隨即出現 PowerPivot 管理儀表板。  
   
@@ -254,12 +254,12 @@ ms.locfileid: "66070844"
   
      如果不要定義下班處理期間，可以為 [開始時間] 和 [結束時間] 輸入相同的值 (例如，兩個時間都設定為 12: 00)。 不過請注意，SharePoint 網站上的排程定義頁面仍然會提供「下班後」做為選項。 如果使用者在未定義下班處理範圍的伺服器陣列上選取了該選項，最後會因為處理工作無法啟動而接到資料重新整理錯誤訊息。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
 ###  <a name="usagehist"></a> 限制保留資料重新整理記錄的時間長度  
  資料重新整理記錄是資料重新整理作業隨著時間經過所產生的成功與失敗訊息詳細記錄。 記錄資訊是透過伺服器陣列中的使用量資料收集系統進行收集與管理。 因此，您在使用量資料記錄上設定的限制也會套用至資料重新整理記錄。 由於使用活動報告會彙集整個 PowerPivot 系統的資料，所以只使用單一記錄設定來控制資料重新整理記錄與收集及儲存之所有其他使用量資料的資料保留。  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [管理服務應用程式]。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [管理服務應用程式]  。  
   
 2.  按一下 PowerPivot 服務應用程式名稱。 隨即出現 PowerPivot 管理儀表板。  
   
@@ -269,7 +269,7 @@ ms.locfileid: "66070844"
   
      預設值為 365 天。 最小值是 1 天，最大值是 5000 天。 0 指定無限制的保留期間，也就是永遠不會刪除資料。 請注意，您無法透過任何設定關閉記錄。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
  SharePoint 使用者在具有資料重新整理記錄的活頁簿上選擇 [管理資料重新整理] 選項時，就可以使用記錄資訊。 這項資訊也用在伺服器陣列管理員用來管理 PowerPivot 服務作業的 PowerPivot 管理儀表板。 如需詳細資訊，請參閱 <<c0> [ 檢視資料重新整理記錄&#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)。</c0>  
   
@@ -286,9 +286,9 @@ ms.locfileid: "66070844"
   
  如果硬體支援的話，您可以藉由指定額外處理器平行執行其他資料重新整理作業，以減輕這個問題。 如需詳細資訊，請參閱 < [Configure Dedicated Data Refresh or Query-Only &#40;PowerPivot for SharePoint&#41;](configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)。 如需有關如何發現、 加入佇列，及處理資料重新整理要求的詳細資訊，請參閱 < [PowerPivot 資料重新整理](power-pivot-sharepoint/power-pivot-data-refresh.md)。  
   
-1.  在管理中心，按一下 **[監視]**。  
+1.  在管理中心，按一下 **[監視]** 。  
   
-2.  按一下 **[檢閱工作定義]**。  
+2.  按一下 **[檢閱工作定義]** 。  
   
 3.  選取  **PowerPivot 資料重新整理計時器工作**。  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28ec21d4cb0cda01852316c1198bd68df3058ffc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073144"
 ---
 # <a name="rename-a-multidimensional-database-analysis-services"></a>重新命名多維度資料庫 (Analysis Services)
@@ -26,7 +26,7 @@ ms.locfileid: "66073144"
   
 1.  使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]直接連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。  
   
-2.  在方案總管中，以滑鼠右鍵按一下資料庫，然後按一下 [編輯資料庫]。  
+2.  在方案總管中，以滑鼠右鍵按一下資料庫，然後按一下 [編輯資料庫]  。  
   
 3.  在 **[資料庫名稱]** 文字方塊中，變更資料庫名稱。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66073144"
   
 1.  開啟 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案。  
   
-2.  在方案總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案，然後按一下 [屬性]。  
+2.  在方案總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案，然後按一下 [屬性]  。  
   
 3.  在 **[屬性頁]** 對話方塊中，按一下 **[組態屬性]** 區段中的 **[部署]** 。  
   

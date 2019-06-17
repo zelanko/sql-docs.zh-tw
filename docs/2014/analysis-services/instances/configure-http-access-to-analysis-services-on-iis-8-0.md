@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c8af52dfe8c95b80f5b9550b41a14e1f70c7a6e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080167"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>設定 Internet Information Services (IIS) 8.0 上 Analysis Services 的 HTTP 存取
@@ -76,7 +76,7 @@ ms.locfileid: "66080167"
   
  **在 IIS 8.0 中的額外設定**  
   
- IIS 8.0 的預設組態遺漏要透過 HTTP 存取 Analysis services 所需的元件。 這些元件 (位於 [網頁伺服器 (IIS)] 角色的 [安全性] 和 [應用程式開發] 功能區域) 包括：  
+ IIS 8.0 的預設組態遺漏要透過 HTTP 存取 Analysis services 所需的元件。 這些元件 (位於 [網頁伺服器 (IIS)]  角色的 [安全性]  和 [應用程式開發]  功能區域) 包括：  
   
 -   **安全性** | **Windows 驗證**或**基本驗證**，以及您的資料存取案例所需的任何其他安全性功能。  
   
@@ -84,11 +84,11 @@ ms.locfileid: "66080167"
   
 -   **應用程式開發** | **ISAPI 擴充程式**  
   
- 若要驗證或加入這些元件，請使用 [伺服器管理員] | [管理] | [新增角色及功能]。 逐步執行精靈直到到達 [伺服器角色]。 向下捲動以尋找 [網頁伺服器 (IIS)]。  
+ 若要驗證或加入這些元件，請使用 [伺服器管理員]   | [管理]   | [新增角色及功能]  。 逐步執行精靈直到到達 [伺服器角色]  。 向下捲動以尋找 [網頁伺服器 (IIS)]  。  
   
-1.  開啟 [網頁伺服器] | [安全性]，並選擇驗證方法。  
+1.  開啟 [網頁伺服器]   | [安全性]  ，並選擇驗證方法。  
   
-2.  開啟 [網頁伺服器] | [應用程式開發]並選擇 [CGI] 和 [ISAPI 擴充程式]。  
+2.  開啟 [網頁伺服器]   | [應用程式開發]  並選擇 [CGI]  和 [ISAPI 擴充程式]  。  
   
      ![Web 伺服器角色的新增功能頁面](../media/ssas-httpaccess-isapicgi.png "新增功能頁面上的網頁伺服器角色")  
   
@@ -135,29 +135,29 @@ ms.locfileid: "66080167"
   
 1.  啟動 IIS 管理員。  
   
-2.  開啟伺服器資料夾，以滑鼠右鍵按一下 [應用程式集區]，然後按一下 [新增應用程式集區]。 使用 .NET Framework，在 Managed 管線模式設為 [傳統] 的情況下，建立名稱為 **OLAP** 的應用程式集區。  
+2.  開啟伺服器資料夾，以滑鼠右鍵按一下 [應用程式集區]  ，然後按一下 [新增應用程式集區]  。 使用 .NET Framework，在 Managed 管線模式設為 [傳統]  的情況下，建立名稱為 **OLAP** 的應用程式集區。  
   
      ![新增應用程式集區的螢幕擷取畫面 對話方塊](../media/ssas-httpaccess.PNG "新增應用程式集區的螢幕擷取畫面 對話方塊")  
   
-3.  根據預設，IIS 會以 **ApplicationPoolIdentity** 做為安全性識別來建立應用程式集區，這對 Analysis Services 的 HTTP 存取來說是有效的選擇。 如果您有特定的理由要變更識別，請以滑鼠右鍵按一下 [OLAP]，然後選取 [進階設定]。 選取 [ApplicationPoolIdentity]。 按一下此屬性的 [變更] 按鈕，以您要使用的自訂帳戶取代內建帳戶。  
+3.  根據預設，IIS 會以 **ApplicationPoolIdentity** 做為安全性識別來建立應用程式集區，這對 Analysis Services 的 HTTP 存取來說是有效的選擇。 如果您有特定的理由要變更識別，請以滑鼠右鍵按一下 [OLAP]  ，然後選取 [進階設定]  。 選取 [ApplicationPoolIdentity]  。 按一下此屬性的 [變更]  按鈕，以您要使用的自訂帳戶取代內建帳戶。  
   
      ![螢幕擷取畫面的進階設定 屬性頁](../media/ssas-httpaccess-advsettings.PNG "的進階設定的螢幕擷取畫面 屬性頁")  
   
-4.  根據預設，IIS 會在 64 位元作業系統上，將 [啟用 32 位元應用程式] 屬性設定為 **false**。 如果您從 64 位元的 Analysis Services 安裝複製 msmdpump.dll，對 64 位元 IIS 伺服器上的 MSMDPUMP 延伸程式而言，這是正確的設定。 如果您從 32 位元安裝複製 MSMDPUMP 二進位檔，請將它設定為 **true**。 立即在 [進階設定] 中檢查此屬性以確認設定是否正確。  
+4.  根據預設，IIS 會在 64 位元作業系統上，將 [啟用 32 位元應用程式]  屬性設定為 **false**。 如果您從 64 位元的 Analysis Services 安裝複製 msmdpump.dll，對 64 位元 IIS 伺服器上的 MSMDPUMP 延伸程式而言，這是正確的設定。 如果您從 32 位元安裝複製 MSMDPUMP 二進位檔，請將它設定為 **true**。 立即在 [進階設定]  中檢查此屬性以確認設定是否正確。  
   
 #### <a name="create-an-application"></a>建立應用程式  
   
-1.  在 [IIS 管理員] 中，依序開啟 [網站] 和 [預設的網站]。 您應該會看到名為 **Olap** 的資料夾。 這是 \inetpub\wwwroot 之下所建立的 OLAP 資料夾的參考。  
+1.  在 [IIS 管理員] 中，依序開啟 [網站]  和 [預設的網站]  。 您應該會看到名為 **Olap** 的資料夾。 這是 \inetpub\wwwroot 之下所建立的 OLAP 資料夾的參考。  
   
      ![在 預設網站下的 OLAP 資料夾](../media/ssas-httpaccess-convertfolderbefore.png "預設網站下的 OLAP 資料夾")  
   
-2.  以滑鼠右鍵按一下該資料夾，然後選擇 [轉換成應用程式]。  
+2.  以滑鼠右鍵按一下該資料夾，然後選擇 [轉換成應用程式]  。  
   
-3.  在 [新增應用程式] 中，輸入 **OLAP** 做為別名。 按一下 [選取] 以選擇 OLAP 應用程式集區。 實體路徑應該設定為 C:\inetpub\wwwroot\OLAP  
+3.  在 [新增應用程式] 中，輸入 **OLAP** 做為別名。 按一下 [選取]  以選擇 OLAP 應用程式集區。 實體路徑應該設定為 C:\inetpub\wwwroot\OLAP  
   
      ![新增應用程式 對話方塊](../media/ssas-httpaccess-convertedapp.png "新增應用程式 對話方塊")  
   
-4.  按一下 [確定] 。 重新整理網站，並注意「OLAP」資料夾現在是在「預設的網站」底下的應用程式。 現在即已建立 MSMDPUMP 檔案的虛擬路徑。  
+4.  按一下 [確定]  。 重新整理網站，並注意「OLAP」資料夾現在是在「預設的網站」底下的應用程式。 現在即已建立 MSMDPUMP 檔案的虛擬路徑。  
   
      ![應用程式轉換後的 OLAP 資料夾](../media/ssas-httpaccess-convertfolderafter.png "應用程式轉換後的 OLAP 資料夾")  
   
@@ -187,22 +187,22 @@ ms.locfileid: "66080167"
   
 #### <a name="set-the-authentication-type-and-add-a-script-map"></a>設定驗證類型及加入指令碼對應  
   
-1.  在 [IIS 管理員] 中，依序開啟 [網站] 和 [預設的網站]，然後選取 [OLAP] 虛擬目錄。  
+1.  在 [IIS 管理員] 中，依序開啟 [網站]  和 [預設的網站]  ，然後選取 [OLAP]  虛擬目錄。  
   
-2.  在主頁面的 IIS 區段中，按兩下 [驗證]。  
+2.  在主頁面的 IIS 區段中，按兩下 [驗證]  。  
   
      ![IIS 管理員的螢幕擷取畫面主頁](../media/ssas-httpaccess-iis.png "螢幕擷取畫面的 IIS 管理員主頁面")  
   
-3.  如果要使用 Windows 整合式安全性，請啟用 [Windows 驗證]。  
+3.  如果要使用 Windows 整合式安全性，請啟用 [Windows 驗證]  。  
   
      ![螢幕擷取畫面的 Vdir 驗證設定](../media/ssas-httpaccess-iisauth.png "Vdir 驗證的螢幕擷取畫面設定")  
   
-4.  或者，如果您的用戶端和伺服器應用程式位於不同的網域，請啟用 [基本驗證]。 此模式會要求使用者輸入使用者名稱和密碼。 使用者名稱和密碼是透過 HTTP 連接，傳送到 IIS。 連接至 MSMDPUMP 時，IIS 將嘗試模擬使用所提供認證的使用者，但是認證不會委派至 Analysis Services。 您必須在連接時傳遞有效的使用者名稱和密碼，如本文件的步驟 6 所述。  
+4.  或者，如果您的用戶端和伺服器應用程式位於不同的網域，請啟用 [基本驗證]  。 此模式會要求使用者輸入使用者名稱和密碼。 使用者名稱和密碼是透過 HTTP 連接，傳送到 IIS。 連接至 MSMDPUMP 時，IIS 將嘗試模擬使用所提供認證的使用者，但是認證不會委派至 Analysis Services。 您必須在連接時傳遞有效的使用者名稱和密碼，如本文件的步驟 6 所述。  
   
     > [!IMPORTANT]  
     >  請注意，建立傳送密碼之目標系統的任何人都必須有數種方式來保護通訊通道的安全。 IIS 提供一組可協助您保護通道安全的工具。 如需詳細資訊，請參閱[如何在 IIS 7 上設定 SSL](https://go.microsoft.com/fwlink/?LinkId=207562) (英文)。  
   
-5.  如果您使用 Windows 或基本驗證，請停用 [匿名驗證]。 啟用匿名驗證時，IIS 將一律優先使用它，即使已啟用其他驗證方法也一樣。  
+5.  如果您使用 Windows 或基本驗證，請停用 [匿名驗證]  。 啟用匿名驗證時，IIS 將一律優先使用它，即使已啟用其他驗證方法也一樣。  
   
      在匿名驗證下，幫浦 (msmdpump.dll) 會以您為匿名使用者建立的使用者帳戶執行。 連接至 IIS 的使用者以及連接至 Analysis Services 的使用者之間並沒有差別。 根據預設，IIS 會使用 IUSR 帳戶，不過，您可以將它變更為具有網路權限的網域使用者帳戶。 如果 IIS 和 Analysis Services 位於不同電腦上，您將需要這項功能。  
   
@@ -211,15 +211,15 @@ ms.locfileid: "66080167"
     > [!IMPORTANT]  
     >  匿名驗證最可能在受到高度控制的環境中使用，這類環境是依據檔案系統中的存取控制清單給予或拒絕使用者的存取權。 如需最佳做法，請參閱[啟用匿名驗證 (IIS 7)](https://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)。  
   
-6.  按一下 [OLAP] 虛擬目錄來開啟主頁面。 按兩下 [處理常式對應]。  
+6.  按一下 [OLAP]  虛擬目錄來開啟主頁面。 按兩下 [處理常式對應]  。  
   
      ![在 [功能] 頁面中的處理常式對應圖示](../media/ssas-httpaccess-handlermapping.png "功能頁面中的處理常式對應圖示")  
   
-7.  以滑鼠右鍵按一下頁面的任何位置，然後選取 [新增指令碼對應]。 在 [新增指令碼對應] 對話方塊中，將要求路徑指定為 **\*.dll**，再指定 c:\inetpub\wwwroot\olap\msmdpump.dll 作為可執行檔，然後輸入 **OLAP** 作為名稱。 讓所有預設限制與這個指令碼對應保持關聯。  
+7.  以滑鼠右鍵按一下頁面的任何位置，然後選取 [新增指令碼對應]  。 在 [新增指令碼對應] 對話方塊中，將要求路徑指定為 **\*.dll**，再指定 c:\inetpub\wwwroot\olap\msmdpump.dll 作為可執行檔，然後輸入 **OLAP** 作為名稱。 讓所有預設限制與這個指令碼對應保持關聯。  
   
      ![螢幕擷取畫面的新增指令碼對應 對話方塊](../media/ssas-httpaccess-addscript.png "螢幕擷取畫面的新增指令碼對應 對話方塊")  
   
-8.  當畫面上出現允許 ISAPI 擴充程式的提示時，請按一下 [是]。  
+8.  當畫面上出現允許 ISAPI 擴充程式的提示時，請按一下 [是]  。  
   
      ![螢幕擷取畫面的確認新增 ISAPI 擴充程式](../media/ssas-httpaccess-isapiprompt.png "螢幕擷取畫面的確認新增 ISAPI 擴充程式")  
   
@@ -246,13 +246,13 @@ ms.locfileid: "66080167"
 ## <a name="step-5-grant-data-access-permissions"></a>步驟 5：授與資料存取權限  
  如前面所述，您需要授與 Analysis Services 執行個體的權限。 每個資料庫物件都有提供特定層級權限的角色 (讀取或讀取/寫入)，因此，每個角色都會有由 Windows 使用者識別所組成的成員。  
   
- 若要設定權限，您可以使用 SQL Server Management Studio。 在 [資料庫] | [角色] 資料夾底下，您可以建立角色、指定資料庫權限、指派成員資格給 Windows 使用者或群組帳戶，然後授與特定物件的讀取或寫入權限。 一般而言，Cube 的 [讀取] 權限對於使用 (但不會更新) 模型資料的用戶端連接而言就已足夠。  
+ 若要設定權限，您可以使用 SQL Server Management Studio。 在 [資料庫]   | [角色]  資料夾底下，您可以建立角色、指定資料庫權限、指派成員資格給 Windows 使用者或群組帳戶，然後授與特定物件的讀取或寫入權限。 一般而言，Cube 的 [讀取]  權限對於使用 (但不會更新) 模型資料的用戶端連接而言就已足夠。  
   
  角色指派會根據您設定的驗證而有所不同。  
   
 |||  
 |-|-|  
-|匿名|將 IIS 的 [編輯匿名驗證認證] 中指定的帳戶加入至 [成員資格] 清單。 如需詳細資訊，請參閱[匿名驗證](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication)，|  
+|匿名|將 IIS 的 [編輯匿名驗證認證]  中指定的帳戶加入至 [成員資格] 清單。 如需詳細資訊，請參閱[匿名驗證](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication)，|  
 |Windows 驗證|將透過模擬或委派要求 Analysis Services 資料的 Windows 使用者或群組帳戶加入至 [成員資格] 清單。<br /><br /> 假使您使用 Kerberos 限制委派，則只有要求存取的 Windows 使用者和群組帳戶需要權限。 應用程式集區識別不需要權限。|  
 |基本驗證|將要在連接字串中傳遞的 Windows 使用者或群組帳戶加入至 [成員資格] 清單。<br /><br /> 此外，如果您要透過連接字串上的 `EffectiveUserName` 傳遞認證，則應用程式集區識別必須具有 Analysis Services 執行個體的系統管理員權限。 在 SSMS 中，以滑鼠右鍵按一下執行個體&#124;**屬性** &#124; **安全性** &#124; **新增**。 輸入應用程式集區識別。 如果您使用的內建的預設身分識別，做為指定的帳戶**IIS AppPool\DefaultAppPool**。<br /><br /> ![](../media/ssas-httpaccess-iisapppoolidentity.png)|  
   
@@ -267,7 +267,7 @@ ms.locfileid: "66080167"
   
  **使用 SQL Server Management Studio 測試連接**  
   
-1.  在 Management Studio 的 [連接到伺服器] 對話方塊中，選取 [Analysis Services] 做為伺服器類型。 在 [伺服器名稱] 中，輸入 msmdpump 延伸模組的 HTTP 位址： `http://my-web-srv01/OLAP/msmdpump.dll`。  
+1.  在 Management Studio 的 [連接到伺服器] 對話方塊中，選取 [Analysis Services]  做為伺服器類型。 在 [伺服器名稱] 中，輸入 msmdpump 延伸模組的 HTTP 位址： `http://my-web-srv01/OLAP/msmdpump.dll`。  
   
      [物件總管] 會顯示 HTTP 連接：  
   
@@ -277,13 +277,13 @@ ms.locfileid: "66080167"
   
  **使用 Excel 測試連接**  
   
-1.  在 Excel 的 [資料] 索引標籤上的 [取得外部資料] 中，按一下 [從其他來源]，然後選擇 [從 Analysis Services] 以啟動 [資料連線精靈]。  
+1.  在 Excel 的 [資料] 索引標籤上的 [取得外部資料] 中，按一下 [從其他來源]  ，然後選擇 [從 Analysis Services]  以啟動 [資料連線精靈]。  
   
 2.  在 [伺服器名稱] 中，輸入 msmdpump 延伸模組的 HTTP 位址：`http://my-web-srv01/OLAP/msmdpump.dll`。  
   
-3.  針對 [登入認證]，如果您使用 Windows 整合式安全性或 NTLM 或是匿名使用者，則選擇 [使用 Windows 驗證]。  
+3.  針對 [登入認證]，如果您使用 Windows 整合式安全性或 NTLM 或是匿名使用者，則選擇 [使用 Windows 驗證]  。  
   
-     針對基本驗證，請選擇 [使用下列的使用者名稱和密碼]，然後指定用來登入的認證。 您提供的認證將在連接字串中傳遞至 Analysis Services。  
+     針對基本驗證，請選擇 [使用下列的使用者名稱和密碼]  ，然後指定用來登入的認證。 您提供的認證將在連接字串中傳遞至 Analysis Services。  
   
  **使用 AMO 測試連接**  
   

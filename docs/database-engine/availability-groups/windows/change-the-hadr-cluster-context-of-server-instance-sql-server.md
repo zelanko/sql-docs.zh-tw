@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: def5873f53093abfc13ed0968229671a012af839
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c4f01db5d1d27c57b863c3421e6abee894975b85
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202127"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796642"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>變更哪個叢集管理 Always On 可用性群組複本的中繼資料
 
@@ -30,30 +30,10 @@ ms.locfileid: "53202127"
   
  僅在跨叢集移轉 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 至新 WSFC 叢集上的 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 執行個體時，才切換 HADR 叢集內容。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的跨叢集移轉支援以最短的可用性群組停機時間升級為 [!INCLUDE[win8](../../../includes/win8-md.md)] 或 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] 。 如需詳細資訊，請參閱 [針對作業系統升級進行 AlwaysOn 可用性群組的跨叢集移轉](https://msdn.microsoft.com/library/jj873730.aspx)。  
   
--   **開始之前：**  
-  
-     [限制事項](#Restrictions)  
-  
-     [必要條件](#Prerequisites)  
-  
-     [建議](#Recommendations)  
-  
-     [安全性](#Security)  
-  
--   **以下列方法切換可用性複本的叢集內容：**[Transact-SQL](#TsqlProcedure)  
-  
--   **後續操作：**[切換可用性複本的叢集內容之後](#FollowUp)  
-  
--   [相關工作](#RelatedTasks)  
-  
--   [相關內容](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> 開始之前  
-  
 > [!CAUTION]  
 >  僅在跨叢集移轉 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 部署時才切換 HADR 叢集內容。  
   
-###  <a name="Restrictions"></a> 限制事項  
+##  <a name="Restrictions"></a> 限制事項  
   
 -   您只能將 HADR 叢集內容從本機 WSFC 叢集切換至遠端叢集，然後從遠端叢集切換回本機叢集。 您無法將 HADR 叢集內容從某一個遠端叢集切換至另一個遠端叢集。  
   
@@ -61,7 +41,7 @@ ms.locfileid: "53202127"
   
 -   遠端 HADR 叢集內容隨時可以切換回本機叢集。 不過，只要伺服器執行個體裝載任何可用性複本，內容就不能再次切換。  
   
-###  <a name="Prerequisites"></a> 必要條件  
+##  <a name="Prerequisites"></a> 必要條件  
   
 -   您變更 HADR 叢集內容所在的伺服器執行個體必須執行 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 或更新版本 (Enterprise Edition 或更新版本)。  
   
@@ -78,7 +58,7 @@ ms.locfileid: "53202127"
   
 -   所有同步認可複本都必須是 SYNCHRONIZED，您才能從遠端叢集切換至本機叢集。  
   
-###  <a name="Recommendations"></a> 建議  
+##  <a name="Recommendations"></a> 建議  
   
 -   我們建議您指定完整網域名稱。 這是因為，為了尋找簡短名稱的目標 IP 位址，ALTER SERVER CONFIGURATION 會使用 DNS 解析。 在某些情況下，根據 DNS 搜尋順序，使用簡短名稱可能會產生混淆。 例如，請考慮下列命令，該命令是在 `abc` 網域 (`node1.abc.com`) 中的節點上執行。 預期的目的地叢集是 `CLUS01` 網域 ( `xyz` ) 中的`clus01.xyz.com`叢集。 不過，本機網域主機也會裝載名為 `CLUS01` (`clus01.abc.com`) 的叢集。  
   
@@ -88,9 +68,8 @@ ms.locfileid: "53202127"
     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com'  
     ```  
   
-###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
   
 -   **SQL Server 登入**  
   

@@ -12,35 +12,22 @@ helpviewer_keywords:
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 730ce9da4a2e44dec103b6c0620acae176f969d1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: b7bca3c8d49950fa58dc128192c817f0def36ee2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506549"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803530"
 ---
 # <a name="transact-sql-statements-for-always-on-availability-groups"></a>AlwaysOn 可用性群組的 Transact-SQL 陳述式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主題介紹支援部署 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 以及建立及管理給定可用性群組、可用性複本及可用性資料庫的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 陳述式。  
   
- **本主題內容：**  
-  
--   [CREATE ENDPOINT](#CreateEndpoint)  
-  
--   [CREATE AVAILABILITY GROUP](#CreateAG)  
-  
--   [ALTER AVAILABILITY GROUP](#AlterAG)  
-  
--   [ALTER DATABASE SET HADR 選項](#AlterDb)  
-  
--   [DROP AVAILABILITY GROUP](#DropAG)  
-  
--   [AVAILABILITY GROUP Transact-SQL 陳述式的限制](#Restrictions)  
-  
+ 
 ##  <a name="CreateEndpoint"></a> CREATE ENDPOINT  
- 如果伺服器執行個體上沒有資料庫鏡像端點，[CREATE ENDPOINT ...FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md) 就會建立資料庫鏡像端點。 您要部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或資料庫鏡像的每個伺服器執行個體都需要一個資料庫鏡像端點。  
+ [CREATE ENDPOINT ...FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md) 會建立資料庫鏡像端點，如果伺服器執行個體上不存在任何資料庫鏡像端點。 您要部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或資料庫鏡像的每個伺服器執行個體都需要一個資料庫鏡像端點。  
   
  在您要建立端點的伺服器執行個體上執行此陳述式。 每個給定的伺服器執行個體上只能建立一個資料庫鏡像端點。 如需詳細資訊，請參閱 [資料庫鏡像端點 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)。  
   
