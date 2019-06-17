@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e6ae0fc2e0f9949bfac6b4043c581dd0921efb
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716953"
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (SSISDB 資料庫)
@@ -41,16 +41,16 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 ## <a name="arguments"></a>引數  
  [@folder_name =] *folder_name*  
- 包含環境之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
+ 包含環境之資料夾的名稱。 *folder_name* 是 **nvarchar(128)** 。  
   
  [@environment_name =] *environment_name*  
- 環境的名稱。 *environment_name* 是 **nvarchar(128)**。  
+ 環境的名稱。 *environment_name* 是 **nvarchar(128)** 。  
   
  [@variable_name =] *variable_name*  
- 環境變數的名稱。 *variable_name* 是 **nvarchar(128)**。  
+ 環境變數的名稱。 *variable_name* 是 **nvarchar(128)** 。  
   
  [@data_type =] *data_type*  
- 變數的資料類型。 支援的環境變數資料類型包含 **Boolean**、**Byte**、**DateTime**、**Double**、**Int16**、**Int32**、**Int64**、**Single**、**String**、**UInt32** 和 **UInt64**。 不支援的環境變數資料類型包含 **Char**、**DBNull**、**Object** 和 **Sbyte**。 *data_type* 參數的資料類型是 **nvarchar(128)**。  
+ 變數的資料類型。 支援的環境變數資料類型包含 **Boolean**、**Byte**、**DateTime**、**Double**、**Int16**、**Int32**、**Int64**、**Single**、**String**、**UInt32** 和 **UInt64**。 不支援的環境變數資料類型包含 **Char**、**DBNull**、**Object** 和 **Sbyte**。 *data_type* 參數的資料類型是 **nvarchar(128)** 。  
   
  [@sensitive =] *sensitive*  
  指出變數是否包含機密值。 使用 `1` 值表示環境變數的值是機密值，或者，使用 `0` 值則表示該值不是機密值。 機密值會在儲存時加密。 非機密值則會儲存為純文字。*Sensitive* 是 **bit**。  
@@ -59,7 +59,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
  環境變數的值。 *value* 是 **sql_variant**。  
   
  [@description =] *description*  
- 環境變數的描述。 *value* 是 **nvarchar(1024)**。  
+ 環境變數的描述。 *value* 是 **nvarchar(1024)** 。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

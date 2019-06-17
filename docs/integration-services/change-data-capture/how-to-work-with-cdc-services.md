@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c280b829f5d3efbca5cdff1dfcf7368e9f26111
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728737"
 ---
 # <a name="how-to-work-with-cdc-services"></a>如何使用 CDC 服務
@@ -27,9 +27,9 @@ ms.locfileid: "65728737"
   
 ### <a name="to-work-with-cdc-services"></a>若要使用 CDC 服務  
   
-1.  從 **[開始]** 功能表，選取 **[Oracle CDC 服務組態]**。  
+1.  從 **[開始]** 功能表，選取 **[Oracle CDC 服務組態]** 。  
   
-2.  從左窗格選取 [本機 CDC 服務] (根層級)。  
+2.  從左窗格選取 [本機 CDC 服務]  (根層級)。  
   
 3.  您會執行下列其中一項或兩項工作：  
   
@@ -37,7 +37,7 @@ ms.locfileid: "65728737"
   
          從 CDC 服務組態主控台右側的 **[動作]** 窗格中選取這個選項。  
   
-         您也可以用滑鼠右鍵按一下 [本機 CDC 服務]，並選取 [準備 SQL Server]。  
+         您也可以用滑鼠右鍵按一下 [本機 CDC 服務]  ，並選取 [準備 SQL Server]  。  
   
          隨即開啟 [為 Oracle CDC 準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體] 對話方塊。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65728737"
   
          從 CDC 服務組態主控台右側的 **[動作]** 窗格中按一下 **[新增服務]** 。  
   
-         您也可以用滑鼠右鍵按一下 [本機 CDC 服務]，並選取 [新增服務]。  
+         您也可以用滑鼠右鍵按一下 [本機 CDC 服務]  ，並選取 [新增服務]  。  
   
          隨即開啟 [新增 Oracle CDC 服務] 對話方塊。  
   

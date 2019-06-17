@@ -14,10 +14,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2f294414d1f9fe702324250d5fffbf05c8d39e0c
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65816386"
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd - 執行 Transact-SQL 指令碼檔案
@@ -27,7 +27,7 @@ ms.locfileid: "65816386"
 ## <a name="create-a-script-file"></a>建立指令碼檔案  
  若要使用 [記事本] 建立簡單的 Transact-SQL 指令碼檔案，請遵循下列步驟：  
   
-1.  按一下 [開始]，依序指向 [所有程式] 和 [附屬應用程式]，然後按一下 [記事本]。  
+1.  按一下 [開始]  ，依序指向 [所有程式]  和 [附屬應用程式]  ，然後按一下 [記事本]  。  
   
 2.  將下列 Transact-SQL 程式碼複製並貼到 [記事本] 中：  
   

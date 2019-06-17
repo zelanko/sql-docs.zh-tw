@@ -15,10 +15,10 @@ author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
 ms.openlocfilehash: 96be54415e3a2892da2ec892a0e90c02c5365e90
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727928"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上傳工作
@@ -62,7 +62,7 @@ RetainFiles|指定是否要保留上傳到 Azure 儲存體的檔案。
 CompressionType|指定在將檔案上傳到 Azure 儲存體時要使用的壓縮格式。 本機來源不會受到影響。
 CompressionLevel|指定要用於壓縮格式的壓縮層級。
 AzureDwConnection|指定 Azure SQL DW 的 ADO.NET 連線管理員。
-TableName|指定目的資料表的名稱。 選擇現有的資料表名稱，或選擇 \<新增資料表...> 建立新的資料表。
+TableName|指定目的資料表的名稱。 選擇現有的資料表名稱，或選擇 \<新增資料表...>  建立新的資料表。
 TableDistribution|指定新資料表的發佈方法。 如果為 **TableName**指定了新的資料表名稱即適用。
 HashColumnName|指定用於雜湊表發佈的資料行。 如果為 **TableDistribution** 指定了 **HASH**即適用。
 
@@ -77,11 +77,11 @@ RowDelimiter|指定標示各資料列結尾的字元。
 ColumnDelimiter|指定一或多個標示各資料行結尾的字元。 例如 &#124; (縱線字元)、\t (定位字元)、' (單引號)、" (雙引號) 和 0x5c (反斜線)。
 CompressionType|指定來源資料使用的壓縮格式。
 AzureDwConnection|指定 Azure SQL DW 的 ADO.NET 連線管理員。
-TableName|指定目的資料表的名稱。 選擇現有的資料表名稱，或選擇 \<新增資料表...> 建立新的資料表。
+TableName|指定目的資料表的名稱。 選擇現有的資料表名稱，或選擇 \<新增資料表...>  建立新的資料表。
 TableDistribution|指定新資料表的發佈方法。 如果為 **TableName**指定了新的資料表名稱即適用。
 HashColumnName|指定用於雜湊表發佈的資料行。 如果為 **TableDistribution** 指定了 **HASH**即適用。
 
-根據您複製到新資料表或現有資料表，看到的 [對應] 頁面會有所不同。
+根據您複製到新資料表或現有資料表，看到的 [對應]  頁面會有所不同。
 如果是前者，請設定要對應哪些來源資料行，及其在要建立的目的資料表中對應名稱為何。
 如果是後者，請設定來源與目的資料行之間的對應關係。
 

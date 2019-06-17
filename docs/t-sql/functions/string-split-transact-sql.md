@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: aab93a133a8dcfeaea96ffa1886ccfcb20936f95
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947472"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
@@ -62,7 +62,7 @@ STRING_SPLIT ( string , separator )
 
 **STRING_SPLIT** 輸入有已分隔之子字串的字串，並輸入一個字元作為分隔符號 (delimiter) 或分隔符號 (separator)。 STRING_SPLIT 輸出單一資料行資料表，其資料列包含子字串。 輸出資料行的名稱為 **value**。
 
-輸出資料列可能為任何順序。 子字串的順序「不」保證與輸入字串的相同。 您可以在 SELECT 陳述式上使用 ORDER BY 子句的 (`ORDER BY value`)，以覆寫最終的排序次序。
+輸出資料列可能為任何順序。 子字串的順序「不」  保證與輸入字串的相同。 您可以在 SELECT 陳述式上使用 ORDER BY 子句的 (`ORDER BY value`)，以覆寫最終的排序次序。
 
 當輸入字串包含兩個或更多個連續出現的分隔符號字元時，會出現長度為零的空白子字串。 空白子字串視為純文字子字串來處理。 您可以使用 WHERE 子句將包含空白字串的任何資料列篩選掉 (`WHERE value <> ''`)。 如果輸入字串是 NULL，則 STRING_SPLIT 資料表值函數會傳回空白資料表。  
 
@@ -130,7 +130,7 @@ FROM Product
 |3|HL Mountain Frame|mountain|  
 
   >[!NOTE]
-  > 輸出順序可能會有所不同，因為該順序「不」保證與輸入字串中的子字串順序相符。
+  > 輸出順序可能會有所不同，因為該順序「不」  保證與輸入字串中的子字串順序相符。
   
 ### <a name="c-aggregation-by-values"></a>C. 依據值彙總
 

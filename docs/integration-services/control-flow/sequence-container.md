@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f4e9157dc3e3fb7bffe8365290ef6e4be1878f81
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727457"
 ---
 # <a name="sequence-container"></a>時序容器
@@ -40,20 +40,20 @@ ms.locfileid: "65727457"
   
 -   在同一個位置藉由設定「時序」容器而非個別工作的屬性，來管理多項工作的屬性。  
   
-     例如，您可以將「時序」容器的 **Disable** 屬性設定為 [True]，以停用「時序」容器中的所有工作和容器。  
+     例如，您可以將「時序」容器的 **Disable** 屬性設定為 [True]  ，以停用「時序」容器中的所有工作和容器。  
   
 -   提供一群相關工作和容器所使用變數的範圍。  
   
 -   將許多工作分組，讓您可以利用收合和展開「時序」容器的方式，更輕鬆地管理工作。  
   
-     您還可以建立工作群組，使用 [群組] 方塊摺疊和展開。 不過，[群組] 方塊是設計階段的功能，不具有屬性或執行階段的行為。 如需詳細資訊，請參閱[將元件分組或取消分組](../../integration-services/group-or-ungroup-components.md)。  
+     您還可以建立工作群組，使用 [群組]  方塊摺疊和展開。 不過，[群組]  方塊是設計階段的功能，不具有屬性或執行階段的行為。 如需詳細資訊，請參閱[將元件分組或取消分組](../../integration-services/group-or-ungroup-components.md)。  
   
 -   設定「時序」容器的交易屬性，以定義封裝控制流程子集的異動。 使用這種方式，可以以更細微的層級管理交易。  
   
      例如，如果「時序」容器包括兩項相關的工作，其中一項工作為刪除資料表中的資料，而另一項工作會將資料插入資料表中，則可設定交易，以確認刪除動作會在插入動作失敗時回復。 如需詳細資訊，請參閱 [Integration Services 交易](../../integration-services/integration-services-transactions.md)。  
   
 ## <a name="configuration-of-the-sequence-container"></a>設定時序容器  
- 「時序」容器沒有自訂使用者介面，而且您只能在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [屬性] 視窗中或利用撰寫程式的方式進行設定。  
+ 「時序」容器沒有自訂使用者介面，而且您只能在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [屬性]  視窗中或利用撰寫程式的方式進行設定。  
   
  如需以程式設計方式設定這些屬性的詳細資訊，請參閱《開發人員指南》中 **T:Microsoft.SqlServer.Dts.Runtime.Sequence** 類別的文件。  
   

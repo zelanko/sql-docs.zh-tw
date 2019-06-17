@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5079a0fbfd3a870875043b40be3c406c72730fbd
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729326"
 ---
 # <a name="package-properties-dialog-box"></a>封裝屬性對話方塊
@@ -26,7 +26,7 @@ ms.locfileid: "65729326"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  使用 [封裝屬性] 對話方塊，檢視儲存在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上之封裝的屬性。  
+  使用 [封裝屬性]  對話方塊，檢視儲存在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上之封裝的屬性。  
   
  如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 伺服器](../integration-services-ssis-packages.md)。  
   
@@ -48,12 +48,12 @@ ms.locfileid: "65729326"
   
 4.  展開包含您要檢視其屬性之封裝的資料夾。  
   
-5.  以滑鼠右鍵按一下封裝，然後選取 [屬性]。  
+5.  以滑鼠右鍵按一下封裝，然後選取 [屬性]  。  
   
 ##  <a name="options"></a> 設定選項  
- 使用 [一般] 頁面，即可檢視所選封裝的屬性。  
+ 使用 [一般]  頁面，即可檢視所選封裝的屬性。  
   
- [一般] 頁面上的所有屬性都是唯讀的。  
+ [一般]  頁面上的所有屬性都是唯讀的。  
   
  **名稱**  
  顯示封裝名稱。  
@@ -62,9 +62,9 @@ ms.locfileid: "65729326"
  列出封裝識別碼。  
   
  **進入點**  
- [True] 值表示封裝是直接啟動。 [False] 值表示封裝是使用「執行封裝」工作，由另一個封裝啟動。 預設值為 **True**。  
+ [True]  值表示封裝是直接啟動。 [False]  值表示封裝是使用「執行封裝」工作，由另一個封裝啟動。 預設值為 **True**。  
   
- 以滑鼠右鍵按一下方案總管中的封裝，然後按一下 [進入點封裝]，就可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中為父封裝和子封裝設定此屬性。  
+ 以滑鼠右鍵按一下方案總管中的封裝，然後按一下 [進入點封裝]  ，就可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中為父封裝和子封裝設定此屬性。  
   
  **說明**  
  顯示封裝的選擇性描述。  

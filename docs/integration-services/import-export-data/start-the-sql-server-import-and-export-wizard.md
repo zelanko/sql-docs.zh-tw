@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6393a3c60abdde6d55302aa83c0c9d687e1af029
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723719"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>啟動 SQL Server 匯入和匯出精靈
@@ -48,7 +48,7 @@ ms.locfileid: "65723719"
 
 ## <a name="startStart"></a> [開始] 功能表  
 ### <a name="start-the-sql-server-import-and-export-wizard-from-the-start-menu"></a>從開始功能表中啟動 SQL Server 匯入和匯出精靈
-1.  在 [開始] 功能表上，找出並展開 [Microsoft SQL Server 2016]。
+1.  在 [開始]  功能表上，找出並展開 [Microsoft SQL Server 2016]  。
 3.  按一下下列其中一個選項。
   
     -   **SQL Server 2016 匯入和匯出資料 (64 位元)**
@@ -75,9 +75,9 @@ ms.locfileid: "65723719"
 ### <a name="start-the-sql-server-import-and-export-wizard-from-sql-server-management-studio-ssms"></a>從 SQL Server Management Studio (SSMS) 啟動 SQL Server 匯入和匯出精靈    
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。
     
-2.  展開 **[資料庫]**。
+2.  展開 **[資料庫]** 。
 3.  以滑鼠右鍵按一下資料庫。
-4.  指向 [工作] 。
+4.  指向 [工作]  。
 5.  按一下下列其中一個選項。
   
     -   **匯入資料**
@@ -92,13 +92,13 @@ ms.locfileid: "65723719"
 ### <a name="start-the-sql-server-import-and-export-wizard-from-visual-studio-with-sql-server-data-tools-ssdt"></a>使用 SQL Server Data Tools (SSDT) 從 Visual Studio 啟動 SQL Server 匯入和匯出精靈 
  在具有 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 Visual Studio 中開啟 Integration Services 專案，然後執行下列其中一個動作。 
   
--   在 [專案]  功能表上，按一下 [SSIS 匯入和匯出精靈] 。 
+-   在 [專案]  功能表上，按一下 [SSIS 匯入和匯出精靈]  。 
 
     ![啟動精靈 (專案)](../../integration-services/import-export-data/media/start-wizard-project.jpg) 
     
     \- 或 -
     
--   在方案總管中，以滑鼠右鍵按一下 [SSIS 封裝]  資料夾，然後按一下 [SSIS 匯入和匯出精靈] 。
+-   在方案總管中，以滑鼠右鍵按一下 [SSIS 封裝]  資料夾，然後按一下 [SSIS 匯入和匯出精靈]  。
 
     ![啟動精靈 (封裝)](../../integration-services/import-export-data/media/start-wizard-packages.jpg)
 
@@ -112,7 +112,7 @@ ms.locfileid: "65723719"
 > 在精靈的任何頁面或對話方塊中點選 F1 鍵，以查看目前頁面的文件。   
 
  ## <a name="whats-next"></a>下一步  
- 當您啟動精靈時，第一頁是 [歡迎使用 SQL Server 匯入和匯出精靈] 。 您不需要在此頁面上採取任何動作。 如需詳細資訊，請參閱 [歡迎使用 SQL Server 匯入和匯出精靈](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)。  
+ 當您啟動精靈時，第一頁是 [歡迎使用 SQL Server 匯入和匯出精靈]  。 您不需要在此頁面上採取任何動作。 如需詳細資訊，請參閱 [歡迎使用 SQL Server 匯入和匯出精靈](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)。  
   
 ## <a name="related"></a> 相關的工作及內容  
  以下是一些其他基本工作。

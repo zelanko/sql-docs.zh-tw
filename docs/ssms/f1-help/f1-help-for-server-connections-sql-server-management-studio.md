@@ -18,15 +18,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: db516c417a0ae1d98ac7a173f9bbfcc5c2bf8e76
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102786"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>伺服器連接的 F1 說明 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，[連接到伺服器] 對話方塊頁面的 F1 說明。  
+本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，[連接到伺服器]  對話方塊頁面的 F1 說明。  
   
 [瀏覽伺服器 &#40;本機伺服器&#41;](../../ssms/f1-help/browse-for-servers-local-servers.md)  
   

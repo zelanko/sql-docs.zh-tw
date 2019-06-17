@@ -13,10 +13,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c0ed65ac8c7f4824270d84cde95cf5ab84851ece
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462465"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>記憶體最佳化資料表上的索引
@@ -36,9 +36,9 @@ ms.locfileid: "66462465"
 - 雜湊索引  
 - 記憶體最佳化非叢集索引 (表示 B 型樹狀結構的預設內部結構) 
   
-「雜湊」索引會在[記憶體最佳化資料表的雜湊索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)中詳細討論。  
-「非叢集」索引會在[記憶體最佳化資料表的非叢集索引](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)中詳細討論。  
-「資料行存放區」索引會在[另一篇文章](../../relational-databases/indexes/columnstore-indexes-overview.md)中討論。  
+「雜湊」  索引會在[記憶體最佳化資料表的雜湊索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)中詳細討論。  
+「非叢集」  索引會在[記憶體最佳化資料表的非叢集索引](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)中詳細討論。  
+「資料行存放區」  索引會在[另一篇文章](../../relational-databases/indexes/columnstore-indexes-overview.md)中討論。  
 
 ## <a name="syntax-for-memory-optimized-indexes"></a>記憶體最佳化索引的語法  
   
@@ -213,7 +213,7 @@ WHERE col1 = 'dn';
 
 ## <a name="summary-table-to-compare-index-use-scenarios"></a>比較索引使用狀況案例的摘要資料表  
   
-下表列出各種索引類型支援的所有運算。 「是」表示索引可以有效率地為要求提供服務，「否」則表示索引無法有效率地滿足要求。 
+下表列出各種索引類型支援的所有運算。 「是」  表示索引可以有效率地為要求提供服務，「否」  則表示索引無法有效率地滿足要求。 
   
 | 作業 | 記憶體最佳化、 <br/> hash (雜湊) | 記憶體最佳化、 <br/> 非叢集 | 以磁碟為基礎、 <br/> (非)叢集 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  

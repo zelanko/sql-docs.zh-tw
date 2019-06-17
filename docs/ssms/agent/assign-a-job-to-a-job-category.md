@@ -20,10 +20,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4947751be0d3ed2c0d10cfce774f1fa9cec35a38
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097555"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>將作業指派至作業類別目錄
@@ -61,15 +61,15 @@ ms.locfileid: "65097555"
   
 1.  在 **[物件總管]** 中，按一下加號展開要將作業指派至作業類別目錄的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
 3.  按一下加號展開 **[作業]** 資料夾。  
   
-4.  以滑鼠右鍵按一下要編輯的作業，然後選取 [屬性]。  
+4.  以滑鼠右鍵按一下要編輯的作業，然後選取 [屬性]  。  
   
-5.  在 [作業屬性 - _job\_name_] 對話方塊的 [類別目錄] 清單中，選取您要指派給作業的作業類別目錄。  
+5.  在 [作業屬性 - _job\_name_]  對話方塊的 [類別目錄]  清單中，選取您要指派給作業的作業類別目錄。  
   
-6.  按一下 [確定] 。  
+6.  按一下 [確定]  。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   
@@ -77,9 +77,9 @@ ms.locfileid: "65097555"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- adding a new job category to the "NightlyBackups" job  
