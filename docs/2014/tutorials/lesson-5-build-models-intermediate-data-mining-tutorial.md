@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: daf554338a50a81f46d86a77bf04e770fcc2512e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63137454"
 ---
 # <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>第 5 課：建立類神經網路和羅吉斯迴歸模型 （中繼資料採礦教學課程）
@@ -28,7 +28,7 @@ ms.locfileid: "63137454"
   
  [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 的營業部門正在負責處理一個專案，目標是提升撥接中心的客戶滿意度。 他們雇用廠商來管理撥接中心、回報撥接中心績效的數據，並要求您分析廠商所提供的一些初步資料。 他們想要知道是否有任何有趣的發現。 他們尤其想知道這些資料是否反映出有關人員雇用的任何問題，或改善客戶滿意度的方式。  
   
- 這個資料集很小，只包含期限為 30 天的撥接中心作業。 這些資料會追蹤每個排班的新進和資深操作員數目、來電數目、訂單數目、必須解決的問題數目，以及客戶等候電話回應的平均時間。 資料也包含以 *「放棄率」*(Abandon Rate) (這是客戶挫折度的指標) 為基礎的服務品質標準。  
+ 這個資料集很小，只包含期限為 30 天的撥接中心作業。 這些資料會追蹤每個排班的新進和資深操作員數目、來電數目、訂單數目、必須解決的問題數目，以及客戶等候電話回應的平均時間。 資料也包含以 *「放棄率」* (Abandon Rate) (這是客戶挫折度的指標) 為基礎的服務品質標準。  
   
  由於您對於資料呈現的內容沒有任何預先的期待，因此您決定使用類神經網路模型來探索可能的相互關聯。 類神經網路模型經常用於進行探索，因為這種模型可以分析許多輸入和輸出之間的複雜關聯性。  
   

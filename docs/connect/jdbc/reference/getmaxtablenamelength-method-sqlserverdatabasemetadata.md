@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 5c51218f-c6e8-49f4-ad09-292e849ca43a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c92624d88142e4b4e1909acd298e4ed439d57d6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 644af7e58a5063f68e6c19c544234074fe2ad2bb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819726"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792354"
 ---
 # <a name="getmaxtablenamelength-method-sqlserverdatabasemetadata"></a>getMaxTableNameLength 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public int getMaxTableNameLength()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **int**，指出允許的最大字元數目。  
+ **int**，指出允許的最大字元數。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

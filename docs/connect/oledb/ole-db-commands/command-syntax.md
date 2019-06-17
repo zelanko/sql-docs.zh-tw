@@ -15,13 +15,13 @@ helpviewer_keywords:
 - stored procedures [OLE DB], command syntax
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: eeceef4ed51000d8fe5d858fd7e504b931999e1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ac3ea02fbdf4a94f7f524022a1808410ca1dfd61
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642706"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795778"
 ---
 # <a name="command-syntax"></a>命令語法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

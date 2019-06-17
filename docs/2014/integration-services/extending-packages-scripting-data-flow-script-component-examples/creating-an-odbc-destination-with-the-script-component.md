@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5ac76e77d1bd5eebd2e796a6a72463564cb3df3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62896184"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>使用指令碼元件建立 ODBC 目的地
@@ -35,7 +35,7 @@ ms.locfileid: "62896184"
   
 -   您無法從 Managed 程式碼呼叫 ODBC 連接管理員的 `AcquireConnection` 方法，因為它會傳回原生物件。 因此，這個範例使用連接管理員的連接字串以 Managed ODBC [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者直接連到資料來源。  
   
--   `OdbcCommand` 需要位置參數。 參數的位置由命令文字中的問號 (?) 指出  (相較之下，`SqlCommand` 需要具名的參數)。  
+-   `OdbcCommand` 需要位置參數。 參數的位置由命令文字中的問號 (?) 指出 (相較之下，`SqlCommand` 需要具名的參數)。  
   
  此範例使用 **AdventureWorks** 範例資料庫中的 **Person.Address** 資料表。 此範例會透過資料流程傳遞此資料表的第一個資料行與第四個資料行：**int*AddressID*** 和 **nvarchar(30)City** 資料行。 在[開發特定類型的指令碼元件](../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)主題中，這個相同的資料用於來源、轉換和目的地範例中。  
   
@@ -52,13 +52,13 @@ ms.locfileid: "62896184"
   
 3.  將新的指令碼元件加入至資料流程設計師介面，並將它設定為目的地。  
   
-4.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  （您可以將來源直接連接到不需要任何轉換的目的地。）為了確保這個範例可運作，上游元件的輸出必須至少包含 **AdventureWorks** 範例資料庫中 **Person.Address** 資料表的 **AddressID** 和 **City** 資料行。  
+4.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件 (您不需要進行任何轉換，就可以直接將來源連線到目的地。)為了確保這個範例可運作，上游元件的輸出必須至少包含 **AdventureWorks** 範例資料庫中 **Person.Address** 資料表的 **AddressID** 和 **City** 資料行。  
   
-5.  開啟**指令碼轉換編輯器**。 在 [輸入資料行] 頁面上，選取 [AddressID] 與 [City] 資料行。  
+5.  開啟**指令碼轉換編輯器**。 在 [輸入資料行]  頁面上，選取 [AddressID]  與 [City]  資料行。  
   
-6.  在 [輸入及輸出] 頁面上，以更具描述性的名稱重新命名輸入，例如 **MyAddressInput**。  
+6.  在 [輸入及輸出]  頁面上，以更具描述性的名稱重新命名輸入，例如 **MyAddressInput**。  
   
-7.  在 [連線管理員] 頁面上，使用 **MyODBCConnectionManager** 之類的描述性名稱，新增或建立 ODBC 連線管理員。  
+7.  在 [連線管理員]  頁面上，使用 **MyODBCConnectionManager** 之類的描述性名稱，新增或建立 ODBC 連線管理員。  
   
 8.  在 **指令碼**頁面上，按一下**編輯指令碼**，然後輸入以下所示的指令碼`ScriptMain`類別。  
   

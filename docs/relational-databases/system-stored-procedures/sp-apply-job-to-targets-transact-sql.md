@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f293e906d647d318bca5d730d0164b75cc88fc6f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998020"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
@@ -54,7 +54,7 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 `[ @target_servers = ] 'target_servers'` 所要套用指定的作業的目標伺服器以逗號分隔清單。 *target_servers*已 **& lt;languagekeyword>nvarchar(2048)</languagekeyword&gt**，預設值是 NULL。  
   
-`[ @operation = ] 'operation'` 指定的工作是否應該套用至或從指定的目標伺服器或目標伺服器群組中移除。 *作業*已**varchar(7)**，預設值是 APPLY。 有效的作業**套用**並**移除**。  
+`[ @operation = ] 'operation'` 指定的工作是否應該套用至或從指定的目標伺服器或目標伺服器群組中移除。 *作業*已**varchar(7)** ，預設值是 APPLY。 有效的作業**套用**並**移除**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 57b318ac8062203bd11a0717a4c8077bca9880d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62766943"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>載入本機封裝的輸出
@@ -45,7 +45,7 @@ ms.locfileid: "62766943"
   
 4.  建立類型為 `DtsClient.DtsCommand` 的物件，以使用先前建立的 `DtsConnection` 並將其 `CommandText` 屬性設定為封裝中的 DataReader 目的地名稱。 然後呼叫命令物件的 `ExecuteReader` 方法，將封裝結果載入新的 DataReader。  
   
-5.  您可以選擇性地使用 `DtsDataParameter` 物件上的 `DtsCommand` 物件集合，間接地參數化封裝輸出，以便將值傳遞給定義在封裝中的變數。 您可以在封裝中使用這些變數做為查詢參數，或在運算式中加以運用，藉此影響傳回 DataReader 目的地的結果。 您必須在封裝中定義這些變數**DtsClient**命名空間才能使用它們搭配`DtsDataParameter`從用戶端應用程式的物件。 (您可能需要按一下 變數 視窗中的 選擇變數資料行 工具列按鈕，才會顯示 命名空間 資料行)。在 用戶端程式碼，當您將新增`DtsDataParameter`要`Parameters`的集合`DtsCommand`，省略變數名稱中的 DtsClient 命名空間參考。 例如：  
+5.  您可以選擇性地使用 `DtsDataParameter` 物件上的 `DtsCommand` 物件集合，間接地參數化封裝輸出，以便將值傳遞給定義在封裝中的變數。 您可以在封裝中使用這些變數做為查詢參數，或在運算式中加以運用，藉此影響傳回 DataReader 目的地的結果。 您必須在封裝中定義這些變數**DtsClient**命名空間才能使用它們搭配`DtsDataParameter`從用戶端應用程式的物件。 (您可能需要按一下 變數  視窗中的 選擇變數資料行  工具列按鈕，才會顯示 命名空間  資料行)。在 用戶端程式碼，當您將新增`DtsDataParameter`要`Parameters`的集合`DtsCommand`，省略變數名稱中的 DtsClient 命名空間參考。 例如：  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  
@@ -69,7 +69,7 @@ ms.locfileid: "62766943"
   
 1.  建立新的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 範例程式碼使用 "DtsClientWParamPkg.dtsx" 做為封裝的名稱。  
   
-2.  在 DtsClient 命名空間中加入 String 類型的變數。 範例程式碼使用 Country 做為變數的名稱  (您可能需要按一下 [變數] 視窗中的 [選擇變數資料行] 工具列按鈕，才會顯示 [命名空間] 資料行)。  
+2.  在 DtsClient 命名空間中加入 String 類型的變數。 範例程式碼使用 Country 做為變數的名稱 (您可能需要按一下 [變數]  視窗中的 [選擇變數資料行]  工具列按鈕，才會顯示 [命名空間]  資料行)。  
   
 3.  加入連接至 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫的 OLE DB 連接管理員。  
   

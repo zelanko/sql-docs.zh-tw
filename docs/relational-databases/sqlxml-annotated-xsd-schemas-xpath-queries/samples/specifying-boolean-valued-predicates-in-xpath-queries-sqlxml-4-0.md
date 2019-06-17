@@ -21,10 +21,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0a5846f45a2919bf5d2de2e94e205bfd59b0fe94
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737428"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定布林值述詞 (SQLXML 4.0)
@@ -92,13 +92,13 @@ ms.locfileid: "62737428"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. 指定連續和巢狀述詞  
- 下列查詢顯示使用連續述詞。 此查詢會傳回所有**\<客戶 >** 的內容節點的子項目都有**SalesPersonID**屬性值為 277 和**TerritoryID**屬性值為 3:  
+ 下列查詢顯示使用連續述詞。 此查詢會傳回所有 **\<客戶 >** 的內容節點的子項目都有**SalesPersonID**屬性值為 277 和**TerritoryID**屬性值為 3:  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- 此查詢會傳回**\<客戶 >** 滿足述詞中指定這兩個條件的項目。  
+ 此查詢會傳回 **\<客戶 >** 滿足述詞中指定這兩個條件的項目。  
   
  捷徑**屬性**軸 (@) 可以指定，而且因為**子**軸是預設值，它可以從查詢省略：  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62737428"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 下列 XPath 查詢說明巢狀述詞的使用方式。 此查詢會傳回所有**\<客戶 >** 包含的子元素的內容節點**\<順序 >** 具有至少一個子元素 **\<順序 >** 具有項目**SalesPersonID**屬性值為 2。  
+ 下列 XPath 查詢說明巢狀述詞的使用方式。 此查詢會傳回所有 **\<客戶 >** 包含的子元素的內容節點 **\<順序 >** 具有至少一個子元素 **\<順序 >** 具有項目**SalesPersonID**屬性值為 2。  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -169,7 +169,7 @@ ms.locfileid: "62737428"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. 指定最上層述詞  
- 下列查詢會傳回**\<客戶 >** 子項目節點的內容節點為具有**\<順序 >** 元素子系。 此查詢會測試當做最上層述詞的位置路徑：  
+ 下列查詢會傳回 **\<客戶 >** 子項目節點的內容節點為具有 **\<順序 >** 元素子系。 此查詢會測試當做最上層述詞的位置路徑：  
   
 ```  
 /child::Customer[child::Order]  

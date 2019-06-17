@@ -111,7 +111,7 @@
 - name: 使用 Updategram 來修改 SQLXML 4.0 中的資料
   href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md
   items:
-    - name: 'Updategram 簡介 (SQLXML 4.0) '
+    - name: Updategram 簡介 (SQLXML 4.0)
       href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/introduction-to-updategrams-sqlxml-4-0.md
     - name: 在 Updategram 中指定註解式對應結構描述 (SQLXML 4.0)
       href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md
@@ -140,7 +140,7 @@
 - name: 執行 XML 資料的大量載入 (SQLXML 4.0)
   href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md
   items:
-    - name: 'XML 大量載入簡介 (SQLXML 4.0) '
+    - name: XML 大量載入簡介 (SQLXML 4.0)
       href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/introduction-to-xml-bulk-load-sqlxml-4-0.md
     - name: 記錄產生處理序 (SQLXML 4.0)
       href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/record-generation-process-sqlxml-4-0.md

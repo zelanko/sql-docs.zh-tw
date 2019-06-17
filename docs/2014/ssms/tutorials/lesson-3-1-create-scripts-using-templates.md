@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8387cdaf85d6fd7750229fda86c8cb3122b61d90
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62913549"
 ---
 # <a name="create-scripts-using-templates"></a>利用範本建立指令碼
@@ -24,15 +24,15 @@ ms.locfileid: "62913549"
   
 #### <a name="to-create-a-script-using-a-template"></a>若要利用範本建立指令碼  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的 [檢視]  功能表上，按一下 [範本總管] 。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的 [檢視]  功能表上，按一下 [範本總管]  。  
   
-2.  [範本總管] 中的範本會組織成不同的群組。 展開 [資料庫]，然後按兩下 [建立資料庫]。  
+2.  [範本總管] 中的範本會組織成不同的群組。 展開 [資料庫]  ，然後按兩下 [建立資料庫]  。  
   
-3.  在 [連接到 Database Engine] 對話方塊中，填妥連接資訊，然後按一下 [連接]。 此時會開啟一個新的 [查詢編輯器] 視窗，其中含有 [建立資料庫] 範本的內容。  
+3.  在 [連接到 Database Engine]  對話方塊中，填妥連接資訊，然後按一下 [連接]  。 此時會開啟一個新的 [查詢編輯器] 視窗，其中含有 [建立資料庫]  範本的內容。  
   
-4.  在 **[查詢]** 功能表上，按一下 **[指定範本參數的值]**。  
+4.  在 **[查詢]** 功能表上，按一下 **[指定範本參數的值]** 。  
   
-5.  在 [指定範本參數的值] 對話方塊中，[值] 資料行包含 **Database_Name** 參數的建議值。 在 [資料庫名稱] 參數方塊中，輸入 [行銷]，然後按一下 [確定]。 請注意在不同位置將 [行銷] 插入指令碼的方式。  
+5.  在 [指定範本參數的值]  對話方塊中，[值]  資料行包含 **Database_Name** 參數的建議值。 在 [資料庫名稱]  參數方塊中，輸入 [行銷]  ，然後按一下 [確定]  。 請注意在不同位置將 [行銷] 插入指令碼的方式。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [建立自訂範本](lesson-3-2-create-custom-templates.md)  

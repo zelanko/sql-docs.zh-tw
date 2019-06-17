@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724043"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
@@ -66,10 +66,10 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|用來參考資料指標的名稱。 如果是利用 DECLARE CURSOR 陳述式所提供的名稱來參考資料指標，參考名稱就與資料指標名稱相同。 如果是利用變數來參考資料指標，參考名稱就是資料指標變數的名稱。|  
 |cursor_name|**sysname**|DECLARE CURSOR 陳述式的資料指標名稱。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如果資料指標是透過資料指標，設定資料指標變數**cursor_name**傳回資料指標變數的名稱。  在舊版中，這個輸出資料行會傳回系統產生的名稱。|  
-|cursor_scope|**smallint**|1 = LOCAL <br /><br /> 2 = GLOBAL|  
+|cursor_scope|**smallint**|1 = LOCAL<br /><br /> 2 = GLOBAL|  
 |status|**smallint**|與 CURSOR_STATUS 系統函數所報告相同的值：<br /><br /> 1 = 資料指標名稱或變數所參考的資料指標是開啟的。 如果資料指標是不區分、靜態或索引鍵集，它至少會有一個資料列。 如果資料指標是動態的，結果集就會有零或多個資料列。<br /><br /> 0 = 資料指標名稱或變數所參考的資料指標是開啟的，但沒有資料列。 動態資料指標永不傳回這個值。<br /><br /> -1 = 資料指標名稱或變數所參考的資料指標是關閉的。<br /><br /> -2 = 只適用於資料指標變數。 沒有指派給變數的資料指標。 可能是 OUTPUT 參數將資料指標指派給變數，但傳回之前，預存程序便關閉了資料指標。<br /><br /> -3 = 含指定名稱的資料指標或資料指標變數不存在，或資料指標變數還沒有配置資料指標。|  
 |model|**smallint**|1 = 不區分 (或靜態)<br /><br /> 2 = 索引鍵集<br /><br /> 3 = 動態<br /><br /> 4 = 向前快轉|  
-|並行 (concurrency)|**smallint**|1 = 唯讀<br /><br /> 2 = 捲動鎖定<br /><br /> 3 = 開放式|  
+|concurrency|**smallint**|1 = 唯讀<br /><br /> 2 = 捲動鎖定<br /><br /> 3 = 開放式|  
 |scrollable|**smallint**|0 = 順向<br /><br /> 1 = 可捲動|  
 |open_status|**smallint**|0 = 已關閉<br /><br /> 1 = 開啟|  
 |cursor_rows|**int**|結果集中符合的資料列數目。 如需詳細資訊，請參閱 < [@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md)。|  

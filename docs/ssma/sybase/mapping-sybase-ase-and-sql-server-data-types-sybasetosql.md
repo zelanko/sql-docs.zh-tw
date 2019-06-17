@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8e50253b7c7fb6c59b4303c528c1ef7267ccf644
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62706077"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>對應 Sybase ASE 和 SQL Server 資料類型 (SybaseToSQL)
@@ -52,7 +52,7 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
   
 2.  若要加入新的對應，請執行下列作業：  
   
-    1.  按一下 **[加入]**。  
+    1.  按一下 **[加入]** 。  
   
     2.  底下**來源類型**，選取要對應的 ASE 資料類型。  
   
@@ -64,11 +64,11 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
   
         某些類型需要目標資料類型長度。 如果需要，請輸入新的資料長度，以**取代為** 方塊中。  
   
-    5.  按一下 [確定] 。  
+    5.  按一下 [確定]  。  
   
 3.  若要編輯的資料類型對應，執行下列作業：  
   
-    1.  按一下 **[編輯]**。  
+    1.  按一下 **[編輯]** 。  
   
     2.  底下**來源類型**，選取要對應的 ASE 資料類型。  
   
@@ -84,7 +84,7 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
   
     1.  在包含您想要移除的資料類型對應的類型對應清單中選取的資料列。  
   
-    2.  按一下 **[移除]**。  
+    2.  按一下 **[移除]** 。  
   
         您無法移除繼承的對應。 不過，在特定物件或物件類別目錄的自訂對應會覆寫繼承的對應。  
   

@@ -24,10 +24,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b5a11a5e7090f89f4a31ffd15f8ebbce78ea395a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013394"
 ---
 # <a name="sysdmexeccomputenodeerrors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "63013394"
 |-----------------|---------------|-----------------|-----------|  
 |error_id|**nvarchar(36)**|與錯誤相關聯的唯一數值識別碼。|系統中的所有查詢錯誤|  
 |來源|**nvarchar(255)**|來源執行緒或處理序的描述||  
-|型別|**nvarchar(255)**|錯誤的類型。||  
+|type|**nvarchar(255)**|錯誤的類型。||  
 |create_time|**datetime**|錯誤發生時間||  
 |compute_node_id|**int**|特定的計算節點的識別碼|請參閱的 compute_node_id [sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|**nvarchar(36)**|PolyBase 查詢，如果有任何識別項。||  

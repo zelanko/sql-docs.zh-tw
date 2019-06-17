@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db9f2758c2df5585a4d9034df7b309ae4547e52c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9c472f5c15be78a35291487e433e0f81a5d7aa60
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633936"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797131"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>如何：使用內建的 UTF-8 支援傳送及接收 UTF-8 資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

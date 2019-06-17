@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 979c2b792d7c56dcdb9fadde112c7e6bff789c15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767622"
 ---
 # <a name="step-5-testing-the-updated-packages"></a>步驟 5：測試更新的封裝
   在進入下一課之前，請先測試封裝，因為在下一課中，您將會建立部署配套，以便在目的地電腦上用來安裝教學課程封裝。 在這項工作中，您會執行 DataTransfer.dtsx 和 LoadXMLData 封裝，這兩個封裝都已加入至「部署教學課程」專案中，並且以組態進行擴充。  
   
- 當封裝執行時，封裝中的每一個可執行檔在順利完成後都會變成綠色。 當所有可執行檔都變成綠色時，就表示該封裝已順利完成。 您也可以在 [進度] 索引標籤上檢視套件的執行進度。  
+ 當封裝執行時，封裝中的每一個可執行檔在順利完成後都會變成綠色。 當所有可執行檔都變成綠色時，就表示該封裝已順利完成。 您也可以在 [進度]  索引標籤上檢視套件的執行進度。  
   
  如果封裝未能順利執行，則必須加以修正，才能進入下一課。  
   
@@ -28,17 +28,17 @@ ms.locfileid: "62767622"
   
 1.  在 [方案總管] 中，按一下 DataTransfer.dtsx。  
   
-2.  在 **[偵錯]** 功能表上，按一下 **[開始偵錯]**。  
+2.  在 **[偵錯]** 功能表上，按一下 **[開始偵錯]** 。  
   
-3.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]**。  
+3.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]** 。  
   
 ### <a name="to-run-the-loadxmldata-package"></a>若要執行 LoadXMLData 封裝  
   
 1.  在 [方案總管] 中，按一下 LoadXMLData.dtsx。  
   
-2.  在 **[偵錯]** 功能表上，按一下 **[開始偵錯]**。  
+2.  在 **[偵錯]** 功能表上，按一下 **[開始偵錯]** 。  
   
-3.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]**。  
+3.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]** 。  
   
 ## <a name="next-lesson"></a>下一課  
  [第 2 課：建立部署配套](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  

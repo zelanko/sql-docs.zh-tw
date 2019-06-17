@@ -14,21 +14,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 08898d4c7a324a97fc0e44ef45b15dba90d42a1d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921845"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>規劃和執行還原順序 (完整復原模式)
-  此主題說明如何針對一般使用完整復原模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，規劃及執行還原順序。 「還原順序」是一或多個 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 陳述式的順序。 還原順序通常會初始化所還原之資料庫、檔案及/或頁面的內容 (資料複製階段)、向前復原記錄的交易 (重做階段)，再回復未認可的交易 (恢復階段)。  
+  此主題說明如何針對一般使用完整復原模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，規劃及執行還原順序。 「還原順序」  是一或多個 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 陳述式的順序。 還原順序通常會初始化所還原之資料庫、檔案及/或頁面的內容 (資料複製階段)、向前復原記錄的交易 (重做階段)，再回復未認可的交易 (恢復階段)。  
   
- 在單純的情況下，還原順序只需要一個完整資料庫備份、一個差異資料庫備份，以及一或多個後續記錄備份。 這種時候，建構正確的還原順序相當容易， 例如，若要將整個資料庫還原到失敗點，可以從備份使用中交易記錄 (記錄的「結尾」) 開始。 然後，還原最近一次完整資料庫備份、最近一次差異備份 (若有的話)，再依照進行記錄備份的順序還原所有後續的記錄備份。  
+ 在單純的情況下，還原順序只需要一個完整資料庫備份、一個差異資料庫備份，以及一或多個後續記錄備份。 這種時候，建構正確的還原順序相當容易， 例如，若要將整個資料庫還原到失敗點，可以從備份使用中交易記錄 (記錄的「結尾」  ) 開始。 然後，還原最近一次完整資料庫備份、最近一次差異備份 (若有的話)，再依照進行記錄備份的順序還原所有後續的記錄備份。  
   
  在更複雜的情況下，建構正確的還原順序會是很複雜的程序。 例如，還原順序可能需要多個檔案備份，或者必須將資料還原到特定的時間點。 在極其複雜的情況下，甚至可能需要周遊跨越一個或多個復原分支的分岔復原路徑。  
   
 > [!NOTE]  
->  「復原路徑」是指將資料庫復原到特定時間點 (稱為復原點) 的資料和記錄備份順序。 復原路徑是一組特定轉換，這些轉換會使資料庫隨時間而變化，同時又能維護資料庫的一致性。 復原路徑描述從起點 (LSN,GUID) 到終點 (LSN,GUID) 的 LSN 範圍。 復原路徑中的 LSN 範圍從開始到結束可能會跨越一個或多個復原分支。  
+>  「復原路徑」  是指將資料庫復原到特定時間點 (稱為復原點) 的資料和記錄備份順序。 復原路徑是一組特定轉換，這些轉換會使資料庫隨時間而變化，同時又能維護資料庫的一致性。 復原路徑描述從起點 (LSN,GUID) 到終點 (LSN,GUID) 的 LSN 範圍。 復原路徑中的 LSN 範圍從開始到結束可能會跨越一個或多個復原分支。  
   
 ## <a name="to-plan-a-restore-sequence"></a>規劃還原順序  
  在啟動還原順序前，請遵循下列步驟：  

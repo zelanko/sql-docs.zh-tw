@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63033621"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>設定目標伺服器的輪詢間隔
   本主題描述如何設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 從主要伺服器到目標伺服器重新整理資訊的頻率。 作業是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行的一系列指定動作。 多重伺服器作業是一個主要伺服器執行於一或多個目標伺服器上的作業。  
   
--   **開始之前：**[安全性](#Security)  
+-   **開始之前：** [安全性](#Security)  
   
--   **若要設定目標伺服器，使用的輪詢間隔：**[SQL Server Management Studio](#SSMS)、[Transact-SQL](#TSQL)  
+-   **若要使用下列項目設定目標伺服器的輪詢間隔：** [SQL Server Management Studio](#SSMS)、[Transact-SQL](#TSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  每一個目標伺服器可以同時執行相同作業的一個執行個體。 每個目標伺服器會定期輪詢主要伺服器、下載任何指派到目標伺服器的新作業之副本，然後中斷連接。 目標伺服器會先在本機執行作業，然後再重新連接到主要伺服器，以便上傳作業結果的狀態。  
@@ -42,11 +42,11 @@ ms.locfileid: "63033621"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，指向 [多重伺服器管理]，然後按一下 [管理目標伺服器]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，指向 [多重伺服器管理]  ，然後按一下 [管理目標伺服器]  。  
   
-3.  在 **[目標伺服器狀態]** 索引標籤上，按一下 **[公佈指示]**。  
+3.  在 **[目標伺服器狀態]** 索引標籤上，按一下 **[公佈指示]** 。  
   
-4.  在 **[指示類型]** 清單中選取 **[設定輪詢間隔]**。  
+4.  在 **[指示類型]** 清單中選取 **[設定輪詢間隔]** 。  
   
 5.  在 **[輪詢間隔]** 方塊中，輸入介於 10 到 28,800 之間的秒數，這是目標伺服器輪詢主要伺服器之前所需經過的時間。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63033621"
   
 1.  在 [物件總管] 中，連接到 Database Engine 的執行個體，然後展開該執行個體。  
   
-2.  在工具列上，按一下 **[新增查詢]**。  
+2.  在工具列上，按一下 **[新增查詢]** 。  
   
 3.  在 [查詢] 視窗中，使用[sp_update_job &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)系統預存程序來設定目標伺服器的輪詢間隔。  
   

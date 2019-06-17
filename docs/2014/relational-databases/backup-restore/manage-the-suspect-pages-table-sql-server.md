@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921951"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>管理 suspect_pages 資料表 (SQL Server)
@@ -124,11 +124,11 @@ ms.locfileid: "62921951"
   
 #### <a name="to-manage-the-suspectpages-table"></a>若要管理 suspect_pages 資料表  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的執行個體，展開該執行個體，然後展開 [資料庫] 。  
+1.  在 [物件總管]  中，連接到 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的執行個體，展開該執行個體，然後展開 [資料庫]  。  
   
-2.  依序展開 [系統資料庫] 、[msdb] 、[資料表] 和 [系統資料表] 。  
+2.  依序展開 [系統資料庫]  、[msdb]  、[資料表]  和 [系統資料表]  。  
   
-3.  展開 **dbo.suspect_pages** ，然後以滑鼠右鍵按一下 [編輯前 200 個資料列] 。  
+3.  展開 **dbo.suspect_pages** ，然後以滑鼠右鍵按一下 [編輯前 200 個資料列]  。  
   
 4.  在查詢視窗中，編輯、更新或刪除所要的資料列。  
   
@@ -138,9 +138,9 @@ ms.locfileid: "62921951"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 這個範例會刪除 `suspect_pages` 資料表中的部分資料列。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。 這個範例會刪除 `suspect_pages` 資料表中的部分資料列。  
   
 ```  
 -- Delete restored, repaired, or deallocated pages.  

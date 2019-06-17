@@ -11,10 +11,10 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5f3b3de71cb60a27613482255556bfbff6bcc8cf
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64877624"
 ---
 # <a name="create-key-performance-indicators"></a>建立關鍵效能指標
@@ -51,14 +51,14 @@ ms.locfileid: "64877624"
   
 7.  在左側 (下) 滑動軸欄位輸入 **1**，然後在右側 (上) 滑動軸欄位中輸入 **1.07**。  
   
-8.  在 [選取圖示樣式] 中，選取菱形 (紅色)、三角形 (黃色)、圓形 (綠色) 圖示類型。
+8.  在 [選取圖示樣式]  中，選取菱形 (紅色)、三角形 (黃色)、圓形 (綠色) 圖示類型。
   
     ![as-lesson7-kpi](../tutorial-tabular-1400/media/as-lesson7-kpi.png)
     
     > [!TIP]  
     > 請注意可擴充**描述**可用圖示樣式下方的標籤。 您可以使用各種 KPI 元素的描述，使其更容易在用戶端應用程式。  
   
-9. 按一下 [確定] 完成 KPI。  
+9. 按一下 [確定]  完成 KPI。  
   
     在量值方格中，請注意圖示旁**InternetCurrentQuarterSalesPerformance**量值。 這個圖示表示這個量值是 KPI 的基底值。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "64877624"
   
 5.  在左側 （下） 滑動軸欄位中，滑動直到欄位顯示**0.8**，然後滑動右側 （高） 滑桿欄位，直到欄位顯示**1.03**。  
   
-6.  在 [選取圖示樣式] 中，選取菱形 (紅色)、三角形 (黃色)、圓形 (綠色) 圖示類型，然後按一下 [確定]。  
+6.  在 [選取圖示樣式]  中，選取菱形 (紅色)、三角形 (黃色)、圓形 (綠色) 圖示類型，然後按一下 [確定]  。  
   
 ## <a name="whats-next"></a>下一步
 

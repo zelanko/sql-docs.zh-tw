@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: de25969712c8b91494aeccfea120bbe4350cbcde
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ee3e77677a3ae52fb112ae8a280e91086a483875
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641616"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796085"
 ---
 # <a name="how-to-perform-transactions"></a>如何：執行交易
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

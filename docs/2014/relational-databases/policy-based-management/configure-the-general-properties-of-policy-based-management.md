@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 249b338148dc762e091d0be47bc081fe87c72fcd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63162390"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>設定原則式管理的一般屬性
@@ -47,11 +47,11 @@ ms.locfileid: "63162390"
   
 #### <a name="to-configure-policy-based-management"></a>設定以原則為基礎的管理  
   
-1.  在物件總管中，按一下加號，展開您想要設定原則式管理屬性的伺服器。  
+1.  在物件總管  中，按一下加號，展開您想要設定原則式管理屬性的伺服器。  
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [原則管理]，然後選取 [屬性]。  
+3.  以滑鼠右鍵按一下 [原則管理]  ，然後選取 [屬性]  。  
   
      **[原則管理屬性]** 對話方塊有下列選項。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "63162390"
   
     -   當這個值為 true 時，成功和失敗的原則評估都會記錄下來。  
   
-4.  完成後，請按一下 **[確定]**。  
+4.  完成後，請按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -76,9 +76,9 @@ ms.locfileid: "63162390"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- enables Policy-Based Management   

@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63243784"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>使用 DNS 轉寄站解析非設備 DNS 名稱在 Analytics Platform System
@@ -66,7 +66,7 @@ SQL Server PDW 2012 提供整合式服務與修補功能。 Microsoft Update 及
   
 3.  在 [連接] 清單中，按一下**VMSEthernet**，然後按一下**屬性**。  
   
-4.  選取  **Internet Protocol Version 4 (TCP/IPv4)**，然後按一下**屬性**。  
+4.  選取  **Internet Protocol Version 4 (TCP/IPv4)** ，然後按一下**屬性**。  
   
 5.  在 **備用 DNS 伺服器**方塊中，新增客戶網路系統管理員提供的 IP 位址。  
   
