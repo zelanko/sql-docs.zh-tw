@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4987e3497b7d52ff11f8f52bc403105340f7f508
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63301366"
 ---
 # <a name="modifying-and-processing-the-market-basket-model-intermediate-data-mining-tutorial"></a>修改及處理購物籃模型 (中繼資料採礦教學課程)
@@ -36,7 +36,7 @@ ms.locfileid: "63301366"
   
 3.  在 **值**資料行**演算法參數**對話方塊方塊中，設定下列參數：  
   
-     MINIMUM_PROBABILITY = 0.1   
+     MINIMUM_PROBABILITY = 0.1  
   
      MINIMUM_SUPPORT = 0.01  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63301366"
   
      **處理採礦結構-關聯**對話方塊隨即開啟。  
   
-3.  按一下 **[執行]**。  
+3.  按一下 **[執行]** 。  
   
      **處理進度**對話方塊會開啟以顯示模型處理的相關資訊。 處理新的結構和模型可能需要花一些時間。  
   

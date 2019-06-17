@@ -23,10 +23,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0bedb8ba74d7965df34a102fb0d53a0cbdb248dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63139018"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>連接到 SQL Server (AccessToSQL)
@@ -59,7 +59,7 @@ SQL Server 執行個體的相關中繼資料不會自動同步處理。 相反�
   
 2.  在 **伺服器名稱**方塊中，輸入或選取的執行個體名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-    -   如果您要連接到本機電腦上的預設執行個體，您可以輸入**localhost**或句點 (**。**)。  
+    -   如果您要連接到本機電腦上的預設執行個體，您可以輸入**localhost**或句點 ( **。** )。  
   
     -   如果您要連接到另一部電腦上的預設執行個體，請輸入電腦的名稱。  
   
@@ -81,7 +81,7 @@ SQL Server 執行個體的相關中繼資料不會自動同步處理。 相反�
   
 6.  安全的連線，會新增兩個控制項，**加密連接**核取方塊並**TrustServerCertificate**核取方塊。 只有當**加密連接**核取方塊**TrustServerCertificate**核取方塊會顯示。 當**加密連接**是 checked(true) 並**TrustServerCertificate** unchecked(false)，將會驗證 SQL Server SSL 憑證。 驗證伺服器憑證是 SSL 交握的一部分，而且這麼做可以確保伺服器是所要連接的正確伺服器。 若要確保此行為，以及伺服器端上的用戶端必須安裝憑證。  
   
-7.  按一下 **[連接]**。  
+7.  按一下 **[連接]** 。  
   
 **較高的版本相容性**  
   

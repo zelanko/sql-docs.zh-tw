@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63285693"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>建立預測 (基本資料採礦教學課程)
@@ -57,7 +57,7 @@ ms.locfileid: "63285693"
   
      這會將可預測的資料行 [Bike Buyer] 對應到輸入資料表資料行。  
   
-3.  按一下 [確定] 。  
+3.  按一下 [確定]  。  
   
 4.  在 [**方案總管] 中**，以滑鼠右鍵按一下**Targeted Mailing**資料來源檢視，並選取**檢視表設計工具**。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "63285693"
     > [!WARNING]  
     >  如果您未在清單中看見資料行，可能必須重新整理設計師中所載入資料來源檢視的定義。 若要這樣做，請從**檔案**功能表上，選取**全部儲存**，然後關閉再重新開啟設計工具中的專案。  
   
-11. 按一下 [確定] 。  
+11. 按一下 [確定]  。  
   
 ## <a name="designing-the-prediction-query"></a>設計預測查詢  
   

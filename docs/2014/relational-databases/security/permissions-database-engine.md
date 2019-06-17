@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63128757"
 ---
 # <a name="permissions-database-engine"></a>權限 (Database Engine)
@@ -49,11 +49,11 @@ ms.locfileid: "63128757"
   
      授與變更特定安全性實體之屬性 (除了擁有權之外) 的能力。 在特定範圍授與 ALTER 權限時，也會一併授與改變、建立或卸除該範圍內包含之任何安全性實體的能力。 例如，結構描述上的 ALTER 權限包括建立、改變與卸除結構描述之物件的能力。  
   
--   ALTER ANY \<*伺服器安全性實體*>，其中「伺服器安全性實體」可以是任何伺服器安全性實體。  
+-   ALTER ANY \<*伺服器安全性實體*>，其中「伺服器安全性實體」  可以是任何伺服器安全性實體。  
   
      授與 *伺服器安全性實體*的 CREATE、ALTER 或 DROP 個別執行個體的能力。 例如，ALTER ANY LOGIN 會授與建立、改變或卸除執行個體中任何登入的能力。  
   
--   ALTER ANY \<*資料庫安全性實體*>，其中「資料庫安全性實體」可以是資料庫層級上的任何安全性實體。  
+-   ALTER ANY \<*資料庫安全性實體*>，其中「資料庫安全性實體」  可以是資料庫層級上的任何安全性實體。  
   
      授與 *資料庫安全性實體*的 CREATE、ALTER 或 DROP 個別執行個體能力。 例如，ALTER ANY SCHEMA 會授與建立、改變或卸除資料庫中任何結構描述的能力。  
   

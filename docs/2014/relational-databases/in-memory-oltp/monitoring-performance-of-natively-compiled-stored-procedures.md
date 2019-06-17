@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9b8d6f35f8dedeb4539dc8299ca32f6566beb03f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63161950"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>監視原生編譯預存程序的效能
@@ -109,7 +109,7 @@ SET SHOWPLAN_XML OFF
 GO  
 ```  
   
- 或者，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中選取程序名稱，然後按一下 **[顯示估計執行計畫]**。  
+ 或者，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中選取程序名稱，然後按一下 **[顯示估計執行計畫]** 。  
   
  原生編譯預存程序的估計執行計畫會顯示程序內各查詢的查詢運算子和運算式。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 並未支援原生編譯預存程序的所有 SHOWPLAN_XML 屬性。 例如，與查詢最佳化工具成本相關的屬性並未納入程序的 SHOWPLAN_XML。  
   

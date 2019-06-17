@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 9983edb500e424be6bbb4f85ff005af00fd65aaf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253253"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>評定 MySQL 資料庫的轉換 (MySQLToSQL)

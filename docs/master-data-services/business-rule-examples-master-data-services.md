@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5f2f1aa1dd763675d50ff9ea1961d6036c3ee73f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485421"
 ---
 # <a name="business-rule-examples-master-data-services"></a>商務規則範例 (Master Data Services)
@@ -151,10 +151,10 @@ Else
   
   
 **若要檢視範例模型中的商務規則範例**  
-1. 瀏覽至 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 網站 (您在安裝 MDS 之後所設定)，然後按一下 [系統管理] 方塊。   
+1. 瀏覽至 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 網站 (您在安裝 MDS 之後所設定)，然後按一下 [系統管理]  方塊。   
 如需設定網站的指示，請參閱 [Master Data Services 安裝和組態](../master-data-services/master-data-services-installation-and-configuration.md)。  
-2. 按一下含有商務規則的範例模型 (如上述表格所列)，然後按一下 [實體]。  
-3. 按一下要套用規則的實體 (如上述表格所列)，然後按一下 [商務規則]。  
+2. 按一下含有商務規則的範例模型 (如上述表格所列)，然後按一下 [實體]  。  
+3. 按一下要套用規則的實體 (如上述表格所列)，然後按一下 [商務規則]  。  
 4. 按一下您想要檢視的商務規則名稱。 隨即展開 UI 以顯示 **If**、 **Then** 和 **Else** 陳述式。  
   
  

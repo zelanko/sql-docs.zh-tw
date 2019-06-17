@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 68586b63d77ceb1c4e84ef9e073812f61b56eb65
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484354"
 ---
 # <a name="collections-master-data-services"></a>集合 (Master Data Services)
@@ -40,7 +40,7 @@ ms.locfileid: "65484354"
  當您建立集合時，您會自動列為擁有者。 如果您是管理員，可以視需要建立集合的其他屬性。  
   
 ## <a name="subscription-views-for-collections"></a>集合的訂閱檢視  
- 顯示集合的訂閱檢視有兩種。 [集合屬性] 格式會顯示集合的清單，以及與集合相關的任何屬性 (如描述或擁有者)。 [集合] 格式會顯示所有集合中的所有成員，以及每個成員加權和排序次序。 如需詳細資訊，請參閱[概觀：匯出資料 &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)。  
+ 顯示集合的訂閱檢視有兩種。 [集合屬性]  格式會顯示集合的清單，以及與集合相關的任何屬性 (如描述或擁有者)。 [集合]  格式會顯示所有集合中的所有成員，以及每個成員加權和排序次序。 如需詳細資訊，請參閱[概觀：匯出資料 &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)。  
   
  如果您為某個集合中的特定成員設定加權值，這些值則可以在相關的訂閱檢視中使用。  
   

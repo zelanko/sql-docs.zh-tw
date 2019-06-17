@@ -11,18 +11,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089849"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>選項 (文字編輯器 - XML - 格式化頁面)
 
-此對話方塊允許您指定 XML 編輯器的格式化設定。 您可以從 [工具] 功能表存取 [選項] 對話方塊。  
+此對話方塊允許您指定 XML 編輯器的格式化設定。 您可以從 [工具]  功能表存取 [選項]  對話方塊。  
   
 > [!NOTE]  
-> 在選取 [文字編輯器] 資料夾、[XML] 資料夾，然後從 [選項] 對話方塊中選取 [格式化] 選項時，均可以使用這些設定。  
+> 在選取 [文字編輯器]  資料夾、[XML]  資料夾，然後從 [選項]  對話方塊中選取 [格式化]  選項時，均可以使用這些設定。  
   
 ## <a name="attributes"></a>屬性  
  **保留手動屬性格式化**  

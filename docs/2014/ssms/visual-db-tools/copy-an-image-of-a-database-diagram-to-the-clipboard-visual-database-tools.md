@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e011d1dc3f4690f78821a2bd47aced8e06b8e768
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63225853"
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>將資料庫圖表的影像複製到剪貼簿 (Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "63225853"
     > [!NOTE]  
     >  只有圖表的擁有人或資料庫的 db_owner 角色成員能開啟圖表。  
   
-2.  以滑鼠右鍵按一下空白區域，再選擇 [複製圖表至剪貼簿]。  
+2.  以滑鼠右鍵按一下空白區域，再選擇 [複製圖表至剪貼簿]  。  
   
      整個資料庫圖表的影像現在已經在系統剪貼簿中。  
   
