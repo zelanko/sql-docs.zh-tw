@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832449"
 ---
 # <a name="data-flow-task"></a>資料流程工作
@@ -99,9 +99,9 @@ ms.locfileid: "62832449"
 |**RowsSent**|已傳送至「排序」轉換之輸入的資料列數目。|76|  
   
 ## <a name="configuration-of-the-data-flow-task"></a>資料流程工作的組態  
- 您可以在 [屬性] 視窗中或以程式設計方式設定屬性。  
+ 您可以在 [屬性]  視窗中或以程式設計方式設定屬性。  
   
- 如需如何在 [屬性] 視窗中設定這些屬性的詳細資訊，請按一下下列主題：  
+ 如需如何在 [屬性]  視窗中設定這些屬性的詳細資訊，請按一下下列主題：  
   
 -   [設定工作或容器的屬性](../set-the-properties-of-a-task-or-container.md)  
   

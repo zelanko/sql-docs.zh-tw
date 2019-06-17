@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 580641db4007f5a7e414f641a8a0495030405b38
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066230"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具列 (屬性關聯性設計師索引標籤，維度設計師) (Analysis Services - 多維度資料)
@@ -32,17 +32,17 @@ ms.locfileid: "66066230"
   
  **若要檢視 [屬性關聯性] 索引標籤的工具列**  
   
--   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的方案總管中，按兩下維度即可開啟 [維度設計師]，然後按一下 [屬性關聯性] 索引標籤。  
+-   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的方案總管中，按兩下維度即可開啟 [維度設計師]，然後按一下 [屬性關聯性]  索引標籤。  
   
 ## <a name="options"></a>選項。  
  **加入商業智慧**  
- 開啟 [商業智慧精靈] 並加入商業智慧功能。 如需詳細資訊，請參閱[使用商業智慧精靈增強維度](use-the-business-intelligence-wizard-to-enhance-dimensions.md)。  
+ 開啟 [商業智慧精靈]  並加入商業智慧功能。 如需詳細資訊，請參閱[使用商業智慧精靈增強維度](use-the-business-intelligence-wizard-to-enhance-dimensions.md)。  
   
  **處理**  
  處理物件。  
   
  **新增屬性關聯性**  
- 開啟 [建立屬性關聯性] 對話方塊，而且您可以在其中定義新的屬性關聯性。  
+ 開啟 [建立屬性關聯性]  對話方塊，而且您可以在其中定義新的屬性關聯性。  
   
  **顯示比例**  
  循環顯示比例百分比，或顯示可用顯示比例選項的清單。  
@@ -66,6 +66,6 @@ ms.locfileid: "66066230"
  根據 [維度設計師] 所使用的配置演算法，自動排列圖表中的形狀。 根據預設， **[自動排列形狀]** 是啟用狀態。  
   
  **顯示清單檢視**  
- 顯示或隱藏 [屬性] 和 [屬性關聯性] 清單。 這些清單顯示於自己的窗格中，而這些窗格緊鄰在包含屬性關聯性圖表的窗格底下。  
+ 顯示或隱藏 [屬性]  和 [屬性關聯性]  清單。 這些清單顯示於自己的窗格中，而這些窗格緊鄰在包含屬性關聯性圖表的窗格底下。  
   
   

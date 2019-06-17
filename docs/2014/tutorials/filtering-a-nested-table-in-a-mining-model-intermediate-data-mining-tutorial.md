@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63267483"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>在採礦模型中篩選巢狀資料表 (中繼資料採礦教學課程)
@@ -31,7 +31,7 @@ ms.locfileid: "63267483"
   
 1.  在 **採礦模型**索引標籤[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，以滑鼠右鍵按一下`Association`模型，然後選取**新的採礦模型**。  
   
-2.  針對**模型名稱**，輸入`Association Filtered`。 針對**演算法名稱**，選取**Microsoft 關聯規則**。 按一下 [確定] 。  
+2.  針對**模型名稱**，輸入`Association Filtered`。 針對**演算法名稱**，選取**Microsoft 關聯規則**。 按一下 [確定]  。  
   
 3.  中的資料行篩選的關聯模型中，按一下 IncomeGroup 資料列，並將值從變更**略過**要**輸入**。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63267483"
   
 1.  在  **Mining Models**索引標籤，以滑鼠右鍵按一下 模型篩選的關聯，然後選取**設定模型篩選器**。  
   
-2.  在 [模型篩選器] 對話方塊的 [採礦結構資料行] 文字方塊中，按一下方格中的上方資料列。  
+2.  在 [模型篩選器]  對話方塊的 [採礦結構資料行]  文字方塊中，按一下方格中的上方資料列。  
   
 3.  在 **採礦結構資料行** 文字方塊中，選取 IncomeGroup。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63267483"
   
 11. 在 **篩選**對話方塊中，在底下的第一個資料列中**採礦結構資料行**，選取`Model`。  
   
-12. 針對**運算子**，選取**IS NOT NULL**。 離開**值**空白的文字方塊。 按一下 [確定] 。  
+12. 針對**運算子**，選取**IS NOT NULL**。 離開**值**空白的文字方塊。 按一下 [確定]  。  
   
      中的篩選條件**運算式**的文字方塊**模型篩選器**對話方塊會自動更新以包含巢狀資料表上新的條件。 完成的運算式如下：  
   

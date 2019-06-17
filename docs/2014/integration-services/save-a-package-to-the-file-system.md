@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07077fabaca18170496a1b4e972da7b7e34cd4fd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056259"
 ---
 # <a name="save-a-package-to-the-file-system"></a>將封裝儲存至檔案系統
@@ -32,7 +32,7 @@ ms.locfileid: "66056259"
   
 2.  在 [方案總管] 中，按一下您要儲存的封裝。  
   
-3.  在 **[檔案]** 功能表上，按一下 **[儲存選取項目]**。  
+3.  在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
     > [!NOTE]  
     >  您可以在 [屬性] 視窗中，確認儲存封裝的路徑和檔案名稱。  

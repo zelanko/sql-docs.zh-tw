@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b394e91c01e4607c74f73d90630095af2e912941
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090054"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>以指令碼變數使用 sqlcmd
@@ -49,7 +49,7 @@ ms.locfileid: "66090054"
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  若要檢視環境變數，請在 [控制台] 中開啟 [系統] ，然後按一下 [進階]  索引標籤。  
+>  若要檢視環境變數，請在 [控制台]  中開啟 [系統]  ，然後按一下 [進階]  索引標籤。  
   
 ## <a name="implicitly-setting-scripting-variables"></a>隱含設定指令碼變數  
  當您透過含有 **sqlcmd** 相關變數的選項啟動 **sqlcmd** 時，會將 **sqlcmd** 變數隱含設定為使用該選項所指定的值。 在下列範例中， `sqlcmd` 透過 `-l` 選項啟動。 這將會隱含地設定 SQLLOGINTIMEOUT 變數。  
@@ -79,7 +79,7 @@ ms.locfileid: "66090054"
   
 -   變數名稱不能包含空白字元或引號。  
   
--   變數名稱的格式不能和變數運算式的格式相同，例如 *$(var)*。  
+-   變數名稱的格式不能和變數運算式的格式相同，例如 *$(var)* 。  
   
 -   指令碼變數不區分大小寫。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "66090054"
  `4> GO`  
   
 ### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. 在 sqlcmd 內使用使用者層級環境變數  
- 下列範例在命令提示字元中設定了使用者層級環境變數 `%Temp%`，並將其傳遞至 `sqlcmd` 輸入檔。 若要取得使用者層級環境變數，請在 [控制台] 中按兩下 [系統]。 按一下 [進階] 索引標籤，然後按一下 [環境變數]。  
+ 下列範例在命令提示字元中設定了使用者層級環境變數 `%Temp%`，並將其傳遞至 `sqlcmd` 輸入檔。 若要取得使用者層級環境變數，請在 [控制台]  中按兩下 [系統]  。 按一下 [進階]  索引標籤，然後按一下 [環境變數]  。  
   
  下列程式碼是在輸入檔 `c:\testscript.txt`中：  
   

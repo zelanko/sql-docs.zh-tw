@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5b8cc62556749a310f8c11a5efcae32eafbd8ee
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108612"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>URL 保留項目語法 (SSRS 組態管理員)
@@ -34,7 +34,7 @@ ms.locfileid: "66108612"
 |屬性|有效的值|描述|  
 |--------------|------------------|-----------------|  
 |配置|http 或 https|非 SSL 和 SSL 連接的前置詞。|  
-|主機名稱|(+) 強式萬用字元，等於 IP 位址的 [(全部指派)] 值。<br /><br /> (\*) 弱式萬用字元，等於 [(全未指派)] 的 IP 位址。<br /><br /> 完整網域名稱<br /><br /> 電腦名稱<br /><br /> IP 位址 (IPV4)<br /><br /> IP 位址 (IPV6)|識別網路上的伺服器。<br /><br /> (+) 強式萬用字元是預設值。 HTTP.SYS 將會接受所有網路介面卡上對於給定通訊埠和虛擬目錄組合的所有要求。 報表伺服器將會接受此通訊埠上的任何要求。<br /><br /> (\*) 弱式萬用字元。 HTTP.SYS 將會接受所有網路介面卡上，對於給定通訊埠和虛擬目錄組合而且未由其他 URL 保留項目處理的所有要求。<br /><br /> 電腦名稱是電腦在網路上的 NETBIOS 名稱。<br /><br /> 完整網域名稱包含網域位址和伺服器名稱 (該名稱已經向網域控制站或公用網域名稱伺服器註冊)。<br /><br /> IP 位址 (IPV4) 是電腦上網路介面卡的 IP 位址，它是使用 IPV4 格式： *nnn.nnn.nnn.nnn*。<br /><br /> IP 位址 (IPV6) 是電腦上網路介面卡的 IP 位址，它是使用 IPV6 格式：\<標頭>:\<標頭>:*nnn.nnn.nnn.nnn*。|  
+|主機名稱|(+) 強式萬用字元，等於 IP 位址的 [(全部指派)]  值。<br /><br /> (\*) 弱式萬用字元，等於 [(全未指派)]  的 IP 位址。<br /><br /> 完整網域名稱<br /><br /> 電腦名稱<br /><br /> IP 位址 (IPV4)<br /><br /> IP 位址 (IPV6)|識別網路上的伺服器。<br /><br /> (+) 強式萬用字元是預設值。 HTTP.SYS 將會接受所有網路介面卡上對於給定通訊埠和虛擬目錄組合的所有要求。 報表伺服器將會接受此通訊埠上的任何要求。<br /><br /> (\*) 弱式萬用字元。 HTTP.SYS 將會接受所有網路介面卡上，對於給定通訊埠和虛擬目錄組合而且未由其他 URL 保留項目處理的所有要求。<br /><br /> 電腦名稱是電腦在網路上的 NETBIOS 名稱。<br /><br /> 完整網域名稱包含網域位址和伺服器名稱 (該名稱已經向網域控制站或公用網域名稱伺服器註冊)。<br /><br /> IP 位址 (IPV4) 是電腦上網路介面卡的 IP 位址，它是使用 IPV4 格式： *nnn.nnn.nnn.nnn*。<br /><br /> IP 位址 (IPV6) 是電腦上網路介面卡的 IP 位址，它是使用 IPV6 格式：\<標頭>:\<標頭>:*nnn.nnn.nnn.nnn*。|  
 |通訊埠|80<br /><br /> 443<br /><br /> \<custom>|通訊埠 80 是與伺服器之間往來之 HTTP 要求的標準通訊埠。<br /><br /> 通訊埠 443 是 SSL 連接的標準通訊埠。<br /><br /> 您可以使用尚未被另一個應用程式保留的任何通訊埠。|  
 |VirtualDirectory|ReportServer *[_InstanceName]*<br /><br /> Reports *[_InstanceName]*<br /><br /> \<custom>|指定應用程式的名稱。 這個值為字串。 根據預設， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用 ReportServer 和 Reports 當做報表伺服器 Web 服務和報表管理員應用程式的應用程式名稱。 如果您要的話，可以使用不同的名稱。<br /><br /> 這是必要的值。 它會識別應用程式。<br /><br /> 只能針對每一個應用程式執行個體指定一個虛擬目錄。 若要針對相同執行個體內的相同應用程式建立多個 URL，請建立多個版本的 `UrlString`。 若要針對多個應用程式執行個體建立唯一的虛擬目錄名稱，請考慮在虛擬目錄名稱中包含此執行個體名稱 (使用底線字元 (_) 來附加此執行個體名稱)。 *InstanceName* 為選擇性，但是如果您在相同電腦上有多個執行個體，則建議您使用它。 如需如何設定具名執行個體之 URL 保留項目的詳細資訊，請參閱[多重執行個體報表伺服器部署的 URL 保留項目&#40;SSRS 設定管理員&#41;](url-reservations-for-multi-instance-report-server-deployments.md)。<br /><br /> 虛擬目錄的值不區分大小寫。 任何字串只要不包含 URL 分隔符號或 URL 編碼，就可以使用它。|  
   

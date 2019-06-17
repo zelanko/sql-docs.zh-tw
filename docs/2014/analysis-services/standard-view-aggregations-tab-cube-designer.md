@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1bfe78e7ac5cb497a39ab0b0679bcb2bd9a43a7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068061"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>標準檢視 (彙總索引標籤，Cube 設計師)
@@ -26,7 +26,7 @@ ms.locfileid: "66068061"
   
 |選項|描述|  
 |------------|-----------------|  
-|**設計彙總**|按一下以顯示 **[彙總設計精靈]**。|  
+|**設計彙總**|按一下以顯示 **[彙總設計精靈]** 。|  
 |**基於使用方式的最佳化**|按一下以顯示 **[基於使用方式的最佳化]** 精靈。|  
 |**指派彙總設計**|按一下以顯示 **[指派彙總設計]** 對話方塊。|  
 |**刪除**|按一下以刪除選取的彙總設計。|  

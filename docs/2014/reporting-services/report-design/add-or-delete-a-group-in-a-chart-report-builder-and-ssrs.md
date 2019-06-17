@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1828f0f76963cea8cf792c17a251c843a93b5b0c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106555"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>在圖表中加入或刪除群組 (報表產生器及 SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66106555"
   
 1.  在報表設計介面上，按一下圖表中的任意位置來選取它。 隨即出現 [圖表資料]  窗格。  
   
-2.  以滑鼠右鍵按一下 [類別目錄群組] 區域中的群組，然後按一下 [類別目錄群組屬性]。  
+2.  以滑鼠右鍵按一下 [類別目錄群組]  區域中的群組，然後按一下 [類別目錄群組屬性]  。  
   
 3.  加入或移除群組運算式、篩選、排序運算式和群組變數。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66106555"
   
 1.  在報表設計介面上，按一下圖表中的任意位置來選取它。 隨即出現 [圖表資料]  窗格。  
   
-2.  以滑鼠右鍵按一下 [數列群組] 區域中的群組，然後按一下 [數列群組屬性]。  
+2.  以滑鼠右鍵按一下 [數列群組]  區域中的群組，然後按一下 [數列群組屬性]  。  
   
 3.  加入或移除群組運算式、篩選、排序運算式和群組變數。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66106555"
   
 1.  在報表設計介面上，按一下圖表中的任意位置來選取它。 隨即出現 [圖表資料]  窗格。  
   
-2.  以滑鼠右鍵按一下 [類別目錄群組] 或 [數列群組] 區域中的群組，然後按一下 [刪除]。  
+2.  以滑鼠右鍵按一下 [類別目錄群組]  或 [數列群組]  區域中的群組，然後按一下 [刪除]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)  

@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe8eee02d019b5cf68e257b3fac4266a18ead795
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087032"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>連接到 Microsoft SQL Server Analysis Services (SSAS)
-  此頁面**資料表匯入精靈**可讓您指定從 Microsoft SQL Server Analysis Services cube 或 SharePoint 主控的 PowerPivot 活頁簿匯入資料的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
+  此頁面**資料表匯入精靈**可讓您指定從 Microsoft SQL Server Analysis Services cube 或 SharePoint 主控的 PowerPivot 活頁簿匯入資料的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]** 。  
   
  若要連接至資料來源，您必須先在電腦上安裝適當的提供者。  
   

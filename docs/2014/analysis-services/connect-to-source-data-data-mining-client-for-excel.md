@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 468686314bb2446415a6883c6233708f9cbd1d2b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087094"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>連接到來源資料 (適用於 Excel 的資料採礦用戶端)
@@ -60,13 +60,13 @@ ms.locfileid: "66087094"
   
 4.  指定驗證方法。  
   
-5.  選取 將資料庫從**目錄名稱**下拉式清單。 如果資料庫不存在的執行個體上，選取 **（預設值）**。  
+5.  選取 將資料庫從**目錄名稱**下拉式清單。 如果資料庫不存在的執行個體上，選取 **（預設值）** 。  
   
 6.  輸入連接的易記名稱。  
   
 7.  按一下 **測試連接**來確認伺服器和資料庫可供使用。  
   
-8.  按一下 **[確定]**，然後按一下 **[關閉]**。  
+8.  按一下 **[確定]** ，然後按一下 **[關閉]** 。  
   
 ### <a name="connections-using-a-web-service"></a>使用 Web 服務的連接  
  如果您要使用精簡型用戶端架構來啟用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube 和資料的瀏覽，也可以透過 Web 服務設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器的連接。 如需有關如何定義網路架構用戶端的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》。  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ee80fbdac31d58cdb4b4b4b60c61be01670ad65a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62993864"
 ---
 # <a name="spchangeagentprofile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
@@ -44,7 +44,7 @@ sp_change_agent_profile [ @profile_id = ] profile_id
   
 `[ @property = ] 'property'` 是屬性的名稱。 *屬性*已**sysname**，沒有預設值。  
   
-`[ @value = ] 'value'` 是新屬性的值。 *值*已**nvarchar(3000)**，沒有預設值。  
+`[ @value = ] 'value'` 是新屬性的值。 *值*已**nvarchar(3000)** ，沒有預設值。  
   
  這份資料表描述可變更的設定檔屬性。  
   

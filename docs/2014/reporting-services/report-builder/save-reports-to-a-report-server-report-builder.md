@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c94117f277f0d058bd67c61e8dabc609d009337
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107642"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>將報表儲存到報表伺服器 (報表產生器)
@@ -25,7 +25,7 @@ ms.locfileid: "66107642"
   
 ### <a name="to-save-a-report-to-a-report-server"></a>若要將報表儲存到報表伺服器  
   
-1.  在報表產生器的按鈕中，按一下 **[儲存]**。 **另存新檔**_\<報表項目\>_ 對話方塊隨即開啟。  
+1.  在報表產生器的按鈕中，按一下 **[儲存]** 。 **另存新檔** _\<報表項目\>_ 對話方塊隨即開啟。  
   
     > [!NOTE]  
     >  如果您重新儲存報表，報表會自動重新儲存到之前的位置。 使用 [另存新檔] 選項可變更位置。  
@@ -40,7 +40,7 @@ ms.locfileid: "66107642"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>若要將報表儲存成不同的名稱  
   
-1.  在 [報表產生器] 按鈕中，按一下 **[另存新檔]**。 **另存新檔**_\<報表項目\>_ 對話方塊隨即開啟。  
+1.  在 [報表產生器] 按鈕中，按一下 **[另存新檔]** 。 **另存新檔** _\<報表項目\>_ 對話方塊隨即開啟。  
   
 2.  瀏覽至報表伺服器位置，或您想要儲存報表的檔案共用。  
   

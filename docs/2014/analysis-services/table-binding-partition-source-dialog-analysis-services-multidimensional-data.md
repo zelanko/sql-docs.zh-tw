@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7f8ea36c8c3d49d4903379ed4450548fc760937a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067873"
 ---
 # <a name="table-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>資料表繫結詳細資料 (資料分割來源對話方塊) (Analysis Services - 多維度資料)
@@ -30,10 +30,10 @@ ms.locfileid: "66067873"
  選取包含此資料分割之來源資料表的資料來源或資料來源檢視。 依預設，會選取所選量值群組使用的資料來源檢視。  
   
  **篩選資料表**  
- 輸入用於 (依資料表名稱) 限制 [可用的資料表] 中顯示之資料表的字串。  
+ 輸入用於 (依資料表名稱) 限制 [可用的資料表]  中顯示之資料表的字串。  
   
  **尋找資料表**  
- 選取即可重新整理 [可用的資料表] 中的資料表清單，如果在 [篩選資料表] 中指定了字串，就可以進一步限制清單。  
+ 選取即可重新整理 [可用的資料表]  中的資料表清單，如果在 [篩選資料表]  中指定了字串，就可以進一步限制清單。  
   
  **可用的資料表**  
  按一下即可選取資料表，用來作為資料分割的來源資料表。  

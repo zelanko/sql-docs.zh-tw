@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 311285545abae9ae9f80b264204b88485aac71aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205712"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>升級舊版的資料庫圖表 (Visual Database Tools)
@@ -34,7 +34,7 @@ ms.locfileid: "63205712"
   
 2.  在資料庫中展開 [資料庫圖表] 節點。  
   
-3.  如果您要設定資料庫圖表化，可在提示出現時選取 [是]。  
+3.  如果您要設定資料庫圖表化，可在提示出現時選取 [是]  。  
   
      這樣將會升級資料庫上預存的圖表。  
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1ca87fc977ee97900be9e821cab4918064c7a44
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788004"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>檢視可用性複本屬性 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62788004"
   
 3.  展開可用性複本所屬的可用性群組，然後展開 **[可用性複本]** 節點。  
   
-4.  以滑鼠右鍵按一下要檢視其屬性的可用性複本，然後選取 [屬性] 命令。  
+4.  以滑鼠右鍵按一下要檢視其屬性的可用性複本，然後選取 [屬性]  命令。  
   
 5.  在 **[可用性複本屬性]** 對話方塊中，使用 **[一般]** 頁面檢視此複本的屬性。 如果您連接至主要複本，可以變更下列屬性：可用性模式、容錯移轉模式、主要角色的連接存取、次要角色的唯讀存取 (可讀取的次要)，以及工作階段逾時值。 如需詳細資訊，請參閱 <<c0> [ 可用性複本屬性&#40;一般頁面&#41;](availability-replica-properties-general-page.md)。</c0>  
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9153a2d07653872ca6ce1f90e39c90f32da21fba
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082516"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>資料來源檢視設計工具 (Analysis Services - 多維度資料)
@@ -28,9 +28,9 @@ ms.locfileid: "66082516"
   
  若要開啟 **[資料來源檢視設計工具]** ：  
   
--   在方案總管中按兩下資料來源檢視。  
+-   在方案總管  中按兩下資料來源檢視。  
   
--   以滑鼠右鍵按一下方案總管中的資料來源檢視，然後選取 [開啟] 或 [檢視表設計工具]。  
+-   以滑鼠右鍵按一下方案總管  中的資料來源檢視，然後選取 [開啟]  或 [檢視表設計工具]  。  
   
  **[資料來源檢視設計工具]** 包含工具列、顯示 DSV 物件和關聯性的圖表、按照字母順序列出資料表和具名查詢的資料表窗格，以及用來建立及檢視 DSV 的特定圖表的 [圖表組合管理] 窗格。 您可以用滑鼠右鍵按一下資料表或關聯性，存取內容相關的命令。  
   

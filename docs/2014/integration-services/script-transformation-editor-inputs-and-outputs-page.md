@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 33ad9ddda5b40abaafddbd6e31272ece1f8edaee
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056069"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>指令碼轉換編輯器 (輸入及輸出頁面)
@@ -41,13 +41,13 @@ ms.locfileid: "66056069"
  將其他輸出加入到清單中。  
   
  **加入資料行**  
- 選取要放置新輸出資料行的資料夾，再按一下 [加入資料行] 將其加入。  
+ 選取要放置新輸出資料行的資料夾，再按一下 [加入資料行]  將其加入。  
   
  **移除輸出**  
- 選取輸出，然後按一下 [移除輸出] 將它移除。  
+ 選取輸出，然後按一下 [移除輸出]  將它移除。  
   
  **移除資料行**  
- 選取資料行，然後按一下 [移除資料行] 將它移除。  
+ 選取資料行，然後按一下 [移除資料行]  將它移除。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

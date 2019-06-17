@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 285ee82110ffdef521d75fb43343f4889663e981
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62822629"
 ---
 # <a name="adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>將新模型加入至目標郵寄結構 (基本資料採礦教學課程)

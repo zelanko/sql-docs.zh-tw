@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c300945fee14b353e5c3be1b42a59440bdbfd4dd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109042"
 ---
 # <a name="html-device-information-settings"></a>HTML 裝置資訊設定
@@ -28,7 +28,7 @@ ms.locfileid: "66109042"
   
 |設定|值|  
 |-------------|-----------|  
-|`AccessibleTablix`|指出是否要使用其他可存取性中繼資料來轉譯，以搭配螢幕助讀員使用。 這個參數只適用於包含簡單資料表或是具有簡單群組之矩陣結構的報表。 預設值是 `false`。 其他可存取性中繼資料會使得轉譯的報表與下列文件內的技術標準相容：＜Electronic and Information Technology Accessibility Standards＞文件 (章節 508) 的＜Web-based Intranet and Internet Information and Applications＞章節 (1194.22)。<br /><br /> (g) 應該針對資料表識別資料列和資料行標頭。<br /><br /> (h) 如果資料表具有兩個或多個邏輯層的資料列或資料行標頭，應該使用標記來讓資料格與標頭資料格產生關聯。<br /><br /> (i) 框架的標頭應該包含文字，該文字有助於識別框架和導覽。<br /><br />  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[SPS2010](../includes/sps2010-md.md)]中支援這個參數，但 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2007](../includes/sps2007-md.md)]則否。|  
+|`AccessibleTablix`|指出是否要使用其他可存取性中繼資料來轉譯，以搭配螢幕助讀員使用。 這個參數只適用於包含簡單資料表或是具有簡單群組之矩陣結構的報表。 預設值是 `false`。 其他可存取性中繼資料會使得轉譯的報表與下列文件內的技術標準相容：＜Electronic and Information Technology Accessibility Standards＞文件 (章節 508) 的＜Web-based Intranet and Internet Information and Applications＞章節 (1194.22)。<br /><br /> (g) 應該針對資料表識別資料列和資料行標頭。<br /><br /> (h) 如果資料表具有兩個或多個邏輯層的資料列或資料行標頭，應該使用標記來讓資料格與標頭資料格產生關聯。<br /><br /> (i) 框架的標頭應該包含文字，該文字有助於識別框架和導覽。<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[SPS2010](../includes/sps2010-md.md)]中支援這個參數，但 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2007](../includes/sps2007-md.md)]則否。|  
 |**ActionScript(\*)**|指定發生動作事件 (例如鑽研或書籤點擊) 時所要使用之 JavaScript 函數的名稱。 如果指定這個參數，動作事件便會觸發具名 JavaScript 函數，而非回傳至伺服器。|  
 |**BookmarkID**|跳到報表中的書籤識別碼。|  
 |**DocMap**|指出是否要顯示或隱藏報表文件引導模式。 此參數的預設值為 `true`。|  
@@ -51,7 +51,7 @@ ms.locfileid: "66109042"
 |`Toolbar`|指出是否要顯示或隱藏工具列。 這個參數的預設值為 `true`。 如果這個參數的值為 `false`，則會忽略所有剩餘的選項 (文件引導模式除外)。 如果您省略這個參數，工具列就會自動顯示以轉譯支援該參數的格式。<br /><br /> 當您使用 URL 存取來轉譯報表時，會轉譯報表檢視器工具列。 工具列不是透過 SOAP API 來轉譯。 不過，`Toolbar` 裝置資訊設定會影響使用 SOAP `Render` 方法時顯示報表的方式。 如果此參數值在使用 SOAP 轉譯為 HTML 時為 `true`，則會轉譯報表的第一個區段。 如果值是 `false`，則會將整個 HTML 報表轉譯為單一 HTML 頁面。|  
 |`UserAgent`|提出要求之瀏覽器的 `user-agent` 字串，該字串可在 HTTP 要求中找到。|  
 |**Zoom (\*)**|報表縮放值，以整數百分比或字串常數表示。 標準字串值包括 `Page Width` 和 `Whole Page`。 Internet Explorer 5.0 之前的 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 版本和所有非[!INCLUDE[msCoName](../includes/msconame-md.md)] 瀏覽器都會忽略這個參數。 此參數的預設值為 `100`。|  
-|**DataVisualizationFitSizing**|指示資料在 Tablix 內的視覺效果調整行為。 其中包括圖表、量測計和地圖。<br /><br /> 可能的值為 **[近似]** 和 **[精確]**。<br /><br /> 預設值為 **[近似]**。 如果從 **rsreportserver.config** 檔案中移除此設定，則預設行為是 **[精確]**。<br /><br /> 啟用 **[精確]** 可能會影響效能，因為判斷精確大小的處理所花的時間可能會比較長。|  
+|**DataVisualizationFitSizing**|指示資料在 Tablix 內的視覺效果調整行為。 其中包括圖表、量測計和地圖。<br /><br /> 可能的值為 **[近似]** 和 **[精確]** 。<br /><br /> 預設值為 **[近似]** 。 如果從 **rsreportserver.config** 檔案中移除此設定，則預設行為是 **[精確]** 。<br /><br /> 啟用 **[精確]** 可能會影響效能，因為判斷精確大小的處理所花的時間可能會比較長。|  
   
 ## <a name="see-also"></a>另請參閱  
  [將裝置資訊設定傳遞至轉譯延伸模組](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   

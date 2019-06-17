@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 97964286b3281eee4e5b6850065c85034628bfdc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62994317"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
@@ -46,7 +46,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>引數  
 `[ @dbname = ] 'dbname'` 指定要驗證的資料庫。 *dbname*已**sysname**。  
   
-`[ @autofix = ] 'auto'` 資料庫和所有資料庫物件的擁有權提供給系統管理員，並卸除任何使用者建立的資料庫使用者和非預設權限。 *自動*已**nvarchar(4)**，預設值是 NULL。  
+`[ @autofix = ] 'auto'` 資料庫和所有資料庫物件的擁有權提供給系統管理員，並卸除任何使用者建立的資料庫使用者和非預設權限。 *自動*已**nvarchar(4)** ，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

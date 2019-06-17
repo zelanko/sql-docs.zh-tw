@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4e4679a6022a37a72ce7083d3467bbbccd69f45
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010172"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>啟用 FileTable 的必要條件
@@ -82,7 +82,7 @@ GO
     ```  
   
  **使用 SQL Server Management Studio 指定非交易式存取的層級**  
- 在 [資料庫屬性] 對話方塊中，您可以透過 [選項] 頁面的 [FILESTREAM 非交易式存取] 欄位，來指定非交易式存取的層級。 如需此對話方塊的詳細資訊，請參閱[資料庫屬性 &#40;選項頁面&#41;](../databases/database-properties-options-page.md)。  
+ 在 [資料庫屬性]  對話方塊中，您可以透過 [選項]  頁面的 [FILESTREAM 非交易式存取]  欄位，來指定非交易式存取的層級。 如需此對話方塊的詳細資訊，請參閱[資料庫屬性 &#40;選項頁面&#41;](../databases/database-properties-options-page.md)。  
   
 ##  <a name="BasicsDirectory"></a> 在資料庫層級指定 FileTable 的目錄  
  當您在資料庫層級啟用檔案的非交易式存取時，可以選擇性地使用 **DIRECTORY_NAME** 選項，一併提供目錄名稱。 如果您在啟用非交易式存取時沒有提供目錄名稱，則之後必須先提供此名稱，然後才能在資料庫中建立 FileTable。  
@@ -126,7 +126,7 @@ GO
     ```  
   
  **使用 SQL Server Management Studio 指定 FileTable 的目錄**  
- 在 [資料庫屬性] 對話方塊中，您可以透過 [選項] 頁面的 [FILESTREAM 目錄名稱] 欄位，來指定目錄名稱。 如需此對話方塊的詳細資訊，請參閱[資料庫屬性 &#40;選項頁面&#41;](../databases/database-properties-options-page.md)。  
+ 在 [資料庫屬性]  對話方塊中，您可以透過 [選項]  頁面的 [FILESTREAM 目錄名稱]  欄位，來指定目錄名稱。 如需此對話方塊的詳細資訊，請參閱[資料庫屬性 &#40;選項頁面&#41;](../databases/database-properties-options-page.md)。  
   
 ###  <a name="viewnames"></a> 如何：檢視執行個體的現有目錄名稱  
  若要檢視執行個體的現有目錄名稱清單，請查詢 [sys.database_filestream_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql) 目錄檢視，並檢查 **filestream_database_directory_name** 資料行。  

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27095834c7f3b863bbc1a4f330898790cf467ec6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62699219"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>邏輯架構概觀 (Analysis Services - 多維度資料)
@@ -89,7 +89,7 @@ ms.locfileid: "62699219"
 |||3rd quarter|6119|1444|4675|Sep-30-99|Sep-18-99 之間|Sep-30-99|  
 |||4th quarter|7818|2126|5692|Dec-29-99|Dec-22-99|Dec-29-99|  
   
- 定義 Cube 之後，您可以建立新的彙總，或變更現有的彙總以設定選項 (例如，在查詢的處理或計算期間，是否要預先計算彙總)。 **相關的主題：**[彙總及彙總設計](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
+ 定義 Cube 之後，您可以建立新的彙總，或變更現有的彙總以設定選項 (例如，在查詢的處理或計算期間，是否要預先計算彙總)。 **相關的主題：** [彙總及彙總設計](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
   
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>對應量值、屬性和階層  
  範例 Cube 的量值、屬性和階層都是衍生自 Cube 事實和維度資料表的下列資料行。  
@@ -101,7 +101,7 @@ ms.locfileid: "62699219"
 |Route 維度中的 Route 類別層級|nonground,ground|RouteDimensionTable|Route_Category|Nonground|  
 |Route 維度的 Route 屬性|air,sea,road,rail|RouteDimensionTable|路由|Sea|  
 |Source 維度的 Hemisphere 屬性|Eastern Hemisphere,Western Hemisphere|SourceDimensionTable|Hemisphere|Eastern Hemisphere|  
-|Source 維度的 Continent 屬性|Africa,Asia,AustraliaEurope,N.  America,S.  America|SourceDimensionTable|Continent|Europe|  
+|Source 維度的 Continent 屬性|Africa,Asia,AustraliaEurope,N. America,S. America|SourceDimensionTable|Continent|Europe|  
 |Time 維度的 Half 屬性|1st half,2nd half|TimeDimensionTable|Half|2nd half|  
 |Time 維度的 Quarter 屬性|1st quarter,2nd quarter,3rd quarter,4th quarter|TimeDimensionTable|Quarter|3rd quarter|  
   
@@ -119,9 +119,9 @@ ms.locfileid: "62699219"
   
  上表中，每個資料列都有相同的值**RouteKey**， **SourceKey**，並**TimeKey**資料行，表示這些資料列會參與相同的 cube 資料格。  
   
- 此處所顯示的範例代表極簡單的 Cube，而在該範例中，Cube 含有單一量值群組，且所有維度資料表都是以星狀結構描述來聯結至事實資料表。 另一個通用結構描述是雪花式結構描述，其中一或多份維度資料表會聯結至另一份維度資料表，而不是直接聯結至事實資料表。 **相關的主題：**[維度&#40;Analysis Services-多維度資料&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)。  
+ 此處所顯示的範例代表極簡單的 Cube，而在該範例中，Cube 含有單一量值群組，且所有維度資料表都是以星狀結構描述來聯結至事實資料表。 另一個通用結構描述是雪花式結構描述，其中一或多份維度資料表會聯結至另一份維度資料表，而不是直接聯結至事實資料表。 **相關的主題：** [維度&#40;Analysis Services-多維度資料&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)。  
   
- 此處所顯示的範例只包含單一事實資料表。 當 Cube 具有多份事實資料表時，會將每份事實資料表的量值組成量值群組，並根據定義的維度關聯性讓量值群組與特定的維度集產生關聯。 而透過指定資料來源檢視的參與資料表和關聯性的資料粒度，即可建立這些關聯性。 **相關的主題：**[維度關聯性](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
+ 此處所顯示的範例只包含單一事實資料表。 當 Cube 具有多份事實資料表時，會將每份事實資料表的量值組成量值群組，並根據定義的維度關聯性讓量值群組與特定的維度集產生關聯。 而透過指定資料來源檢視的參與資料表和關聯性的資料粒度，即可建立這些關聯性。 **相關的主題：** [維度關聯性](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型資料庫 &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  
