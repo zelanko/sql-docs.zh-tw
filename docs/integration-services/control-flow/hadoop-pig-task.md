@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4991fd3ad95a633881099b9677c9db55935f6a13
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727602"
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig 工作
@@ -27,12 +27,12 @@ ms.locfileid: "65727602"
 
   使用 Hadoop Pig 工作在 Hadoop 叢集上執行 Pig 指令碼。  
   
- 若要加入 Hadoop Pig 工作，請將其拖放至設計工具。 然後按兩下工作，或按一下滑鼠右鍵並按一下 [編輯]，以查看 [Hadoop Pig 工作編輯器] 對話方塊。  
+ 若要加入 Hadoop Pig 工作，請將其拖放至設計工具。 然後按兩下工作，或按一下滑鼠右鍵並按一下 [編輯]  ，以查看 [Hadoop Pig 工作編輯器]  對話方塊。  
   
  ![Hadoop Pig 工作編輯器](../../integration-services/control-flow/media/hadoop-pig-task.png "Hadoop Pig 工作編輯器")  
   
 ## <a name="options"></a>選項。  
- 在 [Hadoop Pig 工作編輯器] 對話方塊中設定下列選項。  
+ 在 [Hadoop Pig 工作編輯器]  對話方塊中設定下列選項。  
   
 |欄位|Description|  
 |-----------|-----------------|  

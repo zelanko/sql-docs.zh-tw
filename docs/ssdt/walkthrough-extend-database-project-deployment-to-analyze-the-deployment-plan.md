@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 13e2b010a193e8c610c54a5b619d8a67c9b4d2d3
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097461"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>逐步解說：擴充資料庫專案部署以分析部署計劃
@@ -60,11 +60,11 @@ ms.locfileid: "65097461"
   
 2.  將 "Class1.cs" 檔案重新命名為 "DeploymentUpdateReportContributor.cs"。  
   
-3.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後按一下 [新增參考]。  
+3.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後按一下 [新增參考]  。  
   
-4.  選取 [Framework] 索引標籤上的 [System.ComponentModel.Composition]。  
+4.  選取 [Framework] 索引標籤上的 [System.ComponentModel.Composition]  。  
   
-5.  加入必要的 SQL 參考：以滑鼠右鍵按一下專案節點，然後按一下 [加入參考]。 按一下 [瀏覽] 並巡覽至 **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** 資料夾。 選擇 **Microsoft.SqlServer.Dac.dll**、**Microsoft.SqlServer.Dac.Extensions.dll** 和 **Microsoft.Data.Tools.Schema.Sql.dll** 項目，按一下 [加入]，然後按一下 [確定]。  
+5.  加入必要的 SQL 參考：以滑鼠右鍵按一下專案節點，然後按一下 [加入參考]  。 按一下 [瀏覽]  並巡覽至 **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** 資料夾。 選擇 **Microsoft.SqlServer.Dac.dll**、**Microsoft.SqlServer.Dac.Extensions.dll** 和 **Microsoft.Data.Tools.Schema.Sql.dll** 項目，按一下 [加入]  ，然後按一下 [確定]  。  
   
     下一步，開始將程式碼加入至類別。  
   
@@ -534,19 +534,19 @@ ms.locfileid: "65097461"
   
 #### <a name="to-sign-and-build-the-assembly"></a>若要簽署和建置組件  
   
-1.  按一下 [專案] 功能表上的 [MyDeploymentContributor 屬性]。  
+1.  按一下 [專案]  功能表上的 [MyDeploymentContributor 屬性]  。  
   
 2.  按一下 [ **簽署** ] 索引標籤。  
   
 3.  按一下 [ **簽署組件**]。  
   
-4.  在 [選擇強式名稱金鑰檔案] 中，按一下 **<New>**。  
+4.  在 [選擇強式名稱金鑰檔案]  中，按一下 **<New>** 。  
   
 5.  在 [ **建立強式名稱金鑰** ] 對話方塊中的 [ **金鑰檔名稱**]，輸入 **MyRefKey**。  
   
 6.  (選擇性) 您可以為強式名稱金鑰檔指定密碼。  
   
-7.  按一下 [確定] 。  
+7.  按一下 [確定]  。  
   
 8.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   

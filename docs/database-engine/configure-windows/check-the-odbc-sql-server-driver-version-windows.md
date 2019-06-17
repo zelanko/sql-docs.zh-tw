@@ -16,10 +16,10 @@ ms.author: mikeray
 manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: fb6646d96991785b7c94a48ad4601fdcc6e35b60
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66799546"
 ---
 # <a name="check-the-odbc-sql-server-driver-version-windows"></a>檢查 ODBC SQL Server 驅動程式版本 (Windows)
