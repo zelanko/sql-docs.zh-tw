@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac041e19aeb5948a644a9fcf82b3e687472b7259
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468291"
 ---
 # <a name="simulating-an-exists-clause-in-a-natively-compiled-stored-procedure"></a>在原生編譯預存程序中模擬 EXISTS 子句

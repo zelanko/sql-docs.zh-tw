@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9032249e880f11f27edd53e23d4ca54a47b920db
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087144"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>連接到 Azure SQL 資料庫 (SSAS)
-  [資料表匯入精靈] 的這個頁面可讓您連接到 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
+  [資料表匯入精靈]  的這個頁面可讓您連接到 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]** 。  
   
 > [!NOTE]  
 >  如果您要連接到 Azure DataMarket 資料集，請參閱[連接到報表或資料摘要 &#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md)。  

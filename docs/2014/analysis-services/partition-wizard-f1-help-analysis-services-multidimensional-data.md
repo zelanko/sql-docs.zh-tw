@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 86976ac183fc592deab50ebdf5599ef3e7231c28
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072126"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>資料分割精靈 F1 說明 (Analysis Services - 多維度資料)
   您可以使用資料分割精靈來定義 Cube 中之量值群組的資料分割。 依預設，會為 Cube 中的每一個量值群組定義單一資料分割。 但是，大型的資料分割會使存取和處理效能降低。 藉由建立多個分割區，每一個分割區包含量值群組的一部份資料，這樣可以增進該量值群組的存取和處理效能。  
   
 > [!CAUTION]  
->  建立的資料分割中，可能會因為 [指定來源資訊] 或 [限制資料列] 頁面中包含了重複的資料列，而含有不正確的資料。  
+>  建立的資料分割中，可能會因為 [指定來源資訊]  或 [限制資料列]  頁面中包含了重複的資料列，而含有不正確的資料。  
   
  分割區精靈會引導您完成下列步驟：  
   

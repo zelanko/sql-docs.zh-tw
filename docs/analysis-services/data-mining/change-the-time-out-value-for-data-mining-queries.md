@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c67744ea3862185b59d1a0af3e1bb144eba57e23
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62670977"
 ---
 # <a name="change-the-time-out-value-for-data-mining-queries"></a>針對資料採礦查詢變更逾時值
@@ -26,9 +26,9 @@ ms.locfileid: "62670977"
   
 ### <a name="configure-the-time-out-value-for-data-mining-queries"></a>設定資料採礦查詢的逾時值  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，從 **[工具]** 功能表選取 **[選項]**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，從 **[工具]** 功能表選取 **[選項]** 。  
   
-2.  在 **[選項]** 窗格中，展開 **[商業智慧設計師]**。  
+2.  在 **[選項]** 窗格中，展開 **[商業智慧設計師]** 。  
   
 3.  按一下 **[查詢逾時]** 文字方塊，並輸入秒數的值。  
   

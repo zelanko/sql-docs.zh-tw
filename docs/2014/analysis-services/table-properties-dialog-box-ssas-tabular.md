@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6874d2fc2fd0206e7fe61d4e217820b4171a13e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067845"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>資料表屬性對話方塊 (SSAS - 表格式)
   使用 **中的** [資料表屬性] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可檢視表格式模型資料庫中資料表的屬性。 所有屬性都是唯讀的。  
   
- 您可以用滑鼠右鍵按一下物件總管中的資料表，然後選取 [屬性]，藉以顯示 [資料表屬性] 對話方塊。  
+ 您可以用滑鼠右鍵按一下物件總管中的資料表，然後選取 [屬性]  ，藉以顯示 [資料表屬性]  對話方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  

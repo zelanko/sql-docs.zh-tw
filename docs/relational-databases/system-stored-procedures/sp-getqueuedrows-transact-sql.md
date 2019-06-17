@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fa6ce6b4e0d1c3fbefe7256f3ca96c84d59e664d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62500425"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
@@ -44,7 +44,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
   
 `[ @owner = ] 'owner'` 是訂用帳戶擁有者。 *擁有者*已**sysname**，預設值是 NULL。  
   
-`[ @tranid = ] 'transaction_id'` 可讓交易識別碼。 所要篩選輸出 *transaction_id*已**nvarchar(70)**，預設值是 NULL。 如果指定的話，便會顯示佇列命令的相關聯交易識別碼。 如果是 NULL，便會顯示佇列中的所有命令。  
+`[ @tranid = ] 'transaction_id'` 可讓交易識別碼。 所要篩選輸出 *transaction_id*已**nvarchar(70)** ，預設值是 NULL。 如果指定的話，便會顯示佇列命令的相關聯交易識別碼。 如果是 NULL，便會顯示佇列中的所有命令。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

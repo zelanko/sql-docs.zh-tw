@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1181ab030078b0f7ba61a72448991ed677e22d76
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62636158"
 ---
 # <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
@@ -57,7 +57,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|伺服器|**sysname**|本機伺服器上定義之遠端伺服器的名稱。|  
+|server|**sysname**|本機伺服器上定義之遠端伺服器的名稱。|  
 |local_user_name|**sysname**|來自伺服器的遠端登入所對應之本機伺服器的登入。|  
 |remote_user_name|**sysname**|對應至 local_user_name 遠端伺服器上的登入。|  
 |選項|**sysname**|信任 = 從遠端伺服器連接到本機伺服器時，遠端登入無需提供密碼。<br /><br /> 未受信任 (或空白) = 從遠端伺服器連接到本機伺服器時，會提示遠端登入輸入密碼。|  

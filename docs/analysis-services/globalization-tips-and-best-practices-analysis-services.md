@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57031c75e9433981b45419348ab2d5c0745edbfd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659479"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>全球化秘訣和最佳作法 (Analysis Services)
@@ -85,7 +85,7 @@ ms.locfileid: "62659479"
   
 -   將 `Locale Identifier=1036` 新增至連接字串。 儲存並關閉檔案。  
   
--   開啟 Excel | [資料] | [現有連接]。 將清單篩選到只剩下這部電腦上的連接檔案。 尋找 Adventure Works 的連接 (請仔細查看名稱；您可能會有一個以上的連接)。 開啟連接。  
+-   開啟 Excel | [資料]   | [現有連接]  。 將清單篩選到只剩下這部電腦上的連接檔案。 尋找 Adventure Works 的連接 (請仔細查看名稱；您可能會有一個以上的連接)。 開啟連接。  
   
      您應該會看到 Adventure Works 範例資料庫中的法文翻譯。  
   
@@ -95,9 +95,9 @@ ms.locfileid: "62659479"
   
  在 Management Studio 中，您可以指定伺服器連接的地區設定識別碼。  
   
--   在物件總管 中，選取 [連接]  |  | ，然後按一下 [其他連接參數] **Additional ion Parameters** 索引標籤。  
+-   在物件總管 中，選取 [連接]   |    |   ，然後按一下 [其他連接參數] **Additional ion Parameters** 索引標籤。  
   
--   輸入 `Local Identifier=1036` ，然後按一下 [連接] 。  
+-   輸入 `Local Identifier=1036` ，然後按一下 [連接]  。  
   
 -   對 Adventure Works 資料庫執行 MDX 查詢。 查詢結果應該是法文翻譯。  
   

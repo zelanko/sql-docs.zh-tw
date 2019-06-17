@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d5e85a3685804fa834c9a92887a46c72b7cb69a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62811312"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>預設追蹤已啟用伺服器組態選項
@@ -49,7 +49,7 @@ GO
 ## <a name="configuring"></a>進行設定  
  設為 1 時， **default trace enabled** 選項會啟用 **「預設的追蹤」** 功能。 這個選項的預設值是 1 (ON)。 設為 0 則會關閉追蹤功能。  
   
- **default trace enabled** 屬於進階選項。 如果您要使用 **sp_configure** 系統預存程序來變更設定，只有在 [顯示進階選項] 設定為 1 時，才能變更 [預設追蹤已啟用] 選項。 設定會立即生效，伺服器不必重新啟動。  
+ **default trace enabled** 屬於進階選項。 如果您要使用 **sp_configure** 系統預存程序來變更設定，只有在 [顯示進階選項]  設定為 1 時，才能變更 [預設追蹤已啟用]  選項。 設定會立即生效，伺服器不必重新啟動。  
   
 ## <a name="see-also"></a>另請參閱  
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1a8c9ab517d1f6a122144604d6b147e6f5eeaf6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62650883"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
@@ -46,9 +46,9 @@ ms.locfileid: "62650883"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後按一下 [屬性]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後按一下 [屬性]  。  
   
-3.  選取 [記錄] 頁面，然後確認已選取 [限制作業記錄大小]。  
+3.  選取 [記錄]  頁面，然後確認已選取 [限制作業記錄大小]  。  
   
 4.  在 **[最大作業記錄大小]** 方塊中，輸入作業記錄所允許的最大資料列數。  
   
@@ -58,10 +58,10 @@ ms.locfileid: "62650883"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後按一下 [屬性]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後按一下 [屬性]  。  
   
-3.  選取 **[記錄]** 頁面，然後按一下 **[自動移除代理程式記錄]**。  
+3.  選取 **[記錄]** 頁面，然後按一下 **[自動移除代理程式記錄]** 。  
   
-4.  選取適當的 [天]、[週] 或 [月] 數。  
+4.  選取適當的 [天]  、[週]  或 [月]  數。  
   
   

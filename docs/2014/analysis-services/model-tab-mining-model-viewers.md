@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077615"
 ---
 # <a name="model-tab-mining-model-viewers"></a>模型索引標籤 (採礦模型檢視器)
-  Microsoft 時間序列檢視器中的 [模型] 索引標籤會將時間序列的表示顯示為圖形中的節點，這與決策樹模型中採用的方式類似。  
+  Microsoft 時間序列檢視器中的 [模型]  索引標籤會將時間序列的表示顯示為圖形中的節點，這與決策樹模型中採用的方式類似。  
   
  使用此時間序列模型檢視可擷取有關時間序列分析的有用資訊，包括圖形的方程式、ARIMA 詞彙和係數。  
   
- **如需詳細資訊：**[Microsoft 時間序列演算法](data-mining/microsoft-time-series-algorithm.md)，[瀏覽模型，使用 Microsoft 時間序列檢視器](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)， [Microsoft 時間序列演算法](data-mining/microsoft-time-series-algorithm.md)  
+ **如需詳細資訊：** [Microsoft 時間序列演算法](data-mining/microsoft-time-series-algorithm.md)，[瀏覽模型，使用 Microsoft 時間序列檢視器](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)， [Microsoft 時間序列演算法](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -34,7 +34,7 @@ ms.locfileid: "66077615"
  選擇要檢視的採礦模型。 採礦模型會在其關聯的檢視器中開啟。  
   
  **Viewer**  
- 選擇用來瀏覽選取之採礦模型的檢視器。 您可以使用此模型類型的自訂檢視器，或 [Microsoft 一般內容樹狀檢視器]。 還可以使用外掛程式檢視器 (如果有)。  
+ 選擇用來瀏覽選取之採礦模型的檢視器。 您可以使用此模型類型的自訂檢視器，或 [Microsoft 一般內容樹狀檢視器]  。 還可以使用外掛程式檢視器 (如果有)。  
   
  **放大**  
  放大圖表。  

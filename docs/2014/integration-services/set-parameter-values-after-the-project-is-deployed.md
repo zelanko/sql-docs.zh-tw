@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 910de9d388e60ae3664153e2f6cb3bb5203b289c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055783"
 ---
 # <a name="set-parameter-values-after-the-project-is-deployed"></a>部署專案之後設定參數值
@@ -22,13 +22,13 @@ ms.locfileid: "66055783"
   
 ### <a name="to-set-server-defaults-with-ssms-object-explorer"></a>若要使用 SSMS 物件總管來設定伺服器預設值，請執行下列作業：  
   
-1.  選取並以滑鼠右鍵按一下 [Integration Services] 節點底下的專案。  
+1.  選取並以滑鼠右鍵按一下 [Integration Services]  節點底下的專案。  
   
 2.  按一下 **[屬性]** ，以開啟 **[專案屬性]** 對話方塊視窗。  
   
-3.  按一下 **[選取頁面]** 底下的 **[參數]**，以開啟參數頁面。  
+3.  按一下 **[選取頁面]** 底下的 **[參數]** ，以開啟參數頁面。  
   
-4.  在 **[參數]** 清單選取所需的參數。 注意:[容器] 資料行有助於區分專案參數與封裝參數。  
+4.  在 **[參數]** 清單選取所需的參數。 注意:[容器]  資料行有助於區分專案參數與封裝參數。  
   
 5.  在 **[值]** 資料行中，指定所需的伺服器預設參數值。  
   

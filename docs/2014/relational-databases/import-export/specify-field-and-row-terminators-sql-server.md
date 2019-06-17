@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011849"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定欄位與資料列結束字元 (SQL Server)
-  針對字元資料欄位，選擇性結束字元可讓您使用「欄位結束字元」標示資料檔案中每個欄位的結尾，並使用「資料列結束字元」標示每個資料列的結尾。 結束字元是指示程式從欄位或資料列結束與開始的交接處讀取資料檔的一種方法。  
+  針對字元資料欄位，選擇性結束字元可讓您使用「欄位結束字元」  標示資料檔案中每個欄位的結尾，並使用「資料列結束字元」  標示每個資料列的結尾。 結束字元是指示程式從欄位或資料列結束與開始的交接處讀取資料檔的一種方法。  
   
 > [!IMPORTANT]  
 >  在使用原生或 Unicode 原生格式時，請使用長度前置詞，而不使用欄位結束字元。 由於原生格式資料檔案存放格式為 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的內部二進位資料格式，因此原生格式資料可能會與結束字元相衝突。  
@@ -67,12 +67,12 @@ ms.locfileid: "66011849"
   
     -   使用 **-t** 參數，對資料列中最後一個欄位以外的所有欄位，指定資料列結束字元，並使用 **-r** 參數指定資料列結束字元。  
   
-    -   使用字元格式參數 (**-c** 或 **-w**) 但不使用 **-t** 參數，會將欄位結束字元設定為定位字元 \t。 這與指定 **-t**\t 相同。  
+    -   使用字元格式參數 ( **-c** 或 **-w**) 但不使用 **-t** 參數，會將欄位結束字元設定為定位字元 \t。 這與指定 **-t**\t 相同。  
   
         > [!NOTE]  
         >  如果您指定 **-n** (原生資料) 或 **-N** (Unicode 原生) 參數，則不會插入結束字元。  
   
-    -   如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但不使用格式檔案參數 (**-f**) 或資料格式參數 (**-n**、 **-c**、 **-w**，或 **-N**)，而且您選擇不指定前置長度與欄位長度，則該命令會提示輸入每個欄位的欄位結束字元 (預設是無)：  
+    -   如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但不使用格式檔案參數 ( **-f**) 或資料格式參數 ( **-n**、 **-c**、 **-w**，或 **-N**)，而且您選擇不指定前置長度與欄位長度，則該命令會提示輸入每個欄位的欄位結束字元 (預設是無)：  
   
          `Enter field terminator [none]:`  
   
@@ -127,8 +127,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualifier|描述|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **='*`field_terminator`*'**|指定要用於字元和 Unicode 字元資料檔中的欄位結束字元。<br /><br /> 預設值是 \t (定位字元)。|  
-    |ROWTERMINATOR **='*`row_terminator`*'**|指定要用於字元和 Unicode 字元資料檔中的資料列結束字元。<br /><br /> 預設值是 \n (新行字元)。|  
+    |FIELDTERMINATOR **=' *`field_terminator`* '**|指定要用於字元和 Unicode 字元資料檔中的欄位結束字元。<br /><br /> 預設值是 \t (定位字元)。|  
+    |ROWTERMINATOR **=' *`row_terminator`* '**|指定要用於字元和 Unicode 字元資料檔中的資料列結束字元。<br /><br /> 預設值是 \n (新行字元)。|  
   
      如需詳細資訊，請參閱 [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)。  
   
@@ -170,8 +170,8 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 |選項|屬性|  
 |------------|---------------|  
 |DATAFILETYPE **='`char`'**|指定以字元資料載入資料欄位。|  
-|FIELDTERMINATOR **='**`,`**'**|指定逗號 (`,`) 作為欄位結束字元。|  
-|ROWTERMINATOR **='**`\n`**'**|指定資料列結束字元為新行字元。|  
+|FIELDTERMINATOR **='** `,` **'**|指定逗號 (`,`) 作為欄位結束字元。|  
+|ROWTERMINATOR **='** `\n` **'**|指定資料列結束字元為新行字元。|  
   
  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 查詢編輯器中，執行下列程式碼：  
   

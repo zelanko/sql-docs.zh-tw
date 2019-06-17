@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1e63cee642738036933b0a1e2a9da6b48192fba9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62676635"
 ---
 # <a name="snapshot-agent-security"></a>快照集代理程式安全性
@@ -35,7 +35,7 @@ ms.locfileid: "62676635"
   
  所有帳戶都必須有效，並且每個帳戶皆有指定正確的密碼。 等到代理程式執行時，才會驗證帳戶與密碼。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Process account**  
  輸入在散發者端執行快照集代理程式的 Windows 帳戶。 您指定的 Windows 帳戶必須：  
   

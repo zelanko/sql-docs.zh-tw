@@ -23,10 +23,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e822f034ff4af30fc2d8c6992544b65aaea865e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632301"
 ---
 # <a name="syssysobjects-transact-sql"></a>sys.sysobjects (Transact-SQL)
@@ -52,7 +52,7 @@ ms.locfileid: "62632301"
 |ftcatid|**smallint**|登錄了全文檢索索引的所有使用者資料表之全文檢索目錄識別碼，所有未登錄的使用者資料表都是 0。|  
 |schema_ver|**int**|每次資料表的結構描述變更時，都會遞增的版本號碼。 永遠傳回 0。|  
 |stats_schema_ver|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|型別|**char(2)**|物件類型。 可為下列其中一個值：<br /><br /> AF = 彙總函式 (CLR)<br /><br /> C = CHECK 條件約束<br /><br /> D = 預設值或 DEFAULT 條件約束<br /><br /> F = FOREIGN KEY 條件約束<br /><br /> FN = 純量函數<br /><br /> FS = 組件 (CLR) 純量函數<br /><br /> FT = 組件 (CLR) 資料表值函式 IF = 內嵌資料表函數<br /><br /> IT - 內部資料表<br /><br /> K = PRIMARY KEY 或 UNIQUE 條件約束<br /><br /> L = 記錄<br /><br /> P = 預存程序<br /><br /> PC = 組件 (CLR) 預存程序<br /><br /> R = 規則<br /><br /> RF = 複寫篩選預存程序<br /><br /> S = 系統資料表<br /><br /> SN = 同義字<br /><br /> SQ = 服務佇列<br /><br /> TA = 組件 (CLR) DML 觸發程序<br /><br /> TF = 資料表函數<br /><br /> TR = SQL DML 觸發程序<br /><br /> TT = 資料表類型<br /><br /> U = 使用者資料表<br /><br /> V = 檢視<br /><br /> X = 擴充預存程序|  
+|type|**char(2)**|物件類型。 可為下列其中一個值：<br /><br /> AF = 彙總函式 (CLR)<br /><br /> C = CHECK 條件約束<br /><br /> D = 預設值或 DEFAULT 條件約束<br /><br /> F = FOREIGN KEY 條件約束<br /><br /> FN = 純量函數<br /><br /> FS = 組件 (CLR) 純量函數<br /><br /> FT = 組件 (CLR) 資料表值函式 IF = 內嵌資料表函數<br /><br /> IT - 內部資料表<br /><br /> K = PRIMARY KEY 或 UNIQUE 條件約束<br /><br /> L = 記錄<br /><br /> P = 預存程序<br /><br /> PC = 組件 (CLR) 預存程序<br /><br /> R = 規則<br /><br /> RF = 複寫篩選預存程序<br /><br /> S = 系統資料表<br /><br /> SN = 同義字<br /><br /> SQ = 服務佇列<br /><br /> TA = 組件 (CLR) DML 觸發程序<br /><br /> TF = 資料表函數<br /><br /> TR = SQL DML 觸發程序<br /><br /> TT = 資料表類型<br /><br /> U = 使用者資料表<br /><br /> V = 檢視<br /><br /> X = 擴充預存程序|  
 |userstat|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |sysstat|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |indexdel|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

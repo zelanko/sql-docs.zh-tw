@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f9eb6860a40f6c47e65beb3fe109255d333d628
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058184"
 ---
 # <a name="implementation-of-child-packages"></a>子封裝的實作
@@ -32,7 +32,7 @@ ms.locfileid: "66058184"
   
  設計子封裝時，封裝的設計並無任何限制，您可以放入任何所需的功能。 但是，如果封裝會存取資料，您必須確定執行封裝的伺服器擁有資料的存取權。  
   
- 若要識別執行子封裝的父封裝，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下方案總管中的封裝，然後按一下 [進入點封裝]。  
+ 若要識別執行子封裝的父封裝，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下方案總管中的封裝，然後按一下 [進入點封裝]  。  
   
  子封裝設計完成之後，下一個步驟是將子封裝部署在遠端伺服器上。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66058184"
 ## <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>偵錯 SQL Server Agent 作業和子封裝  
  您可以使用下列其中一種方法來建立 SQL Server Agent 作業及其子封裝：  
   
--   按一下 [偵錯] / [啟動但不偵錯]，以便在 SSIS 設計師中執行每個子套件。  
+-   按一下 [偵錯]   / [啟動但不偵錯]  ，以便在 SSIS 設計師中執行每個子套件。  
   
 -   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]執行遠端電腦上的個別 SQL Server Agent 作業，以確定封裝執行無誤。  
   

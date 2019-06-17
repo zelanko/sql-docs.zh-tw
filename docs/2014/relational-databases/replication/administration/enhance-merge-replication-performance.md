@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62805878"
 ---
 # <a name="enhance-merge-replication-performance"></a>增強合併式複寫效能
@@ -102,7 +102,7 @@ ms.locfileid: "62805878"
   
 -   如果訂閱透過快速連線進行同步處理，且變更從「發行者」和「訂閱者」端送出，請使用「合併代理程式」的 **-ParallelUploadDownload** 參數。  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引進新的「合併代理程式」參數：**-ParallelUploadDownload**。 設定此參數可讓「合併代理程式」平行處理上傳至「發行者」以及下載至「訂閱者」的變更。 這對於高網路頻寬的高容量環境非常有用。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引進新的「合併代理程式」參數： **-ParallelUploadDownload**。 設定此參數可讓「合併代理程式」平行處理上傳至「發行者」以及下載至「訂閱者」的變更。 這對於高網路頻寬的高容量環境非常有用。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
   
     -   [處理複寫代理程式設定檔](../agents/replication-agent-profiles.md)  
   

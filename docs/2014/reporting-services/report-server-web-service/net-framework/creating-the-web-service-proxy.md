@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: decf503b7da6fb4e3f3a3846a714b1062255f1a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62520373"
 ---
 # <a name="creating-the-web-service-proxy"></a>建立 Web 服務 Proxy
@@ -72,11 +72,11 @@ ReportingService2010 service = new ReportingService2010();
   
 1.  在**方案總管**中，選取將取用 Web 服務的專案。  
   
-2.  在 [專案] 功能表上，按一下 [新增 Web 參考]。  
+2.  在 [專案]  功能表上，按一下 [新增 Web 參考]  。  
   
-     [新增 Web 參考] 對話方塊隨即開啟。  
+     [新增 Web 參考]  對話方塊隨即開啟。  
   
-3.  在 [URL] 欄位中，輸入報表伺服器 Web 服務的完整路徑。  
+3.  在 [URL]  欄位中，輸入報表伺服器 Web 服務的完整路徑。  
   
      報表伺服器 Web 服務的報表執行端點之簡化的 URL，可能如下所示：  
   
@@ -93,11 +93,11 @@ ReportingService2010 service = new ReportingService2010();
   
 4.  請確認您的專案可以使用報表伺服器 Web 服務，而且您有適當的權限可以存取報表伺服器。  
   
-5.  在 [Web 參考名稱] 欄位中，輸入在程式碼中將以程式設計方式存取報表伺服器 Web 服務所使用的名稱。  
+5.  在 [Web 參考名稱]  欄位中，輸入在程式碼中將以程式設計方式存取報表伺服器 Web 服務所使用的名稱。  
   
-6.  選取 [新增參考] 按鈕，在應用程式中建立對 Web 服務的參考。  
+6.  選取 [新增參考]  按鈕，在應用程式中建立對 Web 服務的參考。  
   
-     [Web 參考名稱] 欄位中所指定名稱的新參考，將出現於**方案總管**中使用中專案的 [Web 參考] 節點之下。  
+     [Web 參考名稱]  欄位中所指定名稱的新參考，將出現於**方案總管**中使用中專案的 [Web 參考] 節點之下。  
   
 7.  在**方案總管**中，展開 [Web 參考] 資料夾，以寫下在專案中項目的可用 Web 參考類別之命名空間。  
   

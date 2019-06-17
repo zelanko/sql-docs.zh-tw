@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1ba348d3a47945bf9bb4f375310c5c92e6be7705
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055936"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>選取來源位置 (SSIS 封裝升級精靈)
@@ -40,7 +40,7 @@ ms.locfileid: "66055936"
 |**Microsoft SQL Server**|指示要升級的封裝是來自現有的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。<br /><br /> 選取這個值會顯示對應的 **[封裝來源]** 動態選項。|  
   
  **資料夾**  
- 輸入包含您想要升級之封裝的資料夾名稱，或是按一下 [瀏覽] 並尋找資料夾。  
+ 輸入包含您想要升級之封裝的資料夾名稱，或是按一下 [瀏覽]  並尋找資料夾。  
   
  **瀏覽**  
  瀏覽來尋找包含您要升級之封裝的資料夾。  

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bdd8754ac3d4a63e038218c054d064f20485344b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056270"
 ---
 # <a name="save-a-copy-of-a-package"></a>儲存封裝的複本
@@ -37,15 +37,15 @@ ms.locfileid: "66056270"
   
 1.  在 [方案總管] 中，按兩下要儲存副本的封裝。  
   
-2.  在 [檔案] 功能表上，按一下 [另存\<套件檔案> 的副本為]。  
+2.  在 [檔案]  功能表上，按一下 [另存\<套件檔案> 的副本為]  。  
   
 3.  在 **[儲存封裝的副本]** 對話方塊中，從 **[封裝位置]** 清單選取封裝位置。  
   
-4.  如果位置為 **[SQL Server]** 或 **[SSIS 封裝存放區]**，請提供伺服器名稱。  
+4.  如果位置為 **[SQL Server]** 或 **[SSIS 封裝存放區]** ，請提供伺服器名稱。  
   
 5.  若要儲存至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請指定驗證類型；如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，請提供使用者名稱與密碼。  
   
-6.  若要指定封裝路徑，請輸入路徑或按一下瀏覽按鈕 ([...]) 指定封裝的位置。 封裝的預設名稱是 Package。 您也可以選擇更新封裝名稱，以符合您的需求。  
+6.  若要指定封裝路徑，請輸入路徑或按一下瀏覽按鈕 ([...])  指定封裝的位置。 封裝的預設名稱是 Package。 您也可以選擇更新封裝名稱，以符合您的需求。  
   
      如果您選取 **[SQL Server]** 作為 **[封裝路徑]** 選項，封裝路徑會由 **msdb** 中的邏輯資料夾和封裝名稱組成。 例如，如果 DownloadMonthlyData 封裝與 [MSDB] 資料夾 ( **msdb**中根邏輯資料夾的預設名稱) 中的 [Finance] 資料夾關聯，則名為 DownloadMonthlyData 之封裝的封裝路徑就是 MSDB/Finance/DownloadMonthlyData  
   
@@ -55,13 +55,13 @@ ms.locfileid: "66056270"
   
 7.  檢閱封裝保護等級。  
   
-8.  或者，按一下 [保護等級] 方塊旁的瀏覽按鈕 ([...])，以變更保護等級。  
+8.  或者，按一下 [保護等級]  方塊旁的瀏覽按鈕 ([...])  ，以變更保護等級。  
   
     -   在 **[封裝保護等級]** 對話方塊中，選取不同的保護等級。  
   
-    -   按一下 [確定] 。  
+    -   按一下 [確定]  。  
   
-9. 按一下 [確定] 。  
+9. 按一下 [確定]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 封裝](../../2014/integration-services/integration-services-ssis-packages.md)   

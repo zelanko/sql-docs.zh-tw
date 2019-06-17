@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62660799"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
@@ -43,22 +43,22 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @publication**=** ] **'**_publication_**'**  
- 發行集的名稱。 *發行集*已**sysname**，預設值是**%**，傳回目前資料庫中所有合併式發行集的相關資訊。  
+ [ @publication **=** ] **'** _publication_ **'**  
+ 發行集的名稱。 *發行集*已**sysname**，預設值是 **%** ，傳回目前資料庫中所有合併式發行集的相關資訊。  
   
  [ @found **=** ] **'***找到***'** 輸出  
  這是指示傳回資料列的旗標。 *找到*已**int**和一個 OUTPUT 參數，預設值是 NULL。 **1**表示找到發行集。 **0**指出找不到發行集。  
   
- [ @publication_id**=**] **'***publication_id***'** OUTPUT  
+ [ @publication_id **=** ] **'***publication_id***'** OUTPUT  
  這是發行集識別碼。 *publication_id&lt*已**uniqueidentifier**和一個 OUTPUT 參數，預設值是 NULL。  
   
- [ @reserved**=**] **'***reserved***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *保留*已**nvarchar(20)**，預設值是 NULL。  
+ [ @reserved **=** ] **'***reserved***'**  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *保留*已**nvarchar(20)** ，預設值是 NULL。  
   
- [ @publisher**=** ] **'***publisher***'**  
+ [ @publisher **=** ] **'***publisher***'**  
  發行者的名稱。 *發行者*已**sysname**，預設值是 NULL。  
   
- [@publisher_db**=** ] **'***publisher_db***'**  
+ [@publisher_db **=** ] **'***publisher_db***'**  
  發行集資料庫的名稱。 *publisher_db*已**sysname**，預設值是 NULL。  
   
 ## <a name="result-sets"></a>結果集  

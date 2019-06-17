@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 911525abdf78472cde7c8467357ce846daafc3a3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069360"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>選取巢狀資料表資料行 (加入新的巢狀資料表精靈)
-  使用 [選取巢狀資料表資料行] 頁面，即可選取要包含在巢狀資料表中的屬性和量值，並定義採礦模型使用屬性和量值的方式。  
+  使用 [選取巢狀資料表資料行]  頁面，即可選取要包含在巢狀資料表中的屬性和量值，並定義採礦模型使用屬性和量值的方式。  
   
- **如需詳細資訊：**[採礦模型資料行](data-mining/mining-model-columns.md)，[資料採礦精靈 &#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
+ **如需詳細資訊：** [採礦模型資料行](data-mining/mining-model-columns.md)，[資料採礦精靈 &#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料行**  
  列出可用的屬性和量值。 所有屬性都必須在階層中，或是已啟用其屬性階層。  
   

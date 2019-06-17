@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9095bb81099c2e84d087cb92991c0a1757376ea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063245"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>在 Management Studio 中使用屬性視窗
@@ -28,7 +28,7 @@ ms.locfileid: "66063245"
   
 ### <a name="to-view-properties-using-the-properties-window"></a>利用 [屬性] 視窗檢視屬性  
   
-1.  如果看不到 [屬性] 視窗，請按一下 [檢視] 功能表中的 [屬性視窗]，或按 F4。  
+1.  如果看不到 [屬性] 視窗，請按一下 [檢視]  功能表中的 [屬性視窗]  ，或按 F4。  
   
 2.  將焦點設在您要檢視的物件上。  
   
@@ -36,19 +36,19 @@ ms.locfileid: "66063245"
   
 ### <a name="to-view-connection-properties-of-a-query-window"></a>檢視查詢視窗的連接屬性  
   
-1.  如果看不到 [屬性] 視窗，請按一下 [檢視] 功能表中的 [屬性視窗]，或按 F4。  
+1.  如果看不到 [屬性] 視窗，請按一下 [檢視]  功能表中的 [屬性視窗]  ，或按 F4。  
   
 2.  在 [屬性] 視窗中，您可以見到所有連接屬性。  
   
 ### <a name="to-view-the-properties-of-a-showplan-operator"></a>檢視執行程序表運算子的屬性  
   
-1.  在 [查詢] 功能表上，按一下 [包括實際執行計畫]。  
+1.  在 [查詢]  功能表上，按一下 [包括實際執行計畫]  。  
   
 2.  在 [SQL 查詢編輯器] 中，輸入和執行查詢。  
   
-3.  如果看不到 [屬性] 視窗，請按一下 [檢視] 功能表中的 [屬性視窗]，或按 F4。  
+3.  如果看不到 [屬性] 視窗，請按一下 [檢視]  功能表中的 [屬性視窗]  ，或按 F4。  
   
-4.  在 [SQL 查詢編輯器] 的 [執行計畫] 索引標籤中，按一下運算子的圖示來檢視 [屬性] 視窗中之運算子的相關資訊。  
+4.  在 [SQL 查詢編輯器] 的 [執行計畫]  索引標籤中，按一下運算子的圖示來檢視 [屬性] 視窗中之運算子的相關資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性視窗 &#40;Management Studio&#41;](../../ssms/properties-window-management-studio.md)  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85d085472a8d904efb2b33b942ba9f0a67326fed
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067244"
 ---
 # <a name="delete-a-table-ssas-tabular"></a>刪除資料表 (SSAS 表格式)
@@ -22,7 +22,7 @@ ms.locfileid: "66067244"
   
 ### <a name="to-delete-a-table"></a>若要刪除資料表  
   
--   針對您要刪除的資料表，以滑鼠右鍵按一下模型設計師底部的索引標籤，然後按一下 [刪除]。  
+-   針對您要刪除的資料表，以滑鼠右鍵按一下模型設計師底部的索引標籤，然後按一下 [刪除]  。  
   
 ## <a name="considerations-when-deleting-tables"></a>刪除資料表時的考量  
   

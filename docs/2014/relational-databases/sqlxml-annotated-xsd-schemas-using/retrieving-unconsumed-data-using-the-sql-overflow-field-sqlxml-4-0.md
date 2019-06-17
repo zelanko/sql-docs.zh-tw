@@ -18,20 +18,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 18651b91ee2a47819360eae4c57c18ac3eae672b
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013783"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>使用 sql:overflow-field 擷取未耗用的資料 (SQLXML 4.0)
-  當記錄使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 函數，從 XML 文件的資料庫中插入，可以將來源 XML 文件中所有未耗用的資料儲存在資料行中。 當您使用註解式結構描述擷取資料庫中的資料時，您可以指定 `sql:overflow-field` 屬性來識別儲存溢位資料之資料表中的資料行。 `sql:overflow-field`屬性可以在上指定**\<項目 >**。  
+  當記錄使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 函數，從 XML 文件的資料庫中插入，可以將來源 XML 文件中所有未耗用的資料儲存在資料行中。 當您使用註解式結構描述擷取資料庫中的資料時，您可以指定 `sql:overflow-field` 屬性來識別儲存溢位資料之資料表中的資料行。 `sql:overflow-field`屬性可以在上指定 **\<項目 >** 。  
   
  然後以下列方式擷取此資料：  
   
 -   儲存在溢位資料行中的屬性會加入到包含 `sql:overflow-field` 註解的元素中。  
   
--   儲存在資料庫之溢位資料行中的子元素及其下階會當做在結構描述中明確指定之內容之後的子元素加入  (不會保留任何順序)。  
+-   儲存在資料庫之溢位資料行中的子元素及其下階會當做在結構描述中明確指定之內容之後的子元素加入 (不會保留任何順序)。  
   
 ## <a name="examples"></a>範例  
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  

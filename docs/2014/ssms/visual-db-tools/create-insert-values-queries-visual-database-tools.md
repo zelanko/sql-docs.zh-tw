@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 019c2fe96be00c6e86e0c94286770d30e7a54a9c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62676342"
 ---
 # <a name="create-insert-values-queries-visual-database-tools"></a>建立插入值查詢 (Visual Database Tools)
@@ -52,14 +52,14 @@ VALUES   ('BU9876', 'Creating Web Pages', 'business', '1389', '29.99')
   
 1.  將要更新的資料表加入至 [圖表] 窗格。  
   
-2.  在 [查詢設計工具] 功能表中指向 [變更類型]，然後按一下 [插入值]。  
+2.  在 [查詢設計工具]  功能表中指向 [變更類型]  ，然後按一下 [插入值]  。  
   
     > [!NOTE]  
     >  當啟動 [插入值] 查詢時，[圖表] 窗格中若顯示一個以上之資料表，[查詢和檢視表設計工具] 會顯示[選擇插入值的目標資料表對話方塊](visual-database-tools.md)，詢問要更新的資料表名稱。  
   
 3.  在 [圖表] 窗格中，按一下要提供新值之各資料行的核取方塊。 這些資料行將顯示在 [準則] 窗格中。 只有加入查詢中的資料行才會更新。  
   
-4.  在 [準則] 窗格之 [新值] 資料行中，輸入資料行的新值。 您可輸入常值、資料行名稱或運算式。 該值必須符合 (或相容於) 正在更新之資料行的資料類型。  
+4.  在 [準則] 窗格之 [新值]  資料行中，輸入資料行的新值。 您可輸入常值、資料行名稱或運算式。 該值必須符合 (或相容於) 正在更新之資料行的資料類型。  
   
     > [!CAUTION]  
     >  查詢和檢視設計師不會檢查值是否符合要插入之資料行的長度。 如果提供的值太長，它可能會無預警地被截斷。 例如，如果 `name` 資料行的長度是 20 個字元，但是您指定了 25 個字元的插入值，最後 5 個字元可能會被截斷。  

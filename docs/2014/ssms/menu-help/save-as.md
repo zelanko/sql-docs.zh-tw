@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62510317"
 ---
 # <a name="save-as"></a>另存新檔
@@ -32,13 +32,13 @@ ms.locfileid: "62510317"
  使用此選項來檢視目前的檔案名稱、變更檔案名稱，或篩選顯示的檔案和資料夾。 若要篩選顯示的檔案和資料夾，請輸入要篩選的完整或部份的檔案名稱。 您可以使用星號 (`*`) 作為萬用字元。  
   
 > [!TIP]
->  若要顯示位於網路及網路位置上的檔案，請在 [檔案名稱] 方塊中輸入 URL 或網路路徑。 例如，"<http://mywebsite>" 會顯示在 "mywebsite" Web 位置上的可用檔案，而 "\\\myserver\myshare" 則會顯示在 "myserver" 的 "myshare" 位置上的可用檔案。  
+>  若要顯示位於網路及網路位置上的檔案，請在 [檔案名稱]  方塊中輸入 URL 或網路路徑。 例如，"<http://mywebsite>" 會顯示在 "mywebsite" Web 位置上的可用檔案，而 "\\\myserver\myshare" 則會顯示在 "myserver" 的 "myshare" 位置上的可用檔案。  
   
  **存檔類型**  
  使用此選項為所選項目選取新的檔案類型。 顯示的檔案類型都是適用於所選取項目進行轉換的可用檔案類型。  
   
  **進階儲存選項**  
- 若要存取 [進階儲存選項] 對話方塊，請選取 [儲存] 按鈕右方的小矩形，然後按一下 [使用編碼方式儲存]。 使用此對話方塊來指定檔案的編碼方式和用於行尾的字元。  
+ 若要存取 [進階儲存選項]  對話方塊，請選取 [儲存]  按鈕右方的小矩形，然後按一下 [使用編碼方式儲存]  。 使用此對話方塊來指定檔案的編碼方式和用於行尾的字元。  
   
 ## <a name="left-panel"></a>左面板  
  **桌面**  

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 2ed5d6e7ef3b0d6e8ac5ebaa3533c6bebce5e856
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641095"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>建立資料庫和權限 （SQL Server 和 RevoScaleR 教學課程）
@@ -39,9 +39,9 @@ ms.locfileid: "62641095"
 
 ## <a name="create-a-login"></a>建立登入
   
-1. 將資料庫內容變更為 master 資料庫並按一下 [新增查詢]。
+1. 將資料庫內容變更為 master 資料庫並按一下 [新增查詢]  。
   
-2. 在新的 [查詢] 視窗中，執行下列命令以建立使用者帳戶，並將帳戶指派給此教學課程中所用的資料庫。 請務必視需要變更資料庫名稱。
+2. 在新的 [查詢]  視窗中，執行下列命令以建立使用者帳戶，並將帳戶指派給此教學課程中所用的資料庫。 請務必視需要變更資料庫名稱。
 
 3. 若要確認登入，請選取新的資料庫，展開**安全性**，展開**使用者**。
   

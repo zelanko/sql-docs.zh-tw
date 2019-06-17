@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f27b47ae8216fa64b537d4c8b22b612c535a1869
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013665"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>使用 sql:relationship 指定關聯性 (SQLXML 4.0)
@@ -54,7 +54,7 @@ ms.locfileid: "66013665"
  指定關聯性的唯一名稱。  
   
  **父系**  
- 指定父關聯 (資料表)。 這是選用的屬性；如果未指定此屬性，會從文件之子階層中的資訊取得父資料表名稱。 如果結構描述指定使用相同的兩個父子式階層 **\<sql: relationship >** 但不同的父項目，您不要指定父屬性 **\<sql:關聯性 >**。 這項資訊是從結構描述的階層中取得。  
+ 指定父關聯 (資料表)。 這是選用的屬性；如果未指定此屬性，會從文件之子階層中的資訊取得父資料表名稱。 如果結構描述指定使用相同的兩個父子式階層 **\<sql: relationship >** 但不同的父項目，您不要指定父屬性 **\<sql:關聯性 >** 。 這項資訊是從結構描述的階層中取得。  
   
  **parent-key**  
  指定父系的父索引鍵。 如果父索引鍵由多個資料行所組成，值就會用資料行之間的空格指定。 在指定給多重資料行索引鍵和其對應之子索引鍵的值之間有位置性對應。  
@@ -68,7 +68,7 @@ ms.locfileid: "66013665"
  **反向**  
  這個屬性上指定 **\<sql: relationship >** 由 updategrams 所使用。 如需詳細資訊，請參閱 < [sql: relationship 指定 sql: inverse 屬性](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)。  
   
- `sql:key-fields`註解必須指定項目中包含子元素，具有 **\<sql: relationship >** 定義項目和子系之間並不提供的主索引鍵父元素中指定的資料表。 即使未指定結構描述 **\<sql: relationship >**，您必須指定`sql:key-fields`來產生適當的階層。 如需詳細資訊，請參閱 <<c0> [ 使用 sql: key-fields 來識別索引鍵資料行-欄位](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)。  
+ `sql:key-fields`註解必須指定項目中包含子元素，具有 **\<sql: relationship >** 定義項目和子系之間並不提供的主索引鍵父元素中指定的資料表。 即使未指定結構描述 **\<sql: relationship >** ，您必須指定`sql:key-fields`來產生適當的階層。 如需詳細資訊，請參閱 <<c0> [ 使用 sql: key-fields 來識別索引鍵資料行-欄位](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)。  
   
  若要在結果中產生正確的巢狀結構，建議在所有的結構描述中指定 `sql:key-fields`。  
   
@@ -238,7 +238,7 @@ ms.locfileid: "66013665"
 </xsd:schema>  
 ```  
   
- 您可以指定匿名關聯性，而非指定具名關聯性。 在此案例中的整個內容 **\<註釋 >** ... **\</annotation >**，其中描述兩個關聯性時，顯示為的子元素 **\<產品 >** 。  
+ 您可以指定匿名關聯性，而非指定具名關聯性。 在此案例中的整個內容 **\<註釋 >** ... **\</annotation >** ，其中描述兩個關聯性時，顯示為的子元素 **\<產品 >** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -524,7 +524,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- 在結構描述中，同時 **\<Emp1 >** 項目並 **\<Emp2 >** 項目都屬於型別`EmpType`。 型別`EmpType`描述 **\<順序 >** 子項目和對應 **\<sql: relationship >**。 在此情況下，沒有可以識別在單一父系 **\<sql: relationship >** 利用**父**屬性。 在此情況下，您未指定**父代**屬性中 **\<sql: relationship >**;**父**屬性資訊取自結構描述中的階層。  
+ 在結構描述中，同時 **\<Emp1 >** 項目並 **\<Emp2 >** 項目都屬於型別`EmpType`。 型別`EmpType`描述 **\<順序 >** 子項目和對應 **\<sql: relationship >** 。 在此情況下，沒有可以識別在單一父系 **\<sql: relationship >** 利用**父**屬性。 在此情況下，您未指定**父代**屬性中 **\<sql: relationship >** ;**父**屬性資訊取自結構描述中的階層。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>針對結構描述測試範例 XPath 查詢  
   

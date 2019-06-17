@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8fd34a7e614c1c1bb247f84846e090d22ea053e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073043"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>執行 Analysis Services 部署精靈
@@ -36,14 +36,14 @@ ms.locfileid: "66073043"
   
 #### <a name="to-run-the-analysis-services-deployment-wizard-interactively"></a>以互動方式執行 Analysis Services 部署精靈  
   
--   按一下 **[開始]** 功能表，依序指向 **[所有程式]**、 **[Microsoft SQL Server]** 和 **[Analysis Services]**，然後按一下 **[部署精靈]**。  
+-   按一下 **[開始]** 功能表，依序指向 **[所有程式]** 、 **[Microsoft SQL Server]** 和 **[Analysis Services]** ，然後按一下 **[部署精靈]** 。  
   
      -或-  
   
--   在 **專案**的資料夾[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案中，按兩下*\<專案名稱 >*.asdatabase 檔案。  
+-   在 **專案**的資料夾[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案中，按兩下 *\<專案名稱 >* .asdatabase 檔案。  
   
     > [!NOTE]  
-    >  如果找不到*\<專案名稱 >*.asdatabase 檔案，請嘗試使用搜尋，並指定 *.asdatabase。  
+    >  如果找不到 *\<專案名稱 >* .asdatabase 檔案，請嘗試使用搜尋，並指定 *.asdatabase。  
   
 ## <a name="running-the-analysis-services-deployment-wizard-at-the-command-prompt"></a>在命令提示字元下執行 Analysis Services 部署精靈  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈也可以在命令提示字元下執行。 當您在命令提示字元中執行精靈時，請提供 .asdatabase 檔案的完整路徑，並在下列其中一個模式下執行精靈：  

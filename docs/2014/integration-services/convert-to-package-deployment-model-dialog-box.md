@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dfe1f6e5b752284b6bb0feec96f4f3dfd67cc4f6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060353"
 ---
 # <a name="convert-to-package-deployment-model-dialog-box"></a>轉換成封裝部署模型對話方塊
@@ -32,7 +32,7 @@ ms.locfileid: "66060353"
 2.  如果專案和所有封裝通過相容性測試，則按一下 **[確定]** 以轉換封裝。  
   
 > [!NOTE]  
->  若要將專案轉換為專案部署模型，請使用 **[Integration Services 專案轉換精靈]**。 如需相關資訊，請參閱 [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md)。  
+>  若要將專案轉換為專案部署模型，請使用 **[Integration Services 專案轉換精靈]** 。 如需相關資訊，請參閱 [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [部署專案和封裝](packages/deploy-integration-services-ssis-projects-and-packages.md)   

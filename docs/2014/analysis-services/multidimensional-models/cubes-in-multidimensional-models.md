@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ce00bc87ca17c97996023d7cb9a4745b9882f3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076110"
 ---
 # <a name="cubes-in-multidimensional-models"></a>多維度模型中的 Cube
@@ -31,7 +31,7 @@ ms.locfileid: "66076110"
 ## <a name="components-of-cubes"></a>Cube 的元件  
  Cube 是由下列元件構成：  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |維度|[多維度模型中的維度](dimensions-in-multidimensional-models.md)|  
 |量值和量值群組|[在多維度模型中建立量值和量值群組](create-measures-and-measure-groups-in-multidimensional-models.md)|  

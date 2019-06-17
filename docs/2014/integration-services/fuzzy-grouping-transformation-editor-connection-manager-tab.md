@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7cfee2c2a79410d73eb6ca4da47f0fd361a24fb2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058334"
 ---
 # <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>模糊群組轉換編輯器 (連接管理員索引標籤)
@@ -29,12 +29,12 @@ ms.locfileid: "66058334"
   
  若要深入了解模糊群組轉換，請參閱＜ [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[無快取]**  
- 使用清單方塊來選取現有的 OLE DB 連接管理員，或使用 [新增] 按鈕來建立新的連接。  
+ 使用清單方塊來選取現有的 OLE DB 連接管理員，或使用 [新增]  按鈕來建立新的連接。  
   
  **新增**  
- 使用 [設定 OLE DB 連接管理員] 對話方塊來建立新的連接。  
+ 使用 [設定 OLE DB 連接管理員]  對話方塊來建立新的連接。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

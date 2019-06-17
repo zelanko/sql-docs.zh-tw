@@ -15,24 +15,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae8ebf56e4ae7c4fce3566cb7688d203b8ceb318
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054930"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>傳送登入工作編輯器 (登入頁面)
-  使用 [傳送登入工作編輯器] 對話方塊的 [登入] 頁面，即可指定屬性將一個或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入，從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一個執行個體複製到另一個執行個體。 如需這項工作的詳細資訊，請參閱[傳送登入工作](control-flow/transfer-logins-task.md)。  
+  使用 [傳送登入工作編輯器]  對話方塊的 [登入]  頁面，即可指定屬性將一個或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入，從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一個執行個體複製到另一個執行個體。 如需這項工作的詳細資訊，請參閱[傳送登入工作](control-flow/transfer-logins-task.md)。  
   
 > [!IMPORTANT]  
 >  執行傳送登入工作時，目的地伺服器上會建立具隨機密碼的登入，且會停用這些密碼。 若要使用這些登入， **系統管理員** 固定伺服器角色的成員就必須變更密碼，然後啟用密碼。 無法傳送 **sa** 登入。  
   
 ## <a name="options"></a>選項。  
  **SourceConnection**  
- 在清單中選取 SMO 連線管理員，或按一下 [\<新增連線...>] 建立來源伺服器的新連線。  
+ 在清單中選取 SMO 連線管理員，或按一下 [\<新增連線...>]  建立來源伺服器的新連線。  
   
  **DestinationConnection**  
- 在清單中選取一個 SMO 連線管理員，或按一下 [\<新增連線...>]，以建立目的地伺服器的新連線。  
+ 在清單中選取一個 SMO 連線管理員，或按一下 [\<新增連線...>]  ，以建立目的地伺服器的新連線。  
   
  **LoginsToTransfer**  
  選取要從來源複製到目的地伺服器的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入。 此屬性具有下表所列的選項：  
@@ -44,10 +44,10 @@ ms.locfileid: "66054930"
 |**AllLoginsFromSelectedDatabases**|使用 **DatabasesList** 指定之資料庫中的所有登入，都會複製到目的地伺服器。|  
   
  **LoginsList**  
- 選取來源伺服器上要複製到目的地伺服器的登入。 唯有針對 [LoginsToTransfer] 選取了 [SelectedLogins] 時，才能使用此選項。  
+ 選取來源伺服器上要複製到目的地伺服器的登入。 唯有針對 [LoginsToTransfer]  選取了 [SelectedLogins]  時，才能使用此選項。  
   
  **DatabasesList**  
- 選取來源伺服器上的資料庫，其中包含要複製到目的地伺服器的登入。 唯有針對 [LoginsToTransfer] 選取了 [AllLoginsFromSelectedDatabases] 時，才能使用此選項。  
+ 選取來源伺服器上的資料庫，其中包含要複製到目的地伺服器的登入。 唯有針對 [LoginsToTransfer]  選取了 [AllLoginsFromSelectedDatabases]  時，才能使用此選項。  
   
  **IfObjectExists**  
  選取工作應如何處理已經存在於目的地伺服器上，且具有相同名稱的登入。  
@@ -61,7 +61,7 @@ ms.locfileid: "66054930"
 |**Skip**|工作會略過目的地伺服器上具有相同名稱的登入。|  
   
  **CopySids**  
- 選取與登入相關聯的安全性識別碼，是否應複製到目的地伺服器。 如果「傳送登入」工作是與「傳送資料庫」工作一併使用，[CopySids] 就必須設定為 [True]。 否則，已傳送的資料庫就無法辨識被複製的登入。  
+ 選取與登入相關聯的安全性識別碼，是否應複製到目的地伺服器。 如果「傳送登入」工作是與「傳送資料庫」工作一併使用，[CopySids]  就必須設定為 [True]  。 否則，已傳送的資料庫就無法辨識被複製的登入。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

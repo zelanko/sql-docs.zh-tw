@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec4bad8ef036e8f19ce0a856f3d9c04bafd0e7c5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079273"
 ---
 # <a name="lesson-12-create-roles"></a>第 12 課：建立角色
@@ -27,7 +27,7 @@ ms.locfileid: "66079273"
   
 -   銷售經理-此角色可包含使用者在您的組織，您想要的讀取權限的所有模型物件和資料。  
   
--   Sales Analyst US-此角色可包含使用者在組織想只能夠瀏覽到位於美國 (United States) 的銷售相關資料。 針對此角色，您將使用 DAX 公式定義「資料列篩選」，限制成員僅瀏覽美國的資料。  
+-   Sales Analyst US-此角色可包含使用者在組織想只能夠瀏覽到位於美國 (United States) 的銷售相關資料。 針對此角色，您將使用 DAX 公式定義「資料列篩選」  ，限制成員僅瀏覽美國的資料。  
   
 -   系統管理員-此角色可包含您想要有系統管理員權限，無限制的存取權和 model 資料庫上執行管理工作的權限的使用者。  
   
@@ -42,35 +42,35 @@ ms.locfileid: "66079273"
   
 #### <a name="to-create-a-sales-manager-user-role"></a>若要建立 Sales Manager 使用者角色  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，按一下 [模型] 功能表，然後按一下 [角色]。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，按一下 [模型]  功能表，然後按一下 [角色]  。  
   
-2.  在 [角色管理員] 對話方塊中，按一下 [新增]。  
+2.  在 [角色管理員]  對話方塊中，按一下 [新增]  。  
   
      具有「無」權限的新角色就會加入至清單中。  
   
 3.  按一下新角色，然後在**名稱**資料行中，重新命名角色`Internet Sales Manager`。  
   
-4.  按一下 [權限] 資料行中的下拉式清單，然後選取 [讀取] 權限。  
+4.  按一下 [權限]  資料行中的下拉式清單，然後選取 [讀取]  權限。  
   
-5.  選擇性：按一下 [成員] 索引標籤，然後按一下 [新增]。  
+5.  選擇性：按一下 [成員]  索引標籤，然後按一下 [新增]  。  
   
-6.  在 [選取使用者或群組] 對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
+6.  在 [選取使用者或群組]  對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
   
-7.  確認您的選取，然後按一下 [確定]。  
+7.  確認您的選取，然後按一下 [確定]  。  
   
 #### <a name="to-create-a-sales-analyst-us-user-role"></a>若要建立 Sales Analyst US 使用者角色  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，按一下 [模型] 功能表，然後按一下 [角色]。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，按一下 [模型]  功能表，然後按一下 [角色]  。  
   
-2.  在 [角色管理員] 對話方塊中，按一下 [新增]。  
+2.  在 [角色管理員]  對話方塊中，按一下 [新增]  。  
   
      具有「無」權限的新角色就會加入至清單中。  
   
 3.  按一下新角色，然後在**名稱**資料行中，重新命名角色`Internet Sales US`。  
   
-4.  按一下 [權限] 資料行中的下拉式清單，然後選取 [讀取] 權限。  
+4.  按一下 [權限]  資料行中的下拉式清單，然後選取 [讀取]  權限。  
   
-5.  按一下 [資料列篩選] 索引標籤，然後僅針對 [Geography] 資料表，在 [DAX 篩選] 資料行中輸入下列公式：  
+5.  按一下 [資料列篩選] 索引標籤，然後僅針對 [Geography]  資料表，在 [DAX 篩選] 資料行中輸入下列公式：  
   
      `=Geography[Country Region Code] = "US"`  
   
@@ -78,25 +78,25 @@ ms.locfileid: "66079273"
   
      完成建立公式時，按 ENTER。  
   
-6.  選擇性：按一下 [成員] 索引標籤，然後按一下 [新增]。  
+6.  選擇性：按一下 [成員]  索引標籤，然後按一下 [新增]  。  
   
-7.  在 [選取使用者或群組] 對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
+7.  在 [選取使用者或群組]  對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
   
-8.  確認您的選取，然後按一下 [確定]。  
+8.  確認您的選取，然後按一下 [確定]  。  
   
 #### <a name="to-create-an-administrator-role"></a>若要建立 Administrator 角色  
   
-1.  在 [角色管理員] 對話方塊中，按一下 [新增]。  
+1.  在 [角色管理員]  對話方塊中，按一下 [新增]  。  
   
 2.  按一下新角色，然後在**名稱**資料行中，重新命名角色`Internet Sales Administrator`。  
   
-3.  按一下 [權限] 資料行中的下拉式清單，然後選取 [系統管理員] 權限。  
+3.  按一下 [權限]  資料行中的下拉式清單，然後選取 [系統管理員]  權限。  
   
-4.  按一下 [成員] 索引標籤，然後按一下 [新增]。  
+4.  按一下 [成員]  索引標籤，然後按一下 [新增]  。  
   
-5.  選擇性：在 [選取使用者或群組] 對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
+5.  選擇性：在 [選取使用者或群組]  對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
   
-6.  確認您的選取，然後按一下 [確定]。  
+6.  確認您的選取，然後按一下 [確定]  。  
   
 ## <a name="next-steps"></a>後續步驟  
  若要繼續本教學課程，請移至下一課：課程：[第 13 課：在 Excel 中分析](lesson-12-analyze-in-excel.md)。  

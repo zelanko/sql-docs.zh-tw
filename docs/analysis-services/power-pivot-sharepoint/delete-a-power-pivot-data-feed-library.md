@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5faff360ee314ae35632e9fc8578d6bd71436b3e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62467591"
 ---
 # <a name="delete-a-power-pivot-data-feed-library"></a>刪除 Power Pivot 資料摘要庫
@@ -24,15 +24,15 @@ ms.locfileid: "62467591"
   
 ### <a name="delete-a-data-feed-library"></a>刪除資料摘要庫  
   
-1.  按一下 **[網站動作]**。  
+1.  按一下 **[網站動作]** 。  
   
-2.  按一下 **[站台設定]**。  
+2.  按一下 **[站台設定]** 。  
   
-3.  在 [網站管理] 之下，按一下 [網站文件庫和清單]。  
+3.  在 [網站管理] 之下，按一下 [網站文件庫和清單]  。  
   
 4.  按一下 **自訂 「\<程式庫名稱 > 」**  
   
-5.  在 [權限與管理] 之下，按一下 [刪除此文件庫]。  
+5.  在 [權限與管理] 之下，按一下 [刪除此文件庫]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [Power Pivot 資料摘要](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  

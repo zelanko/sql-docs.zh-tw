@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a39cbc319b7b0a62f31b55ded8adfe60a49314b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066563"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>指定標記為日期資料表以搭配時間智慧使用 (SSAS 表格式)
@@ -36,7 +36,7 @@ ms.locfileid: "66066563"
   
 1.  在模型設計師中，按一下日期資料表。  
   
-2.  依序按一下 **[資料表]** 功能表、 **[日期]** 和 **Mark as [日期] [資料表]**。  
+2.  依序按一下 **[資料表]** 功能表、 **[日期]** 和 **Mark as [日期] [資料表]** 。  
   
 3.  在 **[標記為日期資料表]** 對話方塊的 **[日期]** 清單方塊中，選取要當做唯一識別碼使用的資料行。 這個資料行必須包含唯一值而且應該屬於 Date 資料類型。 例如：  
   

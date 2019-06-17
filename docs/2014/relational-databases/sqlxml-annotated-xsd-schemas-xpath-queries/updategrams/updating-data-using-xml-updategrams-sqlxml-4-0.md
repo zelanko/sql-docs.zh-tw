@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d171270a7605c258f9bc347781cd9a4d91c7a348
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014680"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 更新資料 (SQLXML 4.0)
@@ -259,7 +259,7 @@ ms.locfileid: "66014680"
      如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ### <a name="e-using-a-mapping-schema"></a>E. 使用對應的結構描述  
- 在此範例中，Updategram 會使用 `mapping-schema` 屬性指定對應的結構描述  (沒有預設的對應，也就是說，對應結構描述會在 Updategram 中提供所需的元素和屬性對應給資料庫資料表與資料行)。  
+ 在此範例中，Updategram 會使用 `mapping-schema` 屬性指定對應的結構描述 (沒有預設的對應，也就是說，對應結構描述會在 Updategram 中提供所需的元素和屬性對應給資料庫資料表與資料行)。  
   
  在 Updategram 中指定的元素和屬性指的是對應結構描述中的元素和屬性。  
   
@@ -435,7 +435,7 @@ ms.locfileid: "66014680"
   
 3.  複製上述的對應結構描述，並將其貼到文字檔中。 將檔案儲存為 SampleSchema.xml。  
   
-4.  將 Updategram (SampleUpdategram) 儲存在前述步驟用於儲存對應結構描述的相同資料夾中  (這個 Updategram 會從 CS102 課程中卸除 StudentID="1" 的學生)。  
+4.  將 Updategram (SampleUpdategram) 儲存在前述步驟用於儲存對應結構描述的相同資料夾中 (這個 Updategram 會從 CS102 課程中卸除 StudentID="1" 的學生)。  
   
     ```  
     <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

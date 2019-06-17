@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df6622abc3a507d917aefd2a8a5a1bf9505a2622
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062254"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>分析關鍵影響因數 (適用於 Excel 的資料表分析工具)
@@ -40,13 +40,13 @@ ms.locfileid: "66062254"
   
 4.  （選擇性） 按一下**選擇要用於分析的資料行**。 在 **進階資料行選取**對話方塊方塊中，選擇最有可能包含相關資料的資料行。 若要提升效能和精確度，請取消選取對於模式分析不重要的資料行，如識別碼或名稱。 按一下 [ **[確定]** 以關閉**進階資料行選取**] 對話方塊。  
   
-5.  按一下 **[執行]**。  
+5.  按一下 **[執行]** 。  
   
      **分析關鍵影響因數**工具進行分析的資料，以判斷最佳的設定，並自動設定所有參數。  
   
 6.  如果未偵測到任何模式，此精靈便會建立包含問題描述的新工作表。  
   
-7.  如果偵測到模式，此精靈會在新的工作表上建立報表來顯示模式。 此報表稱為**針對關鍵影響因數\<資料行 >**。 您可以自訂此報表，如下列程序所述。  
+7.  如果偵測到模式，此精靈會在新的工作表上建立報表來顯示模式。 此報表稱為**針對關鍵影響因數\<資料行 >** 。 您可以自訂此報表，如下列程序所述。  
   
 #### <a name="create-a-custom-report"></a>建立自訂報表  
   

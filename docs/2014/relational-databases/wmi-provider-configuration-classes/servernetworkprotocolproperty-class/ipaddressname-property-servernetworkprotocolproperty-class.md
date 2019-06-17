@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b841f2afe85c1cf657a4686c2a0e989ecff85715
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62643083"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolproperty-class"></a>IPAddressName 屬性 (ServerNetworkProtocolProperty 類別)

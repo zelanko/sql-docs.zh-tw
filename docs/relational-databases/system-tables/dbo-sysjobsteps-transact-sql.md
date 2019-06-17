@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a9264ed33ffeea224f69b8a880e235753ead1467
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62470743"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
@@ -52,7 +52,7 @@ ms.locfileid: "62470743"
 |**retry_attempts**|**int**|作業失敗時的重試次數。|  
 |**retry_interval**|**int**|重試的間隔等待時間。|  
 |**os_run_priority**|**int**|已保留。|  
-|**output_file_name**|**nvarchar(200)**|在其中步驟輸出的檔案名稱會儲存時**子系統**是 TSQL、 PowerShell 或**CmdExec**_。_|  
+|**output_file_name**|**nvarchar(200)**|在其中步驟輸出的檔案名稱會儲存時**子系統**是 TSQL、 PowerShell 或**CmdExec** _。_|  
 |**last_run_outcome**|**int**|作業步驟上次執行的結果。<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **2** = 重試<br /><br /> **3** = 取消<br /><br /> **5** = 未知|  
 |**last_run_duration**|**int**|上次執行步驟的持續期間 (hhmmss)。|  
 |**last_run_retries**|**int**|作業步驟上次執行的重試次數。|  

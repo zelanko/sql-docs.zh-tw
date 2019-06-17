@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055726"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>使用資料流程路徑編輯器來設定路徑的屬性
@@ -28,11 +28,11 @@ ms.locfileid: "66055726"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  按一下 [資料流程] 索引標籤，然後按兩下路徑。  
+3.  按一下 [資料流程]  索引標籤，然後按兩下路徑。  
   
-4.  在 [資料流程路徑編輯器] 中按一下 [一般]。 然後，您可以編輯路徑的預設名稱並提供路徑的描述。 您還可以修改 PathAnnotation 屬性。  
+4.  在 [資料流程路徑編輯器]  中按一下 [一般]  。 然後，您可以編輯路徑的預設名稱並提供路徑的描述。 您還可以修改 PathAnnotation 屬性。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
 6.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   

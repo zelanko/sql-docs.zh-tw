@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 111948911c0fe7bdc0e7ce260a15b8efee50e9db
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076894"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>將帳戶智慧加入至維度中
@@ -33,7 +33,7 @@ ms.locfileid: "66076894"
  在精靈的第一個 **[定義帳戶智慧]** 頁面上，您可以指定要套用帳戶智慧的維度。 帳戶智慧增強功能加入這個選取的維度之後，會導致維度變更。 包含選取之維度的所有 Cube，都會繼承這些變更。  
   
 ## <a name="specifying-account-attributes"></a>指定帳戶屬性  
- 在精靈的 **[設定維度屬性]** 頁面上，您可以指定已選取之帳戶維度中的帳戶屬性。 首先，在 **[包含]** 資料行中，選取您要對應到維度中之維度資料表每一個帳戶屬性類型旁邊的核取方塊。 然後，在 [維度屬性] 資料行中，展開下拉式清單，並在維度中選取對應到所選取之屬性類型的屬性。 從清單中選取屬性，會設定帳戶屬性的 `Type` 屬性。  
+ 在精靈的 **[設定維度屬性]** 頁面上，您可以指定已選取之帳戶維度中的帳戶屬性。 首先，在 **[包含]** 資料行中，選取您要對應到維度中之維度資料表每一個帳戶屬性類型旁邊的核取方塊。 然後，在 [維度屬性]  資料行中，展開下拉式清單，並在維度中選取對應到所選取之屬性類型的屬性。 從清單中選取屬性，會設定帳戶屬性的 `Type` 屬性。  
   
 ## <a name="mapping-account-types"></a>對應帳戶類型  
  第二個 **[定義帳戶智慧]** 頁面將維度資料表中的帳戶類型值，對應到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]所辨識的帳戶類型。 唯有當您在維度中包含 **[帳戶類型]** 維度屬性時，這個頁面才會出現。 若要包含 **[帳戶類型]** 維度，請在精靈的 **[定義帳戶智慧設定]** 頁面上，選取 **[帳戶類型]** 旁邊的核取方塊，然後選取適當的屬性。  
@@ -59,7 +59,7 @@ ms.locfileid: "66076894"
   
  若要變更已對應到資料庫之每一個帳戶類型的預設彙總，您可以使用資料庫設計工具。  
   
-1.  在方案總管中，以滑鼠右鍵按一下 Analysis Services 專案，然後按一下 [編輯資料庫]。  
+1.  在方案總管中，以滑鼠右鍵按一下 Analysis Services 專案，然後按一下 [編輯資料庫]  。  
   
 2.  在 **[帳戶類型對應]** 方塊中，於 **[名稱]** 中選取帳戶類型。  
   

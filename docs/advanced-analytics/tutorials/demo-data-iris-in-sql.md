@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: f4a57f89a89ed8d5cbf81cc3d63fc1f19b42e51a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641065"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>如需 SQL Server 中的 Python 和 R 教學課程的鳶尾花示範資料 
@@ -60,7 +60,7 @@ ms.locfileid: "62641065"
     > [!TIP] 
     > 如果您不熟悉 T-SQL，值得記住`DROP...IF`陳述式。 當您嘗試建立資料表，並已經存在時，SQL Server 會傳回錯誤：「 有已命名為 'iris_data' 資料庫中的物件。 」 若要避免這類錯誤的一個方式是刪除任何現有的資料表或其他物件做為您的程式碼的一部分。
 
-4. 執行下列程式碼來建立用來儲存已定型的模型資料表。 若要儲存 SQL Server 中的 Python （或 R） 模型，他們必須序列化及儲存在類型的資料行**varbinary （max)**。 
+4. 執行下列程式碼來建立用來儲存已定型的模型資料表。 若要儲存 SQL Server 中的 Python （或 R） 模型，他們必須序列化及儲存在類型的資料行**varbinary （max)** 。 
 
     ```sql
     DROP TABLE IF EXISTS iris_models;

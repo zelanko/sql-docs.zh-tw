@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 808543b2a9e0f770eaf47966bb8d6a08fecabcc8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071777"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>設定或修復 PowerPivot for SharePoint 2013 (PowerPivot 組態工具)
@@ -70,11 +70,11 @@ ms.locfileid: "66071777"
 ##  <a name="bkmk_steps"></a> 組態步驟  
  只有在本機伺服器上安裝了 PowerPivot for SharePoint 2013 時，才看得見組態工具的連結。  
   
-1.  在 **[開始]** 功能表上，指向 **[所有程式]**，然後依序按一下 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[組態工具]** 和 **[PowerPivot for SharePoint 2013 組態]**。  
+1.  在 **[開始]** 功能表上，指向 **[所有程式]** ，然後依序按一下 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[組態工具]** 和 **[PowerPivot for SharePoint 2013 組態]** 。  
   
-2.  按一下 **[設定或修復 PowerPivot for SharePoint]**。  
+2.  按一下 **[設定或修復 PowerPivot for SharePoint]** 。  
   
-3.  將視窗展開為全螢幕。 您應該會在視窗底部看到一個按鈕列，其中包含 **[驗證]**、 **[執行]** 和 **[結束]** 命令。  
+3.  將視窗展開為全螢幕。 您應該會在視窗底部看到一個按鈕列，其中包含 **[驗證]** 、 **[執行]** 和 **[結束]** 命令。  
   
 4.  **預設帳戶：** 在 參數 索引標籤中，輸入 網域使用者帳戶**預設帳戶使用者名稱**。 此帳戶會用來佈建主要服務，包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式集區。 請勿指定內建帳戶，例如 Network Service 或 Local System。 此工具會封鎖指定內建帳戶的組態。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66071777"
   
 7.  (選擇性) 檢閱用來完成每個動作的其餘輸入值。 如需有關每個的詳細資訊，請參閱本主題中的 [用於設定伺服器的輸入值](#bkmk_input) 。  
   
-8.  選擇性地移除您不想處理的任何動作。 例如，如果您想要在稍後設定 Secure Store Service，請按一下 **[設定 Secure Store Service]**，然後清除 **[在工作清單中包含這個動作]** 核取方塊。  
+8.  選擇性地移除您不想處理的任何動作。 例如，如果您想要在稍後設定 Secure Store Service，請按一下 **[設定 Secure Store Service]** ，然後清除 **[在工作清單中包含這個動作]** 核取方塊。  
   
 9. 按一下 **[驗證]** ，檢查此工具是否有足夠的資訊來處理清單中的動作。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66071777"
 ||複雜密碼|使用者輸入|用於資料加密的主要金鑰。 根據預設，用來產生金鑰的複雜密碼與用來在伺服器陣列中佈建新伺器所用的複雜密碼相同。 您可以用唯一的複雜密碼取代預設複雜密碼。|  
 |**建立無人看管的資料重新整理帳戶**|目標應用程式識別碼|預設值 (如果需要)|建立目標應用程式以儲存無人看管之 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料重新整理的認證。<br /><br /> 應用程式識別碼可以是描述性文字。|  
 ||目標應用程式的易記名稱|預設值 (如果需要)||  
-||無人看管帳戶的使用者名稱和密碼|預設值 (如果需要)|輸入目標應用程式用來執行無人看管之資料重新整理的 Windows 使用者帳戶認證。 如需詳細資訊，請參閱 <<c0> [ 的 SharePoint Server 2013 中使用自動的服務帳戶設定 Excel Services 資料重新整理](https://technet.microsoft.com/library/hh525344\(office.15\).aspx)(https://technet.microsoft.com/library/hh525344(office.15).aspx)。|  
+||無人看管帳戶的使用者名稱和密碼|預設值 (如果需要)|輸入目標應用程式用來執行無人看管之資料重新整理的 Windows 使用者帳戶認證。 如需詳細資訊，請參閱 <<c0> [ 的 SharePoint Server 2013 中使用自動的服務帳戶設定 Excel Services 資料重新整理](https://technet.microsoft.com/library/hh525344\(office.15\).aspx)(https://technet.microsoft.com/library/hh525344(office.15).aspx) 。|  
 ||網站 URL|預設值 (如果需要)|輸入與目標應用程式相關聯之網站集合的網站 URL。 若要與其他網站集合產生關聯，請使用 SharePoint 管理中心。|  
 |**建立 Excel Services 服務應用程式**|服務應用程式名稱|預設值 (如果需要)|輸入服務應用程式名稱。 在 SharePoint 伺服器陣列的資料庫伺服器上建立具有相同名稱的服務應用程式資料庫。|  
 |**設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器**|服務應用程式名稱|預設值 (如果需要)|您在先前頁面上輸入的服務應用程式名稱。|  
@@ -200,7 +200,7 @@ ms.locfileid: "66071777"
  一段時間之後，如果您決定需要額外的資料儲存和處理功能，可以將其他以 SharePoint 模式執行 Analysis Services 的伺服器加入至伺服器陣列。 若為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013，您可以使用 SharePoint 模式安裝新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器，然後設定 Excel Services。 如需詳細資訊，請參閱的 < 超過單一伺服器安裝 > 一節[PowerPivot for SharePoint 2013 安裝](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)。  
   
 ## <a name="additional-resources"></a>其他資源  
- ![SharePoint 設定](../media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[透過 Microsoft SQL Server Connect 提交意見與連絡資訊](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)。  
+ ![SharePoint 設定](../media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[透過 Microsoft SQL Server Connect 提交意見與連絡資訊](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback) 。  
   
 ## <a name="see-also"></a>另請參閱  
  [安裝或解除安裝 PowerPivot for SharePoint 增益集&#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   

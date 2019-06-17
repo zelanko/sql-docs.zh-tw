@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 03758f4ac1a88a6ed3e704d72deb1727c30ebccb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814276"
 ---
 # <a name="getting-started-with-alwayson-availability-groups-sql-server"></a>開始使用 AlwaysOn 可用性群組 (SQL Server)
@@ -62,7 +62,7 @@ ms.locfileid: "62814276"
 |工作|連結|  
 |----------|----------|  
 |修改可用性群組的 [彈性容錯移轉原則](flexible-automatic-failover-policy-availability-group.md) ，以便控制造成自動容錯移轉的狀況。 只有在可能發生自動容錯移轉時，這個原則才會相關。|[設定可用性群組的彈性容錯移轉原則](configure-flexible-automatic-failover-policy.md)|  
-|執行規劃的手動容錯移轉或強制手動容錯移轉 (可能遺失資料)，後者通常稱為「強制容錯移轉」。 如需詳細資訊，請參閱[容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](failover-and-failover-modes-always-on-availability-groups.md)。|[執行已規劃的手動容錯移轉](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br /> [執行強制手動容錯移轉](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)|  
+|執行規劃的手動容錯移轉或強制手動容錯移轉 (可能遺失資料)，後者通常稱為「強制容錯移轉」  。 如需詳細資訊，請參閱[容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](failover-and-failover-modes-always-on-availability-groups.md)。|[執行已規劃的手動容錯移轉](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br /> [執行強制手動容錯移轉](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)|  
 |使用一組預先定義的原則，檢視可用性群組及其複本和資料庫的健全狀況。|[使用原則式管理檢視可用性群組健全狀況](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [使用 AlwaysOn 群組儀表板](use-the-always-on-dashboard-sql-server-management-studio.md)|  
 |加入或移除次要複本。|[加入次要複本](add-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [移除次要複本](remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
 |暫停或繼續可用性資料庫。 暫停次要資料庫會維持資料庫的目前狀態，直到您繼續為止。|[暫停資料庫](suspend-an-availability-database-sql-server.md)<br /><br /> [繼續資料庫](resume-an-availability-database-sql-server.md)|  
@@ -77,22 +77,22 @@ ms.locfileid: "62814276"
   
 |工具|簡短描述|連結|  
 |----------|-----------------------|-----------|  
-|適用於 SQL Server 的 System Center 監視封包|適用於 SQL Server 的監視封包 (SQLMP) 是建議 IT 管理員用來監視可用性群組、可用性複本和可用性資料庫的解決方案。 特別與 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 相關的監視功能包括以下項目：<br /><br /> 數百部電腦的可用性群組、可用性複本和可用性資料庫的自動探索能力。 如此可讓您輕鬆地持續追蹤 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 存貨。<br /><br /> 功能完整的 System Center Operations Manager (SCOM) 警示和票證功能。 這些功能會提供詳細知識，讓您更快速地解決問題。<br /><br /> 使用原則式管理 (PBM) 之 AlwaysOn 健全狀況監視的自訂延伸模組。<br /><br /> 從可用性資料庫到可用性複本的健全狀況積存。<br /><br /> 從 System Center Operations Manager 主控台管理 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的自訂工作。|若要下載監視封包 (SQLServerMP.msi) 和＜適用於 System Center Operations Manager 的 SQL Server 管理封包指南＞(SQLServerMPGuide.doc)，請參閱：<br /><br /> [適用於 SQL Server 的 System Center 監視封包](https://www.microsoft.com/download/details.aspx?displaylang=en&id=10631)|  
+|適用於 SQL Server 的 System Center 監視封包|適用於 SQL Server 的監視封包 (SQLMP) 是建議 IT 管理員用來監視可用性群組、可用性複本和可用性資料庫的解決方案。 特別與 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 相關的監視功能包括以下項目：<br /><br /> 數百部電腦的可用性群組、可用性複本和可用性資料庫的自動探索能力。 如此可讓您輕鬆地持續追蹤 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 存貨。<br /><br /> 功能完整的 System Center Operations Manager (SCOM) 警示和票證功能。 這些功能會提供詳細知識，讓您更快速地解決問題。<br /><br /> 使用原則式管理 (PBM) 之 AlwaysOn 健全狀況監視的自訂延伸模組。<br /><br /> 從可用性資料庫到可用性複本的健全狀況積存。<br /><br /> 從 System Center Operations Manager 主控台管理 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的自訂工作。|若要下載監視封包 (SQLServerMP.msi) 和＜適用於 System Center Operations Manager 的 SQL Server 管理封包指南＞  (SQLServerMPGuide.doc)，請參閱：<br /><br /> [適用於 SQL Server 的 System Center 監視封包](https://www.microsoft.com/download/details.aspx?displaylang=en&id=10631)|  
 |[!INCLUDE[tsql](../../../includes/tsql-md.md)]|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 目錄和動態管理檢視提供有關可用性群組及其複本、資料庫、接聽程式和 WSFC 叢集環境的許多資訊。|[監視可用性群組 &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)|  
 |[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|**[物件總管詳細資料]** 窗格會顯示您所連接之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上裝載的可用性群組基本資訊。<br /><br /> 提示：使用此窗格選取多個可用性群組、 複本或資料庫，並針對所選的物件; 執行例行的系統管理工作例如，從可用性群組中移除多個可用性複本或資料庫。|[使用物件總管詳細資料監視可用性群組](use-object-explorer-details-to-monitor-availability-groups.md)|  
 |[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|**[屬性]** 對話方塊可讓您檢視可用性群組、複本或接聽程式的屬性，並在某些情況下變更其值。|[可用性群組屬性](view-availability-group-properties-sql-server.md)<br /><br /> [可用性複本屬性](view-availability-replica-properties-sql-server.md)<br /><br /> [可用性群組接聽程式屬性](view-availability-group-listener-properties-sql-server.md)|  
 |系統監視器|**SQLServer:Availability Replica** 效能物件含有效能計數器，可報告可用性複本的相關資訊。|[SQL Server、可用性複本](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)|  
-|系統監視器|**SQLServer:Database Replica** 效能物件含有效能計數器，可報告給定次要複本上次要資料庫的相關資訊。<br /><br /> SQL Server 中的 **SQLServer:Databases** 物件含有效能計數器，可監視交易記錄活動以及其他項目。 下列的計數器會監視可用性資料庫上的交易記錄活動特別相關：**Log Flush Write Time (ms)**、**Log Flushes/sec**、**Log Pool Cache Misses/sec**、**Log Pool Disk Reads/sec** 和 **Log Pool Requests/sec**。|[SQL Server 的 Database Replica](../../../relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [SQL Server、Databases 物件](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
+|系統監視器|**SQLServer:Database Replica** 效能物件含有效能計數器，可報告給定次要複本上次要資料庫的相關資訊。<br /><br /> SQL Server 中的 **SQLServer:Databases** 物件含有效能計數器，可監視交易記錄活動以及其他項目。 下列的計數器會監視可用性資料庫上的交易記錄活動特別相關：**Log Flush Write Time (ms)** 、**Log Flushes/sec**、**Log Pool Cache Misses/sec**、**Log Pool Disk Reads/sec** 和 **Log Pool Requests/sec**。|[SQL Server 的 Database Replica](../../../relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [SQL Server、Databases 物件](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   **視訊-AlwaysOn 簡介：**[Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分：Introducing the Next Generation High Availability Solution](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (Microsoft SQL Server Code-Named "Denali" Always On 系列第 1 部分：新一代高可用性解決方案簡介)  
+-   **視訊-AlwaysOn 簡介：** [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分：Introducing the Next Generation High Availability Solution](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (Microsoft SQL Server Code-Named "Denali" Always On 系列第 1 部分：新一代高可用性解決方案簡介)  
   
--   **視訊的深入探討 AlwaysOn:**[Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分：建立使用 AlwaysOn 任務關鍵性的高可用性解決方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+-   **視訊的深入探討 AlwaysOn:** [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分：建立使用 AlwaysOn 任務關鍵性的高可用性解決方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **白皮書：**[Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   **白皮書：** [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   **部落格：**[SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
+-   **部落格：** [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組&#40;SQL Server&#41;](always-on-availability-groups-sql-server.md)   

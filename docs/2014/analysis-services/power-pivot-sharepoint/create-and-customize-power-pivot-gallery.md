@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b1a7cc26edb726952e71e25deb271ef1dd997d18
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071530"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>建立及自訂 PowerPivot 圖庫
@@ -40,7 +40,7 @@ ms.locfileid: "66071530"
   
     > [!NOTE]  
     >  Power Pivot 圖庫需要 Microsoft Silverlight，  但 Microsoft Edge 瀏覽器不支援 Silverlight。   
-    > 若要檢視 Edge 中的程式庫內容，請按一下 Powerpivot 圖庫中的 [程式庫]  索引標籤，然後將文件庫檢視變更為 [所有文件] 。    
+    > 若要檢視 Edge 中的程式庫內容，請按一下 Powerpivot 圖庫中的 [程式庫]  索引標籤，然後將文件庫檢視變更為 [所有文件]  。    
     > 若要變更預設檢視，請按一下 [程式庫]  索引標籤，然後按一下 [修改檢視]。 按一下 [設定為預設檢視]，然後按一下 [確定] 以儲存預設檢視。  
     >  如需 Edge 支援的詳細資訊，請參閱 Windows 部落格[揮別以往，第 2 部分：ActiveX、 VBScript...說再見](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
@@ -66,19 +66,19 @@ ms.locfileid: "66071530"
   
 1.  1.  **SharePoint 2010**:按一下 **站台動作**在您的網站首頁的左上角。  
   
-    2.  按一下 **[更多選項]**。  
+    2.  按一下 **[更多選項]** 。  
   
-    3.  在文件庫下，按一下 **[PowerPivot 圖庫]**。  
+    3.  在文件庫下，按一下 **[PowerPivot 圖庫]** 。  
   
-    1.  **SharePoint 2013**:按一下設定圖示![SharePoint 設定](../media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")。 按一下 **[網站內容]**。  
+    1.  **SharePoint 2013**:按一下設定圖示![SharePoint 設定](../media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")。 按一下 **[網站內容]** 。  
   
-    2.  按一下 **[新增應用程式]**。  
+    2.  按一下 **[新增應用程式]** 。  
   
-    3.  按一下 [PowerPivot 圖庫] 。  
+    3.  按一下 [PowerPivot 圖庫]  。  
   
 2.  輸入文件庫的名稱。 請務必包含描述性資訊，以協助使用者將此文件庫識別為 PowerPivot 活頁簿和 Reporting Services 報表的豐富預覽。  
   
-3.  按一下 [建立] 。  
+3.  按一下 [建立]  。  
   
 4.  要求伺服陣列或服務管理員將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫新增為 Excel Service 的信任位置。 如果使用者為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料重新整理設定活頁簿，就需要這個步驟以避免錯誤。 如需有關這項工作的詳細資訊，請參閱 <<c0> [ 在管理中心建立 PowerPivot 網站的信任的位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "66071530"
   
 1.  在 SharePoint 網站中，開啟 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫。  
   
-2.  在功能區中，按一下 **[文件庫]**。  
+2.  在功能區中，按一下 **[文件庫]** 。  
   
 3.  **SharePoint 2010：** 在 自訂檢視中，按一下**修改此檢視**。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "66071530"
   
 1.  在 SharePoint 網站中，開啟 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫。  
   
-2.  在功能區中，按一下 **[文件庫]**。  
+2.  在功能區中，按一下 **[文件庫]** 。  
   
 3.  在 [自訂] 檢視的 [管理檢視] 中，從清單選取您要使用的檢視。 預先設計好的檢視包括 [圖庫]、[劇場] 和 [浮動切換]。 或者，如果您要移動、刪除或管理文件庫中的文件，您可以選擇 [所有文件]。  
   

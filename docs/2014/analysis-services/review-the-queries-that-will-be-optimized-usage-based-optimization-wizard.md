@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1e11d8cddaa780e6572bdb9e8116fa970fc9ef95
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070122"
 ---
 # <a name="review-the-queries-that-will-be-optimized-usage-based-optimization-wizard"></a>檢閱要最佳化的查詢 (基於使用方式的最佳化精靈)
-  使用 [檢閱要最佳化的查詢] 頁面，即可顯示和選取從查詢記錄中擷取的查詢，而 [基於使用方式的最佳化精靈] 將使用此查詢記錄來設計選取之資料分割的彙總。  
+  使用 [檢閱要最佳化的查詢]  頁面，即可顯示和選取從查詢記錄中擷取的查詢，而 [基於使用方式的最佳化精靈] 將使用此查詢記錄來設計選取之資料分割的彙總。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **(Select)**  
  選取所需之查詢的核取方塊，以設計其彙總。  
   

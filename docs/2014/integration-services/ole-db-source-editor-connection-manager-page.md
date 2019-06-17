@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22b7c9ea4012655043cac7eb7f3d432ef1e2e854
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057051"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>OLE DB 來源編輯器 (連接管理員頁面)
-  使用 [OLE DB 來源編輯器] 對話方塊的 [連接管理員] 頁面，來選取來源的 OLE DB 連接管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  
+  使用 [OLE DB 來源編輯器]  對話方塊的 [連接管理員]  頁面，來選取來源的 OLE DB 連接管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  
   
 > [!NOTE]  
 >  若要從使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2007 的資料來源載入資料，請使用 OLE DB 來源。 您無法使用 Excel 來源，從 Excel 2007 資料來源載入資料。 如需詳細資訊，請參閱 [設定 OLE DB 連接管理員](configure-ole-db-connection-manager.md)。  
@@ -38,16 +38,16 @@ ms.locfileid: "66057051"
   
 1.  將 OLE DB 來源加入 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝 (於 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中)。  
   
-2.  以滑鼠右鍵按一下來源元件，然後按一下 [編輯]。  
+2.  以滑鼠右鍵按一下來源元件，然後按一下 [編輯]  。  
   
-3.  按一下 [連接管理員]。  
+3.  按一下 [連接管理員]  。  
   
 ## <a name="static-options"></a>靜態選項  
  **[無快取]**  
- 從清單中選取現有的連線管理員，或按一下 [新增] 來建立新的連線。  
+ 從清單中選取現有的連線管理員，或按一下 [新增]  來建立新的連線。  
   
  **新增**  
- 使用 [設定 OLE DB 連線管理員] 對話方塊建立新的連線管理員。  
+ 使用 [設定 OLE DB 連線管理員]  對話方塊建立新的連線管理員。  
   
  **資料存取模式**  
  從來源中指定選取資料的方法。  
@@ -55,12 +55,12 @@ ms.locfileid: "66057051"
 |選項|描述|  
 |------------|-----------------|  
 |資料表或檢視|從 OLE DB 資料來源中的資料表或檢視擷取資料。|  
-|資料表名稱或檢視名稱變數|請在變數中指定資料表或檢視名稱。<br /><br /> **相關資訊：**[在套件中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  
+|資料表名稱或檢視名稱變數|請在變數中指定資料表或檢視名稱。<br /><br /> **相關資訊：** [在套件中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  
 |SQL (命令)|使用 SQL 查詢從 OLE DB 資料來源中擷取資料。|  
 |來自變數的 SQL 命令|在變數中指定 SQL 查詢文字。|  
   
  **預覽**  
- 使用 [資料檢視] 對話方塊來預覽結果。 [預覽] 最多可顯示 200 個資料列。  
+ 使用 [資料檢視]  對話方塊來預覽結果。 [預覽]  最多可顯示 200 個資料列。  
   
 > [!NOTE]  
 >  在預覽資料時，具有 CLR 使用者定義型別的資料行不會包含資料。 而會顯示 \<數值太大而無法顯示> 或 System.Byte[]。 使用 SQL OLE DB 提供者存取資料來源時會顯示前者，而使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 提供者時會顯示後者。  
@@ -77,16 +77,16 @@ ms.locfileid: "66057051"
   
 ### <a name="data-access-mode--sql-command"></a>資料存取模式 = SQL 命令  
  **SQL 命令文字**  
- 輸入 SQL 查詢文字，按一下 [建立查詢] 建立查詢，或按一下 [瀏覽] 找到包含查詢文字的檔案。  
+ 輸入 SQL 查詢文字，按一下 [建立查詢]  建立查詢，或按一下 [瀏覽]  找到包含查詢文字的檔案。  
   
  **參數**  
  如果您所輸入的參數化查詢使用 ? 做為查詢文字中的參數預留位置，請使用 **[設定查詢參數]** 對話方塊，將查詢輸入參數對應到封裝變數。  
   
  **建立查詢**  
- 使用 [查詢產生器] 對話方塊，以視覺化的方式來建構 SQL 查詢。  
+ 使用 [查詢產生器]  對話方塊，以視覺化的方式來建構 SQL 查詢。  
   
  **瀏覽**  
- 使用 [開啟] 對話方塊來找出包含 SQL 查詢文字的檔案。  
+ 使用 [開啟]  對話方塊來找出包含 SQL 查詢文字的檔案。  
   
  **剖析查詢**  
  請確認查詢文字的語法。  

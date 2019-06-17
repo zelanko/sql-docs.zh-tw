@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b383621408cc84a65e5f9c5adb711dd9f047be64
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073210"
 ---
 # <a name="remote-processing-analysis-services"></a>遠端處理 (Analysis Services)
@@ -35,7 +35,7 @@ ms.locfileid: "66073210"
   
 1.  在要用於排程處理電腦上啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，並連接到遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
   
-2.  在資料庫上按一下滑鼠右鍵，再選取 [處理序] 並指向 [指令碼]，然後選擇 [編寫動作的指令碼至新增查詢視窗]。 用於叫用處理的命令會出現在查詢視窗中。  
+2.  在資料庫上按一下滑鼠右鍵，再選取 [處理序]  並指向 [指令碼]  ，然後選擇 [編寫動作的指令碼至新增查詢視窗]  。 用於叫用處理的命令會出現在查詢視窗中。  
   
 3.  按一下 [確定]  開始執行處理序。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66073210"
   
 1.  使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]連接到遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
   
-2.  在伺服器名稱上按一下滑鼠右鍵，再按一下 [屬性]，然後按一下 [安全性]。  
+2.  在伺服器名稱上按一下滑鼠右鍵，再按一下 [屬性]  ，然後按一下 [安全性]  。  
   
 3.  按一下 [加入]  ，以加入 SQL Server Agent 帳戶。  
   
@@ -66,11 +66,11 @@ ms.locfileid: "66073210"
   
 1.  在 Management Studio 中，連接到本機 Database Engine 執行個體。 SQL Server Agent 是物件總管中的最後一個項目。 如有必要，請啟動該服務。  
   
-2.  在 [作業] 上按一下滑鼠右鍵，再按一下 [新增作業]，然後輸入名稱。  
+2.  在 [作業]  上按一下滑鼠右鍵，再按一下 [新增作業]  ，然後輸入名稱。  
   
 3.  在步驟中按一下 [新增]  ，然後輸入名稱。  
   
-4.  在 [類型] 中，選取 [SQL Server Analysis Services 命令] 。  
+4.  在 [類型] 中，選取 [SQL Server Analysis Services 命令]  。  
   
 5.  在 [伺服器] 中，輸入遠端名稱 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的名稱。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66073210"
   
 #### <a name="run-the-job"></a>執行作業  
   
-1.  在執行此作業的電腦上，確認此作業可以執行基本作業。 在物件總管中的 SQL Server Agent 下，先展開 [作業]，再於剛才所建立的作業上按一下滑鼠右鍵，然後按一下 [從下列步驟啟動作業]。 作業會立即啟動。 您可以在 SQL Server Profiler 中監視進度。  
+1.  在執行此作業的電腦上，確認此作業可以執行基本作業。 在物件總管中的 SQL Server Agent 下，先展開 [作業]  ，再於剛才所建立的作業上按一下滑鼠右鍵，然後按一下 [從下列步驟啟動作業]  。 作業會立即啟動。 您可以在 SQL Server Profiler 中監視進度。  
   
 2.  最後一個步驟是將作業修改成依照您所義的排程執行，並新增管理作業所需的警示或通知。 您也可能想要精簡處理指令碼，或在作業中建立多個步驟來單獨處理物件。  
   

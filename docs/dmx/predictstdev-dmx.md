@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 56d8ade3b270f1e81cb2ac0455a245bd78cacd70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659004"
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev (DMX)
@@ -32,7 +32,7 @@ PredictStdev(<scalar column reference>)
  純量資料行。  
   
 ## <a name="return-type"></a>傳回類型  
- 純量值所指定之型別的*\<純量資料行參考 >*。  
+ 純量值所指定之型別的 *\<純量資料行參考 >* 。  
   
 ## <a name="remarks"></a>備註  
  如果資料行參考是離散**PredictStdev**會傳回 0，因為無法從離散值計算標準差。  

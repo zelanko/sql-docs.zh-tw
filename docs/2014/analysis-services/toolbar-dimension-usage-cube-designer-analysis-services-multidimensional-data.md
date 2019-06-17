@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e4205cc3a99e5ce5fb9e4309813531a451e7bd92
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066020"
 ---
 # <a name="toolbar-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (維度使用方式索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
   在 Cube 設計師的 **[維度使用方式]** 索引標籤上，使用 **[工具列]** 窗格即可執行一般動作，例如加入 Cube 維度或處理 Cube。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |選項|描述|  
 |------------|-----------------|  

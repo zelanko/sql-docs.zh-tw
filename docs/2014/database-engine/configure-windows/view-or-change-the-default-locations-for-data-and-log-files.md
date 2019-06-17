@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06d17a4feaec0db614f61fb7761b37ea415efc24
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808707"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>檢視或變更資料及記錄檔的預設位置 (SQL Server Management Studio)
@@ -33,7 +33,7 @@ ms.locfileid: "62808707"
   
      [Transact-SQL](#SSMSProcedure)  
   
--   **後續操作：**[變更預設位置](#FollowUp)  
+-   **後續操作：** [變更預設位置](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62808707"
   
 #### <a name="to-view-or-change-the-default-locations-for-database-files"></a>若要檢視或變更資料庫檔案的預設位置  
   
-1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]。  
+1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]  。  
   
 2.  在左面板中，按一下 **[資料庫設定]** 頁面。  
   

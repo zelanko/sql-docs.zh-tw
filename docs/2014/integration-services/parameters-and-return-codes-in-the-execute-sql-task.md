@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 49ac4661e533b4c4e56a750f208c3ded09f72d27
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056793"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>執行 SQL 工作中的參數和傳回碼
@@ -179,7 +179,7 @@ ms.locfileid: "66056793"
 |ADO|如果 IsQueryStoreProcedure 設為`False`， `EXEC ? = myStoredProcedure 1`<br /><br /> 如果 IsQueryStoreProcedure 設為`True`， `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|將 IsQueryStoreProcedure 設為`True`。<br /><br /> `myStoredProcedure`|  
   
- 在上表顯示的語法中，「執行 SQL」工作使用 [直接輸入] 來源類型執行預存程序。 「執行 SQL」工作也可以使用 [檔案連接] 來源類型執行預存程序。 不論 「 執行 SQL 」 工作是使用**直接輸入**或是**檔案連接**來源類型，請使用參數的`ReturnValue`實作傳回碼的型別。 如需如何設定「執行 SQL」工作所執行之 SQL 陳述式來源類型的詳細資訊，請參閱[執行 SQL 工作編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)。  
+ 在上表顯示的語法中，「執行 SQL」工作使用 [直接輸入]  來源類型執行預存程序。 「執行 SQL」工作也可以使用 [檔案連接]  來源類型執行預存程序。 不論 「 執行 SQL 」 工作是使用**直接輸入**或是**檔案連接**來源類型，請使用參數的`ReturnValue`實作傳回碼的型別。 如需如何設定「執行 SQL」工作所執行之 SQL 陳述式來源類型的詳細資訊，請參閱[執行 SQL 工作編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)。  
   
  如需搭配 Transact-SQL 預存程序使用傳回碼的詳細資訊，請參閱 [RETURN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/return-transact-sql)。  
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df4afbecebd3c076f80064dbd3d13f35ba2cbcf0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62472078"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>指定標記為日期資料表以搭配時間智慧
@@ -36,11 +36,11 @@ ms.locfileid: "62472078"
   
 1.  在模型設計師中，按一下日期資料表。  
   
-2.  依序按一下 **[資料表]** 功能表、 **[日期]** 和 **Mark as [日期] [資料表]**。  
+2.  依序按一下 **[資料表]** 功能表、 **[日期]** 和 **Mark as [日期] [資料表]** 。  
   
 3.  在 **[標記為日期資料表]** 對話方塊的 **[日期]** 清單方塊中，選取要當做唯一識別碼使用的資料行。 這個資料行必須包含唯一值而且應該屬於 Date 資料類型。 例如：  
   
-    |date|  
+    |Date|  
     |----------|  
     |7/1/2010 12:00:00 AM|  
     |7/2/2010 12:00:00 AM|  

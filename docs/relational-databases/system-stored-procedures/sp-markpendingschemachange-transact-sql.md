@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67377f638459a37f25fbc78b9acff395192a2f3f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62628261"
 ---
 # <a name="spmarkpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
@@ -41,7 +41,7 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [**@publication=** ] **'***publication***'**  
+ [ **@publication=** ] **'***publication***'**  
  這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
 `[ @schemaversion = ] schemaversion` 識別暫止結構描述變更。 *schemaversion*已**int**，預設值是**0**。 使用[sp_enumeratependingschemachanges &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md)列出發行集的暫止結構描述變更。  

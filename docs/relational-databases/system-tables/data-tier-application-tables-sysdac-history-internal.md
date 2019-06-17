@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40696085bc8eb9980d1150feade91a9edd627be0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62471137"
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>資料層應用程式資料表 - sysdac_history_internal
@@ -60,8 +60,8 @@ ms.locfileid: "62471137"
 |**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
 |12|0|建立|dacpac|  
 |12|1|建立|login|  
-|12|2|建立|[資料庫]|  
-|12|3|重新命名|[資料庫]|  
+|12|2|建立|database|  
+|12|3|重新命名|database|  
   
  DAC 作業，例如刪除，不會移除資料列**sysdac_history_internal**。 您可以使用下列查詢手動刪除 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上不再部署的之 DAC 的資料列：  
   

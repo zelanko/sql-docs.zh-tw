@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11f7ca96ca65ae23202b84030140e0eaef945de2
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014692"
 ---
 # <a name="null-handling-sqlxml-40"></a>NULL 處理 (SQLXML 4.0)
-  XML 語法表示 NULL 不存在  (例如，如果屬性或項目值是 NULL，該屬性或項目不存在將 XML 文件。)在  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML、`updg:nullvalue`屬性可讓針對項目或屬性的值指定 NULL。  
+  XML 語法表示 NULL 不存在 (例如，如果屬性或項目值是 NULL，該屬性或項目不存在將 XML 文件。)在  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML、`updg:nullvalue`屬性可讓針對項目或屬性的值指定 NULL。  
   
  例如，下列 updategram 可確保**標題**值，將此連絡人**ContactID** 64 是 NULL，，然後更新**標題**值為"Mr." 。  
   

@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e69b1d6ca838334c36ff94037473e5fda45cce43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667214"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>使用複寫監視器監視效能
@@ -44,15 +44,15 @@ ms.locfileid: "62667214"
   
 -   超過指定的延遲 (交易受發行者認可與對應交易受訂閱者認可之間所經過的時間)。  
   
-     這可以套用於異動複寫。 若已達到或超過指定臨界值，狀態顯示為 **[效能嚴重不足]**。  
+     這可以套用於異動複寫。 若已達到或超過指定臨界值，狀態顯示為 **[效能嚴重不足]** 。  
   
 -   超過指定的同步處理時間。  
   
-     這可以套用於合併式複寫。 若已達到或超過指定臨界值，狀態顯示為 **[長期執行合併]**。 您可以為撥號連接和區域網路 (LAN) 連接指定不同的臨界值。  
+     這可以套用於合併式複寫。 若已達到或超過指定臨界值，狀態顯示為 **[長期執行合併]** 。 您可以為撥號連接和區域網路 (LAN) 連接指定不同的臨界值。  
   
 -   在給定時間內處理的資料列數達不到指定數目。  
   
-     這可以套用於合併式複寫。 若已達到或超過指定臨界值，狀態顯示為 **[效能嚴重不足]**。 您可以為撥號連接和 LAN 連接指定不同的臨界值。  
+     這可以套用於合併式複寫。 若已達到或超過指定臨界值，狀態顯示為 **[效能嚴重不足]** 。 您可以為撥號連接和 LAN 連接指定不同的臨界值。  
   
  如需相關資訊，請參閱 [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)。  
   

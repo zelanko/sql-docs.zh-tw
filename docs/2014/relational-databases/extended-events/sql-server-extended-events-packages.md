@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62638754"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 擴充事件封裝
@@ -141,13 +141,13 @@ where name = 'keyword_map'
   
 -   action  
   
--   目標  
+-   target  
   
 -   pred_source  
   
 -   pred_compare  
   
--   型別  
+-   type  
   
  如需詳細資訊，請參閱 [sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)。  
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f98f62b10b38d726feec2bd427bc7d1fc6dcea9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62635865"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
@@ -48,7 +48,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'object_statement'` 是在目前資料庫中，或是具有報表的權限的陳述式，物件的名稱。 *object_statement&lt*已**nvarchar(776)**，預設值是 NULL，它會傳回所有物件和陳述式的權限。 如果值是物件 (資料表、檢視、預存程序或擴充預存程序)，它必須是目前資料庫中的有效物件。 物件名稱可以在表單中包含的擁有者限定詞_擁有者_**。**_物件_。  
+`[ @name = ] 'object_statement'` 是在目前資料庫中，或是具有報表的權限的陳述式，物件的名稱。 *object_statement&lt*已**nvarchar(776)** ，預設值是 NULL，它會傳回所有物件和陳述式的權限。 如果值是物件 (資料表、檢視、預存程序或擴充預存程序)，它必須是目前資料庫中的有效物件。 物件名稱可以在表單中包含的擁有者限定詞_擁有者_ **。** _物件_。  
   
  如果*object_statement&lt*是陳述式，它可以是 CREATE 陳述式。  
   
@@ -56,7 +56,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 `[ @grantorname = ] 'grantor'` 是授與權限名稱。 *另外，grantor*已**sysname**，預設值是 NULL，它會傳回資料庫中任何主體授與的權限的所有資訊。  
   
-`[ @permissionarea = ] 'type'` 這是字元字串，指出是否要顯示物件的權限 (字元字串**o**)，陳述式權限 (字元字串**s**)，或兩者 (**os**)。 *型別*已**varchar(10)**，預設值是**os**。 *型別*可以是任意的組合**o**並**s**，不論有無逗號或空格之間**o**並**s**。  
+`[ @permissionarea = ] 'type'` 這是字元字串，指出是否要顯示物件的權限 (字元字串**o**)，陳述式權限 (字元字串**s**)，或兩者 (**os**)。 *型別*已**varchar(10)** ，預設值是**os**。 *型別*可以是任意的組合**o**並**s**，不論有無逗號或空格之間**o**並**s**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
