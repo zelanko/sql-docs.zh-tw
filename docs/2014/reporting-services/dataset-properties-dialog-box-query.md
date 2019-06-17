@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aead5d8e5c85b67333f10bee4e73e2bb1a8633ab
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109367"
 ---
 # <a name="dataset-properties-dialog-box-query"></a>資料集屬性對話方塊、查詢
@@ -33,21 +33,21 @@ ms.locfileid: "66109367"
   
 -   [資料集屬性對話方塊，篩選](report-data/dataset-properties-dialog-box-filters.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  輸入資料集的名稱。 此名稱不可以與報表中任何資料區域或群組的名稱相同。  
   
  **資料來源**  
- 選取要做為資料集基礎的資料來源。 若要建立新的資料來源，按一下 **[新增]**。  
+ 選取要做為資料集基礎的資料來源。 若要建立新的資料來源，按一下 **[新增]** 。  
   
  **查詢類型**  
- 選取資料集使用的命令或查詢類型。 選取 **[文字]** 來執行查詢，以便從資料庫中擷取資料。 選取 **[資料表]** 即可使用 **的** [TableDirect] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 功能來選取資料表中的所有欄位。 選取 **[預存程序]** 即可依名稱執行預存程序。 依預設，會選取 **[文字]** ，這適用於大多數的查詢。 若要編輯選取的資料來源查詢，按一下 **[查詢設計工具]**。  
+ 選取資料集使用的命令或查詢類型。 選取 **[文字]** 來執行查詢，以便從資料庫中擷取資料。 選取 **[資料表]** 即可使用 **的** [TableDirect] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 功能來選取資料表中的所有欄位。 選取 **[預存程序]** 即可依名稱執行預存程序。 依預設，會選取 **[文字]** ，這適用於大多數的查詢。 若要編輯選取的資料來源查詢，按一下 **[查詢設計工具]** 。  
   
 > [!NOTE]  
 >  並非所有的查詢類型都受到所有資料來源的支援。 例如， **[資料表]** 只受到 **[OLE DB]** 和 **[ODBC]** 資料來源類型的支援。  
   
  **[資料集屬性]**  
- 此選項會在選擇 [文字] 命令類型選項時出現。 鍵入查詢，或按一下 [匯入] 來匯入已存在的查詢。 請按一下 **「運算式」** (*fx*) 按鈕來編輯運算式。  
+ 此選項會在選擇 [文字]  命令類型選項時出現。 鍵入查詢，或按一下 [匯入]  來匯入已存在的查詢。 請按一下 **「運算式」** (*fx*) 按鈕來編輯運算式。  
   
 > [!NOTE]  
 >  如果您使用查詢設計工具來建立查詢，則查詢的文字會顯示在此方塊中。  

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1f9750813d305834fe36f2c6ab7abfaa1d95075
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106764"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>加入矩形或容器 (報表產生器及 SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "66106764"
   
 ### <a name="to-add-a-rectangle"></a>若要加入矩形  
   
-1.  在 [插入] 索引標籤的 [報表項目] 群組中，按一下 [矩形]。  
+1.  在 [插入]  索引標籤的 [報表項目]  群組中，按一下 [矩形]  。  
   
 2.  在設計介面上，按一下您要放置矩形左上角的位置，然後拖曳到您要放置圖表右下角的位置。  
   
@@ -45,9 +45,9 @@ ms.locfileid: "66106764"
   
 ### <a name="to-change-rectangle-properties-such-as-color-style-or-weight"></a>若要變更色彩、樣式或粗細等矩形屬性  
   
-1.  選取矩形，然後在 [主資料夾] 索引標籤的 [框線] 區段中，按一下線條色彩、樣式或粗細選項。  
+1.  選取矩形，然後在 [主資料夾] 索引標籤的 [框線]  區段中，按一下線條色彩、樣式或粗細選項。  
   
-2.  按一下 [框線] 按鈕旁的箭號，以便決定要變更矩形的哪一面。  
+2.  按一下 [框線]  按鈕旁的箭號，以便決定要變更矩形的哪一面。  
   
     > [!NOTE]  
     >  如果您將線條樣式設定為**Double**和線條的寬度為 1 1/2 pt 或更窄，線條可能不會出現雙線當您在報表產生器、 報表設計師或報表管理員中，會在執行報表時。 當您將報表匯出為其他格式時才會出現雙線，例如 Microsoft Word 及 Acrobat PDF。  

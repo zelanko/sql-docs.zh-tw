@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 13fa1ce6411f2ce4de1526e847bc5a6191d698c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922169"
 ---
 # <a name="backup-encryption"></a>備份加密
@@ -86,9 +86,9 @@ ms.locfileid: "62922169"
 ### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio  
  在下列任一對話方塊中建立資料庫備份時，您可以加密備份：  
   
-1.  [備份資料庫 &#40;備份選項頁面&#41;](back-up-database-backup-options-page.md)：您可以在 [備份選項] 頁面選取 [加密]，並指定用於加密的加密演算法以及憑證或非對稱金鑰。  
+1.  [備份資料庫 &#40;備份選項頁面&#41;](back-up-database-backup-options-page.md)：您可以在 [備份選項]  頁面選取 [加密]  ，並指定用於加密的加密演算法以及憑證或非對稱金鑰。  
   
-2.  [使用維護計畫精靈](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)：當您選取備份工作時，您可以在 [Define Backup ()Task (定義備份 () 工作)] 頁面的 [選項] 索引標籤上，選取 [備份加密]，並指定用於加密的加密演算法以及憑證或金鑰。  
+2.  [使用維護計畫精靈](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)：當您選取備份工作時，您可以在 [Define Backup ()Task (定義備份 () 工作)]  頁面的 [選項]  索引標籤上，選取 [備份加密]  ，並指定用於加密的加密演算法以及憑證或金鑰。  
   
 ### <a name="using-transact-sql"></a>使用 Transact SQL  
  下列為加密備份檔案的範例 Transact-SQL 陳述式：  

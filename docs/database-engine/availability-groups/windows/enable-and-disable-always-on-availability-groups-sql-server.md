@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6d416be5087d9aa9c55f069940aecee568442f8
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+manager: jroth
+ms.openlocfilehash: 3f1ea7ec48f702173ad3370b7212b0b0b24260dc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527121"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765796"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>啟用或停用 Always On 可用性群組功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,23 +31,8 @@ ms.locfileid: "57527121"
 > [!IMPORTANT]  
 >  如果您刪除然後重新建立 WSFC 叢集，則必須在原始 WSFC 叢集上裝載可用性複本的每個 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 執行個體，停用然後重新啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。  
   
--   **開始之前：**  
   
-     [必要條件](#Prerequisites)  
-  
-     [安全性](#Security)  
-  
--   **如何：**  
-  
-    -   [判斷 AlwaysOn 可用性群組是否已啟用](#IsEnabled)  
-  
-    -   [啟用 AlwaysOn 可用性群組](#EnableAOAG)  
-  
-    -   [停用 AlwaysOn 可用性群組](#DisableAOAG)  
-  
-##  <a name="BeforeYouBegin"></a> 開始之前  
-  
-###  <a name="Prerequisites"></a> 啟用 AlwaysOn 可用性群組的必要條件  
+##  <a name="Prerequisites"></a> 啟用 AlwaysOn 可用性群組的必要條件  
   
 -   此伺服器執行個體必須位於 Windows Server 容錯移轉叢集 (WSFC) 節點上。  
   
@@ -57,10 +42,9 @@ ms.locfileid: "57527121"
   
  如需建立及設定可用性群組之其他必要條件的相關資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
-###  <a name="Security"></a> 安全性  
+## <a name="Permissions"></a> 權限  
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體啟用 AlwaysOn 可用性群組之後，伺服器執行個體就會有 WSFC 叢集的完整控制。  
-  
-####  <a name="Permissions"></a> Permissions  
+
  需要本機電腦的 **Administrator** 群組成員資格和 WSFC 叢集的完整控制。 透過使用 PowerShell 啟用 AlwaysOn 時，請使用 [以系統管理員身分執行] 選項開啟命令提示字元視窗。  
   
  需要 Active Directory 建立物件和管理物件權限。  
@@ -134,7 +118,7 @@ ms.locfileid: "57527121"
   
 2.  指向 [開始]  功能表上的 [所有程式] ，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]] 和 [組態工具] ，再按一下 [SQL Server 組態管理員] 。  
   
-3.  在 SQL Server 組態管理員 中，按一下 SQL Server 服務，以滑鼠右鍵按一下 SQL Server (\<_instance name_>)，其中 **\<** instance name**>** 是要啟用 AlwaysOn 可用性群組的本機伺服器執行個體名稱，然後按一下 屬性。  
+3.  在 [SQL Server 組態管理員] 中，按一下 [SQL Server 服務]，以滑鼠右鍵按一下 [SQL Server] (\<_instance name_>)，其中 **\<** instance name**>** 是要啟用 AlwaysOn 可用性群組的本機伺服器執行個體名稱，然後按一下 [屬性]。  
   
 4.  選取 [AlwaysOn 高可用性] 索引標籤。  
   

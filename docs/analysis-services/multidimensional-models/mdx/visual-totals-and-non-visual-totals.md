@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 90925c99f281d128ff197fb7b0ef3b088faf5b7d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62984474"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>視覺化總計和非視覺化總計
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  視覺化總計是在資料行或資料列結尾加總該資料行或資料列中之所有可見項目的總計。 這是大部分資料表顯示時的預設行為。 不過，有時候使用者只想要顯示資料表中的某些資料行，但保持整個資料列的總計，包括未顯示的資料行。 這些稱為「非視覺化總計」，因為總計來自可見和不可見的值。  
+  視覺化總計是在資料行或資料列結尾加總該資料行或資料列中之所有可見項目的總計。 這是大部分資料表顯示時的預設行為。 不過，有時候使用者只想要顯示資料表中的某些資料行，但保持整個資料列的總計，包括未顯示的資料行。 這些稱為「非視覺化總計」  ，因為總計來自可見和不可見的值。  
   
  下列案例示範非視覺化總計的行為。 第一個步驟示範視覺化總計的預設行為。  
   

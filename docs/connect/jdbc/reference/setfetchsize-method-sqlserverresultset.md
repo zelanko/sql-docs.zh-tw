@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 233bf4f8-4758-42d0-a80b-33e34fa78027
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4ab8221e52cc5e3510a70a0e9affa290374330a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c5d0bd8714714a479f9370ed2c60b626006e1964
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814346"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803370"
 ---
 # <a name="setfetchsize-method-sqlserverresultset"></a>setFetchSize 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

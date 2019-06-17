@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e97de85cdd57fdb21aa82379243eb6954358ea38
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108314"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>地圖色彩規則對話方塊、一般
@@ -25,7 +25,7 @@ ms.locfileid: "66108314"
   
  若要在圖層上指定包含不同主要色彩與次要色彩的裝飾漸層來顯示所有地圖元素，請使用 [地圖多邊形屬性] 對話方塊的 **[填滿]** 頁面。 色彩規則優先於圖層的顯示屬性。 如需詳細資訊，請參閱[自訂地圖或地圖圖層的資料和顯示 &#40;報表產生器及 SSRS&#41;](report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **套用範本樣式**  
  選取此選項可以根據您在精靈中選擇的主題，或在多邊形、線條或點圖層屬性中設定的主題，使用色彩。 主題會為地圖設定色彩、字型與框線的預設選項。 若是此選項，不會套用任何規則來指派色彩給每個地圖元素。  
   

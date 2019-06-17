@@ -16,50 +16,29 @@ helpviewer_keywords:
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c56c6586330830c0dbda3ece592db7a3bc71d4f0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 36f74a3e4ca4806260f71353cee4d53bd629526e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213152"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799288"
 ---
 # <a name="join-a-secondary-replica-to-an-always-on-availability-group"></a>將次要複本聯結至 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，將次要複本聯結至 Always On 可用性群組。 當次要複本加入至 Always On 可用性群組之後，此次要複本必須聯結至可用性群組。 聯結複本作業必須在裝載次要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上執行。  
+
   
--   **開始之前：**  
+##  <a name="Prerequisites"></a> 必要條件  
   
-     [必要條件](#Prerequisites)  
-  
-     [安全性](#Security)  
-  
--   **若要使用下列項目來準備次要資料庫：**  
-  
-     [Transact-SQL](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **後續操作：**[設定次要資料庫](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> 開始之前  
-  
-###  <a name="Prerequisites"></a> 必要條件  
-  
--   可用性群組的主要複本目前必須在線上。  
-  
--   您必須連接到伺服器執行個體，此執行個體會裝載尚未加入至可用性群組的次要複本。  
-  
+-   可用性群組的主要複本目前必須在線上。    
+-   您必須連接到伺服器執行個體，此執行個體會裝載尚未加入至可用性群組的次要複本。    
 -   本機伺服器執行個體必須能夠連接到裝載主要複本之伺服器執行個體的資料庫鏡像端點。  
   
 > [!IMPORTANT]  
 >  如果不符合任何先決條件，聯結作業會失敗。 聯結嘗試失敗之後，您可能需要連接至裝載主要複本的伺服器執行個體，以移除及重新加入次要複本，然後將其聯結至可用性群組。 如需詳細資訊，請參閱[將次要複本從可用性群組移除 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md) 和[將次要複本加入至可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
-###  <a name="Security"></a> 安全性  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  

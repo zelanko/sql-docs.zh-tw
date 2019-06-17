@@ -15,13 +15,13 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 8f0894b3e7f9cd0775419e44d102eee345cabf5a
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 7007e931b1af2d7076534ef07c7b653d95f68722
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57972897"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800897"
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>使用 OLE DB Driver for SQL Server 建置應用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -26,20 +26,16 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bae9ec6ddd1d3098c04dc1afaaebc189ae079959
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.openlocfilehash: 07e4f9c8f694f68e1ee0df02ec6110847fde4e0f
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65821097"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836315"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 公用程式 [Service Broker]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **ssbdiagnose** 公用程式會報告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務組態中的問題。 您可以針對兩個服務或單一服務進行組態檢查。 問題會在命令提示字元視窗中報告成人們可讀取的文字，或可重新導向至檔案或其他程式的格式化 XML。
-
-> [!NOTE]
-> 最新版本的 SQL Server Management Studio (SSMS) 18.0 已不再會安裝 ssbdiagnose 公用程式。 若要安裝最新版的 ssbdiagnose，請安裝 [SSMS 17.9.1](../../ssms/release-notes-ssms.md#download-ssms-1791)。
-> 您必須安裝舊版的 SSMS，才能獲取後續版本中最新版的修補 ssbdiagnose。 SSMS 18.x 與 17.x 版會並存執行，因此兩者可以安裝在同一部電腦上。
 
 ## <a name="syntax"></a>語法  
   
@@ -206,7 +202,7 @@ WHERE database_id = DB_ID();
  **sys.conversation_endpoints** 目錄檢視的 **conversation_id** 資料行中會報告交談識別碼。  
   
  **-TIMEOUT** _timeout_interval_  
- 指定 **RUNTIME** 報表要執行的秒數。 如未指定 **-TIMEOUT** ，執行階段報表就會無限期地執行。 **-TIMEOUT** 僅用於 **RUNTIME** 報表，不用在 **CONFIGURATION** 報表。 如果沒有指定 **ssbdiagnose** if **-TIMEOUT** 間隔到期之前結束執行階段報表，您可以使用 CTRL + C 結束**-**。 *timeout_interval* 必須是介於 1 和 2,147,483,647 之間的數字。  
+ 指定 **RUNTIME** 報表要執行的秒數。 如未指定 **-TIMEOUT** ，執行階段報表就會無限期地執行。 **-TIMEOUT** 僅用於 **RUNTIME** 報表，不用在 **CONFIGURATION** 報表。 如果沒有指定 **ssbdiagnose** if **-TIMEOUT** 間隔到期之前結束執行階段報表，您可以使用 CTRL + C 結束 **-** 。 *timeout_interval* 必須是介於 1 和 2,147,483,647 之間的數字。  
   
  **\<runtimeconnectionoptions>**  
  指定資料庫的連接資訊，而這些資料庫包含與受監視之交談元素相關聯的服務。 如果所有服務都位於相同的資料庫中，您就只需要指定一個 **CONNECT TO** 子句。 如果各項服務位於不同的資料庫中，您就必須針對每個資料庫提供一個 **CONNECT TO** 子句。 如未指定 **runtimeconnectionoptions** ，則 **ssbdiagnose** 會使用 **baseconnectionoptions**中的連接資訊。  
@@ -249,7 +245,7 @@ WHERE database_id = DB_ID();
  **-S** _server_name_[\\*instance_name*]  
  指定保存要分析之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 執行個體。  
   
- 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的預設執行個體。 指定 _server\_name_**\\**_instance\_name_，即可連接到該伺服器上 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的具名執行個體。 如未指定 **-S** ，則 **ssbdiagnose** 會使用 SQLCMDSERVER 環境變數的值。 如果也沒有設定 SQLCMDSERVER， **ssbdiagnose** 就會連接至本機電腦上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 預設執行個體。  
+ 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的預設執行個體。 指定 _server\_name_ **\\** _instance\_name_，即可連接到該伺服器上 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的具名執行個體。 如未指定 **-S** ，則 **ssbdiagnose** 會使用 SQLCMDSERVER 環境變數的值。 如果也沒有設定 SQLCMDSERVER， **ssbdiagnose** 就會連接至本機電腦上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 預設執行個體。  
   
  **-d** _database_name_  
  指定保存要分析之 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務的資料庫。 如果此資料庫不存在，就會產生錯誤訊息。 如未指定 **-d** ，預設值就是登入之預設資料庫屬性中所指定的資料庫。  

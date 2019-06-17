@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017755"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
@@ -42,7 +42,7 @@ sp_help [ [ @objname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @objname = ] 'name'` 是中之任何物件名稱**sysobjects**或任何使用者定義資料類型中**systypes**資料表。 *名稱*已**nvarchar (** 776 **)**，預設值是 NULL。 不接受資料庫名稱。  兩個或三個部分的名稱必須加以分隔，例如 'Person.AddressType' 或 [Person.AddressType]。   
+`[ @objname = ] 'name'` 是中之任何物件名稱**sysobjects**或任何使用者定義資料類型中**systypes**資料表。 *名稱*已**nvarchar (** 776 **)** ，預設值是 NULL。 不接受資料庫名稱。  兩個或三個部分的名稱必須加以分隔，例如 'Person.AddressType' 或 [Person.AddressType]。   
    
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -93,7 +93,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Column_name**|**nvarchar(** 128 **)**|資料行名稱。|  
         |**型別**|**nvarchar(** 128 **)**|資料行資料類型。|  
         |**計算**|**varchar(** 35 **)**|指出是否計算資料行的值：Yes 或 no。|  
-        |**長度**|**int**|資料行長度 (以位元組為單位)。<br /><br /> 注意:如果資料行資料類型是大數值類型 (**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或**xml**)，將值顯示為-1。|  
+        |**長度**|**int**|資料行長度 (以位元組為單位)。<br /><br /> 注意:如果資料行資料類型是大數值類型 (**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或**xml**)，將值顯示為-1。|  
         |**Prec**|**char(** 5 **)**|資料行有效位數。|  
         |**小數位數**|**char(** 5 **)**|資料行小數位數。|  
         |**可為 Null**|**varchar(** 35 **)**|指出資料行是否允許 NULL 值：Yes 或 no。|  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15e30a28a816b8105762e9f4cbfc4a0892cae1be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62961053"
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
@@ -47,9 +47,9 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @IndexNamePattern = ] 'table_or_index_name'` 是使用者定義資料表或索引的完整或非完整名稱。 *table_or_index_name&lt*已**nvarchar(1035)**，沒有預設值。 只有在指定完整索引或資料表名稱時，才會需要引號。 如果提供其中包括資料庫名稱的完整資料表名稱，資料庫名稱就必須是目前資料庫的名稱。 如果指定資料表名稱，但不含索引，且沒有任何叢集索引存在，便會將指定的選項值設給這份資料表的所有索引以及資料表本身。  
+`[ @IndexNamePattern = ] 'table_or_index_name'` 是使用者定義資料表或索引的完整或非完整名稱。 *table_or_index_name&lt*已**nvarchar(1035)** ，沒有預設值。 只有在指定完整索引或資料表名稱時，才會需要引號。 如果提供其中包括資料庫名稱的完整資料表名稱，資料庫名稱就必須是目前資料庫的名稱。 如果指定資料表名稱，但不含索引，且沒有任何叢集索引存在，便會將指定的選項值設給這份資料表的所有索引以及資料表本身。  
   
-`[ @OptionName = ] 'option_name'` 是一個索引選項名稱。 *option_name*已**varchar(35)**，沒有預設值。 *option_name*可以有下列值之一。  
+`[ @OptionName = ] 'option_name'` 是一個索引選項名稱。 *option_name*已**varchar(35)** ，沒有預設值。 *option_name*可以有下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -58,7 +58,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 |**DisAllowRowLocks**|當設為 TRUE 時，不會使用資料列鎖定。 當設為 FALSE 時，在存取索引時，允許資料列鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會決定使用資料列鎖定的時機。|  
 |**DisAllowPageLocks**|當設為 TRUE 時，不會使用頁面鎖定。 當設為 FALSE 時，在存取索引時，允許頁面鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會決定使用頁面鎖定的時機。|  
   
-`[ @OptionValue = ] 'value'` 指定是否*option_name*設定是啟用 （TRUE、 ON、 yes 或 1） 或停用 (FALSE、 OFF、 no 或 0)。 *值*已**varchar(12)**，沒有預設值。  
+`[ @OptionValue = ] 'value'` 指定是否*option_name*設定是啟用 （TRUE、 ON、 yes 或 1） 或停用 (FALSE、 OFF、 no 或 0)。 *值*已**varchar(12)** ，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或大於零 (失敗)  

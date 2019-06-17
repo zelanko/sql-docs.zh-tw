@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49e86c8b47a3a0de48a0138d96cec22d585901c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62711443"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量規格
@@ -116,7 +116,7 @@ ms.locfileid: "62711443"
 |每個資料庫的記錄檔案數|1|1|  
 |每部電腦的磁碟區數|3|3|  
   
- * 的 managed 執行個體的數目上限[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]受到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]公用程式可能會根據伺服器的硬體組態而有所不同。 如需入門資訊，請參閱 [SQL Server 公用程式的功能與工作](../relational-databases/manage/sql-server-utility-features-and-tasks.md)。 並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本都提供 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 公用程式控制點。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ \* 的 managed 執行個體的數目上限[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]受到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]公用程式可能會根據伺服器的硬體組態而有所不同。 如需入門資訊，請參閱 [SQL Server 公用程式的功能與工作](../relational-databases/manage/sql-server-utility-features-and-tasks.md)。 並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本都提供 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 公用程式控制點。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料層應用程式物件  
  下表指定已經在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料層應用程式 (DAC) 中測試之各種物件的大小和數目上限。  
