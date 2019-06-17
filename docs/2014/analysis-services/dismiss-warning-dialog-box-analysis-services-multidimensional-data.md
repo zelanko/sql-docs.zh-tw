@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3450713f3b621e960e443062323c3074b2698b07
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081637"
 ---
 # <a name="dismiss-warning-dialog-box-analysis-services---multidimensional-data"></a>解除警告對話方塊 (Analysis Services - 多維度資料)
@@ -26,7 +26,7 @@ ms.locfileid: "66081637"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中開啟 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案。  
   
-2.  在方案總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案、按一下 [編輯資料庫]，然後按一下 [警告] 索引標籤。  
+2.  在方案總管  中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案、按一下 [編輯資料庫]  ，然後按一下 [警告]  索引標籤。  
   
 ## <a name="options"></a>選項  
  **說明**  

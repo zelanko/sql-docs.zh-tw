@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a41f11b200ffe5dfc91479ea54095fd24c90699a
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011550"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>建立及管理全文檢索索引
@@ -27,9 +27,9 @@ ms.locfileid: "66011550"
 > [!NOTE]  
 >  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新的版本中，全文檢索引擎位於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序中，而非個別的服務中。 將全文檢索引擎整合到 Database Engine 可以改善全文檢索管理能力、混合式查詢的最佳化，以及整體效能。  
   
- 每個資料表只允許有一個全文檢索索引。 若要對資料表建立全文檢索索引，該資料表必須有單一的非 Null 唯一資料行。 您可以針對 `char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml`、`varbinary` 和 `varbinary(max)` 類型的資料行建立全文檢索索引，並且建立全文檢索搜尋的索引。 針對資料類型為 `varbinary`、`varbinary(max)`、`image` 或 `xml` 的資料行建立全文檢索索引會要求您指定類型資料行。 「類型資料行」是一個資料表資料行，您可以在每個資料列中儲存文件的副檔名 (.doc、.pdf 與 .xls 等)。  
+ 每個資料表只允許有一個全文檢索索引。 若要對資料表建立全文檢索索引，該資料表必須有單一的非 Null 唯一資料行。 您可以針對 `char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml`、`varbinary` 和 `varbinary(max)` 類型的資料行建立全文檢索索引，並且建立全文檢索搜尋的索引。 針對資料類型為 `varbinary`、`varbinary(max)`、`image` 或 `xml` 的資料行建立全文檢索索引會要求您指定類型資料行。 「類型資料行」  是一個資料表資料行，您可以在每個資料列中儲存文件的副檔名 (.doc、.pdf 與 .xls 等)。  
   
- 建立與維護全文檢索索引的程序稱為「母體擴展」，也稱為「搜耙」。 全文檢索索引母體擴展有三種類型：完整母體擴展、以變更追蹤為基礎的母體擴展，以及以時間戳記為基礎的累加母體擴展。 如需詳細資訊，請參閱 [擴展全文檢索索引](populate-full-text-indexes.md)。  
+ 建立與維護全文檢索索引的程序稱為「母體擴展」  ，也稱為「搜耙」  。 全文檢索索引母體擴展有三種類型：完整母體擴展、以變更追蹤為基礎的母體擴展，以及以時間戳記為基礎的累加母體擴展。 如需詳細資訊，請參閱 [擴展全文檢索索引](populate-full-text-indexes.md)。  
   
 ##  <a name="tasks"></a> 一般工作  
  **若要建立全文檢索索引**  
@@ -108,7 +108,7 @@ ms.locfileid: "66011550"
 |Rear|1|3|1|  
 |Reflector|1|3|2|  
   
- 如片段 2 所示，全文檢索查詢必須在內部查詢每個片段並捨棄較舊的項目。 因此，如果全文檢索索引包含過多全文檢索索引片段，可能會導致查詢效能大幅降低。 若要減少片段的數目，請使用 [ALTER FULLTEXT CATALOG](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 REORGANIZE 選項來重新組織全文檢索目錄。 這個陳述式會執行「主要合併」，將片段合併成較大的單一片段，然後從全文檢索索引中移除所有已過時的項目。  
+ 如片段 2 所示，全文檢索查詢必須在內部查詢每個片段並捨棄較舊的項目。 因此，如果全文檢索索引包含過多全文檢索索引片段，可能會導致查詢效能大幅降低。 若要減少片段的數目，請使用 [ALTER FULLTEXT CATALOG](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 REORGANIZE 選項來重新組織全文檢索目錄。 這個陳述式會執行「主要合併」  ，將片段合併成較大的單一片段，然後從全文檢索索引中移除所有已過時的項目。  
   
  重新組織之後，範例索引就會包含下列資料列：  
   

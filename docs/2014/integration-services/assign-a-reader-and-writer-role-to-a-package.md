@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 793df21782fd3bcb06ad8cbe91c3ba325b2f8a95
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061514"
 ---
 # <a name="assign-a-reader-and-writer-role-to-a-package"></a>指派讀取器和寫入器角色給封裝
@@ -30,6 +30,6 @@ ms.locfileid: "66061514"
   
 4.  在 **[封裝角色]** 對話方塊中，選取 **[讀取器角色]** 清單中的讀取器角色和 **[寫入器角色]** 清單中的寫入器角色。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
   

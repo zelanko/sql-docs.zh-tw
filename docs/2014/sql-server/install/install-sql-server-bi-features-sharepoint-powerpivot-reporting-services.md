@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 436d90b75a5995ac8f455a52ebfffe662b1f9b7f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094456"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>安裝具有 SharePoint 的 SQL Server BI 功能 (PowerPivot 和 Reporting Services)
@@ -61,9 +61,9 @@ ms.locfileid: "66094456"
 |1|僅 SharePoint|原生 Excel Services 功能|Excel Services 以及 SharePoint Server 2013 隨附的其他服務。|  
 |**2**|SharePoint 以及 SharePoint 模式的 Analysis Services|在瀏覽器中的互動式 PowerPivot 活頁簿|以 SharePoint 模式安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。<br /><br /> 在 Excel Services 中註冊 Analysis Services 伺服器。|  
 |**3**|SharePoint 以及 SharePoint 模式的 Reporting Services|Power View|以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。<br /><br /> 安裝[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]增益集 **(rsSharePoint.msi)** for SharePoint。 如需詳細資訊，請參閱 <<c0> [ 安裝或解除安裝 Reporting Services 增益集 for SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;</c0>](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)|  
-|**4**|所有 PowerPivot 功能|存取活頁簿做為來自於伺服器陣列外部的資料來源。<br /><br /> 排程資料重新整理。<br /><br /> PowerPivot 圖庫。<br /><br /> 管理儀表板。<br /><br /> BISM 連結檔案內容類型。|部署 PowerPivot for SharePoint 2013 增益集 **(spPowerPivot.msi)**。 如需詳細資訊，請參閱下列內容：<br /><br /> [安裝或解除安裝 PowerPivot for SharePoint 增益集&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)<br /><br /> 如需有關如何下載 **spPowerPivot.msi**的詳細資訊，請參閱＜ [下載 SQL Server 2014 PowerPivot for SharePoint](https://go.microsoft.com/fwlink/?LinkID=296473)＞。|  
+|**4**|所有 PowerPivot 功能|存取活頁簿做為來自於伺服器陣列外部的資料來源。<br /><br /> 排程資料重新整理。<br /><br /> PowerPivot 圖庫。<br /><br /> 管理儀表板。<br /><br /> BISM 連結檔案內容類型。|部署 PowerPivot for SharePoint 2013 增益集 **(spPowerPivot.msi)** 。 如需詳細資訊，請參閱下列內容：<br /><br /> [安裝或解除安裝 PowerPivot for SharePoint 增益集&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)<br /><br /> 如需有關如何下載 **spPowerPivot.msi**的詳細資訊，請參閱＜ [下載 SQL Server 2014 PowerPivot for SharePoint](https://go.microsoft.com/fwlink/?LinkID=296473)＞。|  
   
- 如需啟用的其他資訊[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]功能，請參閱[SQL Server BI Light-up Story for SharePoint 2013](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) (https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx)。  
+ 如需啟用的其他資訊[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]功能，請參閱[SQL Server BI Light-up Story for SharePoint 2013](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) (https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) 。  
   
 ##  <a name="bkmk_install_sharepoint2013_overview"></a> 安裝概觀  
  如果您要同時使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，請執行 [SQL Server 安裝精靈] 兩次。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 並[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]是不同選項**安裝程式角色**SQL Server 安裝精靈的頁面。  
@@ -94,7 +94,7 @@ ms.locfileid: "66094456"
   
      ![兩個 PowerPivot 組態工具](../../../2014/analysis-services/media/as-powerpivot-configtools-bothicons.gif "兩個 PowerPivot 組態工具")  
   
-5.  在 SharePoint Server 2013 中設定 Excel Services，以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱 < 設定基本 Analysis Services SharePoint 整合 > 一節中[PowerPivot for SharePoint 2013 安裝](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)還有[管理 Excel Services 資料模型設定 (SharePoint Server2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx)。  
+5.  在 SharePoint Server 2013 中設定 Excel Services，以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱 < 設定基本 Analysis Services SharePoint 整合 > 一節中[PowerPivot for SharePoint 2013 安裝](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)還有[管理 Excel Services 資料模型設定 (SharePoint Server2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx) 。  
   
 6.  如需詳細資訊，請參閱＜ [PowerPivot for SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)＞。  
   

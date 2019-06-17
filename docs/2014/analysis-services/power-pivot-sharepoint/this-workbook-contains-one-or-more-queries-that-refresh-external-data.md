@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 925821cba91a8a62076f0dcfa327453d035671d9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070973"
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>此活頁簿包含可重新整理外部資料的一個或多個查詢。
@@ -35,21 +35,21 @@ ms.locfileid: "66070973"
  若要篩選與配量活頁簿中的 PowerPivot 資料，必須啟用查詢。 請務必僅針對您信任的 PowerPivot 活頁簿啟用查詢。  
   
 ## <a name="user-action"></a>使用者動作  
- 按一下 [是] 以啟用查詢。  
+ 按一下 [是]  以啟用查詢。  
   
  您也可以變更組態設定，不再於重新整理時警告。  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]** 。  
   
-2.  按一下 [Excel Services 應用程式]。  
+2.  按一下 [Excel Services 應用程式]  。  
   
-3.  按一下 [信任的檔案位置]。  
+3.  按一下 [信任的檔案位置]  。  
   
-4.  按一下 [http://] 或是您想要設定的位置。  
+4.  按一下 [http://]  或是您想要設定的位置。  
   
-5.  在 [外部資料] 中，清除 [Warn on data refresh (資料重新整理時警告)] 的核取方塊。  
+5.  在 [外部資料] 中，清除 [Warn on data refresh (資料重新整理時警告)]  的核取方塊。  
   
-6.  按一下 [確定] 。  
+6.  按一下 [確定]  。  
   
  或者，您可以針對包含 PowerPivot 活頁簿的網站建立新的信任位置，然後只針對該網站修改組態設定。 如需相關資訊，請參閱 [在管理中心建立 PowerPivot 網站的信任位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   

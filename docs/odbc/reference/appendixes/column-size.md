@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22271cd37069123d0e11a3d0ab660134c61e283b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63224474"
 ---
 # <a name="column-size"></a>資料行大小
@@ -40,8 +40,8 @@ ms.locfileid: "63224474"
 |SQL_DOUBLE[c]|15|  
 |所有二進位型別 [a]、 [b]。|定義或最大長度以位元組為單位的資料行或參數。 例如，定義為 BINARY(10) 資料行的長度為 10。|  
 |SQL_TYPE_DATE[c]|10 (中的字元數*yyyy-mm-dd 的-* 格式)。|  
-|SQL_TYPE_TIME[c]|8 (中的字元數*hh 分秒*格式)，或 9 + *s* (中的字元數*hh: mm:*[.fff]] 格式，其中*的*的秒數有效位數)。|  
-|SQL_TYPE_TIMESTAMP|16 (中的字元數*yyyy 為 yyyy-mm-dd hh: mm*格式)<br /><br /> 19 (中的字元數*yyyy 為 yyyy-mm-dd* *hh: mm:* 格式)<br /><br /> 中的多個<br /><br /> 20 + *s* (中的字元數*yyyy 為 yyyy-mm-dd hh: mm:*[.fff]] 格式，其中*s*是秒數有效位數)。|  
+|SQL_TYPE_TIME[c]|8 (中的字元數*hh 分秒*格式)，或 9 + *s* (中的字元數*hh: mm:* [.fff] 格式，其中*的*的秒數有效位數)。|  
+|SQL_TYPE_TIMESTAMP|16 (中的字元數*yyyy 為 yyyy-mm-dd hh: mm*格式)<br /><br /> 19 (中的字元數*yyyy 為 yyyy-mm-dd* *hh: mm:* 格式)<br /><br /> 中的多個<br /><br /> 20 + *s* (中的字元數*yyyy 為 yyyy-mm-dd hh: mm:* [.fff] 格式，其中*s*是秒數有效位數)。|  
 |SQL_INTERVAL_SECOND|何處*p*是間隔開頭有效位數並*s*是秒數有效位數*p* (如果*s*= 0) 或*p* + *s*+ 1 (如果*s*> 0)。 [d]|  
 |SQL_INTERVAL_DAY_TO_SECOND|何處*p*是間隔開頭有效位數並*s*是秒數有效位數 9 +*p* (如果*s*= 0) 或 10 +*p*+ *s* (如果*s*> 0)。 [d]|  
 |SQL_INTERVAL_HOUR_TO_SECOND|何處*p*是間隔開頭有效位數並*s*是秒數有效位數 6 +*p* (如果*s*= 0) 或 7 +*p* + *s* (如果*s*> 0)。 [d]|  

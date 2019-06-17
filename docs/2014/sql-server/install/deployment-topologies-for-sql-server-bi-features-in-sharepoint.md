@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 7ef3ecf31c0539f3b3cb2cf5a4f04b044e625bd1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095598"
 ---
 # <a name="deployment-topologies-for-sql-server-bi-features-in-sharepoint"></a>Deployment Topologies for SQL Server BI Features in SharePoint
@@ -65,14 +65,14 @@ ms.locfileid: "66095598"
 |||  
 |-|-|  
 |**(1)**|Excel 服務應用程式。 此服務應用程式是在 SharePoint 安裝過程中建立。|  
-|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]**。|  
+|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]** 。|  
 |**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。|  
 |**(4)**|從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝媒體或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能套件安裝 SharePoint 的 Reporting Services 增益集。|  
 |**(5)**|執行 **spPowerPivot.msi** ，以安裝資料提供者、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫及排程資料重新整理。|  
 |**(6)**|SharePoint 模式的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 在 **[資料模型設定]** 中設定 Excel Services 應用程式使用此伺服器。|  
 |**(7)**|SharePoint 內容、組態和服務應用程式資料庫。|  
   
- ![SharePoint 設定](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[透過 Microsoft SQL Server Connect 提交意見與連絡資訊](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)。  
+ ![SharePoint 設定](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[透過 Microsoft SQL Server Connect 提交意見與連絡資訊](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback) 。  
   
 ###  <a name="bkmk_powerpivot_sharepoint2013_1server"></a> PowerPivot for SharePoint 2013 單一伺服器部署  
  單一伺服器部署對於測試很有用，但是不建議用於實際部署。  
@@ -84,7 +84,7 @@ ms.locfileid: "66095598"
 |||  
 |-|-|  
 |**(1)**|Excel 服務應用程式。 此服務應用程式是在 SharePoint 安裝過程中建立。|  
-|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]**。|  
+|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]** 。|  
 |**(3)**|SharePoint 內容、組態和服務應用程式資料庫。|  
 |**(4)**|SharePoint 模式的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 在 **[資料模型設定]** 中設定 Excel Services 應用程式使用此伺服器。|  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66095598"
 |||  
 |-|-|  
 |**(1)**|Excel 服務應用程式。 此服務應用程式是在 SharePoint 安裝過程中建立。|  
-|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]**。|  
+|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]** 。|  
 |**(3)**|執行 **spPowerPivot.msi** ，以安裝資料提供者、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫及排程資料重新整理。|  
 |**(4)**|SharePoint 模式的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 在 **[資料模型設定]** 中設定 Excel Services 應用程式使用此伺服器。|  
 |**(5)**|SharePoint 內容、組態和服務應用程式資料庫。|  
@@ -113,7 +113,7 @@ ms.locfileid: "66095598"
 |||  
 |-|-|  
 |**(1)**|Excel 服務應用程式。 此服務應用程式是在 SharePoint 安裝過程中建立。|  
-|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]**。|  
+|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]** 。|  
 |**(3)**|執行 spPowerPivot.msi，以安裝資料提供者、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫及排程資料重新整理。|  
 |**(4)**|SharePoint 模式的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 在 **[資料模型設定]** 中設定 Excel Services 應用程式使用此伺服器。|  
 |**(5)**|SharePoint 內容、組態和服務應用程式資料庫。|  
@@ -126,7 +126,7 @@ ms.locfileid: "66095598"
 |||  
 |-|-|  
 |**(1)**|Excel 服務應用程式。 此服務應用程式是在 SharePoint 安裝過程中建立。|  
-|**(2)**|PowerPivot 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]**。|  
+|**(2)**|PowerPivot 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]** 。|  
 |**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。|  
 |**(4)**|從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝媒體或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能套件安裝 SharePoint 的 Reporting Services 增益集。|  
 |**(5)**|SharePoint 內容、組態和服務應用程式資料庫。|  
@@ -140,7 +140,7 @@ ms.locfileid: "66095598"
 |||  
 |-|-|  
 |**(1)**|Excel 服務應用程式。 此服務應用程式是在 SharePoint 安裝過程中建立。|  
-|**(2)**|PowerPivot 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]**。|  
+|**(2)**|PowerPivot 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]** 。|  
 |**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。|  
 |**(4)**|從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝媒體或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能套件安裝 SharePoint 的 Reporting Services 增益集。|  
 |**(5)**|執行 **spPowerPivot.msi** 以安裝資料提供者、PowerPivot 組態工具、PowerPivot 圖庫及排程資料重新整理。|  

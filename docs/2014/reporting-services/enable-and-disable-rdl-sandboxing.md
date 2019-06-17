@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebc5ee51dd32cb999f0e6551bb87c36eda8865c7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109231"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>啟用或停用 RDL 沙箱
@@ -148,7 +148,7 @@ ms.locfileid: "66109231"
 -   當您因為新的成員可能已加入至 RDL 類型，而更新報表伺服器來處理較新的 RDL 結構描述時。  
   
 ### <a name="working-with-operators-and-new"></a>使用運算子及 New  
- 根據預設，一定會允許 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 語言運算子，但是 `New` 除外。 `New`運算子會受到`AllowNew`屬性上**\<允許 >** 項目。 其他語言運算子，例如預設集合存取子運算子`!`並[!INCLUDE[vbprvb](../includes/vbprvb-md.md)].NET Framework 轉換巨集的這類`CInt`，一律允許。  
+ 根據預設，一定會允許 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 語言運算子，但是 `New` 除外。 `New`運算子會受到`AllowNew`屬性上 **\<允許 >** 項目。 其他語言運算子，例如預設集合存取子運算子`!`並[!INCLUDE[vbprvb](../includes/vbprvb-md.md)].NET Framework 轉換巨集的這類`CInt`，一律允許。  
   
  不支援將運算子加入至封鎖清單中，包括自訂運算子。 若要排除某個類型的運算子，您必須執行下列動作：  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7e676368ccdd28a195f3a50208e3ca1c0703214
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059452"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>數位簽章對話方塊 UI 參考
@@ -26,9 +26,9 @@ ms.locfileid: "66059452"
   
  如需詳細資訊，請參閱 [使用數位簽章來識別封裝的來源](security/identify-the-source-of-packages-with-digital-signatures.md) 和 [使用數位憑證來簽署封裝](../../2014/integration-services/sign-a-package-by-using-a-digital-certificate.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **簽署**  
- 按一下即可開啟 [選取憑證] 對話方塊，並選取要使用的憑證。  
+ 按一下即可開啟 [選取憑證]  對話方塊，並選取要使用的憑證。  
   
  **移除**  
  按一下即可移除數位簽章。  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 088889518d88c5fd45f988fe03185e22f041b627
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109661"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>建立內嵌或共用資料來源 (SSRS)
@@ -33,16 +33,16 @@ ms.locfileid: "66109661"
   
 ### <a name="to-create-an-embedded-or-shared-data-source"></a>建立內嵌或共用資料來源  
   
-1.  在 [報表資料] 窗格的工具列上，按一下 **[新增]** ，然後按一下 **[資料來源]**。 **[資料來源屬性]** 對話方塊隨即開啟。  
+1.  在 [報表資料] 窗格的工具列上，按一下 **[新增]** ，然後按一下 **[資料來源]** 。 **[資料來源屬性]** 對話方塊隨即開啟。  
   
     > [!NOTE]  
-    >  如果看不到 [報表資料] 窗格，請按一下 [檢視] 功能表上的 [報表資料]。  
+    >  如果看不到 [報表資料] 窗格，請按一下 [檢視]  功能表上的 [報表資料]  。  
   
 2.  在 **[名稱]** 文字方塊中，輸入資料來源的名稱或接受預設值。 資料來源名稱是在報表內部使用。 為了清楚起見，我們建議資料來源的名稱要包含連接字串中所指定的資料庫名稱。  
   
 3.  內嵌的資料來源，請確認**內嵌連接**已選取。  
   
-    1.  從 [類型] 下拉式清單中，選取資料來源類型，例如 [Microsoft SQL Server] 或 [OLE DB]。  
+    1.  從 [類型]  下拉式清單中，選取資料來源類型，例如 [Microsoft SQL Server]  或 [OLE DB]  。  
   
     2.  使用以下其中一個替代方式指定連接字串：  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66109661"
   
 4.  共用的資料來源，請確認**使用共用資料來源參考**已選取。  
   
-    1.  按一下 **[新增]**。 在 [共用資料來源] 屬性對話方塊中，遵循步驟 2 和 3 來建立新的資料來源。  
+    1.  按一下 **[新增]** 。 在 [共用資料來源]  屬性對話方塊中，遵循步驟 2 和 3 來建立新的資料來源。  
   
     2.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -68,9 +68,9 @@ ms.locfileid: "66109661"
   
 ### <a name="to-import-an-existing-data-source-in-report-designer"></a>若要在報表設計師中匯入現有的資料來源  
   
-1.  在方案總管中，以滑鼠右鍵按一下報表伺服器專案中的 [共用資料來源] 資料夾，然後按一下 [加入現有項目]。 [新增現有項目] 對話方塊隨即開啟。  
+1.  在方案總管中，以滑鼠右鍵按一下報表伺服器專案中的 [共用資料來源]  資料夾，然後按一下 [加入現有項目]  。 [新增現有項目]  對話方塊隨即開啟。  
   
-2.  巡覽至現有的報表定義共用資料來源 (rds) 檔案，然後按一下 [開啟]。  
+2.  巡覽至現有的報表定義共用資料來源 (rds) 檔案，然後按一下 [開啟]  。  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

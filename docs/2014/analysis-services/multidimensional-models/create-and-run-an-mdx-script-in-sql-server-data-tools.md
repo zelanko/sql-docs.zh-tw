@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6451e2a02bbaf7ef8a58b63c75838023433ff563
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076213"
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>在 SQL Server 資料工具中建立及執行 MDX 指令碼
@@ -26,9 +26,9 @@ ms.locfileid: "66076213"
   
 ### <a name="to-create-a-multidimensional-expressions-mdx-script"></a>若要建立多維度運算式 (MDX) 指令碼  
   
-1.  開啟要建立 MDX 指令碼的 Cube，然後在 [檢視] 之下，按一下 [計算]。  
+1.  開啟要建立 MDX 指令碼的 Cube，然後在 [檢視]  之下，按一下 [計算]  。  
   
-2.  如果不是處於 [指令碼檢視] 模式，請按一下**指令碼檢視**圖示。  
+2.  如果不是處於 [指令碼檢視]  模式，請按一下**指令碼檢視**圖示。  
   
 3.  在指令碼視窗中，於 CALCULATE 命令之下，輸入 MDX 運算式。 按一下 **檢查語法** 圖示，並確認運算式的語法正確。  
   

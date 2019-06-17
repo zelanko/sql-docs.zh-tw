@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 242c6451cc6dc018e4972be7a16305b676845687
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069270"
 ---
 # <a name="select-table-dialog-box-mining-accuracy-chart-view"></a>選取資料表對話方塊 (採礦精確度圖表檢視)
   使用 **[選取資料表]** 對話方塊，即可選取資料表，用來測試所選取採礦結構包含之採礦模型的精確度。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料來源**  
  此資料來源包含用來測試採礦模型的資料表。 清單包含在目前 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案中定義的所有資料來源。  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 48311ccaa22878fb5b17be75c3f12c64cb4a67e6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109055"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>將權限授與使用者及警示管理員
@@ -30,19 +30,19 @@ ms.locfileid: "66109055"
   
 1.  移至您要授與權限的 SharePoint 網站。  
   
-2.  在工具列上，按一下 **[網站動作]** ，然後按一下 **[網站權限]**。  
+2.  在工具列上，按一下 **[網站動作]** ，然後按一下 **[網站權限]** 。  
   
      如果沒有看到此選項，表示您沒有足夠的權限以將權限授與給其他人。  
   
-3.  按一下 **[授與權限]**。  
+3.  按一下 **[授與權限]** 。  
   
-4.  在 [使用者/群組] 中，輸入要授與權限的使用者名稱、群組名稱或電子郵件地址。  
+4.  在 [使用者/群組]  中，輸入要授與權限的使用者名稱、群組名稱或電子郵件地址。  
   
 5.  選取 **[加入使用者至 SharePoint 群組]** 或 **[直接授與使用者權限]** 選項。 根據您選取的是 **[新增使用者至 SharePoint 群組]** 或是 **[直接授與使用者權限]** 而定，執行下列其中一項操作：  
   
-    -   如果您選取了 [新增使用者至 SharePoint 群組]，請選取下拉式清單中的權限等級。  
+    -   如果您選取了 [新增使用者至 SharePoint 群組]  ，請選取下拉式清單中的權限等級。  
   
-    -   如果您選取了 **[直接授與使用者權限]**，請選取權限等級。  
+    -   如果您選取了 **[直接授與使用者權限]** ，請選取權限等級。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

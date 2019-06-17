@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6e7b629b93e0c79a003019a2e024388d54b12b76
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065206"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中對於 Database Engine 功能的行為變更
@@ -35,7 +35,7 @@ ms.locfileid: "66065206"
  [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql)選項，來判斷回應格式，不會取代實際執行查詢[sp_describe_first_result_set &#40;-&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)， [sp_describe_undeclared_parameters &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql)， [sys.dm_exec_describe_first_result_set &#40;-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)，和[sys.dm_exec_describe_first_result_set_for_object &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)。  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>編寫 SQL Server Agent 工作之指令碼時的行為變更  
- 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，如果您透過從現有的作業複製指令碼來建立新的作業，新的作業可能會對現有的作業產生不良的影響。 若要建立新的工作，使用來自現有工作的指令碼，以手動方式刪除參數*@schedule_uid*而這通常是可在 現有的工作中建立作業排程之區段的最後一個參數。 這將會為新的作業建立新的獨立排程，而不會影響現有的作業。  
+ 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，如果您透過從現有的作業複製指令碼來建立新的作業，新的作業可能會對現有的作業產生不良的影響。 若要建立新的工作，使用來自現有工作的指令碼，以手動方式刪除參數 *@schedule_uid* 而這通常是可在 現有的工作中建立作業排程之區段的最後一個參數。 這將會為新的作業建立新的獨立排程，而不會影響現有的作業。  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>CLR 使用者定義函數和方法的常數摺疊  
  在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，下列使用者定義的 CLR 物件現在是可摺疊的：  

@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a69b2286abbc1ba4289fd482b1bbf5a2dfb3e7b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070042"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>取樣資料 (SQL Server 資料採礦增益集)
@@ -70,7 +70,7 @@ ms.locfileid: "66070042"
 ## <a name="related-options"></a>相關的選項  
  當您逐步進行精靈時，會有下列選項：  
   
-|選項|註解|  
+|選項。|註解|  
 |-------------|--------------|  
 |選取來源資料對話方塊 (適用於 Excel 的資料採礦用戶端)|選取包含資料的 Excel 範圍或資料表。 如果您要使用外部資料，可以使用關聯式資料，不過資料必須包含在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料來源中。 T|  
 |選取取樣類型頁面 (適用於 Excel 的資料採礦用戶端)|如果您使用外部資料來源，則僅能使用隨機取樣選項。 此外，您必須指定要使用最終資料集，在建立資料列數目**資料列計數**選項。 您無法指定來源資料的百分比。|  

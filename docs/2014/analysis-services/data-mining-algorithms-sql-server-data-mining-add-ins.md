@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e0bf6c0c1126dff29107636e0956d92d4b314a7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086505"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>資料採礦演算法 (SQL Server 資料採礦增益集)
@@ -55,7 +55,7 @@ ms.locfileid: "66086505"
   
 -   使用 **[資料採礦查詢]** 精靈建立模型。  
   
--   在 **[資料採礦用戶端]** 中啟動精靈之後，按一下 **[參數]**。  
+-   在 **[資料採礦用戶端]** 中啟動精靈之後，按一下 **[參數]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [查詢&#40;SQL Server 資料採礦增益集&#41;](query-sql-server-data-mining-add-ins.md)   
