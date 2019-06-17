@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53f91ef270d9e4ea255a1cf71250dcc21c88346a
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 6bc6fcad5f667b0c1224c4d1e897ae9fc30642d0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974327"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793526"
 ---
 # <a name="create-an-always-on-availability-group-using-powershell"></a>使用 PowerShell 建立 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,45 +27,27 @@ ms.locfileid: "57974327"
 > [!NOTE]  
 >  如需可用性群組的簡介，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)中的 PowerShell，透過 PowerShell Cmdlet 建立及設定 AlwaysOn 可用性群組。  
   
--   **開始之前：**  
-  
-     [必要條件、限制及建議](#PrerequisitesRestrictions)  
-  
-     [安全性](#Security)  
-  
-     [工作及對應 PowerShell 指令程式的摘要](#SummaryPSStatements)  
-  
-     [若要設定和使用 SQL Server PowerShell 提供者](#PsProviderLinks)  
-  
--   **若要建立和設定可用性群組，請使用：**[使用 PowerShell 建立和設定可用性群組](#PowerShellProcedure)  
-  
--   **範例：**[使用 PowerShell 建立可用性群組](#ExampleConfigureGroup)  
-  
--   [相關工作](#RelatedTasks)  
-  
--   [相關內容](#RelatedContent)  
-  
 > [!NOTE]  
 >  若不使用 PowerShell 指令程式，您可以使用 [建立可用性群組精靈] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。 如需詳細資訊，請參閱 [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md) 或 [建立可用性群組 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)中的 PowerShell，透過 PowerShell Cmdlet 建立及設定 AlwaysOn 可用性群組。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
- 我們強烈建議您先閱讀本節內容，然後再嘗試建立您的第一個可用性群組。  
   
-###  <a name="PrerequisitesRestrictions"></a> 必要條件、限制及建議  
+##  <a name="PrerequisitesRestrictions"></a> 必要條件、限制及建議  
   
 -   建立可用性群組之前，請確認 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主機執行個體分別位於 Windows Server 容錯移轉叢集 (WSFC) 容錯移轉叢集的不同 WSFC 節點上。 此外，請確認您的伺服器執行個體符合其他伺服器執行個體必要條件和所有其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 需求，而且您了解建議事項。 如需詳細資訊，強烈建議您閱讀 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
-###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
+  
+##  <a name="PowerShellProcedure"></a> 使用 PowerShell 建立和設定可用性群組  
+
 ###  <a name="SummaryPSStatements"></a> 工作及對應 PowerShell 指令程式的摘要  
  下表列出與設定可用性群組有關的基本工作，並指出 PowerShell 指令程式支援哪些工作。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 工作必須依照其出現在表格中的順序來執行。  
   
 |工作|PowerShell 指令程式 (如果可用) 或 Transact-SQL 陳述式|在何處執行工作 **&#42;**|  
 |----------|--------------------------------------------------------------------|---------------------------------|  
-|建立資料庫鏡像端點 (每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體一次)|**New-SqlHadrEndPoint**|在缺少資料庫鏡像端點的每一個伺服器執行個體上執行。<br /><br /> 注意：若要變更現有資料庫鏡像端點，請使用 **Set-SqlHadrEndpoint**。|  
+|建立資料庫鏡像端點 (每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體一次)|**New-SqlHadrEndPoint**|在缺少資料庫鏡像端點的每一個伺服器執行個體上執行。<br /><br /> 注意:若要變更現有資料庫鏡像端點，請使用 **Set-SqlHadrEndpoint**。|  
 |建立可用性群組|首先，使用 **New-SqlAvailabilityReplica** Cmdlet 搭配 **-AsTemplate** 參數，針對您打算包含在可用性群組內之兩個可用性複本的每一個來建立記憶體內的可用性複本物件。<br /><br /> 然後，使用 **New-SqlAvailabilityGroup** Cmdlet 及參考可用性複本物件來建立可用性群組。|於裝載初始主要複本的伺服器執行個體上執行。|  
 |將次要複本加入可用性群組|**Join-SqlAvailabilityGroup**|在裝載次要複本的每一個伺服器執行個體上執行。|  
 |準備次要資料庫|**Backup-SqlDatabase** 和 **Restore-SqlDatabase**|在裝載主要複本的伺服器執行個體上建立備份。<br /><br /> 使用 **NoRecovery** 還原參數，還原裝載次要複本之每個伺服器執行個體上的備份。 如果在裝載主要複本的電腦和裝載目標次要複本的電腦之間有檔案路徑差異，也要使用 **RelocateFile** 還原參數。|  
@@ -77,9 +59,7 @@ ms.locfileid: "57974327"
   
 -   [SQL Server PowerShell 提供者](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
--   [取得 SQL Server PowerShell 說明](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
-  
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell 建立和設定可用性群組  
+-   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
 > [!NOTE]  
 >  若要檢視指定 Cmdlet 的語法和範例，請使用 **PowerShell 環境中的** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cmdlet。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  

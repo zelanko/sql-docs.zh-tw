@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62653749"
 ---
-# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>第 2 課：使用 xsd 工具的 RDL 結構描述產生類別
+# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>第 2 課：使用 xsd 工具，從 RDL 結構描述產生類別
   建立 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 專案之後，下一個步驟就是擷取報表定義結構描述的本機副本，並執行 XML 結構描述定義工具 (Xsd.exe)。  
   
 ### <a name="to-generate-the-rdl-classes"></a>產生 RDL 類別  
@@ -32,7 +32,7 @@ ms.locfileid: "62653749"
   
 3.  瀏覽至建立 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 專案的位置，然後以 ReportDefinition.xsd 檔案名稱儲存結構描述。  
   
-4.  在儲存檔案後，開啟的執行個體[!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]命令提示字元。 若要開啟命令提示字元的執行個體，請按一下 [開始] 功能表，指向**所有程式**，指向**Microsoft Visual Studio 2010**，指向**Visual Studio Tools**按一下**Visual Studio 命令提示字元 (2010)**。  
+4.  在儲存檔案後，開啟的執行個體[!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]命令提示字元。 若要開啟命令提示字元的執行個體，請按一下 [開始] 功能表，指向**所有程式**，指向**Microsoft Visual Studio 2010**，指向**Visual Studio Tools**按一下**Visual Studio 命令提示字元 (2010)** 。  
   
 5.  變更目前路徑至儲存 ReportDefinition.xsd 檔案的位置：  
   

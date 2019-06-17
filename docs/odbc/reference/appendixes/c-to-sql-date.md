@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8edb075be1bf64dad8f4ef18924a6396b7c64e80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63294365"
 ---
-# <a name="c-to-sql-date"></a>C 轉換為 SQL：date
+# <a name="c-to-sql-date"></a>C 轉換為 SQL：Date
 日期的 ODBC C 資料類型的識別項是：  
   
  SQL_C_TYPE_DATE  

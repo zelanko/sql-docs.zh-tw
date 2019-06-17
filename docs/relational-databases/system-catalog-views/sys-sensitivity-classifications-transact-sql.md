@@ -24,10 +24,10 @@ helpviewer_keywords:
 - information types
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: a47b311af70c58c36c8c467115c277f300092376
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014426"
 ---
 # <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications & Amp;#40;transact-SQL&AMP;#41;

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fc2fbb2b217880b255d522149dabd38701a8c0e4
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+manager: jroth
+ms.openlocfilehash: 02aef28bb40c4d4f48b28630d1752c9e5f88c3e5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579058"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781545"
 ---
 # <a name="jdbc-43-compliance-for-the-jdbc-driver"></a>JDBC Driver 的 JDBC 4.3 合規性
 

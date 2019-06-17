@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62689069"
 ---
 # <a name="bcpinit"></a>bcp_init
@@ -91,7 +91,7 @@ eDirection
   
 -   複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，資料行在資料檔案中的序數位置必須與資料行在資料庫資料表中的序數位置相同。 從複製時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **bcp_exec**會根據資料庫資料表中的資料行的序數位置的資料。  
   
--   如果資料庫資料類型的長度是變數 (例如**varbinary(22)**) 或者如果資料庫資料行可以包含 null 值，資料檔案中的資料的前置詞為長度 /null 指標。 指標的寬度會根據資料類型和大量複製的版本而改變。  
+-   如果資料庫資料類型的長度是變數 (例如**varbinary(22)** ) 或者如果資料庫資料行可以包含 null 值，資料檔案中的資料的前置詞為長度 /null 指標。 指標的寬度會根據資料類型和大量複製的版本而改變。  
   
  若要變更針對資料檔指定的資料格式值，請呼叫[bcp_columns](bcp-columns.md)並[bcp_colfmt](bcp-colfmt.md)。  
   

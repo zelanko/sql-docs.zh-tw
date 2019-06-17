@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cdf171c66c19d87ea4919eeb55dca65f14b89ebd
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982872"
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact-SQL)
@@ -49,9 +49,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address = N'*azure_server_fully_qualified_address*'  
  Azure 伺服器的完整的位址。  
   
--   如果您提供的值**@database_name**，但指定的資料庫不是已啟用延展功能，則您必須提供值給**@server_address**。  
+-   如果您提供的值 **@database_name** ，但指定的資料庫不是已啟用延展功能，則您必須提供值給 **@server_address** 。  
   
--   如果您提供的值**@database_name**，和指定的資料庫已啟用延展功能，則您不需要提供值給**@server_address**。 如果您提供的值**@server_address**、 預存程序會忽略它，並使用已現有 Azure 伺服器相關聯的已啟用 Stretch 的資料庫。  
+-   如果您提供的值 **@database_name** ，和指定的資料庫已啟用延展功能，則您不需要提供值給 **@server_address** 。 如果您提供的值 **@server_address** 、 預存程序會忽略它，並使用已現有 Azure 伺服器相關聯的已啟用 Stretch 的資料庫。  
   
  @azure_username = N'*azure_username*  
  遠端 Azure 伺服器使用者名稱。  

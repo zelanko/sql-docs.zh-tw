@@ -15,21 +15,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 91b448a87408a830464b50f641e6eefa8cf3f12c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057636"
 ---
 # <a name="msmq-connection-manager-editor"></a>MSMQ 連線管理員編輯器
-  使用 [MSMQ 連線管理員] 對話方塊，來指定 Message Queuing (又稱為 MSMQ) 訊息佇列的路徑。  
+  使用 [MSMQ 連線管理員]  對話方塊，來指定 Message Queuing (又稱為 MSMQ) 訊息佇列的路徑。  
   
  若要深入了解 MSMQ 連線管理員，請參閱＜ [MSMQ Connection Manager](connection-manager/msmq-connection-manager.md)＞。  
   
 > [!NOTE]  
 >  MSMQ 連線管理員支援本機的共用和私用佇列，以及遠端的公用佇列。 但不支援遠端私用佇列。 如需使用指令碼工作的解決方案，請參閱＜ [以指令碼工作傳送至遠端私用訊息佇列](control-flow/script-task.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  提供唯一的名稱給工作流程中的 MSMQ 連線管理員。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66057636"
  您可以使用 "." 代表本機電腦。  
   
  **測試**  
- 在設定 MSMQ 連線管理員之後，請按一下 [測試] 來確認連接已可使用。  
+ 在設定 MSMQ 連線管理員之後，請按一下 [測試]  來確認連接已可使用。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)  

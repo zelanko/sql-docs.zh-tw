@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 08da724047b89ef31c8f9cc06a4a2da36e6b5eaa
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 40dac2df410456b0f3db7aff931e523fe350960b
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161685"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462721"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -421,9 +421,9 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行計畫具有下列主要元件： 
 
 - **查詢執行計畫**     
-  大多數的執行計畫是可重新進入的唯讀資料結構，而且可供任意數目的使用者所使用。 此稱為查詢計畫。 查詢計畫中並不會儲存任何使用者內容。 記憶體中絕不會有超過一或兩個的查詢計畫副本：一個是所有序列執行的副本，另一個則是所有平行執行的副本。 平行副本會涵蓋所有的平行執行，不論其平行處理原則的程度為何。 
+  大量執行計畫是可重新進入的唯讀資料結構，且可供任意數目的使用者所使用。 此稱為查詢計畫。 查詢計畫中並不會儲存任何使用者內容。 記憶體中絕不會有超過一或兩個的查詢計畫副本：一個是所有序列執行的副本，另一個則是所有平行執行的副本。 平行副本會涵蓋所有的平行執行，不論其平行處理原則的程度為何。 
 - **執行內容**     
-  目前執行查詢的每位使用者都有資料結構，其中保存了與其執行相關的特定資料，例如參數值。 此資料結構即稱為執行內容。 而此執行內容資料結構將會重複使用。 如果使用者執行查詢，而且其中有一個結構不在使用中，則系統會根據新使用者的內容來重新初始化該結構。 
+  目前執行查詢的每位使用者都有資料結構，其中保存與其執行相關的特定資料，例如參數值。 此資料結構即稱為執行內容。 而此執行內容資料結構將會重複使用。 如果使用者執行查詢，而且其中有一個結構不在使用中，則系統會根據新使用者的內容來重新初始化該結構。 
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
@@ -729,6 +729,8 @@ WHERE ProductID = 63;
 -  透過 sp_executesql 提交的查詢 
 -  準備查詢
 
+如需如何針對錯誤參數探測問題進行疑難排解的詳細資訊，請參閱[針對含參數敏感查詢執行計畫問題的查詢進行疑難排解](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-issues)。
+
 > [!NOTE]
 > 若是使用 `RECOMPILE` 提示的查詢，則會探查參數值和區域變數的目前值。 探查到的值 (參數和區域變數值) 是存在於批次中具有 `RECOMPILE` 提示的陳述式之前位置的值。 特別是對於參數，不會探查批次引動過程呼叫隨附的值。
 
@@ -916,17 +918,17 @@ CREATE UNIQUE INDEX o_datkeyopr_idx
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援兩種可在 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中參考異質 OLE DB 資料來源的方法：
 
 * 連結伺服器名稱  
-  系統預存程序 `sp_addlinkedserver` 和 `sp_addlinkedsrvlogin` 可用來將伺服器名稱指定至 OLE DB 資料來源。 在這些連結伺服器中的物件，您可以用分成四部份的名稱，在 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中參考。 例如，如果 `DeptSQLSrvr` 的連結伺服器名稱是根據 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的另一個執行個體所定義，則下列陳述式會參考該伺服器上的資料表： 
+  系統預存程序 `sp_addlinkedserver` 和 `sp_addlinkedsrvlogin` 可用來將伺服器名稱指定至 OLE DB 資料來源。 您可以使用四部分的名稱，在 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中參考這些連結伺服器中的物件。 例如，如果 `DeptSQLSrvr` 的連結伺服器名稱是根據 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的另一個執行個體所定義，則下列陳述式會參考該伺服器上的資料表： 
   
   ```sql
   SELECT JobTitle, HireDate 
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
 
-   您也可以在 `OPENQUERY` 陳述式中指定連結伺服器名稱，以開啟 OLE DB 資料來源中的資料列集。 然後您便可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中，像參考資料表一樣參考這個資料列集。 
+   您也可以在 `OPENQUERY` 陳述式中指定連結伺服器名稱，以開啟 OLE DB 資料來源中的資料列集。 然後您便可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中，如同參考資料表一樣參考這個資料列集。 
 
 * 特定連接子名稱  
-  對於資料來源的非經常性參考，需要以連接至連結伺服器所需的資訊來指定 `OPENROWSET` 或 `OPENDATASOURCE` 函數。 然後您便可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中，使用與參考資料表一樣的方式來參考這個資料列集： 
+  對於資料來源的非經常性參考，需要以連接至連結伺服器所需的資訊來指定 `OPENROWSET` 或 `OPENDATASOURCE` 函數。 然後您便可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中，使用參考資料表的相同方式來參考這個資料列集： 
   
   ```sql
   SELECT *
@@ -935,11 +937,11 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援兩種可
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 OLE DB 在關聯式引擎與儲存引擎間進行通訊。 關聯式引擎將每個 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式，皆分解成一連串對 OLE DB 資料列集的簡單作業，而儲存引擎可從基底資料表開啟這個資料列集。 這是表示關聯式引擎也可以在任何 OLE DB 資料來源上，開啟簡單的 OLE DB 資料列集。  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 OLE DB 在關聯式引擎與儲存引擎間進行通訊。 關聯式引擎會將每個 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式分解成一連串對簡單 OLE DB 資料列集的作業，而儲存引擎可從基底資料表開啟這個資料列集。 這是表示關聯式引擎也可以在任何 OLE DB 資料來源上，開啟簡單的 OLE DB 資料列集。  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 關聯式引擎使用 OLE DB 應用程式開發介面 (API) 來開啟連結伺服器上的資料列集、提取資料列、以及管理交易。
 
-每個以連結伺服器的方式存取的 OLE DB 資料來源，在執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的伺服器上必須存在 OLE DB 提供者。 而這組可根據特定 OLE DB 資料來源使用的 [!INCLUDE[tsql](../includes/tsql-md.md)] 作業，需視 OLE DB 提供者的能力來執行。
+每個以連結伺服器的方式存取的 OLE DB 資料來源，在執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的伺服器上必須存在 OLE DB 提供者。 而這組可根據特定 OLE DB 資料來源使用的 [!INCLUDE[tsql](../includes/tsql-md.md)] 作業，需視 OLE DB 提供者的功能來執行。
 
 對於每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，`sysadmin` 固定伺服器角色的成員可藉由使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `DisallowAdhocAccess` 屬性來啟用或停用 OLE DB 提供者的特定連接器名稱的使用。 當啟用隨機存取時，任何登入到該執行個體的使用者都可以執行包含隨機連接子名稱的 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式，該連接子名稱會參考網路上可使用 OLE DB 提供者存取的任何資料來源。 若要控制資料來源的存取， `sysadmin` 角色的成員可以停用該 OLE DB 提供者的特定存取，進而限制使用者只能存取由系統管理員定義之連結伺服器名稱所參考的資料來源。 依預設，會啟用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE DB 提供者的特定存取，並停用所有其他的 OLE DB 提供者。
 

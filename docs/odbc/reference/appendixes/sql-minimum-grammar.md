@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270503"
 ---
 # <a name="sql-minimum-grammar"></a>SQL 最小文法
@@ -33,7 +33,7 @@ ms.locfileid: "63270503"
   
  CREATE TABLE*基底資料表名稱*  
   
- (*資料行識別碼資料型別*[*，資料行識別碼資料型別*]...)  
+ (*資料行識別碼資料型別*[ *，資料行識別碼資料型別*]...)  
   
 > [!IMPORTANT]  
 >  作為*資料型別*中*建立資料表陳述式*，應用程式必須使用來自 TYPE_NAME 資料行所傳回的結果集的資料型別**SQLGetTypeInfo**。  

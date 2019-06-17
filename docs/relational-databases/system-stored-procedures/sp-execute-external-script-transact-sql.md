@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f11b09d93510fe1da89abc1a723e7698f1fdd915
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 77d5386f05e371a2e653f4f6097257e99457e910
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531040"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046710"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -78,9 +78,9 @@ sp_execute_external_script
  **@language** = N'*語言*'  
  表示指令碼語言。 *語言*已**sysname**。  根據您的 SQL Server 的版本，有效值為 R (SQL Server 2016 和更新版本)、 (SQL Server 2017 和更新版本)、 Python 和 Java （SQL Server 2019 預覽）。 
   
- **@script** = N'*指令碼*' 指定為常值或變數輸入的外部語言指令碼。 *指令碼*已**nvarchar （max)**。  
+ **@script** = N'*指令碼*' 指定為常值或變數輸入的外部語言指令碼。 *指令碼*已**nvarchar （max)** 。  
 
-`[ @input_data_1 =  N'input_data_1' ]` 指定的表單中的外部指令碼所使用的輸入的資料[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢。 資料類型*input_data_1*是**nvarchar （max)**。
+`[ @input_data_1 =  N'input_data_1' ]` 指定的表單中的外部指令碼所使用的輸入的資料[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢。 資料類型*input_data_1*是**nvarchar （max)** 。
 
 `[ @input_data_1_name = N'input_data_1_name' ]` 指定用來代表查詢所定義的變數名稱@input_data_1。 在 外部指令碼變數的資料類型會因語言而定。 如果 R 輸入的變數會是資料框架。 在 Python 中，輸入必須是表格式。 *input_data_1_name*已**sysname**。  預設值是*InputDataSet*。  
 
@@ -124,7 +124,7 @@ sp_execute_external_script
 
  在 SQL Server 2019，，您也可以在目前在公開預覽，設定兩個額外的參數可讓資料分割的資料，其中資料分割根據一個或多個資料行提供自然地將資料集分成邏輯分割區建立及使用模型僅指令碼執行期間。 年齡、 性別、 地區、 日期或時間，包含重複值的資料行是讓資料分割的資料集的一些範例。
  
- 兩個參數**input_data_1_partition_by_columns**並**input_data_1_order_by_columns**，第二個參數用以排序結果集。 將參數傳遞做為輸入`sp_execute_external_script`外部指令碼中執行一次的每個資料分割。 如需詳細資訊和範例，請參閱[教學課程：建立分割區為基礎的模型](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md)。
+ 兩個參數**input_data_1_partition_by_columns**並**input_data_1_order_by_columns**，第二個參數用以排序結果集。 將參數傳遞做為輸入`sp_execute_external_script`外部指令碼中執行一次的每個資料分割。 如需詳細資訊和範例，請參閱[教學課程：建立分割區為基礎的模型](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition)。
 
  您可以以平行方式執行指令碼，藉由指定`@parallel=1`。 如果輸入的查詢可以平行處理，您應該設定`@parallel=1`做為您的引數的一部分`sp_execute_external_script`。 根據預設，查詢最佳化工具運作`@parallel=1`超過 256 個資料列，但如果您想要明確地處理此資料表上還會使用這個指令碼包含基於示範用途的參數。
 

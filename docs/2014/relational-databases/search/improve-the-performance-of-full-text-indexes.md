@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 42aa89a111697f17f23613761eeeb462494bdd27
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011254"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改善全文檢索索引的效能
@@ -128,10 +128,10 @@ ms.locfileid: "66011254"
   
 |平台|估計 fdhost.exe 記憶體需求，在 MB*F*<sup>1</sup>|計算最大伺服器記憶體-公式*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|_F_ **=** _搜耙範圍數目_ **&#42;** 50|_M_ **=minimum(** _T_ **,** 2000 **)-*`F`*-** 500|  
+|x86|_F_ **=** _搜耙範圍數目_ **&#42;** 50|_M_ **=minimum(** _T_ **,** 2000 **)- *`F`* -** 500|  
 |x64|_F_ **=** _搜耙範圍數目_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
- <sup>1</sup>多個完整母體擴展正在進行中，如果計算的 fdhost.exe 記憶體需求，每個分別為*F1*， *F2*，依此類推。 然後將 *M* 計算為 _T_**-** sigma **(**_F_i **)**。  
+ <sup>1</sup>多個完整母體擴展正在進行中，如果計算的 fdhost.exe 記憶體需求，每個分別為*F1*， *F2*，依此類推。 然後將 *M* 計算為 _T_ **-** sigma **(** _F_i **)** 。  
   
  <sup>2</sup> 500 MB 是系統中其他處理序所需記憶體的估計。 如果系統正在進行其他工作，請據此增加這個值。  
   

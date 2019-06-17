@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 74bcf1549cdd97752c805f1c6a9cc774ef1a9e52
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62896028"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>開發具有多個輸入的資料流程元件
@@ -54,7 +54,7 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
 > [!NOTE]  
 >  您的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 方法實作不應該呼叫基底類別中實作。 在基底類別中，這個方法的預設實作只會引發 `NotImplementedException`。  
   
- 實作這個方法時，您會針對每個元件的輸入設定布林值 *canProcess* 陣列中的元素狀態  (輸入是由它們在 *inputIDs* 陣列中的識別碼值所識別)。當您設定的值中的項目*canProcess*陣列`true`針對某個輸入，資料流程引擎會呼叫元件的<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>方法，並為指定的輸入提供更多資料。  
+ 實作這個方法時，您會針對每個元件的輸入設定布林值 *canProcess* 陣列中的元素狀態 (輸入是由它們在 *inputIDs* 陣列中的識別碼值所識別)。當您設定的值中的項目*canProcess*陣列`true`針對某個輸入，資料流程引擎會呼叫元件的<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>方法，並為指定的輸入提供更多資料。  
   
  更多的上游資料可供使用，而值*canProcess*都必須至少一個輸入的陣列元素`true`，或處理就會停止。  
   

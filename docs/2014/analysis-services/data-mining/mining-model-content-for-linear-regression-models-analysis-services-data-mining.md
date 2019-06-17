@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 933b56aaa6e364ce55cac8832fc577acc061d510
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083635"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>線性迴歸模型的採礦模型內容 (Analysis Services - 資料採礦)
@@ -141,7 +141,7 @@ ms.locfileid: "66083635"
 ## <a name="remarks"></a>備註  
  當您使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法建立模型時，資料採礦引擎會建立一個特殊的決策樹模型執行個體，並提供包含樹狀結構的參數以便將所有定型資料包含在單一節點中。 所有連續輸入都會加上旗標，並評估為潛在的迴歸輸入變數，但只有符合資料的迴歸輸入變數會保留為最終模型中的迴歸輸入變數。 此分析會針對每個迴歸輸入變數產生單一的迴歸公式，或不產生任何迴歸公式。  
   
- 您可以按一下 [[Microsoft 樹狀檢視器]](browse-a-model-using-the-microsoft-tree-viewer.md) 中的 [(全部)] 節點，檢視 [採礦圖例] 中的完整迴歸公式。  
+ 您可以按一下 [[Microsoft 樹狀檢視器]](browse-a-model-using-the-microsoft-tree-viewer.md) 中的 [(全部)]  節點，檢視 [採礦圖例]  中的完整迴歸公式。  
   
  同時，當您建立包含連續可預測屬性的決策樹模型時，有時候樹狀結構所擁有的迴歸節點會共用迴歸樹根節點的屬性。  
   
@@ -157,12 +157,12 @@ ms.locfileid: "66083635"
 |Age|45.4269617936399|0|0|126.969442359327|9|  
 ||35793.5477381267|0|0|1012968919.28372|11|  
   
- NODE_DISTRIBUTION 資料表包含多個資料列，每個資料列都會依照變數分組。 前兩個資料列的值類型永遠是 1 和 3，而且會描述目標屬性。 之後的資料列會提供特定「迴歸輸入變數」公式的詳細資料。 迴歸輸入變數是一種輸入變數，其中包含與輸出變數的線性關聯性。 您可以擁有多個迴歸輸入變數，而且每個迴歸輸入變數對於係數 (VALUETYPE = 7)、得分 (VALUETYPE = 8) 以及統計資料 (VALUETYPE = 9) 都有個別的資料列。 最後，資料表所擁有的資料列包含方程式的截距 (VALUETYPE = 11)。  
+ NODE_DISTRIBUTION 資料表包含多個資料列，每個資料列都會依照變數分組。 前兩個資料列的值類型永遠是 1 和 3，而且會描述目標屬性。 之後的資料列會提供特定「迴歸輸入變數」  公式的詳細資料。 迴歸輸入變數是一種輸入變數，其中包含與輸出變數的線性關聯性。 您可以擁有多個迴歸輸入變數，而且每個迴歸輸入變數對於係數 (VALUETYPE = 7)、得分 (VALUETYPE = 8) 以及統計資料 (VALUETYPE = 9) 都有個別的資料列。 最後，資料表所擁有的資料列包含方程式的截距 (VALUETYPE = 11)。  
   
 ### <a name="elements-of-the-regression-formula"></a>迴歸公式的元素  
- NODE_DISTRIBUTION 巢狀資料表在個別的資料列中，包含迴歸公式的每個元素。 範例結果中資料的前兩個資料列包含可預測屬性 [年收入] 的資訊，該屬性會製作相依變數的模型。 SUPPORT 資料行會顯示支援此屬性兩個狀態之案例的計數：提供 [年收入] 值，或遺漏 [年收入] 值。  
+ NODE_DISTRIBUTION 巢狀資料表在個別的資料列中，包含迴歸公式的每個元素。 範例結果中資料的前兩個資料列包含可預測屬性 [年收入]  的資訊，該屬性會製作相依變數的模型。 SUPPORT 資料行會顯示支援此屬性兩個狀態之案例的計數：提供 [年收入]  值，或遺漏 [年收入]  值。  
   
- VARIANCE 資料行會告訴您可預測屬性的計算變異數。 「變異數」是在給定預期分佈的情況下，值如何在範例中散佈的量值。 此處的變異數會透過從平均值取得平方差的平均值來計算。 變異數的平方根也就是所謂的標準差。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不提供標準差，但是您可以輕易地計算出來。  
+ VARIANCE 資料行會告訴您可預測屬性的計算變異數。 「變異數」  是在給定預期分佈的情況下，值如何在範例中散佈的量值。 此處的變異數會透過從平均值取得平方差的平均值來計算。 變異數的平方根也就是所謂的標準差。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不提供標準差，但是您可以輕易地計算出來。  
   
  對於每個迴歸輸入變數，系統會輸出三個資料列。 這些資料列包含係數、得分以及迴歸輸入變數統計資料。  
   
@@ -178,11 +178,11 @@ ms.locfileid: "66083635"
  迴歸輸入變數統計資料 (VALUETYPE = 9) 是擁有值之案例的屬性平均值。 ATTRIBUTE_VALUE 資料行包含平均值本身，而 VARIANCE 資料行包含平均值偏差的總和。  
   
 #### <a name="intercept"></a>Intercept  
- 迴歸方程式中的「截距」(VALUETYPE = 11) 或「剩餘」會在輸入屬性所在的點，告訴您可預測屬性的值為 0。 在許多情況下，這可能不會發生，但是可能會導致反直覺式的結果。  
+ 迴歸方程式中的「截距」  (VALUETYPE = 11) 或「剩餘」  會在輸入屬性所在的點，告訴您可預測屬性的值為 0。 在許多情況下，這可能不會發生，但是可能會導致反直覺式的結果。  
   
  例如，在根據年齡預測收入的模型中得知年齡為 0 的收入是毫無用處的。 在實際生活中，了解關於平均值的線性行為通常比較實用。 因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會修改截距，以便說明每個迴歸輸入變數與平均值的關聯性。  
   
- 這種調整很難在採礦模型內容中看出來，但是如果您在 [Microsoft 樹狀檢視器] 的 [採礦圖例] 中檢視完整的方程式就很明顯。 迴歸公式會從 0 點移位到代表平均值的點。 這會讓目前的資料以更直覺的方式呈現。  
+ 這種調整很難在採礦模型內容中看出來，但是如果您在 [Microsoft 樹狀檢視器]  的 [採礦圖例]  中檢視完整的方程式就很明顯。 迴歸公式會從 0 點移位到代表平均值的點。 這會讓目前的資料以更直覺的方式呈現。  
   
  因此，假設平均年齡為 45 歲左右，迴歸公式的截距 (VALUETYPE = 11) 會告訴您平均收入。  
   

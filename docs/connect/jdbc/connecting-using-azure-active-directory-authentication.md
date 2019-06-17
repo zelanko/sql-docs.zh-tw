@@ -47,7 +47,7 @@ ms.locfileid: "66775968"
 ## <a name="client-setup-requirements"></a>用戶端安裝需求
 針對**ActiveDirectoryMSI**驗證，下列元件必須安裝在用戶端電腦上：
 * Java 8 或更新版本
-* 7.2 （或更新版本） 的 Microsoft JDBC Driver for SQL Server
+* 7\.2 （或更新版本） 的 Microsoft JDBC Driver for SQL Server
 * 用戶端環境必須是 Azure 資源，而且必須啟用 「 識別 」 功能的支援。
 * 代表您的 Azure 資源的系統指派給受控身分識別或使用者指派給受控身分識別或其中一個 MSI 所屬的群組的自主的資料庫使用者必須存在於目標資料庫，而且必須具有 CONNECT 權限。
 
@@ -107,7 +107,7 @@ You have successfully logged on as: <your MSI username>
 ```
 
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>使用 ActiveDirectoryIntegrated 驗證模式進行連接
-6.4 版中，Microsoft JDBC Driver 會加入支援 ActiveDirectoryIntegrated 驗證多個平台 （Windows、 Linux 和 macOS） 上使用 Kerberos 票證。
+6\.4 版中，Microsoft JDBC Driver 會加入支援 ActiveDirectoryIntegrated 驗證多個平台 （Windows、 Linux 和 macOS） 上使用 Kerberos 票證。
 如需詳細資訊，請參閱 <<c0> [ 在 Windows、 Linux 和 Mac 上的設定 Kerberos 票證](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)如需詳細資訊。 或者，在 Windows，sqljdbc_auth.dll 也可用為 ActiveDirectoryIntegrated 驗證透過 JDBC 驅動程式。
 
 > [!NOTE]

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f68e51be75e84226dd0b1fd3e578fa4031eda04
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403520"
 ---
 # <a name="lesson-8-create-perspectives"></a>第 8 課：建立檢視方塊
@@ -36,7 +36,7 @@ ms.locfileid: "65403520"
   
 1.  按一下 **模型**功能表 >**觀點** > **建立及管理**。  
   
-2.  在 [檢視方塊] 對話方塊中，按一下 [新增檢視方塊]。  
+2.  在 [檢視方塊]  對話方塊中，按一下 [新增檢視方塊]  。  
   
 3.  按兩下**新的檢視方塊**資料行標題，然後重新命名**網際網路銷售**。  
   

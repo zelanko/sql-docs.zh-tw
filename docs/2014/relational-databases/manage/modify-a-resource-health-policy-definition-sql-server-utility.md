@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2b489fda1c051ecd08b63f28d6232a0e213d9fcb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63188869"
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>修改資源健康情況原則定義 (SQL Server 公用程式)
@@ -32,31 +32,31 @@ ms.locfileid: "63188869"
   
 2.  在 [公用程式總管] 導覽窗格中，按一下 **[公用程式管理]** 來檢視或修改全域監視原則，然後在 [公用程式總管] 內容窗格中按一下 **[原則]** 索引標籤。  
   
-3.  在公用程式總管內容窗格中，按一下箭頭或原則描述來選取 [Set global data-tier monitoring policies (設定全域資料層監視原則)] 或 [Set global managed instance monitoring policies (設定全域受管理的執行個體監視原則)]。  
+3.  在公用程式總管內容窗格中，按一下箭頭或原則描述來選取 [Set global data-tier monitoring policies (設定全域資料層監視原則)]  或 [Set global managed instance monitoring policies (設定全域受管理的執行個體監視原則)]  。  
   
 4.  您可以使用原則描述右邊的控制項來設定使用量過高或使用量過低原則的臨界值。  
   
-5.  視需要使用 [套用] 、[捨棄] 或 [還原預設值]  按鈕。 原則變更最多需要花上 15 分鐘的時間傳回到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式儀表板及清單檢視詳細資料。  
+5.  視需要使用 [套用]  、[捨棄]  或 [還原預設值]  按鈕。 原則變更最多需要花上 15 分鐘的時間傳回到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式儀表板及清單檢視詳細資料。  
   
-6.  若要重新整理資料，請以滑鼠右鍵按一下公用程式總管功能窗格中的 [公用程式管理] 節點，然後選取 [重新整理]。  
+6.  若要重新整理資料，請以滑鼠右鍵按一下公用程式總管功能窗格中的 [公用程式管理]  節點，然後選取 [重新整理]  。  
   
 #### <a name="modify-resource-health-policy-definitions-for-an-individual-data-tier-application-or-an-individual-managed-instance-of-sql-server-in-a-sql-server-utility"></a>在 SQL Server 公用程式中，針對個別的資料層應用程式或個別的 SQL Server 受管理的執行個體，修改其資源健全狀況原則定義。  
   
 1.  連接到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 UCP。  
   
-2.  在公用程式總管功能窗格中，按一下 [部署的資料層應用程式] 或按一下 [受管理的執行個體]，檢視或修改個別資料層應用程式或受管理的執行個體的監視原則。  
+2.  在公用程式總管功能窗格中，按一下 [部署的資料層應用程式]  或按一下 [受管理的執行個體]  ，檢視或修改個別資料層應用程式或受管理的執行個體的監視原則。  
   
-3.  在公用程式總管內容窗格清單檢視中，按一下您想要修改原則的資料層應用程式或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，然後按一下 [原則詳細資料] 索引標籤。  
+3.  在公用程式總管內容窗格清單檢視中，按一下您想要修改原則的資料層應用程式或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，然後按一下 [原則詳細資料]  索引標籤。  
   
 4.  按一下箭頭或原則描述，選取要檢視或修改的原則。 預設會選取全域原則。  
   
-5.  選取 [覆寫全域原則] 的選項按鈕，針對指定的資料層應用程式來覆寫全域原則及實作個別的原則定義。  
+5.  選取 [覆寫全域原則]  的選項按鈕，針對指定的資料層應用程式來覆寫全域原則及實作個別的原則定義。  
   
 6.  您可以使用原則描述右邊的控制項來設定使用量過高或使用量過低原則的臨界值。  
   
-7.  視需要使用 [套用] 、[捨棄] 或 [還原預設值]  按鈕。 原則變更最多需要花上 15 分鐘的時間傳回到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式儀表板及清單檢視詳細資料。  
+7.  視需要使用 [套用]  、[捨棄]  或 [還原預設值]  按鈕。 原則變更最多需要花上 15 分鐘的時間傳回到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式儀表板及清單檢視詳細資料。  
   
-8.  若要重新整理資料，請以滑鼠右鍵按一下公用程式總管功能窗格中的 [部署的資料層應用程式] 節點，然後選取 [重新整理]。  
+8.  若要重新整理資料，請以滑鼠右鍵按一下公用程式總管功能窗格中的 [部署的資料層應用程式]  節點，然後選取 [重新整理]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 公用程式的功能與工作](sql-server-utility-features-and-tasks.md)   

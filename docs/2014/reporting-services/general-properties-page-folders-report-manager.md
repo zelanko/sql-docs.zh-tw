@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901ed097b1a1f689a854d60e0df9b541403fdc76
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109124"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>一般屬性頁面，資料夾 (報表管理員)
@@ -31,7 +31,7 @@ ms.locfileid: "66109124"
   
 1.  開啟報表管理員，然後開啟您想要檢視或設定屬性的資料夾。  
   
-2.  在資料夾橫幅底下的工具列中，按一下 **[資料夾設定]**。  
+2.  在資料夾橫幅底下的工具列中，按一下 **[資料夾設定]** 。  
   
 ## <a name="options"></a>選項。  
  **名稱**  

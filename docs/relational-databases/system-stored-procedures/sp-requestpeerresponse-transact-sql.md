@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b639f692da326390808376eadfd0ab74aa706ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047772"
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
@@ -42,7 +42,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ## <a name="arguments"></a>引數  
 `[ @publication = ] 'publication'` 是，驗證狀態的對等項目-拓撲中的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
-`[ @description = ] 'description'` 可用來識別個別狀態要求的使用者定義資訊。 *描述*已**nvarchar(4000)**，預設值是 NULL。  
+`[ @description = ] 'description'` 可用來識別個別狀態要求的使用者定義資訊。 *描述*已**nvarchar(4000)** ，預設值是 NULL。  
   
 `[ @request_id = ] request_id` 傳回新要求的識別碼。 *request_id*已**int**是 OUTPUT 參數。 執行時，就可以使用此值[sp_helppeerresponses &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)以檢視所有回應之狀態要求。  
   

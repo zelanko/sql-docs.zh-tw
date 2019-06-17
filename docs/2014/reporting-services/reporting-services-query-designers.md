@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c004b098f900606c2263391cf9363b6e5be2b97b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102876"
 ---
 # <a name="reporting-services-query-designers"></a>Reporting Services 查詢設計工具
@@ -30,7 +30,7 @@ ms.locfileid: "66102876"
   
 -   **依查詢設計工具類型。** 例如， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料來源同時支援圖形化查詢設計工具以及以文字為基礎的查詢設計工具。  
   
--   **依查詢語言變化。** 例如， [!INCLUDE[tsql](../includes/tsql-md.md)] 這類的查詢語言在語法上可能會視資料來源類型而有所不同。  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] 語言和 Oracle SQL 語言在查詢命令的語法上有一些不同。  
+-   **依查詢語言變化。** 例如， [!INCLUDE[tsql](../includes/tsql-md.md)] 這類的查詢語言在語法上可能會視資料來源類型而有所不同。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] 語言和 Oracle SQL 語言在查詢命令的語法上有一些不同。  
   
 -   **依資料庫物件名稱的結構描述部分支援。** 當資料來源使用結構描述做為資料庫物件識別碼的一部分時，必須針對不使用預設結構描述的任何名稱，提供結構描述名稱做為查詢的一部分。 例如， `SELECT FirstName, LastName FROM [Person].[Person]` 。  
   

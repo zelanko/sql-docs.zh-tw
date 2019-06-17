@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27063b71c307d1114f74977b81eac19130e70708
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62901772"
 ---
 # <a name="look-up-infopackage"></a>查閱 InfoPackage
-  使用 [查閱 InfoPackage] 對話方塊可以查閱 SAP Netweaver BW 系統中定義的 InfoPackage。 出現 InfoPackage 的清單時，請選取您要的 InfoPackage，然後目的地就會將必要的值填入相關聯的選項。  
+  使用 [查閱 InfoPackage]  對話方塊可以查閱 SAP Netweaver BW 系統中定義的 InfoPackage。 出現 InfoPackage 的清單時，請選取您要的 InfoPackage，然後目的地就會將必要的值填入相關聯的選項。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 目的地會使用 [查閱 ProcessChain] 對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](sap-bw-destination.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 目的地會使用 [查閱 ProcessChain]  對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](sap-bw-destination.md)。  
   
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW 的文件集是假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  
@@ -29,11 +29,11 @@ ms.locfileid: "62901772"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 目的地的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件。  
   
-2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 目的地。  
+2.  在 [資料流程]  索引標籤上，按兩下 SAP BW 目的地。  
   
 3.  在 **[SAP BW 目的地編輯器]** 中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
-4.  在 [連線管理員] 頁面的 [InfoPackage/InfoSource] 群組方塊中，按一下 [查閱] 顯示 [查閱 InfoPackage] 對話方塊。  
+4.  在 [連線管理員]  頁面的 [InfoPackage/InfoSource]  群組方塊中，按一下 [查閱]  顯示 [查閱 InfoPackage]  對話方塊。  
   
 ## <a name="lookup-options"></a>查閱選項  
  在查閱欄位中，您可以使用星號萬用字元 (*) 或結合星號萬用字元使用部分字串來篩選結果。 不過，如果您將查閱欄位保留空白，查閱作業就只會比對該欄位中的空白字串。  

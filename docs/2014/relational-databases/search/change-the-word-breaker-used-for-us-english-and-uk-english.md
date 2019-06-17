@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f0067b0e13e724948e53a2eb291c9a1da6315011
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012750"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Change the Word Breaker Used for US English and UK English
@@ -22,7 +22,7 @@ ms.locfileid: "66012750"
   
  舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用了由美式英文 (LCID 1033) 和英式英文 (LCID 2057) 之不同 CLSID 所代表的不同斷詞工具。 在這個版本中，這兩個 LCID 都使用具有相同 CLSID 的相同元件，如下表所示：  
   
-|LCID|舊版所安裝的斷詞工具<br /><br /> 12.0.6828.0 版|舊版所安裝的字幹分析器|這個版本所安裝的斷詞工具<br /><br /> 14.0.4999.1038 版|這個版本所安裝的字幹分析器|  
+|LCID|舊版所安裝的斷詞工具<br /><br /> 12\.0.6828.0 版|舊版所安裝的字幹分析器|這個版本所安裝的斷詞工具<br /><br /> 14\.0.4999.1038 版|這個版本所安裝的字幹分析器|  
 |----------|-------------------------------------------------------------------------|--------------------------------------------|-----------------------------------------------------------------------|---------------------------------------|  
 |1033<br />(美式英文)|188D6CC5-CB03-4C01-912E-47D21295D77E|EEED4C20-7F1B-11CE-BE57-00AA0051FE20|9faed859-0b30-4434-ae65-412e14a16fb8|e1e5ef84-c4a6-4e50-8188-99aef3de2659|  
 |2057<br />(英式英文)|173C97E2-AEBE-437C-9445-01B237ABF2F6|D99F7670-7F1A-11CE-BE57-00AA0051FE20|9faed859-0b30-4434-ae65-412e14a16fb8|e1e5ef84-c4a6-4e50-8188-99aef3de2659|  
@@ -49,9 +49,9 @@ ms.locfileid: "66012750"
   
 3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\enu**。  
   
-4.  將 **WBreakerClass** 機碼值更新為 **{188D6CC5-CB03-4C01-912E-47D21295D77E}**。  
+4.  將 **WBreakerClass** 機碼值更新為 **{188D6CC5-CB03-4C01-912E-47D21295D77E}** 。  
   
-5.  將 **StemmerClass** 機碼值更新為 **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}**。  
+5.  將 **StemmerClass** 機碼值更新為 **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}** 。  
   
 6.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
@@ -71,9 +71,9 @@ ms.locfileid: "66012750"
   
 3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**。  
   
-4.  將 **WBreakerClass** 機碼值更新為 **{173C97E2-AEBE-437C-9445-01B237ABF2F6}**。  
+4.  將 **WBreakerClass** 機碼值更新為 **{173C97E2-AEBE-437C-9445-01B237ABF2F6}** 。  
   
-5.  將 **StemmerClass** 機碼值更新為 **{D99F7670-7F1A-11CE-BE57-00AA0051FE20}**。  
+5.  將 **StemmerClass** 機碼值更新為 **{D99F7670-7F1A-11CE-BE57-00AA0051FE20}** 。  
   
 6.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
@@ -95,9 +95,9 @@ ms.locfileid: "66012750"
   
 3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**。  
   
-4.  將 **WBreakerClass** 機碼值更新為 **{9faed859-0b30-4434-ae65-412e14a16fb8}**。  
+4.  將 **WBreakerClass** 機碼值更新為 **{9faed859-0b30-4434-ae65-412e14a16fb8}** 。  
   
-5.  將 **StemmerClass** 機碼值更新為 **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}**。  
+5.  將 **StemmerClass** 機碼值更新為 **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** 。  
   
 6.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
@@ -117,9 +117,9 @@ ms.locfileid: "66012750"
   
 3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**。  
   
-4.  將 **WBreakerClass** 機碼值更新為 **{9faed859-0b30-4434-ae65-412e14a16fb8}**。  
+4.  將 **WBreakerClass** 機碼值更新為 **{9faed859-0b30-4434-ae65-412e14a16fb8}** 。  
   
-5.  將 **StemmerClass** 機碼值更新為 **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}**。  
+5.  將 **StemmerClass** 機碼值更新為 **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** 。  
   
 6.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   

@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd78d7fb5f80b766dc7c51ae077d2a241c34d59c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768847"
 ---
 # <a name="use-property-expressions-in-packages"></a>在封裝中使用屬性運算式
@@ -57,28 +57,28 @@ ms.locfileid: "62768847"
 ## <a name="property-expression-user-interface"></a>屬性運算式使用者介面  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供一組用於建立和管理屬性運算式的工具。  
   
--   [運算式] 頁面，位於工作的自訂編輯器、For 迴圈容器和 Foreach 容器中。 該 [運算式] 頁面可讓您編輯運算式，以及檢視工作、Foreach 迴圈或 For 迴圈所使用的屬性運算式清單。  
+-   [運算式]  頁面，位於工作的自訂編輯器、For 迴圈容器和 Foreach 容器中。 該 [運算式]  頁面可讓您編輯運算式，以及檢視工作、Foreach 迴圈或 For 迴圈所使用的屬性運算式清單。  
   
--   [屬性] 視窗，用於編輯運算式及檢視封裝或封裝物件所使用的屬性運算式清單。  
+-   [屬性]  視窗，用於編輯運算式及檢視封裝或封裝物件所使用的屬性運算式清單。  
   
--   [屬性運算式編輯器] 對話方塊，用於建立、更新和刪除屬性運算式。  
+-   [屬性運算式編輯器]  對話方塊，用於建立、更新和刪除屬性運算式。  
   
--   [運算式產生器] 對話方塊，用於使用圖形工具建立運算式。 該 [運算式產生器] 對話方塊可評估運算式以供您檢閱，而無需將評估結果指派給屬性。  
+-   [運算式產生器]  對話方塊，用於使用圖形工具建立運算式。 該 [運算式產生器]  對話方塊可評估運算式以供您檢閱，而無需將評估結果指派給屬性。  
   
  下圖顯示用於加入、變更及移除屬性運算式的使用者介面。  
   
  ![屬性運算式的使用者介面](../media/ssis-propertyexpressionui.gif "屬性運算式的使用者介面")  
   
- 在 [屬性] 視窗和 [運算式] 頁面上，按一下 [運算式] 集合層級上的瀏覽按鈕 ([...])，以開啟 [屬性運算式編輯器] 對話方塊。 [屬性運算式編輯器] 可讓您將屬性對應至運算式，並輸入屬性運算式。 如果您想要使用圖形運算式工具來建立並驗證運算式，請按一下運算式層級上的瀏覽按鈕 ([...])，以開啟 [運算式產生器] 對話方塊，然後再建立或修改並選擇性地驗證運算式。  
+ 在 [屬性]  視窗和 [運算式]  頁面上，按一下 [運算式]  集合層級上的瀏覽按鈕 ([...])  ，以開啟 [屬性運算式編輯器]  對話方塊。 [屬性運算式編輯器] 可讓您將屬性對應至運算式，並輸入屬性運算式。 如果您想要使用圖形運算式工具來建立並驗證運算式，請按一下運算式層級上的瀏覽按鈕 ([...])  ，以開啟 [運算式產生器]  對話方塊，然後再建立或修改並選擇性地驗證運算式。  
   
- 您還可以從 [屬性運算式編輯器] 對話方塊，開啟 [運算式產生器] 對話方塊。  
+ 您還可以從 [屬性運算式編輯器]  對話方塊，開啟 [運算式產生器]  對話方塊。  
   
 #### <a name="to-work-with-property-expressions"></a>處理屬性運算式  
   
 -   [加入或變更屬性運算式](add-or-change-a-property-expression.md)  
   
 ### <a name="setting-property-expressions-of-data-flow-components"></a>設定資料流程元件的屬性運算式  
- 如果在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中建構封裝，支援屬性運算式之資料流程元件的屬性便會在其所屬的資料流程工作上公開。 若要加入、變更及移除資料流程元件的屬性運算式，請以滑鼠右鍵按一下資料流程元件所屬資料流程的資料流程工作，並按一下 [屬性]。 [屬性] 視窗會列出可搭配使用屬性運算式之資料流程元件的屬性。 例如，若要建立或修改屬性運算式，以用於 SampleCustomer 資料流程中資料列取樣轉換的 SamplingValue 屬性，請以滑鼠右鍵按一下資料列取樣轉換所屬資料流程的資料流程工作，並按一下 [屬性]。 SamplingValue 屬性會列在 [屬性] 視窗中，其格式為 [SampleCustomer].[SamplingValue]。  
+ 如果在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中建構封裝，支援屬性運算式之資料流程元件的屬性便會在其所屬的資料流程工作上公開。 若要加入、變更及移除資料流程元件的屬性運算式，請以滑鼠右鍵按一下資料流程元件所屬資料流程的資料流程工作，並按一下 [屬性]  。 [屬性] 視窗會列出可搭配使用屬性運算式之資料流程元件的屬性。 例如，若要建立或修改屬性運算式，以用於 SampleCustomer 資料流程中資料列取樣轉換的 SamplingValue 屬性，請以滑鼠右鍵按一下資料列取樣轉換所屬資料流程的資料流程工作，並按一下 [屬性]  。 SamplingValue 屬性會列在 [屬性] 視窗中，其格式為 [SampleCustomer].[SamplingValue]。  
   
  在 [屬性] 視窗中，您可以使用與其他 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 物件類型之屬性運算式相同的方式，來加入、變更及移除屬性運算式。 [屬性] 視窗也可讓您存取用於加入、變更或移除資料流程元件之屬性運算式的各種對話方塊和產生器。 如需屬性運算式可更新之資料流程元件屬性的詳細資訊，請參閱 [轉換自訂屬性](../data-flow/transformations/transformation-custom-properties.md)。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "62768847"
  `@[User::myfilenamefull]`  
   
 > [!NOTE]  
->  連接管理員的屬性運算式只可使用 [屬性] 視窗進行存取。 若要檢視連線管理員的屬性，您必須在 [屬性] 視窗開啟時，在 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 的 [連線管理員] 區域中選取連線管理員，或以滑鼠右鍵按一下連線管理員並選取 [屬性]。  
+>  連接管理員的屬性運算式只可使用 [屬性] 視窗進行存取。 若要檢視連線管理員的屬性，您必須在 [屬性] 視窗開啟時，在 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 的 [連線管理員]  區域中選取連線管理員，或以滑鼠右鍵按一下連線管理員並選取 [屬性]  。  
   
 ### <a name="property-expression-for-the-configstring-property-of-a-text-file-log-provider"></a>文字檔記錄提供者之 ConfigString 屬性的屬性運算式  
  下列屬性運算式可用以設定文字檔記錄提供者的 ConfigString 屬性。 該運算式會使用 `varConfigString`單一使用者定義變數，該變數包含要使用之檔案連線管理員的名稱。 檔案連接管理員會指定要在其中寫入記錄項目之文字檔的路徑。  
@@ -163,7 +163,7 @@ ms.locfileid: "62768847"
  `@[User::varConfigString]`  
   
 > [!NOTE]  
->  記錄提供者的屬性運算式只可使用 [屬性] 視窗進行存取。 若要檢視記錄提供者的屬性，您必須在 [屬性] 視窗開啟時，在 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 的封裝總管索引標籤上選取記錄提供者，或以滑鼠右鍵按一下封裝總管中的記錄提供者，並按一下 [屬性]。  
+>  記錄提供者的屬性運算式只可使用 [屬性] 視窗進行存取。 若要檢視記錄提供者的屬性，您必須在 [屬性] 視窗開啟時，在 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 的封裝總管  索引標籤上選取記錄提供者，或以滑鼠右鍵按一下封裝總管中的記錄提供者，並按一下 [屬性]  。  
   
 ## <a name="external-resources"></a>外部資源  
   

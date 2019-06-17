@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61fb30ea21ea810eab8d30a3a040fac4a1bd2128
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080526"
 ---
 # <a name="import-from-a-relational-data-source-ssas-tabular"></a>從關聯式資料來源匯入 (SSAS 表格式)
@@ -52,9 +52,9 @@ ms.locfileid: "66080526"
   
 ### <a name="to-import-data-from-a-database"></a>從資料庫匯入資料  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後按一下 **[從資料來源匯入]**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後按一下 **[從資料來源匯入]** 。  
   
-2.  在 **[連接到資料來源]** 頁面上，選取要連接的資料庫類型，然後按 **[下一步]**。  
+2.  在 **[連接到資料來源]** 頁面上，選取要連接的資料庫類型，然後按 **[下一步]** 。  
   
 3.  請遵循 [資料表匯入精靈] 中的步驟來進行。 在後續頁面中，您即可選取特定的資料表及檢視，或使用 **[選取資料表和檢視表]** 頁面，或在 **[指定 SQL 查詢]** 頁面上建立 SQL 查詢，以套用篩選。  
   

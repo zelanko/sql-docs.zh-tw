@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 528ba1cb776124c72fcb2d6f1d1e97c0b25ea2f9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983111"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
@@ -48,7 +48,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="arguments"></a>引數  
 `[ @ftcat = ] 'fulltext_catalog_name'` 是全文檢索目錄的名稱。 每個資料庫的目錄名稱都必須是唯一的。 *fulltext_catalog_name*已**sysname**。  
   
-`[ @action = ] 'action'` 是要執行的動作。 *動作*已**varchar （20)**，而且可以是下列值之一。  
+`[ @action = ] 'action'` 是要執行的動作。 *動作*已**varchar （20)** ，而且可以是下列值之一。  
   
 > [!NOTE]  
 >  您可以依照需要來建立、卸除和修改全文檢索目錄。 不過，請避免同時變更多個目錄的結構描述。 可以使用執行這些動作**sp_fulltext_table**預存程序，這是建議的方式。  
@@ -64,7 +64,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
   
 `[ @path = ] 'root_directory'` 為根目錄 （不是完整實體路徑）**建立**動作。 *root_directory*已**nvarchar(100)** 且具有預設值是 NULL，表示將在安裝期間指定的預設位置。 這是在 Mssql 目錄; 的 Ftdata 子目錄例如，C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\MSSQL\FTData。 指定的根目錄必須在相同電腦的磁碟機中，它不只是磁碟機代號，也不能是相對路徑。 網路磁碟機、卸除式磁碟機、磁碟片及 UNC 路徑都不在支援範圍內。 全文檢索目錄必須建立在與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體相關聯的本機硬碟中。  
   
- **@path** 時才有效*動作*是**建立**。 針對動作以外**建立**(**停止**，**重建**等等)， **@path**必須是 NULL 或省略。  
+ **@path** 時才有效*動作*是**建立**。 針對動作以外**建立**(**停止**，**重建**等等)， **@path** 必須是 NULL 或省略。  
   
  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體是叢集中的虛擬伺服器，指定的全文檢索目錄之目錄就必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源所依賴的共用硬碟中。 如果@path未指定，預設目錄之目錄的位置是在共用的磁碟機中的虛擬伺服器已安裝時所指定的目錄中。  
   
@@ -77,7 +77,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="remarks"></a>備註  
  **Start_incremental**動作來建立完整的中的全文檢索資料快照集*fulltext_catalog_name*。 **Start_incremental**動作可用來重新建立索引只變更的資料庫的資料列。 只有當資料表具有類型的資料行時，才可以套用的累加母體擴展**時間戳記**。 如果全文檢索目錄中的資料表不包含類型的資料行**時間戳記**，資料表就會進行完整母體擴展。  
   
- 全文檢索目錄和索引資料會儲存在全文檢索目錄之目錄下所建立的檔案中。 全文檢索類別目錄會建立為目錄中指定的目錄的子目錄**@path**或在伺服器預設全文檢索目錄的目錄若**@path**不是指定此項目。 全文檢索目錄之目錄名稱的建立方式，必須確保它在伺服器中是唯一的。 因此，伺服器中所有全文檢索目錄之目錄都可以共用相同的路徑。  
+ 全文檢索目錄和索引資料會儲存在全文檢索目錄之目錄下所建立的檔案中。 全文檢索類別目錄會建立為目錄中指定的目錄的子目錄 **@path** 或在伺服器預設全文檢索目錄的目錄若 **@path** 不是指定此項目。 全文檢索目錄之目錄名稱的建立方式，必須確保它在伺服器中是唯一的。 因此，伺服器中所有全文檢索目錄之目錄都可以共用相同的路徑。  
   
 ## <a name="permissions"></a>Permissions  
  呼叫端必須是隸屬**db_owner**角色。 根據要求的動作，呼叫端不應被拒絕 ALTER 或 CONTROL 權限 (這**db_owner**有) 在目標全文檢索目錄上。  

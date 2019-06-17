@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: def96304f13f57095679056e6eab0a004b5c47d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62658755"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
@@ -41,7 +41,7 @@ FROM <model/structure>[.aspect]
 ## <a name="flattened"></a>FLATTENED  
  某些資料採礦用戶端不能接受資料採礦提供者所提供的階層式格式結果集。 用戶端可能缺少處理階層的能力，或者可能必須將結果儲存在單一反正規化資料表中。 若要將巢狀資料表中的資料轉換到扁平化資料表，必須要求查詢結果扁平化。  
   
- 若要將查詢結果扁平化，使用**選取 **語法搭配**FLATTENED**選項，如下列範例所示：  
+ 若要將查詢結果扁平化，使用**選取** 語法搭配**FLATTENED**選項，如下列範例所示：  
   
 ```  
 SELECT FLATTENED <select list> FROM ...  
@@ -77,7 +77,7 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- 您可以限制傳回查詢所使用的案例**其中**子句。 **何處**子句會指定該資料行中的參考**位置**運算式必須有相同的語意中的資料行參考*\<選取清單 >* 的**選取**陳述式，而且只能傳回布林運算式。 語法**其中**子句如下所示  
+ 您可以限制傳回查詢所使用的案例**其中**子句。 **何處**子句會指定該資料行中的參考**位置**運算式必須有相同的語意中的資料行參考 *\<選取清單 >* 的**選取**陳述式，而且只能傳回布林運算式。 語法**其中**子句如下所示  
   
 ```  
 WHERE < condition expression >  

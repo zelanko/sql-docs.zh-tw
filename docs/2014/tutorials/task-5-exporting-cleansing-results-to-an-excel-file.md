@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489119"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>工作 5：將清理結果匯出到 Excel 檔案
@@ -42,7 +42,7 @@ ms.locfileid: "65489119"
   
     3.  搜尋**Los Angeles** ，會看到**狀態**設定為**CA**。  
   
-    4.  確認沒有任何條款**Co.**， **Corp.**，並**Inc.**。  
+    4.  確認沒有任何條款**Co.** ， **Corp.** ，並**Inc.** 。  
   
     5.  刪除**地址驗證**從試算表，並將 excel 檔案儲存的資料行。 此額外資料行對應至「地址驗證」複合定義域。  
   

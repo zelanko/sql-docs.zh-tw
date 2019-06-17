@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3859dbf74d1def19b5f3aad405a884ae607fbca3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107964"
 ---
 # <a name="tutorials-report-builder"></a>教學課程 (報表產生器)
@@ -32,7 +32,7 @@ ms.locfileid: "66107964"
  請遵循這個教學課程中的步驟來學習如何建立您的第一份報表。 這個教學課程會示範如何使用報表產生器來建立資料來源連接、定義簡單的查詢、建立包含資料的配置、格式化報表，以及加入群組和總計。  
   
  [教學課程：建立矩陣報表 &#40;報表產生器&#41;](tutorial-creating-a-matrix-report-report-builder.md)  
- 請遵循這個教學課程中的步驟來學習如何加入及設定矩陣。 您將使用資料表或矩陣精靈，建立報表資料來源、資料集和配置，然後從報表產生器的 [設計] 檢視內強化矩陣。  
+ 請遵循這個教學課程中的步驟來學習如何加入及設定矩陣。 您將使用資料表或矩陣精靈，建立報表資料來源、資料集和配置，然後從報表產生器的 [設計]  檢視內強化矩陣。  
   
  [教學課程：建立自由格式報表 &#40;報表產生器&#41;](tutorial-creating-a-free-form-report-report-builder.md)  
  請遵循此教學課程中的步驟，了解如何從頭建立自由格式報表。 該報表的樣子有如一份新聞稿。  

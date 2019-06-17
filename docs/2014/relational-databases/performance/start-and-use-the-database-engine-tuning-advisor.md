@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150630"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>啟動及使用 Database Engine Tuning Advisor
@@ -46,21 +46,21 @@ ms.locfileid: "63150630"
   
 #### <a name="to-start-database-engine-tuning-advisor-from-the-windows-start-menu"></a>從 Windows 的 [開始] 功能表中啟動 Database Engine Tuning Advisor  
   
-1.  在 **[開始]** 功能表上，依序指向 **[所有程式]**、 **[Microsoft SQL Server]**、 **[效能工具]**，然後按一下 **[Database Engine Tuning Advisor]**。  
+1.  在 **[開始]** 功能表上，依序指向 **[所有程式]** 、 **[Microsoft SQL Server]** 、 **[效能工具]** ，然後按一下 **[Database Engine Tuning Advisor]** 。  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>若要在 SQL Server Management Studio 中啟動 Database Engine Tuning Advisor  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **中的** 功能表上，按一下 **[Database Engine Tuning Advisor]**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **中的** 功能表上，按一下 **[Database Engine Tuning Advisor]** 。  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>若要從 SQL Server Management Studio 查詢編輯器中啟動 Database Engine Tuning Advisor  
   
 1.  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中，開啟一個 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指令碼檔案。 如需詳細資訊，請參閱[查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)。  
   
-2.  選取 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼中的一項查詢，或選取整份指令碼，以滑鼠右鍵按一下選取範圍，選擇 [在 Database Engine Tuning Advisor 中分析查詢]。 此時會開啟 Database Engine Tuning Advisor GUI，且會將指令碼匯入來作為一份 XML 檔工作負載。 您可以指定工作階段名稱和微調選項來微調做為工作負載的所選 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢。  
+2.  選取 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼中的一項查詢，或選取整份指令碼，以滑鼠右鍵按一下選取範圍，選擇 [在 Database Engine Tuning Advisor 中分析查詢]  。 此時會開啟 Database Engine Tuning Advisor GUI，且會將指令碼匯入來作為一份 XML 檔工作負載。 您可以指定工作階段名稱和微調選項來微調做為工作負載的所選 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢。  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-profiler"></a>若要在 SQL Server Profiler 中啟動 Database Engine Tuning Advisor  
   
-1.  在 SQL Server Profiler 的 **[工具]** 功能表上，按一下 **[Database Engine Tuning Advisor]**。  
+1.  在 SQL Server Profiler 的 **[工具]** 功能表上，按一下 **[Database Engine Tuning Advisor]** 。  
   
 ##  <a name="Create"></a> 建立工作負載  
  工作負載是針對需要微調的一或多個資料庫來執行的一組 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 Database Engine Tuning Advisor 會分析這些工作負載，以建議可改善伺服器查詢效能的索引或資料分割策略。  
@@ -90,9 +90,9 @@ ms.locfileid: "63150630"
   
 1.  使用下列其中一種方法啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ：  
   
-    -   在 **[開始]** 功能表中，依序指向 **[所有程式]**、 **[Microsoft SQL Server]** 與 **[效能工具]**，然後按一下 **[SQL Server Profiler]**。  
+    -   在 **[開始]** 功能表中，依序指向 **[所有程式]** 、 **[Microsoft SQL Server]** 與 **[效能工具]** ，然後按一下 **[SQL Server Profiler]** 。  
   
-    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，按一下 **[工具]** 功能表，然後按一下 **[SQL Server Profiler]**。  
+    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，按一下 **[工具]** 功能表，然後按一下 **[SQL Server Profiler]** 。  
   
 2.  按照下列程序，使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **[微調]** 範本來建立追蹤檔案或資料表：  
   
@@ -150,7 +150,7 @@ ms.locfileid: "63150630"
   
 3.  選取 **[計畫快取]** 做為工作負載選項。 Database Engine Tuning Advisor 會選取計畫快取中前 1,000 個用於分析的事件。  
   
-4.  選取一個或多個想要微調的資料庫，並選擇性地從 **[選取的資料表]** 中選擇每個資料庫中的一個或多個資料表。 若要包含所有資料庫的快取項目，請按一下 **[微調選項]** 中的 **[進階選項]** ，然後核取 **[包含來自所有資料庫的計畫快取事件]**。  
+4.  選取一個或多個想要微調的資料庫，並選擇性地從 **[選取的資料表]** 中選擇每個資料庫中的一個或多個資料表。 若要包含所有資料庫的快取項目，請按一下 **[微調選項]** 中的 **[進階選項]** ，然後核取 **[包含來自所有資料庫的計畫快取事件]** 。  
   
 5.  核取 **[儲存微調記錄]** ，以儲存微調記錄的副本。 若您不想儲存微調記錄的副本，請清除核取方塊。  
   
@@ -158,16 +158,16 @@ ms.locfileid: "63150630"
   
 6.  按一下 **[微調選項]** 索引標籤，並從所列出的選項中選取。  
   
-7.  按一下 **[開始分析]**。  
+7.  按一下 **[開始分析]** 。  
   
      如果您要在啟動之後停止微調，請選擇 **[動作]** 功能表上的下列其中一個選項：  
   
-    -   [停止分析 (附帶建議)] 會停止微調工作階段並提示您確定是否要 Database Engine Tuning Advisor 根據現階段完成的分析產生建議。  
+    -   [停止分析 (附帶建議)]  會停止微調工作階段並提示您確定是否要 Database Engine Tuning Advisor 根據現階段完成的分析產生建議。  
   
     -   **[停止分析]** 會停止微調工作階段而不產生任何建議。  
   
 > [!NOTE]  
->  不支援暫停 Database Engine Tuning Advisor。 若在按下 [停止分析] 或 [停止分析 (附帶建議)] 工具列按鈕之後按下 [開始分析] 工具列按鈕，Database Engine Tuning Advisor 會啟動新的微調工作階段。  
+>  不支援暫停 Database Engine Tuning Advisor。 若在按下 [停止分析]  或 [停止分析 (附帶建議)]  工具列按鈕之後按下 [開始分析]  工具列按鈕，Database Engine Tuning Advisor 會啟動新的微調工作階段。  
   
 ##### <a name="to-tune-a-database-using-a-workload-file-or-table-as-input"></a>若要使用工作負載檔案或資料表做為輸入以微調資料庫  
   
@@ -188,7 +188,7 @@ ms.locfileid: "63150630"
     database_name.schema_name.table_name  
     ```  
   
-     若要搜尋工作負載檔案或資料表，請按一下 **[瀏覽]**。 Database Engine Tuning Advisor 會假設工作負載檔案是換用檔案。 如需有關換用檔案的詳細資訊，請參閱＜ [Limit Trace File and Table Sizes](../sql-trace/limit-trace-file-and-table-sizes.md)＞。  
+     若要搜尋工作負載檔案或資料表，請按一下 **[瀏覽]** 。 Database Engine Tuning Advisor 會假設工作負載檔案是換用檔案。 如需有關換用檔案的詳細資訊，請參閱＜ [Limit Trace File and Table Sizes](../sql-trace/limit-trace-file-and-table-sizes.md)＞。  
   
      使用追蹤資料表做為工作負載時，該資料表必須位於 Database Engine Tuning Advisor 所微調的同一部伺服器上。 若您在不同的伺服器上建立追蹤資料表，請先將它移到 Database Engine Tuning Advisor 所微調的伺服器上，再用它來作為您的工作負載。  
   
@@ -204,12 +204,12 @@ ms.locfileid: "63150630"
   
      如果您要在啟動之後停止微調，請選擇 **[動作]** 功能表上的下列其中一個選項：  
   
-    -   [停止分析 (附帶建議)] 會停止微調工作階段並提示您確定是否要 Database Engine Tuning Advisor 根據現階段完成的分析產生建議。  
+    -   [停止分析 (附帶建議)]  會停止微調工作階段並提示您確定是否要 Database Engine Tuning Advisor 根據現階段完成的分析產生建議。  
   
     -   **[停止分析]** 會停止微調工作階段而不產生任何建議。  
   
 > [!NOTE]  
->  不支援暫停 Database Engine Tuning Advisor。 若在按下 [停止分析] 或 [停止分析 (附帶建議)] 工具列按鈕之後按下 [開始分析] 工具列按鈕，Database Engine Tuning Advisor 會啟動新的微調工作階段。  
+>  不支援暫停 Database Engine Tuning Advisor。 若在按下 [停止分析]  或 [停止分析 (附帶建議)]  工具列按鈕之後按下 [開始分析]  工具列按鈕，Database Engine Tuning Advisor 會啟動新的微調工作階段。  
   
 ###  <a name="dta"></a> 使用 dta 公用程式  
  [dta 公用程式](../../tools/dta/dta-utility.md) 提供一個命令提示字元可執行檔，您可用來微調資料庫。 這個公用程式可讓您在批次檔和指令碼中使用 Database Engine Tuning Advisor 的功能。 您的 **dta** 公用程式會將計畫快取項目、追蹤檔案、追蹤資料表和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼視為工作負載； 它也會使用符合 Database Engine Tuning Advisor XML 結構描述的 XML 輸入，此結構描述可從此 [Microsoft 網站](https://go.microsoft.com/fwlink/?linkid=43100)取得。  
@@ -327,13 +327,13 @@ ms.locfileid: "63150630"
  使用此對話方塊，來指定 Database Engine Tuning Advisor 的一般組態參數。  
   
  **啟動時**  
- 指定 Database Engine Tuning Advisor 在啟動時應執行的工作：開啟但沒有資料庫連接、顯示 [新增連接] 對話方塊、顯示新的工作階段，或者載入上次載入的工作階段。  
+ 指定 Database Engine Tuning Advisor 在啟動時應執行的工作：開啟但沒有資料庫連接、顯示 [新增連接]  對話方塊、顯示新的工作階段，或者載入上次載入的工作階段。  
   
  **變更字型**  
  指定 Database Engine Tuning Advisor 資料表所用的字型。  
   
  **最近使用清單中的項目數目**  
- 指定在 [檔案] 功能表中的 [最近使用的工作階段] 或 [最近使用的檔案] 之下，要顯示之工作階段或檔案的數目。  
+ 指定在 [檔案]  功能表中的 [最近使用的工作階段]  或 [最近使用的檔案]  之下，要顯示之工作階段或檔案的數目。  
   
  **記住上次的微調選項**  
  在工作階段之間保留微調選項。 依預設為已選取。 清除此核取方塊，即可永遠使用 Database Engine Tuning Advisor 的預設值來啟動。  
@@ -374,10 +374,10 @@ database_name.owner_name.table_name
   
 1.  在查詢編輯器鍵入查詢，並反白顯示。  
   
-2.  以滑鼠右鍵按一下反白顯示的查詢，並按一下 [在 Database Engine Tuning Advisor 中分析查詢]。  
+2.  以滑鼠右鍵按一下反白顯示的查詢，並按一下 [在 Database Engine Tuning Advisor 中分析查詢]  。  
   
  **瀏覽工作負載 [檔案或資料表]**  
- 選取 [檔案] 或 [資料表] 作為工作負載來源時，請使用此瀏覽按鈕來選取目標。  
+ 選取 [檔案]  或 [資料表]  作為工作負載來源時，請使用此瀏覽按鈕來選取目標。  
   
  **預覽 XML 工作負載**  
  檢視已從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]匯入的 XML 格式工作負載。  
@@ -388,7 +388,7 @@ database_name.owner_name.table_name
  **選取要微調的資料庫與資料表**  
  指定要微調的資料庫與資料表。 若要指定所有資料庫，請選取 **[名稱]** 資料行標題中的核取方塊。 若要指定某些資料庫，請選取資料庫名稱旁的核取方塊。 依預設，所有選取之資料庫的資料表會自動包含在微調工作階段中。 若要排除資料表，請按一下 **[選取的資料表]** 資料行中的箭頭，然後將您不要微調之資料表旁的核取方塊清除。  
   
- [選取的資料表] 向下箭頭  
+ [選取的資料表]  向下箭頭  
  展開資料表清單，以允許選取個別資料表進行微調。  
   
  **[儲存微調記錄]**  
@@ -407,7 +407,7 @@ database_name.owner_name.table_name
 >  [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會在分析期間耗用系統資源。 預期在要微調的伺服器會有較重的工作負載期間之前，您可以使用 **[限制微調時間]** 來停止微調。  
   
  **[進階選項]**  
- 使用 [進階微調選項] 對話方塊，即可設定最大空間、最大索引鍵資料行和線上索引建議。  
+ 使用 [進階微調選項]  對話方塊，即可設定最大空間、最大索引鍵資料行和線上索引建議。  
   
  **定義建議的最大空間 (MB)**  
  鍵入 Database Engine Tuning Advisor 所建議，由實體設計結構使用的最大空間量。  
@@ -443,7 +443,7 @@ database_name.owner_name.table_name
  只包含加入索引檢視的建議。 不建議叢集與非叢集索引。  
   
  **包含篩選的索引**  
- 包含加入篩選之索引的建議。 如果您選取下列其中一個實體設計結構，即可使用這個選項：[索引與索引檢視]、[索引] 或 [非叢集索引]。  
+ 包含加入篩選之索引的建議。 如果您選取下列其中一個實體設計結構，即可使用這個選項：[索引與索引檢視]  、[索引]  或 [非叢集索引]  。  
   
  **[索引]**  
  只包含加入叢集與非叢集索引的建議。 不建議索引檢視。  
@@ -483,7 +483,7 @@ database_name.owner_name.table_name
   
  如果您要在啟動之後停止微調，請選擇 **[動作]** 功能表上的下列其中一個選項：  
   
--   [停止分析 (附帶建議)] 會停止微調工作階段並提示您確定是否要 Database Engine Tuning Advisor 根據現階段完成的分析產生建議。  
+-   [停止分析 (附帶建議)]  會停止微調工作階段並提示您確定是否要 Database Engine Tuning Advisor 根據現階段完成的分析產生建議。  
   
 -   **[停止分析]** 會停止微調工作階段而不產生任何建議。  
   
@@ -503,7 +503,7 @@ database_name.owner_name.table_name
  包含動作步驟所傳回的任何訊息。  
   
  **微調記錄**  
- 包含此微調工作階段的相關資訊。 若要列印此記錄，請以滑鼠右鍵按一下記錄，然後按一下 [列印]。  
+ 包含此微調工作階段的相關資訊。 若要列印此記錄，請以滑鼠右鍵按一下記錄，然後按一下 [列印]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及處理 Database Engine Tuning Advisor 的輸出](database-engine-tuning-advisor.md)   

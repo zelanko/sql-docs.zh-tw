@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31caafde6ea3cdd93355910f244ed5872b6990ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62635885"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
@@ -44,7 +44,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ## <a name="arguments"></a>引數  
 `[ @server = ] 'server'` 是了解哪種報告資訊的伺服器。 當*伺服器*未指定中的所有伺服器都在報導**master.sys.servers**。 *伺服器*已**sysname**，預設值是 NULL。  
   
-`[ @optname = ] 'option'` 會描述伺服器選項。 *選項*已**varchar (** 35 **)**，預設值是 NULL，而且必須是下列值之一。  
+`[ @optname = ] 'option'` 會描述伺服器選項。 *選項*已**varchar (** 35 **)** ，預設值是 NULL，而且必須是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -60,7 +60,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**使用遠端定序**|利用遠端資料行的定序來取代本機伺服器的定序。|  
   
-`[ @show_topology = ] 'show_topology'` 為指定的伺服器與其他伺服器的關聯性。 *show_topology*已**varchar (** 1 **)**，預設值是 NULL。 如果*show_topology*不等於**t**是 NULL，或**sp_helpserver**傳回結果集一節中列出的資料行。 如果*show_topology*等於**t**，列出結果集中的資料行除了**sp_helpserver**也會傳回**topx**和**topy**資訊。  
+`[ @show_topology = ] 'show_topology'` 為指定的伺服器與其他伺服器的關聯性。 *show_topology*已**varchar (** 1 **)** ，預設值是 NULL。 如果*show_topology*不等於**t**是 NULL，或**sp_helpserver**傳回結果集一節中列出的資料行。 如果*show_topology*等於**t**，列出結果集中的資料行除了**sp_helpserver**也會傳回**topx**和**topy**資訊。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)。  

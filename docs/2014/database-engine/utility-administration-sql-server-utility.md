@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773750"
 ---
 # <a name="utility-administration-sql-server-utility"></a>公用程式管理 (SQL Server 公用程式)
@@ -24,38 +24,38 @@ ms.locfileid: "62773750"
  原則索引標籤 - 使用 [原則] 索引標籤來檢視或指定全域監視原則。  
   
  設定全域資料層應用程式監視原則。 若要展開這個選項的值清單，請按一下原則名稱旁的箭頭，或是按一下原則標題。  
- 應用程式何時用完處理器容量？ 若要變更這個原則，請使用原則描述右邊的控制項，然後按一下 **[套用]**。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
+ 應用程式何時用完處理器容量？ 若要變更這個原則，請使用原則描述右邊的控制項，然後按一下 **[套用]** 。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
   
 -   處理器使用量的預設最大值為 70%。  
   
 -   處理器使用量的預設最小值為 0%。  
   
- 應用程式何時用完檔案空間？ 若要變更資料檔或記錄檔空間使用量的原則，請使用原則描述右邊的控制項，然後按一下 [套用] 。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
+ 應用程式何時用完檔案空間？ 若要變更資料檔或記錄檔空間使用量的原則，請使用原則描述右邊的控制項，然後按一下 [套用]  。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
   
 -   檔案空間使用量的預設最大值為 70%。  
   
 -   檔案空間使用量的預設最小值為 0%。  
   
  設定 SQL Server Managed 執行個體的全域應用程式監視原則。 若要展開這個選項的值清單，請按一下原則名稱旁的箭頭，或是按一下原則標題。  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 Managed 執行個體何時用完處理器容量？ 若要變更這個原則，請使用原則描述右邊的控制項，然後按一下 **[套用]**。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 Managed 執行個體何時用完處理器容量？ 若要變更這個原則，請使用原則描述右邊的控制項，然後按一下 **[套用]** 。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
   
 -   執行個體處理器使用量的預設最大值為 70%。  
   
 -   執行個體處理器使用量的預設最小值為 0%。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 電腦的 Managed 執行個體何時用完處理器容量？ 若要變更這個原則，請使用原則描述右邊的控制項，然後按一下 **[套用]**。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 電腦的 Managed 執行個體何時用完處理器容量？ 若要變更這個原則，請使用原則描述右邊的控制項，然後按一下 **[套用]** 。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
   
 -   電腦處理器使用量的預設最大值為 70%。  
   
 -   電腦處理器使用量的預設最小值為 0%。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 Managed 執行個體何時用完檔案空間？ 若要變更資料檔或記錄檔空間使用量的原則，請使用原則描述右邊的控制項，然後按一下 **[套用]**。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 Managed 執行個體何時用完檔案空間？ 若要變更資料檔或記錄檔空間使用量的原則，請使用原則描述右邊的控制項，然後按一下 **[套用]** 。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
   
 -   檔案空間使用量的預設最大值為 70%。  
   
 -   檔案空間使用量的預設最小值為 0%。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 電腦的 Managed 執行個體何時用完存放磁碟區空間？ 若要變更這個原則，請使用原則描述右邊的控制項，然後按一下 **[套用]**。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 電腦的 Managed 執行個體何時用完存放磁碟區空間？ 若要變更這個原則，請使用原則描述右邊的控制項，然後按一下 **[套用]** 。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
   
 -   電腦磁碟區空間使用量的預設最大值為 70%。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62773750"
 >  可以使用卸離/附加或 ALTER DATABASE 來變更 UMDW (sysutility_mdw) 檔案的位置。 我們建議使用 ALTER DATABASE。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)。  
   
  回到原廠的預設值  
- 若要將此索引標籤上的設定重設為預設值，請按一下 [還原預設值] 按鈕，然後按一下 [套用]。  
+ 若要將此索引標籤上的設定重設為預設值，請按一下 [還原預設值]  按鈕，然後按一下 [套用]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [公用程式儀表板&#40;SQL Server 公用程式&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   

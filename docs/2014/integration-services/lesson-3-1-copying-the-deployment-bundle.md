@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d28a85e4dccaa6165d96046848513879998136f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891707"
 ---
-# <a name="step-1-copying-the-deployment-bundle"></a>步驟 1:複製部署配套
+# <a name="step-1-copying-the-deployment-bundle"></a>步驟 1:複製部署套件組合
   在這項工作中，您會將部署配套複製到目的地電腦。  
   
  要將部署配套複製到目的地電腦，最簡單的方式就是先在目的地電腦上建立一個公用共用區，再將磁碟機對應至此公用共用區，然後將部署配套複製到此共用區。 如果不知道如何建立和設定公用資料夾或對應磁碟機，請參閱 Windows 文件集。  
@@ -28,9 +28,9 @@ ms.locfileid: "62891707"
   
      如果使用的是預設位置，則部署配套就是 [部署教學課程] 資料夾內的 Bin\Deployment 資料夾。  
   
-2.  以滑鼠右鍵按一下 [Deployment] 資料夾，然後按一下 [複製]。  
+2.  以滑鼠右鍵按一下 [Deployment] 資料夾，然後按一下 [複製]  。  
   
-3.  在目標電腦上找到您要複製此資料夾的公用共用，然後按一下 [貼上]。  
+3.  在目標電腦上找到您要複製此資料夾的公用共用，然後按一下 [貼上]  。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [步驟 2：執行套件安裝精靈](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  

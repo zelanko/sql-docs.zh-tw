@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 101ac93ba885ebcd571387785aa814ddef873619
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62876243"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>媒體集、媒體家族與備份組 (SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "62876243"
   
   
 ##  <a name="OvMediaSetsFamiliesBackupSets"></a> 媒體集、 媒體家族與備份組的概觀  
- 單一媒體集是由一組一個或多個備份媒體上的備份組成。 *「媒體集」* (Media Set) 是按順序排列的 *「備份媒體」*(Backup Media) 集合 (磁帶或磁碟檔案或是 Windows Azure Blob)，由一個或多個備份作業使用固定的備份裝置類型與數量寫入。 給定的媒體集會使用磁帶機或磁碟機或是 Windows Azure Blob，但是不得為兩個以上的組合。 例如，與媒體集相關的備份裝置可能是三個磁帶機，分別稱為 `\\.\TAPE0`、 `\\.\TAPE1`與 `\\.\TAPE2`。 此媒體集僅包含磁帶，一開始最少有三個磁帶 (每個磁帶機一個)。 備份裝置類型與數量是在媒體集建立時確立，而且無法變更。 不過，可在必要時以相同類型的裝置取代備份和還原作業間的指定裝置。  
+ 單一媒體集是由一組一個或多個備份媒體上的備份組成。 *「媒體集」* (Media Set) 是按順序排列的 *「備份媒體」* (Backup Media) 集合 (磁帶或磁碟檔案或是 Windows Azure Blob)，由一個或多個備份作業使用固定的備份裝置類型與數量寫入。 給定的媒體集會使用磁帶機或磁碟機或是 Windows Azure Blob，但是不得為兩個以上的組合。 例如，與媒體集相關的備份裝置可能是三個磁帶機，分別稱為 `\\.\TAPE0`、 `\\.\TAPE1`與 `\\.\TAPE2`。 此媒體集僅包含磁帶，一開始最少有三個磁帶 (每個磁帶機一個)。 備份裝置類型與數量是在媒體集建立時確立，而且無法變更。 不過，可在必要時以相同類型的裝置取代備份和還原作業間的指定裝置。  
   
  媒體集是在備份作業格式化備份媒體期間，於備份媒體上建立。 如需詳細資訊，請參閱本主題稍後的 [建立新媒體集](#CreatingMediaSet)。 完成格式化後，每個檔案或磁帶會包含媒體集的媒體標頭，且備妥要接收備份內容。 有了適當的標頭，備份作業就可以在指定供作業使用的所有備份裝置上，繼續將指定的資料備份至備份媒體。  
   
@@ -60,12 +60,12 @@ ms.locfileid: "62876243"
   
   
 ### <a name="media-families"></a>媒體家族  
- 在單一非鏡像裝置上或媒體集鏡像裝置組上所建立的備份，即構成一個 *「媒體家族」*(Media family)。 媒體集使用的備份裝置數量決定媒體集內的媒體家族數。 例如，如果媒體集使用兩個非鏡像的備份裝置，此媒體集即包含兩個媒體家族。  
+ 在單一非鏡像裝置上或媒體集鏡像裝置組上所建立的備份，即構成一個 *「媒體家族」* (Media family)。 媒體集使用的備份裝置數量決定媒體集內的媒體家族數。 例如，如果媒體集使用兩個非鏡像的備份裝置，此媒體集即包含兩個媒體家族。  
   
 > [!NOTE]  
 >  在鏡像的媒體集中，每個媒體家族都是鏡像。 例如，如果使用六個備份裝置格式化媒體集，其中兩個使用鏡像，共有三個媒體家族，每個都包含兩份等量的備份資料。 如需鏡像媒體集的詳細資訊，請參閱 [鏡像備份媒體集 &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)的使用者閱讀。  
   
- 媒體家族內的每個磁帶或磁碟都會指派一個 *「媒體序號」*。 磁碟的媒體序號永遠是 1。 在磁帶媒體家族中，初始磁帶的序號為 1，第二個磁帶的序號為 2，以此類推。 如需詳細資訊，請參閱 [使用媒體集和家族](#ConsiderationsForMediaSetFamilies)。  
+ 媒體家族內的每個磁帶或磁碟都會指派一個 *「媒體序號」* 。 磁碟的媒體序號永遠是 1。 在磁帶媒體家族中，初始磁帶的序號為 1，第二個磁帶的序號為 2，以此類推。 如需詳細資訊，請參閱 [使用媒體集和家族](#ConsiderationsForMediaSetFamilies)。  
   
 #### <a name="the-media-header"></a>媒體標頭  
  備份媒體 (磁碟檔案或磁帶) 的每個磁碟區都包含一個媒體標頭，此標頭是由使用磁帶 (或磁碟) 的第一個備份作業所建立。 此標頭會保持不變，直到重新格式化媒體。  
@@ -140,7 +140,7 @@ WITH
   
  ![分散在 3 個媒體集磁帶上的第二個備份集](../../database-engine/media/bnr-mediaset-appendedto.gif "分散在 3 個媒體集磁帶上的第二個備份集")  
   
- 當您要還原備份時，可以使用 FILE 選項來指定所要使用的備份。 下列範例示範 FILE **=**_backup_set_file_number_ 子句在還原 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的完整資料庫備份時的用法，並接著示範在相同媒體集上進行差異資料庫備份。 這個媒體集使用三個備份磁帶，分別位於磁帶機 `\\.\tape0`、 `tape1`和 `tape2`。  
+ 當您要還原備份時，可以使用 FILE 選項來指定所要使用的備份。 下列範例示範 FILE **=** _backup_set_file_number_ 子句在還原 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的完整資料庫備份時的用法，並接著示範在相同媒體集上進行差異資料庫備份。 這個媒體集使用三個備份磁帶，分別位於磁帶機 `\\.\tape0`、 `tape1`和 `tape2`。  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
@@ -261,7 +261,7 @@ GO
 ##  <a name="RelatedTasks"></a> 相關工作  
  **若要建立新的媒體集**  
   
--   [建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) ([備份至新的媒體集，並清除所有現有的備份組] 選項)  
+-   [建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) ([備份至新的媒體集，並清除所有現有的備份組]  選項)  
   
 -   [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (FORMAT 選項)  
   
@@ -269,13 +269,13 @@ GO
   
  **若要將新備份附加至現有媒體**  
   
--   [建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) ([附加至現有的備份組] 選項)  
+-   [建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) ([附加至現有的備份組]  選項)  
   
 -   [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (NOINIT 選項)  
   
  **若要覆寫現有的備份組**  
   
--   [建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) ([覆寫所有現有的備份組] 選項)  
+-   [建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) ([覆寫所有現有的備份組]  選項)  
   
 -   [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (INIT 選項)  
   

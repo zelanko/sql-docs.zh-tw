@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24648d8c52134e572dce82cf37cb59717f139eb1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013425"
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
@@ -99,7 +99,7 @@ dm_exec_cursors (session_id | 0 )
   
  下表提供有關資料指標範圍的資訊，並包括屬性資料行的可能值。  
   
-|範圍。|描述|  
+|`Scope`|描述|  
 |-----------|-----------------|  
 |本機|指定已建立資料指標的批次、預存程序或觸發程序，其資料指標的範圍為本機範圍。|  
 |全域|指定連接的資料指標範圍為全域。|  

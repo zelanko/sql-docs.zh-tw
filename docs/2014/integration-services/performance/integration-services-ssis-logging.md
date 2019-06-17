@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62889786"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 記錄
@@ -58,7 +58,7 @@ ms.locfileid: "62889786"
   
 -   「XML 檔案」記錄提供者，它可將記錄檔寫入 XML 檔案中。 此提供者的預設副檔名為 .xml。  
   
- 如果您將記錄提供者加入封裝或以程式設計的方式設定記錄，則可以使用 ProgID 或 ClassID 來識別記錄提供者，以取代使用 [設定 SSIS 記錄] 對話方塊中所顯示之 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 的名稱。  
+ 如果您將記錄提供者加入封裝或以程式設計的方式設定記錄，則可以使用 ProgID 或 ClassID 來識別記錄提供者，以取代使用 [設定 SSIS 記錄]  對話方塊中所顯示之 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 的名稱。  
   
  下表列出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含之記錄提供者的 ProgID 和 ClassID，以及記錄提供者寫入記錄檔的位置。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62889786"
   
  您還可以建立自訂記錄提供者。 如需詳細資訊，請參閱 [建立自訂記錄提供者](../extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)。  
   
- 封裝中的記錄提供者是此封裝之記錄提供者集合的成員。 使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 建立封裝並實作記錄時，您可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [封裝總管] 索引標籤上，看到 [記錄提供者] 資料夾中集合成員的清單。  
+ 封裝中的記錄提供者是此封裝之記錄提供者集合的成員。 使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 建立封裝並實作記錄時，您可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [封裝總管]  索引標籤上，看到 [記錄提供者]  資料夾中集合成員的清單。  
   
  您可以藉由提供記錄提供者的名稱和描述，並指定記錄提供者使用的連接管理員，來設定記錄提供者。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄提供者會使用 OLE DB 連接管理員。 「文字檔」、「 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]」和「XML 檔案」記錄提供者全都使用「檔案」連線管理員。 Windows 事件記錄檔提供者不使用連接管理員，因為它會直接寫入「Windows 事件記錄檔」中。 如需詳細資訊，請參閱 [OLE DB 連線管理員](../connection-manager/ole-db-connection-manager.md) 和 [檔案連線管理員](../connection-manager/file-connection-manager.md)。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62889786"
   
  若要防止記錄檔使用大量的磁碟空間，或避免可能會降低效能的過度記錄，可以選取要記錄的特定事件和資訊項目，以限制記錄。 例如，您可以設定記錄檔僅擷取每個錯誤的日期和電腦名稱。  
   
- 在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中，使用 [設定 SSIS 記錄] 對話方塊來定義記錄選項。  
+ 在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中，使用 [設定 SSIS 記錄]  對話方塊來定義記錄選項。  
   
 #### <a name="log-schema"></a>記錄結構描述  
  下表描述記錄結構描述中的元素。  
@@ -96,20 +96,20 @@ ms.locfileid: "62889786"
 |運算子|啟動封裝之使用者的識別。|  
 |SourceName|發生記錄事件之容器或工作的名稱。|  
 |SourceID|封裝的唯一識別碼；「For 迴圈」、「Foreach 迴圈」或「時序」容器；或者發生記錄事件的工作。|  
-|ExecutionID|封裝執行執行個體的 GUID。<br /><br /> 注意:執行單一封裝可能會建立記錄項目不同的 ExecutionID 元素值。 例如，當您在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中執行封裝時，驗證階段可能會建立記錄項目，其中包含了對應到 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 ExecutionID 元素。 但是，執行階段可能會建立記錄項目，其中包含了對應到 dtshost.exe 的 ExecutionID 元素。 在另一個範例中，當您執行包含「執行封裝」工作的封裝時，每一個工作都會執行子封裝。 這些子封裝可能會建立記錄項目，其中包含了與父封裝建立之記錄項目不同的 ExecutionID 元素。|  
+|ExecutionID|封裝執行執行個體的 GUID。<br /><br /> 注意:執行單一套件可能會建立記錄項目，其中包含 ExecutionID 項目的不同值。 例如，當您在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中執行封裝時，驗證階段可能會建立記錄項目，其中包含了對應到 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 ExecutionID 元素。 但是，執行階段可能會建立記錄項目，其中包含了對應到 dtshost.exe 的 ExecutionID 元素。 在另一個範例中，當您執行包含「執行封裝」工作的封裝時，每一個工作都會執行子封裝。 這些子封裝可能會建立記錄項目，其中包含了與父封裝建立之記錄項目不同的 ExecutionID 元素。|  
 |MessageText|與記錄項目相關聯的訊息。|  
 |DataBytes|記錄項目特定的位元組陣列。 此欄位的意義會因記錄項目的不同而不同。|  
   
- 下表描述記錄結構描述中，在 [設定 SSIS 記錄] 對話方塊的 [詳細資料] 索引標籤上沒有提供的三個額外元素。  
+ 下表描述記錄結構描述中，在 [設定 SSIS 記錄]  對話方塊的 [詳細資料]  索引標籤上沒有提供的三個額外元素。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |StartTime|容器或工作開始執行的時間。|  
 |EndTime|容器或工作停止執行的時間。|  
 |DataCode|選擇性的整數值，一般會包含 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 列舉的值，指出執行容器或工作的結果：<br /><br /> 0 - 成功<br /><br /> 1 - 失敗<br /><br /> 2 - 已完成<br /><br /> 3 - 已取消|  
   
 ##### <a name="log-entries"></a>記錄項目  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援預先定義事件上的記錄項目，並為許多 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件提供自訂記錄項目。 在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中的 [設定 SSIS 記錄] 對話方塊會列出這些事件和自訂記錄項目。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援預先定義事件上的記錄項目，並為許多 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件提供自訂記錄項目。 在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中的 [設定 SSIS 記錄]  對話方塊會列出這些事件和自訂記錄項目。  
   
  下表描述的預先定義事件可在發生執行階段事件時寫入記錄項目。 這些記錄項目會套用至可執行檔、封裝和封裝所包含的工作和容器。 記錄項目的名稱與引發並造成寫入記錄項目之執行階段事件的名稱相同。  
   
@@ -138,10 +138,10 @@ ms.locfileid: "62889786"
  為了消除這種模糊不清的狀況，您應該更新這個新封裝的名稱和 GUID。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，您可以在 [屬性] 視窗的 `ID` 屬性中重新產生 GUID，並更新 `Name` 屬性的值。 您也可以使用程式設計方式或 **dtutil** 命令提示字元來變更 GUID 和名稱。 如需詳細資訊，請參閱 [設定封裝屬性](../set-package-properties.md) 和 [dtutil 公用程式](../dtutil-utility.md)。  
   
 ### <a name="parent-logging-options"></a>父記錄選項  
- 通常，工作和「For 迴圈」、「Foreach 迴圈」和「時序」容器的記錄選項符合封裝或父容器的選項。 在該情況下，可以設定它們從其父容器繼承記錄選項。 例如，在包含「執行 SQL」工作的「For 迴圈」容器中，「執行 SQL」工作可以使用在「For 迴圈」容器上設定的記錄選項。 若要使用父記錄選項，可將容器的 LoggingMode 屬性設為 **UseParentSetting**。 可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [屬性] 視窗中，或透過 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 的 [設定 SSIS 記錄] 對話方塊設定此屬性。  
+ 通常，工作和「For 迴圈」、「Foreach 迴圈」和「時序」容器的記錄選項符合封裝或父容器的選項。 在該情況下，可以設定它們從其父容器繼承記錄選項。 例如，在包含「執行 SQL」工作的「For 迴圈」容器中，「執行 SQL」工作可以使用在「For 迴圈」容器上設定的記錄選項。 若要使用父記錄選項，可將容器的 LoggingMode 屬性設為 **UseParentSetting**。 可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [屬性]  視窗中，或透過 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 的 [設定 SSIS 記錄]  對話方塊設定此屬性。  
   
 ### <a name="logging-templates"></a>記錄範本  
- 在 [設定 SSIS 記錄] 對話方塊中，還可以將常用的記錄組態建立和儲存為範本，然後在多個封裝中使用這些範本。 這使得跨多個封裝套用一致的記錄策略，以及修改封裝的記錄設定變得很容易，只要更新後再套用範本即可。 範本以 XML 檔案儲存。  
+ 在 [設定 SSIS 記錄]  對話方塊中，還可以將常用的記錄組態建立和儲存為範本，然後在多個封裝中使用這些範本。 這使得跨多個封裝套用一致的記錄策略，以及修改封裝的記錄設定變得很容易，只要更新後再套用範本即可。 範本以 XML 檔案儲存。  
   
  **若要使用 [設定 SSIS 記錄] 對話方塊設定記錄**  
   
