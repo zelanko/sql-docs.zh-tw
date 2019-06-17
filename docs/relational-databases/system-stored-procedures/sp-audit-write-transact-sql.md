@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 450b1cdde9185edee5eac41f52d209e43a7ae22f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996252"
 ---
 # <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
@@ -49,7 +49,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
  由使用者傳遞的參數，指出事件是否成功。 這會顯示在稽核記錄的 succeeded 資料行中。 `@succeeded` 已**元**。  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
- 由使用者定義並且記錄在稽核記錄之新 user_defined_event_id 資料行中的文字。 `@user_defined_information` 已**nvarchar(4000)**。  
+ 由使用者定義並且記錄在稽核記錄之新 user_defined_event_id 資料行中的文字。 `@user_defined_information` 已**nvarchar(4000)** 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
