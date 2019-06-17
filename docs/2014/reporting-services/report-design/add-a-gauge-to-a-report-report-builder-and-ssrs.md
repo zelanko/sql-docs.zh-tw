@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 92b068b4bfa7f8b61b5be0904bc47cf080afc861
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106834"
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>將量測計加入至報表 (報表產生器及 SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66106834"
   
 5.  將一個欄位從資料集加入至資料欄位放置區。 您只能加入一個欄位。 如果您想要顯示多個欄位，您必須加入其他指標 (每一個欄位一個指標)。  
   
-     以滑鼠右鍵按一下量測計標尺，然後選取 [標尺屬性]。 針對標尺的 **[最小值]** 和 **[最大值]** 輸入值。 如需詳細資訊，請參閱[設定量測計的最小值或最大值 &#40;報表產生器和 SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)。  
+     以滑鼠右鍵按一下量測計標尺，然後選取 [標尺屬性]  。 針對標尺的 **[最小值]** 和 **[最大值]** 輸入值。 如需詳細資訊，請參閱[設定量測計的最小值或最大值 &#40;報表產生器和 SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [巢狀資料區 &#40;報表產生器及 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   

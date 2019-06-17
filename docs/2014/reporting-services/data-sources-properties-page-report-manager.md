@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e094c61fe26faca4e60303c340f2b3557c0f148e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109414"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>資料來源屬性頁面 (報表管理員)
@@ -31,11 +31,11 @@ ms.locfileid: "66109414"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該報表的 **[一般]** 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該報表的 **[一般]** 屬性頁面。  
   
 4.  選取 **[資料來源]** 索引標籤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **共用的資料來源**  
  指定報表使用的共用資料來源。 如需建立新的資料來源的詳細資訊，請參閱 <<c0> [ 建立、 刪除或修改共用資料來源&#40;報表管理員&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)。</c0>  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66109414"
   
  `data source=<a SQL Server instance>;initial catalog=MyData`  
   
- 連接字串可設定為運算式，以便於執行階段指定資料來源。 資料來源運算式是在報表設計師的報表中定義的。 「報表管理員」中無法定義、檢視及修改資料來源運算式。 不過，您可以按一下 **[覆寫預設值]** 以輸入靜態連接字串來取代資料來源運算式。 如果您想要切換回運算式，請按一下 **[還原為預設值]**。 報表伺服器會儲存原始的連接字串，您需要時即可還原。 若要使用資料來源運算式，您必須使用原本在報表中發行的資料來源連接資訊。 共用資料來源不支援在連接字串中使用運算式。  
+ 連接字串可設定為運算式，以便於執行階段指定資料來源。 資料來源運算式是在報表設計師的報表中定義的。 「報表管理員」中無法定義、檢視及修改資料來源運算式。 不過，您可以按一下 **[覆寫預設值]** 以輸入靜態連接字串來取代資料來源運算式。 如果您想要切換回運算式，請按一下 **[還原為預設值]** 。 報表伺服器會儲存原始的連接字串，您需要時即可還原。 若要使用資料來源運算式，您必須使用原本在報表中發行的資料來源連接資訊。 共用資料來源不支援在連接字串中使用運算式。  
   
  **使用連線**  
  指定決定如何取得認證的選項。  

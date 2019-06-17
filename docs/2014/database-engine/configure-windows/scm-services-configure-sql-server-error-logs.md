@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 60d38caf365d6db54ea0abe688a3fc2979fdab82
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62809681"
 ---
 # <a name="configure-sql-server-error-logs"></a>設定 SQL Server 錯誤記錄檔
@@ -24,7 +24,7 @@ ms.locfileid: "62809681"
   
 ## <a name="to-open-the-configure-sql-server-error-logs-dialog-box"></a>若要開啟 [設定 SQL Server 錯誤記錄檔] 對話方塊  
   
-1.  在 [物件總管] 中展開 SQL Server 執行個體，展開 [管理]，以滑鼠右鍵按一下 [SQL Server 記錄檔]，然後按一下 [設定]。  
+1.  在 [物件總管] 中展開 SQL Server 執行個體，展開 [管理]  ，以滑鼠右鍵按一下 [SQL Server 記錄檔]  ，然後按一下 [設定]  。  
   
 2.  在 **[設定 SQL Server 錯誤記錄檔]** 對話方塊中，從下列選項中進行選擇。  
   

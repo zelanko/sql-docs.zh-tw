@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1453daf6bf9e806a4b3ac79ae8c9a322e5bd0bac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2cb0e7789e5b75aeed1f8e7bcbe50e25925606da
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771521"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798578"
 ---
 # <a name="using-ssl-encryption"></a>使用 SSL 加密
 

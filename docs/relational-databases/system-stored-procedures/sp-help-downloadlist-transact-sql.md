@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796156"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
@@ -54,7 +54,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
   
-`[ @operation = ] 'operation'` 指定作業有效的作業。 *作業*已**varchar(64)**，預設值是 NULL，而且可以是下列值之一。  
+`[ @operation = ] 'operation'` 指定作業有效的作業。 *作業*已**varchar(64)** ，預設值是 NULL，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -68,11 +68,11 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**SYNC-TIME**|使目標伺服器將它的系統時鐘和多伺服器網域同步化的伺服器作業。 由於這項作業成本很高，因此，請盡量不要太常執行這項作業。|  
 |**UPDATE**|只更新作業**sysjobs**作業，而非從作業步驟或排程的資訊。 會自動呼叫**sp_update_job**。|  
   
-`[ @object_type = ] 'object_type'` 指定作業的物件型別。 *object_type*已**varchar(64)**，預設值是 NULL。 *object_type*可以是 JOB 或 SERVER。 如需有關有效*object_type*值，請參閱[sp_add_category &#40;-&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)。  
+`[ @object_type = ] 'object_type'` 指定作業的物件型別。 *object_type*已**varchar(64)** ，預設值是 NULL。 *object_type*可以是 JOB 或 SERVER。 如需有關有效*object_type*值，請參閱[sp_add_category &#40;-&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)。  
   
 `[ @object_name = ] 'object_name'` 物件的名稱。 *object_name*已**sysname**，預設值是 NULL。 如果*object_type*的工作，是*object_name*是作業名稱。 如果*object_type*是伺服器，請*object_name*是伺服器名稱。  
   
-`[ @target_server = ] 'target_server'` 目標伺服器的名稱。 *target_server*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。  
+`[ @target_server = ] 'target_server'` 目標伺服器的名稱。 *target_server*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** ，預設值是 NULL。  
   
 `[ @has_error = ] has_error` 是工作是否應該認可錯誤。 *has_error*已**tinyint**，預設值是 NULL，表示應該認可任何錯誤。 **1**指出，應該認可所有錯誤。  
   

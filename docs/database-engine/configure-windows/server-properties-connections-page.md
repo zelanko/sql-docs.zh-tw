@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fd6e2883714c538bff1e2ff2a93ace7b71fd5d02
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 394bacedb14f84a5cc11722200c0ee5a1e3380fc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604188"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771853"
 ---
 # <a name="server-properties---connections-page"></a>伺服器屬性 - 連接頁面
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "51604188"
  針對此窗格中的選項，檢視目前執行中的值。 這些值是唯讀的。  
   
 ## <a name="see-also"></a>另請參閱  
- [選項 &#40;查詢執行/SQL Server/進階頁面&#41;](https://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
+ [選項 &#40;查詢執行：SQL Server:進階頁面&#41;](https://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

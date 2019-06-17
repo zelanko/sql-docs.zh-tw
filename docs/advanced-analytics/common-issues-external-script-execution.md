@@ -2,17 +2,17 @@
 title: Launchpad 服務與外部指令碼執行-SQL Server Machine Learning 服務的一般問題
 ms.prod: sql
 ms.technology: ''
-ms.date: 05/31/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: bddc2d2e4021ee0df196078b47e3ecbba96833b6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: a6943a850a2955a36723d14c0226bd5c503f23ec
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509695"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140205"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Launchpad 服務與 SQL Server 中的外部指令碼執行的一般問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ Launchpad 服務 (Launchpad.exe) 會使用低權限的服務帳戶執行。 不�
 
 不過，在組織中實施更嚴格的安全性原則，此群組所需的權限可能已手動移除，或它們可能會自動被原則撤銷。 如果已移除的權限，Launchpad 不再可以連線到 SQL Server 和 SQL Server 無法呼叫外部執行階段。
 
-若要修正此問題，請確定群組 **SQLRUserGroup** 擁有系統權限「允許本機登入」。
+若要修正此問題，請確定群組 **SQLRUserGroup** 擁有系統權限「允許本機登入」  。
 
 如需詳細資訊，請參閱 <<c0> [ 設定 Windows 服務帳戶與權限](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。
 
@@ -131,7 +131,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
     b. 請確定 launchpad 所使用的 Windows 群組可以連接到 SQL Server 執行個體。
 
-    c.  如果您變更任何的服務屬性，請重新啟動 Launchpad 服務。
+    c. 如果您變更任何的服務屬性，請重新啟動 Launchpad 服務。
 
 ## <a name="fatal-error-creation-of-tmpfile-failed"></a>「 嚴重錯誤 tmpFile 建立失敗 」
 
@@ -185,7 +185,7 @@ EXEC sp_execute_external_script @language = N'R',
 若要解決此問題，您必須重新安裝 SQL Server 執行個體文件庫封裝。
 
 >[!NOTE]
->如果您已升級的 SQL Server 2016，以便使用最新版的 Microsoft R 執行個體，預設程式庫位置將會不同。 如需詳細資訊，請參閱 <<c0> [ 使用 SqlBindR 升級 R Services 的執行個體](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+>如果您已升級的 SQL Server 2016，以便使用最新版的 Microsoft R 執行個體，預設程式庫位置將會不同。 如需詳細資訊，請參閱 <<c0> [ 使用 SqlBindR 升級 R Services 的執行個體](install/upgrade-r-and-python.md)。
 
 ## <a name="launchpad-shuts-down-due-to-mismatched-dlls"></a>啟動控制板因不相符的 Dll 而關閉
 
@@ -212,7 +212,7 @@ EXEC sp_execute_external_script @language = N'R',
 > * SQL Server 2016 SP1 和 CU1:[適用於 SQL Server 的累計更新 1](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1)。
 > * SQL Server 2016 RTM、 累計更新 3 和這[hotfix](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3)，這是隨選點播。
 
-使用 R 的相容性，SQL Server 2016 R Services （資料庫內） 所需功能以支援使用短檔名建立的安裝所在的磁碟機*8.3 標記法*。 8.3 檔案名稱也稱為*短檔名*，並且用於與 Microsoft Windows 或長檔名的替代方案的舊版相容。
+使用 R 的相容性，SQL Server 2016 R Services （資料庫內） 所需功能以支援使用短檔名建立的安裝所在的磁碟機*8.3 標記法*。 8\.3 檔案名稱也稱為*短檔名*，並且用於與 Microsoft Windows 或長檔名的替代方案的舊版相容。
 
 如果您要在其中安裝 R 的磁碟區不支援短檔名，從 SQL Server 啟動 R 的處理程序可能無法找出正確的可執行檔，並將不會啟動 [啟動列]。
 

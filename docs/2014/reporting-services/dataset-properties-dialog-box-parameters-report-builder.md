@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295a40bc7964e50e5fc0c4a9ea0294b593fdde18
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109385"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>資料集屬性對話方塊、參數 (報表產生器)
@@ -28,7 +28,7 @@ ms.locfileid: "66109385"
   
  如需詳細資訊，請參閱[內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[加入]**  
  將新的參數加入到清單中。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66109385"
  將清單中所選取的參數向下移動。  
   
  **參數名稱**  
- 在 [資料集屬性] 對話方塊的 [查詢] 索引標籤上，輸入您要加入到資料集之查詢參數的名稱。  
+ 在 [資料集屬性]  對話方塊的 [查詢]  索引標籤上，輸入您要加入到資料集之查詢參數的名稱。  
   
  **參數值**  
  僅適用於內嵌資料集。  

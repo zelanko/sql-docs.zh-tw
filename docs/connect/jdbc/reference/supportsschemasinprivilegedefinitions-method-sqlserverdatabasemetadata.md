@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 2957af1d-62d6-4375-b214-bbba9aafcc2d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e2c669d27df0762ee66e37c7fee7be03c0c0d1d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f857e90b718a93297314ee6770a54bf02106dfca
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694959"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797366"
 ---
 # <a name="supportsschemasinprivilegedefinitions-method-sqlserverdatabasemetadata"></a>supportsSchemasInPrivilegeDefinitions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

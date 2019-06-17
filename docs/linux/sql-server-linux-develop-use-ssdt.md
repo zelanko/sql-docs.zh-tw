@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.openlocfilehash: fafec68510e2c9214ed77294314b2ff06e456ff2
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66713282"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 來建立 Linux 上的 SQL Server 資料庫
@@ -110,8 +110,8 @@ SSDT 17.0 RC 或更新版本的版本支援在 Linux 上的 SQL Server。
 
 如需有關如何開發使用 SQL Data Tools 資料庫的詳細資訊，請參閱[SSDT MSDN 文件]
 
-[下載並安裝 Visual Studio]:https://www.visualstudio.com/downloads/
+[下載並安裝 Visual Studio]: https://www.visualstudio.com/downloads/
 [Download and Install SSDT]:https://aka.ms/ssdt-download
 [SSDT MSDN 文件]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[教學課程：撰寫 Transact-SQL 陳述式]:https://msdn.microsoft.com/library/ms365303.aspx
-[Transact-SQL 參考 (Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx
+[教學課程：撰寫 Transact-SQL 陳述式]: https://msdn.microsoft.com/library/ms365303.aspx
+[Transact-SQL 參考 (Database Engine)]: https://msdn.microsoft.com/library/bb510741.aspx

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23c920f436ae48c8eb4abd8ccd69097a06557907
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109119"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>一般屬性頁面，資源 (報表管理員)
@@ -31,7 +31,7 @@ ms.locfileid: "66109119"
   
 2.  將滑鼠停留在該資源上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該資源的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該資源的 [一般] 屬性頁面。  
   
 ## <a name="options"></a>選項  
  **名稱**  

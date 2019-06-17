@@ -10,10 +10,10 @@ ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63199619"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Analytics Platform System 的防毒軟體

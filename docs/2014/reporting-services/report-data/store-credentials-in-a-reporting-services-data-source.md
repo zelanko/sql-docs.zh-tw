@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 990e5b3c13ced56e78170cb9530f35277174b4cb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107010"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source
@@ -27,7 +27,7 @@ ms.locfileid: "66107010"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式|  
   
  **本主題內容：**  
   
@@ -52,27 +52,27 @@ ms.locfileid: "66107010"
   
 1.  在原生模式報表管理員中，瀏覽至包含報表的資料夾。 按一下項目操作功能表 ![報表管理員中適用於 SSRS 項目的操作功能表](../media/ssrs-report-manager-item-context-menu.png "報表管理員中適用於 SSRS 項目的操作功能表")。  
   
-2.  按一下 [管理]  ，然後按一下 [資料來源] 。  
+2.  按一下 [管理]  ，然後按一下 [資料來源]  。  
   
-3.  選取 **[自訂資料來源]**。  
+3.  選取 **[自訂資料來源]** 。  
   
 4.  在 [資料來源類型]  清單中，選取用來處理資料來源中之資料的資料處理延伸模組。  
   
-5.  針對 **[連接字串]**，請指定報表伺服器用於連接到資料來源的連接字串。 下列範例說明用來連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 資料庫的連接字串：  
+5.  針對 **[連接字串]** ，請指定報表伺服器用於連接到資料來源的連接字串。 下列範例說明用來連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 資料庫的連接字串：  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
     ```  
   
-6.  針對 [連接方式] ，選取 [安全地儲存在報表伺服器中的認證] 。  
+6.  針對 [連接方式]  ，選取 [安全地儲存在報表伺服器中的認證]  。  
   
 7.  輸入使用者名稱和密碼。  
   
-    -   如果帳戶是 Windows 網域使用者帳戶，請使用下列格式來指定它：\<網域>\\<帳戶\>，然後選取 [連線到資料來源時作為 Windows 認證]。  
+    -   如果帳戶是 Windows 網域使用者帳戶，請使用下列格式來指定它：\<網域>\\<帳戶\>，然後選取 [連線到資料來源時作為 Windows 認證]  。  
   
-    -   如果使用者名稱和密碼是資料庫認證，請勿選取 **[連接到資料來源時做為 Windows 認證]**。 如果資料庫伺服器支援模擬或委派，您就可以選取 **[連接到資料來源後，模擬已驗證的使用者]**。  
+    -   如果使用者名稱和密碼是資料庫認證，請勿選取 **[連接到資料來源時做為 Windows 認證]** 。 如果資料庫伺服器支援模擬或委派，您就可以選取 **[連接到資料來源後，模擬已驗證的使用者]** 。  
   
-8.  按一下 **[套用]**。  
+8.  按一下 **[套用]** 。  
   
      ![搭配回到頁首連結使用的箭頭圖示](../../2014-toc/media/uparrow16x16.gif "搭配回到頁首連結使用的箭頭圖示") [預存認證的安全性原則需求](#bkmk_top)  
   
@@ -80,25 +80,25 @@ ms.locfileid: "66107010"
   
 1.  瀏覽至包含報表的文件庫，然後按一下開啟功能表 ![適用於 SSRS 項目的文件庫操作功能表](../media/ssrs-sharepoint-item-context-menu.png "適用於 SSRS 項目的文件庫操作功能表")。  
   
-2.  按一下第二個開啟功能表 ![適用於 SSRS 項目的文件庫操作功能表](../media/ssrs-sharepoint-item-context-menu.png "適用於 SSRS 項目的文件庫操作功能表")，然後按一下 [管理資料來源]。  
+2.  按一下第二個開啟功能表 ![適用於 SSRS 項目的文件庫操作功能表](../media/ssrs-sharepoint-item-context-menu.png "適用於 SSRS 項目的文件庫操作功能表")，然後按一下 [管理資料來源]  。  
   
 3.  按一下您要設定預存認證的 [自訂]  資料來源的名稱。  
   
 4.  在 [資料來源類型]  清單中，選取用來處理資料來源中之資料的資料處理延伸模組。  
   
-5.  針對 **[連接字串]**，請指定報表伺服器用於連接到資料來源的連接字串。 下列範例說明用來連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 資料庫的連接字串：  
+5.  針對 **[連接字串]** ，請指定報表伺服器用於連接到資料來源的連接字串。 下列範例說明用來連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 資料庫的連接字串：  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
     ```  
   
-6.  針對 [認證] 選取 [預存認證] 。  
+6.  針對 [認證]  選取 [預存認證]  。  
   
-7.  輸入 [使用者名稱]  和 [密碼] 。  
+7.  輸入 [使用者名稱]  和 [密碼]  。  
   
-    -   如果帳戶是 Windows 網域使用者帳戶，請使用下列格式來指定它：\<網域>\\<帳戶\>，然後選取 [連線到資料來源時作為 Windows 認證]。  
+    -   如果帳戶是 Windows 網域使用者帳戶，請使用下列格式來指定它：\<網域>\\<帳戶\>，然後選取 [連線到資料來源時作為 Windows 認證]  。  
   
-    -   如果使用者名稱和密碼是資料庫認證，請勿選取 [當做 Windows 認證使用] 。 如果資料庫伺服器支援模擬或委派，您可以選取 **[設定執行內容到這個帳戶]**。  
+    -   如果使用者名稱和密碼是資料庫認證，請勿選取 [當做 Windows 認證使用]  。 如果資料庫伺服器支援模擬或委派，您可以選取 **[設定執行內容到這個帳戶]** 。  
   
 8.  按一下 **ok**。  
   
@@ -108,11 +108,11 @@ ms.locfileid: "66107010"
   
 1.  在原生模式報表管理員中，瀏覽至共用資料來源項目。 ![共用資料來源圖示](../media/hlp-16datasource.png "共用資料來源圖示")  
   
-2.  按一下操作功能表 ![報表管理員中適用於 SSRS 項目的操作功能表](../media/ssrs-report-manager-item-context-menu.png "報表管理員中適用於 SSRS 項目的操作功能表")，然後按一下 [管理]。  
+2.  按一下操作功能表 ![報表管理員中適用於 SSRS 項目的操作功能表](../media/ssrs-report-manager-item-context-menu.png "報表管理員中適用於 SSRS 項目的操作功能表")，然後按一下 [管理]  。  
   
 3.  在 [資料來源類型]  清單中，指定用來處理資料來源中之資料的資料處理延伸模組。  
   
-4.  針對 **[連接字串]**，請指定報表伺服器用於連接到資料來源的連接字串。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您不要在連接字串中指定認證。  
+4.  針對 **[連接字串]** ，請指定報表伺服器用於連接到資料來源的連接字串。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您不要在連接字串中指定認證。  
   
      下列範例說明用來連接到本機 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 資料庫的連接字串：  
   
@@ -122,11 +122,11 @@ ms.locfileid: "66107010"
   
 5.  輸入使用者名稱和密碼。  
   
-    -   如果帳戶是 Windows 網域使用者帳戶，請使用下列格式來指定它：\<網域>\\<帳戶\>，然後選取 [連線到資料來源時作為 Windows 認證]。  
+    -   如果帳戶是 Windows 網域使用者帳戶，請使用下列格式來指定它：\<網域>\\<帳戶\>，然後選取 [連線到資料來源時作為 Windows 認證]  。  
   
-    -   如果使用者名稱和密碼是資料庫認證，請勿選取 **[連接到資料來源時做為 Windows 認證]**。 如果資料庫伺服器支援模擬或委派，您就可以選取 **[連接到資料來源後，模擬已驗證的使用者]**。  
+    -   如果使用者名稱和密碼是資料庫認證，請勿選取 **[連接到資料來源時做為 Windows 認證]** 。 如果資料庫伺服器支援模擬或委派，您就可以選取 **[連接到資料來源後，模擬已驗證的使用者]** 。  
   
-6.  按一下 **[套用]**。  
+6.  按一下 **[套用]** 。  
   
      ![搭配回到頁首連結使用的箭頭圖示](../../2014-toc/media/uparrow16x16.gif "搭配回到頁首連結使用的箭頭圖示") [預存認證的安全性原則需求](#bkmk_top)  
   
@@ -136,11 +136,11 @@ ms.locfileid: "66107010"
   
 2.  按一下操作功能表 ![適用於 SSRS 項目的文件庫操作功能表](../media/ssrs-sharepoint-item-context-menu.png "適用於 SSRS 項目的文件庫操作功能表")，然後按一下第二個操作功能表 ![適用於 SSRS 項目的文件庫操作功能表](../media/ssrs-sharepoint-item-context-menu.png "適用於 SSRS 項目的文件庫操作功能表")。  
   
-3.  按一下 [編輯資料來源定義] 。  
+3.  按一下 [編輯資料來源定義]  。  
   
 4.  在 [資料來源類型]  清單中，指定用來處理資料來源中之資料的資料處理延伸模組。  
   
-5.  針對 **[連接字串]**，請指定報表伺服器用於連接到資料來源的連接字串。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您不要在連接字串中指定認證。  
+5.  針對 **[連接字串]** ，請指定報表伺服器用於連接到資料來源的連接字串。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您不要在連接字串中指定認證。  
   
      下列範例說明用來連接到本機 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 資料庫的連接字串：  
   
@@ -150,11 +150,11 @@ ms.locfileid: "66107010"
   
 6.  輸入使用者名稱和密碼。  
   
-    -   如果帳戶是 Windows 網域使用者帳戶，請使用下列格式來指定它：\<網域>\\<帳戶\>，然後選取 [當作 Windows 認證使用]。  
+    -   如果帳戶是 Windows 網域使用者帳戶，請使用下列格式來指定它：\<網域>\\<帳戶\>，然後選取 [當作 Windows 認證使用]  。  
   
-    -   如果使用者名稱和密碼是資料庫認證，請勿選取 [當做 Windows 認證使用] 。 如果資料庫伺服器支援模擬或委派，您可以選取 [設定執行內容到這個帳戶] 。  
+    -   如果使用者名稱和密碼是資料庫認證，請勿選取 [當做 Windows 認證使用]  。 如果資料庫伺服器支援模擬或委派，您可以選取 [設定執行內容到這個帳戶]  。  
   
-7.  按一下 **[確定]**。  
+7.  按一下 **[確定]** 。  
   
      ![搭配回到頁首連結使用的箭頭圖示](../../2014-toc/media/uparrow16x16.gif "搭配回到頁首連結使用的箭頭圖示") [預存認證的安全性原則需求](#bkmk_top)  
   

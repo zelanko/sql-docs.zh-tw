@@ -1,17 +1,17 @@
 ---
 title: srv_pfield (擴充預存程序 API) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: stored-procedures
 ms.topic: reference
-api_name:
+apiname:
 - srv_pfield
-api_location:
+apilocation:
 - opends60.dll
-topic_type:
-- apiref
+apitype: DLLExport
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,13 +21,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 822e8608939d7fb3dbef6872ec92da37e7621865
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62936773"
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (擴充預存程序 API)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
@@ -48,7 +49,6 @@ field
 int *  
 len  
 );  
-  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -87,6 +87,6 @@ len
  以 Null 結束的字串指標，其中包含指定之欄位在 SRV_PROC 結構中的目前值。 如果欄位是空的，則會傳回空字串的有效指標，而且 *len* 包含 0。 如果欄位不明，會傳回 NULL，而且 *len* 包含值 -1。  
   
 > [!IMPORTANT]  
->  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱[資訊安全開發人員中心](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
+>  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱[資訊安全開發人員中心](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
   
   

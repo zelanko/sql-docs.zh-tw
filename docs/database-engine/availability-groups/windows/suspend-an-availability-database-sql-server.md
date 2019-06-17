@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 409432676e85dd6d6626b3be2ec5aa375c802424
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 86c7677754faca57723e93cccc3e55cf76da7a01
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700936"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803496"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>暫止可用性資料庫 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47700936"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目暫停資料庫：**  
   
@@ -69,7 +69,7 @@ ms.locfileid: "47700936"
  您必須連接到裝載要暫停之資料庫的伺服器執行個體。 若要暫停主要資料庫和對應的次要資料庫，請連接到裝載主要複本的伺服器執行個體。 若要暫停次要資料庫，同時保留主要資料庫可用狀態，請連接到次要複本。  
   
 ###  <a name="Recommendations"></a> 建議  
- 出現瓶頸時，短暫暫停一個或多個次要資料庫，可能有助於暫時改善主要複本的效能。 只要次要資料庫保持暫停狀態，對應主要資料庫的交易記錄便無法截斷。 這會導致記錄檔記錄在主要資料庫上累積。 因此，我們建議您盡快恢復 (或移除) 暫停的次要資料庫。 如需詳細資訊，請參閱本主題稍後的＜ [待處理：避免填滿交易記錄](#FollowUp)＞。  
+ 出現瓶頸時，短暫暫停一個或多個次要資料庫，可能有助於暫時改善主要複本的效能。 只要次要資料庫保持暫停狀態，對應主要資料庫的交易記錄便無法截斷。 這會導致記錄檔記錄在主要資料庫上累積。 因此，我們建議您盡快恢復 (或移除) 暫停的次要資料庫。 如需詳細資訊，請參閱本主題稍後的[後續操作：避免填滿交易記錄](#FollowUp)。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -126,7 +126,7 @@ ms.locfileid: "47700936"
   
 -   [SQL Server PowerShell 提供者](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
+##  <a name="FollowUp"></a> 後續操作：避免填滿交易記錄  
  一般而言，在資料庫上執行自動檢查點時，交易記錄會在下一個記錄備份之後，截斷至該檢查點。 但在次要資料庫暫停時，所有目前的記錄檔記錄仍在主要資料庫作用中。 如果交易記錄已填滿 (因為已達到最大值，或者伺服器執行個體用盡空間)，資料庫就不能再執行其他更新。  
   
  若要避免這個問題，您應該執行下列其中一項工作：  

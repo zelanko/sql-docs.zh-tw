@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 52e0b3f317044e25b2004512083fdcaff7a77ecf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62467987"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148986"
 ---
 # <a name="create-a-tabular-model-project"></a>建立表格式模型專案
 
@@ -41,13 +41,13 @@ ms.locfileid: "62467987"
   
     根據預設，**方案名稱**等同於專案名稱; 不過，您可以輸入不同的解決方案名稱。  
   
-4.  按一下 [確定] 。  
+4.  按一下 [確定]  。  
   
 5.  在 **表格式模型設計師**對話方塊中，選取**整合式工作區**。  
   
     工作區會裝載與專案同名的表格式模型資料庫，在模型製作期間。 整合式工作區意味著 Visual Studio 會使用內建的執行個體，不需要安裝個別的 Analysis Services 伺服器執行個體，只為了撰寫模型。
       
-6.  在 **相容性層級**，選取**SQL Server 2017 / Azure Analysis Services (1400)**。   
+6.  在 **相容性層級**，選取**SQL Server 2017 / Azure Analysis Services (1400)** 。   
  
     ![as-lesson1-tmd](../tutorial-tabular-1400/media/as-lesson1-tmd.png)
       

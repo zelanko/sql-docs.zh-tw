@@ -3,17 +3,17 @@ title: 設定適用於 Python 開發-SQL Server Machine Learning 資料科學用
 description: 設定遠端連線到 SQL Server Machine Learning 服務與 Python 的 Python 的本機環境 （Jupyter Notebook 或 PyCharm）。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/09/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c0ca592d98f9bb69586c537006fd14d4230b661b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 448322fc79f4a85256b1d0b5b682fcc5147263c5
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642817"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140639"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>設定適用於 SQL Server 機器學習服務上的 Python 開發的資料科學用戶端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +52,7 @@ SSMS 屬於不同下載，用於建立和執行預存程序，在 SQL Server，�
 
   + [https://aka.ms/mls-py](https://aka.ms/mls-py) 會安裝 Microsoft Python 套件的版本 9.2.1。 這個版本會對應至預設 SQL Server 2017 執行個體。 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) 會安裝 9.3 版的 Microsoft Python 套件。 此版本是較好的選擇，如果您的遠端 SQL Server 2017 執行個體[繫結至 Machine Learning Server 9.3](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) 會安裝 9.3 版的 Microsoft Python 套件。 此版本是較好的選擇，如果您的遠端 SQL Server 2017 執行個體[繫結至 Machine Learning Server 9.3](../install/upgrade-r-and-python.md)。
 
 2. 開啟提升權限的系統管理員權限的 PowerShell 視窗 (以滑鼠右鍵按一下**系統管理員身分執行**)。
 
@@ -107,7 +107,7 @@ Anaconda 包含 Jupyter Notebook。 下一個步驟中，建立 notebook，並�
 
 3. 輸入`import revoscalepy`並執行的 Microsoft 特定程式庫載入其中一個命令。
 
-4. 輸入並執行`print(revoscalepy.__version__)`来傳回的版本資訊。 您應該會看到 9.2.1 或 9.3.0。 您可以使用任一版本與[伺服器上的 revoscalepy](../r/determine-which-packages-are-installed-on-sql-server.md#get-package-vers)。 
+4. 輸入並執行`print(revoscalepy.__version__)`来傳回的版本資訊。 您應該會看到 9.2.1 或 9.3.0。 您可以使用任一版本與[伺服器上的 revoscalepy](../package-management/installed-package-information.md)。 
 
 4. 輸入一系列更複雜的陳述式。 這個範例會產生摘要統計資料使用[rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary)透過本機的資料集。 其他函式會取得範例資料的位置，並建立本機的.xdf 檔案資料來源物件。
 

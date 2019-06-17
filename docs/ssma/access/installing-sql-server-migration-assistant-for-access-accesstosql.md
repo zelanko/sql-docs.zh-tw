@@ -24,10 +24,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 128c83e0fd63b2724311aec046bdb9683c569a03
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740937"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>安裝 SQL Server Migration Assistant for Access (AccessToSQL)
@@ -70,7 +70,7 @@ SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server Mig
   
 4.  在 [選擇安裝類型] 頁面上，按一下**典型**。  
   
-5.  按一下 **[安裝]**。  
+5.  按一下 **[安裝]** 。  
   
 預設安裝位置是 C:\Program Files\Microsoft SQL Server Migration Assistant for Access。  
   

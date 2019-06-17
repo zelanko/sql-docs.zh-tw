@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f45169a2fdc8fdc4d56cb27a8bf6348a3c3c1a29
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108224"
 ---
 # <a name="model-item-security-page-report-manager"></a>模型項目安全性頁面 (報表管理員)
@@ -56,11 +56,11 @@ ms.locfileid: "66108224"
   
 2.  將滑鼠停留在該模型上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該模型的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該模型的 [一般] 屬性頁面。  
   
 4.  選取 **[模型項目安全性]** 索引標籤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **保護此模型的獨立的個別模型項目**  
  按一下此核取方塊，即可啟用模型項目安全性。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66108224"
  按一下此選項，即可繼承父項目的安全性設定。  
   
  **指派讀取權限給下列使用者和群組 （以分號分隔）**  
- 按一下此選項，即可指定您正在定義存取權的使用者或群組帳戶。 如果您是使用預設安全性，則使用者和群組帳戶是 Windows 網域帳戶。 在這種格式指定帳戶： *\<網域 >\\< 帳戶\>*。  
+ 按一下此選項，即可指定您正在定義存取權的使用者或群組帳戶。 如果您是使用預設安全性，則使用者和群組帳戶是 Windows 網域帳戶。 在這種格式指定帳戶： *\<網域 >\\< 帳戶\>* 。  
   
 ## <a name="see-also"></a>另請參閱  
  [Management Studio F1 說明中的報表伺服器](tools/report-server-in-management-studio-f1-help.md)  

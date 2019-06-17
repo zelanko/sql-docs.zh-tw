@@ -1,6 +1,6 @@
 ---
 title: 報表檢視器最新分支版本的支援
-uthor: markingmyname
+author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.reviewer: jonhp
@@ -10,12 +10,12 @@ ms.technology: application-integration
 ms.topic: reference
 ms.custom: ''
 ms.date: 01/09/2019
-ms.openlocfilehash: f1e4bd4868580ca2497a1ba594de52bb42179b13
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: 39f83631755ce9f5b870560bd5191ab8d391fd80
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503918"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822487"
 ---
 # <a name="support-for-report-viewer-current-branch-versions"></a>報表檢視器最新分支版本的支援
 

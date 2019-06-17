@@ -1,7 +1,7 @@
 ---
-title: FROM (Transact-SQL) | Microsoft Docs
+title: FROM：JOIN、APPLY、PIVOT (T-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2018
+ms.date: 06/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -35,20 +35,33 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85e55be31f3f32316e8d9f841a34a7fcff3a3e97
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 124e42175f82928fd601a1d8af2833e40a1ff458
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334785"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462687"
 ---
-# <a name="from-transact-sql"></a>FROM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 子句與 JOIN、APPLY、PIVOT (Transact-SQL)
 
-  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中指定 DELETE、SELECT 和 UPDATE 陳述式中使用的資料表、檢視表、衍生資料表及聯結資料表。 在 SELECT 陳述式中，除非選取清單只包含常數、變數及算術運算式 (無資料行名稱)，否則都需要 FROM 子句。  
-  
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
+在 Transact-SQL 中，FROM 子句可用於下列陳述式：
+
+- [DELETE](../statements/delete-transact-sql.md)
+- [UPDATE](update-transact-sql.md)
+- [SELECT](select-transact-sql.md)
+
+SELECT 陳述式通常必須使用 FROM 子句。 例外狀況如下：未列出任何資料表資料行，且唯一列出的項目是常值、變數或算術運算式時。
+
+本文也會說明下列可用於 FROM 子句的關鍵字：
+
+- JOIN
+- APPLY
+- PIVOT
+
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
 ## <a name="syntax"></a>語法  
   
 ```  
@@ -441,7 +454,7 @@ APPLY 運算子利用下列方式來產生 FROM 子句的資料表來源：
   
  如需有關 PIVOT 和 UNPIVOT 的詳細資訊 (包括範例)，請參閱[使用 PIVOT 和 UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 DELETE、SELECT 或 UPDATE 陳述式的權限。  
   
 ## <a name="examples"></a>範例  
@@ -880,11 +893,9 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
   
 ## <a name="see-also"></a>另請參閱  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

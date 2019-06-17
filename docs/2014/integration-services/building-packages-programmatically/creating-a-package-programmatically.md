@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f7ebe0c0c5d23210a5111e8b4daaa69f8c73bb0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62836385"
 ---
 # <a name="creating-a-package-programmatically"></a>以程式設計方式建立封裝
@@ -63,7 +63,7 @@ Module Module1
 End Module  
 ```  
   
- 若要編譯和執行範例，請在 Visual Studio 中按 F5。 若要使用 C# 編譯器 **csc.exe** 建置程式碼，請在要編譯的命令提示字元之下，使用下列命令與檔案參考，以 .cs 或 .vb 檔案的名稱取代 \<filename>，並提供您所選擇的*\<outputfilename>*。  
+ 若要編譯和執行範例，請在 Visual Studio 中按 F5。 若要使用 C# 編譯器 **csc.exe** 建置程式碼，請在要編譯的命令提示字元之下，使用下列命令與檔案參考，以 .cs 或 .vb 檔案的名稱取代 \<filename>  ，並提供您所選擇的 *\<outputfilename>* 。  
   
  **csc /target:library /out: \<outputfilename>.dll \<filename>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   

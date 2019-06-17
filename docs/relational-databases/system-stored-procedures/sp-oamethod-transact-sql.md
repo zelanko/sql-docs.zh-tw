@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 25eccb27b75028fdebafaa7a855137946465676b
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65450105"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
@@ -69,7 +69,7 @@ sp_OAMethod objecttoken , methodname
   
  若要取得輸出參數，傳回值*參數*必須是適當資料類型的本機變數並**輸出**必須指定。 如果指定常數參數，或如果**輸出**未指定，所有傳回的輸出參數的值會被忽略。  
   
- 如果指定， *parametername*必須是名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]具名參數。 請注意， **@**_parametername_is 不[!INCLUDE[tsql](../../includes/tsql-md.md)]本機變數。 At 符號 (**@**) 已移除，並*parametername*傳遞給 OLE 物件做為參數名稱。 您必須在指定好所有位置性參數之後，指定所有具名參數。  
+ 如果指定， *parametername*必須是名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]具名參數。 請注意， **@** _parametername_is 不[!INCLUDE[tsql](../../includes/tsql-md.md)]本機變數。 At 符號 ( **@** ) 已移除，並*parametername*傳遞給 OLE 物件做為參數名稱。 您必須在指定好所有位置性參數之後，指定所有具名參數。  
   
  *n*  
  這是一個預留位置，表示可以指定多個參數。  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f2660582b03a121a81976d6bbc12afc1213877c3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107090"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>在資料區域中設定沒有資料的訊息 (報表產生器及 SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66107090"
   
 2.  在 [屬性] 窗格中，輸入您想要顯示中的訊息文字`NoRowsMessage`屬性欄位。  
   
-     另外，您也可以從下拉式清單按一下 [運算式]，開啟 [運算式] 對話方塊，然後建立運算式。  
+     另外，您也可以從下拉式清單按一下 [運算式]  ，開啟 [運算式]  對話方塊，然後建立運算式。  
   
 ### <a name="to-set-the-nodatamessage-property-for-a-chart"></a>為圖表設定 NoDataMessage 屬性  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66107090"
   
 3.  在  **Caption**，輸入您想要顯示為訊息中的文字`NoDataMessage`屬性欄位。  
   
-     另外，您也可以從下拉式清單按一下 [運算式]，開啟 [運算式] 對話方塊，然後建立運算式。  
+     另外，您也可以從下拉式清單按一下 [運算式]  ，開啟 [運算式]  對話方塊，然後建立運算式。  
   
 ### <a name="to-set-the-norowsmessage-for-a-subreport"></a>為子報表設定 NoRowsMessage  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66107090"
   
 2.  在 [屬性] 窗格中，輸入您想要顯示中的訊息文字`NoRowsMessage`屬性欄位。  
   
-     另外，您也可以從下拉式清單按一下 [運算式]，開啟 [運算式] 對話方塊，然後建立運算式。  
+     另外，您也可以從下拉式清單按一下 [運算式]  ，開啟 [運算式]  對話方塊，然後建立運算式。  
   
 ### <a name="to-set-the-nodatatext-property-for-a-color-scale-for-a-map"></a>若要為地圖的色階設定 NoDataText 屬性  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66107090"
   
 2.  在 [屬性] 窗格中，在`NoDataText`，輸入您想要顯示為不含資料值的色彩標籤的文字。  
   
-     另外，您也可以從下拉式清單按一下 [運算式]，開啟 [運算式] 對話方塊，然後建立運算式。  
+     另外，您也可以從下拉式清單按一下 [運算式]  ，開啟 [運算式]  對話方塊，然後建立運算式。  
   
 ## <a name="see-also"></a>另請參閱  
  [子報表 &#40;報表產生器及 SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)   

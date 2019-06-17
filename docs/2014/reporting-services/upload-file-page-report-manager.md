@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1100baa3cd72a04d208b2076d91ca4efed7d38e6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098871"
 ---
 # <a name="upload-file-page-report-manager"></a>上傳檔案頁面 (報表管理員)
@@ -40,9 +40,9 @@ ms.locfileid: "66098871"
   
 1.  開啟報表管理員中，然後導覽至您想要在其中上傳檔案的資料夾。  
   
-2.  在工具列中，按一下 **[上傳檔案]**。  
+2.  在工具列中，按一下 **[上傳檔案]** 。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **要上傳的檔案**  
  顯示您要從檔案系統複製的完整檔案路徑。  
   

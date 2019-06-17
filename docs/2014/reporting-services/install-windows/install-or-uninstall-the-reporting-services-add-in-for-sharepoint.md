@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0da7d391c5dc564129f1504e2100a6c47dcb000b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108823"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>安裝或解除安裝 SharePoint 的 Reporting Services 增益集 (SharePoint 2010 和 SharePoint 2013)
@@ -89,7 +89,7 @@ ms.locfileid: "66108823"
 ##  <a name="bkmk_3ways_to_install"></a> 安裝方法概觀  
  您可以使用下列兩種方法的其中一種，安裝適用於 SharePoint 產品的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集：  
   
--   **安裝精靈：** ![注意](../../../2014/reporting-services/media/rs-fyinote.png "注意")的新[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，增益集可以安裝由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝精靈。 在精靈的 [功能選擇] 頁面上，選擇 [適用於 SharePoint 產品的 Reporting Services 增益集]。  
+-   **安裝精靈：** ![注意](../../../2014/reporting-services/media/rs-fyinote.png "注意")的新[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，增益集可以安裝由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝精靈。 在精靈的 [功能選擇]  頁面上，選擇 [適用於 SharePoint 產品的 Reporting Services 增益集]  。  
   
 -   **rsSharepoint.msi:** 增益集可以直接從安裝媒體安裝或下載並安裝。 rsSharepoint.msi 同時支援圖形化使用者介面和命令列安裝。 您必須以系統管理員權限執行 .msi，方式是先開啟提高權限的命令提示字元，然後從命令列執行 rsSharepoint.msi。 如需下載此增益集的詳細資訊，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
@@ -139,9 +139,9 @@ Rssharepoint.msi /?
   
     1.  導覽至包含 `rsCustomAction.exe` 檔案的資料夾。 此檔案會隨僅限檔案安裝增益集複製到您的電腦上。 `rsCustomAction.exe` 位於 **%temp%** 目錄。 若要導覽至檔案，請在命令提示字元中輸入下列內容：  
   
-         **CD %temp%**。  
+         **CD %temp%** 。  
   
-         此檔案應該位於：**\Users\\<您的名稱\>\AppData\Local\Temp**  
+         此檔案應該位於： **\Users\\<您的名稱\>\AppData\Local\Temp**  
   
     2.  輸入以下命令。 完成此組態步驟將需要幾分鐘的時間。 在此程序期間，將會重新啟動 W3SVC 服務。 會以程式複製檔案、暫存器元件等形式顯示數個狀態訊息，同時會執行 SharePoint 產品設定精靈。  
   
@@ -193,11 +193,11 @@ Rssharepoint.msi /?
 ### <a name="to-uninstall-from-windows-control-panel"></a>若要從 Windows 控制台解除安裝  
  若要從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows [控制台] 啟動精靈並移除增益集：  
   
-1.  在 [控制台] 中的 **[程式]**，選取 **[解除安裝程式]**。  
+1.  在 [控制台] 中的 **[程式]** ，選取 **[解除安裝程式]** 。  
   
-2.  選取 [適用於 SharePoint 的 Microsoft SQL Server RS 增益集]。 您也可以從命令提示字元中執行 **rssharepoint.msi** (不使用任何參數)，藉以啟動解除安裝精靈。  
+2.  選取 [適用於 SharePoint 的 Microsoft SQL Server RS 增益集]  。 您也可以從命令提示字元中執行 **rssharepoint.msi** (不使用任何參數)，藉以啟動解除安裝精靈。  
   
-3.  按一下 **[移除]**。  
+3.  按一下 **[移除]** 。  
   
 ### <a name="uninstall-from-the-command-line"></a>從命令列解除安裝  
  若要從命令列解除安裝增益集：  

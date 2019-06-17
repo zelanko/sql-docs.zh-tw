@@ -12,52 +12,35 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 30cdbd1624e2fd8cd17ca4d0cf36cb8cb8f93b92
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 409c6a27b03eb4a7f84038df005a8c625b4011ee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974417"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793520"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>使用 Transact-SQL (T-SQL) 建立 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主題描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體上建立和設定已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」*(Availability Replica))。  
   
 > [!NOTE]  
->  如需可用性群組的簡介，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
-  
--   **開始之前：**  
-  
-     [必要條件](#PrerequisitesRestrictions)  
-  
-     [安全性](#Security)  
-  
-     [工作和對應 Transact-SQL 陳述式的摘要](#SummaryTsqlStatements)  
-  
--   **若要建立和設定可用性群組，請使用：**[Transact-SQL](#TsqlProcedure)  
-  
--   **範例：**[設定使用 Windows 驗證的可用性群組](#ExampleConfigAGWinAuth)  
-  
--   [相關工作](#RelatedTasks)  
-  
--   [相關內容](#RelatedContent)  
+>  如需可用性群組的簡介，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)中的 PowerShell，透過 PowerShell Cmdlet 建立及設定 AlwaysOn 可用性群組。  
   
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../../includes/tsql-md.md)]以外的替代方案是，使用 [建立可用性群組精靈] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 指令程式。 如需詳細資訊，請參閱 [使用可用性群組精靈 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)、 [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)或 [建立可用性群組 &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)。  
+
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
- 我們強烈建議您先閱讀本節內容，然後再嘗試建立您的第一個可用性群組。  
-  
-###  <a name="PrerequisitesRestrictions"></a> 必要條件、限制及建議  
+## <a name="PrerequisitesRestrictions"></a> 必要條件、限制及建議  
   
 -   建立可用性群組之前，請確認裝載可用性複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體位於相同 Windows Server 容錯移轉叢集 (WSFC) 容錯移轉叢集的不同 WSFC 節點上。 此外，請確認每個伺服器執行個體都符合所有其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 必要條件。 如需詳細資訊，強烈建議您閱讀 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
-###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
+##  <a name="TsqlProcedure"></a> 使用 Transact-SQL 建立和設定可用性群組 
+
 ###  <a name="SummaryTsqlStatements"></a> 工作和對應 Transact-SQL 陳述式的摘要  
  下表列出與建立和設定可用性群組有關的基本工作，並指出哪些 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式要用於這些工作。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 工作必須依照其出現在表格中的順序來執行。  
   
@@ -69,10 +52,9 @@ ms.locfileid: "57974417"
 |準備次要資料庫|[BACKUP](../../../t-sql/statements/backup-transact-sql.md) 和 [RESTORE](../../../t-sql/statements/restore-statements-transact-sql.md)。|在裝載主要複本的伺服器執行個體上建立備份。<br /><br /> 使用 RESTORE WITH NORECOVERY，還原裝載次要複本之每個伺服器執行個體上的備份。|  
 |將每一個次要資料庫加入可用性群組來啟動資料同步處理。|[ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) *database_name* SET HADR AVAILABILITY GROUP = *group_name*|在裝載次要複本的每一個伺服器執行個體上執行。|  
   
- * 若要執行指定的工作，請連接到指定的伺服器執行個體。  
-  
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL 建立和設定可用性群組  
-  
+ * 若要執行指定的工作，請連接到指定的伺服器執行個體。   
+ 
+### <a name="using-transact-sql"></a>使用 Transact-SQL 
 > [!NOTE]  
 >  如需包含每一個這類 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式之程式碼範例的範例設定程序，請參閱[範例：設定使用 Windows 驗證的可用性群組](#ExampleConfigAGWinAuth)。  
   

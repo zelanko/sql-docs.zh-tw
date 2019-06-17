@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfiles"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 92f83e1e2b3553f85301574e98f95ed7e22c1184
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62469778"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148981"
 ---
 # <a name="create-hierarchies"></a>建立階層
 

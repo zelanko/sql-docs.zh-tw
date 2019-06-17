@@ -12,10 +12,10 @@ author: yualan
 ms.author: alayu
 manager: jroth
 ms.openlocfilehash: aa83e92fb62f9cb0ad00830d1e78e5367112899c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798063"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 擴充功能 （預覽）

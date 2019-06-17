@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4b247efb895f037965620c7430a3dc41c33fe550
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013661"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>使用 sql:max-depth 來指定遞迴關聯性的深度
@@ -59,7 +59,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  在這個片段中，員工 5 會向員工 4 報告、員工 4 會向員工 3 報告，而員工 3 和 2 會向員工 1 報告。  
   
- 若要產生這種結果，您可以使用下列 XSD 結構描述並針對它指定 XPath 查詢。 結構描述會描述 **\<Emp >** 屬於 EmployeeType，其中包含類型的項目 **\<Emp >** 相同 EmployeeType 類型的子元素。 這就是遞迴關聯性 (元素及其上階屬於相同的類型)。 此外，會使用結構描述 **\<sql: relationship >** 來描述監督者與被監督者之間的父子式關聯性。 請注意，在這 **\<sql: relationship >**，Emp 是父代和子資料表。  
+ 若要產生這種結果，您可以使用下列 XSD 結構描述並針對它指定 XPath 查詢。 結構描述會描述 **\<Emp >** 屬於 EmployeeType，其中包含類型的項目 **\<Emp >** 相同 EmployeeType 類型的子元素。 這就是遞迴關聯性 (元素及其上階屬於相同的類型)。 此外，會使用結構描述 **\<sql: relationship >** 來描述監督者與被監督者之間的父子式關聯性。 請注意，在這 **\<sql: relationship >** ，Emp 是父代和子資料表。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -96,7 +96,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  由於此關聯性是遞迴的，所以您需要某種方式來指定結構描述中的遞迴深度。 否則，結果將是無止盡的遞迴 (員工向員工報告，依此類推)。 `sql:max-depth` 註解可讓您指定遞迴的深度。 在這個範例中，若要指定 `sql:max-depth` 的值，您必須知道公司中管理階層的深度。  
   
 > [!NOTE]  
->  此結構描述會指定 `sql:limit-field` 註解，但是不會指定 `sql:limit-value` 註解。 這會將產生之階層中的最上層節點限制為不向任何人報告的員工  （ReportsTo 為 NULL）。指定`sql:limit-field`而不指定`sql:limit-value`（預設為 NULL） 註釋可完成此作業。 如果您想讓產生的 XML 包含每個可能的報告樹狀結構 (資料表中每位員工的報告樹狀結構)，請從結構描述中移除 `sql:limit-field` 註解。  
+>  此結構描述會指定 `sql:limit-field` 註解，但是不會指定 `sql:limit-value` 註解。 這會將產生之階層中的最上層節點限制為不向任何人報告的員工 （ReportsTo 為 NULL）。指定`sql:limit-field`而不指定`sql:limit-value`（預設為 NULL） 註釋可完成此作業。 如果您想讓產生的 XML 包含每個可能的報告樹狀結構 (資料表中每位員工的報告樹狀結構)，請從結構描述中移除 `sql:limit-field` 註解。  
   
 > [!NOTE]  
 >  下列程序會使用 tempdb 資料庫。  
@@ -283,7 +283,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ### <a name="nonrecursive-elements"></a>非遞迴元素  
  如果您在結構描述中不會導致任何遞迴的元素上指定了 `sql:max-depth` 註解，系統就會忽略此註解。 在下列結構描述中，  **\<Emp >** 元素所組成 **\<常數 >** 子元素，其具有 **\<Emp >** 子項目。  
   
- 在這個結構描述中，`sql:max-depth`上所指定的註釋 **\<常數 >** 項目會被忽略，因為沒有任何遞迴之間 **\<Emp >** 父系和 **\<常數 >** 子項目。 但沒有之間的遞迴 **\<Emp >** 祖系及 **\<Emp >** 子系。 此結構描述會同時在這兩個項目上指定 `sql:max-depth` 註解。 因此，`sql:max-depth`註釋所指定的上階 (**\<Emp >** 在監督員的角色) 的優先順序。  
+ 在這個結構描述中，`sql:max-depth`上所指定的註釋 **\<常數 >** 項目會被忽略，因為沒有任何遞迴之間 **\<Emp >** 父系和 **\<常數 >** 子項目。 但沒有之間的遞迴 **\<Emp >** 祖系及 **\<Emp >** 子系。 此結構描述會同時在這兩個項目上指定 `sql:max-depth` 註解。 因此，`sql:max-depth`註釋所指定的上階 ( **\<Emp >** 在監督員的角色) 的優先順序。  
   
 #### <a name="example-c"></a>範例 C  
   

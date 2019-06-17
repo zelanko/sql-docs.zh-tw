@@ -15,25 +15,25 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d80ca8e475bf9c2b56c11118a44e5282573f280d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055824"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>傳送郵件工作編輯器 (郵件頁面)
-  使用 [傳送郵件工作編輯器] 對話方塊的 [郵件] 頁面，即可指定收件者、訊息類型以及訊息的優先權。 您也可以附加檔案至訊息。 訊息文字可以是您提供的字串、包含文字之檔案的檔案連接，或包含文字之變數的名稱。  
+  使用 [傳送郵件工作編輯器]  對話方塊的 [郵件]  頁面，即可指定收件者、訊息類型以及訊息的優先權。 您也可以附加檔案至訊息。 訊息文字可以是您提供的字串、包含文字之檔案的檔案連接，或包含文字之變數的名稱。  
   
  若要了解這項工作，請參閱 [傳送郵件工作](control-flow/send-mail-task.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **SMTPConnection**  
- 在清單中選取 SMTP 連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。  
+ 在清單中選取 SMTP 連線管理員，或按一下 [\<新增連線...>]  ，即可建立新的連線管理員。  
   
 > [!IMPORTANT]  
 >  SMTP 連接管理員僅支援匿名驗證和 Windows 驗證， 而不支援基本驗證。  
   
- **相關主題：**[SMTP 連線管理員](connection-manager/smtp-connection-manager.md)  
+ **相關主題：** [SMTP 連線管理員](connection-manager/smtp-connection-manager.md)  
   
  **來源**  
  指定寄件者的電子郵件地址。  
@@ -55,9 +55,9 @@ ms.locfileid: "66055824"
   
 |ReplTest1|描述|  
 |-----------|-----------------|  
-|**直接輸入**|將來源設定為訊息文字。 選取此值會顯示動態選項 [MessageSource]。|  
-|**檔案連接**|將來源設定為包含訊息文字的檔案。 選取此值會顯示動態選項 [MessageSource]。|  
-|**變數**|將來源設定為包含訊息文字的變數。 選取此值會顯示動態選項 [MessageSource]。|  
+|**直接輸入**|將來源設定為訊息文字。 選取此值會顯示動態選項 [MessageSource]  。|  
+|**檔案連接**|將來源設定為包含訊息文字的檔案。 選取此值會顯示動態選項 [MessageSource]  。|  
+|**變數**|將來源設定為包含訊息文字的變數。 選取此值會顯示動態選項 [MessageSource]  。|  
   
  **優先權**  
  設定訊息的優先權。  
@@ -72,19 +72,19 @@ ms.locfileid: "66055824"
   
 ### <a name="messagesourcetype--direct-input"></a>MessageSourceType = 直接輸入  
  **MessageSource**  
- 輸入訊息文字或按一下瀏覽按鈕 ([...])，然後在 [訊息來源] 對話方塊中輸入訊息。  
+ 輸入訊息文字或按一下瀏覽按鈕 ([...])，然後在 [訊息來源]  對話方塊中輸入訊息。  
   
 ### <a name="messagesourcetype--file-connection"></a>MessageSourceType = 檔案連接  
  **MessageSource**  
- 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。  
+ 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]  ，即可建立新的連線管理員。  
   
- **相關主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題：** [檔案連線管理員](connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="messagesourcetype--variable"></a>MessageSourceType = 變數  
  **MessageSource**  
- 在清單中選取變數，或按一下 [\<新增變數...>] 建立新的變數。  
+ 在清單中選取變數，或按一下 [\<新增變數...>]  建立新的變數。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)  
+ **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

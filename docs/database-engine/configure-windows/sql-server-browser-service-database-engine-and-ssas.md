@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ae0482258aeb628e608666ee61f796f2a20157a9
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+manager: jroth
+ms.openlocfilehash: 6be7286056ce59e9080e58fa9706370481fb5fce
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616938"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775440"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server Browser 服務 (Database Engine 和 SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ ms.locfileid: "52616938"
  隱藏的執行個體是只支援共用記憶體連接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請設定 `HideInstance` 旗標以指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 不應使用關於此伺服器執行個體的資訊來回應。  
   
 ### <a name="using-a-firewall"></a>使用防火牆  
- 若要與位於防火牆後面之伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務進行通訊，除了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的 TCP 通訊埠 (例如 1433) 之外，請開啟 UDP 通訊埠 1434。 如需有關使用防火牆的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜如何：設定防火牆供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取＞。  
+ 若要與位於防火牆後面之伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務進行通訊，除了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的 TCP 通訊埠 (例如 1433) 之外，請開啟 UDP 通訊埠 1434。 如需使用防火牆的相關資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜如何：設定防火牆供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [網路通訊協定和網路程式庫](../../sql-server/install/network-protocols-and-network-libraries.md)  

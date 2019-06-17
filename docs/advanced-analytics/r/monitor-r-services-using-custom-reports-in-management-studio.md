@@ -8,10 +8,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 55fcb4e145481f98b0cba065ddab75e7cfa0a538
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641982"
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>使用 Management Studio 中的自訂報表監視機器學習服務
@@ -65,9 +65,9 @@ Management Studio 中報表的一般簡介，請參閱 < [Management Studio 中�
 ### <a name="step-3-run-the-reports"></a>步驟 3： 執行報表
 
 5. 在 Management Studio 中，以滑鼠右鍵按一下要執行報表的執行個體 [資料庫]  節點。
-6. 依序按一下 [報表] 及 [自訂報表] 。
+6. 依序按一下 [報表]  及 [自訂報表]  。
 7. 在 [開啟檔案]  對話方塊中，找出自訂報表資料夾。
-8. 選取下載的其中一個 RDL 檔案，再按一下 [開啟] 。
+8. 選取下載的其中一個 RDL 檔案，再按一下 [開啟]  。
 
 > [!IMPORTANT]
 > 某些電腦無法使用這些報表，例如顯示裝置解析度高於 1080p 或為高 DPI 的電腦，或處於某些遠端桌面工作階段中的電腦。 SSMS 的報表檢視器控制項中有一個 Bug，會損毀報表。

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74b6e86e6c9e7fd9d293e4c1bdab952468adb4b6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106504"
 ---
 # <a name="align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs"></a>在資料表或矩陣的圖表上對齊資料 (報表產生器及 SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66106504"
   
 ### <a name="align-the-data-in-a-sparkline-or-data-bar"></a>對齊走勢圖或資料橫條中的資料  
   
-1.  在走勢圖或資料橫條中按一下，然後按一下 **[水平軸屬性]** 或 **[垂直軸屬性]**。  
+1.  在走勢圖或資料橫條中按一下，然後按一下 **[水平軸屬性]** 或 **[垂直軸屬性]** 。  
   
 2.  在 **[軸選項]** 索引標籤上，核取 **[對齊軸]** 方塊，然後在下拉方塊中，選取要對齊軸的群組。  
   

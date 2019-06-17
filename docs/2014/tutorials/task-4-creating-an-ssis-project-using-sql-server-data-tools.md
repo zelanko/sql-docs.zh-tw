@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8fb38cb068aca480756db7d962540137c8d4bfac
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489199"
 ---
 # <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>工作 4：使用 SQL Server Data Tools 建立 SSIS 專案
@@ -39,6 +39,6 @@ ms.locfileid: "65489199"
 7.  型別**CleanseAndCurate.dtsx**然後按**ENTER**。 請確定**延伸模組**維持 **.dtsx**。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 5:加入資料流程工作](task-5-adding-data-flow-task.md)  
+ [工作 5：加入資料流程工作](task-5-adding-data-flow-task.md)  
   
   

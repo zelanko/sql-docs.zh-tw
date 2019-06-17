@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 96fd36d1710a166285fecba092735c7d2495271e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62690449"
 ---
 # <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "62690449"
 |dms_step_index|**int**|此工作者執行的 DMS 計劃中的步驟。<br /><br /> request_id、 step_index 和 dms_step_index 形成這個檢視的索引鍵。||  
 |pdw_node_id|**int**|Worker 執行所在的節點。|請參閱中的 node_id [sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)。|  
 |distribution_id|**整數**|如果有任何背景工作角色執行所在的散發。|請參閱中的 distribution_id [sys.pdw_distributions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md)。|  
-|型別|**nvarchar(32)**|此項目所代表的 DMS 背景工作執行緒的型別。|'DIRECT_CONVERTER'、 'DIRECT_READER'、 'FILE_READER'、 'HASH_CONVERTER'、 'HASH_READER'、 'ROUNDROBIN_CONVERTER'、 'EXPORT_READER'、 'EXTERNAL_READER'、 'EXTERNAL_WRITER'、 'PARALLEL_COPY_READER'、 'REJECT_WRITER'、 '寫入器'|  
+|type|**nvarchar(32)**|此項目所代表的 DMS 背景工作執行緒的型別。|'DIRECT_CONVERTER'、 'DIRECT_READER'、 'FILE_READER'、 'HASH_CONVERTER'、 'HASH_READER'、 'ROUNDROBIN_CONVERTER'、 'EXPORT_READER'、 'EXTERNAL_READER'、 'EXTERNAL_WRITER'、 'PARALLEL_COPY_READER'、 'REJECT_WRITER'、 '寫入器'|  
 |status|**nvarchar(32)**|DMS 背景工作的狀態。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|上一秒的讀取或寫入輸送量。|大於或等於 0。 如果查詢已取消或失敗之前可以執行背景工作角色，則為 NULL。|  
 |bytes_processed|**bigint**|這個工作者所處理的位元組總數。|大於或等於 0。 如果查詢已取消或失敗之前可以執行背景工作角色，則為 NULL。|  

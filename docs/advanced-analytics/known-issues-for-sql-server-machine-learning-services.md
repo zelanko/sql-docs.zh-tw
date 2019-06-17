@@ -2,17 +2,17 @@
 title: R 語言和 Python 整合-SQL Server Machine Learning 服務的已知的問題
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/29/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2b9ed73b2b4cb65696f9809d757eb901367dde63
-ms.sourcegitcommit: b6ca8596c040fa731efd397e683226516c9f8359
+ms.openlocfilehash: 805dd613c49351c0106231b9147a4af54ac8cf0d
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64906157"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140728"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>在 Machine Learning 服務的已知的問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -136,7 +136,7 @@ R 與 SQL Server R Services 一起安裝的版本會更新在安裝 SQL Server �
 + 用戶端電腦上安裝 R Server （獨立式） 使用的安裝精靈[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]。
 + 使用安裝 Microsoft R Server[不同的 Windows installer](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)。
 
-若要確保伺服器和用戶端都使用相同的版本，您可能需要使用_繫結_、 支援 Microsoft R 伺服器 9.0 和更新版本中，若要升級 SQL Server 2016 執行個體中的 R 元件。 若要判斷是否支援升級為可用，如您的 R Services 的版本，請參閱[執行個體的 R Services 使用 SqlBindR.exe 升級](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+若要確保伺服器和用戶端都使用相同的版本，您可能需要使用_繫結_、 支援 Microsoft R 伺服器 9.0 和更新版本中，若要升級 SQL Server 2016 執行個體中的 R 元件。 若要判斷是否支援升級為可用，如您的 R Services 的版本，請參閱[執行個體的 R Services 使用 SqlBindR.exe 升級](install/upgrade-r-and-python.md)。
 
 **適用於：** SQL Server 2016 R Services 中，使用 R 伺服器 9.0.0 版或更早版本
 
@@ -484,7 +484,7 @@ go
 
 從 SQL Server 2017 CU2 開始，即使是已成功執行 Python 程式碼，否則可能會出現下列訊息：
 
-> *來自外部指令碼的 STDERR 訊息：*
+> *來自外部指令碼的 STDERR 訊息：* 
 >  *~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
 > *SyntaxWarning: telemetry_state 是使用全域宣告之前*
 

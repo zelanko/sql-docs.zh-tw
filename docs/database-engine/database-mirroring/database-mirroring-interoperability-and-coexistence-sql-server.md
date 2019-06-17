@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9af53bac702a7e64e48a24166a549dd97f00197f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d7de380dda9f76f82269177282888038bf73a928
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711216"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801272"
 ---
 # <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>資料庫鏡像：互通性與共存性 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -18,12 +18,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fd4a6fe9ba55aa3e30f0df94721c7aeeef225fa
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.openlocfilehash: c16b0ba6f774321346c95a69163fa110ffb196ad
+ms.sourcegitcommit: 90b0e0a524df1d1dac18251397973ffd1eb6515f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66506425"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046679"
 ---
 # <a name="bitwise-operators-transact-sql"></a>位元運算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "66506425"
 |------------------|-------------------|  
 |[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**、**smallint** 或 **tinyint**|  
 |[bit](../../t-sql/data-types/bit-transact-sql.md)|**int**、**smallint**、**tinyint** 或 **bit**|  
-|[bigint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**、**smallint**、**tinyint**、**binary** 或 **varbinary**|  
+|[bigint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**bigint**、**int**、**smallint**、**tinyint**、**binary** 或 **varbinary**|  
 |[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**、**smallint**、**tinyint**、**binary** 或 **varbinary**|  
 |[smallint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**、**smallint**、**tinyint**、**binary** 或 **varbinary**|  
 |[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**、**smallint**、**tinyint**、**binary** 或 **varbinary**|  

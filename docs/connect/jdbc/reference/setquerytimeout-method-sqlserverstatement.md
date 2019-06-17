@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 0c513265-cd0c-4b38-9494-94458c17a16d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 09c984b0d4a0bfa1fedb57f60532a721b16afccf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ef12c6d5967adc66833146b07e9c8fa071e32a9c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621397"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799617"
 ---
 # <a name="setquerytimeout-method-sqlserverstatement"></a>setQueryTimeout 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

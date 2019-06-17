@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: da846d4afb4ce8fe745b98c8503901fe804520e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63287733"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>連線到 Oracle (OracleToSQL)
@@ -22,7 +22,7 @@ ms.locfileid: "63287733"
   
 若要存取此對話方塊中，在**檔案**功能表上，選取**連接到 Oracle**。 如果您先前曾經連線，則命令是**重新連接到 Oracle**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **提供者**  
 選取您的連線到 Oracle 資料庫的資料存取提供者。 可用的提供者是 Oracle 用戶端提供者和 OLE DB 提供者。 預設值是 Oracle 用戶端提供者。  
   

@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 047d635be9ff9a9b04770f4ebe3f9e31408ff83d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789863"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性群組的必要條件、限制和建議 (SQL Server)
@@ -69,7 +69,7 @@ ms.locfileid: "62789863"
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")||是|是|**更快速的容錯移轉至本機複本**|若 WSFC 節點執行 Windows Server 2008 R2 Service Pack 1 (SP1)，請確定已經安裝了知識庫文件 2687741 中所述的下列 Hotfix。<br /><br /> 此 Hotfix 可以提升 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 容錯移轉至本機複本的效能。|KB 2687741:[Hotfix 可提升效能的 SQL Server 2012 中的 「 AlwaysOn 可用性群組 」 功能是適用於 Windows Server 2008 R2](https://support.microsoft.com/KB/2687741)|  
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|是|是|是|**非對稱式儲存體-容錯移轉叢集執行個體 (Fci)**|如果任何容錯移轉叢集執行個體 (FCI) 都將啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請安裝 Windows Server 2008 Hotfix 976097。<br /><br /> 此 hotfix 可讓支援僅部分 WSFC 節點上可用的非對稱式儲存體共用的磁碟容錯移轉叢集管理 Microsoft Management Console (MMC) 嵌入式管理單元。|KB 976097:[Hotfix 新增非對稱儲存支援執行 Windows Server 2008 或 Windows Server 2008 R2 的容錯移轉叢集的容錯移轉叢集管理 MMC 嵌入式管理單元](https://support.microsoft.com/kb/976097)<br /><br /> [AlwaysOn 架構指南：Building a High Availability and Disaster Recovery Solution by Using Failover Cluster Instances and Availability Groups](https://technet.microsoft.com/library/jj215886.aspx) (Always On 架構指南：使用容錯移轉叢集執行個體和可用性群組，建置高可用性和災害復原解決方案)|  
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|是|是|不適用|**網際網路通訊協定安全性 (IPsec)**|如果您的環境使用 IPsec 連接，當用戶端電腦重新建立虛擬網路名稱的 IPsec 連接 (在本文中，連接至可用性群組接聽程式) 時，您會遇到長時間的延遲 (大約二或三分鐘)。 如果您使用 IPsec 連接，我們建議您檢閱知識庫文件 (KB 980915) 中詳述的特定案例。|KB 980915:[當您重新連接 IPSec 連接，從執行 Windows Server 2003、 Windows Vista、 Windows Server 2008、 Windows 7 或 Windows Server 2008 R2 的電腦時，就會發生長時間延遲](https://support.microsoft.com/kb/980915)|  
-|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|是|是|是|**IPv6**|如果您使用 IPv6，我們建議您根據自己的 Windows Server 作業系統，檢閱知識庫文件 2578103 或 2578113 中詳述的特定案例。<br /><br /> 如果您的 Windows Server 拓撲使用 IP 第 6 版 (IPv6)，WSFC 叢集服務大約需要 30 秒來容錯移轉 IPv6 IP 位址。 這會導致用戶端大約等候 30 秒，然後再重新連接到 IPv6 IP 位址。|KB 2578103 (Windows Server 2008):[叢集服務大約需要 30 秒來容錯移轉 Windows Server 2008 中的 IPv6 IP 位址](https://support.microsoft.com/kb/2578103)<br /><br /> KB 2578113 (Windows Server 2008 R2):**Windows Server 2008 R2:**[叢集服務大約需要 30 秒來容錯移轉 Windows Server 2008 R2 中的 IPv6 IP 位址](https://support.microsoft.com/kb/2578113)|  
+|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|是|是|是|**IPv6**|如果您使用 IPv6，我們建議您根據自己的 Windows Server 作業系統，檢閱知識庫文件 2578103 或 2578113 中詳述的特定案例。<br /><br /> 如果您的 Windows Server 拓撲使用 IP 第 6 版 (IPv6)，WSFC 叢集服務大約需要 30 秒來容錯移轉 IPv6 IP 位址。 這會導致用戶端大約等候 30 秒，然後再重新連接到 IPv6 IP 位址。|KB 2578103 (Windows Server 2008):[叢集服務大約需要 30 秒來容錯移轉 Windows Server 2008 中的 IPv6 IP 位址](https://support.microsoft.com/kb/2578103)<br /><br /> KB 2578113 (Windows Server 2008 R2):**Windows Server 2008 R2:** [叢集服務大約需要 30 秒來容錯移轉 Windows Server 2008 R2 中的 IPv6 IP 位址](https://support.microsoft.com/kb/2578113)|  
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|是|是|是|**沒有路由器之間叢集和應用程式伺服器**|如果容錯移轉叢集與應用程式伺服器之間不存在任何路由器，叢集服務就會緩慢地容錯移轉網路相關資源。 在可用性群組容錯移轉之後，這會延遲用戶端重新連接。 如果路由器不存在，我們建議您檢閱知識庫文件 2582281 中詳述的特定案例並安裝 Hotfix (如果適用於環境的話)。|KB 2582281:[如果叢集與應用程式伺服器之間不存在任何路由器，就會緩慢地進行容錯移轉作業](https://support.microsoft.com/kb/2582281)|  
   
 ###  <a name="ComputerRecommendations"></a> 對裝載可用性複本之電腦的建議 (Windows 系統)  
@@ -99,7 +99,7 @@ ms.locfileid: "62789863"
   
 3.  使用 `Get-ClusterResource` 指令程式尋找網路名稱資源，然後使用 `Set-ClusterParameter` 指令程式設定 `HostRecordTTL` 值，如下所示：  
   
-     Get-ClusterResource "*\<NetworkResourceName>*" | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
+     Get-ClusterResource " *\<NetworkResourceName>* " | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
   
      下列 PowerShell 範例會針對名為 "`SQL Network Name (SQL35)`" 的網路名稱資源將 HostRecordTTL 設定為 300 秒。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "62789863"
 -   [Windows 2008 R2 容錯移轉多站台叢集](https://kiruba4u.blogspot.com/2012/03/failover-clustering-in-windows-server.html)  
   
 ##  <a name="ServerInstance"></a> SQL Server 執行個體的必要條件和限制  
- 每個可用性群組都需要 *執行個體所裝載的一組容錯移轉夥伴，稱為*「可用性複本」 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](Availability Replica)。 給定的伺服器執行個體可以是「獨立執行個體」或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]「容錯移傳叢集執行個體」 (FCI)。  
+ 每個可用性群組都需要 *執行個體所裝載的一組容錯移轉夥伴，稱為*「可用性複本」 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](Availability Replica)。 給定的伺服器執行個體可以是「獨立執行個體」  或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]「容錯移傳叢集執行個體」  (FCI)。  
   
  
   
@@ -330,7 +330,7 @@ ms.locfileid: "62789863"
   
 -   如果次要資料庫的檔案路徑 (包括磁碟機代號) 不同於對應主要資料庫的路徑，下列限制適用：  
   
-    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]：** 不支援 [完整] 選項 (在[選取初始資料同步處理頁面](select-initial-data-synchronization-page-always-on-availability-group-wizards.md))，  
+    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]：** 不支援 [完整]  選項 (在[選取初始資料同步處理頁面](select-initial-data-synchronization-page-always-on-availability-group-wizards.md))，  
   
     -   **RESTORE WITH MOVE：** 若要建立次要資料庫，在裝載次要複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上，資料庫檔案必須是 RESTORED WITH MOVE。  
   

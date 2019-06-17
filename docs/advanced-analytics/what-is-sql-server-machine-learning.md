@@ -3,22 +3,22 @@ title: R 語言和 Python 功能整合 SQL Server Machine Learning 服務
 description: R 語言和 Python 中 SQL Server，適用於資料科學和統計模型、 機器學習服務模型，預測性分析、 資料視覺效果的關聯式資料與整合的功能。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/06/2018
+ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cf7d8a7cddcfbe0d47d4808f82abc0a47efade2c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 921ffc0188623335ac7e7206a02095cc11469327
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512447"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140323"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>Machine Learning 服務 （R、 Python） 在 SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2017 Machine Learning 服務是 database engine 執行個體，用於執行 SQL Server 上的 R 和 Python 程式碼的附加元件。 此功能包含[Microsoft R 和 Python 套件](#components)高效能的預測性分析和機器學習服務。 與核心引擎處理序隔離，但預存程序、 T-SQL 指令碼包含 R 或 Python 的陳述式，或包含 T-SQL 中的 R 或 Python 程式碼的關聯式資料完全可供使用的擴充性架構中，執行程式碼。 
+Machine Learning 服務是用於執行資料庫內 R 和 Python 指令碼的 SQL Server 的功能。 此功能包含[Microsoft R 和 Python 套件](#components)高效能的預測性分析和機器學習服務。 關聯式資料可用於透過預存程序，包含 R 和 Python 陳述式的 T-SQL 指令碼的 R 和 Python 指令碼或 R 和 Python 程式碼包含的 T-SQL。
 
 如果您先前使用[SQL Server 2016 R Services](r/sql-server-r-services.md)、 SQL Server 2017 中的 Machine Learning 服務是新一代的 R 支援的基底 R，RevoScaleR，MicrosoftML，更新版本和 2016年中引進的其他程式庫。 
 
@@ -140,7 +140,7 @@ SQL Server 2017 Machine Learning 服務是新一代的 SQL Server 2016 R Service
 | SQL Server 2016 R Services （資料庫） | R Server 9.1  | 2017 年 7 月  |
 | SQL Server 2016 R Server （獨立式）  |  R Server 9.1 | 2017 年 7 月 |
 
-如需版本的套件版本，請參閱對應中的版本[升級 R 和 Python 元件](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md#version-map)。
+如需版本的套件版本，請參閱對應中的版本[升級 R 和 Python 元件](install/upgrade-r-and-python.md#version-map)。
 
 ## <a name="portability-and-related-products"></a>可攜性及相關的產品
 

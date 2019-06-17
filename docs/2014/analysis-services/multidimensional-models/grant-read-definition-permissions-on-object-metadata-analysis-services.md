@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e03e55451c2340b5f0773e2873127c3551a82aab
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66074900"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>授與物件中繼資料的讀取定義權限 (Analysis Services)
@@ -32,17 +32,17 @@ ms.locfileid: "66074900"
   
  我們建議您包含`Read Definition`在設定用於專用處理的角色時，資料庫層級的權限。 擁有`Read Definition`可讓非系統管理員可以檢視模型的物件階層中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]並瀏覽至個別的物件進行後續處理。  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，在物件總管中展開適當資料庫的 [角色]，然後按一下資料庫角色 (或建立新的資料庫角色)。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，在物件總管中展開適當資料庫的 [角色]  ，然後按一下資料庫角色 (或建立新的資料庫角色)。  
   
 2.  在 **一般**索引標籤上，選取`Read Definition`選項。  
   
-3.  在 [成員資格] 窗格中，輸入使用這個角色連線到 Analysis Services 的 Windows 使用者和群組帳戶。  
+3.  在 [成員資格]  窗格中，輸入使用這個角色連線到 Analysis Services 的 Windows 使用者和群組帳戶。  
   
-4.  按一下 [確定]，完成角色的建立。  
+4.  按一下 [確定]  ，完成角色的建立。  
   
 ## <a name="set-read-definition-permissions-on-individual-objects"></a>設定個別物件的讀取定義權限  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連線到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體、開啟 [資料庫] 資料夾、選取資料庫、在物件總管中展開適當資料庫的 [角色]，然後按一下資料庫角色 (或建立新的資料庫角色)。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連線到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體、開啟 [資料庫]  資料夾、選取資料庫、在物件總管中展開適當資料庫的 [角色]  ，然後按一下資料庫角色 (或建立新的資料庫角色)。  
   
 2.  在 **一般**窗格中，清除的資料庫權限`Read Definition`。 這個步驟會移除權限繼承，因此，您可以設定個別物件的權限。  
   
@@ -54,9 +54,9 @@ ms.locfileid: "66074900"
   
     -   在 採礦結構 窗格中，按一下 `Read Definition`資料採礦結構或模型的核取方塊。 `Read Definition` 需要瀏覽資料模型。 請參閱[授與資料採礦結構和模型的權限 &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)。  
   
-4.  在 [成員資格] 窗格中，輸入使用這個角色連線到 Analysis Services 的 Windows 使用者和群組帳戶。  
+4.  在 [成員資格]  窗格中，輸入使用這個角色連線到 Analysis Services 的 Windows 使用者和群組帳戶。  
   
-5.  按一下 [確定]，完成角色的建立。  
+5.  按一下 [確定]  ，完成角色的建立。  
   
 ## <a name="see-also"></a>另請參閱  
  [授與資料庫權限 &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   

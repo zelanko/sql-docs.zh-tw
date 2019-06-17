@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fcab02cbe7f24da3567fdfa615a6595a268185ba
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105665"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>將 HTML 匯入至報表 (報表產生器及 SSRS)
@@ -70,9 +70,9 @@ ms.locfileid: "66105665"
   
 -   格式不正確的 CSS 值會像格式不正確的 HTML 一樣遭到忽略。  
   
--   同一標記中同時存在屬性和 CSS 樣式屬性時，CSS 屬性擁有較高的優先權。 例如，如果文字是 **\<p style="text-align: right" align="left">**，則只會套用 text-align 屬性而且文字會靠右對齊。  
+-   同一標記中同時存在屬性和 CSS 樣式屬性時，CSS 屬性擁有較高的優先權。 例如，如果文字是 **\<p style="text-align: right" align="left">** ，則只會套用 text-align 屬性而且文字會靠右對齊。  
   
--   對於屬性和 CSS 樣式來說，如果某屬性指定了一次以上，則只會套用該屬性的最後一個執行個體。 例如，如果文字是 **\<p align="left" align="right">**，則會靠右對齊文字。  
+-   對於屬性和 CSS 樣式來說，如果某屬性指定了一次以上，則只會套用該屬性的最後一個執行個體。 例如，如果文字是 **\<p align="left" align="right">** ，則會靠右對齊文字。  
   
 ## <a name="see-also"></a>另請參閱  
  [轉譯為 HTML &#40;報表產生器及 SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  

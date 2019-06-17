@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b520f192-6a14-4453-babd-8e7861ab25d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7fd40b98f66122cafa13ddf060f8800c9e2a65b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fca7b4dd1f8167fa5103d461b22804c43b5c9b86
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657756"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802403"
 ---
 # <a name="position-method-sqlserverblob"></a>position 方法 (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

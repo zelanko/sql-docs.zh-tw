@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63233072"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>舊版 SQL Server 的新日期和時間功能 (OLE DB)
@@ -31,7 +31,7 @@ ms.locfileid: "63233072"
   
 |OLE DB 用戶端類型|SQL Server 2005 類型|SQL Server 2008 (或更新版本) 類型|結果轉換 (伺服器到用戶端)|參數轉換 (用戶端到伺服器)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|Datetime|date|[確定]|[確定]|  
+|DBTYPE_DBDATE|Datetime|Date|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP|||時間欄位會設定為零。|如果時間欄位為非零，IRowsetChange 將會因為字串截斷而失敗。|  
 |DBTYPE_DBTIME||Time(0)|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP|||日期欄位設定為目前的日期。|如果小數秒數為非零，IRowsetChange 會因為字串截斷而失敗。<br /><br /> 忽略日期。|  
@@ -39,7 +39,7 @@ ms.locfileid: "63233072"
 |DBTYPE_DBTIMESTAMP|||失敗-無效的時間間隔。|[確定]|  
 |DBTYPE_DBTIMESTAMP||Datetime2(3)|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP||datetime2(7)|[確定]|[確定]|  
-|DBTYPE_DBDATE|Smalldatetime|date|[確定]|[確定]|  
+|DBTYPE_DBDATE|Smalldatetime|Date|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP|||時間欄位會設定為零。|如果時間欄位為非零，IRowsetChange 將會因為字串截斷而失敗。|  
 |DBTYPE_DBTIME||Time(0)|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP|||日期欄位設定為目前的日期。|如果小數秒數為非零，IRowsetChange 會因為字串截斷而失敗。<br /><br /> 忽略日期。|  

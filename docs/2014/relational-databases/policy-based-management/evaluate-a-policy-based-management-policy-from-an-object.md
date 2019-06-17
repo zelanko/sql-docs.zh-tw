@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43116e7fdec059f822a5381696a485aba767402b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705234"
 ---
 # <a name="evaluate-a-policy-based-management-policy-from-an-object"></a>根據物件評估原則式管理原則
@@ -51,10 +51,10 @@ ms.locfileid: "62705234"
   
 #### <a name="to-evaluate-a-policy-from-an-object"></a>若要根據物件評估原則  
   
-1.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器執行個體、資料庫或資料庫物件、指向 [原則]，然後選取 [評估]。  
+1.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器執行個體、資料庫或資料庫物件、指向 [原則]  ，然後選取 [評估]  。  
   
-2.  在 **[評估原則]** 對話方塊中，選取一個或多個原則，然後按一下 **[評估]** 以評估模式執行原則。 這樣會產生目標集的符合報表，但是不會重新設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或是強制未來的符合。 如果目標不符合選定原則而且其屬性可透過原則式管理來重新設定，您可以按一下 [套用] 來強制符合原則。 如需有關 **[評估原則]** 對話方塊可用之選項的詳細資訊，請參閱＜ [Evaluate Policies Dialog Box, Policy Selection Page](evaluate-policies-dialog-box-policy-selection-page.md)＞、＜ [Evaluate Policies Dialog Box, Evaluation Results Page](evaluate-policies-dialog-box-evaluation-results-page.md)＞和＜ [Results Detailed View Dialog Box](results-detailed-view-dialog-box.md)＞。  
+2.  在 **[評估原則]** 對話方塊中，選取一個或多個原則，然後按一下 **[評估]** 以評估模式執行原則。 這樣會產生目標集的符合報表，但是不會重新設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或是強制未來的符合。 如果目標不符合選定原則而且其屬性可透過原則式管理來重新設定，您可以按一下 [套用]  來強制符合原則。 如需有關 **[評估原則]** 對話方塊可用之選項的詳細資訊，請參閱＜ [Evaluate Policies Dialog Box, Policy Selection Page](evaluate-policies-dialog-box-policy-selection-page.md)＞、＜ [Evaluate Policies Dialog Box, Evaluation Results Page](evaluate-policies-dialog-box-evaluation-results-page.md)＞和＜ [Results Detailed View Dialog Box](results-detailed-view-dialog-box.md)＞。  
   
-3.  完成後，請按一下 **[關閉]**。  
+3.  完成後，請按一下 **[關閉]** 。  
   
   

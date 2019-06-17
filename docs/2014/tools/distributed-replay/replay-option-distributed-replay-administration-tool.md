@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a709d4badbd270d9ddffedd62ff040e8ca6c628
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63149477"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>重新執行選項 (Distributed Replay 管理工具)
@@ -58,7 +58,7 @@ ms.locfileid: "63149477"
  未指定 **-o** 參數時，不會產生結果追蹤檔案。 主控台輸出會在重新執行結尾時傳回摘要資訊，但不會提供其他重新執行統計資料。  
   
  **-s** *target_server*  
- 指定分散式工作負載應該針對它重新執行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 目標執行個體。 您必須使用以下格式指定這個參數： **server_name[\instance name]**。  
+ 指定分散式工作負載應該針對它重新執行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 目標執行個體。 您必須使用以下格式指定這個參數： **server_name[\instance name]** 。  
   
  不可使用 "`localhost`" 或 "`.`" 當做目標伺服器。  
   

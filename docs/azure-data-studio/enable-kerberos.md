@@ -12,10 +12,10 @@ author: meet-bhagdev
 ms.author: meetb
 manager: jroth
 ms.openlocfilehash: 4836b22d9903b05d70170aad53fde7ac7101f537
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66778382"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>連接[!INCLUDE[name-sos](../includes/name-sos-short.md)]到 SQL Server 使用 Windows 驗證-Kerberos 

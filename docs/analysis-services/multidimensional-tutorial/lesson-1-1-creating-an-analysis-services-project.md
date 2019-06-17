@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4576072cd24d17551d087c7be879fddf22636f5c
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403860"
 ---
 # <a name="lesson-1-1---creating-an-analysis-services-project"></a>課程 1-1-建立 Analysis Services 專案
@@ -30,9 +30,9 @@ ms.locfileid: "65403860"
   
     請注意，對話方塊底端會產生預設專案名稱、位置和預設方案名稱。 根據預設，會為方案建立新目錄。  
   
-3.  請將專案名稱變更為 **Analysis Services Tutorial**，如此也會變更 [方案名稱]  方塊，然後按一下 [確定] 。  
+3.  請將專案名稱變更為 **Analysis Services Tutorial**，如此也會變更 [方案名稱]  方塊，然後按一下 [確定]  。  
   
-您已根據 **[Analysis Services 多維度和資料採礦專案]** 專案範本，順利在新的方案內部建立 **[Analysis Services 教學課程]** 專案，而新的方案也名為 **[Analysis Services 教學課程]**。  
+您已根據 **[Analysis Services 多維度和資料採礦專案]** 專案範本，順利在新的方案內部建立 **[Analysis Services 教學課程]** 專案，而新的方案也名為 **[Analysis Services 教學課程]** 。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [定義資料來源](lesson-1-2-defining-a-data-source.md)  

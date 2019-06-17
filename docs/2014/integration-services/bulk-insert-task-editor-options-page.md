@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061185"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>大量插入工作編輯器 (選項頁面)
@@ -26,7 +26,7 @@ ms.locfileid: "66061185"
   
  若要了解如何使用大量插入，請參閱[大量插入工作](control-flow/bulk-insert-task.md)和 [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **CodePage**  
  指定資料檔中之資料的字碼頁。  
   

@@ -21,16 +21,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 37b4a53461b2ebd485941ecad89e3672e7c31b62
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62877067"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently-full-recovery-model"></a>使用標示的異動以一致的方式復原相關資料庫 (完整復原模式)
   本主題只與使用完整或大量記錄復原模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關。  
   
- 當您對兩個以上的資料庫 (「相關資料庫」) 進行相關的更新時，您可以使用交易標示將它們復原到邏輯上一致的時間點。 不過，這種復原會遺失任何在復原點標示之後所認可的交易。 只有當您要測試相關資料庫，或是願意遺失最近認可的交易時，才適合標示交易。  
+ 當您對兩個以上的資料庫 (「相關資料庫」  ) 進行相關的更新時，您可以使用交易標示將它們復原到邏輯上一致的時間點。 不過，這種復原會遺失任何在復原點標示之後所認可的交易。 只有當您要測試相關資料庫，或是願意遺失最近認可的交易時，才適合標示交易。  
   
  例行性標示每個相關資料庫中的相關交易會在資料庫中建立一系列通用的復原點。 交易標示將記錄於交易記錄，並且包含在記錄備份中。 如果發生損毀，即可將每個資料庫還原到相同的交易標示，進而復原至一致的時間點。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62877067"
 -   如果標示交易跨越同一資料庫伺服器或不同伺服器上的多個資料庫，則標示會記錄在所有受影響的資料庫之記錄中。  
   
 ## <a name="creating-the-marked-transactions"></a>建立標示的交易  
- 若要建立標示的交易，請使用 [BEGIN TRANSACTION](/sql/t-sql/language-elements/begin-transaction-transact-sql) 陳述式和 WITH MARK [描述] 子句。 選擇性的「描述」是標示的文字說明。 標示名稱對於交易而言是必要的。 標示名稱可以重複使用。 交易記錄中會記錄標示名稱、描述、資料庫、使用者、日期時間資訊與記錄序號 (LSN)。 日期時間資訊要連同標示名稱一起使用，才能唯一識別標示。  
+ 若要建立標示的交易，請使用 [BEGIN TRANSACTION](/sql/t-sql/language-elements/begin-transaction-transact-sql) 陳述式和 WITH MARK [描述  ] 子句。 選擇性的「描述」  是標示的文字說明。 標示名稱對於交易而言是必要的。 標示名稱可以重複使用。 交易記錄中會記錄標示名稱、描述、資料庫、使用者、日期時間資訊與記錄序號 (LSN)。 日期時間資訊要連同標示名稱一起使用，才能唯一識別標示。  
   
  **若要在一組資料庫中建立標示的交易：**  
   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ab81f5c32f2e5253279f69eb1f2af056b95b2f1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 249ff2d99b5d682f863e4d698b35b9e951da13b4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695066"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802494"
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>設定 nested triggers 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47695066"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法設定 nested triggers 選項：**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47695066"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **待處理**  [設定 nested triggers 選項之後](#FollowUp)  
+-   **後續操作：**[設定巢狀觸發程序選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -80,7 +80,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 待處理：設定 nested triggers 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定巢狀觸發程序選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087765"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>比較表格式和多維度解決方案 (SSAS)
@@ -116,7 +116,7 @@ ms.locfileid: "66087765"
 |使用者定義階層|[是](multidimensional-models/user-defined-hierarchies-create.md)|是|  
 |回寫|[是](multidimensional-models/set-partition-writeback.md)|否|  
   
- * 如果您的解決方案必須支援非常大量的相異計數 （例如數以百萬計的客戶 Id），請優先考慮表格式。 它在這種案例中往往會有更好的效能。 請參閱白皮書中有關相異計數的章節[Analysis Services 案例研究：在大規模商業解決方案中使用表格式模型](https://msdn.microsoft.com/library/dn751533.aspx)。  
+ \* 如果您的解決方案必須支援非常大量的相異計數 （例如數以百萬計的客戶 Id），請優先考慮表格式。 它在這種案例中往往會有更好的效能。 請參閱白皮書中有關相異計數的章節[Analysis Services 案例研究：在大規模商業解決方案中使用表格式模型](https://msdn.microsoft.com/library/dn751533.aspx)。  
   
 ##  <a name="bkmk_modelsize"></a> 模型大小  
  模型的大小 (就物件總數而言) 不會因解決方案類型而異。 但是，用來建立每個解決方案的設計工具，會因為其適應處理大量物件的方式而有所不同。 較大的模型比較容易在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中建立，因為它會在 [物件總管] 和 [方案總管] 中提供更多的功能來依據類型繪製物件圖表及列出物件。  

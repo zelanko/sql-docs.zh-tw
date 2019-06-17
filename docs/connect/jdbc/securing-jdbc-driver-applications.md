@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 42fed21bd2857ea9305b1b8f8771aff80ee9f2ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3a7a8079f60336bbdfe7b837afa2313f5fda2691
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600406"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797835"
 ---
 # <a name="securing-jdbc-driver-applications"></a>保護 JDBC Driver 應用程式
 

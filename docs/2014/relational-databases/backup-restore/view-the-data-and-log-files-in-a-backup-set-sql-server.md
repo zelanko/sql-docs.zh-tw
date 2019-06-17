@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fe58874e0046a53a33d0580c4477ac89f6cd6e18
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62875055"
 ---
 # <a name="view-the-data-and-log-files-in-a-backup-set-sql-server"></a>檢視備份組中的資料和記錄檔 (SQL Server)
@@ -53,11 +53,11 @@ ms.locfileid: "62875055"
   
 1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱展開伺服器樹狀目錄。  
   
-2.  展開 **[資料庫]**，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
+2.  展開 **[資料庫]** ，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，然後按一下 [屬性]，這會開啟 [資料庫屬性] 對話方塊。  
+3.  以滑鼠右鍵按一下資料庫，然後按一下 [屬性]  ，這會開啟 [資料庫屬性]  對話方塊。  
   
-4.  在 **[選取頁面]** 窗格中，按一下 **[檔案]**。  
+4.  在 **[選取頁面]** 窗格中，按一下 **[檔案]** 。  
   
 5.  在 **[資料庫檔案]** 方格中尋找資料與記錄檔的清單，以及這些檔案的屬性。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62875055"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  使用 [RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql) 陳述式。 此範例會傳回`FILE=2`備份裝置上第二個備份組 ( `AdventureWorksBackups` ) 的資訊。  
   

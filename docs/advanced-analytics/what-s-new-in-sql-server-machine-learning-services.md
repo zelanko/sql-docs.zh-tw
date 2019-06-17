@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c5871c6e33947f744dde571c329e8025b4a0813
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: f7b7daefb0f5e9514372fadd9377b05c84784e34
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993450"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140279"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>什麼是 SQL Server Machine Learning 服務的新功能
 
@@ -33,6 +33,7 @@ ms.locfileid: "65993450"
 
 | 版本 | 功能更新 |
 |---------|----------------|
+| CTP 3.0 | 無變更。 |
 | CTP 2.5 | 無變更。 |
 | CTP 2.4 | Linux 支援[CREATE EXTERNAL LIBRARY & Amp;#40;transact-SQL&AMP;#41;](../t-sql/statements/create-external-library-transact-sql.md)對 R 和 Python。 |
 | CTP 2.3 | 只有 Windows 上的 Python 程式碼可以存取的外部程式庫使用[CREATE EXTERNAL LIBRARY & Amp;#40;transact-SQL&AMP;#41;](../t-sql/statements/create-external-library-transact-sql.md)陳述式。 |

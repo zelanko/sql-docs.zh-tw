@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3c8eda71783e7211011bd6f67d9acf638c8946a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062515"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
@@ -61,7 +61,7 @@ ms.locfileid: "66062515"
 |表格式執行個體與資料庫|支援本機和遠端管理。<br /><br /> 如需詳細資訊，請參閱 2011 年 8 月部落格的相關[管理表格式模型使用 PowerShell](https://go.microsoft.com/fwlink/?linkID=227685)。|  
 |PowerPivot for SharePoint 執行個體與資料庫|有限支援。 您可以使用 HTTP 連接和 SQLAS 提供者來檢視執行個體與資料庫資訊。<br /><br /> 但是，不支援使用指令程式。 您不得使用 Analysis Services PowerShell 備份與還原記憶體中 InMemory PowerPivot 資料庫，也不得加入或移除角色、處理資料，或執行任意的 XMLA 指令碼。<br /><br /> 基於組態目的，PowerPivot for SharePoint 具有個別提供的內建 PowerShell 支援。 如需詳細資訊，請參閱 < [powerpivot for SharePoint 的 PowerShell 參考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)。|  
 |本機 Cube 的原生連接<br /><br /> "Data Source=c:\backup\test.cub"|不支援。|  
-|SharePoint 中 BI 語意模型 (.bism) 連接檔案的 HTTP 連接<br /><br /> "Data Source=http://server/shared_docs/name.bism"|不支援。|  
+|SharePoint 中 BI 語意模型 (.bism) 連接檔案的 HTTP 連接<br /><br /> "Data Source=http://server/shared_docs/name.bism "|不支援。|  
 |PowerPivot 資料庫的內嵌連接<br /><br /> "Data Source=$Embedded$"|不支援。|  
 |Analysis Services 預存程序中的本機伺服器內容<br /><br /> "Data Source=*"|不支援。|  
   
@@ -203,7 +203,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  HTTP 連接就很有用，如果您使用本主題中的指示的 HTTP 存取您伺服器設定：[設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- 假設伺服器 URL 的 http://localhost/olap/msmdpump.dll，連接可能會如下所示：  
+ 假設伺服器 URL 的 http://localhost/olap/msmdpump.dll ，連接可能會如下所示：  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  

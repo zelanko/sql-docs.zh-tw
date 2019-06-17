@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f5c1ee253c6fedde6b0954f36eb115253f876d0b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789470"
 ---
 # <a name="remove-an-availability-group-listener-sql-server"></a>移除可用性群組接聽程式 (SQL Server)
@@ -72,7 +72,7 @@ ms.locfileid: "62789470"
  要移除的接聽程式名稱。  
   
  **結果**  
- 顯示連結 ( **[成功]** 或 **[錯誤]**)，而且按一下即可取得詳細資訊。  
+ 顯示連結 ( **[成功]** 或 **[錯誤]** )，而且按一下即可取得詳細資訊。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要移除可用性群組接聽程式**  
@@ -81,7 +81,7 @@ ms.locfileid: "62789470"
   
 2.  使用 [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) 陳述式，如下所示：  
   
-     ALTER AVAILABILITY GROUP *group_name* REMOVE LISTENER **'*`dns_name`*'**  
+     ALTER AVAILABILITY GROUP *group_name* REMOVE LISTENER **' *`dns_name`* '**  
   
      *group_name* 是可用性群組的名稱， *dns_name* 是可用性群組接聽程式的 DNS 名稱。  
   

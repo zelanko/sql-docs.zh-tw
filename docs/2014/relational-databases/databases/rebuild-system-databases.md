@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b58378e8ba2193a186fb58e3e784bf9bc3cb4d4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871265"
 ---
 # <a name="rebuild-system-databases"></a>重建系統資料庫
@@ -136,15 +136,15 @@ ms.locfileid: "62871265"
   
 1.  從散發程式媒體啟動 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式 (setup.exe)。  
   
-2.  在左側導覽區域中，按一下 **[維護]**，然後按一下 **[修復]**。  
+2.  在左側導覽區域中，按一下 **[維護]** ，然後按一下 **[修復]** 。  
   
 3.  安裝程式支援規則和檔案常式將會執行，以便確保您的系統已安裝必要元件而且電腦通過安裝程式驗證規則。 按一下 **[確定]** 或 **[安裝]** 繼續進行。  
   
-4.  在 [選取執行個體] 頁面上，選取要修復的執行個體，然後按 **[下一步]**。  
+4.  在 [選取執行個體] 頁面上，選取要修復的執行個體，然後按 **[下一步]** 。  
   
-5.  修復規則將會執行，以便驗證作業。 若要繼續進行，請按 **[下一步]**。  
+5.  修復規則將會執行，以便驗證作業。 若要繼續進行，請按 **[下一步]** 。  
   
-6.  在 **[已完成修復準備工作]** 頁面中，按一下 **[修復]**。 [完成] 頁面會指出作業已完成。  
+6.  在 **[已完成修復準備工作]** 頁面中，按一下 **[修復]** 。 [完成] 頁面會指出作業已完成。  
   
 ##  <a name="CreateMSDB"></a> 建立新的 msdb 資料庫  
  如果`msdb`資料庫已損毀，且您不需要一份`msdb`資料庫中，您可以建立新`msdb`利用**instmsdb**指令碼。  
@@ -158,7 +158,7 @@ ms.locfileid: "62871265"
   
      如需詳細資訊，請參閱 [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
-3.  在另一個命令列視窗中，卸離`msdb`資料庫執行下列命令，來取代*\<伺服器名稱 >* 的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  在另一個命令列視窗中，卸離`msdb`資料庫執行下列命令，來取代 *\<伺服器名稱 >* 的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
 4.  使用 Windows 檔案總管中，重新命名`msdb`資料庫檔案。 根據預設，這些檔案位於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 DATA 子資料夾中。  
   

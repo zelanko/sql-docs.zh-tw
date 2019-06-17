@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 69903654faf21a7649ec8b54a269e71a99d559c3
-ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66354542"
 ---
 # <a name="common-language-runtime-integration"></a>Common Language Runtime 整合

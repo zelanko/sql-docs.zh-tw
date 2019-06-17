@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.openlocfilehash: 6c1c966c394f871a5772c6df5226d6a136dd12dc
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66713529"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 RHEL 叢集

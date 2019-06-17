@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 551d71d427b9e7997082a8feda1b766b85bfe659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: be6b135e4e21f7bdcec47c231be6fe872a20ab76
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837267"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795310"
 ---
 # <a name="register-mirrored-database"></a>註冊鏡像資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47837267"
   
 |資料行名稱|Description|  
 |-----------------|-----------------|  
-|**註冊**|檢查您要註冊的每一個資料庫。 如果資料庫目前受到監視，則其核取方塊為已選取和停用狀態。<br /><br /> 注意：若要取消註冊資料庫，請關閉 [註冊鏡像資料庫]  對話方塊，在導覽樹狀目錄中選取資料庫，然後選取 [動作]  功能表中的 [取消註冊]  。|  
+|**註冊**|檢查您要註冊的每一個資料庫。 如果資料庫目前受到監視，則其核取方塊為已選取和停用狀態。<br /><br /> 注意:若要取消註冊資料庫，請關閉 [註冊鏡像資料庫] 對話方塊，在導覽樹狀目錄中選取資料庫，然後選取 [動作] 功能表中的 [取消註冊]。|  
 |**[資料庫備份]**|選取之伺服器執行個體上的鏡像資料庫名稱。|  
 |**目前的角色**|資料庫目前在選取之伺服器執行個體上的鏡像角色，可為 [主體] 或 [鏡像]。|  
 |**夥伴 (連接為)**|資料庫的容錯移轉夥伴名稱。 在括弧內會顯示 [主控台使用者的 Windows 驗證]  或 [登入 '\<登入名稱>' 的 SQL Server 驗證]。**** 如果之前已加入這個執行個體，則這是目前使用的驗證資訊；如果尚未將這個執行個體加入至監視器，則這是將要使用的驗證資訊。|  

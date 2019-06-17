@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 479cc0e650c598e0a253caca796b854dc4eb69cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62892666"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>選取來源資料表和檢視 (SQL Server 匯入和匯出精靈)
@@ -48,6 +48,6 @@ ms.locfileid: "62892666"
  **預覽**  
  預覽中的來源資料**預覽資料**對話方塊中，確認之前執行匯入或匯出。 **預覽資料**對話方塊會顯示最多 200 個資料列。  
   
- 預覽資料之後，您可能會想要變更已針對資料來源和目的地選取的選項。 若要進行這些變更，請在 [選取來源資料表和檢視] 頁面上，按 [上一步] 返回先前的頁面，如此您就可以在其中變更選項。  
+ 預覽資料之後，您可能會想要變更已針對資料來源和目的地選取的選項。 若要進行這些變更，請在 [選取來源資料表和檢視]  頁面上，按 [上一步]  返回先前的頁面，如此您就可以在其中變更選項。  
   
   

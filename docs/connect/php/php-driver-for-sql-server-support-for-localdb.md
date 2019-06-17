@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40c6bbf04f0c1fc5f2b4e2e360a3fcce5a68c6f7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 48c9955733672699e16cb4a00e28fa2f59717b80
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600468"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797085"
 ---
 # <a name="support-for-localdb"></a>LocalDB 的支援
 

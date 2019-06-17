@@ -3,17 +3,17 @@ title: 設定適用於 R 開發-SQL Server Machine Learning 服務的資料科�
 description: 在 遠端連線到 SQL Server 的開發工作站上安裝本機的 R 程式庫和工具。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/29/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b46ce112af08fca4c8986be51ba11a15d277fb4f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1b18844e6899615ac978e63cefa6c712f8f194ea
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62641889"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140351"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>設定 SQL Server 上的 R 開發工具的資料科學用戶端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -199,9 +199,9 @@ Microsoft 的 R 封裝有多個產品和服務。 在本機工作站上，我們
 
 使用時[RStudio](https://www.rstudio.com/)，您可以設定要使用的 R 程式庫和對應於遠端的 SQL Server 上的可執行檔的環境。
 
-1. 請檢查 SQL Server 上安裝的 R 套件版本。 如需詳細資訊，請參閱 <<c0> [ 取得 R 封裝資訊](determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)。
+1. 請檢查 SQL Server 上安裝的 R 套件版本。 如需詳細資訊，請參閱 <<c0> [ 取得 R 封裝資訊](../package-management/installed-package-information.md)。
 
-1. 安裝 Microsoft R Client，或其中一個獨立伺服器選項，以新增 RevoScaleR 和其他 R 套件，包括您的 SQL Server 執行個體所使用的基底 R 散發。 選擇在相同的版本層級或更低 （套件都是具有回溯相容性），在伺服器上提供相同的套件版本。 版本資訊，請參閱這篇文章中對應的版本：[升級 R 和 Python 元件](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+1. 安裝 Microsoft R Client，或其中一個獨立伺服器選項，以新增 RevoScaleR 和其他 R 套件，包括您的 SQL Server 執行個體所使用的基底 R 散發。 選擇在相同的版本層級或更低 （套件都是具有回溯相容性），在伺服器上提供相同的套件版本。 版本資訊，請參閱這篇文章中對應的版本：[升級 R 和 Python 元件](../install/upgrade-r-and-python.md)。
 
 1. 在 RStudio 中，[更新您的 R 路徑](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R)指向提供 RevoScaleR、 Microsoft R Open，以及其他 Microsoft 套件的 R 環境。 
 

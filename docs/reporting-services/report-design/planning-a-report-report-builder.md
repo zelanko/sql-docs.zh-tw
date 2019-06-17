@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e67d710530da43216873728ff5f1159ce8fa50f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 9c65d1db987f5d317b0719ff101012b4db0a5873
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581481"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67038028"
 ---
 # <a name="planning-a-report-report-builder"></a>規劃報表 (報表產生器)
   報表產生器可讓您建立許多種類的分頁報表。 例如，您可以建立顯示摘要或詳細銷售資料、行銷和銷售趨勢、營運報表或儀表板的報表。 您也可以建立利用豐富文字格式 (例如銷售訂單、產品目錄或正式書信) 的報表。 所有這些報表都是使用報表產生器中相同基本建置組塊的不同組合而建立。 若要建立有用且易於了解的報表，先進行規劃是有效的方法。 以下是開始作業前可能要考量的部分事項：  
@@ -51,7 +51,6 @@ ms.locfileid: "65581481"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [報表撰寫概念 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [報表產生器教學課程](../../reporting-services/report-builder-tutorials.md)  
+ [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md) [報表產生器教學課程](../../reporting-services/report-builder-tutorials.md)  
   
   

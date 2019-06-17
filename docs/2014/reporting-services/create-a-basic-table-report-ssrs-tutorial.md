@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08ed0c207b92075952ffc71669b45100e4ff7d06
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109674"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>建立基本資料表報表 (SSRS 教學課程)
@@ -32,7 +32,7 @@ ms.locfileid: "66109674"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 資料庫引擎。  
   
--   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫。  如需詳細資訊，請參閱 < [Adventure Works for SQL Server 2012 (Adventure Works for SQL Server 2012)](https://go.microsoft.com/fwlink/?LinkId=245471) (https://go.microsoft.com/fwlink/?LinkId=245471).。 如需支援的詳細資訊[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]範例資料庫和範例程式碼[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，請參閱[資料庫及範例概觀](https://go.microsoft.com/fwlink/?LinkId=110391)CodePlex 網站上。  
+-   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫。  如需詳細資訊，請參閱 < [Adventure Works for SQL Server 2012 (Adventure Works for SQL Server 2012)](https://go.microsoft.com/fwlink/?LinkId=245471) (https://go.microsoft.com/fwlink/?LinkId=245471). 。 如需支援的詳細資訊[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]範例資料庫和範例程式碼[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，請參閱[資料庫及範例概觀](https://go.microsoft.com/fwlink/?LinkId=110391)CodePlex 網站上。  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   

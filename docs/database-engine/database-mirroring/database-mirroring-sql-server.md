@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0eafeec6fb34729de0545df636386ed42186c7b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6be95b1c8a1a04f681abe270d3ab27d7b3aa62b8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629266"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795548"
 ---
 # <a name="database-mirroring-sql-server"></a>資料庫鏡像 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47629266"
   
      資料庫鏡像可提供完整或近乎完整的資料備援性，端視作業模式是高安全性模式或高效能模式而定。 如需詳細資訊，請參閱本主題稍後的 [作業模式](#OperatingModes)。  
   
-     在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 或更新版本上執行的資料庫鏡像夥伴會自動嘗試解決阻礙讀取資料頁面的特定錯誤類型。 無法讀取頁面的夥伴會向其他夥伴要求全新副本。 如果這個要求成功，無法讀取的頁面就會使用副本取代，這通常會解決錯誤。 如需詳細資訊，請參閱本主題稍後的 [自動修復頁面 &#40;可用性群組：資料庫鏡像&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)。  
+     在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 或更新版本上執行的資料庫鏡像夥伴會自動嘗試解決阻礙讀取資料頁面的特定錯誤類型。 無法讀取頁面的夥伴會向其他夥伴要求全新副本。 如果這個要求成功，無法讀取的頁面就會使用副本取代，這通常會解決錯誤。 如需詳細資訊，請參閱[自動修復頁面 &#40;可用性群組：資料庫鏡像&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)。  
   
 -   提升實際執行的資料庫在升級期間的可用性。  
   

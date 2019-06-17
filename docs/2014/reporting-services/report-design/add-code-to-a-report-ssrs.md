@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e8109678c3e9695b842eb57b976da9e653afd737
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106662"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>將程式碼加入至報表 (SSRS)
@@ -32,9 +32,9 @@ ms.locfileid: "66106662"
   
 ### <a name="to-add-embedded-code-to-a-report"></a>將內嵌程式碼加入報表中  
   
-1.  在 [設計] 檢視中，以滑鼠右鍵按一下報表框線外面的設計介面，然後按一下 [報表屬性]。  
+1.  在 [設計]  檢視中，以滑鼠右鍵按一下報表框線外面的設計介面，然後按一下 [報表屬性]  。  
   
-2.  按一下 **[程式碼]**。  
+2.  按一下 **[程式碼]** 。  
   
 3.  在 **[自訂程式碼]** 中，輸入程式碼。 當報表執行時，程式碼中的錯誤會產生警告。 下列範例會建立名為 `ChangeWord` 的自訂函數，以 "`Bike`" 取代 "`Bicycle`" 一字。  
   

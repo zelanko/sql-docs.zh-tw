@@ -3,17 +3,17 @@ title: 建立使用 miniCRAN-SQL Server Machine Learning 服務的本機 R 套�
 description: 使用 miniCran 來偵測、 組合，並將 R 封裝相依性安裝到單一的彙總套件。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: d9154bc1c01bdf9bd7bdfd7a4032b4ed173464d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 83d73bb9d075825472cda96a7dcd54e25549de5e
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642601"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140624"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>建立使用 miniCRAN 本機 R 套件儲存機制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -93,7 +93,7 @@ local_repo <- "C:/mylocalrepo"
     plot(makeDepGraph(pkgs_needed))
     ```
 
-3. 建立本機存放庫。 請務必變更 R 版本，視您的 SQL Server 執行個體上安裝的版本。 SQL Server 2016 上是版本 3.2.2、 3.3 版位於 SQL Server 2017。 如果您執行元件升級時，您的版本可能是較新。 如需詳細資訊，請參閱 <<c0> [ 取得 R 和 Python 封裝資訊](determine-which-packages-are-installed-on-sql-server.md)。
+3. 建立本機存放庫。 請務必變更 R 版本，視您的 SQL Server 執行個體上安裝的版本。 SQL Server 2016 上是版本 3.2.2、 3.3 版位於 SQL Server 2017。 如果您執行元件升級時，您的版本可能是較新。 如需詳細資訊，請參閱 <<c0> [ 取得 R 和 Python 封裝資訊](../package-management/installed-package-information.md)。
 
     ```R
     pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
@@ -159,8 +159,5 @@ pdb[, c("Package", "Version", "License")]
 
 ## <a name="see-also"></a>另請參閱
 
-+ [取得封裝資訊](determine-which-packages-are-installed-on-sql-server.md)
++ [取得封裝資訊](../package-management/installed-package-information.md)
 + [R 教學課程](../tutorials/sql-server-r-tutorials.md)
-+ [使用說明指南](sql-server-machine-learning-tasks.md)
-
-

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: da9676f029bb917adf15690b6870583fb0465fc4
-ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65836220"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>安裝 SQL Server machine learning 無法存取網際網路的電腦上的 R 和 Python

@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 451efaa1bb6968c2e2f43e5fad01646e507ae8ec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082864"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>測試及驗證工作與操作方法 (資料採礦)
@@ -39,7 +39,7 @@ ms.locfileid: "66082864"
   
  前三個圖表會使用 **[輸入選擇]** 索引標籤來定義用於產生圖表的資料。  
   
- 交叉驗證圖表是使用 [交叉驗證] 索引標籤上所提供的其他輸入所建立。如需詳細資訊，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](cross-validation-analysis-services-data-mining.md)。  
+ 交叉驗證圖表是使用 [交叉驗證]  索引標籤上所提供的其他輸入所建立。如需詳細資訊，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](cross-validation-analysis-services-data-mining.md)。  
   
  如需如何使用採礦精確度圖表的詳細資訊，請參閱[測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)。  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5fb555b3731f9afc5296f7f558bb7a4b58b5b6bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: faac11590e21ec6bc4ef27f73c50bf61a66b61a5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694616"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798555"
 ---
 # <a name="using-statements-with-sql"></a>使用 SQL 陳述式
 

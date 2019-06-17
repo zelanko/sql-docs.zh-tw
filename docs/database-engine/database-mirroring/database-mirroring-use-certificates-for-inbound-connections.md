@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6057c87d7fb4e1a5f4b29879179efa0ff716275e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 1b6b6a99a9a3fcc382870932978d3b92a5ec0324
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529695"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795488"
 ---
 # <a name="database-mirroring---use-certificates-for-inbound-connections"></a>資料庫鏡像 - 使用傳入連接的憑證
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ GO
   
  如需建立鏡像資料庫的相關資訊，包括 Transact-SQL 範例在內，請參閱[準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
- 如需建立高效能模式工作階段的 Transact-SQL 範例，請參閱 [範例：使用憑證設定資料庫鏡像 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
+ 如需建立高效能模式工作階段的 Transact-SQL 範例，請參閱[範例：使用憑證設定資料庫鏡像 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  將憑證複製到另一個系統時，請使用安全複製方法。 務必將您所有的憑證小心保管。  

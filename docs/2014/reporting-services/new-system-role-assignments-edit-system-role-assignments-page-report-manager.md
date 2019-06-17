@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661ae0cafe5b484839bbee2531f82f3b62f72c75
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108124"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>新增系統角色指派：編輯系統角色指派頁面 （報表管理員）
@@ -35,7 +35,7 @@ ms.locfileid: "66108124"
   
 1.  開啟報表管理員。  
   
-2.  在頁面的頂端，按一下右邊角落的 **[站台設定]**。 這樣就會開啟該站台的 [一般] 屬性頁面。  
+2.  在頁面的頂端，按一下右邊角落的 **[站台設定]** 。 這樣就會開啟該站台的 [一般] 屬性頁面。  
   
 3.  選取 **[安全性]** 索引標籤。您必須擁有「內容管理員」和「系統管理員」權限才能存取此頁面。  
   

@@ -11,17 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061595"
 ---
 # <a name="analysis-of-data-flow"></a>資料流程分析
   您可以使用[catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB`資料庫檢視，分析封裝的資料流程。 每當資料流程元件傳送資料至下游元件，此檢視就會顯示一個資料列。 您可以使用這項資訊深入了解傳送至每個元件的資料列。  
   
 > [!NOTE]  
->  您必須將記錄層次設定為 [詳細資訊]，以透過 catalog.execution_data_statistics 檢視來擷取資訊。  
+>  您必須將記錄層次設定為 [詳細資訊]  ，以透過 catalog.execution_data_statistics 檢視來擷取資訊。  
   
  下列範例顯示在封裝元件之間傳送的資料列數。  
   

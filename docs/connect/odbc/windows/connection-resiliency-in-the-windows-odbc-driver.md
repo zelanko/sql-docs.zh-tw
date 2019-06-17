@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a038d146b21660e629c7ba7e44332aa6d2133a2c
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+manager: jroth
+ms.openlocfilehash: 94845da5a211c1f5b3ebf9f27a8a7ba780bc4b71
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658162"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797822"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 驅動程式中的連接恢復功能
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

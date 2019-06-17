@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b8b6e629e68cf9d0074a7946258466e4de0001fc
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 1d0c5a6501caf8d36e75deb1ae0b90d7ff3a7ea0
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65576812"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037878"
 ---
 # <a name="report-parameters-concepts-report-builder-and-ssrs"></a>報表參數概念 (報表產生器及 SSRS)
   您可以將參數加入至報表，以便連結相關報表、控制報表外觀、篩選報表資料，或是將報表的範圍縮小至特定使用者或位置。  
@@ -42,8 +42,7 @@ ms.locfileid: "65576812"
  如果您打算建立報表快照集、記錄或已發行報表的訂閱，則必須了解報表參數如何影響報表的設計需求。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表撰寫概念 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md) [報表內嵌資料集和共用資料集&#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [教學課程：將參數加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
   

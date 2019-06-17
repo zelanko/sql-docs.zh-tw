@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 789dc265513c4d0068c721e8cdefb07d7a3d5331
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63297913"
 ---
 # <a name="connect-to-a-registered-server-sql-server-management-studio"></a>連接至已註冊的伺服器 (SQL Server Management Studio)
@@ -27,6 +27,6 @@ ms.locfileid: "63297913"
   
 #### <a name="to-connect-to-a-registered-server"></a>若要連接到已註冊的伺服器  
   
-1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器，指向 [連接]，然後按一下 [物件總管]。  
+1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器，指向 [連接]  ，然後按一下 [物件總管]  。  
   
   

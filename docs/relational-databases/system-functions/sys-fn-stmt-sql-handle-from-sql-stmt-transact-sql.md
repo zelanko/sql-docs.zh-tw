@@ -15,10 +15,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 049fb28c9d49dcfe359363e0be8d78ba8a4bca8d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62744481"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
@@ -40,7 +40,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="arguments"></a>引數  
  *query_sql_text*  
- 這是查詢的您想要的控制代碼的查詢存放區中的文字。 *query_sql_text*已**nvarchar （max)**，沒有預設值。  
+ 這是查詢的您想要的控制代碼的查詢存放區中的文字。 *query_sql_text*已**nvarchar （max)** ，沒有預設值。  
   
  *query_param_type*  
  是查詢的參數類型。 *query_param_type*已**tinyint**。 可能的值為：  

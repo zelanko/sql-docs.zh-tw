@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d28d829280e205028a99afd9fec2e019bf567ab
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089483"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 中已被取代的 SQL Server 功能
@@ -31,7 +31,7 @@ ms.locfileid: "66089483"
 ### <a name="slipstream-functionality"></a>匯集功能  
  產品更新功能取代了之前 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1 中可用的匯集功能。 因此的命令列參數 /*PCUSource*和 /*CUSource*，匯集功能應該不會再使用相關聯。 這些參數仍可繼續運作，但 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程式的未來版本可能會移除這些參數。 /*UpdateSource*參數，結合了 「 匯集參數功能 /*PCUSource*和 /*CUSource*。  
   
- 如需有關中可用的匯集功能[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]PCU1 中，請參閱 <<c2> [ 匯集 SQL Server 更新](https://go.microsoft.com/fwlink/?LinkId=219945)(https://go.microsoft.com/fwlink/?LinkId=219945)。  
+ 如需有關中可用的匯集功能[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]PCU1 中，請參閱 <<c2> [ 匯集 SQL Server 更新](https://go.microsoft.com/fwlink/?LinkId=219945)(https://go.microsoft.com/fwlink/?LinkId=219945) 。  
   
 ## <a name="see-also"></a>另請參閱  
  [回溯相容性](../../2014/getting-started/backward-compatibility.md)  

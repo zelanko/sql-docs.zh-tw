@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63057171"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Analytics Platform System 設定 InfiniBand 網路介面卡
@@ -72,9 +72,9 @@ ms.locfileid: "63057171"
   
     ![在 [管理] 節點的 InfiniBand 連接](media/network-teamib.png "管理節點 InfiniBand 連接")  
   
-4.  從 [Internet Protocol Version 4 (TCP/IPv4) 屬性] 視窗中，記下的值**IP 位址**並**子網路遮罩**。  IP 位址**_設備\_網域_-AD01**節點是分析平台系統的 DNS 伺服器的 IP 位址。  
+4.  從 [Internet Protocol Version 4 (TCP/IPv4) 屬性] 視窗中，記下的值**IP 位址**並**子網路遮罩**。  IP 位址 **_設備\_網域_-AD01**節點是分析平台系統的 DNS 伺服器的 IP 位址。  
   
-5.  上重複步驟 1-5 上述 TeamIB1 配接器**_設備\_網域_-ad02 移**伺服器。  
+5.  上重複步驟 1-5 上述 TeamIB1 配接器 **_設備\_網域_-ad02 移**伺服器。  
   
     ![PDW 管理節點 InfiniBand 1 屬性](media/network-ip1-properties.png "PDW 管理節點 InfiniBand 1 屬性")  
   

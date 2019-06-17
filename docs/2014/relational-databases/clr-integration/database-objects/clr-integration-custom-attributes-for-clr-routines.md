@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 817591cec64a4210c4cc573588be1b8ac6dfb8a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873802"
 ---
 # <a name="custom-attributes-for-clr-routines"></a>CLR 常式的自訂屬性

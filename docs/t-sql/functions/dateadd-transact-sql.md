@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2b31c801d485d4e127993ba7664b5277e5a1e01
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 4f2e86162a7b7fc8dd491241fb598ed8083e2c78
+ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65943689"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469648"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,7 +88,8 @@ DATEADD (datepart , number , date )
 針對 *date*，`DATEADD` 會接受資料行運算式、運算式、字串常值或使用者定義變數。 字串常值必須解析成 **datetime**。 請使用四位數年份以避免模糊不清的問題。 如需兩位數年份的資訊，請參閱[設定兩位數年份的截止伺服器設定選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。
   
 ## <a name="return-types"></a>傳回類型
-*date* 引數資料類型會變成 `DATEADD` 傳回值的資料類型，但字串常值的 *date* 值除外。 對於字串常值，`DATEADD` 會傳回 **datetime** 值。 如果字串常值的秒數小數位數超過三個小數位數位置 (.nnn)，或者字串常值包含時區時差部分，`DATEADD` 就會引發錯誤。
+
+這個方法的傳回值資料類型為動態。 傳回型別取決於提供給 `date` 的引數而定。 如果 `date` 的值是字串常值日期，則 `DATEADD` 會傳回 **datetime** 值。 如果提供其他有效輸入資料類型給 `date`，則 `DATEADD` 會傳回相同的資料類型。 如果字串常值的秒數小數位數超過三個小數位數位置 (.nnn)，者字串常值包含時區時差部分，則 `DATEADD` 會引發錯誤。
   
 ## <a name="return-value"></a>傳回值  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f132b2af-0433-4fbe-b03f-69a7d631093a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: efbf689ea02b318a7a389a848b5a516090be699f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: f0fb2d76d491482e418a005c4fb1f5879620709b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606312"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797099"
 ---
 # <a name="pdostatementsetfetchmode"></a>PDOStatement::setFetchMode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
