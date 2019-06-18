@@ -17,10 +17,10 @@ ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ba639ea5bc65cb8d5e753883418ad3937919fa1d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577657"
 ---
 # <a name="monitoring-report-server-performance"></a>監視報表伺服器效能
@@ -71,7 +71,7 @@ ms.locfileid: "65577657"
 |效能物件|注意|  
 |------------------------|-----------|  
 |**.NET CLR 資料** 和 **.NET CLR 記憶體**|報表管理員會使用 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 效能計數器。 如需詳細資訊，請參閱 MSDN 上的「Improving .NET Application Performance and Scalability」。|  
-|**處理**|針對 ReportingServicesService 執行個體加入 [已耗用時間] 和 [處理序識別碼] 效能計數器，以便依據處理序識別碼追蹤處理序執行時間。|  
+|**處理**|針對 ReportingServicesService 執行個體加入 [已耗用時間]  和 [處理序識別碼]  效能計數器，以便依據處理序識別碼追蹤處理序執行時間。|  
   
 ## <a name="sharepoint-events"></a>SharePoint 事件  
  除了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 效能物件以外，如果您是以 SharePoint 整合模式執行報表伺服器，而且已經將報表環境設定成使用 SharePoint 產品，則可能也要設定 SharePoint 事件。 在本節中，如果您的報表環境已經與 SharePoint 整合，請使用「SharePoint 整合模式中報表伺服器的事件」來檢閱可能會提供有用資訊的診斷事件。  

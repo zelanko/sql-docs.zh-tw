@@ -12,10 +12,10 @@ ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 996a7f53b5969c9c1d8c39edcd23b62d45a7ff15
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65502732"
 ---
 # <a name="mhtml-device-information-settings"></a>MHTML 裝置資訊設定
@@ -26,7 +26,7 @@ ms.locfileid: "65502732"
 |**JavaScript**|指出在轉譯的報表中是否支援 JavaScript。|  
 |**OutlookCompat**|指出是否要使用額外中繼資料轉譯，讓報表在 Outlook 中有較佳的外觀。 預設值為 **true**。|  
 |**MHTML 片段**|指出是否建立 MHTML 片段來取代完整的 MHTML 文件。 MHTML 片段會在 TABLE 元素中包含報表內容，並省略 HTML 和 BODY 元素。 預設值為 **false**。|  
-|**DataVisualizationFitSizing**|指示資料在 Tablix 內的視覺效果調整行為。 其中包括圖表、量測計和地圖。<br /><br /> 可能的值為 **[近似]** 和 **[精確]**。<br /><br /> 預設值為 **[近似]**。 如果從 **rsreportserver.config** 檔案中移除此設定，則預設行為是 **[精確]**。<br /><br /> 啟用 **[精確]** 可能會影響效能，因為判斷精確大小的處理所花的時間可能會比較長。|  
+|**DataVisualizationFitSizing**|指示資料在 Tablix 內的視覺效果調整行為。 其中包括圖表、量測計和地圖。<br /><br /> 可能的值為 **[近似]** 和 **[精確]** 。<br /><br /> 預設值為 **[近似]** 。 如果從 **rsreportserver.config** 檔案中移除此設定，則預設行為是 **[精確]** 。<br /><br /> 啟用 **[精確]** 可能會影響效能，因為判斷精確大小的處理所花的時間可能會比較長。|  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

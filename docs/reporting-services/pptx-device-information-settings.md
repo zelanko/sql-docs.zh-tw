@@ -14,10 +14,10 @@ ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 53f5e080a4ce654eb133aed340034e547f247737
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503335"
 ---
 # <a name="pptx-device-information-settings"></a>PPTX 裝置資訊設定

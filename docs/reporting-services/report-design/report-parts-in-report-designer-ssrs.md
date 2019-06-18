@@ -11,10 +11,10 @@ ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e97b6d8c05fa5e5b1487f04a5ff87849f703c90d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576788"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>報表設計師中的報表組件 (SSRS)

@@ -16,10 +16,10 @@ ms.assetid: 5e8aa5fb-2d4a-45ac-bbd8-47ed3c667cbb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a805b99064325cdcb7ca69a318a7efb95d57c4f6
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573272"
 ---
 # <a name="configurationsetting-property---instancename"></a>ConfigurationSetting 屬性 - InstanceName

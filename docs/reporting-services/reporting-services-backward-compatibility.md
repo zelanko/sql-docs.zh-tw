@@ -14,10 +14,10 @@ ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b16398915b774454895ee39ad80fa008d22a8a75
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571459"
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Reporting Services 回溯相容性

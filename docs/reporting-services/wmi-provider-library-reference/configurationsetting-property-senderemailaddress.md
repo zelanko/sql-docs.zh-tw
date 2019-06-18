@@ -16,10 +16,10 @@ ms.assetid: 087de0ab-6505-48c6-80f3-bd493f76282d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 62c64167886a28ad05a60a576cfa0a42a2cbbcf1
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570246"
 ---
 # <a name="configurationsetting-property---senderemailaddress"></a>ConfigurationSetting 屬性 - SenderEmailAddress

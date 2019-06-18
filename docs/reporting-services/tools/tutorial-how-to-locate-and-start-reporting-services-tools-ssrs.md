@@ -21,10 +21,10 @@ ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 27e90deec22d20f65943f9c7e07cf425772c7737
-ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65875168"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>教學課程：如何尋找及啟動 Reporting Services 工具 (SSRS)
@@ -46,13 +46,13 @@ ms.locfileid: "65875168"
   
 ### <a name="to-start-the-reporting-services-configuration-manager"></a>啟動 Reporting Services 組態管理員  
   
-1.  在 Windows 的 [開始] 畫面上，輸入 **reporting** ，然後在 [應用程式]  搜尋結果中，按一下 [Reporting Services 組態管理員] 。  
+1.  在 Windows 的 [開始] 畫面上，輸入 **reporting** ，然後在 [應用程式]  搜尋結果中，按一下 [Reporting Services 組態管理員]  。  
   
      ![Reporting Services 組態管理員啟動中](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "Reporting Services 組態管理員啟動中")  
   
      **Or**  
   
-     依序按一下 **[開始]**、 **[程式集]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[組態工具]** 和 **[Reporting Services 組態管理員]**。  
+     依序按一下 **[開始]** 、 **[程式集]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[組態工具]** 和 **[Reporting Services 組態管理員]** 。  
   
      **[報表伺服器安裝執行個體選取範圍]** 對話方塊隨即出現，以便讓您選取所要設定的報表伺服器執行個體。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "65875168"
   
 3.  在 **在stance Name**中，選擇您要設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 只有 SQL Server 2008 和更新版的報表伺服器執行個體會出現在此清單中。 您不能設定舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
-4.  按一下 **[連接]**。  
+4.  按一下 **[連接]** 。  
   
 5.  若要確認您已啟動工具，請將結果與下圖相比較：  
   
@@ -92,21 +92,21 @@ ms.locfileid: "65875168"
   
 ### <a name="to-start-sql-server-management-studio"></a>若要啟動 SQL Server Management Studio  
   
-1.  在 Windows 的 [開始] 畫面中，輸入 **sql server** ，然後在 [應用程式]  搜尋結果中，按一下 [SQL Server Management Studio] 。  
+1.  在 Windows 的 [開始] 畫面中，輸入 **sql server** ，然後在 [應用程式]  搜尋結果中，按一下 [SQL Server Management Studio]  。  
   
      ![Windows 開始畫面的 Management Studio](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "Windows 開始畫面的 Management Studio")  
   
      **Or**  
   
-     依序按一下 [開始] 、[所有程式] 和 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，然後按一下 [SQL Server Management Studio] 。 此時會出現 **[連接到伺服器]** 對話方塊。  
+     依序按一下 [開始]  、[所有程式]  和 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，然後按一下 [SQL Server Management Studio]  。 此時會出現 **[連接到伺服器]** 對話方塊。  
   
-2.  如果 **[連接到伺服器]** 對話方塊沒有出現，請在 **[物件總管]** 中按一下 **[連接]** ，然後選取 **[Reporting Services]**。  
+2.  如果 **[連接到伺服器]** 對話方塊沒有出現，請在 **[物件總管]** 中按一下 **[連接]** ，然後選取 **[Reporting Services]** 。  
   
-3.  在 **[伺服器類型]** 清單中，選取 **[Reporting Services]**。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不在清單上，就表示未安裝。  
+3.  在 **[伺服器類型]** 清單中，選取 **[Reporting Services]** 。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不在清單上，就表示未安裝。  
   
 4.  在 **[伺服器名稱]** 清單中，選取一個報表伺服器執行個體。 本機執行個體隨即出現在清單中。 您也可以輸入遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。  
   
-5.  按一下 **[連接]**。 您可以展開根節點以設定伺服器屬性、修改角色定義，或關閉報表伺服器功能。  
+5.  按一下 **[連接]** 。 您可以展開根節點以設定伺服器屬性、修改角色定義，或關閉報表伺服器功能。  
   
 ##  <a name="bkmk_ssdt"></a> 含有報表設計師和報表精靈的 SQL Server 資料工具  
  您可以選擇兩個不同的工具來建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分頁報表︰報表設計師和 [報表產生器](#bkmk_report_builder)。  
@@ -117,13 +117,13 @@ ms.locfileid: "65875168"
   
 ### <a name="to-start-report-designer"></a>啟動報表設計師  
   
-1.  開啟 [SQL Server Data Tools]。  
+1.  開啟 [SQL Server Data Tools]  。  
   
-2.  在 **[檔案]** 功能表上，指向 **[開新檔案]**，然後按一下 **[專案]**。  
+2.  在 **[檔案]** 功能表上，指向 **[開新檔案]** ，然後按一下 **[專案]** 。  
   
-3.  在 **[專案類型]** 清單中，按一下 **[商業智慧專案]**。  
+3.  在 **[專案類型]** 清單中，按一下 **[商業智慧專案]** 。  
   
-4.  在 **[範本]** 清單中，按一下 **[報表伺服器專案]**。 下圖顯示專案範本出現在對話方塊中的情形：  
+4.  在 **[範本]** 清單中，按一下 **[報表伺服器專案]** 。 下圖顯示專案範本出現在對話方塊中的情形：  
   
      ![新增專案範本對話方塊](../../reporting-services/tools/media/rs-ui-newrsproject.gif "新增專案範本對話方塊")  
   
@@ -142,11 +142,11 @@ ms.locfileid: "65875168"
   
 ### <a name="to-start-includessrbnoversionincludesssrbnoversionmd"></a>啟動 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入口網站的 [新增] 功能表上，選取 [分頁報表]。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入口網站的 [新增]  功能表上，選取 [分頁報表]  。  
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
-2.  如果這部電腦尚未安裝 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，請選取 [取得 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]]。  
+2.  如果這部電腦尚未安裝 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，請選取 [取得 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]]  。  
   
      或  
   
@@ -161,11 +161,11 @@ ms.locfileid: "65875168"
   
 ### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-shortmd"></a>啟動 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入口網站的 [新增] 功能表上，選取 [行動報表]。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入口網站的 [新增]  功能表上，選取 [行動報表]  。  
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
-2.  如果這部電腦尚未安裝 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]，請選取 [取得 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]]。  
+2.  如果這部電腦尚未安裝 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]，請選取 [取得 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]]  。  
   
      或  
   

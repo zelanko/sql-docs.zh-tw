@@ -12,10 +12,10 @@ ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e63af3904696e053d7e74419bd7cffdd23aa117
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65504006"
 ---
 # <a name="excel-device-information-settings"></a>Excel 裝置資訊設定

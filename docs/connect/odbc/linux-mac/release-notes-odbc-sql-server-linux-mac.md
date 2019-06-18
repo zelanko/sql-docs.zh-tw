@@ -11,11 +11,11 @@ author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: 6f6cdc23073585f5a9a6a8cee0c3fc779f7ca27a
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042895"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63190580"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上的 Microsoft ODBC Driver to SQL Server 版本資訊
 

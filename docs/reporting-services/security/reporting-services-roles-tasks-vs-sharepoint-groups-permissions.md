@@ -17,10 +17,10 @@ ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 091cdef1316ace27dd2928fb9c263cbc19ea0e61
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570841"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 角色工作與SharePoint 群組權限
@@ -39,7 +39,7 @@ ms.locfileid: "65570841"
 -   [比較原生模式工作和 SharePoint 權限](#bkmk_compare_tasks_permissions)  
   
 ##  <a name="bkmk_compare_tools_terms"></a> 比較權限工具和詞彙  
- **原生模式：**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式權限物件 (角色和工作) 是在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中建立，並為報表管理員的個別使用者設定。  
+ **原生模式：** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式權限物件 (角色和工作) 是在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中建立，並為報表管理員的個別使用者設定。  
   
  **SharePoint 模式** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式會使用 SharePoint 權限功能。 SharePoint 群組和權限是從 **[站台設定]** 頁面管理。  
   

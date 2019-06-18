@@ -12,10 +12,10 @@ ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bc3d4122d276053a12cfcb98f58a3374634f4e5b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573162"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML 報表資料的元素路徑語法 (SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "65573162"
 |&#124; (分隔號)|會分隔語法項目， 您只能選擇其中一個項目。|  
 |`[ ]` (方括弧)|選擇性的語法項目。 不要輸入方括號。|  
 |**{ }** (大括弧)|會分隔語法項目的參數。|  
-|[**,**...*n*]|指出先前項目可以重複 *n* 次。 以逗號分開各次出現項目。|  
+|[ **,** ...*n*]|指出先前項目可以重複 *n* 次。 以逗號分開各次出現項目。|  
   
 ## <a name="syntax"></a>語法  
   
@@ -76,7 +76,7 @@ XMLLocalName :: =
 |**ElementNode**|XML 文件中的 XML 節點。 節點是由標記指定，並存在於與其他節點構成的階層式關聯性中。 例如，\<Customers> 是根元素節點。 \<Customer> 是 \<Customers>的子元素。|  
 |**XMLName**|節點的名稱。 例如，Customers 節點的名稱為 Customers。 **XMLName** 可以使用命名空間識別碼做為前置詞，以確保所有節點的名稱都是唯一的。|  
 |**編碼方式**|指出本元素的 **Value** 是已編碼的 XML，需要加以解碼並加入做為此元素的子元素。|  
-|**FieldList**|定義用來擷取資料的元素與屬性組合。<br /><br /> 如果沒有指定，所有屬性和子元素都會做為欄位使用。 如果指定了空的欄位清單 (**{}**)，就不會使用這個節點中的任何欄位。<br /><br /> **FieldList** 可能不會同時包含 **Value** 及 **Element** 或 **ElementNode**。|  
+|**FieldList**|定義用來擷取資料的元素與屬性組合。<br /><br /> 如果沒有指定，所有屬性和子元素都會做為欄位使用。 如果指定了空的欄位清單 ( **{}** )，就不會使用這個節點中的任何欄位。<br /><br /> **FieldList** 可能不會同時包含 **Value** 及 **Element** 或 **ElementNode**。|  
 |**欄位**|指定擷取做為資料集欄位的資料。|  
 |**Attribute**|**ElementNode**中名稱與值的配對。 例如，在 \<Customer ID="1"> 元素節點中，**ID** 為一屬性，而 **@ID(Integer)** 會在對應的資料欄位 **ID** 中以整數資料類型傳回 "1"。|  
 |**ReplTest1**|元素的值。 **Value** 只能用於元素路徑中的最後一個 **ElementNode** 上。 例如，因為 \<Return> 是分葉節點，如果將其加入元素路徑的結尾，**Return {@}** 的值會是 **Chair**。|  
@@ -177,7 +177,7 @@ XMLLocalName :: =
   
 2.  建立 XML 資料來源的新資料集。  
   
-3.  在 **[資料集屬性]** 對話方塊中，按一下 **[查詢設計工具]**。 以文字為基礎的查詢設計工具對話方塊隨即開啟。  
+3.  在 **[資料集屬性]** 對話方塊中，按一下 **[查詢設計工具]** 。 以文字為基礎的查詢設計工具對話方塊隨即開啟。  
   
 4.  在查詢窗格中，輸入下列兩行程式碼：  
   
@@ -195,7 +195,7 @@ XMLLocalName :: =
   
      `<Query>`  
   
-8.  按一下 [執行查詢]\(!)。  
+8.  按一下 [執行查詢]  \(!)。  
   
      結果集會顯示具有下列資料行的 4 行資料： `xmlns`、 `Customer.ID`、 `FirstName`、 `LastName`、 `ID`、 `Qty`、 `Order`。  
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - execution endpoints [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b4adc5d154dedbdf120e035d0cab90bd89e4d07f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 19daac65c808691be20621d6718b4b71e33b83f9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814191"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284624"
 ---
 # <a name="report-server-web-service-endpoints"></a>報表伺服器 Web 服務端點
   報表伺服器 Web 服務提供幾個端點來管理報表伺服器以及執行和導覽報表。  

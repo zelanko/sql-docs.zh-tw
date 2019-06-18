@@ -11,10 +11,10 @@ ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0e8441dec655398ec530bc95049a339edd9e01ab
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571408"
 ---
 # <a name="schedule-properties-reports-page"></a>排程屬性 (報表頁面)
@@ -25,11 +25,11 @@ ms.locfileid: "65571408"
  開啟 [排程屬性] 頁面：
  1. 啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
  2. 連接到報表伺服器。
- 3. 開啟 [共用排程] 資料夾。
- 4. 以滑鼠右鍵按一下共用的排程，然後選取 [屬性]。
- 5. 按一下 [報表]。  
+ 3. 開啟 [共用排程]  資料夾。
+ 4. 以滑鼠右鍵按一下共用的排程，然後選取 [屬性]  。
+ 5. 按一下 [報表]  。  
   
-  您也可以從 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 入口網站的 [網站設定] 管理共用的排程。
+  您也可以從 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 入口網站的 [網站設定]  管理共用的排程。
   
 > [!NOTE]  
 >  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供此功能。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2017 的版本及支援的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  

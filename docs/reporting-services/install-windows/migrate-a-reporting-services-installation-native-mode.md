@@ -8,10 +8,10 @@ ms.author: maggies
 manager: kfile
 ms.date: 11/06/2018
 ms.openlocfilehash: fe461a189bcf7a123db40674a5cd035621151999
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570719"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>移轉 Reporting Services 安裝 (原生模式)
@@ -144,7 +144,7 @@ ms.locfileid: "65570719"
 
 ## <a name="bkmk_install_ssrs"></a> 安裝 SQL Server Reporting Services
 
- 在僅限檔案模式下，安裝新的報表伺服器執行個體，如此您就可以將它設定為使用非預設值。 針對命令列安裝，請使用 **FilesOnly** 引數。 在 [安裝精靈] 中，選取 [安裝但不設定] 選項。  
+ 在僅限檔案模式下，安裝新的報表伺服器執行個體，如此您就可以將它設定為使用非預設值。 針對命令列安裝，請使用 **FilesOnly** 引數。 在 [安裝精靈] 中，選取 [安裝但不設定]  選項。  
   
  按一下下列其中一個連結，即可檢視有關如何安裝新 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]執行個體的指示：  
   
@@ -239,7 +239,7 @@ ms.locfileid: "65570719"
 
 您無法利用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來刪除向外延展金鑰， 而是必須使用 SQL Server Management Studio，從 **ReportServer** 資料庫中的 **Keys** 資料表刪除舊金鑰。 請刪除 Keys 資料表中的所有資料列。 此動作會清除資料表，使其僅用於還原對稱金鑰，其步驟如下所示。  
 
-刪除金鑰之前，建議您先備份對稱加密金鑰。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來備份金鑰。 請開啟 [設定管理員]，然後按一下 [加密金鑰] 索引標籤，再按一下 [備份] 按鈕。 您也可以編寫 WMI 指令碼命令，備份加密金鑰。 如需 WMI 的詳細資訊，請參閱 [BackupEncryptionKey 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)。  
+刪除金鑰之前，建議您先備份對稱加密金鑰。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來備份金鑰。 請開啟 [設定管理員]，然後按一下 [加密金鑰] 索引標籤，再按一下 [備份]  按鈕。 您也可以編寫 WMI 指令碼命令，備份加密金鑰。 如需 WMI 的詳細資訊，請參閱 [BackupEncryptionKey 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)。  
   
 1. 啟動 Reporting Services 設定管理員，並連線到您安裝的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
@@ -264,7 +264,7 @@ ms.locfileid: "65570719"
 
 ## <a name="bkmk_windowsservice_group"></a> Windows 服務群組和安全性 ACL
 
- [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 中有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 服務群組這個服務群組，會用來為跟著 QL Server Reporting Services 安裝的所有登錄機碼、檔案和資料夾建立安全性 ACL。 這個 Windows 群組名稱會以格式 SQLServerReportServerUser$\<computer_name>$\<instance_name> 顯示。  
+ [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 中有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 服務群組這個服務群組，會用來為跟著 QL Server Reporting Services 安裝的所有登錄機碼、檔案和資料夾建立安全性 ACL。 這個 Windows 群組名稱會以格式 SQLServerReportServerUser$\<computer_name  >$\<instance_name  > 顯示。  
 
 ## <a name="bkmk_verify"></a> 驗證您的部署
 

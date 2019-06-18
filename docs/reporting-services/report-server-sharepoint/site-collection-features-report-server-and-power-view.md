@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: dce33b0f267dadd8454378fccb72112970553a96
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580508"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>在 SharePoint 中啟用報表伺服器和 Power View 整合功能
@@ -38,33 +38,33 @@ ms.locfileid: "65580508"
   
 1.  開啟您想要啟用 Reporting Services 功能的網站瀏覽器。  
   
-2.  按一下 **[網站動作]**。  
+2.  按一下 **[網站動作]** 。  
   
-3.  按一下 **[站台設定]**。  
+3.  按一下 **[站台設定]** 。  
   
 4.  在網站集合管理群組中，按一下 **[網站集合功能]** 。  
   
 5.  在清單中尋找 **[報表伺服器整合功能]** 或 **[Power View 整合功能]** 。  
   
-6.  按一下 **[啟用]**。  
+6.  按一下 **[啟用]** 。  
   
- 若要停用功能，您可以使用相同的程序，但是要按一下 **[停用]** ，而不是 **[啟用]**。  
+ 若要停用功能，您可以使用相同的程序，但是要按一下 **[停用]** ，而不是 **[啟用]** 。  
   
 ## <a name="activate-or-deactivate-reporting-services-central-administration-site-collection-feature"></a>啟用或停用 Reporting Services 管理中心的網站集合功能
   
 1.  開啟瀏覽器，並移至 SharePoint 管理中心。  
   
-2.  按一下 **[網站動作]**。  
+2.  按一下 **[網站動作]** 。  
   
-3.  按一下 **[站台設定]**。  
+3.  按一下 **[站台設定]** 。  
   
 4.  在網站集合管理群組中，按一下 **[網站集合功能]** 。  
   
 5.  在清單中尋找 **[報表伺服器管理中心功能]** 。  
   
-6.  按一下 **[啟用]**。  
+6.  按一下 **[啟用]** 。  
   
- 若要停用此功能，您可以使用相同的程序，但是要按一下 **[停用]** ，而不是 **[啟用]**。  
+ 若要停用此功能，您可以使用相同的程序，但是要按一下 **[停用]** ，而不是 **[啟用]** 。  
   
 ## <a name="next-steps"></a>後續步驟
 

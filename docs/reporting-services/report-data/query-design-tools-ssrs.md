@@ -19,10 +19,10 @@ ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 840b964a8010ad7682a4d6d4d62a53192da9cfbb
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571213"
 ---
 # <a name="query-design-tools-ssrs"></a>查詢設計工具 (SSRS)
@@ -52,7 +52,7 @@ ms.locfileid: "65571213"
   
 -   **依查詢設計工具類型。** 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源同時支援圖形化查詢設計工具以及以文字為基礎的查詢設計工具。  
   
--   **依查詢語言變化。** 例如， [!INCLUDE[tsql](../../includes/tsql-md.md)] 這類的查詢語言在語法上可能會視資料來源類型而有所不同。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言和 Oracle SQL 語言在查詢命令的語法上有一些不同。  
+-   **依查詢語言變化。** 例如， [!INCLUDE[tsql](../../includes/tsql-md.md)] 這類的查詢語言在語法上可能會視資料來源類型而有所不同。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言和 Oracle SQL 語言在查詢命令的語法上有一些不同。  
   
 -   **依資料庫物件名稱的結構描述部分支援。** 當資料來源使用結構描述做為資料庫物件識別碼的一部分時，必須針對不使用預設結構描述的任何名稱，提供結構描述名稱做為查詢的一部分。 例如， `SELECT FirstName, LastName FROM [Person].[Person]`。  
   
@@ -65,21 +65,21 @@ ms.locfileid: "65571213"
   
  ![關聯式資料查詢的一般查詢設計工具](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "關聯式資料查詢的一般查詢設計工具")  
   
- 建議您利用以文字為基礎的查詢設計工具來建立複雜的查詢、使用預存程序、查詢 XML 資料，以及撰寫動態查詢。 根據資料來源，您可能可以切換工具列上的 [當成文字編輯] 按鈕，以便在圖形化查詢設計工具和以文字為基礎的查詢設計工具之間切換。 如需詳細資訊，請參閱 [以文字為基礎的查詢設計工具使用者介面](https://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)。  
+ 建議您利用以文字為基礎的查詢設計工具來建立複雜的查詢、使用預存程序、查詢 XML 資料，以及撰寫動態查詢。 根據資料來源，您可能可以切換工具列上的 [當成文字編輯]  按鈕，以便在圖形化查詢設計工具和以文字為基礎的查詢設計工具之間切換。 如需詳細資訊，請參閱 [以文字為基礎的查詢設計工具使用者介面](https://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)。  
   
 ##  <a name="Graphical"></a> 圖形化查詢設計工具  
  圖形化查詢設計工具用於建立或修改根據關聯式資料庫執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢。 此查詢設計工具可用於數種 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 產品以及其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件。 根據資料來源類型，它支援文字模式、StoredProcedure 模式和 TableDirect 模式。 下圖說明圖形化查詢設計工具。  
   
  ![SQL 查詢適用的圖形化查詢設計工具](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "SQL 查詢適用的圖形化查詢設計工具")  
   
- 您可以切換工具列上的 [當成文字編輯] 按鈕，以便在圖形化查詢設計工具和以文字為基礎的查詢設計工具之間切換。 如需詳細資訊，請參閱 [圖形化查詢設計工具使用者介面](../../reporting-services/report-data/graphical-query-designer-user-interface.md)。  
+ 您可以切換工具列上的 [當成文字編輯]  按鈕，以便在圖形化查詢設計工具和以文字為基礎的查詢設計工具之間切換。 如需詳細資訊，請參閱 [圖形化查詢設計工具使用者介面](../../reporting-services/report-data/graphical-query-designer-user-interface.md)。  
   
 ##  <a name="Model"></a> 報表模型查詢設計工具  
  報表模型查詢設計工具是用於建立或修改針對已發行至報表伺服器的 SMDL 報表模型所執行的查詢。 針對模型執行的報表支援 clickthrough 資料瀏覽。 查詢會在執行階段判斷資料瀏覽的路徑。 下圖說明報表模型查詢設計工具。  
   
  ![語意模型查詢設計工具 UI](../../reporting-services/report-data/media/rsqd-dsawmodel-smql.gif "語意模型查詢設計工具 UI")  
   
- 若要使用報表模型查詢設計工具，您必須定義指向已發行模型的資料來源。 當您定義資料來源的資料集時，您可以在報表模型查詢設計工具中開啟資料集查詢。 報表模型查詢設計工具可用於圖形化模式或以文字為基礎的模式。 您可以切換工具列上的 [當成文字編輯] 按鈕，以便在圖形化查詢設計工具和以文字為基礎的查詢設計工具之間切換。 如需詳細資訊，請參閱 [報表模型查詢設計工具使用者介面](../../reporting-services/report-data/report-model-query-designer-user-interface.md)。  
+ 若要使用報表模型查詢設計工具，您必須定義指向已發行模型的資料來源。 當您定義資料來源的資料集時，您可以在報表模型查詢設計工具中開啟資料集查詢。 報表模型查詢設計工具可用於圖形化模式或以文字為基礎的模式。 您可以切換工具列上的 [當成文字編輯]  按鈕，以便在圖形化查詢設計工具和以文字為基礎的查詢設計工具之間切換。 如需詳細資訊，請參閱 [報表模型查詢設計工具使用者介面](../../reporting-services/report-data/report-model-query-designer-user-interface.md)。  
   
 ##  <a name="MDX"></a> MDX 查詢設計工具  
  多維度運算式 (MDX) 查詢設計工具用於建立或修改針對包含多維度 Cube 之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源所執行的查詢。 下圖說明定義查詢和篩選之後的 MDX 查詢設計工具。  

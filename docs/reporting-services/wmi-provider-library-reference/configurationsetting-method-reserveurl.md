@@ -11,10 +11,10 @@ ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e16dbe378ddab0b04237509a9fc9865d08468bba
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576698"
 ---
 # <a name="configurationsetting-method---reserveurl"></a>ConfigurationSetting 方法 - ReserveURL

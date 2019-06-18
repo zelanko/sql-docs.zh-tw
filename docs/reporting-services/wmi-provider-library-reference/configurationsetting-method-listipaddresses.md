@@ -11,10 +11,10 @@ ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1207c4c9688826b599548477a35ca123b9d39c28
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65579940"
 ---
 # <a name="configurationsetting-method---listipaddresses"></a>ConfigurationSetting 方法 - ListIPAddresses

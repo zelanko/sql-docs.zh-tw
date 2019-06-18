@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b40e9c05d81f7fb868884ab25e0f317804d162e0
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63001090"
 ---
 # <a name="dta-utility"></a>dta 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -227,7 +227,7 @@ dta -d AdventureWorks2012 ...
  指定微調輸入所用的工作負載檔案之路徑與名稱。 檔案必須是下列其中一種格式：.trc (SQL Server Profiler 追蹤檔)、.sql (SQL 檔案) 或 .log ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 追蹤檔)。 您必須指定一個工作負載檔案或一份工作負載資料表。  
   
  **-it** _workload_trace_table_name_  
- 指定包含微調工作負載追蹤的資料表名稱。 請使用下列格式來指定名稱：[*database_name*]**.**[*owner_name*]**.**_table_name_。  
+ 指定包含微調工作負載追蹤的資料表名稱。 請使用下列格式來指定名稱：[*database_name*] **.** [*owner_name*] **.** _table_name_。  
   
  下表顯示各項目的預設值：  
   
@@ -344,14 +344,14 @@ dta -iq -I 48
   
  *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- 這個引數是在命令提示字元中輸入資料表清單的另一種方法 (**-Tl**)。 如果您使用 **-Tl**，請勿使用資料表清單檔案 ( **-Tf**)。 如果同時使用這兩個引數， **dta** 會失敗並傳回錯誤。  
+ 這個引數是在命令提示字元中輸入資料表清單的另一種方法 ( **-Tl**)。 如果您使用 **-Tl**，請勿使用資料表清單檔案 ( **-Tf**)。 如果同時使用這兩個引數， **dta** 會失敗並傳回錯誤。  
   
  如果省略了 **-Tf** 和 **-Tl** 引數，則會將指定資料庫中的所有使用者資料表視為要進行微調。  
   
  **-Tl** _table_list_  
  在命令提示字元之下，指定要微調的資料表清單。 請在資料表名稱之間加上逗號，將它們分開。 如果使用 **-D** 引數只指定一個資料庫，就不需要使用資料庫名稱限定資料表的名稱。 否則，每份資料表都需要完整的名稱格式： *database_name.schema_name.table_name* 。  
   
- 這個引數是使用資料表清單檔案的另一種方法 (**-Tf**)。 如果同時使用 **-Tl** 和 **-Tf** ， **dta** 會失敗並傳回錯誤。  
+ 這個引數是使用資料表清單檔案的另一種方法 ( **-Tf**)。 如果同時使用 **-Tl** 和 **-Tf** ， **dta** 會失敗並傳回錯誤。  
   
  **-U** _login_id_  
  指定用來連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的登入識別碼。  

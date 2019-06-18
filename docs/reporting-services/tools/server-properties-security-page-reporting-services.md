@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/10/2016
 ms.openlocfilehash: 0e29dcf7681d105f92b3bf187c38ebe764d2449e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571317"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>伺服器屬性 (安全性頁面) - Reporting Services
@@ -24,8 +24,8 @@ ms.locfileid: "65571317"
  開啟此頁面：
  1) 啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
  2) 連接到報表伺服器執行個體。
- 3) 以滑鼠右鍵按一下報表伺服器名稱，然後選取 [屬性]。
- 4) 按一下 [安全性]，即可開啟此頁面。  
+ 3) 以滑鼠右鍵按一下報表伺服器名稱，然後選取 [屬性]  。
+ 4) 按一下 [安全性]  ，即可開啟此頁面。  
   
 ## <a name="options"></a>選項。
 

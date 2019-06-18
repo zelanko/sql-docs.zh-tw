@@ -13,10 +13,10 @@ ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 41aad02f9f5b65dd1cf1474abd0c152f3face8c0
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503951"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 中 SQL Server Reporting Services 的重大變更

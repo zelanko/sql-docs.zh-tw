@@ -14,10 +14,10 @@ ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee1a5dcf3d475937ae87a1f3c5282d484b2193a9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570688"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>報表伺服器項目的 SharePoint 網站和清單權限參考

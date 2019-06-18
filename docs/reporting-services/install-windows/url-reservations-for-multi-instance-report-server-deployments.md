@@ -7,14 +7,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c7d96d825c9a1b9a6bc4ea069a9c7b04d79b5412
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0a09d7c391af0d8800f5d9c66d40ab7ba0c2cbf4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814061"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513280"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>多重執行個體報表伺服器部署的 URL 保留項目
   如果您在相同電腦上安裝多個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體，您就必須考慮要如何為每一個執行個體定義 URL 保留項目。 在每一個執行個體中，報表伺服器 Web 服務和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 至少每一個都必須有一個 URL 保留項目。 完整的保留項目集合在 HTTP.SYS 中必須是唯一的。  

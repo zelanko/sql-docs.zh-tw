@@ -9,14 +9,14 @@ ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d315aa1c5037e27d5c48e1ee03addef35cbc22df
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573315"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 資料庫的擴充欄位屬性 (SSRS)
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料處理延伸模組支援擴充欄位屬性。 擴充欄位屬性是除了欄位屬性 **Value** 和 **IsMissing** 之外，資料來源可用而且資料處理延伸模組支援的屬性。 在 [報表資料] 窗格中，報表資料集的欄位集合中不會顯示擴充屬性。 若要在報表中包含擴充欄位屬性值，您必須撰寫運算式，使用內建 **Fields** 集合來以名稱指定擴充欄位屬性值。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料處理延伸模組支援擴充欄位屬性。 擴充欄位屬性是除了欄位屬性 **Value** 和 **IsMissing** 之外，資料來源可用而且資料處理延伸模組支援的屬性。 在 [報表資料] 窗格中，報表資料集的欄位集合中不會顯示擴充屬性。 若要在報表中包含擴充欄位屬性值，您必須撰寫運算式，使用內建 **Fields** 集合來以名稱指定擴充欄位屬性值。  
   
  擴充屬性包括預先定義的屬性和自訂屬性。 預先定義的屬性是多個資料來源共通的屬性，這類屬性會對應到特定欄位屬性名稱，而且可透過內建的 **Fields** 集合按照名稱存取。 自訂屬性則是各個資料提供者專有的屬性，這類屬性可透過內建的 **Fields** 集合存取，但只能透過使用擴充屬性名稱作為字串的語法。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65573315"
 |------------------|--------------|---------------------------------------|  
 |**ReplTest1**|**物件**|指定欄位的資料值。|  
 |**IsMissing**|**布林**|指出在產生的資料集裡是否有找到欄位。|  
-|**UniqueName**|**String**|傳回層級的完整名稱。 例如，某一位員工的 **UniqueName** 值可能是 *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]*。|  
+|**UniqueName**|**String**|傳回層級的完整名稱。 例如，某一位員工的 **UniqueName** 值可能是 *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]* 。|  
 |**BackgroundColor**|**String**|傳回資料庫中為欄位定義的背景色彩。|  
 |**Color**|**String**|傳回資料庫中為項目定義的前景色彩。|  
 |**FontFamily**|**String**|傳回資料庫中為項目定義之字型的名稱。|  

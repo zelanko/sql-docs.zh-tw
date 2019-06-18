@@ -6,19 +6,19 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cf68ea627b69377827cd6e9e33afc70a2c76ef2b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: dc6445b64e323c3e5f8e5b0257d8573ec10d3af8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294927"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63218982"
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
   在報表產生器中使用參數來建立分頁報表時，您可以自訂 [參數] 窗格。 在報表設計檢視中，您可以將參數拖曳到 [參數] 窗格中的特定資料行和資料列。 您可以新增及移除資料行以變更窗格配置。  
   
- 當您在窗格中將參數拖曳至新的資料行和資料列時，參數順序會在 [報表資料] 窗格中變更。 當您在 [報表資料] 窗格中變更參數的順序時，參數在窗格中的位置會變更。 如需參數順序為何重要的詳細資訊，請參閱[變更報表參數的順序 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)。  
+ 當您在窗格中將參數拖曳至新的資料行和資料列時，參數順序會在 [報表資料]  窗格中變更。 當您在 [報表資料]  窗格中變更參數的順序時，參數在窗格中的位置會變更。 如需參數順序為何重要的詳細資訊，請參閱[變更報表參數的順序 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)。  
   
 ## <a name="to-customize-the-parameters-pane"></a>自訂參數窗格  
   
@@ -30,11 +30,11 @@ ms.locfileid: "56294927"
   
 2.  若要將參數加入窗格中，請執行下列其中一項。  
   
-    -   在參數窗格中以滑鼠右鍵按一下空的資料格，然後按一下 [加入參數] 。  
+    -   在參數窗格中以滑鼠右鍵按一下空的資料格，然後按一下 [加入參數]  。  
   
          ![從 [參數] 窗格新增新參數](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "從 [參數] 窗格新增新參數")  
   
-    -   在 [報表資料] 窗格中以滑鼠右鍵按一下 [參數]，然後按一下 [加入參數]。  
+    -   在 [報表資料]  窗格中以滑鼠右鍵按一下 [參數]  ，然後按一下 [加入參數]  。  
   
 3.  若要將參數移到參數窗格中的新位置，請將參數拖曳到窗格中的不同資料格。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "56294927"
   
 4.  若要存取參數的屬性，請執行下列其中一項動作。  
   
-    -   在參數窗格中，以滑鼠右鍵按一下參數，然後按一下 [參數屬性] 。  
+    -   在參數窗格中，以滑鼠右鍵按一下參數，然後按一下 [參數屬性]  。  
   
          ![從 [參數] 窗格存取參數屬性](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "從 [參數] 窗格存取參數屬性")  
   
-    -   在 [報表資料] 窗格中，以滑鼠右鍵按一下參數 ，然後按一下 [參數屬性]。  
+    -   在 [報表資料]  窗格中，以滑鼠右鍵按一下參數 ，然後按一下 [參數屬性]  。  
   
 5.  若要將新的資料行和資料列加入窗格中，或刪除現有的資料列和資料行，請以滑鼠右鍵按一下參數窗格中的任何位置，然後在顯示的功能表上按一下命令。  
   
@@ -57,11 +57,11 @@ ms.locfileid: "56294927"
   
 6.  若要從窗格以及從報表刪除參數，請執行下列其中一項動作。  
   
-    -   在參數窗格中，以滑鼠右鍵按一下參數，然後按一下 [刪除]  。  
+    -   在參數窗格中，以滑鼠右鍵按一下參數，然後按一下 [刪除]   。  
   
          ![從 [參數] 窗格刪除參數](../../reporting-services/report-design/media/ssrs-customparameter-deleteparameter.png "從 [參數] 窗格刪除參數")  
   
-    -   在 [報表資料] 窗格中，以滑鼠右鍵按一下參數，然後按一下 [刪除]。  
+    -   在 [報表資料]  窗格中，以滑鼠右鍵按一下參數，然後按一下 [刪除]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  

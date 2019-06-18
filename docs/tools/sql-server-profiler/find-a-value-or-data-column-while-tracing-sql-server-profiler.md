@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d88810885e1ab3447c561a1aad2f7be049cb7fff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819446"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62712309"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>在追蹤時尋找值或資料行 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,13 +30,13 @@ ms.locfileid: "47819446"
   
 1.  執行追蹤時，按一下追蹤結果中的任何一個資料列。  
   
-2.  在 [編輯] 功能表上，按一下 [尋找]。  
+2.  在 [編輯]  功能表上，按一下 [尋找]  。  
   
-3.  在 [尋找] 對話方塊的 [尋找目標] 文字方塊中，輸入搜尋值，並選擇性地指定資料行。  
+3.  在 [尋找]  對話方塊的 [尋找目標]  文字方塊中，輸入搜尋值，並選擇性地指定資料行。  
   
-4.  若要尋找下一個出現的值，請按一下 [找下一個]。  
+4.  若要尋找下一個出現的值，請按一下 [找下一個]  。  
   
-5.  若要尋找前一個出現的值，請按一下 [找上一個]。  
+5.  若要尋找前一個出現的值，請按一下 [找上一個]  。  
   
      搜尋會從您在步驟 1 中選取的資料列開始執行。  
   

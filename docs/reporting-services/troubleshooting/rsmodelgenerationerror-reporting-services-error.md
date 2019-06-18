@@ -1,23 +1,20 @@
 ---
 title: rsModelGenerationError - Reporting Services 錯誤 | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.date: 03/14/2017
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.technology: troubleshooting
 ms.topic: conceptual
 helpviewer_keywords:
 - rsModelGenerationError
 ms.assetid: 3a0ad63f-87f9-4ca1-b0c2-c85fa991634a
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.openlocfilehash: 870f1fbc49e99e2cd43c6adb857137776c275550
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574083"
 ---
 # <a name="rsmodelgenerationerror---reporting-services-error"></a>rsModelGenerationError - Reporting Services 錯誤

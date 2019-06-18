@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8d8eec7d26034b89b40bcec7150f45e11e41230c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674109"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62712135"
 ---
 # <a name="pause-a-trace-sql-server-profiler"></a>暫停追蹤 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47674109"
   
 1.  選取包含執行中追蹤的視窗。  
   
-2.  在 **[檔案]** 功能表上，按一下 **[暫停追蹤]**。  
+2.  在 **[檔案]** 功能表上，按一下 **[暫停追蹤]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

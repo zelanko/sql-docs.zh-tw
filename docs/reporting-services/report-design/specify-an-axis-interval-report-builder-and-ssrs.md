@@ -9,10 +9,10 @@ ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ecee87ddf31314b8e54c98148ab0570db08a1caf
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578492"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定軸間隔 (報表產生器及 SSRS)
@@ -37,11 +37,11 @@ ms.locfileid: "65578492"
 
 ![report-builder-column-chart-preview-x-axis-interval-auto](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
   
-1.  以滑鼠右鍵按一下類別軸，然後按一下 [水平軸屬性]。   
+1.  以滑鼠右鍵按一下類別軸，然後按一下 [水平軸屬性]  。   
 
     ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  在 [水平軸屬性] 對話方塊 > [軸選項] 索引標籤上，將 [間隔] 設為 **1** 以顯示每個類別群組標籤。 若要在 X 軸上每隔一個類別目錄群組標籤進行顯示，請輸入 **2**。 
+2.  在 [水平軸屬性]  對話方塊 > [軸選項]  索引標籤上，將 [間隔]  設為 **1** 以顯示每個類別群組標籤。 若要在 X 軸上每隔一個類別目錄群組標籤進行顯示，請輸入 **2**。 
 
      ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
@@ -76,9 +76,9 @@ ms.locfileid: "65578492"
 
 根據預設， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將軸間隔設為 [自動]。此程序說明如何將它設回預設值。 
   
-1.  以滑鼠右鍵按一下要變更的圖表軸，然後按一下 **[軸屬性]**。 
+1.  以滑鼠右鍵按一下要變更的圖表軸，然後按一下 **[軸屬性]** 。 
   
-2.  在 [水平軸屬性] 對話方塊 > [軸選項] 索引標籤上，將 [間隔] 設為 [自動]。圖表將顯示可納入軸的最佳類別目錄標籤數目。  
+2.  在 [水平軸屬性]  對話方塊 > [軸選項]  索引標籤上，將 [間隔]  設為 [自動]  。圖表將顯示可納入軸的最佳類別目錄標籤數目。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

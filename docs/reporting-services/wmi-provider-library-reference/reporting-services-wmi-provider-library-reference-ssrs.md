@@ -15,10 +15,10 @@ ms.assetid: 17ba711d-7eff-4423-9168-63dc425a3428
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af3b51f934b9b0221747116772af7a747813e70f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571054"
 ---
 # <a name="reporting-services-wmi-provider-library-reference-ssrs"></a>Reporting Services WMI 提供者程式庫參考 (SSRS)

@@ -11,11 +11,11 @@ author: pensivebrian
 ms.author: broneill
 manager: kenvh
 ms.openlocfilehash: 411a2cf4c9a3170e9fb3a3dc7709d8b3882f066b
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59670864"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63183698"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe 的版本資訊
 
@@ -162,7 +162,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Fix | 詳細資料 |
 | :-- | :------ |
-| 將 Azure SQL Database .bacpac 匯入至內部部署執行個體時，已修正因為「此版本的 SQL Server 不支援沒有密碼的資料庫主要金鑰」而引發的錯誤。 | &nbsp; |
+| 將 Azure SQL Database .bacpac 匯入至內部部署執行個體時，已修正因為「此版本的 SQL Server 不支援沒有密碼的資料庫主要金鑰」  而引發的錯誤。 | &nbsp; |
 | 已針對圖形資料表修正無法解析的虛擬資料行錯誤。 | &nbsp; |
 | 已修正使用 SchemaCompareDataModel 搭配 SQL 驗證來比較結構描述。 | &nbsp; |
 | &nbsp; | &nbsp; |
@@ -176,7 +176,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | 功能 | 詳細資料 |
 | :------ | :------ |
-| 已在 SQL 2017+ 和 Azure SQL Database 上新增「時態性保留原則」的支援。 | &nbsp; |
+| 已在 SQL 2017+ 和 Azure SQL Database 上新增「時態性保留原則」  的支援。 | &nbsp; |
 | 已新增 /DiagnosticsFile:"C:\Temp\sqlpackage.log" 命令列參數，可指定要儲存診斷資訊的檔案路徑。 | &nbsp; |
 | 已新增 /Diagnostics 命令列參數，可將診斷資訊記錄至主控台。 | &nbsp; |
 | &nbsp; | &nbsp; |

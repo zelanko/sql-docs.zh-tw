@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 579870246535bfdb01577b1f74f1c53f6f46685f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: da9f07cf60a2ec42e23416b52cbfebab78802247
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404216"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62512642"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>第 5 課：使用報表精靈設計子報表
 在您建立子報表的資料連接和資料表之後，下一步是要使用報表設計師中的 [報表精靈] 設計子報表。 如需報表設計師的詳細資訊，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)。  
@@ -22,37 +22,37 @@ ms.locfileid: "52404216"
   
 1.  請確認已在 **方案總管**中選取頂層網站。  
   
-2.  以滑鼠右鍵按一下網站，然後選取 [新增項目]。  
+2.  以滑鼠右鍵按一下網站，然後選取 [新增項目]  。  
   
-3.  在 [新增項目] 對話方塊中，按一下 [報表精靈]，輸入報表檔案的名稱，然後選取 [新增]。  
+3.  在 [新增項目]  對話方塊中，按一下 [報表精靈]  ，輸入報表檔案的名稱，然後選取 [新增]  。  
   
     這樣會啟動 [報表精靈]。  
   
-4.  在 [資料集屬性] 頁面的 [資料來源] 中，選取 **DataSet2**。  
+4.  在 [資料集屬性]  頁面的 [資料來源]  中，選取 **DataSet2**。  
   
-    [可用資料集] 方塊會自動更新為您所建立的 DataTable。  
+    [可用資料集]  方塊會自動更新為您所建立的 DataTable。  
   
-5.  選取 **[下一步]**。  
+5.  選取 **[下一步]** 。  
   
-6.  在 [排列欄位] 頁面中執行下列操作：  
+6.  在 [排列欄位]  頁面中執行下列操作：  
   
-    1.  將 **ProductID**、**PurchaseOrderID**、**PurchaseOrderDetailID**、**OrderQty**、**ReceivedQty**、**RejectedQty** 和 **StockedQty** 從 [可用欄位] 拖曳至 [值] 方塊。  
+    1.  將 **ProductID**、**PurchaseOrderID**、**PurchaseOrderDetailID**、**OrderQty**、**ReceivedQty**、**RejectedQty** 和 **StockedQty** 從 [可用欄位]  拖曳至 [值]  方塊。  
   
-    2.  按一下 **Sum(ProductID)**、**Sum(PurchaseOrderID)**、**Sum(PurchaseOrderDetailID)**、**Sum(OrderQty)**、**Sum(ReceivedQty)**、**Sum(RejectedQty)** 和 **Sum(StockedQty)** 旁的箭頭，並清除 [Sum] 選項。  
+    2.  按一下 **Sum(ProductID)** 、**Sum(PurchaseOrderID)** 、**Sum(PurchaseOrderDetailID)** 、**Sum(OrderQty)** 、**Sum(ReceivedQty)** 、**Sum(RejectedQty)** 和 **Sum(StockedQty)** 旁的箭頭，並清除 [Sum]  選項。  
   
-7.  連選兩次 [下一步]，然後選取 [完成] 關閉 [報表精靈]。  
+7.  連選兩次 [下一步]  ，然後選取 [完成]  關閉 [報表精靈]  。  
   
     現在您已建立 .rdlc 檔。 此檔案會在報表設計師中開啟。 您設計的 Tablix 現在會顯示於設計介面中。  
   
 8.  在 .rdlc 檔開啟的情況下，執行下列操作加入參數：  
   
-    1.  以滑鼠右鍵按一下 [報表資料] 窗格中的 [參數]，然後選取 [新增參數]。  
+    1.  以滑鼠右鍵按一下 [報表資料]  窗格中的 [參數]  ，然後選取 [新增參數]  。  
   
-    2.  在 [名稱] 方塊中，輸入 **productid**。  
+    2.  在 [名稱]  方塊中，輸入 **productid**。  
   
-    3.  確認已在 [資料類型] 清單方塊中，選取 [整數]。  
+    3.  確認已在 [資料類型]  清單方塊中，選取 [整數]  。  
   
-    4.  按一下 [確定] 。  
+    4.  按一下 [確定]  。  
   
 9. 儲存 .rdlc 檔。  
   

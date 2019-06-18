@@ -9,10 +9,10 @@ ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: eda9f349cf53d77af14df10c842c9619fb6d370a
-ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66403166"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>針對 Reporting Services 的伺服器與資料庫連線問題進行疑難排解

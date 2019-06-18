@@ -8,24 +8,24 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5e34e018cbbd1ecc9dd6258111cccf7132a682e7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 17975defea6029e4077acbe45fd3f8b0d7495267
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289066"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62759643"
 ---
 # <a name="custom-maps-in-reporting-services-mobile-reports"></a>Reporting Services 行動報表中的自訂地圖
-SQL Server 行動報表發行工具的地理對應定義格式，稱為「ESRI 形狀檔」。  
+SQL Server 行動報表發行工具的地理對應定義格式，稱為「ESRI 形狀檔」  。  
   
 最初由私人公司設計，這是現在大部分 GIS 應用程式廣泛使用的半開放式格式。 為配合這種格式，在定義對應時，行動報表發行工具需要有下列兩個檔案：  
   
 - 用於圖形幾何的 .SHP 檔案  
 - 用於中繼資料的 .DBF 檔案  
   
-基底檔案名稱必須相符 (例如 *canada.shp* 和 *canada.dbf*)。 中繼資料必須包含 [名稱] 欄位和對應的圖形名稱值 (索引鍵)，以在對應中填入資料時使用。  
+基底檔案名稱必須相符 (例如 *canada.shp* 和 *canada.dbf*)。 中繼資料必須包含 [名稱]  欄位和對應的圖形名稱值 (索引鍵)，以在對應中填入資料時使用。  
 
 SHP 和 DBF 這兩個地圖檔案相加不能大於 512 KB。 如果地圖檔案太大，請使用 [https://mapshaper.org/](https://mapshaper.org/) 之類的工具減少其大小。  
   

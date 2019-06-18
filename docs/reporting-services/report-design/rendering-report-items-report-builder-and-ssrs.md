@@ -9,10 +9,10 @@ ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1ae3b511031b95023ab8ebe2a8e4c0aa065d4f35
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576449"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendering Report Items (Report Builder and SSRS)

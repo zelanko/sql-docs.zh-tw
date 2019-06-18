@@ -9,10 +9,10 @@ ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1ed33d00286119c63042680cfd6d2bd414d58098
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581841"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>橫條圖 (報表產生器及 SSRS)

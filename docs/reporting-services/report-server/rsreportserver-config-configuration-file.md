@@ -9,10 +9,10 @@ ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 351ca36275fbd782e3bf3e8d098aaf6a49287430
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66500415"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 組態檔
@@ -59,7 +59,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  下表提供有關檔案第一個部分中顯示之一般組態設定的資訊。 設定會依其出現在組態檔的順序顯示。 資料表的最後一個資料行會指出此設定適用於原生模式的報表伺服器 **(N)** 、SharePoint 模式的報表伺服器 **(S)** ，還是兩者。  
   
 > [!NOTE]  
->  在本主題中，「最大整數」是指 2147483647 的 INT_MAX 值。  如需詳細資訊，請參閱[整數限制](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx)。  
+>  在本主題中，「最大整數」是指 2147483647 的 INT_MAX 值。  如需詳細資訊，請參閱[整數限制](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx) 。  
   
 |設定|Description|[模式]|  
 |-------------|-----------------|----------|  

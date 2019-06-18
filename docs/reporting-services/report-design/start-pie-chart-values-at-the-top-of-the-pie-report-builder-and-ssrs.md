@@ -9,10 +9,10 @@ ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7f2e174d9f08e22f57375703093ed44ab57be83e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578463"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>從圓形圖頂端開始繪製圓形圖值 (報表產生器及 SSRS)
@@ -32,11 +32,11 @@ ms.locfileid: "65578463"
   
 1.  按一下圓形圖本身。  
   
-2.  如果 [屬性] 窗格沒有開啟，請按一下 [檢視] 索引標籤上的 [屬性]。  
+2.  如果 [屬性]  窗格沒有開啟，請按一下 [檢視]  索引標籤上的 [屬性]  。  
   
-3.  在 [屬性] 窗格的 [自訂屬性] 底下，將 [PieStartAngle] 從 **0** 變更為 **270**。  
+3.  在 [屬性]  窗格的 [自訂屬性]  底下，將 [PieStartAngle]  從 **0** 變更為 **270**。  
   
-4.  按一下 [執行] 以預覽報表。  
+4.  按一下 [執行]  以預覽報表。  
   
  第一個值現在從圓形圖的頂端開始繪製。  
   

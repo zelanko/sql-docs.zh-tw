@@ -10,14 +10,14 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], authentication
 - Report Server Web service, authentication
 ms.assetid: 852b4947-a090-4e54-8555-5a503945ceab
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 30ca6b1aa8c076350a77d27f578c9d3a4c26acf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3ea255c03803f6191d3161d3ef2fa149ef157f56
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615426"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63069889"
 ---
 # <a name="web-service-authentication"></a>Web 服務驗證
   您可以使用 Windows 驗證或是基本驗證，以驗證對報表伺服器 Web 服務的呼叫。 任何對報表伺服器提出 SOAP 要求的用戶端，都必須實作其中一個支援的驗證通訊協定之用戶端部分。 如果您是使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，可以使用 Managed 程式碼 HTTP 類別來實作驗證。 使用這些 API 使得連同 SOAP 要求一起傳送驗證資訊變得更容易。  

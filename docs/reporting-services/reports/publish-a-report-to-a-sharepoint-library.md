@@ -13,10 +13,10 @@ ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1b10c9dbfa67a632ce007c1406f8b806a03475b4
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571042"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>將報表發行到 SharePoint 文件庫
@@ -28,9 +28,9 @@ ms.locfileid: "65571042"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟現有或新的報表伺服器專案。  
   
-2.  在 **[專案]** 功能表按一下 **[屬性]**。 \<專案> [屬性頁] 對話方塊隨即開啟。  
+2.  在 **[專案]** 功能表按一下 **[屬性]** 。 \<專案>  [屬性頁]  對話方塊隨即開啟。  
   
-3.  在 **[組態]** 清單中，選取用來建立及發行報表的方案組建組態的名稱。 目前的設定列為 [使用中]\(\<設定>)。  
+3.  在 **[組態]** 清單中，選取用來建立及發行報表的方案組建組態的名稱。 目前的設定列為 [使用中]\(\<設定>  )  。  
   
 4.  如果您想要發行專案中的共用資料來源，並覆寫之前發行的共用資料來源，請將 **OverwriteDataSources** 設定為 **True**。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65571042"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-9. 在方案總管中，以滑鼠右鍵按一下要發行的報表，然後按一下 [部署]。 報表便會發行至 **[TargetReportFolder]** 中所指定的位置。 此時，部署錯誤會出現在 [輸出] 視窗中。  
+9. 在方案總管中，以滑鼠右鍵按一下要發行的報表，然後按一下 [部署]  。 報表便會發行至 **[TargetReportFolder]** 中所指定的位置。 此時，部署錯誤會出現在 [輸出] 視窗中。  
   
 ## <a name="see-also"></a>另請參閱  
  [專案屬性頁對話方塊](../../reporting-services/tools/project-property-pages-dialog-box.md)   

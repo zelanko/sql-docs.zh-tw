@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3dc42904701ce69e762a203e09cb320cc797c15c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65579983"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>將 SQL Server Reporting Services 報表檢視器網頁組件部署至 SharePoint 頁面
@@ -50,7 +50,7 @@ Microsoft 下載中心提供報表檢視器網頁組件。
 
 本節說明如何在 SharePoint 伺服器陣列中部署解決方案套件。 這個工作只需要執行一次。
 
-1. 在 SharePoint 伺服器上，使用 [以系統管理員身分執行] 選項開啟 SharePoint 管理介面。
+1. 在 SharePoint 伺服器上，使用 [以系統管理員身分執行]  選項開啟 SharePoint 管理介面。
 
 2. 執行 [Add-SPSolution](https://technet.microsoft.com/library/ff607552(v=office.16).aspx) 以新增伺服器陣列解決方案。
 
@@ -76,17 +76,17 @@ Microsoft 下載中心提供報表檢視器網頁組件。
 
 ## <a name="activate-feature"></a>啟用功能
 
-1. 在 SharePoint 網站中，選取左上方的**齒輪**圖示，然後選取 [網站設定]。
+1. 在 SharePoint 網站中，選取左上方的**齒輪**圖示，然後選取 [網站設定]  。
 
     ![從齒輪圖示開啟網站設定。](media/sharepoint-site-settings.png)
 
     根據預設，SharePoint Web 應用程式會經由通訊埠 80 進行存取。 這表示通常只要輸入 *https://<computer name>* 即可存取 SharePoint 網站來開啟根網站集合。
 
-3. 在 [網站集合管理] 中選取 [網站集合功能]。
+3. 在 [網站集合管理]  中選取 [網站集合功能]  。
 
 4. 向下捲動網頁，直到您找到**報表檢視器網頁組件**功能。
 
-5. 選取 [啟用]。
+5. 選取 [啟用]  。
 
     ![啟動報表檢視器網頁組件功能](media/web-part-activiate-feature.png)
 
@@ -106,7 +106,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
 雖然 SharePoint 管理中心可以撤銷解決方案，但是除非有以系統方式排除安裝或修補程式的部署問題，否則不需要撤銷 **ReportViewerWebPart.wsp** 檔案。
 
-1. 在 SharePoint 管理中心的 [系統設定] 中，選取 [管理伺服器陣列方案]。
+1. 在 SharePoint 管理中心的 [系統設定]  中，選取 [管理伺服器陣列方案]  。
 
 2. 選取 **ReportViewerWebPart.wsp**。
 
@@ -116,17 +116,17 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
 撤銷解決方案不會從 SharePoint 網站中的網頁組件清單中移除報表檢視器網頁組件。 若要移除報表檢視器網頁組件，請執行下列作業。
 
-1. 在 SharePoint 網站中，選取左上方的**齒輪**圖示，然後選取 [網站設定]。
+1. 在 SharePoint 網站中，選取左上方的**齒輪**圖示，然後選取 [網站設定]  。
 
     ![從齒輪圖示開啟網站設定。](media/sharepoint-site-settings.png)
 
     根據預設，SharePoint Web 應用程式會經由通訊埠 80 進行存取。 這表示通常只要輸入 *https://<computer name>* 即可存取 SharePoint 網站來開啟根網站集合。
 
-2. 在**網站設計工具庫**下選取 [網頁組件]。
+2. 在**網站設計工具庫**下選取 [網頁組件]  。
 
 3. 選取 **ReportViewerNativeMode.dwp** 旁邊的**編輯圖示**。 它可能不會列在第一頁結果中。
 
-4. 選取 [刪除項目]。
+4. 選取 [刪除項目]  。
 
     ![編輯和刪除報表檢視器原生模式網頁組件](media/report-viewer-native-mode-edit-delete.png)
 

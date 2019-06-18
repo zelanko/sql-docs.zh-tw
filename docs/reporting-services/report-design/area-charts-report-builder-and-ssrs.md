@@ -9,10 +9,10 @@ ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1bcd78ad109727e8f585f06703a293665b7cb310
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581852"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>區域圖 (報表產生器及 SSRS)

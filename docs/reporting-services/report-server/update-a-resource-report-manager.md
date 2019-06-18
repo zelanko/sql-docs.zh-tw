@@ -12,10 +12,10 @@ ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 29ebd13314c99d425b191f049f86e6e78d3134fa
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571463"
 ---
 # <a name="update-a-resource-report-manager"></a>更新資源 (報表管理員)
@@ -27,17 +27,17 @@ ms.locfileid: "65571463"
   
 2.  在報表管理員中，導覽至或搜尋您要更新的資源。  
   
-3.  按一下資源，即可在 [檢視] 頁面中開啟資源。  
+3.  按一下資源，即可在 [檢視]  頁面中開啟資源。  
   
-4.  按一下 [屬性]，即可開啟 [一般] 屬性頁面。  
+4.  按一下 [屬性]  ，即可開啟 [一般]  屬性頁面。  
   
-5.  按一下 [取代]，即可開啟 [匯入資源] 頁面。  
+5.  按一下 [取代]  ，即可開啟 [匯入資源]  頁面。  
   
-6.  按一下 **[瀏覽]**。  
+6.  按一下 **[瀏覽]** 。  
   
 7.  選取您要用來取代目前資源的檔案。 您可以使用資源檔案的更新版本，或者指定不同名稱或檔案類型的檔案。  
   
-8.  按一下 [確定]，即可上傳資源檔案，關閉 [匯入資源] 頁面，並將您的變更儲存到報表伺服器。  
+8.  按一下 [確定]  ，即可上傳資源檔案，關閉 [匯入資源]  頁面，並將您的變更儲存到報表伺服器。  
   
  如果您更新的資源包含在報表中所使用的影像，您就需要重新整理報表才看得到更新的影像。  
   

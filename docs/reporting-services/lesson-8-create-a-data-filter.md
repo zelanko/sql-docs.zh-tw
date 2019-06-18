@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2d475716043c14c2dabac3090c58b12c9648b468
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 991610dacf7a13a467a3058f2bdbcfcc454ee71e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700367"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62512390"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>第 8 課：建立資料篩選
 在父報表上加入鑽研動作後，下一步是要針對您為子報表定義的資料表建立資料篩選。  
@@ -33,17 +33,17 @@ ms.locfileid: "47700367"
   
 1.  開啟子報表。  
   
-2.  選取 Tablix 中的資料行標題，以滑鼠右鍵按一下資料行標題上方出現的灰色資料格，然後選取 [Tablix 屬性]。  
+2.  選取 Tablix 中的資料行標題，以滑鼠右鍵按一下資料行標題上方出現的灰色資料格，然後選取 [Tablix 屬性]  。  
   
-3.  依序選取 [篩選] 頁面和 [新增]。  
+3.  依序選取 [篩選]  頁面和 [新增]  。  
   
-4.  在 [運算式] 欄位的下拉式清單中，選取 [ProductID]。 這是要套用篩選的資料行。  
+4.  在 [運算式]  欄位的下拉式清單中，選取 [ProductID]  。 這是要套用篩選的資料行。  
   
-5.  選取 [運算子] 下拉式清單中的等於 (**=**) 運算子。  
+5.  選取 [運算子]  下拉式清單中的等於 ( **=** ) 運算子。  
   
-6.  依序選取 [值] 欄位旁的運算式按鈕和 [類別目錄] 區域中的 [參數]，然後按兩下 [值] 區域中的 [productid]。 [設定運算式對象: 值] 欄位現在應該包含類似 **=Parameters!productid.Value** 的運算式。  
+6.  依序選取 [值]  欄位旁的運算式按鈕和 [類別目錄]  區域中的 [參數]  ，然後按兩下 [值]  區域中的 [productid]  。 [設定運算式對象: 值]  欄位現在應該包含類似 **=Parameters!productid.Value** 的運算式。  
   
-7.  選取 [確定]，並再次選取 [Tablix 屬性] 對話方塊中的 [確定]。  
+7.  選取 [確定]  ，並再次選取 [Tablix 屬性]  對話方塊中的 [確定]  。  
   
 8.  儲存 .rdlc 檔。  
   
@@ -103,11 +103,11 @@ ms.locfileid: "47700367"
   
 1.  在設計師檢視中開啟 Default.aspx。  
   
-2.  以滑鼠右鍵按一下 [ReportViewer] 控制項，然後選取 [屬性]。  
+2.  以滑鼠右鍵按一下 [ReportViewer] 控制項，然後選取 [屬性]  。  
   
-3.  在 [屬性] 頁面上，選取**事件**圖示。  
+3.  在 [屬性]  頁面上，選取**事件**圖示。  
   
-4.  按兩下 [鑽研] 事件。  
+4.  按兩下 [鑽研]  事件。  
   
     這樣會在程式碼中加入事件處理常式區段，看起來類似下面區塊。  
   
@@ -219,11 +219,11 @@ ms.locfileid: "47700367"
   
 1.  在設計師檢視中開啟 Default.aspx。  
   
-2.  以滑鼠右鍵按一下 [ReportViewer] 控制項，然後選取 [屬性]。  
+2.  以滑鼠右鍵按一下 [ReportViewer] 控制項，然後選取 [屬性]  。  
   
-3.  在 [屬性] 窗格上，選取**事件**圖示。  
+3.  在 [屬性]  窗格上，選取**事件**圖示。  
   
-4.  按兩下 [鑽研] 事件。  
+4.  按兩下 [鑽研]  事件。  
   
     這樣會在程式碼中加入事件處理常式區段，看起來類似下面所示。  
   

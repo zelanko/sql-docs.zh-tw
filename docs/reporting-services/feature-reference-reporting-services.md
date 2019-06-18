@@ -14,10 +14,10 @@ ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 40e4fb9280d7ff9d05412966487997f507fb3dc7
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503091"
 ---
 # <a name="feature-reference-reporting-services"></a>功能參考 (Reporting Services)

@@ -11,10 +11,10 @@ ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4d29ed7bc6e627f7ed670feca9b98b0b4fac3eb9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570953"
 ---
 # <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>ConfigurationSetting 方法 - GetDatabaseVersionDisplayName

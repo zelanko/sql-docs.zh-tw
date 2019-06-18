@@ -13,15 +13,15 @@ ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af41da75d553794019f1d01c8b8f5bb6aba80622
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65103308"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>建立基本資料表報表 (SSRS 教學課程)
 
-在本教學課程中，您可以使用 Visual Studio / SQL Server Data Tools (SSDT) 中的 [報表設計師] 工具。 您可以建立 SQL Server Reporting Services (SSRS) 編頁報表。 報表包含查詢資料表，該資料表是從 AdventureWorks2016 資料庫中的資料建立的。
+在本教學課程中，您可以使用 Visual Studio / SQL Server Data Tools (SSDT) 中的 [報表設計師]  工具。 您可以建立 SQL Server Reporting Services (SSRS) 編頁報表。 報表包含查詢資料表，該資料表是從 AdventureWorks2016 資料庫中的資料建立的。
 
 當您繼續本教學課程時，您將了解如何：
   

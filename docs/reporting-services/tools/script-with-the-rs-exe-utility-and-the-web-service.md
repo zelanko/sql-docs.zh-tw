@@ -15,10 +15,10 @@ ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f20551117454ca742c8c681cd43f2704695dd276
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571421"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>利用 rs.exe 公用程式與 Web 服務編寫指令碼

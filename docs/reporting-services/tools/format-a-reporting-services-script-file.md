@@ -12,10 +12,10 @@ ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1979e19b3d93e9687d6abb137758bc71548b10ce
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577792"
 ---
 # <a name="format-a-reporting-services-script-file"></a>格式化 Reporting Services 指令碼檔案

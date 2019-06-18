@@ -9,10 +9,10 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 126819d9adb85fa4cf17af0c6308d56696136988
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570858"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "65570858"
  報表伺服器項目包含分頁與行動報表、KPI、共用資料來源、共用資料集，以及其他可發行、上傳或儲存至報表伺服器的項目。 組織原生報表伺服器之報表伺服器階層資料夾結構中的項目，或是組織 SharePoint 網站之 SharePoint 內容庫中的項目。 如需詳細資訊，請參閱[報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)。  
   
 ### <a name="folders"></a>資料夾
- 在原生報表伺服器上，資料夾提供儲存在報表伺服器中所有可定址項目的階層式導覽結構和路徑。 您可以使用資料夾階層和網站以及資料夾權限，協助控制對報表伺服器項目的存取權，這稱為 *「項目層級安全性」*(Item-level security)。 資料夾階層中的子資料夾預設會繼承您對特定資料夾所定義的角色指派。 若您將特定的角色指派給資料夾，則繼承規則將不再適用。 資料夾結構包含一個稱為 **[主資料夾]** 的根節點以及多個支援選擇性 **[我的報表]** 功能的保留資料夾。 在瀏覽器中，根節點是報表伺服器虛擬目錄的名稱 (例如，`https://myreportserver/reports`)。 如需詳細資訊，請參閱 [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)。  
+ 在原生報表伺服器上，資料夾提供儲存在報表伺服器中所有可定址項目的階層式導覽結構和路徑。 您可以使用資料夾階層和網站以及資料夾權限，協助控制對報表伺服器項目的存取權，這稱為 *「項目層級安全性」* (Item-level security)。 資料夾階層中的子資料夾預設會繼承您對特定資料夾所定義的角色指派。 若您將特定的角色指派給資料夾，則繼承規則將不再適用。 資料夾結構包含一個稱為 **[主資料夾]** 的根節點以及多個支援選擇性 **[我的報表]** 功能的保留資料夾。 在瀏覽器中，根節點是報表伺服器虛擬目錄的名稱 (例如，`https://myreportserver/reports`)。 如需詳細資訊，請參閱 [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)。  
   
  在 SharePoint 網站上，使用文件庫和內容庫中的 SharePoint 資料夾來組織項目。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "65570858"
   
      在報表設計師中，您無法瀏覽至報表伺服器上的共用資料來源。 您可以在 [方案總管] 中建立共用資料來源做為專案的一部分，並且選擇是否將它們部署到報表伺服器。 您可能因為電腦所需的認證和報表伺服器所需的認證不同，而選擇只在本機上使用這些共用資料來源。  
   
--   **內嵌資料來源。** 也稱為 *「報表特定資料來源」*(Report-specific data source)，內嵌資料來源是定義在報表中，而且只能供該報表使用。  
+-   **內嵌資料來源。** 也稱為 *「報表特定資料來源」* (Report-specific data source)，內嵌資料來源是定義在報表中，而且只能供該報表使用。  
   
      內嵌資料來源是儲存在報表定義中的資料連接。 內嵌資料來源連接資訊只能用於內嵌該資訊的報表中。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "65570858"
  如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 ### <a name="report-parameters"></a>報表參數 
- 報表參數是報表定義的一部分。 您可以將參數加入至 Reporting Services 分頁與行動報表，以便連結相關報表、控制報表外觀、篩選報表資料，或是將報表的範圍縮小至特定使用者或位置。 將分頁報表發行至原生報表伺服器或 SharePoint 網站時，會將報表參數儲存為個別的報表伺服器項目。 參數可以獨立管理，與報表定義無關。 若要為相同的報表建立多組參數，請建立 *「連結報表」*(Linked report)。  
+ 報表參數是報表定義的一部分。 您可以將參數加入至 Reporting Services 分頁與行動報表，以便連結相關報表、控制報表外觀、篩選報表資料，或是將報表的範圍縮小至特定使用者或位置。 將分頁報表發行至原生報表伺服器或 SharePoint 網站時，會將報表參數儲存為個別的報表伺服器項目。 參數可以獨立管理，與報表定義無關。 若要為相同的報表建立多組參數，請建立 *「連結報表」* (Linked report)。  
   
 ### <a name="report-items"></a>報表項目 
  報表項目是 Reporting Services 分頁報表定義中一種內部但基本的概念。 報表項目的屬性會套用至資料區、地圖、文字方塊、影像，以及您加入至報表中的其他設計元素。 了解報表項目的屬性可協助您設計自訂的報表內容及外觀。 例如，所有報表項目都具有隱藏屬性，以控制可見性。  

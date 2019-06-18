@@ -9,10 +9,10 @@ ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a93f71f886484d38996a867bebbc6ef32c33c86
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175632"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>尋找、檢視和管理報表 (報表產生器及 SSRS)
@@ -113,7 +113,7 @@ Web 入口網站通常包含資料夾、報表、資料來源及 [我的報表] 
  ![rs_SharePointRunReport](../../reporting-services/report-builder/media/rs-sharepointrunreport.gif "rs_SharePointRunReport")  
   
 ### <a name="managing-items-through-actions"></a>透過動作管理項目  
- 下拉式功能表上的動作可支援每個項目的管理工作。 根據您的權限，每個項目都具有通用的動作，對於儲存在 SharePoint 程式庫中的項目而言，這些都是標準動作。 **[檢視屬性]** 和 **[編輯屬性]** 是通用動作的範例。 自訂動作可提供項目特定的管理功能。 下列影像顯示報表定義的動作。 報表定義的自訂動作範例包括 **[管理訂閱]** 和 **[管理處理選項]**：  
+ 下拉式功能表上的動作可支援每個項目的管理工作。 根據您的權限，每個項目都具有通用的動作，對於儲存在 SharePoint 程式庫中的項目而言，這些都是標準動作。 **[檢視屬性]** 和 **[編輯屬性]** 是通用動作的範例。 自訂動作可提供項目特定的管理功能。 下列影像顯示報表定義的動作。 報表定義的自訂動作範例包括 **[管理訂閱]** 和 **[管理處理選項]** ：  
   
  ![報表伺服器項目的功能表命令](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "報表伺服器項目的功能表命令")  
   

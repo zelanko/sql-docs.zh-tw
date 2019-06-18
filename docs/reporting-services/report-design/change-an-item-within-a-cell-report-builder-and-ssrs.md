@@ -9,10 +9,10 @@ ms.assetid: 91a54778-8929-41f9-bb4c-826cec636be4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cc13f82453349b16e4c9fc00b8f0f083652daa75
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581742"
 ---
 # <a name="change-an-item-within-a-cell-report-builder-and-ssrs"></a>變更資料格內的項目 (報表產生器及 SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "65581742"
 -   在 **[插入]** 索引標籤的 **[資料區域]** 或 **[報表項目]** 群組中，按一下您想要加入至報表的項目，然後按一下報表。 如此項目就會加入至報表。  
   
 > [!NOTE]  
->  當您將影像報表項目拖曳至資料格時，[影像屬性] 對話方塊即會開啟，讓您設定屬性；例如，影像新增至資料格前的影像來源。  
+>  當您將影像報表項目拖曳至資料格時，[影像屬性]  對話方塊即會開啟，讓您設定屬性；例如，影像新增至資料格前的影像來源。  
   
 ## <a name="see-also"></a>另請參閱  
  [影像、文字方塊、矩形和線條 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   

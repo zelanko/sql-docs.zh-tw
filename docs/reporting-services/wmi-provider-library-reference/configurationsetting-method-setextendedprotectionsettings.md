@@ -9,10 +9,10 @@ ms.assetid: 2d8e7232-42f4-41b6-98eb-c856f6c85d8c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cbfd4392572713e1c81fef07467842e18549e089
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581020"
 ---
 # <a name="configurationsetting-method---setextendedprotectionsettings"></a>ConfigurationSetting 方法 - SetExtendedProtectionSettings

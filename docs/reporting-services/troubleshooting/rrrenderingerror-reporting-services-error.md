@@ -1,23 +1,20 @@
 ---
 title: rrRenderingError - Reporting Services 錯誤 | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.date: 03/14/2017
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.technology: troubleshooting
 ms.topic: conceptual
 helpviewer_keywords:
 - rrRenderingError
 ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.openlocfilehash: 1fcfe999a7cfaf41cc4b6b9fad437ea14dfe2613
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65575558"
 ---
 # <a name="rrrenderingerror---reporting-services-error"></a>rrRenderingError - Reporting Services 錯誤

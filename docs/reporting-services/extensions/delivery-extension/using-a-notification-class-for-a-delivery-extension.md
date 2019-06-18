@@ -11,14 +11,14 @@ helpviewer_keywords:
 - retry queues
 - Nofication class
 ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1ac8e57ab8248a06a10488e6b8ca1743ed57f5eb
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ad2792a390597223a98b8606af4cb361d17b9e8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028195"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193678"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>使用傳遞延伸模組的通知類別
   <xref:Microsoft.ReportingServices.Interfaces.Notification> 類別是位於 <xref:Microsoft.ReportingServices.Interfaces> 命名空間中，並代表傳遞延伸模組用於傳遞報表的訂閱資訊。 <xref:Microsoft.ReportingServices.Interfaces.Notification> 類別提供一些屬性可用以轉譯要傳遞的報表、決定通知狀態以及設定使用者資料。  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - extensions [Reporting Services], library
 - library [Reporting Services]
 ms.assetid: e8eff470-64d6-41c3-b98b-5ec916c121c3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f7c4ca9eac612cd80796f5ab48ae41648f2811d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 592061a8665bf5dad30ab653f20d062bc0a54257
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844516"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193840"
 ---
 # <a name="reporting-services-extension-library"></a>Reporting Services 延伸模組程式庫
   Reporting Services 延伸模組程式庫是一組包括在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的類別、介面和值類型。 這個程式庫可以用來存取系統功能，而且是設計成作為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 應用程式可用以擴充 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件的基礎。  

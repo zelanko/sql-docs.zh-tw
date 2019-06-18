@@ -11,10 +11,10 @@ ms.assetid: b338deab-4868-4951-9f22-0605add2fc95
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9e9286363970b568e0690b622fac6d94c2b01f6b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571391"
 ---
 # <a name="server-properties-logging-page"></a>伺服器屬性 (記錄頁面)
@@ -23,7 +23,7 @@ ms.locfileid: "65571391"
  開啟此頁面：
  1) 啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
  2) 連接到報表伺服器。
- 3) 以滑鼠右鍵按一下報表伺服器名稱，然後選取 [屬性]。 
+ 3) 以滑鼠右鍵按一下報表伺服器名稱，然後選取 [屬性]  。 
  4) 按一下 **[記錄]** ，即可開啟此頁面。  
   
 ## <a name="options"></a>選項。  

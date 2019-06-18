@@ -15,10 +15,10 @@ ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7973c4ad5483193aa4ed2116b714f6d404c4da1c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570692"
 ---
 # <a name="secure-my-reports"></a>保護我的報表
@@ -32,7 +32,7 @@ ms.locfileid: "65570692"
   
  **我的報表** 角色指派是由下列元素組成：  
   
--   使用者的 [我的報表] 資料夾，位於 Users Folders\\\<使用者名稱>\My Reports 資料夾內。  
+-   使用者的 [我的報表] 資料夾，位於 Users Folders\\\<使用者名稱>  \My Reports 資料夾內。  
   
 -   使用者帳戶，會判斷何時啟用 [我的報表] 資料夾。 資料夾是當使用者按一下報表管理員的 [我的報表] 資料夾，或者從報表設計師發行報表至 [我的報表] 資料夾時啟用。 此資料夾也會在使用者要求 [我的報表] 連結的屬性時啟用。  
   

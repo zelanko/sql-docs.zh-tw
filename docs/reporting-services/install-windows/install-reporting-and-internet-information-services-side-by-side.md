@@ -7,14 +7,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 991eefb50ec949098e132f17f2c18691f4822987
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b854add44b256078cd19963f2ef22d55a7b3d300
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813503"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64330625"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>並存安裝 Reporting Services 和 Internet Information Services
 
@@ -44,8 +44,8 @@ ms.locfileid: "51813503"
 |`https://123.234.345.456:80/reports`|如果網域名稱服務可以將 IP 位址解析成該主機名稱，則會收到所有傳送至 `https://123.234.345.456/reports` 或 `https://\<computername>/reports` 的所有要求。|  
 |`https://+:80/reports`|只要此 URL 包含 "reports" 虛擬目錄名稱，便接收傳送至適用於該電腦之任何 IP 位址或主機名稱的任何要求。|  
 |`https://123.234.345.456:80`|如果網域名稱服務可以將 IP 位址解析成該主機名稱，則會收到任何指定 `https://123.234.345.456` 或 `https://\<computername>` 的要求。|  
-|`https://+:80`|若為對應至 [全部指派] 的應用程式端點，便接收尚未由其他應用程式接收的要求。|  
-|`https://*:80`|若為對應至 [全未指派] 的應用程式端點，便接收尚未由其他應用程式接收的要求。|  
+|`https://+:80`|若為對應至 [全部指派]  的應用程式端點，便接收尚未由其他應用程式接收的要求。|  
+|`https://*:80`|若為對應至 [全未指派]  的應用程式端點，便接收尚未由其他應用程式接收的要求。|  
   
  發生連接埠衝突的其中一個指標是，您將會看到下列錯誤訊息：「System.IO.FileLoadException: 由於已有另一個處理序正在使用該檔案，所以無法存取該檔案。 (來自 HRESULT 的例外狀況: 0x80070020)。」  
   

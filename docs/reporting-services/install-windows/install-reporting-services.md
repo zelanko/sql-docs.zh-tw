@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: d636086c909d1d486040df6fc8d31cfea57c4f4d
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65502694"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>安裝 SQL Server Reporting Services (2017 和更新版本)
@@ -38,11 +38,11 @@ SQL Server Reporting Services 安裝所涉及的伺服器元件包括儲存報�
 
 1. 找到 SQLServerReportingServices.exe 的位置，並啟動安裝程式。
 
-2. 選取 [安裝 Reporting Services]。
+2. 選取 [安裝 Reporting Services]  。
 
     ![安裝 Reporting Services](media/install-reporting-services/report-server-install.png)
 
-3. 選擇安裝版本，然後選取 [下一步]。
+3. 選擇安裝版本，然後選取 [下一步]  。
 
     ![選擇版本](media/install-reporting-services/report-server-install-edition.png)
 
@@ -52,26 +52,26 @@ SQL Server Reporting Services 安裝所涉及的伺服器元件包括儲存報�
 
     否則，請輸入產品金鑰。 [尋找 SQL Server 2017 Reporting Services 的產品金鑰](find-reporting-services-product-key-ssrs.md).
 
-4. 閱讀並同意授權條款，然後選取 [下一步]。
+4. 閱讀並同意授權條款，然後選取 [下一步]  。
 
-5. 您需要有資料庫引擎以儲存報表伺服器資料庫。 選取 [下一步] 只安裝報表伺服器。
+5. 您需要有資料庫引擎以儲存報表伺服器資料庫。 選取 [下一步]  只安裝報表伺服器。
 
     ![安裝不需要資料庫](media/install-reporting-services/report-server-install-db-engine.png)
 
-6. 指定報表伺服器的安裝位置。 選取 [安裝] 繼續進行。
+6. 指定報表伺服器的安裝位置。 選取 [安裝]  繼續進行。
 
     ![指定安裝路徑](media/install-reporting-services/report-server-install-file-path.png)
 
     > [!NOTE]
     > 預設路徑為 C:\Program Files\Microsoft SQL Server Reporting Services。
 
-7. 成功安裝之後，選取 [設定報表伺服器] 啟動 Reporting Services 設定管理員。
+7. 成功安裝之後，選取 [設定報表伺服器]  啟動 Reporting Services 設定管理員。
 
     ![設定報表伺服器](media/install-reporting-services/report-server-install-configure.png)
 
 ## <a name="configuration-your-report-server"></a>設定報表伺服器
 
-在安裝程式中選取 [設定報表伺服器] 後，您會看到**報表伺服器設定管理員**。 如需詳細資訊，請參閱[報表伺服器設定管理員](reporting-services-configuration-manager-native-mode.md)。
+在安裝程式中選取 [設定報表伺服器]  後，您會看到**報表伺服器設定管理員**。 如需詳細資訊，請參閱[報表伺服器設定管理員](reporting-services-configuration-manager-native-mode.md)。
 
 您需要[建立報表伺服器資料庫](ssrs-report-server-create-a-report-server-database.md)以完成 Reporting Services 的初始設定。 SQL Server Database 伺服器需要完成此步驟。
 
