@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: a0ae01b1bbf0242cc3912d57c50d5e91d2864586
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66799403"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>設定 query wait 伺服器組態選項
@@ -44,7 +44,7 @@ ms.locfileid: "66799403"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定查詢等候選項之後](#FollowUp)  
+-   **後續操作：** [設定查詢等候選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66799403"
   
 #### <a name="to-configure-the-query-wait-option"></a>若要設定查詢等候選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
   
 2.  按一下 **[進階]** 節點。  
   
@@ -73,9 +73,9 @@ ms.locfileid: "66799403"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `query wait` 選項的值設定為 `7500` 秒。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `query wait` 選項的值設定為 `7500` 秒。  
   
 ```sql  
 USE AdventureWorks2012 ;  

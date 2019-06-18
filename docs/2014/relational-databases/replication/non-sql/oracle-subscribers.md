@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022230"
 ---
 # <a name="oracle-subscribers"></a>Oracle 訂閱者
@@ -58,9 +58,9 @@ ms.locfileid: "63022230"
   
  成功連接到「Oracle 發行者」後，請嘗試使用與設定訂閱之「散發代理程式」時相同的帳戶與密碼登入資料庫。  
   
-1.  按一下 **[開始]**，然後按一下 **[執行]**。  
+1.  按一下 **[開始]** ，然後按一下 **[執行]** 。  
   
-2.  輸入 `cmd` ，然後按一下 **[確定]**。  
+2.  輸入 `cmd` ，然後按一下 **[確定]** 。  
   
 3.  在命令提示字元中，輸入：  
   
@@ -85,7 +85,7 @@ ms.locfileid: "63022230"
   
     -   請確定空白字串尚未做為資料行值插入已發行的資料表中。  
   
-    -   如果通知「散發代理程式」記錄中的錯誤並繼續處理是可接受的，則請使用「散發代理程式」的 **-SkipErrors** 參數。 指定 Oracle 錯誤碼 1400 (**-SkipErrors1400**)。  
+    -   如果通知「散發代理程式」記錄中的錯誤並繼續處理是可接受的，則請使用「散發代理程式」的 **-SkipErrors** 參數。 指定 Oracle 錯誤碼 1400 ( **-SkipErrors1400**)。  
   
     -   修改已產生的建立資料表指令碼，同時從可能包含了與空白字串相關聯的任何字元資料行中移除 NOT NULL 屬性，並且使用 @creation_script sp_addarticle [的](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)參數為發行項提供做為自訂建立指令碼的已修改指令碼。  
   

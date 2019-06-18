@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: a513b868132f74a956fc05c1e8af97a7180cb100
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66787825"
 ---
 # <a name="select-databases-page-new-availability-group-wizard-and-add-database-wizard"></a>選取資料庫頁面 (新增可用性群組精靈和加入資料庫精靈)

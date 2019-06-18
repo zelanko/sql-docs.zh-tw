@@ -11,17 +11,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39d3c0dbd23499072ddd0ca2cd21748d92103c8c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66093554"
 ---
 # <a name="overview-of-sql-server-setup-documentation"></a>SQL Server 安裝程式文件集的概觀
   您可以在安裝媒體上取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的文件集，也可以透過線上方式取得。  
   
 ## <a name="documentation-available-during-setup"></a>在安裝期間提供的文件集  
- 在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 期間，按一下 [安裝精靈] 頁面上的 [說明] 按鈕或按鍵盤上的 F1，即可取得完成作業所需的立即資訊。  
+ 在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 期間，按一下 [安裝精靈] 頁面上的 [說明]  按鈕或按鍵盤上的 F1，即可取得完成作業所需的立即資訊。  
   
 ## <a name="overview-of-includessnoversionincludesssnoversion-mdmd-installation-topics"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝主題概觀  
  不論您是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈或命令提示字元來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，都可以閱讀下列章節來進行準備：  

@@ -15,15 +15,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: cf52fc972fbaca8ad9de558d8a515f1f927c33d8
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65093851"
 ---
 # <a name="general-user-interface-elements"></a>一般使用者介面元素
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[編輯器]、[屬性] 視窗和 [工具箱] 是 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的一些基本元素。  
+[編輯器]  、[屬性]  視窗和 [工具箱]  是 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的一些基本元素。  
   
 ## <a name="in-this-section"></a>本節內容  
 [關於對話方塊](../ssms/about-dialog-box.md)  
@@ -33,11 +33,11 @@ ms.locfileid: "65093851"
 描述 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 如何在文件視窗中主控 Web 瀏覽器。  
   
 [外部工具對話方塊](../ssms/external-tools-dialog-box.md)  
-可讓您將工具新增至 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 所沒有的 [工具] 功能表中。  
+可讓您將工具新增至 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 所沒有的 [工具]  功能表中。  
   
 [屬性視窗 &#40;Management Studio&#41;](../ssms/properties-window-management-studio.md)  
 可讓您檢視在編輯器和設計師中之所選物件的屬性和事件。 另外，它也可讓您編輯和檢視檔案、專案和方案的屬性。 您可以在 [屬性] 視窗中，編輯某些屬性。  
   
 [使用工具箱](../ssms/use-the-toolbox.md)  
-說明如何操作和利用 [工具箱]，將控制項新增至專案的設計工具中。 例如，您利用 [工具箱]，將步驟新增至 [維護] 工作中。  
+說明如何操作和利用 [工具箱]  ，將控制項新增至專案的設計工具中。 例如，您利用 [工具箱]  ，將步驟新增至 [維護] 工作中。  
   

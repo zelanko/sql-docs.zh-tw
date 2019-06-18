@@ -11,10 +11,10 @@ author: HJToland3
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 727ede7a057491eea2ea230d7057aa3228b5fc82
-ms.sourcegitcommit: 40e55e55a73e39d447da87d9178f2b6067f39c6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66841106"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>什麼是適用於 SAP ASE (SybaseToSQL) 的 SSMA 的新功能
@@ -43,7 +43,7 @@ V8.1 版的 SSMA 適用於 SAP ASE 被增強的目標式修正，專為改善品
 
 ## <a name="ssma-v80"></a>SSMA v8.0
 
-8.0 版版的 SSMA 適用於 SAP ASE 被增強的目標式修正，旨在改善品質和轉換的計量。 此外，此版本提供了下列新功能：
+8\.0 版版的 SSMA 適用於 SAP ASE 被增強的目標式修正，旨在改善品質和轉換的計量。 此外，此版本提供了下列新功能：
 
 * 支援**Azure SQL Database 受控執行個體**做為目標。 您現在可以建立新的專案目標 Azure SQL Database 受控執行個體：
 
@@ -134,7 +134,7 @@ SSMA for Sybase 的 v7.2 版本包含下列變更：
 
 ## <a name="ssma-v71"></a>SSMA v7.1
 
-7.1 版版的 SSMA for Sybase 包含下列變更：
+7\.1 版版的 SSMA for Sybase 包含下列變更：
 
 * 在 Windows 和 Linux CTP1 上的 SQL Server 2017 現支援的目標平台進行移轉。 這項功能處於技術預覽狀態，並支援結構描述和資料移動至目標 SQL server。
 * 若要下載最新版本的 SSMA，因為它位於的自動更新的支援。

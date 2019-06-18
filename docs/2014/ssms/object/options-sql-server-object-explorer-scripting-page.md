@@ -14,32 +14,32 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63031932"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>選項 （SQL Server 物件總管編寫指令碼頁面）
   使用此頁面設定指定碼選項，以在**物件總管**之物件操作功能表的下列命令中使用：  
   
--   使用者資料表與檢視的 [編輯] 命令。  
+-   使用者資料表與檢視的 [編輯]  命令。  
   
 -   **指令碼\<物件 > 為**使用者建立之物件的命令。  
   
--   使用者建立之物件的 [修改] 命令。  
+-   使用者建立之物件的 [修改]  命令。  
   
--   此頁面也可設定 [產生 SQL Server 指令碼精靈] 的編寫指令碼選項預設值。  
+-   此頁面也可設定 [產生 SQL Server 指令碼精靈]  的編寫指令碼選項預設值。  
   
 ## <a name="remarks"></a>備註  
- **編輯**並**修改**命令可能會產生不同的結果**指令碼\<物件 > 為**命令相同的 [選項] 設定。 [編輯] 與 [修改] 命令的設計讓您可以在查詢編輯器工作階段期間，修改目前資料庫中的物件。 **指令碼\<物件 > 為**命令設計來產生指令碼，以便它可以用於更新版本來建立物件。  
+ **編輯**並**修改**命令可能會產生不同的結果**指令碼\<物件 > 為**命令相同的 [選項] 設定。 [編輯]  與 [修改]  命令的設計讓您可以在查詢編輯器工作階段期間，修改目前資料庫中的物件。 **指令碼\<物件 > 為**命令設計來產生指令碼，以便它可以用於更新版本來建立物件。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  在每個選項右方的清單中選取可用的設定，即可指定指令碼選項。  
   
 ### <a name="general-scripting-options"></a>一般指令碼選項  
  **分隔個別陳述式**  
- 使用批次分隔符號來分隔個別 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 若要變更**查詢編輯器**的預設批次分隔符號，請選取 工具/選項/查詢執行/SQL Server/一般/批次分隔符號。 預設值是 False。 如需詳細資訊，請參閱 < [GO &#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)。  
+ 使用批次分隔符號來分隔個別 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 若要變更**查詢編輯器**的預設批次分隔符號，請選取 工具  /選項  /查詢執行  /SQL Server  /一般  /批次分隔符號  。 預設值是 False。 如需詳細資訊，請參閱 < [GO &#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)。  
   
  **包含描述性標頭**  
  透過將每個物件的指令碼分隔成區段，在指令碼中加入描述性註解。 預設值是 True。 如需詳細資訊，請參閱 <<c0> [ 註解&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/comment-transact-sql)。</c0>  

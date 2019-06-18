@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6449b073adb406d15f41cfe02d477a05ad8b0b31
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63065492"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>使用 TCP IP 建立有效的連接字串
@@ -28,9 +28,9 @@ ms.locfileid: "63065492"
   
 -   指定 **別名名稱**。  
   
--   針對 **[伺服器]**，輸入您可以使用 **PING** 公用程式來連接的伺服器名稱，或是可以使用 **PING** 公用程式來連接的 IP 位址。 針對具名執行個體，請附加執行個體名稱。  
+-   針對 **[伺服器]** ，輸入您可以使用 **PING** 公用程式來連接的伺服器名稱，或是可以使用 **PING** 公用程式來連接的 IP 位址。 針對具名執行個體，請附加執行個體名稱。  
   
--   在 **[通訊協定]** 中指定 **[TCP/IP]**。  
+-   在 **[通訊協定]** 中指定 **[TCP/IP]** 。  
   
 -   (選擇性) 在 **[通訊埠編號]** 中輸入通訊埠編號。 預設值為 1433，也就是伺服器上 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 預設執行個體的通訊埠編號。 若要連接到具名執行個體或未接聽通訊埠 1433 的預設執行個體，您必須提供通訊埠編號，或是啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務。 如需設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務的資訊，請參閱 [SQL Server Browser 服務](../../../2014/tools/configuration-manager/sql-server-browser-service.md)。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63065492"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 完整支援網際網路通訊協定第 4 版 (IPv4) 與網際網路通訊協定第 6 版 (IPv6)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員可以接受 IPv4 和 IPv6 格式的 IP 位址。 如需有關 IPv6 的資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用 IPv6 連接＞。  
   
 ## <a name="connecting-to-the-local-server"></a>連接到本機伺服器  
- 連接到與用戶端在同一部電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，可以使用 `(local)` 做為伺服器名稱。 但不建議這麼做，因為會造成模糊不清，但是若確實知道用戶端正在預期的電腦上執行，這就很有用。 例如，為行動式、非連接的使用者 (例如銷售人員) 建立應用程式 (亦即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會在膝上型電腦上執行並儲存專案資料) 時，連接到 `(local)` 的用戶端一律會連接到在膝上型電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 可以使用字詞 `localhost` 或句點 (**.**) 來取代 `(local)`。  
+ 連接到與用戶端在同一部電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，可以使用 `(local)` 做為伺服器名稱。 但不建議這麼做，因為會造成模糊不清，但是若確實知道用戶端正在預期的電腦上執行，這就很有用。 例如，為行動式、非連接的使用者 (例如銷售人員) 建立應用程式 (亦即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會在膝上型電腦上執行並儲存專案資料) 時，連接到 `(local)` 的用戶端一律會連接到在膝上型電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 可以使用字詞 `localhost` 或句點 ( **.** ) 來取代 `(local)`。  
   
 ## <a name="verifying-your-connection-protocol"></a>驗證您的連接通訊協定  
  下列查詢會傳回目前連接所使用的通訊協定。  

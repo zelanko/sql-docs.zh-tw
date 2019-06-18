@@ -44,11 +44,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 47dca205ad7ac3dd2a82ce404bc2e7fb20938346
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828378"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63201733"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 檔案及檔案群組選項
 
@@ -64,12 +64,12 @@ ms.locfileid: "56828378"
 
 |||
 |-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|** _\* SQL Server \*_ ** &nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
 
-# <a name="sql-server"></a>[SQL Server]
+# <a name="sql-server"></a>SQL Server
 
 ## <a name="syntax"></a>語法
 
@@ -179,7 +179,7 @@ NEWNAME *new_logical_file_name* 指定檔案的新邏輯名稱。
 
 *new_logical_file_name* 這是要取代現有邏輯檔案名稱的名稱。 這個名稱在資料庫內必須是唯一的，且必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 這個名稱可以是字元或 Unicode 常數、正規識別碼，或分隔的識別碼。
 
-FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** | **'**_memory\_optimized\_data\_path_**'**} 指定作業系統 (實體) 檔案名稱。
+FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** | **'** _memory\_optimized\_data\_path_ **'** } 指定作業系統 (實體) 檔案名稱。
 
 ' *os_file_name* ' 如果是標準 (ROWS) 檔案群組，這就是當您建立檔案時，作業系統所用的路徑和檔案名稱。 這個檔案必須在安裝了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的伺服器中。 在執行 ALTER DATABASE 陳述式之前，指定的路徑必須已經存在。
 
@@ -279,7 +279,7 @@ REMOVE FILEGROUP *filegroup_name* 從資料庫中移除檔案群組。 除非檔
 > [!NOTE]
 > 除非 FILESTREAM 記憶體回收行程已移除 FILESTREAM 容器中的所有檔案，否則移除 FILESTREAM 容器的 `ALTER DATABASE REMOVE FILE` 作業會失敗並傳回錯誤訊息。 請參閱本主題稍後的[移除 FILESTREAM 容器](#removing-a-filestream-container)一節。
 
-MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } 透過將狀態設定為 READ_ONLY 或 READ_WRITE 來修改檔案群組，讓檔案群組成為資料庫的預設檔案群組，或變更檔案群組名稱。
+MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } 透過將狀態設定為 READ_ONLY 或 READ_WRITE 來修改檔案群組，讓檔案群組成為資料庫的預設檔案群組，或變更檔案群組名稱。
 
 \<filegroup_updatability_option> 將檔案群組的屬性設成唯讀或讀取/寫入。
 
@@ -684,7 +684,7 @@ GO
 
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* SQL Database<br />受控執行個體 \*_**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|** _\* SQL Database<br />受控執行個體 \*_ **<br />&nbsp;|
 
 &nbsp;
 
@@ -812,7 +812,7 @@ ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_
 
 REMOVE FILEGROUP *filegroup_name* 從資料庫中移除檔案群組。 除非檔案群組是空的，否則無法移除檔案群組。 請先移除檔案群組中的所有檔案。 如需詳細資訊，請參閱本主題中稍早的 "REMOVE FILE *logical_file_name*"。
 
-MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } 透過將狀態設定為 READ_ONLY 或 READ_WRITE 來修改檔案群組，讓檔案群組成為資料庫的預設檔案群組，或變更檔案群組名稱。
+MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } 透過將狀態設定為 READ_ONLY 或 READ_WRITE 來修改檔案群組，讓檔案群組成為資料庫的預設檔案群組，或變更檔案群組名稱。
 
 \<filegroup_updatability_option> 將檔案群組的屬性設成唯讀或讀取/寫入。
 

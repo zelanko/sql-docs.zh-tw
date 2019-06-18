@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 072910b06ed75a5aad53bb6f51f0d62224144459
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088769"
 ---
 # <a name="proxy-account-properties---new-proxy-account-general-page"></a>Proxy 帳戶屬性 - 新增 Proxy 帳戶 (一般頁面)
@@ -40,7 +40,7 @@ ms.locfileid: "65088769"
 > 提供的認證名稱必須是現有的認證名稱。 如需建立認證的資訊，請參閱[如何：建立 Proxy (SQL Server Management Studio)](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)  
   
 **...**  
-啟動 [選取認證] 對話方塊。  
+啟動 [選取認證]  對話方塊。  
   
 **說明**  
 輸入 Proxy 的描述。  

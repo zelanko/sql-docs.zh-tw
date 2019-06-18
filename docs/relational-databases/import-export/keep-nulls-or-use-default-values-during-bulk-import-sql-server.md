@@ -23,10 +23,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6269db9bcf9c242162a01ab144ebc55de6aa0803
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946623"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>大量匯入期間保留 Null 或使用預設值 (SQL Server)
@@ -154,7 +154,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
   
-### **不使用格式檔案而使用 [bcp](../../tools/bcp-utility.md) 使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_null_fmt"></a>
+### **不使用格式檔案而使用 [bcp](../../tools/bcp-utility.md) 使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_null_fmt"></a>
 **-k** 與 **-f** 參數。 請在命令提示字元之下，輸入下列命令：
 
 ```cmd
@@ -182,7 +182,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
   
-### **不使用格式檔案而使用 [bcp](../../tools/bcp-utility.md) 使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_default_fmt"></a>
+### **不使用格式檔案而使用 [bcp](../../tools/bcp-utility.md) 使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_default_fmt"></a>
 **-f** 參數。  請在命令提示字元之下，輸入下列命令：
 
 ```cmd
@@ -215,7 +215,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **不使用格式檔案而使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_null_fmt"></a>
+### **不使用格式檔案而使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_null_fmt"></a>
 **KEEPNULLS** 和 **FORMATFILE** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 
 ```sql
@@ -253,7 +253,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **不使用格式檔案而使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_default_fmt"></a>
+### **不使用格式檔案而使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_default_fmt"></a>
 **FORMATFILE** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 
 ```sql
@@ -271,7 +271,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **不使用格式檔案而使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset__null_fmt"></a>
+### **不使用格式檔案而使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__null_fmt"></a>
 **FORMATFILE** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 
 ```sql
@@ -290,7 +290,7 @@ INSERT INTO dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **不使用格式檔案而使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset__default_fmt"></a>
+### **不使用格式檔案而使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 使用 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__default_fmt"></a>
 **KEEPDEFAULTS** 資料表提示和 **FORMATFILE** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 
 ```sql

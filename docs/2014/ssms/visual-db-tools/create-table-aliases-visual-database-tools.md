@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e7172a7b9b17dfa4553d3179d8cc1a880040f13
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63306533"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>建立資料表別名 (Visual Database Tools)
@@ -35,9 +35,9 @@ ms.locfileid: "63306533"
   
 1.  將資料表或資料表值物件加入到查詢。  
   
-2.  在 [圖表] 窗格中，在想要建立別名的物件按一下滑鼠右鍵，然後從快速鍵功能表中選取 [屬性]。  
+2.  在 [圖表]  窗格中，在想要建立別名的物件按一下滑鼠右鍵，然後從快速鍵功能表中選取 [屬性]  。  
   
-3.  在 [屬性] 視窗中的 [別名] 欄位，輸入別名。  
+3.  在 [屬性]  視窗中的 [別名]  欄位，輸入別名。  
   
 ## <a name="see-also"></a>另請參閱  
  [將資料表加入查詢&#40;Visual Database Tools&#41;](add-tables-to-queries-visual-database-tools.md)   

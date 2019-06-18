@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a32df85b1a2b7362a22c27d05f68c07cf32a3200
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724453"
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats (Transact-SQL)
@@ -49,13 +49,13 @@ sp_createstats
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @indexonly = ] 'indexonly'` 只有位於現有索引並不是任何索引定義中的第一個資料行的資料行建立統計資料。 **indexonly**已**char(9)**。 預設值是 NO。  
+`[ @indexonly = ] 'indexonly'` 只有位於現有索引並不是任何索引定義中的第一個資料行的資料行建立統計資料。 **indexonly**已**char(9)** 。 預設值是 NO。  
   
-`[ @fullscan = ] 'fullscan'` 會使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)陳述式搭配**FULLSCAN**選項。 **fullscan**已**char(9)**。  預設值是 NO。  
+`[ @fullscan = ] 'fullscan'` 會使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)陳述式搭配**FULLSCAN**選項。 **fullscan**已**char(9)** 。  預設值是 NO。  
   
-`[ @norecompute = ] 'norecompute'` 會使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)陳述式搭配**NORECOMPUTE**選項。 **norecompute**已**char(12)**。  預設值是 NO。  
+`[ @norecompute = ] 'norecompute'` 會使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)陳述式搭配**NORECOMPUTE**選項。 **norecompute**已**char(12)** 。  預設值是 NO。  
   
-`[ @incremental = ] 'incremental'` 會使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)陳述式搭配**INCREMENTAL = ON**選項。 **累加**已**char(12)**。  預設值是 NO。  
+`[ @incremental = ] 'incremental'` 會使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)陳述式搭配**INCREMENTAL = ON**選項。 **累加**已**char(12)** 。  預設值是 NO。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 51a3deffc9db182f7b3ad8f50d27c24e0f74dc6d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807070"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>更新統計資料工作 (維護計畫)
@@ -26,7 +26,7 @@ ms.locfileid: "62807070"
   
  此工作會執行 UPDATE STATISTICS 陳述式。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[連接]**  
  選取執行此工作時要使用的伺服器連接。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62807070"
  **附註** 維護計畫只針對相容性層級設為 80 (含) 以上的資料庫來執行。 不會顯示相容性層級設為 70 或更低的資料庫。  
   
  **物件**  
- 限制 [選取範圍] 格線僅顯示資料表、檢視或兩者。  
+ 限制 [選取範圍]  格線僅顯示資料表、檢視或兩者。  
   
  **選取範圍**  
  指定受此工作影響的資料表或索引。 [物件] 方塊中的 **[資料表和檢視]** 為選取狀態時無法使用。  

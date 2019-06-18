@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 17b4052b8842225d729bc8de996a7b0649f85a59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62782398"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>啟用或停用伺服器網路通訊協定
@@ -48,15 +48,15 @@ ms.locfileid: "62782398"
   
 #### <a name="to-enable-a-server-network-protocol"></a>若要啟用伺服器網路通訊協定  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員的主控台窗格中，展開 **[SQL Server 網路組態]**。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員的主控台窗格中，展開 **[SQL Server 網路組態]** 。  
   
-2.  在主控台窗格中，按一下 [\<執行個體名稱> 的通訊協定]。  
+2.  在主控台窗格中，按一下 [\<執行個體名稱> 的通訊協定]   。  
   
-3.  在詳細資料窗格中，以滑鼠右鍵按一下要變更的通訊協定，然後按一下 [啟用] 或 [停用]。  
+3.  在詳細資料窗格中，以滑鼠右鍵按一下要變更的通訊協定，然後按一下 [啟用]  或 [停用]  。  
   
-4.  在主控台窗格中，按一下 **[SQL Server 服務]**。  
+4.  在主控台窗格中，按一下 **[SQL Server 服務]** 。  
   
-5.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server (\<執行個體名稱>)]****，然後按一下 [重新啟動]，以停止並重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
+5.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server (\<執行個體名稱>)] **** ，然後按一下 [重新啟動]  ，以停止並重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 SQL Server PowerShell  
   

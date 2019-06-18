@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38cf74c8ad6542eeafc9f6f785f8bc9f0eecea99
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946408"
 ---
 # <a name="bulk-import-large-object-data-with-openrowset-bulk-rowset-provider"></a>使用 OPENROWSET BULK 資料列集提供者大量匯入大型物件資料

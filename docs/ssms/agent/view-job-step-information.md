@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e61fc9e718be24c5a7dcfaec735390842a40b222
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089420"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
@@ -58,11 +58,11 @@ ms.locfileid: "65089420"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  依序展開 [SQL Server Agent] 和 [作業]、以滑鼠右鍵按一下包含要檢視之作業步驟的作業，然後按一下 [屬性]。  
+2.  依序展開 [SQL Server Agent]  和 [作業]  、以滑鼠右鍵按一下包含要檢視之作業步驟的作業，然後按一下 [屬性]  。  
   
 3.  在 **[作業屬性]** 對話方塊中，按一下 **[步驟]** 頁面。  
   
-4.  按一下所要檢視的作業步驟，再按一下 **[編輯]**。  
+4.  按一下所要檢視的作業步驟，再按一下 **[編輯]** 。  
   
 5.  在 **[作業步驟屬性]** 對話方塊的 **[一般]** 頁面上，您可以檢視作業步驟的類型及其功能。  
   

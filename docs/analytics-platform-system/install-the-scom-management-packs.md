@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f0acfa636a3432dcffb18cfec57ee7625c1eb01b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63215547"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>針對分析平台系統安裝 SQL Server Operations Manager (SCOM) 管理組件
@@ -39,7 +39,7 @@ APS PDW 工作負載中，下載[Microsoft Analytics Platform System 的 System 
   
 1.  若要執行安裝，請按兩下下載 SQL Server 應用裝置基礎管理組件。  
   
-2.  接受授權合約，然後按一下 [**下一步]**。  
+2.  接受授權合約，然後按一下 [**下一步]** 。  
   
     ![接受授權合約](./media/install-the-scom-management-packs/SCOM_licnse_agrmt.png "SCOM_licnse_agrmt")  
   
@@ -47,7 +47,7 @@ APS PDW 工作負載中，下載[Microsoft Analytics Platform System 的 System 
   
     ![選取安裝資料夾](./media/install-the-scom-management-packs/SCOM_licnse_agrmt2.png "SCOM_licnse_agrmt2")  
   
-4.  按一下 **[安裝]**。  
+4.  按一下 **[安裝]** 。  
   
     ![確認安裝](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
@@ -59,7 +59,7 @@ APS PDW 工作負載中，下載[Microsoft Analytics Platform System 的 System 
   
 1.  若要執行安裝，請按兩下已下載 SQL Server PDW 應用裝置的管理組件。  
   
-2.  接受授權合約，然後按一下 [**下一步]**。  
+2.  接受授權合約，然後按一下 [**下一步]** 。  
   
     ![接受授權合約](./media/install-the-scom-management-packs/SCOM_licnse_agmtB.png "SCOM_licnse_agmtB")  
   
@@ -67,7 +67,7 @@ APS PDW 工作負載中，下載[Microsoft Analytics Platform System 的 System 
   
     ![選取安裝資料夾](./media/install-the-scom-management-packs/SCOM_licnse_agmtB1.png "SCOM_licnse_agmtB1")  
   
-4.  按一下 **[安裝]**。  
+4.  按一下 **[安裝]** 。  
   
     ![確認安裝](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ef1a7101a0bd16c3ee2868f47a8dc15f29092621
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806710"
 ---
 # <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>在資料庫鏡像工作階段中強制服務 (Transact-SQL)
@@ -38,9 +38,9 @@ ms.locfileid: "62806710"
   
 2.  發出下列陳述式：  
   
-     ALTER DATABASE <資料庫名稱> SET PARTNER FORCE_SERVICE_ALLOW_DATA_LOSS  
+     ALTER DATABASE <資料庫名稱>  SET PARTNER FORCE_SERVICE_ALLOW_DATA_LOSS  
   
-     其中 <資料庫名稱> 是鏡像資料庫。  
+     其中 <資料庫名稱>  是鏡像資料庫。  
   
      鏡像伺服器會立即轉換為主體伺服器，並暫停鏡像。  
   

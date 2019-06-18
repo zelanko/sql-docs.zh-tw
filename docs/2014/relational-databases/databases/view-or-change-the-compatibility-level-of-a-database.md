@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ccc7b96f4275b09b90b8120813b93f860ec07b9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871056"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>檢視或變更資料庫的相容性層級
@@ -49,17 +49,17 @@ ms.locfileid: "62871056"
   
 1.  連接到適當的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，請在 [物件總管] 中按一下伺服器名稱。  
   
-2.  展開 **[資料庫]**，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
+2.  展開 **[資料庫]** ，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   
-3.  以滑鼠右鍵按一下此資料庫，然後按一下 [屬性]。  
+3.  以滑鼠右鍵按一下此資料庫，然後按一下 [屬性]  。  
   
      **[資料庫屬性]** 對話方塊隨即開啟。  
   
-4.  在 **[選取頁面]** 窗格中，按一下 **[選項]**。  
+4.  在 **[選取頁面]** 窗格中，按一下 **[選項]** 。  
   
      目前的相容性層級會顯示在 **[相容性層級]** 清單方塊中。  
   
-5.  若要變更相容性層級，請從清單中選取其他選項。 這些選項包括 [SQL Server 2008 (100)]、[SQL Server 2012 (110)] 或 [SQL Server 2014 (120)]。  
+5.  若要變更相容性層級，請從清單中選取其他選項。 這些選項包括 [SQL Server 2008 (100)]  、[SQL Server 2012 (110)]  或 [SQL Server 2014 (120)]  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -67,9 +67,9 @@ ms.locfileid: "62871056"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會傳回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的相容性層級。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會傳回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的相容性層級。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -84,9 +84,9 @@ GO
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會變更的相容性層級[!INCLUDE[ssSampleDBobject](../../includes/sssql14-md.md)]。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會變更的相容性層級[!INCLUDE[ssSampleDBobject](../../includes/sssql14-md.md)]。  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  

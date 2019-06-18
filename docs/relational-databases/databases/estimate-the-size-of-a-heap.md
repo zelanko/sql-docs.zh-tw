@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f57b07be679195794df5f0f9fe2329417a0b30f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591762"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62860667"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>估計堆積的大小
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "53591762"
   
 3.  資料列中有一部分 (稱為 Null 點陣圖) 是保留的空間，用來管理資料行的 Null 屬性。 計算它的大小：  
   
-     **_Null_Bitmap_**  = 2 + ((**_Num_Cols_** + 7) / 8)  
+     **_Null_Bitmap_**  = 2 + (( **_Num_Cols_** + 7) / 8)  
   
      您應該僅使用這個運算式的整數部分。 請捨去任何餘數。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "53591762"
   
      如果在索引中有可變長度的資料行，請決定將資料行儲存到索引列中所需的空間大小。  
   
-     **_Variable_Data_Size_**  = 2 + (**_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
+     **_Variable_Data_Size_**  = 2 + ( **_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
   
      新增到 **_Max_Var_Size_** 之位元組是用於追蹤每個可變長度的資料行。 這個公式假設所有可變長度的資料行是 100% 填滿的。 如果您預期可變長度資料行所佔儲存空間的百分比會比較低，您可以經由調整百分比所得的 **_Max_Var_Size_** 值，取得更精確的整體資料表大小估計值。  
   
@@ -66,19 +66,19 @@ ms.locfileid: "53591762"
   
 5.  計算資料列總大小：  
   
-     **_Row_Size_**  = **_Fixed_Data_Size_** + **_Variable_Data_Size_** + **_Null_Bitmap_** + 4  
+     **_Row_Size_**   =  **_Fixed_Data_Size_**  +  **_Variable_Data_Size_**  +  **_Null_Bitmap_** + 4  
   
      公式中 4 這個值是資料列的資料列標頭負擔。  
   
 6.  計算每個分頁的資料列數目 (每個分頁包含 8096 個可用位元組)：  
   
-     **_Rows_Per_Page_**  = 8096 / (**_Row_Size_** + 2)  
+     **_Rows_Per_Page_**  = 8096 / ( **_Row_Size_** + 2)  
   
      因為資料列不能跨頁，每個分頁的資料列數目必須無條件捨去小數，而取最接近的整數資料列。 公式中的 2 這個值是給分頁位置陣列中的該資料列項目。  
   
 7.  計算儲存所有資料列所需的分頁數目：  
   
-     **_Num_Pages_**  = **_Num_Rows_** / **_Rows_Per_Page_**  
+     **_Num_Pages_**   =  **_Num_Rows_**  /  **_Rows_Per_Page_**  
   
      估計的分頁數目應該要將小數進位到最接近的整分頁數。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "53591762"
   
 -   大型物件 (LOB) 值  
   
-     決定到底要使用多少空間來儲存 LOB 資料類型 **varchar(max)**、 **varbinary(max)**、 **nvarchar(max)**、 **text**、 **ntextxml**和 **image** 值的演算法是很複雜的。 只要加入預期的 LOB 值平均大小，並將此值加入堆積大小總計，這樣就已足夠。  
+     決定到底要使用多少空間來儲存 LOB 資料類型 **varchar(max)** 、 **varbinary(max)** 、 **nvarchar(max)** 、 **text**、 **ntextxml**和 **image** 值的演算法是很複雜的。 只要加入預期的 LOB 值平均大小，並將此值加入堆積大小總計，這樣就已足夠。  
   
 -   壓縮  
   
