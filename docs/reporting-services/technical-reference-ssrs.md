@@ -12,14 +12,14 @@ helpviewer_keywords:
 - tools [Reporting Services]
 - user interface reference [Reporting Services]
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d8ed5f298da17422e90cb6ab29fba596a0422079
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: bd0f8310fa0b11b8816f15194da19c856230991b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021032"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63301525"
 ---
 # <a name="technical-reference-ssrs"></a>技術參考 (SSRS)
 

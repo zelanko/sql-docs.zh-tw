@@ -12,14 +12,14 @@ helpviewer_keywords:
 - browser controls [Reporting Services]
 - URL access [Reporting Services], Windows applications
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3d225f20cae31e9f462d7f7c85c7109a3cecf43d
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 30ebdf11faf4780e8091f44ef1460d8980e82505
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812958"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63012180"
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>使用 URL 存取整合 Reporting Services - Windows 應用程式
   雖然會為 Web 環境最佳化報表伺服器的 URL 存取，不過，您也可以使用 URL 存取來將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表內嵌到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式。 不過，需要 Windows Form 的 URL 存取仍然需要您使用網頁瀏覽器技術。 您可以透過 URL 存取與 Windows Form 使用下列整合案例：  
@@ -87,9 +87,9 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 1.  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 建立新的 Windows 應用程式。  
   
-2.  在 [工具箱] 對話方塊中找出 <xref:System.Windows.Forms.WebBrowser> 控制項。  
+2.  在 [工具箱]  對話方塊中找出 <xref:System.Windows.Forms.WebBrowser> 控制項。  
   
-     如果看不到 [工具箱]，可以按一下 [檢視] 功能表項目，並選取 [工具箱] 來存取。  
+     如果看不到 [工具箱]  ，可以按一下 [檢視]  功能表項目，並選取 [工具箱]  來存取。  
   
 3.  將 <xref:System.Windows.Forms.WebBrowser> 控制項拖曳至 Windows Form 的設計介面。  
   

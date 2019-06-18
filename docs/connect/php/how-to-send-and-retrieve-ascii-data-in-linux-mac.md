@@ -15,11 +15,11 @@ author: yitam
 ms.author: v-yitam
 manager: mbarwin
 ms.openlocfilehash: 2fe78cc80cd7ca77f09465fb7d3e92482da7d008
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669976"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63181154"
 ---
 # <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>如何：傳送及擷取 Linux 與 macOS 中的 ASCII 資料 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

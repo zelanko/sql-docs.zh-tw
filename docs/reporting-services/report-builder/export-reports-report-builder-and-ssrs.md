@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0cb5c07545a719571c9fee26edc820006e9f0827
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580813"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>匯出報表 (報表產生器及 SSRS)
@@ -41,51 +41,51 @@ ms.locfileid: "65580813"
 
 1.  執行或預覽報表。  
   
-2.  在功能區上按一下 **[匯出]**。  
+2.  在功能區上按一下 **[匯出]** 。  
   
      ![報表產生器匯出](../../reporting-services/report-builder/media/ssrb-export.png "報表產生器匯出")  
   
 3.  選取要使用的格式。  
   
-     [另存新檔] 對話方塊隨即開啟。 依預設，檔案名稱就是您匯出之報表的名稱。 您可以選擇變更檔案名稱。  
+     [另存新檔]  對話方塊隨即開啟。 依預設，檔案名稱就是您匯出之報表的名稱。 您可以選擇變更檔案名稱。  
   
 ##  <a name="bkmk_export_from_rm"></a> 從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站匯出報表  
   
-1.  從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站的 [首頁] 上，巡覽至您要匯出的報表。  
+1.  從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站的 [首頁]  上，巡覽至您要匯出的報表。  
   
 2.  按一下報表來轉譯和預覽報表。  
   
-3.  在 [報表檢視器] 工具列上，按一下 [匯出] 下拉式箭頭。  
+3.  在 [報表檢視器] 工具列上，按一下 [匯出]  下拉式箭頭。  
   
      ![Reporting Services 入口網站匯出](../../reporting-services/report-builder/media/ssrsportal-export.png "Reporting Services 入口網站匯出")  
   
 4.  選取要使用的格式。  
   
-5.  按一下 **[匯出]**。 隨即出現對話方塊，詢問您是要開啟還是儲存檔案。  
+5.  按一下 **[匯出]** 。 隨即出現對話方塊，詢問您是要開啟還是儲存檔案。  
   
-6.  若要以選取的匯出格式檢視報表，按一下 **[開啟]**。  
+6.  若要以選取的匯出格式檢視報表，按一下 **[開啟]** 。  
   
      \- 或 -  
   
-     若要以選取的匯出格式立即儲存報表，按一下 **[儲存]**。  
+     若要以選取的匯出格式立即儲存報表，按一下 **[儲存]** 。  
   
-     使用與您選擇之格式相關聯的應用程式，顯示或儲存報表。 如果您按一下 **[儲存]**，系統會提示您儲存報表的位置。  
+     使用與您選擇之格式相關聯的應用程式，顯示或儲存報表。 如果您按一下 **[儲存]** ，系統會提示您儲存報表的位置。  
   
 ##  <a name="bkmk_export_from_sharepoint"></a> 從 SharePoint 文件庫匯出報表  
   
 1.  預覽報表。  
   
-2.  在工具列上，按一下 **[動作]**，指向 **[匯出]**，然後選取您要使用的格式。  
+2.  在工具列上，按一下 **[動作]** ，指向 **[匯出]** ，然後選取您要使用的格式。  
   
      隨即開啟 **[檔案下載]** 對話方塊。  
   
-3.  若要以選取的匯出格式檢視報表，按一下 **[開啟]**。  
+3.  若要以選取的匯出格式檢視報表，按一下 **[開啟]** 。  
   
      \- 或 -  
   
-     若要以選取的匯出格式立即儲存報表，按一下 **[儲存]**。  
+     若要以選取的匯出格式立即儲存報表，按一下 **[儲存]** 。  
   
-     使用與您選擇之格式相關聯的應用程式，顯示或儲存報表。 如果您按一下 **[儲存]**，系統會提示您儲存報表的位置。  
+     使用與您選擇之格式相關聯的應用程式，顯示或儲存報表。 如果您按一下 **[儲存]** ，系統會提示您儲存報表的位置。  
   
      您可以選擇變更匯出之報表的檔案名稱。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "65580813"
 |XML|資料|XML 轉譯延伸模組會傳回 XML 格式的報表。 報表 XML 的結構描述為報表特有的，且僅包含資料。 XML 轉譯延伸模組不會轉譯配置資訊，也不會維持分頁。 此延伸模組所產生的 XML 可以匯入資料庫中 (當做 XML 資料訊息使用)，或傳送到自訂應用程式。<br/><br/> 如需詳細資訊，請參閱[匯出至 XML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)。|  
   
 ##  <a name="GeneratingDataFeedsFromReport"></a> 從報表產生資料摘要  
- 若要從報表產生資料摘要，請在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站中執行報表，然後按一下入口網站工具列上的 **產生資料摘要** 圖示。 系統會提示您選擇要儲存還是開啟檔案。 如果您選擇 **[開啟]**，Atom 服務文件會在與 .atomsvc 副檔名相關聯的應用程式中開啟。 如果您選擇 **[儲存]**，文件會儲存為 .atomsvc 檔。 根據預設，檔案的名稱會是報表的名稱。 您可以將名稱變更為更有意義的名稱。  
+ 若要從報表產生資料摘要，請在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站中執行報表，然後按一下入口網站工具列上的 **產生資料摘要** 圖示。 系統會提示您選擇要儲存還是開啟檔案。 如果您選擇 **[開啟]** ，Atom 服務文件會在與 .atomsvc 副檔名相關聯的應用程式中開啟。 如果您選擇 **[儲存]** ，文件會儲存為 .atomsvc 檔。 根據預設，檔案的名稱會是報表的名稱。 您可以將名稱變更為更有意義的名稱。  
   
  將 Atom 服務文件儲存到您的電腦上。 之後您可以將文件上傳到報表伺服器或是其他伺服器，以供其他人使用。 如需詳細資訊，請參閱[從多個報表產生資料摘要](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)和[從報表產生資料摘要](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)。  
   

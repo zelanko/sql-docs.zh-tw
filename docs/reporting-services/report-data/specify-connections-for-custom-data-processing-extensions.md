@@ -20,10 +20,10 @@ ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f346427ee41f8049caa050aa49eda393dd304566
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65575486"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>為自訂資料處理延伸模組指定連接
@@ -58,7 +58,7 @@ ms.locfileid: "65575486"
   
 1.  設定自動執行帳戶。 若要利用 **IDbConnection**來進行連接，則必須設定此帳戶。 報表伺服器在進行連接時會模擬該帳戶。  
   
-2.  在報表中設定資料來源屬性來使用 **[無認證]**。  
+2.  在報表中設定資料來源屬性來使用 **[無認證]** 。  
   
 3.  將用於連接到資料來源的認證放在連接字串中。  
   

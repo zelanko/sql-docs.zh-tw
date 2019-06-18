@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: jt000
 ms.author: jasontre
 ms.openlocfilehash: 738908549caa157557a16b1ae05575231a15c734
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580582"
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>報表檢視器網頁組件的 SharePoint 網站設定 - Reporting Services
@@ -24,11 +24,11 @@ ms.locfileid: "65580582"
 
 若要存取網站設定：
 
-1. 在 SharePoint 網站中，選取左上方的**齒輪**圖示，然後選取 [網站設定]。
+1. 在 SharePoint 網站中，選取左上方的**齒輪**圖示，然後選取 [網站設定]  。
 
     ![從齒輪圖示開啟網站設定。](media/sharepoint-site-settings.png)
 
-2. 在 [Reporting Services] 網站設定群組中，按一下 [Report Viewer Web Part Settings] \(報表檢視器網頁組件設定)。
+2. 在 [Reporting Services]  網站設定群組中，按一下 [Report Viewer Web Part Settings] \(報表檢視器網頁組件設定)  。
 
     > [!NOTE]
     > 您也可以直接巡覽至 `<site>/_layouts/15/ReportViewerWebPart/ReportViewerWebPartSettings.aspx` 來到達網站設定

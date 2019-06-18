@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cee144e7fed793cf08c246f3a83a4f9e213e80a4
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298416"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63316650"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>將視覺效果新增至 Reporting Services 行動報表
 圖表是資料視覺效果中不可或缺的一部分。 了解可在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表中用來涵蓋各種案例的圖表。 
@@ -27,10 +27,10 @@ ms.locfileid: "56298416"
 ### <a name="number-format"></a>數字格式
 您可以在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 中，針對圖表中的數字指定各種格式；例如，一般、包含或不含小數位數的貨幣、包含或不含小數位數的百分比等等。 在圖表中，數字格式會套用至軸註解，以及資料點快顯。 您會在每個圖表 (而不是整個行動報表) 上個別設定數字格式。 
 
-* 若要設定數字格式，請依序選取 [配置] 索引標籤和設計介面上的圖表，然後在 [視覺屬性] 窗格中，選取 [數字格式]。 
+* 若要設定數字格式，請依序選取 [配置]  索引標籤和設計介面上的圖表，然後在 [視覺屬性]  窗格中，選取 [數字格式]  。 
   
 ### <a name="legend"></a>圖例
-* 若要顯示圖表的圖例，請依序選取 [配置] 索引標籤和設計介面上的圖表，然後在 [視覺屬性] 窗格中，將 [顯示圖例] 設定為 [開啟]
+* 若要顯示圖表的圖例，請依序選取 [配置]  索引標籤和設計介面上的圖表，然後在 [視覺屬性]  窗格中，將 [顯示圖例]  設定為 [開啟] 
   
 ### <a name="series"></a>數列
 每個顯示在圖表上的個別度量或值，可以視為一個數列；多個數列可以 (也應該) 共用通用 X 軸與通用 Y 軸。 數列可透過選取一或多個資料表及欄位，在資料檢視的資料屬性面板中定義。 每個欄位會在圖表視覺效果上產生個別的資料點數列，並分別有自己的色彩。  
@@ -38,15 +38,15 @@ ms.locfileid: "56298416"
 ### <a name="change-aggregation"></a>變更彙總 
 在圖表中，數值欄位的預設彙總為總和。 您可以將其變更為平均值、計數、最小值、最大值、第一個值或最後一個值。
 
-* 選取 [資料] 索引標籤，然後在 [資料屬性] 中，選取數值欄位旁的 [選項] > 選取其他彙總。
+* 選取 [資料]  索引標籤，然後在 [資料屬性]  中，選取數值欄位旁的 [選項]  > 選取其他彙總。
 
 ### <a name="set-or-clear-filters"></a>設定或清除篩選
 
 如果您加入導覽器以篩選行動報表，您可以決定要篩選哪些圖表。
 
-1. 選取 [資料] 索引標籤，然後在 [資料屬性] 中，選取 [選項]。
+1. 選取 [資料]  索引標籤，然後在 [資料屬性]  中，選取 [選項]  。
 
-2. 在 [篩選依據] 下，您會看到可選取或清除的導覽器。
+2. 在 [篩選依據]  下，您會看到可選取或清除的導覽器。
 
 深入了解如何 [加入導覽器以篩選行動報表](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)。
    
@@ -56,31 +56,31 @@ ms.locfileid: "56298416"
 
 ![行動報表的時間圖表](../../reporting-services/mobile-reports/media/mobile-report-time-chart.png)
 
-1. 將 [時間圖表] 從 [配置] 索引標籤拖曳至設計介面，然後調整其大小。
+1. 將 [時間圖表]  從 [配置]  索引標籤拖曳至設計介面，然後調整其大小。
 
-2. 預設是堆疊橫條圖。 您可以在 [數列視覺效果] 中進行變更。
+2. 預設是堆疊橫條圖。 您可以在 [數列視覺效果]  中進行變更。
 
-3. 如果圖表需要的資料已不在報表中，請選取 [資料] 索引標籤 > [新增資料]，[從 Excel 或共用資料集取得資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)。
+3. 如果圖表需要的資料已不在報表中，請選取 [資料]  索引標籤 > [新增資料]  ，[從 Excel 或共用資料集取得資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)。
 
-3. 在 [資料屬性] 窗格中，[主要數列] 是 [SimulatedTable]。 選取方塊中的箭號 > 選取您的資料表。
+3. 在 [資料屬性]  窗格中，[主要數列]  是 [SimulatedTable]  。 選取方塊中的箭號 > 選取您的資料表。
 
-5. 如果您將 [資料結構] 設定為 [循資料行] (在 [配置] 索引標籤 > [視覺屬性] 窗格上)，則可以在這裡的 [資料屬性] 窗格中，選取多個數值資料行。
+5. 如果您將 [資料結構]  設定為 [循資料行]  (在 [配置]  索引標籤 > [視覺屬性]  窗格上)，則可以在這裡的 [資料屬性]  窗格中，選取多個數值資料行。
 
-   如果您將 [資料結構] 設定為 [循資料列]，則可以在這裡的 [資料屬性] 窗格中，選取一個 [數列名稱欄位] 及一個數值資料行。
+   如果您將 [資料結構]  設定為 [循資料列]  ，則可以在這裡的 [資料屬性]  窗格中，選取一個 [數列名稱欄位]  及一個數值資料行。
    
 深入了解如何 [依資料行或資料列群組資料](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md)。
   
 ## <a name="category-charts"></a>類別圖表  
   
-不同於時間圖表，在類別圖表中，您可以對 X 軸上的日期/時間欄位以外的欄位進行群組。 此群組 (稱為「類別座標」) 必須針對字串欄位，而不是數值欄位。
+不同於時間圖表，在類別圖表中，您可以對 X 軸上的日期/時間欄位以外的欄位進行群組。 此群組 (稱為「類別座標」  ) 必須針對字串欄位，而不是數值欄位。
 
 ![行動報表的類別圖表](../../reporting-services/mobile-reports/media/mobile-report-category-chart.png)   
 
-1. 將 [類別圖表] 從 [配置] 索引標籤拖曳至設計介面，調整其大小，然後視需要[取得其資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)。
+1. 將 [類別圖表]  從 [配置]  索引標籤拖曳至設計介面，調整其大小，然後視需要[取得其資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)。
 
-2. 選取 [資料] 索引標籤，然後在 [資料屬性] 窗格的 [類別座標] 下，選取要群組的資料表和欄位。 此欄位將會在產生圖表的 X 軸上。
+2. 選取 [資料]  索引標籤，然後在 [資料屬性]  窗格的 [類別座標]  下，選取要群組的資料表和欄位。 此欄位將會在產生圖表的 X 軸上。
 
-3. 在 [主要數列] 下，選取要針對每個類別彙總的資料表和數值欄位。 
+3. 在 [主要數列]  下，選取要針對每個類別彙總的資料表和數值欄位。 
   
 ## <a name="totals-charts"></a>總計圖表  
 
@@ -94,24 +94,24 @@ ms.locfileid: "56298416"
   
 ## <a name="comparison-charts"></a>比較圖  
   
-時間、類別和總計圖表也可當作「比較圖」使用。 在比較圖中，您不僅可以指定主要數列，還可以指定第二個比較數列。 主要和比較數列的顯示方式有三種。
+時間、類別和總計圖表也可當作「比較圖」  使用。 在比較圖中，您不僅可以指定主要數列，還可以指定第二個比較數列。 主要和比較數列的顯示方式有三種。
 
 ![行動報表的比較時間圖表](../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png)
 
-1. 將其中一個 [比較圖] (時間、類別或總計) 從 [配置] 索引標籤拖曳至設計介面，調整其大小，然後視需要[取得其資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)。
+1. 將其中一個 [比較圖]  (時間、類別或總計) 從 [配置]  索引標籤拖曳至設計介面，調整其大小，然後視需要[取得其資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)。
 
-2. 在 [視覺屬性] 窗格的 [數列視覺效果] 中，選取下列其中之一： 
+2. 在 [視覺屬性]  窗格的 [數列視覺效果]  中，選取下列其中之一： 
    * 橫條圖與細橫條圖比較
    * 折線圖與橫條圖比較
    * 橫條圖與階梯圖區域比較 
 
 在比較圖中，您可以選擇讓數列中的主要和比較值具有相同的圖表色彩。
 
-* 在 [視覺屬性] 窗格中，將 [在比較數列上重複使用色彩] 設定為 [開啟]。
+* 在 [視覺屬性]  窗格中，將 [在比較數列上重複使用色彩]  設定為 [開啟]  。
 
-   如果設定為 [開啟]，調色盤在繪製主要和比較數列之間會重新啟動，以確保主要和比較數列的相關值相同。 
+   如果設定為 [開啟]  ，調色盤在繪製主要和比較數列之間會重新啟動，以確保主要和比較數列的相關值相同。 
 
-   如果設定為 [關閉]，調色盤在比較數列後繪製主要數列時，會繼續一般輪替，以防止這兩組數列產生誤導色彩協調。  
+   如果設定為 [關閉]  ，調色盤在比較數列後繪製主要數列時，會繼續一般輪替，以防止這兩組數列產生誤導色彩協調。  
   
 ## <a name="pie-and-funnel-charts"></a>圓形圖和漏斗圖  
   
@@ -122,13 +122,13 @@ ms.locfileid: "56298416"
 ![行動報表的漏斗圖](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
 
 ### <a name="structure-pie-and-funnel-chart-data-by-rows-or-by-columns"></a>將圓形圖和漏斗圖資料依資料列或資料行結構化
-1. 將 [圓形圖] 或 [漏斗圖] 從 [配置] 索引標籤拖曳至設計介面，調整其大小，然後視需要[取得其資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)。
-2. 在 [視覺屬性] 窗格的 [資料結構] 下，選取：
+1. 將 [圓形圖]  或 [漏斗圖]  從 [配置]  索引標籤拖曳至設計介面，調整其大小，然後視需要[取得其資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)。
+2. 在 [視覺屬性]  窗格的 [資料結構]  下，選取：
    * **循資料行**
    * **循資料列**
-3. 如果您選取 [循資料行]，請選取 [資料] 索引標籤，然後在 [資料屬性] 窗格的 [主要數列] 下，選取您要在圓形圖或漏斗圖中彙總的資料表及所有欄位。 欄位名稱會用於標示結果圖表的每個區域。
+3. 如果您選取 [循資料行]  ，請選取 [資料]  索引標籤，然後在 [資料屬性]  窗格的 [主要數列]  下，選取您要在圓形圖或漏斗圖中彙總的資料表及所有欄位。 欄位名稱會用於標示結果圖表的每個區域。
 
-   如果您選取 [循資料列]，請選取 [資料] 索引標籤，然後在 [資料屬性] 窗格的 [類別資料行] 下，選取其值要用於群組及作為圓形圖中標籤的資料表和資料行。 在 [主要數列] 資料行下，針對圖表中的值選取一個數值欄位。
+   如果您選取 [循資料列]  ，請選取 [資料]  索引標籤，然後在 [資料屬性]  窗格的 [類別資料行]  下，選取其值要用於群組及作為圓形圖中標籤的資料表和資料行。 在 [主要數列] 資料行下，針對圖表中的值選取一個數值欄位。
 
 深入了解如何 [依資料行或資料列群組資料](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md)。 
 
@@ -138,23 +138,23 @@ ms.locfileid: "56298416"
 
 ![行動報表的群組樹狀圖](../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png)
 
-1. 將 [樹狀圖] 從 [配置] 索引標籤拖曳至設計介面，調整其大小，然後視需要[取得其資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)。
-2.  選取 [資料] 索引標籤，然後在 [資料屬性] 窗格中： 
+1. 將 [樹狀圖]  從 [配置]  索引標籤拖曳至設計介面，調整其大小，然後視需要[取得其資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)。
+2.  選取 [資料]  索引標籤，然後在 [資料屬性]  窗格中： 
 
-     * 在 [數值表示方式] 下，針對磚的大小選取一個數值欄位。
-     * 在 [色彩表示方式] 下，針對磚的色彩選取一個數值欄位。 
-     * [選擇性] **自訂中間值**：當視覺效果類型為 HeatMapWithCustomCenterValue 時，您才可以使用 [自訂中間值]。
+     * 在 [數值表示方式]  下，針對磚的大小選取一個數值欄位。
+     * 在 [色彩表示方式]  下，針對磚的色彩選取一個數值欄位。 
+     * [選擇性] **自訂中間值**：當視覺效果類型為 HeatMapWithCustomCenterValue 時，您只能使用 **自訂中間值** 。
      
          中間值會決定方塊的色彩。 計量越符合中間值，顏色就越接近綠色。 反之則接近紅色。
      
-     * [選擇性] 若要在檢視器選取格線中的磚時顯示快顯，請在 [快顯標籤] 下選取一個或多個欄位。 樹狀圖快顯可以同時顯示文字和數值欄位。  
+     * [選擇性] 若要在檢視器選取格線中的磚時顯示快顯，請在 [快顯標籤]  下選取一個或多個欄位。 樹狀圖快顯可以同時顯示文字和數值欄位。  
 
 根據預設，樹狀圖是階層式，會先依類別，再依大小和色彩群組磚。
-* 同樣在 [資料] 索引標籤的 [群組依據] 下，選取一個資料表和欄位。
+* 同樣在 [資料]  索引標籤的 [群組依據]  下，選取一個資料表和欄位。
 
 您可以關閉群組，只依大小和色彩來排列磚。 
 
-* 選取 [配置] 索引標籤，然後將 [雙層樹狀圖] 設定為 [關閉]。   
+* 選取 [配置]  索引標籤，然後將 [雙層樹狀圖]  設定為 [關閉]  。   
 
 ## <a name="waterfall-charts"></a>瀑布圖
 
@@ -172,15 +172,15 @@ ms.locfileid: "56298416"
 
 ### <a name="create-a-waterfall-chart"></a>建立瀑布圖
 
-1. 將 [瀑布圖] 從 [配置] 索引標籤拖曳至設計介面，調整其大小，然後視需要[取得其資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)。
+1. 將 [瀑布圖]  從 [配置]  索引標籤拖曳至設計介面，調整其大小，然後視需要[取得其資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)。
 
     ![mobile-report-waterfall-chart-icon](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart-icon.png)
     
-2.  選取 [資料] 索引標籤，然後在 [資料屬性] 窗格中，針對 [類別座標] 選取您資料中的類別欄位，並針對 [主要數列] 選取數值欄位： 
+2.  選取 [資料]  索引標籤，然後在 [資料屬性]  窗格中，針對 [類別座標]  選取您資料中的類別欄位，並針對 [主要數列]  選取數值欄位： 
 
     ![mobile-report-waterfall-data](../../reporting-services/mobile-reports/media/mobile-report-waterfall-data.png)
     
-3. 選取 [配置] 索引標籤以查看瀑布圖的預覽。
+3. 選取 [配置]  索引標籤以查看瀑布圖的預覽。
 
    ![mobile-report-waterfall-chart](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png)
    

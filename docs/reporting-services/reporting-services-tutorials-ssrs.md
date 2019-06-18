@@ -11,10 +11,10 @@ ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9158caf6a1c1e39578bf49bfc3f99e3b37633baf
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570873"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Reporting Services 教學課程 (SSRS)

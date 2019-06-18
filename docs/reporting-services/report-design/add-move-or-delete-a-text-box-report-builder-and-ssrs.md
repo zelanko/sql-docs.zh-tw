@@ -9,10 +9,10 @@ ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 09a8fd213f8bebd171a9e9fa2427345e677523a5
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581953"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>加入、移動或刪除文字方塊 (報表產生器及 SSRS)
@@ -27,17 +27,17 @@ ms.locfileid: "65581953"
   
 ## <a name="to-add-a-text-box"></a>若要加入文字方塊  
   
-1.  在 [設計] 檢視的 **[插入]** 索引標籤上，按一下 **[文字方塊]**。  
+1.  在 [設計] 檢視的 **[插入]** 索引標籤上，按一下 **[文字方塊]** 。  
   
 2.  在設計介面中，按一下然後將方塊拖曳至所需的文字方塊大小。  
   
 ## <a name="to-add-a-text-box-in-a-list"></a>若要在清單中加入文字方塊  
   
-1.  在 [報表設計] 檢視的 **[插入]** 索引標籤上，按一下 **[清單]**。  
+1.  在 [報表設計] 檢視的 **[插入]** 索引標籤上，按一下 **[清單]** 。  
   
 2.  在設計介面中，按一下然後將方塊拖曳至所需的清單大小。  
   
-3.  在 **[插入]** 索引標籤上，按一下 **[文字方塊]**。  
+3.  在 **[插入]** 索引標籤上，按一下 **[文字方塊]** 。  
   
 4.  在設計介面中，於步驟 1 加入的清單內部，按一下然後將方塊拖曳至所需的文字方塊大小。   
   
@@ -49,7 +49,7 @@ ms.locfileid: "65581953"
 6.  在 [屬性] 窗格內，確認 **[Parent]** 屬性是自動加入至清單資料區的矩形。  
   
     > [!NOTE]  
-    >  如果看不到 [屬性] 窗格，請核取 [檢視] 索引標籤上的 [屬性]。  
+    >  如果看不到 [屬性] 窗格，請核取 [檢視]  索引標籤上的 [屬性]  。  
   
 ## <a name="to-move-a-text-box"></a>若要移動文字方塊  
   
@@ -63,7 +63,7 @@ ms.locfileid: "65581953"
   
 ## <a name="to-delete-a-text-box"></a>若要刪除文字方塊  
   
-1.  在 [報表設計] 檢視中，以滑鼠右鍵按一下文字方塊內的任何空白處來選取它，然後按一下 [刪除]。 或者，按一下文字方塊內的任何空白處，然後按 DELETE 鍵。  
+1.  在 [報表設計] 檢視中，以滑鼠右鍵按一下文字方塊內的任何空白處來選取它，然後按一下 [刪除]  。 或者，按一下文字方塊內的任何空白處，然後按 DELETE 鍵。  
   
     > [!NOTE]  
     >  如果您在文字方塊中按一下並且處於編輯模式，請按下 ESC 來選取文字方塊。  

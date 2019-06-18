@@ -12,14 +12,14 @@ helpviewer_keywords:
 - assemblies [Reporting Services], strong names
 - custom assemblies [Reporting Services], strong-named
 ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0c315f5c76c13970d5f3555cb3393ca0877116b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 31479ae9b460b6a660ec865e68e46afd912f49b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754329"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194081"
 ---
 # <a name="using-strong-named-custom-assemblies"></a>使用強式名稱自訂組件
   強式名稱會識別組件，並且含括組件的文字名稱、四部分的版本號碼、文化特性資訊 (若有提供)、公用金鑰，以及儲存在組件資訊清單中的數位簽章。 強式名稱可唯一識別 Common Language Runtime (CLR) 並確保二進位的完整性。  

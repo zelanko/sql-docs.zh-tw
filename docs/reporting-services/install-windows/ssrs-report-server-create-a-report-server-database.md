@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/15/2018
 ms.openlocfilehash: 7f04bff24ca1472b35b71c5e8f04d017714ddf0f
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65502659"
 ---
 # <a name="create-a-report-server-database"></a>建立報表伺服器資料庫 
@@ -48,14 +48,14 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
  ### <a name="native-mode"></a>原生模式
  您可以利用下列方式建立原生模式報表伺服器資料庫：  
   
-- **自動**： 如果您選擇預設設定選項來進行安裝，就會使用 [SQL Server 安裝精靈]。 在 [SQL Server 安裝精靈] 中，這個選項會是 [報表伺服器安裝選項] 頁面中的 [安裝和設定]。 如果您選擇了 [僅安裝] 選項，就必須使用 Reporting Services 組態管理員建立資料庫。  
+- **自動**： 如果您選擇預設設定選項來進行安裝，就會使用 [SQL Server 安裝精靈]。 在 [SQL Server 安裝精靈] 中，這個選項會是 [報表伺服器安裝選項]  頁面中的 [安裝和設定]  。 如果您選擇了 [僅安裝]  選項，就必須使用 Reporting Services 組態管理員建立資料庫。  
   
 - **手動**： 使用 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員。 如果您要使用遠端 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 來裝載報表伺服器資料庫，就必須手動建立資料庫。 如需詳細資訊，請參閱[建立原生模式報表伺服器資料庫](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 ### <a name="sharepoint-mode"></a>SharePoint 模式 
-[報表伺服器安裝選項] 頁面只有一個用於 SharePoint 模式的選項：[僅安裝]。 這個選項會安裝所有 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 檔案及 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共用服務。 下一步是透過下列其中一種方式建立至少一個 SSRS 服務應用程式：  
+[報表伺服器安裝選項]  頁面只有一個用於 SharePoint 模式的選項：[僅安裝]  。 這個選項會安裝所有 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 檔案及 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共用服務。 下一步是透過下列其中一種方式建立至少一個 SSRS 服務應用程式：  
   
 - 前往 SharePoint Server 的管理中心建立 SSRS 服務應用程式。 如需詳細資訊，請參閱[在 SharePoint 模式中安裝第一部報表伺服器](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)的**建立服務應用程式**章節。  
   

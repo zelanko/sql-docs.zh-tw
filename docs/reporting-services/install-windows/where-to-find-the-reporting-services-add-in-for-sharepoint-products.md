@@ -7,15 +7,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - rsSharePoint
 ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1302c9dac8533496582415dd4326a0c1c6f7de23
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+ms.openlocfilehash: 3e91b3225087f7dac04e81f50a987ee441d110d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813331"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62652213"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置
 
@@ -31,7 +31,7 @@ ms.locfileid: "51813331"
   
  您也可以從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 安裝精靈中取得此增益集的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 版本：  
   
--   在安裝精靈的 **[特徵選取]** 頁面上，選取 **[適用於 SharePoint 產品的 Reporting Services 增益集]**。  
+-   在安裝精靈的 **[特徵選取]** 頁面上，選取 **[適用於 SharePoint 產品的 Reporting Services 增益集]** 。  
   
 -   如果是從命令提示字元進行安裝，請使用 **RS_SHPWFE** 選項來安裝此增益集。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 命令提示字元安裝的詳細資訊，請參閱 [在命令提示字元安裝 Reporting Services](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md)。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "51813331"
   
  您也可以從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 安裝精靈中取得此增益集的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 版本：  
   
--   在安裝精靈的 **[特徵選取]** 頁面上，選取 **[適用於 SharePoint 產品的 Reporting Services 增益集]**。  
+-   在安裝精靈的 **[特徵選取]** 頁面上，選取 **[適用於 SharePoint 產品的 Reporting Services 增益集]** 。  
   
 -   如果是從命令提示字元進行安裝，請使用 **RS_SHPWFE** 選項來安裝此增益集。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 命令提示字元安裝的詳細資訊，請參閱 [在命令提示字元安裝 Reporting Services](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md)。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "51813331"
   
 -   **SP1 增益集：**  [適用於 Microsoft® SharePoint® 的 Microsoft® SQL Server® 2012 SP1 Reporting Services 增益集](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583).  
   
--   **SP1：**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://go.microsoft.com/fwlink/p/?LinkID=255906) (https://go.microsoft.com/fwlink/p/?LinkID=255906)。  
+-   **SP1：**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://go.microsoft.com/fwlink/p/?LinkID=255906) (https://go.microsoft.com/fwlink/p/?LinkID=255906) 。  
 
 ##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 適用於 SharePoint 2010 產品的 Reporting Services 增益集
 

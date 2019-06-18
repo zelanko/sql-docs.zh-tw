@@ -9,10 +9,10 @@ ms.assetid: aa1ee96f-9fc4-4775-b9d4-c6187dc37e27
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d4df9f6bb3996c06ea3b6907ab0687e4e8b4a266
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577142"
 ---
 # <a name="report-builder-functions---min-function"></a>報表產生器函式 - Min 函式

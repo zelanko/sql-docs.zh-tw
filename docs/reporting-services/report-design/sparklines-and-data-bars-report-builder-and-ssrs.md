@@ -12,10 +12,10 @@ ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4a0444970a0d4c95ab44a565ff33aa49cfc91f60
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580597"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>走勢圖和資料橫條 (報表產生器和 SSRS)
@@ -69,7 +69,7 @@ ms.locfileid: "65580597"
  當您將走勢圖或資料橫條加入至資料表或矩陣時，這表示將一個資料區放到另一個資料區內，成為 *「巢狀結構」* (Nesting)。 巢狀結構指的是提供給走勢圖或資料橫條的資料受到資料表或矩陣所依據的資料集，以及您將其放在資料表或矩陣中的位置所控制。 如需詳細資訊，請參閱 [巢狀資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)。  
   
 ##  <a name="ConvertSparklinetoChart"></a> 將走勢圖或資料橫條轉換為完整的圖表  
- 由於走勢圖和資料橫條只是一種圖表，因此，如果您決定要擁有完整的圖表功能，您可以以滑鼠右鍵按一下某個圖表，然後按一下 **[轉換成完整圖表]**，將該圖表轉換成完整的圖表。 當您這麼做時，便會自動加入軸線、標籤、刻度標記與圖例。  
+ 由於走勢圖和資料橫條只是一種圖表，因此，如果您決定要擁有完整的圖表功能，您可以以滑鼠右鍵按一下某個圖表，然後按一下 **[轉換成完整圖表]** ，將該圖表轉換成完整的圖表。 當您這麼做時，便會自動加入軸線、標籤、刻度標記與圖例。  
   
 > [!NOTE]  
 >  您無法按一下滑鼠，就將完整的圖表轉換成走勢圖或資料橫條。 不過，您只要刪除不在走勢圖和資料橫條中的所有圖表元素，就可以從完整的圖表建立走勢圖或資料橫條。  

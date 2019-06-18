@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 1fb9daa74abd547f23bc78e76b8c0840e9c54af5
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64775773"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>以 SharePoint 模式安裝第一部報表伺服器
@@ -62,7 +62,7 @@ ms.locfileid: "64775773"
   
  **建立 Reporting Services 服務應用程式**  
   
--   安裝並註冊 Reporting Services 服務之後，請建立一或多個 Reporting Services 服務應用程式。 「SharePoint 伺服器陣列服務帳戶」需要暫時成為本機 Administrators 群組的成員，才能建立 Reporting Services 服務應用程式。 如需 SharePoint 2013 帳戶權限的詳細資訊，請參閱 [SharePoint 2013 中的帳戶權限及安全性設定](https://technet.microsoft.com/library/cc678863.aspx) (https://technet.microsoft.com/library/cc678863.aspx)，若為 SharePoint 2016，則請參閱 [SharePoint 2016 中的帳戶權限及安全性設定](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx)。  
+-   安裝並註冊 Reporting Services 服務之後，請建立一或多個 Reporting Services 服務應用程式。 「SharePoint 伺服器陣列服務帳戶」需要暫時成為本機 Administrators 群組的成員，才能建立 Reporting Services 服務應用程式。 如需 SharePoint 2013 帳戶權限的詳細資訊，請參閱 [SharePoint 2013 中的帳戶權限及安全性設定](https://technet.microsoft.com/library/cc678863.aspx) (https://technet.microsoft.com/library/cc678863.aspx) ，若為 SharePoint 2016，則請參閱 [SharePoint 2016 中的帳戶權限及安全性設定](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx)。  
   
      安全性最佳作法是避免讓 SharePoint 伺服陣列管理員帳戶同時成為本機作業系統管理員帳戶。 如果您在安裝程序中，將伺服陣列管理員帳戶加入至本機 Administrators 群組，建議您在安裝完成之後，從本機 Administrators 群組中移除該帳戶。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "64775773"
  這個步驟會在 SharePoint 模式下安裝 Reporting Services 報表伺服器以及適用於 SharePoint 產品的 Reporting Services 增益集。 根據電腦上已經安裝的元件而定，您可能不會看見下列步驟所描述的部分安裝頁面。  
  
  > [!IMPORTANT]
- > 對於 SharePoint 2016，將安裝 Reporting Services 的 SharePoint 伺服器需要具有 [自訂] 伺服器角色。 Reporting Services 部署將在非 [自訂] 角色的 SharePoint 伺服器上成功，但在下一個 SharePoint 維護期間，MinRole 將停止 Reporting Services 服務，因為它偵測到 SharePoint-整合模式中的 Reporting Services 未指出支援任何其他 SharePoint 伺服器角色。 Reporting Services 服務應用程式僅支援 [自訂] 角色。
+ > 對於 SharePoint 2016，將安裝 Reporting Services 的 SharePoint 伺服器需要具有 [自訂]  伺服器角色。 Reporting Services 部署將在非 [自訂]  角色的 SharePoint 伺服器上成功，但在下一個 SharePoint 維護期間，MinRole 將停止 Reporting Services 服務，因為它偵測到 SharePoint-整合模式中的 Reporting Services 未指出支援任何其他 SharePoint 伺服器角色。 Reporting Services 服務應用程式僅支援 [自訂]  角色。
  
  > [!NOTE]
  > 如果您也打算在 SharePoint 2016 上安裝 Power Pivot 服務，請先安裝該服務，再安裝 Reporting Services。 只能在 SharePoint 伺服器上的**自訂角色**中安裝 Power Pivot 服務。
@@ -85,7 +85,7 @@ ms.locfileid: "64775773"
  
  2. 以系統管理員身分啟動 **SharePoint 2016 管理命令介面** 。 
   
-    您可以用滑鼠右鍵按一下 [SharePoint 2016 管理命令介面]，然後選取 [以系統管理員身分執行]。
+    您可以用滑鼠右鍵按一下 [SharePoint 2016 管理命令介面]  ，然後選取 [以系統管理員身分執行]  。
 
 3. 從 PowerShell 命令提示字元中，執行下列命令。
 
@@ -100,33 +100,33 @@ ms.locfileid: "64775773"
 
         Get-SPServer SERVERNAME 
  
- 6. [角色] 應該會列出 [自訂]。
+ 6. [角色]  應該會列出 [自訂]  。
  
  ### <a name="install-reporting-services"></a>安裝 Reporting Services
   
 1.  執行 [SQL Server 安裝精靈] \(Setup.exe)。  
   
-2.  在精靈的左側選取 [安裝]，然後選取 [新增 SQL Server 獨立安裝或將功能新增至現有安裝]。  
+2.  在精靈的左側選取 [安裝]  ，然後選取 [新增 SQL Server 獨立安裝或將功能新增至現有安裝]  。  
 
-3.  如果您看見 [產品金鑰] 頁面，請輸入您的金鑰或接受 "Enterprise Evaluation" 版本的預設值。  
+3.  如果您看見 [產品金鑰]  頁面，請輸入您的金鑰或接受 "Enterprise Evaluation" 版本的預設值。  
   
-     選取 **[下一步]**。  
+     選取 **[下一步]** 。  
   
 4.  如果您看見 [授權條款] 頁面，請檢閱並接受這些授權條款。 Microsoft 感謝您同意傳送功能使用資料，協助改進產品功能及支援。  
   
-     選取 **[下一步]**。  
+     選取 **[下一步]** 。  
 
-5.  建議您選取 [使用 Microsoft Update 檢查更新 (建議使用)]。 這是選擇性的。
+5.  建議您選取 [使用 Microsoft Update 檢查更新 (建議使用)]  。 這是選擇性的。
   
-     選取 **[下一步]**。   
+     選取 **[下一步]** 。   
   
-6.  在 [安裝安裝程式檔案] 頁面上，根據電腦上已經安裝的元件而定，您可能會看見下列訊息：  
+6.  在 [安裝安裝程式檔案]  頁面上，根據電腦上已經安裝的元件而定，您可能會看見下列訊息：  
   
     -   「一個或多個受影響的檔案有暫止的作業。 您必須在安裝程序完成之後重新啟動電腦。」  
   
-    -   選取 **[下一步]**。  
+    -   選取 **[下一步]** 。  
   
-7.  如果您看見 [安裝規則] 頁面。 檢閱任何警告或封鎖問題。 然後選取 [下一步]。
+7.  如果您看見 [安裝規則]  頁面。 檢閱任何警告或封鎖問題。 然後選取 [下一步]  。
  
 8. 在 **[特徵選取]** 頁面上，選取下列選項：  
   
@@ -134,21 +134,21 @@ ms.locfileid: "64775773"
   
     -   **適用於 SharePoint 產品的 Reporting Services 增益集**。  
   
-    -   您也可以選擇性地選取完整環境的 [Database Engine 服務]不過，您應該會有主控 SharePoint 資料庫的 SQL Server Database Engine 執行個體。  
+    -   您也可以選擇性地選取完整環境的 [Database Engine 服務]  不過，您應該會有主控 SharePoint 資料庫的 SQL Server Database Engine 執行個體。  
   
-     選取 **[下一步]**。  
+     選取 **[下一步]** 。  
   
      ![rs_SetupFeatureSelection_SharePoint_with_circles](../../reporting-services/install-windows/media/rs-setupfeatureselection-sharepoint-with-circles.png)
   
-9. 如果您選取 Database Engine 服務，請接受 **[執行個體組態]** 頁面上的預設 **[MSSQLSERVER]** 執行個體，然後按 **[下一步]**。  
+9. 如果您選取 Database Engine 服務，請接受 **[執行個體組態]** 頁面上的預設 **[MSSQLSERVER]** 執行個體，然後按 **[下一步]** 。  
   
      ![注意](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")Reporting Services SharePoint 服務架構與舊版 Reporting Services 架構不同，不是以 SQL Server「執行個體」為基礎。  
   
-10. 如果您看見 **[伺服器組態]** 頁面，請輸入適當的認證。 如果您想要使用 Reporting Services 資料警示或訂閱功能，則必須將 SQL Server Agent 的 [啟動類型] 變更為 [自動]。 根據電腦上已經安裝的元件而定，您可能不會看見 **[伺服器組態]** 頁面。  
+10. 如果您看見 **[伺服器組態]** 頁面，請輸入適當的認證。 如果您想要使用 Reporting Services 資料警示或訂閱功能，則必須將 SQL Server Agent 的 [啟動類型]  變更為 [自動]  。 根據電腦上已經安裝的元件而定，您可能不會看見 **[伺服器組態]** 頁面。  
   
-     選取 **[下一步]**。  
+     選取 **[下一步]** 。  
   
-11. 如果您已選取 Database Engine 服務，就會看到 [資料庫引擎設定] 頁面。請將適當的帳戶新增至 SQL 系統管理員清單，然後選取 [下一步]。  
+11. 如果您已選取 Database Engine 服務，就會看到 [資料庫引擎設定]  頁面。請將適當的帳戶新增至 SQL 系統管理員清單，然後選取 [下一步]  。  
   
 12. 在 **[Reporting Services 組態]** 頁面上，您應該會看到已選取 **[只安裝]** 選項。 這個選項會安裝報表伺服器檔案，但是不會設定 Reporting Services 的 SharePoint 環境。  
   
@@ -157,9 +157,9 @@ ms.locfileid: "64775773"
   
      ![ssRS-2016-setup-configuration](../../reporting-services/install-windows/media/ssrs-2016-setup-configuration.png)
   
-13. 如果您停在此頁面上，請檢閱任何警告，然後選取 [功能設定規則] 頁面上的 [下一步]。  
+13. 如果您停在此頁面上，請檢閱任何警告，然後選取 [功能設定規則]  頁面上的 [下一步]  。  
   
-14. 在 [準備安裝] 頁面上，檢閱安裝摘要。 此摘要將包括其值顯示為 **[SharePointFilesOnlyMode]** 的 **[Reporting Services SharePoint 模式]** 子節點。 選取 [安裝]。  
+14. 在 [準備安裝]  頁面上，檢閱安裝摘要。 此摘要將包括其值顯示為 **[SharePointFilesOnlyMode]** 的 **[Reporting Services SharePoint 模式]** 子節點。 選取 [安裝]  。  
   
 15. 安裝需要幾分鐘的時間。 您將會看見 **[完成]** 頁面，其中列出功能以及每項功能的狀態。 您可能會看見資訊對話方塊，指出電腦需要重新啟動。  
   
@@ -179,14 +179,14 @@ ms.locfileid: "64775773"
   
  下列步驟將引導您開啟 SharePoint 管理命令介面並執行 PowerShell Cmdlet：  
   
-1.  選取 [開始] 按鈕  
+1.  選取 [開始]  按鈕  
   
-2.  選取 [Microsoft SharePoint 2016 產品] 或 [Microsoft SharePoint 2013 產品] 群組。  
+2.  選取 [Microsoft SharePoint 2016 產品]  或 [Microsoft SharePoint 2013 產品]  群組。  
   
-3.  以滑鼠右鍵按一下 [SharePoint 2016 管理命令介面] 或 [SharePoint 2013 管理命令介面]，然後選取 [以系統管理員身分執行]。 
+3.  以滑鼠右鍵按一下 [SharePoint 2016 管理命令介面]  或 [SharePoint 2013 管理命令介面]  ，然後選取 [以系統管理員身分執行]  。 
 
     > [!NOTE]
-    > 標準 Windows PowerShell 視窗無法辨識 SharePoint 命令。 使用 [SharePoint 管理命令介面]。  
+    > 標準 Windows PowerShell 視窗無法辨識 SharePoint 命令。 使用 [SharePoint 管理命令介面]  。  
   
 4.  執行下列 PowerShell 命令安裝 Reporting Services SharePoint 服務。 成功完成命令會在管理命令介面中顯示新行。 成功完成命令之後，**不會有任何訊息傳回** 管理命令介面：  
   
@@ -219,19 +219,19 @@ ms.locfileid: "64775773"
   
 2.  找到 **[SQL Server Reporting Services 服務]** ，然後按一下 [動作] 欄中的 **[啟動]** 。  
   
-3.  Reporting Services 服務的狀態會從 **[已停止]** 變更為 **[已啟動]**。 如果清單中沒有 Reporting Services 服務，請使用 PowerShell 安裝該服務。  
+3.  Reporting Services 服務的狀態會從 **[已停止]** 變更為 **[已啟動]** 。 如果清單中沒有 Reporting Services 服務，請使用 PowerShell 安裝該服務。  
   
     > [!NOTE]  
-    >  如果 Reporting Services 服務停留在 [啟動中] 狀態，而未變更為 [已啟動]，請確認已在 Windows 伺服器管理員中啟動 'SharePoint 2013 Administration' 服務。  
+    >  如果 Reporting Services 服務停留在 [啟動中]  狀態，而未變更為 [已啟動]  ，請確認已在 Windows 伺服器管理員中啟動 'SharePoint 2013 Administration' 服務。  
   
 ##  <a name="bkmk_create_serrviceapplication"></a> 步驟 3：建立 Reporting Services 服務應用程式  
  本節提供建立服務應用程式的步驟，以及屬性的描述 (如果您要檢閱現有的服務應用程式)。  
   
-1.  在 SharePoint 管理中心的 [應用程式管理] 群組中，選取 [管理服務應用程式]。  
+1.  在 SharePoint 管理中心的 [應用程式管理]  群組中，選取 [管理服務應用程式]  。  
   
-2.  在 SharePoint 功能區中，選取 [新增] 按鈕。  
+2.  在 SharePoint 功能區中，選取 [新增]  按鈕。  
   
-3.  在 [新增] 功能表中，選取 [SQL Server Reporting Services 服務應用程式]。  
+3.  在 [新增] 功能表中，選取 [SQL Server Reporting Services 服務應用程式]  。  
   
     > [!IMPORTANT]  
     >  如果清單中未出現 Reporting Services 選項，**表示未安裝 Reporting Services 共用服務**。 檢閱上一節中，如何使用 PowerShell Cmdlt 來安裝 Reporting Services 服務的相關資訊。  
@@ -246,11 +246,11 @@ ms.locfileid: "64775773"
   
 7.  在 **[資料庫名稱]** 中，預設值是 `ReportingService_<guid>`，這是唯一的資料庫名稱。 若您要輸入新值，請輸入唯一值。 這是專門針對服務應用程式所建立的新資料庫。  
   
-8.  在 **[資料庫驗證]** 中，預設值是 Windows 驗證。 如果您選擇 **[SQL 驗證]**，請參考 SharePoint 文件，以了解在 SharePoint 部署中使用這個驗證類型的最佳作法。  
+8.  在 **[資料庫驗證]** 中，預設值是 Windows 驗證。 如果您選擇 **[SQL 驗證]** ，請參考 SharePoint 文件，以了解在 SharePoint 部署中使用這個驗證類型的最佳作法。  
   
 9. 在 **[Web 應用程式關聯]** 區段中，選取要佈建以供目前 Reporting Services 服務應用程式存取的 Web 應用程式。 您可以建立一個 Reporting Services 服務應用程式與一個 Web 應用程式的關聯。 如果目前所有的 Web 應用程式已有相關聯的 Reporting Services 服務應用程式，則會顯示警告訊息。  
   
-10. 選取 [確定]。  
+10. 選取 [確定]  。  
   
 11. 服務應用程式的建立程序會需要數分鐘才能完成。 完成後，您會看到確認訊息及 **[提供訂閱和警示]** 頁面的連結。 如果您想要使用 Reporting Services 訂閱功能或資料警示功能，請完成提供步驟。 如需詳細資訊，請參閱 [SSRS 服務應用程式的佈建訂閱及警示](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
@@ -272,15 +272,15 @@ ms.locfileid: "64775773"
   
      開啟瀏覽器，移至所要的 SharePoint 網站。 例如 https://\<伺服器名稱>/sites/bi  
   
-2.  選取 [設定]![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")。  
+2.  選取 [設定]  ![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")。  
   
-3.  選取 [網站設定]。  
+3.  選取 [網站設定]  。  
   
-4.  在 [網站集合管理] 群組中，選取 [網站集合功能]。  
+4.  在 [網站集合管理]  群組中，選取 [網站集合功能]  。  
   
 5.  在清單中尋找 **[Power View 整合功能]** 。  
   
-6.  選取 [啟用]。 功能狀態會變更為 **[使用中]**。  
+6.  選取 [啟用]  。 功能狀態會變更為 **[使用中]** 。  
   
  每個網站集合都已完成這個程序。 如需詳細資訊，請參閱 [Activate the Report Server and Power View Integration Features in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)。  
   
@@ -410,7 +410,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  Reporting Services 資料警示功能會以電子郵件訊息傳送警示。 若要傳送電子郵件，您可能需要設定 Reporting Services 服務應用程式，以及修改服務應用程式的電子郵件傳遞延伸模組。 如果您計劃針對 Reporting Services 訂閱功能使用電子郵件傳遞延伸模組，則需要電子郵件設定。 如需詳細資訊，請參閱[設定 Reporting Services 服務應用程式的電子郵件 &#40;SharePoint 2013 和 SharePoint 2016&#41;](https://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f)。 
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>將 Reporting Services 內容類型新增至內容庫  
- Reporting Services 提供預先定義的內容類型，可用來管理共用資料來源 (.rsds) 檔案和報表產生器的報表定義 (.rdl) 檔案。 將 [報表產生器報表] 和 [報表資料來源] 內容類型新增至文件庫會啟用 [新增] 命令，讓您能夠建立該類型的新文件。 如需詳細資訊，請參閱 [將 Reporting Services 內容類型加入至 SharePoint 文件庫](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
+ Reporting Services 提供預先定義的內容類型，可用來管理共用資料來源 (.rsds) 檔案和報表產生器的報表定義 (.rdl) 檔案。 將 [報表產生器報表]  和 [報表資料來源]  內容類型新增至文件庫會啟用 [新增]  命令，讓您能夠建立該類型的新文件。 如需詳細資訊，請參閱 [將 Reporting Services 內容類型加入至 SharePoint 文件庫](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
   
 ### <a name="activate-the-report-server-file-sync-feature"></a>啟動報表伺服器檔案同步處理功能  
  如果使用者經常直接上傳已發行的報表項目至 SharePoint 文件庫， **[報表伺服器檔案同步處理]** 網站層級功能會很有協助。 檔案同步處理功能會更頻繁地同步處理報表伺服器目錄與文件庫中的項目。 如需詳細資訊，請參閱 [在 SharePoint 管理中心啟動報表伺服器檔案同步處理功能](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)。  

@@ -13,10 +13,10 @@ ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d57768a580b4343fbe1e6ee2919a8161013371a4
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65579414"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>在 Windows SharePoint Services 中使用報表伺服器項目的內建安全性
@@ -35,7 +35,7 @@ ms.locfileid: "65579414"
   
  排程、訂閱和報表記錄都不是安全性實體項目。 您可以在網站或程式庫上設定權限，決定使用者是否可以建立或使用排程、訂閱和報表記錄，但無法直接保護這些項目的安全。  
   
- 若要保護個別項目的安全，請在文件庫中選取該項目，按一下向下箭號，然後選取 **[管理權限]**。 在 **[動作]** 功能表上，選取 **[編輯權限]**。  
+ 若要保護個別項目的安全，請在文件庫中選取該項目，按一下向下箭號，然後選取 **[管理權限]** 。 在 **[動作]** 功能表上，選取 **[編輯權限]** 。  
   
 ## <a name="using-built-in-groups-and-permission-levels-to-access-report-server-items"></a>使用內建群組和權限等級存取報表伺服器項目  
  當您使用權限繼承和標準 SharePoint 群組時，可以在設定報表伺服器和 SharePoint 執行個體上的整合設定之後，立即存取大部分的報表伺服器作業。  

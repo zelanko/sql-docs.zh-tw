@@ -9,10 +9,10 @@ ms.assetid: 91c43f58-5771-4d33-a54d-0e802d2f5cba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5736524ba0a57b31a832797fdb9a09c88d321a0b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581933"
 ---
 # <a name="add-or-remove-margins-from-a-chart-report-builder-and-ssrs"></a>加入或移除圖表中的邊界 (報表產生器及 SSRS)
@@ -25,9 +25,9 @@ ms.locfileid: "65581933"
   
 ## <a name="to-enable-or-disable-side-margins"></a>啟用或停用側邊界  
   
-1.  以滑鼠右鍵按一下座標軸，然後選取 [軸屬性]。 [垂直軸屬性] 或 [水平軸屬性] 對話方塊隨即出現。  
+1.  以滑鼠右鍵按一下座標軸，然後選取 [軸屬性]  。 [垂直軸屬性]  或 [水平軸屬性]  對話方塊隨即出現。  
   
-2.  在 [軸選項] 頁面上，設定 [側邊界] 屬性：  
+2.  在 [軸選項]  頁面上，設定 [側邊界]  屬性：  
   
     -   **自動** ：圖表將會判斷是否要根據圖表類型加入側邊界。  
   

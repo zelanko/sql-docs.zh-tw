@@ -16,10 +16,10 @@ ms.assetid: 368346ea-8ae4-42b4-a884-733558103046
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bd4b7857faf7de561831485643afecf5c0e721e4
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570302"
 ---
 # <a name="configurationsetting-property---pathname"></a>ConfigurationSetting 屬性 - PathName

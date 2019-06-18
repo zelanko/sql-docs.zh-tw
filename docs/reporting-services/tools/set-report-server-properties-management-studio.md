@@ -11,10 +11,10 @@ ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e2632e93cf325a560434e0833e3bb5a7288f83ef
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65579001"
 ---
 # <a name="set-report-server-properties-management-studio"></a>設定報表伺服器屬性 (Management Studio)
@@ -24,7 +24,7 @@ ms.locfileid: "65579001"
   
 1.  啟動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 並連接至報表伺服器執行個體。  
   
-2.  以滑鼠右鍵按一下報表伺服器節點，然後選取 [屬性]。 按一下 **[進階]** ，即可開啟屬性頁面。 如需每個屬性的描述，請參閱[伺服器屬性 &#40;進階頁面&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)。  
+2.  以滑鼠右鍵按一下報表伺服器節點，然後選取 [屬性]  。 按一下 **[進階]** ，即可開啟屬性頁面。 如需每個屬性的描述，請參閱[伺服器屬性 &#40;進階頁面&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [連接至 Management Studio 中的報表伺服器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
