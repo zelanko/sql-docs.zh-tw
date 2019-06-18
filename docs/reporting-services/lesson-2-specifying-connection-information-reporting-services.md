@@ -9,10 +9,10 @@ ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0a0c21b2662fc14977c4ac57687754d15d544994
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106042"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>第 2 課：指定連接資訊 (Reporting Services)
@@ -25,21 +25,21 @@ ms.locfileid: "65106042"
 
 ## <a name="to-set-up-a-connection"></a>設定連接  
 
-1. 在 [報表資料] 窗格中，選取 [新增] > [資料來源]。 如果看不到 [報表資料] 窗格，則選取 [檢視] 功能表 > [報表資料]。
+1. 在 [報表資料]  窗格中，選取 [新增]   > [資料來源]  。 如果看不到 [報表資料]  窗格，則選取 [檢視]  功能表 > [報表資料]  。
 
     ![ssrs-table-tutorial-2-new-data-source](media/ssrs-table-tutorial-2-new-data-source.png)
 
-    [資料來源屬性] 對話方塊隨即開啟，並顯示 [一般] 區段。
+    [資料來源屬性]  對話方塊隨即開啟，並顯示 [一般]  區段。
 
     ![資料來源屬性對話方塊](media/lesson-2-specifying-connection-information-reporting-services/vs-datasource-connection-properties-dialog-box.png)
 
-2. 在 [名稱] 文字方塊中，輸入 "AdventureWorks2016"。
+2. 在 [名稱]  文字方塊中，輸入 "AdventureWorks2016"。
 
-3. 選取 [內嵌連接] 選項按鈕。
+3. 選取 [內嵌連接]  選項按鈕。
 
-4. 在 [類型] 下拉式選項方塊中，選取 [Microsoft SQL Server]。
+4. 在 [類型]  下拉式選項方塊中，選取 [Microsoft SQL Server]。
   
-5. 在 [連接字串] 文字方塊，輸入下列字串：
+5. 在 [連接字串]  文字方塊，輸入下列字串：
 
     `Data source=localhost; initial catalog=AdventureWorks2016`
 
@@ -52,11 +52,11 @@ ms.locfileid: "65106042"
     >
     > 如需有關連接字串的詳細資訊，您可以參閱以下的 `See also` 章節。
 
-6. 選取 [認證] 索引標籤，並在 [變更用來連接資料來源的認證] 區段底下，選取 [使用 Windows 驗證 (整合式安全性)] 選項按鈕。
+6. 選取 [認證]  索引標籤，並在 [變更用來連接資料來源的認證]  區段底下，選取 [使用 Windows 驗證 (整合式安全性)]  選項按鈕。
 
-7. 選取 [確定] 以完成程序。
+7. 選取 [確定]  以完成程序。
 
-報表設計師會將資料來源 AdventureWorks2016 新增至 [報表資料] 窗格。
+報表設計師會將資料來源 AdventureWorks2016 新增至 [報表資料]  窗格。
 
 ![ssrs-adventureworks-datasource](media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-datasource2016.png)
 

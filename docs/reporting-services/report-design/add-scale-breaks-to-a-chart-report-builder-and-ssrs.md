@@ -9,10 +9,10 @@ ms.assetid: 84d66436-ed62-4967-bbbd-b457593ee787
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f21fe04e31c4360400934afc76376165083c1dc2
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581948"
 ---
 # <a name="add-scale-breaks-to-a-chart-report-builder-and-ssrs"></a>將刻度斷層加入至圖表 (報表產生器及 SSRS)
@@ -31,9 +31,9 @@ ms.locfileid: "65581948"
   
 ### <a name="to-enable-scale-breaks-on-the-chart"></a>若要在圖表上啟用刻度斷層  
   
-1.  以滑鼠右鍵按一下垂直軸，然後按一下 [軸屬性]。 [垂直軸屬性] 對話方塊隨即開啟。  
+1.  以滑鼠右鍵按一下垂直軸，然後按一下 [軸屬性]  。 [垂直軸屬性]  對話方塊隨即開啟。  
   
-2.  選取 [啟用刻度斷層] 核取方塊。  
+2.  選取 [啟用刻度斷層]  核取方塊。  
   
 ### <a name="to-change-the-style-of-the-scale-break"></a>變更刻度斷層的樣式  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65581948"
   
 2.  以滑鼠右鍵在設計介面上按一下圖表的 Y 軸。 Y 軸物件的屬性 (依預設名為「圖表軸」) 會顯示在 [屬性] 窗格中。  
   
-3.  在 [刻度] 區段中，展開 ScaleBreakStyle 屬性。  
+3.  在 [刻度]  區段中，展開 ScaleBreakStyle 屬性。  
   
 4.  變更 ScaleBreakStyle 屬性的值，例如 BreakLineType 和 Spacing。 如需刻度中斷線屬性的詳細資訊，請參閱[將包含多個資料範圍的數列顯示在圖表上 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)。  
 

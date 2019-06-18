@@ -9,10 +9,10 @@ ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 24b196927e582d1b21bf9f11bd7ea824ecf8ba7b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576460"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>轉譯行為 (報表產生器及 SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "65576460"
   
 -   系統會使用報表項目上顯示的頁面高度與次數來建立約略的版面配置。 例如，如果文字方塊的高度為 .5 英吋，而且會在報表中重複 5 次，就會保留 2.5 英吋。  
   
--   系統會根據互動式高度設定，插入多個軟分頁符號。 若要在 HTML 和 ReportViewer 控制項中隱藏分頁符號，而且僅控制具有明確分頁符號的分頁，請將 [互動高度] 值設定為 0 或非常大的數字。  
+-   系統會根據互動式高度設定，插入多個軟分頁符號。 若要在 HTML 和 ReportViewer 控制項中隱藏分頁符號，而且僅控制具有明確分頁符號的分頁，請將 [互動高度]  值設定為 0 或非常大的數字。  
   
     > [!NOTE]  
     >  在軟分頁符號轉譯器中不會使用互動式寬度設定。  

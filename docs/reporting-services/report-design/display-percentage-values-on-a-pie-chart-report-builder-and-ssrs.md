@@ -9,10 +9,10 @@ ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fab9a9c5f6fbdbf3201ba597102450bad0d95629
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578197"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>在圓形圖上顯示百分比值 (報表產生器及 SSRS)
@@ -27,19 +27,19 @@ ms.locfileid: "65578197"
   
 1.  將圓形圖加入到報表中。 如需詳細資訊，請參閱[將圖表加入至報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)。  
   
-2.  在設計介面上，以滑鼠右鍵按一下圓形圖，然後選取 [顯示資料標籤]。 資料標籤會顯示在圓形圖的每個扇區內。  
+2.  在設計介面上，以滑鼠右鍵按一下圓形圖，然後選取 [顯示資料標籤]  。 資料標籤會顯示在圓形圖的每個扇區內。  
   
-3.  在設計介面上，以滑鼠右鍵按一下標籤，然後選取 [數列標籤屬性]。 [數列標籤屬性] 對話方塊便會出現。  
+3.  在設計介面上，以滑鼠右鍵按一下標籤，然後選取 [數列標籤屬性]  。 [數列標籤屬性]  對話方塊便會出現。  
   
-4.  針對 [標籤資料] 選項輸入 **#PERCENT**。  
+4.  針對 [標籤資料]  選項輸入 **#PERCENT**。  
   
 5.  (選擇性) 若要指定標籤所顯示的小數位數，請輸入 "#PERCENT{P*n*}"，其中 *n* 是要顯示的小數位數。 例如，如果不要顯示任何小數位數，請輸入 "#PERCENT{P0}"。  
   
 ## <a name="to-display-percentage-values-in-the-legend-of-a-pie-chart"></a>若要在圓形圖的圖例中顯示百分比值  
   
-1.  在設計介面上，以滑鼠右鍵按一下圓形圖，然後選取 [數列屬性]。 [數列屬性] 對話方塊隨即顯示。  
+1.  在設計介面上，以滑鼠右鍵按一下圓形圖，然後選取 [數列屬性]  。 [數列屬性]  對話方塊隨即顯示。  
   
-2.  在 [圖例] 中，針對 [自訂圖例文字] 屬性鍵入 **#PERCENT**。  
+2.  在 [圖例]  中，針對 [自訂圖例文字]  屬性鍵入 **#PERCENT**。  
   
 ## <a name="see-also"></a>另請參閱  
 * [教學課程：將圓形圖加入至報表 (報表產生器)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)

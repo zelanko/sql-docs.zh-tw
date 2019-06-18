@@ -17,10 +17,10 @@ ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ec4c97ad3627ae91fd01cf0d8d73a2569a0c41a
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578173"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Pause and Resume Shared Schedules
@@ -41,24 +41,24 @@ ms.locfileid: "65578173"
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>若要暫停或繼續共用排程  
   
-1.  從報表管理員中，按一下 **[站台設定]**。  
+1.  從報表管理員中，按一下 **[站台設定]** 。  
   
-2.  按一下 **[排程]**。  
+2.  按一下 **[排程]** 。  
   
-3.  選取排程，然後按一下功能區中的 **[暫停]** 或 **[繼續]** 。 如果排程目前為暫停狀態，則 **[狀態]** 資料行將包含 **[已暫停]**。  
+3.  選取排程，然後按一下功能區中的 **[暫停]** 或 **[繼續]** 。 如果排程目前為暫停狀態，則 **[狀態]** 資料行將包含 **[已暫停]** 。  
   
 ##  <a name="bkmk_sharepoint"></a> 暫停及繼續共用排程 (SharePoint 模式)  
  若要暫停及繼續共用排程，請使用 [站台設定] 頁面或 PowerShell。 排程是以每個 SharePoint 網站為單位管理。  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>若要暫停或繼續共用排程  
   
-1.  按一下 **[網站動作]**。  
+1.  按一下 **[網站動作]** 。  
   
-2.  按一下 **[站台設定]**。  
+2.  按一下 **[站台設定]** 。  
   
-3.  在 [Reporting Services] 區段中，按一下 **[管理共用排程]**。  
+3.  在 [Reporting Services] 區段中，按一下 **[管理共用排程]** 。  
   
-4.  選取排程，然後按一下 **[暫停選取的排程]** 或 **[執行選取的排程]**。 如果排程目前為暫停狀態，則 **[狀態]** 資料行將包含 **[已暫停]**。  
+4.  選取排程，然後按一下 **[暫停選取的排程]** 或 **[執行選取的排程]** 。 如果排程目前為暫停狀態，則 **[狀態]** 資料行將包含 **[已暫停]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [[排程]](../../reporting-services/subscriptions/schedules.md)   

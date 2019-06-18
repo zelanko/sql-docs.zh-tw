@@ -9,10 +9,10 @@ ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5217684ab98bd70a996f0a8a0bb50170daf57bf0
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573881"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>針對 Reporting Services 報表問題進行疑難排解
@@ -32,7 +32,7 @@ ms.locfileid: "65573881"
 ## <a name="view-the-call-stack-for-report-processing-error-messages-on-the-report-server"></a>在報表伺服器上檢視報表處理錯誤訊息的呼叫堆疊  
 在報表管理員中檢視已發行的報表時，可能會出現代表一般處理或轉譯錯誤的錯誤訊息。 若要查看詳細資訊，您可以檢視呼叫堆疊。   
   
-請使用本機管理員認證登入報表伺服器，然後以滑鼠右鍵按一下 [報表管理員] 頁面，再按一下 [檢視來源]，即可檢視呼叫堆疊。 呼叫堆疊會提供錯誤訊息的詳細內容。  
+請使用本機管理員認證登入報表伺服器，然後以滑鼠右鍵按一下 [報表管理員] 頁面，再按一下 [檢視來源]  ，即可檢視呼叫堆疊。 呼叫堆疊會提供錯誤訊息的詳細內容。  
   
 ## <a name="use-includessmanstudiofullincludesssmanstudiofullmd-to-verify-queries-and-credentials"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] 驗證查詢和認證  
 將複雜查詢加入報表之前，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] 驗證複雜查詢。   

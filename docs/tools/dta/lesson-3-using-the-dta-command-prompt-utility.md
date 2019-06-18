@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67b9d537a3c274e156bf8b4c6450a622b6ef6593
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657667"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62442802"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>第 3 課：使用 dta 命令提示字元公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "51657667"
 ## <a name="access-dta-command-prompt-utility-help-menu"></a>存取 DTA 命令提示字元公用程式說明 功能表
   
   
-1.  在 [開始] 功能表上，依序指向 [所有程式] 和 [附屬應用程式]，再按一下 [命令提示字元]。  
+1.  在 [開始]  功能表上，依序指向 [所有程式]  和 [附屬應用程式]  ，再按一下 [命令提示字元]  。  
   
 2.  在命令提示字元之下，輸入下列字串，再按 ENTER 鍵：  
   

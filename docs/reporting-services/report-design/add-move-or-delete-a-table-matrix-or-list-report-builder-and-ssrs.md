@@ -9,10 +9,10 @@ ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7239efa5a2d64b3751fde34d7cd1e676ea905dd4
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581992"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>加入、移動或刪除資料表、矩陣或清單 (報表產生器及 SSRS)
@@ -22,9 +22,9 @@ ms.locfileid: "65581992"
   
 ## <a name="to-add-a-table-or-matrix-to-a-report-by-using-the-new-table-or-new-matrix-wizard"></a>若要使用新增資料表或新增矩陣精靈，將資料表或矩陣加入至報表  
   
-1.  在 **[插入]** 索引標籤上，按一下 **[資料表]** 或 **[矩陣]**，然後按一下 **[資料表精靈]** 或 **[矩陣精靈]**。  
+1.  在 **[插入]** 索引標籤上，按一下 **[資料表]** 或 **[矩陣]** ，然後按一下 **[資料表精靈]** 或 **[矩陣精靈]** 。  
   
-2.  遵循 [新增資料表] 或 [新增矩陣] 精靈中的步驟進行。  
+2.  遵循 [新增資料表]  或 [新增矩陣]  精靈中的步驟進行。  
   
 3.  在 **[主資料夾]** 索引標籤上，按一下 **[執行]** 查看轉譯的報表。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65581992"
   
      隨即出現選取控點和八個調整大小的控點。  
   
-     若為巢狀資料區，請在巢狀資料區中按一下滑鼠右鍵、按一下 [選取]，然後選取您想要的報表項目。 若要確認哪一個報表項目已選取，請使用 [屬性] 窗格。 設計介面上選取的項目名稱會出現在 [屬性] 窗格的工具列中。  
+     若為巢狀資料區，請在巢狀資料區中按一下滑鼠右鍵、按一下 [選取]  ，然後選取您想要的報表項目。 若要確認哪一個報表項目已選取，請使用 [屬性] 窗格。 設計介面上選取的項目名稱會出現在 [屬性] 窗格的工具列中。  
   
 ## <a name="to-move-a-data-region"></a>若要移動資料區  
   
@@ -56,7 +56,7 @@ ms.locfileid: "65581992"
   
 ## <a name="to-delete-a-data-region"></a>若要刪除資料區  
   
--   選取資料區，在資料區中按一下滑鼠右鍵，然後按一下 [刪除]。  
+-   選取資料區，在資料區中按一下滑鼠右鍵，然後按一下 [刪除]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   

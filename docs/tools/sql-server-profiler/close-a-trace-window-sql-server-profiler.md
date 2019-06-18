@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4aa8ac7d352a7c89d79f8c97cfd480a482da7a4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681166"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033817"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>關閉追蹤視窗 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47681166"
   
 1.  選取您要關閉的追蹤視窗。  
   
-2.  在 **[檔案]** 功能表上按一下 **[關閉]**。  
+2.  在 **[檔案]** 功能表上按一下 **[關閉]** 。  
   
 > [!IMPORTANT]  
 >  如果正在執行追蹤，關閉追蹤視窗將停止相關聯的追蹤。  

@@ -9,14 +9,14 @@ ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b9c8e747ca0ca003e531381a6713b1a083a47d57
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581964"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>在圖表中加入或刪除群組 (報表產生器及 SSRS)
-在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 編頁報表中，按一下圖表資料區域，以顯示 [圖表資料] 窗格。 將資料集欄位拖曳到 **[類別目錄群組]** 和 **[數列群組]** 區域來建立群組。 若要加入巢狀群組，請將多個欄位加入至該區域。  
+在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 編頁報表中，按一下圖表資料區域，以顯示 [圖表資料]  窗格。 將資料集欄位拖曳到 **[類別目錄群組]** 和 **[數列群組]** 區域來建立群組。 若要加入巢狀群組，請將多個欄位加入至該區域。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -31,7 +31,7 @@ ms.locfileid: "65581964"
   
 1.  在報表設計介面上，按一下圖表中的任意位置來選取它。 隨即出現 [圖表資料]  窗格。  
   
-2.  以滑鼠右鍵按一下 [類別目錄群組] 區域中的群組，然後按一下 [類別目錄群組屬性]。  
+2.  以滑鼠右鍵按一下 [類別目錄群組]  區域中的群組，然後按一下 [類別目錄群組屬性]  。  
   
 3.  加入或移除群組運算式、篩選、排序運算式和群組變數。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65581964"
   
 1.  在報表設計介面上，按一下圖表中的任意位置來選取它。 隨即出現 [圖表資料]  窗格。  
   
-2.  以滑鼠右鍵按一下 [數列群組] 區域中的群組，然後按一下 [數列群組屬性]。  
+2.  以滑鼠右鍵按一下 [數列群組]  區域中的群組，然後按一下 [數列群組屬性]  。  
   
 3.  加入或移除群組運算式、篩選、排序運算式和群組變數。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65581964"
   
 1.  在報表設計介面上，按一下圖表中的任意位置來選取它。 隨即出現 [圖表資料]  窗格。  
   
-2.  以滑鼠右鍵按一下 [類別目錄群組] 或 [數列群組] 區域中的群組，然後按一下 [刪除]。  
+2.  以滑鼠右鍵按一下 [類別目錄群組]  或 [數列群組]  區域中的群組，然後按一下 [刪除]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  

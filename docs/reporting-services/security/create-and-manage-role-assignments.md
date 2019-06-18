@@ -15,17 +15,17 @@ ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 863904e2d82fc97045305dd2430241a91e333f11
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65619598"
 ---
 # <a name="create-and-manage-role-assignments"></a>建立和管理角色指派
 
 *角色指派*是一種安全性原則，可決定使用者或群組的權限。 權限可決定使用者或群組是否可存取或修改特定報表伺服器項目，或進行工作。 角色指派是由單一使用者或群組帳戶名稱以及一或多個角色定義所組成。
 
-角色指派的範圍設定為 *「項目層級」* 或 *「系統層級」*。
+角色指派的範圍設定為 *「項目層級」* 或 *「系統層級」* 。
 
 - 項目層級角色指派是在特定項目或在報表伺服器上資料夾階層的分支中建立的。 導覽至特定資料夾或項目，即可為其建立角色指派。
 
@@ -67,7 +67,7 @@ ms.locfileid: "65619598"
 
 ## <a name="deleting-a-role-assignment"></a>刪除角色指派
 
-您可以選取要刪除之每個指派旁的核取方塊，然後按一下 **[刪除]**，以刪除角色指派。 也可以按一下 **[還原為父安全性]**，以刪除角色指派。 當您選取此按鈕時，項目的現有角色指派會遭到刪除，並取代為繼承自父項目的指派。
+您可以選取要刪除之每個指派旁的核取方塊，然後按一下 **[刪除]** ，以刪除角色指派。 也可以按一下 **[還原為父安全性]** ，以刪除角色指派。 當您選取此按鈕時，項目的現有角色指派會遭到刪除，並取代為繼承自父項目的指派。
 
 ## <a name="see-also"></a>另請參閱
 

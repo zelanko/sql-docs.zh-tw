@@ -9,10 +9,10 @@ ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bc8b459c3ecfe9c34ff7552acb2565c1b25239a7
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581673"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>圖表圖例 - 變更項目文字 (報表產生器)
@@ -29,11 +29,11 @@ ms.locfileid: "65581673"
   
 ### <a name="to-modify-the-text-that-appears-in-the-legend-on-a-shape-chart"></a>在形狀圖上修改出現在圖例中的文字  
   
-1.  以滑鼠右鍵按一下數列，或以滑鼠右鍵按一下 [值] 區域中的欄位，然後選取 [數列屬性]。  
+1.  以滑鼠右鍵按一下數列，或以滑鼠右鍵按一下 [值]  區域中的欄位，然後選取 [數列屬性]  。  
   
-2.  按一下 [圖例]，然後在 [自訂圖例文字] 方塊中鍵入關鍵字。  
+2.  按一下 [圖例]  ，然後在 [自訂圖例文字]  方塊中鍵入關鍵字。  
   
- 下表提供用於 [自訂圖例文字] 屬性之圖表特定關鍵字的範例。 如需關鍵字的詳細資訊，請參閱[格式化圖表上的資料點 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
+ 下表提供用於 [自訂圖例文字]  屬性之圖表特定關鍵字的範例。 如需關鍵字的詳細資訊，請參閱[格式化圖表上的資料點 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
   
 |關鍵字|Description|在圖例中顯示為文字的範例|  
 |-------------|-----------------|---------------------------------------------------|  
@@ -43,13 +43,13 @@ ms.locfileid: "65581673"
 |`#AXISLABEL (#PERCENT{P0})`|顯示類別目錄欄位的文字表示法，後面接著每個類別目錄顯示在圖表上的百分比。|Michael Blythe (85%)|  
   
 > [!NOTE]  
->  在 [數列群組] 區域中沒有指定任何欄位時，只能在執行階段評估 #AXISLABEL 關鍵字。  
+>  在 [數列群組]  區域中沒有指定任何欄位時，只能在執行階段評估 #AXISLABEL 關鍵字。  
   
 ### <a name="to-modify-the-text-that-appears-in-the-legend-on-a-non-shape-chart"></a>在非形狀圖上修改出現在圖例中的文字  
   
-1.  以滑鼠右鍵按一下數列，或以滑鼠右鍵按一下 [值] 區域中的欄位，然後選取 [數列屬性]。  
+1.  以滑鼠右鍵按一下數列，或以滑鼠右鍵按一下 [值]  區域中的欄位，然後選取 [數列屬性]  。  
   
-2.  按一下 [圖例]，然後在 [自訂圖例文字] 方塊中鍵入圖例標籤。 數列會隨著您的文字更新。  
+2.  按一下 [圖例]  ，然後在 [自訂圖例文字]  方塊中鍵入圖例標籤。 數列會隨著您的文字更新。  
   
 ## <a name="see-also"></a>另請參閱  
  [在圖表上格式化圖例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   

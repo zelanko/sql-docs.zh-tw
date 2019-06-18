@@ -14,10 +14,10 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3fc3cddc10dd53225867b910b8a3b3cb9c73d6ca
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574853"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML 報表資料的 XML 查詢語法 (SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "65574853"
  如果是連接字串 URL 所指向的 Web 服務端點，XML **查詢** 會定義此 Web 服務方法、SOAP 動作，或兩者皆定義。 XML 資料提供者會建立一個 Web 服務要求來擷取要用於報表的 XML 資料。  
   
 > [!NOTE]  
->  當 Web 服務命名空間包含斜線 (**/)** 字元時，請同時加入 Web 服務方法和 SOAP 動作，好讓 XML 資料處理延伸模組可以正確衍生此命名空間。  
+>  當 Web 服務命名空間包含斜線 ( **/)** 字元時，請同時加入 Web 服務方法和 SOAP 動作，好讓 XML 資料處理延伸模組可以正確衍生此命名空間。  
   
  如果是內嵌 XML 文件，XML **查詢** 會定義要使用的內嵌 XML 資料，以及包含選擇性命名空間和選擇性 XML **ElementPath**。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "65574853"
   
 -   針對 URL 要求，查詢參數會包含為標準 URL 參數。  
   
--   針對 Web 服務要求，查詢參數會傳遞至 Web 服務方法。 若要定義查詢參數，請使用 [資料集屬性] 對話方塊的 [參數] 頁面。 
+-   針對 Web 服務要求，查詢參數會傳遞至 Web 服務方法。 若要定義查詢參數，請使用 [資料集屬性]  對話方塊的 [參數]  頁面。 
   
 ### <a name="example"></a>範例  
  下表中的範例會說明如何從報表伺服器 Web 服務、XML 文件和內嵌 XML 資料中擷取資料。  
@@ -89,7 +89,7 @@ ms.locfileid: "65574853"
 |`<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|D 值<br /><br /> E 值<br /><br /> F 值|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML 文件：DPNamespace.xml  
- 您可以複製這段 XML，並將它儲存為報表設計師可以使用的 URL，以便當做 XML 資料來源使用；例如 https://localhost/DPNamespace.xml。  
+ 您可以複製這段 XML，並將它儲存為報表設計師可以使用的 URL，以便當做 XML 資料來源使用；例如 https://localhost/DPNamespace.xml 。  
   
 ```  
 <Root xmlns:ns="https://schemas.microsoft.com/...">  

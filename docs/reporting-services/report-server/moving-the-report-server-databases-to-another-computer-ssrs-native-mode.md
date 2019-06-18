@@ -9,10 +9,10 @@ ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65619680"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>將報表伺服器資料庫移至其他電腦 (SSRS 原生模式)
@@ -27,7 +27,7 @@ ms.locfileid: "65619680"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。 雖然您不需要將這些作業移至新的電腦，但是可能會想要刪除電腦上不再使用的作業。  
   
--   移動的資料庫會保留訂閱、快取報表以及快照集。 若快照集資料庫移動之後未取用重新整理過的資料，請清除快照集選項，然後選取 [套用] 儲存變更，再重新建立排程，最後再選取 [套用] 儲存變更。  
+-   移動的資料庫會保留訂閱、快取報表以及快照集。 若快照集資料庫移動之後未取用重新整理過的資料，請清除快照集選項，然後選取 [套用]  儲存變更，再重新建立排程，最後再選取 [套用]  儲存變更。  
   
 -   當您移動 reportservertempdb 資料庫時，系統會保留儲存在該資料庫中的暫存報表和使用者工作階段。  
   
@@ -47,13 +47,13 @@ ms.locfileid: "65619680"
   
 3.  啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 並開啟主控報表伺服器資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的連接。  
   
-4.  以滑鼠右鍵按一下報表伺服器資料庫，指向 [工作]，並按一下 [卸離]。 針對報表伺服器暫存資料庫重複此步驟。  
+4.  以滑鼠右鍵按一下報表伺服器資料庫，指向 [工作]，並按一下 [卸離]  。 針對報表伺服器暫存資料庫重複此步驟。  
   
 5.  複製或移動 .mdf 和 .ldf 檔案到您要使用之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 Data 資料夾。 因為移動的資料庫共有兩個，因此請確定您總共移動或複製四個檔案。  
   
 6.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，開啟即將主控報表伺服器資料庫之新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的連接。  
   
-7.  以滑鼠右鍵按一下 [資料庫] 節點，然後按一下 [附加]。  
+7.  以滑鼠右鍵按一下 [資料庫] 節點，然後按一下 [附加]  。  
   
 8.  按一下 **[加入]** ，選取您要附加之報表伺服器資料庫的 .mdf 和 .ldf 檔案。 針對報表伺服器暫存資料庫重複此步驟。  
   
@@ -61,9 +61,9 @@ ms.locfileid: "65619680"
   
 10. 啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並開啟報表伺服器的連接。  
   
-11. 在 [資料庫] 頁面上，選取新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後按一下 **[連接]**。  
+11. 在 [資料庫] 頁面上，選取新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後按一下 **[連接]** 。  
   
-12. 選取您剛才移動的報表伺服器資料庫，然後按一下 **[套用]**。  
+12. 選取您剛才移動的報表伺服器資料庫，然後按一下 **[套用]** 。  
   
 13. 在 [加密金鑰] 頁面上，按一下 [還原]。 指定包含金鑰備份副本的檔案以及解除鎖定此檔案的密碼。  
   
@@ -200,17 +200,17 @@ GO
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並開啟報表伺服器的連接。  
   
-2.  在 [資料庫] 頁面上，按一下 **[變更資料庫]**。 按 [下一步] 。  
+2.  在 [資料庫] 頁面上，按一下 **[變更資料庫]** 。 按 [下一步]  。  
   
-3.  按一下 **[選擇現有報表伺服器資料庫]**。 按 [下一步] 。  
+3.  按一下 **[選擇現有報表伺服器資料庫]** 。 按 [下一步]  。  
   
-4.  選取現在主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，然後按一下 **[測試連接]**。 按 [下一步] 。  
+4.  選取現在主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，然後按一下 **[測試連接]** 。 按 [下一步]  。  
   
-5.  在 [資料庫名稱] 中，選取您想要使用的報表伺服器資料庫。 按 [下一步] 。  
+5.  在 [資料庫名稱] 中，選取您想要使用的報表伺服器資料庫。 按 [下一步]  。  
   
-6.  在 [認證] 中，指定報表伺服器將用來連接至報表伺服器資料庫的認證。 按 [下一步] 。  
+6.  在 [認證] 中，指定報表伺服器將用來連接至報表伺服器資料庫的認證。 按 [下一步]  。  
   
-7.  按 **[下一步]** ，然後按一下 **[完成]**。  
+7.  按 **[下一步]** ，然後按一下 **[完成]** 。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝會要求 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體必須包含 **RSExecRole** 角色。 當您透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具設定報表伺服器資料庫連接時，會產生角色建立、登入註冊以及角色指派等動作。 如果您使用其他方法 (尤其是使用 rsconfig.exe 命令提示字元公用程式) 來設定連接，報表伺服器將不會處於工作狀態。 您可能必須撰寫 WMI 程式碼，才能讓報表伺服器可供使用。 如需詳細資訊，請參閱 [存取 Reporting Services WMI 提供者](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)。  

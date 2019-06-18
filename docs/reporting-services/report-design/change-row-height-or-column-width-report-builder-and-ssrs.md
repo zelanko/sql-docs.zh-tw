@@ -9,10 +9,10 @@ ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: adf756e3ef9cbed7689a5cceb80e6ef4d93e2fb9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581722"
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>變更資料列高度或資料行寬度 (報表產生器及 SSRS)
@@ -49,10 +49,10 @@ ms.locfileid: "65581722"
   
 2.  按一下資料列控制代碼，即可選取此資料列。  
   
-3.  在 [屬性] 窗格中，將 CanGrow 設為 [False]。  
+3.  在 [屬性] 窗格中，將 CanGrow 設為 [False]  。  
   
     > [!NOTE]  
-    >  如果您看不到 [屬性] 窗格，請按一下 **[檢視]** 功能表上的 **[屬性]**。  
+    >  如果您看不到 [屬性] 窗格，請按一下 **[檢視]** 功能表上的 **[屬性]** 。  
   
 ### <a name="to-change-column-width"></a>若要變更資料行寬度  
   

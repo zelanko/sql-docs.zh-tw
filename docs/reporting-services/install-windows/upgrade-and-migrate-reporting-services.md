@@ -13,10 +13,10 @@ manager: kfile
 ms.topic: conceptual
 ms.date: 08/17/2017
 ms.openlocfilehash: dc205f966d0e5556f8dc6f722190d477b5d89327
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570741"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
@@ -29,7 +29,7 @@ ms.locfileid: "65570741"
   
 -   **移轉**：安裝和設定新的 SharePoint 環境、將報表項目和資源複製到新環境，然後設定新環境，以使用現有的內容。 較低層級的移轉形式為複製 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料庫、組態檔，如果您是使用 SharePoint 模式，則還有 SharePoint 內容資料庫。  
     
-> **[!INCLUDE[applies](../../includes/applies-md.md)]**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式
+> **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式
 
 > [!NOTE]
 > SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
@@ -112,7 +112,7 @@ ms.locfileid: "65570741"
   
 3.  如果升級可以繼續，安裝程式會提示您繼續進行升級程序。  
   
-4.  安裝程式會針對 SQL Server Reporting Services 程式檔建立新的資料夾。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝的程式資料夾包括 MSRS13.\<執行個體名稱>。  
+4.  安裝程式會針對 SQL Server Reporting Services 程式檔建立新的資料夾。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝的程式資料夾包括 MSRS13.\<執行個體名稱  >。  
   
 5.  安裝程式會新增 SQL Server Reporting Services 報表伺服器程式檔、設定工具，以及屬於報表伺服器功能之一部分的命令列公用程式。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "65570741"
 >  下列某些狀況因為升級所需的技術不同，而需要將 SharePoint 環境停機。 如果您的情況不允許停機，將需要完成移轉，而非就地升級。  
   
 ### <a name="includesssql14includessssql14-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 SQL Server Reporting Services  
- **起始環境：**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1、SharePoint 2010 或 SharePoint 2013。  
+ **起始環境：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1、SharePoint 2010 或 SharePoint 2013。  
   
  **結束環境：** SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。   
   
@@ -173,7 +173,7 @@ ms.locfileid: "65570741"
      如果您擁有與 SharePoint 2010 整合的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝，就無法就地升級 SharePoint 伺服器。 不過，您可以將內容資料庫和伺服器應用程式資料庫從 SharePoint 2010 伺服器陣列移轉至 SharePoint 2013/2016 伺服器陣列。  
   
 ### <a name="includesssql11includessssql11-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 SQL Server Reporting Services  
- **起始環境：**[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]、SharePoint 2010。  
+ **起始環境：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]、SharePoint 2010。  
   
  **結束環境：** SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。   
   
@@ -182,7 +182,7 @@ ms.locfileid: "65570741"
      如果您擁有與 SharePoint 2010 整合的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝，就無法就地升級 SharePoint 伺服器。 不過，您可以將內容資料庫和伺服器應用程式資料庫從 SharePoint 2010 伺服器陣列移轉至 SharePoint 2013/2016 伺服器陣列。  
   
 ### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 至 SQL Server Reporting Services  
- **起始環境：**[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、SharePoint 2010。  
+ **起始環境：** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、SharePoint 2010。  
   
  **結束環境：** SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。  
  

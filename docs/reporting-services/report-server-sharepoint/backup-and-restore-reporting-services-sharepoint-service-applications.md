@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 93f3eb7db9c00f98d1d4270e9febc105eb6ef6b3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574350"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>備份與還原 Reporting Services SharePoint 服務應用程式
@@ -59,15 +59,15 @@ ms.locfileid: "65574350"
 
 若要備份服務應用程式，請完成下列步驟：  
   
-1.  在 [SharePoint 管理中心] 中，選取 [備份與還原] 群組中的 [執行備份] 。  
+1.  在 [SharePoint 管理中心] 中，選取 [備份與還原]  群組中的 [執行備份]  。  
   
-2.  在 **[共用服務]** 節點底下，展開 **[共用服務應用程式]** ，然後選取您的服務應用程式。 其類型會是 **[SQL Server Reporting Services 服務應用程式]**。  
+2.  在 **[共用服務]** 節點底下，展開 **[共用服務應用程式]** ，然後選取您的服務應用程式。 其類型會是 **[SQL Server Reporting Services 服務應用程式]** 。  
   
-3.  選取 **[下一步]**。  
+3.  選取 **[下一步]** 。  
   
-4.  鍵入 [備份位置：] 的路徑，然後選取 [開始備份]。  
+4.  鍵入 [備份位置：]  的路徑，然後選取 [開始備份]  。  
   
-5.  重複上述程序，但是不要選取服務應用程式，而是展開 **[共用服務 Proxy]** 節點，然後選取服務應用程式 Proxy。 其類型會是 **[SQL Server Reporting Services 服務應用程式 Proxy]**。  
+5.  重複上述程序，但是不要選取服務應用程式，而是展開 **[共用服務 Proxy]** 節點，然後選取服務應用程式 Proxy。 其類型會是 **[SQL Server Reporting Services 服務應用程式 Proxy]** 。  
   
  如需詳細資訊，請參閱 SharePoint 文件中的下列主題：  
   
@@ -79,19 +79,19 @@ ms.locfileid: "65574350"
 
  **執行帳戶** ：若要驗證您的服務應用程式是否使用執行帳戶：  
   
-1.  在 [SharePoint 管理中心] 的 [應用程式管理] 群組中，選取 [管理服務應用程式]。  
+1.  在 [SharePoint 管理中心] 的 [應用程式管理]  群組中，選取 [管理服務應用程式]  。  
   
-2.  選取服務應用程式的名稱，然後選取 SharePoint 功能區中的 [管理] 。  
+2.  選取服務應用程式的名稱，然後選取 SharePoint 功能區中的 [管理]  。  
   
-3.  選取 [執行帳戶]。  
+3.  選取 [執行帳戶]  。  
   
 4.  如果設定了執行帳戶，則在還原服務應用程式備份時需要知道認證。 如果不知道正確的認證，請不要進行備份和還原程序。  
   
  **資料庫驗證** ：若要確認您的服務應用程式是否使用 Windows 驗證進行資料庫驗證：  
   
-1.  在 [SharePoint 管理中心] 的 [應用程式管理] 群組中，選取 [管理服務應用程式]。  
+1.  在 [SharePoint 管理中心] 的 [應用程式管理]  群組中，選取 [管理服務應用程式]  。  
   
-2.  選取服務應用程式的名稱，然後選取 SharePoint 功能區中的 [屬性] 。  
+2.  選取服務應用程式的名稱，然後選取 SharePoint 功能區中的 [屬性]  。  
   
 3.  檢閱 **[Reporting Services (SSRS) 服務資料庫]** 區段。  
   
@@ -109,17 +109,17 @@ ms.locfileid: "65574350"
   
 ### <a name="restore-the-service-application-using-sharepoint-central-administration"></a>使用 SharePoint 管理中心還原服務應用程式
   
-1.  在 [SharePoint 管理中心] 中，選取 [備份與還原] 群組中的 [從備份還原] 。  
+1.  在 [SharePoint 管理中心] 中，選取 [備份與還原]  群組中的 [從備份還原]  。  
   
-2.  在 [備份目錄位置] 方塊中鍵入備份檔案的路徑，然後選取 [重新整理]。  
+2.  在 [備份目錄位置]  方塊中鍵入備份檔案的路徑，然後選取 [重新整理]  。  
   
-3.  從 [上層元件] 清單中選取服務應用程式備份，然後選取 [下一步]。  
+3.  從 [上層元件]  清單中選取服務應用程式備份，然後選取 [下一步]  。  
   
-4.  選取您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式，然後選取 [下一步]。  
+4.  選取您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式，然後選取 [下一步]  。  
   
 5.  在 **[登錄名稱與密碼]** 區段中，輸入登入名稱的密碼。 [登入名稱] 方塊應填入服務應用程式在備份之前使用的登入。  
   
-6.  選取 [開始還原]。  
+6.  選取 [開始還原]  。  
   
 7.  重複上述程序，但是不要還原服務應用程式，而是展開 **[共用服務]** 節點，然後展開 **[共用服務應用程式]** 節點。  
   
@@ -137,28 +137,28 @@ ms.locfileid: "65574350"
 
  **執行帳戶** ：如果您的服務應用程式使用執行帳戶，請完成下列步驟設定該帳戶：  
   
-1.  在 [SharePoint 管理中心] 的 [應用程式管理] 群組中，選取 [管理服務應用程式]。  
+1.  在 [SharePoint 管理中心] 的 [應用程式管理]  群組中，選取 [管理服務應用程式]  。  
   
-2.  選取服務應用程式的名稱，然後選取 SharePoint 功能區中的 [管理] 。  
+2.  選取服務應用程式的名稱，然後選取 SharePoint 功能區中的 [管理]  。  
   
-3.  選取 [執行帳戶]。  
+3.  選取 [執行帳戶]  。  
   
 4.  輸入帳戶、密碼，然後選取 **[指定執行帳戶]** 方塊。  
   
-5.  選取 [確定]。  
+5.  選取 [確定]  。  
   
  **資料庫驗證** ：如果您的服務應用程式使用 Windows 驗證進行資料庫驗證，請完成下列步驟：  
   
-1.  在 [SharePoint 管理中心] 的 [應用程式管理] 群組中，選取 [管理服務應用程式]。  
+1.  在 [SharePoint 管理中心] 的 [應用程式管理]  群組中，選取 [管理服務應用程式]  。  
   
-2.  選取服務應用程式的名稱，然後選取 SharePoint 功能區中的 [屬性] 。  
+2.  選取服務應用程式的名稱，然後選取 SharePoint 功能區中的 [屬性]  。  
   
 3.  檢閱 **[Reporting Services (SSRS) 服務資料庫]** 區段。  
   
-4.  選取 **[Windows 驗證]**。  
+4.  選取 **[Windows 驗證]** 。  
   
 5.  輸入帳戶和密碼。 選取 **[當做 Windows 認證使用]** (如果適用)。  
   
-6.  選取 [確定]。
+6.  選取 [確定]  。
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

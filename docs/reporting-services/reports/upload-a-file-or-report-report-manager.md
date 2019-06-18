@@ -15,10 +15,10 @@ ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b54290c582dab62b7e0f5b8a1cb7ca4dd2eb642c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573303"
 ---
 # <a name="upload-a-file-or-report-in-the-report-server"></a>在報表伺服器中上傳檔案或報表
@@ -30,13 +30,13 @@ ms.locfileid: "65573303"
   
 ### <a name="to-upload-a-file-or-report"></a>若要上傳檔案或報表  
   
-1.  在 Web 入口網站中，按一下 [上傳]。  
+1.  在 Web 入口網站中，按一下 [上傳]  。  
   
 4.  瀏覽至您想要上傳的檔案。 您可以上傳報表定義檔案、影像、文件，或要在報表伺服器上提供使用的任何檔案。  
   
 5.  輸入新項目的名稱。 項目名稱可以包含空格，但是不能包含保留字元：\; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|。  
   
-6.  如果您要以新項目取代現有的項目，請選取 [如果項目存在則覆寫]。  
+6.  如果您要以新項目取代現有的項目，請選取 [如果項目存在則覆寫]  。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

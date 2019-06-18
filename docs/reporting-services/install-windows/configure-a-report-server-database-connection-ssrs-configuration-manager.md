@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: seodec18
 ms.date: 04/26/2019
 ms.openlocfilehash: 6aecb763ccfe8743942ddb41a7eeb826e2ec5088
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64568376"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>設定報表伺服器資料庫連接 (SSRS 組態管理員)
@@ -42,9 +42,9 @@ ms.locfileid: "64568376"
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用 **System.Data.SqlClient** 連接到主控報表伺服器資料庫的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 如果您要使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的本機執行個體，報表伺服器將會使用共用記憶體建立連接。 如果您要使用報表伺服器資料庫的遠端資料庫伺服器，您可能必須根據您使用的版本來啟用遠端連接。 如果您正在使用 Enterprise Edition，預設會啟用 TCP/IP 的遠端連接。  
 
-若要確認此執行個體可接受遠端連線，請依序按一下 [開始]、[所有程式]、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 [組態工具]，再按一下 [SQL Server 組態管理員]，然後確認每一個服務都已啟用 TCP/IP 通訊協定。  
+若要確認此執行個體可接受遠端連線，請依序按一下 [開始]  、[所有程式]  、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 [組態工具]  ，再按一下 [SQL Server 組態管理員]  ，然後確認每一個服務都已啟用 TCP/IP 通訊協定。  
 
-當您啟用遠端連接時，也會啟用用戶端和伺服器通訊協定。 若要確認通訊協定已啟用，請依序按一下 **[開始]**、 **[所有程式]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[組態工具]**、 **[SQL Server 組態管理員]**、 **[SQL Server 網路組態]**，再按一下 **[MSSQLSERVER 的通訊協定]**。 如需詳細資訊，請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的[啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。  
+當您啟用遠端連接時，也會啟用用戶端和伺服器通訊協定。 若要確認通訊協定已啟用，請依序按一下 **[開始]** 、 **[所有程式]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[組態工具]** 、 **[SQL Server 組態管理員]** 、 **[SQL Server 網路組態]** ，再按一下 **[MSSQLSERVER 的通訊協定]** 。 如需詳細資訊，請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的[啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。  
 
 ## <a name="defining-a-report-server-database-connection"></a>定義報表伺服器資料庫連接
 

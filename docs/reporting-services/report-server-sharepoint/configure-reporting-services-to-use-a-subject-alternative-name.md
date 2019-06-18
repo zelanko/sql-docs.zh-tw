@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 493abba0e4396b6f12670dd3214d19e4767c4d0d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580012"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>設定 Reporting Services 來使用主體別名
@@ -32,7 +32,7 @@ ms.locfileid: "65580012"
   
      如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
-2.  在 [Web 服務 URL] 頁面中，選取 SSL 連接埠和 SSL 憑證。  
+2.  在 [Web 服務 URL]  頁面中，選取 SSL 連接埠和 SSL 憑證。  
   
      ![Reporting Services 設定管理員](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Reporting Services 設定管理員")  
   
@@ -115,7 +115,7 @@ ms.locfileid: "65580012"
   
     ```  
   
-10. 在 Reporting Services 設定管理員的 [報表伺服器狀態] 頁面中，按一下 [停止]，然後按一下 [啟動] 以重新啟動報表伺服器。  
+10. 在 Reporting Services 設定管理員的 [報表伺服器狀態]  頁面中，按一下 [停止]  ，然後按一下 [啟動]  以重新啟動報表伺服器。  
   
 ## <a name="see-also"></a>另請參閱
 

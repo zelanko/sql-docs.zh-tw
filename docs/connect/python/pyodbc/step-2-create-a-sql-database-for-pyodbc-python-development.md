@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: b5b4da16785ad0665751673efb1b17128bbcb776
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66780398"
 ---
 # <a name="step-2-create-a-sql-database-for-pyodbc-python-development"></a>步驟 2︰建立用於 pyodbc Python 開發的 SQL 資料庫

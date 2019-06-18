@@ -11,11 +11,11 @@ ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
 ms.openlocfilehash: e198f561fd4f6bcec390ef8632c1cdc96f2810d6
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744795"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62854658"
 ---
 # <a name="universal-data-link-udl-configuration"></a>通用資料連結 (UDL) 設定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "56744795"
 
 [連線] 索引標籤是提供者特有的，而且只會顯示 Microsoft OLE DB Driver for SQL Server 所需的連線屬性。
 
-|選項|描述|
+|選項|Description|
 |---   |---        |
 |選取或輸入伺服器名稱|從下拉式清單中選取伺服器名稱，或是輸入您要存取之資料庫所在的伺服器位置。 在伺服器上選取資料庫是個別的動作。 按一下 [重新整理]，以更新此清單。
 |輸入資訊以登入伺服器|您可以從這個下拉式清單選取下列的驗證選項： <ul><li>`Windows Authentication:` 使用目前登入使用者的 Windows 帳戶認證的 SQL Server 驗證。</li><li>`SQL Server Authentication:` 使用登入識別碼和密碼的 SQL Server 驗證。</li><li>`Active Directory - Integrated:` 使用目前登入使用者的 Windows 帳戶認證的整合式的驗證。</li><li>`Active Directory - Password:` 使用登入識別碼和密碼的 active Directory 驗證。</li></ul>|
@@ -50,7 +50,7 @@ ms.locfileid: "56744795"
 
 ![OLE DB 資料連結頁面-進階 索引標籤的螢幕擷取畫面](../media/data-link-pages-advanced-tab.png)
 
-|選項|描述|
+|選項|Description|
 |---   |---        |
 | 連接逾時 | 指定的 Microsoft OLE DB Driver for SQL Server 等候初始化完成的時間 （以秒為單位）。 如果初始化逾時，系統就會傳回錯誤而且不會建立連接。|
 

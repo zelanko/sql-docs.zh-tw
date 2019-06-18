@@ -9,10 +9,10 @@ ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 535d35ad80f940e7d3ed4a9163b2e65757088e58
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581163"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>使用列印控制項從瀏覽器列印報表 (報表產生器及 SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "65581163"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="print-options"></a>列印選項  
- 若要在 **[列印]** 對話方塊中設定報表的列印屬性，請按一下 **[屬性]** 按鈕。 **[紙張大小]** 會由報表定義中所定義之報表頁面大小的預設高度和寬度來決定。 可用的值將視印表機類型及其功能而定。 [寬度] 和 [高度] 會顯示電腦上已設定之列印驅動程式的預設值。 變更這些值會導致報表使用新的尺寸來列印。 頁寬和頁高會由 **[方向]** 決定，方向會設為 **[縱向]** 或 **[橫向]**。 所顯示的預設方向會視報表的頁寬和頁高而定。  
+ 若要在 **[列印]** 對話方塊中設定報表的列印屬性，請按一下 **[屬性]** 按鈕。 **[紙張大小]** 會由報表定義中所定義之報表頁面大小的預設高度和寬度來決定。 可用的值將視印表機類型及其功能而定。 [寬度] 和 [高度] 會顯示電腦上已設定之列印驅動程式的預設值。 變更這些值會導致報表使用新的尺寸來列印。 頁寬和頁高會由 **[方向]** 決定，方向會設為 **[縱向]** 或 **[橫向]** 。 所顯示的預設方向會視報表的頁寬和頁高而定。  
   
 > [!NOTE]  
 >  **[列印]** 對話方塊和預設的印表機設定 (頁寬、頁高及頁面方向等)，會由報表定義來決定。  

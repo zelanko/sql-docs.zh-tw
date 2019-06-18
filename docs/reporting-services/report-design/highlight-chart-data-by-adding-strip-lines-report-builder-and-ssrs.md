@@ -9,10 +9,10 @@ ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 90ed2330ce7b4627798a5e548f2984886b80644d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580261"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>加入帶狀線來強調圖表資料 (報表產生器及 SSRS)
@@ -31,25 +31,25 @@ ms.locfileid: "65580261"
   
 ### <a name="to-display-interlaced-strip-lines-at-regular-intervals-on-a-chart"></a>在圖表上以固定間隔顯示交錯的帶狀線  
   
-1.  若要顯示水平帶狀線，請以滑鼠右鍵按一下垂直圖表軸，然後按一下 [垂直軸屬性]。  
+1.  若要顯示水平帶狀線，請以滑鼠右鍵按一下垂直圖表軸，然後按一下 [垂直軸屬性]  。  
   
-     若要顯示垂直帶狀線，請以滑鼠右鍵按一下水平圖表軸，然後按一下 [水平軸屬性]。  
+     若要顯示垂直帶狀線，請以滑鼠右鍵按一下水平圖表軸，然後按一下 [水平軸屬性]  。  
   
-2.  選取 [使用交錯式] 選項。 灰色帶狀線會出現在圖表上。  
+2.  選取 [使用交錯式]  選項。 灰色帶狀線會出現在圖表上。  
   
-3.  (選擇性) 使用相鄰的 [色彩] 下拉式清單來指定帶狀線的色彩。  
+3.  (選擇性) 使用相鄰的 [色彩]  下拉式清單來指定帶狀線的色彩。  
   
 ### <a name="to-display-interlaced-strip-lines-at-custom-intervals-on-a-chart"></a>在圖表上以自訂間隔顯示交錯的帶狀線  
   
-1.  若要顯示水平帶狀線，請以滑鼠右鍵按一下垂直圖表軸，然後按一下 [垂直軸屬性]。  
+1.  若要顯示水平帶狀線，請以滑鼠右鍵按一下垂直圖表軸，然後按一下 [垂直軸屬性]  。  
   
-     若要顯示垂直帶狀線，請以滑鼠右鍵按一下水平圖表軸，然後按一下 [水平軸屬性]。  
+     若要顯示垂直帶狀線，請以滑鼠右鍵按一下水平圖表軸，然後按一下 [水平軸屬性]  。  
   
      軸屬性會在 [屬性] 視窗中顯示。  
   
-2.  在 [屬性] 窗格的 [外觀] 區段中，針對 StripLines 屬性按一下 [編輯集合] 按鈕 (…) 來開啟 [ChartStripLine 集合編輯器]。  
+2.  在 [屬性] 窗格的 [外觀]  區段中，針對 StripLines 屬性按一下 [編輯集合] 按鈕 (…) 來開啟 [ChartStripLine 集合編輯器]  。  
   
-3.  按一下 [新增]，將新的帶狀線新增集合。  
+3.  按一下 [新增]  ，將新的帶狀線新增集合。  
   
 4.  按一下 [StripWidth] 來指定帶狀線的寬度，在報表上是以英吋表示。 如果要反白顯示日期或時間，請按一下 [StripWidthType] 並選取時間間隔。  
   

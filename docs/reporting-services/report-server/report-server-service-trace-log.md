@@ -11,10 +11,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
 ms.openlocfilehash: d1efc5b57191ec17f610206115743b656d58d4b3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581390"
 ---
 # <a name="report-server-service-trace-log"></a>報表伺服器服務追蹤記錄
@@ -101,9 +101,9 @@ ms.locfileid: "65581390"
 ## <a name="previous-versions"></a>舊版
 
 在舊版的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]中，系統提供了多個追蹤記錄檔 (每個應用程式都有一個檔案)。 下列檔案已過時，在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和之後的版本中不會再建立：
-+ ReportServerWebApp_\<時間戳記>.log
-+ ReportServer_\<時間戳記>.log
-+ ReportServerService_main_\<時間戳記>.log
++ ReportServerWebApp_\<時間戳記>  .log
++ ReportServer_\<時間戳記>  .log
++ ReportServerService_main_\<時間戳記>  .log
   
 ## <a name="see-also"></a>另請參閱
 

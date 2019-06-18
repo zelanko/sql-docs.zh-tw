@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 8f5f520be226d74c2c6530aacee7916aa381dc06
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66778149"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver 的版本資訊
@@ -33,7 +33,7 @@ ms.locfileid: "66778149"
 | 合規性變更 | 詳細資料 |
 | :---------------- | :------ |
 | 下載 JDBC Driver 7.2 的最新更新。 | &bull; &nbsp; [Microsoft 下載中心](https://go.microsoft.com/fwlink/?linkid=2063159)<br/>&bull; &nbsp; [GitHub，7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)<br/>&bull; &nbsp; [Maven 中心](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
-| 完全符合 JDBC API 規格 4.2 的規範。 | 7.2 套件中的 jar 會根據 Java 版本相容性進行命名。<br/><br/>例如，來自 7.2 套件的 mssql-jdbc-7.2.2.jre11.jar 檔案應該與 Java 11 搭配使用。 |
+| 完全符合 JDBC API 規格 4.2 的規範。 | 7\.2 套件中的 jar 會根據 Java 版本相容性進行命名。<br/><br/>例如，來自 7.2 套件的 mssql-jdbc-7.2.2.jre11.jar 檔案應該與 Java 11 搭配使用。 |
 | 除了 JDK 1.8 之外，還與 Java Development Kit (JDK) 11.0 版相容。 | 除了 JDK 1.8 之外，Microsoft JDBC Driver 7.2 for SQL Server 現在還與 Java 開發套件 (JDK) 11.0 版相容。 |
 | &nbsp; | &nbsp; |
 
@@ -96,7 +96,7 @@ ms.locfileid: "66778149"
 
 ## <a name="70"></a>7.0
 
-Microsoft JDBC Driver 7.0 for SQL Server 完全符合 JDBC API 規格 4.2 的規範。 7.0 套件中的 jar 會根據 Java 版本相容性進行命名。 例如，來自 7.0 套件的 mssql-jdbc-7.0.0.jre10.jar 檔案應該與 Java 10 搭配使用。
+Microsoft JDBC Driver 7.0 for SQL Server 完全符合 JDBC API 規格 4.2 的規範。 7\.0 套件中的 jar 會根據 Java 版本相容性進行命名。 例如，來自 7.0 套件的 mssql-jdbc-7.0.0.jre10.jar 檔案應該與 Java 10 搭配使用。
 
 ### <a name="support-for-jdk-10"></a>JDK 10 支援
 
@@ -153,7 +153,7 @@ Microsoft JDBC Driver 7.0 for SQL Server 已將其在「適用於 Java 的 Micro
 
 ## <a name="64"></a>6.4
 
-Microsoft JDBC Driver 6.4 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 的規範。 6.4 套件中的 jar 會根據 Java 版本相容性進行命名。 例如，來自 6.4 套件的 mssql-jdbc-6.4.0.jre8.jar 檔案必須與 Java 8 搭配使用。
+Microsoft JDBC Driver 6.4 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 的規範。 6\.4 套件中的 jar 會根據 Java 版本相容性進行命名。 例如，來自 6.4 套件的 mssql-jdbc-6.4.0.jre8.jar 檔案必須與 Java 8 搭配使用。
 
 ### <a name="support-for-jdk-9"></a>JDK 9 支援
 
@@ -209,7 +209,7 @@ JDBC 驅動程式現在透過 Kerberos，在所有支援的作業系統 (Windows
 
 ## <a name="62"></a>6.2
 
-Microsoft JDBC Driver 6.2 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 的規範。 6.2 套件中的 jar 會根據 Java 版本相容性進行命名。 例如，建議將來自 6.2 套件的 mssql-jdbc-6.2.2.jre8.jar 檔案與 Java 8 搭配使用。
+Microsoft JDBC Driver 6.2 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 的規範。 6\.2 套件中的 jar 會根據 Java 版本相容性進行命名。 例如，建議將來自 6.2 套件的 mssql-jdbc-6.2.2.jre8.jar 檔案與 Java 8 搭配使用。
 
 > [!NOTE]  
 > 在已於 2017 年 6 月 29 日發行的 JDBC 6.2 RTW 中發現了中繼資料快取改進的問題。 此改進已回復，並且已於 2017 年 7 月 17 日發行新的 jar (版本 6.2.1)。 
@@ -247,7 +247,7 @@ Microsoft JDBC Driver 6.1 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 �
 
 ## <a name="60"></a>6.0
 
-Microsoft JDBC Driver 6.0 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 的規範。 6.0 套件中的 jar 會根據其與 JDBC API 版本的合規性進行命名。 例如，6.0 套件中的 sqljdbc42.jar 檔案會符合 JDBC API 4.2 的規範。 同樣地，sqljdbc41.jar 檔案會符合 JDBC API 4.1 的規範。
+Microsoft JDBC Driver 6.0 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 的規範。 6\.0 套件中的 jar 會根據其與 JDBC API 版本的合規性進行命名。 例如，6.0 套件中的 sqljdbc42.jar 檔案會符合 JDBC API 4.2 的規範。 同樣地，sqljdbc41.jar 檔案會符合 JDBC API 4.1 的規範。
 
 若要確保您擁有正確的 sqljdbc42.jar 或 sqljdbc41.jar 檔案，請執行下列程式碼行。 如果輸出為 "Driver version: 6.0.7507.100"，則您具有 JDBC Driver 6.0 套件。
 
@@ -284,7 +284,7 @@ TVP 提供從用戶端應用程式，將多個資料列的資料封送至 SQL Se
 
 ## <a name="42"></a>4.2
 
-Microsoft JDBC Driver 4.2 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 的規範。 4.2 套件中的 jar 會根據其與 JDBC API 版本的合規性進行命名。 例如，4.2 套件中的 sqljdbc42.jar 檔案會符合 JDBC API 4.2 的規範。 同樣地，sqljdbc41.jar 檔案會符合 JDBC API 4.1 的規範。
+Microsoft JDBC Driver 4.2 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 的規範。 4\.2 套件中的 jar 會根據其與 JDBC API 版本的合規性進行命名。 例如，4.2 套件中的 sqljdbc42.jar 檔案會符合 JDBC API 4.2 的規範。 同樣地，sqljdbc41.jar 檔案會符合 JDBC API 4.1 的規範。
 
 若要確保您擁有正確的 sqljdbc42.jar 或 sqljdbc41.jar 檔案，請執行下列程式碼行。 如果輸出為 "Driver version: 4.2.6420.100"，則您具有 JDBC Driver 4.2 套件。
 

@@ -9,10 +9,10 @@ ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2796447d65a7fcabe029c67f460a76284daf242f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580208"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>插入或刪除資料行 (報表產生器及 SSRS)
@@ -31,29 +31,29 @@ ms.locfileid: "65580208"
   
 ## <a name="to-insert-a-column-in-a-selected-data-region"></a>在選取的資料區中插入資料行  
   
--   以滑鼠右鍵按一下您想要插入資料行的資料行控制代碼、按一下 [插入資料行]，然後按一下 [左方] 或 [右方]。  
+-   以滑鼠右鍵按一下您想要插入資料行的資料行控制代碼、按一下 [插入資料行]  ，然後按一下 [左方]  或 [右方]  。  
   
      -或-  
   
--   在您想要插入資料列的資料區中，以滑鼠右鍵按一下資料格、按一下 [插入資料行]，然後按一下 [左方] 或 [右方]。  
+-   在您想要插入資料列的資料區中，以滑鼠右鍵按一下資料格、按一下 [插入資料行]  ，然後按一下 [左方]  或 [右方]  。  
   
 ## <a name="to-delete-a-column-from-a-selected-data-region"></a>從選取的資料區中刪除資料行  
   
--   選取您想要刪除的一或多個資料行、以滑鼠右鍵按一下其中一個選取之資料行的控制代碼，然後按一下 [刪除資料行]。  
+-   選取您想要刪除的一或多個資料行、以滑鼠右鍵按一下其中一個選取之資料行的控制代碼，然後按一下 [刪除資料行]  。  
   
      -或-  
   
--   在您想要刪除資料行的資料區中，以滑鼠右鍵按一下資料格，然後按一下 [刪除資料行]。  
+-   在您想要刪除資料行的資料區中，以滑鼠右鍵按一下資料格，然後按一下 [刪除資料行]  。  
   
 ## <a name="to-insert-a-column-in-a-group-in-a-selected-data-region"></a>在選取之資料區的群組中插入資料行  
   
--   在您想要插入資料行之 Tablix 資料區的資料行群組區域中，以滑鼠右鍵按一下資料行群組資料格、按一下 [插入資料行]，然後按一下 [左方 - 群組外]、[左方 - 群組內]、[右方 - 群組內] 或 [右方 - 群組外]。  
+-   在您想要插入資料行之 Tablix 資料區的資料行群組區域中，以滑鼠右鍵按一下資料行群組資料格、按一下 [插入資料行]  ，然後按一下 [左方 - 群組外]  、[左方 - 群組內]  、[右方 - 群組內]  或 [右方 - 群組外]  。  
   
      如此就會在您按一下之資料行群組資料格所表示的群組內部或外部加入資料行。  
   
 ## <a name="to-delete-a-column-from-a-group-in-a-selected-data-region"></a>從選取之資料區的群組中刪除資料行  
   
--   在您想要刪除資料行之 Tablix 資料區的資料行群組區域中，以滑鼠右鍵按一下資料行群組資料格，然後按一下 [刪除資料行]。  
+-   在您想要刪除資料行之 Tablix 資料區的資料行群組區域中，以滑鼠右鍵按一下資料行群組資料格，然後按一下 [刪除資料行]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [了解群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)   

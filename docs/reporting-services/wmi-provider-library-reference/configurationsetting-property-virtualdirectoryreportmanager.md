@@ -11,10 +11,10 @@ ms.assetid: fe5ac055-26e3-4c3d-843c-c12eb7e6e4db
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fcc2b7df077fb99985ea019130408a875f214d81
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65569190"
 ---
 # <a name="configurationsetting-property---virtualdirectoryreportmanager"></a>ConfigurationSetting 屬性 - VirtualDirectoryReportManager

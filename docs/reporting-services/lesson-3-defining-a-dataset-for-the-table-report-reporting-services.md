@@ -9,33 +9,33 @@ ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: eaa2af570ae363e6a48c8d14e5b73c70e6790b5c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106015"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>第 3 課：定義資料表報表的資料集 (Reporting Services)
 
-當您定義資料來源之後，就需要定義資料集。 在 [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)] 中，報表所用的資料是包含在「資料集」中。 資料集含有指向資料來源的指標和報表要使用的查詢、導出欄位和變數。
+當您定義資料來源之後，就需要定義資料集。 在 [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)] 中，報表所用的資料是包含在「資料集」  中。 資料集含有指向資料來源的指標和報表要使用的查詢、導出欄位和變數。
 
 使用報表設計師中的查詢設計工具來定義資料集。 在本教學課程中，您將建立一項查詢，可擷取 AdventureWorks2016 資料庫中的銷售訂單資訊。
 
 ## <a name="define-a-transact-sql-query-for-report-data"></a>定義報表資料的 Transact-SQL 查詢  
 
-1. 在 [報表資料] 窗格中，選取 [新增] > [資料集...]。[資料集屬性] 對話方塊隨即開啟，並顯示 [查詢] 區段。
+1. 在 [報表資料]  窗格中，選取 [新增]   > [資料集...]  。[資料集屬性]  對話方塊隨即開啟，並顯示 [查詢]  區段。
 
     ![vs-data_set_properties_dialog](media/lesson-3-defining-a-dataset-for-the-table-report-reporting-services/vs-dataset-properties-dialog.png)
 
-2. 在 [名稱] 文字方塊中，輸入 "AdventureWorksDataset"。
+2. 在 [名稱]  文字方塊中，輸入 "AdventureWorksDataset"。
 
-3. 在該文字方塊下方，選取 [使用內嵌在我的報表中的資料集] 選項按鈕。
+3. 在該文字方塊下方，選取 [使用內嵌在我的報表中的資料集]  選項按鈕。
 
-4. 從 [資料來源] 下拉式方塊中，選取 AdventureWorks2016。
+4. 從 [資料來源]  下拉式方塊中，選取 AdventureWorks2016。
 
-5. 針對 [查詢類型]，選取 [文字] 選項按鈕。
+5. 針對 [查詢類型]  ，選取 [文字]  選項按鈕。
 
-6. 在 [查詢] 文字方塊中，輸入 (或複製並貼上) 下列 Transact-SQL 查詢。
+6. 在 [查詢]  文字方塊中，輸入 (或複製並貼上) 下列 Transact-SQL 查詢。
 
     ```T-SQL
     SELECT
@@ -60,13 +60,13 @@ ms.locfileid: "65106015"
     HAVING ppc.Name = 'Clothing'
     ```
 
-7. (選擇性) 選取 [查詢設計工具] 按鈕。 查詢會顯示在以文字為基礎的 [查詢設計工具] 中。 在 [查詢設計工具] 工具列上，選取 ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) [執行] 按鈕，藉以檢視查詢的結果。 在 AdventureWorks2016 資料庫中，顯示的資料集包含 4 個資料表中的 6 個欄位。 查詢會使用別名之類的 Transact-SQL 功能。 例如，SalesOrderHeader 資料表稱為 *soh*。
+7. (選擇性) 選取 [查詢設計工具]  按鈕。 查詢會顯示在以文字為基礎的 [查詢設計工具]  中。 在 [查詢設計工具]  工具列上，選取 ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) [執行]  按鈕，藉以檢視查詢的結果。 在 AdventureWorks2016 資料庫中，顯示的資料集包含 4 個資料表中的 6 個欄位。 查詢會使用別名之類的 Transact-SQL 功能。 例如，SalesOrderHeader 資料表稱為 *soh*。
 
-8. 選取 [確定] 結束 [查詢設計工具]。
+8. 選取 [確定]  結束 [查詢設計工具]  。
 
-9. 選取 [確定] 結束 [資料集屬性] 對話方塊。
+9. 選取 [確定]  結束 [資料集屬性]  對話方塊。
 
-[報表資料] 窗格會顯示 AdventureWorksDataset 資料集和欄位。
+[報表資料]  窗格會顯示 AdventureWorksDataset 資料集和欄位。
 
    ![ssrs_adventureworksdataset](media/ssrs-adventureworksdataset.png)
 

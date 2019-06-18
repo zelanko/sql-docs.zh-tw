@@ -10,11 +10,11 @@ author: pensivebrian
 ms.author: broneill
 manager: craigg
 ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527590"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63269923"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -36,7 +36,7 @@ ms.locfileid: "58527590"
   
 **SqlPackage.exe** 命令列可讓您指定這些動作以及動作特有的參數和屬性。  
 
-**[下載最新版本](sqlpackage-download.md)**。 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes-sqlpackage.md)。
+**[下載最新版本](sqlpackage-download.md)** 。 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes-sqlpackage.md)。
   
 ## <a name="command-line-syntax"></a>命令列語法
 

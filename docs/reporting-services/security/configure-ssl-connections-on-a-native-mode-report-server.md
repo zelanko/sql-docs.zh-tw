@@ -11,10 +11,10 @@ ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ceab8f9d74aed85f51c91650d0efa1cb32f421e
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175662"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>在原生模式報表伺服器上設定 SSL 連線
@@ -39,24 +39,24 @@ ms.locfileid: "66175662"
   
 -   解除安裝 IIS 會暫時中斷對 SSL 繫結之報表伺服器 URL 的服務。 因此，建議您在解除安裝 IIS 之後重新啟動電腦。  
   
-     必須要重新開機，才能清除快取中的所有 SSL 工作階段。 某些作業系統最多會快取 10 個小時的 SSL 工作階段，即使當 SSL 繫結已經從 HTTP.SYS 的 URL 保留項目中移除後，https:// URL 仍然繼續運作。 重新開機會關閉使用此通道的任何開啟連接。  
+     必須要重新開機，才能清除快取中的所有 SSL 工作階段。 某些作業系統最多會快取 10 個小時的 SSL 工作階段，即使當 SSL 繫結已經從 HTTP.SYS 的 URL 保留項目中移除後， https:// URL 仍然繼續運作。 重新開機會關閉使用此通道的任何開啟連接。  
   
 ## <a name="bind-ssl-to-a-reporting-services-url-reservation"></a>將 SSL 繫結到 Reporting Services URL 保留項目  
  下列步驟不包含要求、產生、下載或安裝憑證的指示。 您必須已安裝憑證，而且此憑證可供使用。 您所指定的憑證屬性、憑證取自的憑證授權單位，以及您用於要求及安裝此憑證的工具和公用程式都是由您決定。  
   
- 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具來繫結此憑證。 如果此憑證正確地安裝在本機電腦存放區， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具將會偵測到它，並將它顯示在 [Web 服務 URL] 和 [Web 入口網站 URL] 頁面的 [SSL 憑證] 清單中。  
+ 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具來繫結此憑證。 如果此憑證正確地安裝在本機電腦存放區， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具將會偵測到它，並將它顯示在 [Web 服務 URL]  和 [Web 入口網站 URL]  頁面的 [SSL 憑證]  清單中。  
   
 ### <a name="to-configure-a-report-server-url-for-ssl"></a>為 SSL 設定報表伺服器 URL  
   
 1.  啟動 Reporting Services 組態工具，並連接到報表伺服器。  
   
-2.  選取 [Web 服務 URL]。  
+2.  選取 [Web 服務 URL]  。  
   
-3.  展開 SSL 憑證的清單。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會偵測本機存放區內的伺服器驗證憑證。 如果您已安裝憑證，而且沒有在清單中看到它，您可能需要重新啟動服務。 您可以在 Reporting Services 組態工具的 [報表伺服器狀態] 頁面中，使用 [停止] 和 [啟動] 按鈕來重新啟動服務 (最上方頁面)。  
+3.  展開 SSL 憑證的清單。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會偵測本機存放區內的伺服器驗證憑證。 如果您已安裝憑證，而且沒有在清單中看到它，您可能需要重新啟動服務。 您可以在 Reporting Services 組態工具的 [報表伺服器狀態]  頁面中，使用 [停止]  和 [啟動]  按鈕來重新啟動服務 (最上方頁面)。  
   
 4.  選取憑證。  
   
-5.  按一下 **[套用]**。  
+5.  按一下 **[套用]** 。  
   
 6.  按一下此 URL 來確認它是否有效。  
   
@@ -64,13 +64,13 @@ ms.locfileid: "66175662"
   
  Web 入口網站和報表伺服器 Web 服務的 URL 保留項目是各自獨自設定的。 如果您也想要透過 SSL 加密的通道來設定 Web 入口網站存取，請繼續以下步驟：  
   
-1.  存取 [Web 入口網站 URL]。
+1.  存取 [Web 入口網站 URL]  。
   
-2.  選取 [進階]。  
+2.  選取 [進階]  。  
   
-3.  在**目前 Reporting Services 功能的多個 HTTPS 身分識別**中，選取 [加入]。  
+3.  在**目前 Reporting Services 功能的多個 HTTPS 身分識別**中，選取 [加入]  。  
   
-4.  選取憑證，選取 [確定]，然後選取 [套用]。  
+4.  選取憑證，選取 [確定]  ，然後選取 [套用]  。  
   
 5.  測試此 URL 來確認它是否可運作。  
   

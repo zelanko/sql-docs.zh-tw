@@ -11,10 +11,10 @@ ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5f767424e9ec24215e280b49fe1ed6b820b7a3d6
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576051"
 ---
 # <a name="report-designer-f1-help"></a>報表設計師 F1 說明

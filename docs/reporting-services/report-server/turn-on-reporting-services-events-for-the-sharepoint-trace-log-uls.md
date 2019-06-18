@@ -9,10 +9,10 @@ ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f25397d69f297c3cbd754de0cf19a8cb90cf872f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580942"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
@@ -50,7 +50,7 @@ ms.locfileid: "65580942"
   
 1.  在 SharePoint 管理中心內  
   
-2.  按一下 **[監視]**。  
+2.  按一下 **[監視]** 。  
   
 3.  按一下 **[報表]** 群組中的 **[設定診斷記錄]** 。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "65580942"
   
 -   **SOAP 用戶端 Proxy**  
   
--   如果您遇到組態設定方面的問題，請加入 **[組態頁面]**。  
+-   如果您遇到組態設定方面的問題，請加入 **[組態頁面]** 。  
   
  您可以使用下列 PowerShell 指令程式來檢閱所有目前伺服器陣列診斷記錄設定：  
   
@@ -100,7 +100,7 @@ Get-SPDiagnosticConfig
 |本機模式轉譯||  
 |SOAP 用戶端 Proxy||  
 |UI 頁面||  
-|Power View|已寫入 **LogClientTraceEvents** API 中的記錄項目。 這些項目來自於用戶端應用程式，包括 SQL Server Reporting Services 增益集的功能 Power View。<br /><br /> 所有來自於 LogClientTraceEvents API 的記錄項目都會記錄在 "SQL Server Reporting Services" [類別目錄] 和 "Power View" [區域] 之下。<br /><br /> 使用 "Power View" 區域所記錄的項目內容是由用戶端應用程式所決定。|  
+|Power View|已寫入 **LogClientTraceEvents** API 中的記錄項目。 這些項目來自於用戶端應用程式，包括 SQL Server Reporting Services 增益集的功能 Power View。<br /><br /> 所有來自於 LogClientTraceEvents API 的記錄項目都會記錄在 "SQL Server Reporting Services" [類別目錄]  和 "Power View" [區域]  之下。<br /><br /> 使用 "Power View" 區域所記錄的項目內容是由用戶端應用程式所決定。|  
 |報表伺服器警示執行階段||  
 |報表伺服器應用程式定義域管理員||  
 |報表伺服器緩衝回應||  

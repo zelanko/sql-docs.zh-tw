@@ -12,10 +12,10 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65619696"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>報表伺服器執行記錄和 ExecutionLog3 檢視
@@ -51,23 +51,23 @@ ms.locfileid: "65619696"
   
  **若要啟用執行記錄：**  
   
-1.  從 SharePoint 管理中心，按一下 [應用程式管理] 群組中的 [管理服務應用程式]。  
+1.  從 SharePoint 管理中心，按一下 [應用程式管理]  群組中的 [管理服務應用程式]  。  
   
 2.  按一下您想要設定之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的名稱。  
   
-3.  按一下 **[系統設定]**。  
+3.  按一下 **[系統設定]** 。  
   
-4.  選取 [記錄] 區段中的 [啟用執行記錄]。  
+4.  選取 [記錄]  區段中的 [啟用執行記錄]  。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
  **若要啟用詳細資訊記錄：**  
   
  您必須依照先前步驟的說明啟用記錄，然後完成下列步驟：  
   
-1.  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的 [系統設定] 頁面中，尋找 [使用者定義] 區段。  
+1.  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的 [系統設定]  頁面中，尋找 [使用者定義]  區段。  
   
-2.  將 [ExecutionLogLevel] 變更為 [verbose]。 這個欄位是文字輸入欄位，而且兩個可能的值為 [verbose] 和 [normal]。  
+2.  將 [ExecutionLogLevel]  變更為 [verbose]  。 這個欄位是文字輸入欄位，而且兩個可能的值為 [verbose]  和 [normal]  。  
   
 ##  <a name="bkmk_native"></a> 原生模式報表伺服器的組態設定  
  您可以從 SQL Server Management Studio 的 [伺服器屬性] 頁面開啟或關閉報表執行記錄。 **EnableExecutionLogging** 是進階屬性。  
@@ -82,19 +82,19 @@ ms.locfileid: "65619696"
   
 2.  連接到所需的報表伺服器。  
   
-3.  以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]。 如果 [屬性] 選項已停用，請確認您已使用系統管理權限來啟動 SQL Server Management Studio。  
+3.  以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]  。 如果 [屬性] 選項已停用，請確認您已使用系統管理權限來啟動 SQL Server Management Studio。  
   
-4.  按一下 [記錄] 頁面。  
+4.  按一下 [記錄]  頁面。  
   
-5.  選取 [啟用報表執行記錄]。  
+5.  選取 [啟用報表執行記錄]  。  
   
  **若要啟用詳細資訊記錄：**  
   
  您必須依照先前步驟的說明啟用記錄，然後完成下列步驟：  
   
-1.  在 [伺服器屬性] 對話方塊中，按一下 [進階] 頁面。  
+1.  在 [伺服器屬性]  對話方塊中，按一下 [進階]  頁面。  
   
-2.  在 [使用者定義] 區段中，將 [ExecutionLogLevel] 變更為 [verbose]。 這個欄位是文字輸入欄位，而且兩個可能的值為 [verbose] 和 [normal]。  
+2.  在 [使用者定義]  區段中，將 [ExecutionLogLevel]  變更為 [verbose]  。 這個欄位是文字輸入欄位，而且兩個可能的值為 [verbose]  和 [normal]  。  
   
 ##  <a name="bkmk_executionlog3"></a> 記錄欄位 (ExecutionLog3)  
  這個檢視已在 XML 架構的 **AdditionalInfo** 資料行內加入其他效能診斷節點。 AdditionalInfo 資料行包含的 XML 結構是由 1 至多個其他資訊欄位所組成。 下面是可從 ExecutionLog3 檢視中擷取資料列的範例 Transact SQL 陳述式。 此範例會假設報表伺服器資料庫名為 **ReportServer**：  

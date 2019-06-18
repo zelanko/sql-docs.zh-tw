@@ -19,10 +19,10 @@ ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1e2b3e519a55d23b524582bef8bb7a677023e704
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581618"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>圖表 (報表產生器及 SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "65581618"
   
  ![圖表項目圖](../../reporting-services/report-design/media/rs-chartelementsc.gif "圖表項目圖")  
   
- 您可以與報表分開發行圖表，作為「報表組件」。 如需詳細資訊，請參閱[報表組件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。
+ 您可以與報表分開發行圖表，作為「報表組件」  。 如需詳細資訊，請參閱[報表組件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。
   
  
 ##  <a name="DesigningChart"></a> 設計圖表  

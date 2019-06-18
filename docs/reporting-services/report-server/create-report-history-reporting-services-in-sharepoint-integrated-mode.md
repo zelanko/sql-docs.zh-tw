@@ -11,10 +11,10 @@ ms.assetid: e57ec746-05ae-4ff6-8e39-6cde87310daa
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4034d7a2892ede43f364d0ebdd105314b6107ff2
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580360"
 ---
 # <a name="create-report-history-reporting-services-in-sharepoint-integrated-mode"></a>建立報表記錄 (SharePoint 整合模式的 Reporting Services)
@@ -26,9 +26,9 @@ ms.locfileid: "65580360"
   
 1.  指向報表。  
   
-2.  按一下以顯示向下箭頭，然後選取 [檢視報表記錄]。  
+2.  按一下以顯示向下箭頭，然後選取 [檢視報表記錄]  。  
   
-3.  按一下 **[新增快照集]**。 如果沒有顯示此按鈕，就是因為您沒有在報表記錄中建立快照集的權限。  
+3.  按一下 **[新增快照集]** 。 如果沒有顯示此按鈕，就是因為您沒有在報表記錄中建立快照集的權限。  
   
 4.  若要檢視您剛建立的快照集，請從清單中選取它。 每個快照集都可由快照集建立時顯示的時間戳記加以識別。 您不能重新命名、移動或修改快照集。  
   
@@ -36,19 +36,19 @@ ms.locfileid: "65580360"
   
 1.  指向報表。  
   
-2.  按一下以顯示向下箭頭，然後選取 [管理處理選項]。  
+2.  按一下以顯示向下箭頭，然後選取 [管理處理選項]  。  
   
-3.  在 [記錄快照集選項] 中，按一下 [在排程上建立報表記錄快照集]。  
+3.  在 [記錄快照集選項]  中，按一下 [在排程上建立報表記錄快照集]  。  
   
-4.  如果您設有包含想要使用之排程資訊的共用排程，請按一下 [在共用排程上]，然後選取想要使用的排程。 否則，請按一下 [在自訂排程上]，然後按一下 [設定] 指定依據重複執行排程建立報表記錄的選項。  
+4.  如果您設有包含想要使用之排程資訊的共用排程，請按一下 [在共用排程上]  ，然後選取想要使用的排程。 否則，請按一下 [在自訂排程上]  ，然後按一下 [設定]  指定依據重複執行排程建立報表記錄的選項。  
   
 ### <a name="to-create-report-history-when-data-is-refreshed-in-a-report"></a>在報表中的資料重新整理時建立報表記錄  
   
 1.  指向報表。  
   
-2.  按一下以顯示向下箭頭，然後選取 [管理處理選項]。  
+2.  按一下以顯示向下箭頭，然後選取 [管理處理選項]  。  
   
-3.  在 [記錄快照集選項] 中，按一下 [在報表記錄中儲存所有報表資料快照集]。  
+3.  在 [記錄快照集選項]  中，按一下 [在報表記錄中儲存所有報表資料快照集]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  

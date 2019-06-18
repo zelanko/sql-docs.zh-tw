@@ -1,5 +1,5 @@
 ---
-title: SQL Server 行動報表：端對端逐步解說
+title: SQL Server 行動報表：完整逐步解說
 description: 逐步解說如何在 Reporting Services 入口網站透過 SQL Server 行動報表發行工具建立適用於任何螢幕大小的行動報表，並在 Power BI 行動應用程式中檢視它們。
 ms.date: 12/07/2018
 ms.prod: reporting-services
@@ -8,16 +8,16 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c4c1735d7f6e896ecb3a0c29b6266cddc48dffae
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: db6f8c664dff6f7234e43a3e3f11f6cc01e2eac4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286956"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62502280"
 ---
-# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 行動報表：端對端逐步解說
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 行動報表：完整逐步解說
 逐步解說在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 入口網站透過 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 建立適用於任何螢幕大小的行動報表，並在 Power BI 行動應用程式中檢視它們。
 
 您可以在可調整格線列和欄，並具有彈性的行動報表元素的設計介面上，建立行動報表。 連接到各種不同的內部部署資料來源，或上傳 Excel 活頁簿來建立行動報表。 然後將您的報表儲存到 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站，並在瀏覽器中或者 Power BI 行動應用程式中檢視。  
@@ -46,14 +46,14 @@ ms.locfileid: "56286956"
   
 您可以從 Reporting Services 支援的任何資料來源，為您的行動報表建立共用資料來源。 請參閱[支援的資料來源清單](../report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
-1. 從您的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站，按一下 [新增] > [資料來源]。  
+1. 從您的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站，按一下 [新增]   > [資料來源]  。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
-3. 輸入您的資料來源資訊 > [確定]。  
+3. 輸入您的資料來源資訊 > [確定]  。  
   
     根據預設，資料來源不會顯示在入口網站中。    
    
-5. 若要檢視資料來源，請按一下 [顯示] > [資料來源]。  
+5. 若要檢視資料來源，請按一下 [顯示]   > [資料來源]  。  
   
    ![PBI_SSMRP_DisplayDataSources](../../reporting-services/mobile-reports/media/pbi-ssmrp-displaydatasources.png)  
    
@@ -67,23 +67,23 @@ ms.locfileid: "56286956"
   
 使用現有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 用戶端工具 (例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中的「報表設計師」) 建立共用資料集。  本逐步解說使用 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安裝報表產生器](../install-windows/install-report-builder.md)，或從您的入口網站啟動它。 您將建立三個資料集，分別針對：KPI 值、KPI 趨勢，以及 Reporting Services 行動報表 (含有更多欄位)。     
   
-1. 從您的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站，按一下 [新增] > [編頁報表] 以啟動[!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。  
+1. 從您的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站，按一下 [新增]   > [編頁報表]  以啟動[!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)   
-2. 按一下 [新資料集]。  
+2. 按一下 [新資料集]  。  
   
    ![PBI_SSMRP_RBNewDataset](../../reporting-services/mobile-reports/media/pbi-ssmrp-rbnewdataset.png)  
    
-3. 按一下 [瀏覽其他資料來源]。  
+3. 按一下 [瀏覽其他資料來源]  。  
    
 4. 在 [名稱] 欄位中，以下列格式輸入您儲存資料來源的伺服器名稱：   
    
    名稱： https://*localhost*/ReportServer  
-   下列類型的項目：資料來源 (*.rsds)  
+   類型的項目：資料來源 (*.rsds)  
    
-5. 按一下 [開啟]，並巡覽至您在該伺服器上建立的資料來源。  
+5. 按一下 [開啟]  ，並巡覽至您在該伺服器上建立的資料來源。  
    
-6. 選取您的資料來源，然後再按一次 [開啟]。    
+6. 選取您的資料來源，然後再按一次 [開啟]  。    
   
 7. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]中設計您的資料集。  
   
@@ -96,16 +96,16 @@ ms.locfileid: "56286956"
 ## <a name="create-KPI">建立 KPI</a>  
 您可以直接在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站中建立 KPI。    
   
-1. 在入口網站右上角，按一下 [新增] > [新增 KPI]。   
+1. 在入口網站右上角，按一下 [新增]   > [新增 KPI]  。   
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
       
    在 KPI 建立畫面中，您可以手動輸入值，或使用共用資料集。    
-2. 將 [值] 從 [手動設定] 變更為 [資料集欄位]。  
+2. 將 [值]  從 [手動設定]  變更為 [資料集欄位]  。  
    
    ![PBI_SSMRP_KPI_DatasetField](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpi-datasetfield.png)  
    
-3. 按一下 [挑選資料集欄位] 方塊中的省略符號 (**...**)，並選取上一個步驟的資料集。  
+3. 按一下 [挑選資料集欄位]  方塊中的省略符號 ( **...** )，並選取上一個步驟的資料集。  
    
    ![PBI_SSMRP_KPIPickDataset](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpipickdataset.png)  
    
@@ -117,17 +117,17 @@ ms.locfileid: "56286956"
 
    ![reporting-services-kpi-pick-aggregation](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
 
-6. 按一下 [確定] 。
+6. 按一下 [確定]  。
 
-7. 在 [趨勢集] 方塊中，按一下 [資料集趨勢]。  
+7. 在 [趨勢集]  方塊中，按一下 [資料集趨勢]  。  
   
-6. 在 [挑選資料集趨勢] 方塊中，按一下省略符號 (**...**)  
+6. 在 [挑選資料集趨勢]  方塊中，按一下省略符號 ( **...** )  
    
-7. 選取欄位，然後按一下 [確定]。  
+7. 選取欄位，然後按一下 [確定]  。  
 
    ![PBI_SSMRP_KPIPickTrend](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpipicktrend.png)  
   
-8. 指定 KPI 的名稱並選取視覺效果類型，然後按一下 [建立]。   
+8. 指定 KPI 的名稱並選取視覺效果類型，然後按一下 [建立]  。   
   
    KPI 會出現在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站。  
    
@@ -141,17 +141,17 @@ ms.locfileid: "56286956"
   
 ## <a name="start-with-the-visuals"></a>開始使用視覺效果  
   
-1. 從您的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站，按一下 [新增] > [行動報表] 以啟動[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]。  
+1. 從您的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站，按一下 [新增]   > [行動報表]  以啟動[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)
 
    [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 會開啟到主要的配置方格。  
   
-2. 在 [配置] 索引標籤上，往下捲動到 [圖表] 區段。  
+2. 在 [配置]  索引標籤上，往下捲動到 [圖表] 區段。  
   
    ![PBI_SSMRP_LayoutTabCharts2](../../reporting-services/mobile-reports/media/pbi-ssmrp-layouttabcharts2.png)  
   
-2. 將 [樹狀圖] 拖曳至方格，並拖曳右下角來使它為三個資料行寬和三個資料列高。  
+2. 將 [樹狀圖]  拖曳至方格，並拖曳右下角來使它為三個資料行寬和三個資料列高。  
   
    ![PBI_SSMRP_TreeMap](../../reporting-services/mobile-reports/media/pbi-ssmrp-treemap.png)  
   
@@ -159,13 +159,13 @@ ms.locfileid: "56286956"
   
    ![PBI_SSMRP_TreeMapVisProps](../../reporting-services/mobile-reports/media/pbi-ssmrp-treemapvisprops.png)  
   
-4. 選取樹狀圖視覺效果後，選取左上角的 [資料] 索引標籤。   
+4. 選取樹狀圖視覺效果後，選取左上角的 [資料]  索引標籤。   
   
    現在，您會看到 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 所產生的模擬欄位和值，並能在樹狀圖中查看大小與色彩代表的意義。  
   
    ![PBI_SSMRP_TreeMapDataProps](../../reporting-services/mobile-reports/media/pbi-ssmrp-treemapdataprops.png)  
   
-6. 按一下 [配置] 索引標籤。  
+6. 按一下 [配置]  索引標籤。  
   
 7. 按一下樹狀圖右上角的 [選項] 齒輪 ![PBI_SSMRP_Cog](../../reporting-services/mobile-reports/media/pbi-ssmrp-cog.png) 以檢視它包含的功能表。   
   
@@ -175,22 +175,22 @@ ms.locfileid: "56286956"
   
 ## <a name="add-your-own-data"></a>新增您自己的資料  
   
-1. 切換至 [資料] 索引標籤。    
+1. 切換至 [資料]  索引標籤。    
    
-2. 若要新增您自己的資料，請按一下右上角的 [新增資料]，然後巡覽至您的資料。    
+2. 若要新增您自己的資料，請按一下右上角的 [新增資料]  ，然後巡覽至您的資料。    
   
 3. 您可以使用本機 Excel 活頁簿中的資料，但是在此案例中，資料是來自您 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站上的共用資料集。 您會看到「已新增伺服器」訊息。  
   
 4. 選取該伺服器，然後選取您所建立的資料集。  
    
-3. 回到 [資料] 索引標籤，在 [資料屬性] 窗格中，變更 [數值表示方式]、[色彩表示方式]，以及您資料中欄位的其他屬性。 
+3. 回到 [資料]  索引標籤，在 [資料屬性]  窗格中，變更 [數值表示方式]  、[色彩表示方式]  ，以及您資料中欄位的其他屬性。 
    
-   *  [數值表示方式]、[色彩表示方式] 以及 [自訂中間值] 都必須是包含數值的欄位。 
-   *  [群組依據] 是類別，因此它是一個文字欄位。
+   *  [數值表示方式]  、[色彩表示方式]  以及 [自訂中間值]  都必須是包含數值的欄位。 
+   *  [群組依據]  是類別，因此它是一個文字欄位。
    
    ![ssrs-mobile-report-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
    
-6. 選取 [預覽] 以查看使用您的資料更新的樹狀圖。  
+6. 選取 [預覽]  以查看使用您的資料更新的樹狀圖。  
 
 ## <a name="add-a-gauge-to-your-mobile-report"></a>將量測計新增到行動報表
 
@@ -200,17 +200,17 @@ ms.locfileid: "56286956"
 
 2. 同樣地，一開始也會使用模擬的資料。 
 
-   請注意，在 [視覺屬性] 中，預設為 [數值愈高愈好]，且 [差異標籤] 為 [目標的百分比]。 它有預設的 [範圍停止]，雖然您可以進行變更，但目前請將它保持預設值。
+   請注意，在 [視覺屬性]  中，預設為 [數值愈高愈好]  ，且 [差異標籤]  為 [目標的百分比]  。 它有預設的 [範圍停止]  ，雖然您可以進行變更，但目前請將它保持預設值。
 
    ![ssrs-mobile-report-donut-visual-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
    
-3. 在 [資料] 索引標籤上，選取包含您資料的資料表並選取 [主要值] 欄位，並在 [比較值] 中選取您想要與之比較的欄位。
+3. 在 [資料]  索引標籤上，選取包含您資料的資料表並選取 [主要值]  欄位，並在 [比較值]  中選取您想要與之比較的欄位。
 
-4. 您可以選擇不同的彙總，以分別得出 [主要值] 和 [比較值] 的數字。 根據預設，它會是總和。
+4. 您可以選擇不同的彙總，以分別得出 [主要值]  和 [比較值]  的數字。 根據預設，它會是總和。
 
    ![ssrs-mobile-report-donut-sum](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
 
-5. 選取 [預覽] 查看其外觀。 
+5. 選取 [預覽]  查看其外觀。 
 
    ![ssrs-mobile-report-donut-preview](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-preview.png)
 
@@ -218,11 +218,11 @@ ms.locfileid: "56286956"
 
 選擇清單就像是 Power BI 和 Excel 中的交叉分析篩選器。 我們可以新增一個以篩選行動報表中的其他視覺效果。
 
-1. 在 [配置] 索引標籤上，將選擇清單拖曳至樹狀圖右側，然後拖曳右下角，使它為兩個正方形寬，五個正方形高 (與畫布同高)。 
+1. 在 [配置]  索引標籤上，將選擇清單拖曳至樹狀圖右側，然後拖曳右下角，使它為兩個正方形寬，五個正方形高 (與畫布同高)。 
 
    ![ssrs-mobile-report-selection-list](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
 
-2. 在 [資料] 索引標籤上的 [資料屬性]，請針對您想要進行篩選的資料欄位設定 [索引鍵] 和 [標籤]。
+2. 在 [資料]  索引標籤上的 [資料屬性]  ，請針對您想要進行篩選的資料欄位設定 [索引鍵]  和 [標籤]  。
 
    ![ssrs-mobile-report-selection-list-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
    
@@ -230,9 +230,9 @@ ms.locfileid: "56286956"
   
 您在主要的配置上建立視覺效果之後，便可以使用一個專為手機使用者最佳化的配置建立行動報表。    
   
-1. 按一下右上角的畫布圖示 > [手機]。  
+1. 按一下右上角的畫布圖示 > [手機]  。  
   
-2. 在 [控制項執行個體] 下，您會在 [配置] 索引標籤上看到您建立的兩個圖表。   
+2. 在 [控制項執行個體]  下，您會在 [配置] 索引標籤上看到您建立的兩個圖表。   
   
 3. 將樹狀圖拖曳到手機畫布，並使它為四個資料行寬以及三個資料列高。  
   
@@ -242,11 +242,11 @@ ms.locfileid: "56286956"
   
 1. 按一下左上角的儲存圖示。   
    
-2. 若要與他人共用並在行動裝置上檢視它，請按一下 [儲存到伺服器]。  
+2. 若要與他人共用並在行動裝置上檢視它，請按一下 [儲存到伺服器]  。  
   
 3. 在伺服器上，瀏覽至您想要儲存行動報表的資料夾。  
   
-4. 按一下 [選擇資料夾] > [儲存]。  
+4. 按一下 [選擇資料夾]   > [儲存]  。  
   
    您會收到確認已儲存報表的訊息。  
     
@@ -268,10 +268,10 @@ ms.locfileid: "56286956"
   
 1.  在您的行動裝置上開啟並登入 Power BI 應用程式。  
     
-2.  若要檢視您的 Reporting Services 行動報表與 KPI，請點選 [Reporting Services]。  
+2.  若要檢視您的 Reporting Services 行動報表與 KPI，請點選 [Reporting Services]  。  
 ![PBI_iPad_GetStartedSm](../../reporting-services/mobile-reports/media/pbi-ipad-getstartedsm.png)  
   
-3. 點選左上角的選項圖示 ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png)，然後點選 [連接到伺服器]。  
+3. 點選左上角的選項圖示 ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png)，然後點選 [連接到伺服器]  。  
   
    ![PBI_iPad_SSMRP_ConnectCrop](../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-connectcrop.png)  
   
@@ -289,7 +289,7 @@ ms.locfileid: "56286956"
   
 ## <a name="view-kpis-and-mobile-reports-in-the-power-bi-app"></a>在 Power BI 應用程式中檢視 KPI 和行動報表  
   
-點選 [KPI] 或 [行動報表] 索引標籤。   
+點選 [KPI]  或 [行動報表]  索引標籤。   
   
 ![PBI_iPad_SSMRP_Portal](../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-portal.png)  
   

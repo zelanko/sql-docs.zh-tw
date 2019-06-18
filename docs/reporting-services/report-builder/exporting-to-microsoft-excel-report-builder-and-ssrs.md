@@ -9,10 +9,10 @@ ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9973ce2f9c5eac344307258e1c212979146c1695
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580781"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
@@ -124,7 +124,7 @@ ms.locfileid: "65580781"
 ## <a name="excel-renderer"></a>Excel 轉譯器  
   
 ### <a name="current-xlsx-excel-file-renderer"></a>目前 (.xlsx) Excel 檔案轉譯器  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，預設 Excel 轉譯器是與目前 (.xlsx) [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 檔案相容的版本。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 入口網站和 SharePoint 清單的 [匯出] 功能表上，這就是 [Excel] 選項。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，預設 Excel 轉譯器是與目前 (.xlsx) [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 檔案相容的版本。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 入口網站和 SharePoint 清單的 [匯出]  功能表上，這就是 [Excel]  選項。  
   
  當您使用預設的 Excel 轉譯器而不是舊版的 Excel 2003 (.xls) 轉譯器時，您可以安裝適用於 Word、Excel 以及 PowerPoint 的 Microsoft Office 相容性套件，以允許舊版 Excel 開啟匯出的檔案。  
   
@@ -219,7 +219,7 @@ ms.locfileid: "65580781"
  Excel 頁首和頁尾區段最多支援 256 個字元，包括標記。 如果超出這個限制，Excel 轉譯器會移除頁首和/或頁尾字串結尾的標記字元，以減少字元的總數。 如果移除所有標記字元後長度仍然超出最大值，系統會從右側開始截斷字串。  
   
 ### <a name="simplepageheader-settings"></a>SimplePageHeader 設定  
- 根據預設，裝置資訊的 SimplePageHeaders 設定會設定為 **False**；因此，在 Excel 工作表介面上，頁首會轉譯為報表中的資料列。 包含頁首的工作表資料列會變成鎖定的資料列。 您可以在 Excel 中凍結或取消凍結窗格。 如果有選取 [列印標題] 選項，這些頁首會自動設定為列印在每個工作表頁面上。  
+ 根據預設，裝置資訊的 SimplePageHeaders 設定會設定為 **False**；因此，在 Excel 工作表介面上，頁首會轉譯為報表中的資料列。 包含頁首的工作表資料列會變成鎖定的資料列。 您可以在 Excel 中凍結或取消凍結窗格。 如果有選取 [列印標題]  選項，這些頁首會自動設定為列印在每個工作表頁面上。  
   
  如果在 Excel 的 [頁面配置] 索引標籤上選取 **[列印標題]** 選項，頁首會在活頁簿的每個工作表頂端重複 (除了文件引導模式封面之外)。 如果沒有在 [報表頁首屬性] 或 [報表頁尾屬性] 對話方塊中選取 **[在第一頁列印]** 或 **[在最後一頁列印]** 選項，頁首就不會分別加入到第一頁或最後一頁。  
   
@@ -242,13 +242,13 @@ ms.locfileid: "65580781"
 -   由於 Excel 的限制，大綱所建立的巢狀結構最多只能有 7 個層級。  
   
 ### <a name="document-map"></a>文件引導模式  
- 如果報表中有任何文件引導模式標籤，就會轉譯文件引導模式。 文件引導模式會轉譯為插入活頁簿第一個索引標籤位置的 Excel 工作表封面。 此工作表的名稱為 **「文件引導模式」**(Document Map)。  
+ 如果報表中有任何文件引導模式標籤，就會轉譯文件引導模式。 文件引導模式會轉譯為插入活頁簿第一個索引標籤位置的 Excel 工作表封面。 此工作表的名稱為 **「文件引導模式」** (Document Map)。  
   
  顯示在文件引導模式中的文字取決於報表項目或群組的 DocumentMapLabel 屬性。 文件引導模式標籤會以報表中出現的順序列出，從第一個資料行的第一個資料列開始。 每個文件引導模式標籤資料格都會縮排報表中出現的層級深度。 系統會在接續的資料行中放置標籤來表示每個縮排層級。 Excel 最多支援 256 層的大綱巢狀層級。  
   
  文件引導模式大綱會轉譯為可折疊的 Excel 大綱。 大綱結構會與文件引導模式的巢狀結構相符。 大綱的展開和折疊狀態會從第二層級開始。  
   
- 地圖的根節點即為報表名稱 \<報表名稱>.rdl，且無法互動。 文件引導模式連結字型為 Arial，10pt。  
+ 地圖的根節點即為報表名稱 \<報表名稱  >.rdl，且無法互動。 文件引導模式連結字型為 Arial，10pt。  
   
 ### <a name="drillthrough-links"></a>鑽研連結  
  系統會將文字方塊中出現的鑽研連結轉譯為轉譯文字之資料格中的 Excel 超連結。 而影像和圖表的鑽研連結則會在轉譯時，轉譯為影像上的 Excel 超連結。 當您按一下鑽研連結時，用戶端的預設瀏覽器會開啟，並巡覽至目標的 HTML 檢視。  

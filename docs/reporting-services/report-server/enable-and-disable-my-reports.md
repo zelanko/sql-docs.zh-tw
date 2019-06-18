@@ -15,10 +15,10 @@ ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6670d1da918ac1bdc6cb1947b265f9d543259814
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577773"
 ---
 # <a name="enable-and-disable-my-reports"></a>啟用與停用我的報表
@@ -31,7 +31,7 @@ ms.locfileid: "65577773"
   
  [我的報表] 所使用的角色定義會決定 [我的報表] 工作空間所支援的動作。 例如，如果「我的報表」角色排除「建立連結報表」，則使用者無法在 [我的報表] 資料夾中建立連結報表。 如需詳細資訊，請參閱 [保護我的報表](../../reporting-services/security/secure-my-reports.md)。  
   
- 若要停用 [我的報表]，清除 **[為每個使用者啟用 [我的報表] 資料夾]**。 停用「我的報表」之後，將會移除所有與 [我的報表] 資料夾相關的可見項目。 停用此功能之後，必須手動移除實際用於儲存的資料夾 (亦即 [使用者資料夾] 中的子資料夾)。  
+ 若要停用 [我的報表]，清除 **[為每個使用者啟用 [我的報表] 資料夾]** 。 停用「我的報表」之後，將會移除所有與 [我的報表] 資料夾相關的可見項目。 停用此功能之後，必須手動移除實際用於儲存的資料夾 (亦即 [使用者資料夾] 中的子資料夾)。  
   
 ### <a name="when-my-reports-is-activated"></a>當啟動 [我的報表] 時  
  當此功能啟動時，使用者可以在根資料夾 (主資料夾) 中看到 [我的報表] 資料夾。 除了 [我的報表] 資料夾以外，報表伺服器管理員也可以看到包含每位使用者子資料夾的 [使用者資料夾] 資料夾。  

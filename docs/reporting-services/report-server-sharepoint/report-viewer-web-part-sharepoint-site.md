@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 882dafee6997f4e0a140872847cfa2fdc1109f05
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580570"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site---reporting-services"></a>SharePoint 網站上的報表檢視器網頁組件 - Reporting Services
@@ -44,7 +44,7 @@ Microsoft 下載中心提供報表檢視器網頁組件。
 
 列出的項目僅適用於更新的報表檢視器網頁組件。
 
-* 網頁組件僅限用於「傳統的」SharePoint 頁面。
+* 網頁組件僅限用於「傳統的」  SharePoint 頁面。
 * 報表檢視器網頁組件只支援內嵌分頁 (RDL) 報表。 如果想要內嵌 Power BI 報表或行動報表，您可以使用 *rs:Embed=true* URL 參數。
 
 ## <a name="next-steps"></a>後續步驟

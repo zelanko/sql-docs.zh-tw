@@ -9,10 +9,10 @@ ms.assetid: 094f39bf-3634-4852-9fc3-3adec4b266e5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 86d73f2ab16bdb7ee801e333f3a75c96a2a1c360
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578183"
 ---
 # <a name="plot-data-on-a-secondary-axis-report-builder-and-ssrs"></a>繪製次要座標軸上的資料 (報表產生器及 SSRS)
@@ -30,9 +30,9 @@ ms.locfileid: "65578183"
   
 ### <a name="to-plot-a-series-on-the-secondary-axis"></a>若要在次要座標軸上繪製數列  
   
-1.  以滑鼠右鍵按一下圖表中的數列，或以滑鼠右鍵按一下要在次要軸上顯示之 **[值]** 區域中的欄位，然後按一下 **[數列屬性]**。 **[數列屬性]** 對話方塊便會出現。  
+1.  以滑鼠右鍵按一下圖表中的數列，或以滑鼠右鍵按一下要在次要軸上顯示之 **[值]** 區域中的欄位，然後按一下 **[數列屬性]** 。 **[數列屬性]** 對話方塊便會出現。  
   
-2.  按一下 **[軸和圖表區域]**，然後選取要啟用的次要軸、值軸或類別目錄軸。  
+2.  按一下 **[軸和圖表區域]** ，然後選取要啟用的次要軸、值軸或類別目錄軸。  
 
 ## <a name="next-steps"></a>後續步驟
 

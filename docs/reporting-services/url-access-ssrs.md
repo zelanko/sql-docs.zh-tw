@@ -16,10 +16,10 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a18ad4fd1d79bc7eae5f45318cece55037c78010
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574242"
 ---
 # <a name="url-access-ssrs"></a>URL 存取 (SSRS)
@@ -75,7 +75,7 @@ https://myspsite/subsite/_vti_bin/reportserver
  *pathinfo*  
  原生模式報表伺服器資料庫中項目的相對路徑名稱，或 SharePoint 目錄中項目的完整 URL。  
   
- 目錄項目的路徑。 針對原生模式，其為報表伺服器資料庫中項目的相對路徑，以斜線 (**/**) 開頭。 例如：  
+ 目錄項目的路徑。 針對原生模式，其為報表伺服器資料庫中項目的相對路徑，以斜線 ( **/** ) 開頭。 例如：  
   
 ```  
 /AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  

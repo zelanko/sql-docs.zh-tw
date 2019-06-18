@@ -9,10 +9,10 @@ ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a2cbda4af8898233e27aa2ad2c505981e343116c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576860"
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>設定量測計的最小值或最大值 (報表產生器及 SSRS)
@@ -22,17 +22,17 @@ ms.locfileid: "65576860"
   
  如果值的範圍很大 (例如從 0 到 10000)，請考慮使用乘數來減少量測計上零的數目。 此乘數只會減少量測計上數字的標尺，而非值本身。  
   
- 您可以使用運算式來設定 [最小值] 和 [最大值] 選項的值。 如需詳細資訊，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
+ 您可以使用運算式來設定 [最小值]  和 [最大值]  選項的值。 如需詳細資訊，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
   
 ## <a name="to-set-the-minimum-and-maximum-on-the-gauge"></a>設定量測計的最小值和最大值  
   
-1.  以滑鼠右鍵按一下標尺，然後選取 [標尺屬性]。 [標尺屬性] 對話方塊隨即顯示。  
+1.  以滑鼠右鍵按一下標尺，然後選取 [標尺屬性]  。 [標尺屬性]  對話方塊隨即顯示。  
   
-2.  在 [一般] 中，指定 [最小值] 的值。 根據預設，這個值為 0。 您可以選擇按一下 [運算式]\(*fx*) 按鈕來編輯設定選項值的運算式。  
+2.  在 [一般]  中，指定 [最小值]  的值。 根據預設，這個值為 0。 您可以選擇按一下 [運算式]  \(*fx*) 按鈕來編輯設定選項值的運算式。  
   
-3.  指定 [最大值] 的值。 根據預設，此值為 100。 您可以選擇按一下 [運算式]\(*fx*) 按鈕來編輯設定選項值的運算式。  
+3.  指定 [最大值]  的值。 根據預設，此值為 100。 您可以選擇按一下 [運算式]  \(*fx*) 按鈕來編輯設定選項值的運算式。  
   
-4.  (選擇性) 如果最小值和最大值的值很大，請指定 [標尺標籤乘數] 選項的值。 若要指定減少標尺的乘數，請使用十進位數字。 例如，如果您的標尺為從 0 到 1000，就可以指定乘數值 0.01 來減少標尺，以便顯示成 0 到 10。  
+4.  (選擇性) 如果最小值和最大值的值很大，請指定 [標尺標籤乘數]  選項的值。 若要指定減少標尺的乘數，請使用十進位數字。 例如，如果您的標尺為從 0 到 1000，就可以指定乘數值 0.01 來減少標尺，以便顯示成 0 到 10。  
   
 ## <a name="see-also"></a>另請參閱  
  [格式化量測計上的標尺 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   

@@ -16,10 +16,10 @@ ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cdaf6447080a82d5b58932e7e4987720a97963b6
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65502938"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>設定自動執行帳戶 (SSRS 組態管理員)
@@ -41,16 +41,16 @@ ms.locfileid: "65502938"
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到您要設定的報表伺服器執行個體。 如需指示，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
-2.  在 [執行帳戶] 頁面上，選取 [指定執行帳戶]。  
+2.  在 [執行帳戶] 頁面上，選取 [指定執行帳戶]  。  
   
-3.  鍵入帳戶和密碼，重新鍵入密碼，然後按一下 [套用]。  
+3.  鍵入帳戶和密碼，重新鍵入密碼，然後按一下 [套用]  。  
   
 ### <a name="using-rsconfig-utility"></a>使用 RSCONFIG 公用程式  
  設定此帳戶的另一個方法是使用 **rsconfig** 公用程式。 若要指定帳戶，請使用 **rsconfig** 的 **-e**引數。 指定 **rsconfig** 的 **-e** 引數，會引導公用程式將帳戶資訊寫入組態檔。 您不需要指定 RSreportserver.config 的路徑。請遵循以下步驟來設定帳戶。  
   
 1.  建立或選取網域帳戶，該帳戶擁有提供資料或服務給報表伺服器之電腦和伺服器的存取權。 您應使用擁有較小權限的帳戶 (例如唯讀權限)。  
   
-2.  開啟命令提示字元：在 [開始] 功能表上，按一下 [執行]，鍵入 **cmd**，然後按一下 [確定]。  
+2.  開啟命令提示字元：在 [開始]  功能表上，按一下 [執行]  ，鍵入 **cmd**，然後按一下 [確定]  。  
   
 3.  輸入下列命令，即可在本機報表伺服器執行個體上設定帳戶：  
   
@@ -72,9 +72,9 @@ ms.locfileid: "65502938"
  您設定了值之後，就不能將值解密，以純文字檢視這些值。 如果您輸入錯誤的值，或者忘記自己指定的值，就必須使用 Reporting Services 組態工具，或執行 **rsconfig -e** 以重新開始。  
   
 ## <a name="how-to-use-the-unattended-report-processing-account"></a>如何使用自動報表處理帳戶  
- 為了擷取影像檔，報表伺服器會自動使用此帳戶，而且您不需要採取特定的動作。 若要使用此帳戶連線到提供資料給報表的外部資料來源，您必須在報表資料來源或共用資料來源的資料來源屬性頁面上指定 [認證類型] 選項：  
+ 為了擷取影像檔，報表伺服器會自動使用此帳戶，而且您不需要採取特定的動作。 若要使用此帳戶連線到提供資料給報表的外部資料來源，您必須在報表資料來源或共用資料來源的資料來源屬性頁面上指定 [認證類型]  選項：  
   
--   在 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]或 SharePoint 網站上，選取 [不需要認證] 選項。  
+-   在 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]或 SharePoint 網站上，選取 [不需要認證]  選項。  
 
 > [!NOTE]
 > SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
@@ -88,18 +88,18 @@ ms.locfileid: "65502938"
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到您要設定的報表伺服器執行個體。  
   
-2.  在 [執行帳戶] 頁面上，確認已經選取 [指定執行帳戶]。  
+2.  在 [執行帳戶] 頁面上，確認已經選取 [指定執行帳戶]  。  
   
-3.  鍵入新帳戶和密碼，重新鍵入密碼，然後按一下 [套用]。  
+3.  鍵入新帳戶和密碼，重新鍵入密碼，然後按一下 [套用]  。  
   
 ## <a name="how-to-delete-the-unattended-report-processing-account"></a>如何刪除自動報表處理帳戶  
  如果沒有使用此帳戶，可以將其刪除，這樣就不需經常進行帳戶維護工作。  
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到您要設定的報表伺服器執行個體。  
   
-2.  在 [執行帳戶] 頁面上，清除 [指定執行帳戶]。  
+2.  在 [執行帳戶] 頁面上，清除 [指定執行帳戶]  。  
   
-3.  按一下 **[套用]**。  
+3.  按一下 **[套用]** 。  
   
  帳戶資訊會隨即從 RSReportServer.config 檔案中移除。  
   

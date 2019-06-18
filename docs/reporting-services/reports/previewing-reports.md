@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 6bd9a273347aa2010cf670ea3a87622e92d69f82
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65935887"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>在 SQL Server Reporting Services (SSRS) 中預覽報表
@@ -32,7 +32,7 @@ ms.locfileid: "65935887"
 
  另一個預覽報表的方式是在偵錯組態下執行報表專案，例如，偵錯您撰寫的自訂組件。 報表會在預設瀏覽器中開啟。 有三種方法可以執行專案：  
   
-- 在 [偵錯] 功能表中，按一下 [開始偵錯]。  
+- 在 [偵錯]  功能表中，按一下 [開始偵錯]  。  
   
 - 依序按一下**啟動**按鈕[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][標準] 工具列![ssrs_ssdt_startdebug](../../reporting-services/reports/media/ssrs-ssdt-startdebug.png "ssrs_ssdt_startdebug")。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "65935887"
  如果您使用建立報表但是未部署報表的專案組態，則在目前組態之 **StartItem** 屬性中所指定的報表，會在另一個預覽視窗中開啟。 預覽視窗顯示報表的方式和功能都與 [預覽] 模式相同。  
   
 > [!NOTE]  
-> 在偵錯報表之前，您必須設定一個啟動項目。 例如，如果您執行偵錯模式，瀏覽器會開啟主要報表伺服器頁面，而不是預覽模式的報表。 若要設定啟動項目，請在方案總管中以滑鼠右鍵按一下報表專案，再按一下 [屬性]，然後在 [StartItem] 中選取要顯示的報表名稱。  
+> 在偵錯報表之前，您必須設定一個啟動項目。 例如，如果您執行偵錯模式，瀏覽器會開啟主要報表伺服器頁面，而不是預覽模式的報表。 若要設定啟動項目，請在方案總管中以滑鼠右鍵按一下報表專案，再按一下 [屬性]  ，然後在 [StartItem]  中選取要顯示的報表名稱。  
   
- 如果您想要預覽並非專案之啟動項目的特定報表，請選取建立報表但未部署報表的組態 (例如 DebugLocal 組態)，以滑鼠右鍵按一下報表，然後按一下 [執行]。 您必須選擇並未部署報表的組態；否則，報表將會發行至報表伺服器，而非在本機的預覽視窗中顯示。  
+ 如果您想要預覽並非專案之啟動項目的特定報表，請選取建立報表但未部署報表的組態 (例如 DebugLocal 組態)，以滑鼠右鍵按一下報表，然後按一下 [執行]  。 您必須選擇並未部署報表的組態；否則，報表將會發行至報表伺服器，而非在本機的預覽視窗中顯示。  
   
 ## <a name="publish-to-a-test-server"></a>發佈至測試伺服器
 

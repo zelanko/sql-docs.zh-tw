@@ -9,10 +9,10 @@ ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 61263520f5d519c2b908c753b72c1d5ec7f67e13
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580134"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>在報表中捲動時將標頭保持可見 (報表產生器及 SSRS)
@@ -38,9 +38,9 @@ ms.locfileid: "65580134"
   
 ### <a name="to-keep-matrix-group-headers-visible-while-scrolling"></a>若要在捲動時維持矩陣群組標頭的可見度  
   
-1.  以滑鼠右鍵按一下 Tablix 資料區的資料列、資料行或角控點，然後按一下 **[Tablix 屬性]**。  
+1.  以滑鼠右鍵按一下 Tablix 資料區的資料列、資料行或角控點，然後按一下 **[Tablix 屬性]** 。  
   
-2.  在 **[一般]** 索引標籤的 **[資料列標頭]** 或 **[資料行標頭]** 下方選取 **[捲動時，標頭應保持可見]**。  
+2.  在 **[一般]** 索引標籤的 **[資料列標頭]** 或 **[資料行標頭]** 下方選取 **[捲動時，標頭應保持可見]** 。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -52,7 +52,7 @@ ms.locfileid: "65580134"
   
      [資料列群組] 窗格會顯示資料列群組階層的階層式靜態及動態成員，[資料行群組] 窗格則會為資料行群組階層顯示類似的內容。  
   
-2.  在 [群組] 窗格的右邊按一下向下箭頭，然後按一下 **[進階模式]**。  
+2.  在 [群組] 窗格的右邊按一下向下箭頭，然後按一下 **[進階模式]** 。  
   
 3.  在捲動時按一下您要保持可見的靜態成員 (資料列或資料行)。 [屬性] 窗格會顯示 **[Tablix 成員]** 屬性。  
   

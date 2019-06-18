@@ -14,11 +14,11 @@ author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: 9dba11c0130dc3b969a9fcec46b631abd7d62fe8
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956049"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63198765"
 ---
 # <a name="list-of-bugs-fixed"></a>已修正的 bug 的清單
 
