@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 52291c866e00100280c63253ef36b31bd8763948
-ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66428980"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>報表伺服器狀態 (SSRS 原生模式)
@@ -31,7 +31,7 @@ ms.locfileid: "66428980"
   
  如果您連接至報表伺服器，而且所有頁面連結都呈現灰色，請確認報表伺服器服務是否已啟動。 **報告服務狀態：** 應該是 「 已啟動 」。 您也可以使用 [系統管理工具] 中的 [服務] 主控台應用程式來檢查服務狀態。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **SQL Server 執行個體**  
  顯示目前所連接報表伺服器執行個體的相關資訊。 報表伺服器執行個體名稱是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具名執行個體為基礎。 預設執行個體為 MSSQLSERVER。 具名執行個體將會是您在安裝期間所指定的值。 如需有關執行個體的詳細資訊，請參閱[使用多個版本和 SQL Server 執行個體](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
   

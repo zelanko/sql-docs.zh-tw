@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 058a3318f98d294d7c6c7ba2cf69becdf218b48f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079964"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>檢查清單：使用 PowerShell 驗證 PowerPivot for SharePoint
@@ -59,7 +59,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
   
 |||  
 |-|-|  
-|![sharepoint 一般應用程式集合中的 powerpivot](../../../sql-server/install/media/ssas-powerpivot-logo.png "sharepoint 一般應用程式集合中的 powerpivot")|您可以選擇使用 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理儀表板來驗證管理中心的大多數元件。 若要在管理中心開啟儀表板，請按一下 **[一般應用程式設定]**，然後按一下 **[PowerPivot]** 中的 **[管理儀表板]**。 如需有關儀表板的詳細資訊，請參閱＜ [PowerPivot Management Dashboard and Usage Data](../../power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)＞。|  
+|![sharepoint 一般應用程式集合中的 powerpivot](../../../sql-server/install/media/ssas-powerpivot-logo.png "sharepoint 一般應用程式集合中的 powerpivot")|您可以選擇使用 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理儀表板來驗證管理中心的大多數元件。 若要在管理中心開啟儀表板，請按一下 **[一般應用程式設定]** ，然後按一下 **[PowerPivot]** 中的 **[管理儀表板]** 。 如需有關儀表板的詳細資訊，請參閱＜ [PowerPivot Management Dashboard and Usage Data](../../power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)＞。|  
   
 ##  <a name="bkmk_symptoms"></a> 徵兆和建議的動作  
  下表是徵兆或問題清單以及這個主題的建議章節，您可參考這些章節來幫助您解決問題。  
