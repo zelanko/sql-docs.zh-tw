@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c5e165380c0f920ebf1366855e7801b6bb9089a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62472987"
 ---
 # <a name="automatically-delete-a-job"></a>自動刪除作業
@@ -64,11 +64,11 @@ ms.locfileid: "62472987"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **[SQL Server Agent]**，展開 **[作業]**，以滑鼠右鍵按一下要編輯的作業，然後按一下 **[屬性]**。  
+2.  展開 **[SQL Server Agent]** ，展開 **[作業]** ，以滑鼠右鍵按一下要編輯的作業，然後按一下 **[屬性]** 。  
   
 3.  選取 **[通知]** 頁面。  
   
-4.  選取 **[自動刪除作業]**，然後選擇下列其中一項：  
+4.  選取 **[自動刪除作業]** ，然後選擇下列其中一項：  
   
     -   按一下 **[當作業成功時]** ，以便在作業順利完成時刪除作業狀態。  
   

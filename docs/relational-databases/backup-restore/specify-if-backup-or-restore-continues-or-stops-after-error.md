@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0c36052ce31b2d0edede232151bb8ef21e9af772
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825543"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62516839"
 ---
 # <a name="specify-if-backup-or-restore-continues-or-stops-after-error"></a>指定在錯誤之後繼續還是停止備份或還原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47825543"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目，指定在發生錯誤後備份或還原作業應該繼續還是停止：**  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47825543"
   
 1.  請依照＜ [建立資料庫備份](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)＞的步驟執行。  
   
-2.  在 **[選項]** 頁面的 **[可靠性]** 區段中，按一下 **[寫入媒體之前執行總和檢查碼]** 和 **[發生錯誤時繼續]**。  
+2.  在 **[選項]** 頁面的 **[可靠性]** 區段中，按一下 **[寫入媒體之前執行總和檢查碼]** 和 **[發生錯誤時繼續]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -69,7 +69,7 @@ ms.locfileid: "47825543"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  在 [BACKUP](../../t-sql/statements/backup-transact-sql.md) 陳述式中，指定 CONTINUE_AFTER_ERROR 選項以繼續，或指定 STOP_ON_ERROR 選項以停止。 預設行為是在發生錯誤後停止。 此範例指示備份作業儘管發生錯誤時仍繼續進行。  
   
@@ -84,7 +84,7 @@ GO
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  在 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式中，指定 CONTINUE_AFTER_ERROR 選項以繼續，或指定 STOP_ON_ERROR 選項以停止。 預設行為是在發生錯誤後停止。 此範例指示還原作業儘管發生錯誤時仍繼續進行。  
   

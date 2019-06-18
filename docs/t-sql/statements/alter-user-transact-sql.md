@@ -27,11 +27,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 522ff2df33067792979e785b60417c9783d5e46a
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421175"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62648804"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -112,12 +112,12 @@ ALTER USER userName
  *userName*  
  指定在這個資料庫內用來識別使用者的名稱。  
   
- LOGIN **=**_loginName_  
+ LOGIN **=** _loginName_  
  變更使用者的安全性識別碼 (SID) 使其符合登入的 SID，以便將使用者重新對應到另一個登入。  
   
  如果 ALTER USER 陳述式是 SQL 批次中的唯一陳述式，Windows Azure SQL Database 會支援 WITH LOGIN 子句。 如果 ALTER USER 陳述式不是 SQL 批次中的唯一陳述式或是在動態 SQL 中執行，則不支援 WITH LOGIN 子句。  
   
- NAME **=**_newUserName_  
+ NAME **=** _newUserName_  
  指定新的名稱給這位使用者。 *newUserName* 不可已存在目前資料庫中。  
   
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
@@ -131,7 +131,7 @@ ALTER USER userName
 > [!NOTE]  
 >  只有包含的使用者能夠使用此選項。 請參閱[自主資料庫](../../relational-databases/databases/contained-databases.md)和 [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md) 以取得詳細資訊。  
   
- OLD_PASSWORD **=**_'oldpassword'_  
+ OLD_PASSWORD **=** _'oldpassword'_  
  **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  目前的使用者密碼，將由 '*password*' 取代。 密碼會區分大小寫。 密碼區分大小寫。除非您有 **ALTER ANY USER** 權限，否則需要 *OLD_PASSWORD* 才能變更密碼。 需要 *OLD_PASSWORD* 可防止具有 **IMPERSONATION** 權限的使用者變更密碼。  
@@ -139,7 +139,7 @@ ALTER USER userName
 > [!NOTE]  
 >  只有包含的使用者能夠使用此選項。  
   
- DEFAULT_LANGUAGE **=**_{ NONE | \<lcid> | \<語言名稱> | \<語言別名> }_  
+ DEFAULT_LANGUAGE **=** _{ NONE | \<lcid> | \<語言名稱> | \<語言別名> }_  
  **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定要指派給使用者的預設語言。 如果這個選項設為 NONE，預設語言將設為資料庫的目前預設語言。 如果稍後變更了資料庫的預設語言，使用者的預設語言會保持不變。 *DEFAULT_LANGUAGE* 可以是本機識別碼 (lcid)、語言名稱或語言別名。  
@@ -193,7 +193,7 @@ ALTER USER userName
 > [!NOTE]  
 >  具有 **ALTER ANY USER** 權限的使用者可以變更任何使用者的預設結構描述。 結構描述變更過的使用者可能會在不知情的情況下，從錯誤的資料表選取資料或從錯誤的結構描述執行程式碼。  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
  若要變更使用者的名稱，需要具有 **ALTER ANY USER** 權限。  
   
  若要變更使用者的目標登入，則需要資料庫的 **CONTROL** 權限。  

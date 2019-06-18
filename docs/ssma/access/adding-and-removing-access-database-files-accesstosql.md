@@ -30,10 +30,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8de9b27a58d277191a4d40da6b34dbcbbd43e497
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62760615"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>新增和移除 Access 資料庫檔案 (AccessToSQL)
@@ -85,7 +85,7 @@ ms.locfileid: "62760615"
   
     您可以使用**全選**並**全部清除**来選取或清除所有資料庫的清單頂端的按鈕。 您可以按住 CTRL 鍵以選取多個資料庫，或按住 SHIFT 鍵，向下選取範圍的資料庫。  
   
-7.  按一下 [下一步] 。  
+7.  按一下 [下一步]  。  
   
 8.  在 確認 頁面中，按一下 **完成**。  
   

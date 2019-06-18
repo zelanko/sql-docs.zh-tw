@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dab6f53c5b75e1ef78eab346d2b0dd96a42e5861
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510145"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62703978"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 結構描述集合 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -170,7 +170,7 @@ ms.locfileid: "58510145"
   
 -   在 XML 結構描述集合的適當目錄檢視上撰寫 Transact-SQL 查詢。  
   
--   使用內建函數 **XML_SCHEMA_NAMESPACE()**。 您可以將 **xml** 資料類型方法套用在此函數的輸出上。 但是您不能修改基礎 XML 結構描述。  
+-   使用內建函數 **XML_SCHEMA_NAMESPACE()** 。 您可以將 **xml** 資料類型方法套用在此函數的輸出上。 但是您不能修改基礎 XML 結構描述。  
   
  如下列範例所示。  
   
@@ -194,7 +194,7 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
  您可以將目標命名空間指定為 **XML_SCHEMA_NAMESPACE()** 的第三個引數，以 **xml**資料類型執行個體的型式來取得集合中的個別 XML 結構描述。 下列範例會顯示這一點。  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>範例從 XML 結構描述集合輸出指定的結構描述  
- 下列陳述式會從關聯式結構描述 dbo 內的 XML 結構描述集合 "myCollection"，輸出含有「假設」目標命名空間 https/\/www.microsoft.com/was-books 的 XML 結構描述。  
+ 下列陳述式會從關聯式結構描述 dbo 內的 XML 結構描述集合 "myCollection"，輸出含有「假設」  目標命名空間 https/\/www.microsoft.com/was-books 的 XML 結構描述。  
   
 ```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   

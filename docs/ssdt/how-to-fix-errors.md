@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 6ef6cb6bce9173a849dbe406971028e3f452767c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090242"
 ---
 # <a name="how-to-fix-errors"></a>如何：修正錯誤
@@ -26,15 +26,15 @@ ms.locfileid: "65090242"
   
 ### <a name="to-fix-errors"></a>若要修正錯誤  
   
-1.  以滑鼠右鍵按一下 [方案總管] 中的 [Product] 資料表 (Product.sql)，再選取 [檢視表設計工具]。  
+1.  以滑鼠右鍵按一下 [方案總管]  中的 [Product]  資料表 (Product.sql)，再選取 [檢視表設計工具]  。  
   
-2.  在設計工具的資料行格線中，以滑鼠右鍵按一下 [ShelflLife] 資料行，再選取 [刪除] 從資料表刪除這個資料行。  
+2.  在設計工具的資料行格線中，以滑鼠右鍵按一下 [ShelflLife]  資料行，再選取 [刪除]  從資料表刪除這個資料行。  
   
-3.  請注意，與下列訊息類似的警告與錯誤會立即顯示在畫面底部的 [錯誤清單] 中。  
+3.  請注意，與下列訊息類似的警告與錯誤會立即顯示在畫面底部的 [錯誤清單]  中。  
   
 **警告 SQL71502：函式：[dbo].[GetProductsBySupplier] 包含物件無法解析的參考。物件不存在或參考不明確，因為它可以參考下列任一個物件：[dbo].[Product].[p]::[ShelfLife] 或 [dbo].[Product].[ShelfLife]。錯誤 SQL71501：檢查限制：[dbo].[CK_Product_ShelfLife] 具有物件 [dbo].[Product].[ShelfLife] 無法解析的參考。**  
   
-4.  您可以用滑鼠右鍵按一下 [錯誤清單]，然後使用關聯式功能表排序結果，篩選要顯示的項目和每個項目要顯示的資訊欄。  
+4.  您可以用滑鼠右鍵按一下 [錯誤清單]  ，然後使用關聯式功能表排序結果，篩選要顯示的項目和每個項目要顯示的資訊欄。  
   
     按兩下第一個識別的警告，並跟著它找出產生警告的指令碼。 有問題的代碼區段會以反白顯示。 以我們所舉的例子來說，這是因為先前建立的資料表值函式中 `RETURN` 和 `SELECT` 陳述式都使用了 `ShelfLife` 資料行。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "65090242"
   
 6.  移除檢查條件約束，以類似的方式修正第二個錯誤。  
   
-7.  請注意，在問題修正後，警告與錯誤隨即從 [錯誤清單] 中消失。  
+7.  請注意，在問題修正後，警告與錯誤隨即從 [錯誤清單]  中消失。  
   
 ## <a name="see-also"></a>另請參閱  
 [使用 Transact-SQL 編輯器，編輯及執行指令碼](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)  

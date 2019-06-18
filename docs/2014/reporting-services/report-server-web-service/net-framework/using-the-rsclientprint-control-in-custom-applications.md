@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 28f4cdf562db1b3008db239a08b76097dc5d7e46
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62519118"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自訂應用程式中使用 RSClientPrint 控制項
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 控制項 **RSPrintClient** 提供在 HTML 檢視器中檢視的報表之用戶端列印。 它提供 [列印] 對話方塊，讓使用者能夠起始列印工作、預覽報表、指定要列印的頁面，以及變更邊界。 在用戶端列印作業期間，報表伺服器會在影像 (EMF) 轉譯延伸模組中轉譯報表，然後使用作業系統的列印功能來建立列印工作，並將它傳送到印表機。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 控制項 **RSPrintClient** 提供在 HTML 檢視器中檢視的報表之用戶端列印。 它提供 [列印]  對話方塊，讓使用者能夠起始列印工作、預覽報表、指定要列印的頁面，以及變更邊界。 在用戶端列印作業期間，報表伺服器會在影像 (EMF) 轉譯延伸模組中轉譯報表，然後使用作業系統的列印功能來建立列印工作，並將它傳送到印表機。  
   
  用戶端列印提供控制及改善 HTML 報表的列印輸出品質的方式，亦即，利用使用者電腦上的瀏覽器列印設定，而不使用報表的頁面維度、邊界、頁首和頁尾文字，來建立列印輸出。 列印控制項會讀取報表的屬性值，來設定頁面的大小和邊界。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62519118"
 -   檢閱關於影像 (EMF) 轉譯的線上叢書主題，以了解如何轉譯頁面來進行預覽列印和輸出。  
   
 ## <a name="rsprintclient-overview"></a>RSPrintClient 概觀  
- 控制項會顯示自訂列印對話方塊，其中支援與其他列印對話方塊一樣的一般功能，包括預覽列印、可指定要列印的特定頁面及範圍、頁面邊界和列印方向等選擇。 此控制項已封裝成 CAB 檔。 [列印] 對話方塊中的文字，已當地語系化成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援的所有語言。 **RSPrintClient** ActiveX 控制項會使用影像轉譯延伸模組 (EMF) 來列印報表。 會使用下列 EMF 裝置資訊：StartPage、 EndPage、 MarginBottom、 MarginLeft、 MarginTop、 MarginRight、 PageHeight 和 PageWidth。 影像轉譯的其他裝置資訊設定則不支援。  
+ 控制項會顯示自訂列印對話方塊，其中支援與其他列印對話方塊一樣的一般功能，包括預覽列印、可指定要列印的特定頁面及範圍、頁面邊界和列印方向等選擇。 此控制項已封裝成 CAB 檔。 [列印]  對話方塊中的文字，已當地語系化成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援的所有語言。 **RSPrintClient** ActiveX 控制項會使用影像轉譯延伸模組 (EMF) 來列印報表。 會使用下列 EMF 裝置資訊：StartPage、 EndPage、 MarginBottom、 MarginLeft、 MarginTop、 MarginRight、 PageHeight 和 PageWidth。 影像轉譯的其他裝置資訊設定則不支援。  
   
 ### <a name="language-support"></a>語言支援  
  列印控制項會以不同的語言呈現使用者介面文字，並接受根據不同度量系統所輸入的值。 所使用的語言和度量系統是由 **Culture** 和 **UICulture** 屬性來決定。 這兩個屬性都接受 LCID 值。 如果您指定的 LCID 是受支援語言的變異語言，就會呈現最相近的語言。 如果您指定的 LCID 不受支援，而且找不到其他相近的 LCID，就會呈現英文 (美國)。  
@@ -51,7 +51,7 @@ ms.locfileid: "62519118"
  **RSClientPrint** 物件的作用，是可以透過程式設計的方式存取 ActiveX 控制項及其方法和屬性。 此控制項會提供預覽列印的強制回應對話方塊。  
   
 ### <a name="specifying-default-values"></a>指定預設值  
- 您可以利用報表的邊界和頁面值，將 [列印] 對話方塊初始化。 根據預設，[列印] 對話方塊會以報表定義的值初始化。 您可以使用預設值，或設定物件的屬性來指定不同的值。  
+ 您可以利用報表的邊界和頁面值，將 [列印]  對話方塊初始化。 根據預設，[列印]  對話方塊會以報表定義的值初始化。 您可以使用預設值，或設定物件的屬性來指定不同的值。  
   
  所有維度均以公釐表示。 如果 **Culture** 與 **UICulture** 已設定為不使用公制度量的地區，則度量的轉換會在執行階段發生。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62519118"
   
 |引數|I/O|類型|描述|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|In|String|指定報表伺服器虛擬目錄 (例如 https://adventure-works/reportserver)。|  
+|ServerPath|In|String|指定報表伺服器虛擬目錄 (例如 https://adventure-works/reportserver) 。|  
 |ReportPathParameters|In|String|在報表伺服器資料夾命名空間內指定報表的全名，包括參數在內。 報表是透過 URL 存取來擷取。 例如:"/ AdventureWorks Sample Reports/Employee Sales summary&empid=1234 = 1234年 」|  
 |ReportName|In|String|報表的簡短名稱 (在上述範例中，簡短名稱為 Employee Sales Summary)。 它會出現在 [列印] 對話方塊及列印佇列中。|  
   

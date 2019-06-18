@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00cb50fe4c71ad853e88ebd86b0891ca4bc24604
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62727223"
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>在 Analysis Services 中使用 XMLA 進行開發
@@ -60,7 +60,7 @@ ms.locfileid: "62727223"
 ## <a name="namespace-and-schema"></a>命名空間與結構描述  
   
 ### <a name="namespace"></a>命名空間  
- 在這個規格中定義的結構描述使用 XML 命名空間 https://schemas.microsoft.com/AnalysisServices/2003/Engine以及標準縮寫"DDL"。  
+ 在這個規格中定義的結構描述使用 XML 命名空間 https://schemas.microsoft.com/AnalysisServices/2003/Engine 以及標準縮寫"DDL"。  
   
 ### <a name="schema"></a>結構描述  
  對於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件定義語言，XML 結構描述定義語言 (XSD) 的定義是根據本章節中的結構描述元素與階層的定義。  

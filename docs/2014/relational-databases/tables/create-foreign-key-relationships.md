@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62761619"
 ---
 # <a name="create-foreign-key-relationships"></a>建立外部索引鍵關聯性
@@ -71,21 +71,21 @@ ms.locfileid: "62761619"
   
 #### <a name="to-create-a-foreign-key-relationship-in-table-designer"></a>若要在資料表設計工具建立外部索引鍵關聯性  
   
-1.  在物件總管中，以滑鼠右鍵按一下位於關聯性之外部索引鍵端上的資料表，然後按一下 [設計]。  
+1.  在物件總管中，以滑鼠右鍵按一下位於關聯性之外部索引鍵端上的資料表，然後按一下 [設計]  。  
   
      資料表會在 **[資料表設計工具]** 中開啟。  
   
-2.  從 **[資料表設計工具]** 功能表中，按一下 **[關聯性]**。  
+2.  從 **[資料表設計工具]** 功能表中，按一下 **[關聯性]** 。  
   
-3.  在 [外部索引鍵關聯性] 對話方塊中，按一下 [加入]。  
+3.  在 [外部索引鍵關聯性]  對話方塊中，按一下 [加入]  。  
   
-     關聯性會出現在 [選取的關聯性] 清單中，並顯示系統提供的名稱，格式為 FK_\<資料表名稱>>_\<資料表名稱>，其中<資料表名稱> 為外部索引鍵資料表的名稱。  
+     關聯性會出現在 [選取的關聯性]  清單中，並顯示系統提供的名稱，格式為 FK_\<資料表名稱>  >_\<資料表名稱  >，其中<資料表名稱>  為外部索引鍵資料表的名稱。  
   
 4.  在 [ **選取的關聯性** ] 清單中，按一下關聯性。  
   
-5.  按一下方格右邊的 [資料表及資料行規格]，然後按一下屬性右邊的省略符號 (**...**)。  
+5.  按一下方格右邊的 [資料表及資料行規格]  ，然後按一下屬性右邊的省略符號 ( **...** )。  
   
-6.  在 [資料表和資料行] 對話視窗的 [主索引鍵] 下拉式清單中，選擇將要成為關聯性主索引鍵端的資料表。  
+6.  在 [資料表和資料行]  對話視窗的 [主索引鍵]  下拉式清單中，選擇將要成為關聯性主索引鍵端的資料表。  
   
 7.  在方格的下方，選擇組成資料表主索引鍵的資料行。 在每個資料行左側的鄰近方格資料格，選擇對應到外部索引鍵資料表的外部索引鍵資料行。  
   
@@ -99,9 +99,9 @@ ms.locfileid: "62761619"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會建立資料表並在 `TempID` 資料行上定義外部索引鍵條件約束，而此資料行會參考 `SalesReasonID` 資料表中的 `Sales.SalesReason` 資料行。 ON DELETE CASCADE 和 ON UPDATE CASCADE 子句用來確定對 `Sales.SalesReason` 資料表所做的變更會自動傳播至 `Sales.TempSalesReason` 資料表。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會建立資料表並在 `TempID` 資料行上定義外部索引鍵條件約束，而此資料行會參考 `SalesReasonID` 資料表中的 `Sales.SalesReason` 資料行。 ON DELETE CASCADE 和 ON UPDATE CASCADE 子句用來確定對 `Sales.SalesReason` 資料表所做的變更會自動傳播至 `Sales.TempSalesReason` 資料表。  
   
     ```  
     USE AdventureWorks2012;  
@@ -120,9 +120,9 @@ ms.locfileid: "62761619"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會在 `TempID` 資料行上建立外部索引鍵，並參考 `SalesReasonID` 資料表中的 `Sales.SalesReason` 資料行。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會在 `TempID` 資料行上建立外部索引鍵，並參考 `SalesReasonID` 資料表中的 `Sales.SalesReason` 資料行。  
   
     ```  
     USE AdventureWorks2012;  

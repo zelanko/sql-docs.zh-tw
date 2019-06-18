@@ -30,11 +30,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c828a7db7a15e9a25073a5c6246a5c354934400
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016469"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664582"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
   
  如果此結構描述集合已經包含 Lax 驗證萬用字元或是 **xs:anyType** 類型的元素，則將新的全域元素、類型或屬性宣告加入到此結構描述集合時，將會重新驗證受到此結構描述集合限制的所有已儲存資料。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要變更 XML SCHEMA COLLECTION，需要集合的 ALTER 權限。  
   
 ## <a name="examples"></a>範例  

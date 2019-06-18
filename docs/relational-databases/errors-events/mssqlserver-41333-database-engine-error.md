@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a4e5e6d6b8e7b8fb62c3e7e8948bad8ecf5b0af2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703466"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716485"
 ---
 # <a name="mssqlserver41333"></a>MSSQLSERVER_41333
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47703466"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|CROSS_CONTAINER_ISOLATION_FAILURE|  
-|訊息文字|下列交易必須在快照隔離下存取記憶體最佳化的資料表和原生編譯預存程序：RepeatableRead 交易、Serializable 交易，以及在 RepeatableRead 或 Serializable 隔離下存取非記憶體最佳化資料表的交易。|  
+|訊息文字|下列交易必須在快照集隔離下，存取記憶體最佳化資料表和原生編譯的預存程序:RepeatableRead 交易、Serializable 交易，以及存取未在 RepeatableRead 或 Serializable 隔離中進行記憶體最佳化之資料表的交易。|  
   
 ## <a name="explanation"></a>說明  
 針對在磁碟基礎的交易和 XTP 交易之間較高的隔離等級使用者，有些限制。  

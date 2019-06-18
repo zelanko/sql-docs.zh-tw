@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fa363c2715057a0f81a691911a7e06b5104c5501
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088750"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>連線至 SQL Server 或 Azure SQL Database
@@ -27,15 +27,15 @@ ms.locfileid: "65088750"
   
 ## <a name="connecting-to-a-server"></a>連接至伺服器  
 
-1. 在**物件總管**，按一下 [連線] > [資料庫引擎...]。
+1. 在**物件總管**，按一下 [連線] > [資料庫引擎...]  。
 
    ![connect](../media/connect-to-server/connect-db-engine.png)
 
-1. 填寫 [連線至伺服器] 表單，並按一下 [連線]：
+1. 填寫 [連線至伺服器]  表單，並按一下 [連線]  ：
 
    ![連線至伺服器](../media/connect-to-server/connect.png)
 
-1. 若您連線至 Azure SQL Server，系統可能會提示您登入以建立防火牆規則。 按一下 [登入...]\(如果沒有，請跳至步驟 6)
+1. 若您連線至 Azure SQL Server，系統可能會提示您登入以建立防火牆規則。 按一下 [登入...]  \(如果沒有，請跳至步驟 6)
 
    ![防火牆](../media/connect-to-server/firewall-rule-sign-in.png)
 
@@ -43,7 +43,7 @@ ms.locfileid: "65088750"
 
    ![防火牆](../media/connect-to-server/new-firewall-rule.png)
 
-1. 若要建立防火牆規則並連線至伺服器，請按一下 [確定]。
+1. 若要建立防火牆規則並連線至伺服器，請按一下 [確定]  。
 
 1. 成功連線後，伺服器會顯示在**物件總管**中：
 

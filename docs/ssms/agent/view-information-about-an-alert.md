@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e58b9b54de57225ee7e2c2ac2ff11afcba4a5a23
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089344"
 ---
 # <a name="view-information-about-an-alert"></a>檢視有關警示的資訊
@@ -58,13 +58,13 @@ ms.locfileid: "65089344"
   
 1.  在 **[物件總管]** 中，按一下加號，展開要檢視警示相關資訊的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
 3.  按一下加號展開 **[警示]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您想要檢視其資訊的警示，然後選取 [屬性]。  
+4.  以滑鼠右鍵按一下您想要檢視其資訊的警示，然後選取 [屬性]  。  
   
-    如需 [_alert\_name_ 警示屬性] 對話方塊中可用選項的詳細資訊，請參閱：  
+    如需 [_alert\_name_ 警示屬性]  對話方塊中可用選項的詳細資訊，請參閱：  
   
     -   [警示屬性 - 新增警示 &#40;一般頁面&#41;](../../ssms/agent/alert-properties-new-alert-general-page.md)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "65089344"
   
     -   [警示屬性 &#40;記錄頁面&#41;](../../ssms/agent/alert-properties-history-page.md)  
   
-5.  完成後，請按一下 **[確定]**。  
+5.  完成後，請按一下 **[確定]** 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -82,9 +82,9 @@ ms.locfileid: "65089344"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- reports information about the Demo: Sev. 25 Errors alert  

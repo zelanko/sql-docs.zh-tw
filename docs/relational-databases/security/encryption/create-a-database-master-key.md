@@ -15,11 +15,11 @@ ms.author: aliceku
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3034dc76a64e25b614b1871247369214199c36b
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62521267"
 ---
 # <a name="create-a-database-master-key"></a>建立資料庫主要金鑰
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "53997490"
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
 需要資料庫的 CONTROL 權限。  
   
 ## <a name="using-transact-sql"></a>使用 Transact-SQL  
@@ -38,9 +38,9 @@ ms.locfileid: "53997490"
   
 2. 在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-3. 在標準列上，按一下 **[新增查詢]**。  
+3. 在標準列上，按一下 **[新增查詢]** 。  
   
-4. 將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+4. 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```sql
     -- Creates a database master key for the "AdventureWorks2012" database.   

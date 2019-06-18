@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a8a1825f00676618b9bcc98c774e7facd6f0e078
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62753015"
 ---
-# <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>第 3 課：使用範本、 方案和指令碼專案
+# <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>第 3 課：使用範本、方案和指令碼專案
   您可以利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立自訂範本以及建立方案和指令碼專案。  
   
  這個課程包含下列主題：  

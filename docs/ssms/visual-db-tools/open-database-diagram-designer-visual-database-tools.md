@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 4e6113e07c712d5bc4d669a518f87ef826fe0a65
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095245"
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>開啟資料庫圖表設計工具 (Visual Database Tools)
@@ -33,22 +33,22 @@ ms.locfileid: "65095245"
   
 1.  在 [物件總管] 中，在資料庫的資料庫圖表節點上按一下滑鼠右鍵。  
   
-2.  從下拉式功能表中，按一下 [新增資料庫圖表]。  
+2.  從下拉式功能表中，按一下 [新增資料庫圖表]  。  
   
-3.  在 [新增資料表] 對話方塊中，選擇圖表中要使用的資料表。  
+3.  在 [新增資料表]  對話方塊中，選擇圖表中要使用的資料表。  
   
     > [!NOTE]  
-    > 如果您選擇 [關閉] 而不新增資料表，您可以在稍後返回此處，並新增資料表。  
+    > 如果您選擇 [關閉]  而不新增資料表，您可以在稍後返回此處，並新增資料表。  
   
-4.  [資料庫圖表] 功能表會新增至主功能表中，並且設計工具窗格會開啟。  
+4.  [資料庫圖表]  功能表會新增至主功能表中，並且設計工具窗格會開啟。  
   
 ### <a name="open-an-existing-database-diagram"></a>開啟現有的資料庫圖表  
   
 1.  在 [物件總管] 中，在資料庫之資料庫圖表節點下的圖表上按一下滑鼠右鍵。  
   
-2.  從下拉式功能表中，按一下 [設計資料庫圖表]。  
+2.  從下拉式功能表中，按一下 [設計資料庫圖表]  。  
   
-3.  [資料庫圖表] 功能表會新增至主功能表中，並且此圖表會在設計工具窗格中開啟。  
+3.  [資料庫圖表]  功能表會新增至主功能表中，並且此圖表會在設計工具窗格中開啟。  
   
 ## <a name="see-also"></a>另請參閱  
 [設計資料庫圖表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62660781"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
@@ -60,7 +60,7 @@ sp_help_job { [ @job_id = ] job_id
 > [!NOTE]  
 >  若要檢視特定工作，或是*job_id*或是*job_name*必須指定。  省略兩者*job_id*並*job_name*傳回所有工作的相關資訊。
   
-`[ @job_aspect = ] 'job_aspect'` 要顯示的作業屬性。 *job_aspect*已**varchar(9)**，預設值是 NULL，而且可以是下列值之一。  
+`[ @job_aspect = ] 'job_aspect'` 要顯示的作業屬性。 *job_aspect*已**varchar(9)** ，預設值是 NULL，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -70,11 +70,11 @@ sp_help_job { [ @job_id = ] job_id
 |**STEPS**|作業步驟資訊|  
 |**目標**|目標資訊|  
   
-`[ @job_type = ] 'job_type'` 要包含在報表中的作業類型。 *job_type&lt*已**varchar(12)**，預設值是 NULL。 *job_type&lt*可以是**本機**或是**MULTI-SERVER**。  
+`[ @job_type = ] 'job_type'` 要包含在報表中的作業類型。 *job_type&lt*已**varchar(12)** ，預設值是 NULL。 *job_type&lt*可以是**本機**或是**MULTI-SERVER**。  
   
 `[ @owner_login_name = ] 'login_name'` 作業的擁有者的登入名稱。 *login_name*已**sysname**，預設值是 NULL。  
   
-`[ @subsystem = ] 'subsystem'` 子系統的名稱。 *子系統*已**nvarchar(40)**，預設值是 NULL。  
+`[ @subsystem = ] 'subsystem'` 子系統的名稱。 *子系統*已**nvarchar(40)** ，預設值是 NULL。  
   
 `[ @category_name = ] 'category'` 類別目錄的名稱。 *類別目錄*已**sysname**，預設值是 NULL。  
   
@@ -92,13 +92,13 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|已暫停。|  
 |**7**|正在執行完成動作。|  
   
-`[ @date_comparator = ] 'date_comparison'` 要在比較中使用的比較運算子*date_created*並*date_modified*。 *date_comparison*已**char(1)**，它可以 = \<，或 >。  
+`[ @date_comparator = ] 'date_comparison'` 要在比較中使用的比較運算子*date_created*並*date_modified*。 *date_comparison*已**char(1)** ，它可以 = \<，或 >。  
   
 `[ @date_created = ] date_created` 作業的建立日期。 *date_created*已**datetime**，預設值是 NULL。  
   
 `[ @date_last_modified = ] date_modified` 作業的上次修改日期。 *date_modified*已**datetime**，預設值是 NULL。  
   
-`[ @description = ] 'description_pattern'` 作業描述。 *description_pattern*已**nvarchar(512)**，預設值是 NULL。 *description_pattern*可以包含 SQL Server 用於萬用字元模式比對。  
+`[ @description = ] 'description_pattern'` 作業描述。 *description_pattern*已**nvarchar(512)** ，預設值是 NULL。 *description_pattern*可以包含 SQL Server 用於萬用字元模式比對。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

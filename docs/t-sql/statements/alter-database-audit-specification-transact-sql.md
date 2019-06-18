@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd843cfe70aeaaac866398339e35089615eb44a2
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326689"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62961220"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="remarks"></a>Remarks  
  資料庫稽核規格是位於給定資料庫內的非安全性實體物件。 您必須將稽核規格的狀態設定為 OFF 選項，才可以變更資料庫稽核規格。 如果在設定 STATE=OFF 以外的任何選項時啟用稽核，而且執行 ALTER DATABASE AUDIT SPECIFICATION，您將會收到錯誤訊息。 如需詳細資訊，請參閱 [tempdb Database](../../relational-databases/databases/tempdb-database.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  具有 ALTER ANY DATABASE AUDIT 權限的使用者可以改變資料庫稽核規格，並將其繫結至任何稽核。  
   
  建立資料庫稽核規格之後，具有 CONTROL SERVER 或 ALTER ANY DATABASE AUDIT 權限的主體、系統管理員帳戶或具有稽核明確存取權的主體就可以檢視此規格。  

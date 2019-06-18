@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a0f354280da857be236049a564a77716e93cd351
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807055"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>重新組織索引工作 (維護計畫)
-  使用 [重新組織索引工作] 對話方塊，即可將索引頁面移至更有效率的搜尋順序。 此工作會使用 `ALTER INDEX REORGANIZE` 陳述式搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫。  
+  使用 [重新組織索引工作]  對話方塊，即可將索引頁面移至更有效率的搜尋順序。 此工作會使用 `ALTER INDEX REORGANIZE` 陳述式搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[連接]**  
  選取執行此工作時要使用的伺服器連接。  
   
@@ -51,10 +51,10 @@ ms.locfileid: "62807055"
      產生維護計畫，只針對選取的資料庫執行維護工作。 如果選擇此選項，則必須在清單中至少選取一個資料庫。  
   
  **物件**  
- 限制 [選取範圍] 格線僅顯示資料表、檢視或兩者。  
+ 限制 [選取範圍]  格線僅顯示資料表、檢視或兩者。  
   
  **選取範圍**  
- 指定受此工作影響的資料表或索引。 [物件] 方塊中的 [資料表和檢視] 為選取狀態時無法使用。  
+ 指定受此工作影響的資料表或索引。 [物件]  方塊中的 [資料表和檢視]  為選取狀態時無法使用。  
   
  **壓縮大型物件**  
  可能時取消配置給資料表和檢視的空間。 此選項使用 `ALTER INDEX LOB_COMPACTION = ON`。  

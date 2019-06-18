@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a50004cfb39b93ecd0c144fb0d92d37545c83ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921185"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>將資料庫還原到新位置 (SQL Server)
@@ -81,7 +81,7 @@ ms.locfileid: "62921185"
   
 1.  連接到適當的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體，然後在 [物件總管] 中，按一下伺服器名稱以展開伺服器樹狀目錄。  
   
-2.  以滑鼠右鍵按一下 [資料庫]，然後按一下 [還原資料庫]。 **[還原資料庫]** 對話方塊隨即開啟。  
+2.  以滑鼠右鍵按一下 [資料庫]  ，然後按一下 [還原資料庫]  。 **[還原資料庫]** 對話方塊隨即開啟。  
   
 3.  在 **[一般]** 頁面上，使用 **[來源]** 區段指定要還原之備份組的來源和位置。 選取下列其中一個選項：  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62921185"
   
     1.  **[裝置]**  
   
-         按一下瀏覽 (**...**) 按鈕，開啟 [選取備份裝置] 對話方塊。 在 **[備份媒體類型]** 方塊中，選取列出的其中一種裝置類型。 若要選取 **[備份媒體]** 方塊中的一個或多個裝置，請按一下 **[加入]**。  
+         按一下瀏覽 ( **...** ) 按鈕，開啟 [選取備份裝置]  對話方塊。 在 **[備份媒體類型]** 方塊中，選取列出的其中一種裝置類型。 若要選取 **[備份媒體]** 方塊中的一個或多個裝置，請按一下 **[加入]** 。  
   
          將您要的裝置加入 **[備份媒體]** 清單方塊後，按一下 **[確定]** 即可回到 **[一般]** 頁面。  
   
@@ -108,9 +108,9 @@ ms.locfileid: "62921185"
   
 6.  在 **[要還原的備份組]** 方格中，選取要還原的備份。 這個方格會顯示指定位置可用的備份。 依預設，會建議一個復原計畫。 若要覆寫建議的復原計畫，您可以變更方格中的選取項目。 取消選取先前的備份時，會自動取消選取相依於先前備份還原的備份。  
   
-     如需 [要還原的備份組] 方格中各資料行的相關資訊，請參閱[還原資料庫 &#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)。  
+     如需 [要還原的備份組]  方格中各資料行的相關資訊，請參閱[還原資料庫 &#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)。  
   
-7.  若要指定資料庫檔案的新位置，請選取 **[檔案]** 頁面，然後按一下 **[將所有檔案重新放置到資料夾]**。 提供 **[資料檔資料夾]** 及 **[記錄檔資料夾]** 的新位置。 如需這個方格的詳細資訊，請參閱[還原資料庫 &#40;檔案頁面&#41;](restore-database-files-page.md)。  
+7.  若要指定資料庫檔案的新位置，請選取 **[檔案]** 頁面，然後按一下 **[將所有檔案重新放置到資料夾]** 。 提供 **[資料檔資料夾]** 及 **[記錄檔資料夾]** 的新位置。 如需這個方格的詳細資訊，請參閱[還原資料庫 &#40;檔案頁面&#41;](restore-database-files-page.md)。  
   
 8.  在 **[選項]** 頁面上，依需要調整選項。 如需這些選項的詳細資訊，請參閱[還原資料庫 &#40;選項頁面&#41;](restore-database-options-page.md)。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "62921185"
   
 1.  (選擇性) 在包含您想要還原之完整資料庫備份的備份組中，決定檔案的邏輯和實體名稱。 這個陳述式會傳回備份組內所自主資料庫和記錄檔清單。 基本語法如下：  
   
-     RESTORE FILELISTONLY FROM <備份裝置> WITH FILE = *backup_set_file_number*  
+     RESTORE FILELISTONLY FROM <備份裝置>  WITH FILE = *backup_set_file_number*  
   
      此處，*backup_set_file_number* 表示媒體集中的備份位置。 您可以使用 [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql) 陳述式來取得備份組的位置。 如需詳細資訊，請參閱 [RESTORE 引數 &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql) 中的＜指定備份組＞。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "62921185"
   
      如需詳細資訊，請參閱 [RESTORE 引數 &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql) 中的＜指定備份組＞。  
   
-     移動 **'*`logical_file_name_in_backup`*'** TO **'*`operating_system_file_name`*'** [ `,`...*n* ]  
+     移動 **' *`logical_file_name_in_backup`* '** TO **' *`operating_system_file_name`* '** [ `,`...*n* ]  
      指定 *logical_file_name_in_backup* 所指定的資料或記錄檔要還原至 *operating_system_file_name*所指定的位置。 針對您想要從備份組還原到新位置的每一個邏輯檔案指定 MOVE 陳述式。  
   
     |選項|描述|  

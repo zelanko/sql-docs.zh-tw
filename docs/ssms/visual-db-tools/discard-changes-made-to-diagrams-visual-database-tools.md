@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 4bb01c435a31f1690642e84481d42ea92c901630
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095289"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>捨棄對圖表所做的變更 (Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "65095289"
   
 1.  關閉您的資料庫圖表或資料表設計視窗。  
   
-2.  畫面會出現訊息，提示您儲存變更。 選擇 [否]。  
+2.  畫面會出現訊息，提示您儲存變更。 選擇 [否]  。  
   
     > [!CAUTION]  
     > 如果有其他開啟的資料庫圖表或資料表設計視窗連接到相同的資料庫，請將其關閉且不要儲存變更。  

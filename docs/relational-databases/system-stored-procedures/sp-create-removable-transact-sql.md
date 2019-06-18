@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9c2e25b51998d863809a57654b245b1cb63027b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724063"
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
@@ -60,13 +60,13 @@ sp_create_removable
   
 `[ @syslogical = ] 'syslogical'` 是系統目錄資料表所在檔案的邏輯名稱。 *syslogical*已**sysname**。  
   
-`[ @sysphysical = ] 'sysphysical'` 這是實體的名稱。 其中包括系統目錄資料表所在檔案的完整路徑。 *sysphysical*已**nvarchar(260)**。  
+`[ @sysphysical = ] 'sysphysical'` 這是實體的名稱。 其中包括系統目錄資料表所在檔案的完整路徑。 *sysphysical*已**nvarchar(260)** 。  
   
 `[ @syssize = ] syssize` 是以 mb 為單位，在系統目錄資料表所在檔案的大小。 *syssize*已**int**。最小*syssize*為 1。  
   
 `[ @loglogical = ] 'loglogical'` 這是檔案的包含交易記錄檔邏輯名稱。 *loglogical*已**sysname**。  
   
-`[ @logphysical = ] 'logphysical'` 這是實體的名稱。 其中包括交易記錄所在檔案的完整路徑。 *logphysical*已**nvarchar(260)**。  
+`[ @logphysical = ] 'logphysical'` 這是實體的名稱。 其中包括交易記錄所在檔案的完整路徑。 *logphysical*已**nvarchar(260)** 。  
   
 `[ @logsize = ] logsize` 是以 mb 為單位的交易記錄所在檔案的大小。 *logsize*已**int**。最小*logsize*為 1。  
   
@@ -74,7 +74,7 @@ sp_create_removable
   
  必須有 1 至 16 個資料檔。 當預期資料庫較大，必須分散到多個磁碟時，通常會建立一個以上的資料檔。  
   
-`[ @dataphysical1 = ] 'dataphysical'` 這是實體的名稱。 其中包括資料表所在檔案的完整路徑。 *dataphysical*已**nvarchar(260)**。  
+`[ @dataphysical1 = ] 'dataphysical'` 這是實體的名稱。 其中包括資料表所在檔案的完整路徑。 *dataphysical*已**nvarchar(260)** 。  
   
 `[ @datasize1 = ] 'datasize'` 是的大小，以 mb 為單位，其中包含資料的資料表。 *datasize*已**int**。最小*datasize*為 1。  
   

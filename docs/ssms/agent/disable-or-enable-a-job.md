@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6d3137b019319163e24a32a2037e9ab7bcbd002f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096563"
 ---
 # <a name="disable-or-enable-a-job"></a>Disable or Enable a Job
@@ -55,11 +55,11 @@ ms.locfileid: "65096563"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **[SQL Server Agent]**。  
+2.  展開 **[SQL Server Agent]** 。  
   
-3.  展開 [作業]，然後以滑鼠右鍵按一下要停用或啟用的作業。  
+3.  展開 [作業]  ，然後以滑鼠右鍵按一下要停用或啟用的作業。  
   
-4.  若要停用作業，請按一下 **[停用]**。 若要啟用作業，請按一下 **[啟用]**。  
+4.  若要停用作業，請按一下 **[停用]** 。 若要啟用作業，請按一下 **[啟用]** 。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   
@@ -67,9 +67,9 @@ ms.locfileid: "65096563"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- changes the name, description, and disables status of the job NightlyBackups.  

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9ce189688bd33f3cb63280e4fa44bb2284ee9e8d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62900034"
 ---
 # <a name="map-columns-to-composite-domains"></a>將資料行對應到複合定義域
@@ -26,7 +26,7 @@ ms.locfileid: "62900034"
   
 ### <a name="to-map-multiple-columns-to-a-composite-domain"></a>若要將多個資料行對應到複合定義域  
   
-1.  以滑鼠右鍵按一下 DQS 清理轉換，然後按一下 [編輯]。  
+1.  以滑鼠右鍵按一下 DQS 清理轉換，然後按一下 [編輯]  。  
   
 2.  在 **[連接管理員]** 索引標籤上，確認複合定義域出現在可用的定義域清單中。  
   
@@ -34,13 +34,13 @@ ms.locfileid: "62900034"
   
 4.  針對 **[輸入資料行]** 欄位中所列的每一個資料行，從 **[定義域]** 欄位中選取個別的單一定義域。 務必只選取位於複合定義域內的單一定義域。  
   
-5.  視需要修改 **[來源別名]**、 **[輸出別名]** 和 **[狀態別名]** 欄位中所顯示的名稱。  
+5.  視需要修改 **[來源別名]** 、 **[輸出別名]** 和 **[狀態別名]** 欄位中所顯示的名稱。  
   
 6.  視需要在 **[進階]** 索引標籤上設定屬性。如需這些屬性的詳細資訊，請參閱＜ [DQS Cleansing Transformation Editor Dialog Box](../../dqs-cleansing-transformation-editor-dialog-box.md)＞。  
   
 ### <a name="to-map-a-column-with-delimited-values-to-a-composite-domain"></a>若要將具有分隔值的資料行對應到複合定義網域  
   
-1.  以滑鼠右鍵按一下 DQS 清理轉換，然後按一下 [編輯]。  
+1.  以滑鼠右鍵按一下 DQS 清理轉換，然後按一下 [編輯]  。  
   
 2.  在 **[連接管理員]** 索引標籤上，確認複合定義域出現在可用的定義域清單中。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62900034"
   
 4.  針對 **[輸入資料行]** 欄位中所列的資料行，從 **[定義域]** 欄位中選取複合定義域。  
   
-5.  視需要修改 **[來源別名]**、 **[輸出別名]** 和 **[狀態別名]** 欄位中所顯示的名稱。  
+5.  視需要修改 **[來源別名]** 、 **[輸出別名]** 和 **[狀態別名]** 欄位中所顯示的名稱。  
   
 6.  視需要在 **[進階]** 索引標籤上設定屬性。如需這些屬性的詳細資訊，請參閱＜ [DQS Cleansing Transformation Editor Dialog Box](../../dqs-cleansing-transformation-editor-dialog-box.md)＞。  
   

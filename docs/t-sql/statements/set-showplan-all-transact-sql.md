@@ -28,11 +28,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8ef59fc6349a588bbb58515614d6d977253d213a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733977"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62816846"
 ---
 # <a name="set-showplanall-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  *表示成本單位是根據內部時間度量，而不是根據時鐘的時間。 成本單位是用來判斷計畫的相對成本 (相較於其他計畫而言)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要使用 SET SHOWPLAN_ALL，您必須對 SET SHOWPLAN_ALL 執行所在之陳述式有適當的執行權限，且必須對包含所參考之物件的所有資料庫擁有 SHOWPLAN 權限。  
   
  對於 SELECT、INSERT、UPDATE、DELETE、EXEC *stored_procedure* 和 EXEC *user_defined_function* 陳述式，若要產生執行程序表，使用者必須：  

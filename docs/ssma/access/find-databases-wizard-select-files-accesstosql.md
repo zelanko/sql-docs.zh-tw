@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3e4142a3492b37df8e161b965639bf8900570c23
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62741243"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>尋找資料庫精靈 （選取檔案） (AccessToSQL)
@@ -26,7 +26,7 @@ ms.locfileid: "62741243"
   
 若要選取要加入至 SSMA 檔案，選取檔案名稱旁邊的核取方塊。 當您完成選取的檔案，請按一下**下一步**若要檢視 完成 頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **全選**  
 選取此核取方塊以選取清單中的所有資料庫。  
   
