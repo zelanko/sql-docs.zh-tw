@@ -9,10 +9,10 @@ ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3eb298bc6b359b0df92566f9add8d7011cdc907
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573846"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>疑難排解 Reporting Services 的報表設計問題
@@ -26,7 +26,7 @@ ms.locfileid: "65573846"
   
 直接加到設計介面的文字方塊，只能顯示為資料集的彙總值。  
   
-若要確認文字方塊的父容器，請選取該文字方塊，然後在 [屬性] 窗格中捲動至 **[Parent]**。   
+若要確認文字方塊的父容器，請選取該文字方塊，然後在 [屬性] 窗格中捲動至 **[Parent]** 。   
   
 如果您需要文字方塊顯示資料集中的每一個值，請使用資料表或矩陣之類的資料區。 依預設，資料表或矩陣中的每個資料格都包含一個文字方塊。 將資料集欄位拖曳至各資料格。   
   
