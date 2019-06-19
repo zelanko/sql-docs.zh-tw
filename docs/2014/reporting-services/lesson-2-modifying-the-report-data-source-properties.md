@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 619d35c084884aa72de63ff221d5a6f61ea86196
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108476"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>第 2 課：修改報表資料來源屬性
@@ -36,13 +36,13 @@ ms.locfileid: "66108476"
   
 1.  開始[報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)系統管理員權限，例如，以滑鼠右鍵按一下 Internet explorer 的圖示，然後按一下**系統管理員身分執行**。  
   
-2.  瀏覽到包含 **Sales Orders** 報表的資料夾，然後在報表的內容功能表中，按一下 **[管理]**。  
+2.  瀏覽到包含 **Sales Orders** 報表的資料夾，然後在報表的內容功能表中，按一下 **[管理]** 。  
   
      ![開啟 [報表] 內容功能表，然後選取 [管理]](../../2014/tutorials/media/ssrs-tutorial-datadriven-manage-report.gif "開啟報表內容功能表，然後選取 [管理]")  
   
-3.  按一下 [資料來源] 索引標籤。  
+3.  按一下 [資料來源]  索引標籤。  
   
-4.  針對 **[連接類型]**，選取 **[Microsoft SQL Server]**。  
+4.  針對 **[連接類型]** ，選取 **[Microsoft SQL Server]** 。  
   
 5.  自訂資料來源連接字串將如下所示，而且它會假設範例資料庫位於本機資料庫伺服器上：  
   
@@ -50,15 +50,15 @@ ms.locfileid: "66108476"
     Data source=localhost; initial catalog=AdventureWorks2012  
     ```  
   
-6.  按一下 **[安全地儲存在報表伺服器中的認證]**。  
+6.  按一下 **[安全地儲存在報表伺服器中的認證]** 。  
   
 7.  輸入您的使用者名稱 (使用 *domain\user*格式) 和密碼。 如果您沒有存取 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫的權限，請指定有這項權限的登入。  
   
 8.  按一下 **當做 windows 認證連接到資料來源時使用**，然後按一下**確定**。 如果您並未使用網域帳戶 (例如，您是使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登入)，請勿點選這個核取方塊。  
   
-9. 按一下 [測試連接]，確認您能夠連線到資料來源。  
+9. 按一下 [測試連接]  ，確認您能夠連線到資料來源。  
   
-10. 按一下 **[套用]**。  
+10. 按一下 **[套用]** 。  
   
 11. 檢視報表以確認報表是以您指定的認證來執行。 若要檢視報表，請按一下 [ **檢視** ] 索引標籤。請注意，報表開啟之後，您必須選取員工姓名，然後按一下**檢視報表**按鈕，以檢視報表。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66108476"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中開啟 Sales Orders 報表。  
   
-2.  以滑鼠右鍵按一下 `AdventureWorksDataset` 資料集，然後按一下 [資料集屬性]。  
+2.  以滑鼠右鍵按一下 `AdventureWorksDataset` 資料集，然後按一下 [資料集屬性]  。  
   
 3.  在 `WHERE (UPPER(SalesOrderNumber) =UPPER(@OrderNumber) or  @OrderNumber IS NULL)` 陳述式前面加入 `Group By` 陳述式。 完整的查詢語法如下：  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66108476"
     HAVING (ppc.Name = 'Clothing')  
     ```  
   
-4.  按一下 **[確定]**。  
+4.  按一下 **[確定]** 。  
   
 ##  <a name="bkmk_add_reportparameter"></a> 若要加入報表參數並重新發行報表  
   
@@ -97,11 +97,11 @@ ms.locfileid: "66108476"
   
 3.  在 **[提示]** 中，輸入 `OrderNumber`。  
   
-4.  選取 [允許空白值 ("")]。  
+4.  選取 [允許空白值 ("")]  。  
   
-5.  選取 [允許 Null 值]。  
+5.  選取 [允許 Null 值]  。  
   
-6.  按一下 [確定] 。 參數會加入至**報表資料 窗格**和它看起來如下圖所示：  
+6.  按一下 [確定]  。 參數會加入至**報表資料 窗格**和它看起來如下圖所示：  
   
      ![新的參數加入至 [報表資料] 窗格](../../2014/tutorials/media/ssrs-tutorial-datadriven-parameter.gif "新的參數加入至 [報表資料] 窗格")  
   
@@ -119,7 +119,7 @@ ms.locfileid: "66108476"
   
 1.  請重新部署報表，讓下一課的訂閱組態能夠運用您在這一課所做的變更。 如需有關用於資料表教學課程中的專案屬性的詳細資訊，請參閱 ' 若要將報表發行至報表伺服器 （選擇性）' 區段的[第 6 課：新增群組和總計 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
   
-2.  在工具列上，按一下 **[建置]** ，然後按一下 **[部署教學課程]**。  
+2.  在工具列上，按一下 **[建置]** ，然後按一下 **[部署教學課程]** 。  
   
 ## <a name="next-steps"></a>後續步驟  
  您已順利設定報表來利用預存認證取得資料。 之後，您可以使用報表管理員中的 [資料驅動訂閱] 頁面來指定訂閱。 請參閱[第 3 課：定義資料驅動訂閱](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)。  

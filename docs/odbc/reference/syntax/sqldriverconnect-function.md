@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 225b882a6c48900e9a15a23e4073910315848985
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537646"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 函數
@@ -63,7 +63,7 @@ SQLRETURN SQLDriverConnect(
   
 ## <a name="arguments"></a>引數  
  *ConnectionHandle*  
- [輸入]連接控制代碼。  
+ [輸入] 連線控制代碼。  
   
  *WindowHandle*  
  [輸入]視窗控制代碼。 應用程式可以將傳遞的父視窗控制代碼，如果適用的話，或如果是 null 指標的視窗控制代碼不適用或**SQLDriverConnect**將不會顯示任何對話方塊。  

@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 32ddb009c4cbeb843e3c2150431a43d86219fc5d
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326069"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62945756"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE 伺服器主體權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,11 +58,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  *permission*  
  指定可以撤銷的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- LOGIN **::***SQL_Server_login*  
- 指定要撤銷其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 範圍限定詞 (**::**) 是必要項。  
+ LOGIN **::** *SQL_Server_login*  
+ 指定要撤銷其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 範圍限定詞 ( **::** ) 是必要項。  
   
  SERVER ROLE **::** *server_role*  
- 指定要撤銷其權限的伺服器角色。 範圍限定詞 (**::**) 是必要項。  
+ 指定要撤銷其權限的伺服器角色。 範圍限定詞 ( **::** ) 是必要項。  
   
  { FROM | TO } \<server_principal> 指定要撤銷其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或伺服器角色。  
   
@@ -106,7 +106,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  對於登入，需要登入的 CONTROL 權限或伺服器的 ALTER ANY LOGIN 權限。  
   
  對於伺服器角色，需要伺服器角色的 CONTROL 權限或伺服器的 ALTER ANY SERVER ROLE 權限。  

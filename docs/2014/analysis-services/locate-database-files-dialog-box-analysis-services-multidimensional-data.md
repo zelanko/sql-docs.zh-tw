@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a013ed1ca80e17f89baba65b89c460b6ee68691
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078033"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>尋找資料庫檔案對話方塊 (Analysis Services - 多維度資料)
@@ -24,17 +24,17 @@ ms.locfileid: "66078033"
   
 -   按一下 **[還原資料庫]** 對話方塊之 **[一般]** 頁面上的 **[瀏覽]** 。  
   
--   在 [還原資料庫] 對話方塊的 [資料分割] 頁面上，於 [還原備份資料分割] 選項之方格的 [備份檔案] 資料行上，按一下省略符號按鈕 (**...**)。  
+-   在 [還原資料庫]  對話方塊的 [資料分割]  頁面上，於 [還原備份資料分割]  選項之方格的 [備份檔案]  資料行上，按一下省略符號按鈕 ( **...** )。  
   
 ## <a name="options"></a>選項  
  **選取的資料夾**  
- 選取資料夾，將 [選取的路徑] 設定為所要的路徑。  
+ 選取資料夾，將 [選取的路徑]  設定為所要的路徑。  
   
  **選取的路徑**  
- 輸入以修改從 [選取資料夾] 選取的路徑，或選取 [選取資料夾] 中未列出的檔案。  
+ 輸入以修改從 [選取資料夾]  選取的路徑，或選取 [選取資料夾]  中未列出的檔案。  
   
  **檔案名稱**  
- 輸入以修改從 [選取資料夾] 選取的檔案，或選取 [選取資料夾] 中未列出的檔案。  
+ 輸入以修改從 [選取資料夾]  選取的檔案，或選取 [選取資料夾]  中未列出的檔案。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7db4849a71644772f055059d18faa9f964603913
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066005"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (KPI 索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
-  使用 [工具列] 窗格，即可執行 [Cube 設計師] 中 [KPI] 索引標籤上的一般動作。  
+  使用 [工具列]  窗格，即可執行 [Cube 設計師] 中 [KPI]  索引標籤上的一般動作。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **加入商業智慧**  
  按一下以顯示 **[商業智慧精靈]** ，並將商業智慧功能加入至 Cube。  
   
@@ -28,40 +28,40 @@ ms.locfileid: "66066005"
  按一下以顯示 **[處理]** 對話方塊，並處理 Cube。  
   
  **重新連線**  
- 如果由於連接遺失或逾時，因而造成 [KPI] 索引標籤的工作階段連接中斷，則按一下即可將 [KPI] 索引標籤重新連接到包含 Cube 的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體和資料庫。  
+ 如果由於連接遺失或逾時，因而造成 [KPI]  索引標籤的工作階段連接中斷，則按一下即可將 [KPI]  索引標籤重新連接到包含 Cube 的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體和資料庫。  
   
  **新的 KPI**  
- 按一下即可顯示 [KPI 表單編輯器]，並建立新的關鍵效能指標 (KPI)。  
+ 按一下即可顯示 [KPI 表單編輯器]  ，並建立新的關鍵效能指標 (KPI)。  
   
 > [!NOTE]  
 >  此選項只會在表單檢視中啟用。  
   
  **刪除**  
- 按一下即可顯示 [刪除物件] 對話方塊，並刪除選取的 KPI。  
+ 按一下即可顯示 [刪除物件]  對話方塊，並刪除選取的 KPI。  
   
 > [!NOTE]  
 >  此選項只會在表單檢視中啟用。  
   
  **上移**  
- 按一下即可將 [KPI 組合管理] 窗格中所選取的 KPI 向上移動一個位置。  
+ 按一下即可將 [KPI 組合管理]  窗格中所選取的 KPI 向上移動一個位置。  
   
 > [!NOTE]  
 >  此選項只會在表單檢視中啟用。  
   
  **下移**  
- 按一下即可將 [KPI 組合管理] 窗格中所選取的 KPI 向下移動一個位置。  
+ 按一下即可將 [KPI 組合管理]  窗格中所選取的 KPI 向下移動一個位置。  
   
 > [!NOTE]  
 >  此選項只會在表單檢視中啟用。  
   
  **表單檢視**  
- 選取即可在表單檢視中使用 [KPI] 索引標籤。  
+ 選取即可在表單檢視中使用 [KPI]  索引標籤。  
   
  **瀏覽器檢視**  
- 選取即可在瀏覽器檢視中使用 [KPI] 索引標籤。  
+ 選取即可在瀏覽器檢視中使用 [KPI]  索引標籤。  
   
  **請檢查語法**  
- 按一下即可檢查 [KPI 組合管理] 窗格中所選取之 KPI 的語法。  
+ 按一下即可檢查 [KPI 組合管理]  窗格中所選取之 KPI 的語法。  
   
 > [!NOTE]  
 >  此選項只會在表單檢視中啟用。  

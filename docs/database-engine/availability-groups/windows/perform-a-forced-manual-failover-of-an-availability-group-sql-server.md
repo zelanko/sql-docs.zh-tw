@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: e79323684bff589f54d3247d2feb710d97ceebe8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798204"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>執行 Always On 可用性群組的強制手動容錯移轉 (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "66798204"
   
  在下列緊急情況中，必須執行強制容錯移轉：  
   
--   在 WSFC 叢集上強制進行仲裁之後 (「強制仲裁」(Forced Quorum))，您需要強制容錯移轉每個可用性群組 (可能會遺失資料)。 強制容錯移轉是必要的，因為 WSFC 叢集值的實際狀態可能已遺失。 不過，您能夠在強制仲裁之前，在裝載主要複本的伺服器執行個體上強制容錯移轉，或是在強制仲裁之前容錯移轉至同步處理的次要複本，則可以避免資料遺失。 如需詳細資訊，請參閱本主題稍後的 [避免在強制仲裁之後遺失資料的可能方式](#WaysToAvoidDataLoss)。  
+-   在 WSFC 叢集上強制進行仲裁之後 (「強制仲裁」(Forced Quorum)  )，您需要強制容錯移轉每個可用性群組 (可能會遺失資料)。 強制容錯移轉是必要的，因為 WSFC 叢集值的實際狀態可能已遺失。 不過，您能夠在強制仲裁之前，在裝載主要複本的伺服器執行個體上強制容錯移轉，或是在強制仲裁之前容錯移轉至同步處理的次要複本，則可以避免資料遺失。 如需詳細資訊，請參閱本主題稍後的 [避免在強制仲裁之後遺失資料的可能方式](#WaysToAvoidDataLoss)。  
   
     > [!IMPORTANT]  
     >  如果仲裁透過自然而不是強制的方式重新取得，則可用性複本會進行一般復原。 如果在重新取得仲裁之後主要複本仍然無法使用，您可以執行規劃的手動容錯移轉至同步處理的次要複本。  
@@ -106,7 +106,7 @@ ms.locfileid: "66798204"
   
      如果 **is_failover_ready** = 1，資料庫在叢集中會標示為已同步處理，並且準備好進行容錯移轉。 如果在給定次要複本的每個資料庫上 **is_failover_ready** = 1，您可以執行強制容錯移轉 (FORCE_FAILOVER_ALLOW_DATA_LOSS)，而且這個次要複本的資料不會遺失。 同步處理的次要複本會在主要角色中變成線上，也就是成為新的主要複本，而且所有資料都保持不變。  
   
-     如果 **is_failover_ready** = 0，資料庫在叢集中不會標示為已同步處理，並且「尚未」準備好進行規劃的手動容錯移轉。 如果您強制容錯移轉至主控次要複本，則這個資料庫中的資料將會遺失。  
+     如果 **is_failover_ready** = 0，資料庫在叢集中不會標示為已同步處理，並且「尚未」  準備好進行規劃的手動容錯移轉。 如果您強制容錯移轉至主控次要複本，則這個資料庫中的資料將會遺失。  
   
     > [!NOTE]  
     >  當您強制容錯移轉至次要複本時，遺失的資料量將取決於容錯移轉目標落後於主要複本的距離。 不幸的是，當 WSFC 叢集缺少仲裁或已強制仲裁時，您就無法評估可能遺失的資料量。 不過請注意，一旦 WSFC 叢集重新取得狀況良好的仲裁，您就可以開始追蹤可能的資料遺失。 如需詳細資訊，請參閱 [容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)中的 PowerShell，在 AlwaysOn 可用性群組上執行強制容錯移轉 (可能會遺失資料)。  
@@ -120,9 +120,9 @@ ms.locfileid: "66798204"
   
 1.  在 [物件總管] 中，連接到裝載需要容錯移轉之可用性群組中，其角色為 SECONDARY 或 RESOLVING 狀態之複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
   
-2.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
+2.  依序展開 [Always On 高可用性]  節點和 [可用性群組]  節點。  
   
-3.  以滑鼠右鍵按一下要容錯移轉的可用性群組，然後選取 [容錯移轉] 命令。  
+3.  以滑鼠右鍵按一下要容錯移轉的可用性群組，然後選取 [容錯移轉]  命令。  
   
 4.  這會啟動「容錯移轉可用性群組精靈」。 如需詳細資訊，請參閱本主題稍後的 [使用容錯移轉可用性群組精靈 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)中的 PowerShell，在 AlwaysOn 可用性群組上執行強制容錯移轉 (可能會遺失資料)。  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6429fb7f30c748c7ac0a8ab69bc16c3d63b4d3ae
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067295"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>從 SQL Server Data Tools 部署 (SSAS 表格式)
@@ -35,17 +35,17 @@ ms.locfileid: "66067295"
   
 #### <a name="to-configure-deployment-options-and-deployment-server-properties"></a>若要設定部署選項與部署伺服器屬性  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的方案總管中，以滑鼠右鍵按一下專案名稱，然後按一下 [屬性]。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的方案總管  中，以滑鼠右鍵按一下專案名稱，然後按一下 [屬性]  。  
   
 2.  在  **\<專案名稱 > 屬性**對話方塊，請在**部署選項**，指定屬性設定，如果不同於預設設定。  
   
     > [!NOTE]  
-    >  快取模式之模型的 [查詢模式] 一律是 [記憶體內部]。  
+    >  快取模式之模型的 [查詢模式]  一律是 [記憶體內部]  。  
   
     > [!NOTE]  
-    >  您無法在 DirectQuery 模式下指定模型的 [模擬設定]。  
+    >  您無法在 DirectQuery 模式下指定模型的 [模擬設定]  。  
   
-3.  在 [部署伺服器] 中，指定 [伺服器] (名稱)、[版本]、[資料庫] (名稱) 及 [Cube 名稱] 屬性設定 (如果與預設設定不同)，然後按一下 [確定]。  
+3.  在 [部署伺服器]  中，指定 [伺服器]  (名稱)、[版本]  、[資料庫]  (名稱) 及 [Cube 名稱]  屬性設定 (如果與預設設定不同)，然後按一下 [確定]  。  
   
 > [!NOTE]  
 >  您也可以指定 [預設部署伺服器] 屬性設定，自動將您建立的任何新專案部署至指定的伺服器。 如需詳細資訊，請參閱 [設定預設的資料模型和部署屬性 &#40;SSAS 表格式&#41;](properties-ssas-tabular.md)中的 [部署] 命令來部署表格式模型方案。  
@@ -54,12 +54,12 @@ ms.locfileid: "66067295"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>若要部署表格式模型方案  
   
--   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]上**建置**功能表上，按一下 **部署\<專案名稱 >**。  
+-   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]上**建置**功能表上，按一下 **部署\<專案名稱 >** 。  
   
-     [部署] 對話方塊將會出現，並指出模型中包含之每個資料表的中繼資料部署與處理狀態 (除非 [處理選項] 屬性設為 [不處理])。 部署程序完成後，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 連接至 Analysis Services 執行個體，並確認已建立新的模型資料庫物件，或使用用戶端報表應用程式連接至已部署的模型。  
+     [部署]  對話方塊將會出現，並指出模型中包含之每個資料表的中繼資料部署與處理狀態 (除非 [處理選項] 屬性設為 [不處理])。 部署程序完成後，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 連接至 Analysis Services 執行個體，並確認已建立新的模型資料庫物件，或使用用戶端報表應用程式連接至已部署的模型。  
   
 ##  <a name="bkmk_deploy_status"></a> 部署狀態  
- [部署] 對話方塊可讓您監視部署作業的進度。 您也可以停止部署作業。  
+ [部署]  對話方塊可讓您監視部署作業的進度。 您也可以停止部署作業。  
   
  **狀態**  
  指出部署作業是否成功。  

@@ -20,10 +20,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e957b45415f42f469166831cf68058d276c9cd33
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980409"
 ---
 # <a name="reserved-keywords-transact-sql"></a>保留關鍵字 (Transact-SQL)
@@ -223,7 +223,7 @@ ms.locfileid: "65980409"
 |BLOB|LAST|SESSION|  
 |BOOLEAN|LATERAL|SETS|  
 |BOTH|LEADING|SIMILAR|  
-|BREADTH|LESS|SIZE |  
+|BREADTH|LESS|SIZE|  
 |CALL|LEVEL|SMALLINT|  
 |CALLED|LIKE_REGEX|SPACE|  
 |CARDINALITY|LIMIT|SPECIFIC|  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109800"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>點選連結報表頁面 (報表管理員)
@@ -42,11 +42,11 @@ ms.locfileid: "66109800"
   
 2.  將滑鼠停留在該模型上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該模型的 **[一般]** 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該模型的 **[一般]** 屬性頁面。  
   
 4.  選取 **[點選連結]** 索引標籤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **模型項目階層**  
  顯示模型命名空間中，您可以為其提供自訂報表的實體、資料夾和項目。  
   

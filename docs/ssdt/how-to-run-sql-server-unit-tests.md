@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: b838503365dde968f938efb46c940f3a66ce4357
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098461"
 ---
 # <a name="how-to-run-sql-server-unit-tests"></a>如何：執行 SQL Server 單元測試
@@ -28,33 +28,33 @@ ms.locfileid: "65098461"
   
 ### <a name="to-run-sql-server-unit-tests-using-test-view-visual-studio-2010"></a>若要使用測試檢視 (Visual Studio 2010) 執行 SQL Server 單元測試  
   
-1.  在 [測試] 功能表上，指向 [Windows]，然後按一下 [測試檢視]。  
+1.  在 [測試]  功能表上，指向 [Windows]  ，然後按一下 [測試檢視]  。  
   
-    [測試檢視] 視窗隨即開啟。  
+    [測試檢視]  視窗隨即開啟。  
   
-2.  在 [測試檢視] 視窗中，按一下您想要執行的一個或多個測試。 您可以使用 CTRL 鍵或 SHIFT 鍵來指定不連續或連續的測試區塊。  
+2.  在 [測試檢視]  視窗中，按一下您想要執行的一個或多個測試。 您可以使用 CTRL 鍵或 SHIFT 鍵來指定不連續或連續的測試區塊。  
   
 3.  執行下列任一步驟：  
   
-    -   以滑鼠右鍵按一下 [測試檢視] 視窗的介面，然後按一下 [執行選取範圍]。  
+    -   以滑鼠右鍵按一下 [測試檢視]  視窗的介面，然後按一下 [執行選取範圍]  。  
   
-    -   在 [測試檢視] 工具列上，按一下 [執行選取範圍]。  
+    -   在 [測試檢視]  工具列上，按一下 [執行選取範圍]  。  
   
 ### <a name="to-run-sql-server-unit-tests-using-test-explorer-visual-studio-2012"></a>若要使用測試總管 (Visual Studio 2012) 執行 SQL Server 單元測試  
   
-1.  在 [測試] 功能表上，指向 [Windows]，然後按一下 [測試總管]。  
+1.  在 [測試]  功能表上，指向 [Windows]  ，然後按一下 [測試總管]  。  
   
-    [測試總管] 視窗隨即開啟。  
+    [測試總管]  視窗隨即開啟。  
   
-2.  在 [測試總管] 中，按一下您想要執行的一個或多個測試。 您可以使用 CTRL 鍵或 SHIFT 鍵來指定不連續或連續的測試區塊。  
+2.  在 [測試總管]  中，按一下您想要執行的一個或多個測試。 您可以使用 CTRL 鍵或 SHIFT 鍵來指定不連續或連續的測試區塊。  
   
-3.  以滑鼠右鍵按一下其中一個反白顯示的測試，然後按一下 [執行選取的測試]。  
+3.  以滑鼠右鍵按一下其中一個反白顯示的測試，然後按一下 [執行選取的測試]  。  
   
 ### <a name="to-run-sql-server-unit-tests-from-the-sql-server-unit-test-designer-visual-studio-2010"></a>若要從 SQL Server 單元測試設計工具 (Visual Studio 2010) 執行 SQL Server 單元測試  
   
--   在 [測試工具] 工具列上，您會找到使用或不使用偵錯工具啟動專案的按鈕。  
+-   在 [測試工具]  工具列上，您會找到使用或不使用偵錯工具啟動專案的按鈕。  
   
-這個步驟會在目前的測試回合中執行所有測試。 啟動測試回合之後，[測試結果] 視窗隨即出現並顯示測試回合的進度。 這個顯示畫面包括執行中的測試以及已完成的測試。 如需詳細資訊，請參閱[解譯 SQL Server 單元測試結果](../ssdt/interpreting-sql-server-unit-test-results.md)。  
+這個步驟會在目前的測試回合中執行所有測試。 啟動測試回合之後，[測試結果]  視窗隨即出現並顯示測試回合的進度。 這個顯示畫面包括執行中的測試以及已完成的測試。 如需詳細資訊，請參閱[解譯 SQL Server 單元測試結果](../ssdt/interpreting-sql-server-unit-test-results.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [執行 SQL Server 單元測試](../ssdt/running-sql-server-unit-tests.md)  

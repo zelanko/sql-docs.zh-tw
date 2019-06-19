@@ -27,10 +27,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 82107dd0e4e5927eec1670a2a4e9fcf933ae35df
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503314"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
@@ -77,7 +77,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
  指定要截斷的資料分割，或要移除所有資料列的部分。 如果未分割此資料表，**WITH PARTITIONS** 引數將會產生錯誤。 如果未提供 **WITH PARTITIONS** 子句，將會截斷整個資料表。  
   
- 您可以使用下列方式來指定 *\<partition_number_expression>*： 
+ 您可以使用下列方式來指定 *\<partition_number_expression>* ： 
   
 -   提供資料分割的編號，例如：`WITH (PARTITIONS (2))`  
   

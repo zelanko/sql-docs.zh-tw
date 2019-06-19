@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: c2679abba1e452ec65b43ca16cc90fc7cb244436
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092786"
 ---
 # <a name="report-manager-url-ssrs-native-mode"></a>報表管理員 URL (SSRS 原生模式)
@@ -31,7 +31,7 @@ ms.locfileid: "66092786"
 > [!NOTE]  
 >  如果報表管理員尚未啟用，您就無法設定此頁面上的選項。 如需啟用報表管理員的詳細資訊，請參閱[Reporting Services 組態管理員&#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **虛擬目錄**  
  為報表管理員指定虛擬目錄名稱。 相同電腦上的每一個報表管理員執行個體只能有一個虛擬目錄名稱。  
   

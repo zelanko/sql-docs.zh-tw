@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 747cf2bb865fb9b3fcdb11a43e410f574556dcc5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723891"
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>連線至 Excel 資料來源 (SQL Server 匯入和匯出精靈)
@@ -22,7 +22,7 @@ ms.locfileid: "65723891"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-本文示範如何從 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面中連線至 **Microsoft Excel** 資料來源。
+本文示範如何從 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源]  或 [選擇目的地]  頁面中連線至 **Microsoft Excel** 資料來源。
 
 下列螢幕擷取畫面顯示 Microsoft Excel 活頁簿的連接範例。
 
@@ -36,17 +36,17 @@ ms.locfileid: "65723891"
 ## <a name="options-to-specify"></a>要指定的選項
 
 > [!NOTE]
-> 不論 Excel 是您的來源還是目的地，此資料提供者的連線選項都會相同。 也就是，您在精靈的 [選擇資料來源] 和 [選擇目的地] 頁面上看到的選項會相同。
+> 不論 Excel 是您的來源還是目的地，此資料提供者的連線選項都會相同。 也就是，您在精靈的 [選擇資料來源]  和 [選擇目的地]  頁面上看到的選項會相同。
 
 **Excel 檔案路徑**  
  指定 Excel 檔案的路徑和檔案名稱。 例如：
 -   本機電腦上的檔案為 **C:\\MyData.xlsx**。
 -   網路共用上的檔案為 **\\\\Sales\\Database\\Northwind.xlsx**。
 
-或按一下 [瀏覽]。  
+或按一下 [瀏覽]  。  
   
  **瀏覽**  
- 使用 [開啟] 對話方塊來找出試算表。  
+ 使用 [開啟]  對話方塊來找出試算表。  
 
 > [!NOTE]
 > 精靈無法開啟受密碼保護的 Excel 檔案。

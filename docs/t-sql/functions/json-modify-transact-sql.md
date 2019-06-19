@@ -13,10 +13,10 @@ ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 8c12a2213c39a8a464a29697e5621a382b6daf69
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577460"
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
@@ -48,15 +48,15 @@ JSON_MODIFY ( expression , path , newValue )
  `[append] [ lax | strict ] $.<json path>`  
   
 - *append*  
-    選用的修飾詞，指定新的值應附加到 \<JSON 路徑> 參考的陣列。  
+    選用的修飾詞，指定新的值應附加到 \<JSON 路徑>  參考的陣列。  
   
 - *lax*  
-    指定 \<JSON 路徑> 參考的屬性不一定要存在。 若屬性不存在，JSON_MODIFY 便會嘗試在指定的路徑插入新值。 若屬性無法在路徑上插入，插入可能會失敗。 若您未指定 *lax* 或 *strict*，則預設模式為 *lax*。  
+    指定 \<JSON 路徑>  參考的屬性不一定要存在。 若屬性不存在，JSON_MODIFY 便會嘗試在指定的路徑插入新值。 若屬性無法在路徑上插入，插入可能會失敗。 若您未指定 *lax* 或 *strict*，則預設模式為 *lax*。  
   
 - *strict*  
-    指定 \<JSON 路徑> 參考的屬性必須存在於 JSON 運算式中。 若屬性不存在，JSON_MODIFY 會傳回錯誤。  
+    指定 \<JSON 路徑>  參考的屬性必須存在於 JSON 運算式中。 若屬性不存在，JSON_MODIFY 會傳回錯誤。  
   
-- \<JSON 路徑>  
+- \<JSON 路徑>   
     指定要更新之屬性的路徑。 如需詳細資訊，請參閱 [JSON 路徑運算式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)。  
   
 在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 及 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中，您可以將變數作為 *path* 的值提供。

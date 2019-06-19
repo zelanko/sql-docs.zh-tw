@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: baae353ae8528c6c62e41afbec84d30772d561c3
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099271"
 ---
 # <a name="sort-in-ascending-or-descending-order-visual-database-tools"></a>以遞增或遞減順序排序 (Visual Database Tools)
@@ -32,9 +32,9 @@ ms.locfileid: "65099271"
   
 ### <a name="to-specify-or-change-the-order-in-which-results-are-sorted"></a>指定或變更已經排序結果的順序  
   
-1.  在 [準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) 中，對要重新排序的資料行按一下 [排序類型] 欄位。  
+1.  在 [準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) 中，對要重新排序的資料行按一下 [排序類型]  欄位。  
   
-2.  選擇 [遞增] 或 [遞減]以指定資料行的排序順序。  
+2.  選擇 [遞增]  或 [遞減]  以指定資料行的排序順序。  
   
 請注意，使用 [準則窗格] 時，查詢的 UNION 子句會變更，以符合您最近的動作。  
   

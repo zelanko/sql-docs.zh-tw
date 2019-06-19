@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3cc37fe2dce76dd59baf776238e141a685c94cb3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722573"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>第 1 課：使用 SSIS 來建立專案和基本套件
@@ -38,9 +38,9 @@ ms.locfileid: "65722573"
 
     1.  瀏覽至 [Integration Services 教學課程檔案](https://www.microsoft.com/en-us/download/details.aspx?id=56827) \(英文\)。
 
-    2.  選取 [Download] \(下載\) 按鈕。
+    2.  選取 [Download] \(下載\)  按鈕。
 
-    3.  選取 [Creating a Simple ETL Package.zip] \(建立簡單的 ETL Package.zip\) 檔案，然後選取 [Next] \(下一步\)。
+    3.  選取 [Creating a Simple ETL Package.zip] \(建立簡單的 ETL Package.zip\)  檔案，然後選取 [Next] \(下一步\)  。
 
     4.  下載檔案之後，將其內容解壓縮至本機目錄。  
 

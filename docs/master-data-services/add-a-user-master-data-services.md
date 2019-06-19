@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 11c4a53fc29e23a41ac2d7f16109bd41a0cc34c1
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484834"
 ---
 # <a name="add-a-user-master-data-services"></a>加入使用者 (Master Data Services)
@@ -34,15 +34,15 @@ ms.locfileid: "65484834"
   
 ### <a name="to-add-a-user"></a>若要加入使用者  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]** 。  
   
-2.  在 **[使用者]** 頁面上，按一下 **[加入使用者]**。  
+2.  在 **[使用者]** 頁面上，按一下 **[加入使用者]** 。  
   
 3.  輸入使用者名稱，並在名稱前面加入 Active Directory 網域名稱或伺服器電腦名稱，如下： *domain*\\*user_name* 或 *computer\user_name*。  
   
-4.  (選擇性) 按一下 **[檢查名稱]**。  
+4.  (選擇性) 按一下 **[檢查名稱]** 。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
 ## <a name="next-steps"></a>後續步驟  
   

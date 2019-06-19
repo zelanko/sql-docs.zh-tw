@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: d555bc79dffcb750494bd9f1f79622d03fc75eb5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795326"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>準備鏡像資料庫以進行鏡像 (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "66795326"
   
 -   [若要準備新的鏡像資料庫](#CombinedProcedure)  
   
--   **後續操作：**[準備鏡像資料庫之後](#FollowUp)  
+-   **後續操作：** [準備鏡像資料庫之後](#FollowUp)  
   
 -   [相關工作](#RelatedTasks)  
   

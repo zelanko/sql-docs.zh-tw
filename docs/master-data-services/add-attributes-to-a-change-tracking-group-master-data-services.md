@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 335bdd657c0aa2f687d89f31dfcdd45d757e0cbd
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484809"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>將屬性加入至變更追蹤群組 (Master Data Services)
@@ -42,15 +42,15 @@ ms.locfileid: "65484809"
   
 ### <a name="to-add-attributes-to-a-change-tracking-group"></a>若要將屬性加入至變更追蹤群組  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 [管理模型]  頁面上，從方格中選取模型，然後按一下 [實體] 。  
+2.  在 [管理模型]  頁面上，從方格中選取模型，然後按一下 [實體]  。  
   
 3.  在 [管理實體]  頁面上，選取您要為其建立屬性之實體的資料列。  
   
-4.  按一下 **[屬性]**。  
+4.  按一下 **[屬性]** 。  
   
-5.  在 [管理屬性] 頁面上，執行下列其中一項動作。  
+5.  在 [管理屬性]  頁面上，執行下列其中一項動作。  
   
     -   如果是分葉成員的屬性，請選取 [成員類型]  清單方塊的 [分葉]  。  
   
@@ -58,15 +58,15 @@ ms.locfileid: "65484809"
   
     -   如果是集合的屬性，請選取 [成員類型]  清單方塊的 [集合]  。  
   
-6.  選取要編輯的屬性資料列，然後按一下 [編輯]。  
+6.  選取要編輯的屬性資料列，然後按一下 [編輯]  。  
   
-7.  選取 [啟用變更追蹤] 核取方塊。  
+7.  選取 [啟用變更追蹤]  核取方塊。  
   
-8.  在 [變更追蹤群組] 方塊中，輸入群組的編號。  
+8.  在 [變更追蹤群組]  方塊中，輸入群組的編號。  
   
-9. 按一下 **[儲存屬性]**。  
+9. 按一下 **[儲存屬性]** 。  
   
-     對於已編輯的屬性，方格中的 [Enable Change Tracking Group (啟用變更追蹤群組)] 資料行會變更為 [Yes (Group: entered group number) (是 (群組: 已輸入群組編號))]。  
+     對於已編輯的屬性，方格中的 [Enable Change Tracking Group (啟用變更追蹤群組)]  資料行會變更為 [Yes (Group: entered group number) (是 (群組: 已輸入群組編號))]  。  
   
 10. 重複此程序，加入要包含在群組中的所有屬性。 對群組中的每個屬性，使用相同的變更追蹤群組編號。  
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 9e982071f1d975b74f1c0c1cab1d6113293773d4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66761735"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>設定 default language 伺服器組態選項
@@ -39,7 +39,7 @@ ms.locfileid: "66761735"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定預設語言選項之後](#FollowUp)  
+-   **後續操作：** [設定預設語言選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -56,11 +56,11 @@ ms.locfileid: "66761735"
   
 #### <a name="to-configure-the-default-language-option"></a>設定 default language 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
   
-2.  按一下 [進階] 索引標籤。  
+2.  按一下 [進階]  索引標籤。  
   
-3.  在 [預設語言] 方塊中，選擇 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應該以哪種語言顯示系統訊息。  
+3.  在 [預設語言]  方塊中，選擇 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應該以哪種語言顯示系統訊息。  
   
      預設語言為英文。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "66761735"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `default language` 選項設定為法文 (`2`)。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `default language` 選項設定為法文 (`2`)。  
   
 ```sql  
 USE AdventureWorks2012 ;  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6aab8fc0c8e083181779c13654b0d7d42531e50
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108172"
 ---
 # <a name="new-linked-report-page-report-manager"></a>新增連結報表頁面 (報表管理員)
@@ -31,7 +31,7 @@ ms.locfileid: "66108172"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[建立連結報表]**。  
+3.  在下拉式功能表中，按一下 **[建立連結報表]** 。  
   
 ###### <a name="to-open-the-new-linked-report-page-from-the-general-properties-page-of-a-report"></a>若要從報表的一般屬性頁面開啟新增連結報表頁面  
   
@@ -39,18 +39,18 @@ ms.locfileid: "66108172"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該報表的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該報表的 [一般] 屬性頁面。  
   
-4.  在項目工具列中，按一下 **[建立連結報表]**。  
+4.  在項目工具列中，按一下 **[建立連結報表]** 。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  指定連結報表的名稱。 名稱必須至少包含一個英數字元。 也可以包含空格和特定符號。 不過，您不可以使用 ; ? : \@ & = +，$ / * \< > |"或 / 來指定名稱。  
   
  **說明**  
  輸入報表內容的描述。 此描述顯示在有權存取此報表的使用者的 [內容] 頁面上。  
   
- **位置**  
+ **Location**  
  指定含有此報表的資料夾路徑。 在預設狀況下，建立的連結報表與基礎報表為同層級。 按一下 **[變更位置]** 即可將連結報表置於不同的資料夾中。  
   
  **確定**  

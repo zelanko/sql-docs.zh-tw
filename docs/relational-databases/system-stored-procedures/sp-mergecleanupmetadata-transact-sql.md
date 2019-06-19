@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017844"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
@@ -39,9 +39,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是**%**，會清除所有發行集的中繼資料。 如果明確指定的話，發行集必須已存在。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是 **%** ，會清除所有發行集的中繼資料。 如果明確指定的話，發行集必須已存在。  
   
-`[ @reinitialize_subscriber = ] 'subscriber'` 指定是否要重新初始化訂閱者。 *訂閱者*是**nvarchar(5)**，可以是**TRUE**或**FALSE**，預設值是**TRUE**。 如果 **，則為 TRUE**，訂用帳戶會標示重新初始化。 如果**FALSE**，訂用帳戶未標示為重新初始化。  
+`[ @reinitialize_subscriber = ] 'subscriber'` 指定是否要重新初始化訂閱者。 *訂閱者*是**nvarchar(5)** ，可以是**TRUE**或**FALSE**，預設值是**TRUE**。 如果 **，則為 TRUE**，訂用帳戶會標示重新初始化。 如果**FALSE**，訂用帳戶未標示為重新初始化。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -53,11 +53,11 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 >  在後**sp_mergecleanupmetadata**執行時，根據預設，所有訂用帳戶在訂閱者端的發行集的中繼資料儲存在**MSmerge_genhistory**， **MSmerge_contents**並**MSmerge_tombstone**會標示為重新初始化，訂閱者的任何暫止的變更都會遺失，和目前的快照集已標記為過時。  
 > 
 > [!NOTE]
->  如果有多個發行集資料庫上，且任何一個發行集都會使用無限期的發行保留期限 (**@retention**=**0**)、 執行**sp_mergecleanupmetadata**就不會清除追蹤資料庫中繼資料的合併式複寫變更。 因此，在使用無限期的發行期限時，一定要特別小心。  
+>  如果有多個發行集資料庫上，且任何一個發行集都會使用無限期的發行保留期限 ( **@retention** =**0**)、 執行**sp_mergecleanupmetadata**就不會清除追蹤資料庫中繼資料的合併式複寫變更。 因此，在使用無限期的發行期限時，一定要特別小心。  
   
- 當執行這個預存程序時，您可以選擇是否要重新初始化訂閱者，藉由設定**@reinitialize_subscriber**參數來**TRUE** （預設值） 或**FALSE**. 如果**sp_mergecleanupmetadata**執行**@reinitialize_subscriber**參數設為**TRUE**，快照集也會重新套用在訂閱者即使訂用帳戶建立沒有初始快照集 （例如，如果快照集資料和結構描述已手動套用，或已存在於訂閱者）。 將參數設定為**FALSE**應小心，因為如果不會重新初始化發行集，您必須確定在發行者和訂閱者的資料會同步處理。  
+ 當執行這個預存程序時，您可以選擇是否要重新初始化訂閱者，藉由設定 **@reinitialize_subscriber** 參數來**TRUE** （預設值） 或**FALSE**. 如果**sp_mergecleanupmetadata**執行 **@reinitialize_subscriber** 參數設為**TRUE**，快照集也會重新套用在訂閱者即使訂用帳戶建立沒有初始快照集 （例如，如果快照集資料和結構描述已手動套用，或已存在於訂閱者）。 將參數設定為**FALSE**應小心，因為如果不會重新初始化發行集，您必須確定在發行者和訂閱者的資料會同步處理。  
   
- 值為何**@reinitialize_subscriber**， **sp_mergecleanupmetadata**失敗，如果有進行中合併正要將變更上傳到 「 發行者 」 或在重新發行訂閱者的程序預存程序會叫用的時間。  
+ 值為何 **@reinitialize_subscriber** ， **sp_mergecleanupmetadata**失敗，如果有進行中合併正要將變更上傳到 「 發行者 」 或在重新發行訂閱者的程序預存程序會叫用的時間。  
   
  **執行與 sp_mergecleanupmetadata @reinitialize_subscriber = TRUE:**  
   

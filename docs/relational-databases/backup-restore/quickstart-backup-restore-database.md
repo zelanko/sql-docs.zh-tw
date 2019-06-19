@@ -13,10 +13,10 @@ ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
 ms.openlocfilehash: 8453d74227e1007a42adfbd8ac1f91bf1a6d86da
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66499667"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>快速入門：備份與還原內部部署的 SQL Server 資料庫

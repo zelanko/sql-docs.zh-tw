@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: eb18bc37f63b74981fcccbcb889bd80dcb816d12
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273156"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>建立資料來源 (基本資料採礦教學課程)
@@ -27,7 +27,7 @@ ms.locfileid: "63273156"
   
 1.  在 **方案總管**，以滑鼠右鍵按一下**資料來源**資料夾，然後選取**新的資料來源**。  
   
-2.  在 [**歡迎使用資料來源精靈**頁面上，按一下**下一步]**。  
+2.  在 [**歡迎使用資料來源精靈**頁面上，按一下**下一步]** 。  
   
 3.  在上**選取如何定義連接**頁面上，按一下**新增**若要將連接加入[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]資料庫。  
   
@@ -44,13 +44,13 @@ ms.locfileid: "63273156"
   
 7.  在 **選取或輸入資料庫名稱**清單中，選取[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]，然後按一下**確定**。  
   
-8.  按一下 [下一步] 。  
+8.  按一下 [下一步]  。  
   
 9. 在上**模擬資訊**頁面上，按一下**使用的服務帳戶**，然後按一下**下一步**。  
   
      在 [**完成精靈]** 頁面上，請注意，根據預設，資料來源名稱是 Adventure Works DW 2012。  
   
-10. 按一下 **[完成]**。  
+10. 按一下 **[完成]** 。  
   
      新的資料來源 Adventure Works DW 2012 會出現在**Zdroje dat**方案總管 中的資料夾。  
   

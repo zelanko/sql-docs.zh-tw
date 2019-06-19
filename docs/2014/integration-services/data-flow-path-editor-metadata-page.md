@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0a1897ded7e3d266d701bd4a587c03c252105bd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059993"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>資料流程路徑編輯器 (中繼資料頁面)
-  使用 [資料流程路徑編輯器] 對話方塊的 [中繼資料] 頁面，即可檢視路徑資料行的中繼資料。  
+  使用 [資料流程路徑編輯器]  對話方塊的 [中繼資料]  頁面，即可檢視路徑資料行的中繼資料。  
   
 ## <a name="options"></a>選項  
  **路徑中繼資料**  

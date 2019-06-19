@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c293b7007ccb8a42928c02ed37bcaacb898504f9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108703"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>刪除和重新建立加密金鑰 (SSRS 組態管理員)
@@ -44,7 +44,7 @@ ms.locfileid: "66108703"
   
      如果您是重新建立報表伺服器向外延展部署的加密金鑰，請針對部署中的所有執行個體停用這個屬性。  
   
-    1.  開啟 Windows 檔案總管並巡覽至 *drive*:\Program Files\Microsoft SQL Server\\<報表伺服器執行個體>\Reporting Services。 將 *drive* 取代成磁碟機代號並將 <報表伺服器執行個體> 取代成對應至您想要停用 Web 服務和 HTTP 存取之報表伺服器執行個體的資料夾名稱。 例如，C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services。  
+    1.  開啟 Windows 檔案總管並巡覽至 *drive*:\Program Files\Microsoft SQL Server\\<報表伺服器執行個體>  \Reporting Services。 將 *drive* 取代成磁碟機代號並將 <報表伺服器執行個體>  取代成對應至您想要停用 Web 服務和 HTTP 存取之報表伺服器執行個體的資料夾名稱。 例如，C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services。  
   
     2.  開啟 rsreportserver.config 檔案。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66108703"
   
 2.  啟動 Reporting Services 組態工具，然後連接到您要設定的報表伺服器執行個體。  
   
-3.  在 [加密金鑰] 頁面上，按一下 **[變更]**。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  在 [加密金鑰] 頁面上，按一下 **[變更]** 。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  重新啟動報表伺服器 Windows 服務。 如果是重新建立向外延展部署的加密金鑰，請重新啟動所有執行個體上的服務。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66108703"
   
 1.  啟動 Reporting Services 組態工具，然後連接到您要設定的報表伺服器執行個體。  
   
-2.  按一下 **[加密金鑰]**，然後按一下 **[刪除]**。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  按一下 **[加密金鑰]** ，然後按一下 **[刪除]** 。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  重新啟動報表伺服器 Windows 服務。 針對向外延展部署，為所有報表伺服器執行個體執行此作業。  
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f05baa17bb09b5cafcd775160d2f585004d00b1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723828"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>開始使用這個匯入和匯出精靈的簡單範例
@@ -50,14 +50,14 @@ ms.locfileid: "65723828"
 如需詳細資訊，請參閱 [啟動 SQL Server 匯入和匯出精靈](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)。
 
 ## <a name="step-2---view-the-welcome-page"></a>步驟 2 - 檢視歡迎頁面
-精靈的第一頁是 [歡迎] 頁面。 
+精靈的第一頁是 [歡迎]  頁面。 
 
-您可能不想再看到此頁面，因此請繼續並按一下 [不要再顯示此開始頁面]。
+您可能不想再看到此頁面，因此請繼續並按一下 [不要再顯示此開始頁面]  。
 
 ![歡迎使用精靈](../../integration-services/import-export-data/media/welcome-to-the-wizard.jpg)
 
 ## <a name="step-3---pick-excel-as-your-data-source"></a>步驟 3 - 挑選 Excel 作為資料來源
-在下一個 [選擇資料來源] 頁面上，您可以挑選 Microsoft Excel 作為資料來源。 您接著可以瀏覽以挑選 Excel 檔案。 最後，您會指定用來建立檔案的 Excel 版本。
+在下一個 [選擇資料來源]  頁面上，您可以挑選 Microsoft Excel 作為資料來源。 您接著可以瀏覽以挑選 Excel 檔案。 最後，您會指定用來建立檔案的 Excel 版本。
 
 > [!IMPORTANT]
 > 如需連接至 Excel 檔案，以及將資料從 Excel 檔案載入或載入至 Excel 檔案的限制與已知問題的詳細資訊，請參閱[使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../load-data-to-from-excel-with-ssis.md)。
@@ -67,14 +67,14 @@ ms.locfileid: "65723828"
 如需精靈之這個頁面的詳細資訊，請參閱[選擇資料來源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)。
 
 ## <a name="step-4---pick-sql-server-as-your-destination"></a>步驟 4 - 挑選 SQL Server 作為目的地
-在下一個 [選擇目的地] 頁面上，您可以挑選清單中連線至 SQL Server 的其中一個資料提供者，以挑選 Microsoft SQL Server 作為目的地。 在此範例中，您挑選 **.Net Framework Data Provider for SQL Server**。
+在下一個 [選擇目的地]  頁面上，您可以挑選清單中連線至 SQL Server 的其中一個資料提供者，以挑選 Microsoft SQL Server 作為目的地。 在此範例中，您挑選 **.Net Framework Data Provider for SQL Server**。
 
 頁面會顯示一份提供者屬性清單。 其中有許多是不易記的名稱和不熟悉的設定。 幸運的是，若要連線至任何企業資料庫，您通常只需要提供三項資訊。 您可以忽略其他設定的預設值。
 
 |必要資訊|.Net Framework Data Provider for SQL Server 屬性|
 |---|---|
 |伺服器名稱|**資料來源**|
-|驗證 (登入) 資訊|[整合式安全性]；或 [使用者識別碼] 和 [密碼]<br/>如果您想要在伺服器上看到資料庫下拉式清單，則需要先提供有效的登入資訊。|
+|驗證 (登入) 資訊|[整合式安全性]  ；或 [使用者識別碼]  和 [密碼] <br/>如果您想要在伺服器上看到資料庫下拉式清單，則需要先提供有效的登入資訊。|
 |資料庫名稱|**初始目錄**|
 
 ![選擇 SQL Server 目的地](../../integration-services/import-export-data/media/choose-the-sql-server-destination.jpg)
@@ -82,17 +82,17 @@ ms.locfileid: "65723828"
 如需連線至 SQL Server 的詳細資訊，請參閱[連線至 SQL Server 資料來源](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)。 如需精靈之這個頁面的詳細資訊，請參閱[選擇目的地](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)。
 
 ## <a name="step-5---copy-a-table-instead-of-writing-a-query"></a>步驟 5 - 複製資料表，而非撰寫查詢
-在下一個 [指定資料表複製或查詢] 頁面上，您可以指定要複製整個來源資料表。 您不想要使用 SQL 語言來撰寫查詢，以選取要複製的資料。
+在下一個 [指定資料表複製或查詢]  頁面上，您可以指定要複製整個來源資料表。 您不想要使用 SQL 語言來撰寫查詢，以選取要複製的資料。
 
 ![指定以複製資料表](../../integration-services/import-export-data/media/specify-to-copy-a-table.jpg)
 
 如需精靈之這個頁面的詳細資訊，請參閱[指定資料表複製或查詢](../../integration-services/import-export-data/specify-table-copy-or-query-sql-server-import-and-export-wizard.md)。
 
 ## <a name="step-6---pick-the-table-to-copy"></a>步驟 6 - 挑選要複製的資料表
-在下一個 [選取來源資料表和檢視] 頁面上，您可以挑選想要從資料來源複製的資料表。 接著，您可以將每個選取的來源資料表對應至新的或現有目的地資料表。
+在下一個 [選取來源資料表和檢視]  頁面上，您可以挑選想要從資料來源複製的資料表。 接著，您可以將每個選取的來源資料表對應至新的或現有目的地資料表。
 
-在此範例中，精靈預設已將 [來源] 資料行中的 **WizardWalkthrough$** 工作表對應至 SQL Server 目的地上同名的新資料表  (Excel 活頁簿只包含單一工作表)。
--   來源資料表名稱上的貨幣符號 ($) 指出是 Excel 工作表  (Excel 中的具名範圍是單獨以其名稱呈現)。
+在此範例中，精靈預設已將 [來源]  資料行中的 **WizardWalkthrough$** 工作表對應至 SQL Server 目的地上同名的新資料表 (Excel 活頁簿只包含單一工作表)。
+-   來源資料表名稱上的貨幣符號 ($) 指出是 Excel 工作表 (Excel 中的具名範圍是單獨以其名稱呈現)。
 -   目的地資料表圖示上的爆炸指出精靈即將建立新的目的地資料表。
 
 ![選取資料表 (重新命名之前)](../../integration-services/import-export-data/media/select-the-table-before-renaming.jpg)
@@ -104,35 +104,35 @@ ms.locfileid: "65723828"
 如需精靈之這個頁面的詳細資訊，請參閱[選取來源資料表和檢視](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)。
 
 ## <a name="optional-step-7---review-the-column-mappings"></a>選擇性步驟 7 - 檢閱資料行對應
-在您離開 [選取來源資料表和檢視] 頁面之前，請選擇性地按一下 [編輯對應] 按鈕以開啟 [資料行對應] 對話方塊。 在這裡，於 [對應] 資料表中，您會看到精靈要如何將來源工作表中的資料行對應至新目的地資料表中的資料行。
+在您離開 [選取來源資料表和檢視]  頁面之前，請選擇性地按一下 [編輯對應]  按鈕以開啟 [資料行對應]  對話方塊。 在這裡，於 [對應]  資料表中，您會看到精靈要如何將來源工作表中的資料行對應至新目的地資料表中的資料行。
 
 ![檢視資料行對應](../../integration-services/import-export-data/media/view-column-mappings.jpg)
 
 如需精靈之這個頁面的詳細資訊，請參閱[資料行對應](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)。
 
 ## <a name="optional-step-8---review-the-create-table-statement"></a>選擇性步驟 8 - 檢閱 CREATE TABLE 陳述式
-開啟 [資料行對應] 對話方塊時，選擇性地按一下 [編輯 SQL ] 按鈕開啟 [建立資料表的 SQL 陳述式] 對話方塊。 您可以在這裡看到精靈所產生的 **CREATE TABLE** 陳述式，以建立新的目的地資料表。 您通常不需要變更陳述式。
+開啟 [資料行對應]  對話方塊時，選擇性地按一下 [編輯 SQL ]  按鈕開啟 [建立資料表的 SQL 陳述式]  對話方塊。 您可以在這裡看到精靈所產生的 **CREATE TABLE** 陳述式，以建立新的目的地資料表。 您通常不需要變更陳述式。
 
 ![檢視 CREATE TABLE 陳述式](../../integration-services/import-export-data/media/view-create-table-statement.jpg)
 
 如需精靈之這個頁面的詳細資訊，請參閱[建立資料表的 SQL 陳述式](../../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md)。
 
 ## <a name="optional-step-9---preview-the-data-to-copy"></a>選擇性步驟 9 - 預覽要複製的資料
-在您按一下 [確定] 關閉 [建立資料表的 SQL 陳述式] 對話方塊，然後按一下 [確定] 關閉 [資料行對應] 對話方塊之後，就會回到 [選取來源資料表和檢視] 頁面。 選擇性地按一下 [預覽] 按鈕以查看精靈即將複製的資料範例。 在此範例中，一切正常。
+在您按一下 [確定]  關閉 [建立資料表的 SQL 陳述式]  對話方塊，然後按一下 [確定]  關閉 [資料行對應]  對話方塊之後，就會回到 [選取來源資料表和檢視]  頁面。 選擇性地按一下 [預覽]  按鈕以查看精靈即將複製的資料範例。 在此範例中，一切正常。
 
 ![要複製的預覽資料](../../integration-services/import-export-data/media/preview-data-to-copy.jpg)
 
 如需精靈之這個頁面的詳細資訊，請參閱[預覽資料](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md)。
 
 ## <a name="step-10---yes-you-want-to-run-the-import-export-operation"></a>步驟 10 - 是，您想要執行匯入/匯出作業
-在下一個 [儲存並執行套件] 頁面上，您可以啟用 [立即執行] 在按下一個頁面上的 [完成] 時盡快複製資料。 或者，您可以按一下 [儲存並執行套件] 頁面上的 [完成]，跳過下一個頁面。
+在下一個 [儲存並執行套件]  頁面上，您可以啟用 [立即執行]  在按下一個頁面上的 [完成]  時盡快複製資料。 或者，您可以按一下 [儲存並執行套件]  頁面上的 [完成]  ，跳過下一個頁面。
 
 ![執行套件](../../integration-services/import-export-data/media/run-the-package.jpg)
 
 如需精靈之這個頁面的詳細資訊，請參閱[儲存並執行套件](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。
 
 ## <a name="step-11---finish-the-wizard-and-run-the-import-export-operation"></a>步驟 11 - 完成精靈並執行匯入/匯出作業
-如果您按一下 [下一步]，而不是 [儲存並執行套件] 頁面上的 [完成]，則在下一個 [完成精靈] 頁面上，您會看到精靈將執行作業的摘要。 按一下 [完成] 執行匯入/匯出作業。
+如果您按一下 [下一步]  ，而不是 [儲存並執行套件]  頁面上的 [完成]  ，則在下一個 [完成精靈]  頁面上，您會看到精靈將執行作業的摘要。 按一下 [完成]  執行匯入/匯出作業。
 
 ![完成精靈](../../integration-services/import-export-data/media/complete-the-wizard.jpg)
 

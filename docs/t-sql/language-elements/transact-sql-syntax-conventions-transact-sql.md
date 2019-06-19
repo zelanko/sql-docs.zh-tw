@@ -30,10 +30,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: edc4bd43b27235a35b6c8ed213e2925523015fde
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981456"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 語法慣例 (Transact-SQL)
@@ -115,7 +115,7 @@ _object\_name_
 
 在每個文章頂端附近，都有一個章節指出支援該文章主題的產品。 如果未列出產品，即表示文章描述的功能不適用於該產品。 例如，可用性群組於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進。 **CREATE AVAILABILITY GROUP** 一文指出其適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，因為它不適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-文章的一般主題可能適用於某產品，但在某些情況下並非所有的引數都受支援。 例如自主資料庫使用者於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進。 您可以在任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品中使用 **CREATE USER** 陳述式，但 **WITH PASSWORD** 語法就無法在舊版中使用。 文章本文會於適當引數描述中插入額外的＜適用對象＞一節。  
+文章的一般主題可能適用於某產品，但在某些情況下並非所有的引數都受支援。 例如自主資料庫使用者於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進。 您可以在任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品中使用 **CREATE USER** 陳述式，但 **WITH PASSWORD** 語法就無法在舊版中使用。 文章本文會於適當引數描述中插入額外的＜適用對象＞  一節。  
   
 ## <a name="see-also"></a>另請參閱  
 [Transact-SQL 參考 &#40;資料庫引擎41;](../../t-sql/transact-sql-reference-database-engine.md)    
