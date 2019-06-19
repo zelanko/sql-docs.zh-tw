@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 57c63cde99dc8319e998277ab1d4c1120c8bf73f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66775256"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>轉換非搜尋字伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  如果屬於[停用字詞](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)的非搜尋字造成全文檢索查詢的布林運算傳回零個資料列，請使用 [轉換非搜尋字] 伺服器組態選項來隱藏錯誤訊息。 若全文檢索查詢使用的 CONTAINS 述詞中，布林運算或 NEAR 運算有包括非搜尋字，則這個選項很有幫助。 下表說明可能的值。  
+  如果屬於[停用字詞](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)的非搜尋字造成全文檢索查詢的布林運算傳回零個資料列，請使用 [轉換非搜尋字]  伺服器組態選項來隱藏錯誤訊息。 若全文檢索查詢使用的 CONTAINS 述詞中，布林運算或 NEAR 運算有包括非搜尋字，則這個選項很有幫助。 下表說明可能的值。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -35,7 +35,7 @@ ms.locfileid: "66775256"
 |1|轉換非搜尋字 (或停用字詞)。 忽略這些字，並評估查詢的其餘部分。<br /><br /> 如果非搜尋字指定在鄰近詞彙中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將其移除。 例如，非搜尋字 `is` 會從 `CONTAINS(<column_name>, 'NEAR (hello,is,goodbye)')`中移除，將搜尋查詢轉換為 `CONTAINS(<column_name>, 'NEAR(hello,goodbye)')`。 請注意， `CONTAINS(<column_name>, 'NEAR(hello,is)')` 只會轉換成 `CONTAINS(<column_name>, hello)` ，因為只有一個有效的搜尋詞彙。|  
   
 ## <a name="effects-of-the-transform-noise-words-setting"></a>轉換非搜尋字設定效果  
- 本節將說明包含非搜尋字 "`the`" 的查詢行為 (在 [轉換非搜尋字] 的替代設定底下)。  假設範例全文檢索查詢字串會針對包含下列資料的資料表資料列執行：`[1, "The black cat"]`。  
+ 本節將說明包含非搜尋字 "`the`" 的查詢行為 (在 [轉換非搜尋字]  的替代設定底下)。  假設範例全文檢索查詢字串會針對包含下列資料的資料表資料列執行：`[1, "The black cat"]`。  
   
 > [!NOTE]  
 >  所有的這類案例都可以產生非搜尋字警告。  
@@ -59,7 +59,7 @@ ms.locfileid: "66775256"
     |"`black`" AND NOT "`the`"|識別碼為 1 之資料列的叫用|  
   
 ## <a name="example"></a>範例  
- 下例會將 [轉換非搜尋字] 設為 `1`。  
+ 下例會將 [轉換非搜尋字]  設為 `1`。  
   
 ```  
 sp_configure 'show advanced options', 1;  

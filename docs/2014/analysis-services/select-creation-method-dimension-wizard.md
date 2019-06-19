@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d44afc5bb4c352a2cb5dfd39030a52db990e3a0b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069601"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>選取建立方法 (維度精靈)
@@ -24,7 +24,7 @@ ms.locfileid: "66069601"
   
  **若要開啟 維度精靈**  
   
--   在方案總管的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的 [維度] 資料夾，然後按一下 [新增維度]。  
+-   在方案總管  的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的 [維度]  資料夾，然後按一下 [新增維度]  。  
   
 ## <a name="options"></a>選項  
  **使用現有的資料表**  
@@ -59,7 +59,7 @@ ms.locfileid: "66069601"
  選取您想要用來建立維度的範本。 範本會提供一組以特定商業用途為目標的完整屬性和階層定義。  
   
 > [!NOTE]  
->  只有在您已經選取 [在資料來源中產生非時間資料表] 時，才能使用這個選項。  
+>  只有在您已經選取 [在資料來源中產生非時間資料表]  時，才能使用這個選項。  
   
 ## <a name="see-also"></a>另請參閱  
  [維度精靈 F1 說明](dimension-wizard-f1-help.md)   

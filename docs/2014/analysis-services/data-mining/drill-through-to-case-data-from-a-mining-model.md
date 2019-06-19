@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084604"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>鑽研採礦模型的案例資料
@@ -48,13 +48,13 @@ ms.locfileid: "66084604"
   
 2.  在資料採礦設計師中，按一下 **[採礦模型檢視器]** 索引標籤。  
   
-3.  從 [採礦模型] 下拉式清單中選取模型。  
+3.  從 [採礦模型]  下拉式清單中選取模型。  
   
-4.  從 [檢視器] 下拉式清單中選取一個檢視器，然後以滑鼠右鍵按一下特定的節點。  
+4.  從 [檢視器]  下拉式清單中選取一個檢視器，然後以滑鼠右鍵按一下特定的節點。  
   
-5.  選取 [鑽研]，然後選取 [僅模型資料行] 或 [模型和結構資料行]，即可開啟 [鑽研] 視窗。  
+5.  選取 [鑽研]  ，然後選取 [僅模型資料行]  或 [模型和結構資料行]  ，即可開啟 [鑽研]  視窗。  
   
-6.  若要將資料複製到剪貼簿，請以滑鼠右鍵按一下資料表中的任何資料列，然後選取 [全部複製]。  
+6.  若要將資料複製到剪貼簿，請以滑鼠右鍵按一下資料表中的任何資料列，然後選取 [全部複製]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [鑽研查詢 &#40;資料採礦&#41;](drillthrough-queries-data-mining.md)  

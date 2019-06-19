@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: da3f95120b81877076533d19e4cb05785d5cb932
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105650"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>指標 (報表產生器及 SSRS)
@@ -95,7 +95,7 @@ ms.locfileid: "66105650"
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> 在資料表和矩陣中使用指標  
  簡單的指標形狀使其適合在資料表和矩陣中使用。 指標即使很小，都仍然有效。 這讓它們在報表的詳細資料或群組資料列中都相當實用。  
   
- 下圖顯示包含使用方向性指標集合 ([四箭號 (彩色)]) 之資料表的報表來表示標尺。 報表中的指標圖示設定為使用藍色陰影來代替預設色彩：紅色、黃色和綠色。  
+ 下圖顯示包含使用方向性指標集合 ([四箭號 (彩色)]  ) 之資料表的報表來表示標尺。 報表中的指標圖示設定為使用藍色陰影來代替預設色彩：紅色、黃色和綠色。  
   
  ![rs_IndicatorReportBlueArrows](../media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   
@@ -137,7 +137,7 @@ ms.locfileid: "66105650"
   
  無論使用百分比或數值狀態度量單位，都可能會發生這種狀況。 它比較可能發生於使用數值度量單位時，因為您為此度量提供特定值。 也比較可能發生於捨入報表資料值時，因為這傾向於使值較不離散。  
   
- 下列案例描述在 [三箭號 (彩色)] 方向指標中變更三個狀態的順序時，資料視覺效果如何受到影響。 依預設，此順序為：  
+ 下列案例描述在 [三箭號 (彩色)]  方向指標中變更三個狀態的順序時，資料視覺效果如何受到影響。 依預設，此順序為：  
   
 1.  紅色向下箭頭  
   
@@ -147,7 +147,7 @@ ms.locfileid: "66105650"
   
  下列案例顯示四個不同的狀態順序及其值範圍，以及順序如何影響資料視覺效果。  
   
- 在這些案例中，[三箭號 (彩色)] 指標使用數值狀態度量。  
+ 在這些案例中，[三箭號 (彩色)]  指標使用數值狀態度量。  
   
 |狀態順序|開始值|結束值|  
 |--------------------|-----------------|---------------|  

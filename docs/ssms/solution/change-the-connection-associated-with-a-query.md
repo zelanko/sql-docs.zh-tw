@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 54239ff499678de23a5e5bc701d9716db8e96355
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105324"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>變更與查詢相關聯的連接
@@ -29,9 +29,9 @@ ms.locfileid: "65105324"
   
 ### <a name="to-change-the-connection-associated-with-a-query"></a>變更查詢的相關連接  
   
-1.  在查詢編輯器中，以滑鼠右鍵按一下查詢編輯器的空白區域，指向 [連接]，再按一下 [變更連接]。  
+1.  在查詢編輯器中，以滑鼠右鍵按一下查詢編輯器的空白區域，指向 [連接]  ，再按一下 [變更連接]  。  
   
-2.  在 [連接到 Database Engine] 對話方塊中，提供新的連接資訊，再按一下 [連接]。  
+2.  在 [連接到 Database Engine]  對話方塊中，提供新的連接資訊，再按一下 [連接]  。  
   
 ## <a name="see-also"></a>另請參閱  
 [方案總管](../../ssms/solution/solution-explorer.md)  

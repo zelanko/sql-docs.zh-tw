@@ -21,10 +21,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f6f4fec0762f1208af800d7070319924f02f0fcb
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980968"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>使用 sql:is-constant 建立常數元素 (SQLXML 4.0)
@@ -36,7 +36,7 @@ ms.locfileid: "65980968"
   
 -   將最上層元素加入到 XML 文件中。 XML 需要單一的最上層元素 (根元素) 供文件使用。  
   
--   建立容器元素，例如**\<訂單 >** 包裝所有訂單的項目。  
+-   建立容器元素，例如 **\<訂單 >** 包裝所有訂單的項目。  
   
  **Sql: is-constant&lt**註解可以加入至 **\<complexType >** 項目。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "65980968"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. 指定 sql:is-constant 來加入容器元素  
- 在此註解式 XSD 結構描述，  **\<CustomerOrders >** 藉由指定定義為常數元素**sql: is-constant&lt**屬性的值為 1。 因此，  **\<CustomerOrders >** 未對應到任何資料庫資料表或資料行。 此常數元素組成**\<順序 >** 子項目。  
+ 在此註解式 XSD 結構描述，  **\<CustomerOrders >** 藉由指定定義為常數元素**sql: is-constant&lt**屬性的值為 1。 因此，  **\<CustomerOrders >** 未對應到任何資料庫資料表或資料行。 此常數元素組成 **\<順序 >** 子項目。  
   
- 雖然 **\<CustomerOrders >** 不會對應到任何資料庫資料表或資料行，它仍然會出現在產生的 XML，做為容器項目包含**\<順序 >** 子項目。  
+ 雖然 **\<CustomerOrders >** 不會對應到任何資料庫資料表或資料行，它仍然會出現在產生的 XML，做為容器項目包含 **\<順序 >** 子項目。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

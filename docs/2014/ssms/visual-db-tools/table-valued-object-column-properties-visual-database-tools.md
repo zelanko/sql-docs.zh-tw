@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14c2fff96c89ee696df1a437f958e4560bfab142
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204536"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>資料表值物件 (資料行) 屬性 (Visual Database Tools)
-  在查詢和檢視表設計工具的 [圖表] 窗格中，選取資料表值物件中的資料行時，就會出現這些屬性。  
+  在查詢和檢視表設計工具的 [圖表]  窗格中，選取資料表值物件中的資料行時，就會出現這些屬性。  
   
 > [!NOTE]  
 >  此主題中的屬性，是依類別目錄的順序排列，而非依字母排列。  
@@ -29,13 +29,13 @@ ms.locfileid: "63204536"
 >  您看到的對話方塊與功能表命令，可能會因您所使用的設定或版本，而與說明中所述不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。  
   
  **識別類別目錄**  
- 展開即可顯示 [名稱] 屬性。  
+ 展開即可顯示 [名稱]  屬性。  
   
  **名稱**  
  顯示所選取資料行的名稱。  
   
  **查詢設計工具類別**  
- 展開即可顯示 [允許 Null]、[定序]、[資料類型]、[長度]、[有效位數]、[小數位數] 和 [大小] 等的屬性。  
+ 展開即可顯示 [允許 Null]  、[定序]  、[資料類型]  、[長度]  、[有效位數]  、[小數位數]  和 [大小]  等的屬性。  
   
  **允許 Null**  
  顯示資料行的資料類型是否允許 Null 值。  
@@ -50,7 +50,7 @@ ms.locfileid: "63204536"
  顯示選取之資料行的資料類型所允許的字元數或位數。 此屬性只適用於以字元為主的資料類型。  
   
 > [!NOTE]  
->  針對以位元組為單位的大小，請參閱下列 [大小] 屬性。  
+>  針對以位元組為單位的大小，請參閱下列 [大小]  屬性。  
   
  **有效位數**  
  顯示數值資料類型所允許的最大位數數目。 這個屬性會顯示 **0** 來表示非數字的資料類型。  

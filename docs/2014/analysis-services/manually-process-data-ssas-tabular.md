@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5de1215bd9646e115c6b2730c4e8a750a3f4040f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077966"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>手動處理資料 (SSAS 表格式)
@@ -36,17 +36,17 @@ ms.locfileid: "66077966"
   
 1.  在模型設計師中，按一下要處理的資料表。  
   
-2.  按一下 **[模型]** 功能表，然後按一下 **[處理]**，再按一下 **[處理]** 或 **[處理全部]**。  
+2.  按一下 **[模型]** 功能表，然後按一下 **[處理]** ，再按一下 **[處理]** 或 **[處理全部]** 。  
   
 #### <a name="to-process-data-for-all-tables-using-the-same-connection"></a>若要使用相同連接處理所有資料表的資料  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，按一下 **[模型]** 功能表，然後按一下 **[現有連接]**。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，按一下 **[模型]** 功能表，然後按一下 **[現有連接]** 。  
   
-2.  在 **[現有連接]** 對話方塊中，選取連接，然後按一下 **[處理]**。  
+2.  在 **[現有連接]** 對話方塊中，選取連接，然後按一下 **[處理]** 。  
   
 #### <a name="to-process-data-for-one-or-more-partitions"></a>若要處理一個或多個資料分割的資料  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，按一下 **[模型]** 功能表，然後指向 **[處理]**，再按一下 **[處理資料分割]**。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，按一下 **[模型]** 功能表，然後指向 **[處理]** ，再按一下 **[處理資料分割]** 。  
   
 2.  在 **[處理資料分割]** 對話方塊的 **[模式]** 中，選取下列其中一個處理模式：  
   
@@ -58,10 +58,10 @@ ms.locfileid: "66077966"
     |**處理清除**|移除資料分割中的所有資料。|  
     |**處理加入**|以新資料累加地更新資料分割。|  
   
-3.  在資料分割清單中，選取要處理的資料分割，然後按一下 **[確定]**。  
+3.  在資料分割清單中，選取要處理的資料分割，然後按一下 **[確定]** 。  
   
 ##  <a name="bkmk_data_process_progress"></a> 資料處理進度  
- **[資料處理進度]** 對話方塊可讓您監視您已經從外部來源匯入模型之資料的處理作業。 若要存取此對話方塊，請按一下 **[模型]** 功能表，然後按一下 **[處理資料分割]**、 **[處理資料表]** 或 **[處理全部]**。  
+ **[資料處理進度]** 對話方塊可讓您監視您已經從外部來源匯入模型之資料的處理作業。 若要存取此對話方塊，請按一下 **[模型]** 功能表，然後按一下 **[處理資料分割]** 、 **[處理資料表]** 或 **[處理全部]** 。  
   
  **狀態**  
  指出處理作業是否成功。  

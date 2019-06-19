@@ -13,11 +13,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 15f9bb429509f64909888883a718325b76efae27
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331498"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63013668"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>使用查詢存放區的工作負載調整資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "56331498"
 此功能可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **v16.4** 或更高版本中取得。 
   
 ## <a name="how-to-tune-a-workload-from-query-store-in-database-engine-tuning-advisor-gui"></a>如何在 Database Engine Tuning Advisor GUI 中調整查詢存放區的工作負載
-從 DTA GUI 中，選取 [一般]窗格中的 [查詢存放區] 選項按鈕，即可啟用此功能 (請參閱下圖)。
+從 DTA GUI 中，選取 [一般]  窗格中的 [查詢存放區]  選項按鈕，即可啟用此功能 (請參閱下圖)。
 
 ![查詢存放區的 DTA 工作負載](../../relational-databases/performance/media/dta-workload-from-query-store.gif)
  

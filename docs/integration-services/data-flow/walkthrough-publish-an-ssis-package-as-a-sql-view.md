@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8614217f7b8b081d43468d25707aa394c917b1ff
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725764"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>逐步解說：發行 SSIS 封裝做為 SQL 檢視
@@ -37,11 +37,11 @@ ms.locfileid: "65725764"
 ## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>步驟 1:建置 SSIS 專案並部署至 SSIS 目錄  
  在此步驟中，您會建立 SSIS 封裝，從 SSIS 支援的資料來源 (在此範例中，我們使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫) 擷取資料，並使用資料流目的地元件輸出資料。 然後您會建置 SSIS 專案並部署至 SSIS 目錄。  
   
-1.  啟動 **SQL Server Data Tools**。 在 **[開始]** 功能表上，依序指向 **[所有程式]** 和 **[Microsoft SQL Server]**，然後按一下 **[SQL Server Data Tools]**。  
+1.  啟動 **SQL Server Data Tools**。 在 **[開始]** 功能表上，依序指向 **[所有程式]** 和 **[Microsoft SQL Server]** ，然後按一下 **[SQL Server Data Tools]** 。  
   
 2.  建立新的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
-    1.  在功能表列上按一下 [檔案]  、指向 [新增] ，然後按一下 [專案] 。  
+    1.  在功能表列上按一下 [檔案]  、指向 [新增]  ，然後按一下 [專案]  。  
   
     2.  在左窗格中展開 [商業智慧]  ，然後按一下樹狀檢視中的 [Integration Services]  。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65725764"
   
 3.  將 [資料流程]  元件從 [SSIS 工具箱]  拖曳至 [控制流程]  索引標籤的設計介面。  
   
-4.  按兩下 [控制流程] 中的 [資料流程] 元件，以開啟 [資料流程設計師]。  
+4.  按兩下 [控制流程]  中的 [資料流程]  元件，以開啟 [資料流程設計師]  。  
   
 5.  將 **來源元件** 從工具箱拖曳至 [資料流程設計師]  ，並將它設定為從資料來源擷取資料。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "65725764"
         |1|John|Doe|  
         |2|Jane|Doe|  
   
-    4.  將 [OLE DB 來源]  元件從 [SSIS 工具箱]  拖曳至 [資料流程設計師] 。  
+    4.  將 [OLE DB 來源]  元件從 [SSIS 工具箱]  拖曳至 [資料流程設計師]  。  
   
-    5.  設定元件以便從 **TestDB** 資料庫的 **Employee** 資料表中擷取資料。 針對 [OLE DB 連線管理員] 選取 [(local).TestDB]、針對 [資料存取模式] 選取 [資料表或檢視表]，以及針對 [資料表或檢視表的名稱] 選取 [[dbo].[Employee]]。  
+    5.  設定元件以便從 **TestDB** 資料庫的 **Employee** 資料表中擷取資料。 針對 [OLE DB 連線管理員]  選取 [(local).TestDB]  、針對 [資料存取模式]  選取 [資料表或檢視表]  ，以及針對 [資料表或檢視表的名稱]  選取 [[dbo].[Employee]]  。  
   
          ![資料流目的地 - OLE DB 連線](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "資料流目的地 - OLE DB 連線")  
   
@@ -82,7 +82,7 @@ ms.locfileid: "65725764"
   
 8.  建置 SSIS 專案並部署至 SSIS 目錄。  
   
-    1.  按一下功能表列上的 [專案]  ，然後按一下 [部署] 。  
+    1.  按一下功能表列上的 [專案]  ，然後按一下 [部署]  。  
   
     2.  遵循精靈中的指示，將專案部署至本機資料庫伺服器中的 SSIS 目錄。 下列範例使用 **Power BI** 做為資料夾名稱，以及使用 **SSISPackagePublishing** 做為 SSIS 目錄中的專案名稱。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "65725764"
   
  在執行階段，檢視會透過您建立的連結伺服器，將查詢傳送至適用於 SSIS 的 OLE DB 提供者。 適用於 SSIS 的 OLE DB 提供者會執行您在查詢中指定的封裝，並將表格式結果集傳回查詢。  
   
-1.  從 C:\Program Files\Microsoft SQL Server\130\DTS\Binn 執行 ISDataFeedPublishingWizard.exe，或按一下 [開始\所有程式] 下方的 [Microsoft SQL Server 2016\SQL Server 2016 Data Feed Publishing Wizard (Microsoft SQL Server 2016\SQL Server 2016 資料摘要發行精靈)]，來啟動 [SSIS 資料摘要發行精靈]。  
+1.  從 C:\Program Files\Microsoft SQL Server\130\DTS\Binn 執行 ISDataFeedPublishingWizard.exe，或按一下 [開始\所有程式] 下方的 [Microsoft SQL Server 2016\SQL Server 2016 Data Feed Publishing Wizard (Microsoft SQL Server 2016\SQL Server 2016 資料摘要發行精靈)]，來啟動 [SSIS 資料摘要發行精靈]  。  
   
 2.  在 [簡介]  頁面上，按 [下一步]  。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "65725764"
   
          ![資料摘要發行精靈 - 套件設定頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "資料摘要發行精靈 - 套件設定頁面")  
   
-    2.  按一下 [路徑] 欄位旁的 [瀏覽]、瀏覽 SSIS 目錄、選取您要發行的 SSIS 套件 (例如︰[SSISDB]->[SSISPackagePublishing]->[Package.dtsx])，然後按一下 [確定]。  
+    2.  按一下 [路徑] 欄位旁的 [瀏覽]  、瀏覽 SSIS 目錄、選取您要發行的 SSIS 套件 (例如︰[SSISDB]  ->[SSISPackagePublishing]  ->[Package.dtsx]  )，然後按一下 [確定]  。  
   
          ![資料摘要發行精靈 - 瀏覽套件](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "資料摘要發行精靈 - 瀏覽套件")  
   
@@ -123,7 +123,7 @@ ms.locfileid: "65725764"
   
     2.  輸入 **檢視** 的 **名稱**。 您也可以從下拉式清單選取現有的檢視。  
   
-    3.  在 [設定] 清單中，指定要與檢視建立關聯的**連結的伺服器** **名稱**。 如果連結的伺服器尚未存在，精靈將會在建立檢視之前先建立連結的伺服器。 您也可以在這裡設定 **User32BitRuntime** 和 **Timeout** 的值。  
+    3.  在 [設定]  清單中，指定要與檢視建立關聯的**連結的伺服器** **名稱**。 如果連結的伺服器尚未存在，精靈將會在建立檢視之前先建立連結的伺服器。 您也可以在這裡設定 **User32BitRuntime** 和 **Timeout** 的值。  
   
     4.  按一下 [進階]  按鈕。 您應該會看見 [進階設定]  對話方塊。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "65725764"
   
         2.  指定在透過網路傳送資料之前，是否應先加密資料 ([加密] 欄位)。 如需此設定和 TrustServerCertificate 設定的詳細資訊，請參閱 [使用加密而不需驗證](../../relational-databases/native-client/features/using-encryption-without-validation.md) 主題。  
   
-        3.  指定在啟用加密設定時，是否可以使用自我簽署的伺服器憑證 ([TrustServerCertificate] 欄位)。  
+        3.  指定在啟用加密設定時，是否可以使用自我簽署的伺服器憑證 ([TrustServerCertificate]  欄位)。  
   
         4.  按一下 **[確定]** 以關閉 **[進階設定]** 對話方塊。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "65725764"
   
      您現在可以針對 TestDB 資料庫執行下列 SQL 陳述式來查詢套件的輸出資料：SELECT * FROM [SSISPackageView]。  
   
-9. 若要將此報表儲存為 XML 檔案，可按一下 [儲存報表] 。  
+9. 若要將此報表儲存為 XML 檔案，可按一下 [儲存報表]  。  
   
 10. 檢閱發行程序的結果，然後按一下 [完成]  以關閉精靈。  
   
@@ -165,18 +165,18 @@ ms.locfileid: "65725764"
   
 1.  啟動 SQL Server Management Studio。  
   
-2.  依序展開 [\<機器名稱>]、[資料庫]、[\<您在精靈中選取的資料庫>] 及 [檢視]。  
+2.  依序展開 [\<機器名稱>]  、[資料庫]  、[\<您在精靈中選取的資料庫>]  及 [檢視]  。  
   
-3.  以滑鼠右鍵按一下精靈建立的 [\<精靈建立的檢視>]，然後按一下 [選取前 1000 個資料列]。  
+3.  以滑鼠右鍵按一下精靈建立的 [\<精靈建立的檢視>]  ，然後按一下 [選取前 1000 個資料列]  。  
   
 4.  確認您看到 SSIS 封裝的結果。  
   
 ## <a name="step-4-verify-the-ssis-package-execution"></a>步驟 4：確認 SSIS 封裝執行  
  在此步驟中，您將驗證已執行 SSIS 封裝。  
   
-1.  在 SQL Server Management Studio 中，依序展開 [Integration Services 目錄] 、[SSISDB] 、您 SSIS 專案所在的 **資料夾** 、[專案] 、您的專案節點，以及 [封裝] 。  
+1.  在 SQL Server Management Studio 中，依序展開 [Integration Services 目錄]  、[SSISDB]  、您 SSIS 專案所在的 **資料夾** 、[專案]  、您的專案節點，以及 [封裝]  。  
   
-2.  在 SSIS 封裝上按一下滑鼠右鍵，接著按一下以依序指向 [報表] 和 [標準報表]，然後按一下 [所有執行]。  
+2.  在 SSIS 封裝上按一下滑鼠右鍵，接著按一下以依序指向 [報表]  和 [標準報表]  ，然後按一下 [所有執行]  。  
   
 3.  您應該會在報表中看到 SSIS 封裝執行。  
   
@@ -222,7 +222,7 @@ GO
     ```  
   
     > [!IMPORTANT]  
-    >  視需要更新資料夾名稱、專案名稱和封裝名稱。 如果 OPENQUERY 函式失敗，可在 **SQL Server Management Studio**中，依序展開 [伺服器物件] 、[連結的伺服器] 及 [提供者] ，然後按兩下 [SSISOLEDB]  提供者，並確定已啟用 [允許 inprocess]  選項。  
+    >  視需要更新資料夾名稱、專案名稱和封裝名稱。 如果 OPENQUERY 函式失敗，可在 **SQL Server Management Studio**中，依序展開 [伺服器物件]  、[連結的伺服器]  及 [提供者]  ，然後按兩下 [SSISOLEDB]  提供者，並確定已啟用 [允許 inprocess]  選項。  
   
 2.  執行下列查詢，在資料庫 **TestDB** 中建立檢視以供本逐步解說使用。  
   

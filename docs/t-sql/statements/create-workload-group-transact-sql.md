@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bac286dc1151c6a0b127a928206505fa047c9ad8
-ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66718287"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
@@ -105,7 +105,7 @@ MAX_DOP = *value* 指定平行要求之平行處理原則的最大程度 (DOP)�
 
 GROUP_MAX_REQUESTS = *value* 指定在工作負載群組中可允許執行的最大同時要求數。 *value* 必須為 0 或正整數。 *value* 的預設值為 0，會允許無限制的要求。 達到最大並行要求時，該群組中的使用者可以登入，但是會處於等候狀態，直到並行要求低於指定的值為止。
 
-USING { *pool_name* | **"default"** } 建立工作負載群組與 *pool_name* 識別之使用者定義資源集區的關聯。 這樣會將工作負載群組實際放到資源集區中。 如果未提供 *pool_name* 或未使用 USING 引數，工作負載群組會放入預先定義的 Resource Governor 預設集區。
+USING { *pool_name* |  **"default"** } 建立工作負載群組與 *pool_name* 識別之使用者定義資源集區的關聯。 這樣會將工作負載群組實際放到資源集區中。 如果未提供 *pool_name* 或未使用 USING 引數，工作負載群組會放入預先定義的 Resource Governor 預設集區。
 
 "default" 是保留字，而且當搭配 USING 使用時，必須加上引號 ("") 或方括號 ([])。
 

@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f666a224c2e41fb50a1a62748e7d8f1666d0beb9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726639"
 ---
 # <a name="ole-db-source"></a>OLE DB 來源
@@ -68,16 +68,16 @@ ms.locfileid: "65726639"
   
  OLE DB 來源使用 OLE DB 連接管理員，以連接到其擷取資料的資料來源。 根據 OLE DB 連接管理員使用的提供者以及連接管理員所連接的關聯式資料庫管理系統 (RDBMS) 而定，參數的命名和列示可能適用不同的規則。 如果從 RDBMS 傳回參數名稱，您可以使用參數名稱，將參數清單中的參數對應到 SQL 陳述式中的參數；否則，參數便會按照它們在參數清單中的序數位置，對應到 SQL 陳述式中的參數。 支援的參數名稱類型會因提供者而不同。 例如，某些提供者要求您必須使用變數或資料行名稱，而某些提供者則要求您使用 0 或 Param0 之類的符號名稱。 如需有關在 SQL 陳述式中使用之參數名稱的資訊，請參考提供者專用的文件集。  
   
- 您在使用 OLE DB 連接管理員時無法使用參數化的子查詢，因為 OLE DB 來源無法透過 OLE DB 提供者衍生參數資訊。 不過，您可以使用運算式來將參數值串連到查詢字串中並設定來源的 SqlCommand 屬性。在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中，則可使用 [OLE DB 來源編輯器] 對話方塊來設定 OLE DB 來源，並在 [設定查詢參數] 對話方塊中將參數對應到變數。  
+ 您在使用 OLE DB 連接管理員時無法使用參數化的子查詢，因為 OLE DB 來源無法透過 OLE DB 提供者衍生參數資訊。 不過，您可以使用運算式來將參數值串連到查詢字串中並設定來源的 SqlCommand 屬性。在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中，則可使用 [OLE DB 來源編輯器]  對話方塊來設定 OLE DB 來源，並在 [設定查詢參數]  對話方塊中將參數對應到變數。  
   
 ### <a name="specifying-parameters-by-using-ordinal-positions"></a>使用序數位置指定參數  
- 如果沒有傳回任何參數名稱，便會依照參數在 [設定查詢參數] 對話方塊之 [參數] 清單中的列示順序，來控制執行階段中參數所對應的參數標記。 清單中的第一個參數會對應到 SQL 陳述式裡的第一個 ?， 第二個參數則對應到第二個 ?，依此類推。  
+ 如果沒有傳回任何參數名稱，便會依照參數在 [設定查詢參數]  對話方塊之 [參數]  清單中的列示順序，來控制執行階段中參數所對應的參數標記。 清單中的第一個參數會對應到 SQL 陳述式裡的第一個 ?， 第二個參數則對應到第二個 ?，依此類推。  
   
- 下列 SQL 陳述式會從 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 資料庫的 **Product** 資料表中選取資料列。 [對應] 清單中的第一個參數對應到 **Color** 資料行的第一個參數，第二個參數則對應到 **Size** 資料行。  
+ 下列 SQL 陳述式會從 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 資料庫的 **Product** 資料表中選取資料列。 [對應]  清單中的第一個參數對應到 **Color** 資料行的第一個參數，第二個參數則對應到 **Size** 資料行。  
   
  `SELECT * FROM Production.Product WHERE Color = ? AND Size = ?`  
   
- 參數名稱無效。 例如，如果參數名稱與它所套用的資料行名稱相同，但並未放在 [參數] 清單中的正確序數位置，則執行階段中發生的參數對應將會使用參數的序數位置，而非參數名稱。  
+ 參數名稱無效。 例如，如果參數名稱與它所套用的資料行名稱相同，但並未放在 [參數]  清單中的正確序數位置，則執行階段中發生的參數對應將會使用參數的序數位置，而非參數名稱。  
   
  EXEC 命令通常會要求您使用在程序中提供參數值的變數名稱作為參數名稱。  
   
@@ -88,13 +88,13 @@ ms.locfileid: "65726639"
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   
- 預存程序需要有變數 `@StartProductID` 和 `@CheckDate`，才能提供參數值。 參數出現在 [對應] 清單中的順序並無任何影響。 唯一的需求是參數名稱必須符合預存程序中的變數名稱，包括 \@ 符號。  
+ 預存程序需要有變數 `@StartProductID` 和 `@CheckDate`，才能提供參數值。 參數出現在 [對應]  清單中的順序並無任何影響。 唯一的需求是參數名稱必須符合預存程序中的變數名稱，包括 \@ 符號。  
   
 ### <a name="mapping-parameters-to-variables"></a>將參數對應至變數  
  參數會對應到在執行階段中提供參數值的變數。 這些變數通常是使用者自訂變數，不過您也可以使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的系統變數。 如果您使用的是使用者自訂變數，請務必將資料類型設定為與對應參數所參考之資料行資料類型相容的類型。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)。  
   
 ## <a name="troubleshooting-the-ole-db-source"></a>疑難排解 OLE DB 來源  
- 您可以記錄 OLE DB 來源對外部資料提供者所執行的呼叫。 您可以使用這項記錄功能，疑難排解 OLE DB 來源執行的從外部資料來源載入資料的作業。 若要記錄 OLE DB 來源對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+ 您可以記錄 OLE DB 來源對外部資料提供者所執行的呼叫。 您可以使用這項記錄功能，疑難排解 OLE DB 來源執行的從外部資料來源載入資料的作業。 若要記錄 OLE DB 來源對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷]  事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
 ## <a name="configuring-the-ole-db-source"></a>設定 OLE DB 來源  
  您可以程式設計方式或透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」設定屬性。  
@@ -119,7 +119,7 @@ ms.locfileid: "65726639"
  social.technet.microsoft.com 上的 Wiki 文章： [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670)(SSIS 與 Oracle 連接器)。  
   
 ## <a name="ole-db-source-editor-connection-manager-page"></a>OLE DB 來源編輯器 (連接管理員頁面)
-  使用 [OLE DB 來源編輯器] 對話方塊的 [連接管理員] 頁面，來選取來源的 OLE DB 連接管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  
+  使用 [OLE DB 來源編輯器]  對話方塊的 [連接管理員]  頁面，來選取來源的 OLE DB 連接管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  
   
 > [!NOTE]  
 >  若要從使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 的資料來源載入資料，請使用 OLE DB 來源。 您無法使用 Excel 來源，從 Excel 2007 資料來源載入資料。 如需詳細資訊，請參閱 [設定 OLE DB 連接管理員](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)。  
@@ -127,22 +127,22 @@ ms.locfileid: "65726639"
 >  若要從使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 或更早版本的資料來源載入資料，請使用 Excel 來源。 如需詳細資訊，請參閱 [Excel 來源編輯器 &#40;連接管理員頁面&#41;](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md)。  
   
 > [!NOTE]  
->  在 OLE DB 來源編輯器中無法使用 OLE DB 來源的 **CommandTimeout** 屬性，但可使用進階編輯器來設定這個屬性。 如需這個屬性的詳細資訊，請參閱 [OLE DB 自訂屬性](../../integration-services/data-flow/ole-db-custom-properties.md)的＜Excel 來源＞一節。  
+>  在 OLE DB 來源編輯器  中無法使用 OLE DB 來源的 **CommandTimeout** 屬性，但可使用進階編輯器  來設定這個屬性。 如需這個屬性的詳細資訊，請參閱 [OLE DB 自訂屬性](../../integration-services/data-flow/ole-db-custom-properties.md)的＜Excel 來源＞一節。  
   
 ### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>開啟 OLE DB 來源編輯器 (連線管理員頁面)  
   
 1.  將 OLE DB 來源加入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝 (於 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中)。  
   
-2.  以滑鼠右鍵按一下來源元件，然後按一下 [編輯]。  
+2.  以滑鼠右鍵按一下來源元件，然後按一下 [編輯]  。  
   
-3.  按一下 [連接管理員]。  
+3.  按一下 [連接管理員]  。  
   
 ### <a name="static-options"></a>靜態選項  
  **[無快取]**  
- 從清單中選取現有的連線管理員，或按一下 [新增] 來建立新的連線。  
+ 從清單中選取現有的連線管理員，或按一下 [新增]  來建立新的連線。  
   
  **新增**  
- 使用 [設定 OLE DB 連線管理員] 對話方塊建立新的連線管理員。  
+ 使用 [設定 OLE DB 連線管理員]  對話方塊建立新的連線管理員。  
   
  **資料存取模式**  
  從來源中指定選取資料的方法。  
@@ -150,12 +150,12 @@ ms.locfileid: "65726639"
 |選項|Description|  
 |------------|-----------------|  
 |資料表或檢視|從 OLE DB 資料來源中的資料表或檢視擷取資料。|  
-|資料表名稱或檢視名稱變數|請在變數中指定資料表或檢視名稱。<br /><br /> **相關資訊：**[在套件中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|資料表名稱或檢視名稱變數|請在變數中指定資料表或檢視名稱。<br /><br /> **相關資訊：** [在套件中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |SQL (命令)|使用 SQL 查詢從 OLE DB 資料來源中擷取資料。|  
 |來自變數的 SQL 命令|在變數中指定 SQL 查詢文字。|  
   
  **預覽**  
- 使用 [資料檢視] 對話方塊來預覽結果。 [預覽] 最多可顯示 200 個資料列。  
+ 使用 [資料檢視]  對話方塊來預覽結果。 [預覽]  最多可顯示 200 個資料列。  
   
 > [!NOTE]  
 >  在預覽資料時，具有 CLR 使用者定義型別的資料行不會包含資料。 而會顯示 \<數值太大而無法顯示> 或 System.Byte[]。 使用 SQL OLE DB 提供者存取資料來源時會顯示前者，而使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者時會顯示後者。  
@@ -172,16 +172,16 @@ ms.locfileid: "65726639"
   
 #### <a name="data-access-mode--sql-command"></a>資料存取模式 = SQL 命令  
  **SQL 命令文字**  
- 輸入 SQL 查詢文字，按一下 [建立查詢] 建立查詢，或按一下 [瀏覽] 找到包含查詢文字的檔案。  
+ 輸入 SQL 查詢文字，按一下 [建立查詢]  建立查詢，或按一下 [瀏覽]  找到包含查詢文字的檔案。  
   
  **參數**  
  如果您所輸入的參數化查詢使用 ? 做為查詢文字中的參數預留位置，請使用 **[設定查詢參數]** 對話方塊，將查詢輸入參數對應到封裝變數。  
   
  **建立查詢**  
- 使用 [查詢產生器] 對話方塊，以視覺化的方式來建構 SQL 查詢。  
+ 使用 [查詢產生器]  對話方塊，以視覺化的方式來建構 SQL 查詢。  
   
  **瀏覽**  
- 使用 [開啟] 對話方塊來找出包含 SQL 查詢文字的檔案。  
+ 使用 [開啟]  對話方塊來找出包含 SQL 查詢文字的檔案。  
   
  **剖析查詢**  
  請確認查詢文字的語法。  
@@ -191,7 +191,7 @@ ms.locfileid: "65726639"
  選取包含 SQL 查詢文字的變數。  
   
 ## <a name="ole-db-source-editor-columns-page"></a>OLE DB 來源編輯器 (資料行頁面)
-  使用 [OLE DB 來源編輯器] 對話方塊的 [資料行] 頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
+  使用 [OLE DB 來源編輯器]  對話方塊的 [資料行]  頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
   
 ### <a name="options"></a>選項。  
  **可用的外部資料行**  
@@ -204,19 +204,19 @@ ms.locfileid: "65726639"
  為每個輸出資料行提供唯一的名稱。 預設值為選取的外部 (來源) 資料行的名稱；不過，您也可以選擇任何唯一的、描述性的名稱。 提供的名稱將顯示在  設計師內。  
   
 ## <a name="ole-db-source-editor-error-output-page"></a>OLE DB 來源編輯器 (錯誤輸出頁面)
-  使用 [OLE DB 來源編輯器] 對話方塊的 [錯誤輸出] 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
+  使用 [OLE DB 來源編輯器]  對話方塊的 [錯誤輸出]  頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
   
 ### <a name="options"></a>選項。  
  **輸入/輸出**  
  檢視資料來源的名稱。  
   
  **資料行**  
- 檢視您在 [OLE DB 來源編輯器] 對話方塊的 [連接管理員] 頁面上所選取的外部 (來源) 資料行。  
+ 檢視您在 [OLE DB 來源編輯器]  對話方塊的 [連接管理員]  頁面上所選取的外部 (來源) 資料行。  
   
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題：**[資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相關主題：** [資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截斷**  
  指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
