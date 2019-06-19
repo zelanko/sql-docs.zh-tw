@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9737b829a5ccab1ddc0362f2d8ac81285f0f6e1c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068703"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>設定或變更 DirectQuery 的慣用連接方法
@@ -34,7 +34,7 @@ ms.locfileid: "66068703"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟 DirectQuery 模型的方案檔。  
   
-2.  在 Visual Studio 中，選取 **[專案]** 功能表中的 **[屬性]**。  
+2.  在 Visual Studio 中，選取 **[專案]** 功能表中的 **[屬性]** 。  
   
 3.  在 **[屬性]** 窗格中，將屬性 **DirectQueryMode**變更為支援 DirectQuery 使用的下列其中一個值：  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66068703"
   
 1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中，連接至部署了 DirectQuery 模型的執行個體。  
   
-2.  以滑鼠右鍵按一下模型資料庫，然後選取 **[屬性]**。  
+2.  以滑鼠右鍵按一下模型資料庫，然後選取 **[屬性]** 。  
   
 3.  在 **[屬性]** 窗格中，將屬性 **DirectQueryMode**變更為下列其中一個值：  
   

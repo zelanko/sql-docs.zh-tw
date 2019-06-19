@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b1619c37bbae6c885862c4749c07a3d5be559565
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945102"
 ---
 # <a name="applocktest-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
@@ -47,13 +47,13 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 可被授與資料庫中物件權限的使用者、角色或應用程式角色。 函數的呼叫者必須是 *database_principal*、dbo 或 db_owner 固定資料庫角色的成員，才能成功呼叫函數。
   
 **'** *resource_name* **'**  
-用戶端應用程式指定的鎖定資源名稱。 應用程式必須確定資源名稱是唯一的。 指定的名稱會在內部雜湊成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員可儲存在內部的值。  *resource_name* 是沒有預設值的 **nvarchar(255)** 。 *resource_name* 是以二進位來比較，不論目前資料庫的定序設定為何，都會區分大小寫。
+用戶端應用程式指定的鎖定資源名稱。 應用程式必須確定資源名稱是唯一的。 指定的名稱會在內部雜湊成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員可儲存在內部的值。  *resource_name* 是沒有預設值的 **nvarchar(255)**。 *resource_name* 是以二進位來比較，不論目前資料庫的定序設定為何，都會區分大小寫。
   
 **'** *lock_mode* **'**  
-針對特定資源要取得的鎖定模式。 *lock_mode* 是沒有預設值的 **nvarchar(32)** 。 *lock_mode* 可以具有以下任一個值：**Shared**、**Update**、**IntentShared**、**IntentExclusive**、**Exclusive**。
+針對特定資源要取得的鎖定模式。 *lock_mode* 是沒有預設值的 **nvarchar(32)**。 *lock_mode* 可以具有以下任一個值：**Shared**、**Update**、**IntentShared**、**IntentExclusive**、**Exclusive**。
   
 **'** *lock_owner* **'**  
-為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 是 **nvarchar(32)** ，而且此值可以是**交易** (預設值) 或**工作階段**。 如果明確指定預設值或 **Transaction**，就必須從交易內執行 APPLOCK_TEST。
+為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 是 **nvarchar(32)**，而且此值可以是**交易** (預設值) 或**工作階段**。 如果明確指定預設值或 **Transaction**，就必須從交易內執行 APPLOCK_TEST。
   
 ## <a name="return-types"></a>傳回類型
 **smallint**

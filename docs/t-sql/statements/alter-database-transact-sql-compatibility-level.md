@@ -26,10 +26,10 @@ ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: baa6f443215d5d1f221462e1d20d4bf1498ca899
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65626694"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
@@ -295,7 +295,7 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 
 導入之後，關鍵字會維持保留狀態。 例如，相容性層級 90 所導入的保留關鍵字 PIVOT，也會保留在層級 100 和 110 和 120 中。
 
-如果應用程式使用的識別碼是其相容性層級的保留關鍵字，應用程式便會失敗。 若要解決這個問題，請用方括號 ( **[]** ) 或引號 ( **""** ) 來括住識別碼；例如，若要將使用識別碼 **EXTERNAL** 的應用程式升級到相容性層級 90，您可將識別碼改成 **[EXTERNAL]** 或 **"EXTERNAL"** 。
+如果應用程式使用的識別碼是其相容性層級的保留關鍵字，應用程式便會失敗。 若要解決這個問題，請用方括號 (**[]**) 或引號 (**""**) 來括住識別碼；例如，若要將使用識別碼 **EXTERNAL** 的應用程式升級到相容性層級 90，您可將識別碼改成 **[EXTERNAL]** 或 **"EXTERNAL"**。
 
 如需詳細資訊，請參閱[保留關鍵字](../../t-sql/language-elements/reserved-keywords-transact-sql.md)。
 

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24b62c2b5cd449b6e7201d413b315e48fbd570f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468795"
 ---
 # <a name="scalar-function-calls"></a>純量函式呼叫
@@ -43,7 +43,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers
   
  應用程式應該使用的最大的互通性**轉換**純量函式，並確認純量函式的輸出所需的類型。 **轉換**函式將資料從一個 SQL 資料類型轉換成指定的 SQL 資料型別。 語法**轉換**函式  
   
- **CONVERT(** _value_exp_ **,** _data_type_**)**  
+ **CONVERT(** _value_exp_ **,** _data_type_ **)**  
   
  其中*value_exp*資料行名稱，另一個純量函式或常值，結果並*data_type*符合關鍵字 **#define**所使用的名稱SQL 資料類型識別項中定義[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。 例如，下列 SQL 陳述式會使用**轉換**並確定函式的輸出**CURDATE**函式是日期類型，而不是時間戳記或字元資料：  
   

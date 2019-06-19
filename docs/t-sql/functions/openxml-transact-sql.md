@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac5e76c2d6e93bb8eb2fe334f38a22325e74d37f
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331588"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62520704"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|可以和 XML_ATTRIBUTES 或 XML_ELEMENTS 合併使用 (邏輯 OR)。 在擷取的內容中，此標幟會指出所取用的資料不應複製到溢位屬性 **\@mp:xmltext**。|  
   
  _SchemaDeclaration_  
- 這是表單的結構描述定義：_ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
+ 這是表單的結構描述定義：_ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
  _ColName_  
  這是資料列集中的資料行名稱。  
@@ -144,7 +144,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- 如果相同的 `SELECT` 陳述式是以 「旗標」設為 `2` 的方式 (表示**項目中心**對應) 來執行，則 XML 文件中兩個客戶的 `CustomerID` 及 `ContactName` 值都會以 NULL 傳回，因為 XML 文件中沒有任何名為 `CustomerID` 或 `ContactName` 的項目。  
+ 如果相同的 `SELECT` 陳述式是以 「旗標」  設為 `2` 的方式 (表示**項目中心**對應) 來執行，則 XML 文件中兩個客戶的 `CustomerID` 及 `ContactName` 值都會以 NULL 傳回，因為 XML 文件中沒有任何名為 `CustomerID` 或 `ContactName` 的項目。  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   

@@ -26,11 +26,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 04632f7b1ef117c31701cf998b913375656e8a39
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334445"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62928679"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - 使用 PIVOT 和 UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -204,7 +204,7 @@ VendorID    Employee    Orders
   
 請注意，`UNPIVOT` 並非與 `PIVOT` 完全相反。 `PIVOT` 會執行彙總，並將多個可能資料列合併成輸出中的單一資料列。 由於資料列已經合併，因此 `UNPIVOT` 並不會重新產生原始資料表值運算式結果。 此外，`UNPIVOT` 輸入的 Null 值會在輸出中消失。 如果這些值會消失，這表示在 `PIVOT` 作業之前，輸入中可能已經有原始 Null 值。  
   
-[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中的 `Sales.vSalesPersonSalesByFiscalYears` 檢視表會使用 `PIVOT` 來傳回每位銷售人員在每個會計年度的總銷售額。 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中編寫該檢視表的指令碼，請在 [物件總管] 中，於 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的 [檢視表] 資料夾底下找出該檢視表。 在檢視表名稱上按一下滑鼠右鍵，然後選取 [編寫檢視表的指令碼為]。  
+[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中的 `Sales.vSalesPersonSalesByFiscalYears` 檢視表會使用 `PIVOT` 來傳回每位銷售人員在每個會計年度的總銷售額。 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中編寫該檢視表的指令碼，請在 [物件總管]  中，於 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的 [檢視表]  資料夾底下找出該檢視表。 在檢視表名稱上按一下滑鼠右鍵，然後選取 [編寫檢視表的指令碼為]  。  
   
 ## <a name="see-also"></a>另請參閱  
 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   

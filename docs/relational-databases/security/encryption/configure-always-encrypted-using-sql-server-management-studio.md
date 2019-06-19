@@ -18,11 +18,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a6cc6dcb53bb7c535db570bbaa68db0673a83879
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531113"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62521650"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 設定永遠加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -91,16 +91,16 @@ SSMS 不支援下列兩者之間的角色隔離：管理資料庫的人員 (DBA)
 針對資料庫連線啟用和停用 Always Encrypted，會指示 .NET Framework Data Provider for SQL Server (SQL Server Management Studio 所使用) 明確地嘗試進行下列動作：   
 -   將從加密資料行擷取以及查詢結果中傳回的任何值解密。   
 -   將目標為加密資料庫資料行且已參數化的 Transact-SQL 變數的值加密。   
-若要針對資料庫連接啟用 Always Encrypted，可在 [連接到伺服器] `Column Encryption Setting=Enabled`**對話方塊的 [其他屬性]****索引標籤中指定** 。    
-若要針對資料庫連接停用 Always Encrypted，可指定 `Column Encryption Setting=Disabled` ，或者只需從 [連接到伺服器]  對話方塊的 [其他屬性]  索引標籤中移除 [資料行加密設定]  的設定 (預設值是 [已停用] )。   
+若要針對資料庫連接啟用 Always Encrypted，可在 [連接到伺服器] `Column Encryption Setting=Enabled`**對話方塊的 [其他屬性]** **索引標籤中指定** 。    
+若要針對資料庫連接停用 Always Encrypted，可指定 `Column Encryption Setting=Disabled` ，或者只需從 [連接到伺服器]  對話方塊的 [其他屬性]  索引標籤中移除 [資料行加密設定]  的設定 (預設值是 [已停用]  )。   
 
 > [!TIP]
 > 在已針對現有的 [查詢編輯器] 視窗啟用和停用的 Always Encrypted 之間進行切換：   
 > 1.    以滑鼠右鍵按一下 [查詢編輯器] 視窗中的任何位置。
-> 2.    選取 [連接] > [變更連接]， 
-> 3.    按一下 [選項] >>，
-> 4.    選取 [其他屬性] 索引標籤，然後輸入 `Column Encryption Setting=Enabled` (以啟用 Always Encrypted 行為) 或移除設定 (以停用 Always Encrypted 行為)。   
-> 5.    按一下 **[連接]**。   
+> 2.    選取 [連接]   > [變更連接]  ， 
+> 3.    按一下 [選項]  >>，
+> 4.    選取 [其他屬性]  索引標籤，然後輸入 `Column Encryption Setting=Enabled` (以啟用 Always Encrypted 行為) 或移除設定 (以停用 Always Encrypted 行為)。   
+> 5.    按一下 **[連接]** 。   
    
 ### <a name="param"></a>Always Encrypted 的參數化   
  
@@ -121,17 +121,17 @@ WHERE [SSN] = @SSN
 
 針對目前的 [查詢編輯器] 視窗啟用/停用 [Always Encrypted 的參數化]：   
 1.  從主功能表選取 [查詢]  。   
-2.  選取 [查詢選項]。   
-3.  瀏覽至 [執行] > [進階]。   
-4.  選取或取消選取 [啟用 Always Encrypted 的參數化] 。   
-5.  按一下 [確定] 。   
+2.  選取 [查詢選項]  。   
+3.  瀏覽至 [執行]   > [進階]  。   
+4.  選取或取消選取 [啟用 Always Encrypted 的參數化]  。   
+5.  按一下 [確定]  。   
 
 針對未來的 [查詢編輯器] 視窗啟用/停用 [Always Encrypted 的參數化]：   
 1.  從主功能表選取 [工具]  。   
-2.  選取 [選項]。   
-3.  瀏覽至 [查詢執行] > [SQL Server] > [進階]。   
-4.  選取或取消選取 [啟用 Always Encrypted 的參數化]。   
-5.  按一下 [確定] 。   
+2.  選取 [選項]  。   
+3.  瀏覽至 [查詢執行]   > [SQL Server]   > [進階]  。   
+4.  選取或取消選取 [啟用 Always Encrypted 的參數化]  。   
+5.  按一下 [確定]  。   
 
 如果您執行查詢的 [查詢編輯器] 視窗會使用已啟用 Always Encrypted 的資料庫連接，但尚未針對 [查詢編輯器] 視窗啟用參數化，則系統將會提示您加以啟用。   
 > [!NOTE]
@@ -173,9 +173,9 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 ```
 SQL Server Management Studio 會使用 Intellisense，來告知您哪些變數可以成功參數化，以及哪些參數化嘗試失敗 (與原因)。   
 
-在 [查詢編輯器] 中，會以警告底線標示可成功參數化的變數宣告。 如果您將滑鼠停留在以警告底線標示的宣告陳述式上，您將會看到參數化程序的結果，包括所產生 [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) 物件 (變數要與其對應) 的主要屬性值：[SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)、[Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx)、[Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx)、[Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx)、[SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx)。 您也可以在 [錯誤清單]  檢視的 [警告]  索引標籤中，查看已成功地參數化的所有變數的完整清單。 若要開啟 [錯誤清單]  檢視，從主功能表選取 [檢視]  ，然後選取 [錯誤清單] 。    
+在 [查詢編輯器] 中，會以警告底線標示可成功參數化的變數宣告。 如果您將滑鼠停留在以警告底線標示的宣告陳述式上，您將會看到參數化程序的結果，包括所產生 [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) 物件 (變數要與其對應) 的主要屬性值：[SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)、[Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx)、[Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx)、[Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx)、[SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx)。 您也可以在 [錯誤清單]  檢視的 [警告]  索引標籤中，查看已成功地參數化的所有變數的完整清單。 若要開啟 [錯誤清單]  檢視，從主功能表選取 [檢視]  ，然後選取 [錯誤清單]  。    
 
-如果 SQL Server Management Studio 已嘗試將變數參數化，但參數化失敗，則將會以錯誤底線標示變數的宣告。 如果您將滑鼠停留在已使用錯誤底線標示的宣告陳述式上，您將會取得有關錯誤的結果。 您也可以在 [錯誤清單]  檢視的 [錯誤]  索引標籤中，查看所有變數的參數化錯誤的完整清單。 若要開啟 [錯誤清單]  檢視，從主功能表選取 [檢視]  ，然後選取 [錯誤清單] 。   
+如果 SQL Server Management Studio 已嘗試將變數參數化，但參數化失敗，則將會以錯誤底線標示變數的宣告。 如果您將滑鼠停留在已使用錯誤底線標示的宣告陳述式上，您將會取得有關錯誤的結果。 您也可以在 [錯誤清單]  檢視的 [錯誤]  索引標籤中，查看所有變數的參數化錯誤的完整清單。 若要開啟 [錯誤清單]  檢視，從主功能表選取 [檢視]  ，然後選取 [錯誤清單]  。   
 
 以下螢幕擷取畫面顯示六個變數宣告的範例。 SQL Server Management Studio 已成功將前三個變數參數化。 最後三個變數不符合參數化的必要條件情況，因此，SQL Server Management Studio 未嘗試將它們參數化 (未以任何方式標示它們的宣告)。   
 
@@ -205,7 +205,7 @@ WHERE [SSN] = @SSN;
 > [!NOTE]
 > 未啟用參數化時，整個查詢 (包括類型轉換) 會在 SQL Server/Azure SQL Database 內部進行處理。 啟用參數化時，.NET Framework 會在 SQL Server Management Studio 內部執行一些類型轉換。 由於 .NET Framework 類型系統與 SQL Server 類型系統之間的差異 (例如某些類型 (例如浮點數) 的有效位數不同)，因此，已啟用參數化執行的查詢可以產生不同於未啟用參數化執行的查詢的結果。 
 
-#### <a name="permissions"></a>[權限]      
+#### <a name="permissions"></a>權限      
 
 若要針對加密資料行 (包括以加密文字擷取資料的查詢) 執行任何查詢，您需要資料庫中的 `VIEW ANY COLUMN MASTER KEY DEFINITION` 和 `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` 權限。   
 除了上述權限，若要將任何查詢結果解密或加密任何查詢參數 (透過參數化 Transact-SQL 變數來產生)，您還需要權限來存取保護目標資料行的資料行主要金鑰：   
@@ -220,16 +220,16 @@ WHERE [SSN] = @SSN;
 <a name="provisioncmk"></a>
 ## <a name="provisioning-column-master-keys-new-column-master-key"></a>佈建資料行主要金鑰 (新增資料行主要金鑰)
 
-[新增資料行主要金鑰] 對話方塊可讓您產生資料行主要金鑰或挑選金鑰存放區中的現有金鑰，以及建立資料庫中所建立或所選取金鑰的資料行主要金鑰中繼資料。
+[新增資料行主要金鑰]  對話方塊可讓您產生資料行主要金鑰或挑選金鑰存放區中的現有金鑰，以及建立資料庫中所建立或所選取金鑰的資料行主要金鑰中繼資料。
 
-1.  使用物件總管，巡覽至資料庫下的 [安全性 > 永遠加密金鑰] 資料夾。
-2.  以滑鼠右鍵按一下 [資料行主要金鑰] 資料夾，然後選取 [新增資料行主要金鑰]。 
+1.  使用物件總管  ，巡覽至資料庫下的 [安全性 > 永遠加密金鑰]  資料夾。
+2.  以滑鼠右鍵按一下 [資料行主要金鑰]  資料夾，然後選取 [新增資料行主要金鑰]  。 
 3.  在 [新增資料行主要金鑰]  對話方塊中，輸入資料行主要金鑰中繼資料物件的名稱。
 4.  選取金鑰存放區︰
     - **憑證存放區 - 目前使用者** - 指出 Windows 憑證存放區中的目前使用者憑證存放區位置 (即個人存放區)。 
     - **憑證存放區 - 本機電腦** - 指出 Windows 憑證存放區中的本機電腦憑證存放區位置。 
-    - **Azure Key Vault** - 您需要登入 Azure (按一下 [登入])。 登入之後，就可以挑選其中一個 Azure 訂用帳戶和金鑰保存庫。
-    - **金鑰存放區提供者 (CNG)** - 指出金鑰存放區，而金鑰存放區可透過實作新一代密碼編譯 (CNG) API 的金鑰存放區提供者 (KSP) 進行存取。 這種類型的存放區通常是硬體安全性模組 (HSM)。 在您選取此選項之後，需要挑選 KSP。 預設會選取 [ (Microsoft 軟體金鑰存放區提供者)] 。 如果您想要使用 HSM 中所儲存的資料行主要金鑰，請選取裝置的 KSP (它必須先安裝和設定於電腦上，您才能開啟對話方塊)。
+    - **Azure Key Vault** - 您需要登入 Azure (按一下 [登入]  )。 登入之後，就可以挑選其中一個 Azure 訂用帳戶和金鑰保存庫。
+    - **金鑰存放區提供者 (CNG)** - 指出金鑰存放區，而金鑰存放區可透過實作新一代密碼編譯 (CNG) API 的金鑰存放區提供者 (KSP) 進行存取。 這種類型的存放區通常是硬體安全性模組 (HSM)。 在您選取此選項之後，需要挑選 KSP。 預設會選取 [ (Microsoft 軟體金鑰存放區提供者)]  。 如果您想要使用 HSM 中所儲存的資料行主要金鑰，請選取裝置的 KSP (它必須先安裝和設定於電腦上，您才能開啟對話方塊)。
     -   **密碼編譯服務提供者 (CAPI)** - 一種金鑰存放區，可透過實作密碼編譯 API (CAPI) 的密碼編譯服務提供者 (CSP) 進行存取。 這類存放區通常是硬體安全性模組 (HSM)。 在您選取此選項之後，需要挑選 CSP。  如果您想要使用 HSM 中所儲存的資料行主要金鑰，請選取裝置的 CSP (它必須先安裝和設定於電腦上，您才能開啟對話方塊)。
     
     > [!NOTE]
@@ -248,16 +248,16 @@ SQL Server Management Studio 將會在資料庫中建立資料行主要金鑰的
 
 [新增資料行加密金鑰]  對話方塊可讓您產生資料行加密金鑰、使用資料行主要金鑰進行加密，以及在資料庫中建立資料行加密金鑰中繼資料。
 
-1.  使用物件總管 ，巡覽至資料庫下的 [安全性]/[永遠加密金鑰]  資料夾。
-2.  以滑鼠右鍵按一下 [資料行加密金鑰] 資料夾，然後選取 [新增資料行加密金鑰]。 
+1.  使用物件總管  ，巡覽至資料庫下的 [安全性]/[永遠加密金鑰]  資料夾。
+2.  以滑鼠右鍵按一下 [資料行加密金鑰]  資料夾，然後選取 [新增資料行加密金鑰]  。 
 3.  在 [新增資料行加密金鑰]  對話方塊中，輸入資料行加密金鑰中繼資料物件的名稱。
 4.  選取代表資料庫中資料行主要金鑰的中繼資料物件。
-5.  按一下 [確定] 。 
+5.  按一下 [確定]  。 
 
 
 SQL Server Management Studio 將會產生新的資料行加密金鑰，接著會擷取您從資料庫選取之資料行主要金鑰的中繼資料。 SQL Server Management Studio 接著將使用資料行主要金鑰中繼資料來連絡包含資料行主要金鑰的金鑰存放區，並加密資料行加密金鑰。 最後，將會在資料庫中建立新資料行加密金鑰的中繼資料。 此對話方塊的做法是產生和發出 [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 陳述式。
 
-### <a name="permissions"></a>[權限]
+### <a name="permissions"></a>權限
 
 您需要具有資料庫中的 *ALTER ANY ENCRYPTION MASTER KEY* 和 *VIEW ANY COLUMN MASTER KEY DEFINITION* 資料庫權限，對話方塊才能建立資料行加密金鑰中繼資料以及存取資料行主要金鑰中繼資料。
 若要存取金鑰存放區，並使用資料行主要金鑰，您可能需要金鑰存放區和/或金鑰的權限︰
@@ -282,11 +282,11 @@ SQL Server Management Studio 將會產生新的資料行加密金鑰，接著會
 資料行主要金鑰通常會保護一或多個資料行加密金鑰。 每個資料行加密金鑰在資料庫中皆存有加密值，其為使用資料行主要金鑰將資料行加密金鑰加密的產物。
 在此步驟中，使用新資料行主要金鑰，將輪替中資料行主要金鑰所保護的每個資料行加密金鑰加密，並將新加密值儲存在資料庫中。 因此，每個受到輪替影響的資料行加密金鑰皆會有兩個加密值︰其中一個值是由現有資料行主要金鑰加密，而另一個新值是由新資料行主要金鑰加密。
 
-1.  使用物件總管，巡覽至 [安全性] > [永遠加密金鑰] > [資料行主要金鑰] 資料夾，並找出輪替中資料行主要金鑰。
-2.  以滑鼠右鍵按一下資料行主要金鑰，然後選取 [輪替]。
+1.  使用物件總管  ，巡覽至 [安全性] > [永遠加密金鑰] > [資料行主要金鑰]  資料夾，並找出輪替中資料行主要金鑰。
+2.  以滑鼠右鍵按一下資料行主要金鑰，然後選取 [輪替]  。
 3.  在 [資料行主要金鑰輪替]  對話方塊的 [目標]  欄位中，選取您在步驟 1 中建立之新資料行主要金鑰的名稱。
 4.  檢閱現有資料行主要金鑰所保護的資料行加密金鑰清單。 這些金鑰將會受到輪替影響。
-5.  按一下 [確定] 。
+5.  按一下 [確定]  。
 
 SQL Server Management Studio 將會取得舊資料行主要金鑰所保護之資料行加密金鑰的中繼資料，以及舊與新資料行主要金鑰的中繼資料。 SSMS 接著將使用資料行主要金鑰中繼資料來存取包含舊資料行主要金鑰的金鑰存放區，並解密資料行加密金鑰。 接著，SSMS 將存取保存新資料行主要金鑰的金鑰存放區，以產生資料行加密金鑰的一組新加密值，接著將新值新增至中繼資料 (產生並發出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) 陳述式)。
 
@@ -296,9 +296,9 @@ SQL Server Management Studio 將會取得舊資料行主要金鑰所保護之資
 **步驟 3：使用新的資料行主要金鑰設定您的應用程式**
 
 在此步驟中，您需要確定查詢輪替中資料行主要金鑰所保護的資料庫資料行 (也就是使用資料行加密金鑰加密的資料庫資料行，而該加密金鑰由輪替中資料行主要金鑰加密) 的所有用戶端應用程式，皆可以存取新資料行主要金鑰。 此步驟取決於新資料行主要金鑰所在金鑰存放區的類型。 例如：
-- 若新資料行主要金鑰是儲存在 Windows 憑證存放區的憑證，則您需要將憑證部署至同一個憑證存放區位置 (「目前使用者」 或「本機電腦」 )，作為資料庫中資料行主要金鑰的金鑰路徑中所指定的位置。 應用程式必須能夠存取憑證︰
-    - 如果憑證儲存在「目前使用者」憑證存放區位置中，憑證必須匯入應用程式的 Windows 身分識別 (使用者) 的「目前使用者」存放區。
-    - 如果憑證儲存在「本機電腦」憑證存放區位置中，應用程式的 Windows 身分識別必須有權存取憑證。
+- 若新資料行主要金鑰是儲存在 Windows 憑證存放區的憑證，則您需要將憑證部署至同一個憑證存放區位置 (「目前使用者」  或「本機電腦」  )，作為資料庫中資料行主要金鑰的金鑰路徑中所指定的位置。 應用程式必須能夠存取憑證︰
+    - 如果憑證儲存在「目前使用者」  憑證存放區位置中，憑證必須匯入應用程式的 Windows 身分識別 (使用者) 的「目前使用者」存放區。
+    - 如果憑證儲存在「本機電腦」  憑證存放區位置中，應用程式的 Windows 身分識別必須有權存取憑證。
 - 若新資料行主要金鑰儲存在 Microsoft Azure 金鑰保存庫中，就必須實作應用程式，使其可以向 Azure 驗證並有權存取金鑰。
 
 如需詳細資訊，請參閱 [建立和儲存資料行主要金鑰 (永遠加密)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
@@ -315,24 +315,24 @@ SQL Server Management Studio 將會取得舊資料行主要金鑰所保護之資
 > [!WARNING]
 > 若您先行移除資料行加密金鑰的值，而應用程式尚無法使用其對應的資料行主要金鑰，則該應用程式將無法再解密資料庫資料行。
 
-1.  使用物件總管，巡覽至 [安全性] > [永遠加密金鑰] 資料夾，並找出要取代的現有資料行主要金鑰。
-2.  以滑鼠右鍵按一下現有資料行主要金鑰，然後選取 [清除]。
+1.  使用物件總管  ，巡覽至 [安全性] > [永遠加密金鑰]  資料夾，並找出要取代的現有資料行主要金鑰。
+2.  以滑鼠右鍵按一下現有資料行主要金鑰，然後選取 [清除]  。
 3.  檢閱要移除的資料行加密金鑰值清單。
-4.  按一下 [確定] 。
+4.  按一下 [確定]  。
 
 SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) 陳述式，來捨棄舊資料行主要金鑰所加密之資料行加密金鑰的加密值。
 
 **步驟 5：刪除舊資料行主要金鑰的中繼資料**
 
 如果您選擇從資料庫移除舊資料行主要金鑰的定義，請使用下列步驟。 
-1.  使用物件總管，巡覽至 安全性 > 永遠加密金鑰} > 資料行主要金鑰 資料夾，然後找出要從資料庫移除的舊資料行主要金鑰。
-2.  以滑鼠右鍵按一下舊資料行主要金鑰，然後選取 [刪除]。 (這樣會產生並發出 [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md) 陳述式來移除資料行主要金鑰中繼資料)。
-3.  按一下 [確定] 。
+1.  使用物件總管  ，巡覽至 安全性 > 永遠加密金鑰} > 資料行主要金鑰  資料夾，然後找出要從資料庫移除的舊資料行主要金鑰。
+2.  以滑鼠右鍵按一下舊資料行主要金鑰，然後選取 [刪除]  。 (這樣會產生並發出 [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md) 陳述式來移除資料行主要金鑰中繼資料)。
+3.  按一下 [確定]  。
 
 > [!NOTE]
 > 強烈建議您不要在輪替之後永久刪除舊資料行主要金鑰。 而是應該將舊資料行主要金鑰保留在其目前金鑰存放區中，或將它封存在另一個安全的地方。 如果您將資料庫從備份檔案還原到設定新資料行主要金鑰之前的某個時間點，則需要舊的金鑰才能存取資料。
 
-### <a name="permissions"></a>[權限]
+### <a name="permissions"></a>權限
 
 輪替資料行主要金鑰需要下列資料庫權限︰
 
@@ -358,16 +358,16 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 > 如果包含輪替中金鑰所加密之資料行的資料表很大，則輪替資料行加密金鑰可能需要很長的時間。 正在重新加密資料時，您的應用程式無法寫入受影響的資料表中。 因此，您的組織需要非常仔細地規劃資料行加密金鑰輪替。
 若要輪替資料行加密金鑰，請使用 [永遠加密精靈]。
 
-1.  開啟資料庫的精靈：以滑鼠右鍵按一下資料庫，並指向 [工作] ，然後按一下 [加密資料行] 。
-2.  檢閱[簡介]  頁面，然後按一下 [下一步] 。
+1.  開啟資料庫的精靈：以滑鼠右鍵按一下資料庫，並指向 [工作]  ，然後按一下 [加密資料行]  。
+2.  檢閱[簡介]  頁面，然後按一下 [下一步]  。
 3.  在 [資料行選取]  頁面上，展開資料表，然後找出舊資料行加密金鑰目前所加密且您想要取代的所有資料行。
-4.  對於舊資料行加密金鑰所加密的每個資料行，將 [加密金鑰]  設定為新的自動產生金鑰。 **注意：** 您也可以先建立新的資料行加密金鑰，再執行精靈，請參閱上述的＜佈建資料行加密金鑰＞一節。
-5.  在 [主要金鑰組態]  頁面上，選取要儲存新金鑰的位置，並選取主要金鑰來源，然後按一下 [下一步] 。 **注意：** 如果您使用的是現有資料行加密金鑰，而非自動產生的資料行加密金鑰，則不需要在這個頁面上執行任何動作。
-6.  在 [驗證] 頁面上，選擇是否要立即執行指令碼或建立 PowerShell 指令碼，然後按一下 [下一步] 。
+4.  對於舊資料行加密金鑰所加密的每個資料行，將 [加密金鑰]  設定為新的自動產生金鑰。 **注意：** 您也可以先建立新的資料行加密金鑰，再執行精靈，請參閱上述的＜佈建資料行加密金鑰＞  一節。
+5.  在 [主要金鑰組態]  頁面上，選取要儲存新金鑰的位置，並選取主要金鑰來源，然後按一下 [下一步]  。 **注意：** 如果您使用的是現有資料行加密金鑰，而非自動產生的資料行加密金鑰，則不需要在這個頁面上執行任何動作。
+6.  在 [驗證]  頁面上，選擇是否要立即執行指令碼或建立 PowerShell 指令碼，然後按一下 [下一步]  。
 7.  在 [摘要]  頁面上，檢閱您已選取的選項，並按一下 [完成]  ，然後在完成時關閉精靈。
-8.  使用物件總管 ，巡覽至 [安全性]/[永遠加密金鑰]/[資料行加密金鑰]  資料夾，然後找出要從資料庫移除的舊資料行加密金鑰。 以滑鼠右鍵按一下金鑰，然後選取 [刪除] 。
+8.  使用物件總管  ，巡覽至 [安全性]/[永遠加密金鑰]/[資料行加密金鑰]  資料夾，然後找出要從資料庫移除的舊資料行加密金鑰。 以滑鼠右鍵按一下金鑰，然後選取 [刪除]  。
 
-### <a name="permissions"></a>[權限]
+### <a name="permissions"></a>權限
 
 輪替資料行加密金鑰需要下列資料庫權限：**ALTER ANY COLUMN MASTER KEY** - 如果您使用新的自動產生資料行加密金鑰 (也會產生新資料行主要金鑰和其新的中繼資料)，則其為必要項目。
 **ALTER ANY COLUMN ENCRYPTION KEY** - 為新的資料行加密金鑰增新中繼資料時的必要項目。
@@ -400,7 +400,7 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 > [!NOTE]
 > 如果針對資料庫或 DACPAC 中資料行所設定的資料行主要金鑰儲存在 Azure 金鑰保存庫中，則系統會提示您登入 Azure (如果尚未登入)。
 
-### <a name="permissions"></a>[權限]
+### <a name="permissions"></a>權限
 
 若要在 DACPAC 或目標資料庫中設定永遠加密時執行 DAC 升級作業，您可能需要具有下列部分或所有權限 (取決於 DACPAC 中的結構描述與目標資料庫結構描述之間的差異)。
 
@@ -423,7 +423,7 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 如果您的應用程式設定成修改或擷取來源資料庫 (您匯出的資料庫) 中所儲存的加密資料，則不需要執行任何特殊作業，就可讓應用程式查詢目標資料庫中的加密資料，因為兩個資料庫中的金鑰都相同。
 
 
-### <a name="permissions"></a>[權限]
+### <a name="permissions"></a>權限
 
 您需要具有來源資料庫的 *ALTER ANY COLUMN MASTER KEY* 和 *ALTER ANY COLUMN ENCRYPTION KEY* 。 您需要具有目標資料庫的 *ALTER ANY COLUMN MASTER KEY*、 *ALTER ANY COLUMN ENCRYPTION KEY*、 *VIEW ANY COLUMN MASTER KEY DEFINITION*和 *VIEW ANY COLUMN ENCRYPTION* 。
 
@@ -434,7 +434,7 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 - 如果您的資料來源是使用永遠加密的資料庫，則可以設定資料來源連接，以在匯出作業期間解密加密資料行中所儲存的資料，或維持加密狀態。
 - 如果您的資料目標是使用永遠加密的資料庫，則可以設定資料目標連接，以加密目標設為加密資料行的資料。
 
-若要啟用解密 (針對資料來源) 或加密 (針對資料目標)，您需要將資料來源/目標連接設定成使用 [.Net Framework Data Provider for SqlServer](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) ，而且需要將資料行加密設定連接字串關鍵字設成 [已啟用] 。
+若要啟用解密 (針對資料來源) 或加密 (針對資料目標)，您需要將資料來源/目標連接設定成使用 [.Net Framework Data Provider for SqlServer](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) ，而且需要將資料行加密設定連接字串關鍵字設成 [已啟用]  。
 
 下表列出可能的移轉案例、它們與永遠加密的關係，以及每個連接的資料來源和資料目標組態。
 
@@ -446,7 +446,7 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 |移動加密資料，而未進行解密。<br><br>**注意：** 移轉之前，必須要有具有加密資料行的目標資料表。| 資料提供者/驅動程式︰任何 <br>資料行加密設定 = 已停用<br><br>(如果使用 SqlServer 和 .NET Framework 4.6 或更新版本的 .Net Framework 資料提供者。)| 資料提供者/驅動程式︰任何 <br>資料行加密設定 = 已停用<br><br>(如果使用 SqlServer 和 .NET Framework 4.6 或更新版本的 .Net Framework 資料提供者。)<br><br>使用者必須將 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 設成 ON。<br><br>如需詳細資訊，請參閱 [移轉透過永遠加密保護的敏感性資料](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)。
 
 
-### <a name="permissions"></a>[權限]
+### <a name="permissions"></a>權限
 
 若要 **加密** 或 **解密** 資料來源中所儲存的資料，您需要具有來源資料庫的 *VIEW ANY COLUMN MASTER KEY DEFINITION* 和 *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* 權限。
 

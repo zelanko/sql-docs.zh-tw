@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b01e6cc26d2dfbcf897a49e971d429961144321f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669317"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62738736"
 ---
 # <a name="ghost-cleanup-process-guide"></a>準刪除清除程序指南
 

@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f530f609c4c5ebc83d74d2e8ea376efe978dea89
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983080"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
@@ -61,9 +61,9 @@ SET STATISTICS IO { ON | OFF }
 |**邏輯讀取**|從資料快取中讀取的頁數。|  
 |**實體讀取**|從磁碟中讀取的頁數。|  
 |**讀取前讀取**|放入查詢快取中的頁數。|  
-|**LOB 邏輯讀取**|從資料快取中讀取的頁數。 包含 **text**、**ntext**、**image**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 或資料行存放區索引頁。|  
-|**LOB 實體讀取**|從磁碟中讀取的頁數。 包含 **text**、**ntext**、**image**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 或資料行存放區索引頁。|  
-|**LOB 讀取前讀取**|放入查詢快取中的頁數。 包含 **text**、**ntext**、**image**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 或資料行存放區索引頁。|
+|**LOB 邏輯讀取**|從資料快取中讀取的頁數。 包含 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 或資料行存放區索引頁。|  
+|**LOB 實體讀取**|從磁碟中讀取的頁數。 包含 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 或資料行存放區索引頁。|  
+|**LOB 讀取前讀取**|放入查詢快取中的頁數。 包含 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 或資料行存放區索引頁。|
 
  SET STATISTICS IO 的設定是在執行階段進行設定，而不是在剖析階段進行設定。
 

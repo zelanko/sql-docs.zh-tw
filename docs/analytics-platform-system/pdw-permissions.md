@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 1ac058e42b8bad4f499210835a1f85c3cc7a08a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62639512"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>在平行處理資料倉儲中管理權限
@@ -62,7 +62,7 @@ ms.locfileid: "62639512"
   
 -   當登入由 using **CREATE LOGIN**陳述式中，登入會收到**CONNECT SQL**允許登入的權限連接到 SQL Server PDW。  
   
--   建立時使用的資料庫使用者**CREATE USER**陳述式中，使用者會收到**CONNECT ON DATABASE::**_< 資料庫名稱 >_ 權限，允許若要連接至該資料庫的使用者身分登入。  
+-   建立時使用的資料庫使用者**CREATE USER**陳述式中，使用者會收到**CONNECT ON DATABASE::** _< 資料庫名稱 >_ 權限，允許若要連接至該資料庫的使用者身分登入。  
   
 -   所有的主體，包括公用角色中，有任何明確或隱含的權限依預設，由於隱含權限繼承自明確的權限。 因此，當有任何明確的權限不時，有也可以是任何隱含的權限。  
   
@@ -86,10 +86,10 @@ ms.locfileid: "62639512"
 -   PUBLIC 伺服器角色無法繼承隱含權限。 必須明確授與給 PUBLIC 角色的任何權限。  
   
 ## <a name="BackupProc"></a>判斷權限  
-登入有權執行特定動作取決於授與或拒絕登入、 使用者和使用者為成員的角色的權限。 伺服器層級權限 (例如**CREATE LOGIN**並**VIEW SERVER STATE**) 可用於伺服器層級主體 （登入）。 資料庫層級權限 (例如**選取 **從資料表或**EXECUTE**程序) 可用於資料庫層級主體 （使用者和資料庫角色）。  
+登入有權執行特定動作取決於授與或拒絕登入、 使用者和使用者為成員的角色的權限。 伺服器層級權限 (例如**CREATE LOGIN**並**VIEW SERVER STATE**) 可用於伺服器層級主體 （登入）。 資料庫層級權限 (例如**選取** 從資料表或**EXECUTE**程序) 可用於資料庫層級主體 （使用者和資料庫角色）。  
   
 ### <a name="implicit-and-explicit-permissions"></a>隱含和明確權限  
-「明確權限」 是藉由 **GRANT** 或 **DENY** 陳述式來賦予主體的 **GRANT** 或 **DENY** 權限。 資料庫層級權限詳列於[sys.database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)檢視。 伺服器層級權限詳列於[sys.server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)檢視。  
+「明確權限」  是藉由 **GRANT** 或 **DENY** 陳述式來賦予主體的 **GRANT** 或 **DENY** 權限。 資料庫層級權限詳列於[sys.database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)檢視。 伺服器層級權限詳列於[sys.server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)檢視。  
   
 *隱含權限*是**GRANT**或是**拒絕**主體 （登入或伺服器角色） 已繼承的權限。 權限可以透過下列方式繼承。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "62639512"
 ## <a name="fixed-database-roles"></a>固定資料庫角色
 SQL Server 提供預先設定的 （固定） 資料庫層級角色，可協助您管理伺服器的權限。 預先設定的角色被固定的因為您無法變更指派給他們的權限。 也可以建立使用者定義資料庫角色。 您可以變更指派給使用者定義資料庫角色的權限。  
   
-角色是分組其他主體的安全性主體。 是整個資料庫的資料庫角色的權限範圍。 資料庫使用者與其他資料庫角色，都可以新增為資料庫角色的成員。 無法加入固定的資料庫角色，彼此。 (「角色」就像是 Windows 作業系統中的「群組」)。  
+角色是分組其他主體的安全性主體。 是整個資料庫的資料庫角色的權限範圍。 資料庫使用者與其他資料庫角色，都可以新增為資料庫角色的成員。 無法加入固定的資料庫角色，彼此。 (「角色」  就像是 Windows 作業系統中的「群組」  )。  
   
 有 9 的固定的資料庫角色。  
   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd074e705c5ae135eb8161a0ea5d2919d1c183e1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076258"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>建立及管理遠端分割區 (Analysis Services)
@@ -56,9 +56,9 @@ ms.locfileid: "66076258"
   
 #### <a name="specify-valid-server-names-for-cube-deployment-in-ssdt"></a>為 Cube 部署指定有效的伺服器名稱 (在 SSDT 中)  
   
-1.  在主要伺服器：在 [方案總管] 中，以滑鼠右鍵按一下方案名稱，然後選取**屬性**。 在 [屬性] 對話方塊中，依序按一下 [組態屬性]、[部署] 及 [伺服器]，然後設定主要伺服器的名稱。  
+1.  在主要伺服器：在 [方案總管] 中，以滑鼠右鍵按一下方案名稱，然後選取**屬性**。 在 [屬性]  對話方塊中，依序按一下 [組態屬性]  、[部署]  及 [伺服器]  ，然後設定主要伺服器的名稱。  
   
-2.  在從屬伺服器：在 [方案總管] 中，以滑鼠右鍵按一下方案名稱，然後選取**屬性**。 在 [屬性] 對話方塊中，依序按一下 [組態屬性]、[部署] 及 [伺服器]，然後設定從屬伺服器的名稱。  
+2.  在從屬伺服器：在 [方案總管] 中，以滑鼠右鍵按一下方案名稱，然後選取**屬性**。 在 [屬性]  對話方塊中，依序按一下 [組態屬性]  、[部署]  及 [伺服器]  ，然後設定從屬伺服器的名稱。  
   
 #### <a name="create-and-deploy-a-secondary-database-in-ssdt"></a>建立及部署次要資料庫 (在 SSDT 中)  
   
@@ -110,13 +110,13 @@ ms.locfileid: "66076258"
   
 #### <a name="set-up-the-remote-partition-in-ssdt"></a>設定遠端分割區 (在 SSDT 中)  
   
-1.  在主要伺服器：在 Cube 設計師中開啟 cube，然後按一下**分割區** 索引標籤。展開量值群組。 如果為多個資料分割設定量值群組，請按一下 [新增資料分割]；否則在 [來源] 資料行中按一下瀏覽 (. . ) 按鈕，以編輯現有的分割區。  
+1.  在主要伺服器：在 Cube 設計師中開啟 cube，然後按一下**分割區** 索引標籤。展開量值群組。 如果為多個資料分割設定量值群組，請按一下 [新增資料分割]  ；否則在 [來源] 資料行中按一下瀏覽 (. . ) 按鈕，以編輯現有的分割區。  
   
-2.  在 [資料分割精靈] 的 [指定來源資訊] 中，選取原始資料來源檢視和事實資料表。  
+2.  在 [資料分割精靈] 的 [指定來源資訊]  中，選取原始資料來源檢視和事實資料表。  
   
 3.  如果使用查詢繫結，請為建立的新分割區提供分割資料的 WHERE 子句。  
   
-4.  在 [處理與儲存位置] 的 [處理位置] 下，選擇 [遠端 Analysis Services 資料來源]，然後按一下 [新增]，以建立指向從屬資料庫 db-storage 的新資料來源。  
+4.  在 [處理與儲存位置]  的 [處理位置]  下，選擇 [遠端 Analysis Services 資料來源]  ，然後按一下 [新增]  ，以建立指向從屬資料庫 db-storage 的新資料來源。  
   
     > [!NOTE]  
     >  如果發生錯誤，指出集合中不存在此資料來源，您必須開啟儲存資料庫 db-storage 的專案，然後建立指向 master 資料庫 db-master 的資料來源。  
