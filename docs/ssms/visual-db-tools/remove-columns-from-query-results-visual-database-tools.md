@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 000d308179cc67ddec3c1f59f0ca8b40a53e0a27
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098192"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>移除查詢結果的資料行 (Visual Database Tools)
@@ -34,7 +34,7 @@ ms.locfileid: "65098192"
   
 ### <a name="to-remove-a-column-from-the-query-output"></a>若要從查詢輸出移除資料行  
   
--   在 [準則] 窗格中，清除要移除的資料行之 [輸出] 資料行欄位的核取方塊。 (若要將資料行再次新增回查詢輸出中，請再次核取 [輸出] 資料行)。  
+-   在 [準則]  窗格中，清除要移除的資料行之 [輸出]  資料行欄位的核取方塊。 (若要將資料行再次新增回查詢輸出中，請再次核取 [輸出]  資料行)。  
   
     -或-  
   

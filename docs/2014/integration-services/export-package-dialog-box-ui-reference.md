@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1cca0a2761f87d6f4f3837df1e9a0bdcc5b91a4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058905"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>匯出封裝對話方塊 UI 參考
@@ -53,10 +53,10 @@ ms.locfileid: "66058905"
  如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，請提供密碼。  
   
  **封裝路徑**  
- 輸入封裝路徑，或按一下瀏覽按鈕 ([...])，並找出要儲存封裝的資料夾。  
+ 輸入封裝路徑，或按一下瀏覽按鈕 ([...])  ，並找出要儲存封裝的資料夾。  
   
  **保護等級**  
- 按一下瀏覽按鈕 ([...]) 並更新 [封裝保護等級] 對話方塊中的保護等級。 如需詳細資訊，請參閱 [封裝與專案保護等級對話方塊](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)。  
+ 按一下瀏覽按鈕 ([...])  並更新 [封裝保護等級]  對話方塊中的保護等級。 如需詳細資訊，請參閱 [封裝與專案保護等級對話方塊](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [儲存封裝的副本](../../2014/integration-services/save-copy-of-package.md)   

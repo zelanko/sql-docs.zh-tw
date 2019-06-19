@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 6fd7ff677fdbbfa91b616fd6a561d3eb48c2de57
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096054"
 ---
 # <a name="connect-to-a-native-mode-report-server"></a>連接至原生模式報表伺服器
@@ -32,13 +32,13 @@ ms.locfileid: "66096054"
 > [!TIP]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態管理員 (RSConfigTool.exe) 使用"highestAvailable"權限層級安裝。 這是依據設計的行為。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員需要與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API 進行通訊。 某些 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 通訊需要更高層級或系統管理權限。  
   
--   若要連接到本機報表伺服器執行個體，請使用預設值，然後按一下 **[連接]**。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員會提供本機伺服器名稱，並偵測預設執行個體。 在大部分情況下，您可以按一下 **[連接]** 而不必變更值。 如果您安裝了一個以上的執行個體，您必須選取您想要使用的執行個體。  
+-   若要連接到本機報表伺服器執行個體，請使用預設值，然後按一下 **[連接]** 。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員會提供本機伺服器名稱，並偵測預設執行個體。 在大部分情況下，您可以按一下 **[連接]** 而不必變更值。 如果您安裝了一個以上的執行個體，您必須選取您想要使用的執行個體。  
   
--   若要連接到遠端報表伺服器執行個體，請輸入伺服器名稱，再按一下 **[尋找]**，並選取此執行個體，然後按一下 **[連接]**。  
+-   若要連接到遠端報表伺服器執行個體，請輸入伺服器名稱，再按一下 **[尋找]** ，並選取此執行個體，然後按一下 **[連接]** 。  
   
  若要開啟此對話方塊，請啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員。 當您啟動此工具時，這個對話方塊會立即出現。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **伺服器名稱**  
  輸入安裝 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之電腦的網路名稱。 只需要輸入電腦名稱；請勿包含前置詞或斜線。  
   

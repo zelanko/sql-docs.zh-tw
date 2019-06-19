@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 992784658a97e938b7793c612d32dfa7fc2a5574
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696806"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62734709"
 ---
 # <a name="transactions-sql-data-warehouse"></a>交易 (SQL 資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
  SET IMPLICIT_TRANSACTIONS { ON | **OFF** }  
  這會切換為與 SET AUTOCOMMIT 相同的模式。 當設為 ON 時，SET IMPLICIT_TRANSACTIONS 會將連接設為隱含的交易模式。 當設為 OFF 時，會讓連線返回自動認可模式。  如需詳細資訊，請參閱 [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  執行與交易相關的陳述式，不需要任何特定的權限。 在交易內執行陳述式則需要權限。  
   
 ## <a name="error-handling"></a>錯誤處理  

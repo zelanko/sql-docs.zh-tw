@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 20102eeb26166d40bfdb87de49c8576eadc47261
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095718"
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>選項 (SQL Server 物件總管 - 命令)
@@ -32,7 +32,7 @@ ms.locfileid: "65095718"
   
     在 Visual Database Tools 中開啟已填入 200 個資料列的資料表。  
   
-使用 [一般指令碼選項] 對話方塊，以變更將會開啟的資料列數目。  
+使用 [一般指令碼選項]  對話方塊，以變更將會開啟的資料列數目。  
   
 ## <a name="general-scripting-options"></a>一般指令碼選項  
 **[選取前 <n> 筆稽核記錄] 命令的值**  

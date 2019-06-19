@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 001e62869146a7090fe4598650c763a690809cfb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103643"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>ReportServer:Service 和 ReportServerSharePoint:Service 效能物件的效能計數器
@@ -29,7 +29,7 @@ ms.locfileid: "66103643"
 > [!NOTE]  
 >  效能物件是用來監視本機報表伺服器的事件。 如果您是在向外延展部署中執行報表伺服器，則計數會套用到目前的伺服器，而非整個向外延展部署。  
   
- Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件集。 [執行階段分析](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx)。  
+ Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件集。 [執行階段分析](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx) 。  
   
  本主題內容：  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66103643"
 |`Logon Attempts/sec`|嘗試登入的速率。|  
 |`Logon Successes Total`|RSWindows 驗證類型成功登入的次數。 RSWindows 驗證類型包括 RSWindowsNegotiate、RSWindowsNTLM、RSWindowsKerberos 和 RSWindowsBasic。 值為零 (0) 表示自訂驗證。|  
 |`Logon Successes/sec`|成功登入的速率。|  
-|`Memory Pressure State`|下列其中一個數字 (從 1 到 5)，表示伺服器目前的記憶體狀態：<br /><br /> 1:沒有壓力<br /><br /> 2:低度壓力<br /><br /> 3:中度壓力<br /><br /> 4:高度壓力<br /><br /> 5:壓力過高|  
+|`Memory Pressure State`|下列其中一個數字 (從 1 到 5)，表示伺服器目前的記憶體狀態：<br /><br /> 1：沒有壓力<br /><br /> 2：低度壓力<br /><br /> 3：中度壓力<br /><br /> 4：高度壓力<br /><br /> 5：壓力過高|  
 |`Memory Shrink Amount`|伺服器要求壓縮使用中記憶體的位元組數目。|  
 |`Memory Shrink Notifications/sec`|伺服器在上一秒發出以壓縮使用中記憶體的通知數目。 這個值表示伺服器遇到記憶體壓力的頻率。|  
 |`Requests Disconnected`|由於通訊失敗而造成中斷連接的要求數目。|  

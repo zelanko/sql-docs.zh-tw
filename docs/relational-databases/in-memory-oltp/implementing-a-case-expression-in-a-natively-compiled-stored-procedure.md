@@ -13,16 +13,16 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5aae82125660ef381d9760ed3f25309f2320bb54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648226"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047674"
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>在原生編譯的預存程序中實作 CASE 運算式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-**適用於：**[!INCLUDE[ssSDSFull_md](../../includes/sssdsfull-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 起)
+**適用於：** [!INCLUDE[ssSDSFull_md](../../includes/sssdsfull-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 起)
 
 原生編譯的 T-SQL 模組可支援 CASE 運算式。 下列範例示範一種在查詢中使用 CASE 運算式的方式。 
 
@@ -45,9 +45,9 @@ EXEC dbo.usp_SOHOnlineOrderResult
 GO  
 ``` 
 
-**適用於：**[!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)] 起)
+**適用於：** [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)] 起)
 
-  原生編譯的 T-SQL 模組「不」支援 CASE 運算式。 下列範例示範如何在原生編譯的預存程序中實作 CASE 運算式功能。  
+  原生編譯的 T-SQL 模組「不」  支援 CASE 運算式。 下列範例示範如何在原生編譯的預存程序中實作 CASE 運算式功能。  
   
  此程式碼範例使用一個資料表變數來建構單一結果集。 由於需要建立額外的資料列複本，因此僅適用於處理有限數目的資料列。  
   

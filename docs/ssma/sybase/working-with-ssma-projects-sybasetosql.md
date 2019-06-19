@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7e1be086b891d6888c6509b15adc6664b3022978
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187117"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>使用 SSMA 專案 (SybaseToSQL)
@@ -55,7 +55,7 @@ SSMA 包含數個選項，藉以轉換和載入資料庫物件，移轉資料，
   
 **若要建立專案**  
   
-1.  在 [檔案] 功能表上，選取 [新增專案]。  
+1.  在 [檔案]  功能表上，選取 [新增專案]  。  
   
     [新增專案]  對話方塊隨即出現。  
   
@@ -97,7 +97,7 @@ SSMA 包含數個選項，藉以轉換和載入資料庫物件，移轉資料，
   
         儲存中繼資料，可能需要幾分鐘的時間。 如果您不想在此時儲存中繼資料，請勿選取任何核取方塊。  
   
-    2.  按一下 [儲存] 按鈕。  
+    2.  按一下 [儲存]  按鈕。  
   
         SSMA 會剖析 Sybase ASE 結構描述，並將中繼資料儲存到專案檔。  
   

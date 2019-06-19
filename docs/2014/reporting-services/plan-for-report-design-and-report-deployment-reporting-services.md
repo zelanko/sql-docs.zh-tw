@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6104bfc97d2f66652ffa9b16e9ff0ae8f9b0550
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108053"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>規劃報表設計與報表部署 (Reporting Services 2014)
@@ -75,7 +75,7 @@ ms.locfileid: "66108053"
   
  當您將報表定義上傳至報表伺服器，或升級包含現有報表的報表伺服器時，報表伺服器會以原始格式保留報表定義。 **第一次使用時**，報表伺服器會將報表伺服器資料庫中的報表升級為二進位格式，而這個格式在後續檢視時都會保留著。 報表定義 (.rdl) 本身不會升級。  
   
- 您可以從報表伺服器擷取報表定義檔案 (.rdl) 的唯讀複本。 在原生模式報表伺服器上，瀏覽至報表管理員，然後選取報表並按一下 **[下載]**。 在 SharePoint 模式部署中，瀏覽至文件庫，然後選取報表並按一下 **[下載複本]**。  
+ 您可以從報表伺服器擷取報表定義檔案 (.rdl) 的唯讀複本。 在原生模式報表伺服器上，瀏覽至報表管理員，然後選取報表並按一下 **[下載]** 。 在 SharePoint 模式部署中，瀏覽至文件庫，然後選取報表並按一下 **[下載複本]** 。  
   
  若要升級報表定義，您必須在報表撰寫環境下開啟報表，然後儲存報表。  
   

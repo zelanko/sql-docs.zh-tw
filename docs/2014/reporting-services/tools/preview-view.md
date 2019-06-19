@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84424e361905121a0e4061f0a6b2d565b79e8ee9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100113"
 ---
 # <a name="preview-view"></a>預覽檢視
@@ -27,7 +27,7 @@ ms.locfileid: "66100113"
 > [!IMPORTANT]  
 >  當 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 以 RemoteApp 的形式執行時，報表無法顯示在  的 [預覽] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]檢視中。 RemoteApp 程式是透過遠端桌面服務進行遠端存取的程式。 如需詳細資訊，請參閱 < [TS RemoteApp 逐步指南](https://technet.microsoft.com/library/cc730673\(WS.10\).aspx)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  使用工具列即可管理預覽功能。  
   
  **顯示或隱藏文件引導模式**  

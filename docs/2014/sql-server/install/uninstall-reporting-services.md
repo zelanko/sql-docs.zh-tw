@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 5b6c7ff7a5ac2539bc6732d68522bb361d6b1b0a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62670622"
 ---
 # <a name="uninstall-reporting-services"></a>解除安裝 Reporting Services
@@ -47,9 +47,9 @@ ms.locfileid: "62670622"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是執行個體功能，因此不會列在 Windows [控制台] 的 [程式和功能] 中。 若要解除安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式：  
   
-1.  在 Windows [控制台] 中，按一下 **[程式和功能]**。  
+1.  在 Windows [控制台] 中，按一下 **[程式和功能]** 。  
   
-2.  在 **[程式和功能]** 中，選取 **[Microsoft SQL Server 2012]**。  
+2.  在 **[程式和功能]** 中，選取 **[Microsoft SQL Server 2012]** 。  
   
 3.  在解除安裝精靈中，選取包含 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體功能 **RS**的執行個體。  
   

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 2b492476eadfde4c0c2666096714a8cd0f634db1
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66712027"
 ---
 # <a name="recordcount-property-ado"></a>RecordCount 屬性 (ADO)
@@ -47,7 +47,7 @@ ms.locfileid: "66712027"
 - **adApproxPosition**與約略位置。
 
 > [!NOTE]
-> 2.8 和更早版本的 ADO 版本，SQLOLEDB 提供者會擷取所有記錄使用伺服器端資料指標時，它會傳回儘管 **，則為 True**同時**支援 (adApproxPosition)** 和**支援 (adBookmark)** 。
+> 2\.8 和更早版本的 ADO 版本，SQLOLEDB 提供者會擷取所有記錄使用伺服器端資料指標時，它會傳回儘管 **，則為 True**同時**支援 (adApproxPosition)** 和**支援 (adBookmark)** 。
   
 資料指標類型**資料錄集**物件會影響是否可判斷記錄數目。 **RecordCount**屬性會傳回-1 的順向資料指標; 靜態的實際計數或 keyset 資料指標，並可能是-1 或動態資料指標，根據資料來源的實際計數。
   

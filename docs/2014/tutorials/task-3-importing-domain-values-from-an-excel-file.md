@@ -10,10 +10,10 @@ ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
 ms.author: lle
 author: lrtoyou1223
 ms.openlocfilehash: d86d71a3d62ca94eed2da5ad91fbdd60ee4989f4
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822985"
 ---
 # <a name="task-3-importing-domain-values-from-an-excel-file"></a>工作 3：從 Excel 檔案匯入定義域值

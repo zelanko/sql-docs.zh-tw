@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: eb2abb926aa90ec2379c1a367671f876d38382cc
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096507"
 ---
 # <a name="edit-an-operator"></a>編輯操作員
@@ -67,13 +67,13 @@ ms.locfileid: "65096507"
   
 1.  在 **[物件總管]** 中，按一下加號，展開包含要編輯之操作員的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
 3.  按一下加號展開 **[操作員]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您要編輯的操作員，然後選取 [屬性]。  
+4.  以滑鼠右鍵按一下您要編輯的操作員，然後選取 [屬性]  。  
   
-    如需 [_operator\_name_ 屬性] 對話方塊中之可用選項的詳細資訊，請參閱：  
+    如需 [_operator\_name_ 屬性]  對話方塊中之可用選項的詳細資訊，請參閱：  
   
     -   [操作員屬性 - 新增操作員 &#40;一般頁面&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "65096507"
   
     -   [操作員屬性 &#40;記錄頁面&#41;](../../ssms/agent/operator-properties-history-page.md)  
   
-5.  完成後，請按一下 **[確定]**。  
+5.  完成後，請按一下 **[確定]** 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -89,9 +89,9 @@ ms.locfileid: "65096507"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- updates the operator status to enabled, and sets the days   

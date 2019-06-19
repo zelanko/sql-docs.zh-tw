@@ -16,10 +16,10 @@ ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3ea42c8ca9025880f28f273248682e5b8fa88f3b
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66743907"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>使用 FOR JSON 將查詢結果格式化為 JSON (SQL Server)
@@ -181,7 +181,7 @@ JSON_F52E2B61-18A1-11d1-B105-00805F49916B
 1.  結果集包含單一資料行。
     -   小型結果集會包含單一資料列。
     -   大型結果集跨多個資料列分割太長的 JSON 字串。
-        -   根據預設，SQL Server Management Studio (SSMS) 會在輸出設定為 [以方格顯示結果] 時，將結果串連成單一資料列。 SSMS 的狀態列會顯示實際資料列計數。
+        -   根據預設，SQL Server Management Studio (SSMS) 會在輸出設定為 [以方格顯示結果]  時，將結果串連成單一資料列。 SSMS 的狀態列會顯示實際資料列計數。
         -   其他用戶端應用程式可能需要程式碼，藉由串連多個資料列的內容，來將較長的結果重新合併成有效的單一 JSON 字串。 如需這個程式碼在 C# 應用程式中的範例，請參閱[在 C# 用戶端應用程式中使用 FOR JSON 輸出](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md#use-for-json-output-in-a-c-client-app)。
   
      ![FOR JSON 輸出的範例](../../relational-databases/json/media/forjson-example2.png)  

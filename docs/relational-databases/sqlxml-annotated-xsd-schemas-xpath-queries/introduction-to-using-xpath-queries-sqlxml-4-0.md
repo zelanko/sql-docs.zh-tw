@@ -17,10 +17,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 57029e2aad7497e68eba2b2007102654f6aa58e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013357"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>使用 XPath 查詢的簡介 (SQLXML 4.0)
@@ -50,9 +50,9 @@ ms.locfileid: "63013357"
   
  本文件中， **\<客戶 >** 是元素節點， **cid**是屬性節點，和 **"Important"** 是文字節點。  
   
- XPath 是一種圖表導覽語言，可用來從 XML 文件中選取一組節點。 每個 XPath 運算子都會根據前一個 XPath 運算子所選取的節點集來選取節點集。 例如，提供一組**\<客戶 >** 節點，XPath 可以選取所有**\<順序 >** 節點**日期**屬性值 **"7/14/1999"**。 產生的節點集會包含訂單日期為 7/14/1999 的所有訂單。  
+ XPath 是一種圖表導覽語言，可用來從 XML 文件中選取一組節點。 每個 XPath 運算子都會根據前一個 XPath 運算子所選取的節點集來選取節點集。 例如，提供一組 **\<客戶>** 節點，XPath 可以選取所有 **\<順序>** 節點 **日期** 屬性值 **"7/14/1999"** 。 產生的節點集會包含訂單日期為 7/14/1999 的所有訂單。  
   
- 全球資訊網協會 (W3C) 將 XPath 語言定義成標準導覽語言。 SQLXML 4.0 會實作 W3C XPath 規格中，位於子集 http://www.w3.org/TR/1999/PR-xpath-19991008.html。  
+ 全球資訊網協會 (W3C) 將 XPath 語言定義成標準導覽語言。 SQLXML 4.0 會實作 W3C XPath 規格中，位於子集 http://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
   
  下面是 W3C XPath 實作與 SQLXML 4.0 實作之間的重要差異。  
   
@@ -98,9 +98,9 @@ ms.locfileid: "63013357"
 |布林值述詞，包括連續和巢狀述詞||[在 XPath 查詢中指定算術運算子&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |所有關係運算子|=, !=, <, \<=, >, >=|[在 XPath 查詢中指定關係運算子&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |算術運算子|+、-、*、div|[在 XPath 查詢中指定算術運算子&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|明確轉換函數|**number()**, **string()**, **Boolean()**|[在 XPath 查詢中指定明確的轉換函式&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|明確轉換函數|**number()** , **string()** , **Boolean()**|[在 XPath 查詢中指定明確的轉換函式&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |布林運算子|AND、OR|[在 XPath 查詢中指定布林運算子&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|布林函數|**true()**, **false()**, **not()**|[在 XPath 查詢中指定布林函數&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|布林函數|**true()** , **false()** , **not()**|[在 XPath 查詢中指定布林函數&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |XPath 變數||[在 XPath 查詢中指定 XPath 變數&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
 ## <a name="unsupported-functionality"></a>不支援的功能  
@@ -108,13 +108,13 @@ ms.locfileid: "63013357"
   
 |功能|項目|  
 |-------------|----------|  
-|軸|**上階**，**上階或本身**，**子代**，**下階或本身 (/ /)**，**下列**， **下列同層級**，**命名空間**，**上述**，**之前同層級**|  
+|軸|**上階**，**上階或本身**，**子代**，**下階或本身 (/ /)** ，**下列**， **下列同層級**，**命名空間**，**上述**，**之前同層級**|  
 |數值述詞||  
 |算術運算子|mod|  
-|節點函數|**上階**，**上階或本身**，**子代**，**下階或本身 (/ /)**，**下列**， **下列同層級**，**命名空間**，**上述**，**之前同層級**|  
-|字串函數|**string （)**， **concat （)**， **starts-with()**， **contains （)**， **substring-before()**， **substring-after()**， **substring （)**， **string-length （)**， **normalize()**， **translate()**|  
+|節點函數|**上階**，**上階或本身**，**子代**，**下階或本身 (/ /)** ，**下列**， **下列同層級**，**命名空間**，**上述**，**之前同層級**|  
+|字串函數|**string （)** ， **concat （)** ， **starts-with()** ， **contains （)** ， **substring-before()** ， **substring-after()** ， **substring （)** ， **string-length （)** ， **normalize()** ， **translate()**|  
 |布林函數|**lang()**|  
-|數值函數|**sum()**, **floor()**, **ceiling()**, **round()**|  
+|數值函數|**sum()** , **floor()** , **ceiling()** , **round()**|  
 |Union 運算子|&#124;|  
   
  當您在範本中指定 XPath 查詢時，請注意下列行為：  

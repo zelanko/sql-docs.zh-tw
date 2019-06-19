@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: df12fa3713ea3e8bc44f810a7a02ea3d0bba1c26
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728082"
 ---
 # <a name="wmi-connection-manager"></a>WMI 連接管理員
@@ -29,7 +29,7 @@ ms.locfileid: "65728082"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  WMI 連接管理員可讓封裝利用 Windows Management Instrumentation (WMI)，來管理企業環境中的資訊。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 Web 服務工作會使用 WMI 連線管理員。  
+  WMI 連接管理員可讓封裝利用 Windows Management Instrumentation (WMI)，來管理企業環境中的資訊。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 Web 服務工作會使用 WMI 連線管理員。  
   
  當您將 WMI 連線管理員新增至套件時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立在執行階段解析為 WMI 連線的連線管理員、設定連線管理員屬性，並將連線管理員新增至套件上的 **Connections** 集合。 連線管理員的 **ConnectionManagerType** 屬性會設為 **WMI**。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65728082"
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="wmi-connection-manager-editor"></a>WMI 連接管理員編輯器
-  使用 [WMI 連線管理員] 對話方塊，以指定 Microsoft Windows Management Instrumentation (WMI) 與伺服器的連線。  
+  使用 [WMI 連線管理員]  對話方塊，以指定 Microsoft Windows Management Instrumentation (WMI) 與伺服器的連線。  
   
  若要深入了解 WMI 連接管理員，請參閱＜ [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md)＞。  
   

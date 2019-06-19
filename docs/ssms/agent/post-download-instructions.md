@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 573dec07eadd70edde5e9607cc6dd90927c75613
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088780"
 ---
 # <a name="post-download-instructions"></a>公佈下載指示
@@ -37,7 +37,7 @@ ms.locfileid: "65088780"
 檢視下載指示的描述。  
   
 **輪詢間隔**  
-設定目標伺服器的輪詢間隔。 僅適用於 [設定輪詢間隔] 指示。  
+設定目標伺服器的輪詢間隔。 僅適用於 [設定輪詢間隔]  指示。  
   
 **所有目標伺服器**  
 選取此選項將下載指示公佈到所有目標伺服器。  

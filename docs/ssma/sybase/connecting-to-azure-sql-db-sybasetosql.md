@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ac8b97e36338a280b6f78a0e6bb73eeab882655d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63297475"
 ---
 # <a name="connecting-to-azure-sql-db-sybasetosql"></a>連線到 Azure SQL DB (SybaseToSQL)
@@ -55,7 +55,7 @@ Azure SQL DB 執行個體的相關中繼資料不會自動同步處理。 相反
   
 6.  SSMA 會建議加密的連線到 Azure SQL DB。  
   
-7.  按一下 **[連接]**。  
+7.  按一下 **[連接]** 。  
   
 > [!IMPORTANT]  
 > SSMA for Sybase 不支援連接到**主要**Azure SQL DB 中的資料庫。  

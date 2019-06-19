@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72909e812418d26d9f9f2905b41e686c36f6b670
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056939"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>封裝組態精靈 UI 參考
@@ -132,7 +132,7 @@ ms.locfileid: "66056939"
 ## <a name="select-objects-to-export-page"></a>選取要匯出的物件頁面  
  使用 **[選取目標屬性] 或 [選取要匯出的屬性]** 頁面，即可指定組態包含的物件屬性。 只有選取 XML 組態類型時，才能選取多個屬性。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **物件**  
  展開封裝階層，並選取要匯出的屬性。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "66056939"
 ## <a name="completing-the-wizard-page"></a>正在完成精靈頁面  
  使用 **[正在完成精靈]** 頁面，即可提供組態的名稱，並檢視精靈用來建立組態的設定。 在精靈完成之後，就會顯示 **[封裝組態組合管理]** ，其中會列出封裝的所有組態。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  **組態名稱**  
  鍵入組態的名稱。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "66056939"
  檢視精靈用來建立組態的設定。  
   
  **[完成]**  
- 建立組態，並結束 [封裝組態精靈]。  
+ 建立組態，並結束 [封裝組態精靈]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立封裝組態](../../2014/integration-services/create-package-configurations.md)  

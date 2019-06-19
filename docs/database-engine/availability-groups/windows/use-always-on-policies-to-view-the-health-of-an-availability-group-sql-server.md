@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 0c01218cf7303653464814a554771d2ea386f1fb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66803444"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>使用 AlwaysOn 原則檢視可用性群組的健全狀況 (SQL Server)
@@ -39,9 +39,9 @@ ms.locfileid: "66803444"
   
 2.  按一下伺服器名稱展開伺服器樹狀目錄。  
   
-3.  展開 [AlwaysOn 高可用性] 節點。  
+3.  展開 [AlwaysOn 高可用性]  節點。  
   
-     以滑鼠右鍵按一下 [可用性群組] 節點，或展開此節點，然後以滑鼠右鍵按一下特定的可用性群組。  
+     以滑鼠右鍵按一下 [可用性群組]  節點，或展開此節點，然後以滑鼠右鍵按一下特定的可用性群組。  
   
 4.  選取 **[顯示儀表板]** 命令。  
   

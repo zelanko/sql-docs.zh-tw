@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51be58cd1c486a139486839e39a9ac820d7818b6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716817"
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (SSISDB 資料庫)
@@ -44,13 +44,13 @@ catalog.create_execution [@folder_name = folder_name
   
 ## <a name="arguments"></a>引數  
  [@folder_name =] *folder_name*  
- 包含所要執行之封裝的資料夾名稱。 *folder_name* 是 **nvarchar(128)**。  
+ 包含所要執行之封裝的資料夾名稱。 *folder_name* 是 **nvarchar(128)** 。  
   
  [@project_name =] *project_name*  
- 包含所要執行之封裝的專案名稱。 *project_name* 是 **nvarchar(128)**。  
+ 包含所要執行之封裝的專案名稱。 *project_name* 是 **nvarchar(128)** 。  
   
  [@package_name =] *package_name*  
- 要執行之封裝的名稱。 *package_name* 是 **nvarchar(260)**。  
+ 要執行之封裝的名稱。 *package_name* 是 **nvarchar(260)** 。  
   
  [@reference_id =] *reference_id*  
  環境參考的唯一識別碼。 這個參數是選擇性的。 *reference_id* 是 **bigint**。  

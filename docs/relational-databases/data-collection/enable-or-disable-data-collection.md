@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6697f631ec0ca4c0fb2ee26529b1f0f410e36912
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596846"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63052191"
 ---
 # <a name="enable-or-disable-data-collection"></a>啟用或停用資料收集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47596846"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目啟用或停用資料收集：**  
   
@@ -49,13 +49,13 @@ ms.locfileid: "47596846"
   
 1.  在 [物件總管] 中，展開 **[管理]** 節點。  
   
-2.  以滑鼠右鍵按一下 **[資料收集]**，然後按一下 **[啟用資料收集]**。  
+2.  以滑鼠右鍵按一下 **[資料收集]** ，然後按一下 **[啟用資料收集]** 。  
   
 #### <a name="to-disable-the-data-collector"></a>若要停用資料收集器  
   
 1.  在 [物件總管] 中，展開 **[管理]** 節點。  
   
-2.  以滑鼠右鍵按一下 **[資料收集]**，然後按一下 **[停用資料收集]**。  
+2.  以滑鼠右鍵按一下 **[資料收集]** ，然後按一下 **[停用資料收集]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -63,9 +63,9 @@ ms.locfileid: "47596846"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例使用 [sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md) 啟用資料收集器。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例使用 [sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md) 啟用資料收集器。  
   
 ```sql  
 USE msdb;  
@@ -77,9 +77,9 @@ EXEC dbo.sp_syscollector_enable_collector ;
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例使用 [sp_syscollector_disable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md) 停用資料收集器。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例使用 [sp_syscollector_disable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md) 停用資料收集器。  
   
 ```sql  
 USE msdb;  

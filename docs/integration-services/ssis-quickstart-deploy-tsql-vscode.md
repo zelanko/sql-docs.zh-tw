@@ -10,10 +10,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 890fa6b671a3497ae1009813c6486c23a8b9217f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717582"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>使用 Transact-SQL 從 Visual Studio Code 部署 SSIS 專案
@@ -43,13 +43,13 @@ Visual Studio Code 是 Windows、macOS 和 Linux 中支援延伸模組的程式�
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>在 VS Code 中將語言模式設定為 SQL
 
-若要啟用 `mssql` 命令和 T-SQL IntelliSense，請在 Visual Studio Code 中將語言模式設定為 [SQL]。
+若要啟用 `mssql` 命令和 T-SQL IntelliSense，請在 Visual Studio Code 中將語言模式設定為 [SQL]  。
 
 1. 開啟 Visual Studio Code，然後開啟新視窗。 
 
-2. 按一下狀態列右下角的 [純文字]。
+2. 按一下狀態列右下角的 [純文字]  。
  
-3. 在開啟的 [選取語言模式] 下拉式功能表中，選取或輸入 **SQL**，然後按 **ENTER** 將語言模式設定為 SQL。 
+3. 在開啟的 [選取語言模式]  下拉式功能表中，選取或輸入 **SQL**，然後按 **ENTER** 將語言模式設定為 SQL。 
 
 ## <a name="connect-to-the-ssis-catalog-database"></a>連線至 SSIS 目錄資料庫
 
@@ -59,7 +59,7 @@ Visual Studio Code 是 Windows、macOS 和 Linux 中支援延伸模組的程式�
 
 2. 鍵入 **sqlcon**，並按 **ENTER**。
 
-3. 按 **ENTER** 選取 [Create Connection Profile] (建立連線設定檔)。 此步驟會建立您 SQL Server 執行個體的連線設定檔。
+3. 按 **ENTER** 選取 [Create Connection Profile] (建立連線設定檔)  。 此步驟會建立您 SQL Server 執行個體的連線設定檔。
 
 4. 遵循提示來指定新連線設定檔的連線屬性。 指定每個值之後，請按 **ENTER** 繼續。 
 
@@ -80,7 +80,7 @@ Visual Studio Code 是 Windows、macOS 和 Linux 中支援延伸模組的程式�
 ## <a name="run-the-t-sql-code"></a>執行 T-SQL 程式碼
 執行下列 Transact-SQL 程式碼來部署 SSIS 專案。
 
-1. 在 [編輯器] 視窗中，於空白查詢視窗中輸入下列查詢 
+1. 在 [編輯器]  視窗中，於空白查詢視窗中輸入下列查詢
 
 2. 更新 `catalog.deploy_project` 預存程序中您系統的參數值。
 

@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d7267c2d4f86025f213208baae90057a84ced3e9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725984"
 ---
 # <a name="merge-transformation"></a>合併轉換
@@ -76,7 +76,7 @@ ms.locfileid: "65725984"
 -   [排序合併和合併聯結轉換的資料](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="merge-transformation-editor"></a>合併轉換編輯器
-  使用 [合併轉換編輯器]，即可指定來自兩個已排序資料集的資料行，以進行合併。  
+  使用 [合併轉換編輯器]  ，即可指定來自兩個已排序資料集的資料行，以進行合併。  
   
 > [!IMPORTANT]  
 >  合併轉換針對其輸入需要已排序的資料。 如需這項重要需求的詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。  

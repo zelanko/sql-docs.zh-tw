@@ -13,20 +13,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c71f254b0d0fb79e3ee8135c10d2d9ed715d3437
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056033"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>選取封裝管理選項 (SSIS 封裝升級精靈)
-  使用 [選取封裝管理選項] 頁面，指定用來升級封裝的選項。  
+  使用 [選取封裝管理選項]  頁面，指定用來升級封裝的選項。  
   
  **執行 SSIS 封裝升級精靈**  
   
 -   [使用 SSIS 套件升級精靈來升級 Integration Services 套件](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **更新連接字串以使用新的提供者名稱**  
  更新目前版本之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的連接字串，以使用下列提供者的名稱：  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66056033"
  **驗證升級套件**  
  驗證升級封裝，並只儲存通過驗證的那些升級封裝。  
   
- 如果您不選取這個選項，此精靈將不會驗證升級封裝。 因此，此精靈將會儲存所有的升級封裝，不論封裝是否有效。 此精靈會將升級封裝儲存到精靈之 [選取目的地位置] 頁面上所指定的目的地。  
+ 如果您不選取這個選項，此精靈將不會驗證升級封裝。 因此，此精靈將會儲存所有的升級封裝，不論封裝是否有效。 此精靈會將升級封裝儲存到精靈之 [選取目的地位置]  頁面上所指定的目的地。  
   
  驗證會增加升級程序的時間。 如果是可能會升級成功的大型封裝，我們建議您不要選取這個選項。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66056033"
  **不升級套件**  
  停止升級封裝，並在完成精靈時顯示錯誤。  
   
- 當您在精靈的 [選取目的地位置] 頁面上選取 [儲存至來源位置] 選項時，無法使用這些選項。  
+ 當您在精靈的 [選取目的地位置]  頁面上選取 [儲存至來源位置]  選項時，無法使用這些選項。  
   
  **忽略設定**  
  封裝升級期間不載入封裝組態。 選取此選項可減少升級封裝所需的時間。  

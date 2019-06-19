@@ -23,10 +23,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 316f943091de15857b4654e98b4910061806def6
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089359"
 ---
 # <a name="use-performance-objects"></a>使用效能物件
@@ -43,8 +43,8 @@ ms.locfileid: "65089359"
   
 |執行個體類型|物件名稱|  
 |-----------------|---------------|  
-|預設|**SQLAgent:**_object_:_counter_|  
-|具名|**SQLAgent$**<br /> **&#42;instance_name&#42; :**_object_:_counter_|  
+|預設|**SQLAgent:** _object_:_counter_|  
+|具名|**SQLAgent$**<br /> **&#42;instance_name&#42; :** _object_:_counter_|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的下列效能物件。  
   

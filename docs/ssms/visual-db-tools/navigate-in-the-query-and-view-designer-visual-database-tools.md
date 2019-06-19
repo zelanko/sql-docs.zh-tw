@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2c2b659cf2763bf0710a1088e8add3722a0c6398
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095356"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>在查詢和檢視表設計工具中巡覽 (Visual Database Tools)
@@ -44,7 +44,7 @@ ms.locfileid: "65095356"
 |在資料表或表格化物件的資料行之間移動|方向鍵|要移至的資料行|  
 |選擇選取的資料行以供輸出|空白鍵或加號鍵|資料行名稱旁邊的核取方塊|  
 |從查詢輸出中移除選取的資料行|空白鍵或減號鍵|資料行名稱旁邊的核取方塊|  
-|從查詢中移除選取的資料表、表格化物件或聯結線|Delete|按一下滑鼠右鍵，再選擇 [移除]。|  
+|從查詢中移除選取的資料表、表格化物件或聯結線|Delete|按一下滑鼠右鍵，再選擇 [移除]  。|  
   
 > [!NOTE]  
 > 如果選取多個項目，按下此按鍵會影響所有選取的項目。 按住 CTRL 鍵，同時在要選取的各項目上按一下滑鼠，即可選取多個項目。  
@@ -79,7 +79,7 @@ ms.locfileid: "65095356"
 如需詳細資訊，請參閱[準則窗格 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)。  
   
 ## <a name="sql-pane"></a>SQL 窗格  
-在 SQL 窗格中工作時，可使用標準的 Windows 編輯鍵 (例如 CTRL + 方向鍵) 在文字間移動，以及 [編輯] 功能表上的 [剪下]、[複製] 和 [貼上] 命令。  
+在 SQL 窗格中工作時，可使用標準的 Windows 編輯鍵 (例如 CTRL + 方向鍵) 在文字間移動，以及 [編輯]  功能表上的 [剪下]  、[複製]  和 [貼上]  命令。  
   
 > [!NOTE]  
 > 您只能插入文字；沒有覆寫模式。  

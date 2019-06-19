@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a633bd4c6a9ffe91a74858641b0b0305577922af
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062803"
 ---
 # <a name="advanced-data-mining-query-editor"></a>進階資料採礦查詢編輯器
@@ -49,11 +49,11 @@ ms.locfileid: "66062803"
  **選取 [輸入]**  
  按一下即可選擇要做為採礦模型之輸入的資料。 如果尚未指定任何資料來源，您也可以按一下 **\<輸入 >** 中以紅色反白顯示的連結**DMX 查詢**窗格。  
   
- 選取 [ **@InputRowset**從下拉式清單中，以開啟 **取代 inputrowset** ] 對話方塊方塊中，並修改現有輸入。  
+ 選取 [ **@InputRowset** 從下拉式清單中，以開啟 **取代 inputrowset** ] 對話方塊方塊中，並修改現有輸入。  
   
  選取**加入輸入**來開啟**加入輸入**對話方塊方塊中，並指定新的資料來源。  
   
- 您也可以修改現有輸入，依序按一下**@InputRowset** DMX 查詢 窗格中以紅色反白顯示的連結。  
+ 您也可以修改現有輸入，依序按一下 **@InputRowset** DMX 查詢 窗格中以紅色反白顯示的連結。  
   
  **將資料行對應**  
  從採礦模型中選取資料行，然後將這些資料行對應至外部資料來源中的資料行。  

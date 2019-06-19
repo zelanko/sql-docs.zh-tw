@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3b051e5f2dc951eb07d4a23a5a22e15f1b2cc071
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805120"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>建立資料庫 (SQL Server 匯入和匯出精靈)
@@ -26,10 +26,10 @@ ms.locfileid: "65805120"
 
 如果您在 [選擇目的地]  頁面上選取 [新增]  來建立新的 SQL Server 目的地資料庫，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [建立資料庫]  對話方塊。 在此頁面中提供新資料庫的名稱。 (選擇性) 您也可以變更新資料庫及其記錄檔的初始大小和自動成長等設定。 
 
-精靈中的 [建立資料庫] 對話方塊只提供基本選項，可用來建立新的 SQL Server 資料庫。 若要查看及設定新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的所有選項，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立資料庫，或在精靈建立資料庫之後進行設定。 
+精靈中的 [建立資料庫]  對話方塊只提供基本選項，可用來建立新的 SQL Server 資料庫。 若要查看及設定新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的所有選項，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立資料庫，或在精靈建立資料庫之後進行設定。 
 
 > [!NOTE]
-> 如果您想要尋找 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE DATABASE 陳述式的相關資訊，而不是 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 之 [建立資料庫] 對話方塊的相關資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+> 如果您想要尋找 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE DATABASE 陳述式的相關資訊，而不是 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 之 [建立資料庫]  對話方塊的相關資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
 
 ## <a name="screen-shot-of-the-create-database-page"></a>[建立資料庫] 頁面的螢幕擷取畫面  
 下列螢幕擷取畫面顯示精靈的 [建立資料庫]  對話方塊。  
@@ -92,5 +92,5 @@ ms.locfileid: "65805120"
 如需您在此頁面看到之檔案大小選項的詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。 
 
 ## <a name="whats-next"></a>下一步  
- 在您提供精靈將建立之新資料庫的名稱並按一下 [確定] 之後，[建立資料庫]  對話方塊會讓您回到 [選擇目的地]  頁面。 如需詳細資訊，請參閱 [選擇目的地](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)。  
+ 在您提供精靈將建立之新資料庫的名稱並按一下 [確定]  之後，[建立資料庫]  對話方塊會讓您回到 [選擇目的地]  頁面。 如需詳細資訊，請參閱 [選擇目的地](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)。  
 

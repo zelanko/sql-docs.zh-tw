@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 410d603b502cb2bb3da4c451a8b408eba3bc5e69
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088901"
 ---
 # <a name="view-the-job-history"></a>檢視作業記錄
@@ -56,13 +56,13 @@ ms.locfileid: "65088901"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **[SQL Server Agent]**，然後展開 **[作業]**。  
+2.  展開 **[SQL Server Agent]** ，然後展開 **[作業]** 。  
   
-3.  以滑鼠右鍵按一下作業，然後按一下 **[檢視記錄]**。  
+3.  以滑鼠右鍵按一下作業，然後按一下 **[檢視記錄]** 。  
   
 4.  在 [記錄檔檢視器] 中檢視作業記錄。  
   
-5.  若要更新作業記錄，請按一下 **[重新整理]**。 若要檢視較少的資料列，請按一下 **[篩選]** 按鈕，並輸入篩選參數。  
+5.  若要更新作業記錄，請按一下 **[重新整理]** 。 若要檢視較少的資料列，請按一下 **[篩選]** 按鈕，並輸入篩選參數。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   
@@ -70,9 +70,9 @@ ms.locfileid: "65088901"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- lists all job information for the NightlyBackups job.  

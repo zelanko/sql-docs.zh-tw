@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1f31a00e0c42bc56dffac191ff9a934bb77b95df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997809"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
@@ -63,7 +63,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @login = ] 'login'` 是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證登入識別碼。 *login* 是預設值為 NULL 的 **sysname**。  
   
-`[ @password = ] 'password'` 是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證密碼。 *密碼*已**sysname**，預設值是**%**。 **%** 表示 password 屬性沒有變更。  
+`[ @password = ] 'password'` 是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證密碼。 *密碼*已**sysname**，預設值是 **%** 。 **%** 表示 password 屬性沒有變更。  
   
 `[ @commit_batch_size = ] commit_batch_size` 支援回溯相容性。  
   
@@ -117,7 +117,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @active_end_date = ] active_end_date` 已停止散發工作的日期排程，格式為 YYYYMMDD。 *active_end_date*已**int**，預設值是 NULL。  
   
-`[ @description = ] 'description'` 是選擇性的文字描述。 *描述*已**nvarchar(255)**，預設值是 NULL。  
+`[ @description = ] 'description'` 是選擇性的文字描述。 *描述*已**nvarchar(255)** ，預設值是 NULL。  
   
 `[ @security_mode = ] security_mode` 是實作的安全性模式。 *security_mode*已**int**，而且可以是下列值之一。  
   
