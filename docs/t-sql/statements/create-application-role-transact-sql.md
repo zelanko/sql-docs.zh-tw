@@ -25,11 +25,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d78cd012d2a66dff8b3cfb2a4d3fba5745dfbe36
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327629"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051673"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ CREATE APPLICATION ROLE application_role_name
  *application_role_name*  
  指定應用程式角色的名稱。 這個名稱必須尚未用來參考資料庫中的任何主體。  
   
- PASSWORD **='**_password_**'**  
+ PASSWORD **='** _password_ **'**  
  指定資料庫使用者要用來啟動應用程式角色的密碼。 您一定要使用增強式密碼。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。  
   
- DEFAULT_SCHEMA **=**_schema\_name_  
+ DEFAULT_SCHEMA **=** _schema\_name_  
  指定伺服器在解析這個角色的物件名稱時，將搜尋的第一個結構描述。 如果未定義 DEFAULT_SCHEMA，應用程式角色會將 DBO 用做它的預設結構描述。 *schema_name* 可以是資料庫中不存在的結構描述。  
   
 ## <a name="remarks"></a>Remarks  
@@ -68,7 +68,7 @@ CREATE APPLICATION ROLE application_role_name
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要資料庫的 ALTER ANY APPLICATION ROLE 權限。  
   
 ## <a name="examples"></a>範例  

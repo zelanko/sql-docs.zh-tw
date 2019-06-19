@@ -12,11 +12,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a73eda4fbb3898846894a4cf35de4253cffedbc3
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872248"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63243367"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>升級在 Windows Server 2008/2008 R2/2012 叢集上執行的 SQL Server 執行個體
 
@@ -46,7 +46,7 @@ ms.locfileid: "58872248"
 
 |                                   | 需要所有伺服器物件和 VNNS | 需要所有伺服器物件和 VNNS | 不需要伺服器物件/VNNS\* | 不需要伺服器物件/VNNS\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| **_可用性群組？(是/否)_**                  | **_是_**                              | **_否_**                                                            | **_是_**    | **_否_**    |
+| **_可用性群組？(是/否)_ **                  | **_是_**                              | **_否_**                                                            | **_是_**    | **_否_**    |
 | **叢集只會使用 SQL FCI**         | [案例 3](#scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups)                           | [案例 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis)                                                        | [案例 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [案例 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis) |
 | **叢集使用獨立執行個體** | [案例 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [案例 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [案例 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [案例 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
 
@@ -185,7 +185,7 @@ ms.locfileid: "58872248"
 
 10. 立即只讓每個 SQL FCI 角色的已重新命名「伺服器名稱」資源重新上線。
 
-11. 現在，在平行獨立執行個體上，將電腦重新命名為原始獨立電腦名稱  (卸除舊的伺服器名稱，使用本機 param 新增新的伺服器名稱)。依指示，重新啟動電腦。
+11. 現在，在平行獨立執行個體上，將電腦重新命名為原始獨立電腦名稱 (卸除舊的伺服器名稱，使用本機 param 新增新的伺服器名稱)。依指示，重新啟動電腦。
 
 12. 重新啟動之後，請將每部獨立電腦加入至目標 Windows Server 容錯移轉叢集。
 
@@ -223,7 +223,7 @@ ms.locfileid: "58872248"
 
 11. 立即只讓每個 SQL FCI 角色的已重新命名「伺服器名稱」資源重新上線。
 
-12. 現在，在平行獨立執行個體上，將電腦重新命名為原始獨立電腦名稱  (在 SQL 中，卸除並新增伺服器名稱)。依指示，重新啟動電腦。
+12. 現在，在平行獨立執行個體上，將電腦重新命名為原始獨立電腦名稱 (在 SQL 中，卸除並新增伺服器名稱)。依指示，重新啟動電腦。
 
 13. 重新啟動之後，請將每部獨立電腦加入至目標 Windows Server 容錯移轉叢集。
 

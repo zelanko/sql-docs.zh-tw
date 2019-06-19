@@ -36,10 +36,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 124e42175f82928fd601a1d8af2833e40a1ff458
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462687"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 子句與 JOIN、APPLY、PIVOT (Transact-SQL)
@@ -365,7 +365,7 @@ ON (p.ProductID = v.ProductID);
  這是 PIVOT 運算子的值資料行。 與 UNPIVOT 搭配使用時，*value_column* 不可以是輸入 *table_source*中現有資料行的名稱。  
   
  FOR *pivot_column*  
- 這是 PIVOT 運算子的樞紐資料行。 *pivot_column* 的類型必須可以隱含或明確地轉換成 **nvarchar()**。 這個資料行不可以是 **image** 或 **rowversion**。  
+ 這是 PIVOT 運算子的樞紐資料行。 *pivot_column* 的類型必須可以隱含或明確地轉換成 **nvarchar()** 。 這個資料行不可以是 **image** 或 **rowversion**。  
   
  使用 UNPIVOT 時，*pivot_column* 係指從 *table_source* 縮小範圍的輸出資料行名稱。 *table_source* 中不可以有具有該名稱的現有資料欄。  
   

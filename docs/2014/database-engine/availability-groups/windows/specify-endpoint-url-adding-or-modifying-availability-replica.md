@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85f3fe4115f770f45df6dc226eac81e798514f08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788459"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>在加入或修改可用性複本時指定端點 URL (SQL Server)
-  若要裝載可用性群組的可用性複本，伺服器執行個體必須擁有資料庫鏡像端點。 伺服器執行個體使用此端點接聽來自其他伺服器執行個體所裝載之可用性複本的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 訊息。 若要定義可用性群組的可用性複本，您必須指定將要裝載此複本之伺服器執行個體的端點 URL。 「端點 URL」會識別資料庫鏡像端點的傳輸通訊協定 (TCP)、伺服器執行個體的系統位址，以及與端點相關聯的連接埠號碼。  
+  若要裝載可用性群組的可用性複本，伺服器執行個體必須擁有資料庫鏡像端點。 伺服器執行個體使用此端點接聽來自其他伺服器執行個體所裝載之可用性複本的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 訊息。 若要定義可用性群組的可用性複本，您必須指定將要裝載此複本之伺服器執行個體的端點 URL。 「端點 URL」  會識別資料庫鏡像端點的傳輸通訊協定 (TCP)、伺服器執行個體的系統位址，以及與端點相關聯的連接埠號碼。  
   
 > [!NOTE]  
 >  「端點 URL」一詞是資料庫鏡像使用者介面和文件集所用「伺服器網路位址」一詞的同義詞。  
@@ -39,7 +39,7 @@ ms.locfileid: "62788459"
 ##  <a name="SyntaxOfURL"></a> 端點 URL 的語法  
  端點 URL 的語法採用以下格式：  
   
- TCP<strong>://</strong>*\<系統位址>*<strong>:<strong>*\<通訊埠>*  
+ TCP<strong>://</strong> *\<系統位址>* <strong>:<strong> *\<通訊埠>*  
   
  其中  
   
@@ -47,15 +47,15 @@ ms.locfileid: "62788459"
   
     -   因為 Windows Server 容錯移轉叢集 (WSFC) 叢集的節點都是在相同網域中，您可以使用電腦系統的名稱，例如 `SYSTEM46`。  
   
-    -   若要使用 IP 位址，則它在您的環境中必須是唯一的。 建議您只使用靜態的 IP 位址。 此 IP 位址可以是 IP 第 4 版 (IPv4) 或 IP 第 6 版 (IPv6)。 IPv6 位址必須使用方括弧括住，例如：**[**<IPv6 位址>**]**。  
+    -   若要使用 IP 位址，則它在您的環境中必須是唯一的。 建議您只使用靜態的 IP 位址。 此 IP 位址可以是 IP 第 4 版 (IPv4) 或 IP 第 6 版 (IPv6)。 IPv6 位址必須使用方括弧括住，例如： **[** <IPv6 位址>  **]** 。  
   
          若要取得系統的 IP 位址，請在 Windows 命令提示字元下，輸入 **ipconfig** 命令。  
   
     -   完整網域名稱保證可以運作。 這是在不同位置會採用不同格式的本機定義位址字串。 完整網域名稱通常 (但不一定) 都是複合名稱，包含電腦名稱及一系列以句號分隔的網域區段，並採用下列格式：  
   
-         _電腦名稱_ **。** _網域區段_[...**.**_網域區段_]  
+         _電腦名稱_ **。** _網域區段_[... **.** _網域區段_]  
   
-         其中 *電腦名稱*是執行伺服器執行個體之電腦的網路名稱，而 *網域區段*[...**.**_網域區段_] 則是伺服器的其餘網域資訊；例如： `localinfo.corp.Adventure-Works.com`。  
+         其中 *電腦名稱*是執行伺服器執行個體之電腦的網路名稱，而 *網域區段*[... **.** _網域區段_] 則是伺服器的其餘網域資訊；例如： `localinfo.corp.Adventure-Works.com`。  
   
          網域區段的內容和數目是在公司或組織的內部決定的。 如需詳細資訊，請參閱本主題後面的＜ [尋找完整網域名稱](#Finding_FQDN)＞。  
   
@@ -102,9 +102,9 @@ ms.locfileid: "62788459"
   
  **IPCONFIG /ALL**  
   
- 若要形成完整的網域名稱，請串連 <主機名稱> 和 <主要 DNS 尾碼> 的值，如下所示：  
+ 若要形成完整的網域名稱，請串連 <主機名稱>  和 <主要 DNS 尾碼>  的值，如下所示：  
   
- <主機名稱> **.** _<主要 DNS 尾碼>_  
+ <主機名稱>  **.** _<主要 DNS 尾碼>_  
   
  例如，IP 組態  
   

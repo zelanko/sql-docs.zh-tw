@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb841d187385724ea31b5a7db86fcb323bf10663
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126234"
 ---
 # <a name="using-url-access-in-a-windows-application"></a>在 Windows 應用程式中使用 URL 存取
@@ -89,9 +89,9 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 1.  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 建立新的 Windows 應用程式。  
   
-2.  在 [工具箱] 對話方塊中找出 <xref:System.Windows.Forms.WebBrowser> 控制項。  
+2.  在 [工具箱]  對話方塊中找出 <xref:System.Windows.Forms.WebBrowser> 控制項。  
   
-     如果看不到 [工具箱]，可以按一下 [檢視] 功能表項目，並選取 [工具箱] 來存取。  
+     如果看不到 [工具箱]  ，可以按一下 [檢視]  功能表項目，並選取 [工具箱]  來存取。  
   
 3.  將 <xref:System.Windows.Forms.WebBrowser> 控制項拖曳至 Windows Form 的設計介面。  
   

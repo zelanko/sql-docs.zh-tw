@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fdf0984f172657ad45ee6da0a09de5e0e457b003
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004210"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
@@ -53,13 +53,13 @@ sp_statistics [ @table_name = ] 'table_name'
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定名稱的資料表，就會傳回這份資料表的索引。 如果*擁有者*未指定且目前使用者並未擁有指定的資料表*名稱*，此程序會尋找具有指定的資料表*名稱*所擁有資料庫擁有者。 如果資料表存在，就會傳回這份資料表的索引。  
   
-`[ @table_qualifier = ] 'qualifier'` 是資料表限定詞的名稱。 *限定詞*已**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (_限定詞_**。**_擁有者_**。**_名稱_)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個參數代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+`[ @table_qualifier = ] 'qualifier'` 是資料表限定詞的名稱。 *限定詞*已**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (_限定詞_ **。** _擁有者_ **。** _名稱_)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個參數代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
 `[ @index_name = ] 'index_name'` 這是索引名稱。 *index_name*已**sysname**，預設值是 %。 支援萬用字元的模式比對。  
   
-`[ @is_unique = ] 'is_unique'` 是是否唯一索引 (如果**Y**) 要傳回。 *is_unique*已**char(1)**，預設值是**N**。  
+`[ @is_unique = ] 'is_unique'` 是是否唯一索引 (如果**Y**) 要傳回。 *is_unique*已**char(1)** ，預設值是**N**。  
   
-`[ @accuracy = ] 'accuracy'` 是基數和頁面精確度的統計資料的層級。 *精確度*已**char(1)**，預設值是**Q**。指定**E**以確定會更新統計資料，以便基數和頁面都精確。  
+`[ @accuracy = ] 'accuracy'` 是基數和頁面精確度的統計資料的層級。 *精確度*已**char(1)** ，預設值是**Q**。指定**E**以確定會更新統計資料，以便基數和頁面都精確。  
   
  該值**E** (SQL_ENSURE) 會要求驅動程式無條件地擷取統計資料。  
   

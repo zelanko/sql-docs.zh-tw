@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 4e065ac17e913d766813076df75a6a65ffe9472e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098263"
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>查詢定義差異對話方塊 (Visual Database Tools)
@@ -35,12 +35,12 @@ ms.locfileid: "65098263"
 -   SQL 陳述式有效，但包含所使用資料連接的特定語法。  
   
 > [!TIP]  
-> 您可以使用 [查詢] 工具列中的 [驗證 SQL 陳述式] 按鈕，檢查陳述式是否有效。  
+> 您可以使用 [查詢]  工具列中的 [驗證 SQL 陳述式]  按鈕，檢查陳述式是否有效。  
   
 此對話方塊會顯示訊息，說明 SQL 陳述式無法顯示的原因，並詢問該如何繼續進行。  
   
 > [!NOTE]  
-> 如果您已經隱藏 [圖表] 和 [準則] 窗格，[查詢定義差異] 對話方塊就不會出現。  
+> 如果您已經隱藏 [圖表] 和 [準則] 窗格，[查詢定義差異]  對話方塊就不會出現。  
   
 ## <a name="options"></a>選項。  
 **忽略按鈕**  

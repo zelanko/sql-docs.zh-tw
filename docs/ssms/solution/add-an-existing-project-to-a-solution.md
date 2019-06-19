@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: c2416606148a0b735f48ec5bd951ee956e020b5e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105441"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>將現有專案加入方案中
@@ -32,9 +32,9 @@ ms.locfileid: "65105441"
   
 1.  在 [方案總管] 中，選取方案。  
   
-2.  在 [檔案] 功能表上，指向 [新增]，再按一下 [現有的專案]。  
+2.  在 [檔案]  功能表上，指向 [新增]  ，再按一下 [現有的專案]  。  
   
-3.  在 [新增現有的專案] 對話方塊中，找出您要新增的專案，選取專案檔，再按一下 [開啟]。  
+3.  在 [新增現有的專案]  對話方塊中，找出您要新增的專案，選取專案檔，再按一下 [開啟]  。  
   
     此時會將專案加入所選的方案中。  
   

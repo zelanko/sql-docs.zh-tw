@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b1fb1e718f8b2ab0257651ff47674d293a9e6a95
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079879"
 ---
 # <a name="install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013"></a>安裝或解除安裝 PowerPivot for SharePoint 增益集 (SharePoint 2013)
@@ -96,11 +96,11 @@ ms.locfileid: "66079879"
   
 2.  在 [歡迎使用] 頁面上，按 **[下一步]** 。  
   
-3.  檢閱並接受授權條款，然後按 **[下一步]**。  
+3.  檢閱並接受授權條款，然後按 **[下一步]** 。  
   
 4.  在 **[特徵選取]** 頁面上，已預設選取所有功能。  
   
-5.  按一下 [下一步] 。  
+5.  按一下 [下一步]  。  
   
 6.  按一下 **[安裝]** 完成安裝。  
   
@@ -171,13 +171,13 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
   
  **Or**  
   
-1.  移至 **[開始]**、 **[所有程式]**。  
+1.  移至 **[開始]** 、 **[所有程式]** 。  
   
-2.  按一下 **[Microsoft SQL Server 2014]**。  
+2.  按一下 **[Microsoft SQL Server 2014]** 。  
   
-3.  按一下 **[組態工具]**。  
+3.  按一下 **[組態工具]** 。  
   
-4.  按一下 **[PowerPivot for SharePoint 2013 組態]**。  
+4.  按一下 **[PowerPivot for SharePoint 2013 組態]** 。  
   
  如需有關組態工具的詳細資訊，請參閱＜ [PowerPivot Configuration Tools](../../power-pivot-sharepoint/power-pivot-configuration-tools.md)＞。  
   
@@ -188,7 +188,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
   
  您可以使用下列其中一個方法來解除安裝或修復 [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] ：  
   
-1.  **Windows 控制台：** 選取  **Microsoft SQL Server 2012 PowerPivot for SharePoint 2013**。 按一下 **[解除安裝]** 或 **[修復]**。  
+1.  **Windows 控制台：** 選取  **Microsoft SQL Server 2012 PowerPivot for SharePoint 2013**。 按一下 **[解除安裝]** 或 **[修復]** 。  
   
 2.  執行 spPowerPivot.msi，然後選取 **[移除]** 選項或 **[修復]** 選項。  
   

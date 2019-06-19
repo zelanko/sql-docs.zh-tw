@@ -13,10 +13,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 180ce23ada32657eb105280a21b9cda12b59710f
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65820990"
 ---
 # <a name="add-transact-sql-snippets"></a>新增 Transact-SQL 程式碼片段
@@ -26,7 +26,7 @@ ms.locfileid: "65820990"
 ## <a name="creating-a-transact-sql-snippet-file"></a>建立 Transact-SQL 程式碼片段檔案  
  建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼片段的第一部分是使用您自己的程式碼片段文字建立 XML 檔案。 此檔案必須有 .snippet 副檔名，且必須符合 [程式碼片段結構描述參考](https://go.microsoft.com/fwlink/?LinkId=207504)的需求。 將程式碼片段語言設定為 SQL。  
   
- 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所隨附的預先定義程式碼片段當做範例。 若要尋找預先定義的程式碼片段，請開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，選取 [工具] 功能表，然後按一下 [程式碼片段管理員]。 在 **[語言]** 清單方塊中選取 **[SQL]** ， [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼片段的路徑就會顯示在 **[位置]** 方塊中。  
+ 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所隨附的預先定義程式碼片段當做範例。 若要尋找預先定義的程式碼片段，請開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，選取 [工具]  功能表，然後按一下 [程式碼片段管理員]  。 在 **[語言]** 清單方塊中選取 **[SQL]** ， [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼片段的路徑就會顯示在 **[位置]** 方塊中。  
   
 ## <a name="registering-the-code-snippet"></a>註冊程式碼片段  
  在建立程式碼片段檔案之後，請使用程式碼片段管理員，向 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]註冊程式碼片段。 您可以加入包含多個程式碼片段的資料夾，或是將個別程式碼片段匯入到 **[My Code 程式碼片段]** 資料夾。  
@@ -37,7 +37,7 @@ ms.locfileid: "65820990"
   
 1.  開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-2.  選取 **[工具]** 功能表，然後按一下 **[程式碼片段管理員]**。  
+2.  選取 **[工具]** 功能表，然後按一下 **[程式碼片段管理員]** 。  
   
 3.  按一下 **[加入]** 按鈕。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "65820990"
   
 1.  開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-2.  選取 **[工具]** 功能表，然後按一下 **[程式碼片段管理員]**。  
+2.  選取 **[工具]** 功能表，然後按一下 **[程式碼片段管理員]** 。  
   
 3.  按一下 **[匯入]** 按鈕。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "65820990"
   
 2.  開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-3.  選取 **[工具]** 功能表，然後按一下 **[程式碼片段管理員]**。  
+3.  選取 **[工具]** 功能表，然後按一下 **[程式碼片段管理員]** 。  
   
 4.  按一下 **[匯入]** 按鈕。  
   

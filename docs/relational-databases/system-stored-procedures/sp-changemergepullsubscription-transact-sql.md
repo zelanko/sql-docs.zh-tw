@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf650c095e27fe3a270ad9610e959bd6f5f1a6a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997088"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
@@ -50,7 +50,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 `[ @property = ] 'property'` 是要變更名稱。 *屬性*已**sysname**，而且可以是下列其中一個資料表中的值。  
   
-`[ @value = ] 'value'` 是指定之屬性的新值。 *值*已**nvarchar(255)**，而且可以是下列其中一個資料表中的值。  
+`[ @value = ] 'value'` 是指定之屬性的新值。 *值*已**nvarchar(255)** ，而且可以是下列其中一個資料表中的值。  
   
 |屬性|值|描述|  
 |--------------|-----------|-----------------|  

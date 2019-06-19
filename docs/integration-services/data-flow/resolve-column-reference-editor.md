@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9b414c8f47cbe8942f4448d0f071b125a7d6518
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726472"
 ---
 # <a name="resolve-column-reference-editor"></a>解析資料行參考編輯器
@@ -34,16 +34,16 @@ ms.locfileid: "65726472"
  解析所有資料行參考之後，如果沒有其他資料路徑錯誤，資料路徑旁邊就不會顯示錯誤圖示。  
   
 ## <a name="options"></a>選項。  
- **未對應的輸出資料行 (來源)**    
+ **未對應的輸出資料行 (來源)**     
  上游路徑中目前未對應的資料行  
   
-**對應的資料行 (來源)**    
+**對應的資料行 (來源)**     
  對應至下游路徑資料行的上游路徑資料行  
   
-**對應的資料行 (目的地)**    
+**對應的資料行 (目的地)**     
  對應至下游路徑資料行的上游路徑資料行  
   
-**未對應的輸入資料行 (目的地)**    
+**未對應的輸入資料行 (目的地)**     
  下游路徑中目前未對應的資料行  
   
 **刪除未對應的輸入資料行**  

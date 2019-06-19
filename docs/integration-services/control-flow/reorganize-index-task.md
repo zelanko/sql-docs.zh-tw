@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e32c34f8fde97d780d7c5cc743e3b78c9805271e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727508"
 ---
 # <a name="reorganize-index-task"></a>重新組織索引工作
@@ -31,7 +31,7 @@ ms.locfileid: "65727508"
 
   「重新組織索引」工作會重新組織 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料表與檢視中的索引。 如需管理索引的詳細資訊，請參閱 [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
   
- 藉由使用「重新組織索引」工作，封裝可重新組織單一資料庫或多重資料庫中的索引。 如果此工作只重新組織單一資料庫中的索引，您可以選擇要由此工作重新組織索引的檢視或資料表。 「重新組織索引」工作亦包含壓縮大型物件資料的選項。 大型物件資料是指 **image**、**text**、**ntext**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 或 **xml** 資料類型的資料。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。  
+ 藉由使用「重新組織索引」工作，封裝可重新組織單一資料庫或多重資料庫中的索引。 如果此工作只重新組織單一資料庫中的索引，您可以選擇要由此工作重新組織索引的檢視或資料表。 「重新組織索引」工作亦包含壓縮大型物件資料的選項。 大型物件資料是指 **image**、**text**、**ntext**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 或 **xml** 資料類型的資料。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。  
   
  「重新組織索引」工作封裝 Transact-SQL ALTER INDEX 陳述式。 如果您選擇壓縮大型物件資料，陳述式便會使用 REORGANIZE WITH (LOB_COMPACTION = ON) 子句，否則 LOB_COMPACTION 會設為 OFF。 如需詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
   

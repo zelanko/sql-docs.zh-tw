@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ea995a4d0f188db2e958b3020da9646a6b069a21
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488238"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>建立實體 (適用於 Excel 的 MDS 增益集)
@@ -27,7 +27,7 @@ ms.locfileid: "65488238"
 ## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   您必須擁有存取 [系統管理] 和總管功能區域的權限。  
+-   您必須擁有存取 [系統管理]  和總管  功能區域的權限。  
   
 -   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
@@ -53,29 +53,29 @@ ms.locfileid: "65488238"
   
 2.  選取要載入到新實體的資料格。  
   
-3.  在 [主要資料] 索引標籤的 [建立模型] 群組中，按一下 [建立實體]。  
+3.  在 [主要資料]  索引標籤的 [建立模型]  群組中，按一下 [建立實體]  。  
   
 4.  如果系統提示您連接到 MDS 儲存機制，請連接。  
   
-5.  在 [建立實體] 對話方塊中，保持預設的範圍，或加以變更以套用至要載入的資料。  
+5.  在 [建立實體]  對話方塊中，保持預設的範圍，或加以變更以套用至要載入的資料。  
   
-6.  請不要清除 [我的資料有標題] 核取方塊。  
+6.  請不要清除 [我的資料有標題]  核取方塊。  
   
 7.  從 **[模型]** 清單中選取模型。  
   
 8.  從 **[版本]** 清單中選取版本。  
   
-9. 在 [新實體名稱] 方塊中，輸入實體的名稱。  
+9. 在 [新實體名稱]  方塊中，輸入實體的名稱。  
   
 10. 從 **Code** 清單中，選取包含唯一識別碼的資料行或讓系統自動產生代碼。  
   
-11. 選擇性。 從 [名稱] 清單中，選取包含每個成員名稱的資料行。  
+11. 選擇性。 從 [名稱]  清單中，選取包含每個成員名稱的資料行。  
   
-12. 按一下 [確定] 。 成功建立實體時，畫面上會顯示新標頭資料列，反白顯示資料格，而且更新工作表名稱以符合實體名稱。  
+12. 按一下 [確定]  。 成功建立實體時，畫面上會顯示新標頭資料列，反白顯示資料格，而且更新工作表名稱以符合實體名稱。  
   
 ## <a name="next-steps"></a>後續步驟  
   
--   若要檢視發生的錯誤，請按一下 [發行和驗證] 群組中的 [顯示狀態]。 ValidationStatus 和 InputStatus 資料行隨即顯示。 如需詳細資訊，請參閱[驗證資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)。  
+-   若要檢視發生的錯誤，請按一下 [發行和驗證]  群組中的 [顯示狀態]  。 ValidationStatus 和 InputStatus 資料行隨即顯示。 如需詳細資訊，請參閱[驗證資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)。  
   
 -   確認屬性已建立為預期的資料類型。  
   

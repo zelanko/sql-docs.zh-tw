@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68e965a523df8dadd03d77df8d3d522870f70a93
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62987142"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>實作 IRenderingExtension 介面
@@ -36,7 +36,7 @@ ms.locfileid: "62987142"
 ## <a name="render-method"></a>Render 方法  
  <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> 方法包含代表下列物件的引數：  
   
--   您要轉譯的「報表」。 這個物件包含報表的屬性、資料與配置資訊。 報表是報表物件模型樹狀結構的根目錄。  
+-   您要轉譯的「報表」  。 這個物件包含報表的屬性、資料與配置資訊。 報表是報表物件模型樹狀結構的根目錄。  
   
 -   包含字串字典物件的 *ServerParameters*，含報表伺服器的參數 (如果有的話)。  
   

@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a3d4af19da0c5d1a6724a0e7beb87fa4b5c8661b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65477151"
 ---
 # <a name="merge-conflicts-mds-add-in-for-excel"></a>合併衝突 (適用於 Excel 的 MDS 增益集)
@@ -39,17 +39,17 @@ ms.locfileid: "65477151"
   
 1.  在工作表中，選取具有衝突錯誤的資料列或資料格。  
   
-2.  在 [發行和驗證] 功能表群組中，選取 [合併衝突] 以開啟 [合併衝突] 對話方塊。  
+2.  在 [發行和驗證]  功能表群組中，選取 [合併衝突]  以開啟 [合併衝突]  對話方塊。  
   
-3.  在 [合併衝突] 對話方塊中，您可以︰  
+3.  在 [合併衝突]  對話方塊中，您可以︰  
   
-    -   選擇 [最新]，並按一下 [套用] 復原暫止的變更，然後重新載入來自伺服器的最新版本。  
+    -   選擇 [最新]  ，並按一下 [套用]  復原暫止的變更，然後重新載入來自伺服器的最新版本。  
   
-    -   選擇 [原始]，並按一下 [套用] 套用工作表中的原始版本。  
+    -   選擇 [原始]  ，並按一下 [套用]  套用工作表中的原始版本。  
   
-    -   選擇 [您的]，並按一下 [套用] 保留現有的本機變更。  
+    -   選擇 [您的]  ，並按一下 [套用]  保留現有的本機變更。  
   
-4.  按一下 [套用] 之後，您可以進行其他變更，並重新發佈。 或是按一下 [取消] 取消更新，並重新載入來自伺服器的最新版本。  
+4.  按一下 [套用]  之後，您可以進行其他變更，並重新發佈。 或是按一下 [取消]  取消更新，並重新載入來自伺服器的最新版本。  
   
 ## <a name="see-also"></a>另請參閱  
  [概觀：從 Excel 匯入資料&#40;MDS 增益集的 Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  

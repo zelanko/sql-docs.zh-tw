@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5032c7f48bdafdab0430357c01698f5672b2f830
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727496"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>資料分析工作的設定
@@ -44,7 +44,7 @@ ms.locfileid: "65727496"
  如需詳細資訊，請參閱 [在封裝工作流程中納入資料分析工作](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md)。  
   
 ## <a name="setup-of-the-task-output"></a>設定工作輸出  
- 在「資料分析」工作位於封裝之後，您必須針對此工作將計算的設定檔設定輸出。 若要設定設定檔的輸出，您可以使用 [資料分析工作編輯器] 的 [一般] 頁面。 除了指定輸出的目的地之外，[一般] 頁面還提供執行快速分析資料的功能。 當您選取 [快速分析] 時，「資料分析」工作會使用某些或所有預設的設定檔及其預設值，分析資料表或檢視表。  
+ 在「資料分析」工作位於封裝之後，您必須針對此工作將計算的設定檔設定輸出。 若要設定設定檔的輸出，您可以使用 [資料分析工作編輯器] 的 [一般]  頁面。 除了指定輸出的目的地之外，[一般]  頁面還提供執行快速分析資料的功能。 當您選取 [快速分析]  時，「資料分析」工作會使用某些或所有預設的設定檔及其預設值，分析資料表或檢視表。  
   
  如需詳細資訊，請參閱[資料分析工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md) 和[單一資料表快速分析表單 &#40;資料分析工作&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)。  
   
@@ -67,9 +67,9 @@ ms.locfileid: "65727496"
 |某個資料行 (相依資料行) 中的值相依於另一個資料行或資料行集合 (行列式資料行) 中之值的程度。|**不適用於相依資料行中的值** - 例如，您分析了包含「美國郵遞區號」之資料行與「美國州名」之資料行之間的相依性。 相同的郵遞區號應該永遠具有相同的州名。 不過，此設定檔發現了這個相依性的違規。|**功能相依性** - 適用於具有下列其中一種資料類型的資料行。<br /><br /> 整數資料類型：<br /><br /> **bit**<br /><br /> **tinyint**<br /><br /> **smallint**<br /><br /> **int**<br /><br /> **bigint**<br /><br /> 字元資料類型：<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 日期和時間資料類型：<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
 |資料行或資料行集合是否適合當做選取之資料表之間的外部索引鍵。<br /><br /> 也就是說，這個設定檔會報告兩個資料行或資料行集合之間值的重疊。|**無效的值** - 例如，您分析了 Sales 資料表的 ProductID 資料行。 此設定檔發現該資料行包含在 Products 資料表之 ProductID 資料行中找不到的值。|**值包含** - 適用於具有下列其中一種資料類型的資料行：<br /><br /> 整數資料類型：<br /><br /> **bit**<br /><br /> **tinyint**<br /><br /> **smallint**<br /><br /> **int**<br /><br /> **bigint**<br /><br /> 字元資料類型：<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 日期和時間資料類型：<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
   
- 若要選取要計算的設定檔，您可以使用 [資料分析工作編輯器] 的 [設定檔要求] 頁面。 如需詳細資訊，請參閱[資料分析工作編輯器 &#40;設定檔要求頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
+ 若要選取要計算的設定檔，您可以使用 [資料分析工作編輯器] 的 [設定檔要求]  頁面。 如需詳細資訊，請參閱[資料分析工作編輯器 &#40;設定檔要求頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
   
- 在 [設定檔要求] 頁面上，您也可以指定資料來源並設定資料設定檔。 當您設定工作時，請考慮下列資訊：  
+ 在 [設定檔要求]  頁面上，您也可以指定資料來源並設定資料設定檔。 當您設定工作時，請考慮下列資訊：  
   
 -   若要簡化組態，並且更容易發現不熟悉之資料的特性，您可以使用萬用字元 **(\*)** 來取代個別的資料行名稱。 如果您使用這個萬用字元，此工作將會分析具有適當資料類型的每個資料行，而且可能會降低處理速度。  
   

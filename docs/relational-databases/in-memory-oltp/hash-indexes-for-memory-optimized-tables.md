@@ -13,11 +13,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2ab8ab5fc572648840e2b4b5919ae0c3417a2a23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726206"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047654"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>為記憶體最佳化資料表的雜湊索引進行疑難排解
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47726206"
   
 如果雜湊索引值有高比率的重複項目，則雜湊值區會受到較長鏈結影響。  
   
-假設您有來自較早 T-SQL 語法程式碼區塊的相同 SupportEvent 資料表。 下列 T-SQL 程式碼示範如何尋找並顯示「所有」值與「唯一」值的比率︰  
+假設您有來自較早 T-SQL 語法程式碼區塊的相同 SupportEvent 資料表。 下列 T-SQL 程式碼示範如何尋找並顯示「所有」  值與「唯一」  值的比率︰  
   
 ```sql
 -- Calculate ratio of:  Rows / Unique_Values.  
@@ -178,7 +178,7 @@ go
   
 我們的 `SELECT` 結果顯示在程式碼之後，以手動方式分割成兩個較窄的結果資料表，以獲得較佳的顯示效果。  
   
-- 以下是「值區計數」的結果。  
+- 以下是「值區計數」的結果  。  
   
 | IndexName | total_bucket_count | empty_bucket_count | EmptyBucketPercent |  
 | :-------- | -----------------: | -----------------: | -----------------: |  
@@ -186,7 +186,7 @@ go
 | ix_StatusCode | 8 | 4 | 50 |  
 | PK_SalesOrd_B14003... | 262144 | 96525 | 36 |  
   
-- 接下來是為「鏈結長度」的結果。  
+- 接下來是為「鏈結長度」  的結果。  
   
 | IndexName | avg_chain_length | max_chain_length |  
 | :-------- | ---------------: | ---------------: |  

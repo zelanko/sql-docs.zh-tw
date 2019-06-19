@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 216e0182c9226306fb2feafe9dee6e8fb13562ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63298466"
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>中斷與註冊伺服器的連接 (SQL Server Management Studio)
@@ -29,6 +29,6 @@ ms.locfileid: "63298466"
   
 #### <a name="to-disconnect-from-a-registered-server"></a>若要中斷與註冊伺服器的連接  
   
--   在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [中斷連接]，或在物件總管工具列上，按一下 [中斷連接] 圖示。  
+-   在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [中斷連接]  ，或在物件總管工具列上，按一下 [中斷連接]  圖示。  
   
   

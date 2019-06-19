@@ -16,20 +16,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: daa647673653280bfc4cf52398751aedfd65b9c8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083055"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>採礦結構和結構資料行的屬性
-  您可以使用 [資料採礦設計師] 的 [採礦結構] 索引標籤，來設定或變更採礦結構及其相關聯資料行和巢狀資料表的屬性。 在此索引標籤中設定的屬性會傳播至與結構相關聯的每一個採礦模型。  
+  您可以使用 [資料採礦設計師] 的 [採礦結構]  索引標籤，來設定或變更採礦結構及其相關聯資料行和巢狀資料表的屬性。 在此索引標籤中設定的屬性會傳播至與結構相關聯的每一個採礦模型。  
   
 > [!NOTE]  
 >  如果您在採礦結構中變更了任何屬性的值，甚至是中繼資料 (例如名稱或描述)，就必須先重新處理該採礦結構及其模型，然後才能檢視或查詢模型。  
   
 ## <a name="properties-of-mining-structures-and-mining-structure-columns"></a>採礦結構和採礦結構資料行的屬性  
- 下表描述採礦結構和採礦結構資料行的屬性，這些屬性是資料採礦特有的屬性，而且您可以在 [採礦結構] 索引標籤中檢視或設定這些屬性。若要檢視或設定這些屬性，請以滑鼠右鍵按一下樹狀檢視中的元素，然後按一下 [屬性]。  
+ 下表描述採礦結構和採礦結構資料行的屬性，這些屬性是資料採礦特有的屬性，而且您可以在 [採礦結構]  索引標籤中檢視或設定這些屬性。若要檢視或設定這些屬性，請以滑鼠右鍵按一下樹狀檢視中的元素，然後按一下 [屬性]  。  
   
 -   若要檢視結構的屬性，請按一下採礦結構標題。  
   
@@ -67,8 +67,8 @@ ms.locfileid: "66083055"
 |**ModelingFlags**|設定演算法提供的其他參數。|  
 |`Name`|資料行的名稱。|  
 |**NameColumn**|識別提供父元素名稱的資料行。|  
-|**Source**|顯示資料行的來源。<br /><br /> 若為關聯式資料來源，此值一律為 **[(無)]**。<br /><br /> 若為以 OLAP Cube 為基礎的結構，此值就是定義當做巢狀資料表來源使用之配量的 MDX 陳述式。|  
-|**SourceMeasureGroup**|顯示量值群組的來源。<br /><br /> 若為關聯式資料來源，此值一律為 **[(無)]**。<br /><br /> 若為以 OLAP Cube 為基礎的結構，此值就是定義當做巢狀資料表來源使用之配量的 MDX 陳述式。|  
+|**Source**|顯示資料行的來源。<br /><br /> 若為關聯式資料來源，此值一律為 **[(無)]** 。<br /><br /> 若為以 OLAP Cube 為基礎的結構，此值就是定義當做巢狀資料表來源使用之配量的 MDX 陳述式。|  
+|**SourceMeasureGroup**|顯示量值群組的來源。<br /><br /> 若為關聯式資料來源，此值一律為 **[(無)]** 。<br /><br /> 若為以 OLAP Cube 為基礎的結構，此值就是定義當做巢狀資料表來源使用之配量的 MDX 陳述式。|  
 |**型別**|資料行中之內容的資料類型。|  
   
  如需設定或變更屬性的詳細資訊，請參閱 [採礦結構工作和使用說明](mining-structure-tasks-and-how-tos.md)。  

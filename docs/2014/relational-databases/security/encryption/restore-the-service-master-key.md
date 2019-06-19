@@ -14,10 +14,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 17a404ef96b4800aa072b8f35c2d22c349361ca3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011544"
 ---
 # <a name="restore-the-service-master-key"></a>還原服務主要金鑰
@@ -62,9 +62,9 @@ ms.locfileid: "63011544"
   
 2.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-3.  在標準列上，按一下 **[新增查詢]**。  
+3.  在標準列上，按一下 **[新增查詢]** 。  
   
-4.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+4.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- Restores the service master key from a backup file.  

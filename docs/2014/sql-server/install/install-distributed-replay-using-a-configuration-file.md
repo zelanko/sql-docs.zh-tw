@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9db8127a9a43478d891d5955190bd594fb6647b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094579"
 ---
 # <a name="install-distributed-replay-using-a-configuration-file"></a>使用組態檔安裝 Distributed Replay
@@ -33,7 +33,7 @@ ms.locfileid: "66094579"
   
 ### <a name="to-generate-a-configuration-file"></a>若要產生組態檔  
   
-1.  遵循安裝精靈的指示，直到 [準備安裝] 頁面。 組態檔的路徑已指定於 **[準備安裝]** 頁面的 [組態檔路徑] 區段中。  
+1.  遵循安裝精靈的指示，直到 [準備安裝]  頁面。 組態檔的路徑已指定於 **[準備安裝]** 頁面的 [組態檔路徑] 區段中。  
   
 2.  取消安裝程式而不實際完成安裝，即可產生 INI 檔案。  
   

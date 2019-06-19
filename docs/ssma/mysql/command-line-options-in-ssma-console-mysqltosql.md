@@ -21,10 +21,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 42f731f93f0344d5b96a8e3cba41f28dd7fadada
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253207"
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>SSMA 主控台中的命令列選項 (MySQLToSQL)
@@ -35,7 +35,7 @@ Microsoft 為您提供執行及控制 SSMA 活動的一組健全命令列選項�
   
 本節中，為了 「 選項 」 一詞也稱為 'switch'。  
   
-選項不區分大小寫和可能的開頭是 '**-**'**/**' 字元。  
+選項不區分大小寫和可能的開頭是 ' **-** ' **/** ' 字元。  
   
 如果指定了選項，就一定要指定對應的選項參數。  
   

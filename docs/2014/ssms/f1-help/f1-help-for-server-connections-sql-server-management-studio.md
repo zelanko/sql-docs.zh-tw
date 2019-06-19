@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6d845874a2fd221163953b0aeb2b8d32516e14b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62955887"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>伺服器連接的 F1 說明 (SQL Server Management Studio)
-  本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，[連接到伺服器] 對話方塊頁面的 F1 說明。  
+  本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，[連接到伺服器]  對話方塊頁面的 F1 說明。  
   
  [瀏覽伺服器 &#40;本機伺服器&#41;](../../database-engine/browse-for-servers-local-servers.md)  
   

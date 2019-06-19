@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2aa9ecc0364accdd9050cae303afb545faf394ba
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727332"
 ---
 # <a name="web-service-task"></a>Web 服務工作
@@ -44,7 +44,7 @@ ms.locfileid: "65727332"
   
  HTTP 連接管理員可指向網站或「Web 服務描述語言」(WSDL) 檔案。 指向 WSDL 檔案之 HTTP 連接管理員的 URL 包含 `?WSDL` 參數：例如 `https://MyServer/MyWebService/MyPage.asmx?WSDL`。  
   
- WSDL 檔案必須可以在本機上使用，這樣才能使用 **設計師提供的 [Web 服務工作編輯器]**[!INCLUDE[ssIS](../../includes/ssis-md.md)] 對話方塊設定 Web 服務工作。  
+ WSDL 檔案必須可以在本機上使用，這樣才能使用 **設計師提供的 [Web 服務工作編輯器]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 對話方塊設定 Web 服務工作。  
   
 -   如果 HTTP 連接管理員指向網站，則必須手動將 WSDL 檔案複製到本機電腦。  
   
@@ -84,16 +84,16 @@ ms.locfileid: "65727332"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="web-service-task-editor-general-page"></a>Web 服務工作編輯器 (一般頁面)
-  使用 [Web 服務工作編輯器] 對話方塊的 [一般] 頁面，來指定 HTTP 連接管理員、指定 Web 服務工作使用的 Web 服務描述語言 (WSDL) 檔案的位置、描述 Web 服務工作，以及下載 WSDL 檔案。  
+  使用 [Web 服務工作編輯器]  對話方塊的 [一般]  頁面，來指定 HTTP 連接管理員、指定 Web 服務工作使用的 Web 服務描述語言 (WSDL) 檔案的位置、描述 Web 服務工作，以及下載 WSDL 檔案。  
   
 ### <a name="options"></a>選項。  
  **HTTPConnection**  
- 在清單中選取連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
+ 在清單中選取連線管理員，或按一下 [\<新增連線...>]  建立新的連線管理員。  
   
 > [!IMPORTANT]  
 >  HTTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
   
- **相關主題：**[HTTP 連接管理員](../../integration-services/connection-manager/http-connection-manager.md)、[HTTP 連接管理員編輯器 &#40;伺服器頁面&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+ **相關主題：** [HTTP 連接管理員](../../integration-services/connection-manager/http-connection-manager.md)、[HTTP 連接管理員編輯器 &#40;伺服器頁面&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
  鍵入本機電腦的 WSDL 檔案完整路徑，或按一下瀏覽按鈕 **(...)** 並找出此檔案。  
@@ -102,19 +102,19 @@ ms.locfileid: "65727332"
   
 -   建立副檔名為 ".wsdl" 的空白檔案。  
   
--   在 [WSDLFile] 選項中選取此空白檔案。  
+-   在 [WSDLFile]  選項中選取此空白檔案。  
   
--   將 **OverwriteWSDLFile** 的值設為 [True]，讓實際的 WSDL 檔案可以覆寫此空白檔案。  
+-   將 **OverwriteWSDLFile** 的值設為 [True]  ，讓實際的 WSDL 檔案可以覆寫此空白檔案。  
   
--   按一下 [下載 WSDL]，下載實際的 WSDL 檔案並覆寫空白檔案。  
+-   按一下 [下載 WSDL]  ，下載實際的 WSDL 檔案並覆寫空白檔案。  
   
     > [!NOTE]  
-    >  您必須先在 [WSDLFile] 方塊中提供現有的本機檔案名稱，才能啟用 [下載 WSDL] 選項。  
+    >  您必須先在 [WSDLFile]  方塊中提供現有的本機檔案名稱，才能啟用 [下載 WSDL]  選項。  
   
  **OverwriteWSDLFile**  
  指出是否可以覆寫 Web 服務工作的 WSDL 檔案。  
   
- 如果您想要使用 [下載 WSDL] 按鈕來下載 WSDL檔案，請將此值設為 [True]。  
+ 如果您想要使用 [下載 WSDL]  按鈕來下載 WSDL檔案，請將此值設為 [True]  。  
   
  **名稱**  
  為 Web 服務工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  
@@ -128,10 +128,10 @@ ms.locfileid: "65727332"
  **下載 WSDL**  
  下載 WSDL 檔案。  
   
- 您必須先在 [WSDLFile] 方塊中提供現有的本機檔案名稱，才能啟用此按鈕。  
+ 您必須先在 [WSDLFile]  方塊中提供現有的本機檔案名稱，才能啟用此按鈕。  
   
 ## <a name="web-service-task-editor-input-page"></a>Web 服務工作編輯器 (輸入頁面)
-  使用 [Web 服務工作編輯器] 對話方塊的 [輸入] 頁面，即可指定 Web 服務、Web 方法，以及提供給 Web 方法的輸入值。 在 [值] 資料行中直接輸入字串，或是在 [值] 資料行中選取變數，即可提供這些值。  
+  使用 [Web 服務工作編輯器]  對話方塊的 [輸入]  頁面，即可指定 Web 服務、Web 方法，以及提供給 Web 方法的輸入值。 在 [值] 資料行中直接輸入字串，或是在 [值] 資料行中選取變數，即可提供這些值。  
   
 ### <a name="options"></a>選項。  
  **服務**  
@@ -141,7 +141,7 @@ ms.locfileid: "65727332"
  從清單中選取要用於執行工作的 Web 方法。  
   
  **WebMethodDocumentation**  
- 鍵入 Web 方法的描述，或按一下瀏覽按鈕 **(...)**，然後在 [Web 方法文件集] 對話方塊中鍵入描述。  
+ 鍵入 Web 方法的描述，或按一下瀏覽按鈕 **(...)** ，然後在 [Web 方法文件集]  對話方塊中鍵入描述。  
   
  **名稱**  
  列出 Web 方法之輸入的名稱。  
@@ -159,7 +159,7 @@ ms.locfileid: "65727332"
  如果選取了 [變數] 核取方塊，請從清單中選取要用於提供輸入的變數，否則請直接輸入要用於輸入的值。  
   
 ## <a name="web-service-task-editor-output-page"></a>Web 服務工作編輯器 (輸出頁面)
-  使用 [Web 服務工作編輯器] 對話方塊的 [輸出] 頁面，即可指定 Web 方法傳回的結果之儲存位置。  
+  使用 [Web 服務工作編輯器]  對話方塊的 [輸出]  頁面，即可指定 Web 方法傳回的結果之儲存位置。  
   
 ### <a name="static-options"></a>靜態選項  
  **OutputType**  
@@ -167,22 +167,22 @@ ms.locfileid: "65727332"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**檔案連接**|在檔案中儲存結果。 選取此值會顯示動態選項 [檔案]。|  
-|**變數**|在變數中儲存結果。 選取此值會顯示動態選項 [變數]。|  
+|**檔案連接**|在檔案中儲存結果。 選取此值會顯示動態選項 [檔案]  。|  
+|**變數**|在變數中儲存結果。 選取此值會顯示動態選項 [變數]  。|  
   
 ### <a name="outputtype-dynamic-options"></a>OutputType 動態選項  
   
 #### <a name="outputtype--file-connection"></a>OutputType = 檔案連接  
  **檔案**  
- 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
+ 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]  建立新的連線管理員。  
   
- **相關主題：**[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = 變數  
  **變數**  
- 在清單中選取變數，或按一下 [\<新增變數...>] 建立新的變數。  
+ 在清單中選取變數，或按一下 [\<新增變數...>]  建立新的變數。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>相關內容  
  影片，[如何：technet.microsoft.com 上的影片：使用 Web 服務工作呼叫 Web 服務) (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=259642) \(英文\)。  

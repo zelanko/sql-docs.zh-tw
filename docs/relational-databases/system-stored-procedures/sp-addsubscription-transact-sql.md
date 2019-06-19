@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998313"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
@@ -89,7 +89,7 @@ sp_addsubscription [ @publication = ] 'publication'
  這是放置複寫資料之目的地資料庫的名稱。 *destination_db*已**sysname**，預設值是 NULL。 為 null， *destination_db*設為發行集資料庫的名稱。 For Oracle Publishers *destination_db*必須指定。 針對非 SQL Server 訂閱者，指定的值 （預設目的地） 的*destination_db*。  
   
  [ @sync_type=] '*sync_type*'  
- 這是訂閱同步處理類型。 *sync_type*已**nvarchar(255)**，而且可以是下列值之一：  
+ 這是訂閱同步處理類型。 *sync_type*已**nvarchar(255)** ，而且可以是下列值之一：  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -111,13 +111,13 @@ sp_addsubscription [ @publication = ] 'publication'
 |subscribed|訂閱需要初始化。 此選項時，會設定的值*sync_type*便會自動進行。|  
   
  [ @subscription_type=] '*subscription_type*'  
- 這是訂閱的類型。 *subscription_type*已**nvarchar(4)**，預設值是 push。 它可以是 push 或 pull。 發送訂閱的散發代理程式位於散發者上，並提取訂閱的散發代理程式位於訂閱者。 *subscription_type*可以是 pull，以便建立發行者已知的具名的提取訂閱。 如需詳細資訊，請參閱[訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)。  
+ 這是訂閱的類型。 *subscription_type*已**nvarchar(4)** ，預設值是 push。 它可以是 push 或 pull。 發送訂閱的散發代理程式位於散發者上，並提取訂閱的散發代理程式位於訂閱者。 *subscription_type*可以是 pull，以便建立發行者已知的具名的提取訂閱。 如需詳細資訊，請參閱[訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)。  
   
 > [!NOTE]  
 >  匿名訂閱不需要使用這個預存程序。  
   
  [ @update_mode=] '*update_mode*'  
- 已更新的類型。*update_mode*是**nvarchar(30)**，而且可以是下列值之一。  
+ 已更新的類型。*update_mode*是**nvarchar(30)** ，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -130,7 +130,7 @@ sp_addsubscription [ @publication = ] 'publication'
  請注意，值 synctran 和 queued 的 tran 不允許如果訂閱的發行集允許 DTS。  
   
  [ @loopback_detection=] '*loopback_detection*'  
- 指定散發代理程式是否會將起源於訂閱者端的交易傳回給訂閱者。 *loopback_detection*已**nvarchar(5)**，而且可以是下列值之一。  
+ 指定散發代理程式是否會將起源於訂閱者端的交易傳回給訂閱者。 *loopback_detection*已**nvarchar(5)** ，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -197,13 +197,13 @@ sp_addsubscription [ @publication = ] 'publication'
  這是排程停止散發代理程式的日期，格式為 YYYYMMDD。 *active_end_date*已**int**，預設值是 NULL。  
   
  [ @optional_command_line=] '*optional_command_line*'  
- 這是要執行的選擇性命令提示字元。 *optional_command_line*已**nvarchar(4000)**，預設值是 NULL。  
+ 這是要執行的選擇性命令提示字元。 *optional_command_line*已**nvarchar(4000)** ，預設值是 NULL。  
   
  [ @reserved=] '*reserved*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
- 為訂用帳戶是否可以透過同步[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows Synchronization Manager。 *enabled_for_syncmgr*已**nvarchar(5)**，預設值是 FALSE。 如果是 false，便不用 Windows Synchronization Manager 來註冊訂閱。 如果是 true，便用 Windows Synchronization Manager 來註冊訂閱，而且不需要啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，就可以同步處理。 不支援 Oracle 發行者使用這個值。  
+ 為訂用帳戶是否可以透過同步[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows Synchronization Manager。 *enabled_for_syncmgr*已**nvarchar(5)** ，預設值是 FALSE。 如果是 false，便不用 Windows Synchronization Manager 來註冊訂閱。 如果是 true，便用 Windows Synchronization Manager 來註冊訂閱，而且不需要啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，就可以同步處理。 不支援 Oracle 發行者使用這個值。  
   
  [ @offloadagent= ] '*remote_agent_activation*'  
  指定是否能從遠端啟動代理程式。 *remote_agent_activation&lt*已**元**預設值是 0。  
@@ -224,7 +224,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  您必須指定密碼，如果*dts_package_name*指定。  
   
  [ @dts_package_location= ] '*dts_package_location*'  
- 指定封裝的位置。 *dts_package_location*已**nvarchar(12)**，預設值是 「 散發者 」。 封裝位置可以是散發者或訂閱者。  
+ 指定封裝的位置。 *dts_package_location*已**nvarchar(12)** ，預設值是 「 散發者 」。 封裝位置可以是散發者或訂閱者。  
   
  [ @distribution_job_name= ] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -236,7 +236,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  *發行者*不應指定為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
   
  [ @backupdevicetype= ] '*backupdevicetype*'  
- 指定從備份中初始化訂閱者時所用的備份裝置類型。 *backupdevicetype&lt*已**nvarchar(20)**，而且可以是下列其中一個值：  
+ 指定從備份中初始化訂閱者時所用的備份裝置類型。 *backupdevicetype&lt*已**nvarchar(20)** ，而且可以是下列其中一個值：  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -247,7 +247,7 @@ sp_addsubscription [ @publication = ] 'publication'
  *backupdevicetype&lt*時，才使用*sync_method*設定為 initialize_with_backup 時。  
   
  [ @backupdevicename= ] '*backupdevicename*'  
- 指定從備份中初始化訂閱者時所用的裝置名稱。 *backupdevicename*已**nvarchar(1000)**，預設值是 NULL。  
+ 指定從備份中初始化訂閱者時所用的裝置名稱。 *backupdevicename*已**nvarchar(1000)** ，預設值是 NULL。  
   
  [ @mediapassword= ] '*mediapassword*'  
  如果媒體格式化時設定了密碼，便指定媒體集的密碼。 *mediapassword*已**sysname**，預設值是 NULL。  

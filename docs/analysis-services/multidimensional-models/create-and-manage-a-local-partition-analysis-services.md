@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 49ac59377001eb6007f7f647d3817993c6121b74
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62866674"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>建立及管理本機分割區 (Analysis Services)
@@ -23,7 +23,7 @@ ms.locfileid: "62866674"
  您可以在模型設計期間，於 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中建立分割區，或是在部署方案之後，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 XMLA 來建立分割區。 建議您選取一種方法就好。 如果您交替使用這兩種工具，可能會發現，當您後續從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重新部署方案時，先前在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中對已部署的資料庫所做的變更會被覆寫。  
   
 ## <a name="before-you-start"></a>開始之前  
- 檢查您是否有 Business Intelligence 版或 Enterprise 版。 Standard 版不支援多個分割區。 若要檢查版本，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中以滑鼠右鍵按一下伺服器節點，然後選取 [報表][一般] | 。 如需功能可用性的詳細資訊，請參閱 [Features Supported by the Editions of SQL Server 2016](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) (SQL Server 2016 版本支援的功能)。  
+ 檢查您是否有 Business Intelligence 版或 Enterprise 版。 Standard 版不支援多個分割區。 若要檢查版本，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中以滑鼠右鍵按一下伺服器節點，然後選取 [報表]  [一般] |   。 如需功能可用性的詳細資訊，請參閱 [Features Supported by the Editions of SQL Server 2016](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) (SQL Server 2016 版本支援的功能)。  
   
  一開始時就務必了解，如果您之後要將分割區合併，則其必須共用相同的彙總設計。 分割區必須要有相同的彙總設計及儲存模式，才能進行合併。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62866674"
   
  建構您的篩選，使分割區之間的資料不要重複。 分割區的篩選會指定分割區使用事實資料表中的哪些資料。 在同一個 Cube 中之所有分割區的篩選，都必須從事實資料表擷取互斥的資料集，這點非常重要。 如果相同的事實資料出現在多個分割區中，可能會重複計算。  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的方案總管中，按兩下 Cube 以在 Cube 設計師中開啟，然後按一下 [分割區] 索引標籤。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的方案總管中，按兩下 Cube 以在 Cube 設計師中開啟，然後按一下 [分割區]  索引標籤。  
   
 2.  展開要為其加入分割區的量值群組。 依預設，每個量值群組都有一個分割區會繫結至 DSV 中的事實資料表。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62866674"
   
      ![分割區 窗格中的來源資料行](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "分割區 窗格中的來源資料行")  
   
-4.  在 [繫結類型] 中，選取 [查詢繫結]。 選取資料的 SQL 查詢會自動出現。  
+4.  在 [繫結類型] 中，選取 [查詢繫結]  。 選取資料的 SQL 查詢會自動出現。  
   
 5.  在最下面的 WHERE 子句中，新增為此分割區進行分割資料的篩選。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62866674"
     |集合 2：|"Continent" = 'NorthAmerica'<br /><br /> "Continent" = 'Europe'<br /><br /> "Continent" = 'SouthAmerica'|  
     |集合 3：|"Country" = 'USA'<br /><br /> "Country" = 'Mexico'<br /><br /> ("Country" <> 'USA' AND "Country" <> 'Mexico')|  
   
-6.  按一下 [檢查] 以檢查語法錯誤，然後按一下 [確定]。  
+6.  按一下 [檢查]  以檢查語法錯誤，然後按一下 [確定]  。  
   
 7.  重複先前的步驟以建立其餘的分割區，並每次修改 WHERE 子句，以選取下一個資料配量。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62866674"
   
 9. 瀏覽 Cube 以驗證傳回正確的資料。  
   
- 在您有了使用多個量值群組的量值群組之後，即可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中建立其他分割區。 在量值群組底下，以滑鼠右鍵按一下 Partitions 資料夾，並選取 [新增分割區] 以啟動精靈。  
+ 在您有了使用多個量值群組的量值群組之後，即可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中建立其他分割區。 在量值群組底下，以滑鼠右鍵按一下 Partitions 資料夾，並選取 [新增分割區]  以啟動精靈。  
   
 > [!NOTE]  
 >  除了在分割區中篩選資料，您可以使用相同的查詢在 DSV 中建立具名查詢，然後以具名查詢做為分割區的基礎。  
@@ -92,19 +92,19 @@ ms.locfileid: "62866674"
   
      具名查詢必須以與量值群組相關聯的事實資料表為基礎。 例如，若您要分割 FactInternetSales 量值群組，則 DSV 中的具名查詢必須在 FROM 陳述式中指定 FactInternetSales 資料表。  
   
-2.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的方案總管中，按兩下 Cube 以在 Cube 設計師中開啟，然後按一下 [分割區] 索引標籤。  
+2.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的方案總管中，按兩下 Cube 以在 Cube 設計師中開啟，然後按一下 [分割區]  索引標籤。  
   
 3.  展開要為其加入分割區的量值群組。  
   
-4.  按一下 [新增分割區]，以啟動 [分割區精靈]。 如果您是使用繫結至量值群組的事實資料表來建立具名查詢，應該就會看到您在前面步驟中建立的每一個具名查詢。  
+4.  按一下 [新增分割區]  ，以啟動 [分割區精靈]。 如果您是使用繫結至量值群組的事實資料表來建立具名查詢，應該就會看到您在前面步驟中建立的每一個具名查詢。  
   
 5.  在 [指定來源資訊] 中，選擇您在前面步驟中建立的其中一個具名查詢。 如果沒有看到任何具名查詢，請回到 DSV 並檢查 FROM 陳述式。  
   
-6.  按一下 [下一步] 以接受每個後續頁面的預設值。  
+6.  按一下 [下一步]  以接受每個後續頁面的預設值。  
   
 7.  在最後一頁的 [正在完成精靈] 上，提供描述性名稱給分割區。  
   
-8.  按一下 **[完成]**。  
+8.  按一下 **[完成]** 。  
   
 9. 重複先前的步驟以建立其餘的分割區，並每次選擇不同的具名查詢，以選取下一個資料配量。  
   

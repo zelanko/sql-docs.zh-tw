@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1acd7bf033ca2170a2a2b0cb1f701606510bf14
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108426"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>第 5 課：格式化報表 (Reporting Services)
@@ -35,11 +35,11 @@ ms.locfileid: "66108426"
   
 1.  按一下 **[設計]** 索引標籤。  
   
-2.  以滑鼠右鍵按一下含有 `[Date]` 欄位運算式的資料格，然後按一下 [文字方塊屬性]。  
+2.  以滑鼠右鍵按一下含有 `[Date]` 欄位運算式的資料格，然後按一下 [文字方塊屬性]  。  
   
 3.  按一下 **數字**，然後在**分類**欄位中，選取`Date`。  
   
-4.  在 **[類型]** 方塊中，選取 **[January 31, 2000]**。  
+4.  在 **[類型]** 方塊中，選取 **[January 31, 2000]** 。  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -50,9 +50,9 @@ ms.locfileid: "66108426"
   
 #### <a name="to-format-a-currency-field"></a>格式化貨幣欄位  
   
-1.  以滑鼠右鍵按一下含有 `[LineTotal]` 欄位運算式的資料格，然後按一下 [文字方塊屬性]。  
+1.  以滑鼠右鍵按一下含有 `[LineTotal]` 欄位運算式的資料格，然後按一下 [文字方塊屬性]  。  
   
-2.  按一下 **[數字]**，然後在 **[類別目錄]** 欄位中選取 **[貨幣]**。  
+2.  按一下 **[數字]** ，然後在 **[類別目錄]** 欄位中選取 **[貨幣]** 。  
   
 3.  如果您的地區設定為英文 (美國)，預設值應為：  
   
@@ -62,9 +62,9 @@ ms.locfileid: "66108426"
   
     -   **符號：$ 英文 (美國)**  
   
-4.  選取 [使用千分位 (,) 符號]。  
+4.  選取 [使用千分位 (,) 符號]  。  
   
-     如果範例文字為：**$12,345.00**，表示您的設定正確。  
+     如果範例文字為： **$12,345.00**，表示您的設定正確。  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66108426"
   
 2.  指向資料行控點之間的線條，使游標變成雙箭頭。 將資料行拖曳到所需的大小。  
   
-3.  選取資料列包含資料行標頭標籤，然後從 **[格式]** 功能表指向 **[字型]** ，然後按一下 **[粗體]**。  
+3.  選取資料列包含資料行標頭標籤，然後從 **[格式]** 功能表指向 **[字型]** ，然後按一下 **[粗體]** 。  
   
 4.  若要預覽報表，按一下 **[預覽]** 索引標籤。其外觀應該如下所示：  
   

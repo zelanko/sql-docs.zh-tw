@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37b28b6d4f15e29242d20b33bb5ade12460ded7e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076565"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>在連線模式下連接至 Analysis Services 資料庫
@@ -26,15 +26,15 @@ ms.locfileid: "66076565"
   
 1.  開啟 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
   
-2.  指向 **[檔案]** 功能表上的 **[開啟舊檔]** ，再按一下 **[Analysis Services 資料庫]**。  
+2.  指向 **[檔案]** 功能表上的 **[開啟舊檔]** ，再按一下 **[Analysis Services 資料庫]** 。  
   
-3.  選取 **[連接到現有的資料庫]**。  
+3.  選取 **[連接到現有的資料庫]** 。  
   
 4.  指定伺服器名稱和資料庫名稱。  
   
      您可以輸入資料庫名稱或是查詢伺服器，以檢視伺服器上現有的資料庫。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
      您現在可以直接編輯 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的任何物件。  
   

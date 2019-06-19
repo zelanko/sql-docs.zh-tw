@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 744e7a10c9c4dcd776d58b6234749f2be5aa1479
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63036209"
 ---
 # <a name="rename-indexes"></a>重新命名索引
@@ -56,17 +56,17 @@ ms.locfileid: "63036209"
   
 2.  按一下加號展開 **[資料表]** 資料夾。  
   
-3.  以滑鼠右鍵按一下要重新命名索引的資料表，然後選取 [設計]。  
+3.  以滑鼠右鍵按一下要重新命名索引的資料表，然後選取 [設計]  。  
   
-4.  在 [資料表設計工具] 功能表上，按一下 [索引/索引鍵]。  
+4.  在 [資料表設計工具]  功能表上，按一下 [索引/索引鍵]  。  
   
-5.  從 [選取的主/唯一索引鍵或索引] 文字方塊中選取要重新命名的索引。  
+5.  從 [選取的主/唯一索引鍵或索引]  文字方塊中選取要重新命名的索引。  
   
 6.  在方格中，按一下 [ **名稱** ]，然後在文字方塊輸入新名稱。  
   
 7.  按一下 [ **關閉**]。  
   
-8.  在 [檔案] 功能表上，按一下 [儲存 _table_name_]。  
+8.  在 [檔案]  功能表上，按一下 [儲存 _table_name_]  。  
   
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>使用物件總管重新命名索引  
   
@@ -78,7 +78,7 @@ ms.locfileid: "63036209"
   
 4.  按一下加號展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您要重新命名的索引，然後選取 [重新命名]。  
+5.  以滑鼠右鍵按一下您要重新命名的索引，然後選取 [重新命名]  。  
   
 6.  鍵入索引的新名稱，然後按 Enter 鍵。  
   
@@ -88,9 +88,9 @@ ms.locfileid: "63036209"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  

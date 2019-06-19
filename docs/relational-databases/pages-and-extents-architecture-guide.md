@@ -16,11 +16,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 95748a37b656c1ab203ed0cff354c5a641a9c7ed
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974367"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026977"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>分頁與範圍架構指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -109,10 +109,10 @@ ms.locfileid: "57974367"
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用兩種配置對應來記錄範圍的配置： 
 
-- **整體配置對應 (GAM)**   
+- **整體配置對應 (GAM)**    
   GAM 分頁可記錄已配置哪些範圍。 每個 GAM 可涵蓋 64,000 個範圍，或接近 4 GB 的資料。 GAM 以 1 個位元來表示所涵蓋期間的每個範圍。 若位元為 1，代表範圍可用；若位元為 0，代表範圍已配置。 
 
-- **共用的整體配置對應 (SGAM)**   
+- **共用的整體配置對應 (SGAM)**    
   SGAM 分頁可記錄哪些範圍目前當作混合範圍使用，並至少擁有一個未使用的分頁。 每個 SGAM 可涵蓋 64,000 個範圍，或接近 4 GB 的資料。 SGAM 以 1 個位元來表示所涵蓋期間的每個範圍。 若位元為 1，則表示該範圍目前當作混合範圍使用，並具有可用分頁。 若位元為 0，則表示該範圍不是當作混合範圍使用，或者它是混合範圍，但所有分頁都在使用中。 
 
 每個範圍都將根據其目前的用法，在 GAM 與 SGAM 中擁有下列的位元模式設定。 
@@ -141,7 +141,7 @@ PFS 分頁是資料檔案中檔案標頭分頁之後的第一頁 (分頁識別�
 
 ## <a name="managing-space-used-by-objects"></a>管理由物件所使用的空間 
 
-[索引配置對應 (IAM)] 頁面會對應配置單位所使用資料庫檔案 4 GB 部分中的範圍。 配置單位為下列三種類型中的一種：
+[索引配置對應 (IAM)]  頁面會對應配置單位所使用資料庫檔案 4 GB 部分中的範圍。 配置單位為下列三種類型中的一種：
 
 - IN_ROW_DATA   
     保存堆積或索引的資料分割。
@@ -177,10 +177,10 @@ IAM 頁面是視需要配置給每個配置單位，而且在檔案中的位置�
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用兩個內部資料結構來追蹤大量複製作業修改過的範圍，以及自從上個完整備份之後修改過的範圍。 這些資料結構大幅加速差異備份； 同時也在資料庫使用大量記錄復原模式時，提高了大量複製作業記錄的速度。 就好像整體配置對應 (GAM) 和共用整體配置對應 (SGAM) 分頁一樣，這些結構也是點陣圖，其中每個位元都代表一個範圍。 
 
-- **差異式變更對應 (DCM)**   
+- **差異式變更對應 (DCM)**    
    這種對應會追蹤自從上個 `BACKUP DATABASE` 陳述式之後發生變更的範圍。 若某個範圍的位元為 1，代表該範圍自從上個 `BACKUP DATABASE` 陳述式之後已經修改。 若位元為 0，代表該範圍並未修改過。 差異備份只讀取 DCM 分頁，找出哪些範圍經過修改。 這可大幅減少差異式備份必須掃描的分頁數目。 差異式備份的執行時間長度，將與上次執行 BACKUP DATABASE 陳述式之後修改過的範圍數目成正比，而不是與資料庫的整體大小成正比。 
 
-- **大量複製變更對應 (BCM)**   
+- **大量複製變更對應 (BCM)**    
    這種對應會追蹤自從上個 `BACKUP LOG` 陳述式之後由大量記錄作業修改過的範圍。 若某個範圍的位元為 1，代表該範圍自從上個 `BACKUP LOG` 陳述式之後已被大量記錄作業所修改。 若位元為 0，代表該範圍並未被大量記錄作業所修改。 雖然 BCM 分頁出現在所有資料庫中，但它們只適用於資料庫正在使用大量複製復原模式時。 在此復原模式中，當執行 `BACKUP LOG` 時，備份處理序會掃描 BCM 來找出修改過的範圍。 接著將這些範圍記錄到記錄備份中。 若資料庫是由資料庫備份和一系列的交易記錄檔備份來還原，這將可復原大量記錄作業。 對於使用簡單復原模式的資料庫，BCM 分頁並不適用，因為並沒有記錄下大量記錄作業。 它們也不適用於使用完整復原模式的資料庫，因為該復原模式會將大量記錄作業視為完整記錄作業。 
 
 DCM 分頁與 BCM 分頁之間的間隔與 GAM 和 SGAM 分頁的間隔一樣，亦即 64,000 個範圍。 DCM 與 BCM 分頁在實體檔案中剛好位於 GAM 與 SGAM 分頁之後：

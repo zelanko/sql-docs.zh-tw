@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 8e704a75a25849009e51a3e7f2c03fee535b7bbf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66780739"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>設定 min memory per query 伺服器組態選項
@@ -45,7 +45,7 @@ ms.locfileid: "66780739"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定每個查詢的最小記憶體選項之後](#FollowUp)  
+-   **後續操作：** [設定每個查詢的最小記憶體選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66780739"
   
 #### <a name="to-configure-the-min-memory-per-query-option"></a>設定 min memory per query 選項  
   
-1.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後選取 **[屬性]**。  
+1.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後選取 **[屬性]** 。  
   
 2.  按一下 **[記憶體]** 節點。  
   
@@ -84,9 +84,9 @@ ms.locfileid: "66780739"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `min memory per query` 選項的值設定為 `3500` KB。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `min memory per query` 選項的值設定為 `3500` KB。  
   
 ```sql  
 USE AdventureWorks2012 ;  

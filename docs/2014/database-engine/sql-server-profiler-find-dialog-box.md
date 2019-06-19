@@ -15,35 +15,35 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81ed454290a5ca62093fe9bdb619179106ca9985
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088860"
 ---
 # <a name="sql-server-profiler---find-dialog-box"></a>SQL Server Profiler - 尋找對話方塊
-  使用 [尋找] 對話方塊，即可針對追蹤搜尋特定字元或文字。 若要取消進行中的搜尋，請按下 ESC 鍵。  
+  使用 [尋找]  對話方塊，即可針對追蹤搜尋特定字元或文字。 若要取消進行中的搜尋，請按下 ESC 鍵。  
   
- 若要在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 中開啟此對話方塊，請在 [編輯] 功能表上按一下 [尋找]**Find**。  
+ 若要在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 中開啟此對話方塊，請在 [編輯]  功能表上按一下 [尋找]**Find**。  
   
 ## <a name="options"></a>選項。  
  **尋找目標**  
  輸入您想要搜尋的文字。 搜尋會找出其中包含指定字串的字串。 例如，搜尋 "Completed" 會與 "SQL:BatchCompleted" 相符。 不支援萬用字元 (*、? 等等)。  
   
  **在資料行中搜尋**  
- 按一下要搜尋的資料行，或按一下 [\<所有資料行>] 即可搜尋追蹤中的所有資料行。  
+ 按一下要搜尋的資料行，或按一下 [\<所有資料行>]  即可搜尋追蹤中的所有資料行。  
   
  **大小寫須相符**  
- 尋找與 [尋找目標] 方塊中的大小寫相同的文字。 清除此核取方塊，即可在追蹤中同時尋找大寫與小寫文字字元的範例。  
+ 尋找與 [尋找目標]  方塊中的大小寫相同的文字。 清除此核取方塊，即可在追蹤中同時尋找大寫與小寫文字字元的範例。  
   
  **全字拼寫須相符**  
- 將搜尋限制為整個文字。 清除 [全字拼寫須相符] 核取方塊來搜尋文字內的所有字元。  
+ 將搜尋限制為整個文字。 清除 [全字拼寫須相符]  核取方塊來搜尋文字內的所有字元。  
   
  **找下一個**  
- 尋找 [尋找目標] 方塊中之字元的下一個範例。  
+ 尋找 [尋找目標]  方塊中之字元的下一個範例。  
   
  **找上一個**  
- 在追蹤中向後搜尋，以尋找 [尋找目標] 方塊中之字元的上一個範例。  
+ 在追蹤中向後搜尋，以尋找 [尋找目標]  方塊中之字元的上一個範例。  
   
 ## <a name="see-also"></a>另請參閱  
  [尋找值或在追蹤時的資料行&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)   
