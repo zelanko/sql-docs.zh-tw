@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 8fbf1ea1a9793ae8d0aad56ee6f524e2e225d26a
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098959"
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>指定群組條件 (Visual Database Tools)
@@ -38,7 +38,7 @@ ms.locfileid: "65098959"
   
 2.  如果[準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中沒有您要做為條件基礎的資料行，請新增它。 (條件通常牽涉已經是群組或摘要資料行的資料行)。您無法使用不屬於彙總函式 (Aggregate Function) 或 GROUP BY 子句一部分的資料行。  
   
-3.  在 [篩選條件] 欄位中，指定要套用至群組的條件。  
+3.  在 [篩選條件]  欄位中，指定要套用至群組的條件。  
   
     [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)會自動在 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)的陳述式中建立 HAVING 子句，如下列範例所示：  
   

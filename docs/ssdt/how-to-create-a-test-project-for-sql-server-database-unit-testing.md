@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e28464059101f6385380ced0a307a61f1e76ba53
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098065"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>如何：建立 SQL Server 資料庫單元測試的測試專案
@@ -35,7 +35,7 @@ ms.locfileid: "65098065"
   
 -   將測試專案加入至方案。 測試專案包含您可以刪除的標準單元測試。 這個專案不包含您必須加入的 SQL Server 單元測試類別。  
   
--   從 [測試] 功能表加入新的 SQL Server 單元測試。 當您加入單元測試時，SQL Server Data Tools 也會建立測試專案 (如果您要求的話)。 此專案包含 SQL Server 單元測試類別。 SQL Server 單元測試類別包含一或多個單元測試。  
+-   從 [測試]  功能表加入新的 SQL Server 單元測試。 當您加入單元測試時，SQL Server Data Tools 也會建立測試專案 (如果您要求的話)。 此專案包含 SQL Server 單元測試類別。 SQL Server 單元測試類別包含一或多個單元測試。  
   
 -   從 SQL Server [物件總管] 中開啟的專案中，從預存程序、函式或觸發程序建立單元測試。 當您建立單元測試時，SQL Server Data Tools 也會建立測試專案 (如果您要求的話)。 此專案包含 SQL Server 單元測試類別。 SQL Server 測試類別包含一個或多個單元測試。  
   
@@ -47,9 +47,9 @@ ms.locfileid: "65098065"
   
     [新增專案]  對話方塊隨即出現。  
   
-2.  在 [已安裝的範本] 底下，展開 [SQL Server] 節點，然後選取 [SQL Server 資料庫專案]。  
+2.  在 [已安裝的範本]  底下，展開 [SQL Server]  節點，然後選取 [SQL Server 資料庫專案]  。  
   
-3.  在 [名稱] 中，輸入專案名稱。  
+3.  在 [名稱]  中，輸入專案名稱。  
   
 ### <a name="to-create-a-test-project-with-a-sql-server-unit-test-class"></a>若要建立包含 SQL Server 單元測試類別的測試專案  
   
