@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5f286a0cd957ed62ab3edb51eb96565431afb22a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723530"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 變數
@@ -57,7 +57,7 @@ ms.locfileid: "65723530"
   
  您可以為下列所有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 容器類型建立使用者自訂變數：封裝、Foreach 迴圈容器、For 迴圈容器、時序容器、工作和事件處理常式。 使用者自訂變數是容器 Variables 集合的成員。  
   
- 如果您使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師建立封裝，則可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師之封裝總管索引標籤上的 [變數] 資料夾中，查看 Variables 集合的成員。 資料夾會列出使用者自訂變數和系統變數。  
+ 如果您使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師建立封裝，則可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師之封裝總管  索引標籤上的 [變數]  資料夾中，查看 Variables 集合的成員。 資料夾會列出使用者自訂變數和系統變數。  
   
  您可以利用下列方式設定使用者自訂變數：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "65723530"
  如需變數之實際使用狀況的詳細資訊，請參閱 [在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
 ## <a name="properties-of-variables"></a>變數屬性  
- 您可以透過在 [變數] 視窗或 [屬性] 視窗中設定下列屬性來設定使用者定義變數。 但某些屬性只能在 [屬性] 視窗中設定。  
+ 您可以透過在 [變數]  視窗或 [屬性]  視窗中設定下列屬性來設定使用者定義變數。 但某些屬性只能在 [屬性] 視窗中設定。  
   
 > [!NOTE]  
 >  系統變數上唯一可設定的選項是指定其變更值時，它們是否會引發事件。  
@@ -103,14 +103,14 @@ ms.locfileid: "65723530"
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供兩個命名空間： **User** 和 **System**。 依預設，自訂變數屬於 **User** 命名空間，而系統變數則屬於 **System** 命名空間。 您可以為使用者定義變數建立其他命名空間，並變更 **User** 命名空間的名稱，但是您無法變更 **System** 命名空間的名稱，也無法將變數加入 **System** 命名空間或將系統變數指派給其他命名空間。  
   
 **RaiseChangedEvent**  
- 當此屬性設為 [True] 時，**OnVariableValueChanged** 事件會在變數變更值時產生。  
+ 當此屬性設為 [True]  時，**OnVariableValueChanged** 事件會在變數變更值時產生。  
   
  **ReadOnly**  
- 當此屬性設為 [False]，表示變數可讀取\寫入。  
+ 當此屬性設為 [False]  ，表示變數可讀取\寫入。  
   
 **範圍。**    
  > [!NOTE]  
->  您只能透過按一下 [變數] 視窗中的 [移動變數] 來變更此屬性設定。  
+>  您只能透過按一下 [變數]  視窗中的 [移動變數]  來變更此屬性設定。  
   
  變數建立於封裝範圍之內，或封裝中的容器、工作或事件處理常式範圍之內。 因為封裝容器位於容器階層的最上層，所以具有封裝範圍的變數在功能上與全域變數相同，且可以由封裝內的所有容器使用。 同樣地，在容器 (例如「For 迴圈」容器) 範圍中定義的變數可由「For 迴圈」容器內的所有工作或容器使用。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "65723530"
   
 **ValueType**    
  > [!NOTE]  
->  此屬性值會顯示在 [變數] 視窗中的 [資料類型] 資料行中。  
+>  此屬性值會顯示在 [變數]  視窗中的 [資料類型]  資料行中。  
   
  指定變數值的資料類型。  
 
@@ -177,24 +177,24 @@ ms.locfileid: "65723530"
   
 3.  在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，若要定義變數的範圍，請執行下列其中之一：  
   
-    -   若要將範圍設為封裝，按一下 [控制流程] 索引標籤之設計介面上的任意位置。  
+    -   若要將範圍設為封裝，按一下 [控制流程]  索引標籤之設計介面上的任意位置。  
   
-    -   若要將範圍設為事件處理常式，在 [事件處理常式] 索引標籤的設計介面上，選取可執行檔和事件處理常式。  
+    -   若要將範圍設為事件處理常式，在 [事件處理常式]  索引標籤的設計介面上，選取可執行檔和事件處理常式。  
   
-    -   若要將範圍設為工作或容器，在 [控制流程] 索引標籤或 [事件處理常式] 索引標籤的設計介面上，按一下工作或容器。  
+    -   若要將範圍設為工作或容器，在 [控制流程]  索引標籤或 [事件處理常式]  索引標籤的設計介面上，按一下工作或容器。  
   
-4.  在 [SSIS] 功能表上，按一下 [變數]。 您可以將 View.Variables 命令對應到您在 [選項] 對話方塊的 [鍵盤] 頁面中所選擇的組合鍵，以選擇性地顯示 [變數] 視窗。  
+4.  在 [SSIS]  功能表上，按一下 [變數]  。 您可以將 View.Variables 命令對應到您在 [選項]  對話方塊的 [鍵盤]  頁面中所選擇的組合鍵，以選擇性地顯示 [變數]  視窗。  
   
-5.  在 [變數] 視窗中，按一下**加入變數**圖示。 新變數便會加入清單。  
+5.  在 [變數]  視窗中，按一下**加入變數**圖示。 新變數便會加入清單。  
   
-6.  選擇性地按一下**方格選項**圖示，在 [變數方格選項] 對話方塊中選取要顯示的其他資料行，然後按一下 [確定]。  
+6.  選擇性地按一下**方格選項**圖示，在 [變數方格選項]  對話方塊中選取要顯示的其他資料行，然後按一下 [確定]  。  
   
 7.  選擇性地設定變數屬性。 如需詳細資訊，請參閱 [設定使用者定義變數的屬性](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)。  
   
 8.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
 
 ### <a name="add-variable-dialog-box"></a>加入變數對話方塊
-使用 [加入變數] 對話方塊，即可指定新變數的屬性。  
+使用 [加入變數]  對話方塊，即可指定新變數的屬性。  
   
 #### <a name="options"></a>選項。  
  **容器**  
@@ -210,7 +210,7 @@ ms.locfileid: "65723530"
  選取資料類型。  
   
  **ReplTest1**  
- 鍵入值。 此值必須與 [值類型] 選項中所指定的資料類型相容。  
+ 鍵入值。 此值必須與 [值類型]  選項中所指定的資料類型相容。  
   
  **唯讀**  
  選取即可使變數成為唯讀的。  
@@ -221,13 +221,13 @@ ms.locfileid: "65723530"
   
 2.  在 [方案總管] 中，以滑鼠右鍵按一下封裝將其開啟。  
   
-3.  在 **[SSIS]** 功能表上，按一下 **變數**。 您可以將 View.Variables 命令對應到您在 [選項] 對話方塊的 [鍵盤] 頁面中所選擇的組合鍵，以選擇性地顯示 [變數] 視窗。  
+3.  在 **[SSIS]** 功能表上，按一下 **變數**。 您可以將 View.Variables 命令對應到您在 [選項]  對話方塊的 [鍵盤]  頁面中所選擇的組合鍵，以選擇性地顯示 [變數]  視窗。  
   
-4.  選取要刪除的變數，然後按一下 [刪除變數]。  
+4.  選取要刪除的變數，然後按一下 [刪除變數]  。  
   
-     若您在 [變數] 視窗中沒看到變數，請按一下 [方格選項]，然後選取 [顯示所有範圍的變數]。  
+     若您在 [變數] 視窗中沒看到變數，請按一下 [方格選項]  ，然後選取 [顯示所有範圍的變數]  。  
   
-5.  如果 [確認刪除變數] 對話方塊開啟，按一下 [是] 確認。  
+5.  如果 [確認刪除變數]  對話方塊開啟，按一下 [是]  確認。  
   
 6.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
@@ -237,13 +237,13 @@ ms.locfileid: "65723530"
   
 2.  在 [方案總管] 中，以滑鼠右鍵按一下封裝將其開啟。  
   
-3.  在 **[SSIS]** 功能表上，按一下 **變數**。 您可以將 View.Variables 命令對應到您在 [選項] 對話方塊的 [鍵盤] 頁面中所選擇的組合鍵，以選擇性地顯示 [變數] 視窗。  
+3.  在 **[SSIS]** 功能表上，按一下 **變數**。 您可以將 View.Variables 命令對應到您在 [選項]  對話方塊的 [鍵盤]  頁面中所選擇的組合鍵，以選擇性地顯示 [變數]  視窗。  
   
-4.  選取變數，然後按一下 [移動變數]。  
+4.  選取變數，然後按一下 [移動變數]  。  
   
-     若您在 [變數] 視窗中沒看到變數，請按一下 [方格選項]，然後選取 [顯示所有範圍的變數]。  
+     若您在 [變數] 視窗中沒看到變數，請按一下 [方格選項]  ，然後選取 [顯示所有範圍的變數]  。  
   
-5.  在 [選取新的範圍] 對話方塊中，選取封裝或容器、工作或是封裝中的事件處理常式，以變更變數範圍。  
+5.  在 [選取新的範圍]  對話方塊中，選取封裝或容器、工作或是封裝中的事件處理常式，以變更變數範圍。  
   
 6.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
 
@@ -252,30 +252,30 @@ ms.locfileid: "65723530"
   
 -   [變數] 視窗。  
   
--   [屬性] 視窗。 [屬性] 視窗會列出屬性，以供您設定 [變數] 視窗中無法使用的變數：Description、EvaluateAsExpression、Expression、ReadOnly、ValueType 和 IncludeInDebugDump。  
+-   [屬性] 視窗。 [屬性]  視窗會列出屬性，以供您設定 [變數]  視窗中無法使用的變數：Description、EvaluateAsExpression、Expression、ReadOnly、ValueType 和 IncludeInDebugDump。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 也提供一組無法更新屬性的系統變數，但屬性 RaiseChangedEvent 除外。  
   
 ### <a name="set-expressions-on-variables"></a>設定變數上的運算式  
   
- 當您使用 [屬性] 視窗設定使用者定義變數的運算式時：  
+ 當您使用 [屬性]  視窗設定使用者定義變數的運算式時：  
   
 -   變數的值可以由 Value 或 Expression 屬性設定。 依預設，EvaluateAsExpression 屬性會設為 **False** ，變數的值會由 Value 屬性設定。 若要使用運算式設定該值，您必須先將 EvaluateAsExpression 設為 **True**，然後在 Expression 屬性中提供運算式。 Value 屬性會自動設為運算式的評估結果。  
   
 -   ValueType 屬性包含 Value 屬性中之值的資料類型。 運算式設定 Value 之後，ValueType 就會自動更新為與運算式之評估結果相容的資料類型。 例如，如果 Value 包含 0 且 ValueType 屬性包含 **Int32**，然後您將 Expression 設為 GETDATE()，Value 就會包含目前的日期和時間，且 ValueType 會設為 **DateTime**。  
   
--   透過變數的 [屬性] 視窗，可以存取 [運算式產生器] 對話方塊。 您可使用此工具建立、驗證和評估運算式。 如需詳細資訊，請參閱[運算式產生器](../integration-services/expressions/expression-builder.md)和 [Integration Services &#40;SSIS&#41; 運算式](../integration-services/expressions/integration-services-ssis-expressions.md)。  
+-   透過變數的 [屬性]  視窗，可以存取 [運算式產生器]  對話方塊。 您可使用此工具建立、驗證和評估運算式。 如需詳細資訊，請參閱[運算式產生器](../integration-services/expressions/expression-builder.md)和 [Integration Services &#40;SSIS&#41; 運算式](../integration-services/expressions/integration-services-ssis-expressions.md)。  
   
- 當您使用 [變數] 視窗設定使用者定義變數的運算式時：  
+ 當您使用 [變數]  視窗設定使用者定義變數的運算式時：  
   
--   若要使用運算式設定變數值，請先確認變數資料類型是否與運算式的評估結果相容，然後才在 [變數] 視窗的 [運算式] 資料行中提供運算式。 [屬性] 視窗中的 EvaluateAsExpression 屬性會自動設為 **True**。  
+-   若要使用運算式設定變數值，請先確認變數資料類型是否與運算式的評估結果相容，然後才在 [變數]  視窗的 [運算式]  資料行中提供運算式。 [屬性]  視窗中的 EvaluateAsExpression 屬性會自動設為 **True**。  
   
 -   當您將運算式指派給變數時，會在變數旁邊顯示特殊圖示標記。 此特殊圖示標記也會顯示在已經設定運算式的連接管理員及工作旁邊。  
   
--   透過變數的 [變數] 視窗，可以存取 [運算式產生器] 對話方塊。 您可使用此工具建立、驗證和評估運算式。 如需詳細資訊，請參閱[運算式產生器](../integration-services/expressions/expression-builder.md)和 [Integration Services &#40;SSIS&#41; 運算式](../integration-services/expressions/integration-services-ssis-expressions.md)。  
+-   透過變數的 [變數]  視窗，可以存取 [運算式產生器]  對話方塊。 您可使用此工具建立、驗證和評估運算式。 如需詳細資訊，請參閱[運算式產生器](../integration-services/expressions/expression-builder.md)和 [Integration Services &#40;SSIS&#41; 運算式](../integration-services/expressions/integration-services-ssis-expressions.md)。  
   
- 如果您在 [變數] 和 [屬性] 視窗中將運算式指派給變數，且 **EvaluateAsExpression** 設為 **True**，就無法變更變數資料類型。  
+ 如果您在 [變數]  和 [屬性]  視窗中將運算式指派給變數，且 **EvaluateAsExpression** 設為 **True**，就無法變更變數資料類型。  
   
 ### <a name="set-the-namespace-and-name-properties"></a>設定命名空間和名稱屬性
   
@@ -289,15 +289,15 @@ ms.locfileid: "65723530"
   
 3.  在 **[SSIS]** 功能表上，按一下 **變數**。  
   
-     您可以將 View.Variables 命令對應到您在 [選項] 對話方塊的 [鍵盤] 頁面中所選擇的組合鍵，以選擇性地顯示 [變數] 視窗。  
+     您可以將 View.Variables 命令對應到您在 [選項]  對話方塊的 [鍵盤]  頁面中所選擇的組合鍵，以選擇性地顯示 [變數]  視窗。  
   
-4.  選擇性地在 [變數] 視窗中按一下 [方格選項]，然後選取要在 [變數] 視窗中顯示的資料行，並選取要套用到此變數清單的篩選。  
+4.  選擇性地在 [變數]  視窗中按一下 [方格選項]  ，然後選取要在 [變數]  視窗中顯示的資料行，並選取要套用到此變數清單的篩選。  
   
-5.  選擇清單中的變數，然後更新 [名稱]、[資料類型]、[值]、[命名空間]、[引發變更事件]、[描述] 及 [運算式] 資料行中的值。  
+5.  選擇清單中的變數，然後更新 [名稱]  、[資料類型]  、[值]  、[命名空間]  、[引發變更事件]  、[描述]  及 [運算式]  資料行中的值。  
   
-6.  選擇清單中的變數，然後按一下 [移動變數] 以變更範圍。  
+6.  選擇清單中的變數，然後按一下 [移動變數]  以變更範圍。  
   
-7.  若要儲存已更新的封裝，請按一下 [檔案] 功能表上的 [儲存選取項目]。  
+7.  若要儲存已更新的封裝，請按一下 [檔案]  功能表上的 [儲存選取項目]  。  
   
 ### <a name="set-variable-properties-in-the-properties-window"></a>在屬性視窗中設定變數屬性  
 
@@ -305,19 +305,19 @@ ms.locfileid: "65723530"
   
 2.  在 [方案總管] 中，以滑鼠右鍵按一下封裝將其開啟。  
   
-3.  在 [檢視]  功能表上，按一下 [屬性視窗] 。  
+3.  在 [檢視]  功能表上，按一下 [屬性視窗]  。  
   
-4.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，按一下 [封裝總管] 索引標籤，並展開 [封裝] 節點。  
+4.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，按一下 [封裝總管]  索引標籤，並展開 [封裝] 節點。  
   
 5.  若要修改具有封裝範圍的變數，請展開 [變數] 節點；否則，展開 [事件處理常式] 或 [可執行檔] 節點，直到找到包含想要修改之變數的 [變數] 節點為止。  
   
 6.  按一下想要修改其屬性的變數。  
   
-7.  在 [屬性] 視窗中，更新讀取/寫入變數屬性。 有些使用者自訂變數的屬性為讀取/唯讀。  
+7.  在 [屬性]  視窗中，更新讀取/寫入變數屬性。 有些使用者自訂變數的屬性為讀取/唯讀。  
   
      如需屬性的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services/integration-services-ssis-variables.md)。  
   
-8.  若要儲存已更新的封裝，請按一下 [檔案] 功能表上的 [儲存選取項目]。  
+8.  若要儲存已更新的封裝，請按一下 [檔案]  功能表上的 [儲存選取項目]  。  
 
 ## <a name="update-a-variable-dynamically-with-configurations"></a>使用設定動態更新變數  
  若要動態地更新變數，您可以建立變數的組態，使用封裝部署組態，然後在部署封裝時更新組態檔中的變數值。 在執行階段，封裝會使用更新的變數值。 如需詳細資訊，請參閱 [建立封裝組態](../integration-services/packages/create-package-configurations.md)。  
