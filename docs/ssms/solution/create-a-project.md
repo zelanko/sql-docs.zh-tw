@@ -1,7 +1,5 @@
 ---
 title: 建立專案 | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -12,15 +10,18 @@ helpviewer_keywords:
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a2bae29b9292ecd36950c131389a8eb9ecc7253d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.custom: ''
+ms.date: 01/19/2017
+ms.openlocfilehash: a70615870126f87c079dffccfe532d796e02f869
+ms.sourcegitcommit: d0d2505d3d517e7b3ea9c4aef4d6fd08aeb28d54
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104875"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67197600"
 ---
 # <a name="create-a-project"></a>建立專案
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 您可以在現有方案內，建立一或多個專案。  
   
