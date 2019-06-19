@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1c7ec3026050181ae31150c4b5e190a65d889d4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721515"
 ---
 # <a name="lesson-4-5-test-the-lesson-4-package"></a>課程 4-5：測試第 4 課套件
@@ -44,9 +44,9 @@ ms.locfileid: "65721515"
   
 ## <a name="run-the-lesson-4-tutorial-package"></a>執行第 4 課教學課程套件  
   
-1.  在 [偵錯] 功能表上，選取 [開始偵錯]。  
+1.  在 [偵錯]  功能表上，選取 [開始偵錯]  。  
   
-2.  在套件執行完成之後，於 [偵錯] 功能表上，選取 [停止偵錯]。  
+2.  在套件執行完成之後，於 [偵錯]  功能表上，選取 [停止偵錯]  。  
   
 ## <a name="view-the-contents-of-the-erroroutputtxt-file"></a>檢視 ErrorOutput.txt 檔案的內容  
   

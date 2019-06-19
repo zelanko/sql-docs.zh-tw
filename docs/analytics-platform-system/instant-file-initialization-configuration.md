@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 959d219565de6577e31d9548f5daea0fe0d2419e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63298128"
 ---
 # <a name="instant-file-initialization-configuration"></a>檔案立即初始化設定
@@ -29,13 +29,13 @@ ms.locfileid: "63298128"
   
 1.  在備份伺服器上，開啟**本機安全性原則**應用程式 (`secpol.msc`)。  
   
-2.  在左窗格中，展開 [本機原則] ，然後按一下 [使用者權限指派] 。  
+2.  在左窗格中，展開 [本機原則]  ，然後按一下 [使用者權限指派]  。  
   
-3.  在右窗格中，按兩下 [執行磁碟區維護工作]。  
+3.  在右窗格中，按兩下 [執行磁碟區維護工作]  。  
   
 4.  按一下 [新增使用者或群組]  ，新增用於備份的任何使用者帳戶。  
   
-5.  按一下 [套用] ，然後關閉所有 [本機安全性原則]  對話方塊。  
+5.  按一下 [套用]  ，然後關閉所有 [本機安全性原則]  對話方塊。  
   
 ## <a name="to-turn-instant-file-initialization-on-or-off"></a>若要開啟或關閉，請開啟立即檔案初始化  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63298128"
     > [!WARNING]  
     > 當您關閉檔案立即初始化時，上面所討論之功能的安全性考量可能仍然會套用到檔案刪除，但已啟用檔案立即初始化。  
   
-4.  按一下 **[套用]**。 下一次重新啟動設備服務時，就會透過 SQL Server PDW 上的 SQL Server 執行個體傳播變更。 若要立即重新啟動的應用裝置的服務，請參閱[PDW 服務狀態&#40;Analytics Platform System&#41;](pdw-services-status.md)。  
+4.  按一下 **[套用]** 。 下一次重新啟動設備服務時，就會透過 SQL Server PDW 上的 SQL Server 執行個體傳播變更。 若要立即重新啟動的應用裝置的服務，請參閱[PDW 服務狀態&#40;Analytics Platform System&#41;](pdw-services-status.md)。  
   
 5.  您可能想要重複上述的步驟**備份帳戶的 新增權限**移除**執行磁碟區維護工作**權限。  
   

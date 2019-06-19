@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a642fbe7dbd866baa01fe9db7163292bfda6db30
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063262"
 ---
 # <a name="troubleshooting-intellisense-sql-server-management-studio"></a>疑難排解 IntelliSense (SQL Server Management Studio)
@@ -59,7 +59,7 @@ ms.locfileid: "66063262"
   
 -   IntelliSense 功能不包含您的編輯器視窗連接到資料庫後，由另一個連接所建立的資料庫物件。 如果 IntelliSense 功能中遺漏物件，例如完成清單，您可以選擇三個機制的其中一個，以重新整理編輯器視窗的快取物件：  
   
-    -   選取 **[編輯]** 功能表，選取 **[IntelliSense]**，再選取 **[重新整理本機快取]**。  
+    -   選取 **[編輯]** 功能表，選取 **[IntelliSense]** ，再選取 **[重新整理本機快取]** 。  
   
     -   使用 CTRL+Shift+R 鍵盤快速鍵。  
   

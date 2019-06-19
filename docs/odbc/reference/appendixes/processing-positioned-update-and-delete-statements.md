@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d898fcc7d1b35230173afa0443219d59c54720ae
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63057071"
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>處理定點更新和刪除陳述式
@@ -37,7 +37,7 @@ ms.locfileid: "63057071"
   
  定位的 update 和 delete 陳述式會受限於下列限制：  
   
--   定位的 update 和 delete 陳述式只能用於下列情況： 當**選取 **產生的結果集的陳述式; 當**選取**陳述式未包含聯結， **UNION**子句，或有**GROUP BY**子句，且在選取清單中使用的別名或運算式的任何資料行已不繫結與**SQLBindCol**。  
+-   定位的 update 和 delete 陳述式只能用於下列情況： 當**選取** 產生的結果集的陳述式; 當**選取**陳述式未包含聯結， **UNION**子句，或有**GROUP BY**子句，且在選取清單中使用的別名或運算式的任何資料行已不繫結與**SQLBindCol**。  
   
 -   如果應用程式會準備定位的 update 或 delete 陳述式，它必須這樣之後就叫做**SQLFetch**或是**SQLFetchScroll**。 雖然資料指標程式庫提交陳述式，以準備的驅動程式時，會關閉陳述式，並直接在應用程式的呼叫時執行它**SQLExecute**。  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8af55ff084a0f6202bf830a006b01460748d8b4e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723767"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>檢閱資料類型對應 (SQL Server 匯入和匯出精靈)
@@ -30,17 +30,17 @@ ms.locfileid: "65723767"
 > 您無法在 [檢閱資料類型對應]  頁面上變更資料類型對應。 不過，您可以按一下 [上一步]  返回 [選取來源資料表和檢視表]  頁面，然後按一下 [編輯對應]  再次開啟 [資料行對應]  對話方塊。 在 [資料行對應]  對話方塊中，您可以指定較可能成功的資料類型對應。 若要再次查看 [資料行對應]  對話方塊，請參閱 [資料行對應](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)。  
   
 ## <a name="screen-shot-of-the-review-data-type-mapping-page"></a>[檢閱資料類型對應] 頁面的螢幕擷取畫面
- 下列螢幕擷取畫面顯示精靈的 [檢閱資料類型對應] 頁面的範例。
+ 下列螢幕擷取畫面顯示精靈的 [檢閱資料類型對應]  頁面的範例。
  
  在此範例中：
- -   使用者已指定 [資料行對應] 對話方塊中可能會失敗的對應。
+ -   使用者已指定 [資料行對應]  對話方塊中可能會失敗的對應。
  -   [資料表]  清單中資料列上的警告圖示，指出將至少一個資料行從查詢結果轉換成目的地資料表中的相容資料類型時發生問題。
- -   [資料類型對應] 清單中第一個資料列上的警告圖示，指出從來源資料行的 **int** 資料類型對應至目的地資料行的 **smalldatetime** 資料類型可能會導致資料遺失。
+ -   [資料類型對應]  清單中第一個資料列上的警告圖示，指出從來源資料行的 **int** 資料類型對應至目的地資料行的 **smalldatetime** 資料類型可能會導致資料遺失。
  
  ![匯入和匯出精靈的 [檢閱資料類型對應] 頁面](../../integration-services/import-export-data/media/review-mapping.png "匯入和匯出精靈的 [檢閱資料類型對應] 頁面") 
  
 ## <a name="review-the-source-and-destination-tables"></a>檢閱來源與目的地資料表  
- [檢閱資料類型對應]  頁面的上半部是 [資料表]  清單，其中列出要從來源複製至目的地的資料表。 若要查看個別資料表的轉換資訊，請在 [資料表]  清單中選取資料表。 所選取資料表之個別資料行的轉換資訊會顯示在此頁面下半部的 [資料類型對應] 方格中。
+ [檢閱資料類型對應]  頁面的上半部是 [資料表]  清單，其中列出要從來源複製至目的地的資料表。 若要查看個別資料表的轉換資訊，請在 [資料表]  清單中選取資料表。 所選取資料表之個別資料行的轉換資訊會顯示在此頁面下半部的 [資料類型對應]  方格中。
 
 在此範例中，使用者提供之查詢的結果將會複製到目的地的 Sales.CustomerNew2 資料表。 警告圖示指出，將至少一個資料行從查詢結果轉換成目的地資料表中的相容資料類型時發生問題。
 
@@ -56,9 +56,9 @@ ms.locfileid: "65723767"
 |**目的地**|目的地資料表的名稱。|  
   
 ## <a name="review-the-data-type-mappings"></a>檢閱資料類型對應  
- [檢閱資料類型對應]  頁面的下半部是 [資料類型對應]  清單。 此方格會提供有關在 [資料表] 清單中選取之來源資料表內資料行的詳細轉換資訊。
+ [檢閱資料類型對應]  頁面的下半部是 [資料類型對應]  清單。 此方格會提供有關在 [資料表]  清單中選取之來源資料表內資料行的詳細轉換資訊。
 
-在此範例中，來源的每個資料行都會複製到目的地中具有相同名稱和資料類型的資料行。 [資料類型對應] 清單中第一個資料列上的警告圖示，指出從來源資料行的 **int** 資料類型對應至目的地資料行的 **smalldatetime** 資料類型可能會導致資料遺失。
+在此範例中，來源的每個資料行都會複製到目的地中具有相同名稱和資料類型的資料行。 [資料類型對應]  清單中第一個資料列上的警告圖示，指出從來源資料行的 **int** 資料類型對應至目的地資料行的 **smalldatetime** 資料類型可能會導致資料遺失。
  
 ![檢閱對應 - 對應](../../integration-services/import-export-data/media/review-mapping-mappings.png)  
 

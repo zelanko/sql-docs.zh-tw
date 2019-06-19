@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 77828ab512373c93313c8b0602423a9eaa38a426
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827948"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939787"
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
@@ -59,7 +59,7 @@ SET QUOTED_IDENTIFIER ON
 
 當 SET QUOTED_IDENTIFIER 是 ON 時，您可以用雙引號來分隔識別碼，文字則必須用單引號來分隔。 當 SET QUOTED_IDENTIFIER 是 OFF 時，識別碼不能附加引號，且必須遵照所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別碼規則。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。 文字可以用單引號或雙引號來分隔。
 
-當 SET QUOTED_IDENTIFIER 是 ON (預設值) 時，用雙引號來分隔的所有字串都會解譯為物件識別碼。 因此，附加引號的識別碼不需要遵照 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的識別碼規則。 它們可以是保留關鍵字，也可以包括 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別碼通常不接受的字元。 文字字串運算式不能用雙引號來分隔；您必須用單引號來括住文字字串。 如果單引號 (**'**) 是常值字串的一部分，則用兩個單引號 (**"**) 代表。 當資料庫中的物件名稱使用保留關鍵字時，SET QUOTED_IDENTIFIER 必須是 ON。
+當 SET QUOTED_IDENTIFIER 是 ON (預設值) 時，用雙引號來分隔的所有字串都會解譯為物件識別碼。 因此，附加引號的識別碼不需要遵照 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的識別碼規則。 它們可以是保留關鍵字，也可以包括 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別碼通常不接受的字元。 文字字串運算式不能用雙引號來分隔；您必須用單引號來括住文字字串。 如果單引號 ( **'** ) 是常值字串的一部分，則用兩個單引號 ( **"** ) 代表。 當資料庫中的物件名稱使用保留關鍵字時，SET QUOTED_IDENTIFIER 必須是 ON。
 
 當 SET QUOTED_IDENTIFIER 是 OFF 時，您可以用單引號或雙引號來分隔運算式中的文字字串。 如果用雙引號來分隔文字字串，字串便可以包含內嵌的單引號，如撇號。
 
@@ -100,7 +100,7 @@ SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
 
 ```
 
-## <a name="permissions"></a>[權限]
+## <a name="permissions"></a>權限
 
 需要 public 角色中的成員資格。
 

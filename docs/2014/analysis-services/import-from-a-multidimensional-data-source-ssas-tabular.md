@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 666b7fdf5af10b6726a1e1d7a2aaafa075bf8777
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080560"
 ---
 # <a name="import-from-a-multidimensional-data-source-ssas-tabular"></a>從多維度資料來源匯入 (SSAS 表格式)
@@ -26,11 +26,11 @@ ms.locfileid: "66080560"
   
 ### <a name="to-import-data-from-an-analysis-services-cube"></a>若要從 Analysis Services Cube 匯入資料  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後按一下 **[從資料來源匯入]**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後按一下 **[從資料來源匯入]** 。  
   
-2.  在 **[連接到資料來源]** 頁面上，選取 **[Microsoft Analysis Services]**，然後按 **[下一步]**。  
+2.  在 **[連接到資料來源]** 頁面上，選取 **[Microsoft Analysis Services]** ，然後按 **[下一步]** 。  
   
-3.  請遵循 [資料表匯入精靈] 中的步驟來進行。 您將能夠在 **[指定 MDX 查詢]** 頁面上，指定 MDX 查詢。 若要使用 MDX 查詢設計工具，請在 [指定 MDX 查詢] 頁面上，按一下 **[設計]**。  
+3.  請遵循 [資料表匯入精靈] 中的步驟來進行。 您將能夠在 **[指定 MDX 查詢]** 頁面上，指定 MDX 查詢。 若要使用 MDX 查詢設計工具，請在 [指定 MDX 查詢] 頁面上，按一下 **[設計]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [匯入資料 &#40;SSAS 表格式&#41;](import-data-ssas-tabular.md)   

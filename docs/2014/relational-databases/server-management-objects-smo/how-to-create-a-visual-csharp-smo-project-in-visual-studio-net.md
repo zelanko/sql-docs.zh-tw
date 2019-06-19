@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 371da8231138fb43e9b001808b9fb88ad09543b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63131647"
 ---
 # <a name="create-a-visual-c-smo-project-in-visual-studio-net"></a>在 Visual Studio .NET 中建立 Visual C# SMO 專案
@@ -28,15 +28,15 @@ ms.locfileid: "63131647"
   
 1.  啟動 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] (或 [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)])。  
   
-2.  在 [檔案] 功能表上，按一下 [新增專案]。 [新增專案]  對話方塊隨即出現。  
+2.  在 [檔案]  功能表上，按一下 [新增專案]  。 [新增專案]  對話方塊隨即出現。  
   
-3.  在 **專案類型**對話方塊中，選取**Visual C#**，然後選取**Windows**。 在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]已安裝的範本窗格中，選取**Windows 應用程式**。  
+3.  在 **專案類型**對話方塊中，選取**Visual C#** ，然後選取**Windows**。 在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]已安裝的範本窗格中，選取**Windows 應用程式**。  
   
 4.  （選擇性）在 **名稱**欄位中，輸入新的應用程式名稱  
   
 5.  選取 Visual C# 應用程式類型。 如需範例，請依照下列中，選取**主控台應用程式**。  
   
-6.  在 [專案] 功能表上，選取 [新增參考]。 [新增參考] 對話方塊隨即出現。  
+6.  在 [專案]  功能表上，選取 [新增參考]  。 [新增參考]  對話方塊隨即出現。  
   
 7.  按一下 **瀏覽**，找到 SMO 組件中的[!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]資料夾，然後再選取下列檔案。 以下是建立 SMO 應用程式所需最少的檔案：  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63131647"
   
      Microsoft.SqlServer.ServiceBrokerEmum.dll  
   
-9. 按一下 **[開啟]**。  
+9. 按一下 **[開啟]** 。  
   
 10. 在 **檢視**功能表上，按一下**程式碼**。-或者-選取 Program1.cs [設計] Windows，然後按兩下 windows form 來顯示程式碼視窗。  
   

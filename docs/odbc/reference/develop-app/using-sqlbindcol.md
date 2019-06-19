@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63208480"
 ---
 # <a name="using-sqlbindcol"></a>使用 SQLBindCol
@@ -35,7 +35,7 @@ ms.locfileid: "63208480"
   
  例如，下列程式碼會繫結變數的銷售人員和 CustID 資料行。 資料行的資料將會傳回*SalesPerson*並*CustID*。 因為*業務員*是字元的緩衝區中，應用程式指定的位元組長度 (11)，好讓驅動程式可以判斷是否要截斷的資料。 傳回的位元組長度的連結，或者是否為 NULL，將會傳回*SalesPersonLenOrInd*。  
   
- 因為*CustID*是一個整數變數，並有固定的長度，則不需要指定它的位元組長度; 驅動程式會假設它是**sizeof (** SQLUINTEGER **)**。 傳回的客戶的位元組長度識別碼的資料，或是否為 NULL，將會傳回*CustIDInd*。 請注意，應用程式想要只薪資是否為 NULL，因為永遠是位元組長度**sizeof (** SQLUINTEGER **)**。  
+ 因為*CustID*是一個整數變數，並有固定的長度，則不需要指定它的位元組長度; 驅動程式會假設它是**sizeof (** SQLUINTEGER **)** 。 傳回的客戶的位元組長度識別碼的資料，或是否為 NULL，將會傳回*CustIDInd*。 請注意，應用程式想要只薪資是否為 NULL，因為永遠是位元組長度**sizeof (** SQLUINTEGER **)** 。  
   
 ```  
 SQLCHAR       SalesPerson[11];  

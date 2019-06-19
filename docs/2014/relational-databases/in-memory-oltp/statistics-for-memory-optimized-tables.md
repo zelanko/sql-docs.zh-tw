@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63155802"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>記憶體最佳化資料表的統計資料
@@ -36,7 +36,7 @@ ms.locfileid: "63155802"
   
 -   記憶體最佳化資料表上的索引會隨資料表建立。 索引鍵資料行上的統計資料會在資料表為空白時建立。 因此，這些統計資料需要在資料載入資料表後更新。  
   
--   若是原生編譯預存程序，程序中查詢的執行計畫會在編譯程序時最佳化。 這種情況只會在建立程序及伺服器重新啟動時發生，而不會在統計資料更新時發生。 因此，資料表需要包含代表性的資料集，且統計資料需要處於最新狀態，才能建立程序  (如果讓資料庫離線後再次上線，或有任何伺服器重新啟動，則原生編譯的預存程序會重新編譯)。  
+-   若是原生編譯預存程序，程序中查詢的執行計畫會在編譯程序時最佳化。 這種情況只會在建立程序及伺服器重新啟動時發生，而不會在統計資料更新時發生。 因此，資料表需要包含代表性的資料集，且統計資料需要處於最新狀態，才能建立程序 (如果讓資料庫離線後再次上線，或有任何伺服器重新啟動，則原生編譯的預存程序會重新編譯)。  
   
 ## <a name="guidelines-for-statistics-when-deploying-memory-optimized-tables"></a>部署記憶體最佳化資料表時統計資料的方針  
  為確保查詢最佳化工具建立查詢計劃時擁有最新的統計資料，請利用下列五個步驟部署記憶體最佳化資料表：  

@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 529c503bc10d3ed0b69a4c280c7fa63e72893f8f
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65536569"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
@@ -70,9 +70,9 @@ BOOL SQLManageDataSources(
   
  ![建立新的資料來源 對話方塊](../../../odbc/reference/syntax/media/ch23f.gif "CH23F")  
   
- 對話方塊會顯示已安裝的驅動程式清單。 如果使用者按兩下驅動程式或驅動程式會選取並按一下 **[確定]**， **SQLManageDataSources**呼叫**ConfigDSN**中安裝 DLL 並將它傳遞為 ODBC_ADD_DSN 選項。  
+ 對話方塊會顯示已安裝的驅動程式清單。 如果使用者按兩下驅動程式或驅動程式會選取並按一下 **[確定]** ， **SQLManageDataSources**呼叫**ConfigDSN**中安裝 DLL 並將它傳遞為 ODBC_ADD_DSN 選項。  
   
- 如果使用者選取資料來源，然後按一下**移除**， **SQLManageDataSources**詢問使用者是否要刪除資料來源。 如果使用者按一下 **[是]**， **SQLManageDataSources**呼叫**ConfigDSN**中安裝 DLL 使用 ODBC_REMOVE_DSN 選項。  
+ 如果使用者選取資料來源，然後按一下**移除**， **SQLManageDataSources**詢問使用者是否要刪除資料來源。 如果使用者按一下 **[是]** ， **SQLManageDataSources**呼叫**ConfigDSN**中安裝 DLL 使用 ODBC_REMOVE_DSN 選項。  
   
  **建立新的資料來源**對話方塊用來加入或刪除使用者資料來源、 系統資料來源或檔案資料來源。  
   
@@ -111,9 +111,9 @@ BOOL SQLManageDataSources(
   
  ![ODBC 資料來源管理員追蹤 索引標籤](../../../odbc/reference/syntax/media/ch23h.gif "Ch23h")  
   
- 如果使用者按一下**立即開始追蹤**，然後按一下 **[確定]**， **SQLManageDataSources**可手動追蹤目前在電腦上執行的所有應用程式。  
+ 如果使用者按一下**立即開始追蹤**，然後按一下 **[確定]** ， **SQLManageDataSources**可手動追蹤目前在電腦上執行的所有應用程式。  
   
- 如果使用者指定的追蹤檔名稱**記錄檔路徑**文字方塊中，然後按一下 **[確定]**， **SQLManageDataSources**設定**TraceFile**指定之名稱的系統資訊 [ODBC] 區段中的關鍵字。  
+ 如果使用者指定的追蹤檔名稱**記錄檔路徑**文字方塊中，然後按一下 **[確定]** ， **SQLManageDataSources**設定**TraceFile**指定之名稱的系統資訊 [ODBC] 區段中的關鍵字。  
   
 > [!IMPORTANT]  
 >  從 Windows 8 （Visual Studio Analyzer 只包含在舊版的 Visual Studio 中）。 開始，已移除 Visual Studio analyzer 的支援。 如需疑難排解機制的替代方法，使用 BID 追蹤。  

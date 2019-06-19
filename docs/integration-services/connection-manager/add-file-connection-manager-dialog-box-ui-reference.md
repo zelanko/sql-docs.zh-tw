@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6da812de105f4afe4b7844057da97af17bc752e4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728389"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>加入檔案連接管理員對話方塊 UI 參考
@@ -49,13 +49,13 @@ ms.locfileid: "65728389"
  檢視已經使用如下所述的按鈕加入的檔案或資料夾。  
   
  **[加入]**  
- 使用 [選取檔案] 對話方塊來加入檔案，或使用 [瀏覽資料夾] 對話方塊來加入資料夾。  
+ 使用 [選取檔案]  對話方塊來加入檔案，或使用 [瀏覽資料夾]  對話方塊來加入資料夾。  
   
  **編輯**  
- 選取檔案或資料夾，然後使用 [選取檔案] 或 [瀏覽資料夾] 對話方塊以不同的檔案或資料夾來取代。  
+ 選取檔案或資料夾，然後使用 [選取檔案]  或 [瀏覽資料夾]  對話方塊以不同的檔案或資料夾來取代。  
   
  **移除**  
- 選取檔案或資料夾，然後使用 [移除] 按鈕將它從清單中移除。  
+ 選取檔案或資料夾，然後使用 [移除]  按鈕將它從清單中移除。  
   
  **箭頭按鈕**  
  選取檔案或資料夾，然後使用箭頭按鈕上移或下移來指定存取順序。  

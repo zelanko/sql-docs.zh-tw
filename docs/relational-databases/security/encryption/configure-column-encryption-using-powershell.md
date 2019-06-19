@@ -13,11 +13,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef76a5d992be5303801233fc34e325d8a54e0a7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822057"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62521572"
 ---
 # <a name="configure-column-encryption-using-powershell"></a>使用 PowerShell 設定資料行加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "47822057"
 步驟 2： 連接到您的伺服器和資料庫 | [連接到資料庫](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 否 | 是
 步驟 3： 如果您的資料行主要金鑰 (用於保護資料行加密金鑰並需要更換) 儲存在 Azure 金鑰保存庫中，請向 Azure 驗證 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | 是 | 否
 步驟 4： 建構 SqlColumnEncryptionSettings 物件的陣列 - 您要加密、重新加密或解密的每個資料庫資料行各有一個物件。 SqlColumnMasterKeySettings 是存在於 PowerShell 記憶體中的物件。 它會指定資料行的目標加密配置。 | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | 否 | 否
-步驟 5： 針對您在上一個步驟中建立的 SqlColumnMasterKeySettings 物件陣列，設定在其中指定的所需加密組態。 將會根據資料行的指定目標設定和目前的加密組態，對資料行進行加密、重新加密或解密。| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**注意︰** 此步驟可能需要很長的時間。 根據您選取的方法 (線上與離線) 而定，您的應用程式可能無法在整個作業期間或作業的部分期間存取資料表。 | 是 | 是
+步驟 5： 針對您在上一個步驟中建立的 SqlColumnMasterKeySettings 物件陣列，設定在其中指定的所需加密組態。 將會根據資料行的指定目標設定和目前的加密組態，對資料行進行加密、重新加密或解密。| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**注意：** 此步驟可能需要很長的時間。 根據您選取的方法 (線上與離線) 而定，您的應用程式可能無法在整個作業期間或作業的部分期間存取資料表。 | 是 | 是
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>使用離線方法加密資料行 - 範例
 

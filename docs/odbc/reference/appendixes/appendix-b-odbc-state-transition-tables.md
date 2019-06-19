@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026944"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>附錄 B：ODBC 狀態轉換資料表
@@ -47,7 +47,7 @@ ms.locfileid: "63026944"
   
 -   **E**  
 
-     **_n_**  ， **C_n_**， **S_n_**，或**D_n_** -環境、 連接、 陳述式或描述元的狀態會移至指定的狀態。  
+     **_n_**  ， **C_n_** ， **S_n_** ，或**D_n_** -環境、 連接、 陳述式或描述元的狀態會移至指定的狀態。  
  
 -   **(KARTRIS)** -無效的控制代碼傳遞給函式。 如果控制代碼的 null 控制代碼是否有效的控制代碼類型錯誤-例如，連接控制代碼時所傳遞的陳述式控制代碼所需-函式會傳回 SQL_INVALID_HANDLE;否則行為未定義的而且可能嚴重。 它會呼叫此函式中指定的狀態的唯一可能的結果時，才會看到這個錯誤。 不會變更狀態以及括號所指示一律偵測到的驅動程式管理員 中，此錯誤。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63026944"
   
 |註腳|意義|  
 |--------------|-------------|  
-|b|之前或之後。 指標置於結果集或結果集的結尾之後開始之前。|  
+|B|之前或之後。 指標置於結果集或結果集的結尾之後開始之前。|  
 |c|目前的函式。 目前的函式以非同步方式執行。|  
 |d|需要的資料。 此函式會傳回 SQL_NEED_DATA。|  
 |e|錯誤。 此函式會傳回 SQL_ERROR。|  

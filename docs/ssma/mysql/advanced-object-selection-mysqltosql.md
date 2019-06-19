@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: c7c3d1f4ccc6b6a7fc9f398c528dcab79ffbd426
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253422"
 ---
 # <a name="advanced-object-selection--mysqltosql"></a>進階物件選取 (MySQLToSQL)
@@ -26,7 +26,7 @@ ms.locfileid: "63253422"
   
 使用此對話方塊之前，您可能想要強制載入所有的中繼資料轉換結構描述，或儲存專案的 SSMA。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **請檢查所有項目**  
 將所有的項目旁的核取記號。 在 [中繼資料總管] 中，會立即選取這些項目。  
   

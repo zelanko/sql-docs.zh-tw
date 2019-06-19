@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3005ff6aa1311b22eea25e2daa14c1d4110da32c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089035"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>使用檔案輸入輸出 API 存取 FileTable
@@ -94,7 +94,7 @@ ms.locfileid: "65089035"
   
 -   這些變更無法回復。  
   
- 但是，FileTable 中的 FILESTREAM 資料行也可以透過呼叫 **OpenSqlFileStream()**，與交易式 FILESTREAM 存取一同進行存取。 這種存取可以完全為交易式，而且會接受目前一致支援的所有交易式層級。  
+ 但是，FileTable 中的 FILESTREAM 資料行也可以透過呼叫 **OpenSqlFileStream()** ，與交易式 FILESTREAM 存取一同進行存取。 這種存取可以完全為交易式，而且會接受目前一致支援的所有交易式層級。  
   
 ###  <a name="concurrency"></a> 並行存取控制  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在檔案系統應用程式之間以及檔案系統應用程式和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 應用程式之間強制執行 FileTable 存取的並行存取控制。 達成此並行存取控制的方式是針對 FileTable 資料列採取適當的鎖定。  

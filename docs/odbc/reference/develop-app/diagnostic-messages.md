@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 883cd29d8628f1e9270ae95a772c4d116b896710
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63034915"
 ---
 # <a name="diagnostic-messages"></a>診斷訊息
@@ -41,7 +41,7 @@ ms.locfileid: "63034915"
   
  下表顯示每個元素的意義。  
   
-|項目|意義|  
+|元素|意義|  
 |-------------|-------------|  
 |*vendor-identifier*|識別發生錯誤或警告，或直接從資料來源收到的錯誤或警告之元件的廠商。|  
 |*ODBC-component-identifier*|識別發生錯誤或警告，或直接從資料來源收到的錯誤或警告的元件。|  
@@ -51,4 +51,4 @@ ms.locfileid: "63034915"
   
  [1] 在此情況下，驅動程式做為驅動程式和資料來源。  
   
- 方括號 (**[]**) 必須包含在訊息，並不表示選擇性的項目。
+ 方括號 ( **[]** ) 必須包含在訊息，並不表示選擇性的項目。

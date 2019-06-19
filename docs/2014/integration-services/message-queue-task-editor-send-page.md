@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66323ccdb91076496f9796245c368697d9ebc8c3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057595"
 ---
 # <a name="message-queue-task-editor-send-page"></a>訊息佇列工作編輯器 (傳送頁面)
@@ -31,10 +31,10 @@ ms.locfileid: "66057595"
  指出是否要加密訊息。 預設為 `False`。  
   
  **EncryptionAlgorithm**  
- 如果您選擇使用加密，請指定要使用之加密演算法的名稱。 「訊息佇列」工作可以使用 RC2 和 RC4 演算法。 預設值是 **[RC2]**。  
+ 如果您選擇使用加密，請指定要使用之加密演算法的名稱。 「訊息佇列」工作可以使用 RC2 和 RC4 演算法。 預設值是 **[RC2]** 。  
   
 > [!NOTE]  
->  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料  (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在最新版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。  
+>  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料 (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在最新版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。  
   
 > [!IMPORTANT]  
 >  這些是 Message Queuing (又稱為 MSMQ) 技術支援的加密演算法。 這兩種加密演算法目前被認為在密碼編譯技術上不如較新的演算法，不過 Message Queuing 目前還不支援較新的演算法。 因此，在使用「訊息佇列」工作傳送訊息時，應仔細考慮您的加密需求。  
@@ -44,25 +44,25 @@ ms.locfileid: "66057595"
   
 |ReplTest1|描述|  
 |-----------|-----------------|  
-|**資料檔訊息**|訊息儲存在檔案中。 選取此值會顯示動態選項 **[DataFileMessage]**。|  
-|**變數訊息**|訊息儲存在變數中。 選取此值會顯示動態選項 **[VariableMessage]**。|  
-|**字串訊息**|訊息儲存在訊息佇列工作中。 選取此值會顯示動態選項 **[StringMessage]**。|  
+|**資料檔訊息**|訊息儲存在檔案中。 選取此值會顯示動態選項 **[DataFileMessage]** 。|  
+|**變數訊息**|訊息儲存在變數中。 選取此值會顯示動態選項 **[VariableMessage]** 。|  
+|**字串訊息**|訊息儲存在訊息佇列工作中。 選取此值會顯示動態選項 **[StringMessage]** 。|  
   
 ## <a name="messagetype-dynamic-options"></a>MessageType 動態選項  
   
 ### <a name="messagetype--data-file-message"></a>MessageType = 資料檔訊息  
  **[DataFileMessage]**  
- 鍵入資料檔的路徑，或按一下省略符號 **(...)**，然後尋找檔案。  
+ 鍵入資料檔的路徑，或按一下省略符號 **(...)** ，然後尋找檔案。  
   
 ### <a name="messagetype--variable-message"></a>MessageType = 變數訊息  
  **[VariableMessage]**  
- 鍵入變數名稱，或按一下省略符號 **(...)**，然後選取變數。 變數以逗號分隔。  
+ 鍵入變數名稱，或按一下省略符號 **(...)** ，然後選取變數。 變數以逗號分隔。  
   
  **相關主題：** 選取變數  
   
 ### <a name="messagetype--string-message"></a>MessageType = 字串訊息  
  **[StringMessage]**  
- 鍵入字串訊息，或按一下省略符號 **(...)**，然後在 [鍵入字串訊息] 對話方塊中鍵入訊息。  
+ 鍵入字串訊息，或按一下省略符號 **(...)** ，然後在 [鍵入字串訊息]  對話方塊中鍵入訊息。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

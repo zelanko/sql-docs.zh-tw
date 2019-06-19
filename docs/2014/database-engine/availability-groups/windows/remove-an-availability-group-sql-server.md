@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0d3ed68462736058ae386d8b5b6ad874f6fde8c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62813965"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>移除可用性群組 (SQL Server)
@@ -56,7 +56,7 @@ ms.locfileid: "62813965"
   
 -   避免在 Windows Server 容錯移轉叢集 (WSFC) 叢集沒有仲裁時卸除可用性群組。 如果您必須在叢集缺少仲裁時卸除可用性群組，儲存在叢集中的中繼資料可用性群組並不會移除。 在叢集重新取得仲裁之後，您將需要再次卸除可用性群組，以便從 WSFC 叢集中將它移除。  
   
--   在次要複本上，只有在緊急狀況下才可使用 DROP AVAILABILITY GROUP。 這是因為卸除可用性群組會讓可用性群組離線。 如果您從次要複本卸除可用性群組，主要複本就無法判斷 OFFLINE 狀態是因為遺失仲裁、強制容錯移轉或 DROP AVAILABILITY GROUP 命令而發生。 主要複本會轉換成 RESTORING 狀態，以防止可能的裂腦情況發生。 如需詳細資訊，請參閱 [How It Works:DROP AVAILABILITY GROUP 行為](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx)（CSS SQL Server 工程師部落格）。  
+-   在次要複本上，只有在緊急狀況下才可使用 DROP AVAILABILITY GROUP。 這是因為卸除可用性群組會讓可用性群組離線。 如果您從次要複本卸除可用性群組，主要複本就無法判斷 OFFLINE 狀態是因為遺失仲裁、強制容錯移轉或 DROP AVAILABILITY GROUP 命令而發生。 主要複本會轉換成 RESTORING 狀態，以防止可能的裂腦情況發生。 如需詳細資訊，請參閱 [How It Works:DROP AVAILABILITY GROUP Behaviors](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (運作方式：DROP AVAILABILITY GROUP 行為) (CSS SQL Server 工程師部落格)。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -72,13 +72,13 @@ ms.locfileid: "62813965"
   
 3.  此步驟取決於您要刪除多個可用性群組或只要刪除一個可用性群組，如下所示：  
   
-    -   若要刪除多個可用性群組 (其主要複本位於連接的伺服器執行個體上)，請使用 [物件總管詳細資料] 窗格，檢視及選取要刪除的所有可用性群組。 如需詳細資訊，請參閱[使用物件總管詳細資料監視可用性群組 &#40;SQL Server Management Studio&#41;](use-object-explorer-details-to-monitor-availability-groups.md)。  
+    -   若要刪除多個可用性群組 (其主要複本位於連接的伺服器執行個體上)，請使用 [物件總管詳細資料]  窗格，檢視及選取要刪除的所有可用性群組。 如需詳細資訊，請參閱[使用物件總管詳細資料監視可用性群組 &#40;SQL Server Management Studio&#41;](use-object-explorer-details-to-monitor-availability-groups.md)。  
   
     -   若要刪除單一可用性群組，請在 **[物件總管]** 窗格或 **[物件總管詳細資料]** 窗格中選取它。  
   
-4.  以滑鼠右鍵按一下一或多個選取的可用性群組，然後選取 [刪除] 命令。  
+4.  以滑鼠右鍵按一下一或多個選取的可用性群組，然後選取 [刪除]  命令。  
   
-5.  在 **[移除可用性群組]** 對話方塊中，刪除所有列出的可用性群組，按一下 **[確定]**。 如果您不要移除所有列出的可用性群組，請按一下 **[取消]**。  
+5.  在 **[移除可用性群組]** 對話方塊中，刪除所有列出的可用性群組，按一下 **[確定]** 。 如果您不要移除所有列出的可用性群組，請按一下 **[取消]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要刪除可用性群組**  
@@ -122,7 +122,7 @@ ms.locfileid: "62813965"
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [How It Works:DROP AVAILABILITY GROUP 行為](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx)（CSS SQL Server 工程師部落格）  
+-   [How It Works:DROP AVAILABILITY GROUP Behaviors](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (運作方式：DROP AVAILABILITY GROUP 行為) (CSS SQL Server 工程師部落格)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

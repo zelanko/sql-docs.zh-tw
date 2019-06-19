@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b568790f9a61c01054d4a7225e4a2dbf9a39887
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071510"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>將 PowerPivot 方案部署到 SharePoint
@@ -98,26 +98,26 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 ##  <a name="deployUI"></a> 步驟 3：將 PowerPivot Web 應用程式方案部署到其他 Web 應用程式  
  在上一個工作中，您已經將 Powerpivotwebapp.wsp 部署到管理中心。 在本節中，您會在支援 PowerPivot 資料存取的每個現有 Web 應用程式上部署 powerpivotwebapp.wsp。 如果您之後加入更多 Web 應用程式，務必針對其他 Web 應用程式重複此步驟。  
   
-1.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器陣列方案]**。  
+1.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器陣列方案]** 。  
   
-2.  按一下 **[powerpivotwebapp.wsp]**。  
+2.  按一下 **[powerpivotwebapp.wsp]** 。  
   
-3.  按一下 **[部署方案]**。  
+3.  按一下 **[部署方案]** 。  
   
-4.  在 **部署？**，選取您要加入 PowerPivot 功能支援的 SharePoint web 應用程式。  
+4.  在 **部署？** ，選取您要加入 PowerPivot 功能支援的 SharePoint web 應用程式。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
 6.  針對其他也支援 PowerPivot 資料存取的 SharePoint Web 應用程式重複以上步驟。  
   
 ##  <a name="retract"></a> 重新部署或撤銷方案  
  雖然 SharePoint 管理中心會提供方案撤銷，但是除非您有系統地排除安裝或修補程式的部署問題，否則不需要撤銷 powerpivotwebapp.wsp 檔。  
   
-1.  在 SharePoint 2010 管理中心的 [系統設定] 中，按一下 **[管理伺服陣列方案]**。  
+1.  在 SharePoint 2010 管理中心的 [系統設定] 中，按一下 **[管理伺服陣列方案]** 。  
   
-2.  按一下 **[Powerpivotwebapp.wsp]**。  
+2.  按一下 **[Powerpivotwebapp.wsp]** 。  
   
-3.  按一下 **[撤銷方案]**。  
+3.  按一下 **[撤銷方案]** 。  
   
  如果您遇到伺服器部署問題，讓您追蹤回伺服陣列方案，您可以重新部署它藉由執行**修復**PowerPivot 組態工具中的選項。 透過此工具的修復作業是慣用的方式，因為您需要執行的步驟比較少。 如需詳細資訊，請參閱 <<c0> [ 設定或修復 PowerPivot for SharePoint 2010 &#40;PowerPivot 組態工具&#41;](../configure-repair-powerpivot-sharepoint-2010.md)。</c0>  
   

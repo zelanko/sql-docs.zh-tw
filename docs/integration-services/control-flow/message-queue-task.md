@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fd1ce5f5da0fec21ee1ac944df6da0f9f6b1390b
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727574"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
@@ -121,12 +121,12 @@ ms.locfileid: "65727574"
  指示是否使用 Message Queuing (又稱為 MSMQ) 的 2000 格式。 預設值為 **False**。  
   
  **MSMQConnection**  
- 選取現有的 MSMQ 連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
+ 選取現有的 MSMQ 連線管理員，或按一下 [\<新增連線...>]  建立新的連線管理員。  
   
  **相關主題**：[MSMQ 連線管理員](../../integration-services/connection-manager/msmq-connection-manager.md)、[MSMQ 連線管理員編輯器](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
  **訊息**  
- 指定訊息佇列工作是否傳送或接收訊息。 如果選取 **[傳送訊息]**，對話方塊的左窗格會列出 [傳送] 頁面，如果選取 **[接收訊息]**，則會列出 [接收] 頁面。 依預設，此值設定為 **[傳送訊息]**。  
+ 指定訊息佇列工作是否傳送或接收訊息。 如果選取 **[傳送訊息]** ，對話方塊的左窗格會列出 [傳送] 頁面，如果選取 **[接收訊息]** ，則會列出 [接收] 頁面。 依預設，此值設定為 **[傳送訊息]** 。  
   
 ## <a name="message-queue-task-editor-send-page"></a>訊息佇列工作編輯器 (傳送頁面)
   使用 **[訊息佇列工作編輯器]** 對話方塊的 **[傳送]** 頁面，即可設定從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝傳送訊息的訊息佇列工作。  
@@ -136,10 +136,10 @@ ms.locfileid: "65727574"
  指出是否要加密訊息。 預設值為 **False**。  
   
  **EncryptionAlgorithm**  
- 如果您選擇使用加密，請指定要使用之加密演算法的名稱。 「訊息佇列」工作可以使用 RC2 和 RC4 演算法。 預設值是 **[RC2]**。  
+ 如果您選擇使用加密，請指定要使用之加密演算法的名稱。 「訊息佇列」工作可以使用 RC2 和 RC4 演算法。 預設值是 **[RC2]** 。  
   
 > [!NOTE]  
->  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料  (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在最新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。  
+>  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料 (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在最新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。  
   
 > [!IMPORTANT]  
 >  這些是 Message Queuing (又稱為 MSMQ) 技術支援的加密演算法。 這兩種加密演算法目前被認為在密碼編譯技術上不如較新的演算法，不過 Message Queuing 目前還不支援較新的演算法。 因此，在使用「訊息佇列」工作傳送訊息時，應仔細考慮您的加密需求。  
@@ -149,28 +149,28 @@ ms.locfileid: "65727574"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**資料檔訊息**|訊息儲存在檔案中。 選取此值會顯示動態選項 **[DataFileMessage]**。|  
-|**變數訊息**|訊息儲存在變數中。 選取此值會顯示動態選項 **[VariableMessage]**。|  
-|**字串訊息**|訊息儲存在訊息佇列工作中。 選取此值會顯示動態選項 **[StringMessage]**。|  
+|**資料檔訊息**|訊息儲存在檔案中。 選取此值會顯示動態選項 **[DataFileMessage]** 。|  
+|**變數訊息**|訊息儲存在變數中。 選取此值會顯示動態選項 **[VariableMessage]** 。|  
+|**字串訊息**|訊息儲存在訊息佇列工作中。 選取此值會顯示動態選項 **[StringMessage]** 。|  
   
 ### <a name="messagetype-dynamic-options"></a>MessageType 動態選項  
   
 #### <a name="messagetype--data-file-message"></a>MessageType = 資料檔訊息  
  **[DataFileMessage]**  
- 鍵入資料檔的路徑，或按一下省略符號 **(...)**，然後尋找檔案。  
+ 鍵入資料檔的路徑，或按一下省略符號 **(...)** ，然後尋找檔案。  
   
 #### <a name="messagetype--variable-message"></a>MessageType = 變數訊息  
  **[VariableMessage]**  
- 鍵入變數名稱，或按一下省略符號 **(...)**，然後選取變數。 變數以逗號分隔。  
+ 鍵入變數名稱，或按一下省略符號 **(...)** ，然後選取變數。 變數以逗號分隔。  
   
  **相關主題：** 選取變數  
   
 #### <a name="messagetype--string-message"></a>MessageType = 字串訊息  
  **[StringMessage]**  
- 鍵入字串訊息，或按一下省略符號 **(...)**，然後在 [鍵入字串訊息] 對話方塊中鍵入訊息。  
+ 鍵入字串訊息，或按一下省略符號 **(...)** ，然後在 [鍵入字串訊息]  對話方塊中鍵入訊息。  
   
 ## <a name="message-queue-task-editor-receive-page"></a>訊息佇列工作編輯器 (接收頁面)
-  使用 [訊息佇列工作編輯器] 對話方塊的 [接收] 頁面，即可設定訊息佇列工作，以接收 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ) 訊息。  
+  使用 [訊息佇列工作編輯器]  對話方塊的 [接收]  頁面，即可設定訊息佇列工作，以接收 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ) 訊息。  
   
 ### <a name="options"></a>選項。  
  **RemoveFromMessageQueue**  
@@ -187,16 +187,16 @@ ms.locfileid: "65727574"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**資料檔訊息**|訊息儲存在檔案中。 選取此值會顯示動態選項 **[DataFileMessage]**。|  
-|**變數訊息**|訊息儲存在變數中。 選取此值會顯示動態選項 **[VariableMessage]**。|  
-|**字串訊息**|訊息儲存在訊息佇列工作中。 選取此值會顯示動態選項 **[StringMessage]**。|  
-|**字串訊息至變數**|訊息<br /><br /> 選取此值會顯示動態選項 **[StringMessage]**。|  
+|**資料檔訊息**|訊息儲存在檔案中。 選取此值會顯示動態選項 **[DataFileMessage]** 。|  
+|**變數訊息**|訊息儲存在變數中。 選取此值會顯示動態選項 **[VariableMessage]** 。|  
+|**字串訊息**|訊息儲存在訊息佇列工作中。 選取此值會顯示動態選項 **[StringMessage]** 。|  
+|**字串訊息至變數**|訊息<br /><br /> 選取此值會顯示動態選項 **[StringMessage]** 。|  
   
 ### <a name="messagetype-dynamic-options"></a>MessageType 動態選項  
   
 #### <a name="messagetype--data-file-message"></a>MessageType = 資料檔訊息  
  **SaveFileAs**  
- 鍵入要使用的檔案路徑，或按一下省略符號按鈕 **(...)**，然後尋找檔案。  
+ 鍵入要使用的檔案路徑，或按一下省略符號按鈕 **(...)** ，然後尋找檔案。  
   
  **Overwrite**  
  指出儲存資料檔訊息的內容時，是否要覆寫現有檔案中的資料。 預設值為 **False**。  
@@ -217,9 +217,9 @@ ms.locfileid: "65727574"
   
 ##### <a name="filter--from-package"></a>篩選 = 來自封裝  
  **識別碼**  
- 如果您選擇套用篩選，請鍵入訊息接收來源套件的唯一識別碼，或按一下省略符號按鈕 **(...)**，然後指定套件。  
+ 如果您選擇套用篩選，請鍵入訊息接收來源套件的唯一識別碼，或按一下省略符號按鈕 **(...)** ，然後指定套件。  
   
- **相關主題：**[選取套件](../../integration-services/control-flow/select-a-package.md)  
+ **相關主題：** [選取套件](../../integration-services/control-flow/select-a-package.md)  
   
 #### <a name="messagetype--variable-message"></a>MessageType = 變數訊息  
  **篩選**  
@@ -231,9 +231,9 @@ ms.locfileid: "65727574"
 |**來自封裝**|訊息只接收來自指定之封裝的訊息。 選取此值會顯示動態選項 **識別碼**＞。|  
   
  **變數**  
- 鍵入變數名稱，或按一下 [\<新增變數…>]，然後設定新的變數。  
+ 鍵入變數名稱，或按一下 [\<新增變數…>]  ，然後設定新的變數。  
   
- **相關主題：**[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：** [新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="filter-dynamic-options"></a>篩選動態選項  
   
@@ -243,9 +243,9 @@ ms.locfileid: "65727574"
   
 ##### <a name="filter--from-package"></a>篩選 = 來自封裝  
  **識別碼**  
- 如果您選擇套用篩選，請鍵入訊息接收來源套件的唯一識別碼，或按一下省略符號按鈕 **(...)**，然後指定套件。  
+ 如果您選擇套用篩選，請鍵入訊息接收來源套件的唯一識別碼，或按一下省略符號按鈕 **(...)** ，然後指定套件。  
   
- **相關主題：**[選取套件](../../integration-services/control-flow/select-a-package.md)  
+ **相關主題：** [選取套件](../../integration-services/control-flow/select-a-package.md)  
   
 #### <a name="messagetype--string-message"></a>MessageType = 字串訊息  
  **比較**  
@@ -259,7 +259,7 @@ ms.locfileid: "65727574"
 |**包含**|訊息必須包含 **CompareString** 選項中的字串。|  
   
  **CompareString**  
- 除非 [比較] 選項設定為 [無]，否則請提供訊息要比較的字串。  
+ 除非 [比較]  選項設定為 [無]  ，否則請提供訊息要比較的字串。  
   
 #### <a name="messagetype--string-message-to-variable"></a>MessageType = 字串訊息至變數  
  **比較**  
@@ -273,15 +273,15 @@ ms.locfileid: "65727574"
 |**包含**|訊息必須包含 **CompareString** 選項中的字串。|  
   
  **CompareString**  
- 除非 [比較] 選項設定為 [無]，否則請提供訊息要比較的字串。  
+ 除非 [比較]  選項設定為 [無]  ，否則請提供訊息要比較的字串。  
   
  **變數**  
- 鍵入要保存已接收訊息的變數名稱，或按一下 [\<新增變數…>]，然後設定新的變數。  
+ 鍵入要保存已接收訊息的變數名稱，或按一下 [\<新增變數…>]  ，然後設定新的變數。  
   
- **相關主題：**[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：** [新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="select-variables"></a>選取變數
-  使用 [選取變數] 對話方塊，即可指定在訊息佇列工作中用於傳送訊息作業的變數。 [可用的變數] 清單包含在訊息佇列工作或其父容器之範圍中的系統和使用者自訂變數。 此工作使用 [選取的變數] 清單中的變數。  
+  使用 [選取變數]  對話方塊，即可指定在訊息佇列工作中用於傳送訊息作業的變數。 [可用的變數]  清單包含在訊息佇列工作或其父容器之範圍中的系統和使用者自訂變數。 此工作使用 [選取的變數]  清單中的變數。  
   
 ### <a name="options"></a>選項。  
  **可用的變數**  
@@ -291,15 +291,15 @@ ms.locfileid: "65727574"
  選取一個或多個變數。  
   
  **向右鍵**  
- 將選取的變數移至 [選取的變數] 清單。  
+ 將選取的變數移至 [選取的變數]  清單。  
   
  **向左鍵**  
- 將選取的變數移回到 [可用的變數] 清單。  
+ 將選取的變數移回到 [可用的變數]  清單。  
   
  **新增變數**  
  建立新變數。  
   
- **相關主題：**[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：** [新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  

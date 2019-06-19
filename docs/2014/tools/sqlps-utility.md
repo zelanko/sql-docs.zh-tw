@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b25921a7b48ecd818527dd95ebc2d8714cb6871d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187038"
 ---
 # <a name="sqlps-utility"></a>sqlps 公用程式
@@ -69,9 +69,9 @@ ms.locfileid: "63187038"
  指定要執行的 PowerShell 命令區塊，此區塊必須以大括號括住：{}。 *Script_block*只有當指定`sqlps`公用程式會呼叫**PowerShell**或其他`sqlps`公用程式工作階段。 *argument_array* 是 PowerShell 變數的陣列，其中包含 *script_block*中 PowerShell 命令的引數。  
   
  *string* [ *command_parameters* ]  
- 指定包含要執行之 PowerShell 命令的字串。 使用格式 **"& {*`command`*}"**。 引號表示字串，並叫用運算子 (&) 會導致`sqlps`公用程式來執行命令。  
+ 指定包含要執行之 PowerShell 命令的字串。 使用格式 **"& { *`command`* }"** 。 引號表示字串，並叫用運算子 (&) 會導致`sqlps`公用程式來執行命令。  
   
- [ **-?** | **-Help** ]  
+ [ **-?** |  **-Help** ]  
  顯示 `sqlps` 公用程式選項的語法摘要。  
   
 ## <a name="remarks"></a>備註  

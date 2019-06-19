@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6665d039587a09bb373179ac6f9675791b45f53b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62815552"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>建立或設定可用性群組接聽程式 (SQL Server)
@@ -67,8 +67,8 @@ ms.locfileid: "62815552"
   
 |Permissions|連結|  
 |-----------------|----------|  
-|裝載可用性群組之 WSFC 叢集的叢集物件名稱 (CNO) 必須具有「建立電腦物件」權限。<br /><br /> 在 Active Directory 中，CNO 預設不會明確具有「建立電腦物件」權限，而且可以建立 10 個虛擬電腦物件 (VCO)。 在建立 10 個 VCO 之後，其他 VCO 的建立作業將會失敗。 您可以明確授與權限給 WSFC 叢集的 CNO，以避免這個狀況。 請注意，您已刪除之可用性群組的 VCO 不會自動在 Active Directory 中刪除及算為 10 個 VCO 預設限制，除非您手動加以刪除。<br /><br /> 注意:在某些組織中，安全性原則會禁止將 [建立電腦物件] 權限授與個別使用者帳戶。|＜Steps for configuring the account for the person who installs the cluster＞(為叢集安裝人員設定帳戶的步驟)，位於 [Failover Cluster Step-by-Step Guide:Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer) (容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶)<br /><br /> ＜Steps for prestaging the cluster name account＞(預先設置叢集名稱帳戶的步驟)，位於 [Failover Cluster Step-by-Step Guide:Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating) (容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶)|  
-|如果您的組織要求您為接聽程式虛擬網路名稱預先設置電腦帳戶，將需要 **Account Operator** 群組中的成員資格或網域管理員的協助。<br /><br /> 提示：一般而言，不要為接聽程式虛擬網路名稱預先設置電腦帳戶是最簡單的。 如果可以，讓帳戶在您執行「WSFC 高可用性精靈」時自動建立並設定。|＜Steps for prestaging an account for a clustered service or application＞(為叢集服務或應用程式預先設置帳戶的步驟)，位於 [Failover Cluster Step-by-Step Guide:Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2) (容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶)。|  
+|裝載可用性群組之 WSFC 叢集的叢集物件名稱 (CNO) 必須具有「建立電腦物件」  權限。<br /><br /> 在 Active Directory 中，CNO 預設不會明確具有「建立電腦物件」  權限，而且可以建立 10 個虛擬電腦物件 (VCO)。 在建立 10 個 VCO 之後，其他 VCO 的建立作業將會失敗。 您可以明確授與權限給 WSFC 叢集的 CNO，以避免這個狀況。 請注意，您已刪除之可用性群組的 VCO 不會自動在 Active Directory 中刪除及算為 10 個 VCO 預設限制，除非您手動加以刪除。<br /><br /> 注意:在某些組織中，安全性原則會禁止將 [建立電腦物件]  權限授與個別使用者帳戶。|＜Steps for configuring the account for the person who installs the cluster＞(為叢集安裝人員設定帳戶的步驟)  ，位於 [Failover Cluster Step-by-Step Guide:Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer) (容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶)<br /><br /> ＜Steps for prestaging the cluster name account＞(預先設置叢集名稱帳戶的步驟)  ，位於 [Failover Cluster Step-by-Step Guide:Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating) (容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶)|  
+|如果您的組織要求您為接聽程式虛擬網路名稱預先設置電腦帳戶，將需要 **Account Operator** 群組中的成員資格或網域管理員的協助。<br /><br /> 提示：一般而言，不要為接聽程式虛擬網路名稱預先設置電腦帳戶是最簡單的。 如果可以，讓帳戶在您執行「WSFC 高可用性精靈」時自動建立並設定。|＜Steps for prestaging an account for a clustered service or application＞(為叢集服務或應用程式預先設置帳戶的步驟)  ，位於 [Failover Cluster Step-by-Step Guide:Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2) (容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶)。|  
   
 ###  <a name="SqlPermissions"></a> SQL Server 權限  
   
@@ -90,9 +90,9 @@ ms.locfileid: "62815552"
   
 3.  按一下您要設定其接聽程式的可用性群組，然後選擇下列其中一個替代方式：  
   
-    -   若要建立接聽程式，以滑鼠右鍵按一下 [可用性群組接聽程式] 節點，然後選取 [新增接聽程式] 命令。 這會開啟 **[新增可用性群組接聽程式]** 對話方塊。 如需詳細資訊，請參閱本主題稍後的[加入可用性群組接聽程式 (對話方塊)](#AddAgListenerDialog)。  
+    -   若要建立接聽程式，以滑鼠右鍵按一下 [可用性群組接聽程式]  節點，然後選取 [新增接聽程式]  命令。 這會開啟 **[新增可用性群組接聽程式]** 對話方塊。 如需詳細資訊，請參閱本主題稍後的[加入可用性群組接聽程式 (對話方塊)](#AddAgListenerDialog)。  
   
-    -   若要變更現有接聽程式的通訊埠編號，展開 [可用性群組接聽程式] 節點、以滑鼠右鍵按一下接聽程式，然後選取 [屬性] 命令。 在 **[通訊埠]** 欄位中輸入新的通訊埠編號，然後按一下 **[確定]**。  
+    -   若要變更現有接聽程式的通訊埠編號，展開 [可用性群組接聽程式]  節點、以滑鼠右鍵按一下接聽程式，然後選取 [屬性]  命令。 在 **[通訊埠]** 欄位中輸入新的通訊埠編號，然後按一下 **[確定]** 。  
   
 ###  <a name="AddAgListenerDialog"></a> 新增可用性群組接聽程式 (對話方塊)  
  **接聽程式 DNS 名稱**  
@@ -203,9 +203,9 @@ ms.locfileid: "62815552"
 ###  <a name="ADQuotas"></a> 由於 Active Directory 配額而無法建立可用性群組接聽程式  
  新可用性群組接聽程式的建立作業可能會在建立時失敗，因為您已達到參與叢集節點電腦帳戶的 Active Directory 配額。  如需詳細資訊，請參閱下列文件：  
   
--   [超連結"https://support.microsoft.com/kb/307532"如何排解叢集服務帳戶修改電腦物件時](https://support.microsoft.com/kb/307532)  
+-   [超連結"https://support.microsoft.com/kb/307532 "如何排解叢集服務帳戶修改電腦物件時](https://support.microsoft.com/kb/307532)  
   
--   [超連結"https://technet.microsoft.com/library/cc904295(WS.10).aspx「 Active Directory 配額](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
+-   [超連結"https://technet.microsoft.com/library/cc904295(WS.10).aspx 「 Active Directory 配額](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
 ##  <a name="FollowUp"></a> 後續操作：建立可用性群組接聽程式之後  
   

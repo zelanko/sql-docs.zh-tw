@@ -15,10 +15,10 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 84a69542e43f108b1a1aa91bde8fb168ecb6a362
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65779247"
 ---
 # <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
@@ -295,7 +295,7 @@ FROM sys.database_query_store_options;
 
 -   在適用情況下參數化查詢，例如將查詢包裝在預存程序或 sp_executesql 內。 如需詳細資訊，請參閱[參數和執行計畫的重複使用](../../relational-databases/query-processing-architecture-guide.md#PlanReuse)。    
   
--   如果您的工作負載包含許多搭配不同查詢計劃的單次使用特定批次，請使用 [[針對特定工作負載最佳化]](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) 選項。  
+-   如果您的工作負載包含許多搭配不同查詢計劃的單次使用特定批次，請使用 [[針對特定工作負載最佳化]  ](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) 選項。  
   
     -   比較不同 query_hash 值的數目與 sys.query_store_query 中的項目總數。 如果比例接近 1，您的特定工作負載會產生不同的查詢。  
   

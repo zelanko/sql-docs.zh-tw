@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b378d7257ddd57e97407d82feb817aa70965f598
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058746"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>一般檔案連接管理員編輯器 (一般頁面)
@@ -26,7 +26,7 @@ ms.locfileid: "66058746"
   
  若要深入了解一般檔案連接管理員，請參閱＜ [Flat File Connection Manager](connection-manager/file-connection-manager.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **連線管理員名稱**  
  提供唯一的名稱給工作流程中的一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66058746"
  指定要使用的文字限定詞。 例如，您可以指定文字欄位加上引號。  
   
 > [!NOTE]  
->  選取文字限定詞之後，就無法重新選取 [無] 選項。 輸入 **None** 即可取消選取文字限定詞。  
+>  選取文字限定詞之後，就無法重新選取 [無]  選項。 輸入 **None** 即可取消選取文字限定詞。  
   
  **標頭資料列分隔符號**  
  從標頭資料列的分隔符號清單中選取，或輸入分隔符號文字。  

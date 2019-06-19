@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9f50e2d4a1cee7bfb36d03f69a8ee4a41772939b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094604"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>安裝適用於 SharePoint 2013 的 Reporting Services SharePoint 模式
@@ -22,7 +22,7 @@ ms.locfileid: "66094604"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; **附註：**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式**不**支援 SharePoint Server 多重租用。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; **附註：** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式**不**支援 SharePoint Server 多重租用。|  
   
  如需有關將其他 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器加入至現有伺服器陣列的詳細資訊，請參閱下列主題：  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66094604"
   
  **建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式**  
   
--   安裝並註冊 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務之後，請建立一個或多個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 「SharePoint 伺服器陣列服務帳戶」需要暫時成為本機 Administrators 群組的成員，才能建立 Reporting Services 服務應用程式。 如需有關 SharePoint 2013 帳戶權限的詳細資訊，請參閱 <<c0> [ 帳戶的權限及 SharePoint 2013 中的安全性設定](https://technet.microsoft.com/library/cc678863.aspx)(https://technet.microsoft.com/library/cc678863.aspx)。  
+-   安裝並註冊 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務之後，請建立一個或多個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 「SharePoint 伺服器陣列服務帳戶」需要暫時成為本機 Administrators 群組的成員，才能建立 Reporting Services 服務應用程式。 如需有關 SharePoint 2013 帳戶權限的詳細資訊，請參閱 <<c0> [ 帳戶的權限及 SharePoint 2013 中的安全性設定](https://technet.microsoft.com/library/cc678863.aspx)(https://technet.microsoft.com/library/cc678863.aspx) 。  
   
      安全性最佳作法是避免讓 SharePoint 伺服陣列管理員帳戶同時成為本機作業系統管理員帳戶。 如果您在安裝程序中，將伺服陣列管理員帳戶加入至本機 Administrators 群組，建議您在安裝完成之後，從本機 Administrators 群組中移除該帳戶。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66094604"
   
 1.  執行 [SQL Server 安裝精靈] \(Setup.exe)。  
   
-2.  在精靈的左側按一下 **[安裝]** ，然後按一下 **[新增 SQL Server 獨立安裝或將功能加入至現有安裝]**。  
+2.  在精靈的左側按一下 **[安裝]** ，然後按一下 **[新增 SQL Server 獨立安裝或將功能加入至現有安裝]** 。  
   
 3.  在 **[安裝程式支援規則]** 頁面上按一下 **[確定]** (假設已通過所有規則)。  
   
@@ -95,19 +95,19 @@ ms.locfileid: "66094604"
   
     -   「一個或多個受影響的檔案有暫止的作業。 您必須在安裝程序完成之後重新啟動電腦。」  
   
-    -   按一下 **[確定]**。  
+    -   按一下 **[確定]** 。  
   
-5.  在支援檔案完成安裝而且 **[支援規則]** 頁面顯示 **[通過]** 狀態之後，請按 **[下一步]**。 檢閱任何警告或封鎖問題。  
+5.  在支援檔案完成安裝而且 **[支援規則]** 頁面顯示 **[通過]** 狀態之後，請按 **[下一步]** 。 檢閱任何警告或封鎖問題。  
   
-6.  在 **[安裝類型]** 頁面上，按一下 **[將功能加入到現有的 SQL Server 2014 執行個體]**。 在下拉式清單中選取正確的執行個體，然後按 **[下一步]**。  
+6.  在 **[安裝類型]** 頁面上，按一下 **[將功能加入到現有的 SQL Server 2014 執行個體]** 。 在下拉式清單中選取正確的執行個體，然後按 **[下一步]** 。  
   
-7.  如果您看見 [產品金鑰] 頁面，請輸入您的金鑰或接受 "Enterprise Evaluation" 版本的預設值。  
+7.  如果您看見 [產品金鑰]  頁面，請輸入您的金鑰或接受 "Enterprise Evaluation" 版本的預設值。  
   
-     按一下 [下一步] 。  
+     按一下 [下一步]  。  
   
 8.  如果您看見 [授權條款] 頁面，請檢閱並接受這些授權條款。 Microsoft 感謝您同意傳送功能使用資料，協助改進產品功能及支援。  
   
-     按一下 [下一步] 。  
+     按一下 [下一步]  。  
   
 9. 如果您看見 **[安裝程式角色]** 頁面，請選取 **[SQL Server 功能安裝]**  
   
@@ -125,23 +125,23 @@ ms.locfileid: "66094604"
   
     -   如果您尚未有 SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體，您也可以針對完整的環境選取 **[Database Engine Services]** 和 **[管理工具 - 完整]** 。  
   
-     按一下 [下一步] 。  
+     按一下 [下一步]  。  
   
      ![SSRS SharePoint 模式的特徵選取](../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "SSRS SharePoint 模式的特徵選取")  
   
 11. 如果您看見 **[安裝規則]** 頁面， 檢閱任何警告或封鎖問題。 然後按 **[下一步]**  
   
-12. 如果您選取 Database Engine 服務，請接受 **[執行個體組態]** 頁面上的預設 **[MSSQLSERVER]** 執行個體，然後按 **[下一步]**。  
+12. 如果您選取 Database Engine 服務，請接受 **[執行個體組態]** 頁面上的預設 **[MSSQLSERVER]** 執行個體，然後按 **[下一步]** 。  
   
      ![注意](../../../2014/reporting-services/media/rs-fyinote.png "注意")Reporting Services SharePoint 服務架構與舊版 Reporting Services 架構不同，不是以 SQL Server「執行個體」為基礎。  
   
-13. 檢閱 **[磁碟空間需求]** 頁面，然後按 **[下一步]**。  
+13. 檢閱 **[磁碟空間需求]** 頁面，然後按 **[下一步]** 。  
   
-14. 如果您看見 **[伺服器組態]** 頁面，請輸入適當的認證。 如果您想要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料警示或訂閱功能，則必須將 SQL Server Agent 的 **[啟動類型]** 變更為 **[自動]**。 根據電腦上已經安裝的元件而定，您可能不會看見 **[伺服器組態]** 頁面。  
+14. 如果您看見 **[伺服器組態]** 頁面，請輸入適當的認證。 如果您想要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料警示或訂閱功能，則必須將 SQL Server Agent 的 **[啟動類型]** 變更為 **[自動]** 。 根據電腦上已經安裝的元件而定，您可能不會看見 **[伺服器組態]** 頁面。  
   
-     按一下 [下一步] 。  
+     按一下 [下一步]  。  
   
-15. 如果您選取了 Database Engine 服務，就會看到 **[資料庫引擎組態]** 頁面。請將適當的帳戶加入至 SQL 管理員清單，然後按 **[下一步]**。  
+15. 如果您選取了 Database Engine 服務，就會看到 **[資料庫引擎組態]** 頁面。請將適當的帳戶加入至 SQL 管理員清單，然後按 **[下一步]** 。  
   
 16. 在 **[Reporting Services 組態]** 頁面上，您應該會看到已選取 **[只安裝]** 選項。 這個選項會安裝報表伺服器檔案，但是不會設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的 SharePoint 環境。  
   
@@ -152,11 +152,11 @@ ms.locfileid: "66094604"
   
 17. 按一下 **[錯誤報告]** 頁面上的核取方塊傳送錯誤報告，協助 Microsoft 改進 SQL Server 功能與服務。  
   
-     按一下 [下一步] 。  
+     按一下 [下一步]  。  
   
 18. 檢閱任何警告，然後在 **[安裝組態規則]** 頁面上按 **[下一步]** 。  
   
-19. 在 **[準備安裝]** 頁面上檢閱安裝摘要，然後按 **[下一步]**。 此摘要將包括其值顯示為 **[SharePointFilesOnlyMode]** 的 **[Reporting Services SharePoint 模式]** 子節點。 按一下 **[安裝]**。  
+19. 在 **[準備安裝]** 頁面上檢閱安裝摘要，然後按 **[下一步]** 。 此摘要將包括其值顯示為 **[SharePointFilesOnlyMode]** 的 **[Reporting Services SharePoint 模式]** 子節點。 按一下 **[安裝]** 。  
   
 20. 安裝需要幾分鐘的時間。 您將會看見 **[完成]** 頁面，其中列出功能以及每項功能的狀態。 您可能會看見資訊對話方塊，指出電腦需要重新啟動。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "66094604"
   
 2.  按一下 **[Microsoft SharePoint 2013 產品]** 群組。  
   
-3.  以滑鼠右鍵按一下 **[SharePoint 2013 管理命令介面]** ，然後按一下 **[以系統管理員身分執行]**。 注意：標準 Windows PowerShell 視窗無法辨識 SharePoint 命令。 請使用 **[SharePoint 2013 管理命令介面]**。  
+3.  以滑鼠右鍵按一下 **[SharePoint 2013 管理命令介面]** ，然後按一下 **[以系統管理員身分執行]** 。 注意：標準 Windows PowerShell 視窗無法辨識 SharePoint 命令。 請使用 **[SharePoint 2013 管理命令介面]** 。  
   
 4.  執行下列 PowerShell 命令安裝 SharePoint 服務。 成功完成命令會在管理命令介面中顯示新行。 成功完成命令之後，**不會有任何訊息傳回** 管理命令介面：  
   
@@ -216,19 +216,19 @@ ms.locfileid: "66094604"
   
 2.  找到 **[SQL Server Reporting Services 服務]** ，然後按一下 [動作] 欄中的 **[啟動]** 。  
   
-3.  Reporting Services 服務的狀態會從 **[已停止]** 變更為 **[已啟動]**。 如果清單中沒有 Reporting Services 服務，請使用 PowerShell 安裝該服務。  
+3.  Reporting Services 服務的狀態會從 **[已停止]** 變更為 **[已啟動]** 。 如果清單中沒有 Reporting Services 服務，請使用 PowerShell 安裝該服務。  
   
     > [!NOTE]  
-    >  如果 Reporting Services 服務停留在 [啟動中] 狀態，而未變更為 [已啟動]，請確認已在 Windows 伺服器管理員中啟動 'SharePoint 2013 Administration' 服務。  
+    >  如果 Reporting Services 服務停留在 [啟動中]  狀態，而未變更為 [已啟動]  ，請確認已在 Windows 伺服器管理員中啟動 'SharePoint 2013 Administration' 服務。  
   
 ##  <a name="bkmk_create_serrviceapplication"></a> 步驟 3：建立 Reporting Services 服務應用程式  
  本節提供建立服務應用程式的步驟，以及屬性的描述 (如果您要檢閱現有的服務應用程式)。  
   
-1.  在 SharePoint 管理中心的 **[應用程式管理]** 群組中，按一下 **[管理服務應用程式]**。  
+1.  在 SharePoint 管理中心的 **[應用程式管理]** 群組中，按一下 **[管理服務應用程式]** 。  
   
 2.  在 SharePoint 功能區中，按一下 **[新增]** 按鈕。  
   
-3.  在 [新增] 功能表中，按一下 **[SQL Server Reporting Services 服務應用程式]**。  
+3.  在 [新增] 功能表中，按一下 **[SQL Server Reporting Services 服務應用程式]** 。  
   
     > [!IMPORTANT]  
     >  如果[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]選項不會不會出現在清單中，它是**指示所[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]共用的服務未安裝**。 檢閱上一節中，如何使用 PowerShell Cmdlt 來安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務的相關資訊。  
@@ -243,11 +243,11 @@ ms.locfileid: "66094604"
   
 7.  在 **[資料庫名稱]** 中，預設值是 `ReportingService_<guid>`，這是唯一的資料庫名稱。 若您要輸入新值，請輸入唯一值。 這是專門針對服務應用程式所建立的新資料庫。  
   
-8.  在 **[資料庫驗證]** 中，預設值是 Windows 驗證。 如果您選擇 **[SQL 驗證]**，請參考 SharePoint 文件，以了解在 SharePoint 部署中使用這個驗證類型的最佳作法。  
+8.  在 **[資料庫驗證]** 中，預設值是 Windows 驗證。 如果您選擇 **[SQL 驗證]** ，請參考 SharePoint 文件，以了解在 SharePoint 部署中使用這個驗證類型的最佳作法。  
   
 9. 在 **[Web 應用程式關聯]** 區段中，選取要佈建以供目前 Reporting Services 服務應用程式存取的 Web 應用程式。 您可以建立一個 Reporting Services 服務應用程式與一個 Web 應用程式的關聯。 如果目前所有的 Web 應用程式已有相關聯的 Reporting Services 服務應用程式，則會顯示警告訊息。  
   
-10. 按一下 [確定] 。  
+10. 按一下 [確定]  。  
   
 11. 服務應用程式的建立程序會需要數分鐘才能完成。 完成後，您會看到確認訊息及 **[提供訂閱和警示]** 頁面的連結。 如果您想要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱功能或資料警示功能，請完成提供步驟。 如需詳細資訊，請參閱 [SSRS 服務應用程式的佈建訂用帳戶及警示](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
@@ -270,13 +270,13 @@ ms.locfileid: "66094604"
   
 2.  按一下 **設定**![SharePoint 設定](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")。  
   
-3.  按一下 **[網站設定]**。  
+3.  按一下 **[網站設定]** 。  
   
-4.  在 **[網站集合管理]** 群組中，按一下 **[網站集合功能]**。  
+4.  在 **[網站集合管理]** 群組中，按一下 **[網站集合功能]** 。  
   
 5.  在清單中尋找 **[Power View 整合功能]** 。  
   
-6.  按一下 **[啟用]**。 功能狀態會變更為 **[使用中]**。  
+6.  按一下 **[啟用]** 。 功能狀態會變更為 **[使用中]** 。  
   
  每個網站集合都已完成這個程序。 如需詳細資訊，請參閱 [在 SharePoint 中啟用報表伺服器和 Power View 整合功能](../../../2014/reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)。  
   
@@ -396,7 +396,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料警示功能會以電子郵件訊息傳送警示。 若要傳送電子郵件，您可能需要設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式，以及修改服務應用程式的電子郵件傳遞延伸模組。 如果您計劃針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱功能使用電子郵件傳遞延伸模組，則需要電子郵件設定。 如需詳細資訊，請參閱[設定 Reporting Services 服務應用程式的電子郵件 &#40;SharePoint 2010 和 SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)。  
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>將 Reporting Services 內容類型加入至內容庫  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供預先定義的內容類型，可用來管理共用資料來源 (.rsds) 檔、報表模型 (.smdl) 檔，以及報表產生器的報表定義 (.rdl) 檔。 將 **[報表產生器報表]**、 **[報表模型]** 和 **[報表資料來源]** 內容類型加入至文件庫會啟用 **[新增]** 命令，讓您能夠建立該類型的新文件。 如需詳細資訊，請參閱 <<c0> [ 將報表伺服器內容類型加入至文件庫&#40;以 SharePoint 整合模式的 Reporting Services&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)。</c0>  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供預先定義的內容類型，可用來管理共用資料來源 (.rsds) 檔、報表模型 (.smdl) 檔，以及報表產生器的報表定義 (.rdl) 檔。 將 **[報表產生器報表]** 、 **[報表模型]** 和 **[報表資料來源]** 內容類型加入至文件庫會啟用 **[新增]** 命令，讓您能夠建立該類型的新文件。 如需詳細資訊，請參閱 <<c0> [ 將報表伺服器內容類型加入至文件庫&#40;以 SharePoint 整合模式的 Reporting Services&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)。</c0>  
   
 ### <a name="activate-the-report-server-file-sync-feature"></a>啟動報表伺服器檔案同步處理功能  
  如果使用者經常直接上傳已發行的報表項目至 SharePoint 文件庫， **[報表伺服器檔案同步處理]** 網站層級功能會很有協助。 檔案同步處理功能會更頻繁地同步處理報表伺服器目錄與文件庫中的項目。 如需詳細資訊，請參閱 [在 SharePoint 管理中心啟動報表伺服器檔案同步處理功能](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)。  

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84bd7e70c5ff3c1ee41bdcc331fefdd2422937ed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62471982"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>表格式模型中的字串儲存和定序
@@ -62,7 +62,7 @@ ms.locfileid: "62471982"
 ## <a name="locale-and-collation-order"></a>地區設定和定序順序  
  在比較字串 (文字值) 時，相等的定義要素通常是有關如何解釋這類字串的文化特性方面。 在某些文化特性中，字元的腔調字或大小寫可能會完全變更字串的意義；因此，在判斷任何特定語言或地區的相等時，通常要考慮這類差異。  
   
- 通常當您使用電腦時，電腦已設定為符合您自己的文化特性期望和語言行為，並且文字值排序和比較等字串作業會如預期般運作。 控制語言特定行為的設定是透過 Windows [地區及語言選項] 設定來定義。 應用程式會讀取這些設定，並據此變更其行為。 在某些情況下，應用程式具有的功能可讓您變更應用程式的文化特性行為或比較字串的方式。  
+ 通常當您使用電腦時，電腦已設定為符合您自己的文化特性期望和語言行為，並且文字值排序和比較等字串作業會如預期般運作。 控制語言特定行為的設定是透過 Windows [地區及語言選項]  設定來定義。 應用程式會讀取這些設定，並據此變更其行為。 在某些情況下，應用程式具有的功能可讓您變更應用程式的文化特性行為或比較字串的方式。  
   
  在您建立表格式模型資料庫時，根據預設資料庫會以語言識別碼和定序的形式繼承這些文化特性和語言設定。  
   

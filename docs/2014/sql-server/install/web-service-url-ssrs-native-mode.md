@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2ab81c33b3aea946fe85c94139acc891aa05a083
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090992"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Web 服務 URL (SSRS 原生模式)
@@ -28,13 +28,13 @@ ms.locfileid: "66090992"
   
  若要開啟此頁面，請啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並按一下導覽窗格中的 **[Web 服務 URL]** 。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
- 此頁面會提供報表伺服器 URL 中常用的值。 如果您想要建立其他 URL、使用主機標頭，或是指定特定格式的 IP 位址，請按一下 **[進階]**。  
+ 此頁面會提供報表伺服器 URL 中常用的值。 如果您想要建立其他 URL、使用主機標頭，或是指定特定格式的 IP 位址，請按一下 **[進階]** 。  
   
  當您按一下 **[套用]** 之後，此頁面上將會出現此 Web 服務的連結。 如果您在建立報表伺服器資料庫之前按一下此連結，您可以預期會看到「找不到網頁」錯誤。 一旦設定此資料庫之後，這個錯誤將不再出現。 如需詳細資訊，請參閱[建立原生模式報表伺服器資料庫 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
   
  如果您已重新安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，然後發現您在嘗試使用 [全部指派] 的預設 IP 位址值和通訊埠 80 時得到錯誤，通常可以在重新啟動此服務之後，重新建立 URL 來解決錯誤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **虛擬目錄**  
  為報表伺服器 Web 服務指定虛擬目錄名稱。 相同電腦上的每一個報表伺服器 Web 服務執行個體只能有一個虛擬名稱。  
   

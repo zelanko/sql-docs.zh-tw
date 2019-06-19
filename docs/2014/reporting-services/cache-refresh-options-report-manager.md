@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ae1ee11edd51153585e9a6738bbfbd59af8974f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109914"
 ---
 # <a name="cache-refresh-options-report-manager"></a>快取重新整理選項 (報表管理員)
@@ -31,16 +31,16 @@ ms.locfileid: "66109914"
   
 2.  將滑鼠停留在報表或共用資料集上方，然後按下拉式箭號。  
   
-3.  在下拉式清單中，按一下 **[管理]**， **[一般屬性]** 頁面隨即開啟。  
+3.  在下拉式清單中，按一下 **[管理]** ， **[一般屬性]** 頁面隨即開啟。  
   
 4.  按一下 **[快取重新整理計劃]** 索引標籤。  
   
-5.  若要建立新的快取計劃，請按一下 **[新增快取重新整理計劃]**。  
+5.  若要建立新的快取計劃，請按一下 **[新增快取重新整理計劃]** 。  
   
     > [!NOTE]  
     >  您必須啟用並啟動 SQL Server Agent 服務來建立快取重新整理計劃。  
   
-6.  若要建立一份快取計劃，然後加以自訂，請按一下 **[從現有的新增]**。  
+6.  若要建立一份快取計劃，然後加以自訂，請按一下 **[從現有的新增]** 。  
   
 ## <a name="cache-refresh-options"></a>快取重新整理選項  
  **刪除**  

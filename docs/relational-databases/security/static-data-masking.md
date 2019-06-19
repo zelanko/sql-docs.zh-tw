@@ -12,10 +12,10 @@ ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1cf3b95ec5836ac86770bd0cd9784f0617b91846
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580974"
 ---
 # <a name="static-data-masking"></a>靜態資料遮罩
@@ -93,7 +93,7 @@ ms.locfileid: "65580974"
 
 以下是執行靜態資料遮罩的逐步指南。 
  
-1. 啟動 SQL Server Management Studio。 連線到您的資料庫。 在左側的 [物件總管] 窗格中，展開 [資料庫] 資料夾。 以滑鼠右鍵按一下您想要遮罩的資料庫。 按一下 [工作]。 以滑鼠左鍵按一下 [遮罩資料庫...(預覽)]。
+1. 啟動 SQL Server Management Studio。 連線到您的資料庫。 在左側的 [物件總管]  窗格中，展開 [資料庫] 資料夾。 以滑鼠右鍵按一下您想要遮罩的資料庫。 按一下 [工作]  。 以滑鼠左鍵按一下 [遮罩資料庫...  (預覽)]。
  
  ![[工作] 功能表](../../relational-databases/security/media/sql-static-data-masking/task_data_masking.PNG)
  
@@ -105,11 +105,11 @@ ms.locfileid: "65580974"
  
  ![資料表下拉式清單](../../relational-databases/security/media/sql-static-data-masking/ui_dropdown_column.png)
  
-4. 選取您想要遮罩的所有資料行，以及您想要套用的遮罩功能。 可用的遮罩類型包括 [隨機顯示] 遮罩、[Group Shuffle] \(群組隨機顯示\) 遮罩、[單一值] 遮罩、[NULL] 遮罩、[String Composite] \(字串複合\) 遮罩。 
+4. 選取您想要遮罩的所有資料行，以及您想要套用的遮罩功能。 可用的遮罩類型包括 [隨機顯示]  遮罩、[Group Shuffle] \(群組隨機顯示\)  遮罩、[單一值]  遮罩、[NULL]  遮罩、[String Composite] \(字串複合\)  遮罩。 
  
  ![遮罩功能下拉式清單](../../relational-databases/security/media/sql-static-data-masking/masking_functions.PNG)
  
- 附註：大多數遮罩功能會有其他設定參數。 針對 [隨機顯示] 遮罩，靜態資料遮罩會提供預設參數。 針對 [Group Shuffle] \(群組隨機顯示\) 遮罩、[單一值] 遮罩和 [String Composite] \(字串複合\) 遮罩，使用者必須提供設定參數。 若要變更或提供設定參數，請按一下 [設定] 選項，然後在快顯對話方塊中指定參數的 (替代) 值。 [遮罩功能](#masking-functions)中提供每項遮罩功能的詳細說明。
+ 附註：大多數遮罩功能會有其他設定參數。 針對 [隨機顯示] 遮罩，靜態資料遮罩會提供預設參數。 針對 [Group Shuffle] \(群組隨機顯示\) 遮罩、[單一值] 遮罩和 [String Composite] \(字串複合\) 遮罩，使用者必須提供設定參數。 若要變更或提供設定參數，請按一下 [設定]  選項，然後在快顯對話方塊中指定參數的 (替代) 值。 [遮罩功能](#masking-functions)中提供每項遮罩功能的詳細說明。
  
  ![遮罩功能設定按鈕](../../relational-databases/security/media/sql-static-data-masking/masking_functions_configure.png)
  
@@ -123,14 +123,14 @@ ms.locfileid: "65580974"
  
  ![驗證機制警告](../../relational-databases/security/media/sql-static-data-masking/validation_warning.PNG)
  
-5. 您可將完成的遮罩設定儲存至 XML 檔案，以供稍後使用。  雖然 Azure SQL Database 的遮罩功能設定與內部部署資料庫完全相同，但有些微差異，那就是會儲存其他屬性 (例如備份檔案路徑)。 若要儲存設定，請按一下 [Save Config] \(儲存設定\)，提供檔案名稱，然後按一下 [儲存]。  使用者稍後可以使用 [Load Config] \(載入設定\) 載入現有的設定檔。建議針對具有大量資料行的資料表使用設定檔。 
+5. 您可將完成的遮罩設定儲存至 XML 檔案，以供稍後使用。  雖然 Azure SQL Database 的遮罩功能設定與內部部署資料庫完全相同，但有些微差異，那就是會儲存其他屬性 (例如備份檔案路徑)。 若要儲存設定，請按一下 [Save Config] \(儲存設定\)  ，提供檔案名稱，然後按一下 [儲存]。  使用者稍後可以使用 [Load Config] \(載入設定\)  載入現有的設定檔。建議針對具有大量資料行的資料表使用設定檔。 
  
  ![組態檔](../../relational-databases/security/media/sql-static-data-masking/load_save_config.PNG)
  
-6. 靜態資料遮罩會在使用者的 [文件] 資料夾中，建立名為「靜態資料遮罩」的資料夾，並將記錄檔置於其中。 記錄檔可協助進行偵錯。 設定視窗底部會指出記錄檔的名稱。 
+6. 靜態資料遮罩會在使用者的 [文件]  資料夾中，建立名為「靜態資料遮罩」的資料夾，並將記錄檔置於其中。 記錄檔可協助進行偵錯。 設定視窗底部會指出記錄檔的名稱。 
   
  
-7. (僅限 SQL Server) 如果您在內部部署資料庫上執行靜態資料遮罩，靜態資料遮罩會執行備份/還原作業。 在 [Step 2: Clone .BAK file Location] \(步驟 2：複製 .BAK 檔案位置\) 中，提供要在伺服器上儲存備份檔案的位置。 
+7. (僅限 SQL Server) 如果您在內部部署資料庫上執行靜態資料遮罩，靜態資料遮罩會執行備份/還原作業。 在 [Step 2: Clone .BAK file Location] \(步驟 2：複製 .BAK 檔案位置\)  中，提供要在伺服器上儲存備份檔案的位置。 
 
 ## <a name="masking-functions"></a>遮罩功能
 
@@ -140,14 +140,14 @@ ms.locfileid: "65580974"
 
 ### <a name="single-value-masking"></a>[單一值] 遮罩
 
-[單一值] 遮罩會將資料行中的所有值取代為單一固定值，此值是由使用者指定。 輸入格式必須可轉換成所選資料行的任何類型。 若要指定值，請按一下 [設定] 並提供值，然後按一下 [確定]。 
+[單一值] 遮罩會將資料行中的所有值取代為單一固定值，此值是由使用者指定。 輸入格式必須可轉換成所選資料行的任何類型。 若要指定值，請按一下 [設定]  並提供值，然後按一下 [確定]  。 
 
 ![[單一值] 遮罩參數](../../relational-databases/security/media/sql-static-data-masking/single_value_parameter.PNG)
 
 
 ### <a name="shuffle-masking"></a>[隨機顯示] 遮罩
 
-資料行中的所有值會隨機顯示於新資料列。 不會產生新資料。 [隨機顯示] 遮罩可讓您選擇保留資料行中的 NULL 項目。 若要這樣做，請按一下 [設定...]，然後選取 [Maintain NULL positions] \(保留 NULL 位置\) 方塊。
+資料行中的所有值會隨機顯示於新資料列。 不會產生新資料。 [隨機顯示] 遮罩可讓您選擇保留資料行中的 NULL 項目。 若要這樣做，請按一下 [設定...]  ，然後選取 [Maintain NULL positions] \(保留 NULL 位置\) 方塊。
 
 ![[隨機顯示] 遮罩參數](../../relational-databases/security/media/sql-static-data-masking/shuffle_parameter.PNG)
 
@@ -167,7 +167,7 @@ ms.locfileid: "65580974"
 | 612-72-1026  | 116-30-8733  | 209-36-1971 |  
 
 ### <a name="group-shuffle-masking"></a>[Group Shuffle] \(群組隨機顯示\) 遮罩
-[Group Shuffle] \(群組隨機顯示\) 會將數個資料行繫結成一個隨機顯示群組。 隨機顯示群組中的資料行會一起隨機顯示。 使用者必須使用 [設定...] 選項來指定隨機顯示群組的名稱。
+[Group Shuffle] \(群組隨機顯示\) 會將數個資料行繫結成一個隨機顯示群組。 隨機顯示群組中的資料行會一起隨機顯示。 使用者必須使用 [設定...]  選項來指定隨機顯示群組的名稱。
 
 ![[Group Shuffle] \(群組隨機顯示\) 遮罩參數](../../relational-databases/security/media/sql-static-data-masking/group_shuffle_parameter.PNG)
 

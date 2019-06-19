@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63164079"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>HOW TO：將資料處理延伸模組部署到報表伺服器
@@ -27,7 +27,7 @@ ms.locfileid: "63164079"
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>部署資料處理延伸模組組件  
   
-1.  將組件從臨時位置複製到您要在其上使用資料處理延伸模組之報表伺服器的 bin 目錄。 報表伺服器 Bin 目錄的預設位置是 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<執行個體名稱>\Reporting Services\ReportServer\bin。  
+1.  將組件從臨時位置複製到您要在其上使用資料處理延伸模組之報表伺服器的 bin 目錄。 報表伺服器 Bin 目錄的預設位置是 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<執行個體名稱  >\Reporting Services\ReportServer\bin。  
   
     > [!NOTE]  
     >  這個步驟會避免升級到 SQL Server 的新執行個體。 如需詳細資訊，請參閱＜ [Upgrade and Migrate Reporting Services](../../install-windows/upgrade-and-migrate-reporting-services.md)＞。  
@@ -52,7 +52,7 @@ ms.locfileid: "63164079"
   
      `Name` 的值是資料處理延伸模組的唯一名稱。 `Type` 的值是以逗號分隔的清單，包括實作 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 介面之類別的完整命名空間項目，後面接著組件的名稱 (不包含 .dll 副檔名)。 依預設值，資料處理延伸模組是可見的。 若要在使用者介面中隱藏延伸模組 (例如報表管理員)，請將 `Visible` 屬性加入至 `Extension` 元素，並將其設定為 `false`。  
   
-5.  針對為延伸模組授與 `FullTrust` 權限的自訂組件，加入程式碼群組。 做法是將程式碼群組新增至預設位於 %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<執行個體名稱>\Reporting Services\ReportServer 的 rssrvpolicy.config 檔案。 您的程式碼群組可能如下所示：  
+5.  針對為延伸模組授與 `FullTrust` 權限的自訂組件，加入程式碼群組。 做法是將程式碼群組新增至預設位於 %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<執行個體名稱  >\Reporting Services\ReportServer 的 rssrvpolicy.config 檔案。 您的程式碼群組可能如下所示：  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

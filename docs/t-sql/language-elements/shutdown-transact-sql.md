@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9aa0b901424df92a5e223855f066a65c2fcb2234
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981717"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
@@ -65,7 +65,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。  
   
--   從預設執行個體的命令提示字元執行 **net stop mssqlserver**，或從具名執行個體的命令提示字元執行 **net stop mssql$**_instancename_。  
+-   從預設執行個體的命令提示字元執行 **net stop mssqlserver**，或從具名執行個體的命令提示字元執行 **net stop mssql$** _instancename_。  
   
 -   使用 [控制台] 中的 [服務]。  
   

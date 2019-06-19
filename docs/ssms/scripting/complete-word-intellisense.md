@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c0cd037a82b7c164e4c36ae5016824b08680b0bd
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65820962"
 ---
 # <a name="complete-word-intellisense"></a>自動完成文字 (IntelliSense)
@@ -30,13 +30,13 @@ ms.locfileid: "65820962"
   
  您可以利用四種方式來叫用 [自動完成文字] 功能：  
   
--   在 [編輯] 功能表上，指向 [IntelliSense]，然後按一下 [自動完成文字]。  
+-   在 [編輯]  功能表上，指向 [IntelliSense]  ，然後按一下 [自動完成文字]  。  
   
 -   按 ALT+向右鍵。  
   
--   以滑鼠右鍵按一下文字編輯器，再按一下 [自動完成文字]。  
+-   以滑鼠右鍵按一下文字編輯器，再按一下 [自動完成文字]  。  
   
--   在 [文字編輯器] 工具列上，按一下 [自動完成文字] 按鈕。  
+-   在 [文字編輯器]  工具列上，按一下 [自動完成文字]  按鈕。  
   
  如果您已輸入的字元有不只一個可能的相符項目，請叫用 [自動完成文字] 來顯示可能的相符項目清單，之後，您就可以利用它來尋找這個詞彙，將它插入您的程式碼中。  
   

@@ -12,10 +12,10 @@ ms.author: sawinark
 ms.reviewer: maghan
 manager: craigg
 ms.openlocfilehash: ba29528248a94a2a46aa14a2cdb5f72e1501f273
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66015180"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>連線至 Azure 中的 SSIS 目錄 (SSISDB)
@@ -37,8 +37,8 @@ ms.locfileid: "66015180"
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>從 Azure 入口網站取得連線資訊
 1. 登入 [Azure 入口網站](https://portal.azure.com/)。
-2. 在 Azure 入口網站中，從左側功能表選取 [SQL 資料庫]，然後選取 [SQL 資料庫] 頁面上的 `SSISDB` 資料庫。 
-3. 在 `SSISDB` 資料庫的 [概觀] 頁面上，檢閱完整伺服器名稱，如下列影像所示。 將滑鼠指標放在伺服器名稱上方，以顯示 [按一下以複製] 選項。
+2. 在 Azure 入口網站中，從左側功能表選取 [SQL 資料庫]  ，然後選取 [SQL 資料庫]  頁面上的 `SSISDB` 資料庫。 
+3. 在 `SSISDB` 資料庫的 [概觀]  頁面上，檢閱完整伺服器名稱，如下列影像所示。 將滑鼠指標放在伺服器名稱上方，以顯示 [按一下以複製]  選項。
 
     ![伺服器連線資訊](media/ssis-azure-connect-to-catalog-database/server-name.png) 
 
@@ -47,7 +47,7 @@ ms.locfileid: "66015180"
 ## <a name="connect-with-ssms"></a>使用 SSMS 連線
 1. 開啟 SQL Server Management Studio。
 
-2. **連線至伺服器**。 在 [連線至伺服器] 對話方塊中，輸入下列資訊：
+2. **連線至伺服器**。 在 [連線至伺服器]  對話方塊中，輸入下列資訊：
 
    | 設定       | 建議值 | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -59,16 +59,16 @@ ms.locfileid: "66015180"
 
     ![使用 SSMS 連線到伺服器](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-1.png)
 
-3. **連線至 SSISDB 資料庫**。 選取 [選項] 以展開 [連線至伺服器] 對話方塊。 在展開的 [連線至伺服器] 對話方塊中，選取 [連線屬性] 索引標籤。在 [連線至資料庫] 欄位中，選取或輸入 `SSISDB`。
+3. **連線至 SSISDB 資料庫**。 選取 [選項]  以展開 [連線至伺服器]  對話方塊。 在展開的 [連線至伺服器]  對話方塊中，選取 [連線屬性]  索引標籤。在 [連線至資料庫]  欄位中，選取或輸入 `SSISDB`。
 
     > [!IMPORTANT]
     > 如果您在連線時沒有選取 `SSISDB`，則可能不會在 [物件總管] 中看到 SSIS 目錄。
 
     ![選取連線的 SSISDB 資料庫](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-2.png)
 
-4. 然後選取 [連線]。
+4. 然後選取 [連線]  。
 
-5. 在 [物件總管] 中，展開 [Integration Services 目錄]，然後展開 [SSISDB] 以檢視 SSIS 目錄資料庫中的物件。
+5. 在 [物件總管] 中，展開 [Integration Services 目錄]  ，然後展開 [SSISDB]  以檢視 SSIS 目錄資料庫中的物件。
 
     ![在 SSMS 中的物件總管中尋找 SSISDB 資料庫](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-3.png)
 

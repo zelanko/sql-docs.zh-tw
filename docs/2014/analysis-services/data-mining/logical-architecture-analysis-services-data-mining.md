@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5702e3e2e5b12edecff4dd6d6f46b632575d211d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084270"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>邏輯架構 (Analysis Services – 資料採礦)
@@ -63,9 +63,9 @@ ms.locfileid: "66084270"
 ##  <a name="bkmk_Models"></a> Mining Models  
  在處理之前，資料採礦模型只是中繼資料屬性的組合。 這些屬性會指定採礦結構、指定資料採礦演算法，以及定義對資料處理方法造成影響之參數和篩選設定的集合。 如需詳細資訊，請參閱[採礦模型 &#40;Analysis Services - 資料採礦&#41;](mining-models-analysis-services-data-mining.md)。  
   
- 當您處理模型時，儲存在採礦結構快取中的定型資料會用來產生模式 (根據資料的統計屬性以及演算法和其參數所定義的啟發學習法)。 這就是所謂的「定型」模型。  
+ 當您處理模型時，儲存在採礦結構快取中的定型資料會用來產生模式 (根據資料的統計屬性以及演算法和其參數所定義的啟發學習法)。 這就是所謂的「定型」  模型。  
   
- 定型的結果是包含在「模型內容」中的一組摘要資料，可描述所找到的模式並提供產生預測所根據的規則。 如需詳細資訊，請參閱[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
+ 定型的結果是包含在「模型內容」  中的一組摘要資料，可描述所找到的模式並提供產生預測所根據的規則。 如需詳細資訊，請參閱[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
   
  在受限的案例中，模型的邏輯結構也可以匯出到檔案中，該檔案代表根據標準格式 (預測模型標記語言，PMML) 的模型公式與資料繫結。 這個邏輯結構可以匯入到利用 PMML 的其他系統中，然後這樣的模型可用來預測。 如需詳細資訊，請參閱 [了解 DMX Select 陳述式](/sql/dmx/understanding-the-dmx-select-statement)。  
   

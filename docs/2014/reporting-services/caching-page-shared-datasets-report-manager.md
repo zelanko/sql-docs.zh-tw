@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae18d021465a7d14ea22b56534ea48ac316154c2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109905"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>快取頁面、共用資料集 (報表管理員)
@@ -32,11 +32,11 @@ ms.locfileid: "66109905"
   
 2.  指向共用資料集，然後按下拉式箭號。  
   
-3.  在下拉式清單中，按一下 **[管理]**， 報表的 [一般屬性] 頁面隨即開啟。  
+3.  在下拉式清單中，按一下 **[管理]** ， 報表的 [一般屬性] 頁面隨即開啟。  
   
 4.  按一下 **[快取]** 索引標籤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **快取共用資料集**  
  當使用者第一次開啟使用此共用資料集的報表時，會在快取中放置資料的暫存副本。 在快取期間內執行此報表的後續使用者都會收到快取的資料副本。 快取通常會改善效能，因為資料是從快取傳回，而非再次執行資料集查詢。  
   
