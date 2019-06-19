@@ -13,10 +13,10 @@ ms.reviewer: dineth, sstein
 ms.custom: ''
 ms.date: 05/17/2019
 ms.openlocfilehash: 2fbd0f4680c7a63a5390d93589f44b708f6c2629
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983121"
 ---
 # <a name="get-full-memory-dump"></a>取得完整記憶體傾印
@@ -91,7 +91,7 @@ ms.locfileid: "65983121"
 
 ## <a name="share-the-information"></a>共用資訊
 
-1. 與 SSMS 小組共用資訊，將問題記錄在 https://aka.ms/sqlfeedback。
+1. 與 SSMS 小組共用資訊，將問題記錄在 https://aka.ms/sqlfeedback 。
 
 2. 然後共用收集至 OneDrive (或相同工具) 的記憶體傾印檔案，這些檔案可從 OneDrive 收集。
 

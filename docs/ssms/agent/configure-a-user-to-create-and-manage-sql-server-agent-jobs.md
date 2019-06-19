@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1f161c586f190edc73ad538b2a0b9da4bc9d9421
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105852"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
@@ -32,9 +32,9 @@ ms.locfileid: "65105852"
 
 本主題描述如何設定使用者，以建立或執行 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。  
   
--   **開始之前：**[安全性](#Security)  
+-   **開始之前：** [安全性](#Security)  
   
--   **設定使用者以建立及管理 SQL Server Agent 作業，使用：**[SQL Server Management Studio](#SSMS)  
+-   **設定使用者以建立及管理 SQL Server Agent 作業，使用：** [SQL Server Management Studio](#SSMS)  
   
 ## <a name="BeforeYouBegin"></a>開始之前  
   
@@ -51,9 +51,9 @@ ms.locfileid: "65105852"
   
 1.  在 **[物件總管]** 中展開伺服器。  
   
-2.  展開 **[安全性]**，再展開 **[登入]**。  
+2.  展開 **[安全性]** ，再展開 **[登入]** 。  
   
-3.  以滑鼠右鍵按一下您要新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色的登入，然後選取 [屬性]。  
+3.  以滑鼠右鍵按一下您要新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色的登入，然後選取 [屬性]  。  
   
 4.  在 **[登入屬性]** 對話方塊的 **[使用者對應]** 頁面上，選取包含 **msdb**的資料列。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "65105852"
   
 1.  在 **[物件總管]** 中展開伺服器。  
   
-2.  展開 **[SQL Server Agent]**。  
+2.  展開 **[SQL Server Agent]** 。  
   
-3.  以滑鼠右鍵按一下 [Proxy]，然後選取 [新增 Proxy]。  
+3.  以滑鼠右鍵按一下 [Proxy]  ，然後選取 [新增 Proxy]  。  
   
 4.  在 **[新 Proxy 帳戶]** 對話方塊的 **[一般]** 頁面上，指定新 Proxy 的 Proxy 名稱、認證名稱及描述。 請注意，在建立 SQL Server Agent Proxy 之前，您必須先建立認證。 如需建立認證的詳細資訊，請參閱[如何：建立認證 (SQL Server Management Studio)](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586) 及 [CREATE CREDENTIAL (Transact-SQL)](https://msdn.microsoft.com/d5e9ae69-41d9-4e46-b13d-404b88a32d9d)。  
   

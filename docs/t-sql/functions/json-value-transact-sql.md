@@ -20,10 +20,10 @@ ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: b2e4685c83c1587e43b26363c9a48af5683d33e5
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577442"
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
@@ -105,7 +105,7 @@ SET @jsonInfo=N'{
 ## <a name="examples"></a>範例  
   
 ### <a name="example-1"></a>範例 1
- 下列範例會使用查詢結果中 `town` 和 `state` 的 JSON 屬性值。 由於 **JSON_VALUE** 會保留來源的定序，因此結果的排序次序取決於 `jsonInfo` 資料行定序而定  
+ 下列範例會使用查詢結果中 `town` 和 `state` 的 JSON 屬性值。 由於 **JSON_VALUE** 會保留來源的定序，因此結果的排序次序取決於 `jsonInfo` 資料行定序而定 
 
 > [!NOTE]
 > (這個範例假設一個名為 `Person.Person` 的資料表，其中包含 JSON 文字的 `jsonInfo` 資料行，且該資料行的結構如先前 lax 模式和 strict 模式的說明中所示。 在 AdventureWorks 範例資料庫中，`Person` 資料表實際上不包含 `jsonInfo` 資料行)。

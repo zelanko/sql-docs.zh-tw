@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da8511361badbdfa1ded7497aaf623fdc35252d0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084012"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft 群集演算法
@@ -62,7 +62,7 @@ ms.locfileid: "66084012"
  如需叢集模型所支援內容類型和資料類型的詳細資訊，請參閱 [Microsoft 叢集演算法技術參考](microsoft-clustering-algorithm-technical-reference.md)的＜需求＞一節。  
   
 ## <a name="viewing-a-clustering-model"></a>檢視叢集模型  
- 若要瀏覽此模型，您可以使用 [Microsoft 群集檢視器]。 在檢視叢集模型時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將叢集顯示在描述叢集關聯性的圖表中，並針對每個叢集提供詳細的設定檔、區分各個叢集的屬性清單以及整個培訓資料集的特性。 如需詳細資訊，請參閱 [使用 Microsoft 叢集檢視器瀏覽模型](browse-a-model-using-the-microsoft-cluster-viewer.md)。  
+ 若要瀏覽此模型，您可以使用 [Microsoft 群集檢視器]  。 在檢視叢集模型時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將叢集顯示在描述叢集關聯性的圖表中，並針對每個叢集提供詳細的設定檔、區分各個叢集的屬性清單以及整個培訓資料集的特性。 如需詳細資訊，請參閱 [使用 Microsoft 叢集檢視器瀏覽模型](browse-a-model-using-the-microsoft-cluster-viewer.md)。  
   
  如果您想要知道更多詳細資訊，您可以在 [Microsoft 一般內容樹狀檢視器](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)中瀏覽此模型。 針對此模型所儲存的內容包括每個節點中所有值的分佈、每個群集的機率及其他資訊。 如需詳細資訊，請參閱[叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)。  
   

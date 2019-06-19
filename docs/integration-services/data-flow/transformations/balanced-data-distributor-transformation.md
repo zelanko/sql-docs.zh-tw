@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6826f7114d2e9b901fb0f17f604ed426286555f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726262"
 ---
 # <a name="balanced-data-distributor-transformation"></a>平衡資料分佈器轉換
@@ -27,7 +27,7 @@ ms.locfileid: "65726262"
 
   平衡資料分佈器 (BDD) 轉換利用新型 CPU 的並行處理能力。 它會將傳入資料列的緩衝區一致地分佈到個別執行緒上的輸出。 透過針對每個輸出路徑使用個別執行緒，BDD 元件可提升 SSIS 封裝在多核心或多處理器機器上的效能。  
   
- 下列圖表顯示使用 BDD 轉換的簡單範例。 在此範例中，BDD 轉換會在從一般檔案來源輸入資料時，挑選一個管線緩衝區，然後以循環配置資源的方式向下傳送至三個輸出路徑的其中一個路徑。 在 SQL Server Data Tools 中，您可以在顯示資料流程工作屬性的 [屬性] 視窗中，查看 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferSize%2A> (預設管線緩衝區大小) 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferMaxRows%2A> (管線緩衝區中的預設最大資料列數) 的值。  
+ 下列圖表顯示使用 BDD 轉換的簡單範例。 在此範例中，BDD 轉換會在從一般檔案來源輸入資料時，挑選一個管線緩衝區，然後以循環配置資源的方式向下傳送至三個輸出路徑的其中一個路徑。 在 SQL Server Data Tools 中，您可以在顯示資料流程工作屬性的 [屬性]  視窗中，查看 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferSize%2A> (預設管線緩衝區大小) 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferMaxRows%2A> (管線緩衝區中的預設最大資料列數) 的值。  
   
  ![平衡型資料分配器](../../../integration-services/data-flow/transformations/media/balanceddatadistributor.JPG "平衡型資料分配器")  
   

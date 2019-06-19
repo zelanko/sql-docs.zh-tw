@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f25023f6a0191cb645134d327f40ea84ba64932f
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65357316"
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>多維度模型中的翻譯 (Analysis Services)
@@ -33,7 +33,7 @@ ms.locfileid: "65357316"
   
 3.  尋找 dimDate、dimProduct、dimProductCategory 或 dimProductSubcateogry。 上述所有維度包含月、週中的日、產品名稱、類別目錄名稱等翻譯成員的屬性。  
   
-4.  以滑鼠右鍵按一下任何欄位，然後選取 [瀏覽資料] 。 您會看到每個成員的英文、西班牙文和法文翻譯。  
+4.  以滑鼠右鍵按一下任何欄位，然後選取 [瀏覽資料]  。 您會看到每個成員的英文、西班牙文和法文翻譯。  
   
  日期、時間和貨幣格式的實作未透過翻譯。 若要根據用戶端的地區設定，以動態方式提供特定文化特性的格式，請使用 [貨幣轉換精靈] 和 **FormatString** 屬性。 如需詳細資訊，請參閱[貨幣轉換 &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) 和 [FormatString 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl)。  
   
@@ -69,9 +69,9 @@ ms.locfileid: "65357316"
   
 3.  若要將屬性繫結至提供翻譯值的資料行：  
   
-    1.  在維度設計師 | [翻譯] 中，加入新翻譯。 選擇語言。 接受翻譯值的新資料行隨即出現在頁面上。  
+    1.  在維度設計師 | [翻譯]  中，加入新翻譯。 選擇語言。 接受翻譯值的新資料行隨即出現在頁面上。  
   
-    2.  將游標置於與其中一個屬性相鄰的空資料格中。 屬性不可以是索引鍵，但其他所有屬性都是可用選項。 您應該會看到中間有個點的小按鈕。 按一下按鈕，開啟 [屬性資料翻譯] 對話方塊。  
+    2.  將游標置於與其中一個屬性相鄰的空資料格中。 屬性不可以是索引鍵，但其他所有屬性都是可用選項。 您應該會看到中間有個點的小按鈕。 按一下按鈕，開啟 [屬性資料翻譯]  對話方塊。  
   
     3.  輸入標題的翻譯。 這會做為目標語言的資料標籤，例如樞紐分析表欄位清單中的欄位名稱。  
   

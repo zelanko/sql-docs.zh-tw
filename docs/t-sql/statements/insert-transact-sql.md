@@ -34,10 +34,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7db64289b031851629c0627bd324eba752fd8554
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503478"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
@@ -429,7 +429,7 @@ OUTPUT 子句
  本節的範例會使用所需的最少語法來示範 INSERT 陳述式的基本功能。  
   
 #### <a name="a-inserting-a-single-row-of-data"></a>A. 插入單一資料列  
- 下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `Production.UnitMeasure` 資料表中插入一個資料列。 此資料表中的資料行為 `UnitMeasureCode`、`Name` 和 `ModifiedDate`。 由於所有資料行的值均已提供，並按資料表中資料行的相同順序列出；因此，您不需要在資料行清單中指定資料行名稱。  
+ 下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `Production.UnitMeasure` 資料表中插入一個資料列。 此資料表中的資料行為 `UnitMeasureCode`、`Name` 和 `ModifiedDate`。 由於所有資料行的值均已提供，並按資料表中資料行的相同順序列出；因此，您不需要在資料行清單中指定資料行名稱。   
   
 ```sql
 INSERT INTO Production.UnitMeasure  

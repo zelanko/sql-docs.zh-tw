@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43b5c2e9691959bcb624a7a22c488240a9730a76
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724527"
 ---
 # <a name="creating-a-custom-log-provider"></a>建立自訂記錄提供者
@@ -48,10 +48,10 @@ ms.locfileid: "65724527"
  設定專案以使用強式名稱金鑰檔案來簽署將產生的組件。  
   
 > [!NOTE]  
->  許多 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 記錄提供者都有自訂使用者介面，以實作 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>，以及使用可用連線管理員的篩選下拉式清單，取代 [設定 SSIS 記錄] 對話方塊中的 [設定] 文字方塊。 不過，在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中並未實作自訂記錄提供者的自訂使用者介面。  
+>  許多 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 記錄提供者都有自訂使用者介面，以實作 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>，以及使用可用連線管理員的篩選下拉式清單，取代 [設定 SSIS 記錄]  對話方塊中的 [設定]  文字方塊。 不過，在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中並未實作自訂記錄提供者的自訂使用者介面。  
   
 ### <a name="applying-the-dtslogprovider-attribute"></a>套用 DtsLogProvider 屬性  
- 將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 屬性套用至您已建立的類別，以便將它識別為記錄提供者。 此屬性會提供記錄提供者的名稱和描述等設計階段資訊。 屬性 (Attribute) 的 **DisplayName** 和 **Description** 屬性 (Property) 會對應至顯示在 [設定 SSIS 記錄] 編輯器中的 [名稱] 和 [描述] 資料行，此編輯器會在為 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中的套件設定記錄時顯示。  
+ 將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 屬性套用至您已建立的類別，以便將它識別為記錄提供者。 此屬性會提供記錄提供者的名稱和描述等設計階段資訊。 屬性 (Attribute) 的 **DisplayName** 和 **Description** 屬性 (Property) 會對應至顯示在 [設定 SSIS 記錄]  編輯器中的 [名稱]  和 [描述]  資料行，此編輯器會在為 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中的套件設定記錄時顯示。  
   
 > [!IMPORTANT]  
 >  未使用屬性 (Attribute) 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.LogProviderType%2A> 屬性 (Property)。 不過，您必須為它輸入值，否則自訂記錄提供者將不會顯示在可用記錄提供者的清單中。  

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f12b95a192535b037f01a601146a0bba544d8fae
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485949"
 ---
 # <a name="reserved-words-master-data-services"></a>保留字 (Master Data Services)
@@ -41,7 +41,7 @@ ms.locfileid: "65485949"
 -   [成員](../master-data-services/reserved-words-master-data-services.md#members)  
   
 ##  <a name="models"></a> 模型  
- 如果您建立一個名稱設定為 **Name** 或 **Code** 的模型，請勿選取 [建立與模型同名的實體]，原因是 **Name** 或 **Code** 無法用於實體的名稱。  
+ 如果您建立一個名稱設定為 **Name** 或 **Code** 的模型，請勿選取 [建立與模型同名的實體]  ，原因是 **Name** 或 **Code** 無法用於實體的名稱。  
   
 ##  <a name="entities"></a> 實體  
  您無法針對實體名稱使用 **Name** 或 **Code**。  

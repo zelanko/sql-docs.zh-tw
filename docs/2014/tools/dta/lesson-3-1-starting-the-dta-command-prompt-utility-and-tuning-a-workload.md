@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf882bc731c8e435de808092e990b35ad23ce57e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66110162"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>啟動 dta 命令提示字元公用程式和微調工作負載
@@ -28,7 +28,7 @@ ms.locfileid: "66110162"
   
 ### <a name="to-start-the-dta-command-prompt-utility-and-view-help"></a>若要啟動 dta 命令提示字元公用程式和檢視說明  
   
-1.  在 [開始] 功能表上，依序指向 [所有程式] 和 [附屬應用程式]，再按一下 [命令提示字元]。  
+1.  在 [開始]  功能表上，依序指向 [所有程式]  和 [附屬應用程式]  ，再按一下 [命令提示字元]  。  
   
 2.  在命令提示字元之下，輸入下列字串，再按 ENTER 鍵：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66110162"
 3.  在 Database Engine Tuning Advisor 微調好工作負載之後，它會顯示一則訊息，指出微調工作階段已順利完成。 您可以利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來開啟 MySession2OutputScript.sql 和 MySession2Output.xml 檔，以檢視微調結果。 另外，您也可以在 Database Engine Tuning Advisor GUI 中開啟 MySession2 微調工作階段，依照 [檢視微調建議](lesson-1-2-viewing-tuning-recommendations.md) 和 [檢視微調報表](lesson-1-3-viewing-tuning-reports.md)中的相同方式來檢視其建議和報表。  
   
 ## <a name="summary"></a>總結  
- 您已在命令提示字元之下，利用 **dta** 公用程式完成了簡單工作負載的微調。 這個工具也提供了許多其他微調選項。 如需詳細資訊，請參閱工具說明 (**dta -?**) 和參考主題 [dta 公用程式](dta-utility.md) 。  
+ 您已在命令提示字元之下，利用 **dta** 公用程式完成了簡單工作負載的微調。 這個工具也提供了許多其他微調選項。 如需詳細資訊，請參閱工具說明 (**dta -?** ) 和參考主題 [dta 公用程式](dta-utility.md) 。  
   
 ## <a name="after-you-finish-this-tutorial"></a>完成這個教學課程之後  
  完成這個教學課程中的課程之後，請參閱下列主題，以取得有關 Database Engine Tuning Advisor 的詳細資訊：  

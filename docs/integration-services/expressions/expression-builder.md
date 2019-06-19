@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 04457acc8bd47f3802ba7ad68797d1745117871d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725417"
 ---
 # <a name="expression-builder"></a>運算式產生器
@@ -27,7 +27,7 @@ ms.locfileid: "65725417"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  使用 [運算式產生器] 對話方塊，即可藉由使用圖形化使用者介面列出變數以及提供函數的內建參考、類型轉換和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式語言所包含的運算子，來建立和編輯屬性運算式或撰寫可設定變數值的運算式。  
+  使用 [運算式產生器]  對話方塊，即可藉由使用圖形化使用者介面列出變數以及提供函數的內建參考、類型轉換和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式語言所包含的運算子，來建立和編輯屬性運算式或撰寫可設定變數值的運算式。  
   
  屬性運算式是指派給屬性的運算式。 在評估運算式時，會動態更新屬性以使用運算式的評估結果。 同樣地，變數中所使用的運算式可使運算式的評估結果更新變數值。  
   

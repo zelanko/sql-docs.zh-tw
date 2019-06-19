@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c79df90c6093ed93668e504e574c712a2ba2146a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716018"
 ---
 # <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project - SSISDB 資料庫
@@ -37,13 +37,13 @@ catalog.move_project [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>引數  
  [ @source_folder = ] *source_folder*  
- 在移動之前，專案所在之來源資料夾的名稱。 *source_folder* 是 **nvarchar(128)**。  
+ 在移動之前，專案所在之來源資料夾的名稱。 *source_folder* 是 **nvarchar(128)** 。  
   
  [ @project_name = ] *project_name*  
- 要移動之專案的名稱。 *project_name* 是 **nvarchar(128)**。  
+ 要移動之專案的名稱。 *project_name* 是 **nvarchar(128)** 。  
   
  [ @destination_folder = ] *destination_folder*  
- 在移動之後，專案所在之目的地資料夾的名稱。 *destination_folder* 是 **nvarchar(128)**。  
+ 在移動之後，專案所在之目的地資料夾的名稱。 *destination_folder* 是 **nvarchar(128)** 。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

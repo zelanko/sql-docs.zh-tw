@@ -15,16 +15,16 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 417b3203cc6e09f3918e2156ac6f676cad381368
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104500"
 ---
 # <a name="options-environment---general-page"></a>選項 (環境 - 一般頁面)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用 [選項] 對話方塊，來設定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的啟動動作、一般視窗管理選項，以及其他一般設定。 在 [工具] 功能表上按一下 [選項]、展開 [環境] 資料夾，然後按一下 [一般]。
+使用 [選項]  對話方塊，來設定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的啟動動作、一般視窗管理選項，以及其他一般設定。 在 [工具]  功能表上按一下 [選項]  、展開 [環境]  資料夾，然後按一下 [一般]  。
 
 ## <a name="uielement-list"></a>UIElement 清單
 

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4076e27a800f9c9653e8a191c1fd53467cba9f75
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071229"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>SharePoint 2013 中的 PowerPivot 資料重新整理
@@ -44,7 +44,7 @@ ms.locfileid: "66071229"
 ||||  
 |-|-|-|  
 ||Excel 2013 活頁簿|Excel 2010 活頁簿|  
-|觸發資料重新整理|**互動式：** 已驗證的使用者<br /><br /> **已排程：**：PowerPivot 系統服務|：PowerPivot 系統服務|  
+|觸發資料重新整理|**互動式：** 已驗證的使用者<br /><br /> **已排程：** ：PowerPivot 系統服務|：PowerPivot 系統服務|  
 |從內容資料庫載入活頁簿|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
 |在 Analysis Services 執行個體上載入資料模型|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
 |將處理命令傳送至 Analysis Services 執行個體|SharePoint 2013 Excel Services|：PowerPivot 系統服務|  
@@ -81,7 +81,7 @@ ms.locfileid: "66071229"
   
 1.  在 SharePoint 文件庫中，使用瀏覽器來開啟 PowerPivot 活頁簿。  
   
-2.  在瀏覽器視窗中，按一下 **[資料]** 功能表，然後按一下 **[重新整理選取的連線]** 或 **[重新整理所有連線]**。  
+2.  在瀏覽器視窗中，按一下 **[資料]** 功能表，然後按一下 **[重新整理選取的連線]** 或 **[重新整理所有連線]** 。  
   
 3.  Excel Services 就會載入 PowerPivot 資料庫、加以處理，然後進行查詢以重新整理 Excel 活頁簿快取。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66071229"
  ![互動式資料重新整理](../media/as-interactive-datarefresh-sharepoint2013.gif "互動式資料重新整理")  
   
 ###  <a name="bkmk_windows_auth_interactive_data_refresh"></a> Windows 驗證與活頁簿資料連接以及互動式資料重新整理  
- Excel Services 會將處理命令傳送至 Analysis Services 伺服器，以便指示伺服器模擬使用者帳戶。 為了取得足以執行使用者模擬-委派處理的系統權限，Analysis Services 服務帳戶需要本機伺服器的 [當成作業系統的一部分] 權限。 Analysis Services 伺服器也必須能夠將使用者的認證委派給資料來源。 查詢結果會傳送到 Excel Services。  
+ Excel Services 會將處理命令傳送至 Analysis Services 伺服器，以便指示伺服器模擬使用者帳戶。 為了取得足以執行使用者模擬-委派處理的系統權限，Analysis Services 服務帳戶需要本機伺服器的 [當成作業系統的一部分]  權限。 Analysis Services 伺服器也必須能夠將使用者的認證委派給資料來源。 查詢結果會傳送到 Excel Services。  
   
  一般使用者經驗：當客戶在包含 PowerPivot 模型的 Excel 2013 活頁簿中選取 [重新整理所有連線] 時，他們會看到類似下面的錯誤訊息：  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66071229"
   
     1.  執行 「`secpol.msc`"  
   
-    2.  依序按一下 **[本機安全性原則]**、 **[本機原則]** 和 **[使用者權限指派]**。  
+    2.  依序按一下 **[本機安全性原則]** 、 **[本機原則]** 和 **[使用者權限指派]** 。  
   
     3.  加入服務帳戶。  
   
@@ -149,9 +149,9 @@ ms.locfileid: "66071229"
   
 -   請參閱這些步驟後面的圖例。  
   
-1.  在 SharePoint 文件庫中，按一下**開啟功能表**(**...**) 為 PowerPivot 活頁簿。  
+1.  在 SharePoint 文件庫中，按一下**開啟功能表**( **...** ) 為 PowerPivot 活頁簿。  
   
-2.  按一下第二個 **[開啟]** 功能表，然後按一下 **[管理 PowerPivot 資料重新整理]**。  
+2.  按一下第二個 **[開啟]** 功能表，然後按一下 **[管理 PowerPivot 資料重新整理]** 。  
   
 3.  在 **[管理資料重新整理]** 頁面上，按一下 **[啟用]** ，然後設定重新整理排程。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "66071229"
  ![管理資料重新整理操作功能表](../media/as-manage-datarefresh-sharepoint2013.gif "管理資料重新整理操作功能表")  
   
 > [!TIP]  
->  如需重新整理活頁簿從 SharePoint online 的資訊，請參閱[從 SharePoint Online （白皮書） 的內嵌 PowerPivot 模型的重新整理 Excel 活頁簿](https://technet.microsoft.com/library/jj992650.aspx)(https://technet.microsoft.com/library/jj992650.aspx)。  
+>  如需重新整理活頁簿從 SharePoint online 的資訊，請參閱[從 SharePoint Online （白皮書） 的內嵌 PowerPivot 模型的重新整理 Excel 活頁簿](https://technet.microsoft.com/library/jj992650.aspx)(https://technet.microsoft.com/library/jj992650.aspx) 。  
   
 ##  <a name="bkmk_refresh_architecture"></a> SharePoint 2013 中排程的資料重新整理架構  
  下圖摘要說明 SharePoint 2013 和 SQL Server 2012 SP1 中的資料重新整理架構。  
@@ -200,11 +200,11 @@ ms.locfileid: "66071229"
   
  記錄項目就會包含：  
   
--   **[PowerPivot 服務]** 的 **[區域]**。  
+-   **[PowerPivot 服務]** 的 **[區域]** 。  
   
 -   **[資料重新整理]** 的類別。  
   
- 檢閱 **[設定診斷記錄]**。 如需詳細資訊，請參閱 <<c0> [ 設定及檢視 SharePoint 記錄檔和診斷記錄&#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)。</c0>  
+ 檢閱 **[設定診斷記錄]** 。 如需詳細資訊，請參閱 <<c0> [ 設定及檢視 SharePoint 記錄檔和診斷記錄&#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)。</c0>  
   
 ##  <a name="datarefresh_additional_authentication"></a> 其他驗證考量  
  在 Excel 2013 中， **[Excel Services 驗證設定]** 對話方塊的設定會決定 Excel Services 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用於資料重新整理的 Windows 識別。  
@@ -221,7 +221,7 @@ ms.locfileid: "66071229"
   
 2.  在功能區中，按一下 **[連線]** 。  
   
-3.  在 **[活頁簿連線]** 對話方塊中，選取連線，然後按一下 **[內容]**。  
+3.  在 **[活頁簿連線]** 對話方塊中，選取連線，然後按一下 **[內容]** 。  
   
 4.  在 [**連接屬性**] 對話方塊中，按一下**定義**，然後按一下 [**驗證設定...** ] 按鈕。  
   

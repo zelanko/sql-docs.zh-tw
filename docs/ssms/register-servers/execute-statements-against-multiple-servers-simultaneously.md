@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 08975843615bbfa45842d8453cd30929d798ae9e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104487"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>同時對多部伺服器執行陳述式
@@ -36,9 +36,9 @@ ms.locfileid: "65104487"
   
  ## <a name="execute-statements-against-multiple-configuration-targets-simultaneously"></a>同時針對多個組態目標執行陳述式  
 
-1.  在 SQL Server Management Studio 的 [檢視] 功能表上，按一下 [已註冊的伺服器]。  
+1.  在 SQL Server Management Studio 的 [檢視]  功能表上，按一下 [已註冊的伺服器]  。  
   
-2.  展開中央管理伺服器，以滑鼠右鍵按一下伺服器群組，指向 [連接]，然後按一下 [新增查詢]。  
+2.  展開中央管理伺服器，以滑鼠右鍵按一下伺服器群組，指向 [連接]  ，然後按一下 [新增查詢]  。  
   
 3.  在 [查詢編輯器] 中，輸入並執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，例如下列陳述式：  
   
@@ -53,11 +53,11 @@ ms.locfileid: "65104487"
   
 #### <a name="to-change-the-multiserver-results-options"></a>變更多伺服器結果選項  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的 **[工具]** 功能表上，按一下 **[選項]**。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-2.  展開 **[查詢結果]**、展開 **[SQL Server]**，然後按一下 **[多伺服器結果]**。  
+2.  展開 **[查詢結果]** 、展開 **[SQL Server]** ，然後按一下 **[多伺服器結果]** 。  
   
-3.  在 **[多伺服器結果]** 頁面上，指定您想要的選項設定，然後按一下 **[確定]**。  
+3.  在 **[多伺服器結果]** 頁面上，指定您想要的選項設定，然後按一下 **[確定]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用中央管理伺服器管理多部伺服器](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c287e840c07d11a527e980f9f07fb39fb3852739
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065523"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>在 Visio 中檢視資料採礦模型 (資料採礦增益集)

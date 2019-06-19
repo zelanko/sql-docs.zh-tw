@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 887e43ef6bc4f3c8105cb51256f35f400368fec9
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098389"
 ---
 # <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>如何：將 Visual Studio 2010 自訂測試條件從舊版升級至 SQL Server Data Tools
@@ -30,27 +30,27 @@ ms.locfileid: "65098389"
 ## <a name="UpdateReferences"></a>更新參考  
 若要更新專案參考：  
   
-1.  在 [方案總管] 中按一下 [顯示所有檔案] (僅限 Visual Basic)。  
+1.  在 [方案總管]  中按一下 [顯示所有檔案]  (僅限 Visual Basic)。  
   
-2.  展開 [方案總管] 中的 [參考] 節點。  
+2.  展開 [方案總管]  中的 [參考]  節點。  
   
-3.  以滑鼠右鍵按一下下列組件參考，然後按一下 [移除]：  
+3.  以滑鼠右鍵按一下下列組件參考，然後按一下 [移除]  ：  
   
     1.  Microsoft.Data.Schema.UnitTesting  
   
     2.  Microsoft.Data.Schema  
   
-4.  在 [專案] 功能表中，或在 [方案總管] 中以滑鼠右鍵按一下專案資料夾，按一下 [加入參考]。  
+4.  在 [專案]  功能表中，或在 [方案總管]  中以滑鼠右鍵按一下專案資料夾，按一下 [加入參考]  。  
   
-5.  按一下 [.NET] 索引標籤。  
+5.  按一下 [.NET]  索引標籤。  
   
-6.  在 [元件名稱] 清單中，選取 [System.ComponentModel.Composition]，然後按一下 [確定]。  
+6.  在 [元件名稱]  清單中，選取 [System.ComponentModel.Composition]  ，然後按一下 [確定]  。  
   
-7.  加入必要的組件參考。 以滑鼠右鍵按一下專案節點，然後按一下 [加入參考]。 按一下 [瀏覽] 並巡覽至 C:\Program Files (x86)\\MicrosoftSQL Server\110\DAC\Bin 資料夾。 選擇 Microsoft.Data.Tools.Schema.Sql.dll，並按一下 [加入]，然後按一下 [確定]。  
+7.  加入必要的組件參考。 以滑鼠右鍵按一下專案節點，然後按一下 [加入參考]  。 按一下 [瀏覽]  並巡覽至 C:\Program Files (x86)\\MicrosoftSQL Server\110\DAC\Bin 資料夾。 選擇 Microsoft.Data.Tools.Schema.Sql.dll，並按一下 [加入]，然後按一下 [確定]。  
   
-8.  按一下 [專案] 功能表上的 [卸載專案]。  
+8.  按一下 [專案]  功能表上的 [卸載專案]  。  
   
-9. 在 [方案總管] 中，以滑鼠右鍵按一下 [專案]，然後選擇 [編輯 `project_name`.csproj]。  
+9. 在 [方案總管]  中，以滑鼠右鍵按一下 [專案]  ，然後選擇 [編輯 `project_name`.csproj]   。  
   
 10. 匯入 `Microsoft.CSharp.targets` 之後，加入下列 Import 陳述式：  
   
@@ -60,9 +60,9 @@ ms.locfileid: "65098389"
     <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(VisualStudioVersion)' != ''" />  
     ```  
   
-11. 儲存並關閉檔案。 在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選擇 [重新載入專案]。  
+11. 儲存並關閉檔案。 在 [方案總管]  中，以滑鼠右鍵按一下專案，然後選擇 [重新載入專案]  。  
   
-12. 開啟測試條件類別，然後移除以 **Microsoft.Data.Schema** 開頭的所有 Using 陳述式。 最簡單的移除方式是以滑鼠右鍵按一下檔案，依序選擇 [組合管理 Using] 和 [移除和排序]。 下列 Using 陳述式必須移除：  
+12. 開啟測試條件類別，然後移除以 **Microsoft.Data.Schema** 開頭的所有 Using 陳述式。 最簡單的移除方式是以滑鼠右鍵按一下檔案，依序選擇 [組合管理 Using]  和 [移除和排序]  。 下列 Using 陳述式必須移除：  
   
     ```  
     using Microsoft.Data.Schema.UnitTesting;  
@@ -122,7 +122,7 @@ ms.locfileid: "65098389"
     ```  
   
 ### <a name="update-type-references"></a>更新型別參考  
-SQL Server 單元測試架構中一些型別名稱已經變更。 若要更新程式碼以使用新型別名稱，請使用 [編輯] 功能表中的 [尋找和取代]。 現在型別名稱開頭為 **Sql**。 類別名稱應該更新如下：  
+SQL Server 單元測試架構中一些型別名稱已經變更。 若要更新程式碼以使用新型別名稱，請使用 [編輯]  功能表中的 [尋找和取代]  。 現在型別名稱開頭為 **Sql**。 類別名稱應該更新如下：  
   
 |舊的型別名稱|新的型別名稱|  
 |-----------------|-----------------|  

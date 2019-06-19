@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4828d1d3f509dc40e6a8f818f24ba5a7881783e6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061064"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>快取轉換編輯器 (連接管理員頁面)
@@ -28,7 +28,7 @@ ms.locfileid: "66061064"
   
 ## <a name="options"></a>選項  
  **快取連接管理員**  
- 使用清單方塊來選取現有的快取連線管理員，或使用 [新增] 按鈕來建立新的連線。  
+ 使用清單方塊來選取現有的快取連線管理員，或使用 [新增]  按鈕來建立新的連線。  
   
  **新增**  
  使用 [快取連接管理員編輯器] 對話方塊來建立新的連接。  

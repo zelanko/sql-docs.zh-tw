@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03acf5db82c21a66e2fbd8337713b6989ce36a31
-ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66403064"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 儲存體連線管理員
