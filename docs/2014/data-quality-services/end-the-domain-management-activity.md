@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d25d369870dc7a4f53e70a61726ffbb7d38d9f5
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480617"
 ---
 # <a name="end-the-domain-management-activity"></a>結束定義域管理活動
@@ -34,6 +34,6 @@ ms.locfileid: "65480617"
  按一下以結束 [定義域管理] 活動，不儲存工作並返回 DQS 首頁。  
   
  **關閉**  
- 按一下以儲存工作，並返回 DQS 首頁。 知識庫會鎖定，而且在 **[開啟知識庫]** 畫面中知識庫資料表的知識庫狀態將會是 **[定義域管理]**。 在按一下 **[關閉]** 之後，若要執行 [知識探索] 活動，您必須返回 **[定義域管理]** 畫面，按一下 **[完成]**，然後按一下 **[是]** 發行知識庫，或按一下 **[否]** 儲存知識庫工作並結束。  如需開啟鎖定之知識庫的詳細資訊，請參閱＜ [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md)＞。  
+ 按一下以儲存工作，並返回 DQS 首頁。 知識庫會鎖定，而且在 **[開啟知識庫]** 畫面中知識庫資料表的知識庫狀態將會是 **[定義域管理]** 。 在按一下 **[關閉]** 之後，若要執行 [知識探索] 活動，您必須返回 **[定義域管理]** 畫面，按一下 **[完成]** ，然後按一下 **[是]** 發行知識庫，或按一下 **[否]** 儲存知識庫工作並結束。  如需開啟鎖定之知識庫的詳細資訊，請參閱＜ [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md)＞。  
   
   

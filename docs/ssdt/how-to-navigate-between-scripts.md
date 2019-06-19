@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 49c19d1109f6105f2f081b1f85c2f188d2c02539
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099668"
 ---
 # <a name="how-to-navigate-between-scripts"></a>如何：在指令碼之間巡覽
@@ -28,9 +28,9 @@ ms.locfileid: "65099668"
   
 ### <a name="to-navigate-between-scripts"></a>若要在指令碼之間巡覽  
   
-1.  展開 [方案總管] 中的 [函數] 資料夾，然後按兩下 [GetProductsBySupplier.sql]。  
+1.  展開 [方案總管]  中的 [函數]  資料夾，然後按兩下 [GetProductsBySupplier.sql]  。  
   
-2.  以滑鼠右鍵按一下這行程式碼中的 `Products`，然後選取 [移至定義]  
+2.  以滑鼠右鍵按一下這行程式碼中的 `Products`，然後選取 [移至定義]   
   
     ```  
     SELECT * from Products p  
@@ -38,5 +38,5 @@ ms.locfileid: "65099668"
   
 3.  Products.sql 隨即自動開啟，顯示 `Products` 類型定義的位置。  
   
-4.  回到 GetProductsBySupplier.sql。 這次為 `Products` 選取關聯式功能表中的 [尋找所有參考]。 在 [尋找符號結果] 窗格中，您會看到 `Products` 資料表參考的位置清單。 按兩下任何的搜尋結果，會將您帶到參考的位置。  
+4.  回到 GetProductsBySupplier.sql。 這次為 `Products` 選取關聯式功能表中的 [尋找所有參考]  。 在 [尋找符號結果]  窗格中，您會看到 `Products` 資料表參考的位置清單。 按兩下任何的搜尋結果，會將您帶到參考的位置。  
   

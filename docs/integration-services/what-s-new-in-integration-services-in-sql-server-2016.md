@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 659059130d63dd2f320dcbd9ec0364b249f0889b
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65713873"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 的新功能
@@ -232,7 +232,7 @@ ms.locfileid: "65713873"
 >  (在 RC0 中，這個方法已移至新的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 介面。 如需詳細資訊，請參閱 [New IDTSComponentMetaData130 interface in the API](#CMD130)(API 中新的 IDTSComponentMetaData130 介面)。  
 
 ####  <a name="ServerLogLevel"></a> 支援全伺服器的預設記錄層級  
- 在 SQL Server 的 [伺服器屬性] 中，您現在可以在 [Server logging level (伺服器記錄層次)]  屬性下方，選取預設的全伺服器記錄層次。 您可以挑選其中一個內建的記錄層級 (基本、無、詳細資訊、效能或執行階段歷程)，或者可挑選現有的自訂記錄層級。 選取的記錄層級會套用到所有部署到 SSIS 目錄的封裝。 它預設也會套用到執行 SSIS 封裝的 SQL 代理程式工作步驟。  
+ 在 SQL Server 的 [伺服器屬性]  中，您現在可以在 [Server logging level (伺服器記錄層次)]  屬性下方，選取預設的全伺服器記錄層次。 您可以挑選其中一個內建的記錄層級 (基本、無、詳細資訊、效能或執行階段歷程)，或者可挑選現有的自訂記錄層級。 選取的記錄層級會套用到所有部署到 SSIS 目錄的封裝。 它預設也會套用到執行 SSIS 封裝的 SQL 代理程式工作步驟。  
 
 ####  <a name="CMD130"></a> API 中新的 IDTSComponentMetaData130 介面  
  SSIS 目錄中新的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 介面會在 SQL Server 2016 中將新功能加入現有 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 介面中，尤其是 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 方法。 ( **GetIdentificationStringByID** 方法會從 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 介面移至新的介面)。另外還有新的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> (已擴大錯誤資料行名稱的支援) 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> 介面，這兩種介面都提供 **LineageIdentificationString** 屬性。 如需詳細資訊，請參閱＜ [資料流程中適用於錯誤的資料行名稱](#ErrorColumn)＞。  
@@ -243,7 +243,7 @@ ms.locfileid: "65713873"
  當您將 SSIS 專案從舊版升級到目前的版本時，專案層級的連線管理員會繼續如預期般運作，並保留封裝配置和註解。  
 
 ####  <a name="BufferSize"></a> AutoAdjustBufferSize 屬性會自動計算資料流程的緩衝區大小  
- 當您將新的 **AutoAdjustBufferSize** 屬性值設為 [true] 時，資料流程引擎會自動計算資料流程的緩衝區大小。 如需詳細資訊，請參閱＜ [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md)＞。  
+ 當您將新的 **AutoAdjustBufferSize** 屬性值設為 [true]  時，資料流程引擎會自動計算資料流程的緩衝區大小。 如需詳細資訊，請參閱＜ [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md)＞。  
 
 ####  <a name="Templates"></a> 可重複使用的控制流程範本  
  將常用的控制流程工作或容器儲存到獨立的範本檔案，並使用控制流程範本，在專案的一或多個封裝中多次重複使用。 這個再使用性讓 SSIS 封裝的設計和維護變得更容易。 如需詳細資訊，請參閱 [使用控制流程封裝組件在封裝之間重複使用控制流程](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md)。  
@@ -325,7 +325,7 @@ ms.locfileid: "65713873"
 ####  <a name="OneDesigner"></a> SSIS 設計師中的多目標和多個版本支援  
  您現在可以在適用於 Visual Studio 2015 的 SQL Server Data Tools &#40;SSDT&#41; 中使用 SSIS 設計師，來建立、維護和執行目標為 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的封裝。 若要取得 SSDT，請參閱 [下載最新的 SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)。 
 
- 在方案總管中，在 Integration Services 專案上按一下滑鼠右鍵，然後選取 [屬性]  以開啟專案的屬性頁。 在 [組態屬性]  的 [一般] 索引標籤中，選取 [TargetServerVersion]  屬性，然後選擇 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
+ 在方案總管中，在 Integration Services 專案上按一下滑鼠右鍵，然後選取 [屬性]  以開啟專案的屬性頁。 在 [組態屬性]  的 [一般]  索引標籤中，選取 [TargetServerVersion]  屬性，然後選擇 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
    
  ![專案屬性對話方塊中的 TargetServerVersion 屬性](../integration-services/media/targetserverversion2.png "專案屬性對話方塊中的 TargetServerVersion 屬性")  
 

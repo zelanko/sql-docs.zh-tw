@@ -20,10 +20,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5494c021b9b017cb91230929da2d5994b518e9cb
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65100269"
 ---
 # <a name="automatically-delete-a-job"></a>Automatically Delete a Job
@@ -71,11 +71,11 @@ ms.locfileid: "65100269"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **[SQL Server Agent]**，展開 **[作業]**，以滑鼠右鍵按一下要編輯的作業，然後按一下 **[屬性]**。  
+2.  展開 **[SQL Server Agent]** ，展開 **[作業]** ，以滑鼠右鍵按一下要編輯的作業，然後按一下 **[屬性]** 。  
   
 3.  選取 **[通知]** 頁面。  
   
-4.  選取 **[自動刪除作業]**，然後選擇下列其中一項：  
+4.  選取 **[自動刪除作業]** ，然後選擇下列其中一項：  
   
     -   按一下 **[當作業成功時]** ，以便在作業順利完成時刪除作業狀態。  
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 041f05a2d7ae623ee40db320676555dad5468459
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726392"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 來源編輯器 (連接管理員頁面)
@@ -39,7 +39,7 @@ ms.locfileid: "65726392"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 來源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 來源。  
+2.  在 [資料流程]  索引標籤上，按兩下 SAP BW 來源。  
   
 3.  在 **[SAP BW 來源編輯器]** 中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
@@ -49,10 +49,10 @@ ms.locfileid: "65726392"
 >  如果您不知道設定來源的所有必要值，可能必須詢問 SAP 系統管理員。  
   
  **SAP BW 連接管理員**  
- 從清單中選取現有的連線管理員，或按一下 [新增] 來建立新的連線。  
+ 從清單中選取現有的連線管理員，或按一下 [新增]  來建立新的連線。  
   
  **新增**  
- 使用 [SAP BW 連線管理員] 對話方塊來建立新的連線管理員。  
+ 使用 [SAP BW 連線管理員]  對話方塊來建立新的連線管理員。  
   
  如需有關此對話方塊的詳細資訊，請參閱＜ [SAP BW Connection Manager Editor](../../integration-services/connection-manager/sap-bw-connection-manager-editor.md)＞。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65726392"
 |**E - 僅限擷取**|擷取與特定要求識別碼相關聯的資料。 在此情況下，SAP Netweaver BW 系統已經將資料擷取到內部資料表中，而且 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝剛剛讀取資料。|  
   
  **預覽**  
- 開啟 [預覽] 對話方塊，以便預覽結果。 如需詳細資訊，請參閱 [Preview](../../integration-services/data-flow/preview.md)。  
+ 開啟 [預覽]  對話方塊，以便預覽結果。 如需詳細資訊，請參閱 [Preview](../../integration-services/data-flow/preview.md)。  
   
 > [!IMPORTANT]  
 >  [SAP BW 來源編輯器] 之 **[連接管理員]** 頁面上提供的 **[預覽]** 選項會實際擷取資料。 如果您已將 SAP Netweaver BW 設定為僅擷取自從上次擷取以來已變更的資料，則選取 **[預覽]** 將會從下次擷取中排除已預覽的資料。  
@@ -96,7 +96,7 @@ ms.locfileid: "65726392"
  輸入與 RFC 目的地相關聯的程式識別碼。  
   
  **查閱**  
- 使用 [查閱 RFC 目的地] 對話方塊來查閱 RFC 目的地。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)＞。  
+ 使用 [查閱 RFC 目的地]  對話方塊來查閱 RFC 目的地。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)＞。  
   
 #### <a name="process-chain-options"></a>處理序鏈結選項  
  您不需要事先了解並輸入這些值。 使用 **[查閱]** 按鈕，即可尋找並選取適當的處理序鏈結。 在您選取處理序鏈結之後，此元件就會針對選項輸入適當的值。  
@@ -105,7 +105,7 @@ ms.locfileid: "65726392"
  輸入要由來源觸發之處理序鏈結的名稱。  
   
  **查閱**  
- 使用 [查閱 ProcessChain] 對話方塊來查閱處理序鏈結。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up Process Chain](../../integration-services/data-flow/look-up-process-chain.md)＞。  
+ 使用 [查閱 ProcessChain]  對話方塊來查閱處理序鏈結。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up Process Chain](../../integration-services/data-flow/look-up-process-chain.md)＞。  
   
 ### <a name="execution-mode--w---wait-for-notify"></a>執行模式 = W - 等候通知  
   
@@ -122,7 +122,7 @@ ms.locfileid: "65726392"
  輸入與 RFC 目的地相關聯的程式識別碼。  
   
  **查閱**  
- 使用 [查閱 RFC 目的地] 對話方塊來查閱 RFC 目的地。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)＞。  
+ 使用 [查閱 RFC 目的地]  對話方塊來查閱 RFC 目的地。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)＞。  
   
 ### <a name="execution-mode--e---extract-only"></a>執行模式 = E - 僅限擷取  
  **要求識別碼**  

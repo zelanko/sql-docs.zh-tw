@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 02a8806494a016e1aca0fd442968857b0428a21b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676706"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63045825"
 ---
 # <a name="mssqlserver233"></a>MSSQLSERVER_233
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,12 +28,12 @@ ms.locfileid: "47676706"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|233|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱||  
-|訊息文字|已順利建立與伺服器的連接，但隨後在登入過程中發生錯誤。 (提供者: 共用記憶體提供者，錯誤: 0 - 在管道的另一端沒有處理序。) (Microsoft SQL Server，錯誤: 233)|  
+|訊息文字|已順利建立與伺服器的連接，但隨後在登入過程中發生錯誤。 (提供者：共用記憶體提供者，錯誤:0 - 管道的另一端上無任何處理程序。) (Microsoft SQL Server，錯誤:233)|  
   
 ## <a name="explanation"></a>說明  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端無法連接到伺服器。 發生這個錯誤可能是因為伺服器未設定成接受遠端連接。  

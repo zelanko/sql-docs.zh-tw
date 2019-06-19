@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0a355108635799d03c2859b6c47eaaf8acc87dc7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63185551"
 ---
 # <a name="set-cpu-idle-time-and-duration-sql-server-management-studio"></a>設定 CPU 閒置與持續時間 (SQL Server Management Studio)
@@ -32,13 +32,13 @@ ms.locfileid: "63185551"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，按一下 [屬性]，然後選取 [進階] 頁面。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，按一下 [屬性]  ，然後選取 [進階]  頁面。  
   
 3.  在 **[閒置 CPU 的條件]** 下方，執行下列步驟：  
   
-    -   核取 **[定義閒置 CPU 的條件]**。  
+    -   核取 **[定義閒置 CPU 的條件]** 。  
   
-    -   在 [平均 CPU 使用量低於]\(所有 CPU) 方塊中指定百分比。 這樣會設定 CPU 必須低於此使用量才會視為閒置。  
+    -   在 [平均 CPU 使用量低於]  \(所有 CPU) 方塊中指定百分比。 這樣會設定 CPU 必須低於此使用量才會視為閒置。  
   
     -   在 **[並且持續低於此狀態達]** 方塊中指定秒數。 這樣會設定此期間必須維持最小 CPU 用量才會視為閒置。  
   

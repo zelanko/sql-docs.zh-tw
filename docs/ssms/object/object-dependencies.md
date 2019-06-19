@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d78edce14b7e88648ce134c2bb3d7def7003f516
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102975"
 ---
 # <a name="object-dependencies"></a>物件相依性
@@ -29,30 +29,30 @@ ms.locfileid: "65102975"
 在變更或刪除選取的物件之前，請使用此對話方塊來了解相依性。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
-**相依於** \<所選取物件> 的物件  
+**相依於** \<所選取物件>  的物件  
 按一下此按鈕會顯示已進行相依性追蹤，並相依於所選取物件的物件清單。  
   
-\<所選取物件> **相依的物件**  
+ \<所選取物件>  **相依的物件**  
 按一下此按鈕會顯示已進行相依性追蹤，所選取物件相依的物件清單。  
   
 **相依性**  
-若按一下**相依於** *<selected object>* 的物件，將會以階層檢視顯示相依於所選物件的物件。 若按一下 *<selected object>* **所相依**的物件，將會以階層檢視顯示所選物件相依的物件。  
+若按一下**相依於** *<selected object>* 的物件，將會以階層檢視顯示相依於所選物件的物件。 若按一下  *<selected object>* **所相依**的物件，將會以階層檢視顯示所選物件相依的物件。  
   
 **名稱**  
-顯示在上述 [相依性] 樹狀檢視中選取之物件的名稱。  
+顯示在上述 [相依性]  樹狀檢視中選取之物件的名稱。  
   
 **型別**  
-顯示在上述 [相依性] 樹狀檢視中選取之物件的類型。  
+顯示在上述 [相依性]  樹狀檢視中選取之物件的類型。  
   
 **上次同步時間**  
 > [!NOTE]  
-> 只有 [進階] 頁面會提供此選項。  
+> 只有 [進階]  頁面會提供此選項。  
   
 指定上次更新相依性資訊的時間和日期。  
   
 **相依性類型**  
 > [!NOTE]  
-> 只有 [一般] 頁面會提供此選項。  
+> 只有 [一般]  頁面會提供此選項。  
   
 顯示兩個物件之間的相依性類型。 可以是下列其中一項：  
   

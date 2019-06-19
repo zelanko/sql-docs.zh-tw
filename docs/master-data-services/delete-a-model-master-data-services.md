@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b58ab23dabb6528783422e82b493f4a721f2fb73
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487682"
 ---
 # <a name="delete-a-model-master-data-services"></a>刪除模型 (Master Data Services)
@@ -39,19 +39,19 @@ ms.locfileid: "65487682"
   
 ### <a name="to-delete-a-model"></a>若要刪除模型  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[模型]**。  
+2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[模型]** 。  
   
-3.  從 [管理模型] 頁面的方格中，選取您要刪除之模型的資料列。  
+3.  從 [管理模型]  頁面的方格中，選取您要刪除之模型的資料列。  
   
-4.  按一下 **[刪除]**。  
+4.  按一下 **[刪除]** 。  
   
-5.  在確認對話方塊中按一下 **[確定]**。  
+5.  在確認對話方塊中按一下 **[確定]** 。  
   
-6.  在另一個確認對話方塊中按一下 [確定]。  
+6.  在另一個確認對話方塊中按一下 [確定]  。  
   
- 方格中的 [狀態]  資料行會顯示模型上的作業狀態。 當您按一下 [儲存模型] 按鈕時，會顯示![正在更新](../master-data-services/media/mds-model-status-updating.png "正在更新")影像，表示正在更新模型。 如果建立或編輯模型時發生錯誤，則會顯示![錯誤](../master-data-services/media/mds-model-status-error.png "錯誤")影像。 否則，狀態為正常並顯示 ![[確定]](../master-data-services/media/mds-model-status-ok.png "[確定]") 影像。  
+ 方格中的 [狀態]  資料行會顯示模型上的作業狀態。 當您按一下 [儲存模型]  按鈕時，會顯示![正在更新](../master-data-services/media/mds-model-status-updating.png "正在更新")影像，表示正在更新模型。 如果建立或編輯模型時發生錯誤，則會顯示![錯誤](../master-data-services/media/mds-model-status-error.png "錯誤")影像。 否則，狀態為正常並顯示 ![[確定]](../master-data-services/media/mds-model-status-ok.png "[確定]") 影像。  
   
 ## <a name="see-also"></a>另請參閱  
  [模型 &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   

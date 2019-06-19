@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c5692d8bb04c239e0cdb84531ff9fc7fec07cc31
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726836"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>使用 OLE DB 來源來擷取資料
@@ -61,11 +61,11 @@ ms.locfileid: "65726836"
   
 8.  (選擇性) 藉由編輯 **[輸出資料行]** 清單中的值，更新輸出資料行的名稱。  
   
-9. 若要設定錯誤輸出，請按一下 **[錯誤輸出]**。 如需詳細資訊，請參閱 [偵錯資料流程](../../integration-services/troubleshooting/debugging-data-flow.md)。  
+9. 若要設定錯誤輸出，請按一下 **[錯誤輸出]** 。 如需詳細資訊，請參閱 [偵錯資料流程](../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
 10. 您可以按一下 **[預覽]** ，以檢視 OLE DB 來源擷取之最多 200 個資料列的資料。  
   
-11. 按一下 [確定] 。  
+11. 按一下 [確定]  。  
   
 12. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   

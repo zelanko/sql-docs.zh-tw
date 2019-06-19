@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 403ce296913bfcfbf55aedb75e989dd5d296c6c2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725888"
 ---
 # <a name="select-a-dimension-table-and-keys-slowly-changing-dimension-wizard"></a>選取維度資料表與索引鍵 (緩時變維度精靈)
@@ -31,13 +31,13 @@ ms.locfileid: "65725888"
   
 ## <a name="options"></a>選項。  
  **[ODBC 目的地編輯器]**  
- 從清單中選取現有的 OLE DB 連線管理員，或按一下 [新增] 建立 OLE DB 連線管理員。  
+ 從清單中選取現有的 OLE DB 連線管理員，或按一下 [新增]  建立 OLE DB 連線管理員。  
   
 > [!NOTE]  
 >  [緩時變維度精靈] 只支援 OLE DB 連線管理員，所以只支援與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的連線。  
   
  **新增**  
- 使用 [設定 OLE DB 連線管理員] 對話方塊，以選取現有的連線管理員，或按一下 [新增] 建立新的 OLE DB 連線。  
+ 使用 [設定 OLE DB 連線管理員]  對話方塊，以選取現有的連線管理員，或按一下 [新增]  建立新的 OLE DB 連線。  
   
  **[資料表或檢視表]**  
  從清單中選取資料表或檢視。  

@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1d70fe813437ff6204173dc20df90d029f6568fb
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096868"
 ---
 # <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>如何：使用資料表設計工具管理資料表和關聯性
@@ -34,17 +34,17 @@ ms.locfileid: "65096868"
   
 1.  開啟先前的程序中使用的 TradeDev 專案。  
   
-2.  在 [方案總管] 中展開 [dbo] 資料夾，以滑鼠右鍵按一下 [資料表] 資料夾，再依序選取 [加入] 和 [資料表]。  
+2.  在 [方案總管]  中展開 [dbo]  資料夾，以滑鼠右鍵按一下 [資料表]  資料夾，再依序選取 [加入]  和 [資料表]  。  
   
-3.  將新資料表命名為 **Shipper**，然後按一下 [加入]。  
+3.  將新資料表命名為 **Shipper**，然後按一下 [加入]  。  
   
 4.  資料表設計工具隨即開啟。 在資料行格線中，使用名稱 **ShipperName** 和資料類型 **int** 將新資料行加入至資料表。  
   
-5.  請注意，您還可以在 [屬性] 視窗中編輯資料行的屬性。 按一下 [ShipperName] 資料行，然後在 [屬性] 視窗中將這個資料行的 [DataType] 變更為 **nvarchar**，並將 [length] 變更為 **128**。 請注意，將焦點從欄位移開時，這個設計工具的指令碼窗格和資料行格線會自動更新以反映變更。  
+5.  請注意，您還可以在 [屬性]  視窗中編輯資料行的屬性。 按一下 [ShipperName]  資料行，然後在 [屬性]  視窗中將這個資料行的 [DataType]  變更為 **nvarchar**，並將 [length]  變更為 **128**。 請注意，將焦點從欄位移開時，這個設計工具的指令碼窗格和資料行格線會自動更新以反映變更。  
   
 ### <a name="to-create-a-new-foreign-key-constraint"></a>若要建立新的外部索引鍵條件約束  
   
-1.  在這個設計工具的內容窗格中，以滑鼠右鍵按一下 [外部索引鍵]，再選取 [加入新的外部索引鍵]。  
+1.  在這個設計工具的內容窗格中，以滑鼠右鍵按一下 [外部索引鍵]  ，再選取 [加入新的外部索引鍵]  。  
   
 2.  請注意，節點計數會自動遞增 1。 按 ENTER 接受條件約束的預設名稱。  
   

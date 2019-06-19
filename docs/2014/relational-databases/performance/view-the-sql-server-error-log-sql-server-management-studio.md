@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 494b57b50115b5ed3cf5089448215b89e9422ccb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150445"
 ---
 # <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>檢視 SQL Server 錯誤記錄檔 (SQL Server Management Studio)
@@ -30,6 +30,6 @@ ms.locfileid: "63150445"
   
 1.  在**物件總管 中**，展開伺服器，展開**管理**，然後展開**SQL Server 記錄檔**。  
   
-2.  以滑鼠右鍵按一下記錄檔，然後按一下 [檢視 SQL Server 記錄檔]。  
+2.  以滑鼠右鍵按一下記錄檔，然後按一下 [檢視 SQL Server 記錄檔]  。  
   
   

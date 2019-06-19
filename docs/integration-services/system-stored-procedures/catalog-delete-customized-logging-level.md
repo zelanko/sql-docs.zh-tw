@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5898e2bffa2c68ee3432830c338da986b7117de5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716765"
 ---
 # <a name="catalogdeletecustomizedlogginglevel"></a>catalog.delete_customized_logging_level 
@@ -38,7 +38,7 @@ delete_customized_logging_level [ @level_name = ] level_name
  [ @level_name = ] *level_name*  
  要刪除的現有自訂記錄層次名稱。  
   
- *level_name* 是 **nvarchar(128)**。  
+ *level_name* 是 **nvarchar(128)** 。  
   
 ## <a name="remarks"></a>Remarks  
   

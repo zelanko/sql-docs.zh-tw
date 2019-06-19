@@ -12,10 +12,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: b089fd59814e8439bee929fdbc4f01fbc0340f75
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65376857"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>設定 SQL Server 工具的使用方式和診斷資料收集 (CEIP)
@@ -43,11 +43,11 @@ ms.locfileid: "65376857"
   
 1.  啟動 Visual Studio。  
   
-2.  從 [說明] 功能表中，選取 [傳送意見反應]  >  [設定]。  
+2.  從 [說明] 功能表中，選取 [傳送意見反應]   >  [設定]  。  
   
-3.  若要關閉 CEIP，請按一下 [否，我不願意參加]，然後按一下 [確定]。  
+3.  若要關閉 CEIP，請按一下 [否，我不願意參加]  ，然後按一下 [確定]  。  
   
-     若要開啟 CEIP，請按一下 [是，我願意參加]，然後按一下 [確定]。  
+     若要開啟 CEIP，請按一下 [是，我願意參加]  ，然後按一下 [確定]  。  
   
 
   
@@ -87,11 +87,11 @@ Value = (DWORD)
   
 1.  啟動 Visual Studio。  
   
-2.  從 [說明] 功能表中，選取 [傳送意見反應]  >  [設定]。  
+2.  從 [說明] 功能表中，選取 [傳送意見反應]   >  [設定]  。  
   
-3.  若要關閉 CEIP，請按一下 [否，我不願意參加]，然後按一下 [確定]。  
+3.  若要關閉 CEIP，請按一下 [否，我不願意參加]  ，然後按一下 [確定]  。  
   
-     若要開啟 CEIP，請按一下 [是，我願意參加]，然後按一下 [確定]。  
+     若要開啟 CEIP，請按一下 [是，我願意參加]  ，然後按一下 [確定]  。  
   
 
   
@@ -125,13 +125,13 @@ Value = (DWORD)
   
 1.  啟動工具，並為 Analysis Services 或 Integration Services 中開啟新的或現有的專案。  
   
-2.  從 [說明] 功能表中，選取 [Microsoft SQL Server 客戶回函選項] 。  
+2.  從 [說明] 功能表中，選取 [Microsoft SQL Server 客戶回函選項]  。  
   
-3.  若要關閉 CEIP，請按一下 [不，我不想參加] 。  
+3.  若要關閉 CEIP，請按一下 [不，我不想參加]  。  
   
-     若要開啟 CEIP，請按一下 [是，我願意參加] 。  
+     若要開啟 CEIP，請按一下 [是，我願意參加]  。  
   
-4.  按一下 [確定] 。  
+4.  按一下 [確定]  。  
   
  **使用以登錄為基礎的原則或群組原則**  
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4111e6f64030d16da75c52ed60b6d0744b3fb58f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726415"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>SAP BW 來源編輯器 (進階頁面)
@@ -25,7 +25,7 @@ ms.locfileid: "65726415"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  使用 [SAP BW 來源編輯器] 的 [進階] 頁面可以指定字串轉換規則和逾時期限，也可以重設特定要求識別碼的狀態。  
+  使用 [SAP BW 來源編輯器]  的 [進階]  頁面可以指定字串轉換規則和逾時期限，也可以重設特定要求識別碼的狀態。  
   
  若要深入了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 來源元件，請參閱 [SAP BW 來源](../../integration-services/data-flow/sap-bw-source.md)。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "65726415"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 來源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程] 索引標籤中，按兩下 SAP BW 來源。  
+2.  在 [資料流程]  索引標籤中，按兩下 SAP BW 來源。  
   
 3.  在 **[SAP BW 來源編輯器]** 中，按一下 **[進階]** 開啟編輯器的 **[進階]** 頁面。  
   
@@ -61,10 +61,10 @@ ms.locfileid: "65726415"
  指定來源應該等候的秒數上限。  
   
 > [!NOTE]  
->  只有當您已經在編輯器的 [連接管理員] 頁面上，選取 [W - 等候通知] 作為 [執行模式] 的值時，這個選項才有效。 如需詳細資訊，請參閱 [SAP BW 來源編輯器 &#40;連接管理員頁面&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)。  
+>  只有當您已經在編輯器的 [連接管理員]  頁面上，選取 [W - 等候通知]  作為 [執行模式]  的值時，這個選項才有效。 如需詳細資訊，請參閱 [SAP BW 來源編輯器 &#40;連接管理員頁面&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)。  
   
  **要求識別碼**  
- 指定您想要在按一下 [重設] 時將其狀態重設成「G - 綠色」的要求識別碼。  
+ 指定您想要在按一下 [重設]  時將其狀態重設成「G - 綠色」的要求識別碼。  
   
  **重設**  
  在提示確認之後，讓您將指定之要求識別碼的狀態重設成「G - 綠色」。 在發生問題，而且 SAP Netweaver BW 系統已將要求標幟為黃色或紅色狀態時，這個選項可能很有用。  

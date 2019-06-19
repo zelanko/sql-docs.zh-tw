@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1a0cb087f5a0cd429d9bc6f30ea08aaef3d07b3b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483098"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>刪除模型物件權限 (Master Data Services)
@@ -33,11 +33,11 @@ ms.locfileid: "65483098"
   
 ### <a name="to-delete-model-object-permissions"></a>若要刪除模型物件權限  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]** 。  
   
 2.  在 **[使用者]** 或 **[群組]** 頁面上，選取要編輯之使用者或群組的資料列。  
   
-3.  按一下 **[編輯選取的使用者]**。  
+3.  按一下 **[編輯選取的使用者]** 。  
   
 4.  按一下 **[模型]** 索引標籤。  
   

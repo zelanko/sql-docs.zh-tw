@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5f7b30970020963e83fa101971d6c30d9e76397a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723953"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>資料行對應 (SQL Server 匯入和匯出精靈)
@@ -24,12 +24,12 @@ ms.locfileid: "65723953"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  選取現有資料表和檢視，以複製或檢視您所提供的查詢之後，如果您按一下 [編輯對應]， [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [資料行對應]  對話方塊。 在此頁面上，您可以指定並設定目的地資料行以接收從來源資料行中複製的資料。 您通常不需要變更此頁面上的任何項目。
+  選取現有資料表和檢視，以複製或檢視您所提供的查詢之後，如果您按一下 [編輯對應]，  [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [資料行對應]  對話方塊。 在此頁面上，您可以指定並設定目的地資料行以接收從來源資料行中複製的資料。 您通常不需要變更此頁面上的任何項目。
   
-如果您不想要複製所選取資料表中的所有資料行，則可以在此頁面上執行的動作是排除不想要的資料行。 針對您不想要複製的資料行，在 [對應] 清單的 [目的地] 資料行中選取 [忽略]。
+如果您不想要複製所選取資料表中的所有資料行，則可以在此頁面上執行的動作是排除不想要的資料行。 針對您不想要複製的資料行，在 [對應]  清單的 [目的地]  資料行中選取 [忽略]  。
  
 ## <a name="screen-shot-of-the-column-mappings-page"></a>[資料行對應] 頁面的螢幕擷取畫面 
- 下列螢幕擷取畫面顯示精靈的 [資料行對應] 對話方塊範例。 
+ 下列螢幕擷取畫面顯示精靈的 [資料行對應]  對話方塊範例。 
  
  在此範例中，因為選取了 [建立目的地資料表]  ，所以您會看到精靈即將建立新的目的地資料表。 精靈預設會在新目的地資料表的每個資料行中提供與對應來源資料行相同的名稱、資料類型和屬性。 
   
@@ -54,11 +54,11 @@ ms.locfileid: "65723953"
 按一下 [編輯 SQL]  以開啟 [建立資料表的 SQL 陳述式]  對話方塊。 使用自動產生的 CREATE TABLE 陳述式，或依您的用途進行修改。 如果您手動變更此陳述式，您必須確定資料行對應清單能夠辨識您所做的變更。 如需詳細資訊，請參閱 [Create Table SQL Statement](../../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md)(建立資料表的 SQL 陳述式)。  
 
 ### <a name="sometimes-these-options-are-disabled"></a>有時會停用這些選項
-自動啟用或自動停用 [建立目的地資料表/檔案] 選項和 [編輯 SQL] 按鈕。
+自動啟用或自動停用 [建立目的地資料表/檔案]  選項和 [編輯 SQL]  按鈕。
 
--   **已啟用。** 如果您已在 [選取來源資料表和檢視] 頁面上指定**新**目的地資料表，就會自動選取 [建立目的地資料表] 選項，並且會啟用 [編輯 SQL] 按鈕。
+-   **已啟用。** 如果您已在 [選取來源資料表和檢視]  頁面上指定**新**目的地資料表，就會自動選取 [建立目的地資料表]  選項，並且會啟用 [編輯 SQL]  按鈕。
 
--   **已停用。** 如果您已在 [選取來源資料表和檢視] 頁面上選取**現有**目的地資料表，就會停用 [建立目的地資料表] 選項和 [編輯 SQL] 按鈕。 如果您想要建立新的目的地資料表，請移回 [選取來源資料表和檢視] 頁面，並在 [目的地] 資料行中輸入**新**資料表的名稱。  
+-   **已停用。** 如果您已在 [選取來源資料表和檢視]  頁面上選取**現有**目的地資料表，就會停用 [建立目的地資料表]  選項和 [編輯 SQL]  按鈕。 如果您想要建立新的目的地資料表，請移回 [選取來源資料表和檢視]  頁面，並在 [目的地]  資料行中輸入**新**資料表的名稱。  
 
 ## <a name="what-about-existing-data-in-the-destination"></a>目的地中的現有資料如何？
 ![資料行對應頁面、選項區段](../../integration-services/import-export-data/media/column-mappings-page-options-section.png)
@@ -79,7 +79,7 @@ ms.locfileid: "65723953"
 > 如果您現有的主索引鍵位於識別資料行、autonumber 資料行或對等項目內，您通常必須選取此選項來保留現有的主索引鍵值。  否則目的地識別欄位通常會指派新值。  
 
 ## <a name="keep-your-autonumber-or-identity-values"></a>保留自動編號或識別值
-如果您正在匯出的資料具有自動編號資料行或識別資料行 (例如，如果您是要從 Microsoft Access 匯出)，請確定您選取 [啟用識別插入]，如上所述。
+如果您正在匯出的資料具有自動編號資料行或識別資料行 (例如，如果您是要從 Microsoft Access 匯出)，請確定您選取 [啟用識別插入]  ，如上所述。
 
 ## <a name="review-column-mappings"></a>檢閱資料行對應
 ![資料行對應頁面、對應區段](../../integration-services/import-export-data/media/column-mappings-page-mappings-section.png)
@@ -95,7 +95,7 @@ ms.locfileid: "65723953"
 -   **目的地**  
     檢視對應的目的地資料行，或選取不同的資料行。
     
-    您不需要複製來源資料表中的所有資料行。 針對您想要跳過的資料行，選取此資料行中的 [忽略]。 在對應資料行之前，您必須忽略不會加以對應的所有資料行。  
+    您不需要複製來源資料表中的所有資料行。 針對您想要跳過的資料行，選取此資料行中的 [忽略]  。 在對應資料行之前，您必須忽略不會加以對應的所有資料行。  
   
 -   **型別**  
     檢視目的地資料行的資料類型，或選取不同的資料類型。
@@ -113,7 +113,7 @@ ms.locfileid: "65723953"
     指定目的地資料行中數值資料的小數位數，即小數位數 (適用時)。  
   
 ## <a name="whats-next"></a>下一步  
- 檢閱並設定目的地資料行以接收從來源資料行複製的資料，且按一下 [確定] 之後，[資料行對應] 對話方塊會將您返回 [選取來源資料表和檢視] 頁面或 [設定一般檔案目的地] 頁面。 如需詳細資訊，請參閱 [選取來源資料表和檢視](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) 或 [設定一般檔案目的地](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)。  
+ 檢閱並設定目的地資料行以接收從來源資料行複製的資料，且按一下 [確定]  之後，[資料行對應]  對話方塊會將您返回 [選取來源資料表和檢視]  頁面或 [設定一般檔案目的地]  頁面。 如需詳細資訊，請參閱 [選取來源資料表和檢視](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) 或 [設定一般檔案目的地](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)。  
   
  如果指定一個可能會在 [對應]  清單中失敗的對應，則 [資料行對應]  對話方塊會將您導向至 [檢閱資料類型對應]  頁面。 在此頁面上，您可以檢閱警告，指定轉換選項，同時指定如何處理錯誤。 如需詳細資訊，請參閱 [檢閱資料類型對應](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md)。  
  

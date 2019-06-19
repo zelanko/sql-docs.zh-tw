@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b686a585b037a9377926198278a3a34f6fd4881
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721662"
 ---
 # <a name="lesson-4-1-copy-the-lesson-3-package"></a>課程 4-1：複製第 3 課套件
@@ -30,33 +30,33 @@ ms.locfileid: "65721662"
   
 如果您要複製已完成的第 3 課，請使用此程序。  若要複製範例第 3 課，請參閱下一節。
 
-1.  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools 尚未開啟，請選取 [開始] > [所有程式] > [Microsoft SQL Server 2017]，然後選取 [SQL Server Data Tools]。
+1.  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools 尚未開啟，請選取 [開始]   > [所有程式]   > [Microsoft SQL Server 2017]  ，然後選取 [SQL Server Data Tools]  。
 
-2.  在 [檔案] 功能表上，選取 [開啟] > [專案/方案]，選取 [SSIS 教學課程] 資料夾，然後選取 [開啟]，再按兩下 [SSIS Tutorial.sln]。
+2.  在 [檔案]  功能表上，選取 [開啟]   > [專案/方案]  ，選取 [SSIS 教學課程]  資料夾，然後選取 [開啟]  ，再按兩下 [SSIS Tutorial.sln]  。
 
-3.  在 [方案總管] 中，於 [Lesson 3.dtsx] 上按一下滑鼠右鍵，然後選取 [複製]。
+3.  在 [方案總管]  中，於 [Lesson 3.dtsx]  上按一下滑鼠右鍵，然後選取 [複製]  。
 
-4.  在 [方案總管] 中，於 [SSIS 封裝] 上按一下滑鼠右鍵，然後選取 [貼上]。
+4.  在 [方案總管]  中，於 [SSIS 封裝]  上按一下滑鼠右鍵，然後選取 [貼上]  。
 
     所複製套件的名稱預設為 **Lesson 4.dtsx**。
 
-5.  在 [方案總管] 中，按兩下 [Lesson 4.dtsx] 以開啟套件
+5.  在 [方案總管]  中，按兩下 [Lesson 4.dtsx]  以開啟套件
 
-6.  在 [控制流程] 設計介面背景中的任何位置按一下滑鼠右鍵，然後選取 [屬性]。
+6.  在 [控制流程]  設計介面背景中的任何位置按一下滑鼠右鍵，然後選取 [屬性]  。
 
-7.  在 [屬性] 視窗中，將 [名稱] 屬性變更為**第 4 課**。
+7.  在 [屬性]  視窗中，將 [名稱]  屬性變更為**第 4 課**。
 
-8.  依序選取 [識別碼] 屬性的方塊、下拉式箭頭，以及 [\<產生新的識別碼>]。
+8.  依序選取 [識別碼]  屬性的方塊、下拉式箭頭，以及 [\<產生新的識別碼>]  。
 
 ## <a name="add-the-completed-lesson-3-package"></a>新增已完成的第 3 課套件
 
 1.  開啟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools 及 SSIS 教學課程專案。
 
-2.  在 [方案總管] 中，於 [SSIS 封裝] 上按一下滑鼠右鍵，然後選取 [加入現有的封裝]。
+2.  在 [方案總管]  中，於 [SSIS 封裝]  上按一下滑鼠右鍵，然後選取 [加入現有的封裝]  。
 
-3.  在 [加入現有封裝的複本] 對話方塊的 [封裝位置] 中，選取 [檔案系統]。
+3.  在 [加入現有封裝的複本]  對話方塊的 [封裝位置]  中，選取 [檔案系統]  。
 
-4.  選取瀏覽 **(…)** 按鈕，瀏覽至您機器上的 [Lesson 3.dtsx]，然後選取 [開啟]。
+4.  選取瀏覽 **(…)** 按鈕，瀏覽至您機器上的 [Lesson 3.dtsx]  ，然後選取 [開啟]  。
 
 5.  複製並貼上第 3 課套件，如上一節中的步驟 3-8 所述。
 

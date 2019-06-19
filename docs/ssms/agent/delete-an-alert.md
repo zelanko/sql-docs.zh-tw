@@ -21,10 +21,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 367b2350e6f479f90cd8dbdde54c02548e584ecc
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096780"
 ---
 # <a name="delete-an-alert"></a>Delete an Alert
@@ -65,13 +65,13 @@ ms.locfileid: "65096780"
   
 1.  在 **[物件總管]** 中，按一下加號展開伺服器，此伺服器包含要刪除的 SQL Server Agent 警示。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
 3.  按一下加號展開 **[警示]** 資料夾。  
   
-4.  在您要刪除的警示上按一下滑鼠右鍵，然後選取 [刪除]。  
+4.  在您要刪除的警示上按一下滑鼠右鍵，然後選取 [刪除]  。  
   
-5.  在 **[刪除物件]** 對話方塊中，確認已選取正確的警示，然後按一下 **[確定]**。  
+5.  在 **[刪除物件]** 對話方塊中，確認已選取正確的警示，然後按一下 **[確定]** 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -79,9 +79,9 @@ ms.locfileid: "65096780"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- deletes the SQL Server Agent alert called 'Test Alert.'  

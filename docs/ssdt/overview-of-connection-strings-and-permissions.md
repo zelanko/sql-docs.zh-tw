@@ -12,17 +12,17 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 413d6ad71b70cc4ddca8205589d25e224bbcad76
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102025"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>連接字串和權限概觀
-若要執行 SQL Server 單元測試，您必須使用一個或兩個特定連接字串來連接到資料庫伺服器。 每一個連接字串都代表具有特定權限的帳戶 (如果您要在測試中的特定指令碼執行某個工作或一組工作，必須擁有該帳戶)。 您可以在 [SQL Server 測試組態] 對話方塊中指定這些字串，或是手動為測試專案編輯 app.config 檔案來加以指定。  
+若要執行 SQL Server 單元測試，您必須使用一個或兩個特定連接字串來連接到資料庫伺服器。 每一個連接字串都代表具有特定權限的帳戶 (如果您要在測試中的特定指令碼執行某個工作或一組工作，必須擁有該帳戶)。 您可以在 [SQL Server 測試組態]  對話方塊中指定這些字串，或是手動為測試專案編輯 app.config 檔案來加以指定。  
   
 ## <a name="connection-strings"></a>連接字串  
-您可以在 [SQL Server 測試組態] 對話方塊中，為以下的每一個帳戶指定連接字串。  
+您可以在 [SQL Server 測試組態]  對話方塊中，為以下的每一個帳戶指定連接字串。  
   
 > [!NOTE]  
 > 只有當您使用 SQL Server 驗證時，執行內容和授權的內容才會不同。 如果您是使用 Windows 驗證，兩個連接字串會使用相同的認證。  

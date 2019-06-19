@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 49032dd9c8f57f1bb822720ae431098e911fbed1
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483879"
 ---
 # <a name="change-an-entity-name-master-data-services"></a>變更實體名稱 (Master Data Services)
@@ -34,15 +34,15 @@ ms.locfileid: "65483879"
   
 ### <a name="to-change-an-entity-name"></a>若要變更實體名稱  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[實體]**。  
+2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[實體]** 。  
   
 3.  在 **[實體維護]** 頁面上，選取 **[模型]** 清單中的模型。  
   
 4.  按一下您想要變更名稱之實體的資料列。  
   
-5.  按一下 **[編輯選取的實體]**。  
+5.  按一下 **[編輯選取的實體]** 。  
   
 6.  在 **實體名稱**方塊中，輸入實體的更新的名稱。  
   

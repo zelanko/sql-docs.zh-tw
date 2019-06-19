@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6ae27f40a1da682ee0254d3605f3f05d47ceba44
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726419"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 目的地
@@ -46,9 +46,9 @@ ms.locfileid: "65726419"
   
 1.  建立新的來源系統：  
   
-    1.  選取 [協力廠商/暫存 BAPI] 類型。  
+    1.  選取 [協力廠商/暫存 BAPI]  類型。  
   
-    2.  針對 [目標系統的通訊類型]，選取 [非 Unicode (非使用中 MDMP 設定)]。  
+    2.  針對 [目標系統的通訊類型]  ，選取 [非 Unicode (非使用中 MDMP 設定)]  。  
   
     3.  指派適當的程式識別碼。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "65726419"
   
 -   使用您已選取的選項來測試資料的載入。  
   
- 您也可以針對目的地的 RFC 函數呼叫啟用記錄  (這項記錄與您針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝啟用的選擇性記錄是分開的)。您可以在設定目的地將使用的 SAP BW 連接管理員時啟用 RFC 函數呼叫的記錄。 如需有關如何設定 SAP BW 連接管理員的詳細資訊，請參閱＜ [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md)＞。  
+ 您也可以針對目的地的 RFC 函數呼叫啟用記錄 (這項記錄與您針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝啟用的選擇性記錄是分開的)。您可以在設定目的地將使用的 SAP BW 連接管理員時啟用 RFC 函數呼叫的記錄。 如需有關如何設定 SAP BW 連接管理員的詳細資訊，請參閱＜ [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md)＞。  
   
  如果您不知道設定目的地的所有必要值，可能必須詢問 SAP 系統管理員。  
   

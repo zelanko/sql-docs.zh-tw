@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d92557b37cac982a70d5b3203472c40a2fd72ce4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922881"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查詢運算式和統一的資源名稱
@@ -104,7 +104,7 @@ ms.locfileid: "62922881"
   
  查詢運算式必須以伺服器物件的絕對參考為開頭。 不允許使用含有前置 / 的相對運算式。 在查詢運算式中指定之物件的順序必須遵循相關聯物件模型中之集合物件的階層。 例如，在 Microsoft.SqlServer.Management.Smo 命名空間中參考物件的查詢運算式必須以伺服器節點為開頭，後面接著資料庫節點等項目。  
   
- 如果未針對物件指定 *\<FilterExpression>*，就會列舉該節點上的所有物件。  
+ 如果未針對物件指定 *\<FilterExpression>* ，就會列舉該節點上的所有物件。  
   
 ## <a name="uniform-resource-names-urn"></a>統一資源名稱 (URN)  
  URN 是查詢運算式的子集。 每個 URN 都會構成單一物件的完整參考。 一般的 URN 會使用 Name 屬性來識別位於每個節點的單一物件。 例如，這個 URN 會參考特定資料行：  

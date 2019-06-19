@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e60baa8e5d00235e859fbef97f616a5ae23e6df2
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095377"
 ---
 # <a name="create-update-queries-visual-database-tools"></a>建立更新查詢 (Visual Database Tools)
@@ -52,19 +52,19 @@ WHERE (pub_id = '0766')
   
 1.  將要更新的資料表加入至 [圖表] 窗格。  
   
-2.  從 [查詢設計工具] 功能表中，指向 [變更類型]，然後按一下 [更新]。  
+2.  從 [查詢設計工具]  功能表中，指向 [變更類型]  ，然後按一下 [更新]  。  
   
     > [!NOTE]  
     > 在啟動更新查詢時，如果 [圖表] 窗格中顯示一個以上的資料表，查詢和檢視表設計工具會顯示[選擇插入值的目標資料表對話方塊](../../ssms/visual-db-tools/choose-target-table-for-insert-values-dialog-box-visual-database-tools.md)，以詢問要更新的資料表名稱。  
   
 3.  在 [圖表] 窗格中，按一下要提供新值之各資料行的核取方塊。 這些資料行將顯示在 [準則] 窗格中。 只有加入查詢中的資料行才會更新。  
   
-4.  在 [準則] 窗格的 [新值] 資料行中，輸入資料行的更新值。 您可輸入常值、資料行名稱或運算式。 該值必須符合 (或相容於) 正在更新之資料行的資料類型。  
+4.  在 [準則] 窗格的 [新值]  資料行中，輸入資料行的更新值。 您可輸入常值、資料行名稱或運算式。 該值必須符合 (或相容於) 正在更新之資料行的資料類型。  
   
     > [!CAUTION]  
     > [查詢和檢視設計師] 不會檢查值是否符合所更新資料行的長度。 如果提供的值太長，它可能會無預警地被截斷。 例如，如果 `name` 資料行的長度是 20 個字元，但是您指定 25 個字元的更新值，則最後 5 個字元可能會被截斷。  
   
-5.  在 [篩選條件] 資料行中輸入搜尋條件，以定義要更新的資料列。 如需詳細資訊，請參閱[指定搜尋準則 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)。  
+5.  在 [篩選條件]  資料行中輸入搜尋條件，以定義要更新的資料列。 如需詳細資訊，請參閱[指定搜尋準則 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)。  
   
     如果不指定搜尋條件，則指定資料表中的所有資料列會更新。  
   

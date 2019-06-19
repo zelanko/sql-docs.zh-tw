@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 17dad1100e0a4dc9df770ef781f8294198247af9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723858"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 的 [匯入及匯出精靈] 連線到資料來源
@@ -22,9 +22,9 @@ ms.locfileid: "65723858"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-本節的這項主題會示範如何使用 SQL Server 的 [匯入及匯出精靈] 連線到許多常用的資料來源。 您必須在精靈的 [選擇資料來源] 與 [選擇目的地] 頁面提供資料來源連線資訊。
+本節的這項主題會示範如何使用 SQL Server 的 [匯入及匯出精靈] 連線到許多常用的資料來源。 您必須在精靈的 [選擇資料來源]  與 [選擇目的地]  頁面提供資料來源連線資訊。
 
-本節的這項主題僅說明如何使用精靈的 [選擇資料來源] 與 [選擇目的地] 頁面**連線到資料來源**。 如需其他資訊，請參閱[相關的工作及內容](#related)。
+本節的這項主題僅說明如何使用精靈的 [選擇資料來源]  與 [選擇目的地]  頁面**連線到資料來源**。 如需其他資訊，請參閱[相關的工作及內容](#related)。
 
 ## <a name="connect-to-a-commonly-used-data-source"></a>連線到常用的資料來源
 按一下連結深入了解如何連線到下列其中一項常用的資料來源。

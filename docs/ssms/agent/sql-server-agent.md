@@ -16,10 +16,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6788b27f4260905c18487866d22fe9434f34b5ff
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097544"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
@@ -63,7 +63,7 @@ ms.locfileid: "65097544"
   
 -   執行 sp_start_job 預存程序。  
   
-作業中的每個動作都是 *「作業步驟」*(Job Step)。 例如，作業步驟可能是由執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、執行 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 封裝或對 Analysis Services 伺服器發出命令等動作構成。 作業步驟會視為作業的一部份來管理。  
+作業中的每個動作都是 *「作業步驟」* (Job Step)。 例如，作業步驟可能是由執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、執行 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 封裝或對 Analysis Services 伺服器發出命令等動作構成。 作業步驟會視為作業的一部份來管理。  
   
 每個作業步驟都是在特定的安全性內容中執行。 對於使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]的作業步驟，請使用 EXECUTE AS 陳述式來設定作業步驟的安全性內容。 對其他作業步驟類型，可以使用 Proxy 帳戶來設定作業步驟的安全性內容。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "65097544"
 > 若要使用 **net send**來傳送通知，則必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所在的電腦上啟動 Windows Messenger 服務。  
   
 > [!IMPORTANT]  
-> [呼叫器] 和 [Net Send] 選項會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未來版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 移除。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
+> [呼叫器] 和 [Net Send]  選項會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未來版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 移除。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
   
 若要使用電子郵件或呼叫器來傳送通知給操作員，則必須設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 以使用 Database Mail。 如需詳細資訊，請參閱 [Database Mail](../../relational-databases/database-mail/database-mail.md)。  
   

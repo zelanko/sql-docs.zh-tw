@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f036866a41376b2ee37076ac311b7dbe3f3d56e4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726538"
 ---
 # <a name="raw-file-custom-properties"></a>原始檔案自訂屬性
@@ -31,7 +31,7 @@ ms.locfileid: "65726538"
   
 |屬性名稱|資料類型|Description|  
 |-------------------|---------------|-----------------|  
-|AccessMode|整數 (列舉)|用來存取原始資料的模式。 可能的值為 [檔案名稱] (0) 和 [來自變數的檔案名稱] (1)。 預設值是 [檔案名稱] (0)。|  
+|AccessMode|整數 (列舉)|用來存取原始資料的模式。 可能的值為 [檔案名稱]  (0) 和 [來自變數的檔案名稱]  (1)。 預設值是 [檔案名稱]  (0)。|  
 |FileName|String|來源檔案的路徑和檔案名稱。|  
   
  原始檔案來源的輸出和輸出資料行沒有任何自訂屬性。  
@@ -46,9 +46,9 @@ ms.locfileid: "65726538"
   
 |屬性名稱|資料類型|Description|  
 |-------------------|---------------|-----------------|  
-|AccessMode|整數 (列舉)|一個值，指定 FileName 屬性包含檔案名稱，或包含檔案名稱之變數的名稱。 選項為 [檔案名稱] (0) 和 [來自變數的檔案名稱] (1)。|  
+|AccessMode|整數 (列舉)|一個值，指定 FileName 屬性包含檔案名稱，或包含檔案名稱之變數的名稱。 選項為 [檔案名稱]  (0) 和 [來自變數的檔案名稱]  (1)。|  
 |FileName|String|原始檔案目的地寫入的檔案名稱。|  
-|WriteOption|整數 (列舉)|一個值，指定原始檔案目的地是否會刪除具有相同名稱的現有檔案。 選項為 [永遠建立] (0)、[建立一次] (1)、[截斷與附加] (3) 和 [附加] (2)。 此屬性的預設值為 [永遠建立] (0)。|  
+|WriteOption|整數 (列舉)|一個值，指定原始檔案目的地是否會刪除具有相同名稱的現有檔案。 選項為 [永遠建立]  (0)、[建立一次]  (1)、[截斷與附加]  (3) 和 [附加]  (2)。 此屬性的預設值為 [永遠建立]  (0)。|  
   
 > [!NOTE]  
 >  附加作業要求已附加資料的中繼資料與檔案中已有資料的中繼資料相符。  

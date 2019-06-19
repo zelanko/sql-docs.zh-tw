@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e4863fa4b59c167728b831b6ff866279a6bf4d55
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105233"
 ---
 # <a name="copy-items-in-a-solution"></a>複製方案中的項目
@@ -30,11 +30,11 @@ ms.locfileid: "65105233"
   
 1.  在 [方案總管] 中，選取您要複製的項目。  
   
-2.  在 [編輯] 功能表上，按一下 [複製]。  
+2.  在 [編輯]  功能表上，按一下 [複製]  。  
   
 3.  在 [方案總管] 中，選取目的地專案。  
   
-4.  在 [編輯] 功能表上，按一下 [貼上]。  
+4.  在 [編輯]  功能表上，按一下 [貼上]  。  
   
 > [!NOTE]  
 > 您無法在專案之間複製連接。 將含有相關連接的查詢複製到另一個專案時，並不會將它的相關連接複製到目標專案。 您必須在目標專案中手動建立連接。  

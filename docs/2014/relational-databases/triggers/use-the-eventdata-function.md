@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62524250"
 ---
 # <a name="use-the-eventdata-function"></a>使用 EVENTDATA 函數
@@ -127,7 +127,7 @@ GO
 > [!NOTE]  
 >  若要傳回事件資料，我們建議您使用 XQuery `value()` 方法，而不要使用 `query()` 方法。 `query()` 方法會在輸出中傳回 XML 和逸出連字號的歸位字元和換行字元 (CRLF) 執行個體，而 `value()` 方法則會轉譯在輸出中看不到的 CRLF 執行個體。  
   
- [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中則提供了相似的 DDL 觸發程序範例。 若要取得此範例，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來尋找 [Database Triggers] 資料夾。 這個資料夾位在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 [可程式性] 資料夾下。 以滑鼠右鍵按一下 [ddlDatabaseTriggerLog]，然後選取 [編寫資料庫觸發程序的指令碼為]。 依預設，會停用 DDL 觸發程序 **ddlDatabaseTriggerLog**。  
+ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中則提供了相似的 DDL 觸發程序範例。 若要取得此範例，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來尋找 [Database Triggers] 資料夾。 這個資料夾位在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 [可程式性]  資料夾下。 以滑鼠右鍵按一下 [ddlDatabaseTriggerLog]  ，然後選取 [編寫資料庫觸發程序的指令碼為]  。 依預設，會停用 DDL 觸發程序 **ddlDatabaseTriggerLog**。  
   
 ## <a name="see-also"></a>另請參閱  
  [DDL 事件](../triggers/ddl-events.md)   

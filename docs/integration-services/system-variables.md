@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed952b3e9d275d54c751aa64c6544653511667c3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715457"
 ---
 # <a name="system-variables"></a>系統變數
@@ -46,7 +46,7 @@ ms.locfileid: "65715457"
 |**ExecutionInstanceGUID**|String|執行封裝之執行個體的唯一識別碼。|  
 |**FailedConfigurations**|String|失敗的封裝組態名稱。|  
 |**IgnoreConfigurationsOnLoad**|布林|指出載入封裝時是否忽略封裝組態。|  
-|**InteractiveMode**|布林|指示封裝是否以互動模式執行。 如果封裝在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中執行，則此屬性設為 [True]。 如果封裝是使用 **DTExec** 命令提示字元公用程式來執行，則此屬性設為 [False]。|  
+|**InteractiveMode**|布林|指示封裝是否以互動模式執行。 如果封裝在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中執行，則此屬性設為 [True]  。 如果封裝是使用 **DTExec** 命令提示字元公用程式來執行，則此屬性設為 [False]  。|  
 |**LocaleId**|Int32|封裝使用的地區設定。|  
 |**MachineName**|String|執行封裝之電腦的名稱。|  
 |**OfflineMode**|布林|指出封裝是否處於離線模式。 離線模式不會取得與資料來源的連接。|  
@@ -94,7 +94,7 @@ ms.locfileid: "65715457"
 |**ProgressCountHigh**|Int32|64 位元值的較高部份，指示 OnProgress 事件處理的作業總數。|OnProgress 事件處理常式|  
 |**ProgressCountLow**|Int32|64 位元值的較低部份，指示 OnProgress 事件處理的作業總數。|OnProgress 事件處理常式|  
 |**ProgressDescription**|String|進度的描述。|OnProgress 事件處理常式|  
-|**Propagate**|布林|指示是否將事件傳播至較高層級的事件處理常式。<br /><br /> 注意:驗證套件期間，系統會忽略 **Propagate** 變數的值。 如果您在子封裝中，將 **Propagate** 設為 [False]，這就無法防止事件向上擴展到父封裝。|所有事件處理常式|  
+|**Propagate**|布林|指示是否將事件傳播至較高層級的事件處理常式。<br /><br /> 注意:驗證套件期間，系統會忽略 **Propagate** 變數的值。 如果您在子封裝中，將 **Propagate** 設為 [False]  ，這就無法防止事件向上擴展到父封裝。|所有事件處理常式|  
 |**SourceDescription**|String|事件處理常式中引發事件之可執行檔的描述。|所有事件處理常式|  
 |**SourceID**|String|事件處理常式中引發事件之可執行檔的唯一識別碼。|所有事件處理常式|  
 |**SourceName**|String|事件處理常式中引發事件之可執行檔的名稱。|所有事件處理常式|  

@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 55da55b347037de5531b8409472ef4c405c55da6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726133"
 ---
 # <a name="derived-column-transformation"></a>衍生的資料行轉換
@@ -79,7 +79,7 @@ ms.locfileid: "65726133"
 -   [使用衍生的資料行轉換來衍生資料行值](../../../integration-services/data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   
 ## <a name="derived-column-transformation-editor"></a>衍生的資料行轉換編輯器
-  使用 [衍生的資料行轉換編輯器] 對話方塊，即可建立會擴展新的資料行或取代資料行的運算式。  
+  使用 [衍生的資料行轉換編輯器]  對話方塊，即可建立會擴展新的資料行或取代資料行的運算式。  
   
 ### <a name="options"></a>選項。  
  **變數和資料行**  
@@ -102,19 +102,19 @@ ms.locfileid: "65726133"
  **相關主題**：[Integration Services &#40;SSIS&#41; 運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[運算子 &#40;SSIS 運算式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)和[函數 &#40;SSIS 運算式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **資料類型**  
- 如果將資料加入新的資料行，[衍生的資料行轉換編輯器] 對話方塊就會自動評估運算式，並且適當設定資料類型。 這個資料行的值是唯讀的。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../../integration-services/data-flow/integration-services-data-types.md)。  
+ 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]  對話方塊就會自動評估運算式，並且適當設定資料類型。 這個資料行的值是唯讀的。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../../integration-services/data-flow/integration-services-data-types.md)。  
   
  **長度**  
- 如果將資料加入新的資料行，[衍生的資料行轉換編輯器] 對話方塊就會自動評估運算式，並且設定字串資料的資料行長度。 這個資料行的值是唯讀的。  
+ 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]  對話方塊就會自動評估運算式，並且設定字串資料的資料行長度。 這個資料行的值是唯讀的。  
   
  **有效位數**  
- 如果將資料加入新的資料行，[衍生的資料行轉換編輯器] 對話方塊就會自動根據資料類型來設定數值資料的有效位數。 這個資料行的值是唯讀的。  
+ 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]  對話方塊就會自動根據資料類型來設定數值資料的有效位數。 這個資料行的值是唯讀的。  
   
  **小數位數**  
- 如果將資料加入新的資料行，[衍生的資料行轉換編輯器] 對話方塊就會自動根據資料類型來設定數值資料的小數位數。 這個資料行的值是唯讀的。  
+ 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]  對話方塊就會自動根據資料類型來設定數值資料的小數位數。 這個資料行的值是唯讀的。  
   
  **字碼頁**  
- 如果將資料加入新的資料行，[衍生的資料行轉換編輯器] 對話方塊就會自動設定 DT_STR 資料類型的字碼頁。 您可以更新 [字碼頁]。  
+ 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]  對話方塊就會自動設定 DT_STR 資料類型的字碼頁。 您可以更新 [字碼頁]  。  
   
  **設定錯誤輸出**  
  使用 [ [設定錯誤輸出](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ] 對話方塊來指定如何處理錯誤。  

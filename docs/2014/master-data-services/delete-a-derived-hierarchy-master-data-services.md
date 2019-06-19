@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bcf52745a984d049db92e8255ba7984b6b52a71a
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483119"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>刪除衍生階層 (Master Data Services)
@@ -35,17 +35,17 @@ ms.locfileid: "65483119"
   
 ### <a name="to-delete-a-derived-hierarchy"></a>若要刪除衍生階層  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
 2.  在 **模型檢視**頁面上，從功能表列指向**管理**，按一下 **衍生階層**。  
   
-3.  在 [衍生階層維護] 頁面上，選取 [模型] 清單中的模型。  
+3.  在 [衍生階層維護]  頁面上，選取 [模型]  清單中的模型。  
   
 4.  選取要刪除之衍生階層的資料列。  
   
 5.  按一下 **刪除選取的階層**。  
   
-6.  在確認對話方塊中按一下 **[確定]**。  
+6.  在確認對話方塊中按一下 **[確定]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立衍生階層 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)   

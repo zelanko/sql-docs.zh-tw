@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 785f7f0af9a41052a870edc8feaf566585a45e89
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725975"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
@@ -68,7 +68,7 @@ ms.locfileid: "65725975"
 -   [排序合併和合併聯結轉換的資料](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="merge-join-transformation-editor"></a>合併聯結轉換編輯器
-  使用 [合併聯結轉換編輯器] 對話方塊，即可指定合併兩個由聯結組合之輸入的聯結類型、聯結資料行以及輸出資料行。  
+  使用 [合併聯結轉換編輯器]  對話方塊，即可指定合併兩個由聯結組合之輸入的聯結類型、聯結資料行以及輸出資料行。  
   
 > [!IMPORTANT]  
 >  合併聯結轉換針對其輸入需要已排序的資料。 如需這項重要需求的詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。  
@@ -78,7 +78,7 @@ ms.locfileid: "65725975"
  指定要使用內部聯結、左方外部聯結或完整聯結。  
   
  **交換輸入**  
- 使用 [交換輸入] 按鈕，來切換輸入之間的順序。 此選取項目對於左方外部聯結選項可能非常有用。  
+ 使用 [交換輸入]  按鈕，來切換輸入之間的順序。 此選取項目對於左方外部聯結選項可能非常有用。  
   
  **輸入**  
  針對您要放入合併輸出中的每個資料行，首先從可用的輸入清單中選取。  

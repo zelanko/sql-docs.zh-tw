@@ -15,17 +15,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d86515646236916a9c651c7fa02923b88b995cd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089550"
 ---
 # <a name="trace-template-properties-events-selection-tab"></a>追蹤範本屬性 (事件選取範圍索引標籤)
   使用 **[追蹤範本屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤，來檢視、編輯或指定要包含在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 追蹤範本中的事件類別和資料行。  
   
-## <a name="options"></a>選項。  
- [事件] 資料行  
+## <a name="options"></a>選項  
+ [事件]  資料行  
  選取或清除事件資料行中的核取方塊，來指定應追蹤的事件。 依事件類別目錄所組織的事件。  
   
  如果選取 **[一般]** 索引標籤上的 **[以現有的範本作為新範本的基礎]** ，就會根據指定的範本自動選取事件。 如需有關事件類別的詳細資訊，請參閱＜ [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md)＞。  
@@ -42,7 +42,7 @@ ms.locfileid: "66089550"
  顯示所有可用的資料行。 如果您正在建立一個不是以現有的範本為基礎的新範本，這個選項依預設為核取的。 取消選取以隱藏 **[事件選取範圍]** 方格中所有未選取的資料行。  
   
  **資料行篩選**  
- 啟動 [編輯篩選] 對話方塊，它會在資料行標籤的左方顯示篩選圖示。 使用 **[編輯篩選]** 對話方塊，即可編輯資料行篩選。  
+ 啟動 [編輯篩選]  對話方塊，它會在資料行標籤的左方顯示篩選圖示。 使用 **[編輯篩選]** 對話方塊，即可編輯資料行篩選。  
   
  **組織資料行**  
  變更追蹤中資料行的順序，並且依據一或多個資料行對結果進行分組。  

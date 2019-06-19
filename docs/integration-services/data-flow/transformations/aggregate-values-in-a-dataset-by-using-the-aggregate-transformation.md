@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dc1f80c816ea2f4a964481682c8fbded50b16675
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726307"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>使用彙總轉換來彙總資料集中的值
@@ -50,7 +50,7 @@ ms.locfileid: "65726307"
   
 8.  (選擇性) 修改 **[輸出別名]** 資料行中的值。  
   
-9. 若要變更預設彙總作業 **[群組依據]**，請在 **[作業]** 清單中選取不同的作業。  
+9. 若要變更預設彙總作業 **[群組依據]** ，請在 **[作業]** 清單中選取不同的作業。  
   
 10. 若要變更預設比較，請選取 **[比較旗標]** 資料行中列出的個別比較旗標。 依預設，比較會忽略大小寫、假名類型、不佔空間字元和字元寬度。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65726307"
   
 13. (選擇性) 按一下 **[進階]** 索引標籤，並設定可以用來最佳化彙總轉換執行之所有作業的屬性。  
   
-14. 按一下 [確定] 。  
+14. 按一下 [確定]  。  
   
 15. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   

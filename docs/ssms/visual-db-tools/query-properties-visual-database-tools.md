@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 84745411a3a44ea75d20c6c9f304fb7fe87d4d85
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098345"
 ---
 # <a name="query-properties-visual-database-tools"></a>查詢屬性 (Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "65098345"
   
 ## <a name="options"></a>選項。  
 **識別類別目錄**  
-展開以顯示 [名稱] 屬性。  
+展開以顯示 [名稱]  屬性。  
   
 **名稱**  
 顯示目前查詢的名稱。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中無法予以變更。  
@@ -62,13 +62,13 @@ ms.locfileid: "65098345"
 指定結果集 (Result Set) 中要包含目前查詢中所有資料表的全部資料行。 選擇此選項就等於在 SQL 陳述式裡的 SELECT 關鍵字後指定星號 (*)，而非指定個別的資料行名稱。  
   
 **查詢參數清單**  
-顯示查詢參數。 若要編輯參數，請按一下屬性，再按屬性右邊的省略符號 ([...])。 (只適用於泛型 OLE DB)。  
+顯示查詢參數。 若要編輯參數，請按一下屬性，再按屬性右邊的省略符號 ([...]  )。 (只適用於泛型 OLE DB)。  
   
 **SQL 註解**  
-顯示 SQL 陳述式的描述。 若要查看或編輯整個描述，請按一下 [描述]，再按屬性右邊的省略符號 ([...])。 您的註解中可能包含使用查詢的人及使用時間等這類資訊 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 (含) 以後版本的資料庫)。  
+顯示 SQL 陳述式的描述。 若要查看或編輯整個描述，請按一下 [描述]，再按屬性右邊的省略符號 ([...]  )。 您的註解中可能包含使用查詢的人及使用時間等這類資訊 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 (含) 以後版本的資料庫)。  
   
 **排名規格分類**  
-展開以顯示 [Top]、[Percent]、[Expression] 的屬性，以及 [With Ties] 屬性。  
+展開以顯示 [Top]  、[Percent]  、[Expression]  的屬性，以及 [With Ties]  屬性。  
   
 **(Top)**  
 指定查詢將包括 TOP 子句，而這個子句只會傳回結果集內的前 *n* 個資料列，或前百分之 *n* 的資料列。 預設值是查詢會傳回結果集裡前 10 個資料列。  
@@ -76,7 +76,7 @@ ms.locfileid: "65098345"
 使用此方塊變更傳回的資料列數目，或指定不同的百分比 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或更新版本)。  
   
 **運算式**  
-指定查詢將傳回的資料列數目或百分比。 如果將 [Percent] 設定為 [是]，則此數字為查詢將傳回的資料列百分比；如果將 [Percent] 設定為 [否]，則此數字表示傳回的資料列數目。 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 (含) 以後版本)。  
+指定查詢將傳回的資料列數目或百分比。 如果將 [Percent]  設定為 [是]，則此數字為查詢將傳回的資料列百分比；如果將 [Percent]  設定為 [否]，則此數字表示傳回的資料列數目。 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 (含) 以後版本)。  
   
 **Percent**  
 指定查詢只會傳回結果集內前百分之 *n* 的資料列。 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 (含) 以後版本)。  

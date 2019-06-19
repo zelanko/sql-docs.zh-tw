@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 534daee6995cd5429878cfb3fca4ac5aea33e2fe
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721969"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>課程 3-2 - 執行套件安裝精靈
@@ -37,52 +37,52 @@ ms.locfileid: "65721969"
   
 2.  在 [Deployment] 資料夾中，按兩下資訊清單檔 Deployment Tutorial.SSISDeploymentManifest。  
   
-3.  在 [封裝安裝精靈] 的 [歡迎使用] 頁面上，按一下 [下一步]。  
+3.  在 [封裝安裝精靈] 的 [歡迎使用] 頁面上，按一下 [下一步]  。  
   
-4.  在 [部署 SSIS 封裝] 頁面上，選取 [SQL Server 部署] 選項，再選取 [安裝之後驗證封裝] 核取方塊，然後按一下 [下一步]。  
+4.  在 [部署 SSIS 封裝] 頁面上，選取 [SQL Server 部署]  選項，再選取 [安裝之後驗證封裝]  核取方塊，然後按一下 [下一步]  。  
   
-5.  在 [指定目標 SQL Server] 頁面上的 [伺服器名稱] 方塊中，指定 **(local)**。  
+5.  在 [指定目標 SQL Server] 頁面上的 [伺服器名稱]  方塊中，指定 **(local)** 。  
   
-6.  如果 SQL Server 的執行個體支援 Windows 驗證，請選取 [使用 Windows 驗證]，否則請選取 [使用 SQL Server 驗證] 並提供使用者名稱和密碼。  
+6.  如果 SQL Server 的執行個體支援 Windows 驗證，請選取 [使用 Windows 驗證]  ，否則請選取 [使用 SQL Server 驗證]  並提供使用者名稱和密碼。  
   
-7.  確認已清除 [依賴伺服器儲存體進行加密] 核取方塊。  
+7.  確認已清除 [依賴伺服器儲存體進行加密]  核取方塊。  
   
-8.  按 **[下一步]**。  
+8.  按 **[下一步]** 。  
   
-9. 在 [選取安裝資料夾] 頁面上，按一下 [瀏覽]。  
+9. 在 [選取安裝資料夾] 頁面上，按一下 [瀏覽]  。  
   
-10. 在 [瀏覽資料夾] 對話方塊中，展開 [我的電腦]，然後按一下 [本機磁碟 (C:)]。  
+10. 在 [瀏覽資料夾]  對話方塊中，展開 [我的電腦]  ，然後按一下 [本機磁碟 (C:)]  。  
   
-11. 按一下 [建立新資料夾]，並且以 **DeploymentTutorialInstall** 取代新資料夾的**新增資料夾**預設名稱。  
+11. 按一下 [建立新資料夾]  ，並且以 **DeploymentTutorialInstall** 取代新資料夾的**新增資料夾**預設名稱。  
   
     > [!IMPORTANT]  
     > 在組態使用的環境變數值中會參考這個名稱， 因此資料夾和參考的名稱必須相符，否則封裝無法執行。  
   
-12. 按一下 [確定] 。  
+12. 按一下 [確定]  。  
   
-13. 在 [選取安裝資料夾] 頁面上，確認 [資料夾] 方塊中包含的是 **C:\DeploymentTutorialInstall**，然後按一下 [下一步]。  
+13. 在 [選取安裝資料夾] 頁面上，確認 [資料夾] 方塊中包含的是 **C:\DeploymentTutorialInstall**，然後按一下 [下一步]  。  
   
-14. 在 [確認安裝] 頁面上，按一下 [下一步]。  
+14. 在 [確認安裝] 頁面上，按一下 [下一步]  。  
   
     精靈便會安裝封裝。 當安裝完成之後，[設定封裝] 頁面隨即開啟。  
   
-15. 在 [設定封裝] 頁面上，確認 [設定檔] 方塊中有列出 datatransferconfig.dtsconfig 和 loadxmldataconfig.dtsconfig。  
+15. 在 [設定封裝] 頁面上，確認 [設定檔]  方塊中有列出 datatransferconfig.dtsconfig 和 loadxmldataconfig.dtsconfig。  
   
-16. 在 [設定檔] 清單中，按一下 **datatransferconfig.dtsconfig**、展開 [設定] 方塊中 [路徑] 資料行的 [屬性]，並以下列值更新 [值] 資料行：  
+16. 在 [設定檔]  清單中，按一下 **datatransferconfig.dtsconfig**、展開 [設定]  方塊中 [路徑]  資料行的 [屬性]，並以下列值更新 [值]  資料行：  
   
     |屬性|ReplTest1|更新的值|  
     |------------|---------|-----------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
-17. 在 [設定檔] 清單中，按一下 loadxmldataconfig.dtsconfig、展開 [設定] 方塊中 [路徑] 資料行的 [屬性]，並以下列值更新 [值] 資料行：  
+17. 在 [設定檔]  清單中，按一下 loadxmldataconfig.dtsconfig、展開 [設定]  方塊中 [路徑]  資料行的 [屬性]，並以下列值更新 [值]  資料行：  
   
     |屬性|ReplTest1|更新的值|  
     |------------|---------|-----------------|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLData]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xml|C:\DeploymentTutorialInstall\orders.xml|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLSchemaDefinition]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xsd|C:\DeploymentTutorialInstall\orders.xsd|  
   
-18. 在 [封裝驗證] 頁面上，檢視所安裝之各個封裝的驗證結果，然後按一下 [下一步]。  
+18. 在 [封裝驗證] 頁面上，檢視所安裝之各個封裝的驗證結果，然後按一下 [下一步]  。  
   
     由於目的地電腦上的環境變數值與開發電腦上的環境變數值不同，因此 [封裝驗證] 頁面上會出現一些警告。 您應該會看到下列這四個警告：  
   
@@ -96,9 +96,9 @@ ms.locfileid: "65721969"
   
     這些警告並不會影響封裝安裝。  
   
-    如果未選取 [部署 SSIS 封裝] 頁面上的 [安裝之後驗證封裝] 選項，則 [封裝驗證] 頁面就不會開啟，而且精靈不會顯示有關驗證的後續安裝資訊。  
+    如果未選取 [部署 SSIS 封裝] 頁面上的 [安裝之後驗證封裝]  選項，則 [封裝驗證] 頁面就不會開啟，而且精靈不會顯示有關驗證的後續安裝資訊。  
   
-19. 閱讀 [完成封裝安裝精靈] 頁面上的安裝摘要，然後按一下 [完成]。  
+19. 閱讀 [完成封裝安裝精靈] 頁面上的安裝摘要，然後按一下 [完成]  。  
   
     > [!NOTE]  
     > 暫存記錄檔是為了在封裝驗證中使用而建立的， 執行封裝時，並不會使用這個檔案。  

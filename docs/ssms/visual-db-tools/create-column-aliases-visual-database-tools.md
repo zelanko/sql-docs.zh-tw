@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 8bae23cd9ddd9221dd9084d0a6b273b57650e38d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105221"
 ---
 # <a name="create-column-aliases-visual-database-tools"></a>建立資料行別名 (Visual Database Tools)
@@ -33,9 +33,9 @@ ms.locfileid: "65105221"
   
 ### <a name="to-create-a-column-alias"></a>若要建立資料行別名  
   
-1.  在 [準則窗格] 中，找出包含您想要建立別名之資料行的資料列，並且視輸出需要標示該資料列。 如果資料行不在方格中，將其加入。  
+1.  在 [準則窗格]  中，找出包含您想要建立別名之資料行的資料列，並且視輸出需要標示該資料列。 如果資料行不在方格中，將其加入。  
   
-2.  在該資料列的 [別名] 資料行中，輸入別名。 別名必須遵循所有 SQL 的命名慣例。 如果所輸入的別名包含空白字元，[查詢和檢視設計師] 會自動在別名前後加入分隔符號。  
+2.  在該資料列的 [別名]  資料行中，輸入別名。 別名必須遵循所有 SQL 的命名慣例。 如果所輸入的別名包含空白字元，[查詢和檢視設計師] 會自動在別名前後加入分隔符號。  
   
 ## <a name="see-also"></a>另請參閱  
 [將資料行新增至查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)  

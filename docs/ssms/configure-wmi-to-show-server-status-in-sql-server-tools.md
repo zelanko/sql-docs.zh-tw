@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 16e262dbc1a89ef16fff5906e128b5f073c8bc3c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102846"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>設定 WMI 在 SQL Server 工具中顯示伺服器狀態
@@ -27,19 +27,19 @@ ms.locfileid: "65102846"
   
 ## <a name="SSMSProcedure"></a>若要設定 WMI 權限  
   
-1.  在遠端伺服器的 [開始] 功能表上按一下 [執行]。  
+1.  在遠端伺服器的 [開始]  功能表上按一下 [執行]  。  
   
-2.  在 [開啟] 方塊中輸入 **wmimgmt.msc**，再按 [確定]。  
+2.  在 [開啟]  方塊中輸入 **wmimgmt.msc**，再按 [確定]  。  
   
-3.  在 **Windows Management Infrastructure** 程式中，以滑鼠右鍵按一下 [WMI 控制 (本機)]，然後按一下[內容]。  
+3.  在 **Windows Management Infrastructure** 程式中，以滑鼠右鍵按一下 [WMI 控制 (本機)]  ，然後按一下[內容]  。  
   
-4.  在 [WMI 控制 (本機) 內容] 對話方塊的 [安全性] 索引標籤上，展開 [Root]，然後按一下 [CIMV2]。  
+4.  在 [WMI 控制 (本機) 內容]  對話方塊的 [安全性]  索引標籤上，展開 [Root]  ，然後按一下 [CIMV2]  。  
   
-5.  按一下 [安全性] 以開啟 [安全性 ROOT\CIMV2] 對話方塊。  
+5.  按一下 [安全性]  以開啟 [安全性 ROOT\CIMV2]  對話方塊。  
   
-6.  新增群組或使用者至 [群組或使用者名稱] 方塊，然後選取此新增項目。  
+6.  新增群組或使用者至 [群組或使用者名稱]  方塊，然後選取此新增項目。  
   
-7.  在 [_<group or user>_ 的權限] 方塊中，針對想要遠端偵測其服務狀態的使用者，選取 [遠端啟用] 權限的 [允許] 資料行。  
+7.  在 [ _<group or user>_ 的權限]  方塊中，針對想要遠端偵測其服務狀態的使用者，選取 [遠端啟用]  權限的 [允許]  資料行。  
   
 ## <a name="see-also"></a>另請參閱  
 [啟動、停止或暫停 SQL Server Agent 服務](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  

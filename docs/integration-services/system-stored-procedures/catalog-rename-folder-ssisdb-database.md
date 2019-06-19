@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5f048ff41461e719a06c20ddd08bb62ca58ca974
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715981"
 ---
 # <a name="catalogrenamefolder-ssisdb-database"></a>catalog.rename_folder (SSISDB 資料庫)
@@ -35,10 +35,10 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
   
 ## <a name="arguments"></a>引數  
  [ @old_name = ] *old_name*  
- 資料夾的原始名稱。 *old_name* 是 **nvarchar(128)**。  
+ 資料夾的原始名稱。 *old_name* 是 **nvarchar(128)** 。  
   
  [ @new_name = ] *new_name*  
- 資料夾的新名稱。 *new_name* 是 **nvarchar(128)**。  
+ 資料夾的新名稱。 *new_name* 是 **nvarchar(128)** 。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  None  

@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1ce5c0323d98e2b8f05813513b3a2f44444a6695
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102776"
 ---
 # <a name="configure-login-auditing-sql-server-management-studio"></a>設定登入稽核 (SQL Server Management Studio)
@@ -40,9 +40,9 @@ ms.locfileid: "65102776"
   
 1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，使用 [物件總管] 連接到 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] 的執行個體。  
   
-2.  在物件總管中，以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]。  
+2.  在物件總管中，以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]  。  
   
-3.  在 [安全性] 頁面的 [登入稽核] 底下，按一下所需的選項並關閉 [伺服器屬性] 頁面。  
+3.  在 [安全性]  頁面的 [登入稽核]  底下，按一下所需的選項並關閉 [伺服器屬性]  頁面。  
   
-4.  在物件總管中，以滑鼠右鍵按一下伺服器名稱，然後按一下 [重新啟動]。  
+4.  在物件總管中，以滑鼠右鍵按一下伺服器名稱，然後按一下 [重新啟動]  。  
   

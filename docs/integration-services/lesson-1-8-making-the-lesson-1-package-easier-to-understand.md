@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f830393b516ac583a6c0ae72332bef8ac8177714
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722836"
 ---
 # <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>課程 1-8：為第 1 課套件加上註解並設定格式 
@@ -34,21 +34,21 @@ ms.locfileid: "65722836"
   
 ## <a name="format-the-layout-of-the-data-flow"></a>設定資料流程配置的格式  
   
-1.  如果第 1 課套件尚未開啟，請按兩下 [方案總管] 中的 [Lesson 1.dtsx]。  
+1.  如果第 1 課套件尚未開啟，請按兩下 [方案總管]  中的 [Lesson 1.dtsx]  。  
   
-2.  選取 [資料流程] 索引標籤。  
+2.  選取 [資料流程]  索引標籤。  
   
-3.  若要一次選取所有資料流程元件，請使用 [編輯] > [全選]。
+3.  若要一次選取所有資料流程元件，請使用 [編輯]   > [全選]  。
   
-4.  在 **[格式]** 功能表上，選取 [設定成相同大小]，然後選取 [兩者]。  
+4.  在 **[格式]** 功能表上，選取 [設定成相同大小]  ，然後選取 [兩者]  。  
   
-5.  選取資料流程物件之後，在 [格式] 功能表上，選取 [對齊]，然後選取 [置中]。  
+5.  選取資料流程物件之後，在 [格式]  功能表上，選取 [對齊]  ，然後選取 [置中]  。  
 
-6.  選取資料流程物件之後，在 [格式] 功能表上，指向 [垂直間距]，然後選取 [設成相等]。  
+6.  選取資料流程物件之後，在 [格式]  功能表上，指向 [垂直間距]  ，然後選取 [設成相等]  。  
   
 ## <a name="add-an-annotation-to-the-data-flow"></a>將註解新增至資料流程  
   
-1.  在資料流程設計介面背景中的任何位置按一下滑鼠右鍵，然後選取 [加入註解]。  
+1.  在資料流程設計介面背景中的任何位置按一下滑鼠右鍵，然後選取 [加入註解]  。  
   
 2.  在註解方塊中輸入或貼上下列文字。  
   

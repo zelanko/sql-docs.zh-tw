@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dab606451fc99c70b28999f2d2d8be93d1513a20
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716042"
 ---
 # <a name="catalogremovedatatap"></a>catalog.remove_data_tap 
@@ -49,7 +49,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  None  
   
 ## <a name="remarks"></a>Remarks  
- 若要移除資料點選，執行的執行個體必須處於已建立狀態 ([catalog.operations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 檢視之 [狀態] 資料行中的值為 1)。  
+ 若要移除資料點選，執行的執行個體必須處於已建立狀態 ([catalog.operations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 檢視之 [狀態]  資料行中的值為 1)。  
   
 ## <a name="permissions"></a>權限  
  這個預存程序需要下列其中一個權限：  

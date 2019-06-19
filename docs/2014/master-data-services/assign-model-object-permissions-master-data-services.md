@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a1477f934dfa8a23fa5498124b74c9a150b24a33
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480068"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>指派模型物件權限 (Master Data Services)
@@ -35,23 +35,23 @@ ms.locfileid: "65480068"
   
 ### <a name="to-assign-model-object-permissions"></a>若要指派模型物件權限  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]** 。  
   
 2.  在 **[使用者]** 或 **[群組]** 頁面上，選取要編輯之使用者或群組的資料列。  
   
-3.  按一下 **[編輯選取的使用者]**。  
+3.  按一下 **[編輯選取的使用者]** 。  
   
 4.  按一下 **[模型]** 索引標籤。  
   
 5.  (選擇性) 從 **[模型]** 清單中選取模型。  
   
-6.  按一下 **[編輯]**。  
+6.  按一下 **[編輯]** 。  
   
 7.  展開樹狀結構，然後按一下要指派權限的模型物件。  
   
 8.  從功能表中，選取**唯讀**，**更新**，或**拒絕**。  
   
-9. 按一下 [儲存] 。  
+9. 按一下 [儲存]  。  
   
 ## <a name="next-steps"></a>後續步驟  
   

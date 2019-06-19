@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9f16743d37342f696241b6f46ac1d88fc1b85e28
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099853"
 ---
 # <a name="save-queries-visual-database-tools"></a>儲存查詢 (Visual Database Tools)
@@ -29,10 +29,10 @@ ms.locfileid: "65099853"
   
 1.  建立您的查詢。  
   
-2.  從 [檔案] 功能表中按一下 [儲存 <查詢名稱>]。  
+2.  從 [檔案]  功能表中按一下 [儲存 <查詢名稱>]  。  
   
     > [!NOTE]  
-    > 新建立的查詢會以系統名稱命名。 若要選擇您自己的查詢名稱，請選擇 [另存 <查詢名稱> 為]。  
+    > 新建立的查詢會以系統名稱命名。 若要選擇您自己的查詢名稱，請選擇 [另存 <查詢名稱> 為]  。  
   
 3.  查詢會儲存在 [方案總管] 中專案的 [查詢] 資料夾內。  
   

@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 68b5acfe67f0fc8f1408a50a09f48ee9515e3cb9
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105675"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>摘要或彙總資料表中所有資料列的值 (Visual Database Tools)
@@ -53,13 +53,13 @@ FROM titles
   
 1.  請確定您要彙總的資料表已經出現在 [圖表] 窗格中。  
   
-2.  在 [圖表] 窗格的背景上按一下滑鼠右鍵，然後從快速鍵功能表中選擇 [群組依據]。 [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)會將 [群組依據] 資料行新增至 [準則] 窗格的方格中。  
+2.  在 [圖表] 窗格的背景上按一下滑鼠右鍵，然後從快速鍵功能表中選擇 [群組依據]  。 [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)會將 [群組依據]  資料行新增至 [準則] 窗格的方格中。  
   
 3.  將您想彙總的資料行加入至 [準則] 窗格。 務必標記資料行以進行輸出。  
   
     [查詢和檢視表設計工具] 會自動將資料行別名指派給您要加總的資料行。 您可以使用較有意義的別名取代這個別名。 如需詳細資訊，請參閱[建立資料行別名 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
   
-4.  在 [群組依據] 格線欄中，選取適當的彙總函式，例如：**Sum**、**Avg**、**Min**、**Max**、**Count**。 如果只要彙總結果集中的唯一資料列，請選擇含有 DISTINCT 選項的彙總函式，例如 [Min Distinct]。 不要選擇 [Group By]、[Expression] 或 [Where]，因為這些選項不適用於彙總所有資料列。  
+4.  在 [群組依據]  格線欄中，選取適當的彙總函式，例如：**Sum**、**Avg**、**Min**、**Max**、**Count**。 如果只要彙總結果集中的唯一資料列，請選擇含有 DISTINCT 選項的彙總函式，例如 [Min Distinct]  。 不要選擇 [Group By]  、[Expression]  或 [Where]  ，因為這些選項不適用於彙總所有資料列。  
   
     查詢和檢視表設計工具會使用指定的彙總函式，取代 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)中陳述式的資料行名稱。 例如，SQL 陳述式將如下所示：  
   
@@ -70,7 +70,7 @@ FROM titles
   
 5.  若要在查詢中建立一個以上的彙總，請重複步驟 3 和 4。  
   
-    當其他資料行新增至查詢輸出清單或排序依據清單時，查詢和檢視表設計工具會自動將 [群組依據] 一詞填入至方格的 [群組依據] 資料行。 選取適當的彙總函式。  
+    當其他資料行新增至查詢輸出清單或排序依據清單時，查詢和檢視表設計工具會自動將 [群組依據]  一詞填入至方格的 [群組依據] 資料行  。 選取適當的彙總函式。  
   
 6.  加入搜尋條件 (如果有)，以指定要加總的資料列子集。  
   

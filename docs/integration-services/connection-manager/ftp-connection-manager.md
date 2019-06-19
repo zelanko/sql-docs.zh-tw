@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b683bf0183b7443106a46abc6d22578a66b5a90
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728265"
 ---
 # <a name="ftp-connection-manager"></a>FTP 連接管理員
@@ -29,11 +29,11 @@ ms.locfileid: "65728265"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  FTP 連接管理員可讓封裝連接到「檔案傳輸通訊協定 (FTP)」伺服器。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含的 FTP 工作使用此連線管理員。  
+  FTP 連接管理員可讓封裝連接到「檔案傳輸通訊協定 (FTP)」伺服器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含的 FTP 工作使用此連線管理員。  
   
  當您將 FTP 連線管理員加入封裝時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立在執行階段可解析為 FTP 連接的連線管理員、設定連線管理員屬性，並將連線管理員加入封裝上的 **Connections** 集合。  
   
- 連線管理員的 **ConnectionManagerType** 屬性會設為 [FTP]。  
+ 連線管理員的 **ConnectionManagerType** 屬性會設為 [FTP]  。  
   
  您可以利用下列方式設定 FTP 連接管理員：  
   
@@ -65,7 +65,7 @@ ms.locfileid: "65728265"
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="ftp-connection-manager-editor"></a>FTP 連接管理員編輯器
-  使用 [FTP 連線管理員編輯器] 對話方塊來指定連接到 FTP 伺服器的屬性。  
+  使用 [FTP 連線管理員編輯器]  對話方塊來指定連接到 FTP 伺服器的屬性。  
   
 > [!IMPORTANT]  
 >  FTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
@@ -98,7 +98,7 @@ ms.locfileid: "65728265"
  提供以 KB 為單位的傳輸資料區塊大小。  
   
  **測試連接**  
- 設定 FTP 連線管理員之後，請按一下 [測試連接] 以確認連接是可行的。  
+ 設定 FTP 連線管理員之後，請按一下 [測試連接]  以確認連接是可行的。  
   
 ## <a name="see-also"></a>另請參閱  
  [FTP 工作](../../integration-services/control-flow/ftp-task.md)   

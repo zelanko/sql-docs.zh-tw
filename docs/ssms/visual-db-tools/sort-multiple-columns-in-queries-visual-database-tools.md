@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1a83fefb4d328ebaea8bb77b914cbf731d117254
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099176"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>排序查詢中的多個資料行 (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "65099176"
   
 ### <a name="to-sort-query-results-by-more-than-one-column"></a>若要使用一個以上的資料行排序查詢結果  
   
-1.  在 [準則] 窗格中，針對要排序之資料行按一下 [排序次序] 欄位。  
+1.  在 [準則]  窗格中，針對要排序之資料行按一下 [排序次序]  欄位。  
   
 2.  輸入一個整數，或是從下拉清單中選取整數，以指示此資料行在排序資料行中的次序。  
   

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 631e838751ce47c19eb51b1f2a7158e89d57d6f6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715808"
 ---
 # <a name="catalogsetfolderdescription-ssisdb-database"></a>catalog.set_folder_description (SSISDB 資料庫)
@@ -36,10 +36,10 @@ catalog.set_folder_description [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>引數  
  [ @folder_name = ] *folder_name*  
- 資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
+ 資料夾的名稱。 *folder_name* 是 **nvarchar(128)** 。  
   
  [ @folder_description = ] *folder_description*  
- 資料夾的描述。 *folder_description* 是 **nvarchar(MAX)**。  
+ 資料夾的描述。 *folder_description* 是 **nvarchar(MAX)** 。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  None  

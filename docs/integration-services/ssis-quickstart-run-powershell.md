@@ -10,10 +10,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0703c95824224f8200a43a38ad5990971c6b7911
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717563"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>使用 PowerShell 執行 SSIS 套件
@@ -42,10 +42,10 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
 若要在 Azure SQL Database 上執行套件，請取得連線至 SSIS 目錄資料庫 (SSISDB) 所需的連線資訊。 在下列程序中，您需要完整伺服器名稱和登入資訊。
 
 1. 登入 [Azure 入口網站](https://portal.azure.com/)。
-2. 從左側功能表中選取 [SQL 資料庫]，然後選取 [SQL 資料庫] 頁面上的 SSISDB 資料庫。 
-3. 在您資料庫的 [概觀] 頁面上，檢閱完整伺服器名稱。 若要顯示 [按一下以複製] 選項，請將滑鼠指標暫留在伺服器名稱上。 
+2. 從左側功能表中選取 [SQL 資料庫]  ，然後選取 [SQL 資料庫]  頁面上的 SSISDB 資料庫。 
+3. 在您資料庫的 [概觀]  頁面上，檢閱完整伺服器名稱。 若要顯示 [按一下以複製]  選項，請將滑鼠指標暫留在伺服器名稱上。 
 4. 如果您忘記 Azure SQL Database 伺服器登入資訊，請巡覽至 [SQL Database 伺服器] 頁面來檢視伺服器管理員名稱。 如有需要，您可以重設密碼。
-5. 按一下 [顯示資料庫連接字串]。
+5. 按一下 [顯示資料庫連接字串]  。
 6. 檢閱完整 **ADO.NET** 連接字串。
 
 ## <a name="ssis-powershell-provider"></a>SSIS PowerShell 提供者

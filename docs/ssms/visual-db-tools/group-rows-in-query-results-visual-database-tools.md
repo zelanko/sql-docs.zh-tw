@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: f93d078f9491a6105a7e96c4e443f14bae936bbb
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104885"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>群組查詢結果中的資料列 (Visual Database Tools)
@@ -56,9 +56,9 @@ GROUP BY pub_id, type
   
 1.  將您要摘要的資料表加入至 [圖表] 窗格，以便開始進行查詢。  
   
-2.  在 [圖表] 窗格的背景上按一下滑鼠右鍵，然後從快速鍵功能表中選擇 [新增群組依據]。 查詢和檢視表設計工具會將 [群組依據] 資料行新增至 [準則] 窗格的方格中。  
+2.  在 [圖表] 窗格的背景上按一下滑鼠右鍵，然後從快速鍵功能表中選擇 [新增群組依據]  。 查詢和檢視表設計工具會將 [群組依據]  資料行新增至 [準則] 窗格的方格中。  
   
-3.  將您想分組的一或多個資料行加入至 [準則] 窗格。 如果您想讓資料行出現在查詢輸出中，務必選取 [輸出] 資料行進行輸出。  
+3.  將您想分組的一或多個資料行加入至 [準則] 窗格。 如果您想讓資料行出現在查詢輸出中，務必選取 [輸出]  資料行進行輸出。  
   
     查詢和檢視設計師會將 GROUP BY 子句加入至 [SQL] 窗格的陳述式中。 例如，SQL 陳述式將如下所示：  
   
@@ -70,13 +70,13 @@ GROUP BY pub_id, type
   
 4.  將您想彙總的一或多個資料行加入至 [準則] 窗格。 務必標記資料行以進行輸出。  
   
-5.  在要彙總資料行的 [群組依據] 方格資料格中，選取適當的彙總函式。  
+5.  在要彙總資料行的 [群組依據]  方格資料格中，選取適當的彙總函式。  
   
     [查詢和檢視表設計工具] 會自動將資料行別名指派給您要加總的資料行。 您可以使用較有意義的別名取代這個自動產生的別名。 如需詳細資訊，請參閱 [建立資料行別名 (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
   
     ![將資料行別名新增到查詢結果集](../../ssms/visual-db-tools/media/dv3w9e3.gif "將資料行別名新增到查詢結果集")  
   
-    [SQL] 窗格中的對應陳述式將如下所示：  
+    [SQL]  窗格中的對應陳述式將如下所示：  
   
     ```  
     SELECT   pub_id, SUM(price) AS Totalprice  

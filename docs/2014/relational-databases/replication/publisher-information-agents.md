@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9094fcbbede4c9bb6bac283129ed20ea4e3e910b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261759"
 ---
 # <a name="publisher-information-agents"></a>發行者資訊，代理程式
@@ -47,11 +47,11 @@ ms.locfileid: "63261759"
 ## <a name="options"></a>選項。  
  若要顯示某個代理程式或作業的相關資訊，請從 **[代理程式和作業類型]** 下拉式功能表中選取。 如需更詳細的資訊以及與代理程式或作業相關的工作，請以滑鼠右鍵按一下該代理程式或作業的資料列，然後按一下快速鍵功能表上的選項。 若要變更方格顯示資料的方式，請以滑鼠右鍵按一下方格，然後按一下下列其中一個選項：  
   
--   **排序**：在 [排序資料行] 對話方塊中排序一個或多個資料行。  
+-   **排序**：在 [排序資料行]  對話方塊中排序一個或多個資料行。  
   
--   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及這些資料行在 [選擇資料行] 對話方塊中的顯示順序。  
+-   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及這些資料行在 [選擇資料行]  對話方塊中的顯示順序。  
   
--   **篩選**：根據 [篩選設定] 對話方塊中的資料行值，篩選方格中的資料列。  
+-   **篩選**：根據 [篩選設定]  對話方塊中的資料行值，篩選方格中的資料列。  
   
 -   **清除篩選**：清除所有篩選設定方格。  
   

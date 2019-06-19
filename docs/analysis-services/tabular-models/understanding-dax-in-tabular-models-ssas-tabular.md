@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: feb215c24081d8f7c33e63369a24651b4008595c
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65356505"
 ---
 # <a name="dax-in-tabular-models"></a>表格式模型中的 DAX 
@@ -68,8 +68,8 @@ ms.locfileid: "65356505"
 |十進位數字|64 位元 (八位元組) 實數 <sup>1、2</sup>|實數是可以有小數位數的數字。 實數涵蓋極廣的值範圍：<br /><br /> 負值是從 -1.79E + 308 到 -2.23E - 308<br /><br /> 零 (0)<br /><br /> 正值是從 2.23E -308 到 1.79E + 308<br /><br /> 不過，有效位數的數目限制為 17 個小數位數。|  
 |布林|布林|True 或 False 值。|  
 |Text|String|Unicode 字元資料字串。 可以是字串或數字，或以文字格式表示的日期。|  
-|date|日期/時間|採用可接受之日期時間表示方式的日期和時間。<br /><br /> 有效日期為 1900 年 3 月 1 日之後的所有日期。|  
-|CURRENCY|CURRENCY|貨幣資料類型允許的值是從 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 且固定有效位數為四個小數位數。|  
+|Date|日期/時間|採用可接受之日期時間表示方式的日期和時間。<br /><br /> 有效日期為 1900 年 3 月 1 日之後的所有日期。|  
+|Currency|Currency|貨幣資料類型允許的值是從 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 且固定有效位數為四個小數位數。|  
 |N/A|空白|空白是 DAX 中表示和取代 SQL Null 的資料類型。 您可以使用 BLANK 函數建立空白，然後使用邏輯函數 ISBLANK 來測試空白。|  
   
  表格式模型也包含資料表資料類型，做為許多 DAX 函數的輸入或輸出。 例如，FILTER 函數會採用資料表做為輸入，並輸出只包含符合篩選條件之資料列的另一份資料表。 您可以結合資料表函數與彙總函式，透過動態定義的資料集執行複雜的計算。  
@@ -229,7 +229,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 -   使用公式中的特殊函數指定的關聯性  
   
- 內容可分為以下不同類型： *「資料列內容」*(Row Context)、 *「查詢內容」*(Query Context) 和 *「篩選內容」*(Filter Context)。  
+ 內容可分為以下不同類型： *「資料列內容」* (Row Context)、 *「查詢內容」* (Query Context) 和 *「篩選內容」* (Filter Context)。  
   
 ###  <a name="bkmk_row_context"></a> 資料列內容  
  *資料列內容*可以視為 「 目前的資料列 」。 如果您已經在導出資料行中建立公式，該公式的「資料列內容」(Row Context) 就會包含目前資料列中所有資料行的值。 如果資料表與另一個資料表相關，則內容也會包含後者中與目前資料列相關的所有值。  
@@ -293,7 +293,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  如前幾節中所述，驗證期間的內容 (和重算運算) 是使用模型中可用的資料表、資料表之間的任何關聯性，以及已套用的任何篩選來決定。  
   
- 例如，如果您只將某些資料匯入新的資料表，而且該資料並未與其他任何資料表有關 (而且您尚未套用任何篩選)，則「目前內容」是資料表中一組完整的資料行。 如果此資料表與其他資料表之間有關聯性，則目前內容會包含相關資料表。 如果您將資料表中的資料行加入至擁有交叉分析篩選器以及或許某些報表篩選的報表中，則公式的內容為報表內每一個資料格中的資料子集。  
+ 例如，如果您只將某些資料匯入新的資料表，而且該資料並未與其他任何資料表有關 (而且您尚未套用任何篩選)，則「目前內容」  是資料表中一組完整的資料行。 如果此資料表與其他資料表之間有關聯性，則目前內容會包含相關資料表。 如果您將資料表中的資料行加入至擁有交叉分析篩選器以及或許某些報表篩選的報表中，則公式的內容為報表內每一個資料格中的資料子集。  
   
  內容是效用強大的概念，但也可能會使公式的疑難排解變得很困難。 建議您從簡單的公式和關聯性開始，以了解內容如何運作。 下一節提供一些範例，說明公式如何使用不同類型的內容以動態方式傳回結果。  
   
@@ -320,7 +320,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 -   當透過關聯性連接資料表時，您必須確認當做索引鍵使用的兩個資料行擁有相符的值。 但是不會強制執行參考完整性，所以有可能索引鍵資料行中有不相符的值而仍建立關聯性。 如果發生這個狀況，您應該小心空白值或不相符的值可能會影響公式的結果。  
   
--   當您在模型中使用關聯性來連結資料表時，便會放大評估公式所在的範圍或 *「內容」*(Context)。 因為增加新的資料表、新的關聯性或是使用中關聯性的變更而導致的內容變更可能會導致您的結果以意外的方式改變。 如需詳細資訊，請參閱本主題先前的 [DAX 公式中的內容](#bkmk_context) 。  
+-   當您在模型中使用關聯性來連結資料表時，便會放大評估公式所在的範圍或 *「內容」* (Context)。 因為增加新的資料表、新的關聯性或是使用中關聯性的變更而導致的內容變更可能會導致您的結果以意外的方式改變。 如需詳細資訊，請參閱本主題先前的 [DAX 公式中的內容](#bkmk_context) 。  
   
 ##  <a name="bkmk_tables"></a> 使用資料表和資料行  
  表格式模型中資料表的外觀就像 Excel 資料表，但其搭配資料與公式使用的方式有所不同：  
@@ -363,7 +363,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  如需詳細資訊，請參閱 <<c0> [ 處理序資料](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
   
 ##  <a name="bkmk_troubleshoot"></a> 疑難排解公式中的錯誤  
- 如果您在定義公式時出現錯誤，該公式可能包含 *「語法錯誤」*(Syntactic Error)、 *「語意錯誤」*(Semantic Error) 或 *「計算錯誤」*(Calculation Error)。  
+ 如果您在定義公式時出現錯誤，該公式可能包含 *「語法錯誤」* (Syntactic Error)、 *「語意錯誤」* (Semantic Error) 或 *「計算錯誤」* (Calculation Error)。  
   
  語法錯誤最容易解決。 它們通常與遺漏括號或逗號有關。 如需個別函數語法的說明，請參閱 [DAX Function Reference](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)。  
   

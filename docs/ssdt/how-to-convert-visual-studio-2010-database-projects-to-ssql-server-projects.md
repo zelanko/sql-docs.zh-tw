@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 93c4e141dc48c87214fc6de764d0b2ff33ebe9b9
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098233"
 ---
 # <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>如何：將 Visual Studio 2010 資料庫專案轉換成 SQL Server 資料庫專案，並將目標重定為不同的平台
@@ -38,17 +38,17 @@ ms.locfileid: "65098233"
   
 1.  開啟 SQL Server 2005 或 2008 資料庫專案。  
   
-2.  [轉換成 SQL Server 資料庫專案] 精靈隨即自動開啟。 選取 [轉換成 SQL Server 資料庫專案]，然後按一下 [確定]。 保留預設值，以備份選取的現有檔案。  
+2.  [轉換成 SQL Server 資料庫專案]  精靈隨即自動開啟。 選取 [轉換成 SQL Server 資料庫專案]  ，然後按一下 [確定]  。 保留預設值，以備份選取的現有檔案。  
   
 3.  自動產生轉換報告，列出所有已經轉換的檔案。 若要閱讀有關轉換程序的詳細資訊，按一下專案檔名旁邊的 **+** 號。  
   
-4.  請注意，[方案總管] 中的專案檔、屬性檔和結構描述物件全部都會轉換。  
+4.  請注意，[方案總管]  中的專案檔、屬性檔和結構描述物件全部都會轉換。  
   
 ### <a name="to-change-a-projects-target-platform"></a>變更專案的目標平台  
   
-1.  以滑鼠右鍵按一下 [方案總管] 中新轉換的專案，再選取 [屬性] 存取 [專案設定] 對話方塊。  
+1.  以滑鼠右鍵按一下 [方案總管]  中新轉換的專案，再選取 [屬性]  存取 [專案設定]  對話方塊。  
   
-2.  從 [目標平台] 下拉式清單中選取 SSDT 支援的任何平台。  
+2.  從 [目標平台]  下拉式清單中選取 SSDT 支援的任何平台。  
   
 ## <a name="see-also"></a>另請參閱  
 [操作說明：變更目標平台及發佈資料庫專案](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  

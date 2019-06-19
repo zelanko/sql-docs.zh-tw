@@ -14,10 +14,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bf9029a72ab1d02f02c5d1e7f51ffb85b76d93e3
-ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66265504"
 ---
 # <a name="brokermessage-classify-event-class"></a>Broker:Message Classify 事件類別

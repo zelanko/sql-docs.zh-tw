@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c4da45e57342288cc23a9783709666f4c02d0bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63050009"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>從容錯移轉叢集執行個體失敗的狀況復原
@@ -34,7 +34,7 @@ ms.locfileid: "63050009"
   
 1.  在節點 1 失敗之後， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 會容錯移轉至節點 2。  
   
-2.  從 FCI 中收回節點 1。 作法是從節點 2 開啟容錯移轉叢集管理員嵌入式管理單元，並以滑鼠右鍵按一下 [節點 1]，按一下 [移動動作]，然後按一下 [收回節點]。  
+2.  從 FCI 中收回節點 1。 作法是從節點 2 開啟容錯移轉叢集管理員嵌入式管理單元，並以滑鼠右鍵按一下 [節點 1]，按一下 [移動動作]  ，然後按一下 [收回節點]  。  
   
 3.  確認節點 1 已從叢集定義中移出。  
   

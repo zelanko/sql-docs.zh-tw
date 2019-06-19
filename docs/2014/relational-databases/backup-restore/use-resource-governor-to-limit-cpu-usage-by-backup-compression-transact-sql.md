@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fcd3d72ef3e716cd640d35505b82df459eb37b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62920793"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>使用資源管理員進行備份壓縮，以限制 CPU 使用率 (Transact-SQL)
@@ -111,7 +111,7 @@ GO
   
 2.  建立和設定使用這個集區的資源管理員工作負載群組。  
   
-3.  建立 *「分類函數」*(Classifier Function)，它是使用者定義的函數 (UDF)，而且資源管理員會使用其傳回值來分類工作階段，以便將它們路由傳送至適當的工作負載群組。  
+3.  建立 *「分類函數」* (Classifier Function)，它是使用者定義的函數 (UDF)，而且資源管理員會使用其傳回值來分類工作階段，以便將它們路由傳送至適當的工作負載群組。  
   
 4.  向資源管理員註冊此分類函數。  
   
@@ -197,7 +197,7 @@ GO
  認可交易之後，此範例就會套用在 ALTER WORKLOAD GROUP 或 ALTER RESOURCE POOL 陳述式中要求的組態變更。  
   
 > [!IMPORTANT]  
->  下列範例會使用在「範例 A：設定登入和使用者 (Transact-SQL)」中所建立範例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者的使用者名稱：網域名稱`\MAX_CPU`。 請將這個名稱取代成您打算在建立低優先順序壓縮備份時使用的登入使用者名稱。  
+>  下列範例會使用在「範例 A：設定登入和使用者 (Transact-SQL)」中所建立範例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者的使用者名稱：網域名稱  `\MAX_CPU`。 請將這個名稱取代成您打算在建立低優先順序壓縮備份時使用的登入使用者名稱。  
   
 ```sql  
 -- Configure Resource Governor.  
@@ -259,7 +259,7 @@ GO
  [&#91;頁首&#93;](#Top)  
   
 ##  <a name="creating_compressed_backup"></a> 使用含有限制 CPU 的工作階段來壓縮備份  
- 若要在含有限制最大 CPU 的工作階段中建立壓縮備份，請以您在分類函數中指定之使用者的身分登入。 在備份命令中，指定 WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 或選取 [壓縮備份] ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])。 若要建立壓縮的資料庫備份，請參閱[建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)。  
+ 若要在含有限制最大 CPU 的工作階段中建立壓縮備份，請以您在分類函數中指定之使用者的身分登入。 在備份命令中，指定 WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 或選取 [壓縮備份]  ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])。 若要建立壓縮的資料庫備份，請參閱[建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)。  
   
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>範例 c:建立壓縮備份 (Transact-SQL)  
  下列 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 範例會在最近格式化的備份檔案 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 中建立 `Z:\SQLServerBackups\AdvWorksData.bak`資料庫的完整壓縮備份。  

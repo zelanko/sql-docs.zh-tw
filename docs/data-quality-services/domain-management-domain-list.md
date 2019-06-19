@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: jroth
 ms.openlocfilehash: f6a0d727f2a862191422d155d0bf1aac04958383
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66769122"
 ---
 # <a name="domain-management-domain-list"></a>定義域管理：定義域清單
@@ -26,7 +26,7 @@ ms.locfileid: "66769122"
 
   此主題描述 **(DQS) 中** [定義域管理] [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 頁面上定義域清單中的控制項。 使用此窗格可選取執行管理作業所在的定義域。 相同的窗格會用於 **[定義域管理]** 頁面上的所有索引標籤式頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 ### <a name="domains-list"></a>定義域清單  
  **網域**  

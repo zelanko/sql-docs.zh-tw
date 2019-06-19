@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d09474741bb86b19d33e34dad317996ae9486aaf
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096770"
 ---
 # <a name="delete-a-sql-server-agent-proxy"></a>Delete a SQL Server Agent Proxy
@@ -49,7 +49,7 @@ ms.locfileid: "65096770"
   
 ### <a name="Restrictions"></a>限制事項  
   
--   當您刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶時，請確定該 Proxy 未參考任何作用中的作業步驟。 若要檢查是否有任何作業步驟參考該 Proxy，請以滑鼠右鍵按一下該 Proxy，選取 [屬性]，然後選取 [_proxy\_name_Proxy 帳戶屬性] 對話方塊中的 [參考] 頁面。 如果刪除一個 Proxy， **[刪除物件]** 對話方塊中有個選項，可以重新指派該 Proxy 使用的所有作業步驟。  
+-   當您刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶時，請確定該 Proxy 未參考任何作用中的作業步驟。 若要檢查是否有任何作業步驟參考該 Proxy，請以滑鼠右鍵按一下該 Proxy，選取 [屬性]  ，然後選取 [_proxy\_name_Proxy 帳戶屬性]  對話方塊中的 [參考]  頁面。 如果刪除一個 Proxy， **[刪除物件]** 對話方塊中有個選項，可以重新指派該 Proxy 使用的所有作業步驟。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 使用認證來儲存 Windows 使用者帳戶的相關資訊。 認證中所指定的使用者，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行的電腦上必須要有「以批次工作登入」的權限。  
   
@@ -68,17 +68,17 @@ ms.locfileid: "65096770"
   
 1.  在 **[物件總管]** 中，按一下加號，展開包含要刪除之 Agent Proxy 帳戶的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
 3.  按一下加號展開 **[Proxy]** 資料夾。  
   
-4.  按一下加號，展開包含要刪除之 Proxy 帳戶的子系統 (例如 [ActiveX Script])。  
+4.  按一下加號，展開包含要刪除之 Proxy 帳戶的子系統 (例如 [ActiveX Script]  )。  
   
-5.  以滑鼠右鍵按一下您要刪除的 Proxy 帳戶，然後選取 [刪除]。  
+5.  以滑鼠右鍵按一下您要刪除的 Proxy 帳戶，然後選取 [刪除]  。  
   
 6.  在 **[刪除物件]** 對話方塊中，確認已選取正確的 Proxy 帳戶。 核取 **[重新指派給]** 核取方塊，將參考此 Proxy 帳戶的工作步驟重新指派給另一個帳戶。  
   
-7.  按一下 [確定] 。  
+7.  按一下 [確定]  。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -86,9 +86,9 @@ ms.locfileid: "65096770"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- deletes the proxy "Catalog application proxy"  

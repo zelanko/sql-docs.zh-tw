@@ -25,10 +25,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b96e70f0ddf57e826bce4cefb085376aa074a0c2
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106254"
 ---
 # <a name="change-an-operator39s-availability"></a>變更操作員的可用性
@@ -64,15 +64,15 @@ ms.locfileid: "65106254"
   
 1.  在 **[物件總管]** 中，按一下加號，展開包含您要啟用或停用操作員的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
 3.  按一下加號展開 **[操作員]** 資料夾。  
   
-4.  以滑鼠右鍵按一下要啟用或停用的操作員並選取 [屬性]，然後按一下 [一般] 索引標籤。  
+4.  以滑鼠右鍵按一下要啟用或停用的操作員並選取 [屬性]  ，然後按一下 [一般]  索引標籤。  
   
-5.  在 [_operator\_name_ 屬性] 對話方塊中，選取或清除 [已啟用] 核取方塊。  
+5.  在 [_operator\_name_ 屬性]  對話方塊中，選取或清除 [已啟用]  核取方塊。  
   
-6.  按一下 [確定] 。  
+6.  按一下 [確定]  。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -80,9 +80,9 @@ ms.locfileid: "65106254"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- disables the 'François Ajenstat' operator  

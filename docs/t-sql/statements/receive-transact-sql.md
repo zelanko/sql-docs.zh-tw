@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c835ea8b1610256f41ee9d0d0787e84b7afcda3d
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503675"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
@@ -98,10 +98,10 @@ ms.locfileid: "65503675"
  指定所接收之訊息的交談或交談群組。 如果忽略這個值，便從下一個可用的交談群組傳回訊息。  
   
  conversation_handle = *conversation_handle*  
- 指定所接收之訊息的交談。 您提供的「交談控制代碼」必須為 **uniqueidentifier**，或可轉換為 **uniqueidentifier** 的類型。  
+ 指定所接收之訊息的交談。 您提供的「交談控制代碼」  必須為 **uniqueidentifier**，或可轉換為 **uniqueidentifier** 的類型。  
   
  conversation_group_id = *conversation_group_id*  
- 指定接收的訊息之交談群組。 您提供的「交談群組識別碼」必須為 **uniqueidentifier**，或可轉換為 **uniqueidentifier** 的類型。  
+ 指定接收的訊息之交談群組。 您提供的「交談群組識別碼」  必須為 **uniqueidentifier**，或可轉換為 **uniqueidentifier** 的類型。  
   
  TIMEOUT *timeout*  
  指定陳述式等候訊息的時間 (以毫秒為單位)。 這個子句只適用於 WAITFOR 子句。 如果未指定這個子句，或逾時為 -**1**，等候時間便沒有限制。 如果等候時間逾時，RECEIVE 會傳回空的結果集。  

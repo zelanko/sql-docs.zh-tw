@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a713687d41c21a3c99c30d6b7192d7c59e41505
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62994244"
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
@@ -53,9 +53,9 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ## <a name="arguments"></a>引數  
 `[ @database = ] 'database'` 是主要伺服器上名稱。 *primary_database&lt*已**sysname**，沒有預設值。  
   
-`[ @backup_directory = ] 'backup_directory'` 是主要伺服器上備份資料夾的路徑。 *backup_directory*已**nvarchar(500)**，沒有預設值，不能是 NULL。  
+`[ @backup_directory = ] 'backup_directory'` 是主要伺服器上備份資料夾的路徑。 *backup_directory*已**nvarchar(500)** ，沒有預設值，不能是 NULL。  
   
-`[ @backup_share = ] 'backup_share'` 是主要伺服器上備份目錄的網路路徑。 *backup_share*已**nvarchar(500)**，沒有預設值，不能是 NULL。  
+`[ @backup_share = ] 'backup_share'` 是主要伺服器上備份目錄的網路路徑。 *backup_share*已**nvarchar(500)** ，沒有預設值，不能是 NULL。  
   
 `[ @backup_retention_period = ] 'backup_retention_period'` 這是時間的以分鐘為單位，將記錄備份檔儲存在備份目錄中主要伺服器上長度。 *backup_retention_period*已**int**，沒有預設值，不能是 NULL。  
   

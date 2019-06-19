@@ -14,15 +14,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 7d83ec8e41d2a0b35a837d58c44bbab191934ae4
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101981"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>視窗對話方塊 (Microsoft 文件總管說明)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-此對話方塊可以讓您顯示、關閉以及排列在編輯器和設計師中開啟的文件。 您可以在 [視窗] 功能表上按一下 [視窗] 來顯示此對話方塊。  
+此對話方塊可以讓您顯示、關閉以及排列在編輯器和設計師中開啟的文件。 您可以在 [視窗]  功能表上按一下 [視窗]  來顯示此對話方塊。  
   
 ## <a name="options"></a>選項。  
 **名稱**  

@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1d540c414b1190a045fdb18b4b971e73f348459f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483587"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>變更使用者的電子郵件地址 (Master Data Services)
@@ -25,21 +25,21 @@ ms.locfileid: "65483587"
 ## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   您必須擁有存取 [使用者及群組] 功能區域的權限。  
+-   您必須擁有存取 [使用者及群組]  功能區域的權限。  
   
 ### <a name="to-change-a-users-email-address-or-default-email-format"></a>變更使用者的電子郵件地址或預設電子郵件格式  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]** 。  
   
-2.  在 [使用者] 頁面上，選取要編輯之使用者的資料列。  
+2.  在 [使用者]  頁面上，選取要編輯之使用者的資料列。  
   
-3.  按一下 **[編輯選取的使用者]**。  
+3.  按一下 **[編輯選取的使用者]** 。  
   
-4.  按一下 [一般] 索引標籤上方的 [編輯]。  
+4.  按一下 [一般]  索引標籤上方的 [編輯]  。  
   
 5.  更新電子郵件地址或電子郵件格式。  
   
-6.  按一下 [儲存] 。  
+6.  按一下 [儲存]  。  
   
 ## <a name="next-steps"></a>後續步驟  
   

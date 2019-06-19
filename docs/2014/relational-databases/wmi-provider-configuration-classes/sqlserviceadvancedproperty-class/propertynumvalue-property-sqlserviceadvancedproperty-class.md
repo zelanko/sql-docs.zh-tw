@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c7ac997caa099136c5b03bcb48bfcd5ecfd0b8f3
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62911590"
 ---
 # <a name="propertynumvalue-property-sqlserviceadvancedproperty-class"></a>PropertyNumValue 屬性 (SqlServiceAdvancedProperty 類別)

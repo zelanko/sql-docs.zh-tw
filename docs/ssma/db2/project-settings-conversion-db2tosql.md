@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273023"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>專案設定 （轉換） (DB2ToSQL)
@@ -130,7 +130,7 @@ ms.locfileid: "63273023"
 ### <a name="convert-foreign-keys-with-set-null-referential-action-on-column-that-is-not-null"></a>轉換的外部索引鍵資料行上的 SET NULL 參考動作 NOT NULL  
 DB2 可讓您建立 foreign key 條件約束，其中 SET NULL 不執行動作，可能是因為參考的資料行中不允許 null 值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許這類外部索引鍵的組態。  
   
--   如果您選取 **[是]**、 SSMA 會產生與 DB2 的參考動作，但您必須手動變更條件約束，以在載入之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 例如，您可以選擇 NO ACTION，而不是設定為 NULL。  
+-   如果您選取 **[是]** 、 SSMA 會產生與 DB2 的參考動作，但您必須手動變更條件約束，以在載入之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 例如，您可以選擇 NO ACTION，而不是設定為 NULL。  
   
 -   如果您選取**No**，條件約束將會標示為錯誤。  
   
@@ -203,7 +203,7 @@ SSMA 可以轉換 DB2 記錄為分隔的變數，並為具有特定結構的 XML
 ### <a name="convert-substr-function-calls-to-substring-function-calls"></a>轉換 SUBSTR 函式呼叫子函式呼叫  
 SSMA 可以將轉換函式呼叫 DB2 SUBSTR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **子字串**函式呼叫，根據參數數目。 如果 SSMA 無法轉換 SUBSTR 函式呼叫，或不支援的參數數目，SSMA 會將 SUBSTR 函式呼叫轉換成自訂的 SSMA 函式呼叫。  
   
--   如果您選取 **[是]**，SSMA 會將使用到的三個參數的 SUBSTR 函式呼叫轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **substring**。 其他 SUBSTR 函式會轉換成呼叫自訂的 SSMA 函式。  
+-   如果您選取 **[是]** ，SSMA 會將使用到的三個參數的 SUBSTR 函式呼叫轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **substring**。 其他 SUBSTR 函式會轉換成呼叫自訂的 SSMA 函式。  
   
 -   如果您選取**No**，SSMA 會將 SUBSTR 函式呼叫轉換成自訂的 SSMA 函式呼叫。  
   
@@ -216,7 +216,7 @@ SSMA 可以將轉換函式呼叫 DB2 SUBSTR [!INCLUDE[ssNoVersion](../../include
 ### <a name="convert-subtypes"></a>轉換子類型  
 SSMA 可轉換 PL/SQL 子類型，有兩種：  
   
--   如果您選取 **[是]**，SSMA 會建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者定義類型從子型別，並將它用於此子類型的每個變數。  
+-   如果您選取 **[是]** ，SSMA 會建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者定義類型從子型別，並將它用於此子類型的每個變數。  
   
 -   如果您選取**No**，SSMA 會取代所有來源宣告子類型的基礎類型，並如往常般將轉換結果。 在此情況下，在不建立任何其他類型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -247,7 +247,7 @@ SSMA 可轉換 PL/SQL 子類型，有兩種：
   
 無法移轉其他的同義字。 SSMA 會產生錯誤訊息為同義字] 和 [使用同義字的所有參考。  
   
--   如果您選取 **[是]**，將建立 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]同義字和直接物件參考，根據先前的清單。  
+-   如果您選取 **[是]** ，將建立 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]同義字和直接物件參考，根據先前的清單。  
   
 -   如果您選取**No**，SSMA 會建立所有的同義字，此處所列的直接物件參考。  
   
@@ -260,7 +260,7 @@ SSMA 都可以將 DB2 TO_CHAR(date, format) 轉換從 sysdb 資料庫的程序�
   
 -   如果您選取**使用 TO_CHAR_DATE 函式**，SSMA 會將 TO_CHAR （日期，格式） 轉換成 TO_CHAR_DATE 函式使用的英文語言進行轉換。  
   
--   如果您選取**使用 TO_CHAR_DATE_LS 函式 （NLS 照護）**，SSMA 會將 TO_CHAR （日期，格式） 轉換成 TO_CHAR_DATE_LS 函式使用的工作階段語言轉換  
+-   如果您選取**使用 TO_CHAR_DATE_LS 函式 （NLS 照護）** ，SSMA 會將 TO_CHAR （日期，格式） 轉換成 TO_CHAR_DATE_LS 函式使用的工作階段語言轉換  
   
 當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
@@ -271,7 +271,7 @@ SSMA 都可以將 DB2 TO_CHAR(date, format) 轉換從 sysdb 資料庫的程序�
 ### <a name="convert-transaction-processing-statements"></a>將轉換的交易處理陳述式  
 SSMA 可以轉換 DB2 交易處理陳述式：  
   
--   如果您選取 **[是]**，SSMA 會將 DB2 交易處理陳述式來轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]陳述式。  
+-   如果您選取 **[是]** ，SSMA 會將 DB2 交易處理陳述式來轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]陳述式。  
   
 -   如果您選取**No**，SSMA 會將標示的交易處理陳述式稱為轉換錯誤。  
   
@@ -327,7 +327,7 @@ SSMA 可以檢查 NULL 的值，以模擬 DB2 ORDER BY 的行為。 它接著先
 ### <a name="generate-rowid-column"></a>產生 ROWID 資料行  
 SSMA 當建立資料表中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，它可以建立 ROWID 資料行。 資料移轉時，每個資料列就會取得新的 UNIQUEIDENTIFIER 值 newid （） 函數所產生。  
   
--   如果您選取 **[是]**，ROWID 資料行建立的所有資料表和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]插入值時，會產生 Guid。 一律選擇**是**如果您打算使用 SSMA 測試人員。  
+-   如果您選取 **[是]** ，ROWID 資料行建立的所有資料表和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]插入值時，會產生 Guid。 一律選擇**是**如果您打算使用 SSMA 測試人員。  
   
 -   如果您選取**No**，ROWID 資料行不會新增至資料表。  
   
@@ -363,7 +363,7 @@ SSMA 當建立資料表中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
 ### <a name="use-isnull-in-string-concatenation"></a>在 字串串連中使用 ISNULL  
 DB2 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字串串連包含 NULL 值時傳回不同的結果。 DB2 會將 NULL 值，像是空的字元組。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 NULL。  
   
--   如果您選取 **[是]**，SSMA 取代 DB2 串連字元 (|)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]串連字元 （+）。 SSMA 也會檢查 NULL 值串連這兩端的運算式。  
+-   如果您選取 **[是]** ，SSMA 取代 DB2 串連字元 (|)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]串連字元 （+）。 SSMA 也會檢查 NULL 值串連這兩端的運算式。  
   
 -   如果您選取**No**，SSMA 會取代串連字元，但不會檢查 NULL 值。  
   

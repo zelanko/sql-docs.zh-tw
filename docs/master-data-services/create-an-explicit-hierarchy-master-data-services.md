@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d117224e9afb331979556d12c6cddc0869382f3
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65477161"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>建立明確階層 (Master Data Services)
@@ -27,7 +27,7 @@ ms.locfileid: "65477161"
 
   當您需要成員可存在於任何層級的不完全階層時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中建立明確階層。 明確階層包含來自單一實體的成員。  
   
- 建立明確階層之後，您可以在總管 功能區域的這個階層中加入成員。  
+ 建立明確階層之後，您可以在總管  功能區域的這個階層中加入成員。  
   
 ## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
@@ -40,28 +40,28 @@ ms.locfileid: "65477161"
   
 ### <a name="to-create-an-explicit-hierarchy"></a>若要建立明確階層  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 [管理模型]  頁面上，從方格中選取模型，然後按一下 [實體] 。  
+2.  在 [管理模型]  頁面上，從方格中選取模型，然後按一下 [實體]  。  
   
-3.  在 [管理實體] 頁面上，從方格中選取含有您想要為其建立明確階層的實體的資料列。  
+3.  在 [管理實體]  頁面上，從方格中選取含有您想要為其建立明確階層的實體的資料列。  
   
-4.  按一下 [明確階層] 。  
+4.  按一下 [明確階層]  。  
   
-5.  在 [管理明確階層] 頁面上，按一下 [加入]。  
+5.  在 [管理明確階層]  頁面上，按一下 [加入]  。  
   
-6.  在 [名稱] 方塊中，輸入階層的名稱。  
+6.  在 [名稱]  方塊中，輸入階層的名稱。  
   
-7.  (選擇性) 清除 [強制階層] 核取方塊，將階層建立為非強制階層。 如需階層類型的詳細資訊，請參閱[明確階層 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)。  
+7.  (選擇性) 清除 [強制階層]  核取方塊，將階層建立為非強制階層。 如需階層類型的詳細資訊，請參閱[明確階層 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)。  
   
-8.  按一下 [儲存] 。  
+8.  按一下 [儲存]  。  
   
 ## <a name="grid-columns"></a>方格資料行  
  對於您建立的每個明確階層，會將含有七個資料行的資料列新增到方格。 下列是資料行的描述。  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[狀態]|實體狀態。 當您按一下 [儲存] 時，下列影像隨即顯示，指出正在更新實體。<br /><br /> ![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")<br /><br /> 如果建立或編輯實體時發生錯誤，則會顯示下列影像。<br /><br /> ![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")<br /><br /> 如果狀態正常，則會顯示下列影像。<br /><br /> ![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")|  
+|[狀態]|實體狀態。 當您按一下 [儲存]  時，下列影像隨即顯示，指出正在更新實體。<br /><br /> ![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")<br /><br /> 如果建立或編輯實體時發生錯誤，則會顯示下列影像。<br /><br /> ![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")<br /><br /> 如果狀態正常，則會顯示下列影像。<br /><br /> ![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")|  
 |名稱|明確階層名稱。|  
 |強制性|指定明確階層是否為強制性。|  
 |建立者|建立明確階層之使用者的使用者名稱。|  

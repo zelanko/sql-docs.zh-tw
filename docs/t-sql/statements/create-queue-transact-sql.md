@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ab7873152b9ae372c3d61d2906d3b52a055d4130
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503244"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
@@ -130,7 +130,7 @@ CREATE QUEUE <object>
 ## <a name="remarks"></a>Remarks  
  佇列可以是 SELECT 陳述式的目標。 不過，您只能利用在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談上運作的陳述式來修改佇列的內容，例如 SEND、RECEIVE 和 END CONVERSATION。 佇列不能是 INSERT、UPDATE、DELETE 或 TRUNCATE 陳述式的目標。  
   
- 佇列不能是暫存物件。 因此，開頭是**#** 的佇列名稱無效。  
+ 佇列不能是暫存物件。 因此，開頭是 **#** 的佇列名稱無效。  
   
  建立非使用中狀態的佇列，可讓您在允許佇列接受訊息之前，備妥服務的基礎結構。  
   

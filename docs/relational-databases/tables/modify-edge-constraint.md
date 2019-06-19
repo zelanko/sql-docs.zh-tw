@@ -20,11 +20,11 @@ ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e5b6a471156f0b1371c727ce96aac72f4f812dac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650246"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62693315"
 ---
 # <a name="modify-edge-constraints"></a>修改邊緣條件約束
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47650246"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要修改邊緣條件約束，請使用：**  
   

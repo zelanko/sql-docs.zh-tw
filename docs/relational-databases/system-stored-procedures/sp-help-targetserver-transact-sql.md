@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c809679694811d23b01dee426aa1afdd7d5cf06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017830"
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
@@ -41,7 +41,7 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @server_name = ] 'server_name'` 要傳回資訊的伺服器名稱。 *server_name*已**nvarchar(30)**，預設值是 NULL。  
+`[ @server_name = ] 'server_name'` 要傳回資訊的伺服器名稱。 *server_name*已**nvarchar(30)** ，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

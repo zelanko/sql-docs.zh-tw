@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0810533a3488043ef4b3d8db9c0de4f3174b4ba8
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102624"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>SSMS 使用方式和診斷資料收集的本機稽核
@@ -28,10 +28,10 @@ SQL Server Management Studio (SSMS) 包含使用已連線到網際網路的功�
 若要查看 SSMS 所收集的功能使用狀況資料，請執行下列步驟：
 
 1.  啟動 SSMS。
-2.  按一下 [檢視]，然後按一下主功能表中的 [輸出] 以顯示 [輸出] 視窗。 
-3.  當 [輸出] 視窗顯示時，選擇 [顯示輸出來源:] 功能表中的 [遙測]。
+2.  按一下 [檢視]  ，然後按一下主功能表中的 [輸出]  以顯示 [輸出]  視窗。 
+3.  當 [輸出]  視窗顯示時，選擇 [顯示輸出來源:]  功能表中的 [遙測]  。
 
-當您使用 SSMS 來與資料庫互動時，[輸出] 視窗會顯示所收集的資料。
+當您使用 SSMS 來與資料庫互動時，[輸出]  視窗會顯示所收集的資料。
 
 ## <a name="enable-or-disable-usage-and-diagnostic-data-collection-in-ssms"></a>啟用或停用 SSMS 中的使用狀況和診斷資料收集
 

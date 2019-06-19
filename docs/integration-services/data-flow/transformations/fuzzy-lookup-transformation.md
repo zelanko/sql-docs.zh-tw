@@ -35,10 +35,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c87b0167c4810c36e6d9579a501aff2a2954d25
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726088"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查閱轉換
@@ -145,17 +145,17 @@ ms.locfileid: "65726088"
   使用 **[模糊查閱轉換編輯器]** 對話方塊的 **[參考資料表]** 索引標籤，指定來源資料表和用於查閱的索引。 參考資料來源必須是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中的資料表。  
   
 > [!NOTE]  
->  模糊查閱轉換會建立參考資料表的工作副本。 下面描述的索引是使用特殊資料表，而非使用一般 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 索引在此工作資料表上建立的。 除非您選取 **[維護儲存的索引]**，否則轉換不會修改現有的來源資料表。 在此情況下，它會在參考資料表上建立觸發程序，以根據參考資料表的變更來更新工作資料表和查閱索引資料表。  
+>  模糊查閱轉換會建立參考資料表的工作副本。 下面描述的索引是使用特殊資料表，而非使用一般 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 索引在此工作資料表上建立的。 除非您選取 **[維護儲存的索引]** ，否則轉換不會修改現有的來源資料表。 在此情況下，它會在參考資料表上建立觸發程序，以根據參考資料表的變更來更新工作資料表和查閱索引資料表。  
   
 > [!NOTE]  
 >  在 **[模糊查閱轉換編輯器]** 中無法使用模糊查閱轉換的 **Exhaustive** 和 **MaxMemoryUsage**屬性，但可使用 **[進階編輯器]** 來設定這兩個屬性。 此外，只有在 **[進階編輯器]** 中，才可指定大於 100 的 **MaxOutputMatchesPerInput**值。 如需有關這些屬性的詳細資訊，請參閱＜ [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)＞的「模糊查閱轉換」一節。  
   
 ### <a name="options"></a>選項。  
  **[無快取]**  
- 從清單中選取現有的 OLE DB 連線管理員，或按一下 [新增] 來建立新連線。  
+ 從清單中選取現有的 OLE DB 連線管理員，或按一下 [新增]  來建立新連線。  
   
  **新增**  
- 使用 [設定 OLE DB 連接管理員] 對話方塊來建立新的連接。  
+ 使用 [設定 OLE DB 連接管理員]  對話方塊來建立新的連接。  
   
  **產生新的索引**  
  指定轉換應建立新的索引以用來查閱。  

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ae1eb0a03e7387c7985a4b05f9f0fba562d03d67
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485969"
 ---
 # <a name="require-attribute-values-master-data-services"></a>要求屬性值 (Master Data Services)
@@ -39,9 +39,9 @@ ms.locfileid: "65485969"
   
 ### <a name="to-require-attribute-values"></a>若要要求屬性值  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]**。  
+2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]** 。  
   
 3.  在 [商務規則]  頁面上，從 [模型]  下拉式清單選取模型。  
   
@@ -49,25 +49,25 @@ ms.locfileid: "65485969"
   
 5.  從 [成員類型]  下拉式清單中，選取要套用商務規則的成員類型。  
   
-6.  按一下 **[加入]**。  
+6.  按一下 **[加入]** 。  
   
 7.  在 [名稱]  方塊中，輸入商務規則的名稱。  
   
 8.  (選擇性) 在 [描述]  欄位中，輸入商務規則描述。  
   
-9. 在 [Then] (則)  區塊下，按一下 [加入] 。 面板隨即顯示。  
+9. 在 [Then] (則)  區塊下，按一下 [加入]  。 面板隨即顯示。  
   
-10. 從 [運算子]  下拉式清單中，選取 [required action] (必要動作) 。  
+10. 從 [運算子]  下拉式清單中，選取 [required action] (必要動作)  。  
   
 11. 從 [屬性]  下拉式清單中，選取屬性。  
   
-12. 按一下 [儲存] 。 新的資料列就會加入 [Then] (則)  方格中。  
+12. 按一下 [儲存]  。 新的資料列就會加入 [Then] (則)  方格中。  
   
-13. 按一下 [儲存] 。  
+13. 按一下 [儲存]  。  
   
-14. 按一下 [全部發行] 。  
+14. 按一下 [全部發行]  。  
   
-15. 在確認對話方塊中按一下 **[確定]**。 [Business Rule State] (商務規則狀態)  資料行中的值是 [使用中] 。  
+15. 在確認對話方塊中按一下 **[確定]** 。 [Business Rule State] (商務規則狀態)  資料行中的值是 [使用中]  。  
   
 ## <a name="next-steps"></a>後續步驟  
   

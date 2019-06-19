@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28d2381c82bc8c1dfe324b396431397a8cea1694
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723804"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>預覽資料對話方塊 (SQL Server 匯入和匯出精靈)
@@ -35,17 +35,17 @@ ms.locfileid: "65723804"
  **Source**  
 顯示精靈用來從資料來源載入資料的查詢。
 
-如果您選取要複製的資料表，[來源] 欄位會顯示 `SELECT * FROM <table>` 查詢，而不是資料表名稱。 
+如果您選取要複製的資料表，[來源]  欄位會顯示 `SELECT * FROM <table>` 查詢，而不是資料表名稱。 
   
  **取樣資料方格**  
  最多顯示 200 筆查詢從資料來源傳回之取樣資料的資料列。  
 
 
 ## <a name="thats-not-right-i-want-to-change-something"></a>不正確，我想要進行變更
-在您預覽資料之後，可能會想要變更已在精靈的先前頁面上選取的選項。 若要執行這些變更，請按一下 [確定] 回到 [選取來源資料表和檢視表] 頁面，然後按一下 [上一步] 回到可以變更選取項目的頁面。
+在您預覽資料之後，可能會想要變更已在精靈的先前頁面上選取的選項。 若要執行這些變更，請按一下 [確定]  回到 [選取來源資料表和檢視表]  頁面，然後按一下 [上一步]  回到可以變更選取項目的頁面。
 
 ## <a name="whats-next"></a>下一步  
- 預覽您即將複製的資料並按一下 [確定] 之後，[預覽資料]  對話方塊會將您帶回 [選取來源資料表和檢視]  頁面或 [設定一般檔案目的地]  頁面。 如需詳細資訊，請參閱 [選取來源資料表和檢視](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) 或 [設定一般檔案目的地](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)。  
+ 預覽您即將複製的資料並按一下 [確定]  之後，[預覽資料]  對話方塊會將您帶回 [選取來源資料表和檢視]  頁面或 [設定一般檔案目的地]  頁面。 如需詳細資訊，請參閱 [選取來源資料表和檢視](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) 或 [設定一般檔案目的地](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)。  
  
  ## <a name="see-also"></a>另請參閱
 [透過匯入和匯出精靈的簡單範例開始使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)

@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: high-availability
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 ms.openlocfilehash: d3be555a890dcfa1fe2e3e26360fbb74c0f33faa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794554"
 ---
 # <a name="business-continuity-and-database-recovery---sql-server"></a>商務持續性與資料庫復原 - SQL Server

@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 257f4ebaba273ad465c259a9bdd633e6513cda53
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726946"
 ---
 # <a name="dimension-processing-destination"></a>維度處理目的地
@@ -63,16 +63,16 @@ ms.locfileid: "65726946"
   
 ### <a name="options"></a>選項。  
  **[ODBC 目的地編輯器]**  
- 從清單中選取現有的連接管理員，或按一下 [新增] 來建立新的連接管理員。  
+ 從清單中選取現有的連接管理員，或按一下 [新增]  來建立新的連接管理員。  
   
  **新增**  
- 使用 [加入 Analysis Services 連接管理員] 對話方塊來建立新的連接。  
+ 使用 [加入 Analysis Services 連接管理員]  對話方塊來建立新的連接。  
   
  **可用維度清單**  
  選取要處理的維度。  
   
  **處理方法**  
- 選取要套用至清單中選取之維度的處理方法。 此選項的預設值是 **[完整]**。  
+ 選取要套用至清單中選取之維度的處理方法。 此選項的預設值是 **[完整]** 。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -118,10 +118,10 @@ ms.locfileid: "65726946"
  指定發生錯誤時，應該停止處理。  
   
  **錯誤數目**  
- 如果您已選取 [發生錯誤時停止]，則指定處理應該停止的錯誤臨界值。  
+ 如果您已選取 [發生錯誤時停止]  ，則指定處理應該停止的錯誤臨界值。  
   
  **發生錯誤時要執行的動作**  
- 如果您已選取 [發生錯誤時停止]，則指定到達錯誤臨界值時要採取的動作。  
+ 如果您已選取 [發生錯誤時停止]  ，則指定到達錯誤臨界值時要採取的動作。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -165,7 +165,7 @@ ms.locfileid: "65726946"
 |**ReportAndStop**|報告錯誤並停止處理。|  
   
  **錯誤記錄路徑**  
- 輸入錯誤記錄路徑，或者按一下 [瀏覽 (…)] 按鈕以選取目的地。  
+ 輸入錯誤記錄路徑，或者按一下 [瀏覽 (…)]  按鈕以選取目的地。  
   
  **瀏覽 (...)**  
  選取錯誤記錄的路徑。  

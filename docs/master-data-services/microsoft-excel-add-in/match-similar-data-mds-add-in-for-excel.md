@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0e4861ad317b71fd646ee8f6f91e73494bee9264
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65476981"
 ---
 # <a name="match-similar-data-mds-add-in-for-excel"></a>比對相似資料 (適用於 Excel 的 MDS 增益集)
@@ -38,23 +38,23 @@ ms.locfileid: "65476981"
   
 ### <a name="to-find-similarities-by-using-the-default-knowledge-base"></a>若要使用預設知識庫尋找相似度  
   
-1.  從包含 MDS 管理之資料的工作表中，按一下 [資料品質] 群組中的 [比對資料]。  
+1.  從包含 MDS 管理之資料的工作表中，按一下 [資料品質]  群組中的 [比對資料]  。  
   
-2.  在 [比對資料] 對話方塊中，從 [DQS 知識庫] 清單中選取 [DQS 資料 (預設值)]。  
+2.  在 [比對資料]  對話方塊中，從 [DQS 知識庫]  清單中選取 [DQS 資料 (預設值)]  。  
   
 3.  為包含要比對之資料的每個資料行，在對話方塊中加入一個資料列。 如需此對話方塊中的欄位資訊，請參閱[如何設定比對規則參數](../../data-quality-services/create-a-matching-policy.md#MatchingRules)。  
   
-4.  當所有加權值的總和等於 100% 時，按一下 [確定]。  
+4.  當所有加權值的總和等於 100% 時，按一下 [確定]  。  
   
 ### <a name="to-find-similarities-by-using-a-custom-knowledge-base"></a>若要使用自訂知識庫尋找相似度  
   
-1.  從包含 MDS 管理之資料的工作表中，按一下 [資料品質] 群組中的 [比對資料]。  
+1.  從包含 MDS 管理之資料的工作表中，按一下 [資料品質]  群組中的 [比對資料]  。  
   
-2.  從 [DQS 知識庫] 清單中，選取自訂知識庫的名稱。  
+2.  從 [DQS 知識庫]  清單中，選取自訂知識庫的名稱。  
   
 3.  為工作表中的每個資料行，選取 DQS 定義域。  
   
-4.  當所有 DQS 定義域都對應到工作表中的資料行時，請按一下 [確定]。  
+4.  當所有 DQS 定義域都對應到工作表中的資料行時，請按一下 [確定]  。  
   
 ## <a name="next-steps"></a>後續步驟  
   

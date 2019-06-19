@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72bdab9edf0dc920ed5e8b5801cbdec4868a047a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65720138"
 ---
 # <a name="dtexec-utility"></a>dtexec 公用程式
@@ -69,22 +69,22 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="bit"></a> 64 位元電腦上的安裝考量  
  在 64 位元電腦上， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會安裝 64 位元版本的 **dtexec** 公用程式 (dtexec.exe)。 若您必須用 32 位元模式執行特定封裝，則須安裝 32 位元版本的 **dtexec** 公用程式。 若要安裝 32 位元版本的 **dtexec** 公用程式，則必須在安裝期間選取用戶端工具或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 。  
   
- 根據預設，同時安裝了 64 位元和 32 位元版之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 命令提示字元公用程式的 64 位元電腦將會在命令提示字元上執行 32 位元版本。 執行 32 位元版本是因為 32 位元版本的目錄路徑在 PATH 環境變數中會出現在 64 位元版本的目錄路徑前面 (一般來說，32 位元的目錄路徑是 \<磁碟機>:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn，而 64 位元的目錄路徑是 \<磁碟機>:\Program Files\Microsoft SQL Server\110\DTS\Binn)。  
+ 根據預設，同時安裝了 64 位元和 32 位元版之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 命令提示字元公用程式的 64 位元電腦將會在命令提示字元上執行 32 位元版本。 執行 32 位元版本是因為 32 位元版本的目錄路徑在 PATH 環境變數中會出現在 64 位元版本的目錄路徑前面 (一般來說，32 位元的目錄路徑是 \<磁碟機>  :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn，而 64 位元的目錄路徑是 \<磁碟機>  :\Program Files\Microsoft SQL Server\110\DTS\Binn)。  
   
 > **注意：** 如果您使用 SQL Server Agent 執行此公用程式，SQL Server Agent 會自動使用 64 位元版的公用程式。 SQL Server Agent 會使用此登錄 (而不是 PATH 環境變數) 來尋找此公用程式的正確可執行檔。  
   
  若要確保您可在命令提示字元上執行 64 位元版的公用程式，您可以採取下列其中一個動作：  
   
--   開啟 [命令提示字元] 視窗，然後將目錄切換到包含 64 位元版公用程式的目錄 (\<磁碟機>:\Program Files\Microsoft SQL Server\110\DTS\Binn)，再從該位置執行公用程式。  
+-   開啟 [命令提示字元] 視窗，然後將目錄切換到包含 64 位元版公用程式的目錄 (\<磁碟機>  :\Program Files\Microsoft SQL Server\110\DTS\Binn)，再從該位置執行公用程式。  
   
--   在命令提示字元上，輸入 64 位元版公用程式的完整路徑 (\<磁碟機>:\Program Files\Microsoft SQL Server\110\DTS\Binn)，以執行此公用程式。  
+-   在命令提示字元上，輸入 64 位元版公用程式的完整路徑 (\<磁碟機>  :\Program Files\Microsoft SQL Server\110\DTS\Binn)，以執行此公用程式。  
   
--   在 PATH 環境變數中將 64 位元路徑 (\<磁碟機>:\Program Files\Microsoft SQL Server\110\DTS\Binn) 置於 32 位元路徑 (\<磁碟機>:\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) 之前，可以永久變更該變數中的路徑順序。  
+-   在 PATH 環境變數中將 64 位元路徑 (\<磁碟機>  :\Program Files\Microsoft SQL Server\110\DTS\Binn) 置於 32 位元路徑 (\<磁碟機>  :\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) 之前，可以永久變更該變數中的路徑順序。  
   
 ##  <a name="side"></a> 擁有並存安裝之電腦的考量  
  如果 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 安裝在已安裝 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 的電腦上，則會安裝多個版本的 **dtexec** 公用程式。  
   
- 為確保您執行正確的公用程式版本，請在命令提示字元中輸入完整路徑 (\<磁碟機>:\Program Files\Microsoft SQL Server\\<版本\>\DTS\Binn) 來執行公用程式。  
+ 為確保您執行正確的公用程式版本，請在命令提示字元中輸入完整路徑 (\<磁碟機>  :\Program Files\Microsoft SQL Server\\<版本\>\DTS\Binn) 來執行公用程式。  
   
 ##  <a name="phases"></a> 執行階段  
  這個公用程式有四個執行階段。 執行階段如下所示：  
@@ -236,7 +236,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/De[crypt]**  _password_：(選擇性)。 設定載入含密碼加密的封裝時，所用的解密密碼。  
   
--   (選擇性) 如果執行封裝時發生一個或多個指定的事件，會建立偵錯傾印檔案 .mdmp 和 .tmp。 *error code* 引數會指定事件代碼的類型 (錯誤、警告或資訊)，這些事件代碼將會觸發系統建立偵錯傾印檔案。 若要指定多個事件代碼，請用分號 (;) 隔開每一個「錯誤碼」引數。 *error code* 引數中請勿包含引號。  
+-   (選擇性) 如果執行封裝時發生一個或多個指定的事件，會建立偵錯傾印檔案 .mdmp 和 .tmp。 *error code* 引數會指定事件代碼的類型 (錯誤、警告或資訊)，這些事件代碼將會觸發系統建立偵錯傾印檔案。 若要指定多個事件代碼，請用分號 (;) 隔開每一個「錯誤碼」  引數。 *error code* 引數中請勿包含引號。  
   
      下列範例會在 DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER 錯誤發生時，產生偵錯傾印檔案。  
   
@@ -244,7 +244,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/Dump** _error code_：根據預設，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會將偵錯傾印檔案儲存在 \<磁碟機>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 資料夾中。  
+     **/Dump** _error code_：根據預設，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會將偵錯傾印檔案儲存在 \<磁碟機>  :\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 資料夾中。  
   
     > **注意：** 偵錯傾印檔案可能會包含敏感性資訊。 您可以使用存取控制清單 (ACL) 來限制這些檔案的存取權，或將這些檔案複製到具有限制性存取權的資料夾。 例如，在您將偵錯檔案傳送給 Microsoft 支援服務之前，我們建議您先移除任何敏感性或機密資訊。  
   
@@ -256,7 +256,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError**：(選擇性) 如果執行套件時發生任何錯誤，會建立偵錯傾印檔 .mdmp 和 .tmp。  
   
-     根據預設，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會將偵錯傾印檔案儲存至 \<磁碟機>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 資料夾。  
+     根據預設，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會將偵錯傾印檔案儲存至 \<磁碟機>  :\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 資料夾。  
   
     > **注意：** 偵錯傾印檔案可能會包含敏感性資訊。 您可以使用存取控制清單 (ACL) 來限制這些檔案的存取權，或將這些檔案複製到具有限制性存取權的資料夾。 例如，在您將偵錯檔案傳送給 Microsoft 支援服務之前，我們建議您先移除任何敏感性或機密資訊。  
   
