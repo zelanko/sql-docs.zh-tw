@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2708c2609d23c6094cd69bddd08d958a85262d88
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099323"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>錯誤和事件參考 (Reporting Services)
@@ -35,11 +35,11 @@ ms.locfileid: "66099323"
 |事件識別碼|類型|類別目錄|`Source`|描述|  
 |--------------|----------|--------------|------------|-----------------|  
 |106|錯誤|排程|報表伺服器|當您定義排程作業時 (例如，報表訂閱和傳遞)，必須執行 SQL Server Agent。|  
-|[107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|錯誤|啟動/關閉|報表伺服器<br /><br /> 排程與傳遞處理器|\<來源> 無法連線到報表伺服器資料庫。 如需詳細資訊，請參閱[報表伺服器 Windows 服務 &#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)。|  
-|108|錯誤|延伸模組|報表伺服器<br /><br /> 報表管理員|\<來源> 無法上傳傳遞、資料處理或轉譯延伸模組。<br /><br /> 最可能的情況是因為延伸模組的部署不完整或遭移除所造成的結果。 如需詳細資訊，請參閱 [部署資料處理延伸模組](../extensions/data-processing/deploying-a-data-processing-extension.md) 和 [部署傳遞延伸模組](../extensions/delivery-extension/deploying-a-delivery-extension.md)。|  
+|[107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|錯誤|啟動/關閉|報表伺服器<br /><br /> 排程與傳遞處理器|\<來源>  無法連線到報表伺服器資料庫。 如需詳細資訊，請參閱[報表伺服器 Windows 服務 &#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)。|  
+|108|錯誤|延伸模組|報表伺服器<br /><br /> 報表管理員|\<來源>  無法上傳傳遞、資料處理或轉譯延伸模組。<br /><br /> 最可能的情況是因為延伸模組的部署不完整或遭移除所造成的結果。 如需詳細資訊，請參閱 [部署資料處理延伸模組](../extensions/data-processing/deploying-a-data-processing-extension.md) 和 [部署傳遞延伸模組](../extensions/delivery-extension/deploying-a-delivery-extension.md)。|  
 |109|[資訊]|管理|報表伺服器<br /><br /> 報表管理員|組態檔已經修改。 如需詳細資訊，請參閱 [Reporting Services 組態檔案](../report-server/reporting-services-configuration-files.md)。|  
 |110|警告|管理|報表伺服器<br /><br /> 報表管理員|組態檔其中之一的設定已經修改，因此不再有效。 會改用預設值。 如需詳細資訊，請參閱 [Reporting Services 組態檔案](../report-server/reporting-services-configuration-files.md)。|  
-|111|錯誤|記錄|報表伺服器<br /><br /> 報表管理員|\<來源> 無法建立追蹤記錄。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)。|  
+|111|錯誤|記錄|報表伺服器<br /><br /> 報表管理員|\<來源>  無法建立追蹤記錄。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)。|  
 |112|警告|安全性|報表伺服器|報表伺服器偵測到可能的阻斷服務攻擊。 如需詳細資訊，請參閱 [Reporting Services 安全性與保護](../security/reporting-services-security-and-protection.md)。|  
 |113|錯誤|記錄|報表伺服器|報表伺服器無法建立效能計數器。|  
 |114|錯誤|啟動/關閉|報表管理員|「報表管理員」無法連接到「報表伺服器」服務。|  
@@ -47,7 +47,7 @@ ms.locfileid: "66099323"
 |116|錯誤|內部|報表伺服器<br /><br /> 報表管理員<br /><br /> 排程與傳遞處理器|發生內部錯誤。|  
 |117|錯誤|啟動/關閉|報表伺服器|報表伺服器資料庫是無效的版本。|  
 |118|警告|記錄|報表伺服器<br /><br /> 報表管理員|追蹤記錄不在預期的目錄位置；將在預設目錄建立新的追蹤記錄。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)。|  
-|119|錯誤|啟用|報表伺服器<br /><br /> 排程與傳遞處理器|\<來源> 沒有被授權存取報表伺服器資料庫的內容。|  
+|119|錯誤|啟用|報表伺服器<br /><br /> 排程與傳遞處理器|\<來源>  沒有被授權存取報表伺服器資料庫的內容。|  
 |120|錯誤|啟用|報表伺服器|對稱金鑰無法解密。 最可能的情況是因為，伺服器執行的帳戶已經變更。 如需詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 設定管理員&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  
 |121|錯誤|啟動/關閉|報表伺服器|遠端程序呼叫 (RPC) 服務啟動失敗。|  
 |122|警告|傳遞|排程與傳遞處理器|「排程與傳遞處理器」無法連接到作為電子郵件傳遞的 SMTP 伺服器。 如需有關 SMTP 伺服器連接的詳細資訊，請參閱 <<c0> [ 電子郵件傳遞設定報表伺服器&#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。</c0>|  
@@ -58,7 +58,7 @@ ms.locfileid: "66099323"
 |127|[資訊]|啟用|報表伺服器|加密內容已經成功從報表伺服器資料庫移除。 如需刪除無法復原之加密資料的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 設定管理員&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  
 |128|錯誤|啟用|報表伺服器|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不同版本的元件無法一起使用。|  
 |129|錯誤|管理|報表伺服器<br /><br /> 排程與傳遞處理器|加密的組態檔設定無法解密。|  
-|130|錯誤|管理|報表伺服器<br /><br /> 排程與傳遞處理器|\<來源> 找不到設定檔。 報表伺服器需要組態檔。|  
+|130|錯誤|管理|報表伺服器<br /><br /> 排程與傳遞處理器|\<來源>  找不到設定檔。 報表伺服器需要組態檔。|  
 |131|錯誤|安全性|報表伺服器<br /><br /> 排程與傳遞處理器|加密的使用者資料值無法解密。|  
 |132|錯誤|安全性|報表伺服器|加密使用者資料期間發生失敗。 無法儲存值。|  
 |133|錯誤|管理|報表伺服器<br /><br /> 報表管理員<br /><br /> 排程與傳遞處理器|組態檔上傳失敗。 如果 XML 無效就可能會發生此錯誤。|  

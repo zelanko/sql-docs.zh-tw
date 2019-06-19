@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jroth
 ms.openlocfilehash: 5be414143dece0b0124d8ea4376d81481635f279
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794537"
 ---
 # <a name="sql-server-database-engine"></a>SQL Server Database Engine

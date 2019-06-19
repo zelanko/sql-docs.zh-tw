@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488947"
 ---
 # <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>工作 7：將 DQS 清理轉換新增至資料流程
@@ -42,13 +42,13 @@ ms.locfileid: "65488947"
   
 9. 若要切換**對應**頂端索引標籤。  
   
-10. 從**可用的輸入資料行**，選取**Supplier Name**， **ContactEmailAddress**，**地址行**， **縣（市)**，**狀態**，**國家/地區**，和**郵遞區號**選取核取方塊。  
+10. 從**可用的輸入資料行**，選取**Supplier Name**， **ContactEmailAddress**，**地址行**， **縣（市)** ，**狀態**，**國家/地區**，和**郵遞區號**選取核取方塊。  
   
      ![DQS 清理轉換編輯器-對應](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-03.jpg "DQS 清理轉換編輯器-對應")  
   
 11. 在底部窗格中，請使用下拉式清單中的，這些資料行對應**網域**資料行：  
   
-    |「資料行」|網域|  
+    |「資料行」|Domain|  
     |------------|------------|  
     |Supplier Name|Supplier Name|  
     |ContactEmailAddress|Contact Email|  

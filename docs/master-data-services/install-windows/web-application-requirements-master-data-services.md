@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 99009d961baf3d1f870783f565cb93c628eb85c7
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480164"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 應用程式需求 (Master Data Services)
@@ -44,18 +44,18 @@ ms.locfileid: "65480164"
  若要在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式中工作，用戶端電腦必須安裝 Silverlight 5。 如果您沒有必要的 Silverlight 版本，系統將會在您導覽至需要 Silverlight 的 Web 應用程式區域時提示安裝 Silverlight。 您可以從 [這裡](https://go.microsoft.com/fwlink/?LinkId=243096)安裝 Silverlight 5。  
   
 ### <a name="role-and-role-services"></a>角色和角色服務  
- 在 Windows Server 2012 或 Windows Server 2012 R2 上，您可以使用 Microsoft Management Console (MMC) 中所提供的 [伺服器管理員]，以安裝 [網頁伺服器 (IIS)] 角色及必要的角色服務。  
+ 在 Windows Server 2012 或 Windows Server 2012 R2 上，您可以使用 Microsoft Management Console (MMC) 中所提供的 [伺服器管理員]  ，以安裝 [網頁伺服器 (IIS)]  角色及必要的角色服務。  
  
  
 > [!IMPORTANT]  
->預設會啟用 [動態內容壓縮]。 如此可大幅降低 xml 回應的大小並省掉了網路 I/O，但 CPU 使用量會增加。  如需詳細資訊，請參閱 [Master Data Services &#40;MDS&#41; 的新功能](../../master-data-services/what-s-new-in-master-data-services-mds.md)中的＜[CTP 2.0] 改良的效能＞。  
+>預設會啟用 [動態內容壓縮]  。 如此可大幅降低 xml 回應的大小並省掉了網路 I/O，但 CPU 使用量會增加。  如需詳細資訊，請參閱 [Master Data Services &#40;MDS&#41; 的新功能](../../master-data-services/what-s-new-in-master-data-services-mds.md)中的＜[CTP 2.0] 改良的效能＞  。  
   
 ||  
 |-|  
 |Internet Information Services<br /><br /> Web 管理工具<br /><br /> IIS 管理主控台<br /><br /> World Wide Web 服務<br /><br /> 應用程式開發<br /><br /> .NET 擴充性 3.5<br /><br /> .NET 擴充性 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 擴充功能<br /><br /> ISAPI 篩選器<br /><br /> 一般 HTTP 功能<br /><br /> 預設文件<br /><br /> 瀏覽目錄<br /><br /> HTTP 錯誤<br /><br /> 靜態內容<br /><br /> [注意：請勿安裝 WebDAV 發行]<br /><br /> 健康情況及診斷<br /><br /> HTTP 記錄<br /><br /> 要求監視器<br /><br /> 效能<br /><br /> 靜態內容壓縮<br /><br /> 安全性<br /><br /> 要求篩選<br /><br /> Windows 驗證|  
   
 ### <a name="features"></a>功能 
- 在 Windows Server 2012 和 Windows Server 2012 R2 上，您可以使用 [伺服器管理員] 來安裝下列必要的功能。  
+ 在 Windows Server 2012 和 Windows Server 2012 R2 上，您可以使用 [伺服器管理員]  來安裝下列必要的功能。  
   
 ||  
 |-|  

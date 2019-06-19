@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773666"
 ---
 # <a name="search-property-list-editor"></a>搜尋屬性清單編輯器
@@ -25,7 +25,7 @@ ms.locfileid: "62773666"
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>若要使用 SQL Server Management Studio 管理搜尋屬性清單  
  如需有關如何建立、 檢視或刪除搜尋屬性清單，以及如何設定屬性搜尋的全文檢索索引資訊，請參閱 < [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **屬性名稱**  
  指定要用來識別全文檢索查詢中之屬性的名稱。 屬性名稱可以包含內部空格。 **[屬性名稱]** 的最大長度為 256 個字元。 這個名稱可以是使用者易記名稱，例如「作者」或「住家地址」，或者它可以是屬性的 Windows 正式名稱，例如 `System.Author` 或 `System.Contact.HomeAddress`。 **[屬性名稱]** 必須唯一識別屬性集內的屬性。  
   

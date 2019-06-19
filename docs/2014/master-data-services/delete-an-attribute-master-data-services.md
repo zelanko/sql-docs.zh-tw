@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6eb278610a8e50effb9c14fd76a13d453c2fb348
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483078"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>刪除屬性 (Master Data Services)
@@ -32,15 +32,15 @@ ms.locfileid: "65483078"
   
 ### <a name="to-delete-an-attribute"></a>若要刪除屬性  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[實體]**。  
+2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[實體]** 。  
   
 3.  在 **[實體維護]** 頁面上，選取 **[模型]** 清單中的模型。  
   
 4.  針對包含要刪除之屬性的實體選取資料列。  
   
-5.  按一下 **[編輯選取的實體]**。  
+5.  按一下 **[編輯選取的實體]** 。  
   
 6.  在 **編輯實體**頁面上，按一下您想要刪除的屬性。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "65483078"
   
 7.  按一下 **刪除選取的屬性**。  
   
-8.  在確認對話方塊中按一下 **[確定]**。  
+8.  在確認對話方塊中按一下 **[確定]** 。  
   
-9. 在另一個確認對話方塊中按一下 [確定]。  
+9. 在另一個確認對話方塊中按一下 [確定]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   

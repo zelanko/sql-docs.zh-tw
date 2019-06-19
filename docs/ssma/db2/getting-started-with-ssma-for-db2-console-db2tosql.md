@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3b8417d75ab0a08532dd073b3ce7f803b3f7490c
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63453322"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>開始使用 SSMA for DB2 主控台 (DB2ToSQL)

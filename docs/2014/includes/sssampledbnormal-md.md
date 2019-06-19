@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: fd86b59c560b4015a713ff48a4d4d71084e1c162
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65818900"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67208206"
 ---
 AdventureWorks2012

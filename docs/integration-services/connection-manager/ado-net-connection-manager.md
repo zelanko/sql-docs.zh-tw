@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bee4d3ea71aaeacf682a6e90fad91786fa7a0c9c
-ms.sourcegitcommit: e92ce0f59345fe61c0dd3bfe495ef4b1de469d4b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/25/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66221178"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 連接管理員
@@ -36,7 +36,7 @@ ms.locfileid: "66221178"
  連線管理員的 **ConnectionManagerType** 屬性會設為 **ADO.NET**。 系統會限定 **ConnectionManagerType** 的值，以包含連線管理員使用之 .NET 提供者的名稱。  
   
 ## <a name="adonet-connection-manager-troubleshooting"></a>ADO.NET 連接管理員疑難排解  
- 您可以記錄 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接管理員對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，疑難排解 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接管理員對外部資料來源執行的連接。 若要記錄 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷]  事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+ 您可以記錄 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接管理員對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，疑難排解 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接管理員對外部資料來源執行的連接。 若要記錄 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
  由 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員讀取時，某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期資料類型的資料將會產生如下表所示的結果。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66221178"
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="configure-adonet-connection-manager"></a>設定 ADO.NET 連接管理員
-  使用 [設定 ADO.NET 連線管理員]  對話方塊加入資料來源的連接，可使用 .NET Framework 資料提供者 (例如 SqlClient 提供者) 來存取此資料來源。 連接管理員可以使用現有的連接，或者您也可以建立新的連接。  
+  使用 [設定 ADO.NET 連線管理員] 對話方塊加入資料來源的連接，可使用 .NET Framework 資料提供者 (例如 SqlClient 提供者) 來存取此資料來源。 連接管理員可以使用現有的連接，或者您也可以建立新的連接。  
   
  若要深入了解 ADO.NET 連線管理員，請參閱 [ADO.NET 連線管理員](../../integration-services/connection-manager/ado-net-connection-manager.md)。  
   
@@ -82,10 +82,10 @@ ms.locfileid: "66221178"
  檢視選取之 ADO.NET 資料連接的屬性和值。  
   
  **新增**  
- 使用 [連線管理員]  對話方塊來建立 ADO.NET 資料連接。  
+ 使用 [連線管理員] 對話方塊來建立 ADO.NET 資料連接。  
   
  **刪除**  
- 請選取一個連接，然後使用 [刪除]  按鈕刪除它。  
+ 請選取一個連接，然後使用 [刪除] 按鈕刪除它。  
   
 ### <a name="managed-identities-for-azure-resources-authentication"></a>Azure 資源驗證的受控識別
 在 [Azure Data Factory 中的 Azure-SSIS 整合執行階段](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)上執行 SSIS 套件時，您可以使用與您資料處理站建立關聯的[受控識別](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity)來進行 Azure SQL Database (或受控執行個體) 驗證。 指定的處理站可以使用此身分識別從您資料庫存取資料，或從您的資料庫複製資料。
@@ -102,9 +102,9 @@ ms.locfileid: "66221178"
       Add-AzureAdGroupMember -ObjectId $Group.ObjectId -RefObjectId "<your data factory managed identity object ID>"
       ```
     
-1. 在 Azure 入口網站為您的 Azure SQL Server **[佈建 Azure Active Directory 系統管理員](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server)** ，如果您尚未這麼做。 Azure AD 系統管理員可以是 Azure AD 使用者或 Azure AD 群組。 如果您授與受控識別系統管理員角色，請略過步驟 3 和 4。 系統管理員將擁有資料庫的完整存取權。
+1. 在 Azure 入口網站為您的 Azure SQL Server **[佈建 Azure Active Directory 系統管理員](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server)**，如果您尚未這麼做。 Azure AD 系統管理員可以是 Azure AD 使用者或 Azure AD 群組。 如果您授與受控識別系統管理員角色，請略過步驟 3 和 4。 系統管理員將擁有資料庫的完整存取權。
 
-1. 為 Azure AD 群組 **[建立自主資料庫使用者](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)** 。 使用至少具有 ALTER ANY USER 權限的 Azure AD 身分識別，使用 SSMS 等工具連線至您要複製資料的資料庫。 執行下列 T-SQL： 
+1. 為 Azure AD 群組**[建立自主資料庫使用者](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)**。 使用至少具有 ALTER ANY USER 權限的 Azure AD 身分識別，使用 SSMS 等工具連線至您要複製資料的資料庫。 執行下列 T-SQL： 
     
     ```sql
     CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
@@ -118,9 +118,9 @@ ms.locfileid: "66221178"
 
 若要使用 Azure SQL Database 受控執行個體的受控識別驗證，請遵循下列步驟來設定您的資料庫：
     
-1. 在 Azure 入口網站為您的受控執行個體 **[佈建 Azure Active Directory 系統管理員](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)** ，如果您尚未這麼做。 Azure AD 系統管理員可以是 Azure AD 使用者或 Azure AD 群組。 如果您授與受控識別系統管理員角色，請略過步驟 2-5。 系統管理員將擁有資料庫的完整存取權。
+1. 在 Azure 入口網站為您的受控執行個體**[佈建 Azure Active Directory 系統管理員](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)**，如果您尚未這麼做。 Azure AD 系統管理員可以是 Azure AD 使用者或 Azure AD 群組。 如果您授與受控識別系統管理員角色，請略過步驟 2-5。 系統管理員將擁有資料庫的完整存取權。
 
-1. **[從 Azure 入口網站尋找資料處理站受控識別](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)** 。 前往您資料處理站的**屬性**。 複製**受控識別應用程式識別碼** (不是**受控識別物件識別碼**)。
+1. **[從 Azure 入口網站尋找資料處理站受控識別](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)**。 前往您資料處理站的**屬性**。 複製**受控識別應用程式識別碼** (不是**受控識別物件識別碼**)。
 
 1. **將資料處理站受控識別轉換成二進位類型**。 使用您的 SQL/Active Directory 系統管理員帳戶，使用 SSMS 等工具連線至您受控執行個體的 **master** 資料庫。 對 **master** 資料庫執行下列 T-SQL，以二進位格式取得您的受控識別應用程式識別碼：
     
@@ -144,7 +144,7 @@ ms.locfileid: "66221178"
 
 最後，為 ADO.NET 連線管理員**設定受控識別驗證**。 有兩種選項可以執行此操作。
     
-1. 在設計階段設定。 在 SSIS 設計工具中以滑鼠右鍵按一下 [ADO.NET 連線管理員]，然後按一下 [屬性]  開啟 [屬性視窗]  。 將 **ConnectUsingManagedIdentity** 屬性更新為 **True**。
+1. 在設計階段設定。 在 SSIS 設計工具中以滑鼠右鍵按一下 [ADO.NET 連線管理員]，然後按一下 [屬性] 開啟 [屬性視窗]。 將 **ConnectUsingManagedIdentity** 屬性更新為 **True**。
     > [!NOTE]
     >  目前，當您在 SSIS 設計工具中或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 中執行 SSIS 套件時，連線管理員的 **ConnectUsingManagedIdentity** 屬性不會生效 (表示受控識別驗證無法運作)。
     

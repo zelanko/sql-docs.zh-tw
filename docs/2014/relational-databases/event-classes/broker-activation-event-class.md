@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f2562f3931f98c040bb3dc475e3863bb6396dbbf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62664344"
 ---
 # <a name="brokeractivation-event-class"></a>Broker:Activation 事件類別
@@ -32,7 +32,7 @@ ms.locfileid: "62664344"
 |**DatabaseID**|`int`|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database*陳述式，則是預設資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |**EventClass**|`int`|擷取的事件類別類型。 對於 **Broker:Activation** ，一律為 **163**。|27|否|  
 |**EventSequence**|`int`|此事件的序號。|51|否|  
-|**EventSubClass**|`nvarchar`|此事件報告的特定動作。 為下列其中一個值：<br /><br /> **啟動**: <br />                [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已開始啟用預存程序。<br /><br /> **結束**:啟用預存程序已正常結束。<br /><br /> **中止**:啟用預存程序已結束並發生錯誤。|21|否|  
+|**EventSubClass**|`nvarchar`|此事件報告的特定動作。 為下列其中一個值：<br /><br /> **啟動**: <br />                [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已開始啟用預存程序。<br /><br /> **ended**：啟用預存程序已正常結束。<br /><br /> **aborted**：啟用預存程序已結束並發生錯誤。|21|否|  
 |**HostName**|`nvarchar`|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |**IntegerData**|`int`|此佇列上作用中的工作數。|25|否|  
 |**IsSystem**|`int`|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|否|  

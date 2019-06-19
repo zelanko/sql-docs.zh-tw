@@ -15,18 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060976"
 ---
 # <a name="character-map-transformation-editor"></a>字元對應表轉換編輯器
-  使用 [字元對應表轉換編輯器] 對話方塊，來選取要套用至資料行資料的字串函數，以及指定對應是就地變更或加入為新資料行。  
+  使用 [字元對應表轉換編輯器]  對話方塊，來選取要套用至資料行資料的字串函數，以及指定對應是就地變更或加入為新資料行。  
   
  若要深入了解字元對應表轉換，請參閱＜ [Character Map Transformation](data-flow/transformations/character-map-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可用的輸入資料行**  
  使用此對話方塊來選取要使用字串函數轉換的資料行。 您的選擇會在下面的資料表中出現。  
   

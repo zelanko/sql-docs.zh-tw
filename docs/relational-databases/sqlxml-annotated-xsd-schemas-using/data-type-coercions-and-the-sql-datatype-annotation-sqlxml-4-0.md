@@ -24,10 +24,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 21dc355570d5a2778e553924a189ce985513a7cc
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981032"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>資料類型強制型轉和 sql:datatype 註解 (SQLXML 4.0)
@@ -89,7 +89,7 @@ ms.locfileid: "65981032"
 ## <a name="sqldatatype-annotation"></a>sql:datatype 註解  
  **Sql: datatype**註解用來指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型，而且此註解時，必須指定：  
   
--   您是大量載入到**dateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料行，從 XSD **dateTime**，**日期**，或**時間**型別。 在此情況下，您必須找出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的資料行資料類型**sql: datatype ="dateTime"**。 這項規則也套用於 Updategram。  
+-   您是大量載入到**dateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料行，從 XSD **dateTime**，**日期**，或**時間**型別。 在此情況下，您必須找出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的資料行資料類型**sql: datatype ="dateTime"** 。 這項規則也套用於 Updategram。  
   
 -   您要大量載入的資料行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier**型別，而且 XSD 值是 GUID，包含大括號 （{和}）。 當您指定**sql: datatype ="uniqueidentifier"** 之前它會插入資料行中,，將會移除值的大括號。 如果**sql: datatype**未指定，則傳送值大括號，與在 insert 或 update 將失敗。  
   

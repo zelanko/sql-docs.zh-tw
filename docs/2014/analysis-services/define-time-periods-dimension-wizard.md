@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98ed499f4f2b751ef092a4091076478338173e17
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081983"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>定義時間週期 (維度精靈)
   使用 **[定義時間週期]** 頁面，即可定義時間維度或伺服器時間維度中包含的日曆年度資訊和時間頻率。  
   
 > [!NOTE]  
->  唯有在 [選取維度類型] 頁面上選取了 [伺服器時間維度]，或者在 [選取建立方法] 頁面上選取了 [不使用資料來源而建立維度]，且在 [選取維度類型] 頁面上選取了 [時間維度]，才會顯示此頁面。  
+>  唯有在 [選取維度類型]  頁面上選取了 [伺服器時間維度]  ，或者在 [選取建立方法]  頁面上選取了 [不使用資料來源而建立維度]  ，且在 [選取維度類型]  頁面上選取了 [時間維度]  ，才會顯示此頁面。  
   
 > [!IMPORTANT]  
->  此頁面是用來定義時間維度的日曆年度。 若要定義時間維度的會計日曆年、製造日曆年、報表日曆年或國際標準組織 (ISO) 8601 日曆年，請使用 [選取日曆] 頁面。  
+>  此頁面是用來定義時間維度的日曆年度。 若要定義時間維度的會計日曆年、製造日曆年、報表日曆年或國際標準組織 (ISO) 8601 日曆年，請使用 [選取日曆]  頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **日曆第一天**  
  鍵入或選取今年的第一天。  
   

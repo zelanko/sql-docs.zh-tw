@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49513fd41e3167adcc9d39a8e680dd25bccb24a6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081840"
 ---
 # <a name="dimension-properties-dialog-box-analysis-services---multidimensional-data"></a>維度屬性對話方塊 (Analysis Services - 多維度資料)
-  使用 **中的** [維度屬性] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中之維度的屬性。 您可以在 [物件總管] 中以滑鼠右鍵按一下維度，然後選取 [屬性]，來顯示 [維度屬性] 對話方塊。  
+  使用 **中的** [維度屬性] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中之維度的屬性。 您可以在 [物件總管] 中以滑鼠右鍵按一下維度，然後選取 [屬性]  ，來顯示 [維度屬性]  對話方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  

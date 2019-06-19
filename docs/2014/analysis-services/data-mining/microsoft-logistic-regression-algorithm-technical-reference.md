@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9d3dd4e9da0445f966e9e46013f0b7cd4998190
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083943"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 羅吉斯迴歸演算法技術參考
@@ -44,7 +44,7 @@ ms.locfileid: "66083943"
  所有 Analysis Services 資料採礦演算法都會自動使用特徵選取來改善分析並減少處理的負載。 在羅吉斯迴歸模型中，特徵選取所使用的方法取決於屬性的資料類型。 羅吉斯迴歸是以 Microsoft 類神經網路演算法為基礎，因此，它會使用適用於類神經網路的特徵選取方法子集。 如需詳細資訊，請參閱[特徵選取 &#40;資料採礦&#41;](feature-selection-data-mining.md)。  
   
 ### <a name="scoring-inputs"></a>計分輸入  
- 在類神經網路模型或羅吉斯迴歸模型的內容中，「計分」表示一種程序，會將資料中出現的值轉換為使用相同小數位數的一組值，因此可以互相比較。 例如，假設 Income 輸入的範圍是 0 到 100,000，而 [Number of Children] 輸入的範圍是 0 到 5。 此轉換程序可讓您*分數*，或比較，不論值的差異的每個輸入的重要性。  
+ 在類神經網路模型或羅吉斯迴歸模型的內容中，「計分」  表示一種程序，會將資料中出現的值轉換為使用相同小數位數的一組值，因此可以互相比較。 例如，假設 Income 輸入的範圍是 0 到 100,000，而 [Number of Children] 輸入的範圍是 0 到 5。 此轉換程序可讓您*分數*，或比較，不論值的差異的每個輸入的重要性。  
   
  對於出現在定型集中的每個狀態，模型都會產生一個輸入。 對於離散或離散化的輸入，如果在定型集中至少出現一次遺漏狀態，則會建立其他輸入來代表「遺漏」狀態。 至於連續輸入，最多會建立兩個輸入節點：一個用於「遺漏」值 (如果出現在定型資料中)，而另一個輸入則用於所有現有的值或非 Null 值。 每個輸入會調整為數值的格式使用 z-score 正規化方法，(x-μ） / 標準差。  
   

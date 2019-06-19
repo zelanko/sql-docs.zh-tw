@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: c64b1ea3ecc283cdea92a5722c7a1dad120ecb50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63272780"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>將 DB2 資料移轉到 SQL Server (DB2ToSQL)

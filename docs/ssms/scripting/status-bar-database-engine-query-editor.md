@@ -12,21 +12,21 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c93fcf0c19f41f1dfbb3f2e44a95b623836ebca
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821852"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>狀態列 (Database Engine 查詢編輯器)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗的狀態列可能利用彩色編碼，以便表示每個視窗所連接的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。  
   
-1.  **開始之前：** [狀態列色彩](#StatusBarColors)  
+1.  **開始之前：**[狀態列色彩](#StatusBarColors)  
   
-2.  **在以下項目中設定伺服器狀態色彩：** [物件總管](#SetOEServerColor)、[已註冊的伺服器](#SetRegServerColor)  
+2.  **在以下項目中設定伺服器狀態色彩：**[物件總管](#SetOEServerColor)、[已註冊的伺服器](#SetRegServerColor)  
   
-3.  **使用狀態色彩：** [使用伺服器色彩開啟查詢編輯器](#OpenServerColor)、[指定狀態色彩並開啟查詢編輯器](#OpenSpecColor)  
+3.  **使用狀態色彩：**[使用伺服器色彩開啟查詢編輯器](#OpenServerColor)、[指定狀態色彩並開啟查詢編輯器](#OpenSpecColor)  
   
 ##  <a name="StatusBarColors"></a> 狀態列色彩  
  您可在 **[物件總管]** 或 **[已註冊的伺服器]** 中讓狀態列色彩與特定伺服器節點產生關聯。 您僅能指定連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的伺服器節點之色彩，而不能指定其他 SQL Server 技術的伺服器節點色彩。 每當您將新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體時，便可自訂狀態列色彩。 接著您可以使用為伺服器節點所定義的狀態色彩，開啟查詢編輯器視窗；或為該編輯器視窗指定獨特的色彩。  
@@ -75,7 +75,7 @@ ms.locfileid: "65821852"
 ##  <a name="OpenSpecColor"></a> 開啟指定狀態色彩的編輯器  
  **開啟指定狀態色彩的編輯器視窗**  
   
--   在 **[檔案]** 功能表上，選取 **[開新檔案]** ，再選取 **[Database Engine 查詢]** 。  
+-   在 **[檔案]** 功能表上，選取 **[開新檔案]**，再選取 **[Database Engine 查詢]**。  
   
 -   在 [連接到伺服器] 對話方塊中選取 [選項 >>]。  
   

@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: b67926706674abb116b4f3075089853e6fbb665e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089305"
 ---
 # <a name="options-query-results-sql-server-results-to-grid-page"></a>選項 (查詢結果-SQL Server-以結果格線頁）
-  使用這個頁面即可指定選項，使查詢結果集以方格的格式顯示。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [查詢] 功能表上的 [查詢選項]，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗中按一下滑鼠右鍵，並選取 [查詢選項]。 在 [查詢選項] 對話方塊的左窗格中，於 [結果] 之下，按一下 [方格]。  
+  使用這個頁面即可指定選項，使查詢結果集以方格的格式顯示。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [查詢]  功能表上的 [查詢選項]  ，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗中按一下滑鼠右鍵，並選取 [查詢選項]  。 在 [查詢選項]  對話方塊的左窗格中，於 [結果]  之下，按一下 [方格]  。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **在結果集裡包含查詢**  
@@ -48,7 +48,7 @@ ms.locfileid: "66089305"
   
  **XML 資料**：  
   
- 選取 [1 MB]、[2 MB] 或 [5 MB]。 選取 [無限制] 以擷取所有字元。  
+ 選取 [1 MB]  、[2 MB]  或 [5 MB]  。 選取 [無限制]  以擷取所有字元。  
   
  **重設為預設值**  
  將此頁面上的所有值重設為原始預設值。  

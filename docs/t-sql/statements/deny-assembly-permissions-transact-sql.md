@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 015d1259430d2da67bb91ae4dd6ed26e0a421766
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326479"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62666184"
 ---
 # <a name="deny-assembly-permissions-transact-sql"></a>DENY 組件權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要組件的 CONTROL 權限。 如果使用 AS 選項，指定的主體必須擁有組件。  
   
 ## <a name="see-also"></a>另請參閱  

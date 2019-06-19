@@ -16,10 +16,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62787756"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>對全文檢索搜尋的重大變更
@@ -38,7 +38,7 @@ ms.locfileid: "62787756"
   
 |功能|狀況|SQL Server 2005|SQL Server 2008 及更新版本|  
 |-------------|--------------|---------------------|----------------------------------------|  
-|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)與使用者定義型別 (Udt)|全文檢索索引鍵是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用者定義型別，例如 `MyType = char(1)`。|傳回的索引鍵具有指派給使用者定義型別的型別。<br /><br /> 在此範例中，這會是**char(1)**。|傳回的索引鍵具有使用者定義型別。 在此範例中，這會是**MyType**。|  
+|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)與使用者定義型別 (Udt)|全文檢索索引鍵是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用者定義型別，例如 `MyType = char(1)`。|傳回的索引鍵具有指派給使用者定義型別的型別。<br /><br /> 在此範例中，這會是**char(1)** 。|傳回的索引鍵具有使用者定義型別。 在此範例中，這會是**MyType**。|  
 |*top_n_by_rank*參數 (的 CONTAINSTABLE 和[FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) [!INCLUDE[tsql](../includes/tsql-md.md)]陳述式)|*top_n_by_rank*使用 0 做為參數的查詢。|發生失敗並傳回錯誤訊息，該訊息指出您必須使用大於零的值。|成功，傳回零個資料列。|  
 |CONTAINSTABLE 和**ItemCount**|在基底資料表發送變更到 MSSearch 之前，從基底資料表中刪除資料列。|CONTAINSTABLE 會傳回準刪除記錄。 **ItemCount**則不會變更。|CONTAINSTABLE 不會傳回任何準刪除記錄。|  
 |**ItemCount**|資料表包含 Null 文件或類型資料行。|除了索引文件，文件，都是 null 或具有 null 的型別會算入**ItemCount**值。|只有索引文件中計算**ItemCount**值。|  

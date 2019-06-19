@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e889c4da9e20a547f5a512f4aab1ee823bde5f5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056174"
 ---
 # <a name="script-task-editor-general-page"></a>指令碼工作編輯器 (一般頁面)
@@ -26,7 +26,7 @@ ms.locfileid: "66056174"
   
  若要深入了解指令碼工作，請參閱＜ [Script Task](control-flow/script-task.md) ＞和＜ [在指令碼工作編輯器設定指令碼工作](extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼工作，請參閱＜ [Extending the Package with the Script Task](extending-packages-scripting/task/extending-the-package-with-the-script-task.md)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **名稱**  
  為指令碼工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  
   

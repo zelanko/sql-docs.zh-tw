@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 98c9691f51036b29aa80aa34b1ca8396ab49def2
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62715525"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>開始執行啟用資料庫的延展功能精靈
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "56240842"
   
 1.  在 SQL Server Management Studio 的 [物件總管] 中，選取要啟用 Stretch 的資料庫。  
   
-2.  按一下滑鼠右鍵並選取 [工作]，然後依序選取 [Stretch] 和 [啟用]，來啟動精靈。  
+2.  按一下滑鼠右鍵並選取 [工作]  ，然後依序選取 [Stretch]  和 [啟用]  ，來啟動精靈。  
   
 ##  <a name="Intro"></a> 簡介  
  檢閱精靈的用途及必要條件。  
@@ -73,26 +73,26 @@ ms.locfileid: "56240842"
 |**大小 (KB)**|指定資料表的大小 (KB)。|  
   
 ## <a name="optionally-provide-a-row-filter"></a>選擇性地提供資料列篩選  
- 如果您想要提供篩選函數來選取要移轉的資料列，請在 [選取資料表] 頁面執行下列其中一項操作。  
+ 如果您想要提供篩選函數來選取要移轉的資料列，請在 [選取資料表]  頁面執行下列其中一項操作。  
   
-1.  在 [選取要延展的資料表] 清單中，按一下資料表之資料列中的 [整份資料表]。 [選取要延展的資料列] 對話方塊隨即開啟。  
+1.  在 [選取要延展的資料表]  清單中，按一下資料表之資料列中的 [整份資料表]  。 [選取要延展的資料列]  對話方塊隨即開啟。  
   
      ![定義日期型篩選述詞](../../sql-server/stretch-database/media/stretch-wizard-2a.png "定義日期型篩選述詞")  
   
-2.  在 [選取要延展的資料列] 對話方塊中，選取 [選擇資料列]。  
+2.  在 [選取要延展的資料列]  對話方塊中，選取 [選擇資料列]  。  
   
-3.  在 [名稱] 欄位中，提供篩選函數的名稱。  
+3.  在 [名稱]  欄位中，提供篩選函數的名稱。  
   
 4.  針對 **Where** 子句，選取資料表中的資料行、挑選一個運算子，並提供值。  
   
-5.  按一下 [檢查] 以測試函數。 如果函數從資料表傳回結果 - 也就是有要移轉的資料列符合條件 - 測試會回報**成功**。  
+5.  按一下 [檢查]  以測試函數。 如果函數從資料表傳回結果 - 也就是有要移轉的資料列符合條件 - 測試會回報**成功**。  
 
 > [!NOTE] 
 > 顯示篩選查詢的文字方塊是唯讀的。 您無法編輯文字方塊中的查詢。
   
-6.  按一下 [完成] 返回 [選取資料表] 頁面。  
+6.  按一下 [完成] 返回 [選取資料表]  頁面。  
 
-篩選函數只有在您完成精靈時才會建立在 SQL Server 中。 在那之前，您可以回到 [選取資料表] 頁面，變更或重新命名篩選函數。
+篩選函數只有在您完成精靈時才會建立在 SQL Server 中。 在那之前，您可以回到 [選取資料表]  頁面，變更或重新命名篩選函數。
 
 ![定義篩選述詞之後的 [選取資料表] 頁面](../../sql-server/stretch-database/media/stretch-wizard-2b.png "定義篩選述詞之後的 [選取資料表] 頁面")
 
@@ -115,7 +115,7 @@ ms.locfileid: "56240842"
   
 3.  選取要用於 Stretch Database 的 Azure 區域。
     -   如果您建立新的伺服器，該伺服器就會建立於此區域中。  
-    -   如果您在所選區域中有現有的伺服器，精靈會在您選擇 [現有伺服器] 時列出它們。
+    -   如果您在所選區域中有現有的伺服器，精靈會在您選擇 [現有伺服器]  時列出它們。
   
      若要將延遲降至最低，請挑選您的 SQL Server 所在的 Azure 區域。 如需區域的詳細資訊，請參閱 [Azure 區域](https://azure.microsoft.com/regions/)。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "56240842"
   
         2.  選取驗證方法。  
   
-            -   如果您選取 [SQL Server 驗證]，請提供系統管理員登入與密碼。  
+            -   如果您選取 [SQL Server 驗證]  ，請提供系統管理員登入與密碼。  
   
             -   選取 [Active Directory 整合式驗證]  ，使用適用於 SQL Server 的同盟服務帳戶，來與遠端 Azure 伺服器通訊。 如果選取的伺服器未與 Azure Active Directory 整合，則不會出現此選項。
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31dd441af6e46784b928006fe45b726f4c59f0c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63267374"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>設定追蹤顯示預設值 (SQL Server Profiler)
@@ -24,17 +24,17 @@ ms.locfileid: "63267374"
   
 ### <a name="to-set-trace-display-defaults"></a>若要設定追蹤顯示預設值  
   
-1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-2.  在 [一般選項] 對話方塊中，按一下 [選擇字型]。  
+2.  在 [一般選項]  對話方塊中，按一下 [選擇字型]  。  
   
-3.  在 [字型] 對話方塊中，選取 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 用來顯示追蹤的 [字型]、[字型樣式] 和 [大小]。  
+3.  在 [字型]  對話方塊中，選取 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 用來顯示追蹤的 [字型]  、[字型樣式]  和 [大小]  。  
   
-4.  按一下 [確定] 套用設定並關閉 [字型] 對話方塊。  
+4.  按一下 [確定]  套用設定並關閉 [字型]  對話方塊。  
   
-5.  在 [一般選項] 對話方塊中，核取 [使用地區設定來顯示日期和時間值]，設定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 在顯示追蹤時使用系統所設定的區域設定。  
+5.  在 [一般選項]  對話方塊中，核取 [使用地區設定來顯示日期和時間值]  ，設定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 在顯示追蹤時使用系統所設定的區域設定。  
   
-6.  按一下 [確定] 關閉 [一般選項] 對話方塊。  
+6.  按一下 [確定]  關閉 [一般選項]  對話方塊。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler](sql-server-profiler.md)  

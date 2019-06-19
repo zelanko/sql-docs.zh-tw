@@ -15,18 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c8eee57be7c7bb9167c24bec117fd2f88a5bb745
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62926329"
 ---
 # <a name="debugging-script"></a>偵錯指令碼
   您可以撰寫指令碼工作和指令碼元件在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 中使用的指令碼。  
   
- 您可以在 VSTA 中設定中斷點和編寫中斷點指令碼。 您可以在 VSTA 中管理中斷點，但您也可以使用「[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」提供的 [設定中斷點] 對話方塊管理中斷點。 如需詳細資訊，請參閱[偵錯控制流程](debugging-control-flow.md)。  
+ 您可以在 VSTA 中設定中斷點和編寫中斷點指令碼。 您可以在 VSTA 中管理中斷點，但您也可以使用「[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」提供的 [設定中斷點]  對話方塊管理中斷點。 如需詳細資訊，請參閱[偵錯控制流程](debugging-control-flow.md)。  
   
- [設定中斷點] 對話方塊包含指令碼中斷點。 這些中斷點出現在中斷點清單的底部，並顯示中斷點所在之函數的行號和名稱。 您可以從 [設定中斷點] 對話方塊刪除指令碼中斷點。  
+ [設定中斷點]  對話方塊包含指令碼中斷點。 這些中斷點出現在中斷點清單的底部，並顯示中斷點所在之函數的行號和名稱。 您可以從 [設定中斷點]  對話方塊刪除指令碼中斷點。  
   
  在執行階段，於指令碼中程式碼行上設定的中斷點會與封裝上或封裝的工作和容器上設定的中斷點整合。 偵錯工具可以從指令碼中的中斷點執行到封裝、工作或容器上設定的中斷點，反之亦可。 例如，封裝可能具有以封裝接收到 **OnPreExecute** 和 **OnPostExecute** 事件時發生之中斷條件設定的中斷點，而且封裝還可擁有在其指令碼行上具有中斷點的指令碼工作。 在此案例中，封裝可以暫停與 **OnPreExecute** 事件相關之中斷條件的執行，而執行到指令碼中的中斷點，並最終執行到與 **OnPostExecute** 事件相關的中斷條件。  
   

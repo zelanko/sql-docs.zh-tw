@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 85af1eb285a8739fb6c9e092609909be660223bb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66786794"
 ---
 # <a name="agent-xps-server-configuration-option"></a>Agent XPs 伺服器組態選項
@@ -44,9 +44,9 @@ ms.locfileid: "66786794"
 
 1. 從 Microsoft SQL Server Management Studio，連接到資料庫引擎。
 
-2.  在標準列中，按一下 [新增查詢]  。
+2.  在標準列中，按一下 [新增查詢]。
 
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 
   
 ```sql 
 sp_configure 'show advanced options', 1;  

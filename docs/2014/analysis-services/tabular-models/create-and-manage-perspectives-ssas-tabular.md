@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b920446018c9199ed0bd436e67a65d43341f7f43
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067433"
 ---
 # <a name="create-and-manage-perspectives-ssas-tabular"></a>建立及管理檢視方塊 (SSAS 表格式)
@@ -35,11 +35,11 @@ ms.locfileid: "66067433"
 -   [複製檢視方塊](#bkmk_copy)  
   
 ## <a name="tasks"></a>工作  
- 若要建立檢視方塊，請使用 **[檢視方塊]** 對話方塊，即可在其中加入、編輯、刪除、複製及查看檢視方塊。 若要在 **中檢視** [檢視方塊] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]對話方塊，請按一下 **[模型]** 功能表，然後按一下 **[檢視方塊]**。  
+ 若要建立檢視方塊，請使用 **[檢視方塊]** 對話方塊，即可在其中加入、編輯、刪除、複製及查看檢視方塊。 若要在 **中檢視** [檢視方塊] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]對話方塊，請按一下 **[模型]** 功能表，然後按一下 **[檢視方塊]** 。  
   
 ###  <a name="bkmk_add"></a> 加入檢視方塊  
   
--   若要加入新檢視方塊，請按一下 **[新增檢視方塊]**。 即可核取或取消核取要包含的欄位物件，並提供新檢視方塊的名稱。  
+-   若要加入新檢視方塊，請按一下 **[新增檢視方塊]** 。 即可核取或取消核取要包含的欄位物件，並提供新檢視方塊的名稱。  
   
      如果您建立空白檢視方塊 (已取消核取所有欄位物件)，則使用此檢視方塊的使用者會看到空白的欄位清單。 檢視方塊應該至少包含一個資料表和一個資料行。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66067433"
   
 ###  <a name="bkmk_rename"></a> 重新命名檢視方塊  
   
--   當您將滑鼠停留在檢視方塊的資料行標頭 （檢視方塊的名稱），**重新命名**按鈕隨即顯示。 若要重新命名檢視方塊，請按一下 **[重新命名]**，然後輸入新名稱或編輯現有名稱。  
+-   當您將滑鼠停留在檢視方塊的資料行標頭 （檢視方塊的名稱），**重新命名**按鈕隨即顯示。 若要重新命名檢視方塊，請按一下 **[重新命名]** ，然後輸入新名稱或編輯現有名稱。  
   
 ###  <a name="bkmk_delete"></a> 刪除檢視方塊  
   

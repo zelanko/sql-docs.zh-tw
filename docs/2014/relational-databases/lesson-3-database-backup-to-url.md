@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7361cb5d0e68cfa3f45f46d7f99d68c88c1a556b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090814"
 ---
 # <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>第 4 課：在 Windows Azure 儲存體中建立資料庫
@@ -77,7 +77,7 @@ ms.locfileid: "66090814"
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
   
-    2.  將 **[儲存體帳戶名稱]** 和 **[主存取金鑰]** 值複製到 SSMS 中的 **[連接到 Windows Azure 儲存體]** 對話方塊視窗。 然後，按一下 **[連接]**。 這樣就會將有關儲存體帳戶容器的資訊帶到 SSMS 中，如下列螢幕擷取畫面所示：  
+    2.  將 **[儲存體帳戶名稱]** 和 **[主存取金鑰]** 值複製到 SSMS 中的 **[連接到 Windows Azure 儲存體]** 對話方塊視窗。 然後，按一下 **[連接]** 。 這樣就會將有關儲存體帳戶容器的資訊帶到 SSMS 中，如下列螢幕擷取畫面所示：  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2.gif "SQL 14 CTP2")  
   

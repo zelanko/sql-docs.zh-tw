@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5fba4bafe61090e3b7bb89129e5ecefd0befc7d9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054887"
 ---
 # <a name="transfer-sql-server-objects-task-editor-general-page"></a>傳送 SQL Server 物件工作編輯器 (一般頁面)
@@ -27,7 +27,7 @@ ms.locfileid: "66054887"
 > [!NOTE]  
 >  建立傳送 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件工作的使用者，在來源伺服器物件上必須擁有適當的權限，來選取其供複製之用，並擁有權限來存取傳送之物件所在的目的地伺服器資料庫。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **名稱**  
  輸入傳送 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件工作的唯一名稱。 這個名稱是作為工作圖示中的標籤使用。  
   

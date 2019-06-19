@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f806501ffbb52f3839fa343a05a8db57917533ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073687"
 ---
 # <a name="modify-or-delete-an-analysis-services-database"></a>修改或刪除 Analysis Services 資料庫
@@ -45,11 +45,11 @@ ms.locfileid: "66073687"
   
 1.  連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
   
-2.  在 [物件總管] 中，展開所連接之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的節點，並確定可以看見要刪除的物件。  
+2.  在 [物件總管]  中，展開所連接之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的節點，並確定可以看見要刪除的物件。  
   
-3.  以滑鼠右鍵按一下要刪除的物件，並選取 [刪除]。  
+3.  以滑鼠右鍵按一下要刪除的物件，並選取 [刪除]  。  
   
-4.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]**。  
+4.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [記錄和編寫 Analysis Services 資料庫的指令碼](document-and-script-an-analysis-services-database.md)  

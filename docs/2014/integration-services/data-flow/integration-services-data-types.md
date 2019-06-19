@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62902436"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 資料類型
@@ -222,7 +222,7 @@ ms.locfileid: "62902436"
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
 |DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
-|DT_CY|smallmoney, money|smallmoney, money|CURRENCY||||  
+|DT_CY|smallmoney, money|smallmoney, money|Currency||||  
 |DT_DATE|||||||  
 |DT_DBDATE|[日期 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[日期 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||日期|日期|日期|  
 |DT_DBTIME||||TIMESTAMP|time|time|  

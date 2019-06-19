@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8e2f3b1e63578af7c0b42f00113fbb9e87cb8003
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63208422"
 ---
 # <a name="paradox-data-types"></a>Paradox 資料類型
@@ -59,6 +59,6 @@ ODBC Paradox 驅動程式會將 Paradox 資料類型對應至 ODBC SQL 資料類
 |英數字元|建立的英數字元的資料行的零或未指定的長度實際上會傳回 255 個位元組的資料行。|  
 |BYTES|如果您將 NULL 插入 Paradox5 驅動程式的二進位資料行時，會將它變更為 0。|  
 |LONG|Paradox 5 中的 Long 資料類型的 Paradox 驅動程式所支援的最大負數值。*x*不是-2 ^31 (-2147483648)，因為它應該是因為長時間對應至 ODBC 資料類型 SQL_INTEGER。 支援長時間的最大負數的值是實際上-2 ^31 + 1 (-2147483647)。|  
-|timestamp|當值是 Paradox 驅動程式插入時間戳記資料行，再接著就會擷取從資料行時，擷取的值可能不同於插入的值最高達 1 的第二個因為捨入。|  
+|TIMESTAMP|當值是 Paradox 驅動程式插入時間戳記資料行，再接著就會擷取從資料行時，擷取的值可能不同於插入的值最高達 1 的第二個因為捨入。|  
   
  資料型別上的更多限制可在[資料型別限制](../../odbc/microsoft/data-type-limitations.md)。

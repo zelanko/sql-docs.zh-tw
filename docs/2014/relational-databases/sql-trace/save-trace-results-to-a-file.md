@@ -11,14 +11,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a55662b38fbd69dc45d8f0031856ad4da5929038
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63136445"
 ---
 # <a name="save-trace-results-to-a-file"></a>將追蹤結果儲存至檔案
-  您可以將追蹤結果儲存至檔案。 追蹤檔案是用來寫入追蹤結果的檔案。 追蹤檔案可以位於本機目錄 (例如 C:\\\\檔案名稱.trc) 或網路目錄 (例如 \\\電腦名稱\共用名稱\檔案名稱.trc)。  
+  您可以將追蹤結果儲存至檔案。 追蹤檔案是用來寫入追蹤結果的檔案。 追蹤檔案可以位於本機目錄 (例如 C:\\  \\檔案名稱.trc  ) 或網路目錄 (例如 \\\電腦名稱\共用名稱\檔案名稱.trc)。  
   
  您可以使用追蹤檔案來執行下列動作：  
   

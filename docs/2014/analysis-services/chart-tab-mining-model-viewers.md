@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088180"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>圖表索引標籤 (採礦模型檢視器)
-  使用 [圖表] 窗格，即可顯示用於定型時間序列模型的歷程記錄資料以及預測值。 圖表的垂直軸代表序列的值，而水平軸代表時間。 虛線代表未來預測。  
+  使用 [圖表]  窗格，即可顯示用於定型時間序列模型的歷程記錄資料以及預測值。 圖表的垂直軸代表序列的值，而水平軸代表時間。 虛線代表未來預測。  
   
- **如需詳細資訊：**[Microsoft 時間序列演算法](data-mining/microsoft-time-series-algorithm.md)，[瀏覽模型，使用 Microsoft 時間序列檢視器](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ **如需詳細資訊：** [Microsoft 時間序列演算法](data-mining/microsoft-time-series-algorithm.md)，[瀏覽模型，使用 Microsoft 時間序列檢視器](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -44,7 +44,7 @@ ms.locfileid: "66088180"
  縮小圖表直到整個圖表納入螢幕內。  
   
  **Abs**  
- 在兩個圖表檢視之間切換：在預設檢視中，數字相對於整體分佈來繪製圖形 (以百分比表示)。 如果您按一下 [Abs]，則會將數字做為絕對值繪製圖形。  
+ 在兩個圖表檢視之間切換：在預設檢視中，數字相對於整體分佈來繪製圖形 (以百分比表示)。 如果您按一下 [Abs]  ，則會將數字做為絕對值繪製圖形。  
   
  **將圖表複製到剪貼簿**  
  將完整圖表複製到剪貼簿。  

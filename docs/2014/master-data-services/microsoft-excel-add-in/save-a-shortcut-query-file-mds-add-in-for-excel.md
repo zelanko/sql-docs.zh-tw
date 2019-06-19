@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bebddfcb9f6dc433831e2649428bd9c99646628f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482859"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>儲存捷徑查詢檔案 (適用於 Excel 的 MDS 增益集)
@@ -27,13 +27,13 @@ ms.locfileid: "65482859"
   
 ### <a name="to-save-a-shortcut-query-file"></a>若要儲存捷徑查詢檔案  
   
-1.  在 [儲存和傳送] 群組中，按一下 [儲存查詢] 底下的箭頭，然後按一下 [另存成查詢]。  
+1.  在 [儲存和傳送]  群組中，按一下 [儲存查詢]  底下的箭頭，然後按一下 [另存成查詢]  。  
   
-2.  選擇性。 若要重新命名查詢，請按一下 [儲存查詢] 底下的箭頭，然後按一下 [管理查詢]。 選取查詢，並按一下 [重新命名]。  
+2.  選擇性。 若要重新命名查詢，請按一下 [儲存查詢]  底下的箭頭，然後按一下 [管理查詢]  。 選取查詢，並按一下 [重新命名]  。  
   
 ## <a name="next-steps"></a>後續步驟  
   
--   按一下 [儲存查詢] 底下的箭頭，以檢視捷徑查詢並將它開啟。  
+-   按一下 [儲存查詢]  底下的箭頭，以檢視捷徑查詢並將它開啟。  
   
 -   [以電子郵件傳送捷徑查詢檔案 &#40;適用於 Excel 的 MDS 增益集&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)  
   

@@ -10,10 +10,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8344f9377cfe1850c7eefbf379667dba664aedfa
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717601"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>在 .NET 應用程式中使用 C# 程式碼執行 SSIS 套件

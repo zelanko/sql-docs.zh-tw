@@ -30,10 +30,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63269870"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>規則、觸發程序、預設值和預存程序支援 (Visual FoxPro ODBC Driver)
@@ -44,7 +44,7 @@ ms.locfileid: "63269870"
  如果您的應用程式互動資料的規則、 觸發程序、 預設值，或任何其他的 Visual FoxPro 命令或函式，呼叫預存程序，驅動程式會產生錯誤。 請參閱[不支援的 Visual FoxPro 命令和函式](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md)如需命令和驅動程式不支援的函式的清單。  
   
 > [!TIP]  
->  如果您想要將條件式的程式碼插入您的規則、 觸發程序或預存程序可決定要呼叫由驅動程式時所執行的命令，您可以使用**版本 （)** 函式。 **版本 （)** 函式會傳回 「 Visual FoxPro ODBC Driver *\<版本 >*」 驅動程式呼叫時。  
+>  如果您想要將條件式的程式碼插入您的規則、 觸發程序或預存程序可決定要呼叫由驅動程式時所執行的命令，您可以使用**版本 （)** 函式。 **版本 （)** 函式會傳回 「 Visual FoxPro ODBC Driver *\<版本 >* 」 驅動程式呼叫時。  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Visual FoxPro 命令和規則、 觸發程序、 預設值和預存程序中支援的函式  
   

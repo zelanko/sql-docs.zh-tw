@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cba784ed6e81152e91b8320ac5e441187c07df9c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922129"
 ---
 # <a name="copy-only-backups-sql-server"></a>只複製備份 (SQL Server)
-  「只複製備份」是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 通常，進行備份會變更資料庫，而且會影響往後其他備份的還原方式。 不過，偶爾為了特殊目的在不影響資料庫整體備份及還原程序的情況下進行備份，相當有用。 只複製備份即是供此目的之用。  
+  「只複製備份」  是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 通常，進行備份會變更資料庫，而且會影響往後其他備份的還原方式。 不過，偶爾為了特殊目的在不影響資料庫整體備份及還原程序的情況下進行備份，相當有用。 只複製備份即是供此目的之用。  
   
  只複製備份的類型如下所示：  
   
@@ -45,21 +45,21 @@ ms.locfileid: "62922129"
   
 ###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-1.  在 [備份資料庫] 對話方塊的 [一般] 頁面上，選取 [只複製備份] 選項。  
+1.  在 [備份資料庫]  對話方塊的 [一般]  頁面上，選取 [只複製備份]  選項。  
   
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  基本的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 語法如下：  
   
 -   用於只複製完整備份：  
   
-     BACKUP DATABASE *database_name* TO \<backup_device>*>* ...WITH COPY_ONLY...  
+     BACKUP DATABASE *database_name* TO \<backup_device> *>* ...WITH COPY_ONLY...  
   
     > [!NOTE]  
     >  指定 DIFFERENTIAL 選項時，COPY_ONLY 沒有任何作用。  
   
 -   用於只複製記錄備份：  
   
-     BACKUP LOG *database_name* TO *\<* backup_device>*>* ...WITH COPY_ONLY...  
+     BACKUP LOG *database_name* TO *\<* backup_device> *>* ...WITH COPY_ONLY...  
   
 ###  <a name="PowerShellProcedure"></a> 使用 PowerShell  
   

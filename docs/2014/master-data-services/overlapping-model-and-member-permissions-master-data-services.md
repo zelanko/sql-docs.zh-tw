@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ca57d34a3dda2880f3882d1940c6852af0729fb7
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482734"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>重疊的模型和成員的權限 (Master Data Services)
@@ -41,7 +41,7 @@ ms.locfileid: "65482734"
   
  在 **[階層成員]** 索引標籤上，衍生階層中的 Mountain Bikes 子類別目錄節點已被指派 **[更新]** 權限。  
   
- 結果：在 [總管] 中，使用者擁有 Mountain Bikes 節點中所有成員全部屬性值的 [更新] 權限。 系統會隱藏所有其他成員和屬性。  
+ 結果：在 [總管]  中，使用者擁有 Mountain Bikes 節點中所有成員全部屬性值的 [更新]  權限。 系統會隱藏所有其他成員和屬性。  
   
  ![mds_conc_overlap_model_example_1](../../2014/master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   

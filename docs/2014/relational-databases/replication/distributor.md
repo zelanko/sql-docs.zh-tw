@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c0a98aa13b4453244c8ed565a950660a20e5a3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721305"
 ---
 # <a name="distributor"></a>散發者
@@ -32,7 +32,7 @@ ms.locfileid: "62721305"
   
  您選擇作為散發者的伺服器，應該具備足夠的磁碟空間及處理器動力，以便支援該伺服器的複寫及所有其他活動。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **'\<伺服器名稱>' 將扮演本身的散發者；SQL Server 將建立散發資料庫和記錄**  
  選取此選項即可將您連接的伺服器設定為散發者。  
   

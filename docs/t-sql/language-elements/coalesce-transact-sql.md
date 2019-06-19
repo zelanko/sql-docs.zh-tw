@@ -23,10 +23,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b44f7d9d37efaac80f018ce2b1c1497230e66e3c
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982688"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
@@ -53,7 +53,7 @@ _expression_
 如果所有引數均為 `NULL`，`COALESCE` 就會傳回 `NULL`。 至少其中一個 Null 值必須是 `NULL` 類型。  
   
 ## <a name="comparing-coalesce-and-case"></a>比較 COALESCE 和 CASE  
-`COALESCE` 運算式是 `CASE` 運算式的語法捷徑。  也就是說，查詢最佳化工具會將程式碼 `COALESCE`(_expression1_, _...n_) 重寫為下列 `CASE` 運算式：  
+`COALESCE` 運算式是 `CASE` 運算式的語法捷徑。  也就是說，查詢最佳化工具會將程式碼 `COALESCE`(_expression1_,_...n_) 重寫為下列 `CASE` 運算式：  
   
 ```sql  
 CASE  

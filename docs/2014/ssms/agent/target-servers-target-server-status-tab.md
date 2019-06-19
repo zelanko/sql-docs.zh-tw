@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245718"
 ---
 # <a name="target-servers-target-server-status-tab"></a>目標伺服器 (目標伺服器狀態索引標籤)
   使用此頁面來檢視此主要伺服器的目標伺服器狀態。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **目標伺服器**  
  檢視目標伺服器的名稱。  
   

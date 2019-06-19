@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9af16a2e8c1d967b42882cc84fae68f1920e9c28
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478081"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 部署模型部署封裝
@@ -36,13 +36,13 @@ ms.locfileid: "65478081"
 ## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   在目標 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 環境中，您必須擁有存取 [系統管理] 功能區域的權限。  
+-   在目標 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 環境中，您必須擁有存取 [系統管理]  功能區域的權限。  
   
 -   模型部署封裝必須存在。 如需詳細資訊，請參閱  [使用 MDSModelDeploy 建立模型部署套件](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
 -   您必須是您要部署模型之環境中的管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
--   如果您正在使用資料更新模型，您所部署的目標版本不得為 [已鎖定] 或 [已認可]。  
+-   如果您正在使用資料更新模型，您所部署的目標版本不得為 [已鎖定]  或 [已認可]  。  
   
 ### <a name="to-deploy-a-model-deployment-package"></a>若要部署模型部署封裝  
   

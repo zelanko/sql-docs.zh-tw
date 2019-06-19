@@ -16,10 +16,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5421467aaf516ca3f1f153979916be01f9160d05
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62738219"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>使用 ODBC 資料表值參數
@@ -67,7 +67,7 @@ ms.locfileid: "62738219"
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>從系統目錄擷取資料表值參數中繼資料  
  當應用程式會針對具有資料表值參數的程序呼叫 SQLProcedureColumns 時，DATA_TYPE 會傳回為 SQL_SS_TABLE，而且 TYPE_NAME 是資料表值參數資料表類型的名稱。 兩個額外的資料行加入 SQLProcedureColumns 傳回的結果集：SS_TYPE_CATALOG_NAME 會傳回定義資料表類型的資料表值參數，而 SS_TYPE_SCHEMA_NAME 會傳回的結構描述名稱的目錄名稱所在的位置定義資料表類型的資料表值參數。 依照 ODBC 規格規定，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 會出現在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所加入的所有驅動程式特有資料行之前，以及 ODBC 本身所託管的所有資料行之後。  
   
- 新的資料行不但會針對資料表值參數擴展，也會針對 CLR 使用者定義型別參數擴展。 仍然會擴展 UDT 參數現有的結構描述和目錄資料行，但是讓需要的資料類型擁有共同的結構描述和目錄資料行將會簡化未來的應用程式開發過程  (請注意，XML 結構描述集合會有些不同，而且未包含在這項變更中)。  
+ 新的資料行不但會針對資料表值參數擴展，也會針對 CLR 使用者定義型別參數擴展。 仍然會擴展 UDT 參數現有的結構描述和目錄資料行，但是讓需要的資料類型擁有共同的結構描述和目錄資料行將會簡化未來的應用程式開發過程 (請注意，XML 結構描述集合會有些不同，而且未包含在這項變更中)。  
   
  應用程式會使用 SQLTables，它會保存的資料表、 系統資料表和檢視表的相同方式決定資料表類型的名稱。 新的資料表類型 TABLE TYPE 已經導入，可讓應用程式識別與資料表值參數相關聯的資料表類型。 資料表類型和一般表格會使用不同的命名空間。 這表示，您可以將相同的名稱用於資料表類型和實際資料表。 為了處理這個情況，已經導入了新的陳述式屬性 SQL_SOPT_SS_NAME_SCOPE。 這個屬性會指定是否 SQLTables 和其他採用資料表名稱做為參數的目錄函數應該解譯的實際資料表名稱的資料表名稱或資料表類型的名稱。  
   

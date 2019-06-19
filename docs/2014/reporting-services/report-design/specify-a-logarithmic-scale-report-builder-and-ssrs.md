@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0910888603528d899f0180bf96c66cfbea045aa4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104941"
 ---
 # <a name="specify-a-logarithmic-scale-report-builder-and-ssrs"></a>指定對數刻度 (報表產生器及 SSRS)
@@ -29,11 +29,11 @@ ms.locfileid: "66104941"
   
 ### <a name="to-specify-a-logarithmic-scale"></a>若要指定對數刻度  
   
-1.  以滑鼠右鍵按一下圖表的 Y 軸，然後按一下 [垂直軸屬性]。 [垂直軸屬性] 對話方塊隨即出現。  
+1.  以滑鼠右鍵按一下圖表的 Y 軸，然後按一下 [垂直軸屬性]  。 [垂直軸屬性]  對話方塊隨即出現。  
   
-2.  在 [軸選項] 中，選取 [使用對數刻度]。  
+2.  在 [軸選項]  中，選取 [使用對數刻度]  。  
   
-3.  在 [對數底數] 文字方塊中，為對數底數鍵入正值。 如果沒有指定任何值，對數基底預設為 10。  
+3.  在 [對數底數]  文字方塊中，為對數底數鍵入正值。 如果沒有指定任何值，對數基底預設為 10。  
   
 ## <a name="see-also"></a>另請參閱  
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

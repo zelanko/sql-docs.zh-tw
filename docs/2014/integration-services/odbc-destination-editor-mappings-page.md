@@ -13,18 +13,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6f5deb525654007248fbc5c97c07e3c368654ad5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057230"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>ODBC 目的地編輯器 (對應頁面)
-  使用 [ODBC 目的地編輯器] 對話方塊的 [對應] 頁面，即可將輸入資料行對應至目的地資料行。  
+  使用 [ODBC 目的地編輯器]  對話方塊的 [對應]  頁面，即可將輸入資料行對應至目的地資料行。  
   
  若要了解有關 ODBC 目的地的詳細資訊，請參閱＜ [ODBC Destination](data-flow/odbc-destination.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 ### <a name="available-input-columns"></a>可用的輸入資料行  
  可用輸入資料行的清單。 將輸入資料行拖放至可用的目的地資料行，即可對應資料行。  
@@ -33,7 +33,7 @@ ms.locfileid: "66057230"
  可用目的地資料行的清單。 將目的地資料行拖放至可用的輸入資料行，即可對應資料行。  
   
 ### <a name="input-column"></a>輸入資料行  
- 檢視所選取的輸入資料行。 您可以選取 [\<忽略>] 移除對應，排除輸出的資料行。  
+ 檢視所選取的輸入資料行。 您可以選取 [\<忽略>]  移除對應，排除輸出的資料行。  
   
 ### <a name="destination-column"></a>目的地資料行  
  檢視所有可用的目的地資料行，包括對應和取消對應的資料行。  

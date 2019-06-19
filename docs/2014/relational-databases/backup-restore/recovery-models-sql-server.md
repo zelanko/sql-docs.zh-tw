@@ -29,14 +29,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6c5b85e316c859e0b6d44fb83e3df6da2edd72ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921763"
 ---
 # <a name="recovery-models-sql-server"></a>復原模式 (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原作業是在資料庫之復原模式的內容中進行。 復原模式的設計目的是要控制交易記錄維護。 「復原模式」是一項資料庫屬性，可控制交易的記錄方式、是否需要 (及允許) 備份交易記錄，以及可用的還原作業類型。 復原模式共有三種：簡單、完整和大量記錄。 一般而言，資料庫會使用完整復原模式或簡單復原模式。 資料庫可以隨時切換到另一個復原模式。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原作業是在資料庫之復原模式的內容中進行。 復原模式的設計目的是要控制交易記錄維護。 「復原模式」  是一項資料庫屬性，可控制交易的記錄方式、是否需要 (及允許) 備份交易記錄，以及可用的還原作業類型。 復原模式共有三種：簡單、完整和大量記錄。 一般而言，資料庫會使用完整復原模式或簡單復原模式。 資料庫可以隨時切換到另一個復原模式。  
   
  **本主題內容：**  
   

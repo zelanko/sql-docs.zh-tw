@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4833ee0dd6514b6a05118b80b756c5fd2de069a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62836781"
 ---
 # <a name="working-with-variables-programmatically"></a>以程式設計方式使用變數
@@ -46,7 +46,7 @@ ms.locfileid: "62836781"
   
 -   您可以為下列所有容器類型建立自訂變數：套件、**Foreach 迴圈**容器、**For 迴圈**容器、**時序**容器、TaskHost 和事件處理常式。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)和[在封裝中使用變數](../use-variables-in-packages.md)。  
   
-## <a name="scope"></a>範圍。  
+## <a name="scope"></a>`Scope`  
  每個容器有它自己的 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 集合。 在建立新變數時，它在其父容器的範圍內。 因為封裝容器位於容器階層的最上層，所以具有封裝範圍的變數在功能上與全域變數相同，而且在封裝中的所有容器都可以看到它們。 透過使用集合中的變數名稱或是變數的索引，容器的子系也可以透過 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 集合來存取容器的變數集合。  
   
  因為變數的可見性範圍是從上向下，所以封裝中的所有容器都可以看到在封裝層級宣告的變數。 因此，在容器上的 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 集合除了自己的變數以外，還會包括屬於其父系的所有變數。  

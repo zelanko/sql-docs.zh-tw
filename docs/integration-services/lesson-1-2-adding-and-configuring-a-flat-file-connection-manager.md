@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 60a704adb2fe1bbdcfd5d78cfd02a7b704745642
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723426"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>課程 1-2：新增及設定一般檔案連線管理員

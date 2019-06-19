@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a13356aae88f332132bc6e8f6d6578971d2be99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641031"
 ---
 # <a name="date-time-and-timestamp-literals"></a>日期、時間和時間戳記常值
@@ -29,9 +29,9 @@ ms.locfileid: "62641031"
   
 |*literal-type*|意義|格式化的*值*|  
 |---------------------|-------------|-----------------------|  
-|**d**|date|*yyyy*-*mm*-*dd*|  
+|**d**|Date|*yyyy*-*mm*-*dd*|  
 |**t**|時間 *|*hh*:*mm*:*ss*[1]|  
-|**ts**|時間戳記|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*][1]|  
+|**ts**|時間戳記|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...* ][1]|  
   
  [SQL_DESC_PRECISION 描述項欄位中包含 1] 的時間戳記常值包含秒數元件間隔中右側位數的數目是小數點的秒數有效位數而定。 (如需詳細資訊，請參閱 < [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。)  
   

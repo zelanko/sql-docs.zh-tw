@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: cd2f8de0af5078816d4034dc9ba23bcc7ab647b8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66799256"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>針對 Always On 可用性群組準備次要資料庫
@@ -80,7 +80,7 @@ ms.locfileid: "66799256"
   
 3.  在裝載次要複本的伺服器執行個體上，還原主要資料庫的完整資料庫備份 (並選擇性地還原差異備份)，接著還原任何後續記錄備份。  
   
-     在 [RESTORE DATABASE 選項]  頁面上，選取 **[讓資料庫保持不運作，且不回復未認可的交易。可以還原其他交易記錄。(RESTORE WITH NORECOVERY)]** 。  
+     在 [RESTORE DATABASE 選項] 頁面上，選取 **[讓資料庫保持不運作，且不回復未認可的交易。可以還原其他交易記錄。(RESTORE WITH NORECOVERY)]**。  
   
      如果主要資料庫與次要資料庫的檔案路徑不同 (例如，主要資料庫位於磁碟機 'F:' 而裝載次要複本的伺服器執行個體缺少 F: 磁碟機)，請在您的 WITH 子句中加入 MOVE 選項。  
   

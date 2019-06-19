@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 254215318a79971e384ab8e08e3e7a17959b58d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62502580"
 ---
 # <a name="operators---logical"></a>運算子 - 邏輯
@@ -25,9 +25,9 @@ ms.locfileid: "62502580"
   
 |運算子|描述|  
 |--------------|-----------------|  
-|[AND &#40;DMX&#41;](../dmx/and-dmx.md)|在兩個數值運算式上執行邏輯結合。|  
-|[NOT &#40;DMX&#41;](../dmx/not-dmx.md)|在數值運算式上執行邏輯否定。|  
-|[OR &#40;DMX&#41;](../dmx/or-dmx.md)|在兩個數值運算式上執行邏輯分離。|  
+|[和&#40;DMX&#41;](../dmx/and-dmx.md)|在兩個數值運算式上執行邏輯結合。|  
+|[不&#40;DMX&#41;](../dmx/not-dmx.md)|在數值運算式上執行邏輯否定。|  
+|[或者&#40;DMX&#41;](../dmx/or-dmx.md)|在兩個數值運算式上執行邏輯分離。|  
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組 &#40;DMX&#41; 參考](../dmx/data-mining-extensions-dmx-reference.md)   

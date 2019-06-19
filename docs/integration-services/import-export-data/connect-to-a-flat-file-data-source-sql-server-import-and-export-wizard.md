@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1c2789d8d10928bcbe576fc57f630675fdbd405
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723896"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>連線至一般檔案資料來源 (SQL Server 匯入和匯出精靈)
@@ -208,7 +208,7 @@ ms.locfileid: "65723896"
 |屬性|Description|  
 |--------------|-----------------|  
 |**名稱**|提供描述性資料行名稱。 如果您未輸入名稱，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會自動以 Column 0、Column 1 等等的格式建立名稱。|
-|**ColumnDelimiter**|從可用的資料行分隔符號清單中選取。 請選擇不太可能會在文字中出現的分隔符號。 固定寬度資料行將忽略這個值。<br /><br /> **{CR}{LF}** ： 資料行是以歸位字元和換行字元的組合分隔。<br /><br /> **{CR}** ： 資料行是以歸位字元分隔。<br /><br /> **{LF}** ： 資料行是以換行字元分隔。<br /><br /> **分號 {;}** ： 資料行是以分號分隔。<br /><br /> **冒號 {:}** ： 資料行是以冒號分隔。<br /><br /> **逗號 {,}** . 資料行是以逗號分隔。<br /><br /> **定位字元 {t}** ： 資料行是以定位字元分隔。<br /><br /> **分隔號 {&#124;}** ： 資料行是以分隔號分隔。|
+|**ColumnDelimiter**|從可用的資料行分隔符號清單中選取。 請選擇不太可能會在文字中出現的分隔符號。 固定寬度資料行將忽略這個值。<br /><br /> **{CR}{LF}**： 資料行是以歸位字元和換行字元的組合分隔。<br /><br /> **{CR}**： 資料行是以歸位字元分隔。<br /><br /> **{LF}**： 資料行是以換行字元分隔。<br /><br /> **分號 {;}**： 資料行是以分號分隔。<br /><br /> **冒號 {:}**： 資料行是以冒號分隔。<br /><br /> **逗號 {,}**. 資料行是以逗號分隔。<br /><br /> **定位字元 {t}**： 資料行是以定位字元分隔。<br /><br /> **分隔號 {&#124;}**： 資料行是以分隔號分隔。|
 |**ColumnType**|代表資料行是否為分隔的、固定寬度或不齊右。 此屬性是唯讀的。 不齊右檔案就是除了最後一個資料行之外，其他所有資料行都有固定寬度的檔案。 它是以資料列分隔符號分隔。|  
 |**InputColumnWidth**|指定儲存為位元組計數的值；針對 Unicode 檔案，此值是字元計數。 分隔資料行將忽略這個值。<br /><br /> **注意** ︰在物件模型中，這個屬性的名稱為 ColumnWidth。|
 |**DataPrecision**|指定數值資料的有效位數。 有效位數是指位數的數目。|

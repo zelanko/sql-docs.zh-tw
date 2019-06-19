@@ -15,10 +15,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: a7f8e0577a7edd885084e117bcac801970993caa
-ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66428850"
 ---
 # <a name="polybase-transact-sql-reference"></a>PolyBase Transact-SQL 參考

@@ -20,11 +20,11 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a8c1dbccf3b45896f56aba5c478e1a37954f37f8
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380699"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62645191"
 ---
 # <a name="create-statistics"></a>建立統計資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "53380699"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  使用者必須是資料表或索引檢視表擁有者，或是下列其中一個角色的成員： **系統管理員** 固定伺服器角色、 **db_owner** 固定資料庫角色或 **db_ddladmin** 固定資料庫角色。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -69,9 +69,9 @@ ms.locfileid: "53380699"
   
 3.  按一下加號展開要在其中建立新統計資料的資料表。  
   
-4.  以滑鼠右鍵按一下 [統計資料] 資料夾，然後選取 [新增統計資料…]。  
+4.  以滑鼠右鍵按一下 [統計資料]  資料夾，然後選取 [新增統計資料…]  。  
   
-     下列屬性會在 [_table\_name_ 資料表上新統計資料] 對話方塊的 [一般] 頁面中顯示。  
+     下列屬性會在 [_table\_name_ 資料表上新統計資料]  對話方塊的 [一般]  頁面中顯示。  
   
      **資料表名稱**  
      顯示統計資料所描述的資料表名稱。  
@@ -115,12 +115,12 @@ ms.locfileid: "53380699"
      **更新這些資料行的統計資料**  
      勾選即可在對話方塊關閉時更新統計資料。  
   
-     下列屬性會在 [_table\_name_ 資料表上新統計資料] 對話方塊的 [篩選] 頁面中顯示。  
+     下列屬性會在 [_table\_name_ 資料表上新統計資料]  對話方塊的 [篩選]  頁面中顯示。  
   
      **篩選運算式**  
      定義要在篩選統計資料中包含什麼資料列。 例如， `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  在 [_table\_name_ 資料表上新統計資料] 對話方塊的 [一般] 頁面上，按一下 [新增]。  
+5.  在 [_table\_name_ 資料表上新統計資料]  對話方塊的 [一般]  頁面上，按一下 [新增]  。  
   
      下列屬性會在 **[選取資料行]** 對話方塊中顯示。 此資訊是唯讀的。  
   
@@ -139,9 +139,9 @@ ms.locfileid: "53380699"
      **Allow NULLs**  
      指出資料行是否接受 NULL 值。  
   
-6.  在 **[選取資料行]** 對話方塊中，選取要為其建立統計資料的每個資料行的核取方塊，然後按一下 **[確定]**。  
+6.  在 **[選取資料行]** 對話方塊中，選取要為其建立統計資料的每個資料行的核取方塊，然後按一下 **[確定]** 。  
   
-7.  在 [_table\_name_ 資料表上新統計資料] 對話方塊中，按一下 [確定]。  
+7.  在 [_table\_name_ 資料表上新統計資料]  對話方塊中，按一下 [確定]  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -149,9 +149,9 @@ ms.locfileid: "53380699"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;   

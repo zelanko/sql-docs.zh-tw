@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d7db93bdbe00b6aa1bc2525c0e8ed47e45aaf15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63225333"
 ---
 # <a name="using-database-mirroring"></a>使用資料庫鏡像
@@ -34,9 +34,9 @@ ms.locfileid: "63225333"
   
  資料庫鏡像是根據每一個資料庫來實作，它會在待命伺服器上保留 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 生產資料庫的複本。 此伺服器為熱或暖待命伺服器，端視資料庫鏡像工作階段的組態和狀態而定。 熱待命伺服器支援不會遺失任何已認可交易的快速容錯移轉，而暖待命伺服器支援強制服務 (資料可能會遺失)。  
   
- 生產資料庫稱為「主體資料庫」，而待命副本則稱為「鏡像資料庫」。 主體資料庫和鏡像資料庫必須位於個別的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (伺服器執行個體) 上，如有可能，也應該位於個別的電腦上。  
+ 生產資料庫稱為「主體資料庫」  ，而待命副本則稱為「鏡像資料庫」  。 主體資料庫和鏡像資料庫必須位於個別的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (伺服器執行個體) 上，如有可能，也應該位於個別的電腦上。  
   
- 稱為「主體伺服器」的實際執行伺服器執行個體會與稱為「鏡像伺服器」的待命伺服器執行個體進行通訊。 主體伺服器和鏡像伺服器會在資料庫鏡像「工作階段」內當做夥伴運作。 如果主體伺服器失敗，則鏡像伺服器可以透過稱為「容錯移轉」的處理序，使鏡像伺服器的資料庫成為主體資料庫。 例如，Partner_A 與 Partner_B 是兩個夥伴伺服器，其中主體資料庫一開始位於 Partner_A 上做為主體伺服器，而鏡像資料庫位於 Partner_B 上做為鏡像伺服器。 如果 Partner_A 離線，Partner_B 上的資料庫可以容錯移轉，變成目前的主體資料庫。 當 Partner_A 重新加入鏡像工作階段時，它會變成鏡像伺服器而其資料庫會變成鏡像資料庫。  
+ 稱為「主體伺服器」  的實際執行伺服器執行個體會與稱為「鏡像伺服器」  的待命伺服器執行個體進行通訊。 主體伺服器和鏡像伺服器會在資料庫鏡像「工作階段」  內當做夥伴運作。 如果主體伺服器失敗，則鏡像伺服器可以透過稱為「容錯移轉」  的處理序，使鏡像伺服器的資料庫成為主體資料庫。 例如，Partner_A 與 Partner_B 是兩個夥伴伺服器，其中主體資料庫一開始位於 Partner_A 上做為主體伺服器，而鏡像資料庫位於 Partner_B 上做為鏡像伺服器。 如果 Partner_A 離線，Partner_B 上的資料庫可以容錯移轉，變成目前的主體資料庫。 當 Partner_A 重新加入鏡像工作階段時，它會變成鏡像伺服器而其資料庫會變成鏡像資料庫。  
   
  替代的資料庫鏡像組態提供不同層次的效能及資料安全，並支援不同形式的容錯移轉。 如需詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   

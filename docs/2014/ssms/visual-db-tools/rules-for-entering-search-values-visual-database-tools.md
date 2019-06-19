@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fc11acccd25dafd811379384bf9975e74e8986b6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63070982"
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>輸入搜尋值的規則 (Visual Database Tools)
@@ -76,7 +76,7 @@ ms.locfileid: "63070982"
   
 -   **引號**：不要用引號括住數字。  
   
--   **非數字字元**：除了小數分隔符號 (在 Windows [控制台] 的 [地區設定] 對話方塊中所定義) 和負號 (-) 以外，不要包含非數字字元。 不要包含數字分位符號 (例如千位用逗號分開) 或貨幣符號。  
+-   **非數字字元**：除了小數分隔符號 (在 Windows [控制台] 的 [地區設定]  對話方塊中所定義) 和負號 (-) 以外，不要包含非數字字元。 不要包含數字分位符號 (例如千位用逗號分開) 或貨幣符號。  
   
 -   **小數符號** ：如果是輸入整數，可以包含小數符號，不論您搜尋的值是整數或實數。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "63070982"
   
  [查詢和檢視設計師] 可以使用下列的日期格式：  
   
--   **地區設定特性** (Locale-Specific)：在 [Windows 區域設定內容] 對話方塊中指定的日期格式。  
+-   **地區設定特性** (Locale-Specific)：在 [Windows 區域設定內容]  對話方塊中指定的日期格式。  
   
 -   **資料庫特性**：資料庫能夠辨識的任何格式。  
   

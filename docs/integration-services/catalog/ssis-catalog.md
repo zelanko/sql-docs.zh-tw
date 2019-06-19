@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f673ea96167b05326519bb9fe04345a87c81fd3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729168"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
@@ -126,7 +126,7 @@ ms.locfileid: "65729168"
   
  若要更新或重新部署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，請使用相同名稱將它部署到目錄中的相同資料夾。 根據預設，每當您重新部署專案時， **SSISDB** 目錄都會保留此專案的舊版。 為了維護作業資料的大小， **[SSIS Server 維護作業]** 會用來移除專案的舊版。  
  
-為執行 **SSIS Server 維護作業**，SSIS 會建立 SQL Server 登入 **##MS_SSISServerCleanupJobLogin##** 。 此登入僅供 SSIS 內部使用。
+為執行 **SSIS Server 維護作業**，SSIS 會建立 SQL Server 登入 **##MS_SSISServerCleanupJobLogin##**。 此登入僅供 SSIS 內部使用。
   
  以下 **[SSISDB]** 目錄屬性會定義此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的行為模式。 您可以使用 [目錄屬性] 對話方塊或使用 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 和 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md) 檢視及修改屬性。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "65729168"
   
  下表列出 **[目錄屬性]** 對話方塊中所顯示的屬性名稱，以及資料庫檢視中的對應屬性。  
   
-|屬性名稱 ( **[目錄屬性]** 對話方塊)|屬性名稱 (資料庫檢視)|  
+|屬性名稱 (**[目錄屬性]** 對話方塊)|屬性名稱 (資料庫檢視)|  
 |---------------------------------------------------------|-------------------------------------|  
 |加密演算法名稱|ENCRYPTION_ALGORITHM|  
 |定期清除記錄檔|OPERATION_CLEANUP_ENABLEDâ€‹|  
@@ -322,7 +322,7 @@ ms.locfileid: "65729168"
   
 3.  在 [物件總管] 中，展開伺服器節點，以滑鼠右鍵按一下 [Integration Services 目錄] 節點，然後按一下 [建立目錄]。  
   
-4.  按一下 **[啟用 CLR 整合]** 。  
+4.  按一下 **[啟用 CLR 整合]**。  
   
      目錄便會使用 CLR 預存程序。  
   
@@ -330,7 +330,7 @@ ms.locfileid: "65729168"
   
      預存程序會執行 SSISDB 目錄之作業狀態的維護。 如果 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 伺服器執行個體關閉，它就會修正任何執行中套件的狀態。  
   
-6.  輸入密碼，然後按一下 **[確定]** 。  
+6.  輸入密碼，然後按一下 **[確定]**。  
   
      此密碼保護用來加密目錄資料的資料庫主要金鑰。 請將密碼儲存在安全位置。 建議您同時備份資料庫主要金鑰。 如需相關資訊，請參閱 [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
   
@@ -610,7 +610,7 @@ ms.locfileid: "65729168"
   
 2.  在物件總管中，展開伺服器節點，以滑鼠右鍵按一下 [Integration Services 目錄]  節點，然後按一下 [建立目錄] 。  
   
-3.  按一下 **[啟用 CLR 整合]** 。 目錄便會使用 CLR 預存程序。  
+3.  按一下 **[啟用 CLR 整合]**。 目錄便會使用 CLR 預存程序。  
   
 4.  按一下 [在 SQL Server 啟動時允許自動執行 Integration Services 預存程序]  ，讓 [catalog.startup](../system-stored-procedures/catalog-startup.md) 預存程序會在每次 SSIS 伺服器執行個體重新啟動時執行。 預存程序會執行 SSISDB 目錄之作業狀態的維護。 它會在 SSIS 伺服器執行個體效能降低時，修正任何正在執行之封裝的狀態。  
   

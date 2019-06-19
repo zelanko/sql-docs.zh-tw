@@ -27,11 +27,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 8de6f5ade289780d5f0929af2f5a62e7facfe39b
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380239"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62649554"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>監視資源使用狀況 (系統監視器)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

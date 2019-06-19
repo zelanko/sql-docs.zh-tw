@@ -31,10 +31,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eca7e157593ff4ea9d40528b592f71227cc8cb0d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65719587"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 記錄
@@ -227,7 +227,7 @@ ms.locfileid: "65719587"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在 **[SSIS]** 功能表上，按一下 **[記錄]** 。  
+2.  在 **[SSIS]** 功能表上，按一下 **[記錄]**。  
   
 3.  在 [提供者類型] 清單中選取記錄提供者，然後按一下 [加入]。  
   
@@ -361,7 +361,7 @@ ms.locfileid: "65719587"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在 **[SSIS]** 功能表上，按一下 **[記錄]** 。  
+2.  在 **[SSIS]** 功能表上，按一下 **[記錄]**。  
   
 3.  展開封裝樹狀檢視，並選取要設定的容器。  
   

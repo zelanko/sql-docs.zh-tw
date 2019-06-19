@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f76d67d5e44fc700d4b889840ef2dcc07a0bfde0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065773"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>疑難排解處理資料 (SSAS 表格式)
@@ -63,15 +63,15 @@ ms.locfileid: "66065773"
   
 1.  在模型設計師中，選取包含想要知道其來源之資料的資料表。  
   
-2.  按一下 [資料表] 功能表，然後再按一下 [資料表屬性]。  
+2.  按一下 [資料表]  功能表，然後再按一下 [資料表屬性]  。  
   
-3.  在 [編輯資料表屬性] 對話方塊中，記下針對 [連接名稱] 列出的值。  
+3.  在 [編輯資料表屬性]  對話方塊中，記下針對 [連接名稱]  列出的值。  
   
-4.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，按一下 [模型] 功能表上的 [現有連接]。  
+4.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，按一下 [模型]  功能表上的 [現有連接]  。  
   
-5.  在 [現有連接] 對話方塊中，選取包含您在步驟 3 找到之名稱的資料來源，然後按一下 [編輯]。  
+5.  在 [現有連接]  對話方塊中，選取包含您在步驟 3 找到之名稱的資料來源，然後按一下 [編輯]  。  
   
-6.  在 [編輯連接] 對話方塊中檢視連接資訊，例如資料庫名稱、檔案路徑或報表路徑。  
+6.  在 [編輯連接]  對話方塊中檢視連接資訊，例如資料庫名稱、檔案路徑或報表路徑。  
   
 ##  <a name="bkmk_det_last_ref"></a> 判斷上次重新整理資料的時間  
  您可以使用 [資料表屬性] 判斷上次重新整理資料的時間。  
@@ -80,9 +80,9 @@ ms.locfileid: "66065773"
   
 1.  在模型設計師中，選取包含想要知道其重新整理日期之資料的資料表。  
   
-2.  按一下 **[資料表]** 功能表，然後再按一下 **[資料表屬性]**。  
+2.  按一下 **[資料表]** 功能表，然後再按一下 **[資料表屬性]** 。  
   
-3.  在 [編輯資料表屬性] 對話方塊中，[上次重新整理] 會顯示上次資料表重新整理的日期。  
+3.  在 [編輯資料表屬性]  對話方塊中，[上次重新整理]  會顯示上次資料表重新整理的日期。  
   
 ##  <a name="bkmk_restrictions"></a> 重新整理資料來源的限制  
  可從 Analysis Services 執行個體之已部署模型自動處理的資料來源具有一些限制。 請務必只選取符合下列準則的資料來源：  

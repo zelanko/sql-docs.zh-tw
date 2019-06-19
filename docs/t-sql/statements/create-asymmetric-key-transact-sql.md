@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1198567d07035413463a35accbd58c17127118bb
-ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66270191"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
@@ -116,7 +116,7 @@ CREATE ASYMMETRIC KEY asym_key_name
  指定用來加密私密金鑰的密碼。 如果這個子句不存在，此私密金鑰將會使用資料庫主要金鑰來加密。 *password* 的上限為 128 個字元。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。  
   
 ## <a name="remarks"></a>Remarks  
- 「非對稱金鑰」  是資料庫層級的安全性實體。 在它的預設格式中，這個實體同時包含公開金鑰和私密金鑰。 如果執行時不使用 FROM 子句，CREATE ASYMMETRIC KEY 會產生新金鑰組。 如果執行時使用 FROM 子句，CREATE ASYMMETRIC KEY 就會從檔案匯入金鑰組，或是從組件或 DLL 檔案匯入公開金鑰。  
+ 「非對稱金鑰」是資料庫層級的安全性實體。 在它的預設格式中，這個實體同時包含公開金鑰和私密金鑰。 如果執行時不使用 FROM 子句，CREATE ASYMMETRIC KEY 會產生新金鑰組。 如果執行時使用 FROM 子句，CREATE ASYMMETRIC KEY 就會從檔案匯入金鑰組，或是從組件或 DLL 檔案匯入公開金鑰。  
   
  依預設，私密金鑰由資料庫主要金鑰保護。 如果尚未建立資料庫主要金鑰，則需要利用密碼保護私密金鑰。  
   

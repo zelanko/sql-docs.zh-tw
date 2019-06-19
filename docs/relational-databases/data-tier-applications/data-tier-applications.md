@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ba71da1f77d0fed61908b6d7aab953505a33e511
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999685"
 ---
 # <a name="data-tier-applications"></a>資料層應用程式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ ms.locfileid: "53591472"
   
  下列資料庫管理工具支援這兩個功能：SQL Server Management Studio、Azure 入口網站和 DACFx API。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  您必須是 **dbmanager** 角色的成員或被指派 **CREATE DATABASE** 權限，才能建立資料庫，包括部署 DAC 封裝來建立資料庫。 您必須是 **dbmanager** 角色的成員或被指派 **DROP DATABASE** 權限，才能卸除資料庫。  
   
 ## <a name="data-tier-application-tasks"></a>資料層應用程式工作  

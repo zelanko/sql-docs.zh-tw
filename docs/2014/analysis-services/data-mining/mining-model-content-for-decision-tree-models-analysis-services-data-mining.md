@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee2142c117a2e46b024a7e2bd639e6739ffd00ac
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083665"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
@@ -75,10 +75,10 @@ ms.locfileid: "66083665"
 |節點類型|描述|  
 |---------------|-----------------|  
 |1 (模型)|模型的根節點。|  
-|2 (樹狀結構)|在模型中分類樹狀結構的父節點。 標示為 **「All」**。|  
+|2 (樹狀結構)|在模型中分類樹狀結構的父節點。 標示為 **「All」** 。|  
 |3 (內部)|內部分支的標頭，可在分類樹狀結構或迴歸樹狀結構中找到。|  
 |4 (分佈)|分葉節點，可在分類樹狀結構或迴歸樹狀結構中找到。|  
-|25 (迴歸樹狀結構)|在模型內迴歸樹狀結構的父節點。 標示為 **「All」**。|  
+|25 (迴歸樹狀結構)|在模型內迴歸樹狀結構的父節點。 標示為 **「All」** 。|  
   
  NODE_CAPTION  
  提供顯示用途的好記名稱。  
@@ -271,7 +271,7 @@ ms.locfileid: "66083665"
   
  一般而言，迴歸會將連續相依 (可預測的變數) 中的變更對應為輸入中變更的功能。 如果相依變數有任何連續輸入，而且輸入和已預測值之間的關聯性夠穩定，可以當做線條圖計算，迴歸的節點就會包含公式。  
   
- 不過，如果輸入和已預測值之間的關聯性為 *「非線性的」*(Nonlinear)，就會建立分岔，如同標準決策樹一樣。 例如，假設 A 是可預測的屬性，而 B 和 C 是輸入，其中 C 是連續的值類型。 如果 A 和 C 之間的關聯性在部分資料中相當穩定，但在部分資料中並不穩定，此演算法將會建立分岔來表示不同的資料區域。  
+ 不過，如果輸入和已預測值之間的關聯性為 *「非線性的」* (Nonlinear)，就會建立分岔，如同標準決策樹一樣。 例如，假設 A 是可預測的屬性，而 B 和 C 是輸入，其中 C 是連續的值類型。 如果 A 和 C 之間的關聯性在部分資料中相當穩定，但在部分資料中並不穩定，此演算法將會建立分岔來表示不同的資料區域。  
   
 |分岔條件|節點的結果|  
 |---------------------|--------------------|  

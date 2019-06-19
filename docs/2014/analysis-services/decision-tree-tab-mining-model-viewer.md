@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082295"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>決策樹索引標籤 (採礦模型檢視器)
-  [決策樹] 窗格會顯示決策樹模型中建立之決策規則的視覺表示。 決策規則描述朝向某個特定結果的路徑。  
+  [決策樹]  窗格會顯示決策樹模型中建立之決策規則的視覺表示。 決策規則描述朝向某個特定結果的路徑。  
   
- **如需詳細資訊：**[Microsoft 決策樹演算法](data-mining/microsoft-decision-trees-algorithm.md)，[瀏覽模型，使用 Microsoft 樹狀檢視器](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **如需詳細資訊：** [Microsoft 決策樹演算法](data-mining/microsoft-decision-trees-algorithm.md)，[瀏覽模型，使用 Microsoft 樹狀檢視器](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>選項  
  **重新整理檢視器內容**  
@@ -56,7 +56,7 @@ ms.locfileid: "66082295"
  選擇要在檢視器中顯示的樹狀目錄。 如果建立一個包含多個可預測屬性的模型，則演算法會為每個可預測屬性建立單獨的樹狀目錄。  
   
  **背景**  
- 選擇可預測屬性的值，用來表示每個節點的背景色彩。 例如，在範例 AdventureWorks 模型中，如果 [背景] 設定為 1 ([Bike Buyer] = Yes)，則當自行車購買者的比例較大時，節點會具有較深的陰影。 此選項提供有關樹狀目錄中分支和節點之意義的其他視覺化提示。  
+ 選擇可預測屬性的值，用來表示每個節點的背景色彩。 例如，在範例 AdventureWorks 模型中，如果 [背景]  設定為 1 ([Bike Buyer] = Yes)，則當自行車購買者的比例較大時，節點會具有較深的陰影。 此選項提供有關樹狀目錄中分支和節點之意義的其他視覺化提示。  
   
  **預設展開**  
  從清單中選擇值，可設定樹狀圖形中所顯示層級數目的預設值。  

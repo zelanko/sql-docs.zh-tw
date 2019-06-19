@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 842fb0e2b111b5bcd17b26d13db15e47aa5c1ad1
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099661"
 ---
 # <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>如何：在 Transact-SQL 指令碼中設定大綱及新增程式碼片段
@@ -30,11 +30,11 @@ SQL Server Data Tools 包含由程式碼片段組成的程式碼程式庫，這�
   
 ### <a name="to-insert-snippets"></a>若要插入程式碼片段  
   
-1.  以滑鼠右鍵按一下 [方案總管] 中的 [TradeDev] 專案，再依序選取 [加入] 和 [指令碼]。 按一下 [加入新項目] 對話方塊中的 [加入]。  
+1.  以滑鼠右鍵按一下 [方案總管]  中的 [TradeDev]  專案，再依序選取 [加入]  和 [指令碼]  。 按一下 [加入新項目]  對話方塊中的 [加入]  。  
   
-2.  以滑鼠右鍵按一下 Transact\-SQL 編輯器，再選取 [插入程式碼片段]。 程式碼片段選擇器隨即出現。  
+2.  以滑鼠右鍵按一下 Transact\-SQL 編輯器，再選取 [插入程式碼片段]  。 程式碼片段選擇器隨即出現。  
   
-3.  按兩下程式碼片段選擇器中的 [資料表]，再按兩下 [建立資料表]。  
+3.  按兩下程式碼片段選擇器中的 [資料表]  ，再按兩下 [建立資料表]  。  
   
 4.  請注意，取代點以黃色反白顯示。 將滑鼠停留在 `Sample_Table` 上，資訊提示隨即顯示取代的說明。 按兩下 `Sample_Table`，並將它變更為 `Shipper2`。  
   
@@ -44,7 +44,7 @@ SQL Server Data Tools 包含由程式碼片段組成的程式碼程式庫，這�
   
 1.  請注意 CREATE TABLE 陳述式旁邊的 **-** 號。 在指令碼中按一下區段旁邊的 **-** 號加以隱藏。  
   
-2.  以滑鼠右鍵按一下 Transact\-SQL 編輯器，再依序選取 [大綱] 和 [取消大綱] 移除大綱資訊，而不會影響編輯器中的基礎程式碼。  
+2.  以滑鼠右鍵按一下 Transact\-SQL 編輯器，再依序選取 [大綱]  和 [取消大綱]  移除大綱資訊，而不會影響編輯器中的基礎程式碼。  
   
-3.  若要再次啟動設定程式碼的大綱，以滑鼠右鍵按一下 Transact\-SQL 編輯器，再依序選取 [大綱] 和 [啟動自動大綱]。 您還可以選取 [切換所有大綱] 切換展開/隱藏區段。  
+3.  若要再次啟動設定程式碼的大綱，以滑鼠右鍵按一下 Transact\-SQL 編輯器，再依序選取 [大綱]  和 [啟動自動大綱]  。 您還可以選取 [切換所有大綱]  切換展開/隱藏區段。  
   

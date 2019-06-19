@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f09d6099ea9c80e9ce237e3462cec93fa66626b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63164028"
 ---
 # <a name="using-comments"></a>使用註解
@@ -26,9 +26,9 @@ ms.locfileid: "63164028"
   
 1.  請用您的滑鼠來選取 `WHERE LastName = 'Sanchez'` 這段文字。  
   
-2.  在 [編輯] 功能表上，指向 [進階]，再按一下 [註解選取範圍]。 此時會用破折號 (--) 將所選的文字註解化。  
+2.  在 [編輯]  功能表上，指向 [進階]  ，再按一下 [註解選取範圍]  。 此時會用破折號 (--) 將所選的文字註解化。  
   
- 除了使用 [編輯] 功能表之外，您還可以使用下列任一種方法，註解或取消註解選取的指令碼部分：  
+ 除了使用 [編輯]  功能表之外，您還可以使用下列任一種方法，註解或取消註解選取的指令碼部分：  
   
 -   按一下 [SQL 編輯器] 工具列上的按鈕。  
   

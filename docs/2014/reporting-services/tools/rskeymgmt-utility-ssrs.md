@@ -22,14 +22,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9b5ca361cbfb5de42341fad8625f10d7ce3c2fa
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099805"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 公用程式 (SSRS)
-  擷取、還原、建立和刪除「用來保護機密報表伺服器資料，以免遭到未獲授權的存取」之對稱金鑰。 另外，這個公用程式也用來將報表伺服器執行個體聯結在向外延展部署中。 「報表伺服器向外延展部署」是指共用單一報表伺服器資料庫的多個報表伺服器執行個體。  
+  擷取、還原、建立和刪除「用來保護機密報表伺服器資料，以免遭到未獲授權的存取」之對稱金鑰。 另外，這個公用程式也用來將報表伺服器執行個體聯結在向外延展部署中。 「報表伺服器向外延展部署」  是指共用單一報表伺服器資料庫的多個報表伺服器執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -75,8 +75,8 @@ ms.locfileid: "66099805"
  `-j`  
  設定遠端報表伺服器執行個體來共用本機報表伺服器執行個體所用的報表伺服器資料庫。  
   
- **-r**  <安裝識別碼>  
- 移除特定報表伺服器執行個體的對稱金鑰資訊，因而從向外延展部署中移除報表伺服器。 <安裝識別碼> 是一個 GUID 值，可在 RSReportserver.config 檔中找到它。  
+ **-r**  <安裝識別碼>   
+ 移除特定報表伺服器執行個體的對稱金鑰資訊，因而從向外延展部署中移除報表伺服器。 <安裝識別碼>  是一個 GUID 值，可在 RSReportserver.config 檔中找到它。  
   
  `-f`  *檔案*  
  指定儲存了對稱金鑰備份副本之檔案的完整路徑。  
@@ -103,7 +103,7 @@ ms.locfileid: "66099805"
  `-v`  *password*  
  (`-u` 需要這個引數) 指定要聯結至向外延展部署中之遠端電腦的管理員帳戶密碼。  
   
- **-t**  <追蹤>  
+ **-t**  <追蹤>   
  在追蹤記錄中，輸出錯誤訊息。 此引數沒有取得值。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)。  
   
 ## <a name="permissions"></a>Permissions  

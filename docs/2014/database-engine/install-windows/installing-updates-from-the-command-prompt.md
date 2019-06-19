@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51ad82519e8afd5e4a871046465e0cafec2f783e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774978"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>從命令提示字元安裝更新
@@ -23,7 +23,7 @@ ms.locfileid: "62774978"
 ## <a name="sample-syntax-for-installation"></a>安裝的範例語法  
  更新封裝的名稱會有所不同而且可能包含語言、版本及處理器元件。 在命令提示字元中套用更新，並以您的更新封裝名稱取代 <package_name>：  
   
--   更新的單一執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和所有共用元件，例如[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]和管理工具：您可以使用 InstanceName 參數或 InstanceID 參數指定執行個體。 若要更新備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，您必須指定 InstanceID 參數<套件名稱>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance 或 <套件名稱>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<執行個體識別碼>。  
+-   更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 單一執行個體和所有共用元件，例如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和管理工具：您可以使用 InstanceName 參數或 InstanceID 參數指定執行個體。 若要更新備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，您必須指定 InstanceID 參數<套件名稱>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance 或 <套件名稱>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<執行個體識別碼>。  
   
 -   安裝程式可以整合最新產品更新與主要產品安裝，因此主要產品及其適用的更新可以同時安裝。 您可以準備安裝資料庫引擎執行個體，使其包含產品更新：setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateEnabled=True /UpdateSource=\<下載更新的路徑> /INSTANCEID=\<執行個體識別碼> /FEATURES=SQLEngine。  
   

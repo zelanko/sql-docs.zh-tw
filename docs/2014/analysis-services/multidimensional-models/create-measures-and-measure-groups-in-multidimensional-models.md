@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2883a9092f7b84e8dd18954cec631b90a8bbe0e9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076244"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>在多維度模型中建立量值和量值群組
@@ -39,7 +39,7 @@ ms.locfileid: "66076244"
   
 |||  
 |-|-|  
-|Cube 精靈|在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中執行 [Cube 精靈]，以建立 Cube。<br /><br /> 在方案總管中，以滑鼠右鍵按一下 [Cube]，然後選擇 [新增 Cube]。 如需這些步驟的說明，請參閱[多維度模型化 &#40;Adventure Works 教學課程&#41;](../multidimensional-modeling-adventure-works-tutorial.md)。<br /><br /> 當您以現有之資料倉儲的資料表為基礎建立 Cube 時，量值和量值群組會在建立 Cube 時具體化。 您會在精靈中選擇事實及事實資料表，以用為 Cube 中之量值及量值群組物件的基礎。|  
+|Cube 精靈|在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中執行 [Cube 精靈]，以建立 Cube。<br /><br /> 在方案總管中，以滑鼠右鍵按一下 [Cube]  ，然後選擇 [新增 Cube]  。 如需這些步驟的說明，請參閱[多維度模型化 &#40;Adventure Works 教學課程&#41;](../multidimensional-modeling-adventure-works-tutorial.md)。<br /><br /> 當您以現有之資料倉儲的資料表為基礎建立 Cube 時，量值和量值群組會在建立 Cube 時具體化。 您會在精靈中選擇事實及事實資料表，以用為 Cube 中之量值及量值群組物件的基礎。|  
 |[新增量值] 對話方塊|假設 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中已有此 Cube，在 [方案總管] 中按兩下此 Cube 的名稱，即可在 Cube 設計師中開啟此 Cube。 在 [量值] 窗格中，於最上層節點上按一下滑鼠右鍵，以建立新的量值群組，或指定來源資料表、資料行及彙總類型，以建立新的量值。 使用這種方法必須從預先建置的函數固定清單中選擇彙總方法。 如需更常用之彙總方法的討論，請參閱＜ [Use Aggregate Functions](use-aggregate-functions.md) ＞。|  
 |「導出成員」|因為您可以控制導出成員的建立時機及方式，所以導出成員可為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 Cube 增加彈性及分析功能。 有時候您可能只是暫時需要量值，在使用者工作階段或調查期間的 Management Studio 階段中使用。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中開啟 [計算] 索引標籤，以建立新的導出成員。<br /><br /> 當基礎為 MDX 運算式中的量值時，請選擇此方法。 請參閱這些主題，如需詳細資訊：[建置在 MDX 中的量值](mdx/mdx-building-measures.md)，[計算](../multidimensional-models-olap-logical-cube-objects/calculations.md)，[多維度模型中的計算](calculations-in-multidimensional-models.md)並[MDX 指令碼基礎觀念&#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md).|  
 |MDX 或 XMLA|在 SQL Server Management Studio 中，您可以執行 MDX 或 XMLA 來更改資料庫，以加入新的導出量值。 這種方法可在解決方案部署到伺服器之後，於特定的資料測試時使用。 請參閱 [Document and Script an Analysis Services Database](document-and-script-an-analysis-services-database.md)。|  

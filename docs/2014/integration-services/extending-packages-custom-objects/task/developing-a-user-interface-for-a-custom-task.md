@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6268fe16c31c931dc71ad1a62bd72e08b1ecb537
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768901"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>開發自訂工作的使用者介面
@@ -40,7 +40,7 @@ ms.locfileid: "62768901"
   
  本章節描述當您為自訂工作開發使用者介面時 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 屬性和 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> 介面的角色，並提供有關如何在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師內建立、整合、部署及偵錯此工作的詳細資料。  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師針對此工作提供使用者介面的多個進入點：使用者可以在捷徑功能表上選取 [編輯]、按兩下此工作，或是按一下屬性表底部的 [顯示編輯器] 連結。 當使用者存取其中一個進入點時，[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師就會尋找及載入包含此工作之使用者介面的組件。 此工作的使用者介面要負責建立對話方塊的屬性，該對話方塊會在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中顯示給使用者。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師針對此工作提供使用者介面的多個進入點：使用者可以在捷徑功能表上選取 [編輯]  、按兩下此工作，或是按一下屬性表底部的 [顯示編輯器]  連結。 當使用者存取其中一個進入點時，[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師就會尋找及載入包含此工作之使用者介面的組件。 此工作的使用者介面要負責建立對話方塊的屬性，該對話方塊會在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中顯示給使用者。  
   
  工作和它的使用者介面是不同的實體。 它們應該在不同的組件中實作，以減少當地語系化、部署和維護工作。 工作 DLL 不會載入、呼叫，或是通常會包含有關其使用者介面的任何知識，除了在工作中編碼之 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 屬性值內包含的資訊以外。 這是工作與其使用者介面產生關聯的唯一方式。  
   
