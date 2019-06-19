@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d2b65f4184ed599cd737cdbb14779f411d09808
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723934"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>資料行轉換詳細資訊對話方塊 (SQL Server 匯入和匯出精靈)
@@ -35,13 +35,13 @@ ms.locfileid: "65723934"
 在此範例中，您會看到下列項目。
 -   來源 SQL Server 資料表中的 `PersonID` 資料行類型為 `int`。 精靈會藉由參考資料類型對應檔案 MSSQLToSSIS10.xml，將此類型對應至 SQL Server Integration Services (SSIS) `DT_I4` 資料類型，也就是四位元組帶正負號的整數。
 -   目的地 SQL Server 資料表中的 `PersonID` 資料行類型也是 `int`。 精靈會將此類型對應至相同的 SSIS 資料類型。
--   精靈判斷「此資料行不需要進行轉換」。
+-   精靈判斷「此資料行不需要進行轉換」  。
  
   
  ![[匯入和匯出精靈] 的資料行轉換頁面](../../integration-services/import-export-data/media/column-conversion.png "[匯入和匯出精靈] 的資料行轉換頁面") 
   
 ## <a name="whats-next"></a>下一步  
- 在您檢閱資料行轉換詳細資訊並按一下 [確定] 之後，[資料行轉換詳細資訊]  對話方塊會讓您回到 [檢閱資料類型對應]  頁面。 如需詳細資訊，請參閱 [檢閱資料類型對應](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md)。  
+ 在您檢閱資料行轉換詳細資訊並按一下 [確定]  之後，[資料行轉換詳細資訊]  對話方塊會讓您回到 [檢閱資料類型對應]  頁面。 如需詳細資訊，請參閱 [檢閱資料類型對應](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md)。  
 
 ## <a name="see-also"></a>另請參閱
 [SQL Server 匯入及匯出精靈的資料類型對應](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)

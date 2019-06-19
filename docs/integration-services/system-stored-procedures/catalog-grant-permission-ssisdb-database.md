@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 865a3c4eab996e41c08477b275b44250d43eb993
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716031"
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission (SSISDB 資料庫)
@@ -41,7 +41,7 @@ catalog.grant_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>引數  
  [ @object_type = ] *object_type*  
- 安全性實體物件的類型。 安全性實體物件類型包含資料夾 (`1`)、專案 (`2`)、環境 (`3`) 和作業 (`4`)。*object_type* 是 **smallint**_。_  
+ 安全性實體物件的類型。 安全性實體物件類型包含資料夾 (`1`)、專案 (`2`)、環境 (`3`) 和作業 (`4`)。*object_type* 是 **smallint** _。_  
   
  [ @object_id = ] *object_id*  
  安全性實體物件的唯一識別碼 (ID)。 *object_id* 是 **bigint**。  

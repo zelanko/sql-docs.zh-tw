@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0d67f8d826f20006ff0b01dbf32e8bd5383d026
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727687"
 ---
 # <a name="file-system-task"></a>檔案系統工作
@@ -84,12 +84,12 @@ ms.locfileid: "65727687"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括下載和上傳資料檔以及管理伺服器上目錄的工作。 如需相關資訊，請參閱 [FTP Task](../../integration-services/control-flow/ftp-task.md)。  
   
 ## <a name="file-system-task-editor-general-page"></a>檔案系統工作編輯器 (一般頁面)
-  使用 [檔案系統工作編輯器] 對話方塊的 [一般] 頁面，即可設定工作執行的檔案系統作業。  
+  使用 [檔案系統工作編輯器]  對話方塊的 [一般]  頁面，即可設定工作執行的檔案系統作業。  
   
- 您必須透過設定 SourceConnection 和 DestinationConnection 屬性，以指定來源和目的地連線管理員。 您可以提供指向工作做為來源或目的地使用之檔案的檔案連接管理員名稱，而如果檔案路徑是儲存在變數中，則可以提供變數的名稱。 若要使用變數來儲存檔案路徑，您必須先將來源連接的 [IsSourcePathVariable] 選項和目的地連接的 [IsDestinationPatheVariable] 選項設定為 [True]。 接著您就可以選擇要使用的現有系統或使用者自訂變數，或是建立新的變數。 您可以在 [加入變數] 對話方塊中，設定和指定變數的範圍。 此範圍必須是「檔案系統」工作或父容器。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 您必須透過設定 SourceConnection 和 DestinationConnection 屬性，以指定來源和目的地連線管理員。 您可以提供指向工作做為來源或目的地使用之檔案的檔案連接管理員名稱，而如果檔案路徑是儲存在變數中，則可以提供變數的名稱。 若要使用變數來儲存檔案路徑，您必須先將來源連接的 [IsSourcePathVariable] 選項和目的地連接的 [IsDestinationPatheVariable] 選項設定為 [True]  。 接著您就可以選擇要使用的現有系統或使用者自訂變數，或是建立新的變數。 您可以在 [加入變數]  對話方塊中，設定和指定變數的範圍。 此範圍必須是「檔案系統」工作或父容器。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
 > [!NOTE]  
->  若要覆寫您針對 **SourceConnection** 和 **DestinationConnection** 屬性選取的變數，請針對 [來源] 和 [目的地] 屬性輸入運算式。 您可在 [檔案系統工作編輯器] 的 [運算式] 頁面上輸入運算式。 例如，為了設定做為工作目的地使用的檔案路徑，在某些情況下您可能想要使用變數 A，而在其他情況下使用變數 B。  
+>  若要覆寫您針對 **SourceConnection** 和 **DestinationConnection** 屬性選取的變數，請針對 [來源]  和 [目的地]  屬性輸入運算式。 您可在 [檔案系統工作編輯器]  的 [運算式]  頁面上輸入運算式。 例如，為了設定做為工作目的地使用的檔案路徑，在某些情況下您可能想要使用變數 A，而在其他情況下使用變數 B。  
   
 > [!NOTE]  
 >  「檔案系統」工作會在單一檔案或目錄上運作。 因此，這項工作不支援使用萬用字元在多個檔案或目錄上執行相同的作業。 為了要讓「檔案系統」工作在多個檔案或目錄上重複作業，請將此「檔案系統」工作放入 Foreach 迴圈容器內。 如需詳細資訊，請參閱 [檔案系統工作](../../integration-services/control-flow/file-system-task.md)。  
@@ -102,8 +102,8 @@ ms.locfileid: "65727687"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**True**|目的地路徑儲存在變數中。 選取這個值會顯示動態選項 [DestinationVariable]。|  
-|**False**|目的地路徑是在檔案連接管理員中指定。 選取這個值會顯示動態選項 [DestinationConnection]。|  
+|**True**|目的地路徑儲存在變數中。 選取這個值會顯示動態選項 [DestinationVariable]  。|  
+|**False**|目的地路徑是在檔案連接管理員中指定。 選取這個值會顯示動態選項 [DestinationConnection]  。|  
   
  **OverwriteDestination**  
  指定作業是否可覆寫目的地目錄中的檔案。  
@@ -138,36 +138,36 @@ ms.locfileid: "65727687"
   
 |ReplTest1||  
 |-----------|-|  
-|**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 [SourceVariable]。|  
-|**False**|目的地路徑是在檔案連接管理員中指定。 選取這個值會顯示動態選項 [DestinationVariable]。|  
+|**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 [SourceVariable]  。|  
+|**False**|目的地路徑是在檔案連接管理員中指定。 選取這個值會顯示動態選項 [DestinationVariable]  。|  
   
 ### <a name="isdestinationpathvariable-dynamic-options"></a>IsDestinationPathVariable 動態選項  
   
 #### <a name="isdestinationpathvariable--true"></a>IsDestinationPathVariable = True  
  **DestinationVariable**  
- 在清單中選取變數名稱，或按一下 [\<新增變數...>] 建立新的變數。  
+ 在清單中選取變數名稱，或按一下 [\<新增變數...>]  建立新的變數。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  **DestinationConnection**  
- 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。  
+ 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]  ，即可建立新的連線管理員。  
   
- **相關主題：**[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 ### <a name="issourcepathvariable-dynamic-options"></a>IsSourcePathVariable 動態選項  
   
 #### <a name="issourcepathvariable--true"></a>IsSourcePathVariable = True  
  **SourceVariable**  
- 在清單中選取變數名稱，或按一下 [\<新增變數...>] 建立新的變數。  
+ 在清單中選取變數名稱，或按一下 [\<新增變數...>]  建立新的變數。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  **SourceConnection**  
- 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。  
+ 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]  ，即可建立新的連線管理員。  
   
- **相關主題：**[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
+ **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
   
 ### <a name="operation-dynamic-options"></a>作業動態選項  
   
@@ -186,7 +186,7 @@ ms.locfileid: "65727687"
   
 #### <a name="operation--create-directory"></a>作業 = 建立目錄  
  **UseDirectoryIfExists**  
- 指出 [建立目錄] 作業是否會使用具有指定之名稱的現有目錄，而不是建立新的目錄。  
+ 指出 [建立目錄]  作業是否會使用具有指定之名稱的現有目錄，而不是建立新的目錄。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   

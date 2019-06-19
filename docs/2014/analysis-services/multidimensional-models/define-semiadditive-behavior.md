@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075542"
 ---
 # <a name="define-semiadditive-behavior"></a>定義局部加總行為
@@ -26,12 +26,12 @@ ms.locfileid: "66075542"
   
  將局部加總行為加入 Cube，以定義個別量值或帳戶類型屬性成員的彙總方法。 如果 Cube 包含帳戶維度，您可以根據帳戶類型自動設定局部加總行為。  
   
- 若要加入局部加總行為，請在 Cube 設計師中開啟 Cube，然後從 [Cube] 功能表中選擇 [加入商業智慧]。 請在 [商業智慧精靈] 中，選取 [選擇增強功能] 頁面上的 [定義局部加總行為] 選項。 然後，此精靈會引導您逐步完成識別具有局部加總行為的量值。  
+ 若要加入局部加總行為，請在 Cube 設計師中開啟 Cube，然後從 [Cube] 功能表中選擇 [加入商業智慧]  。 請在 [商業智慧精靈] 中，選取 [選擇增強功能]  頁面上的 [定義局部加總行為]  選項。 然後，此精靈會引導您逐步完成識別具有局部加總行為的量值。  
   
  除了 Standard 版中提供的 LastChild 之外，只有商業智慧或 Enterprise 版中提供局部加總行為。  
   
 ## <a name="define-semiadditive-behavior"></a>定義局部加總行為  
- 在精靈的 [定義局部加總行為] 頁面上，選取下列其中一個選項來選擇如何定義局部加總：  
+ 在精靈的 [定義局部加總行為]  頁面上，選取下列其中一個選項來選擇如何定義局部加總：  
   
  **關閉局部加總行為**  
  從先前定義局部加總行為的 Cube 中移除局部加總行為。 如果量值設成下列任何彙總函式類型，此選取項目會將其重設為 `SUM`：  

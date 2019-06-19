@@ -7,10 +7,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.openlocfilehash: 1a0bd129fc535b53d8d19ad76f99f3a86ba10c11
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65135234"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>使用服務 SID 授與對 SQL Server 服務的權限

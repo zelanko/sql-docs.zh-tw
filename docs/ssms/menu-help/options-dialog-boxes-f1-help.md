@@ -15,15 +15,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: a118d533e19272e43b8ec1955616ef51261512f9
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104833"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>選項對話方塊 F1 說明
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-此章節包含在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中按一下 [工具] 功能表上的 [選項] 時，可用之對話方塊的 F1 說明。  
+此章節包含在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中按一下 [工具]  功能表上的 [選項]  時，可用之對話方塊的 F1 說明。  
   
 [選項 &#40;設計工具 - Analysis Services 設計工具 - 一般&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   

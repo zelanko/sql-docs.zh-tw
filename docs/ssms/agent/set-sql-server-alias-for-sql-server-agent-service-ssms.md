@@ -16,10 +16,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ae6b9600ec2fb41439d30ece3a8c2fe8bc08008e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65103226"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
@@ -69,11 +69,11 @@ ms.locfileid: "65103226"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後按一下 [屬性]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後按一下 [屬性]  。  
   
-3.  在 [SQL Server Agent 屬性 _server\_name_] 對話方塊的 [選取頁面] 底下，選取 [連線]，然後  
+3.  在 [SQL Server Agent 屬性 _server\_name_]  對話方塊的 [選取頁面]  底下，選取 [連線]  ，然後  
   
 4.  在 **[別名本機主機伺服器]** 方塊中，輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 要連接之伺服器的別名。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   

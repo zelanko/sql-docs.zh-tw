@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cb7639f027a66e424d554a074a82a7ea2d08a827
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726182"
 ---
 # <a name="data-conversion-transformation"></a>資料轉換
@@ -57,10 +57,10 @@ ms.locfileid: "65726182"
  blogs.msdn.com 上的部落格文章： [SSIS 2008 中各種資料類型轉換技術的效能比較](https://go.microsoft.com/fwlink/?LinkId=220823)。  
   
 ## <a name="data-conversion-transformation-editor"></a>資料轉換編輯器
-  使用 [資料轉換編輯器] 對話方塊，即可選取要轉換的資料行、選取資料行要轉換成哪一種資料類型，以及設定轉換屬性。  
+  使用 [資料轉換編輯器]  對話方塊，即可選取要轉換的資料行、選取資料行要轉換成哪一種資料類型，以及設定轉換屬性。  
   
 > [!NOTE]  
->  在 [資料轉換編輯器] 中無法使用資料轉換之輸出資料行的 **FastParse** 屬性，但可使用 [進階編輯器] 來設定這兩個屬性。 如需這個屬性的詳細資訊，請參閱 [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)的＜資料轉換＞一節。  
+>  在 [資料轉換編輯器]  中無法使用資料轉換之輸出資料行的 **FastParse** 屬性，但可使用 [進階編輯器]  來設定這兩個屬性。 如需這個屬性的詳細資訊，請參閱 [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)的＜資料轉換＞一節。  
   
 ### <a name="options"></a>選項。  
  **可用的輸入資料行**  

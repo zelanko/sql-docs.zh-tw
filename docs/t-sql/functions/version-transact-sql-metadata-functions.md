@@ -15,10 +15,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 7077a0696fa8711ceb45c9d8e5ad505da224b501
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947315"
 ---
 # <a name="version---transact-sql-metadata-functions"></a>Version - Transact SQL 中繼資料函式

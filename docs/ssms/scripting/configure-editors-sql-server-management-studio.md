@@ -13,10 +13,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0f90a0406ead09efaac27326fa6071270401b74b
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65820950"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>設定編輯器 (SQL Server Management Studio)
@@ -24,7 +24,7 @@ ms.locfileid: "65820950"
   您可以設定各個 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 編輯器的選項，以自訂其作業。  
   
 ## <a name="settng-editor-options"></a>設定編輯器選項  
- 使用 [工具] 功能表並選取 [選項...] 來顯示 [選項] 對話方塊，即可設定大部分的編輯器選項。 在 **[選項]** 對話方塊於左窗格中開啟 **[文字編輯器]** 節點，可設定編碼與文字編輯選項。 文字編輯器下的節點適用於特定的編輯器：  
+ 使用 [工具]  功能表並選取 [選項...]  來顯示 [選項]  對話方塊，即可設定大部分的編輯器選項。 在 **[選項]** 對話方塊於左窗格中開啟 **[文字編輯器]** 節點，可設定編碼與文字編輯選項。 文字編輯器下的節點適用於特定的編輯器：  
   
 1.  **所有語言** - 使用此節點設定的選項會套用至所有 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 編輯器。 使用其他節點為特定的編輯器設定不同之選項，可以覆寫這些設定。  
   

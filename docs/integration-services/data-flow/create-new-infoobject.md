@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9d08b6058a6ef034a197cb259cc7e4d503e69ed8
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727036"
 ---
 # <a name="create-new-infoobject"></a>建立新的 InfoObject
@@ -34,25 +34,25 @@ ms.locfileid: "65727036"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 目的地的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件。  
   
-2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 目的地。  
+2.  在 [資料流程]  索引標籤上，按兩下 SAP BW 目的地。  
   
 3.  在 **[SAP BW 目的地編輯器]** 中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
 4.  在 **[連接管理員]** 頁面的 **[建立 SAP BW 物件]** 群組方塊中，執行下列其中一個步驟以建立 InfoObject：  
   
-    1.  若要直接建立 InfoObject，請選取 **[InfoObject]**，然後按一下 **[建立]** 開啟 **[建立新的 InfoObject]** 對話方塊。  
+    1.  若要直接建立 InfoObject，請選取 **[InfoObject]** ，然後按一下 **[建立]** 開啟 **[建立新的 InfoObject]** 對話方塊。  
   
-    2.  若要在建立 InfoCube 時建立 InfoObject，請選取 **[InfoCube]**，然後按一下 **[建立]**。 在 **[建立交易資料的 InfoCube]** 對話方塊中，於清單內其中一個資料列的 **[IObject]** 資料行中，選取 **[建立]** 開啟 **[建立新的 InfoObject]** 對話方塊。  
-  
-        > [!NOTE]  
-        >  資料表中的每個資料列都代表封裝之資料流程中的資料行。  
-  
-    3.  若要在建立交易資料的 InfoSource 時建立 InfoObject，請選取 **[InfoSource]**，然後按一下 **[建立]**。 在 **[建立 InfoSource]** 對話方塊中，選取 **[交易資料]**，然後按一下 **[確定]**。 在 **[建立交易資料的 InfoSource]** 對話方塊中，於清單內其中一個資料列的 **[IObject]** 資料行中，選取 **[建立]** 開啟 **[建立新的 InfoObject]** 對話方塊。  
+    2.  若要在建立 InfoCube 時建立 InfoObject，請選取 **[InfoCube]** ，然後按一下 **[建立]** 。 在 **[建立交易資料的 InfoCube]** 對話方塊中，於清單內其中一個資料列的 **[IObject]** 資料行中，選取 **[建立]** 開啟 **[建立新的 InfoObject]** 對話方塊。  
   
         > [!NOTE]  
         >  資料表中的每個資料列都代表封裝之資料流程中的資料行。  
   
-    4.  若要在建立主要資料的 InfoSource 時建立 InfoObject，請選取 **[InfoSource]**，然後按一下 **[建立]**。 在 **[建立 InfoSource]** 對話方塊中，選取 **[主要資料]**，然後按一下 **[確定]**。 在 **[建立主要資料的 InfoSource]** 對話方塊中，按一下 **[新增]** 開啟 **[建立新的 InfoObject]** 對話方塊。  
+    3.  若要在建立交易資料的 InfoSource 時建立 InfoObject，請選取 **[InfoSource]** ，然後按一下 **[建立]** 。 在 **[建立 InfoSource]** 對話方塊中，選取 **[交易資料]** ，然後按一下 **[確定]** 。 在 **[建立交易資料的 InfoSource]** 對話方塊中，於清單內其中一個資料列的 **[IObject]** 資料行中，選取 **[建立]** 開啟 **[建立新的 InfoObject]** 對話方塊。  
+  
+        > [!NOTE]  
+        >  資料表中的每個資料列都代表封裝之資料流程中的資料行。  
+  
+    4.  若要在建立主要資料的 InfoSource 時建立 InfoObject，請選取 **[InfoSource]** ，然後按一下 **[建立]** 。 在 **[建立 InfoSource]** 對話方塊中，選取 **[主要資料]** ，然後按一下 **[確定]** 。 在 **[建立主要資料的 InfoSource]** 對話方塊中，按一下 **[新增]** 開啟 **[建立新的 InfoObject]** 對話方塊。  
   
  您也可以在 **[建立新的 InfoObject]** 對話方塊的 **[屬性]** 區段中按一下 **[新增]** ，藉以開啟 **[建立新的 InfoObject]** 對話方塊。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "65727036"
  表示 InfoObject 包含屬性、文字或階層形式的主要資料。  
   
 > [!NOTE]  
->  如果 InfoObject 代表維度資料，而且您已選取 [特性] 選項，請選取此選項。  
+>  如果 InfoObject 代表維度資料，而且您已選取 [特性]  選項，請選取此選項。  
   
  **允許小寫字元**  
  允許在 InfoObject 資料中使用小寫字元。  
@@ -155,7 +155,7 @@ ms.locfileid: "65727036"
  若要建立並加入新的 InfoObject，請按一下 [新增]，然後使用 **[建立新的 InfoObject]** 對話方塊的新執行個體來建立新的 InfoObject。  
   
  **移除**  
- 從 [屬性] 清單中移除選取的 InfoObject。  
+ 從 [屬性]  清單中移除選取的 InfoObject。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立交易資料的 InfoCube](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   

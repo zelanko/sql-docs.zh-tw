@@ -29,14 +29,14 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 3d95c52bc55df0a7693ee698cc5f01252c05949f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102063"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 編輯器選項
-本主題包含 Transact-SQL 編輯器部分選項的相關資訊。 若要設定這些選項，請透過 [工具\選項] 功能表巡覽至 [選項] 對話方塊。  
+本主題包含 Transact-SQL 編輯器部分選項的相關資訊。 若要設定這些選項，請透過 [工具\選項]  功能表巡覽至 [選項]  對話方塊。  
   
 [查詢執行](#QueryExecution)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "65102063"
 |**SET CURSOR_CLOSE_ON_COMMIT**|控制是否要在認可交易時關閉資料指標。 如需詳細資訊，請參閱 [SET CURSOR_CLOSE_ON_COMMIT](https://go.microsoft.com/fwlink/?LinkId=238754)。|  
 |**SET ANSI_PADDING**|控制資料行如何儲存比資料行的定義大小還短的值，以及如何儲存 **char**、 **varchar**、 **binary**和 **varbinary** 資料含有尾端空格的值。 如需詳細資訊，請參閱 [SET ANSI_PADDING](https://go.microsoft.com/fwlink/?LinkId=238755)。|  
 |**SET ANSI_WARNINGS**|指定數個錯誤狀況的 SQL-92 標準行為。如需詳細資訊，請參閱 [SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758)。|  
-|**SET ANSI_NULLS**|等於 (**=**) 和不等於 (**<>**) 比較運算子搭配 Null 值一起使用時，指定符合 SQL-92 規範的行為。如需詳細資訊，請參閱 [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)。|  
+|**SET ANSI_NULLS**|等於 ( **=** ) 和不等於 ( **<>** ) 比較運算子搭配 Null 值一起使用時，指定符合 SQL-92 規範的行為。如需詳細資訊，請參閱 [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)。|  
   
 ## <a name="QueryResults"></a>查詢結果  
   

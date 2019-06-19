@@ -15,18 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 743f8d8930652deadf3698ea16440b3361ae1789
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059069"
 ---
 # <a name="execute-process-task-editor-general-page"></a>執行處理工作編輯器 (一般頁面)
-  使用 [執行處理工作編輯器] 對話方塊的 [一般] 頁面，來命名和描述執行處理工作。  
+  使用 [執行處理工作編輯器]  對話方塊的 [一般]  頁面，來命名和描述執行處理工作。  
   
  若要了解這個工作，請參閱＜ [Execute Process Task](control-flow/execute-process-task.md)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **名稱**  
  為執行處理工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  
   

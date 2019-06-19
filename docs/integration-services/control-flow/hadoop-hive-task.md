@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d9ae752dabee68d6fae786675e640773009f4b7
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727624"
 ---
 # <a name="hadoop-hive-task"></a>Hadoop Hive 工作
@@ -27,12 +27,12 @@ ms.locfileid: "65727624"
 
   使用 Hadoop Hive 工作在 Hadoop 叢集上執行 Hive 指令碼。  
   
- 若要加入 Hadoop Hive 工作，請將其拖放至設計工具。 然後在工作上按兩下，或按一下滑鼠右鍵並按一下 [編輯]，以開啟 [Hadoop Hive 工作編輯器] 對話方塊。  
+ 若要加入 Hadoop Hive 工作，請將其拖放至設計工具。 然後在工作上按兩下，或按一下滑鼠右鍵並按一下 [編輯]  ，以開啟 [Hadoop Hive 工作編輯器]  對話方塊。  
   
  ![Hadoop Hive 工作編輯器](../../integration-services/control-flow/media/hadoop-hive-task.png "Hadoop Hive 工作編輯器")  
   
 ## <a name="options"></a>選項。  
- 在 [Hadoop Hive 工作編輯器] 對話方塊中設定下列選項。  
+ 在 [Hadoop Hive 工作編輯器]  對話方塊中設定下列選項。  
   
 |欄位|Description|  
 |-----------|-----------------|  

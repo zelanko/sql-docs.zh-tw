@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0079ca11eb6400b2bce524fd909acbaafd112323
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064711"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd 指令程式
@@ -91,7 +91,7 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
 ## <a name="comparing-invoke-sqlcmd-and-the-sqlcmd-utility"></a>比較 Invoke-Sqlcmd 和 sqlcmd 公用程式  
  **Invoke-Sqlcmd** 可用於執行可使用 **sqlcmd** 公用程式執行的許多指令碼。 但是， **Invoke-Sqlcmd** 執行所在的 Windows PowerShell 環境，與 **sqlcmd** 執行所在的命令提示字元環境不同。 **Invoke-Sqlcmd** 的行為已經過修改，可在 Windows PowerShell 環境中工作。  
   
- 並非所有的 **sqlcmd** 命令都實作於 **Invoke-Sqlcmd**中。 未實作的命令包含以下項目： **:!!**、 **:connect**、 **:error**、 **:out**、 **:ed**、 **:list**、 **:listvar**、 **:reset**、 **:perftrace**和 **:serverlist**。  
+ 並非所有的 **sqlcmd** 命令都實作於 **Invoke-Sqlcmd**中。 未實作的命令包含以下項目： **:!!** 、 **:connect**、 **:error**、 **:out**、 **:ed**、 **:list**、 **:listvar**、 **:reset**、 **:perftrace**和 **:serverlist**。  
   
  **Invoke-Sqlcmd** 不會初始化 **sqlcmd** 環境或指令碼變數，例如 SQLCMDDBNAME 或 SQLCMDWORKSTATION。  
   

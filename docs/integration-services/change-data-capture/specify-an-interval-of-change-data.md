@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b5f187d7efb44997cf53a4064daee4a83206a82
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728577"
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定變更資料的間隔
@@ -88,13 +88,13 @@ ms.locfileid: "65728577"
   
 2.  開啟 **[執行 SQL 工作編輯器]** 然後在編輯器的 **[一般]** 頁面上，選取下列選項：  
   
-    1.  針對 **[ResultSet]**，選取 **[單一資料列]**。  
+    1.  針對 **[ResultSet]** ，選取 **[單一資料列]** 。  
   
     2.  將有效的連接設定到來源資料庫。  
   
-    3.  針對 **[SQLSourceType]**，選取 **[直接輸入]**。  
+    3.  針對 **[SQLSourceType]** ，選取 **[直接輸入]** 。  
   
-    4.  針對 **[SQLStatement]**，輸入下列 SQL 陳述式：  
+    4.  針對 **[SQLStatement]** ，輸入下列 SQL 陳述式：  
   
         ```sql
         SELECT DATEADD(dd,0, DATEDIFF(dd,0,GETDATE()-1)) AS ExtractStartTime,  
@@ -110,7 +110,7 @@ ms.locfileid: "65728577"
 ## <a name="next-step"></a>下一個步驟  
  計算變更範圍的起點和結束點後，下一個步驟是判斷變更資料是否就緒。  
   
- **下一個主題：**[判斷變更資料是否就緒](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
+ **下一個主題：** [判斷變更資料是否就緒](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   

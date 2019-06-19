@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 110f02a8b3f0d1e8567914901f69d2fea5f09c46
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062266"
 ---
 # <a name="attribute-relationships-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>屬性關聯性 (屬性關聯性設計師索引標籤，維度設計師) (Analysis Services - 多維度資料)
-  使用 [屬性關聯性] 清單，即可在屬性關聯性圖表中找到特定屬性關聯性，以及管理該項關聯性。 這個窗格會緊鄰在包含屬性關聯性圖表的窗格底下。  
+  使用 [屬性關聯性]  清單，即可在屬性關聯性圖表中找到特定屬性關聯性，以及管理該項關聯性。 這個窗格會緊鄰在包含屬性關聯性圖表的窗格底下。  
   
  **若要檢視屬性關聯性窗格**  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的方案總管中，按兩下維度即可開啟 [維度設計師]，然後按一下 [屬性關聯性] 索引標籤。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的方案總管中，按兩下維度即可開啟 [維度設計師]，然後按一下 [屬性關聯性]  索引標籤。  
   
 2.  在工具列上，按一下 **[顯示清單檢視]** 圖示。  
   
 ## <a name="using-the-attribute-relationships-list"></a>使用屬性關聯性清單  
- [屬性關聯性] 清單會顯示維度中的所有屬性關聯性。  
+ [屬性關聯性]  清單會顯示維度中的所有屬性關聯性。  
   
  若要在屬性關聯性圖表中找到特定屬性關聯性，請按兩下清單中的屬性。 該屬性 (Attribute) 關聯性將在屬性關聯性圖表中反白顯示，而且其屬性 (Property) 會顯示在 [屬性] 視窗中。  
   
@@ -42,18 +42,18 @@ ms.locfileid: "66062266"
   
 ### <a name="shortcut-menu-options"></a>快速鍵功能表選項  
  **編輯屬性關聯性**  
- 開啟 [編輯屬性關聯性] 對話方塊，而且您可以在其中修改屬性關聯性。  
+ 開啟 [編輯屬性關聯性]  對話方塊，而且您可以在其中修改屬性關聯性。  
   
  如需詳細資訊，請參閱[建立屬性關聯性和編輯屬性關聯性對話方塊 &#40;屬性關聯性設計師索引標籤，維度設計師&#41; &#40;Analysis Services - 多維度資料&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) 和[定義屬性關聯性](multidimensional-models/attribute-relationships-define.md)。  
   
  **關聯性類型**  
- 將關聯性類型設定為 [彈性] 或 [固定]。 在彈性關聯性中，成員之間的關聯性會隨時間變更。 在固定關聯性中，成員之間的關聯性不會隨時間變更。  
+ 將關聯性類型設定為 [彈性]  或 [固定]  。 在彈性關聯性中，成員之間的關聯性會隨時間變更。 在固定關聯性中，成員之間的關聯性不會隨時間變更。  
   
  **刪除**  
  刪除選取的屬性關聯性。  
   
  **屬性**  
- 在 [屬性] 視窗中顯示屬性 (Attribute) 的屬性 (Property)。  
+ 在 [屬性]  視窗中顯示屬性 (Attribute) 的屬性 (Property)。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性關聯性&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   

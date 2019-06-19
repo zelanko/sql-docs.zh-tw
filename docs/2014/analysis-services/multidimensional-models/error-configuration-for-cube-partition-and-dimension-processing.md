@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8d81a1df5e574c2ae4821176634e439f4ab6b07
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075095"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing-ssas---multidimensional"></a>設定 Cube、分割區和維度處理 (SSAS - 多維度) 時發生錯誤
@@ -96,7 +96,7 @@ ms.locfileid: "66075095"
 |`KeyErrorAction`|這是伺服器在 `KeyNotFound` 錯誤發生時所採取的動作。 對此錯誤有效的回應方式包括 `ConvertToUnknown` 或 `DiscardRecord`。|  
 |`KeyErrorLogFile`|這是副檔名必須為 .log 的使用者定義檔案名稱，位於服務帳戶具有讀寫權限的資料夾內。 此記錄檔只會包含處理期間產生的錯誤。 如果需要更詳細的資訊，請使用飛行記錄器。|  
 |`KeyErrorLimit`|這是伺服器允許的資料完整性錯誤數上限，達到此上限之後，即無法繼續處理。 值為 -1 表示沒有限制。 預設值為 0，表示在發生第一個錯誤之後停止處理。 您也可以將其設為整數。|  
-|`KeyErrorLimitAction`|這是伺服器在索引鍵錯誤數目達到上限時所採取的動作。 若為 **[停止處理]**，處理作業會立即終止。 若為 **[停止記錄]**，處理作業會繼續，但將不再報告錯誤或予以算入計數。|  
+|`KeyErrorLimitAction`|這是伺服器在索引鍵錯誤數目達到上限時所採取的動作。 若為 **[停止處理]** ，處理作業會立即終止。 若為 **[停止記錄]** ，處理作業會繼續，但將不再報告錯誤或予以算入計數。|  
   
 ##  <a name="bkmk_tools"></a> 在何處設定錯誤組態屬性  
  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中於部署資料庫之後，或是在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的模型專案中，使用屬性頁。 這兩個工具所列出的屬性完全相同。 您也可以在 msmdrsrv.ini 檔案中設定錯誤組態屬性，變更伺服器的錯誤組態預設值，或是針對以指令碼作業形式執行的處理作業，在 `Batch` 和 `Process` 命令中進行設定。  
@@ -105,9 +105,9 @@ ms.locfileid: "66075095"
   
 #### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
   
-1.  在物件總管中，以滑鼠右鍵按一下以下任一物件的 [屬性]：維度、Cube 或資料分割。  
+1.  在物件總管中，以滑鼠右鍵按一下以下任一物件的 [屬性]  ：維度、Cube 或資料分割。  
   
-2.  在 [屬性] 中按一下 **[錯誤組態]**。  
+2.  在 [屬性] 中按一下 **[錯誤組態]** 。  
   
 #### <a name="sql-server-data-tools"></a>SQL Server Data Tools  
   
@@ -131,7 +131,7 @@ ms.locfileid: "66075095"
   
 1.  在 SQL Server Data Tools 的 [方案總管] 中，按兩下 Cube，在 Cube 設計師中加以開啟。  
   
-2.  在 [量值] 窗格中，以滑鼠右鍵按一下量值並選擇 [屬性]。  
+2.  在 [量值] 窗格中，以滑鼠右鍵按一下量值並選擇 [屬性]  。  
   
 3.  在內容中，依序展開**來源**若要檢視`NullProcessing`屬性。 此屬性依預設會設為 **[自動]** ，意指包含數值資料的欄位內凡是 Null 的 OLAP 項目都將轉換成零。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "66075095"
   
 1.  在 SQL Server Data Tools 的 [方案總管] 中，按兩下維度，在維度設計師中加以開啟。  
   
-2.  在 [屬性] 窗格中，以滑鼠右鍵按一下屬性 (attribute) 並選擇 [屬性]。  
+2.  在 [屬性] 窗格中，以滑鼠右鍵按一下屬性 (attribute) 並選擇 [屬性]  。  
   
 3.  在內容中，依序展開**KeyColumns**若要檢視`NullProcessing`屬性。 此屬性依預設會設為 **[自動]** ，意指包含數值資料的欄位內凡是 Null 的項目都將轉換成零。 將值變更為`Error`或`UnknownMember`。  
   

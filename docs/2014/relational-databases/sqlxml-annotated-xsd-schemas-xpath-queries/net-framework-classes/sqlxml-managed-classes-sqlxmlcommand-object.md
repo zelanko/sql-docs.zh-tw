@@ -31,10 +31,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010740"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand 物件 (SQLXML Managed 類別)
@@ -101,7 +101,7 @@ public SqlXmlCommand(string cnString)
  命令的文字。 此屬性對於指定您要執行之命令的文字相當實用。 如需實用範例，請參閱 <<c0> [ 執行 SQL 查詢&#40;SQLXML Managed 類別&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)。</c0>  
   
  CommandStream  
- 命令資料流。 如果您要從檔案 (例如，XML 範本) 執行命令，此屬性相當實用。 當您只使用 CommandStream， **「 範本 」**， **"UpdateGram"** 並 **"DiffGram"CommandType**支援值。 如需實用範例，請參閱 <<c0> [ 利用 CommandStream 屬性執行範本檔案](executing-template-files-by-using-the-commandstream-property.md)。  
+ 命令資料流。 如果您要從檔案 (例如，XML 範本) 執行命令，此屬性相當實用。 當您只使用 CommandStream， **「 範本 」** ， **"UpdateGram"** 並 **"DiffGram"CommandType**支援值。 如需實用範例，請參閱 <<c0> [ 利用 CommandStream 屬性執行範本檔案](executing-template-files-by-using-the-commandstream-property.md)。  
   
  CommandType  
  識別命令的類型。 此屬性對於指定您要執行之命令的類型相當實用。 下表中的值會決定命令的類型。 如需實用範例，請參閱 <<c0> [ 存取.NET 環境中的 SQLXML 功能](accessing-sqlxml-functionality-in-the-net-environment.md)。  

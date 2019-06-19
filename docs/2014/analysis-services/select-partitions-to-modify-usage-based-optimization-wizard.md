@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e98a7c30869428f4cc31428f35eaf6c6f86e97c6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069325"
 ---
 # <a name="select-partitions-to-modify-usage-based-optimization-wizard"></a>選取要修改的資料分割 (基於使用方式的最佳化精靈)
   使用 **[選取要修改的資料分割]** 頁面，即可選取您要設計彙總的資料分割。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **(Select)**  
  選取資料行標題中的核取方塊，以便針對量值群組中的所有資料分割設計彙總。  
   

@@ -18,10 +18,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e368b005eaa1f5729f177356f3e06ea5effbd417
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947534"
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
@@ -96,7 +96,7 @@ FROM Person.Person;
 
 在 `name` 資料格中找到的 `NULL` 值不會在結果中傳回。   
 > [!NOTE]  
->  如果使用 Management Studio 查詢編輯器，[以方格顯示結果] 選項將無法實作歸位字元。 請切換至 [以文字顯示結果] 以正確地查看結果集。   
+>  如果使用 Management Studio 查詢編輯器，[以方格顯示結果]  選項將無法實作歸位字元。 請切換至 [以文字顯示結果]  以正確地查看結果集。   
 
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. 產生以逗號分隔且不含 NULL 值的名稱清單   
 下列範例會將 Null 值取代為 'N/A'，並在單一結果資料格中傳回以逗號分隔的名稱。  
@@ -125,7 +125,7 @@ FROM Person.Person;
 |Ken Sánchez (Feb  8 2003 12:00AM) <br />Terri Duffy (Feb 24 2002 12:00AM) <br />Roberto Tamburello (Dec  5 2001 12:00AM) <br />Rob Walters (Dec 29 2001 12:00AM) <br />... |
 
 > [!NOTE]  
->  如果使用 Management Studio 查詢編輯器，[以方格顯示結果] 選項將無法實作歸位字元。 請切換至 [以文字顯示結果] 以正確地查看結果集。   
+>  如果使用 Management Studio 查詢編輯器，[以方格顯示結果]  選項將無法實作歸位字元。 請切換至 [以文字顯示結果]  以正確地查看結果集。   
 
 ### <a name="d-return-news-articles-with-related-tags"></a>D. 傳回具有相關標籤的新聞文章 
 文件及其標籤會分成不同的資料表。 開發人員希望針對每篇文章傳回單一資料列，並提供所有相關的標籤。 使用下列查詢： 

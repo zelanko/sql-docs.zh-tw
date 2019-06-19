@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: abb30ee26f5063c4a119b13c6891b53518d63b9e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724486"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>新增自訂工作中的偵錯支援
@@ -38,7 +38,7 @@ ms.locfileid: "65724486"
   
  自訂工作開發人員可以使用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 介面及其父介面 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>，以利用此架構建立自訂中斷點目標。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 介面會定義執行階段引擎與工作之間的互動，以建立和管理自訂中斷點位置或目標。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 介面提供執行階段引擎呼叫的方法與屬性，通知工作暫停或是繼續其執行。  
   
- 中斷點位置或目標是在工作執行中可以暫停處理的點。 使用者可以從 [設定中斷點] 對話方塊中的可用中斷點位置選取。 例如，除了預設中斷點選項之外，[Foreach 迴圈容器] 提供 [在迴圈的每一次反覆運算開始時中斷] 選項。  
+ 中斷點位置或目標是在工作執行中可以暫停處理的點。 使用者可以從 [設定中斷點]  對話方塊中的可用中斷點位置選取。 例如，除了預設中斷點選項之外，[Foreach 迴圈容器] 提供 [在迴圈的每一次反覆運算開始時中斷] 選項。  
   
  當工作在執行期間到達中斷點目標時，它會評估中斷點目標以決定是否啟用中斷點。 這指出使用者希望在該中斷點停止執行。 如果啟用中斷點，工作會將 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> 事件引發至執行階段引擎。 執行階段引擎會呼叫目前在封裝中執行的每項工作之 **Suspend** 方法以回應事件。 當執行階段呼叫已暫停工作的 **ResumeExecution** 方法時，工作會繼續執行。  
   

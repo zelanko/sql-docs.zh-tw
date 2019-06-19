@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9d7f388a854897b450a6e29b78763125c01e6037
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726172"
 ---
 # <a name="create-relationships"></a>建立關聯性
@@ -28,7 +28,7 @@ ms.locfileid: "65726172"
   使用 **[建立關聯性]** 對話方塊，即可編輯來源資料行與查閱資料表資料行之間的對應，而這些資料行是在模糊查閱轉換編輯器、查閱轉換編輯器和詞彙查閱轉換編輯器中進行設定。  
   
 > [!NOTE]  
->  從詞彙查閱轉換編輯器中叫用時，[建立關聯性] 對話方塊只會顯示 [輸入資料行] 和 [查閱資料行] 清單。  
+>  從詞彙查閱轉換編輯器中叫用時，[建立關聯性]  對話方塊只會顯示 [輸入資料行]  和 [查閱資料行]  清單。  
   
  若要深入了解使用 **[建立關聯性]** 對話方塊的轉換，請參閱＜ [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)＞、＜ [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)＞和＜ [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)＞。  
   

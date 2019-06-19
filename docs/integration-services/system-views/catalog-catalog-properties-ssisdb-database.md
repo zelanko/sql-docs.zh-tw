@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 455bea0ce159382e30dfae98d8d43041c0d16879
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715489"
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties (SSISDB 資料庫)
@@ -48,7 +48,7 @@ ms.locfileid: "65715489"
 |**VALIDATION_TIMEOUT**|如果驗證沒有在這個屬性指定的秒數中完成，驗證會停止。|  
 |**SERVER_CUSTOMIZED_LOGGING_LEVEL**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的預設自訂記錄層次。 如果您尚未建立任何自訂的記錄層次，則此屬性可能不會出現在檢視中。|
 |**SERVER_LOGGING_LEVEL**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的預設記錄層級。|
-|**SERVER_OPERATION_ENCRYPTION_LEVEL**|當值為 1 (`PER_EXECUTION`) 時，會針對每次「執行」建立用於保護機密執行參數和執行記錄的憑證和對稱金鍵。 當值為 2 (`PER_PROJECT`) 時，會為每個「專案」建立憑證和對稱金鑰一次。 如需此屬性的詳細資訊，請參閱適用於 SSIS 預存程序 [catalog.cleanup_server_log](../system-stored-procedures/catalog-cleanup-server-log.md#remarks) 的＜備註＞。|
+|**SERVER_OPERATION_ENCRYPTION_LEVEL**|當值為 1 (`PER_EXECUTION`) 時，會針對每次「執行」  建立用於保護機密執行參數和執行記錄的憑證和對稱金鍵。 當值為 2 (`PER_PROJECT`) 時，會為每個「專案」  建立憑證和對稱金鑰一次。 如需此屬性的詳細資訊，請參閱適用於 SSIS 預存程序 [catalog.cleanup_server_log](../system-stored-procedures/catalog-cleanup-server-log.md#remarks) 的＜備註＞。|
 |**VERSION_CLEANUP_ENABLED**|當值為 `TRUE` 時，目錄中只會儲存 **MAX_PROJECT_VERSIONS** 數目的專案版本，並會刪除所有其他專案版本。 當值為 **FALSE** 時，所有專案版本都會儲存在目錄中。 注意：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作會執行作業清除。|
 |||
   

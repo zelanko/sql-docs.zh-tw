@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbaf5c82f386330fc632c55aab3cd3ec5a3d07b9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066709"
 ---
 # <a name="properties-ssas-tabular"></a>屬性 (SSAS 表格式)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的表格式模型專案包含各種屬性，可定義專案、模型、報表及部署的行為。 屬性設定會以 XML 格式儲存在 Model.bim 檔案中，但是本節所述的所有屬性都可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 [屬性] 視窗中設定。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的表格式模型專案包含各種屬性，可定義專案、模型、報表及部署的行為。 屬性設定會以 XML 格式儲存在 Model.bim 檔案中，但是本節所述的所有屬性都可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 [屬性]  視窗中設定。  
   
 ## <a name="related-tasks"></a>相關工作  
   

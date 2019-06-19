@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3b9166e26129710a342411ab1da71b1c44c76239
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055945"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>選取 SMO 列舉對話方塊
-  使用 [選取 SMO 列舉] 對話方塊，即可在指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體上指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件 (SMO) 物件，以列舉和選取列舉類型。  
+  使用 [選取 SMO 列舉]  對話方塊，即可在指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體上指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件 (SMO) 物件，以列舉和選取列舉類型。  
   
 ## <a name="options"></a>選項。  
  **列舉**  
@@ -32,7 +32,7 @@ ms.locfileid: "66055945"
  使用物件列舉類型。  
   
  **預先擴展**  
- 使用 [預先擴展] 選項與物件列舉類型搭配使用。  
+ 使用 [預先擴展]  選項與物件列舉類型搭配使用。  
   
  **名稱**  
  使用名稱列舉類型。  

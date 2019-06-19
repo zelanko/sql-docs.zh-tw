@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072890"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>在 ReadOnly 和 ReadWrite 模式之間切換 Analysis Services 資料庫
@@ -45,13 +45,13 @@ ms.locfileid: "66072890"
   
 3.  以滑鼠右鍵按一下資料庫，然後選取**卸離...**  
   
-4.  將密碼指派給要卸離的資料庫，然後按一下 [確定] 執行卸離命令。  
+4.  將密碼指派給要卸離的資料庫，然後按一下 [確定]  執行卸離命令。  
   
 5.  找出**資料庫**的左或右窗格中的資料夾[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
 6.  以滑鼠右鍵按一下**資料庫**資料夾，然後選取**附加...**  
   
-7.  在 [資料夾] 文字方塊中，輸入資料庫資料夾的原始位置。 或者，您可以使用瀏覽按鈕 (**...**) 來找出資料庫資料夾。  
+7.  在 [資料夾]  文字方塊中，輸入資料庫資料夾的原始位置。 或者，您可以使用瀏覽按鈕 ( **...** ) 來找出資料庫資料夾。  
   
 8.  選取資料庫的讀取/寫入模式。  
   

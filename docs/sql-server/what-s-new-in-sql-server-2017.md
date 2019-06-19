@@ -12,10 +12,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 42358e9e43e12a13c5b9e03b58df349b8f7a4231
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729442"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
@@ -41,7 +41,7 @@ SQL Server 2017 包含許多新的 Database Engine 功能、增強功能和效�
 - [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) 中的 **modified_extent_page_count** 資料行會追蹤每個資料庫檔案中的差異變更，並啟用智慧型備份解決方案，以根據資料庫中已變更頁面的百分比來執行差異備份或完整備份。 (CTP 2.0)
 - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) T-SQL 語法現在支援使用 **ON** 關鍵字，將資料表載入使用者預設值以外的檔案群組中。 (CTP 2.0)
 - 現在支援在屬於 **AlwaysOn 可用性群組**的所有資料庫 (包括屬於相同執行個體的資料庫) 之間進行跨資料庫交易。 請參閱[交易 - AlwaysOn 可用性群組和資料庫鏡像](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md) (CTP 2.0)
-- 新的 [可用性群組] 功能包括無叢集支援、最小複本認可可用性群組設定，以及 Windows-Linux 跨 OS 移轉和測試。 (CTP 1.3)
+- 新的 [可用性群組]  功能包括無叢集支援、最小複本認可可用性群組設定，以及 Windows-Linux 跨 OS 移轉和測試。 (CTP 1.3)
 - 新的動態管理檢視：
     - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) 會公開摘要層級屬性和交易記錄檔的相關資訊，適用於監視交易記錄健全狀況。 (CTP 2.1)
     - [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) 會追蹤每個資料庫的版本存放區使用量，適用於主動根據每個資料庫的版本存放區使用量來規劃 tempdb 大小。 (CTP 2.0)
@@ -59,36 +59,36 @@ SQL Server 2017 包含許多新的 Database Engine 功能、增強功能和效�
 如需詳細資訊，請參閱 [SQL Server 2017 Database Engine 的新功能](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md)。
 
 ## <a name="sql-server-2017-integration-services-ssis"></a>SQL Server 2017 Integration Services (SSIS)
-- SSIS 中新的 [相應放大] 功能有下列新的和已變更的功能。 如需詳細資訊，請參閱 [SQL Server 2017 Integration Services 的新功能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)。 (RC1)
+- SSIS 中新的 [相應放大]  功能有下列新的和已變更的功能。 如需詳細資訊，請參閱 [SQL Server 2017 Integration Services 的新功能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)。 (RC1)
     -   相應放大主機現在支援高可用性。
     -   相應放大背景工作中執行記錄的容錯移轉處理已獲得改善。
     -   為了一致性和可讀性，預存程序 **[catalog].[create_execution]** 的參數 *runincluster* 已重新命名為 *runinscaleout*。
     -   SSIS 目錄有新的全域屬性，可指定執行 SSIS 套件的預設模式。
-- 在 SSIS 的新 [相應放大] 功能中，您現在可以在觸發執行時使用 **Use32BitRuntime** 參數。 (CTP 2.1)
+- 在 SSIS 的新 [相應放大]  功能中，您現在可以在觸發執行時使用 **Use32BitRuntime** 參數。 (CTP 2.1)
 - SQL Server 2017 Integration Services (SSIS) 現在支援 **Linux 上的 SQL Server**，並新增套件讓您從命令列在 Linux 上執行 SSIS 套件。 如需詳細資訊，請參閱[宣佈對 Linux 提供 SSIS 支援的部落格文章](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)。 (CTP 2.1)
-- SSIS 的新 [相應放大] 功能讓您更容易在多部電腦上執行 SSIS。 請參閱 [Integration Services 相應放大](~/integration-services/scale-out/integration-services-ssis-scale-out.md)。(CTP 1.0)
+- SSIS 的新 [相應放大]  功能讓您更容易在多部電腦上執行 SSIS。 請參閱 [Integration Services 相應放大](~/integration-services/scale-out/integration-services-ssis-scale-out.md)。(CTP 1.0)
 - OData 來源和 OData 連線管理員現在支援連線到 Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online 的 OData 摘要。 (CTP 1.0)
 
 如需詳細資訊，請參閱 [SQL Server 2017 Integration Services 的新功能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)。
 
 ## <a name="sql-server-2017-master-data-services-mds"></a>SQL Server 2017 Master Data Services (MDS)
 - 從 SQL Server 2012、SQL Server 2014 及 SQL Server 2016 升級至 SQL Server 2017 Master Data Services 時的體驗與效能已獲得改善。 
-- 您現在可以在 Web 應用程式的 [總管] 頁面中，檢視實體、集合和階層的排序清單。
+- 您現在可以在 Web 應用程式的 [總管]  頁面中，檢視實體、集合和階層的排序清單。
 - 使用暫存預存程序來暫存數百萬筆記錄的效能已獲得改善。
-- 在 [管理群組] 頁面上展開 [實體] 資料夾以指派模型權限時的效能已獲得改善。 [管理群組] 頁面位於 Web 應用程式的 [安全性] 區段。 如需效能改進的詳細資訊，請參閱 [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview)。 如需指派權限的詳細資訊，請參閱[指派模型物件權限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)。
+- 在 [管理群組]  頁面上展開 [實體]  資料夾以指派模型權限時的效能已獲得改善。 [管理群組]  頁面位於 Web 應用程式的 [安全性]  區段。 如需效能改進的詳細資訊，請參閱 [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview)。 如需指派權限的詳細資訊，請參閱[指派模型物件權限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)。
 
 ## <a name="sql-server-2017-analysis-services-ssas"></a>SQL Server 2017 Analysis Services (SSAS) 
 SQL Server Analysis Services 2017 為表格式模型引進許多增強功能。 其中包括：
 - 以表格式模型作為 Analysis Services 的預設安裝選項。 (CTP 2.0)
 - 物件層級安全性，以保護表格式模型的中繼資料。 (CTP 2.0)
 - 日期關聯性，以輕鬆地根據日期欄位建立關聯性。 (CTP 2.0)
-- 新的 [取得資料] (Power Query) 資料來源，以及 M 查詢的現有 DirectQuery 資料來源支援。 (CTP 2.0) 
+- 新的 [取得資料]  (Power Query) 資料來源，以及 M 查詢的現有 DirectQuery 資料來源支援。 (CTP 2.0) 
 - SSDT 的 DAX 編輯器。 (CTP 2.0)
 - 編碼提示，這是一種進階功能，可針對大型記憶體內部表格式模型的資料重新整理進行最佳化。 (CTP 1.3)
 - 支援表格式模型的 **1400 相容性層級**。 若要建立新的或升級現有的表格式模型專案至 1400 相容性層級，請下載並安裝 [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939)。 (CTP 1.1)
-- 1400 相容性層級之表格式模型的最新 [取得資料] 體驗。 請參閱 [Analysis Services 小組部落格](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/)。 (CTP 1.1)
-- [隱藏成員] 屬性，可隱藏不完全階層中的空白成員。 (CTP 1.1)
-- 新的 [詳細資料列] 終端使用者動作，可**顯示彙總資訊的詳細資料**。 [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) 和 **DETAILROWS** 函式，可建立詳細資料列運算式。 (CTP 1.1)
+- 1400 相容性層級之表格式模型的最新 [取得資料]  體驗。 請參閱 [Analysis Services 小組部落格](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/)。 (CTP 1.1)
+- [隱藏成員]  屬性，可隱藏不完全階層中的空白成員。 (CTP 1.1)
+- 新的 [詳細資料列]  終端使用者動作，可**顯示彙總資訊的詳細資料**。 [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) 和 **DETAILROWS** 函式，可建立詳細資料列運算式。 (CTP 1.1)
 - DAX **IN** 運算子，可指定多個值。 (CTP 1.1)
 
 如需詳細資訊，請參閱 [SQL Server Analysis Services 2017 的新功能](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)。

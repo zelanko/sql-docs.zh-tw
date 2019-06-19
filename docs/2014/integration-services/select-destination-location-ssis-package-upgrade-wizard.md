@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d891f456f9c4922b3c680913f767d4e9b14a76a0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056013"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>選取目的地位置 (SSIS 封裝升級精靈)
@@ -31,7 +31,7 @@ ms.locfileid: "66056013"
   
 ## <a name="static-options"></a>靜態選項  
  **儲存至來源位置**  
- 將升級封裝儲存到此精靈之 [選取來源位置] 頁面上所指定的相同位置。  
+ 將升級封裝儲存到此精靈之 [選取來源位置]  頁面上所指定的相同位置。  
   
  如果原始封裝儲存在檔案系統中，而且您希望精靈備份這些封裝，請選取 **[儲存至來源位置]** 選項。 如需詳細資訊，請參閱 [使用 SSIS 封裝升級精靈來升級 Integration Services 封裝](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66056013"
 |**Microsoft SQL Server**|指示升級封裝要儲存到現有的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。<br /><br /> 選取這個值會顯示對應的 **[封裝來源]** 動態選項。|  
   
  **資料夾**  
- 輸入將用來儲存升級封裝的資料夾名稱，或是按一下 [瀏覽] 並尋找資料夾。  
+ 輸入將用來儲存升級封裝的資料夾名稱，或是按一下 [瀏覽]  並尋找資料夾。  
   
  **瀏覽**  
  瀏覽來尋找將儲存升級封裝的資料夾。  

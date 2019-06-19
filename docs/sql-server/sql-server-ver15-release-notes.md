@@ -11,10 +11,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
 ms.openlocfilehash: 8f44927fb59e6d1b613b2a67e26aed980b3a080a
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65993948"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 預覽版版本資訊

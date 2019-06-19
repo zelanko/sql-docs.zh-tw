@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 683d3bcee8450a62a040663dacf30d337556529d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727678"
 ---
 # <a name="for-loop-container"></a>For 迴圈容器
@@ -72,26 +72,26 @@ ms.locfileid: "65727678"
 4.  設定「For 迴圈」容器。 如需詳細資訊，請參閱 [設定 For 迴圈容器](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)為止。  
 
 ##  <a name="configure-the-for-loop-container"></a>設定 For 迴圈容器
-此程序描述如何使用 [For 迴圈編輯器] 對話方塊設定「For 迴圈」容器。  
+此程序描述如何使用 [For 迴圈編輯器]  對話方塊設定「For 迴圈」容器。  
   
  如需 For 迴圈容器的範例，請參閱 bimonkey.com 上的 [SSIS Loops that do not fail](https://go.microsoft.com/fwlink/?LinkId=240295)。  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，按兩下「For 迴圈」容器以開啟 [For 迴圈編輯器]。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，按兩下「For 迴圈」容器以開啟 [For 迴圈編輯器]  。  
   
 2.  (選擇性) 修改「For 迴圈」容器的名稱和描述。  
   
-3.  (選擇性) 在 [InitExpression] 文字方塊中輸入初始化運算式。  
+3.  (選擇性) 在 [InitExpression]  文字方塊中輸入初始化運算式。  
   
-4.  在 [EvalExpression] 文字方塊中輸入評估運算式。  
+4.  在 [EvalExpression]  文字方塊中輸入評估運算式。  
   
     > [!NOTE]  
     >  運算式必須評估為布林。 如果運算式評估為 **false**，迴圈將停止執行。  
   
-5.  (選擇性) 在 [AssignExpression] 文字方塊中輸入指派運算式。  
+5.  (選擇性) 在 [AssignExpression]  文字方塊中輸入指派運算式。  
   
-6.  (選擇性) 按一下 [運算式]，然後在 [運算式] 頁面上建立「For 迴圈」容器之屬性的屬性運算式。 如需詳細資訊，請參閱[加入或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)。  
+6.  (選擇性) 按一下 [運算式]  ，然後在 [運算式]  頁面上建立「For 迴圈」容器之屬性的屬性運算式。 如需詳細資訊，請參閱[加入或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)。  
   
-7.  按一下 [確定]，以關閉 [For 迴圈編輯器]。  
+7.  按一下 [確定]  ，以關閉 [For 迴圈編輯器]  。  
 
 ## <a name="for-loop-editor-dialog-box"></a>For 迴圈編輯器對話方塊
 使用 **[For 迴圈編輯器]** 對話方塊的 **[For 迴圈]** 頁面，即可設定迴圈，使工作流程重複到指定的條件評估為 False 為止。  

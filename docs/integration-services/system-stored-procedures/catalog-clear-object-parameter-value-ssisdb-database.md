@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 036fa3398103108cd4b49d1690cd5943cc53ff02
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717052"
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value (SSISDB 資料庫)
@@ -39,19 +39,19 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>引數  
  [ \@folder_name = ] *folder_name*  
- 包含專案之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
+ 包含專案之資料夾的名稱。 *folder_name* 是 **nvarchar(128)** 。  
   
  [ \@project_name = ] *project_name*  
- 專案的名稱。 *project_name* 是 **nvarchar(128)**。  
+ 專案的名稱。 *project_name* 是 **nvarchar(128)** 。  
   
  [ \@object_type = ] *object_type*  
  物件的類型。 有效的值包括 `20` (專案) 和 `30` (封裝)。 *object_type* 是 **smallInt**。  
   
  [ \@ object _name = ] *object _name*  
- 封裝名稱。 *object _name* 是 **nvarchar(260)**。  
+ 封裝名稱。 *object _name* 是 **nvarchar(260)** 。  
   
  [ \@parameter_ name = ] *parameter_name*  
- 參數的名稱。 *parameter_ name* 是 **nvarchar(128)**。  
+ 參數的名稱。 *parameter_ name* 是 **nvarchar(128)** 。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

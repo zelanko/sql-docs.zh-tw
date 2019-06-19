@@ -12,10 +12,10 @@ ms.author: sawinark
 ms.reviewer: maghan
 manager: craigg
 ms.openlocfilehash: cd4b7a4901ed294c4698c4edc23d73a6cd497e58
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014977"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>將 SQL Server Integration Services 工作負載隨即轉移至雲端
@@ -135,8 +135,8 @@ ms.locfileid: "66014977"
 ## <a name="monitor-packages"></a>監視套件
 
 若要監視執行中套件，請在 SSMS 中使用下列報告選項。
--   以滑鼠右鍵按一下 [SSISDB]，然後選取 [作用中的作業] 以開啟 [作用中的作業] 對話方塊。
--   在 [物件總管] 中選取套件，並按一下滑鼠右鍵，然後依序選取 [報表]、[標準報表] 和 [所有執行]。
+-   以滑鼠右鍵按一下 [SSISDB]  ，然後選取 [作用中的作業]  以開啟 [作用中的作業]  對話方塊。
+-   在 [物件總管] 中選取套件，並按一下滑鼠右鍵，然後依序選取 [報表]  、[標準報表]  和 [所有執行]  。
 
 若要監視 Azure SSIS Integration Runtime，請參閱[監視 Azure SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)。
 

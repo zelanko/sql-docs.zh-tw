@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 807f347bb176f6d8b3191f9f10c8f30448ce9b1f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099964"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和監視異動資料擷取 (SQL Server)
@@ -172,7 +172,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
     GO  
     ```  
   
-3. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展開 **[管理]**，然後展開 **[資料收集]**。 以滑鼠右鍵按一下 [CDC 效能資料收集器]，然後按一下 [啟動資料收集組]。  
+3. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展開 **[管理]** ，然後展開 **[資料收集]** 。 以滑鼠右鍵按一下 [CDC 效能資料收集器]  ，然後按一下 [啟動資料收集組]  。  
   
 4. 在步驟 1 中設定的資料倉儲內，找出資料表 custom_snapshots.cdc_log_scan_data。 這份資料表會提供記錄檔掃描工作階段之資料的歷程記錄快照集。 這份資料表可用於分析經過一段時間的延遲、輸送量和其他效能量值。  
   

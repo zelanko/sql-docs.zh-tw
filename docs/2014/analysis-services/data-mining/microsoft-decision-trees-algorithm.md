@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a9adfe74aef16e475d06eddfbe08852f7618518
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084107"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Microsoft 決策樹演算法
@@ -41,9 +41,9 @@ ms.locfileid: "66084107"
  [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 公司的行銷部門想要識別舊客戶的特性，這些特性會指出那些客戶是否可能購買未來的產品。 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫會儲存描述舊客戶的人口統計資訊。 藉由使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法來分析此資訊，行銷部門可以建立模型，依據關於特定客戶之已知資料行的狀態 (例如人口統計或過去購買模式) 來預測該客戶是否會購買產品。  
   
 ## <a name="how-the-algorithm-works"></a>演算法的運作方式  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法會在樹狀結構中建立一系列分割，藉以建立資料採礦模型。 然後，這些分割會表示成「節點」。 每次發現輸入資料行與可預測資料行有明顯地相互關聯時，此演算法就會在模型中加入一個節點。 演算法決定分岔的方式不同，視它預測連續資料行或分隔資料行而定。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法會在樹狀結構中建立一系列分割，藉以建立資料採礦模型。 然後，這些分割會表示成「節點」  。 每次發現輸入資料行與可預測資料行有明顯地相互關聯時，此演算法就會在模型中加入一個節點。 演算法決定分岔的方式不同，視它預測連續資料行或分隔資料行而定。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法會使用「特徵選取」來引導選取最有用的屬性。 所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料採礦演算法都會使用特徵選取來改善效能和分析的品質。 若要防止不重要的屬性佔用處理器時間，特徵選取就很重要。 如果您在設計資料採礦模型時使用過多輸入或可預測的屬性，此模型可能會需要很長的時間才能處理完成，甚至用完記憶體。 用來判斷是否要分割樹狀結構的方法包括 *entropy* 和 Bayesian 網路的業界標準。 如需用來選取有意義屬性，然後針對這些屬性計分並排名之方法的詳細資訊，請參閱[特徵選取 &#40;資料採礦&#41;](feature-selection-data-mining.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法會使用「特徵選取」  來引導選取最有用的屬性。 所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料採礦演算法都會使用特徵選取來改善效能和分析的品質。 若要防止不重要的屬性佔用處理器時間，特徵選取就很重要。 如果您在設計資料採礦模型時使用過多輸入或可預測的屬性，此模型可能會需要很長的時間才能處理完成，甚至用完記憶體。 用來判斷是否要分割樹狀結構的方法包括 *entropy* 和 Bayesian 網路的業界標準。  如需用來選取有意義屬性，然後針對這些屬性計分並排名之方法的詳細資訊，請參閱[特徵選取 &#40;資料採礦&#41;](feature-selection-data-mining.md)。  
   
  資料採礦模型中常見的問題是模型變得過度敏感定型資料中的小差異，而這種情況就稱為*過度納入*或是*過度定型*。 過度調整的模型無法一般化成為其他資料集。 為了避免過度調整任何特定資料集， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法會使用控制樹狀目錄成長的技術。 如需 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法如何運作的更深入說明，請參閱 [Microsoft 決策樹演算法技術參考](microsoft-decision-trees-algorithm-technical-reference.md)。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66084107"
  如需決策樹模型所支援之內容類型和資料類型的詳細資訊，請參閱 [Microsoft 決策樹演算法技術參考](microsoft-decision-trees-algorithm-technical-reference.md)的＜需求＞一節。  
   
 ## <a name="viewing-a-decision-trees-model"></a>檢視決策樹模型  
- 若要瀏覽此模型，您可以使用 [Microsoft 樹狀檢視器]。 如果模型產生了多個樹狀目錄，您就可以選取一個樹狀目錄，然後此檢視器會顯示這些案例如何針對每個可預測屬性分類的細目。 您也可以使用相依性網路檢視器來檢視樹狀目錄的互動。 如需詳細資訊，請參閱 [使用 Microsoft 樹狀檢視器瀏覽模型](browse-a-model-using-the-microsoft-tree-viewer.md)。  
+ 若要瀏覽此模型，您可以使用 [Microsoft 樹狀檢視器]  。 如果模型產生了多個樹狀目錄，您就可以選取一個樹狀目錄，然後此檢視器會顯示這些案例如何針對每個可預測屬性分類的細目。 您也可以使用相依性網路檢視器來檢視樹狀目錄的互動。 如需詳細資訊，請參閱 [使用 Microsoft 樹狀檢視器瀏覽模型](browse-a-model-using-the-microsoft-tree-viewer.md)。  
   
  如果您想要了解樹狀結構中任何分支或節點的詳細資料，也可以使用 [Microsoft 一般內容樹狀檢視器](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)來瀏覽此模型。 針對此模型所儲存的內容包括每個節點中所有值的分佈、樹狀目錄之每個層級的機率，以及其連續屬性的迴歸公式。 如需詳細資訊，請參閱 [決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)。  
   

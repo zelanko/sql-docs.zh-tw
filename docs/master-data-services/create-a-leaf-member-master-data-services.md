@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 43108a02bb4eace9fda31fd8cdd1c75cefaadcc1
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487481"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>建立分葉成員 (Master Data Services)
@@ -43,15 +43,15 @@ ms.locfileid: "65487481"
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 **[模型]** 清單中的模型。  
   
-2.  如果您是使用者，請從 [版本] 清單中選取開啟的版本。 如果您是系統管理員，請從 [版本] 清單中選取狀態為開啟或鎖定的版本。  
+2.  如果您是使用者，請從 [版本]  清單中選取開啟的版本。 如果您是系統管理員，請從 [版本]  清單中選取狀態為開啟或鎖定的版本。  
   
-3.  按一下 **[總管]**。  
+3.  按一下 **[總管]** 。  
   
-4.  從功能表列指向 [實體]，然後按一下要新增成員的實體名稱。  
+4.  從功能表列指向 [實體]  ，然後按一下要新增成員的實體名稱。  
   
-5.  按一下 [加入成員]。  
+5.  按一下 [加入成員]  。  
   
-6.  填妥 [詳細資料] 窗格中的欄位。  
+6.  填妥 [詳細資料]  窗格中的欄位。  
   
      如為網域型屬性，且屬性已套用篩選，則篩選父屬性就會限制屬性值清單。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "65487481"
   
 7.  選擇性。 在 **[註解]** 方塊中，輸入有關加入此成員之原因的註解。 可存取成員的所有使用者都可以檢視註解。  
   
-8.  按一下 [確定] 。  
+8.  按一下 [確定]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立合併成員 &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)   

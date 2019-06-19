@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dfe740bfa0ec25d577565f310ebeb3ea5e5d9274
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727759"
 ---
 # <a name="data-profiling-task"></a>資料分析工作
@@ -91,7 +91,7 @@ ms.locfileid: "65727759"
   
  整數類型包括 **bit**、 **tinyint**、 **smallint**、 **int**和 **bigint**。  
   
- 字元類型包括 **char**、 **nchar**、 **varchar**及 **nvarchar** ，但不包括 **varchar(max)** 和 **nvarchar(max)**。  
+ 字元類型包括 **char**、 **nchar**、 **varchar**及 **nvarchar** ，但不包括 **varchar(max)** 和 **nvarchar(max)** 。  
   
  日期和時間類型包括 **datetime**、 **smalldatetime**和 **timestamp**。  
   
@@ -138,10 +138,10 @@ ms.locfileid: "65727759"
  您可以使用 **[資料分析工作編輯器]** 來設定資料分析工作。 此編輯器有兩個頁面：  
   
  [一般頁面](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)  
- 在 [一般] 頁面上，您可以指定輸出檔案或變數。 您也可以選取 **[快速分析]** ，利用預設值快速設定工作以計算設定檔。 如需詳細資訊，請參閱 [單一資料表快速分析表單 &#40;資料分析工作&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)。  
+ 在 [一般]  頁面上，您可以指定輸出檔案或變數。 您也可以選取 **[快速分析]** ，利用預設值快速設定工作以計算設定檔。 如需詳細資訊，請參閱 [單一資料表快速分析表單 &#40;資料分析工作&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)。  
   
  [設定檔要求頁面](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
- 在 [設定檔要求] 頁面上，您可以指定資料來源，然後選取並設定您要計算的資料設定檔。 如需有關您可以設定之各種設定檔的詳細資訊，請參閱下列主題：  
+ 在 [設定檔要求]  頁面上，您可以指定資料來源，然後選取並設定您要計算的資料設定檔。 如需有關您可以設定之各種設定檔的詳細資訊，請參閱下列主題：  
   
 -   [候選索引鍵設定檔要求選項 &#40;資料分析工作&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 94bd2f66ee3406bab6d1d69281d83f2de5f68e65
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723789"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>歡迎使用 SQL Server 匯入和匯出精靈
@@ -24,7 +24,7 @@ ms.locfileid: "65723789"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  當您啟動 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 時，第一頁是 [歡迎使用 SQL Server 匯入和匯出精靈] 。 您不需要在此頁面上採取任何動作。
+  當您啟動 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 時，第一頁是 [歡迎使用 SQL Server 匯入和匯出精靈]  。 您不需要在此頁面上採取任何動作。
 
 > [!IMPORTANT]
 > 本主題僅描述精靈的 **第一頁** 。 如需其他資訊，請參閱[相關的工作及內容](#related)。
@@ -43,7 +43,7 @@ ms.locfileid: "65723789"
  下次開啟精靈時略過歡迎頁面。  
   
 ## <a name="whats-next"></a>下一步  
- 歡迎使用頁面之後的下一頁是 [選擇資料來源] 。 在此頁面上，您可以提供有關資料來源及其連接方式的資訊。 如需詳細資訊，請參閱 [選擇資料來源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)。
+ 歡迎使用頁面之後的下一頁是 [選擇資料來源]  。 在此頁面上，您可以提供有關資料來源及其連接方式的資訊。 如需詳細資訊，請參閱 [選擇資料來源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)。
 
 ## <a name="related"></a> 相關的工作及內容  
  以下是一些其他基本工作。

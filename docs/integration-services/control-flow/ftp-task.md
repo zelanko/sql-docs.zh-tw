@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 11414e0a669ea3169a610c98740b3fd35ff4e751
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727660"
 ---
 # <a name="ftp-task"></a>FTP 工作
@@ -86,7 +86,7 @@ ms.locfileid: "65727660"
   
 ### <a name="options"></a>選項。  
  **FtpConnection**  
- 選取現有的 FTP 連線管理員，或按一下 [\<新增連線...>] 建立連線管理員。  
+ 選取現有的 FTP 連線管理員，或按一下 [\<新增連線...>]  建立連線管理員。  
   
 > [!IMPORTANT]  
 >  FTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
@@ -114,8 +114,8 @@ ms.locfileid: "65727660"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[RemoteVariable]**。|  
-|**False**|目的地路徑是在檔案連接管理員中指定。 選取此值會顯示動態選項 **[RemotePath]**。|  
+|**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[RemoteVariable]** 。|  
+|**False**|目的地路徑是在檔案連接管理員中指定。 選取此值會顯示動態選項 **[RemotePath]** 。|  
   
  **OverwriteFileAtDestination**  
  指定是否可以覆寫目的地端的檔案。  
@@ -125,8 +125,8 @@ ms.locfileid: "65727660"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[LocalVariable]**。|  
-|**False**|目的地路徑是在檔案連接管理員中指定。 選取此值會顯示動態選項 **[LocalPath]**。|  
+|**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[LocalVariable]** 。|  
+|**False**|目的地路徑是在檔案連接管理員中指定。 選取此值會顯示動態選項 **[LocalPath]** 。|  
   
  **運算**  
  選取要執行的 FTP 作業。 這個屬性具有下表中所列的選項。  
@@ -135,12 +135,12 @@ ms.locfileid: "65727660"
 |-----------|-----------------|  
 |**傳送檔案**|傳送檔案。 選取此值會顯示動態選項 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  
 |**接收檔案**|接收檔案。 選取此值會顯示動態選項 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  
-|**建立本機目錄**|建立本機目錄。 選取此值會顯示動態選項 **[LocalVariable]** 和 **[LocalPath]**。|  
-|**建立遠端目錄**|建立遠端目錄。 選取此值會顯示動態選項 **[RemoteVariable]** 和 **[RemotelPath]**。|  
-|**移除本機目錄**|移除本機目錄。 選取此值會顯示動態選項 **[LocalVariable]** 和 **[LocalPath]**。|  
-|**移除遠端目錄**|移除遠端目錄。 選取此值會顯示動態選項 **[RemoteVariable]** 和 **[RemotePath]**。|  
-|**刪除本機檔案**|刪除本機檔案。 選取此值會顯示動態選項 **[LocalVariable]** 和 **[LocalPath]**。|  
-|**刪除遠端檔案**|刪除遠端檔案。 選取此值會顯示動態選項 **[RemoteVariable]** 和 **[RemotePath]**。|  
+|**建立本機目錄**|建立本機目錄。 選取此值會顯示動態選項 **[LocalVariable]** 和 **[LocalPath]** 。|  
+|**建立遠端目錄**|建立遠端目錄。 選取此值會顯示動態選項 **[RemoteVariable]** 和 **[RemotelPath]** 。|  
+|**移除本機目錄**|移除本機目錄。 選取此值會顯示動態選項 **[LocalVariable]** 和 **[LocalPath]** 。|  
+|**移除遠端目錄**|移除遠端目錄。 選取此值會顯示動態選項 **[RemoteVariable]** 和 **[RemotePath]** 。|  
+|**刪除本機檔案**|刪除本機檔案。 選取此值會顯示動態選項 **[LocalVariable]** 和 **[LocalPath]** 。|  
+|**刪除遠端檔案**|刪除遠端檔案。 選取此值會顯示動態選項 **[RemoteVariable]** 和 **[RemotePath]** 。|  
   
  **IsTransferASCII**  
  指出往返遠端 FTP 伺服器的檔案，是否應以 ASCII 模式傳輸。  
@@ -149,27 +149,27 @@ ms.locfileid: "65727660"
   
 #### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **[RemoteVariable]**  
- 選取現有的使用者定義變數，或按一下 [\<新增變數...>] 來建立使用者定義變數。  
+ 選取現有的使用者定義變數，或按一下 [\<新增變數...>]  來建立使用者定義變數。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、新增變數  
+ **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、新增變數  
   
 #### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **[RemotePath]**  
- 選取現有的 FTP 連線管理員，或按一下 [\<新增連線...>] 建立連線管理員。  
+ 選取現有的 FTP 連線管理員，或按一下 [\<新增連線...>]  建立連線管理員。  
   
- **相關主題：**[FTP 連線管理員](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 連線管理員編輯器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **相關主題：** [FTP 連線管理員](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 連線管理員編輯器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
 ### <a name="islocalpathvariable-dynamic-options"></a>IsLocalPathVariable 動態選項  
   
 #### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **[LocalVariable]**  
- 選取現有的使用者定義變數，或按一下 [\<新增變數...>] 來建立變數。  
+ 選取現有的使用者定義變數，或按一下 [\<新增變數...>]  來建立變數。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、新增變數  
+ **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、新增變數  
   
 #### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **[LocalPath]**  
- 選取現有的檔案連線管理員，或按一下 [\<新增連線...>] 建立連線管理員。  
+ 選取現有的檔案連線管理員，或按一下 [\<新增連線...>]  建立連線管理員。  
   
  **相關主題**：[一般檔案連線管理員](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   

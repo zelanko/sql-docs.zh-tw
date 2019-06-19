@@ -31,10 +31,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dcb58a1eddbce7bfd718c49726825a29164d4081
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980438"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
@@ -93,7 +93,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  *寬度*  
   
- 這是定義引數值所在欄位最小寬度的整數。 如果引數值的長度等於或長於「寬度」，則列印出的值不帶填補。 如果值短於「寬度」，則會將值填補至「寬度」中指定的長度。  
+ 這是定義引數值所在欄位最小寬度的整數。 如果引數值的長度等於或長於「寬度」  ，則列印出的值不帶填補。 如果值短於「寬度」  ，則會將值填補至「寬度」  中指定的長度。  
   
  星號 (*) 表示寬度是由引數清單中相關聯的引數所指定，必須是整數值。  
   
@@ -101,7 +101,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  這是從字串值的引數值取得的最大字元數。 例如，如果字串有五個字元而有效位數為 3，則只會使用字串值的前三個字元。  
   
- 至於整數值，「有效位數」是列印出的最少小數位數。  
+ 至於整數值，「有效位數」  是列印出的最少小數位數。  
   
  星號 (*) 表示有效位數是由引數清單中相關聯的引數所指定，必須是整數值。  
   

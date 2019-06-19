@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a41d72ce6c0234e6419b55a9fe1895226d884fb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083488"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>採礦模型工作和使用說明
-  使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，[資料採礦設計師] 的 [採礦模型] 索引標籤，即可管理及處理採礦結構中的採礦模型。  
+  使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，[資料採礦設計師] 的 [採礦模型]  索引標籤，即可管理及處理採礦結構中的採礦模型。  
   
 ## <a name="in-this-section"></a>本節內容  
   

@@ -22,10 +22,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fb86baacc6fc75aa5e41a5946e1761daa90ebc25
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105632"
 ---
 # <a name="visual-database-tool-designers"></a>Visual Database Tool 設計工具
@@ -38,9 +38,9 @@ Visual Database Tools 是設計組合工具，可用來使用資料來源。 您
 ## <a name="database-diagram-designer"></a>資料庫圖表設計工具  
 資料庫圖表設計工具提供了讓您其中視覺化地建立、編輯和顯示資料庫中之資料表和關聯性的視窗。  
   
-若要顯示資料庫圖表設計工具，請開啟現有的圖表或以滑鼠右鍵按一下物件總管中的 [資料庫] 節點，再從下拉式功能表中選擇 [新增資料庫圖表]。  
+若要顯示資料庫圖表設計工具，請開啟現有的圖表或以滑鼠右鍵按一下物件總管中的 [資料庫] 節點，再從下拉式功能表中選擇 [新增資料庫圖表]  。  
   
-設計工具開啟後，[資料庫圖表] 功能表會出現在主功能表中。 此功能表可存取設計師的特殊功能。  
+設計工具開啟後，[資料庫圖表]  功能表會出現在主功能表中。 此功能表可存取設計師的特殊功能。  
   
 > [!NOTE]  
 > 此設計師使用 Microsoft SQL Server 資料庫。  
@@ -56,7 +56,7 @@ Visual Database Tools 是設計組合工具，可用來使用資料來源。 您
   
 從 [資料表設計師]，您也可以在方格區按一下滑鼠右鍵，存取可用以建立和修改資料表關聯性、條件約束、索引和索引鍵的對話方塊。  
   
-若要顯示資料表設計工具，請開啟現有的資料表或以滑鼠右鍵按一下物件總管中的 [資料表] 節點，再從下拉式功能表中選擇 [新增資料表]。  
+若要顯示資料表設計工具，請開啟現有的資料表或以滑鼠右鍵按一下物件總管中的 [資料表]  節點，再從下拉式功能表中選擇 [新增資料表]  。  
   
 設計師一旦開啟，[資料表設計師] 功能表會出現在主功能表中。 此功能表可存取設計師的特殊功能。  
   
@@ -79,9 +79,9 @@ Visual Database Tools 是設計組合工具，可用來使用資料來源。 您
   
 檢視設計師有四個窗格：圖表窗格、準則窗格、SQL 窗格和結果窗格。 如需這些每個窗格的詳細資訊，請參閱[查詢和檢視表設計工具 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)。  
   
-若要顯示檢視表設計工具，請開啟現有的檢視或以滑鼠右鍵按一下物件總管中的 [檢視] 節點，再從下拉式功能表中選擇 [新增檢視]。  
+若要顯示檢視表設計工具，請開啟現有的檢視或以滑鼠右鍵按一下物件總管中的 [檢視]  節點，再從下拉式功能表中選擇 [新增檢視]  。  
   
-設計工具開啟後，[查詢設計工具] 功能表會出現在主功能表中。 此功能表可存取設計師的特殊功能。  
+設計工具開啟後，[查詢設計工具]  功能表會出現在主功能表中。 此功能表可存取設計師的特殊功能。  
   
 > [!NOTE]  
 > 此設計師使用 Microsoft SQL Server 資料庫。  

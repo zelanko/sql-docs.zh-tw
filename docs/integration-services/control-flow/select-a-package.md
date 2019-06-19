@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cc976451c29c6d0b1656fec456b2a46b1f4f5f1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727477"
 ---
 # <a name="select-a-package"></a>選取封裝
@@ -35,8 +35,8 @@ ms.locfileid: "65727477"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的位置。 選取此值會顯示動態選項 **[伺服器]**、 **[使用 Windows 驗證]**、 **[使用 SQL Server 驗證]**、 **[使用者名稱]** 和 **[密碼]**。|  
-|DTSX 檔案|設定 DTSX 檔案的位置。 選取此值會顯示動態選項 **[檔案名稱]**。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的位置。 選取此值會顯示動態選項 **[伺服器]** 、 **[使用 Windows 驗證]** 、 **[使用 SQL Server 驗證]** 、 **[使用者名稱]** 和 **[密碼]** 。|  
+|DTSX 檔案|設定 DTSX 檔案的位置。 選取此值會顯示動態選項 **[檔案名稱]** 。|  
   
 ## <a name="location-dynamic-options"></a>位置動態選項  
   
@@ -61,7 +61,7 @@ ms.locfileid: "65727477"
   
 ### <a name="location--dtsx-file"></a>位置 = DTSX 檔案  
  **檔案名稱**  
- 提供封裝的路徑，或按一下瀏覽按鈕 ([...]) 並尋找封裝。  
+ 提供封裝的路徑，或按一下瀏覽按鈕 ([...])  並尋找封裝。  
   
 ## <a name="see-also"></a>另請參閱  
  [訊息佇列工作](../../integration-services/control-flow/message-queue-task.md)  
