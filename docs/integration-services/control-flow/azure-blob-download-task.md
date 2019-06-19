@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec05684572563228ec3bce88ebb5c5ca32a86bc2
-ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66403199"
 ---
 # <a name="azure-blob-download-task"></a>Azure Blob 下載工作

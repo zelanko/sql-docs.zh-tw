@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59b8c8dd755a73220de058b6c10220f4cf00d6d6
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506956"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>Database Mail：郵件已排入佇列中，未傳遞 
@@ -70,7 +70,7 @@ sysmail_help_queue_sp @queue_type = 'Mail' ;
 
 ## <a name="message-status-failed"></a>訊息狀態失敗
 
-狀態為失敗，表示 Database Mail 外部程式無法將訊息傳遞至 SMTP 伺服器。 在此情況下，**sysmail_event_log** 檢視會包含來自外部程式的詳細資訊。 如需聯結 **sysmail_faileditems** 和 **sysmail_event_log** 以擷取詳細錯誤訊息的範例查詢，請參閱[檢查使用 Database Mail 傳送之電子郵件訊息的狀態](check-the-status-of-e-mail-messages-sent-with-database-mail.md)。 最常見的失敗原因是目的地位址不正確，或網路發生問題而使外部程式無法連線到一或多個容錯移轉帳戶。 SMTP 伺服器的問題也會導致該伺服器拒絕郵件。 請使用 [Database Mail 設定精靈]，將 [記錄層級] 變更為 [詳細資訊]，然後傳送測試郵件來調查失敗點。
+狀態為失敗，表示 Database Mail 外部程式無法將訊息傳遞至 SMTP 伺服器。 在此情況下，**sysmail_event_log** 檢視會包含來自外部程式的詳細資訊。 如需聯結 **sysmail_faileditems** 和 **sysmail_event_log** 以擷取詳細錯誤訊息的範例查詢，請參閱[檢查使用 Database Mail 傳送之電子郵件訊息的狀態](check-the-status-of-e-mail-messages-sent-with-database-mail.md)。 最常見的失敗原因是目的地位址不正確，或網路發生問題而使外部程式無法連線到一或多個容錯移轉帳戶。 SMTP 伺服器的問題也會導致該伺服器拒絕郵件。 請使用 [Database Mail 設定精靈]，將 [記錄層級]  變更為 [詳細資訊]  ，然後傳送測試郵件來調查失敗點。
 
 
 

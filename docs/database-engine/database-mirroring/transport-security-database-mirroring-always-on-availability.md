@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 74753f0e23c64650e1d2056716cf65ffa0862f38
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795143"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>傳輸安全性 - 資料庫鏡像 - AlwaysOn 可用性

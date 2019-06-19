@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8793fe2e63d6867e8e5c12fef6ec73a6f7a27882
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073804"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>基本 MDX 指令碼 (MDX)
@@ -42,7 +42,7 @@ ms.locfileid: "66073804"
   
 -   對於 Cube 中定義的每個導出成員，預設的 MDX 指令碼中會有對應的 CREATE MEMBER 陳述式存在。  
   
- 您可以使用 Cube 設計師的 [計算] 索引標籤，在預設的 MDX 指令碼中、控制指令碼命令、命名集與導出成員的順序。 如需定義預設 MDX 指令碼中儲存之計算的詳細資訊，請參閱[多維度模型中的計算](../calculations-in-multidimensional-models.md)。  
+ 您可以使用 Cube 設計師的 [計算]  索引標籤，在預設的 MDX 指令碼中、控制指令碼命令、命名集與導出成員的順序。 如需定義預設 MDX 指令碼中儲存之計算的詳細資訊，請參閱[多維度模型中的計算](../calculations-in-multidimensional-models.md)。  
   
  如果沒有與 Cube 相關的  MDX 指令碼，Cube 會假設與其相關的是預設的 MDX 指令碼。 因為 Cube 仰賴 MDX 指令碼來決定計算行為，所以 Cube 必須至少與一個 MDX 指令碼相關。 換句話說，沒有與 Cube 相關的 MDX 指令碼，或是與空白 MDX 指令碼相關的 Cube ，無法計算任何資料格。 如果使用 Analysis Services 指令碼語言 (ASSL) 命令，或使用分析管理物件 (AMO)， 透過設計程式的方式建立 Cube，建議您建立會包含該 Cube 的單一 CALCULATE 陳述式的預設 MDX 指令碼。  
   

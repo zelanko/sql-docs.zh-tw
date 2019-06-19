@@ -13,25 +13,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad20bfbec71f08d694a5f6d7d3104538d9e19e93
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063413"
 ---
 # <a name="threads-window"></a>執行緒視窗
-  [執行緒] 視窗會顯示有關所偵錯之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器工作階段使用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行緒資訊。 您必須在偵錯模式中，才能顯示執行緒資訊。  
+  [執行緒]  視窗會顯示有關所偵錯之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器工作階段使用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行緒資訊。 您必須在偵錯模式中，才能顯示執行緒資訊。  
   
 ## <a name="task-list"></a>工作清單  
  **若要存取執行緒視窗**  
   
--   在 [偵錯] 功能表中，按一下 [視窗]，再按一下 [執行緒]。  
+-   在 [偵錯]  功能表中，按一下 [視窗]  ，再按一下 [執行緒]  。  
   
 ## <a name="columns"></a>[資料行]  
  **ID**  
  這是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具指派給執行緒的唯一識別碼。 您可以從 sys.dm_os_threads 動態管理檢視選取資料列，以尋找有關執行緒的詳細資訊。  
   
- 如果您不是在輕量型共用模式下執行，請選取一個資料列，其中的 os_thread_id 值符合 [識別碼] 資料行中的值。 如果您在輕量型共用模式下執行，請選取一個資料列，其中的 fiber_context_address 值符合 [識別碼] 資料行中的值。  
+ 如果您不是在輕量型共用模式下執行，請選取一個資料列，其中的 os_thread_id 值符合 [識別碼]  資料行中的值。 如果您在輕量型共用模式下執行，請選取一個資料列，其中的 fiber_context_address 值符合 [識別碼]  資料行中的值。  
   
  **名稱**  
  使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ComputerName/InstanceName [SPID] **格式顯示有關**工作階段的資訊。  
@@ -45,7 +45,7 @@ ms.locfileid: "66063413"
  **[SPID]**  
  可唯一識別此工作階段的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作階段處理序識別碼。 您可以取得有關此工作階段的資訊，其方式是在 sys.sysprocesses 檢視表中選取與 spid 資料行有相同值的資料列。  
   
- **位置**  
+ **Location**  
  顯示所偵錯之查詢編輯器工作階段內使用的指令碼檔案名稱。  
   
  **優先權**  

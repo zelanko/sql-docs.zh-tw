@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: f298586f2d1ab97bedd7b606807f4e699f9cf5ed
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095304"
 ---
 # <a name="modify-queries-visual-database-tools"></a>修改查詢 (Visual Database Tools)
@@ -27,11 +27,11 @@ ms.locfileid: "65095304"
   
 ### <a name="to-open-a-query"></a>若要開啟查詢  
   
-1.  在 [檢視] 功能表上，按一下 [方案總管]。  
+1.  在 [檢視]  功能表上，按一下 [方案總管]  。  
   
-2.  在方案總管中，在要開啟的查詢上按一下滑鼠右鍵，然後按一下 **[開啟]**。  
+2.  在方案總管中，在要開啟的查詢上按一下滑鼠右鍵，然後按一下 **[開啟]** 。  
   
-3.  若要修改查詢設計工具中的查詢，可反白顯示 SQL 陳述式，在反白顯示的區域上按一下滑鼠右鍵，然後選取 [在編輯器中設計查詢]  
+3.  若要修改查詢設計工具中的查詢，可反白顯示 SQL 陳述式，在反白顯示的區域上按一下滑鼠右鍵，然後選取 [在編輯器中設計查詢]   
   
 [查詢設計工具] 會開始讓您進行修改。  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21d79e84ca30283eab6fe788be940f712b2cd41f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108196"
 ---
 # <a name="new-folder-page-report-manager"></a>新增資料夾頁面 (報表管理員)
@@ -31,9 +31,9 @@ ms.locfileid: "66108196"
   
 1.  開啟報表管理員中，然後導覽至您想要在其中建立新資料夾的資料夾。  
   
-2.  在工具列中，按一下 **[新增資料夾]**。  
+2.  在工具列中，按一下 **[新增資料夾]** 。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  指定資料夾的名稱。 名稱必須至少包含一個英數字元。 也可以包含空格和特定符號。 請勿使用 ; ? : \@ & = +，$ / * \< > |"或 / 來指定名稱。  
   

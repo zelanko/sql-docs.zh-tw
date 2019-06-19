@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 42f706ed9b7975c73f6c24b3f7e828ab077c8776
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795433"
 ---
 # <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>範例使用 Windows 驗證設定資料庫鏡像 (Transact-SQL)

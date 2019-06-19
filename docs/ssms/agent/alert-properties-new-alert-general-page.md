@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ce2952af8a3f75ce8cc3e7714bb0490db33febd5
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099339"
 ---
 # <a name="alert-properties---new-alert-general-page"></a>警示屬性 - 新增警示 (一般頁面)
@@ -73,7 +73,7 @@ ms.locfileid: "65099339"
 指定要監視之計數器的執行個體。  
   
 **發出警示的時機為計數器達**  
-指定警示要回應的計數器行為。 例如，當 [Free space in tempdb (KB)] 計數器的值低於某個值時，您可能會希望警示針對如此的條件做出回應，或者當 [SQL Compilations/sec] 高於某個值時，您可能會希望警示針對如此的條件做出回應。  
+指定警示要回應的計數器行為。 例如，當 [Free space in tempdb (KB)]  計數器的值低於某個值時，您可能會希望警示針對如此的條件做出回應，或者當 [SQL Compilations/sec]  高於某個值時，您可能會希望警示針對如此的條件做出回應。  
   
 **Value**  
 指定計數器的值。  

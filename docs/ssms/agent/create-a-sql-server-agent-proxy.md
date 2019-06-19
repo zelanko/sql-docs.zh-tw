@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 452cec6a4cfcf5f1f85a4e05f6522007851a31ca
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095538"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>建立 SQL Server Agent Proxy
@@ -73,9 +73,9 @@ ms.locfileid: "65095538"
   
 1.  在 **[物件總管]** 中，按一下加號展開要建立 SQL Server Agent Proxy 的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
-3.  以滑鼠右鍵按一下 [Proxy] 資料夾，然後選取 [新增 Proxy]。  
+3.  以滑鼠右鍵按一下 [Proxy]  資料夾，然後選取 [新增 Proxy]  。  
   
 4.  在 **[新 Proxy 帳戶]** 對話方塊，於 **[一般]** 頁面上的 **[Proxy 名稱]** 方塊中輸入 Proxy 帳戶的名稱。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "65095538"
   
 8.  在 **[主體]** 頁面上，加入或移除登入或角色，藉此授與或移除 Proxy 帳戶的存取。  
   
-9. 完成後，請按一下 **[確定]**。  
+9. 完成後，請按一下 **[確定]** 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -95,9 +95,9 @@ ms.locfileid: "65095538"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- creates credential CatalogApplicationCredential  

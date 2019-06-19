@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbd64cd4eb3ca686fdbdd1a59c9e84fa387e6a7f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077916"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>量值 (Cube 結構索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 **[量值]** 窗格，即可操作 Cube 設計師中之 **[Cube 結構]** 索引標籤上的量值群組和成員。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  [量值]  
  顯示 Cube 中所含的量值群組和量值，視選取的檢視而定：  
   
@@ -49,16 +49,16 @@ ms.locfileid: "66077916"
  選取量值的彙總函式。  
   
 ## <a name="context-menu"></a>操作功能表  
- 以滑鼠右鍵按一下 [量值] 窗格，即可顯示提供下列選項的操作功能表：  
+ 以滑鼠右鍵按一下 [量值]  窗格，即可顯示提供下列選項的操作功能表：  
   
  **新的量值**  
- 選取即可顯示 [新增量值] 對話方塊，並將新的量值加入目前在 [量值] 窗格中選取的量值群組。  
+ 選取即可顯示 [新增量值]  對話方塊，並將新的量值加入目前在 [量值]  窗格中選取的量值群組。  
   
  **新的量值群組**  
- 選取即可顯示 [新增量值群組] 對話方塊，並將新的量值群組加入 [量值] 窗格。  
+ 選取即可顯示 [新增量值群組]  對話方塊，並將新的量值群組加入 [量值]  窗格。  
   
  **顯示在量值**  
- 選取即可循環切換下列選項，或選取下列其中一個選項來變更 [量值] 窗格的檢視：  
+ 選取即可循環切換下列選項，或選取下列其中一個選項來變更 [量值]  窗格的檢視：  
   
 |選項|定義|  
 |------------|----------------|  
@@ -69,7 +69,7 @@ ms.locfileid: "66077916"
  選取即可重新命名選取的量值群組或量值。  
   
  **刪除**  
- 選取即可顯示 [刪除物件] 對話方塊，並刪除在 [量值] 窗格中選取的物件。  
+ 選取即可顯示 [刪除物件]  對話方塊，並刪除在 [量值]  窗格中選取的物件。  
   
  **上移**  
  選取即可將選取的量值群組或量值上移一個位置。  
@@ -87,7 +87,7 @@ ms.locfileid: "66077916"
  按一下即可顯示 **[連結物件精靈]** 來連結其他 Cube 的量值群組和維度，以及匯入動作、KPI 和計算到所選取的 Cube 中。  
   
  **屬性**  
- 選取即可顯示選取的量值群組或量值之 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性] 視窗。  
+ 選取即可顯示選取的量值群組或量值之 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性]  視窗。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定量值屬性](multidimensional-models/configure-measure-properties.md)   

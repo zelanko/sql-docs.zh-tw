@@ -10,10 +10,10 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
 ms.openlocfilehash: 44a8d6c22d7dd003f7c6e90963eb546e6ca1bf50
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65372762"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>設定 SQL Server 的使用狀況和診斷資料收集 (CEIP)
@@ -69,7 +69,7 @@ AND instance_name = '_Total'
 > [!NOTE]
 > [錯誤和使用方式報表] 應用程式會列出於 SQL Server 的 [組態工具] 底下。 您可以利用與 SQL Server 2017 中相同的方式，使用此工具管理您的「錯誤報告」和「使用方式和診斷資料」收集的喜好設定。 「錯誤報告」有別於「使用方式和診斷資料」收集，因此可以獨立於「使用方式和診斷資料」收集進行開啟或關閉。 「錯誤報告」會收集要傳送給 Microsoft 的損毀傾印，其中可能包含[隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)中所述的機密資訊。
 
-若要啟動 [SQL Server 錯誤和使用方式報表]，請按一下或點選 [開始]，然後在搜尋方塊中搜尋「錯誤」。 隨即顯示 [SQL Server 錯誤和使用方式報表] 項目。 啟動工具之後，您可以管理針對該電腦上所安裝之執行個體和元件所收集的使用方式和診斷資料及嚴重錯誤。
+若要啟動 [SQL Server 錯誤和使用方式報表]，請按一下或點選 [開始]  ，然後在搜尋方塊中搜尋「錯誤」。 隨即顯示 [SQL Server 錯誤和使用方式報表] 項目。 啟動工具之後，您可以管理針對該電腦上所安裝之執行個體和元件所收集的使用方式和診斷資料及嚴重錯誤。
 
 針對付費版本，請使用 [使用方式報表] 核取方塊來管理將使用方式和診斷資料傳送到 Microsoft 的功能。
 

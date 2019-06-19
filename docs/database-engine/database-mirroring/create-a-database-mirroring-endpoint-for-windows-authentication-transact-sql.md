@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 630dee3126fe6c122f3e2d034252260769e3ed03
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66774947"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>建立 Windows 驗證的資料庫鏡像端點 (Transact-SQL)
@@ -33,9 +33,9 @@ ms.locfileid: "66774947"
   
  **本主題內容**  
   
--   **開始之前：**[安全性](#Security)  
+-   **開始之前：** [安全性](#Security)  
   
--   **使用下列項目建立資料庫鏡像端點：**[Transact-SQL](#TsqlProcedure)  
+-   **使用下列項目建立資料庫鏡像端點：** [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66774947"
   
 1.  連結至您要建立資料庫鏡像端點的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  使用下列陳述式決定資料庫鏡像端點是否已經存在。  
   
@@ -67,33 +67,33 @@ ms.locfileid: "66774947"
   
 4.  若要以 Transact-SQL 來建立使用 Windows 驗證的端點，請使用 CREATE ENDPOINT 陳述式。 陳述式會採用下列一般形式：  
   
-     CREATE ENDPOINT \<端點名稱>  
+     CREATE ENDPOINT \<端點名稱>   
   
      STATE=STARTED  
   
-     AS TCP ( LISTENER_PORT = \<接聽程式通訊埠清單> )  
+     AS TCP ( LISTENER_PORT = \<接聽程式通訊埠清單>  )  
   
      FOR DATABASE_MIRRORING  
   
      (  
   
-     [ AUTHENTICATION = **WINDOWS** [ \<授權方法> ]  
+     [ AUTHENTICATION = **WINDOWS** [ \<授權方法>  ]  
   
      ]  
   
-     [ [**,**] ENCRYPTION = **REQUIRED**  
+     [ [ **,** ] ENCRYPTION = **REQUIRED**  
   
-     [ ALGORITHM { \<演算法> } ]  
+     [ ALGORITHM { \<演算法>  } ]  
   
      ]  
   
-     [**,**] ROLE = \<角色>  
+     [ **,** ] ROLE = \<角色>   
   
      )  
   
      其中  
   
-    -   \<端點名稱> 是伺服器執行個體之資料庫鏡像端點的唯一名稱。  
+    -   \<端點名稱>  是伺服器執行個體之資料庫鏡像端點的唯一名稱。  
   
     -   STARTED 指定要啟動及要開始接聽連接的端點。 資料庫鏡像端點通常是在 STARTED 狀態下建立。 您也可以在 STOPPED 狀態 (預設值) 或 DISABLED 狀態下啟動工作階段。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66774947"
         > [!IMPORTANT]  
         >  每個伺服器執行個體都需要一個且唯一的接聽程式通訊埠。  
   
-    -   若為 Windows 驗證，除非您想要端點只使用 NTLM 或 Kerberos 來驗證連接，否則 AUTHENTICATION 是選擇性選項。 \<授權方法> 指定用來驗證連線的下列其中一項方法：NTLM、KERBEROS 或 NEGOTIATE。 預設值 NEGOTIATE，將導致端點使用 Windows 交涉通訊協定來選擇 NTLM 或 Kerberos。 視相對端點的驗證層級而定，交涉可讓連接需要或不需要驗證。  
+    -   若為 Windows 驗證，除非您想要端點只使用 NTLM 或 Kerberos 來驗證連接，否則 AUTHENTICATION 是選擇性選項。 \<授權方法>  指定用來驗證連線的下列其中一項方法：NTLM、KERBEROS 或 NEGOTIATE。 預設值 NEGOTIATE，將導致端點使用 Windows 交涉通訊協定來選擇 NTLM 或 Kerberos。 視相對端點的驗證層級而定，交涉可讓連接需要或不需要驗證。  
   
     -   依預設，ENCRYPTION 是設定為 REQUIRED。 這表示此端點的所有連接都必須使用加密。 不過，您可以停用加密或使其在端點上為選擇性的。 替代方案如下所示：  
   
@@ -120,14 +120,14 @@ ms.locfileid: "66774947"
   
          如果端點需要加密，其他的端點必須將 ENCRYPTION 設定為 SUPPORTED 或 REQUIRED。  
   
-    -   \<演算法> 提供用於指定端點加密標準的選項。 \<演算法> 的值可為下列任一演算法或演算法組合：RC4、AES、AES RC4 或 RC4 AES。  
+    -   \<演算法>  提供用於指定端點加密標準的選項。 \<演算法>  的值可為下列任一演算法或演算法組合：RC4、AES、AES RC4 或 RC4 AES。  
   
          AES RC4 指定此端點將交涉加密演算法，將優先權指定給 AES 演算法。 RC4 AES 指定此端點將交涉加密演算法，將優先權指定給 RC4 演算法。 如果這兩個端點都指定了這兩種演算法 (但指定順序不同)，則以接受連接的端點為準。  
   
         > [!NOTE]  
         >  RC4 演算法已被取代。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我們建議您改用 AES。  
   
-    -   \<角色> 定義伺服器可以執行的一個或多個角色。 指定所需的 ROLE。 然而，端點的角色只與資料庫鏡像有關。 對於 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，端點的角色會被忽略。  
+    -   \<角色>  定義伺服器可以執行的一個或多個角色。 指定所需的 ROLE。 然而，端點的角色只與資料庫鏡像有關。 對於 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，端點的角色會被忽略。  
   
          若要允許伺服器執行個體做為一個資料庫鏡像工作階段的一個角色，並做為另一個工作階段的其他角色，請指定 ROLE=ALL。 若要限制伺服器執行個體做為夥伴或見證伺服器，請分別指定 ROLE=PARTNER 或 ROLE=WITNESS。  
   

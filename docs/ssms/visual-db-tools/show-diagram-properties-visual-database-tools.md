@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 70df13e2f61b5514e100163bafe9ae2b76fdacf5
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099943"
 ---
 # <a name="show-diagram-properties-visual-database-tools"></a>顯示圖表屬性 (Visual Database Tools)
@@ -31,9 +31,9 @@ ms.locfileid: "65099943"
   
 2.  在 [資料庫圖表設計工具] 任何除了物件之外的位置上按一下滑鼠鍵，以確定沒有選取任何物件。  
   
-3.  從 [檢視] 功能表中，按一下 [屬性視窗]。  
+3.  從 [檢視]  功能表中，按一下 [屬性視窗]  。  
   
-現在可以在 [屬性] 視窗看到圖表的屬性。  
+現在可以在 [屬性]  視窗看到圖表的屬性。  
   
 ## <a name="see-also"></a>另請參閱  
 [使用資料庫圖表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  

@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 838a6f840f6576d502fa1908c0f4b876b4cf62b7
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242198"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64478473"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>完整的資料庫還原 (完整復原模式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "59242198"
   
 ### <a name="untrusted-sources"></a>不受信任的來源
 
-建議您「不」要附加或還原來自未知來源或不受信任之來源的資料庫。 這些資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 在您使用來自未知或不受信任之來源的資料庫時，請在非生產環境伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。 此外，檢查資料庫中使用者撰寫的程式碼，如預存程序或其他使用者自訂的程式碼。
+建議您「不」  要附加或還原來自未知來源或不受信任之來源的資料庫。 這些資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 在您使用來自未知或不受信任之來源的資料庫時，請在非生產環境伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。 此外，檢查資料庫中使用者撰寫的程式碼，如預存程序或其他使用者自訂的程式碼。
 
 ### <a name="backups-from-earlier-versions"></a>來自舊版的備份
 

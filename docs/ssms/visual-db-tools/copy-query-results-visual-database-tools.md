@@ -14,21 +14,21 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 8b8d93c6daa4fd27a7414f6960f08d0e6ac5b597
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089507"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>複製查詢結果 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-您可以從 [結果] 窗格，將結果集複製成定位字元分隔的文字。 您可以複製整個結果集或任何數目的連續或非連續的資料列或資料格。  
+您可以從 [結果]  窗格，將結果集複製成定位字元分隔的文字。 您可以複製整個結果集或任何數目的連續或非連續的資料列或資料格。  
   
 ### <a name="to-copy-result-set-text-from-the-results-pane"></a>若要從 [結果] 窗格複製結果集文字  
   
 1.  執行含有您要複製之資料的查詢或檢視。  
   
-2.  若要選取整個結果集，請在 [結果] 窗格中按一下左上方空白的資料格。  
+2.  若要選取整個結果集，請在 [結果]  窗格中按一下左上方空白的資料格。  
   
 3.  若要選取資料列：  
   
@@ -50,7 +50,7 @@ ms.locfileid: "65089507"
   
     選取的資料格將會反白顯示。  
   
-5.  按一下滑鼠右鍵，再選擇 [複製]。  
+5.  按一下滑鼠右鍵，再選擇 [複製]  。  
   
 ## <a name="see-also"></a>另請參閱  
 [使用結果窗格中的資料 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  

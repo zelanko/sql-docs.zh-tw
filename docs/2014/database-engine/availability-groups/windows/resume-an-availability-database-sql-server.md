@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b85a2b6e7d574c1752eba84d1bfc2bce8dbafc6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788715"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>繼續可用性資料庫 (SQL Server)
@@ -77,9 +77,9 @@ ms.locfileid: "62788715"
   
 3.  展開可用性群組。  
   
-4.  展開 [可用性資料庫] 節點、以滑鼠右鍵按一下資料庫，然後按一下 [繼續進行資料移動]。  
+4.  展開 [可用性資料庫]  節點、以滑鼠右鍵按一下資料庫，然後按一下 [繼續進行資料移動]  。  
   
-5.  在 **[繼續進行資料移動]** 對話方塊中，按一下 **[確定]**。  
+5.  在 **[繼續進行資料移動]** 對話方塊中，按一下 **[確定]** 。  
   
 > [!NOTE]  
 >  若要繼續此複本位置的其他資料庫，請針對每個資料庫重複步驟 4 和 5。  

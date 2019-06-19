@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cc1b7eec5ceb3b74e575dce9fd5d1d71897a3f5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081663"
 ---
 # <a name="dimension-wizard-f1-help"></a>維度精靈 F1 說明
@@ -24,7 +24,7 @@ ms.locfileid: "66081663"
   
  **若要開啟 維度精靈**  
   
--   在方案總管的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的 [維度] 資料夾，然後按一下 [新增維度]。  
+-   在方案總管  的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的 [維度]  資料夾，然後按一下 [新增維度]  。  
   
 ## <a name="in-this-section"></a>本節內容  
   

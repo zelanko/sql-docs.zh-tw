@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2a9f9364f790e88f119ee46ed17ad2051d23b64
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106254"
 ---
 # <a name="hide-legend-items-on-the-chart-report-builder-and-ssrs"></a>隱藏圖表上的圖例項目 (報表產生器及 SSRS)
@@ -27,9 +27,9 @@ ms.locfileid: "66106254"
   
 ### <a name="to-hide-an-item-from-display-in-the-legend"></a>隱藏圖例中顯示的項目  
   
-1.  以滑鼠右鍵按一下您要隱藏的數列，然後選取 [數列屬性]。  
+1.  以滑鼠右鍵按一下您要隱藏的數列，然後選取 [數列屬性]  。  
   
-2.  按一下 **[圖例]**。 選取 **[不要在圖例中顯示此數列]** 選項。  
+2.  按一下 **[圖例]** 。 選取 **[不要在圖例中顯示此數列]** 選項。  
   
     > [!NOTE]  
     >  您無法針對一個群組而不在其他群組中隱藏數列。 如果您已經將欄位加入到 **[數列群組]** 區域，將會隱藏屬於此群組的所有數列。  

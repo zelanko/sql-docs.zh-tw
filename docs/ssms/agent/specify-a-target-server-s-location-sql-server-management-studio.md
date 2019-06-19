@@ -16,10 +16,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6ec05e58eefd80d4ef3f2602ad9a3d5f55c01fd4
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095525"
 ---
 # <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>指定目標伺服器的位置 (SQL Server Management Studio)
@@ -60,11 +60,11 @@ ms.locfileid: "65095525"
   
 1.  在 **[物件總管]** 中，按一下加號，展開要指定目標伺服器位置的主要伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]、指向 [多伺服器管理]，然後選取 [管理目標伺服器]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  、指向 [多伺服器管理]  ，然後選取 [管理目標伺服器]  。  
   
-3.  以滑鼠右鍵按一下目標伺服器，然後選取 [屬性]。  
+3.  以滑鼠右鍵按一下目標伺服器，然後選取 [屬性]  。  
   
-4.  在 **[位置]** 方塊中輸入伺服器的位置，再按一下 **[確定]**。  
+4.  在 **[位置]** 方塊中輸入伺服器的位置，再按一下 **[確定]** 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -72,9 +72,9 @@ ms.locfileid: "65095525"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE msdb ;  

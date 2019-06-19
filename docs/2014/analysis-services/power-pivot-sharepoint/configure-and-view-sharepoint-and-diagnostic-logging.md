@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f05edb30344b63781a89540ade8de4743bb715e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071849"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>設定及檢視 SharePoint 記錄檔與診斷記錄 (PowerPivot for SharePoint)
@@ -36,17 +36,17 @@ ms.locfileid: "66071849"
  LOGS 資料夾中包含記錄檔 (`.log`)、資料檔 (`.txt`) 與使用方式檔案 (`.usage`)。 SharePoint 追蹤記錄的檔案命名慣例為伺服器名稱後面緊接著日期和時間戳記。 SharePoint 追蹤記錄會定期以及有 IISRESET 時建立。 通常在 24 小時的週期內會有許多追蹤記錄。  
   
 ##  <a name="bkmk_modifyloglevels"></a> 為個別的事件類別目錄修改診斷記錄層次  
- 根據預設，PowerPivot 事件的 ULS 記錄是設為 *「中」*。 這是 SQL Server 2012 的新設定。 如果您從舊版升級伺服器，記錄層次可能仍然設為 *「詳細資訊」*(SQL Server 2008 R2 的預設層次)。 如果您習慣檢閱 ULS 記錄檔中的 PowerPivot 伺服器使用資訊，會注意到因為此變更，PowerPivot 伺服器作業相關資訊變少了。  
+ 根據預設，PowerPivot 事件的 ULS 記錄是設為 *「中」* 。 這是 SQL Server 2012 的新設定。 如果您從舊版升級伺服器，記錄層次可能仍然設為 *「詳細資訊」* (SQL Server 2008 R2 的預設層次)。 如果您習慣檢閱 ULS 記錄檔中的 PowerPivot 伺服器使用資訊，會注意到因為此變更，PowerPivot 伺服器作業相關資訊變少了。  
   
- 除了例外狀況 (類型為 *「高」*) 以外，所有的 PowerPivot 訊息都會歸類為「詳細資訊」類別目錄。 如果您想要例行伺服器作業 (例如連接、要求或查詢報告) 的記錄項目，必須將記錄層次變更為「詳細資訊」。  
+ 除了例外狀況 (類型為 *「高」* ) 以外，所有的 PowerPivot 訊息都會歸類為「詳細資訊」類別目錄。 如果您想要例行伺服器作業 (例如連接、要求或查詢報告) 的記錄項目，必須將記錄層次變更為「詳細資訊」。  
   
  若要為個別的事件類別修改診斷記錄層次：  
   
-1.  在 SharePoint 管理中心，按一下 **[監視]**。  
+1.  在 SharePoint 管理中心，按一下 **[監視]** 。  
   
-2.  按一下 **[設定診斷記錄]**。  
+2.  按一下 **[設定診斷記錄]** 。  
   
-3.  捲動到 **[PowerPivot 服務]**。  
+3.  捲動到 **[PowerPivot 服務]** 。  
   
 4.  展開類別目錄，然後選取個別的類別目錄。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66071849"
   
 8.  選取 **[詳細資訊]** ，將所有事件記錄到追蹤記錄檔。  
   
-9. 按一下 [確定] 。  
+9. 按一下 [確定]  。  
   
 ##  <a name="bkmk_how2viewlogfiles"></a> 如何檢視 SharePoint 記錄檔  
  記錄檔是文字檔。 您可以使用任何文字編輯器來開啟它們。 您也可以使用協力廠商的記錄檢視器應用程式。  
@@ -97,9 +97,9 @@ ms.locfileid: "66071849"
   
      如果您正在下載 SharePoint ULS 記錄檢視器，請將 ULSViewer.zip 儲存至 Downloads 資料夾。  
   
-6.  在 [Downloads] 資料夾中，以滑鼠右鍵按一下 ULSViewer.zip，然後選取 **[解壓縮全部]**。  
+6.  在 [Downloads] 資料夾中，以滑鼠右鍵按一下 ULSViewer.zip，然後選取 **[解壓縮全部]** 。  
   
-7.  指定目的地資料夾，然後按一下 **[解壓縮]**。  
+7.  指定目的地資料夾，然後按一下 **[解壓縮]** 。  
   
 8.  在包含已解壓縮之程式檔的資料夾中，按兩下 **[ULSViewer]** 並執行應用程式。  
   

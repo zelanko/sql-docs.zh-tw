@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: jroth
 ms.openlocfilehash: c40755122775faa3b67fb0f46f5f13b3a789bb32
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66803474"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>疑難排解：可用性群組已超過 RTO

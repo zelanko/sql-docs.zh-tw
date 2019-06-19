@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2454008a6023289fea354680eeeb2cf8185d009b
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821910"
 ---
 # <a name="step-through-transact-sql-code"></a>逐步執行 Transact-SQL 程式碼
@@ -53,11 +53,11 @@ ms.locfileid: "65821910"
   
 |動作|執行動作：|  
 |------------|---------------------|  
-|執行所有陳述式，從目前的陳述式到下一個端點|在 [偵錯] 功能表上，按一下 [繼續]。<br /><br /> 在 [偵錯] 工具列上，按一下 [繼續] 按鈕。|  
-|逐步執行下一個陳述式或模組|在 [偵錯] 功能表上，按一下 [逐步執行]。<br /><br /> 在 [偵錯] 工具列上，按一下 [逐步執行] 按鈕。<br /><br /> 按下 F11。|  
-|不進入下一個陳述式或模組|在 [偵錯] 功能表上，按一下 [不進入函數]。<br /><br /> 在 [偵錯] 工具列上，按一下 [不進入函數] 按鈕。<br /><br /> 按下 F10。|  
-|跳離模組|在 [偵錯] 功能表上，按一下 [跳離函數]。<br /><br /> 在 [偵錯] 工具列上，按一下 [跳離函數] 按鈕。<br /><br /> 按下 SHIFT+F11。|  
-|執行至目前的資料指標位置|在 [查詢編輯器] 視窗中按一下滑鼠右鍵，然後按一下 [執行至資料指標處]。<br /><br /> 按下 CTRL+F10。|  
+|執行所有陳述式，從目前的陳述式到下一個端點|在 [偵錯]  功能表上，按一下 [繼續]  。<br /><br /> 在 [偵錯]  工具列上，按一下 [繼續]  按鈕。|  
+|逐步執行下一個陳述式或模組|在 [偵錯]  功能表上，按一下 [逐步執行]  。<br /><br /> 在 [偵錯]  工具列上，按一下 [逐步執行]  按鈕。<br /><br /> 按下 F11。|  
+|不進入下一個陳述式或模組|在 [偵錯]  功能表上，按一下 [不進入函數]  。<br /><br /> 在 [偵錯]  工具列上，按一下 [不進入函數]  按鈕。<br /><br /> 按下 F10。|  
+|跳離模組|在 [偵錯]  功能表上，按一下 [跳離函數]  。<br /><br /> 在 [偵錯]  工具列上，按一下 [跳離函數]  按鈕。<br /><br /> 按下 SHIFT+F11。|  
+|執行至目前的資料指標位置|在 [查詢編輯器] 視窗中按一下滑鼠右鍵，然後按一下 [執行至資料指標處]  。<br /><br /> 按下 CTRL+F10。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Transact-SQL 偵錯工具資訊](../../relational-databases/scripting/transact-sql-debugger-information.md)  

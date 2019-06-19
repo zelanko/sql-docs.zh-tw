@@ -14,16 +14,16 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 935a2671c2496cb6cbb996d25cddc123bc4d782d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095928"
 ---
 # <a name="how-to-view-data-differences"></a>如何：檢視資料差異
-當您比較兩個資料庫的資料之後，會看到所比較的每個資料庫物件及其狀態。 您也可以檢視每個物件內記錄的結果 (依狀態分組)。  
+當您比較兩個資料庫的資料之後，會看到所比較的每個資料庫物件  及其狀態。 您也可以檢視每個物件內記錄的結果 (依狀態分組)。  
   
-當您檢視差異之後，可以針對不同、遺漏或新增的部分或所有物件或記錄，更新目標以符合來源。  
+當您檢視差異之後，可以針對不同、遺漏或新增的部分或所有物件或記錄，更新目標  以符合來源  。  
   
 ### <a name="to-view-data-differences"></a>若要檢視資料差異  
   
@@ -31,7 +31,7 @@ ms.locfileid: "65095928"
   
 2.  (選擇性) 執行下列其中一項或兩項作業：  
   
-    -   根據預設，不論其狀態，所有物件的結果都會顯示。 若只要顯示具有特定狀態的物件，請按一下 [篩選] 清單中的選項。  
+    -   根據預設，不論其狀態，所有物件的結果都會顯示。 若只要顯示具有特定狀態的物件，請按一下 [篩選]  清單中的選項。  
   
     -   若要檢視在特定物件內記錄的結果，請按一下主要結果窗格中的物件，然後按一下 [記錄檢視] 窗格中的索引標籤。 每個索引標籤會顯示該物件中具有特定狀態的所有記錄：不同、僅限於來源、僅限於目標和相同。 資料會以記錄和資料行顯示。  
   

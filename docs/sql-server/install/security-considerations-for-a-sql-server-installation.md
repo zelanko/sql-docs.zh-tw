@@ -27,11 +27,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8cda2bf030b8e04cf40144c117359d553353ebf6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846756"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62685875"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>SQL Server 安裝的安全性考量
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "47846756"
 ###  <a name="isolated_services"></a> Isolate Services  
  隔離服務減少一個遭到破壞的服務被用來破壤其他服務的風險。 若要隔離服務，請考慮下列方針：  
   
--   在個別 Windows 帳戶下執行個別的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。 請盡可能針對每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務使用低權限的個別 Windows 或本機使用者帳戶。 如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+-   在個別 Windows 帳戶下執行個別的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。 請盡可能針對每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務使用低權限的個別 Windows 或本機使用者帳戶。 如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)預覽版本升級問題的解答。  
   
 ###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
  使用正確的檔案系統會增加安全性。 如果是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝，您應該執行下列工作：  
@@ -135,7 +135,7 @@ ms.locfileid: "47846756"
   
 -   將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務與低權限的 Windows 本機使用者帳戶或網域使用者帳戶產生關聯。  
   
--   如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+-   如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)預覽版本升級問題的解答。  
   
  **驗證模式**  
   

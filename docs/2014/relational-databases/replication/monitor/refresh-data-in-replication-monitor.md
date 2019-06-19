@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 03dae95f44b4166947da4ef7bd88b532db00dd03
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667234"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>在複寫監視器中重新整理資料
@@ -26,7 +26,7 @@ ms.locfileid: "62667234"
   
 ### <a name="to-set-refresh-options-for-replication-monitor"></a>若要為複寫監視器設定重新整理選項  
   
-1.  以滑鼠右鍵按一下「複寫監視器」左窗格中的「發行者」，然後按一下 **[發行者設定]**。  
+1.  以滑鼠右鍵按一下「複寫監視器」左窗格中的「發行者」，然後按一下 **[發行者設定]** 。  
   
 2.  在 **[發行者設定]** 對話方塊中，設定 **[自動重新整理]** 與 **[重新整理的速率]** 選項。 **[自動重新整理]** 設定會影響「複寫監視器」中的主視窗。 **[重新整理的速率]** 設定也可以影響所有設定為自動重新整理的詳細資料視窗 (設定的變更僅影響在變更後開啟的詳細資料視窗)。  
   
@@ -40,9 +40,9 @@ ms.locfileid: "62667234"
   
     2.  按一下 **[所有訂閱]** 索引標籤。  
   
-    3.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]**。  
+    3.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]** 。  
   
-2.  在 [訂閱 \<訂閱名稱>] 視窗中，按一下 [動作]，然後按一下 [自動重新整理]。 重新整理速率將由 **[發行者設定]** 對話方塊中的 **[重新整理的速率]** 設定決定。  
+2.  在 [訂閱 \<訂閱名稱>]  視窗中，按一下 [動作]  ，然後按一下 [自動重新整理]  。 重新整理速率將由 **[發行者設定]** 對話方塊中的 **[重新整理的速率]** 設定決定。  
   
 ## <a name="see-also"></a>另請參閱  
  [監視複寫](../monitoring-replication.md)  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6dad0ca9855cfad8811b1598356ab624ea3fc5ca
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058730"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>一般檔案連接管理員編輯器 (資料行頁面)
@@ -65,13 +65,13 @@ ms.locfileid: "66058730"
 |**分隔號 {&#124;}**|資料行是以分隔號分隔。|  
   
  **[重新整理]**  
- 按一下 [重新整理]，即可檢視變更要略過之分隔符號的影響。 僅在您已變更其他連接選項之後，才會看見此按鈕。  
+ 按一下 [重新整理]  ，即可檢視變更要略過之分隔符號的影響。 僅在您已變更其他連接選項之後，才會看見此按鈕。  
   
  **預覽資料列**  
  檢視一般檔案中的範例資料，使用選取的選項將資料分為資料行和資料列。  
   
  **重設資料行**  
- 按一下 [重設資料行]，即可將原始資料行以外的資料行全部移除。  
+ 按一下 [重設資料行]  ，即可將原始資料行以外的資料行全部移除。  
   
 ### <a name="format--fixed-width"></a>格式 = 固定寬度  
  **字型**  
@@ -84,7 +84,7 @@ ms.locfileid: "66058730"
  為個別資料行加入分隔符號之前，請先指定資料列的長度。 或者，在預覽視窗中拖曳垂直紅線來標示資料列結尾。 資料列寬度值會自動更新。  
   
  **重設資料行**  
- 按一下 [重設資料行]，即可將原始資料行以外的資料行全部移除。  
+ 按一下 [重設資料行]  ，即可將原始資料行以外的資料行全部移除。  
   
 ### <a name="format--ragged-right"></a>格式 = 不齊右  
   
@@ -112,7 +112,7 @@ ms.locfileid: "66058730"
 |**分隔號 {&#124;}**|資料列是以分隔號分隔。|  
   
  **重設資料行**  
- 按一下 [重設資料行]，即可將原始資料行以外的資料行全部移除。  
+ 按一下 [重設資料行]  ，即可將原始資料行以外的資料行全部移除。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

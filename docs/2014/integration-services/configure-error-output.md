@@ -13,18 +13,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18318775c63cd7126686154dec2ee1f02733763f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060640"
 ---
 # <a name="configure-error-output"></a>設定錯誤輸出
-  使用 [設定錯誤輸出] 對話方塊，即可為支援錯誤輸出的資料流程轉換設定錯誤處理選項。  
+  使用 [設定錯誤輸出]  對話方塊，即可為支援錯誤輸出的資料流程轉換設定錯誤處理選項。  
   
  若要深入了解如何使用錯誤輸出，請參閱[處理資料中的錯誤](data-flow/error-handling-in-data.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **輸入或輸出**  
  檢視輸出的名稱。  
   
@@ -34,12 +34,12 @@ ms.locfileid: "66060640"
  **錯誤**  
  如果適用的話，請指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題：**[資料中的錯誤處理](data-flow/error-handling-in-data.md)  
+ **相關主題：** [資料中的錯誤處理](data-flow/error-handling-in-data.md)  
   
  **截斷**  
  如果適用的話，請指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題：**[資料中的錯誤處理](data-flow/error-handling-in-data.md)  
+ **相關主題：** [資料中的錯誤處理](data-flow/error-handling-in-data.md)  
   
  **說明**  
  檢視作業的描述。  

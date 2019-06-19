@@ -61,10 +61,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4f6c3888a97c1a4db107009fdd71e878c3e2b6f2
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66499528"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
@@ -454,8 +454,8 @@ ALTER COLUMN
 
 **text**、**ntext** 與 **image** 資料行的資料類型只能透過以下方式來變更：
 
-- **text** 變更為 **varchar(max)**、**nvarchar(max)** 或 **xml**
-- **ntext** 變更為 **varchar(max)**、**nvarchar(max)** 或 **xml**
+- **text** 變更為 **varchar(max)** 、**nvarchar(max)** 或 **xml**
+- **ntext** 變更為 **varchar(max)** 、**nvarchar(max)** 或 **xml**
 - **image** 變更為 **varbinary(max)**
 
 某些資料類型變更可能會使資料變更。 例如，如果將 **nchar** 或 **nvarchar** 資料行變更為 **char** 或 **varchar**，則可能會轉換擴充字元。 如需詳細資訊，請參閱 [CAST 和 CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)。 減少資料行的有效位數或小數位數，可能會使資料截斷。
@@ -474,7 +474,7 @@ ALTER COLUMN
 *column_name*  
 要改變、新增或卸除的資料欄名稱。 *Column_name* 最多為 128 個字元。 針對以 **timestamp** 資料類型建立的新資料行，您可以省略 *column_name*。 如果您沒有為 **timestamp** 資料類型資料行指定任何 *column_name*，則會使用 **timestamp** 這個名稱。
 
-[ _type\_schema\_name_**.** ] _type\_name_  
+[ _type\_schema\_name_ **.** ] _type\_name_  
 所改變資料行的新資料類型，或是所新增資料行的資料類型。 您無法為資料分割資料表的現有資料行指定 *type_name*。 *type_name* 可以是下列類型之一：
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型。
@@ -507,7 +507,7 @@ ALTER COLUMN
 
 只適用於 **xml** 資料類型，可用來將 XML 結構描述與該類型產生關聯。 將 **L** 資料行鍵入結構描述集合之前，您必須先使用 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 在資料庫中建立結構描述集合。
 
-COLLATE \<定序名稱 >  
+COLLATE \<定序名稱   >  
 指定已改變之資料行的新定序。 若未指定，就會將資料庫的預設定序指派給資料行。 定序名稱可以是 Windows 定序名稱或 SQL 定序名稱。 如需清單和詳細資訊，請參閱 [Windows 定序名稱](../../t-sql/statements/windows-collation-name-transact-sql.md)和 [SQL Server 定序名稱](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。
 
 COLLATE 子句會變更 **char**、**varchar**、**nchar** 與 **nvarchar** 資料類型之資料行的定序。 若要變更使用者定義別名資料類型資料行的定序，請使用個別的 ALTER TABLE 陳述式來將資料行變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型。 然後變更其定序，並將資料行變更回別名資料類型。
@@ -706,13 +706,13 @@ OFF
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需詳細資訊，請參閱 [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)和 [SQL Server 2017 的版本及支援功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。
 
-MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
+MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ [ 1 **,** ... *n*] **)**  | *filegroup* |  **"** default **"** }  
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定目前在叢集索引分葉層級中之資料列所要移往的位置。 資料表會移至新位置。 此選項只適用於建立叢集索引的條件約束。
 
 > [!NOTE]
-> 在此內容中，default 不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，如 MOVE TO **"** default **"** 或 MOVE TO **[** default **]**。 如果指定了 **"** default **"**，則目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。
+> 在此內容中，default 不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，如 MOVE TO **"** default **"** 或 MOVE TO **[** default **]** 。 如果指定了 **"** default **"** ，則目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。
 
 { CHECK | NOCHECK } CONSTRAINT  
 指定 *constraint_name* 為已啟用或已停用。 這個選項只能搭配 FOREIGN KEY 和 CHECK 條件約束使用。 當指定 NOCHECK 時，會停用條件約束，且不會依照條件約束條件來驗證未來資料行的插入或更新作業。 不能停用 DEFAULT、PRIMARY KEY 及 UNIQUE 條件約束。
@@ -743,7 +743,7 @@ WITH **(** TRACK_COLUMNS_UPDATED **=** { ON | **OFF** } **)**
 
 指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是否要追蹤哪些啟用變更追蹤的資料行已更新。 預設值是 OFF。
 
-SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
+SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_ **.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 利用下列其中一種方式切換資料區塊：
@@ -768,7 +768,7 @@ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.
 
 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 以及 SQL Database V12 之前版本建置的非叢集資料行存放區索引是唯讀格式。 執行任何 PARTITION 作業之前，您必須將非叢集資料行存放區索引重建成最新格式 (可以更新的格式)。
 
-SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** | **"** NULL **"** }**)**  
+SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |  **"** default **"**  |  **"** NULL **"** } **)**  
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支援 `FILESTREAM`。
 
 指定 FILESTREAM 資料存放的位置。
@@ -992,11 +992,11 @@ IF EXISTS
 
 ### <a name="adding-not-null-columns-as-an-online-operation"></a>以線上作業的方式加入 NOT NULL 資料行
 
-從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition 開始，當預設值是「執行階段常數」時，加入含有預設值的 NOT NULL 資料行就是線上作業。 這表示，不論資料表中的資料列數目為何，此作業幾乎會立即完成。 因為資料表中的現有資料列不會在作業期間更新。 相反地，預設值只會儲存在資料表的中繼資料內，且存取這些資料列的查詢會視需要查閱此值。 此行為是自動的。 不需要任何額外的語法，即可實作超越 ADD COLUMN 語法的線上作業。 執行階段常數是一種運算式，會在執行階段針對資料表中的每個資料列產生相同的值，不論其決定性為何。 例如，常數運算式 "My temporary data" 或系統函數 GETUTCDATETIME() 都是執行階段常數。 相反地，`NEWID()` 或 `NEWSEQUENTIALID()` 函式不是執行階段常數，因為系統會針對資料表中的每個資料列產生唯一值。 新增含有非執行階段常數之預設值的 NOT NULL 資料行一律以離線方式執行，且系統會在作業期間取得獨佔 (SCH-M) 鎖定。
+從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition 開始，當預設值是「執行階段常數」  時，加入含有預設值的 NOT NULL 資料行就是線上作業。 這表示，不論資料表中的資料列數目為何，此作業幾乎會立即完成。 因為資料表中的現有資料列不會在作業期間更新。 相反地，預設值只會儲存在資料表的中繼資料內，且存取這些資料列的查詢會視需要查閱此值。 此行為是自動的。 不需要任何額外的語法，即可實作超越 ADD COLUMN 語法的線上作業。 執行階段常數是一種運算式，會在執行階段針對資料表中的每個資料列產生相同的值，不論其決定性為何。 例如，常數運算式 "My temporary data" 或系統函數 GETUTCDATETIME() 都是執行階段常數。 相反地，`NEWID()` 或 `NEWSEQUENTIALID()` 函式不是執行階段常數，因為系統會針對資料表中的每個資料列產生唯一值。 新增含有非執行階段常數之預設值的 NOT NULL 資料行一律以離線方式執行，且系統會在作業期間取得獨佔 (SCH-M) 鎖定。
 
 當現有資料列參考中繼資料內儲存的值時，如果已插入任何新資料列但並未針對資料行指定另一個值，預設值就會儲存在資料列上。 當您更新資料列 (即使沒有在 UPDATE 陳述式中指定實際的資料行) 或是重建資料表或叢集索引時，中繼資料內儲存的預設值會移至現有資料列。
 
-類型為 **varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml**, **text**、**ntext**、**image**、**hierarchyid**、**geometry**、**geography** 或 CLR UDTS 的資料行，不可以在線上作業中新增。 您無法在線上新增資料行，如果這樣做會導致最大可能的資料列大小超過 8,060 位元組限制。 在此情況中，資料行會以離線作業的方式加入。
+類型為 **varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**xml**, **text**、**ntext**、**image**、**hierarchyid**、**geometry**、**geography** 或 CLR UDTS 的資料行，不可以在線上作業中新增。 您無法在線上新增資料行，如果這樣做會導致最大可能的資料列大小超過 8,060 位元組限制。 在此情況中，資料行會以離線作業的方式加入。
 
 ## <a name="parallel-plan-execution"></a>平行計畫執行
 

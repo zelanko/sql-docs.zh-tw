@@ -16,10 +16,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cbadda2e3843fc4b15a5ebc2e5ec57a1c76cbf2b
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946193"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>使用格式檔案以略過資料表資料行 (SQL Server)
@@ -76,7 +76,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
 > [!IMPORTANT]  
 >  您可能需要以 `-S` 引數來指定您連線至的伺服器執行個體名稱。 另外，也可能需要以 `-U` 和 `-P` 引數來指定使用者名稱和密碼。 如需相關資訊，請參閱 [bcp Utility](../../tools/bcp-utility.md)。  
 
-上述命令會建立非 XML 格式檔案 `myTestSkipCol_Default.fmt`。 這個格式檔案稱為「預設格式檔案」(Default Format File)，因為它是 **bcp** 所產生的格式。 預設格式檔案描述資料檔案欄位與資料表資料行之間的一對一對應。  
+上述命令會建立非 XML 格式檔案 `myTestSkipCol_Default.fmt`。 這個格式檔案稱為「預設格式檔案」  (Default Format File)，因為它是 **bcp** 所產生的格式。 預設格式檔案描述資料檔案欄位與資料表資料行之間的一對一對應。  
   
  下列螢幕擷取畫面顯示了這個範例預設格式檔案中的值。 
   
@@ -150,7 +150,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 > [!IMPORTANT]  
 >  您可能需要以 `-S` 引數來指定您連線至的伺服器執行個體名稱。 另外，也可能需要以 `-U` 和 `-P` 引數來指定使用者名稱和密碼。 如需相關資訊，請參閱 [bcp Utility](../../tools/bcp-utility.md)。  
  
-上述命令會建立 XML 格式檔案 `myTestSkipCol_Default.xml`。 這個格式檔案稱為「預設格式檔案」(Default Format File)，因為它是 **bcp** 所產生的格式。 預設格式檔案描述資料檔案欄位與資料表資料行之間的一對一對應。  
+上述命令會建立 XML 格式檔案 `myTestSkipCol_Default.xml`。 這個格式檔案稱為「預設格式檔案」  (Default Format File)，因為它是 **bcp** 所產生的格式。 預設格式檔案描述資料檔案欄位與資料表資料行之間的一對一對應。  
   
 ```xml
 <?xml version="1.0"?>  

@@ -19,16 +19,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ca5d6ed8f1e8a92d22bd32e39c8afe946a0fcfee
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095983"
 ---
 # <a name="connection-parameters"></a>連接參數
   若要分析特定伺服器類型 (例如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)])，您必須選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的特定執行個體。 系統會自動選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設執行個體。 您可以變更此選擇，但一次只能選取一個執行個體供 Upgrade Advisor 分析。 如果您已加入需要驗證的伺服器類型，就必須輸入驗證模式和認證。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **伺服器名稱**  
  預先填入您在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件] 窗格中輸入的電腦名稱。  
   

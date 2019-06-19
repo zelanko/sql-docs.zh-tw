@@ -13,11 +13,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 6e01fbd98d2004566c4831db8b1ac28878095868
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143398"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62652532"
 ---
 # <a name="delete-a-plan-guide"></a>刪除計畫指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "54143398"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  刪除 OBJECT 計畫指南需要計畫指南所參考之物件 (例如：函數、預存程序) 的 ALTER 權限。 所有其他計畫指南都需要 ALTER DATABASE 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -50,9 +50,9 @@ ms.locfileid: "54143398"
   
 2.  按一下加號展開 **[計畫指南]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您想要刪除的計畫指南，然後選取 [刪除]。  
+3.  以滑鼠右鍵按一下您想要刪除的計畫指南，然後選取 [刪除]  。  
   
-4.  在 **[刪除物件]** 對話方塊中，確定已選取正確的計畫指南，然後按一下 **[確定]**。  
+4.  在 **[刪除物件]** 對話方塊中，確定已選取正確的計畫指南，然後按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -60,9 +60,9 @@ ms.locfileid: "54143398"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     --Create a procedure on which to define the plan guide.  
@@ -101,9 +101,9 @@ ms.locfileid: "54143398"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  

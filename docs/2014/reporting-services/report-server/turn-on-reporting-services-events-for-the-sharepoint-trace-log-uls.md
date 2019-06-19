@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b292805f0cf24a220223adc3a1996b3e5effe54c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103154"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
@@ -51,7 +51,7 @@ ms.locfileid: "66103154"
   
 1.  在 SharePoint 管理中心內  
   
-2.  按一下 **[監視]**。  
+2.  按一下 **[監視]** 。  
   
 3.  按一下 **[報表]** 群組中的 **[設定診斷記錄]** 。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66103154"
   
 -   **SOAP 用戶端 Proxy**  
   
--   如果您遇到組態設定方面的問題，請加入 **[組態頁面]**。  
+-   如果您遇到組態設定方面的問題，請加入 **[組態頁面]** 。  
   
  您可以使用下列 PowerShell 指令程式來檢閱所有目前伺服器陣列診斷記錄設定：  
   
@@ -101,7 +101,7 @@ Get-SPDiagnosticConfig
 |本機模式轉譯||  
 |SOAP 用戶端 Proxy||  
 |UI 頁面||  
-|Power View|已寫入 **LogClientTraceEvents** API 中的記錄項目。 這些項目來自於用戶端應用程式，包括適用於 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]Enterprise Edition 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 增益集功能 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 。<br /><br /> 所有來自於 LogClientTraceEvents API 的記錄項目都會記錄在 "SQL Server Reporting Services" [類別目錄] 和 "Power View" [區域] 之下。<br /><br /> 使用 "Power View" 區域所記錄的項目內容是由用戶端應用程式所決定。|  
+|Power View|已寫入 **LogClientTraceEvents** API 中的記錄項目。 這些項目來自於用戶端應用程式，包括適用於 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]Enterprise Edition 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 增益集功能 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 。<br /><br /> 所有來自於 LogClientTraceEvents API 的記錄項目都會記錄在 "SQL Server Reporting Services" [類別目錄]  和 "Power View" [區域]  之下。<br /><br /> 使用 "Power View" 區域所記錄的項目內容是由用戶端應用程式所決定。|  
 |報表伺服器警示執行階段||  
 |報表伺服器應用程式定義域管理員||  
 |報表伺服器緩衝回應||  
@@ -109,7 +109,7 @@ Get-SPDiagnosticConfig
 |報表伺服器目錄||  
 |報表伺服器區塊||  
 |報表伺服器清除||  
-|報表伺服器組態管理員|範例項目：<br /><br /> MediumUsing 報表伺服器內部 URL http://localhost:80/ReportServer。<br /><br /> UnexpectedMissing 或是無效的 ExtendedProtectionLevel 設定|  
+|報表伺服器組態管理員|範例項目：<br /><br /> MediumUsing 報表伺服器內部 URL http://localhost:80/ReportServer 。<br /><br /> UnexpectedMissing 或是無效的 ExtendedProtectionLevel 設定|  
 |報表伺服器密碼編譯||  
 |報表伺服器資料延伸模組||  
 |報表伺服器資料庫輪詢||  

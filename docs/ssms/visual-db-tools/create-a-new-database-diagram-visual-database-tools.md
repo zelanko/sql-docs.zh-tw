@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 3de33a9f85a5a846b12fe8a95dc7b70381257c41
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089556"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>建立新資料庫圖表 (Visual Database Tools)
@@ -27,13 +27,13 @@ ms.locfileid: "65089556"
   
 ### <a name="to-create-a-new-database-diagram"></a>若要建立新的資料庫圖表  
   
-1.  在物件總管中，在 [資料庫圖表] 資料夾上或該資料夾的任何圖表上按一下滑鼠右鍵。  
+1.  在物件總管中，在 [資料庫圖表]  資料夾上或該資料夾的任何圖表上按一下滑鼠右鍵。  
   
-2.  在快速鍵功能表上選擇 [新增資料庫圖表]。  
+2.  在快速鍵功能表上選擇 [新增資料庫圖表]  。  
   
-    出現 [新增資料表] 對話方塊。  
+    出現 [新增資料表]  對話方塊。  
   
-3.  在 [資料表] 清單中選取必要的資料表，按一下 [新增]。  
+3.  在 [資料表]  清單中選取必要的資料表，按一下 [新增]  。  
   
     資料表以圖形方式顯示於新資料庫圖表中。  
   

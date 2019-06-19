@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c25a0cf97c556baad24f475cdf71698e03fa6a25
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948042"
 ---
 # <a name="countbig--sql"></a>COUNT_BIG (-SQL)
@@ -74,7 +74,7 @@ COUNT_BIG (ALL *expression*) 會針對群組中的每個資料列來評估 *expr
   
 COUNT_BIG (DISTINCT *expression*) 會針對群組中的每個資料列來評估 *expression*，且會傳回唯一且非 Null 值的數目。
   
-COUNT_BIG **不搭配** OVER 和 ORDER BY 子句使用時，是具決定性的函數。 COUNT_BIG **搭配** OVER 和 ORDER BY 子句使用時，不具決定性。 如需詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
+COUNT_BIG **不搭配**  OVER 和 ORDER BY 子句使用時，是具決定性的函數。 COUNT_BIG **搭配**  OVER 和 ORDER BY 子句使用時，不具決定性。 如需詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
   
 ## <a name="examples"></a>範例  
 如需範例，請參閱 [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md)。

@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18150e08b06e1b8f919df98e8e10b4eb43cc4b64
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727475"
 ---
 # <a name="send-mail-task"></a>傳送郵件工作
@@ -90,7 +90,7 @@ ms.locfileid: "65727475"
 -   shareourideas.com 上的技術文件： [如何在 C# 中傳送包含傳遞通知的電子郵件](https://go.microsoft.com/fwlink/?LinkId=237625)(如何在 C# 中傳送包含傳遞通知的電子郵件)  
   
 ## <a name="send-mail-task-editor-general-page"></a>傳送郵件工作編輯器 (一般頁面)
-  使用 [傳送郵件工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述傳送郵件工作。  
+  使用 [傳送郵件工作編輯器]  對話方塊的 [一般]  頁面，即可命名和描述傳送郵件工作。  
   
 ### <a name="options"></a>選項。  
  **名稱**  
@@ -102,16 +102,16 @@ ms.locfileid: "65727475"
  輸入傳送郵件工作的描述。  
   
 ## <a name="send-mail-task-editor-mail-page"></a>傳送郵件工作編輯器 (郵件頁面)
-  使用 [傳送郵件工作編輯器] 對話方塊的 [郵件] 頁面，即可指定收件者、訊息類型以及訊息的優先權。 您也可以附加檔案至訊息。 訊息文字可以是您提供的字串、包含文字之檔案的檔案連接，或包含文字之變數的名稱。  
+  使用 [傳送郵件工作編輯器]  對話方塊的 [郵件]  頁面，即可指定收件者、訊息類型以及訊息的優先權。 您也可以附加檔案至訊息。 訊息文字可以是您提供的字串、包含文字之檔案的檔案連接，或包含文字之變數的名稱。  
   
 ### <a name="options"></a>選項。  
  **SMTPConnection**  
- 在清單中選取 SMTP 連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。  
+ 在清單中選取 SMTP 連線管理員，或按一下 [\<新增連線...>]  ，即可建立新的連線管理員。  
   
 > [!IMPORTANT]  
 >  SMTP 連接管理員僅支援匿名驗證和 Windows 驗證， 而不支援基本驗證。  
   
- **相關主題：**[SMTP 連線管理員](../../integration-services/connection-manager/smtp-connection-manager.md)  
+ **相關主題：** [SMTP 連線管理員](../../integration-services/connection-manager/smtp-connection-manager.md)  
   
  **來源**  
  指定寄件者的電子郵件地址。  
@@ -133,9 +133,9 @@ ms.locfileid: "65727475"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**直接輸入**|將來源設定為訊息文字。 選取此值會顯示動態選項 [MessageSource]。|  
-|**檔案連接**|將來源設定為包含訊息文字的檔案。 選取此值會顯示動態選項 [MessageSource]。|  
-|**變數**|將來源設定為包含訊息文字的變數。 選取此值會顯示動態選項 [MessageSource]。|  
+|**直接輸入**|將來源設定為訊息文字。 選取此值會顯示動態選項 [MessageSource]  。|  
+|**檔案連接**|將來源設定為包含訊息文字的檔案。 選取此值會顯示動態選項 [MessageSource]  。|  
+|**變數**|將來源設定為包含訊息文字的變數。 選取此值會顯示動態選項 [MessageSource]  。|  
   
  **優先權**  
  設定訊息的優先權。  
@@ -150,19 +150,19 @@ ms.locfileid: "65727475"
   
 #### <a name="messagesourcetype--direct-input"></a>MessageSourceType = 直接輸入  
  **MessageSource**  
- 輸入訊息文字或按一下瀏覽按鈕 ([...])，然後在 [訊息來源] 對話方塊中輸入訊息。  
+ 輸入訊息文字或按一下瀏覽按鈕 ([...])，然後在 [訊息來源]  對話方塊中輸入訊息。  
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = 檔案連接  
  **MessageSource**  
- 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。  
+ 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]  ，即可建立新的連線管理員。  
   
- **相關主題：**[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = 變數  
  **MessageSource**  
- 在清單中選取變數，或按一下 [\<新增變數...>] 建立新的變數。  
+ 在清單中選取變數，或按一下 [\<新增變數...>]  建立新的變數。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   

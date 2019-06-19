@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: decc6e25cc8480dfaf041a79baa0972bdd78e569
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62625858"
 ---
 # <a name="refresh-from-database-oracletosql"></a>從資料庫重新整理 (OracleToSQL)
@@ -32,7 +32,7 @@ ms.locfileid: "62625858"
   
 若要存取**從資料庫重新整理** 對話方塊中，以滑鼠右鍵按一下物件，在 Oracle 中繼資料總管，然後按一下**從資料庫重新整理**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **摺疊 （-）**  
 摺疊所有的物件群組，若要隱藏個別的物件。  
   

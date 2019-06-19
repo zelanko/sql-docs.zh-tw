@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d9b6f9426d4381f33d529e1efefa8afd6a1fc44b
-ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66270159"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
@@ -50,7 +50,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 `[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。 當一個以上的發行集共用散發代理程式時，您必須指定 ALL 值*發行集*。  
   
-`[ @xact_seqno = ] xact_seqno` 是套用在訂閱者端的散發者端之下一項交易的 LSN。 *xact_seqno*已**varbinary(16)**，沒有預設值。  
+`[ @xact_seqno = ] xact_seqno` 是套用在訂閱者端的散發者端之下一項交易的 LSN。 *xact_seqno*已**varbinary(16)** ，沒有預設值。  
   
 ## <a name="result-set"></a>結果集  
   

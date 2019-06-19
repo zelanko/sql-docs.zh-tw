@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: f450978ec1709bf765642f51c9d7b47864d0d5b0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66787950"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>移除可用性群組 (SQL Server)
@@ -47,17 +47,17 @@ ms.locfileid: "66787950"
   
 1.  在物件總管中，連接到裝載主要複本的伺服器執行個體，可能的話，連接到擁有可用性群組之正確安全性認證的 WSFC 節點上已啟用 AlwaysOn 可用性群組的另一個伺服器執行個體。 展開伺服器樹狀目錄。  
   
-2.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
+2.  依序展開 [Always On 高可用性]  節點和 [可用性群組]  節點。  
   
 3.  此步驟取決於您要刪除多個可用性群組或只要刪除一個可用性群組，如下所示：  
   
-    -   若要刪除多個可用性群組 (其主要複本位於連接的伺服器執行個體上)，請使用 [物件總管詳細資料] 窗格，檢視及選取要刪除的所有可用性群組。 如需詳細資訊，請參閱[使用物件總管詳細資料監視可用性群組 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)。  
+    -   若要刪除多個可用性群組 (其主要複本位於連接的伺服器執行個體上)，請使用 [物件總管詳細資料]  窗格，檢視及選取要刪除的所有可用性群組。 如需詳細資訊，請參閱[使用物件總管詳細資料監視可用性群組 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)。  
   
     -   若要刪除單一可用性群組，請在 **[物件總管]** 窗格或 **[物件總管詳細資料]** 窗格中選取它。  
   
-4.  以滑鼠右鍵按一下一或多個選取的可用性群組，然後選取 [刪除] 命令。  
+4.  以滑鼠右鍵按一下一或多個選取的可用性群組，然後選取 [刪除]  命令。  
   
-5.  在 **[移除可用性群組]** 對話方塊中，刪除所有列出的可用性群組，按一下 **[確定]**。 如果您不要移除所有列出的可用性群組，請按一下 **[取消]**。  
+5.  在 **[移除可用性群組]** 對話方塊中，刪除所有列出的可用性群組，按一下 **[確定]** 。 如果您不要移除所有列出的可用性群組，請按一下 **[取消]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要刪除可用性群組**  

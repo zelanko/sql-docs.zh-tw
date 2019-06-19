@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cfee31b4167625b4f868d7312abd752a215652c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059550"
 ---
 # <a name="destination-database-files"></a>目的地資料庫檔案
@@ -24,7 +24,7 @@ ms.locfileid: "66059550"
   
  若要使用來源伺服器上的資料庫檔案名稱和位置，來自動擴展此對話方塊，請先在 **[傳送資料庫工作編輯器]** 對話方塊的 **[資料庫]** 頁面中，指定 **[SourceConnection]** 、 **[SourceDatabaseName]** 和 **[SourceDatabaseFiles]** 。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **目的地檔案**  
  目的地伺服器上已傳送資料庫檔案的名稱。  
   

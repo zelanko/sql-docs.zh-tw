@@ -17,10 +17,10 @@ ms.author: mathoma
 manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 7619712d0445182d0ded0d7d544bd23f2cee8e90
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66800777"
 ---
 # <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>搭配 Always On 可用性群組使用 FILESTREAM 和 FileTable

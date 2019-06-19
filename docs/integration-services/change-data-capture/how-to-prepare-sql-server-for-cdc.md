@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7cb1e51817c4263bdd649ca2f1ea40c0cc968b89
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728746"
 ---
 # <a name="how-to-prepare-sql-server-for-cdc"></a>如何為 CDC 準備 SQL Server
@@ -35,13 +35,13 @@ ms.locfileid: "65728746"
   
 2.  從左窗格中選取 **[動作]** 窗格中的 **[本機 CDC 服務]** ，然後按一下 **[準備 SQL Server]** 。  
   
-     您也可以用滑鼠右鍵按一下 [Local CDC Services (本機 CDC 服務)]，然後選取 [Prepare SQL Server (準備 SQL Server)]。  
+     您也可以用滑鼠右鍵按一下 [Local CDC Services (本機 CDC 服務)]  ，然後選取 [Prepare SQL Server (準備 SQL Server)]  。  
   
 3.  請在 [為 Oracle CDC 準備 SQL Server 執行個體] 對話方塊中輸入必要的資訊。 如需有關如何在此對話方塊中輸入必要資訊的詳細資訊，請參閱＜ [Prepare SQL Server for CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)＞。  
   
      若要為 Oracle CDC 準備 SQL Server 執行個體，登入必須擁有 MSXDBCDC 資料庫的寫入權限。 請輸入擁有 MSXDBCDC 資料庫寫入權限之登入的認證，例如 `sysasmin` 角色的成員。  
   
- **注意**：您可以按一下 [檢視指令碼]，檢視設定指令碼的唯讀版本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員可以將此指令碼複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理主控台來編輯和執行 (必要的話)。  
+ **注意**：您可以按一下 [檢視指令碼]  ，檢視設定指令碼的唯讀版本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員可以將此指令碼複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理主控台來編輯和執行 (必要的話)。  
   
 ## <a name="see-also"></a>另請參閱  
  [為 CDC 準備 SQL Server](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  

@@ -11,10 +11,10 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 41faa953036692a0fa633a2d1ccc7244e02e13e4
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65994946"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
@@ -87,18 +87,18 @@ ALTER EXTERNAL LANGUAGE language_name
 
 **content_bits**
 
-以十六進位常值的形式指定語言內容，類似於組件。
+以十六進位常值形式指定語言的內容，類似於組件。
 如果您必須建立語言或更改現有的語言 (且具備執行此操作所需的權限)，但伺服器上的檔案系統受到限制，而您無法將程式庫檔案複製到伺服器能夠存取的位置，則此選項會相當有用。
 
 **external_lang_file_name**
 
-副檔名為 .dll 或 .so 檔案的名稱。 當 <external_lang_specifier> .zip 或 tar.gz 有數個 .dll 或 .so 檔案時，那麼一定要有此項目才能識別正確的檔案。
+.dll 或 .so 檔案副檔名名稱。 當 <external_lang_specifier> .zip 或 tar.gz 有數個 .dll 或 .so 檔案時，那麼一定要有此項目才能識別正確的檔案。
 
 **external_lang_parameters**
 
-這有可能向外部語言執行階段提供一組參數。 外部處理序啟動之後，向外部執行階段提供參數值。 但在外部處理序啟動之前，語言延伸模組可以存取環境變數。
+這有可能向外部語言執行階段提供一組參數。 外部處理序啟動之後，參數值會提供給外部執行階段。 但在外部處理序啟動之前，語言延伸模組可以存取環境變數。
 
-**external_lang_env_variables**
+.**external_lang_env_variables**
 
 這可能會在外部處理序啟動之前，向外部語言執行階段提供一組環境變數。 例如，執行階段本身的主目錄即為環境變數範例。 例如：JRE_HOME。
 

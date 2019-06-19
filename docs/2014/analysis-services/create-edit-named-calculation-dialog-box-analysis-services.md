@@ -15,20 +15,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a53db9413ce7877182ca5f9c768bb1e1ef71e383
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086847"
 ---
 # <a name="create-edit-named-calculation-dialog-box-analysis-services"></a>建立編輯具名計算對話方塊 (Analysis Services)
-  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [建立/編輯具名計算] 對話方塊，即可定義或修改資料來源檢視中之資料表的具名計算。 您可以執行下列動作來顯示 [建立/編輯具名計算] 對話方塊：  
+  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [建立/編輯具名計算]  對話方塊，即可定義或修改資料來源檢視中之資料表的具名計算。 您可以執行下列動作來顯示 [建立/編輯具名計算]  對話方塊：  
   
--   在 [資料來源檢視設計師] 的 [工具列] 窗格中，按一下 [新增具名計算]。  
+-   在 [資料來源檢視設計師]  的 [工具列]  窗格中，按一下 [新增具名計算]  。  
   
--   在 [資料來源檢視設計師] 的 [資料表] 或 [圖表] 窗格中，以滑鼠右鍵按一下資料表，然後選取 [新增具名計算]。  
+-   在 [資料來源檢視設計師]  的 [資料表]  或 [圖表]  窗格中，以滑鼠右鍵按一下資料表，然後選取 [新增具名計算]  。  
   
--   在 [資料來源檢視設計師] 的 [圖表] 窗格中，以滑鼠右鍵按一下具名計算的名稱，然後選取 [編輯具名計算]。  
+-   在 [資料來源檢視設計師]  的 [圖表]  窗格中，以滑鼠右鍵按一下具名計算的名稱，然後選取 [編輯具名計算]  。  
   
 ## <a name="options"></a>選項  
  **資料行名稱**  

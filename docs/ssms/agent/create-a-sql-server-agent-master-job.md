@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b999b7a06f07df346f9fd38f8118913321d893fb
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095549"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>建立 SQL Server Agent 主要作業
@@ -71,9 +71,9 @@ ms.locfileid: "65095549"
   
 1.  在 **[物件總管]** 中，按一下加號展開要建立 SQL Server Agent 作業的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
-3.  以滑鼠右鍵按一下 [作業] 資料夾，然後選取 [新增作業...]。  
+3.  以滑鼠右鍵按一下 [作業]  資料夾，然後選取 [新增作業...]  。  
   
 4.  在 **[新增作業]** 對話方塊的 **[一般]** 頁面中，修改作業的一般屬性。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性 - 新增作業 &#40;一般頁面&#41;](../../ssms/agent/job-properties-new-job-general-page.md)  
   
@@ -87,7 +87,7 @@ ms.locfileid: "65095549"
   
 9. 在 **[目標]** 頁面上，管理作業的目標伺服器。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性 - 新增作業 &#40;目標頁面&#41;](../../ssms/agent/job-properties-new-job-targets-page.md)。  
   
-10. 完成後，請按一下 **[確定]**。  
+10. 完成後，請按一下 **[確定]** 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -95,9 +95,9 @@ ms.locfileid: "65095549"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE msdb ;  

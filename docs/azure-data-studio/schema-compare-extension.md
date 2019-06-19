@@ -12,13 +12,13 @@ author: yualan
 ms.author: alayu
 manager: jroth
 ms.openlocfilehash: 15c9b05c418d300b7c65266826df552864d0a5b3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798088"
 ---
-# <a name="schema-compare-extension-preview"></a>結構描述比較延伸模組 （預覽）
+# <a name="schema-compare-extension-preview"></a>結構描述比較延伸模組(預覽)
 結構描述比較的擴充功能會提供簡單易用的體驗，來比較.dacpac 檔案和資料庫，以及從來源的變更套用到目標。
 
 這項體驗目前處於其初始的預覽階段。 報告問題和功能要求[這裡。](https://github.com/microsoft/azuredatastudio/issues)

@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62766622"
 ---
 # <a name="package-management-ssis-service"></a>封裝管理 (SSIS 服務)
@@ -56,7 +56,7 @@ ms.locfileid: "62766622"
   
  **[Running Packages]** 資料夾不包含子資料夾，且不可延伸。  
   
- 依預設，[Stored Packages] 資料夾包含兩個資料夾：[File System] 和 [MSDB]。 **[檔案系統]** 資料夾會列出儲存至檔案系統的封裝。 這些檔案的位置是在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的組態檔中指定的。 預設資料夾為 [封裝] 資料夾，位於 %Program Files%\Microsoft SQL Server\100\DTS。 **MSDB** 資料夾會列出已儲存至伺服器上 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb 資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封裝。 sysssispackages 資料表包含 msdb 中所儲存的封裝。  
+ 依預設，[Stored Packages]  資料夾包含兩個資料夾：[File System]  和 [MSDB]  。 **[檔案系統]** 資料夾會列出儲存至檔案系統的封裝。 這些檔案的位置是在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的組態檔中指定的。 預設資料夾為 [封裝] 資料夾，位於 %Program Files%\Microsoft SQL Server\100\DTS。 **MSDB** 資料夾會列出已儲存至伺服器上 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb 資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封裝。 sysssispackages 資料表包含 msdb 中所儲存的封裝。  
   
  若要檢視封裝存放區中的封裝清單，您必須開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 並連接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 如需詳細資訊，請參閱 [在 SQL Server Management Studio 中檢視 Integration Services 封裝 &#40;SSIS 服務&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)回溯相容。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62766622"
   
  若要在 **[摘要]** 頁面上檢視有關單一正在執行封裝的資訊，請按一下該封裝。 **[摘要]** 頁面會顯示諸如封裝的版本和描述等資訊。  
   
- 在 [Running Packages] 資料夾中以滑鼠右鍵按一下封裝，然後按一下 [停止]，可以停止正在執行封裝。  
+ 在 [Running Packages]  資料夾中以滑鼠右鍵按一下封裝，然後按一下 [停止]  ，可以停止正在執行封裝。  
   
 ## <a name="managing-package-storage"></a>管理封裝儲存體  
  若要組織封裝，您可以將自訂資料夾加入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務在其組態檔中列出的根封裝存放區資料夾。 依預設，根資料夾為 **[File System]** 和 **[MSDB]** 資料夾。 例如，您可能想要將包含用於清除資料之所有封裝的 **[Data Cleaning]** 資料夾加入 **[File System]** 資料夾。 您可以將自訂資料夾加入自訂資料夾，以建立巢狀資料夾階層來滿足您的需要。 可以刪除和重新命名自訂資料夾，不過，您無法重新命名或刪除組態檔指定的根資料夾。 若要更新 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 列出的根資料夾，您必須更新組態檔。  

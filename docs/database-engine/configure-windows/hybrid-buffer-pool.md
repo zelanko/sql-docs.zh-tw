@@ -12,10 +12,10 @@ author: DBArgenis
 ms.author: argenisf
 manager: jroth
 ms.openlocfilehash: ce63196cb8a5c8791eb6440f69cf06194591f422
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66785292"
 ---
 # <a name="hybrid-buffer-pool"></a>混合式緩衝集區
@@ -23,7 +23,7 @@ ms.locfileid: "66785292"
 
 混合式緩衝集區可讓資料庫引擎直接存取儲存在持續性記憶體 (PMEM) 裝置之資料庫檔案中的資料頁面。 這項功能是在 [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] 中引進。
 
-在沒有 PMEM 的傳統系統中，SQL Server 會在 DRAM 型的緩衝集區中快取資料頁。 使用混合式緩衝集區，SQL Server 會略過執行頁面複本，進入緩衝集區的 DRAM 型部分。 改為直接在 PMEM 裝置的資料庫檔案中存取頁面。 存取混合式緩衝集區 PMEM 裝置上的資料檔案，是使用記憶體對應 I/O (MMIO) 執行，也稱為 SQL Server 中的資料檔案「啟用」。
+在沒有 PMEM 的傳統系統中，SQL Server 會在 DRAM 型的緩衝集區中快取資料頁。 使用混合式緩衝集區，SQL Server 會略過執行頁面複本，進入緩衝集區的 DRAM 型部分。 改為直接在 PMEM 裝置的資料庫檔案中存取頁面。 存取混合式緩衝集區 PMEM 裝置上的資料檔案，是使用記憶體對應 I/O (MMIO) 執行，也稱為 SQL Server 中的資料檔案「啟用」  。
 
 只有完整分頁才能直接在 PMEM 裝置上存取。 頁面標示為中途時，它會先複製到 DRAM 型的緩衝集區，最後再寫回 PMEM 裝置，並再次標示為完整。 此程序是發生在一般檢查點作業期間的狀況。
 

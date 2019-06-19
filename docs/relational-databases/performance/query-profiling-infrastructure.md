@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: dbf81f0cb1100fdc5663a8c2ff46343d8d9671c1
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64568278"
 ---
 # <a name="query-profiling-infrastructure"></a>查詢分析基礎結構
@@ -33,14 +33,14 @@ ms.locfileid: "64568278"
 
 ## <a name="the-standard-query-execution-statistics-profiling-infrastructure"></a>標準查詢執行統計資料分析基礎結構
 
-「查詢執行統計資料分析基礎結構」 (或標準分析) 必須啟用，才能收集執行計畫的相關資訊，也就是資料列計數、CPU 和 I/O 使用量。 下列針對**目標工作階段**收集執行計畫資訊的方法會利用標準分析基礎結構：
+「查詢執行統計資料分析基礎結構」  (或標準分析) 必須啟用，才能收集執行計畫的相關資訊，也就是資料列計數、CPU 和 I/O 使用量。 下列針對**目標工作階段**收集執行計畫資訊的方法會利用標準分析基礎結構：
 
 - [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) 
 - [SET STATISTICS PROFILE](../../t-sql/statements/set-statistics-profile-transact-sql.md)
 - [即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)
 
 > [!NOTE]
-> 按一下 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [包含即時查詢統計資料] 按鈕，即會利用標準分析基礎結構。    
+> 按一下 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [包含即時查詢統計資料]  按鈕，即會利用標準分析基礎結構。    
 > 在更高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果已啟用[輕量型分析基礎結構](#lwp)，則在透過[活動監視器](../../relational-databases/performance-monitor/activity-monitor.md)檢視或直接查詢 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV 時，就會由即時查詢統計資料而不是標準分析加以利用。 
 
 下列針對**所有工作階段**全域收集執行計畫資訊的方法，會利用標準分析基礎結構：
@@ -91,7 +91,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 至 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])。 
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 包含額外負荷最低的輕量型分析修訂版。 針對上方「適用於」中所述的版本，也可以使用[追蹤旗標 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 全域啟用輕量型分析。 已引進新的 DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)，針對進行中的要求傳回查詢執行計畫。
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 包含額外負荷最低的輕量型分析修訂版。 針對上方「適用於」  中所述的版本，也可以使用[追蹤旗標 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 全域啟用輕量型分析。 已引進新的 DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)，針對進行中的要求傳回查詢執行計畫。
 
 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 開始，如果未全域啟用輕量型分析，則可使用新的 [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)引數 **QUERY_PLAN_PROFILE**，針對任何工作階段啟用查詢層級的輕量型分析。 當包含這個新提示的查詢完成時，也會輸出新的 ***query_plan_profile*** 擴充事件，以提供類似 *query_post_execution_showplan* 擴充事件的實際執行計畫 XML。 
 
@@ -123,7 +123,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 包含最新修訂的輕量型分析版本，可收集所有執行的資料列計數資訊。 輕量型分析預設會在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 上啟用，而追蹤旗標 7412 不會有任何作用。 可以在資料庫層級使用 LIGHTWEIGHT_QUERY_PROFILING [資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)來停用輕量級分析：`ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`。
 
-現已引進新的 DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)，它在大多數查詢中會傳回最後一個已知實際執行計畫的對等項目，稱為「最後一個執行計畫統計資料」。 可以在資料庫層級使用 LAST_QUERY_PLAN_STATS [資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)來啟用最後一個查詢計畫統計資料：`ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`。
+現已引進新的 DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)，它在大多數查詢中會傳回最後一個已知實際執行計畫的對等項目，稱為「最後一個執行計畫統計資料」  。 可以在資料庫層級使用 LAST_QUERY_PLAN_STATS [資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)來啟用最後一個查詢計畫統計資料：`ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`。
 
 不同於使用標準分析的 *query_post_execution_showplan*，新的 *query_post_execution_plan_profile* 擴充事件會根據輕量型分析收集實際執行計畫的對等項目。 使用 *query_post_execution_plan_profile* 擴充事件的範例工作階段可依照下列範例進行設定：
 

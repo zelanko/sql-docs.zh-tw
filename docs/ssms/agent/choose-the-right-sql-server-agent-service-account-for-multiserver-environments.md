@@ -16,10 +16,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 467896f654bc39abf1317287860fe59edee4060a
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105896"
 ---
 # <a name="choose-the-right-sql-server-agent-service-account-for-multiserver-environments"></a>為多伺服器環境選擇適當的 SQL Server Agent 服務帳戶
@@ -38,7 +38,7 @@ ms.locfileid: "65105896"
   
 -   如果以本機系統帳戶執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務，則只有在主要伺服器和目標伺服器都位在相同電腦上時，才支援「主要伺服器-目標伺服器」作業。 如果您使用這個組態，則將目標伺服器編列至主要伺服器時，會傳回下列訊息：  
   
-    「請確定 <目標伺服器電腦名稱> 的代理程式啟動帳戶有權限以 targetServer 的身分登入」。  
+    「請確定 <目標伺服器電腦名稱>  的代理程式啟動帳戶有權限以 targetServer 的身分登入」。  
   
     您可以忽略此參考訊息。 編列作業應該順利完成。  
   

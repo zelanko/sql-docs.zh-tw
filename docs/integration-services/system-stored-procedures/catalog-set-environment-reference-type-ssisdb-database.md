@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 55dc0c5b3cbfb51e15cd0813c87c66e840e592a2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715919"
 ---
 # <a name="catalogsetenvironmentreferencetype-ssisdb-database"></a>catalog.set_environment_reference_type (SSISDB 資料庫)
@@ -40,10 +40,10 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
  要更新之環境參考的唯一識別碼。 *reference_id* 是 **bigint**。  
   
  [ @reference_type = ] *reference_type*  
- 指出環境會位於與專案相同的資料夾 (相對參考) 中，或是在不同的資料夾 (絕對參考) 中。 使用值 `R` 表示相對參考。 使用值 `A` 表示絕對參考。 *reference_type* 是 **char(1)**。  
+ 指出環境會位於與專案相同的資料夾 (相對參考) 中，或是在不同的資料夾 (絕對參考) 中。 使用值 `R` 表示相對參考。 使用值 `A` 表示絕對參考。 *reference_type* 是 **char(1)** 。  
   
  [ @environment_folder_name = ] *environment_folder_name*  
- 環境所在的資料夾。 對於絕對參考來說，這個值是必要值。 *environment_folder_name* 是 **nvarchar(128)**。  
+ 環境所在的資料夾。 對於絕對參考來說，這個值是必要值。 *environment_folder_name* 是 **nvarchar(128)** 。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

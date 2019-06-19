@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2987ac3cb84b2e36fc6e78e7ea0466b30a440f4b
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326289"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62645521"
 ---
 # <a name="deny-asymmetric-key-permissions-transact-sql"></a>DENY 非對稱金鑰權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ DENY { permission  [ ,...n ] }
  *permission*  
  指定非對稱金鑰可以拒絕的權限。 如下所列。  
   
- ON ASYMMETRIC KEY **::**_asymmetric_key_name_  
+ ON ASYMMETRIC KEY **::** _asymmetric_key_name_  
  指定正在拒絕權限的非對稱金鑰。 需要範圍限定詞 "::"。  
   
  *database_principal*  
@@ -105,7 +105,7 @@ DENY { permission  [ ,...n ] }
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要非對稱金鑰的 CONTROL 權限。 如果使用 AS 子句，指定的主體必須擁有非對稱金鑰。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b454197982685882610fc808d9319835053e21bb
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134208"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661068"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>設定快照集屬性 (複寫 Transact-SQL 程式設計)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "54134208"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-snapshot-or-transactional-publication"></a>在建立快照式或交易式發行集時，設定快照集屬性  
   
-1.  在發行者上，執行 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 針對 **@publication**指定發行集名稱、針對 **@repl_freq** 指定 **snapshot** 或 **@repl_freq**的值，並指定下列其中一個或多個快照集相關的參數：  
+1.  在發行者上，執行 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 針對 **@publication** 指定發行集名稱、針對 **@repl_freq** 指定 **snapshot** 或 **@repl_freq** 的值，並指定下列其中一個或多個快照集相關的參數：  
   
     -   **@alt_snapshot_folder** - 如果從該位置 (而不是從快照集預設資料夾) 存取這個發行集的快照集，則指定路徑。    
     -   **@compress_snapshot** - 如果替代快照集資料夾中的快照集檔案壓縮成 **CAB 檔案格式，則指定** true [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 的值。    
@@ -40,7 +40,7 @@ ms.locfileid: "54134208"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-merge-publication"></a>在建立合併式發行集時，設定快照集屬性  
   
-1.  在發行者端，執行 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 針對 **@publication**指定發行集名稱、針對 **@repl_freq** 指定 **snapshot** 或 **@repl_freq**的值，並指定下列其中一個或多個快照集相關的參數：  
+1.  在發行者端，執行 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 針對 **@publication** 指定發行集名稱、針對 **@repl_freq** 指定 **snapshot** 或 **@repl_freq** 的值，並指定下列其中一個或多個快照集相關的參數：  
   
     -   **@alt_snapshot_folder** - 如果從該位置 (而不是從快照集預設資料夾) 存取這個發行集的快照集，則指定路徑。    
     -   **@compress_snapshot** - 如果替代快照集資料夾中的快照集檔案壓縮成 **CAB 檔案格式，則指定** 的值。   
@@ -52,9 +52,9 @@ ms.locfileid: "54134208"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-snapshot-or-transactional-publication"></a>修改現有快照式或交易式發行集的快照集屬性  
   
-1.  在發行集資料庫的發行者上，執行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 針對 **@force_invalidate_snapshot** 或 **@force_invalidate_snapshot** 的值，並針對 **@property**指定下列其中一個值：  
+1.  在發行集資料庫的發行者上，執行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 針對 **@force_invalidate_snapshot** 或 **@force_invalidate_snapshot** 的值，並針對 **@property** 指定下列其中一個值：  
   
-    -   **alt_snapshot_folder** - 也針對 **@value**。    
+    -   **alt_snapshot_folder** - 也針對 **@value** 。    
     -   **compress_snapshot** - 也針對 **CAB 檔案格式，則指定** 指定 **false** 或 **@value** 的值，以指示替代快照集資料夾中的快照集檔案是否壓縮成 CAB 檔案格式。    
     -   **pre_snapshot_script** - 也針對 **@value** 指定在套用初始快照集之前的初始化期間，將於訂閱者上執行之 **.sql** 檔案的檔案名稱和完整路徑。    
     -   **post_snapshot_script** - 也針對 **@value** 指定在套用初始快照集之前的初始化期間，將於訂閱者上執行之 **.sql** 檔案的檔案名稱和完整路徑。    
@@ -69,15 +69,15 @@ ms.locfileid: "54134208"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-merge-publication"></a>修改現有合併式發行集的快照集屬性  
   
-1.  在發行集資料庫的發行者上，執行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)。 針對 **@force_invalidate_snapshot** 或 **@force_invalidate_snapshot** 的值，並針對 **@property**指定下列其中一個值：  
+1.  在發行集資料庫的發行者上，執行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)。 針對 **@force_invalidate_snapshot** 或 **@force_invalidate_snapshot** 的值，並針對 **@property** 指定下列其中一個值：  
   
-    -   **alt_snapshot_folder** - 也針對 **@value**。    
+    -   **alt_snapshot_folder** - 也針對 **@value** 。    
     -   **compress_snapshot** - 也針對 **CAB 檔案格式，則指定** 指定 **false** 或 **@value** 的值，以指示替代快照集資料夾中的快照集檔案是否壓縮成 CAB 檔案格式。    
     -   **pre_snapshot_script** - 也針對 **@value** 指定在套用初始快照集之前的初始化期間，將於訂閱者上執行之 **.sql** 檔案的檔案名稱和完整路徑。    
     -   **post_snapshot_script** - 也針對 **@value** 指定在套用初始快照集之前的初始化期間，將於訂閱者上執行之 **.sql** 檔案的檔案名稱和完整路徑。    
     -   **snapshot_in_defaultfolder** - 也指定 **true** 或 **false** 的值，以指示快照集是否可在非預設位置中使用。  
   
-2.  從命令提示字元執行 [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) 或是啟動快照集代理程式作業來產生新的快照集。 如需詳細資訊，請參閱 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
+2.  從命令提示字元執行 [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) 或是啟動快照集代理程式作業來產生新的快照集。 如需詳細資訊，請參閱 [建立和套用初始快照集](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
 ## <a name="example"></a>範例  
  這個範例會建立使用替代快照集資料夾和壓縮快照集的發行集。  

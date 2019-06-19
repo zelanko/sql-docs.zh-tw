@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: d7335d16f428af13813cea36de6a7de79e1faf95
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795124"
 ---
 # <a name="upgrading-mirrored-instances"></a>升級鏡像執行個體
@@ -83,7 +83,7 @@ ms.locfileid: "66795124"
     > [!IMPORTANT]  
     >  如果鏡像伺服器與主體伺服器之間的地理位置遙遠，輪流升級可能不適合。  
   
-    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：使用 [資料庫屬性] 對話方塊的[鏡像頁面](../../relational-databases/databases/database-properties-mirroring-page.md)，將 [作業模式] 選項變更為 [不具有自動容錯移轉的高安全性 (同步)]。 如需如何存取此頁面的資訊，請參閱[啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)。  
+    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：使用 [資料庫屬性]  對話方塊的[鏡像頁面](../../relational-databases/databases/database-properties-mirroring-page.md)，將 [作業模式]  選項變更為 [不具有自動容錯移轉的高安全性 (同步)]  。 如需如何存取此頁面的資訊，請參閱[啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)。  
   
     -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中：將交易安全性設定為 FULL。 如需詳細資訊，請參閱[在資料庫鏡像工作階段中變更交易安全性 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66795124"
   
 1.  您可以選擇使用下列其中一個方法來回到高效能模式：  
   
-    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：使用 [資料庫屬性] 對話方塊的[鏡像頁面](../../relational-databases/databases/database-properties-mirroring-page.md)，將 [作業模式] 選項變更為 [高效能 (非同步)]。  
+    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：使用 [資料庫屬性]  對話方塊的[鏡像頁面](../../relational-databases/databases/database-properties-mirroring-page.md)，將 [作業模式]  選項變更為 [高效能 (非同步)]  。  
   
     -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中：使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) 將交易安全性設定為 OFF。  
   

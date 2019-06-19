@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 099f576409f4f6052065cf6b3c8fc55bd03bfe03
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105414"
 ---
 # <a name="operator-properties-history-page"></a>操作員屬性 (記錄頁面)
@@ -31,13 +31,13 @@ ms.locfileid: "65105414"
   
 ## <a name="options"></a>選項。  
 **使用電子郵件傳送**  
-最近嘗試發送的電子郵件通知；若此操作員從未發送過電子郵件通知，即是 [(未曾使用電子郵件傳送)]。  
+最近嘗試發送的電子郵件通知；若此操作員從未發送過電子郵件通知，即是 [(未曾使用電子郵件傳送)]  。  
   
 **使用呼叫器傳送**  
-最近嘗試發送的呼叫器通知；若此操作員從未發送過呼叫器通知，即是 [(未曾使用呼叫器功能傳送)]。  
+最近嘗試發送的呼叫器通知；若此操作員從未發送過呼叫器通知，即是 [(未曾使用呼叫器功能傳送)]  。  
   
 **使用 Net Send**  
-最近嘗試使用 net send 發送的通知；若此操作員從未使用過 net send 發送通知，即是 [(未曾使用 Net Send 通知)]。  
+最近嘗試使用 net send 發送的通知；若此操作員從未使用過 net send 發送通知，即是 [(未曾使用 Net Send 通知)]  。  
   
 ## <a name="see-also"></a>另請參閱  
 [運算子](../../ssms/agent/operators.md)  

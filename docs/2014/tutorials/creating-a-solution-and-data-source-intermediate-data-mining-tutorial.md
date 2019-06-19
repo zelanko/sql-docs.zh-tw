@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2f089f487586b6def3d2ddd4eecdbbde1532952b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62855350"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>建立方案與資料來源 (中繼資料採礦教學課程)
@@ -28,7 +28,7 @@ ms.locfileid: "62855350"
   
 1.  開啟 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
-2.  在 [檔案]  功能表中，指向 [新增] ，然後按一下 [專案] 。  
+2.  在 [檔案]  功能表中，指向 [新增]  ，然後按一下 [專案]  。  
   
 3.  從 **[已安裝的範本]** 窗格選取 **[Analysis Services 多維度和資料採礦專案]** 。  
   
@@ -38,23 +38,23 @@ ms.locfileid: "62855350"
   
 ### <a name="to-change-the-instance-where-data-mining-objects-are-stored-optional"></a>變更用於存放資料採礦物件的執行個體 (選擇性)  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，按一下 **[專案]** 功能表上的 **[屬性]**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，按一下 **[專案]** 功能表上的 **[屬性]** 。  
   
-2.  在 [屬性頁]  窗格的左側，按一下 [部署] 。  
+2.  在 [屬性頁]  窗格的左側，按一下 [部署]  。  
   
-3.  確認 **[伺服器]** 的名稱為 **[localhost]**。 如果您要使用不同的執行個體，請輸入執行個體的名稱。 如果您要使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的具名執行個體，請輸入電腦名稱，再輸入執行個體名稱。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+3.  確認 **[伺服器]** 的名稱為 **[localhost]** 。 如果您要使用不同的執行個體，請輸入執行個體的名稱。 如果您要使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的具名執行個體，請輸入電腦名稱，再輸入執行個體名稱。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### <a name="to-change-the-deployment-properties-for-a-project-optional"></a>變更專案的部署屬性 (選擇性)  
   
-1.  在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 **[屬性]**。  
+1.  在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 **[屬性]** 。  
   
      -或-  
   
-     在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的 **[專案]** 功能表上，選取 **[屬性]**。  
+     在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的 **[專案]** 功能表上，選取 **[屬性]** 。  
   
-2.  在 [屬性頁]  窗格的左側，按一下 [部署] 。  
+2.  在 [屬性頁]  窗格的左側，按一下 [部署]  。  
   
-     在 **[選項]** 窗格中，選取 **[部署模式]**，然後將選項設為 **[全部部署]** 以進行覆寫，或是設為 **[只部署變更]** 以更新物件或加入物件。  
+     在 **[選項]** 窗格中，選取 **[部署模式]** ，然後將選項設為 **[全部部署]** 以進行覆寫，或是設為 **[只部署變更]** 以更新物件或加入物件。  
   
 ## <a name="creating-a-data-source"></a>建立資料來源  
  在基本資料採礦教學課程中，您已建立一個 *「資料來源」* (Data source)，其中存放 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫的連接資訊。 請遵循相同的步驟，建立此方案的 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料來源。  

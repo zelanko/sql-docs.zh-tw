@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7c59d3a18c1fd36f82e8ea60e42d1b9f6e2f34c2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084974"
 ---
 # <a name="data-mining-query-interfaces"></a>資料採礦查詢介面
@@ -56,22 +56,22 @@ ms.locfileid: "66084974"
 -   Integration Services 資料採礦元件  
   
 ###  <a name="bkmk_Builder"></a> 預測查詢產生器  
- 預測查詢產生器包含在資料採礦設計師 ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 都有提供) 的 [採礦模型預測] 索引標籤中。  
+ 預測查詢產生器包含在資料採礦設計師 ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 都有提供) 的 [採礦模型預測]  索引標籤中。  
   
  在使用查詢產生器時，可以使用圖形工具來選取採礦模型、加入新的案例資料以及加入預測函數。 預測查詢產生器包含可用來手動修改查詢的文字編輯器，以及簡單**結果**窗格，即可檢視查詢的結果。  
   
 ###  <a name="bkmk_QueryEditor"></a> 查詢編輯器  
- 在 查詢編輯器[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]提供的工具，可用來建置及執行 DMX 查詢。 您可以連接到 SQL Server Analysis Services 的執行個體，然後選取資料庫、採礦結構資料行和採礦模型。 中繼資料總管包含您可以瀏覽的預測函數清單。  
+ 在 查詢編輯器[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]提供的工具，可用來建置及執行 DMX 查詢。 您可以連接到 SQL Server Analysis Services 的執行個體，然後選取資料庫、採礦結構資料行和採礦模型。 中繼資料總管  包含您可以瀏覽的預測函數清單。  
   
 ###  <a name="bkmk_Templates"></a> DMX 範本  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供互動式的 DMX 查詢範本，可用來建立 DMX 查詢。 如果您看不到範本清單，請按一下工具列上的 [檢視]，然後選取 [範本總管]。 若要查看所有 Analysis Services 範本 (包括 DMX、MDX 及 XMLA 的範本)，請按一下 Cube 圖示。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供互動式的 DMX 查詢範本，可用來建立 DMX 查詢。 如果您看不到範本清單，請按一下工具列上的 [檢視]  ，然後選取 [範本總管]  。 若要查看所有 Analysis Services 範本 (包括 DMX、MDX 及 XMLA 的範本)，請按一下 Cube 圖示。  
   
  若要使用範本建立查詢，您可以將範本拖曳到開啟的查詢視窗，也可以按兩下範本，開啟新的連接和新的查詢窗格。  
   
  如需如何根據範本建立預測查詢的範例，請參閱 [根據範本建立單一預測查詢](create-a-singleton-prediction-query-from-a-template.md)。  
   
 > [!WARNING]  
->  適用於 Microsoft Office Excel 的資料採礦增益集也包含許多範本，連同可幫助您撰寫複雜 DMX 陳述式的互動式查詢產生器。 若要使用範本，請在資料採礦用戶端中按一下 [查詢]，再按一下 [進階]。  
+>  適用於 Microsoft Office Excel 的資料採礦增益集也包含許多範本，連同可幫助您撰寫複雜 DMX 陳述式的互動式查詢產生器。 若要使用範本，請在資料採礦用戶端中按一下 [查詢]  ，再按一下 [進階]  。  
   
 ###  <a name="bkmk_SSIS"></a> Integration Services 資料採礦元件  
  您也可以將預測查詢包含為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的一部分。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的下列工作和轉換支援 DMX 預測查詢和 DMX 陳述式的建立及執行。  

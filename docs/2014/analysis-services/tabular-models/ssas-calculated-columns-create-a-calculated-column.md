@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60218cb5f50777ac07e9a2805d224d80bef7975d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066515"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>建立導出資料行 (SSAS 表格式)
@@ -24,11 +24,11 @@ ms.locfileid: "66066515"
   
 #### <a name="to-create-a-new-calculated-column"></a>建立新的導出資料行  
   
-1.  在模型設計師的 [資料檢視] 中，選取您要加入導出資料行的資料表，然後按一下 **[資料行]** 功能表，再按一下 **[加入資料行]**。  
+1.  在模型設計師的 [資料檢視] 中，選取您要加入導出資料行的資料表，然後按一下 **[資料行]** 功能表，再按一下 **[加入資料行]** 。  
   
      **[加入資料行]** 將反白顯示於最右側空白資料行，而且游標會移到公式列。  
   
-     若要在兩個現有的資料行之間建立新資料行，請以滑鼠右鍵按一下現有的資料行，然後按一下 [插入資料行]。  
+     若要在兩個現有的資料行之間建立新資料行，請以滑鼠右鍵按一下現有的資料行，然後按一下 [插入資料行]  。  
   
 2.  在公式列中，執行下列其中一項：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66066515"
   
     -   輸入等號，後面接著 DAX 函數，然後是函數需要的引數和參數。  
   
-    -   按一下函數按鈕 (**fx**)，然後在 [插入函數] 對話方塊中，選取類別目錄和函數，再按一下 [確定]。 在公式列中，輸入函數所需的其餘引數和參數。  
+    -   按一下函數按鈕 (**fx**)，然後在 [插入函數]  對話方塊中，選取類別目錄和函數，再按一下 [確定]  。 在公式列中，輸入函數所需的其餘引數和參數。  
   
 3.  按下 ENTER 鍵接受公式。  
   

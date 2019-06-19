@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2cb929ffc3506d6dcb4a0745c53b47a45fdb469
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62627803"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
@@ -50,9 +50,9 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 `[ @column = ] 'column'` 識別要在其中建立垂直資料分割資料行。 *資料行*已**sysname**，預設值是 NULL。 如果是 NULL 和 `@operation = N'add'`，依預設，會將來源資料表中所有的資料行加入至發行項。 *資料行*不能是 NULL 時*操作*設定為**卸除**。 若要從發行項排除資料行，請執行**sp_mergearticlecolumn**並指定*資料行*並`@operation = N'drop'`要移除的每一個資料行從指定*文章*.  
   
-`[ @operation = ] 'operation'` 這是複寫狀態。 *作業*已**nvarchar(4)**，預設值是 ADD。 **新增**標示複寫的資料行。 **卸除**清除資料行。  
+`[ @operation = ] 'operation'` 這是複寫狀態。 *作業*已**nvarchar(4)** ，預設值是 ADD。 **新增**標示複寫的資料行。 **卸除**清除資料行。  
   
-`[ @schema_replication = ] 'schema_replication'` 指定合併代理程式執行時，將傳播結構描述變更。 *schema_replication*已**nvarchar(5)**，預設值是 FALSE。  
+`[ @schema_replication = ] 'schema_replication'` 指定合併代理程式執行時，將傳播結構描述變更。 *schema_replication*已**nvarchar(5)** ，預設值是 FALSE。  
   
 > [!NOTE]  
 >  只有**假**支援*schema_replication*。  

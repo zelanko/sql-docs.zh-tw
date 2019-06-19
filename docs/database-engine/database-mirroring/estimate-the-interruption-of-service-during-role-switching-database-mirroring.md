@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 574045de5626d3f573988b96dd3c40b3d08df03b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795466"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>預估角色切換期間的服務中斷時間 (資料庫鏡像)

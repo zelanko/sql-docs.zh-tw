@@ -12,10 +12,10 @@ ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 52222f154ccc8068c77b0925f246e738a66721cd
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581252"
 ---
 # <a name="access-report-server-items-using-url-access"></a>使用 URL 存取權存取報表伺服器項目

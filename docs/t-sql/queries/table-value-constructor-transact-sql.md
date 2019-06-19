@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e1a4ca0732a8ce2dda6a3d8d674b1a74940b4c8c
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66198195"
 ---
 # <a name="table-value-constructor-transact-sql"></a>資料表值建構函式 (Transact-SQL)

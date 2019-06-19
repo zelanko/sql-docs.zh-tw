@@ -15,10 +15,10 @@ author: briancarrig
 ms.author: brcarrig
 manager: amitban
 ms.openlocfilehash: e4e0e6622a2a313b85dfa00df8c88044486f75f5
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65994996"
 ---
 # <a name="in-memory-database"></a>記憶體內資料庫

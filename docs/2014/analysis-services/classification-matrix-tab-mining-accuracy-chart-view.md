@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca3471a96a2ad171255f488b255deee55f73e2e0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087952"
 ---
 # <a name="classification-matrix-tab-mining-accuracy-chart-view"></a>分類矩陣索引標籤 (採礦精確度圖表檢視)
-  [分類矩陣] 索引標籤會顯示在 [資料行對應] 索引標籤上的模型方格中選取之每個模型的分類矩陣。只有在 [資料行對應] 索引標籤中選取的可預測資料行不是連續的資料行時，才能使用分類矩陣。 如需更詳細的說明**分類矩陣**索引標籤上，請參閱[測試和驗證&#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)。  
+  [分類矩陣]  索引標籤會顯示在 [資料行對應]  索引標籤上的模型方格中選取之每個模型的分類矩陣。只有在 [資料行對應]  索引標籤中選取的可預測資料行不是連續的資料行時，才能使用分類矩陣。 如需更詳細的說明**分類矩陣**索引標籤上，請參閱[測試和驗證&#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)。  
   
 ## <a name="options"></a>選項  
  **[複製]**  

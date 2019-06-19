@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 28d8279226469b8d7a39c5cf6ec802a393337087
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773580"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>讓可用性群組離線 (SQL Server)
@@ -54,7 +54,7 @@ ms.locfileid: "62773580"
   
      ALTER AVAILABILITY GROUP *group_name* OFFLINE  
   
-     其中 <群組名稱> 是可用性群組的名稱。  
+     其中 <群組名稱>  是可用性群組的名稱。  
   
 ### <a name="example"></a>範例  
  下列範例會讓 `AccountsAG` 可用性群組離線。  
@@ -65,9 +65,9 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 ##  <a name="FollowUp"></a> 後續操作：可用性群組離線之後  
   
--   **OFFLINE 作業記錄：** 起始 OFFLINE 作業所在的 WSFC 節點識別會儲存在 WSFC 叢集記錄檔和 SQL ERRORLOG 中。  
+-   **OFFLINE 作業的記錄：** OFFLINE 作業起始所在的 WSFC 節點身分識別會同時儲存在 WSFC 叢集記錄檔和 SQL ERRORLOG 中。  
   
--   **如果您未在群組離線之前刪除可用性群組接聽程式：** 如果您將可用性群組移轉至另一個 WSFC 叢集，請刪除的 VNN 和 VIP 的接聽程式。 您可以使用容錯移轉叢集管理主控台、 [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) PowerShell Cmdlet 或 [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx)刪除它們。 請注意，cluster.exe 在 Windows 8 中已被取代。  
+-   **如未在群組離線前刪除可用性群組接聽程式：** 如果您要將可用性群組移轉至另一個 WSFC 叢集，請刪除接聽程式的 VNN 和 VIP。 您可以使用容錯移轉叢集管理主控台、 [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) PowerShell Cmdlet 或 [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx)刪除它們。 請注意，cluster.exe 在 Windows 8 中已被取代。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   

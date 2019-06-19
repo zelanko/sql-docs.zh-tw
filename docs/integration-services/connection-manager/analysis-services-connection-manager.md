@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1831108732e6be88e9a21f71c4a2cba2b83d449f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728399"
 ---
 # <a name="analysis-services-connection-manager"></a>Analysis Services 連接管理員
@@ -45,7 +45,7 @@ ms.locfileid: "65728399"
 -   如果您要連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體，請指定驗證模式。  
 
 > [!NOTE]    
->  如果您在 Azure Data Factory (ADF) 中使用 SSIS，並想要連接到 Azure Analysis Services (AAS) 執行個體，您無法使用啟用 Multi-Factor Authentication (MFA) 的帳戶，而必須改用不需要任何互動功能/MFA 的帳戶或服務主體。 若要使用後者，請參閱[這裡](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal)來建立一個並對其指派伺服器管理員角色，然後選取 [使用特定使用者名稱和密碼] 登入您連線管理員中的伺服器，最後輸入 `User name: app:YourApplicationID` 和 `Password: YourAuthorizationKey`。
+>  如果您在 Azure Data Factory (ADF) 中使用 SSIS，並想要連接到 Azure Analysis Services (AAS) 執行個體，您無法使用啟用 Multi-Factor Authentication (MFA) 的帳戶，而必須改用不需要任何互動功能/MFA 的帳戶或服務主體。 若要使用後者，請參閱[這裡](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal)來建立一個並對其指派伺服器管理員角色，然後選取 [使用特定使用者名稱和密碼]  登入您連線管理員中的伺服器，最後輸入 `User name: app:YourApplicationID` 和 `Password: YourAuthorizationKey`。
   
 -   指示是否在執行階段保留從連接管理員建立的連接。  
   

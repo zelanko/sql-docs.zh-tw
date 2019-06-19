@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9475ee323222b800a9c4b9a86e737fdd161e7a60
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102756"
 ---
 # <a name="reporting-services-site-collection-features"></a>Reporting Services 網站集合功能
@@ -27,7 +27,7 @@ ms.locfileid: "66102756"
 |-------------|-----------------|  
 |**報表伺服器管理中心功能**|啟用管理與 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器之整合的功能。 此功能只在 SharePoint 管理中心網站集合中安裝及使用。<br /><br /> 在安裝適用於 SharePoint 產品的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 增益集後，SharePoint 管理中心網站集合中會自動啟用報表伺服器整合功能。 在某些情況下，您必須手動啟動此功能。 若要啟用報表伺服器功能，請使用 SharePoint 管理中心內 [網站設定] 頁面中的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 頁面。<br /><br /> 適用於 SharePoint 產品的 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集 (含) 以後版本將會在安裝此增益集時，針對所有現有的網站集合啟用報表伺服器整合功能。 此外，新的網站集合將會自動啟用這項功能。|  
 |**報表伺服器整合功能**|使用下列方式啟用豐富的報表功能 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> 此功能預設為使用中。|  
-|**Power View 整合功能**|針對 PowerPivot 活頁簿與 Analysis Services 表格式資料庫啟用互動式資料瀏覽及視覺化簡報。<br /><br /> 此功能可透過下列資料來源的操作功能表存取：<br /><br /> .rdlx<br /><br /> .rsds<br /><br /> .bism 連接檔案<br /><br /> <br /><br /> 如果 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 未出現在操作功能表中，請確認已啟用 [Power View 整合功能]。<br /><br /> 此功能預設為停用。|  
+|**Power View 整合功能**|針對 PowerPivot 活頁簿與 Analysis Services 表格式資料庫啟用互動式資料瀏覽及視覺化簡報。<br /><br /> 此功能可透過下列資料來源的操作功能表存取：<br /><br /> .rdlx<br /><br /> .rsds<br /><br /> .bism 連接檔案<br /><br /> <br /><br /> 如果 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 未出現在操作功能表中，請確認已啟用 [Power View 整合功能]  。<br /><br /> 此功能預設為停用。|  
   
 ## <a name="see-also"></a>另請參閱  
  [在 SharePoint 中啟用報表伺服器和 Power View 整合功能](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)   

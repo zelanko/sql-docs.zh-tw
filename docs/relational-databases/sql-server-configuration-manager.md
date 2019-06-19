@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 180a516e355703aaecba57c3764b6077cf87c442
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801002"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62662454"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 組態管理員
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +46,9 @@ ms.locfileid: "56801002"
 >  因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理主控台程式的嵌入式管理單元，而不是獨立的程式，所以 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員在較新版本的 Windows 中不會作為應用程式出現。  
 > 
 >  -   **Windows 10**：  
->          若要開啟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員，請在 **起始頁**上輸入 SQLServerManager13.msc (適用於 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)])。 若為舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，則以較小的數字取代 13。 按一下 SQLServerManager13.msc 即可開啟組態管理員。 若要將組態管理員釘選到起始頁或工作列，請以滑鼠右鍵按一下 SQLServerManager13.msc，然後按一下 [開啟檔案位置]。 在 Windows 檔案總管中，以滑鼠右鍵按一下 SQLServerManager13.msc，然後按一下 [釘選到 [開始] 功能表] 或 [釘選到工作列]。  
+>          若要開啟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員，請在 **起始頁**上輸入 SQLServerManager13.msc (適用於 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)])。 若為舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，則以較小的數字取代 13。 按一下 SQLServerManager13.msc 即可開啟組態管理員。 若要將組態管理員釘選到起始頁或工作列，請以滑鼠右鍵按一下 SQLServerManager13.msc，然後按一下 [開啟檔案位置]  。 在 Windows 檔案總管中，以滑鼠右鍵按一下 SQLServerManager13.msc，然後按一下 [釘選到 [開始] 功能表]  或 [釘選到工作列]  。  
 > -   **Windows 8**：  
->          若要開啟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員，請在 [搜尋] 常用鍵的 [應用程式] 下，鍵入 **SQLServerManager\<版本>.msc** (例如 **SQLServerManager13.msc**)，然後按 **Enter**。  
+>          若要開啟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員，請在 [搜尋]  常用鍵的 [應用程式]  下，鍵入 **SQLServerManager\<版本>.msc** (例如 **SQLServerManager13.msc**)，然後按 **Enter**。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員和 SQL Server Management Studio 利用 Window Management Instrumentation (WMI) 來檢視和變更部份伺服器設定。 WMI 提供統一的方式來協助您連結管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具所要求之登錄作業的 API 呼叫，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員嵌入式管理單元元件的所選 SQL 服務上，它提供了增強的控制和操作功能。 如需設定 WMI 相關權限的相關資訊，請參閱[設定 WMI 在 SQL Server 工具中顯示伺服器狀態](../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)。  
   

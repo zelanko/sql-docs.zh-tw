@@ -14,11 +14,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 56f98831db725a04d7399a49fbe8f6803cbe510c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241396"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64478731"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>第 2 課：設定資料庫物件的權限
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,10 +45,10 @@ ms.locfileid: "59241396"
   
 ### <a name="create-a-new-windows-account"></a>建立新的 Windows 帳戶  
   
-1.  依序按一下 [開始] 和 [執行]，在 [開啟] 方塊中輸入 **%SystemRoot%\system32\compmgmt.msc /s**，然後按一下 [確定] 開啟 [電腦管理] 程式。 
-2.  在 [系統工具] 底下，展開 [本機使用者和群組]，以滑鼠右鍵按一下 [使用者]，然後按一下 [新增使用者]。    
-3.  在 [使用者名稱] 方塊中輸入 **Mary**。    
-4.  在 [密碼] 和 [確認密碼] 方塊中輸入強式密碼，然後按一下 [建立]，建立新的本機 Windows 使用者。  
+1.  依序按一下 [開始]  和 [執行]  ，在 [開啟]  方塊中輸入 **%SystemRoot%\system32\compmgmt.msc /s**，然後按一下 [確定]  開啟 [電腦管理] 程式。 
+2.  在 [系統工具]  底下，展開 [本機使用者和群組]  ，以滑鼠右鍵按一下 [使用者]  ，然後按一下 [新增使用者]  。    
+3.  在 [使用者名稱]  方塊中輸入 **Mary**。    
+4.  在 [密碼]  和 [確認密碼]  方塊中輸入強式密碼，然後按一下 [建立]  ，建立新的本機 Windows 使用者。  
   
 ### <a name="create-a-sql-login"></a>建立 SQL 登入  
 

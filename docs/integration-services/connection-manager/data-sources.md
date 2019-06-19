@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d316864d3dffb26680a503ad1b43bcb4b3ab94a8
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728316"
 ---
 # <a name="data-sources"></a>資料來源
@@ -40,7 +40,7 @@ ms.locfileid: "65728316"
 -   資料來源提供資料來源物件與其封裝參考之間的同步處理。 如果資料來源與參考資料來源的封裝位於同一專案，則資料來源參考的連接字串屬性便會在資料來源變更時自動更新。  
   
 ## <a name="reference-data-sources"></a>參考資料來源  
- 如果要將資料來源物件加入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，請以滑鼠右鍵按一下**方案總管**中的 [資料來源] 資料夾，然後按一下 [新增資料來源]。 項目會隨即加入至 [資料來源] 資料夾。 如果您要使用在其他專案中建立的資料來源物件，您必須先將物件加入專案。  
+ 如果要將資料來源物件加入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，請以滑鼠右鍵按一下**方案總管**中的 [資料來源]  資料夾，然後按一下 [新增資料來源]  。 項目會隨即加入至 [資料來源]  資料夾。 如果您要使用在其他專案中建立的資料來源物件，您必須先將物件加入專案。  
   
  如果您要在封裝中使用資料來源物件，可以將參考該資料來源物件的連接管理員新增至封裝中。 在建立封裝控制流程及資料流程之前，或作為建構控制流程或資料流程程序中的一個步驟，將它新增至封裝中。  
   

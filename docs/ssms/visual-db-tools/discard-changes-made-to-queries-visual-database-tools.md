@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: cb850a92714acfbd4b0f971806f9ac2752c20da9
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095398"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>捨棄對查詢所做的變更 (Visual Database Tools)
@@ -31,9 +31,9 @@ ms.locfileid: "65095398"
   
 ### <a name="to-discard-changes-made-to-a-query-definition"></a>若要捨棄對查詢定義所做的變更  
   
-1.  在查詢和檢視表設計工具中開啟查詢時，從 [檔案] 功能表中按一下 [關閉]。  
+1.  在查詢和檢視表設計工具中開啟查詢時，從 [檔案]  功能表中按一下 [關閉]  。  
   
-2.  在 [Microsoft SQL Server Management Studio] 對話方塊中，按一下 [否]。  
+2.  在 [Microsoft SQL Server Management Studio]  對話方塊中，按一下 [否]  。  
   
     查詢定義會回復為上次儲存時的狀態。  
   

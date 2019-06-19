@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b51c763987fdfe8bbaf08851094a5e6e6d267c36
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66074854"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX 的關鍵概念 (Analysis Services)
@@ -73,7 +73,7 @@ ms.locfileid: "66074854"
   
  總而言之，所有這些概念都是針對 **屬性階層**的概念而建立。 屬性階層是包含下列層級之屬性成員的樹狀結構：  
   
--   包含每個相異屬性成員的分葉層級，分葉層級的每個成員也稱為 **「分葉成員」**。  
+-   包含每個相異屬性成員的分葉層級，分葉層級的每個成員也稱為 **「分葉成員」** 。  
   
 -   中繼層級，如果屬性階層是父子式階層 (稍後將詳細討論)。  
   

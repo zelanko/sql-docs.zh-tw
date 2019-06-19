@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: dbfa8c5acd998fed28546baf8b16af09d3abae07
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66787709"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>選取初始資料同步頁面 (Always On 可用性群組精靈)

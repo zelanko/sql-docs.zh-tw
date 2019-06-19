@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f247f9addde6baa949f3260d7a9d9f86ce0c5bff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66093703"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>其他 Database Engine 升級問題
@@ -27,7 +27,7 @@ ms.locfileid: "66093703"
   
 -   BACKUP LOG 的 NO_LOG 和 TRUNCATE_ONLY 選項  
   
--   BACKUP TRANSACTION   
+-   BACKUP TRANSACTION  
   
 -   RESTORE TRANSACTION  
   

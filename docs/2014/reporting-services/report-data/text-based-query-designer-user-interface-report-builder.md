@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bdd12cf49c86cb9a622c1ac546fd755056b5e357
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106975"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>以文字為基礎的查詢設計工具使用者介面 (報表產生器)
@@ -41,10 +41,10 @@ ms.locfileid: "66106975"
 |**當成文字編輯**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。 並非所有的資料來源類型都支援圖形化查詢設計工具。|  
 |**匯入**|從檔案或報表匯入現有的查詢。 只支援 sql 和 rdl 檔案類型|  
 |![執行查詢](../../analysis-services/media/rsqdicon-run.gif "執行查詢")|執行查詢，並將結果集顯示在 [結果] 窗格中。|  
-|**命令類型**|選取 [Text]、[StoredProcedure] 或 [TableDirect]。 如果預存程序含有參數，當您按一下工具列上的 [執行] 時，便會顯示 [定義查詢參數] 對話方塊，您可以依照需要填入值。<br /><br /> 注意:如果預存程序傳回一個以上的結果集，則只會使用第一個結果集來填入資料集。|  
+|**命令類型**|選取 [Text]  、[StoredProcedure]  或 [TableDirect]  。 如果預存程序含有參數，當您按一下工具列上的 [執行]  時，便會顯示 [定義查詢參數]  對話方塊，您可以依照需要填入值。<br /><br /> 注意:如果預存程序傳回一個以上的結果集，則只會使用第一個結果集來填入資料集。|  
   
 ### <a name="command-type-text"></a>Text 命令類型  
- 當您建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料集時，預設會開啟關聯式查詢設計工具。 若要切換到文字型查詢設計工具，請按一下工具列上的 [當成文字編輯] 切換按鈕。 以文字為基礎的查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 下圖會標示出各個窗格。  
+ 當您建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料集時，預設會開啟關聯式查詢設計工具。 若要切換到文字型查詢設計工具，請按一下工具列上的 [當成文字編輯]  切換按鈕。 以文字為基礎的查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 下圖會標示出各個窗格。  
   
  ![關聯式資料查詢的一般查詢設計工具](../../analysis-services/media/rsqd-dsaw-sql-generic.gif "關聯式資料查詢的一般查詢設計工具")  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66106975"
 |窗格|函數|  
 |----------|--------------|  
 |查詢|顯示 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查詢文字。 使用此窗格，即可撰寫或編輯 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查詢。|  
-|結果|顯示查詢的結果。 若要執行查詢，請以滑鼠右鍵按一下任何窗格，然後按一下 [執行]，或是按一下工具列上的 [執行] 按鈕。|  
+|結果|顯示查詢的結果。 若要執行查詢，請以滑鼠右鍵按一下任何窗格，然後按一下 [執行]  ，或是按一下工具列上的 [執行]  按鈕。|  
   
 #### <a name="example"></a>範例  
  下列查詢會傳回從最後一個名稱的清單[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008年**資料庫`ContactType`適用於資料表`Person`結構描述。  
@@ -62,10 +62,10 @@ ms.locfileid: "66106975"
 SELECT Name FROM Person.ContactType  
 ```  
   
- 當您按一下工具列上的 [執行] 時，[查詢] 窗格中的命令便會執行，而且結果會顯示在 [結果] 窗格中。 結果集會顯示 20 種連絡人類型的清單，例如「擁有者」或「銷售代理人」。  
+ 當您按一下工具列上的 [執行]  時，[查詢]  窗格中的命令便會執行，而且結果會顯示在 [結果]  窗格中。 結果集會顯示 20 種連絡人類型的清單，例如「擁有者」或「銷售代理人」。  
   
 ### <a name="command-type-storedprocedure"></a>StoredProcedure 命令類型  
- 當您選取 [命令類型] [StoredProcedure] 時，文字型查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 請在 [查詢] 窗格內輸入預存程序名稱，然後按一下工具列上的 [執行]。 如果預存程序使用參數，[定義查詢參數] 對話方塊隨即開啟。 為此預存程序輸入參數值。 系統將會針對每一個預存程序輸入參數建立報表參數。  
+ 當您選取 [命令類型] [StoredProcedure]  時，文字型查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 請在 [查詢] 窗格內輸入預存程序名稱，然後按一下工具列上的 [執行]  。 如果預存程序使用參數，[定義查詢參數]  對話方塊隨即開啟。 為此預存程序輸入參數值。 系統將會針對每一個預存程序輸入參數建立報表參數。  
   
  下圖會在您執行預存程序時，顯示 [查詢] 和 [結果] 窗格。 在此情況下，輸入參數是常數。  
   
@@ -76,7 +76,7 @@ SELECT Name FROM Person.ContactType
 |窗格|函數|  
 |----------|--------------|  
 |查詢|顯示預存程序的名稱以及任何輸入參數。|  
-|結果|顯示查詢的結果。 若要執行查詢，請以滑鼠右鍵按一下任何窗格，然後按一下 [執行]，或是按一下工具列上的 [執行] 按鈕。|  
+|結果|顯示查詢的結果。 若要執行查詢，請以滑鼠右鍵按一下任何窗格，然後按一下 [執行]  ，或是按一下工具列上的 [執行]  按鈕。|  
   
 #### <a name="example"></a>範例  
  下列查詢會呼叫[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008年**預存程序`uspGetWhereUsedProductID`。 當您執行查詢時，必須為產品識別碼參數輸入值。  
@@ -85,7 +85,7 @@ SELECT Name FROM Person.ContactType
 uspGetWhereUsedProductID  
 ```  
   
- 按一下 [執行] \(**!**) 按鈕。 提示輸入查詢參數時，請使用下表來輸入值。  
+ 按一下 [執行]  \( **!** ) 按鈕。 提示輸入查詢參數時，請使用下表來輸入值。  
   
 |||  
 |-|-|  
@@ -95,7 +95,7 @@ uspGetWhereUsedProductID
  對於指定的日期，結果集會顯示 13 個產品識別碼 (使用指定的元件編號) 的清單。  
   
 ### <a name="command-type-tabledirect"></a>TableDirect 命令類型  
- 當您選取 [命令類型] [TableDirect] 時，文字型查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 當您輸入資料表並按一下 [執行] 按鈕時，便會傳回該資料表的所有資料行。  
+ 當您選取 [命令類型] [TableDirect]  時，文字型查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 當您輸入資料表並按一下 [執行]  按鈕時，便會傳回該資料表的所有資料行。  
   
 #### <a name="example"></a>範例  
  對於資料來源類型 OLE DB，下列資料集查詢傳回的結果集中的所有連絡人類型[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008年**資料庫。  

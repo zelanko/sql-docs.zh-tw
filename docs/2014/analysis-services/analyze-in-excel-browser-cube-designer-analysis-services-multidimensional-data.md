@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2833fb2ecbbac269442ce149cd5673abedcf83c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062370"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>在 Excel 中進行分析 (瀏覽器索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
@@ -33,7 +33,7 @@ ms.locfileid: "66062370"
   
 4.  按一下功能表列上的 Excel 圖示。  
   
-5.  當系統要求您啟用資料連接時，按一下 **[啟用]**。 Excel 會使用目前的資料連接來開啟，並將樞紐分析表加入工作表中，讓您可以開始瀏覽資料。  
+5.  當系統要求您啟用資料連接時，按一下 **[啟用]** 。 Excel 會使用目前的資料連接來開啟，並將樞紐分析表加入工作表中，讓您可以開始瀏覽資料。  
   
  您現在可透過將事實資料表中的量值拖曳至 [值] 區域，並將維度屬性拖曳至 [資料列] 和 [資料行] 區域，以互動方式建立樞紐分析表。 如果您有階層，可將它們加入至 [資料列] 或 [資料行] 區域。 您可以積存或向下鑽研階層，瀏覽不同層級的事實資料。  
   

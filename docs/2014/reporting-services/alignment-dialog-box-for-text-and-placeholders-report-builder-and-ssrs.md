@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9ef4f2f59698f45f4d0882117abbf2ffc8ae5930
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66110034"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>文字和預留位置的對齊對話方塊 (報表產生器及 SSRS)
   選取 **[對齊]** 索引標籤，可以定位選取之資料格或資料區域內的值。 您只能在文字方塊中格式化個別文字的水平對齊方式。 如果您要在文字方塊上設定填補值或垂直對齊文字的方式，請使用對應的文字方塊屬性。 如需詳細資訊，請參閱 <<c0> [ 文字方塊屬性對話方塊、 對齊&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md)。</c0>  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Horizontal**  
  指定一個值，或輸入一個運算式，評估所選資料格或資料區域內，水平放置文字的位置。 請按一下 **[運算式]** (*fx*) 按鈕來編輯運算式。  
   

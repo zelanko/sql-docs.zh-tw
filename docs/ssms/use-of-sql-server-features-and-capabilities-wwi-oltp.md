@@ -15,15 +15,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2c3fe113514ba44a63bce8b07d14efda865626cf
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088730"
 ---
 # <a name="arguments-for-external-tools"></a>外部工具的引數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-引數是 Studio 環境提供的變數，適用於從 [工具] 功能表中啟動外部工具之時。 您可以使用 [外部工具] 對話方塊，將 [記事本] 之類的外部工具加入 [工具] 功能表中。  
+引數是 Studio 環境提供的變數，適用於從 [工具]  功能表中啟動外部工具之時。 您可以使用 [外部工具]  對話方塊，將 [記事本] 之類的外部工具加入 [工具]  功能表中。  
   
 下表列出外部工具的引數。  
   

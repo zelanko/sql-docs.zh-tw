@@ -15,27 +15,27 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: dad897e09518fa181916676e4a2b4c8a3c14face
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65093751"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>資料行選取對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 讓您在資料庫圖表中變更資料表的 [自訂] 檢視。 [自訂] 檢視只會顯示使用者可識別的資料行屬性。  
   
-在資料表上按一下滑鼠右鍵，然後從快速鍵功能表選擇 [修改自訂檢視]，便會出現此對話方塊。  
+在資料表上按一下滑鼠右鍵，然後從快速鍵功能表選擇 [修改自訂檢視]  ，便會出現此對話方塊。  
   
 ## <a name="options"></a>選項。  
 **可用的資料行**  
-列出存在於已選取資料庫資料表中的所有資料行。 此處所列的資料行相依於資料庫資料表屬性及資料庫類型。 反白顯示所要的資料行，並使用箭號按鈕將資料行移至 [選取的資料行] 方塊。  
+列出存在於已選取資料庫資料表中的所有資料行。 此處所列的資料行相依於資料庫資料表屬性及資料庫類型。 反白顯示所要的資料行，並使用箭號按鈕將資料行移至 [選取的資料行]  方塊。  
   
 **選取的資料行**  
 顯示目前為 [自訂] 檢視所定義的資料行屬性。 使用箭號按鈕將資料行屬性加入 [選取的資料行] 清單，或從該清單移除。  
   
 **箭號控制**  
-使用向上箭號與向下箭號按鈕，在 [選取的資料行] 清單中向上或向下移動反白顯示的資料行。  
+使用向上箭號與向下箭號按鈕，在 [選取的資料行]  清單中向上或向下移動反白顯示的資料行。  
   
 使用 > 和 >> 箭號，將一個或所有屬性加入自訂檢視。  
   

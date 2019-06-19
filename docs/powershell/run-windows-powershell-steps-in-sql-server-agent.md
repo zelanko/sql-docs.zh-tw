@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d9034e88276192c14eb8d7008ced10b7041e40c9
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241197"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64478544"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>在 SQL Server Agent 中執行 Windows PowerShell 步驟
 
@@ -23,11 +23,11 @@ ms.locfileid: "59241197"
 
 使用 SQL Server Agent 在排定的時間執行 SQL Server PowerShell 指令碼。  
   
-**若要從 SQL Server Agent 執行 PowerShell，請使用：**[PowerShell 作業步驟](#PShellJob)、[命令提示字元作業步驟](#CmdExecJob)  
+**若要從 SQL Server Agent 執行 PowerShell，請使用：** [PowerShell 作業步驟](#PShellJob)、[命令提示字元作業步驟](#CmdExecJob)  
   
 > [!IMPORTANT]
 > 有兩個 SQL Server PowerShell 模組：**SqlServer** 和 **SQLPS**。 **SQLPS** 模組隨附於 SQL Server 安裝 (基於回溯相容性)，但不再更新。 最新版 PowerShell 模組是 **SqlServer** 模組。 **SqlServer** 模組包含 **SQLPS** 中 Cmdlet 的更新版本，此外還加入新的 Cmdlet 以支援最新版 SQL 功能。  
-> 舊版 **SqlServer** 模組隨附於 SQL Server Management Studio (SSMS)，但僅限 SSMS 16.x 版。 若要搭配 SSMS 17.0 和更新版本使用 PowerShell，則必須從 PowerShell 資源庫安裝 **SqlServer** 模組。
+> 舊版 **SqlServer** 模組隨附於  SQL Server Management Studio (SSMS)，但僅限 SSMS 16.x 版。 若要搭配 SSMS 17.0 和更新版本使用 PowerShell，則必須從 PowerShell 資源庫安裝 **SqlServer** 模組。
 > 若要安裝 **SqlServer** 模組，請參閱[安裝 SQL Server PowerShell](download-sql-server-ps-module.md)。
 
 
@@ -46,13 +46,13 @@ ms.locfileid: "59241197"
 ##  <a name="PShellJob"></a> 建立 PowerShell 作業步驟  
  **建立 PowerShell 作業步驟**  
   
-1.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]。 如需建立作業的詳細資訊，請參閱＜ [建立作業](../ssms/agent/create-jobs.md)＞。  
+1.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]  。 如需建立作業的詳細資訊，請參閱＜ [建立作業](../ssms/agent/create-jobs.md)＞。  
   
-2.  在 **[作業屬性]** 方塊中，按一下 **[步驟]** 頁面，然後按一下 **[新增]**。  
+2.  在 **[作業屬性]** 方塊中，按一下 **[步驟]** 頁面，然後按一下 **[新增]** 。  
   
 3.  在 **[新增作業步驟]** 對話方塊中，輸入一個作業 **步驟名稱**。  
   
-4.  在 **[類型]** 清單中，按一下 **[PowerShell]**。  
+4.  在 **[類型]** 清單中，按一下 **[PowerShell]** 。  
   
 5.  在 **[執行身分]** 清單中，選取具有作業將會使用之認證的 Proxy 帳戶。  
   
@@ -63,13 +63,13 @@ ms.locfileid: "59241197"
 ##  <a name="CmdExecJob"></a> 建立命令提示字元作業步驟  
  **建立 CmdExec 作業步驟**  
   
-1.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]。 如需建立作業的詳細資訊，請參閱＜ [建立作業](../ssms/agent/create-jobs.md)＞。  
+1.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]  。 如需建立作業的詳細資訊，請參閱＜ [建立作業](../ssms/agent/create-jobs.md)＞。  
   
-2.  在 **[作業屬性]** 方塊中，按一下 **[步驟]** 頁面，然後按一下 **[新增]**。  
+2.  在 **[作業屬性]** 方塊中，按一下 **[步驟]** 頁面，然後按一下 **[新增]** 。  
   
 3.  在 **[新增作業步驟]** 對話方塊中，輸入一個作業 **步驟名稱**。  
   
-4.  在 [類型] 清單中，選擇 [作業系統 (CmdExec)]。  
+4.  在 [類型]  清單中，選擇 [作業系統 (CmdExec)]  。  
   
 5.  在 **[執行身分]** 清單中，選取具有作業將會使用之認證的 Proxy 帳戶。 根據預設，CmdExec 作業步驟會以 SQL Server Agent 服務帳戶的身分執行。  
   

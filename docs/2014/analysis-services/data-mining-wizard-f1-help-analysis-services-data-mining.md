@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44fd7290f48c995ae9cfc92476f1a33fbdc0e8be
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086305"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>資料採礦精靈 F1 說明 (Analysis Services - 資料採礦)
@@ -52,7 +52,7 @@ ms.locfileid: "66086305"
   
 -   將資料分割成培訓集和測試集。  
   
--   完成 **[資料採礦精靈]**。  
+-   完成 **[資料採礦精靈]** 。  
   
  在建立採礦結構和選擇性的採礦模型之後，可以使用 **[資料採礦設計師]** 來修改其屬性。  
   

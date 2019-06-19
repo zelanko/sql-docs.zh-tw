@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489275"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>工作 4 (選擇性)：結合、比對及發行新的資料集
@@ -78,7 +78,7 @@ ms.locfileid: "65489275"
   
 22. 將工作表資料行對應至定義域，如下表所示。  
   
-    |工作表資料行|網域|  
+    |工作表資料行|Domain|  
     |----------------------|------------|  
     |Code (您已上傳供應商識別碼當做 MDS 中供應商實體的代碼)|Supplier ID|  
     |Name (您已上傳供應商名稱當做 MDS 中供應商實體的名稱)|Supplier Name|  
@@ -88,13 +88,13 @@ ms.locfileid: "65489275"
   
 24. 輸入**70%** 做為**權數**如**Supplier Name**和**30%** 為**權數**針對**Contact Email**映像所示。  
   
-25. 按一下 [確定] 。  
+25. 按一下 [確定]  。  
   
 26. 比對程序應該識別出具有**程式碼：S1**。  
   
      ![Excel-比對結果](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel-比對結果")  
   
-27. 選取 **重複的資料列 （橘色）**，按一下滑鼠右鍵，然後按一下**刪除**刪除的資料列。  
+27. 選取 **重複的資料列 （橘色）** ，按一下滑鼠右鍵，然後按一下**刪除**刪除的資料列。  
   
 28. 刪除**CLUSTER_ID**資料行，因為您不再需要它。  
   
@@ -111,6 +111,6 @@ ms.locfileid: "65489275"
 34. 現在，關閉**Book1-Microsoft Excel**視窗，而不用儲存檔案。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 5:從 Excel 建立的網域屬性](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
+ [工作 5：從 Excel 建立的網域屬性](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
   
   

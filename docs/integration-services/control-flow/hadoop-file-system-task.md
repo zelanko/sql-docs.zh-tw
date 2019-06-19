@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ffb3559a379a8d1f64c76072f262b89d41164533
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727627"
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop 檔案系統工作
@@ -27,12 +27,12 @@ ms.locfileid: "65727627"
 
   Hadoop 檔案系統工作可讓 SSIS 封裝在 Hadoop 叢集內進行檔案複製。  
   
- 若要加入 Hadoop 檔案系統工作，請將其拖放至設計工具。 然後在工作上按兩下，或按一下滑鼠右鍵，再按 編輯，以開啟 Hadoop 檔案系統工作編輯器) 對話方塊。  
+ 若要加入 Hadoop 檔案系統工作，請將其拖放至設計工具。 然後在工作上按兩下，或按一下滑鼠右鍵，再按 編輯  ，以開啟 Hadoop 檔案系統工作編輯器)  對話方塊。  
   
  ![Hadoop 檔案系統工作編輯器](../../integration-services/control-flow/media/hadoop-filesystem-task.png "Hadoop 檔案系統工作編輯器")  
   
 ## <a name="options"></a>選項。  
- 在 Hadoop 檔案系統工作編輯器) 對話方塊中設定下列選項。  
+ 在 Hadoop 檔案系統工作編輯器)  對話方塊中設定下列選項。  
   
 |欄位|Description|  
 |-----------|-----------------|  

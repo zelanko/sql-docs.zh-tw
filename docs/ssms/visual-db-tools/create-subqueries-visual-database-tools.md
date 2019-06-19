@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 4350a2da2a6858d776973614302d73ad3cae3f94
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095638"
 ---
 # <a name="create-subqueries-visual-database-tools"></a>建立子查詢 (Visual Database Tools)
@@ -32,9 +32,9 @@ ms.locfileid: "65095638"
   
 1.  建立主查詢。  
   
-2.  在 [SQL] 窗格中選取 SQL 陳述式，然後使用 [複製] 將查詢移至 [剪貼簿]。  
+2.  在 [SQL] 窗格中選取 SQL 陳述式，然後使用 [複製]  將查詢移至 [剪貼簿]。  
   
-3.  起始新的查詢，然後使用 [貼上] 將第一個查詢移至新查詢的 WHERE 或 FROM 子句。  
+3.  起始新的查詢，然後使用 [貼上]  將第一個查詢移至新查詢的 WHERE 或 FROM 子句。  
   
     例如，假設您有兩個資料表 `products` 和 `suppliers`，並且想建立顯示 Sweden 供應商的所有產品的查詢。 請先在 `suppliers` 資料表建立第一個查詢，以找出所有的 Swedish 供應商：  
   

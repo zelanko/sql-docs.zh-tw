@@ -12,10 +12,10 @@ ms.author: jroth
 manager: jroth
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 9832f71c9a898d1d0f5a1ddc6b6c6ef047b95869
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794508"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>資料庫引擎的新功能 - SQL Server 2017
