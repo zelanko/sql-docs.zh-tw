@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 281bbda38a6711efd4e2ffae7afbfa17d689254b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057210"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>ODBC 目的地編輯器 (連接管理員頁面)
@@ -30,9 +30,9 @@ ms.locfileid: "66057210"
   
 -   在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，開啟具有 ODBC 目的地的 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 封裝。  
   
--   在 [資料流程] 索引標籤中，按兩下 ODBC 目的地。  
+-   在 [資料流程]  索引標籤中，按兩下 ODBC 目的地。  
   
--   在 **[ODBC 目的地編輯器]** 中，按一下 **[連接管理員]**。  
+-   在 **[ODBC 目的地編輯器]** 中，按一下 **[連接管理員]** 。  
   
 ## <a name="options"></a>選項  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66057210"
  從清單中選取現有的 ODBC 連接管理員，或按一下 [新增] 建立新的連接。 此連接可以指向任何 ODBC 支援的資料庫。  
   
 ### <a name="new"></a>新增  
- 按一下 **[新增]**。 **[設定 ODBC 連接管理員編輯器]** 對話方塊隨即開啟，讓您能夠建立新的連接管理員。  
+ 按一下 **[新增]** 。 **[設定 ODBC 連接管理員編輯器]** 對話方塊隨即開啟，讓您能夠建立新的連接管理員。  
   
 ### <a name="data-access-mode"></a>資料存取模式  
  選取將資料載入目的地的方法。 下表將顯示這些選項：  

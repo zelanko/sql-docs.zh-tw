@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e26bc62f0e6b81b7b4ac8e1361d0a1ac31513ef6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63137059"
 ---
 # <a name="extended-events-tools"></a>擴充事件工具
@@ -27,7 +27,7 @@ ms.locfileid: "63137059"
   
 -   動態管理檢視、目錄檢視和系統資料表。 這些可讓您使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式取得工作階段資料和中繼資料。 系統資料表可幫助您判定 SQL 追蹤事件類別與資料行的現有「擴充事件」對等項目。  
   
--   [物件總管] 的 [擴充事件] 節點。 這可讓您啟動、停止或刪除工作階段，或是匯入及匯出工作階段範本。  
+-   [物件總管] 的 [擴充事件]  節點。 這可讓您啟動、停止或刪除工作階段，或是匯入及匯出工作階段範本。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者。 這是一項功能強大的工具，可讓您用來建立、更改和管理「擴充事件」工作階段。 如需詳細資訊，請參閱 [針對擴充事件使用 PowerShell 提供者](use-the-powershell-provider-for-extended-events.md)。  
   

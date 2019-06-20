@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e8695c847e6c5efce1869d55ec68e17bdee5800
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62683986"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
@@ -72,9 +72,9 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @shutdown_agent = ] shutdown_agent` 如果 「 散發代理程式在執行**sp_table_validation**，指定是否 「 散發代理程式應該立即關閉驗證完成時。 *shutdown_agent*已**位元**，預設值是**0**。 如果**0**，複寫代理程式不會關機。 如果**1**，就會引發錯誤 20578 和複寫代理程式收到關閉信號。 會忽略這個參數時**sp_table_validation**直接由使用者執行。  
   
-`[ @table_name = ] table_name` 是輸出訊息所用之檢視的資料表名稱。 *table_name*已**sysname**，預設值是**@table**。  
+`[ @table_name = ] table_name` 是輸出訊息所用之檢視的資料表名稱。 *table_name*已**sysname**，預設值是 **@table** 。  
   
-`[ @column_list = ] 'column_list'` 是應該使用總和檢查碼函式中的資料行清單。 *column_list*已**nvarchar(4000)**，預設值是 NULL。 啟用合併發行項驗證來指定排除計算和時間戳記資料行的資料行清單。  
+`[ @column_list = ] 'column_list'` 是應該使用總和檢查碼函式中的資料行清單。 *column_list*已**nvarchar(4000)** ，預設值是 NULL。 啟用合併發行項驗證來指定排除計算和時間戳記資料行的資料行清單。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  如果執行總和檢查碼驗證及預期的總和檢查碼等於資料表中的總和檢查碼**sp_table_validation**傳回資料表通過總和檢查碼驗證的訊息。 否則，它會傳回一則訊息來說明資料表可能不會同步處理，且會報告預期資料列數和實際資料列數的差異。  

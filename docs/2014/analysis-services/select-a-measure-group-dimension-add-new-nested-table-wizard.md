@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e249e2e8a9bccdeddb32bf0f8302d478d08adf1e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069784"
 ---
 # <a name="select-a-measure-group-dimension-add-new-nested-table-wizard"></a>選取量值群組維度 (加入新的巢狀資料表精靈)
-  使用 [選取量值群組維度] 頁面，即可在量值群組中選取要作為巢狀資料表的維度。  
+  使用 [選取量值群組維度]  頁面，即可在量值群組中選取要作為巢狀資料表的維度。  
   
- **如需詳細資訊：**[資料採礦精靈 &#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
+ **如需詳細資訊：** [資料採礦精靈 &#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **量值群組**  
  從量值群組維度中選取巢狀資料表。  
   

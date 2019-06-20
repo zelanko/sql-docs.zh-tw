@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e6a94ff3a40a4c2287f9870222c94ec22e611a7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108264"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>地圖經線屬性對話方塊、標籤
@@ -29,7 +29,7 @@ ms.locfileid: "66108264"
   
  按一下 **[運算式]** (*fx*) 按鈕來編輯設定選項值的運算式。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Interval**  
  輸入指定經線之間間隔的整數值 (以度數為單位)。 根據預設，會選取 **[自動]** 。 **[自動]** 表示此值由空間資料自動決定。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66108264"
  選取此選項即可顯示經線的標籤。  
   
  **放置**  
- 選取要顯示相對於檢視區上方、中間與下方之標籤的位置。 預設位置為 **[靠近]**。  
+ 選取要顯示相對於檢視區上方、中間與下方之標籤的位置。 預設位置為 **[靠近]** 。  
   
 -   **靠近** ：在左邊緣顯示標籤。  
   

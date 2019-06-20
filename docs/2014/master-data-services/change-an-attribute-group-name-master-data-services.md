@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 07642b9a47d23893e67ff035e9967b940aedb813
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483588"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>變更屬性群組名稱 (Master Data Services)
@@ -31,13 +31,13 @@ ms.locfileid: "65483588"
   
 ### <a name="to-change-an-attribute-group-name"></a>若要變更屬性群組名稱  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
 2.  在 **模型檢視**頁面上，從功能表列指向**管理**，按一下 **屬性群組**。  
   
 3.  從 **[模型]** 清單中選取模型。  
   
-4.  從 [實體] 清單中選取實體。  
+4.  從 [實體]  清單中選取實體。  
   
 5.  按一下加號，展開**分葉群組**，**合併群組**，或**集合群組**，取決於您想要更新的群組類型。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "65483588"
   
 8.  在 **分葉群組名稱** 方塊中，**合併群組名稱** 方塊中，或**集合群組名稱**方塊中，輸入屬性群組的更新的名稱。  
   
-9. 按一下 [儲存群組]。  
+9. 按一下 [儲存群組]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性群組 &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   

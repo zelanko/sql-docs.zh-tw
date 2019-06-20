@@ -11,24 +11,24 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 757c70398afe0f88d535b6853abe29b79e9617bc
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482560"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>篩選對話方塊 (適用於 Excel 的 MDS 增益集)
-  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，若要在將 MDS 管理的資料載入 Excel 之前縮小資料的範圍，請使用 [篩選] 對話方塊。  
+  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，若要在將 MDS 管理的資料載入 Excel 之前縮小資料的範圍，請使用 [篩選]  對話方塊。  
   
  此對話方塊包含三個區段：**資料行**，**資料列**，以及**摘要**。  
   
 ## <a name="columns"></a>[資料行]  
- 使用 [資料行] 區段可決定您想要在 Excel 中顯示的屬性 (資料行)。  
+ 使用 [資料行]  區段可決定您想要在 Excel 中顯示的屬性 (資料行)。  
   
 |控制項名稱|描述|  
 |------------------|-----------------|  
-|屬性類型|屬性類型會描述您想要使用的成員類型。 在大多數情況下，這種類型是 [分葉]。 如需成員類型的詳細資訊，請參閱[成員 &#40;Master Data Services&#41;](../members-master-data-services.md)。|  
-|明確階層|如果您選擇 [合併] 屬性類型，請選擇這些合併成員所屬的階層。 如需詳細資訊，請參閱[明確階層 &#40;Master Data Services&#41;](../explicit-hierarchies-master-data-services.md)。|  
+|屬性類型|屬性類型會描述您想要使用的成員類型。 在大多數情況下，這種類型是 [分葉]  。 如需成員類型的詳細資訊，請參閱[成員 &#40;Master Data Services&#41;](../members-master-data-services.md)。|  
+|明確階層|如果您選擇 [合併]  屬性類型，請選擇這些合併成員所屬的階層。 如需詳細資訊，請參閱[明確階層 &#40;Master Data Services&#41;](../explicit-hierarchies-master-data-services.md)。|  
 |屬性群組|屬性群組是將屬性子集分組的方式。 如果您想要顯示可用屬性的子集，請選擇屬性群組。 如需屬性群組的詳細資訊，請參閱[屬性群組 &#40;Master Data Services&#41;](../attribute-groups-master-data-services.md)。|  
 |全選|按一下即可選取清單中顯示的所有屬性。|  
 |全部清除|按一下即可清除清單中顯示的選取屬性。<br /><br /> 注意:您無法清除 **Name** 和 **Code**。|  
@@ -36,28 +36,28 @@ ms.locfileid: "65482560"
 |向下箭號|按一下即可將選取的屬性在清單中向下移動。 由上至下順序會對應至資料行在工作表中顯示的由左至右順序。|  
   
 ## <a name="rows"></a>資料列  
- 使用 [資料列] 區段可決定您想要在 Excel 中顯示的成員 (資料列)。 您可以透過定義準則進行此作業，以便篩選即將顯示的資料列。  
+ 使用 [資料列]  區段可決定您想要在 Excel 中顯示的成員 (資料列)。 您可以透過定義準則進行此作業，以便篩選即將顯示的資料列。  
   
 |控制項名稱|描述|  
 |------------------|-----------------|  
 |屬性|顯示您想要據以篩選的屬性。 如果沒有列出任何屬性，這是因為尚未新增屬性。<br /><br /> 注意:您可以篩選由您不想要顯示工作表中的屬性。|  
 |運算子|顯示對應至已選取之屬性類型的運算子。 如需詳細資訊，請參閱[篩選運算子 &#40;Master Data Services&#41;](../filter-operators-master-data-services.md)。|  
 |準則|您想要據以篩選的準則。|  
-|更新摘要|使用大型資料集時，按一下即可使用即將載入之資料量的詳細資料來更新 [摘要] 區段。|  
-|加入|如果您按一下 [資料行] 區段中的屬性，然後按一下 [加入]，屬性就會加入篩選清單中。|  
+|更新摘要|使用大型資料集時，按一下即可使用即將載入之資料量的詳細資料來更新 [摘要]  區段。|  
+|加入|如果您按一下 [資料行]  區段中的屬性，然後按一下 [加入]  ，屬性就會加入篩選清單中。|  
 |全部移除|從清單中移除所有篩選。|  
 |移除|從清單中移除選取的篩選。|  
   
 ## <a name="summary"></a>總結  
- 使用 [摘要] 區段即可在載入之前檢視即將載入之資料量的相關詳細資料。  
+ 使用 [摘要]  區段即可在載入之前檢視即將載入之資料量的相關詳細資料。  
   
 |控制項名稱|描述|  
 |------------------|-----------------|  
 |[模型]|模型的名稱。|  
 |版本|版本的名稱。|  
 |實體|實體的名稱。|  
-|資料列|根據 [資料列] 區段中套用的篩選，即將載入 Excel 中的資料列數目。|  
-|[資料行]|根據 [資料行] 區段中選取的屬性，即將載入 Excel 中的資料行數目。|  
+|資料列|根據 [資料列]  區段中套用的篩選，即將載入 Excel 中的資料列數目。|  
+|[資料行]|根據 [資料行]  區段中選取的屬性，即將載入 Excel 中的資料行數目。|  
   
 ## <a name="see-also"></a>另請參閱  
  [載入之前篩選資料&#40;MDS 增益集的 Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)   

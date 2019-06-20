@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71eabff4c4caf79718fee8e29c675636b6034205
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056806"
 ---
 # <a name="package-roles-dialog-box-ui-reference"></a>封裝角色對話方塊 UI 參考
-  使用 [封裝角色] 對話方塊 (可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中使用)，即可指定擁有封裝之讀取權限的資料庫層級角色以及擁有封裝之寫入權限的資料庫層級角色。 資料庫層級角色僅適用於儲存在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb** 資料庫中的封裝。  
+  使用 [封裝角色]  對話方塊 (可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中使用)，即可指定擁有封裝之讀取權限的資料庫層級角色以及擁有封裝之寫入權限的資料庫層級角色。 資料庫層級角色僅適用於儲存在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb** 資料庫中的封裝。  
   
  若要深入了解 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 資料庫層級角色及其權限，請參閱 [Integration Services 角色 &#40;SSIS 服務&#41;](security/integration-services-roles-ssis-service.md)。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "66056806"
   
  **sysssispackages** 資料表中的 **ownersid** 資料行列出建立封裝之使用者的唯一安全性識別碼。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **封裝名稱**  
  指定封裝的名稱。  
   

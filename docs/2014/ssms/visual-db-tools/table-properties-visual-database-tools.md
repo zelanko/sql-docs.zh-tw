@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204694"
 ---
 # <a name="table-properties-visual-database-tools"></a>資料表屬性 (Visual Database Tools)
@@ -44,7 +44,7 @@ ms.locfileid: "63204694"
  顯示選取資料表的資料來源名稱。  
   
  **說明**  
- 顯示選取資料表的描述。 若要查看或編輯整個描述，請按一下 [描述]，然後按一下屬性右側的省略符號 **(...)**。  
+ 顯示選取資料表的描述。 若要查看或編輯整個描述，請按一下 [描述]，然後按一下屬性右側的省略符號 **(...)** 。  
   
  **結構描述**  
  顯示此資料表所屬結構描述的名稱 (只適用於 Microsoft SQL Server)。  
@@ -65,7 +65,7 @@ ms.locfileid: "63204694"
  顯示是否已在其他位置複寫資料表。  
   
  **規則資料空間規格分類**  
- 展開以顯示 **(資料空間類型)**、 **檔案群組或資料分割配置名稱**及 **資料分割資料行清單**的屬性。  
+ 展開以顯示 **(資料空間類型)** 、 **檔案群組或資料分割配置名稱**及 **資料分割資料行清單**的屬性。  
   
  **(資料空間類型)**  
  顯示此資料表是否使用檔案群組或資料分割配置加以儲存。  

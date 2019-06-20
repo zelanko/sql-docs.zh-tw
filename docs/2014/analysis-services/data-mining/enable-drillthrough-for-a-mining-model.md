@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06ce3967bf9258e9b8f6cd4a28cb28a29a1e0588
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084536"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>針對採礦模型啟用鑽研
@@ -38,21 +38,21 @@ ms.locfileid: "66084536"
   
 ### <a name="to-enable-drillthrough-on-a-mining-model"></a>針對採礦模型啟用鑽研  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，於資料採礦設計師的 [採礦模型] 索引標籤上，以滑鼠右鍵按一下您想要啟用鑽研之採礦模型的名稱，然後選取 [屬性]。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，於資料採礦設計師的 [採礦模型]  索引標籤上，以滑鼠右鍵按一下您想要啟用鑽研之採礦模型的名稱，然後選取 [屬性]  。  
   
-2.  在 [屬性] 視窗中，按一下 [AllowDrillThrough]，然後選取 [True]。  
+2.  在 [屬性]  視窗中，按一下 [AllowDrillThrough]  ，然後選取 [True]  。  
   
-3.  在 [採礦模型] 索引標籤中，以滑鼠右鍵按一下模型，然後選取 [處理模型]。  
+3.  在 [採礦模型]  索引標籤中，以滑鼠右鍵按一下模型，然後選取 [處理模型]  。  
   
 ### <a name="to-enable-caching-for-a-mining-structure"></a>針對採礦結構啟用快取  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，於資料採礦設計師的 [採礦結構] 索引標籤上，以滑鼠右鍵按一下採礦結構的名稱。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，於資料採礦設計師的 [採礦結構]  索引標籤上，以滑鼠右鍵按一下採礦結構的名稱。  
   
-2.  開啟 [屬性] 視窗。  
+2.  開啟 [屬性]  視窗。  
   
-3.  在 [屬性] 視窗中，找出 **CacheMode** 屬性，然後從清單中選取 [KeepTrainingCases]。  
+3.  在 [屬性]  視窗中，找出 **CacheMode** 屬性，然後從清單中選取 [KeepTrainingCases]  。  
   
-4.  在 [資料庫] 功能表中，選取 [處理]。  
+4.  在 [資料庫]  功能表中，選取 [處理]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [鑽研查詢 &#40;資料採礦&#41;](drillthrough-queries-data-mining.md)  

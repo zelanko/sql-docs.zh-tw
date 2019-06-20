@@ -20,10 +20,10 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d56d0c69b9e3bae87dda9b55d241a1c040210ca9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62637467"
 ---
 # <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
@@ -44,7 +44,7 @@ ms.locfileid: "62637467"
 |NAME |sysname |外部程式庫的名稱。 是每個擁有者在資料庫內唯一的。|
 |principal_id |ssNoversion |擁有這個外部程式庫的主體識別碼。 |
 |language | sysname | 支援的外部程式庫的執行階段之語言的名稱。 有效值為 'R'、 'Python' 和 'Java'。 其他的執行階段可能會在未來新增。|
-|範圍 (scope) |ssNoversion |公用的範圍內; 01 代表私用範圍 |  
+|scope |ssNoversion |公用的範圍內; 01 代表私用範圍 |  
 |scope_desc |varchar(7) |指出封裝是否為公用或私用|
 
 ## <a name="see-also"></a>另請參閱  

@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_8680 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 8680 (Database Engine error)
 ms.assetid: 79f7270e-e4df-4f4e-bc78-2dcad6a9f140
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51b69c7092a81fd84cc586e79dbb201c69c668ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62912595"
 ---
 # <a name="mssqlserver8680"></a>MSSQLSERVER_8680
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>詳細資料  
   
 |||  
@@ -34,8 +33,9 @@ ms.locfileid: "62912595"
 |訊息文字|內部查詢處理器錯誤:查詢處理器在處理遠端查詢階段時發現意外的錯誤。|  
   
 ## <a name="explanation"></a>說明  
-內部查詢處理錯誤。  
+ 內部查詢處理錯誤。  
   
 ## <a name="user-action"></a>使用者動作  
-請使用錯誤、追蹤或傾印 (如果有的話) 的描述來連絡 Microsoft 客戶服務及支援中心 (CSS)。  
+ 請使用錯誤、追蹤或傾印 (如果有的話) 的描述來連絡 Microsoft 客戶服務及支援中心 (CSS)。  
+  
   

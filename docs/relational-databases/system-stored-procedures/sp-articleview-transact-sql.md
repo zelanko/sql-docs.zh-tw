@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 10c46ac2ff35d73453976a91276246d3e810e425
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997979"
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview (Transact-SQL)
@@ -51,7 +51,7 @@ sp_articleview [ @publication = ] 'publication'
   
 `[ @article = ] 'article'` 是發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
   
-`[ @view_name = ] 'view_name'` 是定義已發行的發行項之檢視的名稱。 *view_name*已**nvarchar(386)**，預設值是 NULL。  
+`[ @view_name = ] 'view_name'` 是定義已發行的發行項之檢視的名稱。 *view_name*已**nvarchar(386)** ，預設值是 NULL。  
   
 `[ @filter_clause = ] 'filter_clause'` 是一項限制會定義水平篩選 (WHERE) 子句。 當輸入限制子句時，請省略 WHERE 關鍵字。 *filter_clause*已**ntext**，預設值是 NULL。  
   

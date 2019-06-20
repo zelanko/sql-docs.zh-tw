@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e1246119b72890bc80125034c8ee23bcd0c221b5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067587"
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>設定預設的資料模型和部署屬性 (SSAS 表格式)
@@ -27,9 +27,9 @@ ms.locfileid: "66067587"
   
 #### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>若要針對新的模型專案設定預設相容性層級屬性設定  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，按一下 **[工具]** 功能表，然後按一下 **[選項]**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，按一下 **[工具]** 功能表，然後按一下 **[選項]** 。  
   
-2.  在 **[選項]** 對話方塊中，展開 **[Analysis Services 表格式設計師]**，然後按一下 **[相容性層級]**。  
+2.  在 **[選項]** 對話方塊中，展開 **[Analysis Services 表格式設計師]** ，然後按一下 **[相容性層級]** 。  
   
 3.  設定下列屬性設定：  
   
@@ -40,9 +40,9 @@ ms.locfileid: "66067587"
   
 #### <a name="to-configure-the-default-deployment-server-property-setting-for-new-model-projects"></a>若要針對新的模型專案設定預設部署伺服器屬性設定  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，按一下 **[工具]** 功能表，然後按一下 **[選項]**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，按一下 **[工具]** 功能表，然後按一下 **[選項]** 。  
   
-2.  在 **[選項]** 對話方塊中，展開 **[Analysis Services 表格式設計師]**，然後按一下 **[部署]**。  
+2.  在 **[選項]** 對話方塊中，展開 **[Analysis Services 表格式設計師]** ，然後按一下 **[部署]** 。  
   
 3.  設定下列屬性設定：  
   
@@ -55,9 +55,9 @@ ms.locfileid: "66067587"
   
 ###  <a name="bkmk_conf_default"></a> 若要針對新的模型專案設定預設工作空間資料庫屬性設定  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，按一下 **[工具]** 功能表，然後按一下 **[選項]**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，按一下 **[工具]** 功能表，然後按一下 **[選項]** 。  
   
-2.  在 **[選項]** 對話方塊中，展開 **[Analysis Services 表格式設計師]**，然後按一下 **[工作空間資料庫]**。  
+2.  在 **[選項]** 對話方塊中，展開 **[Analysis Services 表格式設計師]** ，然後按一下 **[工作空間資料庫]** 。  
   
 3.  設定下列屬性設定：  
   

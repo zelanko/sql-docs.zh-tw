@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150797"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoring Performance By Using the Query Store
@@ -32,11 +32,11 @@ ms.locfileid: "63150797"
   
 #### <a name="by-using-the-query-store-page-in-management-studio"></a>使用 Management Studio 中的查詢存放區頁面  
   
-1.  在物件總管中，於伺服器上按一下滑鼠右鍵，然後按一下 [屬性] 。 (需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]2016 版本。)  
+1.  在物件總管中，於伺服器上按一下滑鼠右鍵，然後按一下 [屬性]  。 (需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]2016 版本。)  
   
 2.  在 [資料庫屬性]  對話方塊中，選取 [查詢存放區]  頁面。  
   
-3.  在 [啟用]  方塊中，選取 [True] 。  
+3.  在 [啟用]  方塊中，選取 [True]  。  
   
 #### <a name="by-using-transact-sql-statements"></a>使用 Transact-SQL 陳述式  
   
@@ -90,7 +90,7 @@ JOIN sys.query_store_query_text AS Txt
   
  ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
   
- 選取 [迴歸查詢] ，開啟 **中的 [迴歸查詢]**[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]窗格。 [迴歸查詢] 窗格會顯示查詢存放區中的查詢與計劃。 頂端的下拉式清單方塊，可供您依據各種條件選取查詢。 選取計劃即可以圖形方式檢視查詢計劃。 提供有按鈕可供檢視來源查詢、強制執行或取消強制執行查詢計劃，以及重新整理顯示畫面。  
+ 選取 [迴歸查詢]  ，開啟 **中的 [迴歸查詢]** [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]窗格。 [迴歸查詢] 窗格會顯示查詢存放區中的查詢與計劃。 頂端的下拉式清單方塊，可供您依據各種條件選取查詢。 選取計劃即可以圖形方式檢視查詢計劃。 提供有按鈕可供檢視來源查詢、強制執行或取消強制執行查詢計劃，以及重新整理顯示畫面。  
   
  ![RegressedQueries](../../database-engine/media/regressedqueries.PNG "RegressedQueries")  
   

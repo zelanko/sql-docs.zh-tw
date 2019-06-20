@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85eb934b93d22acc2534d1eb34aa967cbb4f2714
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774250"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>檢視記錄傳送報表 (SQL Server Management Studio)
@@ -43,9 +43,9 @@ ms.locfileid: "62774250"
   
 1.  連接到監視伺服器、主要伺服器或次要伺服器。  
   
-2.  以滑鼠右鍵按一下 [物件總管] 中的伺服器執行個體，然後依序指向 [報表] 和 [標準報表]。  
+2.  以滑鼠右鍵按一下 [物件總管] 中的伺服器執行個體，然後依序指向 [報表]  和 [標準報表]  。  
   
-3.  按一下 **[交易記錄傳送狀態]**。  
+3.  按一下 **[交易記錄傳送狀態]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [監視記錄傳送 &#40;Transact-SQL&#41;](monitor-log-shipping-transact-sql.md)  

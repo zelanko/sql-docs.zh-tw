@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bfce63f3686f06c0289c818daac82f336fb2b17
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084964"
 ---
 # <a name="data-mining-queries"></a>資料採礦查詢
@@ -73,7 +73,7 @@ ms.locfileid: "66084964"
   
 -   使用針對每種演算法類型所提供的自訂資料採礦檢視器，瀏覽及探索每一個模型類型。 如需詳細資訊，請參閱[採礦模型檢視器工作和使用說明](mining-model-viewer-tasks-and-how-tos.md)。  
   
--   使用 Microsoft 一般內容樹狀檢視器來檢閱每一種模型類型的模型內容。 若要解譯此資訊，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
+-   使用 Microsoft 一般內容樹狀檢視器  來檢閱每一種模型類型的模型內容。 若要解譯此資訊，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
   
 ##  <a name="bkmk_Interfaces"></a> 查詢工具和介面  
  您可以使用 SQL Server 提供的其中一種查詢工具，以互動方式建立資料採礦查詢。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中都會提供圖形化預測查詢產生器。 如果您之前未使用過預測查詢產生器，建議您按照＜ [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md) ＞中的步驟執行操作來了解介面。 如需步驟的快速概觀，請參閱 [使用預測查詢產生器來建立預測查詢](create-a-prediction-query-using-the-prediction-query-builder.md)。  
@@ -95,7 +95,7 @@ ms.locfileid: "66084964"
   
  下列清單提供您可以在查詢中使用之函數的摘要：  
   
--   **一般預測函數：**`Predict`函式是多型的這表示它適用於所有模型類型。 這個函數將會自動偵測您所使用之模型的類型，並提示您輸入其他參數。 如需詳細資訊，請參閱 [Predict &#40;DMX&#41](/sql/dmx/predict-dmx)。  
+-   **一般預測函數：** `Predict`函式是多型的這表示它適用於所有模型類型。 這個函數將會自動偵測您所使用之模型的類型，並提示您輸入其他參數。 如需詳細資訊，請參閱 [Predict &#40;DMX&#41](/sql/dmx/predict-dmx)。  
   
     > [!WARNING]  
     >  並非所有模型都會用來做預測。 例如，您可以建立沒有可預測屬性的叢集模型。 但是，即使模型沒有可預測屬性，您也可以建立預測查詢來傳回模型中其他類型的實用資訊。  
@@ -126,7 +126,7 @@ ms.locfileid: "66084964"
   
      例如，當您使用叢集模型時，您可以使用 `PredictCaseLikelihood` 函數傳回與特定案例和叢集相關的可能性分數。 但是，如果您建立了線性迴歸模型，您對於擷取係數和攔截會更感興趣 (您可以使用內容查詢來擷取)。  
   
--   **模型內容函數：***內容*之所有模型以標準化格式表示，可讓您使用簡單查詢擷取資訊。 可以使用 DMX 來針對模型內容建立查詢。 您也可以使用資料採礦結構描述資料列集來取得某個類型的模型內容。  
+-   **模型內容函數：** *內容*之所有模型以標準化格式表示，可讓您使用簡單查詢擷取資訊。 可以使用 DMX 來針對模型內容建立查詢。 您也可以使用資料採礦結構描述資料列集來取得某個類型的模型內容。  
   
      在模型內容中，傳回之資料表的每一個資料列或節點意義會因為用來建立模型的演算法類型以及資料行的資料類型而不同。 如需詳細資訊，請參閱 [內容查詢 &#40;資料採礦&#41;](content-queries-data-mining.md)。  
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ecddbed328d1625f525069fe3d502c3348eb065a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103906"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>建立、修改及刪除報表記錄中的快照集
@@ -51,7 +51,7 @@ ms.locfileid: "66103906"
   
 -   針對單一或群組，以手動的方式刪除快照集。  
   
-     您可以從報表管理員的 [記錄] 頁面中刪除快照集。 導覽至報表，按一下 [記錄]，選取您要刪除的快照集旁邊的核取方塊，然後按一下 **[刪除]**。  
+     您可以從報表管理員的 [記錄] 頁面中刪除快照集。 導覽至報表，按一下 [記錄]，選取您要刪除的快照集旁邊的核取方塊，然後按一下 **[刪除]** 。  
   
 -   降低報表記錄限制，以減少儲存的快照集數量。 報表記錄限制可以針對報表伺服器或特定的報表進行設定。 當限制降低時，系統會從記錄中刪除最舊的快照集。  
   

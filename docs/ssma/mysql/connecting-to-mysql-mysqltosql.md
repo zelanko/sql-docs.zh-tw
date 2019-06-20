@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 233b6824ef527a9ed4e7e02164a08e31e41f3699
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253331"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>連線到 MySQL (MySQLToSQL)
@@ -109,7 +109,7 @@ MySQL 資料庫的相關中繼資料不會自動重新整理。 MySQL 中繼資�
   
     -   若要檢視的定義的色彩編碼，請按一下**圖例** 按鈕。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是[連接到 SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  

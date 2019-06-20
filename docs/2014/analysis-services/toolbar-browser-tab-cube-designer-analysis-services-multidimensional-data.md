@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe356d15c0602f33ec9c59ee463a69783686899b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066145"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (瀏覽器索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
-  在 Cube 設計師中使用 [工具列] 內的功能執行常見的作業，同時設計或瀏覽 Cube 或其物件，或者建立 MDX 查詢。 設計階段與查詢檢視通用的作業包括設定使用者內容、處理物件，以及設定預設語言。  
+  在 Cube 設計師中使用 [工具列]  內的功能執行常見的作業，同時設計或瀏覽 Cube 或其物件，或者建立 MDX 查詢。 設計階段與查詢檢視通用的作業包括設定使用者內容、處理物件，以及設定預設語言。  
   
- 下表列出 [工具列] 按鈕及其功能。  
+ 下表列出 [工具列]  按鈕及其功能。  
   
 |按鈕|描述|  
 |------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "66066145"
 |![取消查詢](media/rsqdicon-cancel.gif "取消查詢")|取消查詢。|  
 |![切換到設計模式](media/rsqdicon-designmode.gif "切換到設計模式")|在「設計」模式與「查詢」模式之間切換。|  
   
- 一般而言，[設計模式] 與 [查詢模式] 的工具列按鈕相同。 不過，系統未針對 [查詢模式] 啟用下列按鈕：  
+ 一般而言，[設計模式]  與 [查詢模式]  的工具列按鈕相同。 不過，系統未針對 [查詢模式] 啟用下列按鈕：  
   
 -   **當成文字編輯**  
   
@@ -51,24 +51,24 @@ ms.locfileid: "66066145"
   
 -   **顯示彙總** (![顯示彙總按鈕](media/rsqdicon-showaggregations.gif "顯示彙總按鈕"))  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |選項|描述|  
 |------------|-----------------|  
-|**處理**|按一下以顯示 **[處理]** 對話方塊，並處理 Cube。 如需 [處理] 對話方塊的詳細資訊，請參閱[處理對話方塊 &#40;Analysis Services - 多維度資料&#41;](process-dialog-box-analysis-services-multidimensional-data.md)。|  
-|**變更使用者**|按一下即可顯示 [安全性內容] 對話方塊，並變更用於 [瀏覽器] 索引標籤上的使用者和角色。如需 [安全性內容] 對話方塊的詳細資訊，請參閱[安全性內容對話方塊 &#40;Analysis Services - 多維度資料&#41;](security-context-dialog-box-analysis-services-multidimensional-data.md)。|  
-|**重新連線**|如果 [瀏覽器] 索引標籤的工作階段因連接遺失或逾時而中斷連接，按一下即可將 [計算] 索引標籤重新連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體和包含 Cube 的資料庫。|  
-|**[重新整理]**|按一下即可重新整理 [中繼資料] 和 [報表] 窗格。|  
-|**遞增排序**|按一下即可依 [語言] 中所指定語言的遞增順序，來排序 [報表] 窗格中選取之資料列的同層級。<br /><br /> **注意**：只有選取 [報表] 窗格中的資料格時，才會啟用此選項。|  
-|**遞減排序**|按一下即可依 [語言] 中所指定語言的遞減順序，來排序 [報表] 窗格中選取之資料列的同層級。<br /><br /> 注意:此選項才會啟用中的資料格**報表**窗格已選取。|  
-|**自動篩選**|按一下即可自動篩選 [結果] 窗格中的結果。|  
-|**只顯示最上方/最下層**|選取一個值或百分比，以根據選取的量值，在 [報表] 窗格中只顯示最上層或最下層的資料格數目或資料格的百分比。<br /><br /> 如需這個選項的詳細資訊，請參閱 [TopCount &#40;MDX&#41;](/sql/mdx/topcount-mdx)、[TopPercent &#40;MDX&#41;](/sql/mdx/toppercent-mdx)、[BottomCount &#40;MDX&#41;](/sql/mdx/bottomcount-mdx) 和 [BottomPercent &#40;MDX&#41;](/sql/mdx/bottompercent-mdx)。|  
+|**處理**|按一下以顯示 **[處理]** 對話方塊，並處理 Cube。 如需 [處理]  對話方塊的詳細資訊，請參閱[處理對話方塊 &#40;Analysis Services - 多維度資料&#41;](process-dialog-box-analysis-services-multidimensional-data.md)。|  
+|**變更使用者**|按一下即可顯示 [安全性內容]  對話方塊，並變更用於 [瀏覽器]  索引標籤上的使用者和角色。如需 [安全性內容]  對話方塊的詳細資訊，請參閱[安全性內容對話方塊 &#40;Analysis Services - 多維度資料&#41;](security-context-dialog-box-analysis-services-multidimensional-data.md)。|  
+|**重新連線**|如果 [瀏覽器]  索引標籤的工作階段因連接遺失或逾時而中斷連接，按一下即可將 [計算]  索引標籤重新連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體和包含 Cube 的資料庫。|  
+|**[重新整理]**|按一下即可重新整理 [中繼資料]  和 [報表]  窗格。|  
+|**遞增排序**|按一下即可依 [語言]  中所指定語言的遞增順序，來排序 [報表]  窗格中選取之資料列的同層級。<br /><br /> **注意**：只有選取 [報表]  窗格中的資料格時，才會啟用此選項。|  
+|**遞減排序**|按一下即可依 [語言]  中所指定語言的遞減順序，來排序 [報表]  窗格中選取之資料列的同層級。<br /><br /> 注意:此選項才會啟用中的資料格**報表**窗格已選取。|  
+|**自動篩選**|按一下即可自動篩選 [結果]  窗格中的結果。|  
+|**只顯示最上方/最下層**|選取一個值或百分比，以根據選取的量值，在 [報表]  窗格中只顯示最上層或最下層的資料格數目或資料格的百分比。<br /><br /> 如需這個選項的詳細資訊，請參閱 [TopCount &#40;MDX&#41;](/sql/mdx/topcount-mdx)、[TopPercent &#40;MDX&#41;](/sql/mdx/toppercent-mdx)、[BottomCount &#40;MDX&#41;](/sql/mdx/bottomcount-mdx) 和 [BottomPercent &#40;MDX&#41;](/sql/mdx/bottompercent-mdx)。|  
 |**Subtotal**|按一下即可顯示小計。|  
-|**所有項目的總計**|按一下即可顯示 [報表] 窗格中之所有成員的總計。|  
-|**顯示空白資料格**|按一下即可顯示 [報表] 窗格中之空的資料格。|  
-|**清除結果**|按一下即可清除 [報表] 窗格中的結果。|  
-|**命令與選項**|按一下即可顯示 [命令與選項] 對話方塊，並編輯 [報表] 窗格中之 Microsoft Office 11.0 樞紐分析表控制項的進階屬性。 如需 [命令與選項] 對話方塊的詳細資訊，請參閱 Microsoft Office 文件。|  
-|**Perspective**|選取用來檢視 [中繼資料] 和 [報表] 窗格中之資料與中繼資料的檢視方塊。<br /><br /> 若要檢視 Cube 而不使用檢視方塊，請選取 Cube 名稱。|  
-|**語言**|選取用來檢視 [中繼資料] 和 [報表] 窗格中之資料與中繼資料的語言。<br /><br /> 若要使用預設語言檢視 Cube，請選取 [預設值]。|  
+|**所有項目的總計**|按一下即可顯示 [報表]  窗格中之所有成員的總計。|  
+|**顯示空白資料格**|按一下即可顯示 [報表]  窗格中之空的資料格。|  
+|**清除結果**|按一下即可清除 [報表]  窗格中的結果。|  
+|**命令與選項**|按一下即可顯示 [命令與選項]  對話方塊，並編輯 [報表]  窗格中之 Microsoft Office 11.0 樞紐分析表控制項的進階屬性。 如需 [命令與選項]  對話方塊的詳細資訊，請參閱 Microsoft Office 文件。|  
+|**Perspective**|選取用來檢視 [中繼資料]  和 [報表]  窗格中之資料與中繼資料的檢視方塊。<br /><br /> 若要檢視 Cube 而不使用檢視方塊，請選取 Cube 名稱。|  
+|**語言**|選取用來檢視 [中繼資料]  和 [報表]  窗格中之資料與中繼資料的語言。<br /><br /> 若要使用預設語言檢視 Cube，請選取 [預設值]  。|  
   
   

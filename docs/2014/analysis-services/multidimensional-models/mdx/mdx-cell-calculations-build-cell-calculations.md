@@ -19,16 +19,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b1d0c01be4901e771278c82c4277c280aeb43ad
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66074523"
 ---
 # <a name="building-cell-calculations-in-mdx-mdx"></a>在 MDX 中建立資料格計算 (MDX)
   多維度運算式 (MDX) 為您提供許多產生導出值的工具，如導出成員、自訂積存與自訂成員。 但是，就此而言光使用這些功能，很難影響一組特定的資料格或單一個資料格。  
   
- 若要特別為資料格產生導出值，就必須在 MDX 中使用導出資料格功能。 導出資料格功能可讓您定義特定的資料格 Slice (稱為 *「計算 Subcube」*)，並對計算 Subcube 內的每個資料格套用公式，但要視每個資料格適用的選擇性條件而定。  
+ 若要特別為資料格產生導出值，就必須在 MDX 中使用導出資料格功能。 導出資料格功能可讓您定義特定的資料格 Slice (稱為 *「計算 Subcube」* )，並對計算 Subcube 內的每個資料格套用公式，但要視每個資料格適用的選擇性條件而定。  
   
  導出資料格也能提供複雜的功能，例如 KPI 中使用的目標搜尋公式或推測性分析公式。 此功能層級來自 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的行程順序功能，使用行程順序中的特定傳遞所套用的計算公式，允許以導出資料格建立遞迴傳遞。 如需行程順序的詳細資訊，請參閱[了解行程順序和求解順序 &#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)。  
   

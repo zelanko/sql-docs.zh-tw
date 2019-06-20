@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b713d9918dabcbaabba2085710dfaa5ed5d3a33b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083283"
 ---
 # <a name="naive-bayes-model-query-examples"></a>貝式機率分類模型查詢範例
@@ -168,7 +168,7 @@ CALL GetPredictableAttributes ('TM_NaiveBayes')
  Microsoft 貝氏機率分類演算法用於預測的頻率通常比用於瀏覽輸入屬性和可預測屬性之間關聯性的頻率低。 不過，此模型支援同時針對預測和關聯使用預測函數。  
   
 ###  <a name="bkmk_Query5"></a> 範例查詢 5:使用單一查詢預測結果  
- 下列查詢使用單一查詢提供新的值，並根據模型預測具備這些特徵的客戶是否可能購買自行車。 在迴歸模型上建立單一查詢最簡單的方式是使用 **[單一查詢輸入]** 對話方塊。 例如，您可以選取 `TM_NaiveBayes` 模型、選擇 **[單一查詢]**，然後從 `[Commute Distance]` 和 `Gender`的下拉式清單選取值來建立下列 DMX 查詢。  
+ 下列查詢使用單一查詢提供新的值，並根據模型預測具備這些特徵的客戶是否可能購買自行車。 在迴歸模型上建立單一查詢最簡單的方式是使用 **[單一查詢輸入]** 對話方塊。 例如，您可以選取 `TM_NaiveBayes` 模型、選擇 **[單一查詢]** ，然後從 `[Commute Distance]` 和 `Gender`的下拉式清單選取值來建立下列 DMX 查詢。  
   
 ```  
 SELECT  

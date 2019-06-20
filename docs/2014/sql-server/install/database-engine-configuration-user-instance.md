@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ba05d426f9515793ad3a924e375ff9a6ab9f940f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095874"
 ---
 # <a name="database-engine-configuration---user-instance"></a>資料庫引擎組態 - 使用者執行個體
@@ -39,8 +39,8 @@ ms.locfileid: "66095874"
   
  若要在此安裝程式結束後，對使用者角色進行任何變更，請使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 介面區組態工具 (SQLSAC.exe)。 若要更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員角色中的使用者清單，按一下 **[新增管理員]** 連結。  
   
- 請確定 [User to provision (要提供的使用者)] 欄位有列出其權限應該更新之使用者的 DomainName\UserName。 從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [可用權限] **窗格的** 執行個體清單中選取要更新的角色，然後按一下向右鍵。 若要將使用者加入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有可用執行個體及可用角色的可用角色，按一下雙重向右鍵。  
+ 請確定 [User to provision (要提供的使用者)]  欄位有列出其權限應該更新之使用者的 DomainName\UserName。 從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [可用權限] **窗格的** 執行個體清單中選取要更新的角色，然後按一下向右鍵。 若要將使用者加入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有可用執行個體及可用角色的可用角色，按一下雙重向右鍵。  
   
- 若要在完成選擇時實作變更，請 [!INCLUDE[clickOK](../../includes/clickok-md.md)]。 若要結束工具而不進行變更，按一下 **[取消]**。  
+ 若要在完成選擇時實作變更，請 [!INCLUDE[clickOK](../../includes/clickok-md.md)]。 若要結束工具而不進行變更，按一下 **[取消]** 。  
   
   

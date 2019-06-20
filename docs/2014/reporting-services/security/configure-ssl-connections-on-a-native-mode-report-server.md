@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7fb33e6ccb5afbdee1bf6c3673a24548d6fe9961
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102125"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>在原生模式報表伺服器上設定 SSL 連接
@@ -52,13 +52,13 @@ ms.locfileid: "66102125"
   
 1.  啟動 Reporting Services 組態工具，並連接到報表伺服器。  
   
-2.  按一下 **[Web 服務 URL]**。  
+2.  按一下 **[Web 服務 URL]** 。  
   
 3.  展開 SSL 憑證的清單。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會偵測本機存放區內的伺服器驗證憑證。 如果您已安裝憑證，而且沒有在清單中看到它，您可能需要重新啟動服務。 您可以在 Reporting Services 組態工具的 **[報表伺服器狀態]** 頁面中，使用 **[停止]** 和 **[啟動]** 按鈕來重新啟動服務。  
   
 4.  選取憑證。  
   
-5.  按一下 **[套用]**。  
+5.  按一下 **[套用]** 。  
   
 6.  按一下此 URL 來確認它是否有效。  
   
@@ -66,13 +66,13 @@ ms.locfileid: "66102125"
   
  報表管理員和報表伺服器 Web 服務的 URL 保留項目會各自獨自設定。 如果您也想要透過 SSL 加密的通道來設定報表管理員存取，請繼續以下步驟：  
   
-1.  按一下 **[報表管理員 URL]**。  
+1.  按一下 **[報表管理員 URL]** 。  
   
-2.  按一下 **[進階]**。  
+2.  按一下 **[進階]** 。  
   
-3.  在 **[報表管理員的多重 SSL 識別]** 中，按一下 **[加入]**。  
+3.  在 **[報表管理員的多重 SSL 識別]** 中，按一下 **[加入]** 。  
   
-4.  選取此憑證，然後按一下 **[確定]**，再按一下 **[套用]**。  
+4.  選取此憑證，然後按一下 **[確定]** ，再按一下 **[套用]** 。  
   
 5.  按一下此 URL 來確認它是否有效。  
   

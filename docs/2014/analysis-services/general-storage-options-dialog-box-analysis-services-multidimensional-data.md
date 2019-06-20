@@ -13,25 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3c7ddd5311232ae12b3eb9f66adc0cd1f5714b32
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081013"
 ---
 # <a name="general-storage-options-dialog-box-analysis-services---multidimensional-data"></a>一般 (儲存選項對話方塊) (Analysis Services - 多維度資料)
-  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，使用 [儲存選項] 對話方塊的 [一般] 索引標籤，即可為維度、Cube、量值群組或資料分割設定儲存模式與主動式快取設定。  
+  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，使用 [儲存選項]  對話方塊的 [一般]  索引標籤，即可為維度、Cube、量值群組或資料分割設定儲存模式與主動式快取設定。  
   
 > [!NOTE]  
 >  在您修改這些設定之前，必須先熟悉儲存模式與主動式快取功能。 如需詳細資訊，請參閱[主動式快取 &#40;資料分割&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  
 |**儲存模式**|選取用於物件的儲存模式。<br /><br /> **MOLAP**<br /> 物件使用多維度 OLAP (MOLAP) 儲存。<br /><br /> **HOLAP**<br /> 物件使用混合式 OLAP (HOLAP) 儲存。<br /><br /> **ROLAP**<br /> 物件使用關聯式 OLAP (ROLAP) 儲存。|  
 |**啟用主動式快取**|啟用主動式快取。<br /><br /> 注意:如果未選取此選項，所有選項除了**儲存模式**會停用。|  
-|**當資料變更時更新快取**|使用 [通知] 索引標籤中所選取的通知方法，即可在接收到通知時，更新物件的 MOLAP 影像。 如需 [通知] 索引標籤的詳細資訊，請參閱[通知 &#40;儲存選項對話方塊&#41; &#40;Analysis Services - 多維度資料&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)。<br /><br /> 注意:此選項會停用，除非**啟用主動式快取**已選取。|  
+|**當資料變更時更新快取**|使用 [通知]  索引標籤中所選取的通知方法，即可在接收到通知時，更新物件的 MOLAP 影像。 如需 [通知]  索引標籤的詳細資訊，請參閱[通知 &#40;儲存選項對話方塊&#41; &#40;Analysis Services - 多維度資料&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)。<br /><br /> 注意:此選項會停用，除非**啟用主動式快取**已選取。|  
 |**無回應間隔**|設定在主動式快取開始建立物件的新 MOLAP 影像之前，物件沒有活動的最短間隔與時間單位。<br /><br /> 注意:此選項會停用，除非**當資料變更時更新快取**已選取。|  
 |**無回應覆寫間隔**|設定在接收到針對物件的通知之後，主動式快取開始建立物件之新 MOLAP 影像的最長間隔與時間單位 (不論物件的目前活動情況)。 在到達此間隔後收到的通知，不會取消此間隔所觸發的 MOLAP 影像處理。<br /><br /> 注意:此選項會停用，除非**當資料變更時更新快取**已選取。 另外請注意，應該不會設定此選項，如果**儲存模式**設為**HOLAP**。|  
 |**卸除過期的快取**|指定在開始建立新的 MOLAP 快取與移除現有 MOLAP 快取之間的期間。<br /><br /> 注意:此選項會停用，除非**啟用主動式快取**已選取。 另外請注意，應該不會設定此選項，如果**儲存模式**設定為 HOLAP。|  

@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 901d8e0adc923ec5f70fbf1097cc806b30318809
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069753"
 ---
 # <a name="select-a-data-source-view-cube-wizard"></a>選取資料來源檢視 (Cube 精靈)
   使用 **[選取資料來源檢視]** 頁面，即可針對空白 Cube 選取資料來源檢視。  
   
 > [!NOTE]  
->  只有當您已在 [選取建立方法] 頁面上選取了 [建立空白 Cube] 時，才會顯示這個頁面。  
+>  只有當您已在 [選取建立方法]  頁面上選取了 [建立空白 Cube]  時，才會顯示這個頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料來源檢視**  
  選取用於空白 Cube 的資料來源檢視。  
   

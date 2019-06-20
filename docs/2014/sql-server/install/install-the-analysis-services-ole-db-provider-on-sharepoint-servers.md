@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 39f875041963cc8d48b2dcf70515c99042cdb8fb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094440"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者
@@ -63,13 +63,13 @@ ms.locfileid: "66094440"
   
 1.  在主控 Excel Services 的應用程式伺服器上，執行 SQL Server 安裝程式。  
   
-2.  在 [安裝] 頁面上，選擇 **[新增 SQL Server 獨立安裝或將功能加入至現有安裝]**。  
+2.  在 [安裝] 頁面上，選擇 **[新增 SQL Server 獨立安裝或將功能加入至現有安裝]** 。  
   
-3.  在 [安裝類型] 頁面上，選擇 **[執行 SQL Server 2012 的新安裝]**。  
+3.  在 [安裝類型] 頁面上，選擇 **[執行 SQL Server 2012 的新安裝]** 。  
   
-4.  在 [安裝程式角色] 頁面上，選擇 **[SQL Server 功能安裝]**。  
+4.  在 [安裝程式角色] 頁面上，選擇 **[SQL Server 功能安裝]** 。  
   
-5.  在 **[特徵選取]** 頁面上，按一下 **[用戶端工具連接性]**。 此選項會安裝 **Microsoft.AnalysisServices.Xmla.dll**。  
+5.  在 **[特徵選取]** 頁面上，按一下 **[用戶端工具連接性]** 。 此選項會安裝 **Microsoft.AnalysisServices.Xmla.dll**。  
   
      請勿選取其他任何功能。  
   
@@ -79,13 +79,13 @@ ms.locfileid: "66094440"
   
 #### <a name="verify-msolap5-is-a-trusted-provider"></a>確認 MSOLAP.5 是受信任的提供者  
   
-1.  在 [管理中心]，按一下 **[管理服務應用程式]**，然後按一下 Excel Services 服務應用程式。  
+1.  在 [管理中心]，按一下 **[管理服務應用程式]** ，然後按一下 Excel Services 服務應用程式。  
   
-2.  按一下 **[信任的資料提供者]**。  
+2.  按一下 **[信任的資料提供者]** 。  
   
 3.  確認 MSOLAP.5 出現在清單中。 根據您設定 PowerPivot for SharePoint 的方式，MSOLAP.5 可能已經是受信任的提供者。 如果您使用 PowerPivot 組態工具，但之後將此動作排除在工作清單之外，則 Excel Services 將不會信任 MSOLAP.5，且現在必須手動加入 MSOLAP.5。  
   
-4.  如果未列出 MSOLAP，請按一下 **[新增信任的資料提供者]**。  
+4.  如果未列出 MSOLAP，請按一下 **[新增信任的資料提供者]** 。  
   
 5.  在 [提供者識別碼] 中，輸入 `MSOLAP.5`。  
   
@@ -97,9 +97,9 @@ ms.locfileid: "66094440"
   
 1.  移至 Program files\Microsoft Analysis Services\AS OLEDB\110。  
   
-2.  以滑鼠右鍵按一下 msolap110.dll，然後選取 **[內容]**。  
+2.  以滑鼠右鍵按一下 msolap110.dll，然後選取 **[內容]** 。  
   
-3.  按一下 **[詳細資料]**。  
+3.  按一下 **[詳細資料]** 。  
   
 4.  檢視檔案版本資訊。 版本應該包含 11.00.<buildnumber>。\<組建編號 >。  
   
@@ -113,11 +113,11 @@ ms.locfileid: "66094440"
   
 1.  瀏覽至 [Microsoft® SQL Server® 2012 SP1 功能套件](https://www.microsoft.com/download/details.aspx?id=35580)  
   
-2.  按一下 **[安裝指示]**。  
+2.  按一下 **[安裝指示]** 。  
   
 3.  請參閱 「 Microsoft Analysis Services OLE DB 提供者的 Microsoft SQL Server 2012 SP1 > 一節。 下載檔案並開始安裝。  
   
-4.  在 **[特徵選取]** 頁面上，選取 **[Analysis Services OLE DB Provider for SQL Server]**。 取消選取其他元件，並完成安裝。 如需有關 spPowerPivot.msi 的詳細資訊，請參閱 <<c0> [ 安裝或解除安裝 PowerPivot for SharePoint 增益集&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。</c0>  
+4.  在 **[特徵選取]** 頁面上，選取 **[Analysis Services OLE DB Provider for SQL Server]** 。 取消選取其他元件，並完成安裝。 如需有關 spPowerPivot.msi 的詳細資訊，請參閱 <<c0> [ 安裝或解除安裝 PowerPivot for SharePoint 增益集&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。</c0>  
   
 5.  向 SharePoint Excel Services 註冊 MSOLAP.5 當做信任的提供者。 如需詳細資訊，請參閱＜ [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx)＞。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "66094440"
   
 2.  此外，您可以檢查檔案版本。  
   
-     移至 `C:\Program files\Microsoft Analysis Services\AS OLEDB\10` 以滑鼠右鍵按一下 **msolap100.dll** ，然後選取 **[屬性]**。 按一下 **[詳細資料]**。  
+     移至 `C:\Program files\Microsoft Analysis Services\AS OLEDB\10` 以滑鼠右鍵按一下 **msolap100.dll** ，然後選取 **[屬性]** 。 按一下 **[詳細資料]** 。  
   
      檢視檔案版本資訊。 此版本應該包含 10.50.<buildnumber>。\<組建編號 >。  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb9ca011cdbbe32ebd6c71cb9ca64967cfbccb9e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079313"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>第 1 課：建立新的表格式模型專案
@@ -31,34 +31,34 @@ ms.locfileid: "66079313"
   
 #### <a name="to-create-a-new-tabular-model-project"></a>若要建立新的表格式模型專案  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]的 **[檔案]** 功能表上，按一下 **[新增]**，然後再按一下 **[專案]**。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]的 **[檔案]** 功能表上，按一下 **[新增]** ，然後再按一下 **[專案]** 。  
   
 2.  在 **新的專案**對話方塊的 **已安裝的範本**，按一下  **Business Intelligence**，然後按一下  **Analysis Services**，和然後按一下**Analysis Services 表格式專案**。  
   
 3.  在 **名稱**，型別`AW Internet Sales Tabular Model`，然後指定專案檔的位置。  
   
-     根據預設，[方案名稱] 將與專案名稱相同，不過您可以輸入不同的方案名稱。  
+     根據預設，[方案名稱]  將與專案名稱相同，不過您可以輸入不同的方案名稱。  
   
-4.  按一下 [確定] 。  
+4.  按一下 [確定]  。  
   
 ## <a name="understanding-the-sql-server-data-tools-tabular-model-authoring-environment"></a>了解 SQL Server 資料工具表格式模型撰寫環境  
  既然您已建立新的表格式模型專案，讓我們花一點時間瀏覽表格式模型撰寫環境中的[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)](Visual Studio 2010 或更新版本)。  
   
  建立專案之後，該專案會在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中開啟。 模型設計師會顯示空白模型，並選取 **方案總管** 視窗中的 **Model.bim** 檔。 當您加入資料時，資料表和資料行將出現在設計師中。 如果您未看見設計師 （含有 [Model.bim] 索引標籤的空視窗），在**方案總管**下方`AW Internet Sales Tabular Model`，按兩下**Model.bim**檔案。  
   
- 您可以在 [屬性] 視窗中檢視基本專案屬性。 在 **方案總管**，按一下  `AW Internet Sales Tabular Model`。 請注意，您會在 [屬性] 視窗的 [專案檔] 中看見 **AW Internet Sales Tabular Model.smproj**。 這是專案檔的名稱，[專案資料夾] 中則會顯示專案檔的位置。  
+ 您可以在 [屬性]  視窗中檢視基本專案屬性。 在 **方案總管**，按一下  `AW Internet Sales Tabular Model`。 請注意，您會在 [屬性]  視窗的 [專案檔]  中看見 **AW Internet Sales Tabular Model.smproj**。 這是專案檔的名稱，[專案資料夾]  中則會顯示專案檔的位置。  
   
- 在 **方案總管**，以滑鼠右鍵按一下`AW Internet Sales Tabular Model`專案，然後再按一下**屬性**。 [AW Internet Sales Tabular Model 屬性頁] 對話方塊隨即出現。 這些是進階專案屬性。 稍後您將在準備好部署模型時，設定其中部分屬性。  
+ 在 **方案總管**，以滑鼠右鍵按一下`AW Internet Sales Tabular Model`專案，然後再按一下**屬性**。 [AW Internet Sales Tabular Model 屬性頁]  對話方塊隨即出現。 這些是進階專案屬性。 稍後您將在準備好部署模型時，設定其中部分屬性。  
   
- 現在，讓我們看看模型屬性。 在 **方案總管**中，按一下 **Model.bim**。 現在您會在 [屬性] 視窗中看見模型屬性，其中最重要的屬性是 [DirectQuery 模式] 屬性。 此屬性指定模型是以 In-Memory 模式 (關閉) 或是 DirectQuery 模式 (開啟) 部署。 在本教學課程中，您將撰寫及部署記憶體中模式的模型。  
+ 現在，讓我們看看模型屬性。 在 **方案總管**中，按一下 **Model.bim**。 現在您會在 [屬性]  視窗中看見模型屬性，其中最重要的屬性是 [DirectQuery 模式]  屬性。 此屬性指定模型是以 In-Memory 模式 (關閉) 或是 DirectQuery 模式 (開啟) 部署。 在本教學課程中，您將撰寫及部署記憶體中模式的模型。  
   
  當您建立新模型時，某些模型屬性會根據可在 [工具\選項] 對話方塊中指定的 [資料模型] 設定自動設定。 [資料備份]、[工作空間保留] 和 [工作空間伺服器] 屬性會指定備份、在記憶體中保留以及建立工作空間資料庫 (您的模型撰寫資料庫) 的方式和位置。 您稍後可以視需要變更這些設定，但目前讓這些屬性保持不變。  
   
- 安裝 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]之後，Visual Studio 環境中會加入幾個新的功能表項目。 讓我們看看撰寫表格式模型所特有的新功能表項目。 按一下 [模型] 功能表。 您可以從此處啟動 [資料表匯入精靈]、檢視和編輯現有的連接、重新整理工作空間資料、在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 中使用 [在 Excel 中進行分析] 功能瀏覽您的模型、建立檢視方塊和角色、選取模型檢視，以及設定計算選項。  
+ 安裝 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]之後，Visual Studio 環境中會加入幾個新的功能表項目。 讓我們看看撰寫表格式模型所特有的新功能表項目。 按一下 [模型]  功能表。 您可以從此處啟動 [資料表匯入精靈]、檢視和編輯現有的連接、重新整理工作空間資料、在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 中使用 [在 Excel 中進行分析] 功能瀏覽您的模型、建立檢視方塊和角色、選取模型檢視，以及設定計算選項。  
   
- 按一下 [資料表] 功能表。 您可以在此建立及管理資料表之間的關聯性、建立和管理、指定日期資料表設定、建立分割區，以及編輯資料表屬性。  
+ 按一下 [資料表]  功能表。 您可以在此建立及管理資料表之間的關聯性、建立和管理、指定日期資料表設定、建立分割區，以及編輯資料表屬性。  
   
- 按一下 [資料行] 功能表。 您可以在此於資料表中加入和刪除資料行、凍結資料行，以及指定排序次序。 您也可以使用 [自動加總] 功能為選取的資料行建立標準彙總量值。 其他工具列按鈕可讓您快速存取常用的功能和命令。  
+ 按一下 [資料行]  功能表。 您可以在此於資料表中加入和刪除資料行、凍結資料行，以及指定排序次序。 您也可以使用 [自動加總] 功能為選取的資料行建立標準彙總量值。 其他工具列按鈕可讓您快速存取常用的功能和命令。  
   
  瀏覽撰寫表格式模型之各種不同專屬功能的對話方塊和位置。 雖然某些項目還無法使用，但是您仍然可以深入認識表格式模型撰寫環境。  
   

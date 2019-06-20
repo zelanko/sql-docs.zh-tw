@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 146834648164e49632a62352d684a6da66a09e12
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480011"
 ---
 # <a name="administrators-master-data-services"></a>管理員 (Master Data Services)
@@ -27,7 +27,7 @@ ms.locfileid: "65480011"
 ## <a name="model-administrators"></a>模型管理員  
  在 [ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，模型管理員是具有的使用者**更新**上指派的最上層模型物件權限**模型物件**] 索引標籤上，而且沒有其他指派權限。  
   
--   如果使用者可以存取總管 功能區域，即可加入、刪除及更新此區域中的所有主要資料。  
+-   如果使用者可以存取總管  功能區域，即可加入、刪除及更新此區域中的所有主要資料。  
   
 -   如果使用者可以存取其他功能區域，即可執行該功能區域中的所有管理工作。  
   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5174b5c859fa76ceeccdb99b7a46f510fd62d923
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63072744"
 ---
 # <a name="native-compilation-advisor"></a>原生編譯 Advisor
@@ -28,13 +28,13 @@ ms.locfileid: "63072744"
  如需移轉方法的資訊，請參閱 [In-Memory OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>使用原生編譯 Advisor 的逐步解說  
- 在 [物件總管] 中，以滑鼠右鍵按一下您想要轉換的預存程序，然後選取 [原生編譯 Advisor]。 隨即顯示 [預存程序原生編譯 Advisor] 的歡迎頁面。 按 **[下一步]** ，繼續進行。  
+ 在 [物件總管]  中，以滑鼠右鍵按一下您想要轉換的預存程序，然後選取 [原生編譯 Advisor]  。 隨即顯示 [預存程序原生編譯 Advisor]  的歡迎頁面。 按 **[下一步]** ，繼續進行。  
   
 ### <a name="stored-procedure-validation"></a>預存程序驗證  
- 此頁面將會回報預存程序是否使用任何與原生編譯不相容的建構。 您可以按 [下一步] 查看詳細資料。 如果有與原生編譯不相容的建構，您可以按 [下一步] 查看詳細資料。  
+ 此頁面將會回報預存程序是否使用任何與原生編譯不相容的建構。 您可以按 [下一步]  查看詳細資料。 如果有與原生編譯不相容的建構，您可以按 [下一步]  查看詳細資料。  
   
 ### <a name="stored-procedure-validation-result"></a>預存程序驗證結果  
- 如果有與原生編譯不相容的建構，[預存程序驗證結果] 頁面會顯示詳細資料。 您可以產生報表 (按一下 [產生報表])、結束 [原生編譯 Advisor]，並更新您的程式碼，使其與原生編譯相容。  
+ 如果有與原生編譯不相容的建構，[預存程序驗證結果]  頁面會顯示詳細資料。 您可以產生報表 (按一下 [產生報表]  )、結束 [原生編譯 Advisor]  ，並更新您的程式碼，使其與原生編譯相容。  
   
 ## <a name="code-sample"></a>程式碼範例  
  下列範例顯示解譯的預存程序及原生編譯的對等預存程序。 該範例假設目錄名為 c:\data。  

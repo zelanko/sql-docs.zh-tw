@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bd9f92b0128bd6280654885f79f8231570f721de
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105624"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>插入或刪除資料列 (報表產生器及 SSRS)
@@ -33,29 +33,29 @@ ms.locfileid: "66105624"
   
 ### <a name="to-insert-a-row-in-a-selected-data-region"></a>在選取的資料區中插入資料列  
   
--   以滑鼠右鍵按一下您想要插入資料列的資料列控制代碼，按一下 [插入資料列]，然後按一下 [上方] 或 [下方]。  
+-   以滑鼠右鍵按一下您想要插入資料列的資料列控制代碼，按一下 [插入資料列]  ，然後按一下 [上方]  或 [下方]  。  
   
      \-或-  
   
--   在您想要插入資料列的資料區中，以滑鼠右鍵按一下資料格，按一下 [插入資料列]，然後按一下 [上方] 或 [下方]。  
+-   在您想要插入資料列的資料區中，以滑鼠右鍵按一下資料格，按一下 [插入資料列]  ，然後按一下 [上方]  或 [下方]  。  
   
 ### <a name="to-delete-a-row-from-a-selected-data-region"></a>從選取的資料區中刪除資料列  
   
--   選取要刪除的一個或多個資料列，以滑鼠右鍵按一下所選資料列之任一資料列的控制代碼，然後按一下 [刪除資料列]。  
+-   選取要刪除的一個或多個資料列，以滑鼠右鍵按一下所選資料列之任一資料列的控制代碼，然後按一下 [刪除資料列]  。  
   
      \-或-  
   
--   在您想要刪除資料列的資料區中，以滑鼠右鍵按一下資料格，然後按一下 [刪除資料列]。  
+-   在您想要刪除資料列的資料區中，以滑鼠右鍵按一下資料格，然後按一下 [刪除資料列]  。  
   
 ### <a name="to-insert-a-row-in-a-group-in-a-selected-data-region"></a>在選取之資料區的群組中插入資料列  
   
--   在您想要插入資料列之 Tablix 資料區的資料列群組區域中，以滑鼠右鍵按一下資料列群組資料格，按一下 [插入資料列]，然後按一下 [上方 - 群組外]、[上方 - 群組內]、[下方 - 群組內] 或 [下方 - 群組外]。  
+-   在您想要插入資料列之 Tablix 資料區的資料列群組區域中，以滑鼠右鍵按一下資料列群組資料格，按一下 [插入資料列]  ，然後按一下 [上方 - 群組外]  、[上方 - 群組內]  、[下方 - 群組內]  或 [下方 - 群組外]  。  
   
      如此就會在您按一下之資料列群組資料格所表示的群組內部或外部加入資料列。  
   
 ### <a name="to-delete-a-row-from-a-group-in-a-selected-data-region"></a>從選取之資料區的群組中刪除資料列  
   
--   在您想要刪除資料列之 Tablix 資料區的資料列群組區域中，以滑鼠右鍵按一下資料列群組資料格，然後按一下 [刪除資料列]。  
+-   在您想要刪除資料列之 Tablix 資料區的資料列群組區域中，以滑鼠右鍵按一下資料列群組資料格，然後按一下 [刪除資料列]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   

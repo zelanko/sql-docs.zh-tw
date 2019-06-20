@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 88f8937658fd7330148f8bcf4e0f5e4db5463e7f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071345"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
@@ -65,7 +65,7 @@ ms.locfileid: "66071345"
 ||2010 工具包括網頁**註冊 SQL Server Analysis Services (PowerPivot) 在本機伺服器上**若要設定的本機執行個體[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 這個頁面不是 2013 工具的一部分，因為沒有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的本機執行個體。<br /><br /> ![舊組態工具中的服務帳戶身分](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "做為舊組態工具中的服務帳戶")|  
 ||**[建立 PowerPivot 服務應用程式]** 頁面多了 **[升級活頁簿以啟用資料重新整理]** 這個額外選項。 這個選項在 2013 工具中無法使用。<br /><br /> ![升級舊組態工具中的活頁簿](../media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "升級舊組態工具中的活頁簿")|  
 |2013 工具有 **[設定 PowerPivot 伺服器]** 這個新頁面。 這個頁面支援在 SharePoint 伺服器陣列外部執行之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的新架構。 根據預設，在主頁面的文字方塊 **[適用於 Excel Services 的 PowerPivot 伺服器]** 中輸入的伺服器名稱，也會在 **[設定 PowerPivot 伺服器]** 上列出。<br /><br /> ![註冊 PowerPivot 伺服器新組態工具](../media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "註冊的 PowerPivot 伺服器新組態工具")||  
-|2013 工具有一個新頁面 **[將 PowerPivot 增益集註冊為 Excel Services Usage Tracker]**。 SharePoint 2010 Excel Services 不會追蹤 PowerPivot 的使用量資料。||  
+|2013 工具有一個新頁面 **[將 PowerPivot 增益集註冊為 Excel Services Usage Tracker]** 。 SharePoint 2010 Excel Services 不會追蹤 PowerPivot 的使用量資料。||  
 ||2010 工具包括 **[加入 MSOLAP.5 做為受信任的提供者]** 這個頁面，可用來註冊 MSOLAP，讓 SharePoint 2010 中的 Excel Services 可以載入 PowerPivot 模型。 這個頁面不是 2013 工具的一部分。 SharePoint 2013 Excel Services 不會使用 MSOLAP 提供者來載入模型。|  
   
 ##  <a name="bkmk_overview"></a> 使用 PowerPivot 組態工具的概觀  
@@ -97,7 +97,7 @@ ms.locfileid: "66071345"
   
     -   **OR**  
   
-    -   **[PowerPivot for SharePoint 2013 組態]**。  
+    -   **[PowerPivot for SharePoint 2013 組態]** 。  
   
      ![兩個 PowerPivot 組態工具](../media/as-powerpivot-configtools-bothicons.gif "兩個 PowerPivot 組態工具")  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c637755741332800a1c3eca2b80c9c001b550d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997015"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
@@ -46,7 +46,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 |**heartbeat_interval**|在未記錄進度訊息的情況下，代理程式所能執行的最大分鐘數。|  
 |NULL (預設值)|所有可用*屬性*值會列印。|  
   
-`[ @value = ] 'value'` 為指定的散發者屬性的值。 *值*已**varchar(255)**，預設值是 NULL。  
+`[ @value = ] 'value'` 為指定的散發者屬性的值。 *值*已**varchar(255)** ，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

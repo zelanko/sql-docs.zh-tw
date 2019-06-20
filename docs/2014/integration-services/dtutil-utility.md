@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d0660fba12f2c83cd7e97b80ac863d8d05eda18
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62769924"
 ---
 # <a name="dtutil-utility"></a>Encrypt
@@ -62,18 +62,18 @@ ms.locfileid: "62769924"
   
  在 64 位元電腦上， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會安裝 64 位元版本的 **dtexec** 公用程式 (dtexec.exe) 和 **dtutil** 公用程式 (dtutil.exe)。 若要安裝 32 位元版本的這些 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 工具，您必須在安裝期間選取用戶端工具或 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 。  
   
- 根據預設，同時安裝了 64 位元和 32 位元版之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 命令提示字元公用程式的 64 位元電腦將會在命令提示字元上執行 32 位元版本。 執行 32 位元版本是因為 32 位元版本的目錄路徑在 PATH 環境變數中會出現在 64 位元版本的目錄路徑前面 (一般來說，32 位元的目錄路徑是*\<磁碟機 >*: \Program 檔案 (x86) server\120\dts\binn，而 64 位元的目錄路徑是*\<磁碟機 >*: \程式 Files\Microsoft SQL Server\120\DTS\Binn）。  
+ 根據預設，同時安裝了 64 位元和 32 位元版之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 命令提示字元公用程式的 64 位元電腦將會在命令提示字元上執行 32 位元版本。 執行 32 位元版本是因為 32 位元版本的目錄路徑在 PATH 環境變數中會出現在 64 位元版本的目錄路徑前面 (一般來說，32 位元的目錄路徑是 *\<磁碟機 >* : \Program 檔案 (x86) server\120\dts\binn，而 64 位元的目錄路徑是 *\<磁碟機 >* : \程式 Files\Microsoft SQL Server\120\DTS\Binn）。  
   
 > [!NOTE]  
 >  如果您使用 SQL Server Agent 執行此公用程式，SQL Server Agent 會自動使用 64 位元版的公用程式。 SQL Server Agent 會使用此登錄 (而不是 PATH 環境變數) 來尋找此公用程式的正確可執行檔。  
   
  若要確保您可在命令提示字元上執行 64 位元版的公用程式，您可以採取下列其中一個動作：  
   
--   開啟命令提示字元 視窗，切換到包含 64 位元版公用程式的目錄 *(\<磁碟機 >*: \Program Files\Microsoft SQL Server\120\DTS\Binn)，然後從該位置執行公用程式。  
+-   開啟命令提示字元 視窗，切換到包含 64 位元版公用程式的目錄 *(\<磁碟機 >* : \Program Files\Microsoft SQL Server\120\DTS\Binn)，然後從該位置執行公用程式。  
   
--   在命令提示字元中，執行公用程式中輸入完整路徑 (*\<磁碟機 >*: \Program Files\Microsoft SQL Server\120\DTS\Binn) 64 位元版公用程式。  
+-   在命令提示字元中，執行公用程式中輸入完整路徑 ( *\<磁碟機 >* : \Program Files\Microsoft SQL Server\120\DTS\Binn) 64 位元版公用程式。  
   
--   永久變更 PATH 環境變數中的路徑順序，將 64 位元路徑 (*\<磁碟機 >*: \Program Files\Microsoft SQL Server\120\DTS\Binn) 之前的 32 位元路徑 ( *\<磁碟機 >*: \程式檔案 (x86) server\120\dts\binn） 在變數中。  
+-   永久變更 PATH 環境變數中的路徑順序，將 64 位元路徑 ( *\<磁碟機 >* : \Program Files\Microsoft SQL Server\120\DTS\Binn) 之前的 32 位元路徑 ( *\<磁碟機 >* : \程式檔案 (x86) server\120\dts\binn） 在變數中。  
   
 ## <a name="syntax"></a>語法  
   
@@ -93,9 +93,9 @@ dtutil /option [value] [/option [value]]...
 |/DestP[assword] *password*|指定搭配 SQL 選項來連接使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證之目的地 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，所使用的密碼。 如果 *DESTPASSWORD* 是指定在不含 *DTSUSER* 選項的命令列上，則會產生錯誤。<br /><br /> 注意： [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]。|  
 |/DestS[erver] *server_instance*|指定以任何動作搭配使用的伺服器名稱，這些動作會使目的地儲存在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的。 當儲存 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝時，它用來識別非本機或非預設的伺服器。 在不含與 *相關聯動作的命令列上指定* DESTSERVER [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]是錯的。 *SIGN SQL*、 *COPY SQL*或 *MOVE SQL* 選項之類的動作，就是結合這個選項的適當命令。<br /><br /> 您可以在伺服器名稱中加入反斜線和執行個體名稱來指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的名稱。|  
 |/DestU[ser] *username*|指定與 *SIGN SQL*、 *COPY SQL*和 *MOVE SQL* 選項一起使用的使用者名稱，以連接到使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 在不含 *DESTUSER* 、 *SIGN SQL*或 *COPY SQL*選項的命令列上指定 *MOVE SQL* 是錯的。|  
-|/Dump *處理序識別碼*|(選擇性) 讓指定的處理序 ( **dtexec** 公用程式或 **dtsDebugHost.exe** 處理序) 暫停，並建立偵錯傾印檔案 .mdmp 和 .tmp。<br /><br /> 注意:若要使用 **/Dump** 選項，您必須被指派「偵錯程式」使用者權限 (SeDebugPrivilege)。<br /><br /> 若要找出您想要暫停之處理序的 *process ID* ，請使用 Windows 工作管理員。<br /><br /> 根據預設，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]偵錯傾印檔案儲存在資料夾中， *\<磁碟機 >*: \Program Files\Microsoft SQL Server\120\Shared\ErrorDumps。<br /><br /> 如需 **dtexec** 公用程式和 **dtsDebugHost.exe** 處理序的詳細資訊，請參閱 [dtexec Utility](packages/dtexec-utility.md) 和 [Building, Deploying, and Debugging Custom Objects](extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)。<br /><br /> 如需有關偵錯傾印檔案的詳細資訊，請參閱＜ [Generating Dump Files for Package Execution](troubleshooting/generating-dump-files-for-package-execution.md)＞。<br /><br /> 注意:偵錯傾印檔案可能會包含敏感性資訊。 您可以使用存取控制清單 (ACL) 來限制這些檔案的存取權，或將這些檔案複製到具有限制性存取權的資料夾。|  
+|/Dump *處理序識別碼*|(選擇性) 讓指定的處理序 ( **dtexec** 公用程式或 **dtsDebugHost.exe** 處理序) 暫停，並建立偵錯傾印檔案 .mdmp 和 .tmp。<br /><br /> 注意:若要使用 **/Dump** 選項，您必須被指派「偵錯程式」使用者權限 (SeDebugPrivilege)。<br /><br /> 若要找出您想要暫停之處理序的 *process ID* ，請使用 Windows 工作管理員。<br /><br /> 根據預設，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]偵錯傾印檔案儲存在資料夾中， *\<磁碟機 >* : \Program Files\Microsoft SQL Server\120\Shared\ErrorDumps。<br /><br /> 如需 **dtexec** 公用程式和 **dtsDebugHost.exe** 處理序的詳細資訊，請參閱 [dtexec Utility](packages/dtexec-utility.md) 和 [Building, Deploying, and Debugging Custom Objects](extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)。<br /><br /> 如需有關偵錯傾印檔案的詳細資訊，請參閱＜ [Generating Dump Files for Package Execution](troubleshooting/generating-dump-files-for-package-execution.md)＞。<br /><br /> 注意:偵錯傾印檔案可能會包含敏感性資訊。 您可以使用存取控制清單 (ACL) 來限制這些檔案的存取權，或將這些檔案複製到具有限制性存取權的資料夾。|  
 |/DT[S] *filespec*|指定要處理的 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝是在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區中。 *filespec* 引數必須包含資料夾路徑，並以 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區的根目錄為開頭。 根據預設，組態檔中根資料夾的名稱為 "MSDB" 和 "File System"。 您必須使用雙引號來隔開包含空格的路徑。<br /><br /> 如果 DT[S] 選項是指定在與下列任何選項相同的命令列上，則會傳回 DTEXEC_DTEXECERROR：<br /><br /> `FILE`<br /><br /> `SQL`<br /><br /> `SOURCEUSER`<br /><br /> `SOURCEPASSWORD`<br /><br /> `SOURCESERVER`|  
-|/En[crypt] *{SQL &#124; FILE}; Path;ProtectionLevel[;password]*|(選擇性)。 利用指定的保護等級和密碼來加密載入的封裝，並將它儲存在 *Path*所指定的位置中。 *ProtectionLevel*決定是否需要密碼：<br />*SQL* - 路徑是目的地封裝名稱。<br />*FILE* - 路徑是指封裝的完整路徑和檔案名稱。<br />*DTS* - 目前不支援此選項。<br /><br /> *ProtectionLevel* 選項：<br />等級 0:解除機密資訊。<br />等級 1：機密資訊使用本機使用者認證加密。<br />等級 2：機密資訊使用必要的密碼加密。<br />等級 3：套件使用必要的密碼加密。<br />等級 4：套件使用本機使用者認證加密。<br />等級 5：封裝使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 儲存體加密。|  
+|/En[crypt] *{SQL &#124; FILE}; Path;ProtectionLevel[;password]*|(選擇性)。 利用指定的保護等級和密碼來加密載入的封裝，並將它儲存在 *Path*所指定的位置中。 *ProtectionLevel*決定是否需要密碼：<br />*SQL* - 路徑是目的地封裝名稱。<br />*FILE* - 路徑是指封裝的完整路徑和檔案名稱。<br />*DTS* - 目前不支援此選項。<br /><br /> *ProtectionLevel* 選項：<br />層級 0：解除機密資訊。<br />等級 1：機密資訊使用本機使用者認證加密。<br />等級 2：機密資訊使用必要的密碼加密。<br />等級 3：套件使用必要的密碼加密。<br />等級 4：套件使用本機使用者認證加密。<br />等級 5：封裝使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 儲存體加密。|  
 |/Ex[ists]|(選擇性)。 用來判斷封裝是否存在。 **dtutil** 會嘗試找出透過 *SQL*、 *DTS* 或 *FILE* 選項所指定的封裝。 如果 **dtutil** 找不到指定的封裝，就會傳回 DTEXEC_DTEXECERROR。|  
 |/FC[reate] {*SQL* &#124; *DTS*};*ParentFolderPath;NewFolderName*|(選擇性)。 建立內含您在 *NewFolderName*所指定之名稱的新資料夾。 *ParentFolderPath*指出新資料夾的位置。|  
 |/FDe[lete] {*SQL* &#124; *DTS*}[;*ParentFolderPath;FolderName]*|(選擇性)。 從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssIS](../includes/ssis-md.md)] 刪除 *FolderName*中之名稱所指定的資料夾。 *ParentFolderPath*指出要刪除之資料夾的位置。|  

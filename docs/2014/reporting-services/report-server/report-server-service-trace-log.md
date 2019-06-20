@@ -16,17 +16,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d69b2a3eeb28d5fe23eb6674c8a0ca0ee7628a75
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103413"
 ---
 # <a name="report-server-service-trace-log"></a>報表伺服器服務追蹤記錄
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表伺服器追蹤記錄為 ASCII 文字檔案，包含報表伺服器服務作業的詳細資訊，包括報表伺服器 Web 服務、報表管理員及背景處理所執行的作業。 追蹤記錄檔包括已記錄於其他記錄檔的重複資訊，加上別處所沒有的其他資訊。 如果您要偵錯包含報表伺服器的應用程式，或者調查寫入事件記錄或執行記錄的特定問題，追蹤記錄資訊可能會很有用。  
   
 > [!NOTE]  
->  在先前的版本中，系統提供了多個追蹤記錄檔 (每個應用程式都有一個檔案)。 下列檔案已過時，在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和之後的版本中不會再建立：ReportServerWebApp_*\<時間戳記 >*.log、 ReportServer_*\<時間戳記 >*.log 和 ReportServerService_main_ *\<時間戳記 >*。 記錄檔。  
+>  在先前的版本中，系統提供了多個追蹤記錄檔 (每個應用程式都有一個檔案)。 下列檔案已過時，在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和之後的版本中不會再建立：ReportServerWebApp_ *\<時間戳記 >* .log、 ReportServer_ *\<時間戳記 >* .log 和 ReportServerService_main_ *\<時間戳記 >* 。 記錄檔。  
   
  **本主題內容：**  
   

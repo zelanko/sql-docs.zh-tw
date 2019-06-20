@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3de8f9e708149669a65b8abf4114227392aa15a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102704"
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>設定報表的執行屬性 (報表管理員)
@@ -36,15 +36,15 @@ ms.locfileid: "66102704"
   
  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-1.  在下拉式功能表中，按一下 [管理]，然後選取 [處理選項] 索引標籤。  
+1.  在下拉式功能表中，按一下 [管理]  ，然後選取 [處理選項]  索引標籤。  
   
-2.  按一下 [從報表執行快照集轉譯此報表]，然後選取下列其中一個選項：  
+2.  按一下 [從報表執行快照集轉譯此報表]  ，然後選取下列其中一個選項：  
   
-    -   如果想要建立快照集，請選取 [使用下列排程建立報表執行快照集]，然後定義報表特定的排程或從 [共用排程] 清單中選取。  
+    -   如果想要建立快照集，請選取 [使用下列排程建立報表執行快照集]  ，然後定義報表特定的排程或從 [共用排程]  清單中選取。  
   
-    -   如果您要立即建立快照集，請選取 [當您在此頁面上按一下 [套用] 按鈕時，會建立報表快照集]。  
+    -   如果您要立即建立快照集，請選取 [當您在此頁面上按一下 [套用] 按鈕時，會建立報表快照集]  。  
   
-3.  按一下 **[套用]**。  
+3.  按一下 **[套用]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表處理屬性](../report-server/set-report-processing-properties.md)   

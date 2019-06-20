@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf665b0ea1cae89257d6368af9b307845a2cb3c2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089615"
 ---
 # <a name="trace-file-properties-general-tab"></a>追蹤檔案屬性 (一般索引標籤)
   使用 **[追蹤檔案屬性]** 對話方塊的 **[一般]** 索引標籤，來檢視追蹤檔案的屬性。  
   
- 若要檢視此視窗，請開啟追蹤檔案。 接著在 **[檔案]** 功能表上，按一下 **[屬性]**。  
+ 若要檢視此視窗，請開啟追蹤檔案。 接著在 **[檔案]** 功能表上，按一下 **[屬性]** 。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **檔案名稱**  
  就會顯示追蹤檔案的路徑與名稱。  
   

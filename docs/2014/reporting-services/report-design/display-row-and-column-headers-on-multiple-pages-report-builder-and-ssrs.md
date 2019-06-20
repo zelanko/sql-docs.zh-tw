@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8b5b343a32480d7d8ae59e9fa27fbe7d1f531213
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106016"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>在多個頁面上顯示資料列和資料行標頭 (報表產生器及 SSRS)
@@ -33,17 +33,17 @@ ms.locfileid: "66106016"
   
 ### <a name="to-display-row-headers-on-multiple-pages"></a>若要在多個頁面上顯示資料列標頭  
   
-1.  以滑鼠右鍵按一下 Tablix 資料區的資料列、資料行或角控點，然後按一下 **[Tablix 屬性]**。  
+1.  以滑鼠右鍵按一下 Tablix 資料區的資料列、資料行或角控點，然後按一下 **[Tablix 屬性]** 。  
   
-2.  在 **[資料列標頭]** 中，選取 **[在每一頁重複標頭資料列]**。  
+2.  在 **[資料列標頭]** 中，選取 **[在每一頁重複標頭資料列]** 。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="to-display-column-headers-on-multiple-pages"></a>在多個頁面上顯示資料行標頭  
   
-1.  以滑鼠右鍵按一下 Tablix 資料區的資料列、資料行或角控點，然後按一下 **[Tablix 屬性]**。  
+1.  以滑鼠右鍵按一下 Tablix 資料區的資料列、資料行或角控點，然後按一下 **[Tablix 屬性]** 。  
   
-2.  在 **[資料行標頭]** 中，選取 **[在每一頁重複標頭資料行]**。  
+2.  在 **[資料行標頭]** 中，選取 **[在每一頁重複標頭資料行]** 。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -51,11 +51,11 @@ ms.locfileid: "66106016"
   
 1.  在設計介面上，按一下 Tablix 資料區的資料列或資料行控點來選取它。 [群組] 窗格會顯示資料列和資料行群組。  
   
-2.  在 [群組] 窗格的右邊按一下向下箭頭，然後按一下 **[進階模式]**。 [資料列群組] 窗格會顯示資料列群組階層的階層式靜態及動態成員，[資料行群組] 窗格則會為資料行群組階層顯示類似的內容。  
+2.  在 [群組] 窗格的右邊按一下向下箭頭，然後按一下 **[進階模式]** 。 [資料列群組] 窗格會顯示資料列群組階層的階層式靜態及動態成員，[資料行群組] 窗格則會為資料行群組階層顯示類似的內容。  
   
 3.  按一下對應至要在捲動時保持可見之靜態成員 (資料列或資料行) 的靜態成員。 [屬性] 窗格會顯示 **[Tablix 成員]** 屬性。  
   
-     如果看不到 [屬性] 窗格，請按一下報表產生器視窗最上方的 [檢視] 索引標籤，然後按一下 [屬性]。  
+     如果看不到 [屬性] 窗格，請按一下報表產生器視窗最上方的 [檢視]  索引標籤，然後按一下 [屬性]  。  
   
 4.  在 [屬性] 窗格中，將 **[RepeatOnNewPage]** 設定為 [True]。  
   

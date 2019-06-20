@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0281a487de123adfeb3739066628694b1da17a3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108902"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>設定原生模式報表伺服器向外延展部署 (SSRS 組態管理員)
@@ -63,7 +63,7 @@ ms.locfileid: "66108902"
   
 ### <a name="to-install-the-first-report-server-instance"></a>若要安裝第一個報表伺服器執行個體  
   
-1.  安裝屬於部署之一部分的第一個報表伺服器執行個體。 當您安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 時，請在 [報表伺服器安裝選項] 頁面上選擇 [安裝但不設定伺服器] 選項。  
+1.  安裝屬於部署之一部分的第一個報表伺服器執行個體。 當您安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 時，請在 [報表伺服器安裝選項] 頁面上選擇 [安裝但不設定伺服器]  選項。  
   
 2.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66108902"
   
 ### <a name="to-install-and-configure-the-second-report-server-instance"></a>若要安裝和設定第二個報表伺服器執行個體  
   
-1.  執行安裝程式，將第二個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體安裝在另一部電腦上，或做為相同電腦上的具名執行個體。 當您安裝 Reporting Services 時，請在 [報表伺服器安裝選項] 頁面上選擇 [安裝但不設定伺服器] 選項。  
+1.  執行安裝程式，將第二個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體安裝在另一部電腦上，或做為相同電腦上的具名執行個體。 當您安裝 Reporting Services 時，請在 [報表伺服器安裝選項] 頁面上選擇 [安裝但不設定伺服器]  選項。  
   
 2.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到您剛才安裝的新執行個體。  
   
@@ -81,17 +81,17 @@ ms.locfileid: "66108902"
   
     1.  按一下 **資料庫**以開啟 資料庫 頁面。  
   
-    2.  按一下 **[變更資料庫]**。  
+    2.  按一下 **[變更資料庫]** 。  
   
-    3.  按一下 **[選擇現有報表伺服器資料庫]**。  
+    3.  按一下 **[選擇現有報表伺服器資料庫]** 。  
   
     4.  輸入主控您要使用之報表伺服器資料庫的 SQL Server Database Engine 執行個體的伺服器名稱。 這必須是您在先前的指示集內所連接的相同伺服器。  
   
-    5.  按一下 [**測試連接**，然後按一下**下一步]**。  
+    5.  按一下 [**測試連接**，然後按一下**下一步]** 。  
   
-    6.  在 [**報表伺服器資料庫**，選取您的第一個報表伺服器時，所建立的資料庫，然後按一下**下一步]**。 預設名稱為 ReportServer。 請勿選取 ReportServerTempDB，因為它只能在處理報表時用來儲存暫存資料。 如果資料庫清單是空的，請重複前四個步驟來建立與伺服器的連接。  
+    6.  在 [**報表伺服器資料庫**，選取您的第一個報表伺服器時，所建立的資料庫，然後按一下**下一步]** 。 預設名稱為 ReportServer。 請勿選取 ReportServerTempDB，因為它只能在處理報表時用來儲存暫存資料。 如果資料庫清單是空的，請重複前四個步驟來建立與伺服器的連接。  
   
-    7.  在 [認證] 頁面中，選取報表伺服器將用來連接到報表伺服器資料庫的帳戶類型和認證。 您可以使用與第一個報表伺服器執行個體相同的認證，或是不同的認證。 按一下 [下一步] 。  
+    7.  在 [認證] 頁面中，選取報表伺服器將用來連接到報表伺服器資料庫的帳戶類型和認證。 您可以使用與第一個報表伺服器執行個體相同的認證，或是不同的認證。 按一下 [下一步]  。  
   
     8.  按一下 **摘要**，然後按一下**完成**。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66108902"
   
 1.  開啟 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並重新連接到第一個報表伺服器執行個體。 由於第一部報表伺服器已針對可回復的加密作業初始化，因此它可用來將其他報表伺服器執行個體加入向外延展部署中。  
   
-2.  按一下 [向外延展部署]，開啟 [向外延展部署] 頁面。 您應該會看到兩個項目，一個項目適用於連接到報表伺服器資料庫的每一個報表伺服器執行個體。 第一個報表伺服器執行個體應該會加入， 第二部報表伺服器應該是「正在等候加入」。 如果您沒有看到類似於部署的項目，請確認您已連接到已設定及初始化來使用報表伺服器資料庫的第一部報表伺服器。  
+2.  按一下 [向外延展部署]  ，開啟 [向外延展部署] 頁面。 您應該會看到兩個項目，一個項目適用於連接到報表伺服器資料庫的每一個報表伺服器執行個體。 第一個報表伺服器執行個體應該會加入， 第二部報表伺服器應該是「正在等候加入」。 如果您沒有看到類似於部署的項目，請確認您已連接到已設定及初始化來使用報表伺服器資料庫的第一部報表伺服器。  
   
      ![[向外延展部署] 頁面的局部螢幕擷取畫面](../../../2014/sql-server/install/media/scaloutscreen.gif "[向外延展部署] 頁面的局部螢幕擷取畫面")  
   

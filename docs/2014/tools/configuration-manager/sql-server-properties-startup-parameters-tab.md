@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62679158"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 屬性 (啟動參數索引標籤)
@@ -22,12 +22,12 @@ ms.locfileid: "62679158"
   
 ## <a name="options"></a>選項。  
  **指定啟動參數**  
- 若要加入參數，請輸入參數，然後按一下 [加入]。  
+ 若要加入參數，請輸入參數，然後按一下 [加入]  。  
   
- 若要修改其中一個必要參數，請在 **[現有參數]** 方塊中選取參數、在 **[指定啟動參數]** 方塊中變更其值，然後按一下 **[更新]**。  
+ 若要修改其中一個必要參數，請在 **[現有參數]** 方塊中選取參數、在 **[指定啟動參數]** 方塊中變更其值，然後按一下 **[更新]** 。  
   
  **[現有參數]**  
- 若要移除參數，請選取參數，然後按一下 [移除]。  
+ 若要移除參數，請選取參數，然後按一下 [移除]  。  
   
 ## <a name="parameter-format"></a>參數格式  
  請勿在參數之間輸入分隔符號。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員會自動加入分隔符號。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員會強制執行下列參數需求。  
@@ -51,7 +51,7 @@ ms.locfileid: "62679158"
  如需有關如何移動 master 資料庫的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜移動系統資料庫＞主題。  
   
 ## <a name="optional-parameters"></a>選擇性參數  
- 《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動選項＞主題描述了所有支援的啟動參數。 啟動參數 -T*trace#* 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體應該使用作用中的指定追蹤旗標 (*trace#*) 來啟動。 追蹤旗標用來啟動具有非標準行為的伺服器。 如需追蹤旗標的詳細資訊，請參閱《[!INCLUDE[tsql](../../includes/tsql-md.md)]線上叢書》中的＜追蹤旗標 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )＞主題。  
+ 《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動選項＞主題描述了所有支援的啟動參數。 啟動參數 -T*trace#* 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體應該使用作用中的指定追蹤旗標 (*trace#* ) 來啟動。 追蹤旗標用來啟動具有非標準行為的伺服器。 如需追蹤旗標的詳細資訊，請參閱《[!INCLUDE[tsql](../../includes/tsql-md.md)]線上叢書》中的＜追蹤旗標 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )＞主題。  
   
 > [!CAUTION]  
 >  您可能會在網際網路上看到其他未記載的啟動參數和追蹤旗標描述。 未記載的啟動參數和追蹤旗標是用來處理不常見的問題或強制執行測試所需的特定條件。 使用未記載的啟動參數可能會產生非預期的結果。 除非 Microsoft 客戶支援服務建議使用未記載的參數，否則請勿使用這些參數。  

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 876923763d6aad1319b0409143dd5fca6e23e92a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62658770"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance (DMX)
@@ -32,7 +32,7 @@ PredictVariance(<scalar column reference>)
  純量資料行。  
   
 ## <a name="return-type"></a>傳回類型  
- 純量值所指定之型別的*\<純量資料行參考 >*。  
+ 純量值所指定之型別的 *\<純量資料行參考 >* 。  
   
 ## <a name="remarks"></a>備註  
  如果資料行參考是離散**PredictVariance**會傳回 0，因為無法從離散值計算變異數。  

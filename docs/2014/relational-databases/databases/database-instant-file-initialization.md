@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 491c8a63c7ee3ed06c90356c58820f34ed3c0bf9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62872088"
 ---
 # <a name="database-instant-file-initialization"></a>資料庫立即檔案初始化
@@ -49,9 +49,9 @@ ms.locfileid: "62872088"
   
 1.  在將建立備份檔案的電腦上，開啟「`Local Security Policy`」應用程式 (`secpol.msc`)。  
   
-2.  在左窗格中，展開 [本機原則] ，然後按一下 [使用者權限指派] 。  
+2.  在左窗格中，展開 [本機原則]  ，然後按一下 [使用者權限指派]  。  
   
-3.  在右窗格中，按兩下 [執行磁碟區維護工作]。  
+3.  在右窗格中，按兩下 [執行磁碟區維護工作]  。  
   
 4.  按一下 [新增使用者或群組]  ，新增用於備份的任何使用者帳戶。  
   

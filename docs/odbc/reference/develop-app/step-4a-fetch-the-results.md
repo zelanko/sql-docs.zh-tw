@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cad33f1ccf798a08ef1f11667e59b4d5fb4888d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63149198"
 ---
 # <a name="step-4a-fetch-the-results"></a>步驟 4a：擷取結果
@@ -26,7 +26,7 @@ ms.locfileid: "63149198"
   
  ![正在擷取 ODBC 應用程式中的結果會顯示](../../../odbc/reference/develop-app/media/pr14.gif "pr14")  
   
- 如果陳述式執行，則 「 步驟 3:建置並執行 SQL 陳述式 」 已**選取 **陳述式或類別目錄函式，在應用程式第一次呼叫**SQLNumResultCols**來判斷結果集中的資料行數目。 此步驟不需要應用程式已經知道設定資料行，例如是硬式編碼的垂直或自訂應用程式中的 SQL 陳述式的結果數目。  
+ 如果陳述式執行，則 「 步驟 3:建置並執行 SQL 陳述式 」 已**選取** 陳述式或類別目錄函式，在應用程式第一次呼叫**SQLNumResultCols**來判斷結果集中的資料行數目。 此步驟不需要應用程式已經知道設定資料行，例如是硬式編碼的垂直或自訂應用程式中的 SQL 陳述式的結果數目。  
   
  接下來，應用程式會擷取名稱、 資料類型、 有效位數和小數位數與每個結果集資料行**SQLDescribeCol**。 同樣地，這不需要熟悉這項資訊的垂直和自訂應用程式等應用程式。 應用程式傳遞這項資訊才能**SQLBindCol**，它會在將應用程式變數中的結果集的資料行繫結。  
   

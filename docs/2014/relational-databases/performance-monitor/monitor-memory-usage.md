@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8d7dc9fdf5a6cd6e52261c0d2327676db79508c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63239149"
 ---
 # <a name="monitor-memory-usage"></a>監視記憶體使用量
@@ -54,11 +54,11 @@ ms.locfileid: "63239149"
   
 -   **程序：Working Set**  
   
--   **SQL Server:緩衝區管理員：Buffer Cache Hit Ratio**  
+-   **SQL Server：緩衝區管理員：Buffer Cache Hit Ratio**  
   
--   **SQL Server:緩衝區管理員：Database Pages**  
+-   **SQL Server：緩衝區管理員：Database Pages**  
   
--   **SQL Server:記憶體管理員：Total Server Memory (KB)**  
+-   **SQL Server：記憶體管理員：Total Server Memory (KB)**  
   
  **WorkingSet** 計數器顯示處理序使用的記憶體數量。 如果這個數字一直低於 **「最小伺服器記憶體」** 與 **「最大伺服器記憶體」** 伺服器選項設定的記憶體數量，則代表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定的記憶體過多。  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 873fd4bc1e010b2f7e2795368f8f209dfee23ea0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: de2ac80a10e66ed7673a65428c4bfa011d31b534
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210187"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263277"
 ---
 # <a name="what39s-new-in-analysis-services"></a>Analysis Services 的新功能
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -60,7 +60,7 @@ SQL Server 2016 Service SP1 Analysis Services 透過非統一記憶體存取 (NU
 ### <a name="bi-directional-cross-filtering"></a>雙向交叉篩選
 此版本中有內建的新方法可以啟用表格式模型中的雙向交叉篩選，因此不需要透過自訂 DAX 因應措施在資料表關聯性之間散佈篩選內容。 可以建立高度確定的方向時，才會自動產生篩選。 如果資料表關聯性之間有多個查詢路徑的形式模糊不清，將不會自動建立篩選。 如需詳細資訊，請參閱 [SQL Server 2016 Analysis Services 中適用於表格式模型的雙向交叉篩選](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) 。
  ### <a name="translations"></a>翻譯    
- 您現在可以在表格式 1200 模型中儲存已翻譯的中繼資料。 模型中的中繼資料包含 **Culture**、已轉譯標題和已轉譯描述的欄位。 若要新增翻譯，請使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中的 [模型] > [翻譯] 命令。 如需詳細資訊，請參閱[表格式模型中的翻譯 &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)。    
+ 您現在可以在表格式 1200 模型中儲存已翻譯的中繼資料。 模型中的中繼資料包含 **Culture**、已轉譯標題和已轉譯描述的欄位。 若要新增翻譯，請使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中的 [模型]   > [翻譯]  命令。 如需詳細資訊，請參閱[表格式模型中的翻譯 &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)。    
  ### <a name="pasted-tables"></a>貼上的資料表    
  您現在可以在模型包含貼上的資料表時，將 1100 或 1103 表格式模型升級為 1200。 建議使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]。 在 SSDT 中，將 **CompatibilityLevel** 設定為 1200，然後部署到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體。 如需詳細資訊，請參閱 [Compatibility Level for Tabular models in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) 。    
  ### <a name="calculated-tables-in-ssdt"></a>SSDT 中的導出資料表    
@@ -130,12 +130,12 @@ refresh|處理物件。 ASSL 對等項目為 PROCESS。
 
 ## <a name="dax"></a>DAX
 ### <a name="improved-dax-formula-editing"></a>改良的 DAX 公式編輯
-公式列更新使用語法顏色設定來區分函數、欄位和量值，協助您更輕鬆地撰寫公式，而語法顏色設定會提供智慧型函數和欄位建議，並使用錯誤「波浪線」 來告訴您 DAX 運算式是否有任何部分錯誤。 它也可讓您使用多行程式碼 (Alt + Enter 鍵) 和縮排 (Tab 鍵)。 在公式列現在也可讓您撰寫註解做為您的量值的一部分，則只要輸入"/ /"之後的同一行上這些字元會被視為註解的一切。
+公式列更新使用語法顏色設定來區分函數、欄位和量值，協助您更輕鬆地撰寫公式，而語法顏色設定會提供智慧型函數和欄位建議，並使用錯誤「波浪線」  來告訴您 DAX 運算式是否有任何部分錯誤。 它也可讓您使用多行程式碼 (Alt + Enter 鍵) 和縮排 (Tab 鍵)。 在公式列現在也可讓您撰寫註解做為您的量值的一部分，則只要輸入"/ /"之後的同一行上這些字元會被視為註解的一切。
 
 ### <a name="dax-variables"></a>DAX 變數    
-此版本現在會在 DAX 中包含變數的支援。 變數現在可以將運算式的結果儲存為具名變數，然後做為引數傳遞至其他量值運算式。 一旦計算變數運算式的結果值，這些值就不會變更，即使另一個運算式中參考的此變數。 如需詳細資訊，請參閱 [VAR 函數](http://msdn.microsoft.com/library/mt243785.aspx)。    
+此版本現在會在 DAX 中包含變數的支援。 變數現在可以將運算式的結果儲存為具名變數，然後做為引數傳遞至其他量值運算式。 一旦計算變數運算式的結果值，這些值就不會變更，即使另一個運算式中參考的此變數。 如需詳細資訊，請參閱 [VAR 函數](/dax/var-dax)。    
 ### <a name="new-dax-functions"></a>新的 DAX 函數
-在此版本中，DAX 引進了超過 50 個新函數，以在 Power BI 中支援更快速的計算和增強的視覺效果。 如需詳細資訊，請參閱 [New DAX Functions](http://msdn.microsoft.com/library/mt704075.aspx)(新的 DAX 函數)。
+在此版本中，DAX 引進了超過 50 個新函數，以在 Power BI 中支援更快速的計算和增強的視覺效果。 如需詳細資訊，請參閱 [New DAX Functions](/dax/new-dax-functions)(新的 DAX 函數)。
 ### <a name="save-incomplete-measures"></a>儲存不完整的量值
 您現在可以直接在表格式 1200 模型專案中儲存不完整的 DAX 量值，然後在您準備好繼續進行時再次取用。
 ### <a name="additional-dax-enhancements"></a>其他 DAX 增強功能
@@ -178,10 +178,10 @@ Visual Studio 2015 中的 [程式碼檢視] 現在會針對表格式 1200 模型
 >  ### <a name="new-elements-in-ms-csdlbi-20-schema"></a>MS-CSDLBI 2.0 結構描述中的新元素    
 >  下列元素已新增至 [MS-CSDLBI] 2.0 結構描述中定義的 **TProperty** 複雜類型：    
     
-|元素|定義|    
+|項目|定義|    
 |-------------|----------------|    
 |DefaultValue|一個屬性，可指定在評估查詢時使用的值。 DefaultValue 是選擇性屬性，但如果無法彙總成員所提供的值，則會自動選取該屬性。|    
-|Statistics|與資料行相關聯的基礎資料中的一組統計值。 這些統計值是由 TPropertyStatistics 複雜類型所定義，而如概念結構定義檔案格式的 2.1.13.5 節與商業智慧註釋文件所述，只有在不耗費許多資源即可產生時才會提供這些統計值。|    
+|統計資料|與資料行相關聯的基礎資料中的一組統計值。 這些統計值是由 TPropertyStatistics 複雜類型所定義，而如概念結構定義檔案格式的 2.1.13.5 節與商業智慧註釋文件所述，只有在不耗費許多資源即可產生時才會提供這些統計值。|    
     
 ## <a name="directquery"></a>DirectQuery    
 ### <a name="new-directquery-implementation"></a>新的 DirectQuery 實作    

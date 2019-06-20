@@ -18,15 +18,15 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 253e29ffb6b0723d672fdbf4de8a3cd6aff334d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63007973"
 ---
 # <a name="null-handling-sqlxml-40"></a>NULL 處理 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 語法表示 NULL 不存在  (例如，如果屬性或項目值是 NULL，該屬性或項目不存在將 XML 文件。)在  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML， **updg: nullvalue**屬性可讓針對項目或屬性的值指定 NULL。  
+  XML 語法表示 NULL 不存在 (例如，如果屬性或項目值是 NULL，該屬性或項目不存在將 XML 文件。)在  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML， **updg: nullvalue**屬性可讓針對項目或屬性的值指定 NULL。  
   
  例如，下列 updategram 可確保**標題**值，將此連絡人**ContactID** 64 是 NULL，，然後更新**標題**值為"Mr." 。  
   

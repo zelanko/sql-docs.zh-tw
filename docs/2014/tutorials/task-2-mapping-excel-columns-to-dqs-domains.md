@@ -11,15 +11,15 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 29d45e06dcd3e67af3abbc6b356d44877e40f46b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484699"
 ---
 # <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>工作 2：將 Excel 資料行對應到 DQS 定義域
     
-1.  在 [對應]  頁面上，針對 [資料來源]  選取 [Excel 檔案] 。  
+1.  在 [對應]  頁面上，針對 [資料來源]  選取 [Excel 檔案]  。  
   
 2.  按一下 **瀏覽**，選取**Suppliers.xlsx**，然後按一下**開啟**。  
   
@@ -49,6 +49,6 @@ ms.locfileid: "65484699"
 6.  按一下 **下一步**轉為**清理**頁面。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 3:針對供應商知識庫清理資料](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
+ [工作 3：針對供應商知識庫清理資料](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
   
   

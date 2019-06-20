@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8530a13af0e0ae6f1b769adcaa7cb6e9a3fbc0ae
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106040"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>顯示頁碼或其他報表屬性 (報表產生器及 SSRS)
@@ -49,20 +49,20 @@ ms.locfileid: "66106040"
 1.  在 [報表資料] 窗格中，展開 [內建欄位] 資料夾。  
   
     > [!NOTE]  
-    >  如果您看不到 [報表資料] 窗格，請在 [檢視] 索引標籤上，核取 [報表資料]。  
+    >  如果您看不到 [報表資料] 窗格，請在 [檢視] 索引標籤上，核取 [報表資料]  。  
   
-2.  將 [頁碼] 欄位從 [報表資料] 窗格拖曳至報表頁首或頁尾。  
+2.  將 [頁碼]  欄位從 [報表資料] 窗格拖曳至報表頁首或頁尾。  
   
     > [!NOTE]  
-    >  頁尾就會自動加入至報表。 若要新增頁首，請在 [插入] 索引標籤上，按一下 [頁首]，然後按一下 [新增頁首]。  
+    >  頁尾就會自動加入至報表。 若要新增頁首，請在 [插入]  索引標籤上，按一下 [頁首]  ，然後按一下 [新增頁首]  。  
     >   
     >  包含簡單運算式 [&PageNumber] 的文字方塊隨即加入。  
   
 ### <a name="to-add-the-word-page-before-the-page-number"></a>若要在頁碼前面加入 "Page" 一詞  
   
-1.  以滑鼠右鍵按一下包含 [&PageNumber] 的文字方塊，然後按一下 [運算式]。  
+1.  以滑鼠右鍵按一下包含 [&PageNumber] 的文字方塊，然後按一下 [運算式]  。  
   
-     [設定運算式對象：值] 文字方塊包含運算式 =Globals!PageNumber。  
+     [設定運算式對象：  值] 文字方塊包含運算式 =Globals!PageNumber。  
   
 2.  將游標放在等號 (=) 之後，然後輸入 `"Page " &`。  
   
@@ -72,11 +72,11 @@ ms.locfileid: "66106040"
   
 ### <a name="to-add-total-number-of-pages-after-the-page-number"></a>若要在頁碼後面加入總頁數  
   
-1.  以滑鼠右鍵按一下包含運算式的文字方塊，然後按一下 [運算式]。  
+1.  以滑鼠右鍵按一下包含運算式的文字方塊，然後按一下 [運算式]  。  
   
-2.  在運算式結尾鍵入 **&" of "&**。  
+2.  在運算式結尾鍵入 **&" of "&** 。  
   
-3.  在 [類別目錄] 窗格中，展開 [內建欄位]，然後按兩下 [TotalPages]。  
+3.  在 [類別目錄] 窗格中，展開 [內建欄位]  ，然後按兩下 [TotalPages]  。  
   
      運算式現在是 ="Page "&Globals!PageNumber &" of "&Globals!TotalPages  
   
