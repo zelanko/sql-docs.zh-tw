@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: df7698d222c2c2f0f68138eaa5f6289106b97659
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62799872"
 ---
 # <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)

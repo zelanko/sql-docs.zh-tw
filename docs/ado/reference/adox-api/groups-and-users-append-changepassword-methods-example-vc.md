@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 5c3a1e66be521a08ef94719cffff813206ce965e
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66706735"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Groups 和 Users Append、ChangePassword 方法範例 (VC++)

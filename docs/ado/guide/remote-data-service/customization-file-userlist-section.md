@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: e38b253cdebcc5ab976de8c8eb355f7f6fb03aec
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66699538"
 ---
 # <a name="customization-file-userlist-section"></a>自訂檔案 UserList 區段
@@ -32,7 +32,7 @@ ms.locfileid: "66699538"
 ## <a name="syntax"></a>語法  
  使用者存取項目屬於表單：  
   
- _userName_ **=**    
+ _userName_ **=**   
  **_accessRights_**  
   
 |部分|描述|  

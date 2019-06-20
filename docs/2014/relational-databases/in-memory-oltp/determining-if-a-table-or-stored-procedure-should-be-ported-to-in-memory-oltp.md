@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63072366"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>判斷是否應將資料表或預存程序匯出至記憶體中 OLTP
@@ -85,7 +85,7 @@ ms.locfileid: "63072366"
   
  您收集資料所在的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體版本 (設定檔) 應該與設定管理資料倉儲的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本相同或更舊。  
   
-1.  在物件總管中，展開 [管理]。  
+1.  在物件總管中，展開 [管理]  。  
   
 2.  以滑鼠右鍵按一下**資料收集**，然後選取**工作**，然後**設定管理資料倉儲**。 **設定管理資料倉儲精靈**開始。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "63072366"
   
  可以在 SQL Server 2012 或更新版本的設定資料收集器[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- 您需要使用正確認證建立的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Proxy，資料收集器才能將資料上傳到執行個體上的管理資料倉儲資料庫 (此執行個體與即將分析交易的地方不同)。 若要啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Proxy，您必須先使用具有網域功能的登入建立認證。 具有網域功能的登入必須是管理資料倉儲資料庫的 `mdw_admin` 群組成員。 請參閱[How to:建立認證 (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md)如需如何建立認證的詳細資訊。  
+ 您需要使用正確認證建立的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Proxy，資料收集器才能將資料上傳到執行個體上的管理資料倉儲資料庫 (此執行個體與即將分析交易的地方不同)。 若要啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Proxy，您必須先使用具有網域功能的登入建立認證。 具有網域功能的登入必須是管理資料倉儲資料庫的 `mdw_admin` 群組成員。 請參閱[如何：建立認證 (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md)如需如何建立認證的詳細資訊。  
   
  若要設定資料收集，以便上傳至不同執行個體上的管理資料倉儲資料庫：  
   

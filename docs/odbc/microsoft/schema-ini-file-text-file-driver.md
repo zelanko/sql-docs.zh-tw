@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127902"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini 檔案 (文字檔驅動程式)
@@ -100,7 +100,7 @@ n=ColumnNametype [#]
 |參數|描述|  
 |---------------|-----------------|  
 |*ColumnName*|文字資料行的名稱。 如果資料行名稱包含內嵌的空格，您必須將它括在雙引號中。|  
-|*type*|資料類型如下所示：<br /><br /> **Microsoft Jet 資料類型**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> 長整數<br /><br /> CURRENCY<br /><br /> Single<br /><br /> Double<br /><br /> Datetime<br /><br /> Text<br /><br /> 備忘錄<br /><br /> **ODBC 資料類型**Char （相同的文字）<br /><br /> Float （與 Double 相同）<br /><br /> 整數 （Short 與相同）<br /><br /> LongChar （如同備忘）<br /><br /> 日期*日期格式*|  
+|*type*|資料類型如下所示：<br /><br /> **Microsoft Jet 資料類型**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> 長整數<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> Datetime<br /><br /> Text<br /><br /> 備忘錄<br /><br /> **ODBC 資料類型**Char （相同的文字）<br /><br /> Float （與 Double 相同）<br /><br /> 整數 （Short 與相同）<br /><br /> LongChar （如同備忘）<br /><br /> 日期*日期格式*|  
 |**寬度**|常值字串值`Width`。 指出下列數字指定的資料行的寬度 （選擇性的字元分隔的檔案; 需要固定長度的檔案）。|  
 |*#*|指定資料行寬度的整數值 (需要**寬度**指定)。|  
   

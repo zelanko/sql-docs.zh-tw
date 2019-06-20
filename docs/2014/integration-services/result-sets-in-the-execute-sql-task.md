@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056433"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>執行 SQL 工作中的結果集
@@ -74,7 +74,7 @@ ms.locfileid: "66056433"
   
  將變數對應到 **單一資料列** 結果集時，如果符合下列條件，SQL 陳述式傳回的非字串值就會轉換為字串：  
   
--   **TypeConversionMode** 屬性設為 True。 您可以在 [屬性] 視窗中設定屬性值，也可以使用 **[執行 SQL 工作編輯器]**。  
+-   **TypeConversionMode** 屬性設為 True。 您可以在 [屬性] 視窗中設定屬性值，也可以使用 **[執行 SQL 工作編輯器]** 。  
   
 -   轉換不會導致資料截斷。  
   

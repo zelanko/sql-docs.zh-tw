@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d6ba289eed3e700034ed73d3f45ca3e0d963e385
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404480"
 ---
 # <a name="lesson-11-create-roles"></a>第 11 課：建立角色
@@ -43,7 +43,7 @@ ms.locfileid: "65404480"
   
 #### <a name="to-create-a-sales-manager-user-role"></a>若要建立 Sales Manager 使用者角色  
   
-1.  在表格式模型總管 中，以滑鼠右鍵按一下**角色** > **角色**。  
+1.  在表格式模型總管] 中，以滑鼠右鍵按一下**角色** > **角色**。  
   
 2.  在 [角色管理員] 中，按一下**新增**。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "65404480"
 
     ![as-tabular-lesson11-new-role](media/as-tabular-lesson11-new-role.png) 
   
-5.  選擇性：按一下 **成員**索引標籤，然後再按一下**新增**。 在 [選取使用者或群組] 對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
+5.  選擇性：按一下 [**成員**索引標籤，然後再按一下**新增**。 在 [選取使用者或群組] 對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
   
 #### <a name="to-create-a-sales-analyst-us-user-role"></a>若要建立 Sales Analyst US 使用者角色  
   

@@ -12,10 +12,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b39b71f65dfe9c41c3e2ea7282729691e78a5986
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484518"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
@@ -25,7 +25,7 @@ ms.locfileid: "65484518"
 SNAC 或 SQL Server Native Client，指的是，已用交換來參考適用於 SQL Server 的 ODBC 和 OLE DB 驅動程式。
 
 > [!IMPORTANT] 
-> SQL Server Native Client (SQLNCLI) 會保持已被取代，並不建議用於新的開發工作。 相反地，使用 新[Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 這會更新為最新的伺服器功能。
+> SQL Server Native Client (SQLNCLI) 會保持已被取代，並不建議用於新的開發工作。 相反地，使用 [新[Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 這會更新為最新的伺服器功能。
 
 > [!NOTE]
 > 如需詳細資訊及下載的 SNAC 或 ODBC 驅動程式，請參閱[SNAC 生命週期所述的部落格文章](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)。

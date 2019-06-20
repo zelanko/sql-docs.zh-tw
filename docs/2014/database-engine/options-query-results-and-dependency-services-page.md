@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481199"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>選項 (查詢結果和相依性服務頁面)
@@ -32,7 +32,7 @@ ms.locfileid: "65481199"
   
 1.  在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，按一下**選項**上**工具**功能表。  
   
-2.  展開 [查詢結果]，然後按一下 [相依性服務]。  
+2.  展開 [查詢結果]  ，然後按一下 [相依性服務]  。  
   
 ##  <a name="options"></a> 設定選項  
   

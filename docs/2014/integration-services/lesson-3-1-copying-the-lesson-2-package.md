@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b4458f8fe198ba3d052bcb21bef38975738b2c23
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767460"
 ---
-# <a name="step-1-copying-the-lesson-2-package"></a>步驟 1:複製第 2 課的套件
+# <a name="step-1-copying-the-lesson-2-package"></a>步驟 1:複製第 2 課的封裝
   在這項工作中，您將為第 2 課所建立的 Lesson 2.dtsx 套件建立複本。 另外，您也可以將此教學課程中隨附之已完成的第 2 課套件加入專案，然後改為複製該套件。 在第 3 課其餘的課程中，您將使用這個新的複本。  
   
 ### <a name="to-create-the-lesson-3-package"></a>建立第 3 課的套件  

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 64a5fbd4cf2bff4d4fb7338c565bb9bc46a5a22d
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65449995"
 ---
 # <a name="analysis-services-tutorials"></a>Analysis Services 教學課程

@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 711b577b737b48012e1bed0a52ba599cf17b3d8f
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 1f322b395f897780f3693d1186767aeef7dbfd4a
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685755"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263274"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>什麼是 SQL Server 2017 Analysis Services 的新功能
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -38,7 +38,7 @@ SQL Server 2017 Analysis Services 會看到一些最重要的增強功能自 SQL
 ![AS_NewTabular1400Project](../analysis-services/media/as-newtabular1400project.png)
 
 
-若要升級現有的表格式模型，在 SSDT 中，在 [方案總管] 中，以滑鼠右鍵按一下**Model.bim**，然後在**屬性**，將**相容性層級**屬性**SQL Server 2017 (1400)**。 
+若要升級現有的表格式模型，在 SSDT 中，在 [方案總管] 中，以滑鼠右鍵按一下**Model.bim**，然後在**屬性**，將**相容性層級**屬性**SQL Server 2017 (1400)** 。 
 
 ![AS_Model_Properties](../analysis-services/media/as-model-properties.png)
 
@@ -85,7 +85,7 @@ SQL Server 2017 Analysis Services 會看到一些最重要的增強功能自 SQL
 
 ![AS_Ragged_Hierarchy](../analysis-services/media/as-ragged-hierarchy.png)
 
-此版本推出 **隱藏成員** 屬性。 您可以將階層的 **隱藏成員** 屬性設定為[Hide blank members (隱藏空白成員)] 。
+此版本推出 **隱藏成員** 屬性。 您可以將階層的 **隱藏成員** 屬性設定為[Hide blank members (隱藏空白成員)]  。
 
 ![AS_Hide_Blank_Members](../analysis-services/media/as-hide-blank-members.png)
 
@@ -111,7 +111,7 @@ SQL Server 2017 Analysis Services 會看到一些最重要的增強功能自 SQL
 
 ![AS_Detail_Rows_Expression_Property](../analysis-services/media/as-detail-rows-expression-property.png)
 
-[SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) DAX 函數常用的詳細資料列運算式。 下例會定義範例 Adventure Works 表格式模型的 Internet Sales 資料表中，資料列要傳回的資料行︰
+[SELECTCOLUMNS](/dax/selectcolumns-function-dax) DAX 函數常用的詳細資料列運算式。 下例會定義範例 Adventure Works 表格式模型的 Internet Sales 資料表中，資料列要傳回的資料行︰
 
 ```
 SELECTCOLUMNS(
@@ -123,7 +123,7 @@ SELECTCOLUMNS(
 )
 ```
 
-定義屬性及部署模型之後，當使用者選取 [顯示詳細資料] 時，就會傳回自訂的資料列集。 它會自動接受所選儲存格的篩選器內容優先權。 本例中只會顯示 2010 年的值資料列︰
+定義屬性及部署模型之後，當使用者選取 [顯示詳細資料]  時，就會傳回自訂的資料列集。 它會自動接受所選儲存格的篩選器內容優先權。 本例中只會顯示 2010 年的值資料列︰
 
 ![AS_Detail_Rows](../analysis-services/media/as-detail-rows.png)
 
@@ -146,7 +146,7 @@ EVALUATE DETAILROWS([Internet Total Sales])
 
 物件層級安全性，必須使用 JSON 為基礎的中繼資料、 表格式模型指令碼語言 (TMSL) 或表格式物件模型 (TOM) 來設定。 
 
-例如，下列程式碼將 **TablePermission** 類別的 **MetadataPermission** 屬性設為 [無] ，協助保護範例 Adventure Works 表格式模型中的 Product 資料表。
+例如，下列程式碼將 **TablePermission** 類別的 **MetadataPermission** 屬性設為 [無]  ，協助保護範例 Adventure Works 表格式模型中的 Product 資料表。
 
 ```
 //Find the Users role in Adventure Works and secure the Product table
@@ -179,9 +179,9 @@ db.Update(UpdateOptions.ExpandFull);
 [MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset)增強功能會包含此 dmv，各種用戶端工具用來顯示量值維度性。 比方說，在 Excel 樞紐分析表中的 [瀏覽] 功能可讓使用者跨-向下切入至選取的量值與相關維度。 此版本中修正的基數的資料行，先前已顯示不正確的值。
 
 ## <a name="dax-enhancements"></a>DAX 增強功能
-此版本包含新的 DAX 函數和功能的支援。 若要利用，您需要使用最新版的 SSDT。 若要進一步了解，請參閱[新的 DAX 函數](https://msdn.microsoft.com/library/mt704075.aspx)。
+此版本包含新的 DAX 函數和功能的支援。 若要利用，您需要使用最新版的 SSDT。 若要進一步了解，請參閱[新的 DAX 函數](/dax/new-dax-functions)。
 
-其中一個新的 DAX 功能的最重要的項目是新[IN 運算子 / 函式 CONTAINSROW](https://msdn.microsoft.com/library/mt842621.aspx) DAX 運算式。 這類似於 [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) 子句中常用來指定多個值的 `WHERE` 運算子。
+其中一個新的 DAX 功能的最重要的項目是新[IN 運算子 / 函式 CONTAINSROW](/dax/in-operator-containsrow-function) DAX 運算式。 這類似於 [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) 子句中常用來指定多個值的 `WHERE` 運算子。
 
 過去通常使用邏輯 `OR` 運算子指定多重值的篩選條件，如下列量值運算式中所示︰
 

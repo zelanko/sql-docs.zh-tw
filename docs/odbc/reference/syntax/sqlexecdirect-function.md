@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a1c66c9ab423a6bb722c422450b99c1a47118f7
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537193"
 ---
 # <a name="sqlexecdirect-function"></a>SQLExecDirect 函式
@@ -124,7 +124,7 @@ SQLRETURN SQLExecDirect(
   
  應用程式可以包含一或多個參數標記中的 SQL 陳述式。 若要包含的參數標記，應用程式會嵌入在適當的位置上的 SQL 陳述式的問號 （？）。 如需參數的資訊，請參閱[陳述式參數](../../../odbc/reference/develop-app/statement-parameters.md)。  
   
- 如果 SQL 陳述式**選取 **陳述式，如果應用程式會呼叫**SQLSetCursorName**陳述式相關聯的資料指標，則驅動程式會使用指定的資料指標。 否則，此驅動程式會產生資料指標名稱。  
+ 如果 SQL 陳述式**選取** 陳述式，如果應用程式會呼叫**SQLSetCursorName**陳述式相關聯的資料指標，則驅動程式會使用指定的資料指標。 否則，此驅動程式會產生資料指標名稱。  
   
  如果資料來源是在手動認可模式 （需要明確的交易初始），而且已經尚未起始交易，此驅動程式傳送的 SQL 陳述式之前，就會起始交易。 如需詳細資訊，請參閱 <<c0> [ 手動認可模式](../../../odbc/reference/develop-app/manual-commit-mode.md)。  
   

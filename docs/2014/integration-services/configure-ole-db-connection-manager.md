@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cef2c37c2775b1b5bd46e04f214d8ae77ee7b56d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060545"
 ---
 # <a name="configure-ole-db-connection-manager"></a>設定 OLE DB 連接管理員
@@ -26,7 +26,7 @@ ms.locfileid: "66060545"
   
  若要深入了解 OLE DB 連接管理員，請參閱＜ [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料連接**  
  從清單中選取現有的 OLE DB 資料連接。  
   

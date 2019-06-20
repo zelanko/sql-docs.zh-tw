@@ -11,24 +11,24 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7c5fc9d863c23c1cae08c04fef7810aeda446762
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65476989"
 ---
 # <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>工作 13：新增 OLE DB 目的地來將資料寫入 MDS 暫存資料表
   既然您已新增**ImportType**並**BatchTag**所有記錄的值，您已準備好將它們傳送至 MDS 供暫存。 在這個工作中，您可以使用 OLE DB 目的地將資料寫入至**stg.supplier_Leaf**暫存資料表。  
   
-1.  拖曳**OLE DB 目的地**從**其他目的地**一節中**SSIS 工具箱**至**資料流程**索引標籤並將它放在**加入 MDS 所需的資料行**。  
+1.  拖曳**OLE DB 目的地**從**其他目的地**一節中**SSIS 工具箱]** 至**資料流程**索引標籤並將它放在**加入 MDS 所需的資料行**。  
   
 2.  以滑鼠右鍵按一下**OLE DB 目的地**中**資料流程**索引標籤，然後按一下**重新命名**。 型別**供應商資料寫入 MDS 暫存資料表**然後按**ENTER**。  
   
 3.  連接**加入 MDS 所需的資料行**要**供應商資料寫入 MDS 暫存資料表**使用藍色連接器。  
   
-4.  按兩下**供應商資料寫入 MDS 暫存資料表**中**資料流程** 索引標籤。  
+4.  按兩下**供應商資料寫入 MDS 暫存資料表**中**資料流程**] 索引標籤。  
   
-5.  在  **OLE DB 目的地編輯器**對話方塊方塊中，請確定 **(local)。MDS** (或**localhost。MDS**) 選取**OLE DB 連接管理員**欄位。  
+5.  在 [ **OLE DB 目的地編輯器**對話方塊方塊中，請確定 **(local)。MDS** (或**localhost。MDS**) 選取**OLE DB 連接管理員**欄位。  
   
 6.  選取**stg.Supplier_Leaf**從清單中的資料表**的資料表或檢視表名稱**。  
   

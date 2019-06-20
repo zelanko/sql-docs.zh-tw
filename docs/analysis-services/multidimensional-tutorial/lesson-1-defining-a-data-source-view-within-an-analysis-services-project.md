@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b45d519b8abc40709780f21721e38927f96a06dc
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403700"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>第 1 課：在 Analysis Services 專案內定義資料來源檢視

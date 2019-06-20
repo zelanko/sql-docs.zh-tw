@@ -11,10 +11,10 @@ author: HJToland3
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0f0084f93fa648e5db79ef70dd5f05a259b94b67
-ms.sourcegitcommit: 40e55e55a73e39d447da87d9178f2b6067f39c6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66841114"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access (AccessToSQL) 中最新消息
@@ -40,7 +40,7 @@ SSMA for Access v8.1 版本被增強的目標式修正，專為改善品質和�
 
 ## <a name="ssma-v80"></a>SSMA v8.0
 
-8.0 版發行的 SSMA for Access 被增強的目標式修正，旨在改善品質和轉換的計量。 此版本也提供了下列新功能：
+8\.0 版發行的 SSMA for Access 被增強的目標式修正，旨在改善品質和轉換的計量。 此版本也提供了下列新功能：
 
 * 支援**Azure SQL Database 受控執行個體**做為目標。 您現在可以建立新的專案目標 Azure SQL Database 受控執行個體：
 

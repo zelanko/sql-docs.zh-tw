@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4e546aa56cf9831a0b519f5788359d8c58c41fb
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538171"
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 位元資訊
@@ -27,7 +27,7 @@ ms.locfileid: "65538171"
   
 -   ODBC 中的數個函式會宣告為接受指標參數。 在 32 位元 ODBC 中，參數會定義為指標經常用來將整數值或將指標傳遞至緩衝區，以根據呼叫的內容。 這是，當然，可能原因，指標和整數有相同的大小。 在 64 位元 Windows，這不是大小寫。  
   
--   以先前定義的某些 ODBC 函數**SQLINTEGER**並**SQLUINTEGER**參數已經變更，以使用新**SQLLEN**和**SQLULEN** typedef。 這些變更已列在下一步 區段中，函式宣告的變更。  
+-   以先前定義的某些 ODBC 函數**SQLINTEGER**並**SQLUINTEGER**參數已經變更，以使用新**SQLLEN**和**SQLULEN** typedef。 這些變更已列在下一步] 區段中，函式宣告的變更。  
   
 -   可以透過各種設定的描述項欄位的一些**SQLSet**並**SQLGet**函式已變更為容納 64 位元的值，有些則是仍為 32 位元值。 請確定您使用適當大小的變數時設定和擷取這些欄位。 哪一個描述項欄位已變更的詳細資料列在函式宣告的變更。  
   
@@ -365,7 +365,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetStmtOption**  
   
- 當* 選項*參數可以有下列值之一，是 64 位元值會傳回在 **值*:  
+ 當 *] 選項*參數可以有下列值之一，是 64 位元值會傳回在 **值*:  
   
  SQL_KEYSET_SIZE  
   
@@ -487,7 +487,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtOption**  
   
- 當* 選項*參數具有下列值之一，是 64 位元值會傳入*值*:  
+ 當 *] 選項*參數具有下列值之一，是 64 位元值會傳入*值*:  
   
  SQL_KEYSET_SIZE  
   

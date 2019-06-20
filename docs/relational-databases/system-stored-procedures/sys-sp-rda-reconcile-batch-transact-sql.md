@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 54bdac5237ff190f3620bb29dabbf684868c0b75
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982923"
 ---
 # <a name="syssprdareconcilebatch-transact-sql"></a>sys.sp_rda_reconcile_batch (Transact-SQL)
@@ -44,7 +44,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>引數  
- \@objname = '*\@objname*'  
+ \@objname = ' *\@objname*'  
  已啟用 Stretch 的 SQL Server 資料表的名稱。  
   
 ## <a name="permissions"></a>Permissions  

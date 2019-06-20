@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 86386460c3abc9ab7b6463b01ee4388e9186ad2b
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65536322"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 函式
@@ -216,7 +216,7 @@ SQLRETURN SQLSetPos(
  已刪除的資料之後，驅動程式會變更為 SQL_ROW_DELETED （或 SQL_ROW_ERROR） 的實作資料列狀態陣列，針對適當的資料列中的值。  
   
 ## <a name="updating-data-using-sqlsetpos"></a>使用 SQLSetPos 更新資料  
- 應用程式可以將傳遞的資料行的值，繫結的資料緩衝區中或透過一或多個呼叫**SQLPutData**。 資料會使用傳遞的資料行**SQLPutData**又稱為*資料在執行**資料行*。 這些通常用來傳送 SQL_LONGVARBINARY 和 SQL_LONGVARCHAR 資料行的資料，並可以混合使用與其他資料行。  
+ 應用程式可以將傳遞的資料行的值，繫結的資料緩衝區中或透過一或多個呼叫**SQLPutData**。 資料會使用傳遞的資料行**SQLPutData**又稱為*資料在執行* *資料行*。 這些通常用來傳送 SQL_LONGVARBINARY 和 SQL_LONGVARCHAR 資料行的資料，並可以混合使用與其他資料行。  
   
 #### <a name="to-update-data-with-sqlsetpos-an-application"></a>若要更新的資料使用 SQLSetPos，應用程式：  
   

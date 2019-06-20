@@ -11,10 +11,10 @@ author: HJToland3
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: bd80395b4df7957f48cc480ba858af387e870b86
-ms.sourcegitcommit: 40e55e55a73e39d447da87d9178f2b6067f39c6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66841096"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle (OracleToSQL) 中最新消息
@@ -171,7 +171,7 @@ SSMA for Oracle 的 v7.2 版本包含下列變更：
 
 ## <a name="ssma-v71"></a>SSMA v7.1
 
-7.1 版版本的 SSMA for Oracle 包含下列變更：
+7\.1 版版本的 SSMA for Oracle 包含下列變更：
 
 * 在 Windows 和 Linux CTP1 上的 SQL Server 2017 現支援的目標平台進行移轉。 這項功能是在 technical preview 中，並允許結構描述和資料移動至目標 SQL server。
 * SSMA 現在支援自動更新，以下載最新版本的 SSMA，因為它位於。

@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 20ce33d85c3906a14bbc813b110591e3aa0b71fe
-ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65836170"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "65836170"
 |end_compile_time|**datetime**|引擎完成編譯要求的時間。|尚未; 尚未經過編譯的要求都是 NULL否則有效**datetime**小於 start_time 且小於或等於目前的時間。|
 |end_time|**datetime**|時間的要求執行已完成、 失敗或已取消。|已排入佇列或作用中的要求; 是 null否則，有效**datetime**小於或等於目前的時間。|  
 |total_elapsed_time|**int**|在執行中的事件，是因為啟動要求，以毫秒為單位經過的時間。|介於 0 到 start_time 和 end_time 之間的差異。</br></br> 如果 total_elapsed_time 超過整數的最大值，total_elapsed_time 仍是最大值。 這種情況會產生警告 」 的最大值已超過 」。</br></br> 以毫秒為單位的最大值等同於 24.8 天。|  
-|標籤|**nvarchar(255)**|某些選取的查詢陳述式相關聯的選擇性標籤字串。|任何字串包含 'a-z '、' A-Z '、 ' 0-9'、 '_'。|  
+|label|**nvarchar(255)**|某些選取的查詢陳述式相關聯的選擇性標籤字串。|任何字串包含 'a-z '、' A-Z '、 ' 0-9'、 '_'。|  
 |error_id|**nvarchar(36)**|如果有的話，與要求相關的錯誤的唯一識別碼。|請參閱[sys.dm_pdw_errors &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); 設為 NULL，如果沒有發生錯誤。|  
 |database_id|**int**|明確內容 (例如，使用 DB_X) 所使用的資料庫識別碼。|請參閱中的識別碼[sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
 |command|**nvarchar(4000)**|保留由使用者提交要求的完整文字。|任何有效查詢或要求的文字。 查詢的長度超過 4000 個位元組會被截斷。|  

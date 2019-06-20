@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 89674116f8f41dbfca3041f3378e384b581be61f
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403920"
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>課程 4-1-使用 Analysis Services 教學課程專案的修改的版本
@@ -35,7 +35,7 @@ ms.locfileid: "65403920"
   
 4.  移動**adventure-運作方式-多維度-教學課程-projects.zip**到子資料夾。  
   
-5.  以滑鼠右鍵按一下該檔案，然後選取 [Extract All(全部解壓縮)]。  
+5.  以滑鼠右鍵按一下該檔案，然後選取 [Extract All(全部解壓縮)]  。  
   
 6.  瀏覽至 **Lesson 4 Start** 資料夾以尋找 **Analysis Services Tutorial.sln** 檔案。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "65403920"
   
 1.  在[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]上**檔案**功能表上，按一下 **關閉方案**關閉您不會使用的檔案。  
   
-2.  在 [檔案] 功能表上，指向 [開啟舊檔]，再按一下 [專案/方案]。  
+2.  在 [檔案]  功能表上，指向 [開啟舊檔]  ，再按一下 [專案/方案]  。  
   
 3.  瀏覽到您解壓縮教學課程專案檔案的位置。  
   
@@ -57,10 +57,10 @@ ms.locfileid: "65403920"
 ### <a name="data-source-view"></a>[資料來源檢視]  
 增強型專案中的資料來源檢視多包含一個事實資料表及四個維度資料表，它們來自 [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] 資料庫。  
   
-請注意，資料來源檢視中的十個資料表使得 <All Tables> 圖表變得很擁擠， 以致於不容易了解資料表之間的關聯性及尋找特定資料表。 為了解決這個問題，資料表分成兩個邏輯圖表：[網際網路銷售] 圖表和 [轉售商銷售] 圖表。 這些圖表各以單一事實資料表為中心。 建立邏輯圖表可讓您檢視及使用資料來源檢視中的資料表的特定子集，而不是檢視單一圖表中的所有資料表及其關聯性。  
+請注意，資料來源檢視中的十個資料表使得 <All Tables> 圖表變得很擁擠， 以致於不容易了解資料表之間的關聯性及尋找特定資料表。 為了解決這個問題，資料表分成兩個邏輯圖表：[網際網路銷售]  圖表和 [轉售商銷售]  圖表。 這些圖表各以單一事實資料表為中心。 建立邏輯圖表可讓您檢視及使用資料來源檢視中的資料表的特定子集，而不是檢視單一圖表中的所有資料表及其關聯性。  
   
 #### <a name="internet-sales-diagram"></a>Internet Sales 圖表  
-[網際網路銷售] 圖表包含透過網際網路直接向客戶銷售 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 產品之相關資料表。 圖表中的資料表為 4 個維度資料表和 1 個事實資料表，這些是您在第 1 課新增至 **Adventure Works DW 2012** 資料來源檢視中的資料表。 這些資料表如下：  
+[網際網路銷售]  圖表包含透過網際網路直接向客戶銷售 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 產品之相關資料表。 圖表中的資料表為 4 個維度資料表和 1 個事實資料表，這些是您在第 1 課新增至 **Adventure Works DW 2012** 資料來源檢視中的資料表。 這些資料表如下：  
   
 -   **地理位置**  
   
@@ -73,7 +73,7 @@ ms.locfileid: "65403920"
 -   **InternetSales**  
   
 #### <a name="reseller-sales-diagram"></a>轉售商銷售圖表  
-[轉售商銷售] 圖表包含與轉售商銷售 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 產品有關的資料表。 此圖表包含下列七個維度資料表及一個事實資料表，它們來自 [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] 資料庫：  
+[轉售商銷售]  圖表包含與轉售商銷售 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 產品有關的資料表。 此圖表包含下列七個維度資料表及一個事實資料表，它們來自 [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] 資料庫：  
   
 -   **轉售商**  
   
@@ -91,7 +91,7 @@ ms.locfileid: "65403920"
   
 -   **ResellerSales**  
   
-請注意，**DimGeography**、**DimDate** 和 **DimProduct** 資料表同時用於 [網際網路銷售額] 圖表和 [轉售商銷售] 圖表。 維度資料表可連結至多個事實資料表。  
+請注意，**DimGeography**、**DimDate** 和 **DimProduct** 資料表同時用於 [網際網路銷售額]  圖表和 [轉售商銷售]  圖表。 維度資料表可連結至多個事實資料表。  
   
 ### <a name="database-and-cube-dimensions"></a>資料庫和 Cube 維度  
 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 教學課程專案包含 5 個新資料庫維度，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 教學課程 Cube 包含這 5 個與 Cube 維度相同的維度。 這些維度已定義為具有階層和屬性，這些已使用具名計算、構成要素成員索引鍵和顯示資料夾來修改過。 下列清單描述的是新的維度。  

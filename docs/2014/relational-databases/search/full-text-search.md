@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6d56a6e32818296343b711769ad594bf7cadce57
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011237"
 ---
 # <a name="full-text-search"></a>全文檢索搜尋
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的全文檢索搜尋可讓使用者和應用程式針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中以字元為主的資料，執行全文檢索查詢。 資料庫管理員必須先在資料表上建立全文檢索索引，才能在此資料表上執行全文檢索查詢。 全文檢索索引包括資料表中一或多個以字元為基礎的資料行。 這些資料行可以具有下列任何資料類型：`char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml` 或 `varbinary(max)` 和 FILESTREAM。 每個全文檢索索引都會為資料表中的一個或多個資料行建立索引，而且每個資料行都可以使用特定的語言。  
   
- 全文檢索查詢會根據特定語言的規則 (例如英文或日文) 在單字與片語上運作，藉以針對全文檢索索引中的文字資料執行語言搜尋。 全文檢索查詢可以包含簡單的單字和片語，或者單字或片語的多種形式。 全文檢索查詢會傳回至少包含一個符合項目 (也稱為 *「叫用」*(Hit)) 的任何文件。 如果目標文件包含全文檢索查詢中指定的所有詞彙，而且符合其他搜尋條件 (例如相符詞彙之間的距離)，就會出現符合項目。  
+ 全文檢索查詢會根據特定語言的規則 (例如英文或日文) 在單字與片語上運作，藉以針對全文檢索索引中的文字資料執行語言搜尋。 全文檢索查詢可以包含簡單的單字和片語，或者單字或片語的多種形式。 全文檢索查詢會傳回至少包含一個符合項目 (也稱為 *「叫用」* (Hit)) 的任何文件。 如果目標文件包含全文檢索查詢中指定的所有詞彙，而且符合其他搜尋條件 (例如相符詞彙之間的距離)，就會出現符合項目。  
   
 > [!NOTE]  
 >  全文檢索搜尋是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 的選擇性元件。 如需詳細資訊，請參閱 <<c0> [ 安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)。  
@@ -35,17 +35,17 @@ ms.locfileid: "66011237"
 ###  <a name="queries"></a> 全文檢索搜尋查詢  
  將資料行加入至全文檢索索引之後，使用者和應用程式即可針對資料行中的文字執行全文檢索查詢。 這些查詢可以搜尋下列任何項目：  
   
--   一或多個特定的單字或片語 (*「不可分割的詞彙」*(Simple Term))  
+-   一或多個特定的單字或片語 ( *「不可分割的詞彙」* (Simple Term))  
   
--   以指定之文字開頭的單字或片語 (*「前置詞彙」*(Prefix Term))  
+-   以指定之文字開頭的單字或片語 ( *「前置詞彙」* (Prefix Term))  
   
--   特定單字的字形變化 (*「衍生詞彙」*(Generation Term))  
+-   特定單字的字形變化 ( *「衍生詞彙」* (Generation Term))  
   
--   靠近另一個單字或片語的單字或片語 (*「相近詞彙」*(Proximity Term))  
+-   靠近另一個單字或片語的單字或片語 ( *「相近詞彙」* (Proximity Term))  
   
--   特定單字的同義字變化 (*「同義字」*(Thesaurus))  
+-   特定單字的同義字變化 ( *「同義字」* (Thesaurus))  
   
--   使用加權值的單字或片語 (*「加權詞彙」*(Weighted Term))  
+-   使用加權值的單字或片語 ( *「加權詞彙」* (Weighted Term))  
   
  全文檢索查詢不區分大小寫。 例如，搜尋 "Aluminum" 或 "aluminum" 都會傳回相同的結果。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "66011237"
   
 -   **篩選器。** 某些資料類型需要先篩選，然後才能針對文件中的資料建立全文檢索索引，包括 `varbinary`、`varbinary(max)`、`image` 或 `xml` 資料行中的資料。 用於給定文件的篩選會因其文件類型而不同。 例如，Microsoft Word (.doc) 文件、Microsoft Excel (.xls) 文件和 XML (.xml) 文件會使用不同的篩選。 然後，篩選會從文件中擷取文字區塊，並且移除內嵌的格式，並保留文字和文字位置的相關資訊。 其結果就是文字資訊的資料流。 如需詳細資訊，請參閱 [設定及管理搜尋的篩選](configure-and-manage-filters-for-search.md)。  
   
--   **斷詞工具和字幹分析器。** 斷詞工具是一項語言特有的元件，它會根據給定語言的語彙規則來尋找文字分界 (*「斷詞」*(Word Breaking))。 每個斷詞工具都與語言特有的字幹分析器元件相關聯，而且此元件會進行動詞變化和執行字形擴展。 建立索引時，篩選背景程式主機會使用斷詞工具和字幹分析器，針對來自給定資料表資料行的文字資料執行語言分析。 與全文檢索索引中資料表資料行相關聯的語言會決定哪些斷詞工具和字幹分析器要用於建立該資料行的索引。 如需詳細資訊，請參閱 [設定及管理搜尋的斷詞工具與字幹分析器](configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
+-   **斷詞工具和字幹分析器。** 斷詞工具是一項語言特有的元件，它會根據給定語言的語彙規則來尋找文字分界 ( *「斷詞」* (Word Breaking))。 每個斷詞工具都與語言特有的字幹分析器元件相關聯，而且此元件會進行動詞變化和執行字形擴展。 建立索引時，篩選背景程式主機會使用斷詞工具和字幹分析器，針對來自給定資料表資料行的文字資料執行語言分析。 與全文檢索索引中資料表資料行相關聯的語言會決定哪些斷詞工具和字幹分析器要用於建立該資料行的索引。 如需詳細資訊，請參閱 [設定及管理搜尋的斷詞工具與字幹分析器](configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
  [本主題內容](#top)  
   
@@ -154,7 +154,7 @@ ms.locfileid: "66011237"
   
  語言特有的元件包含下列：  
   
--   **斷詞工具和字幹分析器。** 斷詞工具會根據給定語言的語彙規則來尋找文字分界 (*「斷詞」*(Word Breaking))。 每個斷詞工具都與針對相同語言進行動詞變化的字幹分析器相關聯。 如需詳細資訊，請參閱 [設定及管理搜尋的斷詞工具與字幹分析器](configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
+-   **斷詞工具和字幹分析器。** 斷詞工具會根據給定語言的語彙規則來尋找文字分界 ( *「斷詞」* (Word Breaking))。 每個斷詞工具都與針對相同語言進行動詞變化的字幹分析器相關聯。 如需詳細資訊，請參閱 [設定及管理搜尋的斷詞工具與字幹分析器](configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
 -   **停用字詞表。** 提供包含基本停用字詞 (也稱為非搜尋字) 集合的系統停用字詞表。 *「停用字詞」* (Stopword) 是指無助於搜尋而且全文檢索查詢會忽略的單字。 以英文地區設定為例，"a"、"and"、"is" 和 "the" 都會被視為停用字詞。 一般而言，您必須設定一個或多個同義字檔案和停用字詞表。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   

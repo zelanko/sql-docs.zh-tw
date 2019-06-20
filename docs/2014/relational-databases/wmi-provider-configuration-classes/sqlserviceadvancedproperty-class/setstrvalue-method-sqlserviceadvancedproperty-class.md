@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d8cb4bb7aec53ebc28a91cc36add1ae810b08d44
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62911842"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>SetStrValue 方法 (SqlServiceAdvancedProperty 類別)

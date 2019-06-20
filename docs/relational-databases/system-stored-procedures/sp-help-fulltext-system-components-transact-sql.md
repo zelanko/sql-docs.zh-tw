@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b8090ea1080fa7528d3a8297e14760190e8aadfe
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980249"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
@@ -107,7 +107,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. 判斷特定的斷詞工具是否已註冊  
- 下列範例會列出土耳其文 (LCID = 1055) 的斷詞工具 (如果它已經安裝在系統上，並在服務執行個體上註冊)。 這個範例會指定參數名稱， **@component_type**並**@param**。  
+ 下列範例會列出土耳其文 (LCID = 1055) 的斷詞工具 (如果它已經安裝在系統上，並在服務執行個體上註冊)。 這個範例會指定參數名稱， **@component_type** 並 **@param** 。  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  

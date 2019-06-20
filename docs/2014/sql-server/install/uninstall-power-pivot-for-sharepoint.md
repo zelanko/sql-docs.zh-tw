@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9397dd268d767fd8c4bad9056455c21b9be65398
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62989863"
 ---
 # <a name="uninstall-powerpivot-for-sharepoint"></a>解除安裝 PowerPivot for SharePoint
@@ -78,15 +78,15 @@ ms.locfileid: "62989863"
   
     -   **PowerPivot 組態工具**  
   
-2.  選取 **[移除功能、服務、應用程式和方案]** ，然後按一下 **[確定]**。  
+2.  選取 **[移除功能、服務、應用程式和方案]** ，然後按一下 **[確定]** 。  
   
-3.  或者，將視窗展開為全螢幕。 您應該會在視窗底部看到一個按鈕列，其中包含 **[驗證]**、 **[執行]** 和 **[結束]** 命令。  
+3.  或者，將視窗展開為全螢幕。 您應該會在視窗底部看到一個按鈕列，其中包含 **[驗證]** 、 **[執行]** 和 **[結束]** 命令。  
   
 4.  檢閱工作清單中的每個動作以了解每個動作的用途。  
   
      在 **[移除 PowerPivot 服務應用程式]** 中，您可以選擇刪除與服務應用程式相關聯的應用程式資料。 應用程式資料是使用服務應用程式建立的 SQL Server 資料庫，用於儲存資料重新整理排程、資料庫執行個體資訊、使用量資料，以及 PowerPivot for SharePoint 所使用的其他資料。 它不會儲存使用者檔案，例如 PowerPivot 活頁簿。 除非您有保留應用程式資料的特定原因 (例如，如果您有與資料重新整理或資料存取相關的資料保留原則)，您才可以在不移除 SharePoint 使用者所建立或儲存之任何檔案的情況下刪除應用程式資料庫。  
   
-     若要刪除資料庫，選取 **[移除 PowerPivot 服務應用程式]** ，然後選取 **[刪除與這個服務應用程式關聯的應用程式資料]**。  
+     若要刪除資料庫，選取 **[移除 PowerPivot 服務應用程式]** ，然後選取 **[刪除與這個服務應用程式關聯的應用程式資料]** 。  
   
 5.  或者，在 **[輸出]** 索引標籤或 **[指令碼]** 索引標籤中檢閱詳細資訊。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62989863"
   
 6.  按一下 **[驗證]** 來檢查每個動作是否有效。 如果無法使用 **[驗證]** ，表示所有動作都適用於您的系統。  
   
-7.  按一下 **[執行]** ，執行適用於此工作的所有動作。 只有在通過驗證檢查的情況下，才可以使用 **[執行]** 。 當您按一下 [執行] 時，會出現下列警告，提醒您動作是在批次模式下處理：「工具中標示為有效的所有組態設定都會套用到 SharePoint 伺服器陣列。 您要繼續嗎？」  
+7.  按一下 **[執行]** ，執行適用於此工作的所有動作。 只有在通過驗證檢查的情況下，才可以使用 **[執行]** 。 當您按一下 [執行]  時，會出現下列警告，提醒您動作是在批次模式下處理：「工具中標示為有效的所有組態設定都會套用到 SharePoint 伺服器陣列。 您要繼續嗎？」  
   
 8.  按一下 **[是]** 繼續。  
   
@@ -120,7 +120,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
     Stsadm -o enumdeployments  
     ```  
   
-3.  檢閱現有部署中的下列資訊：[類型] 是 [撤銷] 或 [部署]、[檔案] 是 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
+3.  檢閱現有部署中的下列資訊：[類型]  是 [撤銷] 或 [部署]、[檔案]  是 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
   
 4.  部署或撤銷與 PowerPivot 方案相關將複製的 GUID 值**JobId**然後將它貼到下列命令 （使用標記]、 [複製] 和 [貼上命令殼層的 [編輯] 功能表上來複製 GUID）：  
   
@@ -128,7 +128,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
     Stsadm -o canceldeployment -id "<GUID>"  
     ```  
   
-5.  依序按一下 **[驗證]** 和 **[執行]**，重試組態工具中的工作。  
+5.  依序按一下 **[驗證]** 和 **[執行]** ，重試組態工具中的工作。  
   
  或者，您可以使用 PowerShell 從伺服器陣列移除功能和方案。 如需詳細資訊，請參閱 < [powerpivot for SharePoint 的 PowerShell 參考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)。  
   
@@ -137,11 +137,11 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  您可以解除安裝部分安裝，而不影響已安裝的其他 SQL Server 執行個體 (或同一個執行個體中的功能)。 例如，您可以解除安裝 PowerPivot for SharePoint，但保留安裝其他元件，例如 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或 Database Engine。  
   
-1.  從程式清單中選取 [Microsoft SQL Server 2014 (64 位元)]。  
+1.  從程式清單中選取 [Microsoft SQL Server 2014 (64 位元)]  。  
   
-2.  按一下 [解除安裝/變更]。  
+2.  按一下 [解除安裝/變更]  。  
   
-3.  按一下 **[移除]**。 隨即啟動 SQL Server 安裝程式。  
+3.  按一下 **[移除]** 。 隨即啟動 SQL Server 安裝程式。  
   
      您可以從安裝程式選取 **[PowerPivot]** 執行個體，然後選取 **[Analysis Services]** 和 **[Analysis Services SharePoint 整合]** 只移除該功能，而保留其他所有功能。  
   
@@ -181,7 +181,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      相反地，由 PowerPivot 系統服務自動產生的各種目標應用程式將會在解除安裝 PowerPivot 時自動刪除。  
   
-4.  在 [控制台] 中，按一下 **[程式]**，然後按一下 **[解除安裝程式]** 。解除安裝所有不再使用的 Analysis Services 用戶端程式庫。 當您解除安裝 PowerPivot for SharePoint 時，不會移除 Analysis Services ADOMD.NET 及 Microsoft SQL Server Analysis Management Objects。 由於其他使用 Analysis Services 資料的程式庫仍可能需要使用這些程式庫，因此 SQL Server 安裝程式不會自動解除安裝這些程式庫。 如果您不再需要這些用戶端程式庫，必須手動解除安裝它們。  
+4.  在 [控制台] 中，按一下 **[程式]** ，然後按一下 **[解除安裝程式]** 。解除安裝所有不再使用的 Analysis Services 用戶端程式庫。 當您解除安裝 PowerPivot for SharePoint 時，不會移除 Analysis Services ADOMD.NET 及 Microsoft SQL Server Analysis Management Objects。 由於其他使用 Analysis Services 資料的程式庫仍可能需要使用這些程式庫，因此 SQL Server 安裝程式不會自動解除安裝這些程式庫。 如果您不再需要這些用戶端程式庫，必須手動解除安裝它們。  
   
      除非疑難排解或安裝指示要求您解除安裝 SQL Server Reporting Services SharePoint 2010 增益集，否則請勿任意解除安裝。 Access Services 需要使用 Reporting Services 增益集。 此增益集由 SharePoint 產品準備工具所安裝，應繼續保留在系統上，以支援 SharePoint 所需要的功能。  
   

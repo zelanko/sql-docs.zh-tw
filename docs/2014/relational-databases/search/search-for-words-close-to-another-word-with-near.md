@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011070"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜尋靠近另一個單字的字詞
@@ -33,7 +33,7 @@ ms.locfileid: "66011070"
 ##  <a name="Custom_NEAR"></a> 自訂相近詞彙  
  自訂相近詞彙導入下列新功能：  
   
--   您可以指定分隔第一個和最後一個搜尋字詞之非搜尋字詞的數目上限 (或「最大距離」)，以便構成符合項目。  
+-   您可以指定分隔第一個和最後一個搜尋字詞之非搜尋字詞的數目上限 (或「最大距離」  )，以便構成符合項目。  
   
 -   如果您指定了詞彙的數目上限，也可以指定符合項目必須按照指定的順序包含搜尋詞彙。  
   
@@ -147,9 +147,9 @@ GO
   
      在 CONTAINSTABLE 函數中使用 NEAR 時，文件的叫用次數相對於其長度以及每次叫用中第一個和最後一個搜尋詞彙之間的距離就會影響每份文件的等級。 對於泛型相近詞彙而言，如果符合的搜尋詞彙距離 >50 個邏輯詞彙，針對文件傳回的等級就是 0。 若為沒有指定整數做為最大距離的自訂相近詞彙，只包含間距 >100 個邏輯詞彙之叫用的文件將收到的等級為 0。 如需自訂鄰近搜尋等級的詳細資訊，請參閱[限制 RANK 的搜索結果](limit-search-results-with-rank.md)。  
   
--   [轉換非搜尋字] 伺服器選項  
+-   [轉換非搜尋字]  伺服器選項  
   
-     如果您在鄰近搜尋中指定停用字詞，則 [轉換非搜尋字] 的值會影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理停用字詞的方式。 如需詳細資訊，請參閱 [轉換非搜尋字伺服器組態選項](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)。  
+     如果您在鄰近搜尋中指定停用字詞，則 [轉換非搜尋字]  的值會影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理停用字詞的方式。 如需詳細資訊，請參閱 [轉換非搜尋字伺服器組態選項](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)。  
   
 
   
@@ -158,7 +158,7 @@ GO
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我們建議您改用[自訂相近詞彙](#Custom_NEAR)。  
   
- 泛型鄰近字詞表示指定的搜尋字詞必須全部都出現在同一份文件中，才會傳回符合項目，而不論搜尋字詞之間的非搜尋字詞數目 (「距離」) 為何。 基本語法如下：  
+ 泛型鄰近字詞表示指定的搜尋字詞必須全部都出現在同一份文件中，才會傳回符合項目，而不論搜尋字詞之間的非搜尋字詞數目 (「距離」  ) 為何。 基本語法如下：  
   
  { *search_term* { NEAR | ~ } *search_term* } [ ,...*n* ]  
   

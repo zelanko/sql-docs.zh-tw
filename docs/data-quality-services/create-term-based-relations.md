@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: jroth
 ms.openlocfilehash: a3a6393ff2f2ed5317e63fe0d8979c9b5ddda2ab
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66785493"
 ---
 # <a name="create-term-based-relations"></a>建立以詞彙為主的關聯
@@ -68,7 +68,7 @@ ms.locfileid: "66785493"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]** 。 如需相關資訊，請參閱 [建立知識庫](../data-quality-services/create-a-knowledge-base.md) 或 [開啟知識庫](../data-quality-services/open-a-knowledge-base.md)。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]**。 如需相關資訊，請參閱 [建立知識庫](../data-quality-services/create-a-knowledge-base.md) 或 [開啟知識庫](../data-quality-services/open-a-knowledge-base.md)。  
   
     > [!NOTE]  
     >  定義域管理會在 Data Quality Services 用戶端的頁面上執行，該頁面包含個別定義域管理作業所適用的五個索引標籤。 這不是精靈驅動的程序，任何管理作業都可以個別執行。  
@@ -94,7 +94,7 @@ ms.locfileid: "66785493"
   
     6.  在 **[尋找]** 文字方塊中輸入一個或多個位數，以尋找關聯資料表中的值。 系統會反白顯示此字串的相符項目。 使用上下箭頭，移到此字串在資料表中的不同出現位置。  
   
-    7.  **拼字檢查**：如果 [值]  或 [更正為]  資料行中的某個值有波浪式紅色底線，則表示拼字檢查建議對此值進行更正。 以滑鼠右鍵按一下加上底線的值，並且選取拼字檢查建議的其中一個值。 或者，您可以按一下快速鍵功能表中的 **[加入]** ，繼續使用原始值。 如需相關資訊，請參閱 [使用 DQS 拼字檢查](../data-quality-services/use-the-dqs-speller.md) 及 [設置域屬性](../data-quality-services/set-domain-properties.md)。  
+    7.  **拼字檢查**：如果 [值] 或 [更正為] 資料行中的某個值有波浪式紅色底線，則表示拼字檢查建議對此值進行更正。 以滑鼠右鍵按一下加上底線的值，並且選取拼字檢查建議的其中一個值。 或者，您可以按一下快速鍵功能表中的 **[加入]** ，繼續使用原始值。 如需相關資訊，請參閱 [使用 DQS 拼字檢查](../data-quality-services/use-the-dqs-speller.md) 及 [設置域屬性](../data-quality-services/set-domain-properties.md)。  
   
         > [!NOTE]  
         >  若要使用拼字檢查，您可以在 **[定義域屬性]** 頁面中啟用此功能，或者如果 **[定義域屬性]** 頁面中已停用此功能，您可以按一下 **[以詞彙為主的關聯]** 頁面上的 **[啟用/停用拼字檢查]** 圖示，在此頁面上啟用此功能。  

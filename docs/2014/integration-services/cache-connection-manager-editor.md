@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061079"
 ---
 # <a name="cache-connection-manager-editor"></a>快取連接管理員編輯器
@@ -27,7 +27,7 @@ ms.locfileid: "66061079"
   
  查閱轉換會針對參考資料集執行查閱。  
   
- [快取連線管理員編輯器] 對話方塊包含下列索引標籤：  
+ [快取連線管理員編輯器]  對話方塊包含下列索引標籤：  
   
 -   [一般 索引標籤](#generaltab)  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66061079"
  若要深入了解快取連接管理員，請參閱＜ [Cache Connection Manager](connection-manager/cache-connection-manager.md)＞。  
   
 ##  <a name="generaltab"></a> General Tab  
- 使用 [快取連線管理員編輯器] 對話方塊的 [一般] 索引標籤即可指出要從檔案中讀取快取，還是要將快取儲存至檔案。  
+ 使用 [快取連線管理員編輯器]  對話方塊的 [一般]  索引標籤即可指出要從檔案中讀取快取，還是要將快取儲存至檔案。  
   
 ### <a name="options"></a>選項  
  **連線管理員名稱**  
@@ -69,7 +69,7 @@ ms.locfileid: "66061079"
 ##  <a name="columnstab"></a> 資料行索引標籤  
  使用 **[快取連接管理員編輯器]** 對話方塊的 **[資料行]** 索引標籤即可設定快取中每個資料行的屬性。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **資料行**  
  指定資料行名稱。  
   

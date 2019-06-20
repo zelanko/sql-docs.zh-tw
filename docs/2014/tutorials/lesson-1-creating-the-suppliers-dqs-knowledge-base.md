@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6e25b57bce84876de1119ec52ad068602cd5cf13
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485585"
 ---
 # <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>第 1 課：建立供應商 DQS 知識庫
@@ -43,6 +43,6 @@ ms.locfileid: "65485585"
 -   發行知識庫，好讓知識庫可用於清理和比對活動。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 1:建立知識庫和定義域](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
+ [工作 1：建立知識庫和定義域](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
   
   

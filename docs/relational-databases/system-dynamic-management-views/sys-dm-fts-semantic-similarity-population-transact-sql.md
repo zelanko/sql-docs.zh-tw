@@ -20,10 +20,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 ms.openlocfilehash: baeb646853294266e4dbca2a649236e1046ffa1f
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947165"
 ---
 # <a name="sysdmftssemanticsimilaritypopulation-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)

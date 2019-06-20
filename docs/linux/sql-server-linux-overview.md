@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.openlocfilehash: 1f89e4f093c2216c90f133bdf38298272ea57f18
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66713244"
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server

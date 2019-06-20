@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: tbd
 ms.openlocfilehash: a468fc1b317e906cc27005469ac81cb4eef48045
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66713182"
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB Mail 和 Linux 上的 SQL 代理程式的電子郵件警示

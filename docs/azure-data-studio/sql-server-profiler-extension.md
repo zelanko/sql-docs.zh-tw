@@ -12,10 +12,10 @@ author: yualan
 ms.author: alayu
 manager: jroth
 ms.openlocfilehash: 92c662a05334731d66891e85e7501e38da438e03
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66797997"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>SQL Server Profiler 擴充功能 （預覽）

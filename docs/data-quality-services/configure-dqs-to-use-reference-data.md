@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: jroth
 ms.openlocfilehash: ad70828c8b25a9329d5069db204de360900dcb0f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66802144"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>設定 DQS 使用參考資料
@@ -45,7 +45,7 @@ ms.locfileid: "66802144"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[管理]** 底下的 **[組態]** 。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[管理]** 底下的 **[組態]**。  
   
 3.  在 **[參考資料]** 索引標籤的 **[網路設定]** 區域底下，於 **[Proxy 伺服器]** 和 **[通訊埠]** 方塊中輸入適當的值 (如果您或您的組織使用 Proxy 伺服器連接至網際網路)。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66802144"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[管理]** 底下的 **[組態]** 。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[管理]** 底下的 **[組態]**。  
   
 3.  在 **[參考資料]** 索引標籤的 **[網路設定]** 區域底下，於 **[Proxy 伺服器]** 和 **[通訊埠]** 方塊中輸入適當的值 (如果您或您的組織使用 Proxy 伺服器連接至網際網路)。  
   

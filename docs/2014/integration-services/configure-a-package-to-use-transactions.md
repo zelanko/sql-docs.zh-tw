@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 16d1f0f4c24f18327ee31da1fb85a74d19588384
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060854"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>設定封裝來使用交易
@@ -41,11 +41,11 @@ ms.locfileid: "66060854"
   
 3.  按一下 **[控制流程]** 索引標籤。  
   
-4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]。  
+4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]  。  
   
 5.  在 [**屬性**] 視窗中，將 TransactionOption 屬性設定為`Required`。  
   
-6.  在 [控制流程] 索引標籤的設計介面上，以滑鼠右鍵按一下您要在交易中註冊的工作或容器，然後按一下 [屬性]。  
+6.  在 [控制流程]  索引標籤的設計介面上，以滑鼠右鍵按一下您要在交易中註冊的工作或容器，然後按一下 [屬性]  。  
   
 7.  在 [**屬性**] 視窗中，將 TransactionOption 屬性設定為`Supported`。  
   
@@ -67,18 +67,18 @@ ms.locfileid: "66060854"
   
 3.  按一下 **[控制流程]** 索引標籤。  
   
-4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]。  
+4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]  。  
   
 5.  在 [**屬性**] 視窗中，將 TransactionOption 屬性設定為`Supported`。  
   
     > [!NOTE]  
     >  封裝支援交易，但交易是由封裝中的工作或容器所啟動。  
   
-6.  在 [控制流程] 索引標籤的設計介面上，以滑鼠右鍵按一下要啟動其交易之封裝內的工作或容器，然後按一下 [屬性]。  
+6.  在 [控制流程]  索引標籤的設計介面上，以滑鼠右鍵按一下要啟動其交易之封裝內的工作或容器，然後按一下 [屬性]  。  
   
 7.  在 [**屬性**] 視窗中，將 TransactionOption 屬性設定為`Required`。  
   
-8.  如果交易由容器啟動，請以滑鼠右鍵按一下您要在交易中註冊的工作或容器，然後按一下 [屬性]。  
+8.  如果交易由容器啟動，請以滑鼠右鍵按一下您要在交易中註冊的工作或容器，然後按一下 [屬性]  。  
   
 9. 在 [**屬性**] 視窗中，將 TransactionOption 屬性設定為`Supported`。  
   

@@ -34,10 +34,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2da7e9873c2c4bb2f0f12a980159dd05fbb9cef9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62521284"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 大量載入範例 (SQLXML 4.0)
@@ -202,7 +202,7 @@ End Function
 ```  
   
 ## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. 將 XML 資料大量載入到多個資料表中  
- 在此範例中，XML 文件組成**\<客戶 >** 並**\<順序 >** 項目。  
+ 在此範例中，XML 文件組成 **\<客戶 >** 並 **\<順序 >** 項目。  
   
 ```xml  
 <ROOT>  
@@ -233,7 +233,7 @@ End Function
   
 -   CustOrder （訂單編號、 客戶編號）  
   
- 下列 XSD 結構描述會定義這些資料表的 XML 檢視。 結構描述指定的父-子關係**\<客戶 >** 並**\<順序 >** 項目。  
+ 下列 XSD 結構描述會定義這些資料表的 XML 檢視。 結構描述指定的父-子關係 **\<客戶 >** 並 **\<順序 >** 項目。  
   
 ```xml  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -385,7 +385,7 @@ End Function
 </xsd:schema>  
 ```  
   
- 結構描述會指定**\<順序 >** 項目**\<產品 >** 子項目。 **\<順序 >** 元素會對應到 Ord 資料表並**\<產品 >** 元素會對應到資料庫中的 Product 資料表。 在指定的鏈結關聯性**\<產品 >** 項目會識別 OrderDetail 資料表所代表的 M:N 關聯性。 (一個訂單可以包含許多產品，而一個產品可以包含在許多訂單中)。  
+ 結構描述會指定 **\<順序 >** 項目 **\<產品 >** 子項目。 **\<順序 >** 元素會對應到 Ord 資料表並 **\<產品 >** 元素會對應到資料庫中的 Product 資料表。 在指定的鏈結關聯性 **\<產品 >** 項目會識別 OrderDetail 資料表所代表的 M:N 關聯性。 (一個訂單可以包含許多產品，而一個產品可以包含在許多訂單中)。  
   
  當您要使用此結構描述大量載入 XML 文件時，會將記錄加入到 Ord、Product 和 OrderDetail 資料表中。  
   
@@ -847,7 +847,7 @@ End Sub
 </xsd:schema>  
 ```  
   
- 此結構描述會識別 Cust 資料表的溢位資料行 (OverflowColumn)。 如此一來，所有未 XML 資料消耗每**\<客戶 >** 元素會加入至這個資料行。  
+ 此結構描述會識別 Cust 資料表的溢位資料行 (OverflowColumn)。 如此一來，所有未 XML 資料消耗每 **\<客戶 >** 元素會加入至這個資料行。  
   
 > [!NOTE]  
 >  所有抽象元素 (其中的項目**抽象 ="true"** 指定) 以及所有禁止的屬性 (屬性**禁止 ="true"** 指定) 會被視為 XML 大量溢位負載和都加入至溢位資料行中，如果指定。 (否則便會予以忽略)。  

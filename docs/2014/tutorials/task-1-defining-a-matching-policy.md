@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481308"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>工作 1：定義比對原則
-  在這項工作中，您會建立包含一個規則的比對原則。 此規則將會有一個必要條件：**Supplier ID**，也就是說，Supplier Id 必須符合才能使用規則中的其他定義域。 此規則會使用其他兩個定義域：**Supplier Name**與**相似度**值設定為**70%** 並**Contact Email**使用**相似度**值設定為**30%**。  
+  在這項工作中，您會建立包含一個規則的比對原則。 此規則將會有一個必要條件：**Supplier ID**，也就是說，Supplier Id 必須符合才能使用規則中的其他定義域。 此規則會使用其他兩個定義域：**Supplier Name**與**相似度**值設定為**70%** 並**Contact Email**使用**相似度**值設定為**30%** 。  
   
 1.  中的主頁面**DQS 用戶端**，按一下**向右箭號**旁**供應商**知識，然後選取**比對原則**。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65481308"
   
 12. 重複上述兩個步驟來加入**Contact Email**網域**30** for**權數**。  
   
-13. 請注意，**最小符合分數**設為**80%**，這是您在中看到值**一般**索引標籤**組態**頁面**DQS 管理**。 您在這裡只能增加這個分數，使其高於此臨界值。  
+13. 請注意，**最小符合分數**設為**80%** ，這是您在中看到值**一般**索引標籤**組態**頁面**DQS 管理**。 您在這裡只能增加這個分數，使其高於此臨界值。  
   
 14. 請注意，**重疊的叢集**選項。 有了這個選項，記錄就會出現在多個叢集中。 如果您將設定變更為 [非重疊的叢集]，具有共同記錄的叢集就會結合到單一叢集中。  
   
@@ -66,6 +66,6 @@ ms.locfileid: "65481308"
 16. 按一下 **下一步**轉為**比對結果**頁面。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 2:測試和發行比對原則](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
+ [工作 2：測試和發行比對原則](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
   
   
