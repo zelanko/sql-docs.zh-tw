@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_845 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 845 (Database Engine error)
 ms.assetid: 8fff6ad4-234c-44be-b123-e25d5e1cd63e
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9d98be02727582d4f9201ec7f47c3cdb8db5a56b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62761921"
 ---
 # <a name="mssqlserver845"></a>MSSQLSERVER_845
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>詳細資料  
   
 |||  
@@ -34,10 +33,10 @@ ms.locfileid: "62761921"
 |訊息文字|等候緩衝閂類型 %d (資料庫識別碼 %d，頁面 %S_PGID) 時發生逾時。|  
   
 ## <a name="explanation"></a>說明  
-處理序持續等候取得閂鎖，但一直等到超出時間限制仍無法取得。 如果 I/O 作業完成需要花費太長時間 (通常是因為其他工作封鎖了系統處理序)，可能就會發生這種情形。 在某些情況下，這項錯誤可能是硬體故障的結果。  
+ 處理序持續等候取得閂鎖，但一直等到超出時間限制仍無法取得。 如果 I/O 作業完成需要花費太長時間 (通常是因為其他工作封鎖了系統處理序)，可能就會發生這種情形。 在某些情況下，這項錯誤可能是硬體故障的結果。  
   
 ## <a name="user-action"></a>使用者動作  
-執行下列事項或可避免此錯誤發生：  
+ 執行下列事項或可避免此錯誤發生：  
   
 -   降低工作負載。  
   
@@ -47,5 +46,6 @@ ms.locfileid: "62761921"
   
 -   如果經常發生諸如判斷提示之類的重大錯誤，請解決這些問題。  
   
-如果持續發生錯誤，請連絡 Microsoft 客戶服務及支援中心。  
+ 如果持續發生錯誤，請連絡 Microsoft 客戶服務及支援中心。  
+  
   

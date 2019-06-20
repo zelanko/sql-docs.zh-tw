@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f784da5b506930bd3a28366c4610c79e73b14c77
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105544"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>地圖 (報表產生器及 SSRS)
@@ -64,7 +64,7 @@ ms.locfileid: "66105544"
  若要視覺化地圖上的資料，分析資料和空間資料必須擁有關聯性。 當空間資料與分析資料來自相同的來源時，關聯性是已知的。 當空間資料和分析資料來自不同的來源，您必須指定要將兩者產生關聯的符合欄位。  
   
 ### <a name="spatial-data"></a>空間資料  
- 空間資料由多組座標所組成。 資料來源中的空間資料可以是單一點、多個點、單一線條、多個線條，或一組多邊形。 每組座標都會定義一個 *「地圖元素」*(Map Element)，例如，表示某個縣市外框的多邊形、表示路段圖的線條，或是表示城市位置的點。  
+ 空間資料由多組座標所組成。 資料來源中的空間資料可以是單一點、多個點、單一線條、多個線條，或一組多邊形。 每組座標都會定義一個 *「地圖元素」* (Map Element)，例如，表示某個縣市外框的多邊形、表示路段圖的線條，或是表示城市位置的點。  
   
  空間資料以下列其中一個座標系統為基礎：  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66105544"
 #### <a name="sources-of-spatial-data"></a>空間資料的來源  
  系統支援下列空間資料來源：  
   
--   **地圖庫報表：** 空間資料會內嵌在位於地圖庫中的報表內。 根據預設，地圖庫安裝在 \<磁碟機>:\Program Files\Microsoft SQL Server\Report Builder \MapGallery 中。  
+-   **地圖庫報表：** 空間資料會內嵌在位於地圖庫中的報表內。 根據預設，地圖庫安裝在 \<磁碟機>  :\Program Files\Microsoft SQL Server\Report Builder \MapGallery 中。  
   
     > [!NOTE]  
     >  這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地圖功能會使用美國人口普查局 ([http://www.census.gov/](http://www.census.gov/)) 提供的 TIGER/Line Shapefiles 資料。 TIGER/Line 形狀檔是 Census MAF/TIGER 資料庫中選定地理和製圖資訊的擷取內容。 TIGER/Line 形狀檔是由美國人口普查局免費提供。 如需有關 TIGER/Line Shapefile 的詳細資訊，請參閱 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger) \(英文\)。 TIGER/Line 形狀檔中的界限資訊只能當做統計資料收集和表格製作的用途，其統計用途的描述和指定並不構成司法權或擁有權利的判定，也不屬於法律上的土地描述。 Census TIGER 與 TIGER/Line 是美國人口普查局的註冊商標。  
@@ -123,7 +123,7 @@ ms.locfileid: "66105544"
  當您指定圖層的規則，並選取分析資料欄位時，如果資料類型為數值，報表處理器會自動使用預設函數 Sum 來計算地圖元素的彙總值。 如果該欄位不是數值，則不會指定任何彙總函式，而且會使用隱含的彙總函式 First。 若要變更預設運算式，請針對圖層變更規則的選項。 如需詳細資訊，請參閱 [使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 ### <a name="match-fields"></a>符合欄位  
- 若要在圖層上讓分析資料和地圖元素產生關聯，您必須指定 *「符合欄位」*(Match Field)。 符合欄位用於建立地圖元素和分析資料之間的關聯性。 只要進行比對的欄位指定唯一的分析值給每個空間位置，您就可以使用一個或多個欄位。  
+ 若要在圖層上讓分析資料和地圖元素產生關聯，您必須指定 *「符合欄位」* (Match Field)。 符合欄位用於建立地圖元素和分析資料之間的關聯性。 只要進行比對的欄位指定唯一的分析值給每個空間位置，您就可以使用一個或多個欄位。  
   
  例如，對於依據城市人口數更改泡泡大小的泡泡地圖，需要下列資料：  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66105544"
 
   
 ##  <a name="Viewport"></a> 了解地圖檢視區  
- 指定報表的地圖資料之後，您可以指定地圖 *「檢視區」*(Viewport) 來限制地圖檢視區。 根據預設，檢視區與整個地圖的區域相同。 若要裁剪地圖，您可以指定定義您要包含在報表中之區域的中心、縮放層級，以及最大和最小座標。 若要改善地圖在報表中的顯示，您可以將圖例、距離標尺和色階移到檢視區外部。 下圖顯示檢視區：  
+ 指定報表的地圖資料之後，您可以指定地圖 *「檢視區」* (Viewport) 來限制地圖檢視區。 根據預設，檢視區與整個地圖的區域相同。 若要裁剪地圖，您可以指定定義您要包含在報表中之區域的中心、縮放層級，以及最大和最小座標。 若要改善地圖在報表中的顯示，您可以將圖例、距離標尺和色階移到檢視區外部。 下圖顯示檢視區：  
   
  ![rs_MapViewport](../media/rs-mapviewport.gif "rs_MapViewport")  
   

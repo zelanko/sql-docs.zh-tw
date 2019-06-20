@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cfb905cb56c053d44b93021838915d3a628241a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62813221"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中對於 Database Engine 的重大變更
@@ -64,7 +64,7 @@ ms.locfileid: "62813221"
   
 |檢視|描述|  
 |----------|-----------------|  
-|sys.data_spaces<br /><br /> sys.partition_schemes<br /><br /> sys.filegroups<br /><br /> sys.partition_functions|新的資料行 is_system 已經加入至 sys.data_spaces 和 sys.partition_functions  (sys.partition_schemes 和 sys.filegroups 會繼承 sys.data_spaces 的資料行)。<br /><br /> 這個資料行中的值 1 表示此物件用於全文檢索索引片段。<br /><br /> 在 sys.partition_functions、sys.partition_schemes 和 sys.filegroups 中，新的資料行不是最後一個資料行。 請修訂仰賴這些目錄檢視所傳回之資料行順序的現有查詢。|  
+|sys.data_spaces<br /><br /> sys.partition_schemes<br /><br /> sys.filegroups<br /><br /> sys.partition_functions|新的資料行 is_system 已經加入至 sys.data_spaces 和 sys.partition_functions (sys.partition_schemes 和 sys.filegroups 會繼承 sys.data_spaces 的資料行)。<br /><br /> 這個資料行中的值 1 表示此物件用於全文檢索索引片段。<br /><br /> 在 sys.partition_functions、sys.partition_schemes 和 sys.filegroups 中，新的資料行不是最後一個資料行。 請修訂仰賴這些目錄檢視所傳回之資料行順序的現有查詢。|  
   
 ### <a name="sql-clr-data-types-geometry-geography-and-hierarchyid"></a>SQL CLR 資料類型 (geometry、geography 和 hierarchyid)  
  組件**Microsoft.SqlServer.Types.dll**，其中包含空間資料類型和 hierarchyid 類型，具有已從 10.0 版升級為 11.0 版。 當下列條件成立時，參考這個組件的自訂應用程式可能會失敗。  

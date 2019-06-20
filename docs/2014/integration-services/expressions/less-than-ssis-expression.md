@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0683f741de16b688330fcd7833d5705e4bbb9a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62769044"
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt; (小於) (SSIS 運算式)
@@ -55,7 +55,7 @@ expression1 < expression2
     > [!NOTE]  
     >  字串比較有區分大小寫、腔調字、假名與全半形。  
   
--   **日期、時間或日期/時間** *expression1* 和 *expression2* 都必須評估為下列其中一個資料類型：DT_DBDATE、 DT_DATE、 DT_DBTIME、 DT_DBTIME2、 DT_DBTIMESTAMP、 DT_DBTIMESTAMP2、 DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **日期、時間或日期/時間** *expression1* 和 *expression2* 都必須評估為下列其中一個資料類型：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系統不支援評估為時間資料類型之運算式與評估為日期或日期/時間資料類型之運算式之間的比較。 系統會產生錯誤。  

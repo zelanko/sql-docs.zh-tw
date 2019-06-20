@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fe6fffc96a816c9b71c003926d6267e8287a1c48
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106862"
 ---
 # <a name="add-a-details-group-report-builder-and-ssrs"></a>加入詳細資料群組 (報表產生器及 SSRS)
@@ -27,11 +27,11 @@ ms.locfileid: "66106862"
   
 1.  在設計介面上，按一下 Tablix 資料區域中的任意位置來選取它。 [群組] 窗格會顯示選定資料區域的資料列和資料行群組。  
   
-2.  在 [群組] 窗格中，以滑鼠右鍵按一下屬於最內部之子群組的群組。 按一下 **[加入群組]**，然後按一下 **[子群組]**。 **[Tablix 群組]** 對話方塊隨即開啟。  
+2.  在 [群組] 窗格中，以滑鼠右鍵按一下屬於最內部之子群組的群組。 按一下 **[加入群組]** ，然後按一下 **[子群組]** 。 **[Tablix 群組]** 對話方塊隨即開啟。  
   
 3.  在 **[群組運算式]** 中，將運算式保留空白。 詳細資料群組沒有運算式。  
   
-4.  選取 **[顯示詳細資料]**。  
+4.  選取 **[顯示詳細資料]** 。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

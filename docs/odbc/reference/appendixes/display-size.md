@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c7d4a14a6afc2d716e85e687cbae1a202a596d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63241244"
 ---
 # <a name="display-size"></a>顯示大小
@@ -38,9 +38,9 @@ ms.locfileid: "63241244"
 |SQL_REAL|14 (符號、 7 位數、 小數點、 字母*E*，符號和 2 的數字)。|  
 |SQL_FLOAT SQL_DOUBLE|24 (符號、 15 位數、 小數點、 字母*E*，符號，以及 3 位數)。|  
 |所有的二進位類型 [a]|定義或 （適用於變數的型別） 的最大資料行長度逾 2。 （每個二進位的位元組被以 2 位數的十六進位數字。）|  
-|SQL_TYPE_DATE|10 (格式的日期*yyyy-mm-dd 的-*)。|  
-|SQL_TYPE_TIME|8 (時間格式*hh: mm:*)<br /><br /> - 或 -<br /><br /> 9 + *s* (時間格式*hh: mm:*[.fff...]，其中*s*小數秒數有效位數)。|  
-|SQL_TYPE_TIMESTAMP|19 (針對在時間戳記*yyyy 為 yyyy-mm-dd hh: mm:* 格式)<br /><br /> - 或 -<br /><br /> 20 + *s* (針對在時間戳記*yyyy 為 yyyy-mm-dd hh: mm:*[.fff]] 格式，其中*s*小數秒數有效位數)。|  
+|SQL_TYPE_DATE|10 (格式的日期*yyyy-mm-dd 的-* )。|  
+|SQL_TYPE_TIME|8 (時間格式*hh: mm:* )<br /><br /> - 或 -<br /><br /> 9 + *s* (時間格式*hh: mm:* [.fff...]，其中*s*小數秒數有效位數)。|  
+|SQL_TYPE_TIMESTAMP|19 (針對在時間戳記*yyyy 為 yyyy-mm-dd hh: mm:* 格式)<br /><br /> - 或 -<br /><br /> 20 + *s* (針對在時間戳記*yyyy 為 yyyy-mm-dd hh: mm:* [.fff]] 格式，其中*s*小數秒數有效位數)。|  
 |間隔的所有資料類型|請參閱[間隔資料類型長度](../../../odbc/reference/appendixes/interval-data-type-length.md)。|  
 |SQL_GUID|36 (中的字元數*aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee*格式|  
   

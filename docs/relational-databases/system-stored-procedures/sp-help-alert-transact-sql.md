@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796554"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
@@ -44,7 +44,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @alert_name = ] 'alert_name'` 警示的名稱。 *alert_name* is **nvarchar(128)**. 如果*alert_name&lt*是未指定，會傳回有關所有警示的資訊。  
+`[ @alert_name = ] 'alert_name'` 警示的名稱。 *alert_name* is **nvarchar(128)** . 如果*alert_name&lt*是未指定，會傳回有關所有警示的資訊。  
   
 `[ @order_by = ] 'order_by'` 用來產生結果的排序順序。 *order_by*已**sysname**，預設值是 N '*名稱*'。  
   
@@ -58,7 +58,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 當**@legacy_format**是**0**， **sp_help_alert**會產生下列結果集。  
+ 當 **@legacy_format** 是**0**， **sp_help_alert**會產生下列結果集。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -92,7 +92,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**wmi_query**|**nvarchar(512)**|如果**型別**是**3**，這個資料行會顯示 WMI 事件查詢。|  
 |**type**|**int**|事件類型：<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件警示<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]效能警示<br /><br /> **3** = WMI 事件警示|  
   
- 當**@legacy_format**是**1**， **sp_help_alert**會產生下列結果集。  
+ 當 **@legacy_format** 是**1**， **sp_help_alert**會產生下列結果集。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -121,7 +121,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**has_notification**|**int**|如果向一或多個操作員通知這個警示，便是非零。 這個值是下列的一或多個值 (以 OR 聯結)：<br /><br /> **1**= 有電子郵件通知<br /><br /> **2**= 有呼叫器通知<br /><br /> **4**= 已**網路傳送**通知。|  
 |**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
 |**performance_condition**|**nvarchar(512)**|如果**型別**是**2**，這個資料行會顯示效能條件的定義。 如果**型別**是**3**，這個資料行會顯示 WMI 事件查詢。 否則，這個資料行是 NULL。|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 一律為 '**[未分類]**' 的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0。|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 一律為 ' **[未分類]** ' 的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0。|  
 |**type**|**int**|警示類型：<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件警示<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]效能警示<br /><br /> **3** = WMI 事件警示|  
   
 ## <a name="remarks"></a>備註  

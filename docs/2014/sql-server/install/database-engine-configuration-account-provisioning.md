@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 300e3dd81ae7a3de2361c79864130c1361c19588
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095866"
 ---
 # <a name="database-engine-configuration---account-provisioning"></a>Database Engine 組態 - 帳戶提供
@@ -31,9 +31,9 @@ ms.locfileid: "66095866"
 > [!IMPORTANT]  
 >  您必須在安裝期間針對新的安裝明確提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員。 要等到您完成此步驟之後，安裝程式才允許您繼續。  
   
- **指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員** - 您必須為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體指定至少一個 Windows 主體。 若要加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式執行所用的帳戶，請按一下 [目前使用者] 按鈕。 若要從系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中將會有管理員權限的使用者、群組或電腦清單。  
+ **指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員** - 您必須為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體指定至少一個 Windows 主體。 若要加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式執行所用的帳戶，請按一下 [目前使用者]  按鈕。 若要從系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]** ，然後編輯在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中將會有管理員權限的使用者、群組或電腦清單。  
   
- 當您完成清單的編輯之後，請按一下 [確定]，然後在組態對話方塊中確認管理員的清單。 當此清單完成時，請按 **[下一步]**。  
+ 當您完成清單的編輯之後，請按一下 [確定]  ，然後在組態對話方塊中確認管理員的清單。 當此清單完成時，請按 **[下一步]** 。  
   
  如果您選取混合模式驗證，您必須為內建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員 (SA) 帳戶提供登入認證。  
   

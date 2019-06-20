@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e0e2cb6de46a20f185819f42825576ee529e0198
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108061"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 模式的 PowerShell Cmdlet
@@ -56,7 +56,7 @@ ms.locfileid: "66108061"
   
 ##  <a name="bkmk_cmdlet_sum"></a> 指令程式摘要  
 
- 若要執行指令程式，您需要開啟 SharePoint 管理命令介面。 您也可以使用 Microsoft Windows 隨附的圖形化使用者介面編輯器 **Windows PowerShell 整合式指令碼環境 (ISE)**。 如需詳細資訊，請參閱 [Starting Windows PowerShell on Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)。 在下列 cmdlet 摘要中，服務應用程式 「 資料庫 」 參考的所有資料庫建立及使用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服務應用程式。 其中包括組態、警示和暫時資料庫。  
+ 若要執行指令程式，您需要開啟 SharePoint 管理命令介面。 您也可以使用 Microsoft Windows 隨附的圖形化使用者介面編輯器 **Windows PowerShell 整合式指令碼環境 (ISE)** 。 如需詳細資訊，請參閱 [Starting Windows PowerShell on Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)。 在下列 cmdlet 摘要中，服務應用程式 「 資料庫 」 參考的所有資料庫建立及使用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服務應用程式。 其中包括組態、警示和暫時資料庫。  
 
   
  當您輸入 PowerShell 範例時，將會看到類似下面的錯誤訊息：  
@@ -74,7 +74,7 @@ ms.locfileid: "66108061"
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- 如需詳細資訊，請參閱[使用 Windows PowerShell 管理 SharePoint 2013](https://technet.microsoft.com/library/ee806878.aspx) (https://technet.microsoft.com/library/ee806878.aspx)。  
+ 如需詳細資訊，請參閱[使用 Windows PowerShell 管理 SharePoint 2013](https://technet.microsoft.com/library/ee806878.aspx) (https://technet.microsoft.com/library/ee806878.aspx) 。  
   
 #### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>若要開啟 SharePoint 管理命令介面並執行指令程式  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66108061"
   
 2.  按一下 **[Microsoft SharePoint 產品]** 群組。  
   
-3.  按一下 **[SharePoint 管理命令介面]**。  
+3.  按一下 **[SharePoint 管理命令介面]** 。  
   
  若要檢視 Cmdlet 的命令列說明，請在 PowerShell 命令提示字元中使用 PowerShell 'Get-Help' 命令。 例如：  
   
@@ -178,7 +178,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  將 Proxy 加入至預設 Proxy 群組。  
   
-3.  將服務應用程式存取權授與連接埠 80 Web 應用程式的內容資料庫。 指令碼會假設網站"http://sitename"已經存在。  
+3.  將服務應用程式存取權授與連接埠 80 Web 應用程式的內容資料庫。 指令碼會假設網站"http://sitename "已經存在。  
   
 ```  
 # Create service application and service application proxy  

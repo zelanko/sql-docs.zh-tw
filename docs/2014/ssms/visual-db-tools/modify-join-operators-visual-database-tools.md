@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 74470d40bace6e1443ef9eb94f9698e225ff2946
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63232842"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>修改聯結運算子 (Visual Database Tools)
@@ -26,11 +26,11 @@ ms.locfileid: "63232842"
   
 ### <a name="to-modify-join-operators"></a>若要修改聯結運算子  
   
-1.  在 [[圖表窗格](diagram-pane-visual-database-tools.md)] 中，在要修改的聯結線上按一下滑鼠右鍵，然後從捷徑功能表中選取 [屬性]。  
+1.  在 [[圖表窗格](diagram-pane-visual-database-tools.md)] 中，在要修改的聯結線上按一下滑鼠右鍵，然後從捷徑功能表中選取 [屬性]。   
   
-2.  在 [屬性] 視窗中，按一下 [聯結條件及類型]，然後按一下屬性右側的**省略符號 (...)**。  
+2.  在 [屬性] 視窗中，按一下 [聯結條件及類型]  ，然後按一下屬性右側的**省略符號 (...)** 。  
   
-3.  在 [聯結] 對話方塊中選取新的運算子。  
+3.  在 [聯結]  對話方塊中選取新的運算子。  
   
 ## <a name="see-also"></a>另請參閱  
  [自動聯結資料表&#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)   

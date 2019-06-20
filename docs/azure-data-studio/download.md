@@ -12,10 +12,10 @@ ms.custom: seodec18
 ms.date: 06/06/2019
 ms.reviewer: alayu; sstein
 ms.openlocfilehash: b8de39cd3039c24420325dbff5ffb3f1db4efd40
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66801850"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下載並安裝 Azure Data Studio

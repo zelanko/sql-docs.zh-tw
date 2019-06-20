@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 96dc11ebc246e42fb4b01b777b430c6aa9230b5e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099962"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
@@ -44,10 +44,10 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ## <a name="arguments"></a>引數  
 `[ @acctname = ] 'account_name'` 是的 Windows 使用者或授與存取權的群組名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *account_name*已**sysname**，預設值是 NULL。 如果*account_name*未指定，所有 Windows 群組和 Windows 使用者已被明確授都與登入權限會報告。 *account_name*必須是完整名稱。 例如，'ADVWKS4\macraes' 或 'BUILTIN\Administrators'。  
   
- **'all'** | **'members'**  
- 指定是要報告有關帳戶所有權限路徑的資訊，或是要報告有關 Windows 群組成員的資訊。 **@option** 已**varchar(10)**，預設值是 NULL。 除非**所有**指定，會顯示的第一個權限路徑。  
+ **'all'**  |  **'members'**  
+ 指定是要報告有關帳戶所有權限路徑的資訊，或是要報告有關 Windows 群組成員的資訊。 **@option** 已**varchar(10)** ，預設值是 NULL。 除非**所有**指定，會顯示的第一個權限路徑。  
   
-`[ @privilege = ] variable_name` 會傳回指定的 Windows 帳戶的權限層級的輸出參數。 *variable_name*已**varchar(10)**，預設值是 'Not wanted'。 傳回的權限等級**使用者**， **admin**，或**null**。  
+`[ @privilege = ] variable_name` 會傳回指定的 Windows 帳戶的權限層級的輸出參數。 *variable_name*已**varchar(10)** ，預設值是 'Not wanted'。 傳回的權限等級**使用者**， **admin**，或**null**。  
   
  OUTPUT  
  指定時，會將放*variable_name*輸出參數。  

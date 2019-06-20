@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 54505266a77c8baee7f39633ebccd0a5ab5708a8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106734"
 ---
 # <a name="add-an-expression-report-builder-and-ssrs"></a>加入運算式 (報表產生器及 SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66106734"
   
     -   如果是簡單運算式，請將運算式的顯示文字輸入文字方塊內。 例如，在資料集欄位 Sales 中輸入 `[Sales]`。  
   
-    -   如果是複雜運算式，請以滑鼠右鍵按一下文字方塊，然後選取 **[運算式]**。 **[運算式]** 對話方塊隨即開啟。 在運算式窗格內的 '=' 後面輸入您的運算式或是以互動方式建立運算式，然後按一下 [確定]。  
+    -   如果是複雜運算式，請以滑鼠右鍵按一下文字方塊，然後選取 **[運算式]** 。 **[運算式]** 對話方塊隨即開啟。 在運算式窗格內的 '=' 後面輸入您的運算式或是以互動方式建立運算式，然後按一下 [確定]。  
   
          此運算式會以 `<<Expr>>`形式出現在設計介面上。  
   

@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 40e591615850d16994c4023b63a354aa2061da59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63287500"
 ---
 # <a name="connecting-to-sql-server-oracletosql"></a>連線到 SQL Server (OracleToSQL)
@@ -55,7 +55,7 @@ ms.locfileid: "63287500"
   
 2.  在 [連線] 對話方塊中，輸入或選取的執行個體名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-    -   如果您要連接到本機電腦上的預設執行個體，您可以輸入**localhost**或句點 (**。**)。  
+    -   如果您要連接到本機電腦上的預設執行個體，您可以輸入**localhost**或句點 ( **。** )。  
   
     -   如果您要連接到另一部電腦上的預設執行個體，請輸入電腦的名稱。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63287500"
   
 6.  安全的連線，會新增兩個控制項，**加密連接**並**TrustServerCertificate**核取方塊。 只有當**加密連接**會檢查**TrustServerCertificate**核取方塊會顯示。 當**加密連接**核取 (true) 及**TrustServerCertificate**未核取 (false)，它將會驗證 SQL Server SSL 憑證。 驗證伺服器憑證是 SSL 交握的一部分，而且這麼做可以確保伺服器是所要連接的正確伺服器。 若要確保此行為，以及伺服器端上的用戶端必須安裝憑證。  
   
-7.  按一下 **[連接]**。  
+7.  按一下 **[連接]** 。  
   
 **較高的版本相容性**  
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721680"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>建立和套用初始快照集
@@ -42,9 +42,9 @@ ms.locfileid: "62721680"
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您要為其建立快照集的發行集，然後按一下 **[檢視快照集代理程式的狀態]**。  
+3.  以滑鼠右鍵按一下您要為其建立快照集的發行集，然後按一下 **[檢視快照集代理程式的狀態]** 。  
   
-4.  在 [檢視快照集代理程式的狀態 - \<發行集>] 對話方塊中，按一下 [啟動]。  
+4.  在 [檢視快照集代理程式的狀態 - \<發行集>]  對話方塊中，按一下 [啟動]  。  
   
  快照集代理程式產生完快照集後，就會顯示一個訊息，例如「[100%] 已產生 17 個發行項的快照集」。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "62721680"
   
 1.  在複寫監視器的左窗格中展開發行者群組，然後展開發行者。  
   
-2.  以滑鼠右鍵按一下要產生快照集的發行集，然後按一下 **[產生快照集]**。  
+2.  以滑鼠右鍵按一下要產生快照集的發行集，然後按一下 **[產生快照集]** 。  
   
-3.  若要檢視快照集代理程式的狀態，請按一下 **[代理程式]** 索引標籤。如需詳細資訊，請以滑鼠右鍵按一下方格中的「快照集代理程式」，然後按一下 **[檢視詳細資料]**。  
+3.  若要檢視快照集代理程式的狀態，請按一下 **[代理程式]** 索引標籤。如需詳細資訊，請以滑鼠右鍵按一下方格中的「快照集代理程式」，然後按一下 **[檢視詳細資料]** 。  
   
 #### <a name="to-apply-a-snapshot"></a>若要套用快照集  
   
@@ -82,9 +82,9 @@ ms.locfileid: "62721680"
   
     -   **@job_login，它會指定**散發者上的快照集代理程式執行時所用的 Windows 驗證認證。  
   
-    -   **@job_password**，它是提供之 Windows 認證的密碼。  
+    -   **@job_password** ，它是提供之 Windows 認證的密碼。  
   
-    -   (選擇性) 如果代理程式在連接到發行者時將使用「SQL Server 驗證」，會將 **@publisher_security_mode** 設定為 **@publisher_security_mode** 的值。 在此情況下，您也必須針對 **@publisher_login** ＞和＜ **@publisher_password**。  
+    -   (選擇性) 如果代理程式在連接到發行者時將使用「SQL Server 驗證」，會將 **@publisher_security_mode** 設定為 **@publisher_security_mode** 的值。 在此情況下，您也必須針對 **@publisher_login** ＞和＜ **@publisher_password** 。  
   
     -   (選擇性) 快照集代理程式作業的同步排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](specify-synchronization-schedules.md)。  
   
@@ -119,13 +119,13 @@ ms.locfileid: "62721680"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **@publisher_security_mode**  
+    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **@publisher_security_mode**  
+    -   **-PublisherSecurityMode** =  **@publisher_security_mode**  
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
  此範例會示範如何建立交易式發行集，並針對新的發行集加入快照集代理程式作業 (使用 **sqlcmd** 指令碼變數)。 此範例也會啟動此作業。  

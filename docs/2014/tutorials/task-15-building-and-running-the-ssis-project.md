@@ -10,10 +10,10 @@ ms.assetid: 13adf4e0-216a-4992-b13d-b7b1e1629e77
 ms.author: lle
 author: lrtoyou1223
 ms.openlocfilehash: 50b313f63ae434a96d6c0e38f3c8b600914c806d
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822990"
 ---
 # <a name="task-15-building-and-running-the-ssis-project"></a>工作 15：建置及執行 SSIS 專案

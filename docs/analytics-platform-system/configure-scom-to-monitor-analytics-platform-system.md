@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 2dae92263d7be76490a51ea7027f79ab5fcd6118
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62509759"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>設定 System Center Operations Manager (SCOM)，以監視 Analytics Platform System
@@ -41,7 +41,7 @@ System Center Operations Manager 2007 R2 必須已安裝且正在執行。
   
         ![ConfigureScomCreateRunAsAccount](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "ConfigureScomCreateRunAsAccount")  
   
-    2.  **建立執行身分帳戶精靈**此時會開啟對話方塊。 在 [**簡介**頁面上，按一下**下一步]**。  
+    2.  **建立執行身分帳戶精靈**此時會開啟對話方塊。 在 [**簡介**頁面上，按一下**下一步]** 。  
   
     3.  在上**一般屬性**頁面上，選取**Windows**從**執行身分帳戶類型**，並指定為"AP 監看員 」**顯示名稱**。  
   
@@ -71,7 +71,7 @@ System Center Operations Manager 2007 R2 必須已安裝且正在執行。
   
     3.  **執行身分設定檔精靈**此時會開啟對話方塊。 略過**簡介**頁面上，依序按一下**下一步**。  
   
-    4.  在 [**一般屬性**頁面上，按一下**下一步]**。  
+    4.  在 [**一般屬性**頁面上，按一下**下一步]** 。  
   
     5.  在 **執行身分帳戶**頁面上，按一下**加入...** 按鈕，然後選取先前建立**APS 監看員**執行身分帳戶。  
   

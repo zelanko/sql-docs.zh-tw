@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a2dd1ecf333c452e2f1e2710a7ad16782a1a3628
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100415"
 ---
 # <a name="delete-an-item-management-studio"></a>刪除項目 (Management Studio)
@@ -30,7 +30,7 @@ ms.locfileid: "66100415"
   
 2.  展開資料夾。  
   
-3.  以滑鼠右鍵按一下項目，然後按一下 [刪除]。  
+3.  以滑鼠右鍵按一下項目，然後按一下 [刪除]  。  
   
 4.  出現提示時， [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

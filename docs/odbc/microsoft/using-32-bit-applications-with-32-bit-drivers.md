@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c4f0b21bba9e56cad076ae08f5a561cc972d2ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63213469"
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>搭配使用 32 位元應用程式與 32 位元驅動程式
@@ -33,7 +33,7 @@ ms.locfileid: "63213469"
 >  請勿在 WindowsNT/windows 2000 上使用 32 位元 thunk 安裝程式 DLL。 雖然有相同的檔案名稱，因為 32 位元安裝程式 DLL，它會是不同的 DLL。  
   
 ## <a name="administration"></a>系統管理  
- 您可以使用 ODBC 資料來源管理員來管理資料來源的 32 位元驅動程式。 若要開啟 ODBC 管理員，在執行 Windows 2000 的電腦上，開啟 Windows 控制台中，按兩下**系統管理工具**，然後按兩下**資料來源 (ODBC)**。 在電腦上執行舊版的 Microsoft Windows，名為圖示**32 位元 ODBC**簡稱**ODBC**。  
+ 您可以使用 ODBC 資料來源管理員來管理資料來源的 32 位元驅動程式。 若要開啟 ODBC 管理員，在執行 Windows 2000 的電腦上，開啟 Windows 控制台中，按兩下**系統管理工具**，然後按兩下**資料來源 (ODBC)** 。 在電腦上執行舊版的 Microsoft Windows，名為圖示**32 位元 ODBC**簡稱**ODBC**。  
   
 ## <a name="components"></a>元件  
  ODBC 元件包含下列檔案來執行 32 位元驅動程式的 32 位元應用程式。 這些元件是在 \Redist 目錄中。  

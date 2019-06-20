@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a3937f227d025da054a28f73fffde4a57dc365c3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098654"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>在 Microsoft Surface 裝置及 Apple iOS 裝置上檢視 Reporting Services 報表
@@ -119,9 +119,9 @@ ms.locfileid: "66098654"
 > [!IMPORTANT]  
 >  iPad 不支援這些方法。  
   
--   開啟文件庫並點選 **[上傳文件]**，將報表定義檔案 (.rdl) 上傳至 SharePoint 文件庫。  
+-   開啟文件庫並點選 **[上傳文件]** ，將報表定義檔案 (.rdl) 上傳至 SharePoint 文件庫。  
   
--   開啟報表管理員並點選 **[上傳檔案]**，將報表定義檔案上傳至報表伺服器資料庫。  
+-   開啟報表管理員並點選 **[上傳檔案]** ，將報表定義檔案上傳至報表伺服器資料庫。  
   
 ## <a name="additional-information"></a>其他資訊  
  如需有關 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 和支援之瀏覽器的詳細資訊，請參閱：  
@@ -130,13 +130,13 @@ ms.locfileid: "66098654"
   
  如需有關 Microsoft Business Intelligence 和行動裝置的詳細資訊，請參閱下列主題：  
   
--   [行動裝置和 SharePoint 2013 的概觀](https://technet.microsoft.com/library/fp161351\(v=office.15\).aspx)(https://technet.microsoft.com/library/fp161351(v=office.15).aspx)。  
+-   [行動裝置和 SharePoint 2013 的概觀](https://technet.microsoft.com/library/fp161351\(v=office.15\).aspx)(https://technet.microsoft.com/library/fp161351(v=office.15).aspx) 。  
   
--   [支援在 SharePoint 2013 中的行動裝置瀏覽器](https://technet.microsoft.com/library/fp161353\(v=office.15\).aspx)(https://technet.microsoft.com/library/fp161353(v=office.15).aspx)。  
+-   [支援在 SharePoint 2013 中的行動裝置瀏覽器](https://technet.microsoft.com/library/fp161353\(v=office.15\).aspx)(https://technet.microsoft.com/library/fp161353(v=office.15).aspx) 。  
   
--   [Apple iPad 裝置 (SharePoint Server 2010) 上檢視報表和計分卡](https://technet.microsoft.com/library/hh697482.aspx)(https://technet.microsoft.com/library/hh697482.aspx)。  
+-   [Apple iPad 裝置 (SharePoint Server 2010) 上檢視報表和計分卡](https://technet.microsoft.com/library/hh697482.aspx)(https://technet.microsoft.com/library/hh697482.aspx) 。  
   
--   [（影片） iPad 上檢視 Reporting Services 報表](https://technet.microsoft.com/sqlserver/jj873792.aspx)(https://technet.microsoft.com/sqlserver/jj873792.aspx)。  
+-   [（影片） iPad 上檢視 Reporting Services 報表](https://technet.microsoft.com/sqlserver/jj873792.aspx)(https://technet.microsoft.com/sqlserver/jj873792.aspx) 。  
   
 -   [Microsoft Surface RT 裝置 （影片） 上檢視 Reporting Services 報表](https://technet.microsoft.com/sqlserver/dn146017)  
   

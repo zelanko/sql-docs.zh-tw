@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 493f0b885f25cfba956fc8e03505b705c731cf2b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62875797"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-windows-azure"></a>設定 SQL Server Managed Backup 到 Windows Azure
@@ -81,7 +81,7 @@ ms.locfileid: "62875797"
   
      預設會顯示已經啟用 Admin、Operational 和 Analytical 通道事件，且無法予以停用。 這應該足以監視需要手動介入的事件。  您可以啟用偵錯事件，不過偵錯通道包含 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 用來偵測及解決問題的資訊和偵錯事件。 如需詳細資訊，請參閱 <<c0> [ 監視 SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md)。  
   
-7.  **啟用及設定健全狀態通知：**[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的預存程序會建立代理程式作業，以針對可能需要注意的錯誤或警告傳送電子郵件通知。 下列步驟描述啟用及設定電子郵件通知的程序：  
+7.  **啟用及設定健全狀態通知：** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的預存程序會建立代理程式作業，以針對可能需要注意的錯誤或警告傳送電子郵件通知。 下列步驟描述啟用及設定電子郵件通知的程序：  
   
     1.  如果執行個體上尚未啟用，請設定 Database Mail。 如需詳細資訊，請參閱＜ [Configure Database Mail](../database-mail/configure-database-mail.md)＞。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "62875797"
   
  本節所描述的步驟是針對第一次在資料庫上設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 您可以修改現有的組態使用相同的系統預存程序**smart_admin.sp_set_db_backup**並提供新的值。 如需詳細資訊，請參閱 < [SQL Server Managed Backup to Microsoft Azure-Retention and Storage Settings](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)。  
   
-### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd-for-the-instance-with-default-settings"></a>[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]使用預設設定啟用執行個體的   
+### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd-for-the-instance-with-default-settings"></a>[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]使用預設設定啟用執行個體的  
  本教學課程描述啟用及設定步驟[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]執行個體 'MyInstance'，\\。 其中也包括如何啟用[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]健全狀態之監視功能的步驟。  
   
  **權限：**  
@@ -210,7 +210,7 @@ ms.locfileid: "62875797"
   
      可能需要 15 分鐘才會顯示設定，並開始執行資料庫上的備份作業。  
   
-8.  **啟用及設定健全狀態通知：**[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的預存程序會建立代理程式作業，以針對可能需要注意的錯誤或警告傳送電子郵件通知。  若要接收這類通知，必須啟用 [執行預存程序]，以建立 SQL Server Agent 工作。 下列步驟描述啟用及設定電子郵件通知的程序：  
+8.  **啟用及設定健全狀態通知：** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的預存程序會建立代理程式作業，以針對可能需要注意的錯誤或警告傳送電子郵件通知。  若要接收這類通知，必須啟用 [執行預存程序]，以建立 SQL Server Agent 工作。 下列步驟描述啟用及設定電子郵件通知的程序：  
   
     1.  如果執行個體上尚未啟用，請設定 Database Mail。 如需詳細資訊，請參閱＜ [Configure Database Mail](../database-mail/configure-database-mail.md)＞。  
   

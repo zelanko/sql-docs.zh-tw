@@ -17,13 +17,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62524327"
 ---
-# <a name="tutorial-getting-started-with-the-database-engine"></a>教學課程：Database Engine 使用者入門
+# <a name="tutorial-getting-started-with-the-database-engine"></a>教學課程：資料庫引擎使用者入門
   歡迎使用 [!INCLUDE[ssDE](../includes/ssde-md.md)] 使用者入門教學課程。 本教學課程的主要對象是剛接觸 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 且已安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]的使用者。 這個簡短的教學課程可幫助您開始使用 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
 ## <a name="what-you-will-learn"></a>學習內容  

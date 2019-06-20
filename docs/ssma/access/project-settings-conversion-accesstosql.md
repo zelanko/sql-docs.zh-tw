@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2489442eb8de9d8d0ebfb5d8ed902dd2792e22f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63299147"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>專案設定 （轉換） (AccessToSQL)
@@ -85,7 +85,7 @@ ms.locfileid: "63299147"
 -   **完整模式**:錯誤  
   
 **當複雜查詢中使用萬用字元，即發出警告 (\&#42;)**  
-SELECT 陳述式中的資料行名稱為萬用字元 （*） 時，請在 輸出 窗格和 錯誤清單中顯示警告。  
+SELECT 陳述式中的資料行名稱為萬用字元 （*） 時，請在 [輸出] 窗格和 [錯誤清單中顯示警告。  
   
 -   **預設模式**:True  
   

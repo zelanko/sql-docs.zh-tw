@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 087360981a7c31de6980755cfee4f98f88f48a15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63183426"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>啟動 Analytics Platform System 中的 Configuration Manager
@@ -25,7 +25,7 @@ ms.locfileid: "63183426"
 Analytics Platform System**Configuration Manager**設備網域系統管理員，才可以執行。 若要執行這項工具，您需要設備網域系統管理員密碼。 若要建立其他的 APS 系統管理員，請參閱[建立 APS 網域系統管理員&#40;AP&#41;](create-an-aps-domain-administrator-aps.md)。  
   
 ## <a name="Accessing"></a>啟動組態管理員工具  
-若要執行 Configuration Manager，請使用遠端桌面連接至 PDW 控制節點 (**_PDW_region_-CTL01**) 節點，然後登入為_appliance_domain_ **\Administrator**。 啟動時**Configuration Manager**程式中，使用**系統管理員身分執行**選項可確保使用您的系統管理員認證。  
+若要執行 Configuration Manager，請使用遠端桌面連接至 PDW 控制節點 ( **_PDW_region_-CTL01**) 節點，然後登入為_appliance_domain_ **\Administrator**。 啟動時**Configuration Manager**程式中，使用**系統管理員身分執行**選項可確保使用您的系統管理員認證。  
   
 #### <a name="to-launch-from-a-browser-window"></a>若要從瀏覽器視窗啟動  
   

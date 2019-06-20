@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 33618c019e59c044e681c45130130adc79d53122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22109f1cd7f3ebce652ae4c006473866321f7f0e
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62472197"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263424"
 ---
 # <a name="data-types-supported-in-tabular-models"></a>支援表格式模型中的資料類型
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "62472197"
 >  您不能從字串長度超過 131,072 個字元的 **varchar(max)** 資料行匯入。  
   
 ### <a name="table-data-type"></a>資料表資料類型  
- 此外，DAX 還使用 *「資料表」* (Table) 資料類型。 DAX 會在許多函數中使用這個資料類型，例如彙總與時間智慧計算。 有些函數需要使用資料表的參考；有些函數則會傳回之後可當做其他函數輸入使用的資料表。 在需要資料表當做輸入的部分函數中，您可以指定評估為資料表的運算式；對於某些函數，則需要基底資料表的參考。 如需特定函數需求的相關資訊，請參閱 [DAX 函數參考](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)。  
+ 此外，DAX 還使用 *「資料表」* (Table) 資料類型。 DAX 會在許多函數中使用這個資料類型，例如彙總與時間智慧計算。 有些函數需要使用資料表的參考；有些函數則會傳回之後可當做其他函數輸入使用的資料表。 在需要資料表當做輸入的部分函數中，您可以指定評估為資料表的運算式；對於某些函數，則需要基底資料表的參考。 如需特定函數需求的相關資訊，請參閱 [DAX 函數參考](/dax/dax-function-reference)。  
   
 ##  <a name="bkmk_implicit"></a> DAX 公式中隱含與明確的資料類型轉換
   
@@ -136,7 +136,7 @@ ms.locfileid: "62472197"
  例如，如果在除法運算中結合整數與貨幣值，兩個值都會轉換為實數，因此結果也是實數。  
   
 #### <a name="comparison-operators"></a>比較運算子  
-支援僅提供有限的混合的資料類型的比較作業的組合。 若要深入了解，請參閱 [DAX 運算子參考](https://msdn.microsoft.com/library/ee634237.aspx)。  
+支援僅提供有限的混合的資料類型的比較作業的組合。 若要深入了解，請參閱 [DAX 運算子參考](/dax/dax-operator-reference)。  
   
 ## <a name="bkmk_hand_blanks"></a> 空白、 空字串與零值的處理  
  下表摘要說明 DAX 與差異在 Microsoft Excel 中的空白處理方式：  
@@ -157,5 +157,5 @@ ms.locfileid: "62472197"
 |BLANK OR BLANK|BLANK|錯誤|  
 |BLANK AND BLANK|BLANK|錯誤|  
   
- 如需特定函數或運算子如何處理空白的詳細資訊，請參閱 [DAX 函數參考](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)一節中，每個 DAX 函數的個別主題。  
+ 如需特定函數或運算子如何處理空白的詳細資訊，請參閱 [DAX 函數參考](/dax/dax-function-reference)一節中，每個 DAX 函數的個別主題。  
   

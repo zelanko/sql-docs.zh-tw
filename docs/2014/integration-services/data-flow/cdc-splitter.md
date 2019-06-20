@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 551e5bfdba63ca09388db5260adb5accafe2a78a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62828235"
 ---
 # <a name="cdc-splitter"></a>CDC 分隔器
@@ -25,10 +25,10 @@ ms.locfileid: "62828235"
 |作業值|輸出|描述|  
 |------------------------|------------|-----------------|  
 |1|DELETE|已刪除的資料列|  
-|2|Insert|插入的資料列 (在使用 [Net with Merge (淨 (含合併))] CDC 模式時無法使用)|  
-|3|Update|更新前資料列 (僅在使用 [All with Old Values (全部 (含舊值))] CDC 模式時才可使用)|  
+|2|Insert|插入的資料列 (在使用 [Net with Merge (淨 (含合併))]  CDC 模式時無法使用)|  
+|3|Update|更新前資料列 (僅在使用 [All with Old Values (全部 (含舊值))]  CDC 模式時才可使用)|  
 |4|Update|更新後資料列 (在更新前之後)|  
-|5|Update|合併資料列 (僅在使用 [Net with Merge (淨 (含合併))] CDC 模式時才可使用)|  
+|5|Update|合併資料列 (僅在使用 [Net with Merge (淨 (含合併))]  CDC 模式時才可使用)|  
 |其他|錯誤||  
   
  您可以使用分隔器連接到預先定義的 INSERT、DELETE 和 UPDATE 輸出，以供進一步處理。  
@@ -55,7 +55,7 @@ ms.locfileid: "62828235"
   
  若要開啟 **[進階編輯器]** 對話方塊：  
   
--   在 **專案的** [資料流程] [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 畫面中，以滑鼠右鍵按一下 CDC 分隔器，然後選取 **[顯示進階編輯器]**。  
+-   在 **專案的** [資料流程] [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 畫面中，以滑鼠右鍵按一下 CDC 分隔器，然後選取 **[顯示進階編輯器]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [依據變更類型來導向 CDC 資料流](direct-the-cdc-stream-according-to-the-type-of-change.md)  

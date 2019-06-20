@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c13e41abea44bdbe0f954518f42aab118360a155
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62715835"
 ---
 # <a name="syspdwnodesindexes-transact-sql"></a>sys.pdw_nodes_indexes (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "62715835"
 |object_id|**int**|此索引所屬的物件識別碼。||  
 |NAME|**sysname**|索引的名稱。 只有在物件內的唯一名稱。 NULL = 堆積||  
 |index_id|**int**|索引的識別碼。 index_id 只物件內是唯一。<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集索引<br /><br /> > 1 = 非叢集索引||  
-|型別|**tinyint**|索引的類型：<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集<br /><br /> 2 = 非叢集<br /><br /> 5 = 叢集 xVelocity 記憶體最佳化的資料行存放區索引|  
+|type|**tinyint**|索引的類型：<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集<br /><br /> 2 = 非叢集<br /><br /> 5 = 叢集 xVelocity 記憶體最佳化的資料行存放區索引|  
 |type_desc|**nvarchar(60)**|索引類型的描述：<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> 叢集資料行存放區||  
 |is_unique|**bit**|0 = 索引不是唯一的。|一律是 0。|  
 |data_space_id|**int**|這個索引的資料空間識別碼。 資料空間是一個檔案群組或分割區結構描述。<br /><br /> 0 = object_id 是資料表值函式。||  

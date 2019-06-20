@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 10cf7256c5190f9ba94dff70118f43f0ad926aa4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049314"
 ---
 # <a name="register-servers"></a>註冊伺服器
@@ -47,7 +47,7 @@ ms.locfileid: "63049314"
   
 -   建立伺服器群組。  
   
--   在有別於 [伺服器名稱] 清單的 [已註冊的伺服器名稱] 方塊中提供一個值，以提供已註冊的伺服器之使用者易讀的名稱。  
+-   在有別於 [伺服器名稱]  清單的 [已註冊的伺服器名稱]  方塊中提供一個值，以提供已註冊的伺服器之使用者易讀的名稱。  
   
 -   提供已註冊的伺服器的詳細說明。  
   

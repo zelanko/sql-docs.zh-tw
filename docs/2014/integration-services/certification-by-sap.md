@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 06ae79e51fa7526ab0e6bad2747c32d0bc5ca6bd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771597"
 ---
 # <a name="certification-by-sap"></a>SAP 認證
@@ -26,7 +26,7 @@ ms.locfileid: "62771597"
   
 |SAP 介面|SAP 版本等級|認證日期|相關元件|  
 |-------------------|------------------------|------------------------|-----------------------|  
-|BW_OHS 7.0 - SAP NetWeaver Business Intelligence - Open Hub Service 7.0|Business Intelligence 7.0|2012 年 12 月|Source|  
+|BW_OHS 7.0 - SAP NetWeaver Business Intelligence - Open Hub Service 7.0|Business Intelligence 7.0|2012 年 12 月|`Source`|  
 |BW-STA 3.5 - Staging BAPIs for SAP BW 3.5|Business Intelligence 3.5, 7.0|2012 年 12 月|目的地|  
   
   

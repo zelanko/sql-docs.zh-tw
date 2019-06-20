@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 98a8476ef317a0ddfa6f7fc27c0c9572ed12817a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770174"
 ---
 # <a name="unpivot-transformation"></a>取消樞紐轉換
@@ -44,7 +44,7 @@ ms.locfileid: "62770174"
   
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可在 [取消樞紐轉換編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
+ 如需可在 [取消樞紐轉換編輯器]  對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [取消樞紐轉換編輯器](../../unpivot-transformation-editor.md)  
   

@@ -23,10 +23,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 196bfdc78ea29b1d334660a732f087a50ae9c2ee
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096116"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)
@@ -131,7 +131,7 @@ ms.locfileid: "66096116"
   
 -   `SMTPServer` 指定遠端 SMTP 伺服器或轉送子。 如果您使用的是遠端 SMTP 伺服器或轉送子，此值為必要的。  
   
--   [`From`] 設定的值，會在電子郵件訊息 [寄件者:] 行內顯示。 如果您使用的是遠端 SMTP 伺服器或轉送子，此值為必要的。  
+-   [`From`] 設定的值，會在電子郵件訊息 [寄件者:]  行內顯示。 如果您使用的是遠端 SMTP 伺服器或轉送子，此值為必要的。  
   
  用於遠端 SMTP 服務的其他值包括下列項目 (請注意，除非您要覆寫預設值，否則不需要指定這些值)。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "66096116"
   
 -   **SMTPAuthenticate** 會指定報表伺服器如何連接到遠端 SMTP 伺服器。 預設值是 0 (或無驗證)。 在此情況下，連接是透過匿名存取。 依照您的網域組態，報表伺服器和 SMTP 伺服器可能必須是同一網域的成員。  
   
-     若要傳送電子郵件至限制的通訊群組清單 (例如，只接受來自已驗證帳戶之內送訊息的通訊群組清單)，請將 **[SMTPAuthenticate]** 設定為 **[2]**。  
+     若要傳送電子郵件至限制的通訊群組清單 (例如，只接受來自已驗證帳戶之內送訊息的通訊群組清單)，請將 **[SMTPAuthenticate]** 設定為 **[2]** 。  
   
 
   
@@ -155,7 +155,7 @@ ms.locfileid: "66096116"
     > [!NOTE]  
     >  請確定您執行不設定`SMTPServer`如果您使用本機 SMTP 伺服器。  
   
--   [`From`] 設定的值，會在電子郵件訊息 [寄件者:] 行內顯示。 這是必要的值。  
+-   [`From`] 設定的值，會在電子郵件訊息 [寄件者:]  行內顯示。 這是必要的值。  
   
  
   
@@ -169,7 +169,7 @@ ms.locfileid: "66096116"
   
 4.  在 **[寄件者地址]** 中，輸入擁有從 SMTP 伺服器傳送電子郵件之權限的帳戶名稱。  
   
-5.  按一下 **[套用]**。  
+5.  按一下 **[套用]** 。  
   
 
   
@@ -197,17 +197,17 @@ ms.locfileid: "66096116"
   
 ##  <a name="bkmk_confiugre_local_SMTP"></a> 若要設定報表伺服器的本機 SMTP 服務  
   
-1.  在 [控制台] 中，按兩下 **[新增或移除程式]**。  
+1.  在 [控制台] 中，按兩下 **[新增或移除程式]** 。  
   
 2.  按一下 **[新增/移除 Windows 元件]** 以啟動 [Windows 元件精靈]。  
   
-3.  選取 **[應用程式伺服器]** 並按一下 **[詳細資料]**。  
+3.  選取 **[應用程式伺服器]** 並按一下 **[詳細資料]** 。  
   
-4.  選取 **[Internet Information Services (IIS)]** ，再按一下 **[詳細資料]**。  
+4.  選取 **[Internet Information Services (IIS)]** ，再按一下 **[詳細資料]** 。  
   
-5.  選取 **[SMTP 服務]** 核取方塊，再按一下 **[確定]**。  
+5.  選取 **[SMTP 服務]** 核取方塊，再按一下 **[確定]** 。  
   
-6.  在 [Windows 元件精靈] 中按 **[下一步]**。 按一下 **[完成]**。  
+6.  在 [Windows 元件精靈] 中按 **[下一步]** 。 按一下 **[完成]** 。  
   
 7.  確認 **[服務]** 主控台中有執行該服務。  
   

@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98f7dd23615cf86e4c20a84eae6bc39ff6489bc3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094352"
 ---
 # <a name="installation-prerequisites"></a>安裝的必要條件
@@ -34,7 +34,7 @@ ms.locfileid: "66094352"
 > [!NOTE]  
 >  如果安裝程式失敗或取消，並不會移除這些元件。 若要移除它們，請使用 [控制台] 的 [新增或移除程式]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  若要安裝必要條件檔案，請按一下 [安裝]。 若要結束安裝，請按一下 [取消]。  
   
   

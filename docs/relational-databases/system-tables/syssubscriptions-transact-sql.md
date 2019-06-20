@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7375dff31cb9cd0f092315b9a53e57e2f0ecd1a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632288"
 ---
 # <a name="syssubscriptions-transact-sql"></a>syssubscriptions (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "62632288"
 |**update_mode**|**tinyint**|更新模式：<br /><br /> **0** = 唯讀。<br /><br /> **1** = 立即更新。|  
 |**loopback_detection**|**bit**|適用於雙向異動複寫拓撲中的訂閱。 回送偵測會判斷散發代理程式是否將起源於訂閱者端的交易傳回給訂閱者：<br /><br /> **0** = 傳回。<br /><br /> **1** = 不傳回。|  
 |**queued_reinit**|**bit**|指定發行項是否標示初始化或重新初始化。 值為**1**指定標示初始化或重新初始化訂閱之發行項。|  
-|**nosync_type**|**tinyint**|訂閱初始化的類型：<br /><br /> **0** = 自動 （快照集）<br /><br /> **1** = 僅支援複寫<br /><br /> **2** = 以備份初始化<br /><br /> **3** = 從記錄序號 (LSN) 初始化<br /><br /> 如需詳細資訊，請參閱 < **@sync_type**參數[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。|  
+|**nosync_type**|**tinyint**|訂閱初始化的類型：<br /><br /> **0** = 自動 （快照集）<br /><br /> **1** = 僅支援複寫<br /><br /> **2** = 以備份初始化<br /><br /> **3** = 從記錄序號 (LSN) 初始化<br /><br /> 如需詳細資訊，請參閱 < **@sync_type** 參數[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。|  
 |**srvname**|**sysname**|訂閱者的名稱。|  
   
 ## <a name="see-also"></a>另請參閱  

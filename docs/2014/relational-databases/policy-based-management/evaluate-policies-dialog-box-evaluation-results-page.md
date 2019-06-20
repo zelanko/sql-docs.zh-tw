@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5efb31c8fa537c1483635128755aa20fc9c898db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705135"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>評估原則對話方塊，評估結果頁面
@@ -36,7 +36,7 @@ ms.locfileid: "62705135"
  評估原則所針對的目標。  
   
  **目標詳細資料：詳細資料**  
- [結果詳細檢視] 對話方塊的連結，其中會顯示原則評估的詳細資料。  
+ [結果詳細檢視]  對話方塊的連結，其中會顯示原則評估的詳細資料。  
   
  **目標詳細資料：訊息**  
  發生錯誤時的資訊連結。  

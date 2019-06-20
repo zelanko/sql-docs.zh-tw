@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d779e6362cc3e2842003b82a092ce48ce4933e8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011375"
 ---
 # <a name="reconcile-a-database-diagram-with-a-modified-database-visual-database-tools"></a>使用修改的資料庫協調資料庫圖表 (Visual Database Tools)
@@ -32,11 +32,11 @@ ms.locfileid: "63011375"
   
 1.  儲存您的資料庫圖表。  
   
-     如果您先前未儲存圖表，請在 [儲存新資料庫圖表] 對話方塊中輸入圖表名稱，再選擇 [確定]。  
+     如果您先前未儲存圖表，請在 [儲存新資料庫圖表]  對話方塊中輸入圖表名稱，再選擇 [確定]  。  
   
-2.  [儲存] 對話方塊會列出儲存圖表時會影響的資料表。 選擇 [是] 繼續進行。  
+2.  [儲存]  對話方塊會列出儲存圖表時會影響的資料表。 選擇 [是]  繼續進行。  
   
-3.  [偵測到資料庫變更] 對話方塊會列出修改的物件，這些物件將會變更，以符合您的圖表。 選擇 [是] 儲存圖表，並接受變更的清單。  
+3.  [偵測到資料庫變更]  對話方塊會列出修改的物件，這些物件將會變更，以符合您的圖表。 選擇 [是]  儲存圖表，並接受變更的清單。  
   
     > [!NOTE]  
     >  如果您的圖表包含已經在資料庫中刪除的資料表和資料行，儲存圖表時只會在資料庫中重新建立這些物件的定義。 此程序不會還原刪除這些物件之前就存在於物件中的任何資料。  
@@ -47,7 +47,7 @@ ms.locfileid: "63011375"
   
 2.  在 [物件總管] 的圖表上按一下滑鼠右鍵。  
   
-3.  從快速鍵功能表按一下 [重新整理]。  
+3.  從快速鍵功能表按一下 [重新整理]  。  
   
 4.  重新開啟圖表。  
   

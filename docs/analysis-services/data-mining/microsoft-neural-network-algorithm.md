@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54896093b887985fc658e823f7d277347a70f0ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724969"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
@@ -38,7 +38,7 @@ ms.locfileid: "62724969"
 -   任何分析許多輸入以及較少輸出之間複雜關聯性的預測模型  
   
 ## <a name="how-the-algorithm-works"></a>演算法的運作方式  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法會建立最多由三層節點 (有時稱為「神經」) 所組成的網路。 這三層分別是「輸入層」、「隱藏層」和「輸出層」。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法會建立最多由三層節點 (有時稱為「神經」  ) 所組成的網路。 這三層分別是「輸入層」  、「隱藏層」  和「輸出層」  。  
   
  **輸入的層：** 輸入的節點定義資料採礦模型及其機率的所有輸入的屬性的值。  
   

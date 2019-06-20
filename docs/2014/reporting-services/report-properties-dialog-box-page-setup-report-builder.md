@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4be5a0ba8575467467a6d73a7d6fac27e914463f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104373"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>報表屬性對話方塊、版面設定 (報表產生器)
@@ -39,10 +39,10 @@ ms.locfileid: "66104373"
  從可在「寬度」和「高度」控制項中自動輸入大小的清單選取大小。 或者，選取 **[自訂大小]** ，然後變更「寬度」和「高度」控制項，以反映您要使用的大小。  
   
  **寬度**  
- 顯示 [紙張類型] 清單中選取之紙張大小的寬度。  
+ 顯示 [紙張類型]  清單中選取之紙張大小的寬度。  
   
  **高度**  
- 顯示 [紙張類型] 清單中選取之紙張大小的高度。  
+ 顯示 [紙張類型]  清單中選取之紙張大小的高度。  
   
  **頂端**  
  設定報表頂端和報表第一行頂端之間的距離。  
