@@ -15,17 +15,17 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e7fb8a3b4e627190e4fc7eb4909f4d9bd542d8f8
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478526"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>指派階層成員權限 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  指派階層成員的權限，提供使用者或群組存取權，以便在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的總管功能區域中檢視資料。  
+  指派階層成員的權限，提供使用者或群組存取權，以便在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的總管  功能區域中檢視資料。  
   
  階層成員權限為選擇性。 它們為必要的模型物件權限提供更細微的控制。  
   
@@ -38,27 +38,27 @@ ms.locfileid: "65478526"
   
 ### <a name="to-assign-hierarchy-member-permissions"></a>若要指派階層成員權限  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]** 。  
   
 2.  在 **[使用者]** 或 **[群組]** 頁面上，選取要編輯之使用者或群組的資料列。  
   
-3.  按一下 **[編輯選取的使用者]**。  
+3.  按一下 **[編輯選取的使用者]** 。  
   
-4.  按一下 [階層成員] 索引標籤。  
+4.  按一下 [階層成員]  索引標籤。  
   
-5.  從 [模型] 清單中選取模型。  
+5.  從 [模型]  清單中選取模型。  
   
 6.  從 **[版本]** 清單中選取版本。  
   
-7.  從 [階層] 清單中選取階層。  
+7.  從 [階層]  清單中選取階層。  
   
-8.  按一下 **[編輯]**。  
+8.  按一下 **[編輯]** 。  
   
 9. 展開樹狀結構，然後按一下要指派權限的階層節點。  
   
-10. 從功能表中，選取 [建立]、[讀取]、[更新] 和 [刪除] 的組合，或是 [拒絕] 權限。  
+10. 從功能表中，選取 [建立]  、[讀取]  、[更新] 和 [刪除]  的組合，或是 [拒絕]  權限。  
   
-11. 按一下 [儲存] 。  
+11. 按一下 [儲存]  。  
   
     > [!NOTE]  
     >  階層成員權限不會立即生效。 如需詳細資訊，請參閱[立即套用成員權限 &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)。  

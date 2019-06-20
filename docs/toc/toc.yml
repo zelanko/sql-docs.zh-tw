@@ -8215,12 +8215,12 @@
               href: ../azure-data-studio/extensibility-apis.md
         - name: 資源
           items:
+            - name: 常見問題集
+              href: ../azure-data-studio/faq.md
             - name: Azure Data Studio GitHub 存放庫 >
               href: 'https://www.github.com/Microsoft/azuredatastudio'
             - name: SQL Server 部落格 >
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-            - name: 常見問題集
-              href: ../azure-data-studio/faq.md
             - name: 回報問題與提出建議 >
               href: 'https://github.com/microsoft/azuredatastudio/issues'
     - name: 命令提示字元公用程式
