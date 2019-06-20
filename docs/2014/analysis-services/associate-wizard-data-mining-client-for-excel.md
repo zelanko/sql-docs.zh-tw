@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15a86cc55e67b2000eabee62d02fa04de4874f59
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062311"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>關聯精靈 (適用於 Excel 的資料採礦用戶端)
@@ -33,7 +33,7 @@ ms.locfileid: "66062311"
   
 1.  在 **資料採礦**功能區中，按一下**關聯**。  
   
-2.  在 [**選取來源資料**頁面上，選擇 Excel 資料表或資料範圍，然後按一下**下一步]**。  
+2.  在 [**選取來源資料**頁面上，選擇 Excel 資料表或資料範圍，然後按一下**下一步]** 。  
   
      [關聯] 索引標籤中的範例資料活頁簿包含交易資料通常如何排列的範例；例如，每筆交易有多項產品或每個客戶有多筆購買記錄需要分析。  
   

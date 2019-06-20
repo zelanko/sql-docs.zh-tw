@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7067449c0de9958e98a7a9dc5cc09c7f89f33fa9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a23d2753f6fe1d94fcccab648766c3471581906
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62472290"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263389"
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>建立及管理表格式模型資料分割
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "62472290"
   分割區會將一個資料表分割成多個邏輯部分。 接著，每個分割區可以不受其他分割區的影響，單獨處理 (重新整理)。 模型撰寫期間，在已部署的模型中有重複定義的模型資料分割。 部署之後，即可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [資料分割]  對話方塊或指令碼，管理這些資料分割。 此主題提供的工作描述如何為已部署的模型建立及管理資料分割。  
   
   > [!NOTE]  
->  在建立 1400年相容性層級的表格式模型中的資料分割使用 M 查詢陳述式定義。 若要進一步了解，請參閱[M 參考](https://msdn.microsoft.com/library/mt211003.aspx)。 
+>  在建立 1400年相容性層級的表格式模型中的資料分割使用 M 查詢陳述式定義。 若要進一步了解，請參閱[M 參考](/powerquery-m/power-query-m-reference)。 
 >
   
 ## <a name="tasks"></a>工作  
