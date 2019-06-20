@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 29e5bd9f5dc682862d636b49d77e6b338fe937b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724493"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
@@ -46,7 +46,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
  計畫指南的名稱。 計畫指南名稱僅限於目前的資料庫。 *plan_guide_name*必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)且開頭不能是數字符號 （#）。 最大長度*plan_guide_name*為 124 個字元。  
   
  [ @plan_handle = ] *plan_handle*  
- 識別工作負載中的批次。 *plan_handle*已**varbinary(64)**。 *plan_handle*可以取自[sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)動態管理檢視。  
+ 識別工作負載中的批次。 *plan_handle*已**varbinary(64)** 。 *plan_handle*可以取自[sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)動態管理檢視。  
   
  [ @statement_start_offset = ] { *statement_start_offset* | NULL } ]  
  識別指定的批次內的陳述式的開始位置*plan_handle*。 *statement_start_offset*已**int**，預設值是 NULL。  

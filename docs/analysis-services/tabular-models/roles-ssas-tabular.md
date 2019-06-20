@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bbbf4f080696d41360e7fd654ef4b6878df268a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6c42615115ae486d14112a1a1dbd7f05d6328eb
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62472131"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263302"
 ---
 # <a name="roles"></a>角色
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -84,8 +84,8 @@ ms.locfileid: "62472131"
   
 |函數|描述|  
 |--------------|-----------------|  
-|[USERNAME 函數 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)|傳回目前登入使用者的 domain\username。|  
-|[CUSTOMDATA 函數 (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|傳回連接字串中的 CustomData 屬性。|  
+|[USERNAME 函數 (DAX)](/dax/username-function-dax)|傳回目前登入使用者的 domain\username。|  
+|[CUSTOMDATA 函數 (DAX)](/dax/customdata-function-dax)|傳回連接字串中的 CustomData 屬性。|  
   
  您可以使用 LOOKUPVALUE 函數傳回資料行值，其中 Windows 使用者名稱與 USERNAME 函數傳回的使用者名稱或 CustomData 函數傳回的字串相同。 然後，可以限制查詢，其中 LOOKUPVALUE 所傳回的值會符合相同或相關資料表中的值。  
   
@@ -128,8 +128,8 @@ ms.locfileid: "62472131"
 ## <a name="see-also"></a>另請參閱  
  [檢視方塊](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [[在 Excel 中進行分析]](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [USERNAME 函數 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   
- [LOOKUPVALUE 函數 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)   
- [CUSTOMDATA 函數 (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+ [USERNAME 函數 (DAX)](/dax/username-function-dax)   
+ [LOOKUPVALUE 函數 (DAX)](/dax/lookupvalue-function-dax)   
+ [CUSTOMDATA 函數 (DAX)](/dax/customdata-function-dax)  
   
   

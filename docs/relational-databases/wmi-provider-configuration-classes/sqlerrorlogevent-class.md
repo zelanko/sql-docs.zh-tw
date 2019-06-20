@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 35e2af3f371d66ce38df5cb376516d40d01006bf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62515483"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent 類別
@@ -47,7 +47,7 @@ class SQLErrorLogEvent
 |FileName|資料型別：**字串**<br /><br /> 存取類型：唯讀<br /><br /> <br /><br /> 錯誤記錄檔的名稱。|  
 |InstanceName|資料型別：**字串**<br /><br /> 存取類型：唯讀<br /><br /> 限定詞：Key<br /><br /> 記錄檔所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。|  
 |LogDate|資料型別：**日期時間**<br /><br /> 存取類型：唯讀<br /><br /> 限定詞：Key<br /><br /> <br /><br /> 將事件記錄到記錄檔中的日期和時間。|  
-|訊息|資料型別：**字串**<br /><br /> 存取類型：唯讀<br /><br /> <br /><br /> 事件訊息。|  
+|Message|資料型別：**字串**<br /><br /> 存取類型：唯讀<br /><br /> <br /><br /> 事件訊息。|  
 |ProcessInfo|資料型別：**字串**<br /><br /> 存取類型：唯讀<br /><br /> <br /><br /> 事件之來源伺服器處理序識別碼 (SPID) 的相關資訊。|  
   
 ## <a name="remarks"></a>備註  

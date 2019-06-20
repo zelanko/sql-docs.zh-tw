@@ -23,10 +23,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5f35aaa9009d07e4dad6f7c5309d9f2bb6c23ea4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62719965"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>指定軸 (SQLXML 4.0)
@@ -36,7 +36,7 @@ ms.locfileid: "62719965"
   
      包含內容節點的子系。  
   
-     下列 XPath 運算式 （位置路徑） 從目前所有的內容節點中選取**\<客戶 >** 子系：  
+     下列 XPath 運算式 （位置路徑） 從目前所有的內容節點中選取 **\<客戶 >** 子系：  
   
     ```  
     child::Customer  
@@ -48,7 +48,7 @@ ms.locfileid: "62719965"
   
      包含內容節點的父系。  
   
-     下列 XPath 運算式會選取所有**\<客戶 >** 父系**\<順序 >** 子系：  
+     下列 XPath 運算式會選取所有 **\<客戶 >** 父系 **\<順序 >** 子系：  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -70,7 +70,7 @@ ms.locfileid: "62719965"
   
      包含內容節點本身。  
   
-     下列 XPath 運算式會選取目前的節點才**\<順序 >** 節點：  
+     下列 XPath 運算式會選取目前的節點才 **\<順序 >** 節點：  
   
     ```  
     self::Order  

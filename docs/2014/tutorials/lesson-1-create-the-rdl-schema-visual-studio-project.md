@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678516"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>第 1 課：建立 RDL 結構描述 Visual Studio 專案
@@ -57,7 +57,7 @@ ms.locfileid: "62678516"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 您的專案的摺疊的檢視會顯示在 [方案總管] 中。  
   
-7.  在 [專案] 功能表上，按一下 [新增現有項目]。  
+7.  在 [專案]  功能表上，按一下 [新增現有項目]  。  
   
 8.  巡覽至的位置，為.cs 或.vb 檔案來產生，然後選取檔案，然後按一下 **新增**。  
   
