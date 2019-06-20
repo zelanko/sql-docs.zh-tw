@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 45fddb470ce7bee4dd84cbcc3c656e33d30e3166
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66091770"
 ---
 # <a name="uninstall-an-existing-instance-of-distributed-replay"></a>解除安裝 Distributed Replay 的現有執行個體
@@ -32,7 +32,7 @@ ms.locfileid: "66091770"
   
      選取 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中**解除安裝或變更程式**] 視窗中，然後在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]] 對話方塊中，按一下 [**移除**。  
   
-2.  請依照下列中的步驟[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]精靈，然後在**選取功能**頁面上，選取您想要移除此項目，然後按一下 [Distributed Replay 元件**下一步]。**。  
+2.  請依照下列中的步驟[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]精靈，然後在**選取功能**頁面上，選取您想要移除此項目，然後按一下 [Distributed Replay 元件**下一步]。** 。  
   
 3.  完成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈，解除安裝選取的 Distributed Replay 功能。  
   

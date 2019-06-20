@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 24587f27710381ac787fe8045029df681e401af5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63036188"
 ---
 # <a name="set-index-options"></a>設定索引選項
@@ -68,9 +68,9 @@ ms.locfileid: "63036188"
   
 2.  按一下加號展開 **[資料表]** 資料夾。  
   
-3.  以滑鼠右鍵按一下要修改索引屬性的資料表，然後選取 [設計]。  
+3.  以滑鼠右鍵按一下要修改索引屬性的資料表，然後選取 [設計]  。  
   
-4.  在 [資料表設計工具] 功能表上，按一下 [索引/索引鍵]。  
+4.  在 [資料表設計工具]  功能表上，按一下 [索引/索引鍵]  。  
   
 5.  選取您要修改的索引。 其屬性會在主要方格中顯示。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "63036188"
   
 7.  按一下 [ **關閉**]。  
   
-8.  在 [檔案] 功能表上，選取 [儲存 _table_name_]。  
+8.  在 [檔案]  功能表上，選取 [儲存 _table_name_]  。  
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>在物件總管中修改索引的屬性  
   
@@ -90,13 +90,13 @@ ms.locfileid: "63036188"
   
 4.  按一下加號展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下要修改其屬性的索引，然後選取 [屬性]。  
+5.  以滑鼠右鍵按一下要修改其屬性的索引，然後選取 [屬性]  。  
   
-6.  在 **[選取頁面]** 底下，選取 **[選項]**。  
+6.  在 **[選取頁面]** 底下，選取 **[選項]** 。  
   
 7.  變更任何和所有屬性的設定，以自訂索引。  
   
-8.  若要加入、移除或變更索引資料行的位置，請選取 [索引屬性 - _index_name_] 對話方塊中的 [一般] 頁面。 如需相關資訊，請參閱 [Index Properties F1 Help](index-properties-f1-help.md)  
+8.  若要加入、移除或變更索引資料行的位置，請選取 [索引屬性 - _index_name_]  對話方塊中的 [一般]  頁面。 如需相關資訊，請參閱 [Index Properties F1 Help](index-properties-f1-help.md)  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -104,9 +104,9 @@ ms.locfileid: "63036188"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -138,9 +138,9 @@ ms.locfileid: "63036188"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。  
   
      [!code-sql[IndexDDL#AlterIndex4](../../snippets/tsql/SQL14/tsql/indexddl/transact-sql/alterindex.sql#alterindex4)]  
   

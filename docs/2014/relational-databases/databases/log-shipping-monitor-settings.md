@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 788defce7f897e4da3a3680118c573b5a73ac3b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917051"
 ---
 # <a name="log-shipping-monitor-settings"></a>記錄傳送監視器設定
@@ -24,7 +24,7 @@ ms.locfileid: "62917051"
   
  如需記錄傳送概念的說明，請參閱[關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **監視伺服器執行個體**  
  顯示目前設定為記錄傳送組態的監視伺服器之伺服器執行個體的名稱。  
   

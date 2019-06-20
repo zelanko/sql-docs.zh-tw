@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075394"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>定義資料來源檢視 (Analysis Services)
@@ -84,7 +84,7 @@ ms.locfileid: "66075394"
 > [!NOTE]  
 >  或者，您可以先建構維度和 Cube，然後使用 [結構描述產生] 精靈產生模型的 DSV。 如需詳細資訊，請參閱[結構描述產生精靈 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)。  
   
-1.  在方案總管中，以滑鼠右鍵按一下 [資料來源檢視] 資料夾，然後按一下 [新增資料來源檢視]。  
+1.  在方案總管中，以滑鼠右鍵按一下 [資料來源檢視] 資料夾，然後按一下 [新增資料來源檢視]  。  
   
 2.  指定新的或現有的資料來源物件，以提供連接資訊給外部關聯式資料庫 (在精靈中只能選取一個資料來源)。  
   

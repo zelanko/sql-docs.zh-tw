@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022208"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 訂閱者
@@ -31,7 +31,7 @@ ms.locfileid: "63022208"
   
 1.  在散發者上安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for DB2 的最新版本：  
   
-    -   如果您使用的是 [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]，請在 [SQL Server 2008 下載](https://go.microsoft.com/fwlink/?LinkId=149256) 網頁的 **[Related Downloads] (相關下載)** 區段中，按一下最新版 Microsoft SQL Server 2008 功能套件的連結。 在 **[Microsoft SQL Server 2008 Feature Pack]** 網頁上，搜尋 **[Microsoft OLE DB Provider for DB2]**。  
+    -   如果您使用的是 [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]，請在 [SQL Server 2008 下載](https://go.microsoft.com/fwlink/?LinkId=149256) 網頁的 **[Related Downloads] (相關下載)** 區段中，按一下最新版 Microsoft SQL Server 2008 功能套件的連結。 在 **[Microsoft SQL Server 2008 Feature Pack]** 網頁上，搜尋 **[Microsoft OLE DB Provider for DB2]** 。  
   
     -   如果您使用的是 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard，請安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS) 伺服器的最新版本，其中就包含此提供者。  
   
@@ -39,11 +39,11 @@ ms.locfileid: "63022208"
   
 2.  為「訂閱者」建立連接字串。 在任何文字編輯器中都可建立連接字串，但建議您使用「資料存取工具」。 若要在「資料存取工具」中建立字串：  
   
-    1.  依序按一下 **[開始]**、 **[程式集]** 和 **[DB2 的 Microsoft OLE DB 提供者]**，然後再按 **[資料存取工具]**。  
+    1.  依序按一下 **[開始]** 、 **[程式集]** 和 **[DB2 的 Microsoft OLE DB 提供者]** ，然後再按 **[資料存取工具]** 。  
   
     2.  遵循 **[資料存取工具]** 中的步驟提供有關 DB2 伺服器的資訊。 完成工具後，將建立通用資料連結 (UDL) 和相關聯的連接字串 (複寫實際不會使用 UDL，但會用到連接字串)。  
   
-    3.  存取連接字串：以滑鼠右鍵按一下「資料存取工具」中的 UDL，然後選取 **[顯示連接字串]**。  
+    3.  存取連接字串：以滑鼠右鍵按一下「資料存取工具」中的 UDL，然後選取 **[顯示連接字串]** 。  
   
      連接字串類似於 (使用分行符號是為提高可讀性)：  
   
@@ -107,12 +107,12 @@ ms.locfileid: "63022208"
 |`char(1-254)`|CHAR(1-254)|  
 |`char(255-8000)`|VARCHAR(255-8000)|  
 |`date`|DATE|  
-|`datetime`|timestamp|  
+|`datetime`|TIMESTAMP|  
 |`datetime2(0-7)`|VARCHAR(27)|  
 |`datetimeoffset(0-7)`|VARCHAR(34)|  
 |`decimal(1-31, 0-31)`|DECIMAL(1-31, 0-31)|  
 |`decimal(32-38, 0-38)`|VARCHAR(41)|  
-|`float(53)`|DOUBLE|  
+|`float(53)`|Double|  
 |`float`|FLOAT|  
 |`geography`|IMAGE|  
 |`geometry`|IMAGE|  
@@ -127,7 +127,7 @@ ms.locfileid: "63022208"
 |`nvarchar(1-4000)`|VARCHAR(1-4000)|  
 |`nvarchar(max)`|VARCHAR(0)<sup>1</sup>|  
 |`real`|real|  
-|`smalldatetime`|timestamp|  
+|`smalldatetime`|TIMESTAMP|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
 |`sql_variant`|N/A|  

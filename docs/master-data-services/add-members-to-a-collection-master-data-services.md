@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 086294f3615c32d9d8bbbd8c26da0439288dc8d3
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65486406"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>將成員加入至集合 (Master Data Services)
@@ -41,21 +41,21 @@ ms.locfileid: "65486406"
   
 2.  從 **[版本]** 清單中選取版本。  
   
-3.  按一下 **[總管]**。  
+3.  按一下 **[總管]** 。  
   
-4.  從功能表列指向 [集合]，然後按一下 *entity_name*。  
+4.  從功能表列指向 [集合]  ，然後按一下 *entity_name*。  
   
 5.  在方格中，按一下您想要在其中加入成員之集合的資料列。  
   
 6.  按一下 **[集合成員]** 索引標籤。  
   
-7.  按一下 **[編輯成員]**。  
+7.  按一下 **[編輯成員]** 。  
   
 8.  若要篩選可用成員的清單，請從左側的清單中選取。  
   
-9. 按一下包含您想要加入之成員的資料列，然後按一下 **[加入]**。  
+9. 按一下包含您想要加入之成員的資料列，然後按一下 **[加入]** 。  
   
-10. 或者，按一下 **[向上]** 或 **[向下]**，重新排列集合成員。  
+10. 或者，按一下 **[向上]** 或 **[向下]** ，重新排列集合成員。  
   
 11. 或者，按一下 **[加權]** 資料行中的值來設定加權值。  
   

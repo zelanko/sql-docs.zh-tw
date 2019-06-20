@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 670ed0adbbd5ad993af0942d492ee19f75fa9628
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026578"
 ---
 # <a name="choosing-an-sql-grammar"></a>選擇 SQL 文法
 首先要建構 SQL 陳述式時決定是要使用的文法。 除了可從各種不同的標準組織，例如 Open Group、 ANSI 和 ISO、 文法幾乎每個 DBMS 廠商會定義它自己的文法，其中每個標準略有不同。  
   
- [附錄 c:SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)，告訴您所有的 ODBC 驅動程式必須支援的最小 SQL 文法。 此文法是 SQL-92 的項目層級的子集。 驅動程式可能支援其他符合中繼、 完整 或 FIPS 127-2 過渡期的層級定義的 SQL-92 的文法。 如需詳細資訊，請參閱 < [SQL 最小文法](../../../odbc/reference/appendixes/sql-minimum-grammar.md)附錄 c:SQL 文法和 SQL-92。  
+ [附錄 C：SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)，告訴您所有的 ODBC 驅動程式必須支援的最小 SQL 文法。 此文法是 SQL-92 的項目層級的子集。 驅動程式可能支援其他符合中繼、 完整 或 FIPS 127-2 過渡期的層級定義的 SQL-92 的文法。 如需詳細資訊，請參閱 < [SQL 最小文法](../../../odbc/reference/appendixes/sql-minimum-grammar.md)附錄 c:SQL 文法和 SQL-92。  
   
  附錄 C 也會定義*逸出序列*包含常用的語言功能，例如外部聯結中，標準的文法，未涵蓋的 SQL-92 文法。 如需詳細資訊，請參閱 < [ODBC 逸出序列](../../../odbc/reference/appendixes/odbc-escape-sequences.md)附錄 c:SQL 文法，以及[逸出序列](../../../odbc/reference/develop-app/escape-sequences.md)稍後這一節。  
   

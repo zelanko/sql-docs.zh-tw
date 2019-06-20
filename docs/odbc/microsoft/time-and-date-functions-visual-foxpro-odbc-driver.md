@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632768"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>時間和日期函式 (Visual FoxPro ODBC Driver)
@@ -61,7 +61,7 @@ ms.locfileid: "62632768"
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
- 在這個語法中， **d**指出*值*是中的日期*yyyy-mm-dd 的-* 格式和**ts**表示*值*是在一個時間戳記*yyyy 為 yyyy-mm-dd hh: mm:*[。*f...*] 格式。 日期和時間戳記資料的速記語法如下所示：  
+ 在這個語法中， **d**指出*值*是中的日期*yyyy-mm-dd 的-* 格式和**ts**表示*值*是在一個時間戳記*yyyy 為 yyyy-mm-dd hh: mm:* [。*f...* ] 格式。 日期和時間戳記資料的速記語法如下所示：  
   
 ```  
 {d 'value'}  

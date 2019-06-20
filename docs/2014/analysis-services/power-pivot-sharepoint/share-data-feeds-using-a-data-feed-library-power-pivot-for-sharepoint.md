@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00ecb4487119251f1b86c2daf29b7481966f09f7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071146"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>使用資料摘要庫共用資料摘要 (PowerPivot for SharePoint)
@@ -53,11 +53,11 @@ ms.locfileid: "66071146"
   
  單一文件可以指定多份資料摘要。 如果您想要在單一匯入作業中，從相同的服務 (或甚至不同的服務) 擷取一組資料裝載，這項功能會很有用。  
   
-1.  在 SharePoint 網站上，開啟資料摘要庫，或已經加入並設定資料服務內容類型的另一個文件庫。 若要尋找先前已建立的資料摘要庫，請按一下 [快速啟動] 上的 [全部檢視]。  
+1.  在 SharePoint 網站上，開啟資料摘要庫，或已經加入並設定資料服務內容類型的另一個文件庫。 若要尋找先前已建立的資料摘要庫，請按一下 [快速啟動] 上的 [全部檢視]  。  
   
-2.  在頁面頂端功能區上的 [文件工具] 中，按一下 [文件]。  
+2.  在頁面頂端功能區上的 [文件工具] 中，按一下 [文件]  。  
   
-3.  按一下 [新增文件]，然後選取 [資料服務文件]。  
+3.  按一下 [新增文件]  ，然後選取 [資料服務文件]  。  
   
 4.  在 [新資料服務文件] 頁面中輸入下列資訊：  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66071146"
   
 6.  儲存文件。 資料服務文件是以實體檔案 (.atomsvc) 儲存於內容庫中，內容庫必須已設定為此內容類型。  
   
- 若要使用資料服務文件，您可以在 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 中開啟 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿，然後在 [匯入資料精靈] 中選擇 [從資料摘要] 選項。 接到提示時，使用者要指定資料服務文件的 SharePoint URL，以啟動資料匯入作業。 如需詳細資訊，請參閱 <<c0> [ 使用資料摘要&#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)。</c0>  
+ 若要使用資料服務文件，您可以在 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 中開啟 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿，然後在 [匯入資料精靈] 中選擇 [從資料摘要]  選項。 接到提示時，使用者要指定資料服務文件的 SharePoint URL，以啟動資料匯入作業。 如需詳細資訊，請參閱 <<c0> [ 使用資料摘要&#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)。</c0>  
   
 ##  <a name="securedsdoc"></a> 保護資料服務文件的安全  
  資料服務文件會繼承包含該文件之文件庫的權限。 您在項目上設定的權限會決定使用者是否可以開啟、修改或刪除資料服務文件。  

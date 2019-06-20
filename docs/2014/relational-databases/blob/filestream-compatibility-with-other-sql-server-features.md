@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aba8bdc3182cd0e3784908a8af32b6f2fbebd6e9
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010187"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM 與其他 SQL Server 功能的相容性
@@ -66,7 +66,7 @@ ms.locfileid: "66010187"
  `Could not continue scan with NOLOCK due to data movement.`  
   
 ##  <a name="Replication"></a> Replication  
- 在簽發者上啟用 FILESTREAM 屬性的 `varbinary(max)` 資料行可以複寫到訂閱者上 (不論有沒有 FILESTREAM 屬性)。 若要指定複寫資料行的方式，請使用 [發行項屬性 - \<發行項>] 對話方塊或是 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 或 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 的 @schema_option 參數。 複寫到沒有 FILESTREAM 屬性之 `varbinary(max)` 資料行的資料不能超過該資料類型的 2-GB 限制，否則會產生執行階段錯誤。 我們建議您複寫 FILESTREAM 屬性，除非您要複寫資料至[!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)]不支援訂閱者，不論指定的結構描述選項為何。  
+ 在簽發者上啟用 FILESTREAM 屬性的 `varbinary(max)` 資料行可以複寫到訂閱者上 (不論有沒有 FILESTREAM 屬性)。 若要指定複寫資料行的方式，請使用 [發行項屬性 - \<發行項>]  對話方塊或是 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 或 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 的 @schema_option 參數。 複寫到沒有 FILESTREAM 屬性之 `varbinary(max)` 資料行的資料不能超過該資料類型的 2-GB 限制，否則會產生執行階段錯誤。 我們建議您複寫 FILESTREAM 屬性，除非您要複寫資料至[!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)]不支援訂閱者，不論指定的結構描述選項為何。  
   
 > [!NOTE]  
 >  將大型資料值從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 複寫到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 訂閱者受到最大 256 MB 資料值的限制。 如需詳細資訊，請參閱＜ [SQL Server 2005 的最大容量規格](https://go.microsoft.com/fwlink/?LinkId=103810)＞。  
@@ -74,7 +74,7 @@ ms.locfileid: "66010187"
 ### <a name="considerations-for-transactional-replication"></a>異動複寫考量  
  如果您在針對異動複寫發行之資料表中使用 FILESTREAM 資料行，請注意以下考量：  
   
--   如果有任何資料表包含具有 FILESTREAM 屬性 (attribute) 的資料行，您將無法針對 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 的 @sync_method 屬性 (property) 使用「資料庫快照集」或「資料庫快照集字元」的值。  
+-   如果有任何資料表包含具有 FILESTREAM 屬性 (attribute) 的資料行，您將無法針對 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 的 @sync_method 屬性 (property) 使用「資料庫快照集」  或「資料庫快照集字元」  的值。  
   
 -   max text repl size 選項會指定可以插入要發行以供複寫之資料行中的資料數量上限。 此選項可用來控制所複寫之 FILESTREAM 資料的大小。  
   

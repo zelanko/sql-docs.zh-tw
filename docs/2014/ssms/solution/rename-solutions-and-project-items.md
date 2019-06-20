@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b6643499ac9df8bcfcb663baa5e9c0e5db19045e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035577"
 ---
 # <a name="rename-solutions-and-project-items"></a>重新命名方案和專案項目
@@ -32,9 +32,9 @@ ms.locfileid: "63035577"
   
 1.  在 [方案總管] 中，選取您要重新命名的方案或專案項目。  
   
-2.  在 [檢視]  功能表上，按一下 [屬性視窗] 。  
+2.  在 [檢視]  功能表上，按一下 [屬性視窗]  。  
   
-3.  在 [屬性] 視窗中，編輯 [(Name)] 屬性。  
+3.  在 [屬性] 視窗中，編輯 [(Name)]  屬性。  
   
 ## <a name="see-also"></a>另請參閱  
  [方案總管](solution-explorer.md)  

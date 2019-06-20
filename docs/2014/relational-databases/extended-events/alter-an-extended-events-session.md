@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 99984df84d2eb24ebf3d58f3fa697d11c5ad4a1d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63128601"
 ---
 # <a name="alter-an-extended-events-session"></a>更改擴充事件工作階段
@@ -38,15 +38,15 @@ ms.locfileid: "63128601"
 -   變更進階屬性組態。  
   
 > [!NOTE]  
->  [SQL Server 擴充事件精靈] 不支援修改事件工作階段。  
+>  [SQL Server 擴充事件精靈]  不支援修改事件工作階段。  
   
 ## <a name="how-to-alter-an-extended-events-session-using-the-sql-server-extended-events-wizard"></a>如何使用 SQL Server 擴充事件精靈更改擴充事件工作階段  
   
--   在物件總管中，依序展開 **[管理]**、 **[擴充事件]** 和 **[工作階段]**。  
+-   在物件總管中，依序展開 **[管理]** 、 **[擴充事件]** 和 **[工作階段]** 。  
   
--   以滑鼠右鍵按一下您要改變的工作階段，然後按一下 [屬性]。  
+-   以滑鼠右鍵按一下您要改變的工作階段，然後按一下 [屬性]  。  
   
--   在 **[屬性]** 對話方塊中，進行適當的變更，然後按一下 **[確定]**。  
+-   在 **[屬性]** 對話方塊中，進行適當的變更，然後按一下 **[確定]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   

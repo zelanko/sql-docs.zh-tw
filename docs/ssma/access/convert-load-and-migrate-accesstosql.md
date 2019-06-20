@@ -15,10 +15,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: fdfdfc65abef5c7d0793c4a00cdb78a033e67998
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63138754"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>轉換、 載入和移轉 (AccessToSQL)
@@ -28,7 +28,7 @@ ms.locfileid: "63138754"
   
 **移轉所選物件的資料**也包含頁面區段**報表** 按鈕。 您可以按一下此按鈕，以檢視資料移轉報告。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **報表**  
 顯示相關聯的轉換或移轉報表。  
   

@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a84e1d2fa9d65cfdab4e4753315d44346af4597e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004530"
 ---
 # <a name="sysinternaltables-transact-sql"></a>sys.internal_tables (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "63004530"
 
   針對每個內部資料表物件，各傳回一個資料列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動產生內部資料表來支援各種功能。 例如，當您建立主要 XML 索引時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會自動建立內部資料表來保存零碎的 XML 文件資料。 內部資料表會出現在**sys**結構描述，每個資料庫的唯一系統產生名稱，以便表示其功能，比方說，還有**xml_index_nodes_2021582240_32001**或**queue_messages_1977058079**  
   
- 內部資料表不包含使用者可存取的資料，而且其結構描述是固定且無法變更的。 您無法在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中參考內部資料表名稱。 比方說，您無法在其中執行的陳述式，例如 SELECT \* FROM  *\<sys.internal_table_name >*。 不過，您可以查詢目錄檢視來查看內部資料表的中繼資料。  
+ 內部資料表不包含使用者可存取的資料，而且其結構描述是固定且無法變更的。 您無法在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中參考內部資料表名稱。 比方說，您無法在其中執行的陳述式，例如 SELECT \* FROM  *\<sys.internal_table_name >* 。 不過，您可以查詢目錄檢視來查看內部資料表的中繼資料。  
   
   
 |資料行名稱|資料類型|描述|  

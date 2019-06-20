@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: db02b92ffead56451e72c7a1d564c2c9956d2ecc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059780"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>資料採礦查詢工作編輯器 (輸出索引標籤)
@@ -38,7 +38,7 @@ ms.locfileid: "66059780"
   
 ## <a name="output-tab-options"></a>輸出索引標籤選項  
  **[連接]**  
- 在清單中選取連線管理員，或按一下 [新增] 來建立新的連線管理員。  
+ 在清單中選取連線管理員，或按一下 [新增]  來建立新的連線管理員。  
   
  **新增**  
  建立新的連接管理員。 只能使用 ADO.NET 和 OLE DB 連接管理員類型。  

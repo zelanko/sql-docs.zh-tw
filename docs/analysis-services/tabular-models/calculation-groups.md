@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 表格式模型中的計算群組 |Microsoft Docs
-ms.date: 06/09/2019
+ms.date: 06/17/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: abc1f51d21613676fd94271f931e1a7692cc1efc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dfe3516a36fa0ee6e8644b46b5caeb2a7cca92b
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822697"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263435"
 ---
 # <a name="calculation-groups-preview"></a>計算群組 （預覽版）
  
@@ -64,7 +64,7 @@ ms.locfileid: "66822697"
 
 [ISSELECTEDMEASURE](https://docs.microsoft.com/dax/isselectedmeasure-function-dax) -由計算項目，來判斷在內容中的量值的量值清單中指定的運算式。
 
-[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax) -由計算項目，以擷取在內容中的量值的格式字串的運算式。
+[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) -由計算項目，以擷取在內容中的量值的格式字串的運算式。
 
 ### <a name="time-intelligence-example"></a>時間智慧範例
 
@@ -251,7 +251,7 @@ SELECTEDVALUE(
     SELECTEDMEASUREFORMATSTRING()
 )
 ```
-格式字串運算式必須傳回純量的字串。 它會使用新[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax)函式來還原為基底量值的格式字串，如果篩選內容中有多個貨幣。
+格式字串運算式必須傳回純量的字串。 它會使用新[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax)函式來還原為基底量值的格式字串，如果篩選內容中有多個貨幣。
 
 下列動畫顯示的動態格式貨幣轉換**銷售**在報表中的量值。
 
@@ -407,8 +407,6 @@ CALCULATE() 函式的年初迄今引數會覆寫要重複使用已經在 YTD 計
 [物件層級安全性](object-level-security.md)(OLS) 定義計算方式不支援群組的資料表。 不過，OLS 可以定義在相同的模型中的其他資料表。 如果計算項目是指 OLS 安全的物件，則會傳回一般錯誤。
 
 [資料列層級安全性](roles-ssas-tabular.md#bkmk_rowfliters)(RLS) 不支援。 您可以定義 RLS 的相同模型中的資料表，但不是能在計算群組本身 （直接或間接）。
-
-[詳細資料列運算式](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)計算群組不支援。
 
 ## <a name="see-also"></a>另請參閱  
 

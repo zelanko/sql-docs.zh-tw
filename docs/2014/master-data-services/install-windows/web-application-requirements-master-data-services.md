@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 15b394c836cb24229944f4e0775dfccad847a32b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482878"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 應用程式需求 (Master Data Services)
@@ -40,7 +40,7 @@ ms.locfileid: "65482878"
  若要在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式中工作，用戶端電腦必須安裝 Silverlight 5。 如果您沒有必要的 Silverlight 版本，系統將會在您導覽至需要 Silverlight 的 Web 應用程式區域時提示安裝 Silverlight。 您可以從 [這裡](https://go.microsoft.com/fwlink/?LinkId=243096)安裝 Silverlight 5。  
   
 ### <a name="role-and-role-services-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>角色和角色服務 (Windows Server 2008 或 Windows Server 2008 R2、Windows 7 作業系統)  
- 在 Windows Server 2008 R2 上，您可以使用 Microsoft Management Console (MMC) 中所提供的 **[伺服器管理員]**，以安裝 **[網頁伺服器 (IIS)]** 角色及下列必要的角色服務。  
+ 在 Windows Server 2008 R2 上，您可以使用 Microsoft Management Console (MMC) 中所提供的 **[伺服器管理員]** ，以安裝 **[網頁伺服器 (IIS)]** 角色及下列必要的角色服務。  
   
 > [!NOTE]  
 >  在 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 和 Windows 7 作業系統上，使用 [控制台] 內的 **[程式和功能]** ，在 **[Windows 功能]** 對話方塊中啟用這些選項。  

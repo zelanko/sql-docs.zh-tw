@@ -21,10 +21,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 ms.openlocfilehash: 16df7ce483209be058d44448e9071406f897b41a
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822362"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
@@ -69,7 +69,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |關鍵字 (keyword)|**varbinary(128)**|斷詞工具所傳回之給定關鍵字的十六進位表示法。 這個表示法是用來將關鍵字儲存在全文檢索索引中。 這個值不是人類看得懂，但它可用於傳回全文檢索索引的內容，例如其他動態管理檢視與給定的關鍵字來輸出傳回[sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)和[sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)。<br /><br /> **注意：** OxFF 代表指出檔案或資料集的結尾的特殊字元。|  
-|group_id|**int**|包含可用於區分從中產生給定詞彙之邏輯群組的整數值。 例如，'`Server AND DB OR FORMSOF(THESAURUS, DB)"`' 會使用英文產生下列 group_id 值：<br /><br /> 1：[伺服器]<br />2：DB<br />3:DB|  
+|group_id|**int**|包含可用於區分從中產生給定詞彙之邏輯群組的整數值。 例如，'`Server AND DB OR FORMSOF(THESAURUS, DB)"`' 會使用英文產生下列 group_id 值：<br /><br /> 1：[伺服器]<br />2：DB<br />3：DB|  
 |phrase_id|**int**|包含可用於區分斷詞工具發出複合字 (例如 full-text) 之替代形式所處情況的整數值。 有時候，如果存在複合字 ('multi-million')，斷詞工具就會發出替代形式。 這些替代形式 (片語) 有時必須加以區別。<br /><br /> 例如，'`multi-million`' 會使用英文產生下列 phrase_id 值：<br /><br /> 1 `multi`<br />1 `million`<br />2 `multimillion`|  
 |occurrence|**int**|指出剖析結果中每個詞彙的順序。 例如，若為 "`SQL Server query processor`" 片語，occurrence 就會使用英文針對此片語中的詞彙包含下列 occurrence 值：<br /><br /> 1 `SQL`<br />2 `Server`<br />3 `query`<br />4 個 `processor`|  
 |special_term|**nvarchar(4000)**|包含斷詞工具所發出之詞彙特性的相關資訊，它有下列幾種：<br /><br /> 完全相符<br /><br /> 非搜尋字<br /><br /> 句子的結尾<br /><br /> 段落的結尾<br /><br /> 章節的結尾|  

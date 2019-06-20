@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b94fef660128637ebeb01ea1290ec24ed11b3278
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088080"
 ---
 # <a name="choose-time-calculations-business-intelligence-wizard"></a>選擇時間計算 (商業智慧精靈)
-  使用 [選擇時間計算] 頁面，即可定義針對現有時間階層所建立之新時間計算的解決方式。  
+  使用 [選擇時間計算]  頁面，即可定義針對現有時間階層所建立之新時間計算的解決方式。  
   
 ## <a name="options"></a>選項。  
  **使用下列階層來分析時間計算**  

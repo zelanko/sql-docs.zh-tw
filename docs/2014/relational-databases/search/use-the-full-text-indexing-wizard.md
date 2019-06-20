@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7bab4ee8f03eb666e1a8396fbf8957b1e42f2c7
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010902"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文檢索索引精靈
@@ -35,7 +35,7 @@ ms.locfileid: "66010902"
   
 #### <a name="to-use-the-full-text-indexing-wizard"></a>使用全文檢索索引精靈  
   
-1.  在物件總管中，以滑鼠右鍵按一下您要建立全文檢索索引的資料表、指向 [全文檢索索引]，然後按一下 [Define Full-Text Index (定義全文檢索索引)]。  
+1.  在物件總管中，以滑鼠右鍵按一下您要建立全文檢索索引的資料表、指向 [全文檢索索引]  ，然後按一下 [Define Full-Text Index (定義全文檢索索引)]  。  
   
      **唯一索引**  
      從下拉式清單中選取索引。 索引必須是單一索引鍵資料行、唯一的且不可以是 Null 的索引。 請選取最小的唯一索引鍵索引來當做全文檢索唯一索引鍵。 為求最佳效能，建議使用叢集索引。  
@@ -54,7 +54,7 @@ ms.locfileid: "66010902"
      **統計語意**  
      選取是否要針對選取的資料行啟用語意索引。 如需詳細資訊，請參閱[語意搜尋 &#40;SQL Server&#41;](semantic-search-sql-server.md)。  
   
-     如果您在選取 **[統計語意]** 之前選取 **[語言]**，而且選取的語言沒有相關聯的語意語言模型，則會停用 **[統計語意]** 核取方塊。 如果您在選取 [語言] 之前選取 [統計語意]，則下拉式方塊中提供的語言將受限為有語意語言模型支援的語言。  
+     如果您在選取 **[統計語意]** 之前選取 **[語言]** ，而且選取的語言沒有相關聯的語意語言模型，則會停用 **[統計語意]** 核取方塊。 如果您在選取 [語言]  之前選取 [統計語意]  ，則下拉式方塊中提供的語言將受限為有語意語言模型支援的語言。  
   
 2.  選取變更追蹤選項。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66010902"
      選取即可讓此目錄成為這個資料庫的預設目錄。  
   
      **區分腔調字**  
-     指定新目錄是要區分腔調字或不區分腔調字。 如果資料庫有區分腔調字，預設就會選取 [區分]。  
+     指定新目錄是要區分腔調字或不區分腔調字。 如果資料庫有區分腔調字，預設就會選取 [區分]  。  
   
      **選取索引檔案群組**  
      指定要在上面建立全文檢索索引的檔案群組。  
@@ -102,7 +102,7 @@ ms.locfileid: "66010902"
      **選取全文檢索停用字詞表**  
      指定要針對全文檢索索引使用的停用字詞表，或停用停用字詞表。  
   
-     在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新的版本中，停用字詞在資料庫中是使用稱為停用字詞表的物件來管理。 「停用字詞表」是停用字詞的清單，與全文檢索索引相關聯時，會套用至該索引上的全文檢索查詢。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
+     在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新的版本中，停用字詞在資料庫中是使用稱為停用字詞表的物件來管理。 「停用字詞表」  是停用字詞的清單，與全文檢索索引相關聯時，會套用至該索引上的全文檢索查詢。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
      選取下列其中一個值：  
   

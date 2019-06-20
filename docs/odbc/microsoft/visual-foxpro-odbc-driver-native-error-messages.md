@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 661752a55b808b010f8a111bcc18e47048a3999b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63065105"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Visual FoxPro ODBC Driver 原生錯誤訊息
@@ -296,7 +296,7 @@ ms.locfileid: "63065105"
 |901|函式引數的值、 類型或計數無效。|  
 |902|運算式評估工具失敗。|  
 |903|字串太長而無法容納。|  
-|904|* * 或 ^ 網域時發生錯誤。|  
+|904|\* * 或 ^ 網域時發生錯誤。|  
 |905|LOG （):零或負值做為引數。|  
 |906|Sqrt （） 的引數不可為負數。|  
 |912|作業的一般欄位無效。|  

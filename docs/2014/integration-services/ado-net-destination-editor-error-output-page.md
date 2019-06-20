@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1a36537f8ca122a6fe9ae9521aa2f0713c94d01
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061772"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>ADO NET 目的地編輯器 (錯誤輸出頁面)
@@ -28,11 +28,11 @@ ms.locfileid: "66061772"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟具有 ADO NET 目的地的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程] 索引標籤中，按兩下 ADO NET 目的地。  
+2.  在 [資料流程]  索引標籤中，按兩下 ADO NET 目的地。  
   
-3.  在 **[ADO NET 目的地編輯器]** 中，按一下 **[錯誤輸出]**。  
+3.  在 **[ADO NET 目的地編輯器]** 中，按一下 **[錯誤輸出]** 。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **輸入或輸出**  
  檢視輸入的名稱。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66061772"
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題：**[資料中的錯誤處理](data-flow/error-handling-in-data.md)  
+ **相關主題：** [資料中的錯誤處理](data-flow/error-handling-in-data.md)  
   
  **截斷**  
  未使用。  

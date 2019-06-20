@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d8883d72ec5fcb15dfb1b827ea7e053a14568a48
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65357345"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>設定 Cube、 資料分割和維度處理時發生錯誤
@@ -54,7 +54,7 @@ ms.locfileid: "65357345"
   
 -   預設會轉換成未知的成員是基於 **ConvertToUnknown** 的 **KeyErrorAction**設定。 資料庫中會將配置為未知成員的記錄隔離，以玆證明曾有問題發生，供您在處理完成之後著手調查。  
   
-     未知的成員會排除在查詢工作負載之外，但若 **[UnknownMember]** 設為 **[可見]**，則某些用戶端應用程式將予以顯示。  
+     未知的成員會排除在查詢工作負載之外，但若 **[UnknownMember]** 設為 **[可見]** ，則某些用戶端應用程式將予以顯示。  
   
      如果您想要追蹤已轉換成未知成員的 Null 數目，請修改 **NullKeyConvertedToUnknown** 屬性，以便由記錄檔或在 [處理] 視窗中報告這些錯誤。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "65357345"
 |**CalculationError**<br /><br /> 初始化錯誤組態時發生。|**IgnoreError** 既不會記錄錯誤，也未將錯誤算入計數，而只要錯誤計數低於上限，處理作業便會繼續。|**ReportAndContinue** 會記錄錯誤並將其算入計數。<br /><br /> **ReportAndStop** 會報告錯誤並立即停止處理，而無視於錯誤限制。|  
 |**KeyNotFound**<br /><br /> 事實資料表中的外部索引鍵在相關維度資料表中沒有相符的主索引鍵時發生 (例如，[銷售額] 事實資料表有一筆記錄，其產品識別碼不存在於 [產品] 維度資料表中)。 在資料分割處理或是雪花維度的維度處理期間，可能會發生此錯誤。|**ReportAndContinue** 會記錄錯誤並將其算入計數。|**ReportAndStop** 會報告錯誤並立即停止處理，而無視於錯誤限制。<br /><br /> **IgnoreError** 既不會記錄錯誤，也未將錯誤算入計數，而只要錯誤計數低於上限，處理作業便會繼續。 觸發此錯誤的記錄預設會轉換成未知的成員，但是您可以變更 **KeyErrorAction** 屬性改為捨棄這些記錄。|  
 |**KeyDuplicate**<br /><br /> 在維度中發現重複的屬性索引鍵時發生。 大多數情況下，具有重複的屬性索引鍵是可接受的，但此錯誤將讓您得知發生重複現象，從而可檢查維度的設計是否有缺陷而可能導致屬性之間的關聯性不一致。|**IgnoreError** 既不會記錄錯誤，也未將錯誤算入計數，而只要錯誤計數低於上限，處理作業便會繼續。|**ReportAndContinue** 會記錄錯誤並將其算入計數。<br /><br /> **ReportAndStop** 會報告錯誤並立即停止處理，而無視於錯誤限制。|  
-|**NullKeyNotAllowed**<br /><br /> 針對維度屬性設定 **NullProcessing** = Error，或者用以唯一識別成員的屬性索引鍵資料行中存在 Null 值時發生。|**ReportAndContinue** 會記錄錯誤並將其算入計數。|**ReportAndStop** 會報告錯誤並立即停止處理，而無視於錯誤限制。<br /><br /> **IgnoreError** 既不會記錄錯誤，也未將錯誤算入計數，而只要錯誤計數低於上限，處理作業便會繼續。 觸發此錯誤的記錄預設會轉換成未知的成員，但是您可以設定 **KeyErrorAction** 屬性改為捨棄這些記錄。|  
+|**NullKeyNotAllowed**<br /><br /> 針對維度屬性設定 **NullProcessing** = Error  ，或者用以唯一識別成員的屬性索引鍵資料行中存在 Null 值時發生。|**ReportAndContinue** 會記錄錯誤並將其算入計數。|**ReportAndStop** 會報告錯誤並立即停止處理，而無視於錯誤限制。<br /><br /> **IgnoreError** 既不會記錄錯誤，也未將錯誤算入計數，而只要錯誤計數低於上限，處理作業便會繼續。 觸發此錯誤的記錄預設會轉換成未知的成員，但是您可以設定 **KeyErrorAction** 屬性改為捨棄這些記錄。|  
 |**NullKeyConvertedToUnknown**<br /><br /> Null 值接續轉換成未知的成員時發生。 針對維度屬性設定 **NullProcessing** = **ConvertToUnknown** 將會觸發此錯誤。|**IgnoreError** 既不會記錄錯誤，也未將錯誤算入計數，而只要錯誤計數低於上限，處理作業便會繼續。|如果您認為此錯誤屬於參考性質，請保留預設值。 否則，您可以選擇使用 **ReportAndContinue** 在 [處理] 視窗中報告錯誤並將其算入錯誤限制的錯誤計數。<br /><br /> **ReportAndStop** 會報告錯誤並立即停止處理，而無視於錯誤限制。|  
   
  **一般屬性**  
@@ -92,7 +92,7 @@ ms.locfileid: "65357345"
 |**KeyErrorAction**|這是伺服器在 **KeyNotFound** 錯誤發生時所採取的動作。 對此錯誤有效的回應方式包括 **ConvertToUnknown** 或 **DiscardRecord**。|  
 |**KeyErrorLogFile**|這是副檔名必須為 .log 的使用者定義檔案名稱，位於服務帳戶具有讀寫權限的資料夾內。 此記錄檔只會包含處理期間產生的錯誤。 如果需要更詳細的資訊，請使用飛行記錄器。|  
 |**[KeyErrorLimit]**|這是伺服器允許的資料完整性錯誤數上限，達到此上限之後，即無法繼續處理。 值為 -1 表示沒有限制。 預設值為 0，表示在發生第一個錯誤之後停止處理。 您也可以將其設為整數。|  
-|**KeyErrorLimitAction**|這是伺服器在索引鍵錯誤數目達到上限時所採取的動作。 若為 **[停止處理]**，處理作業會立即終止。 若為 **[停止記錄]**，處理作業會繼續，但將不再報告錯誤或予以算入計數。|  
+|**KeyErrorLimitAction**|這是伺服器在索引鍵錯誤數目達到上限時所採取的動作。 若為 **[停止處理]** ，處理作業會立即終止。 若為 **[停止記錄]** ，處理作業會繼續，但將不再報告錯誤或予以算入計數。|  
   
 ##  <a name="bkmk_tools"></a> 在何處設定錯誤組態屬性  
  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中於部署資料庫之後，或是在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的模型專案中，使用屬性頁。 這兩個工具所列出的屬性完全相同。 您也可以在 msmdrsrv.ini 檔案中設定錯誤組態屬性，變更伺服器的錯誤組態預設值，或是針對以指令碼作業形式執行的處理作業，在 **Batch** 和 **Process** 命令中進行設定。  
@@ -101,15 +101,15 @@ ms.locfileid: "65357345"
   
 #### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
   
-1.  在物件總管中，以滑鼠右鍵按一下以下任一物件的 [屬性]：維度、Cube 或資料分割。  
+1.  在物件總管中，以滑鼠右鍵按一下以下任一物件的 [屬性]  ：維度、Cube 或資料分割。  
   
-2.  在 [屬性] 中按一下 **[錯誤組態]**。  
+2.  在 [屬性] 中按一下 **[錯誤組態]** 。  
   
 #### <a name="sql-server-data-tools"></a>SQL Server Data Tools  
   
 1.  在 [方案總管] 中，按兩下任何維度或 Cube。 下方窗格中的 [屬性] 內隨即出現 **[ErrorConfiguration]** 。  
   
-2.  或者，如果只有單一維度，則在方案總管中以滑鼠右鍵按一下該維度，然後選擇 [處理]，再從 [處理維度] 對話方塊中選擇 [變更設定]。 [維度索引鍵錯誤] 索引標籤上隨即出現錯誤組態選項。  
+2.  或者，如果只有單一維度，則在方案總管中以滑鼠右鍵按一下該維度，然後選擇 [處理]  ，再從 [處理維度] 對話方塊中選擇 [變更設定]  。 [維度索引鍵錯誤] 索引標籤上隨即出現錯誤組態選項。  
   
 ##  <a name="bkmk_missing"></a> 遺漏索引鍵 (KeyNotFound)  
  遺漏索引鍵值的記錄一概無法加入至資料庫，即使忽略錯誤或錯誤限制不設限亦然。  
@@ -121,17 +121,17 @@ ms.locfileid: "65357345"
 ##  <a name="bkmk_nullfact"></a> 事實資料表中的 Null 外部索引鍵 (KeyNotFound)  
  依預設，事實資料表的外部索引鍵資料行中的 Null 值會轉換成零。 顯然零不是有效的外部索引鍵值，所以系統會記錄 **KeyNotFound** 錯誤並將其計數算入預設為零的錯誤限制。  
   
- 為了讓處理作業能夠繼續，您可以先行處理 Null 免得系統進行轉換而檢查出有錯誤。 若要這樣做，請將 **[NullProcessing]** 設為 **[錯誤]**。  
+ 為了讓處理作業能夠繼續，您可以先行處理 Null 免得系統進行轉換而檢查出有錯誤。 若要這樣做，請將 **[NullProcessing]** 設為 **[錯誤]** 。  
   
 #### <a name="set-nullprocessing-property-on-a-measure"></a>針對量值設定 NullProcessing 屬性  
   
 1.  在 SQL Server Data Tools 的 [方案總管] 中，按兩下 Cube，在 Cube 設計師中加以開啟。  
   
-2.  在 [量值] 窗格中，以滑鼠右鍵按一下量值並選擇 [屬性]。  
+2.  在 [量值] 窗格中，以滑鼠右鍵按一下量值並選擇 [屬性]  。  
   
 3.  在 [屬性] 中，展開 **[來源]** 以檢視 **[NullProcessing]** 屬性。 此屬性依預設會設為 **[自動]** ，意指包含數值資料的欄位內凡是 Null 的 OLAP 項目都將轉換成零。  
   
-4.  將其值變更為 [錯誤] 以排除任何具有 Null 值的記錄，避免 Null 轉換成數值 (零)。 這項修改讓您可避開與索引鍵資料行中有多筆記錄為零相關的索引鍵重複錯誤，以及避開值為零的外部索引鍵在相關維度資料表中沒有對等的主索引鍵時所造成的 **KeyNotFound** 錯誤。  
+4.  將其值變更為 [錯誤]  以排除任何具有 Null 值的記錄，避免 Null 轉換成數值 (零)。 這項修改讓您可避開與索引鍵資料行中有多筆記錄為零相關的索引鍵重複錯誤，以及避開值為零的外部索引鍵在相關維度資料表中沒有對等的主索引鍵時所造成的 **KeyNotFound** 錯誤。  
   
 ##  <a name="bkmk_nulldim"></a> 維度中的 Null 索引鍵  
  若要在雪花維度中發現外部索引鍵的值為 Null 時繼續進行處理，請針對維度屬性的 **NullProcessing** 設定 **KeyColumn** 以先行處理 Null 值。 如此將會捨棄或轉換記錄，避免可能發生 **KeyNotFound** 錯誤。  
@@ -148,9 +148,9 @@ ms.locfileid: "65357345"
   
 1.  在 SQL Server Data Tools 的 [方案總管] 中，按兩下維度，在維度設計師中加以開啟。  
   
-2.  在 [屬性] 窗格中，以滑鼠右鍵按一下屬性 (attribute) 並選擇 [屬性]。  
+2.  在 [屬性] 窗格中，以滑鼠右鍵按一下屬性 (attribute) 並選擇 [屬性]  。  
   
-3.  在 [屬性] 中，展開 **[KeyColumns]** 以檢視 **[NullProcessing]** 屬性。 此屬性依預設會設為 **[自動]** ，意指包含數值資料的欄位內凡是 Null 的項目都將轉換成零。 將其值變更為 **[錯誤]** 或 **[UnknownMember]**。  
+3.  在 [屬性] 中，展開 **[KeyColumns]** 以檢視 **[NullProcessing]** 屬性。 此屬性依預設會設為 **[自動]** ，意指包含數值資料的欄位內凡是 Null 的項目都將轉換成零。 將其值變更為 **[錯誤]** 或 **[UnknownMember]** 。  
   
      這項修改會導致捨棄或轉換記錄，從而移除觸發 **KeyNotFound** 的基礎條件，以免檢查出有錯誤。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "65357345"
 ##  <a name="bkmk_limit"></a> 變更錯誤限制或錯誤限制動作  
  您可以藉著提高錯誤限制，允許處理期間發生更多次錯誤。 提高錯誤限制並無任何方針指引可循，適當的值會因您的實際狀況而不同。 錯誤限制在 **[KeyErrorLimit]** 中是指定成 **[ErrorConfiguration]** properties 中是指定成 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]，而在 **中是指定成維度、Cube 或量值群組屬性 [錯誤組態] 索引標籤上的** 中是指定成 the Error Configuration tab for properties of dimensions, cubes, or measure groups 中是指定成 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
- 您可以指定一旦達到錯誤限制時，要停止處理還是停止記錄。 例如，假設您設定錯誤限制為 100 且對應的動作是 **StopLogging** 。 若發生第 101 個錯誤，處理作業仍會繼續，但將不再記錄錯誤或予以算入計數。 錯誤限制在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 **ErrorConfiguration** 屬性中是指定成 **KeyErrorLimitAction**，而在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中維度、Cube 或量值群組屬性 [錯誤組態] 索引標籤中是指定成 [發生錯誤時的動作]。  
+ 您可以指定一旦達到錯誤限制時，要停止處理還是停止記錄。 例如，假設您設定錯誤限制為 100 且對應的動作是 **StopLogging** 。 若發生第 101 個錯誤，處理作業仍會繼續，但將不再記錄錯誤或予以算入計數。 錯誤限制在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 **ErrorConfiguration** 屬性中是指定成 **KeyErrorLimitAction**，而在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中維度、Cube 或量值群組屬性 [錯誤組態] 索引標籤中是指定成 [發生錯誤時的動作]  。  
   
 ##  <a name="bkmk_log"></a> 設定錯誤記錄檔路徑  
  您可以指定檔案用來儲存處理期間所報告的索引鍵相關錯誤訊息。 依預設，在 [處理] 視窗的互動式處理期間，錯誤將維持可見，而當您關閉該視窗或工作階段後，錯誤即會遭捨棄。 記錄檔只包含與索引鍵相關的錯誤資訊，和您在處理對話方塊中所見報告的錯誤相同。  

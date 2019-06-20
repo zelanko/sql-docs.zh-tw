@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d71a6ddc965b422f0f96f40788352213501b4db2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63042302"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>下載並套用 Analytics Platform System 的 Microsoft 更新
@@ -65,7 +65,7 @@ ms.locfileid: "63042302"
   
 1.  在左窗格中，WSUS 主控台中，按一下**所有更新**。  
   
-2.  在**所有更新**窗格中，按一下**核准**下拉式選單中，將**核准**至**Any 除了拒絕**。 按一下 **狀態**下拉式選單中，將**狀態**來**任何**。 按一下 **[重新整理]**。  
+2.  在**所有更新**窗格中，按一下**核准**下拉式選單中，將**核准**至**Any 除了拒絕**。 按一下 **狀態**下拉式選單中，將**狀態**來**任何**。 按一下 **[重新整理]** 。  
   
     以滑鼠右鍵按一下**標題**資料行，然後選取**檔案狀態**下載完成之後，請確認檔案狀態。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "63042302"
   
 1.  在開始之前，開啟[使用管理主控台來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)，按一下 **設備狀態**索引標籤，並確認**叢集**並**網路**欄顯示綠色 （或 NA） 的所有節點。 如果任何警示都存在於這些資料行，設備可能無法正確安裝更新。 位址中的所有現有警示**叢集**並**網路**再繼續進行的資料行。  
   
-2.  登入 _< 網域名稱 >_**-HST01**節點為網狀架構網域系統管理員。  
+2.  登入 _< 網域名稱 >_ **-HST01**節點為網狀架構網域系統管理員。  
   
 3.  若要套用所有適用於 WSUS 中核准的更新，執行更新程式。 請參閱[執行更新程式](#RunUpdateWizard)下方的指示。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "63042302"
   
 8.  在 **所有更新**視窗中，將**狀態**來**失敗或需要**。  
   
-9. 按一下 **[重新整理]**。  
+9. 按一下 **[重新整理]** 。  
   
 10. 如果**所需的更新**大於零，請連絡支援服務，以取得協助。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "63042302"
   
 1.  請確定您已登入 HST01 節點為網狀架構網域系統管理員。  
   
-2.  開啟命令提示字元視窗並輸入下列命令。 取代*<parameter>* 與指定的資訊。  
+2.  開啟命令提示字元視窗並輸入下列命令。 取代 *<parameter>* 與指定的資訊。  
   
 **若要執行 Microsoft Update:**  
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06c466eb5e3275818a710a9f9d90c705ed93c957
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081859"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>偵測類別目錄 (適用於 Excel 的資料表分析工具)
@@ -39,7 +39,7 @@ ms.locfileid: "66081859"
   
 4.  選擇性地指定要建立的最大類別目錄數目。 根據預設，此工具找到多少類別目錄，就會自動建立一樣多的類別目錄。  
   
-5.  按一下 **[執行]**。  
+5.  按一下 **[執行]** 。  
   
 6.  工具會建立名為「類別目錄報表」的新工作表，其中包含類別目錄清單及其特性。  
   

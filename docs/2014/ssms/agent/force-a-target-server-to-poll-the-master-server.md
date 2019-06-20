@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63044053"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>強制目標伺服器輪詢主要伺服器
@@ -32,7 +32,7 @@ ms.locfileid: "63044053"
   
 -   **開始之前：**[限制事項](#Restrictions)、[安全性](#Security)  
   
--   **若要強制目標伺服器輪詢主要伺服器中，請使用：**[SQL Server Management Studio](#SSMS)  
+-   **若要強制目標伺服器輪詢主要伺服器，請使用：**[SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   

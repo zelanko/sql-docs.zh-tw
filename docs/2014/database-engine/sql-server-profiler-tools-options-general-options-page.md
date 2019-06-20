@@ -15,14 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9da36f49927acd2a313bcb9f8647655731006d2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089608"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler-工具選項 （一般選項頁面）
-  使用 [一般選項] 對話方塊來檢視或指定下列選項。  
+  使用 [一般選項]  對話方塊來檢視或指定下列選項。  
   
 ## <a name="options"></a>選項  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66089608"
 >  切換此核取方塊可變更時間資料行的顯示格式，例如 **StartTime** 和 **EndTime**。 但是，此操作不會變更語言事件或遠端程序呼叫 (RPC) 中的 **DateTime** 值參數。  
   
  **顯示 [持續時間] 資料行中的值 (以百萬分之一秒為單位)。**  
- 以百萬分之一秒顯示追蹤的 [持續時間] 資料行中的值。 依預設，[持續時間] 資料行會以毫秒為單位顯示值。  
+ 以百萬分之一秒顯示追蹤的 [持續時間]  資料行中的值。 依預設，[持續時間]  資料行會以毫秒為單位顯示值。  
   
 ### <a name="tracing-options"></a>追蹤選項  
  **進行連接後立即啟動追蹤**  

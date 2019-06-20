@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 58002ec0e8ceacae49f4d54be5d3406ea3014d59
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65536775"
 ---
 # <a name="sqlwritefiledsn-function"></a>SQLWriteFileDSN 函式
@@ -47,7 +47,7 @@ BOOL SQLWriteFileDSN(
   
 ## <a name="arguments"></a>引數  
  *lpszFileName*  
- [輸入]檔案 DSN 名稱的指標。 尚無 DSN 延伸模組的所有檔案名稱會加都上 DSN 延伸模組。  
+ [輸入][檔案 DSN 名稱的指標。 尚無 DSN 延伸模組的所有檔案名稱會加都上 DSN 延伸模組。  
   
  *lpszAppName*  
  [輸入]應用程式名稱的指標。 這是"ODBC"ODBC 」 一節。  

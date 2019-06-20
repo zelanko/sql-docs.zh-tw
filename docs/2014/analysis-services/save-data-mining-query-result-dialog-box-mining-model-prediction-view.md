@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97b391e24f98b230dbfe352e0cf1a574c7549984
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070014"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>儲存資料採礦查詢結果對話方塊 (採礦模型預測檢視)
@@ -31,7 +31,7 @@ ms.locfileid: "66070014"
  從目前的專案中選取資料來源。 如果正確的資料來源不存在，請按一下 **[新增]** 建立新的資料來源。  
   
  **新增**  
- 開啟 [資料來源精靈]。  
+ 開啟 [資料來源精靈]  。  
   
  **資料表名稱**  
  輸入新資料表的名稱。  
@@ -47,7 +47,7 @@ ms.locfileid: "66070014"
   
 -   您已在目的地資料表上執行 ALTER 陳述式。  
   
- 如果多個資料行具有相同的名稱 (例如，許多衍生的資料行可能具有預設資料行名稱 [運算式])，您就必須針對名稱重複的每個資料行建立別名。 如果資料行沒有唯一的名稱，當設計師嘗試將結果儲存至 SQL Server 時，將會引發錯誤，因為資料表中的資料行必須具有唯一的名稱。  
+ 如果多個資料行具有相同的名稱 (例如，許多衍生的資料行可能具有預設資料行名稱 [運算式]  )，您就必須針對名稱重複的每個資料行建立別名。 如果資料行沒有唯一的名稱，當設計師嘗試將結果儲存至 SQL Server 時，將會引發錯誤，因為資料表中的資料行必須具有唯一的名稱。  
   
  **加入至 DSV**  
  (選擇性) 如果您要將資料表加入至現有的資料來源，請選取專案中包含的資料來源檢視。  

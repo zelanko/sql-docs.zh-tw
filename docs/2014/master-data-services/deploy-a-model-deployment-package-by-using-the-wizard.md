@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cbdf233af3c0c27d6b4e95d18dc2c438d5307e7d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479480"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>使用精靈部署模型部署封裝
@@ -29,7 +29,7 @@ ms.locfileid: "65479480"
 ## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   在目標 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 環境中，您必須擁有存取 [系統管理] 功能區域的權限。  
+-   在目標 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 環境中，您必須擁有存取 [系統管理]  功能區域的權限。  
   
 -   模型部署封裝必須存在。 如需詳細資訊，請參閱 [使用精靈建立模型部署封裝](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)。  
   
@@ -37,23 +37,23 @@ ms.locfileid: "65479480"
   
 ### <a name="to-deploy-a-model-deployment-package-of-model-objects-only"></a>若僅要部署模型物件的模型部署封裝  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 [模型檢視] 頁面上，從功能表列指向 [系統]，然後按一下 [部署]。  
+2.  在 [模型檢視]  頁面上，從功能表列指向 [系統]  ，然後按一下 [部署]  。  
   
-3.  按一下 [模型部署精靈] 上的 [部署]。  
+3.  按一下 [模型部署精靈]  上的 [部署]  。  
   
-4.  按一下 **[瀏覽]**。  
+4.  按一下 **[瀏覽]** 。  
   
-5.  尋找您的部署套件 (.pkg 檔案)，然後按一下 [開啟]。  
+5.  尋找您的部署套件 (.pkg 檔案)，然後按一下 [開啟]  。  
   
-6.  按一下 [下一步] 。  
+6.  按一下 [下一步]  。  
   
-7.  載入套件之後，按一下 [下一步]。  
+7.  載入套件之後，按一下 [下一步]  。  
   
-8.  如果模型已存在，您可以選取 [更新現有模型] 來更新模型。 若要建立新的模型，請選取 [建立新模型]，然後在按 [下一步] 之後，輸入新模型的名稱。  
+8.  如果模型已存在，您可以選取 [更新現有模型]  來更新模型。 若要建立新的模型，請選取 [建立新模型]  ，然後在按 [下一步]  之後，輸入新模型的名稱。  
   
-9. 按一下 [完成] 結束精靈。  
+9. 按一下 [完成]  結束精靈。  
   
  **注意：**  
   

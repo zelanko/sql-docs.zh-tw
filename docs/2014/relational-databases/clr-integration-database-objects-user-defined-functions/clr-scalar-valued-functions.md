@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62919595"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 純量值函式
@@ -80,7 +80,7 @@ Public Class T
 End Class  
 ```  
   
- 第一行程式碼會參考 `Microsoft.SqlServer.Server` 來存取屬性，並參考 `System.Data.SqlClient` 來存取 ADO.NET 命名空間  (此命名空間包含 `SqlClient`，也就是 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。  
+ 第一行程式碼會參考 `Microsoft.SqlServer.Server` 來存取屬性，並參考 `System.Data.SqlClient` 來存取 ADO.NET 命名空間 (此命名空間包含 `SqlClient`，也就是 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。  
   
  接下來，此函數會接收 `SqlFunction` 自訂屬性，該屬性可在 `Microsoft.SqlServer.Server` 命名空間中找到。 此自訂屬性會指出使用者定義函數 (UDF) 是否會使用同處理序提供者來讀取伺服器上的資料。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許 UDF 更新、插入或刪除資料。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以讓不使用同處理序提供者之 UDF 的執行最佳化。 將 `DataAccessKind` 設定為 `DataAccessKind.None` 可表示這一點。 在下一行中，目標方法為 public static (Visual Basic .NET 中則為 shared)。  
   
