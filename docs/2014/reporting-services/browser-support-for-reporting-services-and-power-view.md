@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63266816"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>規劃 Reporting Services 和 Power View 瀏覽器支援 (Reporting Services 2014)
@@ -35,7 +35,7 @@ ms.locfileid: "63266816"
   
 ##  <a name="bkmk_powerview"></a> Power View 瀏覽器案例
 
- 支援的瀏覽器和 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 支援的瀏覽器版本清單取決於開啟的文件類型。 Excel 2013 活頁簿和"**.rdlx**"檔案使用不同的元件。  
+ 支援的瀏覽器和 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 支援的瀏覽器版本清單取決於開啟的文件類型。 Excel 2013 活頁簿和" **.rdlx**"檔案使用不同的元件。  
   
 |文件類型|環境|瀏覽器支援|  
 |-------------------|-----------------|---------------------|  
@@ -47,9 +47,9 @@ ms.locfileid: "63266816"
   
 - 此表格適用於 SharePoint 2010 和 SharePoint 2013。  
   
-- 如需有關 SharePoint 2013 瀏覽器支援的詳細資訊，請參閱 <<c0> [ 規劃 SharePoint 2013 中的瀏覽器支援](https://technet.microsoft.com//library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx)。  
+- 如需有關 SharePoint 2013 瀏覽器支援的詳細資訊，請參閱 <<c0> [ 規劃 SharePoint 2013 中的瀏覽器支援](https://technet.microsoft.com//library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx) 。  
   
-- 如需有關 SharePoint 2010 瀏覽器支援的詳細資訊，請參閱 <<c0> [ 規劃瀏覽器支援 (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx)。  
+- 如需有關 SharePoint 2010 瀏覽器支援的詳細資訊，請參閱 <<c0> [ 規劃瀏覽器支援 (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx) 。  
   
 |**瀏覽器**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
@@ -71,7 +71,7 @@ ms.locfileid: "63266816"
 
  下表摘要說明當使用者在執行 Excel Services 的 SharePoint Server 上開啟具有 Power View 工作表的 Excel 2013 活頁簿時， [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 支援的瀏覽器版本：  
   
--   如需有關 SharePoint 2013 瀏覽器支援的詳細資訊，請參閱 <<c0> [ 規劃 SharePoint 2013 中的瀏覽器支援](https://technet.microsoft.com/library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx)。  
+-   如需有關 SharePoint 2013 瀏覽器支援的詳細資訊，請參閱 <<c0> [ 規劃 SharePoint 2013 中的瀏覽器支援](https://technet.microsoft.com/library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx) 。  
   
 |**瀏覽器**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
@@ -146,7 +146,7 @@ ms.locfileid: "63266816"
   
  如果指令碼功能未啟用，當您開啟報表時，會看到類似下列的錯誤訊息：  
   
-- **您的瀏覽器不支援指令碼，或已設定為不允許執行的指令碼。按一下此處，檢視不含指令碼的報表**。  
+- **您的瀏覽器不支援指令碼，或已設定為不允許執行指令碼。按一下此處，檢視不含指令碼的報表**。  
   
  如果您選擇檢視不含指令碼支援的報表，報表會以 HTML 轉譯，且不含報表檢視器功能 (例如，報表工具列和文件引導模式)。  
   
@@ -191,9 +191,9 @@ ms.locfileid: "63266816"
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">  
 ```
   
- 如需有關在 Internet Explorer 中的相容性模式的詳細資訊，請參閱[定義的文件相容性](https://go.microsoft.com/fwlink/?LinkId=180380)(https://go.microsoft.com/fwlink/?LinkId=180380)。  
+ 如需有關在 Internet Explorer 中的相容性模式的詳細資訊，請參閱[定義的文件相容性](https://go.microsoft.com/fwlink/?LinkId=180380)(https://go.microsoft.com/fwlink/?LinkId=180380) 。  
   
- 如需有關使用 ReportViewer 控制項的詳細資訊，請參閱 <<c0> [ 部署報表和 ReportViewer 控制項](https://msdn.microsoft.com/library/ms251723.aspx)(https://msdn.microsoft.com/library/ms251723.aspx)。  
+ 如需有關使用 ReportViewer 控制項的詳細資訊，請參閱 <<c0> [ 部署報表和 ReportViewer 控制項](https://msdn.microsoft.com/library/ms251723.aspx)(https://msdn.microsoft.com/library/ms251723.aspx) 。  
   
 ## <a name="next-steps"></a>後續步驟
 

@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 441366208d2bfd886794dd7e50dca7e0aef7b3ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63299284"
 ---
 # <a name="project-settings-migration-accesstosql"></a>專案設定 （移轉） (AccessToSQL)
@@ -29,7 +29,7 @@ ms.locfileid: "63299284"
   
 -   使用**預設專案設定**對話方塊來設定的所有專案的組態選項。 若要存取的移轉設定中，在**工具**功能表上，選取**預設專案設定**，選取 專案類型中的**移轉目標版本**下拉式方塊，其中您要存取的設定，請按一下**一般**左的窗格中，然後再按一下底部**移轉**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **檢查條件約束**  
 指定 SSMA 是否應該將資料加入資料表檢查條件約束。  
   

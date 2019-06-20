@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d904f82c793acf6135f600e1ed5392bda96e1bb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62856128"
 ---
 # <a name="create-a-job-category"></a>建立作業類別目錄
@@ -31,7 +31,7 @@ ms.locfileid: "62856128"
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Restrictions"></a> 限制事項  
- 多伺服器類別只存在於主要伺服器上。 主要伺服器上只有一個預設作業類別目錄：**未分類 (多伺服器)**。 下載多伺服器作業之後，其類別目錄會變更為目標伺服器上的 **[來自 MSX 的作業]** 。  
+ 多伺服器類別只存在於主要伺服器上。 主要伺服器上只有一個預設作業類別目錄：**未分類 (多伺服器)** 。 下載多伺服器作業之後，其類別目錄會變更為目標伺服器上的 **[來自 MSX 的作業]** 。  
   
 ###  <a name="Security"></a> 安全性  
  如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
@@ -44,19 +44,19 @@ ms.locfileid: "62856128"
   
 1.  在 **[物件總管]** 中，按一下加號展開要建立作業類別目錄所在的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
-3.  以滑鼠右鍵按一下 [作業] 資料夾，然後選取 [管理作業類別目錄]。  
+3.  以滑鼠右鍵按一下 [作業]  資料夾，然後選取 [管理作業類別目錄]  。  
   
-4.  在 [管理作業類別目錄 <伺服器名稱>] 對話方塊中，按一下 [新增]。  
+4.  在 [管理作業類別目錄 <伺服器名稱>  ]  對話方塊中，按一下 [新增]  。  
   
 5.  在新對話方塊的 **[名稱]** 方塊中，輸入新作業類別目錄的名稱。  
   
 6.  選取 **[顯示所有作業]** 核取方塊。 選取對應於作業的方塊，為新的類別目錄選取一個或多個作業。  
   
-7.  按一下 [確定] 。  
+7.  按一下 [確定]  。  
   
-8.  在 [管理作業類別目錄 <伺服器名稱>] 對話方塊中，按一下 [重新整理]，以確定新作業類別目錄為作用中。 如果一切如預期，關閉此對話方塊。  
+8.  在 [管理作業類別目錄 <伺服器名稱>  ]  對話方塊中，按一下 [重新整理]  ，以確定新作業類別目錄為作用中。 如果一切如預期，關閉此對話方塊。  
   
  如需有關這些對話方塊的詳細資訊，請參閱[作業類別目錄：管理作業類別目錄](job-categories-manage-job-categories.md)並[作業類別目錄屬性和新增作業類別目錄](job-categories-properties-new-job-category.md)。  
   
@@ -68,9 +68,9 @@ ms.locfileid: "62856128"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- creates a local job category named AdminJobs   

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: dd578c40c71b8be4a0567cc2cc1a516f795e288d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63288063"
 ---
 # <a name="assessment-report-oracletosql"></a>評定報告 (OracleToSQL)
@@ -22,7 +22,7 @@ ms.locfileid: "63288063"
   
 若要存取評估報表中，選取來源的中繼資料檔案總管 中要轉換的物件上按一下滑鼠右鍵**結構描述**或**同義字**，然後選取**建立報表**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |||  
 |-|-|  

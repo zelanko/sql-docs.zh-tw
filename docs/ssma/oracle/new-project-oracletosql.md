@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: acfc9cc5593001e3a9a918abe788494b1b7fd405
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63209835"
 ---
 # <a name="new-project-oracletosql"></a>新增專案 (OracleToSQL)
@@ -24,7 +24,7 @@ ms.locfileid: "63209835"
 **名稱**  
 輸入專案的名稱。 SSMA 會將附加檔案的副檔名。  
   
-**位置**  
+**Location**  
 輸入或瀏覽至資料夾或網路位置，以儲存專案。  
   
 **移轉至**  

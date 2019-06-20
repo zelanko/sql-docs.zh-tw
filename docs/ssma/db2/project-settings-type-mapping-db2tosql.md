@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 91498db5535c99c7c8afaba85efc35639510a079
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270009"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>專案設定 （類型對應） (DB2ToSQL)
@@ -28,7 +28,7 @@ ms.locfileid: "63270009"
   
 若要指定目前的物件或物件類別的設定，請使用**型別對應**主要的 SSMA 視窗索引標籤中。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 下表顯示**型別對應** 索引標籤選項：  
   
 **來源類型**  
