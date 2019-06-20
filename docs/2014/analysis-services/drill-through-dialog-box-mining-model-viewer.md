@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c065e36dd20646312d04379ea61b96d37a47a262
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081488"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>鑽研對話方塊 (採礦模型檢視器)
@@ -27,7 +27,7 @@ ms.locfileid: "66081488"
   
  如需如何從每個支援鑽研的採礦模型檢視器存取案例資料的詳細資訊**請參閱 <<c2>**   [鑽研到案例資料採礦模型的](data-mining/drill-through-to-case-data-from-a-mining-model.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **案例分類為**  
  顯示所選節點中所包含之規則、項目集和叢集的定義。  
   
@@ -36,10 +36,10 @@ ms.locfileid: "66081488"
   
  **注意** —只有在採礦結構上啟用鑽研，而且選取 **[模型和結構資料行]** 選項時，才會顯示結構資料行。 此外，您必須同時擁有採礦模型和採礦結構的鑽研權限，才能檢視資料行。  
   
- 不包含在模型中的結構資料行顯示為**結構。\<資料行名稱 >**。  
+ 不包含在模型中的結構資料行顯示為**結構。\<資料行名稱 >** 。  
   
 > [!NOTE]  
->  您可以以滑鼠右鍵按一下詳細資料方格中的任意位置，然後選取 [全部複製]，以 Tab 分隔的格式，將鑽研資料複製到剪貼簿。 複製的資料僅包含案例資料，而不包含節點定義。  
+>  您可以以滑鼠右鍵按一下詳細資料方格中的任意位置，然後選取 [全部複製]  ，以 Tab 分隔的格式，將鑽研資料複製到剪貼簿。 複製的資料僅包含案例資料，而不包含節點定義。  
   
  **Play**  
  按一下綠色箭頭按鈕可重新整理資料。  

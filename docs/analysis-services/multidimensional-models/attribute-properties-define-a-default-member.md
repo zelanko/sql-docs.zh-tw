@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 10b5776a4d4be5f31522740c28a6142a7e213576
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62746630"
 ---
 # <a name="attribute-properties---define-a-default-member"></a>屬性內容 - 定義預設成員
@@ -28,7 +28,7 @@ ms.locfileid: "62746630"
  如果屬性階層沒有指定預設成員，而且該屬性階層為可彙總的 (屬性 (attribute) 上的 **IsAggregatable** 屬性 (property) 設定為 **True**)，則 (全部) 成員都是預設成員。 如果未指定任何預設成員，且屬性階層為不可彙總的 (屬性 (attribute) 上的 **IsAggregatable** 屬性 (property) 設定為 **False**)，則會從屬性階層的最上層中選取預設成員。  
   
 ## <a name="specifying-the-default-member"></a>指定預設成員  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中維度的每一個屬性 (attribute) 都有預設成員，您可以針對屬性 (attribute) 使用 **DefaultMember** 屬性 (property) 來指定此成員。 如果查詢中不包含屬性，則此設定可用來評估運算式。 如果查詢在維度中指定階層，則會忽略階層中之屬性的預設成員。 如果查詢未在維度中指定階層，則維度屬性的 **DefaultMember** 設定會生效。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中維度的每一個屬性 (attribute) 都有預設成員，您可以針對屬性 (attribute) 使用 **DefaultMember** 屬性 (property) 來指定此成員。 如果查詢中不包含屬性，則此設定可用來評估運算式。 如果查詢在維度中指定階層，則會忽略階層中之屬性的預設成員。 如果查詢未在維度中指定階層，則維度屬性的 **DefaultMember** 設定會生效。  
   
  如果屬性的 **DefaultMember** 設定空白，且其 **IsAggregatable** 屬性是設為 **True**，則預設成員是全部成員。 如果 **IsAggregatable** 屬性設為 **False**，預設成員是第一個可見層級的第一個成員。  
   

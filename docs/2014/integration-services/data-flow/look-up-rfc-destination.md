@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4badd9c961f5a0d7ca2d3e32185a7ab742628d97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62901778"
 ---
 # <a name="look-up-rfc-destination"></a>查閱 RFC 目的地
@@ -37,7 +37,7 @@ ms.locfileid: "62901778"
   
      在 [SAP BW 來源編輯器] 中，只有當 [執行模式] 的值是 [P - 觸發處理鏈結] 或 [W - 等候通知] 時，才會出現 [RFC 目的地] 群組方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **目的地**  
  檢視 SAP Netweaver BW 系統中定義的 RFC 目的地名稱。  
   

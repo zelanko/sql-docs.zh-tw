@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 087f32510b65d7ea505bc4bf816a5ca9edcfe82d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055455"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>SQL 目的地編輯器 (進階頁面)
@@ -26,7 +26,7 @@ ms.locfileid: "66055455"
   
  若要深入了解 SQL Server 目的地，請參閱＜ [SQL Server Destination](data-flow/sql-server-destination.md)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **保留識別**  
  指定工作是否應該將值插入識別欄位中。 此屬性的預設值為 `False`。  
   

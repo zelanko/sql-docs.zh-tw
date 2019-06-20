@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac1aa0c45e8201d50ead862dd1631bbb3324c8e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891586"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>步驟 3：測試第 3 課的教學課程封裝
@@ -35,9 +35,9 @@ ms.locfileid: "62891586"
   
 1.  在 [SSIS] 功能表上，按一下 [記錄事件]。  
   
-2.  在 **[偵錯]** 功能表上，按一下 **[開始偵錯]**。  
+2.  在 **[偵錯]** 功能表上，按一下 **[開始偵錯]** 。  
   
-3.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]**。  
+3.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]** 。  
   
 ### <a name="to-examine-the-generated-log-file"></a>若要檢查產生的記錄檔  
   

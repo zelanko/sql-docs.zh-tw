@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b99fd70e0119aa01d384066aaa2f3b91eed152b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026897"
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access 資料類型
@@ -41,7 +41,7 @@ ms.locfileid: "63026897"
 |長文字|長文字|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
 |附註|長文字|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
 |數字 (欄位大小 = 單一)|單一|SQL_REAL|  
-|數字 (欄位大小 = 雙精度浮點數)|DOUBLE|SQL_DOUBLE|  
+|數字 (欄位大小 = 雙精度浮點數)|Double|SQL_DOUBLE|  
 |數字 (欄位大小 = BYTE)|不帶正負號的位元組|SQL_TINYINT|  
 |NUMBER (FieldSize= INTEGER)|簡短|SQL_SMALLINT|  
 |數字 (欄位大小 = 長整數)|LONG|SQL_INTEGER|  

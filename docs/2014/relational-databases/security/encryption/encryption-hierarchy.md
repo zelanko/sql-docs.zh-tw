@@ -17,10 +17,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 5be9eb21e12402f7463c7e79714ef93e7eccb455
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011468"
 ---
 # <a name="encryption-hierarchy"></a>加密階層
@@ -79,7 +79,7 @@ ms.locfileid: "63011468"
   
 -   有效期間。 憑證在這段期間內都會視為有效。  
   
-     超過這段期間憑證則無效；每個憑證都包含 [有效期限自]與 [有效期限至]日期。 這些日期會指定有效期間。 當憑證的有效期過期時，憑證的主體應該要求取得新憑證。  
+     超過這段期間憑證則無效；每個憑證都包含 [有效期限自]  與 [有效期限至]  日期。 這些日期會指定有效期間。 當憑證的有效期過期時，憑證的主體應該要求取得新憑證。  
   
 -   簽發者識別資訊。  
   

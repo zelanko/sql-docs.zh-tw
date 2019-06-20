@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 48f0ada8740735e64fe57c35bc17553f59aa444c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63184287"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>根據事件結束時間篩選事件 (SQL Server Profiler)
@@ -27,20 +27,20 @@ ms.locfileid: "63184287"
   
 ### <a name="to-filter-events-based-on-the-event-end-time"></a>若要根據事件結束時間篩選事件  
   
-1.  在 [檔案] 功能表上，按一下 [新增追蹤]，接著連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
+1.  在 [檔案]  功能表上，按一下 [新增追蹤]  ，接著連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
      會出現 [追蹤屬性] **[追蹤屬性]** 對話方塊。  
   
     > [!NOTE]  
-    >  如果選取 [進行連接後立即啟動追蹤]，將不會顯示 [追蹤屬性] 對話方塊，而是開始追蹤。 於 [工具] 功能表，按一下 [選項]，並清除 [連接後立即啟動追蹤] 核取方塊，以關閉這項設定。  
+    >  如果選取 [進行連接後立即啟動追蹤]  ，將不會顯示 [追蹤屬性]  對話方塊，而是開始追蹤。 於 [工具]  功能表，按一下 [選項]  ，並清除 [連接後立即啟動追蹤]  核取方塊，以關閉這項設定。  
   
-2.  在 [追蹤屬性] 對話方塊中，請確定已選取 [一般] 索引標籤，並在 [追蹤名稱] 文字方塊中輸入名稱。  
+2.  在 [追蹤屬性]  對話方塊中，請確定已選取 [一般]  索引標籤，並在 [追蹤名稱]  文字方塊中輸入名稱。  
   
-3.  在 [使用範本] 清單中，選取追蹤範本。  
+3.  在 [使用範本]  清單中，選取追蹤範本。  
   
 4.  選擇性，指定要儲存追蹤結果的目的地檔案或資料表。  
   
-5.  在 [事件選取範圍] 索引標籤上，按一下 [結束時間] 資料行，以啟動 [編輯篩選] 對話方塊。 您也可以用滑鼠右鍵按一下資料行標題，然後選取 [編輯資料行篩選]。  
+5.  在 [事件選取範圍]  索引標籤上，按一下 [結束時間]  資料行，以啟動 [編輯篩選]  對話方塊。 您也可以用滑鼠右鍵按一下資料行標題，然後選取 [編輯資料行篩選]  。  
   
 6.  依序展開**Greater than**或**小於**，然後輸入`datetime`比較運算子下出現的欄位中的值。  
   

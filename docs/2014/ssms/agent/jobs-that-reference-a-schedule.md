@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efba2e73c3043ddbf25fef06b57ef039f6eacea5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63183465"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>參考排程的作業
   此對話方塊允許您檢視有關參考特定排程之作業的資訊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[排程]**  
  顯示您正在檢視之排程的名稱。  
   

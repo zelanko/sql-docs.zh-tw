@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 663c26ac169c11e5ab2d9b90285419cf4145368c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025773"
 ---
 # <a name="database-dimension-properties---types"></a>資料庫維度屬性 - 類型
@@ -38,7 +38,7 @@ ms.locfileid: "63025773"
 |狀況|此維度的屬性代表計畫或策略分析資訊。|  
 |數量|此維度的屬性代表數量的資訊。|  
 |公用程式|此維度的屬性代表其他資訊。|  
-|CURRENCY|此維度類型包含貨幣資料和中繼資料。|  
+|Currency|此維度類型包含貨幣資料和中繼資料。|  
 |匯率|此維度的屬性代表貨幣匯率的資訊。|  
 |通路|此維度的屬性代表通道資訊。|  
 |促銷|此維度的屬性代表行銷促銷資訊。|  

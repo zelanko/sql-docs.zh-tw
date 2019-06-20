@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a2834652d7a14199ccc4914091a2c8c8b7a99801
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017788"
 ---
 # <a name="sphelpspatialgeometryindexxml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
@@ -58,7 +58,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  包含 NULL 值的屬性不會包含在 XML 傳回集合中。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`sp_help_spatial_geometry_index_xml`來調查空間索引**SIndx_SpatialTable_geometry_col2**資料表上定義**geometry_col&lt**給定的查詢範例 **@qs**. 此範例以 XML 片段傳回指定索引的核心屬性，該片段會顯示所選取屬性的名稱和值。  
+ 下列範例會使用`sp_help_spatial_geometry_index_xml`來調查空間索引**SIndx_SpatialTable_geometry_col2**資料表上定義**geometry_col&lt**給定的查詢範例 **@qs** . 此範例以 XML 片段傳回指定索引的核心屬性，該片段會顯示所選取屬性的名稱和值。  
   
  [XQuery](../../xquery/xquery-basics.md)接著會在結果集，傳回特定的屬性上執行。  
   

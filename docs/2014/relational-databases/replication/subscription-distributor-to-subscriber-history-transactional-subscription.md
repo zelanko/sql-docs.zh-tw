@@ -13,16 +13,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8d858e8b7ab62ac22902a15159163f8d6d01889
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62630552"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>訂閱，散發者到訂閱者記錄 (交易式訂閱)
   **[散發者到訂閱者記錄]** 索引標籤會顯示散發代理程式的詳細資訊，包括狀態、記錄、參考訊息和錯誤訊息。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  從 **[檢視]** 功能表中選取要檢視的散發代理程式工作階段，再於 **[散發代理程式的工作階段]** 的方格中選取特定的工作階段。 有關這個工作階段的詳細資訊，會顯示在標示為 **[所選取工作階段中的動作]** 之方格中。 如果選取的工作階段結束時發生錯誤， **[所選取之工作階段的錯誤詳細資料或訊息]** 的文字區域也會顯示。  
   
  **[檢視]**  

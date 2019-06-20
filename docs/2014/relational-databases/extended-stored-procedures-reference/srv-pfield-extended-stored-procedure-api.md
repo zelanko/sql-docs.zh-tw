@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ed4abfe8914c7f6b1dc3e22de7a321419b8d9cee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127116"
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (擴充預存程序 API)

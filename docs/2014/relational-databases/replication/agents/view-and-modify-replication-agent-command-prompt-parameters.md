@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6e4327de10dd03b3ff8cf034ade64391d18d2a86
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63192895"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters-sql-server-management-studio"></a>檢視並修改複寫代理程式命令提示字元參數 (SQL Server Management Studio)
@@ -71,7 +71,7 @@ ms.locfileid: "63192895"
   
 3.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]**。  
   
-4.  在 **訂用帳戶\<SubscriptionName >**  視窗中，按一下**動作**，然後按一下  **\<代理程式名稱 > 作業屬性**。  
+4.  在 [**訂用帳戶\<SubscriptionName >** ] 視窗中，按一下**動作**，然後按一下 [ **\<代理程式名稱 > 作業屬性**。  
   
 5.  在 [作業屬性 - \<作業>] 對話方塊的 [步驟] 頁面上，選取步驟 [執行代理程式]，然後按一下 [編輯]。  
   

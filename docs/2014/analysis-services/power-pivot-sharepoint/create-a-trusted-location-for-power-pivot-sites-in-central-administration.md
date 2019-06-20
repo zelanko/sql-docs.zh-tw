@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b54c06d86490c92936d147f2876d663f43d99fac
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071593"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Create a trusted location for PowerPivot sites in Central Administration
@@ -36,30 +36,30 @@ ms.locfileid: "66071593"
   
 ##  <a name="create"></a> 建立 PowerPivot 資料存取的受信任的位置  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]** 。  
   
 2.  按一下 [Excel Services 服務應用程式]。  
   
-3.  按一下 [信任的檔案位置]。  
+3.  按一下 [信任的檔案位置]  。  
   
-4.  按一下 [新增信任的檔案位置]。  
+4.  按一下 [新增信任的檔案位置]  。  
   
 5.  輸入包含 PowerPivot 圖庫文件庫之網站的 URL。  
   
-6.  在 [位置類型] 中，選取 [Microsoft SharePoint Foundation]。  
+6.  在 [位置類型] 中，選取 [Microsoft SharePoint Foundation]  。  
   
     > [!IMPORTANT]  
     >  PowerPivot 資料存取不支援 UNC 和 HTTP 位置類型。  
   
 7.  接受 [工作階段管理]、[活頁簿內容] 及 [計算方式] 中屬性的所有預設值。  
   
-8.  在 [活頁簿內容] 中，將 [最大活頁簿大小] 設定為 **50**。 這樣會將活頁簿檔案大小的上限對齊父 Web 應用程式的檔案上傳上限。 如果您的活頁簿大於 50 MB，您必須進一步增加檔案大小的限制。 如需詳細資訊，請參閱 <<c0> [ 設定最大檔案上傳大小 &#40;PowerPivot for SharePoint&#41;](configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。</c0>  
+8.  在 [活頁簿內容] 中，將 [最大活頁簿大小]  設定為 **50**。 這樣會將活頁簿檔案大小的上限對齊父 Web 應用程式的檔案上傳上限。 如果您的活頁簿大於 50 MB，您必須進一步增加檔案大小的限制。 如需詳細資訊，請參閱 <<c0> [ 設定最大檔案上傳大小 &#40;PowerPivot for SharePoint&#41;](configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。</c0>  
   
-9. 在 [外部資料] 中，請確認 [允許外部資料] 設定為 [信任的資料連線庫與內嵌連線]。 活頁簿中的 PowerPivot 資料存取需要這項設定。  
+9. 在 [外部資料] 中，請確認 [允許外部資料] 設定為 [信任的資料連線庫與內嵌連線]  。 活頁簿中的 PowerPivot 資料存取需要這項設定。  
   
-10. 此外，請在 [外部資料] 的 [重新整理時警告] 中，清除 [啟用重新整理警告] 的核取方塊。 清除此核取方塊可讓 PowerPivot 圖庫略過例行的警告訊息，並改為顯示活頁簿的預覽影像。  
+10. 此外，請在 [外部資料] 的 [重新整理時警告] 中，清除 [啟用重新整理警告]  的核取方塊。 清除此核取方塊可讓 PowerPivot 圖庫略過例行的警告訊息，並改為顯示活頁簿的預覽影像。  
   
-11. 按一下 [確定] 。  
+11. 按一下 [確定]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [PowerPivot 圖庫](../../2014-toc/books-online-for-sql-server-2014.md)   

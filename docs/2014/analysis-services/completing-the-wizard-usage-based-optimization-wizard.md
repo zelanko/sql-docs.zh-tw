@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 87c638b2c5455a2f3a15051b0e62ee86685d4e5f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087554"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>正在完成精靈 (基於使用方式的最佳化精靈)
-  使用 [正在完成精靈] 頁面，即可儲存彙總設計並將它指派給選取的資料分割。 在基於使用方式的最佳化精靈完成設計和儲存彙總之後，您也可以選擇性地處理選取的資料分割。  
+  使用 [正在完成精靈]  頁面，即可儲存彙總設計並將它指派給選取的資料分割。 在基於使用方式的最佳化精靈完成設計和儲存彙總之後，您也可以選擇性地處理選取的資料分割。  
   
 ## <a name="options"></a>選項  
  **建立新的彙總設計**  

@@ -13,12 +13,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 5e9d7ee2c086f188041fbf6c42448d21953b008d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf5a4c2f51d394a0322540a1651aa2549fedf8c5
+ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822782"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67166383"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教學課程：使用 Linux 上的 SQL Server 的 Active Directory 驗證
 
@@ -102,7 +102,7 @@ ms.locfileid: "66822782"
 
    ```bash
    kinit user@CONTOSO.COM
-   kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
+   kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM
    ```
 
    > [!NOTE]

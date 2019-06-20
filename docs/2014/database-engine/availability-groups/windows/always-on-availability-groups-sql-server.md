@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bedea60c8bc356ff18b687123799977d83f308c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62816733"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組 (SQL Server)
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能是提供資料庫鏡像之企業級替代方案的高可用性與災害復原解決方案。 在 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]中導入的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 可讓企業將一組使用者資料庫的可用性提高到最大程度。 *「可用性群組」* (Availability Group) 支援一組可一起容錯移轉之離散化使用者資料庫的容錯移轉環境，也就是所謂的 *「可用性資料庫」*(Availability Database)。 可用性群組支援一組讀寫的主要資料庫，以及一到八組對應的次要資料庫。 此外，您可以將次要資料庫用於唯讀存取及/或某些備份作業。  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能是提供資料庫鏡像之企業級替代方案的高可用性與災害復原解決方案。 在 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]中導入的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 可讓企業將一組使用者資料庫的可用性提高到最大程度。 *「可用性群組」* (Availability Group) 支援一組可一起容錯移轉之離散化使用者資料庫的容錯移轉環境，也就是所謂的 *「可用性資料庫」* (Availability Database)。 可用性群組支援一組讀寫的主要資料庫，以及一到八組對應的次要資料庫。 此外，您可以將次要資料庫用於唯讀存取及/或某些備份作業。  
   
  可用性群組會在可用性複本層級容錯移轉。 容錯移轉不是因資料庫問題 (例如資料庫因為資料檔案遺失而變得可疑、資料庫刪除或交易記錄損毀) 而造成的。  
   
@@ -39,9 +39,9 @@ ms.locfileid: "62816733"
   
 -   支援替代可用性模式，如下所示：  
   
-    -   非同步認可模式。 這種可用性模式是一種當可用性複本分散距離相當遠時仍可正常運作的災害復原方案。  
+    -   非同步認可模式  。 這種可用性模式是一種當可用性複本分散距離相當遠時仍可正常運作的災害復原方案。  
   
-    -   同步認可模式。 這種可用性模式強調的是高可用性和資料保護而非效能，但是相對地增加了交易延遲。 給定的可用性群組最多可支援三個同步認可的可用性複本，包括目前的主要複本。  
+    -   同步認可模式  。 這種可用性模式強調的是高可用性和資料保護而非效能，但是相對地增加了交易延遲。 給定的可用性群組最多可支援三個同步認可的可用性複本，包括目前的主要複本。  
   
      如需詳細資訊，請參閱[可用性模式;Always On 可用性群組。](availability-modes-always-on-availability-groups.md).  
   
@@ -85,10 +85,10 @@ ms.locfileid: "62816733"
   
 ##  <a name="TermsAndDefinitions"></a> 詞彙和定義  
  可用性群組  
- 一組一起容錯移轉之資料庫 (「可用性資料庫」) 的容器。  
+ 一組一起容錯移轉之資料庫 (「可用性資料庫」  ) 的容器。  
   
  可用性資料庫  
- 屬於可用性群組的資料庫。 對於每個可用性資料庫而言，可用性群組會維護單一讀寫複本 (「主要資料庫」) 以及一到八個唯讀複本 (「次要資料庫」)。  
+ 屬於可用性群組的資料庫。 對於每個可用性資料庫而言，可用性群組會維護單一讀寫複本 (「主要資料庫」  ) 以及一到八個唯讀複本 (「次要資料庫」  )。  
   
  主要資料庫  
  可用性資料庫的讀寫複本。  
@@ -97,7 +97,7 @@ ms.locfileid: "62816733"
  可用性資料庫的唯讀複本。  
   
  「可用性複本」  
- 特定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所裝載之可用性群組的具現化，它會維護屬於可用性群組之每個可用性資料庫的本機副本。 有兩種類型的可用性複本存在：單一 *「主要複本」* 以及一到八個 *「次要複本」*。  
+ 特定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所裝載之可用性群組的具現化，它會維護屬於可用性群組之每個可用性資料庫的本機副本。 有兩種類型的可用性複本存在：單一 *「主要複本」* 以及一到八個 *「次要複本」* 。  
   
  「主要複本」  
  可用性複本，該複本可讓主要資料庫用於用戶端的讀寫連接，同時也將每個主要資料庫的交易記錄檔記錄傳送到每個次要複本。  

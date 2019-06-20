@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022647"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 發行者的資料類型對應
@@ -49,7 +49,7 @@ ms.locfileid: "63022647"
 |RAW([1-2000])|VARBINARY([1-2000])|否|  
 |real|FLOAT|否|  
 |ROWID|CHAR(18)|否|  
-|timestamp|DATETIME|是|  
+|TIMESTAMP|DATETIME|是|  
 |TIMESTAMP(0-7)|DATETIME|是|  
 |TIMESTAMP(8-9)|DATETIME|是|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|是|  

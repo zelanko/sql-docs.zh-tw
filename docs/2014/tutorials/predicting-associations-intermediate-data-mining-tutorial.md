@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62472843"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>預測關聯 (中繼資料採礦教學課程)
@@ -39,7 +39,7 @@ ms.locfileid: "62472843"
   
 2.  在 **採礦模型**窗格中，按一下**選取模型**。 (如果已選取正確的模型，您可以略過這個步驟和下一個步驟)。  
   
-3.  在 **選取採礦模型**對話方塊方塊中，展開代表採礦結構的節點**關聯**，並選取模型**關聯**。 按一下 [確定] 。  
+3.  在 **選取採礦模型**對話方塊方塊中，展開代表採礦結構的節點**關聯**，並選取模型**關聯**。 按一下 [確定]  。  
   
      現在可以忽略輸入窗格。  
   

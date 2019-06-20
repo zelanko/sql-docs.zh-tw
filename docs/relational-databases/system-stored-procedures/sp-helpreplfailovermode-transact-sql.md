@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f733740b062983f14379f71a48b77f73392aceae
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62865280"
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
@@ -50,7 +50,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` 傳回容錯移轉模式的整數值，它是**輸出**參數。 *failover_mode_id*已**tinyint**預設值是**0**。 它會傳回**0**立即更新並**1**佇列更新。  
   
- [**@failover_mode=**] **'***failover_mode***'OUTPUT**  
+ [ **@failover_mode=** ] **'***failover_mode***'OUTPUT**  
  傳回在訂閱者端修改資料的模式。 *failover_mode*已**nvarchar(10**預設值是 NULL。 已**輸出**參數。  
   
 |值|描述|  

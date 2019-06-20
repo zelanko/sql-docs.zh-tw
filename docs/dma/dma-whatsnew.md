@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: jtoland
 manager: jroth
 ms.openlocfilehash: f88562c25982ce8c5d6c8d4b87dd629e4ba57c03
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794313"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>資料移轉小幫手的新功能

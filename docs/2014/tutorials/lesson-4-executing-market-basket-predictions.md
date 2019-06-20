@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63312104"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>第 4 課：執行購物籃預測
@@ -140,11 +140,11 @@ SELECT <select list> FROM [<mining model>]
       UNION SELECT 'Mountain-200' AS [Model]) AS [Products]) AS t  
     ```  
   
-6.  在 **檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
+6.  在 [**檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
   
 7.  在 [**另存新檔**] 對話方塊中，瀏覽至適當的資料夾，並將檔案命名`Association Prediction.dmx`。  
   
-8.  在工具列上，按一下**Execute**  按鈕。  
+8.  在工具列上，按一下**Execute** ] 按鈕。  
   
      查詢會傳回包含三項產品的資料表：HL Mountain Tire、 Fender Set-Mountain 和 ML Mountain Tire。 此資料表會按照機率的順序列出這些傳回的產品。 最有可能與查詢中指定之三項產品加入同一個購物車的傳回產品會顯示在資料表的最上方。 後面兩項產品則是後續最有可能加入購物車的產品。 此資料表也包含描述預測精確性的統計資料。  
   
@@ -212,11 +212,11 @@ SELECT <select list> FROM [<mining model>]
       UNION SELECT 'Mountain-200' AS [Model]) AS [Products]) AS t  
     ```  
   
-6.  在 **檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
+6.  在 [**檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
   
 7.  在 [**另存新檔**] 對話方塊中，瀏覽至適當的資料夾，並將檔案命名`Modified Association Prediction.dmx`。  
   
-8.  在工具列上，按一下**Execute**  按鈕。  
+8.  在工具列上，按一下**Execute** ] 按鈕。  
   
      查詢會傳回包含三項產品的資料表：HL Mountain Tire、 Water Bottle 和 Fender Set-Mountain。 此資料表會按照機率的順序列出這些產品。 顯示在資料表最上方的產品就是最有可能與查詢中指定之三項產品加入同一個購物車的產品。 其餘產品則是後續最有可能加入購物車的產品。 此資料表也包含描述預測精確度的統計資料。  
   

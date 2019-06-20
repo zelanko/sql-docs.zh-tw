@@ -19,14 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3623e9cd841feb3a82828c12ba32e2e691482a7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083903"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Microsoft 貝氏機率分類演算法技術參考
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所提供用於預測模型的分類演算法。 此演算法會計算輸入資料行和可預測資料行之間的條件式機率，並假設資料行是獨立的。 這種獨立性假設產生了貝氏機率分類這個名稱。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所提供用於預測模型的分類演算法。 此演算法會計算輸入資料行和可預測資料行之間的條件式機率，並假設資料行是獨立的。 這種獨立性假設產生了貝氏機率分類這個名稱。  
   
 ## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Microsoft 貝氏機率分類演算法的實作  
  此演算法比其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法更少計算，因此對於快速產生採礦模型來探索輸入資料行和可預測資料行之間的關聯性很有用。 此演算法會考量輸入屬性值與輸出屬性值的每個配對。  

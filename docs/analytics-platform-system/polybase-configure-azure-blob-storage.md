@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 7bbf2dface759da63bd6b9845f4e62321b1cbe76
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63027519"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>設定 PolyBase 以存取 Azure Blob 儲存體中的外部資料
@@ -45,7 +45,7 @@ ms.locfileid: "63027519"
    GO
    ```  
 
-2. 重新啟動使用服務狀態 頁面上的 APS 地區[設備 Configuration Manager](launch-the-configuration-manager.md)。
+2. 重新啟動使用服務狀態] 頁面上的 APS 地區[設備 Configuration Manager](launch-the-configuration-manager.md)。
   
 ## <a name="configure-an-external-table"></a>設定外部資料表
 

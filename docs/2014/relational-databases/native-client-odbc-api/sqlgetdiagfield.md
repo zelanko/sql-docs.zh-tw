@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62657701"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
@@ -36,7 +36,7 @@ ms.locfileid: "62657701"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會支援下列其他的動態函數程式碼，以識別最後所嘗試的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式。 動態函數程式碼會以診斷記錄集的標頭 (記錄 0) 傳回，因此會在每次執行時使用 (不論成功與否)。  
   
-|動態函數程式碼|Source|  
+|動態函數程式碼|`Source`|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE 陳述式|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT 陳述式|  

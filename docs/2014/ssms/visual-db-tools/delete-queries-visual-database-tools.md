@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e046aef7cd5fb4049b4bfb92c99272f625224c2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62670471"
 ---
 # <a name="delete-queries-visual-database-tools"></a>刪除查詢 (Visual Database Tools)
@@ -27,16 +27,16 @@ ms.locfileid: "62670471"
   
 ### <a name="to-permanently-delete-a-query"></a>若要永久刪除查詢  
   
-1.  從 [檢視] 功能表選擇 [方案總管]。  
+1.  從 [檢視]  功能表選擇 [方案總管]。  
   
 2.  在方案總管中選取要永久刪除的查詢。  
   
-3.  在查詢上按一下滑鼠右鍵，然後從快速鍵功能表中按一下 [移除]。  
+3.  在查詢上按一下滑鼠右鍵，然後從快速鍵功能表中按一下 [移除]  。  
   
-4.  在 [Microsoft SQL Server Management Studio] 對話方塊中，按一下 [刪除]。  
+4.  在 [Microsoft SQL Server Management Studio]  對話方塊中，按一下 [刪除]  。  
   
 > [!NOTE]  
->  如果您只想將查詢從專案中移除，但不想刪除它，請按一下 [移除]。 如此您便可於稍後在查詢資料夾上按一下滑鼠右鍵並選擇 [新增項目]，以重新尋找及加入查詢。  
+>  如果您只想將查詢從專案中移除，但不想刪除它，請按一下 [移除]  。 如此您便可於稍後在查詢資料夾上按一下滑鼠右鍵並選擇 [新增項目]  ，以重新尋找及加入查詢。  
   
 ## <a name="see-also"></a>另請參閱  
  [清除查詢結果&#40;Visual Database Tools&#41;](visual-database-tools.md)   

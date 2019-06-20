@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b5696b55252a6053b7501eee08dfbe4365678a26
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62827643"
 ---
 # <a name="data-viewer"></a>資料檢視器
   如果路徑設定為使用資料檢視器，當資料在資料流程元件之間移動時，資料檢視器會一一顯示緩衝區的資料。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **綠色箭頭**  
  按一下即可顯示下一個緩衝區中的資料。 如果在單一緩衝區中可以移動資料，則無法使用此選項。  
   

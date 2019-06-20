@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 20c8ef211fe32d1459704c963c525a6cc9235d4a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810658"
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client-sql-server-configuration-manager"></a>建立或刪除用戶端使用的伺服器別名 (SQL Server 組態管理員)
@@ -29,23 +29,23 @@ ms.locfileid: "62810658"
   
 #### <a name="to-create-an-alias"></a>若要建立別名  
   
-1.  在 SQL Server 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]，並以滑鼠右鍵按一下 [別名]，然後按一下 [新增別名]。  
+1.  在 SQL Server 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]  ，並以滑鼠右鍵按一下 [別名]  ，然後按一下 [新增別名]  。  
   
-2.  在 [別名名稱] 方塊中，輸入別名的名稱。 當用戶端應用程式連接時使用此名稱。  
+2.  在 [別名名稱]  方塊中，輸入別名的名稱。 當用戶端應用程式連接時使用此名稱。  
   
-3.  在 [伺服器] 方塊中，輸入伺服器的名稱或 IP 位址。 針對具名執行個體，請附加執行個體名稱。  
+3.  在 [伺服器]  方塊中，輸入伺服器的名稱或 IP 位址。 針對具名執行個體，請附加執行個體名稱。  
   
-4.  在 [通訊協定] 方塊中，選取用於此別名的通訊協定。 選取通訊協定，將選用屬性方塊的標題變更為「通訊埠編號」、「管道名稱」或「連接字串」。  
+4.  在 [通訊協定]  方塊中，選取用於此別名的通訊協定。 選取通訊協定，將選用屬性方塊的標題變更為「通訊埠編號」、「管道名稱」或「連接字串」。  
   
- ＜[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員說明＞中描述的連接字串，對於建立自己連接字串的程式設計人員會很有幫助。 若要存取此資訊，在 [新增別名] 對話方塊，按 F1，或按一下 [說明]。  
+ ＜[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員說明＞中描述的連接字串，對於建立自己連接字串的程式設計人員會很有幫助。 若要存取此資訊，在 [新增別名]  對話方塊，按 F1，或按一下 [說明]  。  
   
 > [!NOTE]  
 >  如果已設定的別名連接到錯誤的伺服器或執行個體，請停用再重新啟用相關的網路通訊協定。 這麼做可清除任何快取的連接資訊，讓用戶端能夠正確連接。  
   
 #### <a name="to-delete-an-alias"></a>若要刪除別名  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]，再按一下 [別名]。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]  ，再按一下 [別名]  。  
   
-2.  在詳細資料窗格中，以滑鼠右鍵按一下要刪除的別名，然後按一下 [刪除]。  
+2.  在詳細資料窗格中，以滑鼠右鍵按一下要刪除的別名，然後按一下 [刪除]  。  
   
   

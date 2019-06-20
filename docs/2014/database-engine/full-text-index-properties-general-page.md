@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62778939"
 ---
 # <a name="full-text-index-properties-general-page"></a>全文檢索索引屬性 (一般頁面)
@@ -74,7 +74,7 @@ ms.locfileid: "62778939"
  **搜尋屬性清單**  
  目前與此全文檢索索引相關聯的搜尋屬性清單 (如果有的話)。 搜尋屬性清單會指定關聯全文檢索索引擴展時所包含的一組文件屬性。 如需詳細資訊，請參閱 [使用搜索屬性清單搜索文件屬性](../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
- **\<關閉 >** 表示目前沒有與索引相關聯的搜尋屬性清單。 您也可以選取從索引移除目前的搜尋屬性清單**\<關閉 >** 從清單中，或從清單中選取不同的搜尋屬性清單。 這裡只會列出目前資料庫中的搜尋屬性清單。  
+ **\<關閉 >** 表示目前沒有與索引相關聯的搜尋屬性清單。 您也可以選取從索引移除目前的搜尋屬性清單 **\<關閉 >** 從清單中，或從清單中選取不同的搜尋屬性清單。 這裡只會列出目前資料庫中的搜尋屬性清單。  
   
 > [!NOTE]  
 >  您可以將特定的搜尋屬性清單與相同資料庫中的多個全文檢索索引相關聯。  

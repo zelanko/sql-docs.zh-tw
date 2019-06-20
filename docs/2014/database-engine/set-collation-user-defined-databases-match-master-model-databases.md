@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773307"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>將使用者定義資料庫的定序設定為 master 和 model 資料庫的定序

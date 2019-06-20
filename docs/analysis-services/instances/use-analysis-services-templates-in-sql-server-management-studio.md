@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d5ac074bef7570dc49a5597500bd15c8075235ba
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: bdcd5b9a30d19fc6fd0018fac1d24a275f236518
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148133"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263165"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中使用 Analysis Services 範本
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一組範本，協助您快速建立 XMLA 指令碼、DMX 或 MDX 查詢、在 Cube 或表格式模型中建立 KPI、編寫備份與還原作業的指令碼，以及執行許多其他工作。 範本位於 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的範本總管。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一組範本，協助您快速建立 XMLA 指令碼、DMX 或 MDX 查詢、在 Cube 或表格式模型中建立 KPI、編寫備份與還原作業的指令碼，以及執行許多其他工作。 範本位於 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的範本總管  。  
   
  此主題包含用於多維度模型和表格式模型之範本的清單，並提供如何使用中繼資料總管和範本總管建立 MDX 查詢和 XMLA 陳述式的範例。  
   
@@ -28,43 +28,43 @@ ms.locfileid: "50148133"
 ##  <a name="bkmk_usingTE"></a> 開啟 Analysis Services 範本  
  Database Engine 查詢和 Analysis Services 查詢與命令的所有範本都是在範本總管中存取。  
   
- 若要開啟範本總管，請選取 [檢視] 功能表上的 [範本總管]。 接著按一下 Cube 圖示，查看 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的可用範本清單。  
+ 若要開啟範本總管，請選取 [檢視]  功能表上的 [範本總管]  。 接著按一下 Cube 圖示，查看 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的可用範本清單。  
   
  ![範本總管 中，篩選出的 Analysis Services](../../analysis-services/instances/media/ssas-templateexplorer.gif "範本總管 中，針對 Analysis Services 進行篩選")  
   
- 若要開啟範本，以滑鼠右鍵按一下範本名稱，然後選取 [開啟]，或將範本拖曳至已開啟的查詢視窗。 在查詢視窗開啟之後，您可以使用工具列或 [查詢] 功能表上的命令，建立陳述式：  
+ 若要開啟範本，以滑鼠右鍵按一下範本名稱，然後選取 [開啟]  ，或將範本拖曳至已開啟的查詢視窗。 在查詢視窗開啟之後，您可以使用工具列或 [查詢] 功能表上的命令，建立陳述式：  
   
--   若要檢查查詢的語法，請按一下 [剖析]。  
+-   若要檢查查詢的語法，請按一下 [剖析]  。  
   
--   若要執行查詢，請按一下 [執行]。  
+-   若要執行查詢，請按一下 [執行]  。  
   
-     若要停止執行中的查詢，請按一下 [取消執行查詢]。  
+     若要停止執行中的查詢，請按一下 [取消執行查詢]  。  
   
--   檢視畫面底端的 [結果] 索引標籤中的查詢結果。  
+-   檢視畫面底端的 [結果]  索引標籤中的查詢結果。  
   
-     切換至 [訊息] 索引標籤，查看所傳回的記錄數目、與查詢執行相關聯的錯誤、查詢陳述式和任何其他訊息。 例如，如果對處於 DirectQuery 模式的模型執行 DAX 陳述式，您會看到 xVelocity 記憶體中分析引擎 (VertiPaq) 所產生的 Transact-SQL 陳述式。  
+     切換至 [訊息]  索引標籤，查看所傳回的記錄數目、與查詢執行相關聯的錯誤、查詢陳述式和任何其他訊息。 例如，如果對處於 DirectQuery 模式的模型執行 DAX 陳述式，您會看到 xVelocity 記憶體中分析引擎 (VertiPaq) 所產生的 Transact-SQL 陳述式。  
   
 ##  <a name="BKMK_Building_Queries"></a> 使用範本在表格式模型上建立及執行 MDX 查詢  
  這個範例示範如何將表格式模型資料庫做為資料來源，在 SQL Server Management Studio 中建立 MDX 查詢。 若要在電腦上重複此範例，您可以 [下載 Adventureworks 表格式模型範例專案](http://go.microsoft.com/fwlink/?LinkId=231183)。  
   
 > [!WARNING]  
->  您不能對 DirectQuery 模式下部署的表格式模型使用 MDX 查詢。 但是，可透過將 DAX 資料表查詢搭配 EVALUATE 命令使用，傳送對等查詢。 如需詳細資訊，請參閱 [DAX 查詢參數](http://msdn.microsoft.com/c5841b4e-3395-4237-815b-9822a691e544)。  
+>  您不能對 DirectQuery 模式下部署的表格式模型使用 MDX 查詢。 但是，可透過將 DAX 資料表查詢搭配 EVALUATE 命令使用，傳送對等查詢。 如需詳細資訊，請參閱 [DAX 查詢參數](/dax/dax-queries#parameters-in-dax-queries)。  
   
 #### <a name="create-an-mdx-query-from-a-template"></a>從範本建立 MDX 查詢  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，開啟包含所要查詢之表格式模型的執行個體。 以滑鼠右鍵按一下資料庫圖示，選取 [新增查詢]，然後選取 [MDX]。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，開啟包含所要查詢之表格式模型的執行個體。 以滑鼠右鍵按一下資料庫圖示，選取 [新增查詢]  ，然後選取 [MDX]  。  
   
-2.  在範本瀏覽器中，開啟 [Analysis Services 範本] 中的 [MDX]，然後開啟 [查詢]。 將 [基本查詢] 拖曳至查詢視窗。  
+2.  在範本瀏覽器中，開啟 [Analysis Services 範本] 中的 [MDX]  ，然後開啟 [查詢]  。 將 [基本查詢]  拖曳至查詢視窗。  
   
-3.  使用中繼資料總管，將下列欄位和量值拖曳至查詢範本：  
+3.  使用中繼資料總管  ，將下列欄位和量值拖曳至查詢範本：  
   
-    1.  取代\<o w s，mdx_set> > 與 **[Product Category]。 [Product Category Name]**。  
+    1.  取代\<o w s，mdx_set> > 與 **[Product Category]。 [Product Category Name]** 。  
   
-    2.  取代\<column_axis，mdx_set> > 與 **[Date]。 [Calendar Year]。[Calendar Year]**.  
+    2.  取代\<column_axis，mdx_set> > 與 **[Date]。 [Calendar Year]。[Calendar Year]** .  
   
-    3.  取代\<from_clause，mdx_name> > 與 **[網際網路銷售]**。  
+    3.  取代\<from_clause，mdx_name> > 與 **[網際網路銷售]** 。  
   
-    4.  取代\<w，mdx_set> > 與 **[Measures]。 [Internet Total Sales]**。  
+    4.  取代\<w，mdx_set> > 與 **[Measures]。 [Internet Total Sales]** 。  
   
 4.  您可以直接執行原有的查詢，但可能要進行某些變更，例如加入函數以傳回特定成員。 例如，在 **[Product Category].[Product Category Name]** 後面輸入 **.members**。 如需詳細資訊，請參閱 [使用成員運算式](../../mdx/using-member-expressions.md)。  
   
@@ -83,12 +83,12 @@ ms.locfileid: "50148133"
   
 #### <a name="create-a-backup-command-script-from-a-template"></a>從範本建立備份命令指令碼  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟包含所要查詢之資料庫的執行個體。 以滑鼠右鍵按一下資料庫圖示，選取 [新增查詢]，然後選取 [XMLA]。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟包含所要查詢之資料庫的執行個體。 以滑鼠右鍵按一下資料庫圖示，選取 [新增查詢]  ，然後選取 [XMLA]  。  
   
     > [!WARNING]  
     >  您不能透過變更限制清單或在連接對話方塊中指定資料庫，設定 XMLA 查詢的內容。 您必須從要查詢的資料庫開啟 XMLA 查詢視窗。  
   
-2.  將 [備份] 範本拖曳至空白查詢視窗。  
+2.  將 [備份]  範本拖曳至空白查詢視窗。  
   
 3.  按兩下內的文字\<DatabaseID > 項目。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "50148133"
 5.  按兩下內的文字\<檔案 > 項目。 輸入備份檔案的名稱，包括 .abf 副檔名。 如果您不使用預設的備份位置，請指定完整檔案路徑。 如需詳細資訊，請參閱[備份、還原和同步處理資料庫 &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
   
 ##  <a name="bkmk_schemarowset"></a> 使用 XMLA 範本產生結構描述資料列集查詢  
- 範本總管只包含一個用於結構描述資料列集查詢的範本。 若要使用此範本，您必須熟悉所要使用之個別結構描述資料列集的需求，包括任何必要元素，以及可做為限制的資料行。 如需詳細資訊，請參閱 [Analysis Services 結構描述資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)。  
+ 範本總管  只包含一個用於結構描述資料列集查詢的範本。 若要使用此範本，您必須熟悉所要使用之個別結構描述資料列集的需求，包括任何必要元素，以及可做為限制的資料行。 如需詳細資訊，請參閱 [Analysis Services 結構描述資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)。  
   
  請注意，為了簡單起見，許多結構描述資料列集也已公開做為動態管理檢視 (DMV)。 透過使用對應的 DMV，您可以使用類似 Transact-SQL 的語法來查詢結構描述資料列集。 例如，下列查詢傳回相同的結果，但一個是 XML 格式的查詢，一個是表格式查詢。 如需 DMV 的詳細資訊，請參閱[使用動態管理檢視 &#40;DMV&#41; 監視 Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)。  
   
@@ -125,16 +125,16 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 #### <a name="get-a-list-of-data-sources-for-a-tabular-model-using-a-schema-rowset-query"></a>使用結構描述資料列集查詢，取得表格式模型的資料來源清單  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，開啟包含所要查詢之資料庫的執行個體。 以滑鼠右鍵按一下資料庫圖示，選取 [新增查詢]，然後選取 [XMLA]。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，開啟包含所要查詢之資料庫的執行個體。 以滑鼠右鍵按一下資料庫圖示，選取 [新增查詢]  ，然後選取 [XMLA]  。  
   
     > [!WARNING]  
     >  您不能透過變更限制清單或在連接對話方塊中指定資料庫，設定 XMLA 查詢的內容。 您必須從要查詢的資料庫開啟 XMLA 查詢視窗。  
   
-2.  開啟範本總管，並將 [探索結構描述資料列集] 範本拖曳至空白查詢視窗中。  
+2.  開啟範本總管  ，並將 [探索結構描述資料列集]  範本拖曳至空白查詢視窗中。  
   
 3.  在範本中，取代[RequestType 元素&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/requesttype-element-xmla)項目包含下列文字： `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
-4.  按一下 **[執行]**。  
+4.  按一下 **[執行]** 。  
   
      預期的結果：  
   
@@ -154,14 +154,14 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ##  <a name="bkmk_Ref"></a> Analysis Services 範本參考  
  下列範本可用於 Analysis Services 資料庫和資料庫物件，包括採礦結構與採礦模型、Cube，以及表格式模型：  
   
-|類別目錄|項目範本|描述|  
+|Category|項目範本|描述|  
 |--------------|-------------------|-----------------|  
-|DMX\模型內容|內容查詢|示範如何使用 DMX SELECT FROM *\<模型 >*。內容的陳述式來擷取指定之採礦模型的採礦模型結構描述資料列集的內容。|  
+|DMX\模型內容|內容查詢|示範如何使用 DMX SELECT FROM *\<模型 >* 。內容的陳述式來擷取指定之採礦模型的採礦模型結構描述資料列集的內容。|  
 ||連續資料行值|示範如何使用 DMX SELECT DISTINCT FROM *\<模型 >* 陳述式及 DMX **RangeMin**並**RangeMax**擷取一組的函式從指定的採礦模型中的連續資料行的指定範圍中的值。|  
 ||離散資料行值|示範如何使用 DMX SELECT DISTINCT FROM *\<模型 >* 陳述式中指定之採礦模型的離散資料行中擷取一組完整的值。|  
 ||鑽研查詢|示範如何搭配 DMX IsInNode 函數使用 DMX SELECT * FROM Model.CASES 陳述式來執行鑽研查詢。|  
 ||模型屬性|示範如何使用 DMX System.GetModelAttributes 函數來傳回模型所用的屬性清單。|  
-||PMML 內容|示範如何使用 DMX SELECT \* FROM *\<模型 >*。PMML 陳述式，來擷取採礦模型，支援這項功能的演算法的預測模型標記語言 (PMML) 表示法。|  
+||PMML 內容|示範如何使用 DMX SELECT \* FROM *\<模型 >* 。PMML 陳述式，來擷取採礦模型，支援這項功能的演算法的預測模型標記語言 (PMML) 表示法。|  
 |DMX\模型管理|加入模型|示範如何使用 DMX ALTER MINING MODEL STRUCTURE 陳述式來加入採礦模型。|  
 ||清除模型|示範如何使用 DMX DELETE * FROM MINING MODEL 陳述式來刪除指定之採礦模型的內容。|  
 ||清除結構案例|示範如何使用 DMX DELETE FROM MINING STRUCTURE 陳述式來清除採礦模型結構案例。|  
@@ -186,8 +186,8 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||預存程序呼叫|示範如何使用 DMX CALL 陳述式來呼叫預存程序。|  
 |MDX\運算式|移動平均-固定|展示如何使用 MDX **ParallelPeriod** 和 **CurrentMemeber** 函數搭配已自然排序的集合，來建立導出量值，以提供量值在時間維度階層所包含之固定時間週期上的移動平均。|  
 ||移動平均-變動|展示如何在 **Avg** 函數內使用 MDX **CASE** 陳述式，來建立導出量值，以提供量值在時間維度階層所包含之變動時間週期上的移動平均。|  
-||至今的期間數|展示如何在導出成員中使用 MDX PeriodsToDate 函數。|  
-||對父系的比率|展示如何使用 MDX Parent 函數來建立導出量值，該值代表指定階層中父成員之每一個子系的量值比率百分比。|  
+||至今的期間數|展示如何在導出成員中使用 MDX PeriodsToDate  函數。|  
+||對父系的比率|展示如何使用 MDX Parent  函數來建立導出量值，該值代表指定階層中父成員之每一個子系的量值比率百分比。|  
 ||對總計的比率|展示如何使用所有成員來建立導出量值，該值代表指定階層中每一個成員的量值比率百分比。|  
 |MDX\查詢|基本查詢|展示可以用來建構 MDX 查詢的基本 MDX SELECT 陳述式。|  
 ||KPI 查詢|展示如何在 MDX 查詢中使用 MDX **KPIValue** 和 **KPIGoal** 函數，來擷取關鍵效能指標 (KPI) 資訊。|  

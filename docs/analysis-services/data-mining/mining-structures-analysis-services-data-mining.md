@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2c5a71b864a1ec032112c2a73b965b82775e5b92
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62509883"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>採礦結構 (Analysis Services - 資料採礦)
@@ -94,7 +94,7 @@ ms.locfileid: "62509883"
  `SELECT * FROM <model>.CASES` 陳述式會傳回相同的資料行，但是僅針對該特定模型中的案例。 如需詳細資訊，請參閱 [SELECT FROM &#60;structure&#62;.CASES](../../dmx/select-from-structure-cases.md) 和 [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](../../dmx/select-from-model-cases-dmx.md)。  
   
 ## <a name="using-data-mining-models-with-mining-structures"></a>搭配採礦結構使用資料採礦模型  
- 資料採礦模型會將採礦模型演算法套用至以採礦結構表示的資料。 採礦模型是屬於特定採礦結構的物件，且繼承採礦結構所定義的所有屬性值。 此模型可以使用採礦結構包含的所有資料行或資料行子集。 您可以將結構資料行的多個複本加入到結構中。 您也可以將結構資料行的多個複本加入到模型中，然後針對此模型中的每一個結構資料行指派不同的名稱或 *「別名」*(Alias)。 如需為結構資料行建立別名的詳細資訊，請參閱 [建立模型資料行的別名](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md) 和 [採礦模型屬性](../../analysis-services/data-mining/mining-model-properties.md)。  
+ 資料採礦模型會將採礦模型演算法套用至以採礦結構表示的資料。 採礦模型是屬於特定採礦結構的物件，且繼承採礦結構所定義的所有屬性值。 此模型可以使用採礦結構包含的所有資料行或資料行子集。 您可以將結構資料行的多個複本加入到結構中。 您也可以將結構資料行的多個複本加入到模型中，然後針對此模型中的每一個結構資料行指派不同的名稱或 *「別名」* (Alias)。 如需為結構資料行建立別名的詳細資訊，請參閱 [建立模型資料行的別名](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md) 和 [採礦模型屬性](../../analysis-services/data-mining/mining-model-properties.md)。  
   
  如需資料採礦模型之結構的詳細資訊，請參閱 [採礦模型 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)。  
   

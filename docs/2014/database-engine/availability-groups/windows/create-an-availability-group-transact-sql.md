@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13d14fafd18fb9e0cdb156617798c8d2f15ff661
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62815361"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>建立可用性群組 (Transact-SQL)
-  此主題描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體上建立和設定已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」*(Availability Replica))。  
+  此主題描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體上建立和設定已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」* (Availability Replica))。  
   
 > [!NOTE]  
 >  如需可用性群組的簡介，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)。  
@@ -45,7 +45,7 @@ ms.locfileid: "62815361"
 ###  <a name="SummaryTsqlStatements"></a> 工作和對應 Transact-SQL 陳述式的摘要  
  下表列出與建立和設定可用性群組有關的基本工作，並指出哪些 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式要用於這些工作。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 工作必須依照其出現在表格中的順序來執行。  
   
-|工作|Transact-SQL 陳述式|要在何處執行工作**<sup>*</sup>**|  
+|工作|Transact-SQL 陳述式|要在何處執行工作 **<sup>*</sup>**|  
 |----------|----------------------------------|-------------------------------------------|  
 |建立資料庫鏡像端點 (每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體一次)|[CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql) *endpointName* ...FOR DATABASE_MIRRORING|在缺少資料庫鏡像端點的每一個伺服器執行個體上執行。|  
 |建立可用性群組|[CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)|於裝載初始主要複本的伺服器執行個體上執行。|  

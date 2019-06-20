@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3c156f9e0d6df2afbf7710b1ed5c19fb60034e92
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62800211"
 ---
 # <a name="autoexists"></a>自動存在
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  「自動存在」的概念是將 Cube 空間限制為實際存在於 Cube 中的資料格，相對因建立相同階層中的所有屬性階層成員組合而可能存在的資料格。 這是因為某個屬性階層的成員不能與相同維度中另一個屬性階層的成員同時存在。 在 SELECT 陳述式中使用相同維度的兩個以上屬性階層時，Analysis Services 會評估屬性的運算式來確認這些屬性的成員有受到正確的限制以符合所有其他屬性的準則。  
+  「自動存在」  的概念是將 Cube 空間限制為實際存在於 Cube 中的資料格，相對因建立相同階層中的所有屬性階層成員組合而可能存在的資料格。 這是因為某個屬性階層的成員不能與相同維度中另一個屬性階層的成員同時存在。 在 SELECT 陳述式中使用相同維度的兩個以上屬性階層時，Analysis Services 會評估屬性的運算式來確認這些屬性的成員有受到正確的限制以符合所有其他屬性的準則。  
   
  例如，假設您正在使用來自 Geography 維度的屬性。 如果您所擁有的其中一個運算式會從 City 屬性傳回所有成員，而另一個運算式會將 Country 屬性的成員限制為歐洲所有國家 (地區)，這將會使得 City 成員限制為只有屬於歐洲國家 (地區) 的城市。 這是因為 Analysis Services 的自動存在特性所致。 「自動存在」僅適用於相同維度的屬性的原因是，它會嘗試防止某個屬性運算式加入其他屬性運算式中排除的維度記錄。 您也可以將「自動存在」視為不同之屬性運算式在維度資料列上所產生的交集。  
   
@@ -88,7 +88,7 @@ WHERE (Measures.[Internet Sales Amount],
  上述這三個查詢示範了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中自動存在行為的作用。  
   
 ## <a name="deep-and-shallow-autoexists"></a>深層和淺層自動存在  
- 自動存在以「深層」或「淺層」方式套用至運算式。 「深層自動存在」表示在套用 slicer 運算式、軸中的子 SELECT 運算式等之後，會評估所有運算式以符合最深層的可能空間。 「淺層自動存在」表示在目前運算式之前評估外部運算式，並將這些結果傳遞至目前運算式。 預設值是深層自動存在。  
+ 自動存在以「深層」或「淺層」方式套用至運算式。 「深層自動存在」  表示在套用 slicer 運算式、軸中的子 SELECT 運算式等之後，會評估所有運算式以符合最深層的可能空間。 「淺層自動存在」  表示在目前運算式之前評估外部運算式，並將這些結果傳遞至目前運算式。 預設值是深層自動存在。  
   
  下列案例和範例有助於說明不同類型的自動存在。 在下列範例中會建立兩個集合：一個當做計算運算式，而另一個當做常數運算式。  
   

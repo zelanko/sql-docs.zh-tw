@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34bd5a607998c6e37f688ccbadcd4d612d3daea7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806980"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>重建索引工作 (維護計畫)
-  使用 [重建索引工作] 對話方塊，以新的填滿因數重新建立資料庫資料表上的索引。 填滿因數會決定索引中每頁的空白數量，以配合未來擴充需要。 將資料加入資料表時，因為沒有維護填滿因數，所以可用空間都會填滿。 重新組織資料與索引頁面可以重新建立可用空間。  
+  使用 [重建索引工作]  對話方塊，以新的填滿因數重新建立資料庫資料表上的索引。 填滿因數會決定索引中每頁的空白數量，以配合未來擴充需要。 將資料加入資料表時，因為沒有維護填滿因數，所以可用空間都會填滿。 重新組織資料與索引頁面可以重新建立可用空間。  
   
- [重建索引工作] 會使用 ALTER INDEX 陳述式。  
+ [重建索引工作]  會使用 ALTER INDEX 陳述式。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[連接]**  
  選取執行此工作時要使用的伺服器連接。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62806980"
     >  維護計畫只針對相容性層級設為 80 (含) 以上的資料庫來執行。 不會顯示相容性層級設為 70 或更低的資料庫。  
   
  **物件**  
- 限制 [選取範圍] 格線僅顯示資料表、檢視或兩者。  
+ 限制 [選取範圍]  格線僅顯示資料表、檢視或兩者。  
   
  **選取範圍**  
  指定受此工作影響的資料表或索引。 [物件] 方塊中的 **[資料表和檢視]** 為選取狀態時無法使用。  

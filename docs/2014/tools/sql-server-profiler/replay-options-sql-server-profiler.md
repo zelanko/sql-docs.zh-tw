@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e91a501a899a6ba2b18790ac2da6e7c45b270b07
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025738"
 ---
 # <a name="replay-options-sql-server-profiler"></a>重新執行選項 (SQL Server Profiler)
-  使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來重新執行擷取的追蹤之前，請在 [重新執行組態] 對話方塊中指定重新執行選項。 若要啟動此對話方塊，請開啟 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中的重新執行追蹤檔案或資料表，然後在 [重新執行] 功能表上按一下 [啟動]。 如需有關重做追蹤時所需之權限的詳細資訊，請參閱＜ [Permissions Required to Run SQL Server Profiler](sql-server-profiler.md)＞。  
+  使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來重新執行擷取的追蹤之前，請在 [重新執行組態]  對話方塊中指定重新執行選項。 若要啟動此對話方塊，請開啟 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中的重新執行追蹤檔案或資料表，然後在 [重新執行]  功能表上按一下 [啟動]  。 如需有關重做追蹤時所需之權限的詳細資訊，請參閱＜ [Permissions Required to Run SQL Server Profiler](sql-server-profiler.md)＞。  
   
- 本主題描述使用 [重新執行組態] 對話方塊所指定的選項。  
+ 本主題描述使用 [重新執行組態]  對話方塊所指定的選項。  
   
 > [!NOTE]  
 >  我們建議您使用分散式重新執行公用程式來重新執行密集的 OLTP 應用程式 (具有許多使用中並行連接或高輸送量)。 分散式重新執行公用程式可以從多部電腦重新執行追蹤資料，並有效模擬關鍵任務的工作負載。 如需詳細資訊，請參閱 [SQL Server Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)。  
@@ -63,7 +63,7 @@ ms.locfileid: "63025738"
  重新執行您從清單中選擇的 SPID 號碼。  
   
  **依日期和時間限制重新執行**  
- 針對所指定的 [開始時間] 及 [結束時間] 來重新執行追蹤。  
+ 針對所指定的 [開始時間]  及 [結束時間]  來重新執行追蹤。  
   
  **健全狀況監視器等候間隔**  
  設定可允許處理序執行的時間量，時間一到，健全狀況監視器就會將其終止。  
@@ -75,7 +75,7 @@ ms.locfileid: "63025738"
  設定已封鎖之處理序監視器搜尋已封鎖或封鎖中處理序的頻率。  
   
 ## <a name="about-the-health-monitor"></a>關於健全狀況監視器  
- 健全狀況監視器是一個應用程式執行緒，可監視有關重新執行追蹤的模擬處理序，並結束重新執行作業中被封鎖的處理序。 您可以在 [重新執行組態] 對話方塊的 [進階重新執行選項] 索引標籤中，指定健全狀況監視器要等候幾秒，再結束被封鎖的處理序 ([健全狀況監視器等候間隔])。 如果您將此間隔設為 0，則健全狀況監視器就永遠都不會結束重新執行追蹤中的模擬封鎖處理序。  
+ 健全狀況監視器是一個應用程式執行緒，可監視有關重新執行追蹤的模擬處理序，並結束重新執行作業中被封鎖的處理序。 您可以在 [重新執行組態]  對話方塊的 [進階重新執行選項]  索引標籤中，指定健全狀況監視器要等候幾秒，再結束被封鎖的處理序 ([健全狀況監視器等候間隔]  )。 如果您將此間隔設為 0，則健全狀況監視器就永遠都不會結束重新執行追蹤中的模擬封鎖處理序。  
   
 ## <a name="see-also"></a>另請參閱  
  [重新執行追蹤](replay-traces.md)   

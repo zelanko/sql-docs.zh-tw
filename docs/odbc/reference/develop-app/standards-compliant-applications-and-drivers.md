@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8937c2b9c80209975d03963acb19ab5da9c99e39
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63148909"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>符合標準的應用程式和驅動程式
@@ -35,9 +35,9 @@ ms.locfileid: "63148909"
   
  符合標準的應用程式會出現下列行為：  
   
--   如果符合標準的應用程式呼叫**SQLAllocEnv** (這可能是因為**SQLAllocEnv**是有效的函式中，開啟 群組和 ISO CLI)，在呼叫對應至**SQLAllocHandleStd**在編譯時期。 如此一來，在執行階段，應用程式會呼叫**SQLAllocHandleStd**。 在處理此呼叫過程中，驅動程式管理員會設定為 SQL_OV_ODBC3 SQL_ATTR_ODBC_VERSION 環境屬性。 呼叫**SQLAllocHandleStd**相當於呼叫**SQLAllocHandle**具有*HandleType* SQL_HANDLE_ENV 和呼叫**SQLSetEnvAttr** SQL_ATTR_ODBC_VERSION 設定為 SQL_OV_ODBC3。  
+-   如果符合標準的應用程式呼叫**SQLAllocEnv** (這可能是因為**SQLAllocEnv**是有效的函式中，開啟 [群組和 ISO CLI)，在呼叫對應至**SQLAllocHandleStd**在編譯時期。 如此一來，在執行階段，應用程式會呼叫**SQLAllocHandleStd**。 在處理此呼叫過程中，驅動程式管理員會設定為 SQL_OV_ODBC3 SQL_ATTR_ODBC_VERSION 環境屬性。 呼叫**SQLAllocHandleStd**相當於呼叫**SQLAllocHandle**具有*HandleType* SQL_HANDLE_ENV 和呼叫**SQLSetEnvAttr** SQL_ATTR_ODBC_VERSION 設定為 SQL_OV_ODBC3。  
   
--   如果符合標準的應用程式呼叫**SQLBindParam** (這可能是因為**SQLBindParam**是有效的函式中，開啟 群組和 ISO CLI)，ODBC 3 *.x*驅動程式管理員會將對應的呼叫中的對等呼叫**SQLBindParameter**。 (請參閱[SQLBindParam 對應](../../../odbc/reference/appendixes/sqlbindparam-mapping.md)附錄 g:驅動程式的指導方針提供回溯相容性。）  
+-   如果符合標準的應用程式呼叫**SQLBindParam** (這可能是因為**SQLBindParam**是有效的函式中，開啟 [群組和 ISO CLI)，ODBC 3 *.x*驅動程式管理員會將對應的呼叫中的對等呼叫**SQLBindParameter**。 (請參閱[SQLBindParam 對應](../../../odbc/reference/appendixes/sqlbindparam-mapping.md)附錄 g:驅動程式的指導方針提供回溯相容性。）  
   
 -   若要使用 ISO CLI，而 ODBC 3 對齊 *.x*標頭檔包含對呼叫中使用的資訊類型的別名**SQLGetInfo**。 符合標準的應用程式可以使用這些別名，而不是 ODBC 3 *.x*資訊類型。 如需詳細資訊，請參閱下一個主題中，[標頭檔](../../../odbc/reference/develop-app/header-files.md)。  
   

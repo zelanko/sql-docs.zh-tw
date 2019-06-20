@@ -12,10 +12,10 @@ author: yualan
 ms.author: alayu
 manager: jroth
 ms.openlocfilehash: c21cab43211e168802e8acd94d4664124182b2de
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798047"
 ---
 # <a name="sql-server-agent-extension-preview"></a>SQL Server Agent 擴充功能 （預覽）
@@ -37,6 +37,7 @@ SQL Server Agent 擴充功能 （預覽） 是管理和疑難排解 SQL Agent �
 1. 選取您想要的延伸模組並**安裝**它。
 2. 選取**重新載入**以啟用該擴充功能 (只有第一次安裝擴充功能時需要)。
 1. 透過滑鼠右鍵點選伺服器或資料庫並點選**管理**，瀏覽您的管理儀表板。
+
 2. 已安裝的擴充功能會以索引標籤方式顯示在您的管理儀表板上：
 
    ![檢視代理程式](media/extensions/sql-server-agent-extension/view-sql-agent.png)

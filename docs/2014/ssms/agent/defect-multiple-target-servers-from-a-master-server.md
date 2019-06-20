@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0123027ac9aa87d616b52ac5cc26f36a20f7e1e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62524012"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>使多個目標伺服器脫離主要伺服器
@@ -33,15 +33,15 @@ ms.locfileid: "62524012"
   
 1.  在 **[物件總管]** 中，展開設定為主要伺服器的伺服器。  
   
-2.  在 [SQL Server Agent]，再指向 [多伺服器管理]，然後按一下 [管理目標伺服器]。  
+2.  在 [SQL Server Agent]  ，再指向 [多伺服器管理]  ，然後按一下 [管理目標伺服器]  。  
   
-3.  按一下 **[公佈指示]**，然後在 **[指示類型]** 清單中選取 **[脫離]**。  
+3.  按一下 **[公佈指示]** ，然後在 **[指示類型]** 清單中選取 **[脫離]** 。  
   
 4.  在 **[收件者]** 下，執行下列其中一項：  
   
     -   按一下 **[所有目標伺服器]** ，脫離此主要伺服器的所有目標伺服器。 如果您要完整解除安裝目前的多伺服器管理組態，請使用此選項。  
   
-    -   按一下 **[下列目標伺服器]**，然後按一下對應的 **[選取]** 方塊，脫離此主要伺服器的部份目標伺服器，但不是所有目標伺服器。  
+    -   按一下 **[下列目標伺服器]** ，然後按一下對應的 **[選取]** 方塊，脫離此主要伺服器的部份目標伺服器，但不是所有目標伺服器。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立多伺服器環境](create-a-multiserver-environment.md)   

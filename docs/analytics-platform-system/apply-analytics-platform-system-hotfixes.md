@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b4b72017bb23ae44da9c5884f0ebf2a8b099fd3e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63019043"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>套用 Analytics Platform System Hotfix
@@ -32,7 +32,7 @@ ms.locfileid: "63019043"
   
 -   具有權限存取管理主控台來監視設備狀態 Analytics Platform System 登入。 <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   網狀架構網域系統管理員帳戶連接到的知識 _< 網域名稱 >_**-HST01**節點。  
+-   網狀架構網域系統管理員帳戶連接到的知識 _< 網域名稱 >_ **-HST01**節點。  
   
 ## <a name="HowToInstallPDW"></a>套用 Analytics Platform System hotfix  
 不同於 Microsoft updates，Analytics Platform System 軟體 hotfix 不會處理透過 WSUS。 它們有不同的工作流程，並會安裝在執行 hotfix 封裝。  

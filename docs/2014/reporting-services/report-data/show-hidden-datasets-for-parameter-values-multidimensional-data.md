@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 92db49f8f6a112f8466fc81527b214bad7252f82
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107061"
 ---
 # <a name="show-hidden-datasets-for-parameter-values-for-multidimensional-data-report-builder-and-ssrs"></a>針對多維度資料的參數值顯示隱藏的資料集 (報表產生器及 SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66107061"
   
 ### <a name="to-display-hidden-datasets"></a>顯示隱藏的資料集  
   
--   在 [報表資料] 窗格中，以滑鼠右鍵按一下 [資料集] 資料夾，然後按一下 [顯示隱藏資料集]。  
+-   在 [報表資料] 窗格中，以滑鼠右鍵按一下 [資料集] 資料夾，然後按一下 [顯示隱藏資料集]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [查詢設計工具 &#40;報表產生器&#41;](../query-designers-report-builder.md)   

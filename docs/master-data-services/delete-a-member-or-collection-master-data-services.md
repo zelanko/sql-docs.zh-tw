@@ -18,10 +18,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b702219ebf0c6a4a7eaec33c21fccc5fb821454c
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478586"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>刪除成員或集合 (Master Data Services)
@@ -48,23 +48,23 @@ ms.locfileid: "65478586"
   
 2.  從 **[版本]** 清單中選取版本。  
   
-3.  按一下 **[總管]**。  
+3.  按一下 **[總管]** 。  
   
 4.  若要刪除：  
   
-    -   分葉成員，請從功能表列指向 [實體]，然後按一下包含該成員的實體名稱。  
+    -   分葉成員，請從功能表列指向 [實體]  ，然後按一下包含該成員的實體名稱。  
   
-    -   合併成員，請從功能表列指向 [階層]，然後按一下包含該成員的階層名稱。 然後按一下階層中包含此成員的節點。  
+    -   合併成員，請從功能表列指向 [階層]  ，然後按一下包含該成員的階層名稱。 然後按一下階層中包含此成員的節點。  
   
-    -   集合，請從功能表列指向 [集合]，然後按一下包含該集合的實體名稱。  
+    -   集合，請從功能表列指向 [集合]  ，然後按一下包含該集合的實體名稱。  
   
 5.  在方格中，按一下要刪除之成員或集合的資料列。  
   
-6.  按一下 [刪除成員]、[刪除] 或 [刪除集合]。  
+6.  按一下 [刪除成員]  、[刪除]  或 [刪除集合]  。  
   
 7.  實體系統管理員也會在實體版本中看到清除 (永久刪除) 所有虛刪除成員的功能表選項。  
   
-8.  在確認對話方塊中按一下 **[確定]**。  
+8.  在確認對話方塊中按一下 **[確定]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [重新啟用成員或集合 &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   

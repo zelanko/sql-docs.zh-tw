@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6da2326c22d0581f59c2307abf018a54915857a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62732470"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 模式中的 DAX 公式相容性 (SSAS 2014)

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 001b90eafd26c90f730e5647f0dc62d756ca9d1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62503773"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>如何產生預測與使用 SQL Server 中的機器學習服務模型的預測
@@ -84,7 +84,7 @@ _評分_是兩個步驟的程序。 首先，您可以指定已定型的模型�
 
 **使用 SQL**
 
-從 SQL 程式碼中，您可以訓練模型使用[sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)，並直接插入至資料表，類型的資料行中的 定型的模型**varbinary （max)**。 如需簡單的範例，請參閱[在 R 中建立 preditive 模型](../tutorials/rtsql-create-a-predictive-model-r.md)
+從 SQL 程式碼中，您可以訓練模型使用[sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)，並直接插入至資料表，類型的資料行中的 定型的模型**varbinary （max)** 。 如需簡單的範例，請參閱[在 R 中建立 preditive 模型](../tutorials/rtsql-create-a-predictive-model-r.md)
 
 **使用 R**
 

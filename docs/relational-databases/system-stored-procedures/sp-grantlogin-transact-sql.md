@@ -19,10 +19,10 @@ ms.author: vanto
 manager: jroth
 author: VanMSFT
 ms.openlocfilehash: efed12f21dd3413108849124d1326d7ec2c8540c
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822757"
 ---
 # <a name="spgrantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)

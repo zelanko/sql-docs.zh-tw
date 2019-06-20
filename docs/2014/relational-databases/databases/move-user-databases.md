@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 602ac6de5a2b623e33b1b85b46a9f8cf31e0b225
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871715"
 ---
 # <a name="move-user-databases"></a>移動使用者資料庫

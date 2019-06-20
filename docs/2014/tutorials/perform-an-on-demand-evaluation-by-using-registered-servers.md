@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822378"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>使用已註冊的伺服器執行指定評估

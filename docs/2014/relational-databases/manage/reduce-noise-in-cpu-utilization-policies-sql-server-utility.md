@@ -13,17 +13,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ce41c287105f97ce4a9cc0ce92facf9919f7ad33
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035767"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>降低 CPU 使用量原則的雜訊 (SQL Server 公用程式)
   使用下列策略，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式資源使用量原則中減少報告雜訊及不必要的違規。  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-overutilized"></a>將處理器使用量報告為過高之前，其違規的頻率應該是多少？  
- 您可以在公用程式總管中，使用 **[公用程式管理]** 節點的 **[原則]** 索引標籤設定來設定評估期間和違規百分比的容錯。 若要變更原則，請使用原則描述右邊的滑動軸控制項，然後按一下 **[套用]**。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
+ 您可以在公用程式總管中，使用 **[公用程式管理]** 節點的 **[原則]** 索引標籤設定來設定評估期間和違規百分比的容錯。 若要變更原則，請使用原則描述右邊的滑動軸控制項，然後按一下 **[套用]** 。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
   
 -   資料收集間隔是 15 分鐘。 您無法設定這個值。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63035767"
 -   提高 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Managed 執行個體和資料層應用程式之處理器使用量的原則臨界值。 如需如何變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體或資料層應用程式之全域 CPU 使用量原則的詳細資訊，請參閱 [公用程式管理 &#40;SQL Server 公用程式&#41;](../../database-engine/utility-administration-sql-server-utility.md)。 如需如何變更個別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之 CPU 使用量原則的詳細資訊，請參閱[受管理的執行個體詳細資料 &#40;SQL Server 公用程式&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)。 如需如何變更個別資料層應用程式之 CPU 使用量原則的詳細資訊，請參閱[部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)。  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-underutilized"></a>將處理器使用量報告為過低之前，其違規的頻率應該是多少？  
- 您可以在公用程式總管中，使用 **[公用程式管理]** 節點的 **[原則]** 索引標籤設定來設定評估期間和違規百分比的容錯。 若要變更原則，請使用原則描述右邊的滑動軸控制項，然後按一下 **[套用]**。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
+ 您可以在公用程式總管中，使用 **[公用程式管理]** 節點的 **[原則]** 索引標籤設定來設定評估期間和違規百分比的容錯。 若要變更原則，請使用原則描述右邊的滑動軸控制項，然後按一下 **[套用]** 。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
   
 -   資料收集間隔是 15 分鐘。 您無法設定這個值。  
   

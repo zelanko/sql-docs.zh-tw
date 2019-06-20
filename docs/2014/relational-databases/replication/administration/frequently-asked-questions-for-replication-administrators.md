@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63207055"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>複寫管理員的常見問題集
@@ -88,7 +88,7 @@ ms.locfileid: "63207055"
 ### <a name="can-multiple-publications-use-the-same-distribution-database"></a>多個發行集是否可以使用相同的散發資料庫？  
  是的。 可以使用相同散發資料庫的發行集沒有數量或類型的限制。 給定「發行者」的所有發行集必須使用相同的「散發者」和散發資料庫。  
   
- 如果您有多個發行集，則可在「散發者」端設定多個散發資料庫，以確定每個散發資料庫中的資料流程來自單一發行集。 使用 [散發者屬性] 對話方塊或 [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) 以新增散發資料庫。 如需存取對話方塊的詳細資訊，請參閱[檢視和修改散發者和發行者屬性](../view-and-modify-distributor-and-publisher-properties.md)。  
+ 如果您有多個發行集，則可在「散發者」端設定多個散發資料庫，以確定每個散發資料庫中的資料流程來自單一發行集。 使用 [散發者屬性]  對話方塊或 [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) 以新增散發資料庫。 如需存取對話方塊的詳細資訊，請參閱[檢視和修改散發者和發行者屬性](../view-and-modify-distributor-and-publisher-properties.md)。  
   
 ### <a name="how-do-i-find-information-on-the-distributor-and-publisher-such-as-which-objects-in-a-database-are-published"></a>如何尋找「散發者」和「發行者」的資訊 (例如，資料庫中哪些物件已發行)？  
  此資訊可透過 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]和數個複寫預存程序獲得。 如需詳細資訊，請參閱 [Distributor and Publisher Information Script](distributor-and-publisher-information-script.md)。  
@@ -151,9 +151,9 @@ ms.locfileid: "63207055"
   
 -   指定在重新初始化訂閱時不應卸除物件。 在重新初始化之前，執行下列其中一項：  
   
-    -   執行 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) 或 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 指定**sp_changearticle**參數的 'pre_creation_cmd' (**sp_changemergearticle**) 或 'pre_creation_command' ( **@property** )，以及 **@value**。  
+    -   執行 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) 或 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 指定**sp_changearticle**參數的 'pre_creation_cmd' (**sp_changemergearticle**) 或 'pre_creation_command' ( **@property** )，以及 **@value** 。  
   
-    -   在 [發行項屬性 - \<發行項>] 對話方塊的 [目的地物件] 區段中，選取 [不要變更現有物件]、[刪除資料。如果發行項有資料列篩選，僅刪除符合篩選的資料。] 或 [截斷現有物件中的所有資料] 作為 [如果名稱使用中，則採取動作] 選項的值。 如需存取這個對話方塊的詳細資訊，請參閱[檢視和修改發行集屬性](../publish/view-and-modify-publication-properties.md)。  
+    -   在 [發行項屬性 - \<發行項>]  對話方塊的 [目的地物件]  區段中，選取 [不要變更現有物件]  、[刪除資料。  如果發行項有資料列篩選，僅刪除符合篩選的資料。] 或 [截斷現有物件中的所有資料]  作為 [如果名稱使用中，則採取動作]  選項的值。 如需存取這個對話方塊的詳細資訊，請參閱[檢視和修改發行集屬性](../publish/view-and-modify-publication-properties.md)。  
   
 ## <a name="database-maintenance"></a>資料庫維護  
   
@@ -181,7 +181,7 @@ ms.locfileid: "63207055"
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，移動或重新命名資料庫檔案需要卸離及重新附加資料庫。 因為複寫的資料庫無法卸離，所以必須先從這些資料庫中移除複寫。 從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]開始，您可以在不卸離或重新附加資料庫的情況下移動或重新命名檔案，而不會影響複寫。 如需移動和重新命名檔案的詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)。  
   
 ### <a name="how-do-i-drop-a-table-that-is-being-replicated"></a>如何卸除正在複寫的資料表？  
- 首先使用 [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)、[sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) 或 [發行集屬性 - \<發行集>] 對話方塊從發行集中卸除發行項，然後使用 `DROP <Object>` 將其從資料庫中卸除。 訂閱已加入之後，不可從快照集或交易式發行集卸除發行項，必須先卸除訂閱。 如需詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
+ 首先使用 [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)、[sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) 或 [發行集屬性 - \<發行集>]  對話方塊從發行集中卸除發行項，然後使用 `DROP <Object>` 將其從資料庫中卸除。 訂閱已加入之後，不可從快照集或交易式發行集卸除發行項，必須先卸除訂閱。 如需詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>如何在已發行的資料表中新增或卸除資料行？  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援在已發行物件上進行各種結構描述變更，包括新增和卸除資料行。 例如，在發行者端執行 ALTER TABLE ...DROP COLUMN，並將陳述式複寫至訂閱者，然後執行以卸除資料行。 執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本的「訂閱者」支援透過預存程序 [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) 和 [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql)新增和卸除資料行。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../publish/make-schema-changes-on-publication-databases.md)。  
@@ -192,10 +192,10 @@ ms.locfileid: "63207055"
  使用驗證。 驗證將報告給定「訂閱者」是否與「發行者」同步。 如需詳細資訊，請參閱[驗證複寫的資料](../validate-data-at-the-subscriber.md)。 驗證不會提供未正確同步之資料列 (若有的話) 的資訊，但 [tablediff 公用程式](../../../tools/tablediff-utility.md) 可以提供。  
   
 ### <a name="how-do-i-add-a-table-to-an-existing-publication"></a>如何將資料表新增至現有的發行集？  
- 新增資料表 (或其他物件) 時不必停止發行集或訂閱資料庫中的活動。 透過 [發行集屬性 - \<發行集>] 對話方塊或預存程序 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 和 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)，將資料表新增至發行集。 如需詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
+ 新增資料表 (或其他物件) 時不必停止發行集或訂閱資料庫中的活動。 透過 [發行集屬性 - \<發行集>]  對話方塊或預存程序 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 和 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)，將資料表新增至發行集。 如需詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ### <a name="how-do-i-remove-a-table-from-a-publication"></a>如何從發行集中移除資料表？  
- 使用 [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)、[sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) 或 [發行集屬性 - \<發行集>] 對話方塊從發行集中移除資料表。 訂閱已加入之後，不可從快照集或交易式發行集卸除發行項，必須先卸除訂閱。 如需詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
+ 使用 [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)、[sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) 或 [發行集屬性 - \<發行集>]  對話方塊從發行集中移除資料表。 訂閱已加入之後，不可從快照集或交易式發行集卸除發行項，必須先卸除訂閱。 如需詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ### <a name="what-actions-require-subscriptions-to-be-reinitialized"></a>哪些動作需要重新初始化訂閱？  
  有許多發行項和發行集變更需要重新初始化訂閱。 如需詳細資訊，請參閱[變更發行集與發行項屬性](../publish/change-publication-and-article-properties.md)。  

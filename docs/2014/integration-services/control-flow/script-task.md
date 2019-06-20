@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7c710065bf0a87b5ec3850010344f2ef5114022e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62830559"
 ---
 # <a name="script-task"></a>指令碼工作
@@ -43,7 +43,7 @@ ms.locfileid: "62830559"
 ## <a name="writing-and-running-the-script-that-the-task-uses"></a>撰寫並執行工作使用的指令碼  
  指令碼工作使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 當做撰寫指令碼以及執行這些指令碼之引擎的環境。  
   
- VSTA 提供 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境的所有標準功能，例如色彩編碼的 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 編輯器、IntelliSense 和 [物件總管]。 VSTA 也使用其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 開發工作使用的相同偵錯工具。 指令碼中的中斷點能與 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 工作和容器上的中斷點合作無間。 VSTA 支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 程式語言。  
+ VSTA 提供 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境的所有標準功能，例如色彩編碼的 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 編輯器、IntelliSense 和 [物件總管]  。 VSTA 也使用其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 開發工作使用的相同偵錯工具。 指令碼中的中斷點能與 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 工作和容器上的中斷點合作無間。 VSTA 支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 程式語言。  
   
  若要執行指令碼，必須在封裝執行的電腦上安裝 VSTA。 當封裝執行時，工作會載入指令碼引擎並執行指令碼。 您可以在專案中將參考加入至組件，藉此在指令碼中存取外部 .NET 組件。  
   

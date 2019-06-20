@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7d879ffb8f02b41c4cc6c070946c737f9aea2c4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065732"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>翻譯 (維度設計師) (Analysis Services - 多維度資料)
@@ -26,10 +26,10 @@ ms.locfileid: "66065732"
  **[翻譯]** 索引標籤包含下列窗格：  
   
  [工具列](toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md)  
- 在維度設計師的 [翻譯] 索引標籤中，使用工具列來執行一般動作。  
+ 在維度設計師的 [翻譯]  索引標籤中，使用工具列來執行一般動作。  
   
  [翻譯詳細資料](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
- 使用 [翻譯詳細資料] 窗格，即可瀏覽和管理與維度相關聯的翻譯。  
+ 使用 [翻譯詳細資料]  窗格，即可瀏覽和管理與維度相關聯的翻譯。  
   
 ## <a name="see-also"></a>另請參閱  
  [維度設計師&#40;Analysis Services-多維度資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)   

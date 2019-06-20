@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 403e0af44fc1db7efaf674d02ed0e3b94e81a5b6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916872"
 ---
 # <a name="estimate-the-size-of-a-table"></a>估計資料表的大小

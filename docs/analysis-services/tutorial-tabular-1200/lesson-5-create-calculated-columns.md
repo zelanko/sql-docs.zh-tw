@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df9b5a6d490b33b9aea786290acb7454d0066453
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404180"
 ---
 # <a name="lesson-5-create-calculated-columns"></a>第 5 課：建立導出資料行
@@ -32,7 +32,7 @@ ms.locfileid: "65404180"
   
 #### <a name="create-a-monthcalendar-calculated-column-in-the-dimdate-table"></a>在 DimDate 資料表中建立 MonthCalendar 計算結果的欄  
   
-1.  按一下 **模型**功能表 >**模型檢視** > **資料檢視**。  
+1.  按一下 [**模型**功能表 >**模型檢視** > **資料檢視**。  
   
     導出資料行只能使用模型設計師在「資料檢視」中建立。  
   
@@ -58,7 +58,7 @@ MonthCalendar 計算結果欄提供可排序的月份名稱。
   
 #### <a name="create-a-dayofweek-calculated-column-in-the-dimdate-table"></a>在 DimDate 資料表中建立 DayOfWeek 計算結果的欄  
   
-1.  具有**DimDate**資料表仍為使用中，按一下 **資料行**功能表，然後再按一下**加入資料行**。  
+1.  具有**DimDate**資料表仍為使用中，按一下 [**資料行**功能表，然後再按一下**加入資料行**。  
   
 2.  在公式列中，輸入下列公式：  
     
@@ -80,7 +80,7 @@ DayOfWeek 計算結果欄提供可排序的星期幾名稱。
 #### <a name="create-a-productsubcategoryname-calculated-column-in-the-dimproduct-table"></a>在 DimProduct 資料表中建立 ProductSubcategoryName 計算結果的欄  
   
   
-1.  在  **DimProduct**資料表中，捲動到右邊的資料表。 您會發現，最右側的資料行命名為 [加入資料行] \(斜體)，請按一下該欄位標題。  
+1.  在 [ **DimProduct**資料表中，捲動到右邊的資料表。 您會發現，最右側的資料行命名為 [加入資料行] \(斜體)，請按一下該欄位標題。  
   
 2.  在公式列中，輸入下列公式。  
     
@@ -94,7 +94,7 @@ ProductSubcategoryName 導出資料行用來建立階層，其中包括 [english
   
 #### <a name="create-a-productcategoryname-calculated-column-in-the-dimproduct-table"></a>在 DimProduct 資料表中建立 ProductCategoryName 計算結果的欄  
   
-1.  具有**DimProduct**資料表仍在作用中，按一下 **資料行**功能表，然後再按一下**加入資料行**。  
+1.  具有**DimProduct**資料表仍在作用中，按一下 [**資料行**功能表，然後再按一下**加入資料行**。  
   
 2.  在公式列中，輸入下列公式：  
   

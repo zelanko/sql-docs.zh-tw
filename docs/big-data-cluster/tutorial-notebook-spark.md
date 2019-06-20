@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 91daed271ca8e6a8eb04928a0806b287163143a8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66770867"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>教學課程：SQL Server 的巨量資料叢集上執行 notebook 範例

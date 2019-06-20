@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a66d4665af9980822f5ce4c41ed0b94964fa8c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62634923"
 ---
 # <a name="languages-and-collations-analysis-services"></a>語言和定序 (Analysis Services)
@@ -66,7 +66,7 @@ ms.locfileid: "62634923"
   
 -   0x0407 或 1031，代表 [德文 (德國)]   
   
--   0x0416 或 1046，代表 [葡萄牙文 (巴西)] 。  
+-   0x0416 或 1046，代表 [葡萄牙文 (巴西)]  。  
   
  若要檢視較長的清單，請參閱 [Microsoft 指派的地區設定識別碼](http://msdn.microsoft.com/goglobal/bb964664.aspx)。 如需更多背景，請參閱 [編碼方式和字碼頁](/globalization/encoding/encoding-overview)。  
   
@@ -124,11 +124,11 @@ ms.locfileid: "62634923"
   
 -   更新定序之後，請重新處理資料分割和維度。  
   
- 您可以在伺服器層級，使用 SQL Server Management Studio 或 AMO PowerShell 來變更預設語言或定序。 或者，您可以在其中修改**\<語言 >** 並 **\<CollationName >** 在 msmdsrv.ini 檔案中，設定指定之語言的 LCID。  
+ 您可以在伺服器層級，使用 SQL Server Management Studio 或 AMO PowerShell 來變更預設語言或定序。 或者，您可以在其中修改 **\<語言 >** 並 **\<CollationName >** 在 msmdsrv.ini 檔案中，設定指定之語言的 LCID。  
   
-1.  在 Management Studio 中，在伺服器名稱上按一下滑鼠右鍵 | [屬性] | [語言/定序]。  
+1.  在 Management Studio 中，在伺服器名稱上按一下滑鼠右鍵 | [屬性]   | [語言/定序]  。  
   
-2.  選擇排序選項。 若要選取 [二進位]  或 [二進位 2] ，請先清除 [區分腔調字] 的核取方塊。  
+2.  選擇排序選項。 若要選取 [二進位]  或 [二進位 2]  ，請先清除 [區分腔調字]  的核取方塊。  
   
      請注意，定序和語言是完全無關的設定。 如果您變更其中一項，並不會篩選另一項的值以顯示常見組合。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "62634923"
   
  使用 XMLA 修改現有的資料庫之前，請確定您沒有引入資料庫與用來建立資料庫的原始程式檔之間的差異。 例如，您可能想要使用 XMLA 來快速變更概念驗證測試的語言或定序，然後追蹤原始程式檔的變更 (請參閱 [變更 Cube 上的語言或定序](#bkmk_cube))，並使用已存在的作業程序來重新部署方案。  
   
-1.  在 Management Studio 中，在資料庫上按一下滑鼠右鍵 | [編寫資料庫的指令碼為] | [ALTER 至] | [新增查詢編輯器視窗]。  
+1.  在 Management Studio 中，在資料庫上按一下滑鼠右鍵 | [編寫資料庫的指令碼為]   | [ALTER 至]   | [新增查詢編輯器視窗]  。  
   
 2.  搜尋現有的語言或定序，並以替代值取代。  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7d3ee86844f2b120c69e2cc2ddef55644cce8f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714335"
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
@@ -67,7 +67,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
  您必須指定這個參數，如果*mapping_id*是 NULL。  
   
-`[ @source_version = ] 'source_version'` 是來源 DBMS 的版本號碼。 *source_version*已**varchar(10)**，預設值是 NULL。  
+`[ @source_version = ] 'source_version'` 是來源 DBMS 的版本號碼。 *source_version*已**varchar(10)** ，預設值是 NULL。  
   
 `[ @source_type = ] 'source_type'` 是來源 DBMS 中的資料類型。 *source_type*已**sysname**。 您必須指定這個參數，如果*mapping_id*是 NULL。  
   
@@ -95,7 +95,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 |**SYBASE**|目的地是一個 Sybase 資料庫。|  
 |NULL (預設值)||  
   
-`[ @destination_version = ] 'destination_version'` 這是目的地 DBMS 的產品版本。 *destination_version*已**varchar(10)**，預設值是 NULL。  
+`[ @destination_version = ] 'destination_version'` 這是目的地 DBMS 的產品版本。 *destination_version*已**varchar(10)** ，預設值是 NULL。  
   
 `[ @destination_type = ] 'destination_type'` 目的地 DBMS 中列出的資料類型。 *destination_type*已**sysname**，預設值是 NULL。  
   

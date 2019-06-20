@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d936c1a1086f13d43bc38758f86a0ab80f757f7b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63249375"
 ---
 # <a name="subscription-type"></a>訂閱類型
@@ -33,7 +33,7 @@ ms.locfileid: "63249375"
 > [!NOTE]  
 >  建立訂閱之後，就無法變更訂閱類型。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **訂閱屬性**  
  針對每個訂閱者，請從 **[訂閱類型]** 資料行的下拉式清單方塊中選取 **[客訂閱]** 或 **[主訂閱]** 。 針對擁有主訂閱的訂閱者，請在 **[衝突解決的優先權]** 資料行中輸入介於 0 和 99.99 之間的數字 (數字愈高，訂閱者的優先權就愈高)。  
   

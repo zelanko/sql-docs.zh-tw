@@ -8,10 +8,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 2df4fa2fd9ef52fe5edbca9440f73f351553f1ed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62642347"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>SQL Server 中的 R 指令碼錯誤

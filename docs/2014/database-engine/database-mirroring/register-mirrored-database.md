@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b5be7eb52d0aa8c0a94b1a4ff63493e7f641bdbd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754458"
 ---
 # <a name="register-mirrored-database"></a>註冊鏡像資料庫
@@ -29,7 +29,7 @@ ms.locfileid: "62754458"
   
 -   [啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **伺服器執行個體**  
  從包含「資料庫鏡像監視器」已經儲存連接之伺服器執行個體的清單中選取一個伺服器執行個體，或是按一下 [連接] 。 若要為清單中所列的伺服器執行個體指定新的認證，請按一下 [連接]  並使用新的認證來連接。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62754458"
   
 |資料行名稱|描述|  
 |-----------------|-----------------|  
-|**註冊**|檢查您要註冊的每一個資料庫。 如果資料庫目前受到監視，則其核取方塊為已選取和停用狀態。<br /><br /> 注意:若要取消註冊資料庫，請關閉**註冊鏡像資料庫** 對話方塊中，瀏覽樹狀目錄中選取的資料庫，然後選取**取消註冊**從**動作**功能表。|  
+|**註冊**|檢查您要註冊的每一個資料庫。 如果資料庫目前受到監視，則其核取方塊為已選取和停用狀態。<br /><br /> 注意:若要取消註冊資料庫，請關閉 [註冊鏡像資料庫] 對話方塊，在導覽樹狀目錄中選取資料庫，然後選取 [動作] 功能表中的 [取消註冊]。|  
 |**[資料庫備份]**|選取之伺服器執行個體上的鏡像資料庫名稱。|  
 |**目前的角色**|資料庫目前在選取之伺服器執行個體上的鏡像角色，可為 [主體] 或 [鏡像]。|  
 |**夥伴 (連接為)**|資料庫的容錯移轉夥伴名稱。 **在括**弧內 **會顯示 主控台使用者的 Windows 驗證] 或 [登入 '***\<登入名稱>***'** 的 SQL Server 驗證。 如果之前已加入這個執行個體，則這是目前使用的驗證資訊；如果尚未將這個執行個體加入至監視器，則這是將要使用的驗證資訊。|  

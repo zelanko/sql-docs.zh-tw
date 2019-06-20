@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ef7f15fc1b54d18c71d7fccfd379454911cb8961
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62875001"
 ---
 # <a name="restore-database-files-page"></a>還原資料庫 (檔案頁面)
   使用 **[還原資料庫]** 對話方塊的 **[檔案]** 頁面，管理資料庫中已選擇要還原的特定檔案。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 ### <a name="restore-database-files-as"></a>將資料庫檔案還原為  
  用來指派和管理已還原之檔案的新檔案路徑。  

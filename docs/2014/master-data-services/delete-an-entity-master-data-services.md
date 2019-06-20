@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8bcadc041fd1f2c4fd708fbc79ab52d0c0472956
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479571"
 ---
 # <a name="delete-an-entity-master-data-services"></a>刪除實體 (Master Data Services)
@@ -43,7 +43,7 @@ ms.locfileid: "65479571"
   
 4.  選取要刪除之實體的資料列。  
   
-5.  按一下 **刪除選取的實體**。  
+5.  按一下 [**刪除選取的實體**。  
   
 6.  在確認對話方塊中按一下 **[確定]**。  
   

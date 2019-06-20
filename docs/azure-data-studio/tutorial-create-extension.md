@@ -12,10 +12,10 @@ author: kevcunnane
 ms.author: kcunnane
 manager: jroth
 ms.openlocfilehash: 2f031ec68cc6ae342b8bac51c450ee40a9df0555
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66797958"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>教學課程：建立 Azure Data Studio 擴充功能

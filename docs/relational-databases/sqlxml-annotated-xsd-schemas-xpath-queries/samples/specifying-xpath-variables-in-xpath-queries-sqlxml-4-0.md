@@ -16,10 +16,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9f6d8bb97da7bd678f23c13f48c6a4c973071b43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737477"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定 XPath 變數 (SQLXML 4.0)
@@ -29,7 +29,7 @@ ms.locfileid: "62737477"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-use-the-xpath-variables"></a>A. 使用 XPath 變數  
- 範例範本由兩個 XPath 查詢所組成。 每個 XPath 查詢都會採用一個參數。 此範本也會指定這些參數的預設值。 如果未指定參數值，則會使用預設值。 使用預設值的兩個參數中指定 **\<sql:header >**。  
+ 範例範本由兩個 XPath 查詢所組成。 每個 XPath 查詢都會採用一個參數。 此範本也會指定這些參數的預設值。 如果未指定參數值，則會使用預設值。 使用預設值的兩個參數中指定 **\<sql:header >** 。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

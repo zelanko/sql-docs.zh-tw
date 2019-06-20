@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aa4cd8349846a5c00f62f6cbf115b4cc3a1614ab
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480469"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>在 .NET Framework 更新之後升級 SQLCLR 組件

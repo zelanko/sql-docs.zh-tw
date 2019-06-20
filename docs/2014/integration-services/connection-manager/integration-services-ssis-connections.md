@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78c3ba452d3ba681823e5c9f473d7a86f55809a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62833775"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 連接
@@ -112,7 +112,7 @@ ms.locfileid: "62833775"
   
 -   technet.microsoft.com 上的影片： [沿用 Microsoft Attunity Connector for Oracle 來增強封裝效能](https://technet.microsoft.com/sqlserver/gg598963.aspx)  
   
--   social.technet.microsoft.com 上的 Wiki 文章： [SSIS 連接性](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)   
+-   social.technet.microsoft.com 上的 Wiki 文章： [SSIS 連接性](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)  
   
 -   blogs.msdn.com 上的部落格文章： [從 SSIS 連接至 MySQL](https://go.microsoft.com/fwlink/?LinkId=217669)。  
   

@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 00645f619a89010bb4e2b112d50e00cbc6f40dce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127151"
 ---
 # <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset (擴充預存程序 API)
@@ -76,14 +76,14 @@ len
   
 |新的資料類型|傳回資料長度|  
 |--------------------|------------------------|  
-|`BITN`|**NULL：***len* = 0、data = IG、RET = 0<br /><br /> **ZERO：** N/A<br /><br /> **>=255：** N/A<br /><br /> **<255：** N/A|  
-|`BIGVARCHAR`|**NULL：***len* = 0、data = IG、RET = 1<br /><br /> **ZERO：***len* = IG、data = IG、RET = 0<br /><br /> **>=255：***len* = max8k、data = valid、RET = 0<br /><br /> **<255：***len* = <8k、data = valid、RET = 1|  
-|`BIGCHAR`|**NULL：***len* = 0、data = IG、RET = 1<br /><br /> **ZERO：***len* = IG、data = IG、RET = 0<br /><br /> **>=255：***len* = max8k、data = valid、RET = 0<br /><br /> **<255：***len* = <8k、data = valid、RET = 1|  
-|`BIGBINARY`|**NULL：***len* = 0、data = IG、RET = 1<br /><br /> **ZERO：***len* = IG、data = IG、RET = 0<br /><br /> **>=255：***len* = max8k、data = valid、RET = 0<br /><br /> **<255：***len* = <8k、data = valid、RET = 1|  
-|`BIGVARBINARY`|**NULL：***len* = 0、data = IG、RET = 1<br /><br /> **ZERO：***len* = IG、data = IG、RET = 0<br /><br /> **>=255：***len* = max8k、data = valid、RET = 0<br /><br /> **<255：***len* = <8k、data = valid、RET = 1|  
-|NCHAR|**NULL：***len* = 0、data = IG、RET = 1<br /><br /> **ZERO：***len* = IG、data = IG、RET = 0<br /><br /> **>=255：***len* = max8k、data = valid、RET = 0<br /><br /> **<255：***len* = <8k、data = valid、RET = 1|  
-|NVARCHAR|**NULL：***len* = 0、data = IG、RET = 1<br /><br /> **ZERO：***len* = IG、data = IG、RET = 0<br /><br /> **>=255：***len* = max8k、data = valid、RET = 0<br /><br /> **<255：***len* = <8k、data = valid、RET = 1|  
-|`NTEXT`|**NULL：***len* = IG、data = IG、RET = 0<br /><br /> **ZERO：***len* = IG、data = IG、RET = 0<br /><br /> **>=255：***len* = IG、data = IG、RET = 0<br /><br /> **\<255：***len* = IG、data = IG、RET = 0|  
+|`BITN`|**NULL：** *len* = 0、data = IG、RET = 0<br /><br /> **ZERO：** N/A<br /><br /> **>=255：** N/A<br /><br /> **<255：** N/A|  
+|`BIGVARCHAR`|**NULL：** *len* = 0、data = IG、RET = 1<br /><br /> **ZERO：** *len* = IG、data = IG、RET = 0<br /><br /> **>=255：** *len* = max8k、data = valid、RET = 0<br /><br /> **<255：** *len* = <8k、data = valid、RET = 1|  
+|`BIGCHAR`|**NULL：** *len* = 0、data = IG、RET = 1<br /><br /> **ZERO：** *len* = IG、data = IG、RET = 0<br /><br /> **>=255：** *len* = max8k、data = valid、RET = 0<br /><br /> **<255：** *len* = <8k、data = valid、RET = 1|  
+|`BIGBINARY`|**NULL：** *len* = 0、data = IG、RET = 1<br /><br /> **ZERO：** *len* = IG、data = IG、RET = 0<br /><br /> **>=255：** *len* = max8k、data = valid、RET = 0<br /><br /> **<255：** *len* = <8k、data = valid、RET = 1|  
+|`BIGVARBINARY`|**NULL：** *len* = 0、data = IG、RET = 1<br /><br /> **ZERO：** *len* = IG、data = IG、RET = 0<br /><br /> **>=255：** *len* = max8k、data = valid、RET = 0<br /><br /> **<255：** *len* = <8k、data = valid、RET = 1|  
+|NCHAR|**NULL：** *len* = 0、data = IG、RET = 1<br /><br /> **ZERO：** *len* = IG、data = IG、RET = 0<br /><br /> **>=255：** *len* = max8k、data = valid、RET = 0<br /><br /> **<255：** *len* = <8k、data = valid、RET = 1|  
+|NVARCHAR|**NULL：** *len* = 0、data = IG、RET = 1<br /><br /> **ZERO：** *len* = IG、data = IG、RET = 0<br /><br /> **>=255：** *len* = max8k、data = valid、RET = 0<br /><br /> **<255：** *len* = <8k、data = valid、RET = 1|  
+|`NTEXT`|**NULL：** *len* = IG、data = IG、RET = 0<br /><br /> **ZERO：** *len* = IG、data = IG、RET = 0<br /><br /> **>=255：** *len* = IG、data = IG、RET = 0<br /><br /> **\<255：** *len* = IG、data = IG、RET = 0|  
 |RET = srv_paramset 的傳回值||  
 |IG = 值將會被略過||  
 |valid = 資料的任何有效指標||  

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a2a830ad4d6fa87cd754910baf8be53216086cab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810429"
 ---
 # <a name="change-the-service-startup-account-for-sql-server-sql-server-configuration-manager"></a>變更 SQL Server 的服務啟動帳戶 (SQL Server 組態管理員)
@@ -45,7 +45,7 @@ ms.locfileid: "62810429"
   
 #### <a name="to-change-the-sql-server-service-startup-account"></a>變更 SQL Server 服務啟動帳戶  
   
-1.  指向 **[開始]** 功能表上的 **[所有程式]**，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
+1.  指向 **[開始]** 功能表上的 **[所有程式]** ，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]** ，再按一下 **[SQL Server 組態管理員]** 。  
   
     > [!NOTE]  
     >  由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 程式的嵌入式管理單元，而不是獨立的程式，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員在較新版本的 Windows 中不會作為應用程式出現。  
@@ -55,17 +55,17 @@ ms.locfileid: "62810429"
     > -   **Windows 8**：  
     >          若要開啟  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager，請在**搜尋**快速鍵**應用程式**，型別**SQLServerManager\<版本 >.msc**例如`SQLServerManager12.msc`，然後按下**Enter**。  
   
-2.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，按一下 **[SQL Server 服務]**。  
+2.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，按一下 **[SQL Server 服務]** 。  
   
-3.  在詳細資料窗格中，以滑鼠右鍵按一下您要變更服務啟動帳戶的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，然後按一下 [屬性]。  
+3.  在詳細資料窗格中，以滑鼠右鍵按一下您要變更服務啟動帳戶的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，然後按一下 [屬性]  。  
   
-4.  在 [SQL Server \<執行個體名稱> 屬性] 對話方塊中，按一下 [登入] 索引標籤，然後選取 [登入身分] 帳戶類型。****  
+4.  在 [SQL Server \<執行個體名稱> 屬性] 對話方塊中，按一下 [登入] 索引標籤，然後選取 [登入身分] 帳戶類型。 ****    
   
-5.  選取新的服務啟動帳戶之後，請按一下 **[確定]**。  
+5.  選取新的服務啟動帳戶之後，請按一下 **[確定]** 。  
   
      此時會出現一個訊息方塊，詢問您是否想要重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
   
-6.  按一下 **[是]**，然後關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。  
+6.  按一下 **[是]** ，然後關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](start-stop-pause-resume-restart-sql-server-services.md)   

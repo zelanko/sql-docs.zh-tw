@@ -8,10 +8,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: e55093c83e9a306a06235d6bb613dac78d4677ce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62642311"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>在 R 中使用 OLAP cube 的資料
@@ -38,15 +38,15 @@ MDX 中，短的多維度運算式，是用來查詢 cube 的語言。 MDX 查�
 
 + *配量*採用的 cube 子集，藉由使用來自單一維度的值。
 
-+ 「切割」 藉由在多個維度上指定值範圍來建立 Subcube。
++ 「切割」  藉由在多個維度上指定值範圍來建立 Subcube。
 
-+ 「向下鑽研」 會從摘要巡覽至詳細資料。
++ 「向下鑽研」  會從摘要巡覽至詳細資料。
 
-+ 「向上鑽研」 會從詳細資料移至更高層級的彙總。
++ 「向上鑽研」  會從詳細資料移至更高層級的彙總。
 
-+ 「彙總」 會摘要維度上的資料。
++ 「彙總」  會摘要維度上的資料。
 
-+ 「樞紐」 會輪流選取 Cube 或資料。
++ 「樞紐」  會輪流選取 Cube 或資料。
 
 ## <a name="how-to-use-olapr-to-create-mdx-queries"></a>如何使用 olapR 建立 MDX 查詢
 
