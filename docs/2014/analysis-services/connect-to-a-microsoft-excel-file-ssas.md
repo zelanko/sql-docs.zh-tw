@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e49b37a6f344b7fc6c45c9767a05c7f7d5bfe6e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087314"
 ---
 # <a name="connect-to-a-microsoft-excel-file-ssas"></a>連接到 Microsoft Excel 檔案 (SSAS)
-  **[資料表匯入精靈]** 的這個頁面可讓您連接到儲存在本機電腦上的 Microsoft Excel 檔案。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
+  **[資料表匯入精靈]** 的這個頁面可讓您連接到儲存在本機電腦上的 Microsoft Excel 檔案。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]** 。  
   
  若要連接 Microsoft Excel 檔案，您必須先在電腦上安裝適當的 ACE 提供者。 如需詳細資訊，請參閱 [Data Sources Supported &#40;SSAS Tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md) (支援的資料來源 (SSAS 表格式))。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66087314"
  導覽至有 Excel 檔案可用的位置。  
   
  **進階**  
- 使用 [設定進階屬性] 對話方塊設定其他連接屬性。  
+ 使用 [設定進階屬性]  對話方塊設定其他連接屬性。  
   
  **第一個資料列做為資料行的標頭**  
  指定是否要使用第一個資料列做為目的地資料表的資料行標頭。  

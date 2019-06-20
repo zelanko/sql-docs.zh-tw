@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0de86b9690f0647803938218ce566508662da20e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094915"
 ---
 # <a name="how-to-install-upgrade-advisor"></a>HOW TO：安裝 Upgrade Advisor
@@ -40,17 +40,17 @@ ms.locfileid: "66094915"
     >   
     >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom 是安裝的必要條件[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Upgrade Advisor，並不會安裝 Upgrade Advisor 安裝程式。 安裝程式會要求您下載並安裝[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom 從[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Feature Pack。  
   
-2.  在 [**歡迎[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Upgrade Advisor 安裝程式**頁面上，按一下**下一步]**。  
+2.  在 [**歡迎[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Upgrade Advisor 安裝程式**頁面上，按一下**下一步]** 。  
   
 3.  在 **授權合約**頁面上，閱讀授權合約。 如果您同意，請選取**我接受授權合約**，然後按一下**下一步**。  
   
 4.  在 **註冊資訊**頁面上，輸入您的名稱和公司。  
   
-5.  在 **特徵**頁面上，檢閱**安裝路徑**值。 如有必要，使用**瀏覽**按鈕來變更位置。 按一下 [下一步] 。  
+5.  在 **特徵**頁面上，檢閱**安裝路徑**值。 如有必要，使用**瀏覽**按鈕來變更位置。 按一下 [下一步]  。  
   
 6.  在上**安裝程式準備好**頁面上，按一下**安裝**以便安裝 Upgrade Advisor。  
   
-7.  按一下 [完成] 結束精靈。  
+7.  按一下 [完成]  結束精靈。  
   
 ## <a name="see-also"></a>另請參閱  
  [升級建議程式必要條件](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  

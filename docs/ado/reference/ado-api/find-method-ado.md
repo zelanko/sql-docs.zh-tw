@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: a3f544ae5a38b50ed13ddbafb725c07e0c8a4c8e
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66697952"
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
@@ -50,7 +50,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ## <a name="remarks"></a>備註  
  只能在單一資料行名稱可以指定以*準則*。 這個方法不支援多重資料行搜尋。  
   
- 中的比較運算子*準則*可能是" **>** 」 （大於）、 「 **\<** "（小於）、"="（等於）、"> ="（大於或等於）"< ="（小於或等於）、 「 <>"（不等於） 或"like"（模式比對）。  
+ 中的比較運算子*準則*可能是"**>**」 （大於）、 「**\<**"（小於）、"="（等於）、"> ="（大於或等於）"< ="（小於或等於）、 「 <>"（不等於） 或"like"（模式比對）。  
   
  中的值*準則*可能是字串、 浮點數或日期。 字串值是以單引號或"#"（數字符號） 標記分隔 (比方說，」 狀態 = 'WA' 」 或 「 狀態 = #WA #")。 日期值會以"#"（數字符號） 標記 (例如，"start_date > #7/22/97 #")。 這些值可以包含小時、 分鐘和秒，表示時間戳記，但不是應包含毫秒，或將會發生錯誤。  
   

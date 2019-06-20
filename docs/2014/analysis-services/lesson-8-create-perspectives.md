@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd395e605bfde9d34ed0dc4f16060812464efb56
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078246"
 ---
 # <a name="lesson-9-create-perspectives"></a>第 9 課：建立檢視方塊
@@ -37,7 +37,7 @@ ms.locfileid: "66078246"
   
 1.  在模型設計師中，按一下**模型**功能表，然後再按一下**觀點**。  
   
-2.  在 [檢視方塊] 對話方塊中，按一下 [新增檢視方塊]。  
+2.  在 [檢視方塊]  對話方塊中，按一下 [新增檢視方塊]  。  
   
 3.  若要重新命名檢視方塊，請按兩下**新的檢視方塊 1**資料行標題，然後按`Internet Sales`。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66078246"
   
      請注意，您從此檢視方塊中排除了 Customer 資料表及其所有資料行。 稍後，您將在第 12 課中使用 [在 Excel 中進行分析] 功能測試此檢視方塊。 Excel 樞紐分析表欄位清單將包含 Customer 資料表之外的每個資料表。  
   
-5.  驗證您所做的選擇，確定未核取 [Customer] 資料表，然後按一下 [確定]  
+5.  驗證您所做的選擇，確定未核取 [Customer]  資料表，然後按一下 [確定]   
   
 ## <a name="next-steps"></a>後續步驟  
  若要繼續本教學課程，請移至下一課：[第 10 課：建立階層](lesson-9-create-hierarchies.md)。  

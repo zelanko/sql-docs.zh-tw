@@ -15,50 +15,50 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26eb85c97c970f9fe1cfaf63ca9861c2be0b4695
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079468"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>索引鍵資料行對話方塊 (Analysis Services - 多維度資料)
-  使用 [索引鍵資料行] 對話方塊，即可變更屬性 (Attribute) 的 **KeyColumns** 屬性 (Property)。 如需詳細資訊，請參閱 [修改屬性 (Attribute) 的 KeyColumn 屬性 (Property)](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)。  
+  使用 [索引鍵資料行]  對話方塊，即可變更屬性 (Attribute) 的 **KeyColumns** 屬性 (Property)。 如需詳細資訊，請參閱 [修改屬性 (Attribute) 的 KeyColumn 屬性 (Property)](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)。  
   
  **若要顯示 [索引鍵資料行] 對話方塊**  
   
--   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，選取屬性 (Attribute)，然後在 [屬性] 視窗中，按一下與該屬性 (Attribute) 之 **KeyColumns** 屬性 (Property) 相關聯的省略符號按鈕 (**...**)。  
+-   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，選取屬性 (Attribute)，然後在 [屬性]  視窗中，按一下與該屬性 (Attribute) 之 **KeyColumns** 屬性 (Property) 相關聯的省略符號按鈕 ( **...** )。  
   
 ## <a name="options"></a>選項  
  **來源資料表**  
  選取您想要選取其索引鍵資料行的來源資料表。 您可以從 [資料來源檢視] 中所有資料表的清單中，選取來源資料表。  
   
  **可用的資料行**  
- 選取您想要當做索引鍵資料行使用的資料行。 您可以從指定之 [來源資料表] 的資料行清單中選取尚未選取成索引鍵資料行的資料行。  
+ 選取您想要當做索引鍵資料行使用的資料行。 您可以從指定之 [來源資料表]  的資料行清單中選取尚未選取成索引鍵資料行的資料行。  
   
- 若要將選取的資料行加入**索引鍵資料行**清單中，按一下**>**  按鈕。  
+ 若要將選取的資料行加入**索引鍵資料行**清單中，按一下 **>**  按鈕。  
   
  **索引鍵資料行**  
- 定義選取之索引鍵資料行的順序。 索引鍵資料行的順序在定義正確的複合索引鍵時很重要。 若要排序或重新排序索引鍵資料行的清單，請選取資料行，然後按一下 [向上] 或 [向下] 按鈕。  
+ 定義選取之索引鍵資料行的順序。 索引鍵資料行的順序在定義正確的複合索引鍵時很重要。 若要排序或重新排序索引鍵資料行的清單，請選取資料行，然後按一下 [向上]  或 [向下]  按鈕。  
   
- 若要移除的資料行**索引鍵資料行**清單中，選取的資料行，然後按一下**\<**  按鈕。  
+ 若要移除的資料行**索引鍵資料行**清單中，選取的資料行，然後按一下 **\<**  按鈕。  
   
  **向上**  
- 按一下即可將 [索引鍵資料行] 中選取的資料行向上移動一個位置。  
+ 按一下即可將 [索引鍵資料行]  中選取的資料行向上移動一個位置。  
   
 > [!NOTE]  
 >  只有當清單包含一個以上的資料行而且選取了資料行時，才會啟用此選項。  
   
  **向下**  
- 按一下即可將 [索引鍵資料行] 中選取的資料行向下移動一個位置。  
+ 按一下即可將 [索引鍵資料行]  中選取的資料行向下移動一個位置。  
   
 > [!NOTE]  
 >  只有當清單包含一個以上的資料行而且選取了資料行時，才會啟用此選項。  
   
  **>**  
- 按一下即可將新資料行加入 [索引鍵資料行] 中列出之資料行的結尾處。  
+ 按一下即可將新資料行加入 [索引鍵資料行]  中列出之資料行的結尾處。  
   
  **<**  
- 按一下即可從 [索引鍵資料行] 中列出的資料行中移除選取的資料行。  
+ 按一下即可從 [索引鍵資料行]  中列出的資料行中移除選取的資料行。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  

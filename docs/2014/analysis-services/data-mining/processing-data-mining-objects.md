@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65c61f6e4b571880b6607bb647d2629a3b6864f7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083144"
 ---
 # <a name="processing-data-mining-objects"></a>處理資料採礦物件
-  資料採礦物件在處理之前只是一個空容器。 *「處理」* (Processing) 資料採礦模型也稱為 *「定型」*(Training)。  
+  資料採礦物件在處理之前只是一個空容器。 *「處理」* (Processing) 資料採礦模型也稱為 *「定型」* (Training)。  
   
  **處理採礦結構：** 採礦結構所定義的資料行繫結和使用方式中繼資料，取得外部資料來源的資料，並讀取資料。 系統會完整地讀取這項資料，再加以分析以擷取各種統計資料。 Analysis Services 會在本機快取中儲存資料的壓縮表示 (適合以資料採礦演算法進行分析)。 您可在模型經過處理後保存此快取或加以刪除。 依預設會儲存此快取。 如需詳細資訊，請參閱 [處理採礦結構](process-a-mining-structure.md)。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66083144"
   
 -   在結構案例上建立 DMX 查詢。 如需詳細資訊，請參閱 [SELECT FROM &#60;structure&#62;.CASES](/sql/dmx/select-from-structure-cases)。  
   
- 採礦模型經過處理之後只會包含衍生自分析的模式，以及模型結果與快取之定型資料的對應。 您可以瀏覽或查詢模型結果 (稱為 *「模型內容」*)，或者也可以查詢模型和結構案例 (若已存入快取)。  
+ 採礦模型經過處理之後只會包含衍生自分析的模式，以及模型結果與快取之定型資料的對應。 您可以瀏覽或查詢模型結果 (稱為 *「模型內容」* )，或者也可以查詢模型和結構案例 (若已存入快取)。  
   
  每個採礦模型的模型內容都是根據建立時所使用的演算法而定。 例如，如果某個模式是叢集模型，而另一個模型是決策樹模型，則即使模型使用的資料完全相同，模型的內容也會非常不同。 如需詳細資訊，請參閱[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5870cb445d7afd098aba32ffd9be7a88c048bae5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62735054"
 ---
 # <a name="system-functions"></a>系統函數
@@ -33,5 +33,5 @@ ms.locfileid: "62735054"
 |函數|描述|  
 |--------------|-----------------|  
 |**DATABASE( )**  (ODBC 1.0)|傳回對應至連接控制代碼的資料庫名稱。 (資料庫的名稱，也可以透過呼叫**SQLGetConnectOption** SQL_CURRENT_QUALIFIER 連接選項。)|  
-|**IFNULL(** _exp_,_value_**)**  (ODBC 1.0)|如果*exp*為 null，然後*值*會傳回。 如果*exp*不是 null， *exp*會傳回。 可能資料類型或類型*值*必須是相容的資料型別*exp*。|  
+|**IFNULL(** _exp_,_value_ **)**  (ODBC 1.0)|如果*exp*為 null，然後*值*會傳回。 如果*exp*不是 null， *exp*會傳回。 可能資料類型或類型*值*必須是相容的資料型別*exp*。|  
 |**USER( )**  (ODBC 1.0)|DBMS 中傳回的使用者名稱。 (使用者名稱也是可透過**SQLGetInfo**藉由指定的資訊類型：SQL_USER_NAME。)這可以是不同的登入名稱。|

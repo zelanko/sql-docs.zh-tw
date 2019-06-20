@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62842575"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>針對 SQL Server Managed Backup 到 Windows Azure 進行疑難排解
@@ -105,8 +105,8 @@ ms.locfileid: "62842575"
   
      如果 SQL Server 停止回應，事件會記錄到管理通道。  以下是事件記錄檔的範例：  
   
-     *Sql 錯誤 (引擎無回應或收到 sqlException:SqlException:*   
-     *錯誤碼、 訊息和堆疊追蹤會顯示在管理通道 xevent，外加一些額外的資訊，例如：*   
+     *Sql 錯誤 (引擎無回應或收到 sqlException:SqlException:*    
+     *錯誤碼、 訊息和堆疊追蹤會顯示在管理通道 xevent，外加一些額外的資訊，例如：*    
     *「 可能會發生與 SQL Server 的連線問題。正在略過目前的反覆項目中的資料庫 」*  
   
 -   **SQL 代理程式停止回應或停止運作時[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]執行：**  

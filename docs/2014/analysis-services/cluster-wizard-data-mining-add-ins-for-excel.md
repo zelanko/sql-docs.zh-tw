@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d93f676aec67b5d791924cbbda8f71a966d5bbc2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087813"
 ---
 # <a name="cluster-wizard-data-mining-add-ins-for-excel"></a>叢集精靈 (適用於 Excel 的資料採礦增益集)
@@ -28,7 +28,7 @@ ms.locfileid: "66087813"
   
 ## <a name="using-the-cluster-wizard"></a>使用叢集精靈  
   
-1.  在 [資料採礦功能區中，按一下**叢集**，然後按一下**下一步]**。  
+1.  在 [資料採礦功能區中，按一下**叢集**，然後按一下**下一步]** 。  
   
 2.  在 **選取來源資料**頁面上，選取 Excel 資料表或範圍。 或指定外部資料來源。  
   

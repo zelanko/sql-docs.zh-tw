@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078096"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>增益圖索引標籤 (採礦精確度圖表檢視)
-  使用 [增益圖] 窗格可檢視比較選取的採礦結構中所有選取的採礦模型的圖表。  
+  使用 [增益圖]  窗格可檢視比較選取的採礦結構中所有選取的採礦模型的圖表。  
   
  如果模型預測離散的屬性，則此窗格可以顯示增益圖或收益圖。 如需增益圖的資訊，請參閱[增益圖 &#40;Analysis Services - 資料採礦&#41;](data-mining/lift-chart-analysis-services-data-mining.md)。  
   
@@ -32,12 +32,12 @@ ms.locfileid: "66078096"
   
 ## <a name="options"></a>選項。  
  **圖表類型**  
- 設定要在檢視器中顯示之圖表的類型。 您可以選取 [增益圖] 或是 [收益圖]。  
+ 設定要在檢視器中顯示之圖表的類型。 您可以選取 [增益圖]  或是 [收益圖]  。  
   
  **設定**  
- 開啟 [收益圖設定] 對話方塊，且您可以使用它設定收益圖。  
+ 開啟 [收益圖設定]  對話方塊，且您可以使用它設定收益圖。  
   
- 如果在 [資料行對應] 索引標籤中選取連續的可預測資料行，就無法使用收益圖。  
+ 如果在 [資料行對應]  索引標籤中選取連續的可預測資料行，就無法使用收益圖。  
   
  **[複製]**  
  將圖表複製到剪貼簿。  

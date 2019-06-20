@@ -16,10 +16,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ab3a864d9f93700fdb9aa646bba0d244d1ea17c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63014610"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
@@ -42,7 +42,7 @@ ms.locfileid: "63014610"
 |資料行名稱|描述|  
 |-----------------|-----------------|  
 |DATA_TYPE|傳回 SQL_VARCHAR、 SQL_VARBINARY 或 SQL_WVARCHAR for **varchar （max)** 資料型別。|  
-|TYPE_NAME|傳回"varchar"、"varbinary"或"nvarchar" **varchar （max)**， **varbinary （max)**，並**nvarchar （max)** 資料型別。|  
+|TYPE_NAME|傳回"varchar"、"varbinary"或"nvarchar" **varchar （max)** ， **varbinary （max)** ，並**nvarchar （max)** 資料型別。|  
 |COLUMN_SIZE|傳回為 SQL_SS_LENGTH_UNLIMITED **varchar （max)** 資料型別表示，資料行的大小不受限制。|  
 |BUFFER_LENGTH|傳回為 SQL_SS_LENGTH_UNLIMITED **varchar （max)** 資料型別表示，緩衝區的大小不受限制。|  
 |SQL_DATA_TYPE|傳回 SQL_VARCHAR、 SQL_VARBINARY 或 SQL_WVARCHAR for **varchar （max)** 資料型別。|  

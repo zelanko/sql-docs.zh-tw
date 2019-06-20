@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b66e8b2d1b0d397a24c4ff5c702c00aff14988d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996166"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
@@ -40,7 +40,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @tsqlbatch = ] 'tsqlbatch'` 是 Unicode 字串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次參數是您想要的資訊。 *tsqlbatch*已**nvarchar （max)** 或隱含地轉換成**nvarchar （max)**。  
+`[ @tsqlbatch = ] 'tsqlbatch'` 是 Unicode 字串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次參數是您想要的資訊。 *tsqlbatch*已**nvarchar （max)** 或隱含地轉換成**nvarchar （max)** 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  

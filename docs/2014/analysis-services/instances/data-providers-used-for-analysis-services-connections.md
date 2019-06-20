@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16e691ab6c6a6fcff4cb59fe54884fbb1b52268e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080103"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>用於 Analysis Services 連接的資料提供者
@@ -62,7 +62,7 @@ ms.locfileid: "66080103"
   
 1.  移至 C:\Windows\Assembly。  
   
-2.  以滑鼠右鍵按一下 Microsoft.AnalysisServices.AdomdClient，再按一下 [內容]。 按一下 **[版本]**。  
+2.  以滑鼠右鍵按一下 Microsoft.AnalysisServices.AdomdClient，再按一下 [內容]  。 按一下 **[版本]** 。  
   
      針對 AMO，以滑鼠右鍵按一下 Microsoft.AnalysisServices。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66080103"
   
 1.  移至 [Microsoft 下載中心](https://go.microsoft.com/fwlink/p/?LinkID=296473)。  
   
-2.  展開 **[安裝指示]**。  
+2.  展開 **[安裝指示]** 。  
   
 3.  向下捲動至包含 Analysis Services 元件的段落。 ADOMD.NET、OLE DB 提供者和 AMO 分別為清單中的第二項、第三項和第四項。 每一套程式庫都有 32 位元或 64 位元版本可選。 執行 64 位元作業系統的伺服器和新型工作站需要 64 位元版本。  
   

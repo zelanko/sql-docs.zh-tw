@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21c56f28a6f65b22d8fe334a1046f44f868c4453
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099905"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 工具
@@ -52,7 +52,7 @@ ms.locfileid: "66099905"
 |----------|-----------------|-------------------|  
 |Reporting Services 組態管理員|請使用此工具設定 Reporting Services 安裝。 請注意，Reporting Services 組態管理員無法幫您管理報表伺服器內容、 啟用其他功能，或授與伺服器的存取權。 可用的工作包括：<br /><br /> 設定本機和遠端報表伺服器執行個體<br /><br /> 設定報表伺服器服務帳戶。<br /><br /> 建立及設定一個或多個 Web 服務 URL。<br /><br /> 設定報表管理員 URL。<br /><br /> 建立及設定報表伺服器資料庫。<br /><br /> 設定向外延展部署。<br /><br /> 備份、還原或取代用於加密已儲存之連接字串和認證的對稱金鑰。<br /><br /> 設定自動執行帳戶。<br /><br /> 設定電子郵件傳遞的 SMTP 伺服器。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)。|開始功能表|  
 |SQL Server Management Studio|使用此工具即可在單一環境中管理一個或多個報表伺服器執行個體，包括：<br /><br /> 管理本機和遠端報表伺服器執行個體<br /><br /> 設定報表伺服器屬性<br /><br /> 修改角色定義<br /><br /> 關閉您不要使用的報表伺服器功能<br /><br /> 管理作業<br /><br /> 管理共用排程|開始功能表|  
-|SQL Server 組態管理員|使用此工具可以：<br /><br /> 啟動及停止 Reporting Services Windows 服務<br /><br /> 設定客戶回函報表、傾印目錄位置和錯誤報告<br /><br /> <br /><br /> **\*\* 警告\* \*** 請勿使用此工具來設定服務帳戶。 請改用 Reporting Services 組態工具。<br /><br /> 如需詳細資訊，請參閱 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)。|開始功能表|  
+|SQL Server 組態管理員|使用此工具可以：<br /><br /> 啟動及停止 Reporting Services Windows 服務<br /><br /> 設定客戶回函報表、傾印目錄位置和錯誤報告<br /><br /> <br /><br /> **\*\* 警告\* \* **請勿使用此工具來設定服務帳戶。 請改用 Reporting Services 組態工具。<br /><br /> 如需詳細資訊，請參閱 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)。|開始功能表|  
 |Rsconfig 公用程式|使用此工具可設定及管理連線到報表伺服器資料庫的報表伺服器。 您也可以使用它來指定自動執行報表處理所使用的使用者帳戶。<br /><br /> 如需詳細資訊，請參閱[報表伺服器命令提示字元公用程式 &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)。|命令提示字元|  
 |Rskeymgmt 公用程式|使用此工具可以：<br /><br /> 擷取、還原、建立及刪除用於加密報表伺服器資料的對稱金鑰<br /><br /> 在向外延展部署中加入報表伺服器執行個體<br /><br /> <br /><br /> 如需詳細資訊，請參閱[報表伺服器命令提示字元公用程式 &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)。|命令提示字元|  
 |Windows Management Instrumentation (WMI) 類別|使用這些類別可自動化 Reporting Services 組態管理員中的組態工作，且無須使用圖形化使用者介面。<br /><br /> 如需詳細資訊，請參閱 [以程式設計方式存取 WMI 提供者](../accessing-the-wmi-provider-programmatically.md)。|Visual Basic 指令碼|  

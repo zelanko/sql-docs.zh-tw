@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ae5244110e6b95434f9008fd7dc99cee259acf8c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086823"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>建立採礦結構 (SQL Server 資料採礦增益集)
@@ -37,7 +37,7 @@ ms.locfileid: "66086823"
   
 2.  在 **選取來源資料**對話方塊方塊中，指定 Excel 範圍、 Excel 資料表或包含您想要用於分析的資料的外部資料來源。  
   
-     按一下 [下一步] 。  
+     按一下 [下一步]  。  
   
 3.  在 **選取資料行**對話方塊方塊中，檢閱所選的資料來源中資料行的清單。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66086823"
   
      按一下 **[確定]** ，關閉對話方塊。  
   
-6.  按一下 [下一步] 。  
+6.  按一下 [下一步]  。  
   
      根據您使用的資料類型，您可以在這個步驟之後就完成精靈。 在此情況下，往前跳至**完成**頁面，即可命名採礦結構。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "66086823"
   
      或者，輸入要用於測試之資料列的數目上限。  
   
-     按一下 [下一步] 。  
+     按一下 [下一步]  。  
   
 8.  在 [**完成**] 對話方塊中，輸入名稱和新的採礦結構描述。  
   
-9. 按一下 **[完成]**。  
+9. 按一下 **[完成]** 。  
   
 ### <a name="related-options"></a>相關的選項  
   

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 5d9bf2a94146739a743fc4c310ece1d9c4642d11
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126351"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>全域設定 (測試器) (SybaseToSQL)
@@ -24,7 +24,7 @@ ms.locfileid: "63126351"
   
 ## <a name="options"></a>選項。  
 **可測試的物件分析**  
-此設定指定是否要執行之測試的物件的分析。 選取 **是**如果您想要分析，並自動檢查相依物件的 SSMA 測試人員。 設定預設選項是**是**。  
+此設定指定是否要執行之測試的物件的分析。 選取 [**是**如果您想要分析，並自動檢查相依物件的 SSMA 測試人員。 設定預設選項是**是**。  
   
 此設定有下列選項：  
   

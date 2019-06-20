@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a04c27fd790a1ad5c4ba453b43af5983a6440e3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099533"
 ---
 # <a name="server-properties-logging-page"></a>伺服器屬性 (記錄頁面)
@@ -24,7 +24,7 @@ ms.locfileid: "66099533"
   
  若要開啟此頁面，請啟動[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，連接到報表伺服器，以滑鼠右鍵按一下報表伺服器名稱，然後選取**屬性**。 按一下 **[記錄]** ，即可開啟此頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **啟用報表執行記錄**  
  按一下即可建立和儲存有關伺服器之報表活動的資訊。 如果此選項已啟用，報表伺服器將會追蹤使用的報表、報表處理的頻率、執行的報表作業類型、輸出格式，以及執行報表的人員。 如需有關記錄檔中所擷取的其他資料點的詳細資訊，請參閱[報表伺服器執行記錄和 ExecutionLog3 檢視](../report-server/report-server-executionlog-and-the-executionlog3-view.md)。  
   

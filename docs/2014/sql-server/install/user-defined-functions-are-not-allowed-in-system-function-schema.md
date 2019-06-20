@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66091325"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>system_function_schema 中不允許有使用者定義函數
@@ -54,7 +54,7 @@ ms.locfileid: "66091325"
   
 4.  取代參考**system_function_schema**具有**dbo**中所有包含使用者定義函數 DDL 陳述式的指令碼。  
   
-5.  修改指令碼，以叫用這些函式來使用兩部分名稱 dbo **。**_function_name_，或三部分名稱_database_name_**。** dbo。*function_name*。  
+5.  修改指令碼，以叫用這些函式來使用兩部分名稱 dbo **。** _function_name_，或三部分名稱_database_name_ **。** dbo。*function_name*。  
   
  如需詳細資訊，請參閱《SQL Server 線上叢書》中的下列主題：  
   

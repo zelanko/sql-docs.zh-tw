@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 20ec7a19d856bc0fc472362fcb5646b4afb761b6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108864"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application-sharepoint-2010-and-sharepoint-2013"></a>設定 Reporting Services 服務應用程式的電子郵件 (SharePoint 2010 和 SharePoint 2013)
@@ -26,19 +26,19 @@ ms.locfileid: "66108864"
   
 ### <a name="to-configure-e-mail-for-the-shared-service"></a>設定共用服務的電子郵件  
   
-1.  在 SharePoint 管理中心中，按一下 **[應用程式管理]**。  
+1.  在 SharePoint 管理中心中，按一下 **[應用程式管理]** 。  
   
-2.  在 **[服務應用程式]** 群組中，按一下 **[管理服務應用程式]**。  
+2.  在 **[服務應用程式]** 群組中，按一下 **[管理服務應用程式]** 。  
   
 3.  在 **[名稱]** 清單中，按一下 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的名稱。  
   
-4.  在 [管理 Reporting Services 應用程式] 頁面上，按一下 [電子郵件設定]。  
+4.  在 [管理 Reporting Services 應用程式]  頁面上，按一下 [電子郵件設定]  。  
   
-5.  選取 **[使用 SMTP 伺服器]**。  
+5.  選取 **[使用 SMTP 伺服器]** 。  
   
 6.  在 **[外送 SMTP 伺服器]** 方塊中，輸入 SMTP 伺服器的名稱。  
   
-7.  在 [來源位址] 方塊中，鍵入電子郵件地址。  
+7.  在 [來源位址]  方塊中，鍵入電子郵件地址。  
   
      此地址是所有警示電子郵件訊息的寄件者地址。  
   

@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: c4280fb257147f3c401badc6eaec18929f6d69b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63149635"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>匯入 SCOM 管理組件-Analytics Platform System
@@ -36,7 +36,7 @@ System Center Operations Manager 2007 R2 必須已安裝且正在執行。
   
     ![按一下 匯入管理組件](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP.png "SCOM_IMP")  
   
-4.  在管理組件清單中，選取您想要匯入，請按一下 管理組件**選取 **，然後按一下**新增**。  
+4.  在管理組件清單中，選取您想要匯入，請按一下 管理組件**選取** ，然後按一下**新增**。  
   
     ![管理組件清單](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP2.png "SCOM_IMP2")  
   
@@ -48,7 +48,7 @@ System Center Operations Manager 2007 R2 必須已安裝且正在執行。
   
     ![選取這兩個管理組件](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP4.png "SCOM_IMP4")  
   
-7.  按一下 **[安裝]**。  
+7.  按一下 **[安裝]** 。  
   
     ![按一下 [安裝]](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
   
@@ -68,7 +68,7 @@ System Center Operations Manager 2007 R2 必須已安裝且正在執行。
   
     ![選取管理組件](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW2.png "SCOM_PDW2")  
   
-4.  按一下 **[安裝]**。  
+4.  按一下 **[安裝]** 。  
   
     ![按一下 [安裝]](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   

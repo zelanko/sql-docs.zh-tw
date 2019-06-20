@@ -14,10 +14,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14fc681ea05e47d733c164588db817d903f8fd0c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088626"
 ---
 # <a name="about-the-sql-server-license-terms"></a>關於 SQL Server 授權條款
@@ -64,7 +64,7 @@ ms.locfileid: "66088626"
 |俄文|RUS|1049|  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-licensing-options"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 授權選項  
- 如需詳細資訊[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]計價和授權選項，請參閱[Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx) (https://www.microsoft.com/sqlserver/sql-server-2014.aspx)網站。  
+ 如需詳細資訊[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]計價和授權選項，請參閱[Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx) (https://www.microsoft.com/sqlserver/sql-server-2014.aspx) 網站。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 的授權考量](../../2014/sql-server/install/licensing-considerations-for-sql-server.md)   

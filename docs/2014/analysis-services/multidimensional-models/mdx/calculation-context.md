@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 847e9da07f8c255af8041071c63254b241490761
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66074693"
 ---
 # <a name="calculation-context"></a>計算內容
@@ -27,7 +27,7 @@ ms.locfileid: "66074693"
   
 1.  FROM 子句 (如果有的話) - 採用 SELECT 陳述式的格式，這個子句可以指定整個 Cube，也可以指定 Subcube。  
   
-2.  WHERE 子句 (如果有的話) - 這個子句也稱為「slicer 軸」，用來指定集合、Tuple 或成員，可限制查詢所傳回之欄軸和列軸上的成員。 概念上，資料行或資料列軸上沒有明確指定之每個屬性階層的預設成員都是 slicer 座標軸的一部分。  
+2.  WHERE 子句 (如果有的話) - 這個子句也稱為「slicer 軸」  ，用來指定集合、Tuple 或成員，可限制查詢所傳回之欄軸和列軸上的成員。 概念上，資料行或資料列軸上沒有明確指定之每個屬性階層的預設成員都是 slicer 座標軸的一部分。  
   
     > [!NOTE]  
     >  當 slicer 座標軸和另一個座標軸上指定了特定屬性的資料格座標時，函數中指定的座標會優先使用來決定座標軸上的成員集合。 [Filter (MDX)](/sql/mdx/filter-mdx) 和 [Order (MDX)](/sql/mdx/order-mdx) 函數是這類函數的範例 - 您可以使用 WHERE 子句，或 FROM 子句的 SELECT 陳述式，依據從計算內容排除的屬性成員來篩選或排序結果。  

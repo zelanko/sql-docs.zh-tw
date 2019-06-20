@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27d3ff9ef1c6296a6bec2040f9caefd477568bfa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62900144"
 ---
 # <a name="percentage-sampling-transformation"></a>百分比取樣轉換
@@ -48,7 +48,7 @@ ms.locfileid: "62900144"
   
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需可在 [百分比取樣轉換編輯器] 對話方塊中設定之屬性的詳細資訊，請參閱[百分比取樣轉換編輯器](../../percentage-sampling-transformation-editor.md)。  
+ 如需可在 [百分比取樣轉換編輯器]  對話方塊中設定之屬性的詳細資訊，請參閱[百分比取樣轉換編輯器](../../percentage-sampling-transformation-editor.md)。  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   

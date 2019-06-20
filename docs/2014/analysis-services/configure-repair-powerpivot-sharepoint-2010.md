@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 350aadcdd44dcc4424b94792286a7421e2613b2e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087391"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>設定或修復 PowerPivot for SharePoint 2010 (PowerPivot 組態工具)
@@ -52,11 +52,11 @@ ms.locfileid: "66087391"
 ##  <a name="bkmk_steps"></a> 組態步驟  
  只有在本機伺服器上安裝了 PowerPivot for SharePoint 2010 時，才看得見組態工具的連結。  
   
-1.  指向 **[開始]** 功能表上的 **[所有程式]**，按一下 [ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]，然後按一下 **[組態工具]**，再按一下 **[PowerPivot 組態工具]**。  
+1.  指向 **[開始]** 功能表上的 **[所有程式]** ，按一下 [ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]，然後按一下 **[組態工具]** ，再按一下 **[PowerPivot 組態工具]** 。  
   
-2.  按一下 **[設定或修復 PowerPivot for SharePoint]**。  
+2.  按一下 **[設定或修復 PowerPivot for SharePoint]** 。  
   
-3.  將視窗展開為全螢幕。 您應該會在視窗底部看到一個按鈕列，其中包含 **[驗證]**、 **[執行]** 和 **[結束]** 命令。  
+3.  將視窗展開為全螢幕。 您應該會在視窗底部看到一個按鈕列，其中包含 **[驗證]** 、 **[執行]** 和 **[結束]** 命令。  
   
 4.  **預設帳戶：** 在 參數 索引標籤中，輸入 網域使用者帳戶**預設帳戶使用者名稱**。 此帳戶會用來佈建主要服務，包括 PowerPivot 服務應用程式集區。 請勿指定內建帳戶，例如 Network Service 或 Local System。 此工具會封鎖指定內建帳戶的組態。  
   
@@ -64,13 +64,13 @@ ms.locfileid: "66087391"
   
 5.  **連接埠：** 選擇性地輸入連接埠號碼連線至管理中心 web 應用程式，或使用提供的隨機產生的編號。 組態工具會先檢查這個編號是否可以使用，然後再提供它當做選項。  
   
-6.  按一下 **[在本機伺服器上註冊 SQL Server Analysis Services (PowerPivot)]**。  
+6.  按一下 **[在本機伺服器上註冊 SQL Server Analysis Services (PowerPivot)]** 。  
   
      指定 Analysis Services 服務帳戶的密碼。  
   
 7.  (選擇性) 檢閱用來完成每個動作的其餘輸入值。 如需有關每個的詳細資訊，請參閱本主題中的 [用於設定伺服器的輸入值](#bkmk_input) 。  
   
-8.  選擇性地移除您不想處理的任何動作。 例如，如果您想要在稍後設定 Secure Store Service，請按一下 **[設定 Secure Store Service]**，然後清除 **[在工作清單中包含這個動作]** 核取方塊。  
+8.  選擇性地移除您不想處理的任何動作。 例如，如果您想要在稍後設定 Secure Store Service，請按一下 **[設定 Secure Store Service]** ，然後清除 **[在工作清單中包含這個動作]** 核取方塊。  
   
 9. 按一下 **[驗證]** ，檢查此工具是否有足夠的資訊來處理清單中的動作。  
   
@@ -151,9 +151,9 @@ ms.locfileid: "66087391"
 ### <a name="grant-sharepoint-permissions-to-workbook-users"></a>將 SharePoint 權限授與活頁簿使用者  
  使用者需要有 SharePoint 權限，才能發行或檢視活頁簿。 請務必將 **[檢視]** 權限授與給需要檢視已發行之活頁簿的使用者，並將 **[參與]** 權限授與給發行或管理活頁簿的使用者。 您必須是網站集合管理員，才能授與權限。  
   
-1.  在網站中，按一下 **[網站動作]**。  
+1.  在網站中，按一下 **[網站動作]** 。  
   
-2.  按一下 **[網站權限]**。  
+2.  按一下 **[網站權限]** 。  
   
 3.  如果您希望其中一組使用者具有 **[參與]** 權限，而另一個使用者群組只有 **[檢視]** 權限，則視需要建立群組。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "66087391"
  一段時間之後，如果您判斷需要額外的資料儲存和處理功能，您可以將另一個 PowerPivot for SharePoint 伺服器執行個體加入到伺服器陣列中。 如需指示，請參閱[部署檢查清單：藉由將 PowerPivot 伺服器加入至 SharePoint 2010 伺服器陣列的向外](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)。  
   
 ## <a name="additional-resources"></a>其他資源  
- ![SharePoint 設定](media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[透過 Microsoft SQL Server Connect 提交意見與連絡資訊](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)。  
+ ![SharePoint 設定](media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[透過 Microsoft SQL Server Connect 提交意見與連絡資訊](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback) 。  
   
 ## <a name="see-also"></a>另請參閱  
  [PowerPivot 組態工具](power-pivot-sharepoint/power-pivot-configuration-tools.md)   

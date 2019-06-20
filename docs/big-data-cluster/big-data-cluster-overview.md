@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: fed82f9bda8f72d92157de726eb6ae3c6ed1c0c0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66801887"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>什麼是 SQL Server 巨量資料叢集？
@@ -61,7 +61,7 @@ SQL Server 的巨量資料叢集啟用人工智慧和機器學習服務工作儲
 
 [叢集系統管理員入口網站](cluster-admin-portal.md)是顯示在叢集中的 pod 的健全狀況與狀態的 web 介面。 它也會提供 log analytics 和監視儀表板的其他儀表板的連結。
 
-您可以使用 Azure Data Studio 巨量資料叢集上執行的各種工作。 這會啟用新**SQL Server 2019 擴充功能 （預覽）** 。 此延伸模組提供：
+您可以使用 Azure Data Studio 巨量資料叢集上執行的各種工作。 這會啟用新**SQL Server 2019 擴充功能 （預覽）**。 此延伸模組提供：
 
 - 適合一般管理工作的內建程式碼片段。
 - 能夠瀏覽 HDFS 中，將檔案上傳、 預覽檔案，然後建立目錄。

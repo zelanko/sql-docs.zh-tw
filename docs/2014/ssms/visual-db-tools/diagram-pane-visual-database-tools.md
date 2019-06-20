@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 79ddfb40d33c8585b94ccc9718100e771da5e92e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126444"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>圖表窗格 (Visual Database Tools)
@@ -35,21 +35,21 @@ ms.locfileid: "63126444"
   
  [圖表] 窗格中的每一個資料表或資料值物件，都以個別視窗顯示。 每個矩形的標題列圖示都將表示該矩形代表的物件類型，如下表所示。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料表**  
- 列出可以加入 [圖表] 窗格的資料表。 若要新增資料表，請選取資料表，再按 [新增]。 若要一次新增數個資料表，請選取資料表，再按 [新增]。  
+ 列出可以加入 [圖表] 窗格的資料表。 若要新增資料表，請選取資料表，再按 [新增]  。 若要一次新增數個資料表，請選取資料表，再按 [新增]  。  
   
  **檢視**  
- 列出可以加入 [圖表] 窗格的檢視。 若要新增檢視表，請選取檢視表，再按 [新增]。 若要一次新增數個檢視表，請選取檢視表，再按 [新增]。  
+ 列出可以加入 [圖表] 窗格的檢視。 若要新增檢視表，請選取檢視表，再按 [新增]  。 若要一次新增數個檢視表，請選取檢視表，再按 [新增]  。  
   
  **函數**  
- 列出可加入 [圖表] 窗格的使用者定義函數。 若要新增函數，請選取函數，再按 [新增]。 若要一次新增數個函數，請選取函數，再按 [新增]。  
+ 列出可加入 [圖表] 窗格的使用者定義函數。 若要新增函數，請選取函數，再按 [新增]  。 若要一次新增數個函數，請選取函數，再按 [新增]  。  
   
  **區域資料表**  
  列出由查詢所建立的資料表，而非屬於資料庫的資料表  
   
  **同義字**  
- 列出可加入 [圖表] 窗格的同義資料表。 若要新增同義資料表，請選取同義資料表，再按 [新增]。 若要一次新增數個同義資料表，請選取同義資料表，再按一下 [新增]。  
+ 列出可加入 [圖表] 窗格的同義資料表。 若要新增同義資料表，請選取同義資料表，再按 [新增]  。 若要一次新增數個同義資料表，請選取同義資料表，再按一下 [新增]  。  
   
 |圖示|物件類型|  
 |----------|-----------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "63126444"
   
 |核取方塊或符號|描述|  
 |-------------------------|-----------------|  
-|![Visual Database Tools 圖示](../../database-engine/media//dv3wbi7.gif "Visual Database Tools 圖示")<br /><br /> ![Visual Database Tools 圖示](../../database-engine/media//dv3wbi8.gif "Visual Database Tools 圖示")<br /><br /> ![Visual Database Tools 圖示](../../database-engine/media//dv3wbi9.gif "Visual Database Tools 圖示")<br /><br /> ![Visual Database Tools 圖示](../../database-engine/media//dv3wbia.gif "Visual Database Tools 圖示")|指定查詢結果集 (選取查詢) 中是否使用資料欄，或者是否在 UPDATE、INSERT FROM、製成資料表 (Make Table) 或 INSERT INTO 查詢中使用資料欄。 選取要新增到結果的資料行。 如果選取 [(所有資料行)]，所有資料行都將出現在輸出中。<br /><br /> 核取方塊所使用的圖示將根據您建立的查詢類型而有所改變。 建立刪除查詢時，您無法選取個別的資料行。|  
+|![Visual Database Tools 圖示](../../database-engine/media//dv3wbi7.gif "Visual Database Tools 圖示")<br /><br /> ![Visual Database Tools 圖示](../../database-engine/media//dv3wbi8.gif "Visual Database Tools 圖示")<br /><br /> ![Visual Database Tools 圖示](../../database-engine/media//dv3wbi9.gif "Visual Database Tools 圖示")<br /><br /> ![Visual Database Tools 圖示](../../database-engine/media//dv3wbia.gif "Visual Database Tools 圖示")|指定查詢結果集 (選取查詢) 中是否使用資料欄，或者是否在 UPDATE、INSERT FROM、製成資料表 (Make Table) 或 INSERT INTO 查詢中使用資料欄。 選取要新增到結果的資料行。 如果選取 [(所有資料行)]  ，所有資料行都將出現在輸出中。<br /><br /> 核取方塊所使用的圖示將根據您建立的查詢類型而有所改變。 建立刪除查詢時，您無法選取個別的資料行。|  
 |![Visual Database Tools 圖示](../../database-engine/media//dv3wbib.gif "Visual Database Tools 圖示")<br /><br /> ![Visual Database Tools 圖示](../../database-engine/media//dv3wbic.gif "Visual Database Tools 圖示")|指示用來排列查詢結果 (ORDER BY 子句的一部分) 的資料欄。 如果排列順序為遞增，則圖示將以 A-Z 的方法呈現，如果為遞減排序，則為 Z-A。|  
 |![Visual Database Tools 圖示](../../database-engine/media//dv3wbid.gif "Visual Database Tools 圖示")|指示在彙總查詢中用來建立群組結果集 (GROUP BY 子句的一部分) 的資料欄。|  
 |![Visual Database Tools 圖示](../../database-engine/media//dv3wbie.gif "Visual Database Tools 圖示")|指示查詢 (WHERE 或 HAVING 子句的一部分) 的搜尋條件包含該資料欄。|  

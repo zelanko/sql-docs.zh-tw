@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2102d28a61a99ed9ed6786dd8f2dee196066045c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072153"
 ---
 # <a name="partition-source-dialog-box-analysis-services---multidimensional-data"></a>資料分割來源對話方塊 (Analysis Services - 多維度資料)
@@ -26,7 +26,7 @@ ms.locfileid: "66072153"
   
 -   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [屬性] 視窗中，於 [資料分割] 物件的 [來源] 屬性值上，按一下 [...] 按鈕。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |選項|定義|  
 |------------|----------------|  

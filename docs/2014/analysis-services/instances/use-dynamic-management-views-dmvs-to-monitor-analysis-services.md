@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a02d8d5b113e4773aa7cdfbbf20975fd70218e1a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079576"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>使用動態管理檢視 (DMV) 監視 Analysis Services
@@ -86,7 +86,7 @@ Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAM
   
  您可以使用任何支援 MDX 或 DMX 查詢的用戶端應用程式，包括 SQL Server Management Studio、Reporting Services 報表或 PerformancePoint 儀表板。  
   
- 若要從 Management Studio 執行 DMV 查詢，請連接到您要查詢的執行個體，然後按一下 **[新增查詢]**。 可從 MDX 或 DMX 查詢視窗執行查詢。  
+ 若要從 Management Studio 執行 DMV 查詢，請連接到您要查詢的執行個體，然後按一下 **[新增查詢]** 。 可從 MDX 或 DMX 查詢視窗執行查詢。  
   
 ##  <a name="bkmk_ref"></a> DMV 參考  
  並不是所有結構描述資料列集都有 DMV 介面。 若要傳回可透過 DMV 查詢之所有結構描述資料列集的清單，請使用下列查詢。  

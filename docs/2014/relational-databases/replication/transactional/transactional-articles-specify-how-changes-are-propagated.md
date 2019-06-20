@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62655673"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>指定交易式發行項變更的傳播方式
@@ -37,11 +37,11 @@ ms.locfileid: "62655673"
 ## <a name="default-and-custom-stored-procedures"></a>預設與自訂預存程序  
  依預設，複寫為每個資料表發行項建立的三個程序為：  
   
--   處理插入的 **sp_MSins_\<**<資料表名稱> **>**。  
+-   處理插入的 **sp_MSins_\<** <資料表名稱>  **>** 。  
   
--   處理更新的 **sp_MSupd_\<**<資料表名稱> **>**。  
+-   處理更新的 **sp_MSupd_\<** <資料表名稱>  **>** 。  
   
--   處理刪除的 **sp_MSdel_\<**<資料表名稱> **>**。  
+-   處理刪除的 **sp_MSdel_\<** <資料表名稱>  **>** 。  
   
  程序中使用的 **\<資料表名稱>** 取決於發行項新增至發行集的方式，以及訂閱資料庫是否包含與不同擁有者具有相同名稱的資料表。  
   

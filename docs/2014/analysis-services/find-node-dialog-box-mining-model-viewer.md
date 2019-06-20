@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c202ae84546cfdfde917a3d4ff9d98df74d7afd6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081134"
 ---
 # <a name="find-node-dialog-box-mining-model-viewer"></a>尋找節點對話方塊 (採礦模型檢視器)
@@ -29,10 +29,10 @@ ms.locfileid: "66081134"
  輸入節點名稱的部分文字，可取得包含該文字的所有節點的清單。 不支援規則運算式；搜尋預設會使用萬用字元。  
   
  **節點清單**  
- 顯示包含您在 [節點名稱包含] 中輸入之文字的節點清單。  
+ 顯示包含您在 [節點名稱包含]  中輸入之文字的節點清單。  
   
  **確定**  
- 選取節點清單中的節點，然後按一下 [確定]。 此時會關閉對話方塊，並在檢視器中反白顯示選取的節點。  
+ 選取節點清單中的節點，然後按一下 [確定]  。 此時會關閉對話方塊，並在檢視器中反白顯示選取的節點。  
   
 ## <a name="see-also"></a>另請參閱  
  [採礦模型檢視器 &#40;資料採礦模型設計師&#41;](mining-model-viewers-data-mining-model-designer.md)   

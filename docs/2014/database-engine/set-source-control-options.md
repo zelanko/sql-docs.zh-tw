@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62843711"
 ---
 # <a name="set-source-control-options"></a>設定原始檔控制選項
@@ -34,7 +34,7 @@ ms.locfileid: "62843711"
   
 ### <a name="to-set-source-control-options"></a>設定原始檔控制選項  
   
-1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
 2.  在**選項**對話方塊方塊中，展開**原始檔控制**，然後按一下**外掛程式選取範圍**頁面。  
   

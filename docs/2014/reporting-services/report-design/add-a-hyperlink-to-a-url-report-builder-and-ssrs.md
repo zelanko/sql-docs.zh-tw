@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa7b0d32a62e5e2d729e05c88b892ccaffc0fc2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106820"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>將超連結加入到 URL (報表產生器及 SSRS)
@@ -34,11 +34,11 @@ ms.locfileid: "66106820"
   
 ### <a name="to-add-a-hyperlink"></a>若要加入超連結  
   
-1.  在報表設計檢視中，以滑鼠右鍵按一下要加入連結的文字方塊、影像或圖表，然後按一下 **[屬性]**。  
+1.  在報表設計檢視中，以滑鼠右鍵按一下要加入連結的文字方塊、影像或圖表，然後按一下 **[屬性]** 。  
   
-2.  在 [屬性] 對話方塊中，按一下 **[動作]**。  
+2.  在 [屬性] 對話方塊中，按一下 **[動作]** 。  
   
-3.  選取 **[移至 URL]**。 此對話方塊中會出現這個選項的其他區段。  
+3.  選取 **[移至 URL]** 。 此對話方塊中會出現這個選項的其他區段。  
   
 4.  在 **[選取 URL]** 中，輸入或選取 URL 或是評估為 URL 的運算式，或者按下拉式箭號，再按一下含有 URL 之欄位的名稱。  
   

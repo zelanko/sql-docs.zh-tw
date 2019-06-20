@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bbfa7853e1b12bc31b5676e3b64082a57a3c800a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064160"
 ---
 # <a name="complete-word-intellisense"></a>自動完成文字 (IntelliSense)
@@ -27,13 +27,13 @@ ms.locfileid: "66064160"
   
  您可以利用四種方式來叫用 [自動完成文字] 功能：  
   
--   在 [編輯] 功能表上，指向 [IntelliSense]，然後按一下 [自動完成文字]。  
+-   在 [編輯]  功能表上，指向 [IntelliSense]  ，然後按一下 [自動完成文字]  。  
   
 -   按 ALT+向右鍵。  
   
--   以滑鼠右鍵按一下文字編輯器，再按一下 [自動完成文字]。  
+-   以滑鼠右鍵按一下文字編輯器，再按一下 [自動完成文字]  。  
   
--   在 [文字編輯器] 工具列上，按一下 [自動完成文字] 按鈕。  
+-   在 [文字編輯器]  工具列上，按一下 [自動完成文字]  按鈕。  
   
  如果您已輸入的字元有不只一個可能的相符項目，請叫用 [自動完成文字] 來顯示可能的相符項目清單，之後，您就可以利用它來尋找這個詞彙，將它插入您的程式碼中。  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ad98fe533caefa937d969754fa1278354e5c6e1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102155"
 ---
 # <a name="security-properties-page-items-report-manager"></a>安全性屬性頁面，項目 (報表管理員)
@@ -35,7 +35,7 @@ ms.locfileid: "66102155"
   
 3.  在下拉式功能表中，執行下列其中一項步驟：  
   
-    -   按一下 **[安全性]**。 這樣就會開啟該項目的 [安全性] 屬性頁面。  
+    -   按一下 **[安全性]** 。 這樣就會開啟該項目的 [安全性] 屬性頁面。  
   
     -   按一下 **[管理]** 開啟項目的 [一般] 屬性頁面。 然後，選取 **[安全性]** 索引標籤。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66102155"
  編輯項目安全性時，可以使用下列按鈕。  
   
  **刪除**  
- 選取您要刪除的群組或使用者名稱旁的核取方塊，然後按一下 **[刪除]**。 如果它是留下的唯一角色指派，或是定義報表伺服器之安全性基準的內建角色指派 (例如，「Built-in\Administrators」)，則無法將其刪除。 刪除角色指派不會刪除群組或使用者帳戶或角色定義。  
+ 選取您要刪除的群組或使用者名稱旁的核取方塊，然後按一下 **[刪除]** 。 如果它是留下的唯一角色指派，或是定義報表伺服器之安全性基準的內建角色指派 (例如，「Built-in\Administrators」)，則無法將其刪除。 刪除角色指派不會刪除群組或使用者帳戶或角色定義。  
   
  **新增角色指派**  
  按一下即可開啟 [新增角色指派] 頁面，可用來建立目前項目的其他角色指派。 如需詳細資訊，請參閱[新增角色指派：編輯角色指派頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)。  

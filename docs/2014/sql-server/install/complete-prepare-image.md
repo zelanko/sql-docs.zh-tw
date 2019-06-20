@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 23dbdd4449a72737fd0929a4243ed093013ae643
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096242"
 ---
 # <a name="complete---prepare-image"></a>完成 - 準備映像
   使用**完成**頁面，確認已完成的準備映像。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  這個對話方塊包含此作業之安裝程式記錄檔的連結。 若要完成準備映像，請按一下**關閉**。  
   
   

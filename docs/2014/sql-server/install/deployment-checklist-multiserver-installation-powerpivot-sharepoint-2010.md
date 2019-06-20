@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e738635465bf6e7af0b16913c4c1f91f719f6a35
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095696"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>部署檢查清單：PowerPivot for SharePoint 2010 的多伺服器安裝
@@ -114,11 +114,11 @@ ms.locfileid: "66095696"
   
     10. 在 [通訊協定和連接埠，接受預設設定，然後按一下**下一步]** 。  
   
-    11. 在範圍內，接受預設設定，然後按一下**下一步** 。  
+    11. 在範圍內，接受預設設定，然後按一下**下一步**。  
   
-    12. 在動作中，接受預設設定，然後按一下**下一步** 。  
+    12. 在動作中，接受預設設定，然後按一下**下一步**。  
   
-    13. 在設定檔中，清除核取方塊**私人**並**公用**，然後按一下**下一步** 。  
+    13. 在設定檔中，清除核取方塊**私人**並**公用**，然後按一下**下一步**。  
   
     14. 在 名稱 輸入 輸入規則的描述性名稱 (例如**SQL Server**)。  
   

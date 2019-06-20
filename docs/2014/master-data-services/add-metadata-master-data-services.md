@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 801872affac61572553cbbd2e9648e197e16bb47
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054285"
 ---
 # <a name="add-metadata-master-data-services"></a>加入中繼資料 (Master Data Services)
@@ -30,7 +30,7 @@ ms.locfileid: "66054285"
   
 -   針對**中繼資料**模型，您必須擁有**新增**之中繼資料實體或分葉成員類型，您想要新增的權限。  
   
--   版本的狀態必須是 [開啟]。  
+-   版本的狀態必須是 [開啟]  。  
   
 ### <a name="to-add-metadata"></a>若要加入中繼資料  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66054285"
   
 2.  從 **[版本]** 清單中選取版本。  
   
-3.  按一下 **[總管]**。  
+3.  按一下 **[總管]** 。  
   
 4.  從功能表列指向**實體**然後按一下您想要新增的中繼資料實體。  
   

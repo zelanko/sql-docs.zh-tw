@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057321"
 ---
 # <a name="odata-source-editor-connection-page"></a>OData 來源編輯器 (連接頁面)
@@ -24,10 +24,10 @@ ms.locfileid: "66057321"
   
 ## <a name="static-options"></a>靜態選項  
  **OData 連接管理員**  
- 從清單中選取現有的連線管理員，或按一下 [新增] 來建立新的連線。  
+ 從清單中選取現有的連線管理員，或按一下 [新增]  來建立新的連線。  
   
  **新增**  
- 使用 [OData 連線管理員編輯器] 對話方塊建立新的連線管理員。  
+ 使用 [OData 連線管理員編輯器]  對話方塊建立新的連線管理員。  
   
  **使用集合或資源路徑**  
  從來源中指定選取資料的方法。  
@@ -44,7 +44,7 @@ ms.locfileid: "66057321"
  根據您在此對話方塊中選取的選項顯示唯讀摘要 URL。  
   
  **預覽**  
- 使用 [預覽] 對話方塊來預覽結果。 **[預覽]** 最多可顯示 20 個資料列。  
+ 使用 [預覽]  對話方塊來預覽結果。 **[預覽]** 最多可顯示 20 個資料列。  
   
 ## <a name="dynamic-options"></a>動態選項  
   

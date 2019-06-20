@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9eceaff8ea7fee16eac3afef8bdc560d7fb1642
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63036193"
 ---
 # <a name="perform-index-operations-online"></a>線上執行索引作業
@@ -76,17 +76,17 @@ ms.locfileid: "63036193"
   
 4.  展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下要線上重建的索引，然後選取 [屬性]。  
+5.  以滑鼠右鍵按一下要線上重建的索引，然後選取 [屬性]  。  
   
-6.  在 **[選取頁面]** 底下，選取 **[選項]**。  
+6.  在 **[選取頁面]** 底下，選取 **[選項]** 。  
   
-7.  選取 **[允許線上 DML 處理]**，然後從清單中選取 **[True]** 。  
+7.  選取 **[允許線上 DML 處理]** ，然後從清單中選取 **[True]** 。  
   
-8.  按一下 [確定] 。  
+8.  按一下 [確定]  。  
   
-9. 以滑鼠右鍵按一下要線上重建的索引，然後選取 [重建]。  
+9. 以滑鼠右鍵按一下要線上重建的索引，然後選取 [重建]  。  
   
-10. 在 **[重建索引]** 對話方塊中，確認 **[要重建的索引]** 方格中有正確索引，然後按一下 **[確定]**。  
+10. 在 **[重建索引]** 對話方塊中，確認 **[要重建的索引]** 方格中有正確索引，然後按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -94,9 +94,9 @@ ms.locfileid: "63036193"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會線上重建現有索引  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會線上重建現有索引  
   
     ```  
     USE AdventureWorks2012;  

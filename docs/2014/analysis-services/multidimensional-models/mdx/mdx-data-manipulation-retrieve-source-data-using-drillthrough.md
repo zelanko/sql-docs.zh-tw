@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b437016cc29b2e4a85f781e3a422fb40c70f37c3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66074294"
 ---
 # <a name="using-drillthrough-to-retrieve-source-data-mdx"></a>使用 DRILLTHROUGH 擷取來源資料 (MDX)
   多維度運算式 (MDX) 使用 [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough)陳述式從來源資料擷取 Cube 資料格的資料列集。  
   
- 必須定義 Cube 的鑽研動作，才能在該 Cube 上執行 `DRILLTHROUGH` 陳述式。 若要定義鑽研動作，請在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的 Cube 設計師中，於 [動作] 窗格的工具列上，按一下 [新增鑽研動作]。 在新增的鑽研動作中，指定動作名稱、目標、條件，以及 `DRILLTHROUGH` 陳述式所傳回的資料行。  
+ 必須定義 Cube 的鑽研動作，才能在該 Cube 上執行 `DRILLTHROUGH` 陳述式。 若要定義鑽研動作，請在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的 Cube 設計師中，於 [動作]  窗格的工具列上，按一下 [新增鑽研動作]  。 在新增的鑽研動作中，指定動作名稱、目標、條件，以及 `DRILLTHROUGH` 陳述式所傳回的資料行。  
   
 ## <a name="drillthrough-statement-syntax"></a>DRILLTHROUGH 陳述式語法  
  `DRILLTHROUGH` 陳述式使用以下語法：  

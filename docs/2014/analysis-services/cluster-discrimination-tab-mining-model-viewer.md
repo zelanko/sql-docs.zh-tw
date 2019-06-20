@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d55f61d9255d19f22fffb7380785a2ada1a2763
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087902"
 ---
 # <a name="cluster-discrimination-tab-mining-model-viewer"></a>叢集辨識索引標籤 (採礦模型檢視器)
-  使用 [叢集辨識] 索引標籤，即可比較存在於一個叢集模型中的兩個叢集。 可以查看屬性和值的不同組合在叢集中的表示方式。  
+  使用 [叢集辨識]  索引標籤，即可比較存在於一個叢集模型中的兩個叢集。 可以查看屬性和值的不同組合在叢集中的表示方式。  
   
- **如需詳細資訊：**[Microsoft 群集演算法](data-mining/microsoft-clustering-algorithm.md)，[瀏覽模型，使用 Microsoft 叢集檢視器](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **如需詳細資訊：** [Microsoft 群集演算法](data-mining/microsoft-clustering-algorithm.md)，[瀏覽模型，使用 Microsoft 叢集檢視器](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -38,7 +38,7 @@ ms.locfileid: "66087902"
  選取叢集，以便與另一個叢集進行比較。  
   
  **叢集 2**  
- 從採礦模型中的叢集清單選取第二個叢集，以便與 [叢集 1] 比較。 還可以將叢集與其補數 (表示模型中不屬於所選叢集的所有案例) 進行比較。  
+ 從採礦模型中的叢集清單選取第二個叢集，以便與 [叢集 1]  比較。 還可以將叢集與其補數 (表示模型中不屬於所選叢集的所有案例) 進行比較。  
   
  **辨識率\<群集 1 > 和\<cluster 2 >**  
  圖形中的資料行提供有關每個屬性/值組與兩個選定叢集之間如何相關的資訊。  
@@ -46,9 +46,9 @@ ms.locfileid: "66087902"
 |||  
 |-|-|  
 |**變數**|採礦模型中的屬性。|  
-|**值**|[變數] 中所選屬性的值。|  
-|**喜好\<群集 1 >**|左側的橫條圖表示所選屬性/值組代表 [叢集 1] 中所選叢集的機率。 將滑鼠暫時放在長條上方，可查看以百分比表示的值。 請注意，即使值為零，它並不表示屬性值就從叢集中必定缺少的分佈會強烈喜好一個叢集之間進行。|  
-|**喜好\<cluster 2 >**|右側的橫條圖表示所選屬性/值組代表 [叢集 2] 中所選叢集的機率。|  
+|**值**|[變數]  中所選屬性的值。|  
+|**喜好\<群集 1 >**|左側的橫條圖表示所選屬性/值組代表 [叢集 1]  中所選叢集的機率。 將滑鼠暫時放在長條上方，可查看以百分比表示的值。 請注意，即使值為零，它並不表示屬性值就從叢集中必定缺少的分佈會強烈喜好一個叢集之間進行。|  
+|**喜好\<cluster 2 >**|右側的橫條圖表示所選屬性/值組代表 [叢集 2]  中所選叢集的機率。|  
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

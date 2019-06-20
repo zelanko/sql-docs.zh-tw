@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: b2c6e28a8c328bd1e38cee2f4cad74802a981aa9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095635"
 ---
 # <a name="deployment-checklist-reporting-services-power-view-and-powerpivot-for-sharepoint"></a>部署檢查清單：Reporting Services、Power View 及 PowerPivot for SharePoint
@@ -69,7 +69,7 @@ ms.locfileid: "66095635"
 |安裝 SharePoint Server 2010 Enterprise Edition 或 Enterprise Evaluation Edition。|安裝 SharePoint 時，您可以選擇在完成安裝程式之後，不要執行 [SharePoint 2010 產品設定精靈]，以在稍後設定伺服器陣列。 等候設定伺服器陣列可讓您使用[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Database Engine 執行個體，這會安裝在稍後的步驟中，做為伺服器陣列的資料庫伺服器。 若要設定伺服器陣列，請使用 PowerPivot 組態工具。 此工具包括佈建尚未設定之伺服器陣列的動作。|  
 |安裝 SharePoint Server 2010 SP1。|下載從 SP1 [ https://support.microsoft.com/kb/2460045 ](https://go.microsoft.com/fwlink/p/?linkID=219697)。|  
 |執行 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 安裝程式，以安裝 Database Engine 和 PowerPivot for SharePoint。|[安裝 PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)<br /><br /> 步驟 1 說明如何安裝 PowerPivot for SharePoint。 在此步驟中，請務必按一下 [安裝程式角色] 頁面上的核取方塊，以將 Database Engine 加入角色。 如此一來您的安裝將 Database Engine，好讓您可以使用它做為伺服器陣列的資料庫伺服器在下一個步驟中設定伺服器陣列時。 不過，如果已經設定伺服器陣列，您就可以略過此步驟。<br /><br /> 步驟 2 要求您設定伺服器。 在此步驟中，請選擇 PowerPivot 組態工具。 雖然有許多方法可用，但是使用組態工具是對獨立安裝最有效率的方法。<br /><br /> 如果安裝 SharePoint 2010 但未設定，此工具會預先選取動作，以建立伺服器陣列、預設 Web 應用程式及根網站集合。 請務必保留選取這些選項，以建立伺服器陣列。 如果您已經設定伺服器陣列，此工具會省略這些動作，只提供設定 PowerPivot for SharePoint 的必要動作。<br /><br /> 步驟 3 指示您安裝 SQL Server 2008 R2 版的 Analysis Services OLE DB 提供者。 此步驟對於支援在 2008 R2 版的 PowerPivot for Excel 中建立之活頁簿版本而言很重要。|  
-|確認伺服器陣列可以運作。|首先，啟動管理中心並確認可以使用。 接下來，輸入以開啟小組網站 http://localhost。  您應該會看到 SharePoint 小組網站。|  
+|確認伺服器陣列可以運作。|首先，啟動管理中心並確認可以使用。 接下來，輸入以開啟小組網站 http://localhost 。  您應該會看到 SharePoint 小組網站。|  
 |確認 PowerPivot for SharePoint 可以運作。|[確認 PowerPivot for SharePoint 安裝](../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md)<br /><br /> 此工作使用您上傳的範例活頁簿確認 PowerPivot 資料存取。|  
 |執行 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 安裝程式，以安裝及設定 Reporting Services 和 Reporting Services 增益集。|[安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)<br /><br /> 如果您需要第二個資源來裝載表格式資料，您也可以在安裝 Reporting Services 時，選擇將額外的 Analysis Services 執行個體加入安裝功能樹狀目錄。 此額外的 Analysis Services 執行個體可用來裝載您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中建立的表格式模型資料庫。 表格式資料庫是 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 報表的有效資料來源。<br /><br /> [以表格式模式安裝 Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)|  
 |確認 Reporting Services 可以運作。|[驗證 Reporting Services 安裝](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)|  

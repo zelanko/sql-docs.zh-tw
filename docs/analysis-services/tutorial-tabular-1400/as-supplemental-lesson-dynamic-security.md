@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9fbc474dbf7621b0da68edb7b310bb55ffcde7d5
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 8496868bc3b5b6ee42ac4f222724e859797662a4
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776095"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263335"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>補充課程 - 動態安全性
 
@@ -25,7 +25,7 @@ ms.locfileid: "64776095"
   
 若要實作動態安全性，您可以加入資料表至包含這些使用者可以連接至模型，並瀏覽模型物件和資料的使用者名稱。 使用本教學課程中您所建立的模型位於 Adventure Works; 的內容不過，若要完成這一課，您必須新增資料表，其中包含您自有網域中的使用者。 您不需要新增的使用者名稱的密碼。 若要建立 EmployeeSecurity 資料表，使用您自己的網域使用者的小型範例，您使用 [貼上] 功能中，貼上的 Excel 試算表中的員工資料。 在真實世界案例中，包含使用者名稱的資料表通常是來自實際資料庫的資料表做為資料來源;例如，實際的 DimEmployee 資料表。  
   
-若要實作動態安全性，您可以使用兩個 DAX 函數：[USERNAME 函數 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)並[LOOKUPVALUE 函數 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)。 這兩個函數是在新角色中定義，並且會套用至資料列篩選器公式。 藉由使用 LOOKUPVALUE 函式，此公式會指定 EmployeeSecurity 表中的值。 此公式接著將傳遞至 USERNAME 函式，其指定登入之使用者的使用者名稱的值屬於此角色。 使用者可以再瀏覽該角色的資料列篩選器所指定的資料。 在此案例中，您指定的銷售員工只能瀏覽不是成員的銷售地區的網際網路銷售資料。  
+若要實作動態安全性，您可以使用兩個 DAX 函數：[USERNAME 函數 (DAX)](/dax/username-function-dax)並[LOOKUPVALUE 函數 (DAX)](/dax/lookupvalue-function-dax)。 這兩個函數是在新角色中定義，並且會套用至資料列篩選器公式。 藉由使用 LOOKUPVALUE 函式，此公式會指定 EmployeeSecurity 表中的值。 此公式接著將傳遞至 USERNAME 函式，其指定登入之使用者的使用者名稱的值屬於此角色。 使用者可以再瀏覽該角色的資料列篩選器所指定的資料。 在此案例中，您指定的銷售員工只能瀏覽不是成員的銷售地區的網際網路銷售資料。  
   
 例如此 Adventure Works 表格式模型案例專屬的工作就是這類工作，但不一定適用於真實案例。 每一項工作都包含描述工作目的的其他資訊。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "64776095"
   
 3.  在 [查詢編輯器] 中，按一下**DimSalesTerritory**查詢，然後再移除**SalesTerritoryAlternateKey**資料行。  
   
-7.  按一下 **[匯入]**。  
+7.  按一下 **[匯入]** 。  
   
     新的資料表加入至模型工作區。 然後，物件與來源 DimSalesTerritory 資料表中的資料會匯入 AW Internet Sales 表格式模型。  
   
@@ -88,7 +88,7 @@ AdventureWorksDW 範例資料庫中的 DimEmployee 資料表包含來自 Adventu
   
 8.  在 **要貼上資料**，確認資料包含所有的使用者資料和從 SampleEmployee 工作表的標頭。  
   
-9. 確認已核取 [使用第一個資料列作為資料行標頭]，然後按一下 [確定]。  
+9. 確認已核取 [使用第一個資料列作為資料行標頭]  ，然後按一下 [確定]  。  
   
     建立新的資料表，名為 EmployeeSecurity 包含從 SampleEmployee 工作表複製的員工資料。  
   
@@ -110,7 +110,7 @@ FactInternetSales、 DimGeography 和 DimSalesTerritory 資料表全都包含常
   
 #### <a name="to-hide-the-employeesecurity-table-from-client-applications"></a>若要隱藏 EmployeeSecurity 資料表，從用戶端應用程式  
   
--   在模型設計師的 [圖表檢視] 中，以滑鼠右鍵按一下 [Employee] 資料表標題，然後按一下 [在用戶端工具中隱藏]。  
+-   在模型設計師的 [圖表檢視] 中，以滑鼠右鍵按一下 [Employee]  資料表標題，然後按一下 [在用戶端工具中隱藏]  。  
   
 ## <a name="create-a-sales-employees-by-territory-user-role"></a>建立 Sales Employees by Territory 使用者角色  
 
@@ -129,11 +129,11 @@ FactInternetSales、 DimGeography 和 DimSalesTerritory 資料表全都包含常
   
 3.  按一下新角色，然後在**名稱**資料行中，重新命名角色**Sales Employees by Territory**。  
   
-4.  按一下 [權限] 資料行中的下拉式清單，然後選取 [讀取] 權限。  
+4.  按一下 [權限]  資料行中的下拉式清單，然後選取 [讀取]  權限。  
   
 5.  按一下 **成員**索引標籤，然後再按一下**新增**。  
   
-6.  在 **選取使用者或群組**對話方塊中，於**輸入要選取的物件名稱**，輸入您建立 EmployeeSecurity 資料表時使用的第一個範例使用者名稱。 按一下 [檢查名稱]，確認使用者名稱有效，然後按一下 [確定]。  
+6.  在 **選取使用者或群組**對話方塊中，於**輸入要選取的物件名稱**，輸入您建立 EmployeeSecurity 資料表時使用的第一個範例使用者名稱。 按一下 [檢查名稱]  ，確認使用者名稱有效，然後按一下 [確定]  。  
   
     重複此步驟中，新增的其他範例使用者名稱建立 EmployeeSecurity 資料表時使用。  
   
@@ -169,11 +169,11 @@ FactInternetSales、 DimGeography 和 DimSalesTerritory 資料表全都包含常
   
 1.  在 SSDT 中，按一下**模型**功能表，然後再按一下**在 Excel 中的進行分析**。  
   
-2.  於 [在 Excel 中進行分析] 對話方塊的 [指定用於連接模型的使用者名稱或角色] 中，選取 [其他 Windows 使用者]，然後按一下 [瀏覽]。  
+2.  於 [在 Excel 中進行分析]  對話方塊的 [指定用於連接模型的使用者名稱或角色]  中，選取 [其他 Windows 使用者]  ，然後按一下 [瀏覽]  。  
   
 3.  在 **選取使用者或群組**對話方塊中，於**輸入物件名稱來選取**，輸入您包含在 EmployeeSecurity 資料表中，使用者名稱，然後按一下**檢查名稱**。  
   
-4.  按一下 [確定] 關閉 [選取使用者或群組] 對話方塊，然後按一下 [確定] 關閉 [在 Excel 中進行分析] 對話方塊。  
+4.  按一下 [確定]  關閉 [選取使用者或群組]  對話方塊，然後按一下 [確定]  關閉 [在 Excel 中進行分析]  對話方塊。  
   
     Excel 會開啟新的活頁簿。 自動建立樞紐分析表。 樞紐分析表欄位清單包含大部分的新模型中可用的資料欄位。  
   
@@ -188,6 +188,6 @@ FactInternetSales、 DimGeography 和 DimSalesTerritory 資料表全都包含常
   
 ## <a name="see-also"></a>另請參閱  
 
-[USERNAME 函數 (DAX)](https://msdn.microsoft.com/library/hh230954.aspx)  
-[LOOKUPVALUE 函數 (DAX)](https://msdn.microsoft.com/library/gg492170.aspx)  
-[CUSTOMDATA 函數 (DAX)](https://msdn.microsoft.com/library/hh213140.aspx)  
+[USERNAME 函數 (DAX)](/dax/username-function-dax)  
+[LOOKUPVALUE 函數 (DAX)](/dax/lookupvalue-function-dax)  
+[CUSTOMDATA 函數 (DAX)](/dax/customdata-function-dax)  

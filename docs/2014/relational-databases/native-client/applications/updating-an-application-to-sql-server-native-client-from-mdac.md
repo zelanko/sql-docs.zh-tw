@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2c8afa1fbbb51947bef28ae45cabd445aaf0bf2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63046409"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>從 MDAC 將應用程式更新至 SQL Server Native Client
@@ -110,7 +110,7 @@ ms.locfileid: "63046409"
   
 -   使用時，您可能會遇到錯誤[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 驅動程式，以存取 System.Data.Odbc[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會公開新的伺服器電腦[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-特定資料類型或功能。 System.Data.Odbc 提供一般的 ODBC 實作，而且後續不會公開供應商特有的功能或延伸模組。 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端驅動程式會更新以原生支援最新[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]功能。)若要解決此問題，您可以還原成 MDAC 或移轉至 System.Data.SqlClient。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和 MDAC 都可使用資料列版本設定來支援讀取認可的交易隔離，但是只有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 可支援快照集交易隔離  (在程式設計的詞彙中，使用資料列版本設定的讀取認可交易隔離與讀取認可的交易相同)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和 MDAC 都可使用資料列版本設定來支援讀取認可的交易隔離，但是只有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 可支援快照集交易隔離 (在程式設計的詞彙中，使用資料列版本設定的讀取認可交易隔離與讀取認可的交易相同)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 SQL Server Native Client 建置應用程式](building-applications-with-sql-server-native-client.md)  

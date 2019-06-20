@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2d8a3c6a47a9f353f44a9ec9c4a0cbb2c3cd3505
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094700"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>在執行管理中心的 Web 前端伺服器上安裝 ADOMD.NET
@@ -40,7 +40,7 @@ ms.locfileid: "66094700"
   
 2.  以滑鼠右鍵按一下 Microsoft.AnalysisServices.AdomdClient，然後選取**屬性**。  
   
-3.  按一下 **[版本]**。  
+3.  按一下 **[版本]** 。  
   
 4.  請確認該版本包含 12.00。\<組建編號 > 且描述為 Microsoft.AnalysisService.AdomdClient。  
   
