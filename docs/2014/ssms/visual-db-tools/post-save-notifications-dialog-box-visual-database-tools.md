@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e4ce89c0a1333a0a9a7a4ee9a801a2969c32a2e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63033470"
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>儲存後告知對話方塊 (Visual Database Tools)

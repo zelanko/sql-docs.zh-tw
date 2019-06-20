@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a97225797380294968f1af595f1299e478d548d3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058360"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>模糊群組轉換編輯器 (資料行索引標籤)
@@ -26,7 +26,7 @@ ms.locfileid: "66058360"
   
  若要深入了解模糊群組轉換，請參閱＜ [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可用的輸入資料行**  
  從清單中選取輸入資料行，即可依據該資料行將具有重複值的資料列分組。  
   

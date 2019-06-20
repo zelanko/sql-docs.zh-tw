@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2148c5145ab9d28c698d04253871677560fea9d9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980200"
 ---
 # <a name="sphelpfulltexttables-transact-sql"></a>sp_help_fulltext_tables (Transact-SQL)
@@ -46,7 +46,7 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 ## <a name="arguments"></a>引數  
 `[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` 是全文檢索目錄的名稱。 *fulltext_catalog_name*已**sysname**，預設值是 NULL。 如果*fulltext_catalog_name*省略或為 NULL，就會傳回所有與資料庫相關聯的全文檢索索引的資料表。 如果*fulltext_catalog_name*未指定，但*table_name*省略或是 NULL，擷取這個目錄相關聯的每個全文檢索索引資料表的全文檢索索引資訊。 如果兩個*fulltext_catalog_name*並*table_name*都有指定，會傳回一個資料列，如果*table_name*聯*fulltext_catalog_name*;否則，就會引發錯誤。  
   
-`[ @table_name = ] 'table_name'` 是全文檢索中繼資料要求的一或兩部分資料表名稱。 *table_name*已**nvarchar(517)**，預設值是 NULL。 如果只有*table_name*指定時，只有資料列相關*table_name*會傳回。  
+`[ @table_name = ] 'table_name'` 是全文檢索中繼資料要求的一或兩部分資料表名稱。 *table_name*已**nvarchar(517)** ，預設值是 NULL。 如果只有*table_name*指定時，只有資料列相關*table_name*會傳回。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

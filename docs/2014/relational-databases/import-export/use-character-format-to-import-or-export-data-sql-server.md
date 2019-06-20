@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011673"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字元格式匯入或匯出資料 (SQL Server)
@@ -56,7 +56,7 @@ ms.locfileid: "66011673"
 |**bcp**|**-c**|會導致**bcp**公用程式使用字元資料。<sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **='char'**|於大量匯入資料時使用字元格式。|  
   
- <sup>1</sup>載入字元 (**-c**) 與舊版相容的格式資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端，使用 **-V**切換。 如需詳細資訊，請參閱 [從舊版 SQL Server 匯入原生與字元格式資料](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
+ <sup>1</sup>載入字元 ( **-c**) 與舊版相容的格式資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端，使用 **-V**切換。 如需詳細資訊，請參閱 [從舊版 SQL Server 匯入原生與字元格式資料](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   
  如需詳細資訊，請參閱 [bcp 公用程式](../../tools/bcp-utility.md)、[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 或 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)。  
   

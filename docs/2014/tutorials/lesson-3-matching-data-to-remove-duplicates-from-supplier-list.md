@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c59a2fce106b08f53722ce44ae69225b680d7925
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484657"
 ---
 # <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>第 3 課：比對資料，以便從供應商清單中移除重複項
@@ -25,6 +25,6 @@ ms.locfileid: "65484657"
  在這一課，您會執行比對活動，從供應商清單中移除重複項。 首先，您要建立一個比對原則，其中包含一個規則來識別供應商清單中的重複項，然後將原則發行到知識庫。 接下來，您要建立並執行資料品質專案以進行比對。 最後，您會將比對活動中的結果匯出到 Excel 檔案，您稍後會使用這個檔案將資料上傳到 Master Data Services (MDS)。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 1:定義比對原則](../../2014/tutorials/task-1-defining-a-matching-policy.md)  
+ [工作 1：定義比對原則](../../2014/tutorials/task-1-defining-a-matching-policy.md)  
   
   

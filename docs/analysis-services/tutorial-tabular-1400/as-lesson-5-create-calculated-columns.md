@@ -11,10 +11,10 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: b56fe07237faa6570fd4b8c1adb31d3cce8e4540
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64776066"
 ---
 # <a name="create-calculated-columns"></a>建立導出資料行
@@ -45,7 +45,7 @@ ms.locfileid: "64776066"
   
 3.  以滑鼠右鍵按一下**CalendarQuarter**資料行標頭，，然後按一下**插入資料行**。  
   
-    名為 [Calculated Column 1] 的新資料行將會插入 [日曆季] 資料行的左側。  
+    名為 [Calculated Column 1]  的新資料行將會插入 [日曆季]  資料行的左側。  
   
 4.  在資料表上方的公式列中輸入下列 DAX 公式：自動完成協助您輸入的資料行和資料表的完整格式的名稱，並列出可用的函式。  
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ef717625e94b95559a6ae8bba57b0b82043fbc42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705451"
 ---
 # <a name="delete-a-policy-based-management-policy"></a>刪除原則式管理原則
@@ -47,12 +47,12 @@ ms.locfileid: "62705451"
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  按一下加號展開 **[原則管理]**。  
+3.  按一下加號展開 **[原則管理]** 。  
   
 4.  按一下加號展開 **[原則]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要刪除的原則，然後選取 [刪除]。  
+5.  以滑鼠右鍵按一下您想要刪除的原則，然後選取 [刪除]  。  
   
-6.  在 **[刪除物件]** 對話方塊中，確定已選取正確的條件，然後按一下 **[確定]**。  
+6.  在 **[刪除物件]** 對話方塊中，確定已選取正確的條件，然後按一下 **[確定]** 。  
   
   

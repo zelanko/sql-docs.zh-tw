@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1387b6321ace59ec8a0c13ed03444553f4adf85
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871913"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>卸除資料庫快照集 (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "62871913"
   
 2.  發出 [DROP DATABASE](/sql/t-sql/statements/drop-database-audit-specification-transact-sql) 陳述式，並指定所要卸除之資料庫快照集的名稱。 其語法如下：  
   
-     DROP DATABASE *database_snapshot_name* [ **,**...*n* ]  
+     DROP DATABASE *database_snapshot_name* [ **,** ...*n* ]  
   
      其中， *database_snapshot_name* 是所要卸除之資料庫快照集的名稱。  
   

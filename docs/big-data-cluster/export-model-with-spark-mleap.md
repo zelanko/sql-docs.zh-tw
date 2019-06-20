@@ -12,10 +12,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: e831345e82310b51e5802af70c91b0d397e66c90
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822452"
 ---
 # <a name="export-spark-machine-learning-models-with-mleap"></a>匯出 Spark 機器學習服務模型與 MLeap

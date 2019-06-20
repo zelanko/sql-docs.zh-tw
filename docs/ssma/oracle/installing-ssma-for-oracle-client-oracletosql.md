@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 27e5c0ef0c834806351bda73eb69dbe783d78db2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63223582"
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>安裝 SSMA for Oracle 用戶端 (OracleToSQL)
@@ -70,7 +70,7 @@ SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server Mig
   
 4.  在 [選擇安裝類型] 頁面上，按一下**典型**。  
   
-5.  按一下 **[安裝]**。  
+5.  按一下 **[安裝]** 。  
   
 > [!IMPORTANT]  
 > 1.  請安裝新版本之前，解除安裝所有舊版的 SSMA for Oracle。  

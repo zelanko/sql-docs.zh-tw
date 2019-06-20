@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7c9a628f912f382f3ee8a87276aa34d0e54e37ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63033637"
 ---
 # <a name="update-statistics"></a>更新統計資料
@@ -56,9 +56,9 @@ ms.locfileid: "63033637"
   
 4.  按一下加號展開 **[統計資料]** 資料夾。  
   
-5.  以滑鼠右鍵按一下要更新的統計資料物件，然後選取 [屬性]。  
+5.  以滑鼠右鍵按一下要更新的統計資料物件，然後選取 [屬性]  。  
   
-6.  在 **統計資料屬性-**_statistics_name_對話方塊中，選取**更新這些資料行的統計資料**核取方塊，然後按一下  **確定**.  
+6.  在 **統計資料屬性-** _statistics_name_對話方塊中，選取**更新這些資料行的統計資料**核取方塊，然後按一下  **確定**.  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -66,9 +66,9 @@ ms.locfileid: "63033637"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -82,9 +82,9 @@ ms.locfileid: "63033637"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;   
@@ -100,9 +100,9 @@ ms.locfileid: "63033637"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;   

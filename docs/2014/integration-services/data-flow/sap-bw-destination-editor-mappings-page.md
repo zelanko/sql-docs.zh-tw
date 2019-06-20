@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0af079eaa96fd7925ef361b398cd628641c55a3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770872"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 目的地編輯器 (對應頁面)
@@ -33,7 +33,7 @@ ms.locfileid: "62770872"
   
 3.  在 [SAP BW 目的地編輯器] 中，按一下 [對應] 開啟編輯器的 [對應] 頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 > [!NOTE]  
 >  如果您不知道設定目的地的所有必要值，可能必須詢問 SAP 系統管理員。  
