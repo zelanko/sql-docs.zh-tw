@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 631d55e1f8921601f25f2b2d8a14f00d11bd0947
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62782003"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>隱藏 SQL Server Database Engine 的執行個體
@@ -40,7 +40,7 @@ ms.locfileid: "62782003"
  如需詳細資訊，請參閱[建立或刪除用戶端使用的伺服器別名 &#40;SQL Server 組態管理員&#41;](create-or-delete-a-server-alias-for-use-by-a-client.md)。  
   
  如果隱藏了叢集具名執行個體，而當 **LastConnect** 登錄機碼 (**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI11.0\LastConnect**) 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前接聽的連接埠有不同的連接埠時，叢集服務可能無法連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果叢集服務將無法連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可能會看到類似如下的錯誤：  
-**事件識別碼：1001:事件名稱：容錯移轉叢集資源鎖死。**  
+**事件識別碼：1001：事件名稱：容錯移轉叢集資源鎖死。**  
   
 ## <a name="see-also"></a>另請參閱  
  [伺服器網路組態](server-network-configuration.md)   

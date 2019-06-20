@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 549efcd796d9cef721995b48fc5e7b3cc02403a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62920648"
 ---
 # <a name="restoring-from-backups-stored-in-windows-azure"></a>從儲存在 Windows Azure 的備份還原
@@ -33,10 +33,10 @@ ms.locfileid: "62920648"
   
 ### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio  
   
--   此還原工作使用 SQL Server Management Studio 來還原資料庫。 備份媒體頁面現在包含 [URL] 選項，以顯示儲存在 Windows Azure Blob 儲存體服務中的備份檔案。 您也必須提供用來驗證儲存體帳戶的 SQL 認證。 [要還原的備份組] 方格接著會填入 Windows Azure Blob 儲存體中的可用備份。 如需詳細資訊，請參閱[使用 SQL Server Management Studio 從 Windows Azure 儲存體還原](sql-server-backup-to-url.md#RestoreSSMS)。  
+-   此還原工作使用 SQL Server Management Studio 來還原資料庫。 備份媒體頁面現在包含 [URL]  選項，以顯示儲存在 Windows Azure Blob 儲存體服務中的備份檔案。 您也必須提供用來驗證儲存體帳戶的 SQL 認證。 [要還原的備份組]  方格接著會填入 Windows Azure Blob 儲存體中的可用備份。 如需詳細資訊，請參閱[使用 SQL Server Management Studio 從 Windows Azure 儲存體還原](sql-server-backup-to-url.md#RestoreSSMS)。  
   
 ### <a name="optimizing-restores"></a>最佳化還原  
- 若要減少還原寫入時間，請將 [執行磁碟區維護工作] 使用者權限加入至 SQL Server 使用者帳戶。 如需詳細資訊，請參閱[資料庫檔案初始化](https://go.microsoft.com/fwlink/?LinkId=271622)。 如果開啟立即檔案初始化功能之後，還原速度仍然很慢，請查看資料庫備份所在之執行個體上的記錄檔大小。 如果記錄檔大小很大 (數以 GB)，還原速度應該就會很慢。 在還原期間，記錄檔必須歸零，因此需要大量時間。  
+ 若要減少還原寫入時間，請將 [執行磁碟區維護工作]  使用者權限加入至 SQL Server 使用者帳戶。 如需詳細資訊，請參閱[資料庫檔案初始化](https://go.microsoft.com/fwlink/?LinkId=271622)。 如果開啟立即檔案初始化功能之後，還原速度仍然很慢，請查看資料庫備份所在之執行個體上的記錄檔大小。 如果記錄檔大小很大 (數以 GB)，還原速度應該就會很慢。 在還原期間，記錄檔必須歸零，因此需要大量時間。  
   
  若要減少還原時間，建議您使用壓縮的備份。  如果備份大小超過 25 GB，請使用 [AzCopy 公用程式](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) 下載到本機磁碟機，然後執行還原。 如需其他備份最佳做法與建議，請參閱 [SQL Server 備份至 URL 的最佳做法和疑難排解](sql-server-backup-to-url-best-practices-and-troubleshooting.md)。  
   

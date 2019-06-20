@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 05cc6dc2647b5297b8d7176cd4bc70261b78cb71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181409"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (Visual FoxPro ODBC Driver)
@@ -35,7 +35,7 @@ ms.locfileid: "63181409"
 |SQL_BIGINT|不支援。 沒有任何 64 位元 Visual FoxPro 型別。|  
 |SQL_BIT|邏輯|  
 |SQL_CHAR|字元|  
-|SQL_DATE|date|  
+|SQL_DATE|Date|  
 |SQL_DECIMAL|Numeric|  
 |SQL_DOUBLE|Double|  
 |SQL_FLOAT|Double|  
@@ -51,6 +51,6 @@ ms.locfileid: "63181409"
 |SQL_VARBINARY|備忘 （二進位） *、 一般|  
 |SQL_VARCHAR|字元|  
   
- * 預設類型  
+ \* 預設類型  
   
  如需 Visual FoxPro 資料類型的詳細資訊，請參閱[CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md)。 如需有關這個函式的詳細資訊，請參閱 < [SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md)中*ODBC 程式設計人員參考*。

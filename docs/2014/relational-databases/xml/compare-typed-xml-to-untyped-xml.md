@@ -26,14 +26,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62637616"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>比較具類型的 XML 與不具類型的 XML
-  您可以建立 `xml` 類型的變數、參數和資料行。 此外，也可以選擇性地將 XML 結構描述的集合與 `xml` 類型的變數、參數和資料行建立關聯。 在此情況下，`xml`資料類型執行個體則稱為*型別*。 非此種情況下的 XML 執行個體則稱為「不具類型」。  
+  您可以建立 `xml` 類型的變數、參數和資料行。 此外，也可以選擇性地將 XML 結構描述的集合與 `xml` 類型的變數、參數和資料行建立關聯。 在此情況下，`xml`資料類型執行個體則稱為*型別*。 非此種情況下的 XML 執行個體則稱為「不具類型」  。  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>格式正確的 XML 和 xml 資料類型  
  `xml` 資料類型會實作 ISO 標準 `xml` 資料類型。 因此，它可以在不具類型的 XML 資料行中儲存格式良好的 XML 1.0 版文件，也可以儲存含有文字節點和任意數量之最上層元素的所謂 XML 內容片段。 系統會確認資料的格式良好、不需要將資料行繫結到 XML 結構描述，並拒絕在某種程度上格式不良的資料。 對於不具類型的 XML 變數和參數而言，也是如此。  

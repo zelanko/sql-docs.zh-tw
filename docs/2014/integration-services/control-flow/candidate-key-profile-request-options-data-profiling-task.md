@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d682bacdc2bce10a118190108a2237419d4b9e27
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832953"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>候選索引鍵設定檔要求選項 (資料分析工作)
@@ -111,7 +111,7 @@ ms.locfileid: "62832953"
  **RequestID**  
  輸入描述性名稱，以便識別這個設定檔要求。 一般而言，您不需要變更自動產生的值。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **ThresholdSetting**  
  這個屬性具有下表中所列的選項。 這個屬性的預設值為 [已指定]。  
   

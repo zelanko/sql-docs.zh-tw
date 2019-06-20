@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a3650b284e8817c2b7f8aee6a0beca71c275d6a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62670368"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>變更採礦模型的屬性
@@ -30,20 +30,20 @@ ms.locfileid: "62670368"
   
 ### <a name="to-change-the-properties-of-a-mining-model"></a>若要變更採礦模型的屬性  
   
-1.  在資料採礦設計師的 [採礦模型] 索引標籤中，以滑鼠右鍵按一下包含採礦模型名稱的資料行標題，或方格中包含採礦演算法名稱的資料列，然後選取 [屬性]。  
+1.  在資料採礦設計師的 [採礦模型]  索引標籤中，以滑鼠右鍵按一下包含採礦模型名稱的資料行標題，或方格中包含採礦演算法名稱的資料列，然後選取 [屬性]  。  
   
-2.  在畫面右側的 [屬性] 視窗中，反白顯示對應到您要變更之屬性的值，然後輸入新值。  
+2.  在畫面右側的 [屬性]  視窗中，反白顯示對應到您要變更之屬性的值，然後輸入新值。  
   
      您在設計師中選取其他元素時，新值就會生效。  
   
 ### <a name="to-change-the-properties-of-a-mining-model-column"></a>變更採礦模型資料行的屬性  
   
-1.  在資料採礦設計師的 [採礦模型] 索引標籤中，以滑鼠右鍵按一下採礦結構資料行和採礦模型交集方格中的資料格，然後選取 [屬性]。  
+1.  在資料採礦設計師的 [採礦模型]  索引標籤中，以滑鼠右鍵按一下採礦結構資料行和採礦模型交集方格中的資料格，然後選取 [屬性]  。  
   
-2.  在畫面右側的 [屬性] 視窗中，反白顯示對應到您要變更之屬性的值，然後輸入新值。  
+2.  在畫面右側的 [屬性]  視窗中，反白顯示對應到您要變更之屬性的值，然後輸入新值。  
   
     > [!NOTE]  
-    >  如果資料行使用方式是設定為 [忽略]，則資料行的 [屬性] 視窗為空白。  
+    >  如果資料行使用方式是設定為 [忽略]  ，則資料行的 [屬性]  視窗為空白。  
   
      您在設計師中選取其他元素時，新值就會生效。  
   

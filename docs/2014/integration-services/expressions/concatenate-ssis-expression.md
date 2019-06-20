@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 288e4aedc6112640aa511712ad90912b1d41b2fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62769366"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (串連) (SSIS 運算式)
@@ -48,7 +48,7 @@ character_expression1 + character_expression2
   
  兩個運算式的資料類型必須相同，或者其中一個運算式必須隱含轉換成另一個運算式的資料類型。 例如，如果串連 "Order date is " 字串和 **OrderDate** 資料行，則 **OrderDate** 中的值會隱含轉換成字串資料類型。 若要串連兩個數值，這兩個數值都必須明確轉換成字串資料類型。  
   
- 串連只能使用一種 BLOB 資料類型：DT_TEXT、 DT_NTEXT 或 DT_IMAGE。  
+ 串連只能使用一種 BLOB 資料類型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
   
  如果任一元素為 Null，則結果為 Null。  
   

@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767550"
 ---
-# <a name="lesson-2-adding-looping"></a>第 2 課：加入迴圈
+# <a name="lesson-2-adding-looping"></a>第 2 課：新增迴圈
   在[第 1 課：建立專案和基本套件](lesson-1-create-a-project-and-basic-package-with-ssis.md)，您所建立的封裝，從單個一般檔案來源擷取資料、 轉換資料，使用查閱轉換，和最後載入將資料載入**FactCurrency**事實資料表**AdventureWorksDW2012**範例資料庫。  
   
- 不過，擷取、轉換和載入 (ETL) 處理序使用單個一般檔案的情況很罕見。 典型的 ETL 處理序會從多個一般檔案來源擷取資料。 從多個來源擷取資料需要反覆的控制流程。  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 最令人期待的功能之一就是可以輕易地在套件中加入反覆運算或迴圈的能力。  
+ 不過，擷取、轉換和載入 (ETL) 處理序使用單個一般檔案的情況很罕見。 典型的 ETL 處理序會從多個一般檔案來源擷取資料。 從多個來源擷取資料需要反覆的控制流程。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 最令人期待的功能之一就是可以輕易地在套件中加入反覆運算或迴圈的能力。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供兩種類型的容器來循環使用封裝迴圈：Foreach 迴圈容器和 For 迴圈容器。 Foreach 迴圈容器會使用列舉值來執行迴圈，而 For 迴圈容器通常會使用變數運算式。 這一課使用 Foreach 迴圈容器。  
   

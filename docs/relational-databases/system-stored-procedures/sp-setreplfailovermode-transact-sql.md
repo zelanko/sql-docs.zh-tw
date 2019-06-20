@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ae89e606633fc3555745dd56fc7703ef50685468
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63028627"
 ---
 # <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
@@ -48,7 +48,7 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [**@failover_mode=**] **'***failover_mode***'**  
+ [ **@failover_mode=** ] **'***failover_mode***'**  
  這是訂閱的容錯移轉模式。 *failover_mode*已**nvarchar(10**而且可以是下列值之一。  
   
 |值|描述|  

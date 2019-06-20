@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b824129d1687dce8471800f79d106328b9ee36f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62892268"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 變數
@@ -52,7 +52,7 @@ ms.locfileid: "62892268"
   
  您可以為下列所有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 容器類型建立使用者自訂變數：封裝、Foreach 迴圈容器、For 迴圈容器、時序容器、工作和事件處理常式。 使用者自訂變數是容器 Variables 集合的成員。  
   
- 如果您使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師建立封裝，則可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師之封裝總管索引標籤上的 [變數] 資料夾中，查看 Variables 集合的成員。 資料夾會列出使用者自訂變數和系統變數。  
+ 如果您使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師建立封裝，則可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師之封裝總管  索引標籤上的 [變數]  資料夾中，查看 Variables 集合的成員。 資料夾會列出使用者自訂變數和系統變數。  
   
  您可以利用下列方式設定使用者自訂變數：  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62892268"
  如需變數之實際使用狀況的詳細資訊，請參閱[在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)。  
   
 ## <a name="variable-properties"></a>變數屬性  
- 您可以透過在 [變數] 視窗或 [屬性] 視窗中設定下列屬性來設定使用者定義變數。 但某些屬性只能在 [屬性] 視窗中設定。  
+ 您可以透過在 [變數]  視窗或 [屬性]  視窗中設定下列屬性來設定使用者定義變數。 但某些屬性只能在 [屬性] 視窗中設定。  
   
 > [!NOTE]  
 >  系統變數上唯一可設定的選項是指定其變更值時，它們是否會引發事件。  
@@ -103,9 +103,9 @@ ms.locfileid: "62892268"
  ReadOnly  
  當此屬性設為 `False`，表示變數可讀取\寫入。  
   
- 範圍。  
+ `Scope`  
  > [!NOTE]  
->  您只能透過按一下 [變數] 視窗中的 [移動變數] 來變更此屬性設定。  
+>  您只能透過按一下 [變數]  視窗中的 [移動變數]  來變更此屬性設定。  
   
  變數建立於封裝範圍之內，或封裝中的容器、工作或事件處理常式範圍之內。 因為封裝容器位於容器階層的最上層，所以具有封裝範圍的變數在功能上與全域變數相同，且可以由封裝內的所有容器使用。 同樣地，在容器 (例如「For 迴圈」容器) 範圍中定義的變數可由「For 迴圈」容器內的所有工作或容器使用。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "62892268"
   
  ValueType  
  > [!NOTE]  
->  此屬性值會顯示在 [變數] 視窗中的 [資料類型] 資料行中。  
+>  此屬性值會顯示在 [變數]  視窗中的 [資料類型]  資料行中。  
   
  指定變數值的資料類型。  
   

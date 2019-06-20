@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7cfc9890bda35f1574c83b339495b996782b79b0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069219"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>選取範圍 (資料分割屬性對話方塊) (SSMS)
-  在 SQL Server Management Studio 中，使用 **[資料分割屬性]** 對話方塊的 **[選取範圍]** 頁面，即可從量值群組中選取資料分割，然後在 **[一般]**、 **[主動式快取]** 或 **[錯誤組態]** 窗格中檢視或修改屬性。  
+  在 SQL Server Management Studio 中，使用 **[資料分割屬性]** 對話方塊的 **[選取範圍]** 頁面，即可從量值群組中選取資料分割，然後在 **[一般]** 、 **[主動式快取]** 或 **[錯誤組態]** 窗格中檢視或修改屬性。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **格線**  
  顯示包含所選取資料分割之量值群組的資料分割。  
   
- 選取要在 **[一般]**、 **[主動式快取]** 或 **[錯誤組態]** 頁面中檢視其屬性的資料分割。  
+ 選取要在 **[一般]** 、 **[主動式快取]** 或 **[錯誤組態]** 頁面中檢視其屬性的資料分割。  
   
  方格包含下列資料行：  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f60ea2b2a642cf9435ed8366c42e43abb927e426
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62823128"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>加入預測用的資料來源檢視 (中繼資料採礦教學課程)
@@ -24,16 +24,16 @@ ms.locfileid: "62823128"
   
 1.  在 [方案總管] 中，以滑鼠右鍵按一下**資料來源檢視**，然後選取**新的資料來源檢視**。  
   
-2.  在 [歡迎使用資料來源檢視精靈] 頁面上，按一下 [下一步]。  
+2.  在 [歡迎使用資料來源檢視精靈]  頁面上，按一下 [下一步]  。  
   
-3.  在  **Zdroj Dat**頁面的 **關聯式資料來源**，選取[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]資料來源。 按一下 [下一步] 。  
+3.  在  **Zdroj Dat**頁面的 **關聯式資料來源**，選取[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]資料來源。 按一下 [下一步]  。  
   
     > [!NOTE]  
     >  如果您沒有此資料來源，您可以找到建立資料來源中的步驟[83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](../../2014/tutorials/basic-data-mining-tutorial.md)。  
   
 4.  在 **選取資料表和檢視**頁面上，選取 vTimeSeries (dbo) 資料表，然後按一下向右箭號，將它新增至資料來源檢視。  
   
-5.  按一下 [下一步] 。  
+5.  按一下 [下一步]  。  
   
 6.  在 [**完成精靈]** 頁面上，依預設名稱的資料來源檢視是[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]。 將名稱變更為**SalesByRegion**，然後按一下**完成**。  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678495"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>第 1 課：建立自行車買主採礦結構
@@ -96,7 +96,7 @@ WITH HOLDOUT (<holdout specifier>)
   
 1.  開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。  
   
-2.  在 [**連接到伺服器**] 對話方塊中，如**伺服器類型**，選取**Analysis Services**。 在**伺服器名稱**，型別`LocalHost`，輸入執行個體的名稱或[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]您想要連接到這一課。 按一下 **[連接]**。  
+2.  在 [**連接到伺服器**] 對話方塊中，如**伺服器類型**，選取**Analysis Services**。 在**伺服器名稱**，型別`LocalHost`，輸入執行個體的名稱或[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]您想要連接到這一課。 按一下 **[連接]** 。  
   
 3.  中**物件總管 中**，以滑鼠右鍵按一下執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查詢**，然後按一下**DMX**以開啟**查詢編輯器**以及新的空白查詢。  
   

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4ee60bcfc801cb3b9e886aa11e03ed9213712bdf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66097640"
 ---
 # <a name="isinitialized-property-wmi-msreportserverconfigurationsetting"></a>IsInitialized 屬性 (WMI MSReportServer_ConfigurationSetting)

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dea74f8fc22bea5a0903a3dae17f6c969849181c
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485056"
 ---
 # <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>工作 3：針對供應商知識庫清理資料
@@ -31,6 +31,6 @@ ms.locfileid: "65485056"
 3.  按一下 **下一步**轉為**管理和檢視結果**頁面。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 4:管理和檢視結果](../../2014/tutorials/task-4-manaing-and-viewing-results.md)  
+ [工作 4：管理和檢視結果](../../2014/tutorials/task-4-manaing-and-viewing-results.md)  
   
   

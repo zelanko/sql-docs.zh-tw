@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 5a703adf94d4708a4ee222a6cfcc442386202567
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63288543"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>SQL Server Migration Assistant for MySQL (MySQLToSQL)

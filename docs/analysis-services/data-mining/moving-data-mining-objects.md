@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: edbceb50dd1532e427c3bf5738dfe183223afc2d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62509870"
 ---
 # <a name="moving-data-mining-objects"></a>移動資料採礦物件
@@ -43,7 +43,7 @@ ms.locfileid: "62509870"
 ### <a name="scripting"></a>指令碼  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了數種語言，可用於編寫物件的指令碼。  
   
--   **XMLA**:您可以使用 XMLA，以滑鼠右鍵按一下物件中的物件編寫指令碼[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 若要執行指令碼，請在目標伺服器上的 [XMLA 查詢] 視窗中開啟指令碼。  
+-   **XMLA**:您可以使用 XMLA，以滑鼠右鍵按一下物件中的物件編寫指令碼[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 若要執行指令碼，請在目標伺服器上的 [XMLA 查詢]  視窗中開啟指令碼。  
   
 -   **DMX**:您可以使用範本來建立指令碼，或在提供的其中一個查詢產生器[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]和[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   

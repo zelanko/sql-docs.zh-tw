@@ -1,7 +1,7 @@
 ---
 title: 設定 Internet Information Services (IIS) 8.0 上 Analysis services 的 HTTP 存取 |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 06/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -10,12 +10,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c8af52dfe8c95b80f5b9550b41a14e1f70c7a6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42ccdae89fdb0883201ec022479e51a327ea0b33
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080167"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263225"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>設定 Internet Information Services (IIS) 8.0 上 Analysis Services 的 HTTP 存取
   本文說明如何設定 HTTP 端點來存取 Analysis Services 執行個體。 您可以設定 MSMDPUMP.dll (這是在 Internet Information Services (IIS) 中執行的一個 ISAPI 擴充程式，可以在用戶端應用程式與 Analysis Services 伺服器之間來回提取資料) 來啟用 HTTP 存取。 此方法會在您的 BI 方案需要下列功能時，提供連接至 Analysis Services 的替代方式。  
@@ -261,7 +261,7 @@ ms.locfileid: "66080167"
 ##  <a name="bkmk_test"></a> 步驟 6:測試您的組態  
  MSMDPUMP 的連接字串語法為 MSMDPUMP.dll 檔案的 URL。  
   
- 如果 web 應用程式正在接聽固定通訊埠，將通訊埠編號附加至的伺服器名稱或 IP 位址 (例如 http://my-web-srv01:8080/OLAP/msmdpump.dll 或 http://123.456.789.012:8080/OLAP/msmdpump.dll 。  
+ 如果 web 應用程式正在接聽固定通訊埠，附加連接埠號碼的伺服器名稱或 IP 位址，例如`http://my-web-srv01:8080/OLAP/msmdpump.dll`或`http://123.456.789.012:8080/OLAP/msmdpump.dll`。  
   
  若要快速測試連接，您可以使用 Microsoft Excel 或 SQL Server Management Studio 開啟連接。  
   

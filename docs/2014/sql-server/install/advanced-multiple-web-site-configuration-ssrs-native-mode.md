@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 01ed7ed806cc064b05180347fa41905b57c4c98e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096833"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>進階多重網站組態 (SSRS 原生模式)
@@ -30,7 +30,7 @@ ms.locfileid: "66096833"
   
  按一下 **[確定]** 儲存您的變更。 如果您加入或移除 URL，然後沒有先按一下 **[確定]** 就關閉此對話方塊，您的變更將會遺失。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **IP 位址**  
  識別 TCP/IP 網路上的報表伺服器電腦。 有效值包括：  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66096833"
      如果您有多張網路卡，您會看到每一張網路卡都有一個 IP 位址。 如果您只選取這個值，它會將應用程式存取限制為只有該 IP 位址 (以及網域名稱伺服器對應至該位址的任何主機名稱)。 您無法使用 localhost 來存取報表伺服器，而且也不能使用安裝於報表伺服器電腦上之其他網路卡的 IP 位址。  
   
  **通訊埠**  
- 指定報表伺服器用來監視要求的通訊埠。 通訊埠 80 是預設通訊埠。 如果您使用通訊埠 80，您不需要在 URL 中包含此通訊埠。 如果您使用任何其他連接埠號碼，您必須一律包含在 URL (例如 http://localhost:8181/reports)。  
+ 指定報表伺服器用來監視要求的通訊埠。 通訊埠 80 是預設通訊埠。 如果您使用通訊埠 80，您不需要在 URL 中包含此通訊埠。 如果您使用任何其他連接埠號碼，您必須一律包含在 URL (例如 http://localhost:8181/reports) 。  
   
  **主機標頭**  
  如果您已經在網域名稱伺服器上定義解析為電腦的主機標頭，您可以在設定報表伺服器存取的 URL 中指定該主機標頭。  

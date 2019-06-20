@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85b9387b5e60cdcdfd7af17bc3268f5ee475b739
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109322"
 ---
 # <a name="delete-group-dialog-box"></a>刪除群組對話方塊
   使用 **[刪除群組]** 對話方塊，即可從資料表、矩陣或清單資料區中刪除群組。 如果有與此群組相關聯的資料列或資料行，您也可以刪除這些結構。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **刪除群組及相關資料列和資料行**  
  選擇此選項來刪除群組定義以及與群組相關聯的所有資料列和資料行。  
   

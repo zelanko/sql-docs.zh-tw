@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2cc49bbd3d2927431da2c16debbe0f35dbf4bb79
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63453558"
 ---
 # <a name="global-settings-logging-accesstosql"></a>全域設定 （記錄） (AccessToSQL)
@@ -51,7 +51,7 @@ ms.locfileid: "63453558"
 |**偵錯**|寫入所有的訊息，包括偵錯訊息，記錄檔。|  
   
 **記錄檔路徑**  
-檔案路徑和名稱的 SSMA 記錄檔。 若要指定不同的名稱，按一下目前路徑，然後按一下 瀏覽 (**...**) 按鈕。  
+檔案路徑和名稱的 SSMA 記錄檔。 若要指定不同的名稱，按一下目前路徑，然後按一下 瀏覽 ( **...** ) 按鈕。  
   
 **記錄檔大小**  
 記錄檔，以 kb 為單位的大小上限。 最小的大小為 10 KB。 預設大小為 10240 KB。  

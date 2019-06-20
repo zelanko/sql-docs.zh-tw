@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63251553"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 和 DAX 中的 VBA 函數
@@ -51,7 +51,7 @@ ms.locfileid: "63251553"
 |CurDir|不支援||  
 |CVar|僅限 MDX||  
 |CVErr|不支援||  
-|date|僅限 MDX|**警告**DAX 會實作不同的函式具有相同名稱，用來從指定的引數產生日期類型值的 DATE (Year，Month，Day) 函數|  
+|Date|僅限 MDX|**警告**DAX 會實作不同的函式具有相同名稱，用來從指定的引數產生日期類型值的 DATE (Year，Month，Day) 函數|  
 |DateAdd|僅限 MDX|**警告**DAX 會實作不同的函式具有相同名稱： dateadd (\<日期 >，< number_of_intervals >，\<間隔 >) 函數，用來移位給定的日期，由數項給定的間隔|  
 |DateDiff]|僅限 MDX||  
 |DatePart|僅限 MDX||  

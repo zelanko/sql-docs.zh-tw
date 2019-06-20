@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c40ec2d7da7dc8f46644632d29b6fb8d1101ff9b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055642"
 ---
 # <a name="set-the-properties-of-the-integration-services-service"></a>設定 Integration Services 服務的屬性
@@ -33,9 +33,9 @@ ms.locfileid: "66055642"
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-sql-server-configuration-manager"></a>使用 SQL Server 組態管理員來設定 Integration Services 服務的屬性  
   
-1.  在 **[開始]** 功能表上，依序指向 **[所有程式]**、 **[Microsoft SQL Server]** 和 **[組態工具]**，然後按一下 **[SQL Server 組態管理員]**。  
+1.  在 **[開始]** 功能表上，依序指向 **[所有程式]** 、 **[Microsoft SQL Server]** 和 **[組態工具]** ，然後按一下 **[SQL Server 組態管理員]** 。  
   
-2.  在 [SQL Server 組態管理員] 嵌入式管理單元中，尋找服務清單中的 [SQL Server Integration Services]，以滑鼠右鍵按一下 [SQL Server Integration Services]，然後按一下 [屬性]。  
+2.  在 [SQL Server 組態管理員]  嵌入式管理單元中，尋找服務清單中的 [SQL Server Integration Services]  ，以滑鼠右鍵按一下 [SQL Server Integration Services]  ，然後按一下 [屬性]  。  
   
 3.  在 **[SQL Server Integration Services 屬性]** 對話方塊中，可以執行下列操作：  
   
@@ -44,19 +44,19 @@ ms.locfileid: "66055642"
     -   按一下 **[服務]** 索引標籤，即可檢視服務的相關資訊 (例如主機電腦的名稱)，並指定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務的啟動模式。  
   
         > [!NOTE]  
-        >  [進階] 索引標籤不包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務的資訊。  
+        >  [進階]  索引標籤不包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務的資訊。  
   
-4.  按一下 [確定] 。  
+4.  按一下 [確定]  。  
   
-5.  在 [檔案] 功能表上，按一下 [結束]，以關閉 [SQL Server 組態管理員] 嵌入式管理單元。  
+5.  在 [檔案]  功能表上，按一下 [結束]  ，以關閉 [SQL Server 組態管理員]  嵌入式管理單元。  
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-services"></a>使用服務來設定 Integration Services 服務的屬性  
   
-1.  在 **[控制台]** 中，如果您使用「一般檢視」，請按一下 **[系統管理工具]**，如果您使用「類別檢視」，請按一下 **[效能及維護]** ，然後按一下 **[系統管理工具]**。  
+1.  在 **[控制台]** 中，如果您使用「一般檢視」，請按一下 **[系統管理工具]** ，如果您使用「類別檢視」，請按一下 **[效能及維護]** ，然後按一下 **[系統管理工具]** 。  
   
-2.  按一下 **[服務]**。  
+2.  按一下 **[服務]** 。  
   
-3.  在 [服務] 嵌入式管理單元中，尋找服務清單中的 [SQL Server Integration Services]，以滑鼠右鍵按一下 [SQL Server Integration Services]，然後按一下 [屬性]。  
+3.  在 [服務]  嵌入式管理單元中，尋找服務清單中的 [SQL Server Integration Services]  ，以滑鼠右鍵按一下 [SQL Server Integration Services]  ，然後按一下 [屬性]  。  
   
 4.  在 **[SQL Server Integration Services 屬性]** 對話方塊中，您可以執行下列動作：  
   
@@ -70,11 +70,11 @@ ms.locfileid: "66055642"
   
     -   按一下 **[相依性]** 索引標籤，以檢視相依性服務的清單。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務不具有相依性。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
-6.  或者，如果啟動類型是 [手動] 或 [自動]，則可以用滑鼠右鍵按一下 [SQL Server Integration Services]，然後按一下 [啟動]、[停止] 或 [重新啟動]。  
+6.  或者，如果啟動類型是 [手動] 或 [自動]，則可以用滑鼠右鍵按一下 [SQL Server Integration Services]  ，然後按一下 [啟動]、[停止] 或 [重新啟動]  。  
   
-7.  在 [檔案] 功能表上，按一下 [結束]，以關閉 [服務] 嵌入式管理單元。  
+7.  在 [檔案]  功能表上，按一下 [結束]  ，以關閉 [服務]  嵌入式管理單元。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理 Integration Services 服務](../../2014/integration-services/manage-the-integration-services-service.md)  

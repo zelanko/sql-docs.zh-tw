@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 713a0ba96a2e82f10d4150b337d51f9f1774548f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253150"
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>連線到 Azure SQL DB (MySQLToSQL)
@@ -22,7 +22,7 @@ ms.locfileid: "63253150"
   
 若要存取此對話方塊中，在**檔案**功能表上，選取**連接到 SQL Azure**。 如果您先前曾經連線，則命令是**重新連接到 SQL Azure。**  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **伺服器名稱**  
   
 選取或輸入伺服器名稱連接到 SQL Azure。  

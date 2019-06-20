@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c11f414bded0c0b927579eb5dbec4664584a055e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204961"
 ---
 # <a name="draw-reflexive-relationships-visual-database-tools"></a>繪製自反關聯性 (Visual Database Tools)
@@ -32,11 +32,11 @@ ms.locfileid: "63204961"
   
 2.  將線條拖曳回選取的資料表。  
   
-3.  放開滑鼠按鈕。 隨即出現 [資料表和資料行] 對話方塊。  
+3.  放開滑鼠按鈕。 隨即出現 [資料表和資料行]  對話方塊。  
   
 4.  選取要用來形成關聯性的外部索引鍵資料行及主索引鍵資料表與資料行。  
   
-5.  選擇兩次 [確定] 以建立關聯性。  
+5.  選擇兩次 [確定]  以建立關聯性。  
   
  當您對資料表執行查詢時，可使用自反關聯性來建立自我聯結 (Self-Join)。 如需使用聯結查詢資料表的相關資訊，請參閱 [使用聯結查詢 &#40;Visual Database Tools&#41;](visual-database-tools.md)。  
   

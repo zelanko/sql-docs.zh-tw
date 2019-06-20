@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070005"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>排程資料重新整理 (PowerPivot for SharePoint)
@@ -77,7 +77,7 @@ ms.locfileid: "66070005"
   
 1.  在包含活頁簿的文件庫中選取活頁簿，然後按一下向下箭號以顯示命令清單。  
   
-2.  按一下 **[管理 PowerPivot 資料重新整理]**。 如果已經定義資料重新整理排程，則會改看到 [檢視資料重新整理] 記錄頁面。 您可以按一下 **[設定資料重新整理]** 以開啟排程定義頁面。  
+2.  按一下 **[管理 PowerPivot 資料重新整理]** 。 如果已經定義資料重新整理排程，則會改看到 [檢視資料重新整理] 記錄頁面。 您可以按一下 **[設定資料重新整理]** 以開啟排程定義頁面。  
   
 3.  在排程定義頁面中，選取 **[啟用]** 核取方塊。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "66070005"
   
 2.  選取文件，然後按一下出現在右邊的向下箭號。  
   
-3.  選取 **[管理 PowerPivot 資料重新整理]**。  
+3.  選取 **[管理 PowerPivot 資料重新整理]** 。  
   
  隨即顯示記錄頁面，以顯示在目前 Excel 活頁簿中為 PowerPivot 資料顯示所有重新整理活動的完整記錄，包含最近的資料重新整理作業狀態。  
   

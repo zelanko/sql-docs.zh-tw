@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 49638971a01d2082938d4759bb9f597d7bfdf254
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462626"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)

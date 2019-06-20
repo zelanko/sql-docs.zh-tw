@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250591"
 ---
 # <a name="replication-snapshot-agent"></a>複寫快照集代理程式
@@ -78,8 +78,8 @@ ms.locfileid: "63250591"
  **-?**  
  列印所有可用的參數。  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。 請針對該伺服器上 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。 請針對該伺服器上 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
   
  **-Publication** _發行集_  
  這是發行集的名稱。 只有在發行集設定成隨時都有快照供新的訂閱或重新初始化的訂閱使用時，這個參數才有效。  
@@ -93,10 +93,10 @@ ms.locfileid: "63250591"
  **-DefinitionFile** _def_path_and_file_name_  
  這是代理程式定義檔的路徑。 代理程式定義檔包含代理程式的命令列引數。 此檔案的內容會剖析為可執行檔。 請使用雙引號 (") 來指定包含任意字元的引數值。  
   
- **-Distributor** _server_name_[**\\**_instance_name_]  
- 這是散發者的名稱。 請針對該伺服器上的 *預設執行個體指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 請針對該伺服器上 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ 這是散發者的名稱。 請針對該伺服器上的 *預設執行個體指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 請針對該伺服器上 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
   
- **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
+ **-DistributorDeadlockPriority** [ **-1**|**0**|**1**]  
  這是發生死結時散發者之快照集代理程式連接的優先權。 指定這個參數的目的是為了解決快照集產生期間，快照集代理程式與使用者應用程式之間可能會發生的死結。  
   
 |DistributorDeadlockPriority 值|描述|  
@@ -172,7 +172,7 @@ ms.locfileid: "63250591"
  這是將「正在等候後端訊息」記錄至 [MSsnapshot_history](/sql/relational-databases/system-tables/mssnapshot-history-transact-sql) 資料表之前，快照集代理程式等候的時間量 (以秒為單位)。 預設值為 300 秒。  
   
  **-LoginTimeOut** _login_time_out_seconds_  
- 這是登入逾時之前的秒數。 預設值為 15 秒。  
+ 這是登入逾時之前的秒數。  預設值為 15 秒。  
   
  **-MaxBcpThreads** _number_of_threads_  
  指定可用平行方式執行的大量複製作業數目。 同時存在之執行緒和 ODBC 連接的最大數目是 **MaxBcpThreads** 或散發資料庫之同步處理交易中顯示的大量複製要求數目的較小者。 **MaxBcpThreads** 必須具有大於 **0** 的值而且沒有硬式編碼的上限。 預設值為 **1**。  
@@ -215,7 +215,7 @@ ms.locfileid: "63250591"
  **-PublisherDB** _publisher_database_  
  這是發行集資料庫的名稱。 *這個參數不支援 Oracle 發行者*。  
   
- **-PublisherDeadlockPriority** [**-1**|**0**|**1**]  
+ **-PublisherDeadlockPriority** [ **-1**|**0**|**1**]  
  這是發生死結時發行者之快照集代理程式連接的優先權。 指定這個參數的目的是為了解決快照集產生期間，快照集代理程式與使用者應用程式之間可能會發生的死結。  
   
 |PublisherDeadlockPriority 值|描述|  
@@ -224,7 +224,7 @@ ms.locfileid: "63250591"
 |**0** (預設值)|未指派優先權。|  
 |**1**|在發行者端發生死結時，快照集代理程式擁有優先權。|  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  指定參與具有發行集資料庫之資料庫鏡像工作階段的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉夥伴執行個體。 如需詳細資訊，請參閱 [資料庫鏡像和複寫 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
  **-PublisherLogin** _publisher_login_  

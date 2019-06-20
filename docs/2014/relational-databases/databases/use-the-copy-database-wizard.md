@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871135"
 ---
 # <a name="use-the-copy-database-wizard"></a>使用複製資料庫精靈

@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67bbc67db06e05a0f6a02f8e9efd8dcc46441aeb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075054"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>授與維度資料的自訂存取權 (Analysis Services)
@@ -56,17 +56,17 @@ ms.locfileid: "66075054"
   
 ## <a name="basic-dimension-security"></a>基本維度安全性  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，在物件總管中展開適當資料庫的 [角色]，然後按一下資料庫角色 (或建立新的資料庫角色)。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，在物件總管中展開適當資料庫的 [角色]  ，然後按一下資料庫角色 (或建立新的資料庫角色)。  
   
      角色應該已具備 Cube 的讀取權限。 如果您需要這個步驟的說明，請參閱[授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)。  
   
-2.  在 [維度資料] | [基本] 上，選取您正在設定權限的維度。  
+2.  在 [維度資料]   | [基本]  上，選取您正在設定權限的維度。  
   
-3.  選擇屬性階層。 並非所有屬性都是可用的。 只有擁有 [AttributeHierarchyEnabled] 的屬性會出現在 [屬性階層] 清單中。  
+3.  選擇屬性階層。 並非所有屬性都是可用的。 只有擁有 [AttributeHierarchyEnabled]  的屬性會出現在 [屬性階層]  清單中。  
   
-4.  選擇要允許或拒絕存取的成員。 預設會透過 [選取全部成員] 選項來允許存取。 建議您保留這個預設值，然後清除不應透過這個角色讓 [成員資格] 窗格中的 Windows 使用者和群組帳戶看見的個別成員。 這麼做的好處在於以這個角色連線的使用者，都能夠使用後續處理作業中新增的成員。  
+4.  選擇要允許或拒絕存取的成員。 預設會透過 [選取全部成員]  選項來允許存取。 建議您保留這個預設值，然後清除不應透過這個角色讓 [成員資格]  窗格中的 Windows 使用者和群組帳戶看見的個別成員。 這麼做的好處在於以這個角色連線的使用者，都能夠使用後續處理作業中新增的成員。  
   
-     或者，您可以 [取消選取全部成員] 來全面撤銷存取，然後挑選要允許的成員。 在後續的處理作業中，一直到您手動編輯維度資料安全性來允許存取新成員為止，將無法看到任何新成員。  
+     或者，您可以 [取消選取全部成員]  來全面撤銷存取，然後挑選要允許的成員。 在後續的處理作業中，一直到您手動編輯維度資料安全性來允許存取新成員為止，將無法看到任何新成員。  
   
 5.  （選擇性） 按一下**進階**若要啟用`Visual Totals`針對這個屬性階層。 這個選項會根據可透過這個角色使用的成員，重新計算彙總。  
   
@@ -84,9 +84,9 @@ ms.locfileid: "66075054"
 >  查看 [必要條件] 以了解如何識別可能破壞角色安全性的量值。  
   
 ## <a name="advanced-dimension-security"></a>進階維度安全性  
- 如果您精通 MDX，另一個方法是撰寫 MDX 運算式來設定條件以允許或拒絕成員的存取。 按一下 [建立角色] | [維度資料] | [進階]，以提供指令碼。  
+ 如果您精通 MDX，另一個方法是撰寫 MDX 運算式來設定條件以允許或拒絕成員的存取。 按一下 [建立角色]   | [維度資料]   | [進階]  ，以提供指令碼。  
   
- 您可以使用 MDX 產生器來撰寫 MDX 陳述式。 如需詳細資訊，請參閱 [MDX 產生器 &#40;Analysis Services - 多維度資料&#41;](../mdx-builder-analysis-services-multidimensional-data.md)。 [進階] 索引標籤具有下列選項：  
+ 您可以使用 MDX 產生器來撰寫 MDX 陳述式。 如需詳細資訊，請參閱 [MDX 產生器 &#40;Analysis Services - 多維度資料&#41;](../mdx-builder-analysis-services-multidimensional-data.md)。 [進階]  索引標籤具有下列選項：  
   
  **Attribute**  
  選取您要管理其成員安全性的屬性。  

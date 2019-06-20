@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aff33ad5722ad4b08c1429b795607d1217b95e39
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103940"
 ---
 # <a name="configure-report-manager-native-mode"></a>設定報表管理員 (原生模式)
-  報表管理員是一個 Web 前端應用程式，可用來檢視報表、管理報表伺服器內容，以及將原生模式報表伺服器的存取權授與使用者。 如果您在安裝程式中選取 [Install in the default native mode configuration (以預設原生模式組態安裝)] 選項，報表管理員就會與報表伺服器 Web 服務一起安裝在相同的報表伺服器執行個體中，而且進行選擇性設定。 您也可以將報表管理員設定為後續安裝工作。 本主題會提供有關下列報表管理員組態狀況的資訊：  
+  報表管理員是一個 Web 前端應用程式，可用來檢視報表、管理報表伺服器內容，以及將原生模式報表伺服器的存取權授與使用者。 如果您在安裝程式中選取 [Install in the default native mode configuration (以預設原生模式組態安裝)]  選項，報表管理員就會與報表伺服器 Web 服務一起安裝在相同的報表伺服器執行個體中，而且進行選擇性設定。 您也可以將報表管理員設定為後續安裝工作。 本主題會提供有關下列報表管理員組態狀況的資訊：  
   
 -   [將報表管理員設定為使用預設 URL](#ConfigureRMURL)  
   
@@ -59,17 +59,17 @@ ms.locfileid: "66103940"
 -   您也必須擁有啟用指令碼的 Internet Explorer 7.0 或更新版本。 如需詳細資訊，請參閱 <<c0> [ 規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)。</c0>  
   
 ##  <a name="ConfigureRMURL"></a> 將報表管理員設定為使用預設 URL  
- 根據預設，報表管理員 URL 包含唯一的虛擬目錄名稱，再加上針對在相同執行個體中執行之報表伺服器 Web 服務所定義的通訊埠和主機名稱。 在大部分情況下，主機名稱就是報表伺服器電腦的網路名稱，但是它可能也是解析電腦的 IP 位址或主機標頭。 若要將報表管理員設定為使用預設 URL，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具中的 [報表管理員 URL] 頁面。  
+ 根據預設，報表管理員 URL 包含唯一的虛擬目錄名稱，再加上針對在相同執行個體中執行之報表伺服器 Web 服務所定義的通訊埠和主機名稱。 在大部分情況下，主機名稱就是報表伺服器電腦的網路名稱，但是它可能也是解析電腦的 IP 位址或主機標頭。 若要將報表管理員設定為使用預設 URL，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具中的 [報表管理員 URL]  頁面。  
   
 #### <a name="to-configure-the-default-report-manager-url-and-virtual-directory"></a>設定預設的報表管理員 URL 和虛擬目錄  
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到報表伺服器執行個體。  
   
-2.  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具中，按一下 [報表管理員 URL] 開啟設定 URL 的頁面。  
+2.  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具中，按一下 [報表管理員 URL]  開啟設定 URL 的頁面。  
   
 3.  針對報表管理員輸入唯一的虛擬目錄名稱。  
   
-4.  按一下 **[套用]**。  
+4.  按一下 **[套用]** 。  
   
 5.  如果您正在使用 [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 或 Windows Server 2008，可能需要進行其他步驟，才能使用報表管理員。 如需詳細資訊，請參閱 [設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
@@ -99,15 +99,15 @@ ms.locfileid: "66103940"
   
     1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具。  
   
-    2.  按一下 [Web 服務 URL] 設定報表伺服器的主機名稱、通訊埠和虛擬目錄。  
+    2.  按一下 [Web 服務 URL]  設定報表伺服器的主機名稱、通訊埠和虛擬目錄。  
   
-    3.  按一下 [資料庫] 設定報表伺服器資料庫。  
+    3.  按一下 [資料庫]  設定報表伺服器資料庫。  
   
 3.  設定即將主控報表管理員的第二個安裝：  
   
     1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具。  
   
-    2.  按一下 [報表管理員 URL] 輸入報表管理員的虛擬目錄名稱。  
+    2.  按一下 [報表管理員 URL]  輸入報表管理員的虛擬目錄名稱。  
   
      請勿設定資料庫。 請勿測試 URL。  
   
@@ -139,21 +139,21 @@ ms.locfileid: "66103940"
 ##  <a name="ModifyTitle"></a> 自訂樣式或應用程式標題  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不支援自訂報表管理員的樣式表。 不過，如果您具備 Web 開發的專業知識，就可以修改這些樣式，但風險自負。 如需哪些檔案包含樣式資訊的詳細資訊，請參閱 [自訂 HTML 檢視器及報表管理員的樣式表](../customize-style-sheets-for-html-viewer-and-report-manager.md)。  
   
- 報表管理員具有顯示在頁面頂端的應用程式標題。 根據預設，這個標題是 **SQL Server Reporting Services**。 您可以自訂這個標題。 若要變更此標題，請使用報表管理員中的 [站台設定] 頁面。 若要在報表管理員中修改應用程式設定，您必須被指派至 [系統管理員] 角色，才能設定 [站台設定] 頁面上的屬性。 若要檢視應用程式標題，使用者必須被指派至 [系統使用者] 角色。  
+ 報表管理員具有顯示在頁面頂端的應用程式標題。 根據預設，這個標題是 **SQL Server Reporting Services**。 您可以自訂這個標題。 若要變更此標題，請使用報表管理員中的 [站台設定] 頁面。 若要在報表管理員中修改應用程式設定，您必須被指派至 [系統管理員]  角色，才能設定 [站台設定] 頁面上的屬性。 若要檢視應用程式標題，使用者必須被指派至 [系統使用者]  角色。  
   
 #### <a name="to-modify-application-title"></a>修改應用程式標題  
   
-1.  使用被指派報表伺服器之 [系統管理員] 權限的帳戶來登入。  
+1.  使用被指派報表伺服器之 [系統管理員]  權限的帳戶來登入。  
   
 2.  開啟 Internet Explorer。  
   
-3.  輸入報表管理員 URL。 根據預設，它是 http://\<**您的伺服器名稱**>/reports，但是如果您將 Reporting Services 安裝成具名執行個體，預設 URL 就是 http://\<**您的伺服器名稱**>/reports\<**_執行個體名稱**>。  
+3.  輸入報表管理員 URL。 根據預設，它是 http://\<**您的伺服器名稱**>/reports，但是如果您將 Reporting Services 安裝成具名執行個體，預設 URL 就是 http://\<**您的伺服器名稱**>/reports\< **_執行個體名稱**>。  
   
-4.  按一下 **[站台設定]**。  
+4.  按一下 **[站台設定]** 。  
   
-5.  在 [一般] 索引標籤的 [名稱] 中，將 **SQL Server Reporting Services** 取代成不同的名稱。  
+5.  在 [一般]  索引標籤的 [名稱]  中，將 **SQL Server Reporting Services** 取代成不同的名稱。  
   
-6.  按一下 **[套用]**。  
+6.  按一下 **[套用]** 。  
   
 ##  <a name="DisableRM"></a> Turn Off Report Manager  
  如果您擁有提供對等功能的自訂應用程式，或者您要使用不同服務執行個體的報表管理員應用程式，就可以關閉報表管理員。 若要關閉報表管理員，您可以修改 RSReportServer.config 檔。  

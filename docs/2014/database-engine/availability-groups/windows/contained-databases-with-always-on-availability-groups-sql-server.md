@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13dd6e87b6442b8c1b908ceb73d1e5c7f135308c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62815328"
 ---
 # <a name="contained-databases-with-always-on-availability-groups-sql-server"></a>自主資料庫與 AlwaysOn 可用性群組 (SQL Server)

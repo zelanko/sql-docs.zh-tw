@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 29513ec37a946b9ec613ccc483048396149dd15a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63042627"
 ---
-# <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>第 2 課：評估最佳做法原則根據排程
+# <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>第 2 課：根據排程評估最佳做法原則
   您可以針對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一個或多個執行個體，設定最佳作法原則的排程評估。 若要設定最佳做法原則根據排程執行，您必須將原則匯入至目標執行個體。  
   
  若要將排程的原則部署至多個伺服器，您可以將原則匯入至一個執行個體、設定每個原則的排程、將排程的原則匯出至資料夾，然後透過已註冊的伺服器，將排程的原則部署至目標執行個體。  

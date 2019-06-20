@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c87b8ecc730c70bbe0b49c1fe071c08079816a42
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65477074"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>適用於 Microsoft Excel 的 Master Data Services 增益集
@@ -45,7 +45,7 @@ ms.locfileid: "65477074"
   
 -   *entity* 是指資料的清單。 您可以將實體視為資料庫中的資料表。  例如，Color 實體可能會包含色彩的清單。 如需詳細資訊，請參閱[實體 &#40;Master Data Services&#41;](../../master-data-services/entities-master-data-services.md)。  
   
--   「成員」是指資料列 (記錄)。 每個實體都包含成員。 **Blue**是成員的範例。 如需詳細資訊，請參閱[成員 &#40;Master Data Services&#41;](../../master-data-services/members-master-data-services.md)。  
+-   「成員」  是指資料列 (記錄)。 每個實體都包含成員。 **Blue**是成員的範例。 如需詳細資訊，請參閱[成員 &#40;Master Data Services&#41;](../../master-data-services/members-master-data-services.md)。  
   
 -   *attribute* 是指資料行。 每個成員都具有屬性。 例如，**Blue** 成員的 **Code** 屬性是 **B**。如需屬性的詳細資訊，請參閱[屬性 &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)。  
   

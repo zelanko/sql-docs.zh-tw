@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d5d777686bd40fa1b405f20da6173fc2de82640
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63226237"
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
@@ -106,7 +106,7 @@ cbValue
   
 -   選擇性結束位元組順序的長度。  
   
- 每次呼叫**bcp_setcolfmt**指定一個使用者檔案資料行的格式。 例如，若要變更為五個資料行的使用者資料檔中的三個資料行的預設設定，請先呼叫[bcp_columns](bcp-columns.md)**(5)**，然後呼叫**bcp_setcolfmt**五次，具有三個呼叫會設定您的自訂格式。 其餘的兩個呼叫，將 BCP_FMT_TYPE 設定為 0，並將 BCP_FMT_INDICATOR_LENGTH、 BCP_FMT_DATA_LEN 和*cbValue*至 0、sql_varlen_data 和 0 分別。 此程序會複製全部五個資料行，其中三個為您自訂的格式，而另兩個為預設格式。  
+ 每次呼叫**bcp_setcolfmt**指定一個使用者檔案資料行的格式。 例如，若要變更為五個資料行的使用者資料檔中的三個資料行的預設設定，請先呼叫[bcp_columns](bcp-columns.md) **(5)** ，然後呼叫**bcp_setcolfmt**五次，具有三個呼叫會設定您的自訂格式。 其餘的兩個呼叫，將 BCP_FMT_TYPE 設定為 0，並將 BCP_FMT_INDICATOR_LENGTH、 BCP_FMT_DATA_LEN 和*cbValue*至 0、sql_varlen_data 和 0 分別。 此程序會複製全部五個資料行，其中三個為您自訂的格式，而另兩個為預設格式。  
   
  **Bcp_columns**必須呼叫函式，然後再呼叫**bcp_setcolfmt**。  
   

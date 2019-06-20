@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c2c7059c5c6ff6a770c1658d260da04f2a042ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779947"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>示範記憶體中 OLTP 的 AdventureWorks 延伸模組
@@ -33,7 +33,7 @@ ms.locfileid: "62779947"
   
 -   安裝範例及執行工作負載示範的[必要條件](#Prerequisites)  
   
--    [基於AdventureWorks安裝In-Memory OLTP示例](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的指示  
+-   [基於AdventureWorks安裝In-Memory OLTP示例](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的指示  
   
 -   [範例資料表和程序描述](#Descriptionofthesampletablesandprocedures)-這包括資料表和程序加入 AdventureWorks 的說明[!INCLUDE[hek_2](../includes/hek-2-md.md)]範例中，以及移轉考量部分原始 AdventureWorks 資料表中，以記憶體最佳化  
   
@@ -180,13 +180,13 @@ ms.locfileid: "62779947"
   
  Sales.SalesOrderHeader_inmem  
   
--   記憶體最佳化資料表支援「預設條件約束」 ，且大部分的預設條件約束在移轉後會保持原狀。 不過，原始資料表 Sales.SalesOrderHeader 包含兩個預設條件約束，會擷取資料行 OrderDate 和 ModifiedDate 的目前日期。 在具有大量並行的高輸送量訂單處理工作負載中，任何全域資源都可能會成為競爭重點。 系統時間即為這類全域資源。根據觀察，執行插入銷售訂單的 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 工作負載時，系統時間可能會成為瓶頸，特別是在需要針對銷售訂單標頭的多個資料行擷取系統時間，並同時擷取銷售訂單詳細資料時。 這個問題已在此範例中獲得解決，只對每個插入的銷售訂單擷取一次系統時間，然後在預存程序 Sales.usp_InsertSalesOrder_inmem 中，將此值做為 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 的日期時間資料行使用。  
+-   記憶體最佳化資料表支援「預設條件約束」  ，且大部分的預設條件約束在移轉後會保持原狀。 不過，原始資料表 Sales.SalesOrderHeader 包含兩個預設條件約束，會擷取資料行 OrderDate 和 ModifiedDate 的目前日期。 在具有大量並行的高輸送量訂單處理工作負載中，任何全域資源都可能會成為競爭重點。 系統時間即為這類全域資源。根據觀察，執行插入銷售訂單的 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 工作負載時，系統時間可能會成為瓶頸，特別是在需要針對銷售訂單標頭的多個資料行擷取系統時間，並同時擷取銷售訂單詳細資料時。 這個問題已在此範例中獲得解決，只對每個插入的銷售訂單擷取一次系統時間，然後在預存程序 Sales.usp_InsertSalesOrder_inmem 中，將此值做為 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 的日期時間資料行使用。  
   
--   「別名 UDT」 - 原始資料表針對資料行 PurchaseOrderNumber 和 AccountNumber，分別使用兩個別名使用者定義資料類型 (UDT) dbo.OrderNumber 和 dbo.AccountNumber。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 不支援在記憶體最佳化資料表中使用別名 UDT，因此新資料表會分別使用系統資料類型 Nvarchar(25) 和 Nvarchar(15)。  
+-   「別名 UDT」  - 原始資料表針對資料行 PurchaseOrderNumber 和 AccountNumber，分別使用兩個別名使用者定義資料類型 (UDT) dbo.OrderNumber 和 dbo.AccountNumber。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 不支援在記憶體最佳化資料表中使用別名 UDT，因此新資料表會分別使用系統資料類型 Nvarchar(25) 和 Nvarchar(15)。  
   
--   「索引鍵中的資料行可為 Null」 - 在原始資料表中，資料行 SalesPersonID 可為 Null，但是在新資料表中，資料行不可為 Null，且預設條件約束必須帶有值 (-1)。 這是因為記憶體最佳化資料表上的索引不可以在索引鍵中有可為 Null 的資料行，在此情況下，-1 會代替 NULL 值。  
+-   「索引鍵中的資料行可為 Null」  - 在原始資料表中，資料行 SalesPersonID 可為 Null，但是在新資料表中，資料行不可為 Null，且預設條件約束必須帶有值 (-1)。 這是因為記憶體最佳化資料表上的索引不可以在索引鍵中有可為 Null 的資料行，在此情況下，-1 會代替 NULL 值。  
   
--   「計算資料行」 - 由於 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 不支援在記憶體最佳化資料表中使用計算資料行，因此會省略計算資料行 SalesOrderNumber 和 TotalDue。 新檢視 Sales.vSalesOrderHeader_extended_inmem 會反映資料行 SalesOrderNumber 和 TotalDue。 因此，如果需要這些資料行，您可以使用此檢視。  
+-   「計算資料行」  - 由於 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 不支援在記憶體最佳化資料表中使用計算資料行，因此會省略計算資料行 SalesOrderNumber 和 TotalDue。 新檢視 Sales.vSalesOrderHeader_extended_inmem 會反映資料行 SalesOrderNumber 和 TotalDue。 因此，如果需要這些資料行，您可以使用此檢視。  
   
 -   在*中，記憶體最佳化資料表不支援「外部索引鍵條件約束」*  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 此外，SalesOrderHeader_inmem 是範例工作負載中的作用資料表，而外部索引鍵條件約束需要對所有 DML 作業進行額外的處理，因為它需要查閱這些條件約束中參考的其他所有資料表。 因此，此處的假設是應用程式會確保參考完整性，但插入資料列時不會驗證參考完整性。 您可以使用預存程序 dbo.usp_ValidateIntegrity 驗證此資料表中資料的參考完整性，其指令碼如下：  
   
@@ -195,7 +195,7 @@ ms.locfileid: "62779947"
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   在 SQ Server 2014 中，記憶體最佳化資料表不支援「檢查條件約束」 。 使用下列指令碼可驗證網域完整性及參考完整性：  
+-   在 SQ Server 2014 中，記憶體最佳化資料表不支援「檢查條件約束」  。 使用下列指令碼可驗證網域完整性及參考完整性：  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
@@ -227,7 +227,7 @@ ms.locfileid: "62779947"
   
 -   *Rowguid* - Rowguid 資料行會遭到省略。 如需詳細資訊，請參閱 SalesOrderHeader 資料表的描述。  
   
--   「唯一條件約束」,  及「外部索引鍵條件約束」  are accounted for in two ways: the stored procedures Product.usp_InsertProduct_inmem 及「外部索引鍵條件約束」 Product.usp_DeleteProduct_inmem can be used to insert 及「外部索引鍵條件約束」 delete products; these procedures validate domain 及「外部索引鍵條件約束」 referential integrity, 及「外部索引鍵條件約束」 will fail if integrity is violated. 此外，下列指令碼可用來驗證網域和參考完整性的現狀：  
+-   「唯一條件約束」  ,  及「外部索引鍵條件約束」  are accounted for in two ways: the stored procedures Product.usp_InsertProduct_inmem 及「外部索引鍵條件約束」 Product.usp_DeleteProduct_inmem can be used to insert 及「外部索引鍵條件約束」 delete products; these procedures validate domain 及「外部索引鍵條件約束」 referential integrity, 及「外部索引鍵條件約束」 will fail if integrity is violated. 此外，下列指令碼可用來驗證網域和參考完整性的現狀：  
   
     ```  
     DECLARE @o int = object_id(N'Production.Product')  
@@ -238,7 +238,7 @@ ms.locfileid: "62779947"
   
  Sales.SpecialOffer  
   
--   「檢查條件約束」 和「外部索引鍵條件約束」  are accounted for in two ways: the stored procedures Sales.usp_InsertSpecialOffer_inmem 和「外部索引鍵條件約束」 Sales.usp_DeleteSpecialOffer_inmem can be used to insert 和「外部索引鍵條件約束」 delete special offers; these procedures validate domain 和「外部索引鍵條件約束」 referential integrity, 和「外部索引鍵條件約束」 will fail if integrity is violated. 此外，下列指令碼可用來驗證網域和參考完整性的現狀：  
+-   「檢查條件約束」  和「外部索引鍵條件約束」  are accounted for in two ways: the stored procedures Sales.usp_InsertSpecialOffer_inmem 和「外部索引鍵條件約束」 Sales.usp_DeleteSpecialOffer_inmem can be used to insert 和「外部索引鍵條件約束」 delete special offers; these procedures validate domain 和「外部索引鍵條件約束」 referential integrity, 和「外部索引鍵條件約束」 will fail if integrity is violated. 此外，下列指令碼可用來驗證網域和參考完整性的現狀：  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SpecialOffer_inmem')  
@@ -249,7 +249,7 @@ ms.locfileid: "62779947"
   
  Sales.SpecialOfferProduct  
   
--   「外部索引鍵條件約束」 的說明包含兩點：預存程序 Sales.usp_InsertSpecialOfferProduct_inmem 可用來插入特殊供應項目與產品之間的關聯性，此程序會驗證參考完整性，如果違反完整性則會失敗。 此外，下列指令碼可用來驗證參考完整性的現狀：  
+-   「外部索引鍵條件約束」  的說明包含兩點：預存程序 Sales.usp_InsertSpecialOfferProduct_inmem 可用來插入特殊供應項目與產品之間的關聯性，此程序會驗證參考完整性，如果違反完整性則會失敗。 此外，下列指令碼可用來驗證參考完整性的現狀：  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SpecialOfferProduct_inmem')  

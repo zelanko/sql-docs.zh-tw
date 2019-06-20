@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5126ab2c44dbd5045af86cda54068b9ec8ed2f03
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069676"
 ---
 # <a name="select-data-source-view-data-mining-wizard"></a>選取資料來源檢視 (資料採礦精靈)
@@ -27,7 +27,7 @@ ms.locfileid: "66069676"
   
  **如需詳細資訊：**[資料來源的多維度模型中的檢視](multidimensional-models/data-source-views-in-multidimensional-models.md)，[資料採礦精靈 &#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可用的資料來源檢視**  
  按一下採礦結構的資料來源。  
   

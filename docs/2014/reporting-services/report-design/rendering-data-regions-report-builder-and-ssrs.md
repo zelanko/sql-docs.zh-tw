@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 918aa5eee3aada465e904cf7f1627f93d1b9bb6b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105373"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>轉譯資料區 (報表產生器及 SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "66105373"
  群組的邏輯分頁符號則不會使外部群組標頭分頁。 例如，假設您的報表有一個國家 (地區) 的外部群組，以及一個國家地區的內部群組。 如果在國家地區群組的執行個體之間有邏輯分頁符號，則外部群組 (也就是國家 (地區)) 將會同時出現在報表的兩個頁面上。  
   
 #### <a name="repeated-tablix-headers"></a>重複的 Tablix 標頭  
- 在 [屬性] 窗格中設定 RepeatWith 屬性時，在資料區中沒有變更的項目 (例如資料行標頭) 在轉譯部分資料區的每個頁面上會重複。 例如，如果資料的資料列出現在下一個頁面上，而且有設定 [重複] 屬性，資料行標頭就也會出現在轉譯的頁面上。  
+ 在 [屬性]  窗格中設定 RepeatWith 屬性時，在資料區中沒有變更的項目 (例如資料行標頭) 在轉譯部分資料區的每個頁面上會重複。 例如，如果資料的資料列出現在下一個頁面上，而且有設定 [重複] 屬性，資料行標頭就也會出現在轉譯的頁面上。  
   
 ### <a name="tablix-corner"></a>Tablix 邊角  
  左上角稱為 Tablix 邊角。 Tablix 邊角可以包含其中的其他報表項目，但是，如果有將邏輯分頁符號插入到邊角中，系統在轉譯 Tablix 資料區時，則會忽略這些項目。  

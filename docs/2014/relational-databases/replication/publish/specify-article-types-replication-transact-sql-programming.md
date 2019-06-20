@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b90fb6d2a85d30179e630d292f8fc11250958344
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261767"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>指定發行項類型 (複寫 Transact-SQL 程式設計)
@@ -36,11 +36,11 @@ ms.locfileid: "63261767"
   
     -   **logbased** - 記錄式資料表發行項，這是交易式和快照式複寫的預設值。 複寫會自動產生用於水平篩選的預存程序以及定義垂直篩選之發行項的檢視。  
   
-    -   **logbased manualfilter** - 記錄式、水平篩選的發行項，其中用於水平篩選的預存程序是由使用者手動建立及定義，而且是針對 **@filter**。 如需詳細資訊，請參閱 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)。  
+    -   **logbased manualfilter** - 記錄式、水平篩選的發行項，其中用於水平篩選的預存程序是由使用者手動建立及定義，而且是針對 **@filter** 。 如需詳細資訊，請參閱 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)。  
   
-    -   **logbased manualview** - 記錄式、垂直篩選的發行項，其中用於定義垂直篩選之發行項的檢視是由使用者建立及定義，而且是針對 **@sync_object**。 如需相關資訊，請參閱 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 及 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。  
+    -   **logbased manualview** - 記錄式、垂直篩選的發行項，其中用於定義垂直篩選之發行項的檢視是由使用者建立及定義，而且是針對 **@sync_object** 。 如需相關資訊，請參閱 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 及 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。  
   
-    -   **logbased manualboth** - 記錄式、水平和垂直篩選的發行項，其中用於水平篩選的預存程序及定義垂直篩選之發行項的檢視是由使用者所建立及定義，而且是分別針對 **@filter** 及 **@sync_object**所指定。 如需相關資訊，請參閱 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 及 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。  
+    -   **logbased manualboth** - 記錄式、水平和垂直篩選的發行項，其中用於水平篩選的預存程序及定義垂直篩選之發行項的檢視是由使用者所建立及定義，而且是分別針對 **@filter** 及 **@sync_object** 所指定。 如需相關資訊，請參閱 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 及 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。  
   
      這樣會為發行集定義新的發行項。 如需詳細資訊，請參閱 [定義發行項](define-an-article.md)。  
   
@@ -58,11 +58,11 @@ ms.locfileid: "63261767"
   
     -   **indexed view schema only** - 僅限結構描述的索引檢視發行項。 也必須要複寫基底資料表。  
   
-    -   **indexed view logbased manualfilter** - 記錄式、水平篩選的索引檢視發行項，其中用於水平篩選的預存程序是由使用者手動建立及定義，而且是針對 **@filter**。 如需詳細資訊，請參閱 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)。  
+    -   **indexed view logbased manualfilter** - 記錄式、水平篩選的索引檢視發行項，其中用於水平篩選的預存程序是由使用者手動建立及定義，而且是針對 **@filter** 。 如需詳細資訊，請參閱 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)。  
   
-    -   **indexed view logbased manualview** - 記錄式、篩選的索引檢視發行項，其中用於定義垂直篩選之發行項的檢視是由使用者建立及定義，而且是針對 **@sync_object**。 如需相關資訊，請參閱 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 及 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。  
+    -   **indexed view logbased manualview** - 記錄式、篩選的索引檢視發行項，其中用於定義垂直篩選之發行項的檢視是由使用者建立及定義，而且是針對 **@sync_object** 。 如需相關資訊，請參閱 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 及 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。  
   
-    -   **indexed view logbased manualboth** - 記錄式、篩選的索引檢視發行項，其中用於水平篩選的預存程序及定義垂直篩選之發行項的檢視是由使用者所建立及定義，而且是分別針對 **@filter** 及 **@sync_object**所指定。 如需相關資訊，請參閱 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 及 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。  
+    -   **indexed view logbased manualboth** - 記錄式、篩選的索引檢視發行項，其中用於水平篩選的預存程序及定義垂直篩選之發行項的檢視是由使用者所建立及定義，而且是分別針對 **@filter** 及 **@sync_object** 所指定。 如需相關資訊，請參閱 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 及 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。  
   
      這樣會為發行集定義新的發行項。 如需詳細資訊，請參閱 [定義發行項](define-an-article.md)。  
   

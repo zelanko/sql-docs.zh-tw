@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b54815164693171a54cf10b40a279fe8deb8337a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106799"
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>加入分頁符號 (報表產生器及 SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66106799"
   
 ### <a name="to-add-a-page-break-to-a-data-region"></a>將分頁符號加入至資料區域  
   
-1.  在設計介面上，以滑鼠右鍵按一下資料區域的角控點，然後按一下 [Tablix 屬性]。  
+1.  在設計介面上，以滑鼠右鍵按一下資料區域的角控點，然後按一下 [Tablix 屬性]  。  
   
 2.  在 **[一般]** 索引標籤的 **[分頁符號選項]** 下方，選取下列其中一個選項：  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66106799"
   
 ### <a name="to-add-a-page-break-to-a-rectangle"></a>將分頁符號加入至矩形  
   
-1.  在設計介面上，以滑鼠右鍵按一下要新增分頁符號的矩形，然後按一下 [矩形屬性]。  
+1.  在設計介面上，以滑鼠右鍵按一下要新增分頁符號的矩形，然後按一下 [矩形屬性]  。  
   
 2.  在 **[一般]** 索引標籤的 **[分頁符號選項]** 下方，選取下列其中一個選項：  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66106799"
   
 ### <a name="to-add-a-page-break-to-a-row-group-in-a-table-matrix-or-list"></a>若要將分頁符號加入至資料表、矩陣或清單中的資料列群組  
   
-1.  在 [群組] 窗格中，以滑鼠右鍵按一下資料列群組，然後按一下 [群組屬性]。  
+1.  在 [群組] 窗格中，以滑鼠右鍵按一下資料列群組，然後按一下 [群組屬性]  。  
   
     > [!NOTE]  
     >  系統就會忽略資料行群組上的分頁符號。  

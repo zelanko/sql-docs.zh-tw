@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fc123be862320cd35ccf4aec76d8bc9cf7877af
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107594"
 ---
 # <a name="start-report-builder-report-builder"></a>啟動報表產生器 (報表產生器)
@@ -38,7 +38,7 @@ ms.locfileid: "66107594"
   
 1.  在網頁瀏覽器的網址列中，輸入報表伺服器的 URL。 根據預設，URL 為 http://\<*伺服器名稱*>/reports。 報表管理員隨即開啟。  
   
-2.  按一下 **[報表產生器]**。  
+2.  按一下 **[報表產生器]** 。  
   
      報表產生器隨即開啟，而且您可以在報表伺服器上建立報表或開啟報表。  
   
@@ -58,9 +58,9 @@ ms.locfileid: "66107594"
   
 2.  開啟文件庫。  
   
-3.  按一下 [文件]。  
+3.  按一下 [文件]  。  
   
-4.  在 [新增文件] 功能表上，按一下 [報表產生器報表]。  
+4.  在 [新增文件]  功能表上，按一下 [報表產生器報表]  。  
   
      報表產生器隨即開啟，而且您可以在報表伺服器上建立報表或開啟報表。  
   

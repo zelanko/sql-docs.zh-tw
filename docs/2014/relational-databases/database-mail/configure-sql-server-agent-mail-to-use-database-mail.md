@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3c2f5f0be09e9a60997308efd72c360348efc60
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62872316"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>設定 SQL Server Agent Mail 使用 Database Mail
@@ -55,13 +55,13 @@ ms.locfileid: "62872316"
   
 -   在 [物件總管] 中，展開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
--   以滑鼠右鍵按一下 [SQL Server Agent]，然後按一下 [屬性]。  
+-   以滑鼠右鍵按一下 [SQL Server Agent]  ，然後按一下 [屬性]  。  
   
--   按一下 **[警示系統]**。  
+-   按一下 **[警示系統]** 。  
   
--   選取 **[啟用郵件設定檔]**。  
+-   選取 **[啟用郵件設定檔]** 。  
   
--   在 **[郵件系統]** 清單中，選取 **[Database Mail]**。  
+-   在 **[郵件系統]** 清單中，選取 **[Database Mail]** 。  
   
 -   在 **[郵件設定檔]** 清單中，選取 Database Mail 的郵件設定檔。  
   

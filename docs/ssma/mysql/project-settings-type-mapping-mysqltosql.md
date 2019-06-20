@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e0a11a0b49589c3763b5af67623c9e819038c217
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63231823"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>專案設定 (類型對應) (MySQLToSQL)
@@ -26,7 +26,7 @@ ms.locfileid: "63231823"
   
 -   使用 [預設專案設定] 對話方塊中設定的所有專案的組態選項。 若要存取的型別對應設定，請在 [工具] 功能表中，選取預設專案設定，其設定被要求檢視 / 變更從選取的移轉專案類型**移轉目標版本**下拉式清單，然後再按一下類型在左窗格中的對應。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 ##### <a name="source-type"></a>來源類型  
 它是 MySQL 資料類型，必須對應到目標資料庫的資料類型。  

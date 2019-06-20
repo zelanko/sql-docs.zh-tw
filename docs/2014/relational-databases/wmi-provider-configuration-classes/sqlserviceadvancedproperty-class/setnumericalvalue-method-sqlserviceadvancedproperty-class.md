@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 07c54d34b3fa7c874142395e5113b90799dcbe6f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62911491"
 ---
 # <a name="setnumericalvalue-method-sqlserviceadvancedproperty-class"></a>SetNumericalValue 方法 (SqlServiceAdvancedProperty 類別)

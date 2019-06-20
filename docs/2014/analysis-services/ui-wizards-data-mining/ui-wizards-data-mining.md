@@ -12,10 +12,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e183adbba2007e6ff79361631e23f3f510458e6f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065636"
 ---
 # <a name="ui-wizards-for-data-mining-analysis"></a>資料採礦分析 UI 精靈

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 86db5a13ab1bdac2b35c6d5128ba1b2234bc24b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62860948"
 ---
 # <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (Transact-SQL)
@@ -66,7 +66,7 @@ EXEC managed_backup.sp_backup_config_advanced
  如需有關加密演算法的詳細資訊，請參閱＜ [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)＞。  
   
  @encryptor_type  
- 加密程式，它可以是任一個 [憑證] 的型別或 ' ASYMMETRIC_KEY"。 @encryptor_type已**nvarchar(32)**。 這個參數是選擇性，如果您指定的 NO_ENCRYPTION@encryption_algorithm參數。  
+ 加密程式，它可以是任一個 [憑證] 的型別或 ' ASYMMETRIC_KEY"。 @encryptor_type已**nvarchar(32)** 。 這個參數是選擇性，如果您指定的 NO_ENCRYPTION@encryption_algorithm參數。  
   
  @encryptor_name  
  用來加密備份之現有憑證或非對稱金鑰的名稱。 @encryptor_name已**SYSNAME**。 如果使用非對稱金鑰，則必須透過可延伸金鑰管理 (EKM) 設定。 這個參數是選擇性，如果您指定的 NO_ENCRYPTION@encryption_algorithm參數。  

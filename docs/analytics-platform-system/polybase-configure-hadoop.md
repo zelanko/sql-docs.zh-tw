@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: afa5728d651444aeb633c69b310c36af6b0e821a
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175260"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>設定 PolyBase 存取 Hadoop 中的外部資料
@@ -336,7 +336,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="view-polybase-objects-in-ssdt"></a>在 SSDT 中的檢視 PolyBase 物件  
 
-在 SQL Server Data Tools，外部資料表會顯示在個別的資料夾**外部資料表**。 外部資料來源和外部檔案格式會在 [外部資源] 下方的子資料夾中。  
+在 SQL Server Data Tools，外部資料表會顯示在個別的資料夾**外部資料表**。 外部資料來源和外部檔案格式會在 [外部資源]  下方的子資料夾中。  
   
 ![在 SSDT 中的 PolyBase 物件](media/polybase/external-tables-datasource.png)  
 

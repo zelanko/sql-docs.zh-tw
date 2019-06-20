@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b89d67636dd28514b8d5f34bee423e60abd9b81
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109093"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>一般屬性頁面，報表 (報表管理員)
@@ -31,7 +31,7 @@ ms.locfileid: "66109093"
   
 3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該報表的 [一般] 屬性頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  指定報表的名稱。 名稱必須至少包含一個英數字元。 也可以包含空格和特定符號。 請勿使用 ; ? : \@ & = + , $ * \< >  
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee7d1aba2b468c8aa0420bbacc76aea652ae7556
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62828662"
 ---
 # <a name="ado-net-custom-properties"></a>ADO NET 自訂屬性
@@ -38,7 +38,7 @@ ms.locfileid: "62828662"
   
  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目的地同時具有自訂屬性，以及所有資料流程元件通用的屬性。  
   
- 下表描述 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目的地的自訂屬性。 所有屬性都是可讀寫的。 雖然您無法在 [ADO NET 目的地編輯器] 中使用這些屬性，但是可以使用 [進階編輯器] 來設定這些屬性。  
+ 下表描述 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目的地的自訂屬性。 所有屬性都是可讀寫的。 雖然您無法在 [ADO NET 目的地編輯器]  中使用這些屬性，但是可以使用 [進階編輯器]  來設定這些屬性。  
   
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  

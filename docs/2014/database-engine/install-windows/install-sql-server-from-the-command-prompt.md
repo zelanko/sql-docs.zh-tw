@@ -85,10 +85,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13f6cb50604047e7c5f2aaaa60c3e3b77cae5913
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62780978"
 ---
 # <a name="install-sql-server-2014-from-the-command-prompt"></a>Install SQL Server 2014 from the Command Prompt
@@ -283,7 +283,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/INDICATEPROGRESS<br /><br /> **選擇性**|指定要將詳細安裝程式記錄檔送到主控台。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/INSTALLSHAREDDIR<br /><br /> **選擇性**|指定 64 位元共用元件的非預設安裝目錄。<br /><br /> 預設值為 %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 無法設定為 %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ INSTANCEDIR<br /><br /> **選擇性**|指定執行個體特有元件的非預設安裝目錄。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/INSTANCEID<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累計更新 2 (2013 年 1 月) 之前，[必要項]<br /><br /> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累計更新 2 開始，為執行個體功能的 **必要項** 。|指定要準備之執行個體的 InstanceID。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/INSTANCEID<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累計更新 2 (2013 年 1 月) 之前，[必要項] <br /><br /> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累計更新 2 開始，為執行個體功能的 **必要項** 。|指定要準備之執行個體的 InstanceID。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/Q<br /><br /> **選擇性**|指定安裝程式會在不含任何使用者介面的無訊息模式中執行。 這是自動安裝所使用的參數。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/QS<br /><br /> **選擇性**|指定安裝程式會執行並透過 UI 顯示進度，但是不接受任何輸入或顯示任何錯誤訊息。|  
   
@@ -306,8 +306,8 @@ Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ERRORREPORTING<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的錯誤報告。<br /><br /> 如需詳細資訊，請參閱＜ [Microsoft 錯誤報告服務隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=72173)＞。 支援的值：<br /><br /> 1=啟用<br /><br /> 0=停用|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/HELP、H、?<br /><br /> **選擇性**|顯示安裝參數的使用方式選項。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/INDICATEPROGRESS<br /><br /> **選擇性**|指定要將詳細安裝程式記錄檔送到主控台。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/INSTANCEID<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累計更新 2 (2013 年 1 月) 之前，[必要項]<br /><br /> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累計更新 2 開始， **選擇性**|使用準備圖像步驟期間指定的執行個體識別碼。 支援的值：<br /><br /> 準備之執行個體的 InstanceID。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/INSTANCENAME<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累計更新 2 (2013 年 1 月) 之前，[必要項]<br /><br /> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累計更新 2 開始， **選擇性**|指定要完成之執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。<br /><br /> 如需詳細資訊，請參閱＜ [Instance Configuration](../../sql-server/install/instance-configuration.md)＞。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/INSTANCEID<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累計更新 2 (2013 年 1 月) 之前，[必要項] <br /><br /> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累計更新 2 開始， **選擇性**|使用準備圖像步驟期間指定的執行個體識別碼。 支援的值：<br /><br /> 準備之執行個體的 InstanceID。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/INSTANCENAME<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累計更新 2 (2013 年 1 月) 之前，[必要項] <br /><br /> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累計更新 2 開始， **選擇性**|指定要完成之執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。<br /><br /> 如需詳細資訊，請參閱＜ [Instance Configuration](../../sql-server/install/instance-configuration.md)＞。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/PID<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版的產品金鑰。 如果沒有指定這個參數，就會使用 Evaluation。<br /><br /> 注意:如果您要安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express with tools 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Express with Advanced Services，預先定義 PID。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/Q<br /><br /> **選擇性**|指定安裝程式會在不含任何使用者介面的無訊息模式中執行。 這是自動安裝所使用的參數。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/QS<br /><br /> **選擇性**|指定安裝程式會執行並透過 UI 顯示進度，但是不接受任何輸入或顯示任何錯誤訊息。|  

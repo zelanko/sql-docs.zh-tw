@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 88b11a66ab33d8eebc0c00b0471c1a31d343ed94
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062563"
 ---
 # <a name="analysis-services-designers-and-dialog-boxes-multidimensional-data"></a>Analysis Services 設計師與對話方塊 (多維度資料)

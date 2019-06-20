@@ -21,10 +21,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 62042b08d455d77855a58aece480a84bc653f808
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62865618"
 ---
 # <a name="with-changetrackingcontext-transact-sql"></a>WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)
@@ -43,7 +43,7 @@ WITH CHANGE_TRACKING_CONTEXT ( context )
   
 #### <a name="parameters"></a>參數  
  *context*  
- 藉由呼叫應用程式所提供的內容資訊，而且會與變更的變更追蹤資訊儲存在一起。 *內容*已**varbinary(128)**。  
+ 藉由呼叫應用程式所提供的內容資訊，而且會與變更的變更追蹤資訊儲存在一起。 *內容*已**varbinary(128)** 。  
   
  這個值可以是常數或變數，但不得為 NULL。  
   

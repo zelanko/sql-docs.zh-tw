@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7fe9955ba4f20c4a20e24d99924adce7ff0d992a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62828142"
 ---
 # <a name="comparing-string-data"></a>比較字串資料
@@ -78,7 +78,7 @@ ms.locfileid: "62828142"
   
  「排序」、「彙總」「模糊群組」和「模糊查閱」轉換包含這些用於比較資料的選項。  
   
- 「模糊群組」和「模糊查閱」轉換的 [進階編輯器] 對話方塊中會顯示 **FullySensitive** 比較旗標。 選取 [FullySensitive] 比較旗標表示會套用所有的比較選項。  
+ 「模糊群組」和「模糊查閱」轉換的 [進階編輯器]  對話方塊中會顯示 **FullySensitive** 比較旗標。 選取 [FullySensitive]  比較旗標表示會套用所有的比較選項。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 資料類型](integration-services-data-types.md)   

@@ -15,10 +15,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 608457b1732d2c1cc188b4b419903d20faa642c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62631949"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>開始使用 SSMA for Sybase 主控台 (SybaseToSQL)

@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 ms.openlocfilehash: f688a95135716a41ae37cb86b50bcb90fc6cce5e
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66712813"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>在 Linux Docker 容器中的 SQL Server 資料庫還原

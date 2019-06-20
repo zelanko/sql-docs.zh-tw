@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_33085 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 33085 (Database Engine error)
 ms.assetid: c27b8d1d-668a-4ba8-8b61-25a5ebbc5485
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f3692ab986f3648bd1ab5b411207fe4948ca216
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62868512"
 ---
 # <a name="mssqlserver33085"></a>MSSQLSERVER_33085
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>詳細資料  
   
 |||  
@@ -34,10 +33,10 @@ ms.locfileid: "62868512"
 |訊息文字|在密碼編譯提供者程式庫 '%.*ls' 中找不到一個或多個方法。|  
   
 ## <a name="explanation"></a>說明  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法使用錯誤訊息中所列的密碼編譯提供者。 此密碼編譯提供者不支援所需的方法。 錯誤的狀態表示找不到哪一個方法。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法使用錯誤訊息中所列的密碼編譯提供者。 此密碼編譯提供者不支援所需的方法。 錯誤的狀態表示找不到哪一個方法。  
   
 |State|描述|  
-|---------|---------------|  
+|-----------|-----------------|  
 |1|SqlCryptInitializeProvider|  
 |2|SqlCryptFreeProvider|  
 |3|SqlCryptOpenSession|  
@@ -57,5 +56,6 @@ ms.locfileid: "62868512"
 |17|SqlCryptDecrypt|  
   
 ## <a name="user-action"></a>使用者動作  
-如需詳細資訊，請連絡密碼編譯提供者。  
+ 如需詳細資訊，請連絡密碼編譯提供者。  
+  
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d6c21af2ef3f47c05aacf4b47673ab42a170f506
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63128076"
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>桌面資料庫驅動程式的診斷

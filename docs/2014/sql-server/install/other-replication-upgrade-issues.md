@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dd8ae8bb1080d92bb6a4ad1ba982f1dffc6d51f3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66093638"
 ---
 # <a name="other-replication-upgrade-issues"></a>其他複寫升級問題
@@ -35,7 +35,7 @@ ms.locfileid: "66093638"
 > [!NOTE]  
 >  由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁碟儲存格式在 64 位元和 32 位元的環境中是相同的，所以複寫拓撲可結合在 32 位元環境中執行的伺服器執行個體，以及在 64 位元環境中執行的伺服器執行個體。  
   
- 對於所有複寫類型而言，散發者的版本都不能比發行者的版本還舊  (通常散發者和發行者會是相同的執行個體)。  
+ 對於所有複寫類型而言，散發者的版本都不能比發行者的版本還舊 (通常散發者和發行者會是相同的執行個體)。  
   
  如果是異動複寫，交易式發行集的訂閱者可以是兩個發行者版本的其中任何版本。  
   

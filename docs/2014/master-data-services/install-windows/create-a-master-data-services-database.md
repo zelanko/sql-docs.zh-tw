@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1707de1934ff6265268e40a3ab2a805629134e3d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482939"
 ---
 # <a name="create-a-master-data-services-database"></a>建立 Master Data Services 資料庫
@@ -28,11 +28,11 @@ ms.locfileid: "65482939"
   
 1.  開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-2.  按一下左窗格中的 [資料庫組態]。  
+2.  按一下左窗格中的 [資料庫組態]  。  
   
-3.  在 [資料庫組態] 頁面上，按一下 [建立資料庫]。  
+3.  在 [資料庫組態]  頁面上，按一下 [建立資料庫]  。  
   
-4.  完成 [建立資料庫] 精靈，建立及設定此資料庫。 如需精靈中之使用者介面 (UI) 選項的相關資訊，請參閱 [Create Database Wizard &#40;Master Data Services Configuration Manager&#41;](../create-database-wizard-master-data-services-configuration-manager.md) (建立資料庫精靈 (Master Data Services 組態管理員))。  
+4.  完成 [建立資料庫]  精靈，建立及設定此資料庫。 如需精靈中之使用者介面 (UI) 選項的相關資訊，請參閱 [Create Database Wizard &#40;Master Data Services Configuration Manager&#41;](../create-database-wizard-master-data-services-configuration-manager.md) (建立資料庫精靈 (Master Data Services 組態管理員))。  
   
 ## <a name="next-steps"></a>後續步驟  
   

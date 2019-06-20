@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0b0f81c5de267d6e85525714d19999920ba9c71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770964"
 ---
 # <a name="preview"></a>預覽
@@ -46,7 +46,7 @@ ms.locfileid: "62770964"
     > [!NOTE]  
     >  按一下 **[預覽]** 也會開啟 **[要求記錄檔]** 對話方塊。 如需有關此對話方塊的詳細資訊，請參閱＜ [Request Log](request-log.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[預覽]** 對話方塊會顯示向 SAP Netweaver BW 系統要求的資料列。 顯示的資料行就是來源資料中定義的資料行。  
   
  這個對話方塊沒有其他選項。  

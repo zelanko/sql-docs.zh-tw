@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9dba9988bec98f597a59fe4152b2abdde0d5ccea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096710"
 ---
 # <a name="change-credentials-wizard-ssrs-native-mode"></a>變更認證精靈 (SSRS 原生模式)
@@ -38,7 +38,7 @@ ms.locfileid: "66096710"
  您不能指定不同的 Windows 認證。 如果您想要以不同的 Windows 使用者身分連接，請以該使用者身分登入，然後啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員。  
   
  **認證**  
- 指定用來將報表伺服器連接到報表伺服器資料庫的帳戶。 有效的值包括報表伺服器 Web 服務的服務帳戶、用來主控報表伺服器之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上定義的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 資料庫登入，或是 Windows 帳戶。 如果您使用的 Windows 帳戶，您可以指定本機帳戶 (*\<電腦名稱 >\\< 使用者名稱\>*) 如果報表伺服器和資料庫位於同一部電腦或網域使用者帳戶 (*\<網域 >\\< 使用者名稱\>*) 如果它們位於相同網域中的不同電腦上。  
+ 指定用來將報表伺服器連接到報表伺服器資料庫的帳戶。 有效的值包括報表伺服器 Web 服務的服務帳戶、用來主控報表伺服器之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上定義的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 資料庫登入，或是 Windows 帳戶。 如果您使用的 Windows 帳戶，您可以指定本機帳戶 ( *\<電腦名稱 >\\< 使用者名稱\>* ) 如果報表伺服器和資料庫位於同一部電腦或網域使用者帳戶 ( *\<網域 >\\< 使用者名稱\>* ) 如果它們位於相同網域中的不同電腦上。  
   
  報表伺服器將會建立資料庫登入，並為您指定的帳戶指派資料庫權限。  
   

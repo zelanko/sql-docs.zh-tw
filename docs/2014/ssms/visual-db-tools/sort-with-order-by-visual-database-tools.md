@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30a2fca3dd0f2fcc6f22f2330c37fb8e333d9994
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049149"
 ---
 # <a name="sort-with-order-by-visual-database-tools"></a>使用 ORDER BY 排序 (Visual Database Tools)
@@ -36,7 +36,7 @@ ms.locfileid: "63049149"
  請注意，使用 [準則] 窗格時，查詢的 UNION 子句會變更，以符合您最近的動作。  
   
 > [!NOTE]  
->  使用多個資料行排序結果時，可使用 [排序次序] 欄位指定資料行相互之間搜尋的順序。 如需詳細資訊，請參閱**如何：排序查詢中的多個資料行**。  
+>  使用多個資料行排序結果時，可使用 [排序次序] 欄位指定資料行相互之間搜尋的順序。 如需詳細資訊，請參閱**如何：在查詢中排序多個資料行**。  
   
 ## <a name="see-also"></a>另請參閱  
  [排序及群組查詢結果&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   

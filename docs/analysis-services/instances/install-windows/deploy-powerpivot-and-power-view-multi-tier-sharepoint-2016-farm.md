@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ee295f354de5479f5af8add49cb7aee2985a687f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63054575"
 ---
 # <a name="deploy-powerpivot-and-power-view---multi-tier-sharepoint-2016-farm"></a>部署 PowerPivot 和 Power View-多層式 SharePoint 2016 伺服器陣列

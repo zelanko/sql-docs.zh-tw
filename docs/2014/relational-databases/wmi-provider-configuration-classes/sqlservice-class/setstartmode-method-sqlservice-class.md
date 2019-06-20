@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0b3689c843fbbe7ad845a45aca6bb962f8f0c75e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63061956"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>SetStartMode 方法 (SqlService 類別)

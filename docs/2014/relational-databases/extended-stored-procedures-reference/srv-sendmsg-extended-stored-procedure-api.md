@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 12a7ae2db2d0e1c91e85eeb4a2c2691579c2da70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62745549"
 ---
 # <a name="srvsendmsg-extended-stored-procedure-api"></a>srv_sendmsg (擴充預存程序 API)

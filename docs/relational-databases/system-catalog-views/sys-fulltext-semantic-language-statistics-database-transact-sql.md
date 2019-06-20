@@ -21,10 +21,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 ms.openlocfilehash: 0adbb42591017a6b5a014769fbb2d49baf6d0f0a
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64945687"
 ---
 # <a name="sysfulltextsemanticlanguagestatisticsdatabase-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d64754328954becb328a70a09fca8d2a6472050
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109729"
 ---
 # <a name="contents-page-report-manager"></a>內容頁面 (報表管理員)
@@ -22,7 +22,7 @@ ms.locfileid: "66109729"
   
  [內容] 頁面顯示您有權檢視的項目。 依據您擁有的權限，也可以移動、刪除和加入項目。 您必須按一下 **[詳細資料檢視]** ，才能存取 **[刪除]** 和 **[移動]** 按鈕。 如果無法看到任何項目，請洽詢您的報表伺服器管理員。 這可能是因為您尚未被指派至可提供報表伺服器內容或作業之存取權的角色。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **新增資料夾**  
  按一下即可開啟 [新增資料夾] 頁面，可在目前資料夾之下建立資料夾。  
   

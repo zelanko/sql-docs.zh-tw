@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4b450470ea945f42cfdb625f7ff92444c046b04a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105958"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>圖表中的空白和 Null 資料點 (報表產生器及 SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "66105958"
 ## <a name="fields-with-no-values-in-a-chart"></a>圖表中沒有值的欄位  
  如果在傳回的資料集中欄位未包含任何值，則圖表會顯示沒有資料點的空白圖表，但會加入數列名稱 (通常為欄位名稱) 做為圖例項目。  
   
- 這項行為與傳回資料集中有零個資料列的情況不同，後者可能會發生在當報表已進行參數化，而選取的值傳回空白結果集時。 如果資料集查詢傳回零個資料列，則系統會在執行階段會顯示訊息，指出沒有可以顯示的資料。 您可以在 [屬性] 窗格中修改報表的 NoDataMessage 標題，以自訂這個訊息。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
+ 這項行為與傳回資料集中有零個資料列的情況不同，後者可能會發生在當報表已進行參數化，而選取的值傳回空白結果集時。 如果資料集查詢傳回零個資料列，則系統會在執行階段會顯示訊息，指出沒有可以顯示的資料。 您可以在 [屬性]  窗格中修改報表的 NoDataMessage 標題，以自訂這個訊息。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   

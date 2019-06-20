@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 521d40529501d761b8e50300c16a816284109695
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770884"
 ---
 # <a name="request-log"></a>要求記錄檔
@@ -41,7 +41,7 @@ ms.locfileid: "62770884"
     > [!NOTE]  
     >  按一下 **[預覽]** 也會開啟 **[預覽]** 對話方塊。 如需有關此對話方塊的詳細資訊，請參閱＜ [Preview](preview.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Time**  
  顯示記錄事件的時間。  
   

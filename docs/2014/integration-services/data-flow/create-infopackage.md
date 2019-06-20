@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ad4a7791f7bda19c7bec1887ca45d92943c04e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62827967"
 ---
 # <a name="create-infopackage"></a>建立 InfoPackage
@@ -35,7 +35,7 @@ ms.locfileid: "62827967"
   
 4.  在 [連線管理員] 頁面的 [建立 SAP BW 物件] 群組方塊中，選取 [InfoPackage]，然後按一下 [建立]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **InfoSource**  
  輸入新 InfoPackage 應該依據的 InfoSource 名稱。  
   

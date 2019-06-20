@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2a18dd84f5f0a83cc3c6f42bf664c178c1ba6b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62637924"
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>範例使用 XMLDATA 和 XMLSCHEMA 選項來要求結構描述作為結果

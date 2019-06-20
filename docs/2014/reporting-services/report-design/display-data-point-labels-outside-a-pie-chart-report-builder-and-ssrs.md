@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb726adbb523f679fd9d59e3e51b2dc1291e6247
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106053"
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>在圓形圖外部顯示資料點標籤 (報表產生器及 SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66106053"
   
 1.  將圓形圖加入到報表中。 如需詳細資訊，請參閱[將圖表加入至報表 &#40;報表產生器及 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)。  
   
-2.  在設計介面上以滑鼠右鍵按一下圖表，然後選取 [顯示資料標籤]。  
+2.  在設計介面上以滑鼠右鍵按一下圖表，然後選取 [顯示資料標籤]  。  
   
 ### <a name="to-display-data-point-labels-outside-a-pie-chart"></a>在圓形圖外部顯示資料點標籤  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66106053"
   
 2.  開啟 [屬性] 窗格。  
   
-3.  在設計介面上，按一下圓形圖本身，可在 [屬性] 窗格中顯示 [類別目錄] 屬性。  
+3.  在設計介面上，按一下圓形圖本身，可在 [屬性] 窗格中顯示 [類別目錄]  屬性。  
   
 4.  展開 **CustomAttributes** 節點。 圓形圖的屬性清單隨即顯示。  
   
@@ -47,11 +47,11 @@ ms.locfileid: "66106053"
   
 1.  建立具有外部標籤的圓形圖。  
   
-2.  在設計介面上以滑鼠右鍵按一下圓形圖外部 (但位於圖表框線內)，然後選取 [圖表區域屬性]。[圖表區域屬性] 對話方塊隨即出現。  
+2.  在設計介面上以滑鼠右鍵按一下圓形圖外部 (但位於圖表框線內)，然後選取 [圖表區域屬性]  。[圖表區域屬性]  對話方塊隨即出現。  
   
-3.  在 [3D 選項] 索引標籤上，選取 [啟用 3D]。  
+3.  在 [3D 選項]  索引標籤上，選取 [啟用 3D]  。  
   
-4.  如果希望圖表的標籤有更多的空間，但仍然以二維方式呈現，請將 [旋轉] 和 [傾斜] 屬性設定為 **0**。  
+4.  如果希望圖表的標籤有更多的空間，但仍然以二維方式呈現，請將 [旋轉]  和 [傾斜]  屬性設定為 **0**。  
   
 ## <a name="see-also"></a>另請參閱  
  [圓形圖 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   

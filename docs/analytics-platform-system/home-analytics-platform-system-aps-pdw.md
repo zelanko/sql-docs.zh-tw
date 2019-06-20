@@ -10,10 +10,10 @@ ms.date: 04/18/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: bc8765d0bc8fe4b5b9ab3b4bcc98ce940f99400c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181742"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System

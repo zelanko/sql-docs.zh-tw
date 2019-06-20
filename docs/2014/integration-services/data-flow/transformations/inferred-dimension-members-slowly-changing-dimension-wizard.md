@@ -13,18 +13,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2c505bf78acc4293e68f0f2222dd9fbf7f9e01e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62900134"
 ---
 # <a name="inferred-dimension-members-slowly-changing-dimension-wizard"></a>推斷的維度成員 (緩時變維度精靈)
-  使用 [推斷的維度成員] 對話方塊來指定使用推斷的成員之選項。 在事實資料表參考尚未載入的維度成員時，推斷的成員即已存在。 當載入推斷成員的資料時，可以更新現有的記錄而不是建立新記錄。  
+  使用 [推斷的維度成員]  對話方塊來指定使用推斷的成員之選項。 在事實資料表參考尚未載入的維度成員時，推斷的成員即已存在。 當載入推斷成員的資料時，可以更新現有的記錄而不是建立新記錄。  
   
  若要深入了解這個精靈，請參閱＜ [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **啟用推斷的成員支援**  
  如果您選擇啟用推斷的成員，就必須選取下列兩個選項的其中之一。  
   

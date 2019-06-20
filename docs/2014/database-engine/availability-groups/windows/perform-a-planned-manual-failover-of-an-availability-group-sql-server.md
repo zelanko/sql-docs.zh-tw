@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 386e07bd1be4eaac4c75541665fc6951e2a24fd3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789290"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>執行可用性群組的已規劃手動容錯移轉 (SQL Server)

@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1985e7c3fc55f6783c88569c196713050fa40287
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918950"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
@@ -53,7 +53,7 @@ ms.locfileid: "62918950"
 |------------|-----------------|  
 |區分大小寫 (_CS)|區分大寫和小寫字母。 如果選取此選項，小寫字母會排序在大寫字母的前面。 如果未選取此選項，則定序不區分大小寫。 也就是說，在排序用途上，SQL Server 會將大寫和小寫字母視為相同。 指定 _CI，就可以明確地選取不區分大小寫。|  
 |區分腔調字 (_AS)|區分有腔調和無腔調的字元。 例如，' a' 不等於 ' 篇 '。 如果未選取此選項，則定序不區分腔調字。 也就是說，在排序用途上，SQL Server 會將有腔調和無腔調字母視為相同。 指定 _AI，就可以明確地選取不區分腔調字。|  
-|區分假名 (_KS)|區分兩類日文的假名字元：平假名與片假名。 如果未選取此選項，定序就不會區分假名。 也就是說，在排序用途上，SQL Server 會將平假名和片假名視為相同。 省略此選項，是指定不區分假名的唯一方法。|  
+|區分假名 (_KS)|區分兩種類型的日文假名字元：平假名與片假名。 如果未選取此選項，定序就不會區分假名。 也就是說，在排序用途上，SQL Server 會將平假名和片假名視為相同。 省略此選項，是指定不區分假名的唯一方法。|  
 |區分全半形 (_WS)|區分全形與半形字元。 如果未選取此選項，在排序用途上，SQL Server 會將相同字元的全形和半形表示法視為相同。 省略此選項，是指定不區分全形與半形的唯一方法。|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列定序集：  

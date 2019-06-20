@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175042"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader 平行處理資料倉儲的命令列載入器
@@ -136,7 +136,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 使用參數檔案， *parameter_file_name*，來取代命令列參數。 *parameter_file_name*可以包含任何命令列參數，除了*user_name*並*密碼*。 如果在命令列和參數檔案中指定的參數，命令列覆寫檔案參數。  
   
-參數檔案包含一個參數，不含**-** 前置詞，每一行。  
+參數檔案包含一個參數，不含 **-** 前置詞，每一行。  
   
 範例:  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0ec8725a0cec9e15cb6d8402f8d654320c38471
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099594"
 ---
 # <a name="server-properties-execution-page"></a>伺服器屬性 (執行頁面)
@@ -24,7 +24,7 @@ ms.locfileid: "66099594"
   
  若要開啟此頁面，請啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、連接至報表伺服器執行個體、以滑鼠右鍵按一下報表伺服器名稱，然後選取 [屬性]。 按一下 **[執行]** ，即可開啟此頁面。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **執行報表時，不要計算逾時值**  
  讓報表伺服器完成報表處理不受時間限制。  
   

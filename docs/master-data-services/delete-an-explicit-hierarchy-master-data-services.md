@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 27f2da08eb5b1f9f7027d3e9747c7de8cab0ec1b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478205"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>刪除明確階層 (Master Data Services)
@@ -39,19 +39,19 @@ ms.locfileid: "65478205"
   
 ### <a name="to-delete-an-explicit-hierarchy"></a>若要刪除明確階層  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 [管理模型]  頁面上，從方格中選取模型，然後按一下 [實體] 。  
+2.  在 [管理模型]  頁面上，從方格中選取模型，然後按一下 [實體]  。  
   
 3.  在 [管理實體]  頁面上，從格線中選取含有您想要刪除之明確階層的實體資料列。  
   
-4.  按一下 [明確階層] 。  
+4.  按一下 [明確階層]  。  
   
 5.  在 [Manage Explicit Hierarchy]  (管理明確階層) 頁面上，按一下您想要刪除的明確階層。  
   
-6.  按一下 **[編輯]**。  
+6.  按一下 **[編輯]** 。  
   
-7.  在確認對話方塊中按一下 **[確定]**。  
+7.  在確認對話方塊中按一下 **[確定]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立明確階層 &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 016eeebb679ee16e07a99e44a3740efaae413483
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106833"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>將移動平均加入至圖表 (報表產生器及 SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66106833"
   
 ### <a name="to-add-a-calculated-moving-average-to-a-series-on-the-chart"></a>將導出的移動平均加入至圖表上的數列  
   
-1.  以滑鼠右鍵按一下 **[值]** 區域中的欄位，然後按一下 **[加入導出數列]**。 **[導出數列屬性]** 對話方塊隨即開啟。  
+1.  以滑鼠右鍵按一下 **[值]** 區域中的欄位，然後按一下 **[加入導出數列]** 。 **[導出數列屬性]** 對話方塊隨即開啟。  
   
 2.  從 **[公式]** 下拉式清單中，選取 **[移動平均]** 選項。  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63044064"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>測試篩選過的模型 (基本資料採礦教學課程)
@@ -37,7 +37,7 @@ ms.locfileid: "63044064"
   
 4.  在 **模型名稱**欄位中，輸入`TM_Decision_Tree_Male`。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
  接下來，建立一個篩選來選取此模型的客戶 (根據客戶的性別)。  
   
@@ -47,9 +47,9 @@ ms.locfileid: "63044064"
   
      -或-  
   
-     選取此模型。 在 **[採礦模型]** 功能表上，選取 **[設定模型篩選器]**。  
+     選取此模型。 在 **[採礦模型]** 功能表上，選取 **[設定模型篩選器]** 。  
   
-2.  在 [模型篩選器] 對話方塊的 [採礦結構資料行] 文字方塊中，按一下方格中的上方資料列。  
+2.  在 [模型篩選器]  對話方塊的 [採礦結構資料行]  文字方塊中，按一下方格中的上方資料列。  
   
      下拉式清單只會顯示該資料表中的資料行名稱。  
   

@@ -14,18 +14,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a3cbe076564d1ce24cbe606485462cbfe012407
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109893"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>導出數列屬性對話方塊、標記 (報表產生器及 SSRS)
   選取 **[導出數列屬性]** 對話方塊上的 **[標記]** 來定義如何在每個數列的資料點上顯示標記。 標記僅適用於某些圖表類型。 下列圖表類型支援標記：區域中，列、 資料行、 極座標圖、 線條和散佈圖。 如需圖表功能的詳細資訊，請參閱[圖表類型 &#40;報表產生器及 SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **標記類型**  
- 在圖表上啟用標記時，選取標記類型。 依預設，這個選項會設為 **[圓形]**。  
+ 在圖表上啟用標記時，選取標記類型。 依預設，這個選項會設為 **[圓形]** 。  
   
  **標記大小**  
  選取要在資料點上顯示之標記的大小。  

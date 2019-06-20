@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 42fc6848b89c57e6bfab40f1af96013fc73271f6
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462709"
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)

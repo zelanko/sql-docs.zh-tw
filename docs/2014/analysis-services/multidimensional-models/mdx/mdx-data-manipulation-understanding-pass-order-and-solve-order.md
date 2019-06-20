@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 39e1c4ae6de01be55bf94f60e06c7979765f1b62
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66074242"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>了解行程順序與解決順序 (MDX)
@@ -37,7 +37,7 @@ ms.locfileid: "66074242"
 ## <a name="solve-order"></a>解決順序  
  解決順序決定在運算式發生競爭事件時，計算的優先權。 在單一行程內，解決順序決定兩件事情：  
   
--    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 評估維度、成員、導出成員、自訂積存和導出資料格的順序。  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 評估維度、成員、導出成員、自訂積存和導出資料格的順序。  
   
 -   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 評估自訂成員、導出成員、自訂積存和導出資料格的順序。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66074242"
  強烈建議您在設定解決順序值時只使用正整數。 如果您指定比上表中解決順序值還低的值，計算行程可能會變得無法預測。 例如，導出成員的計算會收到一個低於預設自訂積存公式值 -5119 的解決順序值。 這類低的解決順序值會造成導出成員的計算早於自訂積存公式，所以會產生不正確的結果。  
   
 ### <a name="creating-and-changing-solve-order"></a>建立與變更解決順序  
- 在 [Cube 設計師] 的 [計算窗格] 上，您可以變更計算的順序，來變更導出成員和導出資料格的解決順序。  
+ 在 [Cube 設計師] 的 [計算窗格]  上，您可以變更計算的順序，來變更導出成員和導出資料格的解決順序。  
   
  在 MDX 中，您可以使用 `SOLVE_ORDER` 關鍵字來建立或變更導出成員與導出資料格。  
   

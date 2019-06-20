@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: b58a9463932e9761688fd744b972f50ad3286381
-ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66718692"
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>XML 中的資料錄集動態屬性

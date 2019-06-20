@@ -13,16 +13,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13c1acf24212a236eae5e377a7febfd398e579c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022020"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>發行集資訊，所有訂閱 (合併式發行集)
   **[所有訂閱]** 索引標籤會顯示所選取合併式發行集之所有訂閱的相關資訊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  如需詳細資訊以及與訂閱相關的工作，請以滑鼠右鍵按一下該訂閱的資料列，然後按一下捷徑功能表上的選項。 若要變更方格顯示資料的方式，請以滑鼠右鍵按一下方格，然後按一下下列其中一個選項：  
   
 -   **排序**：在 [排序資料行] 對話方塊中排序一個或多個資料行。  

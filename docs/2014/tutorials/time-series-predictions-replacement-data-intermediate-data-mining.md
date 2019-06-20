@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c96b70775105ea9446810ac3b064ae7cb07d4337
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63312874"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>使用取代資料執行時間序列預測 (中繼資料採礦教學課程)
@@ -86,7 +86,7 @@ ms.locfileid: "63312874"
   
     1.  確認採礦模型中的 ReportingDate 資料行對應到輸入資料中的 ReportingDate 資料行。  
   
-    2.  在 **修改對應**對話方塊的 模型資料行 AvgQty 的資料列中按一下 下**資料表資料行**，然後選取 T1000 pacific.quantity。 按一下 [確定] 。  
+    2.  在 **修改對應**對話方塊的 模型資料行 AvgQty 的資料列中按一下 下**資料表資料行**，然後選取 T1000 pacific.quantity。 按一下 [確定]  。  
   
          這個步驟會將您在模型中建立用於預測平均數量的資料行對應到 T1000 數列中銷售數量的實際資料。  
   

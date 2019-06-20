@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767500"
 ---
-# <a name="lesson-1-creating-the-project-and-basic-package"></a>第 1 課：建立專案和基本套件
+# <a name="lesson-1-creating-the-project-and-basic-package"></a>第 1 課：建立專案和基本封裝
   在這一課，您將建立一個從單個一般檔案來源擷取資料的簡易 ETL 封裝，使用兩個查閱轉換元件來轉換資料、將該資料寫入至 **AdventureWorksDW2012** 中的 **FactCurrency**事實資料表。 在這一課，您會學到如何建立新封裝，加入和設定資料來源和目的地連接，以及使用新控制流程和資料流程元件。  
   
 > [!IMPORTANT]  

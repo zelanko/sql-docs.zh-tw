@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: ef3e652762d582335b1502de3810e7e8f0d3d721
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66710441"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>UpdateBatch 和 CancelBatch 方法範例 (VC++)

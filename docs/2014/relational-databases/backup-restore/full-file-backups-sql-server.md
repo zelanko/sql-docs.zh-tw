@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 14ead76661b6818ac2daf6a3aa250dddb348745d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62876131"
 ---
 # <a name="full-file-backups-sql-server"></a>完整檔案備份 (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "62876131"
  檔案備份可以當成差異檔案備份的 *「差異基底」* (Differential base)。 如需詳細資訊，請參閱 [差異備份 &#40;SQL Server&#41;](differential-backups-sql-server.md)。  
   
 > [!NOTE]  
->  完整檔案備份通常稱為「檔案備份」，但與「差異檔案備份」明確對照時除外。  
+>  完整檔案備份通常稱為「檔案備份」  ，但與「差異檔案備份」  明確對照時除外。  
   
  **本主題內容：**  
   

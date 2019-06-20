@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997945"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
@@ -48,9 +48,9 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 `[ @article = ] 'article'` 是其屬性是要變更的發行項的名稱。 *發行項*已**sysname**，預設值是 NULL。  
   
-`[ @property = ] 'property'` 為發行項屬性變更。 *屬性*已**nvarchar(100)**。  
+`[ @property = ] 'property'` 為發行項屬性變更。 *屬性*已**nvarchar(100)** 。  
   
-`[ @value = ] 'value'` 是發行項屬性的新值。 *值*已**nvarchar(255)**。  
+`[ @value = ] 'value'` 是發行項屬性的新值。 *值*已**nvarchar(255)** 。  
   
  下表描述發行項的屬性及這些屬性的值。  
   
@@ -104,7 +104,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x4000000**|在複寫索引**xml**資料行。|  
 ||**0x8000000**|建立訂閱者目前還沒有的任何結構描述。|  
 ||**0x10000000**|將轉換**xml**資料行**ntext**訂閱者上。|  
-||**0x20000000**|將大型物件資料類型 (**nvarchar （max)**， **varchar （max)**，並**varbinary （max)**) 中所導入[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]支援的資料類型在  [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。|  
+||**0x20000000**|將大型物件資料類型 (**nvarchar （max)** ， **varchar （max)** ，並**varbinary （max)** ) 中所導入[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]支援的資料類型在  [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。|  
 ||**0x40000000**|複寫權限。|  
 ||**0x80000000**|嘗試卸除對於不在發行集中之任何物件的相依性。|  
 ||**0x100000000**|使用此選項來複寫 FILESTREAM 屬性，如果同時指定**varbinary （max)** 資料行。 如果您要將資料表複寫至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 訂閱者，請勿指定這個選項。 將具有 FILESTREAM 資料行的資料表複寫[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]不支援訂閱者，不論這個結構描述選項的設定方式。<br /><br /> 請參閱相關的選項**0x800000000**。|  

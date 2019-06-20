@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 24d605c3ca3374a41fa080a861b64001c36f3ef2
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63019225"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263328"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>在 DirectQuery 模式中的 DAX 公式相容性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,16 +39,16 @@ ms.locfileid: "63019225"
 
 
 ### <a name="non-optimized-for-directquery"></a>未針對 DirectQuery 最佳化
-這些函式有尚未最佳化，以使用 DirectQuery。 導出資料行和資料列層級安全性公式完全「不」  支援這些函數。 不過， 量值和查詢公式「支援」  這些函數，隨然效能並不確定。
+這些函式有尚未最佳化，以使用 DirectQuery。 導出資料行和資料列層級安全性公式完全「不」支援這些函數。 不過， 量值和查詢公式「支援」這些函數，隨然效能並不確定。
 
  我們不會在此列出所有的函數。 基本上，如果不是上述列出的其中一種最佳化函數，它就不是針對 DirectQuery 的最佳化功能。
 
 特定函數可能未針對 DirectQuery 最佳化的原因，是因為基礎關聯式引擎無法執行相當於 xVelocity 引擎所執行的計算，或公式無法轉換為相等的 SQL 運算式。 在其他情況下，轉換運算式以及產生的計算效能可能令人無法接受。
 
-若要深入了解所有 DAX 函數，請參閱 [DAX 函數參考]。(https://msdn.microsoft.com/library/ee634396.aspx)
+若要深入了解所有 DAX 函數，請參閱[DAX 函數參考](/dax/dax-function-reference)。
 
 ## <a name="dax-operators-in-directquery-mode"></a>在 DirectQuery 模式中的 DAX 運算子
-在 DirectQuery 模式中完全支援所有 DAX 比較和算術運算子。 若要深入了解，請參閱 [DAX 運算子參考](https://msdn.microsoft.com/library/ee634237.aspx)。
+在 DirectQuery 模式中完全支援所有 DAX 比較和算術運算子。 若要深入了解，請參閱 [DAX 運算子參考](/dax/dax-operator-reference)。
 
 
  
@@ -107,7 +107,7 @@ ms.locfileid: "63019225"
 -   進行比較而且搭配 EXACT、AND、OR、 &amp;&amp;或 || 使用時，布林值一定會被視為邏輯值。  
   
 **從字串轉換成布林值**  
-在記憶體中和 DirectQuery 模型中，僅允許轉換成布林值從這些字串： **""** （空字串）、 **"true"** ， **"false"** ; 其中空字串轉換 （cast) 成 false 值。  
+在記憶體中和 DirectQuery 模型中，僅允許轉換成布林值從這些字串： **""** （空字串）、 **"true"**， **"false"**; 其中空字串轉換 （cast) 成 false 值。  
   
 轉換成任何其他字串的布林資料類型會產生錯誤。  
   
@@ -160,7 +160,7 @@ SQL Server 處理 Null 和空白的方式與 xVelocity 引擎不同。 如此一
   
 相同的限制適用於其他對數函數：LOG10 和 ln。  
   
-如需 DAX 中 **blank** 資料類型的詳細資訊，請參閱 [DAX 語法參考](https://msdn.microsoft.com/library/ee634217.aspx)。  
+如需 DAX 中 **blank** 資料類型的詳細資訊，請參閱 [DAX 語法參考](/dax/dax-syntax-reference)。  
   
 **除以 0 和除以空白**  
 在 DirectQuery 模式中，除以零 (0) 或除以 BLANK 都一定會產生錯誤。 SQL Server 不支援無限大的概念，而且因為任何除以 0 的自然結果都是無限大，所以結果就是錯誤。 不過，SQL Server 支援除以 Null，而且結果一定等於 Null。  

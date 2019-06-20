@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0948fda951bb415d9fe3f457729200752a8afaaf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080490"
 ---
 # <a name="incremental-update-dialog-box-analysis-services---multidimensional-data"></a>累加式更新對話方塊 (Analysis Services - 多維度資料)
-  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [累加式更新] 對話方塊，即可定義累加更新量值群組與資料分割時使用的設定。 在 [處理] 對話方塊裡的 [物件清單] 方格中，按一下 [設定值] 資料行中的 [設定]，即可顯示 [累加式更新] 對話方塊。  
+  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [累加式更新]  對話方塊，即可定義累加更新量值群組與資料分割時使用的設定。 在 [處理]  對話方塊裡的 [物件清單]  方格中，按一下 [設定值]  資料行中的 [設定]  ，即可顯示 [累加式更新]  對話方塊。  
   
 ## <a name="options"></a>選項  
   

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8e9532c9d3ecbc32942e6a70d82f5837856a329
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66093585"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>SQL Server 服務安裝概觀
@@ -128,12 +128,12 @@ ms.locfileid: "66093585"
 3.  在您已加入的節點上執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新安裝程式。  
   
 ## <a name="restart-services-and-applications"></a>重新啟動服務及應用程式  
- 當安裝程式完成時，它可能會提示您重新啟動電腦。 在系統重新啟動或在安裝程式完成 (但未要求重新啟動電腦) 之後，您可以使用 [控制台] 中的 [服務] 節點來重新啟動在套用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新之前所停止的服務。 這包括分散式交易協調器及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search 等服務，或執行個體特定的對等服務。  
+ 當安裝程式完成時，它可能會提示您重新啟動電腦。 在系統重新啟動或在安裝程式完成 (但未要求重新啟動電腦) 之後，您可以使用 [控制台] 中的 [服務]  節點來重新啟動在套用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新之前所停止的服務。 這包括分散式交易協調器及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search 等服務，或執行個體特定的對等服務。  
   
  重新啟動在執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新安裝程式之前所關閉的應用程式。 您可能還想在安裝成功完成之後，立即為已升級的 `master`、`msdb` 和 `model` 資料庫進行另一次備份。  
   
 ## <a name="uninstalling-updates-from-includesscurrentincludessscurrent-mdmd"></a>解除安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的更新  
- 您可以從 [控制台] 中的 [程式和功能] 解除安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 累計更新或 Service Pack。 若要檢視已安裝的更新清單，請依序按一下 [開始] 按鈕、[控制台]、[程式集]，然後按一下 [程式和功能] 下的 [檢視已安裝的更新]，開啟 [已安裝的更新]。 系統會個別列出每個累計更新。 然而，安裝了高於累計更新的 Service Pack 時，累計更新項目會隱藏而且在您解除安裝 Service Pack 時，才會變成可用。  
+ 您可以從 [控制台] 中的 [程式和功能]  解除安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 累計更新或 Service Pack。 若要檢視已安裝的更新清單，請依序按一下 [開始]  按鈕、[控制台]  、[程式集]  ，然後按一下 [程式和功能]  下的 [檢視已安裝的更新]  ，開啟 [已安裝的更新]。 系統會個別列出每個累計更新。 然而，安裝了高於累計更新的 Service Pack 時，累計更新項目會隱藏而且在您解除安裝 Service Pack 時，才會變成可用。  
   
  若要解除安裝任何 Service Pack 及更新，您必須以套用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之執行個體最新的更新或 Service Pack 開始並回溯執行。 在下列每個範例中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在解除安裝其他的 Service Pack 或更新完成後，以累計更新 1 結束。  
   

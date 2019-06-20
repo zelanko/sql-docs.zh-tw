@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1bd9e18d1dfe7226d043a7c8c968999da680da08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775005"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>重新命名主控 SQL Server 獨立執行個體的電腦

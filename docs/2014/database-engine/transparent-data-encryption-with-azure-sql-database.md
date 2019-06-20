@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3551cf4db3ab1b84f04ba13dea414943fbb2ef44
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773869"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Azure SQL Database 的透明資料加密
@@ -52,19 +52,19 @@ ms.locfileid: "62773869"
   
 1.  請瀏覽 Azure 入口網站，網址[ https://portal.azure.com ](https://portal.azure.com)並使用您的 Azure 系統管理員或參與者帳戶登入。  
   
-2.  在左邊的橫幅中，按一下 [瀏覽] ，再按一下 [SQL 資料庫] 。  
+2.  在左邊的橫幅中，按一下 [瀏覽]  ，再按一下 [SQL 資料庫]  。  
   
 3.  在左窗格中選取 [SQL 資料庫]  ，然後按一下您的使用者資料庫。  
   
-4.  在資料庫刀鋒視窗中，按一下 [所有設定] 。  
+4.  在資料庫刀鋒視窗中，按一下 [所有設定]  。  
   
 5.  在 [設定]  刀鋒視窗中，按一下 [透明資料加密 (預覽版)]  部分，以開啟 [透明資料加密 (預覽版)]  刀鋒視窗。 若還未註冊 TDE 預覽版，資料加密設定將會停用，直到您完成註冊為止。  
   
-6.  按一下 [預覽條款] 。  
+6.  按一下 [預覽條款]  。  
   
 7.  閱讀預覽條款，如果您同意這些條款，請選取**透明資料 encryptionPreview 條款**核取方塊，然後按一下**確定**靠近頁面底部。 返回**資料 encryptionPREVIEW**刀鋒視窗中，其中**資料加密**應該已啟用 按鈕。  
   
-8.  在 [資料加密預覽]  刀鋒視窗中，將 [資料加密]  按鈕移至 [開啟] ，然後按一下 [儲存]  (位於頁面頂端)，以套用此設定。 [加密狀態]  會顯示透明資料加密的概略進度。  
+8.  在 [資料加密預覽]  刀鋒視窗中，將 [資料加密]  按鈕移至 [開啟]  ，然後按一下 [儲存]  (位於頁面頂端)，以套用此設定。 [加密狀態]  會顯示透明資料加密的概略進度。  
   
      ![SQLDB_TDE_TermsNewUI](../../2014/database-engine/media/sqldb-tde-termsnewui.png "SQLDB_TDE_TermsNewUI")  
   
@@ -122,15 +122,15 @@ ms.locfileid: "62773869"
   
 1.  請瀏覽 Azure 入口網站，網址[ https://portal.azure.com ](https://portal.azure.com)並使用您的 Azure 系統管理員或參與者帳戶登入。  
   
-2.  在左邊的橫幅中，按一下 [瀏覽] ，再按一下 [SQL 資料庫] 。  
+2.  在左邊的橫幅中，按一下 [瀏覽]  ，再按一下 [SQL 資料庫]  。  
   
 3.  在左窗格中選取 [SQL 資料庫]  ，然後按一下您的使用者資料庫。  
   
-4.  在資料庫刀鋒視窗中，按一下 [所有設定] 。  
+4.  在資料庫刀鋒視窗中，按一下 [所有設定]  。  
   
 5.  在 [設定]  刀鋒視窗中，按一下 [透明資料加密 (預覽版)]  部分，以開啟 [透明資料加密 (預覽版)]  刀鋒視窗。  
   
-6.  在 [透明資料加密預覽]  刀鋒視窗中，將 [資料加密]  按鈕移至 [關閉] ，然後按一下 [儲存]  (位於頁面頂端)，以套用此設定。 [加密狀態]  會顯示透明資料解密的概略進度。  
+6.  在 [透明資料加密預覽]  刀鋒視窗中，將 [資料加密]  按鈕移至 [關閉]  ，然後按一下 [儲存]  (位於頁面頂端)，以套用此設定。 [加密狀態]  會顯示透明資料解密的概略進度。  
   
      您也可以使用查詢工具 (例如 [!INCLUDE[ssSDS](../includes/sssds-md.md)] )，以具有 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] VIEW DATABASE STATE **權限的資料庫使用者身分，連接到** 監視解密進度。 查詢`encryption_state`資料行[sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)檢視。  
   
