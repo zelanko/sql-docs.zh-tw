@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065234"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>新增或移除資料表對話方塊 (Analysis Services-多維度資料)
@@ -28,7 +28,7 @@ ms.locfileid: "66065234"
   
 -   以滑鼠右鍵按一下 [資料來源檢視設計工具] 的 [圖表] 窗格，然後選取 [加入/移除資料表]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料來源**  
  選取要加入或移除資料表的資料來源。  
   

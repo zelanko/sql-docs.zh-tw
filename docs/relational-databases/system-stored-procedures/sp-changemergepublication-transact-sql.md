@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997127"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
@@ -46,7 +46,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 `[ @property = ] 'property'` 若要變更給定發行集屬性。 *屬性*已**sysname**，它可以其中一個值列出在下表中。  
   
-`[ @value = ] 'value'` 指定屬性的新值。 *值*已**nvarchar(255)**，它可以其中一個值列出在下表中。  
+`[ @value = ] 'value'` 指定屬性的新值。 *值*已**nvarchar(255)** ，它可以其中一個值列出在下表中。  
   
  下表描述可變更之發行集的屬性及這些屬性值的限制。  
   

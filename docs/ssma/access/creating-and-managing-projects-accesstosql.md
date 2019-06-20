@@ -19,10 +19,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1cf23a076f7e4d7e873f48988364c51b1daa03b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63138797"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>建立和管理專案 (AccessToSQL)
@@ -60,7 +60,7 @@ SSMA 會啟動但不載入預設專案。 若要將資料從 Access 資料庫移
   
 **若要建立新的專案**  
   
-1.  在 [檔案] 功能表上，選取 [新增專案]。  
+1.  在 [檔案]  功能表上，選取 [新增專案]  。  
   
     [新增專案]  對話方塊隨即出現。  
   
@@ -90,7 +90,7 @@ SSMA 會建立專案檔。 您現在可以執行的下一個步驟[新增一或�
   
         儲存中繼資料，可能需要幾分鐘的時間。 如果您不想在此時儲存中繼資料，請勿選取任何核取方塊。  
   
-    2.  按一下 [儲存] 。  
+    2.  按一下 [儲存]  。  
   
         SSMA 會剖析存取結構描述，並將中繼資料儲存到專案檔。  
   

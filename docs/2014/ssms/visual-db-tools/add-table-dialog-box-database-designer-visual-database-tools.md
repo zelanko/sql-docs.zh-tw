@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a301857168f7da4040df0195bc25c0ab54861eb7
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63460149"
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>加入資料表對話方塊 (資料庫設計工具) (Visual Database Tools)
@@ -34,7 +34,7 @@ ms.locfileid: "63460149"
  加入選取的資料表或多個資料表。  
   
 > [!NOTE]  
->  若要將好幾個資料表加入至圖表，可以在按一下 [新增] 之前選取所有資料表。 或是，按兩下每一個要加入的資料表，完成時按一下 [關閉]。  
+>  若要將好幾個資料表加入至圖表，可以在按一下 [新增]  之前選取所有資料表。 或是，按兩下每一個要加入的資料表，完成時按一下 [關閉]  。  
   
  **關閉**  
  關閉對話方塊，而不再加入其他資料表。  

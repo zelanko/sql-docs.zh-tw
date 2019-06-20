@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9592898521aee296677c195d860dcb6b5e205a8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060103"
 ---
 # <a name="create-the-ssis-catalog"></a>建立 SSIS 目錄
@@ -28,17 +28,17 @@ ms.locfileid: "66060103"
   
 2.  連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine。  
   
-3.  在 [物件總管] 中，展開伺服器節點，以滑鼠右鍵按一下 [Integration Services 目錄] 節點，然後按一下 [建立目錄]。  
+3.  在 [物件總管] 中，展開伺服器節點，以滑鼠右鍵按一下 [Integration Services 目錄]  節點，然後按一下 [建立目錄]  。  
   
-4.  按一下 **[啟用 CLR 整合]**。  
+4.  按一下 **[啟用 CLR 整合]** 。  
   
      目錄便會使用 CLR 預存程序。  
   
-5.  按一下 [在 SQL Server 啟動時允許自動執行 Integration Services 預存程序]，讓 [catalog.startup](/sql/integration-services/system-stored-procedures/catalog-startup) 預存程序會在每次 [!INCLUDE[ssIS](../includes/ssis-md.md)] 伺服器執行個體重新啟動時執行。  
+5.  按一下 [在 SQL Server 啟動時允許自動執行 Integration Services 預存程序]  ，讓 [catalog.startup](/sql/integration-services/system-stored-procedures/catalog-startup) 預存程序會在每次 [!INCLUDE[ssIS](../includes/ssis-md.md)] 伺服器執行個體重新啟動時執行。  
   
      預存程序會執行 SSISDB 目錄之作業狀態的維護。 它會在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 伺服器執行個體效能降低時，修正正在執行之任何封裝的狀態。  
   
-6.  輸入密碼，然後按一下 **[確定]**。  
+6.  輸入密碼，然後按一下 **[確定]** 。  
   
      此密碼保護用來加密目錄資料的資料庫主要金鑰。 請將密碼儲存在安全位置。 建議您同時備份資料庫主要金鑰。 如需相關資訊，請參閱 [Back Up a Database Master Key](../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
   

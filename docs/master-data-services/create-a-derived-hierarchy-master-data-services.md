@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 046bebc200c25ee41bd056fae6d478fe0542cca6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487424"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>建立衍生階層 (Master Data Services)
@@ -39,26 +39,26 @@ ms.locfileid: "65487424"
   
 ### <a name="to-create-a-derived-hierarchy"></a>若要建立衍生階層  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  從功能表列指向 [管理]，然後按一下 [衍生階層]。  
+2.  從功能表列指向 [管理]  ，然後按一下 [衍生階層]  。  
   
-3.  在 [衍生階層維護] 頁面上，選取 [模型] 清單中的模型。  
+3.  在 [衍生階層維護]  頁面上，選取 [模型]  清單中的模型。  
   
-4.  按一下 **[加入]**。  
+4.  按一下 **[加入]** 。  
   
-5.  在 [加入衍生階層] 頁面上的 [衍生階層名稱] 方塊中，輸入階層的名稱。  
+5.  在 [加入衍生階層]  頁面上的 [衍生階層名稱]  方塊中，輸入階層的名稱。  
   
     > [!TIP]  
     >  請使用名稱來描述階層中的層級，例如**產品到子類別目錄到類別目錄**。  
   
-6.  按一下 [儲存衍生階層]。  
+6.  按一下 [儲存衍生階層]  。  
   
-7.  在 [編輯衍生階層] 頁面上，按一下 [可用的實體和階層] 窗格中的實體或階層，並將它拖曳至 [目前層級] 窗格中的 [在此放置父系]。  
+7.  在 [編輯衍生階層]  頁面上，按一下 [可用的實體和階層]  窗格中的實體或階層，並將它拖曳至 [目前層級]  窗格中的 [在此放置父系]  。  
   
 8.  繼續拖曳實體或階層，直到完成階層為止。  
   
-9. 按一下 [上一步]。  
+9. 按一下 [上一步]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)   

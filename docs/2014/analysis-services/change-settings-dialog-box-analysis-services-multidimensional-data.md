@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43dfc1dca2e60fe2f5e467556ee36c3add1a9da3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088244"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>變更設定對話方塊 (Analysis Services - 多維度資料)
   使用 **和** 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [變更設定] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可變更 **[處理]** 對話方塊所列出之物件的處理設定。 您可以在 **[處理]** 對話方塊中按一下 **[變更設定]** ，以顯示 **[變更設定]** 對話方塊。  
   
 > [!NOTE]  
->  對於 [處理] 對話方塊中列出的物件，此對話方塊所指定的設定會覆寫從 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫繼承的預設值。  
+>  對於 [處理]  對話方塊中列出的物件，此對話方塊所指定的設定會覆寫從 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫繼承的預設值。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **處理選項**  
  使用此索引標籤即可針對處理作業，修改處理順序、回寫資料表以及受影響的物件等相關設定。 索引標籤包含下列選項：  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66088244"
  按一下以平行處理物件。  
   
  **平行工作數上限**  
- 選取處理作業平行執行的工作數上限，或選擇 [讓伺服器決定]，即可讓 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 選取最佳的平行工作數。  
+ 選取處理作業平行執行的工作數上限，或選擇 [讓伺服器決定]  ，即可讓 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 選取最佳的平行工作數。  
   
  **循序**  
  按一下即可循序處理物件。  
@@ -46,7 +46,7 @@ ms.locfileid: "66088244"
 -   **[個別交易]** 會在個別交易中處理所有物件，包括相依物件。  
   
 > [!NOTE]  
->  只有選取 [循序] 時才會啟用此選項。  
+>  只有選取 [循序]  時才會啟用此選項。  
   
  **回寫資料表選項**  
  選擇用來管理回寫資料表的選項：  
@@ -86,7 +86,7 @@ ms.locfileid: "66088244"
  輸入處理停止之前所忽略的錯誤數目。  
   
  **發生錯誤時要執行的動作**  
- 當錯誤數目超出 [錯誤數目] 中的值時，請選擇採取下列動作之一：  
+ 當錯誤數目超出 [錯誤數目]  中的值時，請選擇採取下列動作之一：  
   
 -   **[停止處理]** 會結束處理作業。  
   
@@ -132,10 +132,10 @@ ms.locfileid: "66088244"
  輸入錯誤記錄檔的完整路徑和檔案名稱。  
   
  **瀏覽**  
- 按一下即可開啟 [開啟] 對話方塊，並選取錯誤記錄檔的完整路徑和檔案名稱。  
+ 按一下即可開啟 [開啟]  對話方塊，並選取錯誤記錄檔的完整路徑和檔案名稱。  
   
  **處理受影響的物件**  
- 按一下即可處理相依於 [處理] 對話方塊中所選取物件的物件。  
+ 按一下即可處理相依於 [處理]  對話方塊中所選取物件的物件。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

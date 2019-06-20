@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5204cab43e3c801acf80113ec92c51e00c0f9d13
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108384"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>第 8 課：建立資料篩選
@@ -41,7 +41,7 @@ ms.locfileid: "66108384"
   
 4.  在 **運算式**欄位中，按一下 `ProductID`從下拉式清單。 這是要套用篩選的資料行。  
   
-5.  按一下 等於 (**=**) 中的運算子**運算子**下拉式清單。  
+5.  按一下 等於 ( **=** ) 中的運算子**運算子**下拉式清單。  
   
 6.  旁按一下 [運算式] 按鈕**值**欄位中，按一下**參數**中**分類**區域中，然後再按兩下`productid`中**值**區域。 **設定運算式對象：值**欄位現在應該包含類似於運算式 **= 參數 ！ productid。值**。  
   

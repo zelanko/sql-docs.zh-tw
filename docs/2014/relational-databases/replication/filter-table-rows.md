@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eafa0dc2be5ee9ceffd86185399168589fdd8b1f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721217"
 ---
 # <a name="filter-table-rows"></a>篩選資料表的資料列
@@ -44,7 +44,7 @@ ms.locfileid: "62721217"
   
  篩選不得包含複寫識別資料列所使用的 `rowguidcol`。 根據預設，這是在您設定合併式複寫時加入，且名稱為 **rowguid**的資料行。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **已篩選的資料表**  
  當您在發行集的資料表發行項中加入篩選時，這些篩選就會擴展到窗格中。 含有資料列篩選的資料表，會顯示為窗格中的最上層節點。 若為合併式發行集，則透過聯結篩選而擴充篩選的資料表，就會顯示為子節點。  
   

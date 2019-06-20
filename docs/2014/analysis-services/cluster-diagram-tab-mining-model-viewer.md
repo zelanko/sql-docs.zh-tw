@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 127ff0c386a1f93c00178624b54499e33cf9042a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088011"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>叢集圖表索引標籤 (採礦模型檢視器)
   **[叢集圖表]** 索引標籤會提供叢集模型中，所有叢集的圖形化檢視。  
   
- **如需詳細資訊：**[Microsoft 群集演算法](data-mining/microsoft-clustering-algorithm.md)，[瀏覽模型，使用 Microsoft 叢集檢視器](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **如需詳細資訊：** [Microsoft 群集演算法](data-mining/microsoft-clustering-algorithm.md)，[瀏覽模型，使用 Microsoft 叢集檢視器](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -50,7 +50,7 @@ ms.locfileid: "66088011"
  縮小圖表，直到畫面能容納整個圖表為止。  
   
  **找不到節點**  
- 開啟 [尋找節點] 對話方塊。 在難以找到所需屬性的大型模型中，此功能很有用。 可以在對話方塊中輸入搜尋準則，這會篩選叢集檢視，只顯示包含搜尋字串的叢集。  
+ 開啟 [尋找節點]  對話方塊。 在難以找到所需屬性的大型模型中，此功能很有用。 可以在對話方塊中輸入搜尋準則，這會篩選叢集檢視，只顯示包含搜尋字串的叢集。  
   
  **修訂版面配置**  
  重新排序圖表中的叢集，以修訂版面配置。  
@@ -64,7 +64,7 @@ ms.locfileid: "66088011"
  選取要在叢集圖表中表示的屬性。  
   
  **狀態**  
- 選取 [陰影變數] 的單一狀態，以用於叢集圖表中。  
+ 選取 [陰影變數]  的單一狀態，以用於叢集圖表中。  
   
  **Links**  
  透過上移或下移滑動軸來調整叢集之間顯示的連結數目。 降低滑動軸只會保留叢集之間的最強關聯。  

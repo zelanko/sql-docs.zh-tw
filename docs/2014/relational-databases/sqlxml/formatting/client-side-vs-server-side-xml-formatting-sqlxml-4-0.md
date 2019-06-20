@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4eaa4667db1e8b6ed789e2adb90bc8d72c1b02e6
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012344"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>用戶端與伺服器端 XML 格式 (SQLXML 4.0)
@@ -75,7 +75,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- 當您執行此範本時，將會傳回下列 XML  （只有部分的結果會顯示）。請注意，項目名稱會根據執行查詢的檢視名稱。  
+ 當您執行此範本時，將會傳回下列 XML （只有部分的結果會顯示）。請注意，項目名稱會根據執行查詢的檢視名稱。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -131,7 +131,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>   
 ```  
   
- 當您使用用戶端 FOR XML 的 NESTED 模式時，資料表名稱會當做產生之 XML 中的元素名稱傳回  （不使用查詢中指定的資料表別名。）例如，假設有以下的範本：  
+ 當您使用用戶端 FOR XML 的 NESTED 模式時，資料表名稱會當做產生之 XML 中的元素名稱傳回 （不使用查詢中指定的資料表別名。）例如，假設有以下的範本：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -179,7 +179,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- 如果 XML 格式化在伺服器上完成 (**用戶端端 xml ="0"**)，您可以用於傳回 dbobject 查詢在實際的資料表和資料行 （即使您有指定的別名），會傳回名稱的資料行中的別名。 例如，下列範本會執行查詢，而 XML 格式化在伺服器上完成 (**用戶端端 xml**未指定選項和**Run On Client**選項未選取虛擬根目錄）。 此查詢也會指定 AUTO 模式 (而非用戶端 NESTED 模式)。  
+ 如果 XML 格式化在伺服器上完成 (**用戶端端 xml ="0"** )，您可以用於傳回 dbobject 查詢在實際的資料表和資料行 （即使您有指定的別名），會傳回名稱的資料行中的別名。 例如，下列範本會執行查詢，而 XML 格式化在伺服器上完成 (**用戶端端 xml**未指定選項和**Run On Client**選項未選取虛擬根目錄）。 此查詢也會指定 AUTO 模式 (而非用戶端 NESTED 模式)。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

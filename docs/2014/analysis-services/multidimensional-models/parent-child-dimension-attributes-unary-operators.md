@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25c1acf7a1fadbc79b7781488143ce57881c81fc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073451"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>父子式維度中的一元運算子
@@ -38,11 +38,11 @@ ms.locfileid: "66073451"
 |/ (斜線)|成員的值除以該成員發生前之同層級成員的彙總值。|  
 |~ (波狀符號)|忽略成員的值。|  
   
- 空白值以及資料表中找不到的其他任何值，都與加號 (+) 一元運算子一樣地處理。 由於並無運算子優先順序，因此儲存在一元運算子資料行的成員順序就決定其評估順序。 若要變更評估順序，請建立新的屬性，將其 [類型] 屬性設定為 [順序]，然後在其 [來源資料行] 屬性中指派對應到此評估順序的序號。 您也必須根據該屬性來排序此屬性的成員。 如需如何使用 [商業智慧精靈] 來排序屬性之成員的資訊，請參閱 [定義維度的排序方式](bi-wizard-define-the-ordering-for-a-dimension.md)。  
+ 空白值以及資料表中找不到的其他任何值，都與加號 (+) 一元運算子一樣地處理。 由於並無運算子優先順序，因此儲存在一元運算子資料行的成員順序就決定其評估順序。 若要變更評估順序，請建立新的屬性，將其 [類型]  屬性設定為 [順序]  ，然後在其 [來源資料行]  屬性中指派對應到此評估順序的序號。 您也必須根據該屬性來排序此屬性的成員。 如需如何使用 [商業智慧精靈] 來排序屬性之成員的資訊，請參閱 [定義維度的排序方式](bi-wizard-define-the-ordering-for-a-dimension.md)。  
   
  您可以使用 **UnaryOperatorColumn** 屬性指定具名計算，以傳回一元運算子作為屬性之所有成員的常值字元。 這可能和在具名計算中輸入常值字元 (例如 `'*'` ) 一樣簡單。 這會針對屬性的所有成員，使用乘法運算子 (星號 (*)) 來取代預設運算子 (加號 (+))。 如需詳細資訊，請參閱[在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)。  
   
- 在維度設計師的 [瀏覽器] 索引標籤中，您可以檢視階層中每個成員旁邊的一元運算子。 當您使用可寫入的維度時，也可以變更一元運算子。 如果維度是不可寫入的，您必須使用工具直接修改資料來源。  
+ 在維度設計師的 [瀏覽器]  索引標籤中，您可以檢視階層中每個成員旁邊的一元運算子。 當您使用可寫入的維度時，也可以變更一元運算子。 如果維度是不可寫入的，您必須使用工具直接修改資料來源。  
   
 ## <a name="see-also"></a>另請參閱  
  [維度屬性 (Attribute) 屬性 (Property) 參考](dimension-attribute-properties-reference.md)   

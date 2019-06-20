@@ -13,14 +13,14 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 0f5588e897c730663540ba2e4aa1fa60bbb3fe13
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089323"
 ---
 # <a name="options-query-results-analysis-server-general-page"></a>選項 （查詢結果-Analysis Server-一般頁面）
-  使用此頁面，即可決定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 查詢之查詢結果視窗的預設行為。 若要顯示這些設定，請選取 [工具] 功能表中的 [選項]。 在 [查詢結果] 資料夾內展開 [Analysis Server] 子資料夾，然後選擇 [一般]。  
+  使用此頁面，即可決定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 查詢之查詢結果視窗的預設行為。 若要顯示這些設定，請選取 [工具]  功能表中的 [選項]  。 在 [查詢結果]  資料夾內展開 [Analysis Server]  子資料夾，然後選擇 [一般]  。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **在不同的索引標籤中顯示資料格**  

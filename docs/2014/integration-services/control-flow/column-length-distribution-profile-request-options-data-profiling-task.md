@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a34e5f5af82103709b1e08c22860b1f87288422e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832564"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>資料行長度散發設定檔要求選項 (資料分析工作)
@@ -30,7 +30,7 @@ ms.locfileid: "62832564"
 ## <a name="request-properties-options"></a>要求屬性選項  
  **[要求屬性]** 窗格會針對 **[資料行長度散發設定檔要求]** 顯示下列選項群組：  
   
--   **[資料]**，其中包括 **[TableOrView]** 和 **[資料行]** 選項。  
+-   **[資料]** ，其中包括 **[TableOrView]** 和 **[資料行]** 選項。  
   
 -   **一般**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62832564"
   
 #### <a name="column-options"></a>資料行選項  
  **IsWildCard**  
- 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(\*)** 來分析所有資料行，這個選項會設定為 [True]。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
+ 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(\*)** 來分析所有資料行，這個選項會設定為 [True]  。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
   
  **ColumnName**  
  顯示所選取資料行的名稱。 如果您已選取 **(\*)** 來分析所有資料行，這個選項就是空白的。 此選項是唯讀的。  
@@ -71,12 +71,12 @@ ms.locfileid: "62832564"
  **RequestID**  
  輸入描述性名稱，以便識別這個設定檔要求。 一般而言，您不需要變更自動產生的值。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **IgnoreLeadingSpaces**  
- 指出當設定檔比較字串值時是否要忽略開頭空白。 此選項的預設值是 **[False]**。  
+ 指出當設定檔比較字串值時是否要忽略開頭空白。 此選項的預設值是 **[False]** 。  
   
  **IgnoreTrailingSpaces**  
- 指出當設定檔比較字串值時是否要忽略尾端空白。 此選項的預設值是 **[True]**。  
+ 指出當設定檔比較字串值時是否要忽略尾端空白。 此選項的預設值是 **[True]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料分析工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)   

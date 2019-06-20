@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0a7498820bedf5d412fe227c268a6bef35d3d74
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072516"
 ---
 # <a name="ragged-hierarchies"></a>不完全階層
@@ -52,7 +52,7 @@ ms.locfileid: "66072516"
   
 1.  在 SSDT 中按兩下維度，在維度設計師中加以開啟。 第一個索引標籤 [維度結構] 會在 [階層] 窗格中顯示屬性階層。  
   
-2.  以滑鼠右鍵按一下此階層中的成員，並選取 [屬性]。 將 `HideMemberIf` 設定為底下描述的其中一個值。  
+2.  以滑鼠右鍵按一下此階層中的成員，並選取 [屬性]  。 將 `HideMemberIf` 設定為底下描述的其中一個值。  
   
     |HideMemberIf 設定|描述|  
     |--------------------------|-----------------|  

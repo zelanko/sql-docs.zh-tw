@@ -16,10 +16,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 518f899118d5a7d2dce4f56d185fce9d5b1e47df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63287845"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>使用 SSMA 專案 (MySQLToSQL)
@@ -68,7 +68,7 @@ SSMA 會包含數項設定將轉換和載入資料庫、 移轉資料和同步�
   
 ##### <a name="to-create-a-new-project"></a>建立新的專案  
   
-1.  選取 **新的專案**從**檔案**功能表。 [新增專案]  對話方塊隨即出現。 在 [檔案] 功能表上，選取 [新增專案]。 [新增專案]  對話方塊隨即出現。  
+1.  選取 **新的專案**從**檔案**功能表。 [新增專案]  對話方塊隨即出現。 在 [檔案]  功能表上，選取 [新增專案]  。 [新增專案]  對話方塊隨即出現。  
   
 2.  在 **名稱**方塊中，輸入您專案的名稱。  
   
@@ -106,7 +106,7 @@ SSMA 會建立專案檔。
   
 1.  每個資料庫，會顯示狀態**中繼資料遺漏**，選取資料庫名稱旁邊的核取方塊。 儲存中繼資料，可能需要幾分鐘的時間。 如果您不想在此時儲存中繼資料，請勿選取任何核取方塊。  
   
-2.  按一下 [儲存] 。  
+2.  按一下 [儲存]  。  
   
 SSMA 會剖析 MySQL 結構描述，並將中繼資料儲存到專案檔。  
   

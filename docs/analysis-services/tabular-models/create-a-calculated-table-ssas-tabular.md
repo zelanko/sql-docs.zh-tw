@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 199096efcdf9212e19e1055f1276079eddfb1a75
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62469366"
 ---
 # <a name="create-a-calculated-table"></a>建立導出的資料表 
@@ -33,7 +33,7 @@ ms.locfileid: "62469366"
   
 2.  切換至 [資料檢視]。 您無法在 [資料檢視] 中建立導出資料表。  
   
-3.  選取 [資料表] > [新的導出資料表]。  
+3.  選取 [資料表]   > [新的導出資料表]  。  
   
 4.  輸入或貼上 DAX 運算式 (請參閱下方的一些概念)。  
   

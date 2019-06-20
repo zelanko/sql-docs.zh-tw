@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6c5a28cbac2c13d0662f744a12f3041458d9b0bb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108709"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>備份與還原 Reporting Services 加密金鑰
@@ -57,7 +57,7 @@ ms.locfileid: "66108709"
   
 1.  啟動 Reporting Services 組態管理員，然後連接到您要設定的報表伺服器執行個體。  
   
-2.  按一下 **[加密金鑰]**，然後按一下 **[備份]**。  
+2.  按一下 **[加密金鑰]** ，然後按一下 **[備份]** 。  
   
 3.  輸入增強式密碼。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66108709"
   
 1.  啟動 Reporting Services 組態管理員，然後連接到您要設定的報表伺服器執行個體。  
   
-2.  在 [加密金鑰] 頁面上，按一下 **[還原]**。  
+2.  在 [加密金鑰] 頁面上，按一下 **[還原]** 。  
   
 3.  選取包含備份副本的 .snk 檔案。  
   

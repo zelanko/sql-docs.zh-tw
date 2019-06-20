@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4996ba378319e442df07a4ff09af3404034474d9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085723"
 ---
 # <a name="clustering-model-query-examples"></a>叢集模型查詢範例
@@ -107,7 +107,7 @@ WHERE MODEL_NAME = 'TM_Clustering'
  [回頁首](#bkmk_top2)  
   
 ## <a name="finding-information-about-clusters"></a>尋找有關群集的資訊  
- 叢集模型上最有用的內容查詢所傳回的資訊類型，通常與可以使用 [叢集檢視器] 瀏覽的資訊類型相同。 這包括群集設定檔、群集特性和群集辨識。 本章節提供會擷取這些資訊的查詢範例。  
+ 叢集模型上最有用的內容查詢所傳回的資訊類型，通常與可以使用 [叢集檢視器]  瀏覽的資訊類型相同。 這包括群集設定檔、群集特性和群集辨識。 本章節提供會擷取這些資訊的查詢範例。  
   
 ###  <a name="bkmk_Query3"></a> 範例查詢 3:傳回群集清單  
  因為所有的群集都具有節點類型 5，所以您可以僅針對該類型的節點查詢模型內容，以輕鬆地擷取群集清單。 您也可以篩選由機率或支援所傳回的節點，如下列範例所示。  
@@ -136,7 +136,7 @@ WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000
  [回頁首](#bkmk_top2)  
   
 ###  <a name="bkmk_Query4"></a> 範例查詢 4:傳回群集的屬性  
- 對於每個叢集而言，[叢集檢視器] 會顯示列出屬性及其值的設定檔。 檢視器也會顯示長條圖，以顯示模型中整個案例母體的值分佈情形。 如果是在檢視器中瀏覽模型，則您可以輕鬆地從「採礦圖例」複製長條圖，然後將它貼入至 Excel 或 Word 文件。 也可以使用檢視器的 [群集特性] 窗格，以圖形方式比較不同群集的屬性。  
+ 對於每個叢集而言，[叢集檢視器]  會顯示列出屬性及其值的設定檔。 檢視器也會顯示長條圖，以顯示模型中整個案例母體的值分佈情形。 如果是在檢視器中瀏覽模型，則您可以輕鬆地從「採礦圖例」複製長條圖，然後將它貼入至 Excel 或 Word 文件。 也可以使用檢視器的 [群集特性] 窗格，以圖形方式比較不同群集的屬性。  
   
  不過，如果一次必須取得一個以上群集的值，對模型進行查詢是比較簡單的方式。 例如，您在瀏覽模型時，可能會注意到最上面兩個叢集在 `Number Cars Owned`屬性方面不同。 因此可能會想針對每個群集擷取值。  
   
@@ -204,7 +204,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
  [回頁首](#bkmk_top2)  
   
 ###  <a name="bkmk_Query6"></a> 範例查詢 6:尋找群集的辨識因數  
- [叢集檢視器] 的 [叢集辨識] 索引標籤可讓您輕鬆地將某個叢集與另一個叢集相比較，或將某個叢集與所有其餘案例 (叢集的補充) 相比較。  
+ [叢集檢視器]  的 [叢集辨識]  索引標籤可讓您輕鬆地將某個叢集與另一個叢集相比較，或將某個叢集與所有其餘案例 (叢集的補充) 相比較。  
   
  不過，要建立傳回此資訊的查詢可能很複雜，而且您可能需要在用戶端上進行一些額外的處理，並比較兩個或更多查詢的結果。 所以可以使用系統預存程序當做捷徑。  
   
@@ -223,7 +223,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
 |Region|Europe|-72.5041051379789|  
 |English Occupation|手動|-69.6503163202722|  
   
- 這與您從第一個下拉式清單選取叢集 9 和從第二個下拉式清單選取叢集 7 時，在 [叢集辨識] 檢視器的圖表中所展示的資訊相同。 若要將群集 9 與其補充相較，可以使用第二個參數中的空字串，如下列範例所示：  
+ 這與您從第一個下拉式清單選取叢集 9 和從第二個下拉式清單選取叢集 7 時，在 [叢集辨識]  檢視器的圖表中所展示的資訊相同。 若要將群集 9 與其補充相較，可以使用第二個參數中的空字串，如下列範例所示：  
   
 ```  
 CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDiscrimination('TM_Clustering','009','',0.0005,true)  
@@ -283,7 +283,7 @@ NATURAL PREDICTION JOIN
 |----------------|----------------|  
 |1|0.55843544003102|  
   
- 在此範例中，模型中的差異並不大。 不過，有時候偵測值的實際散發和模型所預測的情況之間的差異可能很重要。  [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 函數在此案例中很有用，因為它會告訴您在模型已知時的案例可能性。  
+ 在此範例中，模型中的差異並不大。 不過，有時候偵測值的實際散發和模型所預測的情況之間的差異可能很重要。 [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 函數在此案例中很有用，因為它會告訴您在模型已知時的案例可能性。  
   
  PredictCaseLikelihood 函數傳回的數字是機率，因此一定會介於 0 和 1 之間，.5 的值則代表隨機結果。 因此，小於 .5 的分數代表預測的案例在模型已知時不太可能發生，而超過 .5 的分數則代表預測的案例較符合模型的預測。  
   

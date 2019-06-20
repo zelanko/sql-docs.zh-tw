@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef4d185b143e0a89781e6fbf0c9efe874f7f0ec5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087000"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>建立自訂成員公式 (商業智慧精靈)
   使用**建立自訂成員公式**頁面，即可指定維度中的屬性和自訂成員公式資料行-資料行包含定義的成員值的多維度運算式 (MDX) 陳述式產生關聯該屬性。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **Attribute**  
  選取要與自訂成員公式相關聯的屬性。  
   

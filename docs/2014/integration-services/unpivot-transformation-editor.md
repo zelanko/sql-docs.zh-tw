@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a0222627860b70059163bff1dd989e230c1cb66
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054843"
 ---
 # <a name="unpivot-transformation-editor"></a>取消樞紐轉換編輯器
@@ -29,7 +29,7 @@ ms.locfileid: "66054843"
   
  若要深入了解取消樞紐轉換，請參閱＜ [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可用的輸入資料行**  
  使用此核取方塊，指定要樞紐轉換為資料列的資料行。  
   

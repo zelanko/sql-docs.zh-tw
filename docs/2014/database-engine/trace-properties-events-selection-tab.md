@@ -15,17 +15,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64896beeb2e815f22662cd7d16aaf263135f8122
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089583"
 ---
 # <a name="trace-properties-events-selection-tab"></a>追蹤屬性 (事件選取範圍索引標籤)
   使用 **[追蹤屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤，來檢視或指定追蹤的事件和資料行。  
   
-## <a name="options"></a>選項。  
- [事件] 資料行  
+## <a name="options"></a>選項  
+ [事件]  資料行  
  選取或清除事件資料行中的核取方塊，來指定追蹤的事件。 依事件類別目錄所組織的**事件** 。 範本中所指定的事件類別會自動選取。 如需詳細資訊，請參閱 [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
  資料行  
@@ -40,7 +40,7 @@ ms.locfileid: "66089583"
  顯示所有可用的資料行。 依預設，僅會顯示選取的資料行。 取消選取此方塊，即可隱藏 **[事件選取範圍]** 方格中所有未選取的資料行。  
   
  **資料行篩選**  
- 啟動 [編輯篩選] 對話方塊。 您可以使用此對話來編輯資料行篩選。  
+ 啟動 [編輯篩選]  對話方塊。 您可以使用此對話來編輯資料行篩選。  
   
  **組織資料行**  
  變更追蹤中資料行的順序，並且依據一或多個資料行對結果進行分組。  

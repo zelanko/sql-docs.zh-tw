@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 354b3fa047fb1fd0effc4f92f18c011d85fcb1e2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063425"
 ---
 # <a name="transact-sql-debugger-information"></a>Transact-SQL 偵錯工具資訊
@@ -40,7 +40,7 @@ ms.locfileid: "66063425"
 -   在 [偵錯] 工具列上，按一下 [中斷點]，然後選取您想要的視窗。  
   
 ## <a name="transact-sql-expressions"></a>Transact-SQL 運算式  
- 運算式是評估成單一純量值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句，例如變數或參數。 左側的偵錯工具視窗可以顯示目前指派給最多五個索引標籤或視窗中運算式的資料值：**區域變數、 監看式 1**，**監看式 2**，**監看式 3**，和**監看式 4**。  
+ 運算式是評估成單一純量值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句，例如變數或參數。 左側偵錯工具視窗最多可以在五個索引標籤或視窗中顯示目前指派給運算式的資料值：[區域變數]、[監看式 1]、[監看式 2]、[監看式 3] 和 [監看式 4]。  
   
  [區域變數] 視窗會顯示有關 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具目前範圍中之區域變數的資訊。 [區域變數] 視窗中所列的這組運算式會隨著偵錯工具逐步執行不同的程式碼部分而變更。  
   

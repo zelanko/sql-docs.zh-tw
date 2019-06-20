@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd97b67974f248d002255c1977feebe4551e691f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013674"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>使用 targetNamespace 屬性來指定目標命名空間 (SQLXML 4.0)
@@ -117,7 +117,7 @@ ms.locfileid: "66013674"
     </ROOT>  
     ```  
   
-     在範本中的 XPath 查詢會傳回 **\<客戶 >** CustomerID 為 1 的客戶的項目。 請注意，XPath 查詢會針對此查詢中的元素 (而不是屬性) 來指定命名空間前置詞  (如同結構描述中所指定，本機屬性並未限定)。  
+     在範本中的 XPath 查詢會傳回 **\<客戶 >** CustomerID 為 1 的客戶的項目。 請注意，XPath 查詢會針對此查詢中的元素 (而不是屬性) 來指定命名空間前置詞 (如同結構描述中所指定，本機屬性並未限定)。  
   
      針對對應結構描述 (targetNamespace.xml) 所指定的目錄路徑相對於儲存範本的目錄。 您也可以指定絕對路徑，例如：  
   
