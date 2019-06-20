@@ -15,21 +15,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 090b4d990a516b412ae5f7cc4e4d6e766e8d02e5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058492"
 ---
 # <a name="ftp-connection-manager-editor"></a>FTP 連接管理員編輯器
-  使用 [FTP 連線管理員編輯器] 對話方塊來指定連接到 FTP 伺服器的屬性。  
+  使用 [FTP 連線管理員編輯器]  對話方塊來指定連接到 FTP 伺服器的屬性。  
   
 > [!IMPORTANT]  
 >  FTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
   
  若要深入了解 FTP 連線管理員，請參閱 [FTP 連線管理員](connection-manager/ftp-connection-manager.md)。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **伺服器名稱**  
  提供 FTP 伺服器的名稱。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66058492"
  提供以 KB 為單位的傳輸資料區塊大小。  
   
  **測試連接**  
- 設定 FTP 連線管理員之後，請按一下 [測試連接] 以確認連接是可行的。  
+ 設定 FTP 連線管理員之後，請按一下 [測試連接]  以確認連接是可行的。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)  

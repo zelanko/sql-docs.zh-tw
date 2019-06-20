@@ -25,16 +25,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4217c455433f2fec4ebbe64b77346c54a6d47827
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085064"
 ---
 # <a name="data-mining-concepts"></a>資料採礦概念
   資料採礦是從大型資料集探索可付諸行動之資訊的過程。 資料採礦使用數學分析衍生存在於資料中的模式和趨勢。 傳統資料瀏覽一般無法探索這些模式，因為這些關聯性太複雜或因為沒有太多資料。  
   
- 這些模式和趨勢可收集在一起，並定義為 *「資料採礦模型」*(Data mining model)。 採礦模型可套用至特定案例，例如：  
+ 這些模式和趨勢可收集在一起，並定義為 *「資料採礦模型」* (Data mining model)。 採礦模型可套用至特定案例，例如：  
   
 -   **預測**:估計銷售、 預測伺服器負載或伺服器停機時間  
   
@@ -132,7 +132,7 @@ ms.locfileid: "66085064"
   
  您可以建立採礦結構以定義要使用的資料行。 採礦結構會連結至資料的來源，但是在處理資料前，不會真的包含任何資料。 當您處理採礦結構時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會產生可用於分析的彙總與其他統計資訊。 此資訊可根據結構，透過任何採礦模型使用。 如需採礦結構如何與採礦模型產生關聯的詳細資訊，請參閱[邏輯架構 &#40;Analysis Services - 資料採礦&#41;](logical-architecture-analysis-services-data-mining.md)。  
   
- 處理結構和模型之前，資料採礦模型也只是一個容器，可指定用於輸入的資料行、您要預測的屬性，以及告知演算法如何處理資料的參數。 處理模型通常稱為 *「定型」*(Training)。 定型指的是將特定數學演算法套用到結構中的資料以擷取模式的程序。 您在定型程序中找到的模式取決於選取的定型資料、選擇的演算法，以及設定演算法的方式。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包含許多不同的演算法，每個演算法都適合不同類型的工作，而且每個演算法都會建立不同類型的模型。 如需 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中所提供的演算法清單，請參閱[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)。  
+ 處理結構和模型之前，資料採礦模型也只是一個容器，可指定用於輸入的資料行、您要預測的屬性，以及告知演算法如何處理資料的參數。 處理模型通常稱為 *「定型」* (Training)。 定型指的是將特定數學演算法套用到結構中的資料以擷取模式的程序。 您在定型程序中找到的模式取決於選取的定型資料、選擇的演算法，以及設定演算法的方式。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包含許多不同的演算法，每個演算法都適合不同類型的工作，而且每個演算法都會建立不同類型的模型。 如需 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中所提供的演算法清單，請參閱[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)。  
   
  您也可以使用參數調整每個演算法，而且您可以將篩選套用到定型資料，只使用資料的子集以建立不同的結果。 將資料傳遞到模型之後，採礦模型物件就包含可以進行查詢或用於預測的摘要和模型。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "66085064"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的工具可協助您將資料分割為訓練資料集與測試資料集，讓您可以針對相同的資料，正確評估所有模型的效能。 您會使用訓練資料集來建立模型，並建立預測查詢，使用測試資料集來測試模型的精確度。 在 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]中，這個資料分割可以在建立採礦結構時自動完成。 如需詳細資訊，請參閱 [測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)。  
   
- 您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用資料採礦設計師的檢視器，來瀏覽演算法所探索的趨勢和模式。 如需詳細資訊，請參閱 [資料採礦模型檢視器](data-mining-model-viewers.md)。 您也可以使用設計師中的工具 (例如增益圖和分類矩陣)，來測試模型建立預測的效能。 若要確認模型是否專屬於您的資料，或者模型是否可用於針對一般母體進行推斷，您可以使用稱為 *「交叉驗證」*(Cross-Validation) 的統計技巧，自動建立資料的子集，並對照每個子集測試模型。 如需詳細資訊，請參閱 [測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)。  
+ 您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用資料採礦設計師的檢視器，來瀏覽演算法所探索的趨勢和模式。 如需詳細資訊，請參閱 [資料採礦模型檢視器](data-mining-model-viewers.md)。 您也可以使用設計師中的工具 (例如增益圖和分類矩陣)，來測試模型建立預測的效能。 若要確認模型是否專屬於您的資料，或者模型是否可用於針對一般母體進行推斷，您可以使用稱為 *「交叉驗證」* (Cross-Validation) 的統計技巧，自動建立資料的子集，並對照每個子集測試模型。 如需詳細資訊，請參閱 [測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)。  
   
  如果您在 [建立模型](#BuildingModels) 步驟中所建立的模型沒有一個有好的執行效能，您可能必須要回到程序的上一個步驟，並重新定義問題或重新調查原始資料集內的資料。  
   

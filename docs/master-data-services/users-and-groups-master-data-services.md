@@ -17,10 +17,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bba9009365a4353a6fc5610fe97b6c859ea8910f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484951"
 ---
 # <a name="users-and-groups-master-data-services"></a>使用者和群組 (Master Data Services)
@@ -36,7 +36,7 @@ ms.locfileid: "65484951"
     > [!NOTE]  
     >  如果使用者屬於可存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的群組，則在第一次存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 或 MDS [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 時，使用者的名稱會自動新增至使用者清單。  
   
- 若要在 UI 的 [總管] 功能區域內執行動作，群組或使用者必須獲得指派 [總管] 功能區域存取權以及模型物件權限。  
+ 若要在 UI 的 [總管]  功能區域內執行動作，群組或使用者必須獲得指派 [總管]  功能區域存取權以及模型物件權限。  
   
  如果使用者或群組需要存取其他功能區域，使用者或群組必須獲得指派取得特定功能區域的存取權。  
   

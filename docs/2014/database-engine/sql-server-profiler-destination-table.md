@@ -15,16 +15,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 802d39742b932b3721941e3d3c314b209b4e823c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088932"
 ---
 # <a name="sql-server-profiler---destination-table"></a>SQL Server Profiler - 目的地資料表
   使用 **[目的地資料表]** 對話方塊，來指定您要儲存追蹤的資料表。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **SQL Server**  
  指定目前連接之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體。 此欄位會自動擴展且無法更新。 若要變更伺服器，請按一下 **[取消]** ，並連接到您要儲存追蹤資料表之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體。  
   

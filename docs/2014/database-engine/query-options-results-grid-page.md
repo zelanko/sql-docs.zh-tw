@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 7c50957f59ef4e4743ca1667d6eb7a97869bec18
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089010"
 ---
 # <a name="query-options-results-grid-page"></a>查詢選項結果 (方格頁面)
@@ -48,7 +48,7 @@ ms.locfileid: "66089010"
   
  **XML 資料**：  
   
- 選取 [1 MB]、[2 MB] 或 [5 MB]。 選取 [無限制] 以擷取所有字元。  
+ 選取 [1 MB]  、[2 MB]  或 [5 MB]  。 選取 [無限制]  以擷取所有字元。  
   
  **重設為預設值**  
  將此頁面上的所有值重設為原始預設值。  

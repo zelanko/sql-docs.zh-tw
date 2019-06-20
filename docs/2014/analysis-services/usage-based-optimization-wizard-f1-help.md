@@ -15,18 +15,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5e94818245ba1e87d90f87539ae07e9531e5450
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065564"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>基於使用方式的最佳化精靈 F1 說明
   基於使用方式的最佳化精靈，在輸出方面類似於彙總設計精靈，並可用於設計資料分割的彙總。 然而，基於使用方式的最佳化精靈會依據查詢的特定使用模式來設計彙總，而這些使用模式是記錄於 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的查詢記錄檔中。 彙總允許 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 直接從 Cube 儲存區擷取預先計算的總計，而不必針對每個查詢從基礎資料來源重新計算資料，藉此改善效能。  
   
- 若要從 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 開啟 [基於使用方式的最佳化精靈]，請開啟 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的 Cube 設計師，然後按一下 [彙總] 索引標籤。按一下工具列上的 **[基於使用方式的最佳化]** 按鈕。  
+ 若要從 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 開啟 [基於使用方式的最佳化精靈]，請開啟 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的 Cube 設計師，然後按一下 [彙總]  索引標籤。按一下工具列上的 **[基於使用方式的最佳化]** 按鈕。  
   
- 若要從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 開啟 [基於使用方式的最佳化精靈]，請連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫，然後開啟 [Cubes] 資料夾。 選取一個 Cube，接著開啟 **[Measure Groups]** 資料夾，並展開您要修改的量值群組。 以滑鼠右鍵按一下 [資料分割] 資料夾，然後選取 [基於使用方式的最佳化]。  
+ 若要從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 開啟 [基於使用方式的最佳化精靈]，請連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫，然後開啟 [Cubes]  資料夾。 選取一個 Cube，接著開啟 **[Measure Groups]** 資料夾，並展開您要修改的量值群組。 以滑鼠右鍵按一下 [資料分割]  資料夾，然後選取 [基於使用方式的最佳化]  。  
   
  若要設計這些彙總，您可以使用彙總設計精靈。 這個精靈會引導您執行下列步驟：  
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7464c7d780a420b0f95b59ebde02494bd40661e6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084214"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>建立採礦模型的複本
@@ -39,7 +39,7 @@ ms.locfileid: "66084214"
   
      -或-  
   
-     選取此模型。 在 [採礦模型] 功能表上，選取 [新增採礦模型]。  
+     選取此模型。 在 [採礦模型]  功能表上，選取 [新增採礦模型]  。  
   
 4.  輸入新採礦模型的名稱，然後選取演算法。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

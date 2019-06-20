@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9228eb879ed1417b31c95d53783d32acf53bcdb4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62509803"
 ---
 # <a name="powershell-reference-for-power-pivot-for-sharepoint"></a>Power Pivot for SharePoint 的 PowerShell 參考
@@ -26,7 +26,7 @@ ms.locfileid: "62509803"
 ## <a name="cmdlet-list"></a>指令程式清單  
  從 PowerShell 提示字元查看 Cmdlet 清單︰  
   
-1.  使用 [以系統管理員身分執行] 選項，開啟 SharePoint 管理命令介面。  
+1.  使用 [以系統管理員身分執行]  選項，開啟 SharePoint 管理命令介面。  
   
 2.  輸入下列命令： `Get-help *powerpivot*`  
   

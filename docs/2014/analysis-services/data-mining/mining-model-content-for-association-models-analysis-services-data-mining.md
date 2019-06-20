@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a1e525d7b42d058343e41ea154f0687fb969839
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083692"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>關聯模型的採礦模型內容 (Analysis Services - 資料採礦)
@@ -31,9 +31,9 @@ ms.locfileid: "66083692"
   
  ![關聯模型的模型內容的結構](../media/modelcontentstructure-assoc.gif "的關聯模型的模型內容結構")  
   
- 每個項目集都是包含在其本身的節點中 (NODE_TYPE = 7)。 「節點」包含項目集的定義、包含此項目集的案例數以及其他資訊。  
+ 每個項目集都是包含在其本身的節點中 (NODE_TYPE = 7)。 「節點」  包含項目集的定義、包含此項目集的案例數以及其他資訊。  
   
- 每個規則也會包含在其本身的節點中 (NODE_TYPE = 8)。 「規則」描述項目關聯方式的一般模式。 規則與 IF - THEN 陳述式類似。 規則的左側顯示現有的條件或條件集； 規則的右側則顯示資料集中通常與左側的條件相關聯的項目。  
+ 每個規則也會包含在其本身的節點中 (NODE_TYPE = 8)。 「規則」  描述項目關聯方式的一般模式。 規則與 IF - THEN 陳述式類似。 規則的左側顯示現有的條件或條件集； 規則的右側則顯示資料集中通常與左側的條件相關聯的項目。  
   
  **注意** 如果想要擷取規則或項目集，您可以使用查詢僅傳回所要的節點類型。 如需詳細資訊，請參閱 [關聯模型查詢範例](association-model-query-examples.md)。  
   

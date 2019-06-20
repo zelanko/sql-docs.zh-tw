@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 91dbc92eca754b99a154b062c4f40e5663a4cd9a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078395"
 ---
 # <a name="defining-calculated-members"></a>定義導出成員
@@ -32,7 +32,7 @@ ms.locfileid: "66078395"
   
      下圖顯示 Cube 設計師的 [計算] 索引標籤。  
   
-     ![計算索引標籤，Cube 設計師](../../2014/tutorials/media/l6-calculatedmembers-1.gif "計算索引標籤，Cube 設計師 的")  
+     ![計算索引標籤，Cube 設計師](../../2014/tutorials/media/l6-calculatedmembers-1.gif "計算索引標籤，Cube 設計師] 的")  
   
 2.  在 [計算] 索引標籤的工具列上，按一下 [新增導出成員]。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66078395"
   
      ![計算運算式窗格表單](../../2014/tutorials/media/l6-calculatedmembers-02.gif "計算運算式窗格表單")  
   
-3.  在 **名稱**方塊中，變更導出量值名稱`[Total Sales Amount]`。  
+3.  在 [**名稱**方塊中，變更導出量值名稱`[Total Sales Amount]`。  
   
      如果導出成員的名稱包含空格，則必須以方括號括住導出成員的名稱。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66078395"
   
 5.  從 [計算工具] 窗格的 [中繼資料] 索引標籤，將 [網際網路銷售 - 銷售量] 拖曳到 [計算運算式] 窗格中的 [運算式] 方塊。  
   
-6.  在 **運算式**方塊中，輸入一個加號 (`+`) 之後 **[Measures]。 [網際網路銷售-銷售量]**。  
+6.  在 [**運算式**方塊中，輸入一個加號 (`+`) 之後 **[Measures]。 [網際網路銷售-銷售量]**。  
   
 7.  在 [計算工具] 窗格的 [中繼資料] 索引標籤中，展開 [轉售商銷售]，再將 [轉售商銷售 - 銷售量] 拖曳到 [計算運算式] 窗格中 [運算式] 方塊的加號 (+) 後面。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66078395"
   
      下圖顯示 [計算運算式] 窗格，其中含有您在前面步驟所指定的設定。  
   
-     ![Populated 計算運算式 窗格](../../2014/tutorials/media/l6-calculatedmembers-03.gif "填入計算運算式 窗格")  
+     ![Populated 計算運算式] 窗格](../../2014/tutorials/media/l6-calculatedmembers-03.gif "填入計算運算式] 窗格")  
   
 10. 在 [計算] 索引標籤的工具列上，按一下 [指令碼檢視]，然後再檢閱 [計算運算式] 窗格中的計算指令碼。  
   
@@ -101,9 +101,9 @@ ms.locfileid: "66078395"
   
 ## <a name="defining-gross-profit-margin-calculations"></a>定義毛利率計算  
   
-1.  確認`[Total Product Cost]`中選取**指令碼組合管理**窗格中，然後再按一下**新增導出成員**工具列上的**計算** 索引標籤。  
+1.  確認`[Total Product Cost]`中選取**指令碼組合管理**窗格中，然後再按一下**新增導出成員**工具列上的**計算**] 索引標籤。  
   
-2.  在 **名稱**方塊中，變更到這個新導出量值名稱`[Internet GPM]`。  
+2.  在 [**名稱**方塊中，變更到這個新導出量值名稱`[Internet GPM]`。  
   
 3.  在 [運算式] 方塊中，建立下列 MDX 運算式：  
   
@@ -119,7 +119,7 @@ ms.locfileid: "66078395"
   
 6.  在 [計算] 索引標籤的工具列上，按一下 [新增導出成員]。  
   
-7.  在 **名稱**方塊中，變更到這個新導出量值名稱`[Reseller GPM]`。  
+7.  在 [**名稱**方塊中，變更到這個新導出量值名稱`[Reseller GPM]`。  
   
 8.  在 [運算式] 方塊中，建立下列 MDX 運算式：  
   
@@ -135,7 +135,7 @@ ms.locfileid: "66078395"
   
 11. 在 [計算] 索引標籤的工具列上，按一下 [新增導出成員]。  
   
-12. 在 **名稱**方塊中，變更此導出量值名稱`[Total GPM]`。  
+12. 在 [**名稱**方塊中，變更此導出量值名稱`[Total GPM]`。  
   
 13. 在 [運算式] 方塊中，建立下列 MDX 運算式：  
   
@@ -167,7 +167,7 @@ ms.locfileid: "66078395"
   
 1.  在 [計算] 索引標籤的工具列上，按一下 [表單檢視]。  
   
-2.  在 **指令碼組合管理**窗格中，選取`[Total GPM]`，然後按一下 **新增導出成員**工具列上的**計算** 索引標籤。  
+2.  在 [**指令碼組合管理**窗格中，選取`[Total GPM]`，然後按一下 [**新增導出成員**工具列上的**計算**] 索引標籤。  
   
      在按一下 [新增導出成員] 之前，先按一下 [指令碼組合管理] 窗格中的最後一個導出成員，可確保這個新的導出成員加在指令碼結尾。 指令碼是以它們出現在 [指令碼組合管理] 窗格中的順序執行的。  
   

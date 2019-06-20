@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b642d7a0bdf552d8944602761aa76eec1cf35306
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085495"
 ---
 # <a name="create-a-data-mining-dimension"></a>建立資料採礦維度
@@ -26,21 +26,21 @@ ms.locfileid: "66085495"
   
 ### <a name="to-create-a-data-mining-dimension"></a>若要建立資料採礦維度  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的資料採礦設計師中，選取 [採礦結構] 索引標籤或 [採礦模型] 索引標籤。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的資料採礦設計師中，選取 [採礦結構]  索引標籤或 [採礦模型]  索引標籤。  
   
-2.  從 [採礦模型] 功能表，選取 [建立資料採礦維度]。  
+2.  從 [採礦模型]  功能表，選取 [建立資料採礦維度]  。  
   
-     [建立資料採礦維度] 對話方塊隨即開啟。  
+     [建立資料採礦維度]  對話方塊隨即開啟。  
   
-3.  在 [建立資料採礦維度] 對話方塊的 [模型名稱] 清單中，選取 OLAP 採礦模型。  
+3.  在 [建立資料採礦維度]  對話方塊的 [模型名稱]  清單中，選取 OLAP 採礦模型。  
   
-4.  在 [維度名稱] 方塊中，輸入新資料採礦維度的名稱。  
+4.  在 [維度名稱]  方塊中，輸入新資料採礦維度的名稱。  
   
-5.  如果您想要建立包含新資料採礦維度的 Cube，請選取 [建立 Cube]。 在選取 [建立 Cube] 之後，您就可以輸入 Cube 的新名稱。  
+5.  如果您想要建立包含新資料採礦維度的 Cube，請選取 [建立 Cube]  。 在選取 [建立 Cube]  之後，您就可以輸入 Cube 的新名稱。  
   
-6.  按一下 [確定] 。  
+6.  按一下 [確定]  。  
   
-     這時會建立資料採礦維度，並加入方案總管的 [維度] 資料夾。 如果您選取 [建立 Cube]，則也會建立新的 Cube，並將其加入 [Cubes] 資料夾。  
+     這時會建立資料採礦維度，並加入方案總管的 [維度]  資料夾。 如果您選取 [建立 Cube]  ，則也會建立新的 Cube，並將其加入 [Cubes]  資料夾。  
   
 ## <a name="see-also"></a>另請參閱  
  [採礦結構工作和操作說明](mining-structure-tasks-and-how-tos.md)  

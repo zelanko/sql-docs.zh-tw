@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f85ec2a21b478771a9ace733c22ff93a521c8430
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068709"
 ---
 # <a name="set-dimension-intelligence-options-business-intelligence-wizard"></a>設定維度智慧選項 (商業智慧精靈)
   使用 **[設定維度智慧選項]** 頁面，可選取 [商業智慧精靈] 會套用維度智慧的維度。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援數種標準商務類型的維度和屬性，例如產品維度或帳戶維度。 用戶端應用程式可以使用這些商務類型，為商業智慧方案提供其他的分析支援。 如需可用維度類型和屬性類型的詳細資訊，請參閱 [維度類型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md) 和 [屬性和屬性階層](multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Dimension**  
  選取精靈會套用維度智慧的維度。  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f76a48481066ff30bbd5a825d477d0e6309abaca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204968"
 ---
 # <a name="stop-a-query-visual-database-tools"></a>停止查詢 (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "63204968"
   
 ### <a name="to-stop-a-query"></a>若要停止查詢  
   
--   在[結果窗格](visual-database-tools.md)的任何位置上按一下滑鼠右鍵，在快速鍵功能表指向 [窗格]，再按 [清除結果]。  
+-   在[結果窗格](visual-database-tools.md)的任何位置上按一下滑鼠右鍵，在快速鍵功能表指向 [窗格]  ，再按 [清除結果]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [清除查詢結果&#40;Visual Database Tools&#41;](clear-query-results-visual-database-tools.md)   

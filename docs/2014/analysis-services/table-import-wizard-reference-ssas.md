@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef0cb7dfe9b3fbbca1cda3833506e56cc6bb9681
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067913"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>資料表匯入精靈的參考 (SSAS)
-  本節提供 **[資料表匯入精靈]** 的說明。 此精靈可讓您從各種不同的資料來源匯入資料。 若要從模型設計師存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
+  本節提供 **[資料表匯入精靈]** 的說明。 此精靈可讓您從各種不同的資料來源匯入資料。 若要從模型設計師存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]** 。  
   
 ## <a name="pages"></a>頁面  
   

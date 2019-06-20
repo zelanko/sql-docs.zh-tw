@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63164050"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>探索時序群集模型 (中繼資料採礦教學課程)
@@ -159,7 +159,7 @@ ms.locfileid: "63164050"
   
      這個轉換的機率會顯示成百分比。  
   
-7.  在 **叢集**下拉式清單中選取**母體擴展 （全部）**。  
+7.  在 **叢集**下拉式清單中選取**母體擴展 （全部）** 。  
   
      屬性的清單會更新，以顯示用來建立模型之所有訂單的特性。 在此採礦模型中，是最重要的區分群集的特性`Region`，其值為**North America**。  
   

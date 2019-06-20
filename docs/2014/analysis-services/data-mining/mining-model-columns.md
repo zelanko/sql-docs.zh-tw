@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f99a2dc218543faa4d862fa7520c1618ec307ba7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083710"
 ---
 # <a name="mining-model-columns"></a>採礦模型資料行
@@ -32,7 +32,7 @@ ms.locfileid: "66083710"
   
 -   **使用方式** 是定義模型如何使用資料行的屬性。 資料行可以做為輸入資料行、索引鍵資料行或可預測資料行使用。  
   
--   **模型旗標**為演算法提供額外的資訊，說明案例資料表中所定義的資料，使演算法可以建立更精確的模型。 您可以使用資料採礦延伸模組 (DMX) 語言以程式設計方式定義模型旗標，或在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [資料採礦設計師] 中定義。  
+-   **模型旗標**為演算法提供額外的資訊，說明案例資料表中所定義的資料，使演算法可以建立更精確的模型。 您可以使用資料採礦延伸模組 (DMX) 語言以程式設計方式定義模型旗標，或在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [資料採礦設計師]  中定義。  
   
  下列清單描述您在採礦模型資料行上可以定義的模型旗標。  
   

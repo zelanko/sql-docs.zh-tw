@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e148fa4f7a5340217a2efe2374312568eee43435
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099933"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>SQL Server Management Studio (SSRS) 中的 Reporting Services
@@ -28,7 +28,7 @@ ms.locfileid: "66099933"
   
  報表作者可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 執行下列作業：  
   
--   將對應報表查詢結果集的空間資料視覺化。 執行查詢後，請使用 [結果集] 窗格中的 [空間結果] 索引標籤。 如需詳細資訊，請參閱 [檢視物件總管中的空間資料](../../relational-databases/scripting/view-spatial-data-in-object-explorer.md)。  
+-   將對應報表查詢結果集的空間資料視覺化。 執行查詢後，請使用 [結果集] 窗格中的 [空間結果]  索引標籤。 如需詳細資訊，請參閱 [檢視物件總管中的空間資料](../../relational-databases/scripting/view-spatial-data-in-object-explorer.md)。  
   
  本節包含使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]執行各種報表工作的逐步指示。 您也可以使用報表管理員來執行建立和管理共用排程的作業。  
   

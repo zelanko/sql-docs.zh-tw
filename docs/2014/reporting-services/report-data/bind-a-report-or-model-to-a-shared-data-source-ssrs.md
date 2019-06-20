@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6d973d4628e9c80b47c4fea0ef3476dbd05131f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107445"
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>將報表或模型繫結至共用資料來源 (SSRS)
@@ -32,33 +32,33 @@ ms.locfileid: "66107445"
   
      [屬性] 索引標籤隨即開啟。  
   
-2.  按一下 **[資料來源]**。  
+2.  按一下 **[資料來源]** 。  
   
-3.  按一下 **[瀏覽]**，然後導覽到報表或模型要繫結的資料來源。  
+3.  按一下 **[瀏覽]** ，然後導覽到報表或模型要繫結的資料來源。  
   
-4.  選取資料來源，然後按一下 **[確定]**。  
+4.  選取資料來源，然後按一下 **[確定]** 。  
   
-5.  按一下 **[套用]**。  
+5.  按一下 **[套用]** 。  
   
      現在報表或模型已繫結至所選取的資料來源。  
   
 ### <a name="to-bind-a-report-or-model-to-a-shared-data-source-on-a-report-server-running-in-sharepoint-integrated-mode"></a>將報表或模型繫結至以 SharePoint 整合模式執行之報表伺服器上的共用資料來源  
   
-1.  如果文件庫尚未開啟，請在 [快速啟動] 列上按一下文件庫名稱。 如果找不到您的文件庫名稱，請先按一下 **[檢視所有網站內容]**，然後再按一下文件庫名稱。  
+1.  如果文件庫尚未開啟，請在 [快速啟動] 列上按一下文件庫名稱。 如果找不到您的文件庫名稱，請先按一下 **[檢視所有網站內容]** ，然後再按一下文件庫名稱。  
   
 2.  指向報表或模型，然後按一下向下箭頭。  
   
-3.  按一下 **[管理資料來源]**。  
+3.  按一下 **[管理資料來源]** 。  
   
-4.  按一下 **[dataSource1]**。  
+4.  按一下 **[dataSource1]** 。  
   
 5.  在 **[連接類型]** 區域中，確認已選取 **[共用資料來源]** 。  
   
-6.  在 [資料來源連結] 區域中，按一下省略符號 (...) 按鈕。  
+6.  在 [資料來源連結]  區域中，按一下省略符號 (...) 按鈕。  
   
 7.  找到要使用的資料來源。  
   
-8.  選取資料來源，然後按一下 **[確定]**。  
+8.  選取資料來源，然後按一下 **[確定]** 。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

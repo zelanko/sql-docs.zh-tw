@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070322"
 ---
 # <a name="lesson-3-rename-columns"></a>第 3 課：重新命名資料行
@@ -32,7 +32,7 @@ ms.locfileid: "66070322"
   
 #### <a name="to-rename-columns"></a>若要重新命名資料行  
   
-1.  在模型設計師中，按一下 [Customer] 資料表 (索引標籤)。  
+1.  在模型設計師中，按一下 [Customer]  資料表 (索引標籤)。  
   
      當您按一下某個索引標籤時，該資料表會在模型設計師視窗中變成使用中。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66070322"
     > [!TIP]  
     >  您也可以重新命名的資料行**資料行名稱**屬性中的資料行**屬性** 視窗中，或在圖表檢視中。  
   
-3.  重新命名 [Customer] 資料表中的其餘資料行以及其餘資料表中的資料行，使用易記名稱取帶來原名稱：  
+3.  重新命名 [Customer]  資料表中的其餘資料行以及其餘資料表中的資料行，使用易記名稱取帶來原名稱：  
   
      **Customer 資料表**  
   

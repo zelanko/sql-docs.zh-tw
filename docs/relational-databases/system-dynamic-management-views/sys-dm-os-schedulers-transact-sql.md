@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 86b2ed6f19f17147eb5622f120898e6f579cb77a
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65626766"
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
@@ -62,10 +62,10 @@ ms.locfileid: "65626766"
 |memory_object_address|**varbinary(8)**|排程器記憶體物件的記憶體位址。 不是 NULLABLE。|  
 |task_memory_object_address|**varbinary(8)**|工作記憶體物件的記憶體位址。 不可為 Null。 如需詳細資訊，請參閱 < [sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 公開 SQLOS 所使用的排程器配量。|  
-| total_cpu_usage_ms |**bigint**|**適用於**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更新版本 <br><br> 非先佔式工作者所報告，這個排程器所耗用的 CPU 總計。 不可為 Null。|
+| total_cpu_usage_ms |**bigint**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本 <br><br> 非先佔式工作者所報告，這個排程器所耗用的 CPU 總計。 不可為 Null。|
 |total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 表示正在進行節流根據[服務等級目標](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective)，一律為 0 表示非 Azure 版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可為 Null。|
-|total_scheduler_delay_ms|**bigint**|**適用於**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更新版本 <br><br> 切換移出一個背景工作和切換移入另一個之間的時間。 可能被因延遲排程的下一個非先佔式背景工作角色，或因為排程來自其他處理序執行緒的作業系統的先佔式背景工作角色。 不可為 Null。|
-|ideal_workers_limit|**int**|**適用於**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]和更新版本 <br><br> 排程器在理想情況下應該是多少背景工作角色。 如果目前的背景工作角色之後在變成閒置，超過限制，因為不平衡的工作負載，會刪除它們。 不可為 Null。|
+|total_scheduler_delay_ms|**bigint**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本 <br><br> 切換移出一個背景工作和切換移入另一個之間的時間。 可能被因延遲排程的下一個非先佔式背景工作角色，或因為排程來自其他處理序執行緒的作業系統的先佔式背景工作角色。 不可為 Null。|
+|ideal_workers_limit|**int**|**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和更新版本 <br><br> 排程器在理想情況下應該是多少背景工作角色。 如果目前的背景工作角色之後在變成閒置，超過限制，因為不平衡的工作負載，會刪除它們。 不可為 Null。|
 |pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   
 ## <a name="permissions"></a>Permissions

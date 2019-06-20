@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6cd3569425a862efd662c894c6839eb6df0f767e
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65536514"
 ---
 # <a name="sqlmoreresults-function"></a>SQLMoreResults 函數
@@ -83,7 +83,7 @@ SQLRETURN SQLMoreResults(
   
  呼叫**SQLCloseCursor**，或**SQLFreeStmt**具有*選項*的 SQL_CLOSE，捨棄所有結果集和可用的執行結果的資料列計數批次。 陳述式控制代碼所傳回的已配置或已備妥的狀態。 呼叫**SQLCancel**取消非同步執行的函式，當批次已經執行陳述式控制代碼中執行，資料指標位置，或非同步狀態中的所有結果集產生且資料列計數如果成功取消呼叫被丟棄批次產生。 然後，陳述式傳回的已備妥或已配置的狀態。  
   
- 如果批次陳述式或程序中混合使用其他 SQL 陳述式**選取 **，**更新**，**插入**，以及**刪除**陳述式，這些陳述式不會影響**SQLMoreResults**。  
+ 如果批次陳述式或程序中混合使用其他 SQL 陳述式**選取** ，**更新**，**插入**，以及**刪除**陳述式，這些陳述式不會影響**SQLMoreResults**。  
   
  如需詳細資訊，請參閱 <<c0> [ 多個結果](../../../odbc/reference/develop-app/multiple-results.md)。  
   
@@ -96,7 +96,7 @@ SQLRETURN SQLMoreResults(
 ## <a name="availability-of-row-counts"></a>資料列計數的可用性  
  當批次包含多個連續的資料列計數產生陳述式時，就可以在這些資料列計數會彙總，到只在一個資料列計數。 比方說，如果批次中有五個 insert 陳述式，則某些資料來源是能夠傳回五個個別的資料列計數。 特定資料來源傳回只有一個資料列計數，表示五個個別的資料列計數的總和。  
   
- 當批次包含結果集產生和資料列計數產生陳述式的組合時，資料列計數可能會或可能無法完全。 相對於資料列計數的可用性驅動程式的行為會列舉在 SQL_BATCH_ROW_COUNT 資訊類型，可透過呼叫**SQLGetInfo**。 例如，假設 批次包含**選取 **，後面兩個**插入**s，而另一個**選取**。 下列情況下便可以：  
+ 當批次包含結果集產生和資料列計數產生陳述式的組合時，資料列計數可能會或可能無法完全。 相對於資料列計數的可用性驅動程式的行為會列舉在 SQL_BATCH_ROW_COUNT 資訊類型，可透過呼叫**SQLGetInfo**。 例如，假設 批次包含**選取** ，後面兩個**插入**s，而另一個**選取**。 下列情況下便可以：  
   
 -   資料列計數對應到兩個**插入**陳述式完全不提供。 第一次呼叫**SQLMoreResults**放置您的第二個結果集上**選取**陳述式。  
   

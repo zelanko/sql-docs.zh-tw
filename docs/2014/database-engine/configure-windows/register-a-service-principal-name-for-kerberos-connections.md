@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62781993"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>註冊 Kerberos 連接的服務主體名稱
@@ -71,7 +71,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **具名執行個體**  
   
--   *MSSQLSvc/FQDN*:[_port_**|**_instancename_]，其中：  
+-   *MSSQLSvc/FQDN*:[_port_ **|** _instancename_]，其中：  
   
     -   *MSSQLSvc* 是所註冊的服務。  
   
@@ -83,7 +83,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **預設執行個體**  
   
--   *MSSQLSvc/FQDN*:_port_**|**_MSSQLSvc/FQDN_，其中：  
+-   *MSSQLSvc/FQDN*:_port_ **|** _MSSQLSvc/FQDN_，其中：  
   
     -   *MSSQLSvc* 是所註冊的服務。  
   
@@ -103,9 +103,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 |MSSQLSvc/*fqdn:InstanceName*|使用 TCP 以外的通訊協定時，此為提供者針對具名執行個體所產生的預設 SPN。 *InstanceName* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的名稱。|  
   
 ##  <a name="Auto"></a> 自動 SPN 註冊  
- 當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體啟動時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試註冊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的 SPN。 當此執行個體停止時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試取消註冊 SPN。 如果是 TCP/IP 連接，SPN 會以 MSSQLSvc/\<FQDN>:\<tcpport> 格式註冊。具名執行個體和預設執行個體都會註冊為 MSSQLSvc (根據 \<tcpport> 值來區分執行個體)。  
+ 當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體啟動時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試註冊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的 SPN。 當此執行個體停止時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試取消註冊 SPN。 如果是 TCP/IP 連接，SPN 會以 MSSQLSvc/\<FQDN>  :\<tcpport>  格式註冊。具名執行個體和預設執行個體都會註冊為 MSSQLSvc  (根據 \<tcpport>  值來區分執行個體)。  
   
- 支援 Kerberos 的其他連接中格式註冊的 SPN *MSSQLSvc /\<FQDN >*:*\<執行個體名稱 >* 的具名執行個體。 用來註冊預設執行個體的格式為 MSSQLSvc/\<FQDN>。  
+ 支援 Kerberos 的其他連接中格式註冊的 SPN *MSSQLSvc /\<FQDN >* : *\<執行個體名稱 >* 的具名執行個體。 用來註冊預設執行個體的格式為 MSSQLSvc/\<FQDN>  。  
   
  如果服務帳戶缺少這些動作所需的權限，可能需要手動介入才能註冊或取消註冊 SPN。  
   

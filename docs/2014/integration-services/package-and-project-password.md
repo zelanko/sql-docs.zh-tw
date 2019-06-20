@@ -14,16 +14,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad916fddff23bcffbed37bab76b0b49d67c6c484
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056993"
 ---
 # <a name="package-and-project-password"></a>封裝與專案密碼
   使用 **[封裝密碼]** 對話方塊，即可為使用密碼加密的封裝提供封裝密碼。 如果封裝使用 **[機密資料以密碼加密]** 或 **[所有資料以密碼加密]** 保護等級，則必須提供密碼。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **密碼**  
  輸入密碼。  
   

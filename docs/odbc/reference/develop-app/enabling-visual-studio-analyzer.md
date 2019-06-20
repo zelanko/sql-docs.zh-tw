@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a640d2432e6a079174644646fed5106fbc040c2b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62943126"
 ---
 # <a name="enabling-visual-studio-analyzer"></a>啟用 Visual Studio Analyzer
@@ -34,7 +34,7 @@ ms.locfileid: "62943126"
   
 3.  按一下 **啟動 Visual Studio Analyzer 追蹤**。  
   
-4.  按一下 [確定] 。  
+4.  按一下 [確定]  。  
   
  Visual Studio Analyzer 事件產生一直**停止 Visual Studio Analyzer 追蹤**已選取。  
   

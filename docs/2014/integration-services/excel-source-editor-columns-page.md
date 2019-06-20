@@ -15,18 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dba56ee39e710adc3973a00a0d84b1823ee74f1b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059207"
 ---
 # <a name="excel-source-editor-columns-page"></a>Excel 來源編輯器 (資料行頁面)
-  使用 [Excel 來源編輯器] 對話方塊的 [資料行] 頁面，將輸出資料行對應至每個外部 (來源) 資料行。  
+  使用 [Excel 來源編輯器]  對話方塊的 [資料行]  頁面，將輸出資料行對應至每個外部 (來源) 資料行。  
   
  若要深入了解 Excel 來源，請參閱＜ [Excel Source](data-flow/excel-source.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可用的外部資料行**  
  在資料來源中檢視可用的外部資料行清單。 您無法使用此資料表來加入或刪除資料行。  
   

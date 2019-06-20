@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43eeb6984a0e7ef15b52fd349bccdf3c1bf78f15
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058943"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>匯出資料行轉換編輯器 (錯誤輸出頁面)
@@ -31,7 +31,7 @@ ms.locfileid: "66058943"
  檢視輸出的名稱。 按一下名稱即可展開檢視來包含資料行。  
   
  **資料行**  
- 檢視您在 [匯出資料行轉換編輯器] 對話方塊的 [資料行] 頁面上選取的輸出資料行。  
+ 檢視您在 [匯出資料行轉換編輯器]  對話方塊的 [資料行]  頁面上選取的輸出資料行。  
   
  **錯誤**  
  指定您要在錯誤發生時採取什麼動作：忽略失敗、重新導向資料列，或使元件失效。  

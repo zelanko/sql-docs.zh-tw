@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9480b0729e7c08117ba5633c6934eca1903a61b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108159"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>新增角色指派：編輯角色指派頁面 （報表管理員）
@@ -31,9 +31,9 @@ ms.locfileid: "66108159"
   
 2.  將滑鼠停留在該項目上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[安全性]**。 這樣就會開啟該項目的 [安全性] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[安全性]** 。 這樣就會開啟該項目的 [安全性] 屬性頁面。  
   
-4.  如果您想要加入新的角色指派，請在工具列中，按一下 **[新增角色指派]**。 如果您想要編輯角色指派，請按一下想要編輯之群組或使用者名稱旁的 **[編輯]** 。  
+4.  如果您想要加入新的角色指派，請在工具列中，按一下 **[新增角色指派]** 。 如果您想要編輯角色指派，請按一下想要編輯之群組或使用者名稱旁的 **[編輯]** 。  
   
     > [!NOTE]  
     >  如果某個項目目前是從父項目繼承安全性，請按一下工具列中的 **[編輯項目安全性]** 來變更安全性設定。  
@@ -49,7 +49,7 @@ ms.locfileid: "66108159"
  顯示報表伺服器中定義的全部角色，可用來定義項目的安全性。 在建立或變更報表或資料夾的角色指派時，請選取一或多個角色，直到結合的工作集描述使用者獲准執行的動作為止。 若要檢視每一個角色支援的工作集，請使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 您無法在報表管理員中檢視、建立、修改或刪除角色。 如需相關指示，請參閱 <<c0> [ 建立、 刪除或修改角色&#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)。</c0>  
   
  **說明**  
- 顯示有關角色的其他資訊。 針對預先定義的角色，例如 **[瀏覽器]** 或 **[內容管理員]**，描述會摘要每個角色支援的工作。  
+ 顯示有關角色的其他資訊。 針對預先定義的角色，例如 **[瀏覽器]** 或 **[內容管理員]** ，描述會摘要每個角色支援的工作。  
   
  **刪除角色指派**  
  按一下即可刪除使用者或群組的現有角色指派。 如果它是唯一留下的角色指派，就不可以刪除該角色指派 (每一個項目至少都必須具有一個角色指派)。  

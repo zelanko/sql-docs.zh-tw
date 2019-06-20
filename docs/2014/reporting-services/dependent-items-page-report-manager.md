@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59c022a0e6c57a85d83b25be3fe9dbe0c9dfeeb1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109330"
 ---
 # <a name="dependent-items-page-report-manager"></a>相依項目頁面 (報表管理員)
@@ -33,7 +33,7 @@ ms.locfileid: "66109330"
   
 4.  選取 **[相依項目]** 索引標籤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  顯示報表或模型的名稱。 按一下報表名稱將它開啟。 按一下模型的名稱則可開啟它的屬性頁面。  
   

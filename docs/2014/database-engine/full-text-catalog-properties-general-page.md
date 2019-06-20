@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779661"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>全文檢索目錄屬性 (一般頁面)
@@ -25,7 +25,7 @@ ms.locfileid: "62779661"
 > [!NOTE]  
 >  對於 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 資料庫而言，全文檢索目錄是參考一組全文檢索索引的邏輯概念。 全文檢索目錄是不屬於任何檔案群組的虛擬物件。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 ### <a name="properties"></a>屬性  
  **預設目錄**  
@@ -64,7 +64,7 @@ ms.locfileid: "62779661"
  全文檢索目錄的名稱。  
   
  **區分腔調字**  
- 檢視或修改目錄是否會區分變音符號，例如波狀符號 (**~**)、尖重音符號 (**´**) 或母音變化 (**¨**)。 有效值為：  
+ 檢視或修改目錄是否會區分變音符號，例如波狀符號 ( **~** )、尖重音符號 (**´**) 或母音變化 (**¨**)。 有效值為：  
   
 -   **否**  
   

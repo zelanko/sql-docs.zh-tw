@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d933475231913edeccbc5206afb675916a765302
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054222"
 ---
 # <a name="change-a-model-name-master-data-services"></a>變更模型名稱 (Master Data Services)
@@ -31,9 +31,9 @@ ms.locfileid: "66054222"
   
 ### <a name="to-change-a-model-name"></a>若要變更模型名稱  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[模型]**。  
+2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[模型]** 。  
   
 3.  在 **模型維護**頁面上，在方格中，按一下您想要變更名稱之模型的資料列。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66054222"
   
 5.  在 **模型名稱**方塊中，輸入模型的更新的名稱。  
   
-6.  按一下 **[儲存模型]**。  
+6.  按一下 **[儲存模型]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立模型 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)   

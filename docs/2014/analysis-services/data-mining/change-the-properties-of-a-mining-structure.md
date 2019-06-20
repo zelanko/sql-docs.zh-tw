@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7c9ca227753b8ebbd80d4de0c672fc8cab5c1b56
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085856"
 ---
 # <a name="change-the-properties-of-a-mining-structure"></a>變更採礦結構的屬性
@@ -32,7 +32,7 @@ ms.locfileid: "66085856"
   
 ### <a name="to-change-the-properties-of-a-mining-structure"></a>若要變更採礦結構的屬性  
   
-1.  在資料採礦設計師的 [採礦結構] 索引標籤上，以滑鼠右鍵按一下採礦結構或採礦結構中的資料行，然後選取 [屬性]。  
+1.  在資料採礦設計師的 [採礦結構]  索引標籤上，以滑鼠右鍵按一下採礦結構或採礦結構中的資料行，然後選取 [屬性]  。  
   
      如果 **[屬性]** 視窗還沒有出現，則它會在螢幕的右邊開啟。  
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2df09cb9bf167c0af28c240ff69f8666cce01a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62988644"
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>設定及檢視 SharePoint 與診斷記錄
@@ -36,25 +36,25 @@ ms.locfileid: "62988644"
  LOGS 資料夾中包含記錄檔 (`.log`)、資料檔 (`.txt`) 與使用方式檔案 (`.usage`)。 SharePoint 追蹤記錄的檔案命名慣例為伺服器名稱後面緊接著日期和時間戳記。 SharePoint 追蹤記錄會定期以及有 IISRESET 時建立。 通常在 24 小時的週期內會有許多追蹤記錄。  
   
 ##  <a name="bkmk_modifyloglevels"></a> 為個別的事件類別目錄修改診斷記錄層次  
- 根據預設，[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 事件的 ULS 記錄是設為「中」。 這是 SQL Server 2012 的新設定。 如果您從舊版升級伺服器，記錄層次可能仍然設為 *「詳細資訊」*(SQL Server 2008 R2 的預設層次)。 如果您習慣檢閱 ULS 記錄檔中的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 伺服器使用資訊，會注意到因為此變更，[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 伺服器作業相關資訊變少了。  
+ 根據預設，[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 事件的 ULS 記錄是設為「中」  。 這是 SQL Server 2012 的新設定。 如果您從舊版升級伺服器，記錄層次可能仍然設為 *「詳細資訊」* (SQL Server 2008 R2 的預設層次)。 如果您習慣檢閱 ULS 記錄檔中的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 伺服器使用資訊，會注意到因為此變更，[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 伺服器作業相關資訊變少了。  
   
- 除了例外狀況 (類型為「高」) 以外，所有的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 訊息都會歸類為「詳細資訊」類別目錄。 如果您想要例行伺服器作業 (例如連接、要求或查詢報告) 的記錄項目，必須將記錄層次變更為「詳細資訊」。  
+ 除了例外狀況 (類型為「高」  ) 以外，所有的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 訊息都會歸類為「詳細資訊」類別目錄。 如果您想要例行伺服器作業 (例如連接、要求或查詢報告) 的記錄項目，必須將記錄層次變更為「詳細資訊」。  
   
  若要為個別的事件類別修改診斷記錄層次：  
   
-1.  在 SharePoint 管理中心，按一下 **[監視]**。  
+1.  在 SharePoint 管理中心，按一下 **[監視]** 。  
   
-2.  按一下 **[設定診斷記錄]**。  
+2.  按一下 **[設定診斷記錄]** 。  
   
-3.  捲動到 [[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務]。  
+3.  捲動到 [[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務]  。  
   
 4.  展開類別目錄，然後選取個別的類別目錄。  
   
-     [應用程式頁面要求] 會指定尋找 [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] 以載入 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 資料來源以及和伺服陣列中的其他伺服器通訊時，由服務應用程式所觸發的事件。  
+     [應用程式頁面要求]  會指定尋找 [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] 以載入 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 資料來源以及和伺服陣列中的其他伺服器通訊時，由服務應用程式所觸發的事件。  
   
-     [要求處理] 會指定針對位於伺服器陣列中伺服器上所載入的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 資料庫，由查詢要求所觸發的事件。  
+     [要求處理]  會指定針對位於伺服器陣列中伺服器上所載入的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 資料庫，由查詢要求所觸發的事件。  
   
-     [使用量] 指定與 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 使用量資料收集相關的事件。  
+     [使用量]  指定與 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 使用量資料收集相關的事件。  
   
 5.  在 [回報至事件記錄的最低緊急事件] 中，選取 **[無]** 以停用類別目錄的事件記錄，或是選取 **[錯誤]** 以限制僅針對錯誤進行記錄。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62988644"
   
 8.  選取 **[詳細資訊]** ，將所有事件記錄到追蹤記錄檔。  
   
-9. 按一下 [確定] 。  
+9. 按一下 [確定]  。  
   
 ##  <a name="bkmk_how2viewlogfiles"></a> 如何檢視 SharePoint 記錄檔  
  記錄檔是文字檔。 您可以使用任何文字編輯器來開啟它們。 您也可以使用協力廠商的記錄檢視器應用程式。  
@@ -97,9 +97,9 @@ ms.locfileid: "62988644"
   
      如果您正在下載 SharePoint ULS 記錄檢視器，請將 ULSViewer.zip 儲存至 Downloads 資料夾。  
   
-6.  在 [Downloads] 資料夾中，以滑鼠右鍵按一下 ULSViewer.zip，然後選取 **[解壓縮全部]**。  
+6.  在 [Downloads] 資料夾中，以滑鼠右鍵按一下 ULSViewer.zip，然後選取 **[解壓縮全部]** 。  
   
-7.  指定目的地資料夾，然後按一下 **[解壓縮]**。  
+7.  指定目的地資料夾，然後按一下 **[解壓縮]** 。  
   
 8.  在包含已解壓縮之程式檔的資料夾中，按兩下 **[ULSViewer]** 並執行應用程式。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "62988644"
 #### <a name="entries-for-power-pivot-services"></a>Power Pivot 服務的項目  
  下表描述很可能在 SharePoint 記錄檔中找到之 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 伺服器作業的項目。  
   
-|處理|區域|Category|層級|訊息|詳細資料|  
+|處理|區域|Category|層級|Message|詳細資料|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務|使用量|「詳細資訊」|目前沒有要求統計資料，沒有要記錄的項目。|服務報表會在預先定義的間隔查詢回應統計資料，做為使用量資料集合系統的使用量事件。 此訊息表示沒有要報告的查詢統計資料。|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務|Web 前端|「詳細資訊」|開始尋找資料來源的應用程式伺服器 =\<*路徑*>|當它收到連接要求時， [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務會識別可用的 [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] 來處理要求。 如果伺服陣列中只有一個伺服器，在所有情況下本機伺服器都會接受要求。|  

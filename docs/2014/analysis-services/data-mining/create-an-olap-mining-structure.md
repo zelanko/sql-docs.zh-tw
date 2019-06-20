@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adf29f6f73020ddc265072b3b9f3f67042200506
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085244"
 ---
 # <a name="create-an-olap-mining-structure"></a>建立 OLAP 採礦結構
@@ -37,12 +37,12 @@ ms.locfileid: "66085244"
 ##  <a name="bkmk_Reqs"></a> OLAP 採礦結構和模型的需求  
  如果您正在設計 OLAP 採礦模型，您的資料來源會已經存在於之前用來建立 Cube 的資料庫中。 您不能連接到遠端 Cube 及建立資料採礦物件；這些 Cube 物件必須存在於與您即將建立之採礦結構的資料庫相同的方案中。  
   
- 如果您沒有原始專案檔或者不想要加以改變，您可以使用 Visual Studio 中的 [從伺服器匯入 (多維度和資料採礦)] 選項，取得中繼資料和方案物件的複本。 然後您可以修改部署目標、編輯資料來源，以及在不影響現有物件的情況下處理 Cube 物件。  
+ 如果您沒有原始專案檔或者不想要加以改變，您可以使用 Visual Studio 中的 [從伺服器匯入 (多維度和資料採礦)]  選項，取得中繼資料和方案物件的複本。 然後您可以修改部署目標、編輯資料來源，以及在不影響現有物件的情況下處理 Cube 物件。  
   
  如需詳細資訊，請參閱 [使用 Analysis Services 匯入精靈匯入資料採礦專案](import-a-data-mining-project-using-the-analysis-services-import-wizard.md)。  
   
 ##  <a name="bkmk_Overview"></a> OLAP 資料採礦處理概觀  
- 在方案總管中，以滑鼠右鍵按一下 [採礦結構] 節點，然後選取 [新增採礦結構]，即可啟動 [資料採礦精靈]。 此精靈會引導您透過下列步驟來建立新結構和模型的結構：  
+ 在方案總管中，以滑鼠右鍵按一下 [採礦結構]  節點，然後選取 [新增採礦結構]  ，即可啟動 [資料採礦精靈]。 此精靈會引導您透過下列步驟來建立新結構和模型的結構：  
   
 1.  **選取定義方法**:您在這裡選取資料來源類型，並選擇**從現有的 cube**。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66085244"
   
      使用 **[選取巢狀資料表資料行]** 對話方塊，從您想要用於分析的新維度中選擇屬性和量值。 您也必須指定巢狀屬性是否會用於預測。  
   
-     在您加入可能需要的所有巢狀屬性之後，請回到 **[指定採礦模型資料行使用方式]** 頁面，並按 **[下一步]**。  
+     在您加入可能需要的所有巢狀屬性之後，請回到 **[指定採礦模型資料行使用方式]** 頁面，並按 **[下一步]** 。  
   
 8.  **指定資料行的內容和資料類型**:此時，您已經加入將用於分析，而且必須指定的所有資料*資料型別*並*內容類型*針對每個屬性。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66085244"
   
  在建立採礦結構之後，您可以修改 Cube 資料的定義和篩選準則。 如需詳細資訊，請參閱 [Filter the Source Cube for a Mining Structure](../filter-the-source-cube-for-a-mining-structure.md)。  
   
- **[採礦結構]** 索引標籤和 **[採礦模型]** 索引標籤會提供將篩選加入至現有採礦結構的選項，加入的方法是按一下 **[定義 Cube 配量]**。 **[配量 Cube]** 對話方塊會幫助您從下拉式清單中選擇值來建立有效的 MDX 篩選運算式。  
+ **[採礦結構]** 索引標籤和 **[採礦模型]** 索引標籤會提供將篩選加入至現有採礦結構的選項，加入的方法是按一下 **[定義 Cube 配量]** 。 **[配量 Cube]** 對話方塊會幫助您從下拉式清單中選擇值來建立有效的 MDX 篩選運算式。  
   
 > [!WARNING]  
 >  請注意， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中已經變更設計和瀏覽 Cube 的介面。 如需詳細資訊，請參閱 [瀏覽 Cube 中的資料和中繼資料](../multidimensional-models/browse-data-and-metadata-in-cube.md)。  

@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 541b7371cdc05ee316e9fb9de9f50affc4f14fc7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062856"
 ---
 # <a name="add-reference-dialog-box-analysis-services---multidimensional-data"></a>加入參考對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [加入參考] 對話方塊，即可將參考加入 [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework 組件或開發專案的另一個專案中。 您可以在方案總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的 [組件] 資料夾，然後從內容功能表中選取 [新增組件參考]，來顯示 [加入參考] 對話方塊。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 |詞彙|定義|  
 |----------|----------------|  

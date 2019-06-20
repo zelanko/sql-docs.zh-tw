@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6afaa65d5d0a9c368b35cc410a1753838c8a5480
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107174"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot 連接類型 (SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66107174"
  請使用報表資料來源類型： **Microsoft SQL Server Analysis Services**。  
   
 ## <a name="connection-string"></a>連接字串  
- 連接字串是在 SharePoint 中 PowerPivot 圖庫或其他程式庫，例如，發行的 PowerPivot 活頁簿的 URL http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx。  
+ 連接字串是在 SharePoint 中 PowerPivot 圖庫或其他程式庫，例如，發行的 PowerPivot 活頁簿的 URL http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx 。  
   
 ## <a name="credentials"></a>認證  
  請指定存取 PowerPivot 活頁簿和 SharePoint 網站所需的認證，例如 Windows 驗證 (整合式安全性)。 如需詳細資訊，請參閱 <<c0> [ 資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)或是[在 報表產生器中指定認證](../specify-credentials-in-report-builder.md)。  
@@ -39,13 +39,13 @@ ms.locfileid: "66107174"
 ## <a name="queries"></a>查詢  
  在您連接至 PowerPivot 資料來源之後，請使用 MDX 圖形化查詢來建立查詢，其方式是從基礎資料結構進行瀏覽及選取。 建立查詢之後，請執行查詢，於結果窗格中查看範例資料。  
   
- 查詢設計工具會分析該查詢來決定資料集的欄位。 您也可以在 [報表資料] 窗格中手動編輯資料集欄位集合。 如需詳細資訊，請參閱[加入、編輯、重新整理報表資料窗格中的欄位 &#40;報表產生器及 SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。  
+ 查詢設計工具會分析該查詢來決定資料集的欄位。 您也可以在 [報表資料]  窗格中手動編輯資料集欄位集合。 如需詳細資訊，請參閱[加入、編輯、重新整理報表資料窗格中的欄位 &#40;報表產生器及 SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。  
   
 ## <a name="filters"></a>篩選  
  在 [篩選] 窗格中，請指定要從查詢結果中篩選出或包含在查詢結果中的維度和成員。  
   
 ## <a name="parameters"></a>參數  
- 在 [篩選] 窗格中，選取篩選的 [參數] 選項，以便使用對應至篩選選取範圍的可用值來自動建立報表參數。  
+ 在 [篩選] 窗格中，選取篩選的 [參數]  選項，以便使用對應至篩選選取範圍的可用值來自動建立報表參數。  
   
 ## <a name="remarks"></a>備註  
  如果您從 PowerPivot 圖庫中的 PowerPivot 活頁簿開啟報表產生器，該報表就不會重新建立樞紐分析表、樞紐分析圖、交叉分析篩選器，以及來自 PowerPivot 活頁簿的其他配置和分析功能。 而是，空白報表會包括指向 PowerPivot 活頁簿中資料的預先設定資料來源。 根據您想要在報表中重新建立的交叉分析篩選器、篩選和資料表或圖表數目，設計以 PowerPivot 活頁簿為基礎的報表可能會相當費時耗力。 較佳的方法是分開想像報表資料的呈現方式與 PowerPivot 設計方式。  

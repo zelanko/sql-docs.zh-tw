@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 15e16fb311bf3c9acb2823772247e0fc16eabeef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63232305"
 ---
 # <a name="create-index-for-paradox"></a>Paradox 的 CREATE INDEX
@@ -30,7 +30,7 @@ CREATE INDEX 陳述式，ODBC Paradox 驅動程式的語法是：
   
  **(** *column-identifier* [**ASC**]  
   
- [**,** *column-identifier* [**ASC**]...]**)**  
+ [ **,** *column-identifier* [**ASC**]...] **)**  
   
  ODBC Paradox 驅動程式不支援**DESC** CREATE INDEX 陳述式的 ODBC SQL 文法中的關鍵字。 *資料表名稱*引數可以指定資料表的完整路徑。  
   

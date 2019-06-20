@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087906"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>叢集圖表逐步解說 (資料採礦增益集)
@@ -76,7 +76,7 @@ ms.locfileid: "66087906"
   
      不過，此選項會做做為篩選條件，在圖表的資料，因此您無法增加的更新版本的項目數。  
   
-8.  按一下 **[進階]**。  
+8.  按一下 **[進階]** 。  
   
      **叢集選項**對話方塊可讓您可讓您自訂圖表中使用之圖形的視覺外觀。 您可以變更用於圖形的色彩，以及用於叢集的圖形。  
   

@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a976d7caad790c80b15c17d65686ee1f6308f415
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65536751"
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName 函式
@@ -85,7 +85,7 @@ SQLRETURN SQLSetCursorName(
  資料指標名稱，設定明確或隱含地將會保持設定直到除與相關聯的陳述式時，使用**SQLFreeHandle**。 **SQLSetCursorName**可以呼叫來重新命名的資料指標陳述式，只要游標處於已配置或已備妥狀態。  
   
 ## <a name="code-example"></a>程式碼範例  
- 在下列範例中，應用程式會使用**SQLSetCursorName**設定陳述式的資料指標名稱。 然後，它會使用該陳述式來擷取 CUSTOMERS 資料表中的結果。 最後，它會執行定位的更新，以變更為 John Smith 的電話號碼。 請注意，應用程式使用不同的陳述式控制代碼，以便**選取 **並**更新**陳述式。  
+ 在下列範例中，應用程式會使用**SQLSetCursorName**設定陳述式的資料指標名稱。 然後，它會使用該陳述式來擷取 CUSTOMERS 資料表中的結果。 最後，它會執行定位的更新，以變更為 John Smith 的電話號碼。 請注意，應用程式使用不同的陳述式控制代碼，以便**選取** 並**更新**陳述式。  
   
  如需其他程式碼範例，請參閱[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
   

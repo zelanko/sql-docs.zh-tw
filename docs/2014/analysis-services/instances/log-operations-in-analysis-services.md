@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079755"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services 中的記錄作業
@@ -109,7 +109,7 @@ ms.locfileid: "66079755"
   
 2.  授與 Analysis Services 服務帳戶資料庫的足夠權限。 帳戶需要建立資料表、寫入資料表，並從資料表讀取的權限。  
   
-3.  在 SQL Server Management Studio 中，以滑鼠右鍵按一下 **[Analysis Services]** | **[屬性]** | **[一般]**，並將 **CreateQueryLogTable** 設為 true。  
+3.  在 SQL Server Management Studio 中，以滑鼠右鍵按一下 **[Analysis Services]**  |  **[屬性]**  |  **[一般]** ，並將 **CreateQueryLogTable** 設為 true。  
   
 4.  如果您想要以不同的速率對查詢取樣，或使用不同的資料表名稱，請選擇性地變更 **QueryLogSampling** 或 **QueryLogTableName** 。  
   

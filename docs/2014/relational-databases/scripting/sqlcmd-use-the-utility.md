@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 19c13fba697477174f671344304a9cd4befba53e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063643"
 ---
 # <a name="use-the-sqlcmd-utility"></a>使用 sqlcmd 公用程式
   `sqlcmd` 公用程式是命令列公用程式，可用來執行特定的互動式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式和指令碼，以及用於自動化 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼工作。 若要以互動方式使用 `sqlcmd`，或是要建立透過 `sqlcmd` 執行的指令碼檔案，使用者必須了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 一般而言，`sqlcmd` 公用程式的使用方式如下：  
   
--   使用者可以像是在命令提示字元中工作一般，以互動的方式輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 結果會顯示在命令提示字元視窗中。 若要開啟 [命令提示字元] 視窗，請按一下 **[開始]**、按一下 **[所有程式]**、指向 **[附屬應用程式]**，然後按一下 **[命令提示字元]**。 在命令提示字元中，輸入 `sqlcmd`，後面接著您要使用的一串選項。 如需所支援的選項的完整清單`sqlcmd`，請參閱 < [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)。  
+-   使用者可以像是在命令提示字元中工作一般，以互動的方式輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 結果會顯示在命令提示字元視窗中。 若要開啟 [命令提示字元] 視窗，請按一下 **[開始]** 、按一下 **[所有程式]** 、指向 **[附屬應用程式]** ，然後按一下 **[命令提示字元]** 。 在命令提示字元中，輸入 `sqlcmd`，後面接著您要使用的一串選項。 如需所支援的選項的完整清單`sqlcmd`，請參閱 < [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)。  
   
 -   使用者可指定要執行的單一 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，或者將公用程式指向包含要執行之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的文字檔，來提交 `sqlcmd` 工作。 輸出通常會導向文字檔，不過，也可以在命令提示字元上顯示。  
   
@@ -40,16 +40,16 @@ ms.locfileid: "66063643"
 ## <a name="typically-used-sqlcmd-options"></a>一般使用的 sqlcmd 選項  
  以下是最常使用的選項：  
   
--   [伺服器] 選項 (**-S**)，識別執行個體[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要`sqlcmd`連接。  
+-   [伺服器] 選項 ( **-S**)，識別執行個體[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要`sqlcmd`連接。  
   
--   驗證選項 (**-E**， **-U**，並 **-P**) 所指定的認證，`sqlcmd`用來連接到執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   驗證選項 ( **-E**， **-U**，並 **-P**) 所指定的認證，`sqlcmd`用來連接到執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
     > [!NOTE]  
     >  **-E** 選項是預設值，不需要予以指定。  
   
--   輸入選項 (**-Q**， **-q**，並 **-i**)，識別輸入位置`sqlcmd`。  
+-   輸入選項 ( **-Q**， **-q**，並 **-i**)，識別輸入位置`sqlcmd`。  
   
--   [輸出] 選項 (**-o**)，指定要在其中檔案`sqlcmd`存放其輸出。  
+-   [輸出] 選項 ( **-o**)，指定要在其中檔案`sqlcmd`存放其輸出。  
   
 ## <a name="connecting-to-the-sqlcmd-utility"></a>連接到 sqlcmd 公用程式  
  下列是 `sqlcmd` 公用程式的一般用途：  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69fa6500439e51705e9dfd3ee838c2f7e1b4eddb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105000"
 ---
 # <a name="set-synchronization-scope-report-builder-and-ssrs"></a>設定同步處理範圍 (報表產生器及 SSRS)
@@ -29,15 +29,15 @@ ms.locfileid: "66105000"
   
 ### <a name="to-change-the-synchronization-scope-of-an-indicator"></a>若要變更指標的同步處理範圍  
   
-1.  以滑鼠右鍵按一下您要變更的指標，然後按一下 **[指標屬性]**。  
+1.  以滑鼠右鍵按一下您要變更的指標，然後按一下 **[指標屬性]** 。  
   
 2.  按一下左窗格中的 **[值和狀態]** 。  
   
 3.  在 **[同步處理範圍]** 清單中，按一下您要套用的範圍。  
   
-     [(無)] 選項 (會從指標移除同步處理範圍) 永遠可以使用。 其他選項則取決於您報表的版面配置。  
+     [(無)]  選項 (會從指標移除同步處理範圍) 永遠可以使用。 其他選項則取決於您報表的版面配置。  
   
-     或者，按一下 [運算式]\(*fx*) 按鈕來編輯設定範圍的運算式。  
+     或者，按一下 [運算式]  \(*fx*) 按鈕來編輯設定範圍的運算式。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

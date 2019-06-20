@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47a14ad3baf1660b2b60cd6b96f2ef51f1e5d727
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060093"
 ---
 # <a name="custom-messages-for-logging"></a>自訂訊息以進行記錄
@@ -115,7 +115,7 @@ ms.locfileid: "66060093"
 |記錄項目|描述|  
 |---------------|-----------------|  
 |`ExecuteDTS80PackageTaskBegin`|指出工作已經開始執行 DTS 2000 封裝。|  
-|`ExecuteDTS80PackageTaskEnd`|指出工作已經完成。<br /><br /> 注意:DTS 2000 封裝可能會繼續在工作結束之後執行。|  
+|`ExecuteDTS80PackageTaskEnd`|指出工作已經完成。<br /><br /> 注意:DTS 2000 套件可能會在工作結束後繼續執行。|  
 |`ExecuteDTS80PackageTaskTaskInfo`|提供有關工作的描述性資訊。|  
 |`ExecuteDTS80PackageTaskTaskResult`|報告工作執行之 DTS 2000 封裝的執行結果。|  
   
