@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2c858d0fa8579aff288efd7026ab4b65035bad8d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127199"
 ---
 # <a name="srvparamlen-extended-stored-procedure-api"></a>srv_paramlen (擴充預存程序 API)
@@ -69,7 +69,7 @@ n
 |`BIGVARBINARY`|**NULL：** 0<br /><br /> **ZERO：** 1<br /><br /> **>=255：** 255<br /><br /> **<255：** 實際 *len*|  
 |`NCHAR`|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>=255：** 255<br /><br /> **<255：** 255|  
 |`NVARCHAR`|**NULL：** 0<br /><br /> **ZERO：** 1<br /><br /> **>=255：** 255<br /><br /> **<255：** 實際 *len*|  
-|`NTEXT`|**NULL：**-1<br /><br /> **ZERO：**-1<br /><br /> **>=255:** -1<br /><br /> **<255:** -1|  
+|`NTEXT`|**NULL：** -1<br /><br /> **ZERO：** -1<br /><br /> **>=255:** -1<br /><br /> **<255:** -1|  
   
  \*   實際 *len* = 多位元組字元字串 (cch) 的長度  
   
