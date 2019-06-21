@@ -21,11 +21,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d2e5e0cad34fdd9364868e5f9c2e4a02d460dba
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242261"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62506380"
 ---
 # <a name="restore-pages-sql-server"></a>還原頁面 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,13 +96,13 @@ ms.locfileid: "54242261"
     > [!WARNING]  
     >  若受損的頁面正在儲存重要資料庫中繼資料，則在嘗試線上頁面還原時，中繼資料的必要更新可能會失敗。 在此情況下，您可以執行離線頁面還原，但是您必須先建立 [結尾記錄備份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) (使用 RESTORE WITH NORECOVERY 來備份交易記錄)。  
   
--   線上分頁還原會利用改良的頁面層級錯誤報告 (包括頁面總和檢查碼) 和追蹤。 因總和檢查碼或寫入損壞偵測為損毀的頁面 (「損毀頁面」 ) 可由頁面還原作業加以還原。 只有明確指定的頁面才會還原。 每一個指定的頁面都是由指定之資料備份中該頁面的複本所取代。  
+-   線上分頁還原會利用改良的頁面層級錯誤報告 (包括頁面總和檢查碼) 和追蹤。 因總和檢查碼或寫入損壞偵測為損毀的頁面 (「損毀頁面」  ) 可由頁面還原作業加以還原。 只有明確指定的頁面才會還原。 每一個指定的頁面都是由指定之資料備份中該頁面的複本所取代。  
   
      當您還原後續的記錄備份時，這些備份只會套用到至少包含一個正在復原之頁面的資料庫檔案。 必須套用未中斷的記錄備份鏈結至最後一個完整或差異還原，將包含該頁面的檔案群組向前帶到目前的記錄檔。 在檔案還原中，向前復原集會以單一記錄重做行程向前進行。 頁面還原若要成功，還原的頁面必須復原到與資料庫一致的狀態。  
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  如果還原的資料庫不存在，使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。 如果資料庫存在，RESTORE 權限預設為 **系統管理員 (sysadmin)** 和 **資料庫建立者 (dbcreator)** 固定伺服器角色的成員以及資料庫的擁有者 (**dbo**) (對 FROM DATABASE_SNAPSHOT 選項而言，資料庫一律存在)。  
   
  RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此；因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
@@ -114,9 +114,9 @@ ms.locfileid: "54242261"
   
 1.  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]連接到適當的  執行個體，然後在 [物件總管] 中，按一下伺服器名稱以展開伺服器樹狀目錄。  
   
-2.  展開 **[資料庫]**。 視資料庫而定，選取使用者資料庫，或者展開 [系統資料庫] ，再選取系統資料庫。  
+2.  展開 **[資料庫]** 。 視資料庫而定，選取使用者資料庫，或者展開 [系統資料庫]  ，再選取系統資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，指向 [工作] ，再指向 [還原] ，然後按一下 [頁面] ，這樣會開啟 [還原頁面]  對話方塊。  
+3.  以滑鼠右鍵按一下資料庫，指向 [工作]  ，再指向 [還原]  ，然後按一下 [頁面]  ，這樣會開啟 [還原頁面]  對話方塊。  
   
      **Restore**  
      此區段與 [還原資料庫 (一般頁面)](../../relational-databases/backup-restore/restore-database-general-page.md) 上的 **[還原至]** 執行相同功能。  
@@ -136,8 +136,8 @@ ms.locfileid: "54242261"
     |標頭|值|  
     |------------|------------|  
     |**名稱**|備份組的名稱。|  
-    |**元件**|備份的元件：[資料庫]、[檔案] 或 [\<空白>] (適用於交易記錄)。|  
-    |**型別**|執行的備份類型：[完整]、[差異] 或 [交易記錄]。|  
+    |**元件**|備份的元件：[資料庫]  、[檔案]  或 [\<空白>]  (適用於交易記錄)。|  
+    |**型別**|執行的備份類型：[完整]  、[差異]  或 [交易記錄]  。|  
     |**Server**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行備份作業的  執行個體名稱。|  
     |**[資料庫備份]**|備份作業中所含的資料庫名稱。|  
     |**位置**|備份組在磁碟區中的位置。|  
@@ -160,11 +160,11 @@ ms.locfileid: "54242261"
   
 5.  頁面方格會用來識別要還原的頁面。 一開始是從 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 系統資料表填入這個方格。  若要從方格中加入或移除頁面，請按一下 **[加入]** 或 [移除]。 如需詳細資訊，請參閱 [管理 suspect_pages 資料表 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)，在  中還原頁面。  
   
-6.  **[備份組]** 方格會列出預設還原計畫中的備份組。 您可以選擇按一下 [確認]，確認備份可讀取而且備份組是完整的，而不需加以還原。 如需詳細資訊，請參閱 [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
+6.  **[備份組]** 方格會列出預設還原計畫中的備份組。  您可以選擇按一下 [確認]，確認備份可讀取而且備份組是完整的，而不需加以還原。 如需詳細資訊，請參閱 [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
      **頁面**  
   
-7.  若要還原頁面方格中所列的頁面，請按一下 [確定]。  
+7.   若要還原頁面方格中所列的頁面，請按一下 [確定]。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  若要在 RESTORE DATABASE 陳述式中指定頁面，您需要包含該頁面之檔案的檔案識別碼和頁面的頁面識別碼。 所需語法如下：  

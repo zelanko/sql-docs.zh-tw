@@ -17,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4f864a063feeaaefccebf384e5ab4725f354fa54
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: eacc48453ff8c96e30808fcc19d8b82ddb9dc4e7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65100285"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67037929"
 ---
 # <a name="configure-sql-server-agent"></a>Configure SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 SQL Database 受控執行個體中目前不支援啟用和停用 SQL Server Agent。 SQL 代理程式一律會處於正在執行的狀態。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 本主題描述如何在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 期間指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 的一些組態選項。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]管理物件 (SMO) 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 預存程序內才有完整的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 組態選項集合可用。  
   
@@ -69,15 +69,15 @@ ms.locfileid: "65100285"
   
 #### <a name="to-configure-sql-server-agent"></a>若要設定 SQL Server Agent  
   
-1.  按一下 **[開始]** 按鈕，然後按一下 **[開始]**  功能表上的 **[控制台]**。  
+1.  按一下 **[開始]** 按鈕，然後按一下 **[開始]**  功能表上的 **[控制台]** 。  
   
-2.  在 [控制台] 中，依序按一下 **[系統及安全性]** 和 **[系統管理工具]**，然後選取 **[本機安全性原則]**。  
+2.  在 [控制台] 中，依序按一下 **[系統及安全性]** 和 **[系統管理工具]** ，然後選取 **[本機安全性原則]** 。  
   
 3.  在 [本機安全性原則] 中，按一下＞形箭號展開 **[本機原則]** 資料夾，然後按一下 **[使用者權限指派]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您要設定搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的權限，然後選取 [屬性]。  
+4.  以滑鼠右鍵按一下您要設定搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的權限，然後選取 [屬性]  。  
   
-5.  在權限的屬性對話方塊中，確認已列出用於執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的帳戶。 如果未列出，請按一下 **[加入使用者或群組]**，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [選取使用者、電腦、服務帳戶或群組] **對話方塊中輸入執行** Agent 的帳戶，然後按一下 **[確定]**。  
+5.  在權限的屬性對話方塊中，確認已列出用於執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的帳戶。 如果未列出，請按一下 **[加入使用者或群組]** ，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [選取使用者、電腦、服務帳戶或群組] **對話方塊中輸入執行** Agent 的帳戶，然後按一下 **[確定]** 。  
   
-6.  針對您要加入以搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行的每項權限重複這項操作。 完成後，請按一下 **[確定]**。  
+6.  針對您要加入以搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行的每項權限重複這項操作。 完成後，請按一下 **[確定]** 。  
   

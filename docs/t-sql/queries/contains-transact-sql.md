@@ -36,11 +36,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 4afc59a5901497fc3112cff3a06bbe20dd3ce04d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334805"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62466995"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ CONTAINS (
   
 ## <a name="arguments"></a>引數  
  *column_name*  
- 這是在 FROM 子句中指定之資料表全文檢索索引資料行的名稱。 資料行可為以下類型：**char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml**、**varbinary** 或 **varbinary(max)**。  
+ 這是在 FROM 子句中指定之資料表全文檢索索引資料行的名稱。 資料行可為以下類型：**char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml**、**varbinary** 或 **varbinary(max)** 。  
   
  *column_list*  
  指定兩個或多個以逗號分隔的資料行。 *column_list* 必須括在括號中。 除非已指定 *language_term*，否則 *column_list* 之所有資料行的語言都必須相同。  
@@ -321,14 +321,14 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
 > [!NOTE]  
 >  不論作業系統地區設定為何，小數分隔符號一定是句點。  
   
- { AND | & } | { AND NOT | &! } | { OR | | }   
+ { AND | & } | { AND NOT | &! } | { OR | | }  
  指定兩個包含搜尋條件之間的邏輯運算。  
   
  { AND | & }  
- 指出相符項目必須符合這兩個包含搜尋條件。 您可以利用 & 符號取代 AND 關鍵字來表示 AND 運算子。  
+ 指出相符項目必須符合這兩個包含搜尋條件。 您可以使用 & 符號取代 AND 關鍵字來表示 AND 運算子。  
   
  { AND NOT | &! }  
- 指出相符項目不能有第二個搜尋條件。 您可以利用後面接著驚歎號的連字號 (&!) 取代 AND NOT 關鍵字來表示 AND NOT 運算子。  
+ 指出相符項目不能有第二個搜尋條件。 您可以使用後面接著驚歎號的 & 符號 (&!) 取代 AND NOT 關鍵字來表示 AND NOT 運算子。  
   
  { OR | | }  
  指出相符項目必須符合兩個包含搜尋條件的其中之一。 您可以利用垂直線符號 (|) 取代 OR 關鍵字來表示 OR 運算子。  

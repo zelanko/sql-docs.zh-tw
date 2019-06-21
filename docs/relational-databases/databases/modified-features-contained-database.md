@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c59f9b04ad4552280c586941e43e91aa25fd935
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558272"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686883"
 ---
 # <a name="modified-features-contained-database"></a>修改的功能 (自主資料庫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "51558272"
  暫存資料表無法參考使用者定義型別、XML 結構描述集合或使用者定義函數。  
   
 ## <a name="collation"></a>定序  
- 在非自主資料庫模型中，有三種不同的定序類型：資料庫定序、執行個體定序和 tempdb 定序。 自主資料庫只會使用兩種定序：資料庫定序和新的目錄定序。 如需自主資料庫定序的詳細資訊，請參閱 [自主資料庫定序](../../relational-databases/databases/contained-database-collations.md) 。  
+ 在非自主資料庫模型中，有三種不同類型的定序：資料庫定序、執行個體定序和 tempdb 定序。 自主資料庫只會使用兩種定序：資料庫定序和新的目錄定序。 如需自主資料庫定序的詳細資訊，請參閱 [自主資料庫定序](../../relational-databases/databases/contained-database-collations.md) 。  
   
 ## <a name="user-options"></a>User Options  
  啟用自主資料庫時， [執行個體的](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) user options 選項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必須設定為 0。  

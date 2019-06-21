@@ -28,11 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0aa6dbd766f842b4c923d98702fd2780fc2652fb
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306226"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644387"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +95,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  一般資料表運算式也可以搭配 SELECT、INSERT、UPDATE 和 CREATE VIEW 等陳述式來使用。 如需詳細資訊，請參閱 [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
- TOP **(**_expression_**)** [ PERCENT ]  
+ TOP **(** _expression_ **)** [ PERCENT ]  
  指定要刪除的隨機資料列數或百分比。 *expression* 可以是一個數字，也可以是資料列的百分比。 搭配 INSERT、UPDATE 或 DELETE 使用的 TOP 運算式所參考的資料列並不依照任何順序來排列。 如需詳細資訊，請參閱 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)。  
   
  FROM  
@@ -164,7 +164,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *cursor_variable_name*  
  資料指標變數的名稱。 資料指標變數必須參考允許更新的資料指標。  
   
- OPTION **(** \<query_hint> [ **,**... *n*] **)**  
+ OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
  關鍵字，它們會指出要使用哪一個最佳化工具提示來自訂 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理陳述式的方式。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="best-practices"></a>最佳作法  

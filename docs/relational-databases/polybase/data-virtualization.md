@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45cde8d0e42c2e85238bf3d42fc8835584083d27
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: a64e02ecdb3f8a8321e0a625a3788228df0890fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510975"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64775186"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>搭配使用外部資料表精靈與關聯式資料來源
 
-其中一個 SQL Server 2019 CTP 2.0 重要情節是可以虛擬化資料。 此程序允許將資料保留在其原始位置。 您可以在 SQL Server 執行個體中「虛擬化」資料，以在該處查詢它，如同 SQL Server 中的任何其他資料表。 此程序會將 ETL 程序的需求降到最低。 此程序只要使用 PolyBase 連接器就能達成。 如需資料虛擬化的詳細資訊，請參閱[開始使用 PolyBase](polybase-guide.md)。
+其中一個 SQL Server 2019 CTP 2.0 重要情節是可以虛擬化資料。 此程序允許將資料保留在其原始位置。 您可以在 SQL Server 執行個體中「虛擬化」  資料，以在該處查詢它，如同 SQL Server 中的任何其他資料表。 此程序會將 ETL 程序的需求降到最低。 此程序只要使用 PolyBase 連接器就能達成。 如需資料虛擬化的詳細資訊，請參閱[開始使用 PolyBase](polybase-guide.md)。
 
 ## <a name="start-the-external-table-wizard"></a>啟動外部資料表精靈
 
-使用在部署指令碼結尾取得的 IP 位址/連接埠號碼 (31433) 來連線至主要執行個體。 展開 [物件總管] 中的 [資料庫] 節點。 然後選取您想要將資料從現有 SQL Server 執行個體虛擬化到其中的其中一個資料庫。 以滑鼠右鍵按一下資料庫，然後選取 [建立外部資料表] 以啟動 [虛擬化資料精靈]。 您也可以從命令選擇區啟動 [虛擬化資料精靈]。 使用 Ctrl+Shift+P (在 Windows 中) 或 Cmd+Shift+P (在 Mac 中)。
+使用透過 [**mssqlctl cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints) 命令取得的 **sql-server-master** 端點 IP 位址/連接埠號碼來連線到主要執行個體。 展開 [物件總管] 中的 [資料庫]  節點。 然後選取您想要將資料從現有 SQL Server 執行個體虛擬化到其中的其中一個資料庫。 以滑鼠右鍵按一下資料庫，然後選取 [建立外部資料表]  以啟動 [虛擬化資料精靈]。 您也可以從命令選擇區啟動 [虛擬化資料精靈]。 使用 Ctrl+Shift+P (在 Windows 中) 或 Cmd+Shift+P (在 Mac 中)。
 
 ![虛擬化資料精靈](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>選取資料來源
@@ -36,7 +36,7 @@ ms.locfileid: "58510975"
 
 ![選取資料來源](media/data-virtualization/select-data-source.png)
 
-選取 [下一步] 繼續進行。
+選取 [下一步]  繼續進行。
 
 ## <a name="create-a-database-master-key"></a>建立資料庫主要金鑰
 
@@ -45,14 +45,14 @@ ms.locfileid: "58510975"
 ![建立資料庫主要金鑰](media/data-virtualization/virtualize-data-master-key.png)
 
 > [!IMPORTANT]
-> 如果您已經有資料庫主要金鑰，則會限制輸入欄位，而且您可以略過此步驟。 選取 [下一步] 繼續進行。
+> 如果您已經有資料庫主要金鑰，則會限制輸入欄位，而且您可以略過此步驟。 選取 [下一步]  繼續進行。
 
 > [!NOTE]
 > 如果您未選擇強式密碼，精靈會在最後一個步驟中執行此作業。 這是已知的問題。
 
 ## <a name="enter-external-data-source-credentials"></a>輸入外部資料來源認證
 
-在此步驟中，輸入您的外部資料來源和認證詳細資料，以建立外部資料來源物件。 資料庫物件會使用這些認證連線到資料來源。 輸入外部資料來源的名稱。 例如 Test。 提供外部資料來源 SQL Server 連線詳細資料。 輸入您想要建立外部資料來源的 [伺服器名稱] 和 [資料庫名稱]。
+在此步驟中，輸入您的外部資料來源和認證詳細資料，以建立外部資料來源物件。 資料庫物件會使用這些認證連線到資料來源。 輸入外部資料來源的名稱。 例如 Test。 提供外部資料來源 SQL Server 連線詳細資料。 輸入您想要建立外部資料來源的 [伺服器名稱]  和 [資料庫名稱]  。
 
 下一個步驟是設定認證。 輸入認證的名稱。 此名稱是資料庫範圍認證，可用來安全地儲存您所建立外部資料來源的登入資訊。 例如 TestCred。 輸入使用者名稱與密碼以連線到資料來源。
 
@@ -72,20 +72,20 @@ ms.locfileid: "58510975"
 
 ## <a name="summary"></a>摘要
 
-此步驟顯示您選項的摘要。 它會提供資料庫範圍認證名稱以及在目的地資料庫中建立的外部資料來源物件。 選取 [產生指令碼] 以 T-SQL 撰寫用來建立外部資料來源的語法指令碼。 選取 [建立] 以建立外部資料來源物件。
+此步驟顯示您選項的摘要。 它會提供資料庫範圍認證名稱以及在目的地資料庫中建立的外部資料來源物件。 選取 [產生指令碼]  以 T-SQL 撰寫用來建立外部資料來源的語法指令碼。 選取 [建立]  以建立外部資料來源物件。
 
 ![摘要畫面](media/data-virtualization/virtualize-data-summary.png)
 
-如果您選取 [建立]，則會看到目的地資料庫中所建立的外部資料來源物件。
+如果您選取 [建立]  ，則會看到目的地資料庫中所建立的外部資料來源物件。
 
 ![外部資料來源](media/data-virtualization/external-data-sources.png)
 
-如果您選取 [產生指令碼]，則會看到建立外部資料來源物件所產生的 T-SQL 查詢。
+如果您選取 [產生指令碼]  ，則會看到建立外部資料來源物件所產生的 T-SQL 查詢。
 
 ![產生指令碼](media/data-virtualization/generated-script.png)
 
 > [!NOTE]
-> [產生指令碼] 應該只顯示在精靈的最後一頁。 目前它會顯示在所有頁面上。
+> [產生指令碼]  應該只顯示在精靈的最後一頁。 目前它會顯示在所有頁面上。
 
 ## <a name="next-steps"></a>後續步驟
 

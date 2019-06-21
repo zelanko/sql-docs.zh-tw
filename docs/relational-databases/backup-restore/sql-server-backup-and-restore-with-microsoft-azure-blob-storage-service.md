@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 625eccb976c500dcacaa5612ca41bac8b638fbed
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434440"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62516224"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "58434440"
   
 -   **Azure Blob 儲存體中資料庫檔案的檔案快照集備份** ：透過使用 Azure 快照集， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案快照集備份可針對使用 Azure Blob 儲存體服務儲存的資料庫檔案，提供幾乎即時的備份和還原。 這個功能可讓您簡化備份和還原原則，並支援還原時間點。 如需詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。 SQL Server 2016 或更新版本皆提供此功能。  
   
--   **讓 SQL Server 管理針對 Microsoft Azure 所進行的備份：** 設定 SQL Server 以管理單一資料庫或多個資料庫的備份策略與排程備份，或是在執行個體層級設定預設值。 此功能又稱為 **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**。 如需詳細資訊，請參閱 [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。 SQL Server 2014 或更新版本皆提供此功能。  
+-   **讓 SQL Server 管理針對 Microsoft Azure 所進行的備份：** 設定 SQL Server 以管理單一資料庫或多個資料庫的備份策略與排程備份，或是在執行個體層級設定預設值。 此功能又稱為 **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** 。 如需詳細資訊，請參閱 [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。 SQL Server 2014 或更新版本皆提供此功能。  
   
 ## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>使用 Microsoft Azure Blob 服務進行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份的優點  
   
@@ -58,7 +58,7 @@ ms.locfileid: "58434440"
   
  [Microsoft Azure 定價計算機](https://go.microsoft.com/fwlink/?LinkId=277060) 可以協助您預估成本。  
   
- **儲存體：** 費用是根據使用的空間收費，而計算方式採累進費率和備援等級計算。 如需詳細資料與最新資訊，請參閱 **定價詳細資料** 文章的 [資料管理](https://go.microsoft.com/fwlink/?LinkId=277059) 一節。  
+ **儲存體：** 費用是根據使用的空間收費，而計算方式則是採累進費率和備援層級計算。 如需詳細資料與最新資訊，請參閱 **定價詳細資料** 文章的 [資料管理](https://go.microsoft.com/fwlink/?LinkId=277059) 一節。  
   
  **資料轉送：** 針對 Microsoft Azure 的輸入資料轉送是免費的。 輸出傳輸則必須支付頻寬使用量的費用，計算方式是根據地區特定的累進費率計算。 如需詳細資料，請參閱＜定價詳細資料＞文章的 [資料傳輸](https://go.microsoft.com/fwlink/?LinkId=277061) 一節。  
   

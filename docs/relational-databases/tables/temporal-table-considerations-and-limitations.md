@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f88363967571c2f6401be42659b5b00ec3811b07
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410085"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034979"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>時態表考量與限制
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52410085"
   
 -   時態表與歷程記錄資料表不可為 **FILETABLE** ，且會包含 **FILESTREAM** 以外所有受支援的資料類型資料行，這是因為 **FILETABLE** 和 **FILESTREAM** 允許在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之外操作資料，以致無法保證系統版本設定。  
   
--   時態表支援 Blob 資料類型 (例如 **(n)varchar(max)**、**varbinary(max)**、**(n)text** 和 **image**)，但會產生龐大的儲存成本，且其大小會影響效能。 因此您在設計系統時，應小心使用這些資料類型。  
+-   時態表支援 Blob 資料類型 (例如 **(n)varchar(max)** 、**varbinary(max)** 、 **(n)text** 和 **image**)，但會產生龐大的儲存成本，且其大小會影響效能。 因此您在設計系統時，應小心使用這些資料類型。  
   
 -   歷程記錄資料表必須建立於與目前資料表相同的資料庫中。 不支援針對 **Linked Server** 的時態查詢。  
   
@@ -64,12 +64,12 @@ ms.locfileid: "52410085"
   
     -   **Always On：** 完全支援  
   
-    -   **異動資料擷取和變更資料追蹤︰** 僅支援目前的資料表  
+    -   **異動資料擷取與變更資料追蹤：** 僅在目前資料表上獲得支援  
   
-    -   **快照集與異動複寫**：僅支援未啟用時態的單一發行者，以及已啟用時態的單一訂閱者。 在此情況下，當訂閱者執行卸載報表時會針對 OLTP 工作負載使用發行者 (包括 'AS OF' 查詢)。    
+    -   **快照集與交易複寫**：僅支援未啟用時態的單一發行者，以及已啟用時態的單一訂閱者。 在此情況下，當訂閱者執行卸載報表時會針對 OLTP 工作負載使用發行者 (包括 'AS OF' 查詢)。    
         不支援使用多位訂閱者，這是因為在此案例中每個時態資料皆取決於本機系統時鐘，因此會導致這些資料出現不一致。  
   
-    -   **合併式複寫︰** 不支援時態表  
+    -   **合併式複寫：** 不支援時態表  
   
 -   一般查詢只會影響目前資料表中的資料。 若要查詢歷程記錄資料表中的資料，您必須使用時態查詢。 我們會在本文件後面的＜查詢時態資料＞一節中加以詳述。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "52410085"
   
     -   索引  
   
-    -   Statistics  
+    -   統計資料  
   
     -   檢查條件約束  
   
@@ -91,7 +91,7 @@ ms.locfileid: "52410085"
   
     -   資料分割設定  
   
-    -   [權限]  
+    -   權限  
   
     -   資料列層級安全性述詞  
   

@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0b63123e9d48ca7f89d888dca82b6b988942893
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417939"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62466683"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理系統設定版本之時態表中的歷程記錄資料保留
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,45 +45,45 @@ ms.locfileid: "52417939"
 
  對於以上任一種方式，移轉或清除歷程記錄資料的邏輯乃基於與目前資料表之期間結束相對應的資料行。 每個資料列的期間結束值決定資料列版本「關閉」時間，也就是落在歷程記錄資料表的時間。 例如， `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` 條件指定超過一個月的歷程記錄資料需要移除或移出歷程記錄資料表。  
   
-> **注意：**  本主題中的範例使用此 [時態表範例](creating-a-system-versioned-temporal-table.md)。  
+> **注意：** 本主題中的範例使用此[時態表範例](creating-a-system-versioned-temporal-table.md)。  
   
 ## <a name="using-stretch-database-approach"></a>使用 Stretch Database 方法  
   
-> **注意：**  Stretch Database 方法僅適用於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，不適用於 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+> **注意：** Stretch Database 方法僅適用於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，不適用於 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md) 中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 能以透明的方式將歷程記錄資料移轉到 Azure。 若要提升安全性，您可以使用 SQL Server 的 [一律加密](https://msdn.microsoft.com/library/mt163865.aspx) 功能為移動中的資料加密。 此外，您還可以使用 [資料列層級安全性](../../relational-databases/security/row-level-security.md) 和其他先進的 SQL Server 安全性功能來搭配 Temporal 和 Stretch Database，藉此保護資料。  
   
  透過 Stretch Database 方法，您可以將部分或所有時態歷程記錄資料表延展到 Azure，而 SQL Server 將會以無訊息的方式將歷程記錄資料移動到 Azure。 讓歷程記錄資料表具備延展功能，不會變更您與時態表在資料修改和時態查詢等方面的互動方式。  
   
--   **整個歷程記錄資料表︰** 如果您的主要案例是在資料變更頻繁和歷程記錄資料查詢相對鮮少的環境中進行資料稽核，請為整個歷程記錄資料表設定 Stretch Database。  換句話說，如果時態查詢的效能不重要，您可以使用這個方法。 在此情況下，Azure 提供的成本效益極具吸引力。   
+-   **延展整個歷程記錄資料表：** 在您的主要案例是在資料頻繁變更和歷程記錄資料查詢相對稀少的環境中進行資料稽核時，為整個記錄資料表設定 Stretch Database。  換句話說，如果時態查詢的效能不重要，您可以使用這個方法。 在此情況下，Azure 提供的成本效益極具吸引力。   
     在延展整個歷程記錄資料表時，您可以使用延展精靈或 Transact-SQL。 如需這兩者的範例，請參閱下文。  
   
--   **延展一部分歷程記錄資料表︰** 如果您的主要案例大致涉及查詢最近的歷程記錄資料，但您想要保留在需要時查詢舊有歷程記錄資料的選擇，同時以較低的成本將這些資料儲存在遠端，請針對一部分的歷程記錄資料表設定 Stretch Database 來改善效能。 透過 Transact-SQL，您可以指定述詞函數來選取要從歷程記錄資料表移轉的資料列 (而不是移轉所有資料列)，進而達成前述目的。  在使用時態表時，根據時間條件移動資料 (也就是根據歷程記錄資料表中資料列版本的存在時間) 通常是合理的做法。    
+-   **延展記錄資料表的一部分：** 在您的主要案例主要涉及查詢最近的歷程記錄資料，但您想要保留在需要時查詢舊有歷程記錄資料的選項，同時以較低成本將這些資料儲存在遠端時，針對一部分的歷程記錄資料表設定 Stretch Database 來改善效能。 透過 Transact-SQL，您可以指定述詞函數來選取要從歷程記錄資料表移轉的資料列 (而不是移轉所有資料列)，進而達成前述目的。  在使用時態表時，根據時間條件移動資料 (也就是根據歷程記錄資料表中資料列版本的存在時間) 通常是合理的做法。    
     藉由確定性述詞函數，您可以將歷程記錄的一部分保存在與目前資料相同的資料庫內，再將其他部分移轉到 Azure。    
     如需範例與限制，請參閱 [使用篩選函數來選取要移轉的資料列 (Stretch Database)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。 由於非確定性的函數不合法，所以如果您想要以滑動視窗的方式傳輸歷程記錄資料，必須定期變更內嵌述詞函數的定義，讓保存在本機之資料列視窗的存在時間保持不變。 滑動視窗可讓您不斷將超過一個月的歷程記錄資料移動到 Azure。 如需這個方法的範例，請參閱下文。  
   
 > **注意：** Stretch Database 能將資料移轉到 Azure。 因此，您必須擁有 Azure 帳戶和計費用的訂閱。 若要取得免費試用的 Azure 帳戶，請按一下[免費試用一個月](https://azure.microsoft.com/pricing/free-trial/)。  
   
- 您可以使用延展精靈或 Transact-SQL 來設定 Stretch 的時態歷程記錄資料表，而且可以在系統版本設定功能設定為 [ON] 時啟用時態歷程記錄資料表的延展功能。 您無法延展目前的資料表，因為延展目前的資料表不具意義。  
+ 您可以使用延展精靈或 Transact-SQL 來設定 Stretch 的時態歷程記錄資料表，而且可以在系統版本設定功能設定為 [ON]  時啟用時態歷程記錄資料表的延展功能。 您無法延展目前的資料表，因為延展目前的資料表不具意義。  
   
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>使用延展精靈來延展整個歷程記錄資料表  
  對初學者來說，最簡單的方法是使用延展精靈來啟用整個資料庫的延展功能，接著在延展精靈中選取時態歷程記錄資料表 (以下範例假設您已將 Department 資料表設定為空資料庫中的系統設定版本時態資料表)。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，您無法以滑鼠右鍵按一下時態歷程記錄資料表本身，然後再按一下 [延展]。  
   
-1.  以滑鼠右鍵按一下資料庫，並指向 [工作] 和 [延展]，然後按一下 [啟用] 來啟動精靈。  
+1.  以滑鼠右鍵按一下資料庫，並指向 [工作]  和 [延展]  ，然後按一下 [啟用]  來啟動精靈。  
   
-2.  在 [選取資料表] 視窗中，選取時態歷程記錄資料表的核取方塊，然後按 [下一步]。  
+2.  在 [選取資料表]  視窗中，選取時態歷程記錄資料表的核取方塊，然後按 [下一步]。  
   
      ![在 [選取資料表] 頁面上選取歷程記錄資料表](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "在 [選取資料表] 頁面上選取歷程記錄資料表")  
   
-3.  在 [設定 Azure] 視窗中，提供您的登入認證。 登入 Microsoft Azure 或註冊帳戶。 選取要使用的訂閱，並選取 Azure 區域。 接下來，建立新伺服器或選取現有伺服器。 按 [下一步] 。  
+3.  在 [設定 Azure]  視窗中，提供您的登入認證。 登入 Microsoft Azure 或註冊帳戶。 選取要使用的訂閱，並選取 Azure 區域。 接下來，建立新伺服器或選取現有伺服器。 按 [下一步]  。  
   
      ![建立新的 Azure 伺服器 - Stretch Database 精靈](../../relational-databases/tables/media/stretch-wizard-4.png "建立新的 Azure 伺服器 - Stretch Database 精靈")  
   
-4.  在 [安全認證] 視窗中，提供資料庫主要金鑰的密碼來保護來源 SQL Server 資料庫認證，然後按 [下一步]。  
+4.  在 [安全認證]  視窗中，提供資料庫主要金鑰的密碼來保護來源 SQL Server 資料庫認證，然後按 [下一步]。  
   
      ![Stretch Database 精靈的 [安全認證] 頁面](../../relational-databases/tables/media/stretch-wizard-6.png "Stretch Database 精靈的 [安全認證] 頁面")  
   
-5.  在 [選取 IP 位址] 視窗中提供 SQL Server 的 IP 位址範圍，讓 Azure 伺服器得以與您的 SQL Server 通訊 (如果您選取已有防火牆規則的現有伺服器，在這裡只要按 [下一步] 就能使用現有的防火牆規則)。 依序按 [下一步] 和 [完成] 以啟用 Stretch Database 及延展時態歷程記錄資料表。  
+5.  在 [選取 IP 位址]  視窗中提供 SQL Server 的 IP 位址範圍，讓 Azure 伺服器得以與您的 SQL Server 通訊 (如果您選取已有防火牆規則的現有伺服器，在這裡只要按 [下一步] 就能使用現有的防火牆規則)。 依序按 [下一步]  和 [完成]  以啟用 Stretch Database 及延展時態歷程記錄資料表。  
   
      ![Stretch Database 精靈的 [選取 IP 位址] 頁面](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 精靈的 [選取 IP 位址] 頁面")  
   
@@ -193,7 +193,7 @@ COMMIT ;
   
  週期性資料分割維護工作的詳細步驟如下︰  
   
-1.  SWITCH OUT︰建立暫存資料表，然後使用 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 陳述式並搭配 SWITCH PARTITION 引數，在歷程記錄資料表和暫存資料表之間切換資料分割 (請參閱範例 C. 在資料表之間切換資料分割)。  
+1.  切換移出：建立暫存表格，然後使用 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 陳述式並搭配 SWITCH PARTITION 引數，在記錄資料表和暫存資料表之間切換分割區 (請參閱範例 C 在資料表之間切換分割區)。  
   
     ```  
     ALTER TABLE <history table> SWITCH PARTITION 1 TO <staging table>  
@@ -201,9 +201,9 @@ COMMIT ;
   
      切換資料分割之後，您可以選擇性地封存暫存資料表中的資料，然後丟棄或截斷暫存資料表以做好下次執行此週期性資料分割維護工作的準備。  
   
-2.  MERGE RANGE︰使用 [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md) 並搭配 MERGE RANGE 來合併空的資料分割 1 和資料分割 2 (請參閱範例 B)。 藉由使用這個函數移除最低界限，您可以有效地合併空的資料分割 1 和先前的資料分割 2，組成新資料分割 1。 其他資料分割也可以有效地變更其序數。  
+2.  MERGE RANGE：使用 [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md) 並搭配 MERGE RANGE 來合併空的分割區 1 和分割區 2 (請參閱範例 B)。 藉由使用這個函數移除最低界限，您可以有效地合併空的資料分割 1 和先前的資料分割 2，組成新資料分割 1。 其他資料分割也可以有效地變更其序數。  
   
-3.  SPLIT RANGE︰使用 [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md) 並搭配 SPLIT RANGE 來建立新的空資料分割 7 (請參閱範例 A)。 藉由使用這個函數加入新的上限，您可以有效地為下個月份建立個別資料分割。  
+3.  SPLIT RANGE：使用 [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md) 並搭配 SPLIT RANGE 來建立新的空白分割區 7 (請參閱範例 A)。 藉由使用這個函數加入新的上限，您可以有效地為下個月份建立個別資料分割。  
   
 ### <a name="use-transact-sql-to-create-partitions-on-history-table"></a>使用 Transact-SQL 在歷程記錄資料表上建立資料分割  
  使用下列程式碼視窗中的 Transact-SQL 指令碼來建立資料分割函數、資料分割結構描述，以及重新建立與資料分割結構描述和資料分割對齊的叢集索引。 在此範例中，我們將利用從 2015 年 9 月開始的每月資料分割建立為期六個月的滑動視窗方法。  
@@ -341,11 +341,11 @@ COMMIT TRANSACTION
   
  在滑動視窗案例中，我們一律會移除最低的資料分割界限。  
   
--   RANGE LEFT 案例︰在 RANGE LEFT 案例中，最低的分割區界限屬於分割區 1，由於該分割區是空的 (在分割區切換移出後)，所以 MERGE RANGE 不會引發任何資料移動。  
+-   RANGE LEFT 案例：在 RANGE LEFT 案例中，最低的分割區界限屬於分割區 1，由於該分割區是空的 (在分割區切換移出後)，所以 MERGE RANGE 不會引發任何資料移動。  
   
--   RANGE RIGHT 案例︰在 RANGE RIGHT 案例中，最低的資料分割界限屬於資料分割 2，由於我們假設切換移出已將資料分割 1 清空，因此資料分割 2 不是空的。在該案例中，MERGE RANGE 將會引發資料移動 (資料分割 2 的資料將移動到資料分割 1)。 若要避免資料移動，滑動視窗案例中的 RANGE RIGHT 需要隨時保持清空的資料分割 1。 相較於 RANGE LEFT 案例，這表示如果我們使用 RANGE RIGHT，應該要建立及維護一個額外的資料分割，。  
+-   RANGE RIGHT 案例：在 RANGE RIGHT 案例中，最低的分割區界限屬於分割區 2，由於我們假設切換移出已將分割區 1 清空，因此分割區 2 不是空的。在該案例中，MERGE RANGE 將會引發資料移動 (資料分割 2 的資料將移動到資料分割 1)。 若要避免資料移動，滑動視窗案例中的 RANGE RIGHT 需要隨時保持清空的資料分割 1。 相較於 RANGE LEFT 案例，這表示如果我們使用 RANGE RIGHT，應該要建立及維護一個額外的資料分割，。  
   
- 結論︰在滑動資料分割中使用 RANGE LEFT 的管理作業較為簡單，也能避免資料移動。 不過，定義 RANGE RIGHT 的資料分割界限則稍微簡單一些，因為您不需要應付日期時間的對時問題。  
+ 結論：在滑動資料分割中使用 RANGE LEFT 的管理作業較為簡單，也能避免資料移動。 不過，定義 RANGE RIGHT 的資料分割界限則稍微簡單一些，因為您不需要應付日期時間的對時問題。  
   
 ## <a name="using-custom-cleanup-script-approach"></a>使用自訂清除指令碼方法  
  當 Stretch Database 和資料表資料分割方法均不可行時，第三種方法是使用自訂清除指令碼刪除歷程記錄資料表中的資料。 唯有當 **SYSTEM_VERSIONING = OFF**時，您才可以刪除歷程記錄資料表中的資料。 為了避免資料不一致，請在維護期間 (當修改資料的工作負載未作用時) 或交易內 (有效地封鎖其他工作負載) 執行清除作業。  這項作業需要目前和歷程記錄資料表的 **CONTROL** 權限。  
@@ -433,7 +433,7 @@ COMMIT;
 ```  
 
 ## <a name="using-temporal-history-retention-policy-approach"></a>使用時態歷程記錄保留原則方法
-> **注意：** 時態歷程記錄保留原則的方法適用於 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 SQL Server 2017 (從 CTP 1.3 開始)。  
+> **注意：** 使用時態歷程記錄保留原則適用於 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 SQL Server 2017 (從 CTP 1.3 開始)。  
 
 時態歷程記錄保留可在不同的資料表層級上設定，讓使用者建立彈性的過時原則。 套用暫時保留很簡單：只需要在資料表建立或結構描述變更期間設定一個參數。
 
@@ -473,7 +473,7 @@ CREATE TABLE dbo.WebsiteUserInfo
      )
  );
 ```
-您可以使用不同的時間單位來指定保留週期：DAYS、WEEKS、MONTHS 和 YEARS。 如果省略了 HISTORY_RETENTION_PERIOD，則會假設 INFINITE 保留。 您也可以明確地使用 INFINITE 關鍵字。
+您可以使用不同的時間單位來指定保留期間：DAYS、WEEKS、MONTHS 和 YEARS。 如果省略了 HISTORY_RETENTION_PERIOD，則會假設 INFINITE 保留。 您也可以明確地使用 INFINITE 關鍵字。
 在某些狀況中，您可能想要在資料表建立後設定保留，或變更先前設定的值。 在此情況下，請使用 ALTER TABLE 陳述式：
 ```
 ALTER TABLE dbo.WebsiteUserInfo

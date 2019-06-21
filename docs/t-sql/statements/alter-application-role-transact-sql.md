@@ -22,11 +22,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b272b3b5df01931cfabf1f19945bba477cc680bc
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326709"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62993848"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ALTER APPLICATION ROLE application_role_name
 > [!CAUTION]  
 >  在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，結構描述的行為已經與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的行為不同。 假設結構描述相當於資料庫使用者的程式碼可能不會傳回正確的結果。 不應該在曾經使用下列任何一個 DDL 陳述式的資料庫中使用舊的目錄檢視 (包括 sysobjects)：CREATE SCHEMA、ALTER SCHEMA、DROP SCHEMA、CREATE USER、ALTER USER、DROP USER、CREATE ROLE、ALTER ROLE、DROP ROLE、CREATE APPROLE、ALTER APPROLE、DROP APPROLE、ALTER AUTHORIZATION。 在曾經使用這些陳述式的任何一個資料庫中，您必須使用新的目錄檢視。 新的目錄檢視會考量 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中所導入的主體和結構描述的分隔。 如需目錄檢視的詳細資訊，請參閱[目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要資料庫的 ALTER ANY APPLICATION ROLE 權限。 若要變更預設的結構描述，使用者還需要在應用程式角色上具有 ALTER 權限。 應用程式角色可改變它自己的預設結構描述，但不能變更它的名稱或密碼。  
   
 ## <a name="examples"></a>範例  

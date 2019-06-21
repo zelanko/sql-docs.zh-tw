@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0a208baaf237987c9f3e544da4d02dca72b191f9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021449"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62857328"
 ---
 # <a name="value-method-xml-data-type"></a>value() 方法 (xml 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ ORDER BY Result desc
 ### <a name="c-using-the-value-and-exist-methods-to-retrieve-values-from-an-xml-type-column"></a>C. 使用 value() 和 exist() 方法來擷取 xml 類型資料行中的值  
  下列範例顯示如何使用 **xml** 資料類型的 `value()` 方法和 [exist()](../../t-sql/xml/exist-method-xml-data-type.md) 方法。 `value()` 方法是用於擷取 XML 中的 `ProductModelID` 屬性值。 `exist()` 子句中的 `WHERE` 方法則是用於篩選資料表中的資料列。  
   
- 此查詢會從將保固資訊 (<`Warranty`> 元素) 做為功能之一的 XML 執行個體中，擷取產品型號識別碼。 `WHERE` 子句中的條件會使用 `exist()` 方法，只擷取滿足此條件的資料列。  
+ 此查詢會從將保固資訊 (<`Warranty`> 元素) 作為功能之一的 XML 執行個體中，擷取產品型號識別碼。 `WHERE` 子句中的條件會使用 `exist()` 方法，只擷取滿足此條件的資料列。  
   
 ```  
 SELECT CatalogDescription.value('  
@@ -121,7 +121,7 @@ WHERE CatalogDescription.exist('
   
 -   `CatalogDescription` 資料行是具類型的 XML 資料行。 這表示它有相關聯的結構描述集合。 在 [XQuery 初構](../../xquery/modules-and-prologs-xquery-prolog.md)中，命名空間宣告是用來定義稍後要在查詢主體中使用的前置詞。  
   
--   如果 `exist()` 方法傳回 `1` (True)，表示 XML 執行個體包括 <`Warranty`> 子元素做為功能之一。  
+-   如果 `exist()` 方法傳回 `1` (True)，表示 XML 執行個體包括 <`Warranty`> 子元素作為功能之一。  
   
 -   `value()` 子句中的 `SELECT` 方法就會擷取 `ProductModelID` 屬性值做為整數。  
   

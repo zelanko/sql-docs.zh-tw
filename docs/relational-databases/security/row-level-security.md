@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5bf464198a795a2ada5a6cb273754a2fb1945978
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 0ba5cddf682ba9e3f9dfa6e5ef9b44ce7f9e5f4e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59476694"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140595"
 ---
 # <a name="row-level-security"></a>資料列層級安全性
 
@@ -120,7 +120,7 @@ RLS 可支援兩種類型的安全性述詞。
   
  如果以 `SCHEMABINDING = OFF`來建立安全性原則，則為了查詢目標資料表，使用者必須對述詞函數和述詞函數內使用的任何其他資料表、檢視或函數具有  **SELECT** 或 **EXECUTE** 權限。 如果以 `SCHEMABINDING = ON` (預設值) 來建立安全性原則，則當使用者查詢目標資料表時，會略過這些權限檢查。  
   
-## <a name="Best"></a> 最佳做法  
+## <a name="Best"></a> 最佳作法  
   
 - 強烈建議為 RLS 物件、述詞函式和安全性原則建立另一個結構描述。  
   
@@ -250,6 +250,14 @@ ADD FILTER PREDICATE Security.fn_securitypredicate(SalesRep)
 ON dbo.Sales  
 WITH (STATE = ON);  
 ```
+
+允許 fn_securitypredicate 函式的 SELECT 權限 
+```sql
+GRANT SELECT ON security.fn_securitypredicate TO Manager;  
+GRANT SELECT ON security.fn_securitypredicate TO Sales1;  
+GRANT SELECT ON security.fn_securitypredicate TO Sales2;  
+```
+
 
 現在從每個使用者的 Sales 資料表進行選取，藉此測試篩選述詞。
 

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 58b54c71171e2d05ac57de0d9851ceb63f88a71e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63045325"
 ---
 # <a name="mssqlserver2537"></a>MSSQLSERVER_2537
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,12 +26,12 @@ ms.locfileid: "47821102"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|2537|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC_RECORD_CHECK_FAILED|  
-|訊息文字|資料表錯誤: 物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE)，頁面 P_ID，資料列 ROW_ID。 記錄檢查 (CHECK_TEXT) 失敗。 值為 VALUE1 和 VALUE2。|  
+|訊息文字|資料表錯誤：物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE)，頁面 P_ID，資料列 ROW_ID。 記錄檢查 (CHECK_TEXT) 失敗。 值為 VALUE1 和 VALUE2。|  
   
 ## <a name="explanation"></a>說明  
 資料列 ROW_ID (或資料列中的資料行) 無法通過 CHECK_TEXT 所描述的測試或條件。  

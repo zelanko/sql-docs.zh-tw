@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: bee1497ec928f1ac3abcd39ca052301ad5b6bfc9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e3b0e53dfbbe03fd723edb4d4c941e3395a0b1e5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785120"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826931"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -2934,7 +2934,7 @@ RESULT_SET_CACHING { ON | OFF}
 > [!Note]
 > 雖然這項功能即將推出到所有區域，但請檢查部署至您執行個體的版本和最新版 [Azure SQL DW 版本資訊](/azure/sql-data-warehouse/release-notes-10-0-10106-0)是否提供此功能。
 
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF } (Azure SQL 資料倉儲 Gen2 的預覽) 這是連線至 master 資料庫時必須執行的命令。  對此資料庫設定的變更會立即生效。  儲存體的費用會以快取查詢結果集的數目計算。 停用資料庫的結果快取後，會立即從 Azure SQL 資料倉儲儲存體中刪除先前保存的結果快取。 我們在 sys.databases 中導入了稱作 is_result_set_caching_on 的新欄位，來顯示資料庫的結果快取設定。  
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF } 僅適用於 Azure SQL 資料倉儲 Gen2 (預覽) 必須在連線到 master 資料庫時執行此命令。  對此資料庫設定的變更會立即生效。  儲存體的費用會以快取查詢結果集的數目計算。 停用資料庫的結果快取後，會立即從 Azure SQL 資料倉儲儲存體中刪除先前保存的結果快取。 我們在 sys.databases 中導入了稱作 is_result_set_caching_on 的新欄位，來顯示資料庫的結果快取設定。  
 
 ON：指定從這個資料庫傳回的查詢結果集將快取至 Azure SQL 資料倉儲儲存體中。
 

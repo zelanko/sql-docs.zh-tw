@@ -17,12 +17,12 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
-ms.openlocfilehash: 562119dd258c996b070cdd2c16fd60ca27ffc424
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e4375d7b0ce19c5bb0f44a0be3b55e7b105b5a4e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794106"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145423"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -127,7 +127,7 @@ REM Gather information about the instance of LocalDB
 
 ### <a name="connect-to-a-shared-instance-of-localdb"></a>連線到 LocalDB 共用執行個體
 
-若要連線到 LocalDB 共用執行個體，請在連接字串中加入 `.\` (點 + 反斜線)，以參考保留給共用執行個體的命名空間。 例如，若要連線到名稱為 `AppData` 的 LocalDB 共用執行個體，請使用連接字串 (例如 `(localdb).AppData`)，做為連接字串的一部分。 使用者若要連線到他們並未擁有的 LocalDB 共用執行個體，則必須有 Windows 驗證或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入。
+若要連線到 LocalDB 的共用執行個體，請將 `\.\` (反斜線 + 點號 + 反斜線) 新增到連接字串，以參考為共用執行個體保留的命名空間。 例如，若要連線到名稱為 `AppData` 的 LocalDB 共用執行個體，請使用連接字串 (例如 `(localdb)\.\AppData`)，做為連接字串的一部分。 使用者若要連線到他們並未擁有的 LocalDB 共用執行個體，則必須有 Windows 驗證或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入。
 
 ## <a name="troubleshooting"></a>疑難排解
 

@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 67866652e7c010a00018c394677c9d1e7e1cb8d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728896"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62508401"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>定義和修改合併發行項之間的聯結篩選
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,19 +54,19 @@ ms.locfileid: "47728896"
 -   可以為一組資料表手動建立聯結篩選，或者根據資料表中定義的外部索引鍵與主索引鍵之間的關聯性自動產生篩選。 如需自動產生一組聯結篩選的詳細資訊，請參閱[在合併發行項之間自動產生一組聯結篩選 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在 [新增發行集精靈] 的 [篩選資料表的資料列] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊的 [篩選資料列] 頁面上，定義、修改及刪除聯結篩選。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 您可以在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - \<發行集>]  對話方塊的 [篩選資料列]  頁面上，定義、修改及刪除聯結篩選。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-define-a-join-filter"></a>若要定義聯結篩選  
   
-1.  在 [新增發行集精靈] 的 [篩選資料表的資料列] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊的 [篩選資料列] 頁面上，從 [已篩選的資料表] 窗格中選取一個現有的資料列篩選或聯結篩選。  
+1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - \<發行集>]  對話方塊的 [篩選資料列]  頁面上，從 [已篩選的資料表]  窗格中選取一個現有的資料列篩選或聯結篩選。  
   
-2.  按一下 **[加入]**，然後按一下 **[加入聯結以擴充選取的篩選]**。  
+2.  按一下 **[加入]** ，然後按一下 **[加入聯結以擴充選取的篩選]** 。  
   
-3.  建立聯結陳述式：選取 [使用產生器建立陳述式]  或 [手動寫入 join 陳述式] 。  
+3.  建立聯結陳述式：選取 [使用產生器建立陳述式]  或 [手動寫入 join 陳述式]  。  
   
-    -   如果選取使用產生器，請使用方格中的資料行 ([結合]、[已篩選的資料表資料行] 、[運算子] 和 [聯結的資料表資料行] ) 來建立聯結陳述式。  
+    -   如果選取使用產生器，請使用方格中的資料行 ([結合]  、[已篩選的資料表資料行]  、[運算子]  和 [聯結的資料表資料行]  ) 來建立聯結陳述式。  
   
-         方格中的每個資料行都包含下拉式方塊，可讓您選取兩個資料行和一個運算子 (**=**、[已篩選的資料表資料行] **<>**、[已篩選的資料表資料行] **<=**、[已篩選的資料表資料行] **\<**、[已篩選的資料表資料行] **>=**、[已篩選的資料表資料行] **>** 和 [聯結的資料表資料行] **like**)。 結果會在 **[預覽]** 文字區域中顯示。 如果聯結涉及多對資料行，請從 **[結合]** 資料行中選取一個結合 (AND 或 OR)，然後輸入兩個或更多的資料行及一個運算子。  
+         方格中的每個資料行都包含下拉式方塊，可讓您選取兩個資料行和一個運算子 ( **=** 、[已篩選的資料表資料行] **<>** 、[已篩選的資料表資料行] **<=** 、[已篩選的資料表資料行] **\<** 、[已篩選的資料表資料行] **>=** 、[已篩選的資料表資料行] **>** 和 [聯結的資料表資料行] **like**)。 結果會在 **[預覽]** 文字區域中顯示。 如果聯結涉及多對資料行，請從 **[結合]** 資料行中選取一個結合 (AND 或 OR)，然後輸入兩個或更多的資料行及一個運算子。  
   
     -   如果選取手動寫入陳述式，請在 **[聯結陳述式]** 文字區域寫入聯結陳述式。 使用 **[已篩選的資料表資料行]** 清單方塊與 **[聯結的資料表資料行]** 清單方塊將資料行拖放到 **[Join 陳述式]** 文字區域。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "47728896"
   
 4.  指定聯結選項：  
   
-    -   如果在篩選的資料表 (父系資料表) 中聯結的資料行是唯一的，請選擇 **[唯一索引鍵]**。  
+    -   如果在篩選的資料表 (父系資料表) 中聯結的資料行是唯一的，請選擇 **[唯一索引鍵]** 。  
   
         > [!CAUTION]  
         >  選取此選項表示聯結篩選中的子資料表與父資料表之間的關聯性是一對一或一對多。 如果在子系資料表中的聯結資料行有保證唯一性的條件約束，請僅選取此選項。 如果選項設定不正確，則資料可能發生非聚合的情況。  
@@ -89,11 +89,11 @@ ms.locfileid: "47728896"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  如果您在 [發行集屬性 - \<發行集>] 對話方塊中，請按一下 [確定] 以儲存並關閉對話方塊。  
+6.  如果您在 [發行集屬性 - \<發行集>]  對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。  
   
 #### <a name="to-modify-a-join-filter"></a>若要修改聯結篩選  
   
-1.  在 [新增發行集精靈] 的 [篩選資料表的資料列] 頁面上，或是在 [發行集屬性 - \<發行集>]的 [篩選資料列] 頁面上，從 [已篩選的資料表] 窗格中選取一個篩選，然後按一下 [編輯]。  
+1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - \<發行集>]  的 [篩選資料列]  頁面上，從 [已篩選的資料表]  窗格中選取一個篩選，然後按一下 [編輯]  。  
   
 2.  在 **[編輯聯結]** 對話方塊中，修改篩選。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "47728896"
   
 #### <a name="to-delete-a-join-filter"></a>若要刪除聯結篩選  
   
-1.  在 [新增發行集精靈] 的 [篩選資料表的資料列] 頁面上，或是在 [發行集屬性 - \<發行集>]的 [篩選資料列] 頁面上，從 [已篩選的資料表] 窗格中選取一個篩選，然後按一下 [刪除]。 如果您刪除的聯結篩選本身已由其他聯結擴充，也會一併刪除這些聯結。  
+1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - \<發行集>]  的 [篩選資料列]  頁面上，從 [已篩選的資料表]  窗格中選取一個篩選，然後按一下 [刪除]  。 如果您刪除的聯結篩選本身已由其他聯結擴充，也會一併刪除這些聯結。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  這些程序顯示父發行項上的參數化篩選，其中包含此發行項與相關子發行項之間的聯結篩選。 您可以使用複寫預存程序來以程式設計的方式定義及修改聯結篩選。  
@@ -116,7 +116,7 @@ ms.locfileid: "47728896"
   
 2.  在發行集資料庫的發行者端，執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 來針對發行集定義一個或多個相關發行項，這些發行項也稱為子發行項。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
-3.  在發行集資料庫的發行者端，執行 [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)。 指定 **@publication**、針對 **@filtername**指定此篩選的唯一名稱、針對 **@article**指定步驟 2 中建立的子發行項名稱、針對 **@join_articlename**指定聯結的父發行項名稱，以及針對 **@join_unique_key**指定下列其中一個值：  
+3.  在發行集資料庫的發行者端，執行 [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)。 指定 **@publication** 、針對 **@filtername** 指定此篩選的唯一名稱、針對 **@article** 指定步驟 2 中建立的子發行項名稱、針對 **@join_articlename** 指定聯結的父發行項名稱，以及針對 **@join_unique_key** 指定下列其中一個值：  
   
     -   **0** - 指示父發行項與子發行項之間的多對一或多對多的聯結。  
   
@@ -141,8 +141,8 @@ ms.locfileid: "47728896"
  [參數化資料列篩選器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [針對合併式複寫篩選發行的資料](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
- [如何：定義和修改合併發行項之間的聯結篩選 (SQL Server Management Studio)](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [複寫系統預存程序概念](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [操作說明：定義和修改合併發行項之間的聯結篩選 (SQL Server Management Studio)](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [定義合併資料表發行項之間的邏輯記錄關聯性](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)   
  [針對合併發行項定義及修改參數化資料列篩選](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
   

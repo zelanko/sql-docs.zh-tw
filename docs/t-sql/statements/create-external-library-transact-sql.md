@@ -19,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bfaeb323e940ca2d289ddae58aaf679bed9fffa
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 852b98c1ee0eecba21b426c74397985208fd2178
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993720"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140793"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -127,6 +127,8 @@ WITH ( LANGUAGE = 'R' )
 指定適用於特定平台的套件內容。 只支援每個平台一個檔案成品。
 
 指定檔案時，可以採用本機路徑或網路路徑的形式來指定。
+
+當您試圖存取在 **<client_library_specifier>** 中所指定的檔案時，SQL Server 會模擬目前 Windows 登入的安全性內容。 由於委派限制之故，如果 **<client_library_specifier>** 指定網路位置 (UNC 路徑)，目前登入的模擬並不會在網路位置發揮作用。 此時就得利用 SQL Server 服務帳戶的資訊安全內容進行存取。 如需詳細資訊，請參閱[認證 (資料引擎)](../../relational-databases/security/authentication-access/credentials-database-engine.md)。
 
 (選擇性) 可以指定檔案的 OS 平台。 針對特定語言或執行階段，每個 OS 平台只允許一個檔案成品或內容。
 

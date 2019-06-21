@@ -20,12 +20,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aeb87d4408f1fbe1ba269d8373e8cc648efba55e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 4364afdd649fe91f5e779170d9f80a4071118ea0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65948376"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145412"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -97,8 +97,7 @@ SELECT HASHBYTES('SHA1', c1) FROM dbo.Test1;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[選擇加密演算法](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
-[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
-[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
-[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)  
-  
+[選擇加密演算法](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)
+[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)
+[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)
+[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)

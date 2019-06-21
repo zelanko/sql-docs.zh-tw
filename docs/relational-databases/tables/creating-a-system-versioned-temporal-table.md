@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: eae7dfb2a198cf7cb3b1563f8f5b35c5fbb0b4eb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409615"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62515984"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>建立系統建立版本的時態表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -58,11 +58,11 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   匿名的記錄資料表會自動使用與目前資料表或時態表相同的結構描述建立。  
   
--   匿名的記錄資料表名稱具有下列格式︰MSSQL_TemporalHistoryFor_<目前時態表物件識別碼>_[後置詞]。 後置詞是選用的，只有在資料表名稱前半部分不是唯一的時候，才會加入。  
+-   匿名的記錄資料表名稱格式如下：MSSQL_TemporalHistoryFor_<現有暫存料表物件識別碼>_[尾碼]  。 後置詞是選用的，只有在資料表名稱前半部分不是唯一的時候，才會加入。  
   
 -   記錄資料表會建立為資料列存放區資料表。 如果可能，會套用 PAGE 壓縮，否則不壓縮記錄資料表。 例如，有些資料表組態，像 SPARSE 資料行，就不允許壓縮。  
   
--   為記錄資料表建立的預設叢集索引，會使用自動產生的名稱，格式為：IX_<記錄資料表名稱 >。 叢集索引包含 **PERIOD** 資料行 (結尾、開頭)。  
+-   為記錄資料表建立的預設叢集索引，會使用自動產生的名稱，格式為：IX_<記錄資料表名稱 >  。 叢集索引包含 **PERIOD** 資料行 (結尾、開頭)。  
   
 -   若要將目前的資料表建立為記憶體最佳化資料表，請參閱 [系統版本設定時態表與記憶體最佳化資料表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)。  
   

@@ -1,5 +1,5 @@
 ---
-title: 教學課程：撰寫國際性通用的 Transact-SQL 陳述式 | Microsoft Docs
+title: 教學課程：撰寫 Transact-SQL 陳述式 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -16,17 +16,17 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 75c372af16b9a982fb5924fbc1ef4fd7668d0c0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62935324"
 ---
-# <a name="tutorial-writing-transact-sql-statements"></a>教學課程：撰寫國際性通用的 Transact-SQL 陳述式
+# <a name="tutorial-writing-transact-sql-statements"></a>教學課程：撰寫 Transact-SQL 陳述式
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 歡迎使用「撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式」教學課程。 本教學課程的主要對象是撰寫 SQL 陳述式的新手， 會透過檢閱一些建立資料表及插入資料的基本陳述式，協助新手上路。 本教學課程採用 [!INCLUDE[tsql](../includes/tsql-md.md)]，是 SQL 標準的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 實作。 本教學課程的目的是用來概述 [!INCLUDE[tsql](../includes/tsql-md.md)] 語言，而非用來取代 [!INCLUDE[tsql](../includes/tsql-md.md)] 類別。 在本教學課程中的陳述式是有意經過簡化的，並無意呈現一般實際資料庫中所遇到的複雜問題。  
   
->**注意︰** 如果您是初學者，可能會覺得使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 反而比撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式更簡單。  
+>**注意：** 如果您是初學者，可能會覺得使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 反而比撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式更簡單。  
   
 ## <a name="finding-more-information"></a>尋找詳細資訊  
 若要尋找任何特定陳述式的詳細資訊，請在《SQL Server 線上叢書》中依名稱搜尋陳述式，或是使用 [內容] 瀏覽 [Transact-SQL 參考 &#40;Database Engine&#41;](../t-sql/transact-sql-reference-database-engine.md) 底下依字母順序排列的 1,800 個語言元素。 此外，搜尋與您有興趣的主題內容相關的關鍵字，也是另一種找出資訊的不錯方式。 例如，您想要知道如何傳回一部分的日期 (如月份)，您可以搜尋 **dates [SQL Server]** 的索引，然後選取 **dateparts**， 即會帶您前往 [DATEPART &#40;Transact-SQL&#41;](../t-sql/functions/datepart-transact-sql.md) 主題。 例如若要找出如何使用字串，您可以搜尋**字串函數**， 即會帶您前往[字串函數 &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md) 主題。  

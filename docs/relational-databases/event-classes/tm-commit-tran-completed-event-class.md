@@ -1,5 +1,5 @@
 ---
-title: 'TM: Commit Tran Completed 事件類別 | Microsoft 文件'
+title: TM：Commit Tran Completed 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a910e2217f94b16e8890467ba75bef83e37a838d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623556"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661328"
 ---
-# <a name="tm-commit-tran-completed-event-class"></a>TM: Commit Tran Completed 事件類別
+# <a name="tm-commit-tran-completed-event-class"></a>TM：Commit Tran Completed 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  TM: Commit Tran Completed 事件類別指出已完成 COMMIT TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。 EventSubClass 資料行指出在認可目前交易之後，是否會啟動新交易。  
+  TM：Commit Tran Completed 事件類別會指出已完成 COMMIT TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。 EventSubClass 資料行指出在認可目前交易之後，是否會啟動新交易。  
   
-## <a name="tm-commit-tran-completed-event-class-data-columns"></a>TM: Commit Tran Completed 事件類別資料行  
+## <a name="tm-commit-tran-completed-event-class-data-columns"></a>TM：Commit Tran Completed 事件類別資料行  
   
 |資料行名稱|資料類型|Description|資料行識別碼|是|  
 |----------------------|---------------|-----------------|---------------|---------|  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ea3c26affaac50e791a9d18d68911850a1ac53f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688616"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797142"
 ---
 # <a name="mssqlserver7936"></a>MSSQLSERVER_7936
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,12 +26,12 @@ ms.locfileid: "47688616"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|7936|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_ORPHANED_COLUMN_DIRECTORY|  
-|訊息文字|資料表錯誤: FileStream 目錄對於物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 的資料行識別碼 C_ID 存在，但是該資料行並非 FileStream 資料行。|  
+|訊息文字|資料表錯誤：物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 的資料行識別碼 C_ID 存在 Filestream 目錄，但是該資料行並非 Filestream 資料行。|  
   
 ## <a name="explanation"></a>說明  
 在 DBCC CHECKDB 執行期間，系統已找到指定之資料行的 FILESTREAM 目錄。但是，該資料行不是 **FILESTREAM** 資料行。  

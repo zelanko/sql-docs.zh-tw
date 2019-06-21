@@ -14,10 +14,10 @@ ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 25b695456bbac34e2c6ce8bf8c312c4108dd852e
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506648"
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services 組態檔
@@ -26,16 +26,16 @@ ms.locfileid: "66506648"
  只有當您要加入或設定進階設定時，才需要修改組態檔。 組態設定會指定為 XML 元素或屬性。 如果您了解 XML 和組態檔，就可以使用文字或程式碼編輯器來修改可由使用者定義的設定。 如需如何修改設定檔的詳細資訊，或想要進一步了解報表伺服器如何讀取全新和更新的組態設定，請參閱[修改 Reporting Services 設定檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
 > [!NOTE]  
-> 在先前的版本中，報表管理員具有名為 RSWebApplication.config 的自訂組態檔。該檔案現在已過時。 如果您是從舊版安裝升級，雖然系統不會刪除該檔案，但是報表伺服器也不會從該檔案讀取任何設定。 如果該檔案存在電腦上，您就應該刪除它。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中，所有報表管理員的組態設定都是透過 RSReportServer.config 檔進行儲存和讀取。 若要檢閱已刪除或移動之設定的清單，請參閱 [SQL Server 2016 中 SQL Server Reporting Services 的重大變更](../../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)。  
+> 在先前的版本中，報表管理員具有名為 RSWebApplication.config 的自訂組態檔。該檔案現在已過時。 如果您是從舊版安裝升級，雖然系統不會刪除該檔案，但是報表伺服器也不會從該檔案讀取任何設定。 如果該檔案存在電腦上，您就應該刪除它。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中，所有報表管理員和入口網站的組態設定都是透過 RSReportServer.config 檔案進行儲存和讀取。 若要檢閱已刪除或移動之設定的清單，請參閱 [SQL Server 2016 中 SQL Server Reporting Services 的重大變更](../../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)。  
   
- 本文內容  
+ 本文內容：  
   
 -   [組態檔的摘要 (原生模式)](#bkmk_config_file_Summary_native_mode)  
   
 -   [組態檔的摘要 (SharePoint 模式)](#bkmk_config_file_Summary_sharepoint_mode)  
   
 ##  <a name="bkmk_config_file_Summary_native_mode"></a> 組態檔的摘要 (原生模式)  
- 下表將提供儲存組態設定之位置的描述。 大部分組態設定都會儲存在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]隨附的組態檔中。 根據預設，其安裝目錄如下：  
+ 下表將提供儲存組態設定之位置的描述。 大部分組態設定都會儲存在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 隨附的組態檔中。 根據預設，其安裝目錄如下：  
   
 '' 安裝路徑  
 C:\Program Files\Microsoft SQL Server\MSRSxx.MSSQLSERVER （其中 xx 是 MS SQL 版本號碼） 或  
@@ -64,9 +64,9 @@ C:\Program Files\Microsoft SQL Server Reporting Services\SSRS
 C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  
 ```  
   
-|儲存於：|Description|位置|  
+|儲存於：|描述|位置|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|儲存報表伺服器服務之功能區的組態設定：報表管理員、報表伺服器 Web 服務，以及背景處理。 如需每個設定的詳細資訊，請參閱 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。|\<安裝目錄> \Reporting Services\ReportServer|  
+|RSReportServer.config|儲存報表伺服器服務之功能區的組態設定：報表管理員或入口網站、報表伺服器 Web 服務，以及背景處理。 如需每個設定的詳細資訊，請參閱 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。|\<安裝目錄> \Reporting Services\ReportServer|  
 |RSSrvPolicy.config|儲存伺服器延伸模組的程式碼存取安全性原則。 如需有關這個檔案的詳細資訊，請參閱＜ [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)＞。|\<安裝目錄> \Reporting Services\ReportServer|  
 |報表伺服器 Web 服務的 Web.config|包含僅如果適用於 SSRS 版本，則需要適用於 ASP.NET 的設定。|\<安裝目錄> \Reporting Services\ReportServer|  
 |登錄設定|儲存用來解除安裝 Reporting Services 的組態狀態和其他設定。 同時儲存有關每個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的資訊。<br /><br /> 請勿直接修改這些設定，因為這樣做可能會讓安裝失效。|HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft \Microsoft SQL Server \\<執行個體識別碼\> \Setup<br /><br /> 範例執行個體識別碼：MSSQL13.MSSQLSERVER<br /><br /> **- 和 -**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Reporting Services\Service Applications|  

@@ -16,11 +16,11 @@ ms.author: sstein
 ms.manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fdc46b1d0addad193f5bc09a9bcd60fab9efe027
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418169"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62744009"
 ---
 # <a name="rename-views"></a>重新命名檢視
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,15 +35,15 @@ ms.locfileid: "52418169"
   
      [必要條件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法重新命名檢視：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [After renaming a view](#FollowUp)  
+-   **後續操作：** [重新命名檢視後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -52,7 +52,7 @@ ms.locfileid: "52418169"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要 SCHEMA 的 ALTER 權限，或 OBJECT 的 CONTROL 權限，以及資料庫的 CREATE VIEW 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -61,7 +61,7 @@ ms.locfileid: "52418169"
   
 1.  在 **[物件總管]** 中，展開資料庫，此資料庫包含您要重新命名的檢視，然後展開 **[檢視]** 資料夾。  
   
-2.  以滑鼠右鍵按一下您要重新命名的檢視，然後選取 **[重新命名]**。  
+2.  以滑鼠右鍵按一下您要重新命名的檢視，然後選取 **[重新命名]** 。  
   
 3.  輸入檢視的新名稱。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "52418169"
   
  如需詳細資訊，請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md) 和 [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md)。  
   
-##  <a name="FollowUp"></a> 待處理：重新命名檢視之後  
+##  <a name="FollowUp"></a> 後續操作：重新命名檢視後  
  確定參考檢視舊名稱的任何物件、指令碼和應用程式現在都使用新名稱。  
   
   

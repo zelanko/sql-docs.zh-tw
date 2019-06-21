@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 187a333da1f38cc89f8783b48e0c171630339c9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766177"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034835"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>時態表系統一致性檢查
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47766177"
 10. 記錄資料表不會設定處理變更追蹤或異動資料擷取。  
   
 ### <a name="data-consistency-check"></a>資料一致性檢查  
- 在 **SYSTEM_VERSIONING** 設為 **ON** 並成為任何 DML 作業的一部分之前，系統會執行下列檢查︰ **SysEndTime** ≥**SysStartTime**  
+ 在 **SYSTEM_VERSIONING** 設為 **ON** 並成為任何 DML 作業的一部分之前，系統會執行下列檢查：**SysEndTime** ≥**SysStartTime**  
   
  建立現有記錄資料表的連結時，您可以選擇執行資料一致性檢查。 這項資料一致性檢查可確保現有的記錄沒有重疊，而且每一筆個別記錄都達到暫時需求。 預設執行資料一致性檢查。 一般而言，每當目前和記錄資料表之間的資料可能不同步時，即建議執行資料一致性作業，如納入已填入歷程記錄資料的現有記錄資料表時。  
   

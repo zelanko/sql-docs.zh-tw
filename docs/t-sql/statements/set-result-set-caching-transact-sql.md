@@ -15,14 +15,14 @@ author: XiaoyuL-Preview
 ms.author: xiaoyul
 manager: craigg
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7e2c9ee878b49065a040865bc32d62837e8b8e25
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 561e92512ded10b06926f5b23f0f5d40540e3d2d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781016"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826871"
 ---
-# <a name="set-result-set-caching-transact-sql-preview-for-azure-sql-data-warehouse-gen2"></a>SET RESULT SET CACHING (Transact-SQL) (Azure SQL 資料倉儲 Gen2 預覽)
+# <a name="set-result-set-caching-transact-sql-applies-to-azure-sql-data-warehouse-gen2-only-preview"></a>SET RESULT SET CACHING (Transact-SQL) 僅適用於 Azure SQL 資料倉儲 Gen2 (預覽)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 

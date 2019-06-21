@@ -25,11 +25,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 31eda87e2a1934c5f18d73540a502880590445e8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207657"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051502"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -129,7 +129,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 -   組件二進位具有有效的中繼資料和程式碼區段，格式良好，而且程式碼區段也具有有效的 Microsoft 中繼語言 (MSIL) 指示。  
   
--   它所參考的系統組件集是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中下列支援組件的其中一個：Microsoft.Visualbasic.dll、 Mscorlib.dll、 System.Data.dll、 System.dll、 System.Xml.dll、 Microsoft.Visualc.dll、 Custommarshallers.dll、 System.Security.dll、 System.Web.Services.dll、 System.Data.SqlXml.dll、 System.Core.dll 和 System.Xml.Linq.dll。 也可以參考其他系統組件，但是它們必須在資料庫中明確註冊。  
+-   它所參考的系統組件集是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中下列支援組件的其中一個：Microsoft.Visualbasic.dll、Mscorlib.dll、System.Data.dll、System.dll、System.Xml.dll、Microsoft.Visualc.dll、Custommarshallers.dll、System.Security.dll、System.Web.Services.dll、System.Data.SqlXml.dll、System.Core.dll，以及 System.Xml.Linq.dll。 也可以參考其他系統組件，但是它們必須在資料庫中明確註冊。  
   
 -   以 SAFE 或 EXTERNAL ACCESS 權限集合加以建立的組件：  
   
@@ -149,7 +149,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  如需詳細資訊，請參閱[設計組件](../../relational-databases/clr-integration/assemblies-designing.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 CREATE ASSEMBLY 權限。  
   
  如果指定 PERMISSION_SET = EXTERNAL_ACCESS，則需要伺服器的 **EXTERNAL ACCESS ASSEMBLY** 權限。 如果未指定 PERMISSION_SET = UNSAFE，則伺服器上需要 **UNSAFE ASSEMBLY** 權限。  

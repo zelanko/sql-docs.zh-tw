@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6c44870c5c562f2dc28fa5e7b94c3547c425cee4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597207"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025272"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>移除無用的檔案群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47597207"
   
 -   [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目移除無用的檔案群組：**  
   
@@ -70,15 +70,15 @@ ms.locfileid: "47597207"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開 **[資料庫]**，以滑鼠右鍵按一下要從中刪除檔案的資料庫，再按一下 **[屬性]**。  
+2.  展開 **[資料庫]** ，以滑鼠右鍵按一下要從中刪除檔案的資料庫，再按一下 **[屬性]** 。  
   
 3.  選取 **[檔案]** 頁面。  
   
-4.  在 **[資料庫檔案]** 方格中，選取要刪除的檔案，按一下 **[移除]**，然後按一下 **[確定]**。  
+4.  在 **[資料庫檔案]** 方格中，選取要刪除的檔案，按一下 **[移除]** ，然後按一下 **[確定]** 。  
   
 5.  選取 **[檔案群組]** 頁面。  
   
-6.  在 **[資料列]** 方格中，選取要刪除的檔案群組，按一下 **[移除]**，然後按一下 **[確定]**。  
+6.  在 **[資料列]** 方格中，選取要刪除的檔案群組，按一下 **[移除]** ，然後按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -86,9 +86,9 @@ ms.locfileid: "47597207"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 (**注意：** 這個範例假設檔案和檔案群組都已經存在。 若要建立這些物件，請參閱 [ALTER DATABASE 檔案及檔案群組選項](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)主題中的範例 B。)第一個範例會使用 `test1dat3` 陳述式搭配 `test1dat4` 子句，從無用的檔案群組中移除 `ALTER DATABASE` 和 `REMOVE FILE` 檔案。 第二個範例會使用 `Test1FG1` 子句，移除無用的檔案群組 `REMOVE FILEGROUP`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 **注意：** 此範例假設檔案和檔案群組都已經存在。 若要建立這些物件，請參閱 [ALTER DATABASE 檔案及檔案群組選項](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)主題中的範例 B。)第一個範例會使用 `test1dat3` 陳述式搭配 `test1dat4` 子句，從無用的檔案群組中移除 `ALTER DATABASE` 和 `REMOVE FILE` 檔案。 第二個範例會使用 `Test1FG1` 子句，移除無用的檔案群組 `REMOVE FILEGROUP`。  
   
 ```sql  
 USE master;  

@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c041ee4a56b2df2190eabb0da0ef472f0b8ee49
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397051"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63008557"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>SQL Server Managed Backup to Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "52397051"
  您可以使用系統預存程序 [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)。 如果您未指定自訂的備份排程，排程的備份類型及備份頻率會取決於資料庫的工作負載。 保留週期設定可用於指定備份檔案保留在儲存體中的時間，以及能否將資料庫復原至保留週期內的時間點。  
   
 ### <a name="backup-file-naming-conventions"></a>備份檔案命名慣例  
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 會使用您指定的容器，因此您就能控制容器的名稱。 針對備份檔案，非可用性資料庫的命名慣例是使用資料庫名稱的前 40 個字元，加上不含 '-' 的資料庫 GUID 與時間戳記。 區段之間會插入底線字元做為分隔符號。 完整備份會使用副檔名 **.bak** ，記錄備份則會使用 **.log** 。 對於可用性群組資料庫而言，除了上面所述的檔案命名慣例以外，可用性群組資料庫 GUID 會加在資料庫名稱的 40 個字元之後。 可用性群組資料庫 GUID 值是 sys.databases 中的 group_database_id 值。  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 會使用您指定的容器，因此您就能控制容器的名稱。 針對備份檔案，非可用性資料庫會使用下列慣例命名：名稱是使用資料庫名稱的前 40 個字元、資料庫 GUID (去除 '-')，以及時間戳記來建立。 區段之間會插入底線字元做為分隔符號。 完整備份會使用副檔名 **.bak** ，記錄備份則會使用 **.log** 。 對於可用性群組資料庫而言，除了上面所述的檔案命名慣例以外，可用性群組資料庫 GUID 會加在資料庫名稱的 40 個字元之後。 可用性群組資料庫 GUID 值是 sys.databases 中的 group_database_id 值。  
   
 ### <a name="full-database-backup"></a>完整資料庫備份  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 代理程式會進行完整資料庫備份排程。  
@@ -100,7 +100,7 @@ ms.locfileid: "52397051"
 -   交易紀錄備份一律會在完整資料庫備份之後執行。 其目的在保留完整備份之前的記錄檔鏈結。  
   
 ## <a name="retention-period-settings"></a>保留週期設定  
- 啟用備份時，必須設定保留週期的天數：最小值是 1 天，最大值是 30 天。  
+ 啟用備份時，您必須設定保留期間，以天為單位：最少是 1 天，最多是 30 天。  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 會根據保留週期設定，評估能否在指定的時間內，復原到某個時間點，從而決定所要保留的備份檔案，以及指定所要刪除的備份檔案。 備份的 backup_finish_date 會用於指定及比對保留週期設定所指定的時間。  
   

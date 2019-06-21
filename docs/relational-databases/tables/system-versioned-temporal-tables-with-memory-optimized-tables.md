@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3bd467691d8b96a823013fa3f9f45655b0857cf0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658073"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62751615"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>系統版本設定時態表與記憶體最佳化資料表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "51658073"
 ## <a name="the-internal-memory-optimized-staging-table"></a>內部記憶體最佳化暫存資料表  
  內部記憶體最佳化暫存資料表是由系統建立的內部物件，用來最佳化 DML 作業。  
   
--   資料表名稱會以下列格式產生：**Memory_Optimized_History_Table_<物件識別碼>**，其中 <物件識別碼> 是目前時態表的識別碼。  
+-   資料表名稱會以下列格式產生：**Memory_Optimized_History_Table_<物件識別碼>** ，其中 <物件識別碼>  是目前時態表的識別碼。  
   
 -   資料表會複寫目前時態表的結構描述，加上一個 BIGINT 資料行。 這個額外的資料行可保證移動到內部歷程記錄緩衝區之資料列的唯一性。  
   
--   額外的資料行具有下列名稱格式：**Change_ID[_<後置詞>]**，其中 *_\<後置詞>* 是在資料表已經有 *Change_ID* 資料行時選擇性加入。  
+-   其他資料行具有下列名稱格式：**Change_ID[_<尾碼>]** ，其中 _\<尾碼>  是在資料表已經有 *Change_ID* 資料行時選擇性新增。  
   
 -   因為暫存資料表中額外的 BIGINT 資料行，系統建立版本記憶體最佳化資料表的資料列大小上限減少 8 個位元組。 現在新的最大值為 8052 位元組。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "51658073"
  資料排清會刪除比目前執行之最舊的交易還舊的記憶體內部內部緩衝區記錄，將這些記錄移動到磁碟歷程記錄資料表。  
   
  您可以叫用 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) 並指定結構描述和資料表名稱來強制執行資料排清：   
-**sys.sp_xtp_flush_temporal_history @schema_name，@object_name**。 利用這個使用者執行的命令，當資料排清工作由系統依據內部排程叫用時，會叫用相同的資料移動程序。  
+**sys.sp_xtp_flush_temporal_history @schema_name，@object_name** 。 利用這個使用者執行的命令，當資料排清工作由系統依據內部排程叫用時，會叫用相同的資料移動程序。  
   
 ## <a name="see-also"></a>另請參閱  
  [時態表](../../relational-databases/tables/temporal-tables.md)   

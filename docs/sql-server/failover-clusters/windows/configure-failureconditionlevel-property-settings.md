@@ -11,17 +11,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de1f8d1a64a7db68780509c27c8ceb219ce0917f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695591"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63037256"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>設定 FailureConditionLeve 屬性設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用 FailureConditionLevel 屬性，即可將 AlwaysOn 容錯移轉叢集執行個體 (FCI) 的條件設定為容錯移轉或重新啟動。 對這個屬性的變更會立即套用，而不需要重新啟動 Windows Server 容錯移轉叢集 (WSFC) 服務或 FCI 資源。  
   
--   **開始之前**  [FailureConditionLevel 屬性設定](#Restrictions)， [安全性](#Security)  
+-   **開始之前：** [FailureConditionLevel 屬性設定](#Restrictions)[安全性](#Security)  
   
 -   **To configure the FailureConditionLevel property settings using,** [PowerShell](#PowerShellProcedure), [Failover Cluster Manager](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "51695591"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要 ALTER SETTINGS 及 VIEW SERVER STATE 權限。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
@@ -74,7 +74,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 2.  展開 **[服務及應用程式]** 並選取 FCI。  
   
-3.  以滑鼠右鍵按一下 [其他資源] 下方的 [SQL Server 資源]，然後從功能表中選取 [屬性]。 SQL Server 資源的 **[屬性]** 對話方塊隨即開啟。  
+3.  以滑鼠右鍵按一下 [其他資源]  下方的 [SQL Server 資源]  ，然後從功能表中選取 [屬性]  。 SQL Server 資源的 **[屬性]** 對話方塊隨即開啟。  
   
 4.  選取 **[屬性]** 索引標籤，為 **[FaliureConditionLevel]** 屬性輸入所要的值，然後再按一下 **[確定]** 以套用變更。  
   

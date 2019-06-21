@@ -1,5 +1,5 @@
 ---
-title: 'TM: Begin Tran Starting 事件類別 | Microsoft 文件'
+title: TM：Begin Tran Starting 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4a54b50078edc7b15e13e2567cd7231ed8ea9b8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734994"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661593"
 ---
-# <a name="tm-begin-tran-starting-event-class"></a>TM: Begin Tran Starting 事件類別
+# <a name="tm-begin-tran-starting-event-class"></a>TM：Begin Tran Starting 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  TM：Begin Tran Starting 事件類別指出正在開始 BEGIN TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。  
+  TM：Begin Tran Starting 事件類別會指出正在啟動 BEGIN TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。  
   
 ## <a name="tm-begin-tran-starting-event-class-data-columns"></a>TM：Begin Tran Starting 事件類別資料行  
   

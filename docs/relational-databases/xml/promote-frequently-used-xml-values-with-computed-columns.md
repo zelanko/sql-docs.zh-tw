@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a92ea4fd7b16715cdea3994d8ab68fa0ef047c4
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510545"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939042"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用計算資料行升級常用的 XML 值
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   在 XML 資料行上建立觸發程序，以維護屬性資料表。 在觸發程序中執行下列其中之一：  
   
-    -   使用 **xml** 資料類型方法，例如： **nodes()** 和 **value()**，進而插入及刪除屬性資料表的資料列。  
+    -   使用 **xml** 資料類型方法，例如： **nodes()** 和 **value()** ，進而插入及刪除屬性資料表的資料列。  
   
     -   在 Common Language Runtime (CLR) 中建立資料流資料表值函式，以插入及刪除屬性資料表的資料列。  
   
