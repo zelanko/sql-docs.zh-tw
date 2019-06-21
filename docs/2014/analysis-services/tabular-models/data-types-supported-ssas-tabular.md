@@ -10,12 +10,12 @@ ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 585ce68402e8922f6c9629d8f4e8cd517218106f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c395bb74e8bde83bc2f89fa07f541183297300b
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067279"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284932"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>支援的資料類型 (SSAS 表格式)
   本文描述可用於表格式模型中的資料類型，並討論在 Data Analysis Expressions (DAX) 公式中計算或使用資料時，隱含的資料類型轉換。  
@@ -68,7 +68,7 @@ ms.locfileid: "66067279"
 >  您不能從字串長度超過 131,072 個字元的 **varchar(max)** 資料行匯入。  
   
 ### <a name="table-data-type"></a>資料表資料類型  
- 此外，DAX 還使用 *「資料表」* (Table) 資料類型。 DAX 會在許多函數中使用這個資料類型，例如彙總與時間智慧計算。 有些函數需要使用資料表的參考；有些函數則會傳回之後可當做其他函數輸入使用的資料表。 在需要資料表當做輸入的部分函數中，您可以指定評估為資料表的運算式；對於某些函數，則需要基底資料表的參考。 如需特定函數需求的相關資訊，請參閱 [DAX 函數參考](https://msdn.microsoft.com/library/ee634396.aspx)。  
+ 此外，DAX 還使用 *「資料表」* (Table) 資料類型。 DAX 會在許多函數中使用這個資料類型，例如彙總與時間智慧計算。 有些函數需要使用資料表的參考；有些函數則會傳回之後可當做其他函數輸入使用的資料表。 在需要資料表當做輸入的部分函數中，您可以指定評估為資料表的運算式；對於某些函數，則需要基底資料表的參考。 如需特定函數需求的相關資訊，請參閱 [DAX 函數參考](/dax/dax-function-reference)。  
   
 ##  <a name="bkmk_implicit"></a> DAX 公式中隱含與明確的資料類型轉換  
  每個 DAX 函數對於當做輸入與輸出使用之資料的類型都有特定需求。 例如，某些函數需要整數做為部分引數並需要日期做為其他引數；其他函數則需要文字或資料表。  
@@ -188,7 +188,7 @@ ms.locfileid: "66067279"
 |BLANK OR BLANK|BLANK|錯誤|  
 |BLANK AND BLANK|BLANK|錯誤|  
   
- 如需特定函數或運算子如何處理空白的詳細資訊，請參閱 [DAX 函數參考](https://msdn.microsoft.com/library/ee634396.aspx)一節中，每個 DAX 函數的個別主題。  
+ 如需特定函數或運算子如何處理空白的詳細資訊，請參閱 [DAX 函數參考](/dax/dax-function-reference)一節中，每個 DAX 函數的個別主題。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料來源 (SSAS 表格式)](../data-sources-ssas-tabular.md)   

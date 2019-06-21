@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 172b96b63f65b5ee8b576ba6ee9c18aad18e3531
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 82fa4ef2f47143afe8f2331469a1eb07fd9b2522
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744448"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796231"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>常數 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -68,11 +68,11 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT 屬性是任何代表逾時期間 (秒) 的非負
 ### <a name="handling-numeric-fetches"></a>處理數值擷取
 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性可用來處理從資料行的數值提取和數值 SQL 型別 （位元、 整數、 smallint、 tinyint、 float 和 real）。 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 當設定為 true 時，整數資料行的結果會會表示為 int，而 SQL 浮點數和 reals 會表示為浮點數。 這個屬性可以設定具有[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)。 
 
-您可以修改預設十進位 PDO::SQLSRV_ATTR_FORMAT_DECIMALS 和 PDO::SQLSRV_ATTR_DECIMAL_PLACES 屬性格式化行為。 這些屬性的行為等同於 SQLSRV 一端對應的選項 (**FormatDecimals**並**DecimalPlaces**)，不同之處在於不支援輸出參數的格式。 這些屬性可能設定在連接或陳述式層級，使用[pdo:: setattribute](../../connect/php/pdo-setattribute.md)或[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)，但任何陳述式屬性將會覆寫對應連接屬性。 如需詳細資訊，請參閱 <<c0> [ 格式化為十進位字串和貨幣值 （PDO_SQLSRV 驅動程式）](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。
+您可以修改預設十進位 PDO::SQLSRV_ATTR_FORMAT_DECIMALS 和 PDO::SQLSRV_ATTR_DECIMAL_PLACES 屬性格式化行為。 這些屬性的行為等同於 SQLSRV 一端對應的選項 (**FormatDecimals**並**DecimalPlaces**)，不同之處在於不支援輸出參數的格式。 這些屬性可能設定在連接或陳述式層級，使用[pdo:: setattribute](../../connect/php/pdo-setattribute.md)或[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)，但任何陳述式屬性將會覆寫對應連接屬性。 如需詳細資訊，請參閱[將十進位字串及貨幣值格式化 (PDO_SQLSRV 驅動程式)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。
 
 ### <a name="handling-date-and-time-fetches"></a>處理日期和時間擷取
 
-PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要擷取日期和時間類型作為[PHP DateTime](http://php.net/manual/en/class.datetime.php)物件。 如果保留，則為 false，預設行為是以字串傳回它們。 這個屬性可能設定在連接或陳述式層級，使用[pdo:: setattribute](../../connect/php/pdo-setattribute.md)或[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)，但陳述式屬性將會覆寫對應連接屬性。 如需詳細資訊，請參閱 <<c0> [ 如何： 擷取日期和時間類型做為 PHP DateTime 物件使用 PDO_SQLSRV 驅動程式](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。
+PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要擷取日期和時間類型作為[PHP DateTime](http://php.net/manual/en/class.datetime.php)物件。 如果保留 false，則預設行為是以字串形式傳回它們。 這個屬性可能設定在連接或陳述式層級，使用[pdo:: setattribute](../../connect/php/pdo-setattribute.md)或[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)，但陳述式屬性將會覆寫對應連接屬性。 如需詳細資訊，請參閱[操作說明：使用 PDO_SQLSRV 驅動程式以 PHP DateTime 物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV 驅動程式常數  
 下列各節列出 SQLSRV 驅動程式所使用的常數。  

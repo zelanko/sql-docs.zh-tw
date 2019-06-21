@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1fa6c6e18620c0e80576e864eca246c524eb0c5d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 8aea7a5a74ae85563234c1f40f5faae1213e75de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601038"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789951"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>下載 ODBC Driver for SQL Server
 
@@ -26,7 +26,7 @@ ms.locfileid: "51601038"
 
 - [下載 Microsoft ODBC Driver 17 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=56567)
 
-### <a name="linux-and-macos"></a>Linux 和 macOS
+### <a name="linux-and-macos"></a>Linux 與 macOS
 
 #### <a name="debian"></a>Debian
 - [Debian 9.deb 套件](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql17/)
@@ -37,8 +37,8 @@ ms.locfileid: "51601038"
 - [RedHat 6.rpm 套件 (msodbcsql17-*)](https://packages.microsoft.com/rhel/6.8/prod/)
 
 #### <a name="suse"></a>Suse
-- [SuSE 12.rpm 封裝 (msodbcsql17-*)](https://packages.microsoft.com/sles/12/prod/)
-- [SuSE 11.rpm 套件 (msodbcsql17-*)](https://packages.microsoft.com/sles/11/prod/)
+- [SuSE 12 .rpm 套件 (msodbcsql17-*)](https://packages.microsoft.com/sles/12/prod/)
+- [SuSE 11 .rpm 套件 (msodbcsql17-*)](https://packages.microsoft.com/sles/11/prod/)
 
 #### <a name="ubuntu"></a>Ubuntu
 - [Ubuntu 18.04.deb 套件](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
@@ -58,7 +58,7 @@ ms.locfileid: "51601038"
 - [下載 Microsoft ODBC Driver 13.1 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=53339)
 - [下載 Microsoft Command Line Utilities 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53591)
 
-### <a name="linux-and-macos"></a>Linux 和 macOS
+### <a name="linux-and-macos"></a>Linux 與 macOS
 
 #### <a name="debian"></a>Debian
 - [Debian 8.deb 套件](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
@@ -69,7 +69,7 @@ ms.locfileid: "51601038"
 
 #### <a name="suse"></a>Suse
 - [SuSE 12.rpm 封裝 (msodbcsql-*)](https://packages.microsoft.com/sles/12/prod/)
-- [SuSE 11.rpm 套件 (msodbcsql-*)](https://packages.microsoft.com/sles/11/prod/)
+- [SuSE 11 .rpm 套件 (msodbcsql-*)](https://packages.microsoft.com/sles/11/prod/)
 
 #### <a name="ubuntu"></a>Ubuntu
 - [Ubuntu 17.04.deb 套件](https://packages.microsoft.com/ubuntu/17.04/prod/pool/main/m/msodbcsql/)

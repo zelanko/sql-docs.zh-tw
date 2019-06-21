@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 92e30537-5fd9-4b67-8b0f-486c6e840e03
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77cf26575352325acfeb6202f6cc3df84555bec4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9b3de4aa91f3b3d115d57a3e88c58c7e1acc6220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727476"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66793012"
 ---
 # <a name="getlong-method-javalangstring"></a>getLong 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public long getLong(java.lang.String sCol)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此 getLong 方法由 java.sql.CallableStatement 介面中的 getLong 方法指定。  
   
  只有可以安全傳回整數值 (如 **bigint**、**int**、**smallint**、**tinyint** 和 **bit**) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型才支援這個方法。 對任何其他資料類型使用這個方法，將擲回例外狀況。  

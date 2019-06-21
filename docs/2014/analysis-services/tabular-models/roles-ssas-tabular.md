@@ -10,12 +10,12 @@ ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77114194f36ac24ff34e48b580513a939d8a4467
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066633"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284866"
 ---
 # <a name="roles-ssas-tabular"></a>角色 (SSAS 表格式)
   表格式模型中的角色定義模型的成員權限。 每個角色都包含成員 (依 Windows 使用者名稱或 Windows 群組列出) 和權限 (讀取、處理、系統管理員)。 角色的成員可以依角色權限所定義，對模型執行動作。 以讀取權限定義的角色也可以使用資料列層級篩選，在資料列層級提供額外的安全性。  
@@ -75,7 +75,7 @@ ms.locfileid: "66066633"
   
  只有具有「讀取」及「讀取和處理」權限的角色，才可以定義資料列篩選。 根據預設，如果特定資料表未定義資料列篩選，除非從其他資料表套用交叉篩選，否則具有「讀取」或「讀取和處理」權限的角色成員將可以查詢資料表中的所有資料列。  
   
- 定義特定資料表的資料列篩選之後，必須評估為 TRUE/FALSE 值的 DAX 公式即會定義該特定角色成員可以查詢的資料列。 無法查詢 DAX 公式中未包含的資料列。 例如，對於 Sales 角色成員，具有下列資料列的 [客戶] 資料表篩選運算式 *= Customers [Country] ="USA"* ，Sales 角色成員只能看到美國的客戶。  
+ 定義特定資料表的資料列篩選之後，必須評估為 TRUE/FALSE 值的 DAX 公式即會定義該特定角色成員可以查詢的資料列。 無法查詢 DAX 公式中未包含的資料列。 例如，對於 Sales 角色成員，具有下列資料列的 [客戶] 資料表篩選運算式 *= Customers [Country] ="USA"*，Sales 角色成員只能看到美國的客戶。  
   
  資料列篩選會套用至指定的資料列及相關的資料列。 當資料表具有多個關聯性時，篩選會對作用中關聯性套用安全性。 資料列篩選會與針對相關資料表定義的其他資料列篩選進行交叉篩選，例如：  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66066633"
   
  對 Transactions 資料表套用這些權限的結果如下：成員可以查詢美國客戶、自行車產品類別目錄及 2008 年的資料列。 使用者將無法查詢美國以外地區、非自行車及非 2008 年的任何交易，除非成為授與這些權限的其他角色成員。  
   
- 您可以使用篩選 ( *=FALSE()* ) 拒絕存取整個資料表的所有資料列。  
+ 您可以使用篩選 ( *=FALSE()*) 拒絕存取整個資料表的所有資料列。  
   
 ### <a name="dynamic-security"></a>動態安全性  
  動態安全性可根據下列項目來定義資料列層級安全性：目前登入使用者的使用者名稱或從連接字串所傳回的 CustomData 屬性。 若要實作動態安全性，您必須在模型中加入包含使用者登入 (Windows 使用者名稱) 值以及可用來定義特定權限之欄位的資料表，例如具有登入 ID (domain\username) 以及每個員工部門值的 dimEmployees 資料表。  
@@ -96,8 +96,8 @@ ms.locfileid: "66066633"
   
 |函數|描述|  
 |--------------|-----------------|  
-|[USERNAME 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)|傳回目前登入使用者的 domain\username。|  
-|[CUSTOMDATA 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)|傳回連接字串中的 CustomData 屬性。|  
+|[USERNAME 函式&#40;DAX&#41;](/dax/username-function-dax)|傳回目前登入使用者的 domain\username。|  
+|[CUSTOMDATA 函式&#40;DAX&#41;](/dax/customdata-function-dax)|傳回連接字串中的 CustomData 屬性。|  
   
  您可以使用 LOOKUPVALUE 函數傳回資料行值，其中 Windows 使用者名稱與 USERNAME 函數傳回的使用者名稱或 CustomData 函數傳回的字串相同。 然後，可以限制查詢，其中 LOOKUPVALUE 所傳回的值會符合相同或相關資料表中的值。  
   
@@ -129,19 +129,19 @@ ms.locfileid: "66066633"
 |7|Sales and Marketing|  
   
 ##  <a name="bkmk_testroles"></a> 測試角色  
- 在撰寫模型專案時，您可以使用 [在 Excel 中進行分析] 功能，測試所定義之角色的效用。 請從模型設計師中的 **[模型]** 功能表，按一下 **[在 Excel 中進行分析]** ， **[選擇認證和檢視方塊]** 對話方塊即會在 Excel 開啟前出現。 在這個對話方塊中，您可指定目前的使用者名稱、其他使用者名稱、角色，以及您想用來連接至做為資料來源之工作空間模型的檢視方塊。 如需詳細資訊，請參閱本主題稍後的 [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](analyze-in-excel-ssas-tabular.md)中的 [角色管理員] 對話方塊來定義角色的表格式模型作者。  
+ 在撰寫模型專案時，您可以使用 [在 Excel 中進行分析] 功能，測試所定義之角色的效用。 請從模型設計師中的 **[模型]** 功能表，按一下 **[在 Excel 中進行分析]**， **[選擇認證和檢視方塊]** 對話方塊即會在 Excel 開啟前出現。 在這個對話方塊中，您可指定目前的使用者名稱、其他使用者名稱、角色，以及您想用來連接至做為資料來源之工作空間模型的檢視方塊。 如需詳細資訊，請參閱本主題稍後的 [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](analyze-in-excel-ssas-tabular.md)中的 [角色管理員] 對話方塊來定義角色的表格式模型作者。  
   
 ##  <a name="bkmk_rt"></a> 相關工作  
   
 |主題|描述|  
 |-----------|-----------------|  
-|[建立及管理角色 &#40;SSAS 表格式&#41;](create-and-manage-roles-ssas-tabular.md)|此主題中的工作描述如何使用 [角色管理員]  對話方塊來建立及管理角色。|  
+|[建立及管理角色 &#40;SSAS 表格式&#41;](create-and-manage-roles-ssas-tabular.md)|此主題中的工作描述如何使用 [角色管理員] 對話方塊來建立及管理角色。|  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視方塊 &#40;SSAS 表格式&#41;](perspectives-ssas-tabular.md)   
  [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](analyze-in-excel-ssas-tabular.md)   
- [USERNAME 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [LOOKUPVALUE 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
- [CUSTOMDATA 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [USERNAME 函式&#40;DAX&#41;](/dax/username-function-dax)   
+ [LOOKUPVALUE 函式&#40;DAX&#41;](/dax/lookupvalue-function-dax)   
+ [CUSTOMDATA 函式&#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

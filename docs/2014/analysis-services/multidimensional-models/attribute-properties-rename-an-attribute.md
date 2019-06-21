@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df6f25841231bbfc8821cb5a7c42c4687544f407
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077217"
 ---
 # <a name="rename-an-attribute"></a>重新命名屬性
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的屬性 (attribute) 名稱，是由它的 **Name** 屬性 (property) 所定義。 若要重新命名屬性，請以滑鼠右鍵按一下 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 維度設計師中，[維度結構] 索引標籤的 [屬性] 窗格內的屬性，然後按一下 [重新命名]。 如果 **[屬性]** 窗格是在方格檢視中，請按一下屬性的名稱，並直接在方格中編輯它。 您也可以選取屬性，並在 **[屬性]** 視窗中設定它的 **Name** 屬性。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的屬性 (attribute) 名稱，是由它的 **Name** 屬性 (property) 所定義。 若要重新命名屬性，請以滑鼠右鍵按一下 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 維度設計師中，[維度結構]  索引標籤的 [屬性]  窗格內的屬性，然後按一下 [重新命名]  。 如果 **[屬性]** 窗格是在方格檢視中，請按一下屬性的名稱，並直接在方格中編輯它。 您也可以選取屬性，並在 **[屬性]** 視窗中設定它的 **Name** 屬性。  
   
  如需如何重新命名屬性的詳細資訊，請參閱 [將屬性繫結至索引鍵資料行](attribute-properties-bind-an-attribute-to-a-key-column.md)。  
   

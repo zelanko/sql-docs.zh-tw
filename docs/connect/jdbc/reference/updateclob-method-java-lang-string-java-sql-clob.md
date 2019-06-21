@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 5da64915-1c13-44fd-90c0-52168889bae0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 78a894683ec3d85012e96ac8e8378b17a9baceac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bcd8f232a72994a1d970b9c90d146e05406de63a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735056"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66804283"
 ---
 # <a name="updateclob-method-javalangstring-javasqlclob"></a>updateClob 方法 (java.lang.String, java.sql.Clob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,8 +48,8 @@ public void updateClob(java.lang.String columnName,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- UpdateClob 方法 java.sql.ResultSet 介面中所指定這個 updateClob 方法。  
+## <a name="remarks"></a>備註  
+ 這個 updateClob 方法是由 java.sql.ResultSet 介面中的 updateClob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [updateClob 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   

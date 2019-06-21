@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 9681ddf0946627306a64c099d2df1c242d95bcbe
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66762805"
 ---
 # <a name="getnstring-method-javalangstring-sqlserverresultset"></a>getNString 方法 (java.lang.String) (SQLServerResultSet)
@@ -41,10 +41,10 @@ public java.lang.String getNString(java.lang.String columnLabel)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getNString 方法是由 java.sql.CallableStatement 介面中的 getNString 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getNString 方法是由 java.sql.SQLServerResultSet 介面中的 getNString 方法指定。  
   
- 這個方法可用來擷取值**nvarchar**， **nchar**， **nvarchar （max)** ， **ntext**，或**xml**中目前的資料列，這個資料行[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。 如果嘗試使用這個方法來擷取其他資料類型的值，將擲回例外狀況。  
+ 這個方法可用來擷取值**nvarchar**， **nchar**， **nvarchar （max)**， **ntext**，或**xml**中目前的資料列，這個資料行[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。 如果嘗試使用這個方法來擷取其他資料類型的值，將擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱  
  [getNString 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   

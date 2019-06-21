@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4b83978f35dadff86e231b93b836c7ffdd1e0f08
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 11fa40f3cdeb93463f3e5f66975e83e5d12dd6d4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676046"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797733"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式以字串形式擷取日期和時間類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -195,4 +195,4 @@ sqlsrv_close($conn);
 ## <a name="see-also"></a>另請參閱
 [擷取資料](../../connect/php/retrieving-data.md)
 
-[如何： 擷取為 PHP Datetime 物件，使用 PDO_SQLSRV 的日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
+[如何：使用 PDO_SQLSRV 以 PHP 日期時間物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)

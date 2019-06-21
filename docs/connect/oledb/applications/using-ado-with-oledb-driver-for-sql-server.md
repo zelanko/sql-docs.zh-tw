@@ -17,10 +17,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 1906ad25e9bb170b8979f44757ec5742ad9ec6c4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66778053"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>搭配使用 ADO 與 OLE DB Driver for SQL Server
@@ -33,7 +33,7 @@ ms.locfileid: "66778053"
  為了讓 ADO 使用最新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的新功能，我們已經對 OLE DB Driver for SQL Server 新增了一些增強功能，以便擴充 OLE DB 的核心功能。 這些增強功能可讓 ADO 應用程式使用較新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能，以及取用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 所導入的兩種資料類型：**xml** 和 **udt**。 這些增強功能也會利用 **varchar**、**nvarchar** 和 **varbinary** 資料類型的增強功能。 OLE DB Driver for SQL Server 會將 SSPROP_INIT_DATATYPECOMPATIBILITY 初始化屬性新增至 ADO 應用程式所使用的 DBPROPSET_SQLSERVERDBINIT 屬性集，以便使用與 ADO 相容的方式來公開這些新的資料類型。 此外，OLE DB Driver for SQL Server 也會定義新的連接字串關鍵字，名為**DataTypeCompatibility**設定連接字串中。  
 
 > [!NOTE]  
->  現有的 ADO 應用程式可以使用 SQLOLEDB 提供者來存取並更新 XML、UDT 和大數值文字與二進位欄位值。 新的較大 **varchar(max)** 、**nvarchar(max)** 和 **varbinary(max)** 資料類型會分別傳回成 ADO 類型 **adLongVarChar**、**adLongVarWChar** 和 **adLongVarBinary**。 XML 資料行會傳回成 **adLongVarChar**，而且 UDT 資料行會傳回成 **adVarBinary**。 不過，如果您使用 OLE DB Driver for SQL Server (MSOLEDBSQL) 取代 SQLOLEDB，您必須確定設定**DataTypeCompatibility**關鍵字為"80"，讓新的資料類型會正確對應至 ADO 資料類型。  
+>  現有的 ADO 應用程式可以使用 SQLOLEDB 提供者來存取並更新 XML、UDT 和大數值文字與二進位欄位值。 新的較大 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 資料類型會分別傳回成 ADO 類型 **adLongVarChar**、**adLongVarWChar** 和 **adLongVarBinary**。 XML 資料行會傳回成 **adLongVarChar**，而且 UDT 資料行會傳回成 **adVarBinary**。 不過，如果您使用 OLE DB Driver for SQL Server (MSOLEDBSQL) 取代 SQLOLEDB，您必須確定設定**DataTypeCompatibility**關鍵字為"80"，讓新的資料類型會正確對應至 ADO 資料類型。  
 
 ## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>啟用 OLE DB Driver for SQL Server 從 ADO  
  若要能夠使用 OLE DB Driver for SQL Server，ADO 應用程式必須在其連接字串中實作下列關鍵字：  
@@ -42,7 +42,7 @@ ms.locfileid: "66778053"
 
 -   `DataTypeCompatibility=80`  
 
- 如需 OLE DB Driver for SQL Server 中連接字串關鍵字的詳細資訊，請參閱[利用 OLE DB Driver for SQL Server 使用連接字串關鍵字](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
+ 如需 OLE DB Driver for SQL Server 中支援之 ADO 連接字串關鍵字的詳細資訊，請參閱[利用 OLE DB Driver for SQL Server 使用連接字串關鍵字](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
 
  下列範例會建立完全啟用成可使用 OLE DB Driver for SQL Server 的 ADO 連接字串，包括啟用 MARS 功能：  
 

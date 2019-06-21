@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cce1203b73f5a1685634c4b50f6e5941bed3eb98
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62671316"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>使用 Microsoft 時序叢集檢視器瀏覽模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 時序叢集檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法是時序分析演算法，用來瀏覽包含事件的資料，這些事件可透過遵循路徑或 *時序*加以連結。 如需這個演算法的詳細資訊，請參閱 [Microsoft 時序群集演算法](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 時序叢集檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法是時序分析演算法，用來瀏覽包含事件的資料，這些事件可透過遵循路徑或 *時序*加以連結。 如需這個演算法的詳細資訊，請參閱 [Microsoft 時序群集演算法](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)。  
   
 > [!NOTE]  
 >  若要檢視有關此模型中所用的方程式及所探索之模式的詳細資訊，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容樹狀檢視器。 如需詳細資訊，請參閱[使用 Microsoft 一般內容樹狀檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)。  
@@ -42,11 +42,11 @@ ms.locfileid: "62671316"
 ###  <a name="BKMK_Diagram"></a> 群集圖表  
  **時序群集檢視器的** [群集圖表] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 索引標籤，會顯示採礦模型中的所有群集。 連接一個群集與另一個群集的線條陰影代表群集的相似程度。 如果陰影很淡或不存在，則表示群集不太相似。 當線條色彩加深時，連結的相似度就更高。 您可以調整群集右邊的滑桿，來調整檢視器要顯示的線條數目。 降低滑桿只顯示最強的連結。  
   
- 依預設，陰影代表群集的母體。 使用 [陰影變數] 和 [狀態] 選項，您可以選取陰影所代表的屬性和狀態組合。 陰影愈深，表示特定狀態的屬性散發就愈大。 當陰影變淡時，散發跟著減少。  
+ 依預設，陰影代表群集的母體。 使用 [陰影變數]  和 [狀態]  選項，您可以選取陰影所代表的屬性和狀態組合。 陰影愈深，表示特定狀態的屬性散發就愈大。 當陰影變淡時，散發跟著減少。  
   
- 若要重新命名叢集，請以滑鼠右鍵按一下其節點，然後選取 [重新命名叢集]。 新名稱會保存在伺服器上。  
+ 若要重新命名叢集，請以滑鼠右鍵按一下其節點，然後選取 [重新命名叢集]  。 新名稱會保存在伺服器上。  
   
- 若要將圖表的可見區段複製到剪貼簿，請按一下 **[複製圖表檢視]**。 若要複製完整圖表，請按一下 **[複製整個圖表]**。 您也可以使用 **[放大]** 和 **[縮小]** 來放大和縮小，或使用 **[將圖表縮放至視窗大小]**，使圖表符合視窗大小。  
+ 若要將圖表的可見區段複製到剪貼簿，請按一下 **[複製圖表檢視]** 。 若要複製完整圖表，請按一下 **[複製整個圖表]** 。 您也可以使用 **[放大]** 和 **[縮小]** 來放大和縮小，或使用 **[將圖表縮放至視窗大小]** ，使圖表符合視窗大小。  
   
  [回到頁首](#BKMK_ViewerTabs)  
   
@@ -55,9 +55,9 @@ ms.locfileid: "62671316"
   
  [長條圖列]  選項會控制長條圖中可見的橫條數。 如果總列數超出您選擇要顯示的列數，就會保留最重要的列，而其餘的列將會分組放入灰色值區中。  
   
- 您可以變更群集的預設名稱，使名稱更具描述性。 請以滑鼠右鍵按一下叢集的資料行標題並選取 [重新命名叢集]，來重新命名叢集。 您可以選取 **[隱藏資料行]** 來隱藏群集，也可以拖曳資料行，在檢視器中將它們重新排序。  
+ 您可以變更群集的預設名稱，使名稱更具描述性。 請以滑鼠右鍵按一下叢集的資料行標題並選取 [重新命名叢集]  ，來重新命名叢集。 您可以選取 **[隱藏資料行]** 來隱藏群集，也可以拖曳資料行，在檢視器中將它們重新排序。  
   
- 若要開啟一個能提供更大、更詳細之叢集檢視的視窗，請按兩下 [狀態] 資料行的資料格或檢視器中的長條圖。  
+ 若要開啟一個能提供更大、更詳細之叢集檢視的視窗，請按兩下 [狀態]  資料行的資料格或檢視器中的長條圖。  
   
  [回到頁首](#BKMK_ViewerTabs)  
   

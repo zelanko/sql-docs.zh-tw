@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 46d4beec-831a-449f-98b6-322a80cc499a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b74fa32c08115ea67cd75a33db6f917ad0bb1bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: faf6af6e1d52102b6f6358f2adc8a125ac1ef18a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672572"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802454"
 ---
 # <a name="position-method-javalangstring-long-sqlservernclob"></a>position 方法 (java.lang.String, long) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public long position(java.lang.String searchstr,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個位置的方法是方法所指定位置 java.sql.NClob 介面中。  
   
 ## <a name="see-also"></a>另請參閱  

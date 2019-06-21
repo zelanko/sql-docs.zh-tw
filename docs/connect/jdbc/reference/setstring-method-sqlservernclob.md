@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 31f365292a58aabc852f28cc1bd4b5cd737d94de
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66773379"
 ---
 # <a name="setstring-method-sqlservernclob"></a>setString 方法 (SQLServerNClob)
@@ -25,9 +25,9 @@ ms.locfileid: "66773379"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
-|[setString 方法 &#40;long, java.lang.String, int, int&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-sqlservernclob.md)|寫入指定**字串**要**NCLOB**指定位置開始。|  
+|[setString 方法 &#40;long, java.lang.String&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-sqlservernclob.md)|寫入指定**字串**要**NCLOB**指定位置開始。|  
 |[setString 方法 &#40;long, java.lang.String, int, int&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-int-int-sqlservernclob.md)|依據指定的位移和長度，在指定位置的 NCLOB 開始位置寫入所指定字串。|  
   
 ## <a name="see-also"></a>另請參閱  

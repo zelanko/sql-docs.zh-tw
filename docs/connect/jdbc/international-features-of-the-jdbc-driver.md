@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45ad47f53b36a54843aacb985e3d9c3db3d55d01
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: b555568ae93936c1f8659b52ba6bb731e8398e0f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398331"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66781663"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC Driver 的國際功能
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的國際化功能包括下列：  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的國際化功能包含下列各項：  
   
 -   支援與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相同語言的完整當地語系化體驗  
   
--   支援區分地區設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料之 Java 語言轉換  
+-   支援區分地區設定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料的 Java 語言轉換  
   
 -   支援不論作業系統為何的國際語言  
   

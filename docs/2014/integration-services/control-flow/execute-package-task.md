@@ -16,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37d0edcabdb0171c8ca83c79080d59fdd8aafb76
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62831907"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284947"
 ---
 # <a name="execute-package-task"></a>執行封裝工作
   「執行封裝」工作可讓封裝將其他封裝當做工作流程的一部分執行，以延伸 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企業功能。  
@@ -112,12 +112,8 @@ ms.locfileid: "62831907"
   
 -   [設定工作或容器的屬性](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="related-tasks"></a>相關工作  
-  
 ## <a name="related-content"></a>相關內容  
-  
--   部落格文章[SSIS:您應該執行子封裝的處理序或跨處理序嗎？](https://go.microsoft.com/fwlink/?LinkId=220819)，consultingblogs.emc.com 上。  
-  
--   部落格文章[SSIS:存取父封裝中的變數](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)，andyleonard.blog 上。 
+
+部落格文章[SSIS:存取父封裝中的變數](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)，andyleonard.blog 上。 
   
   

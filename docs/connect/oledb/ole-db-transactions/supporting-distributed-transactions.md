@@ -1,6 +1,6 @@
 ---
 title: 支援分散式的交易 |Microsoft Docs
-description: OLE DB Driver for SQL Server 中的交易
+description: OLE DB Driver for SQL Server 中的分散式交易
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 97c7c4744d21697620740d2a865e5e6a66558a0f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66766117"
 ---
 # <a name="supporting-distributed-transactions"></a>支援分散式交易
@@ -39,7 +39,7 @@ ms.locfileid: "66766117"
   
  若是分散式交易，OLE DB Driver for SQL Server 會實作 **ITransactionJoin::JoinTransaction** 參數，如下所示。  
   
-|參數|Description|  
+|參數|描述|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|MS DTC 交易物件的指標。|  
 |*IsoLevel*|忽略 OLE DB Driver for SQL Server。 取用者從 MS DTC 取得交易物件時，會判斷 MS DTC 協調交易的隔離等級。|  

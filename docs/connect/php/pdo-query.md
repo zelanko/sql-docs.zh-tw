@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 68f06811c0c56fa46f1e3769c794d48ad0e43488
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66761980"
 ---
 # <a name="pdoquery"></a>PDO::query
@@ -41,14 +41,14 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 ## <a name="exceptions"></a>例外狀況  
 PDOException。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 使用 PDO::query 執行的查詢可以執行已備妥的陳述式或直接執行 (視 PDO::SQLSRV_ATTR_DIRECT_QUERY 的設定而定)。 如需詳細資訊，請參閱 [PDO_SQLSRV 驅動程式中的直接陳述式執行和已備妥的陳述式執行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。  
   
 PDO::SQLSRV_ATTR_QUERY_TIMEOUT 也會影響 PDO::exec 的行為；如需詳細資訊，請參閱 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。  
   
 您可以為 $*fetch_style* 指定下列選項。  
   
-|style|Description|  
+|style|描述|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|指定的資料行中資料的查詢。 資料表中的第一個資料行是資料行 0。|  
 |PDO::FETCH_CLASS, '*classname*', array( *arglist* )|建立類別執行個體並將資料行名稱指派給類別中的屬性。 如果類別建構函式採用一或多個參數，您也可以傳遞 *arglist*。|  

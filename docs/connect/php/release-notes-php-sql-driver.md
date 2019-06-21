@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 48c4497dfa8974fe5fd59747d4b7023002d3f762
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+manager: jroth
+ms.openlocfilehash: b17e45fee91b293524cca39037f15fac15cd881e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58646413"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797082"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的版本資訊
 
@@ -80,7 +80,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - 在 Linux 和 macOS 上的非 UTF8 地區設定支援
   - Microsoft ODBC Driver 17 或更新版本才支援在 Linux 和 macOS 上的非 UTF8 地區設定
 - Azure SQL 資料倉儲的支援
-- 支援 Azure SQL 受控執行個體 （延伸私人預覽）
+- 對 Azure SQL 受控執行個體 (延伸個人預覽版) 的支援
 
 ## <a name="whats-new-in-version-43"></a>4.3 版的新功能
 
@@ -115,7 +115,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 - PHP 5.4 的支援  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]第 3 版不支援 PHP 5.2。  
 - 已加入 AttachDBFileName 連接選項。 如需詳細資訊，請參閱 [Connection Options](../../connect/php/connection-options.md)。  
-- LocalDB 的支援，已在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中新增。 如需詳細資訊，請參閱 < [LocalDB 的支援](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)。
+- LocalDB 的支援，已在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中新增。 如需詳細資訊，請參閱[支援 LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)。
 - 已加入 AttachDBFileName 連接選項。 如需詳細資訊，請參閱 [Connection Options](../../connect/php/connection-options.md)。  
 - 高可用性與災害復原功能的支援。 如需詳細資訊，請參閱 <<c0> [ 支援高可用性、 災害復原](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。
 - 用戶端資料指標的支援 (快取記憶體中的結果集)。 如需詳細資訊，請參閱[資料指標類型 &#40;SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-sqlsrv-driver.md) 和[資料指標類型 &#40;PDO_SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。

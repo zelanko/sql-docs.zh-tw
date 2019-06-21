@@ -1,6 +1,6 @@
 ---
 title: 支援本機交易 |Microsoft Docs
-description: OLE DB Driver for SQL Server 中的交易
+description: OLE DB Driver for SQL Server 中的本機交易
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 9aacaf8c52ad45a3d61087d1029bdd6f7176629e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66765976"
 ---
 # <a name="supporting-local-transactions"></a>支援本機交易
@@ -38,7 +38,7 @@ ms.locfileid: "66765976"
   
  OLE DB Driver for SQL Server 支援**itransactionlocal:: Starttransaction**參數，如下所示。  
   
-|參數|Description|  
+|參數|描述|  
 |---------------|-----------------|  
 |*isoLevel*[in]|與此交易搭配使用的隔離等級。 在本機交易，OLE DB Driver for SQL Server 支援以下功能：<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 注意：從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 開始，不論是否啟用資料庫的版本控制，ISOLATIONLEVEL_SNAPSHOT 都適用於 *isoLevel* 引數。 不過，如果使用者嘗試執行執行陳述式，而未啟用版本控制且/或資料庫不是唯讀的，則會發生錯誤。 此外，如果在連接到早於 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本時，將 ISOLATIONLEVEL_SNAPSHOT 指定為 *isoLevel*，則會發生 XACT_E_ISOLATIONLEVEL 錯誤。|  
 |*isoFlags*[in]|OLE DB Driver for SQL Server 會傳回非零的任何值的錯誤。|  
@@ -47,7 +47,7 @@ ms.locfileid: "66765976"
   
  若是本機交易，OLE DB Driver for SQL Server 會實作**itransaction:: Abort**參數，如下所示。  
   
-|參數|Description|  
+|參數|描述|  
 |---------------|-----------------|  
 |*pboidReason*[in]|如果設定，則略過。 可以安全地成為 NULL。|  
 |*fRetaining*[in]|當為 TRUE 時，就會針對工作階段隱含地開始新的交易。 此交易必須由取用者認可或結束。 若為 FALSE，OLE DB Driver for SQL Server 會還原為自動認可模式工作階段。|  
@@ -55,7 +55,7 @@ ms.locfileid: "66765976"
   
  若是本機交易，OLE DB Driver for SQL Server 會實作**itransaction:: Commit**參數，如下所示。  
   
-|參數|Description|  
+|參數|描述|  
 |---------------|-----------------|  
 |*fRetaining*[in]|當為 TRUE 時，就會針對工作階段隱含地開始新的交易。 此交易必須由取用者認可或結束。 若為 FALSE，OLE DB Driver for SQL Server 會還原為自動認可模式工作階段。|  
 |*grfTC*[in]|非同步和第一階段傳回不支援的 OLE DB Driver for SQL Server。 OLE DB Driver for SQL Server XACT_E_NOTSUPPORTED 以外的任何值傳回 XACT_E_NOTSUPPORTED。|  

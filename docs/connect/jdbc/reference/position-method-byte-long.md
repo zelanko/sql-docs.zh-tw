@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 787412c2-4342-49c8-9ca2-7a9ddcd3277c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3844d294c72539e752f944b604409b4967a8c166
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e6056412f6ab2726112d5286f2f52c83ff6691cf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603930"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802473"
 ---
 # <a name="position-method-byte-long"></a>position 方法 (byte, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,12 +46,12 @@ public long position(byte[] bPattern,
  搜尋所在的起始索引。  
   
 ## <a name="return-value"></a>傳回值  
- 找到模式位置的 **long** 值，如果找不到則為 -1。  
+ 找到模式所在位置的 **long** 值，如果找不到，則為 -1。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個位置的方法是由 java.sql.Blob 介面中的位置方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

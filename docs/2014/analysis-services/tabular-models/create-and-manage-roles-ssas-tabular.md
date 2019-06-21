@@ -13,12 +13,12 @@ ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 664f0cdc9f01bf27e8f20c6799097948b0c100c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10e5e26142cd1819e4f2c5f884af9c2f2af10812
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067470"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284898"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>建立及管理角色 (SSAS 表格式)
   表格式模型中的角色定義模型的成員權限。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [角色管理員] 對話方塊來定義模型專案的角色。 部署模型之後，資料庫管理員即可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]管理角色。  
@@ -67,7 +67,7 @@ ms.locfileid: "66067470"
  [角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)   
  [檢視方塊 &#40;SSAS 表格式&#41;](perspectives-ssas-tabular.md)   
  [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](analyze-in-excel-ssas-tabular.md)   
- [USERNAME 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [CUSTOMDATA 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [USERNAME 函式&#40;DAX&#41;](/dax/username-function-dax)   
+ [CUSTOMDATA 函式&#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

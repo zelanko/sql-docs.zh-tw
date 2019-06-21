@@ -1,5 +1,5 @@
 ---
-title: getNCharacterStream 方法 (int) (SQLServerResultSet) | Microsoft Docs
+title: updateCharacterStream 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 108e3c3c48249c0cd228a8b88679e81c97c8cdb8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66784027"
 ---
 # <a name="updatecharacterstream-method-sqlserverresultset"></a>updateCharacterStream 方法 (SQLServerResultSet)
@@ -30,7 +30,7 @@ ms.locfileid: "66784027"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[updateCharacterStream 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-int-java-io-reader.md)|使用字元資料流值，更新指定的資料行。|  
 |[updateCharacterStream (int, java.io.Reader, int)](../../../connect/jdbc/reference/updatecharacterstream-method-int-java-io-reader-int.md)|使用字元資料流值來更新指定的資料行，該值將包含指定的字元數目。|  

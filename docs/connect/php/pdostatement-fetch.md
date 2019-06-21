@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 624f5efe97333fd76e934f94517588aede030f38
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: afd2f2fc098e23685dca1b913e010dced40cece9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605258"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799181"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,10 +40,10 @@ $*cursor_offset*：選擇性 (整數) 符號，指定在 $*cursor_orientation* �
 ## <a name="return-value"></a>傳回值  
 傳回資料列或 false 的混合值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 在呼叫提取時，資料指標會自動前進。 下表包含可能的 $*fetch_style* 值清單。  
   
-|$*fetch_style*|Description|  
+|$*fetch_style*|描述|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|指定依資料行名稱編製索引的陣列。|  
 |PDO::FETCH_BOTH|指定依資料行名稱且以 0 起始而編製索引的陣列。 這是預設值。|  
@@ -58,7 +58,7 @@ $*cursor_offset*：選擇性 (整數) 符號，指定在 $*cursor_orientation* �
   
 如果資料指標是可捲動的 (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL)，則提取會在結果集界限內移動資料指標。 下表包含可能的 $*cursor_orientation* 值清單。  
   
-|$*cursor_orientation*|Description|  
+|$*cursor_orientation*|描述|  
 |--------------------------|---------------|  
 |PDO::FETCH_ORI_NEXT|擷取下一個資料列。 這是預設值。|  
 |PDO::FETCH_ORI_PRIOR|擷取上一個資料列。|  

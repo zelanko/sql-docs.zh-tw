@@ -10,12 +10,12 @@ ms.assetid: 30841d1f-0c3b-4575-8f4a-27a1492e248c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a39cbc319b7b0a62f31b55ded8adfe60a49314b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27a03aaf94d518caa6b649b7ccd826e08798dacb
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066563"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284886"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>指定標記為日期資料表以搭配時間智慧使用 (SSAS 表格式)
   若要在 DAX 公式中使用時間智慧函數，您必須指定日期資料表以及 Date 資料類型的唯一識別碼 (日期時間) 資料行。 您將日期資料表中的某個資料行指定為唯一識別碼之後，就可以在日期資料表與任何事實資料表的資料行之間建立關聯性。  
@@ -52,6 +52,6 @@ ms.locfileid: "66066563"
   
 ## <a name="see-also"></a>另請參閱  
  [計算 &#40;SSAS 表格式&#41;](calculations-ssas-tabular.md)   
- [時間智慧函數&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634763.aspx)  
+ [時間智慧函數&#40;DAX&#41;](/dax/time-intelligence-functions-dax)  
   
   

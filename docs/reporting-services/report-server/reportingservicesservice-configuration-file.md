@@ -13,10 +13,10 @@ ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dfb0f48bb35e6341e2b2a9a72007ef4eb09c2b9b
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506626"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 組態檔
@@ -77,7 +77,7 @@ ReportingServicesService.exe.config 檔包括設定追蹤的設定。
 ## <a name="configuration-settings"></a>組態設定  
  下表提供有關特定設定的資訊。 設定會依其出現在組態檔的順序顯示。  
   
-|設定|Description|  
+|設定|描述|  
 |-------------|-----------------|  
 |**RStrace**|指定用於錯誤和追蹤的命名空間。|  
 |**DefaultTraceSwitch**|指定報告到 ReportServerService 追蹤記錄的資訊層級。 每一個層級包括所有較低層級所報告的資訊。 不建議停用追蹤。 有效值包括：<br /><br /> 0= 停用追蹤<br /><br /> 1= 例外狀況和重新啟動<br /><br /> 2= 例外、重新啟動和警告<br /><br /> 3= 例外、重新啟動、警告和狀態訊息 (預設值)<br /><br /> 4= 詳細資訊模式|  

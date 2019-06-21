@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: genemi
 ms.openlocfilehash: d773e05a3ed953e5210c0ade3226b4a32e82aeab
-ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51289898"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63182253"
 ---
-# <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>用戶端程式設計 Microsoft SQL server 首頁
+# <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL Server 用戶端程式設計的首頁
 
 
 歡迎使用我們的首頁，關於用戶端程式設計來使用 Microsoft SQL Server，和在雲端中的 Azure SQL database 進行互動。 本文提供下列資訊：
@@ -54,7 +54,7 @@ ms.locfileid: "51289898"
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
 | &nbsp; [![C# 標誌][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM 的 Entity Framework、.NET framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java 標誌][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp; [![Node.js 標誌][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp 回票價][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP 標誌][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Node.js 標誌][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP 標誌][image-ref-360-php]](#an-170-php-docu) |
 | &nbsp; [![Python 標誌][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby 標誌][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
@@ -104,7 +104,7 @@ EF 有直接或間接的關聯性，使用下列技術：
 
 - .NET Framework
 - [LINQ to SQL](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/)，或[LINQ to Entities](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- 語言語法增強功能，例如**=>** C# 中的運算子。
+- 語言語法增強功能，例如 **=>** C# 中的運算子。
 - 針對對應至您的 SQL database 中的資料表類別產生原始程式碼的實用程式。 比方說， [EdmGen.exe](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)。
 
 
@@ -179,9 +179,9 @@ SQL Server 的 Node.js 連線驅動程式是以 JavaScript 進行實作。 驅�
 
 <a name="an-160-odbc-cpp-docu" />
 
-## <a name="odbc-for-c"></a>C + + ODBC 
+## <a name="odbc-for-c"></a>ODBCC++ 
 
-![ODBC 標誌][image-ref-350-odbc] ![cpp 回票價][image-ref-322-cpp]
+![ODBC 標誌][image-ref-350-odbc] ![cpp-big-plus][image-ref-322-cpp]
 
 開放式資料庫連接 (ODBC) 所開發，1990 年代，以及它之前的.NET Framework。 ODBC 被設計為獨立於任何特定的資料庫系統，且獨立的作業系統。
 
@@ -191,17 +191,17 @@ SQL Server 的 Node.js 連線驅動程式是以 JavaScript 進行實作。 驅�
 
 #### <a name="code-example"></a>程式碼範例
 
-- [使用 ODBC 的 c + + 程式碼範例](../odbc/reference/sample-odbc-program.md)
+- [使用 ODBC 的 C++ 程式碼範例](../odbc/reference/sample-odbc-program.md)
 
 #### <a name="documentation-outline"></a>文件大綱
 
-在本節中的 ODBC 內容著重於從 c + + 存取 SQL Server 或 Azure SQL Database。 下表列出 ODBC 的主要文件的概略大綱。
+在本節中的 ODBC 內容著重於從存取 SQL Server 或 Azure SQL Database， C++。 下表列出 ODBC 的主要文件的概略大綱。
 
 
-| 區域 | 子區域 | Description |
+| 區域 | 子區域 | 描述 |
 | :--- | :------ | :---------- |
-| [C + + ODBC](./odbc/index.md) | 我們的文件的根目錄。 |
-| [Linux Mac](./odbc/linux-mac/index.md) | &nbsp; | 在 Linux 或 MacOS 作業系統上使用 ODBC 的相關資訊。 |
+| [ODBCC++](./odbc/index.md) | 我們的文件的根目錄。 |
+| [Linux-Mac](./odbc/linux-mac/index.md) | &nbsp; | 在 Linux 或 MacOS 作業系統上使用 ODBC 的相關資訊。 |
 | [視窗](./odbc/windows/index.md)     | &nbsp; | Windows 作業系統上使用 ODBC 的相關資訊。 |
 | [管理](../odbc/admin/index.md) | &nbsp; | 管理 ODBC 資料來源的系統管理工具。 |
 | [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | 各種 ODBC 驅動程式會建立並由 Microsoft 所提供。 |
@@ -251,7 +251,7 @@ SQL Server 的 Node.js 連線驅動程式是以 JavaScript 進行實作。 驅�
 
 #### <a name="documentation"></a>文件集
 
-| 區域 | Description |
+| 區域 | 描述 |
 | :--- | :---------- |
 | [SQL server 的 Python](./python/index.md) | 我們的文件的根目錄。 |
 | [pymssql 驅動程式](./python/pymssql/index.md) | Microsoft 不會維護或測試 pymssql 驅動程式。<br /><br />Pymssql 連接驅動程式是 SQL database，以供 Python 程式的簡單介面。 Pymssql 建置上 FreeTDS 來提供 Microsoft SQL server 的 Python DB API (PEP 249) 介面。 |

@@ -1,6 +1,6 @@
 ---
 title: SQL Server Management Studio 中的 Reporting Services (SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 06/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
@@ -10,25 +10,21 @@ helpviewer_keywords:
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de602e47f7c68c06fee042265b3f84d3d6d385f9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 27fe190bfa73414158d05353c4aa8f244b65b4f4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581320"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140352"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>SQL Server Management Studio (SSRS) 中的 Reporting Services
   報表伺服器管理員可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行下列作業：  
   
 -   啟用功能、設定伺服器預設值，以及管理正在執行的作業。  
   
--   檢視及建立自訂報表。 在物件總管中，許多節點會顯示一組與 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]一起安裝的標準報表。 您必須具有下列管理員權限： 自訂報表的結構描述必須符合已安裝報表的結構描述。 如需詳細資訊，請參閱 [Management Studio 中的自訂報表](../../ssms/object/custom-reports-in-management-studio.md)和[尋找報表定義結構描述版本 &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)。  
+-   檢視自訂報表。 在 [物件總管] 中，大部分的節點會顯示自訂報表選項。 您必須具有下列管理員權限： 自訂報表的結構描述必須符合已安裝報表的結構描述。 如需詳細資訊，請參閱 [Management Studio 中的自訂報表](../../ssms/object/custom-reports-in-management-studio.md)和[尋找報表定義結構描述版本 &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)。  
   
- 報表作者可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 執行下列作業：  
-  
--   將對應報表查詢結果集的空間資料視覺化。 執行查詢後，請使用 [結果集] 窗格中的 [空間結果] 索引標籤。 如需詳細資訊，請參閱 [檢視物件總管中的空間資料](../../relational-databases/scripting/view-spatial-data-in-object-explorer.md)。  
-  
- 本節包含使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]執行各種報表工作的逐步指示。 您也可以使用報表管理員來執行建立和管理共用排程的作業。  
+ 下一節包含的文章包含執行使用各種報表工作的逐步指示連結[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 您也可以建立和管理 web 入口網站中的共用的排程。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -42,6 +38,5 @@ ms.locfileid: "65581320"
   
 ## <a name="see-also"></a>另請參閱  
  [Management Studio F1 說明中的報表伺服器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [SQL Server Management Studio 簡介](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
-  
+ [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md)  
   

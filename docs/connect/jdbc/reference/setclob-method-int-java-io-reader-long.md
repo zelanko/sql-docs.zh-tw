@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 157882dd-1a96-4501-a895-46e88a49266e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5a38ff98a8df384e16fabf93a4eae6afc57ddc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bfa9190cc945a6df49582b47aa52815dd331bcd3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818826"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795624"
 ---
 # <a name="setclob-method-int-javaioreader-long"></a>setClob 方法 (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public final void setClob(int parameterIndex,
   
  指出參數值中字元數的 **long**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 setClob 方法由 java.sql.PreparedStatement 介面中的 setClob 方法指定。  
   
 ## <a name="exceptions"></a>例外狀況  

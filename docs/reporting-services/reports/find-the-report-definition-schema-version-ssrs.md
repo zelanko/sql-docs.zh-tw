@@ -1,6 +1,6 @@
 ---
 title: 尋找報表定義結構描述版本 (SSRS) | Microsoft Docs
-ms.date: 05/30/2017
+ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reports
@@ -12,29 +12,28 @@ helpviewer_keywords:
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67f1311e3f8bde71c52301178bf242d88e62c3a0
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 129fcb8e1533162560b88e9400c68c7c863be119
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65576421"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826835"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>尋找報表定義結構描述版本 (SSRS)
 
-報表定義檔案會針對用來驗證 rdl 檔的報表定義結構描述版本指定 RDL 命名空間。 當您在報表撰寫環境 (例如 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的報表設計師或報表產生器) 中開啟 .rdl 檔案時，如果此報表是針對先前的命名空間所建立，系統就會自動建立備份檔案，而且此報表會升級為目前的命名空間。 如果您儲存了升級的報表定義，就會儲存轉換的 .rdl 檔。 這是升級報表定義的唯一方式。 報表定義本身不會在報表伺服器上升級。 不過，已編譯的報表會在報表伺服器上升級。 如需詳細資訊，請參閱 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)。  
+報表定義檔案會針對用來驗證 rdl 檔的報表定義結構描述版本指定 RDL 命名空間。 當您在報表撰寫環境，例如報表設計師中開啟.rdl 檔時[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，Visual Studio 中或報表產生器。 如果報表針對先前的命名空間建立的會自動建立備份檔案，和報表會升級到目前的命名空間。 如果您儲存了升級的報表定義，就會儲存轉換的 .rdl 檔。 這是升級報表定義的唯一方式。 報表定義本身不會在報表伺服器上升級。 不過，已編譯的報表會在報表伺服器上升級。 如需詳細資訊，請參閱 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)。  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>如何：識別報表的 RDL 結構描述版本  
+## <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>如何：識別報表的 RDL 結構描述版本  
   
-1.  在可以檢視 xml 的應用程式 (例如 [記事本] 或 XML Notepad 2007) 中開啟 .rdl 檔案。  
+1. 在可以檢視 XML 的應用程式 (例如 [記事本] 或 XML Notepad) 中開啟 .rdl 檔案。  
   
      XML 報表元素會指定結構描述命名空間。 例如，下列報表元素會指定報表設計師的命名空間以及報表定義的命名空間。  
   
-    ```  
-    <Report xmlns:rd=https://schemas.microsoft.com/SQLServer/reporting/reportdesigner   
-    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
+    ``` XML 
+    <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily" MustUnderstand="df">  
     ```  
   
-     報表定義命名空間是由下列 URL 指定： `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`。  
+     最新的報表定義命名空間是 2016年。 不過，最新的已發行的報表定義命名空間是 2010 中，指定下列 URL: `https://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition`...
   
 ### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>如何：識別報表設計師的 RDL 結構描述版本  
   
@@ -50,38 +49,32 @@ ms.locfileid: "65576421"
   
 6.  在 [檢視] 功能表中，按一下 [程式碼]。 報表定義就會顯示成 XML 檔。  
   
-     XML 報表元素會指定結構描述命名空間。 例如，下列報表元素會指定報表設計師的命名空間以及報表定義的命名空間。  
+    XML 報表元素會指定結構描述命名空間。 例如，下列報表元素會指定報表設計師的命名空間以及報表定義的命名空間。  
   
-    ```  
-    <Report xmlns:rd=https://schemas.microsoft.com/SQLServer/reporting/reportdesigner  
-    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
+    ``` XML 
+    <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/*year*/01/reportdefinition" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/*year*/01/reportdefinition/defaultfontfamily" MustUnderstand="df">  
     ```  
   
-     報表定義命名空間是由下列 URL 指定： `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
+     報表定義命名空間是由下列 URL 指定： `https://schemas.microsoft.com/sqlserver/reporting/*year*/01/reportdefinition`  
   
 ### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>如何：識別報表伺服器的 RDL 結構描述版本  
   
--   在報表管理員中，輸入報表伺服器的 URL。 例如，下列 URL 會指定本機電腦上的報表伺服器。  
+-   在入口網站中，輸入報表伺服器的 URL。 例如，下列 URL 會指定本機電腦上的報表伺服器。  
   
      `https://localhost/reportserver/reportdefinition.xsd`  
   
      .xsd 檔就會在瀏覽器中開啟。  
   
-     XML 結構描述元素會指定結構描述命名空間。 例如，下列結構描述元素會指定三個命名空間： [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]在內部使用的 targetNamespace 參考、結構描述本身 (xsd) 的 xsd 參考，以及報表定義參考。  
+     XML 結構描述元素會指定結構描述命名空間。 例如，下列結構描述元素會指定三個命名空間： [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]在內部使用的 targetNamespace 參考、結構描述本身 (xsd) 的 xsd 參考，以及報表定義參考。  *年*代表年份的報表正在使用的結構描述。 比方說，2010年或 2016年。
   
-    ```  
-    <xsd:schema   
-    targetNamespace="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
-    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
-    elementFormDefault="qualified">  
+    ``` XML  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/reporting/*year*/01/reportdefinition" targetNamespace="http://schemas.microsoft.com/sqlserver/reporting/*year*/01/reportdefinition" elementFormDefault="qualified">  
     ```  
   
-     報表定義命名空間是由下列 URL 指定： `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
+     報表定義命名空間是由下列 URL 指定： `https://schemas.microsoft.com/sqlserver/reporting/*year*/01/reportdefinition`  
 
 ## <a name="next-steps"></a>後續步驟
-
 [升級報表](../../reporting-services/install-windows/upgrade-reports.md)   
-[報表定義語言](../../reporting-services/reports/report-definition-language-ssrs.md)  
+[報表定義語言](../../reporting-services/reports/report-definition-language-ssrs.md)   
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

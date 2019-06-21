@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db62f127b5f955de24186c3625d72860eac49f90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 74dea806465d8f1d011f5318eb4ed1571a6ba734
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794206"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800507"
 ---
 # <a name="sqlserverdatasource-members"></a>SQLServerDataSource 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47794206"
   
 ## <a name="constructors"></a>建構函式  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[SQLServerDataSource ()](../../../connect/jdbc/reference/sqlserverdatasource-constructor.md)|初始化 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 類別的新執行個體。|  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47794206"
   
 ## <a name="methods"></a>方法  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|傳回的值**applicationIntent**連接屬性。|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|傳回應用程式名稱。|  

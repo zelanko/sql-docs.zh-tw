@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd37c097873b104f3f53e9ca92e50b6f7c1acafe
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+manager: jroth
+ms.openlocfilehash: 9b48188cbc1eb25774bc127246514d82ca5ef475
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464764"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66841090"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>系統需求、安裝和驅動程式檔案
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +28,9 @@ Windows 上的 ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnov
 ODBC Driver 13 和 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，除此之外，支援 SQL Server 2016。 
 
 ODBC Driver 17 for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援上述所有項目，以及 SQL Server 2017。
-  
+
+ODBC Driver 17 for SQL Server 支援 SQL Server 2019 開頭 17.3 版的驅動程式。
+
 您在連接字串中指定的驅動程式名稱是`ODBC Driver 11 for SQL Server`或是`ODBC Driver 13 for SQL Server`（適用於 13 和 13.1） 或`ODBC Driver 17 for SQL Server`。
   
 ## <a name="supported-operating-systems"></a>支援的作業系統

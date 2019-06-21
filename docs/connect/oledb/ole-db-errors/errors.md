@@ -1,5 +1,5 @@
 ---
-title: 錯誤 |Microsoft Docs
+title: 錯誤 | Microsoft Docs
 description: 錯誤
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,13 +16,13 @@ helpviewer_keywords:
 - OLE DB error handling
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 96772a8de06454d038b3e018643cd32e5132ec2c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: a9f937e130af664570b92b006a54d329b33b9e23
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606108"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798142"
 ---
 # <a name="errors"></a>錯誤
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

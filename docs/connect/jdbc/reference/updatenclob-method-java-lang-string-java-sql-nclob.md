@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: ff1732e9ea7d146fdd129dc86030039afbf97444
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66776714"
 ---
 # <a name="updatenclob-method-javalangstring-javasqlnclob"></a>updateNClob 方法 (java.lang.String, java.sql.NClob)
@@ -43,8 +43,8 @@ public void updateNClob(java.lang.String columnLabel,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getNClob 方法是由 java.sql.ResultSet 介面中的 getNClob 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 updateNClob 方法是由 java.sql.ResultSet 介面中的 updateNClob 方法指定。  
   
  這個方法僅支援**nvarchar （max)** ， **ntext**，並**xml**資料行。 對任何其他資料類型使用這個方法，將擲回例外狀況。  
   

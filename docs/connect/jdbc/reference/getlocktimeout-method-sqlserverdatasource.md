@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 676094e9-ec18-4524-9b21-1f9c5b16dd52
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 25b16ae2c31233ee837c86cc156ddcb2d4ffa901
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 120a90168d46f81d57115812c832c5c6674cf436
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660316"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66793210"
 ---
 # <a name="getlocktimeout-method-sqlserverdatasource"></a>getLockTimeout 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public int getLockTimeout()
 ## <a name="return-value"></a>傳回值  
  **int** 值，其中包含資料庫要等候的毫秒數。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  鎖定逾時是等候資料庫報告鎖定逾時的毫秒數。預設值為 -1，表示將會無限期地等候。 如果已指定，則此值為連接上所有陳述式的預設值。  
   
 > [!NOTE]  

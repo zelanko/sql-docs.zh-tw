@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77065f64067ef505714bbd5e831d63abf41337bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4612b0762d8a0d619a19b61b8bb10ef6a68d1ba0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804966"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803081"
 ---
 # <a name="sqlserverconnection-members"></a>SQLServerConnection 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,19 +28,19 @@ ms.locfileid: "47804966"
   
 ## <a name="fields"></a>欄位  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[TRANSACTION_SNAPSHOT](../../../connect/jdbc/reference/transaction-snapshot-field-sqlserverconnection.md)|用來指定快照集交易隔離等級。|  
   
 ## <a name="inherited-fields"></a>繼承的欄位  
   
-|類別繼承自：|Description|  
+|類別繼承自：|描述|  
 |---------------------------|-----------------|  
 |java.sql.Connection|TRANSACTION_NONE, TRANSACTION_READ_COMMITTED, TRANSACTION_READ_UNCOMMITTED, TRANSACTION_REPEATABLE_READ, TRANSACTION_SERIALIZABLE|  
   
 ## <a name="methods"></a>方法  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverconnection.md)|清除這個 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件所報告的所有警告。|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)|立刻釋放出這個 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件的資料庫和 JDBC 資源，而非等待它們由系統自動釋放。|  
@@ -59,7 +59,7 @@ ms.locfileid: "47804966"
 |[getDiscardedServerPreparedStatementCount](../../../connect/jdbc/reference/getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md)|傳回的目前未完成已備妥之陳述式取消準備動作。|
 |[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md)|傳回的值**enablePrepareOnFirstPreparedStatementCall**連接屬性。|
 |[getHoldability](../../../connect/jdbc/reference/getholdability-method-sqlserverconnection.md)|擷取 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的目前保留性，這些物件是使用此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件所建立。|  
-|[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md)|擷取包含資料庫相關中繼資料的 [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 物件，該資料庫是此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件表示連線的目標資料庫。|  
+|[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md)|擷取 [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 物件，其中包含此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件表示連接到其中資料庫的相關中繼資料。|  
 |[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md)|傳回的值**serverPreparedStatementDiscardThreshold**連接屬性。|  
 |[getStatementHandleCacheEntryCount](../../../connect/jdbc/reference/getstatementhandlecacheentrycount-method-sqlserverconnection.md)|傳回目前的集區的已備妥之陳述式控制代碼數目。|  
 |[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverconnection.md)|傳回此連線的已備妥的陳述式快取的大小。|  

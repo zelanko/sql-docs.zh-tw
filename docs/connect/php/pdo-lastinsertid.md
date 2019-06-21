@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 6106d830a48b4ef89d85b88e7264e08209947ecc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66762004"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
@@ -38,7 +38,7 @@ $*name*：讓您指定序列名稱的選擇性字串。
 如果提供的序列名稱，最近加入序列識別碼的字串。
 如果方法呼叫失敗，則會傳回空字串。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
 版本 2.0 和 4.3 之間選擇性參數是資料表名稱，且傳回值是最近新增到提供的資料表資料列的識別碼。
 從 5.0 開始，選擇性的參數會被視為序列名稱，並傳回值是提供的序列名稱的最新加入的順序。

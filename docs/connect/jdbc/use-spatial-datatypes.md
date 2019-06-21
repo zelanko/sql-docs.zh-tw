@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4d00692b0b5872b1020f900587a24a3116aee9be
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: ce3df0755799e907bb286e10f5711a58a48135bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737009"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66782465"
 ---
 # <a name="using-spatial-datatypes"></a>使用空間資料類型
 
@@ -88,14 +88,14 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 
 ### <a name="sqlserverpreparedstatement"></a>SQLServerPreparedStatement
 
-|方法|Description|
+|方法|描述|
 |:------|:----------|
 |void setGeometry(int n, Geometry x)| 設定指定的參數來指定的 microsoft.sql.Geometry 類別物件。
 |void setGeography(int n, Geography x)| 設定指定的參數來指定的 microsoft.sql.Geography 類別物件。
 
 ### <a name="sqlserverresultset"></a>SQLServerResultSet
 
-|方法|Description|
+|方法|描述|
 |:------|:----------|
 |Geometry getGeometry(int colunIndex)| 傳回這個結果集物件的目前資料列中的指定資料行的值來當做 Java 程式語言 com.microsoft.sqlserver.jdbc.Geometry 物件。
 |幾何 getGeometry (字串 columnName)| 傳回這個結果集物件的目前資料列中的指定資料行的值來當做 Java 程式語言 com.microsoft.sqlserver.jdbc.Geometry 物件。
@@ -104,7 +104,7 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 
 ### <a name="geometry"></a>幾何
 
-|方法|Description|
+|方法|描述|
 |:------|:----------|
 |Geometry STGeomFromText(String wkt, int SRID)| 從開放地理空間協會 (OGC) Well-Known Text (WKT) 表示法傳回之 Geometry 執行個體的建構函式，經由此執行個體夾帶的任何 Z (高度) 值和 M (測量) 值來擴充。
 |Geometry STGeomFromWKB(byte[] wkb)| 從開放地理空間協會 (OGC) Well-Known Binary (WKB) 表示法傳回之 Geometry 執行個體的建構函式。
@@ -129,9 +129,9 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 
 ### <a name="geography"></a>Geography
 
-|方法|Description|
+|方法|描述|
 |:------|:----------|
-|Geography STGeomFromText (字串 well-known text，wkt，int SRID)| 從開放地理空間協會 (OGC) Well-Known Text (WKT) 表示法傳回之 Geography 執行個體的建構函式，經由此執行個體夾帶的任何 Z (高度) 值和 M (測量) 值來擴充。
+|Geography STGeomFromText(String wkt, int SRID)| 從開放地理空間協會 (OGC) Well-Known Text (WKT) 表示法傳回之 Geography 執行個體的建構函式，經由此執行個體夾帶的任何 Z (高度) 值和 M (測量) 值來擴充。
 |Geography STGeomFromWKB(byte[] wkb)| 從開放地理空間協會 (OGC) Well-Known Binary (WKB) 表示法傳回之 Geography 執行個體的建構函式。
 |地理還原序列化 (byte [] well-known binary，wkb)| 從空間資料之內部 SQL Server 格式的地理位置執行個體的建構函式。
 |Geography 剖析 (字串 well-known text，wkt)| 從開放地理空間協會 (OGC) Well-Known Text (WKT) 表示法傳回之 Geography 執行個體的建構函式。 空間參考識別碼被預設為 0。

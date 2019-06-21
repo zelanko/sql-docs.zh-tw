@@ -10,12 +10,12 @@ ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ad2e89a8862c4b51856d70ddb1dfd3b1e1fdb17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066578"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284896"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>導出資料行 (SSAS 表格式)
   表格式模型中的導出資料行可讓您將新資料加入至模型。 不必貼上或匯入到資料行的值，您可以建立定義資料行的資料列層級值的 DAX 公式。 然後就可以像是其他任何資料行一樣，在報表、樞紐分析表或樞紐分析圖中使用導出資料行。  
@@ -60,7 +60,7 @@ ms.locfileid: "66066578"
   
 -   當您重新命名導出資料行時，必須手動更新依賴此資料行的所有公式。 只要您不是處於手動更新模式，公式的結果都會自動更新。 不過，這項作業可能需要花一些時間。  
   
--   資料行的名稱中不能使用某些字元。 如需詳細資訊，請參閱 [PowerPivot 的 DAX 語法規格](https://msdn.microsoft.com/library/ee634217(v=sql.120).aspx)中的＜命名需求＞。  
+-   資料行的名稱中不能使用某些字元。 如需詳細資訊，請參閱 [PowerPivot 的 DAX 語法規格](/dax/dax-syntax-reference)中的＜命名需求＞。  
   
 ##  <a name="bkmk_perf"></a> 導出資料行的效能  
  導出資料行的公式可能會比量值所使用的公式更耗費資源。 其中一個原因是：導出資料行的結果永遠是針對資料表中的每個資料列計算，而量值僅針對報表、樞紐分析表或樞紐分析圖中所用篩選定義的資料格計算。 例如，包含一百萬個資料列的資料表所擁有的導出資料行永遠都會有一百萬個結果，在效能上也會有對應的影響。 但是，樞紐分析表通常會套用資料列和資料行標題來篩選資料，因此，只會針對樞紐分析表內每一個資料格中的資料子集來計算量值。  

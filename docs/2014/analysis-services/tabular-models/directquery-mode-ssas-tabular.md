@@ -12,12 +12,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ab544235e842e38024ce98763094c300bb06275
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a9c1510030f61896f686b49f4bc134a7dfcb42b
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067224"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284867"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery 模式 (SSAS 表格式)
   Analysis Services 可讓您擷取資料，並從表格式模型中建立報表，藉由擷取資料和彙總，直接從關聯式資料庫系統，使用*DirectQuery 模式*。 此主題介紹僅存在於記憶體中的標準表格式模型和可查詢關聯式資料來源的表格式模型之間的差異，並且說明如何撰寫和部署要在 DirectQuery 模式下使用的模型。  
@@ -82,7 +82,7 @@ ms.locfileid: "66067224"
   
 -   **用戶端限制：** 當模型處於 DirectQuery 模式時，只能使用 DAX 查詢它。 不能使用 MDX 來建立查詢。 這表示您不能使用 Excel Pivot Client，因為 Excel 會使用 MDX。  
   
-     不過，您可以建立針對 DirectQuery 模型中的查詢[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]如果您使用 DAX 資料表查詢當做 XMLA Execute 陳述式一部分如需詳細資訊，請參閱[DAX 查詢語法參考](https://msdn.microsoft.com/library/ee634217.aspx)。  
+     不過，您可以建立針對 DirectQuery 模型中的查詢[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]如果您使用 DAX 資料表查詢當做 XMLA Execute 陳述式一部分如需詳細資訊，請參閱 [DAX 查詢語法參考] （/dax/dax 語法-參考
   
  在您解決了所有設計問題並且測試模型之後，就可以進行部署。 此時，您可以設定回應模型查詢的慣用方法。 您希望使用者有存取快取的權限，還是永遠只使用關聯式資料來源？  
   

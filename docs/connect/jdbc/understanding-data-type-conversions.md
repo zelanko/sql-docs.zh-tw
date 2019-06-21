@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01e3d8b002df2f939528bef8d4faa39d3a5c72f1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 551443e60a1b7ad794dd014cf0c0daab07212c29
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520203"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801973"
 ---
 # <a name="understanding-data-type-conversions"></a>了解資料類型轉換
 
@@ -26,11 +26,11 @@ ms.locfileid: "52520203"
 
 ## <a name="getter-method-conversions"></a>Getter 方法轉換
 
-根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，下列圖表包含 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別之 get\<類型>() 方法的 JDBC 驅動程式轉換對應，以及 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別之 get\<類型> 方法的支援轉換。
+根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，下列圖表包含 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別之 get\<Type>() 方法的 JDBC 驅動程式轉換對應，以及 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別之 get\<Type> 方法的支援轉換。
 
 ![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
-JDBC Driver 的 getter 方法所支援的轉換有三種類別：
+JDBC 驅動程式的 getter 方法所支援的轉換有三種類別：
 
 - **不失真 (x)**：轉換的情況為，getter 類型與基礎伺服器類型相同或更小。 例如，在基礎伺服器十進位資料行上呼叫 getBigDecimal 時，不需要轉換。
 
@@ -46,7 +46,7 @@ JDBC Driver 的 getter 方法所支援的轉換有三種類別：
 
 ![JDBCUpdaterConversions](../../connect/jdbc/media/jdbc_jdbcupdatterconversions.gif "JDBCUpdaterConversions")
 
-JDBC Driver 的 updater 方法所支援的轉換有三種類別：
+JDBC 驅動程式的 updater 方法所支援的轉換有三種類別：
 
 - **不失真 (x)**：轉換的情況為，updater 類型與基礎伺服器類型相同或更小。 例如，在基礎伺服器十進位資料行上呼叫 updateBigDecimal 時，不需要轉換。
 
@@ -74,7 +74,7 @@ JDBC Driver 的 updater 方法所支援的轉換有三種類別：
 
 若是**字串**資料類型，如果值超出的長度**VARCHAR**，則會對應至**LONGVARCHAR**。 同樣地， **NVARCHAR**對應至**LONGNVARCHAR**如果值超出的支援的長度**NVARCHAR**。 這一點對 **byte[]** 來說也相同。 值長度超過**VARBINARY**成為**LONGVARBINARY**。
 
-JDBC Driver 的 setter 方法所支援的轉換有兩種類別：
+JDBC 驅動程式的 setter 方法所支援的轉換有兩種類別：
 
 - **不失真 (x)**：轉換的數值情況為，setter 類型與基礎伺服器類型相同或更小。 例如，在基礎伺服器**十進位**資料行上呼叫 setBigDecimal 時，不需要轉換。 針對數值到字元的轉換，Java **numeric** 資料類型會轉換為 **String**。 例如，以值 "53" 在 varchar(50) 資料行上呼叫 setDouble，就會在該目的地資料行中產生字元值 "53"。
 
@@ -103,7 +103,7 @@ JDBC Driver 的 setter 方法所支援的轉換有兩種類別：
 
 不具有指定目標類型的 setObject 方法會使用預設對應。 若是**字串**資料類型，如果值超出的長度**VARCHAR**，則會對應至**LONGVARCHAR**。 同樣地， **NVARCHAR**對應至**LONGNVARCHAR**如果值超出的支援的長度**NVARCHAR**。 這一點對 **byte[]** 來說也相同。 值長度超過**VARBINARY**成為**LONGVARBINARY**。
 
-JDBC Driver 的 setObject 方法所支援的轉換有三種類別：
+JDBC 驅動程式的 setObject 方法所支援的轉換有三種類別：
 
 - **不失真 (x)**：轉換的數值情況為，setter 類型與基礎伺服器類型相同或更小。 例如，在基礎伺服器**十進位**資料行上呼叫 setBigDecimal 時，不需要轉換。 針對數值到字元的轉換，Java **numeric** 資料類型會轉換為 **String**。 例如，以值 "53" 在 varchar(50) 資料行上呼叫 setDouble，會在該目的地資料行中產生字元值 "53"。
 

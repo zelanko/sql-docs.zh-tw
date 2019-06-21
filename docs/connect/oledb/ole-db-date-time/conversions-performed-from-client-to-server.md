@@ -14,10 +14,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 49d474e1fcaca6c90cdec5bdfcb0a8194ce7d23f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66769304"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>從用戶端到伺服器執行的轉換
@@ -74,9 +74,9 @@ ms.locfileid: "66769304"
 ||||  
 |-|-|-|  
 |類型|長度 (以字元為單位)|小數位數|  
-|DBTIME2|8, 10..18|0,1..9|  
-|DBTIMESTAMP|19, 21..29|0,1..9|  
-|DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  
+|DBTIME2|8, 10..18|0、1..9|  
+|DBTIMESTAMP|19, 21..29|0、1..9|  
+|DBTIMESTAMPOFFSET|26, 28..36|0、1..9|  
   
 ## <a name="see-also"></a>另請參閱  
  [繫結和轉換 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/conversions-ole-db.md)  

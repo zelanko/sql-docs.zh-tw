@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_fetch_array |Microsoft Docs
+title: sqlsrv_fetch_array | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e983d3c9a0989a5aae79c074ba7b77b09528af6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cb76c3498be69a9a29525bbe96a26b94ba954af2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662686"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802278"
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* [選擇性]：預先定義的常數。 此參數可以採用下表所列的其中一個值：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|下一個資料列會以數值陣列的形式傳回。|  
 |SQLSRV_FETCH_ASSOC|下一個資料列會以關聯陣列的形式傳回。 陣列索引鍵是結果集內的資料行名稱。|  
@@ -66,7 +66,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 根據 *$fetchType* 參數的值，傳回的 **陣列** 可以是數值索引 **陣列**和 (或) 關聯 **陣列**。 根據預設，會傳回同時具有數值和關聯索引鍵的 **陣列** 。 傳回之陣列中的資料類型值，將是預設的 PHP 資料類型。 如需有關預設 PHP 資料類型的詳細資訊，請參閱 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 如果傳回沒有名稱的資料行，則陣列元素的關聯索引鍵會是空字串 ("")。 例如，請考量下列將值插入資料庫資料表中，並擷取伺服器產生之主索引鍵的 Transact-SQL 陳述式：  
   
 ```

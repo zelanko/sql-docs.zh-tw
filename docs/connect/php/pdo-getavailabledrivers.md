@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 52df84278079a9d1c7f7e7c23e4c86b5413758e9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66762197"
 ---
 # <a name="pdogetavailabledrivers"></a>PDO::getAvailableDrivers
@@ -33,7 +33,7 @@ array PDO::getAvailableDrivers ();
 ## <a name="return-value"></a>傳回值  
 包含 PDO 驅動程式清單的陣列。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 PDO 驅動程式的名稱用於 PDO::__construct，以建立 PDO 執行個體。  
   
 PDO::getAvailableDrivers 不需要由 PHP 驅動程式實作。 如需有關此方法的詳細資訊，請參閱 PHP 文件。  

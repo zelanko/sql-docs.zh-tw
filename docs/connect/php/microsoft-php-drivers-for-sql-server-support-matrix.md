@@ -11,11 +11,11 @@ author: David-Engel
 ms.author: genemi
 manager: ''
 ms.openlocfilehash: 0790d2cc0497ef2912f96cd4679e4541fc9b2262
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645500"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63180268"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP Drivers for SQL Server 支援對照表
 
@@ -31,24 +31,24 @@ Microsoft PHP Driver 不提供延長支援與自訂支援選項。
 
 下列 Microsoft PHP Driver 的支援期限到指定的結束支援日期為止。
 
-|驅動程式名稱|驅動程式套件版本|結束主要支援|
+|驅動程式名稱|驅動程式套件版本|主要支援結束日期|
 |-|:-:|-|
-|Microsoft PHP Driver for SQL Server 5.6|5.6|2024 年 2 月 21 日|
-|Microsoft PHP Driver for SQL Server 5.3|5.3|2023 年 7 月 20 日|
-|Microsoft PHP Driver for SQL Server 5.2|5.2|2023 年 2 月 9 日|
-|Microsoft PHP Driver for SQL Server 4.3|4.3|2022 年 7 月 6 日|
-|Microsoft PHP Driver 4.0 for SQL Server|4.0|2021 年 7 月 11 日|
+|Microsoft PHP Drivers 5.6 for SQL Server|5.6|2024 年 2 月 21 日|
+|Microsoft PHP Drivers 5.3 for SQL Server|5.3|2023 年 7 月 20 日|
+|Microsoft PHP Drivers 5.2 for SQL Server|5.2|2023 年 2 月 9 日|
+|Microsoft PHP Drivers 4.3 for SQL Server|4.3|2022 年 7 月 6 日|
+|Microsoft PHP Drivers 4.0 for SQL Server|4.0|2021 年 7 月 11 日|
 |Microsoft PHP Drivers 3.2 for SQL Server|3.2|2020 年 3 月 9日日|
 |Microsoft PHP Drivers 3.1 for SQL Server|3.1|2019 年 12 月 12 日|
 | &nbsp; | &nbsp; | &nbsp; |
 
 下列是不再支援的 Microsoft PHP Driver。
 
-|驅動程式名稱|驅動程式套件版本|結束主要支援|
+|驅動程式名稱|驅動程式套件版本|主要支援結束日期|
 |-|:-:|-|
 |Microsoft PHP Drivers 3.0 for SQL Server|3.0|2017 年 3 月 6 日|
 |Microsoft PHP Drivers 2.0 for SQL Server|2.0|2015 年 8 月 10日日|
-|Microsoft PHP Driver 1.0 for SQL Server|1.0|2014 年 4 月 28 日|
+|Microsoft PHP Drivers 1.0 for SQL Server|1.0|2014 年 4 月 28 日|
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-version-certified-compatibility"></a>認證的相容性的 SQL Server 版本
@@ -56,7 +56,7 @@ Microsoft PHP Driver 不提供延長支援與自訂支援選項。
 
 |PHP for SQL Server 驅動程式版本&#8594;<br />&#8595; SQL Server 版本|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Azure SQL 受控執行個體<br/> （延伸私人預覽）|Y|Y|Y|Y| | | | | |
+|Azure SQL 受控執行個體<br/> (延伸的個人預覽版)|Y|Y|Y|Y| | | | | |
 |Azure SQL 資料倉儲|Y|Y|Y|Y| | | | | |
 |SQL Server 2017         |Y|Y|Y|Y| | | | | |
 |SQL Server 2016         |Y|Y|Y|Y|Y| | | | |

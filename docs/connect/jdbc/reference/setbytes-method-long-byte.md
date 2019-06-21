@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ffb8f107-0f9d-4410-957f-62b718e1e872
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0a75b93fd423c2a664df71f437fcd3e54f8115fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f0d47be46aac25807fd9f97bb3ee40cf96ffd4fd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851586"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797640"
 ---
 # <a name="setbytes-method-long-byte"></a>setBytes 方法 (long, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public int setBytes(long pos,
 ## <a name="exceptions"></a>例外狀況  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 setBytes 方法是由 java.sql.Blob 介面中的 setBytes 方法指定。  
   
  資料會從指定的位置開始覆寫，而且可以超過 BLOB 的初始長度。 指定位置 + 1 的值將會附加位元組。 傳遞位置 + 2 或更大 (或是零或零以下) 的值將會擲回位置錯誤。 傳遞長度為零的 **byte** 陣列將會傳回零，因為未寫入任何位元組。  

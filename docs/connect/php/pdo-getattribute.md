@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 7a7b634b10be90b164f67eb2837a053eef3db7e8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66762137"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
@@ -36,10 +36,10 @@ mixed PDO::getAttribute ( $attribute )
 ## <a name="return-value"></a>傳回值  
 如果成功，會傳回連接選項、預先定義的 PDO 屬性或自訂驅動程式屬性的值。 如果失敗，則會傳回 null。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 下表包含支援的屬性清單。  
   
-|attribute|處理者|支援的值|Description|  
+|attribute|處理者|支援的值|描述|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|指定資料行名稱是否應為特定的大小寫。 PDO::CASE_LOWER 會強制使用小寫的資料行名稱、PDO::CASE_NATURAL 會保留資料庫所傳回的資料行名稱，而 PDO::CASE_UPPER 會強制使用大寫的資料行名稱。<br /><br />預設值是 PDO::CASE_NATURAL。<br /><br />也可以使用 PDO::setAttribute 設定此屬性。|  
 |PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|字串陣列|描述驅動程式和相關程式庫的版本。 傳回具有下列項目的陣列：ODBC 版本 (*MajorVer*.*MinorVer*)、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client DLL 名稱和版本、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 版本 (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  

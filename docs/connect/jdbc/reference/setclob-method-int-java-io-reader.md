@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 2b3727da-0480-4cea-b8b1-abda90699b84
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad07fbd53d2e3004ea96572d1c4d28f83e92a509
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5d777242d38e6a7002b2fa557c4ca18290e652a9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604396"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795597"
 ---
 # <a name="setclob-method-int-javaioreader"></a>setClob 方法 (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將所指定參數設定為指定的 Reader 物件。  
+  將指定的參數設定為所指定 Reader 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +43,7 @@ public final void setClob(int parameterIndex,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 setClob 方法由 java.sql.PreparedStatement 介面中的 setClob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

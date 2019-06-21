@@ -15,13 +15,13 @@ helpviewer_keywords:
 - BCPControl method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 0b483941a5907842500ba58f2af5312c7e1f9e0c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 49c26fdaf7912fe0cf67d35ac8fa6f581319cbe5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600822"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66790958"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,14 +39,14 @@ HRESULT BCPControl(
       void *iValue);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **BCPControl** 方法會設定各種大量複製作業的控制參數，包括取消大量複製之前允許出現的錯誤次數、要從資料檔案複製的第一個和最後一個資料列的數目，以及批次大小。  
   
  當從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大量複製資料時，這個方法也可用於指定要使用的 SELECT 陳述式。 您可以將 **eOption** 引數設定為 BCP_OPTION_HINTS 和 **iValue** 引數，以取得含有 SELECT 陳述式之寬字元字串的指標。  
   
  可能值為*eOption*是：  
   
-|選項|Description|  
+|選項|描述|  
 |------------|-----------------|  
 |BCP_OPTION_ABORT|停止已經進行的大量複製作業。 您可以用 BCP_OPTION_ABORT 的 *eOption* 引數來呼叫 **BCPControl** 方法，從另一個執行緒停止正在執行的大量複製作業。 *IValue*引數會被忽略。|  
 |BCP_OPTION_BATCH|每一批次中的資料列數目。 預設值為 0，表示資料擷取時，會指出資料表中的所有資料列，或資料複製到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，會指出使用者資料檔案中的所有資料列。 小於 1 的值會將 BCP_OPTION_BATCH 重設為預設值。|  

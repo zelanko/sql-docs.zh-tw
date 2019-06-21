@@ -7,13 +7,13 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.date: 03/14/2017
-ms.openlocfilehash: 50703b76ddd67ca4d41cc42625eb6cd0e5ac993b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.date: 06/06/2019
+ms.openlocfilehash: a6383eb6bf9c00f6158e0e7adc77605cfc226d9f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580378"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826913"
 ---
 # <a name="configure-report-builder-access"></a>設定報表產生器的存取
 報表產生器是一個隨選報表工具，它會與設定原生模式或 SharePoint 整合模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器一起安裝。  
@@ -28,29 +28,29 @@ ms.locfileid: "65580378"
 
 ## <a name="prerequisites"></a>Prerequisites
 
-並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中都可使用報表產生器。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2017 版本支援的功能](~/sql-server/editions-and-components-of-sql-server-2017.md)。  
+並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中都可使用報表產生器。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2017 版本支援的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
 
-用戶端電腦必須已經安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供了執行 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 應用程式的基礎結構。  
+用戶端電腦必須具備[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 或 4.6.1 分別安裝 SSRS 2016 和 2017年。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供了執行 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 應用程式的基礎結構。  
 
-您必須使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 6.0 或更新版本。  
+您必須使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]Internet Explorer 11 或更新版本或其他的現代瀏覽器。  
 
 報表產生器一定會在完全信任模式中執行；您不能設定它在部分信任模式中執行。 在舊版中，報表產生器可以在部分信任模式中執行，但是在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中則不支援這個選項。  
 
 ## <a name="enabling-and-disabling-report-builder"></a>啟用及停用報表產生器  
 
-預設會啟用報表產生器。 報表伺服器管理員可以選擇將報表伺服器系統屬性 **EnableReportDesignClientDownload** 設為 **false**，以停用報表產生器功能。 設定這個屬性將會停用該報表伺服器的報表產生器下載功能。  
+預設會啟用報表產生器。 報表伺服器管理員可以選擇將報表伺服器系統屬性 **ShowDownloadMenu** 設定為 **false**，以停用報表產生器功能。 設定這個屬性將會停用報表產生器中，行動報表發行工具，和該報表伺服器下載 Power BI 行動裝置。  
 
-若要設定報表伺服器系統屬性，您可以使用 Management Studio 或指令碼：  
+ 若要設定報表伺服器系統屬性，您可以使用 Management Studio 或指令碼：   
 
-- 若要使用 Management Studio，請連線到報表伺服器，並使用 [進階伺服器屬性] 頁面將 **EnableReportDesignClientDownload** 設為 **false**。 如需如何開啟此頁面的詳細資訊，請參閱[設定報表伺服器屬性 &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)。  
+ - 若要使用 Management Studio，請連線到報表伺服器，並使用 [進階伺服器屬性] 頁面將 **ShowDownloadMenu** 設定為 **false**。 如需如何開啟此頁面的詳細資訊，請參閱[設定報表伺服器屬性 &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)。      
 
-- 若要檢視設定報表伺服器屬性的範例指令碼，請參閱 [編寫部署和管理工作的指令碼](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)。  
+ - 若要檢視設定報表伺服器屬性的範例指令碼，請參閱 [編寫部署和管理工作的指令碼](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)。  
 
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>原生模式報表伺服器上授與報表產生器存取的角色指派  
 
 在原生模式報表伺服器上，建立使用者角色指派來包含使用報表產生器的工作。 您必須是內容管理員和系統管理員，才能建立或修改項目和網站層級的角色定義與角色指派。  
 
-下列指示假設您使用預先定義的角色。 如果您已修改角色定義或是從 SQL Server 2000 升級，請檢查這些角色，以確認它們有包含所需的工作。 如需建立角色指派的詳細資訊，請參閱[將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)。  
+下列指示假設您使用預先定義的角色。 如果您已修改角色定義或是從 SQL Server 2000 升級，請檢查這些角色，以確認它們有包含所需的工作。 如需建立角色指派的詳細資訊，請參閱[將報表伺服器的存取權授與使用者](../../reporting-services/security/grant-user-access-to-a-report-server.md)。
 
 在建立角色指派之後，使用者將有權執行以下作業：  
 
@@ -100,7 +100,7 @@ ms.locfileid: "65580378"
 
     3. 在 [名稱] 中，輸入 **報表產生器**。  
 
-    4. 在 [描述] 中，輸入角色的描述，好讓報表管理員中的使用者知道這個角色的目的。  
+    4. 在 [描述] 中，輸入角色的描述，好讓入口網站中的使用者知道這個角色的目的。  
 
     5. 新增下列工作：[取用報表]、[檢視報表]、[檢視模型]、[檢視資源]、[檢視資料夾] 及 [管理個別訂閱]。  
 
@@ -108,11 +108,12 @@ ms.locfileid: "65580378"
 
 #### <a name="to-create-role-assignments-that-grant-access-to-report-builder"></a>建立角色指派來授與報表產生器的存取權  
 
-1. 啟動報表管理員。  
+1. 啟動入口網站。  
 
-2. 按一下 **[站台設定]** 。  
+2. 按一下右上方的齒輪圖示方的 web 入口網站的首頁上，然後選取**站台設定**從下拉式清單。  
+![web 入口網站的齒輪圖示和功能表](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
-3. 按一下 **[安全性]** 。  
+3. 按一下 **[安全性]**。  
 
 4. 如果您想要設定報表產生器存取的使用者或群組已經有角色指派，請按一下 [編輯]。  
 否則請按一下 [新增角色指派]。 在群組或使用者中，使用下列格式來輸入 Windows 網域使用者或群組帳戶：\<網域>\\<帳戶\>。 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。  
@@ -133,7 +134,7 @@ ms.locfileid: "65580378"
 
 11. 重複上述步驟，以便建立或修改其他使用者或群組的角色指派。  
 
-## <a name="permissions-granting-report-builder-access-on-a-sharepoint-integrated-mode-report-server"></a>授與 SharePoint 整合模式報表伺服器之報表產生器存取的權限  
+## <a name="permissions-granting-report-builder-access-on-a-sharepoint-integrated-mode-report-server"></a>授與 SharePoint 整合模式報表伺服器上之報表產生器存取的權限  
 
 在 SharePoint 整合模式報表伺服器上，報表產生器的存取會授與給具有「參與」或「完全控制」權限等級的 SharePoint 使用者。  
 
@@ -150,5 +151,6 @@ ms.locfileid: "65580378"
 - [報表伺服器的驗證](../../reporting-services/security/authentication-with-the-report-server.md)
 - [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
 - [啟動報表產生器](../../reporting-services/report-builder/start-report-builder.md)
-- [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)- [連接至 Management Studio 中的報表伺服器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
+- [報表伺服器的入口網站 (SSRS 原生模式)](../web-portal-ssrs-native-mode.md)
+- [連接至 Management Studio 中的報表伺服器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
 - [報表伺服器系統屬性](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)

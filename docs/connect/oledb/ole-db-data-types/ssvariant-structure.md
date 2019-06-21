@@ -16,10 +16,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: d956aab8a82dc0387317578964b1796a685f24c2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66769530"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 結構
@@ -31,7 +31,7 @@ ms.locfileid: "66769530"
   
  **SSVARIANT**是辨識聯集。 根據 vt 成員的值而定，取用者可以判斷要讀取的成員。 vt 值會對應至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型。 因此，**SSVARIANT** 結構可以保留任何 SQL Server 類型。 如需有關標準 OLE DB 類型的資料結構的詳細資訊，請參閱 <<c0> [ 的類型指標](https://go.microsoft.com/fwlink/?LinkId=122171)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當 DataTypeCompat==80 時，數個 **SSVARIANT** 子類型會變成字串。 例如，下列 vt 值在 **SSVARIANT** 中會顯示為 VT_SS_WVARSTRING：  
   
 -   VT_SS_DATETIMEOFFSET  

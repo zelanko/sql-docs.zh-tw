@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e90dc3c4996fc9dc412a28849df2283ec9495ebd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9e9e7c7c6c29847fef54ac3e484e7ed7b1821f4d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597136"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801794"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC Driver 概觀
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47597136"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[下載 Microsoft JDBC Driver for SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)|Microsoft JDBC Driver for SQL Server 的下載連結|  
 |[JDBC Driver 的版本資訊](../../connect/jdbc/release-notes-for-the-jdbc-driver.md)|說明目前之 Microsoft JDBC Driver 版本中所加入的功能。|  
@@ -42,7 +42,7 @@ ms.locfileid: "47597136"
 |[Microsoft JDBC Driver for SQL Server 的功能相依性](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Microsoft JDBC Driver for SQL Server 的功能相依性。|
 
 ## <a name="see-also"></a>另請參閱  
- [JDBC 驅動程式 GitHub 儲存機制](https://github.com/microsoft/mssql-jdbc)  
+ [JDBC 驅動程式 GitHub 存放庫](https://github.com/microsoft/mssql-jdbc) \(英文\)  
  [JDBC 驅動程式 API 參考](../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

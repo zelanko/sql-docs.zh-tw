@@ -11,10 +11,10 @@ ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 77590da41aa09f66d7549a0d7ff615cdb3f63af3
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506637"
 ---
 # <a name="create-a-linked-report"></a>建立連結報表
@@ -36,7 +36,7 @@ ms.locfileid: "66506637"
   
 4. 若要選取報表的其他資料夾，選取 右邊的省略符號按鈕 （...）***位置***。  瀏覽至報表，然後選取新資料夾**選取**。 如果您未選取不同的資料夾，則建立連結的報表是在目前的資料夾。  
   
-5. 選取 [建立]  。 會建立連結的報表。  
+5. 選取 [建立]。 會建立連結的報表。  
 
 6. 底下**進階**，選取不同**報表逾時**值，如有需要，然後選取**套用**以儲存變更。
   

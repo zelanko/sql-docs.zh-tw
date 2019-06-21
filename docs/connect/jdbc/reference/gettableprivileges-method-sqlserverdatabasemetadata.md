@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 0610d667-a16d-4201-a14b-0a40048911e1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bdea6926543bd95fa66c4b73a48736a3b685859e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 26c1630042b4f33230f37ec979de7bfa643b283b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810086"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802607"
 ---
 # <a name="gettableprivileges-method-sqlserverdatabasemetadata"></a>getTablePrivileges 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,12 +56,12 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getTablePrivileges 方法是由 java.sql.DatabaseMetaData 介面中 getTablePrivileges 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getTablePrivileges 方法是由 java.sql.DatabaseMetaData 介面中的 getTablePrivileges 方法指定。  
   
  透過 getTablePrivileges 方法所傳回的結果將包含下列資訊：  
   
-|[屬性]|類型|Description|  
+|名稱|類型|描述|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|目錄的名稱。|  
 |TABLE_SCHEM|**String**|資料表結構描述名稱。|  

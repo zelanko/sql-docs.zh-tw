@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 034378c7e5f8624fa945bcf696ee521606963063
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66762582"
 ---
 # <a name="getrow-method-sqlserverresultset"></a>getRow 方法 (SQLServerResultSet)
@@ -41,8 +41,8 @@ public int getRow()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getInt 方法是由 java.sql.ResultSet 介面中的 getInt 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getRow 方法是由 java.sql.ResultSet 介面中的 getRow 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

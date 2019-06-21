@@ -14,10 +14,10 @@ ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f4d98747a2f00de41dd5661b76a05a9f22d341df
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506442"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>設定報表和共用資料集處理的逾時值 (SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66506442"
  當您建立或管理共用資料集時，可在報表伺服器上以秒數指定查詢逾時值。 根據預設，這個值是設定為 0 秒，相當於沒有逾時值。 如需詳細資訊，請參閱 [Manage Shared Datasets](../../reporting-services/report-data/manage-shared-datasets.md)(管理共用資料集)。  
   
 ## <a name="setting-a-report-execution-time-out"></a>設定報表執行逾時  
- 您可以設定報表執行逾時值，來限制報表伺服器用於處理報表的時間量。 報表執行逾時值可以在報表管理員中指定。 您可以設定 [站台設定] 頁面中所有報表的預設值，然後覆寫特定報表在 [執行] 屬性頁面中的值。 依預設，此值設定為 1800 秒。 如需詳細資訊，請參閱 [設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)。  
+ 您可以設定報表執行逾時值，來限制報表伺服器用於處理報表的時間量。 報表執行逾時值可以在入口網站中指定。 您可以設定 [站台設定] 頁面中所有報表的預設值，然後覆寫特定報表在 [執行] 屬性頁面中的值。 依預設，此值設定為 1800 秒。 如需詳細資訊，請參閱 [設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)。  
   
 ## <a name="how-report-execution-time-out-values-are-evaluated"></a>如何評估報表執行逾時值  
  報表伺服器會以 60 秒的間隔評估執行中的作業。 每間隔 60 秒，報表伺服器會比較實際的處理時間和報表執行逾時值。 如果報表的處理時間超過報表執行逾時值，就會停止報表的處理。  

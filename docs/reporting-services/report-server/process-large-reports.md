@@ -1,6 +1,6 @@
 ---
 title: 處理大型報表 | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8100f0e074f407b2733a5ede0fec97497356cfab
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 574fcc9c8e180b75d5d3def6d97798708c40996c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581440"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140256"
 ---
 # <a name="process-large-reports"></a>處理大型報表
   大型報表會造成一定的處理挑戰，若要正確執行，就需要特定的組態。 除非將大型報表設定成支援分頁，否則不應視需要執行大型報表。  
@@ -31,12 +31,12 @@ ms.locfileid: "65581440"
   
  針對包含動態資料的報表，每次執行報表之後，報表大小有可能會大幅變更。 在此情況下，您應監視資料來源以判斷資料的變動性對您的報表有何影響，以及您是否必須遵循本主題中所指定的步驟。  
   
- 如需如何診斷逾時錯誤和記憶體不足錯誤的詳細資訊和提示，請參閱 blogs.msdn.com 上的 [如何在報表伺服器中執行報表時診斷錯誤](https://go.microsoft.com/fwlink/?LinkId=85634) 文章。  
+ 如需如何診斷逾時錯誤和記憶體不足錯誤的詳細資訊和提示，請參閱 blogs.msdn.microsoft.com 上的 [如何在報表伺服器中執行報表時診斷錯誤](https://go.microsoft.com/fwlink/?LinkId=85634) 文章。  
   
 ## <a name="configuration-recommendations"></a>組態建議  
  報表執行、報表轉譯與報表存取的建議包括下列項目：  
   
--   設計報表以支援分頁。 報表伺服器每次傳送一頁報表。 如果報表包含分頁，您就可以控制多少資料流至瀏覽器。 如需詳細資訊，請參閱 [預先載入快取 &#40;報表管理員&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)。  
+-   設計報表以支援分頁。 報表伺服器每次傳送一頁報表。 如果報表包含分頁，您就可以控制多少資料流至瀏覽器。 如需詳細資訊，請參閱 <<c0> [ 預先載入快取 (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)。  
   
 -   設定報表當成已排程的報表快照集執行，以防止其視需要執行。 請勿設定報表執行的逾時值。 在離峰時段執行報表。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "65581440"
   
 -   限制對報表的存取。 設定報表使用項目層級安全性，並以只允許需要的使用者存取之新角色指派取代預設的角色指派。  
   
-     依預設，使用者可以開啟他們可在資料夾階層中檢視的任何報表。 即使設定報表以快照集執行，可在資料夾中檢視報表項目的使用者也可以開啟報表。 如果報表很大，則使用者在報表管理員中開啟報表時，可能會造成瀏覽器停止回應。  
+     依預設，使用者可以開啟他們可在資料夾階層中檢視的任何報表。 即使設定報表以快照集執行，可在資料夾中檢視報表項目的使用者也可以開啟報表。 如果報表很大，則使用者在入口網站中開啟報表時，可能會造成瀏覽器停止回應。  
   
 ## <a name="rendering-recommendations"></a>轉譯建議  
  在設定報表散發之前，重要的是了解哪些轉譯用戶端可容納大型文件。 建議的格式是使用軟分頁符號的預設 HTML 轉譯延伸模組，但是您可以選擇支援分頁的任何格式。  
@@ -54,7 +54,7 @@ ms.locfileid: "65581440"
  每一個轉譯格式的效能和記憶體耗用量各不相同。 相同的報表會視您選取的格式，而有不同的轉譯速度，且需要不同的記憶體數量。 最快速且記憶體需求較少的格式包括 CSV、XML 和 HTML。 PDF 和 Excel 的效能最慢，但其原因不同。 PDF 是屬於 CPU 運算密集的格式，Excel 則是 RAM 需求高的格式。 影像轉譯則介於這兩個群組之間。 您可以在定義如何散發報表時指定此格式。  
   
 ## <a name="deployment-and-distribution-recommendations"></a>部署與散發建議  
- 如果您使用分頁符號來控制報表轉譯，則可以使用和部署任何報表一樣的方式來部署大型報表。 您可以透過報表管理員、SharePoint Web 組件或加入入口網站或網站的 URL，來提供報表的存取。 這些部署選項全都支援視需要存取，以及先前執行的報表快照集。  
+ 如果您使用分頁符號來控制報表轉譯，則可以使用和部署任何報表一樣的方式來部署大型報表。 您可以透過入口網站、SharePoint Web 組件或加入入口網站或網站的 URL，來提供報表的存取。 這些部署選項全都支援視需要存取，以及先前執行的報表快照集。  
   
  有一個替代部署策略，是將報表散發給個別使用者。 如果您能夠仔細設定傳遞選項的方式，就可以透過訂閱來散發大型報表。 您可以使用標準訂閱或資料驅動訂閱來傳遞報表。 訂閱和傳遞的建議包含下列各項：  
   
@@ -71,6 +71,4 @@ ms.locfileid: "65581440"
  [設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)   
  [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [預先載入快取 &#40;報表管理員&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
-  
-  
+ [預先載入快取 (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)  

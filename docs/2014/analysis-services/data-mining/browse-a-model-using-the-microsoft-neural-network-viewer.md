@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1628eff6e5c440071126ce3508b977f9f7508ba5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086060"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>使用 Microsoft 類神經網路檢視器瀏覽模型
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 類神經網路檢視器，會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建立可分析多個輸入和輸出的分類和迴歸採礦模型，對於開放式分析和瀏覽十分有用。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)＞。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 類神經網路檢視器，會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建立可分析多個輸入和輸出的分類和迴歸採礦模型，對於開放式分析和瀏覽十分有用。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)＞。  
   
  在您使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路檢視器瀏覽模型時，通常會選擇某個目標屬性和狀態，然後使用該檢視器來查看輸入屬性是如何影響結果。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66086060"
 ###  <a name="BKMK_Inputs"></a> 輸入  
  使用 **[輸入]** 索引標籤選擇模型用來做為輸入的屬性和值。 根據預設，當檢視器開啟時包含所有屬性。 在此預設檢視中，模型會選擇哪些是要顯示的最重要的屬性值。  
   
- 若要選取輸入屬性，請按一下 [輸入] 方格的 [屬性] 資料行內，然後從下拉式清單中選取屬性。 (只有模型所包含的屬性才會包含在清單中)。  
+ 若要選取輸入屬性，請按一下 [輸入]  方格的 [屬性]  資料行內，然後從下拉式清單中選取屬性。 (只有模型所包含的屬性才會包含在清單中)。  
   
  第一個相異值出現在 **[值]** 資料行之下。 按一下預設值會顯示一份清單，它包含相關聯屬性的所有可能狀態。 您可以選取要調查的狀態。 您可以選取任何您想要的屬性，數目不限。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66086060"
  [回到頁首](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Characteristics"></a> 變數  
- 中的方格**變數** 索引標籤包含下列資料行：**屬性**，**值**，**喜好 [值 1]**，和**喜好 [值 2]**。 依預設，資料行是依 [喜好 [值 1]] 的程度來排序。 按一下資料行標題會將排序順序變更為選取的資料行。  
+ 中的方格**變數** 索引標籤包含下列資料行：**屬性**，**值**，**喜好 [值 1]** ，和**喜好 [值 2]** 。 依預設，資料行是依 [喜好 [值 1]]  的程度來排序。 按一下資料行標題會將排序順序變更為選取的資料行。  
   
  屬性右邊的列會顯示指定的輸入屬性狀態所喜好的輸出屬性狀態。 此橫條的大小會顯示輸出狀態喜好輸入狀態的強烈程度。  
   

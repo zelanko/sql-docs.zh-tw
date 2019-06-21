@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: b08ead32ba3c31f8f928c6e6dda051df1204073c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66762015"
 ---
 # <a name="pdoquote"></a>PDO::quote
@@ -38,7 +38,7 @@ $*parameter_type*：指出資料類型的選擇性 (整數) 符號。  預設值
 ## <a name="return-value"></a>傳回值  
 可以傳遞至 SQL 陳述式的加上引號的字串，如果失敗則傳回 false。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
 ## <a name="example"></a>範例  

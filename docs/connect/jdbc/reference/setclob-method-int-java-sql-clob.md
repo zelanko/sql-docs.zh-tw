@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 68d49f2c-fd8d-4abb-bfdc-e7b0fbd9a9da
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a98e39438220dea5139f1d5df65314caf08eb086
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f78d8d226043deed03ab86e5859453313d296fb9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612076"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795615"
 ---
 # <a name="setclob-method-int-javasqlclob"></a>setClob 方法 (int, java.sql.Clob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +48,7 @@ public final void setClob(int parameterIndex,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 setClob 方法由 java.sql.PreparedStatement 介面中的 setClob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

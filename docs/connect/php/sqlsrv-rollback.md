@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 7be00e00ade69c48f36f788dd093fb814440f3e9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66782820"
 ---
 # <a name="sqlsrvrollback"></a>sqlsrv_rollback
@@ -34,7 +34,7 @@ ms.locfileid: "66782820"
 > 根據預設，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 處於自動認可模式。 這表示所有查詢都會在成功時自動進行認可，除非已使用 **sqlsrv_begin_transaction**開始交易。  
   
 > [!NOTE]  
-> 如果在不屬於使用中交易 (以 **sqlsrv_begin_transaction** 起始) 的連線上呼叫 **sqlsrv_rollback**，則呼叫會傳回 **false**，且「不在交易中」  錯誤會新增至錯誤集合。  
+> 如果在不屬於使用中交易 (以 **sqlsrv_begin_transaction** 起始) 的連線上呼叫 **sqlsrv_rollback**，則呼叫會傳回 **false**，且「不在交易中」錯誤會新增至錯誤集合。  
   
 ## <a name="syntax"></a>語法  
   

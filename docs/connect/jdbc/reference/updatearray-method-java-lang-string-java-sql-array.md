@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6f2ced5a-1c7d-439a-aaa5-472b9f4fdeab
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d397098ba86fb891b4703f6e15970a75f9266dcd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3035a4cfefa7138de79d585e5aef22e8a0d1c981
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783046"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66781387"
 ---
 # <a name="updatearray-method-javalangstring-javasqlarray"></a>updateArray 方法 (java.lang.String, java.sql.Array)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +48,7 @@ public void updateArray(java.lang.String columnName,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 updateArray 方法是由 java.sql.ResultSet 介面中的 updateArray 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

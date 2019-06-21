@@ -1,6 +1,6 @@
 ---
 title: 監視 Reporting Services 訂閱 | Microsoft Docs
-ms.date: 03/07/2017
+ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: subscriptions
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cb4d7f64bf72aaf8844097277c78d6563b426cc1
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
-ms.translationtype: MTE75
+ms.openlocfilehash: 33d865ad28e9d013b97910ff30c4bcf7be760f93
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65578215"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140539"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>監視 Reporting Services 訂閱
   您可以透過使用者介面、Windows PowerShell 或記錄檔來監視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱。 您可以使用的監視選項取決於正在執行的報表伺服器模式。  
@@ -28,7 +28,7 @@ ms.locfileid: "65578215"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。|  
   
- **本主題內容：**  
+ **本文內容：**  
   
 -   [原生模式使用者介面](#bkmk_native_mode)  
   
@@ -39,14 +39,14 @@ ms.locfileid: "65578215"
 -   [管理非使用中訂閱](#bkmk_manage_inactive)  
   
 ##  <a name="bkmk_native_mode"></a> 原生模式使用者介面  
- 個別 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用者可以使用 [我的訂閱]  頁面或報表管理員中的 [訂閱]  索引標籤，來監視訂閱的狀態。 [訂閱] 頁面會包括資料行，指出上次訂閱是在何時執行以及報表的狀態。 當訂閱已設定處理排程時，就會更新狀態訊息。 如果觸發程序從未發生 (例如，報表執行快照集從未重新整理或排程從未執行)，則狀態訊息不會更新。  
+ 個別 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用者可以使用 [我的訂閱] 頁面或入口網站中的 [訂閱] 索引標籤，來監視訂閱的狀態。 [訂閱] 頁面會包括資料行，指出上次訂閱是在何時執行以及報表的狀態。 當訂閱已設定處理排程時，就會更新狀態訊息。 如果觸發程序從未發生 (例如，報表執行快照集從未重新整理或排程從未執行)，則狀態訊息不會更新。  
   
  下表描述 [狀態]  欄的可能值。  
   
-|[狀態]|Description|  
+|狀態|描述|  
 |------------|-----------------|  
 |新增訂閱|出現在第一次建立訂閱時。|  
-|非使用中|出現在無法處理訂閱時。 如需詳細資訊，請參閱此主題稍後的＜管理非使用中訂閱＞。|  
+|非使用中|出現在無法處理訂閱時。 如需詳細資訊，請參閱本文中稍後的＜管理非使用中訂閱＞。|  
 |完成：已處理 \<數目> 個 (總共 \<數目> 個)；\<數目> 個錯誤。|顯示資料驅動訂閱執行的狀態；此訊息來自排程與傳遞處理器。|  
 |已處理 \<數目> 個|排程與傳遞處理器已成功傳遞或已不再嘗試傳遞的通知數目。 當資料驅動傳遞完成時，已處理的通知數目應該和產生的通知總數相等。|  
 |總共 \<數目> 個|訂閱最後一次傳遞所產生的通知總數。|  
@@ -66,17 +66,17 @@ ms.locfileid: "65578215"
 ### <a name="native-mode-log-files"></a>原生模式記錄檔  
  如果在傳遞期間發生錯誤，就會在報表伺服器追蹤記錄中產生項目。  
   
- 報表伺服器管理員可以檢閱 **reportserverservice_\*.log** 檔案，以決定訂閱傳遞狀態。 針對電子郵件傳遞，報表伺服器記錄檔會包括處理以及傳遞到特定電子郵件帳戶的記錄。 下列是記錄檔的預設位置：  
+ 報表伺服器管理員可以檢閱 **ReportServerService_*.log** 檔案，以決定訂閱傳遞狀態。 針對電子郵件傳遞，報表伺服器記錄檔會包括處理以及傳遞到特定電子郵件帳戶的記錄。 下列是記錄檔的預設位置：  
   
- `C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\LogFiles`  
+ `C:\Program Files\Microsoft SQL Server Reporting Services\SSRS\LogFiles`  
   
  下列是範例記錄檔檔名：  
   
- `ReportServerService__05_21_2014_00_05_07.log`  
+ `ReportServerService__05_21_2019_00_05_07.log`  
   
  下列是與訂閱相關的追蹤記錄檔範例錯誤訊息：  
   
--   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO: 將 EnableExecutionLogging 初始化至 'True'  如同 Server 系統所示 properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR: **傳送電子郵件時發生錯誤**。 例外狀況：System.Net.Mail.SmtpException: SMTP 伺服器需要安全的連線或是用戶端未經認證。 伺服器回應為：5.7.1 用戶端未經認證   於 System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36:: i INFO: 將 EnableExecutionLogging 初始化至 'True' ，如同 Server 系統所示 properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41:: e ERROR: **傳送電子郵件時發生錯誤**。 例外狀況：System.Net.Mail.SmtpException: SMTP 伺服器需要安全的連線或是用戶端未經認證。 伺服器回應為：5.7.1 用戶端未經認證   於 System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  記錄檔不包括有關報表是否開啟或實際上是否成功傳遞的資訊。 成功傳遞是指排程與傳遞處理器未產生錯誤，且報表伺服器已連接到郵件伺服器。 如果電子郵件在使用者信箱產生無法傳遞訊息錯誤，該資訊將不會包含在記錄檔中。 如需記錄檔的詳細資訊，請參閱 [Reporting Services 記錄檔和來源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
   
@@ -97,10 +97,10 @@ ms.locfileid: "65578215"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |date|處理|區域|類別目錄|層級|Correlation|訊息|  
-|5/21/2014 14:34:06:15|應用程式集區：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|報表伺服器電子郵件延伸模組|未預期|(空的)|**Error sending email.** 例外狀況：System.net.mail.smtpexception: 信箱無法使用。 伺服器回應為：5.7.1 用戶端不具權限，無法以此寄件者傳送  於 System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  於 System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  於 System.Net.Mail.SmtpClient.Send(MailMessage message)  於 Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|2019/5/21 14:34:06:15|應用程式集區：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|報表伺服器電子郵件延伸模組|未預期|(空的)|**Error sending email.** 例外狀況：System.net.mail.smtpexception: 信箱無法使用。 伺服器回應為：5.7.1 用戶端不具權限，無法以此寄件者傳送  於 System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  於 System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  於 System.Net.Mail.SmtpClient.Send(MailMessage message)  於 Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> 使用 PowerShell 監視訂閱  
- 例如，您可以使用 PowerShell 指令碼查看原生模式或 SharePoint 模式訂閱的狀態，請參閱 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)。  
+ 比方說的 PowerShell 指令碼可用來檢查狀態的原生模式或 SharePoint 模式的訂用帳戶，請參閱[管理的訂用帳戶擁有者和執行訂用帳戶-PowerShell](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)。  
   
 ##  <a name="bkmk_manage_inactive"></a> 管理非使用中訂閱  
  如果訂閱變成非使用中，您應該將其刪除，或藉由解決導致無法處理的問題將其重新啟動。 如果發生問題而導致無法處理，訂閱就可能會變成非使用中。 這些條件包括：  
@@ -118,7 +118,7 @@ ms.locfileid: "65578215"
  當條件導致訂閱變成非使用中，而報表伺服器執行訂閱時，該訂閱會反映出此事實。 如果訂閱已排程在每星期五的上午 2:00 傳遞報表，而其使用的傳遞延伸模組在星期一的上午 9:00 解除安裝，則直到星期五的上午 2:00，訂閱才會反映出其非使用中的狀態。  
   
 ## <a name="see-also"></a>另請參閱  
- [old_建立及管理原生模式報表伺服器的訂閱](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+ [建立及管理原生模式報表伺服器的訂閱](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

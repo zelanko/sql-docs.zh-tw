@@ -1,5 +1,5 @@
 ---
-title: 格式化十進位字串和貨幣值 （SQLSRV 驅動程式） |Microsoft Docs
+title: 將十進位字串及貨幣值格式化 (SQLSRV 驅動程式) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,13 +12,13 @@ author: yitam
 ms.author: v-yitam
 manager: mbarwin
 ms.openlocfilehash: 76b6d27acedcfe2ec462a764559237a1a2218f78
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676515"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62669600"
 ---
-# <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>格式化十進位字串和貨幣值 （SQLSRV 驅動程式）
+# <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>將十進位字串及貨幣值格式化 (SQLSRV 驅動程式)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 若要保留精確[decimal 或 numeric 類型](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)一律會擷取為確切的有效位數與標尺的字串。 如果任何值小於 1，前置的零遺失。 它是相同的 money 和 smallmoney 欄位為十進位的欄位，固定小數位數等於 4。
@@ -84,6 +84,6 @@ if (sqlsrv_execute($stmt)) {
 ```
 
 ## <a name="see-also"></a>另請參閱
-[格式化十進位字串和貨幣值 （PDO_SQLSRV 驅動程式）](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)
+[將十進位字串及貨幣值格式化 (PDO_SQLSRV 驅動程式)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)
 
 [擷取資料](../../connect/php/retrieving-data.md)

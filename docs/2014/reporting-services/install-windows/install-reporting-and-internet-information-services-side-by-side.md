@@ -12,12 +12,12 @@ ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6555f47c1d390180bbf2d2ccca1f29f07889465d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 514774acc7255f2f499bfe7fdd6e731944ab67fe
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66108794"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285050"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>並存安裝 Reporting Services 和 Internet Information Services (SSRS 原生模式)
   您可以在同一部電腦上安裝和執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 與 Internet Information Services (IIS)。 您所使用的 IIS 版本會決定必須處理的互通性問題。  
@@ -43,11 +43,11 @@ ms.locfileid: "66108794"
   
 |範例|要求|  
 |-------------|-------------|  
-|http://123.234.345.456:80/reports|接收的所有要求傳送至 http://123.234.345.456/reports 或 http://\< 電腦名稱 > / 如果網域名稱服務可以解析成該主機名稱的 IP 位址。|  
+|http:\//123.234.345.456:80/reports|接收的所有要求傳送至 http:\//123.234.345.456/reports 或 http://\<電腦名稱 > / 如果網域名稱服務可以解析成該主機名稱的 IP 位址。|  
 |http://+:80/reports|只要此 URL 包含 "reports" 虛擬目錄名稱，便接收傳送至適用於該電腦之任何 IP 位址或主機名稱的任何要求。|  
-|http://123.234.345.456:80|任何指定的要求會收到 http://123.234.345.456 或 http://\< computername > 如果網域名稱服務可以將 IP 位址解析成該主機名稱。|  
-|http://+:80|若為對應至 [全部指派]  的應用程式端點，便接收尚未由其他應用程式接收的要求。|  
-|http://*:80|若為對應至 [全未指派]  的應用程式端點，便接收尚未由其他應用程式接收的要求。|  
+|http:\//123.234.345.456:80|收到的任何要求，指定 http:\//123.234.345.456 或 http://\<computername > 如果網域名稱服務可以將 IP 位址解析成該主機名稱。|  
+|http://+:80|若為對應至 [全部指派] 的應用程式端點，便接收尚未由其他應用程式接收的要求。|  
+|http://*:80|若為對應至 [全未指派] 的應用程式端點，便接收尚未由其他應用程式接收的要求。|  
   
  連接埠衝突的其中一個指標是您會看到下列錯誤訊息：' System.IO.FileLoadException:此程序無法存取檔案，因為它正由另一個處理序。 (來自 HRESULT 的例外狀況：0x80070020)。 '  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 85d4451f-6392-470e-ab21-78a495b45792
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9030898e71ec13a75da9b91e41f9792d31cce82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: dab78e0f48f2bb7debcf5d993dfb128388a42506
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798019"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796523"
 ---
 # <a name="islast-method-sqlserverresultset"></a>isLast 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public boolean isLast()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 isLast 方法是由 java.sql.ResultSet 介面中的 isLast 方法指定。  
   
  如果搭配順向和動態資料指標使用這個方法，則會擲回例外狀況。  

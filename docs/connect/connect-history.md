@@ -3,18 +3,18 @@ title: Microsoft SQL Server 的驅動程式歷程記錄 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/04/2018
 ms.prod: sql
-ms.reviewer: genemi
+ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daveng
+author: MightyPen
+ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 5c312421c7934690c947dbe0bf23b6404afaf56f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
-ms.translationtype: HT
+ms.openlocfilehash: f8a0c12939882602f21a849d2fb3ec7d829df92b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770507"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822776"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL Server 的驅動程式歷程記錄
 
@@ -22,7 +22,7 @@ ms.locfileid: "66770507"
 
 ## <a name="odbc"></a>ODBC
 
-有三個不同世代的 Microsoft OLE DB Provider for SQL Server。 第一個"SQL Server"ODBC 驅動程式仍隨附於[Windows Data Access Components](#microsoft-or-windows-data-access-components)。 不建議用於新的開發中使用此驅動程式。 在 SQL Server 2005 中，啟動[SQL Server Native Client](#sql-server-native-client)包含 ODBC 介面，並隨附於 SQL Server 2005 到 SQL Server 2012 的 ODBC 驅動程式。 不建議用於新的開發中使用此驅動程式。 SQL Server 2012 之後, [Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server)會更新為最新的伺服器功能，接下來的驅動程式。
+有三個不同世代適用於 SQL Server 的 Microsoft ODBC 驅動程式。 第一個"SQL Server"ODBC 驅動程式仍隨附於[Windows Data Access Components](#microsoft-or-windows-data-access-components)。 不建議用於新的開發中使用此驅動程式。 在 SQL Server 2005 中，啟動[SQL Server Native Client](#sql-server-native-client)包含 ODBC 介面，並隨附於 SQL Server 2005 到 SQL Server 2012 的 ODBC 驅動程式。 不建議用於新的開發中使用此驅動程式。 SQL Server 2012 之後, [Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server)會更新為最新的伺服器功能，接下來的驅動程式。
 
 ### <a name="sql-server-native-client"></a>SQL Server Native Client
 
@@ -36,7 +36,7 @@ SQL Server 2012 之後, 主要 ODBC driver for SQL Server 已開發和發行為 
 
 ## <a name="ole-db"></a>OLE DB
 
-有三個不同世代的 Microsoft OLE DB Provider for SQL Server。 [Microsoft OLE DB Provider for SQL Server](#microsoft-or-windows-data-access-components) (SQLOLEDB) 仍隨附於 Windows Data Access Component \(英文\)。 此提供者將不會更新與新功能，並不建議用於新的開發中使用此驅動程式。 在 SQL Server 2005 中，啟動[SQL Server Native Client](#sql-server-native-client)包含 OLE DB 提供者介面 (SQLNCLI)，並隨附於 SQL Server 2005 到 SQL Server 2017 的 OLE DB 提供者。 [已在 2011 年宣布取代](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/) \(英文\) 它，因此，不建議使用此驅動程式來進行新開發。 在 2017 中，OLE DB 資料存取技術的後續[取消和新的已規劃的發行已宣布](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/)2018。 新的 OLE DB 提供者稱為 「 Microsoft OLE DB Driver for SQL Server"(MSOLEDBSQL) 是目前維護和支援。
+有三個不同世代的 Microsoft OLE DB Provider for SQL Server。 第一個 "Microsoft OLE DB Provider for SQL Server" (SQLOLEDB) 仍隨附於 [Windows Data Access Component](#microsoft-or-windows-data-access-components)。 此提供者將不會更新與新功能，並不建議用於新的開發中使用此驅動程式。 在 SQL Server 2005 中，啟動[SQL Server Native Client](#sql-server-native-client)包含 OLE DB 提供者介面 (SQLNCLI)，並隨附於 SQL Server 2005 到 SQL Server 2017 的 OLE DB 提供者。 [已在 2011 年宣布取代](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/) \(英文\) 它，因此，不建議使用此驅動程式來進行新開發。 在 2017 中，OLE DB 資料存取技術的後續[取消和新的已規劃的發行已宣布](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/)2018。 新的 OLE DB 提供者稱為 「 Microsoft OLE DB Driver for SQL Server"(MSOLEDBSQL) 是目前維護和支援。
 
 ## <a name="adonet"></a>ADO.NET
 
@@ -83,7 +83,7 @@ MDAC/WDAC 包含下列元件：
 * **ODBC:** Microsoft 開放式資料庫連接 (ODBC) 介面是 C 程式設計語言介面，可讓應用程式從各種不同的資料庫管理系統 (DBMS) 存取資料。 使用此 API 的應用程式僅限於存取只使用關聯式資料來源。
 * **OLE DB:** OLE DB 是一組 COM 介面來存取各種資料存放區中的資料。 OLE DB 提供者有存取資料庫、 檔案系統、 訊息存放區、 目錄服務、 工作流程，以及文件存放區中的資料。
 * **ADO:** ActiveX Data Objects (ADO) 提供高階的程式設計模型。 雖然較好的效能比直接編碼至 OLE DB 或 ODBC、 ADO 是容易學習和使用。 它可從指令碼語言，例如 Microsoft Visual Basic Scripting Edition (VBScript) 或 Microsoft JScript。
-* **ADOMD:** .ADO 多維度 (ADOMD) 是用於多維度資料提供者，例如 Microsoft OLAP 提供者，也就是 Microsoft Analysis Services 提供者。 任何主要的強化功能，已對它自 MDAC 2.0。
+* **ADOMD:**.ADO 多維度 (ADOMD) 是用於多維度資料提供者，例如 Microsoft OLAP 提供者，也就是 Microsoft Analysis Services 提供者。 任何主要的強化功能，已對它自 MDAC 2.0。
 * **ADOX:** DDL 和安全性 (ADOX) 的 ADO 延伸模組讓您建立及修改資料庫、 資料表、 索引或預存程序的定義。 您可以使用 ADOX 與任何提供者。 Microsoft Jet OLE DB 提供者會提供完整支援 ADOX，而 Microsoft SQL Server OLE DB 提供者提供有限的支援。
 * **Microsoft SQL Server 網路程式庫：** SQLOLEDB 和 SQLODBC 與 SQL Server 資料庫進行通訊，可讓 SQL Server 的網路程式庫。 下列的 SQL Server 網路程式庫已被取代的 MDAC/WDAC 版本： Banyan Vines、 AppleTalk、 ServerNet、 IPX/SPX、 Giganet 和 RPC。 TCP/IP 和具名管道會繼續受到支援，並可在 64 位元 Windows 作業系統上。
 * **MSDASQL:** Microsoft OLE DB Provider for ODBC (MSDASQL) 可讓來存取資料來源的 ODBC 驅動程式透過 OLE DB 和 ADO (在內部使用 OLEDB） 建置的應用程式。 MSDASQL 是 OLEDB 提供者連接到 ODBC，而非資料庫。 它是要作為橋接器從 OLE DB ODBC 驅動程式沒有直接的 OLE DB 提供者存在資料來源時。 MSDASQL 隨附於 Windows 作業系統和 Windows Server 2008 和 Vista SP1 是第一個 Windows 版本，以包含 64 位元版本的技術。

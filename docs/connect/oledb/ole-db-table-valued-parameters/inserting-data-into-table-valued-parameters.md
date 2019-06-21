@@ -12,13 +12,13 @@ helpviewer_keywords:
 - table-valued parameters, inserting data into
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: be4ecd3bfdf88029f56e86fb071edc51987a21b2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: c1edbe7d411e06e477db016db62b4245e0893aee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604588"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801163"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>將資料插入至資料表值參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,15 +54,15 @@ ms.locfileid: "51604588"
   
  若要使用提取模型，取用者必須提供資料列集物件自己的實作。 使用資料表值參數資料列集 (CLSID_ROWSET_TVP) 使用提取模型，取用者時需要彙總的提供者會公開 ITableDefinitionWithConstraints 透過資料表值參數資料列集物件：CreateTableWithConstraints 方法或 iopenrowset:: Openrowset&lt; 方法。 只有取用者物件會覆寫 IRowset 介面實作。 您必須覆寫下列函數：  
   
--   Irowset:: Getnextrows  
+-   IRowset::GetNextRows  
   
--   Irowset:: Addrefrows  
+-   IRowset::AddRefRows  
   
--   Irowset:: Getdata  
+-   IRowset::GetData  
   
--   Irowset:: Releaserows  
+-   IRowset::ReleaseRows  
   
--   Irowset:: Restartposition  
+-   IRowset::RestartPosition  
   
  OLE DB Driver for SQL Server 會從取用者資料列集物件一次讀取一或多個資料列，以支援資料表值參數中的資料流行為。 例如，使用者在磁碟 (而不是記憶體) 上可能有資料表值參數資料列集資料，而且可能會在 OLE DB Driver for SQL Server 需要時，從磁碟實作功能來讀取資料。  
   
