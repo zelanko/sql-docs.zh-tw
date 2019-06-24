@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42358e9e43e12a13c5b9e03b58df349b8f7a4231
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79be3e174e77648b4cbe908fa7d29f827bf4d3c5
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729442"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263504"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ SQL Server Analysis Services 2017 為表格式模型引進許多增強功能。 
 - 支援表格式模型的 **1400 相容性層級**。 若要建立新的或升級現有的表格式模型專案至 1400 相容性層級，請下載並安裝 [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939)。 (CTP 1.1)
 - 1400 相容性層級之表格式模型的最新 [取得資料]  體驗。 請參閱 [Analysis Services 小組部落格](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/)。 (CTP 1.1)
 - [隱藏成員]  屬性，可隱藏不完全階層中的空白成員。 (CTP 1.1)
-- 新的 [詳細資料列]  終端使用者動作，可**顯示彙總資訊的詳細資料**。 [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) 和 **DETAILROWS** 函式，可建立詳細資料列運算式。 (CTP 1.1)
+- 新的 [詳細資料列]  終端使用者動作，可**顯示彙總資訊的詳細資料**。 [SELECTCOLUMNS](/dax/selectcolumns-function-dax) 和 **DETAILROWS** 函式，可建立詳細資料列運算式。 (CTP 1.1)
 - DAX **IN** 運算子，可指定多個值。 (CTP 1.1)
 
 如需詳細資訊，請參閱 [SQL Server Analysis Services 2017 的新功能](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)。

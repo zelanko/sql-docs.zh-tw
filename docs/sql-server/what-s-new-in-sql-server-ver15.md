@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 018a9ddb9a51b9962486d8a9e6d2c6b1945e5885
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4e36454809519b6470c353b9dd77364491a87f8
+ms.sourcegitcommit: 3870a41f49906108136396c4ed8c130691c46b18
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836295"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298220"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
 
@@ -233,7 +233,6 @@ Community Technical Preview (CTP) 3.0 是 [!INCLUDE[sql-server-2019](../includes
 |動態管理檢視 `sys.dm_exec_requests` 資料行 `command` 會在 `SELECT` 正在等候同步統計資料更新作業完成以繼續查詢執行的情況下，顯示 `SELECT (STATMAN)`。 | [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) |
 |新的等候類型 `WAIT_ON_SYNC_STATISTICS_REFRESH` 會顯示在 `sys.dm_os_wait_stats` 動態管理檢視中。 它會顯示花費在同步統計資料重新整理作業上的累積執行個體層級時間。|[`sys.dm_os_wait_stats`](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) |
 |混合式緩衝集區是 SQL Server 資料庫的新功能，其中坐落在置於持續性記憶體 (PMEM) 裝置上之資料庫檔案上的資料庫頁面，會在必要時被直接存取。|[混合式緩衝集區](../database-engine/configure-windows/hybrid-buffer-pool.md) |
-|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 提供靜態資料遮罩。 您可以使用靜態資料遮罩來處理 SQL Server 資料庫複本中的敏感性資料。|[靜態資料遮罩](../relational-databases/security/static-data-masking.md) |
 |在圖形比對查詢中使用衍生資料表或檢視別名 |[圖表邊緣條件約束](../relational-databases/tables/graph-edge-constraints.md) |
 | &nbsp; | &nbsp; |
 

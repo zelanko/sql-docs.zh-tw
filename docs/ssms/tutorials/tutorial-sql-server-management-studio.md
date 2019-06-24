@@ -23,12 +23,12 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bf2776df77af8f4ba5fec9595d6ba9cddf927f7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7756482734dac8d4d5982b0ab6d5d58942065697
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65620510"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263523"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 教學課程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ SQL Server Management Studio (SSMS) 教學課程會向您介紹整合式環境�
 
     在本教學課程中，您將學習如何在 SSMS 中編寫各種物件的指令碼，包括資料庫和查詢。 
 
-- [教學課程：使用 SSMS 中的範本](templates-ssms.md)
+- [教學課程：使用 SSMS 中的範本](../template/templates-ssms.md)
    
     在本教學課程中，您將學習如何使用在 SSMS 中預先建立的範本。 範本是鮮為人知的功能，其存放各種資料庫系統管理工作的大量 Transact-SQL 程式碼片段。 
 

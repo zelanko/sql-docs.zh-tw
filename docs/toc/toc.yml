@@ -214,9 +214,9 @@
             - name: 儲存體
               items:
                 - name: mssqlctl cluster storage-pool
-                  href: ../big-data-cluster/reference-mssqlctl-storage.md
+                  href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool.md
                 - name: mssqlctl cluster storage-pool mount
-                  href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
+                  href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool-mount.md
 - name: 商務持續性
   items:
     - name: 概觀
@@ -1382,7 +1382,7 @@
             - name: 索引屬性 F1 說明
               href: ../relational-databases/indexes/index-properties-f1-help.md
         - name: 資料行存放區索引
-          hrefe: ../relational-databases/indexes/columnstore-indexes-overview.md
+          href: ../relational-databases/indexes/columnstore-indexes-overview.md
           items:
             - name: 新功能
               href: ../relational-databases/indexes/columnstore-indexes-what-s-new.md

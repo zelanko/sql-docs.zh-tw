@@ -15,12 +15,12 @@ ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47a14ad3baf1660b2b60cd6b96f2ef51f1e5d727
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060093"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316670"
 ---
 # <a name="custom-messages-for-logging"></a>自訂訊息以進行記錄
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一組豐富的自訂事件，可以為封裝和許多工作寫入記錄項目。 您可以使用這些項目，透過記錄預先定義事件或使用者自訂訊息，來儲存關於執行進度、結果和問題的詳細資訊，以供稍後分析。 比方說，您可以記錄大量插入開始和結束的時間，以便識別封裝執行時的效能問題。  
@@ -258,12 +258,8 @@ ms.locfileid: "66060093"
   
 |記錄項目|描述|  
 |---------------|-----------------|  
-|`XMLOperation`|提供有關工作執行之作業的資訊。|  
-  
-## <a name="related-content"></a>相關內容  
- dougbert.com 上的部落格文章： [記錄 Integration Services 工作的自訂事件](https://go.microsoft.com/fwlink/?LinkId=150580)。  
+|`XMLOperation`|提供有關工作執行之作業的資訊。|   
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 記錄](performance/integration-services-ssis-logging.md)  
-  
   
