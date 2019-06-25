@@ -17,12 +17,12 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ab14ac049e9081e82175512a0107af446a51f37
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62828039"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343864"
 ---
 # <a name="data-flow"></a>資料流程
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供三種不同類型的資料流程元件：來源、轉換與目的地。 來源從關聯式資料庫、檔案和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的資料表和檢視等資料存放區擷取資料。 轉換會修改、摘要並清除資料。 目的地則將資料載入資料存放區或建立記憶體中資料集。  
@@ -161,7 +161,7 @@ ms.locfileid: "62828039"
 |`Source`|描述|  
 |------------|-----------------|  
 |Oracle 目的地|Oracle 目的地是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 的目的地元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
-|SAP BI 目的地|SAP BI 目的地是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的目的地元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=110393)＞。|  
+|SAP BI 目的地|SAP BI 目的地是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的目的地元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)＞。|  
 |Teradata 目的地|Teradata 目的地是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity 的目的地元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
   
  如需如何利用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 獲致效能提升的示範，請參閱 [Microsoft Connector for Oracle by Attunity 的效能 (SQL Server 視影片)](https://go.microsoft.com/fwlink/?LinkID=210369)。  

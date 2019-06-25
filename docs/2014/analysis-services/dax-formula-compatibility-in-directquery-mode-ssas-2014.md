@@ -10,12 +10,12 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2136c162846b31c4d221d7aaad6476ba70508287
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.openlocfilehash: e588630b4bc9b2dd72e1fb54362b9b024c17bdb5
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67284964"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343900"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 模式中的 DAX 公式相容性 (SSAS 2014)
 Data Analysis Expression 語言 (DAX) 可用來建立 Analysis Services 表格式模型中的量值和其他自訂公式[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]Excel 活頁簿中的資料模型和 Power BI Desktop 資料模型。 在大部分的方面，您在這些環境中建立的模型相同，且您可以使用相同的量值、 關聯性和 Kpi 等等。不過，如果您撰寫的 Analysis Services 表格式模型，並將它部署在 DirectQuery 模式中，有一些限制，您可以使用的公式。 本主題概述這些差異，列出在相容性層級 1100年或 1103年的 SQL Server 2014 Analysis Services tabulars 模型和 DirectQuery 模式中，不支援的函式並列出支援的函式但可能傳回不同的結果。  
@@ -78,14 +78,14 @@ Data Analysis Expression 語言 (DAX) 可用來建立 Analysis Services 表格�
 -   進行比較而且搭配 EXACT、AND、OR、 &amp;&amp;或 || 使用時，布林值一定會被視為邏輯值。  
   
 **從字串轉換成布林值**  
-在記憶體中和 DirectQuery 模型中，僅允許轉換成布林值從這些字串： **""** （空字串）、 **"true"**， **"false"**; 其中空字串轉換 （cast) 成 false 值。  
+在記憶體中和 DirectQuery 模型中，僅允許轉換成布林值從這些字串： **""** （空字串）、 **"true"** ， **"false"** ; 其中空字串轉換 （cast) 成 false 值。  
   
 轉換成任何其他字串的布林資料類型會產生錯誤。  
   
 **從字串轉換成日期/時間**  
 在 DirectQuery 模式中，從日期和時間的字串表示轉換成實際的 **datetime** 值時，其行為方式與 SQL Server 相同。  
   
-如需有關管理從字串轉換成的規則資訊**datetime**中的資料類型[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]模型，請參閱 [DAX Syntax Reference] （/dax/dax 語法-參考
+如需有關管理從字串轉換成的規則資訊**datetime**中的資料類型[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]模型，請參閱[DAX Syntax Reference](/dax/dax-syntax-reference)。
   
 使用記憶體中資料存放區之模型所支援的日期文字格式範圍比 SQL Server 所支援的日期字串格式更有限。 不過，DAX 支援自訂日期和時間格式。  
   
@@ -133,7 +133,7 @@ SQL Server 處理 Null 和空白的方式與 xVelocity 引擎不同。 如此一
   
 相同的限制適用於其他對數函數：LOG10 和 ln。  
   
-如需詳細資訊**空白**資料型別，在 DAX 中，請參閱 [DAX Syntax Reference] （/dax/dax 語法-參考
+如需 DAX 中 **blank** 資料類型的詳細資訊，請參閱 [DAX 語法參考](/dax/dax-syntax-reference)。
   
 **除以 0 和除以空白**  
 在 DirectQuery 模式中，除以零 (0) 或除以 BLANK 都一定會產生錯誤。 SQL Server 不支援無限大的概念，而且因為任何除以 0 的自然結果都是無限大，所以結果就是錯誤。 不過，SQL Server 支援除以 Null，而且結果一定等於 Null。  
