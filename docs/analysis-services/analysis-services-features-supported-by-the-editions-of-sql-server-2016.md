@@ -1,6 +1,6 @@
 ---
-title: Analysis Services 的 SQL Server 2016 版本支援的功能 |Microsoft 文件
-ms.date: 05/08/2018
+title: Analysis Services 的 SQL Server 版本所支援的功能 |Microsoft Docs
+ms.date: 06/25/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 19618fc0311de28184e3a95c5e57e423d121f085
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9947b10e01864f66bf26d6599e43814ab37dadc6
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015565"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388211"
 ---
-# <a name="analysis-services-features-supported-by-sql-server-editions"></a>SQL Server 版本所支援的 analysis Services 功能
+# <a name="analysis-services-features-supported-by-sql-server-edition"></a>SQL Server 版本所支援的 analysis Services 功能
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
-本主題提供 SQL Server 2016 Analysis Services 不同版本所支援功能的詳細資料。 如需 Evaluation 和 Developer edition 所支援的功能，請參閱 Enterprise edition。
+本文說明 SQL Server 2016、 2017 中，於 2019 Analysis Services 不同版本所支援的功能。 評估版支援 Enterprise edition 的功能。
 
 ## <a name="analysis-services-servers"></a>Analysis Services （伺服器）
   
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|開發人員|  
+|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |可擴充共用資料庫|是||||||是|  
 |備份/還原與附加/卸離資料庫|是|是|||||是|  
@@ -33,26 +33,27 @@ ms.locfileid: "34015565"
   
 ## <a name="tabular-models"></a>表格式模型 
   
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|開發人員|  
+|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |階層|是|是|||||是|  
 |KPI|是|是|||||是|  
-|檢視方塊|是||||||是|  
+|「檢視方塊」|是||||||是|  
 |翻譯|是|是|||||是|  
 |DAX 計算、DAX 查詢、MDX 查詢|是|是|||||是|  
 |資料列層級安全性|是|是|||||是|  
 |多個分割區|是||||||是|  
+|計算群組|是 （從 SQL Server 2019 開始）|是 （從 SQL Server 2019 開始）|||||是 （從 SQL Server 2019 開始）|  
 |記憶體內部儲存模式|是|是|||||是|  
-|DirectQuery 儲存模式|是||||||是|  
+|DirectQuery 模式|是|是 （從 SQL Server 2019 開始）|||||是|  
 
 ## <a name="multidimensional-models"></a>多維度模型 
   
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|開發人員|  
+|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |局部加總量值|是|否 <sup>1</sup>|||||是|  
 |階層|是|是|||||是|  
 |KPI|是|是|||||是|  
-|檢視方塊|是||||||是|  
+|「檢視方塊」|是||||||是|  
 |動作|是|是|||||是|  
 |帳戶智慧|是|是|||||是|  
 |時間智慧|是|是|||||是|  
@@ -77,15 +78,14 @@ ms.locfileid: "34015565"
 |MOLAP、ROLAP 和 HOLAP 儲存體模型|是|是|||||是|  
 |二進位和壓縮 XML 傳輸|是|是|||||是|  
 |發送模式處理|是||||||是|  
-|直接回寫|是||||||是|  
 |量值運算式|是||||||是|  
   
  <sup>1</sup> LastChild 局部加總量值在 Standard Edition 中有受到支援，但是其他局部加總量值 (例如 None、FirstChild、FirstNonEmpty、LastNonEmpty、AverageOfChildren 和 ByAccount) 則不受支援。 所有的版本都支援加總量值 (例如 Sum、Count、Min、Max) 和非加總量值 (DistinctCount)。  
-  <sup>2</sup> standard edition 支援連結的量值和維度，在相同的資料庫，而不是從其他資料庫或執行個體。
+  <sup>2</sup> Standard Edition 支援同一個資料庫內的連結量值和維度，但不支援來自其他資料庫或執行個體的連結量值和維度。
   
 ## <a name="power-pivot-for-sharepoint"></a>PowerPivot for SharePoint  
   
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|開發人員|  
+|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |以共用服務架構為基礎的 SharePoint 伺服器陣列整合|是||||||是|  
 |使用方式報表|是||||||是|  
@@ -96,14 +96,14 @@ ms.locfileid: "34015565"
   
 ## <a name="data-mining"></a>資料採礦  
   
-|功能名稱|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|開發人員|  
+|功能名稱|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |標準演算法|是|是|||||是|  
 |資料採礦工具 (精靈、編輯器、查詢產生器)|是|是|||||是|  
 |交叉驗證|是||||||是|  
 |已篩選的採礦結構資料子集的模型|是||||||是|  
 |時間序列：ARTXP 和 ARIMA 方法之間的自訂混合|是||||||是|  
-|時間序列：以新的資料預測|是||||||是|  
+|時間序列：使用新資料預測|是||||||是|  
 |無限制的並行 DM 查詢|是||||||是|  
 |資料採礦演算法的進階組態與微調選項|是||||||是|  
 |支援外掛程式演算法|是||||||是|  
@@ -113,8 +113,5 @@ ms.locfileid: "34015565"
 |順序預測|是||||||是|  
 |貝氏機率、類神經網路和羅吉斯迴歸的多個預測目標|是||||||是|  
   
- ## <a name="see-also"></a>另請參閱  
- [SQL Server 2016 的產品規格](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
- [SQL Server 安裝](../database-engine/install-windows/installation-for-sql-server-2016.md)  
 
 

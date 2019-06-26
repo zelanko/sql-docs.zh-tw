@@ -5,17 +5,17 @@ description: 本文章提供有用的命令，來監視和疑難排解 SQL Serve
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 232c39e6a98f7f55fa3a653735f39c9607fbcbf4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d217e206ff9b41b0b61fa2d0407f530ef31eadf7
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800734"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388718"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>監視和疑難排解 SQL Server 的巨量資料叢集
 
@@ -116,12 +116,11 @@ kubectl get svc -n mssql-cluster
 |---|---|
 | **master-svc-external** | 提供存取權的主要執行個體。<br/>(**EXTERNAL-IP，31433**並**SA**使用者) |
 | **controller-svc-external** | 支援工具和管理叢集的用戶端。 |
-| **mgmtproxy-svc-external** | 提供存取權[叢集管理網站](cluster-admin-portal.md)。<br/>(https://**EXTERNAL-IP**: 30777/入口網站) |
 | **gateway-svc-external** | 可存取 HDFS/Spark 閘道。<br/>(**EXTERNAL-IP**並**根**使用者) |
 | **appproxy-svc-external** | 支援應用程式的部署案例。 |
 
 > [!TIP]
-> 這是一種檢視的服務**kubectl**，但也可以使用`mssqlctl cluster endpoint list`命令來檢視這些端點。 如需詳細資訊，請參閱 <<c0> [ 取得巨量資料叢集端點](deployment-guidance.md#endpoints)。
+> 這是一種檢視的服務**kubectl**，但也可以使用`mssqlctl bdc endpoint list`命令來檢視這些端點。 如需詳細資訊，請參閱 <<c0> [ 取得巨量資料叢集端點](deployment-guidance.md#endpoints)。
 
 ## <a name="get-service-details"></a>取得服務詳細資料
 
@@ -224,10 +223,6 @@ kubectl get pods <pod_name> -o yaml -n <namespace_name> | grep hostIP
 ```bash
 kubectl get pods master-0 -o yaml -n mssql-cluster | grep hostIP
 ```
-
-## <a name="cluster-administration-portal"></a>叢集系統管理入口網站
-
-使用[叢集管理網站](cluster-admin-portal.md)來監視您的巨量資料叢集的狀態。 例如，在部署中，您可以使用**部署** 索引標籤。您必須等到**mgmtproxy svc 外部**服務存取此入口網站，讓其無法在部署開始之前啟動。
 
 ## <a name="kubernetes-dashboard"></a>Kubernetes 儀表板
 

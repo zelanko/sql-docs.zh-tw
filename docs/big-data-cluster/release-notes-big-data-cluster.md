@@ -5,17 +5,17 @@ description: 本文說明 SQL Server 2019 巨量資料叢集 （預覽） 的已
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d3967da74969556cd96483d4a9c3afa3135fa342
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 424b09f9cd18a3fa68eb8a3ade26eecc1191ef72
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779214"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388642"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>版本資訊適用於 SQL Server 上的巨量資料叢集
 
@@ -24,6 +24,95 @@ ms.locfileid: "66779214"
 本文章列出的更新，並了解最新版本的 SQL Server 的巨量資料叢集的問題。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+## <a id="ctp31"></a> CTP 3.1 （年 6 月）
+
+下列各節說明的新功能與 SQL Server 2019 CTP 3.1 中的巨量資料叢集的已知的問題。
+
+### <a name="whats-new"></a>新功能
+
+| 新功能或更新 | 詳細資料 |
+|:---|:---|
+| `mssqlctl` 命令會變更 | `mssqlctl cluster` 已重新命名命令`mssqlctl bdc`。 如需詳細資訊，請參閱 < [ `mssqlctl`參考](reference-mssqlctl.md)。 |
+| 新`mssqlctl`狀態命令和移除叢集的系統管理入口網站。 | 叢集系統管理入口網站會在此版本中移除。 已新增新的狀態命令`mssqlctl`補充現有的監視命令。 |
+| Spark 計算集區 | 建立額外的節點，以提升 Spark 的計算能力，而不需要相應增加儲存體。 此外，您可以開始不會使用適用於 Spark 的儲存體集區節點。 Spark 和儲存體會分離。 如需詳細資訊，請參閱 <<c0> [ 設定存放裝置，而不需要 spark](deployment-custom-configuration.md#sparkstorage)。 |
+| MSSQL Spark 連接器 | 支援讀取/寫入至資料集區外部的資料表。 上一個版本支援讀取/寫入主要執行個體僅限資料表。 |
+| 使用 MLeap 的機器學習服務 | [在 Spark 中的 MLeap 機器學習服務模型定型和評分使用 Java 語言擴充功能的 SQL Server 中](spark-create-machine-learning-model.md)。 |
+
+### <a name="known-issues"></a>已知問題
+
+下列各節說明此版本中的限制與已知的問題。
+
+#### <a name="hdfs"></a>HDFS
+
+- 如果您以滑鼠右鍵按一下檔案，以進行預覽，HDFS 中，您可能會看到下列錯誤：
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   目前沒有任何方法可預覽檔案大於 30 MB 的 Azure Data Studio。
+
+- 不支援對 hdfs-site.xml 變更的 HDFS 組態變更。
+
+#### <a name="deployment"></a>部署
+
+- 不支援從舊版升級的巨量資料的資料叢集。
+
+   > [!IMPORTANT]
+   > 您必須備份您的資料，然後再刪除現有的巨量資料叢集 (使用舊版**mssqlctl**) 才能部署最新版本。 如需詳細資訊，請參閱 <<c0> [ 升級到新版](deployment-upgrade.md)。
+
+- 在部署之後在 AKS 上，您可能會看到部署的下列兩個警告事件。 這兩個事件的已知問題，但它們不會防止您成功部署在 AKS 上的巨量資料叢集。
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- 如果巨量資料叢集部署失敗，不會移除相關聯的命名空間。 這可能會導致失去關聯的命名空間，在叢集上。 因應措施是手動刪除命名空間，才能部署具有相同名稱的叢集。
+
+#### <a name="external-tables"></a>外部資料表
+
+- 巨量資料叢集部署不會再建立**SqlDataPool**並**SqlStoragePool**外部資料來源。 您可以建立這些資料來源，以手動方式來支援資料虛擬化資料集區和儲存體集區。
+
+   > [!NOTE]
+   > 建立這些外部資料來源的 URI 是 Ctp 之間不同。 請下列 TRANSACT-SQL 命令，以了解如何建立它們，參閱 
+
+   ```sql
+   -- Create default data sources for SQL Big Data Cluster
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://controller-svc/default');
+ 
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://controller-svc/default');
+   ```
+
+- 可以建立具有不支援的資料行類型為資料表的資料集區外部資料表。 如果您查詢外部資料表時，您收到訊息如下所示：
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- 如果您查詢儲存體集區外部資料表時，您可能會發生錯誤，如果在相同的時間基礎檔案複製到 HDFS。
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- 如果您要建立外部資料表以使用字元資料類型的 Oracle，Azure Data Studio virtualization 精靈會解譯為 VARCHAR 這些資料行中的外部資料表定義。 這會導致外部資料表 DDL 失敗。 請修改使用 NVARCHAR2 類型，或以手動方式建立 EXTERNAL TABLE 陳述式，而不是使用此精靈指定 NVARCHAR 的 Oracle 結構描述。
+
+#### <a name="application-deployment"></a>應用程式部署
+
+- 在呼叫 R、 Python 或 MLeap 應用程式從支援的 RESTful API 時，呼叫會逾時在 5 分鐘內。
+
+#### <a name="spark-and-notebooks"></a>Spark 和 notebook
+
+- POD IP 位址可能變更 Kubernetes 環境中，Pod 重新啟動時。 在案例中，重新啟動主要 pod，Spark 工作階段可能會失敗並`NoRoteToHostException`。 這因為不使用新的 IP 取得重新整理的 JVM 快取的位址。
+
+- 如果您在 Windows 上有已安裝的 Jupyter 和個別的 Python，可能會失敗 Spark notebook。 若要解決此問題，請升級為最新版本的 Jupyter。
+
+- 在筆記本中，如果您按一下**新增文字**命令時，文字資料格會新增 [預覽] 模式，而不是編輯模式。 您可以按一下 [預覽] 圖示，切換至編輯模式和編輯儲存格。
+
+#### <a name="security"></a>安全性
+
+- SA_PASSWORD 屬於環境的且可探索 （例如在線傾印檔案）。 您必須在部署之後，重設 SA_PASSWORD 主要執行個體上。 這不是 bug，但安全性步驟。 如需有關如何變更 SA_PASSWORD 的 Linux 容器的詳細資訊，請參閱[變更 SA 密碼](../linux/quickstart-install-connect-docker.md#sapassword)。
+
+- AKS 記錄檔可能包含適用於巨量資料叢集部署的 SA 密碼。
 
 ## <a id="ctp30"></a> CTP 3.0 (5)
 
@@ -89,11 +178,11 @@ ms.locfileid: "66779214"
    -- Create default data sources for SQL Big Data Cluster
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
        CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+       WITH (LOCATION = 'sqldatapool://controller-svc/default');
  
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
        CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
+       WITH (LOCATION = 'sqlhdfs://controller-svc/default');
    ```
 
 - 可以建立具有不支援的資料行類型為資料表的資料集區外部資料表。 如果您查詢外部資料表時，您收到訊息如下所示：

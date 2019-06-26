@@ -6,17 +6,17 @@ author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 115809307b430a9e5079de4db71180cca4766dac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0623a920b060e4d5d1e7724f39e2eadb0bd2475
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783167"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387952"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>什麼是 SQL Server 的巨量資料叢集上的控制站？
 
@@ -44,17 +44,13 @@ ms.locfileid: "66783167"
 
 ## <a name="managing-the-cluster-through-the-controller-service"></a>管理透過控制器服務叢集
 
-您可以管理純粹是透過使用控制器服務在叢集`mssqlctl`Api 或裝載於叢集內的叢集系統管理入口網站。 如果您將其他像是 pod 的 Kubernetes 物件部署到相同的命名空間時，不受管理或監視的控制器服務。
+您可以管理透過使用其中一個控制站服務的叢集**mssqlctl**命令。 如果您將其他像是 pod 的 Kubernetes 物件部署到相同的命名空間時，不受管理或監視的控制器服務。 您也可以使用**kubectl**管理層級 Kubernetes 叢集的命令。 如需詳細資訊，請參閱 <<c0> [ 監視和疑難排解 SQL Server 的巨量資料叢集](cluster-troubleshooting-commands.md)。
 
-建立適用於巨量資料叢集的 Kubernetes 物件 （可設定狀態的集合，pod、 密碼等） 和的控制站位於專用的 Kubernetes 命名空間。 控制器服務將 Kubernetes 叢集系統管理員可以管理該命名空間內的所有資源授與權限。  在初始叢集部署使用自動設定此案例中的 RBAC 原則`mssqlctl`。 
+建立適用於巨量資料叢集的 Kubernetes 物件 （可設定狀態的集合，pod、 密碼等） 和的控制站位於專用的 Kubernetes 命名空間。 控制器服務將 Kubernetes 叢集系統管理員可以管理該命名空間內的所有資源授與權限。  在初始叢集部署使用自動設定此案例中的 RBAC 原則**mssqlctl**。
 
 ### <a name="mssqlctl"></a>mssqlctl
 
-`mssqlctl` 命令列公用程式是以 Python，可讓叢集系統管理員啟動及管理巨量資料叢集透過控制器服務所公開的 REST Api 撰寫。
-
-### <a name="cluster-administration-portal"></a>叢集系統管理入口網站
-
-一旦控制器服務已啟動並執行，叢集系統管理員可以使用[叢集管理網站](cluster-admin-portal.md)若要監視部署進度，偵測及疑難排解在叢集內的服務。
+**mssqlctl**是命令列公用程式，可讓叢集系統管理員啟動及管理透過控制器服務所公開的 REST Api 的巨量資料叢集以 Python 所撰寫。
 
 ## <a name="controller-service-security"></a>控制器服務的安全性
 

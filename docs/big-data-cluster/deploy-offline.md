@@ -5,16 +5,16 @@ description: 了解如何執行離線部署的 SQL Server 的巨量資料叢集�
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fd6a1e1e6f2ad661c8a2316c434854095c7f6da5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f3bfcfba0cfb972c7d02042bc98aa461eb110bb
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797884"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388808"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>執行離線部署的 SQL Server 的巨量資料叢集
 
@@ -42,7 +42,7 @@ ms.locfileid: "66797884"
    > [!TIP]
    > 這些命令會使用 PowerShell 為例，但您可以從 cmd、 bash 或任何可以執行 docker 的命令殼層中執行它們。 在 Linux 上，新增`sudo`給每個命令。
 
-1. 提取的巨量資料叢集容器映像重複下列命令。 取代`<SOURCE_IMAGE_NAME>`與每個[映像名稱](#images)。 取代`<SOURCE_DOCKER_TAG>`巨量資料的標記與叢集版本中，這類**ctp3.0 或較**。  
+1. 提取的巨量資料叢集容器映像重複下列命令。 取代`<SOURCE_IMAGE_NAME>`與每個[映像名稱](#images)。 取代`<SOURCE_DOCKER_TAG>`巨量資料的標記與叢集版本中，這類**ctp3.1**。  
 
    ```PowerShell
    docker pull private-repo.microsoft.com/mssql-private-preview/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -84,7 +84,6 @@ ms.locfileid: "66797884"
  - **mssql-mlserver-r-runtime**
  - **mssql-mlserver-py-runtime**
  - **mssql-controller**
- - **mssql-portal**
  - **mssql-server-controller**
  - **mssql-monitor-grafana**
  - **mssql-monitor-kibana**
@@ -92,6 +91,8 @@ ms.locfileid: "66797884"
  - **mssql-app-service-proxy**
  - **mssql-ssis-app-runtime**
  - **mssql-monitor-telegraf**
+ - **mssql-mleap-serving-runtime**
+  
 
 ## <a id="automated"></a> 自動化的指令碼
 
@@ -179,9 +180,9 @@ ms.locfileid: "66797884"
 若要從私人存放庫部署，使用 中所述的步驟[部署指南](deployment-guidance.md)，但使用自訂的部署組態檔，指定您的私人 Docker 存放庫資訊。 下列**mssqlctl**命令示範如何變更名為自訂部署組態檔中的 Docker 設定**custom.json**:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
 部署會提示您輸入的 docker 使用者名稱和密碼，或您可以指定在**DOCKER_USERNAME**並**DOCKER_PASSWORD**環境變數。

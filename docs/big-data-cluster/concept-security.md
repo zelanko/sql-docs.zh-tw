@@ -6,17 +6,17 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 12/06/2018
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a71c4fb8902bb016de0d5ee607f955db61d94901
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d57fbeee578d2889d330ba19401477a43ab95e60
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783068"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387935"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>SQL Server 的巨量資料叢集的安全性概念
 
@@ -34,7 +34,7 @@ ms.locfileid: "66783068"
 
 * HDFS/Spark (Knox) 閘道-這是以 HTTPS 為基礎的端點。 其他端點會透過 proxy 進行此程序。 用於存取 webHDFS 等 Livy 服務會使用 HDFS/Spark 閘道。 只要您看到 Knox 的參考，這會是端點。
 
-* 控制器端點會公開 REST Api 來管理叢集的巨量資料叢集管理服務。 某些工具，例如系統管理員入口網站中，也是透過此端點存取。
+* 控制器端點會公開 REST Api 來管理叢集的巨量資料叢集管理服務。 有些工具也是透過此端點存取。
 
 * 主要執行個體-適用於資料庫工具和應用程式連接到 SQL Server Master 執行個體在叢集中的 TDS 端點。
 

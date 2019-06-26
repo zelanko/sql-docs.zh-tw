@@ -5,17 +5,17 @@ description: 了解如何部署在 Kubernetes 上的 SQL Server 2019 巨量資�
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 15cd412de1dda9d1245859c27d35a7c7f9f52710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bd6d260d58b837e2df0d216c28149b6e9a3fa51
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782249"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388775"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 在 Kubernetes 上的巨量資料叢集
 
@@ -82,14 +82,14 @@ kubectl config view
 
 | 部署設定檔 | Kubernetes 的環境 |
 |---|---|
-| **aks-dev-test.json** | Azure Kubernetes Service (AKS) |
-| **kubeadm-dev-test.json** | 多部電腦 (kubeadm) |
-| **minikube-dev-test.json** | Minikube |
+| **aks-dev-test** | Azure Kubernetes Service (AKS) |
+| **kubeadm-dev-test** | 多部電腦 (kubeadm) |
+| **minikube-dev-test** | Minikube |
 
-您可以藉由執行部署巨量資料叢集**mssqlctl 叢集建立**。 這會提示您選擇其中一個預設設定，然後引導您完成部署。
+您可以藉由執行部署巨量資料叢集**mssqlctl bdc 建立**。 這會提示您選擇其中一個預設設定，然後引導您完成部署。
 
 ```bash
-mssqlctl cluster create
+mssqlctl bdc create
 ```
 
 在此案例中，系統會提示您提供不是預設設定，例如密碼的一部分的任何設定。 請注意，Docker 資訊 Microsoft 提供給您的 SQL Server 2019 一部分[Early Adoption Program](https://aka.ms/eapsignup)。
@@ -99,35 +99,38 @@ mssqlctl cluster create
 
 ## <a id="customconfig"></a> 自訂設定
 
-它也可自訂您自己的部署設定檔。 您可以使用下列步驟來這麼做：
+也可以自訂自己的部署組態設定檔的位置。 您可以使用下列步驟來這麼做：
 
-1. 開始使用其中一個符合您的 Kubernetes 環境的標準部署設定檔。 您可以使用**mssqlctl 叢集組態清單**命令來列出它們：
+1. 開始使用其中一個符合您的 Kubernetes 環境的標準部署設定檔。 您可以使用**mssqlctl bdc 組態清單**命令來列出它們：
 
    ```bash
-   mssqlctl cluster config list
+   mssqlctl bdc config list
    ```
 
-1. 若要自訂您的部署，建立與部署設定檔的複本**mssqlctl 叢集組態 init**命令。 例如，下列命令會建立一份**aks-dev-test.json**目前目錄中的部署設定檔：
+1. 若要自訂您的部署，建立與部署設定檔的複本**mssqlctl bdc config init**命令。 例如，下列命令會建立一份**aks-開發 / 測試**名為目標目錄中的部署組態檔案`custom`:
 
    ```bash
-   mssqlctl cluster config init --src aks-dev-test.json --target custom.json
-   ```
-
-1. 若要自訂您的部署組態檔中設定，您可以在一種工具，適合編輯 json 文件，例如 VS 程式碼中加以編輯。 指令碼式自動化，您可以編輯自訂組態檔中使用**mssqlctl 叢集組態區段組**命令。 例如，下列命令會改變要變更預設的已部署的叢集名稱的自訂組態檔 (**mssql 叢集**) 來**測試叢集**:  
-
-   ```bash
-   mssqlctl cluster config section set --config-file custom.json --json-values "metadata.name=test-cluster"
+   mssqlctl bdc config init --source aks-dev-test --target custom
    ```
 
    > [!TIP]
-   > 有用的工具，尋找 JSON 路徑是[JSONPath 線上評估工具](https://jsonpath.com/)。
+   > `--target`指定包含組態檔的目錄，根據`--source`參數。
+
+1. 若要自訂您的部署組態設定檔中的設定，您可以編輯部署設定檔，在適用於編輯 JSON 檔案，例如 VS 程式碼的工具。 指令碼式自動化，您也可以編輯自訂部署設定檔使用**mssqlctl bdc 組態區段組**命令。 例如，下列命令會改變的自訂部署設定檔，以變更預設的已部署的叢集名稱 (**mssql 叢集**) 來**測試叢集**:  
+
+   ```bash
+   mssqlctl bdc config section set --config-profile custom --json-values "metadata.name=test-cluster"
+   ```
+
+   > [!TIP]
+   > `--config-profile`上部署組態的 JSON 檔案，該目錄中會指定您自訂部署設定檔，但實際修改的目錄名稱。 有用的工具，尋找 JSON 路徑是[JSONPath 線上評估工具](https://jsonpath.com/)。
 
    除了傳遞索引鍵 / 值組，您也可以內嵌方式提供的 JSON 值，或傳遞 JSON 修補程式檔案。 如需詳細資訊，請參閱 <<c0> [ 巨量資料叢集的部署設定](deployment-custom-configuration.md)。
 
-1. 然後將傳遞至自訂的組態檔**mssqlctl 叢集建立**。 請注意，您必須設定必要[環境變數](#env)，否則系統會提示的值：
+1. 然後將傳遞至自訂的組態檔**mssqlctl bdc 建立**。 請注意，您必須設定必要[環境變數](#env)，否則系統會提示的值：
 
    ```bash
-   mssqlctl cluster create --config-file custom.json --accept-eula yes
+   mssqlctl bdc create --config-profile custom --accept-eula yes
    ```
 
 > [!TIP]
@@ -146,7 +149,7 @@ mssqlctl cluster create
 | **KNOX_PASSWORD** | Knox 使用者的密碼。 |
 | **MSSQL_SA_PASSWORD** | SQL master 執行個體的 SA 使用者的密碼。 |
 
-呼叫之前，必須設定這些環境變數**mssqlctl 叢集建立**。 如果未設定任何變數，它會提示您。
+呼叫之前，必須設定這些環境變數**mssqlctl bdc 建立**。 如果未設定任何變數，它會提示您。
 
 下列範例示範如何設定環境變數，適用於 Linux (bash) 和 Windows (PowerShell):
 
@@ -168,10 +171,10 @@ SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
 ```
 
-設定環境變數，您必須執行`mssqlctl cluster create`觸發部署。 此範例會使用先前建立的叢集組態檔：
+設定環境變數之後, 您必須執行`mssqlctl bdc create`觸發部署。 此範例會使用先前建立的叢集組態設定檔：
 
 ```
-mssqlctl cluster create --config-file custom.json --accept-eula yes
+mssqlctl bdc create --config-profile custom --accept-eula yes
 ```
 
 請注意下列指導方針：
@@ -182,7 +185,7 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 
 ## <a id="unattended"></a> 自動的安裝
 
-如需自動部署，您必須設定所有必要的環境變數、 使用組態檔，並呼叫`mssqlctl cluster create`命令搭配`--accept-eula yes`參數。 上一節中的範例將示範自動安裝的語法。
+如需自動部署，您必須設定所有必要的環境變數、 使用組態檔，並呼叫`mssqlctl bdc create`命令搭配`--accept-eula yes`參數。 上一節中的範例將示範自動安裝的語法。
 
 ## <a id="monitor"></a> 監視部署
 
@@ -195,7 +198,7 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 在 15 到 30 分鐘內，應該會通知您正在執行控制器 pod:
 
 ```output
-2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Checkthe mssqlctl.log file for more details.
+2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Check the mssqlctl.log file for more details.
 2019-04-12 15:01:40.0861 UTC | INFO | Controller pod is running.
 2019-04-12 15:01:40.0884 UTC | INFO | Controller Endpoint: https://<ip-address>:30080
 ```
@@ -206,11 +209,8 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 部署完成時，輸出會通知您成功：
 
 ```output
-2019-04-12 15:37:18.0271 UTC | INFO | Monitor and track your cluster at the Portal Endpoint: https://<ip-address>:30777/portal/
 2019-04-12 15:37:18.0271 UTC | INFO | Cluster deployed successfully.
 ```
-
-記下的 URL**入口網站端點**在上述的輸出，以用於下一節。
 
 > [!TIP]
 > 已部署的巨量資料叢集的預設名稱是`mssql-cluster`除非修改自訂的組態。
@@ -236,10 +236,10 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 
    在部署期間指定的使用者名稱和您設定控制站 （CONTROLLER_USERNAME 和 CONTROLLER_PASSWORD） 的密碼。
 
-1. 執行**mssqlctl 叢集端點清單**來取得每個端點和其對應的 IP 位址和連接埠值的描述與清單。 
+1. 執行**mssqlctl bdc 端點清單**來取得每個端點和其對應的 IP 位址和連接埠值的描述與清單。 
 
    ```bash
-   mssqlctl cluster endpoint list
+   mssqlctl bdc endpoint list
    ```
 
    下列清單顯示此命令的範例輸出：
@@ -252,7 +252,6 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
    yarn-ui            Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  30443   https
    app-proxy          Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  30778   https
    management-proxy   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  30777   https
-   portal             Management Portal                                       https://11.111.111.111:30777/portal                        11.111.111.111  30777   https
    log-search-ui      Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  30777   https
    metrics-ui         Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  30777   https
    controller         Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  30080   https

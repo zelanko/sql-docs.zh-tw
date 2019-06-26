@@ -6,17 +6,17 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: aa95621178b26becd5985fd60b7b2d3588607d17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7a61c97d3e1636cd6a11173e281c192d1533d93
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801865"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388745"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>如何部署 SQL Server 的巨量資料叢集 （預覽） 上的應用程式
 
@@ -45,7 +45,7 @@ ms.locfileid: "66801865"
 
 ## <a name="capabilities"></a>Capabilities
 
-在 SQL Server 2019 （預覽） CTP 3.0 您可以建立、 刪除、 描述、 初始化，清單會執行，並更新您的應用程式。 下表描述您可以搭配使用的應用程式部署命令**mssqlctl**。
+在 SQL Server 2019 （預覽） 您可以建立、 刪除、 描述、 初始化，清單會執行，並更新您的應用程式。 下表描述您可以搭配使用的應用程式部署命令**mssqlctl**。
 
 |命令 |描述 |
 |:---|:---|

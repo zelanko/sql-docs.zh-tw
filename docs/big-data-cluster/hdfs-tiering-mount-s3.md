@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1f126620c4da759a4c56abad05bf2e989d7d1bc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b31c47039c79e0b8303f560694e67276dd192b6f
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782070"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388774"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>如何掛接 S3 層的巨量資料叢集的 HDFS 的
 
@@ -60,10 +60,10 @@ ms.locfileid: "66782070"
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. 掛接在 Azure 中使用遠端 HDFS 儲存體**mssqlctl 叢集存放集區掛接建立**。 將預留位置值，再執行下列命令：
+1. 掛接在 Azure 中使用遠端 HDFS 儲存體**mssqlctl bdc 存放集區掛接建立**。 將預留位置值，再執行下列命令：
 
    ```bash
-   mssqlctl cluster storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -76,21 +76,21 @@ ms.locfileid: "66782070"
 若要列出所有掛接在您的巨量資料叢集的狀態，請使用下列命令：
 
 ```bash
-mssqlctl cluster storage-pool mount status
+mssqlctl bdc storage-pool mount status
 ```
 
 若要列出在 HDFS 中的特定路徑掛上的狀態，請使用下列命令：
 
 ```bash
-mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
+mssqlctl bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> 刪除掛接
 
-若要刪除掛接，請使用**mssqlctl 叢集儲存體集區掛接刪除**命令，並在 HDFS 中指定掛接路徑：
+若要刪除掛接，請使用**mssqlctl bdc 存放集區掛接刪除**命令，並在 HDFS 中指定掛接路徑：
 
 ```bash
-mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>後續步驟

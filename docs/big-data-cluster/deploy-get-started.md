@@ -5,16 +5,16 @@ description: 了解的步驟和部署 SQL Server 2019 巨量資料叢集 （預�
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 31f8b94693ad7c6d242249300a21d051a7afe859
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4379e35b4d86ca462ea97b28c37d2f3b56427292
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797910"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388825"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>開始使用 SQL Server 的巨量資料叢集
 
@@ -47,7 +47,7 @@ ms.locfileid: "66797910"
 
 ## <a name="deploy-a-big-data-cluster"></a>部署巨量資料叢集
 
-您可以設定 Kubernetes 之後, 部署的巨量資料叢集`mssqlctl cluster create`命令。 部署時，您可以採取數個不同的方法。
+您可以設定 Kubernetes 之後, 部署的巨量資料叢集`mssqlctl bdc create`命令。 部署時，您可以採取數個不同的方法。
 
 - 如果您要部署到開發 / 測試環境，您可以選擇使用其中一種[預設組態](deployment-guidance.md#deploy)所提供**mssqlctl**。
 

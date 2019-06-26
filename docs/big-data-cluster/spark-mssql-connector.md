@@ -5,26 +5,37 @@ description: 了解如何在 Spark 中使用 MSSQL Spark 連接器，來讀取�
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: faa9d90cf78df5d73f125c7660b79d39e2bd5622
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d8172bc1d2b831d0cbeaab72bead283853b22cc
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770938"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388625"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>如何讀取和寫入至 SQL Server 使用 MSSQL Spark 連接器從 Spark
 
 索引鍵的巨量資料使用模式是在 Spark 中，後面接著將資料寫入至 SQL Server 中，以存取特定業務應用程式的大量資料處理。 這些使用模式受益於使用重要的 SQL 最佳化，並提供有效率的寫入機制的連接器。
 
-巨量資料叢集提供新的 MSSQL Spark 連接器，並使用大量 Api 撰寫高效能 Spark SQL 寫入 SQL Server。 這篇文章提供如何讀取和寫入至 SQL Server 從 Spark 使用 MSSQL Spark 連接器的範例。 在此範例中，會從 HDFS 的巨量資料叢集，Spark 處理，以及接著會寫入至 SQL Server 主要執行個體在叢集中使用新 MSSQL Spark 連接器中讀取資料。
+這篇文章提供如何使用 MSSQL Spark 連接器來讀取和寫入下列位置中的巨量資料叢集的範例：
+
+1. SQL Server 的主要執行個體
+1. SQL Server 資料集區
+
+   ![MSSQL Spark 連接器圖表](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
+
+此範例會執行下列工作：
+
+- 從 HDFS 讀取檔案，並進行一些基本的處理。
+- 寫入 SQL Server 主要執行個體為 SQL 資料表的資料框架，然後讀取資料表的資料框架。
+- 寫入當做 SQL 外部資料表的 SQL Server 資料集區中的資料框架，然後讀取 外部資料表的資料框架。
 
 ## <a name="mssql-spark-connector-interface"></a>MSSQL Spark 連接器介面
 
-MSSQL Spark 連接器將 Spark 資料來源 Api 為基礎，並提供熟悉的 Spark JDBC 連接器介面。 如介面參數，請參閱[Apache Spark 文件](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)。 依名稱參考 MSSQL Spark 連接器**com.microsoft.sqlserver.jdbc.spark**。
+SQL Server 2019 preview 可提供**MSSQL Spark 連接器**適用於巨量資料叢集所使用 SQL Server 大量寫入 Api 適用於 Spark SQL 寫入。 MSSQL Spark 連接器將 Spark 資料來源 Api 為基礎，並提供熟悉的 Spark JDBC 連接器介面。 如介面參數，請參閱[Apache Spark 文件](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)。 依名稱參考 MSSQL Spark 連接器**com.microsoft.sqlserver.jdbc.spark**。
 
 下表描述已變更或不熟悉的介面參數：
 
@@ -55,7 +66,9 @@ MSSQL Spark 連接器將 Spark 資料來源 Api 為基礎，並提供熟悉的 S
 
 1. 下載[AdultCensusIncome.csv](https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv)到本機電腦。
 
-1. 在 Azure 資料 Studio 中，您的巨量資料叢集的 HDFS 資料夾上按一下滑鼠右鍵，然後選取**新的目錄**。 目錄命名為**spark_data**。
+1. 啟動 Azure Data Studio，並[連線到您的巨量資料叢集](connect-to-big-data-cluster.md)。
+
+1. 在您的巨量資料叢集的 HDFS 資料夾上按一下滑鼠右鍵，然後選取**新的目錄**。 目錄命名為**spark_data**。
 
 1. 以滑鼠右鍵按一下**spark_data**目錄，然後選取**將檔案上傳**。 上傳**AdultCensusIncome.csv**檔案。
 

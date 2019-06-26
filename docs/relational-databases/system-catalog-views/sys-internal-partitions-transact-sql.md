@@ -1,7 +1,7 @@
 ---
 title: sys.internal_partitions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,14 +14,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a86c559adeeca787ac0e278eed5fb832b8c00bfd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5795ec9feaef483dd3ee9b5f3e31dbb619a89331
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537899"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388344"
 ---
-# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   傳回追蹤資料行存放區索引的內部資料，以磁碟為基礎的資料表上每個資料列集的一個資料列。 這些資料列集資料行存放區索引的內部，而追蹤刪除資料列、 資料列群組對應和差異存放區資料列群組。 它們會針對每個資料表資料分割; 每個追蹤資料每個資料表有至少一個資料分割。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新建立資料列集資料行存放區索引在重建每一次。   
@@ -39,6 +39,7 @@ ms.locfileid: "52537899"
 |rows|**bigint**|這個資料分割中的近似資料列數。|  
 |data_compression|**tinyint**|壓縮的資料列集的狀態：<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE|  
 |data_compression_desc|**nvarchar(60)**|每個資料分割的壓縮狀態。 資料列存放區資料表的可能值為 NONE、ROW 和 PAGE。 資料行存放區資料表的可能值為 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。|  
+|optimize_for_sequential_key|**bit**|1 = 資料分割有啟用的最後一頁插入最佳化。<br><br>0 = 預設值。 資料分割已停用的最後一頁插入最佳化。|
   
 ## <a name="permissions"></a>Permissions  
  需要 **public** 角色的成員資格。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
