@@ -14,12 +14,12 @@ ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49bffb24c5ddc45c1c6b88fb424ab419445819fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3851e196da2e6497285559192d90cbb0e74fd217
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025433"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400122"
 ---
 # <a name="spgetredirectedpublisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_get_redirected_publisher
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @original_publisher = ] 'original_publisher'` 發行的資料庫名稱。 *publisher_db*已**sysname**，沒有預設值。  
+`[ @original_publisher = ] 'original_publisher'` 當初發行資料庫的 SQL Server 執行個體名稱。 *original_publisher*已**sysname**，沒有預設值。
   
 `[ @publisher_db = ] 'publisher_db'` 發行的資料庫名稱。 *publisher_db*已**sysname**，沒有預設值。  
   

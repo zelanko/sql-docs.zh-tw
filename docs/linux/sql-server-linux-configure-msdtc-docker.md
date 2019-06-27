@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 71392b2d5de785df22ec1cf758a12675a0058e45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e38c1cf0fb82c70f57a1648619d584b06281cba
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705579"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400053"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>如何使用 Docker 上的 SQL Server 的分散式的交易
 
@@ -40,7 +40,7 @@ docker run \
    -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
    -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
    -p 51433:1433 -p 135:135 -p 51000:51000  \
-   -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
 ```
 
 > [!IMPORTANT]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8645fc41b518618194a62f24e3826b31a56596ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b6a8cb48e6447992fafc5b028146955668a7f66
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705270"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399972"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>在 Linux 上的 SQL Server 2019 preview 版本資訊
 
@@ -47,7 +47,8 @@ ms.locfileid: "66705270"
 
 | 版本               | 版本       | 發行日期 |
 |-----------------------|---------------|--------------|
-| [CTP 3.0](#CTP30)     | 15.0.1600.8  | 2019-5-22    |
+| [CTP 3.1](#CTP31)     | 15.0.1700.37  | 2019-6-26    |
+| [CTP 3.0](#CTP30)     | 15.0.1600.8   | 2019-5-22    |
 | [CTP 2.5](#CTP25)     | 15.0.1500.28  | 2019-4-24    |
 | [CTP 2.4](#CTP24)     | 15.0.1400.75  | 2019-3-27    |
 | [CTP 2.3](#CTP23)     | 15.0.1300.359 | 2019-3-01    |
@@ -65,8 +66,28 @@ ms.locfileid: "66705270"
 - [安裝全文檢索搜尋套件](sql-server-linux-setup-full-text-search.md)
 - [安裝 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [在 Linux 上安裝 SQL Server 2019 預覽版機器學習服務 R 和 Python 支援](sql-server-linux-setup-machine-learning.md)
+- [安裝 PolyBase 套件](../relational-databases/polybase/polybase-linux-setup.md)
 - [啟用 SQL Server Agent](sql-server-linux-setup-sql-agent.md)
-- [PolyBase Linux 安裝程式](../relational-databases/polybase/polybase-linux-setup.md)
+
+## <a id="CTP31"></a> CTP 3.1 (第 2019 年 6 月)
+
+下列章節提供封裝的位置以及版 CTP 3.1 的已知的問題。 若要深入了解新功能適用於 Linux 上 SQL Server 2019，請參閱[的新功能 SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)。
+
+### <a name="package-details"></a>套件詳細資料
+
+若為手動或離線套件安裝，您可以下載 RPM 和 Debian 套件使用下表中的資訊：
+
+| 套件 | 套件版本 | 下載 |
+|-----|-----|-----|
+| Red Hat RPM 套件 | 15.0.1700.37-2 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1700.37-2.x86_64.rpm)</br>[高可用性的 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1700.37-2.x86_64.rpm)</br>[全文檢索搜尋的 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1700.37-2.x86_64.rpm)</br>[擴充性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1700.37-2.x86_64.rpm)</br>[Java 擴充性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1700.37-2.x86_64.rpm)</br>[PolyBase RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1700.37-2.x86_64.rpm)|
+| SLES RPM 套件 | 15.0.1700.37-2 | [mssql server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1700.37-2.x86_64.rpm)</br>[高可用性的 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1700.37-2.x86_64.rpm)</br>[全文檢索搜尋的 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1700.37-2.x86_64.rpm)</br>[擴充性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1700.37-2.x86_64.rpm)</br>[Java 擴充性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1700.37-2.x86_64.rpm)</br>[PolyBase RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1700.37-2.x86_64.rpm)|
+| Ubuntu 16.04 的 Debian 套件 | 15.0.1700.37-2 | [引擎的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1700.37-2_amd64.deb)</br>[高可用性的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1700.37-2_amd64.deb)</br>[全文檢索搜尋中的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1700.37-2_amd64.deb)</br>[擴充性的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1700.37-2_amd64.deb)</br>[Java 擴充性中的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1700.37-2_amd64.deb)</br>[PolyBase RPM 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1700.37-2_amd64.deb)|
+
+### <a name="known-issues"></a>已知問題
+
+#### <a id="msdtc"></a> Microsoft 分散式交易協調器
+
+目前，MSDTC 會需要為未經驗證的交易。 比方說，如果您使用連結的伺服器，從 SQL Server 到 Linux 上的 SQL Server 的 Windows 上，或使用 Windows 用戶端應用程式開始在 Linux 上的 SQL Server 對分散式的交易，然後在 Windows server/用戶端上的 MSDTC 才可使用選項 否需要驗證 」。
 
 ## <a id="CTP30"></a> CTP 3.0 (2019 年)
 

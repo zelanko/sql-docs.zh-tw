@@ -10,12 +10,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 16b336113f869733b8f6ba93e3dbfe3dde5a52c1
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: ea4f04a2618bc1da6348f68675373704b46770a0
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388786"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400021"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>如何針對 HDFS 層的巨量資料叢集掛接 ADLS Gen2
 
@@ -64,17 +64,15 @@ ms.locfileid: "67388786"
 
 等候 5-10 分鐘，再使用的認證進行裝載
 
-### <a name="create-credential-file"></a>建立認證檔案
+### <a name="set-environment-variable-for-oauth-credentials"></a>設定環境變數中的 OAuth 認證
 
-開啟命令提示字元可存取您的巨量資料叢集的用戶端電腦上。
-
-建立名為本機檔案**filename.creds** ，其中包含您使用下列格式的 Azure Data Lake 儲存體 Gen2 帳戶認證：
+開啟命令提示字元可存取您的巨量資料叢集的用戶端電腦上。 設定環境變數，使用下列格式：請注意，認證必須是以逗號分隔清單。 'Set' 命令用在 Windows 上。 如果您使用 Linux，則請改用 'export'。
 
    ```text
-    fs.azure.account.auth.type=OAuth
-    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider
-    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above]
-    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above]
+    set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
+    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
+    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above],
+    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above],
     fs.azure.account.oauth2.client.secret=[<key> from step5 above]
    ```
 
@@ -85,20 +83,20 @@ ms.locfileid: "67388786"
  > [!TIP]
    > 如需有關如何尋找存取金鑰 (`<storage-account-access-key>`) 儲存體帳戶，請參閱[檢視及複製存取金鑰](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys)。
 
-### <a name="create-credential-file"></a>建立認證檔案
+### <a name="set-environment-variable-for-access-key-credentials"></a>設定環境變數中的 存取金鑰認證
 
 1. 開啟命令提示字元可存取您的巨量資料叢集的用戶端電腦上。
 
-1. 建立名為本機檔案**filename.creds** ，其中包含您使用下列格式的 Azure Data Lake 儲存體 Gen2 帳戶認證：
+1. 開啟命令提示字元可存取您的巨量資料叢集的用戶端電腦上。 設定環境變數，使用下列格式。 請注意，認證必須是以逗號分隔清單。 'Set' 命令用在 Windows 上。 如果您使用 Linux，則請改用 'export'。
 
    ```text
-   fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net
+   set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
    fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
 
 ## <a id="mount"></a> 掛接遠端 HDFS 儲存體
 
-現在您已備妥的便捷鍵或使用 OAuth 的認證檔案，您可以開始掛接。 下列步驟會掛接到本機 HDFS 儲存體，您的巨量資料叢集的 Azure Data Lake 中遠端 HDFS 儲存。
+既然您已設定存取金鑰，或使用 OAuth 的 MOUNT_CREDENTIALS 環境變數，您可以開始掛接。 下列步驟會掛接到本機 HDFS 儲存體，您的巨量資料叢集的 Azure Data Lake 中遠端 HDFS 儲存。
 
 1. 使用**kubectl**若要尋找 IP 位址端點**控制站 svc 外部**巨量資料叢集服務。 尋求**EXTERNAL-IP**。
 
@@ -111,11 +109,12 @@ ms.locfileid: "67388786"
    ```bash
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
+1. 設定環境變數 MOUNT_CREDENTIALS （捲動註冊指示）
 
 1. 掛接在 Azure 中使用遠端 HDFS 儲存體**mssqlctl bdc 存放集區掛接建立**。 將預留位置值，再執行下列命令：
 
    ```bash
-   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]

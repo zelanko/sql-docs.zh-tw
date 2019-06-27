@@ -3,7 +3,7 @@ title: SQL Server 2019 擴充功能 （預覽）
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 的 SQL Server 2019 Preview 延伸模組
 ms.custom: seodec18
-ms.date: 05/15/2019
+ms.date: 06/25/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: aa83e92fb62f9cb0ad00830d1e78e5367112899c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b8f31d55ae9dcc7042fff051c37a4beaa72a47e
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798063"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399998"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 擴充功能 （預覽）
 
@@ -30,9 +30,9 @@ SQL Server 2019 擴充功能 （預覽） 提供的預覽支援的新功能和�
 
    |平台|下載|發行日期|版本
    |:---|:---|:---|:---|
-   |視窗|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092817)|2019 5 月 15日日 |0.13.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092816)|2019 5 月 15日日 |0.13.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092815)|2019 5 月 15日日 |0.13.1
+   |視窗|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097803)|2019 年 6 月 25日日 |0.14.1
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097802)|2019 年 6 月 25日日 |0.14.1
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097801)|2019 年 6 月 25日日 |0.14.1
 
 1. 在 Azure Data Studio 選擇**VSIX 套件安裝延伸模組**從**檔案**功能表，然後選取已下載的.vsix 檔案。
 
@@ -43,6 +43,9 @@ SQL Server 2019 擴充功能 （預覽） 提供的預覽支援的新功能和�
 1. 重新載入後，擴充功能會安裝相依性。 您可以看到在 [輸出] 視窗中，進度，並可能需要幾分鐘的時間。
 
 1. 在相依性後面完成安裝，關閉再重新開啟 Azure Data Studio。 **巨量資料的 SQL Server 叢集**連接類型不可以使用，直到您重新啟動 Azure Data Studio。
+
+## <a name="changes-in-release-0141"></a>版本 0.14.1 中的變更
+* CTP 3.1 的資料來源支援的支援
 
 ## <a name="changes-in-release-0121"></a>版本 0.12.1 中的變更
 

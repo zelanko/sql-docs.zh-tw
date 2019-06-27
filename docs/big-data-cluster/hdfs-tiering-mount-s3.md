@@ -10,12 +10,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b31c47039c79e0b8303f560694e67276dd192b6f
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: f26fcfa24da5b9f22ddab1e76c2f80a0d24fae8d
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388774"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400023"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>如何掛接 S3 層的巨量資料叢集的 HDFS 的
 
@@ -32,12 +32,12 @@ ms.locfileid: "67388774"
 
 ## <a name="access-keys"></a>存取金鑰
 
-1. 開啟命令提示字元可存取您的巨量資料叢集的用戶端電腦上。
+### <a name="set-environment-variable-for-access-key-credentials"></a>設定環境變數中的 存取金鑰認證
 
-1. 建立名為本機檔案**filename.creds** ，其中包含您使用下列格式的 S3 帳戶認證：
+開啟命令提示字元可存取您的巨量資料叢集的用戶端電腦上。 設定環境變數，使用下列格式。 請注意，認證必須是以逗號分隔清單。 'Set' 命令用在 Windows 上。 如果您使用 Linux，則請改用 'export'。
 
    ```text
-    fs.s3a.access.key=<Access Key ID of the key>
+    set MOUNT_CREDENTIALS=fs.s3a.access.key=<Access Key ID of the key>,
     fs.s3a.secret.key=<Secret Access Key of the key>
    ```
 
@@ -59,11 +59,13 @@ ms.locfileid: "67388774"
    ```bash
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
+   
+1. 設定環境變數遵循上述指示 MOUNT_CREDENTIALS
 
 1. 掛接在 Azure 中使用遠端 HDFS 儲存體**mssqlctl bdc 存放集區掛接建立**。 將預留位置值，再執行下列命令：
 
    ```bash
-   mssqlctl bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]

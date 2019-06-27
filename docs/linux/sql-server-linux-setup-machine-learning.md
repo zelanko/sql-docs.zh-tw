@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a64addb1d9267aadc7e7eb2828e032d67db5d540
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a36ae06f28cb68395fd24b64921575567757a7f
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705100"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399943"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>安裝 SQL Server 2019 Machine Learning 服務 （R、 Python） 在 Linux 上
 
@@ -28,7 +28,7 @@ Machine Learning 服務也支援在 Linux 容器。 我們不會提供預先建�
 
 ## <a name="uninstall-previous-ctp"></a>解除安裝先前的 CTP
 
-套件清單已變更透過最後幾個 CTP 版本中，導致較少的封裝。 我們建議您解除安裝 CTP 2.x 安裝 CTP 3.0 之前先移除所有先前的封裝。 不支援多個版本的並存安裝。
+套件清單已變更透過最後幾個 CTP 版本中，導致較少的封裝。 我們建議您解除安裝 CTP 2.x 安裝 CTP 3.1 之前先移除所有先前的封裝。 不支援多個版本的並存安裝。
 
 ### <a name="1-confirm-package-installation"></a>1.確認封裝安裝
 
@@ -61,7 +61,7 @@ ls /opt/microsoft/mssql/bin
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-30-install"></a>3.繼續進行 CTP 3.0 安裝
+### <a name="3-proceed-with-ctp-31-install"></a>3.繼續進行 CTP 3.1 的安裝
 
 在最高的封裝層級使用這篇文章中的指示，適用於您作業系統的安裝。
 

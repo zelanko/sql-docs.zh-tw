@@ -4,17 +4,17 @@ description: 在 Red Hat、 Ubuntu 與 SUSE，了解如何安裝 SQL Server 語�
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c796d8f445f4cc1b02a0f49d12cde55e0a7ab4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9231828263020c352700fda6a4a0a9953dd70760
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719375"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399941"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>在 Linux 上安裝 SQL Server 2019 語言延伸模組 (Java)
 
@@ -28,7 +28,7 @@ Java 延伸模組的封裝位置是在 SQL Server Linux 來源存放庫中。 �
 
 ## <a name="uninstall-previous-ctp"></a>解除安裝先前的 CTP
 
-套件清單已變更透過最後幾個 CTP 版本中，導致較少的封裝。 我們建議您解除安裝 CTP 2.x 安裝 CTP 3.0 之前先移除所有先前的封裝。 不支援多個版本的並存安裝。
+套件清單已變更透過最後幾個 CTP 版本中，導致較少的封裝。 我們建議您解除安裝 CTP 2.x 安裝 CTP 3.1 之前先移除所有先前的封裝。 不支援多個版本的並存安裝。
 
 ### <a name="1-confirm-package-installation"></a>1.確認封裝安裝
 
@@ -52,7 +52,7 @@ ls /opt/microsoft/mssql/bin
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-proceed-with-ctp-30-install"></a>3.繼續進行 CTP 3.0 安裝
+### <a name="3-proceed-with-ctp-31-install"></a>3.繼續進行 CTP 3.1 的安裝
 
 在最高的封裝層級使用這篇文章中的指示，適用於您作業系統的安裝。
 
@@ -185,6 +185,20 @@ sudo zypper install mssql-server-extensibility-java
 6. 重新啟動`mssql-launchpadd`服務一次。
 
 7. 針對您想要使用的語言擴充功能，在每個資料庫，您需要註冊的外部語言[建立外部語言](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)。
+
+## <a name="register-external-language"></a>註冊外部語言
+
+針對您想要使用的語言擴充功能，在每個資料庫，您需要註冊的外部語言[建立外部語言](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)。
+
+下列範例會將外部的語言，稱為 Java 在 Linux 上的 SQL Server 上的資料庫。
+
+```SQL
+CREATE EXTERNAL LANGUAGE Java
+FROM (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so');
+GO
+```
+
+如需詳細資訊，請參閱 <<c0> [ 建立外部語言](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)。
 
 ## <a name="verify-installation"></a>確認安裝
 
