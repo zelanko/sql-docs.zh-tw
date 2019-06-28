@@ -67,7 +67,7 @@ CREATE PROCEDURE usp_UpdateCategories
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```
 
-## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>使用資料表值參數 & Amp;#40;transact-SQL&AMP;#41; 修改資料  
+## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>使用資料表值參數 &#40;transact-SQL&#41; 修改資料  
 
 資料表值參數可以用於執行單一陳述式來影響多個資料列的集合為基礎的資料修改。 例如，您可以選取所有資料列中的資料表值參數，並將其插入至資料庫資料表，或您可以建立的 update 陳述式的資料表值參數加入您想要更新的資料表。  
   
