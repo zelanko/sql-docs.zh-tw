@@ -2,7 +2,8 @@
 title: sys.workload_management_workload_classifiers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2019
-ms.prod: ''
+ms.prod: sql
+ms.technology: system-objects
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
 ms.topic: language-reference
@@ -12,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 43d8921f2135dbc1a343e8f3a604cc81f79b9faa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d125f6bdbc024e0f72cb138075e5abb97ae93eb
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65089540"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413238"
 ---
 # <a name="sysworkloadmanagementworkloadclassifiers-transact-sql"></a>sys.workload_management_workload_classifiers (Transact-SQL)
 

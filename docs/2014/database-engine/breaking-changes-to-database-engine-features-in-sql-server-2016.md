@@ -13,12 +13,12 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cfb905cb56c053d44b93021838915d3a628241a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7b5bf6ff2324c8e63b030d03e36794faf0ec9d4
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62813221"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419032"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中對於 Database Engine 的重大變更
   本主題描述 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 及舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的重大變更。 這些變更可能會中斷以舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]為根據的應用程式、指令碼或功能。 當您升級時可能會遇到這些問題。 如需詳細資訊，請參閱＜ [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)＞。  
@@ -265,9 +265,9 @@ ms.locfileid: "62813221"
 [!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2014 中已被取代的 Database Engine 功能](deprecated-database-engine-features-in-sql-server-2016.md)   
- [SQL Server 2014 中的 Database Engine 功能的行為變更](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md)   
- [SQL Server 2014 中已停止的 Database Engine 功能](discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [SQL Server 2014 中已被取代的 Database Engine 功能](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)   
+ [SQL Server 2014 中的 Database Engine 功能的行為變更](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md?view=sql-server-2014)   
+ [SQL Server 2014 中已停止的 Database Engine 功能](discontinued-database-engine-functionality-in-sql-server-2016.md?view=sql-server-2014)   
  [SQL Server Database Engine 回溯相容性](sql-server-database-engine-backward-compatibility.md)   
  [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
  [SQL Server 2014 中管理工具功能的重大變更](breaking-changes-to-management-tools-features-in-sql-server-2014.md?view=sql-server-2014)  

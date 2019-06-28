@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 06/26/2019
+ms.date: 06/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea4f04a2618bc1da6348f68675373704b46770a0
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 1d06b668a6c8badef75a0e90d3f58b67b1269984
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400021"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419044"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>如何針對 HDFS 層的巨量資料叢集掛接 ADLS Gen2
 
@@ -81,7 +81,7 @@ ms.locfileid: "67400021"
 此外，您也可以掛上使用存取金鑰，您可以為您的 ADLS 帳戶，在 Azure 入口網站上取得。
 
  > [!TIP]
-   > 如需有關如何尋找存取金鑰 (`<storage-account-access-key>`) 儲存體帳戶，請參閱[檢視及複製存取金鑰](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys)。
+   > 如需有關如何尋找存取金鑰 (`<storage-account-access-key>`) 儲存體帳戶，請參閱[檢視帳戶金鑰和連接字串](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string)。
 
 ### <a name="set-environment-variable-for-access-key-credentials"></a>設定環境變數中的 存取金鑰認證
 

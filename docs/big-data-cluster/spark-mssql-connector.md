@@ -9,12 +9,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d8172bc1d2b831d0cbeaab72bead283853b22cc
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: d4fde2e13efdebd0cdaad4a4f1c7e528c46ea136
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388625"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412886"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>如何讀取和寫入至 SQL Server 使用 MSSQL Spark 連接器從 Spark
 
@@ -49,7 +49,7 @@ SQL Server 2019 preview 可提供**MSSQL Spark 連接器**適用於巨量資料�
 
 - A[巨量資料的 SQL Server 叢集](deploy-get-started.md)。
 
-- [Azure Data Studio](../azure-data-studio/download.md)。
+- [Azure Data Studio](https://aka.ms/azdata-insiders)。
 
 ## <a name="create-the-target-database"></a>建立目標資料庫
 

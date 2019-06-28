@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: cbb4860cd747e454a09f1374d3b166fae466ee33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ffb63e3e7fb2891aeed1b9b26fbc43dddf69c78e
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797919"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412961"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安裝 SQL Server 2019 巨量資料工具
 
@@ -33,7 +33,7 @@ ms.locfileid: "66797919"
 |---|---|---|---|
 | **mssqlctl** | 是 | 安裝和管理的巨量資料叢集的命令列工具。 | [安裝](deploy-install-mssqlctl.md) |
 | **kubectl**<sup>1</sup> | 是 | 監視基礎 Kuberentes 叢集的命令列工具 ([進一歩](https://kubernetes.io/docs/tasks/tools/install-kubectl/))。 | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
-| **Azure Data Studio** | 是 | 查詢 SQL Server 的跨平台圖形化工具 ([進一歩](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15))。 | [安裝](../azure-data-studio/download.md) |
+| **Azure Data Studio （測試人員）** | 是 | 查詢 SQL Server 的跨平台圖形化工具 ([進一歩](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15))。 | [安裝](https://aka.ms/azdata-insiders) |
 | **SQL Server 2019 延伸模組** | 是 | 適用於支援連接至巨量資料叢集的 Azure 資料 Studio 的延伸模組。 也提供資料虛擬化精靈。 | [安裝](../azure-data-studio/sql-server-2019-extension.md) |
 | **Azure CLI**<sup>2</sup> | 供 AKS 使用 | 現代的命令列介面來管理 Azure 服務。 搭配 AKS 巨量資料叢集部署 ([進一歩](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest))。 | [安裝](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | 選擇性 | 查詢 SQL Server 的新式命令列介面 ([進一歩](https://github.com/dbcli/mssql-cli/blob/master/README.rst))。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |

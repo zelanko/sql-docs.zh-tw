@@ -4,6 +4,7 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.service: sql-data-warehouse
 ms.reviewer: ''
+ms.prod: sql
 ms.technology: system-objects
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +14,15 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3b7ed226b3f56de3e4220fc9cc3a48230bf6b337
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7fc6025cae0c0b265553b8380de27699d4cb1cba
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025499"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413029"
 ---
 # <a name="sppdwdatabaseencryptionregeneratesystemkeys-sql-data-warehouse"></a>sp_pdw_database_encryption_regenerate_system_keys （SQL 資料倉儲）
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   使用**sp_pdw_database_encryption_regenerate_system_keys**旋轉應用裝置上啟用 TDE 時加密的內部資料庫的憑證和資料庫加密金鑰。 這包括 `tempdb`。 這將會成功才會啟用 TDE。  

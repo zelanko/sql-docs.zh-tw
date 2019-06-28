@@ -1,7 +1,7 @@
 ---
 title: 運算式範例 (報表產生器及 SSRS) | Microsoft Docs
-ms.prod: reporting-services
-ms.technology: reporting-services-native
+ms.prod: sql-server-2014
+ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/08/2017
-ms.openlocfilehash: 11441e0866904742985c55d535e8398802b206fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 456dd8e4e232f77e7cc7709a997fdd8ae5ef0e5b
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775036"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413007"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>運算式範例 (報表產生器及 SSRS)
 

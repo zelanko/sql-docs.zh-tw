@@ -4,7 +4,7 @@ ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.technology: release-landing
 ms.reviewer: ''
-ms.topic: 'index-page '
+ms.topic: conceptual
 f1_keywords:
 - sql12.portal.f1
 helpviewer_keywords:
@@ -19,12 +19,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 33cc877dfb2b1789aa775981e8377cf66b4ee950
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62d8f6199be3cf3fdef1b5f986267b42723f0efd
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413211"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412631"
 ---
 # <a name="books-online-for-sql-server-2014"></a>SQL Server 2014 的線上叢書
 

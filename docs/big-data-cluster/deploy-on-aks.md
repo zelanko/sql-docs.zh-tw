@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 51c7dbf8e50f6c3537a2a4171720c160c444471d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad42063b2c4959429bdc54e3772aa755bc32e2f2
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797871"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412953"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>設定適用於 SQL Server 的巨量資料叢集部署的 Azure Kubernetes 服務
 
@@ -70,28 +70,44 @@ Azure 資源群組是在哪一項 Azure 資源部署與管理的邏輯群組。 
    az account set --subscription <subscription id>
    ```
 
-1. 建立的資源群組**az 群組建立**命令。 下列範例會建立名為的資源群組`sqlbigdatagroup`在`westus2`位置。
+1. 建立的資源群組**az 群組建立**命令。 下列範例會建立名為的資源群組`sqlbdcgroup`在`westus2`位置。
 
    ```azurecli
-   az group create --name sqlbigdatagroup --location westus2
+   az group create --name sqlbdcgroup --location westus2
    ```
 
 ## <a name="create-a-kubernetes-cluster"></a>建立 Kubernetes 叢集
 
 1. 在與 AKS 建立 Kubernetes 叢集[az aks 建立](https://docs.microsoft.com/cli/azure/aks)命令。 下列範例會建立名為 Kubernetes 叢集*kubcluster*使用一個 Linux 代理程式節點大小**Standard_L8s**。 請確定您在先前各節中使用的相同資源群組中建立 AKS 叢集。
 
-    ```azurecli
+   **bash:**
+
+   ```bash
    az aks create --name kubcluster \
-    --resource-group sqlbigdatagroup \
-    --generate-ssh-keys \
-    --node-vm-size Standard_L8s \
-    --node-count 1 \
-    --kubernetes-version 1.12.8
-    ```
+   --resource-group sqlbdcgroup \
+   --generate-ssh-keys \
+   --node-vm-size Standard_L8s \
+   --node-count 1 \
+   --kubernetes-version 1.12.8
+   ```
+
+   **PowerShell:**
+
+   ```powershell
+   az aks create --name kubcluster `
+   --resource-group sqlbdcgroup `
+   --generate-ssh-keys `
+   --node-vm-size Standard_L8s `
+   --node-count 1 `
+   --kubernetes-version 1.12.8
+   ```
 
    您可以增加或減少的 Kubernetes 代理程式節點數目，藉由變更`--node-count <n>`其中`<n>`是您想要使用的代理程式節點數目。 這不包括 master 的 Kubernetes 節點，其在幕後受 AKS。 先前的範例只會使用針對評估用途的單一節點。
 
    幾分鐘之後，此命令會完成，並傳回 JSON 格式化叢集的相關資訊。
+
+   > [!TIP]
+   > 如果您收到 AKS 中建立叢集的任何錯誤，請參閱[疑難排解 區段](#troubleshoot)這篇文章。
 
 1. 儲存 JSON 輸出以供稍後使用前一個命令。
 
@@ -100,17 +116,24 @@ Azure 資源群組是在哪一項 Azure 資源部署與管理的邏輯群組。 
 1. 若要設定 kubectl 來連線到 Kubernetes 叢集，請執行[az aks get-credentials 來取得認證](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials)命令。 此步驟中下載憑證，並設定 kubectl CLI 來使用它們。
 
    ```azurecli
-   az aks get-credentials --resource-group=sqlbigdatagroup --name kubcluster
+   az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
    ```
 
 1. 若要驗證您的叢集連線，請使用[kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)命令來傳回叢集節點的清單。  下列範例顯示輸出時有 1 部主機，以及 3 個代理程式節點。
 
-   ```
+   ```bash
    kubectl get nodes
    ```
 
+## <a id="troubleshoot"></a> 疑難排解
+
+如果您有使用上述命令建立 Azure Kubernetes 服務的任何問題，請嘗試下列解決方法：
+
+- 請確定您已安裝[最新的 Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)。
+- 請嘗試相同步驟，使用不同的資源群組與叢集名稱。
+
 ## <a name="next-steps"></a>後續步驟
 
-這篇文章中的步驟會設定在 AKS 中 Kubernetes 叢集。 下一個步驟是將 SQL Server 2019 巨量資料部署到叢集。 如需有關如何部署巨量資料叢集的詳細資訊，請參閱下列文章：
+這篇文章中的步驟會設定在 AKS 中 Kubernetes 叢集。 下一個步驟是部署在 AKS 的 Kubernetes 叢集上的 SQL Server 2019 巨量資料叢集。 如需有關如何部署巨量資料叢集的詳細資訊，請參閱下列文章：
 
 [如何部署 SQL Server 在 Kubernetes 上的巨量資料叢集](deployment-guidance.md)
