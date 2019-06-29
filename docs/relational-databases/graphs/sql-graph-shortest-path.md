@@ -19,12 +19,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed931a8b1918961b69cc0600f94aff6e4d68b9e1
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: ef8f38acbf621a9c73a0d85bca579c8b7c87aa13
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413985"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463547"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -39,12 +39,12 @@ SHORTEST_PATH 函式可讓您尋找：
 * 單一來源的最短路徑。
 * 最短到多個目標節點從多個來源節點路徑。
 
-它會使用任意長度的模式，做為輸入，並傳回兩個節點之間的最短的路徑存在。 此函式僅適用於在 MATCH 內。 它會接受使用任意長度的模式，並在圖形中，符合該模式會尋找最短的路徑。 此函數會傳回任何兩個指定的節點之間只能有一個最短的路徑。 如果有，兩個或多個長度相同的來源和目的地節點上的任何一對之間的最短路徑，此函數會傳回只有一個周遊期間找不到第一個的路徑。 請注意，使用任意長度的模式，只能指定在 SHORTEST_PATH 函式。 
+它會使用任意長度的模式，做為輸入，並傳回兩個節點之間的最短的路徑存在。 此函式僅適用於在 MATCH 內。 此函數會傳回任何兩個指定的節點之間只能有一個最短的路徑。 如果有，兩個或多個長度相同的來源和目的地節點，函式傳回只有一個路徑找到第一個周遊期間的任何一對之間的最短路徑。 請注意，使用任意長度的模式，只能指定在 SHORTEST_PATH 函式。 
 
 請參閱[比對 (SQL Graph)](../../t-sql/queries/match-sql-graph.md)語法。 
 
 ## <a name="for-path"></a>路徑
-路徑必須使用具有在 FROM 子句中，使用任意長度的模式，將會參與任何節點或邊緣資料表名稱。 路徑會告訴引擎節點或邊緣資料表將會傳回已排序的集合，表示節點或邊緣周遊的路徑從 [開始] 節點以結束節點的清單。 從這些資料表的屬性不能直接在 SELECT 子句中投射。 專案屬性，這些資料表中的，圖形路徑彙總函式必須使用。  
+路徑必須使用具有在 FROM 子句中，使用任意長度的模式，將會參與任何節點或邊緣資料表名稱。 路徑會告訴引擎節點或邊緣資料表將會傳回已排序的集合，表示節點或邊緣周遊的路徑中找到的清單。 從這些資料表的屬性不能直接在 SELECT 子句中投射。 專案屬性，這些資料表中的，圖形路徑彙總函式必須使用。  
 
 ## <a name="arbitrary-length-pattern"></a>任意長度的模式
 此模式包含節點和邊緣，直到達到所需的節點，或直到此模式中所指定的反覆項目數上限必須重複周遊成立。 執行查詢時，每次執行此模式的結果會在節點與邊緣周遊的路徑從 [開始] 節點以結束節點的已排序的集合。 這是規則運算式樣式語法模式，並支援下列兩個模式數量詞：

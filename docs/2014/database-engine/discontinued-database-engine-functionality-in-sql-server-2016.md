@@ -33,24 +33,24 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ebb9b4e3db7cf8f7a19fd582dceb0b19f5c47d0
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62779858"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463462"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014 中已停止的 Database Engine 功能
   本主題描述 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中不再可用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="SQL14"></a> 在 已停止的功能 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  下表列出已在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中移除的功能。  
   
 |Category|已停止的功能|取代|  
 |--------------|--------------------------|-----------------|  
 |相容性層級|90 相容性層級|資料庫至少必須設定為相容性層級 100。 當相容性層級低於 100 的資料庫升級為 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]時，資料庫的相容性層級會在升級作業期間設定為 100。|  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="Denali"></a> 在 已停止的功能 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  下表列出已在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中移除的功能。  
   
 |Category|已停止的功能|取代|  
@@ -93,6 +93,6 @@ ms.locfileid: "62779858"
 -   加入的欄位：target_kb、pages_kb  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2014 中已淘汰的資料庫引擎功能](deprecated-database-engine-features-in-sql-server-2016.md)  
+ [SQL Server 2014 中已淘汰的資料庫引擎功能](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
   
   

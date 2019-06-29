@@ -2,8 +2,6 @@
 title: sp_pdw_database_encryption_regenerate_system_keys （SQL 資料倉儲） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.service: sql-data-warehouse
-ms.reviewer: ''
 ms.prod: sql
 ms.technology: system-objects
 ms.topic: language-reference
@@ -12,14 +10,14 @@ dev_langs:
 ms.assetid: bb13e323-a984-4462-8b6d-6019c38ddd9d
 author: ronortloff
 ms.author: rortloff
-manager: craigg
+ms.reviewer: ''
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7fc6025cae0c0b265553b8380de27699d4cb1cba
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 323b7602fd375bc393828663f1d2c749332dc9ac
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413029"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463473"
 ---
 # <a name="sppdwdatabaseencryptionregeneratesystemkeys-sql-data-warehouse"></a>sp_pdw_database_encryption_regenerate_system_keys （SQL 資料倉儲）
 
