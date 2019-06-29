@@ -17,12 +17,12 @@ ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 71eec87e4cdf325a20e6ad213dd8f591a094f825
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb1fcf2a88824a2ddef2e8b896b2ee585fa2623a
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267933"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469093"
 ---
 # <a name="sqlgetinfo-returned-values-for-excel"></a>Excel 的 SQLGetInfo 傳回值
 下表列出 C 語言 #defines *fInfoType*引數和所傳回的對應值**SQLGetInfo**。 這項資訊可以擷取傳遞所列出的 C 語言 #defines **SQLGetInfo**中*fInfoType*引數。 如需詳細資訊，所傳回之值的相關**SQLGetInfo**，請參閱*ODBC 程式設計人員參考*。  
@@ -112,7 +112,7 @@ ms.locfileid: "63267933"
 |SQL_GETDATA_EXTENSIONS|多個值|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"'"（反引號）|  
+|SQL_IDENTIFIER_QUOTE_CHAR|「\`"（反引號）|  
 |SQL_KEYWORDS|多個值|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -157,7 +157,7 @@ ms.locfileid: "63267933"
 |SQL_SCROLL_OPTIONS|多個值|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|"EXCEL"|  
-|SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SPECIAL_CHARACTERS|"~\`\@#$%^&\*\_-+=\\}{"';:?/><,.!'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|多個值|  
 |SQL_SUBQUERIES|多個值|  
 |SQL_SYSTEM_FUNCTIONS|0|  

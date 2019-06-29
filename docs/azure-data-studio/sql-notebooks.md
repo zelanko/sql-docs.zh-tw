@@ -3,7 +3,7 @@ title: 如何在 Azure Data Studio 中使用 SQL Notebook
 titleSuffix: Azure Data Studio
 description: 了解如何在 Azure Data Studio 中使用 SQL Notebook
 ms.custom: seodec18
-ms.date: 03/17/2019
+ms.date: 06/28/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: achatter; alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 6ac15dcd6b440a8c3bcca0c468a79548469fe059
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02146596b8c0c21531d269a815f97512b5c955a5
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798038"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469076"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>如何在 Azure Data Studio 中使用 notebook
 
@@ -163,14 +163,13 @@ import <package-name>
 
 當您執行此命令，`Module not found`會傳回。 如果您的套件存在，則您不會收到錯誤。
 
-如果它傳回`Module not Found`錯誤，然後按一下**管理套件**啟動終端機。 您現在可以安裝在本機的套件。 使用下列命令來安裝封裝：
+如果它傳回`Module not Found`錯誤，然後按一下**管理套件**來啟動精靈 體驗。 
 
-```bash
-./pip install <package-name>
-```
+![image17](media/sql-notebooks/manage-packages.png)
 
-   > [!Tip]
-   > 在 Mac 上，請遵循安裝套件的終端機視窗中的指示。 
+在此精靈中您會看到**已安裝**封裝。 您可以搜尋清單和相關聯的每個這些套件的版本。 如果您需要**解除安裝**任一這些封裝，然後您可以按一下其中一個封裝，然後按一下 上**解除安裝選取的封裝**選項。
+
+您也可以按一下**新增**套件**搜尋**特定套件，請選擇相關的版本，然後按一下**安裝**。 根據預設，我們可以選取搜尋封裝的最新版本。 
 
 安裝套件之後，您應該能夠在 Notebook 資料格，並輸入下列命令：
 
@@ -178,11 +177,7 @@ import <package-name>
 import <package-name>
 ```
 
-若要解除安裝封裝，請使用下列命令，從您的終端機：
-
-```bash
-./pip uninstall <package-name>
-```
+如果您需要**解除安裝**任一這些封裝，然後您可以按一下 上一或多個封裝，然後按一下 上**解除安裝選取的封裝**選項。
 
 ## <a name="next-steps"></a>後續步驟
 

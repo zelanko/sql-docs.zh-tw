@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 424b09f9cd18a3fa68eb8a3ade26eecc1191ef72
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 1f2d7f5a1d4a966edbce3c4ad96a7b31bd604b48
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388642"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469126"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>版本資訊適用於 SQL Server 上的巨量資料叢集
 
@@ -36,7 +36,7 @@ ms.locfileid: "67388642"
 | `mssqlctl` 命令會變更 | `mssqlctl cluster` 已重新命名命令`mssqlctl bdc`。 如需詳細資訊，請參閱 < [ `mssqlctl`參考](reference-mssqlctl.md)。 |
 | 新`mssqlctl`狀態命令和移除叢集的系統管理入口網站。 | 叢集系統管理入口網站會在此版本中移除。 已新增新的狀態命令`mssqlctl`補充現有的監視命令。 |
 | Spark 計算集區 | 建立額外的節點，以提升 Spark 的計算能力，而不需要相應增加儲存體。 此外，您可以開始不會使用適用於 Spark 的儲存體集區節點。 Spark 和儲存體會分離。 如需詳細資訊，請參閱 <<c0> [ 設定存放裝置，而不需要 spark](deployment-custom-configuration.md#sparkstorage)。 |
-| MSSQL Spark 連接器 | 支援讀取/寫入至資料集區外部的資料表。 上一個版本支援讀取/寫入主要執行個體僅限資料表。 |
+| MSSQL Spark 連接器 | 支援讀取/寫入至資料集區外部的資料表。 上一個版本支援讀取/寫入主要執行個體僅限資料表。 如需詳細資訊，請參閱 <<c0> [ 如何讀取和寫入至 SQL Server 使用 MSSQL Spark 連接器從 Spark](spark-mssql-connector.md)。 |
 | 使用 MLeap 的機器學習服務 | [在 Spark 中的 MLeap 機器學習服務模型定型和評分使用 Java 語言擴充功能的 SQL Server 中](spark-create-machine-learning-model.md)。 |
 
 ### <a name="known-issues"></a>已知問題

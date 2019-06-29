@@ -9,12 +9,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d4fde2e13efdebd0cdaad4a4f1c7e528c46ea136
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 878e08426fc58d6ad5a921eff4ac33dca18aa03c
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412886"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469115"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>如何讀取和寫入至 SQL Server 使用 MSSQL Spark 連接器從 Spark
 
@@ -81,7 +81,7 @@ SQL Server 2019 preview 可提供**MSSQL Spark 連接器**適用於巨量資料�
 1. 從 PowerShell 或 bash 命令列中，執行下列命令來下載**mssql_spark_connector.ipynb** notebook 範例：
 
    ```PowerShell
-   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/spark_to_sql/mssql_spark_connector.ipynb"
+   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector.ipynb"
    ```
 
 1. 在 Azure 資料 Studio 中開啟範例筆記本檔案。 請確認它連線到您的巨量資料叢集的 HDFS/Spark 閘道。

@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f4d66846be52a1f42a87f6dd11a584ace4e3ac4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e85d3d1257b4cd873ddb1686a78d746cf92021c3
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499677"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469135"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -346,6 +346,7 @@ GO
 |HADR_TDS_LISTENER_SYNC |內部 Alwayson 系統或 WSFC 叢集將會在接聽程式會啟動或停止要求。 這項要求的處理方式一律為非同步，而且具有移除重複要求的機制。 此外，這個處理序有時候會由於組態變更而暫停。 與此接聽程式同步處理機制相關的所有等候都會使用此等候類型。 僅供內部使用。， <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_TDS_LISTENER_SYNC_PROCESSING |使用此選項，需要啟動及/或停止的可用性群組接聽程式的一律在 TRANSACT-SQL 陳述式的結尾。 啟動/停止作業會以非同步方式完成，因為使用者執行緒會封鎖直到稱為接聽程式的情況下，使用這種等候類型。， <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_THROTTLE_LOG_RATE_GOVERNOR |僅供內部使用。 <br /> **適用於**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO | 以較低設定異地複寫次要資料庫時，就會發生計算低於主要複本的大小 (較低的 SLO)。 主要資料庫是由次要資料庫，進行節流處理因為延後的記錄。 這被因次要資料庫具有足夠的計算容量，以趕上主要資料庫的變動率。 <br /> **適用於**：Azure SQL Database| 
 |HADR_THROTTLE_LOG_RATE_LOG_SIZE |僅供內部使用。 <br /> **適用於**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_THROTTLE_LOG_RATE_SEEDING |僅供內部使用。 <br /> **適用於**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |僅供內部使用。 <br /> **適用於**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
