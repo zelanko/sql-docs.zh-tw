@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: jroth
-ms.openlocfilehash: 6e27dc247648e8fd69ed372a5ddd2a8566240efd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 290a3a9d307e19820af7f59cd5d6f821bcefc1a3
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794894"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412777"
 ---
 # <a name="install-sql-server-servicing-updates"></a>安裝 SQL Server 服務更新
 
@@ -55,7 +55,7 @@ ms.locfileid: "66794894"
 當您透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新收到更新時，它會以自動模式將所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能更新至最新版本。 如果您需要更多彈性，或者是無法存取網際網路或 WSUS，就必須從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心取得更新。  
   
 ## <a name="see-also"></a>另請參閱  
-[從安裝精靈安裝 SQL Server &#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-[將功能新增至 SQL Server 的執行個體 &#40;安裝程式&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)
+[從 [安裝精靈] &#40;安裝程式&#41; 安裝 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)        
+[將功能新增至 SQL Server 的執行個體 &#40;安裝程式&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)         
 [修復失敗的 SQL Server 安裝](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
 

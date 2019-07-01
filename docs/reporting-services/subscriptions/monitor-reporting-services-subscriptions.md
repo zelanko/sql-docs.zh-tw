@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 33d865ad28e9d013b97910ff30c4bcf7be760f93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: HT
+ms.openlocfilehash: d1cfa2c5face12eab1677d4a1386511d005aa5dd
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140539"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285037"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>監視 Reporting Services 訂閱
   您可以透過使用者介面、Windows PowerShell 或記錄檔來監視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱。 您可以使用的監視選項取決於正在執行的報表伺服器模式。  
@@ -39,20 +39,20 @@ ms.locfileid: "67140539"
 -   [管理非使用中訂閱](#bkmk_manage_inactive)  
   
 ##  <a name="bkmk_native_mode"></a> 原生模式使用者介面  
- 個別 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用者可以使用 [我的訂閱] 頁面或入口網站中的 [訂閱] 索引標籤，來監視訂閱的狀態。 [訂閱] 頁面會包括資料行，指出上次訂閱是在何時執行以及報表的狀態。 當訂閱已設定處理排程時，就會更新狀態訊息。 如果觸發程序從未發生 (例如，報表執行快照集從未重新整理或排程從未執行)，則狀態訊息不會更新。  
+ 個別 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用者可以使用 [我的訂閱]  頁面或入口網站中的 [訂閱]  索引標籤，來監視訂閱的狀態。 [訂閱] 頁面會包括資料行，指出上次訂閱是在何時執行以及報表的狀態。 當訂閱已設定處理排程時，就會更新狀態訊息。 如果觸發程序從未發生 (例如，報表執行快照集從未重新整理或排程從未執行)，則狀態訊息不會更新。  
   
  下表描述 [狀態]  欄的可能值。  
   
-|狀態|描述|  
+|[狀態]|Description|  
 |------------|-----------------|  
 |新增訂閱|出現在第一次建立訂閱時。|  
-|非使用中|出現在無法處理訂閱時。 如需詳細資訊，請參閱本文中稍後的＜管理非使用中訂閱＞。|  
-|完成：已處理 \<數目> 個 (總共 \<數目> 個)；\<數目> 個錯誤。|顯示資料驅動訂閱執行的狀態；此訊息來自排程與傳遞處理器。|  
-|已處理 \<數目> 個|排程與傳遞處理器已成功傳遞或已不再嘗試傳遞的通知數目。 當資料驅動傳遞完成時，已處理的通知數目應該和產生的通知總數相等。|  
-|總共 \<數目> 個|訂閱最後一次傳遞所產生的通知總數。|  
-|\<數目> 個錯誤|排程與傳遞處理器無法傳遞或已不再嘗試傳遞的通知數目。|  
+|非使用中|出現在無法處理訂用帳戶時。 如需詳細資訊，請參閱本文中稍後的＜管理非使用中訂閱＞。|  
+|完成：已處理 \<數目  > 個 (總共 \<數目  > 個)；\<數目  > 個錯誤。|顯示資料驅動訂閱執行的狀態；此訊息來自排程與傳遞處理器。|  
+|已處理 \<數目  > 個|排程與傳遞處理器已成功傳遞或已不再嘗試傳遞的通知數目。 當資料驅動傳遞完成時，已處理的通知數目應該和產生的通知總數相等。|  
+|總共 \<數目  > 個|訂閱最後一次傳遞所產生的通知總數。|  
+|\<數目  > 個錯誤|排程與傳遞處理器無法傳遞或已不再嘗試傳遞的通知數目。|  
 |傳送郵件失敗：傳輸無法連接到伺服器。|指出報表伺服器未連接到郵件伺服器；此訊息來自電子郵件傳遞延伸模組。|  
-|檔案 \<檔案名稱> 已寫入 \<路徑>。|指出已成功傳遞到檔案共用位置；此訊息來自檔案共用傳遞延伸模組。|  
+|檔案 \<檔案名稱  > 已寫入 \<路徑>。|指出已成功傳遞到檔案共用位置；此訊息來自檔案共用傳遞延伸模組。|  
 |寫入檔案時發生未知的錯誤。|指出未成功傳遞到檔案共用位置；此訊息來自檔案共用傳遞延伸模組。|  
 |無法連線到目的資料夾，\<路徑>。 請確認目的資料夾或檔案共用存在。|指出找不到所指定的資料夾；此訊息來自檔案共用傳遞延伸模組。|  
 |檔案 \<檔案名稱> 無法寫入 \<路徑>。 正在嘗試重試。|指出無法以較新版本進行檔案更新；此訊息來自檔案共用傳遞延伸模組。|  
@@ -76,7 +76,7 @@ ms.locfileid: "67140539"
   
  下列是與訂閱相關的追蹤記錄檔範例錯誤訊息：  
   
--   library!WindowsService_7!b60!05/20/2019-22:34:36:: i INFO: 將 EnableExecutionLogging 初始化至 'True' ，如同 Server 系統所示 properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41:: e ERROR: **傳送電子郵件時發生錯誤**。 例外狀況：System.Net.Mail.SmtpException: SMTP 伺服器需要安全的連線或是用戶端未經認證。 伺服器回應為：5.7.1 用戶端未經認證   於 System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36 i i INFO: 將 EnableExecutionLogging 初始化至 'True' ，如同 Server 系統所示 properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERROR: **傳送電子郵件時發生錯誤**。 例外狀況：System.Net.Mail.SmtpException: SMTP 伺服器需要安全的連線或是用戶端未經認證。 伺服器回應為：5.7.1 用戶端未經認證   於 System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  記錄檔不包括有關報表是否開啟或實際上是否成功傳遞的資訊。 成功傳遞是指排程與傳遞處理器未產生錯誤，且報表伺服器已連接到郵件伺服器。 如果電子郵件在使用者信箱產生無法傳遞訊息錯誤，該資訊將不會包含在記錄檔中。 如需記錄檔的詳細資訊，請參閱 [Reporting Services 記錄檔和來源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
   
@@ -85,9 +85,9 @@ ms.locfileid: "67140539"
   
 1.  瀏覽至包含報表的文件庫  
   
-2.  開啟報表的內容功能表 (**…**)。  
+2.  開啟報表的內容功能表 ( **…** )。  
   
-3.  選取展開的功能表選項 (**…**)。  
+3.  選取展開的功能表選項 ( **…** )。  
   
 4.  選取 [管理訂閱]   
   
