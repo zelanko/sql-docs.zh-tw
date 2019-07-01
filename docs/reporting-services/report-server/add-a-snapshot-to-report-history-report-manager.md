@@ -1,7 +1,7 @@
 ---
 title: 將快照集新增至報表記錄 (報表管理員) | Microsoft Docs
-ms.prod: reporting-services-2014
-ms.technology: reporting-services-native
+ms.prod: reporting-services
+ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
-ms.openlocfilehash: ba994e3fe63bfabeb9949f6dc96dc4b4536f0f0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1b211684bc267671ea86571f4214c32c013f674
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64568541"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463422"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>將快照集加入報表記錄 (報表管理員)
 
@@ -24,33 +24,33 @@ ms.locfileid: "64568541"
   
 ## <a name="to-manually-add-snapshots-to-report-history"></a>若要手動將快照集加入至報表記錄
   
-::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-1. 在報表管理員中，巡覽至 [內容] 頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。
+1. 在報表管理員中，巡覽至 [內容]  頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。
   
-2. 在下拉式功能表中，按一下 **[檢視報表記錄]**。  
+2. 在下拉式功能表中，按一下 **[檢視報表記錄]** 。  
   
-3. 按一下 **[新增快照集]**。 **[執行時]** 資料行裡會建立一個新的快照集。  
+3. 按一下 **[新增快照集]** 。 **[執行時]** 資料行裡會建立一個新的快照集。  
   
     > [!NOTE]
-    > 管理員必須將報表記錄設定為 **[允許手動建立記錄]**，才能執行此作業。 如需詳細資訊，請參閱 [限制報表記錄 &#40;報表管理員&#41;](../reports/limit-report-history-report-manager.md)。
+    > 管理員必須將報表記錄設定為 **[允許手動建立記錄]** ，才能執行此作業。 如需詳細資訊，請參閱 [限制報表記錄 &#40;報表管理員&#41;](../reports/limit-report-history-report-manager.md)。
 
-4. 按一下 **[套用]**。
+4. 按一下 **[套用]** 。
 
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
-1. 在報表管理員中，瀏覽到 [內容] 頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下省略符號 (...)。
+1. 在報表管理員中，瀏覽到 [內容]  頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下省略符號 (...)。
 
-2. 在下拉式功能表中，按一下 [檢視報表記錄]。  
+2. 在下拉式功能表中，按一下 **[檢視報表記錄]** 。  
 
 3. 按一下 **新的歷程記錄快照集**。 建立新的快照集，並列出。
 
     > [!NOTE]  
-    > 管理員必須將報表記錄設定為 **[允許手動建立記錄]**，才能執行此作業。 如需詳細資訊，請參閱 [限制報表記錄 &#40;報表管理員&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)。
+    > 管理員必須將報表記錄設定為 **[允許手動建立記錄]** ，才能執行此作業。 如需詳細資訊，請參閱 [限制報表記錄 &#40;報表管理員&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)。
 
-4. 按一下 **[套用]**。
+4. 按一下 **[套用]** 。
 
 ::: moniker-end
   
@@ -58,31 +58,31 @@ ms.locfileid: "64568541"
   
 1. 若為已經設定成當做報表執行快照集執行的報表，您可以設定其他屬性，以便在每次重新整理快照集時，將快照集的副本儲存至報表記錄。  
   
-2. 在報表管理員中，巡覽至 [內容] 頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。  
+2. 在報表管理員中，巡覽至 [內容]  頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。  
   
-3. 在下拉式功能表中，按一下 **[管理]**。  
+3. 在下拉式功能表中，按一下 **[管理]** 。  
   
-4. 按一下 **[快照集選項]**。  
+4. 按一下 **[快照集選項]** 。  
   
 5. 選取 **[將所有報表執行快照集儲存在記錄中]** 的核取方塊。  
   
-6. 按一下 **[套用]**。  
+6. 按一下 **[套用]** 。  
   
 ### <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>若要依照排程自動將快照集加入報表記錄  
   
-1. 在報表管理員中，巡覽至 [內容] 頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。  
+1. 在報表管理員中，巡覽至 [內容]  頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。  
   
-2. 在下拉式功能表中，按一下 **[管理]**。  
+2. 在下拉式功能表中，按一下 **[管理]** 。  
   
-3. 按一下 **[快照集選項]**。  
+3. 按一下 **[快照集選項]** 。  
   
 4. 選取 **[使用下列排程將快照集加入至報表記錄]** 的核取方塊。 執行下列其中之一：  
   
-    - 選取 [報表特定排程]。 填入排程詳細資料，選取排程的開始和結束日期，然後按一下 **[確定]**。  
+    - 選取 [報表特定排程]  。 填入排程詳細資料，選取排程的開始和結束日期，然後按一下 **[確定]** 。  
 
-    - 選取 **[共用排程]**。 從清單中，選取喜好的排程。  
+    - 選取 **[共用排程]** 。 從清單中，選取喜好的排程。  
 
-5. 按一下 **[套用]**。  
+5. 按一下 **[套用]** 。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -1,6 +1,6 @@
 ---
 title: 監視報表伺服器效能 | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 06/20/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ba639ea5bc65cb8d5e753883418ad3937919fa1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 36837445c13d5a0aa0c2bf0f93008d93e87d77d8
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577657"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314019"
 ---
 # <a name="monitoring-report-server-performance"></a>監視報表伺服器效能
   使用效能監視工具來監視報表伺服器的效能，以評估伺服器活動、觀察趨勢、診斷系統瓶頸，以及收集可協助您判斷目前系統組態是否適當的資料。 若要微調伺服器效能，您可以指定回收報表伺服器應用程式定義域的頻率。 如需詳細資訊，請參閱 [設定報表伺服器應用程式的可用記憶體](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。  
@@ -37,7 +37,7 @@ ms.locfileid: "65577657"
   
  工作管理員提供有關在您電腦上執行之程式與處理序的資訊。 您可以使用工作管理員來監視報表伺服器效能的重要指標。 您也可以評估執行處理序的活動，以及檢視 CPU 和記憶體使用量的圖表與資料。 如需有關使用工作管理員的資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 產品文件集。  
   
- 您可以使用效能主控台和事件檢視器來建立有關報表處理與資源耗用的記錄和警示。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]產生之 Windows 事件的資訊，請參閱 [Windows 應用程式記錄檔](../../reporting-services/report-server/windows-application-log.md)。 如需有關效能主控台的詳細資訊，請參閱本主題稍後的「Windows 效能計數器」。  
+ 您可以使用效能主控台和事件檢視器來建立有關報表處理與資源耗用的記錄和警示。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]產生之 Windows 事件的資訊，請參閱 [Windows 應用程式記錄檔](../../reporting-services/report-server/windows-application-log.md)。 如需有關效能主控台的詳細資訊，請參閱此文章稍後的「Windows 效能計數器」。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式也會提供用於快取和工作階段管理之報表伺服器資料庫與暫存資料庫的相關資訊。  
   
@@ -55,13 +55,13 @@ ms.locfileid: "65577657"
 -   驗證系統組態的變更對效能有正面的影響。  
   
 ## <a name="reporting-services-performance-objects"></a>Reporting Services 效能物件  
- [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 包含下列效能物件：  
+SQL Server 2016 Reporting Services 或更新版本 (SSRS) 包含下列效能物件：  
   
 -   監視報表伺服器效能的**MSRS 2011 Web 服務** 和 **MSRS 2011 SharePoint 模式 Web 服務** 。 這些效能物件包含一組計數器集合，用來追蹤通常透過互動式報表檢視作業所起始的報表伺服器處理。 每當 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，便會重設這些計數器。  
   
 -   監視已排程作業和報表傳遞的**MSRS 2011 Windows 服務** 和 **MSRS 2011 Windows 服務 SharePoint Mode** to monitor scheduled operations 和 report delivery. 這些效能物件包含一組計數器集合，用來追蹤透過已排程的作業所起始的報表處理。 已排程的作業包括訂閱與傳遞、報表執行快照集，以及報表記錄。  
   
--   監視 HTTP 相關事件和記憶體管理的**Reportserver:Service** 和 **ReportServerSharePoint:Service** to monitor HTTP-related events 和 memory management. 這些計數器是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]特有的，而且它們會追蹤報表伺服器的 HTTP 相關事件，例如要求、連接和登入嘗試。 這個效能物件也包含與記憶體管理相關的計數器。  
+-   監視 HTTP 相關事件和記憶體管理的**ReportServer Service** 和 **ReportServerSharePoint:Service** 以監視 HTTP 相關事件與記憶體管理。 這些計數器是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]特有的，而且它們會追蹤報表伺服器的 HTTP 相關事件，例如要求、連線和登入嘗試。 這個效能物件也包含與記憶體管理相關的計數器。  
   
  如果您在單一電腦上有多個報表伺服器執行個體，則可以一起或分開監視這些執行個體。 加入計數器時，選擇要包含哪些執行個體。 如需使用效能主控台 (perfmon.msc) 與加入計數器的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 產品文件集。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "65577657"
   
 |效能物件|注意|  
 |------------------------|-----------|  
-|**.NET CLR 資料** 和 **.NET CLR 記憶體**|報表管理員會使用 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 效能計數器。 如需詳細資訊，請參閱 MSDN 上的「Improving .NET Application Performance and Scalability」。|  
+|**.NET CLR 資料** 和 **.NET CLR 記憶體**|Web 入口網站會使用[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]效能計數器。 如需詳細資訊，請參閱 MSDN 上的「Improving .NET Application Performance and Scalability」。|  
 |**處理**|針對 ReportingServicesService 執行個體加入 [已耗用時間]  和 [處理序識別碼]  效能計數器，以便依據處理序識別碼追蹤處理序執行時間。|  
   
 ## <a name="sharepoint-events"></a>SharePoint 事件  
@@ -93,5 +93,4 @@ ms.locfileid: "65577657"
  [設定報表伺服器應用程式的可用記憶體](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)  
-  
   

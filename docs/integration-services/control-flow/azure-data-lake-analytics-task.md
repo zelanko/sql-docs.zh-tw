@@ -2,7 +2,7 @@
 title: Azure Data Lake Analytics 工作 | Microsoft Docs
 description: 您可以利用 Data Lake Analytics 工作，將 U-SQL 作業提交至 Azure Data Lake Analytics 服務。
 ms.custom: ''
-ms.date: 05/18/2018
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: maghan
@@ -14,12 +14,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: f68a57063f0619458d6961308bbaeeee9c22c323
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28c9ed815825dbebd0d7f96b983ee34f1176b48c
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014920"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419171"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics 工作
 
@@ -37,7 +37,7 @@ ms.locfileid: "66014920"
 
 ## <a name="general-page-configuration"></a>一般頁面設定
 
-使用 [一般]  頁面來設定工作，並提供工作提交的 U-SQL 指令碼。 若要深入了解 U-SQL 語言，請參閱 [U-SQL 語言參考](https://msdn.microsoft.com/azure/data-lake-analytics/u-sql/u-sql-language-reference) \(英文\)。
+使用 [一般]  頁面來設定工作，並提供工作提交的 U-SQL 指令碼。 若要深入了解 U-SQL 語言，請參閱 [U-SQL 語言參考](/u-sql/) \(英文\)。
 
 ### <a name="basic-configuration"></a>基本組態
 

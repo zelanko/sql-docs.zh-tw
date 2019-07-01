@@ -1,6 +1,6 @@
 ---
 title: 關於 URL 保留項目和註冊 (SSRS 設定管理員) | Microsoft Docs
-ms.date: 05/18/2016
+ms.date: 06/20/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 640407e68b146e399dc478b17a91c351b23fe306
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dba8913c5aa5fa0aa8d93dd1c4dd639f85ac3081
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454502"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314032"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>關於 URL 保留項目和註冊 (SSRS 組態管理員)
-  Reporting Services 應用程式的 URL 會當做 URL 保留項目定義在 HTTP.SYS 中。 URL 保留項目會定義 Web 應用程式之 URL 端點的語法。 當您在報表伺服器上設定應用程式時，會同時針對報表伺服器 Web 服務和報表管理員定義 URL 保留項目。 當您透過安裝程式或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具設定 URL 時，將會自動為您建立 URL 保留項目：  
+  Reporting Services 應用程式的 URL 會當做 URL 保留項目定義在 HTTP.SYS 中。 URL 保留項目會定義 Web 應用程式之 URL 端點的語法。 當您在報表伺服器上設定應用程式時，會同時針對報表伺服器 Web 服務和入口網站定義 URL 保留項目。 當您透過安裝程式或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具設定 URL 時，將會自動為您建立 URL 保留項目：  
   
--   安裝程式將會使用預設值建立 URL 保留項目。 如果安裝程式安裝預設組態，它將會保留兩個 URL；其中一個用於報表伺服器 Web 服務，另一個用於報表管理員。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具來加入更多的 URL，或是修改安裝程式所建立的預設 URL。  
+-   安裝程式將會使用預設值建立 URL 保留項目。 如果安裝程式安裝預設組態，它將會保留兩個 URL；其中一個用於報表伺服器 Web 服務，另一個用於入口網站。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具來加入更多的 URL，或是修改安裝程式所建立的預設 URL。  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定工具將會根據您在此工具的 [Web 服務 URL]  或 [入口網站 URL]  頁面所指定的 URL 來建立 URL 保留項目。  
   
  安裝程式和此工具也都將指派報表伺服器服務之 URL 的權限、檢查是否有重複的執行個體，然後將此 URL 保留項目加入到 HTTP.SYS。 絕對不要直接使用 HttpCfg.exe 或其他工具來建立或修改 Reporting Services URL 保留項目。 如果您略過某個步驟或是設定無效的值，您將會遇到可能很難診斷或修復的問題。  
   
 > [!NOTE]  
->  HTTP.SYS 是一個作業系統元件，它可接聽網路要求，並將這些要求路由傳送到要求佇列。 在這一版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，HTTP.SYS 會建立及維護報表伺服器 Web 服務和報表管理員的要求佇列。 將不再使用 Internet Information Services (IIS) 來主控或存取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式。 如需有關 HTTP.SYS 功能的詳細資訊，請參閱 MSDN 上的＜ [HTTP 伺服器 API](https://go.microsoft.com/fwlink/?LinkId=92652) ＞。  
+> HTTP.SYS 是一個作業系統元件，它可接聽網路要求，並將這些要求路由傳送到要求佇列。 在這一版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，HTTP.SYS 會建立及維護報表伺服器 Web 服務和入口網站的要求佇列。 將不再使用 Internet Information Services (IIS) 來主控或存取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式。 如需有關 HTTP.SYS 功能的詳細資訊，請參閱 [HTTP 伺服器 API](https://go.microsoft.com/fwlink/?LinkId=92652)。  
   
 ##  <a name="ReportingServicesURLs"></a> Reporting Services 中的 URL  
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝中，您可以透過 URL 存取下列工具、應用程式和項目：  
@@ -42,10 +42,10 @@ ms.locfileid: "66454502"
  其他已發行之可由 URL 定址的項目 (例如共用資料來源) 不應該透過當做獨立項目的 URL 來存取。 在瀏覽器視窗中檢視這些項目時，報表伺服器不會使用有意義的格式來顯示這些項目。  
   
 > [!NOTE]  
->  本主題並未說明可存取報表伺服器上儲存之特定報表的 URL。 如需這些項目之 URL 存取的詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/access-report-server-items-using-url-access.md) 使用 URL 存取權存取報表伺服器項目 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+> 此文章並未說明可存取報表伺服器上儲存之特定報表的 URL。 如需這些項目之 URL 存取的詳細資訊，請參閱[ 使用 URL 存取權存取報表伺服器項目](../../reporting-services/access-report-server-items-using-url-access.md)。  
   
 ##  <a name="URLreservation"></a> URL 保留項目和註冊  
- URL 保留項目會定義可用於存取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式的 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 將會保留一個或多個 URL 以供 HTTP.SYS 中的報表伺服器 Web 服務和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 使用，然後在此服務啟動時加以註冊。 您可以將參數附加到 URL，透過此 Web 服務開啟報表。 保留項目和註冊是由 HTTP.SYS 所提供。 如需詳細資訊，請參閱 MSDN 上的＜ [命名空間保留、註冊和路由](https://go.microsoft.com/fwlink/?LinkId=92653) ＞。  
+ URL 保留項目會定義可用於存取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式的 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 將會保留一個或多個 URL 以供 HTTP.SYS 中的報表伺服器 Web 服務和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 使用，然後在此服務啟動時加以註冊。 您可以將參數附加到 URL，透過此 Web 服務開啟報表。 保留項目和註冊是由 HTTP.SYS 所提供。 如需詳細資訊，請參閱[命名空間保留、註冊和路由](https://go.microsoft.com/fwlink/?LinkId=92653)。  
   
  *「URL 保留」* 是建立 Web 應用程式的 URL 端點，並將其儲存在 HTTP.SYS 中的一項程序。 HTTP.SYS 是所有定義於電腦上之 URL 保留項目的通用儲存機制，而且會定義一組通用規則來保證唯一的 URL 保留項目。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66454502"
  如果您使用預設組態安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，安裝程式將會保留 URL 供報表伺服器 Web 服務和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]使用。 當您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具內定義 URL 保留項目時，您也可以接受這些預設值。 如果您安裝 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 或是將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝為具名執行個體，預設 URL 將會包含執行個體名稱。  
   
 > [!IMPORTANT]  
->  執行個體字元是一個底線字元 ( **_** )。  
+> 執行個體字元是一個底線字元 ( **_** )。  
   
  URL 保留項目包含通訊埠編號。 下列作業系統將允許多個 Web 應用程式共用一個連接埠：  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66454502"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 保留項目會顯示 URL 保留項目的帳戶。 系統會針對在相同執行個體中執行的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式所建立的 URL 使用虛擬服務帳戶。
   
  
- 由於預設安全性為 **RSWindowsNegotiate**，所以會停用匿名存取。 如果是內部網路存取，報表伺服器 URL 會使用網路電腦名稱。 如果您想要設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 進行網際網路連接，就必須使用不同的設定。 如需驗證的詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/security/authentication-with-the-report-server.md) 使用報表伺服器驗證 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 由於預設安全性為 **RSWindowsNegotiate**，所以會停用匿名存取。 如果是內部網路存取，報表伺服器 URL 會使用網路電腦名稱。 如果您想要設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 進行網際網路連接，就必須使用不同的設定。 如需驗證的詳細資訊，請參閱[ 使用報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)。  
   
 ##  <a name="URLlocalAdmin"></a> 用於本機管理的 URL  
  如果您指定了強式或弱式萬用字元作為 URL 保留項目，則可以使用 `https://localhost/reportserver` 或 `https://localhost/reports`。  
@@ -105,5 +105,4 @@ ms.locfileid: "66454502"
 ## <a name="see-also"></a>另請參閱  
  [設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [URL 保留項目語法 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
-  
   
