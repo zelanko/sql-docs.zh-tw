@@ -1,7 +1,7 @@
 ---
 title: 記憶體內部 OLTP (記憶體內部最佳化) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/22/2016
+ms.date: 06/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5d982ba0b7a2ec5b35a6d38da3a5831119c4c1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ebb953132e28a3ea0766f7d9d7cd40f3f620659
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047572"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351659"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (記憶體中最佳化)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 可大幅提升交易處理、資料擷取和資料載入，以及暫時性資料案例的效能。  若要跳至快速測試您自己的記憶體最佳化資料表和原生編譯預存程序所需的基本程式碼和知識，請參閱
@@ -42,7 +43,7 @@ ms.locfileid: "63047572"
  
  請注意， [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技術，可改善交易處理的效能。 如需改善報告和分析查詢效能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技術，請參閱 [資料行存放區索引指南](../../relational-databases/indexes/columnstore-indexes-overview.md)。
   
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的記憶體內部 OLTP 進行了幾項改進。 已增加 Transact-SQL 介面區，讓移轉資料庫應用程式更容易。 已新增對記憶體最佳化資料表和原生編譯預存程序的執行 ALTER 作業支援，讓維護應用程式更容易。 如需 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 中新功能的資訊，請參閱[資料行存放區索引 - 新功能](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)。  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的記憶體內部 OLTP 進行了幾項改進。 已增加 Transact-SQL 介面區，讓移轉資料庫應用程式更容易。 已新增對記憶體最佳化資料表和原生編譯預存程序的執行 ALTER 作業支援，讓維護應用程式更容易。
   
 > [!NOTE]  
 >  **現在就試試看**  
