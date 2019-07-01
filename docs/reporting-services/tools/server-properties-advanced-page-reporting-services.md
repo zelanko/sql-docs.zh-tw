@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/15/2019
-ms.openlocfilehash: 490a21572d1a62bbf90754a8c33e0aa98bac0aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2560c752dd55741e1718ba60f942288093d027bb
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65571342"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463586"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>伺服器屬性 (進階頁面) - Reporting Services
 
@@ -93,8 +93,9 @@ ms.locfileid: "65571342"
 
 **AccessControlMaxAge** 指定可快取推斷要求結果的秒數。 預設值為 600 (10 分鐘)。
 
-**AllowedResourceExtensionsForUpload** ***(僅限 Power BI 報表伺服器)***：設定可上傳到報表伺服器的資源副檔名。 不需要包含內建檔案類型的副檔名，例如 &ast;.rdl 和 &ast;.pbix。 預設為「&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx」。 
+**AllowedResourceExtensionsForUpload**一組擴充功能的資源可供上傳至報表伺服器。 不需要包含內建檔案類型的副檔名，例如 &ast;.rdl 和 &ast;.pbix。 預設為「&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx」。
 
+**RestrictedResourceMimeTypeForUpload**的 mime 類型使用者的設定不允許上傳的內容。 只為應用程式/八位元資料流而不是開啟/執行瀏覽器下載任何已儲存與受限制的 mime 類型的資源。  根據預設，在此清單中，沒有任何限制的項目，但我們建議組織填入此選項可提供最安全的經驗。
 
 **EditSessionCacheLimit**  
 指定可以在報表編輯工作階段中使用的資料快取項目數目。 預設數目是 5。  

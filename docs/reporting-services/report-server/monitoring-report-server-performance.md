@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36837445c13d5a0aa0c2bf0f93008d93e87d77d8
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: HT
+ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314019"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412659"
 ---
 # <a name="monitoring-report-server-performance"></a>監視報表伺服器效能
   使用效能監視工具來監視報表伺服器的效能，以評估伺服器活動、觀察趨勢、診斷系統瓶頸，以及收集可協助您判斷目前系統組態是否適當的資料。 若要微調伺服器效能，您可以指定回收報表伺服器應用程式定義域的頻率。 如需詳細資訊，請參閱 [設定報表伺服器應用程式的可用記憶體](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。  
@@ -53,6 +53,8 @@ ms.locfileid: "67314019"
 -   確認硬體升級對效能的影響是正面的。  
   
 -   驗證系統組態的變更對效能有正面的影響。  
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
   
 ## <a name="reporting-services-performance-objects"></a>Reporting Services 效能物件  
 SQL Server 2016 Reporting Services 或更新版本 (SSRS) 包含下列效能物件：  
@@ -85,9 +87,8 @@ SQL Server 2016 Reporting Services 或更新版本 (SSRS) 包含下列效能物�
   
  [ReportServer:Service 和 ReportServerSharePoint:Service 效能物件的效能計數器](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
  描述 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的 HTTP 相關和記憶體相關效能計數器。  
-  
- SharePoint 整合模式中報表伺服器的事件  
- 描述當您執行含有 SharePoint 產品的報表環境時所要記錄的有用診斷事件。  
+
+::: moniker-end
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表伺服器應用程式的可用記憶體](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   

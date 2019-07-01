@@ -1,6 +1,6 @@
 ---
 title: 重新命名報表伺服器電腦 | Microsoft Docs
-ms.date: 03/20/2017
+ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15c69293cbe602cd69e4e0dfe0f0c29deb79347c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3fe381daf1b89d76d9282f2c1a54c3940a3ffbe
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581424"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314049"
 ---
 # <a name="rename-a-report-server-computer"></a>重新命名報表伺服器電腦
-  重新命名電腦會使 Web 伺服器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (如果它在同一台電腦上) 發生對應的名稱變更。 在某些情況下，一旦電腦名稱變更之後，可能就無法存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 電腦名稱變更之後，您可以利用本主題提供的步驟來重新設定報表伺服器。  
+  重新命名電腦會使 Web 伺服器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (如果它在同一台電腦上) 發生對應的名稱變更。 在某些情況下，一旦電腦名稱變更之後，可能就無法存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 電腦名稱變更之後，您可以利用此文章提供的步驟來重新設定報表伺服器。  
   
 ## <a name="renaming-a-sql-server-database-engine"></a>重新命名 SQL Server Database Engine  
  如果您要重新命名執行報表伺服器資料庫的  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體，請執行下列步驟：  
@@ -41,7 +41,7 @@ ms.locfileid: "65581424"
 2.  在相同的檔案中，如果已設定名稱，請修改 **ReportServerUrl** 設定來反映新的伺服器名稱。 請注意，並非每一種安裝都使用此設定。 如果它是空的，請不要執行任何動作。  
   
     > [!NOTE]  
-    >  如果您在企業網路上使用 Windows 網際網路命名服務 (WINS)，報表伺服器和報表管理員可能還可以在先前的名稱下繼續使用一段時間。 WINS 會將 IP 位址對應到它所提供服務的每台電腦。 WINS 為重新命名的電腦重新整理 IP 位址之後，就無法再利用舊的電腦名稱來存取報表伺服器或報表管理員。  
+    >  如果您在企業網路上使用 Windows 網際網路命名服務 (WINS)，報表伺服器和入口網站可能還可以在先前的名稱下繼續使用一段時間。 WINS 會將 IP 位址對應到它所提供服務的每台電腦。 WINS 為重新命名的電腦重新整理 IP 位址之後，就無法再利用舊的電腦名稱來存取報表伺服器或入口網站。  
   
 ## <a name="see-also"></a>另請參閱  
  [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
@@ -49,5 +49,4 @@ ms.locfileid: "65581424"
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [啟動與停止 Report Server 服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
  [rsconfig 公用程式 &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)  
-  
   
