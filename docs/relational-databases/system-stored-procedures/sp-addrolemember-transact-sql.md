@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d7b47670d56ab916a8c2f263f9ddee3dc85c0a6
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: 18680069663b0979662b3288b5d02439fdf55297
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652537"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492760"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
  角色不能包含它自己作為成員。 這類「循環」定義是無效的，即使成員資格只是由一個或多個中繼成員資格間接隱含也一樣。  
   
- sp_addrolemember 不能將固定的資料庫角色、 固定的伺服器角色或 dbo 加入角色。 sp_addrolemember 無法在使用者自訂交易內執行。  
+ sp_addrolemember 不能將固定的資料庫角色、 固定的伺服器角色或 dbo 加入角色。
   
  您只能使用 sp_addrolemember 將成員加入資料庫角色中。 若要新增至伺服器角色的成員，請使用[sp_addsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)。  
   

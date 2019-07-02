@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e85d3d1257b4cd873ddb1686a78d746cf92021c3
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 1d4fa43746db12f8a1ee2957e3846bf1082ff219
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469135"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492761"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -114,11 +114,11 @@ GO
 |BACKUPTHREAD |在工作等候備份工作完成時發生。 等候時間可能會很長，從幾分鐘到數小時都可能。 如果等候的工作是在 I/O 處理序中，這個類型就不表示發生問題。| 
 |BAD_PAGE_PROCESS |當背景可疑頁面記錄器想要避免執行間隔超過每 5 秒一次時發生。 可疑頁面過多將導致記錄器經常執行。| 
 |BLOB_METADATA |僅供內部使用。 <br />**適用於**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|BMPALLOCATION |僅供內部使用。 <br />**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|BMPBUILD |僅供內部使用。 <br />**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|BMPREPARTITION |僅供內部使用。 <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|BMPREPLICATION |僅供內部使用。 <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|BPSORT |僅供內部使用。 <br /> **適用於**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|BMPALLOCATION |在輸入批次模式運算子內的不同的處理階段的執行緒同步處理時發生。 <br />**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|BMPBUILD |在輸入批次模式運算子內的不同的處理階段的執行緒同步處理時發生。 <br />**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|BMPREPARTITION |在輸入批次模式運算子內的不同的處理階段的執行緒同步處理時發生。 <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|BMPREPLICATION |在輸入批次模式運算子內的不同的處理階段的執行緒同步處理時發生。 <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|BPSORT |在輸入批次模式運算子內的不同的處理階段的執行緒同步處理時發生。 <br /> **適用於**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |BROKER_CONNECTION_RECEIVE_TASK |在連接端點上等候接收訊息的存取權時發生。 端點的接收存取是序列化的。| 
 |BROKER_DISPATCHER |僅供內部使用。 <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |BROKER_ENDPOINT_STATE_MUTEX |若要存取的狀態，Service Broker 連接端點發生爭用時，就會發生。 存取變更的狀態是序列化的。| 
@@ -361,11 +361,11 @@ GO
 |HK_RESTORE_FILEMAP |僅供內部使用。 <br /> **適用於**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HKCS_PARALLEL_MIGRATION |僅供內部使用。 <br /> **適用於**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HKCS_PARALLEL_RECOVERY |僅供內部使用。 <br /> **適用於**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|HTBUILD |僅供內部使用。 <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|HTDELETE |僅供內部使用。 <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|HTMEMO |僅供內部使用。 <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|HTREINIT |僅供內部使用。 <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|HTREPARTITION |僅供內部使用。 <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|HTBUILD |在輸入批次模式運算子內的不同的處理階段的執行緒同步處理時發生。 <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|HTDELETE |在輸入批次模式運算子內的不同的處理階段的執行緒同步處理時發生。 <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|HTMEMO |在輸入批次模式運算子內的不同的處理階段的執行緒同步處理時發生。 <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|HTREINIT |在輸入批次模式運算子內的不同的處理階段的執行緒同步處理時發生。 <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|HTREPARTITION |在輸入批次模式運算子內的不同的處理階段的執行緒同步處理時發生。 <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HTTP_ENUMERATION |在啟動以列舉 HTTP 端點來啟動 HTTP 時發生。| 
 |HTTP_START |在連接等候 HTTP 完成初始化時發生。| 
 |HTTP_STORAGE_CONNECTION |僅供內部使用。 <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
