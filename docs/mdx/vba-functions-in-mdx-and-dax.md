@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f6b6d89ced88a570ce242ae9490d4c6d8bd6ac8
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251553"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500050"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 和 DAX 中的 VBA 函數
 
@@ -53,10 +53,10 @@ ms.locfileid: "63251553"
 |CVErr|不支援||  
 |Date|僅限 MDX|**警告**DAX 會實作不同的函式具有相同名稱，用來從指定的引數產生日期類型值的 DATE (Year，Month，Day) 函數|  
 |DateAdd|僅限 MDX|**警告**DAX 會實作不同的函式具有相同名稱： dateadd (\<日期 >，< number_of_intervals >，\<間隔 >) 函數，用來移位給定的日期，由數項給定的間隔|  
-|DateDiff]|僅限 MDX||  
+|DateDiff|僅限 MDX||  
 |DatePart|僅限 MDX||  
 |DateSerial|僅限 MDX||  
-|DateValue]|DAX、MDX||  
+|DateValue|DAX、MDX||  
 |Day|DAX、MDX||  
 |DDB|僅限 MDX||  
 |Dir|不支援||  
@@ -118,7 +118,7 @@ ms.locfileid: "63251553"
 |MonthName|不支援||  
 |MsgBox|不支援||  
 |現在|DAX、MDX||  
-|NPer]|僅限 MDX||  
+|NPer|僅限 MDX||  
 |NPV|僅限 MDX||  
 |Oct|僅限 MDX||  
 |資料分割|僅限 MDX||  
@@ -146,7 +146,7 @@ ms.locfileid: "63251553"
 |Str|僅限 MDX||  
 |StrComp|僅限 MDX||  
 |StrConv|僅限 MDX||  
-|String]|僅限 MDX||  
+|String|僅限 MDX||  
 |StrReverse|不支援||  
 |參數|僅限 MDX||  
 |SYD|僅限 MDX||  
@@ -156,7 +156,7 @@ ms.locfileid: "63251553"
 |Timer|僅限 MDX||  
 |TimeSerial|僅限 MDX||  
 |TimeValue|DAX、MDX||  
-|修剪]|DAX、MDX||  
+|Trim|DAX、MDX||  
 |TypeName|僅限 MDX||  
 |UBound|不支援||  
 |UCase|僅限 MDX||  

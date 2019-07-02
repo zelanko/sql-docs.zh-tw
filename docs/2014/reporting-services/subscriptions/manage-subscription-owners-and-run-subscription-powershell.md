@@ -10,12 +10,12 @@ ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d6598781301ad6e7483a3cea6b45949c1cd39cf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d83ee924a1df8db92b74be5a3282bd7b4d16cf11
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66100809"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500056"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
   從 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 開始，您可以用程式設計方式，將 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 訂閱的擁有權，從某位使用者轉移到另一位使用者。 本主題提供數個 Windows PowerShell 指令碼，供您可變更或單純列出訂閱擁有權時使用。 每項範例均包含原生模式和 SharePoint 模式的範例語法。 當您變更訂閱擁有者之後，便會在新擁有者的安全性內容中執行訂閱，且報表中的 [User!UserID] 欄位會顯示新擁有者的值。 如需 PowerShell 範例呼叫的物件模型詳細資訊，請參閱 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
@@ -213,7 +213,7 @@ ForEach ($item in $items)
         $curRepSubs = $rs2010.ListSubscriptions($item.Path);  
         ForEach ($curRepSub in $curRepSubs)  
         {  
-            if ($curRepSub.Owner -eq $previousOwner)  
+            if ($curRepSub.Owner -eq $currentOwner)  
             {  
                 $subscriptions += $curRepSub;  
             }  

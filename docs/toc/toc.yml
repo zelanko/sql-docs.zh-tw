@@ -157,8 +157,8 @@
           items:
             - name: 連線至巨量資料叢集
               href: ../big-data-cluster/connect-to-big-data-cluster.md
-            - name: 叢集系統管理入口網站
-              href: ../big-data-cluster/cluster-admin-portal.md
+            - name: 檢視叢集狀態
+              href: ../big-data-cluster/view-cluster-status.md
             - name: Kubernetes 疑難排解
               href: ../big-data-cluster/cluster-troubleshooting-commands.md
         - name: 筆記型電腦
@@ -177,56 +177,56 @@
               href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
             - name: 使用擴充的 Spark 歷程記錄伺服器
               href: ../big-data-cluster/spark-history-server.md
-- name: 參考
-  items:
-    - name: 部署參考
+    - name: 參考
       items:
-        - name: 部署組態檔
-          href: ../big-data-cluster/reference-deployment-config.md
-    - name: mssqlctl 參考
-      items:
-        - name: mssqlctl
-          href: ../big-data-cluster/reference-mssqlctl.md
-        - name: 應用程式部署
+        - name: 部署參考
           items:
-            - name: app
-              href: ../big-data-cluster/reference-mssqlctl-app.md
-            - name: app template
-              href: ../big-data-cluster/reference-mssqlctl-app-template.md
-        - name: 叢集
+            - name: 部署組態檔
+              href: ../big-data-cluster/reference-deployment-config.md
+        - name: mssqlctl 參考
           items:
-            - name: bdc
-              href: ../big-data-cluster/reference-mssqlctl-bdc.md
-            - name: bdc config
-              href: ../big-data-cluster/reference-mssqlctl-bdc-config.md
-            - name: bdc config section
-              href: ../big-data-cluster/reference-mssqlctl-bdc-config-section.md
-            - name: bdc control
-              href: ../big-data-cluster/reference-mssqlctl-bdc-control.md
-            - name: bdc control status
-              href: ../big-data-cluster/reference-mssqlctl-bdc-control-status.md
-            - name: bdc debug
-              href: ../big-data-cluster/reference-mssqlctl-bdc-debug.md
-            - name: bdc endpoint
-              href: ../big-data-cluster/reference-mssqlctl-bdc-endpoint.md
-            - name: bdc pool
-              href: ../big-data-cluster/reference-mssqlctl-bdc-pool.md
-            - name: bdc pool status
-              href: ../big-data-cluster/reference-mssqlctl-bdc-pool-status.md
-            - name: bdc status
-              href: ../big-data-cluster/reference-mssqlctl-bdc-status.md
-        - name: 儲存體
-          items:
-            - name: bdc storage
-              href: ../big-data-cluster/reference-mssqlctl-storage.md
-            - name: bdc storage mount
-              href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
-            - name: hdfs
-              href: ../big-data-cluster/reference-mssqlctl-hdfs.md
-        - name: SQL
-          items:
-            - name: sql
-              href: ../big-data-cluster/reference-mssqlctl-sql.md
+            - name: mssqlctl
+              href: ../big-data-cluster/reference-mssqlctl.md
+            - name: 應用程式部署
+              items:
+                - name: app
+                  href: ../big-data-cluster/reference-mssqlctl-app.md
+                - name: app template
+                  href: ../big-data-cluster/reference-mssqlctl-app-template.md
+            - name: 叢集
+              items:
+                - name: bdc
+                  href: ../big-data-cluster/reference-mssqlctl-bdc.md
+                - name: bdc config
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-config.md
+                - name: bdc config section
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-config-section.md
+                - name: bdc control
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-control.md
+                - name: bdc control status
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-control-status.md
+                - name: bdc debug
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-debug.md
+                - name: bdc endpoint
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-endpoint.md
+                - name: bdc pool
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-pool.md
+                - name: bdc pool status
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-pool-status.md
+                - name: bdc status
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-status.md
+            - name: 儲存體
+              items:
+                - name: bdc storage
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-storage-pool.md
+                - name: bdc storage mount
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-storage-pool-mount.md
+                - name: hdfs
+                  href: ../big-data-cluster/reference-mssqlctl-hdfs.md
+            - name: SQL
+              items:
+                - name: sql
+                  href: ../big-data-cluster/reference-mssqlctl-sql.md
 - name: 商務持續性
   items:
     - name: 概觀
@@ -1415,6 +1415,8 @@
           href: ../relational-databases/graphs/sql-graph-architecture.md
         - name: 範例
           href: ../relational-databases/graphs/sql-graph-sample.md
+        - name: SHORTEST_PATH
+          href: ../relational-databases/graphs/sql-graph-shortest-path.md
     - name: 序號
       href: ../relational-databases/sequence-numbers/sequence-numbers.md
       items:
@@ -1611,6 +1613,8 @@
                   href: ../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md
                 - name: 查詢資料
                   href: ../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md
+                - name: Security
+                  href: ../relational-databases/tables/temporal-table-security.md
                 - name: 變更結構描述
                   href: ../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md
                 - name: 停止系統版本設定
@@ -8759,16 +8763,10 @@
           items:
             - name: SQL Server Management Studio (SSMS)
               href: ../ssms/sql-server-management-studio-ssms.md
-        - name: 快速入門
+        - name: 教學課程
           items:
             - name: 連線與查詢 SQL Server
               href: ../ssms/tutorials/connect-query-sql-server.md
-        - name: 教學課程
-          items:
-            - name: 編寫物件的指令碼
-              href: ../ssms/tutorials/scripting-ssms.md
-            - name: SSMS 組態
-              href: ../ssms/tutorials/ssms-configuration.md
         - name: 概念
           items:
             - name: SSMS 中的工具視窗
@@ -9045,6 +9043,10 @@
               href: ../ssms/install-other-languages.md
             - name: 使用 SSMS 中的範本
               href: ../ssms/tutorials/templates-ssms.md
+            - name: 編寫物件的指令碼
+              href: ../ssms/tutorials/scripting-ssms.md
+            - name: SSMS 組態
+              href: ../ssms/tutorials/ssms-configuration.md
             - name: 自訂功能表與快速鍵
               href: ../ssms/customize-menus-and-shortcut-keys.md
             - name: 設定 WMI 在 SQL Server 工具中顯示伺服器狀態
@@ -12839,6 +12841,8 @@
               href: ../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md
             - name: sys.dm_os_server_diagnostics_log_configurations
               href: ../relational-databases/system-dynamic-management-views/sys-dm-os-server-diagnostics-log-configurations.md
+            - name: sys.dm_os_spinlock_stats
+              href: ../relational-databases/system-dynamic-management-views/sys-dm-os-spinlock-stats-transact-sql.md
             - name: sys.dm_os_stacks
               href: ../relational-databases/system-dynamic-management-views/sys-dm-os-stacks-transact-sql.md
             - name: sys.dm_os_sys_info

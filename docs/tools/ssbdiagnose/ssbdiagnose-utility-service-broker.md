@@ -26,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07e4f9c8f694f68e1ee0df02ec6110847fde4e0f
-ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
+ms.openlocfilehash: 34d549a433bebe20beaae287362537a851b2ae6b
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66836315"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469150"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 公用程式 [Service Broker]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -185,14 +185,14 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  可識別應用程式中某個交談端點的唯一識別碼。 交談控制代碼對於交談的某個端點而言是唯一的，而起始端和目標端點具有不同的交談控制代碼。  
   
- **BEGIN DIALOG** 陳述式的 *@dialog_handle* 參數和 **RECEIVE** 陳述式結果集中的 **conversation_handle** 資料行，會將交談控制代碼傳回應用程式。  
+ **BEGIN DIALOG** 陳述式的 *\@dialog_handle* 參數和 **RECEIVE** 陳述式結果集中的 **conversation_handle** 資料行，會將交談控制代碼傳回應用程式。  
   
  **sys.transmission_queue** 和 **sys.conversation_endpoints** 目錄檢視的 **conversation_handle** 資料行中會報告交談控制代碼。  
   
  *conversation_group_id*  
  識別交談群組且不重複的識別碼。  
   
- **GET CONVERSATION GROUP** 陳述式的 *@conversation_group_id* 參數和 **RECEIVE** 陳述式結果集中的 **conversation_group_id** 資料行會將交談群組識別碼傳回應用程式。  
+ **GET CONVERSATION GROUP** 陳述式的 *\@conversation_group_id* 參數和 **RECEIVE** 陳述式結果集中的 **conversation_group_id** 資料行會將交談群組識別碼傳回應用程式。  
   
  **sys.conversation_groups** 和 **sys.conversation_endpoints** 目錄檢視的 **conversation_group_id** 資料行中會報告交談群組識別碼。  
   
