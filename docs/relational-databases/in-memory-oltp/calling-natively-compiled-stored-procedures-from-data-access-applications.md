@@ -37,12 +37,12 @@ ms.locfileid: "59671274"
 
 - SqlClient 不支援備妥的 RPC 程序呼叫。
 
-- SqlClient 不支援有關原生編譯預存程序傳回之結果集的僅限結構描述資訊 (中繼資料探索) 擷取 (CommandType.SchemaOnly)。
+- SqlClient 不支援針對原生編譯預存程序所傳回的結果集而擷取其僅限結構描述的資訊 (中繼資料探索) (CommandType.SchemaOnly)。
   - 請改用 [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。
 
 ### <a name="includessnoversionincludesssnoversion-mdmd-native-client"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client
 
-- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 版本不支援有關原生編譯預存程序傳回之結果集的僅限結構描述資訊 (中繼資料探索) 擷取。
+- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 版本不支援針對原生編譯預存程序所傳回的結果集而擷取其僅限結構描述的資訊 (中繼資料探索)。
   - 請改用 [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。
 
 ### <a name="odbc"></a>ODBC
