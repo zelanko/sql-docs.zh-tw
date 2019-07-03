@@ -1,7 +1,7 @@
 - name: 什麼是 SQL Server Reporting Services (SSRS)？
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
 - name: 歡迎使用 SQL Server >>
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: 概觀
   items:
     - name: Reporting Services 的新功能

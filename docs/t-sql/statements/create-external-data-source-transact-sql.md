@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2019
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a6a8832f60ae4552b825dd5d0845b15592dc58b7
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
+ms.openlocfilehash: 4aa152883c8d6571f446bee5c783e96b88cbba64
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314054"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419054"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -458,8 +458,6 @@ WITH
 > [!IMPORTANT]
 > 如果使用任何其他外部資料來源，請不要設定 `TYPE`。
 
-如需使用 `TYPE` = `HADOOP` 從 Azure Blob 儲存體載入資料的範例，請參閱[建立參考 Azure Blob 儲存體的外部資料來源](#d-create-external-data-source-to-reference-azure-blob-storage)。
-
 ### <a name="databasename--databasename"></a>DATABASE_NAME = *database_name*
 
 當 `TYPE` 設定為 `RDBMS` 或 `SHARD_MAP_MANAGER` 時，請設定此引數。
@@ -678,7 +676,7 @@ WITH
 > [!IMPORTANT]
 > 如果使用任何其他外部資料來源，請不要設定 `TYPE`。
 
-如需使用 `TYPE` = `HADOOP` 從 Azure Blob 儲存體載入資料的範例，請參閱[建立參考 Azure Blob 儲存體的外部資料來源](#e-create-external-data-source-to-reference-azure-blob-storage)。
+如需使用 `TYPE` = `HADOOP` 從 Azure Blob 儲存體載入資料的範例，請參閱[建立參考 Azure Blob 儲存體的外部資料來源](#a-create-external-data-source-to-reference-azure-blob-storage)。
 
 ## <a name="permissions"></a>權限
 
@@ -897,7 +895,7 @@ WITH
 > [!IMPORTANT]
 > 如果使用任何其他外部資料來源，請不要設定 `TYPE`。
 
-如需使用 `TYPE` = `HADOOP` 從 Azure Blob 儲存體載入資料的範例，請參閱[建立參考 Azure Blob 儲存體的外部資料來源](#e-create-external-data-source-to-reference-azure-blob-storage)。
+如需使用 `TYPE` = `HADOOP` 從 Azure Blob 儲存體載入資料的範例，請參閱[建立參考 Azure Blob 儲存體的外部資料來源](#d-create-external-data-source-to-reference-azure-blob-storage)。
 
 ### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -924,7 +922,7 @@ WITH
 > [!IMPORTANT]  
 > 當您建立外部資料來源時，不會驗證 RESOURCE_MANAGER_LOCATION 值。 輸入不正確的值可能會導致每次嘗試下推就在執行時間發生查詢失敗，因為無法解析所提供的值。
 
-[在已啟用下推的情況下，建立參考 Hadoop 的外部資料來源](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled)提供具體範例及進一步指引。
+[在已啟用下推的情況下，建立參考 Hadoop 的外部資料來源](#b-create-external-data-source-to-reference-hadoop-with-push-down-enabled)提供具體範例及進一步指引。
 
 ## <a name="permissions"></a>權限
 

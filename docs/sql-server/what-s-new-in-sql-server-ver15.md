@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 的新功能 | Microsoft Docs
-ms.date: 05/28/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b4e36454809519b6470c353b9dd77364491a87f8
-ms.sourcegitcommit: 3870a41f49906108136396c4ed8c130691c46b18
+ms.openlocfilehash: f3bd726fc0320d1dd0980f9e568190e00ea08bbb
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67298220"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469096"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
 
@@ -28,15 +28,46 @@ ms.locfileid: "67298220"
 
 **使用[最新的工具](#tools)以獲得 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最佳體驗。**
 
-## <a name="ctp-30-may-2019"></a>CTP 3.0 2019 年 5 月
+## <a name="ctp-31-june-2019"></a>2019 年 6 月 CTP 3.1
 
-Community Technical Preview (CTP) 3.0 是 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最新公開版本。 這個版本對先前的 CTP 版本做了改進，以修正 Bug，提升安全性，以及將效能最佳化。
+Community Technical Preview (CTP) 3.1 是 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最新公開版本。 這個版本對先前的 CTP 版本做了改進，以修正 Bug，提升安全性，以及將效能最佳化。
 
 [!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
 
 如需從支援中排除之特定功能的資訊，請參閱[版本資訊](sql-server-ver15-release-notes.md)。
 
-此外，也為 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.0 新增或強化了下列功能。
+此外，也為 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.1 新增或強化了下列功能。
+
+### <a name="big-data-clusters"></a>巨量資料叢集
+
+| 新功能或更新 | 詳細資料 |
+|:---|:---|
+| `mssqlctl` 命令變更 | `mssqlctl cluster` 命令已重新命名為 `mssqlctl bdc`。 如需詳細資訊，請參閱 [`mssqlctl` 參考](../big-data-cluster/reference-mssqlctl.md)。 |
+|`mssqlsctl` 新的狀態命令|`mssqlctl` 已加入新的命令，補充現有的監視命令。 這些取代了已從此版本中移除的叢集系統管理入口網站。|
+| Spark 計算集區 | 可建立額外的節點，提升 Spark 的計算能力，而無須相應增加儲存體。 此外，您可以啟動不會用於 Spark 的儲存體集區節點。 Spark 與儲存體彼此分離。 如需詳細資訊，請參閱 [Configure SQL Server Agent](../big-data-cluster/deployment-custom-configuration.md#sparkstorage)。 |
+| MSSQL Spark 連接器 | 可對資料集區外部資料表提供讀寫支援。 先前的版本只支援對 MASTER 執行個體資料表進行讀寫。 如需詳細資訊，請參閱 [How to read and write to SQL Server from Spark using the MSSQL Spark Connector](../big-data-cluster/spark-mssql-connector.md)。 |
+| 使用 MLeap 的機器學習 | [可在 Spark 中訓練 MLeap 機器學習模型，並使用 Java 語言延伸模組在 SQL Server 中評分](../big-data-cluster/spark-create-machine-learning-model.md)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="database-engine"></a>資料庫引擎
+
+| 新功能或更新 | 詳細資料 |
+|:---|:---|
+|加密索引的資料行|可在使用隨機加密方式以及啟用記憶體保護區的索引鍵所加密的資料行上建立索引，改善雜雜查詢 (使用 `LIKE` 與比較運算子) 的效能。 請參閱[具有安全記憶體保護區的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)。
+|可於安裝期間設定 `MIN` 與 `MAX` 的伺服器記憶體值 |在安裝期間，您可設定伺服器記憶體的值。 可以使用預設值、導出的建議值，若您已選擇 [建議]  選項 [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)，也可以手動指定您自己的值。
+|新的圖形函式 - `SHORTEST_PATH` | 可使用 `MATCH` 中的 `SHORTEST_PATH`，尋找圖形中兩個節點之間最短的路徑，或是執行任意長度的周遊。|
+|圖形資料庫的分割區資料表與索引|分割區資料表與索引的資料，會分成可分散於圖形資料庫中多個檔案群組之間的單位。 |
+|索引的新選項 - `OPTIMIZE_FOR_SEQUENTIAL_KEY`|可在能協助改善對索引進行高並行插入之輸送量的資料庫引擎內，開啟最佳化。 此選項適用於可能出現最後一頁插入競爭的索引，通常是具有循序鍵 (例如識別資料行、序列或日期/時間資料行) 的索引。 如需詳細資訊，請參閱 [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys)。|
+| &nbsp; | &nbsp; |
+
+### <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
+
+| 新功能或更新 | 詳細資料 |
+|:-----|:-----|
+| Tempdb 的改進內容 | 根據預設，在 Linux 上進行新的 SQL Server 安裝，會依據邏輯核心的數目 (最多 8 個資料檔案)，建立多個 tempdb 資料檔。 此情況不適用於就地次要或主要版本升級。 每個 tempdb 檔為 8 MB，且可自動成長到 64 MB。 此行為類似於 Windows 上的預設 SQL Server 安裝。 |
+| &nbsp; | &nbsp; |
+
+## <a name="ctp-30-may-2019"></a>CTP 3.0 2019 年 5 月
 
 ### <a name="big-data-clusters"></a>巨量資料叢集
 
@@ -82,6 +113,7 @@ Community Technical Preview (CTP) 3.0 是 [!INCLUDE[sql-server-2019](../includes
 |:---|:---|
 |MDX 查詢支援具有計算群組的表格式模型。 |此版本移除[計算群組](#calc-ctp24)中較舊的限制。 |
 |使用計算群組之量值的動態格式。 |這項功能可讓您依條件變更具有[計算群組](#calc-ctp24)之量值的格式字串。 例如，透過貨幣轉換，量值可以使用不同的外幣格式顯示。|
+| &nbsp; | &nbsp; |
 
 ## <a name="ctp-25-april-2019"></a>CTP 2.5 2019 年 4 月
 

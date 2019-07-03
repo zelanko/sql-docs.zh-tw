@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 063c344e36ed4cb4404e2f78ae97a4e118322bb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad92bfee285b8a64b704e0636ce2421a80da4fed
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63002367"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351547"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 版本資訊
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -464,10 +464,12 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 ### <a name="54-an-error-might-occur-when-navigating-in-the-generate-script-wizard"></a>5.4 在產生指令碼精靈中導覽時可能會發生錯誤  
 **問題：** 在產生指令碼精靈中，按一下 [儲存或發佈指令碼]  產生指令碼，然後按一下 [選擇選項]  或 [設定指令碼編寫選項]  進行導覽之後，再次按一下 [儲存或發佈指令碼]  可能會產生下列錯誤：  
   
-<a name="prean-exception-occurred-while-executing-a-transact-sql-statement-or-batch-microsoftsqlserverconnectioninfo"></a><pre>An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
+<pre>
+An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
-其他資訊:  
-無效的物件名稱 'sys.federations'。 (Microsoft SQL Server，錯誤：208)</pre>  
+ADDITIONAL INFORMATION:  
+Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
+</pre>  
   
 **因應措施：** 關閉 [產生指令碼精靈]，並重新開啟。  
   

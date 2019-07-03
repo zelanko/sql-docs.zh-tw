@@ -1,7 +1,7 @@
 - name: APS 概觀 (PDW)
   href: ../analytics-platform-system/home-analytics-platform-system-aps-pdw.md
 - name: 歡迎使用 SQL Server >>
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: APS 的新功能
   href: ../analytics-platform-system/whats-new-analytics-platform-system.md
   items:
