@@ -11,12 +11,12 @@ ms.author: maghan
 manager: craigg
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 74ec0cd11e1c13363905c71a64096f6c4eb8b053
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: 0be9bae60c46aa43c6f0acb5de5204d33a318450
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263536"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399663"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 版本資訊
 
@@ -56,7 +56,7 @@ SSMS 18.1 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SS
 
 | 新項目| 詳細資料|
 | :-------| :------|
-| 資料庫圖表 | 資料庫圖表已新增回 SSMS。 如需詳細資料，請參閱[資料庫圖表](https://feedback.azure.com/forums/908035/suggestions/37507828)。 |
+| 資料庫圖表 | [將資料庫圖表新增回 SSMS](https://feedback.azure.com/forums/908035/suggestions/37507828)。
 | SSBDIAGNOSE.EXE |SQL Server 診斷 (命令列工具) 已新增回 SSMS 套件。|
 | Integration Services (SSIS) | 支援在 Azure 中，排程位於 Azure 或檔案系統中 SSIS 目錄裡的 SSIS 套件。 有三種啟動新增排程對話方塊的項目：[新增排程...]  功能表項目 (以滑鼠右鍵按一下 Azure 中 SSIS 目錄內的 SSIS 套件時顯示)、位於 [工具]  功能表項目下方 [遷移至 Azure]  功能表項目之下的 [排程 Azure 中的 SSIS 套件]  ，以及以滑鼠右鍵按一下 Azure SQL Database 受控執行個體 SQL Server 代理程式下方的 Jobs 資料夾時所顯示的「排程 Azure 中的 SSIS」。|
 
@@ -101,6 +101,12 @@ SSMS 18.1 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SS
 | SQL 代理程式 | 已修正下列問題：[作業步驟屬性]  上的 [檢視] 按鈕不一定會啟用，妨礙到檢視指定作業步驟的輸出。 |
 | XEvent UI | 在 XEvent 清單中新增 [套件] 資料行，釐清同名的事件。 |
 | XEvent UI | 在 XEventUI 中，新增遺漏的「外部程式庫」類別類型對應。 |
+
+### <a name="known-issues-181"></a>已知問題 (18.1)
+
+- 當將資料表物件從 [物件總管] 拖曳到 [查詢編輯器] 中時，使用者可能會見到錯誤。 我們已經知道此問題，並計劃於下一版中修正。
+
+- 關閉 SSMS 18.1 之後，[選項]-> [文字編輯器]-> [編輯器] 索引標籤及狀態列 -> [狀態列配置和色彩] 下的 [群組連線]  與 [單一伺服器連線]  色彩選項不會保留。 當您重新開啟 SSMS 之後，[狀態列配置和色彩] 選項會還原成預設值 (白色)。
 
 ## <a name="previous-ssms-releases"></a>舊版 SSMS
 
@@ -368,9 +374,9 @@ SSMS 18.1 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SS
 - 已移除 [物件總管] 中的 [維護] > [舊版] 節點。
   - 您再也無法存取真正舊的 [資料庫維護計畫] 與 [SQL Mail] 節點。 新式的 Database Mail 和「維護計劃」節點會繼續如往常般運作。
 
-### <a name="known-issues"></a>已知問題
+### <a name="known-issues-180"></a>已知問題 (18.0)
 
-您可能會在安裝 18.0 版時，遇到無法執行 SQL Server Management Studio 的問題。 如果您遇到此問題，請依照 [SSMS2018 - Installed, but will not run](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run) (SSMS2018 - 已安裝但未執行) 一文中的步驟進行。
+- 您可能會在安裝 18.0 版時，遇到無法執行 SQL Server Management Studio 的問題。 如果您遇到此問題，請依照 [SSMS2018 - Installed, but will not run](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run) (SSMS2018 - 已安裝但未執行) 一文中的步驟進行。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-1791httpsgomicrosoftcomfwlinklinkid2043154clcid0x409"></a>![下載](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
@@ -454,7 +460,7 @@ Microsoft Azure 整合：
 - 修正 SSMS 只顯示前 50 個訂用帳戶 (Always Encrypted 對話方塊、來自 URL 對話方塊的備份/還原及其他對話方塊) 的問題。
 - 修正 SSMS 在嘗試登入沒有任何儲存體帳戶的 Microsoft Azure 帳戶時擲回例外狀況 (「索引超出範圍」) 的問題 (在 [從 URL 還原備份] 對話方塊中)。 
 
-物件指令碼： 
+物件指令碼：
 
 - 編寫「Drop 及 Create」指令碼時，SSMS 現在會避免產生動態 T-SQL。
 - 編寫資料庫物件指令碼時，SSMS 現在不會產生指令碼以設定資料庫範圍設定 (若它們是設定為預設值)。
