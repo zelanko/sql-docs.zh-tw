@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c035ee265f913a91f49b7c9b3c9e5c562ab1477a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823526"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63043279"
 ---
 # <a name="republish-data"></a>重新發行資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47823526"
   
  ![Republishing data](../../relational-databases/replication/media/repl-06a.gif "Republishing data")  
   
- 任何伺服器都可以同時扮演「發行者」與「訂閱者」的角色。 例如，假設下圖中位於英國倫敦，而且必須散發到美國四個不同城市的資料表發行集：芝加哥、紐約、聖地牙哥和西雅圖。 位於紐約的伺服器將被選來訂閱在倫敦產生的發行資料表，因為紐約網站符合這些條件：  
+ 任何伺服器都可以同時扮演「發行者」與「訂閱者」的角色。 例如，假設下圖中的資料表發行集位於英國倫敦，且必須散發到美國四個不同城市：芝加哥、紐約、聖地牙哥和西雅圖。 位於紐約的伺服器將被選來訂閱在倫敦產生的發行資料表，因為紐約網站符合這些條件：  
   
 -   到倫敦的網路連結相當可靠。  
   

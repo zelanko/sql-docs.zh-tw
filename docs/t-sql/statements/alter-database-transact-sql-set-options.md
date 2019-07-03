@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: e3b0e53dfbbe03fd723edb4d4c941e3395a0b1e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10b29bcce89adb35b4650b5501fea9a460f18d50
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66826931"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67313985"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -2897,49 +2897,45 @@ SET QUERY_STORE = ON
 
 ## <a name="azure-sql-data-warehouse"></a>Azure SQL 資料倉儲
 
-> [!NOTE]
-> 目前工作階段的許多資料庫 SET 選項都可以使用 [SET 陳述式](../../t-sql/statements/set-statements-transact-sql.md)來設定，而且通常是在應用程式連線時由其加以設定。 工作階段層級 SET 選項會覆寫 **ALTER DATABASE SET** 值。 以下所述的資料庫選項皆為未明確提供其他 SET 選項值，因而可針對工作階段進行設定的值。
-
 ## <a name="syntax"></a>語法
 
 ```
-ALTER DATABASE { database_name | Current }
+ALTER DATABASE { database_name }
 SET
 {
     <optionspec> [ ,...n ]
 }
 ;
 
-<auto_option> ::=
-{}
-RESULT_SET_CACHING { ON | OFF}
+<option_spec>::=
+{
+<RESULT_SET_CACHING>
 }
+;
+
+<RESULT_SET_CACHING>::=
+{
+RESULT_SET_CACHING {ON | OFF}
+}
+
 ```
 
 ## <a name="arguments"></a>引數
 
-*database_name*：這是要修改的資料庫名稱。
+*database_name*
 
-**\<auto_option> ::=**
+這是要修改之資料庫的名稱。
 
-控制自動選項。
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
+適用於 Azure SQL 資料倉儲 (預覽)
 
-**權限** 需要下列權限：
+此命令必須在連線到 `master` 資料庫時執行。  對此資料庫設定的變更會立即生效。  儲存體費用會以快取查詢結果集的數目計算。 停用資料庫的結果快取後，會立即從 Azure SQL 資料倉儲儲存體中刪除先前保存的結果快取。 我們在 `sys.databases` 中引進了新資料行 is_result_set_caching_on，用來顯示資料庫的結果快取設定。  
 
-- 由佈建程序建立的伺服器層級主體登入，或
-- `dbmanager` 資料庫角色的成員。
+ON   
+指定從此資料庫傳回的查詢結果集將快取於 Azure SQL 資料倉儲儲存體中。
 
-除非資料庫擁有者是 dbmanager 角色的成員，否則無法改變資料庫。
-
-> [!Note]
-> 雖然這項功能即將推出到所有區域，但請檢查部署至您執行個體的版本和最新版 [Azure SQL DW 版本資訊](/azure/sql-data-warehouse/release-notes-10-0-10106-0)是否提供此功能。
-
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF } 僅適用於 Azure SQL 資料倉儲 Gen2 (預覽) 必須在連線到 master 資料庫時執行此命令。  對此資料庫設定的變更會立即生效。  儲存體的費用會以快取查詢結果集的數目計算。 停用資料庫的結果快取後，會立即從 Azure SQL 資料倉儲儲存體中刪除先前保存的結果快取。 我們在 sys.databases 中導入了稱作 is_result_set_caching_on 的新欄位，來顯示資料庫的結果快取設定。  
-
-ON：指定從這個資料庫傳回的查詢結果集將快取至 Azure SQL 資料倉儲儲存體中。
-
-OFF：指定從這個資料庫傳回的查詢結果集將不會快取至 Azure SQL 資料倉儲儲存體中。
-使用者可以特定 request_id 查詢 sys.pdw_request_steps，來知道是否有結果為命中或遺漏的已執行查詢。   如果有快取命中，則查詢結果會具有包含以下詳細資料的單一步驟：
+OFF   
+指定從此資料庫傳回的查詢結果集將不會快取於 Azure SQL 資料倉儲儲存體中。 使用者可以特定 request_id 查詢 sys.pdw_request_steps，來知道是否有結果為命中或遺漏的已執行查詢。   如果有快取命中，則查詢結果會具有包含以下詳細資料的單一步驟：
 
 |**資料行名稱** |**[運算子]** |**ReplTest1** |
 |----|----|----|
@@ -2948,6 +2944,25 @@ OFF：指定從這個資料庫傳回的查詢結果集將不會快取至 Azure S
 |location_type|=|Control|
 command|相似|%DWResultCacheDb%|
 | | |
+
+## <a name="remarks"></a>Remarks
+
+如果符合下列所有需求，則會對查詢重複使用快取結果集：
+
+1. 執行查詢的使用者可以存取查詢中參考的所有資料表。
+1. 新查詢與產生結果集快取的上一個查詢完全相符。
+1. 產生快取結果集的來源資料表中沒有資料或結構描述變更。  
+
+一旦開啟資料庫的結果集快取功能，除了具有非決定性函數 (例如 DateTime.Now()) 的查詢以外，會快取查詢的其他全部結果，直到快取滿為止。   具有大型結果集 (例如 > 1 百萬個資料列) 的查詢在第一次執行時，可能會在建立結果快取時，出現效能較低的情形。
+
+## <a name="permissions"></a>權限
+
+需要下列權限：
+
+- 由佈建程序建立的伺服器層級主體登入，或
+- `dbmanager` 資料庫角色的成員。
+
+除非資料庫擁有者是 dbmanager 角色的成員，否則無法改變資料庫。
 
 ## <a name="examples"></a>範例
 

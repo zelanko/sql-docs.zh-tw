@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a44c62bfa8c85999112887dcacd54bfd176dfaa1
-ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
+ms.openlocfilehash: 783b2249a36b69bc53e147699e50dcab86fd89b5
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55428645"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316675"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ INCREMENT BY \<constant>
 以 **CACHE** 選項建立時，非預期關機 (例如停電) 可能會導致留在快取中的序號遺失。  
   
 ## <a name="general-remarks"></a>一般備註  
- 序號是在目前交易範圍之外產生的。 無論使用序號的交易被認可或回復交易，都會耗用序號。  
+ 序號是在目前交易範圍之外產生的。 無論使用序號的交易被認可或回復交易，都會耗用序號。 只有在填完記錄之後才會出現重複驗證。 這會導致在某些情況下，同一個數字會在建立期間用於多筆記錄，但會識別為重複項目。 如果發生這種情況，而且已將其他自動編號值套用至後續記錄，這會導致自動編號值之間出現間距，這是預期的行為。
   
 ### <a name="cache-management"></a>快取管理  
  為了改善效能，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會預先配置 **CACHE** 引數所指定之序號的數目。  
@@ -154,7 +154,7 @@ INCREMENT BY \<constant>
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
  需要 SCHEMA 的 **CREATE SEQUENCE**、 **ALTER**或 **CONTROL** 權限。  
   
 -   db_owner 和 db_ddladmin 固定資料庫角色的成員可以建立、改變及卸除順序物件。  

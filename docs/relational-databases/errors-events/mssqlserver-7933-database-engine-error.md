@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 92154266ba63b51b83667ee548fdb2fa9d8472e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766506"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62805603"
 ---
 # <a name="mssqlserver7933"></a>MSSQLSERVER_7933
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,12 +26,12 @@ ms.locfileid: "47766506"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|7933|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_ORPHANED_ROWSET_DIRECTORY|  
-|訊息文字|資料表錯誤: 分割區已經有 Filestream 目錄識別碼 F_ID，但是對應的分割區不存在資料庫中。|  
+|訊息文字|資料表錯誤：分割區已經有 Filestream 目錄識別碼 F_ID，但對應的分割區不存在資料庫中。|  
   
 ## <a name="explanation"></a>說明  
 執行 DBCC CHECKDB 期間，於 FILESTREAM 資料空間中發現資料列集目錄，但是對應的分割區卻不在資料庫中。  

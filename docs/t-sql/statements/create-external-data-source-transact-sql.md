@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e2bf0ddde51d69567393a77b18a1f72478101b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6a8832f60ae4552b825dd5d0845b15592dc58b7
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67145487"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314054"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -109,7 +109,7 @@ WITH
 - 您可以使用 `sqlserver` 位置前置詞，將 SQL Server 2019 連線到 SQL Server、SQL Database 或 SQL 資料倉儲。
 - 透過 `ODBC` 連線時，請指定 `Driver={<Name of Driver>}`。
 - `wasb` 是 Azure Blob 儲存體的預設通訊協定。 `wasbs` 為選擇性，但由於資料會使用安全的 SSL 連線傳送，因此建議使用。
-- 為確保在 Hadoop `Namenode` 容錯移轉期間能成功進行 PolyBase 查詢，請考慮使用虛擬 IP 位址作為 Hadoop 叢集的 `Namenode`。 若未這樣做，請執行 [ALTER EXTERNAL DATA SOURCE][alter_eds] 以指向新位置。
+- 為確保在 Hadoop `Namenode` 容錯移轉期間能成功進行 PolyBase 查詢，請考慮使用虛擬 IP 位址作為 Hadoop 叢集的 `Namenode`。 若未這樣做，請執行 [ALTER EXTERNAL DATA SOURCE][alter_eds] 命令以指向新位置。
 
 ### <a name="connectionoptions--keyvaluepair"></a>CONNECTION_OPTIONS = *key_value_pair*
 
@@ -148,7 +148,7 @@ WITH
 指定要設定的外部資料來源類型。 不一定需要此參數。
 
 - 當外部資料來源為 Cloudera、Hortonworks 或 Azure Blob 儲存體時，請使用 HADOOP。
-- 使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 搭配 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 執行大量作業時，請使用 BLOB_STORAGE。
+- 使用 [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] 搭配 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 執行大量作業時，請使用 BLOB_STORAGE。
 
 > [!IMPORTANT]
 > 如果使用任何其他外部資料來源，請不要設定 `TYPE`。
@@ -226,7 +226,7 @@ WITH
 ;
 ```
 
-如需 MongoDB 等其他資料來源的其他範例，請參閱[設定 PolyBase 存取 MongoDB 中的外部資料][mongodb_pb]
+如需 MongoDB 等其他資料來源的範例，請參閱[設定 PolyBase 存取 MongoDB 中的外部資料][mongodb_pb]
 
 ### <a name="b-create-external-data-source-to-reference-hadoop"></a>B. 建立參考 Hadoop 的外部資料來源
 
@@ -318,7 +318,7 @@ WITH
 ### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. 針對從 Azure Blob 儲存體擷取資料的大量作業，建立外部資料來源
 
 **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
-針對使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 的大量作業，請使用下列資料來源。 認證必須將 `SHARED ACCESS SIGNATURE` 設定為身分識別、不得在 SAS 權杖中有前置 `?`、必須至少擁有應載入檔案的讀取權限 (例如 `srt=o&sp=r`)，且到期時間應該有效 (所有日期都是 UTC 時間)。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)][sas_token]。
+針對使用 [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset] 的大量作業，請使用下列資料來源。 認證必須將 `SHARED ACCESS SIGNATURE` 設定為身分識別、不得在 SAS 權杖中有前置 `?`、必須至少擁有應載入檔案的讀取權限 (例如 `srt=o&sp=r`)，且到期時間應該有效 (所有日期都是 UTC 時間)。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)][sas_token]。
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -356,7 +356,7 @@ WITH
 
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
 [create_eff]: https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql
-[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
+[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-transact-sql
 [create_etb_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azure-sqldw-latest
 [create_tbl_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-table-as-select-azure-sql-data-warehouse?view=azure-sqldw-latest
 
@@ -388,8 +388,8 @@ WITH
 建立彈性查詢的外部資料來源。 外部資料來源會用來建立連線能力，並支援這些主要使用案例：
 
 - 使用 `BULK INSERT` 或 `OPENROWSET` 的大量載入作業
-- 使用 SQL Database 搭配[彈性查詢][remote_eq]來查詢遠端 SQL Database 或 SQL 資料倉儲執行個體
-- 使用[彈性查詢][sharded_eq]來查詢分區化 Azure SQL Database
+- 使用 SQL Database 搭配[彈性查詢][remote_eq]，查詢遠端 SQL Database 或 SQL 資料倉儲執行個體
+- 使用[彈性查詢][sharded_eq]，查詢分區化 Azure SQL Database
 
 ## <a name="syntax"></a>語法
 
@@ -453,12 +453,12 @@ WITH
 
 - 使用 RDBMS 從 SQL Database 透過彈性查詢進行跨資料庫查詢。  
 - 建立外部資料來源以連線到分區化 SQL Database 時，請使用 SHARD_MAP_MANAGER。
-- 使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 執行大量作業時，請使用 BLOB_STORAGE。
+- 使用 [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] 執行大量作業時，請使用 BLOB_STORAGE。
 
 > [!IMPORTANT]
 > 如果使用任何其他外部資料來源，請不要設定 `TYPE`。
 
-如需使用 `TYPE` = `HADOOP` 從 Azure Blob 儲存體載入資料的範例，請參閱[建立參考 Azure Blob 儲存體的外部資料來源](#e-create-external-data-source-to-reference-azure-blob-storage)。
+如需使用 `TYPE` = `HADOOP` 從 Azure Blob 儲存體載入資料的範例，請參閱[建立參考 Azure Blob 儲存體的外部資料來源](#d-create-external-data-source-to-reference-azure-blob-storage)。
 
 ### <a name="databasename--databasename"></a>DATABASE_NAME = *database_name*
 
@@ -538,7 +538,7 @@ WITH
 ;
 ```
 
-如需 RDBMS 的逐步教學課程，請參閱[跨資料庫查詢入門 (垂直資料分割)][remote_eq_tutorial]。
+如需有關 RDBMS 的逐步教學課程，請參閱[跨資料庫查詢入門 (垂直資料分割)][remote_eq_tutorial]。
 
 ## <a name="examples-bulk-operations"></a>範例:大量作業
 
@@ -547,7 +547,7 @@ WITH
 
 ### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>C. 針對從 Azure Blob 儲存體擷取資料的大量作業，建立外部資料來源
 
-針對使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 的大量作業，請使用下列資料來源。 認證必須將 `SHARED ACCESS SIGNATURE` 設定為身分識別、不得在 SAS 權杖中有前置 `?`、必須至少擁有應載入檔案的讀取權限 (例如 `srt=o&sp=r`)，且到期時間應該有效 (所有日期都是 UTC 時間)。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)][sas_token]。
+針對使用 [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset] 的大量作業，請使用下列資料來源。 認證必須將 `SHARED ACCESS SIGNATURE` 設定為身分識別、不得在 SAS 權杖中有前置 `?`、必須至少擁有應載入檔案的讀取權限 (例如 `srt=o&sp=r`)，且到期時間應該有效 (所有日期都是 UTC 時間)。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)][sas_token]。
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -877,7 +877,7 @@ WITH
 - 在建立物件時，PDW 引擎不會驗證外部資料來源是否存在。 若要驗證，請使用外部資料來源建立外部資料表。
 - 查詢 Hadoop 時，請針對所有資料表使用相同的外部資料來源，以確保查詢語意一致。
 - `wasb` 是 Azure Blob 儲存體的預設通訊協定。 `wasbs` 為選擇性，但由於資料會使用安全的 SSL 連線傳送，因此建議使用。
-- 為確保在 Hadoop `Namenode` 容錯移轉期間能成功進行 PolyBase 查詢，請考慮使用虛擬 IP 位址作為 Hadoop 叢集的 `Namenode`。 若未這樣做，請執行 [ALTER EXTERNAL DATA SOURCE][alter_eds] 以指向新位置。
+- 為確保在 Hadoop `Namenode` 容錯移轉期間能成功進行 PolyBase 查詢，請考慮使用虛擬 IP 位址作為 Hadoop 叢集的 `Namenode`。 若未這樣做，請執行 [ALTER EXTERNAL DATA SOURCE][alter_eds] 命令以指向新位置。
 
 ### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
 

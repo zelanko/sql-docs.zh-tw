@@ -26,12 +26,12 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ab7873152b9ae372c3d61d2906d3b52a055d4130
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f7c970293a68e1ecf4df19ac70bb0e7e1ba303a
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503244"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67232549"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -163,32 +163,32 @@ CREATE QUEUE <object>
 |message_id|**uniqueidentifier**|訊息的唯一識別碼。|  
   
 ## <a name="permissions"></a>權限  
- 建立佇列的權限會使用 db_ddladmin 或 db_owner 固定資料庫角色的成員，以及系統管理員 (sysadmin) 固定伺服器角色的成員。  
+ 建立佇列的權限會使用 `db_ddladmin` 或 `db_owner` 固定資料庫角色的成員，或是 `sysadmin` 固定伺服器角色的成員。  
   
- 佇列的 REFERENCES 權限預設為佇列的擁有者、db_ddladmin 或 db_owner 固定資料庫角色的成員，以及系統管理員 (sysadmin) 固定伺服器角色的成員。  
+ 佇列的 `REFERENCES` 權限預設為佇列的擁有者、`db_ddladmin` 或 `db_owner` 固定資料庫角色的成員，或是 `sysadmin` 固定伺服器角色的成員。  
   
- 佇列的 RECEIVE 權限預設給佇列的擁有者、db_owner 固定資料庫角色的成員，以及系統管理員 (sysadmin) 固定伺服器角色的成員。  
+ 佇列的 `RECEIVE` 權限預設為佇列的擁有者、`db_owner` 固定資料庫角色的成員，或是 `sysadmin` 固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-creating-a-queue-with-no-parameters"></a>A. 建立佇列，不使用任何參數  
  下列範例會建立可用來接收訊息的佇列。 未指定佇列的任何啟用預存程序。  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue ;  
 ```  
   
 ### <a name="b-creating-an-unavailable-queue"></a>B. 建立無法使用的佇列  
  下列範例會建立無法用來接收訊息的佇列。 未指定佇列的任何啟用預存程序。  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue WITH STATUS=OFF ;  
 ```  
   
 ### <a name="c-creating-a-queue-and-specify-internal-activation-information"></a>C. 建立佇列和指定內部啟用資訊  
  下列範例會建立可用來接收訊息的佇列。 當訊息進入佇列時，這個佇列會啟動 `expense_procedure` 預存程序。 這個預存程序以 `ExpenseUser` 使用者的身分來執行。 佇列會啟動最多 `5` 個預存程序執行個體。  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS=ON,  
     ACTIVATION (  
@@ -200,7 +200,7 @@ CREATE QUEUE ExpenseQueue
 ### <a name="d-creating-a-queue-on-a-specific-filegroup"></a>D. 在特定檔案群組上建立佇列  
  下列範例會在 `ExpenseWorkFileGroup` 檔案群組上建立佇列。  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     ON ExpenseWorkFileGroup ;  
 ```  
@@ -208,7 +208,7 @@ CREATE QUEUE ExpenseQueue
 ### <a name="e-creating-a-queue-with-multiple-parameters"></a>E. 利用多個參數來建立佇列  
  下列範例會在 `DEFAULT` 檔案群組上建立佇列。 這個佇列無法使用。 訊息會保留在佇列中，直到它們所屬的交談結束為止。 當透過 ALTER QUEUE 使佇列成為可用時，佇列會啟動 `2008R2.dbo.expense_procedure` 預存程序來處理訊息。 這個預存程序是以執行 `CREATE QUEUE` 陳述式的使用者身分來執行。 佇列會啟動最多 `10` 個預存程序執行個體。  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS = OFF,  
       RETENTION = ON,  

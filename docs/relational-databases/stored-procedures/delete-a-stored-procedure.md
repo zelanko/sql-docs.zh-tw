@@ -16,20 +16,20 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7d5dc099d335c0a77efc3cbcf864940d0c16f27a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808526"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62960125"
 ---
 # <a name="delete-a-stored-procedure"></a>刪除預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
     
 ##  <a name="Top"></a> 本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來刪除 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的預存程序。  
   
--   **開始之前：**[限制事項](#Restrictions)、[安全性](#Security)  
+-   **開始之前：** [限制事項](#Restrictions)、[安全性](#Security)  
   
--   **使用下列項目刪除程序：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **若要刪除程序，請使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -53,13 +53,13 @@ ms.locfileid: "47808526"
   
 1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  依序展開 **[資料庫]**、程序所屬的資料庫，以及 **[可程式性]**。  
+2.  依序展開 **[資料庫]** 、程序所屬的資料庫，以及 **[可程式性]** 。  
   
-3.  展開 [預存程序]，以滑鼠右鍵按一下要移除的程序，然後按一下 [刪除]。  
+3.  展開 [預存程序]  ，以滑鼠右鍵按一下要移除的程序，然後按一下 [刪除]  。  
   
-4.  若要檢視相依於程序的物件，請按一下 **[顯示相依性]**。  
+4.  若要檢視相依於程序的物件，請按一下 **[顯示相依性]** 。  
   
-5.  確認已選取正確的程序，再按一下 **[確定]**。  
+5.  確認已選取正確的程序，再按一下 **[確定]** 。  
   
 6.  從任何相依物件和指令碼中移除程序的參考。  
   
@@ -68,11 +68,11 @@ ms.locfileid: "47808526"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  依序展開 **[資料庫]**、程序所屬的資料庫，或從工具列的可用資料庫清單中選取資料庫。  
+2.  依序展開 **[資料庫]** 、程序所屬的資料庫，或從工具列的可用資料庫清單中選取資料庫。  
   
-3.  按一下 [檔案] 功能表上的 **[新增查詢]**。  
+3.  按一下 [檔案] 功能表上的 **[新增查詢]** 。  
   
-4.  取得要從目前資料庫移除之預存程序的名稱。 在 [物件總管] 中，依序展開 **[可程式性]** 與 **[預存程序]**。 或在查詢編輯器中，執行下列陳述式。  
+4.  取得要從目前資料庫移除之預存程序的名稱。 在 [物件總管] 中，依序展開 **[可程式性]** 與 **[預存程序]** 。 或在查詢編輯器中，執行下列陳述式。  
   
     ```sql  
     SELECT name AS procedure_name   

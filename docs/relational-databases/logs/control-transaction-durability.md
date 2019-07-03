@@ -16,11 +16,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ac96a7ea691a02c61aa132ea0efcdf5bc2d68ab1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513754"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62707130"
 ---
 # <a name="control-transaction-durability"></a>控制交易持久性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,13 +64,13 @@ ms.locfileid: "52513754"
     
  可因使用延遲的交易持久性而獲益的情形如下：    
     
- **您可以容忍部分資料遺失。**    
+ **您可以容忍部分資料遺失。**     
  如果您可以容忍部分資料遺失 (只要擁有大部分資料即可，個別記錄並不重要)，延遲的持久性就值得考慮使用。 如果您無法容忍任何資料遺失，請勿使用延遲的交易持久性。    
     
- **您在交易記錄寫入時遇到瓶頸。**    
+ **您在交易記錄寫入時遇到瓶頸。**     
  如果您的效能問題是由於交易記錄寫入的延遲所造成，則使用延遲的交易持久性可能會讓您的應用程式從中獲益。    
     
- **您的工作負載具有很高的競爭率。**    
+ **您的工作負載具有很高的競爭率。**     
  如果您的系統具有高競爭層級的工作負載，就表示花很多時間在等候釋放鎖定。 延遲的交易持久性會減少認可時間並加快釋放鎖定的速度，因而提高輸送量。    
     
  ### <a name="delayed-transaction-durability-guarantees"></a>延遲的交易持久性保證   
@@ -135,7 +135,7 @@ AS BEGIN ATOMIC WITH
 END    
 ```    
     
-### <a name="table-1-durability-in-atomic-blocks"></a>表 1：不可部分完成的區塊持久性    
+### <a name="table-1-durability-in-atomic-blocks"></a>表格 1：ATOMIC 區塊的持久性    
     
 |不可部分完成的區塊持久性選項|無現有的交易|交易處理中 (完全或延遲的持久)|    
 |------------------------------------|-----------------------------|---------------------------------------------------------|    

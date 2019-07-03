@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba776c683ea05665708891dbe734e82591077bf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd0a4a2850af0bcd954db1c257adef209d5876c8
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946233"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67219001"
 ---
 # <a name="create-a-format-file-sql-server"></a>建立格式檔案 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "64946233"
  一般而言，XML 和非 XML 格式檔案可以互換使用， 但是，仍建議您在新的格式檔案中使用 XML 語法，因為 XML 比非 XML 格式檔案多了一些優點。  
   
 > [!NOTE]  
->  用於讀取格式檔案的 **bcp** 公用程式 (Bcp.exe) 版本，必須與用於建立格式檔案的版本相同或比它更新。 例如， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** 可以讀取由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**產生的 10.0 版的格式檔案，但 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** 無法讀取由 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp**所產生的 11.0 版格式檔案。  
+>  用於讀取格式檔案的 **bcp** 公用程式 (Bcp.exe) 版本，必須與用於建立格式檔案的版本相同或比它更新。 例如，[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** 可以讀取由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** 產生的 10.0 版格式檔案，但 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** 無法讀取由 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** 產生的 11.0 版格式檔案。  
   
  此主題描述如何使用 [bcp 公用程式](../../tools/bcp-utility.md) 來建立特定資料表的格式檔案。 格式檔案以指定的資料類型選項 ( **-n**、 **-c**、 **-w**，或 **-N**) 與資料表或檢視分隔符號為基礎。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "64946233"
  **bcp** _table_or_view_ **format** nul **-f**_format_file_name_  
   
 > [!NOTE]  
->  為了區分非 XML 格式檔案，建議您使用 .fmt 做為副檔名，例如 MyTable.fmt。  
+> 為了區分非 XML 格式檔案，建議您使用 .fmt 做為副檔名，例如 MyTable.fmt。  
   
  如需有關非 XML 格式檔案之結構與欄位的詳細資訊，請參閱 [非 XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)所支援的原始格式。  
   
@@ -172,7 +172,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  **bcp** _table_or_view_ **format nul-f** _format_file_name_ **-x**  
   
 > [!NOTE]  
->  為了區分 XML 格式檔案，建議您使用 .xml 做為副檔名，例如 MyTable.xml。  
+> 為了區分 XML 格式檔案，建議您使用 .xml 做為副檔名，例如 MyTable.xml。  
   
  如需有關 XML 格式檔案之結構與欄位的詳細資訊，請參閱 [XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)所支援的原始格式。  
   
@@ -180,7 +180,6 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  本節包含下列範例，說明如何使用 **bcp** 命令建立 XML 格式檔案：  
   
 -   A. 建立字元資料的 XML 格式檔案  
-  
 -   B. 建立原生資料的 XML 格式檔案  
   
  這些範例使用 `HumanResources.Department` 範例資料庫中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表。 `HumanResources.Department` 資料表包含四個資料行： `DepartmentID`、 `Name`、 `GroupName`和 `ModifiedDate`。  
@@ -203,7 +202,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  在 Windows 命令提示字元中，輸入下列 `bcp` 命令：  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c.xml -t, -T  
 ```  
   
  產生的格式檔案 `Department-c.xml`包含下列 XML 元素：  
@@ -242,7 +241,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
  在 Windows 命令提示字元中，輸入下列 `bcp` 命令：  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..xml -n -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n.xml -n -T  
 ```  
   
  產生的格式檔案 `Department-n.xml`包含下列 XML 元素：  
