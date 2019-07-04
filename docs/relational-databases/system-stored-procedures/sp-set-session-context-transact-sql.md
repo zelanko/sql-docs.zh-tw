@@ -1,9 +1,9 @@
 ---
-title: sp_set_session_context & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_set_session_context (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/04/2017
+ms.date: 05/14/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
@@ -18,16 +18,16 @@ ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c7c68341338706c59c7ef966bf5abc6110c46e6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 25f9d67ee50f7c33391027d69c7db87aac8d7210
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51811869"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559426"
 ---
-# <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context & Amp;#40;transact-SQL&AMP;#41;
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+# <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 工作階段內容中設定的索引鍵 / 值組。  
   
@@ -43,10 +43,10 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @key=] N'key'  
+ [ @key= ] N'key'  
  正在設定的類型的索引鍵**sysname**。 最大的金鑰大小為 128 個位元組。  
   
- [ @value=] 'value'  
+ [ @value= ] 'value'  
  所指定的索引鍵類型的值**sql_variant**。 將值設定為 NULL，就會釋出記憶體。 大小上限是 8,000 位元組。  
   
  [ @read_only= ] { 0 | 1 }  
