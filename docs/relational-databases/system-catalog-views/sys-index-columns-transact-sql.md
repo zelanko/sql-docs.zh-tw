@@ -1,7 +1,7 @@
 ---
 title: sys.index_columns & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 07/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7ee4944511dca9167c787c529cdebcf33cdc92c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8707cb6cfb4f535a634f501e9113406c26b7e4a8
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004392"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564192"
 ---
 # <a name="sysindexcolumns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,15 +42,18 @@ ms.locfileid: "63004392"
 |**key_ordinal**|**tinyint**|索引鍵資料行組中的序數 (以 1 為基底)。<br /><br /> 0 = 不是索引鍵資料行，或是 XML 索引、資料行存放區索引或空間索引。<br /><br /> 注意:XML 或空間索引不可以是金鑰因為基礎資料行無法比較，這表示其值不會按照順序。|  
 |**partition_ordinal**|**tinyint**|分割區資料行組中的序數 (以 1 為基底)。 叢集資料行存放區索引最多可以有 1 個分割區資料行。<br /><br /> 0 = 不是分割區資料行。|  
 |**is_descending_key**|**bit**|1 = 索引鍵資料行是以遞減方式排序。<br /><br /> 0 = 索引鍵資料行是以遞增方式排序，或者資料行是資料行存放區索引或雜湊索引的一部分。|  
-|**is_included_column**|**bit**|1 = 資料行是利用 CREATE INDEX INCLUDE 子句加入索引中的非索引鍵資料行，或者資料行是資料行存放區索引的一部分。<br /><br /> 0 = 資料行並未加入。<br /><br /> 中不會列出資料行以隱含方式加入，因為它們是叢集索引鍵的一部分**sys.index_columns**。<br /><br /> 因為是分割區資料行而隱含新增的資料行會當做 0 傳回。|  
+|**is_included_column**|**bit**|1 = 資料行是利用 CREATE INDEX INCLUDE 子句加入索引中的非索引鍵資料行，或者資料行是資料行存放區索引的一部分。<br /><br /> 0 = 資料行並未加入。<br /><br /> 中不會列出資料行以隱含方式加入，因為它們是叢集索引鍵的一部分**sys.index_columns**。<br /><br /> 因為是分割區資料行而隱含新增的資料行會當做 0 傳回。| 
+|**column_store_order_ordinal**</br> 適用於：Azure SQL 資料倉儲 （預覽）|**tinyint**|序數 （以 1 起始） 內設定的已排序的叢集資料行存放區索引中排序資料行。|
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="examples"></a>範例  
+## <a name="examples"></a>範例
+
  下列範例會傳回 `Production.BillOfMaterials` 資料表的所有索引和索引資料行。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT i.name AS index_name  
@@ -59,7 +62,7 @@ SELECT i.name AS index_name
     ,ic.key_ordinal  
 ,ic.is_included_column  
 FROM sys.indexes AS i  
-INNER JOIN sys.index_columns AS ic   
+INNER JOIN sys.index_columns AS ic
     ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
 WHERE i.object_id = OBJECT_ID('Production.BillOfMaterials');  
   
@@ -67,7 +70,7 @@ WHERE i.object_id = OBJECT_ID('Production.BillOfMaterials');
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
   
 index_name                                                 column_name        index_column_id key_ordinal is_included_column  
 ---------------------------------------------------------- -----------------  --------------- ----------- -------------  

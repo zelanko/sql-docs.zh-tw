@@ -3,7 +3,7 @@ title: 針對 Azure Data Studio sandDance
 titleSuffix: Azure Data Studio
 description: 如何在 Azure 資料 Studio 中使用 SandDance
 ms.custom: seodec18
-ms.date: 04/18/2019
+ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 683aea4066c0b27db295cc07db31ecd07fb33245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 466b2b60548d1dcef104979d1e291d44bf53b3de
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798078"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563983"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance 適用於 Azure 的資料 Studio （預覽）
 Azure Data Studio 現在提供一種方式建立快速的視覺效果，您正在使用的.csv 和.tsv 檔案。 這在您的 SQL Server 2019 巨量資料叢集，包括本機檔案或在 HDFS 上的檔案。 當您嘗試將快速查看資料，並了解發生什麼情況，此延伸模組會有幫助。 我們會使用來自 Microsoft Research，可以產生資料的就地視覺效果稱為 SandDance 的技術。
@@ -36,9 +36,9 @@ SandDance 使用單位的視覺效果，其會套用在螢幕上的資料庫中�
 
 ## <a name="known-issues"></a>已知問題
 
-目前您的資料應該具有第一個資料行，當做唯一識別碼。
+目前，您的資料應該有第一個資料行做為唯一的識別碼。
 
-目前我們不會限制以視覺化方式檢視的資料列計數。 不過，記憶體耗用量上去按比例的數字的資料列，因此我們建議的資料集或檢視，僅限於大約 100 萬個資料列。
+目前，我們不會限制以視覺化方式檢視的資料列計數。 不過，記憶體耗用量上去按比例的數字的資料列，因此我們建議的資料集或檢視，僅限於大約 100 萬個資料列。
 
 請參閱[已知問題](https://microsoft.github.io/SandDance/#known-issues)
 
