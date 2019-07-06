@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6af0bf5d7226cea9a7ff42b2b4fd22c34b56f0c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af64b8a622cb23ae04bcbf7dbf090be764a54882
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62500435"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584854"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>使用 CommandText 屬性執行範本檔案
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,9 @@ class Test
      這樣會建立可執行檔 (DocSample.exe)。  
   
 5.  在命令提示字元中，執行 DocSample.exe。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  如果您將參數傳遞給範本時，參數名稱必須以開頭 at 符號 (@);比方說，p.Name="\@ContactID"，其中 p 是 SqlXmlParameter 物件。  
   
  這是採用一個參數的已更新範本。  

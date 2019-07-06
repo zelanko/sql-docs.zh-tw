@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_cleanup_change_table (TRANSACT-SQL) |Microsoft Docs
+title: sys.sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 19fb2cb2fc3b70bb8389a85d661992a5f7a7cb4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bbcc576ab0ff38adde9042a713e0dfd0c7d54be
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700698"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583287"
 ---
 # <a name="sysspcdccleanupchangetable-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sys.sp_cdc_cleanup_change_table
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @capture_instance =] '*capture_instance*'  
+ [ @capture_instance = ] '*capture_instance*'  
  是與變更資料表相關聯之擷取執行個體的名稱。 *capture_instance*已**sysname**，沒有預設值，不能是 NULL。  
   
  *擷取執行個體*必須命名為存在於目前資料庫中的擷取執行個體。  
   
- [ @low_water_mark =] *low_water_mark&lt*  
- 記錄序號 (LSN) 來作為新下限標準所*擷取執行個體*。 *low_water_mark&lt*已**binary(10)**，沒有預設值。  
+ [ @low_water_mark = ] *low_water_mark*  
+ 記錄序號 (LSN) 來作為新下限標準所*擷取執行個體*。 *low_water_mark&lt*已**binary(10)** ，沒有預設值。  
   
  如果值為非 null，它必須顯示成中目前項目的 start_lsn 值[cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)資料表。 如果 cdc.lsn_time_mapping 中的其他項目與新下限標準所識別的項目共用相同的認可時間，系統就會選擇與該項目群組相關聯的最小 LSN 做為下限標準。  
   
@@ -76,7 +76,9 @@ sys.sp_cdc_cleanup_change_table
     >  新下限標準可能不是預存程序呼叫中指定的下限標準。 如果 cdc.lsn_time_mapping 資料表中的其他項目共用相同的認可時間，系統就會選取在項目群組中表示的最小 start_lsn 做為已調整的下限標準。 如果@low_water_mark參數為 NULL 或目前的下限標準大於新的下限標準、 start_lsn 值的擷取執行個體就會維持不變。  
   
 2.  然後，系統會刪除 __$start_lsn 值小於下限標準的變更資料表項目。 此 delete threshold 是用來限制在單一交易中刪除的資料列數目。 雖然系統會回報無法成功刪除項目，但是不會影響對擷取執行個體下限標準所做的任何變更，因為這些變更可能已經根據呼叫完成了。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  您可以在下列情況中使用 sys.sp_cdc_cleanup_change_table：  
   
 -   清除代理程式作業回報刪除失敗。  

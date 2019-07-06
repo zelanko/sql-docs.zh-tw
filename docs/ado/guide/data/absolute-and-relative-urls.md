@@ -15,15 +15,15 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: c67a58b1299a002428c3a72b9df23892c76cd81c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 207ac319852435d3d0178e4a0dcc78a1cc1a0c8e
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702661"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597503"
 ---
 # <a name="absolute-and-relative-urls"></a>絕對和相對 URL
-URL 會指定儲存在本機或網路的電腦上的目標位置。 目標可以是檔案、 目錄、 HTML 網頁、 影像、 程式及等等 *。*  
+URL 會指定儲存在本機或網路的電腦上的目標位置。 目標可以是檔案、 目錄、 HTML 網頁、 影像、 程式及等等。  
   
  *絕對 URL*包含找出資源所需的所有資訊。  
   
@@ -53,7 +53,7 @@ URL 會指定儲存在本機或網路的電腦上的目標位置。 目標可以
   
  使用 ADO 2.7 或更新版本時，絕對的 URL 也可以定義內容。 例如，當[記錄](../../../ado/reference/ado-api/record-object-ado.md)絕對 URL，以開啟物件**連線**隱含地建立物件來代表 URL 所指定的資源。  
   
- 定義內容的絕對 URL 可以指定於*ActiveConnection*的參數**記錄**物件[開啟](../../../ado/reference/ado-api/open-method-ado-record.md)方法。 絕對 URL 也可以指定的值為"URL **=** 」 中的關鍵字**連線**物件[開啟](../../../ado/reference/ado-api/open-method-ado-connection.md)方法*ConnectionString*參數，而[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)物件[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法*ActiveConnection*參數。  
+ 定義內容的絕對 URL 可以指定於*ActiveConnection*的參數**記錄**物件[開啟](../../../ado/reference/ado-api/open-method-ado-record.md)方法。 絕對 URL 也可以指定的值為"URL ="中的關鍵字**連接**物件[開啟](../../../ado/reference/ado-api/open-method-ado-connection.md)方法*ConnectionString*參數，而[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)物件[開放](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法*ActiveConnection*參數。  
   
  內容也可以定義開啟**記錄**或是**資料錄集**物件，代表目錄，因為這些物件已經有隱含或明確宣告**連線**物件，指定內容。  
   

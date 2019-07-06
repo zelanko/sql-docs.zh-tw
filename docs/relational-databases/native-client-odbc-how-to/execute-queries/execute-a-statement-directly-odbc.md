@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f8c220685caec07b32868ed189f5acdac2b7d17
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 685cd0891bb074acee5aa0c59cbb089333d2c7c8
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665477"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584500"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>直接執行陳述式 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "51665477"
 2.  呼叫[SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)執行陳述式。  
   
 3.  如果資料在執行中輸入的參數， [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)會傳回 SQL_NEED_DATA。 使用區塊傳送資料[SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405)並[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-execute-a-statement-multiple-times-by-using-column-wise-parameter-binding"></a>使用資料行取向的參數繫結多次執行陳述式  
   
 1.  呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)設定下列屬性：  

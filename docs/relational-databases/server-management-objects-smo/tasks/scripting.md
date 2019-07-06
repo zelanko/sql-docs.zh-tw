@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68fcd735be7c3729f01e50a6133b5de2a6f9cfe6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a53ab0d5b8fde978afce5adeb3dd753da554cda4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715686"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582640"
 ---
 # <a name="scripting"></a>指令碼
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -34,7 +34,9 @@ ms.locfileid: "47715686"
 2.  產生清單  
   
 3.  產生指令碼  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  探索階段會使用 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 物件。 如果已給定物件 URN 清單，則 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 方法會針對 URN 清單中的物件傳回 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 物件。 布林值*fParents*參數用來選取要探索的父代或指定之物件的子系是否。 在這個階段可以修改相依性樹狀目錄。  
   
  在產生清單階段會傳入樹狀目錄並傳回產生的清單。 這個物件清單會以指令碼作業順序排列，且可以操作。  

@@ -16,18 +16,18 @@ ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: f913d6ef342a110d6484e05a2f1925e47d5abdac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c62953f958ef14134d7463c899f5b842d94f596
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718490"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597575"
 ---
 # <a name="datasource-property-ado"></a>DataSource 屬性 (ADO)
 表示包含資料表示為物件[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
   
 ## <a name="remarks"></a>備註  
- 這個屬性用來與資料環境中建立資料繫結控制項。 資料環境維護集合包含的資料 （資料來源） 為具名物件 （資料成員），將會呈現為**Recordset**物件 *。*  
+ 這個屬性用來與資料環境中建立資料繫結控制項。 資料環境維護集合包含的資料 （資料來源） 為具名物件 （資料成員），將會呈現為**資料錄集**物件。  
   
  [DataMember](../../../ado/reference/ado-api/datamember-property.md)並**DataSource**屬性必須搭配使用。  
   

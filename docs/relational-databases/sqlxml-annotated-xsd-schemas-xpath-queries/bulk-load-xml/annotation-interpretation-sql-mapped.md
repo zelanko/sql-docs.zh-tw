@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b33bdeff7f34993681fbdede0200e9bcab8ab96e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aa5370e91aa5a8f5012a9c8f35f3fb98b3b3e726
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040069"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581919"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>註解解譯 - sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 大量載入處理序**sql： 對應**註解 XSD 結構描述，預期是，如果對應結構描述指定**sql： 對應 ="false"** 任何項目或屬性，XML 大量載入則否嘗試將相關聯的資料儲存在對應的資料行。  
   
- XML 大量載入會忽略未對應的元素和屬性 (因為它們不在結構描述中，或是因為它們註解式 XSD 結構描述中**sql： 對應 ="false"**)。 所有未對應的資料進入溢位資料行中，如果這類資料行指定使用**sql: overflow-field-欄位**。  
+ XML 大量載入會忽略未對應的元素和屬性 (因為它們不在結構描述中，或是因為它們註解式 XSD 結構描述中**sql： 對應 ="false"** )。 所有未對應的資料進入溢位資料行中，如果這類資料行指定使用**sql: overflow-field-欄位**。  
   
  例如，請考慮下列 XSD 結構描述：  
   
@@ -56,7 +56,7 @@ ms.locfileid: "56040069"
 </xsd:schema>  
 ```  
   
- 因為**HomePhone**屬性會指定**sql： 對應 ="false"**，XML 大量載入未將此屬性對應至對應的資料行。 XSD 結構描述識別為溢位資料行 (**OverflowColumn**) XML 大量載入會儲存此未耗用的資料。  
+ 因為**HomePhone**屬性會指定**sql： 對應 ="false"** ，XML 大量載入未將此屬性對應至對應的資料行。 XSD 結構描述識別為溢位資料行 (**OverflowColumn**) XML 大量載入會儲存此未耗用的資料。  
   
 ### <a name="to-test-a-working-sample"></a>測試工作範例  
   
@@ -86,7 +86,9 @@ ms.locfileid: "56040069"
     ```  
   
 4.  若要執行 XML 大量載入，請將這個 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) 範例儲存為 Sample.vbs 並執行它：  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
     objBL.ConnectionString = "provider=SQLOLEDB;data source=localhost;database=tempdb;integrated security=SSPI"  

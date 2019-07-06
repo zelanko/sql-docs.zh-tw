@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3605365fcee0a351d7638fb20f3633f03b976a3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c2d90f9ec9a396333715f6285ed300bc2436eed2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656617"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580965"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>分析 ODBC 驅動程式效能資料 - 記錄長時間執行的查詢
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51656617"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>使用 ODBC 管理員記錄長時間執行的查詢  
   
-1.  在 **控制台**，按兩下**系統管理工具**，然後按兩下**資料來源 (ODBC)**。 (或者，您也可以從命令提示字元執行 odbcad32.exe)。  
+1.  在 **控制台**，按兩下**系統管理工具**，然後按兩下**資料來源 (ODBC)** 。 (或者，您也可以從命令提示字元執行 odbcad32.exe)。  
   
 2.  按一下 [**使用者 DSN**，**系統 DSN**，或**檔案 DSN** ] 索引標籤。  
   
@@ -45,7 +45,9 @@ ms.locfileid: "51656617"
 6.  選取 **記錄檔儲存長時間執行的查詢**。 在方塊中，放置應該記錄其長時間執行查詢之檔案的名稱。 （選擇性） 按一下**瀏覽**來瀏覽檔案系統中的查詢記錄檔。  
   
 7.  設定查詢逾時間隔，以毫秒為單位，在**長時間查詢的時間 （毫秒）**  方塊中。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-log-long-running-queries-data-programmatically"></a>以程式設計方式記錄長時間執行的查詢資料  
   
 1.  呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)利用 SQL_COPT_SS_PERF_QUERY_LOG 以及長時間執行的查詢記錄檔的完整路徑和檔案名稱。 例如：  
@@ -61,7 +63,7 @@ ms.locfileid: "51656617"
 4.  呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)利用 SQL_COPT_SS_PERF_QUERY 和 SQL_PERF_STOP 停止記錄長時間執行的查詢。  
   
 ## <a name="example"></a>範例  
- 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫  (您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案) 首頁下載 AdventureWorks 範例資料庫)。此資料來源必須以作業系統提供的 ODBC 驅動程式為基礎 (驅動程式名稱為 "SQL Server")。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
+ 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫 (您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案) 首頁下載 AdventureWorks 範例資料庫)。此資料來源必須以作業系統提供的 ODBC 驅動程式為基礎 (驅動程式名稱為 "SQL Server")。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   

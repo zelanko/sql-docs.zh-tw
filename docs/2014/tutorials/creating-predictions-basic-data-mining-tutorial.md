@@ -10,12 +10,12 @@ ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 456aec6c6b9d0d1a5d0ee1d9949507a37577130c
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63285693"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597516"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>建立預測 (基本資料採礦教學課程)
   您已測試好採礦模型的精確度，並決定您滿意結果之後，您可以上使用預測查詢產生器，然後產生預測**採礦模型預測**在資料採礦 索引標籤設計工具。  
@@ -96,7 +96,7 @@ ms.locfileid: "63285693"
   
      這會指定 `PredictProbability` 函數的目的地資料行。 如需函式的詳細資訊，請參閱[資料採礦延伸模組&#40;DMX&#41;函式參考](/sql/dmx/data-mining-extensions-dmx-function-reference)。  
   
-5.  按一下 下一步中的空白資料列**來源**資料行，並接著選取 TM_Decision_Tree 採礦模型 **。**  
+5.  按一下 下一步中的空白資料列**來源**資料行，然後選取**TM_Decision_Tree**採礦模型。  
   
 6.  在 `TM_Decision_Tree`資料列中**欄位**欄中，選取`Bike Buyer`。  
   

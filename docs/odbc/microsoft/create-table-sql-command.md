@@ -13,12 +13,12 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 195d226caed68da7131390eaf1985d4e05b2edf3
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232287"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597536"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE - SQL 命令
 建立資料表，具有指定的欄位。  
@@ -121,7 +121,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  資料表可以有多個候選項目索引。  
   
  FOREIGN KEY *eExpression4*TAG *TagName4*[NODUP]  
- 建立外部 （非主要） 索引，並建立父資料表之關聯性。 *eExpression4*指定外部索引鍵運算式，並*TagName4*指定名稱之外部索引鍵標記的建立 *。* 索引標籤名稱可以包含最多 10 個字元。 包含 NODUP 建立候選項目外部的索引。  
+ 建立外部 （非主要） 索引，並建立父資料表之關聯性。 *eExpression4*指定外部索引鍵運算式，並*TagName4*指定建立外部索引鍵標記的名稱。 索引標籤名稱可以包含最多 10 個字元。 包含 NODUP 建立候選項目外部的索引。  
   
  您可以建立多個外部索引的索引資料表，但外部索引的索引運算式必須指定資料表中的不同欄位。  
   

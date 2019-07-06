@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 501ee9f2bde6d77e8f07fcbdfa6a43a0fa6f3b3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45c6f1d61df8f3f83b1cb8f579535882a9c1ad98
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63007300"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584673"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>將參數傳遞至 Updategrams (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,9 @@ ms.locfileid: "63007300"
 1.  將上述的 updategram 複製到 [記事本] 中，並將它儲存為 UpdategramWithParameters.xml 檔。  
   
 2.  準備中的 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) [Ba6e326154d2"&gt;using ADO to Execute SQLXML 4.0 Queries&lt](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)以加入下列幾行之後執行 updategram `cmd.Properties("Output Stream").Value = outStream`:  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     cmd.NamedParameters = True  
     ' CreateParameter arguments: Name, Type, Direction, Size, Value  

@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14d152adb1d2b24b70e64a0924935416cdcf09af
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 00edc71fdec53ac7606f11d913a2c1089ecf0216
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675107"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586226"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>使用 IRow::GetColumns 提取資料行 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51675107"
   
 -   如何提取資料行的群組 (依序)。  
   
--   如何存取兩次資料行。 第一次會先取得實際的資料行寬度，然後再存取實際的資料。 在 DBCOLUMNACCESS 結構中，如果 **pData** 為 NULL，而 **cbMaxLen** 為 0，**IRow**-**>GetColumns()** 的呼叫僅會傳回實際的資料行長度。 在此情況下，您可以在相同的資料行上再次呼叫 **IRow->GetColumns()** 來擷取實際的資料。  
+-   如何存取兩次資料行。 第一次會先取得實際的資料行寬度，然後再存取實際的資料。 在 DBCOLUMNACCESS 結構中，如果 **pData** 為 NULL，而 **cbMaxLen** 為 0，**IRow**- **>GetColumns()** 的呼叫僅會傳回實際的資料行長度。 在此情況下，您可以在相同的資料行上再次呼叫 **IRow->GetColumns()** 來擷取實際的資料。  
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
@@ -45,7 +45,9 @@ ms.locfileid: "51675107"
 3.  執行 IRow::GetColumns() 來提取所產生之資料列中的一或多個資料行。 如果您要在提取資料前尋找實際的資料行大小，將 DBCOLUMNACCESS 中的 pData 設定為 NULL。 IRow::GetColumns() 的呼叫僅會傳回資料行寬度。 IRow::GetColumns() 的另一個呼叫將會提取資料。  
   
 4.  執行 IRow::GetColumns()，直到存取所需的所有資料行為止。 資料行必須依序進行存取。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>範例  
  此範例顯示如何使用 IRow 介面，允許直接存取結果集中單一資料列的資料行。 此範例會示範：  
   

@@ -17,12 +17,12 @@ ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: a3f544ae5a38b50ed13ddbafb725c07e0c8a4c8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19e643c82653ecb10bc2006eb5ed14bd2dede9b7
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697952"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597562"
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
 搜尋[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)針對符合指定之準則的資料列。 （選擇性） 您可以指定搜尋開始的資料列及從起始的資料列位移的方向。 如果符合準則時，目前的資料列位置會設定上所找到的記錄;否則，位置會設定為結尾 （或起始） 的**資料錄集**。  
@@ -39,10 +39,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  A**字串**包含在搜尋中指定要使用的資料行名稱、 比較運算子和值的陳述式的值。  
   
  *SkipRows*  
- 選擇性 *。* A**長**值，其預設值為零，指出目前資料列的資料列位移或*開始*書籤，以便開始搜尋。 根據預設，搜尋會開始對目前資料列。  
+ 選擇性。 A**長**值，其預設值為零，指出目前資料列的資料列位移或*開始*書籤，以便開始搜尋。 根據預設，搜尋會開始對目前資料列。  
   
  *SearchDirection*  
- 選擇性 *。* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，指定是否應該在目前的資料列或下一個可用的資料列的方向搜尋開始搜尋。 不成功的搜尋便會停止在結尾**Recordset**的值是否**adSearchForward**。 不成功的搜尋便會停止在開頭**Recordset**的值是否**adSearchBackward**。  
+ 選擇性。 A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，指定是否應該在目前的資料列或下一個可用的資料列的方向搜尋開始搜尋。 不成功的搜尋便會停止在結尾**Recordset**的值是否**adSearchForward**。 不成功的搜尋便會停止在開頭**Recordset**的值是否**adSearchBackward**。  
   
  *啟動*  
  選擇性。 A **Variant**做為搜尋的起始位置的書籤。  
@@ -50,7 +50,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ## <a name="remarks"></a>備註  
  只能在單一資料行名稱可以指定以*準則*。 這個方法不支援多重資料行搜尋。  
   
- 中的比較運算子*準則*可能是"**>**」 （大於）、 「**\<**"（小於）、"="（等於）、"> ="（大於或等於）"< ="（小於或等於）、 「 <>"（不等於） 或"like"（模式比對）。  
+ 中的比較運算子*準則*可能是" **>** 」 （大於）、 「 **\<** "（小於）、"="（等於）、"> ="（大於或等於）"< ="（小於或等於）、 「 <>"（不等於） 或"like"（模式比對）。  
   
  中的值*準則*可能是字串、 浮點數或日期。 字串值是以單引號或"#"（數字符號） 標記分隔 (比方說，」 狀態 = 'WA' 」 或 「 狀態 = #WA #")。 日期值會以"#"（數字符號） 標記 (例如，"start_date > #7/22/97 #")。 這些值可以包含小時、 分鐘和秒，表示時間戳記，但不是應包含毫秒，或將會發生錯誤。  
   

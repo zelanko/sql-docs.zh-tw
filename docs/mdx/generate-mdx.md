@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 222479dd03263f61a603e30202f2abf54307b0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c965300654f8cbebdf6fbd88699afdd512632488
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224886"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597439"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 
@@ -46,9 +46,9 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  以字串運算式表示的有效分隔符號。  
   
 ## <a name="remarks"></a>備註  
- 如果未指定第二個集合，則**Generate**函式會傳回所將套用至第一個集合中的每個 tuple 的第二個集合中的 tuple 產生一組 *，* 和聯集，然後將聯結所產生的設定。 如果**所有**指定，則此函式會保留在結果集中的重複項。  
+ 如果未指定第二個集合，則**產生**函式會傳回套用至第一個集合，每個 tuple 的第二個集合中的 tuple 所產生的集合和聯集，然後將聯結所產生的設定。 如果**所有**指定，則此函式會保留在結果集中的重複項。  
   
- 如果指定的字串運算式，則**Generate**函式會傳回所指定的字串運算式，對第一個集合中的每個 tuple 評估產生的字串 *，* 然後串連結果。 另外，也可以選擇字串分隔符號，在產生的串連字串中分隔每個結果。  
+ 如果指定的字串運算式，則**產生**函式會傳回所指定的字串運算式，對第一個集合，每個 tuple 評估，然後串連結果產生的字串。 另外，也可以選擇字串分隔符號，在產生的串連字串中分隔每個結果。  
   
 ## <a name="examples"></a>範例  
   

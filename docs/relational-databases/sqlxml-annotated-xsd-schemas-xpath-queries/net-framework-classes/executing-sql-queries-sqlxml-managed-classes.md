@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d08831c8699acb7ef938e8d977801109704943d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 739c664e9e6c4085f55e68aa7222a3b47f556026
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719704"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580875"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>執行 SQL 查詢 (SQLXML Managed 類別)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,9 @@ public static int Main(String[] args)
      這樣會建立可執行檔 (DocSample.exe)。  
   
 3.  在命令提示字元中，執行 DocSample.exe。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  若要測試此範例，您必須先在電腦上安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework。  
   
  您可以指定執行 Updategram (也是一個範本) 的範本 (如以下程式碼片段所示) 來插入客戶記錄，而不是指定 SQL 查詢當做命令文字。 您可以在檔案中指定範本和 Updategrams 並執行這些檔案。 如需詳細資訊，請參閱 <<c0> [ 使用 CommandText 屬性執行範本檔案](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md)。  

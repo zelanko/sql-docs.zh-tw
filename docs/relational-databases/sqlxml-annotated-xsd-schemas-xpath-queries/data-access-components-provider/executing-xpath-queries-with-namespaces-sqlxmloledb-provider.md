@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c1cea28dea447cf8fbbcbadea54071c3696ad09
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1e709d1ab8618221395cd3ea3cab3ed27b9668cc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010494"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582844"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>執行含有命名空間的 XPath 查詢 (SQLXMLOLEDB 提供者)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,9 @@ End Sub
     ```  
   
 4.  執行應用程式。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  以下是部份結果：  
   
 ```  

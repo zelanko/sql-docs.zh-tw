@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb7c0956a505aab1043a90d29fe63b46836fbfea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 811f546511a9bb49aaf5f5e52d9cf785e99ea5f7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690350"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582733"
 ---
 # <a name="obtain-a-fastforward-cursor"></a>取得 FAST_FORWARD 資料指標
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "62690350"
 2.  將資料列集屬性 DBPROP_SERVERCURSOR、DBPROP_OTHERINSERT、DBPROP_OTHERUPDATEDELETE、DBPROP_OWNINSERT 和 DBPROP_OWNUPDATEDELETE 設為 VARIANT_TRUE。  
   
 3.  執行命令。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>範例  
  以下範例顯示如何設定資料列集屬性，以取得 FAST_FORWARD 資料指標。 在設定屬性之後，會執行 SELECT 陳述式，擷取並顯示 AdventureWorks 資料庫中 Purchasing.Vendor 資料表的 Name 資料行。 IA64 不支援此範例。  
   

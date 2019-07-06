@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33a35a56cb433e860eb1cc66b7e0178db3eed925
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2f23c7ace1a4a83b07d5ac25972c8fd4028d173f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667537"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583797"
 ---
 # <a name="set-large-data-ole-db"></a>設定大型資料 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,9 @@ ms.locfileid: "51667537"
 5.  呼叫 **GetNextRows** 將下一個資料列擷取到資料列集中。 呼叫 **GetData** 來讀取資料列集中的資料。  
   
 6.  建立包含資料 (以及長度指標) 的儲存物件，然後使用繫結 BLOB 資料行來設定資料的存取子，呼叫 **IRowsetChange::SetData** (或 **IRowsetChange::InsertRow**)。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  

@@ -33,12 +33,12 @@ ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f82da51a519525451078a7f65548a91a532a0c86
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cad827776e525c55b41517ae1de05d547d88dd2a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537312"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584057"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>在 SQL Server 中註冊使用者定義型別
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,9 @@ ms.locfileid: "52537312"
 4.  撰寫程式碼以實作 UDT。  
   
 5.  從**建置**功能表上，選取**部署**。 如此將會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中註冊組件並建立型別。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="using-transact-sql-to-deploy-udts"></a>使用 Transact-SQL 部署 UDT  
  您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 語法，於要使用 UDT 的資料庫中註冊組件。 它會儲存於資料庫系統資料表內部，而非檔案系統外部。 如果 UDT 與外部組件相關，也必須將它們載入資料庫。 CREATE TYPE 陳述式可在要使用 UDT 的資料庫內建立 UDT。 如需詳細資訊，請參閱[CREATE ASSEMBLY &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/create-assembly-transact-sql.md)並[CREATE TYPE &#40;-&#41;](../../t-sql/statements/create-type-transact-sql.md)。  
   
@@ -178,7 +180,7 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **file_id**  
  數字，識別每個相關聯的第一個物件的物件，指定**assembly_id** 1 的值。 如果有多個物件具有相同相關聯**assembly_id**，則每個後續**file_id**值都會遞增 1。  
   
- **內容**  
+ **content**  
  組件或檔案的十六進位表示法。  
   
  您可以使用 CAST 或 CONVERT 函數，將轉換的內容**內容**可讀取的文字資料行。 下列查詢會將 Point.cs 檔案的內容轉換為可讀取的文字，並在 WHERE 子句中使用此名稱，以將結果集限制為單一資料列。  

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39a1e699b52b29db74209aa5288bb5dc01896a3b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017755"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586251"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,9 @@ sp_help [ [ @objname = ] 'name' ]
     |**定序**|**sysname**|資料類型的定序。 非字元資料類型是 NULL。|  
   
 3.  如果*名稱*是資料類型以外的任何資料庫物件**sp_help**傳回這個結果集和也有其他結果集，根據指定的物件類型。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     |資料行名稱|資料類型|描述|  
     |-----------------|---------------|-----------------|  
     |**名稱**|**nvarchar(** 128 **)**|資料表名稱|  
@@ -82,9 +84,9 @@ sp_help [ [ @objname = ] 'name' ]
     |**型別**|**nvarchar(** 31 **)**|資料表類型|  
     |**Created_datetime**|**datetime**|資料表的建立日期|  
   
-     根據指定的資料庫物件**sp_help**傳回其他結果集。  
+     Depending on the database object specified, **sp_help** returns additional result sets.  
   
-     如果*名稱*是系統資料表、 使用者資料表或檢視， **sp_help**會傳回下列結果集。 不過，不會傳回描述資料檔在檔案群組中之位置的結果集。  
+     If *name* is a system table, user table, or view, **sp_help** returns the following result sets. However, the result set that describes where the data file is located on a file group is not returned for a view.  
   
     -   在資料行物件上傳回的其他結果集：  
   

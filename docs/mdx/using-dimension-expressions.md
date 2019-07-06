@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a5e26d56a52c8c922c43325bd2267fa623dc0e19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e492498ee6e15866e7fe6fd96588480c914b0622
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125528"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597531"
 ---
 # <a name="using-dimension-expressions"></a>使用維度運算式
 
@@ -59,7 +59,7 @@ ms.locfileid: "63125528"
   
  `FROM [Adventure Works]`  
   
- 階層識別碼會以*Dimension_Name **。** Hierarchy_Name*在 backus-naur form，BNF 標記法中用來描述 MDX 陳述式。  
+ 階層識別碼會以*Dimension_Name.Hierarchy_Name*在 backus-naur form，BNF 標記法中用來描述 MDX 陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
  [運算式&#40;MDX&#41;](../mdx/expressions-mdx.md)  

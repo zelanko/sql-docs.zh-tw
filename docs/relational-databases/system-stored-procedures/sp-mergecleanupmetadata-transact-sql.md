@@ -16,12 +16,12 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12e2dde3916392e2e106499bdfb9dd0d4fad5b0c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017844"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582166"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 5.  重新產生所有層級所涉及之所有合併式發行集的快照集檔案。 如果您試圖在尚未重新產生快照集前進行合併，系統會提示您重新產生快照集。  
   
 6.  備份發行集資料庫。 如果沒有完成這個動作，在還原發行集資料庫之後，合併可能會失敗。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  **連續模式合併的特殊考量**  
   
  如果您在執行連續模式的合併，您必須執行下列動作之一：  

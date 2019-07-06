@@ -18,12 +18,12 @@ ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 136771c5bf691155b4547963fa2b6bd035f3f039
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5af98bd479738785c341b2618561eaab3f43b5d1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62994227"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586023"
 ---
 # <a name="spchangelogshippingsecondarydatabase-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,9 @@ sp_change_log_shipping_secondary_database
 1.  在設定的變更**log_shipping_secondary_database**記錄。  
   
 2.  變更中的之本機監視記錄**log_shipping_monitor_secondary**次要伺服器上使用提供的引數，如有必要。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
   

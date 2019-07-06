@@ -17,12 +17,12 @@ ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3162036c9c52836475278cdd1b036b0eefbc7531
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 2fc8080bc02edf04fd041a9b796be54767286d3b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215826"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584820"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>使用 VBScript 存取組態管理的 WMI 提供者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "51215826"
 5.  儲存檔案。  
   
 6.  輸入以執行指令碼**cscript test.vbs**在命令提示字元。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>範例  
   
 ```  

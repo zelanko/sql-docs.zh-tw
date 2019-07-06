@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b755c59a23a9b937c1de96236795cd1e01052842
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8dad8d3992bfef695b54f82e5d8d9548b6280b32
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658572"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584514"
 ---
 # <a name="use-rowset-binding-odbc"></a>使用資料列集繫結 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,9 @@ ms.locfileid: "51658572"
 3.  執行陳述式。  
   
 4.  每次呼叫[SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)或是[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)擷取 R 個資料列，並將資料傳送到繫結的資料行。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-use-row-wise-binding"></a>使用資料列取向的繫結  
   
 1.  配置結構的陣列[R]，其中 R 是資料列集的資料列數目。 結構中每個資料行都具有一個元素，而每個元素則具有兩部分：  

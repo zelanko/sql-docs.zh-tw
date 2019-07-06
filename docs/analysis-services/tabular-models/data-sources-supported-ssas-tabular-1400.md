@@ -1,6 +1,6 @@
 ---
 title: 支援 SQL Server Analysis Services 表格式 1400年模型中的資料來源 |Microsoft Docs
-ms.date: 02/12/2019
+ms.date: 07/02/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c900c6f1683b9f4c96355a759c604022515d2ce
-ms.sourcegitcommit: 89a7bd9ccbcb19bb92a1f4ba75576243a58584e8
+ms.openlocfilehash: 246375015786cf67685c89f368f83662539da36b
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56159753"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597354"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>支援 SQL Server Analysis Services 中表格式 1400年模型的資料來源
 
@@ -31,18 +31,20 @@ Azure Analysis services，請參閱[支援 Azure Analysis Services 中的資料�
 
 |資料來源  |記憶體中  |DirectQuery  |
 |---------|---------|---------|
-|Azure SQL Database     |   是      |    是      |
+|Azure SQL Database <sup> [1](#ae)</sup>    |   是      |    是      |
 |Azure SQL 資料倉儲     |   是      |   是       |
 |Azure Blob 儲存體     |   是       |    否      |
 |Azure 資料表儲存體    |   是       |    否      |
 |Azure Cosmos DB     |  是        |  否        |
-|Azure Data Lake Store (Gen1)<sup>[1](#gen2)</sup>      |   是       |    否      |
+|Azure Data Lake Store (Gen1)<sup>[2](#gen2)</sup>      |   是       |    否      |
 |Azure HDInsight 的 HDFS    |     是     |   否       |
-|Azure HDInsight Spark <sup> [2](#databricks)</sup>     |   是       |   否       |
+|Azure HDInsight Spark <sup> [3](#databricks)</sup>     |   是       |   否       |
 ||||
 
-<a name="gen2">1</a> -目前不支援 ADLS Gen2。   
-<a name="databricks">2</a> -azure Databricks 使用的 Spark 連接器目前不支援。   
+<a name="ae">1</a> -不支援 azure SQL Database Always Encrypted。   
+<a name="gen2">2</a> -目前不支援 ADLS Gen2。   
+<a name="databricks">3</a> -azure Databricks 使用的 Spark 連接器目前不支援。   
+
 
 
 
@@ -55,11 +57,13 @@ Azure Analysis services，請參閱[支援 Azure Analysis Services 中的資料�
 
 |資料來源 | 記憶體中的提供者 | DirectQuery 提供者 |
 |  --- | --- | --- |
-| [SQL Server] |SQL Server Native Client 11.0，Microsoft OLE DB Provider for SQL Server、.NET Framework Data Provider for SQL Server | .NET Framework Data Provider for SQL Server |
+| SQL Server <sup>[4](#aeop)</sup> |SQL Server Native Client 11.0，Microsoft OLE DB Provider for SQL Server、.NET Framework Data Provider for SQL Server | .NET Framework Data Provider for SQL Server |
 | SQL Server 資料倉儲 |SQL Server Native Client 11.0，Microsoft OLE DB Provider for SQL Server、.NET Framework Data Provider for SQL Server | .NET Framework Data Provider for SQL Server |
 | Oracle |Microsoft OLE DB Provider for Oracle, Oracle Data Provider for .NET |適用於.NET 的 oracle 資料提供者 | |
 | Teradata |OLE DB Provider for Teradata、 Teradata Data Provider for.NET |Teradata Data Provider for.NET | |
 | | | |
+
+<a name="aeop">4</a> -Always Encrypted 支援為 DirectQuery 的 azure SQL Database 和 SQL Server 資料庫[用戶端資料來源](data-sources-supported-ssas-tabular.md#bkmk_supported_ds_dq)只有 1200年相容性層級的 SQL Server Analysis Services 表格式模型中。 Azure Analysis Services 中不支援 Always Encrypted 的 azure SQL Database 和 SQL Server 資料庫。       
 
 > [!NOTE]
 > 針對記憶體中模型中，OLE DB 提供者可以提供較佳的效能，大規模的資料。 相同的資料來源的不同提供者之間選擇時，請先嘗試 OLE DB 提供者。  

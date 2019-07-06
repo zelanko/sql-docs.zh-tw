@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38428e0a95dcce39589310ee91be2a7d396c2f1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8bfd021414ab9e8078ec0df9c23c33828e36d0f9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088510"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584604"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -236,7 +236,9 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
 3.  如果兩個類似的資料類型將依據規則 1，例如**varchar （8000)** 並**varchar （max)** 較小資料類型 (**varchar （8000)** ) 選擇。 相同原則適用於**nvarchar**並**varbinary**資料型別。  
   
 4.  為執行規則 1，類型推算演算法會偏好特定轉換。 從最佳到最差的轉換順序如下：  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  不同長度的同一個基本資料類型之間的轉換。  
   
     2.  固定長度和可變長度版本相同的資料類型之間的轉換 (例如**char**要**varchar**)。  

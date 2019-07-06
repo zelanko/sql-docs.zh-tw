@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e51749416c0668ccc4760132bb860121ebae6e3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe80d94be42a9ea953a5829de43bcab3cb30955f
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653458"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597375"
 ---
 # <a name="union--mdx"></a>聯集 (MDX)
 
@@ -43,7 +43,7 @@ Alternate syntax 2
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 此函式會傳回兩個聯集或多個指定集合 *。* 搭配標準語法和替代語法 1，則預設會刪除重複項目。 搭配標準語法時，使用**所有**旗標會在聯結集合中保留重複項。 從集合結尾刪除重複項。 使用替代語法 2 時，一律會保留重複項。  
+ 此函式會傳回兩個聯集或多個指定集合。 搭配標準語法和替代語法 1，則預設會刪除重複項目。 搭配標準語法時，使用**所有**旗標會在聯結集合中保留重複項。 從集合結尾刪除重複項。 使用替代語法 2 時，一律會保留重複項。  
   
 ## <a name="examples"></a>範例  
  下列範例示範的行為**聯集**函式使用的每個語法。  

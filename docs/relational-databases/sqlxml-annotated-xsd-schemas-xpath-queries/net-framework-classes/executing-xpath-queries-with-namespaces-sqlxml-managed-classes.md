@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c03bb79584f4016dbdea2cfecf2a975deb309ead
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b32a7d53c4802cb2da89fc06cb5d740d0c00ef52
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012559"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584824"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>執行含有命名空間的 XPath 查詢 (SQLXML Managed 類別)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ class Test
   
 1.  將這個範例所提供的 XSD 結構描述 (MySchema.xml) 儲存在資料夾中。  
   
-2.  將此範例中提供的 C# 程式碼 (DocSample.cs) 儲存到儲存結構描述的相同資料夾中  (如果您將檔案儲存在不同的資料夾中，您將需要編輯程式碼，然後為對應的結構描述指定適當的目錄路徑)。  
+2.  將此範例中提供的 C# 程式碼 (DocSample.cs) 儲存到儲存結構描述的相同資料夾中 (如果您將檔案儲存在不同的資料夾中，您將需要編輯程式碼，然後為對應的結構描述指定適當的目錄路徑)。  
   
 3.  編譯程式碼。 若要在命令提示字元下編譯程式碼，請使用：  
   
@@ -110,5 +110,6 @@ class Test
      這樣會建立可執行檔 (DocSample.exe)。  
   
 4.  在命令提示字元中，執行 DocSample.exe。  
-  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3dd1128bfafb052936e742f7ce56529b1222333a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2dde2a96b34485fd6d460699a20055e289f2f1ad
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690850"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597474"
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop (MDX)
 
@@ -55,7 +55,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
   
  完成排序之後， **DrilldownMemberTop**函式會傳回一組包含父成員中指定的子成員數目*計數*最高值及包含在兩個集合.  
   
- 如果**遞迴**指定，則函式會如先前所述來排序第一個集合，然後遞迴比較第一個集合的成員，如同在階層中，針對第二個集合的組織方式 *。* 函式會擷取第一個集合並且也出現在第二個集合中每個成員的子系的最高數目。  
+ 如果**遞迴**指定，則函式會如先前所述來排序第一個集合，然後遞迴比較第一個集合的成員，如同在階層中，針對第二個集合的組織方式。 函式會擷取第一個集合並且也出現在第二個集合中每個成員的子系的最高數目。  
   
  第一個集合可以包含 Tuple，而非成員。 Tuple 向下鑽研是 OLE DB 的延伸模組，而且會傳回 Tuple 集合而不是傳回成員。  
   

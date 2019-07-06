@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 087e2194fb5d0963e8fd9cb4aef0d0193359de04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8c4447413468fe01370ad67c16da0209fcee359
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818657"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584578"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>設定 SQL Server ODBC 驅動程式 - 刪除資料來源
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,14 +31,16 @@ ms.locfileid: "47818657"
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>使用 ODBC 管理員刪除資料來源  
   
-1.  在 **控制台**，開啟**系統管理工具**，然後按兩下  **ODBC 資料來源 （64 位元）** 或**ODBC 資料來源 （32 位元）**. 或者，您也可以從命令提示字元執行 odbcad32.exe。  
+1.  在 **控制台**，開啟**系統管理工具**，然後按兩下  **ODBC 資料來源 （64 位元）** 或**ODBC 資料來源 （32 位元）** . 或者，您也可以從命令提示字元執行 odbcad32.exe。  
   
 2.  按一下 [**使用者 DSN**，**系統 DSN**，或**檔案 DSN** ] 索引標籤。  
   
 3.  選取要刪除的資料來源。  
   
 4.  按一下 **移除**，然後確認刪除。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>範例  
  若要以程式設計方式刪除資料來源，請呼叫[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)使用 ODBC_REMOVE_DSN 或 ODBC_REMOVE_SYS_DSN 做為第二個參數。  
   
