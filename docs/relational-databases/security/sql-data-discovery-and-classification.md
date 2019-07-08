@@ -2,22 +2,22 @@
 title: SQL 資料探索與分類 | Microsoft Docs
 description: SQL 資料探索與分類
 documentationcenter: ''
-ms.reviewer: carlrab
+ms.reviewer: vanto
 ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
 ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 02/13/2018
-ms.author: giladm
-author: giladm
-manager: shaik
-ms.openlocfilehash: e3df41240791d01beb1214f3f5b150bdba618420
-ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
+ms.date: 06/25/2019
+ms.author: mibar
+author: barmichal
+manager: craigg
+ms.openlocfilehash: b45f3a081b7be55642e662ed195cfc1377e3659b
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67316683"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351727"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 資料探索與分類
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "67316683"
 * 控制存取以及強化包含高敏感性資料之資料庫/資料行的安全性。
 
 > [!NOTE]
-> **SQL Server 2008 和更新版本支援**資料探索與分類。 針對 Azure SQL Database，請參閱 [Azure SQL Database 資料探索與分類](https://go.microsoft.com/fwlink/?linkid=866265)。
+> 資料探索與分類受 **SQL Server 2008 和更新版本支援，且可搭配 SSMS 17.5 或更新版本使用**。 針對 Azure SQL Database，請參閱 [Azure SQL Database 的資料探索與分類](https://go.microsoft.com/fwlink/?linkid=866265)。
 
 ## <a id="subheading-1"></a>概觀
 資料探索與分類引進一組進階服務，形成目標為保護資料的新 SQL Information Protection 範例，而不只是資料庫：

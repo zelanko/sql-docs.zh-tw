@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: efb4bcfd0ed5befc7438f5ff82747254efa8b88e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1d573c815d426d2d6084735f2492e4f679c15b11
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517006"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581605"
 ---
 # <a name="modify-primary-keys"></a>修改主索引鍵
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "52517006"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目來修改主索引鍵：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -43,28 +43,30 @@ ms.locfileid: "52517006"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-a-primary-key"></a>若要修改主索引鍵  
   
-1.  針對您想要修改其主索引鍵的資料表開啟 [資料表設計工具]，在 [資料表設計工具] 中按一下滑鼠右鍵，然後從捷徑功能表選擇 [索引/索引鍵]。  
+1.  針對您想要修改其主索引鍵的資料表開啟 [資料表設計工具]，在 [資料表設計工具] 中按一下滑鼠右鍵，然後從捷徑功能表選擇 [索引/索引鍵]  。  
   
-2.  在 [索引/索引鍵] 對話方塊中，從 [選取的主索引鍵/唯一索引鍵或索引] 清單中選取主索引鍵索引。  
+2.  在 [索引/索引鍵]  對話方塊中，從 [選取的主索引鍵/唯一索引鍵或索引]  清單中選取主索引鍵索引。  
   
 3.  完成下表中的動作：  
   
     |若要|請依照下列步驟：|  
     |--------|------------------------|  
-    |重新命名主索引鍵|在 [ **名稱** ] 方塊中輸入新的名稱。 確定新名稱不會與 [選取的主索引鍵/唯一索引鍵或索引] 清單中的名稱重複。|  
-    |設定叢集選項|若要建立主索引鍵的叢集索引，請選取 [建立成 CLUSTERED]，然後從下拉式清單方塊中選取選項。 每個資料表只能存在一個叢集索引。 如果您的索引無法使用此選項，則必須先清除現有叢集索引的這個設定。<br /><br /> 如果沒有選取此選項，就會建立唯一非叢集索引。|  
+    |重新命名主索引鍵|在 [ **名稱** ] 方塊中輸入新的名稱。 確定新名稱不會與 [選取的主索引鍵/唯一索引鍵或索引]  清單中的名稱重複。|  
+    |設定叢集選項|若要建立主索引鍵的叢集索引，請選取 [建立成 CLUSTERED]  ，然後從下拉式清單方塊中選取選項。 每個資料表只能存在一個叢集索引。 如果您的索引無法使用此選項，則必須先清除現有叢集索引的這個設定。<br /><br /> 如果沒有選取此選項，就會建立唯一非叢集索引。|  
     |定義填滿因數|展開 **[填滿規格]** 類別目錄，然後在 **[填滿因數]** 方塊中輸入 0 到 100 的整數。 如需填滿因數的詳細資訊以及使用方法，請參閱 [指定索引的填滿因素](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。|  
-    |變更資料行順序|選取 [資料行]，然後按一下屬性右邊的省略符號 **(…)**。 在  **[索引資料行]** 對話方塊中，從主索引鍵移除資料行。 然後將資料行以所要的順序加回去。 若要從索引鍵移除資料行，只要從 **[資料行]** 名稱清單中移除資料行名稱即可。|  
+    |變更資料行順序|選取 [資料行]  ，然後按一下屬性右邊的省略符號 **(…)** 。 在  **[索引資料行]** 對話方塊中，從主索引鍵移除資料行。 然後將資料行以所要的順序加回去。 若要從索引鍵移除資料行，只要從 **[資料行]** 名稱清單中移除資料行名稱即可。|  
   
-4.  在 [檔案]  功能表上，按一下 [儲存] _table name_。  
-  
+4.  在 [檔案]  功能表上，按一下 [儲存]  _table name_。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改主索引鍵**  
   

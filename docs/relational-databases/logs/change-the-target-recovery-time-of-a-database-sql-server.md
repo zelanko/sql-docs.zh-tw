@@ -11,12 +11,12 @@ ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f47d33179fb382472def9950a928be137e1f6583
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9563f7ad61b33b4248ce22c58974d4967db6d55e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354385"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584223"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>變更資料庫的目標復原時間 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,9 @@ ms.locfileid: "66354385"
 3.  在 [資料庫屬性]  對話方塊中按一下 [選項]  頁面。  
   
 4.  在 [復原]  面板的 [目標復原時間 (秒)]  欄位中，指定您想要作為此資料庫復原時間上限的秒數。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要變更目標復原時間**  
   

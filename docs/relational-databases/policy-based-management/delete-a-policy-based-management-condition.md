@@ -13,12 +13,12 @@ ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8c8ecf331904ff58415807de9a16c3575778aa46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c324e25ef5dacf835a8b81e6ffc23041647b1fcf
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63009115"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585046"
 ---
 # <a name="delete-a-policy-based-management-condition"></a>刪除原則式管理條件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,5 +56,6 @@ ms.locfileid: "63009115"
 5.  以滑鼠右鍵按一下您想要刪除的條件，然後選取 [刪除]  。  
   
 6.  在 **[刪除物件]** 對話方塊中，確定已選取正確的條件，然後按一下 **[確定]** 。  
-  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

@@ -16,12 +16,12 @@ ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 481146623145c2abc6e3e9c8ed5b971f614979e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40062550cba47e7de36ccb5d389bae15853da026
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640816"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581005"
 ---
 # <a name="piecemeal-restores-sql-server"></a>分次還原 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -173,7 +173,9 @@ ms.locfileid: "62640816"
 3.  稍後，從 backup_1 部分備份進行讀取/寫入次要檔案群組 WITH NORECOVERY 檔案還原  
   
 4.  差異備份之後緊接著原始分次還原順序中所還原的任何其他備份，可還原資料直到原始的復原點為止。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="see-also"></a>另請參閱  
  [套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   

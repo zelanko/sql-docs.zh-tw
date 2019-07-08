@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b0b63123e9d48ca7f89d888dca82b6b988942893
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef2848efb4a66ccf2d8d1b2271bd70c455b27fd9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62466683"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582641"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理系統設定版本之時態表中的歷程記錄資料保留
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,9 @@ ms.locfileid: "62466683"
      ![Stretch Database 精靈的 [選取 IP 位址] 頁面](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 精靈的 [選取 IP 位址] 頁面")  
   
 6.  當精靈完成時，請確認資料庫是否成功啟用延展。 請注意物件總管中指出資料庫已延展的圖示。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > **注意：** 如果 [啟用資料庫的延展] 失敗，請檢閱錯誤記錄檔。 常見錯誤是防火牆規則的設定不正確。  
   
  另請參閱：  

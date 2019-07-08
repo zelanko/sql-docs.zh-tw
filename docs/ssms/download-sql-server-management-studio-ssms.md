@@ -24,12 +24,12 @@ ms.author: dinethi
 manager: craigg
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 7993cfbf21efcbb6f984a91347987e5805741904
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 403ca9e5132a00f003aa67a2011d98d0044b4807
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67033404"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399656"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 
@@ -68,7 +68,6 @@ SSMS 18.x 安裝不會升級或取代 SSMS 17.x 版或更早版本。 SSMS 18.x 
 SQL Server Management Studio 18.1：<br>
 [簡體中文](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
 
-
 > [!NOTE]
 > SQL Server PowerShell 模組為透過 PowerShell 資源庫個別安裝的模組。 如需詳細資訊，請參閱[下載 SQL Server PowerShell 模組](download-sql-server-ps-module.md)。
 
@@ -79,7 +78,6 @@ SQL Server Management Studio 18.1：<br>
 - **Integration Services (SSIS)** - 支援在 Azure 中排程位於 Azure 或檔案系統中 SSIS 目錄裡的 SSIS 套件。 有三種啟動新增排程對話方塊的項目：[新增排程...]  功能表項目 (以滑鼠右鍵按一下 Azure 中 SSIS 目錄內的 SSIS 套件時顯示)、位於 [工具]  功能表項目下方 [遷移至 Azure]  功能表項目之下的 [排程 Azure 中的 SSIS 套件]  ，以及以滑鼠右鍵按一下 Azure SQL Database 受控執行個體 SQL Server 代理程式下方的 Jobs 資料夾時所顯示的「排程 Azure 中的 SSIS」。
 
 如需此版本中最新功能的詳細資料，請參閱 [SSMS 版本資訊](release-notes-ssms.md)。
-
 
 ## <a name="supported-sql-offerings-ssms-181"></a>支援的 SQL 供應項目 (SSMS 18.1)
 
@@ -93,7 +91,8 @@ SQL Server Management Studio 18.1：<br>
 
 - Windows 10 (64 位元) <sup>*</sup>
 - Windows 8.1 (64 位元)
-- Windows Server 2016 <sup>*</sup>
+- Windows Server 2019 (64 位元)
+- Windows Server 2016 (64 位元) <sup>*</sup>
 - Windows Server 2012 R2 (64 位元)
 - Windows Server 2012 (64 位元)
 - Windows Server 2008 R2 (64 位元)
@@ -105,7 +104,7 @@ SQL Server Management Studio 18.1：<br>
 
 ## <a name="release-notes-ssms-181"></a>版本資訊 (SSMS 18.1)
 
-此版本沒有已知的問題。
+此版本有一些[已知問題](release-notes-ssms.md#known-issues-181)。
 
 如需此版本的詳細資料，請參閱 [SSMS 版本資訊](release-notes-ssms.md)。
 

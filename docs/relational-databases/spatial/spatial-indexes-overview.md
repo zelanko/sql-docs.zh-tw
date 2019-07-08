@@ -13,12 +13,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6cad42165bfb79e411a6e1fe6edef0c1b2ef9caa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 542fd8c891a0efcaf216d9a5d00de69921ae0dd7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939212"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585815"
 ---
 # <a name="spatial-indexes-overview"></a>空間索引概觀
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -170,7 +170,9 @@ ms.locfileid: "65939212"
 2.  將兩個金字塔扁平化。  
   
 3.  聯結扁平化的金字塔，以形成非 Euclidean 平面。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  下圖顯示三個步驟之分解程序的圖解檢視。 在金字塔中，點狀的線條代表每一個金字塔之四個 Facet 的界限。 步驟 1 和 2 說明此測量的橢圓體，使用綠色水平線來表示赤道經線，並使用一系列的綠色垂直線來表示幾條緯線。 步驟 1 顯示投射到兩個半球上的金字塔。 步驟 2 顯示扁平化的金字塔。 步驟 3 說明扁平化的金字塔在經過組合之後會形成一個平面，顯示投射的經線數目。 請注意，這些投射的線條會變直，而且長度會視其落於金字塔上的位置而有所不同。  
   
  ![將橢圓體投射到平面上](../../relational-databases/spatial/media/spndx-geodetic-projection.gif "將橢圓體投射到平面上")  

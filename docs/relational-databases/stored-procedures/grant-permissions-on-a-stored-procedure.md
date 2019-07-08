@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 09194b8d9e38fe7eaa42487c6e810749d19d056e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cac03be8a275f3918d509f028c56feaaa8b0518
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617766"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580522"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>授與預存程序的權限
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47617766"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法授與預存程序的權限：**  
   
@@ -55,20 +55,22 @@ ms.locfileid: "47617766"
   
 1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  依序展開 **[資料庫]**、程序所屬的資料庫，以及 **[可程式性]**。  
+2.  依序展開 **[資料庫]** 、程序所屬的資料庫，以及 **[可程式性]** 。  
   
-3.  展開 [預存程序]，以滑鼠右鍵按一下要授與權限的程序，然後按一下 [屬性]。  
+3.  展開 [預存程序]  ，以滑鼠右鍵按一下要授與權限的程序，然後按一下 [屬性]  。  
   
 4.  在 **[預存程序屬性]** 上選取 **[權限]** 頁面。  
   
-5.  若要將權限授與使用者、資料庫角色或應用程式角色，請按一下 **[搜尋]**。  
+5.  若要將權限授與使用者、資料庫角色或應用程式角色，請按一下 **[搜尋]** 。  
   
 6.  在 **[選取使用者或角色]** 中，按一下 **[物件類型]** ，以加入或清除想要的使用者和角色。  
   
 7.  按一下 **[瀏覽]** 顯示使用者或角色的清單。 選取要獲得權限授與的使用者或角色。  
   
 8.  在 **[明確權限]** 方格中，選取要授與指定使用者或角色的權限。 如需權限的說明，請參閱 [權限 &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  選取 **[授與]** 表示要將指定的權限提供給被授與者。 選取 **[可授與]** 則表示授與者也能夠將指定的權限授與給其他主體。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
@@ -77,9 +79,9 @@ ms.locfileid: "47617766"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 此範例會將預存程序 `EXECUTE` 的 `HumanResources.uspUpdateEmployeeHireInfo` 權限授與名為 `Recruiting11`的應用程式角色。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。 此範例會將預存程序 `EXECUTE` 的 `HumanResources.uspUpdateEmployeeHireInfo` 權限授與名為 `Recruiting11`的應用程式角色。  
   
 ```sql  
 USE AdventureWorks2012;   

@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 7f0f2c7bf602e0280f7d38147d3d7924712d90eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1498a7d78e88055052499027a8255743ca3da6dc
+ms.sourcegitcommit: fb9114df7224446696e7772024f64735c3e46c8f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772632"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67345149"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>為 Always On 可用性群組設定分散式交易
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,6 +89,15 @@ ALTER AVAILABILITY GROUP MyaAG
 
 >[!NOTE]
 >從 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 開始，您可以改變分散式交易的可用性群組。 若為 Service Pack 2 之前的 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 版本，您必須卸除可用性群組並使用 `DTC_SUPPORT = PER_DB` 設定來重新建立。 
+
+若要停用分散式交易，請使用下列 Transact-SQL 命令：
+
+```sql
+ALTER AVAILABILITY GROUP MyaAG
+   SET (
+      DTC_SUPPORT = NONE  
+      );
+```
 
 ## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>分散式交易 - 技術概念
 

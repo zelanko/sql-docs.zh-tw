@@ -12,12 +12,12 @@ ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 4e0e8afe9c46d6d1f4c5382152de8a0f66ac6e9e
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 4dd095f8d4a9254b88680b13bffcf319960336f3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997520"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585606"
 ---
 # <a name="restore-a-database-master-key"></a>還原資料庫主要金鑰
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53997520"
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>[權限]
+### <a name="permissions"></a>權限
 需要資料庫的 CONTROL 權限。  
   
 ## <a name="using-sql-server-management-studio-with-transact-sql"></a>搭配 Transact-SQL 使用 SQL Server Management Studio  
@@ -48,10 +48,12 @@ ms.locfileid: "53997520"
   
 2. 在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-3. 在標準列上，按一下 **[新增查詢]**。  
+3. 在標準列上，按一下 **[新增查詢]** 。  
   
-4. 將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
-  
+4. 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```sql
     -- Restores the database master key of the AdventureWorks2012 database.  
     USE AdventureWorks2012;  
@@ -64,6 +66,6 @@ ms.locfileid: "53997520"
     ```  
   
     > [!NOTE]  
-    > 金鑰的檔案路徑和金鑰的密碼 (如果有) 不同於上方指示。 請確定兩者都是您伺服器和金鑰設定專用的。  
+    > The file path to the key and the key's password (if it exists) will be different than what is indicated above. Please make sure that both are specific to your server and key set-up.  
   
  如需詳細資訊，請參閱 [RESTORE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-master-key-transact-sql.md)  

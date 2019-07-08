@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0753f6459ac832bd4b5564e356a62bcc8b54aa30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b05cca816684cbb95c625232883d06706edfe7f6
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944708"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351716"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "65944708"
 
 ||||||
 |---|---|---|---|---|
-|** _\* SQL Server \*_ ** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|** _\* SQL Server \*_** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -273,7 +273,7 @@ GO
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|** _\* SQL Database<br />單一資料庫/彈性集區 \*_ **&nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|** _\* SQL Database<br />單一資料庫/彈性集區 \*_** &nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -478,8 +478,8 @@ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB) 指定資料庫的
 
 以下規則會套用到 MAXSIZE 和 EDITION 引數：
 
-- 如果指定了 EDITION 但是未指定 MAXSIZE，就會使用版本的預設值。 例如，如果將 EDITION 設定為 Standard，而未指定 MAXSIZE，則 MAXSIZE 會自動設定為 500 MB。
-- 如果 MAXSIZE 和 EDITION 皆未指定，則 EDITION 會設定為 Standard (S0) 而 MAXSIZE 則設定為 250 GB。
+- 如果指定了 EDITION 但是未指定 MAXSIZE，就會使用版本的預設值。 例如，如果將 EDITION 設為 Standard，而未指定 MAXSIZE，則 MAXSIZE 會自動設定為 250 MB。
+- 如果 MAXSIZE 和 EDITION 皆未指定，則 EDITION 會設定為 General Purpose 而 MAXSIZE 設定為 32 GB。
 
 MODIFY (SERVICE_OBJECTIVE = \<service-objective>) 指定效能等級。 下列範例會將進階資料庫的服務目標變更為 `P6`：
 
@@ -659,7 +659,7 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|** _\* SQL Database<br />受控執行個體 \*_ **&nbsp;|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|** _\* SQL Database<br />受控執行個體 \*_** &nbsp;|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -780,7 +780,7 @@ ALTER DATABASE WideWorldImporters
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|** _\* SQL 資料<br />倉儲 \*_ ** &nbsp;|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|** _\* SQL 資料<br />倉儲 \*_** &nbsp;|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -901,7 +901,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics<br />Platform System (PDW) \*_ ** &nbsp;|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 ||||||
 
 &nbsp;

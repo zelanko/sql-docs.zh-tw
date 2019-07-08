@@ -4,7 +4,7 @@ Description: 透過收集完整記憶體傾印，針對 SSMS 停止回應或當�
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
-ms.topic: how-to
+ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
@@ -12,12 +12,12 @@ manager: craigg
 ms.reviewer: dineth, sstein
 ms.custom: ''
 ms.date: 05/17/2019
-ms.openlocfilehash: 2fbd0f4680c7a63a5390d93589f44b708f6c2629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af7f9222a5de8c0e899d22d32e53d7638a4158cb
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983121"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412899"
 ---
 # <a name="get-full-memory-dump"></a>取得完整記憶體傾印
 
@@ -31,9 +31,9 @@ ms.locfileid: "65983121"
 
 2. 將下載項目解壓縮到資料夾。
 
-3. 開啟命令提示字元，並執行下列命令。
+3. 開啟命令提示字元 (例如 `cmd.exe`)，然後執行以下命令。
 
-    ```cmd
+    ```
     <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
     ```
 

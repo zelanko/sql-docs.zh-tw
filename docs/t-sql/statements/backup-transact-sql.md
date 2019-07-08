@@ -1,7 +1,7 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -47,12 +47,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 04dc8f227a64e4c21c8104d679086ebe9de57f6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a22f789aa967f7a6dcb9582083bf22c5698e99e7
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175308"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419065"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -70,7 +70,7 @@ ms.locfileid: "66175308"
 
 ||||
 |---|---|---|
-|** _\* SQL Server \*_ ** &nbsp;|[SQL Database<br />受控執行個體](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|** _\* SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -931,7 +931,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\* SQL Database<br />受控執行個體 \*_ ** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\* SQL Database<br />受控執行個體 \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
@@ -980,7 +980,7 @@ DATABASE 指定完整的資料庫備份。 在資料庫備份期間，受控執�
 > [!IMPORTANT]
 > 在受控執行個體上建立的資料庫備份，只能在其他受控執行個體上還原。 它無法還原至 SQL Server 內部部署執行個體 (如同 SQL Server 2016 資料庫的備份無法還原至 SQL Server 2012 執行個體)。
 
-當您還原 BACKUP DATABASE 所建立的備份 (「資料備份」  ) 時，就會還原整個備份。 若要從 Azure SQL Database 受控執行個體自動備份進行還原，請參閱 [SQL Database 還原](https://docs.microsoft.com/azure/sql-database/sql-database-restore)。
+當您還原 BACKUP DATABASE 所建立的備份 (「資料備份」  ) 時，就會還原整個備份。 若要從 Azure SQL Database 受控執行個體自動備份進行還原，請參閱[將資料庫還原到受控執行個體](/azure/sql-database/sql-database-managed-instance-get-started-restore)。
 
 { *database_name* |  **@** _database\_name\_var_ } 這是要備份完整資料庫的來源資料庫。 如果這個名稱是以變數 ( **@** _database\_name\_var_) 的形式提供，您還可以將這個名稱指定為字串常數 ( **@** _database\_name\_var_ **=** _database name_)，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。
 
@@ -1116,7 +1116,7 @@ WITH STATS = 5, COPY_ONLY;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />受控執行個體](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System (PDW) \*_ ** &nbsp;|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />受控執行個體](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 
 &nbsp;
 

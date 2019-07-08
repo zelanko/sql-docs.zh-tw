@@ -13,12 +13,12 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b91e4f912de3eff2d64e7cbbf35aad56cbccbcd
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 19043cd42f89c16dbbab88264bf5710c50d14067
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58072222"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586450"
 ---
 # <a name="configure-an-oracle-publisher"></a>設定 Oracle 發行者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +31,8 @@ ms.locfileid: "58072222"
 3.  在「 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」上安裝 Oracle 用戶端軟體和 OLE DB 提供者，然後停止並重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 如果「散發者」在 64 位元平台上執行，則必須使用 Oracle OLE DB 提供者的 64 位元版本。  
   
 4.  在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端將 Oracle 資料庫設為「發行者」。  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援下列交易式與快照式複寫的異質性情況：  
   
@@ -57,7 +59,7 @@ ms.locfileid: "58072222"
 > [!NOTE]  
 >  用 **CASCADE** 選項來卸除 **MSSQLSERVERDISTRIBUTOR** 公用同義字和設定的 Oracle 複寫使用者，會從「Oracle 發行者」移除所有的複寫物件。  
   
- 在 Oracle 複寫使用者結構描述的安裝程式中會提供範例指令碼進行輔助。 安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 後，可在下列目錄中取得此指令碼：*\<磁碟機>*:\\\Program Files\Microsoft SQL Server\\*\<執行個體名稱>* \MSSQL\Install\oracleadmin.sql。 它也包含在＜ [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)＞主題中。  
+ 在 Oracle 複寫使用者結構描述的安裝程式中會提供範例指令碼進行輔助。 安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 後，可在下列目錄中取得此指令碼： *\<磁碟機>* :\\\Program Files\Microsoft SQL Server\\ *\<執行個體名稱>* \MSSQL\Install\oracleadmin.sql。 它也包含在＜ [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)＞主題中。  
   
  使用具有 DBA 權限的帳戶連接到 Oracle 資料庫並執行指令碼。 此指令碼會提示輸入複寫管理使用者結構描述的使用者與密碼，以及要在其中建立物件的預設資料表空間 (資料表空間必須已經存在於 Oracle 資料庫中)。 如需如何為物件指定其他資料表空間的資訊，請參閱[管理 Oracle 資料表空間](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。 可以選擇任何使用者名稱和強式密碼，但是需將兩者都記下來，因為稍後當您將 Oracle 資料庫設為「發行者」時必須提供此資訊。 建議僅將結構描僅用於複寫所需的物件；不要建立資料表來發行於此結構描述中。  
   
@@ -113,9 +115,9 @@ ms.locfileid: "58072222"
   
  如果成功連接到「Oracle 發行者」，則嘗試使用與您建立之複寫管理使用者結構描述相關聯的帳戶和密碼登入資料庫。 當以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務使用的 Windows 帳戶執行時，必須執行下列項目：  
   
-1.  按一下 **[開始]**，然後按一下 **[執行]**。  
+1.  按一下 **[開始]** ，然後按一下 **[執行]** 。  
   
-2.  輸入 `cmd` ，然後按一下 **[確定]**。  
+2.  輸入 `cmd` ，然後按一下 **[確定]** 。  
   
 3.  在命令提示字元中，輸入：  
   

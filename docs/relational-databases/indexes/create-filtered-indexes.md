@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa37094aa6e41da48de776e7bb73b98096cae503
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15be60fe093bfc28d29e5d9b8883f3928936883b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523492"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583201"
 ---
 # <a name="create-filtered-indexes"></a>建立篩選的索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,11 +52,11 @@ ms.locfileid: "52523492"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法建立篩選的索引：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -100,7 +100,7 @@ ms.locfileid: "52523492"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。 若要修改篩選索引運算式，請使用 CREATE INDEX WITH DROP_EXISTING。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -113,29 +113,31 @@ ms.locfileid: "52523492"
   
 3.  按一下加號展開要建立篩選索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引] 資料夾，指向 [新增索引]，然後選取 [非叢集索引…]。  
+4.  以滑鼠右鍵按一下 [索引]  資料夾，指向 [新增索引]  ，然後選取 [非叢集索引…]  。  
   
 5.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
-6.  按一下 [索引鍵資料行]底下的 [加入...]。  
+6.  按一下 [索引鍵資料行]  下的 [新增...]  。  
   
-7.  在 [從 _table\_name_ 選取資料行] 對話方塊中，選取要新增至唯一索引之一或多個資料表資料行的一或多個核取方塊。  
+7.  在 [從 _table\_name_ 選取資料行]  對話方塊中，選取要新增至唯一索引之一或多個資料表資料行的一或多個核取方塊。  
   
-8.  按一下 [確定] 。  
+8.  按一下 [確定]  。  
   
-9. 在 [篩選] 頁面的 [篩選運算式]底下，輸入要用來建立篩選索引的 SQL 運算式。  
+9. 在 [篩選]  頁面的 [篩選運算式]  底下，輸入要用來建立篩選索引的 SQL 運算式。  
   
-10. 按一下 [確定] 。  
-  
+10. 按一下 [確定]  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-filtered-index"></a>建立篩選的索引  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -175,9 +177,9 @@ ms.locfileid: "52523492"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  

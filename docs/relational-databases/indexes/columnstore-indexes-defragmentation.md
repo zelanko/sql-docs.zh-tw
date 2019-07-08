@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c33b07af2ad43f15913580ce55c173d04a876366
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 67131c083966244db252c047b200c2a6d979aadb
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511537"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388139"
 ---
 # <a name="columnstore-indexes---defragmentation"></a>資料行存放區索引 - 重組
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52511537"
   
 使用 [sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) 中的範例計算分散。 這可協助您判斷是否需要執行 REORGANIZE 作業。  
   
-### <a name="example-how-reorganizing-works"></a>範例︰重新組織的運作方式  
+### <a name="example-how-reorganizing-works"></a>範例重新組織的運作方式  
  本範例展示 ALTER INDEX REORGANIZE 如何將所有差異存放區資料列群組強制放置於資料行存放區，然後再將資料列群組合併。  
   
 1.  執行此 Transact-SQL，建立包含 300,000 個資料列的暫存表格。 我們將使用此暫存表格大量載入資料列至資料行存放區索引中。  
@@ -55,6 +55,9 @@ ms.locfileid: "52511537"
     CREATE DATABASE [columnstore];  
     GO  
   
+    USE columnstore;
+    GO
+
     IF EXISTS (SELECT name FROM sys.tables  
         WHERE name = N'staging'  
         AND object_id = OBJECT_ID (N'staging'))  

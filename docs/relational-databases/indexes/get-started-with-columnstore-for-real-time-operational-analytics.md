@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d1d5699a32b62de823846e64757a1842a9337ad
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 38d58dc9156488e9c80e199ba2074b96015df7f7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294446"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583173"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>開始使用資料行存放區進行即時作業分析
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,9 @@ ms.locfileid: "56294446"
     ```  
   
 3.  您只需要執行這個動作！  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  您現在已準備好執行即時作業分析，而不需對應用程式進行任何變更。  分析查詢將針對資料行存放區索引執行，而 OLTP 作業將針對 OLTP btree 索引繼續執行。 OLTP 工作負載將繼續執行，但會產生一些額外的負荷來維護資料行存放區索引。 請參閱下一節中的效能最佳化。  
   
 ## <a name="blog-posts"></a>部落格文章  

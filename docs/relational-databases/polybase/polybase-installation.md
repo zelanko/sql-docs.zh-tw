@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: b3e6a0fc14137ca13e3539a7046edf576b4719ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb0f511f5b8a470e4f7784d6dff9ce4e46650543
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775051"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581234"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安裝 PolyBase
 
@@ -91,6 +91,8 @@ ms.locfileid: "64775051"
      此選項也會啟用 Microsoft Distributed Transaction Coordinator (MSDTC) 防火牆連線，並修改 MSDTC 登錄設定。  
    
 6. 在 [PolyBase 設定] 頁面上，指定至少具有六個連接埠的連接埠範圍。 SQL Server 安裝程式會配置該範圍內前六個可用的連接埠。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    >[!IMPORTANT]
    > 安裝完成後，您必須[啟用 PolyBase 功能](#enable)。

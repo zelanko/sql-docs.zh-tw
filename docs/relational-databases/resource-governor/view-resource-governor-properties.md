@@ -14,12 +14,12 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: ed9959bf001855e869262c9f91f2821bf7c59744
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 95c7b2a185786c37687a28978fc4786c45a99958
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689901"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586186"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,20 +49,22 @@ ms.locfileid: "55689901"
   
  您可以利用查詢 [sys.dm_resource_governor_configuration](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) 動態管理檢視的方式，查看目前 is_configuration_pending 的狀況，了解是否有暫止的組態。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
  檢視資源管理員屬性需要 VIEW SERVER STATER 權限。 資源管理員組態工作需要 CONTROL SERVER 權限。  
   
 ##  <a name="ViewRGProp"></a> Resource Governor 屬性頁面  
  **若要使用下列項目中的 [Resource Governor 屬性] 頁面來檢視 Resource Governor 屬性： [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
   
-2.  以滑鼠右鍵按一下 [Resource Governor]，然後按一下 [屬性]，這會開啟 [Resource Governor 屬性] 頁面。  
+2.  以滑鼠右鍵按一下 [Resource Governor]  ，然後按一下 [屬性]  ，這會開啟 [Resource Governor 屬性]  頁面。  
   
 3.  如需有關該頁中之欄位的說明，請參閱＜ [資源管理員屬性](#RGProp)＞。  
   
-4.  若要儲存任何變更，請按一下 **[確定]**。  
-  
+4.  若要儲存任何變更，請按一下 **[確定]** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="RGProp"></a> Resource Governor properties  
  **分類函數名稱**  
  從清單中選取以指定分類函數。  
@@ -71,7 +73,7 @@ ms.locfileid: "55689901"
  以選取或清除核取方塊的方式，啟用或停用資源管理員。  
   
  **資源集區**  
- 使用所提供的方格，建立或變更資源集區和外部資源集區組態。 此方格會填入預先定義的內部與預設集區的資訊。 以按一下集區資料列的第一個資料行的方式，選取要進行作業的集區。 若要建立新的資源集區，請按一下前面有星號 (**&#42;**) 的資料列。  
+ 使用所提供的方格，建立或變更資源集區和外部資源集區組態。 此方格會填入預先定義的內部與預設集區的資訊。 以按一下集區資料列的第一個資料行的方式，選取要進行作業的集區。 若要建立新的資源集區，請按一下前面有星號 ( **&#42;** ) 的資料列。  
   
  **名稱**  
  指定資源集區的名稱。  
@@ -91,7 +93,7 @@ ms.locfileid: "55689901"
  如需詳細資訊，請參閱 [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md) (建立資源集區 (Transact-SQL)) 和 [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md) (建立外部資源集區 (Transact-SQL)。  
   
  **資源集區的工作負載群組**  
- 使用提供的方格，建立或變更工作負載群組的組態。 此方格會填入預先定義的內部與預設群組的資訊。 按一下集區資料列的第一個資料行，選取要進行作業的群組。 若要建立新的工作負載群組，請按一下前面有星號 (**&#42;**) 的資料列。  
+ 使用提供的方格，建立或變更工作負載群組的組態。 此方格會填入預先定義的內部與預設群組的資訊。 按一下集區資料列的第一個資料行，選取要進行作業的群組。 若要建立新的工作負載群組，請按一下前面有星號 ( **&#42;** ) 的資料列。  
   
  **名稱**  
  指定工作負載群組的名稱。  

@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: ebfac68a62ef9ddbe954ed692bf46549e07bae88
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 0c22fb10e6264420c95149bb77c2318fdf89a715
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67391338"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556970"
 ---
 # <a name="tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>教學課程：使用隨機化加密在已啟用記憶體保護區的資料行上建立及使用索引
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -87,7 +87,7 @@ Microsoft 強烈建議先在您的資料庫中啟用 ADR，再使用隨機化加
 
    CREATE INDEX IX_LastName ON [Employees] ([LastName])
    INCLUDE ([EmployeeID], [FirstName], [SSN], [Salary]);
-   GO;
+   GO
    ```
 
 1. 在 **LastName** 資料行上執行豐富查詢，並確認 SQL Server 在執行查詢時會使用該索引。
@@ -154,7 +154,7 @@ Microsoft 強烈建議先在您的資料庫中啟用 ADR，再使用隨機化加
 
         CREATE INDEX IX_LastName ON [Employees] ([LastName])
         INCLUDE ([EmployeeID], [FirstName], [SSN], [Salary]);
-        GO;
+        GO
         ```
 
 1. 以資料擁有者的身分，在 **LastName** 資料行上執行豐富查詢，並確認 SQL Server 在執行查詢時會使用該索引。

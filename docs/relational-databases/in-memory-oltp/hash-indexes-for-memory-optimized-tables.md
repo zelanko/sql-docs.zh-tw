@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ab8ab5fc572648840e2b4b5919ae0c3417a2a23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 486f361ab7915c0a7be0076a7f90b2359887cabc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047654"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581863"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>為記憶體最佳化資料表的雜湊索引進行疑難排解
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -117,7 +117,9 @@ ORDER BY [table], [index];
     A. 模數運算子可用來設定 StatusCode 資料行中重複值的比率。  
     B. 迴圈大約會在 1 分鐘內插入 262,144 個資料列。  
 3. 列印 (PRINT) 訊息會要求您執行先前來自 **sys.dm_db_xtp_hash_index_stats**的 SELECT。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ```sql
 DROP TABLE IF EXISTS SalesOrder_Mem;  
 go  

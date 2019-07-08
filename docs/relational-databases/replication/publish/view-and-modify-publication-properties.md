@@ -19,12 +19,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25808ffd9a65a62d1f2849f54ca5fcb3ed5015b6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e11c0b6a3f7ef8ebeeb0c8059e26e37494ab345e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133578"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585510"
 ---
 # <a name="view-and-modify-publication-properties"></a>檢視及修改發行集屬性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +57,9 @@ ms.locfileid: "54133578"
 -   建立發行集之後，某些屬性變更需要新的快照集。 如果發行集有訂閱，則某些變更還需要重新初始化所有訂閱。 如需詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)和[在現有發行集中新增和卸除發行項](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在位於 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 與複寫監視器的 [發行集屬性 - \<發行集>] 對話方塊中，檢視及修改發行集屬性。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+ 您可以在位於 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 與複寫監視器的 [發行集屬性 - \<發行集>]  對話方塊中，檢視及修改發行集屬性。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
- [發行集屬性 - \<發行集>] 對話方塊上包含下列頁面：  
+ [發行集屬性 - \<發行集>]  對話方塊上包含下列頁面：  
   
 -   **[一般]** 頁面包含發行集名稱和描述、發行集類型以及訂閱過期設定。  
   
@@ -87,17 +87,19 @@ ms.locfileid: "54133578"
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。  
   
-3.  以滑鼠右鍵按一下發行集，然後按一下 **[屬性]**。  
+3.  以滑鼠右鍵按一下發行集，然後按一下 **[屬性]** 。  
   
-4.  必要時修改任何屬性，然後按一下 **[確定]**。  
-  
+4.  必要時修改任何屬性，然後按一下 **[確定]** 。  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-view-and-modify-publication-properties-in-replication-monitor"></a>若要在複寫監視器中檢視和修改發行集屬性  
   
 1.  展開「複寫監視器」左窗格中的「發行者」群組，然後展開一個「發行者」。  
   
-2.  以滑鼠右鍵按一下發行集，然後按一下 **[屬性]**。  
+2.  以滑鼠右鍵按一下發行集，然後按一下 **[屬性]** 。  
   
-3.  必要時修改任何屬性，然後按一下 **[確定]**。  
+3.  必要時修改任何屬性，然後按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用複寫預存程序來以程式設計的方式修改發行集及傳回其屬性。 您使用的預存程序將根據發行集的類型而定。  
@@ -111,7 +113,7 @@ ms.locfileid: "54133578"
 1.  執行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，在 **@property** 參數中指定要變更的發行集屬性，並在 **@value** 參數指定發行集的名稱。  
   
     > [!NOTE]  
-    >  如果此變更將需要產生新的快照集，您也必須針對 **@force_invalidate_snapshot** 指定 **@force_invalidate_snapshot**的值，而如果此變更將需要重新初始化訂閱者，您就必須針對 **@force_invalidate_snapshot** 指定 **@force_reinit_subscription**。 如需當變更時需要新的快照集或重新初始化之屬性的詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
+    >  如果此變更將需要產生新的快照集，您也必須針對 **@force_invalidate_snapshot** 指定 **@force_invalidate_snapshot** 的值，而如果此變更將需要重新初始化訂閱者，您就必須針對 **@force_invalidate_snapshot** 指定 **@force_reinit_subscription** 。 如需當變更時需要新的快照集或重新初始化之屬性的詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>檢視合併式發行集的屬性  
   
@@ -160,7 +162,7 @@ ms.locfileid: "54133578"
   
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 **false**，則表示步驟 2 中的發行集屬性定義不正確，或者該發行集不存在。  
   
-4.  (選擇性) 若要變更屬性，請針對一或多個可設定的屬性設定新的值。 使用邏輯 AND 運算子 (Microsoft Visual C# 中的**&** 及 Microsoft Visual Basic 中的 **And** )，以判斷是否已針對 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性設定給定的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。 使用包含的邏輯 OR 運算子 (Visual C# 中的**|** 和 Visual Basic 中的 **Or** )，並使用排除的邏輯 OR 運算子 (Visual C# 中的**^** 和 Visual Basic 中的 **Xor** )，為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性變更 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
+4.  (選擇性) 若要變更屬性，請針對一或多個可設定的屬性設定新的值。 使用邏輯 AND 運算子 (Microsoft Visual C# 中的 **&** 及 Microsoft Visual Basic 中的 **And** )，以判斷是否已針對 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性設定給定的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。 使用包含的邏輯 OR 運算子 (Visual C# 中的 **|** 和 Visual Basic 中的 **Or** )，並使用排除的邏輯 OR 運算子 (Visual C# 中的 **^** 和 Visual Basic 中的 **Xor** )，為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性變更 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
   
 5.  (選擇性) 如果您已針對 **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** 指定 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>的值，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器上的變更。 如果您已針對 **false** 指定 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 的值 (預設值)，則會立即將變更傳送到伺服器。  
   
@@ -172,7 +174,7 @@ ms.locfileid: "54133578"
   
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 **false**，則表示步驟 2 中的發行集屬性定義不正確，或者該發行集不存在。  
   
-4.  (選擇性) 若要變更屬性，請針對一或多個可設定的屬性設定新的值。 使用邏輯 AND 運算子 (Microsoft Visual C# 中的**&** 和 Visual Basic 中的 **And** )，以判斷是否已針對 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性設定給定的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。 使用包含的邏輯 OR 運算子 (Visual C# 中的**|** 和 Visual Basic 中的 **Or** )，並使用排除的邏輯 OR 運算子 (Visual C# 中的**^** 和 Visual Basic 中的 **Xor** )，為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性變更 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
+4.  (選擇性) 若要變更屬性，請針對一或多個可設定的屬性設定新的值。 使用邏輯 AND 運算子 (Microsoft Visual C# 中的 **&** 和 Visual Basic 中的 **And** )，以判斷是否已針對 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性設定給定的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。 使用包含的邏輯 OR 運算子 (Visual C# 中的 **|** 和 Visual Basic 中的 **Or** )，並使用排除的邏輯 OR 運算子 (Visual C# 中的 **^** 和 Visual Basic 中的 **Xor** )，為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性變更 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
   
 5.  (選擇性) 如果您已針對 **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** 指定 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>的值，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器上的變更。 如果您已針對 **false** 指定 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 的值 (預設值)，則會立即將變更傳送到伺服器。  
   

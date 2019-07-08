@@ -21,18 +21,37 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 31bfc7ef9761ac40b56af9b733a29fbb12bc586e
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.openlocfilehash: 4e366d686bc71d9b4ee391013fedb25e93494c45
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66822955"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413151"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 追蹤旗標用來設定特定的伺服器特性，或變更特定行為。 例如，追蹤旗標 3226 是常用的啟動追蹤旗標，可隱藏錯誤記錄檔中的成功備份訊息。 追蹤旗標經常用來診斷效能問題，或是針對預存程序或複雜電腦系統進行偵錯，但 Microsoft 支援服務也可能會建議使用它們來解決對特定工作負載產生負面影響的行為。  按照指示使用時，生產環境完全支援所有記錄的追蹤旗標，以及 Microsoft 支援服務所提供的建議。  請注意，這份清單中的追蹤旗標可能有其特定使用方式的額外考量，因此建議您仔細檢閱此處及/或支援工程師提供的所有建議。 此外，如同 SQL Server 中的任何設定變更一樣，最好一律在部署之前於非生產環境中徹底測試旗標。
+
+## <a name="remarks"></a>Remarks  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中有三種類型的追蹤旗標：查詢、工作階段和全域。 查詢追蹤旗標可用於特定查詢的內容。 工作階段追蹤旗標用於某個連接，而且只會在該連接顯示出來。 全域追蹤旗標是設在伺服器層級，只要是該伺服器上的連接，都看得到它們。 某些旗標只能啟用為全域旗標，某些則可以啟用為全域或工作階段範圍。  
+  
+ 適用的規則如下：  
+-   全域追蹤旗標必須全域啟用， 否則追蹤旗標就沒有效果。 建議您使用 **-T** 命令列選項，在啟動時啟用全域追蹤旗標。 這可確保追蹤旗標在伺服器重新啟動後仍維持使用中。 重新啟動 SQL Server，使追蹤旗標生效。 
+-   如果追蹤旗標具有全域、工作階段或查詢的範圍，可以使用適當的範圍加以啟用。 以工作階段層級啟用的追蹤旗標絕不會影響其他工作階段，而且當開啟該工作階段的 SPID 登出時，該追蹤旗標的效果也隨之消失。  
+  
+請利用下列方法之一，將追蹤旗標設為開啟或關閉：
+-   使用 DBCC TRACEON 和 DBCC TRACEOFF 命令。  
+     例如，若要全域啟用 2528 追蹤旗標，請搭配使用 [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) 和 -1 引數：`DBCC TRACEON (2528, -1)`。 使用 DBCC TRACEON 啟用的全域追蹤旗標，在伺服器重新啟動後就會失去效果。 若要關閉全域追蹤旗標，請搭配使用 [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) 和 -1 引數。  
+-   使用 **-T** 啟動選項，指定應在啟動期間設定追蹤旗標。  
+     **-T** 啟動選項會全域啟用追蹤旗標。 您不能利用啟動選項啟用工作階段層級的追蹤旗標。 這可確保追蹤旗標在伺服器重新啟動後仍維持使用中。 如需啟動選項的詳細資訊，請參閱 [Database Engine 服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)。
+-   在查詢層級，請使用 QUERYTRACEON [查詢提示](https://support.microsoft.com/kb/2801413) \(機器翻譯\)。 只有上表中記錄的查詢最佳化工具追蹤旗標支援 QUERYTRACEON 選項。
+  
+使用 `DBCC TRACESTATUS` 命令可判斷目前有哪些使用中的追蹤旗標。
+
+## <a name="trace-flags"></a>追蹤旗標
+
   
 下表列出並描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的追蹤旗標。
  
@@ -156,21 +175,7 @@ ms.locfileid: "66822955"
 |**11023**|針對未在 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 陳述式中明確指定採樣速率的所有後續統計資料更新，停用上次保存的採樣速率。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4039284) \(機器翻譯\)。<br /><br />**範圍**：全域或工作階段|    
 |**11024**|當任何分割區的修改次數超過總[閾值](../../relational-databases/statistics/statistics.md#AutoUpdateStats)時，使自動更新統計資料功能觸發。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4041811) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 和更新版本的組建。<br /><br />**範圍**：全域或工作階段| 
   
-## <a name="remarks"></a>Remarks  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中有三種類型的追蹤旗標：查詢、工作階段和全域。 查詢追蹤旗標可用於特定查詢的內容。 工作階段追蹤旗標用於某個連接，而且只會在該連接顯示出來。 全域追蹤旗標是設在伺服器層級，只要是該伺服器上的連接，都看得到它們。 某些旗標只能啟用為全域旗標，某些則可以啟用為全域或工作階段範圍。  
-  
- 適用的規則如下：  
--   全域追蹤旗標必須全域啟用， 否則追蹤旗標就沒有效果。 建議您使用 **-T** 命令列選項，在啟動時啟用全域追蹤旗標。 這可確保追蹤旗標在伺服器重新啟動後仍維持使用中。  
--   如果追蹤旗標具有全域、工作階段或查詢的範圍，可以使用適當的範圍加以啟用。 以工作階段層級啟用的追蹤旗標絕不會影響其他工作階段，而且當開啟該工作階段的 SPID 登出時，該追蹤旗標的效果也隨之消失。  
-  
-請利用下列方法之一，將追蹤旗標設為開啟或關閉：
--   使用 DBCC TRACEON 和 DBCC TRACEOFF 命令。  
-     例如，若要全域啟用 2528 追蹤旗標，請搭配使用 [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) 和 -1 引數：`DBCC TRACEON (2528, -1)`。 使用 DBCC TRACEON 啟用的全域追蹤旗標，在伺服器重新啟動後就會失去效果。 若要關閉全域追蹤旗標，請搭配使用 [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) 和 -1 引數。  
--   使用 **-T** 啟動選項，指定應在啟動期間設定追蹤旗標。  
-     **-T** 啟動選項會全域啟用追蹤旗標。 您不能利用啟動選項啟用工作階段層級的追蹤旗標。 這可確保追蹤旗標在伺服器重新啟動後仍維持使用中。 如需啟動選項的詳細資訊，請參閱 [Database Engine 服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)。
--   在查詢層級，請使用 QUERYTRACEON [查詢提示](https://support.microsoft.com/kb/2801413) \(機器翻譯\)。 只有上表中記錄的查詢最佳化工具追蹤旗標支援 QUERYTRACEON 選項。
-  
-使用 `DBCC TRACESTATUS` 命令可判斷目前有哪些使用中的追蹤旗標。
+
   
 ## <a name="examples"></a>範例  
  下列範例使用 DBCC TRACEON 在伺服器層級為所有工作階段設定追蹤旗標 3205。  

@@ -1,7 +1,7 @@
 ---
 title: 使用 PowerShell 設定 Always Encrypted 金鑰 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 889df15caaba289e5f0fed43727d9358bab3a2e1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 5e8f0eb293390e88f0c7d8f982c0525b5a62f871
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327469"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387996"
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>使用 PowerShell 設定永遠加密金鑰
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "54327469"
 
 本節所述的金鑰佈建方法，不支援安全性系統管理員與 DBA 之間的角色隔離。 下列步驟有些會結合實體金鑰作業和金鑰中繼資料作業。 因此，使用 DevOps 模型的組織，或是如果資料庫裝載於雲端且主要目標是限制雲端管理員 (而不是內部部署 DBA) 存取敏感性資料，建議利用這種方法佈建金鑰。 如果潛在的對象包括 DBA，或是 DBA 不應具有存取敏感性資料的權限，即不建議使用。
 
-請先確定 PowerShell 環境是在不同於裝載資料庫之電腦的安全電腦上執行，再執行與存取純文字金鑰或金鑰存放區相關的任何步驟 (下表中的 [存取純文字金鑰/金鑰存放區] 資料行)。 如需詳細資訊，請參閱 ***金鑰管理的安全性考量***。
+請先確定 PowerShell 環境是在不同於裝載資料庫之電腦的安全電腦上執行，再執行與存取純文字金鑰或金鑰存放區相關的任何步驟 (下表中的 [存取純文字金鑰/金鑰存放區]  資料行)。 如需詳細資訊，請參閱 ***金鑰管理的安全性考量***。
 
 
 工作  |發行項  |存取純文字金鑰/金鑰存放區  |存取資料庫   
@@ -177,16 +177,16 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 ## <a name="KeyProvisionWithRoles"></a> 使用角色隔離的金鑰佈建
 
-本節提供安全性系統管理員不能存取資料庫，而資料庫系統管理員不能存取金鑰存放區或純文字金鑰的加密設定步驟。
+對於安全性管理員不能存取資料庫，而資料庫管理員不能存取金鑰存放區或純文字金鑰，本節提供加密設定步驟。
 
 
 ### <a name="security-administrator"></a>安全性系統管理員
 
-執行與存取純文字金鑰或金鑰存放區相關的任何步驟 (下表中的 [存取純文字金鑰/金鑰存放區] 資料行) 前，請確定︰
+執行與存取純文字金鑰或金鑰存放區相關的任何步驟 (下表中的 [存取純文字金鑰/金鑰存放區]  資料行) 前，請確定︰
 1.  PowerShell 環境執行所在的安全電腦，與裝載您資料庫的電腦不同。
 2.  貴組織的 DBA 沒有電腦存取權 (會破壞的角色隔離的目的)。
 
-如需詳細資訊，請參閱 [金鑰管理的安全性考量](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)。
+如需詳細資訊，請參閱 [金鑰管理的安全性考量](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)。
 
 
 工作  |發行項  |存取純文字金鑰/金鑰存放區  |存取資料庫  

@@ -18,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86c030eabfe3b18f544ca43f3e493bcd90f5e5ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a12c6ae385b4fa527251da266f2d0711eb2b9e9c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994233"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583434"
 ---
 # <a name="tempdb-database"></a>tempdb 資料庫
 
@@ -244,6 +244,8 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
     ```
 3. 針對經記憶體最佳化之資料表的查詢不支援鎖定和隔離提示，因此針對經記憶體最佳化之 TempDB 目錄檢視的查詢不支援鎖定和隔離提示。 至於 SQL Server 中的其他系統目錄檢視，針對系統檢視表的所有交易都會是 READ COMMITTED 隔離 (或在本例中為 READ COMMITTED SNAPSHOT)。
 4. 啟用經記憶體最佳化的 tempdb 中繼資料後，暫存資料表可能會有一些資料行存放區索引的問題。 在此預覽版本中，使用經記憶體最佳化的 tempdb 中繼資料時，最好避免在暫存資料表上使用資料行存放區索引。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE] 
 > 這些限制僅適用於參考 TempDB 系統檢視表時，如有需要，您可在存取使用者資料庫中經記憶體最佳化的資料表時，在相同的交易中建立暫存資料表。

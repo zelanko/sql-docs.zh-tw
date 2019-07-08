@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c95169a1be08b04be9b7cdb1b90fea243e99cf10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 206749c851423dd7a3b0ea06e1f443732d86b8bd
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62669291"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583853"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段
 
@@ -37,7 +37,9 @@ ms.locfileid: "62669291"
 3.  使用 fn_trace_getfilterinfo 函數可列出要使用的篩選以及同等的「擴充事件」動作。  
   
 4.  使用同等的「擴充事件」事件、動作和述詞 (篩選器) 手動建立「擴充事件」工作階段。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="to-obtain-the-trace-id"></a>若要取得追蹤識別碼  
   
 1.  在查詢編輯器中開啟 SQL 追蹤指令碼，並執行此指令碼來建立追蹤工作階段。 請注意，不需要執行追蹤工作階段也可完成此程序。  

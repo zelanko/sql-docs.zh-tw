@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9256ecdba8aa898cc0eb927f90a2f4f6e6a6a6e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b9983c4627be4b3d60b6fdb40e10932f380b970
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665635"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580992"
 ---
 # <a name="page-compression-implementation"></a>頁面壓縮實作
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "62665635"
 2.  前置詞壓縮  
   
 3.  字典壓縮  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  在您使用頁面壓縮時，索引的非分葉層級頁面會藉由僅使用資料列壓縮來進行壓縮。 如需資料列壓縮的詳細資訊，請參閱 [資料列壓縮實作](../../relational-databases/data-compression/row-compression-implementation.md)。  
   
 ## <a name="prefix-compression"></a>前置詞壓縮  

@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78ae465604c6f1b368cb0d1b8483025feef9d343
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 7a8078302624e280fa23de0401302106e867e5e0
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380386"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583015"
 ---
 # <a name="modify-statistics"></a>修改統計資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "53380386"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要：  
   
 -   使用者有資料表或檢視的 ALTER 權限。  
@@ -60,12 +60,14 @@ ms.locfileid: "53380386"
   
 4.  按一下加號展開 **[統計資料]** 資料夾。  
   
-5.  以滑鼠右鍵按一下要修改的統計資料物件，然後選取 [屬性]。  
+5.  以滑鼠右鍵按一下要修改的統計資料物件，然後選取 [屬性]  。  
   
-6.  在 [統計資料屬性 - *statistics_name*] 對話方塊的 [一般] 頁面上，按一下 [加入]、[移除]、[上移]、[下移] 或任何組合，以改變統計資料的屬性。 請記住，資料行在 [統計資料行] 方格中位置會大幅影響統計資料的效益。  
+6.  在 [統計資料屬性 - *statistics_name*]  對話方塊的 [一般]  頁面上，按一下 [加入]  、[移除]  、[上移]  、[下移]  或任何組合，以改變統計資料的屬性。 請記住，資料行在 [統計資料行]  方格中位置會大幅影響統計資料的效益。  
   
-7.  按一下 [確定] 。  
-  
+7.  按一下 [確定]  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改統計資料**  
   

@@ -14,12 +14,12 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e75565d69b2a5a1ac2cf5d6a9d512fffbcf768f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c75556e07d3dd5ae944e2652157f01456fdaee6d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653236"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580123"
 ---
 # <a name="unpack-a-dac-package"></a>解除封裝 DAC 封裝
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,7 +28,9 @@ ms.locfileid: "62653236"
 1.  **開始之前：** [安全性](#Security)  
   
 2.  **若要解除封裝 DAC，請使用下列方式：** [解除封裝資料層應用程式對話方塊](#UnpackDACDial)、[檢查 DAC 套件的內容](#ExamDACPack)  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="Security"></a> 安全性  
  建議您不要部署來源不明或來源不受信任的 DAC 封裝。 這類 DAC 可能包含惡意程式碼，因此可能會執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述而造成錯誤。 在您使用來源不明或來源不受信任的 DAC 之前，請將它部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的隔離測試執行個體、解除封裝 DAC 並檢查程式碼，例如預存程序或其他使用者定義的程式碼。  
   

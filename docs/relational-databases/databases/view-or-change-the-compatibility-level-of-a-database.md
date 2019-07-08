@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b0544c995039c2dda6f20ea86b5893e2938708d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: d0023f2646cadac8b189992f06b695c1779c491d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559911"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583411"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>檢視或變更資料庫的相容性層級
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "51559911"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法檢視或變更資料庫的相容性層級：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "51559911"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -52,27 +52,29 @@ ms.locfileid: "51559911"
   
 1.  連接到適當的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，請在 [物件總管] 中按一下伺服器名稱。  
   
-2.  展開 **[資料庫]**，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
+2.  展開 **[資料庫]** ，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   
-3.  以滑鼠右鍵按一下此資料庫，然後按一下 [屬性]。  
+3.  以滑鼠右鍵按一下此資料庫，然後按一下 [屬性]  。  
   
      **[資料庫屬性]** 對話方塊隨即開啟。  
   
-4.  在 **[選取頁面]** 窗格中，按一下 **[選項]**。  
+4.  在 **[選取頁面]** 窗格中，按一下 **[選項]** 。  
   
      目前的相容性層級會顯示在 **[相容性層級]** 清單方塊中。  
   
-5.  若要變更相容性層級，請從清單中選取其他選項。 選項為 [SQL Server 2008 (100)]、[SQL Server 2012 (110)]、[SQL Server 2014 (120)]、[SQL Server 2016 (130)] 與 [SQL Server 2017 (140)]。  
-  
+5.  若要變更相容性層級，請從清單中選取其他選項。 選項為 [SQL Server 2008 (100)]  、[SQL Server 2012 (110)]  、[SQL Server 2014 (120)]  、[SQL Server 2016 (130)]  與 [SQL Server 2017 (140)]  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-the-compatibility-level-of-a-database"></a>檢視資料庫的相容性層級  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會傳回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的相容性層級。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會傳回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的相容性層級。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -86,9 +88,9 @@ GO
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的相容性層級變更為 `120`，亦即 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的相容性層級。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的相容性層級變更為 `120`，亦即 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的相容性層級。  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  

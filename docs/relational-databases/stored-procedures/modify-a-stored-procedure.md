@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 597b0e7d39d178eb2ed6f8ede8db5a1852117dcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e299541e48de590474b9f1e13996ab921b9246d2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018653"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580494"
 ---
 # <a name="modify-a-stored-procedure"></a>修改預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +66,9 @@ ms.locfileid: "63018653"
 6.  若要將所做的修改儲存至程序定義，請在 **[查詢]** 功能表上按一下 **[執行]** 。  
   
 7.  若要將更新的程序定義儲存為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼，請在 **[檔案]** 功能表上按一下 **[另存新檔]** 。 接受檔案名稱，或將它取代成新名稱，然後按一下 **[儲存]** 。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!IMPORTANT]  
 >  驗證所有使用者輸入。 在使用者輸入完成驗證前，請勿加以串連。 請勿執行由未經驗證之使用者輸入所建構的命令。  
   

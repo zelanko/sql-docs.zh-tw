@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 894de6f944f8e47c90cdd1338c694ab251d23d43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 557136026e518d54d81bda44b9694f9fe86e7c9d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848938"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580656"
 ---
 # <a name="disable-check-constraints-for-replication"></a>停用複寫的檢查條件約束
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -45,21 +45,23 @@ ms.locfileid: "47848938"
   
 1.  在 **[物件總管]** 中，展開包含您要修改之檢查條件約束的資料表，然後展開 **[條件約束]** 資料夾。  
   
-2.  以滑鼠右鍵按一下您要修改的檢查條件約束，然後按一下 **[修改]**。  
+2.  以滑鼠右鍵按一下您要修改的檢查條件約束，然後按一下 **[修改]** 。  
   
 3.  在 **[檢查條件約束]** 對話方塊中的 **[資料表設計工具]** 底下，針對 **[強制複寫]** 選取 **[否]** 值。  
   
 4.  按一下 [ **關閉**]。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-disable-a-check-constraint-for-replication"></a>若要停用複製的檢查條件約束  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會建立包含 IDENTITY 資料行及 CHECK 條件約束的資料表。 接著範例會卸除條件約束再重新建立，並指定 NOT FOR REPLICATION 子句。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會建立包含 IDENTITY 資料行及 CHECK 條件約束的資料表。 接著範例會卸除條件約束再重新建立，並指定 NOT FOR REPLICATION 子句。  
   
     ```  
     USE AdventureWorks2012;  

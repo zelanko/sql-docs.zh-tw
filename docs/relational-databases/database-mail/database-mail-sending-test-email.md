@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cf3921cae772b278b66a39fa8241895d2e582c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 95e4e365ed1ec89050ceb8c3765e6a217f819cd3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506926"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585264"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>使用 Database Mail 傳送測試電子郵件  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,6 +49,8 @@ ms.locfileid: "66506926"
     sent_status 資料行會指出是否已傳送測試電子郵件訊息。
 
 1. 如果發生錯誤，請執行下列陳述式檢視錯誤訊息：
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql
     SELECT * FROM msdb.dbo.sysmail_event_log 

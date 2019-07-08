@@ -1,7 +1,7 @@
 ---
 title: 定序與 Unicode 支援 | Microsoft 文件
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -22,18 +22,20 @@ helpviewer_keywords:
 - locales [SQL Server]
 - code pages [SQL Server]
 - SQL Server collations
+- UTF-8
+- UTF-16
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a754607e4eb3af99216e5a11e9af50730279040e
-ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
+ms.openlocfilehash: bcff15423fb1ab3f1f05347bddba6eab09fae713
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66836382"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419199"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -117,57 +119,54 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
 ###  <a name="Code_Page_Defn"></a> Code Page    
  字碼頁是給定的指令碼的已排序字元集，其中每一個字元與數字索引或字碼指標值相關聯。 Windows 字碼頁一般稱為 *「字元集」* (Character set) 或 *charset*。 字碼頁是用來提供不同 Windows 系統地區設定所使用的字元集和鍵盤配置的支援。     
+ 
 ###  <a name="Sort_Order_Defn"></a> Sort Order    
  排序次序會指定如何排序資料值。 這會影響資料比較的結果。 資料是使用定序來排序，而且可以使用索引來最佳化。    
     
 ##  <a name="Unicode_Defn"></a> Unicode 支援    
-Unicode 是將字碼指標對應到字元的標準用法。 由於 Unicode 主要設計為涵蓋世界上所有語言的字元，因此不需要使用不同的字碼頁來處理不同的字元集。 如果您將可反映多種語言的字元資料儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，則請使用 Unicode (UTF-16) 資料類型 (**nchar**、**nvarchar** 和 **ntext**)，而不要使用非 Unicode 資料類型 (**char**、**varchar** 和 **text**)。 或者，從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，如果使用啟用 UTF-8 的定序 (\_UTF8)，則先前非 Unicode 資料類型 (**char** 和 **varchar**) 會變成 Unicode (UTF-8) 資料類型。 
-
-> [!NOTE]
-> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 不會變更先前現有 Unicode (UTF-16) 資料類型 (**nchar**、**nvarchar** 和 **ntext**) 的行為。   
-    
-重要限制會與非 Unicode 資料類型相關聯。 這是因為非 Unicode 電腦受限於使用單一字碼頁。 透過使用 Unicode，您可能會發現效能獲得明顯改善，因為所需要的字碼頁轉換減少。 您必須在資料庫、資料行或運算式層級個別選取 Unicode 定序，因為伺服器層級不支援這些定序。    
-    
+Unicode 是將字碼指標對應到字元的標準用法。 由於 Unicode 主要設計為涵蓋世界上所有語言的字元，因此不需要使用不同的字碼頁來處理不同的字元集。 
+   
 用戶端所使用的字碼頁是由作業系統設定決定。 若要在 Windows XP 作業系統上設定用戶端字碼頁，請使用 [控制台] 中的 **[地區設定]** 。    
-    
+
+重要限制會與非 Unicode 資料類型相關聯。 這是因為非 Unicode 電腦受限於使用單一字碼頁。 透過使用 Unicode，您可能會發現效能獲得明顯改善，因為所需要的字碼頁轉換減少。 您必須在資料庫、資料行或運算式層級個別選取 Unicode 定序，因為伺服器層級不支援這些定序。    
+   
 當您將資料從伺服器移至用戶端時，舊版用戶端驅動程式可能無法辨識您的伺服器定序。 這種問題可能會發生在您將資料從 Unicode 伺服器移至非 Unicode 用戶端時。 此時，最佳選項可能就是升級用戶端作業系統，以便更新基礎系統定序。 如果用戶端已經安裝資料庫用戶端軟體，就可以考慮將服務更新套用至資料庫用戶端軟體。    
     
-此外，您也可以嘗試針對伺服器上的資料使用不同的定序。 您可以選擇將對應至用戶端字碼頁的定序。    
-    
-若要使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中提供的 UTF-16 定序來改善部分 Unicode 字元的搜尋和排序 (僅限 Windows 定序)，您可以選取其中一個增補字元 (\_SC) 定序或其中一個版本 140 定序。    
+> [!TIP]
+> 此外，您也可以嘗試針對伺服器上的資料使用不同的定序。 您可以選擇將對應至用戶端字碼頁的定序。    
+
+如果您將可反映多種語言的字元資料儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，請使用 Unicode 資料類型 (**nchar**、**nvarchar** 和 **ntext**)，不要使用非 Unicode 資料類型 (**char**、**varchar** 和 **text**)。 
+
+> [!NOTE]
+> 針對 Unicode 資料類型，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 可以使用 UCS-2 表示最多 65,535 個字元，或是在使用增補字元的情況下，使用完整的 Unicode 範圍 (1,114,111 個字元)。 如需啟用增補字元的詳細資訊，請參閱[增補字元](#Supplementary_Characters)。
+
+或者，從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，如果使用啟用 UTF-8 的定序 (\_UTF8)，則先前非 Unicode 資料類型 (**char** 和 **varchar**) 會變成 Unicode (UTF-8) 資料類型。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 不會變更先前現有 Unicode (UTF-16) 資料類型 (**nchar**、**nvarchar** 和 **ntext**) 的行為。 請參閱 [UTF-8 和 UTF-16 間的儲存差異](#storage_differences)，取得進一步的詳細資料。
+       
+若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 中提供的 UTF-16 定序來改善部分 Unicode 字元的搜尋和排序 (僅限 Windows 定序)，您可以選取其中一個增補字元 (\_SC) 定序或其中一個版本 140 定序。    
  
 若要使用 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中提供的 UTF-8 定序以改善一些 Unicode 字元的排序和搜尋 (僅限 Windows 定序)，您必須選取啟用 UTF-8 編碼的定序 (\_UTF8)。
  
 -   UTF8 旗標可套用至：    
-   
     -   版本 90 定序 
-    
         > [!NOTE]
         > 只有在增補字元 (\_SC) 或區分變化選取器 (\_VSS) 感知定序已存在於此版本時。
-    
     -   版本 100 定序    
-    
     -   版本 140 定序   
-    
     -   BIN2<sup>1</sup> 二進位定序
     
 -   UTF8 旗標無法套用至：    
-    
     -   不支援增補字元 (\_SC) 或區分變化選取器 (\_VSS) 的 90 版定序    
-    
     -   BIN 或 BIN2<sup>2</sup> 二進位定序    
-    
     -   SQL\* 定序  
     
-<sup>1</sup> 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 開始     
-<sup>2</sup> 最高使用 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3
+<sup>1</sup> 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 開始。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 已將定序 UTF8_BIN2 替換成 Latin1_General_100_BIN2_UTF8。     
+<sup>2</sup> 最高使用 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3。 
     
 若要評估與使用 Unicode 或非 Unicode 資料類型有關的議題，請測試自己的狀況，在您的環境中衡量效能差異。 建議您將組織內系統上使用的定序標準化，並盡量部署 Unicode 伺服器和用戶端。    
     
 在許多情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會與其他伺服器或用戶端互動，而且您的組織可能會在應用程式與伺服器執行個體之間使用多重資料存取標準。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端是兩種主要類型中的其中一種：    
     
 -   **Unicode 用戶端** ，使用 OLE DB 和開放式資料庫連接 (ODBC) 3.7 版或更新版本。    
-    
 -   **非 Unicode 用戶端** ，使用 DB-Library 和 ODBC 3.6 版或更早版本。    
     
 下表將提供搭配 Unicode 和非 Unicode 伺服器的各種組合來使用多國語言資料的相關資訊。    
@@ -180,38 +179,34 @@ Unicode 是將字碼指標對應到字元的標準用法。 由於 Unicode 主�
 |非 Unicode|非 Unicode|這是多國語言資料的限制狀況。 您只能使用單一字碼頁。|    
     
 ##  <a name="Supplementary_Characters"></a> 增補字元    
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供資料類型 (例如 **Nchar** 和 **nvarchar**) 將 Unicode (UTF-16) 資料儲存至任何定序下方，以及提供資料類型 (例如 **char** 和 **varchar**) 將 Unicode (UTF-8) 資料儲存至啟用 UTF-8 的定序 (\_UTF8) 下方。 這些資料類型分別使用稱為 *UTF-16* 和 *UTF-8* 的格式來編碼文字。 Unicode Consortium 會為每個字元配置唯一的字碼指標，其值介於 0x0000 到 0x10FFFF 的範圍。 最常用的字元具有可在記憶體和磁碟上納入 8 位元或 16 位元單字的字碼指標值，但是字碼指標值大於 0xFFFF 的字元需要兩個到四個連續 8 位元單字 (UTF-8) 或兩個連續 16 位元單字 (UTF-16)。 這些字元稱為「增補字元」  ，而其他連續的 8 位元或 16 位元單字則稱為「代理字組」  。    
-    
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中引進的全新系列增補字元 (\_SC) 定序可以與 **Nchar**、**nvarchar** 和 **sql_variant** 資料類型搭配使用。 例如： `Latin1_General_100_CI_AS_SC`或 `Japanese_Bushu_Kakusu_100_CI_AS_SC`(如果使用日文定序的話)。 
- 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 會將增補字元支援延伸到具有新啟用 UTF-8 定序 (\_UTF8) 的資料類型 **char** 和 **varchar**。   
+Unicode Consortium 會為每個字元配置唯一的字碼元素，其值介於 000000 到 10FFFF 的範圍。 最常用的字元會具備介於 000000 到 00FFFF 範圍 (65,535 個字元) 內的字碼元素值，可在記憶體和硬碟上容於 8 位元或 16 位元的字組中。 此範圍通常會指定為基本多語系平面 (BMP)。 
 
-從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始，所有新定序都會自動支援增補字元。
+但 Unicode Consortium 已建立其它 16 個字元「平面」，每個平面的大小都與 BMP 相同。 此定義可讓 Unicode 具備表示 1,114,112 個字元的潛力 (即 2<sup>16</sup> * 17 個字元)，介於字碼元素 000000 到 10FFFF 的範圍中。 字碼元素值大於 00FFFF 的字元需要二至四個連續的 8 位元字組 (UTF-8) 或兩個連續的 16 位元字組 (UTF-16)。 這些字元位於 BMP 範圍之外，稱為「增補字元」  的範圍內，並且額外的連續 8 位元或 16 位元字組稱為「代理字組」  。 如需增補字元、代理及代理字組的詳細資料，請參閱 [Unicode Standard](http://www.unicode.org/standard/standard.html) (Unicode 標準)。    
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 **nchar** 和 **nvarchar** 等資料類型，用來儲存 BMP 範圍 (000000 到 00FFFF) 中的 Unicode 資料，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會使用 UCS-2 來進行編碼。 
+
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中引進的全新系列增補字元 (\_SC) 定序可以與 **nchar**、**nvarchar** 和 **sql_variant** 資料類型搭配使用，代表完整的 Unicode 字元範圍 (000000 到 10FFFF)。 例如： `Latin1_General_100_CI_AS_SC`或 `Japanese_Bushu_Kakusu_100_CI_AS_SC`(如果使用日文定序的話)。 
+ 
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 會將增補字元支援延伸到具有新啟用 UTF-8 定序 ([\_UTF8](#utf8)) 的資料類型 **char** 和 **varchar**。 這些也能夠代表完整的 Unicode 字元範圍。   
+
+> [!NOTE]
+> 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始，所有新的 **\_140** 定序都會自動支援增補字元。
 
 如果您使用增補字元：    
     
 -   增補字元可用於 90 (含) 以上定序版本的排序及比較作業。    
-    
 -   所有版本 100 定序都支援含有增補字元的語言排序。    
-    
 -   不支援在中繼資料內使用增補字元，例如資料庫物件的名稱。    
-    
 -   無法啟用搭配使用定序與增補字元 (\_SC) 的資料庫，進行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫。 這是因為針對複寫所建立的某些系統資料表和預存程序使用舊版 **ntext** 資料類型，其不支援增補字元。  
-    
+
 -   SC 旗標可套用至：    
-    
     -   版本 90 定序    
-    
     -   版本 100 定序    
     
 -   SC 旗標無法套用至：    
-    
     -   80 版本的非版本控制 Windows 定序    
-    
     -   BIN 或 BIN2 二進位定序    
-    
     -   SQL\* 定序    
-    
     -   版本 140 定序 (這些定序已支援增補字元，因此不需要 SC 旗標)    
     
 下表將比較當某些字串函式和字串運算子使用增補字元搭配或不搭配增補字元感知 (SCA) 定序時，這些函式和運算子的行為：    
@@ -224,11 +219,11 @@ Unicode 是將字碼指標對應到字元的標準用法。 由於 Unicode 主�
 |[UNICODE](../../t-sql/functions/unicode-transact-sql.md)|傳回 UTF-16 字碼指標 (在 0 到 0x10FFFF 的範圍內)。|傳回 UCS-2 字碼指標 (在 0 到 0xFFFF 的範圍內)。|    
 |[符合單一萬用字元](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [萬用字元 - 不相符的字元](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|增補字元支援所有萬用字元作業。|增補字元不支援這些萬用字元作業， 但支援其他萬用字元運算子。|    
     
-##  <a name="GB18030"></a> GB18030 支援    
- GB18030 是一種獨立標準，可供中華人民共和國進行中文字元的編碼。 在 GB18030 中，字元的長度可以是 1、2 或 4 個位元組。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可在 GB18030 編碼的字元從用戶端應用程式進入伺服器時加以辨識，並在轉換後以原生模式將其儲存為 Unicode 字元，藉以支援這種編碼的字元。 當 GB18030 編碼的字元儲存在伺服器中後，任何後續作業都會將其視為 Unicode 字元。 您可以使用任何中文定序，最好是使用最新的 100 版本。 所有 _100 層級定序都支援含有 GB18030 字元的語言排序。 如果資料包含增補字元 (Surrogate 字組)，您就可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所提供的 SC 定序來改善搜尋和排序。    
+## <a name="GB18030"></a> GB18030 支援    
+GB18030 是一種獨立標準，可供中華人民共和國進行中文字元的編碼。 在 GB18030 中，字元的長度可以是 1、2 或 4 個位元組。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可在 GB18030 編碼的字元從用戶端應用程式進入伺服器時加以辨識，並在轉換後以原生模式將其儲存為 Unicode 字元，藉以支援這種編碼的字元。 當 GB18030 編碼的字元儲存在伺服器中後，任何後續作業都會將其視為 Unicode 字元。 您可以使用任何中文定序，最好是使用最新的 100 版本。 所有 _100 層級定序都支援含有 GB18030 字元的語言排序。 如果資料包含增補字元 (Surrogate 字組)，您就可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所提供的 SC 定序來改善搜尋和排序。    
     
-##  <a name="Complex_script"></a> 複雜字集支援    
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以支援輸入、儲存、變更和顯示複雜字集。 複雜字集包括下列類型：    
+## <a name="Complex_script"></a> 複雜字集支援    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以支援輸入、儲存、變更和顯示複雜字集。 複雜字集包括下列類型：    
     
 -   包括由右至左和由左至右兩種文字之組合的字集，如阿拉伯文和英文文字的組合。    
 -   字元的形狀會隨著位置或是否結合其他字元而不同的字集，例如，阿拉伯文、印度文和泰文字元。    
@@ -236,7 +231,7 @@ Unicode 是將字碼指標對應到字元的標準用法。 由於 Unicode 主�
     
 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 互動的資料庫應用程式必須使用支援複雜字集的控制項。 Managed 程式碼中所建立的標準 Windows Form 控制項具有複雜字集的功能。    
 
-##  <a name="Japanese_Collations"></a> 在  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+## <a name="Japanese_Collations"></a> 在  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 開始，支援新的日文定序系列，可使用不同選項 (\_CS、\_AS、\_KS、\_WS、\_VSS) 的排列。 
 
@@ -247,19 +242,44 @@ SELECT Name, Description FROM fn_helpcollations()
 WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ``` 
 
-所有新定序都內建增補字元支援，因此沒有且不需要 SC 旗標。
+所有新定序都內建增補字元支援，因此新的 **\_140** 定序都沒有 (都不需要) SC 旗標。
 
-資料庫引擎索引、記憶體最佳化資料表、資料行存放區索引和原生編譯的模組都支援這些定序。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 索引、記憶體最佳化資料表、資料行存放區索引和原生編譯的模組都支援這些定序。
 
 <a name="ctp23"></a>
 
-## <a name="utf-8-support"></a>UTF-8 支援
+## <a name="utf8"></a> UTF-8 支援
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始完整支援將廣泛使用的 UTF-8 字元編碼作為匯入或匯出編碼，和作為字串資料的資料庫層級或資料行層級定序。 UTF-8 允許用於 **char** 和 **varchar** 資料類型，並且會在建立物件定序或將其變更為具有 `UTF8` 尾碼的定序時啟用。 例如，`LATIN1_GENERAL_100_CI_AS_SC` 至 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`。 
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始完整支援廣泛使用 UTF-8 字元編碼作為匯入或匯出編碼，或作為文字資料的資料庫層級或資料行層級定序。 UTF-8 允許用於 `CHAR` 和 `VARCHAR` 資料類型，並且在建立物件定序或將其變更為具有 `UTF8` 尾碼的定序時啟用。 
+UTF-8 僅適用於支援增補字元的 Windows 定序，已於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中推出。 **nchar** 和 **nvarchar** 只允許 UCS-2 或 UTF-16 編碼，沒有產生任何變更。
 
-例如，`LATIN1_GENERAL_100_CI_AS_SC` 至 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`。 UTF-8 僅適用於支援增補字元的 Windows 定序，已於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中推出。 `NCHAR` 和 `NVARCHAR` 只允許 UTF-16 編碼，並維持不變。
+### <a name="storage_differences"></a> UTF-8 和 UTF-16 間的儲存差異
+Unicode Consortium 會為每個字元配置唯一的字碼元素，其值介於 000000 到 10FFFF 的範圍。 透過 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]，UTF-8 和 UTF-16 編碼都能夠表示完整範圍：    
+-  透過 UTF-8 編碼，ASCII 範圍 (000000 到 00007F) 中的字元需要 1 位元組，字碼元素 000080 到 0007FF 需要 2 位元組，字碼元素 000800 到 00FFFF 需要 3 位元組，字碼元素 0010000 至 0010FFFF 需要 4 個位元組。 
+-  透過 UTF-16 編碼，字碼元素 000000 到 00FFFF 需要 2 位元組，字碼元素 0010000 到 0010FFFF 需要 4 位元組。 
 
-此功能可能會節省大量儲存空間 (視使用的字元集而定)。 例如，使用啟用 UTF-8 的定序，將具有 ASCII (拉丁文) 字串的現有資料行資料類型從 `NCHAR(10)` 變更為 `CHAR(10)`，會使儲存體需求減少 50%。 這項減少的原因是 `NCHAR(10)` 需要 20 個位元組作為儲存空間，而 `CHAR(10)` 針對相同的 Unicode 字串需要 10 個位元組。
+下表概述了每個字元範圍和編碼類型的編碼儲存位元組數：
+
+|字碼範圍 (十六進位)|字碼範圍 (十進位)|使用 UTF-8 的儲存位元組數<sup>1</sup>|使用 UTF-16 的儲存位元組數<sup>1</sup>|    
+|---------------------------------|---------------------------------|--------------------------|-----------------------------|   
+|000000 – 00007F|0 - 127|1|2|
+|000080 – 00009F<br />0000A0 – 0003FF<br />000400 – 0007FF|128 – 159<br />160 – 1,023<br />1,024 – 2,047|2|2|
+|000800 – 003FFF<br />004000 – 00FFFF|2,048 - 16,383<br />16,384 – 65,535|3|2|
+|010000 – 03FFFF <sup>2</sup><br /><br />040000 – 10FFFF <sup>2</sup>|65,536 – 262,143 <sup>2</sup><br /><br />262,144 – 1,114,111 <sup>2</sup>|4|4|
+
+<sup>1</sup> 儲存位元組數指的是編碼位元組長度，而非個別資料類型在磁碟上的儲存大小。 如需磁碟上儲存大小的詳細資訊，請參閱 [nchar 與 nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 和 [char 與 varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)。
+
+<sup>2</sup> [增補字元](#Supplementary_Characters)的字碼元素範圍。
+
+如以上所見，取決於所使用的字元集，選擇適當的 Unicode 編碼和資料類型可能會節省大量的儲存空間。 例如，使用啟用 UTF-8 的定序，將具有 ASCII 字元的現有資料行資料類型從 `NCHAR(10)` 變更為 `CHAR(10)`，會使儲存體需求減少 50%。 這項減少的原因是 `NCHAR(10)` 需要 20 個位元組作為儲存空間，而 `CHAR(10)` 針對相同的 Unicode 字串表示只需要 10 個位元組。
+
+在為資料庫或資料行選擇使用 UTF-8 或 UTF-16 編碼前，請考慮 (要儲存的) 字串資料的分布：
+-  若大部分都在 ASCII 的範圍內 (例如英文)，使用 UTF-8 每個字元將需要 1 個位元組，UTF-16 則需要 2 個位元組。 使用 UTF-8 可提供儲存空間上的優勢。 
+-  在 ASCII 的範圍以上，幾乎所有的拉丁式字集，以及希臘文、斯拉夫、科普特文、亞美尼亞文、希伯來文、阿拉伯文、敘利亞文、它拿文和西非書面文字在 UTF-8 和 UTF-16 中每個字元都需要 2 個位元組。 在這些案例中，可比較的資料類型 (例如使用 **char** 或 **nchar**) 沒有明顯的儲存差異。
+-  若其內容大部分是東亞字集 (例如韓文、中文和日文)，在 UTF-8 中每個字元都需要 3 個位元組，UTF-16 中則為 2 個位元組。 使用 UTF-16 可提供儲存空間上的優勢。 
+-  010000 至 10FFFF 範圍中的字元在 UTF-8 和 UTF-16 中都需要 4 個位元組。 在這些案例中，可比較的資料類型 (例如使用 **char** 或 **nchar**) 沒有儲存差異。
+
+針對其它考量事項，請參閱[撰寫國際 Transact-SQL 陳述式](../../relational-databases/collations/write-international-transact-sql-statements.md)。
 
 ##  <a name="Related_Tasks"></a> 相關工作    
     
@@ -277,7 +297,8 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 [使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
 [撰寫國際通用的 Transact-SQL 陳述式](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 [SQL Server 最佳做法：移轉至 Unicode](https://go.microsoft.com/fwlink/?LinkId=113890) - 不再維護   
-[Unicode Consortium 網站](https://go.microsoft.com/fwlink/?LinkId=48619)    
+[Unicode Consortium 網站](https://go.microsoft.com/fwlink/?LinkId=48619)   
+[Unicode Standard](http://www.unicode.org/standard/standard.html) (Unicode 標準)      
     
 ## <a name="see-also"></a>另請參閱    
 [自主資料庫定序](../../relational-databases/databases/contained-database-collations.md)     

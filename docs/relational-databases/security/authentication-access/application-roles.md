@@ -22,12 +22,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8346c4f7a5b324c8fb05a46e74aae3bbdd5dab49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 233f794901dd73fd8a6d49a000ebdcccd2e92184
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62715815"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581084"
 ---
 # <a name="application-roles"></a>應用程式角色
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "62715815"
 4.  若應用程式角色的名稱與密碼是有效的，則會啟用該應用程式角色。  
   
 5.  此時連接會遺失使用者的權限，並假設應用程式角色的權限。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  透過應用程式角色取得的權限在連接階段中仍為有效。  
   
  在舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，使用者在啟動應用程式角色後要重新取得其原始安全性內容的唯一方式，就是中斷連接並重新連接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]開始， **sp_setapprole** 就有一個選項可建立 Cookie。 此 Cookie 包含在啟用應用程式角色之前的內容資訊。 **sp_unsetapprole** 可使用此 Cookie 將工作階段還原為其原始內容。 如需有關這個新選項與範例的詳細資訊，請參閱 [sp_setapprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)的權限來存取其他資料庫。  

@@ -14,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 807f347bb176f6d8b3191f9f10c8f30448ce9b1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45fd2a7f8281a2b65097c7c0e493cc0a6f60eddc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099964"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584357"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和監視異動資料擷取 (SQL Server)
 
@@ -175,7 +175,9 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
 3. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展開 **[管理]** ，然後展開 **[資料收集]** 。 以滑鼠右鍵按一下 [CDC 效能資料收集器]  ，然後按一下 [啟動資料收集組]  。  
   
 4. 在步驟 1 中設定的資料倉儲內，找出資料表 custom_snapshots.cdc_log_scan_data。 這份資料表會提供記錄檔掃描工作階段之資料的歷程記錄快照集。 這份資料表可用於分析經過一段時間的延遲、輸送量和其他效能量值。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="ScriptUpgrade"></a>指令碼升級模式
 
 當您將累積更新或 Service Pack 套用到執行個體時，在重新啟動時執行個體可以進入指令碼升級模式。 在此模式中，SQL Server 可能會執行步驟來分析和升級內部 CDC 資料表，這可能會導致重新建立像是擷取資料表上的索引等物件。 根據所涉及的資料量，此步驟中可能需要一些時間，或對已啟用 CDC 的資料庫造成大量交易記錄使用量。

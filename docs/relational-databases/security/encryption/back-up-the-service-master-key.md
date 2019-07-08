@@ -12,12 +12,12 @@ ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 8ad7bbe4ff7ab1ccf72e84c51d91c1732face24a
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 6e0d1da7b4910e4d3d6268be23c36fb69b16dc62
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997480"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583670"
 ---
 # <a name="back-up-the-service-master-key"></a>備份服務主要金鑰
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "53997480"
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>[權限]
+### <a name="permissions"></a>權限
 需要資料庫的 CONTROL 權限。  
   
 ## <a name="using-transact-sql"></a>使用 Transact-SQL  
@@ -50,9 +50,9 @@ ms.locfileid: "53997480"
   
 5. 在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-6. 在標準列上，按一下 **[新增查詢]**。  
+6. 在標準列上，按一下 **[新增查詢]** 。  
   
-7. 將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+7. 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```sql
     -- Creates a backup of the service master key.
@@ -69,5 +69,7 @@ ms.locfileid: "53997480"
 8. 將檔案複製到備份媒體，並確認複製後的副本。  
   
 9. 將備份存放在安全且位於異地的位置。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  如需詳細資訊，請參閱 [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md) (開啟主要金鑰 (Transact-SQL)) 和 [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md) (備份主要金鑰 (Transact-SQL))。  

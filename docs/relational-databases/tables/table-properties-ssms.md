@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f4b3c22e81f28116fcdaaa83076ff4212b24bf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00b42c7221971707787a7b74cd7c799b1afb58e3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632012"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580575"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "62632012"
 3.  [FileTable 頁面](#FileTable)  
   
 4.  [儲存體頁面](#Storage)  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="GeneralPage"></a> 一般頁面  
  **[資料庫備份]**  
  包含此資料表之資料庫的名稱。  

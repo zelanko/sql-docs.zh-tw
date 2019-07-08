@@ -12,12 +12,12 @@ ms.assetid: af6d6322-3cba-43d8-be97-e6ef15f8c933
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4afcdeef25dd28a97cf5b9096e8ac5635ca0c35f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6c3ec14df307f0868444e58e7adbaa375591487
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62797676"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585057"
 ---
 # <a name="mssqlserver7995"></a>MSSQLSERVER_7995
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,9 @@ DBCC CHECKDB 處理序由下列三個階段組成：
 2.  系統資料表一致性的檢查。 這相當於針對必要的系統基底資料表，執行小型清單的 DBCC CHECKTABLE。  
   
 3.  完整資料庫一致性的檢查。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 MSSQLEngine_7995 在第 2 階段引發，指出 DBCC CHECKDB 已經找到命令無法修復或尚未指定 REPAIR 的錯誤。 DBCC CHECKDB 無法繼續進行第 3 階段，因為有問題的系統基底資料表儲存資料庫中所有物件的中繼資料，或是系統基底資料表已損毀。  
   
 ## <a name="user-action"></a>使用者動作  

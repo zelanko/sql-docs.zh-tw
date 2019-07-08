@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84c23f7518850b25e1216a7e380871fc6cb99888
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0ca9273e02d32951960930f7f869aa888b78b8b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66744130"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579703"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>進階檢視 SQL Server 中擴充事件的目標資料
 
@@ -181,6 +181,9 @@ SSMS 中有目標資料之後，即可執行下列動作以將資料匯出為各
 
 
 1. 將焦點放在資料顯示。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     - 擴充事件的新工具列和新功能表項目會突然變成可見。
 
     ![匯出顯示的資料，擴充事件 > 匯出至 > (.csv、.xel 或資料表)](../../relational-databases/extended-events/media/xevents-ssms-ui75-menuextevent-exportto-xel.png)

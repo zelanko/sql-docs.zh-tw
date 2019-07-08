@@ -19,12 +19,12 @@ ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 02469a92e530521a32fab9cf126acd51c859312a
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 06ed5433d23501016a0ea308c9238fcf7bc1b3c1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143188"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582069"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>使用計畫指南指定查詢參數化行為
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,9 +52,11 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 1.  擷取查詢的參數化格式。 取得這個值供 **sp_create_plan_guide** 使用的唯一安全方法，是使用 [sp_get_query_template](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md) 系統預存程序。  
   
 2.  在查詢的參數化格式上建立計畫指南，以指定 PARAMETERIZATION FORCED 查詢提示。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     > [!IMPORTANT]  
-    >  在參數化查詢時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會指派資料類型給取代常值的參數，端視常值的值與大小而定。 同樣的程序也會發生在傳遞給 **@stmt** 的 **sp_get_query_template**中指定 PARAMETERIZATION SIMPLE 查詢提示。 由於 **@params** 的 **sp_create_plan_guide** 引數中所指定的資料類型，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]參數化該查詢時必須符合查詢的資料類型，因此您必須建立一個或多個計畫指南以涵蓋完整範圍的查詢可能參數值。  
+    >  As part of parameterizing a query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns a data type to the parameters that replace the literal values, depending on the value and size of the literal. The same process occurs to the value of the constant literals passed to the **@stmt** output parameter of **sp_get_query_template**. Because the data type specified in the **@params** argument of **sp_create_plan_guide** must match that of the query as it is parameterized by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you may have to create more than one plan guide to cover the complete range of possible parameter values for the query.  
   
  下列指令碼可用以擷取參數化查詢，並在該查詢上建立計畫指南：  
   

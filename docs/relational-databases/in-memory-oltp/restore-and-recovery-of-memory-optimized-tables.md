@@ -11,12 +11,12 @@ ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8dbf17ab9e9340b793b4310427169be3bcdfe120
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 074802ff3717b8935015071fdf37e43923d752c1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671317"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582980"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>記憶體最佳化資料表的還原與復原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "51671317"
     前述在磁碟和記憶體最佳化資料表上的作業完成時，資料庫即可供存取。  
   
 3.  **復原**。 在這個階段中，未認可的交易會回復。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="process-for-improving-load-time"></a>改善載入時間的程序
 將記憶體最佳化資料表載入記憶體中可能會影響復原時間目標 (RTO) 的效能。 為了改善從資料和差異檔案載入記憶體最佳化資料的時間，記憶體中 OLTP 引擎會平行載入資料/差異檔案，如下所示：  
   

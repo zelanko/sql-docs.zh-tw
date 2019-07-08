@@ -14,12 +14,12 @@ ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ab88dfa27c63607c312b2a3c757b04cd076745a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adeefeec7db61824d05d3f7b3960b3f26984aa12
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65094149"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583239"
 ---
 # <a name="manage-filetables"></a>管理 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,9 @@ GO
 2.  在資料庫層級啟用非交易式存取。  
   
 3.  已在資料庫層級指定有效的目錄。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="BasicsEnabling"></a> 停用並重新啟用資料表層級的 FileTable 命名空間  
  停用 FileTable 命名空間，會停用所有使用 FileTable 所建立的系統定義條件約束和觸發程序。 如果您需要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業來大規模重新組織 FileTable，但不想要產生 FileTable 語意強制執行的成本，這樣做就很有用。 不過，這些作業可能會讓 FileTable 處於不一致的狀態，而且可能會無法重新啟用 FileTable 命名空間。  
   

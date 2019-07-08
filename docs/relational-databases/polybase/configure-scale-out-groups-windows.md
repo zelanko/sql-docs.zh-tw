@@ -10,12 +10,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: ab93c4a4ea1a09fa9af8adea765b342d7ac9f340
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fc4c6ef8a84ff670feb43fafbdd239e9e9862f1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64774717"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581628"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>改善 Windows 上的 PolyBase 相應放大群組
 
@@ -43,6 +43,8 @@ ms.locfileid: "64774717"
 
 5. 選擇性。 使用 [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md) 移除運算節點。
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example-walk-through"></a>範例逐步解說
 
 這會使用下列項目逐步設定 PolyBase 群組︰  
@@ -59,11 +61,11 @@ ms.locfileid: "64774717"
 
 1. 執行 setup.exe。
   
-2. 在 [功能選取] 頁面上，選取 [適用於外部資料的 PolyBase 查詢服務]。
+2. 在 [功能選取] 頁面上，選取 [適用於外部資料的 PolyBase 查詢服務]  。
   
 3. 在 [伺服器設定] 頁面上，針對 SQL Server PolyBase 引擎和 SQL Server PolyBase 資料移動服務，請使用**網域帳戶** PQTH4A\PolyBaseUser。
   
-4. 在 [PolyBase 組態] 頁面上，選取 [Use the SQL Server instance as part of a PolyBase scale-out group (使用此 SQL Server 執行個體作為 PolyBase 向外延展群組的一部分)]。 這會開啟防火牆，以允許 PolyBase 服務的連入連線。
+4. 在 [PolyBase 組態] 頁面上，選取 [Use the SQL Server instance as part of a PolyBase scale-out group (使用此 SQL Server 執行個體作為 PolyBase 向外延展群組的一部分)]  。 這會開啟防火牆，以允許 PolyBase 服務的連入連線。
   
 5. 安裝程式完成之後，執行 **services.msc**。 確認 SQL Server、PolyBase Engine 和 PolyBase Data Movement Service 正在執行中。
   

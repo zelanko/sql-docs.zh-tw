@@ -13,21 +13,21 @@ ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 665e88f2b86276beb16acb043dd270d0a8cf6da5
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: f09c3fecff6dd64934a456fafc0eabfcb134c30f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689831"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581825"
 ---
 # <a name="create-a-workload-group"></a>建立工作負載群組
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]來建立工作負載群組。  
   
--   **開始之前：**[限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
+-   **開始之前：** [限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **若要建立工作負載群組，請使用下列方式：**[SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
+-   **若要建立工作負載群組，請使用下列方式：** [SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -38,7 +38,7 @@ ms.locfileid: "55689831"
   
  允許索引建立使用比一開始授與之記憶體更多的記憶體工作空間來改善效能。 資源管理員支援這種特殊的處理，不過，初始授與和任何額外的記憶體授與都受到工作負載群組和資源集區設定的限制。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 權限  
  建立工作負載群組需要 CONTROL SERVER 權限。  
   
 ##  <a name="CreRPProp"></a> 使用 SQL Server Management Studio 建立工作負載群組  
@@ -46,7 +46,7 @@ ms.locfileid: "55689831"
   
 1.  在 [物件總管] 中，遞迴地向下展開 **[管理]** 節點至包含要修改之工作負載群組的資源集區。  
   
-2.  以滑鼠右鍵按一下 [工作負載群組] 資料夾，然後按一下 [新增工作負載群組]。  
+2.  以滑鼠右鍵按一下 [工作負載群組]  資料夾，然後按一下 [新增工作負載群組]  。  
   
 3.  在 **[資源集區]** 方格中，確定已反白顯示要新增工作負載群組的資源集區。  
   
@@ -56,8 +56,10 @@ ms.locfileid: "55689831"
   
 6.  在資料列中按一下或按兩下要變更預設值的任何其他資料格，然後輸入新值。  
   
-7.  若要儲存變更，請按一下 **[確定]**。  
-  
+7.  若要儲存變更，請按一下 **[確定]** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="CreRPTSQL"></a> 使用 Transact-SQL 建立工作負載群組  
  **若要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   

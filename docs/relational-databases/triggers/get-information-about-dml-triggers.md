@@ -18,12 +18,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b4006814233152c487823fbe1936431368af5f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d2e2f82379ad32b5de25778a60f123221114ae9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703156"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584314"
 ---
 # <a name="get-information-about-dml-triggers"></a>取得關於 DML 觸發程序的詳細資訊
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47703156"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要取得 DML 觸發程序的相關資訊，使用：**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47703156"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
  OBJECT_DEFINITION、OBJECTPROPERTY、 **sp_helptext**  
- 需要 **public** 角色中的成員資格。 凡具有 ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION 任一權限的物件擁有者或被授與者，都看得到使用者物件的定義。 **db_owner**、 **db_ddladmin**和 **db_securityadmin** 固定資料庫角色的成員隱含地擁有這些權限。  
+ 需要 **public** 角色的成員資格。 凡具有下列任一權限的物件擁有者或承授者，都看得到使用者物件的定義：ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION。 **db_owner**、 **db_ddladmin**和 **db_securityadmin** 固定資料庫角色的成員隱含地擁有這些權限。  
   
  **sys.sql_expression_dependencies**  
  需要資料庫的 VIEW DEFINITION 權限和資料庫之 **sys.sql_expression_dependencies** 的 SELECT 權限。 依預設，SELECT 權限只授與 **db_owner** 固定資料庫角色的成員。 當 SELECT 和 VIEW DEFINITION 權限授與其他使用者時，被授與者就可以檢視資料庫中的所有相依性。  
@@ -61,25 +61,27 @@ ms.locfileid: "47703156"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開您要的資料庫，展開 **[資料表]**，然後展開包含您要檢視其定義之觸發程序的資料表。  
+2.  展開您要的資料庫，展開 **[資料表]** ，然後展開包含您要檢視其定義之觸發程序的資料表。  
   
-3.  展開 [觸發程序]，以滑鼠右鍵按一下您要的觸發程序，然後按一下 [修改]。 DML 觸發程序的定義會出現在查詢視窗中。  
-  
+3.  展開 [觸發程序]  ，以滑鼠右鍵按一下您要的觸發程序，然後按一下 [修改]  。 DML 觸發程序的定義會出現在查詢視窗中。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>若要檢視 DML 觸發程序的相依性  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開您要的資料庫，展開 **[資料表]**，然後展開包含您要檢視的觸發程序及其相依性的資料表。  
+2.  展開您要的資料庫，展開 **[資料表]** ，然後展開包含您要檢視的觸發程序及其相依性的資料表。  
   
-3.  展開 [觸發程序]，以滑鼠右鍵按一下您要的觸發程序，然後按一下 [檢視相依性]。  
+3.  展開 [觸發程序]  ，以滑鼠右鍵按一下您要的觸發程序，然後按一下 [檢視相依性]  。  
   
-4.  在 [物件相依性] 視窗中，若要檢視相依於 DML 觸發程序的物件，請選取 [相依於 \<DML 觸發程序名稱> 的物件]。 物件會出現在 **[相依性]** 區域中。  
+4.  在 [物件相依性]  視窗中，若要檢視相依於 DML 觸發程序的物件，請選取 [相依於 \<DML 觸發程序名稱> 的物件]  。 物件會出現在 **[相依性]** 區域中。  
   
-     若要檢視 DML 所相依的物件，請選取 [\<DML 觸發程序名稱> 所相依的物件]。 物件會出現在 **[相依性]** 區域中。 展開每個節點，查看所有物件。  
+     若要檢視 DML 所相依的物件，請選取 [\<DML 觸發程序名稱> 所相依的物件]  。 物件會出現在 **[相依性]** 區域中。 展開每個節點，查看所有物件。  
   
-5.  若要取得出現在 **[相依性]** 區域中之物件的相關資訊，請按一下該物件。 **[選取的物件]** 欄位的 **[名稱]**、 **[類型]** 和 **[相依性類型]** 方塊中會提供資訊。  
+5.  若要取得出現在 **[相依性]** 區域中之物件的相關資訊，請按一下該物件。 **[選取的物件]** 欄位的 **[名稱]** 、 **[類型]** 和 **[相依性類型]** 方塊中會提供資訊。  
   
-6.  若要關閉 **[物件相依性]** 視窗，請按一下 **[確定]**。  
+6.  若要關閉 **[物件相依性]** 視窗，請按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -87,9 +89,9 @@ ms.locfileid: "47703156"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列其中一個範例複製並貼到查詢視窗中，然後按一下 **[執行]**。 每個範例都會說明如何檢視 `iuPerson` 觸發程序的定義。  
+3.  將下列其中一個範例複製並貼到查詢視窗中，然後按一下 **[執行]** 。 每個範例都會說明如何檢視 `iuPerson` 觸發程序的定義。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -120,9 +122,9 @@ GO
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列其中一個範例複製並貼到查詢視窗中，然後按一下 **[執行]**。 每個範例都會說明如何檢視 `iuPerson` 觸發程序的相依性。  
+3.  將下列其中一個範例複製並貼到查詢視窗中，然後按一下 **[執行]** 。 每個範例都會說明如何檢視 `iuPerson` 觸發程序的相依性。  
   
 ```  
 USE AdventureWorks2012;   
@@ -146,9 +148,9 @@ GO
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列其中一個範例複製並貼到查詢視窗中，然後按一下 **[執行]**。 每個範例都會說明如何檢視資料庫中有關 DML 觸發程序 (`TR`) 的資訊。  
+3.  將下列其中一個範例複製並貼到查詢視窗中，然後按一下 **[執行]** 。 每個範例都會說明如何檢視資料庫中有關 DML 觸發程序 (`TR`) 的資訊。  
   
 ```  
 USE AdventureWorks2012;   
@@ -182,9 +184,9 @@ GO
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列其中一個範例複製並貼到查詢視窗中，然後按一下 **[執行]**。 每個範例都會說明如何檢視引發 `iuPerson` 觸發程序的事件。  
+3.  將下列其中一個範例複製並貼到查詢視窗中，然後按一下 **[執行]** 。 每個範例都會說明如何檢視引發 `iuPerson` 觸發程序的事件。  
   
 ```sql  
 USE AdventureWorks2012;   

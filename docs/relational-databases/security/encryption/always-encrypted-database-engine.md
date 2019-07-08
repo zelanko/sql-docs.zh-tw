@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ac5ce3e74713da1b1560d4fd0e1cb86bb4593be
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.openlocfilehash: 0fefd22e080ac0ed4e0646dde1805ce5923b8e3a
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185024"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419157"
 ---
 # <a name="always-encrypted-database-engine"></a>一律加密 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 
 若要成功更新資料行，請執行下列動作：
 
-1. 從 SSN 資料行中選取資料，並將它儲存為應用程式中的結果集。 這可讓應用程式 (用戶端「驅動程式」) 將資料行解密。
+1. 從 SSN 資料行中選取資料，並將它儲存為應用程式中的結果集。 這可讓應用程式 (用戶端「驅動程式」  ) 將資料行解密。
 2. 將結果集中的資料插入 SQL Server。 
 
  >[!IMPORTANT]
@@ -124,14 +124,14 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 >  如需使用精靈的影片，請參閱 [Getting Started with Always Encrypted with SSMS](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS)(搭配 SSMS 開始使用永遠加密)。
 
 1.  您可連接到現有的資料庫，其中包含您想要使用 Management Studio 物件總管  加密之資料行的資料表；或者，建立新的資料庫，再以要加密的資料行建立一或多個資料表，然後連接到該資料庫。
-2.  以滑鼠右鍵按一下您的資料庫，指向 [工作]，然後按一下 [加密資料行] 以開啟 [Always Encrypted 精靈]。
-3.  檢閱[簡介]  頁面，然後按一下 [下一步] 。
+2.  以滑鼠右鍵按一下您的資料庫，指向 [工作]  ，然後按一下 [加密資料行]  以開啟 [Always Encrypted 精靈]  。
+3.  檢閱[簡介]  頁面，然後按一下 [下一步]  。
 4.  在 [資料行選取]  頁面上，展開資料表，並選取您想要加密的資料行。
-5.  針對每個已選取要進行加密的資料行，將 [加密類型]  設定為 [決定性]  或 [隨機化] 。
-6.  針對每個已選取要進行加密的資料行，選取 [加密金鑰] 。 如果您之前沒有針對此資料庫建立任何加密金鑰，請選取新的自動產生金鑰的預設選項，然後按一下 [下一步] 。
-7.  在 [主要金鑰組態]  頁面上，選取要儲存新金鑰的位置，並選取主要金鑰來源，然後按一下 [下一步] 。
-8.  在 [驗證]  頁面上，選擇是否要立即執行指令碼或建立 PowerShell 指令碼，然後按一下 [下一步] 。
-9.  在 [摘要]  頁面上，檢閱您已選取的選項，然後按一下 [完成] 。 完成時請關閉精靈。
+5.  針對每個已選取要進行加密的資料行，將 [加密類型]  設定為 [決定性]  或 [隨機化]  。
+6.  針對每個已選取要進行加密的資料行，選取 [加密金鑰]  。 如果您之前沒有針對此資料庫建立任何加密金鑰，請選取新的自動產生金鑰的預設選項，然後按一下 [下一步]  。
+7.  在 [主要金鑰組態]  頁面上，選取要儲存新金鑰的位置，並選取主要金鑰來源，然後按一下 [下一步]  。
+8.  在 [驗證]  頁面上，選擇是否要立即執行指令碼或建立 PowerShell 指令碼，然後按一下 [下一步]  。
+9.  在 [摘要]  頁面上，檢閱您已選取的選項，然後按一下 [完成]  。 完成時請關閉精靈。
 
   
 ## <a name="feature-details"></a>功能詳細資料  
@@ -181,11 +181,11 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 下列功能無法在加密的資料行運作：
 
 - 交易式或合併式複寫
-- 分散式查詢 (連結的伺服器)
+- 分散式查詢 (連結伺服器、OPENROWSET(T-SQL)、OPENDATASOURCE(T-SQL))
 
 工具需求
 
-- 如果您在 [連接到伺服器]  對話方塊的 [其他屬性]  索引標籤中，使用 **column encryption setting=enabled** 連接，SQL Server Management Studio 就會解密擷取自加密資料行的結果。 至少需要 SQL Server Management Studio 17 版，才能插入、更新或篩選已加密的資料行。
+- 如果您在 [連接到伺服器]  對話方塊的 [其他屬性]  索引標籤中，使用 **column encryption setting=enabled** 連接，SQL Server Management Studio 就會解密擷取自加密資料行的結果。 至少需要 SQL Server Management Studio 17 版，才能插入、更新或篩選已加密的資料行。 如需要在用戶端應用程式中使用的連接字串，請參閱 [Always Encrypted (用戶端開發)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 
 - 來自 `sqlcmd` 的加密連接需要至少 13.1 版，可從 [下載中心](https://go.microsoft.com/fwlink/?LinkID=825643)取得。
 
@@ -214,7 +214,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
   
 -   選取加密的資料行時需具備這兩種「檢視」  權限 (即使使用者沒有解密資料行的權限亦同)。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]預設會將這兩個「檢視」  權限授與 `public` 固定資料庫角色。 資料庫管理員可以選擇撤銷 (或拒絕) 授與 *角色的「檢視」*`public` 權限，而將其授與特定角色或使用者，以實作更嚴格的控制。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]預設會將這兩個「檢視」  權限授與 `public` 固定資料庫角色。 資料庫管理員可以選擇撤銷 (或拒絕) 授與 *角色的「檢視」* `public` 權限，而將其授與特定角色或使用者，以實作更嚴格的控制。  
   
 -   [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]預設不會將「檢視」  權限授與 `public` 固定資料庫角色。 這可讓某些現有的舊版工具 (使用舊版 DacFx) 正常運作。 因此，若要使用加密的資料行 (即使不要加以解密)，資料庫管理員必須明確授與這兩個「檢視」  權限。  
 

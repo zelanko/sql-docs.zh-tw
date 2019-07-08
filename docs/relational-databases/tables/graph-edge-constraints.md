@@ -1,7 +1,7 @@
 ---
 title: 圖形邊緣條件約束 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,31 +13,22 @@ helpviewer_keywords:
 - edge constraints [Azure SQL Database]
 - graph edge constraints
 - SQL Graph
-ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86544dee5262a1d04c1ff1d8e59f8ddac5e9b5ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
+ms.openlocfilehash: aa73858e6df29c814821ee9e24923cbfc0fbd4a2
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64774652"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343887"
 ---
 # <a name="edge-constraints"></a>邊緣條件約束
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-  邊緣條件約束可以用來強制執行資料完整性以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 圖形資料庫之邊緣資料表上的特定語意。 
-  
-本文包含下列各節。  
-  
-[邊緣條件約束](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[邊緣條件約束](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
-  
-[相關工作](../../relational-databases/tables/graph-edge-constraints.md#Tasks)  
-  
+邊緣條件約束可以用來強制執行資料完整性以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 圖形資料庫邊緣資料表中的特定語意。
+
 ##  <a name="Connection"></a> 邊緣條件約束
  在第一版的圖形功能中，邊緣資料表不會強制執行邊緣端點的任何項目。 亦即，圖形資料庫中的邊緣可以將任何節點連線至任何其他節點，不論類型為何。 
 
@@ -66,3 +57,5 @@ ms.locfileid: "64774652"
 |描述如何刪除邊緣條件約束。|[刪除邊緣條件約束](../../relational-databases/tables/delete-edge-constraint.md)|  
 |描述如何修改邊緣條件約束。|[修改邊緣條件約束](../../relational-databases/tables/modify-edge-constraint.md)|  
 |描述如何檢視邊緣條件約束屬性。|[檢視邊緣條件約束屬性](../../relational-databases/tables/view-edge-constraint-properties.md)|  
+| SQL Server 中的圖形技術概觀 | [SQL Server 和 Azure SQL Database 的圖表處理](../graphs/sql-graph-overview.md) |
+| &nbsp; | &nbsp; |

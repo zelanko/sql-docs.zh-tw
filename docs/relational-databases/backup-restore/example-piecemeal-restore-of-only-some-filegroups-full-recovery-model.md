@@ -15,12 +15,12 @@ ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 992b010e583a8c40032021f91f26f0a13569b2ee
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: b16e030be8afa6caa0de6cb42ed82a3b396801c3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583141"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579453"
 ---
 # <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>範例僅對部分檔案群組分次還原 (完整復原模式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,17 +72,19 @@ ms.locfileid: "59583141"
      此時，主要與次要檔案群組 `A` 和 `C` 會在線上。 檔案群組 `B` 裡的檔案會保持復原暫止，而檔案群組為離線。  
   
 4.  線上還原檔案群組 `B`。  
-  
-     檔案群組 `B` 中的檔案，可在此後的任何時間進行還原。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     Files in filegroup `B` are restored any time thereafter.  
   
     > [!NOTE]  
-    >  檔案群組 `B` 的備份是在檔案群組變成唯讀之後進行的，因此這些檔案不需向前復原。  
+    >  The backup of filegroup `B` was taken after the filegroup became read-only; therefore, these files do not have to be rolled forward.  
   
     ```  
     RESTORE DATABASE adb FILEGROUP='B' FROM backup WITH RECOVERY  
     ```  
   
-     所有檔案群組現在都已在線上。  
+     All filegroups are now online.  
   
 ## <a name="additional-examples"></a>其他範例  
   

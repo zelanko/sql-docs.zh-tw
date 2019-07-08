@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 95aa89336e4dcd6decc4434d4afaf77073dd45e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04339f2553d2eb6787fec1b83d61b71623159308
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66428969"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351688"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,7 +61,7 @@ ms.locfileid: "66428969"
 
 |||||
 |-|-|-|-|
-|** _\* SQL Server \*_ ** &nbsp;| [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+|** _\* SQL Server \*_** &nbsp;| [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 |||||
 
 &nbsp;
@@ -865,7 +865,7 @@ GO
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\* SQL Database<br />單一資料庫/彈性集區 \*_ ** | [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\* SQL Database<br />單一資料庫/彈性集區 \*_** | [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -949,8 +949,6 @@ EDITION
 指定資料庫的服務層。
 
 單一資料庫/彈性集區上的單一和集區資料庫。 可用的值為：'basic'、'standard'、'premium'、'GeneralPurpose'、'BusinessCritical' 和 'Hyperscale'。
-
-若指定 EDITION 但未指定 MAXSIZE 時，MAXSIZE 會設定為版本支援的最高限制大小。
 
 MAXSIZE     
 指定資料庫的大小上限。 MAXSIZE 對於指定的 EDITION (服務層) 而言必須有效。下表列出服務層支援的 MAXSIZE 值與預設值 (D)：
@@ -1042,8 +1040,8 @@ MAXSIZE
 
 以下規則會套用到 MAXSIZE 和 EDITION 引數：
 
-- 如果指定了 EDITION 但是未指定 MAXSIZE，就會使用版本的預設值。 例如，如果將 EDITION 設為 Standard，而未指定 MAXSIZE，則 MAXSIZE 會自動設定為 250 MB。
-- 如果 MAXSIZE 和 EDITION 皆未指定，則 EDITION 會設定為 Standard (S0) 而 MAXSIZE 則設定為 250 GB。
+- 如果指定了 EDITION 但是未指定 MAXSIZE，就會使用版本的預設值。 例如，如果 EDITION 設定為 Standard，且未指定 MAXSIZE，則 MAXSIZE 會自動設定為 250 MB。
+- 如果 MAXSIZE 和 EDITION 皆未指定，則 EDITION 會設定為 General Purpose 而 MAXSIZE 設定為 32 GB。
 
 SERVICE_OBJECTIVE     
 - **針對單一和集區資料庫**
@@ -1122,7 +1120,7 @@ CREATE DATABASE TestDB1;
 ```
 
 ### <a name="simple-example-with-edition"></a>使用 Edition 的簡單範例
-建立標準資料庫的簡單範例。
+建立一般用途資料庫的簡單範例。
 
 ```sql
 CREATE DATABASE TestDB2
@@ -1194,7 +1192,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)| ** _\* SQL Database<br />受控執行個體 \*_ ** | [SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)| ** _\* SQL Database<br />受控執行個體 \*_** | [SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1261,7 +1259,7 @@ CREATE DATABASE TestDB1;
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)| ** _\* SQL 資料<br />倉儲 \*_ **| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)| ** _\* SQL 資料<br />倉儲 \*_**| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1373,7 +1371,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics Platform<br />System (PDW) \*_ ** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics Platform<br />System (PDW) \*_** |
 
 &nbsp;
 

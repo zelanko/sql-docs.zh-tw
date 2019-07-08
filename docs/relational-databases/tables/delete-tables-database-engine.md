@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3dfb480335b36dde5ce7faece207fb214d1dba5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0454483882af5bcd55b607b63336587590d3ebf8
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620677"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580680"
 ---
 # <a name="delete-tables-database-engine"></a>刪除資料表 (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47620677"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目來刪除資料表：**  
   
@@ -71,12 +71,14 @@ ms.locfileid: "47620677"
   
 1.  在 [物件總管] 中選取要刪除的資料表。  
   
-2.  在資料表上按一下滑鼠右鍵，再從快速鍵功能表中選擇 [刪除]。  
+2.  在資料表上按一下滑鼠右鍵，再從快速鍵功能表中選擇 [刪除]  。  
   
-3.  訊息方塊會提示您確認是否刪除。 按一下 **[是]**。  
-  
+3.  訊息方塊會提示您確認是否刪除。 按一下 **[是]** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     > [!NOTE]  
-    >  刪除資料表會自動移除它的所有關聯性。  
+    >  Deleting a table automatically removes any relationships to it.  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -84,9 +86,9 @@ ms.locfileid: "47620677"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     DROP TABLE dbo.PurchaseOrderDetail;  

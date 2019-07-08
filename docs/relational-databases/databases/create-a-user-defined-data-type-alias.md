@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0aa09ddef11c733abda1a5e706c1b788c3745c8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: be0398f868eaac63ca13aaf8989ad8316ae06476
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511879"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584289"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>建立使用者定義資料類型別名
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "52511879"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法建立使用者定義資料類型別名：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -50,14 +50,14 @@ ms.locfileid: "52511879"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要目前資料庫的 CREATE TYPE 權限，以及 *schema_name*的 ALTER 權限。 如果未指定 *schema_name* ，則套用用來判斷目前使用者之結構描述的預設名稱解析規則。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-user-defined-data-type"></a>若要建立使用者自訂的資料類型  
   
-1.  在物件總管中，依序展開 [資料庫]、某個資料庫、[可程式性] 和 [類型]，並以滑鼠右鍵按一下 [使用者定義資料類型]，然後按一下 [新增使用者定義資料類型]。  
+1.  在物件總管中，依序展開 [資料庫]  、某個資料庫、[可程式性]  和 [類型]  ，並以滑鼠右鍵按一下 [使用者定義資料類型]  ，然後按一下 [新增使用者定義資料類型]  。  
   
      **允許 NULL**  
      指定使用者定義資料類型是否可接受 NULL 值。 無法編輯現有使用者定義資料類型的 Null 屬性。  
@@ -69,9 +69,9 @@ ms.locfileid: "52511879"
      選擇性地選取繫結到使用者定義資料類型別名的預設值。  
   
      **長度/有效位數**  
-     顯示適用之資料類型的長度或有效位數。 [長度] 適用於字元為主的使用者定義資料類型；[有效位數] 只適用於數值為主的使用者定義資料類型。 標籤會根據稍早選取的資料類型而變更。 如果選取之資料類型的長度或有效位數是固定的，則無法編輯此方塊。  
+     顯示適用之資料類型的長度或有效位數。 [長度]  適用於字元為主的使用者定義資料類型；[有效位數]  只適用於數值為主的使用者定義資料類型。 標籤會根據稍早選取的資料類型而變更。 如果選取之資料類型的長度或有效位數是固定的，則無法編輯此方塊。  
   
-     **nvarchar(max)**、 **varchar(max)** 或 **varbinary(max)** 資料類型不會顯示長度。  
+     **nvarchar(max)** 、 **varchar(max)** 或 **varbinary(max)** 資料類型不會顯示長度。  
   
      **名稱**  
      如果您正在建立新的使用者定義資料類型別名，請輸入跨資料庫使用以代表使用者定義資料類型的唯一名稱。 最大字元數必須與系統 **sysname** 資料類型相符。 無法編輯現有的使用者定義資料類型別名的名稱。  
@@ -95,31 +95,33 @@ ms.locfileid: "52511879"
     |20 - 28|13|  
     |29 - 38|17|  
   
-     如果是 **nchar** 和 **nvarchar** 資料類型，儲存體值一律為 [長度] 值的兩倍。  
+     如果是 **nchar** 和 **nvarchar** 資料類型，儲存體值一律為 [長度]  值的兩倍。  
   
-     **nvarchar(max)**、**varchar(max)** 或 **varbinary(max)** 資料類型不會顯示儲存體。  
+     **nvarchar(max)** 、**varchar(max)** 或 **varbinary(max)** 資料類型不會顯示儲存體。  
   
-2.  在 [新增使用者定義資料類型] 對話方塊的 [結構描述] 方塊中，輸入要擁有此資料類型別名的結構描述，或使用瀏覽按鈕來選取結構描述。  
+2.  在 [新增使用者定義資料類型]  對話方塊的 [結構描述]  方塊中，輸入要擁有此資料類型別名的結構描述，或使用瀏覽按鈕來選取結構描述。  
   
 3.  在 **[名稱]** 方塊中，輸入新資料類型別名的名稱。  
   
 4.  在 **[資料類型]** 方塊中，選取將做為新資料類型別名基礎的資料類型。  
   
-5.  依該資料類型的情況，完成 **[長度]**、 **[有效位數]** 和 **[小數位數]** 方塊。  
+5.  依該資料類型的情況，完成 **[長度]** 、 **[有效位數]** 和 **[小數位數]** 方塊。  
   
 6.  若新的資料類型別名可允許 NULL 值，請選取 **[允許 NULL]** 。  
   
 7.  若您要將預設值或規則繫結至新的資料類型別名，請在 **[繫結]** 區域中，完成 **[預設值]** 或 **[規則]** 方塊。 您不能在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中建立預設值和規則。 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 [範本總管] 中有可供建立預設值和規則的範例程式碼。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-user-defined-data-type-alias"></a>若要建立使用者定義資料類型別名  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例根據系統提供的 `varchar` 資料類型建立資料類型別名。 `ssn` 資料類型別名用於保留 11 位數之社會保險號碼 (999-99-9999) 的資料行。 該資料行不能是 NULL。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例根據系統提供的 `varchar` 資料類型建立資料類型別名。 `ssn` 資料類型別名用於保留 11 位數之社會保險號碼 (999-99-9999) 的資料行。 該資料行不能是 NULL。  
   
 ```sql  
 CREATE TYPE ssn  

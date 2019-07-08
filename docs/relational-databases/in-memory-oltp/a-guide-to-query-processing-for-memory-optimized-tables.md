@@ -1,7 +1,7 @@
 ---
 title: 記憶體最佳化資料表的查詢處理指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b69d261470a674ef6a90a5bef9e0db7aebfbb44a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0234a6806e63a7eec6a13d30ceeda55c0ee27a29
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205577"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579585"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>記憶體最佳化資料表的查詢處理指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  執行計畫大致如下面的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 所示  
   
- ![聯結以磁碟為基礎的資料表的查詢計劃。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.gif "聯結以磁碟為基礎的資料表的查詢計劃。")  
+ ![聯結以磁碟為基礎的資料表的查詢計劃。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.png "聯結以磁碟為基礎的資料表的查詢計劃。")  
 聯結磁碟為基礎資料表的查詢計劃。  
   
  關於這個查詢計劃：  
@@ -93,7 +93,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  這個查詢的計畫大致如下：  
   
- ![雜湊聯結以磁碟為基礎的資料表的查詢計劃。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.gif "雜湊聯結以磁碟為基礎的資料表的查詢計劃。")  
+ ![雜湊聯結以磁碟為基礎的資料表的查詢計劃。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "雜湊聯結以磁碟為基礎的資料表的查詢計劃。")  
 磁碟為基礎資料表的雜湊聯結查詢計劃。  
   
  在這個查詢中，Orders 資料表的資料列是使用叢集索引擷取。 **Hash Match** 實體運算子現在用於 **Inner Join**。 Order 上的叢集索引不會在 CustomerID 上排序，因此 **Merge Join** 會需要排序運算子，而這樣就會影響效能。 請記下與上一個範例中 **Merge Join** 運算子成本 (46%) 相較的 **Hash Match** 運算子相對成本 (75%)。 最佳化工具原本也會在上一個範例中考慮 **Hash Match** 運算子，但結果卻是 **Merge Join** 運算子提供更佳效能的結果。  
@@ -101,7 +101,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁碟資料表的查詢處理  
  下圖概述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中隨選查詢的查詢處理流程：  
   
- ![SQL Server 查詢處理管線。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.gif "SQL Server 查詢處理管線。")  
+ ![SQL Server 查詢處理管線。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "SQL Server 查詢處理管線。")  
 SQL Server 查詢處理管線。  
   
  在這個案例中：  
@@ -117,7 +117,9 @@ SQL Server 查詢處理管線。
 5.  對於每個索引搜尋、索引掃描和資料表掃描運算子，執行引擎都會向 Access Methods 的個別索引和資料表結構要求資料列。  
   
 6.  Access Methods 會從緩衝集區中的索引和資料頁面擷取資料列，並且視需要將頁面從磁碟載入至緩衝集區。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  在第一個範例查詢中，執行引擎會從 Access Methods 要求 Customer 上叢集索引中以及 Order 上非叢集索引中的資料列。 Access Methods 會周遊 B 型樹狀目錄索引結構，擷取所要求的資料列。 在這種情況下，當計畫需要完整索引掃描時，就會擷取所有資料列。  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取  
@@ -125,7 +127,7 @@ SQL Server 查詢處理管線。
   
  解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可用來存取記憶體最佳化和磁碟為基礎的資料表。 下圖說明對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取之查詢處理：  
   
- ![用於解譯的 tsql 的查詢處理管線。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.gif "用於解譯的 tsql 的查詢處理管線。")  
+ ![用於解譯的 tsql 的查詢處理管線。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.png "用於解譯的 tsql 的查詢處理管線。")  
 對記憶體最佳化資料表進行解譯的 Transact-SQL 存取之查詢處理管線。  
   
  如圖中所示，查詢處理管線大致保持不變：  
@@ -163,7 +165,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  估計的計畫如下所示：  
   
- ![聯結記憶體最佳化資料表的查詢計劃。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.gif "聯結記憶體最佳化資料表的查詢計劃。")  
+ ![聯結記憶體最佳化資料表的查詢計劃。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.png "聯結記憶體最佳化資料表的查詢計劃。")  
 聯結記憶體最佳化資料表的查詢計劃。  
   
  請觀察與磁碟為基礎的資料表 (圖 1) 上相同查詢的下列差異：  
@@ -204,7 +206,7 @@ END
 ### <a name="compilation-and-query-processing"></a>編譯和查詢處理  
  下圖說明原生編譯預存程序的編譯程序：  
   
- ![預存程序的原生編譯。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.gif "預存程序的原生編譯。")  
+ ![預存程序的原生編譯。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.png "預存程序的原生編譯。")  
 預存程序的原生編譯。  
   
  這個程序描述為：  
@@ -221,7 +223,7 @@ END
   
  原生編譯預存程序的引動過程會轉譯為在 DLL 中呼叫函數。  
   
- ![執行原生編譯預存程序。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.gif "執行原生編譯預存程序。")  
+ ![執行原生編譯預存程序。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "執行原生編譯預存程序。")  
 執行原生編譯預存程序。  
   
  原生編譯預存程序的引動過程描述如下：  
@@ -243,7 +245,7 @@ END
  參數探測不會用於編譯原生編譯的預存程序。 預存程序的所有參數都會視為具有 UNKNOWN 值。 與解譯的預存程序相同，原生編譯的預存程序也支援 **OPTIMIZE FOR** 提示。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>擷取原生編譯預存程序的查詢執行計畫  
- 原生編譯預存程序的查詢執行計畫，可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 [Estimated Execution Plan (估計的執行計畫)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的 SHOWPLAN_XML 選項加以擷取。 例如：  
+ 原生編譯預存程序的查詢執行計畫，可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 [Estimated Execution Plan (估計的執行計畫)]  或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的 SHOWPLAN_XML 選項加以擷取。 例如：  
   
 ```sql  
 SET SHOWPLAN_XML ON  
@@ -273,7 +275,7 @@ GO
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|請注意，Hash Match 運算子不支援彙總。 因此，即使解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中相同查詢的計畫使用 Hash Match 運算子，原生編譯預存程序中的所有彙總仍會使用 Stream Aggregate 運算子。|  
   
 ## <a name="column-statistics-and-joins"></a>資料行統計資料和聯結  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在索引鍵資料行中維護值的統計資料，以協助估計特定作業的成本，例如索引掃描或索引搜尋。 (如果您明確建立非索引之索引鍵資料行的統計資料，或如果查詢最佳化工具為了回應包含述詞的查詢而建立它們，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會建立這些統計資料。)成本估計的主要標準是單一運算子所處理的資料列數  請注意，對於磁碟基礎的資料表，特定運算子所存取的頁面數目在成本估計中佔有相當大的比例。 但是，由於頁面數對於記憶體最佳化資料表而言並不重要 (一律為零)，因此這裡的討論將著重在資料列計數。 估計時間是從計劃中的索引搜尋和掃描運算子開始算起，然後延伸以納入其他運算子，像是聯結運算子。 聯結運算子所要處理的估計資料列數是以基礎索引、搜尋和掃描運算子的估計為依據。 若要對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取，您可以觀察實際執行計畫，了解計畫中運算子的估計資料列計數和實際資料列計數之間的差異。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在索引鍵資料行中維護值的統計資料，以協助估計特定作業的成本，例如索引掃描或索引搜尋。 (如果您明確建立非索引之索引鍵資料行的統計資料，或如果查詢最佳化工具為了回應包含述詞的查詢而建立它們，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會建立這些統計資料。)成本估計的主要標準是單一運算子所處理的資料列數 請注意，對於磁碟基礎的資料表，特定運算子所存取的頁面數目在成本估計中佔有相當大的比例。 但是，由於頁面數對於記憶體最佳化資料表而言並不重要 (一律為零)，因此這裡的討論將著重在資料列計數。 估計時間是從計劃中的索引搜尋和掃描運算子開始算起，然後延伸以納入其他運算子，像是聯結運算子。 聯結運算子所要處理的估計資料列數是以基礎索引、搜尋和掃描運算子的估計為依據。 若要對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取，您可以觀察實際執行計畫，了解計畫中運算子的估計資料列計數和實際資料列計數之間的差異。  
   
  在圖 1 的範例中，  
   
@@ -295,7 +297,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  只保留 Customer 資料表中的一個資料列，並刪除其餘全部資料列時：  
   
- ![資料行統計資料和聯結。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.gif "資料行統計資料和聯結。")  
+ ![資料行統計資料和聯結。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "資料行統計資料和聯結。")  
   
  關於這個查詢計畫：  
   

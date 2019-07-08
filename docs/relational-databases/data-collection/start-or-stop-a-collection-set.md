@@ -13,12 +13,12 @@ ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5669af5105e8d46f346d279b3be8027b7c22088d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12e425f889826a5fc9464ee8c85c88ab05043f4b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62695004"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580293"
 ---
 # <a name="start-or-stop-a-collection-set"></a>啟動或停止收集組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,8 +70,10 @@ ms.locfileid: "62695004"
 1.  在 [物件總管] 中，依序展開 **[管理]** 節點、 **[資料收集]** 和 **[系統資料收集組]** 。  
   
 2.  以滑鼠右鍵按一下您要啟動的收集組，然後按一下 [啟動資料收集組]  。  
-  
-     訊息方塊會顯示此動作的結果，而此收集組圖示上的綠色箭頭會指示此收集組已經啟動。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     A message box displays the results of this action, and a green arrow on the icon for the collection set indicates that the collection set has started.  
   
 #### <a name="to-stop-a-collection-set"></a>若要停止收集組  
   

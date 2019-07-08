@@ -21,19 +21,19 @@ ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d90c284494fe3f351d66932c019dbc3140aac433
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c025b791559fb63ba82826f112e04b6da837be1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698036"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581766"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>使用標示的交易以一致的方式復原相關資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主題只與使用完整或大量記錄復原模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關。  
   
- 當您對兩個以上的資料庫 (「相關資料庫」) 進行相關的更新時，您可以使用交易標示將它們復原到邏輯上一致的時間點。 不過，這種復原會遺失任何在復原點標示之後所認可的交易。 只有當您要測試相關資料庫，或是願意遺失最近認可的交易時，才適合標示交易。  
+ 當您對兩個以上的資料庫 (「相關資料庫」  ) 進行相關的更新時，您可以使用交易標示將它們復原到邏輯上一致的時間點。 不過，這種復原會遺失任何在復原點標示之後所認可的交易。 只有當您要測試相關資料庫，或是願意遺失最近認可的交易時，才適合標示交易。  
   
  例行性標示每個相關資料庫中的相關交易會在資料庫中建立一系列通用的復原點。 交易標示將記錄於交易記錄，並且包含在記錄備份中。 如果發生損毀，即可將每個資料庫還原到相同的交易標示，進而復原至一致的時間點。  
   
@@ -63,7 +63,9 @@ ms.locfileid: "47698036"
 4.  使用 WITH NORECOVERY 還原資料庫備份。  
   
 5.  使用 WITH STOPATMARK 還原記錄。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="considerations-for-using-marked-transactions"></a>使用標示的交易的考量  
  將具名標示插入交易記錄之前，請考慮以下幾點：  
   
@@ -74,7 +76,7 @@ ms.locfileid: "47698036"
 -   如果標示交易跨越同一資料庫伺服器或不同伺服器上的多個資料庫，則標示會記錄在所有受影響的資料庫之記錄中。  
   
 ## <a name="creating-the-marked-transactions"></a>建立標示的交易  
- 若要建立標示的交易，請使用 [BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md) 陳述式和 WITH MARK [描述] 子句。 選擇性的「描述」是標示的文字說明。 標示名稱對於交易而言是必要的。 標示名稱可以重複使用。 交易記錄中會記錄標示名稱、描述、資料庫、使用者、日期時間資訊與記錄序號 (LSN)。 日期時間資訊要連同標示名稱一起使用，才能唯一識別標示。  
+ 若要建立標示的交易，請使用 [BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md) 陳述式和 WITH MARK [描述  ] 子句。 選擇性的「描述」  是標示的文字說明。 標示名稱對於交易而言是必要的。 標示名稱可以重複使用。 交易記錄中會記錄標示名稱、描述、資料庫、使用者、日期時間資訊與記錄序號 (LSN)。 日期時間資訊要連同標示名稱一起使用，才能唯一識別標示。  
   
  **若要在一組資料庫中建立標示的交易：**  
   
@@ -183,6 +185,6 @@ GO
  [套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [復原包含標示之交易的相關資料庫](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)  
+ [復原包含標記之異動的相關資料庫](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)  
   
   

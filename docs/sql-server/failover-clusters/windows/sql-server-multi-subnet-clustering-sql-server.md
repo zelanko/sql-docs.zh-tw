@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: faa34ef2e1b38fe13f487574ba95d0ad015b08a4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: b3ebbbcefcd3477af997cea4680ba5ce51621555
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516584"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388028"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多重子網路叢集 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "59516584"
 ##  <a name="ComponentsAndConcepts"></a> IP 位址資源考量  
  在多重子網路容錯移轉叢集組態中，IP 位址不會由容錯移轉叢集中的所有節點擁有，可能也不會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 啟動期間全數都在線上。 從 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]開始，您可以將 IP 位址資源相依性設為 **OR**。 當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以繫結到至少一個有效的 IP 位址時，這可讓它位於線上。  
   
-> **注意：** 在版本早於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]版本中，多重子站台叢集組態中使用了延展 V-LAN 技術來公開跨越站台之容錯移轉的單一 IP 位址。 利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 跨越不同子網路叢集節點的新功能，現在您可以在不需要實作延展 V-LAN 技術的情況下，設定跨越多個站台的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集。  
+  > [!NOTE] 
+  > - 在版本早於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 版本中，多重子站台叢集組態中使用了延展 V-LAN 技術來公開跨越站台之容錯移轉的單一 IP 位址。 利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 跨越不同子網路叢集節點的新功能，現在您可以在不需要實作延展 V-LAN 技術的情況下，設定跨越多個站台的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集。  
+
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>IP 位址資源 OR 相依性考量  
  若您將 IP 位址資源相依性設為 **OR**，可能需要考量下列容錯移轉行為：  
@@ -68,6 +70,9 @@ ms.locfileid: "59516584"
  對於舊版用戶端程式庫或協力廠商資料提供者，您不能在連接字串中使用 **MultiSubnetFailover** 參數。 為確保用戶端應用程式以最佳方式與 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]多重子網路 FCI 搭配使用，針對每個額外 IP 位址，請嘗試將用戶端連接字串中的連接逾時調增 21 秒。 這可確保在完成多重子網路 FCI 中的所有 IP 位址之間循環前，用戶端的重新連線嘗試不會逾時。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio 和 **sqlcmd** 的預設用戶端連接逾時期限是 15 秒。  
+ 
+ > [!NOTE]
+ > - 如果您使用多個子網路，且具有靜態 DNS，即必須採用程序才能更新與接聽程式相關聯的 DNS 記錄，再執行容錯移轉，否則網路名稱無法上線。
   
    
 ##  <a name="RelatedContent"></a> 相關內容  

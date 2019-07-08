@@ -15,12 +15,12 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14255fde1f8d0d165e1071f95c737f60aacf5058
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a5064d3c2f2252137ac3b3f614e6f509bf971e85
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131428"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582473"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>使用參數化篩選建立合併式發行集的快照集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,35 +59,37 @@ ms.locfileid: "54131428"
 -   如果發行集內的一或多個發行項的篩選產生對每個訂閱而言是唯一的非重疊資料分割，則只要合併代理程式一執行，就會清除中繼資料。 這表示分割快照集會更快過期。 使用這個選項時，您應該考慮允許訂閱者初始化快照集的產生與傳遞。 
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在 [發行集屬性 - \<發行集>] 對話方塊的 [資料分割] 頁面上，產生資料分割的快照集。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。 您可以讓訂閱者初始化快照集產生和傳遞，並且/或者產生快照集。  
+ 您可以在 [發行集屬性 - \<發行集>]  對話方塊的 [資料分割]  頁面上，產生資料分割的快照集。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。 您可以讓訂閱者初始化快照集產生和傳遞，並且/或者產生快照集。  
   
  產生一個或多個資料分割的快照集之前，必須：  
   
 1.  使用「新增發行集精靈」建立合併發行集，並在精靈的 **[加入篩選]** 頁面上，指定一個或多個參數化資料列篩選器。 如需詳細資訊，請參閱 [針對合併發行項定義及修改參數化資料列篩選](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
 2.  產生發行集的結構描述快照集。 依預設，當您完成「新增發行集精靈」時，便會產生結構描述快照集；您也可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]產生結構描述快照集。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-generate-a-schema-snapshot"></a>若要產生結構描述快照集  
   
 1.  連接到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的發行者，然後展開伺服器節點。  
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[發行集]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您要為其建立快照集的發行集，然後按一下 **[檢視快照集代理程式的狀態]**。  
+3.  以滑鼠右鍵按一下您要為其建立快照集的發行集，然後按一下 **[檢視快照集代理程式的狀態]** 。  
   
-4.  在 [檢視快照集代理程式的狀態 - \<發行集>] 對話方塊中，按一下 [啟動]。  
+4.  在 [檢視快照集代理程式的狀態 - \<發行集>]  對話方塊中，按一下 [啟動]  。  
   
      快照集代理程式產生完快照集後，就會顯示一個訊息，例如「[100%] 已產生 17 個發行項的快照集」。  
   
 #### <a name="to-allow-subscribers-to-initiate-snapshot-generation-and-delivery"></a>若要允許訂閱者初始化快照集的產生與傳遞  
   
-1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [資料分割] 頁面上，選取 [新的訂閱者嘗試進行同步處理時，自動定義資料分割並依需要產生快照]。  
+1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [資料分割]  頁面上，選取 [新的訂閱者嘗試進行同步處理時，自動定義資料分割並依需要產生快照]  。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 #### <a name="to-generate-and-refresh-snapshots"></a>若要產生和重新整理快照集  
   
-1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [資料分割] 頁面上，按一下 [新增]。  
+1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [資料分割]  頁面上，按一下 [新增]  。  
   
 2.  輸入與您要建立快照集的資料分割關聯之 **HOST_NAME()** 和 (或) **SUSER_SNAME()** 的值。  
   
@@ -97,9 +99,9 @@ ms.locfileid: "54131428"
   
     2.  接受重新重理快照集的預設排程，或按一下 **[變更]** 以指定其他排程。  
   
-4.  按一下 [確定] 回到 [發行集屬性 - \<發行集>] 對話方塊。  
+4.  按一下 [確定]  回到 [發行集屬性 - \<發行集>]  對話方塊。  
   
-5.  在屬性方格中選取資料分割，然後按一下 **[立即產生選取的快照集]**。  
+5.  在屬性方格中選取資料分割，然後按一下 **[立即產生選取的快照集]** 。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -119,13 +121,13 @@ ms.locfileid: "54131428"
   
 1.  在發行集資料庫的發行者端，執行 [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 指定下列參數：  
   
-    -   將 **@publication**。  
+    -   將 **@publication** 。  
   
-    -   將 **@allow_subscriber_initiated_snapshot** @allow_subscriber_initiated_snapshot **@allow_subscriber_initiated_snapshot**的值，這樣可讓訂閱者起始快照集處理。  
+    -   將 **@allow_subscriber_initiated_snapshot** @allow_subscriber_initiated_snapshot **@allow_subscriber_initiated_snapshot** 的值，這樣可讓訂閱者起始快照集處理。  
   
-    -   (選擇性) 將 **@max_concurrent_dynamic_snapshots**。 如果正在執行最大的處理序數目，而且訂閱者嘗試產生快照集，則會將此處理序置於佇列中。 根據預設，並行處理序的數目沒有任何限制。  
+    -   (選擇性) 將 **@max_concurrent_dynamic_snapshots** 。 如果正在執行最大的處理序數目，而且訂閱者嘗試產生快照集，則會將此處理序置於佇列中。 根據預設，並行處理序的數目沒有任何限制。  
   
-2.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 針對 **@publication** 指定步驟 1 中所用的發行集名稱，並針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login [@password](../../relational-databases/replication/agents/replication-snapshot-agent.md) 和 **@job_login** 指定執行 **@password**。 如果代理程式會在與「發行者」時連接時使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」，則也必須指定 **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** 指定步驟 1 中所用的發行集名稱，並針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定執行 **@publisher_password**。 這麼做會為發行集建立快照集代理程式作業。 如需有關產生初始快照集以及為快照集代理程式定義自訂排程的詳細資訊，請參閱＜ [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)＞。  
+2.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 針對 **@publication** 指定步驟 1 中所用的發行集名稱，並針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login [@password](../../relational-databases/replication/agents/replication-snapshot-agent.md) 和 **@job_login** 指定執行 **@password** 。 如果代理程式會在與「發行者」時連接時使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」，則也必須指定 **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** 指定步驟 1 中所用的發行集名稱，並針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定執行 **@publisher_password** 。 這麼做會為發行集建立快照集代理程式作業。 如需有關產生初始快照集以及為快照集代理程式定義自訂排程的詳細資訊，請參閱＜ [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)＞。  
   
     > [!IMPORTANT]  
     >  當利用遠端散發者來設定發行者時，提供給所有參數的值 (包括 *job_login* 和 *job_password*) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再執行這個預存程序。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
@@ -140,7 +142,7 @@ ms.locfileid: "54131428"
   
 1.  若要建立發行集，請執行 [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 如需詳細資訊，請參閱 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)。  
   
-2.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 針對 **@publication** 指定步驟 1 中所使用的發行集名稱，以及針對 **@job_login** 指定執行 **@password**。 如果代理程式會在與「發行者」時連接時使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」，則也必須指定 **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** 指定步驟 1 中所用的發行集名稱，並針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定執行 **@publisher_password**。 這麼做會為發行集建立快照集代理程式作業。 如需有關產生初始快照集以及為快照集代理程式定義自訂排程的詳細資訊，請參閱＜ [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)＞。  
+2.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 針對 **@publication** 指定步驟 1 中所使用的發行集名稱，以及針對 **@job_login** 指定執行 **@password** 。 如果代理程式會在與「發行者」時連接時使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」，則也必須指定 **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** 指定步驟 1 中所用的發行集名稱，並針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定執行 **@publisher_password** 。 這麼做會為發行集建立快照集代理程式作業。 如需有關產生初始快照集以及為快照集代理程式定義自訂排程的詳細資訊，請參閱＜ [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)＞。  
   
     > [!IMPORTANT]  
     >  當利用遠端散發者來設定發行者時，提供給所有參數的值 (包括 *job_login* 和 *job_password*) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再執行這個預存程序。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
@@ -157,7 +159,7 @@ ms.locfileid: "54131428"
   
 8.  在發行集資料庫的發行者端，執行 [sp_addmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)。 針對 **@publication** 指定步驟 1 中的發行集名稱，並針對 **@suser_sname** (如果 [SUSER_SNAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sname-transact-sql.md) 用於篩選子句) 或是針對 **@host_name** (如果 [HOST_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/host-name-transact-sql.md) 用於篩選子句) 指定用於定義資料分割的值。  
   
-9. 在發行集資料庫的發行者端，執行 [sp_adddynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)。 針對 **@publication**指定步驟 1 中的發行集名稱、步驟 8 中的 **@suser_sname** 或 **@host_name** 的值，以及此作業的排程。 這樣會建立針對指定的資料分割產生參數化快照集的作業。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)。  
+9. 在發行集資料庫的發行者端，執行 [sp_adddynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)。 針對 **@publication** 指定步驟 1 中的發行集名稱、步驟 8 中的 **@suser_sname** 或 **@host_name** 的值，以及此作業的排程。 這樣會建立針對指定的資料分割產生參數化快照集的作業。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
     > [!NOTE]  
     >  這個作業會使用與步驟 2 中定義的初始快照集作業相同的 Windows 帳戶來執行。 若要移除參數化快照集作業及其相關的資料分割，請執行 [sp_dropdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)。  
@@ -172,7 +174,7 @@ ms.locfileid: "54131428"
   
 1.  若要建立發行集，請執行 [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 如需詳細資訊，請參閱 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)。  
   
-2.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 針對 **@publication** 指定步驟 1 中所使用的發行集名稱，以及針對 **@job_login** 指定執行 **@password**。 如果代理程式會在與「發行者」時連接時使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」，則也必須指定 **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** 指定步驟 1 中所用的發行集名稱，並針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定執行 **@publisher_password**。 這麼做會為發行集建立快照集代理程式作業。 如需有關產生初始快照集以及為快照集代理程式定義自訂排程的詳細資訊，請參閱＜ [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)＞。  
+2.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 針對 **@publication** 指定步驟 1 中所使用的發行集名稱，以及針對 **@job_login** 指定執行 **@password** 。 如果代理程式會在與「發行者」時連接時使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」，則也必須指定 **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** 指定步驟 1 中所用的發行集名稱，並針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定執行 **@publisher_password** 。 這麼做會為發行集建立快照集代理程式作業。 如需有關產生初始快照集以及為快照集代理程式定義自訂排程的詳細資訊，請參閱＜ [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)＞。  
   
     > [!IMPORTANT]  
     >  當利用遠端散發者來設定發行者時，提供給所有參數的值 (包括 *job_login* 和 *job_password*) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再執行這個預存程序。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
@@ -305,7 +307,7 @@ PAUSE
   
     -   將 <xref:Microsoft.SqlServer.Replication.MergePublication.MaxConcurrentDynamicSnapshots%2A>設定為動態快照集作業的最大數目。 由於訂閱者起始的快照集要求可在任何時間發生，所以當多個訂閱者同時要求其分割快照集時，這個屬性會限制可以同時執行的快照集代理程式作業數目。 當正在執行最大的作業數目時，其他分割快照集要求會排入佇列中，直到其中一個執行中的作業完成為止。  
   
-    -   使用位元邏輯 OR (Visual C# 中為**|** 且 Visual Basic 中為 **Or** ) 運算子，將 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot> 值加入 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>。  
+    -   使用位元邏輯 OR (Visual C# 中為 **|** 且 Visual Basic 中為 **Or** ) 運算子，將 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot> 值加入 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>。  
   
     -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 欄位，可提供執行快照集代理程式作業所使用之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的認證。  
   

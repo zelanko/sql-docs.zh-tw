@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e0431b913366b4e4ccb34bea7a00f0cf003a82e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 077abbbb8ca5e233cc9582d9305f3e689a25bc6a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134428"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583175"
 ---
 # <a name="create-nonclustered-indexes"></a>建立非叢集索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "54134428"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -60,20 +60,22 @@ ms.locfileid: "54134428"
   
 2.  展開 **[資料表]** 資料夾。  
   
-3.  以滑鼠右鍵按一下要建立非叢集索引的資料表，然後選取 [設計]。  
+3.  以滑鼠右鍵按一下要建立非叢集索引的資料表，然後選取 [設計]  。  
   
-4.  在 [資料表設計工具] 功能表上，按一下 [索引/索引鍵]。  
+4.  在 [資料表設計工具]  功能表上，按一下 [索引/索引鍵]  。  
   
-5.  在 [索引/索引鍵] 對話方塊中，按一下 [加入]。  
+5.  在 [索引/索引鍵]  對話方塊中，按一下 [加入]  。  
   
-6.  從 [選取的主索引鍵/唯一索引鍵或索引] 文字方塊中選取新索引。  
+6.  從 [選取的主索引鍵/唯一索引鍵或索引]  文字方塊中選取新索引。  
   
-7.  在方格中，選取 [建立成 CLUSTERED]，然後從屬性右邊的下拉式清單中選擇 [否]。  
+7.  在方格中，選取 [建立成 CLUSTERED]  ，然後從屬性右邊的下拉式清單中選擇 [否]  。  
   
 8.  按一下 [ **關閉**]。  
   
-9. 在 [檔案] 功能表上，按一下 [儲存 _資料表名稱_]。  
-  
+9. 在 [檔案]  功能表上，按一下 [儲存 _資料表名稱_]  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>若要使用物件總管建立非叢集索引  
   
 1.  在 [物件總管] 中，展開包含您要建立非叢集索引之資料表的資料庫。  
@@ -82,17 +84,17 @@ ms.locfileid: "54134428"
   
 3.  展開您要建立非叢集索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引] 資料夾，指向 [新增索引]，然後選取 [非叢集索引…]。  
+4.  以滑鼠右鍵按一下 [索引]  資料夾，指向 [新增索引]  ，然後選取 [非叢集索引…]  。  
   
 5.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
-6.  按一下 [索引鍵資料行] 下的 [新增...]。  
+6.  按一下 [索引鍵資料行]  下的 [新增...]  。  
   
-7.  在 [從 _資料表名稱_ 選取資料行] 對話方塊中，選取要加入非叢集索引之一或多個資料表資料行的核取方塊。  
+7.  在 [從 _資料表名稱_ 選取資料行]  對話方塊中，選取要加入非叢集索引之一或多個資料表資料行的核取方塊。  
   
-8.  按一下 [確定] 。  
+8.  按一下 [確定]  。  
   
-9. 在 **[新增索引]** 對話方塊中，按一下 **[確定]**。  
+9. 在 **[新增索引]** 對話方塊中，按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -100,9 +102,9 @@ ms.locfileid: "54134428"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```sql  
     USE AdventureWorks2012;  

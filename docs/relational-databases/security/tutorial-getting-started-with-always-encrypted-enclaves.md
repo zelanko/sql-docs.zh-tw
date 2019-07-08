@@ -1,7 +1,7 @@
 ---
 title: 教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 04/05/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 051123efd5c58048635bb83e43eaff73218c463e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 9ab1678831e67fa2504f9abb64a7dcc95f9f8e64
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241536"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388125"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -51,8 +51,8 @@ ms.locfileid: "59241536"
 
 或者，您也可以在另一部電腦上安裝 SSMS。
 
->[!WARNING] 
->在生產環境中，您絕不應該使用 SSMS 或其他工具來管理 Always Encrypted 金鑰，或對 SQL Server 電腦上的加密資料執行查詢，因為這樣可能會降低或完全損害使用 Always Encrypted 的目的。
+> [!WARNING]
+> 在生產環境中，您絕不應該使用 SSMS 或其他工具來管理 Always Encrypted 金鑰，或對 SQL Server 電腦上的加密資料執行查詢，因為這樣可能會降低或完全損害使用 Always Encrypted 的目的。 如需詳細資訊，請參閱[金鑰管理的安全性考量](encryption/overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)。
 
 ### <a name="hgs-computer-requirements"></a>HGS 電腦需求
 
@@ -61,8 +61,8 @@ ms.locfileid: "59241536"
 - 8 GB RAM
 - 100 GB 儲存體
 
->[!NOTE]
->在您開始之前，不應該將 HGS 電腦加入網域。
+> [!NOTE]
+> 在您開始之前，不應該將 HGS 電腦加入網域。
 
 ## <a name="step-1-configure-the-hgs-computer"></a>步驟 1:設定 HGS 電腦
 
@@ -93,13 +93,14 @@ ms.locfileid: "59241536"
    Get-NetIPAddress  
    ```
 
->[!NOTE]
->或者，如果您想要以 DNS 名稱來參考您的 HGS 電腦，可以設定從您公司 DNS 伺服器到新 HGS 網域控制站的轉寄站。  
+> [!NOTE]
+> 或者，如果您想要以 DNS 名稱來參考您的 HGS 電腦，可以設定從您公司 DNS 伺服器到新 HGS 網域控制站的轉寄站。  
 
 ## <a name="step-2-configure-the-sql-server-computer-as-a-guarded-host"></a>步驟 2:設定 SQL Server 電腦作為受防護主機
 在此步驟中，您將設定 SQL Server 電腦作為使用主機金鑰證明來向 HGS 註冊的受防護主機。
->[!NOTE]
->主機金鑰證明只建議在測試環境中使用。 針對生產環境，您應該使用 TPM 證明。
+
+> [!WARNING]
+> 主機金鑰證明只建議在測試環境中使用。 針對生產環境，您應該使用 TPM 證明。
 
 1. 以系統管理員身分登入您的 SQL Server 電腦，開啟提升權限的 Windows PowerShell 主控台，然後透過存取 computername 變數來擷取您電腦的名稱。
 
@@ -128,24 +129,22 @@ ms.locfileid: "59241536"
        Restart-Computer
        ```
 
-
-
-4. 以系統管理員身分再次登入 SQL Server 電腦、開啟提升權限的 Windows PowerShell 主控台、產生唯一的主機金鑰，並將產生的公開金鑰匯出至檔案。
+5. 以系統管理員身分再次登入 SQL Server 電腦、開啟提升權限的 Windows PowerShell 主控台、產生唯一的主機金鑰，並將產生的公開金鑰匯出至檔案。
 
    ```powershell
    Set-HgsClientHostKey 
    Get-HgsClientHostKey -Path $HOME\Desktop\hostkey.cer
    ```
 
-5. 將上一個步驟中產生的主機金鑰檔案手動複製到 HGS 電腦。 下列指示假設您的檔案名稱為 hostkey.cer，且您正在將它複製到 HGS 電腦上的桌面。
+6. 將上一個步驟中產生的主機金鑰檔案手動複製到 HGS 電腦。 下列指示假設您的檔案名稱為 hostkey.cer，且您正在將它複製到 HGS 電腦上的桌面。
 
-6. 在 HGS 電腦上，開啟提升權限的 Windows PowerShell 主控台，並向 HGS 註冊 SQL Server 電腦的主機金鑰：
+7. 在 HGS 電腦上，開啟提升權限的 Windows PowerShell 主控台，並向 HGS 註冊 SQL Server 電腦的主機金鑰：
 
    ```powershell
    Add-HgsAttestationHostKey -Name <your SQL Server computer name> -Path $HOME\Desktop\hostkey.cer
    ```
 
-7. 在 SQL Server 電腦上，在提升權限的 Windows PowerShell 主控台執行下列命令，以告知 SQL Server 電腦證明的位置。 請務必同時在兩個位址位置中指定 HGS 電腦的 IP 位址或 DNS 名稱。 
+8. 在 SQL Server 電腦上，在提升權限的 Windows PowerShell 主控台執行下列命令，以告知 SQL Server 電腦證明的位置。 請務必同時在兩個位址位置中指定 HGS 電腦的 IP 位址或 DNS 名稱。 
 
    ```powershell
    # use http, and not https
@@ -164,8 +163,14 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
 
 在此步驟中，您將在 SQL Server 執行個體中使用記憶體保護區啟用 Always Encrypted 的功能。
 
-1. 開啟 SSMS、以系統管理員身分連線到您的 SQL Server 執行個體，並開啟新的查詢視窗。
-2. 將安全記憶體保護區類型設定為虛擬化型安全性 (VBS)。
+1. 使用 SSMS，以 sysadmin 身分連線到**未**針對資料庫連接啟用 Always Encrypted 的 SQL Server 執行個體。
+    1. 啟動 SSMS。
+    1. 在 [連線到伺服器]  對話方塊中，指定您的伺服器名稱，然後選取驗證方法並指定認證。
+    1. 按一下 [選項 >>]  ，然後選取 [Always Encrypted]  索引標籤。
+    1. 請確定**未**選取 [啟用 Always Encrypted (資料行加密)]  核取方塊。
+    1. 選取 [連接]  。
+
+2. 開啟新的查詢視窗，並執行以下陳述式，將安全記憶體保護區類型設成虛擬化型安全性 (VBS)。
 
    ```sql
    EXEC sys.sp_configure 'column encryption enclave type', 1;
@@ -199,19 +204,18 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
 ## <a name="step-4-create-a-sample-database"></a>步驟 4：建立範例資料庫
 在此步驟中，您將建立一個具有部分範例資料的資料庫，且稍後會加密它。
 
-1. 使用 SSMS 連線至 SQL Server 執行個體。
-2. 建立新的資料庫，名為 ContosoHR。
+1. 使用上個步驟中的 SSMS 執行個體，在查詢視窗中執行以下陳述式，建立名為 **ContosoHR** 的新資料庫。
 
     ```sql
     CREATE DATABASE [ContosoHR];
     ```
 
-3. 確定您連線的是新建立的資料庫。 建立新的資料表，名為 Employees。
+1. 建立名為 **Employees** 的新資料表。
 
     ```sql
     USE [ContosoHR];
     GO
-    
+
     CREATE TABLE [dbo].[Employees]
     (
         [EmployeeID] [int] IDENTITY(1,1) NOT NULL,
@@ -222,9 +226,12 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
     ) ON [PRIMARY];
     ```
 
-4. 在 Employees 資料表中新增一些員工記錄。
+1. 在 **Employees** 資料表中新增一些員工記錄。
 
     ```sql
+    USE [ContosoHR];
+    GO
+
     INSERT INTO [dbo].[Employees]
             ([SSN]
             ,[FirstName]
@@ -235,7 +242,7 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
             , N'Catherine'
             , N'Abel'
             , $31692);
- 
+
     INSERT INTO [dbo].[Employees]
             ([SSN]
             ,[FirstName]
@@ -252,65 +259,62 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
 
 在此步驟中，您將建立資料行主要金鑰和允許記憶體保護區計算的資料行加密金鑰。
 
-1. 使用 SSMS 連線到您的資料庫。
-2. 在 [物件總管] 中，展開您的資料庫，然後巡覽至 [安全性] > [Always Encrypted 金鑰]。
-3. 佈建已啟用記憶體保護區的新資料行主要金鑰：
-    1. 以滑鼠右鍵按一下 [Always Encrypted 金鑰]，然後選取 [新增資料行主要金鑰]。
-    2. 選取您的資料行主要金鑰名稱：CMK1。
-    3. 請確定您選取 [Windows 憑證存放區 (目前的使用者或本機電腦)] 或 [Azure Key Vault]。
-    4. 選取 [允許記憶體保護區運算]。
+1. 使用上個步驟中的 SSMS 執行個體，在**物件總管**中展開您的資料庫，然後巡覽至 [安全性]   > [Always Encrypted 金鑰]  。
+1. 佈建已啟用記憶體保護區的新資料行主要金鑰：
+    1. 以滑鼠右鍵按一下 [Always Encrypted 金鑰]  ，然後選取 [新增資料行主要金鑰]  。
+    2. 選取您的資料行主要金鑰名稱：**CMK1**。
+    3. 請確定您選取 [Windows 憑證存放區 (目前的使用者或本機電腦)]  或 [Azure Key Vault]  。
+    4. 選取 [允許記憶體保護區運算]  。
     5. 如果您已選取 Azure Key Vault，請登入 Azure，然後選取您的金鑰保存庫。 如需如何建立 Always Encrypted 金鑰保存庫的詳細資訊，請參閱 [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/) (從 Azure 入口網站管理金鑰保存庫)。
-    6. 選取您的憑證或 Azure Key Vault 金鑰 (如果已經存在)，或按一下 [產生憑證] 按鈕來建立一個新的憑證。
-    7. 選取 [確定]。
+    6. 選取您的憑證或 Azure Key Vault 金鑰 (如果已經存在)，或按一下 [產生憑證]  按鈕來建立一個新的憑證。
+    7. 選取 [確定]  。
 
         ![允許記憶體保護區運算](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
-    
-4. 建立已啟用記憶體保護區的新資料行加密金鑰：
 
-    1. 以滑鼠右鍵按一下 [Always Encrypted 金鑰]，然後選取 [新增資料行加密金鑰]。
-    2. 輸入新資料行加密金鑰的名稱：CEK1。
-    3. 在 [資料行主要金鑰] 下拉式清單中，選取您在先前步驟中建立的資料行主要金鑰。
-    4. 選取 [確定]。
+1. 建立已啟用記憶體保護區的新資料行加密金鑰：
+
+    1. 以滑鼠右鍵按一下 [Always Encrypted 金鑰]  ，然後選取 [新增資料行加密金鑰]  。
+    2. 輸入新資料行加密金鑰的名稱：**CEK1**。
+    3. 在 [資料行主要金鑰]  下拉式清單中，選取您在先前步驟中建立的資料行主要金鑰。
+    4. 選取 [確定]  。
 
 ## <a name="step-6-encrypt-some-columns-in-place"></a>步驟 6：就地加密某些資料行
 
-在此步驟中，您會將伺服器端記憶體保護區內 SSN 和 Salary 資料行中儲存的資料加密，然後測試資料的 SELECT 查詢。
+在此步驟中，您會加密儲存在伺服器端記憶體保護區內 **SSN** 和 **Salary** 資料行中的資料，然後對資料測試 SELECT 查詢。
 
-1. 在 SSMS 中，設定新的查詢視窗，並針對資料庫連線啟用 Always Encrypted 。
-    1. 在 SSMS 中，開啟新的查詢視窗。
-    2. 以滑鼠右鍵按一下新查詢視窗中的任何位置。
-    3. 選取 [連線]\>[變更連線]。
-    4. 選取 [選項]。 巡覽至 [Always Encrypted] 索引標籤，並選取 [啟用 Always Encrypted]，然後指定您的記憶體保護區證明 URL (例如，<span>http://</span>hgs.bastion.local/Attestation)。
-    5. 選取 [連接]。
-    6. 如果系統提示您啟用 Always Encrypted 的參數化查詢，按一下 [啟用]。
-2. 在 SSMS 中，設定另一個查詢視窗，並針對資料庫連線停用 Always Encrypted 。
-    1. 在 SSMS 中，開啟新的查詢視窗。
-    2. 以滑鼠右鍵按一下新查詢視窗中的任何位置。
-    3. 選取 [連線]\>[變更連線]。
-    4. 選取 [選項]。 巡覽至 [Always Encrypted] 索引標籤，並確定未選取 [啟用 Always Encrypted]。
-    5. 選取 [連接]。
-    6. 將資料庫內容變更為 ContosoHR 資料庫。
-1. 加密 SSN 和 Salary 資料行。 在已啟用 Always Encrypted 的查詢視窗中，貼上並執行以下指令碼：
+1. 開啟新的 SSMS 執行個體，連線到**已**針對資料庫連接啟用 [Always Encrypted] 的 SQL Server 執行個體。
+    1. 啟動新的 SSMS 執行個體。
+    1. 在 [連線到伺服器]  對話方塊中，指定您的伺服器名稱，然後選取驗證方法並指定認證。
+    1. 按一下 [選項 >>]  ，然後選取 [Always Encrypted]  索引標籤。
+    1. 選取 [Enable Always Encrypted (column encryption)] \(啟用 Always Encrypted (資料行加密)\)  核取方塊，然後指定您的記憶體保護區證明 URL (例如，ht<span>tp://</span>hgs.bastion.local/Attestation)。
+    1. 選取 [連接]  。
+    1. 如果系統提示您啟用 Always Encrypted 的參數化查詢，請選取 [啟用]  。
+
+1. 使用相同的 SSMS 執行個體 (啟用 Always Encrypted)，開啟新的查詢視窗，並執行下列查詢以加密 **SSN** 和 **Salary** 資料行。
 
     ```sql
+    USE [ContosoHR];
+    GO
+
     ALTER TABLE [dbo].[Employees]
     ALTER COLUMN [SSN] [char] (11) COLLATE Latin1_General_BIN2
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
     (ONLINE = ON);
-     
+
     ALTER TABLE [dbo].[Employees]
     ALTER COLUMN [Salary] [money]
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
     (ONLINE = ON);
- 
+
     ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
     ```
+
     > [!NOTE]
     > 請注意上述指令碼中用來清除資料庫查詢計畫快取的 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 陳述式。 修改資料表之後，您需要清除所有批次之計畫和存取資料表的預存程序，以重新整理參數加密資訊。 
 
-4. 若要確認 SSN 和 Salary 資料行現在已加密，請在查詢視窗中貼上並執行以下陳述式，並且停用 Always Encrypted。 查詢視窗應該在 SSN 和 Salary 資料行中傳回加密的值。 使用已啟用 Always Encrypted 的查詢視窗，嘗試相同的查詢，以查看解密的資料。
+1. 為驗證 **SSN** 和 **Salary** 資料行現已加密，請在**未**針對資料庫連接啟用 Always Encrypted 的 SSMS 執行個體中開啟新的查詢視窗，並執行以下陳述式。 查詢視窗應該傳回 **SSN** 和 **Salary** 資料行中加密的值。 如果使用已啟用 Always Encrypted 的 SSMS 執行個體執行同一查詢，您應該會看到解密的資料。
 
     ```sql
     SELECT * FROM [dbo].[Employees];
@@ -320,13 +324,13 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
 
 現在，您可以針對加密的資料行執行豐富查詢。 在伺服器端記憶體保護區內，將會執行一些查詢處理。 
 
-1. 確定會啟用 [Always Encrypted 的參數化]。
-    1. 從 SSMS 的主功能表中，選取 [查詢]。
-    2. 選取 [查詢選項]。
-    3. 瀏覽至 [執行] > [進階]。
-    4. 確定會勾選 [啟用 Always Encrypted 的參數化]。
-    5. 選取 [確定]。
-2. 在已啟用 Always Encrypted 的查詢視窗中，貼上並執行以下查詢。 查詢應該會傳回純文字值和符合指定搜尋準則的資料列。
+1. 在**已**啟用 Always Encrypted 的 SSMS 執行個體中，請確定也已啟用 Always Encrypted 的參數化。
+    1. 從 SSMS 主功能表選取 [工具]  。
+    2. 選取 [選項]  。
+    3. 瀏覽至 [查詢執行]   > [SQL Server]   > [進階]  。
+    4. 確定勾選 [啟用 Always Encrypted 的參數化]  。
+    5. 選取 [確定]  。
+2. 開啟新的查詢視窗，貼上並執行下列查詢。 查詢應該會傳回純文字值和符合指定搜尋準則的資料列。
 
     ```sql
     DECLARE @SSNPattern [char](11) = '%6818';
@@ -334,10 +338,13 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```
-3. 在未啟用 Always Encrypted 的查詢視窗中再次嘗試相同的查詢，並留意到隨即發生的失敗。
+
+3. 在未啟用 Always Encrypted 的 SSMS 執行個體中再次嘗試相同查詢，並留意發生的失敗。
 
 ## <a name="next-steps"></a>Next Steps
-請參閱[設定具有安全記憶體保護區的 Always Encrypted](encryption/configure-always-encrypted-enclaves.md)，以獲得關於其他使用案例的想法。 您也可以嘗試下列各項：
+移至[教學課程：使用隨機加密在已啟用記憶體保護區的資料行中建立及使用索引](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)，這是本教學課程接續的內容。
+
+如需具有安全記憶體保護區的 Always Encrypted 其他使用案例資訊，請參閱[設定具有安全記憶體保護區的 Always Encrypted](encryption/configure-always-encrypted-enclaves.md)。 例如：
 
 - [設定 TPM 證明。](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
 - [ HGS 執行個體的 HTTPS。](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)

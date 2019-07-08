@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9d0dcecd83c38dcd42bc7512bd416bd70d743ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41a78443dba90f8b75fec9e3db05c9106755b865
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62515938"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580465"
 ---
 # <a name="delete-columns-from-a-table"></a>從資料表中刪除資料行
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -69,7 +69,9 @@ ms.locfileid: "62515938"
 3.  以滑鼠右鍵按一下您想要刪除的資料行，然後選擇 [刪除]  。  
   
 3.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  如果資料行包含條件約束或其他相依性， **[刪除物件]** 對話方塊將會顯示錯誤訊息。 請刪除參考的條件約束，藉以解決此錯誤。  
   
 #### <a name="to-delete-columns-by-using-table-designer"></a>若要使用資料表設計工具來刪除資料行  

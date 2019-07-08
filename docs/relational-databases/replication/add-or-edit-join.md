@@ -13,12 +13,12 @@ ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d883a137dd182f233bc056b0fca98cf60df4331f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c6e0a2429bfb78f2cee7ae5871cef98660ccce1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665500"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585695"
 ---
 # <a name="add-or-edit-join"></a>加入或編輯聯結
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,9 @@ ms.locfileid: "62665500"
     -   如果是編輯現有的聯結，您必須以手動進行編輯。  
   
 3.  **指定聯結選項**  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   如果在已篩選的資料表中聯結的資料行是唯一的，請選取 **[唯一索引鍵]** 。 如果資料行是唯一的，合併處理可以使用特殊效能最佳化。  
   
         > [!CAUTION]  

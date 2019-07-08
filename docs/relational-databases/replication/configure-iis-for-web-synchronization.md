@@ -15,12 +15,12 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78fc4eff34dd98552924435c3132c1fafb96c746
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62668879"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585795"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>針對 Web 同步處理設定 IIS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,9 @@ ms.locfileid: "62668879"
 4.  為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener 設定適當的權限。  
   
 5.  在診斷模式下執行 Web 同步處理，以測試執行 IIS 的電腦連接，並確定 SSL 憑證已正確安裝。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="configuring-secure-sockets-layer"></a>設定安全通訊端層  
  若要設定 SSL，請為所要使用之執行 IIS 的電腦指定一個憑證。 合併式複寫的 Web 同步處理支援使用伺服器憑證，但不支援用戶端憑證。 若要設定 IIS 以進行部署，必須先從憑證授權中心 (CA) 獲得憑證。 憑證授權單位是負責建立及保證屬於使用者、電腦或其他憑證授權中心之公開加密金鑰真實性的實體。 如需有關憑證的詳細資訊，請參閱 IIS 文件集。 在您安裝憑證之後，必須將憑證與 Web 同步處理所使用的網站相關聯。  
   

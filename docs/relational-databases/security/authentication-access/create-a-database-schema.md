@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cdaa903f8d81c2c4878965bc085f594f0313704
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 073d0a9a3600144eac7edd2e10a73c744ee6bd50
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62715895"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580005"
 ---
 # <a name="create-a-database-schema"></a>建立資料庫結構描述
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,6 +61,8 @@ ms.locfileid: "62715895"
 5.  在 **[結構描述擁有者]** 方塊中，輸入擁有結構描述之資料庫使用者或角色的名稱。 或者，按一下 **[搜尋]** 開啟 **[搜尋角色和使用者]** 對話方塊。  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]
 > 如果對 **Azure SQL Database** 或 **Azure SQL 資料倉儲**使用 SSMS 建立結構描述，則不會顯示對話方塊。 您將需要執行所產生的「建立結構描述範本 T-SQL 陳述式」。

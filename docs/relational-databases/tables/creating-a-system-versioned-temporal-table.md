@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eae7dfb2a198cf7cb3b1563f8f5b35c5fbb0b4eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 078761fcaf017cfe483926283ea06bf93a40e272
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62515984"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343935"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>建立系統建立版本的時態表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -209,6 +209,8 @@ ALTER TABLE ProjectTaskCurrent
 -   加入 **PERIOD** 時，系統會執行目前資料表的資料一致性檢查，以確定時段資料行的現有值為有效。  
   
 -   強烈建議您將 **SYSTEM_VERSIONING** 設為 **DATA_CONSISTENCY_CHECK = ON** ，以強制執行現有資料的資料一致性檢查。  
+
+-   如果慣用隱藏的資料行，請使用命令 `ALTER TABLE [tableName] ALTER COLUMN [columnName] ADD HIDDEN;`。
   
  
 ## <a name="see-also"></a>另請參閱  

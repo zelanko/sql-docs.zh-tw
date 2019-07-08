@@ -17,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6dd3633cfe8b51cebceac01c0a9b0e2f17ee999a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 069480b8a2afc1e88f5edbdd11775e4988e3f9f4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62663266"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585784"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>交易鎖定與資料列版本設定指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -1074,6 +1074,9 @@ BEGIN TRANSACTION
   
 1.  將 `READ_COMMITTED_SNAPSHOT` 和 `ALLOW_SNAPSHOT_ISOLATION` 資料庫選項其中之一或兩者都設定為 ON。  
 2.  在應用程式中設定適當的交易隔離等級：  
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   當 `READ_COMMITTED_SNAPSHOT` 資料庫選項為 ON 時，設定讀取認可隔離等級的交易就會使用資料列版本設定。  
     -   當 `ALLOW_SNAPSHOT_ISOLATION` 資料庫選項為 ON 時，交易便可設定快照隔離等級。  
   

@@ -14,12 +14,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cfe7ea1c88a6d7118be63314824a479bd108f070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 510da94cb6eb83a208c6135441b5705fdacaa760
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65094357"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586335"
 ---
 # <a name="create-alter-and-drop-filetables"></a>建立、改變及卸除 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,9 @@ ms.locfileid: "65094357"
     2.  如果您未提供 **FILETABLE_COLLATE_FILENAME**的值，或指定 **database_default**，則資料行會繼承目前資料庫的定序。 如果目前的資料庫定序區分大小寫，則會引發錯誤，而且 **CREATE TABLE** 作業會失敗。  
   
 3.  您也可以指定要用於 3 個自動建立的主索引鍵條件約束和唯一條件約束的名稱。 如果您未提供名稱，則系統會產生名稱，如本主題稍後所述。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   **FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME**  
   
     -   **FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME**  

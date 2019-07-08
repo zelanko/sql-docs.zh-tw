@@ -13,12 +13,12 @@ ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3005ff6aa1311b22eea25e2daa14c1d4110da32c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: abcbeb3cd6abfd1712217ed5577f2fafd4d5b4a3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65089035"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582256"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>使用檔案輸入輸出 API 存取 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,9 @@ ms.locfileid: "65089035"
 1.  檔案 I/O API 存取通常一開始會先取得檔案或目錄的邏輯 UNC 路徑。 應用程式可以搭配 [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 函數使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以取得檔案或目錄的邏輯路徑。 如需詳細資訊，請參閱 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)。  
   
 2.  然後應用程式會使用此邏輯路徑以取得檔案或目錄控制代碼，並對物件進行操作。 該路徑可傳遞至任何支援的檔案系統 API 函數，例如 CreateFile() 或 CreateDirectory()，以建立或開啟檔案並取得控制代碼。 控制代碼隨後便可用於以資料流形式處理資料、列舉或組織目錄、取得或設定檔案屬性、刪除檔案或目錄等。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="create"></a> 在 FileTable 中建立檔案和目錄  
  透過呼叫檔案 I/O API (例如 CreateFile 或 CreateDirectory) 在 FileTable 中建立檔案或目錄。  
   

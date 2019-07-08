@@ -11,12 +11,12 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dcc749166f7c86575a84f41e12b452275ff3649c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4127d0dce2f693a89bec5ef79e83884f1181d0d1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66402991"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586084"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>快速入門：SQL Server 備份及還原至 Azure Blob 儲存體服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,9 @@ ms.locfileid: "66402991"
 
 1. 開啟 Azure 入口網站。 
 1. 巡覽至您的儲存體帳戶。 
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
    1. 選取儲存體帳戶，向下捲動至 [Blob 服務]  。
    1. 選取 [Blob]  ，然後選取 [+容器]  以新增新的容器。 
    1. 輸入容器名稱，並記下您指定的容器名稱。 此資訊會在本快速入門稍後的 T-SQL 陳述式內的 URL (備份檔路徑) 中用到。 

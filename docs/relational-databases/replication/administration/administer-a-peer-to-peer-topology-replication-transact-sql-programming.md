@@ -15,16 +15,16 @@ ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ba35386a91e6660b69b1e00c31da95e405b8627
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7ced1aff5f2d9ceaa1fd70afdc6165fc6988d61
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665383"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581411"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>管理點對點拓撲 (複寫 Transact-SQL 程式設計)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  管理點對點拓撲與管理一般的異動複寫拓撲類似，但有一些需要特殊考量的地方。 管理點對點拓撲的主要差別在於有些變更需要 *「停止」*(Quiesce) 系統。 停止系統包括停止所有節點上已發行資料表的活動，並確定每個節點已收到來自其他所有節點的所有變更。 如需詳細資訊，請參閱[停止複寫拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)。  
+  管理點對點拓撲與管理一般的異動複寫拓撲類似，但有一些需要特殊考量的地方。 管理點對點拓撲的主要差別在於有些變更需要 *「停止」* (Quiesce) 系統。 停止系統包括停止所有節點上已發行資料表的活動，並確定每個節點已收到來自其他所有節點的所有變更。 如需詳細資訊，請參閱[停止複寫拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)。  
   
 > [!NOTE]  
 >  在點對點拓撲中，散發者無法使用比提取訂閱者還舊的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本。  
@@ -45,7 +45,9 @@ ms.locfileid: "62665383"
     >  在執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 之後，複寫會將發行項自動新增至拓撲中的訂閱。  
   
 6.  重新啟動拓撲中每個節點的「散發代理程式」。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-make-schema-changes-to-a-publication-database"></a>若要對發行集資料庫進行結構描述變更  
   
 1.  停止系統。  

@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e3d57094a6863bb5b6bebd96f05ed57a1fcc25f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 1be87a50ad6e8815a9446ca22c2734a6e82b4745
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872018"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583541"
 ---
 # <a name="rename-a-database"></a>重新命名資料庫
 
@@ -41,7 +41,7 @@ ms.locfileid: "58872018"
   
      [Transact-SQL](#rename-a-database-using-transact-sql)  
   
-- **後續操作：**[重新命名資料庫之後](#backup-after-renaming-a-database)  
+- **後續操作：** [重新命名資料庫之後](#backup-after-renaming-a-database)  
 
 > [!NOTE]
 > 若要重新命名 Azure SQL 資料倉儲或平行處理資料倉儲中的資料庫，請使用 [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) 陳述式。
@@ -65,14 +65,16 @@ ms.locfileid: "58872018"
 
 使用 SQL Server Management Studio，透過下列步驟重新命名 SQL Server 或 Azure SQL 資料庫。
   
-1. 在 [物件總管] 中，連線至 SQL 執行個體。  
+1. 在 [物件總管]  中，連線至 SQL 執行個體。  
   
 2. 請確定資料庫沒有任何開啟的連線。 如果您使用 SQL Server，則可以[將資料庫設定為單一使用者模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)關閉任何開啟的連線，並防止其他使用者在您變更資料庫名稱時連線。  
   
-3. 在 [物件總管] 中，展開 [資料庫]，並以滑鼠右鍵按一下要重新命名的資料庫，然後按一下 [重新命名]。  
+3. 在 [物件總管] 中，展開 [資料庫]  ，並以滑鼠右鍵按一下要重新命名的資料庫，然後按一下 [重新命名]  。  
   
-4. 輸入新的資料庫名稱，然後按一下 **[確定]**。  
-  
+4. 輸入新的資料庫名稱，然後按一下 **[確定]** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="rename-a-database-using-transact-sql"></a>使用 Transact-SQL 重新命名資料庫  
   
 ### <a name="to-rename-a-sql-server-database-by-placing-it-in-single-user-mode"></a>讓 SQL Server 資料庫進入單一使用者模式以重新予以命名
@@ -81,7 +83,7 @@ ms.locfileid: "58872018"
   
 1. 連線至您執行個體的 `master` 資料庫。  
 2. 開啟查詢視窗。  
-3. 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會將 `MyTestDatabase` 資料庫的名稱變更為 `MyTestDatabaseCopy`。
+3. 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會將 `MyTestDatabase` 資料庫的名稱變更為 `MyTestDatabaseCopy`。
   
    ```sql
    USE master;  
@@ -101,7 +103,7 @@ ms.locfileid: "58872018"
 1. 連線至您執行個體的 `master` 資料庫。  
 2. 開啟查詢視窗。
 3. 請確定沒有人正在使用資料庫。
-4. 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會將 `MyTestDatabase` 資料庫的名稱變更為 `MyTestDatabaseCopy`。
+4. 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會將 `MyTestDatabase` 資料庫的名稱變更為 `MyTestDatabaseCopy`。
   
    ```sql
    ALTER DATABASE MyTestDatabase MODIFY NAME = MyTestDatabaseCopy ;

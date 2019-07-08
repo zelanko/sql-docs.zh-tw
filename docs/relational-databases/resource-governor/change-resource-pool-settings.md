@@ -13,21 +13,21 @@ ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 1fcf2b3c6f6b516d34f2d1c8658acd61549650b6
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 2780556c86203cd89e6804cf9a108bdf37ecd019
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689861"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582430"
 ---
 # <a name="change-resource-pool-settings"></a>變更資源集區設定
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]來變更資源集區設定。  
   
--   **開始之前：**[限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
+-   **開始之前：** [限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **若要變更資源集區的設定，請使用下列方式：**[SQL Server Management Studio](#ChgRPProp)、[Transact-SQL](#ChgRPTSQL)  
+-   **若要變更資源集區的設定，請使用下列方式：** [SQL Server Management Studio](#ChgRPProp)、[Transact-SQL](#ChgRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -36,22 +36,24 @@ ms.locfileid: "55689861"
   
  所有資源集區之最小 CPU 百分比和最小記憶體百分比的總和不得超過 100。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 權限  
  變更資源集區設定需要 CONTROL SERVER 權限。  
   
 ##  <a name="ChgRPProp"></a> 使用 SQL Server Management Studio 變更資源集區設定  
  **若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 [管理]  節點至 [資源集區] 。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 [管理]  節點至 [資源集區]  。  
   
-2.  以滑鼠右鍵按一下要修改的資源集區，然後按一下 [屬性]。  
+2.  以滑鼠右鍵按一下要修改的資源集區，然後按一下 [屬性]  。  
   
 3.  在 **[資源管理員屬性]** 頁面的 **[資源集區]** 方格中，選取資源集區的資料列 (如果系統沒有自動選取的話)。  
   
 4.  在資料列中按一下或按兩下要變更的資料格，然後輸入新值。  
   
-5.  若要儲存變更，請按一下 **[確定]**。  
-  
+5.  若要儲存變更，請按一下 **[確定]** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="ChgRPTSQL"></a> 使用 Transact-SQL 變更資源集區設定  
  **若要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   

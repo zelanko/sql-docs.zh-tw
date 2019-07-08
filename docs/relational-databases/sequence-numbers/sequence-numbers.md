@@ -18,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f5665e97e09d8bdaad57a328aae31113f42f15b
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: b5198b8919fb41c754d5d94ac45c895dda852e2e
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571137"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343843"
 ---
 # <a name="sequence-numbers"></a>序號
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,6 +58,8 @@ ms.locfileid: "51571137"
  雖然順序物件會根據其定義產生編號，不過順序物件不會控制編號的使用方式。 當您回復交易時、當多個資料表共用順序物件時，或者當您配置序號而沒有將它們用於資料表時，插入資料表中的序號可能會產生間距。 以 CACHE 選項建立時，非預期關閉 (例如停電) 可能會失去快取中的序號。  
   
  如果單一 **陳述式具有多個指定相同順序產生器的** NEXT VALUE FOR [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數執行個體，所有執行個體都會針對該 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式所處理的給定資料列傳回相同的值。 這種行為與 ANSI 標準一致。  
+ 
+ 序號是在目前交易範圍之外產生的。 無論使用序號的交易被認可或回復交易，都會耗用序號。 只有在填完記錄之後才會出現重複驗證。 這會導致在某些情況下，同一個數字會在建立期間用於多筆記錄，但會識別為重複項目。 如果發生這種情況，而且已將其他自動編號值套用至後續記錄，這會導致自動編號值之間出現間距。
   
 ## <a name="typical-use"></a>一般用法  
  若要建立從 -2,147,483,648 到 2,147,483,647 且遞增量為 1 的整數序號，請使用下列陳述式。  
@@ -270,7 +272,7 @@ WHERE Name LIKE '%nut%' ;
 ```  
   
 ### <a name="f-resetting-the-sequence-number"></a>F. 重設序號  
- 範例 E 取用了前 79 個 `Samples.IDLabel` 序號  (您的 `AdventureWorks2012` 版本可能會傳回不同的結果數目)。請執行下列陳述式來取用後續 79 個序號 (80 到 158)。  
+ 範例 E 取用了前 79 個 `Samples.IDLabel` 序號 (您的 `AdventureWorks2012` 版本可能會傳回不同的結果數目)。請執行下列陳述式來取用後續 79 個序號 (80 到 158)。  
   
 ```  
 SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, Name, ProductNumber FROM Production.Product  

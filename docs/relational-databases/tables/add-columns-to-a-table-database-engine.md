@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 485a31f0f7ff230ffdedcf7aa2d889191f8a637d
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 231590b5b1d15e85bc6fb3ca062253dfc3fba9b9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801350"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585075"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>將資料行加入資料表 (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -35,14 +35,14 @@ ms.locfileid: "56801350"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-insert-columns-into-a-table-with-table-designer"></a>若要使用資料表設計工具將資料行插入資料表中  
   
-1.  在物件總管 中，以滑鼠右鍵按一下要加入資料行的資料表，然後選擇 [設計]。  
+1.  在物件總管  中，以滑鼠右鍵按一下要加入資料行的資料表，然後選擇 [設計]  。  
   
 2.  在 **[資料行名稱]** 資料行中，按一下第一個空白資料格。  
   
@@ -51,24 +51,26 @@ ms.locfileid: "56801350"
 4.  按下 TAB 鍵以移至 [ **資料類型** ] 資料格，然後從下拉式清單中選取資料類型。 此為必要值。若未加以選擇，將會指派預設值。  
   
     > [!NOTE]  
-    >  您可以在 [資料庫工具] 的 [選項] 對話方塊中變更預設值。  
+    >  您可以在 [資料庫工具]  的 [選項]  對話方塊中變更預設值。  
   
 5.  在 [ **資料行屬性** ] 索引標籤中繼續定義其他任何的資料行屬性。  
   
     > [!NOTE]  
-    >  資料行屬性的預設值會在您建立新資料行時加入，但是您可以在 [資料行屬性] 索引標籤中變更預設值。  
+    >  資料行屬性的預設值會在您建立新資料行時加入，但是您可以在 [資料行屬性]  索引標籤中變更預設值。  
   
-6.  新增資料行之後，請從 [檔案] 功能表中，選擇 [儲存**資料表**] 。  
-  
+6.  新增資料行之後，請從 [檔案]  功能表中，選擇 [儲存**資料表**]  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-insert-columns-into-a-table"></a>若要將資料行插入資料表中  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  下列範例會將兩個資料行加入至 `dbo.doc_exa`資料表。 將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  下列範例會將兩個資料行加入至 `dbo.doc_exa`資料表。 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
 ```  
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;  

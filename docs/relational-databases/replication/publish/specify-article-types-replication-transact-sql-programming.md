@@ -18,12 +18,12 @@ ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b72f1f7b6779819de87bc3aa37f8c9fc06e71fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a5a33cc382fabf5a77c97b0b4d68a34f83cb907
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807686"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582653"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>指定發行項類型 (複寫 Transact-SQL 程式設計)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,18 +38,20 @@ ms.locfileid: "47807686"
   
     -   **logbased** - 記錄式資料表發行項，這是交易式和快照式複寫的預設值。 複寫會自動產生用於水平篩選的預存程序以及定義垂直篩選之發行項的檢視。  
   
-    -   **logbased manualfilter** - 記錄式、水平篩選的發行項，其中用於水平篩選的預存程序是由使用者手動建立及定義，而且是針對 **@filter**。 如需詳細資訊，請參閱 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
+    -   **logbased manualfilter** - 記錄式、水平篩選的發行項，其中用於水平篩選的預存程序是由使用者手動建立及定義，而且是針對 **@filter** 。 如需詳細資訊，請參閱 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
   
-    -   **logbased manualview** - 記錄式、垂直篩選的發行項，其中用於定義垂直篩選之發行項的檢視是由使用者建立及定義，而且是針對 **@sync_object**。 如需相關資訊，請參閱 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) 及 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
+    -   **logbased manualview** - 記錄式、垂直篩選的發行項，其中用於定義垂直篩選之發行項的檢視是由使用者建立及定義，而且是針對 **@sync_object** 。 如需相關資訊，請參閱 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) 及 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
   
-    -   **logbased manualboth** - 記錄式、水平和垂直篩選的發行項，其中用於水平篩選的預存程序及定義垂直篩選之發行項的檢視是由使用者所建立及定義，而且是分別針對 **@filter** 及 **@sync_object**所指定。 如需相關資訊，請參閱 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) 及 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
+    -   **logbased manualboth** - 記錄式、水平和垂直篩選的發行項，其中用於水平篩選的預存程序及定義垂直篩選之發行項的檢視是由使用者所建立及定義，而且是分別針對 **@filter** 及 **@sync_object** 所指定。 如需相關資訊，請參閱 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) 及 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
   
      這樣會為發行集定義新的發行項。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 2.  如果是 **logbased manualboth** 和 **logbased manualfilter** 發行項，請執行 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) 來產生用於水平篩選之發行項的篩選預存程序。 如需詳細資訊，請參閱 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
   
 3.  如果是 **logbased manualboth**、 **logbased manualview**和 **logbased manualfilter** 發行項，請執行 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) 來產生用於定義垂直篩選之發行項的檢視。 如需詳細資訊，請參閱 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-publish-a-view-or-indexed-view-article-in-a-transactional-or-snapshot-publication"></a>在交易式或快照式發行集中發行檢視或索引檢視發行項  
   
 1.  在發行集資料庫的發行者上，執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 針對 **@type** 指定下列其中一個值，以定義發行項的類型：  
@@ -60,11 +62,11 @@ ms.locfileid: "47807686"
   
     -   **indexed view schema only** - 僅限結構描述的索引檢視發行項。 也必須要複寫基底資料表。  
   
-    -   **indexed view logbased manualfilter** - 記錄式、水平篩選的索引檢視發行項，其中用於水平篩選的預存程序是由使用者手動建立及定義，而且是針對 **@filter**。 如需詳細資訊，請參閱 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
+    -   **indexed view logbased manualfilter** - 記錄式、水平篩選的索引檢視發行項，其中用於水平篩選的預存程序是由使用者手動建立及定義，而且是針對 **@filter** 。 如需詳細資訊，請參閱 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
   
-    -   **indexed view logbased manualview** - 記錄式、篩選的索引檢視發行項，其中用於定義垂直篩選之發行項的檢視是由使用者建立及定義，而且是針對 **@sync_object**。 如需相關資訊，請參閱 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) 及 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
+    -   **indexed view logbased manualview** - 記錄式、篩選的索引檢視發行項，其中用於定義垂直篩選之發行項的檢視是由使用者建立及定義，而且是針對 **@sync_object** 。 如需相關資訊，請參閱 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) 及 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
   
-    -   **indexed view logbased manualboth** - 記錄式、篩選的索引檢視發行項，其中用於水平篩選的預存程序及定義垂直篩選之發行項的檢視是由使用者所建立及定義，而且是分別針對 **@filter** 及 **@sync_object**所指定。 如需相關資訊，請參閱 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) 及 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
+    -   **indexed view logbased manualboth** - 記錄式、篩選的索引檢視發行項，其中用於水平篩選的預存程序及定義垂直篩選之發行項的檢視是由使用者所建立及定義，而且是分別針對 **@filter** 及 **@sync_object** 所指定。 如需相關資訊，請參閱 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) 及 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
   
      這樣會為發行集定義新的發行項。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   

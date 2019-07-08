@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
-ms.openlocfilehash: 0e8faaeb6a809caf5bd8c42ceee94cbbb0702979
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ef7132e61a646cd0c622a3f15a647cf2430d95c
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794134"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351677"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>設定 max degree of parallelism 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "66794134"
 |具有多個 NUMA 節點的伺服器|每個 NUMA 節點多於 16 個邏輯處理器|將 MAXDOP 保持在最大 (MAX) 值為每個 NUMA 節點 16 個邏輯伺服器數量的一半|
   
 > [!NOTE]
-> 上表中的 NUMA 節點指的是由 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本自動建立的軟體式 NUMA 節點。   
+> 上表中的 NUMA 節點指的是由 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本自動建立的軟體式 NUMA 節點，若已停用軟體式 NUMA，則為硬體式 NUMA 節點。   
 >  請在您為 Resource Governor 工作負載群組設定平行處理最大程度的選項時，使用這些相同的方針。 如需詳細資訊，請參閱 [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)。
   
 從 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，請在您設定**最大平行處理程度**伺服器設定值時，使用下列方針：

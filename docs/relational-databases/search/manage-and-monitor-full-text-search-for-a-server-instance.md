@@ -14,12 +14,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2e095dafe61a2745f6401f7596e7dffcdeb05a0
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 3f1c47068d35da60877f9523a905c539cfac9e17
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974127"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579805"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理及監視伺服器執行個體的全文檢索搜尋
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,10 +36,12 @@ ms.locfileid: "57974127"
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>檢視與變更全文檢索搜尋的伺服器屬性  
   
-1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]。  
+1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]  。  
   
-2.  在 [伺服器屬性] 對話方塊中，按一下 [進階] 頁面檢視全文檢索搜尋的相關伺服器資訊。 全文檢索屬性如下所示：  
-  
+2.  在 [伺服器屬性]  對話方塊中，按一下 [進階]  頁面檢視全文檢索搜尋的相關伺服器資訊。 全文檢索屬性如下所示：  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   **預設全文檢索語言**  
   
          指定全文檢索索引資料行的預設語言。 全文檢索索引資料的語言分析相依於資料所用的語言。 這個選項的預設值是伺服器使用的語言。 如需所顯示設定的對應語言，請參閱 [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  

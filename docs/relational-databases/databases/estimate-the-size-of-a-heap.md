@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f57b07be679195794df5f0f9fe2329417a0b30f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d65ccbf6784b7571684624423cc0f7d378c0f2c7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62860667"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585286"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>估計堆積的大小
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,8 +83,10 @@ ms.locfileid: "62860667"
      估計的分頁數目應該要將小數進位到最接近的整分頁數。  
   
 8.  計算儲存堆積內的資料所需的空間 (每個頁面共有 8192 個位元組)：  
-  
-     堆積大小 (位元組) = 8192 x **_Num_Pages_**  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     Heap size (bytes) = 8192 x **_Num_Pages_**  
   
  上述計算未考慮下列項目：  
   

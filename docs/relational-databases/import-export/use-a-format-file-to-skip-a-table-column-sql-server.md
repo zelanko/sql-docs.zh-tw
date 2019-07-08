@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cbadda2e3843fc4b15a5ebc2e5ec57a1c76cbf2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9c4bbcb901aca307d0dce9ed7d4a724778392c1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946193"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579613"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>使用格式檔案以略過資料表資料行 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,6 +59,8 @@ GO
 1.   使用 **bcp** 命令列公用程式來建立預設格式檔案。
 
 2.   修改文字編輯器中的預設格式檔案。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 修改後的格式檔案必須將每個現有欄位對應到目的地資料表中相應的資料行。 其也必須指出要跳過哪些資料表資料行或資料行。 
 

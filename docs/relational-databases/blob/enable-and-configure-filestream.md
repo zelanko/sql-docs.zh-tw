@@ -12,12 +12,12 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
-ms.openlocfilehash: 9c2b248e89b3aa822de79dd26970931fea4aaebd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 100e08cc7dcb83ad8e65b86424acb9aba4d62120
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822818"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586333"
 ---
 # <a name="enable-and-configure-filestream"></a>啟用及設定 FILESTREAM
 
@@ -28,23 +28,23 @@ ms.locfileid: "66822818"
   
 #### <a name="to-enable-and-change-filestream-settings"></a>若要啟用和變更 FILESTREAM 設定  
   
-1.  指向 [開始] 功能表上的 [所有程式]，然後依序指向 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]] 和 [組態工具]，再按一下 [SQL Server 組態管理員]。  
+1.  指向 [開始]  功能表上的 [所有程式]  ，然後依序指向 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]] 和 [組態工具]  ，再按一下 [SQL Server 組態管理員]  。  
   
-2.  在服務的清單中，以滑鼠右鍵按一下 [SQL Server 服務]，然後按一下 [開啟]。  
+2.  在服務的清單中，以滑鼠右鍵按一下 [SQL Server 服務]  ，然後按一下 [開啟]  。  
   
-3.  在 [SQL Server 組態管理員] 嵌入式管理單元中，找出您想要啟用 FILESTREAM 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
+3.  在 [SQL Server 組態管理員]  嵌入式管理單元中，找出您想要啟用 FILESTREAM 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
-4.  以滑鼠右鍵按一下該執行個體，然後按一下 [屬性]。  
+4.  以滑鼠右鍵按一下該執行個體，然後按一下 [屬性]  。  
   
-5.  在 [SQL Server 屬性] 對話方塊中，按一下 [FILESTREAM] 索引標籤。  
+5.  在 [SQL Server 屬性]  對話方塊中，按一下 [FILESTREAM]  索引標籤。  
   
-6.  選取 [啟用 FILESTREAM 的 Transact-SQL 存取] 核取方塊。  
+6.  選取 [啟用 FILESTREAM 的 Transact-SQL 存取]  核取方塊。  
   
-7.  如果您想要從 Windows 讀取和寫入 FILESTREAM 資料，請按一下 [啟用 FILESTREAM 的檔案 I/O 資料流存取]。 在 [Windows 共用名稱] 方塊中，輸入 Windows 共用的名稱。  
+7.  如果您想要從 Windows 讀取和寫入 FILESTREAM 資料，請按一下 [啟用 FILESTREAM 的檔案 I/O 資料流存取]  。 在 [Windows 共用名稱]  方塊中，輸入 Windows 共用的名稱。  
   
-8.  如果遠端用戶端必須存取儲存在這個共用上的 FILESTREAM 資料，請選取 [允許遠端用戶端具有 FILESTREAM 資料的資料流存取權]。  
+8.  如果遠端用戶端必須存取儲存在這個共用上的 FILESTREAM 資料，請選取 [允許遠端用戶端具有 FILESTREAM 資料的資料流存取權]  。  
   
-9. 按一下 **[套用]**。  
+9. 按一下 **[套用]** 。  
   
 10. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，按一下 **[新增查詢]** 顯示 [查詢編輯器]。  
   
@@ -55,11 +55,12 @@ ms.locfileid: "66822818"
     RECONFIGURE  
     ```  
   
-12. 按一下 **[執行]**。  
+12. 按一下 **[執行]** 。  
   
 13. 重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
-  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="best"></a> 最佳做法  
   
 ###  <a name="config"></a> 實體組態和維護  

@@ -15,12 +15,12 @@ ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c035ee265f913a91f49b7c9b3c9e5c562ab1477a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f32b9eaa6619ad761e5799991196fe0c04f7d78
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63043279"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581258"
 ---
 # <a name="republish-data"></a>重新發行資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "63043279"
 5.  在要重新發行的「訂閱者」端為其他「訂閱者」建立發行集的訂閱。  
   
 6.  初始化訂閱。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
 >  如果在重新發行的拓撲中使用合併式複寫，則所有重新發行「訂閱者」均必須使用伺服器訂閱。 如需訂閱類型的詳細資訊，請參閱[訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)。  
   

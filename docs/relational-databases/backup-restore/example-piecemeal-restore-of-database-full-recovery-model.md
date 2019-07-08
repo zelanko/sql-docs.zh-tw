@@ -15,12 +15,12 @@ ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3bf9130dadbc0b7a851856d70d78403b6f0008e1
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: caae503d57460d88d2396842f565125ff32c9378
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581843"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579437"
 ---
 # <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>範例分次還原資料庫 (完整復原模式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,14 +75,16 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
      此時，主要與次要檔案群組 `A` 和 `C` 會在線上。 檔案群組 `B` 裡的檔案會保持復原暫止，而檔案群組為離線。 已解決延遲的交易，而且可以截斷記錄。  
   
 3.  線上還原檔案群組 `B`。  
-  
-     在第三個還原順序中，資料庫管理員會還原檔案群組 `B`。 在檔案群組變成唯讀之後會進行檔案群組 `B` 的備份，因此不需要在復原期間將它向前復原。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     In the third restore sequence, the database administrator restores filegroup `B`. The backup of filegroup `B` was taken after the filegroup became read-only; therefore, it does not have to be rolled forward during recovery.  
   
     ```  
     RESTORE DATABASE adb FILEGROUP='B' FROM backup2b WITH RECOVERY  
     ```  
   
-     所有檔案群組現在都已在線上。  
+     All filegroups are now online.  
   
 ## <a name="additional-examples"></a>其他範例  
   

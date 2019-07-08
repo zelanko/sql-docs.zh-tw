@@ -18,12 +18,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 160de04e9b8fbe83e8a771f5622f4f6103a8c7bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97ad249695c4fbe0fd79a23a5493d998fbaf5191
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845596"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582320"
 ---
 # <a name="create-edge-constraints"></a>建立邊緣條件約束
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -42,10 +42,12 @@ ms.locfileid: "47845596"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會在 **bought** 邊緣資料表上建立邊緣條件約束。  
-  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會在 **bought** 邊緣資料表上建立邊緣條件約束。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  ```sql
  USE TEMPDB
  GO
@@ -78,9 +80,9 @@ ms.locfileid: "47845596"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會使用 ALTER TABLE 將邊緣條件約束新增至 **bought** 邊緣資料表。
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會使用 ALTER TABLE 將邊緣條件約束新增至 **bought** 邊緣資料表。
   
  ```sql
  USE TEMPDB
@@ -115,9 +117,9 @@ ms.locfileid: "47845596"
 ### <a name="creating-a-new-edge-constraint-on-existing-edge-table-with-additional-edge-constraint-clauses"></a>使用額外的邊緣條件約束子句，在現有邊緣資料表上建立新的邊緣條件約束。
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會使用 ALTER TABLE 以使用額外的邊緣條件約束子句在 **bought** 邊緣資料表上新增邊緣條件約束。
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會使用 ALTER TABLE 以使用額外的邊緣條件約束子句在 **bought** 邊緣資料表上新增邊緣條件約束。
   
  ```sql
  USE TEMPDB
@@ -169,9 +171,9 @@ ms.locfileid: "47845596"
 ### <a name="creating-a-new-edge-constraint-on-existing-edge-table-with-new-edge-constraint-clause"></a>使用新的邊緣條件約束子句，在現有邊緣資料表上建立新的邊緣條件約束。
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會使用 ALTER TABLE 以使用新的邊緣條件約束子句在 **bought** 邊緣資料表上新增邊緣條件約束。
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會使用 ALTER TABLE 以使用新的邊緣條件約束子句在 **bought** 邊緣資料表上新增邊緣條件約束。
   
  ```sql
  USE TEMPDB

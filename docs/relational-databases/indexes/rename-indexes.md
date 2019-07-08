@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b61ab4da7de38c045fe222a6c0784b7032658ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5da7d9bf341db44648062d740410dbcf9193d125
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62685220"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579476"
 ---
 # <a name="rename-indexes"></a>重新命名索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,9 @@ ms.locfileid: "62685220"
 7.  按一下 [ **關閉**]。  
   
 8.  在 [檔案]  功能表上，按一下 [儲存 _table_name_]  。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>使用物件總管重新命名索引  
   
 1.  在 [物件總管] 中，按一下加號展開資料庫，此資料庫包含您要重新命名索引的資料表。  

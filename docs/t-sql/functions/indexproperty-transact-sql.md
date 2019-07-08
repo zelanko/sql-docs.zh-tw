@@ -1,7 +1,7 @@
 ---
 title: INDEXPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 813b88f56d6017a9e20d8bce72925f9ee7ab552b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3d0cf76dfc6225b23551ccb2ee4e55d09fb88c4
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944464"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388350"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +69,8 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsRowLockDisallowed**|ALTER INDEX 的 ALLOW_ROW_LOCKS 選項所設定的資料列鎖定值。|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 不允許資料列鎖定。<br /><br /> 0 = 允許資料列鎖定。<br /><br /> NULL = 輸入無效。|  
 |**IsStatistics**|*index_or_statistics_name* 為 CREATE STATISTICS 陳述式或 ALTER DATABASE 之 AUTO_CREATE_STATISTICS 選項建立的統計資料。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
 |**IsUnique**|索引是唯一的。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
-|**IsColumnstore**|索引是 xVelocity 記憶體最佳化的資料行存放區索引。|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**IsColumnstore**|索引是 xVelocity 記憶體最佳化的資料行存放區索引。|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = True<br /><br /> 0 = False| 
+|**IsOptimizedForSequentialKey**|索引已啟用最後一頁插入的最佳化。|**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和更新版本。 <br><br>1 = True<br><br>0 = False| 
   
 ## <a name="return-types"></a>傳回類型  
  **int**  

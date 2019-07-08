@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 825fedb3bfc3262abf4e432075e03f6e0a370eac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d5e7b1be70692f29b81f06725adfa326ba77d65
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65626695"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388356"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -134,6 +134,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }
   | ALLOW_PAGE_LOCKS = { ON | OFF }
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
   | MAXDOP = max_degree_of_parallelism
   | DATA_COMPRESSION = { NONE | ROW | PAGE}
      [ ON PARTITIONS ( { <partition_number_expression> | <range> }
@@ -233,19 +234,19 @@ NONCLUSTERED 建立索引來指定資料表的邏輯排序。 如果是非叢集
 
 單一複合式索引鍵中最多只能結合 32 個資料行。 複合索引鍵中的所有資料行都必須在相同的資料表或檢視表中。 針對叢集索引，組合索引值的允許大小上限是 900 個位元組，非叢集索引則為 1,700 個位元組。 針對 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前的版本，限制為 16 個資料行與 900 個位元組。
 
-屬於大型物件 (LOB) 資料類型 **ntext**、**text**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml** 或 **image** 的資料行無法指定為索引的索引鍵資料行。 此外，即使 CREATE INDEX 陳述式中未參考 **ntext**、**text** 或 **image** 資料行，檢視定義也不能包含這些資料行。
+屬於大型物件 (LOB) 資料類型 **ntext**、**text**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**xml** 或 **image** 的資料行無法指定為索引的索引鍵資料行。 此外，即使 CREATE INDEX 陳述式中未參考 **ntext**、**text** 或 **image** 資料行，檢視定義也不能包含這些資料行。
 
 如果 CLR 使用者定義型別支援二進位排序，您可以在該型別的資料行上建立索引。 只要方法標示為具決定性且不執行資料存取作業，您也可以在定義為使用者定義型別資料行方法引動過程的計算資料行上建立索引。 如需編製 CLR 使用者定義類型資料行索引的詳細資訊，請參閱 [CLR 使用者定義類型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。
 
 [ **ASC** | DESC ] 決定特定索引資料行的遞增或遞減排序方向。 預設值是 ASC。
 
-INCLUDE **(**_column_ [ **,**... *n* ] **)** 指定要新增至非叢集索引分葉層級的非索引鍵資料行。 非叢集索引可以是唯一或非唯一的。
+INCLUDE **(** _column_ [ **,** ... *n* ] **)** 指定要新增至非叢集索引分葉層級的非索引鍵資料行。 非叢集索引可以是唯一或非唯一的。
 
 資料行名稱在 INCLUDE 清單中不能重複，且不能同時做為索引鍵資料行和非索引鍵資料行。 如果資料表上有定義叢集索引，非叢集索引一定會包含叢集索引資料行。 如需詳細資訊，請參閱 [建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。
 
-允許所有的資料類型，除了 **text**、 **ntext**和 **image**以外。 如果任一個指定的非索引鍵資料行屬於 **varchar(max)**、**nvarchar(max)** 或 **varbinary(max)** 資料類型，就必須離線 (ONLINE = OFF) 建立或重建索引。
+允許所有的資料類型，除了 **text**、 **ntext**和 **image**以外。 如果任一個指定的非索引鍵資料行屬於 **varchar(max)** 、**nvarchar(max)** 或 **varbinary(max)** 資料類型，就必須離線 (ONLINE = OFF) 建立或重建索引。
 
-具決定性之精確或非精確的計算資料行都可以當做內含資料行。 從 **image**、**ntext**、**text**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 及 **xml** 資料類型衍生的計算資料行，只要計算資料行資料類型可作為內含資料行，就可包含於非索引鍵的資料行中。 如需詳細資訊，請參閱 [計算資料行的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。
+具決定性之精確或非精確的計算資料行都可以當做內含資料行。 從 **image**、**ntext**、**text**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 及 **xml** 資料類型衍生的計算資料行，只要計算資料行資料類型可作為內含資料行，就可包含於非索引鍵的資料行中。 如需詳細資訊，請參閱 [計算資料行的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。
 
 如需建立 XML 索引的資訊，請參閱 [CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md)。
 
@@ -265,7 +266,7 @@ WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL
 
 已篩選的索引不適用於 XML 索引和全文檢索索引。 如果是 UNIQUE 索引，只有選取的資料列必須有唯一的索引值。 已篩選的索引不允許 IGNORE_DUP_KEY 選項。
 
-ON *partition_scheme_name* **( _column_name_ )**
+ON *partition_scheme_name* **( _column_name_ )** 
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定分割區配置來定義要做為分割區索引之分割區對應目標的檔案群組。 透過執行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 或 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)，讓資料分割配置一定會存在於資料庫內。 *column_name* 會指定資料分割索引將進行分割的資料行。 此資料行必須符合 *partition_scheme_name* 所使用資料分割函數引數的資料類型、長度與有效位數。 *column_name* 不限定為索引定義中的資料行。 可以指定基底資料表中的任何資料行，但有個例外是，在分割 UNIQUE 索引時，必須從用來作為唯一索引鍵使用的資料行中選擇 *column_name*。 這項限制可讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只在單一分割區內驗證索引鍵值的唯一性。
@@ -285,12 +286,12 @@ ON _filegroup_name_
 
 在指定的檔案群組上建立指定的索引。 如果未指定位置，且資料表或檢視表未分割，則索引會使用與基礎資料表或檢視表相同的檔案群組。 此檔案群組必須已存在。
 
-ON **"** default **"**
+ON **"** default **"** 
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及 [!INCLUDE[ssCurrent](../../includes/sssdsfull-md.md)]。
 
 在與資料表或檢視相同的檔案群組或分割區結構描述上建立所指定索引。
 
-在這個內容中，default 這個字不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，如 ON **"** default **"** 或 ON **[** default **]**。 如果指定了 "default"，目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。
+在這個內容中，default 這個字不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，如 ON **"** default **"** 或 ON **[** default **]** 。 如果指定了 "default"，目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。
 
 > [!NOTE]
 > "default" 並未指出 CREATE INDEX 內容中的資料庫預設檔案群組。 這不同於 CREATE TABLE，其中的 "default" 會將資料表定位在資料庫的預設檔案群組上。
@@ -341,7 +342,7 @@ OFF 或未指定 _fillfactor_ 時，中繼層級頁面會在考慮到中繼頁�
 
 在與舊版本相容的語法中，WITH PAD_INDEX 相當於 WITH PAD_INDEX = ON。
 
-FILLFACTOR **=**_fillfactor_
+FILLFACTOR **=** _fillfactor_
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定用以指出建立或重建索引時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 填滿各索引頁面分葉層級之程度的百分比。 *fillfactor* 必須是 1 到 100 之間的整數值。 如果 *fillfactor* 是 100，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用已填滿容量的分葉頁面來建立索引。
@@ -476,8 +477,13 @@ ON 存取索引時，允許頁面鎖定。 [!INCLUDE[ssDE](../../includes/ssde-m
 
 OFF 不使用頁面鎖定。
 
+
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **適用對象**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更新版本。
+
+指定是否要最佳化最後一頁的插入競爭。 預設值為 OFF。 請參閱[循序索引鍵](#sequential-keys)一節以取得詳細資訊。
+
 MAXDOP = _max_degree_of_parallelism_
-：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+  ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 在索引作業期間，覆寫 **max degree of parallelism** 設定選項。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 請利用 MAXDOP 來限制執行平行計畫所用的處理器數目。 最大值是 64 個處理器。
 
@@ -504,7 +510,7 @@ PAGE 使用頁面壓縮來壓縮索引或指定的分割區。
 
 如需與壓縮有關的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。
 
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**..._n_ ] **)**
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ..._n_ ] **)** 
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定套用 DATA_COMPRESSION 設定的分割區。 如果未分割此索引，ON PARTITIONS 引數將會產生錯誤。 如果未提供 ON PARTITIONS 子句，DATA_COMPRESSION 選項會套用到分割區索引的所有分割區。
@@ -558,7 +564,7 @@ CREATE INDEX 陳述式的最佳化方式與其他任何查詢一樣。 若要儲
 
 分割區索引與分割區資料表的建立和維護方式類似，不過，跟一般索引一樣，分割區索引會當做個別資料庫物件來處理。 未進行分割的資料表上可以有分割區索引；已進行分割的資料表上也可以有非分割區索引。
 
-如果您要在分割區資料表上建立索引，且不指定要從中放置索引的檔案群組，則索引的分割區方式與基礎資料表相同。 這是因為索引及其基礎資料表預設會置於同一個檔案群組內，且索引會供相同分割區配置中，使用相同分割區資料行的分割區資料表使用。 當索引使用與資料表相同的資料分割配置及分割資料行時，索引將會與資料表「對齊」。
+如果您要在分割區資料表上建立索引，且不指定要從中放置索引的檔案群組，則索引的分割區方式與基礎資料表相同。 這是因為索引及其基礎資料表預設會置於同一個檔案群組內，且索引會供相同分割區配置中，使用相同分割區資料行的分割區資料表使用。 當索引使用與資料表相同的資料分割配置及分割資料行時，索引將會與資料表「對齊」  。
 
 > [!WARNING]
 > 您可以對包含超過 1,000 個分割區的資料表，建立及重建不以資料表為準的索引，但不予支援。 此做法可能會導致在作業期間效能降低或耗用過多記憶體。 建議當分割區數超過 1,000 時，一律使用以資料表為準的索引。
@@ -631,7 +637,7 @@ CREATE INDEX 陳述式的最佳化方式與其他任何查詢一樣。 若要儲
 
 UNIQUE 或 PRIMARY KEY 條件約束只要符合索引作業的所有條件就可以包含計算資料行。 更具體的說法是，計算資料行必須具決定性且精確，或是具決定性且一直保存。 如需確定性的詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
 
-從 **image**、**ntext**、**text**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 及 **xml** 資料類型衍生的計算資料行，只要計算資料行資料類型可作為索引鍵資料行或非索引鍵資料行，就可編製索引以作為索引鍵或內含的非索引鍵資料行。 例如，您無法在計算的 **xml** 資料行上建立主要 XML 索引。 如果索引鍵大小超過 900 個位元組，畫面上會顯示警告訊息。
+從 **image**、**ntext**、**text**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 及 **xml** 資料類型衍生的計算資料行，只要計算資料行資料類型可作為索引鍵資料行或非索引鍵資料行，就可編製索引以作為索引鍵或內含的非索引鍵資料行。 例如，您無法在計算的 **xml** 資料行上建立主要 XML 索引。 如果索引鍵大小超過 900 個位元組，畫面上會顯示警告訊息。
 
 在計算資料行上建立索引，可能會使先前有效的插入或更新作業失敗。 當計算資料行導致算術錯誤時，就可能發生這類失敗。 例如在下表中，雖然計算資料行 `c` 導致算術錯誤，但 INSERT 陳述式仍可運作。
 
@@ -656,11 +662,11 @@ INSERT INTO t1 VALUES (1, 0);
 
 ## <a name="specifying-index-options"></a>指定索引選項
 
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入新的索引選項，並修改選項的指定方式。 在與舊版本相容的語法中，WITH *option_name* 相當於 WITH **(** \<option_name> **= ON )**。 當您設定索引選項時，適用下列規則：
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入新的索引選項，並修改選項的指定方式。 在與舊版本相容的語法中，WITH *option_name* 相當於 WITH **(** \<option_name> **= ON )** 。 當您設定索引選項時，適用下列規則：
 
-- 只能使用 WITH (**_option\_name_ = ON | OFF**) 來指定新的索引選項。
+- 只能使用 WITH ( **_option\_name_ = ON | OFF**) 來指定新的索引選項。
 - 不能在相同的陳述式中同時利用與舊版本相容的語法和新語法來指定選項。 例如，指定 WITH (**DROP_EXISTING, ONLINE = ON**) 會造成陳述式失敗。
-- 當您建立 XML 索引時，必須搭配 WITH (**_option_name_= ON | OFF**) 來指定選項。
+- 當您建立 XML 索引時，必須搭配 WITH ( **_option_name_= ON | OFF**) 來指定選項。
 
 ## <a name="dropexisting-clause"></a>DROP_EXISTING 子句
 
@@ -732,6 +738,13 @@ INSERT INTO t1 VALUES (1, 0);
 如果 ALLOW_ROW_LOCKS = ON 且 ALLOW_PAGE_LOCK = ON，當您在存取索引時，允許使用資料列、頁面和資料表層級的鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會選擇適當的鎖定，且可以將鎖定從資料列或頁面鎖定擴大到資料表鎖定。
 
 如果 ALLOW_ROW_LOCKS = OFF 且 ALLOW_PAGE_LOCK = OFF，當您存取索引時，只允許使用資料表層級的鎖定。
+
+## <a name="sequential-keys"></a>循序索引鍵
+**適用對象**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更新版本。
+
+最後一頁的插入競爭是大量並行的執行緒在嘗試將資料列插入具備循序索引鍵的索引時，經常發生的一種效能問題。 當開頭的索引鍵資料行包含總是在增加 (或減少) 的值 (例如識別欄位或預設為目前日期/時間的日期) 時，便會將索引視為循序。 因為要插入的索引鍵是循序的，所有新的資料列都會在索引結構的結尾插入，也就是位於相同的頁面。 這會導致頁面在記憶體中互相競爭，可觀察到的結果就是數個執行緒不明所以地在 PAGELATCH_EX 持續等待頁面。
+
+開啟 OPTIMIZE_FOR_SEQUENTIAL_KEY 索引選項，可在資料庫引擎中啟用最佳化，協助改善對索引進行高並行插入時的輸送量。 它適用於因具備循序索引鍵，而可能發生最後一頁插入競爭的索引，但它也可以協助在 B 型樹狀索引結構中其它區域內包含熱點的索引。
 
 ## <a name="viewing-index-information"></a>檢視索引資訊
 
@@ -967,7 +980,7 @@ GO
 
 ### <a name="i-create-an-index-with-included-non-key-columns"></a>I. 使用內含的 (非索引鍵) 資料行建立索引
 
-下列範例會利用一個索引鍵資料行 (`PostalCode`) 和四個非索引鍵資料行 (`AddressLine1`、`AddressLine2`、`City`、`StateProvinceID`) 來建立非叢集索引。 其後有一個由索引處理的查詢。 若要顯示查詢最佳化工具所選取的索引，請先在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [查詢] 功能表上選取 [Display Actual Execution Plan] \(顯示實際執行計畫\)，然後再執行查詢。
+下列範例會利用一個索引鍵資料行 (`PostalCode`) 和四個非索引鍵資料行 (`AddressLine1`、`AddressLine2`、`City`、`StateProvinceID`) 來建立非叢集索引。 其後有一個由索引處理的查詢。 若要顯示查詢最佳化工具所選取的索引，請先在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [查詢]  功能表上選取 [Display Actual Execution Plan]  \(顯示實際執行計畫\)，然後再執行查詢。
 
 ```sql
 CREATE NONCLUSTERED INDEX IX_Address_PostalCode

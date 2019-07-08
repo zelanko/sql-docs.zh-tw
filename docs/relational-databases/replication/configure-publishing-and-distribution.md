@@ -15,12 +15,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ab0b82002024a819ef1e6794b6c99bb238fa18e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ec133a404b7485edff3e63e3c8c495ef2bc4a542
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135888"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586236"
 ---
 # <a name="configure-publishing-and-distribution"></a>設定發行和散發
 [!INCLUDE[appliesto-ss-asdbmi-asdbmi-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,17 +32,19 @@ ms.locfileid: "54135888"
 如需詳細資訊，請參閱[檢視及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。
 
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio 
-使用「新增發行集精靈」或「設定散發精靈」來設定散發。 設定散發者之後，請檢視並修改 [散發者屬性 - \<散發者] 對話方塊中的屬性。 如果您想設定「散發者」讓 `db_owner`固定資料庫角色的成員可以建立發行集，或者因為您想設定非「發行者」的遠端「散發者」，則請使用「設定散發精靈」。
+使用「新增發行集精靈」或「設定散發精靈」來設定散發。 設定散發者之後，請檢視並修改 [散發者屬性 - \<散發者]  對話方塊中的屬性。 如果您想設定「散發者」讓 `db_owner`固定資料庫角色的成員可以建立發行集，或者因為您想設定非「發行者」的遠端「散發者」，則請使用「設定散發精靈」。
 
 #### <a name="to-configure-distribution"></a>若要設定散發 
 
 1. 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到將成為「散發者」的伺服器 (在許多情況下，「發行者」與「散發者」是同一個伺服器)，然後展開伺服器節點。
 
-2. 在以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[設定散發]**。
+2. 在以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[設定散發]** 。
 
 3. 遵循「設定散發精靈」的指示執行下列項目： 
 
-  - 選取「散發者」。 若要使用本機「散發者」，請選取 [ServerName 將扮演本身的散發者; SQL Server 將建立散發資料庫和記錄]。 若要使用遠端散發者，請選取 **[使用下列伺服器做為散發者]**，然後選取伺服器。 伺服器必須已設定為散發者，且必須先啟用發行者才能使用散發者。 如需詳細資訊，請參閱[在散發者端啟用遠端發行者 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)。
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+  - 選取「散發者」。 若要使用本機「散發者」，請選取 [ServerName 將扮演本身的散發者; SQL Server 將建立散發資料庫和記錄]  。 若要使用遠端散發者，請選取 **[使用下列伺服器做為散發者]** ，然後選取伺服器。 伺服器必須已設定為散發者，且必須先啟用發行者才能使用散發者。 如需詳細資訊，請參閱[在散發者端啟用遠端發行者 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)。
 
      如果您選取遠端「散發者」，則必須在 **[管理密碼]** 頁面上輸入密碼才能從「發行者」連接到「散發者」。 此密碼必須符合發行者於遠端散發者啟用時所指定的密碼。
 

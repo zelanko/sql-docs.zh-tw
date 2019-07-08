@@ -1,7 +1,7 @@
 ---
 title: 從命令提示字元安裝 SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: jroth
-ms.openlocfilehash: 8c8dd90ae08cae3f62be07443af5bdae68cfee2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e6ff0a849823978eff36e84889c8d582afafa53
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794956"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388296"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>從命令提示字元安裝 SQL Server
 
@@ -251,7 +251,7 @@ ms.locfileid: "66794956"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 SQLSVCACCOUNT 的密碼。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 [服務的](#Accounts) 啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 模式。 支援的值：<br /><br /> **自動**<br /><br /> **已停用**<br /><br /> **手動**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必要**|您可以使用這個參數來提供登入，以便成為系統管理員 (sysadmin) 角色的成員。<br /><br /> 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之外的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 版本，需要 /SQLSYSADMINACCOUNTS。 對於 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的版本，/SQLSYSADMINACCOUNTS 的使用是選擇性的，但使用 /SQLSYSADMINACCOUNTS 或 /ADDCURRENTUSERASSQLADMIN 則是必要的。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **選擇性**|指定 tempdb 資料檔案的目錄。 指定多個目錄時，請以空格隔開這些目錄。 若指定多個目錄，tempdb 資料檔案將以循環配置資源方式跨多個目錄存放。<br /><br /> 預設值︰`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> 附註：此參數也會新增至 RebuildDatabase 案例。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **選擇性**|指定 tempdb 資料檔案的目錄。 指定多個目錄時，請以空格隔開這些目錄。 若指定多個目錄，tempdb 資料檔案將以循環配置資源方式跨多個目錄存放。<br /><br /> 預設值︰`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> **注意：** 此參數也會新增至 RebuildDatabase 案例。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **選擇性**|指定 tempdb 記錄檔的目錄。<br /><br /> 預設值︰`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (系統資料目錄)<br /><br /> 注意:此參數也會新增至 RebuildDatabase 案例。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **選擇性**|指定安裝程式要新增的 tempdb 資料檔案數目。 此值可以增加到與核心數目相同為止。 預設值︰<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 1 個<br /><br /> 所有其他版本為 8 個或與核心數目相同 (兩者取其較低者)<br /><br /> **重要：** tempdb 的主要資料庫檔案仍為 tempdb.mdf。 其他的 tempdb 檔案會命名為 tempdb_mssql_#.ndf，其中 # 代表唯一的數字，該數字是在安裝期間替每個額外的 tempdb 資料庫檔案所建立。 此命名慣例旨在使其為唯一。 解除安裝 SQL Server 的執行個體會刪除命名慣例為 tempdb_mssql_ #.ndf 的檔案。 請勿將 tempdb_mssql_\*.ndf 命名慣例用於使用者資料庫檔案。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引進。 指定每個 tempdb 資料檔案的初始大小。<br/><br/>預設值 = [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 4 MB，所有其他版本為 8 MB。<br/><br/>最小值 = (4 或 8 MB)。<br/><br/>最大值 = 1024 MB ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 為 262,144 MB)。|  
@@ -262,6 +262,9 @@ ms.locfileid: "66794956"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCINSTANTFILEINIT<br /><br /> **選擇性**|為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶啟用檔案立即初始化。 如需安全性和效能考量，請參閱 [資料庫立即檔案初始化](../../relational-databases/databases/database-instant-file-initialization.md)。<br /><br /> 預設值︰"False"<br /><br /> 選擇性的值："True"|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **選擇性**|指定使用者資料庫之記錄檔的目錄。<br /><br /> 預設值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMAXDOP=parameter <br /><br /> **選擇性**：如在自動 (無訊息) 安裝時省略，MAXDOP 會配合[平行處理原則的最大程度指導方針](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)。 |指定平行處理原則的最大程度，這會決定單一陳述式在執行期間可以利用的處理器數目。 僅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始提供。 <br /><br /> 預設值會配合[平行處理原則的最大程度指導方針](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/USESQLRECOMMENDEDMEMORYLIMITS<br /><br /> **選擇性**：如果在自動安裝 (無訊息安裝) 時省略 /USESQLRECOMMENDEDMEMORYLIMITS、/SQLMINMEMORY 和 /SQLMAXMEMORY，則 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會使用預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體設定。|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會使用依照[伺服器記憶體設定指導方針](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)計算出的記憶體設定。 僅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始提供。<br /><br /> **注意：** 此參數無法搭配 /SQLMINMEMORY 和 /SQLMAXMEMORY 使用。 |  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMINMEMORY<br /><br /> **選擇性**：如果在自動安裝 (無訊息安裝) 時省略 /USESQLRECOMMENDEDMEMORYLIMITS、/SQLMINMEMORY 和 /SQLMAXMEMORY，則 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會使用預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體設定。|指定最小的伺服器記憶體設定。 僅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始提供。<br /><br /> 預設值︰0.<br /><br /> **注意：** 這個參數無法搭配 /USESQLRECOMMENDEDMEMORYLIMITS 使用。 |  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMAXMEMORY<br /><br /> **選擇性**：如果在自動安裝 (無訊息安裝) 時省略 /USESQLRECOMMENDEDMEMORYLIMITS、/SQLMINMEMORY 和 /SQLMAXMEMORY，則 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會使用預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體設定。|設定最大的伺服器記憶體設定。 僅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始提供。<br /><br /> 預設值：依照[伺服器記憶體設定指導方針](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)計算出的值。<br /><br /> **注意：** 這個參數無法搭配 /USESQLRECOMMENDEDMEMORYLIMITS 使用。 |  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **選擇性**|指定 FILESTREAM 功能的存取層級。 支援的值：<br /><br /> 0=針對這個執行個體停用 FILESTREAM 支援 (預設值)。<br /><br /> 1=針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取啟用 FILESTREAM。<br /><br /> 2=針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和檔案 I/O 資料流存取啟用 FILESTREAM (不適用於叢集狀況)。<br /><br /> 3=允許遠端用戶端具有 FILESTREAM 資料的資料流存取權。|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **選擇性**<br /><br /> **當 FILESTREAMLEVEL 大於 1 時則為必要參數。**|指定即將儲存 FILESTREAM 資料之 Windows 共用的名稱。|  
 |SQL Server 全文檢索|/FTSVCACCOUNT<br /><br /> **選擇性**|指定全文檢索篩選啟動器服務的帳戶。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更新版本中會忽略此參數。 ServiceSID 是用來協助保護 SQL Server 與全文檢索篩選背景程式之間的通訊。 如果沒有提供這些值，就會停用全文檢索篩選啟動器服務。 您必須使用 SQL Server 控制管理員來變更服務帳戶並啟用全文檢索功能。<br /><br /> 預設值︰本機服務帳戶|  

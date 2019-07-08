@@ -13,12 +13,12 @@ ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6697f631ec0ca4c0fb2ee26529b1f0f410e36912
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0579405abb9a8b84d56e94db88a1a2a77f1d99d1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63052191"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586006"
 ---
 # <a name="enable-or-disable-data-collection"></a>啟用或停用資料收集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "63052191"
 1.  在 [物件總管] 中，展開 **[管理]** 節點。  
   
 2.  以滑鼠右鍵按一下 **[資料收集]** ，然後按一下 **[啟用資料收集]** 。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-disable-the-data-collector"></a>若要停用資料收集器  
   
 1.  在 [物件總管] 中，展開 **[管理]** 節點。  

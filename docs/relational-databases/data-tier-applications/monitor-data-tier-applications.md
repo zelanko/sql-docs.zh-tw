@@ -13,12 +13,12 @@ ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df8cd54cdf13941044ae4f72f8781e4532fc5c51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0bea639ebb7ec36cc1784db829fc98db8d2c0ba
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714325"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580200"
 ---
 # <a name="monitor-data-tier-applications"></a>監視資料層應用程式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "62714325"
 3.  選取 [檢視/公用程式總管詳細資料]  功能表。  
   
 4.  選取 [公用程式總管]  中的 [部署的資料層應用程式]  節點。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  [部署的資料層應用程式]  詳細資料頁面中的資訊來自公用程式管理資料倉儲中的資料，此資料倉儲預設每 15 分鐘收集資料一次。 其間隔可以使用 **[公用程式管理]** 詳細資料頁面自訂。  
   
 ## <a name="using-object-explorer"></a>使用物件總管  

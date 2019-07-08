@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dddb1ee5aaeab9a741cfe0a09bea2a93b786c57e
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: ff3494a9983104c958dbd1f3e0ac7b74598f2dcb
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255275"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343921"
 ---
 # <a name="columnstore-indexes---query-performance"></a>資料行存放區索引 - 查詢效能
 

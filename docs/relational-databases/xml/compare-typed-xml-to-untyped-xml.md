@@ -26,12 +26,12 @@ ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8e4679cb4627f5366327c02f6b30db32d3b2610
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ad284fdb121900e3c6eff89f38213c09cf0331b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760700"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582309"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>比較具類型的 XML 與不具類型的 XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +154,9 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
     3.  在下列情況下，任何小於 1 年 1 月 1 日的 **xs:date** 或 **xs:dateTime** 值都會導致發生執行階段錯誤：當重建索引時，或是針對包含該值的 XML 資料類型執行 XQuery 或 XML-DML 陳述式時。  
   
 2.  **xs:date** 或 **xs:dateTime** Facet 中的任何負數年份或是 XML 結構描述集合中的預設值，將會自動更新為基底 **xs:date** 或 **xs:dateTime** 類型所允許的最小值 (例如 **xs:dateTime**的 0001-01-01T00:00:00.0000000Z)。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  請注意，您仍然可以使用簡單 SQL SELECT 陳述式來擷取整個 XML 資料類型，即使它包含負數年份。 建議您使用新支援範圍中的年份來取代負數年份，或是將元素或屬性的類型變更為 **xs:string**。  
   
 ## <a name="see-also"></a>另請參閱  

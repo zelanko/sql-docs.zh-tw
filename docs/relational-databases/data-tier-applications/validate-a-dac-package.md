@@ -16,21 +16,23 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e7e22f164ba8da071a93dff1535b777993e76e2
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 40db1a19c2c32db5b75e5715e7a0a051eca53b96
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590472"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580111"
 ---
 # <a name="validate-a-dac-package"></a>驗證 DAC 封裝
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   最好先檢閱 DAC 封裝的內容，再將它部署至實際執行環境，以及先驗證升級動作，再升級現有 DAC。 當您部署的封裝之前不是在組織內開發時，特別會是這個情況。  
   
-1.  **開始之前：**[必要條件](#Prerequisites)  
+1.  **開始之前：** [必要條件](#Prerequisites)  
   
-2.  **若要升級 DAC，請使用下列方式：**[檢視 DAC 內容](#ViewDACContents)、[檢視資料庫變更](#ViewDBChanges)、[檢視升級動作](#ViewUpgradeActions)、[比較 DAC](#CompareDACs)  
-  
+2.  **若要升級 DAC，請使用下列方式：** [檢視 DAC 內容](#ViewDACContents)、[檢視資料庫變更](#ViewDBChanges)、[檢視升級動作](#ViewUpgradeActions)、[比較 DAC](#CompareDACs)  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="Prerequisites"></a> 必要條件  
  建議您不要部署來源不明或來源不受信任的 DAC 封裝。 這類 DAC 可能包含惡意程式碼，因此可能會執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述而造成錯誤。 使用來源不明或來源不受信任的 DAC 之前，請先將它部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的隔離測試執行個體，並在資料庫上執行 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)，然後檢查資料庫中的程式碼，例如預存程序或其他使用者定義的程式碼。  
   
@@ -39,17 +41,17 @@ ms.locfileid: "53590472"
   
  **在 SQL Server Developer Tools 中檢視 DAC**  
   
-1.  開啟 [檔案] 功能表，選取 [開新檔案]，然後選取 [專案...]。  
+1.  開啟 [檔案]  功能表，選取 [開新檔案]  ，然後選取 [專案...]  。  
   
-2.  選取 **[SQL Server]** 專案範本，並指定 **[名稱]**、 **[位置]** 及 **[方案名稱]**。  
+2.  選取 **[SQL Server]** 專案範本，並指定 **[名稱]** 、 **[位置]** 及 **[方案名稱]** 。  
   
-3.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後選取 [屬性...]。  
+3.  在 [方案總管]  中，以滑鼠右鍵按一下專案節點，然後選取 [屬性...]  。  
   
-4.  在 [專案設定] 索引標籤的 [輸出類型] 區段中，選取 [資料層應用程式 (.dacpac 檔案)] 核取方塊，然後關閉屬性對話方塊。  
+4.  在 [專案設定]  索引標籤的 [輸出類型]  區段中，選取 [資料層應用程式 (.dacpac 檔案)]  核取方塊，然後關閉屬性對話方塊。  
   
-5.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後選取 [匯入資料層應用程式...]。  
+5.  在 [方案總管]  中，以滑鼠右鍵按一下專案節點，然後選取 [匯入資料層應用程式...]  。  
   
-6.  使用方案總管開啟 DAC 中的所有檔案，例如伺服器選取原則和部署前後指令碼。  
+6.  使用方案總管  開啟 DAC 中的所有檔案，例如伺服器選取原則和部署前後指令碼。  
   
 7.  使用 **[結構描述檢視]** 檢閱結構描述中的所有物件，特別是檢閱函數或預存程序這類物件中的程式碼時。  
   
@@ -66,7 +68,7 @@ ms.locfileid: "53590472"
   
  **使用精靈檢視資料庫變更**  
   
-1.  執行 [升級資料層應用程式精靈]，同時指定目前部署的 DAC 以及含有新版 DAC 的 DAC 封裝。  
+1.  執行 [升級資料層應用程式精靈]  ，同時指定目前部署的 DAC 以及含有新版 DAC 的 DAC 封裝。  
   
 2.  在 **[偵測變更]** 頁面上，檢閱已對資料庫進行之變更的報表。  
   
@@ -111,7 +113,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
  **使用精靈來報告升級動作**  
   
-1.  執行 [升級資料層應用程式精靈]，同時指定目前部署的 DAC 以及含有新版 DAC 的 DAC 封裝。  
+1.  執行 [升級資料層應用程式精靈]  ，同時指定目前部署的 DAC 以及含有新版 DAC 的 DAC 封裝。  
   
 2.  在 **[摘要]** 頁面上，檢閱升級動作的報表。  
   

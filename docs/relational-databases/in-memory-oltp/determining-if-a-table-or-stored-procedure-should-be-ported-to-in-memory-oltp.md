@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cb94b594be62bf19ad90c00ffaef6145eb90fc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcb4c7385c509e132da589149c4da9f2db5c0d5f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047767"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582227"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>判斷是否應將資料表或預存程序匯出至記憶體中 OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,7 +123,9 @@ ms.locfileid: "63047767"
 3.  按一下 [下一步]  ，然後確認工作清單符合位於 [設定檢查清單產生選項]  頁面的設定。  
   
 4.  按一下 [完成]  ，然後確認僅針對您選取的物件產生移轉檢查清單報表。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  您可將這些報表與記憶體最佳化建議程式工具和原生編譯建議程式工具產生的報表加以比較，以確認報表的精確度。 如需相關資訊，請參閱 [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 及 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md)。  
   
 **使用 SQL Server PowerShell 產生移轉檢查清單**  

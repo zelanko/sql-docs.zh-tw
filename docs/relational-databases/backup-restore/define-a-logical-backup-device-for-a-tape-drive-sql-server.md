@@ -17,12 +17,12 @@ ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 68512f8c70e27849b8517ba20967bb7719ecd312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96e7e096e9c2b59dbe5736b285d851e8b3d415e9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707866"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583630"
 ---
 # <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>定義磁帶機的邏輯備份裝置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47707866"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目定義磁帶機的邏輯備份裝置：**  
   
@@ -66,17 +66,19 @@ ms.locfileid: "47707866"
   
 1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱展開伺服器樹狀目錄。  
   
-2.  展開 [伺服器物件]，然後以滑鼠右鍵按一下 [備份裝置]。  
+2.  展開 [伺服器物件]  ，然後以滑鼠右鍵按一下 [備份裝置]  。  
   
-3.  按一下 **[新增備份裝置]**，開啟 **[備份裝置]** 對話方塊。  
+3.  按一下 **[新增備份裝置]** ，開啟 **[備份裝置]** 對話方塊。  
   
 4.  輸入裝置名稱。  
   
 5.  在目的地中，請按一下 **[磁帶]** ，選取尚未與其他備份裝置連接的磁帶機。 如果沒有這樣的磁帶機可用， **[磁帶]** 選項會停用。  
   
-6.  若要定義新裝置，請按一下 **[確定]**。  
-  
- 若要備份至這個新裝置，請將它加入 [備份資料庫] ([一般]) 對話方塊中的 [備份至:] 欄位。 如需詳細資訊，請參閱 [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)中建立差異資料庫備份。  
+6.  若要定義新裝置，請按一下 **[確定]** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+ 若要備份至這個新裝置，請將它加入 [備份資料庫]  ([一般]  ) 對話方塊中的 [備份至:]  欄位。 如需詳細資訊，請參閱 [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)中建立差異資料庫備份。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -84,9 +86,9 @@ ms.locfileid: "47707866"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例示範如何使用 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) ，定義磁帶的邏輯備份裝置。 範例會加入名稱為 `tapedump1`的磁帶備份裝置，實體名稱是 `\\.\tape0`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例示範如何使用 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) ，定義磁帶的邏輯備份裝置。 範例會加入名稱為 `tapedump1`的磁帶備份裝置，實體名稱是 `\\.\tape0`。  
   
 ```sql  
 USE AdventureWorks2012 ;  

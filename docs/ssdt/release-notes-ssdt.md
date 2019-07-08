@@ -12,20 +12,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 80836cb5ab67f221ff3f9965d1980bcbc9c8378d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef3cd72348cc93eee37716007c7975731b2da333
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101906"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400088"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的版本資訊
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 這些是適用於 Visual Studio (VS) 的 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) 的版本資訊。
-
-如需新功能和已變更功能的詳細文章，請參閱 [SSDT 小組部落格](https://blogs.msdn.microsoft.com/ssdt/) \(英文\)。
 
 <!--
 Hello.  We have switched to a newer standardized format for Release Notes articles.
@@ -72,6 +70,7 @@ P.S.  There is no need to keep this large HTML comment indefinitely.
 | :---------- | :------ |
 | 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 | 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。 |
 | SSDT for Visual Studio 2017 (15.8 以上版本) 不支援設計包含 Teradata 來源/目的地的套件。 | 使用適用於 Visual Studio 2017 (15.8) 的 SSDT。 |
+| 無法在套件部署模型中建立或編輯資料來源。 | 無法開啟 [資料來源精靈]。 |
 | 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援 OData v4。 | &nbsp; |
 | 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援使用 ODBC 連接到 Oracle。 | &nbsp; |
 | Power Query 來源未當地語系化。 | &nbsp; |

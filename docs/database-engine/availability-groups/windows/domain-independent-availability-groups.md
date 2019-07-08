@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: ad844d0b08ba0323f9930970a3056e592e44c25e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19e64c2fa9f1006e07f6da72d8fdfc146c9faf8b
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765722"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388112"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>建立網域獨立的可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,8 +71,10 @@ Windows Server 2016 引進以「已中斷連結 Active Directory 的叢集」為
 10. 系統會提示您重新啟動。 如果您不想要立即重新啟動，請按一下 [稍後重新啟動]，否則按一下 [立即重新啟動]。
 11. 重新啟動伺服器之後，請重新查看 [系統] 來確認已設定一般 DNS 尾碼。
 
-
 ![成功設定 DNS 尾碼][4]
+
+  > [!NOTE]
+  > 如果您使用多個子網路，且具有靜態 DNS，即必須採用程序才能更新與接聽程式相關聯的 DNS 記錄，再執行容錯移轉，否則網路名稱無法上線。
 
 ## <a name="create-a-domain-independent-availability-group"></a>建立網域獨立的可用性群組
 

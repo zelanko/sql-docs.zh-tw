@@ -40,12 +40,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e16bca2aabbf35c3bd75dd7a0c75e81c13efcfbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e17dece6d010554caf94278a432c30a04d52255
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62999514"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581212"
 ---
 # <a name="configure-database-mail"></a>設定 Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,9 @@ ms.locfileid: "62999514"
 3.  以滑鼠右鍵按一下 [Database Mail]  ，然後按一下 [設定 Database Mail]  。  
   
 4.  完成精靈對話方塊  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   [歡迎頁面](#Welcome)  
   
     -   [選取組態工作頁面](#ConfigTask)  

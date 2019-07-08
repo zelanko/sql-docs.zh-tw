@@ -14,12 +14,12 @@ ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 62d24228267d0f5fd104a26d46d4aae721ac2663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2edf3cf1f23b8a18f2fc2b7586d22b7d46bb7226
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62509935"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580108"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>從 Oracle 資料庫建立發行集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,9 @@ ms.locfileid: "62509935"
     >  如果網路組態有問題，此時您會收到一條錯誤訊息。 如果您遇到連接到 Oracle 資料庫的問題，請參閱在＜ [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)＞中的「SQL Server 散發者無法連接到 Oracle 資料庫執行個體」一節。  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-create-a-publication-from-an-oracle-database"></a>若要從 Oracle 資料庫建立發行集  
   
 1.  連接到「Oracle 發行者」將其做為「散發者」使用的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，然後展開伺服器節點。  

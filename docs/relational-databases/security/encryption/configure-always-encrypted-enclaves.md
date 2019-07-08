@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac71a5cc516b89636576aa59114974b4bd5cd017
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 87ae14a8acaa94873b81238d998f755a8ee0a8bd
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67387990"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583662"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>設定具有安全記憶體保護區的 Always Encrypted
 
@@ -32,6 +32,8 @@ ms.locfileid: "67387990"
 4. 在 SQL Server 執行個體中設定安全記憶體保護區類型。
 5. 佈建已啟用記憶體保護區的金鑰。
 6. 加密包含敏感性資料的資料行。
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]
 > 如需有關如何設定測試環境並在 SSMS 中嘗試具有安全記憶體保護區之 Always Encrypted 功能的逐步教學課程，請參閱[教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted](../tutorial-getting-started-with-always-encrypted-enclaves.md)。

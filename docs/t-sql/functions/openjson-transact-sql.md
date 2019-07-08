@@ -1,7 +1,7 @@
 ---
 title: OPENJSON (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/17/2017
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: genemi
@@ -19,12 +19,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 53739518c40221b752d63016faf369b9e3e71587
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88c74779b60ae25ea381a2814b06a11b4fdd2e22
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65576313"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343862"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -74,33 +74,37 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 為包含 JSON 文字的 Unicode 字元運算式。  
   
 OPENJSON 會逐一查看陣列中的項目或 JSON 運算式中物件的屬性，並為每個項目或屬性傳回一個資料列。 下列範例會傳回以 *jsonExpression* 提供之每個物件的屬性：  
-  
-```sql  
-DECLARE @json NVARCHAR(4000) = N'{  
-   "StringValue":"John",  
-   "IntValue":45,  
-   "TrueValue":true,  
-   "FalseValue":false,  
-   "NullValue":null,  
-   "ArrayValue":["a","r","r","a","y"],  
-   "ObjectValue":{"obj":"ect"}  
-}'
 
-SELECT *
-FROM OPENJSON(@json)
-```  
-  
-**結果**
-  
-|索引鍵|value|型別|  
-|---------|-----------|----------|  
-|StringValue|John|1|  
-|IntValue|45|2|  
-|TrueValue|true|3|  
-|FalseValue|false|3|  
-|NullValue|NULL|0|  
-|ArrayValue|["a","r","r","a","y"]|4|  
-|ObjectValue|{"obj":"ect"}|5|  
+```sql
+DECLARE @json NVarChar(2048) = N'{
+   "String_value": "John",
+   "DoublePrecisionFloatingPoint_value": 45,
+   "DoublePrecisionFloatingPoint_value": 2.3456,
+   "BooleanTrue_value": true,
+   "BooleanFalse_value": false,
+   "Null_value": null,
+   "Array_value": ["a","r","r","a","y"],
+   "Object_value": {"obj":"ect"}
+}';
+
+SELECT * FROM OpenJson(@json);
+```
+
+**結果：**
+
+| 索引鍵                                | value                 | 型別 |
+| :--                                | :----                 | :--- |
+| String_value                       | John                  | 1 |
+| DoublePrecisionFloatingPoint_value | 45                    | 2 |
+| DoublePrecisionFloatingPoint_value | 2.3456                | 2 |
+| BooleanTrue_value                  | true                  | 3 |
+| BooleanFalse_value                 | false                 | 3 |
+| Null_value                         | NULL                  | 0 |
+| Array_value                        | ["a","r","r","a","y"] | 4 |
+| Object_value                       | {"obj":"ect"}         | 5 |
+| &nbsp; | &nbsp; | &nbsp; |
+
+- DoublePrecisionFloatingPoint_value 符合 IEEE-754 標準。
 
 ### <a name="path"></a>*path*
 
@@ -228,7 +232,7 @@ OPENJSON 函式傳回的資料行取決於 WITH 選項。
         |------------------------------|--------------------|  
         |0|null|  
         |1|string|  
-        |2|ssNoversion|  
+        |2|INT|  
         |3|true/false|  
         |4|array|  
         |5|物件 (object)|  

@@ -16,16 +16,16 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017 ||= sqlallproducts-allversions
-ms.openlocfilehash: f366514d23a2de7180eb84d12997434f9414c427
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: c38cff3036b3c00897d28a1ff12e576f61bf4cfd
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836361"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564005"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   將 *inputdate* 轉換成目標時區中對應的 *datetimeoffset* 值。 提供 *inputdate* 但未提供位移資訊時，此函式就會在假設 *inputdate* 位於目標時區的情況下，套用時區位移。 如果提供 *inputdate* 來作為 *datetimeoffset* 值，則 **AT TIME ZONE** 子句會使用時區轉換規則將它轉換成目標時區。  
   
@@ -55,7 +55,7 @@ inputdate AT TIME ZONE timezone
 ## <a name="remarks"></a>Remarks  
  **AT TIME ZONE** 會針對 **smalldatetime**、**datetime** 及 **datetime2** 資料類型中，落在受 DST 變更影響之間隔內的輸入值，套用特定的轉換規則：  
   
--   將時鐘調快時，本地時間會有落差，其相當於時鐘調整的持續時間。 這段持續時間通常是 1 個小時，但也可能是 30 或 45 分鐘，視時區而定。 將會使用在 DST 變更「後」之位移來轉換位於此落差中的時間點。  
+-   將時鐘調快時，本地時間會有落差，其相當於時鐘調整的持續時間。 這段持續時間通常是 1 個小時，但也可能是 30 或 45 分鐘，視時區而定。 將會使用在 DST 變更「後」  之位移來轉換位於此落差中的時間點。  
   
     ```  
     /*  
@@ -86,7 +86,7 @@ inputdate AT TIME ZONE timezone
   
     ```  
   
-- 將時鐘調整回來時，2 個小時的本地時間就會重疊成 1 個小時。  在此情況下，會使用在時鐘變更「之前」的位移來顯示屬於重疊間隔的時間點：  
+- 將時鐘調整回來時，2 個小時的本地時間就會重疊成 1 個小時。  在此情況下，會使用在時鐘變更「之前」  的位移來顯示屬於重疊間隔的時間點：  
   
     ```  
     /*  

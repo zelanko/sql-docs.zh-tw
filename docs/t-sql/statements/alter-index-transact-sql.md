@@ -1,7 +1,7 @@
 ---
 title: ALTER INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/03/2018
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abffa2d7bebfcf6defab15cf058c4fdf50b359c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 758c6524e124557083fc61af234283b567633a7b
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413638"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388847"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -127,6 +127,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 {  
       ALLOW_ROW_LOCKS = { ON | OFF }  
     | ALLOW_PAGE_LOCKS = { ON | OFF }  
+    | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
     | IGNORE_DUP_KEY = { ON | OFF }  
     | STATISTICS_NORECOMPUTE = { ON | OFF }  
     | COMPRESSION_DELAY= {0 | delay [Minutes]}  
@@ -467,7 +468,13 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
 > [!NOTE]
 >  當 ALLOW_PAGE_LOCKS 設為 OFF 時，無法重新組織索引。  
-  
+
+ OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
+
+**適用對象**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更新版本。
+
+指定是否要最佳化最後一頁的插入競爭。 預設值為 OFF。 請參閱 CREATE INDEX 頁面的[循序索引鍵](./create-index-transact-sql.md#sequential-keys)一節以取得詳細資訊。
+
  MAXDOP **=** max_degree_of_parallelism  
  
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 開始) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
@@ -686,7 +693,7 @@ ONLINE、MAXDOP 和 SORT_IN_TEMPDB 的值並未儲存在系統目錄中。 除�
 請利用 ALTER INDEX REBUILD 陳述式或 CREATE INDEX WITH DROP_EXISTING 陳述式來啟用索引。 當 ONLINE 選項設為 ON 時，無法重建停用的叢集索引。 如需詳細資訊，請參閱 [停用索引和條件約束](../../relational-databases/indexes/disable-indexes-and-constraints.md)。  
   
 ## <a name="setting-options"></a>設定選項  
-您可以在不重建或重新組織指定之索引的情況下，設定這個索引的 ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、IGNORE_DUP_KEY 和 STATISTICS_NORECOMPUTE 選項。 修改的值會立即套用在索引上。 若要檢視這些設定，請使用 **sys.indexes**。 如需詳細資訊，請參閱 [設定索引選項](../../relational-databases/indexes/set-index-options.md)。  
+您可以在不重建或重新組織指定索引的情況下，設定該索引的 ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、OPTIMIZE_FOR_SEQUENTIAL_KEY、IGNORE_DUP_KEY 和 STATISTICS_NORECOMPUTE 選項。 修改的值會立即套用在索引上。 若要檢視這些設定，請使用 **sys.indexes**。 如需詳細資訊，請參閱 [設定索引選項](../../relational-databases/indexes/set-index-options.md)。  
   
 ### <a name="row-and-page-locks-options"></a>資料列和頁面鎖定選項  
 如果 ALLOW_ROW_LOCKS = ON 且 ALLOW_PAGE_LOCK = ON，當您存取索引時，允許資料列、頁面和資料表層級的鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會選擇適當的鎖定，且可以將鎖定從資料列或頁面鎖定擴大到資料表鎖定。  

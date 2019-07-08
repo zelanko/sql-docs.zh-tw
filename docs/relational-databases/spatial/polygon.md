@@ -14,12 +14,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bbed0ab919c2eb4258c22bee4545ec8d49a1462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 192b068c8ece6bcfda9aee2899793d7d901dd90a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761449"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581697"
 ---
 # <a name="polygon"></a>多邊形
 
@@ -43,7 +43,9 @@ ms.locfileid: "66761449"
 2.  圖 2 是 **Polygon** 執行個體，其界限是由一個外部環形和兩個內部環形所定義。 內部環形內的區域是 **Polygon** 執行個體外部的一部分。  
   
 3.  圖 3 是有效的 **Polygon** 執行個體，因為它的內部環形會在單一正切點上相交。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="accepted-instances"></a>已接受的執行個體  
  已接受的 **Polygon** 執行個體是指可儲存在 **geometry** 或 **geography** 變數中而不會擲回例外狀況的執行個體。 已接受的 **Polygon** 執行個體如下：  
   

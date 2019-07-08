@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a6f4b6283c6e1a29f273eae5c607478166535af
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 1197244abd63560bf6fa9d76401c0836b833c6a5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256023"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581415"
 ---
 # <a name="view-user-defined-functions"></a>檢視使用者定義函數
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "54256023"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  若要使用 **sys.sql_expression_dependencies** 尋找函數的所有相依性，需要資料庫的 VIEW DEFINITION 權限以及資料庫之 **sys.sql_expression_dependencies** 的 SELECT 權限。 系統物件定義是公開可見的，就像 OBJECT_DEFINITION 中傳回的定義一樣。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -69,48 +69,50 @@ ms.locfileid: "54256023"
   
     -   彙總函式  
   
-4.  以滑鼠右鍵按一下要查看其屬性的函數，然後選取 [屬性]。  
+4.  以滑鼠右鍵按一下要查看其屬性的函數，然後選取 [屬性]  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following properties appear in the **Function Properties -** _function_name_ dialog box.  
   
-     下列屬性會出現在 [函數屬性 - _function_name_] 對話方塊中。  
-  
-     **[資料庫備份]**  
-     包含此函數之資料庫的名稱。  
+     **Database**  
+     The name of the database containing this function.  
   
      **Server**  
-     目前伺服器執行個體的名稱。  
+     The name of the current server instance.  
   
-     **使用者**  
-     這個連接之使用者的名稱。  
+     **User**  
+     The name of the user of this connection.  
   
-     **建立日期**  
-     顯示建立函數的日期。  
+     **Created date**  
+     Displays the date the function was created.  
   
-     **執行身分**  
-     函數的執行內容。  
+     **Execute As**  
+     Execution context for the function.  
   
-     **名稱**  
-     目前函數的名稱。  
+     **Name**  
+     The name of the current function.  
   
-     **結構描述**  
-     顯示擁有函數的結構描述。  
+     **Schema**  
+     Displays the schema that owns the function.  
   
-     **系統物件**  
-     指出函數是否為系統物件。 值為 True 與 False。  
+     **System object**  
+     Indicates whether the function is a system object. Values are True and False.  
   
-     **ANSI NULLS**  
-     指出物件是否使用 ANSI NULLS 選項建立。  
+     **ANSI NULLs**  
+     Indicates if the object was created with the ANSI NULLs option.  
   
-     **已加密**  
-     指出函數是否加密。 值為 True 與 False。  
+     **Encrypted**  
+     Indicates whether the function is encrypted. Values are True and False.  
   
-     **函數類型**  
-     使用者定義函數的類型。  
+     **Function Type**  
+     The type of user defined function.  
   
-     **引號識別碼**  
-     指出物件是否使用引號識別碼選項建立。  
+     **Quoted identifier**  
+     Indicates if the object was created with the quoted identifier option.  
   
-     **結構描述繫結**  
-     指出函數是否為結構描述繫結函數。 值為 True 與 False。 如需結構描述繫結函數的資訊，請參閱 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) 的＜SCHEMABINDING＞一節。  
+     **Schema bound**  
+     Indicates whether the function is schema-bound. Values are True and False. For information about schema-bound functions, see the SCHEMABINDING section of [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -118,9 +120,9 @@ ms.locfileid: "54256023"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列其中一個範例複製並貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列其中一個範例複製並貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -159,9 +161,9 @@ ms.locfileid: "54256023"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  

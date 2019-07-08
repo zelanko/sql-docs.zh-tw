@@ -20,12 +20,12 @@ ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85cd45abfbc434ce02d5000d48ed5dacd48ad208
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 0d063f60a959c047385b50b150359c063bfa668c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242119"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579415"
 ---
 # <a name="file-restores-full-recovery-model"></a>檔案還原 (完整復原模式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ ms.locfileid: "54242119"
   
 -   離線檔案還原  
   
-     在 *「離線檔案還原」*(Offline File Restore) 中，還原損毀的檔案或檔案群組時，資料庫處於離線狀態。 在還原順序結束後，資料庫會恢復上線。  
+     在 *「離線檔案還原」* (Offline File Restore) 中，還原損毀的檔案或檔案群組時，資料庫處於離線狀態。 在還原順序結束後，資料庫會恢復上線。  
   
      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的所有版本都支援離線檔案還原。  
   
 -   線上檔案還原  
   
-     在 *「線上檔案還原」*(Online File Restore) 中，如果資料庫在還原期間處於線上，則在檔案還原期間也會處於線上。 不過，在還原作業期間，包含正在還原之檔案的每個檔案群組都會離線。 離線檔案群組中的所有檔案都復原後，檔案群組就會自動回到線上。  
+     在 *「線上檔案還原」* (Online File Restore) 中，如果資料庫在還原期間處於線上，則在檔案還原期間也會處於線上。 不過，在還原作業期間，包含正在還原之檔案的每個檔案群組都會離線。 離線檔案群組中的所有檔案都復原後，檔案群組就會自動回到線上。  
   
      如需線上頁面和檔案還原支援的資訊，請參閱 [SQL Server 2016 版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 如需線上還原的詳細資訊，請參閱[線上還原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)。
   
@@ -76,7 +76,9 @@ ms.locfileid: "54242119"
      您必須還原在檔案備份之後建立的交易記錄備份，才能讓資料庫恢復一致的狀態。 交易記錄備份可以快速地向前復原，因為只需套用適用於還原檔案的變更。 還原個別檔案比還原整個資料庫更為理想，因為不需複製未受損的檔案，便可接著向前復原。 不過，仍然需要讀取記錄備份的整個鏈結。  
   
 5.  復原資料庫。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
 >  檔案備份可以用來將資料庫還原至較早的時間點。 若要這樣做，您必須還原整個檔案備份組，然後依序還原交易記錄備份，以回到上一次還原的檔案備份結尾之後的目標時間點。 如需時間點還原的詳細資訊，請參閱[將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
