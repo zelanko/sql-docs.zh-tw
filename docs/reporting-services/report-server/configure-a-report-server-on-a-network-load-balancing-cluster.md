@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 10/03/2018
-ms.openlocfilehash: a6c04be1bf56577d0a6d40ccba9f627d319535ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.date: 07/03/2019
+ms.openlocfilehash: cc9e35829be7ea287cebaa99d7f96d10bb0d92d1
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937243"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564002"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在網路負載平衡叢集上設定報表伺服器
 
@@ -62,16 +62,16 @@ ms.locfileid: "65937243"
     下列範例說明您必須取得的值。 請不要將此範例複製至設定檔，因為這些金鑰值無效。  
   
     ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. 開啟 Reportserver 的 Web.config 檔案，並在 <`system.web`> 區段中貼上您產生的 <`machineKey`> 項目。 根據預設，報表管理員的 Web.config 檔案位於 \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config。  
+2. 開啟 Reportserver 的 Web.config 檔案，並在 <`system.web`> 區段中貼上您產生的 <`MachineKey`> 項目。 根據預設，報表管理員的 Web.config 檔案位於 \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config。  
   
 3. 儲存檔案。  
   
 4. 針對向外延展部署中的每個報表伺服器重複以上步驟。  
   
-5. 確認 \Reporting Services\Reportserver 資料夾中的所有 Web.Config 檔案在 <`system.web`> 區段中包含相同的 <`machineKey`> 項目。  
+5. 確認 \Reporting Services\Reportserver 資料夾中的所有 Web.Config 檔案在 <`system.web`> 區段中包含相同的 <`MachineKey`> 項目。  
 
 ::: moniker-end
 
@@ -82,7 +82,7 @@ ms.locfileid: "65937243"
     下列範例說明您必須取得的值。 請勿將此範例複製到組態檔中，因為這些金鑰值是無效的。 報表伺服器需要正確的大小寫。
 
     ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>
     ```
 
 2. 儲存檔案。

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 77590da41aa09f66d7549a0d7ff615cdb3f63af3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dad85f35be1d7fb26f4c9eef6241e01baadb692
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506637"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492819"
 ---
 # <a name="create-a-linked-report"></a>建立連結報表
   連結報表是提供現有報表之存取點的報表伺服器項目。 它在概念上類似於您用來執行程式或開啟檔案的程式捷徑。  
@@ -36,7 +36,7 @@ ms.locfileid: "66506637"
   
 4. 若要選取報表的其他資料夾，選取 右邊的省略符號按鈕 （...）***位置***。  瀏覽至報表，然後選取新資料夾**選取**。 如果您未選取不同的資料夾，則建立連結的報表是在目前的資料夾。  
   
-5. 選取 [建立]。 會建立連結的報表。  
+5. 選取 [建立]  。 會建立連結的報表。  
 
 6. 底下**進階**，選取不同**報表逾時**值，如有需要，然後選取**套用**以儲存變更。
   
@@ -45,7 +45,7 @@ ms.locfileid: "66506637"
      ![連結報表圖示](../../reporting-services/report-server/media/hlp-16linked.gif "連結報表圖示")  
   
 ## <a name="see-also"></a>另請參閱  
- [開啟及關閉報表&#40;web 入口網站&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
+
  [Reporting Services 概念 &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)  
  [報表伺服器的入口網站 (SSRS 原生模式)](../../reporting-services/web-portal-ssrs-native-mode.md)
   

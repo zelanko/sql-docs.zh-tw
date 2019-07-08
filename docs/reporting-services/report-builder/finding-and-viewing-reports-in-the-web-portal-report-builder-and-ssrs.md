@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e92e16db5eb7ac6edf03a07c3091edac2c26d144
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f0dae8999d22773a1a76440c439d4682785f684
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581193"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492843"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>在入口網站中尋找和檢視報表 (報表產生器及 SSRS)
   報表管理員是以網路為基礎的工具，其中包含檢視和管理報表的功能。 這是報表伺服器安裝的一部分。 若要開啟「報表管理員」，請在瀏覽器視窗中輸入「報表管理員」的 URL。 如需瀏覽器需求的詳細資訊，請參閱 [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。 如需有關如何在報表伺服器上設定「報表管理員」URL 的詳細資訊，請連絡您的系統管理員。 如需詳細資訊，請參閱[設定報表管理員 &#40;原生模式&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)。  
@@ -40,8 +40,8 @@ ms.locfileid: "65581193"
 ## <a name="opening-a-report"></a>開啟報表  
  找到報表之後，按一下報表名稱即可開啟報表。 該報表會在 HTML 中轉譯，並出現在「報表管理員」的 [內容] 頁面中。 瀏覽器工作階段一律會快取報表，因此如果您開啟報表，按一下 [上一頁]  按鈕通常可以返回至該報表。 即使需要提供使用者名稱和密碼才可以執行報表也是如此。 在關閉瀏覽器之前，您無法完全關閉已轉譯的報表。  
   
- 並非資料夾階層中可見的所有報表都可以立即存取。 有些報表可能會提示您輸入使用者名稱和密碼，以決定您是否可以存取報表的資料來源。 如需在報表管理員開啟報表的詳細資訊，請參閱[開啟及關閉報表 &#40;報表管理員&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)。  
-  
+ 並非資料夾階層中可見的所有報表都可以立即存取。 有些報表可能會提示您輸入使用者名稱和密碼，以決定您是否可以存取報表的資料來源。 
+
  您也可以從報表產生器用瀏覽的方式直接從報表伺服器開啟報表。 
   
 ## <a name="to-search-for-items"></a>搜尋項目  
