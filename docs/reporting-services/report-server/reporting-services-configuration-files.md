@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25b695456bbac34e2c6ce8bf8c312c4108dd852e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0bd7ad95fcda039c6fd5a9299f4339d35b8a619
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506648"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564125"
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services 組態檔
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將元件資訊儲存在登錄以及安裝過程中複製到檔案系統的組態檔內。 組態檔包含僅供內部使用和使用者自訂值的組合。 使用者自訂值會透過安裝程式、組態工具、命令列公用程式，以及手動編輯組態檔等方式指定。  
@@ -35,36 +35,39 @@ ms.locfileid: "66506648"
 -   [組態檔的摘要 (SharePoint 模式)](#bkmk_config_file_Summary_sharepoint_mode)  
   
 ##  <a name="bkmk_config_file_Summary_native_mode"></a> 組態檔的摘要 (原生模式)  
- 下表將提供儲存組態設定之位置的描述。 大部分組態設定都會儲存在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 隨附的組態檔中。 根據預設，其安裝目錄如下：  
+ 下表將提供儲存組態設定之位置的描述。 大部分組態設定都會儲存在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]隨附的組態檔中。 根據預設，其安裝目錄如下：  
   
-'' 安裝路徑  
-C:\Program Files\Microsoft SQL Server\MSRSxx.MSSQLSERVER （其中 xx 是 MS SQL 版本號碼） 或  
+```
+Install Paths  
+C:\Program Files\Microsoft SQL Server\MSRSxx.MSSQLSERVER  (where xx is the MS SQL version number)
+  or  
 C:\Program Files\Microsoft SQL Server Reporting Services\SSRS  
-  SSRS 版本而定
+  depending on the SSRS version
 ```  
   
-|Stored in:|Description|Location|  
+|儲存於：|Description|位置|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|Stores configuration settings for feature areas of the Report Server service: Report Manager or the web portal, the Report Server Web service, and background processing. For more information about each setting, see [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<Installation directory> \Reporting Services \ReportServer|  
-|RSSrvPolicy.config|Stores the code access security policies for the server extensions. For more information about this file, see [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Installation directory> \Reporting Services \ReportServer|  
-|RSMgrPolicy.config|Stores the code access security policies for the web portal. For more information about this file, see [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Installation directory> \Reporting Services \ReportManager|  
-|Web.config for the Report Server Web service|Includes only those settings that are required for ASP.NET.|\<Installation directory> \Reporting Services \ReportServer|  
-|Web.config for Report Manager|Includes only those settings that are required for ASP.NET if applicable for the SSRS version.|\<Installation directory> \Reporting Services \ReportManager|  
-|ReportingServicesService.exe.config|Stores configuration settings that specify the trace levels and logging options for the Report Server service. For more information about the elements in this file, see [ReportingServicesService Configuration File](../../reporting-services/report-server/reportingservicesservice-configuration-file.md).|\<Installation directory> \Reporting Services \ReportServer \Bin|  
-|Registry settings|Stores configuration state and other settings used to uninstall Reporting Services. If you are troubleshooting an installation or configuration problem, you can view these settings to get information about how the report server is configured.<br /><br /> Do not modify these settings directly as this can invalidate your installation.|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<InstanceID\> \Setup<br /><br /> **- And -**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Services\ReportServer|  
-|RSReportDesigner.config|Stores configuration settings for Report Designer. For more information, see [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).|\<drive>:\Program Files \Microsoft Visual Studio 10 \Common7 \IDE \PrivateAssemblies.|  
-|RSPreviewPolicy.config|Stores the code access security policies for the server extensions used during report preview. For more information about this file, see [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssembliesr|  
+|RSReportServer.config|儲存報表伺服器服務之功能區的組態設定：報表管理員或入口網站、報表伺服器 Web 服務，以及背景處理。 如需每個設定的詳細資訊，請參閱 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。|\<安裝目錄> \Reporting Services\ReportServer|  
+|RSSrvPolicy.config|儲存伺服器延伸模組的程式碼存取安全性原則。 如需有關這個檔案的詳細資訊，請參閱＜ [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)＞。|\<安裝目錄> \Reporting Services\ReportServer|  
+|RSMgrPolicy.config|儲存入口網站的程式碼存取安全性原則。 如需有關這個檔案的詳細資訊，請參閱＜ [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)＞。|\<安裝目錄> \Reporting Services\ReportManager|  
+|報表伺服器 Web 服務的 Web.config|只包含 ASP.NET 所需的設定。|\<安裝目錄> \Reporting Services\ReportServer|  
+|報表管理員的 Web.config|包含僅如果適用於 SSRS 版本，則需要適用於 ASP.NET 的設定。|\<安裝目錄> \Reporting Services\ReportManager|  
+|ReportingServicesService.exe.config|儲存針對報表伺服器服務指定追蹤層級和記錄選項的組態設定。 如需有關這個檔案中之元素的詳細資訊，請參閱＜ [ReportingServicesService Configuration File](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)＞。|\<安裝目錄> \Reporting Services\ReportServer \Bin|  
+|登錄設定|儲存用來解除安裝 Reporting Services 的組態狀態和其他設定。 如果您要疑難排解安裝或組態問題，可以檢視這些設定來取得有關報表伺服器之設定方式的資訊。<br /><br /> 請勿直接修改這些設定，因為這樣做可能會讓安裝失效。|HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft \Microsoft SQL Server \\<執行個體識別碼\> \Setup<br /><br /> **- 和 -**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Services\ReportServer|  
+|RSReportDesigner.config|儲存報表設計師的組態設定。 如需詳細資訊，請參閱 [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。|\<磁碟機>:\Program Files\Microsoft Visual Studio 10\Common7\IDE\PrivateAssemblies|  
+|RSPreviewPolicy.config|儲存報表預覽期間使用之伺服器延伸模組的程式碼存取安全性原則。 如需有關這個檔案的詳細資訊，請參閱＜ [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)＞。|C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssembliesr|  
   
-##  <a name="bkmk_config_file_Summary_sharepoint_mode"></a> Summary of configuration Files (SharePoint mode)  
- The following table provides a description of configuration files used for a SharePoint mode report server. Most configuration settings are stored in SharePoint service application databases. For more information, see [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
+##  <a name="bkmk_config_file_Summary_sharepoint_mode"></a> 組態檔的摘要 (SharePoint 模式)  
+ 下表提供用於 SharePoint 模式報表伺服器之組態檔的描述。 大部分組態設定都儲存在 SharePoint 服務應用程式資料庫中。 如需詳細資訊，請參閱 [Reporting Services SharePoint 服務和服務應用程式](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)。  
   
- By default, the installation directory for SharePoint mode is the following:  
+ 根據預設，SharePoint 模式的安裝目錄如下：  
   
-```Install path
+```
+Install path
 C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  
 ```  
   
-|儲存於：|描述|位置|  
+|儲存於：|Description|位置|  
 |----------------|-----------------|--------------|  
 |RSReportServer.config|儲存報表伺服器服務之功能區的組態設定：報表管理員或入口網站、報表伺服器 Web 服務，以及背景處理。 如需每個設定的詳細資訊，請參閱 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。|\<安裝目錄> \Reporting Services\ReportServer|  
 |RSSrvPolicy.config|儲存伺服器延伸模組的程式碼存取安全性原則。 如需有關這個檔案的詳細資訊，請參閱＜ [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)＞。|\<安裝目錄> \Reporting Services\ReportServer|  

@@ -31,12 +31,12 @@ ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b3e8921e230f581f60c96e6443d4fa5b71a417b3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dfb90f9e0d1e3910f45a5b283161e9c36da49a71
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661558"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579786"
 ---
 # <a name="creating-user-defined-types---coding"></a>建立使用者定義型別 - 編碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ using Microsoft.SqlServer.Server;
  **Microsoft.SqlServer.Server**命名空間包含的物件所需的各種屬性的 UDT，而**System.Data.SqlTypes**命名空間包含類別，代表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組件可用的原生資料類型。 若要能夠正確運作，您的組件還需要其他的命名空間。 **點**UDT 也使用**System.Text**命名空間來處理字串。  
   
 > [!NOTE]  
->  Visual c + + 資料庫物件，例如使用編譯的 Udt **/clr: pure**不支援執行。  
+>  VisualC++資料庫物件，例如使用編譯的 Udt **/clr: pure**不支援執行。  
   
 ## <a name="specifying-attributes"></a>指定屬性  
  屬性會決定如何使用序列化來建構 UDT 的儲存表示，並將 UDT 以傳值方式傳輸到用戶端。  
@@ -93,7 +93,7 @@ public struct Point : INullable
   
  您必須建立名為的屬性**IsNull**，其需要來判斷值是否為 null 的 CLR 程式碼。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 找到 UDT 的 Null 執行個體時，便會使用正常的 Null 處理方法來保存 UDT。 除非必要，否則伺服器不會浪費時間來序列化或還原序列化 UDT，而且它也不會浪費空間來儲存 Null UDT。 每次從 CLR 引入 UDT 時都會執行 Null 檢查，這表示使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] IS NULL 建構來檢查 Null UDT 的作業一定都可運作。 **IsNull**屬性也伺服器用來測試例項是否為 null。 伺服器一旦判定 UDT 為 Null，就可以使用其原生的 Null 處理。  
   
- **Get （)** 方法**IsNull**不是特殊案例，以任何方式。 如果**點**變數**@p**是**Null**，然後**@p.IsNull**將根據預設，評估為"NULL"，非"1"。 這是因為**SqlMethod(OnNullCall)** 屬性**IsNull get （)** 方法預設為 false。 因為物件是**Null**，當物件不會還原序列化，不會呼叫方法，並預設值是"NULL"傳回要求的屬性。  
+ **Get （)** 方法**IsNull**不是特殊案例，以任何方式。 如果**點**變數 **@p** 是**Null**，然後 **@p.IsNull** 將根據預設，評估為"NULL"，非"1"。 這是因為**SqlMethod(OnNullCall)** 屬性**IsNull get （)** 方法預設為 false。 因為物件是**Null**，當物件不會還原序列化，不會呼叫方法，並預設值是"NULL"傳回要求的屬性。  
   
 ### <a name="example"></a>範例  
  在下列範例中，`is_Null` 變數為私用，而且會針對 UDT 執行個體保留 Null 狀態。 您的程式碼必須維護對 `is_Null` 適當的值。 UDT 也必須有一個名為的靜態屬性**Null**傳回 UDT 的 null 值執行個體。 如果執行個體在資料庫中實際上為 Null，這可讓 UDT 傳回 Null 值。  
@@ -544,7 +544,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  **Microsoft.SqlServer.Server.SqlMethodAttribute**類別提供自訂的屬性，可以用來標示方法定義中，若要針對 null 呼叫行為指定決定性以及指定方法是否為 mutator。 已假設這些屬性 (Property) 的預設值，而且只有在需要非預設值時才會使用自訂屬性 (Attribute)。  
   
 > [!NOTE]  
->  **SqlMethodAttribute**類別繼承自**SqlFunctionAttribute**類別，因此**SqlMethodAttribute**繼承**FillRowMethodName**並**TableDefinition**欄位從**SqlFunctionAttribute**。 這意味著撰寫資料表值方法是可行的，不過情況不是這樣。 方法會進行編譯和組件進行部署，但是發生錯誤的相關**IEnumerable**傳回型別就會引發在執行階段，並出現下列訊息: 「 方法、 屬性或欄位 '\<名稱 >' 中類別\<類別>' 中的組件 '\<組件 >' 有無效的傳回類型。 」  
+>  **SqlMethodAttribute**類別繼承自**SqlFunctionAttribute**類別，因此**SqlMethodAttribute**繼承**FillRowMethodName**並**TableDefinition**欄位從**SqlFunctionAttribute**。 這意味著撰寫資料表值方法是可行的，不過情況不是這樣。 方法會進行編譯和組件進行部署，但是發生錯誤的相關**IEnumerable**傳回型別就會引發在執行階段，並出現下列訊息：「 方法、 屬性或欄位 '\<名稱 >' 中類別\<類別 >' 的組件中'\<組件 >' 有無效的傳回類型。 」  
   
  下表描述的部分相關**Microsoft.SqlServer.Server.SqlMethodAttribute**可用在 UDT 方法中，並列出其預設值的屬性。  
   
@@ -614,7 +614,9 @@ public void Rotate(double anglex, double angley, double anglez)
 2.  使用**撰寫**方法**貨幣**UDT 來判斷如何保存 UDT 在磁碟上，因此如何比較及排序的 UDT 值[!INCLUDE[tsql](../../includes/tsql-md.md)]作業。  
   
 3.  儲存**貨幣**使用下列二進位格式的 UDT:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  針對位元組 0-19 將文化特性儲存為 UTF-16 編碼的字串，並使用 null 字元填補到右邊。  
   
     2.  使用位元組 20 以上 (含) 來包含貨幣的十進位值。  

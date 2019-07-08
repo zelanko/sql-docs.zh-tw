@@ -1,6 +1,6 @@
 ---
-title: 設定報表的執行屬性 (報表管理員) | Microsoft Docs
-ms.date: 03/01/2017
+title: 設定報表的執行屬性 - Reporting Services | Microsoft Docs
+ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reports
@@ -12,21 +12,23 @@ helpviewer_keywords:
 ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27508400b63e1fe0cc95b290130d9c122399be32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dfb24b6314529b19fb7bb5edb81534f30dc018a
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65570854"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492741"
 ---
-# <a name="configure-execution-properties-for-a-report--report-manager"></a>設定報表的執行屬性 (報表管理員)
+# <a name="configure-execution-properties-for-a-report"></a>設定報表的執行屬性
   您可以設定報表處理選項，以便指定擷取報表資料的時間。 如果外部資料來源是在特定時間重新整理 (例如，每日或每週重新整理的資料倉儲)，而且您想要避免每次要求報表都擷取相同資料的負擔，排程報表的資料處理就很有用。 此外，如果您想要控制外部資料庫伺服器的處理負載，或者當您想要針對必須使用相同資料集的多位使用者提供一致的結果時，排程資料處理也很有用。 若為變動資料，視需要報表可能會在不同的時間產生不同的結果。 相對地，報表快照集可讓您針對包含相同時間資料的其他報表或分析工具，進行有效的比較。  
   
  報表快照集是一種報表，它包含在特定時間點擷取的配置指示和查詢結果。 報表快照集和視需要報表不同，視需要報表會在您選取報表時取得最新的查詢結果，而報表快照集是依排程處理，並儲存至報表伺服器。 您選取報表快照集以供檢視時，報表伺服器會從報表伺服器資料庫擷取儲存的報表，並顯示建立快照集當時的資料與配置。  
   
  報表快照集不會以特定轉譯格式儲存。 而是只有在使用者或應用程式要求它時，報表快照集才以最後的檢視格式轉譯 (例如 HTML)。 延遲轉譯讓快照集具有可攜性。 報表可以使用要求的裝置或 Web 瀏覽器的正確格式轉譯。  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
-### <a name="to-configure-report-processing-options"></a>若要設定報表處理選項  
+## <a name="to-configure-report-processing-options"></a>若要設定報表處理選項  
   
 1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
@@ -46,9 +48,38 @@ ms.locfileid: "65570854"
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)   
- [開啟及關閉報表 &#40;報表管理員&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
  [內容頁面 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [處理選項屬性頁面 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)  
   
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
   
+## <a name="to-configure-report-execution-properties"></a>設定報表執行屬性  
+  
+從[報表伺服器的入口網站 (SSRS 原生模式)](../../reporting-services/web-portal-ssrs-native-mode.md)：  
+  
+1. 瀏覽至您要設定執行屬性的報表。  
+  
+2. 以滑鼠右鍵按一下報表，然後選取**管理**從下拉式選單。
+
+3. 選取 **歷程記錄快照集**索引標籤，顯示**歷程記錄快照集**頁面。  
+  
+4. 選取 **排程及設定**按鈕，然後檢查**依排程建立歷程記錄快照集**如果未選取。
+  
+5. 選取 **共用排程**或是**報表特定排程**視。  
+  
+6. 在 **進階**區段中，選取所需**保留**原則歷程記錄快照集。  
+  
+7. 選取 [套用]  。  
+  
+   >[!NOTE]
+   >如果您想要立即建立快照集，請選取**新的歷程記錄快照集**按鈕而不要**排程與設定**會立即建立按鈕和報表快照集。  
+  
+## <a name="see-also"></a>另請參閱  
+ [設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [報表伺服器內容管理 (SSRS 原生模式)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)   
+
+::: moniker-end

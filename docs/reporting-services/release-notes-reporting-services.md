@@ -9,12 +9,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: cd2f9dec39075b332b2ae38c622f3970faf8d331
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
+ms.openlocfilehash: 8767640e2ad0a7b71bb7977ab6eb997892845403
+ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67037849"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533835"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SQL Server Reporting Services (SSRS) 2017 與更新版本的版本資訊
 
@@ -50,6 +50,23 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+
+## <a name="1406001274-20190701"></a>2019/07/01 14.0.600.1274
+
+| 已修正的問題 | 詳細資料 |
+| :---------- | :------ |
+| 安全性更新 | &nbsp; |
+| 無法選取工作日建立共用的每週排程時 | &nbsp; |
+| 報表不會顯示換行字元正確 Word 格式 | &nbsp; |
+| System Center Operations Manager(SCOM) 2019 沒有較長的運作方式，使用最新的 SSRS 2017 升級 | &nbsp; |
+| 叫用授權延伸模組共用資料集時，發生錯誤 | &nbsp; |
+| 變更預存程序 GetAllProperties SSRS 2017 及 PBIRS，這會導致 Web 服務端點 ReportingService2010.GetProperties 方法無法取得連結報表中的任何資料的邏輯 | &nbsp; |
+| 按一下方格內的項目時，就會消失在行動報表中的簡單格線資料列標頭 | &nbsp; |
+| 無法使用資料驅動訂閱參數中的 [日期] 欄位 | &nbsp; |
+| 巢狀的 tablix 會顯示小字型或部分的字型，在 SSRS 2016 和更新版本 | &nbsp; |
+| 使用日期時間參數發生錯誤的訂用帳戶之後以不同的地區設定編輯訂用帳戶的使用者 | &nbsp; |
+| 使用 Null 傳遞延伸模組來建立資料驅動訂閱的 「 發生傳遞錯誤 」 發生失敗 | &nbsp; |
+| URL 編碼不正確，Excel\Word 格式設定值時 | &nbsp; |
 
 ## <a name="1406001109-20190212"></a>14.0.600.1109，2019/02/12
 
