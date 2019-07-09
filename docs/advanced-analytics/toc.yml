@@ -19,7 +19,7 @@
     - name: 在 Windows 上安裝 ML 服務
       href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
     - name: 在 Linux 上安裝 ML 服務 >>
-      href: ../linux/sql-server-linux-setup-machine-learning.md?toc=../toc/toc.json
+      href: ../linux/sql-server-linux-setup-machine-learning.md?toc=../toc.json
     - name: 安裝 R 服務
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
     - name: 安裝獨立伺服器 (R、Python)
@@ -323,7 +323,7 @@
 - name: 資源
   items:
     - name: 版本資訊 >>
-      href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
+      href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
     - name: 疑難排解
       items:
         - name: 疑難排解概觀
