@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0fefd22e080ac0ed4e0646dde1805ce5923b8e3a
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: 6a3f6ccaf2da262033a291d300fc66c02ca35e78
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419157"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580704"
 ---
 # <a name="always-encrypted-database-engine"></a>一律加密 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,13 +84,15 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 1. 從 SSN 資料行中選取資料，並將它儲存為應用程式中的結果集。 這可讓應用程式 (用戶端「驅動程式」  ) 將資料行解密。
 2. 將結果集中的資料插入 SQL Server。 
 
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  >[!IMPORTANT]
  > 在此案例中，資料會在傳回伺服器時予以解密，因為目的地資料行是不接受加密資料的一般 varchar。 
   
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>選擇決定性加密或隨機加密  
  Database Engine 絕不會處理儲存於加密資料行中的純文字資料，但仍可根據資料行的加密類型，支援某些加密資料的查詢。 [永遠加密] 支援兩種類型的加密：隨機加密和決定性加密。  
   
-- 確定性加密一律會針對特定的純文字值產生相同的加密值。 使用確定性加密時，您能根據加密資料行進行點查閱、相等聯結、分組和編製索引等作業。 但它也可能讓未獲授權使用者透過觀察加密資料行中的模式，來猜出加密值資訊，尤其當其中有一小組可能的加密值時 (例如 True/False 或北/南/東/西區域)。 確定性加密必須針對字元資料行使用 binary2 排序次序的資料行定序。
+- 確定性加密一律會針對特定的純文字值產生相同的加密值。 使用確定性加密時，您能根據加密資料行進行點查閱、相等聯結、分組和編製索引等作業。 但它也可能讓未獲授權使用者透過檢查加密資料行中的模式，來猜出加密值資訊，尤其當其中有一小組可能的加密值時 (例如 True/False 或北/南/東/西區域)。 確定性加密必須針對字元資料行使用 binary2 排序次序的資料行定序。
 
 - 隨機化加密會使用更難預測的方式來加密資料。 隨機化加密雖較安全，但會讓您無法針對加密資料行進行搜尋、分組、編製索引和聯結等作業。
 

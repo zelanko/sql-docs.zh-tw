@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ab1678831e67fa2504f9abb64a7dcc95f9f8e64
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: dde30ce48bf559bc72b3cdf3a4544039328f53e7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388125"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585094"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "67388125"
    - 在 Hyper-V 2016 或更新版本上，在 VM 處理器上[啟用巢狀虛擬化擴充功能](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) \(部分機器翻譯\)。
    - 在 Azure 中，確定您正在執行支援巢狀虛擬化的 VM 大小，例如 Dv3 和 Ev3 系列的 VM。 請參閱[建立可使用巢狀功能的 Azure VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm) \(部分機器翻譯\)。
    - 在 VMWare vSphere 6.7 或更新版本上，針對 VM 啟用虛擬化型安全性支援，如 [VMware 文件](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html) \(英文\) 所述。
-   - 其他 Hypervisor 和公用雲端可能支援在 VM 中使用具有安全記憶體保護區的 Always Encrypted，前提是已對 VM 公開虛擬化擴充 (又稱巢狀虛擬化)。 如需相容性和設定指示，請參閱您虛擬化解決方案的文件。
+   - 其他 Hypervisor 和公用雲端可能支援在 VM 中使用具有安全記憶體保護區的 Always Encrypted，前提是已對 VM 公開虛擬化擴充 (又稱巢狀虛擬化)。 如需相容性和設定指示，請參閱您的虛擬化解決方案文件。
 - [SQL Server Management Studio (SSMS) 18.0 或更新版本](../../ssms/download-sql-server-management-studio-ssms.md)。
 
 或者，您也可以在另一部電腦上安裝 SSMS。
@@ -88,6 +88,8 @@ ms.locfileid: "67388125"
    ```
 
 4. 執行下列命令來尋找 HGS 電腦的 IP 位址。 儲存此 IP 位址，供後續步驟使用。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ```powershell
    Get-NetIPAddress  
@@ -328,7 +330,7 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
     1. 從 SSMS 主功能表選取 [工具]  。
     2. 選取 [選項]  。
     3. 瀏覽至 [查詢執行]   > [SQL Server]   > [進階]  。
-    4. 確定勾選 [啟用 Always Encrypted 的參數化]  。
+    4. 確定已選取 [啟用 Always Encrypted 的參數化]  。
     5. 選取 [確定]  。
 2. 開啟新的查詢視窗，貼上並執行下列查詢。 查詢應該會傳回純文字值和符合指定搜尋準則的資料列。
 

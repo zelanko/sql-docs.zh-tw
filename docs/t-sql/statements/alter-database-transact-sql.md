@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b05cca816684cbb95c625232883d06706edfe7f6
-ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
+ms.openlocfilehash: 26db878bee2a786dc52f6046afea617bf7c69c0f
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67351716"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500152"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -566,10 +566,7 @@ FORCE_FAILOVER_ALLOW_DATA_LOSS 將異地複寫合作關係中用來執行命令�
 
 ## <a name="permissions"></a>權限
 
-只有伺服器層級主體登入 (由佈建程序所建立) 或 `dbmanager` 資料庫角色成員可以改變資料庫。
-
-> [!IMPORTANT]
-> 資料庫的擁有者不能改變資料庫，除非他們是 `dbmanager` 角色的成員。
+若要變更資料庫，登入必須是伺服器層級主體登入 (由佈建程序所建立)、master 中 `dbmanager` 資料庫角色的成員、目前資料庫中 `db_owner` 資料庫角色的成員，或資料庫的 `dbo`。
 
 ## <a name="examples"></a>範例
 
