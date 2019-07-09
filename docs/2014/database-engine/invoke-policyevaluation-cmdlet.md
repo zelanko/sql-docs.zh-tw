@@ -16,12 +16,12 @@ ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1239d2dea1a4f73b54f78345f769c9550c262b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 871f5eb0dab1105017fac8be1f978e0c81a9f1d3
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064687"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624363"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation 指令程式
   **Invoke-PolicyEvaluation** 是一項 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cmdlet，它會報告 SQL Server 物件的目標集是否符合在一或多個原則式管理原則中所指定的條件。  
@@ -88,7 +88,7 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
   
 -   **-TargetObjects** 會使用在目標集中代表 SQL Server 物件的物件或物件陣列。 例如，您可以建立要傳入 <xref:Microsoft.SqlServer.Management.Smo.Database> 的 **-TargetObjects**傳送輸出的物件。  
   
--   **-TargetExpressions** 會使用字串，其中包含在目標集中指定物件的查詢運算式。 查詢運算式的格式為以 '/' 字元分隔的節點。 每個節點的格式為 ObjectType[Filter]。 物件類型是 SQL Server 管理物件 (SMO) 物件階層中的其中一個物件。 篩選是篩選位於該節點之物件的運算式。 如需詳細資訊，請參閱 [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)。  
+-   **-TargetExpressions** 會使用字串，其中包含在目標集中指定物件的查詢運算式。 查詢運算式的格式為以 '/' 字元分隔的節點。 每個節點的格式為 ObjectType[Filter]。 物件類型是其中一個 SQL Server 管理物件 (SMO) 物件階層架構中的物件。 篩選是篩選位於該節點之物件的運算式。 如需詳細資訊，請參閱 [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)。  
   
  請指定 **-TargetObjects** 或 **-TargetExpression**，但不能同時指定。  
   

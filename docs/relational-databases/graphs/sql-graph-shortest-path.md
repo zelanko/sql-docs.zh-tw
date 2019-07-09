@@ -19,12 +19,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ef8f38acbf621a9c73a0d85bca579c8b7c87aa13
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 3ed9fbb373febd803fedfd7519df7656c23181f2
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463547"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652841"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -49,8 +49,8 @@ SHORTEST_PATH 函式可讓您尋找：
 ## <a name="arbitrary-length-pattern"></a>任意長度的模式
 此模式包含節點和邊緣，直到達到所需的節點，或直到此模式中所指定的反覆項目數上限必須重複周遊成立。 執行查詢時，每次執行此模式的結果會在節點與邊緣周遊的路徑從 [開始] 節點以結束節點的已排序的集合。 這是規則運算式樣式語法模式，並支援下列兩個模式數量詞：
 
-* **‘+’** :重複的模式 1 或更多的時間。 終止只要找到最短的路徑。
-* **{1，n}** :重複的 'n' 個的模式 1 次。 終止只要找到最短。
+* **‘+’** :重複模式 1 或多次。 在找到最短路徑後立即終止。
+* **{1,n}** ：重複模式 1 至 'n' 次。 終止只要找到最短。
 
 ## <a name="lastnode"></a>LAST_NODE
 LAST_NODE() 函式允許鏈結兩個任意長度的周遊模式。 用於案例其中：    
@@ -94,7 +94,7 @@ STRING_AGG 函式採用的運算式和分隔符號，做為輸入，並傳回字
 此函數會傳回周遊的路徑中提供的節點/邊緣屬性值或運算式出現的總和。
 
 ### <a name="count"></a>COUNT
-此函式會傳回路徑中的所需的節點/邊緣屬性的非 null 值的數目。 COUNT 函式支援 ' *' 運算子的節點或邊緣資料表別名。 沒有節點或邊緣資料表別名，使用 * 模稜兩可，而且會產生錯誤。
+此函式會傳回路徑中的所需的節點/邊緣屬性的非 null 值的數目。 COUNT 函式支援 '\*' 運算子的節點或邊緣資料表別名。 沒有節點或邊緣資料表別名，使用\*模稜兩可，而且會產生錯誤。
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 

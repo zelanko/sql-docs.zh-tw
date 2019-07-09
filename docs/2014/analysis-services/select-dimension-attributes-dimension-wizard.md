@@ -12,12 +12,12 @@ ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84f8612b4d420eed11308472c9c8fabfc56e23c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 482e4ebbd467f3bc8946d90b9ad77bb892e85504
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66069533"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624345"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>選取維度屬性 (維度精靈)
   使用 **[選取維度屬性]** 頁面，即可選取和修改要建立之維度的屬性。  
@@ -29,7 +29,7 @@ ms.locfileid: "66069533"
   
 -   在方案總管  的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的 [維度]  資料夾，然後按一下 [新增維度]  。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  (具有核取方塊的資料行)  
  選取即可將屬性包含在維度中。  
   
@@ -53,8 +53,8 @@ ms.locfileid: "66069533"
 |案例|[設定]|  
 |----------|--------------|  
 |維度包含父子式階層而且沒有選取 [啟用瀏覽] |精靈會維持 `AttributeHierarchyEnabled` 屬性 (Property) 設定為 `True`，並將索引鍵屬性 (Attribute) 的 `AttributeHierarchyVisible` 屬性 (Attribute) 設定為 `False`。|  
-|維度中的資料表包含指向不在維度中之資料表的外部索引鍵|雖然精靈會選取外部索引鍵當做要包含的屬性，但是不會選取 **[啟用瀏覽]** 。 如果您保留這些設定，屬性 (Attribute) 的 `AttributeHiearchyEnabled` 屬性 (Property) 將設定為 `True`，而且 `AttributeHieararchyVisible` 屬性 (Property) 將設定為 `False`。|  
-|維度包含透過可為 Null 之外部索引鍵資料行存取的雪花資料表<br /><br /> -和-<br /><br /> 沒有針對以雪花資料表之索引鍵為基礎的屬性選取 [啟用瀏覽]|精靈將會建立新的屬性 (Attribute)，其中 `AttributeHiearchyEnabled` 屬性 (Property) 設定為 `True`，而且 `AttributeHieararchyVisible` 屬性 (Property) 設定為 `False`。|  
+|維度中的資料表包含指向不在維度中之資料表的外部索引鍵|雖然精靈會選取外部索引鍵當做要包含的屬性，但是不會選取 **[啟用瀏覽]** 。 如果您保留這些設定，屬性 (Attribute) 的 `AttributeHiearchyEnabled` 屬性 (Property) 將設定為 `True`，而且 `AttributeHierarchyVisible` 屬性 (Property) 將設定為 `False`。|  
+|維度包含透過可為 Null 之外部索引鍵資料行存取的雪花資料表<br /><br /> -和-<br /><br /> 沒有針對以雪花資料表之索引鍵為基礎的屬性選取 [啟用瀏覽]|精靈將會建立新的屬性 (Attribute)，其中 `AttributeHiearchyEnabled` 屬性 (Property) 設定為 `True`，而且 `AttributeHierarchyVisible` 屬性 (Property) 設定為 `False`。|  
   
  **屬性類型**  
  (選擇性) 設定屬性的類型。 預設值是 **[一般]** 。 屬性類型會將屬性可能包含之資訊的相關指引提供給用戶端應用程式。  
