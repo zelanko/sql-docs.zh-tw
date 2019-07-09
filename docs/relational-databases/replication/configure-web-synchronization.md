@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 144323deee0c84ac1be404869a0ca71197ffcd32
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 674a785d0e5d3dd6b847c8f26701ad0ce48e2d20
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135578"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582515"
 ---
 # <a name="configure-web-synchronization"></a>[設定 Web 同步處理]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,11 @@ ms.locfileid: "54135578"
 3.  將合併式發行集設定為允許 Web 同步處理。  
   
 4.  將一個或多個訂閱設定為使用 Web 同步處理。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
->  如果您打算複寫大量資料或使用大型資料類型 (例如 **varchar(max)**)，請參閱本主題的＜複寫大量資料＞一節。  
+>  如果您打算複寫大量資料或使用大型資料類型 (例如 **varchar(max)** )，請參閱本主題的＜複寫大量資料＞一節。  
   
  為了順利設定 Web 同步處理，您必須決定如何設定安全性以符合特定需求和原則。 建議您最好先進行這些決定並建立必要的帳戶，然後再嘗試設定 IIS、發行集和訂閱。  
   
@@ -104,7 +106,7 @@ ms.locfileid: "54135578"
   
 2.  選取與 Web 同步處理網站相關聯的應用程式集區，然後按一下 **[動作]** 窗格上的 **[進階設定]** 。  
   
-3.  在 [進階設定] 對話方塊的 **[處理序模型]** 標題底下，按一下標示為 **[工作者處理序數上限]** 的列。 變更屬性值，然後按一下 **[確定]**。  
+3.  在 [進階設定] 對話方塊的 **[處理序模型]** 標題底下，按一下標示為 **[工作者處理序數上限]** 的列。 變更屬性值，然後按一下 **[確定]** 。  
   
 ## <a name="configuring-the-publication"></a>設定發行集  
  若要使用 Web 同步處理，請採用您建立標準合併拓撲的相同方式來建立發行集。 如需詳細資訊，請參閱[發行資料和資料庫物件](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  
@@ -132,11 +134,11 @@ ms.locfileid: "54135578"
   
  XML 檔案的大小上限為 4 GB，不過複寫會分批次同步處理來自該檔案的變更。 資料和中繼資料的批次大小上限為 25 MB。 您必須確定各批次的資料未超過約 20 MB，以便允許中繼資料和任何其他負擔。 這項限制具有下列含意：  
   
--   您無法複寫任何導致資料和中繼資料超過 25 MB 的資料行。 當您要複寫包含大型資料類型 (例如 **varchar(max)**) 的資料列時，這可能會產生問題。  
+-   您無法複寫任何導致資料和中繼資料超過 25 MB 的資料行。 當您要複寫包含大型資料類型 (例如 **varchar(max)** ) 的資料列時，這可能會產生問題。  
   
 -   如果您要複寫大量資料，可能必須調整合併代理程式的批次大小。  
   
- 合併式複寫的批次大小是以 *「層代」*(Generation) 為測量單位，而這是每個發行項的變更集合。 批次中的層代數目是使用合併代理程式的 –**DownloadGenerationsPerBatch** 和 –**UploadGenerationsPerBatch** 參數所指定。 如需詳細資訊，請參閱 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
+ 合併式複寫的批次大小是以 *「層代」* (Generation) 為測量單位，而這是每個發行項的變更集合。 批次中的世代數目是使用合併代理程式的 ?**DownloadGenerationsPerBatch** 和 ?**UploadGenerationsPerBatch** 參數所指定。 如需詳細資訊，請參閱 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
   
  若為大量資料，請針對每個批次參數指定一個少量數目。 我們建議您從 10 這個值開始，然後根據需求和效能進行微調。 一般而言，這些參數都指定於代理程式設定檔中。 如需有關設定檔的詳細資訊，請參閱＜ [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)＞。  
   

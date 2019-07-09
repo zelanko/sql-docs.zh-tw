@@ -17,12 +17,12 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 647828d7e0e78b7faa6abb2ce1a7ca8102490d67
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3c24ad02eb34e06d23ec30f91b3c547f6fbd737e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135898"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585881"
 ---
 # <a name="oracle-subscribers"></a>Oracle 訂閱者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,9 @@ ms.locfileid: "54135898"
     |指定識別資料庫接聽程式的主機資訊|主機是 Oracle 接聽程式所執行之電腦 (通常與資料庫所在的電腦相同) 的名稱或 DNS 別名。 針對某些通訊協定，您必須提供其他的資訊。 例如，您若是選取 TCP，就必須提供接聽程式接聽對目標資料庫之連接要求的通訊埠。 預設 TCP 組態使用通訊埠 1521。|  
   
 3.  建立快照集或交易式發行集，並為非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者啟用，然後再為訂閱者建立發送訂閱。 如需相關資訊，請參閱 [為非 SQL Server 訂閱者建立訂閱](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="setting-directory-permissions"></a>設定目錄權限  
  必須授與「散發者」端執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務所用之帳戶，對安裝 Oracle 用戶端網路軟體之目錄 (以及所有子目錄) 的讀取和執行權限。  
   
@@ -60,9 +62,9 @@ ms.locfileid: "54135898"
   
  成功連接到「Oracle 發行者」後，請嘗試使用與設定訂閱之「散發代理程式」時相同的帳戶與密碼登入資料庫。  
   
-1.  按一下 **[開始]**，然後按一下 **[執行]**。  
+1.  按一下 **[開始]** ，然後按一下 **[執行]** 。  
   
-2.  輸入 `cmd` ，然後按一下 **[確定]**。  
+2.  輸入 `cmd` ，然後按一下 **[確定]** 。  
   
 3.  在命令提示字元中，輸入：  
   
@@ -87,7 +89,7 @@ ms.locfileid: "54135898"
   
     -   請確定空白字串尚未做為資料行值插入已發行的資料表中。  
   
-    -   如果通知「散發代理程式」記錄中的錯誤並繼續處理是可接受的，則請使用「散發代理程式」的 **–SkipErrors** 參數。 指定 Oracle 錯誤碼 1400 (**-SkipErrors1400**)。  
+    -   如果通知「散發代理程式」記錄中的錯誤並繼續處理是可接受的，則請使用「散發代理程式」的 **?SkipErrors** 參數。 指定 Oracle 錯誤碼 1400 ( **-SkipErrors1400**)。  
   
     -   修改已產生的建立資料表指令碼，同時從可能包含了與空白字串相關聯的任何字元資料行中移除 NOT NULL 屬性，並且使用 @creation_script sp_addarticle [的](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)參數為發行項提供做為自訂建立指令碼的已修改指令碼。  
   

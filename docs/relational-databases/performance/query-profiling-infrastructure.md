@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: dbf81f0cb1100fdc5663a8c2ff46343d8d9671c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47382961ebb72d3d0b51ae9a72161fb107021f75
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64568278"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559466"
 ---
 # <a name="query-profiling-infrastructure"></a>查詢分析基礎結構
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -172,7 +172,19 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="query-profiling-infrastruture-usage-guidance"></a>查詢分析基礎結構使用方式指導方針
+下表摘要說明啟用標準分析或輕量型分析 (全域 (在伺服器層級) 或在單一工作階段中) 的動作。 也包括支援動作的最新版本。 
+
+|範圍。|標準分析|輕量型分析|
+|---------------|---------------|---------------|
+|全域|具有 `query_post_execution_showplan` XE 的 xEvent 工作階段，從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始|追蹤旗標 7412；從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始|
+|全域|具有 `Showplan XML` 追蹤事件的 SQL 追蹤與 SQL Server Profiler；從 SQL Server 2000 開始|具有 `query_thread_profile` XE 的 xEvent 工作階段；從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 開始|
+|全域|-|具有 `query_post_execution_plan_profile` XE 的 xEvent 工作階段；從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始|
+|Session|使用 `SET STATISTICS XML ON`；從 SQL Server 2000 開始|使用 `query_plan_profile` XE 搭配 xEvent 工作階段使用 `QUERY_PLAN_PROFILE` 查詢提示；從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 與 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 開始|
+|Session|使用 `SET STATISTICS PROFILE ON`；從 SQL Server 2000 開始|-|
+|Session|按一下 SSMS 中的[即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)按鈕；從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 開始|-|
+
+## <a name="remarks"></a>備註
 
 > [!IMPORTANT]
 > 由於執行參考 [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) 的監視預存程序時可能會產生隨機 AV，因而請確保會在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中安裝 [KB 4078596](http://support.microsoft.com/help/4078596)。

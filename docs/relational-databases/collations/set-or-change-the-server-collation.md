@@ -13,12 +13,12 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2bb8afe1e20e71245beea8f9482ff0aec4b047ba
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: 29b980fffbc4c6f670f48694cd238c521337ef70
+ms.sourcegitcommit: c8f9e5577465148ffe94eec784848f5a956b1086
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671135"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67517754"
 ---
 # <a name="set-or-change-the-server-collation"></a>設定或變更伺服器定序
 
@@ -61,7 +61,7 @@ ms.locfileid: "59671135"
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>設定受控執行個體中的伺服器定序
 
-建立 Azure SQL 受控執行個體時，可指定執行個體中的伺服器層級定序 (預覽)，且稍後無法變更。 您可以在建立執行個體時，透過 [Azure 入口網站](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance)或 [PowerShell 和 Resource Manager 範本](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)來設定伺服器層級定序。 預設伺服器層級定序為 **SQL_Latin1_General_CP1_CI_AS**。 無法將僅限 Unicode 定序和新的 UTF-8 定序指定為伺服器層級定序。
+建立 Azure SQL 受控執行個體時，可指定執行個體中的伺服器層級定序，且稍後無法變更。 您可以在建立執行個體時，透過 [Azure 入口網站](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance)或 [PowerShell 和 Resource Manager 範本](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)來設定伺服器層級定序。 預設伺服器層級定序為 **SQL_Latin1_General_CP1_CI_AS**。 無法將僅限 Unicode 定序和新的 UTF-8 定序指定為伺服器層級定序。
 如果您將資料庫從 SQL Server 移轉至受控執行個體，請使用 `SERVERPROPERTY(N'Collation')` 函式來檢查來源 SQL Server 中的伺服器定序，並建立符合您 SQL Server 定序的受控執行個體。 將資料庫從 SQL Server 移轉至伺服器層級定序不相符的受控執行個體，可能會導致查詢中出現數個未預期的錯誤。 您無法變更現有受控執行個體上的伺服器層級定序。
 
 ## <a name="see-also"></a>另請參閱

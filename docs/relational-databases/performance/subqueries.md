@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9c0d51046b7ac30cbf1f2a608c51c34974b75d9
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 07d8b7936051b202c73b7457c87e7533e1d46192
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579388"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500225"
 ---
 # <a name="subqueries-sql-server"></a>子查詢 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -106,7 +106,7 @@ GO
 -   `EXISTS` 所導入之子查詢的選取清單，依慣例會有星號 (\*)，而非單一資料行名稱。 `EXISTS` 所導入之子查詢的規則和適用於標準選取清單的規則一樣，因為由 `EXISTS` 所導入的子查詢會建立存在測試並傳回 TRUE 或 FALSE，而不是傳回資料。   
 
 ## <a name="qualifying"></a> 在子查詢中識別資料行名稱
-在以下的範例中，外部查詢之 `WHERE` 子句的 *CustomerID* 資料行，會由外部查詢 `FROM` 子句中的資料表名稱 (*Sales.Store*) 進行隱含限定。 在子查詢的選取清單中針對 *CustomerID* 的參考會被子查詢 `FROM` 子句限定，也就是被 *Sales.Customer* 資料表所限定。
+在以下的範例中，外部查詢之 `WHERE` 子句的 *BusinessEntityID* 資料行會由外部查詢 `FROM` 子句中的資料表名稱 (*Sales.Store*) 進行隱含限定。 在子查詢的選取清單中針對 *CustomerID* 的參考會被子查詢 `FROM` 子句限定，也就是被 *Sales.Customer* 資料表所限定。
 
 ```sql
 USE AdventureWorks2016;

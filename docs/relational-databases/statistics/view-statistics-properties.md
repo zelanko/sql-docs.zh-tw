@@ -1,5 +1,5 @@
 ---
-title: 檢視統計資料屬性 | Microsoft 文件
+title: 檢視統計資料屬性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3a20135a3063e5316f133e2f6483eb40e17d035
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 27fb2d88af957067af09baccd7cbd6f3629b7353
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256633"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585026"
 ---
 # <a name="view-statistics-properties"></a>檢視統計資料屬性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "54256633"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  使用者必須擁有資料表，或者使用者必須是 **系統管理員** 固定伺服器角色、 **db_owner** 固定資料庫角色或 **db_ddladmin** 固定資料庫角色的成員，才能檢視統計資料物件。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -58,11 +58,11 @@ ms.locfileid: "54256633"
   
 4.  按一下加號展開 **[統計資料]** 資料夾。  
   
-5.  以滑鼠右鍵按一下要檢視其屬性的統計資料物件，然後選取 [屬性]。  
+5.  以滑鼠右鍵按一下要檢視其屬性的統計資料物件，然後選取 [屬性]  。  
   
-6.  在 [統計資料屬性 - _statistics_name_] 對話方塊的 [選取頁面] 窗格中，選取 [詳細資料]。  
+6.  在 [統計資料屬性 - _statistics_name_]  對話方塊的 [選取頁面]  窗格中，選取 [詳細資料]  。  
   
-     下列屬性會在 [統計資料屬性 - _statistics_name_] 對話方塊的 [詳細資料] 頁面中顯示。  
+     下列屬性會在 [統計資料屬性 - _statistics_name_]  對話方塊的 [詳細資料]  頁面中顯示。  
   
      **資料表名稱**  
      顯示統計資料所描述的資料表名稱。  
@@ -91,13 +91,13 @@ ms.locfileid: "54256633"
      長條圖中的步驟數。 每一個步驟都會跨越某個範圍的資料行值，後面緊接著上限資料行值。 長條圖步驟會在統計資料中的第一個索引鍵資料行上定義。 步驟數的最大值為 200。  
   
      **密度**  
-     針對統計資料物件第一個索引鍵資料行中的所有值，計算為 1 / 相異值，不包括長條圖界限值。 查詢最佳化工具不會使用這個密度值，而且會針對與 SQL Server 2008 之前版本之間的回溯相容性顯示。  
+     針對統計資料物件第一個索引鍵資料行中的所有值，計算為 1 / 相異值  ，不包括長條圖界限值。 查詢最佳化工具不會使用這個密度值，而且會針對與 SQL Server 2008 之前版本之間的回溯相容性顯示。  
   
      **平均索引鍵長度**  
      針對統計資料物件中的所有索引鍵資料行計算之每個值的平均位元組數。  
   
      **String Index**  
-     Yes 表示統計資料物件包含了字串摘要統計資料來改善使用 LIKE 運算子之查詢述詞的基數預估，例如 `WHERE ProductName LIKE '%Bike'`。 字串摘要統計資料會與長條圖分開儲存，而且會在具有 **char**、 **varchar**、 **nchar**、 **nvarchar**、 **varchar(max)**、 **nvarchar(max)**、 **text**或 **ntext**類型時於統計資料物件的第一個索引鍵資料行上建立。  
+     Yes 表示統計資料物件包含了字串摘要統計資料來改善使用 LIKE 運算子之查詢述詞的基數預估，例如 `WHERE ProductName LIKE '%Bike'`。 字串摘要統計資料會與長條圖分開儲存，而且會在具有 **char**、 **varchar**、 **nchar**、 **nvarchar**、 **varchar(max)** 、 **nvarchar(max)** 、 **text**或 **ntext**類型時於統計資料物件的第一個索引鍵資料行上建立。  
   
      **篩選運算式**  
      包含在統計資料物件中之資料表資料列子集的述詞。 NULL = 非篩選的統計資料。  
@@ -108,7 +108,7 @@ ms.locfileid: "54256633"
      下列資訊描述結果集針對密度向量所傳回的資料行。  
   
      **所有密度**  
-     密度是 1 / 相異值。 結果會針對統計資料物件中資料行的每個前置詞來顯示密度，一個密度一個資料列。 相異值是每個資料列和每個資料行前置詞的資料行值相異清單。 例如，如果統計資料物件包含索引鍵資料行 (A, B, C)，結果就會報告每一個資料行前置詞中相異值清單的密度：(A)、(A,B) 和 (A, B, C)。 使用前置詞 (A, B, C) 時，這些清單的每一個都會是相異值清單：(3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7)。 使用前置詞 (A, B) 時，相同的資料行值都會有這些相異值清單：(3, 5)、(4, 4) 和 (4, 5)。  
+     密度是 1 / 相異值  。 結果會針對統計資料物件中資料行的每個前置詞來顯示密度，一個密度一個資料列。 相異值是每個資料列和每個資料行前置詞的資料行值相異清單。 例如，如果統計資料物件包含索引鍵資料行 (A, B, C)，結果就會報告每一個資料行前置詞中相異值清單的密度：(A)、(A,B) 和 (A, B, C)。 使用前置詞 (A, B, C) 時，這些清單的每一個都會是相異值清單：(3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7)。 使用前置詞 (A, B) 時，相同的資料行值都會有這些相異值清單：(3, 5)、(4, 4) 和 (4, 5)。  
   
      **平均長度**  
      平均長度 (以位元組為單位)，用來儲存資料行前置詞的資料行值清單。 例如，如果清單 (3, 5, 6) 中的每一個值都需要 4 位元組，長度就是 12 位元組。  
@@ -133,17 +133,19 @@ ms.locfileid: "54256633"
      **AVG_RANGE_ROWS**  
      在長條圖步驟內具有重複資料行值的平均資料列數，上限不包括在內 (RANGE_ROWS / DISTINCT_RANGE_ROWS for DISTINCT_RANGE_ROWS > 0)。  
   
-7.  按一下 [確定] 。  
-  
+7.  按一下 [確定]  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-statistics-properties"></a>若要檢視統計資料屬性  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -159,9 +161,9 @@ ms.locfileid: "54256633"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;   

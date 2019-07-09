@@ -1,5 +1,5 @@
 ---
-title: 檢視並解決合併式發行集的資料衝突 | Microsoft 文件
+title: 檢視並解決合併式發行集的資料衝突 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/20/2018
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b9a3f872a87695da3e6c57ad90012cfe1307109
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a5aced367f3b046473887999ff8e72b24ff8156
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047336"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580454"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>合併式複寫的衝突解決
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "63047336"
   
     -   在上方方格中選取一個或多個資料列，然後按一下 **[移除]** ，這相當於按一下 **[提交成功者]** 按鈕 (不會對資料進行任何變更)。  
   
-    -   按一下屬性按鈕 ( **[…]** ) 以檢視更多有關於衝突的資料行資訊。  
+    -   按一下屬性按鈕 ([?]  ) 以檢視更多有關於衝突的資料行資訊。  
   
     -   在提交資料之前，編輯 **[衝突成功者]** 或 **[衝突失敗者]** 資料行中的資料 (灰色資料行表示資料為唯讀)。  
   
@@ -74,8 +74,8 @@ ms.locfileid: "63047336"
   
 6.  關閉複寫衝突檢視器。  
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-  
 ## <a name="view-conflict-information"></a>檢視衝突資訊
 在合併式複寫中解決衝突時，遺失之資料列的資料會寫入衝突資料表。 可以使用複寫預存程序來以程式設計的方式檢視此衝突資料。 如需詳細資訊，請參閱 [進階合併式複寫衝突偵測與解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   

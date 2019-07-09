@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: dd767690533365dc51f1ef3e1fb27bcf3659eeb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dba65eb4ca0aa97ca747567a6337e68fb7c2f29
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775138"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581428"
 ---
 # <a name="scalar-udf-inlining"></a>純量 UDF 內嵌
 
@@ -136,6 +136,8 @@ SQL Server 2017 (相容性層級 140 及更早版本) 中此查詢的執行計�
 2. SQL Server 還會推斷隱含的 `GROUP BY O_CUSTKEY on ORDERS`，並使用 IndexSpool + StreamAggregate 來進行實作。
 3. SQL Server 現在正在所有的運算子之間使用平行處理原則。
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 視 UDF 的邏輯複雜度而定，產生的查詢計劃也可能會變得更大且更複雜。 如我們所見，UDF 內的作業現在不再是黑盒子，因此查詢最佳化工具能夠估算這些作業的成本，並將其最佳化。 此外，因為計劃中不再有 UDF，所以反覆執行 UDF 叫用會取代為完全避免函式呼叫額外負荷的計劃。
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>可內嵌的純量 UDF 需求
@@ -182,7 +184,7 @@ SQL Server 2017 (相容性層級 140 及更早版本) 中此查詢的執行計�
 
 ## <a name="enabling-scalar-udf-inlining"></a>啟用純量 UDF 內嵌
 
-您可以啟用資料庫的相容性層級 150，讓工作負載自動符合純量 UDF 內嵌的資格。  您可以使用 Transact-SQL 設定此項目。 例如：  
+您可以啟用資料庫的相容性層級 150，讓工作負載自動符合純量 UDF 內嵌的資格。 您可以使用 Transact-SQL 設定此項目。例如：  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;

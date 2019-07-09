@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04632f7b1ef117c31701cf998b913375656e8a39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e4ec1c90f49de20707690825f9e5ba802965278
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62928679"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559413"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - 使用 PIVOT 和 UNPIVOT
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-您可以使用 `PIVOT` 和 `UNPIVOT` 關係運算子，將資料表值運算式變更為另一個資料表。 `PIVOT` 會藉由將來自運算式中某個資料行之唯一值轉換成輸出中的多個資料行來旋轉資料表值運算式，然後需要對最終輸出所需的任何剩餘資料行值執行彙總。 `UNPIVOT` 執行的作業與 PIVOT 相反，它會將資料表值運算式的資料行旋轉成資料行值。  
+您可以使用 `PIVOT` 和 `UNPIVOT` 關係運算子，將資料表值運算式變更為另一個資料表。 `PIVOT` 會透過將唯一值從運算式中的某一資料行轉換為輸出中的多個資料行，來旋轉表格值運算式。 而 `PIVOT` 會在最終輸出中需要它們的任何其餘資料行上執行彙總。 `UNPIVOT` 執行的作業與 PIVOT 相反，它會將資料表值運算式的資料行旋轉成資料行值。  
   
 `PIVOT` 提供的語法比您另外指定一連串複雜的 `SELECT...CASE` 陳述式，還要簡單易讀。 如需 `PIVOT` 語法的完整描述，請參閱 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。  
   
@@ -62,7 +62,7 @@ FOR
 <optional ORDER BY clause>;  
 ```  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 `UNPIVOT` 子句中的資料行識別碼會依照目錄定序。 就 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 而言，定序一律為 `SQL_Latin1_General_CP1_CI_AS`。 就 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 部分自主資料庫而言，定序一律為 `Latin1_General_100_CI_AS_KS_WS_SC`。 如果資料行與其他資料行結合，就必須使用定序子句 (`COLLATE DATABASE_DEFAULT`) 來避免衝突。  
 
   
@@ -75,7 +75,6 @@ GO
 SELECT DaysToManufacture, AVG(StandardCost) AS AverageCost   
 FROM Production.Product  
 GROUP BY DaysToManufacture;  
-  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

@@ -15,12 +15,12 @@ ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 248f4f540cffb3d1d71eda2fa23b388140745234
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eef28dde084a7ec0f4a782a22e77485ca477dec5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775716"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585907"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>切換可更新之交易式訂閱的更新模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,19 +61,21 @@ ms.locfileid: "47775716"
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機訂閱]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您要設定更新模式的訂閱，再按一下 **[設定更新方法]**。  
+3.  以滑鼠右鍵按一下您要設定更新模式的訂閱，再按一下 **[設定更新方法]** 。  
   
-4.  在 [設定更新方法 - \<訂閱者>: \<訂閱資料庫>] 對話方塊中，選取 [立即更新] 或 [佇列更新]。  
+4.  在 [設定更新方法 - \<訂閱者> :  \<訂閱資料庫>] 對話方塊中，選取 [立即更新]  或 [佇列更新]  。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>若要設定提取訂閱的更新模式  
   
-1.  在 [訂閱屬性 - \<發行者>: \<發行資料庫>] 對話方塊中，選取 [立即複寫變更] 的值或 [訂閱者更新方法] 選項的 [佇列變更]。  
+1.  在 [訂閱屬性 - \<發行者>:  \<發行資料庫>] 對話方塊中，選取 [立即複寫變更]  的值或 [訂閱者更新方法]  選項的 [佇列變更]  。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- 如需存取 [訂閱屬性 - \<發行者>: \<發行集資料庫>] 對話方塊的詳細資訊，請參閱[檢視及修改提取訂閱屬性](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
+ 如需有關存取 [訂閱屬性 - \<發行者>:  \<發行資料庫>] 對話方塊的詳細資訊，請參閱[檢視及修改提取訂閱屬性](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -81,7 +83,7 @@ ms.locfileid: "47775716"
   
 1.  針對提取訂閱執行 [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) ，或針對發送訂閱執行 [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) ，確定訂閱支援容錯移轉。 如果結果集中 **update mode** 的值是 **3** 或 **4**，即支援容錯移轉。  
   
-2.  在訂閱資料庫的「訂閱者」端執行 [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)。 指定 **@publisher**、 **@publisher_db**、 **@publication**和 **@failover_mode**的下列其中一個值：  
+2.  在訂閱資料庫的「訂閱者」端執行 [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)。 指定 **@publisher** 、 **@publisher_db** 、 **@publication** 和 **@failover_mode** 的下列其中一個值：  
   
     -   **queued** - 當連接已暫時遺失時，容錯移轉到佇列更新。  
   

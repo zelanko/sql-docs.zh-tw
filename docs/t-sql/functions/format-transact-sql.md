@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 732ca10f49982c7e2de190cffd50d9780a986a8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b53865a753cb538ebeb42573e473281057d4201
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499522"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556907"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
@@ -61,7 +61,7 @@ FORMAT ( value, format [, culture ] )
   
  傳回值的長度取決於 *format*。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
  FORMAT 會針對不是 *valid* 的 *culture* 以外的錯誤傳回 NULL。 例如，如果 *format* 中指定的值無效，則會傳回 NULL。  
 
@@ -78,7 +78,7 @@ FORMAT ( value, format [, culture ] )
 |類別目錄|類型|.NET 類型|  
 |--------------|----------|---------------|  
 |數值|BIGINT|Int64|  
-|數值|ssNoversion|Int32|  
+|數值|INT|Int32|  
 |數值|SMALLINT|Int16|  
 |數值|TINYINT|Byte|  
 |數值|Decimal|SqlDecimal|  
@@ -235,6 +235,12 @@ Format 會傳回指定的時間，並顯示 PM
 ```sql
 select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'hh:mm tt') -- returns 02:00 PM
 select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'hh:mm t') -- returns 02:00 P
+```
+  
+Format 會以 24 小時制格式傳回指定的時間
+
+```sql
+select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'HH:mm') -- returns 14:00
 ```
   
 ## <a name="see-also"></a>另請參閱

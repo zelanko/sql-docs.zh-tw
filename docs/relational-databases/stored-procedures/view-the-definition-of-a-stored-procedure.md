@@ -1,5 +1,5 @@
 ---
-title: 檢視預存程序的定義 | Microsoft 文件
+title: 檢視預存程序的定義 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a423012af5d4fa7c89b38fda6739c142bc5b367b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d6be68be92ac6525e0fb3b128e8c02ab596c601
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648916"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584127"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>檢視預存程序的定義
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
     
 ##  <a name="Top"></a> 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用 [物件總管] 功能表選項，或在查詢編輯器中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]，檢視預存程序的定義。 本主題描述如何在 [物件總管] 中，以及透過系統預存程序、系統函數和查詢編輯器中的物件目錄檢視，來檢視程序的定義。  
   
--   **開始之前**  [安全性](#Security)  
+-   **開始之前：** [安全性](#Security)  
   
--   **To view the definition of a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **若要檢視程序中的定義，使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -38,10 +38,10 @@ ms.locfileid: "47648916"
   
 ####  <a name="Permissions"></a> 權限  
  系統預存程序： **sp_helptext**  
- 需要 **public** 角色的成員資格。 系統物件定義是公開顯示的。 凡具有 ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION 任一權限的物件擁有者或被授與者，都看得到使用者物件的定義。  
+ 需要 **public** 角色的成員資格。 系統物件定義是公開顯示的。 凡具有下列任一權限的物件擁有者或承授者，都看得到使用者物件的定義：ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION。  
   
- 系統函數： **OBJECT_DEFINITION**  
- 系統物件定義是公開顯示的。 凡具有 ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION 任一權限的物件擁有者或被授與者，都看得到使用者物件的定義。 **db_owner**、 **db_ddladmin**和 **db_securityadmin** 固定資料庫角色的成員隱含地擁有這些權限。  
+ 系統函數：**OBJECT_DEFINITION**  
+ 系統物件定義是公開顯示的。 凡具有下列任一權限的物件擁有者或承授者，都看得到使用者物件的定義：ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION。 **db_owner**、 **db_ddladmin**和 **db_securityadmin** 固定資料庫角色的成員隱含地擁有這些權限。  
   
  物件目錄檢視： **sys.sql_modules**  
  目錄檢視內中繼資料的可見性會限制在使用者所擁有的安全性實體，或已授與使用者某些權限的安全性實體。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
@@ -58,19 +58,21 @@ ms.locfileid: "47648916"
   
 1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  依序展開 [資料庫] 、程序所屬的資料庫，以及 [可程式性] 。  
+2.  依序展開 **[資料庫]** 、程序所屬的資料庫，以及 **[可程式性]** 。  
   
-3.  展開 **[預存程序]**，以滑鼠右鍵按一下程序，然後按一下 **[產生預存程序的指令碼為]**，再按一下下列其中一個選項： **[CREATE 至]**、 **[ALTER 至]** 或 **[DROP 並 CREATE 至]**。  
+3.  展開 [預存程序]  ，以滑鼠右鍵按一下程序，然後按一下 [產生預存程序的指令碼為]  ，然後按一下下列其中一個項目：[建立為]  、[變更為]  或 [DROP 並 CREATE 至]  。  
   
-4.  選取 **[新增查詢編輯器視窗]**。 這會顯示程序定義。  
-  
+4.  選取 **[新增查詢編輯器視窗]** 。 這會顯示程序定義。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **在查詢編輯器中檢視程序的定義**  
   
  系統預存程序： **sp_helptext**  
  1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在工具列上，按一下 **[新增查詢]**。  
+2.  在工具列上，按一下 **[新增查詢]** 。  
   
 3.  在查詢視窗中，輸入下列使用 **sp_helptext** 系統預存程序的陳述式。 請變更資料庫名稱和預存程序名稱，使其參考您需要的資料庫和預存程序。  
   
@@ -80,10 +82,10 @@ ms.locfileid: "47648916"
     EXEC sp_helptext N'AdventureWorks2012.dbo.uspLogError';  
     ```  
   
- 系統函數： **OBJECT_DEFINITION**  
+ 系統函數：**OBJECT_DEFINITION**  
  1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在工具列上，按一下 **[新增查詢]**。  
+2.  在工具列上，按一下 **[新增查詢]** 。  
   
 3.  在查詢視窗中，輸入下列使用 **OBJECT_DEFINITION** 系統函數的陳述式。 請變更資料庫名稱和預存程序名稱，使其參考您需要的資料庫和預存程序。  
   
@@ -96,7 +98,7 @@ ms.locfileid: "47648916"
  物件目錄檢視： **sys.sql_modules**  
  1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在工具列上，按一下 **[新增查詢]**。  
+2.  在工具列上，按一下 **[新增查詢]** 。  
   
 3.  在查詢視窗中，輸入下列使用 **sys.sql_modules** 目錄檢視的陳述式。 請變更資料庫名稱和預存程序名稱，使其參考您需要的資料庫和預存程序。  
   

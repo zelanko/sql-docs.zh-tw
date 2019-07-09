@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 660b9d8ea0d0ebd0f0ef1ea83c225cd74f71080b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7e831a6c0e5a1d45c8e7ac2c921be3ef120a41f
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66744176"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556953"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的版本及支援功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 |資料庫復原建議程式|是|是|是|是|是|
 |加密的備份|是|是|否|否|否|
 |混合式備份至 Windows Azure (備份至 URL)|是|是|否|否|否|
-|無叢集的可用性群組|是|是|否|否|否|否|
+|讀取級別可用性群組|是|是|否|否|否|否|
 |最小複本認可可用性群組|是|是|是|否|否|否|
   
 

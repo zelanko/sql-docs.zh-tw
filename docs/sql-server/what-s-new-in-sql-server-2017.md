@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79be3e174e77648b4cbe908fa7d29f827bf4d3c5
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: d1f75a8c70415fe31419a8f30f80e727226fa879
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263504"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556931"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ SQL Server 2017 包含許多新的 Database Engine 功能、增強功能和效�
 - [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) 中的 **modified_extent_page_count** 資料行會追蹤每個資料庫檔案中的差異變更，並啟用智慧型備份解決方案，以根據資料庫中已變更頁面的百分比來執行差異備份或完整備份。 (CTP 2.0)
 - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) T-SQL 語法現在支援使用 **ON** 關鍵字，將資料表載入使用者預設值以外的檔案群組中。 (CTP 2.0)
 - 現在支援在屬於 **AlwaysOn 可用性群組**的所有資料庫 (包括屬於相同執行個體的資料庫) 之間進行跨資料庫交易。 請參閱[交易 - AlwaysOn 可用性群組和資料庫鏡像](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md) (CTP 2.0)
-- 新的 [可用性群組]  功能包括無叢集支援、最小複本認可可用性群組設定，以及 Windows-Linux 跨 OS 移轉和測試。 (CTP 1.3)
+- 新的 [可用性群組]  功能包括無叢集讀取級別支援、最小複本認可可用性群組設定，以及 Windows-Linux 跨 OS 移轉和測試。 (CTP 1.3)
 - 新的動態管理檢視：
     - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) 會公開摘要層級屬性和交易記錄檔的相關資訊，適用於監視交易記錄健全狀況。 (CTP 2.1)
     - [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) 會追蹤每個資料庫的版本存放區使用量，適用於主動根據每個資料庫的版本存放區使用量來規劃 tempdb 大小。 (CTP 2.0)

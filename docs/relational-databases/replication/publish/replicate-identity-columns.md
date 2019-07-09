@@ -18,12 +18,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 091ca8ad9fa80876936dcfdc2c7ed0ca687c6aea
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b2e412e2ef25e9eb48a8068cbe6e75b2c1ec8797
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124340"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579832"
 ---
 # <a name="replicate-identity-columns"></a>複寫識別欄位
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "54124340"
   
 -   **@threshold** 參數，用於確定 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 或舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的訂閱何時需要新的識別範圍。  
   
- 例如，您可以為 **@identity_range** 指定 10000，為 **@pub_identity_range**。 執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本的發行者和所有訂閱者 (包括具有主訂閱的訂閱者) 都會被指派 10000 的主要範圍。 具有主訂閱的訂閱者也會被指派 500000 的主要範圍，這可供與重新發行訂閱者同步的訂閱者使用 (您還必須為重新發行訂閱者端之發行集中的發行項指定 **@identity_range**、 **@pub_identity_range**與 **@threshold** )。  
+ 例如，您可以為 **@identity_range** 指定 10000，為 **@pub_identity_range** 。 執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本的發行者和所有訂閱者 (包括具有主訂閱的訂閱者) 都會被指派 10000 的主要範圍。 具有主訂閱的訂閱者也會被指派 500000 的主要範圍，這可供與重新發行訂閱者同步的訂閱者使用 (您還必須為重新發行訂閱者端之發行集中的發行項指定 **@identity_range** 、 **@pub_identity_range** 與 **@threshold** )。  
   
  執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本的每一個訂閱者還會收到次要識別範圍。 次要範圍的大小等於主要範圍；當主要範圍用盡時，就會使用次要範圍，並且「合併代理程式」會為「訂閱者」指派新的範圍。 新範圍隨即成為次要範圍，且當「訂閱者」使用識別值時處理會繼續。  
   
@@ -97,10 +97,10 @@ ms.locfileid: "54124340"
   
 -   **@threshold** 參數，用於確定訂閱何時需要新的識別範圍。  
   
- 例如，您可以為 **@pub_identity_range**指定 10000，為 **@identity_range** 指定 1000 (假設在「訂閱者」端沒有什麼更新)，為 **@threshold**。 在「訂閱者」端執行 800 次插入 (1000 的 80%) 之後，將為「訂閱者」指派新範圍。 在「發行者」端執行 8000 次插入之後，將為「發行者」指派新範圍。 指派新範圍時，資料表裡的識別範圍值中會有一個間隔。 指定的臨界值越高間距就越小，但系統的容錯功能也就越弱：如果「散發代理程式」因某種原因無法執行，「訂閱者」可能更容易用盡識別。  
+ 例如，您可以為 **@pub_identity_range** 指定 10000，為 **@identity_range** 指定 1000 (假設在「訂閱者」端沒有什麼更新)，為 **@threshold** 。 在「訂閱者」端執行 800 次插入 (1000 的 80%) 之後，將為「訂閱者」指派新範圍。 在「發行者」端執行 8000 次插入之後，將為「發行者」指派新範圍。 指派新範圍時，資料表裡的識別範圍值中會有一個間隔。 指定的臨界值越高間距就越小，但系統的容錯功能也就越弱：如果「散發代理程式」因某種原因無法執行，「訂閱者」可能更容易用盡識別。  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>為手動識別範圍管理指派範圍  
- 如果指定手動識別範圍管理，則必須確定「發行者」與每個「訂閱者」都使用不同的識別範圍。 例如，考慮識別欄位定義為 `IDENTITY(1,1)`之「發行者」端的資料表：識別欄位從 1 開始，每插一個資料列即遞增 1。 如果「發行者」端的資料表有 5,000 個資料列，而您希望在應用程式使用期間資料表有所成長，「發行者」可以使用範圍 1-10,000。 假設有兩個「訂閱者」，「訂閱者 A」可以使用 10,001–20,000，「訂閱者 B」可以使用 20,001-30,000。  
+ 如果指定手動識別範圍管理，則必須確定「發行者」與每個「訂閱者」都使用不同的識別範圍。 例如，考慮識別欄位定義為 `IDENTITY(1,1)`之「發行者」端的資料表：識別欄位從 1 開始，每插一個資料列即遞增 1。 如果「發行者」端的資料表有 5,000 個資料列，而您希望在應用程式使用期間資料表有所成長，「發行者」可以使用範圍 1-10,000。 假設有兩個「訂閱者」，「訂閱者 A」可以使用 10,001?20,000，「訂閱者 B」可以使用 20,001-30,000。  
   
  在「訂閱者」透過快照集或其他方式初始化之後，執行 DBCC CHECKIDENT 以為「訂閱者」指派識別範圍的起點。 例如，在「訂閱者 A」端，應執行 `DBCC CHECKIDENT('<TableName>','reseed',10001)`。 在「訂閱者 B」端，應執行 `CHECKIDENT('<TableName>','reseed',20001)`。  
   
@@ -112,7 +112,9 @@ ms.locfileid: "54124340"
 1.  停止所有「訂閱者」上的所有活動。  
   
 2.  對於每個包括識別欄位的已發行資料表：  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  在每個「訂閱者」端的訂閱資料庫中，執行 `IDENT_CURRENT('<TableName>')`。  
   
     2.  記錄所有「訂閱者」中找到的最大值。  

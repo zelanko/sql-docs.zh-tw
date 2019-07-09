@@ -1,9 +1,9 @@
 ---
-title: 資料列層級安全性 | Microsoft 文件
+title: 資料列層級安全性 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 05/14/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ba5cddf682ba9e3f9dfa6e5ef9b44ce7f9e5f4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de58a5d37bae0f589cae0c56dba21370923aa850
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140595"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559446"
 ---
 # <a name="row-level-security"></a>資料列層級安全性
 
@@ -38,8 +38,8 @@ ms.locfileid: "67140595"
 存取限制邏輯是位於資料庫層，而不是離開這些資料，到另一個應用程式層。 資料庫系統會在每次於任何層嘗試存取該資料時套用存取限制。 透過減少安全性系統的介面區，讓您的安全性系統更可靠且健全。  
   
 使用 [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式以及作為[內嵌資料表值函式](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)建立的述詞來實作 RLS。  
-  
-**適用對象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([立即取得](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
+
+**適用對象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([立即取得](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。
   
 > [!NOTE]
 > Azure SQL 資料倉儲僅支援篩選述詞。 Azure SQL 資料倉儲目前不支援封鎖述詞。
@@ -422,7 +422,7 @@ DROP LOGIN Manager;
 ### <a name="MidTier"></a> C. 透過中介層應用程式連接到資料庫的使用者案例
 
 > [!NOTE]
-> 此範例不適用對象 Azure SQL 資料倉儲，因為目前不支援 SESSION_CONTEXT 和封鎖述詞。
+> 在此範例中，Azure SQL Data Warehouse 目前不支援區塊預測功能，因此插入錯誤使用者識別碼的列不會使用 Azure SQL Data Warehouse 封鎖。
 
 此範例示範中介層應用程式如何實作連線篩選，其中應用程式使用者 (或租用戶) 共用相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者 (應用程式)。 應用程式在連接到資料庫之後，會在 [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) 中設定目前應用程式使用者識別碼，然後安全性原則會明確地篩選此 ID 不應該看到的資料列，並同時避免使用者插入錯誤使用者識別碼的資料列。 不需要任何其他的應用程式變更。  
   

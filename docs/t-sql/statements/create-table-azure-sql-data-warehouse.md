@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE (Azure SQL 資料倉儲) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/14/2017
+ms.date: 07/03/2019
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 328a0aaeed34bd03e33f480ea0b0ea6afc7e940d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a137ff26240b23e99f2faeadb367b1379b8c0f8
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413337"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564013"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
 
@@ -164,21 +164,21 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
  請參閱＜範例＞一節中的[建立資料分割資料表](#PartitionedTable)。
 
-### <a name="ordered-clustered-columnstore-index-option-preview"></a>已排序的叢集資料行存放區索引選項 (預覽)
+### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>已排序的叢集資料行存放區索引選項 (針對 Azure SQL 資料倉儲為預覽)
 
 叢集資料行存放區索引是在 Azure SQL 資料倉儲中建立資料表的預設。  ORDER 指定規格預設為 COMPOUND 索引鍵。  排序一律會以遞增排序進行。 若沒有指定任何 ORDER 子句，資料行存放區將不會進行排序。 由於排序流程，若資料表具有已排序的叢集資料行存放區索引，則該資料表所經歷的資料載入時間可能比未排序的叢集資料行存放區索引還長。 如果您在載入資料時需要更多 tempdb 空間，您可以減少每個插入的資料量。
 
-在預覽期間，您可以啟用 ORDER 來執行此查詢，以檢查資料行。  若在 ORDER 中指定多個資料行，則稍後將會提供目錄檢視，以提供此資訊和資料行序數。
+在預覽期間，您可以啟用 ORDER 來執行此查詢，以檢查資料行。
 
 ```sql
-SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.*
-FROM sys.objects o 
-INNER JOIN sys.columns c ON o.object_id = c.object_id 
-INNER JOIN sys.partitions p ON o.object_id = p.object_id   
-INNER JOIN sys.column_store_segments s 
-    ON p.hobt_id = s.hobt_id AND s.column_id = c.column_id  
-WHERE o.name = 't1' and c.name = 'col1' 
-ORDER BY c.name, s.min_data_id, s.segment_id;
+SELECT i.name AS index_name  
+    ,COL_NAME(ic.object_id,ic.column_id) AS column_name  
+    ,ic.index_column_id  
+    ,ic.key_ordinal  
+,ic.is_included_column  
+FROM sys.indexes AS i  
+INNER JOIN sys.index_columns AS ic
+    ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
 ```
 
 ### <a name="DataTypes"></a> 資料類型
@@ -594,7 +594,8 @@ WITH
 <a name="SeeAlso"></a>
 ## <a name="see-also"></a>另請參閱
  
- [CREATE TABLE AS SELECT &#40;Azure SQL 資料倉儲&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
- [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
+[CREATE TABLE AS SELECT &#40;Azure SQL 資料倉儲&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
+[sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql?view=azure-sqldw-latest) 
   

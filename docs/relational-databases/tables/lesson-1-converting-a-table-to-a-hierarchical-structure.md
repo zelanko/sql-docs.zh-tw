@@ -13,12 +13,12 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e95be3958bf3b5ab77e3da43e31b91b75c918d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83871be7e8de5976eee684788d7a1a852aaa7c8a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661156"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582152"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>第 1 課：將資料表轉換為階層式結構
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "47661156"
 ### <a name="copy-the-employee-table"></a>複製 Employee 資料表  
   
 1.  在 [查詢編輯器] 視窗中執行下列程式碼，以便將資料表結構和資料從 **Employee** 資料表複製到名稱為 **EmployeeDemo**的新資料表。 由於原始的資料表已經使用 hierarchyid，此查詢基本上會使階層扁平化，以擷取員工的經理。 在本課程的後續部分中，我們將會重建此階層。
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```sql  
     USE AdventureWorks2017;  
     GO  
@@ -290,7 +292,7 @@ ms.locfileid: "47661156"
     /1/1/5/ 0x5AE3  3   11  adventure-works\ovidiu0
     ```
 
-    **EmployeeID** 優先索引：資料列會以 **EmployeeID** 順序儲存。  
+    **EmployeeID**-優先索引：資料列會以 **EmployeeID** 順序儲存。  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID

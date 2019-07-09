@@ -27,19 +27,19 @@ ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: da68caa3ac81d25c8a03dfe11c1f75dcee15d40d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 876e498a84ea3b6066647b47ea7ba27b5fc2a91d
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041539"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492590"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 此資料類型會公開在資料庫中自動產生的唯一二進位數字。 **rowversion** 通常用來作為版本戳記資料表資料列的機制。 儲存體大小是 8 位元組。 **rowversion** 資料類型只是會遞增的數字，因此不會保留日期或時間。 若要記錄日期或時間，請使用 **datetime2** 資料類型。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 每個資料庫都有一個計數器，會針對在資料庫內包含 **rowversion** 資料行的資料表所執行的每個插入或更新作業而遞增。 這個計數器是資料庫資料列版本。 這會追蹤資料庫內的相對時間，而不是可關聯於時鐘的實際時間。 資料表只能有一個 **rowversion** 資料行。 每次修改或插入含 **rowversion** 資料行的資料列時，都會在 **rowversion** 資料行中插入遞增的資料庫資料列版本值。 這個屬性會使 **rowversion** 資料行不適合作為索引鍵 (尤其是主索引鍵) 的候選項。 資料列的任何更新都會變更資料列版本值，因而會變更索引鍵值。 如果資料行在主索引鍵中，舊的索引鍵值便不再有效，參考舊值的外部索引鍵也不再有效。 如果動態資料指標參考資料表，所有更新都會變更資料列在資料指標中的位置。 如果資料行在索引鍵中，資料列的所有更新也會產生索引的更新。  **rowversion** 值會隨著任何 update 陳述式而遞增，即使沒有變更任何資料列值。 (例如，若資料行值為 5，而 update 陳述式將該值設為 5，即使沒有任何變更，此動作仍然會被視為更新；因此 **rowversion** 便會遞增。)
   
 **timestamp** 是 **rowversion** 資料類型的同義字，遵照資料類型同義字的行為。 在 DDL 陳述式中，請盡可能的使用 **rowversion** 而非 **timestamp**。 如需詳細資訊，請參閱[資料類型同義字 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md)。
@@ -102,7 +102,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
   
 `myRv` 代表您上次讀取資料列時，該資料列的 **rowversion** 資料行值。 此值必須由實際的 **rowversion** 值取代。 實際 **rowversion** 值的範例是 0x00000000000007D3。
   
-您也可以將範例 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式放入交易中。 您可藉由在交易的範圍中查詢 `@t` 變數來擷取資料表已更新的 `myKey` 資料行，而不必重新查詢 `MyTes` 資料表。
+您也可以將範例 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式放入交易中。 您可以透過在交易的範圍中查詢 `@t` 變數來擷取資料表已更新的 `myKey` 資料行，而不必重新查詢 `MyTest` 資料表。
   
 下列為使用 **timestamp** 語法的相同範例：
   
