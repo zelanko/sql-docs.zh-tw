@@ -1,5 +1,5 @@
 - name: 歡迎使用 SQL Server
-  href: sql-server/sql-server-technical-documentation.md?toc=toc.json
+  href: sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: 舊版 2014-2005
   href: toc/previous-versions-sql-server.md
 - name: 概觀
@@ -30,7 +30,7 @@
         - name: SQL Server 2019
           href: sql-server/sql-server-ver15-release-notes.md
         - name: SQL Server 2017
-          href: sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
+          href: sql-server/sql-server-2017-release-notes.md?toc=../toc.json
         - name: SQL Server 2016
           href: sql-server/sql-server-2016-release-notes.md
         - name: SQL Server 2014
@@ -8763,14 +8763,10 @@
           items:
             - name: SQL Server Management Studio (SSMS)
               href: ssms/sql-server-management-studio-ssms.md
-        - name: 快速入門
+        - name: 教學課程
           items:
             - name: 連線與查詢 SQL Server
               href: ssms/tutorials/connect-query-sql-server.md
-        - name: 教學課程
-          items:
-            - name: 在單一資料庫設計關聯式資料庫
-              href: 'https://docs.microsoft.com/en-us/azure/sql-database/sql-database-design-first-database?view=sql-server-2017'
         - name: 概念
           items:
             - name: SSMS 中的工具視窗
@@ -8907,12 +8903,11 @@
                   href: ssms/register-servers/register-servers.md
                 - name: 已註冊的伺服器 F1 說明
                   href: ssms/register-servers/registered-servers-f1-help.md
-            - name: 指令碼
+            - name: 使用 SSMS 撰寫指令碼
               items:
                 - name: 查詢與文字編輯器
+                  href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
-                    - name: 查詢與文字編輯器
-                      href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                     - name: Database Engine 查詢編輯器
                       href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
                     - name: XML 編輯器
@@ -9339,10 +9334,9 @@
                   href: ssms/register-servers/export-registered-server-information-sql-server-management-studio.md
                 - name: 匯入已註冊的伺服器資訊
                   href: ssms/register-servers/import-registered-server-information-sql-server-management-studio.md
-            - name: 指令碼
+            - name: 資料庫引擎的指令碼
+              href: ssms/scripting/database-engine-scripting.md
               items:
-                - name: 指令碼
-                  href: ssms/scripting/database-engine-scripting.md
                 - name: 查詢與文字編輯器
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                 - name: Database Engine 查詢編輯器
