@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1f2d7f5a1d4a966edbce3c4ad96a7b31bd604b48
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 389a521d256becb431b23ec073cadcde7c116952
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469126"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681548"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>版本資訊適用於 SQL Server 上的巨量資料叢集
 
@@ -33,11 +33,11 @@ ms.locfileid: "67469126"
 
 | 新功能或更新 | 詳細資料 |
 |:---|:---|
-| `mssqlctl` 命令會變更 | `mssqlctl cluster` 已重新命名命令`mssqlctl bdc`。 如需詳細資訊，請參閱 < [ `mssqlctl`參考](reference-mssqlctl.md)。 |
+| `mssqlctl` 命令變更 | `mssqlctl cluster` 命令已重新命名為 `mssqlctl bdc`。 如需詳細資訊，請參閱 [`mssqlctl` 參考](reference-mssqlctl.md)。 |
 | 新`mssqlctl`狀態命令和移除叢集的系統管理入口網站。 | 叢集系統管理入口網站會在此版本中移除。 已新增新的狀態命令`mssqlctl`補充現有的監視命令。 |
-| Spark 計算集區 | 建立額外的節點，以提升 Spark 的計算能力，而不需要相應增加儲存體。 此外，您可以開始不會使用適用於 Spark 的儲存體集區節點。 Spark 和儲存體會分離。 如需詳細資訊，請參閱 <<c0> [ 設定存放裝置，而不需要 spark](deployment-custom-configuration.md#sparkstorage)。 |
-| MSSQL Spark 連接器 | 支援讀取/寫入至資料集區外部的資料表。 上一個版本支援讀取/寫入主要執行個體僅限資料表。 如需詳細資訊，請參閱 <<c0> [ 如何讀取和寫入至 SQL Server 使用 MSSQL Spark 連接器從 Spark](spark-mssql-connector.md)。 |
-| 使用 MLeap 的機器學習服務 | [在 Spark 中的 MLeap 機器學習服務模型定型和評分使用 Java 語言擴充功能的 SQL Server 中](spark-create-machine-learning-model.md)。 |
+| Spark 計算集區 | 可建立額外的節點，提升 Spark 的計算能力，而無須相應增加儲存體。 此外，您可以啟動不會用於 Spark 的儲存體集區節點。 Spark 與儲存體彼此分離。 如需詳細資訊，請參閱 [Configure SQL Server Agent](deployment-custom-configuration.md#sparkstorage)。 |
+| MSSQL Spark 連接器 | 可對資料集區外部資料表提供讀寫支援。 先前的版本只支援對 MASTER 執行個體資料表進行讀寫。 如需詳細資訊，請參閱 [How to read and write to SQL Server from Spark using the MSSQL Spark Connector](spark-mssql-connector.md)。 |
+| 使用 MLeap 的機器學習 | [可在 Spark 中訓練 MLeap 機器學習模型，並使用 Java 語言延伸模組在 SQL Server 中評分](spark-create-machine-learning-model.md)。 |
 
 ### <a name="known-issues"></a>已知問題
 
@@ -125,7 +125,7 @@ ms.locfileid: "67469126"
 | **mssqlctl** 更新 | 數個 **mssqlctl** [命令與參數更新](../big-data-cluster/reference-mssqlctl.md)。 這包含 **mssqlctl login** 命令的更新，此命令現在針對控制器使用者名稱和端點。 |
 | 儲存體增強功能 | 支援記錄檔和資料的不同儲存體設定。 此外，巨量資料叢集的永續性磁碟區宣告數已減少。 |
 | 多重計算集區執行個體 | 支援多重計算集區執行個體。 |
-| 新的集區行為和功能 | 根據預設，現在計算集區只會用於 **ROUND_ROBIN** 散發中的存放集區和資料集區作業。 資料集區現在可以使用新的 **REPLICATED** 散發類型，這表示相同的資料會出現在所有資料集區執行個體上。 |
+| 新的集區行為和功能 | 根據預設，現在計算集區只會用於 **ROUND_ROBIN** 散發中的存放集區和資料集區作業。 資料集區現在可以使用新**複寫**散發類型，這表示相同的資料會出現在所有資料集區執行個體。 |
 | 外部資料表改善 | HADOOP 資料來源類型的外部資料表，現在支援讀取最高 1 MB 的資料列。 外部資料表 (ODBC、存放集區、資料集區) 現在支援如 SQL Server 資料表寬度的資料列。 |
 
 ### <a name="known-issues"></a>已知問題

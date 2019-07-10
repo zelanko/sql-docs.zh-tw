@@ -11,12 +11,12 @@ manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: 453c00715e68a648e9cdfc2010810ce701358cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b06e8476e10abc3a96ab6c6f2304ef81f225f02
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798101"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681622"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
@@ -367,7 +367,7 @@ _0.32.8 包含幾個 0.32.7 中找到的迴歸修正 ([# 1971年](https://github
 ### <a name="github-issues-fixes-june-2018"></a>GitHub 問題修正，2018 年 6 月
 
 - 功能要求 ([發出 1204年](https://github.com/Microsoft/azuredatastudio/issues/1204)):請對結果格線自動調整資料行寬度資料，並請記得手動變更，如果重新執行相同的查詢。
-- 修正[發出 1398年](https://github.com/Microsoft/azuredatastudio/issues/1398):應該顯示新增訊息，並新增帳戶 [帳戶] 按鈕，當連結的帳戶為空白時。
+- 修正[發出 1398年](https://github.com/Microsoft/azuredatastudio/issues/1398):應該顯示新增的訊息，並新增帳戶 按鈕，當連結的帳戶為空白時。
 - 修正[發出 1399年](https://github.com/Microsoft/azuredatastudio/issues/1399):摺疊檢視時，會中斷連結的帳戶 索引標籤。
 - 修正[發出 1374年](https://github.com/Microsoft/azuredatastudio/issues/1374):從磁碟開啟的.sql 檔時，SQL 工具服務會當機。
 - 修正[發出 1372年](https://github.com/Microsoft/azuredatastudio/issues/1372):遺漏 SQL 關鍵字"BETWEEN"。

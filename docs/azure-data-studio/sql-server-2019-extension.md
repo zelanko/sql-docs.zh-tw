@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 0b8f31d55ae9dcc7042fff051c37a4beaa72a47e
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: bc865b36dc8b8036fa9a6a1a9c58c6890acadf47
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399998"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681597"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 擴充功能 （預覽）
 
@@ -51,7 +51,7 @@ SQL Server 2019 擴充功能 （預覽） 提供的預覽支援的新功能和�
 
 * **巨量資料的 SQL Server 叢集**連接類型已在此版本中移除。 從 SQL Server 的巨量資料叢集連接先前提供的所有功能都位於 SQL Server 連接。
 * HDFS 瀏覽您可以找到**Data Services**資料夾
-* Notebook 的 PySpark 和其他巨量資料的核心會在連接至 SQL Server 巨量資料叢集 SQL Server 主要執行個體時。
+* Notebook 的 PySpark 和其他巨量資料的核心，可在連接至 SQL Server 巨量資料叢集 SQL Server 主要執行個體時。
 * 建立外部資料表精靈：
   * 建立使用現有的外部資料來源的外部資料表的支援。
   * 在精靈的效能改進。

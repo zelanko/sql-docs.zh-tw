@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0d07288bccc641f67644a37cd027e093fc3967c8
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 8d701d9e8595eee3a583e913baabc2148af214fe
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645547"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681608"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>監視 SQL Server Machine Learning 服務使用動態管理檢視 (Dmv)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -167,7 +167,7 @@ WHERE object_name LIKE '%External Scripts%'
 | 計數器 | 描述 |
 |---------|-------------|
 | 執行總計 | 本機或遠端呼叫所啟動的外部處理序數目。 |
-| 平行執行 | 包含指令碼次數_@parallel_規格且[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]能夠產生及使用平行查詢計畫。 |
+| 平行執行 | 包含指令碼次數 _@parallel_ 規格且[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]能夠產生及使用平行查詢計畫。 |
 | 串流執行 | 已叫用的串流處理功能的次數的數目。 |
 | SQL CC 執行 | 執行位置呼叫具現化遠端及 SQL Server 的外部指令碼已用作為計算內容。 |
 | 隱含驗證登入 | 使用隱含的驗證; 進行 ODBC 回送呼叫的次數也就是[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]執行代表傳送指令碼要求的使用者呼叫。 |
@@ -195,8 +195,8 @@ FROM sys.dm_os_sys_info;
 | 「資料行」 | 描述 |
 |--------|-------------|
 | physical_memory_kb | 在電腦上的實體記憶體總數量。 |
-| committed_kb&lt | 記憶體管理員中的千位元組 (KB) 中認可的記憶體。 不包含記憶體管理員中的保留記憶體。 |
-| external_pool_peak_memory_kb | 加總記憶體，以 kb 為單位，所有外部資源集區的最大數量。 |
+| committed_kb | 記憶體管理員中的千位元組 (KB) 中認可的記憶體。 不包含記憶體管理員中的保留記憶體。 |
+| external_pool_peak_memory_kb | 最大記憶體總和使用，以 kb 為單位，所有外部資源集區。 |
 
 ## <a name="memory-configuration"></a>記憶體組態
 
@@ -277,7 +277,7 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 | 「資料行」 | 描述 |
 |--------|-------------|
-| 封裝 | 已安裝封裝的名稱。 |
+| 套件 | 已安裝封裝的名稱。 |
 | 版本 | 封裝的版本。 |
 | 相依 | 列出已安裝的套件相依的套件。 |
 | 使用權 | 已安裝套件的授權。 |
@@ -303,9 +303,9 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 | 「資料行」 | 描述 |
 |--------|-------------|
-| 封裝 | 已安裝封裝的名稱。 |
+| 套件 | 已安裝封裝的名稱。 |
 | 版本 | 封裝的版本。 |
-| 位置 | 您可以在其中找到封裝的目錄。 |
+| Location | 您可以在其中找到封裝的目錄。 |
 
 ## <a name="next-steps"></a>後續步驟
 

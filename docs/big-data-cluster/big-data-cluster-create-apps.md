@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d7a61c97d3e1636cd6a11173e281c192d1533d93
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 2ace3ee9cd17240890a9da901297c731ced4016c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388745"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681596"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>如何部署 SQL Server 的巨量資料叢集 （預覽） 上的應用程式
 
@@ -107,7 +107,7 @@ mssqlctl app create --spec <directory containing spec file>
 mssqlctl app create --spec ./addpy
 ```
 
-這是假設您有儲存在您的應用程式`addpy`資料夾。 此資料夾也應包含的應用程式中，然後再呼叫被呼叫的規格檔`spec.yaml`。 請參閱[應用程式部署頁面](concept-application-deployment.md)如需有關`spec.yaml`檔案。
+這是假設您有儲存在您的應用程式`addpy`資料夾。 此資料夾也應包含呼叫的應用程式的規格檔`spec.yaml`。 請參閱[應用程式部署頁面](concept-application-deployment.md)如需有關`spec.yaml`檔案。
 
 若要部署此應用程式範例應用程式，請在呼叫的目錄中建立下列檔案`addpy`:
 
