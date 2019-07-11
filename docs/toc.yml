@@ -9056,7 +9056,7 @@
               items:
                 - name: 取得完整記憶體傾印
                   href: ssms/troubleshoot/get-full-memory-dump.md
-                - name: 當機和停止回應
+                - name: 取得診斷資料
                   href: ssms/troubleshoot/ssms-troubleshoot.md
             - name: SQL Server Agent
               items:
