@@ -2,20 +2,20 @@
 title: 產生資料有爭議的工作程式的碼
 titleSuffix: Azure Data Studio
 description: 本文說明如何使用 Azure 資料 Studio 中的文字的程式碼加速器，自動產生程式碼的常見的資料有爭議的工作。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: f5406ce0e67322a8f7148fc83b83d0789f27e1ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c26a6efa1f96ac5016d1560f0ae4d9e02f0d369d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770775"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728320"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>使用文字程式碼加速器 data Wrangling
 

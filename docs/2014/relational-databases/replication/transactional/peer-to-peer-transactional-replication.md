@@ -16,12 +16,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63274366"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793919"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
   點對點複寫藉由維護多個伺服器執行個體之間的資料複本 (也稱為 *「節點」* ) 來提供向外延展和高可用性解決方案。 點對點複寫是以異動複寫為基礎，會以接近即時、交易式的方式傳播一致的變更。 如此可讓需要向外延展讀取作業的應用程式將來自用戶端的讀取散發到多個節點之間。 由於會以接近即時的方式在節點之間維護資料，所以點對點複寫會提供資料備援性，這樣可提高資料的可用性。  
@@ -137,19 +137,19 @@ ms.locfileid: "63274366"
   
 -   散發代理程式參數 **-SubscriptionStreams** 和記錄讀取器代理程式參數 **-MaxCmdsInTran**。  
   
--   發行項屬性 **@destination_owner** 及 **@destination_table** ) 來提供向外延展和高可用性解決方案。  
+-   發行項屬性 **\@destination_owner**並 **\@destination_table**。  
 
 -   點對點異動複寫不支援建立點對點發行集的單向交易式訂閱
   
  下列屬性有特殊考量：  
   
--   發行集屬性 **@allow_initialize_from_backup** 需要的值為`true`。  
+-   發行集屬性 **\@allow_initialize_from_backup**需要的值為`true`。  
   
--   發行項屬性 **@replicate_ddl** 需要的值為`true`; **@identityrangemanagementoption** 需要的值為`manual`; 並 **@status** 需要該選項**24**設定。  
+-   發行項屬性 **\@replicate_ddl**需要的值為`true`; **\@identityrangemanagementoption**需要的值為`manual`; 並 **\@狀態**需要該選項**24**設定。  
   
--   發行項屬性的值 **@ins_cmd** ， **@del_cmd** ，以及 **@upd_cmd** 不能設為`SQL`。  
+-   發行項屬性的值 **\@ins_cmd**，  **\@del_cmd**，以及 **\@upd_cmd**不能設為`SQL`。  
   
--   訂用帳戶屬性 **@sync_type** 需要的值為`none`或`automatic`。  
+-   訂用帳戶屬性 **\@sync_type**需要的值為`none`或`automatic`。  
   
 ### <a name="maintenance-considerations"></a>維護考量  
  下列動作需要停止系統。 這表示停止所有節點上已發行之資料表的活動，並確定每個節點都已收到來自其他所有節點的所有變更。  

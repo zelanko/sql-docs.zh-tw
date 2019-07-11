@@ -10,17 +10,37 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 06/06/2019
-ms.openlocfilehash: 2b06e8476e10abc3a96ab6c6f2304ef81f225f02
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.date: 07/10/2019
+ms.openlocfilehash: 5e3aa3f0472b775f1dfbd13634228226e4e7e0c2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681622"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794075"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
 **[下載並安裝最新版的 ！](download.md)**
+
+## <a name="july-2019"></a>2019 年 7 月
+
+2019 年 7 月 10 日&nbsp;  /  &nbsp;版本：1.9.0 
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| :----- | :------ |
+| SentryOne 計劃總管延伸模組的版本 | 我們值中的合作夥伴，SentryOne，將運送他們[SentryOne 計劃總管延伸模組，適用於 Azure 資料 Studio](https://www.sentryone.com/products/sentryone-plan-explorer-extension-azure-data-studio)。 <br> 這是免費的延伸模組，提供增強的計劃的查詢的圖表在 Azure 資料 Studio 中，執行與最佳化的配置演算法，有助於快速識別成本最高的運算子會影響查詢效能的直覺式色彩編碼。 若要深入了解延伸模組，請參閱 SentryOne 的部落格文章[此處](https://sqlperformance.com/2019/07/sentryone/plan-explorer-extension-azure-data-studio)。 |
+| 結構描述比較即將推出的新功能 | &bull; &nbsp; 結構描述比較檔案支援 (。SCMP) <br/>&bull; &nbsp; 取消結構描述比較支援 <br/>&bull; &nbsp; 可以找到完整的變更[這裡](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed+)|
+| Notebook 增強功能 | &bull; &nbsp; Plotly 的 Python 支援 <br/>&bull; &nbsp; 從瀏覽器開啟 Notebook <br/> &bull; &nbsp; Python 套件管理對話方塊 <br/> &bull; &nbsp; 效能和 Markdown 增強功能 <br/> &bull; &nbsp; 鍵盤快速鍵更新 <br/>  &bull; &nbsp; 您可以找到 Bug 修正和次要功能[這裡](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22+) |
+| SQL Server 2019 Support |  此版本包含額外的 SQL Server 2019 巨量資料叢集功能，包括的支援： <br/> &bull; &nbsp; 服務端點內管理儀表板，其中列出所有主要的服務在叢集中的資料表。 <br/> &bull; &nbsp; 叢集狀態 Notebook 會示範如何查詢 & 疑難排解跨所有服務和 pod 的叢集狀態。| 
+| 可用更新的語言套件| 現在有 10 個語言套件可用在擴充管理員 marketplace 中。 直接使用擴充功能市集的特定語言搜尋，並安裝。 一旦您安裝選取的語言時，Azure Data Studio 會提示您重新啟動新的語言。 |
+| SQL Server Profiler 更新 | SQL Server 設定檔延伸模組已更新為包含新功能包括： <br/> &bull; &nbsp; 依資料庫名稱篩選 <br/> &bull; &nbsp; 複製並貼上支援 <br/> &bull; &nbsp; 儲存/載入篩選器 <br/>可以找到 SQL Server Profiler 擴充功能的增強功能的完整清單[此處](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+SQL+Profiler%22+)。  |
+| Visual Studio 程式碼可能會發行合併 1.35 版 | 您可以找到最新的改良[此處](https://code.visualstudio.com/updates/v1_35)。 |
+| 已解決的 bug 和問題 | 在舊版的 Azure Data Studio 中，如果使用者資料庫都已選取 連接 對話方塊中，從連接時產生的物件總管 中項目範圍只完全限於該單一資料庫。 開始在此版本中，以便在伺服器層級的屬性也會顯示在 [物件總管] 中，正在變更行為。 <br/> 如需修正的完整清單[Bug 和問題，請在 GitHub 上的](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1)。 |
+| &nbsp; | &nbsp; |
+
+
 
 ## <a name="june-2019"></a>2019 年 6 月
 
@@ -34,7 +54,7 @@ ms.locfileid: "67681622"
 | 版本的 Windows 的資料庫管理工具擴充功能 | 此延伸模組會啟動兩個 SQL Server Management Studio，從 Azure Data Studio 中最常使用的體驗。 使用者可以在許多不同的物件 （例如資料庫、 資料表、 資料行、 檢視等等） 上按一下滑鼠右鍵，並選取要檢視 [SSMS 屬性] 對話方塊，該物件的屬性。 此外，使用者可以在資料庫上按一下滑鼠右鍵並選取 產生指令碼來啟動已知 SSMS 產生指令碼精靈。 
 | 結構描述比較增強功能 | &bull; &nbsp; 已新增排除/包含選項 <br/>&bull; &nbsp; 產生後所產生的指令碼會開啟指令碼 <br/>&bull; &nbsp; 移除雙重捲軸  <br/>&bull; &nbsp; 格式與版面配置的增強功能 <br/>&bull; &nbsp; 可以找到完整的變更[這裡](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
 | 移動的訊息至自己的索引標籤 區段 | 當使用者執行 SQL 查詢時，結果和訊息是在堆疊面板上。 現在它們位於不同的索引標籤，例如在 SSMS 中的某個面板中。 |
-| SQL Notebook 增強功能 | &bull; &nbsp; 使用者現在可以選擇在 notebook 中使用自己的 Python 3 或 Anaconda 安裝 <br/>&bull; &nbsp; 多個穩定性 + 符合/完成修正&bull;&nbsp;檢視的增強功能的完整清單[這裡](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
+| SQL Notebook 增強功能 | &bull; &nbsp; 使用者現在可以選擇在 notebook 中使用自己的 Python 3 或 Anaconda 安裝 <br/>&bull; &nbsp; 多個穩定性 + 符合/完成修正 <br/> &bull; &nbsp; 檢視的增強功能的完整清單[這裡](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
 | Visual Studio 程式碼可能會發行合併 1.34 | 您可以找到最新的改良[這裡](https://code.visualstudio.com/updates/v1_34) |
 | 已解決的 bug 和問題。 | 請參閱[Bug 和問題，請在 GitHub 上的](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1)。 |
 | &nbsp; | &nbsp; |

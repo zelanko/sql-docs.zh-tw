@@ -2,20 +2,20 @@
 title: 什麼是應用程式部署？
 titleSuffix: SQL Server 2019 big data clusters
 description: 本文說明在 SQL Server 2019 巨量資料叢集 （預覽） 上的應用程式部署。
-author: jterh
-ms.author: jroth
+author: jeroenterheerdt
+ms.author: jterh
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 03/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 1a6ba9caed2b01abc50e16e34d1a13413af2d0ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e103acdcfd11b3693e6b1ba343258ee00c16572
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801862"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729191"
 ---
 # <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>什麼是 SQL Server 2019 巨量資料叢集上的應用程式部署？
 

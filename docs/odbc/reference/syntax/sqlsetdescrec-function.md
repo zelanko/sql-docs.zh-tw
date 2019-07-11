@@ -20,12 +20,12 @@ ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f76974a17fc12c4a72623c133586690c81269d06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cee1f41c76a79edf1d78d8b94b07107c3c2771e0
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536279"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793157"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec 函式
 **合規性**  
@@ -101,7 +101,7 @@ SQLRETURN SQLSetDescRec(
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足情況。|  
 |HY016|無法修改實作資料列描述項|*DescriptorHandle*引數為 IRD 相關聯。|  
 |HY021|不一致的描述元資訊|*型別* 欄位中或任何其他的描述元中的 SQL_DESC_TYPE 欄位相關聯的欄位不是有效或一致。<br /><br /> 描述項一致性檢查期間檢查的資訊不一致。 （請參閱 「 一致性檢查，」 本節稍後的）。|  
-|HY090|字串或緩衝區長度無效|(DM) 驅動程式的 ODBC 2 *.x*驅動程式，描述元是 ARD， *ColumnNumber*引數設定為 0，並指定引數的值*Columnsize*已不等於 4。|  
+|HY090|字串或緩衝區長度無效|(DM) 驅動程式的 ODBC *2.x*驅動程式，描述元是 ARD， *ColumnNumber*引數設定為 0，並指定引數的值*Columnsize*已不等於 4。|  
 |HY117|連接已因為未知的交易狀態暫止。 只中斷連線，並允許唯讀的函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函式](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYT01|連接逾時過期|連接逾時期限到期之前的資料來源回應要求。 透過設定連接逾時期限**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
 |IM001|驅動程式不支援此函式|(DM) 驅動程式相關聯*DescriptorHandle*不支援此函式。|  

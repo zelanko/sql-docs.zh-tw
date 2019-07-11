@@ -15,12 +15,12 @@ ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 623ac38791eebc6db84380dfadd499651af938af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56caa8131cea834b88eeb338bb05d20c25349ea9
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280916"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794157"
 ---
 # <a name="sql-data-types"></a>SQL 資料類型
 每個 DBMS 定義自己的 SQL 類型。 每個 ODBC 驅動程式會顯示只有這些 SQL 資料型別相關聯的 DBMS 所定義。 驅動程式的對應方式的相關資訊 DBMS SQL 類型對 ODBC 定義的 SQL 型別識別項和驅動程式將 DBMS SQL 類型對應至它自己的驅動程式專屬 SQL 型別識別項的方式透過呼叫傳回**SQLGetTypeInfo**。 驅動程式也會傳回 SQL 資料類型，描述資料類型的資料行和參數，透過呼叫時**SQLColAttribute**， **SQLColumns**， **SQLDescribeCol**，**SQLDescribeParam**， **SQLProcedureColumns**，並**SQLSpecialColumns**。  
@@ -86,7 +86,7 @@ ms.locfileid: "63280916"
   
  [5] 取決於實作，SQL_FLOAT 的有效位數可以是 24 或 53： 如果它是 24，SQL_FLOAT 資料型別等同於 SQL_REAL;如果是 53，SQL_FLOAT 資料型別是 SQL_DOUBLE 相同。  
   
- [6] 在 ODBC 3 *.x*，SQL date、 time 和 timestamp 資料類型是 SQL_TYPE_DATE、 SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP，分別; 在 ODBC 2。*x*，資料類型是 SQL_DATE、 SQL_TIME、 和 SQL_TIMESTAMP。  
+ [6] 在 ODBC *3.x*，SQL date、 time 和 timestamp 資料類型是 SQL_TYPE_DATE、 SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP，分別; 在 ODBC *2.x*的資料類型為 SQL_DATE、 SQL_TIME、 和 SQL_時間戳記。  
   
  [7] 如需間隔 SQL 資料類型的詳細資訊，請參閱[間隔資料類型](../../../odbc/reference/appendixes/interval-data-types.md)區段中的，稍後在本附錄中。  
   

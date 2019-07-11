@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistpublisher
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c01d00362dc55deb1fa9da8df49beebdaf82b170
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: b7f55d89054ff7d950921e0c6762770c6e714500
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492770"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716752"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 > [!IMPORTANT]  
 >  請勿使用空白密碼。 請使用增強式密碼。  
   
-`[ @working_directory = ] 'working_directory'` 是用來儲存發行集的資料和結構描述檔案的工作目錄的名稱。 *working_directory*已**nvarchar(255)**，預設值是 ReplData 資料夾，這個執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，例如`C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`。 這個名稱應該用 UNC 格式來指定。  
+`[ @working_directory = ] 'working_directory'` 是用來儲存發行集的資料和結構描述檔案的工作目錄的名稱。 *working_directory*已**nvarchar(255)** ，預設值是 ReplData 資料夾，這個執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，例如`C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`。 這個名稱應該用 UNC 格式來指定。  
 
  針對 Azure SQL Database，使用`\\<storage_account>.file.core.windows.net\<share>`。
 
@@ -74,7 +74,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
-`[ @trusted = ] 'trusted'` 這個參數已被取代，並提供回溯相容性。 *受信任*是**nvarchar(5)**，並設定為任何內容，不過**false**會導致錯誤。  
+`[ @trusted = ] 'trusted'` 這個參數已被取代，並提供回溯相容性。 *受信任*是**nvarchar(5)** ，並設定為任何內容，不過**false**會導致錯誤。  
   
 `[ @encrypted_password = ] encrypted_password` 設定*encrypted_password*不受支援。 嘗試將這個**位元**參數來**1**會導致錯誤。  
   

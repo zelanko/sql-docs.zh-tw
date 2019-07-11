@@ -20,12 +20,12 @@ ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81659ae2cab2343a7fcf03327cbdc89c0db6c8c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3581c5ae7b9f4e41d0f8646f4e6e1d2cca1a2ca8
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536311"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793719"
 ---
 # <a name="sqltableprivileges-function"></a>SQLTablePrivileges 函數
 **合規性**  
@@ -114,9 +114,9 @@ SQLRETURN SQLTablePrivileges(
 > [!NOTE]  
 >  如需一般用途、 引數和 ODBC 目錄函數的傳回的資料的詳細資訊，請參閱[目錄函數](../../../odbc/reference/develop-app/catalog-functions.md)。  
   
- 下列資料行已重新命名為 ODBC 3 *.x*。 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
+ 下列資料行已重新命名為 ODBC *3.x*。 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
   
-|ODBC 2.0 資料行|ODBC 3 *.x*資料行|  
+|ODBC 2.0 資料行|ODBC *3.x*資料行|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

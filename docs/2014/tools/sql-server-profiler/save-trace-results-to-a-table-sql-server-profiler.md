@@ -13,12 +13,12 @@ ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4679576a8336d9a35299622b8513b9c8ae855287
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8571f7273cc2667040ffffc8ffbfb0df4e2a6ef6
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267776"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792693"
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>將追蹤結果儲存到資料表 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]將追蹤結果儲存到資料庫資料表。  
@@ -42,7 +42,7 @@ ms.locfileid: "63267776"
   
 6.  在 [資料表]  清單中，輸入或選取追蹤結果的資料表名稱。 按一下 **[確定].**  
   
-7.  在 [追蹤屬性]  對話方塊中，選取 [設定最大資料列數 (單位：千)]  核取方塊，以指定要儲存的最大資料列數。  
+7.  在 **追蹤屬性**對話方塊中，選取**設定 （以千為單位） 的最大的資料列數**核取方塊以指定要儲存的資料列數目上限。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler](sql-server-profiler.md)  

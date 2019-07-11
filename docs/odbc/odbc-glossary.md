@@ -14,12 +14,12 @@ ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33116adaf74ed2d3fc52fec460859a7672ce2d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6741b5f07f2427ef502f5177bbf01acd56c4d5b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057780"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794172"
 ---
 # <a name="odbc-glossary"></a>ODBC 詞彙
 ## <a name="a"></a>A  
@@ -55,7 +55,7 @@ ms.locfileid: "63057780"
   
 ## <a name="b"></a>B  
  **行為變更**  
- 在特定的功能，從 ODBC 3 中變更 *.x* ODBC 2 的行為。*x*行為，或反之亦然。 因變更 SQL_ATTR_ODBC_VERSION 環境屬性。  
+ 變更特定的功能，從 ODBC *3.x*行為，以 ODBC *2.x*行為，或反之亦然。 因變更 SQL_ATTR_ODBC_VERSION 環境屬性。  
   
  **二進位大型物件 (BLOB)**  
  透過特定數目的位元組為單位，例如 255 任何二進位資料。 通常會更長。 這類資料通常會傳送至，並從組件中的資料來源擷取。 也稱為*長資料*。  
@@ -75,7 +75,7 @@ ms.locfileid: "63057780"
  **byte**  
  8 位元或一個八位元。 *另請參閱*八位元。  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
  **C 資料類型**  
  C 程式中，在此情況下應用程式中的變數資料類型。  
   

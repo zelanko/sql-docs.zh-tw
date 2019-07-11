@@ -1,32 +1,32 @@
 ---
-title: 部署快速入門
+title: 部署指令碼
 titleSuffix: SQL Server big data clusters
 description: 逐步解說部署的 SQL Server 2019 巨量資料叢集 （預覽） 在 Azure Kubernetes Service (AKS)。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 05/22/2019
-ms.topic: quickstart
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d1b8c595512d3268e0e04482d464f6c19ee01234
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0254b76b0845ff5f913d2d0ab69324ddd0072923
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798742"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728779"
 ---
-# <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入門：部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集
+# <a name="deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-在本快速入門中，您可以使用範例部署指令碼部署 SQL Server 2019 巨量資料叢集 （預覽） Azure Kubernetes Service (AKS)。 
+在本教學課程中，您可以使用範例部署指令碼部署 SQL Server 2019 巨量資料叢集 （預覽） Azure Kubernetes Service (AKS)。 
 
 > [!TIP]
 > AKS 會為您的巨量資料叢集裝載 Kubernetes 的只有一個選項。 若要瞭解其他部署選項，如何以自訂部署選項，請參閱[如何部署 SQL Server 的巨量資料叢集的 Kubernetes 上](deployment-guidance.md)。
 
-這裡使用預設的巨量資料叢集部署是由 SQL Master 執行個體、 一個計算集區執行個體、 兩個資料集區執行個體和兩個儲存體集區執行個體所組成。 資料會保存使用使用 AKS 預設儲存體類別的 Kubernetes 永續性磁碟區。 在本快速入門使用的預設組態是適用於開發/測試環境。
+這裡使用預設的巨量資料叢集部署是由 SQL Master 執行個體、 一個計算集區執行個體、 兩個資料集區執行個體和兩個儲存體集區執行個體所組成。 資料會保存使用使用 AKS 預設儲存體類別的 Kubernetes 永續性磁碟區。 在本教學課程使用的預設組態是適用於開發/測試環境。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -50,7 +50,7 @@ az login
 
 ## <a name="download-the-deployment-script"></a>下載部署指令碼
 
-本快速入門中會自動建立巨量資料叢集上使用 python 指令碼的 AKS**部署-sql-巨量的資料-aks.py**。 如果您已安裝適用於 python **mssqlctl**，您應該能夠成功地執行指令碼，在本快速入門。 
+本教學課程中會自動建立巨量資料叢集上使用 python 指令碼的 AKS**部署-sql-巨量的資料-aks.py**。 如果您已安裝適用於 python **mssqlctl**，您應該能夠成功地執行指令碼，在本教學課程。 
 
 在 Windows PowerShell 或 Linux bash 提示字元中，執行下列命令，以從 GitHub 下載的部署指令碼。
 

@@ -14,12 +14,12 @@ ms.assetid: 9de15ca0-fe6a-4634-8709-a928d3c9cc73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a883377a17aa9e0c3426b4805263616375ea6215
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d58b5791fc3cd6418f5594828aff6c8419cc7e1
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198403"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793411"
 ---
 # <a name="installation-components"></a>安裝元件
 > [!NOTE]  
@@ -30,7 +30,7 @@ ms.locfileid: "63198403"
  ![安裝元件之間的關聯性](../../../odbc/reference/install/media/pr29.gif "pr29")  
   
 > [!IMPORTANT]
->  ODBC 2 中所使用 Odbc.inf 檔案。*x*來描述每個 ODBC 所需的檔案元件不使用在 ODBC 3 *.x*。 ODBC 3 隨附的驅動程式 *.x*元件不需要建立 Odbc.inf 檔案。 移除**SQLInstallDriver**並**SQLInstallODBC**，並取代**SQLInstallTranslator**，轉譯 Odbc.inf 不必要。 現在提供使用 Driver 關鍵字 Odbc.inf 章節中的驅動程式資訊*lpszDriver*中的引數**SQLInstallDriverEx**。 轉譯器資訊，用來在 [ODBC 轉譯程式] 和轉譯程式規格 Odbc.inf 區段現在提供*lpszTranslator*引數**SQLInstallTranslatorEx**。 這些變更可讓 ODBC 安裝程式，能夠更容易移植到不同的平台。  
+>  Odbc.inf 檔案是用於 ODBC *2.x*來描述每個 ODBC 所需的檔案元件不會用於 ODBC *3.x*。 驅動程式隨附 ODBC *3.x*元件不需要建立 Odbc.inf 檔案。 移除**SQLInstallDriver**並**SQLInstallODBC**，並取代**SQLInstallTranslator**，轉譯 Odbc.inf 不必要。 現在提供使用 Driver 關鍵字 Odbc.inf 章節中的驅動程式資訊*lpszDriver*中的引數**SQLInstallDriverEx**。 轉譯器資訊，用來在 [ODBC 轉譯程式] 和轉譯程式規格 Odbc.inf 區段現在提供*lpszTranslator*引數**SQLInstallTranslatorEx**。 這些變更可讓 ODBC 安裝程式，能夠更容易移植到不同的平台。  
   
  如需有關這些元件的詳細資訊，請參閱本節結尾處的下列主題。  
   

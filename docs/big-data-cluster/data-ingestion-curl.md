@@ -2,20 +2,20 @@
 title: 使用 curl 將資料載入 HDFS |Microsoft Docs
 titleSuffix: SQL Server big data clusters
 description: 將資料載入 HDFS，在 SQL Server 2019 巨量資料叢集上使用 curl。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d1e8da7430048381a320936abef35cdd64bad134
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40907155c819e4a1c6f9117a3b345fa8376efeb2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800704"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729021"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>將資料載入 HDFS，在 SQL Server 的巨量資料叢集上使用 curl
 
@@ -40,7 +40,7 @@ kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq
 
 `https://<gateway-svc-external service external IP address>:30443/gateway/default/webhdfs/v1/`
 
-例如：
+例如:
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 

@@ -16,12 +16,12 @@ ms.assetid: b1453a65-ae03-4061-b0cf-a8434d8bc40b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1105f3adc3762e01c601d9c882bfbf0f05b9bad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eecc56b357b580d791d5c7c7b3fc7b57e99654fd
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026654"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794136"
 ---
 # <a name="backward-compatibility-of-c-data-types"></a>C 資料類型的回溯相容性
-SQL_C_SHORT、 SQL_C_LONG、 和 SQL_C_TINYINT 已取代 ODBC 中的帶正負號和不帶正負號的類型：SQL_C_SSHORT 和 SQL_C_USHORT、 SQL_C_SLONG 和 SQL_C_ULONG、 SQL_C_STINYINT 和 SQL_C_UTINYINT。 ODBC 3 *.x*驅動程式就應該使用 ODBC 2。*x*應用程式應支援 SQL_C_SHORT、 SQL_C_LONG、 和 SQL_C_TINYINT，，因為它們呼叫時，驅動程式管理員就會將透過傳遞給驅動程式。
+SQL_C_SHORT、 SQL_C_LONG、 和 SQL_C_TINYINT 已取代 ODBC 中的帶正負號和不帶正負號的類型：SQL_C_SSHORT 和 SQL_C_USHORT、 SQL_C_SLONG 和 SQL_C_ULONG、 SQL_C_STINYINT 和 SQL_C_UTINYINT。 ODBC *3.x*驅動程式就應該使用 ODBC *2.x*應用程式應支援 SQL_C_SHORT、 SQL_C_LONG、 和 SQL_C_TINYINT，，因為它們呼叫時，驅動程式管理員會將他們透過傳遞驅動程式。

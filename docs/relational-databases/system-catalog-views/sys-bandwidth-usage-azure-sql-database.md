@@ -16,16 +16,16 @@ helpviewer_keywords:
 - sys.bandwidth_usage
 - bandwidth_usage
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e3432bbf535b329f539b9404cb0f5b5b87d38542
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4b7534a806a856dee922ead1055da6a7567a4d8c
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035709"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716598"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
@@ -42,10 +42,10 @@ ms.locfileid: "56035709"
   
 |Column Name|描述|  
 |-----------------|-----------------|  
-|**time**|頻寬消耗的小時。 這個檢視中的資料列是以每小時為基礎。 例如，2009-09-19 02:00:00.000 表示頻寬是在 2009 年 9 月 19 日的上午 2:00  和 3:00 之間耗用。|  
+|**time**|頻寬消耗的小時。 這個檢視中的資料列是以每小時為基礎。 例如，2009-09-19 02:00:00.000 表示頻寬是在 2009 年 9 月 19 日的上午 2:00 和 3:00 之間耗用。|  
 |**database_name**|使用頻寬的資料庫名稱。|  
-|**direction**|使用的頻寬類型，下列其中一個值：<br /><br /> 輸入：移入 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的資料。<br /><br /> 輸出：從 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 移出的資料。|  
-|**class**|使用的頻寬類別，下列其中一個值：<br />內部：在 Azure 平台中移動的資料。<br />外部功能：從 Azure 平台移出的資料。<br /><br /> 這個類別只會在資料庫參與區域 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]) 之間的連續複製關聯性時傳回。 如果指定的資料庫未參與任何連續複製關聯性，則不會傳回"Interlink"資料列。 如需詳細資訊，請參閱本主題後面的＜備註＞一節。|  
+|**direction**|使用的頻寬類型，下列其中一個值：<br /><br /> 輸入：資料移入[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 輸出：移出資料[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
+|**class**|使用的頻寬類別，下列其中一個值：<br />內部：在 Azure 平台中移動的資料。<br />外部功能：Azure 平台移出的資料。<br /><br /> 這個類別只會在資料庫參與區域 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]) 之間的連續複製關聯性時傳回。 如果指定的資料庫未參與任何連續複製關聯性，則不會傳回"Interlink"資料列。 如需詳細資訊，請參閱本主題後面的＜備註＞一節。|  
 |**time_period**|發生使用時的時間週期是尖峰時間或離峰。 The Peak time is based on the region in which the server was created. 例如，如果伺服器是在 "US_Northwest" 區域中建立，則尖峰時間會定義為介於太平洋標準時間上午 10:00 到 和 06:00:00 執行報表， 之間。|  
 |**quantity**|使用的頻寬數量，以 KB 為單位。|  
   

@@ -2,20 +2,20 @@
 title: 設定 Azure Kubernetes 服務
 titleSuffix: SQL Server big data clusters
 description: 了解如何設定適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署的 Azure Kubernetes Service (AKS)。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: ad42063b2c4959429bdc54e3772aa755bc32e2f2
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: c5860e4c26008cf94b9ec168bb6a705f15ae7cd1
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412953"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728915"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>設定適用於 SQL Server 的巨量資料叢集部署的 Azure Kubernetes 服務
 
@@ -30,7 +30,7 @@ AKS 可讓您更輕鬆地建立、 設定及管理預先設定的虛擬機器的
 > [!TIP] 
 > 部署 AKS 和 SQL Server 的巨量資料叢集的範例 python 指令碼，請參閱[快速入門：將巨量資料叢集的 Azure Kubernetes Service (AKS) 上的 SQL Server 部署](quickstart-big-data-cluster-deploy.md)。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - [部署 SQL Server 2019 巨量資料的工具](deploy-big-data-tools.md):
    - **Kubectl**

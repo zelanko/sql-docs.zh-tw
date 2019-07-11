@@ -2,20 +2,20 @@
 title: 載入範例資料
 titleSuffix: SQL Server big data clusters
 description: 本教學課程會示範如何將範例資料載入 SQL Server 的巨量資料叢集。 範例資料包含在 SQL Server 的主要執行個體中的關聯式資料。 它也會包含在存放集區中的 HDFS 資料。 這項資料會支援其他教學課程，這一節。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 04/23/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d78fd9ecce71e9b7ffb86441fab134b1180d058a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4ea5540c0188ec9a57ad8b6780cf3ab6af5dfc2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770832"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727351"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>教學課程：將範例資料載入 SQL Server 的巨量資料叢集
 

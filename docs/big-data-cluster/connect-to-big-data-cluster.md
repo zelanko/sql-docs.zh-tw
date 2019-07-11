@@ -2,19 +2,20 @@
 title: 連接到 master 和 HDFS
 titleSuffix: SQL Server big data clusters
 description: 了解如何連接到 SQL Server 的主要執行個體和 SQL Server 2019 巨量資料叢集 （預覽） 的 HDFS/Spark 閘道。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 245e88034194a01908b69d545deb9fa717c19a4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4eebad10a18b98ecc5d62ab981dcb3955ae2d29
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782977"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729083"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>連線到 SQL Server 的巨量資料叢集使用 Azure Data Studio
 
@@ -22,7 +23,7 @@ ms.locfileid: "66782977"
 
 本文說明如何從 Azure Data Studio 連接到 SQL Server 2019 巨量資料叢集 （預覽）。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 已部署[SQL Server 2019 巨量資料叢集](deployment-guidance.md)。
 - [SQL Server 2019 巨量資料工具](deploy-big-data-tools.md):

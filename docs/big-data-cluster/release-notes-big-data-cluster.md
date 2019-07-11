@@ -2,20 +2,20 @@
 title: 版本資訊
 titleSuffix: SQL Server big data clusters
 description: 本文說明 SQL Server 2019 巨量資料叢集 （預覽） 的已知的問題與最新的更新。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 389a521d256becb431b23ec073cadcde7c116952
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 2937734ad4543d9dc59e777ceaddfc597da148d2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681548"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794094"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>版本資訊適用於 SQL Server 上的巨量資料叢集
 
@@ -113,6 +113,11 @@ ms.locfileid: "67681548"
 - SA_PASSWORD 屬於環境的且可探索 （例如在線傾印檔案）。 您必須在部署之後，重設 SA_PASSWORD 主要執行個體上。 這不是 bug，但安全性步驟。 如需有關如何變更 SA_PASSWORD 的 Linux 容器的詳細資訊，請參閱[變更 SA 密碼](../linux/quickstart-install-connect-docker.md#sapassword)。
 
 - AKS 記錄檔可能包含適用於巨量資料叢集部署的 SA 密碼。
+
+#### <a name="kibana-logs-dashboards"></a>Kibana 記錄儀表板
+
+- 之間 Aris CTP 3.0 和 3.1 版，Kibana 版本已從 6.3.1 升級至 7.0.1。  這已在進行 microsoft Edge 瀏覽器與 Kibana 不相容。 載入 Kibana 儀表板在 Edge 中的目前版本時，使用者會看到空白頁面。 請參閱[此處]( https://www.elastic.co/support/matrix#matrix_browse)對於 Kibana.rs 支援瀏覽器 
+
 
 ## <a id="ctp30"></a> CTP 3.0 (5)
 
@@ -312,7 +317,7 @@ ms.locfileid: "67681548"
 | 說明在 Spark 中透過 TensorFlow 執行深度學習時的 GPU 支援。 | [部署具有 GPU 支援的巨量資料叢集並執行 TensorFlow](spark-gpu-tensorflow.md)。 |
 | 預設不會再建立 **SqlDataPool** 和 **SqlStoragePool** 資料來源。 | 視需要手動建立這些資料來源。 請參閱[已知問題](#externaltablesctp24)。 |
 | 資料集區的 `INSERT INTO SELECT` 支援。 | 如需範例，請參閱[教學課程：使用 Transact-SQL 將資料內嵌到 SQL Server 資料集區](tutorial-data-pool-ingest-sql.md)。 |
-| `FORCE SCALEOUTEXECUTION` 和 `DISABLE SCALEOUTEXECUTION` 選項。 | 強制或停用外部資料表上的查詢集區的計算使用。 例如， `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)` 。 |
+| `FORCE SCALEOUTEXECUTION` 和 `DISABLE SCALEOUTEXECUTION` 選項。 | 強制或停用外部資料表上的查詢集區的計算使用。 例如： `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)` 。 |
 | 更新的 AKS 部署建議。 | 評估 AKS 上的巨量資料叢集時，我們現在建議您使用大小為 **Standard_L8s** 的單一節點。 |
 | 將 Spark 執行階段升級至 Spark 2.4。 | |
 

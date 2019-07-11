@@ -19,25 +19,25 @@ ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93c8510bb23bb57244590a472073fc882f9fe64f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a51183964fe36d799e0e62243c6a0012da99727
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208467"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793279"
 ---
 # <a name="writing-odbc-3x-applications"></a>撰寫 ODBC 3.x 應用程式
-當 ODBC 2。*x*應用程式會升級到 ODBC 3。*x*，就應該撰寫，它會使用這兩個 ODBC 2。*x*和 3。*x*驅動程式。 應用程式應該納入條件式的程式碼，以充分利用 ODBC 3。*x*功能。  
+當 ODBC *2.x*應用程式會升級到 ODBC *3.x*，就應該撰寫，它會使用這兩個 ODBC *2.x*並*3.x*驅動程式. 應用程式應該納入條件式的程式碼，以充分利用 ODBC *3.x*功能。  
   
- SQL_ATTR_ODBC_VERSION 環境屬性應該設 SQL_OV_ODBC2。 這可確保，驅動程式的行為類似 ODBC 2 *.x*一節所述的變更方面的驅動程式[行為變更](../../../odbc/reference/develop-app/behavioral-changes.md)。  
+ SQL_ATTR_ODBC_VERSION 環境屬性應該設 SQL_OV_ODBC2。 這可確保，驅動程式的行為如 ODBC *2.x*一節所述的變更方面的驅動程式[行為變更](../../../odbc/reference/develop-app/behavioral-changes.md)。  
   
- 如果應用程式會使用任何一節所述的功能[新功能](../../../odbc/reference/develop-app/new-features.md)，條件式的程式碼應該用來判斷驅動程式是否為 ODBC 3。*x*或 ODBC 2 *.x*驅動程式。 應用程式會使用**SQLGetDiagField**並**SQLGetDiagRec**若要取得 ODBC 3。*x*在執行這些條件程式碼片段上處理的錯誤時的 Sqlstate。 應該考慮下列各點有關的新功能：  
+ 如果應用程式會使用任何一節所述的功能[新功能](../../../odbc/reference/develop-app/new-features.md)，條件式的程式碼應該用來判斷驅動程式是否為 ODBC *3.x*或 ODBC *2.x*驅動程式。 應用程式會使用**SQLGetDiagField**並**SQLGetDiagRec**若要取得 ODBC *3.x*在執行這些條件程式碼片段上處理的錯誤時的 Sqlstate。 應該考慮下列各點有關的新功能：  
   
--   受影響的資料列集大小的行為變更的應用程式應該小心，不要呼叫**SQLFetch**當陣列大小大於 1。 這些應用程式應該呼叫，換成**SQLExtendedFetch**呼叫**SQLSetStmtAttr**若要設定 SQL_ATTR_ARRAY_STATUS_PTR 陳述式屬性以及**SQLFetchScroll**，好讓它們擁有與這兩個 ODBC 3 搭配運作的通用程式碼。*x*和 ODBC 2。*x*驅動程式。 因為**SQLSetStmtAttr** SQL_ATTR_ROW_ARRAY_SIZE 與將對應到**SQLSetStmtAttr**使用的 ODBC 2 SQL_ROWSET_SIZE。*x*驅動程式，應用程式可以只將 SQL_ATTR_ROW_ARRAY_SIZE 設定為其多資料列的 fetch 作業。  
+-   受影響的資料列集大小的行為變更的應用程式應該小心，不要呼叫**SQLFetch**當陣列大小大於 1。 這些應用程式應該呼叫，換成**SQLExtendedFetch**呼叫**SQLSetStmtAttr**若要設定 SQL_ATTR_ARRAY_STATUS_PTR 陳述式屬性以及**SQLFetchScroll**，好讓它們擁有可搭配 ODBC 使用的通用程式碼*3.x*和 ODBC *2.x*驅動程式。 因為**SQLSetStmtAttr** SQL_ATTR_ROW_ARRAY_SIZE 與將對應到**SQLSetStmtAttr**與 odbc SQL_ROWSET_SIZE *2.x*驅動程式，應用程式就可以設定 SQL其多資料列的 fetch 作業 _ATTR_ROW_ARRAY_SIZE。  
   
--   要升級的大部分應用程式不會實際影響 SQLSTATE 程式碼中的變更。 對於會影響這些應用程式，它們可以機械搜尋及取代在大部分情況下，使用 「 SQLSTATE 對應 」 一節中的錯誤轉換資料表，來轉換 ODBC 3。*x* ODBC 2 的錯誤代碼 *.x*代碼。 因為 ODBC 3 *.x*驅動程式管理員會執行對應的 ODBC 2。*x* ODBC 3 的 Sqlstate。*x* Sqlstate，這些應用程式撰寫者需要只檢查針對 ODBC 3。*x* Sqlstate，而不必擔心包括 ODBC 2。*x*條件式的程式碼中的 Sqlstate。  
+-   要升級的大部分應用程式不會實際影響 SQLSTATE 程式碼中的變更。 對於會影響這些應用程式，它們可以機械搜尋及取代在大部分情況下，使用 「 SQLSTATE 對應 」 一節中的錯誤轉換資料表，將 ODBC *3.x* odbc 錯誤碼*2.x*程式碼。 因為 ODBC *3.x*驅動程式管理員會執行對應從 ODBC *2.x* odbc Sqlstate *3.x* Sqlstate，這些應用程式撰寫者需要只檢查適用於 ODBC *3.x* Sqlstate，而不必擔心包括 ODBC *2.x*條件式的程式碼中的 Sqlstate。  
   
--   如果應用程式能妥善使用日期、 時間和時間戳記資料類型，應用程式可以宣告本身為 ODBC 2。*x*應用程式並使用其現有的程式碼而不是使用的條件與程式碼。  
+-   如果應用程式能妥善使用日期、 時間和時間戳記資料類型，應用程式可以宣告本身為 ODBC *2.x*應用程式並使用其現有的程式碼而不是使用的條件與程式碼。  
   
  升級也應該包含下列步驟：  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63208467"
   
 -   取代所有對**SQLTransact**呼叫**SQLEndTran**。 如果在最右邊有效的控制代碼**SQLTransact**呼叫是環境控制代碼*HandleType*利用 SQL_HANDLE_ENV 的引數應在**SQLEndTran**呼叫適當*處理*引數。 如果最右邊有效的控制代碼，在您**SQLTransact**呼叫是連接控制代碼*HandleType*利用 SQL_HANDLE_DBC 的引數應用於**SQLEndTran**呼叫適當*處理*引數。  
   
--   取代所有對**SQLColAttributes**呼叫**SQLColAttribute**。 如果*FieldIdentifier*引數是 SQL_COLUMN_PRECISION、 SQL_COLUMN_SCALE 或 SQL_COLUMN_LENGTH，不會將函式的名稱以外的任何變更。 如果沒有，請變更*FieldIdentifier*從 SQL_DESC_XXXX 的 SQL_COLUMN_XXXX。 如果*FieldIdentifier* SQL_DESC_CONCISE_TYPE 且資料類型是 datetime 資料類型，將變更為對應的 ODBC 3 *.x*資料型別。  
+-   取代所有對**SQLColAttributes**呼叫**SQLColAttribute**。 如果*FieldIdentifier*引數是 SQL_COLUMN_PRECISION、 SQL_COLUMN_SCALE 或 SQL_COLUMN_LENGTH，不會將函式的名稱以外的任何變更。 如果沒有，請變更*FieldIdentifier*從 SQL_DESC_XXXX 的 SQL_COLUMN_XXXX。 如果*FieldIdentifier* SQL_DESC_CONCISE_TYPE 且資料類型是 datetime 資料類型，將變更為對應的 ODBC *3.x*資料型別。  
   
 -   如果使用區塊資料指標、 可捲動資料指標，或兩者，應用程式會執行下列動作：  
   

@@ -20,12 +20,12 @@ ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c49e7fd827cfd48df07e5e5a01367977504f4511
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f3fe596428450795426537f5c2f5913a6c83a46
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536266"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793745"
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 函數
 **合規性**  
@@ -151,9 +151,9 @@ SQLRETURN SQLSpecialColumns(
   
  **SQLSpecialColumns**標準的結果集，依 SCOPE 來排序的方式傳回結果。  
   
- 下列資料行已重新命名為 ODBC 3 *.x*。 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
+ 下列資料行已重新命名為 ODBC *3.x*。 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
   
-|ODBC 2.0 資料行|ODBC 3 *.x*資料行|  
+|ODBC 2.0 資料行|ODBC *3.x*資料行|  
 |---------------------|-----------------------|  
 |PRECISION|COLUMN_SIZE|  
 |LENGTH|BUFFER_LENGTH|  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_adddistributor
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ada0d0323f4fe8e7f73150560161d8b65738dc13
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 8cf36a02d81b8732d80beb7c97d025a74138cd43
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494310"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716733"
 ---
 # <a name="spadddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

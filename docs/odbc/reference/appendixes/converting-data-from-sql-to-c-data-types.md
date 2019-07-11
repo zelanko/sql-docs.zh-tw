@@ -21,19 +21,19 @@ ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 553596f474cd8e7c4f4c91911b0167d5b1bc0b4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6819b28ba57f1e6314535a6a90ad13de39b4842c
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224468"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793201"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>將資料從 SQL 轉換成 C 資料類型
 當應用程式呼叫**SQLFetch**， **SQLFetchScroll**，或**SQLGetData**，驅動程式會從資料來源擷取資料。 如果有必要，它會將資料轉換中的驅動程式擷取它所指定之資料類型的資料型別*TargetType*中的引數**SQLBindCol**或**SQLGetData。** 最後，它將資料儲存在所指的位置*TargetValuePtr*中的引數**SQLBindCol**或是**SQLGetData** （和 ARD 的 SQL_DESC_DATA_PTR 欄位）。  
   
  下表顯示從 ODBC SQL 的支援的轉換成 ODBC C 資料類型的資料類型。 填滿的圓形表示預設轉換，SQL 資料類型 (資料會轉換為時的 C 資料類型的值*TargetType*是 SQL_C_DEFAULT)。 空心圓表示支援的轉換。  
   
- 適用於 ODBC 3 *.x*應用程式使用 ODBC 2。*x*驅動程式、 驅動程式特定資料類型可能不支援的轉換。  
+ 適用於 ODBC *3.x*應用程式使用 ODBC *2.x*驅動程式、 驅動程式特定資料類型可能不支援的轉換。  
   
  已轉換的資料格式不會受到 Windows® 國家/地區設定。  
   

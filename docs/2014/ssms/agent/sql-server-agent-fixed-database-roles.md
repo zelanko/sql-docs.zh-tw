@@ -19,12 +19,12 @@ ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a8067aaa2133648c1a1ea4fff81db08c139d5278
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245987"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793398"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server Agent 固定資料庫角色
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有下列 **msdb** 資料庫固定資料庫角色，讓管理員在存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式時具有更細微的控制權。 以下列出這些角色 (存取權限由少至多排列)：  
@@ -98,7 +98,7 @@ ms.locfileid: "63245987"
 ### <a name="sqlagentoperatorrole-permissions"></a>SQLAgentOperatorRole 權限  
  **SQLAgentOperatorRole** 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色中具備最多權限的角色。 它包括 **SQLAgentUserRole** 和 **SQLAgentReaderRole**的所有權限。 此角色的成員也可以檢視操作員和 Proxy 的屬性，並列舉出伺服器上可用的 Proxy 和警示。  
   
- **SQLAgentOperatorRole** 成員對本機作業和排程擁有額外的權限。 他們可以執行、停止或啟動所有本機作業，也可以刪除伺服器上任何本機作業的作業記錄。 還可以啟用或停用伺服器上所有本機作業和排程。 若要啟用或停用本機作業或排程，此角色的成員必須使用預存程序 **sp_update_job** 和 **sp_update_schedule**。 只有指定作業或排程名稱或識別碼的參數，以及 **@enabled** 參數可由 **SQLAgentOperatorRole**的成員。 如果他們指定任何其他參數，執行這些預存程序會失敗。 **SQLAgentOperatorRole** 成員無法變更作業擁有權來取得他們尚未擁有之作業的存取權。  
+ **SQLAgentOperatorRole** 成員對本機作業和排程擁有額外的權限。 他們可以執行、停止或啟動所有本機作業，也可以刪除伺服器上任何本機作業的作業記錄。 還可以啟用或停用伺服器上所有本機作業和排程。 若要啟用或停用本機作業或排程，此角色的成員必須使用預存程序 **sp_update_job** 和 **sp_update_schedule**。 只有指定作業或排程名稱或識別碼的參數和 **\@啟用**的成員可以指定參數**SQLAgentOperatorRole**。 如果他們指定任何其他參數，執行這些預存程序會失敗。 **SQLAgentOperatorRole** 成員無法變更作業擁有權來取得他們尚未擁有之作業的存取權。  
   
  **SQLAgentOperatorRole** 的成員可以看見 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管中的 [作業]  、[警示]  、[操作員]  和 [Proxy]  節點。 只有 [錯誤記錄檔]  節點對此角色的成員是不可見的。  
   
@@ -123,9 +123,9 @@ ms.locfileid: "63245987"
   
  <sup>2</sup>無法變更作業擁有權。  
   
- <sup>3</sup> **SQLAgentOperatorRole**成員可以啟用或停用本機作業，它們不是由使用預存程序擁有**sp_update_job**指定值和 **@enabled** 而 **@job_id** (或 **@job_name** ) 參數。 如果此角色的成員為此預存程序指定任何其他參數，執行程序會失敗。  
+ <sup>3</sup> **SQLAgentOperatorRole**成員可以啟用或停用本機作業，它們不是由使用預存程序擁有**sp_update_job**指定值和 **\@啟用**並 **\@job_id** (或 **\@job_name**) 參數。 如果此角色的成員為此預存程序指定任何其他參數，執行程序會失敗。  
   
- <sup>4</sup> **SQLAgentOperatorRole**成員可以啟用或停用的排程，它們不是由使用預存程序擁有**sp_update_schedule**指定值和 **@enabled** 並 **@schedule_id** (或 **@name** ) 參數。 如果此角色的成員為此預存程序指定任何其他參數，執行程序會失敗。  
+ <sup>4</sup> **SQLAgentOperatorRole**成員可以啟用或停用的排程，它們不是由使用預存程序擁有**sp_update_schedule**指定值和 **\@啟用**並 **\@schedule_id** (或 **\@名稱**) 參數。 如果此角色的成員為此預存程序指定任何其他參數，執行程序會失敗。  
   
 ## <a name="assigning-users-multiple-roles"></a>指派多個角色給使用者  
  **系統管理員 (sysadmin)** 固定伺服器角色的成員，可存取所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的功能。 如果使用者不是 **系統管理員 (sysadmin)** 角色的成員，但是是多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色的成員，請記住這些角色是同心權限模型。 因為較多權限的角色永遠包含較少權限的角色的所有權限，因此使用者若為多個角色的成員，會自動擁有較多權限的角色成員所關聯的權限。  

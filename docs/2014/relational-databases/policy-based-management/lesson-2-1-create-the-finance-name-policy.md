@@ -10,12 +10,12 @@ ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ec01dd697e04b5d4b5d8d943a855a62adac48f60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4484f9ccb76ea31c95a5392570e18df2c4b0ff5
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090620"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792907"
 ---
 # <a name="create-the-finance-name-policy"></a>建立 Finance Name 原則
   在這項工作中，您將會建立名為 Finance 的資料庫，然後建立要求所有資料表都以字母 **fintbl** 為開頭的條件。 接著，您將會建立原則和原則類別目錄，以便針對 Finance 資料庫中的資料表強制執行命名標準。  
@@ -39,7 +39,7 @@ ms.locfileid: "66090620"
   
 3.  在 [Facet]  清單中，選取 [多部分名稱]  。  
   
-4.  在 [運算式]  區域的 [欄位]  方塊中，選取 [@Name]  。在 [運算子]  方塊中，選取 [Like]  。然後，在 [值]  方塊中，輸入 **'fintbl%'** ，強制所有資料表名稱都以字母 **fintbl** 為開頭。  
+4.  在 **運算式**區域中**欄位**方塊中，選取 **\@名稱**; 在**運算子**方塊中，選取**像是**; 然後在**值**方塊中，輸入 **'fintbl %'** 若要強制所有資料表名稱以字母開頭**fintbl**。  
   
 5.  在 [描述]  頁面上，輸入**財務資料表名稱的開頭必須是 fintbl**，然後按一下 [確定]  建立條件。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66090620"
   
 6.  在 [建立新條件]  對話方塊的 [名稱]  方塊中，輸入 **Finance Database**。  
   
-7.  在 [運算式]  方塊中，完成要包含 **@Name = 'Finance'** 的運算式，然後按一下 [確定]  關閉條件頁面。  
+7.  在 **運算式**方塊中，完成要包含的運算式 **\@名稱 = 'Finance'** ，然後按一下**確定**關閉條件頁面。  
   
     > [!NOTE]  
     >  您可能必須按下 TAB 鍵跳離 [值]  方塊，才能啟用 [確定]  按鈕。  

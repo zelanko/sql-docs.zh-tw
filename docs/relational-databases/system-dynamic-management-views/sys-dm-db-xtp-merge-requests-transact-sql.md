@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_merge_requests (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_db_xtp_merge_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
 ms.prod: sql
@@ -10,22 +10,21 @@ ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9fa5034f83f537afa3b7678b57637ffedada6680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c7ff8638aeeb02cdb86643fd1fc6a3241a8db26
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630716"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732545"
 ---
 # <a name="sysdmdbxtpmergerequests-transact-sql"></a>sys.dm_db_xtp_merge_requests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
 追蹤資料庫合併要求。 Merge 要求可能會產生 SQL server，或要求可能已有的使用者[sys.sp_xtp_merge_checkpoint_files & Amp;#40;transact-SQL&AMP;#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md)。
 
 > [!NOTE]
 > 這個動態管理檢視 (DMV)，Microsoft SQL Server 2014 之前的 sys.dm_db_xtp_merge_requests，存在。
-> 
 > 但是，從 SQL Server 2016 開始此 DMV 就不再適用。
 
 ## <a name="columns-in-the-report"></a>在報表中的資料行
@@ -39,7 +38,7 @@ ms.locfileid: "47630716"
 | upper_bound_tsn | BIGINT | 目標合併檔案的最大時間戳記。 要合併之所有來源檔案的最高交易時間戳記。 |
 | collection_tsn | BIGINT | 可收集目前資料列的時間戳記。<br/><br/>當 checkpoint_tsn 大於 collection_tsn 時，就會移除處於 Installed 狀態的資料列。<br/><br/>當 checkpoint_tsn 小於 collection_tsn 時，就會移除處於 Abandoned 狀態的資料列。 |
 | checkpoint_tsn | BIGINT | 檢查點啟動的時間。<br/><br/>由時間戳記低於此數的交易所完成的所有刪除都會計算在新的資料檔案中。 剩餘的刪除則會移到目標差異檔案。 |
-| sourcenumber_file_id | GUID | 可在合併中唯一識別來源檔案的內部檔案識別碼，最多 16 個。 |
+| sourcenumber_file_id | GUID | 最多 16 個內部檔案識別碼可唯一識別在合併的來源檔案。 |
 
 ## <a name="permissions"></a>Permissions
 
@@ -48,5 +47,3 @@ ms.locfileid: "47630716"
 ## <a name="see-also"></a>另請參閱
 
 [記憶體最佳化的資料表動態管理檢視 & Amp;#40;transact-SQL&AMP;#41](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)
-
-

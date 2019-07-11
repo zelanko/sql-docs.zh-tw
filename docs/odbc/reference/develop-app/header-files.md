@@ -13,19 +13,19 @@ ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e6d0806a7c3eabd1c6f4cd1836308eba99a6d5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c706dca3a1479a299841f9d47743785d29689f12
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724363"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792562"
 ---
 # <a name="header-files"></a>標頭檔
 Sql.h 標頭檔包含原型的函式和核心 ODBC 介面一致性層級中的功能。 Sqlext.h 標頭檔包含原型的函式和中的層級 1 和層級 2 API 一致性層級的功能。 Sqltypes.h 標頭檔包含類型定義與 SQL 資料類型的指標。  
   
  所有包含的標頭檔 **#define**，ODBCVER，應用程式或驅動程式可以設定要編譯的不同版本的 ODBC。  
   
- 若要對齊與 ISO CLI 和開啟群組 CLI，請在標頭檔包含對呼叫中使用的資訊類型的別名**SQLGetInfo**。 下表中，「 ODBC 名稱 」 的資料行表示中的資訊類型的 ODBC 名稱[ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)。 資料行 」 標頭檔中的別名"表示使用 ISO CLI 和開啟群組 CLI 中的名稱。 這些資訊清單名稱的實際數值是相同的 ODBC 和標準 Cli。 這些別名啟用符合標準的應用程式或驅動程式使用 ODBC 3 編譯 *.x*標頭檔。  
+ 若要對齊與 ISO CLI 和開啟群組 CLI，請在標頭檔包含對呼叫中使用的資訊類型的別名**SQLGetInfo**。 下表中，「 ODBC 名稱 」 的資料行表示中的資訊類型的 ODBC 名稱[ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)。 資料行 」 標頭檔中的別名"表示使用 ISO CLI 和開啟群組 CLI 中的名稱。 這些資訊清單名稱的實際數值是相同的 ODBC 和標準 Cli。 這些別名啟用符合標準的應用程式或驅動程式使用 ODBC *3.x*標頭檔。  
   
  這些別名在 ODBC 名稱中包含縮寫的展開，使名稱更容易了解。 "MAX"已擴充成"MAXIMUM"、"LEN 」 到 「 長度 」，「 多 」"MULTIPLE"，"OJ"到"OUTER_JOIN 」，和 「 交易 」 到 「 交易 」。  
   

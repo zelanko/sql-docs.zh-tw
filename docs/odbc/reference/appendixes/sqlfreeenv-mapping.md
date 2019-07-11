@@ -14,15 +14,15 @@ ms.assetid: c0f76455-d072-4bae-bee7-452277dfa479
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c1ab12a975d7b9c0aba77db9af31accac398a16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6070d7a9d9a7d2eafa35b87c94d6cfd320f916ae
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199414"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793570"
 ---
 # <a name="sqlfreeenv-mapping"></a>SQLFreeEnv 對應
-當應用程式呼叫**SQLFreeEnv**透過 ODBC 3 *.x*驅動程式，會呼叫  
+當應用程式呼叫**SQLFreeEnv**透過 ODBC *3.x*驅動程式，會呼叫  
   
 ```  
 SQLFreeEnv(henv)   

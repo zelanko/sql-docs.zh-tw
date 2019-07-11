@@ -10,12 +10,12 @@ ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2fb48665fafc9c79856279c7460918b85334bfb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c96443d7f46dee539fd7d39a91a168b3ed5a0d8c
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064299"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792929"
 ---
 # <a name="create-the-off-by-default-policy"></a>建立依預設為關閉的原則
   這項工作會建立名為 Mail Off 並且以介面區組態 Facet 為基礎的條件。 然後，它會建立名為 Off By Default 的原則。  
@@ -28,7 +28,7 @@ ms.locfileid: "66064299"
   
 3.  在 [Facet]  方塊中，確認已選取 [介面區組態]  Facet。  
   
-4.  在 [運算式]  區域的 [欄位]  方塊中，選取 [@DatabaseMailEnabled]  、在 [運算子]  方塊中選取 [=]  ，然後在 [值]  中選取 [False]  。  
+4.  在 **運算式**區域中**欄位**方塊中，選取 **\@DatabaseMailEnabled**中**運算子**方塊中選取 **=** ，然後在**值**選取**False**。  
   
 5.  在 [描述]  頁面上，輸入條件的描述，然後按一下 [確定]  建立條件。  
   

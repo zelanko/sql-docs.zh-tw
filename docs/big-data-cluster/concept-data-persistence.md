@@ -2,20 +2,20 @@
 title: 在 Kubernetes 上的資料持續性
 titleSuffix: SQL Server big data clusters
 description: 深入了解資料持續性中的 SQL Server 2019 巨量資料叢集的運作方式。
-author: rothja
-ms.author: jroth
+author: mihaelablendea
+ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: cfba93aaca23ca3303b6d9bd9752c1d458a9a81a
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 701be4a352066ab0c80e0269b16114e8e279998a
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388006"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729141"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>在 Kubernetes 上的 SQL Server 巨量資料叢集使用的資料持續性
 

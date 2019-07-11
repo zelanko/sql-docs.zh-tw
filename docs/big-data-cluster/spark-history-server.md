@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 若要偵錯和診斷在 SQL Server 2019 巨量資料叢集上執行的 Spark 應用程式中使用 Spark 歷程記錄伺服器。
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 6bc310fc856a9f2fe4a100770a5af2eed6a189e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cba788fcb61dddce54d8b0c4ad4f2ca87ea0906d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782098"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728394"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>偵錯和診斷在 SQL Server 在 Spark 歷程記錄伺服器中的巨量資料叢集上的 Spark 應用程式
 

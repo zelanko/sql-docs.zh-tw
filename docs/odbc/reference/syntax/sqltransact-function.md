@@ -20,19 +20,19 @@ ms.assetid: 496249e0-8eff-4c60-8358-5543bc3ead9c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b76b7a550211522c2b2100776b88f311abb2b932
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ad40522bd9f97c72a5d0a71d089b9e7c98a7d6b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233342"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793617"
 ---
 # <a name="sqltransact-function"></a>SQLTransact 函式
 **合規性**  
  導入的版本：ODBC 1.0 標準的合規性：已被取代  
   
  **摘要**  
- 在 ODBC 3。*x*，ODBC 2 *.x*函式**SQLTransact**已被取代**SQLEndTran**。 如需詳細資訊，請參閱 < [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)。  
+ 在 ODBC *3.x*，ODBC *2.x*函式**SQLTransact**已被取代**SQLEndTran**。 如需詳細資訊，請參閱 < [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)。  
   
 > [!NOTE]  
 >  屬性 SQL_ASYNC_DBC_FUNCTION_ENABLE ODBC 3.8 中所導入，不支援**SQLTransact**。 使用連接控制代碼上的非同步作業的應用程式必須使用**SQLEndTran**。  

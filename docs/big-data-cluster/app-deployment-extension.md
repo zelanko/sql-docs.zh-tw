@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 將 Python 或 R 指令碼部署為 SQL Server 2019 巨量資料叢集 （預覽） 上的應用程式。
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0b0d76db3813e0a399f1ece841d729711743cbd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba56ebb90d09866b7860c5f29dd2a26cf525fd9b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801911"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729309"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>如何使用 VS Code 來部署應用程式到 SQL Server 的巨量資料叢集
 
@@ -128,7 +128,7 @@ VS Code 會提示輸入適當的端點、 使用者名稱和密碼。 如果指�
 - 輸出參數
 - 連結
   - swagger
-  - 詳細資料
+  - details
 
 如果您按一下`Links`，您會看到您可以存取`swagger.json`已部署的應用程式，讓您可以撰寫您自己的用戶端會呼叫您的應用程式：
 

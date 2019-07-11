@@ -16,16 +16,16 @@ helpviewer_keywords:
 - sys.resource_stats
 - resource_stats
 ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c12b995a52f633c4fbd7829f090f2a95d631751e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6918c712e5440aa79bef045f2d64b2578eb42a69
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041439"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716321"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

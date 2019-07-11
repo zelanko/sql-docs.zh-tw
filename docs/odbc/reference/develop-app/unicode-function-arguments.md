@@ -14,12 +14,12 @@ ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3caa5feb387a7acdfa682f048bf77f2d999b560
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83cb2faad86268c3270e9386ca10b25e4807e030
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305803"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793752"
 ---
 # <a name="unicode-function-arguments"></a>Unicode 函式引數
 ODBC 3.5 （或更新版本） 驅動程式管理員支援接受字元字串或 SQLPOINTER 指標，其引數中的所有函式的 ANSI 和 Unicode 版本。 Unicode 函式會實作為函式 (尾碼*W*)，而非巨集。 ANSI 函式 (使用或後置字元不可以呼叫它*A*) 與目前的 ODBC API 函式相同。  
@@ -66,7 +66,7 @@ ODBC 3.5 （或更新版本） 驅動程式管理員支援接受字元字串或 
 |**SQLInstallDriver**||  
   
 > [!NOTE]
->  已被取代的函式具有 Unicode-ANSI 對應支援，因為 ODBC 3 *.x*驅動程式管理員支援重新編譯 ODBC 2。*x*使用 UNICODE 應用程式 **#define**。  
+>  已被取代的函式具有 Unicode-ANSI 對應支援，因為 ODBC *3.x*驅動程式管理員支援重新編譯 ODBC *2.x*應用程式與 UNICODE **#define**.  
   
  此章節包含下列主題。  
   

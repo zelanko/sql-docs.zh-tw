@@ -4,17 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 這篇文章說明如何使用 Azure Data Studio、 筆記型電腦和 mssqlctl 命令的巨量資料叢集的狀態。
 author: yualan
 ms.author: alayu
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2edd49c37655d420cf8022677c0d0287028a0b93
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: b3cc78e36fe427966c7730533104c63aa3ed9332
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413965"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727327"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>如何檢視的巨量資料叢集狀態
 

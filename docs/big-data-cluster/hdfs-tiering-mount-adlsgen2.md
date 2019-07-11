@@ -4,18 +4,18 @@ titleSuffix: How to mount ADLS Gen2
 description: 這篇文章說明如何設定外部 Azure 資料湖儲存區檔案系統掛接到 HDFS，在 SQL Server 2019 巨量資料叢集 （預覽） 上的階層處理的 HDFS。
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1d06b668a6c8badef75a0e90d3f58b67b1269984
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: 94835b3ae041aa721e915bb5399737b35c52799f
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419044"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728791"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>如何針對 HDFS 層的巨量資料叢集掛接 ADLS Gen2
 

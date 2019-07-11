@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_add_agent_profile
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ab2d928770a8e10c04e03aa2ccb5f36374fe1227
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2afaf37cc82ccfee3c5a85c2945a7998457a979d
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493601"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716632"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
  **0**表示系統設定檔。 **1**表示自訂設定檔。 使用此預存程序，就可以建立自訂的設定檔因此，唯一有效的值是**1**。 只有[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會建立系統設定檔。  
   
-`[ @description = ] 'description'` 是設定檔的描述。 *描述*已**nvarchar(3000)**，沒有預設值。  
+`[ @description = ] 'description'` 是設定檔的描述。 *描述*已**nvarchar(3000)** ，沒有預設值。  
   
 `[ @default = ] default` 指出設定檔是否為預設*agent_type * *。* *預設值*已**位元**，預設值是**0**。 **1**表示所加入的設定檔將成為所指定的代理程式的新預設設定檔*agent_type*。  
   

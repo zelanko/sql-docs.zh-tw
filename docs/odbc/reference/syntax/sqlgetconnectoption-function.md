@@ -20,22 +20,22 @@ ms.assetid: 59cde899-7957-4b5e-8677-f34d3b859bfd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30d91302161b236cee5634196bea33f61411f046
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 947a7ea107e334eb393248f7d368fe958e6229c0
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259570"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792577"
 ---
 # <a name="sqlgetconnectoption-function"></a>SQLGetConnectOption 函式
 **合規性**  
  導入的版本：ODBC 1.0 標準的合規性：已被取代  
   
  **摘要**  
- 在 ODBC 3 *.x*，ODBC 2 *.x*函式**SQLGetConnectOption**已被取代**SQLGetConnectAttr**。 如需詳細資訊，請參閱 < [SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)。  
+ 在 ODBC *3.x*，ODBC *2.x*函式**SQLGetConnectOption**已被取代**SQLGetConnectAttr**。 如需詳細資訊，請參閱 < [SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)。  
   
 > [!NOTE]
->  如需有關什麼驅動程式管理員會對應到此函式時 ODBC 2 *.x*應用程式使用 ODBC 3 *.x*驅動程式，請參閱[對應已被取代的函式](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)附錄 g:為了與舊版相容的驅動程式指導方針。  
+>  如需有關什麼驅動程式管理員會對應到此函式時 ODBC *2.x*應用程式使用 ODBC *3.x*驅動程式，請參閱[對應已被取代的函式](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)附錄 g:為了與舊版相容的驅動程式指導方針。  
 > 
 > [!NOTE]
 >  不支援屬性符合 ODBC 3.8 中導入的 SQL_ASYNC_DBC_FUNCTION_ENABLE **SQLGetConnectOption**。 使用連接控制代碼上的非同步作業的應用程式必須使用**SQLGetConnectAttr**。  

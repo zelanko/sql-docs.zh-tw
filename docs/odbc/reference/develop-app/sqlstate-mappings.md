@@ -15,23 +15,23 @@ ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 89be9c958cb848384a67e7eaf74cfecc72f07c35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 597fe4f7697375cc2e75bef79059beeba9d91e14
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148876"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792764"
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE 對應
-本主題會討論 ODBC 2 SQLSTATE 值。*x*和 ODBC 3。*x*。 如需有關 ODBC 3 的詳細資訊。*x* SQLSTATE 值，請參閱[附錄 a:ODBC 錯誤碼](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。  
+本主題討論 ODBC SQLSTATE 值*2.x*和 ODBC *3.x*。 如需有關 ODBC *3.x* SQLSTATE 值，請參閱[附錄 a:ODBC 錯誤碼](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。  
   
- 在 ODBC 3。*x*HYxxx Sqlstate 會傳回而不是 S1xxx，，而不是 S00XX 傳回 42Sxx Sqlstate。 這麼做是為了與 Open Group 和 ISO 標準。 在許多情況下，對應並非一對一因為標準已重新定義的數個 Sqlstate 解譯。  
+ 在 ODBC *3.x*HYxxx Sqlstate 會傳回而不是 S1xxx，，而不是 S00XX 傳回 42Sxx Sqlstate。 這麼做是為了與 Open Group 和 ISO 標準。 在許多情況下，對應並非一對一因為標準已重新定義的數個 Sqlstate 解譯。  
   
- 當 ODBC 2。*x*應用程式會升級到 ODBC 3。*x*應用程式，應用程式必須變更為預期 ODBC 3。*x*而不是 ODBC 2 的 Sqlstate。*x* Sqlstate。 下表列出 ODBC 3。*x* Sqlstate，每個 ODBC 2。*x* SQLSTATE 對應至。  
+ 當 ODBC *2.x*應用程式會升級到 ODBC *3.x*變更為預期 ODBC 的應用程式，應用程式有*3.x*而不是 ODBC Sqlstate*2.x* Sqlstate。 下表列出 ODBC *3.x* Sqlstate，每個 ODBC *2.x* SQLSTATE 對應至。  
   
- 當 SQL_ATTR_ODBC_VERSION 環境屬性設定為 SQL_OV_ODBC2 時，驅動程式會張貼 ODBC 2。*x*而不是 ODBC 3 的 Sqlstate。*x* Sqlstate 時**SQLGetDiagField**或是**SQLGetDiagRec**呼叫。 您會看到 ODBC 2 也可判斷特定的對應 *.x*對應到 ODBC 3 的下列資料表的資料行 1 中的 SQLSTATE。*x*資料行 2 中的 SQLSTATE。  
+ 當 SQL_ATTR_ODBC_VERSION 環境屬性設定為 SQL_OV_ODBC2 時，驅動程式會張貼 ODBC *2.x*而不是 ODBC Sqlstate *3.x* Sqlstate 時**SQLGetDiagField**或是**SQLGetDiagRec**呼叫。 可判斷特定的對應，注意的是 ODBC *2.x*對應至 ODBC 的下列資料表的資料行 1 中的 SQLSTATE *3.x*資料行 2 中的 SQLSTATE。  
   
-|ODBC 2.*x* SQLSTATE|ODBC 3.*x* SQLSTATE|註解|  
+|ODBC *2.x* SQLSTATE|ODBC *3.x* SQLSTATE|註解|  
 |-------------------------|-------------------------|--------------|  
 |01S03|01001||  
 |01S04|01001||  
@@ -50,7 +50,7 @@ ms.locfileid: "63148876"
 |S0023|42S23||  
 |S1000|HY000||  
 |S1001|HY001||  
-|S1002|07009|ODBC 2。*x* SQLSTATE S1002 會對應至 ODBC 3。*x* SQLSTATE 07009 基礎函式是否**SQLBindCol**， **SQLColAttribute**， **SQLExtendedFetch**， **SQLFetch**， **SQLFetchScroll**，或**SQLGetData**。|  
+|S1002|07009|ODBC *2.x*對應到 ODBC SQLSTATE S1002 *3.x* SQLSTATE 07009 如果基礎函式**SQLBindCol**， **SQLColAttribute**，**SQLExtendedFetch**， **SQLFetch**， **SQLFetchScroll**，或**SQLGetData**。|  
 |S1003|HY003||  
 |S1004|HY004||  
 |S1008|HY008||  
@@ -63,7 +63,7 @@ ms.locfileid: "63148876"
 |S1090|HY090||  
 |S1091|HY091||  
 |S1092|HY092||  
-|S1093|07009|ODBC 3。*x* SQLSTATE 07009 會對應至 ODBC 2。*x*如果基礎函式的 SQLSTATE S1093 **SQLBindParameter**或是**SQLDescribeParam**。|  
+|S1093|07009|ODBC *3.x*對應到 ODBC SQLSTATE 07009 *2.x*如果基礎函式的 SQLSTATE S1093 **SQLBindParameter**或**SQLDescribeParam**.|  
 |S1096|HY096||  
 |S1097|HY097||  
 |S1098|HY098||  
@@ -83,4 +83,4 @@ ms.locfileid: "63148876"
 |S1T00|HYT00||  
   
 > [!NOTE]  
->  ODBC 3。*x* SQLSTATE 07008 會對應至 ODBC 2。*x* SQLSTATE S1000。
+>  ODBC *3.x*對應到 ODBC SQLSTATE 07008 *2.x* SQLSTATE S1000。

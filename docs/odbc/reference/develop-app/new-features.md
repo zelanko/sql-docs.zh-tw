@@ -17,15 +17,15 @@ ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d425a6896a64f06bf1610ed8f6be87dd60af25d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4582a99797d5f6035f6d5d639514c5a6fdd572d
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658181"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794059"
 ---
 # <a name="new-features"></a>新功能
-ODBC 3 中已引進下列新功能。*x*。 ODBC 3。*x*應用程式使用 ODBC 2 *.x*驅動程式不能使用這項功能。 ODBC 3。*x*驅動程式管理員不會對應這些功能，使用 ODBC 2 時 *.x*驅動程式。  
+ODBC 中已引進下列新功能*3.x*。 ODBC *3.x*應用程式使用 ODBC *2.x*驅動程式不能使用這項功能。 ODBC *3.x*驅動程式管理員不會對應這些功能，使用 ODBC 時*2.x*驅動程式。  
   
 -   接受的描述元的函式會處理做為引數：**SQLSetDescField**， **SQLGetDescField**， **SQLSetDescRec**， **SQLGetDescRec**，並**SQLCopyDesc**。  
   
@@ -81,7 +81,7 @@ ODBC 3 中已引進下列新功能。*x*。 ODBC 3。*x*應用程式使用 ODBC 
   
 -   具名的參數。  
   
--   任何 ODBC 3。*x*-特定**SQLGetInfo**選項。 （若為 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式會呼叫 SQL_XXX_CURSOR_ATTRIBUTES1 資訊型別，已取代數個 ODBC 2。*x*資訊類型的部分資訊可能很可靠，但某些可能不可靠。 如需詳細資訊，請參閱 < [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)。)  
+-   任何 ODBC *3.x*-特定**SQLGetInfo**選項。 (如果 ODBC *3.x*應用程式使用 ODBC *2.x*驅動程式會呼叫 SQL_XXX_CURSOR_ATTRIBUTES1 資訊型別，已取代數個 ODBC *2.x*資訊類型的部分資訊可能可靠，但某些可能不可靠。 如需詳細資訊，請參閱 < [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)。)  
   
 -   繫結的位移。  
   
@@ -103,7 +103,7 @@ ODBC 3 中已引進下列新功能。*x*。 ODBC 3。*x*應用程式使用 ODBC 
   
 -   利用**SQLDescribeCol**並**SQLColAttribute** 0 的資料行上。  
   
--   使用的任何 ODBC 3。*x*-的呼叫中的特定資料行屬性**SQLColAttribute**。  
+-   使用任何 ODBC *3.x*-的呼叫中的特定資料行屬性**SQLColAttribute**。  
   
 -   使用多個環境控制代碼。  
   

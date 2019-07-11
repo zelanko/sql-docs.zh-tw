@@ -2,19 +2,20 @@
 title: 設定部署
 titleSuffix: SQL Server big data clusters
 description: 了解如何使用組態檔來自訂部署巨量資料叢集。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba2587c2effdc3242e6032a0137bbf43ac153f1c
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 19654422bcc57f2ad00b9ab8170d163f848f188b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388796"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728886"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>設定部署巨量資料叢集
 
@@ -22,7 +23,7 @@ ms.locfileid: "67388796"
 
 若要自訂叢集部署設定檔，您可以使用任何 JSON 格式編輯器，例如 VSCode。 指令碼處理這些編輯用於自動化用途，使用**mssqlctl bdc 組態區段**命令。 這篇文章說明如何藉由修改部署組態檔案中設定的巨量資料叢集部署。 它會提供如何變更組態，針對不同案例的範例。 如需如何在部署中使用組態檔的詳細資訊，請參閱[部署指引](deployment-guidance.md#configfile)。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - [安裝 mssqlctl](deploy-install-mssqlctl.md)。
 

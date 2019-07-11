@@ -14,15 +14,15 @@ ms.assetid: 57ed65f6-9620-4738-b331-19d2a2b5cae4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad5f394eb30e70838bdc0a7b8ae6380c145a1952
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 821af40a9550cc6e5fc038bb8e9a24f9e4323441
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298219"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792819"
 ---
 # <a name="sqlparamoptions-mapping"></a>SQLParamOptions 對應
-當應用程式呼叫**SQLParamOptions**透過 ODBC 3 *.x*驅動程式，會呼叫  
+當應用程式呼叫**SQLParamOptions**透過 ODBC *3.x*驅動程式，會呼叫  
   
 ```  
 SQLParamOptions(hstmt, crow, piRow);  

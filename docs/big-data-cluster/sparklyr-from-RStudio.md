@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: 連接到使用 RStudio 從 sparklyr 的巨量資料叢集。
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
+ms.reviewer: mikeray
 ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8004146499bd8b17c7705f7558de075dfece5813
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f346fed17e4c79214a7eba43f70767fc80b98a07
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994173"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728381"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>在 SQL Server 巨量資料叢集中使用 sparklyr
 
@@ -22,7 +22,7 @@ ms.locfileid: "65994173"
 
 Sparklyr 提供適用於 Apache Spark 的 R 介面。 Sparklyr 是使用 Spark 的 R 開發人員的熱門方式。 本文說明如何使用 sparklyr 使用 RStudio 的 SQL Server 2019 巨量資料叢集 （預覽）。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - [部署 SQL Server 2019 巨量資料叢集](quickstart-big-data-cluster-deploy.md)。
 

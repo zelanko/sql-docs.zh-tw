@@ -9,12 +9,12 @@ ms.assetid: 2b0b5ab7-4e08-431a-bd59-360177c4565c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 64a1423295b8117640de555a7132a44af98b87c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6cc9530b636409864e7e1b72f7417619a0fc8af
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470099"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792473"
 ---
 # <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>案例研究：使用 Microsoft Dynamics ERP 和 SQL Server 2014 複寫建置具有延展性和效能的企業生態系統
 
@@ -26,13 +26,13 @@ ms.locfileid: "62470099"
   
  此內容適用於開發人員、架構設計人員和資料庫管理員。 這是假設這份技術白皮書的讀者具備 SQL Server 2008、2012 或 2014 以及 SQL Server 管理經驗的基本知識。  
   
- **作者：** Prabhakaran Sethuraman (PRAB)，Microsoft  
+ **寫入器：** Prabhakaran Sethuraman (PRAB) Microsoft  
   
  **技術校閱：** Prabhakaran Sethuraman (PRAB)，Microsoft;Santosh Padhy，Microsoft;Pavel Majstrov，Microsoft;Karthik Sankaranarayanan，Microsoft;Jon Acone，Microsoft;David Stahlkopf，Microsoft;Kent Oldenburger，Microsoft;Mandi Ohlinger，Microsoft;Jason Roth Microsoft  
   
- **發行：** 2015 年 10 月  
+ **發行日期：** 2015 年 10 月  
   
- **適用於：** SQL Server 2008、SQL Server 2012 及 SQL Server 2014  
+ **適用於：** SQL Server 2008，SQL Server 2012 和 SQL Server 2014  
   
  若要檢閱文件，請下載  
         [案例研究：建置使用 Microsoft Dynamics ERP 和 SQL Server 2014 複製的企業生態系統的延展性和效能](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/A%20Case%20Study%20Using%20Replication%20to%20Build%20an%20Enterprise%20Ecosystem%20in%20Microsoft%20Dynamics%20ERP%20for%20Scalability%20and%20Performance.docx)Word 文件。  

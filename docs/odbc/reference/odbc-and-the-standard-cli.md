@@ -17,12 +17,12 @@ ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5485da176b9bd4aa7afca7afa088e6932d6f0d58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adddf32a29d3a891a4a2c6fb2353648e62b0d9c5
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273309"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794096"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC 和標準 CLI
 ODBC 與下列規格和處理使用呼叫層級介面 (CLI) 中的標準。 （ODBC 功能是每個這些標準的超集）。  
@@ -33,17 +33,17 @@ ODBC 與下列規格和處理使用呼叫層級介面 (CLI) 中的標準。 （O
   
  由於這種對齊方式，在下列情況成立：  
   
--   若要開啟 群組和 ISO CLI 規格所撰寫的應用程式將會使用 ODBC 3。*x*驅動程式或符合標準的驅動程式時進行編譯 ODBC 3。*x*標頭檔，並與 ODBC 3 連結。*x*程式庫，以及當它取得的存取權的驅動程式透過 ODBC 3 時。*x*驅動程式管理員。  
+-   Open Group 和 ISO CLI 規格所撰寫的應用程式會使用 ODBC *3.x*驅動程式或符合標準的驅動程式時它會使用 ODBC 編譯*3.x*標頭檔，並與連結ODBC *3.x*程式庫，以及當它取得的存取權透過 ODBC 驅動程式時*3.x*驅動程式管理員。  
   
--   寫入的 Open Group 和 ISO CLI 規格的驅動程式會使用 ODBC 3 *.x*應用程式或與標準相容的應用程式時它會使用 ODBC 3 編譯 *.x*標頭檔，並連結ODBC 3 *.x*程式庫，並當應用程式會取得存取權的驅動程式透過 ODBC 3 *.x*驅動程式管理員。 (如需詳細資訊，請參閱 <<c0> [ 標準相容的應用程式和驅動程式](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)。  
+-   寫入的 Open Group 和 ISO CLI 規格的驅動程式會使用 ODBC *3.x*應用程式或與標準相容的應用程式使用 ODBC 編譯時*3.x*標頭檔，並連結使用 ODBC *3.x*程式庫和應用程式取得存取權透過 ODBC 驅動程式的當*3.x*驅動程式管理員。 (如需詳細資訊，請參閱 <<c0> [ 標準相容的應用程式和驅動程式](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)。  
   
- 核心介面一致性層級包含 ISO CLI 中的所有功能，開啟群組 CLI 中的所有 nonoptional 功能。 開啟群組 CLI 的選用功能會出現在較高的介面一致性層級。 因為所有的 ODBC 3。*x*驅動程式所需的核心介面一致性層級中支援的功能，下列條件成立：  
+ 核心介面一致性層級包含 ISO CLI 中的所有功能，開啟群組 CLI 中的所有 nonoptional 功能。 開啟群組 CLI 的選用功能會出現在較高的介面一致性層級。 因為所有的 ODBC *3.x*驅動程式所需的核心介面一致性層級中支援的功能，下列條件成立：  
   
--   ODBC 3。*x*驅動程式將支援符合標準的應用程式所使用的所有功能。  
+-   ODBC *3.x*驅動程式將支援符合標準的應用程式所使用的所有功能。  
   
--   ODBC 3。*x*使用 ISO CLI 中的功能和開啟群組 CLI nonoptional 功能的應用程式會使用任何標準相容的驅動程式。  
+-   ODBC *3.x*使用 ISO CLI 中的功能和開啟群組 CLI nonoptional 功能的應用程式會使用任何標準相容的驅動程式。  
   
- 除了呼叫層級介面規格 ISO/IEC 與開啟群組 CLI 標準中所包含的情況下，ODBC 會實作下列功能。 （其中某些功能已在 ODBC 3 之前的 ODBC 版本。*x*。)  
+ 除了呼叫層級介面規格 ISO/IEC 與開啟群組 CLI 標準中所包含的情況下，ODBC 會實作下列功能。 (其中某些功能的 ODBC 之前的 ODBC 版本存在於*3.x*。)  
   
 -   多重資料列會擷取單一函式呼叫  
   

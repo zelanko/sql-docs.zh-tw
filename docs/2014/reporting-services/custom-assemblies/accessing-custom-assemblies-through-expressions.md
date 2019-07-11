@@ -16,12 +16,12 @@ ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ba5d3ec6958cf3dbc3cca0497f08feaac094b837
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb9e2ae87a82bf272e84a8d940606879aa3c1e9d
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63265123"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792806"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>透過運算式存取自訂組件
   一旦您建立自訂組件，請將它提供給報表設計師或是報表伺服器、加入適當的安全性原則，以及將參考加入報表定義中的自訂組件，這樣您就可以使用報表運算式來存取組件中的類別成員。 若要在運算式中參考自訂程式碼，您必須在組件中呼叫類別的成員。 該如何完成，取決於此方法為靜態或以執行個體為基礎。  
@@ -43,7 +43,7 @@ ms.locfileid: "63265123"
 ## <a name="calling-instance-members-from-a-report-definition-file"></a>呼叫報表定義檔案中的執行個體成員  
  如果您的自訂組件包含需要在報表定義中存取的執行個體成員，則必須將類別的執行個體名稱加入報表。 您可以使用 [報表屬性]  對話方塊的 [程式碼]  索引標籤，來為類別新增執行個體名稱。 如需詳細資訊，請參閱[報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
- 若要呼叫靜態成員，您需要以運算式的形式加以參考，其格式為 =Code *.InstanceName.Method*。  
+ 若要呼叫靜態成員，您需要參考運算式，其格式為 = Code *.Instancename.method*。  
   
 #### <a name="to-call-instance-members"></a>呼叫執行個體成員  
   

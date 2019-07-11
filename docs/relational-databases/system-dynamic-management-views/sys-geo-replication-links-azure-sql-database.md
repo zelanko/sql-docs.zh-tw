@@ -14,16 +14,16 @@ helpviewer_keywords:
 - sys.dm_geo_replication_links dynamic management view
 - dm_geo_replication_links dynamic management view
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 94ed170ea4aa99d861bea2e087310260982af4d3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cd552d357284ce6fefd85df43baa38ad52ebb310
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031765"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716642"
 ---
 # <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links (Azure SQL Database)
 
@@ -35,7 +35,7 @@ ms.locfileid: "56031765"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|目前資料庫中的 sys.databases 檢視的識別碼。|  
 |start_date|**datetimeoffset**|在區域 SQL Database 資料中心起始資料庫複製時的 UTC 時間|  
-|modify_date|**datetimeoffset**|在完成資料庫異地複寫區域的 SQL Database 資料中心的 UTC 時間。 新的資料庫與主要資料庫於此時間同步。 .|  
+|modify_date|**datetimeoffset**|在完成資料庫異地複寫區域的 SQL Database 資料中心的 UTC 時間。 新的資料庫與主要資料庫於此時間同步。 。|  
 |link_guid|**uniqueidentifier**|異地複寫連結的唯一識別碼。|  
 |partner_server|**sysname**|包含異地複寫資料庫的 SQL Database 伺服器的名稱。|  
 |partner_database|**sysname**|異地複寫連結的 SQL Database 伺服器上資料庫的名稱。|  

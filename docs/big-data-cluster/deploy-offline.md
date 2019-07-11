@@ -2,25 +2,26 @@
 title: 離線部署
 titleSuffix: SQL Server big data clusters
 description: 了解如何執行離線部署的 SQL Server 的巨量資料叢集。
-author: rothja
-ms.author: jroth
+author: mihaelablendea
+ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0f3bfcfba0cfb972c7d02042bc98aa461eb110bb
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 1300c375903eb8692b8da6dce4e74a41e91d80c0
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388808"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728928"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>執行離線部署的 SQL Server 的巨量資料叢集
 
 本文說明如何執行離線部署的 SQL Server 2019 巨量資料叢集 （預覽）。 巨量資料叢集必須能夠存取 Docker 存放庫從中提取容器映像。 離線安裝是所需的影像到私人 Docker 存放庫的放置位置。 該私人存放庫，然後做映像來源新部署。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 在任何支援的 Linux 發行版本或適用於 Mac/Windows 上的 Docker 安裝 Docker 引擎 1.8 以上版本。 如需詳細資訊，請參閱[安裝 Docker](https://docs.docker.com/engine/installation/)。
 
@@ -133,7 +134,7 @@ ms.locfileid: "67388808"
 
    | 作業系統 | 下載 |
    |---|---|
-   | 視窗 | [https://go.microsoft.com/fwlink/?linkid=2074021](https://go.microsoft.com/fwlink/?linkid=2074021) |
+   | Windows | [https://go.microsoft.com/fwlink/?linkid=2074021](https://go.microsoft.com/fwlink/?linkid=2074021) |
    | Linux   | [https://go.microsoft.com/fwlink/?linkid=2065975](https://go.microsoft.com/fwlink/?linkid=2065975) |
    | OSX     | [https://go.microsoft.com/fwlink/?linkid=2065976](https://go.microsoft.com/fwlink/?linkid=2065976) |
 

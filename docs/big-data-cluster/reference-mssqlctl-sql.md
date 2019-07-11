@@ -2,19 +2,20 @@
 title: mssqlctl sql 參考
 titleSuffix: SQL Server big data clusters
 description: Mssqlctl sql 命令的參考文件。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 536d4712a6ccb288ca60c038a37e99c2be8a5eba
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 844ea94e9df18132fd0729745ff154783b578fc1
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394200"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728505"
 ---
 # <a name="mssqlctl-sql"></a>mssqlctl sql
 

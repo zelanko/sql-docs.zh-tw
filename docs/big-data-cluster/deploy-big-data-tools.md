@@ -2,20 +2,20 @@
 title: 安裝巨量資料工具
 titleSuffix: SQL Server big data clusters
 description: 了解如何安裝 SQL Server 2019 巨量資料叢集 （預覽） 搭配使用的工具。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: ffb63e3e7fb2891aeed1b9b26fbc43dddf69c78e
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 1862c6c16aaecca7888f00cb6ca5deeb7138ea03
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412961"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728976"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安裝 SQL Server 2019 巨量資料工具
 

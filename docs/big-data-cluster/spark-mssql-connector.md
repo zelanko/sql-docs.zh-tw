@@ -2,19 +2,20 @@
 title: 將 Spark 連線到 SQL Server
 titleSuffix: SQL Server big data clusters
 description: 了解如何在 Spark 中使用 MSSQL Spark 連接器，來讀取和寫入至 SQL Server。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: shivsood
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 878e08426fc58d6ad5a921eff4ac33dca18aa03c
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: aaa9cd54c3540c17f9995f985f4537dafe05d5c2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469115"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727469"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>如何讀取和寫入至 SQL Server 使用 MSSQL Spark 連接器從 Spark
 

@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 這篇文章說明如何設定外部 Azure 資料湖儲存區檔案系統掛接到 HDFS，在 SQL Server 2019 巨量資料叢集 （預覽） 上的階層處理的 HDFS。
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a36bd28efd128a76246297995d712b417d7f230d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 823e24b4ec78996140fa3f17cef9c1e56365a3f7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782107"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728732"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>設定 SQL Server 的巨量資料叢集上的階層處理的 HDFS
 

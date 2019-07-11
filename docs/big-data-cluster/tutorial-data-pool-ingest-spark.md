@@ -2,20 +2,20 @@
 title: 擷取與 Spark 作業的資料
 titleSuffix: SQL Server big data clusters
 description: 本教學課程會示範如何將資料內嵌到 Spark 作業在 Studio 中使用 Azure 資料的 SQL Server 2019 巨量資料叢集 （預覽） 的資料集區。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: shivsood
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 56715b8134ca5427807bb287124d7766aefb1b3b
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 1d52a88a1742cdf1dbd83bebe52ebeb6cc277033
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388559"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727432"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教學課程：將資料內嵌到 Spark 作業的 SQL Server 資料集區
 
