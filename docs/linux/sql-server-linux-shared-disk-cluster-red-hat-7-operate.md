@@ -1,20 +1,21 @@
 ---
-title: 適用於 SQL Server 運作 Red Hat Enterprise Linux 共用的叢集 |Microsoft Docs
+title: 適用於 SQL Server 運作 Red Hat Enterprise Linux 共用的叢集
 description: 設定適用於 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集，以實作高可用性。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: bc453b815c0aaee7a7cd30b153101f75c1dbeacf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e20824630fa9740ba8d9bc7d1c63e87fe08d1632
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712902"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833120"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>操作 SQL server 的 Red Hat Enterprise Linux 共用的磁碟叢集
 

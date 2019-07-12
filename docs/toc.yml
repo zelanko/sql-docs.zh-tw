@@ -1336,7 +1336,7 @@
       items:
         - name: 堆積 (無叢集索引的資料表)
           href: relational-databases/indexes/heaps-tables-without-clustered-indexes.md
-        - name: 叢集與非叢集索引說明
+        - name: 叢集與非叢集索引
           href: relational-databases/indexes/clustered-and-nonclustered-indexes-described.md
           items:
             - name: 建立

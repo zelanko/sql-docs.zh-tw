@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 22d771f57e5ac0d9035b8c283eb6da69027eadb3
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 1df2ac9979e99a301d416d25d143039bef3ee4ed
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716683"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833046"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67716683"
 |end_time|**datetime**|UTC 時間會指出目前報告間隔的結束。|  
 |avg_cpu_percent|**decimal (5,2)**|平均運算使用率，以服務層限制的百分比計算。|  
 |avg_data_io_percent|**decimal (5,2)**|平均資料 I/O 使用率的服務層限制的百分比表示。|  
-|avg_log_write_percent|**decimal (5,2)**|平均寫入 I/O 輸送量使用率的服務層限制的百分比。|  
+|avg_log_write_percent|**decimal (5,2)**|平均交易記錄寫入 （以 mbps 為單位） 的服務層限制百分比。|  
 |avg_memory_usage_percent|**decimal (5,2)**|平均記憶體使用率，以服務層限制的百分比計算。<br /><br /> 這包括用於緩衝集區分頁和儲存體的記憶體內部 OLTP 物件的記憶體。|  
 |xtp_storage_percent|**decimal (5,2)**|儲存體使用量記憶體內部 OLTP 的服務層限制的百分比表示 （在報告的時間間隔結束）。 這包括用來儲存下列記憶體內部 OLTP 物件的記憶體： 記憶體最佳化資料表、 索引和資料表變數。 它也包含用於處理的 ALTER TABLE 作業的記憶體。<br /><br /> 如果未使用記憶體內部 OLTP 資料庫中，會傳回 0。|  
 |max_worker_percent|**decimal (5,2)**|最大並行背景工作角色 （要求） 的資料庫的服務層限制的百分比表示。|  
