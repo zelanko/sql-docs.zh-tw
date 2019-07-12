@@ -1,20 +1,21 @@
 ---
-title: 部署 Kubernetes 使用 Azure Kubernetes Service (AKS) 中的 SQL Server 容器 |Microsoft Docs
+title: 部署 Kubernetes 使用 Azure Kubernetes Service (AKS) 中的 SQL Server 容器
 description: 本教學課程會示範如何部署 SQL Server 高可用性解決方案使用 Azure Kubernetes Service 上的 Kubernetes。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: 236ae198b77f8fdc63a6c4d5069e3b335a44a472
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76c4003398368a1cdbadb257165dab6b048ebced
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704846"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832993"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>部署 Kubernetes 使用 Azure Kubernetes Service (AKS) 中的 SQL Server 容器
 

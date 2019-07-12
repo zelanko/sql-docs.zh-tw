@@ -1,20 +1,20 @@
 ---
-title: 將資料大量複製到 Linux 上的 SQL Server |Microsoft 文件
+title: 在 Linux 上 SQL server 的大量複製資料
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 01/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: bda200cccdaadb4db30b95289c2e16982a4e1f4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59ad1299d665a7c15aac3a657623d03d48d2fbac
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713112"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834907"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>使用 Linux 上的 SQL Server 的 bcp 大量複製資料
 

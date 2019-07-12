@@ -10,13 +10,13 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 07/10/2019
-ms.openlocfilehash: 5e3aa3f0472b775f1dfbd13634228226e4e7e0c2
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.date: 07/11/2019
+ms.openlocfilehash: 9b6fa6e7ec82853e05070a1675154f06091e5092
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794075"
+ms.locfileid: "67826520"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
@@ -24,7 +24,7 @@ ms.locfileid: "67794075"
 
 ## <a name="july-2019"></a>2019 年 7 月
 
-2019 年 7 月 10 日&nbsp;  /  &nbsp;版本：1.9.0 
+2019 年 7 月 11 日&nbsp;  /  &nbsp;版本：1.9.0 
 
 &nbsp;
 
@@ -39,7 +39,6 @@ ms.locfileid: "67794075"
 | Visual Studio 程式碼可能會發行合併 1.35 版 | 您可以找到最新的改良[此處](https://code.visualstudio.com/updates/v1_35)。 |
 | 已解決的 bug 和問題 | 在舊版的 Azure Data Studio 中，如果使用者資料庫都已選取 連接 對話方塊中，從連接時產生的物件總管 中項目範圍只完全限於該單一資料庫。 開始在此版本中，以便在伺服器層級的屬性也會顯示在 [物件總管] 中，正在變更行為。 <br/> 如需修正的完整清單[Bug 和問題，請在 GitHub 上的](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1)。 |
 | &nbsp; | &nbsp; |
-
 
 
 ## <a name="june-2019"></a>2019 年 6 月

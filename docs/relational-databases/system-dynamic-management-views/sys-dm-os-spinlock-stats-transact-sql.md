@@ -5,11 +5,8 @@ ms.date: 06/03/2019
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: ''
-ms.component: dmv's
-ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -21,20 +18,19 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_os_spinlock_stats dynamic management view
-ms.assetid: ''
-caps.latest.revision: ''
 author: bluefooted
 ms.author: pamela
+ms.reviewer: maghan
 manager: amitban
-ms.workload: Inactive
-ms.openlocfilehash: d26369b657848bf1ff092bc69fba1a6aa5850102
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: e302eadaa559674482911904678cc8aa4cbd2577
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67420850"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826604"
 ---
 # <a name="sysdmosspinlockstats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 傳回依類型組織的所有單一執行緒存取鎖等候的相關資訊。  
@@ -42,7 +38,7 @@ ms.locfileid: "67420850"
 
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(256)**|執行緒同步鎖定類型的名稱。|  
+|name|**nvarchar(256)**|執行緒同步鎖定類型的名稱。|  
 |衝突|**bigint**|執行緒嘗試取得單一執行緒存取鎖，且被封鎖，因為另一個在目前執行緒的次數會保留單一執行緒存取鎖。|  
 |執行微調|**bigint**|執行緒的次數執行迴圈，嘗試取得單一執行緒存取鎖。|  
 |spins_per_collision|**real**|每個衝突的拋的比率。|  
@@ -191,7 +187,7 @@ GO
 |LANG_RES_LOAD|僅供內部使用。|
 |LIVE_TARGET_TVF|僅供內部使用。|
 |LOCK_FREE_LIST|僅供內部使用。|
-|LOCK_HASH|保護存取權會持有鎖定的相關資訊儲存在資料庫中的鎖定管理員雜湊表。 請參閱[這篇文章](https://support.microsoft.comkb/2926217)如需詳細資訊。|
+|LOCK_HASH|保護存取權會持有鎖定的相關資訊儲存在資料庫中的鎖定管理員雜湊表。 請參閱[這篇文章](https://support.microsoft.com/kb/2926217)如需詳細資訊。|
 |LOCK_NOTIFICATION|僅供內部使用。|
 |LOCK_RESOURCE_ID|僅供內部使用。|
 |LOCK_RW_ABTX_HASH_SET|僅供內部使用。|

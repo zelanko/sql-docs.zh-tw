@@ -1,20 +1,21 @@
 ---
-title: 從 Windows 的 SQL Server 資料庫移轉至 Linux |Microsoft Docs
+title: 從 Windows 的 SQL Server 資料庫移轉至 Linux
 description: 本教學課程會示範如何取得 Windows 上的 SQL Server 資料庫備份，並將它還原到執行 SQL Server 的 Linux 機器。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 08/16/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 7d31490369b1562db91820d0e47f5935b5b42911
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ec273a58c2a907b6059972816736382e10df883
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713132"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834893"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>從 Windows 的 SQL Server 資料庫移轉至 Linux 使用備份與還原
 
@@ -31,7 +32,7 @@ SQL Server 的備份和還原功能會從在 Windows 上的 SQL Server 的資料
 
 您也可以建立 SQL Server Always On 可用性群組將從 Windows 的 SQL Server 資料庫移轉到 Linux。 請參閱[sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md)。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 若要完成本教學課程需要下列必要條件：
 
@@ -85,7 +86,7 @@ SQL Server 的備份和還原功能會從在 Windows 上的 SQL Server 的資料
 
 ## <a id="scp"></a> 將備份檔案複製到 Linux
 
-1. 在您的 Bash 工作階段，瀏覽至包含您的備份檔案的目錄。 例如：
+1. 在您的 Bash 工作階段，瀏覽至包含您的備份檔案的目錄。 例如:
 
    ```bash
    cd 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\'

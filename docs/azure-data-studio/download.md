@@ -9,14 +9,14 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.custom: seodec18
-ms.date: 07/10/2019
+ms.date: 07/11/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: 75122c146a33e5e44b61cbfd894c6997c2a4601f
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 741c36331e6c0c8827e34517dd7ee4e5d04abf93
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792943"
+ms.locfileid: "67826590"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下載並安裝 Azure Data Studio
 
@@ -30,9 +30,9 @@ ms.locfileid: "67792943"
 
 |平台|下載|發行日期| 版本 |
 |:---|:---|:---|:---|
-|Windows|[使用者安裝程式 （建議選項）](https://go.microsoft.com/fwlink/?linkid=2098449)<br>[系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2098450)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2098500)|2019 年 7 月 10日日 |1.9.0|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2098501)|2019 年 7 月 10日日 |1.9.0|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2098279)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2098280)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2098197)|2019 年 7 月 10日日 |1.9.0|
+|Windows|[使用者安裝程式 （建議選項）](https://go.microsoft.com/fwlink/?linkid=2098449)<br>[系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2098450)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2098500)|2019 年 7 月 11日日 |1.9.0|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2098501)|2019 年 7 月 11日日 |1.9.0|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2098279)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2098280)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2098197)|2019 年 7 月 11日日 |1.9.0|
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes.md)。
 

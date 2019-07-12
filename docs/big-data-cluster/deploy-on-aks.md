@@ -6,16 +6,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 manager: jroth
-ms.date: 02/28/2019
+ms.date: 07/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c5860e4c26008cf94b9ec168bb6a705f15ae7cd1
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 872988b29cddc202ea2c0f199548bc28b946b918
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728915"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826524"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>設定適用於 SQL Server 的巨量資料叢集部署的 Azure Kubernetes 服務
 
@@ -76,9 +76,39 @@ Azure 資源群組是在哪一項 Azure 資源部署與管理的邏輯群組。 
    az group create --name sqlbdcgroup --location westus2
    ```
 
+## <a name="verify-available-kubernetes-versions"></a>確認可用的 Kubernetes 版本
+
+使用 Kubernetes 的最新可用版本。 最新的可用版本取決於您要在其中部署叢集的位置。 下列命令會傳回在特定位置的可用 Kubernetes 版本。
+
+執行命令之前，請更新指令碼。 取代`<Azure data center>`叢集中的位置。
+
+   **bash**
+
+   ```bash
+   az aks get-versions \
+   --location <Azure data center> \
+   --query orchestrators \
+   --o table
+   ```
+
+   **PowerShell**
+
+   ```powershell
+   az aks get-versions `
+   --location <Azure data center> `
+   --query orchestrators `
+   --o table
+   ```
+
+選擇您的叢集的最新可用版本。 記錄的版本號碼。 您將在下一個步驟中使用它。
+
 ## <a name="create-a-kubernetes-cluster"></a>建立 Kubernetes 叢集
 
-1. 在與 AKS 建立 Kubernetes 叢集[az aks 建立](https://docs.microsoft.com/cli/azure/aks)命令。 下列範例會建立名為 Kubernetes 叢集*kubcluster*使用一個 Linux 代理程式節點大小**Standard_L8s**。 請確定您在先前各節中使用的相同資源群組中建立 AKS 叢集。
+1. 在與 AKS 建立 Kubernetes 叢集[az aks 建立](https://docs.microsoft.com/cli/azure/aks)命令。 下列範例會建立名為 Kubernetes 叢集*kubcluster*使用一個 Linux 代理程式節點大小**Standard_L8s**。
+
+   執行指令碼之前，請取代`<version number>`您在上一個步驟中識別的版本號碼。
+
+   請確定您在先前各節中使用的相同資源群組中建立 AKS 叢集。
 
    **bash:**
 
@@ -88,7 +118,7 @@ Azure 資源群組是在哪一項 Azure 資源部署與管理的邏輯群組。 
    --generate-ssh-keys \
    --node-vm-size Standard_L8s \
    --node-count 1 \
-   --kubernetes-version 1.12.8
+   --kubernetes-version <version number>
    ```
 
    **PowerShell:**
@@ -99,7 +129,7 @@ Azure 資源群組是在哪一項 Azure 資源部署與管理的邏輯群組。 
    --generate-ssh-keys `
    --node-vm-size Standard_L8s `
    --node-count 1 `
-   --kubernetes-version 1.12.8
+   --kubernetes-version <version number>
    ```
 
    您可以增加或減少的 Kubernetes 代理程式節點數目，藉由變更`--node-count <n>`其中`<n>`是您想要使用的代理程式節點數目。 這不包括 master 的 Kubernetes 節點，其在幕後受 AKS。 先前的範例只會使用針對評估用途的單一節點。
