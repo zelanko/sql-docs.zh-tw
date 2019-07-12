@@ -9041,11 +9041,13 @@
             - name: 安裝非英文版 SSMS
               href: ssms/install-other-languages.md
             - name: 使用 SSMS 中的範本
-              href: ssms/tutorials/templates-ssms.md
+              href: ssms/template/templates-ssms.md
             - name: 編寫物件的指令碼
               href: ssms/tutorials/scripting-ssms.md
             - name: SSMS 組態
               href: ssms/tutorials/ssms-configuration.md
+            - name: 使用其他的秘訣和訣竅
+              href: ssms/tutorials/ssms-tricks.md
             - name: 自訂功能表與快速鍵
               href: ssms/customize-menus-and-shortcut-keys.md
             - name: 設定 WMI 在 SQL Server 工具中顯示伺服器狀態
@@ -9959,8 +9961,6 @@
                   href: ssms/visual-db-tools/print-query-results-visual-database-tools.md
         - name: 資源
           items:
-            - name: SQL Server Management Studio
-              href: ssms/tutorials/tutorial-sql-server-management-studio.md
             - name: SSMS 支援原則
               href: ssms/support-policy.md
             - name: 適用於商務使用者的支援選項
@@ -10180,15 +10180,15 @@
           href: linux/quickstart-install-connect-clouds.md
     - name: 教學課程
       items:
-        - name: 1_從 Windows 移轉
+        - name: 從 Windows 移轉
           href: linux/sql-server-linux-migrate-restore-database.md
-        - name: 2_移轉到 Docker
+        - name: 整合至 Docker
           href: linux/tutorial-restore-backup-in-sql-server-container.md
-        - name: 3_建立作業
+        - name: 建立作業
           href: linux/sql-server-linux-run-sql-server-agent-job.md
-        - name: 4_設定 AD 驗證
+        - name: 設定 AD 驗證
           href: linux/sql-server-linux-active-directory-authentication.md
-        - name: 5_建立容錯移轉叢集執行個體
+        - name: 建立容錯移轉叢體執行個體
           href: linux/sql-server-linux-shared-disk-cluster-configure.md
           items:
             - name: iSCSI
@@ -10197,16 +10197,18 @@
               href: linux/sql-server-linux-shared-disk-cluster-configure-nfs.md
             - name: SMB
               href: linux/sql-server-linux-shared-disk-cluster-configure-smb.md
-        - name: 6_操作容錯移轉叢集執行個體 - Linux 上的 SQL Server
+        - name: 操作容錯移轉叢集執行個體 - Linux 上的 SQL Server
           href: linux/sql-server-linux-shared-disk-cluster-operate.md
-        - name: 7_部署 Pacemaker 叢集
+        - name: 部署 Pacemaker 叢集
           href: linux/sql-server-linux-deploy-pacemaker-cluster.md
-        - name: 8_建立與設定可用性群組
+        - name: 建立及設定可用性群組
           href: linux/sql-server-linux-create-availability-group.md
-        - name: 9_在 Kubernetes 上部署
+        - name: 在 Kubernetes 上部署
           href: linux/tutorial-sql-server-containers-kubernetes.md
-        - name: 10_設定複寫
+        - name: 設定複寫
           href: linux/sql-server-linux-replication-tutorial-tsql.md
+        - name: 容器中的機器學習服務
+          href: linux/sql-server-linux-machine-learning-services-container.md
     - name: 概念
       items:
         - name: 安裝
