@@ -1,20 +1,20 @@
 ---
-title: Linux 上的 SQL Server 2017 的版本資訊 |Microsoft Docs
+title: Linux 上的 SQL Server 2017 的版本資訊
 description: 本文包含的版本資訊，並在 Linux 上執行的 SQL Server 2017 的支援的功能。 版本資訊會包含最新版本和先前的數個版本。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 06/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: da7d92fd1fa15deb83dbca9a1710b967d660b99f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06c46a54f21c0397f4ee801349acbebafeedf7a1
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705151"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834807"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 的版本資訊
 
@@ -45,7 +45,7 @@ ms.locfileid: "66705151"
 
 下表列出的版本歷程記錄[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]。
 
-| 版本               | 版本       | 發行日期 |
+| 版本               | Version       | 發行日期 |
 |-----------------------|---------------|--------------|
 | [CU15](#CU15)         | 14.0.3162.1   | 2019-05-23   |
 | [CU14](#CU14)         | 14.0.3076.1   | 2019-03-25   |
@@ -393,7 +393,7 @@ sudo systemctl start mssql-server
 | &nbsp; | 異動資料擷取 (CDC) |
 | &nbsp; | 受管理備份 |
 | **高可用性** | 資料庫鏡像  |
-| **Security** | 可延伸金鑰管理 |
+| **安全性** | 可延伸金鑰管理 |
 | &nbsp; | 連結伺服器的 AD 驗證 | 
 | &nbsp; | 可用性群組 (Ag) 的 AD 驗證 | 
 | &nbsp; | 第 3 個合作對象 AD 工具 (Centrify，Vintela，Powerbroker) | 

@@ -1,20 +1,20 @@
 ---
-title: 在 Docker 中的 SQL Server 資料庫還原 |Microsoft Docs
+title: 在 Docker 中的 SQL Server 資料庫還原
 description: 本教學課程會示範如何還原新的 Linux Docker 容器中的 SQL Server 資料庫備份。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 79a480f2bd162e44a622413d091a2bebdaa82c00
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 826d62b3f1aeb75a89aa65be4755839f6601fcf2
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399918"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834557"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>在 Linux Docker 容器中的 SQL Server 資料庫還原
 

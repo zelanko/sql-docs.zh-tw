@@ -4,17 +4,18 @@ titleSuffix: SQL Server
 description: 了解 Linux 上設定 SQL Server Alwayson 上可用性群組 (AG) 針對讀取規模的工作負載。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 2b95d1d97a81ce99ab22d72e47d0ae7a6940f4f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cbb11da91864716838a7fbb4be26ac2dc00614c
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713405"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834279"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>在 Linux 上設定 SQL Server 可用性群組的讀取級別
 

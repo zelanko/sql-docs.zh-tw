@@ -1,20 +1,20 @@
 ---
-title: 開始使用 Linux 上的 SQL Server 的效能功能 |Microsoft Docs
+title: 開始使用 Linux 上的 SQL Server 的效能功能
 description: 這篇文章介紹 SQL Server 效能功能的 SQL server 的 Linux 使用者。 許多這些範例作用於所有平台，但這篇文章的內容是 Linux。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.openlocfilehash: a340b3b8ded0824947cc242538ad19159b4abb4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c5cf07107702579af1ae111c9c55843c16c01bd0
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713327"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834829"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的效能功能的逐步解說
 
@@ -158,7 +158,7 @@ SQL Server 支援原生編譯的預存程序存取記憶體最佳化資料表。
 ### <a name="learn-more-about-in-memory-oltp"></a>深入了解記憶體內部 OLTP
 如需記憶體內部 OLTP 的詳細資訊，請參閱下列主題：
 
-- [快速入門 1:更快速的 TRANSACT-SQL 效能的記憶體內部 OLTP 技術](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
+- [快速入門 1：可讓 Transact-SQL 擁有更快效能的記憶體內部 OLTP 技術](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
 - [移轉至 In-Memory OLTP](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)
 - [使用記憶體最佳化加快暫存資料表與資料表變數的速度](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
 - [監視與疑難排解記憶體使用量](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)

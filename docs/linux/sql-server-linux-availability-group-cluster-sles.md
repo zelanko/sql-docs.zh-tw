@@ -4,18 +4,19 @@ titleSuffix: SQL Server
 description: 了解如何建立可用性群組叢集 SQL Server 在 SUSE Linux Enterprise Server (SLES)
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: f69a4c0d98807d11b0ef2b01fb2995a0eeaddf21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f6638d1d31be45f12f0b80b7fc63f918e90d5ca
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705592"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834396"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 SLES 叢集
 
@@ -48,7 +49,7 @@ ms.locfileid: "66705592"
 
 5. [新增可用性群組為叢集中資源](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server)。 
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 若要完成下列的端對端案例中，您需要三部機器來部署三個節點叢集。 下列步驟概述如何設定這些伺服器。
 

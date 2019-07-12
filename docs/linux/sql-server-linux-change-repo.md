@@ -1,20 +1,20 @@
 ---
-title: 設定 Linux 存放庫的 SQL Server 2017 和 2019年 |Microsoft Docs
+title: 設定 SQL Server 2017 和 2019 Linux 存放庫
 description: 請檢查並設定 SQL Server 2019 和 Linux 上的 SQL Server 2017 的來源存放庫。 來源儲存機制會影響在安裝和升級時套用的 SQL Server 的版本。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 5e21110eb8a24c736b08833d10b509b5494adc48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 05299a2efd374dc7d58b5e32fcdea918b12fc1d3
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713332"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834079"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>設定存放庫進行安裝及升級 Linux 上的 SQL Server
 
@@ -171,7 +171,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ::: zone pivot="ld2-rhel"
 設定新的存放庫，若要使用 SQL Server 安裝與升級。 使用下列命令之一來設定您選擇的存放庫。
 
-| Repository | 版本 | 命令 |
+| Repository | Version | 命令 |
 |---|---|---|
 | **預覽 (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
 | **CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
@@ -183,7 +183,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ::: zone pivot="ld2-sles"
 設定新的存放庫，若要使用 SQL Server 安裝與升級。 使用下列命令之一來設定您選擇的存放庫。
 
-| Repository | 版本 | 命令 |
+| Repository | Version | 命令 |
 |---|---|---|
 | **預覽 (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
 | **CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
@@ -203,7 +203,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 2. 使用下列命令之一來設定您選擇的存放庫。
 
-   | Repository | 版本 | 命令 |
+   | Repository | Version | 命令 |
    |---|---|---|
    | **預覽 (2019)** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"` |
    | **CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |

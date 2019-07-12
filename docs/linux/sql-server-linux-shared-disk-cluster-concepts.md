@@ -1,19 +1,20 @@
 ---
-title: 容錯移轉叢集執行個體-在 Linux 上的 SQL Server |Microsoft Docs
+title: 容錯移轉叢集執行個體-在 Linux 上的 SQL Server
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e42c5cc42b1b6d0de6d9674070f53df33bda31b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 31d53db207dd7c3fa213e96261062b2575562e31
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705305"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833199"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>容錯移轉叢集執行個體-在 Linux 上的 SQL Server
 

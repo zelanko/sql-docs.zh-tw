@@ -1,20 +1,21 @@
 ---
-title: 安裝 SQL Server Machine Learning 在 Linux 上的服務 （R、 Python） |Microsoft Docs
+title: 在 Linux 上安裝 SQL Server Machine Learning 服務 （R、 Python）
 description: 在 Red Hat、 Ubuntu 與 SUSE，了解如何安裝 SQL Server Machine Learning 服務 （R、 Python）。
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a36ae06f28cb68395fd24b64921575567757a7f
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 5e64f19c7495a58c02852d9c1207b047de669758
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399943"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834678"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>安裝 SQL Server 2019 Machine Learning 服務 （R、 Python） 在 Linux 上
 

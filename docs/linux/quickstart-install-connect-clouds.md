@@ -2,20 +2,20 @@
 title: 開始使用雲端中的 SQL Server （在 Linux 上）
 titleSuffix: SQL Server
 description: 本快速入門示範如何在您選擇的雲端中的 Linux 上執行 SQL Server。
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/25/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 3530436b08ae05e6e10a42720b47688f50077a27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00b2f24de925c1d957e535030079ad0b1e18487d
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713555"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833614"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>快速入門：在雲端中執行 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]

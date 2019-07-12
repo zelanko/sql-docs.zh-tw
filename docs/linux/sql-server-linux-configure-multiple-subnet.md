@@ -1,19 +1,20 @@
 ---
-title: 在 Linux 上設定多個子網路 Always On 可用性群組和容錯移轉叢集執行個體 |Microsoft Docs
+title: 在 Linux 上設定多個子網路 Always On 可用性群組和容錯移轉叢集執行個體
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4c8116462266386457270b16ebcdb684252f5dcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37f4349a2d8888e0c5df7783d7f9e54460094980
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713253"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834027"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>設定子網路的多個 Always On 可用性群組和容錯移轉叢集執行個體
 

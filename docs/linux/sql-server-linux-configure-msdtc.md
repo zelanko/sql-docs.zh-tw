@@ -1,20 +1,20 @@
 ---
-title: 如何在 Linux 上設定 MSDTC |Microsoft Docs
+title: 如何在 Linux 上設定 MSDTC
 description: 本文章提供在 Linux 上設定 MSDTC 的逐步解說。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2bcf87b91423ae7aa79ae6a5194aa8fc31ca71c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4fe81c5e306b059414fe0f2245aca9c9787ee1b
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713270"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834018"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>如何在 Linux 上設定 Microsoft Distributed Transaction Coordinator (MSDTC)
 

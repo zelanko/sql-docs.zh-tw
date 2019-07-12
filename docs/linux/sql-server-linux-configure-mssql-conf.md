@@ -1,20 +1,20 @@
 ---
-title: 在 Linux 上設定 SQL Server 設定 |Microsoft Docs
+title: 在 Linux 上設定 SQL Server 設定
 description: 本文說明如何在 Linux 上設定 SQL Server 設定時，用以 mssql-conf 工具。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 9fd4e35a9fbdd7e0cd3c77fb05ef2f7fdde53c02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57e43f3afd9c46e3b49e4f1f07ab3038359c8c50
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719398"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834015"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具，設定在 Linux 上的 SQL Server
 
@@ -394,7 +394,7 @@ ms.locfileid: "66719398"
 
     下表列出可能**coredump.coredumptype**值。
 
-    | 類型 | 描述 |
+    | type | 描述 |
     |-----|-----|
     | **mini** | 迷你是最小的傾印檔案類型。 它會使用 Linux 系統資訊來判斷執行緒和處理序中的模組。 傾印包含只有主機環境執行緒堆疊和模組。 它不包含間接記憶體參考或全域變數。 |
     | **miniplus** | Mini、 miniPlus 大致，但包含額外的記憶體。 它了解 SQLPAL 和主機環境中，加入傾印中的下列記憶體區域的內部項目：</br></br> -各種全域變數</br> -所有的記憶體，大於 64 TB</br> -所有名為區域中找到 **/proc/$ pid/對應**</br> -間接與執行緒堆疊的記憶體</br> 執行緒的資訊</br> -關聯 Teb 的和 Peb 的</br> 模組資訊</br> VMM 和 VAD 樹狀結構 |

@@ -1,19 +1,20 @@
 ---
-title: Linux 部署的 SQL Server 可用性基本概念 |Microsoft Docs
+title: Linux 部署的 SQL Server 可用性基本概念
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4e42088227e22f6368426b9c4e8dc8134dbb49d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 203fad6aa3c39d57446738b9c74631fe114c609e
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719367"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833557"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 部署的 SQL Server 可用性基本概念
 
@@ -83,7 +84,7 @@ Samba，也就是伺服器訊息區 (SMB) 的 Linux 變體，也可用來建立�
 ### <a name="configure-the-firewall"></a>設定防火牆
 類似於 Windows，Linux 散發套件有內建的防火牆。 如果貴公司使用外部防火牆的伺服器，停用防火牆，在 Linux 中的可能可以接受。 不過，不論其中已啟用防火牆，連接埠必須開啟。 下表列出常見的連接埠進行高可用性[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux 上的部署。
 
-| 通訊埠編號 | 類型     | 描述                                                                                                                 |
+| 通訊埠編號 | type     | 描述                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | （如果使用） samba-結束點對應程式                                                                                          |

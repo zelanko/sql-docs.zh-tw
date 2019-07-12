@@ -1,20 +1,21 @@
 ---
-title: Always On 可用性群組，在 Linux 上的 SQL server |Microsoft Docs
+title: Always On 可用性群組，在 Linux 上的 SQL server
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 04/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: e552b1392716625cd2ce3f7927a1554c25bdb8e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1900a7156eaf98abb9a4c20bad5f7d1eafe365db
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713402"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834218"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux 上的可用性群組
 

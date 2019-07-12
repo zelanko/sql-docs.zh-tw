@@ -1,20 +1,20 @@
 ---
-title: 開始使用 Linux 上的 SQL Server 安全性 |Microsoft 文件
+title: 開始使用 Linux 上的 SQL Server 安全性
 description: 本文說明一般的安全性動作。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 655aebb0c07c812a7aa6c81e7c7033d85e8b7ce2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fe29cadaa14168871e7448350d41bc89afed05b
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705202"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834744"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的安全性功能的逐步解說
 
@@ -28,7 +28,7 @@ ms.locfileid: "66705202"
 
 ## <a name="create-a-login-and-a-database-user"></a>建立登入和資料庫使用者 
 
-授與其他人所建立的登入在 master 資料庫中使用的 SQL Server 存取[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)陳述式。 例如：
+授與其他人所建立的登入在 master 資料庫中使用的 SQL Server 存取[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)陳述式。 例如:
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
@@ -49,7 +49,7 @@ GO
 - SQL Server 系統管理員帳戶可以連接到任何資料庫，而且可以建立多個登入和使用者在任何資料庫中。  
 - 當有人建立資料庫時，它們成為資料庫擁有者，可以連接至該資料庫。 資料庫擁有者可以建立更多使用者。
 
-稍後您可以授權其他登入，以便建立更多的登入，授與他們`ALTER ANY LOGIN`權限。 在資料庫內，您可以授權其他使用者授與它們建立更多使用者`ALTER ANY USER`權限。 例如：   
+稍後您可以授權其他登入，以便建立更多的登入，授與他們`ALTER ANY LOGIN`權限。 在資料庫內，您可以授權其他使用者授與它們建立更多使用者`ALTER ANY USER`權限。 例如:   
 
 ```
 GRANT ALTER ANY LOGIN TO Larry;   

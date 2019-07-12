@@ -1,8 +1,7 @@
 ---
-title: 版本及支援的功能的 SQL Server 2017 ~ Linux |Microsoft Docs
+title: 版本及支援的功能的 SQL Server 2017 ~ Linux
 ms.date: 09/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: linux
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
-ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 21e709b20df80fdecc7aff80ff983b0f33bbf101
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.reviewer: vanto
+manager: jroth
+ms.openlocfilehash: c3fe41e136bb3a4614c791cb7f225c8b32c63692
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713180"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833793"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上 SQL Server 2017 的版本及支援功能
 

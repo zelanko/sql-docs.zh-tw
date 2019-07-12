@@ -4,18 +4,18 @@ titleSuffix: SQL Server
 description: ''
 author: Dylan-MSFT
 ms.author: dygray
-ms.reviewer: rothja
+ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: craigg
+manager: jroth
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 50f2685b5b981cddfdba61f91b7ec04e9f6345d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cee4ca0edcc5a49a34b6c352ae0121bed3b40ca
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822522"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834446"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>加入 Active Directory 網域的 Linux 主機上的 SQL Server
 
@@ -23,7 +23,7 @@ ms.locfileid: "66822522"
 
 這篇文章提供有關如何將 SQL Server Linux 主機電腦加入 Active Directory (AD) 網域的一般指引。 有兩種方法： 使用內建的 SSSD 封裝，或使用協力廠商 Active Directory 提供者。 第三方網域聯結產品的範例包括[PowerBroker 身分識別服務 (PBI)](https://www.beyondtrust.com/)，[一個身分識別](https://www.oneidentity.com/products/authentication-services/)，並[Centrify](https://www.centrify.com/)。 本指南包含要檢查您的 Active Directory 設定的步驟。 不過，它並不打算提供有關如何使用協力廠商公用程式時，將機器加入網域的指示。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 設定 Active Directory 驗證之前，您需要設定一個 Active Directory 網域控制站，Windows，您的網路。 然後，加入您的 SQL Server 的 Active Directory 網域的 Linux 主機上。
 

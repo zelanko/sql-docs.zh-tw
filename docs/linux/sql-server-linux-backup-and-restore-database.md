@@ -1,20 +1,21 @@
 ---
-title: 備份和還原在 Linux 上的 SQL Server 資料庫 |Microsoft Docs
+title: 在 Linux 上的備份和還原 SQL Server 資料庫
 description: 了解如何備份和還原在 Linux 上的 SQL Server 資料庫。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f07885aaef22da63d1c94e669db17e7536ccc933
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4722afd669893dc4bfa9cad23a7c97cdef5cc182
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713343"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834197"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>在 Linux 上的備份和還原 SQL Server 資料庫
 
@@ -30,7 +31,7 @@ ms.locfileid: "66713343"
 sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
 ```
 
-當您執行命令時，SQL Server 將會提示輸入密碼。 您輸入密碼之後，命令介面會傳回備份進度的結果。 例如：
+當您執行命令時，SQL Server 將會提示輸入密碼。 您輸入密碼之後，命令介面會傳回備份進度的結果。 例如:
 
 ```
 Password:

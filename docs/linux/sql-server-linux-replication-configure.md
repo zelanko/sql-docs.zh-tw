@@ -1,21 +1,22 @@
 ---
-title: 在 Linux 上設定 SQL Server 複寫 |Microsoft Docs
+title: 在 Linux 上設定 SQL Server 複寫
 description: 本文說明如何在 Linux 上設定 SQL Server 複寫。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/20/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 29c8dd4ef4898796722e1c54eeaff94afef1c0c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe12afac12e34dfb6c66a44a1d1de6c2b5ce1876
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705332"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834795"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>在 Linux 上設定 SQL Server 複寫
 
@@ -33,7 +34,7 @@ ms.locfileid: "66705332"
   
 * 如需預存程序的範例，請遵循[在 Linux 上的設定 SQL Server 複寫](sql-server-linux-replication-tutorial-tsql.md)教學課程。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 設定 「 發行者 」、 「 散發者 」 和 「 訂閱者 」 時，您需要完成幾個 SQL Server 執行個體的組態步驟。
 
