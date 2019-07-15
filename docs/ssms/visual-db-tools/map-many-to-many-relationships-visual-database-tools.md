@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2977cf92-98b5-48b2-b0fd-8fbc7040f2b4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6abe574ebfbe031d4a5ee1aa90698b566a4f84da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 74ee534f8451c7951f8bce1fa7ef9a738e1f37ae
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096649"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682095"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>對應多對多關聯性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

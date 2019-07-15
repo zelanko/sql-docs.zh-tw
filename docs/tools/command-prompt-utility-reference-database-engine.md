@@ -14,16 +14,16 @@ helpviewer_keywords:
 - utilities [SQL Server], command prompt
 - command prompt [SQL Server], utilities
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bf6b699c7ff8830d1f74d14a077a4d0cb4e68116
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e83792a7d982dedf41e525fc7801fb76f1db7d5
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62723473"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730102"
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>SQL 命令提示字元公用程式 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

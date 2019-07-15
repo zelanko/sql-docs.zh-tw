@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: f518e528-cc8f-446a-b37d-98505b86e430
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 954c609b5f6cd8a376010e58fe197e992314516a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f677ce64acd550b59d7e531bac24c47bc6fb7292
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096601"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687140"
 ---
 # <a name="edit-an-alert"></a>Edit an Alert
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

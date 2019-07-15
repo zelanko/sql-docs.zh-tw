@@ -11,15 +11,15 @@ helpviewer_keywords:
 - unique resource names
 - URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aaf8d8f1410295439f5083fa8c33067d61b0ffa1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ada8c5996f0324d3d1f623981b7f83f8f0aa804
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62672367"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730601"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查詢運算式和統一的資源名稱
 

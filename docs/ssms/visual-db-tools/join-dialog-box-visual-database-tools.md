@@ -13,19 +13,19 @@ f1_keywords:
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 75cfa4ee4a51e1113537d677c47104be215b6b7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 72eb437cf92f0a9b6271e3c609a58af204e89eee
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096627"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682207"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>聯結對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用此對話方塊可指定聯結資料表的選項。 若要存取此對話方塊，請在 [設計] 窗格中選取聯結線 (Join Line)。 然後，在 [屬性] 視窗中按一下 [聯結條件及類型]，並按一下顯示在屬性右邊的省略符號 **(...)**。  
+使用此對話方塊可指定聯結資料表的選項。 若要存取此對話方塊，請在 [設計]  窗格中選取聯結線 (Join Line)。 然後，在 [屬性]  視窗中按一下 [聯結條件及類型]  ，並按一下顯示在屬性右邊的省略符號 **(...)** 。  
   
-依照預設，是使用根據包含聯結資料行中符合資訊資料列來建立結果集的內部聯結，將關聯資料表聯結在一起。 藉由設定 [聯結] 對話方塊中的選項，可以根據不同的運算子指定聯結，也可以指定外部聯結。  
+依照預設，是使用根據包含聯結資料行中符合資訊資料列來建立結果集的內部聯結，將關聯資料表聯結在一起。 藉由設定 [聯結]  對話方塊中的選項，可以根據不同的運算子指定聯結，也可以指定外部聯結。  
   
 如需聯結資料表的詳細資訊，請參閱[使用聯結查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)。  
   
@@ -39,12 +39,12 @@ ms.locfileid: "65096627"
 |**選取所有資料列，從 <table1>**|指定輸出中顯示左邊資料表裡全部的資料列，即使右邊資料表中沒有對應的符合也一樣。 右邊資料表中沒有符合資料的資料行會顯示為 null。 選擇此選項就等於在 SQL 陳述式中指定 LEFT OUTER JOIN。|  
 |**選取所有資料列，從 <table2>**|指定輸出中顯示右邊資料表裡全部的資料列，即使左邊資料表中沒有對應的符合也一樣。 左邊資料表中沒有符合資料的資料行會顯示為 null。 選擇此選項就等於在 SQL 陳述式中指定 RIGHT OUTER JOIN。|  
   
-同時選取 [選取所有資料列，從 <table1>] 和 [選取所有資料列，從 <table2>]，與在 SQL 陳述式中指定 FULL OUTER JOIN 相同。  
+同時選取 [選取所有資料列，從 <table1>]  和 [選取所有資料列，從 <table2>]  ，與在 SQL 陳述式中指定 FULL OUTER JOIN 相同。  
   
 選取某個選項建立外部聯結時，聯結線中的菱形圖就會改變，以指示聯結為左邊外部、右邊外部或完整外部聯結。  
   
 > [!NOTE]  
-> 「左邊」和「右邊」這兩個字不一定對應到 [圖表] 窗格中的資料表位置。 「左邊」指的是在 SQL 陳述式中名稱出現在關鍵字 JOIN 左邊的資料表，「右邊」指的是名稱出現在關鍵字 JOIN 右邊的資料表。 如果在 [圖表] 窗格中移動資料表，則不必變更資料表是左邊或右邊的考量。  
+> 「左邊」和「右邊」這兩個字不一定對應到 [圖表] 窗格中的資料表位置。 「左邊」指的是在 SQL 陳述式中名稱出現在關鍵字 JOIN 左邊的資料表，「右邊」指的是名稱出現在關鍵字 JOIN 右邊的資料表。 如果在 [圖表]  窗格中移動資料表，則不必變更資料表是左邊或右邊的考量。  
   
 ## <a name="see-also"></a>另請參閱  
 [使用聯結查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  

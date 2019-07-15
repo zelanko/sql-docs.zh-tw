@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9b40aabf488f0d0c294638c43153e8f384187781
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 446f44bc872a967478cc3c1cd1071c691ca24a07
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096689"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682237"
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>資料庫演進問題 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

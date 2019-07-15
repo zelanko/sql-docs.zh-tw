@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 52ec5347795a6b26453ae806c3ef43113d28aed4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 102f8156bfb221c4bef61c3f75a5b67a82745759
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095402"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690218"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>修改聯結運算子 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -23,27 +23,27 @@ helpviewer_keywords:
 - database performance [SQL Server], SQL Server Profiler
 - trace [SQL Server]
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 549b08a7237492064cc6cf50470521ce3be804ee
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 1395cef2b706cc9e37610686ebae6561f2f22396
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439890"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729736"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一個介面，您可以利用它來建立和管理追蹤，以及分析和重新執行追蹤結果。 事件會儲存於追蹤檔案中，稍後在嘗試診斷問題時，可以用來進行分析或是重新執行特定的一連串步驟。  
+[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一個介面，可以建立和管理追蹤，以及分析和重新執行追蹤結果。 事件會儲存於追蹤檔案中，稍後在嘗試診斷問題時，可以用來進行分析或是重新執行特定的一連串步驟。  
   
 > [!IMPORTANT]
-> SQL 追蹤和[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]已被取代。 包含 Microsoft SQL Server 追蹤和重新執行物件的 *Microsoft.SqlServer.Management.Trace* 命名空間也會被取代。 
+> SQL 追蹤和 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 已被淘汰。 包含 Microsoft SQL Server 追蹤和重新執行物件的 *Microsoft.SqlServer.Management.Trace* 命名空間也會被淘汰。 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
-> 請改用擴充事件。 如需詳細資訊[擴充事件](../../relational-databases/extended-events/extended-events.md)，請參閱[快速入門： SQL Server 中的擴充事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)並[SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
+> 請改用擴充事件。 如需[擴充事件](../../relational-databases/extended-events/extended-events.md)的詳細資訊，請參閱[快速入門︰SQL Server 中的擴充事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent 分析工具](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
 
 > [!NOTE]
-> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 針對 Analysis Services 工作負載不被取代，而且將會繼續受到支援。
+> 適用於 Analysis Services 工作負載的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]「未」遭淘汰，而且將會繼續受支援。
 
  ## <a name="where-is-the-profiler"></a>Profiler 位於何處？
  

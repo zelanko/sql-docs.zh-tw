@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f9ec90e8-3aad-415c-a5c4-8dfa9540e37f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 770d6c0813d210843f4606783aa3e9e025b81eb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 7958ed99aa26de79893329d57471ead88ea4519b
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095644"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680240"
 ---
 # <a name="create-self-joins-automatically-visual-database-tools"></a>自動建立自我聯結 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

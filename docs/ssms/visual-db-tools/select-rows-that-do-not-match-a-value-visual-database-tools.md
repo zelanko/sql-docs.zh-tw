@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 19898578-7b2f-401c-bb8f-9f2a017efdf7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 14c3d94d35177f1c95b80561124dcba8fd143653
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: d33faa4f04c9448910493c9511edffd418e7161c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099906"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687689"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>選取不符合某值的資料列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "65099906"
   
 1.  如果尚未這麼做，請將想要在搜尋條件中使用的資料行或運算式新增至[準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中。  
   
-2.  尋找包含想要搜尋之資料行或運算式的資料列，然後在 [篩選條件] 方格資料行中輸入 NOT 運算子，後面再加上搜尋值。  
+2.  尋找包含想要搜尋之資料行或運算式的資料列，然後在 [篩選條件]  方格資料行中輸入 NOT 運算子，後面再加上搜尋值。  
   
 例如，若要尋找 `products` 資料表中產品代碼資料行不是以 "A," 為開頭的所有資料列，則可以輸入如下所示的搜尋條件：  
   

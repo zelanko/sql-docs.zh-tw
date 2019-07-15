@@ -14,15 +14,15 @@ helpviewer_keywords:
 - PowerShell [SQL Server], SMO
 - SQL Server Management Objects, PowerShell
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6ec1bbc16f12424c1be539e9b82f56224822646b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa65edf81bbed5868864d433169e5902a971d6c3
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65450055"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730540"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell 提供者
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "65450055"
   
 > [!NOTE]
 > 有兩個 SQL Server PowerShell 模組：**SqlServer** 和 **SQLPS**。 **SQLPS** 模組隨附於 SQL Server 安裝 (基於回溯相容性)，但不再更新。 最新版 PowerShell 模組是 **SqlServer** 模組。 **SqlServer** 模組包含 **SQLPS** 中 Cmdlet 的更新版本，此外還加入新的 Cmdlet 以支援最新版 SQL 功能。  
-> 舊版 **SqlServer** 模組隨附於 SQL Server Management Studio (SSMS)，但僅限 SSMS 16.x 版。 若要搭配 SSMS 17.0 和更新版本使用 PowerShell，則必須從 PowerShell 資源庫安裝 **SqlServer** 模組。
+> 舊版 **SqlServer** 模組隨附於  SQL Server Management Studio (SSMS)，但僅限 SSMS 16.x 版。 若要搭配 SSMS 17.0 和更新版本使用 PowerShell，則必須從 PowerShell 資源庫安裝 **SqlServer** 模組。
 > 若要安裝 **SqlServer** 模組，請參閱[安裝 SQL Server PowerShell](download-sql-server-ps-module.md)。
 
 
@@ -54,7 +54,7 @@ ms.locfileid: "65450055"
 |`SQLSERVER:\SSIS`|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件，例如專案、封裝和環境。|  
 |`SQLSERVER:\SQLAS`|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件，例如 Cube、彙總和維度。|  
   
- 例如，您可以使用 SQLSERVER:\SQL 資料夾來當做可代表 SMO 物件模型所支援之任何物件的路徑開頭。 SQLSERVER:\SQL 路徑的前置部分是 SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*。 執行個體名稱之後的節點會在物件集合 (例如「資料庫」或「檢視」) 和物件名稱 (例如 AdventureWorks2012) 之間輪替。 結構描述不會表示為物件類別。 當您在結構描述中指定最上層物件的節點 (如資料表或檢視表) 時，必須使用 *SchemaName.ObjectName*格式來指定物件名稱。  
+ 例如，您可以使用 SQLSERVER:\SQL 資料夾來當做可代表 SMO 物件模型所支援之任何物件的路徑開頭。 SQLSERVER:\SQL 路徑的前置部分是 SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*。 執行個體名稱之後的節點會在物件集合 (例如「資料庫」  或「檢視」  ) 和物件名稱 (例如 AdventureWorks2012) 之間輪替。 結構描述不會表示為物件類別。 當您在結構描述中指定最上層物件的節點 (如資料表或檢視表) 時，必須使用 *SchemaName.ObjectName*格式來指定物件名稱。  
   
  下列範例顯示本機電腦上預設 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體中 AdventureWorks2012 資料庫之 Purchasing 結構描述的 Vendor 資料表路徑：  
   

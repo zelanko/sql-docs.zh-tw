@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 56c40b55b49f4d6e5cd50c696029366e9c63a6d8
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 8717043764d67ab16217da7beecdc7bfee6515c3
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291449"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729351"
 ---
 # <a name="replay-trace-data"></a>重新執行追蹤資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51291449"
   
     2.  修改新組態檔中的重新執行組態設定。  
   
-    3.  當起始事件重新執行階段 (下一步) 時，使用 [重新執行] 選項的 *config_file* 參數指定已修改組態檔的位置。  
+    3.  當起始事件重新執行階段 (下一步) 時，使用 [重新執行]  選項的 *config_file* 參數指定已修改組態檔的位置。  
   
      如需重新執行組態檔的詳細資訊，請參閱[設定 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)。  
   

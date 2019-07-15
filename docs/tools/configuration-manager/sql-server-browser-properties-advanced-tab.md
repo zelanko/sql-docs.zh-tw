@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: ba79137a-cb72-4bf3-a650-e11d02cfce10
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: b0af8a4f636e403d3ec04ba63396db872fce3141
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf0f8a27de07eb61e288fb290041a433a06b3481
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596991"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733251"
 ---
 # <a name="sql-server-browser-properties-advanced-tab"></a>SQL Server Browser 屬性 (進階索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47596991"
  在發生錯誤時放置記憶體傾印的位置。  
   
  **錯誤報告**  
- 若設定為 [是]，一旦發生嚴重錯誤，Dr. Watson 程式會將資訊轉送至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 或您的錯誤伺服器。 如需錯誤報表的詳細資訊，請搜尋《線上叢書》的＜錯誤報告和使用方式報告設定＞主題。  
+ 若設定為 [是]  ，一旦發生嚴重錯誤，Dr. Watson 程式會將資訊轉送至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 或您的錯誤伺服器。 如需錯誤報表的詳細資訊，請搜尋《線上叢書》的＜錯誤報告和使用方式報告設定＞主題。  
   
  **執行個體識別碼**  
  指出使用此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 預設執行個體為 **MSSQL10_50.MSSQLSERVER**。  

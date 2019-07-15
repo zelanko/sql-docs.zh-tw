@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fda8d6390ff5ccda6b241cba1eafa63c08ef0436
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: e8d1e286165a8215a2c8c081c78e7c49886f679e
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095380"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690371"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>設計查詢和檢視操作說明主題 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

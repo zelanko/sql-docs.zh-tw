@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], about SQL Server Profiler
 - SQL Server Profiler, about SQL Server Profiler
 ms.assetid: 6d00378a-5d74-463b-9ed6-a2685306a9d2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 47778dc7faf65628484dd30f8905b16646e91063
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6973c0cd200cd53190e12fec7cf4d1a54a228268
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704206"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729761"
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>SQL Server Profiler 範本和權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

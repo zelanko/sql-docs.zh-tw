@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - FeatureSet element
 ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0e1dea053feee9539ad8ddd764954147e9428515
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: fab04800631cde90514b234b85adf2e5cdf010ac
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293064"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727713"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ccc212a1-fd13-48d6-85e5-5ff310c34bbd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6e1de076e5882be92a1ed3b9f2d16eac7c5e062f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: f2962f2182d26a9a54ae59c127e6ececafc4b84e
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098205"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679508"
 ---
 # <a name="remove-joins-visual-database-tools"></a>移除聯結 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

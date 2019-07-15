@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a5e5bf5561a72eb6eee82f7ae72877b16255caa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 9d47e69e37ddebb4009f2badceb6b461e05488e9
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098471"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680883"
 ---
 # <a name="print-dialog-box"></a>列印對話方塊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

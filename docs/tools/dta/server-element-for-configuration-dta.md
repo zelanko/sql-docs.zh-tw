@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Server element
 ms.assetid: da9ff870-9cfd-42fe-994b-7b9292681f7d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1374ae2bff41360c473d039909859bd1f67b4f95
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 276af9a4703d70a930d39e06cb4ad21e2d56c9e2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671457"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733472"
 ---
 # <a name="server-element-for-configuration-dta"></a>組態的 Server 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

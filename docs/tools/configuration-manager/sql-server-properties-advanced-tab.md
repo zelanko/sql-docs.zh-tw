@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: d82c5abb5108c49281763465023cde9fc2cca275
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1813499879df65dba847f3296dec71d58da6e1c4
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804576"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732611"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server 屬性 (進階索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47804576"
  顯示在發生錯誤時放置記憶體傾印的位置。  
   
  **錯誤報告**  
- 若設定為 [是]，一旦發生嚴重錯誤，Dr. Watson 程式會將資訊轉送至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 或您的錯誤伺服器。 如需錯誤報表的詳細資訊，請搜尋《線上叢書》的＜錯誤報告和使用方式報告設定＞主題。 若要變更此值，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管中，在伺服器上按一下滑鼠右鍵，然後依序按一下 [屬性] **和 [其他伺服器設定]** 頁面。 這個選項會出現在 **[資訊報告]** 區域中。  
+ 若設定為 [是]  ，一旦發生嚴重錯誤，Dr. Watson 程式會將資訊轉送至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 或您的錯誤伺服器。 如需錯誤報表的詳細資訊，請搜尋《線上叢書》的＜錯誤報告和使用方式報告設定＞主題。 若要變更此值，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管中，在伺服器上按一下滑鼠右鍵，然後依序按一下 [屬性]  **和 [其他伺服器設定]** 頁面。 這個選項會出現在 **[資訊報告]** 區域中。  
   
  **檔案版本**  
  顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可執行檔的版本。  

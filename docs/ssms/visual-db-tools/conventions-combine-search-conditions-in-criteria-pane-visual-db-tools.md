@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 040e07943bf90a0cae7a9afa262bb384631c3e93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: abee94fda58ce46f9c9e34906928003d7e6293d5
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65093328"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686187"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>在條件窗格中合併搜尋條件的慣例 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -124,9 +124,9 @@ WHERE
   
 一般而言，這些規則指示了 AND 和 OR 子句在 [準則窗格] 中顯示的方式：  
   
--   所有使用 AND 連結的條件都會顯示在 [篩選] 格線欄或同一個 [或...] 資料欄中。  
+-   所有使用 AND 連結的條件都會顯示在 [篩選]  格線欄或同一個 [或...]  資料欄中。  
   
--   所有使用 OR 連結的條件都會顯示在不同的 [或...] 資料欄中。  
+-   所有使用 OR 連結的條件都會顯示在不同的 [或...]  資料欄中。  
   
 -   如果 AND 和 OR 子句合併的邏輯結果是 AND 分散至數個 OR 子句，[準則窗格] 會以需要的次數重複 AND 子句，以明確表示這一點。  
   

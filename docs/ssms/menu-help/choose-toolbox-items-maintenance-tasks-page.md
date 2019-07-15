@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0446ae198b5e4468dfb14a5ba86f51f2839c8608
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 6fafc654e7eb9142422b192ee9bfd221ce434143
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105265"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679967"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>選擇工具箱項目 (維護工作頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

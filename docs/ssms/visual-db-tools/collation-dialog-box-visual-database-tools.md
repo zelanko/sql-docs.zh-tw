@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ffdd615647e1dea318d5cec7fa5075b6449b4dae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 94409316db28a3e122457e81037a9a4eadb60509
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65093835"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686311"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>定序對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "65093835"
   
 下列情況會出現這個對話方塊：  
   
--   在 [資料行屬性] 索引標籤的 [定序] 欄位中輸入無效的定序名稱。  
+-   在 [資料行屬性]  索引標籤的 [定序]  欄位中輸入無效的定序名稱。  
   
--   在 [資料行屬性] 索引標籤的 [定序] 欄位中按一下，然後按一下欄位右側的省略符號按鈕 (**...**)。  
+-   在 [資料行屬性]  索引標籤的 [定序]  欄位中按一下，然後按一下欄位右側的省略符號按鈕 ( **...** )。  
   
 ## <a name="options"></a>選項。  
 **SQL 定序**  
@@ -39,10 +39,10 @@ ms.locfileid: "65093835"
 從下拉式清單中選擇 Windows 所定義的定序序列。  
   
 **二進位編碼排序**  
-使用字元值的二進位碼進行比較。 如果選取此選項，某些字母順序比較選項會無法使用。 例如，區分字母大小寫的比較會無法使用，因為大寫字母和小寫字母有不同的二進位編碼方式。 只有在選取 [Windows 定序] 時適用。  
+使用字元值的二進位碼進行比較。 如果選取此選項，某些字母順序比較選項會無法使用。 例如，區分字母大小寫的比較會無法使用，因為大寫字母和小寫字母有不同的二進位編碼方式。 只有在選取 [Windows 定序]  時適用。  
   
 **字典排序**  
-使用字母順序比較選項。 只有在選取 [Windows 定序] 時適用。 The alphabetic comparisons options are:  
+使用字母順序比較選項。 只有在選取 [Windows 定序]  時適用。 The alphabetic comparisons options are:  
   
 -   **區分大小寫** ：若要比較作業將大寫和小寫字母視為不相同，請選取此選項。  
   

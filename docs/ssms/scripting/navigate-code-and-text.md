@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23e1560bff7515f99e10588003b7b9b3d1935376
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d323f9821587316e013c9eabe37ebdb75e9d1a2
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65821368"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681139"
 ---
 # <a name="navigate-code-and-text"></a>導覽程式碼與文字
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

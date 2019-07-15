@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0810533a3488043ef4b3d8db9c0de4f3174b4ba8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 1aac4a0582906ac74994ac45a932b4a781f97e37
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102624"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680748"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>SSMS 使用方式和診斷資料收集的本機稽核
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

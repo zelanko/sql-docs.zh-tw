@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 605b0f4c-5ba1-4249-ad1c-6341df77cd7a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 855c307974185bc85aed222ea18742251411166b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: d7525e4122598f099d34dfd763aabaebdc176059
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102605"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687330"
 ---
 # <a name="open-a-template"></a>開啟範本
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

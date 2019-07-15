@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 26ff0aa2920072d8c6fd4ef97d9945bf1b365970
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: a65a9f721f9abbfabc18da05b6095a6cb5a945d3
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104837"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690282"
 ---
 # <a name="external-tools"></a>外部工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

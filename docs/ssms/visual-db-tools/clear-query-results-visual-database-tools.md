@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0e2567ae3e2d82c1083803d37fa90c5154f01026
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 1036fcad90dbd2f9efbf46e30295c75291022598
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65093804"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686376"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>清除查詢結果 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1ffaaae5e6849db094c4c7ea176118b68a040ad7
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 73faafc9f9aca28ec6c334722a1cb9ce0a51d5ca
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582754"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860702"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ ms.locfileid: "67582754"
 |RESTORE HEADERONLY|Y||如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是使用作為密碼的儲存體帳戶金鑰所定義，則需要定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，而且需要指定 WITH CREDENTIAL 引數。|  
 |RESTORE LABELONLY|Y||如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是使用作為密碼的儲存體帳戶金鑰所定義，則需要定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，而且需要指定 WITH CREDENTIAL 引數。|  
 |RESTORE VERIFYONLY|Y||如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是使用作為密碼的儲存體帳戶金鑰所定義，則需要定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，而且需要指定 WITH CREDENTIAL 引數。|  
-|RESTORE REWINDONLY|?|||  
+|RESTORE REWINDONLY|-|||  
   
  如需 Backup 陳述式的語法和一般資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。  
   
@@ -151,9 +151,9 @@ ms.locfileid: "67582754"
 |COMPRESSION&#124;NO_COMPRESSION|Y|不支援檔案快照備份||  
 |DESCRIPTION|Y|||  
 |NAME|Y|||  
-|EXPIREDATE &#124; RETAINDAYS|?|||  
-|NOINIT &#124; INIT|?||您無法附加至 Blob。 若要覆寫備份，請使用 **WITH FORMAT** 引數。 不過，當使用檔案快照集備份時 (使用 **WITH FILE_SNAPSHOT** 引數)，不允許 **WITH FORMAT** 引數，以避免留下使用原始備份建立的孤立檔案快照集。|  
-|NOSKIP &#124; SKIP|?|||  
+|EXPIREDATE &#124; RETAINDAYS|-|||  
+|NOINIT &#124; INIT|-||您無法附加至 Blob。 若要覆寫備份，請使用 **WITH FORMAT** 引數。 不過，當使用檔案快照集備份時 (使用 **WITH FILE_SNAPSHOT** 引數)，不允許 **WITH FORMAT** 引數，以避免留下使用原始備份建立的孤立檔案快照集。|  
+|NOSKIP &#124; SKIP|-|||  
 |NOFORMAT &#124; FORMAT|Y||除非指定了 **WITH FORMAT** ，否則將備份帶入現有的 Blob 會失敗。 指定 **WITH FORMAT** 時就會覆寫現有的 Blob。 不過，當使用檔案快照集備份時 (使用 **WITH FILE_SNAPSHOT** 引數)，不允許 FORMAT 引數，以避免留下使用原始檔案快照集備份建立的孤立檔案快照集。 不過，當使用檔案快照集備份時 (使用 **WITH FILE_SNAPSHOT** 引數)，不允許 **WITH FORMAT** 引數，以避免留下使用原始備份建立的孤立檔案快照集。|  
 |MEDIADESCRIPTION|Y|||  
 |MEDIANAME|Y|||  
@@ -163,8 +163,8 @@ ms.locfileid: "67582754"
 |NO_CHECKSUM &#124; CHECKSUM|Y|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|Y|||  
 |STATS|Y|||  
-|REWIND &#124; NOREWIND|?|||  
-|UNLOAD &#124; NOUNLOAD|?|||  
+|REWIND &#124; NOREWIND|-|||  
+|UNLOAD &#124; NOUNLOAD|-|||  
 |NORECOVERY &#124; STANDBY|Y|||  
 |NO_TRUNCATE|Y|||  
   
@@ -186,19 +186,19 @@ ms.locfileid: "67582754"
 |REPLACE|Y|||  
 |RESTART|Y|||  
 |RESTRICTED_USER|Y|||  
-|FILE|?|||  
+|FILE|-|||  
 |PASSWORD|Y|||  
 |MEDIANAME|Y|||  
 |MEDIAPASSWORD|Y|||  
 |BLOCKSIZE|Y|||  
-|BUFFERCOUNT|?|||  
-|MAXTRANSFERSIZE|?|||  
+|BUFFERCOUNT|-|||  
+|MAXTRANSFERSIZE|-|||  
 |CHECKSUM &#124; NO_CHECKSUM|Y|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|Y|||  
 |FILESTREAM|Y|不支援快照備份||  
 |STATS|Y|||  
-|REWIND &#124; NOREWIND|?|||  
-|UNLOAD &#124; NOUNLOAD|?|||  
+|REWIND &#124; NOREWIND|-|||  
+|UNLOAD &#124; NOUNLOAD|-|||  
 |KEEP_REPLICATION|Y|||  
 |KEEP_CDC|Y|||  
 |ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|Y|||  
@@ -219,9 +219,6 @@ ms.locfileid: "67582754"
 2.  展開 [資料庫]  ，以滑鼠右鍵按一下所需的資料庫，指向 [工作]  ，然後按一下 [備份...]  。
   
 3.  [一般]  頁面之 [目的地]  區段的 [備份至:]  下拉式清單中提供 [URL]  選項。  [URL]  選項可用以建立備份至 Microsoft Azure 儲存體。 按一下 [加入]  ，[選取備份目的地]  對話方塊隨即開啟：
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     1.  **Azure 儲存體容器：** 儲存備份檔案的 Microsoft Azure 儲存體容器名稱。  從下拉式清單中選取現有的容器，或手動輸入容器。 
   
     2.  **共用的存取原則：** 輸入手動輸入之容器的共用存取簽章。  如果已選擇現有的容器，則此欄位無法使用。 
@@ -229,11 +226,13 @@ ms.locfileid: "67582754"
     3.  **備份檔案：** 備份檔案的名稱。
     
     4.  **新增容器：** 用來註冊您沒有共用存取簽章的現有容器。  請參閱 [連接到 Microsoft Azure 訂用帳戶](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
-  
+
 > [!NOTE] 
 >  **加入**單一媒體集有多個備份檔案和儲存體容器的支援。
-  
- 當您選取 **URL** 作為目的地時，[媒體選項]  頁面中的某些選項會停用。  下列主題包含有關備份資料庫對話方塊的詳細資訊：  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+當您選取 **URL** 作為目的地時，[媒體選項]  頁面中的某些選項會停用。  下列主題包含有關備份資料庫對話方塊的詳細資訊：  
   
  [備份資料庫 &#40;一般頁面&#41;](../../relational-databases/backup-restore/back-up-database-general-page.md)  
   

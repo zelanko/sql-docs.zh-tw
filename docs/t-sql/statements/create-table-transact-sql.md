@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b067d81c83f266a59bda624f118a7113acbd53fe
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 29b3f725f90abc4efbbcf7bd308cf583d7f5859a
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388655"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860593"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -121,7 +121,7 @@ column_name <data_type>
     [ <column_constraint> [, ...n ] ]
     [ <column_index> ]
   
-<data type> ::=
+<data_type> ::=
 [ type_schema_name . ] type_name
     [ ( precision [ , scale ] | max |
         [ { CONTENT | DOCUMENT } ] xml_schema_collection ) ]
@@ -291,7 +291,7 @@ column_name <data_type>
     [ <column_constraint> ]
     [ <column_index> ]
   
-<data type> ::=
+<data_type> ::=
  [type_schema_name . ] type_name [ (precision [ , scale ]) ]
 
 <column_constraint> ::=

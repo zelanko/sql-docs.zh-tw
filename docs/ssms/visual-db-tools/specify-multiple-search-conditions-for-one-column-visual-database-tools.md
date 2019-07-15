@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2c006e36-56b1-4992-89b4-c6c0b19808f3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 90732e16e94aa8c64602a3ad21f2ad59f35ef9fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 63edd44191f47ac3fa91360eccbfa5b338968f11
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098884"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682887"
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>指定單一資料行的多重搜尋條件 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

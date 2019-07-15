@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fd2e27d4e7d9649b94c85a45c2fb3b67ef12756c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 68e76bc218016f5c759e77a5cf91f403b066d8d3
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105055"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690260"
 ---
 # <a name="open-with-new-file"></a>開啟方式 (新增檔案)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

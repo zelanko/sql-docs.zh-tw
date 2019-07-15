@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9660a5321bfd04276bffed6eae1ea78b517eaf0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 5aa625a65d2ce2d98ca71fbe1c97e23a328c7006
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099720"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689606"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>支援的查詢類型 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

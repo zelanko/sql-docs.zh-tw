@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 779fdb9a-4ede-4784-b9eb-997a6683c26e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7c7db5b56ba756a0ce9b976cc6e9a2e72d7e8828
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 3e4dfbbe1854919e6f8680c749a09774cbfa5e84
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105068"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682327"
 ---
 # <a name="go-to-line-dialog-box"></a>移至行對話方塊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

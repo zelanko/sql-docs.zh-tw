@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 27fa44454f2eecb85162f3b7a73549e77528638b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 9940f1af400cc7b3d80c6540be940ba61254bbf9
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102731"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688256"
 ---
 # <a name="options-environment---help---general-page"></a>選項 (環境 - 說明 - 一般頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

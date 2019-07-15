@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0f91e6f0bd6e7192201540bbaef764a9394c941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7f3b149d785699950bb8f9139fa127502bbc8736
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65821761"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679556"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL 偵錯工具 - 錯誤清單視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

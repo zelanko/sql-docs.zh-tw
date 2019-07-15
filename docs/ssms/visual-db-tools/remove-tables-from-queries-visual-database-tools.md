@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 05484ea82d0bb29f7e8822966224e850500e2756
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 6e7546f57fa03e75dcd09cc90db4c1b656f7e018
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095575"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679495"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>移除查詢的資料表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

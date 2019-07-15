@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: bc9e5784-227e-4c5d-8084-24274fa6c14a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2f44636f7ccf2b8aad7794403199acfe68637b15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 5e27f93e18adfdfcbcd675022ae089aeb4e1c8c3
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105668"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689731"
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>發生 SQL 語法錯誤對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "65105668"
 -   SQL 陳述式有效，但包含所使用資料連接的特定語法。  
   
 > [!TIP]  
-> 您可以使用 [查詢] 工具列上的 [驗證 SQL 語法] 按鈕，檢查陳述式是否有效。  
+> 您可以使用 [查詢]  工具列上的 [驗證 SQL 語法]  按鈕，檢查陳述式是否有效。  
   
-對話方塊會顯示 SQL 陳述式無法剖析的原因訊息。 按一下 [確定] 繼續進行。  
+對話方塊會顯示 SQL 陳述式無法剖析的原因訊息。 按一下 [確定]  繼續進行。  
   
 ## <a name="see-also"></a>另請參閱  
 [設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

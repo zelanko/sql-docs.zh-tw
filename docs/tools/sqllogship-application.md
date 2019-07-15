@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8e4179324ec6b194e0e60e4d9715ec24c1c4f835
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: ca6a9765c7813fd0fbece4d8c392c23e2f784ec2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100753"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728080"
 ---
 # <a name="sqllogship-application"></a>sqllogship 應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +64,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |4|輸出所有偵錯和追蹤訊息。|  
   
  **-logintimeout** _timeout_value_  
- 指定嘗試登入伺服器執行個體的逾時時間。預設為 15 秒。 *timeout_value* 是 **int**_。_  
+ 指定嘗試登入伺服器執行個體的逾時時間。預設為 15 秒。 *timeout_value* 是 **int** _。_  
   
  **-querytimeout** _timeout_value_  
- 指定啟動執行作業的嘗試逾時時間。預設沒有逾時期限。 *timeout_value* 是 **int**_。_  
+ 指定啟動執行作業的嘗試逾時時間。預設沒有逾時期限。 *timeout_value* 是 **int** _。_  
   
 ## <a name="remarks"></a>Remarks  
  建議您盡可能使用備份、複製和還原作業來執行備份、複製和還原。 若要從批次作業或其他應用程式執行這些作業，請呼叫 [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) 預存程序。  
@@ -76,10 +76,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
   
  **sqllogship** 應用程式 (SqlLogShip.exe) 安裝在 x:\Program Files\Microsoft SQL Server\130\Tools\Binn 目錄中。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  **sqllogship** 使用「Windows 驗證」。 執行命令的「Windows 驗證」帳戶必須擁有 Windows 目錄存取權和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 權限。 需求取決於 **sqllogship** 命令是指定 **-backup**、 **-copy**或 **-restore** 選項。  
   
-|選項|目錄存取|[權限]|  
+|選項|目錄存取|權限|  
 |------------|----------------------|-----------------|  
 |**-backup**|需要讀取/寫入權限才能備份目錄。|需要與 BACKUP 陳述式相同的權限。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md)。|  
 |**-copy**|需要讀取權限才能備份目錄，以及需要寫入權限才能複製目錄。|需要與 [sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) 預存程序相同的權限。|  

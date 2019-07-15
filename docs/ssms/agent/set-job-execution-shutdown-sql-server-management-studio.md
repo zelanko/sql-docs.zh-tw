@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: ac23e88f-53fc-41de-bb16-0c27c002d5a5
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6beafe9a878ad468a10f3c6e9e572699d4ebed30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0971103e8424a3d2a23ce9cb7f6f9a58e9fecd01
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088802"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685096"
 ---
 # <a name="set-job-execution-shutdown-sql-server-management-studio"></a>設定作業執行關機 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

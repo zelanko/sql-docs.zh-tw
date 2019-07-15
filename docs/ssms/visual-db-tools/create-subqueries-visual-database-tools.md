@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 34f6b9b4-ca3a-4a4f-9594-36e513f1c547
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4350a2da2a6858d776973614302d73ad3cae3f94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 02a3181b4787d2659deb37f1e91bf6f719dce46b
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095638"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690490"
 ---
 # <a name="create-subqueries-visual-database-tools"></a>建立子查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

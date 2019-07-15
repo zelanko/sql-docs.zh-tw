@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 10b8e4f0d1c199ca676a726fc13a98856d9d5abb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a141abd42c1a3d8c15dc2b96b1637ea2775072f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65821991"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680205"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>管理編輯器和檢視模式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

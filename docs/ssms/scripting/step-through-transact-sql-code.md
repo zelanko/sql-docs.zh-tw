@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2454008a6023289fea354680eeeb2cf8185d009b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d7b83d68999d18e368459f0e3623b4f40ab2b5d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65821910"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679679"
 ---
 # <a name="step-through-transact-sql-code"></a>逐步執行 Transact-SQL 程式碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

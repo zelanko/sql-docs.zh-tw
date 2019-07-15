@@ -12,15 +12,15 @@ helpviewer_keywords:
 - scripts [SQL Server], traces
 - replaying traces
 ms.assetid: 9c0eb222-e6e3-4bc1-a25f-a41e962d361b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6b85c31fcaad26d6cc8604764e37d8aa32d58610
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0875e0ba5d06e5549b03518e30944b864aaca931
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62712346"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732882"
 ---
 # <a name="replay-a-transact-sql-script-sql-server-profiler"></a>重新執行 Transact-SQL 指令碼 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

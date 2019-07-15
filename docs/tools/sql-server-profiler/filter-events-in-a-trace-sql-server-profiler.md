@@ -12,15 +12,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 - traces [SQL Server], events
 ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2b4273d1af6f4f740c7b6527359957abf447cc2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afdbe68aa8da7fbc6a6aa812d5e89b7ed089c158
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765396"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729949"
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>篩選追蹤中的事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,15 +32,15 @@ ms.locfileid: "47765396"
   
 1.  在 **[追蹤檔案屬性]** 或 **[追蹤資料表屬性]** 對話方塊中，按一下 **[事件選取範圍]** 索引標籤。  
   
-     **[事件選取範圍]** 索引標籤包含方格控制項。 方格控制項是包含每一個可追蹤事件類別的資料表。 資料表針對每個事件類別包含一個資料列。 事件類別可能會依您所連接的伺服器類型與版本而稍有不同。 事件類別在方格的 [事件] 資料行中識別，並依事件類別目錄分組。 其餘資料行會列出可針對每個事件類別傳回的資料行。  
+     **[事件選取範圍]** 索引標籤包含方格控制項。 方格控制項是包含每一個可追蹤事件類別的資料表。 資料表針對每個事件類別包含一個資料列。 事件類別可能會依您所連接的伺服器類型與版本而稍有不同。 事件類別在方格的 [事件]  資料行中識別，並依事件類別目錄分組。 其餘資料行會列出可針對每個事件類別傳回的資料行。  
   
-2.  按一下 [資料行篩選]。  
+2.  按一下 [資料行篩選]。   
   
-     [編輯篩選] 對話方塊隨即顯示。 您可以使用 [編輯篩選] 對話方塊包含的比較運算子清單，篩選追蹤中的事件。  
+     [編輯篩選]  對話方塊隨即顯示。 您可以使用 [編輯篩選]  對話方塊包含的比較運算子清單，篩選追蹤中的事件。  
   
 3.  若要套用篩選，請按一下比較運算子，再輸入篩選要用的值。  
   
-4.  按一下 [確定] 。  
+4.  按一下 [確定]  。  
   
  **考量因素：**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47765396"
   
          -或-  
   
-    -   已在 **[一般選項]** 對話方塊中，核取 **[使用地區設定來顯示日期和時間值]** 。 若要檢視 **[一般選項]** 對話方塊，請在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **[工具]** 功能表上，按一下 **[選項]**。  
+    -   已在 **[一般選項]** 對話方塊中，核取 **[使用地區設定來顯示日期和時間值]** 。 若要檢視 **[一般選項]** 對話方塊，請在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **[工具]** 功能表上，按一下 **[選項]** 。  
   
          -且-  
   

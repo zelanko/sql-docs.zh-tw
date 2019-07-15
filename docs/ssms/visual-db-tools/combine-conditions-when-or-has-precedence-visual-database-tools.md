@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5757d32093ab6547092d967f1d9fcf8c94323cf0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 6f0649b38d0446dd0fcdc4143a96e9ffab671445
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65093350"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686199"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>在 OR 具有優先權時結合條件 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

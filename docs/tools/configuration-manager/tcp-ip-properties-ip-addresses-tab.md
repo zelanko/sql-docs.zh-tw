@@ -11,19 +11,19 @@ helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 97cbd6c44c9d06381cbb91f860c3be75550bb4de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2e26ff7e902d1b3f7607dd7199822b7e4ddab1d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780086"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731845"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP 屬性 (IP 位址索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  您可以使用 [TCP/IP 屬性 (IP 位址索引標籤)] 對話方塊，設定特定 IP 位址的 TCP/IP 通訊協定選項。 您只能透過選取 **[IPAll]** ，一次設定所有位址的 **[TCP 動態通訊埠]** 和 **[TCP 通訊埠]**。  
+  您可以使用 [TCP/IP 屬性 (IP 位址索引標籤)]  對話方塊，設定特定 IP 位址的 TCP/IP 通訊協定選項。 您只能透過選取 **[IPAll]** ，一次設定所有位址的 **[TCP 動態通訊埠]** 和 **[TCP 通訊埠]** 。  
   
  重新啟動 SQL Server 之後，變更才會生效。 如需啟動和停止 SQL Server Browser 服務的資訊，請參閱[啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
@@ -35,35 +35,35 @@ ms.locfileid: "47780086"
   
 ## <a name="options"></a>選項。  
  **作用中**  
- 指出電腦上的 IP 位址為使用中狀態。 不適用於 **[IPAll]**。  
+ 指出電腦上的 IP 位址為使用中狀態。 不適用於 **[IPAll]** 。  
   
  **已啟用**  
- 如果 **[TCP/IP 屬性 (通訊協定索引標籤)]** 上的 **[全部接聽]** 屬性設為 **[否]**，此屬性便會指出 SQL Server 是否正在接聽該 IP 位址。 如果 **[TCP/IP 屬性 (通訊協定索引標籤)]** 上的 **[全部接聽]** 屬性設為 **[是]**，則會忽略此屬性。 不適用於 **[IPAll]**。  
+ 如果 **[TCP/IP 屬性 (通訊協定索引標籤)]** 上的 **[全部接聽]** 屬性設為 **[否]** ，此屬性便會指出 SQL Server 是否正在接聽該 IP 位址。 如果 **[TCP/IP 屬性 (通訊協定索引標籤)]** 上的 **[全部接聽]** 屬性設為 **[是]** ，則會忽略此屬性。 不適用於 **[IPAll]** 。  
   
  **IP 位址**  
- 檢視或變更此連線使用的 IP 位址。 列出電腦使用的 IP 位址以及 IP 回送位址 127.0.0.1。 不適用於 **[IPAll]**。 IP 位址可以採用 IPv4 或 IPv6 其中一種格式。  
+ 檢視或變更此連線使用的 IP 位址。 列出電腦使用的 IP 位址以及 IP 回送位址 127.0.0.1。 不適用於 **[IPAll]** 。 IP 位址可以採用 IPv4 或 IPv6 其中一種格式。  
   
  **[IPAll]**  
  如果未啟用動態通訊埠，就會空白。 若要使用動態通訊埠，請設為 0。  
   
- 若為 **[IPAll]**，則顯示使用之動態通訊埠的通訊埠編號。  
+ 若為 **[IPAll]** ，則顯示使用之動態通訊埠的通訊埠編號。  
   
  **[TCP 動態通訊埠]**  
  檢視或變更 SQL Server 接聽的通訊埠。 根據預設，SQL Server 的預設執行個體會接聽通訊埠 1433。  
   
  資料庫引擎可以在同一個 IP 位址接聽多個通訊埠，方法是使用逗號隔開通訊埠 (例如，1433,1500,1501)。 此欄位最長不可超過 2047 個字元。  
   
- 若要設定單一 IP 位址接聽多個通訊埠，還必須在 [TCP/IP 屬性] 對話方塊的 [通訊協定] 索引標籤上，將 [全部接聽] 參數設為 [否]。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的＜如何：設定 Database Engine 接聽多個 TCP 通訊埠＞。  
+ 若要設定單一 IP 位址接聽多個通訊埠，還必須在 [TCP/IP 屬性]  對話方塊的 [通訊協定]  索引標籤上，將 [全部接聽]  參數設為 [否]  。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的＜如何：設定 Database Engine 接聽多個 TCP 通訊埠＞。  
   
 ## <a name="adding-or-removing-ip-addresses"></a>新增或移除 IP 位址  
- SQL Server 組態管理員顯示 SQL Server 安裝後可用的 IP 位址。 加入或移除網路卡時、動態指派的 IP 位址過期時、重新設定網路結構時，或是電腦的實際位置有變化時 (例如，膝上型電腦在不同的大樓連接到網路)，可用的 IP 位址都會有變動。 若要變更 IP 位址，請編輯 [IP 位址] 方塊，然後重新啟動 SQL Server。  
+ SQL Server 組態管理員顯示 SQL Server 安裝後可用的 IP 位址。 加入或移除網路卡時、動態指派的 IP 位址過期時、重新設定網路結構時，或是電腦的實際位置有變化時 (例如，膝上型電腦在不同的大樓連接到網路)，可用的 IP 位址都會有變動。 若要變更 IP 位址，請編輯 [IP 位址]  方塊，然後重新啟動 SQL Server。  
   
 ## <a name="additional-topics-in-books-online"></a>線上叢書中的其他主題  
  搜尋 MSDN 中的主題，例如 **設定伺服器接聽特定 TCP 通訊埠 (SQL Server 組態管理員)** 和 **設定 Database Engine 接聽多個 TCP 通訊埠**。  
   
 ## <a name="see-also"></a>另請參閱  
  [選擇網路通訊協定](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
- [使用 TCP IP 建立有效的連接字串](creating-a-valid-connection-string-using-tcp-ip.md)   
+ [Creating a Valid Connection String Using TCP IP](creating-a-valid-connection-string-using-tcp-ip.md)   
  [SQL Server Browser 服務](sql-server-browser-service.md)  
   
   

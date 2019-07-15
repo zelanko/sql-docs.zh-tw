@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4e6113e07c712d5bc4d669a518f87ef826fe0a65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 5b15568b33f84df95e1321d1bd768e727e022548
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095245"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687572"
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>開啟資料庫圖表設計工具 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

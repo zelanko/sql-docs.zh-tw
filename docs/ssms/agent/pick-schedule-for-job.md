@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ce303fcf282a25515e87005ac9e8225e612e17fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 31b7df7f6c5441f31931aa78ad20a59b0a9840de
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088851"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685481"
 ---
 # <a name="pick-schedule-for-job"></a>作業的挑選排程
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

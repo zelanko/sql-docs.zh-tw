@@ -22,16 +22,16 @@ helpviewer_keywords:
 - error logs [SQL Server]
 - logs [SQL Server], Windows application logs
 ms.assetid: e250336b-0695-44f6-a42f-23222f94e377
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: d9da74a8eeea03466fe496146cc98978714126ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1abcc8cd5b265f7e3e6226f274bbcf536469aba5
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660277"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732203"
 ---
 # <a name="monitoring-the-error-logs"></a>監視錯誤記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

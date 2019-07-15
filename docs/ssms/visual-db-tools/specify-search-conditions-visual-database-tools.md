@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 18e2c759-68ec-4efe-b208-2f73418cd9bd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0bbff2cbc8eb04bad8c45ff5ef236acd22bb4a5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 409e8c9a7639c3de4febdc6aadf2fac635c20089
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105754"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682837"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>指定搜尋條件 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

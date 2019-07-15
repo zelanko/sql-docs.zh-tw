@@ -12,15 +12,15 @@ helpviewer_keywords:
 - filters [SQL Server], SPIDs
 - traces [SQL Server], filters
 ms.assetid: f5945c39-be6b-4632-91cb-92066c80e188
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5262d9a261e1fa9cb6cb0950f8509253d7eaced5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b14492930f6860472e1126dce8e0e6faadd29b5
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62712500"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729935"
 ---
 # <a name="filter-server-process-ids-spids-in-a-trace-sql-server-profiler"></a>篩選追蹤中的伺服器處理序識別碼 (SPID) (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

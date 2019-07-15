@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: d25f79da-1ec1-4683-8ceb-5026b62b7364
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 099f576409f4f6052065cf6b3c8fc55bd03bfe03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af5ea57111035010af559dafa6b32566465611b2
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105414"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685637"
 ---
 # <a name="operator-properties-history-page"></a>操作員屬性 (記錄頁面)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

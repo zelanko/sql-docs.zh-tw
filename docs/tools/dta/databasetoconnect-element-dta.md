@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - DatabaseToConnect element
 ms.assetid: 65153a66-3aee-4429-99b7-0816ac23c285
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f6c06339b7e38272e1a6923183f79869cbdd871c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e1a8ccb53f30f71abf58480cebc261fe5ff68658
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62857499"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733431"
 ---
 # <a name="databasetoconnect-element-dta"></a>DatabaseToConnect 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

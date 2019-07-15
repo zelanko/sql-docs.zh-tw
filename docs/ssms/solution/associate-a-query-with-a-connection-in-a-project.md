@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 03a434a9482f8cb426815407b1b85519744c9331
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 4b455fee7632f243493a85baf81950b48135f889
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105000"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683124"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>在專案中建立查詢與連接的關聯性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "65105000"
   
 ### <a name="to-associate-a-query-with-a-connection-in-a-project"></a>若要建立查詢與專案中連接的關聯性  
   
-1.  若果在查詢編輯器中開啟查詢，請在查詢編輯器的空白區域上按一下滑鼠右鍵，再指向 [連線]，然後按一下 [連線]。 如果尚未開啟查詢，請在方案總管中，按兩下查詢來連接查詢。  
+1.  若果在查詢編輯器中開啟查詢，請在查詢編輯器的空白區域上按一下滑鼠右鍵，再指向 [連線]  ，然後按一下 [連線]  。 如果尚未開啟查詢，請在方案總管中，按兩下查詢來連接查詢。  
   
-2.  在 [連接到 Database Engine] 對話方塊中提供連線資訊。 如果連接資訊符合現有的連接，查詢就會關聯於這個連接。  
+2.  在 [連接到 Database Engine]  對話方塊中提供連線資訊。 如果連接資訊符合現有的連接，查詢就會關聯於這個連接。  
   
 ## <a name="see-also"></a>另請參閱  
 [方案總管](../../ssms/solution/solution-explorer.md)  

@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: c982b208-e2d1-4d34-8cee-940b9baf6586
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 367b2350e6f479f90cd8dbdde54c02548e584ecc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c470054a274a9065a46c1478ef8ce324af25dbc
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096780"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687944"
 ---
 # <a name="delete-an-alert"></a>Delete an Alert
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

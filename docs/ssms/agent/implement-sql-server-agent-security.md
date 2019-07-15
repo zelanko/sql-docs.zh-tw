@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9f7ff348c6e2d01683c59f30b7f89affe833955c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce513bc7c6796121a15b34b00a4a7ef6107029ae
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096461"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686978"
 ---
 # <a name="implement-sql-server-agent-security"></a>實作 SQL Server Agent 安全性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

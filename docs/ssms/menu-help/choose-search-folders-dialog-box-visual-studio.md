@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e7d4bee18b534713b8c1a6316f0eb9f114c519b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: db23fdb715c2acf2243ef355e7c62275a32670e4
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104913"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679966"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>選擇搜尋資料夾對話方塊 (Visual Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

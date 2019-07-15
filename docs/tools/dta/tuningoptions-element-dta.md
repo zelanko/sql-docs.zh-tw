@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - TuningOptions element
 ms.assetid: 58a22ba1-8e03-411f-bd46-85e4540f217a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e705c5aba00fb0f2ef63dec46f108c6ed98c8269
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: da2819797e720582a3ae46b5c3b1428077a3ec75
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657087"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730144"
 ---
 # <a name="tuningoptions-element-dta"></a>TuningOptions 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Configuration element
 ms.assetid: 1478e56f-57c4-4441-bac9-1ac91453839b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9a0e0bbcc65dd3b9cb1d6fd53f3d296f995f0527
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 7292e171a2d3d5b2813ebe2add4164876d9edd8a
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291314"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732447"
 ---
 # <a name="configuration-element-dta"></a>Configuration 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

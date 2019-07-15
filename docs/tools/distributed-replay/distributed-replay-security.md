@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7aef54c119c9941b245068186cc93f66f4e5f135
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b4fab6179453ccd21623a2da5ea0157d235eea40
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677747"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732112"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay 安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ ms.locfileid: "51677747"
   
 1.  請根據作業系統執行下列其中一項作業：  
   
-    -   按一下 [開始]、在 [搜尋] 方塊中輸入 **services.msc**，然後按下 ENTER。  
+    -   按一下 [開始]  、在 [搜尋]  方塊中輸入 **services.msc**，然後按下 ENTER。  
   
-    -   按一下 [開始]、按一下 [執行]、輸入 **services.msc**，然後按下 ENTER。  
+    -   按一下 [開始]  、按一下 [執行]  、輸入 **services.msc**，然後按下 ENTER。  
   
-2.  在 [服務] 對話方塊中，以滑鼠右鍵按一下您想要設定的服務，然後按一下 [內容]。  
+2.  在 [服務]  對話方塊中，以滑鼠右鍵按一下您想要設定的服務，然後按一下 [內容]  。  
   
-3.  在 [登入] 索引標籤上，按一下 [This account (這個帳戶)]。  
+3.  在 [登入]  索引標籤上，按一下 [This account (這個帳戶)]  。  
   
 4.  設定您想要使用的使用者帳戶。  
   
@@ -74,9 +74,9 @@ ms.locfileid: "51677747"
   
 1.  **開啟 dcomcnfg.exe，亦即 [元件服務] 嵌入式管理單元**：這是用來設定 DCOM 權限的工具。  
   
-    1.  在 Controller 電腦上，按一下 [開始]。  
+    1.  在 Controller 電腦上，按一下 [開始]  。  
   
-    2.  在 [搜尋] 方塊中，輸入 **dcomcnfg.exe**。  
+    2.  在 [搜尋]  方塊中，輸入 **dcomcnfg.exe**。  
   
     3.  按 ENTER 鍵。  
   

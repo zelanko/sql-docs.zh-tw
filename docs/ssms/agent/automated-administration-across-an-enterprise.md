@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 905a470c09c1fff750900764134846925d7899b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c186794989d89eff38975ca57908a5da1fcaa987
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095875"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688903"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>將整個企業的管理自動化
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

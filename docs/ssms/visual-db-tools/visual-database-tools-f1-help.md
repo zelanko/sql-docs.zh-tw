@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 79d15b47-6759-4f48-b9ac-2c86a3cd9980
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a725546340b316b676160759190cec701532ff49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 1995dfde3471bde35caafcebabbdc3f20aa770b9
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65097664"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689309"
 ---
 # <a name="visual-database-tools-f1-help"></a>Visual Database Tools F1 說明
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

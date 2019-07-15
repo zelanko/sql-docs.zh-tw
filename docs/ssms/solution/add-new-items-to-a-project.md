@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 76af8692-324f-4f5e-b1a0-d72ca8a107e3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fcb6d5e1a811f13a346a3daf89de459273cd2140
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 1baf05baae45683c291d1ef26408d3efc8764f7b
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105353"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683136"
 ---
 # <a name="add-new-items-to-a-project"></a>將新項目加入專案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

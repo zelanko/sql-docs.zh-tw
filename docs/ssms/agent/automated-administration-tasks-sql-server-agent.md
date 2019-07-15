@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 15218e5f58daf9fba8e204d70fba719151fe33e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25b3572ac5365578046aa272136e9bd953043e39
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65100294"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688866"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>自動化管理工作 (SQL Server Agent)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

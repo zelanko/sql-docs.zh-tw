@@ -11,15 +11,15 @@ helpviewer_keywords:
 - scripts [SQL Server], traces
 - extracting script from trace [SQL Server]
 ms.assetid: 431126a6-ff91-4818-8763-4442152bd571
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5cab84931db11e91e474ffd38aecfa4fb2aafae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e94dd6e91814a70366f41dd7ee6f788c63e5455d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62712450"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731359"
 ---
 # <a name="extract-a-script-from-a-trace-sql-server-profiler"></a>從追蹤中擷取指令碼 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 576611f246311e0a80e72781cc8c6a49e9b97f82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 833dfd2b9f6fc9cefb785db70369969004e52e13
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096819"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682304"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>查詢和檢視設計工具表示聯結的方式 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

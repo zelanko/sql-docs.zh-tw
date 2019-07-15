@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9d1a853c5469fc30ef9545c0a062fdd1933f5c9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: b737566d1584bc08210ba6df400951cea638e8ee
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104406"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683972"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>匯出已註冊的伺服器資訊 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

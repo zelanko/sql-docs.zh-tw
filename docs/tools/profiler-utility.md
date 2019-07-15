@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9f1fa1e72ab814f6ff00d39cd72e6ed98cb57fb6
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 06ee31ac87f8bbdc8177ea7899b59a6f0e576365
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291296"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731581"
 ---
 # <a name="profiler-utility"></a>Profiler 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,44 +58,44 @@ profiler
  **/?**  
  顯示 **profiler** 引數的語法摘要。  
   
- **/U** <登入識別碼>  
+ **/U** <登入識別碼>   
  這是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證的使用者登入識別碼。 登入識別碼會區分大小寫。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)](採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
+>  第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]。  
   
- **/P** <密碼>  
+ **/P** <密碼>   
  指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證之使用者指定的密碼。  
   
  **/E**  
  利用目前使用者的認證來指定以 Windows 驗證進行連接。  
   
- **/S** <SQL Server 名稱>  
- 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體。 Profiler 會利用 **/U** 和 **/P** 參數或 **/E** 參數所指定的驗證資訊，自動連接指定的伺服器。 若要連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體，請使用 **/S** <SQL Server 名稱>\\<執行個體名稱>。  
+ **/S** <SQL Server 名稱>   
+ 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體。 Profiler 會利用 **/U** 和 **/P** 參數或 **/E** 參數所指定的驗證資訊，自動連接指定的伺服器。 若要連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體，請使用 **/S** <SQL Server 名稱>  \\<執行個體名稱>  。  
   
- **/A** <Analysis Services 伺服器名稱>  
- 指定 Analysis Services 的執行個體。 Profiler 會利用 **/U** 和 **/P** 參數或 **/E** 參數所指定的驗證資訊，自動連接指定的伺服器。 若要連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體，請使用 **/A** <Analysis Services 伺服器名稱>\<執行個體名稱> 的格式。  
+ **/A** <Analysis Services 伺服器名稱>   
+ 指定 Analysis Services 的執行個體。 Profiler 會利用 **/U** 和 **/P** 參數或 **/E** 參數所指定的驗證資訊，自動連接指定的伺服器。 若要連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體，請使用 **/A** <Analysis Services 伺服器名稱>\<執行個體名稱>  的格式。  
   
- **/D** <資料庫>  
+ **/D** <資料庫>   
  指定連接要用的資料庫名稱。 如果未指定任何資料庫，這個選項會選取指定使用者的預設資料庫。  
   
- **/B "** <追蹤資料表名稱> **"**  
+ **/B "** <追蹤資料表名稱>  **"**  
  指定啟動 Profiler 時所載入的追蹤資料表。 您必須指定資料庫、使用者或結構描述，以及資料表。  
   
- **/T "** <範本名稱> **"**  
- 指定將載入來設定追蹤的範本。 範本名稱必須用引號括住。 範本名稱必須在系統範本目錄中，或在使用者範本目錄中。 如果兩個目錄中有同名的兩個範本存在，就會載入系統目錄中的範本。 如果沒有含指定名稱的範本，便會載入標準範本。 請注意，在 <範本名稱> 中，不應指定範本的副檔名 (.tdf)。 例如：  
+ **/T "** <範本名稱>  **"**  
+ 指定將載入來設定追蹤的範本。 範本名稱必須用引號括住。 範本名稱必須在系統範本目錄中，或在使用者範本目錄中。 如果兩個目錄中有同名的兩個範本存在，就會載入系統目錄中的範本。 如果沒有含指定名稱的範本，便會載入標準範本。 請注意，在 <範本名稱>  中，不應指定範本的副檔名 (.tdf)。 例如：  
   
 ```  
 /T "standard"  
 ```  
   
- **/F "** <檔案名稱> **"**  
+ **/F "** <檔案名稱>  **"**  
  指定啟動 Profiler 時所載入之追蹤檔的路徑和檔案名稱。 整個路徑和檔案名稱必須用引號括住。 這個選項不能搭配 **/O** 一起使用。  
   
- **/O "** <檔案名稱> **"**  
+ **/O "** <檔案名稱>  **"**  
  指定應該寫入追蹤結果之檔案的路徑和檔案名稱。 整個路徑和檔案名稱必須用引號括住。 這個選項不能搭配 **/F** 一起使用。  
   
- **/L** <地區設定識別碼>  
+ **/L** <地區設定識別碼>   
  無法使用。  
   
  **/M "** *MM-DD-YY hh:mm:ss* **"**  
@@ -111,12 +111,12 @@ profiler
 |ss|兩位數的秒鐘|  
   
 > [!NOTE]  
->  只有當 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 中已啟用 [使用地區設定顯示日期與時間值] 選項時，才能使用 "MM-DD-YY hh:mm:ss" 格式。 如果這個選項未啟用，您必須使用 "YYYY-MM-DD hh:mm:ss" 日期和時間格式。  
+>  只有當 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 中已啟用 [使用地區設定顯示日期與時間值]  選項時，才能使用 "MM-DD-YY hh:mm:ss" 格式。 如果這個選項未啟用，您必須使用 "YYYY-MM-DD hh:mm:ss" 日期和時間格式。  
   
  **/R**  
  啟用追蹤檔的換用。  
   
- **/Z** <檔案大小>  
+ **/Z** <檔案大小>   
  指定追蹤檔的大小 (以 MB 為單位)。 預設大小是 5 MB。 如果啟用換用，所有換用檔案都不能超出這個引數所指定的值。  
   
 ## <a name="remarks"></a>Remarks  

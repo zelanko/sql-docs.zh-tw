@@ -12,15 +12,15 @@ helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 220fb192-9636-41a2-b15c-62af6cab8fff
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ab6d5c64ab1f154e0b31cabfe89ba9aa095bf376
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91db80cd80b5e69bd9dee2c72c99eae6c76f166b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800007"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732949"
 ---
 # <a name="replay-a-single-event-at-a-time-sql-server-profiler"></a>一次重新執行一個事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "47800007"
   
      確定您開啟的追蹤檔案或資料表包含重新執行所需的事件類別。 如需詳細資訊，請參閱 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)。  
   
-2.  在 **[重新執行]** 功能表上，按一下 **[步驟]**，然後連接到要重新執行追蹤的伺服器執行個體。  
+2.  在 **[重新執行]** 功能表上，按一下 **[步驟]** ，然後連接到要重新執行追蹤的伺服器執行個體。  
   
-3.  在 **[重新執行組態]** 對話方塊中確認設定，然後按一下 **[確定]**。 如需在 [重新執行組態] 對話方塊中指定設定的詳細資訊，請參閱[重新執行追蹤檔案 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md) 或[重新執行追蹤資料表 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)。  
+3.  在 **[重新執行組態]** 對話方塊中確認設定，然後按一下 **[確定]** 。 如需在 [重新執行組態]  對話方塊中指定設定的詳細資訊，請參閱[重新執行追蹤檔案 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md) 或[重新執行追蹤資料表 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)。  
   
 4.  若要重新執行第一個事件，請在 **[重新執行組態]** 對話方塊上，按一下 **[確定]** 。  
   

@@ -27,14 +27,14 @@ helpviewer_keywords:
 ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 869262f20b50e23a8e59f4a318fd70d73c339db9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 255be6ede046a777756ed3f967b303628f31b206
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65821950"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688364"
 ---
 # <a name="search-and-replace"></a>搜尋和取代
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

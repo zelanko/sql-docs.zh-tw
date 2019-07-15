@@ -8,22 +8,22 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 98ace9b0-72d5-4b72-9b7b-11fbc490981a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 77286e4bb4ed04a61e6949c4834e242bfac4be66
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c87e3ecbbec1a2ee566fd8dfb446372f1e89fa6d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534653"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733226"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>SQL Server Browser 屬性 (服務索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 程式會以伺服器服務的方式執行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 會接聽 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的內送要求，並提供有關電腦上所安裝之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資訊。  
   
- 您可以使用 **[SQL Server Browser 內容]** 對話方塊上的 **[服務]** 索引標籤來檢視下列選項。 除了 [啟動模式] 之外的所有屬性都是唯讀的。  
+ 您可以使用 **[SQL Server Browser 內容]** 對話方塊上的 **[服務]** 索引標籤來檢視下列選項。 除了 [啟動模式]  之外的所有屬性都是唯讀的。  
   
 ## <a name="options"></a>選項。  
  **二進位路徑**  
@@ -57,7 +57,7 @@ ms.locfileid: "52534653"
 -   停用：這項服務無法啟動。  
   
  **State**  
- 表示這項服務為執行中、已停止或已停用。 "**...**" 表示狀態變更已暫止。  
+ 表示這項服務為執行中、已停止或已停用。 " **...** " 表示狀態變更已暫止。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Browser 服務](../../tools/configuration-manager/sql-server-browser-service.md)  

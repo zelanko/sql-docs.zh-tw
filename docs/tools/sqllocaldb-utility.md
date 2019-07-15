@@ -12,15 +12,15 @@ helpviewer_keywords:
 - local database runtime utility
 - LocalDB, SqlLocalDB Utility
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 19902c030538d0384c89dd632aaf1d6f8c728048
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bf71626fcec01b1140f85a67a03a69dc1a9736e8
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538780"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728151"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **create** | **c** ] *\<執行個體名稱>* *\<執行個體版本>* [**-s** ]  
+ [ **create** | **c** ] *\<執行個體名稱>* *\<執行個體版本>* [ **-s** ]  
  建立 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** 的新執行個體。 **SqlLocalDB** 會使用 *\<執行個體版本>* 引數所指定之 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 二進位檔的版本。 使用至少一個十進位數的數字格式指定版本號碼。 次要版本號碼 (Service Pack) 為選擇性。 例如，下列兩個版本號碼都可接受：11.0 或 11.0.1186。 電腦上必須安裝指定的版本。 如果未指定，版本號碼會預設為 **SqlLocalDB** 公用程式的版本。 加入 **-s** 會啟動新的 **LocalDB** 執行個體。  
   
  [ **share** | **h** ]  
@@ -57,10 +57,10 @@ SqlLocalDB.exe
  [ **delete** | **d** ] *\<執行個體名稱>*  
  刪除指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** 執行個體。  
   
- [ **start** | **s** ] "*\<執行個體名稱>*"  
+ [ **start** | **s** ] " *\<執行個體名稱>* "  
  啟動指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** 執行個體。 當成功的陳述式傳回 **LocalDB**的具名管道位址時。  
   
- [ **stop** | **p** ] *\<執行個體名稱>* [**-i** ] [**-k** ]  
+ [ **stop** | **p** ] *\<執行個體名稱>* [ **-i** ] [ **-k** ]  
  停止指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** 執行個體。 加入 **-i** 會要求使用 **NOWAIT** 選項關閉此執行個體。 加入 **-k** 會在未經連絡的情況下終止執行個體處理序。  
   
  [ **info** | **i** ] [ *\<執行個體名稱>* ]  
@@ -75,7 +75,7 @@ SqlLocalDB.exe
  傳回每一個 **SqlLocalDB** 選項的簡短描述。  
   
 ## <a name="remarks"></a>Remarks  
- <執行個體名稱> 引數必須遵循 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別碼的規則，或者必須以雙引號括住。  
+ <執行個體名稱>  引數必須遵循 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別碼的規則，或者必須以雙引號括住。  
   
  不使用任何引數執行 SqlLocalDB 會傳回說明文字。  
   

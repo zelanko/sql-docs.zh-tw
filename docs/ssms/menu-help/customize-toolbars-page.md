@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0a9e738eb24800b64309e1e422ee3d1378a19a6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 67fe081e5520eeab908d3a5a624104d2002cf6e4
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105014"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679938"
 ---
 # <a name="customize-toolbars-page"></a>自訂 (工具列頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

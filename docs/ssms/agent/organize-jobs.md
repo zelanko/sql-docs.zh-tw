@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 629c3e06-f933-483b-8621-280dbb7a7bd1
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d1b7be315af4f9554019e094d7e82bf35fc71db8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 350de0ea8c6026396615404adaf01d8183070ec0
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088969"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685500"
 ---
 # <a name="organize-jobs"></a>組織作業
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

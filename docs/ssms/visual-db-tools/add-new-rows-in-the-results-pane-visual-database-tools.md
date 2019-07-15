@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 70faae781da3e9ab78777e0e893a379b64f89949
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: e2efd0c9cddc2342b506e44438af0a8890efe941
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088928"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686579"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>在結果窗格中加入新的資料列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

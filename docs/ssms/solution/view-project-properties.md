@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fd69a7ea6336c44e653dd03f1b25f22465713107
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 9a0a223e90bc750a4b4372b8b7e205465dcdc5b7
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102971"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680776"
 ---
 # <a name="view-project-properties"></a>檢視專案屬性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

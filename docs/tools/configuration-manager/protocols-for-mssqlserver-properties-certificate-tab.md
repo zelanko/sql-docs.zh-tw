@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - MSSQLSERVER property protocols
 ms.assetid: 776addd6-25f3-4875-9a71-064035787090
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 85e7e9cbc454785379fac029cbe970a492e0fffd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2da05501cca599f3aa22e083d07424f54715cca9
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760096"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731275"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>MSSQLSERVER 的通訊協定內容 (憑證索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47760096"
  可存取憑證上其他的詳細資料。 在 **[憑證]** 方塊中選取憑證之前，此按鈕無法使用。 如需憑證詳細資料的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 文件集。  
   
  **Clear**  
- 從 [憑證] 方塊中移除選取的項目。  
+ 從 [憑證]  方塊中移除選取的項目。  
   
  **[MSSQLSERVER 的通訊協定內容]**  
  憑證名稱，此名稱是由安全性提供者所決定。 選取憑證，以便在內容方格中檢視其詳細資料。  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a3440b7dd15b95c8ef890c7d2827f72cbe43d118
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 106cb79c1a19c64a2a9c661d82766d5becd37654
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102887"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680358"
 ---
 # <a name="external-tools-dialog-box"></a>外部工具對話方塊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

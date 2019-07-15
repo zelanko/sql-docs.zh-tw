@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - KeepExisting element
 ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ece977251d71ff25a0dba52a0ba4f2d1f72d55a1
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: fafd931dd05726285ee505f1d68ca59d28c0c59d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51290824"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727638"
 ---
 # <a name="keepexisting-element-dta"></a>KeepExisting 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

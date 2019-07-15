@@ -14,15 +14,15 @@ helpviewer_keywords:
 - traces [SQL Server], logs
 - SQL Server Profiler, correlating trace with log data
 ms.assetid: 1e4412c8-d27c-4aae-9b35-214128d1d00a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bdbd634a74c5e7cd48232a28ab4c7709e8febfad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ba481b92bd262769a0b134b2561fa1803ad417b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63033759"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731455"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>建立追蹤與 Windows 效能記錄資料的關聯
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

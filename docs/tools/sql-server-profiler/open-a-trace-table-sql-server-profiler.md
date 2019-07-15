@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - opening trace tables
 ms.assetid: 8f7cc6b9-c717-4995-9af9-cacc6501aee2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b7f99e1b4957332b66ed710c0416f545d883ecc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25973a65cc275d85f0d72ec3707d1763d9f38551
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62712005"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732985"
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>開啟追蹤資料表 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

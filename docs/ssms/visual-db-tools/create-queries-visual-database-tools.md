@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fb03a941fa462f1b08157859335c94eedf31927d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 0fd43373b9820fa01317e98dcc072342257ca2b6
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65097533"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690531"
 ---
 # <a name="create-queries-visual-database-tools"></a>建立查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5a491e7c1c152f88b496f4833e43634fc11dde0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9b4f7de175cd2e2339fe8f5dbea9a46b3f76377
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65820886"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683708"
 ---
 # <a name="drag-and-drop-text"></a>拖放文字
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

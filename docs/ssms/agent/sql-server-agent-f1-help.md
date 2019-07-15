@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 55f4bd55-aa61-4d5c-98fd-f85824206ea0
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2d385fd6ec4173140cb042fd18adff9587f22717
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 547f28562bdcf1664d0fdc36d902c5b27014d715
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095454"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681866"
 ---
 # <a name="sql-server-agent-f1-help"></a>SQL Server Agent F1 說明
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 456834ab7682ec013a1f8fb7fe120a13b3591862
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 3152bf516975dc88d9b1bf826dc01775d98f4f05
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105901"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682508"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>建立製成資料表查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

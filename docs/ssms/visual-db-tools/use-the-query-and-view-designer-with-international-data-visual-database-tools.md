@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ddb0112fd671f939f3b217e31f299814a3f59f1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 0c22989e0e8ff2086b86d1435c4ab354c1f64aa5
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098563"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689406"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>使用查詢和檢視表設計工具操作國際資料 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

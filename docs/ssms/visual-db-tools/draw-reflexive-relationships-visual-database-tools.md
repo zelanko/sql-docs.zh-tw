@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e218363f-faec-46d5-9904-a537fbcc994d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: be3abc83b3084626f714efa6628fc7cfe1547867
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 79510a86159d771d6ff51a98ba9d1a988a312bc7
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105305"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690301"
 ---
 # <a name="draw-reflexive-relationships-visual-database-tools"></a>繪製自反關聯性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

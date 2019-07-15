@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8d27e26eced538718492d0239af875968eed4777
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 681b997637a06fcf6c2917f1d54d2296a03e5ca6
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096439"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687051"
 ---
 # <a name="handle-multiple-job-steps"></a>處理多個作業步驟
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

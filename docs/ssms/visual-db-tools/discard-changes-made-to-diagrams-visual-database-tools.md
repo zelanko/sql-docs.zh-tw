@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4bb01c435a31f1690642e84481d42ea92c901630
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: de7a8763639961fe44c279b550713b48317045c5
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095289"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690339"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>捨棄對圖表所做的變更 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 16e6e7f0-30d9-46f2-8e14-f4d6d3ab1a46
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 894b6afff739d3d6bf5625bfc3a14482bfe32b09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: a9059b4ed02b50c266f8e7d7f4b74d6e78fdc004
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102953"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688352"
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>檢視或變更專案中連接的屬性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

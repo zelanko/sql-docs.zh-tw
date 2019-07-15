@@ -11,15 +11,15 @@ helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 6a0ad817-3d8d-4495-889d-c66a7ef9e8bb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2e011b894693539fa2c79ffaa2c922567ee7d5fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13296bb26a65d7ebe17d9d2bc732a28959ae5e45
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736446"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732903"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>重新執行追蹤資料表 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,34 +31,34 @@ ms.locfileid: "47736446"
   
 1.  開啟內含重新執行時所需事件類別的追蹤資料表。  
   
-2.  在 [重新執行] 功能表上按一下 [開始]，然後連接到您要重新執行追蹤的伺服器執行個體。  
+2.  在 [重新執行]  功能表上按一下 [開始]  ，然後連接到您要重新執行追蹤的伺服器執行個體。  
   
-3.  在 [重新執行組態] 對話方塊的 [基本重新執行選項] 索引標籤上，指定 [重新執行伺服器]。 按一下 [變更]，以變更 [重新執行伺服器] 方塊中所顯示的伺服器。  
+3.  在 [重新執行組態]  對話方塊的 [基本重新執行選項]  索引標籤上，指定 [重新執行伺服器]  。 按一下 [變更]  ，以變更 [重新執行伺服器]  方塊中所顯示的伺服器。  
   
 4.  選擇性，選取下列要儲存重新執行之目的地的其中之一：  
   
-    -   [儲存至檔案]，指定用來儲存重新執行的檔案。  
+    -   [儲存至檔案]  ，指定用來儲存重新執行的檔案。  
   
-    -   [儲存至資料表]，會指定要儲存重新執行的資料庫資料表。  
+    -   [儲存至資料表]  ，會指定要儲存重新執行的資料庫資料表。  
   
-5.  選擇 [以追蹤事件的順序重新執行事件] 或 [使用多執行緒重新執行事件]。 下列資料表說明這些設定之間的差異。  
+5.  選擇 [以追蹤事件的順序重新執行事件]  或 [使用多執行緒重新執行事件]  。 下列資料表說明這些設定之間的差異。  
   
     |選項|Description|  
     |------------|-----------------|  
     |**依照追蹤的順序重新執行事件**|以記錄事件的順序重新執行事件。 此選項會啟動偵錯。|  
     |**使用多執行緒重新執行事件**|這個選項使用多個執行緒重新執行每個事件，不受順序的限制。 這個選項會將效能最佳化。|  
   
-6.  選取 [顯示重新執行結果]，在重新執行時檢視其過程。  
+6.  選取 [顯示重新執行結果]  ，在重新執行時檢視其過程。  
   
-7.  或者按一下 [進階重新執行選項] 索引標籤，指定下列選項：  
+7.  或者按一下 [進階重新執行選項]  索引標籤，指定下列選項：  
   
-    -   若要重新執行所有伺服器處理序識別碼 (SPID)，請選取 [重新執行系統 SPID]。  
+    -   若要重新執行所有伺服器處理序識別碼 (SPID)，請選取 [重新執行系統 SPID]  。  
   
-    -   若要限制只重新執行屬於特定 SPID 的處理序，請選取 [只重新執行一個 SPID]。 在 [要重新執行的 SPID] 方塊中，輸入 SPID。  
+    -   若要限制只重新執行屬於特定 SPID 的處理序，請選取 [只重新執行一個 SPID]  。 在 [要重新執行的 SPID]  方塊中，輸入 SPID。  
   
-    -   若要重新執行在特定時間週期內產生的事件，請選取 [依日期和時間限制重新執行]。 選取 [開始時間] 與 [結束時間] 的日期和時間，指定重新執行中包含的時間週期。  
+    -   若要重新執行在特定時間週期內產生的事件，請選取 [依日期和時間限制重新執行]  。 選取 [開始時間]  與 [結束時間]  的日期和時間，指定重新執行中包含的時間週期。  
   
-    -   若要控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在重新執行期間管理處理序的方式，請設定 [健全狀況監視器選項]。  
+    -   若要控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在重新執行期間管理處理序的方式，請設定 [健全狀況監視器選項]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行 SQL Server Profiler 所需的權限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   

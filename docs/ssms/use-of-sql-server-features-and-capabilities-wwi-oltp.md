@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2c3fe113514ba44a63bce8b07d14efda865626cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 9de1dc3f9b50e7a39c5760c960fe525e6c2980a4
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088730"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67684861"
 ---
 # <a name="arguments-for-external-tools"></a>外部工具的引數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f294414d1f9fe702324250d5fffbf05c8d39e0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c9b450ba41c72c49d902ec7cf039d3967b8b7b8e
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65816386"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679765"
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd - 執行 Transact-SQL 指令碼檔案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ce6d9d88-3ac8-4f5d-8ea9-e9b55ceca0f4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5601719215e2196f1c2b94774468b07cd47ecc7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 51c1b63caaa96a95210352e94260389ffa6d1840
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104541"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680820"
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>變更伺服器的註冊 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

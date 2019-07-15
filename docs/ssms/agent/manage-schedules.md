@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 56e8fcb2048b4d741708beff3fae2267981be475
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f4f2a9780938f5438b76f3251800bc1032f3e10
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105395"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685841"
 ---
 # <a name="manage-schedules"></a>管理排程
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

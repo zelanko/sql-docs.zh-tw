@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1b9fcd20a9915e6f0b0a3c5164b035a2fb5acf54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: d3f53eee720729ea839272e30791bc8ef20b81c5
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105725"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690345"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>圖表窗格 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

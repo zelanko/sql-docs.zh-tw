@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - CmdExec jobs
 ms.assetid: b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 452e88dfc3ff2bc1353013f2a7a140b68db5121f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 35f2a4382d70aebf6c179bcc760b0914fd48e590
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698166"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688629"
 ---
 # <a name="create-a-cmdexec-job-step"></a>建立 CmdExec 作業步驟
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,11 +33,11 @@ ms.locfileid: "51698166"
   
 -   **開始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目建立 CmdExec 作業步驟：**  
   
-    [SQL Server Management Studio](#SSMS)  
+    [Transact-SQL](#SSMS)  
   
     [Transact-SQL](#TSQL)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "51698166"
 根據預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員可以建立 CmdExec 作業步驟。 這些作業步驟會以 SQL Server Agent 服務帳戶的身分執行，除非 **系統管理員 (sysadmin)** 使用者建立 Proxy 帳戶。 如果使用者不是 **系統管理員 (sysadmin)** 角色的成員，則必須能夠存取 CmdExec Proxy 帳戶，才能建立 CmdExec 作業步驟。  
   
 #### <a name="Permissions"></a>Permissions  
-如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
+如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
   
@@ -57,13 +57,13 @@ ms.locfileid: "51698166"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]。  
+2.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]  。  
   
-3.  在 **[作業屬性]** 方塊中，按一下 **[步驟]** 頁面，然後按一下 **[新增]**。  
+3.  在 **[作業屬性]** 方塊中，按一下 **[步驟]** 頁面，然後按一下 **[新增]** 。  
   
 4.  在 **[新增作業步驟]** 對話方塊中，輸入一個作業 **步驟名稱**。  
   
-5.  在 [類型] 清單中，選擇 [作業系統 (CmdExec)]。  
+5.  在 [類型]  清單中，選擇 [作業系統 (CmdExec)]  。  
   
 6.  在 **[執行身分]** 清單中，選取具有作業將會使用之認證的 Proxy 帳戶。 根據預設，CmdExec 作業步驟會以 SQL Server Agent 服務帳戶的身分執行。  
   
@@ -79,9 +79,9 @@ ms.locfileid: "51698166"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- creates a job step that uses CmdExec  
@@ -91,7 +91,7 @@ ms.locfileid: "51698166"
         @job_name = N'Weekly Sales Data Backup',  
         @step_name = N'Set database to read only',  
         @subsystem = N'CMDEXEC',  
-        @command = C:\clickme_scripts\SQL11\PostBOLReorg GetHsX.exe',   
+        @command = 'C:\clickme_scripts\SQL11\PostBOLReorg GetHsX.exe',   
         @retry_attempts = 5,  
         @retry_interval = 5 ;  
     GO  
