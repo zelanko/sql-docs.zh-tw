@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e13f242e-33f4-4d8d-9b10-0652ef4d0156
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 90a5996819cf97fc2fe85849e971ba24b59d6aa5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: e3459f60c454609fd792db89df20848d617d9ab7
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104508"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681405"
 ---
 # <a name="connect-to-a-registered-server-sql-server-management-studio"></a>連接至已註冊的伺服器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

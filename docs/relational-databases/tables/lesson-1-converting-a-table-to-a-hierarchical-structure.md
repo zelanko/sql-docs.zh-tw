@@ -13,12 +13,12 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 83871be7e8de5976eee684788d7a1a852aaa7c8a
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 14b490c48cf60c01efa1a0c3fed38b4aabb10495
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582152"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716283"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>第 1 課：將資料表轉換為階層式結構
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,21 +45,22 @@ ms.locfileid: "67582152"
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-    ```sql  
-    USE AdventureWorks2017;  
-    GO  
-      if OBJECT_ID('HumanResources.EmployeeDemo') is not null
-     drop table HumanResources.EmployeeDemo 
+
+   ```sql  
+   USE AdventureWorks2017;  
+   GO  
+     if OBJECT_ID('HumanResources.EmployeeDemo') is not null
+    drop table HumanResources.EmployeeDemo 
 
     SELECT emp.BusinessEntityID AS EmployeeID, emp.LoginID, 
-      (SELECT  man.BusinessEntityID FROM HumanResources.Employee man 
-            WHERE emp.OrganizationNode.GetAncestor(1)=man.OrganizationNode OR 
-                (emp.OrganizationNode.GetAncestor(1) = 0x AND man.OrganizationNode IS NULL)) AS ManagerID,
-           emp.JobTitle, emp.HireDate
-    INTO HumanResources.EmployeeDemo   
-    FROM HumanResources.Employee emp ;
-    GO
-    ```  
+     (SELECT  man.BusinessEntityID FROM HumanResources.Employee man 
+        WHERE emp.OrganizationNode.GetAncestor(1)=man.OrganizationNode OR 
+            (emp.OrganizationNode.GetAncestor(1) = 0x AND man.OrganizationNode IS NULL)) AS ManagerID,
+          emp.JobTitle, emp.HireDate
+   INTO HumanResources.EmployeeDemo   
+   FROM HumanResources.Employee emp ;
+   GO
+   ```  
   
 ### <a name="examine-the-structure-and-data-of-the-employeedemo-table"></a>檢查 EmployeeDemo 資料表的結構和資料  
   

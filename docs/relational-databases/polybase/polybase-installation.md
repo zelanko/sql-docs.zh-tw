@@ -1,23 +1,22 @@
 ---
 title: 在 Windows 上安裝 PolyBase | Microsoft Docs
-ms.custom: ''
 ms.date: 09/24/2018
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
 helpviewer_keywords:
 - PolyBase, installation
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 manager: craigg
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: bb0f511f5b8a470e4f7784d6dff9ce4e46650543
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 52655a320b7f31f012c0820d7d3875b5c4866fe7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581234"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730301"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安裝 PolyBase
 

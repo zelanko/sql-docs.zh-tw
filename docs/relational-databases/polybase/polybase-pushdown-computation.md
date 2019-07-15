@@ -1,23 +1,22 @@
 ---
 title: PolyBase 中的下推計算 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 manager: craigg
-ms.openlocfilehash: 24320f6f60d336df54093dd761d2b8bc872e3cc9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 4cfaa18c314358c290fb06cfad23527a42e0369b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211457"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731135"
 ---
 # <a name="pushdown-computations-in-polybase"></a>PolyBase 中的下推計算
-
 
 ## <a name="dmv"></a>DMV
 

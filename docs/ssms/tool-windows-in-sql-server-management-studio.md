@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 656eb21e7b6ebb1d263bd42df0b2fc97ae457373
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: e89faa976798cb1242d8b813ffa6fe5baf8fbcdc
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102675"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687213"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 中的工具視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "65102675"
 |||  
 |-|-|  
 |**工具**|**目的**|  
-|[物件總管](../ssms/object/object-explorer.md)|瀏覽伺服器、建立和尋找物件、管理資料來源，以及檢視記錄。 此工具可從 [檢視] 功能表加以存取。|  
-|[方案總管](../ssms/solution/solution-explorer.md)|儲存和組織稱為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 指令碼之專案中的指令碼和相關連接資訊。 您可以將許多 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 指令碼儲存成方案，當指令碼隨著時間而進展時，您可以利用原始檔控制來管理它們。 此工具可從 [檢視] 功能表加以存取。|  
-|[範本總管](../ssms/template/template-explorer.md)|根據現有的範本來建立查詢。 您也可以建立您的自訂查詢，或變更現有的範本來配合您的狀況。 此工具可從 [檢視] 功能表加以存取。|  
+|[物件總管](../ssms/object/object-explorer.md)|瀏覽伺服器、建立和尋找物件、管理資料來源，以及檢視記錄。 此工具可從 [檢視]  功能表加以存取。|  
+|[方案總管](../ssms/solution/solution-explorer.md)|儲存和組織稱為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 指令碼之專案中的指令碼和相關連接資訊。 您可以將許多 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 指令碼儲存成方案，當指令碼隨著時間而進展時，您可以利用原始檔控制來管理它們。 此工具可從 [檢視]  功能表加以存取。|  
+|[範本總管](../ssms/template/template-explorer.md)|根據現有的範本來建立查詢。 您也可以建立您的自訂查詢，或變更現有的範本來配合您的狀況。 此工具可從 [檢視]  功能表加以存取。|  
 |[動態說明](../ssms/user-assistance-in-sql-server-management-studio.md)|在您按一下元件或類型程式碼時，顯示一份相關說明主題的清單。|  
   
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的各項工具能夠協同運作。 例如，您可以執行下列動作：  

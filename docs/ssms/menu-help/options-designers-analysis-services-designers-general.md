@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 7f976d2b-1a16-47f8-85e6-d7c2bf6a84b8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a2af1a0d0c5ec1a36b1cd34d65ab853bae2bcae1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: f930820f381e3599cc3ae13007b8abf84bbe7e28
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104855"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690271"
 ---
 # <a name="options-designers---analysis-services-designers---general"></a>選項 (設計工具 - Analysis Services 設計工具 - 一般)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

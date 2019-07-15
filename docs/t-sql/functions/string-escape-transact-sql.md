@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: fe99e6044963f9591614b331df0238658744af63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af26d1dd64b859be94693f98579e0e48b793ae20
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947522"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624374"
 ---
 # <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 
@@ -55,7 +55,7 @@ STRING_ESCAPE( text , type )
 |特殊字元|編碼的序列|  
 |-----------------------|----------------------|  
 |引號 (")|\\"|  
-|反斜線 (\\)|\\\|  
+|反斜線 (\\)| \\\\ |  
 |斜線 (/)|\\/|  
 |退格鍵|\b|  
 |換頁字元|\f|  

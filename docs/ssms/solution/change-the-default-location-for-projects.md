@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3b8af28d-3095-40aa-b7db-636f2852d483
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f2787800e3dbb128f0382d63a1b645ce70035c42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 9910f5ced7a3adf4801a7723753ac4981fe0c93b
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105152"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689915"
 ---
 # <a name="change-the-default-location-for-projects"></a>變更專案的預設位置
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

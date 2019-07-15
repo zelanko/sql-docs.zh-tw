@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 7efda8e3-739f-4c97-a497-b8808a0acbea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e753a0854e5ac8f789249a211b4af3990417279c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 488ec073e47758bc7caff4983f033d44bace67a9
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099873"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679237"
 ---
 # <a name="save-not-permitted-dialog-box"></a>儲存 (不允許) 對話方塊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

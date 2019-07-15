@@ -2,8 +2,6 @@
 title: 什麼是 PolyBase？ | Microsoft Docs
 ms.date: 06/10/2019
 ms.prod: sql
-ms.reviewer: ''
-ms.custom: ''
 ms.technology: polybase
 ms.topic: overview
 f1_keywords:
@@ -16,16 +14,17 @@ helpviewer_keywords:
 - Hadoop export
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: 4cea1e73dc2bc19add94a24c7a4f504c4d9e1224
-ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
+ms.openlocfilehash: 8d1c2cb27a2046f95ee250f16016488d30aa7929
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66836326"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730306"
 ---
 # <a name="what-is-polybase"></a>什麼是 PolyBase？
 

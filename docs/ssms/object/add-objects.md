@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 17ac0e99-8490-46b0-8515-e5012bc9e0cf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 51303fc2d37a1100d09275c5750d37c68a647785
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 653f7fbae82427f12d246c9758bfce2651d790df
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65097211"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690057"
 ---
 # <a name="add-objects"></a>加入物件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

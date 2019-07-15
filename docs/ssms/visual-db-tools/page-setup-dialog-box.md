@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 00f87815f851a9334f84009af7818bcbfa15370a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 95e4e18317ebcad2ad25ef5e17db20fe91f75bff
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095625"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680977"
 ---
 # <a name="page-setup-dialog-box"></a>版面設定對話方塊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
