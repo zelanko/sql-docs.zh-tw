@@ -46,7 +46,7 @@ ms.locfileid: "63243367"
 
 |                                   | 需要所有伺服器物件和 VNNS | 需要所有伺服器物件和 VNNS | 不需要伺服器物件/VNNS\* | 不需要伺服器物件/VNNS\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| **_可用性群組？(是/否)_ **                  | **_是_**                              | **_否_**                                                            | **_是_**    | **_否_**    |
+| **_可用性群組？(是/否_)**                  | **_是_**                              | **_否_**                                                            | **_是_**    | **_否_**    |
 | **叢集只會使用 SQL FCI**         | [案例 3](#scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups)                           | [案例 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis)                                                        | [案例 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [案例 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis) |
 | **叢集使用獨立執行個體** | [案例 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [案例 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [案例 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [案例 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
 
