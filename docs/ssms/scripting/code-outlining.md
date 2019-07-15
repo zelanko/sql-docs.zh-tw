@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d4729ec0928b73e4dac0c4f9dd92dd3b4856218
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d8dd89c8fd894ff10127335d2b6fce91af84b2f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65820981"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683836"
 ---
 # <a name="code-outlining"></a>程式碼大綱
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

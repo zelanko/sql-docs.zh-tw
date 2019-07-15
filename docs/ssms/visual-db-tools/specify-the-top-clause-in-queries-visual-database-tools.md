@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ba7d7c10-9bb3-4d9b-90b0-5fa94ecae59b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f7e7e32c084acb1c011fe047a151ba7d2d4201a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 716c121bfa759dd67b709b1590b6637c97237ac8
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105717"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682839"
 ---
 # <a name="specify-the-top-clause-in-queries-visual-database-tools"></a>在查詢中指定 TOP 子句 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

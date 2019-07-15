@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: cd6b5527-c032-473e-b954-1a549e1cdf4a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b698549f37e0ffb9da390ff93c1ceb3c8218369f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: c1f47b4eead86406dc5938df314754de6c966af9
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090832"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686453"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>選擇名稱對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

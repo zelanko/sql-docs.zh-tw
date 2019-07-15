@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fad81cd625444af3b56c256b4dc34fa471e6841c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: e1bb88c38a93b3af11e34fbb48575eb791a05d93
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098493"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687749"
 ---
 # <a name="query-with-joins-visual-database-tools"></a>使用聯結進行查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -22,14 +22,14 @@ helpviewer_keywords:
 ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b96e70f0ddf57e826bce4cefb085376aa074a0c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 092a2d0029f2561cc8860919f61cfe87b201dcc9
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106254"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688793"
 ---
 # <a name="change-an-operator39s-availability"></a>變更操作員的可用性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

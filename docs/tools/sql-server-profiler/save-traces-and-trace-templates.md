@@ -17,15 +17,15 @@ helpviewer_keywords:
 - importing trace templates
 - SQL Server Profiler, templates
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bf12d70f78a18b24b7fd6638d788d4e5b436c21c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 411600c64df15dcb51a68641164c2bd05de70003
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62712628"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730282"
 ---
 # <a name="save-traces-and-trace-templates"></a>儲存追蹤及追蹤範本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

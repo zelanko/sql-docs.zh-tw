@@ -8,20 +8,20 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 9bd80a957b3f571c4289935eaab145e0fd9f9719
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6d7dddd07463e16d0fe85d4feba4a9a347435854
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656368"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732636"
 ---
 # <a name="new-alias-alias-tab"></a>新增別名 (別名索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  別名是可用於進行連接的替代名稱。 別名會封裝連接字串的必要元素，並以使用者選擇的名稱來公開這些元素。 您可以使用 [別名 - 新增] 對話方塊的 [別名] 頁面來指定別名的連接字串元素。 若要變更現有別名的連接字串，請參閱 [&#60;Alias&#62; 屬性 &#40;別名索引標籤&#41;](../../tools/configuration-manager/alias-properties-alias-tab.md)。  
+  別名是可用於進行連接的替代名稱。 別名會封裝連接字串的必要元素，並以使用者選擇的名稱來公開這些元素。 您可以使用 [別名 - 新增]  對話方塊的 [別名]  頁面來指定別名的連接字串元素。 若要變更現有別名的連接字串，請參閱 [&#60;Alias&#62; 屬性 &#40;別名索引標籤&#41;](../../tools/configuration-manager/alias-properties-alias-tab.md)。  
   
  您不必填滿所有 **[內容]** 方格內的值。 有效的組合視選取的通訊協定而異。 如需有效組合的範例，請參閱下列主題。  
   
@@ -46,14 +46,14 @@ ms.locfileid: "51656368"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並非接聽預設具名管道，因此您必須為連接字串提供其他管道名稱。  
   
--   應用程式想要連接到伺服器上的 `ACCT` 資料庫，但該資料庫已被合併為 `ACCT` 伺服器上的 `CENTRAL` 執行個體。 該應用程式無法輕易修改。 您可以建立名為 `ACCT`的別名，其連接字串指向 `CENTRAL\ACCT`。  
+-   應用程式想要連接到伺服器上的 `ACCT`資料庫，但該資料庫已被合併為 `ACCT` 伺服器上的 `CENTRAL`執行個體。 該應用程式無法輕易修改。 您可以建立名為 `ACCT`的別名，其連接字串指向 `CENTRAL\ACCT`。  
   
 ## <a name="creating-a-valid-connection-string"></a>建立有效的連接字串  
  如需有效別名屬性組合的範例描述，請參閱下列主題：  
   
 -   [使用共用記憶體通訊協定建立有效的連接字串](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)  
   
--   [Creating a Valid Connection String Using TCP IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
+-   [使用 TCP IP 建立有效的連接字串](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
 -   [使用具名管道建立有效的連接字串](https://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   

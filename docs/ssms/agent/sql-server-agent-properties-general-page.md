@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: b51601e9-5454-43c6-bb5e-24eb2ff043c8
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b9dc1f9fa030c66d3cfacd7ebdf420a455b9aa24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c57b472379c24e20a105a793e65c376b01944e7
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65089629"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686766"
 ---
 # <a name="sql-server-agent-properties-general-page"></a>SQL Server Agent 屬性 (一般頁面)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

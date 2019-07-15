@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: 0b03585b-a510-484d-8a63-9b32459def9c
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b0444310b6c0d226fefe093c281cf9e96c2ca0c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b7cb76d41c20f44c0e05980d435cd5a3d50ae05
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095809"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686880"
 ---
 # <a name="job-properties---new-job-schedules-page"></a>作業屬性 - 新增作業 (排程頁面)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

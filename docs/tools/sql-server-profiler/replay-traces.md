@@ -17,15 +17,15 @@ helpviewer_keywords:
 - events [SQL Server], replaying traces
 - Profiler [SQL Server Profiler], replaying traces
 ms.assetid: da958d3c-7f3e-44c9-aecc-8a9493bea7c0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d1d10e70c86f98933a2b7081767f6f0362075ca3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe0132fa04e2201a66c64e672b074d380a831b94
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62712576"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733381"
 ---
 # <a name="replay-traces"></a>重新執行追蹤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

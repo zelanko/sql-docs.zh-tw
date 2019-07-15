@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a19a820f8ec84778e52025ec56f2fc8b6b344ae8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 537f904e7a12003576d790115cf97fe0af5902bd
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65089398"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686358"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>摺疊資料列群組 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

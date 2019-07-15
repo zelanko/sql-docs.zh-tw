@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 000d308179cc67ddec3c1f59f0ca8b40a53e0a27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 848b9026774b914707c415dc39cb030269bb963e
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098192"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688315"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>移除查詢結果的資料行 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 4fb80502-d271-4d06-bcbc-bfbbceb5f2a2
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0fa4fa781f16ab7ba0b5f26cc0024b97ab82a08a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 197f9258974b045e92d4529bbca29f5f888bd4fa
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65089353"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681456"
 ---
 # <a name="synchronize-target-server-clocks-sql-server-management-studio"></a>Synchronize Target Server Clocks (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 05f1ba1d-465f-4e36-84bb-21b963c9b8f9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4911b633fb6dcb2b40dc6d22828c0af53b0d2bda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: a7ec68839a913678d53a46c393b9f35a5c536054
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088759"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686603"
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>將衍生資料表加入查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

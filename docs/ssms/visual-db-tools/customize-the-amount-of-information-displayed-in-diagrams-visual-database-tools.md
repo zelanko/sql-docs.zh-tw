@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 65007b1470ca86f5aeca3f459748d79b95c598b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 479c2e42f471b4a42b7fe8a3b82dc07ad70a6537
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105775"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680108"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>自訂圖表中顯示的資料數量 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

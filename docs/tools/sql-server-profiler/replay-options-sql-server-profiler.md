@@ -13,21 +13,21 @@ helpviewer_keywords:
 - health monitor [SQL Server]
 - Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ded43c2d61999b0bf4fe4cfe7501f4907492f399
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f082f484c945dd6acbb6be2f4bf92cd107605175
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808036"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733402"
 ---
 # <a name="replay-options-sql-server-profiler"></a>重新執行選項 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來重新執行擷取的追蹤之前，請在 [重新執行組態] 對話方塊中指定重新執行選項。 若要啟動此對話方塊，請開啟 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中的重新執行追蹤檔案或資料表，然後在 [重新執行] 功能表上按一下 [啟動]。 如需有關重做追蹤時所需之權限的詳細資訊，請參閱＜ [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)＞。  
+  使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來重新執行擷取的追蹤之前，請在 [重新執行組態]  對話方塊中指定重新執行選項。 若要啟動此對話方塊，請開啟 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中的重新執行追蹤檔案或資料表，然後在 [重新執行]  功能表上按一下 [啟動]  。 如需有關重做追蹤時所需之權限的詳細資訊，請參閱＜ [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)＞。  
   
- 本主題描述使用 [重新執行組態] 對話方塊所指定的選項。  
+ 本主題描述使用 [重新執行組態]  對話方塊所指定的選項。  
   
 > [!NOTE]  
 >  我們建議您使用分散式重新執行公用程式來重新執行密集的 OLTP 應用程式 (具有許多使用中並行連接或高輸送量)。 分散式重新執行公用程式可以從多部電腦重新執行追蹤資料，並有效模擬關鍵任務的工作負載。 如需詳細資訊，請參閱 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "47808036"
  重新執行您從清單中選擇的 SPID 號碼。  
   
  **依日期和時間限制重新執行**  
- 針對所指定的 [開始時間] 及 [結束時間] 來重新執行追蹤。  
+ 針對所指定的 [開始時間]  及 [結束時間]  來重新執行追蹤。  
   
  **健全狀況監視器等候間隔**  
  設定可允許處理序執行的時間量，時間一到，健全狀況監視器就會將其終止。  
@@ -77,7 +77,7 @@ ms.locfileid: "47808036"
  設定已封鎖之處理序監視器搜尋已封鎖或封鎖中處理序的頻率。  
   
 ## <a name="about-the-health-monitor"></a>關於健全狀況監視器  
- 健全狀況監視器是一個應用程式執行緒，可監視有關重新執行追蹤的模擬處理序，並結束重新執行作業中被封鎖的處理序。 您可以在 [重新執行組態] 對話方塊的 [進階重新執行選項] 索引標籤中，指定健全狀況監視器要等候幾秒，再結束被封鎖的處理序 ([健全狀況監視器等候間隔])。 如果您將此間隔設為 0，則健全狀況監視器就永遠都不會結束重新執行追蹤中的模擬封鎖處理序。  
+ 健全狀況監視器是一個應用程式執行緒，可監視有關重新執行追蹤的模擬處理序，並結束重新執行作業中被封鎖的處理序。 您可以在 [重新執行組態]  對話方塊的 [進階重新執行選項]  索引標籤中，指定健全狀況監視器要等候幾秒，再結束被封鎖的處理序 ([健全狀況監視器等候間隔]  )。 如果您將此間隔設為 0，則健全狀況監視器就永遠都不會結束重新執行追蹤中的模擬封鎖處理序。  
   
 ## <a name="see-also"></a>另請參閱  
  [重新執行追蹤](../../tools/sql-server-profiler/replay-traces.md)   

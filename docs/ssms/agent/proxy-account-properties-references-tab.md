@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: 52f6b2a7-2274-4c35-86be-0278c27cd418
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 885d85b1a9dc8c665572155597629730a05dd1d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5fb60571c6462c76e4368d73af70a07df92a2547
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088809"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685351"
 ---
 # <a name="proxy-account-properties-references-tab"></a>Proxy 帳戶屬性 (參考索引標籤)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

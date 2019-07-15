@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f93d078f9491a6105a7e96c4e443f14bae936bbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: de8a64a6c11bd28bdbd12e000796fca4fd33f3c0
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104885"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682309"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>群組查詢結果中的資料列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

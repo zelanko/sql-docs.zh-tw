@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 36f53b9f4daaa25d6276778ed4f38ae641c73c93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dcc2a2e828360d26eb5dde3ec41cd85395d9c8fd
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62712415"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731468"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>建立追蹤 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

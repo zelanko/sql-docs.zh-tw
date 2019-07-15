@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, help
 ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 34942a33e71c2d9f17f77a9f595cf873d71fbc4e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2610106e0ab691af885bb8eb3c1d62555db7f56f
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204717"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733185"
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 組態管理員說明
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "53204717"
 -   設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 網路通訊協定  
   
 > [!NOTE]  
->  如需有關如何設定通訊協定並連線到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的簡要教學課程，請參閱[教學課程：Database Engine 使用者入門](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)。  
+>  如需如何設定通訊協定並連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的簡要教學課程，請參閱 [教學課程：Database Engine 使用者入門](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)。  
   
 ## <a name="sql-server-native-client-configuration"></a>SQL Server Native Client 組態  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 網路程式庫連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」執行與此電腦用戶端應用程式相關的下列工作：  
@@ -71,12 +71,12 @@ ms.locfileid: "53204717"
   
 #### <a name="to-open-sql-server-configuration-manager"></a>若要開啟 SQL Server 組態管理員  
   
--   在 [開始] 功能表上，依序指向 [所有程式]、[Microsoft SQL Server] \(版本) 和 [組態工具]，然後按一下 [SQL Server 組態管理員]。  
+-   在 [開始]  功能表上，依序指向 [所有程式]  、[Microsoft SQL Server]  \(版本) 和 [組態工具]  ，然後按一下 [SQL Server 組態管理員]  。  
   
   
  **使用 [!INCLUDE[win8](../../includes/win8-md.md)] 存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定管理員**  
   
- 由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 程式的嵌入式管理單元，而不是單獨的程式，在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時並不會出現 [!INCLUDE[win8](../../includes/win8-md.md)]組態管理員這樣的應用程式。 若要開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定管理員，請在 [搜尋] 常用鍵的 [應用程式] 下，鍵入 **SQLServerManager12.msc** (適用於 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 或鍵入 **SQLServerManager11.msc** (適用於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])，然後按 **Enter**。  
+ 由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 程式的嵌入式管理單元，而不是單獨的程式，在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時並不會出現 [!INCLUDE[win8](../../includes/win8-md.md)]組態管理員這樣的應用程式。 若要開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定管理員，請在 [搜尋]  常用鍵的 [應用程式]  下，鍵入 **SQLServerManager12.msc** (適用於 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 或鍵入 **SQLServerManager11.msc** (適用於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])，然後按 **Enter**。  
   
 
 ## <a name="see-also"></a>另請參閱  

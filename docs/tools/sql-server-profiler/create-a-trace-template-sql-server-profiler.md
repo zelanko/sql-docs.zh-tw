@@ -12,15 +12,15 @@ helpviewer_keywords:
 - trace templates [SQL Server]
 - saving trace template
 ms.assetid: 025868b0-3790-4cda-8757-5a58327bfba0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a6ca4014bd8bbaed28afad2bf7f87ebab5007004
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fef9b3e7420bb383ea1e46490b4e902e7ad4021
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62712447"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731413"
 ---
 # <a name="create-a-trace-template-sql-server-profiler"></a>建立追蹤範本 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: cd445949-dc10-42fc-8785-4db74c9723ad
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c63160251ee21ea409deab13ebd8cd264e1bd7c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 452d7e7511ac7b43e1a0df15f049d8cc668fa2ad
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088939"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685212"
 ---
 # <a name="run-jobs"></a>執行作業
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

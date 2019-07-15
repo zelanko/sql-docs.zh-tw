@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b6c9bf93c92bb7797f179e0b6647993dff71e6b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: a7a875e114c9f1e485442191ae077339c967274e
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105115"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67684806"
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>選項 (設計工具 - 資料表和資料庫設計工具頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

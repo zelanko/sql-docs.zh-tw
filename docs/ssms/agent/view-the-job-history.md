@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 410d603b502cb2bb3da4c451a8b408eba3bc5e69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 67ac560a422dc87ce33f2a15979bd9b203d8f94f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088901"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680558"
 ---
 # <a name="view-the-job-history"></a>檢視作業記錄
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

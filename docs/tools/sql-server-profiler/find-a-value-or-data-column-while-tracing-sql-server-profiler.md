@@ -12,15 +12,15 @@ helpviewer_keywords:
 - traces [SQL Server], running
 - traces [SQL Server], searching while trace running
 ms.assetid: fa5212af-1f49-4227-9d80-58003062146f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d88810885e1ab3447c561a1aad2f7be049cb7fff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 199bb840153e55e524b1a090c135b0691a8ce2ce
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62712309"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729912"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>在追蹤時尋找值或資料行 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7fa6b709-e023-49c8-8f0d-b4476402cd73
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 21b12ce8d9c9f2c63265f79f5c8c5614dc16f9fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 55d011af649c57e84ab5d4ed97717edb52f0ad49
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65089455"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686170"
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>將資料庫圖表的影像複製到剪貼簿 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - breakpoints [SQL Server]
 - traces [SQL Server], replaying
 ms.assetid: 3caf751e-df3b-40c7-b5e8-4490ae178e0c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 38b3ada072c6cf5ef8753f1218fea858d98b6f1d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cb776b84c68c5903b5c7204109d2d56eb1cbed7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751106"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732125"
 ---
 # <a name="replay-to-a-breakpoint-sql-server-profiler"></a>重新執行至中斷點 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,17 +35,17 @@ ms.locfileid: "47751106"
   
     -   按 F9 鍵。  
   
-    -   在 **[重新執行]** 功能表上，按一下 **[切換中斷點]**。  
+    -   在 **[重新執行]** 功能表上，按一下 **[切換中斷點]** 。  
   
-    -   以滑鼠右鍵按一下事件，然後按一下 [切換中斷點]。  
+    -   以滑鼠右鍵按一下事件，然後按一下 [切換中斷點]  。  
   
      選取的追蹤事件旁邊會出現紅色項目符號，表示此為追蹤中斷點。  
   
      重複這個步驟來設定多個中斷點。  
   
-3.  在 **[重新執行]** 功能表，按一下 **[開始]**，連接到您要重新執行追蹤的伺服器。  
+3.  在 **[重新執行]** 功能表，按一下 **[開始]** ，連接到您要重新執行追蹤的伺服器。  
   
-4.  在 **[重新執行組態]** 對話方塊中確認設定，然後按一下 **[確定]**。  
+4.  在 **[重新執行組態]** 對話方塊中確認設定，然後按一下 **[確定]** 。  
   
      開始重新執行，到達中斷點時會暫停。  
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cb850a92714acfbd4b0f971806f9ac2752c20da9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 263e60e087a47218f195aaec3a3b3ff43cef76bd
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095398"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690321"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>捨棄對查詢所做的變更 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

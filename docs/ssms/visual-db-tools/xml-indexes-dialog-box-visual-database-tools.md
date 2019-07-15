@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2a0ffb3a5b0eee643438e68fa8e3bf3477a04273
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: d6c6ecfab62ed35394bbd1802e06adc4ad3807c2
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104438"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689138"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML 索引對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

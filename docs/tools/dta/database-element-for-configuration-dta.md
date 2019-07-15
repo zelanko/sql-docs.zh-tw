@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Database element
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2823734aec3138dd030a0d0399d11d458a970a8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c434b43d35dfc59fde648321d12a61674dda8fd
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62857420"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730931"
 ---
 # <a name="database-element-for-configuration-dta"></a>組態的 Database 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

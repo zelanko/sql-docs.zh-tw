@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fb86baacc6fc75aa5e41a5946e1761daa90ebc25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 19ea7509acfa17830a862c38ec54d16820b138df
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105632"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689270"
 ---
 # <a name="visual-database-tool-designers"></a>Visual Database Tool 設計工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

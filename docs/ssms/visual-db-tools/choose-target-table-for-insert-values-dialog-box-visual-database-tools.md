@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 580ed86a-be86-419b-9dc7-e3b17f19905f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 31ff12ff168be5f73bd03d3f71aaaccaee6dd214
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 66349a2fee507c6d4a333ee843073395de911438
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65097512"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686390"
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>選擇插入值的目標資料表對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

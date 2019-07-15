@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a4fa8994af0a9a10b2dc08a592d49abc8b4afa94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5451fd6edf7d84b8e939f0f62ae6fcebf6e2f069
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099402"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688579"
 ---
 # <a name="create-a-job-category"></a>建立作業類別目錄
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

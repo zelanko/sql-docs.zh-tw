@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 41f097c0edfbdf0f8014b54bd72099f72f4e239b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: def3c1bfab6bb4e73b10f584ce2d10556edba19f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096817"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682409"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>編輯結果窗格中的資料列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

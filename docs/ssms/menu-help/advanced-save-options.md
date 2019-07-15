@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 186a78bbd2b887875bf6f5fc8594ffb714fb3ec7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 705593e1ed47a1b19538654ab15755facae1e57a
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088828"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679988"
 ---
 # <a name="advanced-save-options"></a>進階儲存選項
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8ce85a190288adeb02f19d71a76cc5a0d6c8605b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 33b69a99d6ff965c7e8d95c67b48a1f358ffe7aa
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102695"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680323"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>從 SQL Server Management Studio 連接到任何 SQL Server 元件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

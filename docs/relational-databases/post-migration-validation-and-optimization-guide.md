@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: d13809c3fa5b100a29df4434da5aec354de0c7c2
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 1ba2746e91c33c49c943a9c100e9ea3bd6d3d9e5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581233"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860494"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移轉後驗證和最佳化指南
 
@@ -53,7 +53,7 @@ ms.locfileid: "67581233"
 **適用於：** 外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉。
 
 > [!NOTE]
-> 針對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉，如果此問題存在於來源 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，則依現況移轉至較新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]無法解決這種情況。 
+> 若為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉，如果此問題存在於來源 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，依現況移轉至較新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法解決這種情況。 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 透過在第一次編譯時使用探查輸入參數來編譯預存程序的查詢計劃，產生已針對該輸入資料分佈進行最佳化的參數化和可重複使用的計畫。 即使不是預存程序，也會將產生簡單計劃的大部分陳述式進行參數化。 第一次快取計劃之後，日後的每次執行都會對應至先前快取的計劃。
 第一次編譯時若未對一般工作負載使用最常見的參數集，就會引發潛在問題。 對於不同的參數，使用相同的執行計畫會變成效率不佳。 如需本主題的詳細資訊，請參閱[參數探測](../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。

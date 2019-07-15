@@ -25,14 +25,14 @@ helpviewer_keywords:
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b80668cadd7ea2b2b721f93d41c79a08290c3370
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fde6594743ed20100e8e650d655769b9056a1b2
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65821979"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680190"
 ---
 # <a name="manage-code-formatting"></a>管理程式碼格式設定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

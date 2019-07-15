@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 59be4645a7f2ae38fc01fba9e92452c03cde6445
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 43bcfa304979b918d9588c8bdd8bd07f9296fa5f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096671"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682166"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>自動聯結資料表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

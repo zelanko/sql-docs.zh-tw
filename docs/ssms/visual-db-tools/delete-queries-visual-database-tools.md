@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5fa79c9883a1de60f08fb6362e5aa7a7d9c4d28b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 60310b49996fcd4fa9cae91267978728a91c2b04
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099983"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690429"
 ---
 # <a name="delete-queries-visual-database-tools"></a>刪除查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: 68402a69-24c4-4304-a1db-7409c42c51dc
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c03c67a71774c7656196a034d64efe4284479fc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f008f4b1e3af13dcffdee2d8c8d207af76f7961e
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096790"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690092"
 ---
 # <a name="delete-operator"></a>刪除操作員
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

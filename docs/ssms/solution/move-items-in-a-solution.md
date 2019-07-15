@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b40a24eb-f528-4e70-b26e-5eaf6e0ed1ed
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 51332c1d9d5076752a3897a12e5e6a1e5a2b6ee2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 217ad4a4d045798adaa7d430b0b91ba2eb3e8d7c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102862"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689800"
 ---
 # <a name="move-items-in-a-solution"></a>移動方案中的項目
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

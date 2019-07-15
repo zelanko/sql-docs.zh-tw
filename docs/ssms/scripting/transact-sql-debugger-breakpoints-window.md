@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af1a6dcbd241daa2d7edf0bb14f17e84d32bf2d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d83cfe9e409d9634f9853bfc02b4ff8dc7d9e70a
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65821759"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679570"
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Transact-SQL 偵錯工具 - 中斷點視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

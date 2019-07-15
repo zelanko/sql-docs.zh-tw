@@ -11,15 +11,15 @@ helpviewer_keywords:
 - templates [SQL Server], traces
 - trace templates [SQL Server]
 ms.assetid: 305817b7-4d23-49fb-9e6c-4d34359877bf
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7f2f0cbac8ccc6ebbf53227622b4b3650aa72dec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e3ba334d2cae800e6bc84b057ba1f39e8db3bf9
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62712299"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731334"
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>從追蹤檔案或追蹤資料表衍生範本 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

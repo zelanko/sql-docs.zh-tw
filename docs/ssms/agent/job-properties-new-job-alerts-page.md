@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: 6d3f9b24-d214-4e82-b161-c00ff8eff813
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 41d547331327bc31c5c57918e49dacbe521c6012
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86071ff3bfd47e74d954e5c56a301a792b6c6b35
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095868"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686926"
 ---
 # <a name="job-properties---new-job-alerts-page"></a>作業屬性 - 新增作業 (警示頁面)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

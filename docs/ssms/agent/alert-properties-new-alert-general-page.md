@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ce2952af8a3f75ce8cc3e7714bb0490db33febd5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b43801ae2889e5eddec99af05bdefb0ebf49bcb
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099339"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689062"
 ---
 # <a name="alert-properties---new-alert-general-page"></a>警示屬性 - 新增警示 (一般頁面)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

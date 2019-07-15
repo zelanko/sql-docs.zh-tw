@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 59ff07bd-a147-47e1-969f-3b260a9e2763
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 102330726d95a8fd99f3cef1b39b7bfb94727b3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: ca105f33bf460b8b1eebf0d1461da26fb774901f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104431"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689120"
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>使用圖表配置 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2930098c36a18ce74c23b6505c431e743c68e491
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 912a8e010ce84b421f5ba12b8a98384b0fb91cf1
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095319"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690435"
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>刪除資料庫圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,11 +29,11 @@ ms.locfileid: "65095319"
   
 ### <a name="to-delete-a-database-diagram"></a>若要刪除資料庫圖表  
   
-1.  在物件總管中，展開 [資料庫圖表] 資料夾。  
+1.  在物件總管中，展開 [資料庫圖表]  資料夾。  
   
 2.  用滑鼠右鍵按一下準備刪除的資料庫圖表。  
   
-3.  在快速鍵功能表上選擇 [刪除]。  
+3.  在快速鍵功能表上選擇 [刪除]  。  
   
 4.  會出現訊息提示您確認是否刪除。 選擇 [ **是**]。  
   

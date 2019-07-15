@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4b5c98d9b70be58dfc6ad2fb1ccf0063699acc74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73109772c476eac8f1c0cc75c013ef7c637bf2d2
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65097222"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685579"
 ---
 # <a name="operator-properties---new-operator-notifications-page"></a>操作員屬性/新增操作員 (通知頁面)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

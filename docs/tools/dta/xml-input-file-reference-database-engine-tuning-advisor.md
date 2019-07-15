@@ -14,15 +14,15 @@ helpviewer_keywords:
 - input file reference [Database Engine Tuning Advisor]
 - XML input files [Database Engine Tuning Advisor]
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1fa942cf89221dcfb66e78e6be77bbdd882e91b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00f869cb7c9c7ce4f844b7b4ca30399d1a0a295f
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63033794"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731731"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>XML 輸入檔參考 (Database Engine Tuning Advisor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -14,12 +14,12 @@ ms.assetid: 9a98c53a-fea5-4235-b23d-6c69587c5676
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f352a52905e4f67760e7e6c4e9f46c08fdbdd5a9
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 8b85376eb210185649c495fccaf69a5628f857c1
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583763"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860656"
 ---
 # <a name="set-distribution-retention-period-for-transactional-publications"></a>設定交易式發行集的散發保留週期
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "67583763"
   
 ### <a name="to-specify-the-distribution-retention-period"></a>若要指定散發保留期限  
   
-1.  在 [散發者屬性 - \<散發者>]  對話方塊的 [一般]  頁面上，按一下散發資料庫的屬性按鈕 ( **?** )。  
+1.  在 [散發者屬性 - \<散發者>]  對話方塊的 [一般]  頁面上，按一下散發資料庫的屬性按鈕 ( **...** )。  
   
 2.  若要指定最短散發保留期限，請在 **[至少]** 方塊中輸入值；若要指定最長散發期限，請在 **[但是不能超過]** 方塊中輸入值。  
   

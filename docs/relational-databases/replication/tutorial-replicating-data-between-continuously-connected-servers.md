@@ -15,12 +15,12 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7d40e49816ccec8c84486056a3f5b3bdee759de
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 23169fd3625c2501e295645201da89667731f0b6
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581330"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860683"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>教學課程：設定兩個已完全連線伺服器之間的複寫 (異動)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ ms.locfileid: "67581330"
   
    ![輸入訂閱資料庫的名稱](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8. 在 [散發代理程式安全性]  頁面上，選取省略符號 ( **?** ) 按鈕。 在 [Process account] \(處理帳戶)  方塊中輸入 <*Publisher_Machine_Name*> **\repl_distribution**，然後輸入此帳戶的密碼並選取 [確定]  ，然後選取 [下一步]  。
+8. 在 [散發代理程式安全性]  頁面上，選取省略符號 ( **...** ) 按鈕。 在 [Process account] \(處理帳戶)  方塊中輸入 <*Publisher_Machine_Name*> **\repl_distribution**，然後輸入此帳戶的密碼並選取 [確定]  ，然後選取 [下一步]  。
 
    ![「散發代理程式安全性」對話方塊中的散發帳戶資訊](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   

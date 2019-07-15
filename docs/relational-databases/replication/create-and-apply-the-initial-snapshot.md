@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a18aaf9d8743e5f3d250d04156dd5bab5375625f
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 48a3bfbca1b133be9c8be9b05fef3f4e2dd9ae14
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67579471"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860740"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>建立和套用初始快照集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "67579471"
   
 ### <a name="modify-the-default-snapshot-location"></a>修改預設快照集位置  
   
-1.  在 [散發者屬性 - \<散發者>]  對話方塊的 [發行者]  頁面上，按一下您要變更其預設快照集位置之發行者的屬性按鈕 ( **?** )。  
+1.  在 [散發者屬性 - \<散發者>]  對話方塊的 [發行者]  頁面上，按一下您要變更其預設快照集位置之發行者的屬性按鈕 ( **...** )。  
   
 2.  在 [發行者屬性 - \<發行者>]  對話方塊中，輸入 [預設快照集資料夾]  屬性的值。  
   

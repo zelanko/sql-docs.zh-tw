@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 174c7275-5b15-42a9-b172-5ff30de575a1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ef55e7c73bf9aec256a2ec2d89a4734fe40b18a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 5af8ce73a1526dcae20b3b1d113d26d50e00fc93
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098525"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689445"
 ---
 # <a name="update-table-dialog-box-visual-database-tools"></a>更新資料表對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

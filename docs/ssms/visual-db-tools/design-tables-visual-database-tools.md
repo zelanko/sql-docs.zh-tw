@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7bb60aac75343a65264c2a87f72957dae336dacb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: b120156f0bfc7a69112697869e2efbbbd83af63c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105737"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690368"
 ---
 # <a name="create-and-update-database-tables"></a>建立及更新資料表
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "65105737"
   
 ## <a name="create-a-table"></a>建立資料表  
   
-1. 以滑鼠右鍵按一下資料庫中的 [資料表] 節點，然後選取 [新增] > [資料表]：  
+1. 以滑鼠右鍵按一下資料庫中的 [資料表]  節點，然後選取 [新增]   > [資料表]  ：  
   
     ![新增資料表](../media/design-tables/new-table.png)
   
@@ -44,7 +44,7 @@ ms.locfileid: "65105737"
   
 ## <a name="update-a-table"></a>更新資料表  
   
-1. 以滑鼠右鍵按一下資料庫中，[資料表] 節點下的資料表，然後選取 [設計]：  
+1. 以滑鼠右鍵按一下資料庫中，[資料表]  節點下的資料表，然後選取 [設計]  ：  
   
    ![更新資料表](../media/design-tables/update-table.png)
 

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 087abb83075b37b3002f649164485ae64cf137c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 510b22c7b4f384e59d8839ff0009855970378ae6
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095222"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690462"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>建立 UNION 查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

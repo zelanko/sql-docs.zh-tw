@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 68b5acfe67f0fc8f1408a50a09f48ee9515e3cb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 49b0e7cdcdf357f163ea577af0289e41bca90ef3
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105675"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689680"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>摘要或彙總資料表中所有資料列的值 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

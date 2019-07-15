@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f51e28decfaa62023143550a185a5a07eb50ef82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4232888faf16478860b007cfdb9bb7a8360c83a2
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65820852"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683847"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>語法組的自動比對
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

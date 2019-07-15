@@ -11,15 +11,15 @@ helpviewer_keywords:
 - traces [SQL Server], stopping
 - stopping traces
 ms.assetid: 47c4f33d-63e0-4444-bec8-4c1c91f8e25c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c0d3b9a2c0d699b03e26930300eb01e1ac096097
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08e735a45ba6ae2403d89491e0f75817ac5dd028
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62439974"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729635"
 ---
 # <a name="stop-a-trace-sql-server-profiler"></a>停止追蹤 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

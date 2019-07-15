@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0cd037a82b7c164e4c36ae5016824b08680b0bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3754085579088126f5feb025cbf2e6e3e27a1fed
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65820962"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683806"
 ---
 # <a name="complete-word-intellisense"></a>自動完成文字 (IntelliSense)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

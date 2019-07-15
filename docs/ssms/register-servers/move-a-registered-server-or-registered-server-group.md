@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4f7844f0d707784e82bdbe4058e5fd7b00999a7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 8838f41cbf6f839aa030a35624f9b10e5a4f1215
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104763"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683964"
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>移動已註冊的伺服器或已註冊的伺服器群組
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

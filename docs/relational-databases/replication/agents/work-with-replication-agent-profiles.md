@@ -16,12 +16,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85125ef01d299c34081578bd38eb6ac3fdb328a4
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 74f0746d3b69183702ef2a9d0609c39e25b28e95
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582714"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860477"
 ---
 # <a name="work-with-replication-agent-profiles"></a>處理複寫代理程式設定檔
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "67582714"
   
 1.  如果 **[代理程式設定檔]** 對話方塊顯示一個以上的代理程式設定檔，請選取一個代理程式。  
   
-2.  按一下設定檔旁邊的屬性按鈕 ( **?** )。  
+2.  按一下設定檔旁邊的屬性按鈕 ([...]  )。  
   
 3.  檢視 [\<設定檔名稱> 設定檔屬性]  對話方塊中的參數和值。  
   

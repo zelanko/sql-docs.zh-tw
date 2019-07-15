@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Name element
 ms.assetid: 014e4854-fed2-454b-8557-5f7c5bb6b17a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b28505c0a950339a8a65eb018df770fcba8a7118
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 65b0c89b2444d3c75570d4a3c843c8af7fe6b12c
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292504"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730771"
 ---
 # <a name="name-element-for-schema-dta"></a>結構描述的 Name 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

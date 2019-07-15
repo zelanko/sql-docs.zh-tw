@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 26db878bee2a786dc52f6046afea617bf7c69c0f
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: a7423b1a9e260e644e46a5c31246dd5dbb07cf1d
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500152"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826573"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -418,7 +418,7 @@ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB) 指定資料庫的
 |500 GB|不適用|√|√|√ (D)|√|
 |750 GB|不適用|√|√|√|√|
 |1024 GB|不適用|√|√|√|√ (D)|
-|從 1024 GB 至最大 4096 GB (以每 256 GB 的大小遞增)*|不適用|不適用|不適用|不適用|√|√|
+|從 1024 GB 至最大 4096 GB (以每 256 GB 的大小遞增)*|不適用|不適用|不適用|不適用|√|
 
 \* P11 和 P15 允許 MAXSIZE 最大至 4 TB，並以 1024 GB 作為預設大小。 P11 和 P15 最多可使用 4 TB 的隨附儲存體，且不另收費。 在進階層中，大於 1 TB 的 MAXSIZE 目前可用於下列區域：美國東部 2、美國西部、US Gov 維吉尼亞州、西歐、德國中部、東南亞、日本東部、澳大利亞東部、加拿大中部和加拿大東部。 針對以 DTU 為基礎的模型，如需資源限制的額外詳細資訊，請參閱[以 DTU 為基礎的資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) \(英文\)。
 

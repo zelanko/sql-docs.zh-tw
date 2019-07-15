@@ -12,24 +12,24 @@ f1_keywords:
 ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8b47ec263ad22317990fd547e93a5ec3821abdb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: f7f822feaba2fd4f340a8c0b02088244c9373a52
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105085"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682346"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>全文檢索索引資料行對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-這個對話方塊會列出 [資料表設計工具] 開啟的資料表中，參與全文檢索索引的資料行。 若要存取這個對話方塊，請在資料表設計工具中的資料表上按一下滑鼠右鍵、選擇 [全文檢索索引]，然後在 [全文檢索索引] 對話方塊中，依序按一下想要檢視或編輯的資料行索引、右側方格的 [資料行] 欄位，再按一下省略符號 (**...**)。  
+這個對話方塊會列出 [資料表設計工具] 開啟的資料表中，參與全文檢索索引的資料行。 若要存取這個對話方塊，請在資料表設計工具中的資料表上按一下滑鼠右鍵、選擇 [全文檢索索引]  ，然後在 [全文檢索索引]  對話方塊中，依序按一下想要檢視或編輯的資料行索引、右側方格的 [資料行]  欄位，再按一下省略符號 ( **...** )。  
   
 ## <a name="options"></a>選項。  
 **資料行**  
 顯示參與全文檢索索引之資料行的名稱。 若要加入資料行，請按一下第一個空的資料格，然後從下拉式清單中選擇資料行。 只可以存取資料類型為文字基礎或影像的資料行。  
   
 **資料類型**  
-顯示每一資料行的資料類型。 這是一個唯讀屬性。 若要變更資料類型，請在資料表設計工具中開啟資料表、按一下資料行，然後編輯 [資料行屬性] 索引標籤中的資料類型。  
+顯示每一資料行的資料類型。 這是一個唯讀屬性。 若要變更資料類型，請在資料表設計工具中開啟資料表、按一下資料行，然後編輯 [資料行屬性]  索引標籤中的資料類型。  
   
 **依資料行排列類型**  
 只適用於資料類型為 **image**的資料行。 提供下拉式清單，您可在此選取代表本資料行之資料類型的其他資料行。 如果此資料行的資料類型不是 **image** ，值將會是 [無]。  
@@ -42,7 +42,7 @@ ms.locfileid: "65105085"
 **統計語意**  
 選取是否要針對選取的資料行啟用語意索引。 如需詳細資訊，請參閱 [語意搜尋預留位置](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97)。  
   
-如果您在選取 **[統計語意]** 之前選取 **[語言]**，而且選取的語言沒有相關聯的語意語言模型，則會停用 **[統計語意]** 核取方塊。 如果您在選取 [語言] 之前選取 [統計語意]，則下拉式方塊中提供的語言將受限為有語意語言模型支援的語言。  
+如果您在選取 **[統計語意]** 之前選取 **[語言]** ，而且選取的語言沒有相關聯的語意語言模型，則會停用 **[統計語意]** 核取方塊。 如果您在選取 [語言]  之前選取 [統計語意]  ，則下拉式方塊中提供的語言將受限為有語意語言模型支援的語言。  
   
 ## <a name="see-also"></a>另請參閱  
 [全文檢索索引對話方塊 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/full-text-index-dialog-box-visual-database-tools.md)  

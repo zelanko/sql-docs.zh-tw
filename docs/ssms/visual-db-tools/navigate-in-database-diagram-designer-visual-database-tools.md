@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e883757ec7c7aedf459382a1938813883942b415
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: a305fd79a7036ae2081283372db9fe7b2c5cd4ca
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095255"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690546"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>在資料庫圖表設計工具中導覽 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

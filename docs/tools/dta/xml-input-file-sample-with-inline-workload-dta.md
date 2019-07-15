@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - sample applications [DTA]
 ms.assetid: 7c04fe1d-6669-44a1-8b73-36d469e9b002
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3b08565d38044ba7af93b5614e2758e524b406ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5cc30a19303aea9db0e989186df820405ddb1384
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63033850"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731702"
 ---
 # <a name="xml-input-file-sample-with-inline-workload-dta"></a>含內嵌工作負載的 XML 輸入檔範例 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

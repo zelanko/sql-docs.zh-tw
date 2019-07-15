@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: jroth
 author: MightyPen
-ms.openlocfilehash: aff69606c81a1ee93a01a8467299ba2155da770d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a187f83939ec9758db8ca688a074de530d6cf0d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801743"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680085"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>搭配使用 Always Encrypted 與 ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -58,7 +58,12 @@ SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>擷取和修改加密資料行中的資料
 
-在您於連線上啟用 Always Encrypted 之後，您便可以使用標準 ODBC API (請參閱 [ODBC 範例程式碼](https://code.msdn.microsoft.com/windowsapps/ODBC-sample-191624ae/sourcecode?fileId=51137&pathId=1980325953) \(英文\) 或 [ODBC 程式設計人員參考](https://msdn.microsoft.com/library/ms714177(v=vs.85).aspx) \(部分機器翻譯\)) 來擷取或修改加密資料庫資料行中的資料。 假設您的應用程式具有必要的資料庫權限，而且能夠存取資料行主要金鑰，則驅動程式會加密所有以加密資料行為目標的查詢參數，並將擷取自加密資料行的資料解密，此行為對應用程式而言是在背景中自動執行，彷彿資料行未經加密一樣。
+一旦您啟用 「 一律加密的連接上，您可以使用標準 ODBC Api。 ODBC Api 可以擷取或修改加密的資料庫資料行中的資料。 下列文件項目可協助進行這個：
+
+- [ODBC 範例程式碼](cpp-code-example-app-connect-access-sql-db.md)
+- [ODBC 程式設計人員參考](../../odbc/reference/odbc-programmer-s-reference.md)
+
+您的應用程式必須擁有必要的資料庫權限，而且必須能夠存取資料行主要金鑰。 然後，此驅動程式會加密目標加密資料行的任何查詢參數。 驅動程式也會解密擷取自加密資料行的資料。 驅動程式會執行所有此加密和解密，而不需要任何協助從您的程式碼。 為您的程式，就如同未加密的資料行。
 
 如未啟用 Always Encrypted，使用目標加密資料行參數的查詢就會失敗。 只要查詢沒有以加密資料行為目標的參數，就仍然可以從加密資料行擷取資料。 不過，驅動程式不會嘗試進行任何解密，而應用程式則會收到二進位加密資料 (以位元組陣列的形式)。
 

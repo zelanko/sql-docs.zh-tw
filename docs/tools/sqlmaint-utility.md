@@ -16,15 +16,15 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8f73f17d3224ced3fca052e9b19a7d61cf64548b
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 5b35a8027608cc2b250e37078b9c44971e9bb106
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100433"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728131"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,8 +81,8 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  指定傳回 **sqlmaint** 的語法圖。 這個參數必須單獨使用。  
   
- **-S** _server_name_[ **\\**_instance\_name_]  
- 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目標執行個體。 指定 _server\_name_，即可連接到該伺服器上 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的預設執行個體。 指定 _server\_name_**\\**_instance\_name_，即可連線到該伺服器上 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的具名執行個體。 如果未指定伺服器， **sqlmaint** 會連接到本機電腦中 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體。  
+ **-S** _server_name_[ **\\** _instance\_name_]  
+ 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目標執行個體。 指定 _server\_name_，即可連接到該伺服器上 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的預設執行個體。 指定 _server\_name_ **\\** _instance\_name_，即可連線到該伺服器上 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的具名執行個體。 如果未指定伺服器， **sqlmaint** 會連接到本機電腦中 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體。  
   
  **-U** _login_ID_  
  指定連接伺服器時所用的登入識別碼。 如果未提供， **sqlmaint** 會嘗試使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 驗證。 如果 *login_ID* 包含特殊字元，則必須以雙引號 (") 括住；否則可省略雙引號。  
@@ -136,12 +136,12 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-RmUnusedSpace** _threshold_percent free_percent_  
  指定從 **-D**指定的資料庫中移除未使用的空間。 這個選項只適用於定義成自動成長的資料庫。 *Threshold_percent* 會以 MB 為單位來指定大小，一旦資料庫到達此大小之後， **sqlmaint** 便會嘗試移除未使用的資料空間。 在資料庫大小小於 *threshold_percent*時，則不會採取任何動作。 *Free_percent* 會指定必須保留在資料庫中的未使用空間大小，指定的方式是資料庫最終大小的百分比。 例如，如果 200 MB 資料庫包含 100 MB 的資料， *free_percent* 指定 10 會使最終資料庫大小成為 110 MB。 請注意，如果資料庫小於 *free_percent* 加上資料庫中的資料量，就不會擴充資料庫。 例如，如果 108 MB 的資料庫包含 100 MB 的資料， *free_percent* 指定 10 並不會將資料庫擴充成 110 MB；它會保持 108 MB。  
   
- **-CkDB** | **-CkDBNoIdx**  
+ **-CkDB** |  **-CkDBNoIdx**  
  指定在 **-D**所指定的資料庫中，執行設定了 NOINDEX 選項的 DBCC CHECKDB 陳述式或 DBCC CHECKDB 陳述式。 如需詳細資訊，請參閱 DBCC CHECKDB。  
   
  如果執行 *sqlmaint* 時資料庫正在使用中，就會在 **text_file** 中寫入一則警告。  
   
- **-CkAl** | **-CkAlNoIdx**  
+ **-CkAl** |  **-CkAlNoIdx**  
  指定在 **-D** 所指定的資料庫中，執行設定了 NOINDEX 選項的 DBCC CHECKALLOC 陳述式。 如需詳細資訊，請參閱 [DBCC CHECKALLOC &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)。  
   
  **-CkCat**  
@@ -213,7 +213,7 @@ dbname_log_yyyymmddhhmm.BAK
  指定備份媒體是磁帶。  
   
  **-BkUpOnlyIfClean**  
- 指定只有在任何指定的 **-Ck** 檢查確定資料都沒問題時，才會進行備份。 維護動作會依照它們在命令提示字元下所呈現的順序來執行。 如果您還要指定 **-BkUpOnlyIfClean**，或者不論檢查是否報告問題都要執行備份，可在 **-BkUpDB**-BkUpLog **參數之前指定**-CkDB **、**-CkDBNoIdx **、**-CkAl **、** -CkAlNoIdx **、**/**-CkTxtAl** 或 **-CkCat**參數。  
+ 指定只有在任何指定的 **-Ck** 檢查確定資料都沒問題時，才會進行備份。 維護動作會依照它們在命令提示字元下所呈現的順序來執行。 如果您還要指定 **-BkUpOnlyIfClean**，或者不論檢查是否報告問題都要執行備份，可在 **-BkUpDB**-BkUpLog **參數之前指定**-CkDB **、** -CkDBNoIdx **、** -CkAl **、** -CkAlNoIdx **、** / **-CkTxtAl** 或 **-CkCat**參數。  
   
  **-VrfyBackup**  
  指定在備份完成時執行 RESTORE VERIFYONLY。  
@@ -240,7 +240,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   如果發生一般失敗。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  **sqlmaint** 公用程式可以由任何對於 **具有** 讀取和執行 `sqlmaint.exe`權限的 Windows 使用者執行，依預設，其會儲存於 `x:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER1\MSSQL\Binn` 資料夾內。 另外，以 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -login_ID **指定的** 登入必須擁有執行指定動作的必要 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 權限。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的連接是使用 Windows 驗證，則對應到已驗證之 Windows 使用者的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入必須有執行指定動作的必要 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 權限。  
   
  例如，使用 **-BkUpDB** 需要有執行 BACKUP 陳述式的權限。 使用 **-UpdOptiStats** 引數需要有執行 UPDATE STATISTICS 陳述式的權限。 如需詳細資訊，請參閱線上叢書中對應主題的＜權限＞章節。  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: eaf2b862-6649-410e-ba8a-2d92ca159a16
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 94613e42940b340a02ab67bf7c92e0e81d1d1fcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 235058b6a0cd6632fa2a26eb810d903d71607a4e
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099569"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682924"
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>自動調整圖表中所選資料表的大小 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

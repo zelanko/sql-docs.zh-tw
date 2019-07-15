@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 1f3ea9ee-67c0-46ed-bf02-ceca92d3b8fe
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9d3a646bda2469232f8323c6fbd76e3618de9de4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 32ffcd1ebe35ad2045774ec2ee19a06bede9dc92
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104316"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683916"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>移除伺服器群組 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

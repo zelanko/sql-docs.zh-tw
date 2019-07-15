@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: dnethi
 ms.author: dinethi
-manager: craigg
-ms.openlocfilehash: 3fa971160eb4a8d2caa4773c4a9c4ccef1b31027
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: ab62b7e09aa3361e53532ca4145bf16d27610d64
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62934990"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687331"
 ---
 # <a name="sql-server-management-studio-ssms-support-policy"></a>SQL Server Management Studio (SSMS) 支援原則
 

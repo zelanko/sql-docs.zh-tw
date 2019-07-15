@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ee2c5d84-22bf-4597-ac70-a27ed8cc94f4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bef5713f86521bca416b7048fda12ba465ec3e30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 2604350bc44a86f89f08b5c44e59563c39c387b4
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104391"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689121"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>使用資料庫圖表中的資料表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
