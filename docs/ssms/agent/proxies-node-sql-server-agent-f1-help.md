@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 1f911829-8c73-4542-b75e-6273f0dd52bf
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0d37a359dde18416f0648d8ce7defc816d1af426
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f37c9eb904d3db75feda7fda27142f3c432ec6b
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088865"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685459"
 ---
 # <a name="proxies-node-sql-server-agent-f1-help"></a>Proxy 節點 (SQL Server Agent F1 說明)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

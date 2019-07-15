@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c2416606148a0b735f48ec5bd951ee956e020b5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: ff9f94b545e7170d7d68b7b5412bf99a4cc47696
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105441"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683236"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>將現有專案加入方案中
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

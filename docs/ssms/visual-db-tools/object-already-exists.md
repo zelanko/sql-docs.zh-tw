@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: f80735dd-06aa-4d69-b226-32dc57e3223f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fdadc4734db5dd8911b384b8aa35a01248aff453
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 0859fdcd2ae5564e05427fda2bc2c2b09dcdda00
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095267"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687581"
 ---
 # <a name="object-already-exists"></a>物件已存在
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

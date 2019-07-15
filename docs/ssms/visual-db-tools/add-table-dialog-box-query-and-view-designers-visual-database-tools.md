@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cfbad10dd90ddc5b68e44bac88bc1ee6d437f78e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 3da683d21f7abadd59352ba84483d9e8c566b276
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099491"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686649"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>加入資料表對話方塊 (查詢和檢視表設計工具) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

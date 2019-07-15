@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2d4b2f6d-cc09-434b-8a0e-ccce40628064
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5f1fb77b9664de6806a5dd49420267919be28c59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: f819a9ef1dacf7247c318ff90be5036579e2882d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105885"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687769"
 ---
 # <a name="create-insert-values-queries-visual-database-tools"></a>建立插入值查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

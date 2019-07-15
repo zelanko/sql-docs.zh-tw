@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c34ab77bdb69282d271a82cd69e4e26d2a66a6ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3aaee1f92cacd3d529e8b739ad52edd371a37c56
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65103201"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680639"
 ---
 # <a name="view-information-about-an-operator"></a>檢視關於操作員的資訊
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

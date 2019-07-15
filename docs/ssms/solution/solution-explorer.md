@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9482ce9ff77eb188d8d13d2995d57158843be973
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 94b57b25f26b974970d08123042213875aff290c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102958"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688429"
 ---
 # <a name="solution-explorer"></a>方案總管
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

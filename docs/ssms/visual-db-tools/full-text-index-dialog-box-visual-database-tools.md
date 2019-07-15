@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 461a0afd4b77a449f7b398a03113164370061df5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 114f5969bc4d0987df0dbc0ecd04e424c7224f4c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105164"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682318"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>全文檢索索引對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "65105164"
 建立新的全文檢索索引。  
   
 **刪除**  
-刪除在 [選取的全文檢索索引] 清單中所選取的全文檢索索引。  
+刪除在 [選取的全文檢索索引]  清單中所選取的全文檢索索引。  
   
 **一般類別目錄**  
-展開時會顯示 [資料行] 和 [全文檢索資料庫目錄名稱]。  
+展開時會顯示 [資料行]  和 [全文檢索資料庫目錄名稱]  。  
   
 **資料行**  
-顯示可使用全文檢索搜尋資料行的逗號分隔清單。 若要查看完整清單，請按一下屬性欄位左邊的省略符號按鈕 (**...**)。  
+顯示可使用全文檢索搜尋資料行的逗號分隔清單。 若要查看完整清單，請按一下屬性欄位左邊的省略符號按鈕 ( **...** )。  
   
 **全文檢索資料庫目錄名稱**  
 顯示全文檢索索引儲存位置的全文檢索資料庫目錄名稱。 若要將索引儲存到不同的目錄，請按目錄名稱，然後從下拉式清單選擇另外一個目錄名稱。  

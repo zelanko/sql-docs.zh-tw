@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 1f15ef88-6f02-4cfc-8327-3408233619b1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 976581be4308563d3580d1b4553333c1fe5fda2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 0aa2525686794462559e6dfea40aa65260e50b88
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095180"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690390"
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>描述屬性對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

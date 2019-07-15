@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 330bd48c-9427-4967-b58e-b7c492d5ee36
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 51c3eae0bc3fcf9360b16ba119e939a93b3418b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 62175de587940e70cdebd7b667d9756b7258367f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095442"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685989"
 ---
 # <a name="multiuser-environments-visual-database-tools"></a>多使用者環境 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

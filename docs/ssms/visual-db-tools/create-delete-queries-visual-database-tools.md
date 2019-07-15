@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 0db3af43-1ec4-48c8-b769-2bb9c76d3434
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 40b9dd59f70243dcfd547c8a94ca8b46f3237ddf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: d4dd1b2b5e62c889a5b0ac4b1d0531c77eec5f4b
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65089510"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686050"
 ---
 # <a name="create-delete-queries-visual-database-tools"></a>建立刪除查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

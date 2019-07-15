@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 4249328a-24d8-4284-9d1d-7d04ed90e3d7
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: daedb5dbd9bb08c0ee68e149ee70deab24426782
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3a1d64df19c6a08ceacdede329081418cd71ff0
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65089456"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681513"
 ---
 # <a name="stop-a-job"></a>停止作業
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "65089456"
 
 此主題描述如何停止 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。 作業是 SQL Server Agent 執行的一系列指定動作。  
   
--   **開始之前：**   
+-   **開始之前：**  
   
     [限制事項](#Restrictions)  
   
@@ -62,9 +62,9 @@ ms.locfileid: "65089456"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **[SQL Server Agent]**，再展開 **[作業]**，以滑鼠右鍵按一下要停止的作業，然後按一下 **[停止作業]**。  
+2.  展開 **[SQL Server Agent]** ，再展開 **[作業]** ，以滑鼠右鍵按一下要停止的作業，然後按一下 **[停止作業]** 。  
   
-3.  若要停止多個作業，請以滑鼠右鍵按一下 **[作業活動監視器]**，然後按一下 **[檢視作業活動]**。 在「作業活動監視器」中，選取要停止的作業，以滑鼠右鍵按一下選取範圍，然後按一下 **[停止作業]**。  
+3.  若要停止多個作業，請以滑鼠右鍵按一下 **[作業活動監視器]** ，然後按一下 **[檢視作業活動]** 。 在「作業活動監視器」中，選取要停止的作業，以滑鼠右鍵按一下選取範圍，然後按一下 **[停止作業]** 。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   
@@ -72,9 +72,9 @@ ms.locfileid: "65089456"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- stops a job named Weekly Sales Data Backup  

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: dfb60ac381570489fe5fdb5d8ac0b6ec75e15cd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 2fc070db04e6d64b1e7901acff4178d44cb7b878
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096800"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682256"
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>包含或排除資料列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

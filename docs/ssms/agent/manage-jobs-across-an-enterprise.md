@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 4fe7f6c6-f89b-4430-979c-4994a5dcf7a6
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 135f6e037e71e9af94bc5f6db21782d17713ec31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22538a3a8a5bef241a27ec68b8dbd56f2fee8595
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105432"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685899"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>管理整個企業的作業
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

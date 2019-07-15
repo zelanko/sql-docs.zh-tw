@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 3c8b59f4-1922-4bde-844f-5f2306514d96
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ce292a91733de2d1e5010d1ba1c1585ff72685a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b268d88ea57da6da2807716753efffa9808a401
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65821992"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690166"
 ---
 # <a name="quick-info-intellisense"></a>快速資訊 (IntelliSense)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 537fa556-390e-4c88-9b8e-679848d94abc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: de064177558169db099f73e1b4ae113a9f7d2569
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 5bcb73a9c1129864991dee80a8e2951f2ca803de
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099448"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687771"
 ---
 # <a name="create-full-text-search-queries-visual-database-tools"></a>建立全文檢索搜尋查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

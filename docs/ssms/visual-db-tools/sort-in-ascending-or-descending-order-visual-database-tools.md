@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d61cc55b-9ee8-4ecf-a32f-6459ae43910b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: baae353ae8528c6c62e41afbec84d30772d561c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 0154016bfcc8d94b94166f11e8778bdb25114edc
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099271"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681349"
 ---
 # <a name="sort-in-ascending-or-descending-order-visual-database-tools"></a>以遞增或遞減順序排序 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

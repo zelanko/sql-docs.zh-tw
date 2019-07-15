@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3b35521c0a387028d442ff77214e910a922ff4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 159130ab47f874239a2a87c567f89ff5d81cc99c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65820810"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683675"
 ---
 # <a name="edit-a-breakpoint-location"></a>編輯中斷點位置
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

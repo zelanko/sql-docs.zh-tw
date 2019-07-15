@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a2be726581713805c3cc001125957597eb178945
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: a8dfe782b32ce8390330b5e06866631aad52f103
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098510"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689418"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>升級舊版的資料庫圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 493dd3d0-50c6-4d8d-aba1-cd7c3030a581
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f3afd66abdf75e8464a30140ae4e830aa3b2fa4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: aaa988c98ba464b3d1db3929ac3470c0d3356f34
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102640"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683038"
 ---
 # <a name="sql-server-management-studio-web-browser"></a>SQL Server Management Studio Web 瀏覽器
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

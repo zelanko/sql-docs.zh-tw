@@ -7,16 +7,15 @@ ms.technology: polybase
 ms.topic: conceptual
 author: Abiola
 ms.author: aboke
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: craigg
-ms.custom: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0545e320378fe1c9a8951100b9353ff0c4105172
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a11764f2452a940d54c5da06158777df0c7b9a2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775399"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731169"
 ---
 # <a name="configure-polybase-to-access-external-data-in-oracle"></a>設定 PolyBase 存取 Oracle 中的外部資料
 

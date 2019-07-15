@@ -15,30 +15,30 @@ helpviewer_keywords:
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ddb6a3b343e89f5f844e54788ce88658a1a76e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fbd0a8fdf994f58894be41d340051a9bd7f1a34c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65820740"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686690"
 ---
 # <a name="search-text-with-regular-expressions"></a>使用規則運算式搜尋文字
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-規則運算式是在尋找及取代文字模式時所使用，為既簡明、又有彈性的標記法。 特定的規則運算式集可用在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [尋找和取代] 對話方塊的 [尋找目標] 欄位。  
+規則運算式是在尋找及取代文字模式時所使用，為既簡明、又有彈性的標記法。 特定的規則運算式集可用在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [尋找和取代]  對話方塊的 [尋找目標]  欄位。  
   
 ## <a name="find-using-regular-expressions"></a>使用規則運算式來尋找  
   
-1.  若要啟用於 [快速尋找]、[檔案中尋找]、[快速取代] 或 [檔案中取代] 等作業期間，在 [尋找目標] 欄位使用規則運算式，請選取 [尋找選項] 下的 [使用] 選項，然後選擇 [規則運算式]。  
+1.  若要啟用於 [快速尋找]  、[檔案中尋找]  、[快速取代]  或 [檔案中取代]  等作業期間，在 [尋找目標]  欄位使用規則運算式，請選取 [尋找選項]  下的 [使用]  選項，然後選擇 [規則運算式]  。  
   
-2.  之後，就可以使用 **[尋找目標]** 欄位旁三角形的 **[參考清單]** 按鈕。 請按一下這個按鈕來顯示最常用的規則運算式清單。 當您從「運算式產生器」中選擇任何項目時，項目會插入 [尋找目標] 字串中。  
+2.  之後，就可以使用 **[尋找目標]** 欄位旁三角形的 **[參考清單]** 按鈕。 請按一下這個按鈕來顯示最常用的規則運算式清單。 當您從「運算式產生器」中選擇任何項目時，項目會插入 [尋找目標]  字串中。  
   
 > [!NOTE]  
-> [尋找目標] 字串所能使用的規則運算式與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程式設計中的有效規則運算式，兩者語法不同。 例如，在 [尋找和取代] 中，標記運算式會使用括號標記法 {}。 因此運算式 "zo{1}" 符合 "zo" 後面接著標記 1 的所有出現項目，如 "Alonzo1" 及 "Gonzo1"。 但在 .NET Framework 中，限定詞會使用標記法 {}。 因此運算式 "zo{1}" 符合 "z" 後面接著正好一個 "o" 的所有出現項目，如 "zone"，而 "zoo" 就不符合。  
+> [尋找目標]  字串所能使用的規則運算式與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程式設計中的有效規則運算式，兩者語法不同。 例如，在 [尋找和取代]  中，標記運算式會使用括號標記法 {}。 因此運算式 "zo{1}" 符合 "zo" 後面接著標記 1 的所有出現項目，如 "Alonzo1" 及 "Gonzo1"。 但在 .NET Framework 中，限定詞會使用標記法 {}。 因此運算式 "zo{1}" 符合 "z" 後面接著正好一個 "o" 的所有出現項目，如 "zone"，而 "zoo" 就不符合。  
   
- 下表說明 [參考清單] 中可用的規則運算式。  
+ 下表說明 [參考清單]  中可用的規則運算式。  
   
 |運算式|語法|Description|  
 |----------------|------------|-----------------|  
@@ -60,7 +60,7 @@ ms.locfileid: "65820740"
 |空格或定位點|:b|符合空格或定位字元。|  
 |Integer|:z|符合運算式 ([0-9]+)。|  
   
- [尋找和取代] 作業中有效的所有規則運算式清單很長，無法在 [參考清單] 中顯示出來。 您也可以將下列其中任何規則運算式插入 [尋找目標] 字串中：  
+ [尋找和取代]  作業中有效的所有規則運算式清單很長，無法在 [參考清單]  中顯示出來。 您也可以將下列其中任何規則運算式插入 [尋找目標]  字串中：  
   
 |運算式|語法|Description|  
 |----------------|------------|-----------------|  
@@ -68,9 +68,9 @@ ms.locfileid: "65820740"
 |最少 - 一或多個|#|符合一或多個前導運算式出現項目，相符的字元數儘可能少。|  
 |重複 n 次|^n|符合 N 個前導運算式的出現項目。 例如，[0-9]^4 符合任何四位數序列。|  
 |群組|()|將子運算式分組。|  
-|第 n 個標記文字|\n|在 [尋找或取代] 運算式中，指出第 n 個標記運算式相符的文字，其中 n 是 1 到 9 的數字。<br /><br /> 在 [取代] 運算式中，\0 會插入完整的相符文字。|  
-|欄位靠右對齊|\\(w,n)|在 [取代] 運算式中，將欄位中的第 n 個標記運算式靠右對齊至少 *w* 個字元寬。|  
-|欄位靠左對齊|\\(-w,n)|在 [取代] 運算式中，將欄位中的第 n 個標記運算式靠左對齊至少 *w* 個字元寬。|  
+|第 n 個標記文字|\n|在 [尋找或取代]  運算式中，指出第 n 個標記運算式相符的文字，其中 n 是 1 到 9 的數字。<br /><br /> 在 [取代]  運算式中，\0 會插入完整的相符文字。|  
+|欄位靠右對齊|\\(w,n)|在 [取代]  運算式中，將欄位中的第 n 個標記運算式靠右對齊至少 *w* 個字元寬。|  
+|欄位靠左對齊|\\(-w,n)|在 [取代]  運算式中，將欄位中的第 n 個標記運算式靠左對齊至少 *w* 個字元寬。|  
 |預先排除相符|~(X)|排除運算式中與 X 相符的部分。 例如，real~(ity) 符合 "realty" 及 "really" 中的 "real"，但 "reality" 中的 "real" 則不符合。|  
 |英數字元|:a|符合運算式 ([a-zA-Z0-9])。|  
 |字母字元|:c|符合運算式 ([a-zA-Z])。|  

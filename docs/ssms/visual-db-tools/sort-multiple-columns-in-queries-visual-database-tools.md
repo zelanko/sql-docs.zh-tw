@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1a83fefb4d328ebaea8bb77b914cbf731d117254
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 999844d4dcc915d008ecc92f8f3bf82927d2614c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099176"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681317"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>排序查詢中的多個資料行 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

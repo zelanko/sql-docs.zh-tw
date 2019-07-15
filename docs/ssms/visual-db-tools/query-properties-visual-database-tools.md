@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 84745411a3a44ea75d20c6c9f304fb7fe87d4d85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 44be7c64358828c7e5c043a8b5180a22c0515987
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098345"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687470"
 ---
 # <a name="query-properties-visual-database-tools"></a>查詢屬性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

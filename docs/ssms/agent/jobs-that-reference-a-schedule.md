@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: b6ecb6eb-9514-4ac1-b67c-31e3d39db4d9
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8cbd5a6d5a4a29bafc1b57d55b3bcd34c5dc5024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d45e98ae7e4b1dc069653d622811897618f3b098
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095763"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685996"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>參考排程的作業
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

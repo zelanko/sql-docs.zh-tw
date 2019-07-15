@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ec20772c86ca651262c5e45821869bd61beb50c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: daf03d0682b60495cf090153259c0a64cfc83a59
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099240"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679338"
 ---
 # <a name="results-pane-visual-database-tools"></a>結果窗格 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
