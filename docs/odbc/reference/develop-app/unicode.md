@@ -1,5 +1,5 @@
 ---
-title: Unicode | Microsoft Docs
+title: Unicode |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 113e1c9a-8333-4805-86f2-e4b57ab816a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1e6201b83b909573476b043cdb1a10543f894def
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e0044a2e2efbf0d8921a07ed4679806ba50bcd1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632545"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087557"
 ---
 # <a name="unicode"></a>Unicode
 Unicode 定義許多語言的字元編碼方式。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5ce192a0d3510f6034ff223f6573bf1e058516e9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0a1e37004d15d8758160edb3558b2a69d30dae54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031018"
 ---
 # <a name="spaddqreaderagent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_login = ] 'job_login'` 登入[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 帳戶下執行的代理程式。 *job_login*已**nvarchar(257)**，沒有預設值。 通往散發者的代理程式連接一律使用這個 Windows 帳戶。  
+`[ @job_login = ] 'job_login'` 登入[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 帳戶下執行的代理程式。 *job_login*已**nvarchar(257)** ，沒有預設值。 通往散發者的代理程式連接一律使用這個 Windows 帳戶。  
   
 `[ @job_password = ] 'job_password'` 這是代理程式所執行的 Windows 帳戶的密碼。 *job_password*已**sysname**，沒有預設值。  
   

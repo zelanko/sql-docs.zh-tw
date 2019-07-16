@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: db3d3720291ee80c3e5889ff80ed23edaea3df34
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c178d116dddb5dc18b1bec91066205fe08f6d0c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402183"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067613"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Wide World Importers Microsoft sql 範例資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

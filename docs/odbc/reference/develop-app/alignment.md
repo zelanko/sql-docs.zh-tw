@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e4c86fd8fba66e6424b41fa4b80b42fc089e6d64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8b5a107f5ed8cd1c6c45317e60cc515a2601316
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287455"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077273"
 ---
 # <a name="alignment"></a>對齊
 在 ODBC 應用程式中的對齊問題通常與並無不同它們位於其他任何應用程式。 也就是大部分的 ODBC 應用程式有少數或沒有對齊問題。 未對齊位址處分會隨著硬體和作業系統而有所不同，而且可能會為次要效能稍微降低為或，主要為嚴重的執行階段錯誤。 因此，ODBC 應用程式和可攜式的 ODBC 應用程式特別的是，應該要特別小心適當對齊的資料。  

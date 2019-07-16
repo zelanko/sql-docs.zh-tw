@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 49bab021-81fa-402e-b7a4-a5214f1fadc4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 088c9b60861266bf99649343aec2e763097bf155
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df91638f91091940e00e7a6a19d0fd6cb700f85f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198203"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094166"
 ---
 # <a name="driver-setup-dll"></a>驅動程式安裝程式 DLL
 > [!NOTE]  
@@ -30,7 +29,7 @@ ms.locfileid: "63198203"
   
  **ConfigDSN**在安裝程式中維護在登錄中的資料來源資訊的 DLL 呼叫下列函數：  
   
--   **SQLWriteDSNToIni**. 新增資料來源。  
+-   **SQLWriteDSNToIni**。 新增資料來源。  
   
 -   **SQLRemoveDSNFromIni**。 刪除資料來源。  
   

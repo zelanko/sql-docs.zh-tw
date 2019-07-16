@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e14ae90f-87b3-4bcf-b69a-1773e2c2a1c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d2a3b80fd34aa93fad4735edb623a154e6fa225
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3454fab31de20a7d72f99a50c7dd3781ea2bc2be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63045546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937980"
 ---
 # <a name="network-example"></a>網路範例
 下圖顯示如何每個先前的設定可能會出現，在單一網路。  

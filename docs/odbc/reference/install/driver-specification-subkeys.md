@@ -15,25 +15,24 @@ helpviewer_keywords:
 ms.assetid: b4d802ef-b199-4e64-b7a5-6f2b3e5e2c80
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b15aa278e2fe38afe93f5628433a6c8f4b41cd8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f5523c54286ed2e7cc554745dc269599115793e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094170"
 ---
 # <a name="driver-specification-subkeys"></a>驅動程式規格子機碼
 ODBC 驅動程式子機碼中所列每個驅動程式都有自己的子機碼。 這個子機碼有相同名稱下的 ODBC 驅動程式子機碼的對應值。 這個子機碼底下的值清單的驅動程式和驅動程式安裝程式 Dll，所傳回的驅動程式關鍵字值的完整路徑**SQLDrivers**，並使用計數。 值的格式是下表所示。  
   
-|名稱|資料類型|資料|  
+|名稱|資料類型|Data|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
 |ConnectFunctions|REG_SZ|{**Y**&#124;**N**}{**Y**&#124;**N**}{**Y**&#124;**N**}|  
 |CreateDSN|REG_SZ|*driver-description*|  
 |驅動程式|REG_SZ|*driver-DLL-path*|  
 |DriverODBCVer|REG_SZ|*nn.nn*|  
-|FileExtns|REG_SZ|**\*.** *檔案 extension1*[ **，\*。** *file-extension2*]...|  
+|FileExtns|REG_SZ|**\*.** *檔案 extension1*[ **，\*。** *檔案 extension2*]...|  
 |FileUsage|REG_SZ|**0** &#124; **1** &#124; **2**|  
 |安裝程式|REG_SZ|*setup-DLL-path*|  
 |SQLLevel|REG_SZ|**0** &#124; **1** &#124; **2**|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 43108a02bb4eace9fda31fd8cdd1c75cefaadcc1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7204fb8183ed84390bd3eaec38b16833dd8eb2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906738"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>建立分葉成員 (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "65487481"
   
  您也可以使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 匯入資料。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  

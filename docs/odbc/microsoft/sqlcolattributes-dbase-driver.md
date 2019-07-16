@@ -1,5 +1,5 @@
 ---
-title: SQLColAttributes (dBASE Driver) | Microsoft Docs
+title: SQLColAttributes (dBASE 驅動程式) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed44de2b-0b01-4dce-a340-f5eb3aac30b7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 56d6a7cb3c2c071191a956c6aaf11479810698f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66a37f3c9ceccdf3fb226ea423552886d36ed99f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903977"
 ---
 # <a name="sqlcolattributes-dbase-driver"></a>SQLColAttributes (dBASE 驅動程式)
 > [!NOTE]  

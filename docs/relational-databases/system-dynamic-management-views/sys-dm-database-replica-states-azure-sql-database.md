@@ -18,13 +18,12 @@ helpviewer_keywords:
 - sys.dm_database_replica_states dynamic management view
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9c07ac791d7729ffa2b61664c3294c891dd554f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a927b31e12aaf01c5fe30bfcf530bd049989e48f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66213739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005036"
 ---
 # <a name="sysdmdatabasereplicastates-azure-sql-database"></a>sys.dm_database_replica_states (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

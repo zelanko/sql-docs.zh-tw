@@ -1,5 +1,5 @@
 ---
-title: SQLGetEnvAttr Function | Microsoft Docs
+title: SQLGetEnvAttr 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9d09182bc39d99a99f3d03957e296c91101b0fe5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e3bfc22e4205657107f11b4eec145028aee6397
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911283"
 ---
 # <a name="sqlgetenvattr-function"></a>SQLGetEnvAttr 函式
 **合規性**  

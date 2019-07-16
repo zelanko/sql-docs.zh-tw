@@ -5,23 +5,22 @@ description: 這篇文章說明如何設定外部 Azure 資料湖儲存區檔案
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 94835b3ae041aa721e915bb5399737b35c52799f
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ce7836b66408fda5f60e5566625dc1aa460fa672
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958376"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>如何針對 HDFS 層的巨量資料叢集掛接 ADLS Gen2
 
 下列各節提供如何設定 HDFS 階層處理的 Azure Data Lake 儲存體 Gen2 資料來源的範例。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - [已部署的巨量資料叢集](deployment-guidance.md)
 - [巨量資料工具](deploy-big-data-tools.md)

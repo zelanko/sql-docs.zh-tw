@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1c379826b16ef805abfedb0467d3385010ca1b99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd64ba8119db1ecf2d2b621cd202c9f700b53475
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967288"
 ---
 # <a name="append-method-adox-procedures"></a>Append 方法 (ADOX Procedures)
 加入新[程序](../../../ado/reference/adox-api/procedure-object-adox.md)物件[程序](../../../ado/reference/adox-api/procedures-collection-adox.md)集合。  

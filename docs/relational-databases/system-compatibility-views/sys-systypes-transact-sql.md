@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4acf3466615548e9c88b7743c48e39d3915f9c8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5533e521ba28c0190a5be57ed7637632213d7447
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602687"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018085"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47602687"
 |**xtype**|**tinyint**|實體儲存類型。|  
 |**status**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|擴充使用者類型。 如果資料類型的數目超過 32,767，則會造成溢位或傳回 NULL。|  
-|**長度**|**smallint**|資料類型的實際長度。|  
+|**length**|**smallint**|資料類型的實際長度。|  
 |**xprec**|**tinyint**|符合伺服器所用的內部有效位數。 不會用在查詢中。|  
 |**xscale**|**tinyint**|符合伺服器所用的內部小數位數。 不會用在查詢中。|  
 |**tdefault**|**int**|包含這個資料類型之完整性檢查的預存處理序識別碼。|  

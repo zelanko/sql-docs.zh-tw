@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a197ec19-a2ba-44f5-a4f2-3eee33ebd77d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 547a1dd14eab2a5627dbd8e3b8b6e09a4c5143b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b51cd98cd9ef0e6adc3d17d2b1263a62604ab52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62680282"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053276"
 ---
 # <a name="sysdmresourcegovernorresourcepoolaffinity-transact-sql"></a>sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

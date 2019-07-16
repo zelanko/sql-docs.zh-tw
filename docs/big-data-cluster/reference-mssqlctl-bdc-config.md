@@ -5,19 +5,18 @@ description: Mssqlctl bdc 命令的參考文件。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5c4182f216b13d4b56d1c37f6d003ad2ea6f5cf6
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: f6aee38bd11d226ba324153b76c750ba57eb9fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728687"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958170"
 ---
-# <a name="mssqlctl-bdc-config"></a>mssqlctl bdc config
+# <a name="mssqlctl-bdc-config"></a>mssqlctl bdc 組態
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -28,8 +27,8 @@ ms.locfileid: "67728687"
 | --- | --- |
 [mssqlctl bdc config show](#mssqlctl-bdc-config-show) | 取得巨量資料叢集的目前組態。
 [mssqlctl bdc config init](#mssqlctl-bdc-config-init) | 初始化可以與叢集搭配使用的組態設定檔建立巨量資料叢集。
-[mssqlctl bdc config list](#mssqlctl-bdc-config-list) | 列出可用的組態設定檔選項。
-[mssqlctl bdc config section](reference-mssqlctl-bdc-config-section.md) | 使用巨量資料叢集組態設定檔的個別區段的命令。
+[mssqlctl bdc 組態清單](#mssqlctl-bdc-config-list) | 列出可用的組態設定檔選項。
+[mssqlctl bdc 組態區段](reference-mssqlctl-bdc-config-section.md) | 使用巨量資料叢集組態設定檔的個別區段的命令。
 ## <a name="mssqlctl-bdc-config-show"></a>mssqlctl bdc config show
 取得巨量資料叢集的目前組態設定檔，並將它輸出到目標目錄或很將它列印至主控台。
 ```bash
@@ -91,7 +90,7 @@ mssqlctl bdc config init --source aks-dev-test --target custom
 JMESPath 查詢字串。 請參閱[ http://jmespath.org/ ](http://jmespath.org/])如需詳細資訊和範例。
 #### `--verbose`
 增加記錄詳細程度。 使用--debug 取得完整的偵錯記錄。
-## <a name="mssqlctl-bdc-config-list"></a>mssqlctl bdc config list
+## <a name="mssqlctl-bdc-config-list"></a>mssqlctl bdc 組態清單
 列出可用的組態設定檔選擇，以用於 `bdc config init`
 ```bash
 mssqlctl bdc config list [--config-profile -c] 

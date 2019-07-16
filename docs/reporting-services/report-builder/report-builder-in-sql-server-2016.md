@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa1dd3517002405a93185ea55adcdc5ecd808e6f
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
+ms.openlocfilehash: c10e37d7c1231a3ed4db2d7412ea223cccc6922d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67037848"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688518"
 ---
 # <a name="report-builder-in-sql-server"></a>SQL Server 的報表產生器
 

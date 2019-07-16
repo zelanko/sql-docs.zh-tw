@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 43f155de0eb81918d5129d404e7cd2f236957152
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 0071746f2d65dd0c9c699beeacf404bf3dd7bb65
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43037901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941929"
 ---
 # <a name="sppolybaseleavegroup-transact-sql"></a>sp_polybase_leave_group & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

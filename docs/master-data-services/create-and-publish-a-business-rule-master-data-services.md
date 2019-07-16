@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1ad1a0935c084aab515d6e91181695af55860773
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9822b9f4b26897b1162a336b1adaa6f38c5ff117
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025066"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>建立及發行商務規則 (Master Data Services)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65489609"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立商務規則，確保主要資料的正確性。 建立規則之後，您必須發行它，才能將它套用至資料。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  

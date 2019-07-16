@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2b733230abfe7d9fc3c9e73831f097955cd056b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d045858ddd0cde818eedb983f10527fe7e94a2fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963688"
 ---
 # <a name="rds-methods"></a>RDS 方法
 > [!IMPORTANT]
@@ -27,7 +26,7 @@ ms.locfileid: "66694750"
   
 |||  
 |-|-|  
-|[Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)|取消執行暫止狀態，非同步方法呼叫。|  
+|[取消 (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)|取消執行暫止狀態，非同步方法呼叫。|  
 |[CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)|取消目前的或新資料列所做的變更**資料錄集**物件。|  
 |[ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|將轉換**資料錄集**MIME 字串，表示資料錄集資料。|  
 |[CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)|建立目標商務物件的 proxy，並傳回的指標。|  
@@ -37,8 +36,8 @@ ms.locfileid: "66694750"
 |[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)|傳回要求的介面指標上能力更強的版本的物件。|  
 |[MoveFirst、 MoveLast、 MoveNext、 MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|移至 [first、 last、 下一步]，或上一個記錄中指定**資料錄集**物件。|  
 |[查詢 (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|會使用有效的 SQL 查詢字串傳回**資料錄集**。|  
-|[Refresh (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)|重新查詢中指定的資料來源**Connect**屬性和更新查詢結果。|  
-|[Reset (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|用戶端上執行排序或篩選**資料錄集**、 根據指定的排序和篩選屬性。|  
+|[重新整理 (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)|重新查詢中指定的資料來源**Connect**屬性和更新查詢結果。|  
+|[重設 (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|用戶端上執行排序或篩選**資料錄集**、 根據指定的排序和篩選屬性。|  
 |[SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|提交暫止的變更以及與在本機快取可更新**Recordset**中指定的資料來源**Connect**屬性。|  
 |[Synchronize 方法 (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|使用連接字串 （適用於 ADO 2.5 及更新版本） 所指定的資料庫，同步處理指定的資料錄集。|  
 |[Synchronize21 方法 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|使用連接字串 （適用於 ADO 2.1） 所指定的資料庫，同步處理指定的資料錄集。|

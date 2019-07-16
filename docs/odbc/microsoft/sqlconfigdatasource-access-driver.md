@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource (Access Driver) | Microsoft Docs
+title: SQLConfigDataSource （Access 驅動程式） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1b152fb7-fa12-46b9-b168-006bb1355e77
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd626d476bf1c4ac8b4f83f397584c367299904f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85b515ed4c30d68e62a49e1044c4ddf6f5cc5ab1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665403"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985231"
 ---
 # <a name="sqlconfigdatasource-access-driver"></a>SQLConfigDataSource (Access 驅動程式)
 > [!NOTE]  
@@ -31,7 +30,7 @@ ms.locfileid: "62665403"
 |-------------|-----------------|  
 |COLLATINGSEQUENCE|欄位會排序順序。<br /><br /> 這會設定為相同的選項**定序順序**在安裝程式 對話方塊中。|  
 |COMPACT_DB|資料庫檔案上執行資料壓縮。 具有下列格式：COMPACT_DB = < path_name >< optionaL_sort_order >\<選擇性的加密關鍵字 >。<br /><br /> 當使用 COMPACT_DB 關鍵字使用 DSN 關鍵字相同的陳述式中，此驅動程式會忽略 DSN 關鍵字。 因此，壓縮的資料庫，並指定 DSN 是兩步驟程序。|  
-|CREATE_DB|建立資料庫檔案。 具有下列格式：CREATE_DB = < path_name >\<optional_sort 順序 >< optional_ENCRYPT 關鍵字 >，其中的路徑名稱是 Microsoft Access 資料庫的完整路徑。 如果路徑名稱指定現有的資料庫，則會傳回錯誤。 排序次序會在新的資料庫 對話方塊，顯示在 Microsoft 存取設定 對話方塊中按下 建立 按鈕時，設定會啟動。 如果未不指定任何排序順序，則會使用一般。<br /><br /> 當使用 CREATE_DB 關鍵字使用 DSN 關鍵字相同的陳述式中，此驅動程式會忽略 DSN 關鍵字。 因此，建立資料庫，並指定 DSN 是兩步驟程序。當使用 CREATE_DB 關鍵字，如果要建立 Microsoft Access 資料庫的路徑名稱包含一或多個空格，然後整個路徑名稱必須括以雙引號括住，如下列範例所示：<br /><br /> "C:\PROGRAM FILES\COMMON FILES\ MyAccess.mdb"<br /><br /> "C:\PROGRAM FILES\Access2.mdb"<br /><br /> CREATE_DB=C:\TEMP\test.mdb (no quotation marks needed)|  
+|CREATE_DB|建立資料庫檔案。 具有下列格式：CREATE_DB = < path_name >\<optional_sort 順序 >< optional_ENCRYPT 關鍵字 >，其中的路徑名稱是 Microsoft Access 資料庫的完整路徑。 如果路徑名稱指定現有的資料庫，則會傳回錯誤。 排序次序會在新的資料庫 對話方塊，顯示在 Microsoft 存取設定 對話方塊中按下 建立 按鈕時，設定會啟動。 如果未不指定任何排序順序，則會使用一般。<br /><br /> 當使用 CREATE_DB 關鍵字使用 DSN 關鍵字相同的陳述式中，此驅動程式會忽略 DSN 關鍵字。 因此，建立資料庫，並指定 DSN 是兩步驟程序。當使用 CREATE_DB 關鍵字，如果要建立 Microsoft Access 資料庫的路徑名稱包含一或多個空格，然後整個路徑名稱必須括以雙引號括住，如下列範例所示：<br /><br /> "C:\PROGRAM FILES\COMMON FILES\ MyAccess.mdb"<br /><br /> "C:\PROGRAM FILES\Access2.mdb"<br /><br /> CREATE_DB=C:\TEMP\test.mdb （沒有引號所需）|  
 |CREATE_SYSDB|建立系統資料庫檔案。 具有下列格式：CREATE_SYSDB =\<路徑名稱 >\<選擇性排序次序 >，其中的路徑名稱是 Microsoft Access 資料庫的完整路徑。 如果路徑名稱指定現有的資料庫，則會傳回錯誤。 排序次序就會設定為啟動中**新的資料庫**對話方塊顯示時**建立**，就會引發**ODBC Microsoft Access 安裝**對話方塊。 如果未不指定任何排序順序，則會使用一般。|  
 |CREATE_V2DB|建立與 Microsoft Access 2.0 相容的資料庫檔案。 具有下列格式：CREATE_V2DB =\<路徑名稱 >\<選擇性排序次序 >，其中的路徑名稱是 Microsoft Access 資料庫的完整路徑。 如果路徑名稱指定現有的資料庫，則會傳回錯誤。 排序次序會在新的資料庫 對話方塊，顯示在 Microsoft 存取設定 對話方塊中按下 建立 按鈕時，設定會啟動。 如果未不指定任何排序順序，則會使用一般。<br /><br /> 當使用 CREATE_V2DB 關鍵字使用 DSN 關鍵字相同的陳述式中，此驅動程式會忽略 DSN 關鍵字。 因此，建立資料庫，並指定 DSN 是兩步驟程序。<br /><br /> 當使用 CREATE_V2DB 關鍵字，如果要建立 Microsoft Access 資料庫的路徑名稱包含一或多個空格，然後整個路徑名稱必須括以雙引號括住，如下列範例所示：<br /><br /> "C:\PROGRAM FILES\COMMON FILES\ MyAccess.mdb"<br /><br /> "C:\PROGRAM FILES\Access2.mdb"<br /><br /> CREATE_V2DB=C:\TEMP\test.mdb （沒有引號所需）|  
 |DBQ|資料庫檔案的名稱。<br /><br /> 這會設定為相同的選項**資料庫**在安裝程式 對話方塊中。|  

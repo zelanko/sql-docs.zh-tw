@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: e7eb9b10ce427d1da46a225f532fba9cdaa8fa6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bf00bedf096165fc669bd93ff01fb064e1e30069
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991799"
 ---
 # <a name="run-a-matching-project"></a>執行比對專案
 

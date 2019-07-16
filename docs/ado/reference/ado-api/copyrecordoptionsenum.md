@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2fa4eec5-d50b-4fd3-8ae7-40af441ba12b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a944d3f82940d9364312fb8033ec8b8937b0c49c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6692125b7323bedc7a416e51555c373ef850ce0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919375"
 ---
 # <a name="copyrecordoptionsenum"></a>CopyRecordOptionsEnum
 指定的行為[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)方法。  

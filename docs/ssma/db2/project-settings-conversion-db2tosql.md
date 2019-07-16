@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6918dac33ce0e69116f713cb8906b2774d00575
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084554"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>專案設定 （轉換） (DB2ToSQL)
 [轉換] 頁面**專案設定** 對話方塊中包含自訂 SSMA 如何轉換 DB2 語法來設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]語法。  
@@ -170,7 +169,7 @@ SSMA 都可以將許多鎖定資料表陳述式轉換資料表提示。 SSMA 無
 |SHARE UPDATE = 資料列共用|ROWLOCK HOLDLOCK|  
 |共用|TABLOCK HOLDLOCK|  
 |共用資料列獨佔|TABLOCK、 XLOCK，HOLDLOCK|  
-|EXCLUSIVE|TABLOCKX HOLDLOCK|  
+|獨佔|TABLOCKX HOLDLOCK|  
   
 當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
@@ -372,7 +371,7 @@ DB2 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字串串連包�
 ### <a name="use-isnull-in-replace-function-calls"></a>取代函式呼叫中使用 ISNULL  
 ISNULL 陳述式用於取代函式呼叫中，以模擬 DB2 行為。 此設定有下列選項：  
   
--   YES  
+-   是  
   
 -   否  
   
@@ -385,7 +384,7 @@ ISNULL 陳述式用於取代函式呼叫中，以模擬 DB2 行為。 此設定�
 ### <a name="use-isnull-in-concat-function-calls"></a>CONCAT 函式呼叫中使用 ISNULL  
 CONCAT 函式呼叫會使用 ISNULL 陳述式來模擬 DB2 行為。 此設定有下列選項：  
   
--   YES  
+-   是  
   
 -   否  
   

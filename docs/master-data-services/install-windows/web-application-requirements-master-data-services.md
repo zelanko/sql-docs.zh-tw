@@ -12,13 +12,12 @@ keywords:
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 99009d961baf3d1f870783f565cb93c628eb85c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 763695a4fe00b2bb5f50113b5c9c2ba65ddd9417
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944881"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 應用程式需求 (Master Data Services)
 
@@ -73,7 +72,7 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
   
 ### <a name="accounts-and-permissions"></a>帳戶和權限  
   
-|類型|描述|  
+|type|描述|  
 |----------|-----------------|  
 |Windows 帳戶|您必須使用具備設定 Windows 角色、角色服務與功能，以及在本機電腦之 IIS 中建立與管理應用程式集區、網站與 Web 應用程式的 Windows 帳戶登入 Web 伺服器電腦。|  
 |服務帳戶|建立 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中的 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]Web 應用程式時，必須為應用程式執行所在之應用程式集區指定識別。 此帳戶可能與建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫時所指定的服務帳戶不同。<br /><br /> 這個識別必須是網域使用者帳戶，而且加入至 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫的 mds_exec 資料庫角色來進行資料庫存取。 如需詳細資訊，請參閱[資料庫登入、使用者和角色](../../master-data-services/database-logins-users-and-roles-master-data-services.md)。 這個帳戶也會加入 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Windows 群組 **MDS_ServiceAccounts**，而這個群組在檔案系統中已被授與暫存編譯目錄 **MDSTempDir**的權限。 如需詳細資訊，請參閱[資料夾和檔案的權限 &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)。|  

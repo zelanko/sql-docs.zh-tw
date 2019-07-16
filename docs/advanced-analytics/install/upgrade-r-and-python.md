@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 93384c8152109b01720ae7e861731638316d4966
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 6210cfe67b4c360f14fc3e68929a5ac4f5f5d570
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962828"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升級 SQL Server 執行個體中的 機器學習 （R 和 Python） 元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,7 +50,7 @@ SQL Server 2016 R Services 的客戶，繫結會提供更新的 R 封裝，新�
 
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
-元件 |初始版本 | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
+元件 |初始版本 | [R Server 9.0.1 （英文)](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
 ----------|----------------|----------------|--------------|---------|-------|
 透過 R 的 Microsoft R Open (MRO) | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 |
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
@@ -232,7 +231,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 <a name="step-1-unbind"></a> 
 
-### <a name="step-1-unbind"></a>步驟 1:解除繫結
+### <a name="step-1-unbind"></a>步驟 1：解除繫結
 
 您有兩個步驟回復繫結的選項： 重新重新執行安裝程式，或使用 SqlBindR 命令列公用程式。
 
@@ -243,7 +242,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 2. 安裝程式會識別會被解除繫結的本機執行個體。
 3. 取消選取您想要還原為原始設定的執行個體旁邊的核取方塊。
 4. 接受授權合約。 您必須在安裝時，指出您接受授權條款，甚至是。
-5. 按一下 **[完成]** 。 此程序需要一些時間。
+5. 按一下 [ **完成**]。 此程序需要一些時間。
 
 #### <a name="bkmk_cmdunbind"></a> 解除繫結使用命令列
 
@@ -257,7 +256,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 <a name="step-2-restore"></a> 
 
-###  <a name="step-2-repair-the-sql-server-instance"></a>步驟 2:修復 SQL Server 執行個體
+###  <a name="step-2-repair-the-sql-server-instance"></a>步驟 2：修復 SQL Server 執行個體
 
 執行 SQL Server 安裝程式修復具有 R 和 Python 功能的資料庫引擎執行個體。 系統會保留現有的更新，但如果您錯過任何的 SQL Server 服務更新 R 和 Python 套件，此步驟適用於這些修補程式。
 

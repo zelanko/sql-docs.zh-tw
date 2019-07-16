@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba973025-18c8-481b-a383-6ed935237894
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc921f458861da420c4dd34bb672dc8a4f58f361
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f21a2b1c7c8573d06f92654f85b4ecaacc1484a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063277"
 ---
 # <a name="sqlallocstmt-visual-foxpro-odbc-driver"></a>SQLAllocStmt (Visual FoxPro ODBC Driver)
 > [!NOTE]  

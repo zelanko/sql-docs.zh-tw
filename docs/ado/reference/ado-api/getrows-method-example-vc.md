@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 728edb30336d3687e92638b348d605fef5842d34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1f49de41c0735f53323c1f9ba75c6f2257439b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697851"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932500"
 ---
 # <a name="getrows-method-example-vc"></a>GetRows 方法範例 (VC++)
 這個範例會使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法來擷取指定的資料列數[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)和要使用產生的資料填入的陣列。 **GetRows**方法會傳回所需的資料列數目小於在兩個情況下： 可能是如果[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)已達到，或如果**GetRows**嘗試擷取已記錄刪除由其他使用者。 此函數會傳回**False**只有當第二個案例，就會發生。 若要執行此程序需要 GetRowsOK 函式。  

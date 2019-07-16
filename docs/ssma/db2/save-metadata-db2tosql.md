@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 9a76083e-4902-449e-b125-7e9259fc37f7
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d12ff5f349d5b7328af7e47dbfc7724420d6fb15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fb0c8849ce56fd424a93234d8878b19e19b5bdd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060103"
 ---
 # <a name="save-metadata-db2tosql"></a>儲存中繼資料 (DB2ToSQL)
 **儲存中繼資料**對話方塊會提示您載入 SSMA 專案中的中繼資料，才能將它儲存。 這可以讓您擁有完整的專案檔案，您可離線使用，並傳送給其他人，例如技術支援人員。  
   
 若要存取**儲存中繼資料**對話方塊中，儲存專案。 如果遺漏任何中繼資料，將會顯示 SSMA**儲存中繼資料** 對話方塊。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **名稱**  
 在專案中的每個資料庫的名稱。  
   

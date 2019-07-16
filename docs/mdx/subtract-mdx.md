@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: fd0bb64169f6474874405cfd88476d426a9a6ee0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b8003bdeddea32f80636dc10a78e200d6b0e0be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63266545"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036680"
 ---
 # <a name="--subtract-mdx"></a>- (減) (MDX)
 

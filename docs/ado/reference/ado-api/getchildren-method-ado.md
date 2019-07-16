@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d29618fbacfbd4ba3becd222ef8a063e59e2cc70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 84f1a2f7a80e17571f1b8ad3e63db640fb58dc19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932501"
 ---
 # <a name="getchildren-method-ado"></a>GetChildren 方法 (ADO)
 傳回[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)其資料列代表集合的子系[記錄](../../../ado/reference/ado-api/record-object-ado.md)。  

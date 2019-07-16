@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 442d0865ede4819ea3413d662411295daa5b48bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3a0b54617d55033addabc729adbd078680022fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62501109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902474"
 ---
 # <a name="using-length-and-indicator-values"></a>使用長度與指標值
 長度/指標緩衝區用來傳遞資料緩衝區或例如 SQL_NULL_DATA 表示資料為 NULL 的特殊指標中資料的位元組長度。 根據函式中使用，是 SQLINTEGER 或 SQLSMALLINT 定義長度/指標緩衝區。 因此，需要單一引數，才能加以描述。 如果 nondeferred 的輸入的緩衝區的資料緩衝區，這個引數會包含資料本身的位元組長度或指標值。 它通常會命名為*Strlen_or_ind&lt*或其他類似的名稱。 例如，下列程式碼會呼叫**SQLPutData**傳遞緩衝區完整的資料; 的位元組長度 (*ValueLen*) 因為直接傳遞的資料緩衝區 (*ValuePtr*) 是輸入的緩衝區。  
@@ -69,6 +68,6 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
 -   SQL_NO_TOTAL。 驅動程式無法判斷傳回的輸出緩衝區中仍然可用的長資料的位元組數目。 這個值是合法的只能針對 SQL 資料擷取的驅動程式。  
   
--   SQL_DEFAULT_PARAM. 程序是使用中的程序，而不是對應的資料緩衝區中值的輸入參數的預設值。  
+-   SQL_DEFAULT_PARAM。 程序是使用中的程序，而不是對應的資料緩衝區中值的輸入參數的預設值。  
   
--   SQL_COLUMN_IGNORE. **SQLBulkOperations**或是**SQLSetPos**要忽略的資料緩衝區中的值。 藉由呼叫更新的資料列時**SQLBulkOperations**或是**SQLSetPos**不會變更資料行的值。 藉由呼叫插入新的資料列時**SQLBulkOperations**，資料行的值設為其預設值或資料行沒有預設值，為 NULL。
+-   SQL_COLUMN_IGNORE。 **SQLBulkOperations**或是**SQLSetPos**要忽略的資料緩衝區中的值。 藉由呼叫更新的資料列時**SQLBulkOperations**或是**SQLSetPos**不會變更資料行的值。 藉由呼叫插入新的資料列時**SQLBulkOperations**，資料行的值設為其預設值或資料行沒有預設值，為 NULL。

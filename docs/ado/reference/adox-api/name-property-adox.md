@@ -41,13 +41,12 @@ helpviewer_keywords:
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7f7b61dd2c1dc5899852234d23148969dad9c3dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52808cf9e90c6779efb9f95e385f8df501bae870
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965754"
 ---
 # <a name="name-property-adox"></a>Name 屬性 (ADOX)
 表示物件的名稱。  

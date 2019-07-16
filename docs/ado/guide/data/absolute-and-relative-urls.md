@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 207ac319852435d3d0178e4a0dcc78a1cc1a0c8e
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597503"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926368"
 ---
 # <a name="absolute-and-relative-urls"></a>絕對和相對 URL
 URL 會指定儲存在本機或網路的電腦上的目標位置。 目標可以是檔案、 目錄、 HTML 網頁、 影像、 程式及等等。  
