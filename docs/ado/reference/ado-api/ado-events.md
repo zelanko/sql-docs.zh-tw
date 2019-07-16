@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e9f8d1031f12972ebe1e48506143aea720b43d63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35169313ae487514403f62c8e6d1ba2c262cb8a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921001"
 ---
 # <a name="ado-events"></a>ADO 事件
 

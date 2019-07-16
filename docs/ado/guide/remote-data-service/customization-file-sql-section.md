@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ba0d8c7ab1294400c19456abf164c6ad6be0dd2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6163a5b5fd0999e17e17961639e0a1fee3e8fa4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704303"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922789"
 ---
 # <a name="customization-file-sql-section"></a>自訂檔案 SQL 區段
 **Sql**區段可以包含新的 SQL 字串，它會取代用戶端命令字串。 如果沒有區段中的 SQL 字串，將會忽略一節。  

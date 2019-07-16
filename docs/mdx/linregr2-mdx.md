@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 42c703e703e8c557b4de8466a0cd1b686217fd4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e38df1a24b76ee40aae3a5ab3c28dd9bca2b310
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63136210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905525"
 ---
 # <a name="linregr2-mdx"></a>LinRegR2 (MDX)
 

@@ -4,19 +4,18 @@ titleSuffix: SQL Server
 description: 本快速入門示範如何在 Ubuntu 上安裝 SQL Server 2017 或 SQL Server 2019 然後建立並查詢資料庫，以使用 sqlcmd。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 9454affd6d6c60efc31e46c575cc575227cf05f3
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 23597e4937f279694d7e4286e5aec3d714b54afa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833647"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910459"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入門：安裝 SQL Server，並在 Ubuntu 上建立資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "67833647"
 > [!TIP]
 > 本教學課程需要使用者輸入和網際網路連線。 如果您想要自動或離線安裝程序中，請參閱[在 Linux 上的 SQL Server 的安裝指引](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 您必須有一個 Ubuntu 16.04 的機器**至少 2 GB**的記憶體。
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f656396455a8d5669debc158c3edc866491fcb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c78d3f20e5a03fc80029549318c9c53662e4121
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63457630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901375"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - SQL 命令
 以程式設計方式修改資料表的結構。  
@@ -82,10 +81,10 @@ ALTER TABLE TableName1
   
  如果您省略 NULL 和 NOT NULL、 SET NULL 目前設定會決定欄位中是否允許 null 值。 不過，如果您省略 NULL 和 NOT NULL，而且包含主索引鍵或唯一的子句，設定為 NULL 的目前設定會被忽略，該欄位不是預設為 NULL。  
   
- CHECK *lExpression1*  
+ 檢查*lExpression1*  
  指定欄位的驗證規則。 *lExpression1*必須評估為邏輯運算式，而且可以是使用者定義函式或預存程序。 每當附加空的記錄，則會檢查驗證規則。 如果驗證規則不允許附加的記錄中的空白欄位值，則會產生錯誤。  
   
- ERROR *cMessageText1*  
+ 錯誤*cMessageText1*  
  指定欄位的驗證規則會產生錯誤時，會顯示錯誤訊息。  
   
  預設*eExpression1*  
@@ -106,7 +105,7 @@ ALTER TABLE TableName1
   
  如果您要修改現有的欄位和主要或候選索引運算式是由資料表中的欄位所組成，Visual FoxPro 檢查欄位，以查看它們是否包含 null 值或重複的記錄。 如果沒有的話，Visual FoxPro 產生錯誤，並不會改變資料表。  
   
- REFERENCES *TableName2* TAG *TagName1*  
+ 參考*TableName2*標記*TagName1*  
  指定要建立持續性的關聯性的父資料表。 標記*TagName1*指定關聯性所依據的父資料表的索引標籤。 索引標籤名稱可以包含最多 10 個字元。  
   
  NOCPTRANS  
@@ -125,10 +124,10 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  設為預設值*eExpression2*  
  指定與現有欄位的新預設值。 資料類型*eExpression2*必須是欄位的資料類型相同。  
   
- SET CHECK *lExpression2*  
+ 設定核取*lExpression2*  
  指定新的驗證規則，對於現有的欄位。 *lExpression2*必須評估為邏輯運算式，而且可能是使用者定義函數或預存程序。  
   
- ERROR *cMessageText2*  
+ 錯誤*cMessageText2*  
  指定欄位的驗證規則會產生錯誤時，會顯示錯誤訊息。 瀏覽 或 編輯 視窗中變更資料時，才會顯示訊息。  
   
  DROP DEFAULT  
@@ -137,12 +136,12 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  卸除檢查  
  移除現有欄位的驗證規則。  
   
- DROP [COLUMN] *FieldName3*  
+ 拖放 [COLUMN] *FieldName3*  
  指定要移除資料表中的欄位。 移除資料表中的欄位也會移除該欄位的預設值和欄位驗證規則。  
   
  如果索引鍵或觸發程序的運算式參考欄位，運算式將會移除欄位時變成無效。 在此情況下，將會移除欄位，但不正確的索引鍵或觸發程序運算式將會在執行階段產生錯誤時，會不產生錯誤。  
   
- SET CHECK *lExpression3*  
+ 設定核取*lExpression3*  
  指定資料表驗證規則。 *lExpression3*必須評估為邏輯運算式，而且可能是使用者定義函數或預存程序。  
   
  ERROR *cMessageText3*  
@@ -157,16 +156,16 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  卸除主索引鍵  
  移除主索引鍵和它的索引標籤。 資料表只能有一個主索引鍵，因為它不需要指定主索引鍵的名稱。 移除主索引鍵時，也會刪除任何持續性的關聯性的主索引鍵為基礎。  
   
- ADD UNIQUE *eExpression4*[TAG *TagName3*]  
+ 新增 UNIQUE *eExpression4*[標記*TagName3*]  
  將資料表中的候選項目索引。 *eExpression4*指定 候選索引鍵運算式，並*TagName3*指定候選項目索引標籤的名稱。 索引標籤名稱可以包含最多 10 個字元。 如果您省略標記*TagName3*如果*eExpression4*是單一欄位中，候選項目索引標籤中指定的欄位具有相同的名稱*eExpression4*。  
   
- DROP UNIQUE TAG *TagName4*  
+ 卸除唯一的標記*TagName4*  
  移除的候選項目索引和它的索引標籤。 因為資料表可以有多個候選索引鍵，您必須指定候選項目索引標籤的名稱。  
   
- ADD FOREIGN KEY [ *eExpression5*]TAG *TagName4*  
+ 新增外部索引鍵 [ *eExpression5*] 標籤*TagName4*  
  將資料表中的外部 （非主要） 索引。 *eExpression5*指定外部索引鍵運算式，並*TagName4*指定外部索引的索引標籤的名稱。 索引標籤名稱可以包含最多 10 個字元。  
   
- REFERENCES *TableName2*[TAG *TagName5*]  
+ 參考*TableName2*[標記*TagName5*]  
  指定要建立持續性的關聯性的父資料表。 包含標記*TagName5*建立根據現有的索引標籤的父資料表的關聯性。 索引標籤名稱可以包含最多 10 個字元。 如果您省略標記*TagName5*，使用父資料表的主索引鍵標記建立關聯性。  
   
  卸除的外部索引鍵標記*TagName6*[儲存]  

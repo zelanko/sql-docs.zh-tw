@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40620b839b7bf7df14d1beddd90315b51d32d0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eefc1981d5a064eeb362dd0781a3f682117125a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013659"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902409"
 ---
 # <a name="cursor-properties"></a>資料指標屬性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

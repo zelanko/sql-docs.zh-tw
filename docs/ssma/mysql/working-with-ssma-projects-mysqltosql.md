@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 518f899118d5a7d2dce4f56d185fce9d5b1e47df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37a763c0acca891d8bbbc1a310edcb6f8b987436
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904907"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>使用 SSMA 專案 (MySQLToSQL)
 若要將 MySQL 資料庫移轉至 SQL Server 或 SQL Azure，您必須先建立 SSMA 專案。 專案是檔案，其中包含下列資訊：  
@@ -68,7 +67,7 @@ SSMA 會包含數項設定將轉換和載入資料庫、 移轉資料和同步�
   
 ##### <a name="to-create-a-new-project"></a>建立新的專案  
   
-1.  選取 **新的專案**從**檔案**功能表。 [新增專案]  對話方塊隨即出現。 在 [檔案]  功能表上，選取 [新增專案]  。 [新增專案]  對話方塊隨即出現。  
+1.  選取 **新的專案**從**檔案**功能表。 [ **新增專案** ] 對話方塊隨即出現。 在 [檔案]  功能表上，選取 [新增專案]  。 [ **新增專案** ] 對話方塊隨即出現。  
   
 2.  在 **名稱**方塊中，輸入您專案的名稱。  
   

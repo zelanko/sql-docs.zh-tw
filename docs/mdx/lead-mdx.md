@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: d72af1bf0b671eeb2bd4b84c194f129ed1ce6bfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc4d362fbc7656e9427548a352b32d5d8297071e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63205441"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905746"
 ---
 # <a name="lead-mdx"></a>Lead (MDX)
 

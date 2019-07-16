@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 88d3900417bfbdaec6d2408d503b1537b8dff2da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925569"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>偵測並解決衝突
 如果您在即時模式中處理資料錄集，會有較少機會發生的並行處理問題。 相反地，如果您的應用程式會使用批次模式更新，可能會有一個良好機會儲存編輯同一筆記錄的另一位使用者所做的變更之前，一位使用者將變更記錄。 在此情況下，您會想，正常處理衝突的應用程式。 它可能是您將更新傳送至伺服器的最後一個人中 「 獲勝。 」 的願望 或者，您可能想要讓最新的使用者決定哪些更新應該優先選擇兩個衝突的值，提供與他連絡。  

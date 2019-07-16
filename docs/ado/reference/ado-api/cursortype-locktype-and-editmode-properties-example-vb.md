@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 915be581cf6f75d4909b586d368cb12749358e2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4556a243206d373a110aaab6a56bd43bf487abff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919275"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType、 LockType、 和 EditMode 屬性範例 (VB)
 此範例示範如何設定[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)並[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)的屬性，才能開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它也會顯示的值[EditMode](../../../ado/reference/ado-api/editmode-property.md)在各種情況下的屬性。 若要執行此程序需要 EditModeOutput 函式。  

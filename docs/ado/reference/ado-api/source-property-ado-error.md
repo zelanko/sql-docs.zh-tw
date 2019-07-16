@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 89a4597cc846db1bb3bb2fac0a79ec8c2090d9d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b55ebbe5a167b7d70cf606fc4e37e7ede36b486
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711143"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916908"
 ---
 # <a name="source-property-ado-error"></a>Source 屬性 (ADO Error)
 表示物件或最初產生錯誤的應用程式的名稱。  

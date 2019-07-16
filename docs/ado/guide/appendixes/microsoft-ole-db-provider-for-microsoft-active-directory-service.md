@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: acd7c73926e996100511569df3a5693068894b10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926670"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 服務的 Microsoft OLE DB 提供者
 Active Directory 服務介面 (ADSI) 提供者可讓 ADO 連接到異質的 directory services 透過 ADSI。 這可讓 ADO 應用程式唯讀存取 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 directory 服務，除了任何 LDAP 相容目錄服務和 Novell Directory Services。 ADSI 本身為基礎提供者模型，因此如果有新的提供者提供存取至另一個目錄，ADO 應用程式將能夠順暢地存取它。 ADSI 提供者是無限制執行緒，並啟用 Unicode。  
@@ -67,13 +66,13 @@ ADSDSOObject
 |*屬性*|表示要傳回之屬性的逗號分隔清單。|  
 |*範圍*|選擇性。 A**字串**，指定搜尋範圍。 可以是下列其中一項：<br /><br /> 基底-搜尋只有基底物件 （搜尋根目錄）。<br />-OneLevel-搜尋只有一個層級。<br />-樹狀子目錄-搜尋整個樹狀子目錄。|  
   
- 例如：  
+ 例如:  
   
 ```vb
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
 ```  
   
- 提供者也支援 SQL SELECT 命令文字。 例如：  
+ 提供者也支援 SQL SELECT 命令文字。 例如:  
   
 ```vb
 "SELECT title, telephoneNumber From 'LDAP://DC=Microsoft, DC=COM' WHERE   
@@ -96,10 +95,10 @@ objectClass='user' AND objectCategory='Person'"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|讀取/寫入|  
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|唯讀|  
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|唯讀|  
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|讀取/寫入|  
+|[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)|讀取/寫入|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|讀取/寫入|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|一律**adUseServer**|  
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|  
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|一律**adOpenStatic**|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|一律**adEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|唯讀|  
 |[篩選](../../../ado/reference/ado-api/filter-property.md)|讀取/寫入|  

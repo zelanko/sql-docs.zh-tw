@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8406d02e167258901c3a6ce9ed3a1d7de935df54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b419cbb05aa616f163f5878bda83c9d68203575d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63048512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905664"
 ---
 # <a name="level-mdx"></a>Level (MDX)
 

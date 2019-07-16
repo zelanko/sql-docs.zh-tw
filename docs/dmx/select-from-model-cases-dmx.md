@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;model&gt;.CASES (DMX) | Microsoft Docs
+title: SELECT FROM&lt;模型&gt;。案例 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4f65aa4dc64e795235286eccd9f3283216ba6f4f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2fc4a61868114f86a198878f5f54a59f3e96a5b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928435"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM&lt;模型&gt;。案例 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

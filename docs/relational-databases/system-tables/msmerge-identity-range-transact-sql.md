@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 27906e593020d45a9fb5e79be6ac53bc0e7fafcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e62d2e8cf46de73bf8f0881b398437ab4ef58fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62904748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909038"
 ---
 # <a name="msmergeidentityrange-transact-sql"></a>MSmerge_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "62904748"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**subid**|**uniqueidentifier**|給定訂閱的唯一識別碼。|  
-|**artid**|**uniqueidentifier**|給定發行項的唯一識別碼。|  
+|**artid&lt**|**uniqueidentifier**|給定發行項的唯一識別碼。|  
 |**range_begin**|**numeric(38)**|在目前範圍開頭的識別值。|  
 |**range_end**|**numeric(38)**|在目前範圍結尾的識別值。|  
 |**next_range_begin**|**numeric(38)**|在下一個要指派之範圍開頭的識別值。|  

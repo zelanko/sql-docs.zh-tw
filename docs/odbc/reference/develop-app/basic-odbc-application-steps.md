@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a92d1f78-c669-47ad-88c4-0b1a93503dfc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cb15d3b64496374bed5b16f2661528c7ba1f9aae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 524c4b8f8c9467358a3868f191f8a0d527ca3d70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63201652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909821"
 ---
 # <a name="basic-odbc-application-steps"></a>基本的 ODBC 應用程式步驟
 本節描述 ODBC 應用程式的一般流程。 不可能，任何應用程式就會將所有這些函式呼叫這個順序完全相同。 不過，大部分的應用程式會使用這些步驟有些不同。 在下圖顯示基本的應用程式步驟。  

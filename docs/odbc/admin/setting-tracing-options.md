@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ccf5afd559d4d3716c22b42665c516aa230fafe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13e8caf9f3a9643f8063d6227258245a603f1665
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901628"
 ---
 # <a name="setting-tracing-options"></a>設定追蹤選項
 **追蹤**索引標籤**ODBC 資料來源管理員**對話方塊可讓您設定 ODBC 函數呼叫追蹤的方式。  

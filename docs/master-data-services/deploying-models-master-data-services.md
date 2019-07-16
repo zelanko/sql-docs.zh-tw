@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a6272c8daa1bc6895a064bd936c55af5678887c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3cbd0815109b5242f7f49b791f24cfc348200ccc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906204"
 ---
 # <a name="deploying-models-master-data-services"></a>部署模型 (Master Data Services)
 

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1a6e149c81345cae00d5fdc918fa4366685bfd58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32a36388b1be6dc7f5bab6bbb0bd9f97b01aac46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910614"
 ---
 # <a name="adox-properties"></a>ADOX 屬性
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6436ca3b67587751757ae01b4248c1ce8b35722d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e3c71d7233e75e0c97cacf6ec35d86bd4c8df31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921224"
 ---
 # <a name="ado-api-reference"></a>ADO API 參考
 ADO 文件的本節包含主題中的每一個 ADO 物件、 集合、 屬性、 動態屬性、 方法、 事件和列舉型別。 此外，它包含一份 ADO 語法索引，以搭配 Microsoft VisualC++和 Windows Foundation 類別 (WCF)。  

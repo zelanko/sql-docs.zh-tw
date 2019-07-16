@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 89c414c684ee41e7b7607acc1142d01c961566a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16ff3c926b1c0457f0f0dda382881aad45fb4efd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928507"
 ---
 # <a name="adox-objects"></a>ADOX 物件
 ## <a name="adox-object-summary"></a>ADOX 物件摘要  
@@ -34,7 +33,7 @@ ms.locfileid: "66708420"
 |[程序](../../../ado/reference/adox-api/procedure-object-adox.md)|代表預存程序。|  
 |[Table](../../../ado/reference/adox-api/table-object-adox.md)|表示資料庫資料表，包括資料行、 索引和索引鍵。|  
 |[使用者](../../../ado/reference/adox-api/user-object-adox.md)|代表可受保護的資料庫內的存取權限的使用者帳戶。|  
-|[[檢視]](../../../ado/reference/adox-api/view-object-adox.md)|代表已篩選的一份記錄或一份虛擬資料表。|  
+|[檢視](../../../ado/reference/adox-api/view-object-adox.md)|代表已篩選的一份記錄或一份虛擬資料表。|  
   
  這些物件之間的關聯性如下所示[ADOX 物件模型](../../../ado/reference/adox-api/adox-object-model.md)。  
   

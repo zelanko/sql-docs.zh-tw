@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4d7db8b6-611f-4fe4-be85-2a407059de45
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c3c0cb45f95cd2b99bc87f86a0e6ab713c458615
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a82a26d275ed17285415244b03e92e7ab9220950
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910879"
 ---
 # <a name="sqlexecute"></a>SQLExecute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

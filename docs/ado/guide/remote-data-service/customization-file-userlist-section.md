@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e38b253cdebcc5ab976de8c8eb355f7f6fb03aec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 558fd9c8379808e6c2f109a9c9584e8831cddd0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922768"
 ---
 # <a name="customization-file-userlist-section"></a>自訂檔案 UserList 區段
 **Userlist**一節有關**連線**相同的區段與區段*識別碼*參數。  
@@ -32,7 +31,7 @@ ms.locfileid: "66699538"
 ## <a name="syntax"></a>語法  
  使用者存取項目屬於表單：  
   
- _userName_ **=**   
+ _userName_ **=**    
  **_accessRights_**  
   
 |部分|描述|  

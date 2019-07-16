@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 859bf3f53051a500e86742cb681885b8067f6a0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ffc515350bfff4307da382c05aae50ed1930802
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712212"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917364"
 ---
 # <a name="record-object-ado"></a>Record 物件 (ADO)
 表示從資料列[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)或資料提供者或為半結構化的資料提供者，例如檔案或目錄所傳回的物件。  

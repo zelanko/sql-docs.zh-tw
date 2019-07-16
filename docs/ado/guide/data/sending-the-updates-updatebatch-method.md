@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6759f007e652a6a52a1633b021553faa2978f6b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 182e444587ce9bb3ca73166fb05dfac2506a39aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706644"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924250"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>傳送更新：UpdateBatch 方法
 下列程式碼藉由 LockType 屬性設定為 Adlockpessimistic 和以 adUseClient CursorLocation 批次模式中開啟資料錄集。 它將加入兩筆新記錄和變更在現有的記錄儲存到原始值欄位的值，然後呼叫 UpdateBatch 傳送回資料來源所做的變更。  

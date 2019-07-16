@@ -1,5 +1,5 @@
 ---
-title: LinRegIntercept (MDX) | Microsoft Docs
+title: LinRegIntercept (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: a0c153182e1405ebedd26cc875c10068e280b654
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30d3fd98995c24498af9376db19087b2018394e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63136415"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905587"
 ---
 # <a name="linregintercept-mdx"></a>LinRegIntercept (MDX)
 

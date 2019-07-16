@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ab65b5361be1c5cdba4ab64cf58312b90d47ddb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdb6a9b2c7e42406443b802803723fae4c60a7c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906290"
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>刪除階層成員權限 (Master Data Services)
 

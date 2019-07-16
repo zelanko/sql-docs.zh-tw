@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8337a6e93aba36e8b5838dcbf6d2e084fe022f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 520c484bdaaa6eb59488900208993a607c5b0f7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924111"
 ---
 # <a name="static-cursors"></a>靜態資料指標
 靜態資料指標一律會顯示的結果集時的第一次開啟資料指標。 根據實作中，靜態資料指標都是唯讀或讀取/寫入，並提供向前及向後捲動。 靜態資料指標通常無法偵測成員資格、 順序或結果集資料指標開啟後的值所做的變更。 雖然不需要執行這項操作，但靜態資料指標可能會偵測自己的更新、刪除和插入。  

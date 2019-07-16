@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 925eefdbe8f5ff9196689026edb685c8f76d7d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920802"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 介面
 **ADORecordConstruction**介面用來建構 ADO**記錄**的 OLE DB 物件**列**C 中的物件 /C++應用程式。  
@@ -33,12 +32,12 @@ ms.locfileid: "66718173"
 |||  
 |-|-|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|唯寫。<br />設定 OLE DB 的容器**資料列**物件，此 ado**記錄**物件。|  
-|[Row](../../../ado/reference/ado-api/row-property-ado.md)|讀取/寫入。<br />取得/設定 OLE DB**資料列**物件，此 ado 往返**記錄**物件。|  
+|[資料列](../../../ado/reference/ado-api/row-property-ado.md)|讀取/寫入。<br />取得/設定 OLE DB**資料列**物件，此 ado 往返**記錄**物件。|  
   
 ## <a name="methods"></a>方法  
  無。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="remarks"></a>備註  

@@ -11,16 +11,15 @@ dev_langs:
 ms.assetid: 8ef966f8-d14e-40d3-9626-3508ada9b8fb
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a376ac534182f5ebdae8a3af5e32f9c4a536f8aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29a82daa2857177200bd76b738f92d65f6b26668
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62668220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899381"
 ---
-# <a name="sysdmpdwlockwaits-transact-sql"></a>sys.dm_pdw_lock_waits (Transact-SQL)
+# <a name="sysdmpdwlockwaits-transact-sql"></a>sys.dm_pdw_lock_waits & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   保留的要求正在等待鎖定的相關資訊。  

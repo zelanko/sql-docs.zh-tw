@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19a5f2f82fd46b8aa4c3f54b62287f447c8b2c1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 274e801bfb8e627564f5586574c16ecd916e9859
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910717"
 ---
 # <a name="sysdmdbstatsproperties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
   
 ## <a name="arguments"></a>引數  
  *object_id*  
- 這是目前資料庫中，要求其中一個統計資料屬性之物件的識別碼。 *@object_id* 是 **int**。  
+ 這是目前資料庫中，要求其中一個統計資料屬性之物件的識別碼。 *object_id* 是 **int**。  
   
  *stats_id*  
  這是指定 *object_id*之統計資料的識別碼。 您可以從 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 動態管理檢視取得統計資料識別碼。 *stats_id* 是 **int**。  
@@ -58,7 +57,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |步驟|**int**|長條圖中的步驟數。 如需詳細資訊，請參閱 [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)並未包含檢視。|  
 |unfiltered_rows|**bigint**|套用篩選運算式 (針對篩選的統計資料) 之前，資料表中的資料列總數。 如果統計資料未經過篩選，unfiltered_row 就會等於 rows 資料行中傳回的值。|  
 |modification_counter|**bigint**|自從上次更新統計資料以來，前端統計資料資料行 (用以建置長條圖的資料行) 的總修改次數。<br /><br /> 記憶體最佳化資料表： 正在啟動[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]然後在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]這個資料行包含： 總資料表中，更新最後一個時間統計資料或資料庫重新啟動之後的修改次數。|  
-|persisted_sample_percent|**float**|使用於未明確指定取樣百分比之統計資料更新的保存取樣百分比。 如果值為零，表示這個統計資料未設定保存取樣百分比。<br /><br /> **適用於：**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
+|persisted_sample_percent|**float**|使用於未明確指定取樣百分比之統計資料更新的保存取樣百分比。 如果值為零，表示這個統計資料未設定保存取樣百分比。<br /><br /> **適用於：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
 ## <a name="Remarks"></a> 備註  
  **sys.dm_db_stats_properties**傳回任何下列的情況下的空資料列集：  

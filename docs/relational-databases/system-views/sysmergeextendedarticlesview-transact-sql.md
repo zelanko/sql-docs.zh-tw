@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f91537880615fd7075db67ff8d89835944d1a79
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: dd7e15e6e0a1a4097cbc79535ffec968f6776db4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125878"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910068"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,20 +67,20 @@ ms.locfileid: "54125878"
 |**identity_support**|**int**|指定是否啟用自動識別範圍處理。 **1**表示啟用識別範圍處理，並**0**表示沒有任何身分識別支援範圍。|  
 |**destination_owner**|**sysname**|目的地物件的擁有者名稱。|  
 |**before_image_objid**|**int**|追蹤資料表物件識別碼。 發行集設定為啟用資料分割變更最佳化時，追蹤資料表會包含某些索引鍵資料行值。|  
-|**before_view_objid**|**int**|檢視資料表的物件識別碼。 檢視所在的資料表會追蹤是否刪除或更新了在它之前屬於特定訂閱者的資料列。 適用於僅發行集建立時使用*@keep_partition_changes*  =  **true**。|  
+|**before_view_objid**|**int**|檢視資料表的物件識別碼。 檢視所在的資料表會追蹤是否刪除或更新了在它之前屬於特定訂閱者的資料列。 適用於僅發行集建立時使用 *@keep_partition_changes*  =  **true**。|  
 |**verify_resolver_signature**|**int**|指定在合併式複寫中使用解析程式之前，是否要驗證數位簽章：<br /><br /> **0** = 不驗證簽章。<br /><br /> **1** = 驗證簽章來查看它是否來自信任的來源。|  
 |**allow_interactive_resolver**|**bit**|指定是否啟用發行項的互動式解析程式。 **1**指定發行項上使用互動式解析程式。|  
 |**fast_multicol_updateproc**|**bit**|指定是否已啟用合併代理程式，以在 UPDATE 陳述式中，將變更套用相同資料列的多個資料行中。<br /><br /> **0** = 變更為個別更新每個資料行的問題。<br /><br /> **1** = 發出 UPDATE 陳述式，這會導致更新發生在單一陳述式的多個資料行上。|  
 |**check_permissions**|**int**|合併代理程式將變更套用在發行者時，將驗證之資料表層級權限的點陣圖。 *check_permissions*可以有下列值之一：<br /><br /> **0x00** = 不檢查權限。<br /><br /> **0x10** = 在發行者端檢查權限，才可上傳在訂閱者端進行的 Insert。<br /><br /> **0x20** = 在發行者端檢查權限，在上傳在訂閱者端進行的更新之前。<br /><br /> **0x40** = 在上傳在訂閱者端所作的刪除之前的發行者端檢查權限。|  
 |**maxversion_at_cleanup**|**int**|清除中繼資料的最高層代 (Generation)。|  
-|**processing_order**|**int**|指出合併式發行集中; 的發行項的處理順序值**0**指出發行項並未排序，，和處理順序從最低到最高值的發行項。 如果兩個發行項有相同的值，就會同時處理它們。 如需詳細資訊，請參閱 <<c0> [ 指定合併式複寫屬性](../../relational-databases/replication/merge/specify-merge-replication-properties.md)。|  
+|**processing_order**|**int**|指出合併式發行集中; 的發行項的處理順序值**0**指出發行項並未排序，，和處理順序從最低到最高值的發行項。 如果兩個發行項有相同的值，就會同時處理它們。 如需詳細資訊，請參閱[指定合併式複寫屬性](../../relational-databases/replication/merge/specify-merge-replication-properties.md)。|  
 |**published_in_tran_pub**|**bit**|指出合併式發行集中的發行項也在交易式發行集中發行。<br /><br /> **0** = 發行項不發行在交易式發行項中。<br /><br /> **1** = 發行項也發行在交易式發行項中。|  
 |**upload_options**|**tinyiny**|定義是否能在訂閱者端進行變更或從訂閱者上傳變更，它可以是下列值之一。<br /><br /> **0** = 在訂閱者端進行的更新沒有限制; 所有的變更會上傳到 「 發行者 」。<br /><br /> **1** = 允許在訂閱者，但變更不會上傳到 「 發行者 」。<br /><br /> **2** = 不允許在訂閱者端進行變更。|  
 |**輕量型**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**delete_proc**|**sysname**|預設衝突解析程式在同步處理期間刪除資料列所使用的程序。|  
 |**before_upd_view_objid**|**int**|在更新之前，資料表的檢視之識別碼。|  
-|**delete_tracking**|**bit**|指出是否複寫刪除。<br /><br /> **0** = 不複寫刪除。<br /><br /> **1** = 複寫刪除，這是合併式複寫的預設行為。<br /><br /> 當 windows 7 *delete_tracking*是**0**、 訂閱者端刪除的資料列必須手動移除在發行者上，並在 「 訂閱者 」 必須手動移除在發行者端刪除的資料列。<br /><br /> 注意：值為**0**導致無法聚合。|  
-|**compensate_for_errors**|**bit**|指出在同步處理期間發現錯誤時，是否採取補償動作。<br /><br /> **0** = 補償動作會停用。<br /><br /> **1** = 無法在 「 訂閱者 」 或 「 發行者 」 一定會導致套用至補償動作恢復這些變更，這是合併式複寫的預設行為的變更。<br /><br /> 注意：值為**0**導致無法聚合。|  
+|**delete_tracking**|**bit**|指出是否複寫刪除。<br /><br /> **0** = 不複寫刪除。<br /><br /> **1** = 複寫刪除，這是合併式複寫的預設行為。<br /><br /> 當 windows 7 *delete_tracking*是**0**、 訂閱者端刪除的資料列必須手動移除在發行者上，並在 「 訂閱者 」 必須手動移除在發行者端刪除的資料列。<br /><br /> 注意:值為**0**導致無法聚合。|  
+|**compensate_for_errors**|**bit**|指出在同步處理期間發現錯誤時，是否採取補償動作。<br /><br /> **0** = 補償動作會停用。<br /><br /> **1** = 無法在 「 訂閱者 」 或 「 發行者 」 一定會導致套用至補償動作恢復這些變更，這是合併式複寫的預設行為的變更。<br /><br /> 注意:值為**0**導致無法聚合。|  
 |**pub_range**|**bigint**|發行者識別範圍大小。|  
 |**範圍**|**bigint**|將在調整中指派給訂閱者的連續識別值大小。|  
 |**threshold**|**int**|識別範圍臨界值百分比。|  
@@ -92,7 +91,7 @@ ms.locfileid: "54125878"
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addmergearticle &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [sysmergearticles &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-tables/sysmergearticles-transact-sql.md)  

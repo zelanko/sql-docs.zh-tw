@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f04b786aaef8a994cff1051a289bbdad3b3fd5ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eda3f15f0d9ca1cfe04c25bfee5f2ece827e8b83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63311965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908999"
 ---
 # <a name="managing-passwords-mysqltosql"></a>管理密碼 (MySQLToSQL)
 本章節是關於保護資料庫的密碼和匯入，或將它們匯出到伺服器的程序：  
