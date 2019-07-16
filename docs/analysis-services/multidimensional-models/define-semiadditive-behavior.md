@@ -1,5 +1,5 @@
 ---
-title: 定義局部加總行為 |Microsoft 文件
+title: 定義局部加總行為 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ab36e1835af05010fa3fa206e49feec6161c31d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023435"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178637"
 ---
 # <a name="define-semiadditive-behavior"></a>定義局部加總行為
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,12 +22,12 @@ ms.locfileid: "34023435"
   
  將局部加總行為加入 Cube，以定義個別量值或帳戶類型屬性成員的彙總方法。 如果 Cube 包含帳戶維度，您可以根據帳戶類型自動設定局部加總行為。  
   
- 若要加入局部加總行為，請在 Cube 設計師中開啟 Cube，然後從 [Cube] 功能表中選擇 [加入商業智慧]。 請在 [商業智慧精靈] 中，選取 [選擇增強功能] 頁面上的 [定義局部加總行為] 選項。 然後，此精靈會引導您逐步完成識別具有局部加總行為的量值。  
+ 若要加入局部加總行為，請在 Cube 設計師中開啟 Cube，然後從 [Cube] 功能表中選擇 [加入商業智慧]  。 請在 [商業智慧精靈] 中，選取 [選擇增強功能]  頁面上的 [定義局部加總行為]  選項。 然後，此精靈會引導您逐步完成識別具有局部加總行為的量值。  
   
  除了 Standard 版中提供的 LastChild 之外，只有商業智慧或 Enterprise 版中提供局部加總行為。  
   
 ## <a name="define-semiadditive-behavior"></a>定義局部加總行為  
- 在精靈的 [定義局部加總行為] 頁面上，選取下列其中一個選項來選擇如何定義局部加總：  
+ 在精靈的 [定義局部加總行為]  頁面上，選取下列其中一個選項來選擇如何定義局部加總：  
   
  **關閉局部加總行為**  
  從先前定義局部加總行為的 Cube 中移除局部加總行為。 如果量值設成下列任何彙總函式類型，此選取項目會將其重設為 **SUM** ：  
@@ -44,11 +44,11 @@ ms.locfileid: "34023435"
   
 -   第一個非空白子系  
   
--   無  
+-   None  
   
- 此選項不會變更具有下列一般彙總函式的量值： **Sum**、 **Min**、 **Max**、 **Count**或 **Distinct****Count**。  
+ 此選項不會變更具有下列一般彙總函式的量值：**總和**， **Min**， **Max**，**計數**，或**相異 * * * 計數**。  
   
- **此精靈偵測到包含局部加總成員的 'Account" 帳戶維度。伺服器將會彙總此維度，根據每一個帳戶類型指定的局部加總行為的成員。**  
+ **精靈已偵測到 ' 帳戶 」 包含局部加總成員的帳戶維度。伺服器會彙總此維度，依據每一個帳戶類型指定的局部加總行為的成員。**  
  讓系統將帳戶類型維度所建立維度之量值群組中的所有量值設定為「依帳戶」彙總函式，而且伺服器將會根據每一個帳戶類型所指定之局部加總行為來彙總此維度的成員。  
   
 > [!NOTE]  
@@ -62,7 +62,7 @@ ms.locfileid: "34023435"
   
  針對每個量值，您可以從下表描述之局部加總功能的類型進行選取。  
   
-|局部加總函數|說明|  
+|局部加總函數|描述|  
 |---------------------------|-----------------|  
 |子系的平均|成員的彙總是其子系的平均。|  
 |ByAccount|系統會讀取帳戶類型所指定的局部加總行為。|  
@@ -74,7 +74,7 @@ ms.locfileid: "34023435"
 |LastNonEmpty|成員值判斷為包含資料之時間維度最後一個子系的值。|  
 |Max|套用標準最大彙總函式。|  
 |Min|套用標準最小彙總函式。|  
-|無|不套用任何彙總。|  
+|None|不套用任何彙總。|  
 |SUM|套用標準總和函數。|  
   
  當精靈完成時，會覆寫全部現有的局部加總行為。  

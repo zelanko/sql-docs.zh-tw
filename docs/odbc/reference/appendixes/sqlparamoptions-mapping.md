@@ -1,5 +1,5 @@
 ---
-title: SQLParamOptions Mapping | Microsoft Docs
+title: SQLParamOptions 對應 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 57ed65f6-9620-4738-b331-19d2a2b5cae4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 821af40a9550cc6e5fc038bb8e9a24f9e4323441
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 7f4fa71c06b4a9bf3b01d39fa02d4eadeb9b0778
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125723"
 ---
 # <a name="sqlparamoptions-mapping"></a>SQLParamOptions 對應
 當應用程式呼叫**SQLParamOptions**透過 ODBC *3.x*驅動程式，會呼叫  

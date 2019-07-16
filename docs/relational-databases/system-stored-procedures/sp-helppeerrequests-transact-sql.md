@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a51015d8c1e6e6df7f23f32fc7febf7fe9e429f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5b9e2a370c9acc9c22dac7e5e60ceb10e08e46ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137616"
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ## <a name="arguments"></a>引數  
 `[ @publication = ] 'publication'` 是針對它而傳送狀態要求的對等項目-拓撲中的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
-`[ @description = ] 'description'` 值，可用來識別個別狀態要求，可讓您篩選傳回的回應以使用者定義呼叫時所提供的資訊[b &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)。 *描述*已**nvarchar(4000)**，預設值是**%**。 依預設，它會傳回所有的發行集狀態要求。 這個參數用來傳回只有狀態的要求中提供之值的描述*描述*，其中使用比對字元字串[像&#40;-&#41; ](../../t-sql/language-elements/like-transact-sql.md)子句。  
+`[ @description = ] 'description'` 值，可用來識別個別狀態要求，可讓您篩選傳回的回應以使用者定義呼叫時所提供的資訊[b &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)。 *描述*已**nvarchar(4000)** ，預設值是 **%** 。 依預設，它會傳回所有的發行集狀態要求。 這個參數用來傳回只有狀態的要求中提供之值的描述*描述*，其中使用比對字元字串[像&#40;-&#41; ](../../t-sql/language-elements/like-transact-sql.md)子句。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -64,7 +63,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_helppeerrequests**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [sp_helppeerresponses &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)  
+ [sp_deletepeerrequesthistory &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_helppeerresponses &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)  
   
   

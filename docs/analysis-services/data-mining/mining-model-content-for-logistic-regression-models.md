@@ -1,5 +1,5 @@
 ---
-title: 羅吉斯迴歸模型的採礦模型內容 |Microsoft 文件
+title: 羅吉斯迴歸模型的採礦模型內容 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8d5aab960b1987a0c076504b4e2858403a2ecb99
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017595"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182733"
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>Mining Model Content for Logistic Regression Models
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34017595"
   
  不過，在羅吉斯迴歸模型中，代表隱藏層的節點是空的，而且沒有子系。 因此，此模型包含代表個別輸出 (NODE_TYPE = 23) 與個別輸入 (NODE_TYPE = 21) 的節點，但是不包含個別的隱藏節點。  
   
- ![羅吉斯迴歸模型內容結構](../../analysis-services/data-mining/media/skt-modelcontentstructure-logregc.gif "的羅吉斯迴歸模型內容結構")  
+ ![內容，羅吉斯迴歸模型的結構](../../analysis-services/data-mining/media/skt-modelcontentstructure-logregc.gif "的羅吉斯迴歸模型內容結構")  
   
  根據預設，羅吉斯迴歸模型顯示在 **[Microsoft 類神經網路檢視器]** 中。 您可以利用這個自訂的檢視器，篩選輸入屬性及其值，並以圖形方式查看這些屬性和值如何影響輸出。 檢視器中的工具提示會顯示與每個成對輸入和輸出值相關聯的機率與增益。 如需詳細資訊，請參閱 [使用 Microsoft 類神經網路檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "34017595"
 ## <a name="model-content-for-a-logistic-regression-model"></a>羅吉斯迴歸模型的模型內容  
  本節僅針對採礦模型內容中與羅吉斯迴歸具有特定相關的資料行，提供詳細資料和範例。 此模型內容與類神經網路模型的內容幾乎相同，但是為了方便，適用於類神經網路模型的描述在此資料表中可能會重複。  
   
- 如需結構描述資料列集 (例如 MODEL_CATALOG 和 MODEL_NAME) 中一般用途資料行的詳細資訊 (此處沒有說明)，或採礦模型術語的說明，請參閱 [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md) (採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
+ 如需結構描述資料列集 (例如 MODEL_CATALOG 和 MODEL_NAME) 中一般用途資料行的詳細資訊 (此處沒有說明)，或採礦模型術語的說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
  MODEL_CATALOG  
  模型儲存位置所在資料庫的名稱。  
@@ -68,7 +68,7 @@ ms.locfileid: "34017595"
  NODE_TYPE  
  羅吉斯迴歸模型會輸出下列節點類型：  
   
-|節點類型識別碼|說明|  
+|節點類型識別碼|描述|  
 |------------------|-----------------|  
 |1|模型。|  
 |17|子網路的組合管理節點。|  

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 76f1f4d690956837b28ebaa5bafc50d42efa7146
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67225916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68194087"
 ---
 SQL

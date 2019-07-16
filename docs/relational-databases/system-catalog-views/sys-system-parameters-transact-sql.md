@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 0d135c5f-68b5-4009-a0da-35e6abfee0ff
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca972eebfb39aa44248e17eecfc952fdf71f98ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da8d2bb7be2c3da502065d9ee210c4c1ef8c2094
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108815"
 ---
 # <a name="syssystemparameters-transact-sql"></a>sys.system_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47727368"
 |**parameter_id**|**int**|參數的識別碼。 在物件中，這是唯一的。 如果物件是純量函數**parameter_id** = 0 就代表傳回的值。|  
 |**system_type_id**|**tinyint**|參數系統類型的識別碼。|  
 |**user_type_id**|**int**|使用者所定義的參數類型識別碼。<br /><br /> 若要傳回之型別的名稱，加入[sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目錄檢視這個資料行。|  
-|**max_length**|**smallint**|參數的最大長度 (以位元組為單位)。 值會是資料行資料類型時的-1 **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或**xml**。|  
+|**max_length**|**smallint**|參數的最大長度 (以位元組為單位)。 值會是資料行資料類型時的-1 **varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或**xml**。|  
 |**有效位數**|**tinyint**|如果是以數值為基礎，便是參數的有效位數；否則，便是 0。|  
 |**scale**|**tinyint**|如果是以數值為基礎，便是參數的小數位數；否則，便是 0。|  
 |**is_output**|**bit**|1 = 參數是輸出 (或傳回)；否則，便是 0。|  

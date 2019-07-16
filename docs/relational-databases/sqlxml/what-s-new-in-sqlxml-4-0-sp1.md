@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: deb6b0044caabeaca23f5bb7c01f976ca6b874e3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0a852e2d9d85c6d3801c8a62fd7c1ff5accb4f8f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135304"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>什麼&#39;新功能 SQLXML 4.0 SP1
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -147,7 +146,7 @@ ms.locfileid: "56016839"
   
      導入這個機碼的原因，是讓您可以選擇保有資料中的空白字元。 如果加入這個登錄機碼並將其值設定為 0，則 XML 中的空白字元 (LF、CR 和索引標籤) 會編碼傳回 (如果使用屬性值)。 如果使用元素值，則只有 CR 會編碼傳回。  
   
-     例如：  
+     例如:  
   
     ```  
     CREATE TABLE T( Col1 int, Col2 nvarchar(100));  

@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_index_columns (Transact-SQL) | Microsoft Docs
+title: sys.fulltext_index_columns & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,14 +21,13 @@ ms.assetid: c34b8625-e53c-4281-ace6-d46230d5cb84
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c695997906aeb5c3d5181cc8683f8401adb5df17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c139a45df1031ac47750d995780f8e13ea64f2c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133808"
 ---
 # <a name="sysfulltextindexcolumns-transact-sql"></a>sys.fulltext_index_columns (Transact-SQL)
 

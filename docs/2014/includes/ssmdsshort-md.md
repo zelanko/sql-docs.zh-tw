@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: c95fbf6f29ba266e546eda2a07db30409cdc323d
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67208542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68190446"
 ---
 Master Data Services

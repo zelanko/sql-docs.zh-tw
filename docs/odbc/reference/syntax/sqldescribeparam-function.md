@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e810d2e7ff3f69faea5fdcbccbb7f7ba276df48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 337ed5808b8eb3cf964977fcba70307984d1b2b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104709"
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam 函數
 **合規性**  

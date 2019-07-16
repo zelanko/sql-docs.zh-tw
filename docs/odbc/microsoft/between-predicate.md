@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0cc7464b-d788-4720-98d8-411e1169185f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a4411345d790e64ae9fb21144a7d82ffe4cd45e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a0ac99729966acdcb03c2aab0175c34bba0c08a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63301963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138121"
 ---
 # <a name="between-predicate"></a>BETWEEN 述詞
 語法：  

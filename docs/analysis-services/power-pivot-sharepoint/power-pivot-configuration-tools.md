@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2d15054f3d6ebbcd25627df42aab5b9248db1f6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207497"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163948"
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot 組態工具
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -59,16 +59,16 @@ ms.locfileid: "53207497"
 ###  <a name="bkmk_sum_differences_betweentools"></a> 兩種組態工具之間的差異  
  這兩個版本的組態工具很類似，但是兩者執行的組態設定步驟有些差異。 這些差異是因為 SharePoint 2010 和 SharePoint 2013 之間的變更，以及 SQL Server 2012 SP1 版的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 與舊版 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 之間的架構差異而產生。  
   
- 下表描述 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態] 工具的新功能和變更的功能。 表中還會描述 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具] 中 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態工具] 所沒有的功能。 資料表中資料列的順序與組態工具中索引標籤的順序相同。  
+ 下表描述 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態]  工具的新功能和變更的功能。 表中還會描述 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具]  中 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態工具] 所沒有的功能。 資料表中資料列的順序與組態工具中索引標籤的順序相同。  
   
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具|  
 |--------------------------------------------------------------|-----------------------------------------------|  
-|主頁面有 [適用於 Excel Services 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器] 這個新選項。 這個選項支援採用在 SharePoint 伺服器陣列外部執行之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的新架構。 您設定 Excel Services 使用以 SharePoint 模式執行的一部或多部 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。<br /><br /> ![在新的組態工具中的 PowerPivot 伺服器](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-mainpage.gif "新組態工具中的 PowerPivot 伺服器")||  
-||2010 工具包括 [在本機伺服器上註冊 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])] 頁面，用來設定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的本機執行個體。 這個頁面不是 2013 工具的一部分，因為沒有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的本機執行個體。<br /><br /> ![舊組態工具中的服務帳戶身分](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "做為舊組態工具中的服務帳戶")|  
-||[建立 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式] 頁面多了 [升級活頁簿以啟用資料重新整理] 這個額外選項。 這個選項在 2013 工具中無法使用。<br /><br /> ![升級舊組態工具中的活頁簿](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "升級舊組態工具中的活頁簿")|  
-|2013 工具有 [設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器] 這個新頁面。 這個頁面支援在 SharePoint 伺服器陣列外部執行之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的新架構。 根據預設，在主頁面的文字方塊 [適用於 Excel Services 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器] 中輸入的伺服器名稱，也會在 [設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器] 上列出。<br /><br /> ![註冊 PowerPivot 伺服器新組態工具](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "註冊的 PowerPivot 伺服器新組態工具")||  
-|2013 工具有一個新頁面 [將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 增益集註冊為 Excel Services Usage Tracker]。 SharePoint 2010 Excel Services 不會追蹤 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 的使用量資料。||  
-||2010 工具包括 [加入 MSOLAP.5 做為受信任的提供者] 這個頁面，可用來註冊 MSOLAP，讓 SharePoint 2010 中的 Excel Services 可以載入 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 模型。 這個頁面不是 2013 工具的一部分。 SharePoint 2013 Excel Services 不會使用 MSOLAP 提供者來載入模型。|  
+|主頁面有 [適用於 Excel Services 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器]  這個新選項。 這個選項支援採用在 SharePoint 伺服器陣列外部執行之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的新架構。 您設定 Excel Services 使用以 SharePoint 模式執行的一部或多部 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。<br /><br /> ![在新的組態工具中的 PowerPivot 伺服器](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-mainpage.gif "新組態工具中的 PowerPivot 伺服器")||  
+||2010 工具包括 [在本機伺服器上註冊 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])]  頁面，用來設定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的本機執行個體。 這個頁面不是 2013 工具的一部分，因為沒有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的本機執行個體。<br /><br /> ![舊組態工具中的服務帳戶身分](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "做為舊組態工具中的服務帳戶")|  
+||[建立 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式]  頁面多了 [升級活頁簿以啟用資料重新整理]  這個額外選項。 這個選項在 2013 工具中無法使用。<br /><br /> ![升級舊組態工具中的活頁簿](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "升級舊組態工具中的活頁簿")|  
+|2013 工具有 [設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器]  這個新頁面。 這個頁面支援在 SharePoint 伺服器陣列外部執行之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的新架構。 根據預設，在主頁面的文字方塊 [適用於 Excel Services 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器]  中輸入的伺服器名稱，也會在 [設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器]  上列出。<br /><br /> ![註冊 PowerPivot 伺服器新組態工具](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "註冊的 PowerPivot 伺服器新組態工具")||  
+|2013 工具有一個新頁面 [將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 增益集註冊為 Excel Services Usage Tracker]  。 SharePoint 2010 Excel Services 不會追蹤 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 的使用量資料。||  
+||2010 工具包括 [加入 MSOLAP.5 做為受信任的提供者]  這個頁面，可用來註冊 MSOLAP，讓 SharePoint 2010 中的 Excel Services 可以載入 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 模型。 這個頁面不是 2013 工具的一部分。 SharePoint 2013 Excel Services 不會使用 MSOLAP 提供者來載入模型。|  
   
 ##  <a name="bkmk_overview"></a> 使用 Power Pivot 組態工具的概觀  
  當您啟動其中一種 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具時，該工具會評估現有的安裝以判斷適用的作業。 在新的安裝上，只有組態工作可以使用。 設定伺服器後，移除工作就會出現。 如果您從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 執行個體開始，升級也會在可用工作的清單中啟用。  
@@ -77,7 +77,7 @@ ms.locfileid: "53207497"
   
  此外，此工具可以偵測到是否已設定伺服器陣列或缺少必要的功能。 如果已安裝 SharePoint 程式檔案但未設定伺服器陣列，此工具會提供設定伺服器陣列與 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝的動作。  
   
- 您可以檢閱 [指令碼] 索引標籤，以學習並了解如何使用 Windows PowerShell 設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和 SharePoint。 如需詳細資訊，請參閱下列內容：  
+ 您可以檢閱 [指令碼]  索引標籤，以學習並了解如何使用 Windows PowerShell 設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和 SharePoint。 如需詳細資訊，請參閱下列內容：  
   
 -   [使用 Windows PowerShell 的 Power Pivot 組態](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
   
@@ -93,7 +93,7 @@ ms.locfileid: "53207497"
   
 1.  在 [開始]  畫面上輸入 **powerpivot**  
   
-     在 [開始] 畫面上輸入 **powerpivot**，或在 [開始] 功能表上，依序按一下 [所有程式]、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、[組態工具]，然後按一下下列其中一個選項：  
+     在 [開始]  畫面上輸入 **powerpivot**，或在 [開始]  功能表上，依序按一下 [所有程式]  、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、[組態工具]  ，然後按一下下列其中一個選項：  
   
     -   **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具**。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "53207497"
   
 3.  根據目前的安裝狀態而定，可以執行下列其中一項或多項工作：  
   
-    1.  按一下 [設定或修復 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint] 來完成安裝後工作或修復安裝。  
+    1.  按一下 [設定或修復 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint]  來完成安裝後工作或修復安裝。  
   
     2.  按一下 **[移除功能、服務、應用程式和方案]** ，從伺服器陣列移除功能和方案。  
   
