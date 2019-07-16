@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 543526fb-7c54-42f7-9371-926730ca5483
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3bdeddbd8e2b94fe28f3086c7d2f4a96318cc8ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8745580b1e478c2cfa9548887affb64e07322779
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898822"
 ---
 # <a name="sqlgetinfo-returned-values-for-paradox"></a>Paradox 的 SQLGetInfo 傳回值
 下表列出 C 語言 #defines *fInfoType*引數和所傳回的對應值**SQLGetInfo**。 這項資訊可以擷取傳遞所列出的 C 語言 #defines **SQLGetInfo**中*fInfoType*引數。 如需詳細資訊，所傳回之值的相關**SQLGetInfo**，請參閱*ODBC 程式設計人員參考*。  

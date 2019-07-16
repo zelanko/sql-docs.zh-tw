@@ -1,5 +1,5 @@
 ---
-title: bcp_gettypename |Microsoft Docs
+title: bcp_gettypename | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de5b4a62dbb86008f686cb0d630386340238f42c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57d2a7562efce015f5fb693cbb9a2f6114826e6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895546"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +41,7 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>引數  
- *語彙基元*  
+ *token*  
  指出 BCP 類型 Token 的值。  
   
  *field*  
@@ -56,7 +55,7 @@ RETCODE bcp_gettypename (
   
  以下的資料表會指定可能的 BCP 類型 (不論它們是否為最大類型) 以及預期的輸出。  
   
-|BCP 類型名稱|MaxType|輸出|  
+|BCP 類型名稱|MaxType|Output|  
 |-------------------|-------------|------------|  
 |**SQLDECIMAL**|之前或之後|**decimal**|  
 |**SQLNUMERIC**|之前或之後|**numeric**|  
@@ -66,7 +65,7 @@ RETCODE bcp_gettypename (
 |**SQLMONEY**|之前或之後|**money**|  
 |**SQLFLT8**|之前或之後|**float**|  
 |**SQLDATETIME**|之前或之後|**datetime**|  
-|**SQLBITN**|之前或之後|**位元 null**|  
+|**SQLBITN**|之前或之後|**bit-null**|  
 |**SQLBIT**|之前或之後|**bit**|  
 |**SQLBIGCHAR**|否|**char**|  
 |**SQLCHARACTER**|否|**char**|  
@@ -77,14 +76,14 @@ RETCODE bcp_gettypename (
 |**SQLBINARY**|否|**二進位**|  
 |**SQLBIGVARBINARY**|否|**varbinary**|  
 |**SQLVARBINARY**|否|**varbinary**|  
-|**SQLIMAGE**|之前或之後|**映像**|  
+|**SQLIMAGE**|之前或之後|**影像**|  
 |**SQLINTN**|之前或之後|**int-null**|  
-|**SQLDATETIMN**|之前或之後|**datetime null**|  
-|**SQLMONEYN**|之前或之後|**money null**|  
+|**SQLDATETIMN**|之前或之後|**datetime-null**|  
+|**SQLMONEYN**|之前或之後|**money-null**|  
 |**SQLFLTN**|之前或之後|**float-null**|  
 |**SQLAOPSUM**|之前或之後|**Sum**|  
 |**SQLAOPAVG**|之前或之後|**Avg**|  
-|**SQLAOPCNT**|之前或之後|**Count**|  
+|**SQLAOPCNT**|之前或之後|**計數**|  
 |**SQLAOPMIN**|之前或之後|**Min**|  
 |**SQLAOPMAX**|之前或之後|**Max**|  
 |**SQLDATETIM4**|之前或之後|**smalldatetime**|  

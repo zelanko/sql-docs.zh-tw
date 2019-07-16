@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 015ea45d1383e6813973aeb1e4c86451a506a2aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14837bc5ba3368fbb0d33680ee1c54936ab0a224
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213323"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898852"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (Visual FoxPro ODBC Driver)
 > [!NOTE]  
@@ -46,7 +45,7 @@ ms.locfileid: "63213323"
 ## <a name="b"></a>B  
  SQL_BOOKMARK_PERSISTENCE 傳回 SQL_BP_SCROLL。  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
  SQL_COLUMN_ALIAS 傳回 'Y'。  
   
  SQL_CONCAT_NULL_BEHAVIOR 傳回連接。  
@@ -159,7 +158,7 @@ ms.locfileid: "63213323"
   
  SQL_GROUP_BY 傳回 SQL_GB_NO_RELATION。  
   
-## <a name="i-j"></a>I-J  
+## <a name="i-j"></a>我-J  
  SQL_IDENTIFIER_CASE 傳回 SQL_IC_MIXED。  
   
  SQL_IDENTIFIER_QUOTE_CHAR 傳回 '。  
@@ -199,7 +198,7 @@ ms.locfileid: "63213323"
   
  SQL_MAX_QUALIFIER_NAME_LEN 傳回最大的作業系統路徑長度。  
   
- SQL_MAX_ROW_SIZE returns 254^2.  
+ SQL_MAX_ROW_SIZE 傳回 254 ^2。  
   
  SQL_MAX_ROW_SIZE_INCLUDES_LONG 傳回 ' N '。  
   
@@ -355,7 +354,7 @@ ms.locfileid: "63213323"
   
 -   SQL_FN_STR_UCASE  
   
--   SQL_FN_STR_SPACE.  
+-   SQL_FN_STR_SPACE。  
   
  SQL_SUBQUERIES 會傳回：  
   
@@ -367,7 +366,7 @@ ms.locfileid: "63213323"
   
 -   SQL_SQ_IN  
   
--   SQL_SQ_QUANTIFIED.  
+-   SQL_SQ_QUANTIFIED。  
   
  SQL_SYSTEM_FUNCTIONS 會傳回：  
   
@@ -384,7 +383,7 @@ ms.locfileid: "63213323"
   
  SQL_TIMEDATE_ADD_INTERVALS 會傳回：  
   
--   SQL_FN_TSI_ SECOND  
+-   SQL_FN_TSI_ 秒  
   
 -   SQL_FN_TSI_MINUTE  
   
@@ -406,7 +405,7 @@ ms.locfileid: "63213323"
   
  SQL_TIMEDATE_DIFF_INTERVALS 會傳回：  
   
--   SQL_FN_TSI_ SECOND  
+-   SQL_FN_TSI_ 秒  
   
 -   SQL_FN_TSI_MINUTE  
   
