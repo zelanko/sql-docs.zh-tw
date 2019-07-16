@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15366693f212690176620bd1b395dae856ff1302
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f16cac6a715716dcef0a1c2b337716835c14b2b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910376"
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>SQLSetConnectAttrForDbcInfo 函式
 **合規性**  

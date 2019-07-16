@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: jroth
-ms.openlocfilehash: f88562c25982ce8c5d6c8d4b87dd629e4ba57c03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5251b4da6334e8aeba1c467ff921f6f25b2ab26a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008374"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>資料移轉小幫手的新功能
 本文章列出新增的項目在每個版本的 Data Migration Assistant (DMA)。

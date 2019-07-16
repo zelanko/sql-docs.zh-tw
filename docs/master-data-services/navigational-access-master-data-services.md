@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 942fe720fb4ba0e1dc65f2b6f918b3e5c1f985a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b6ba978887aed556b7a53e613c9f79e36875b61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488056"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928119"
 ---
 # <a name="navigational-access-master-data-services"></a>導覽存取權 (Master Data Services)
 

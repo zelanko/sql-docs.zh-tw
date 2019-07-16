@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 23afb52d9728fae0d7e9c0fe1615e3f96ff58114
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1a542ffba5f24ec1ed3cfbad0b6a084b81b74d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003498"
 ---
 # <a name="mdx-language-reference-mdx"></a>MDX 語言參考 (MDX)
 

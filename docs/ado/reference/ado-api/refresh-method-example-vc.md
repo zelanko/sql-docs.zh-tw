@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c6c09ebcf6b161f7b294e1cb70bff4c0f6137126
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 58bc25f41171e4258347522efe7a02f2620cfd82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917268"
 ---
 # <a name="refresh-method-example-vc"></a>Refresh 方法範例 (VC++)
 此範例示範如何使用[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)方法，以重新整理[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)預存程序的集合[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  

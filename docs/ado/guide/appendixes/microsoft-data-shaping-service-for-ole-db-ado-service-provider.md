@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7741cc84b27991cc0831e5e28f397f46d22020a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ddef2feab633627c9549b73787faa1d104d69c5e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926815"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft 資料成形 Service for OLE DB 概觀
 > [!IMPORTANT]

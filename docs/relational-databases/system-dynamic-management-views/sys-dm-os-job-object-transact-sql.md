@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: fdc778a34a513c2aca12da0dd0e1245e50dc5d6a
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 43063bb56607d1b5a21ae04b40ee4c7a17825521
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716282"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900139"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

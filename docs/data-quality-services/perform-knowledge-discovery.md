@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 64841ad2cc0613c7774263a985e098e8c7d4cbd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be28b40ad4c967f057c5d47f1a1db37db76d1e00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991814"
 ---
 # <a name="perform-knowledge-discovery"></a>執行知識探索
 
@@ -184,7 +183,7 @@ ms.locfileid: "66787930"
   
 8.  **從 Excel 匯入定義域值**：若要從 Excel 試算表新增新值，請按一下 [匯入值]  圖示的向下箭號，然後選取 [從 Excel 匯入定義域值]  。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]** 。 如需詳細資訊，請參閱 [將 Excel 檔案中的值匯入定義域中](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)。  
   
-9. **匯入專案值**：若要從資料品質專案新增新值，請按一下 [匯入值]  圖示的向下箭號，然後選取 [匯入專案值]  。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]** 。 選取要匯入的值來自於哪一個專案，然後按一下 **[確定]** 。 隨即顯示匯入的值。 按一下 **[完成]** 。 如需詳細資訊，請參閱＜將專案值匯入定義域＞。  
+9. **匯入專案值**：若要從資料品質專案新增新值，請按一下 [匯入值]  圖示的向下箭號，然後選取 [匯入專案值]  。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]** 。 選取要匯入的值來自於哪一個專案，然後按一下 **[確定]** 。 隨即顯示匯入的值。 按一下 [ **完成**]。 如需詳細資訊，請參閱＜將專案值匯入定義域＞。  
   
 10. **刪除選取的定義域值**：若要從定義域中移除一個或多個現有值，請選取值，然後按一下 [刪除選取的定義域值]  按鈕。 DQS_NULL 的項目無法刪除，所以如果您選擇多個要刪除的值，而且 DQS_NULL 的項目是其中一個，此作業將會失敗。  
   

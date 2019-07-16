@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ca44809c-8647-48b6-a7fb-0be70a02f53e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5fde8adfb1b3f78e8dd0d047f8b100ddada4608c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0cd6d06a50047f431700af9418a504faa4bd6957
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919697"
 ---
 # <a name="commandtype-property-ado"></a>CommandType 屬性 (ADO)
 表示的型別[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  

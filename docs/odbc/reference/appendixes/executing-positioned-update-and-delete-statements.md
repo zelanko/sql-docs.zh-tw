@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2391c01d93c876562ab9d870ab0dba22bf74cea5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c69f784c2ce7c29cb49c81bf23f34a9cad12089
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63189023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913624"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>執行定點更新和刪除陳述式
 > [!IMPORTANT]  
@@ -35,9 +34,9 @@ ms.locfileid: "63189023"
   
      **更新** *資料表名稱*  
   
-     **設定** *資料行識別碼* ** =** {*運算式* &#124; **NULL**}  
+     **設定** *資料行識別碼*  **=** {*運算式* &#124; **NULL**}  
   
-     [**,** *column-identifier* **=** {*expression* &#124; **NULL**}]  
+     [ **，** *資料行識別碼* **=** {*運算式* &#124; **NULL**}]  
   
      **WHERE CURRENT OF** *資料指標名稱*  
   

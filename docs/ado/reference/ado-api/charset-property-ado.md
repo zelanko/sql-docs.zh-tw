@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: da9e41d594890b399be975a9f1465a6bff50010a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69d65a5330ea83b955629cd9de9684ecc47906ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920086"
 ---
 # <a name="charset-property-ado"></a>Charset 屬性 (ADO)
 指出字元集所在的文字內容[Stream](../../../ado/reference/ado-api/stream-object-ado.md)應轉譯為儲存體中的內部緩衝區**Stream**物件。  

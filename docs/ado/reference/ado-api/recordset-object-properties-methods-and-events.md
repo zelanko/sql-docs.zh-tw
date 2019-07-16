@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1feb7d741a867f729df83442ba4d9f407a062710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f84faca18ad1f4f4bf7e036fa4ccbe0335154a63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917337"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>資料錄集物件屬性、 方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
@@ -58,7 +57,7 @@ ms.locfileid: "66711969"
   
  [MaxRecords 屬性](../../../ado/reference/ado-api/maxrecords-property-ado.md)  
   
- [PageCount Property](../../../ado/reference/ado-api/pagecount-property-ado.md)  
+ [PageCount 屬性](../../../ado/reference/ado-api/pagecount-property-ado.md)  
   
  [PageSize 屬性](../../../ado/reference/ado-api/pagesize-property-ado.md)  
   
@@ -121,7 +120,7 @@ ms.locfileid: "66711969"
   
  [UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  [EndOfRecordset 事件](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
   
  [FetchComplete 事件](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)  

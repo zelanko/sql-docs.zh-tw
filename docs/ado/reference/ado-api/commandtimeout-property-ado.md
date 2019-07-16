@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 556474c3b038f40e21467a4bbc945fc8f29fd5a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c8c6b10e63e4cacce0124eb11102db796168d9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919704"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout 屬性 (ADO)
 表示要在終止嘗試並產生錯誤之前，執行命令時的等候的時間。  

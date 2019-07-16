@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 35eb7e7ac49cda0601117566e8b377abf36b6aba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b63c81595cc25820a537a931dafe1e489a49b59f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66777797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992223"
 ---
 # <a name="data-quality-client-application"></a>Data Quality Client 應用程式
 

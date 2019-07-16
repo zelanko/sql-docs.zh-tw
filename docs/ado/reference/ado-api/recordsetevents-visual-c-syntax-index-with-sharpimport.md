@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: b7021f11-8242-4e9f-92e9-1a4472673fb1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f5b8da9f851e6171b2149d57da200d093d98d0ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd512cbb01ace33bad275981be4c895591cd229d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917318"
 ---
 # <a name="recordsetevents-visual-c-syntax-index-with-import"></a>RecordsetEvents (VisualC++含 #import 語法索引)
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
   
 ```  
 HRESULT WillChangeField( long cFields, const  

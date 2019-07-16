@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5e7f9a484ecb873a141f9b91a88c64f65ff25336
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6c174d2e6a659a3b9da8f89816b5bdf90342416
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917376"
 ---
 # <a name="readtext-method"></a>ReadText 方法
 讀取指定的文字的字元數[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。  

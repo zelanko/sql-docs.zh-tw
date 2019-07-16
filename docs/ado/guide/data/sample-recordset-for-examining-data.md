@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9ffc34dd95ac2f5ef6e26e796c4c05cd91b28ae0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1882c5298d92e17a7ddaa165288fddfab7fdb02b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924301"
 ---
 # <a name="sample-recordset-for-examining-data"></a>用於檢查資料的範例資料錄集
 首先，讓我們看看**資料錄集**物件傳回使用下列 SQL 查詢，針對 Microsoft SQL Server 中的基底的 Northwind 範例資料執行。  
@@ -36,7 +35,7 @@ WHERE CategoryID = 7
 |---------------|-----------------|---------------|  
 |7|得以 Bob 有機曬的梨子|30.0000|  
 |14|Tofu|23.2500|  
-|28|Rssle Sauerkraut|45.6000|  
+|28|Rssle 酸菜|45.6000|  
 |51|柳乾蘋果|53.0000|  
 |74|長壽豆腐|10.0000|  
   

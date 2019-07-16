@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4e1a885d-eed1-4993-9c87-e6fd781f437d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2a0b326eef888ebf36fded7ae4ab95fe9f1b6bc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c326a5dd3a964209af0cc4834b91bca9071da9e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904587"
 ---
 # <a name="sysremoteservicebindings-transact-sql"></a>sys.remote_service_bindings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

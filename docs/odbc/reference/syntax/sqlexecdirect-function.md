@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 985fcee1-f204-425c-bdd1-deb0e7d7bbd9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6a1c66c9ab423a6bb722c422450b99c1a47118f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0fa34020478308c1e0d5c5fe112bbeb04920f07e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537193"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003117"
 ---
 # <a name="sqlexecdirect-function"></a>SQLExecDirect 函式
 **合規性**  

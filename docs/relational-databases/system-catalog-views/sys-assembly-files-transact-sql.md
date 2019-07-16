@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1a384a2c-5556-4d12-a2ba-4da781363143
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0279d6c2850dff07b365e7543f387f6cf6e9f328
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb7f4f6b017b1251b873f0e45ab7688d9fd2c6bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62516080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001159"
 ---
 # <a name="sysassemblyfiles-transact-sql"></a>sys.assembly_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "62516080"
 |**assembly_id**|**int**|這個檔案所屬的組件識別碼。|  
 |**name**|**nvarchar(260)**|組件檔的名稱。|  
 |**file_id**|**int**|檔案識別碼。 在組件中，這是唯一的。 編號 1 的檔案識別碼代表組件 DLL。|  
-|**content**|**varbinary(max)**|檔案內容。|  
+|**內容**|**varbinary(max)**|檔案內容。|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

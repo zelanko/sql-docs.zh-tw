@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: f2ae4792f20cf59b08a280ff160ad03a0b1641d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eec1b8258d888ef520e996912683b92fb259e1aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992034"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>使用 DQSInstaller.exe 匯出及匯入 DQS 知識庫
 

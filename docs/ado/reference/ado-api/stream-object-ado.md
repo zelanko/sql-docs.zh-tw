@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0514531f-009d-4519-abc3-d727014a39f1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 509f91b3e19b8e1215919ce89a98c6ac1c8fc74f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c70a22a3048c769aac343d51e621e4d755d3baeb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710752"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916724"
 ---
 # <a name="stream-object-ado"></a>Stream 物件 (ADO)
 表示二進位資料或文字資料流。  

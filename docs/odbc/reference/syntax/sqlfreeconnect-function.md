@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0d22eaeb-3c75-47fb-af9a-6f7397e61b9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7d79776151f8fdf370b5b53231b7810fa371d4a3
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 37ecdbee0795734e0f046a78f6c262e9b3fe660b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002957"
 ---
 # <a name="sqlfreeconnect-function"></a>SQLFreeConnect 函式
 **合規性**  

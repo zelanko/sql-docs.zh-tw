@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e59e2dc-1e4a-47c0-a5c3-ae7b5f5e469c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 095f8e45c85a74bae9b15af63454846532bbc8c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c138f76b3c34a378418bb2ba655fa7a2bb5af739
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63311873"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908816"
 ---
 # <a name="new-gui-features-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 中的新 GUI 功能 (MySQLToSQL)
 此章節會描述 SSMA 使用者介面的新功能  

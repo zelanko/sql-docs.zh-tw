@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15074b31b1c147ef78a898dbb8624f3b40358d13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f9b3171d496f54942e7ac1005acea1b3566ff76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003072"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 函式
 **合規性**  
@@ -107,8 +106,8 @@ SQLRETURN SQLFetch(
 |條件|新的資料列集的第一個資料列|  
 |---------------|-----------------------------|  
 |開始之前|1|  
-|*CurrRowsetStart* \<= *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
-|*CurrRowsetStart* > *LastResultRow - RowsetSize*[1]|後端|  
+|*CurrRowsetStart* \< =  *LastResultRow-RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* > *LastResultRow-RowsetSize*[1]|後端|  
 |後端|後端|  
   
  [1] 如果之間擷取變更資料列集大小，這是曾經與前一個擷取的資料列集大小。  
@@ -232,16 +231,16 @@ SQLRETURN SQLFetch(
   
 |描述項欄位|Desc。|中的欄位|透過設定|  
 |----------------------|-----------|--------------|-----------------|  
-|SQL_DESC_ARRAY_SIZE|ARD|標頭|SQL_ATTR_ROW_ARRAY_SIZE statement attribute|  
-|SQL_DESC_ARRAY_STATUS_PTR|IRD|標頭|Sql_attr_row_status_ptr 設定陳述式屬性|  
-|SQL_DESC_BIND_OFFSET_PTR|ARD|標頭|SQL_ATTR_ROW_BIND_OFFSET_PTR statement attribute|  
-|SQL_DESC_BIND_TYPE|ARD|標頭|SQL_ATTR_ROW_BIND_TYPE statement attribute|  
-|SQL_DESC_COUNT|ARD|標頭|*ColumnNumber*引數**SQLBindCol**|  
+|SQL_DESC_ARRAY_SIZE|ARD|頁首|SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性|  
+|SQL_DESC_ARRAY_STATUS_PTR|IRD|頁首|Sql_attr_row_status_ptr 設定陳述式屬性|  
+|SQL_DESC_BIND_OFFSET_PTR|ARD|頁首|SQL_ATTR_ROW_BIND_OFFSET_PTR 陳述式屬性|  
+|SQL_DESC_BIND_TYPE|ARD|頁首|SQL_ATTR_ROW_BIND_TYPE 陳述式屬性|  
+|SQL_DESC_COUNT|ARD|頁首|*ColumnNumber*引數**SQLBindCol**|  
 |SQL_DESC_DATA_PTR|ARD|記錄|*TargetValuePtr*引數**SQLBindCol**|  
 |SQL_DESC_INDICATOR_PTR|ARD|記錄|*StrLen_or_IndPtr*中的引數**SQLBindCol**|  
 |SQL_DESC_OCTET_LENGTH|ARD|記錄|*BufferLength*中的引數**SQLBindCol**|  
 |SQL_DESC_OCTET_LENGTH_PTR|ARD|記錄|*StrLen_or_IndPtr*中的引數**SQLBindCol**|  
-|SQL_DESC_ROWS_PROCESSED_PTR|IRD|標頭|SQL_ATTR_ROWS_FETCHED_PTR 陳述式屬性|  
+|SQL_DESC_ROWS_PROCESSED_PTR|IRD|頁首|SQL_ATTR_ROWS_FETCHED_PTR 陳述式屬性|  
 |SQL_DESC_TYPE|ARD|記錄|*TargetType*中的引數**SQLBindCol**|  
   
  您也可以透過設定所有的描述項欄位**SQLSetDescField**。  

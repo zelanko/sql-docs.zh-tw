@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0bedb8ba74d7965df34a102fb0d53a0cbdb248dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4630ae8d92dbf0e9b1c5bf615dd82d436a5751f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63139018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006644"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>連接到 SQL Server (AccessToSQL)
 若要將 Access 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您必須連接到目標執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 SSMA 連線時，取得執行個體中之資料庫相關的中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並顯示資料庫中繼資料中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管。 SSMA 會將哪一個執行個體的相關資訊儲存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您要連線，但不會儲存密碼。  
@@ -63,7 +62,7 @@ SQL Server 執行個體的相關中繼資料不會自動同步處理。 相反�
   
     -   如果您要連接到另一部電腦上的預設執行個體，請輸入電腦的名稱。  
   
-    -   如果您要連接到具名執行個體，請輸入電腦名稱、 反斜線和執行個體名稱。 例如：MyServer\MyInstance。  
+    -   如果您要連接到具名執行個體，請輸入電腦名稱、 反斜線和執行個體名稱。 例如: MyServer\MyInstance。  
   
     -   若要連接到作用中使用者執行個體[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，使用具名管道連接通訊協定和指定管道名稱，例如\\ \\.\pipe\sql\query。 如需詳細資訊，請參閱[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]文件。  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2dbbc8f6adf2340e058f8328af77a1a061b55186
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f5c7dfc901434c086b46bfb11c70e1eb2ee3bff7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965365"
 ---
 # <a name="procedures-delete-method-example-vb"></a>Procedures Delete 方法範例 (VB)
 下列程式碼示範如何刪除使用的程序[刪除](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法[程序](../../../ado/reference/adox-api/procedures-collection-adox.md)集合。  

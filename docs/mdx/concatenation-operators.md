@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8eacfc08fdeb0f92874758d0f95e5cde3e6b295a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 235320a65bf04e8b0ce1d7c23da588a4d541a0b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915865"
 ---
 # <a name="concatenation-operators"></a>串連運算子
 

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e9fe6b7f7a92ec6df78e4eb2d086125b5e9fa957
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3bcea9183d44b02e5f45b7bdb977573f283815b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911701"
 ---
 # <a name="supports-method-example-vb"></a>Supports 方法範例 (VB)
 這個範例會使用[支援](../../../ado/reference/ado-api/supports-method.md)開啟具有不同的資料指標類型的方法，以顯示資料錄集所支援的選項。 若要執行此程序需要 DisplaySupport 程序。  

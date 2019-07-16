@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 48b1f3794828af7f60c1d00313506fa9f9c522c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5ecc6de67defb2366bf208c38bd2de5bff643e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920902"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO 物件和介面
 在中表示這些物件之間的關聯性[ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)。  
@@ -41,7 +40,7 @@ ms.locfileid: "66696639"
 |[屬性](../../../ado/reference/ado-api/property-object-ado.md)|表示提供者會定義於 ADO 物件的動態特性。|  
 |[記錄](../../../ado/reference/ado-api/record-object-ado.md)|表示的資料列**資料錄集**、 目錄或檔案系統中的檔案。 **記錄**物件而言是安全的指令碼。|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|表示一組記錄來自基底資料表或執行命令的結果。 在任何時候**資料錄集**物件是指單一資料錄和目前的記錄集內。<br /><br /> **資料錄集**物件而言是安全的指令碼。|  
-|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|表示資料的二進位資料流。<br /><br /> **Stream**物件而言是安全的指令碼。|  
+|[資料流](../../../ado/reference/ado-api/stream-object-ado.md)|表示資料的二進位資料流。<br /><br /> **Stream**物件而言是安全的指令碼。|  
   
 ## <a name="see-also"></a>另請參閱  
  [ADO API 參考](../../../ado/reference/ado-api/ado-api-reference.md)   

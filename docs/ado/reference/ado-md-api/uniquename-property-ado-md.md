@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5b977956-e252-4861-8425-f1aaf6b80130
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: eada0b02391ba4cab9aafedc5eebe14d9a980b7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bb4e77047fb1a5483c0b87d98f55eda43f1658b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708658"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913954"
 ---
 # <a name="uniquename-property-ado-md"></a>UniqueName 屬性 (ADO MD)
 表示目前物件模稜兩可的名稱。  

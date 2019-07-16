@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 693e6e28-a845-41b1-9622-5058b0d87229
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8c2d78e26309d5ea7dc5e6eed5a04e84a1651b33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3746d9cea2ce5ffb7d03424d7cda4fa1889aabc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905386"
 ---
 # <a name="sqlsetscrolloptions-visual-foxpro-odbc-driver"></a>SQLSetScrollOptions (Visual FoxPro ODBC Driver)
 > [!NOTE]  

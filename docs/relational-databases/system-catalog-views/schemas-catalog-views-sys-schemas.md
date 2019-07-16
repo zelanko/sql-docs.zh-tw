@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 29af5ce5-2af7-4103-8f08-3ec92603ba05
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8519dc4846f148b1b4d1bc83589baf0cc6a81e12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f5a0707c599b70ec3c006b00eacb5f8c1a8a87b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018337"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>結構描述目錄檢視-sys.schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]

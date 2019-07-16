@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6b538767f62a3d80b9cf2cd9b558f14c5de91549
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7423879b8263d87575d913c4863143faf3573e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712465"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963998"
 ---
 # <a name="handler-property-rds"></a>Handler 屬性 (RDS)
 指出擴充功能的伺服器端自訂計劃 （處理常式） 的名稱[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)，以及任何所使用的參數*處理常式*。  

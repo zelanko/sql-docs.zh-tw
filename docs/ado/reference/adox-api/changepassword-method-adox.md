@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 981f2e5b801cd35b0aedb04e5f1aa11b741e4535
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de8baf504a76407037322fd6b799f6d63584eae7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967033"
 ---
 # <a name="changepassword-method-adox"></a>ChangePassword 方法 (ADOX)
 變更的密碼[使用者](../../../ado/reference/adox-api/user-object-adox.md)帳戶。  

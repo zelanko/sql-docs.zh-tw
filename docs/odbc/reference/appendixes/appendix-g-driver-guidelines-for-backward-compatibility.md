@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 911cd335-f2c0-4d03-9739-1078308a678a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d78de7b3bd1d91351a4159847d6605e30cc1353d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a07e936617100c56f8fa873df1b490e1d61e3f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909949"
 ---
 # <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>附錄 G：回溯相容性的驅動程式方針
 本附錄提供使用 ODBC 3 上的驅動程式寫入器的資訊。*x*驅動程式，需要支援 ODBC 2。*x*應用程式。 如需有關回溯相容性的詳細資訊，請參閱 <<c0> [ 回溯相容性與標準相容性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。  

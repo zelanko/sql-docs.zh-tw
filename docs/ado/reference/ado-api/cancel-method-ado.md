@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9723b28ff56f4fe8eced52cecc43d58921d101e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: db369b32737c0e2dae4603a4a5a6c26cdd3a7142
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920232"
 ---
 # <a name="cancel-method-ado"></a>Cancel 方法 (ADO)
 取消暫止的非同步方法呼叫的執行。  
@@ -48,7 +47,7 @@ object.Cancel
 |[[連接]](../../../ado/reference/ado-api/connection-object-ado.md)|[執行](../../../ado/reference/ado-api/execute-method-ado-connection.md)或[開啟](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
 |[記錄](../../../ado/reference/ado-api/record-object-ado.md)|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)， [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)， [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)，或[開啟](../../../ado/reference/ado-api/open-method-ado-record.md)|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|[開啟](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
+|[資料流](../../../ado/reference/ado-api/stream-object-ado.md)|[開啟](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
   
 ## <a name="applies-to"></a>適用於  
   

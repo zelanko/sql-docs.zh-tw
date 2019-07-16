@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: cee82f3baa95df1d8636e314bfbb0798efe9527a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 58bee93a4cef37a8a5a71211b292a16392687f12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999956"
 ---
 # <a name="dimension-mdx"></a>Dimension (MDX)
 

@@ -1,5 +1,5 @@
 ---
-title: RuleEnum | Microsoft Docs
+title: RuleEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 77d488bd128f4f5cfa905586f2130cd90be6354c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87c61baa93cb1dbca58bbe86ffc254a92d2b9d5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705836"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965249"
 ---
 # <a name="ruleenum"></a>RuleEnum
 指定要時遵循的規則[金鑰](../../../ado/reference/adox-api/key-object-adox.md)會被刪除。  

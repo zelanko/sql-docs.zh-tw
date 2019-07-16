@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 4e0fed979571c27aa42e01a9e876abae81aaff9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a75eacaf4283b957a24ade9319ea0dc46c436bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991759"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>DQS 定義域支援的 SQL Server 和 SSIS 資料類型
 

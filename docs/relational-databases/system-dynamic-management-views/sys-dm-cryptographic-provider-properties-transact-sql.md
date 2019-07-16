@@ -1,5 +1,5 @@
 ---
-title: sys.dm_cryptographic_provider_properties (Transact-SQL) | Microsoft Docs
+title: sys.dm_cryptographic_provider_properties (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f8f497019dea80bbe79903c60531f506d7950371
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc1e0915fb48b42429bb2821476f98154ac39451
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005108"
 ---
 # <a name="sysdmcryptographicproviderproperties-transact-sql"></a>sys.dm_cryptographic_provider_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

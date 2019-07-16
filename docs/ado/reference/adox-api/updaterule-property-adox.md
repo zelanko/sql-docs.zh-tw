@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ab8bed66cf459bcbf5cdc8f3a645eb25d4c01112
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37fd7f3f9cd69dd3702a19bd390ee6601a75dd44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705803"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965006"
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule 屬性 (ADOX)
 表示動作執行時的主要[金鑰](../../../ado/reference/adox-api/key-object-adox.md)會更新。  

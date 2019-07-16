@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b5902adad5f9f419b553e4b73c976ae64a4e129f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00f470bef5026a6f91c43478b3d745446130d081
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924961"
 ---
 # <a name="internet-publishing-scenario"></a>網際網路發佈案例
 此程式碼範例示範如何搭配使用 ADO 與 Microsoft OLE DB Provider for Internet Publishing。 在此案例中，您將建立會使用 Visual Basic 應用程式**Recordset**，**記錄**，和**Stream**物件顯示資源的內容一起發佈網際網路發佈提供者。  

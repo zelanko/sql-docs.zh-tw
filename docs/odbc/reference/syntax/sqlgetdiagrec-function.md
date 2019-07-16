@@ -1,5 +1,5 @@
 ---
-title: SQLGetDiagRec Function | Microsoft Docs
+title: SQLGetDiagRec 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6cb79375475e4827e1e1c4d3b76721f1614e864e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c404cbb1f29adbdcb49ef6bed8bb57a047f64f3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911323"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec 函式
 **合規性**  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c7b99a0848101ca0fad4844c51e44f1ccc628cd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d76f239094185af7a3e940201b3f99132c0194a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918189"
 ---
 # <a name="move-method-ado"></a>Move 方法 (ADO)
 移動中的目前記錄的位置[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  

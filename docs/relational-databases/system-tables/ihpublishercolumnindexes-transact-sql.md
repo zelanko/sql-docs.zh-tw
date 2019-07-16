@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 95b95a1d-b502-4838-825f-82a456487e25
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 70fce3c0c919a9d898e0dadf9d56e5ae5adaa0a7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f6dfe2075f983d59b0ef4edecf242a5faadc5821
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990280"
 ---
 # <a name="ihpublishercolumnindexes-transact-sql"></a>IHpublishercolumnindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

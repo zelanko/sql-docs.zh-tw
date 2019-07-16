@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1c6894a19c39df171dea3b621773daf31971895f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8dc0799fbeba24ad4725d25647ef471edad8fb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704265"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922559"
 ---
 # <a name="minimizing-log-file-space-usage"></a>將記錄檔空間使用量降到最低
 記錄檔可能會迅速填滿 （因此暫停伺服器） 如果有大型的磁碟區上的 SQL Server 資料庫的活動。 您可以將記錄檔設定為**檢查點截斷**大幅擴充的資料庫記錄檔的生命週期。  
