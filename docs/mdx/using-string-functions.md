@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6e151d06d086569b16fcdf1dc3570f9b220dfcd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74eec478baad335cb5be6a78ec1faea2d15030ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62928151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037990"
 ---
 # <a name="using-string-functions"></a>使用字串函數
 
@@ -103,7 +102,7 @@ ms.locfileid: "62928151"
   
 ## <a name="see-also"></a>另請參閱  
  [產生&#40;MDX&#41;](../mdx/generate-mdx.md)   
- [Name &#40;MDX&#41;](../mdx/name-mdx.md)   
+ [名稱&#40;MDX&#41;](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
  [函式&#40;MDX 語法&#41;](../mdx/functions-mdx-syntax.md)   
  [使用預存程序&#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)   

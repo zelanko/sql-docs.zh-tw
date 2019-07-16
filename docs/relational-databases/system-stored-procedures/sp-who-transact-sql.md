@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dbed86af1415f89a59b7de85061a6db1db324307
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5d758c7ca2d21183b9486030704c31b9d5f621d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950510"
 ---
 # <a name="spwho-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 |**ecid**|**smallint**|特定工作階段識別碼所關聯之給定執行緒的執行內容識別碼。<br /><br /> ECID = {0、 1、 2、 3、...*n*}，其中 0 一律代表主要或父執行緒，以及 {1，2，3，...*n*} 代表子執行緒。|  
 |**status**|**nchar(30)**|處理序狀態。 可能值為：<br /><br /> **休眠**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在重設工作階段。<br /><br /> **running**。 工作階段正在執行一或多個批次。 啟用 Multiple Active Result Set (MARS) 之後，工作階段就可以執行多個批次。 如需詳細資訊，請參閱[使用 Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。<br /><br /> **背景**。 工作階段正在執行背景工作，例如死結偵測。<br /><br /> **回復**。 工作階段正在進行交易回復。<br /><br /> **pending**。 工作階段正在等候工作者執行緒變成可用狀態。<br /><br /> **runnable**。 在等候取得時間配量時，工作階段的工作位於排程器的可執行佇列中。<br /><br /> **spinloop**。 工作階段的工作正在等候單一執行緒存取鎖變成可用狀態。<br /><br /> **suspended**。 工作階段正在等候事件 (例如 I/O) 完成。|  
 |**loginame**|**nchar(128)**|特定處理序所關聯的登入名稱。|  
-|**hostname**|**nchar(128)**|每個處理序的主機或電腦名稱。|  
+|**主機名稱**|**nchar(128)**|每個處理序的主機或電腦名稱。|  
 |**blk**|**char(5)**|封鎖處理序的工作階段識別碼 (如果有)。 否則，這個資料行就是零。<br /><br /> 當被遺棄的分散式交易封鎖了與指定工作階段識別碼相關的交易時，這個資料行會針對進行封鎖的被遺棄交易傳回 '-2'。|  
 |**dbname**|**nchar(128)**|處理序所用的資料庫。|  
 |**cmd**|**nchar(16)**|針對處理序來執行的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 命令 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、內部 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理序等等)。|  
@@ -122,7 +121,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys.sysprocesses &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

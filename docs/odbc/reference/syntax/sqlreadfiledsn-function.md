@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f32e23be700f17fee88cc6354f8652bb1333a12c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad1e3dc4901fc7251528e6040b9250469f8fef6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053661"
 ---
 # <a name="sqlreadfiledsn-function"></a>SQLReadFileDSN 函式
 **合規性**  

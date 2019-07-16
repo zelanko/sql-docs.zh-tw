@@ -5,17 +5,16 @@ description: 本教學課程會示範如何將範例資料載入 SQL Server 的�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 04/23/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f4ea5540c0188ec9a57ad8b6780cf3ab6af5dfc2
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 30e3756251cc8df5ba9e14278983d44d0f6d4ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957781"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>教學課程：將範例資料載入 SQL Server 的巨量資料叢集
 
@@ -26,7 +25,7 @@ ms.locfileid: "67727351"
 > [!TIP]
 > 您可以在中找到其他範例可供 SQL Server 2019 巨量資料叢集 （預覽） [sql server 範例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster)GitHub 存放庫。 它們位於**sql-server-samples/samples/features/sql-big-data-cluster/** 路徑。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - [已部署的巨量資料叢集](deployment-guidance.md)
 - [巨量資料工具](deploy-big-data-tools.md)

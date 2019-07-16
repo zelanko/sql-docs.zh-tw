@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9c30b5a-9ddf-4044-a7c5-0bdb983fdda4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fabd9efd5e6dcfcabd318584364d8f1d70752ad9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68ed273989d738a768d8e5fffd116ea630d8043d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045049"
 ---
 # <a name="modifying-a-visual-foxpro-data-source"></a>修改 Visual FoxPro 資料來源
 ### <a name="to-modify-a-visual-foxpro-data-source"></a>若要修改 Visual FoxPro 資料來源  

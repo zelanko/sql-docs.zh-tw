@@ -5,17 +5,16 @@ description: 了解如何在 Spark 中使用 MSSQL Spark 連接器，來讀取�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aaa9cd54c3540c17f9995f985f4537dafe05d5c2
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 5b603e91e2dffae034dd9d66a1bcd3e5f812a308
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727469"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957835"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>如何讀取和寫入至 SQL Server 使用 MSSQL Spark 連接器從 Spark
 

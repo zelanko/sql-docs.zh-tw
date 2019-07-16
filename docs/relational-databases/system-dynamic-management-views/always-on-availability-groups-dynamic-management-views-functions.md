@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b9cf146720502f31a030cb5be63c0a238e460c41
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 732f1f84d7bc336969d2484f18eb2dae8ebfab76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "47646946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018044"
 ---
 # <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Alwayson 可用性群組動態管理檢視-函式
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

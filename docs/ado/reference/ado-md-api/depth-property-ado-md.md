@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e41f2644-617d-4c09-80a4-feb5cf736186
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 97fc2e4a7c6146b82a48d4dc28d8b86ff94f7cd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 249ab4a4a4f82e5fd6eebfd326c71971f401bcc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952191"
 ---
 # <a name="depth-property-ado-md"></a>Depth 屬性 (ADO MD)
 表示層級之間的數字[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)和階層的根。  

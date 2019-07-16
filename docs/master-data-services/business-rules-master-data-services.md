@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b02be45157036a9f29971b7e51447eb8b1c89361
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa05b563fc72f3908fe2ab796d77917d58b16636
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485393"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047395"
 ---
 # <a name="business-rules-master-data-services"></a>商務規則 (Master Data Services)
 

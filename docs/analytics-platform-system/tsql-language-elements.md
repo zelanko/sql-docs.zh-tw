@@ -2,19 +2,18 @@
 title: T-SQL 語言元素-Parallel Data Warehouse |Microsoft Docs
 description: T-SQL 語言元素的分析平台 System (APS) SQL Server Parallel Data Warehouse (PDW)。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d9e2011ef30864e35245f59cab0861ea116d1502
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f019599e5dde2759da9f1e8f94e71b2fe2b9c9a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034999"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959952"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>平行處理資料倉儲的 T-SQL 語言元素
 T-SQL 語言元素的分析平台 System (APS) SQL Server Parallel Data Warehouse (PDW)。
@@ -24,7 +23,7 @@ T-SQL 語言元素的分析平台 System (APS) SQL Server Parallel Data Warehous
 * [物件命名規則](../relational-databases/databases/database-identifiers.md)
 * [保留的關鍵字](../t-sql/language-elements/reserved-keywords-transact-sql.md)
 * [定序](https://msdn.microsoft.com/library/ff848763.aspx)
-* [comments](../t-sql/language-elements/comment-transact-sql.md)
+* [註解](../t-sql/language-elements/comment-transact-sql.md)
 * [常數](../t-sql/data-types/constants-transact-sql.md)
 * [資料類型](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
@@ -225,7 +224,7 @@ T-SQL 語言元素的分析平台 System (APS) SQL Server Parallel Data Warehous
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
 ## <a name="transactions"></a>交易
-* [transactions](../t-sql/language-elements/transactions-sql-data-warehouse.md)
+* [交易](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>診斷工作階段
 * [CREATE DIAGNOSTICS SESSION](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)
@@ -266,9 +265,9 @@ T-SQL 語言元素的分析平台 System (APS) SQL Server Parallel Data Warehous
 * [SET DATEFIRST](../t-sql/statements/set-datefirst-transact-sql.md)
 * [SET DATEFORMAT](../t-sql/statements/set-dateformat-transact-sql.md)
 * [SET FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
-* [SET IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
+* [設定 IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
 * [SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
-* [SET NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
+* [設定 NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
 * [SET QUOTED_IDENTIFIER](../t-sql/statements/set-quoted-identifier-transact-sql.md)
 * [SET ROWCOUNT](../t-sql/statements/set-rowcount-transact-sql.md)
 * [SET TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)

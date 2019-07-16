@@ -7,13 +7,12 @@ ms.date: 03/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: d852cc745578d852b2c8235ebcaf3614020a1bb8
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6ffd4b13d5ab92187ac998fd983e8fa8416e4401
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511745"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962898"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>安裝 SQL Server machine learning R 和 Python 的元件，從命令列
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "58511745"
 
 | 引數 | 描述 |
 |-----------|-------------|
-| /FEATURES = AdvancedAnalytics | 會安裝在資料庫版本：SQL Server 2017 Machine Learning 服務 （資料庫） 或 SQL Server 2016 R Services （資料庫）。  |
+| / 功能 = AdvancedAnalytics | 會安裝在資料庫版本：SQL Server 2017 Machine Learning 服務 （資料庫） 或 SQL Server 2016 R Services （資料庫）。  |
 | /FEATURES = SQL_INST_MR | 適用於僅 SQL Server 2017。 將它搭配 AdvancedAnalytics。 會安裝 （資料庫內） R 功能，包括 Microsoft R Open 和專屬的 R 套件。 SQL Server 2016 R Services 功能是 R 專用，因此沒有任何參數，該版本。|
 | /FEATURES = SQL_INST_MPY | 適用於僅 SQL Server 2017。 將它搭配 AdvancedAnalytics。 會安裝 Python （資料庫） 的功能，包括 Anaconda 和專屬的 Python 套件。 |
 | /FEATURES = SQL_SHARED_MR | 會安裝獨立版本的 R 功能：SQL Server 2017 Machine Learning 伺服器 （獨立式） 或 SQL Server 2016 R Server （獨立式）。 未繫結至資料庫引擎執行個體的 「 共用的功能 」 的獨立伺服器。|

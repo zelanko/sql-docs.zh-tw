@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2fb2d57-6884-42ef-a18c-2673ba9b85c0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5de97dba7816b5561c607fa83acab98887613f74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1248cd86e657b2e038af908ec1023ab8cfa58bd8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947416"
 ---
 # <a name="ado-md-code-examples-in-visual-basic-scripting-edition"></a>Visual Basic Scripting Edition 中的 ADO MD 程式碼範例
 下列範例會要求 Microsoft 網際網路資訊伺服器 4.0 的 Microsoft Active Server Pages (ASP)。  

@@ -2,19 +2,18 @@
 title: 遠端資料表複製-Parallel Data Warehouse |Microsoft Docs
 description: Analytics Platform System 平行處理資料倉儲中使用遠端資料表複本。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5ed517a471368e4192ad7393a92274424d37f975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28bd5deda25650d36467281ccbffa7b666f4c695
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960208"
 ---
 # <a name="remote-table-copy"></a>遠端資料表複製
 描述如何將資料表從 SQL Server PDW 資料庫複製到遠端的 （非應用裝置） SMP SQL Server 資料庫時，用於遠端資料表複製功能。 使用遠端資料表複製到可讓中樞和支點案例適用於 SQL Server PDW。  

@@ -5,17 +5,16 @@ description: 本文說明如何使用 Azure 資料 Studio 中的文字的程式�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c26a6efa1f96ac5016d1560f0ae4d9e02f0d369d
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957689"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>使用文字程式碼加速器 data Wrangling
 
@@ -120,7 +119,7 @@ builder.learn().code()
 | 1 |Naiara Moravcikova        |Unknown        |
 | 2 |Jihoo Spel                |2014           |
 | 3 |Viachaslau Gordan Hilario |22-Apr-67      |
-| 4 |Maya de Villiers          |19-Mar-60      |
+| 4 |Maya de Villiers          |19-3 月-60      |
 
 根據磁碟區和資料的多樣性，撰寫資料行中的不同模式的規則運算式可能會相當耗時的工作。 `FindPatternsBuilder`是功能強大的程式碼加速的一項工具，可解決上述問題，藉由產生的字串的規則運算式的清單。
 

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 59031a14dd4c844aa8b0540d640e683c9d2f0894
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9cb5ddf37104c0de00e17bdec5946d9b39d60020
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63201682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017208"
 ---
 # <a name="-add-mdx"></a>+ (加) (MDX)
 

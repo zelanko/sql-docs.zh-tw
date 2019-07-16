@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0b24db48d6a76c221e72944e8e5e6826cb8d5d55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6072a6e317ab87118376b08790fc0fb49c495e3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952511"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>錯誤訊息 (Visual FoxPro ODBC Driver)
 發生錯誤時，Visual FoxPro 驅動程式會傳回下列資訊：  
@@ -49,7 +48,7 @@ ms.locfileid: "63127981"
   
 |資料來源|Prefix|值|  
 |-----------------|------------|-----------|  
-|驅動程式管理員|[vendor]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC 驅動程式管理員]<br />N/A|  
+|驅動程式管理員|[廠商]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC 驅動程式管理員]<br />N/A|  
 |Visual FoxPro 驅動程式|廠商]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC Visual FoxPro 驅動程式]<br />N/A|  
   
  例如，如果 Visual FoxPro ODBC Driver 找不到檔案 employee.dbf，它可能會傳回下列錯誤訊息：  

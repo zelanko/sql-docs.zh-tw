@@ -6,13 +6,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: bb354e1a0a7f7f22a39b690fdd0c0f4ae7778b8f
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: e1aea5bd9166386662fc090a7a6d41737a9eecb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962561"
 ---
 # <a name="tips-for-using-r-packages-in-sql-server"></a>SQL Server 中使用 R 套件的秘訣
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

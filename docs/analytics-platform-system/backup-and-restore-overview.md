@@ -2,19 +2,18 @@
 title: 備份與還原-Parallel Data Warehouse |Microsoft Docs
 description: 說明資料如何備份及還原的運作方式的 Parallel Data Warehouse (PDW)。 備份和還原作業會用於災害復原。 備份與還原也可用來將資料庫從一個應用裝置複製到另一個應用裝置。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d322eb27a92c644afa834371d5f38b3d9d7ad28b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961406"
 ---
 # <a name="backup-and-restore"></a>備份與還原
 
