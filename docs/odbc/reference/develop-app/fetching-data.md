@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 04a1efc1-0a46-42f9-8c4e-9f063740dd8a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a548c521b7baa283a9cdf1572fbe8e42e1e6cf45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea322346b955fc8e252dc14b78b055d491d14f69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069849"
 ---
 # <a name="fetching-data"></a>擷取資料
 從結果集內擷取資料列，並將其傳回至應用程式的程序會呼叫*擷取*。 本節說明如何擷取資料。  

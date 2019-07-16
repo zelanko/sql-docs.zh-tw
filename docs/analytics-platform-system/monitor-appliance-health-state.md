@@ -2,19 +2,18 @@
 title: 監視設備健全狀況-Analytics Platform System
 description: 如何使用管理主控台中，或直接查詢的平行處理資料倉儲動態管理檢視來監視 Analytics Platform System appliance 的狀態。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d8616d291dcaa8afadc01c9bd237903ca6c13573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c69e46ad6a37a17a12c37f83625b5c7f6eaf8078
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960619"
 ---
 # <a name="monitor-appliance-health-state"></a>監視設備健全狀況狀態
 這篇文章說明如何使用管理主控台中，或直接查詢的平行處理資料倉儲動態管理檢視來監視 Analytics Platform System appliance 的狀態。 

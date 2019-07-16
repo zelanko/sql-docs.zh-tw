@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 07/11/2019
-ms.openlocfilehash: 9b6fa6e7ec82853e05070a1675154f06091e5092
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: 8f19424b1e7946c7fb3d7a7056c1bda94b83b79b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959380"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
@@ -33,7 +32,7 @@ ms.locfileid: "67826520"
 | SentryOne 計劃總管延伸模組的版本 | 我們值中的合作夥伴，SentryOne，將運送他們[SentryOne 計劃總管延伸模組，適用於 Azure 資料 Studio](https://www.sentryone.com/products/sentryone-plan-explorer-extension-azure-data-studio)。 <br> 這是免費的延伸模組，提供增強的計劃的查詢的圖表在 Azure 資料 Studio 中，執行與最佳化的配置演算法，有助於快速識別成本最高的運算子會影響查詢效能的直覺式色彩編碼。 若要深入了解延伸模組，請參閱 SentryOne 的部落格文章[此處](https://sqlperformance.com/2019/07/sentryone/plan-explorer-extension-azure-data-studio)。 |
 | 結構描述比較即將推出的新功能 | &bull; &nbsp; 結構描述比較檔案支援 (。SCMP) <br/>&bull; &nbsp; 取消結構描述比較支援 <br/>&bull; &nbsp; 可以找到完整的變更[這裡](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed+)|
 | Notebook 增強功能 | &bull; &nbsp; Plotly 的 Python 支援 <br/>&bull; &nbsp; 從瀏覽器開啟 Notebook <br/> &bull; &nbsp; Python 套件管理對話方塊 <br/> &bull; &nbsp; 效能和 Markdown 增強功能 <br/> &bull; &nbsp; 鍵盤快速鍵更新 <br/>  &bull; &nbsp; 您可以找到 Bug 修正和次要功能[這裡](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22+) |
-| SQL Server 2019 Support |  此版本包含額外的 SQL Server 2019 巨量資料叢集功能，包括的支援： <br/> &bull; &nbsp; 服務端點內管理儀表板，其中列出所有主要的服務在叢集中的資料表。 <br/> &bull; &nbsp; 叢集狀態 Notebook 會示範如何查詢 & 疑難排解跨所有服務和 pod 的叢集狀態。| 
+| SQL Server 2019 支援 |  此版本包含額外的 SQL Server 2019 巨量資料叢集功能，包括的支援： <br/> &bull; &nbsp; 服務端點內管理儀表板，其中列出所有主要的服務在叢集中的資料表。 <br/> &bull; &nbsp; 叢集狀態 Notebook 會示範如何查詢 & 疑難排解跨所有服務和 pod 的叢集狀態。| 
 | 可用更新的語言套件| 現在有 10 個語言套件可用在擴充管理員 marketplace 中。 直接使用擴充功能市集的特定語言搜尋，並安裝。 一旦您安裝選取的語言時，Azure Data Studio 會提示您重新啟動新的語言。 |
 | SQL Server Profiler 更新 | SQL Server 設定檔延伸模組已更新為包含新功能包括： <br/> &bull; &nbsp; 依資料庫名稱篩選 <br/> &bull; &nbsp; 複製並貼上支援 <br/> &bull; &nbsp; 儲存/載入篩選器 <br/>可以找到 SQL Server Profiler 擴充功能的增強功能的完整清單[此處](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+SQL+Profiler%22+)。  |
 | Visual Studio 程式碼可能會發行合併 1.35 版 | 您可以找到最新的改良[此處](https://code.visualstudio.com/updates/v1_35)。 |

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6514f5378c04652ec62cbad0b4899f28a2ade672
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fecd704d5f6b6f0384ecb17787bd8423852356ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078192"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
   
-`[ @server_name = ] 'server'` 要以工作為目標伺服器的名稱。 *伺服器*已**nvarchar(30)**，預設值是 （local） '。 *伺服器*可以是 **(LOCAL)** 本機伺服器，或現有目標伺服器的名稱。  
+`[ @server_name = ] 'server'` 要以工作為目標伺服器的名稱。 *伺服器*已**nvarchar(30)** ，預設值是 （local） '。 *伺服器*可以是 **(LOCAL)** 本機伺服器，或現有目標伺服器的名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

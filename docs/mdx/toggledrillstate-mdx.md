@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 58acac77e4826855997791476b0602699452b7b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d027a76a82de3fd82b6c0c81c54ace08167039b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63228086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036607"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
 

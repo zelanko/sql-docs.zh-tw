@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 83d73bb9d075825472cda96a7dcd54e25549de5e
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 2e976e66212fffa63547db160a06941456229d93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962701"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>建立使用 miniCRAN 本機 R 套件儲存機制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

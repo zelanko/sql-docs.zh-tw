@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b92eeb64b95d666b15c03c70d656d2309a63eabf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a945eef43a1fc12689853c3fa209f6126df4f0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951874"
 ---
 # <a name="considering-database-features-to-use"></a>考慮要使用的資料庫功能
 已知的互通性的基本層級之後，必須考量應用程式所使用的資料庫功能。 比方說，哪些 SQL 陳述式將應用程式執行？ 將應用程式會使用可捲動資料指標？ 交易？ 程序？ Long 資料？ 針對所有 Dbms 可能不都支援哪些功能的想法，請參閱[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)， [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)，並[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)函式描述，以及[附錄 c:SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。 應用程式所需的功能可能消除某些 Dbms 從目標 Dbms 的清單。 它們也可能會顯示應用程式很容易下手有許多 Dbms。  

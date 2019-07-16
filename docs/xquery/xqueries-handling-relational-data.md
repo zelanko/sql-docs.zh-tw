@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9aa8b150a26e64d4a61efe80ab635110e540af33
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: ed4583b30ed1e4538a36079f9f7794704b819cda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291015"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946161"
 ---
 # <a name="xqueries-handling-relational-data"></a>XQueries 處理關聯式資料
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  指定針對 XQuery **xml**類型資料行或變數使用其中一種[XML 資料類型方法](../t-sql/xml/xml-data-type-methods.md)。 其中包括**query （)**， **value （)**， **exist （)**，或**modify （)**。 對查詢中所識別出的 XML 執行個體執行 XQuery，以產生 XML 。  
+  指定針對 XQuery **xml**類型資料行或變數使用其中一種[XML 資料類型方法](../t-sql/xml/xml-data-type-methods.md)。 其中包括**query （)** ， **value （)** ， **exist （)** ，或**modify （)** 。 對查詢中所識別出的 XML 執行個體執行 XQuery，以產生 XML 。  
   
  執行 XQuery 而產生的 XML，可以包含從其他 Transact-SQL 變數或資料列集資料行擷取的值。 若要將非 XML 關聯式資料繫結到產生的 XML，SQL Server 可提供以下虛擬函數做為 XQuery 延伸模組：  
   
@@ -36,7 +35,7 @@ ms.locfileid: "51291015"
   
  指定在 XQuery 時，您可以使用這些 XQuery 延伸模組**query （)** 方法**xml**資料型別。 如此一來， **query （)** 方法可以產生結合 xml 和非資料的 XML-**xml**資料型別。  
   
- 您也可以使用這些函式，當您使用**xml**資料類型方法**modify （)**， **value （)**， **query （)**，和**exist （)** 来公開 XML 內的關聯式值。  
+ 您也可以使用這些函式，當您使用**xml**資料類型方法**modify （)** ， **value （)** ， **query （)** ，和**exist （)** 来公開 XML 內的關聯式值。  
   
  如需詳細資訊，請參閱 < [: column （） 函數 (XQuery)](../xquery/xquery-extension-functions-sql-column.md)並[（） 函數 (XQuery)](../xquery/xquery-extension-functions-sql-variable.md)。  
   

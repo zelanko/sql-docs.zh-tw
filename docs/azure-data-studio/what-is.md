@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: overview
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
-ms.openlocfilehash: 18fbf279a4d32121f552fda345d8024d1d408e31
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
+ms.openlocfilehash: 1dd66b432ff489b5576b9ce7f69c1860cb9240d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67313963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958938"
 ---
 # <a name="what-is-azure-data-studio"></a>什麼是 Azure Data Studio？
 
@@ -95,7 +94,7 @@ SQL 程式碼片段會產生適當的 SQL 語法來建立資料庫、 資料表�
 |深色的模式|是||
 |Azure 資源總管|預覽||
 |產生指令碼精靈||是|
-|Import\Export DACPAC||是|
+|DACPAC 匯入/匯出||是|
 |物件屬性||是|
 |資料表設計工具||是|
 
@@ -123,7 +122,7 @@ SQL 程式碼片段會產生適當的 SQL 語法來建立資料庫、 資料表�
 |:---|:---|:---|
 |Linux|是||
 |macOS|是||
-|視窗|是|是|
+|Windows|是|是|
 
 ### <a name="data-engineering"></a>資料工程
 

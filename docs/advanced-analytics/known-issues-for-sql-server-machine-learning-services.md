@@ -6,13 +6,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 805dd613c49351c0106231b9147a4af54ac8cf0d
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 88dcbbf3a336af38b80ab8c5aa4b49dbe17d9184
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140728"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962816"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>在 Machine Learning 服務的已知的問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -204,7 +203,7 @@ R 與 SQL Server R Services 一起安裝的版本會更新在安裝 SQL Server �
 
 如果您遇到資源限制，請檢查目前的預設值。 如果 20%不夠時，請參閱文件[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]如何變更此值。
 
-**適用於：** SQL Server 2016 R Services, Enterprise Edition
+**適用於：** SQL Server 2016 R 服務，Enterprise Edition
 
 ## <a name="r-script-execution-issues"></a>R 指令碼執行問題
 
@@ -214,9 +213,9 @@ R 與 SQL Server R Services 一起安裝的版本會更新在安裝 SQL Server �
 
 ### <a name="1-access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>1.存取遭拒的非預設位置中的 SQL Server 上執行 R 指令碼時的警告
 
-如果 SQL Server 執行個體已安裝到非預設位置，例如外部`Program Files`資料夾中，當您嘗試執行安裝套件的指令碼時，會引發 ACCESS_DENIED 警告。 例如：
+如果 SQL Server 執行個體已安裝到非預設位置，例如外部`Program Files`資料夾中，當您嘗試執行安裝套件的指令碼時，會引發 ACCESS_DENIED 警告。 例如:
 
-> *In `normalizePath(path.expand(path), winslash, mustWork)` : path[2]="~ExternalLibraries/R/8/1":存取遭拒*
+> *在  `normalizePath(path.expand(path), winslash, mustWork)` ： 路徑 [2] ="~ExternalLibraries/R/8/1 」:存取遭拒*
 
 原因是 R 函式嘗試讀取此路徑，且如果將會失敗的內建的使用者群組**SQLRUserGroup**，沒有讀取權限。 就會引發警告不會封鎖執行目前的 R 指令碼，但警告可能會重複發生，每當使用者執行任何其他的 R 指令碼。
 
@@ -252,7 +251,7 @@ R 與 SQL Server R Services 一起安裝的版本會更新在安裝 SQL Server �
 
 SQL Server 2016 Service Pack 1 已修正這個問題。 我們建議您升級至最新的服務版本。
 
-**適用於：** SQL Server 2016 R Services RTM version
+**適用於：** SQL Server 2016 R 服務 RTM 版本
 
 ### <a name="5-changes-to-column-types-cannot-be-performed-when-reading-data-in-a-sql-server-compute-context"></a>5.讀取 SQL Server 計算內容中的資料，無法變更資料行類型。
 
@@ -358,7 +357,7 @@ data <- RxSqlServerData(
 
 若遇到此問題，您可以在 `f` 定義內嵌 `g`的定義以解決此問題， `g` 前的任何位置則會正常呼叫 `f`。
 
-例如：
+例如:
 
 ```R
 f <- function(x) { 2*x * 3 }

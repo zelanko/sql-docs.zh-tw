@@ -2,19 +2,18 @@
 title: Analytics Platform System 中的高可用性 |Microsoft Docs
 description: 了解 Analytics Platform System (APS) 的高可用性架構的方式。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5c8a562ab105e1bc40b590916d0881757036aeff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cdf1837bd3b3b1cdf8e189ae591cd6fbff58387a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280349"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960869"
 ---
 # <a name="analytics-platform-system-high-availability"></a>Analytics Platform System 的高可用性
 了解 Analytics Platform System (APS) 的高可用性架構的方式。  

@@ -2,7 +2,6 @@
 title: 功能切換 (Analytics Platform System)
 description: Analytics Platform System AU7 中，會顯示有關導入的兩個功能參數的資訊。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4fa05bcc33c9a305253563e40bf071338f19461
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e9929d4729cc1027c82b61c9fab6ebfcddbd54d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276154"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961511"
 ---
 # <a name="appliance-feature-switches"></a>應用裝置功能參數
 

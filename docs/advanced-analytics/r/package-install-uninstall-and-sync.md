@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f6782acd011242cfd9b8ed4fe24a11fba85e932c
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 65903358acd1c14f63ca93ea8bd7438121ad9ad9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140513"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962579"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>適用於 SQL Server 的 R 套件同步處理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

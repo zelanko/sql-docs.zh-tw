@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 7d7e44dc-b6d3-4e0f-95c7-8f99930c94f2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5705a8aa5a36442a4a57b10b22d9950fab83473
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6a71852dbd4f25e2055544727fd981718ef524b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027009"
 ---
 # <a name="annotated-schema-security-considerations-sqlxml-40"></a>註解式結構描述安全性考量 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "56020340"
   
 -   使用註解指定的明確對應會公開資料庫資訊 (例如資料表名稱和資料行名稱)。 因此，您可能不會想要公開地提供這些結構描述。  
   
--   某些查詢，例如針對對應結構描述利用遞迴指定 (使用指定**最大深度**註釋設定為較高的值) 可能需要較長的時間執行。 您可以選擇性地指定逾時限制，藉由設定命令逾時屬性 （以秒為單位）。 例如：  
+-   某些查詢，例如針對對應結構描述利用遞迴指定 (使用指定**最大深度**註釋設定為較高的值) 可能需要較長的時間執行。 您可以選擇性地指定逾時限制，藉由設定命令逾時屬性 （以秒為單位）。 例如:  
   
     ```  
     cn.Open "Provider=SQLOLEDB;Server=localhost;Database=tempdb;Integrated Security=SSPI;Command Properties='Command Time Out=50';"  

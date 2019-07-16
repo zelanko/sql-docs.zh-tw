@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef2cbb93-cd00-40f8-b1d2-5f5723a991aa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d50ce0c2023e187d63d08aa862398d18dc188fd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2138a5f8417fc9156c916719e96d707b9a29de9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744238"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040015"
 ---
 # <a name="descriptors"></a>描述項
 描述項控制代碼是指資料結構，其中保存資料行或將動態參數的相關資訊。  

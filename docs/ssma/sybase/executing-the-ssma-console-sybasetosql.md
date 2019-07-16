@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126301"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029150"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>執行 SSMA 主控台 (SybaseToSQL)
 Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 SSMA 活動。 後續章節將詳細說明相同。  
@@ -231,7 +230,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <generate-assessment-report  
@@ -296,7 +295,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <convert-schema  
@@ -352,7 +351,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
   
 </migrate-data>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <migrate-data  
@@ -372,7 +371,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 > [!NOTE]  
 > [移轉] 命令設定預設的主控台輸出會是 'Full' 輸出報表不詳細的錯誤報告：只有在來源物件樹狀結構根節點的摘要。  
   
-### <a name="map-schema"></a>map-schema  
+### <a name="map-schema"></a>對應結構描述  
 這個命令會提供結構描述對應到目標結構描述的來源資料庫。  
   
 -   `source-schema` 指定要移轉的來源結構描述。  
@@ -393,7 +392,7 @@ sql-server-schema="<target-schema>"/>
 > [!NOTE]  
 > [移轉] 命令設定預設的主控台輸出會是 'Full' 輸出報表不詳細的錯誤報告：只有在來源物件樹狀結構根節點的摘要。  
   
-### <a name="synchronize-target"></a>synchronize-target  
+### <a name="synchronize-target"></a>同步處理目標  
 此命令會使用目標資料庫，同步處理的目標物件。  
  
 如果針對來源資料庫執行此命令時，發生錯誤。  
@@ -410,7 +409,7 @@ sql-server-schema="<target-schema>"/>
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   失敗指令碼  
   
 -   `report-errors-to:` 指定同步處理作業 （也就是選擇性屬性） 的錯誤報表的位置。 如果只指定資料夾路徑，然後檔案名稱**TargetSynchronizationReport.XML**建立。  
   
@@ -431,7 +430,7 @@ fail-script>" (optional)
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <synchronize-target  
@@ -440,7 +439,7 @@ fail-script>" (optional)
   
   object-type="<object-category>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <synchronize-target>  
@@ -471,7 +470,7 @@ fail-script>" (optional)
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   失敗指令碼  
   
 -   `report-errors-to:` 指定的錯誤報表重新整理作業 （也就是選擇性屬性） 的位置。 如果只指定資料夾路徑，然後檔案名稱**SourceDBRefreshReport.XML**建立。  
   
@@ -492,7 +491,7 @@ fail-script>" (optional)
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <refresh-from-database  
@@ -501,7 +500,7 @@ fail-script>" (optional)
   
   object-type="<object-category>" />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <refresh-from-database>  
@@ -546,7 +545,7 @@ fail-script>" (optional)
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <save-as-script  
@@ -620,7 +619,7 @@ fail-script>" (optional)
   
 </convert-sql-statement>  
 ```  
-中的多個  
+或  
   
 ```  
 <convert-sql-statement  
@@ -645,7 +644,7 @@ fail-script>" (optional)
   
 />  
 ```  
-中的多個  
+或  
   
 ```  
 <convert-sql-statement  
