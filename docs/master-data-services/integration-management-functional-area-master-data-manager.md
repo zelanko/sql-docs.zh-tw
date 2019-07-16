@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f71df0d77792ecd96694d9a24ed9d4f1d1ea59ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f12e6246ac08be29c673514ad7f35dbaa74a820
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487987"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007206"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>整合管理功能區域 (主資料管理員)
 

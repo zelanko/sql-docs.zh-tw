@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4589eac1a564ee06f96d175eda8dcf63d860a262
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cc901f2ccd68fbdee19fc7887638f7f89ff04efa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668157"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006852"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService 方法 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

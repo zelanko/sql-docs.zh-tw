@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: df1c4c50e21ba5db5459da958f915be560500dc7
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: baa7a378c85668ac87ff8dc28422d4a6bbbcd225
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962022"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>快速入門：處理資料類型和使用 R 在 SQL Server 中的物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -62,7 +61,7 @@ EXECUTE sp_execute_external_script
 
 為何結果如此不同？ 
 
-您通常可以使用 R `str()` 命令來找到答案。 在 R 指令碼中的任一處加入函數 `str(object_name)`，以傳回指定 R 物件的資料結構描述做為資訊訊息。 若要檢視訊息，可查看 Visual Studio Code 的 [訊息] 窗格，或 SSMS 中的 [訊息] 索引標籤。
+您通常可以使用 R `str()` 命令來找到答案。 在 R 指令碼中的任一處加入函數 `str(object_name)`，以傳回指定 R 物件的資料結構描述做為資訊訊息。 若要檢視訊息，可查看 Visual Studio Code 的 [訊息]  窗格，或 SSMS 中的 [訊息]  索引標籤。
 
 若要了解為什麼範例 1 和範例 2 會有如此不同的結果，在每個陳述式中 _@script_ 變數定義的結尾插入一行 `str(OutputDataSet)`，如下：
 
@@ -88,7 +87,7 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N'  ';
 ```
 
-現在，檢視 [訊息] 中的文字，以查看為何會有不同的輸出。
+現在，檢視 [訊息]  中的文字，以查看為何會有不同的輸出。
 
 **結果 - 範例 1**
 

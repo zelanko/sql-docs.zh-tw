@@ -5,17 +5,16 @@ description: 了解如何設定適用於 SQL Server 2019 巨量資料叢集 （�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 07/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 872988b29cddc202ea2c0f199548bc28b946b918
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: d39f62345a539094c585b196c9b6030b673f8e89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958481"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>設定適用於 SQL Server 的巨量資料叢集部署的 Azure Kubernetes 服務
 
@@ -30,7 +29,7 @@ AKS 可讓您更輕鬆地建立、 設定及管理預先設定的虛擬機器的
 > [!TIP] 
 > 部署 AKS 和 SQL Server 的巨量資料叢集的範例 python 指令碼，請參閱[快速入門：將巨量資料叢集的 Azure Kubernetes Service (AKS) 上的 SQL Server 部署](quickstart-big-data-cluster-deploy.md)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 - [部署 SQL Server 2019 巨量資料的工具](deploy-big-data-tools.md):
    - **Kubectl**
@@ -110,7 +109,7 @@ Azure 資源群組是在哪一項 Azure 資源部署與管理的邏輯群組。 
 
    請確定您在先前各節中使用的相同資源群組中建立 AKS 叢集。
 
-   **bash:**
+   **Bash:**
 
    ```bash
    az aks create --name kubcluster \

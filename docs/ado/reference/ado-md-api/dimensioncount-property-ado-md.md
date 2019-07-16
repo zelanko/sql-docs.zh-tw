@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 87929cbc-9c38-491a-8616-62d45c51e299
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8032122a6b9bafb04c077961b857c5ae9d7628a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ccb2ae99761ecfa1fc52cef44e4cf35a5600531
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938491"
 ---
 # <a name="dimensioncount-property-ado-md"></a>DimensionCount 屬性 (ADO MD)
 在指出的維度數目[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)。  

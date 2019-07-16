@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc6511c6a0999dfd366c87fcfa18630614215efa
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 524f0d82b5f426ae41169b8358dd8ad8be66da03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900284"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +57,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  *database_id* |NULL
 
- **適用於：** SQL Server （從 2008年開始）、 Azure SQL Database
+ **適用於：** SQL Server (從 2008 開始)、Azure SQL Database
 
  資料庫的識別碼。 *database_id*是 int，沒有預設值。 資料庫的識別碼或 NULL 都是有效的輸入。 如果指定 NULL，則會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中所有的資料庫。  
   
@@ -66,7 +65,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *file_id* |NULL
 
-**適用於：** SQL Server （從 2008年開始）、 Azure SQL Database
+**適用於：** SQL Server (從 2008 開始)、Azure SQL Database
  
 檔案識別碼。 *file_id*是 int，沒有預設值。 有效輸入是檔案的識別碼或 NULL。 如果指定 NULL，則會傳回資料庫中所有的檔案。  
   
@@ -89,9 +88,9 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall**|**bigint**|使用者等候檔案完成 I/O 的總時間 (以毫秒為單位)。|  
 |**size_on_disk_bytes**|**bigint**|該檔案在磁碟上所用的位元組數。 如果是疏鬆檔案，這個數字就是資料庫快照集在磁碟上所用的實際位元組數。|  
 |**file_handle**|**varbinary**|這個檔案的 Windows 檔案控制代碼。|  
-|**io_stall_queued_read_ms**|**bigint**|**不適用於：**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]。<br /><br /> IO 資源管理針對讀取導入的總 IO 延遲。 不可為 Null。 如需詳細資訊，請參閱 < [sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。|  
-|**io_stall_queued_write_ms**|**bigint**|**不適用於：**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]。<br /><br />  IO 資源管理針對寫入導入的總 IO 延遲。 不可為 Null。|
-|**pdw_node_id**|**int**|**適用於：**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>發佈節點的識別碼。
+|**io_stall_queued_read_ms**|**bigint**|**不適用於：** :[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]。<br /><br /> IO 資源管理針對讀取導入的總 IO 延遲。 不可為 Null。 如需詳細資訊，請參閱 < [sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。|  
+|**io_stall_queued_write_ms**|**bigint**|**不適用於：** :[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]。<br /><br />  IO 資源管理針對寫入導入的總 IO 延遲。 不可為 Null。|
+|**pdw_node_id**|**int**|**適用於：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>發佈節點的識別碼。
  
   
 ## <a name="permissions"></a>Permissions  
@@ -101,7 +100,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
 ### <a name="a-return-statistics-for-a-log-file"></a>A. 傳回記錄檔的統計的資料
 
-**適用於：** SQL Server （從 2008年開始）、 Azure SQL Database
+**適用於：** SQL Server (從 2008 開始)、Azure SQL Database
 
  下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中記錄檔的統計資料。  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 987b7d7006ff448a92eee1926a2c60c3b7ae039e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17fa0ff30e8dcdbf7ea67080f17c3e066bba8605
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920662"
 ---
 # <a name="append-method-ado"></a>Append 方法 (ADO)
 將物件附加至集合。 如果集合很[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)，新[欄位](../../../ado/reference/ado-api/field-object.md)可以先建立物件，它會附加至集合。  
@@ -38,7 +37,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *collection*  
  集合物件。  
   
- *fields*  
+ *欄位*  
  A**欄位**集合。  
   
  *object*  

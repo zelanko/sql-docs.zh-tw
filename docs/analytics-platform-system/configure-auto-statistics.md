@@ -2,7 +2,6 @@
 title: 自動統計資料 (Analytics Platform System)
 description: 描述 Analytics Platform System AU7 中引進的自動統計資料功能。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: e48d40d78c25431fd6e5592dacfa410723b31f82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caed6b9d126e09bc70a61c73b5100d689f81b011
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961274"
 ---
 # <a name="configure-auto-statistics"></a>設定自動統計資料
 

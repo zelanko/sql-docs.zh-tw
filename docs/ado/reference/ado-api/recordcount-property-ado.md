@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2b492476eadfde4c0c2666096714a8cd0f634db1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7304062298a95406a223ba58026379a3bebf392f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931476"
 ---
 # <a name="recordcount-property-ado"></a>RecordCount 屬性 (ADO)
 

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2b7ce62ebedbd5d0622c8b69720f7153d7711a48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54d55926d2bec89b0764b751bf165586e8d3c6c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700451"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924510"
 ---
 # <a name="records-and-provider-supplied-fields"></a>記錄和提供者提供的欄位
 當[記錄](../../../ado/reference/ado-api/record-object-ado.md)開啟物件、 其來源可以是已開啟的目前資料列[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，絕對 URL 或開啟搭配的相對 URL[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件.  
@@ -56,13 +55,13 @@ ms.locfileid: "66700451"
 ## <a name="resource-recordset-columns"></a>資源資料錄集資料行  
  A*資源的資料錄集*下列資料行所組成。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|type|描述|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|唯讀。 表示資源的 URL。|  
 |RESOURCE_PARENTNAME|AdVarWChar|唯讀。 表示父記錄的絕對 URL。|  
 |RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|唯讀。 表示資源，也就是串連 PARENTNAME 和 PARSENAME 絕對的 URL。|  
-|RESOURCE_ISHIDDEN|AdBoolean|如果資源已隱藏，則為 true。 除非明確地建立資料列集的命令會選取其中 RESOURCE_ISHIDDEN 為 True 的資料列，則會不傳回任何資料列。|  
-|RESOURCE_ISREADONLY|AdBoolean|如果資源是唯讀，則為 true。 嘗試開啟此資源 DBBINDFLAG_WRITE 與將會失敗並 DB_E_READONLY。 可以編輯這個屬性，即使資源只開啟進行讀取。|  
+|RESOURCE_ISHIDDEN|adBoolean|如果資源已隱藏，則為 true。 除非明確地建立資料列集的命令會選取其中 RESOURCE_ISHIDDEN 為 True 的資料列，則會不傳回任何資料列。|  
+|RESOURCE_ISREADONLY|adBoolean|如果資源是唯讀，則為 true。 嘗試開啟此資源 DBBINDFLAG_WRITE 與將會失敗並 DB_E_READONLY。 可以編輯這個屬性，即使資源只開啟進行讀取。|  
 |RESOURCE_CONTENTTYPE|AdVarWChar|表示文件的可能用法-例如諮詢法律顧問的簡短。 這可能會對應至 Office 範本用來建立文件。|  
 |RESOURCE_CONTENTCLASS|AdVarWChar|表示 MIME 類型的文件，表示的格式，例如"`text/html`」。|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|表示用來儲存內容的語言。|  
@@ -70,12 +69,12 @@ ms.locfileid: "66700451"
 |RESOURCE_LASTACCESSTIME|AdFileTime|唯讀。 指示 FILETIME 結構，其中包含上次存取資源的時間。 時間是 UTC 格式。 FILETIME 成員都是零，如果提供者不支援這個時間成員。|  
 |RESOURCE_LASTWRITETIME|AdFileTime|唯讀。 指示 FILETIME 結構，其中包含資源的上次寫入時間。 時間是 UTC 格式。 FILETIME 成員都是零，如果提供者不支援這個時間成員。|  
 |RESOURCE_STREAMSIZE|asUnsignedBigInt|唯讀。 表示資源的預設資料流，以位元組為單位的大小。|  
-|RESOURCE_ISCOLLECTION|AdBoolean|唯讀。 如果資源是集合，例如目錄，則為 true。 如果資源是簡單的檔案，則為 false。|  
-|RESOURCE_ISSTRUCTUREDDOCUMENT|AdBoolean|如果資源是結構化文件，則為 true。 如果資源不是結構化文件，則為 false。 可能是簡單的檔案或集合。|  
+|RESOURCE_ISCOLLECTION|adBoolean|唯讀。 如果資源是集合，例如目錄，則為 true。 如果資源是簡單的檔案，則為 false。|  
+|RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|如果資源是結構化文件，則為 true。 如果資源不是結構化文件，則為 false。 可能是簡單的檔案或集合。|  
 |DEFAULT_DOCUMENT|AdVarWChar|唯讀。 表示此資源包含資料夾的預設簡單文件或結構化文件的 URL。 預設資料流所要求資源時使用。 這個屬性是空白的簡單的檔案。|  
 |CHAPTERED_CHILDREN|AdChapter|唯讀。 選擇性。 表示資料列集包含資源的子系的章節。 ( *OLE DB Provider for Internet Publishing*不會使用此資料行。)|  
 |RESOURCE_DISPLAYNAME|AdVarWChar|唯讀。 表示資源的顯示名稱。|  
-|RESOURCE_ISROOT|AdBoolean|唯讀。 如果資源是集合或結構化文件的根目錄，則為 true。|  
+|RESOURCE_ISROOT|adBoolean|唯讀。 如果資源是集合或結構化文件的根目錄，則為 true。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   

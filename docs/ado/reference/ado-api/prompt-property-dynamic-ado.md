@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4f2c778a6e922477cd8b21251a638d430ce15480
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cde7a5ad0324bc7d5cde5e1a794eeb9e2cb3381a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703153"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931586"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Prompt 動態屬性 (ADO)
 指定的 OLE DB 提供者是否應該提示使用者提供初始化資訊。  

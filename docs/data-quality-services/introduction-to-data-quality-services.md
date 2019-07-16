@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 425213baf19ddc016a483d9f273b644f2043d1dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc156cfa292dd67e0e889fd28dbbf927061abdef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935109"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 簡介
 

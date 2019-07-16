@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 13c8afda7e2a6ab1d59a2b271a4d508d4fc315a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e54ac7b6329a678d2965f135dadf5870ca19010b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915957"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>明確階層 (Master Data Services)
 

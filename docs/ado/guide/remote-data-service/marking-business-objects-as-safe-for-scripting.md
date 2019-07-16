@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 18f14920ae532e344ddb69ee79fdc0bd838af95b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 55ae560f35a06e77803bfb011f4d430d5079ea05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922600"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>將商務物件標示為可安全編寫指令碼
 > [!IMPORTANT]

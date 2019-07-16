@@ -12,13 +12,12 @@ keywords:
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a07e97cda518834207990f3adcb15c99d5506e5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20920eb0a7a748b886444b44abef38708df0db46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007183"
 ---
 # <a name="learn-sql-server-master-data-services"></a>學習 SQL Server Master Data Services
 

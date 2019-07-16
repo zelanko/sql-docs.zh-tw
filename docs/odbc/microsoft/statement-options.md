@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd73b769-c8b5-43e0-9f80-b3011b7a6162
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe57ffa0d7628601fcb6dd19218715b32a57322b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3bf99aace8b058e429898846466294cc42612070
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948836"
 ---
 # <a name="statement-options"></a>陳述式選項
 > [!IMPORTANT]  

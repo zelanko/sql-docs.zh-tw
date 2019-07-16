@@ -5,17 +5,16 @@ description: 這篇文章說明如何使用 Azure Data Studio、 筆記型電腦
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b3cc78e36fe427966c7730533104c63aa3ed9332
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 1a8d04ab43adac77a534a82626cc4a018c24b68f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957672"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>如何檢視的巨量資料叢集狀態
 

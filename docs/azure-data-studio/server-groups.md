@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 1295d189b5f565e0cd341ce69e06b375f4f6dc37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1edfb7566d47b8c02dbd53fcccbd7441239a949
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959302"
 ---
 # <a name="server-groups-in-includename-sosincludesname-sos-shortmd"></a>中的伺服器群組 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

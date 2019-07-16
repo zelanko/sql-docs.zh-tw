@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ae5ac50-c88c-4262-b7ab-f2b3de382a0b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 663cac5f83608b5a0a100a3f5bc33dc94e3023db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7cdfd5b91caa52b3c2de3d0775ecf7d706b1a73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963230"
 ---
 # <a name="url-property-example-vbscript"></a>URL 屬性範例 (VBScript)
 > [!IMPORTANT]

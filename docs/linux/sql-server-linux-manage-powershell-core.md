@@ -8,13 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-manager: jroth
-ms.openlocfilehash: e96fe471f78e02e5667431f7065a169a5c136417
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: d8d0675bbb7ebbedc9d1efec29fff8854670c10f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952530"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>管理與 PowerShell Core 在 Linux 上的 SQL Server
 

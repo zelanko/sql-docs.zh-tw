@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 821b4535-cec3-4e59-b681-87faf9d51575
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 221007de9707d982dfd273825318a9f1f3c2bc14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5362c8da9edca2b35c9049c12be0f44e4fa30fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735187"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948933"
 ---
 # <a name="sqltransact-excel-driver"></a>SQLTransact (Excel 驅動程式)
 > [!NOTE]  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0953b76ff642387679c907e6f0b3364cbac898df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ec1601749b6537484cead17c50492de131932ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931179"
 ---
 # <a name="save-method"></a>Save 方法
 節省[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)檔案中或[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。  

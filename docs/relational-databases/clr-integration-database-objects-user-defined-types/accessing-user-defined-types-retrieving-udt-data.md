@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d6b70a61173de35d441208dc5f2794e5d5b341ed
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: e5ceaa0e9812ba69820b8ac912ba8b5441cc73fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009605"
 ---
 # <a name="accessing-user-defined-types---retrieving-udt-data"></a>存取使用者定義型別 - 擷取 UDT 資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

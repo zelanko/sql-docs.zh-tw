@@ -7,13 +7,12 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 22f6c48aec0c9434b17ceda0a2b729f6e63bf136
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: cccbae1e1957baedaba665e68a3a058db69f4885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962379"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>使用 SQL Server machine learning 中的 sp_rxPredict 進行即時評分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +21,7 @@ ms.locfileid: "58645470"
 
 ## <a name="how-real-time-scoring-works"></a>如何進行即時評分運作方式
 
-即時評分支援在 SQL Server 2017 和 SQL Server 2016 中，特定模型類型，例如根據 RevoScaleR 或 MicrosoftML functions [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). 它會使用原生 c + + 程式庫產生分數，根據使用者輸入提供給 machine learning 的特殊的二進位格式儲存的模型。
+即時評分支援在 SQL Server 2017 和 SQL Server 2016 中，特定模型類型，例如根據 RevoScaleR 或 MicrosoftML functions [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). 它會使用原生C++程式庫，以產生分數，根據提供的機器學習模型以特殊的二進位格式儲存的使用者輸入。
 
 因為可以使用定型的模型進行評分，而不需要呼叫外部語言執行階段，則會減少多個處理序的額外負荷。 這可用於評分案例的生產環境支援更快的預測效能。 因為資料絕不會離開 SQL Server，就可以產生並插入新的資料表，而不需要任何 R 與 SQL 之間的資料轉譯結果。
 
@@ -168,7 +167,7 @@ ms.locfileid: "58645470"
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 ```
 
-### <a name="step-3-call-sprxpredict"></a>步驟 3： Call sp_rxPredict
+### <a name="step-3-call-sprxpredict"></a>步驟 3： 呼叫 sp_rxPredict
 
 您呼叫 sp\_rxPredict 您對任何其他預存程序。 在目前的版本中，預存程序會採用只有兩個參數： _\@模型_模型，以二進位格式，和 _\@inputData_用於評分的資料定義為有效的 SQL 查詢。
 

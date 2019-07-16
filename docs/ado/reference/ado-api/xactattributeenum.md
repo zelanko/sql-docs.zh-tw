@@ -1,5 +1,5 @@
 ---
-title: XactAttributeEnum | Microsoft Docs
+title: XactAttributeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5bf3c4b8a7cbbee1e384c08746f32d6a7e550ddd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d828c2b9b49138cc4dfd6345d90e70c333554fe0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710132"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947436"
 ---
 # <a name="xactattributeenum"></a>XactAttributeEnum
 指定的交易屬性[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件。  

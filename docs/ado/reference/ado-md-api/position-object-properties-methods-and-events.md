@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c3e824b1-30c7-4afa-9a27-213c407453e8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ef2d631429385785b6c6889d60684193323eb117
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6758484e5f8dc4b4f4e3c87734ad7dc5be9ce4e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949239"
 ---
 # <a name="position-object-properties-methods-and-events"></a>Position 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
@@ -30,7 +29,7 @@ ms.locfileid: "66708811"
 ## <a name="methods"></a>方法  
  無。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

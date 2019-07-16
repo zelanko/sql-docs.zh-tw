@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 56c7203db3e7c32383b59a85d2bc7cb16cba4d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe7bdd3ab79987f4f45a4a50d818ce454914e608
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941102"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>設定商務規則來傳送通知 (Master Data Services)
 

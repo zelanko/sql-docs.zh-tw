@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_delete_collection_item (Transact-SQL) | Microsoft Docs
+title: sp_syscollector_delete_collection_item (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9bb3db70db6d888858ec413de852acccf73b96e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ae8cb259f1dfa424de37c7342cf1f6081a8c8b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000901"
 ---
 # <a name="spsyscollectordeletecollectionitem-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ EXEC sp_syscollector_delete_collection_item @name = 'MyCollectionItem1';
   
 ## <a name="see-also"></a>另請參閱  
  [資料收集](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
+ [sp_syscollector_create_collection_item &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
  [資料收集器預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   

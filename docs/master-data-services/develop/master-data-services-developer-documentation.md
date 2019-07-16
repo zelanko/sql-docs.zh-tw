@@ -10,13 +10,12 @@ ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 18f13cbe1c5d7c3a281ee3c3ad542b2f5281a74f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7544660fdcab3ef4caa8082d7096bbe343790fcb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488335"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006316"
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services 開發人員文件
 

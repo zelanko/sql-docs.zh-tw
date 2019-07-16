@@ -2,19 +2,18 @@
 title: 取得並設定載入伺服器-Parallel Data Warehouse |Microsoft Docs
 description: 本文說明如何取得和設定載入伺服器做為非應用裝置 Windows 系統，來提交資料載入至 Parallel Data Warehouse (PDW)。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: da404aa881f3ff7af26a681751aae12a45f2628f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d753237841695786de3d368bebf9a606875ea634
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63231100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961615"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>取得並設定載入伺服器來進行平行處理資料倉儲
 本文說明如何取得和設定載入伺服器做為非應用裝置 Windows 系統，來提交資料載入至 Parallel Data Warehouse (PDW)。  
@@ -45,7 +44,7 @@ ms.locfileid: "63231100"
   
 -   Windows Server 2012 或 Windows Server 2012 R2。 這些作業系統需要 FDR 網路介面卡。  
   
--   Windows Server 2008 R2. 這個作業系統需要 DDR 網路介面卡。  
+-   Windows Server 2008 R2。 這個作業系統需要 DDR 網路介面卡。  
   
 伺服器必須使用 EN-US 地區設定，才能使用 dwloader 命令列載入工具。 dwloader 不支援其他地區設定。  
   

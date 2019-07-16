@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 1ec0c02863422565edd8a35ddc39bc653f778b2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57f8524cde4404a4380cc58454b348af27b9d094
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935288"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>將知識庫匯出到 .dqs 檔案
 
@@ -44,11 +43,11 @@ ms.locfileid: "66776649"
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，於 [定義域管理] 活動中開啟知識庫。  
   
-3.  在 [定義域管理] 頁面中 (包含任何選取的索引標籤)，按一下定義域清單上方的 **[匯出知識庫資料]** 圖示，然後按一下 **[匯出知識庫]**。 另外，您也可以用滑鼠右鍵按一下 **[定義域]** 清單，將游標移到 **[匯出]** 上方，然後按一下 **[匯出知識庫]**。  
+3.  在 [定義域管理] 頁面中 (包含任何選取的索引標籤)，按一下定義域清單上方的 **[匯出知識庫資料]** 圖示，然後按一下 **[匯出知識庫]** 。 另外，您也可以用滑鼠右鍵按一下 **[定義域]** 清單，將游標移到 **[匯出]** 上方，然後按一下 **[匯出知識庫]** 。  
   
-4.  在 [匯出到資料檔] 對話方塊中，移至您想要用來儲存檔案的資料夾、為檔案命名或是保留知識庫名稱、將 [DQS 資料檔 (\*.dqs)] 保留為 [另存新檔] 類型，然後按一下 [儲存]。  
+4.  在 [匯出到資料檔]  對話方塊中，移至您想要用來儲存檔案的資料夾、為檔案命名或是保留知識庫名稱、將 [DQS 資料檔 (\*.dqs)]  保留為 [另存新檔]  類型，然後按一下 [儲存]  。  
   
-5.  在 **[匯出知識庫]** 對話方塊中，確認狀態行指出已完成匯出。 按一下 [確定] 。  
+5.  在 **[匯出知識庫]** 對話方塊中，確認狀態行指出已完成匯出。 按一下 [確定]  。  
   
 ##  <a name="FollowUp"></a> 後續操作：將定義域匯出到 .dqs 檔案之後  
  當您將知識庫匯出到 .dqs 檔案之後，您可以將此知識庫匯入相同的 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] (具有新的名稱) 或不同的 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]。  

@@ -2,19 +2,18 @@
 title: 授與 T-SQL 權限-Parallel Data Warehouse |Microsoft Docs
 description: 授與 T-SQL 平行處理資料倉儲的資料庫作業的權限。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 01ef7b199a07be8bbc2dc1dee40d9c4d5771db1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15798edc4d6a9b1f00c8dd489dfed76a39e5f340
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157493"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960940"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>授與 T-SQL 平行處理資料倉儲的權限
 授與 T-SQL 平行處理資料倉儲的資料庫作業的權限。
@@ -247,6 +246,6 @@ GO
   
 ## <a name="see-also"></a>另請參閱
 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
-[CREATE USER](../t-sql/statements/create-user-transact-sql.md)  
+[建立使用者](../t-sql/statements/create-user-transact-sql.md)  
 [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
 [載入](load-overview.md)  

@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 82a7b33a201a21d488ea2cef4b15b7609af47de8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b977d2fa47d7fd40e751e4db7c9389eac48a2993
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935519"
 ---
 # <a name="create-a-domain-rule"></a>建立定義域規則
 

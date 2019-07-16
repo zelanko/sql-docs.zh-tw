@@ -8,14 +8,13 @@ ms.date: 03/27/2019
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
-manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f7b176cf4aa50292c3b3968107ded5fcdd3533d8
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: e2cbffcab6fd34d08e8338522e8dcc97ac50f4c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961976"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教學課程：在 SQL Server 上的 R 中建立分割區為基礎的模型
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "59582130"
 
 + SQL Server 2019 預覽資料庫引擎執行個體，與機器學習服務和 R 的整合。
 
-檢查版本，藉由執行**`SELECT @@Version`** 為 T-SQL 查詢中的查詢工具。 輸出應該是 「 Microsoft SQL Server 2019 (CTP 2.4)-15.0.x"。
+檢查版本，藉由執行 **`SELECT @@Version`** 為 T-SQL 查詢中的查詢工具。 輸出應該是 「 Microsoft SQL Server 2019 (CTP 2.4)-15.0.x"。
 
 檢查可用性的 R 套件，藉由傳回格式正確的所有目前已安裝與您的資料庫引擎執行個體的 R 封裝清單：
 
@@ -173,7 +172,7 @@ GO
 根據預設，查詢最佳化工具通常會進行運作 **@parallel= 1**超過 256 個資料列，但如果您可以處理此明確設定的資料表上 **@parallel= 1**在此所示指令碼。
 
 > [!Tip]
-> 您可以使用訓練 workoads **@parallel**任何任意的訓練指令碼，甚至是使用非 Microsoft rx 演算法。 通常，只有 RevoScaleR 演算法 （具有 rx 前置詞） 會提供 SQL Server 中的定型案例中的平行處理原則。 但是，新的參數，您可以平行處理呼叫函式，包括開放原始碼 R 函數，不是明確地使用這項功能設計的指令碼。 這是因為資料分割有特定的執行緒親和性，因此以每個分割區為基礎，在指定的執行緒上執行的指令碼中呼叫的所有作業。
+> 您可以使用訓練 workoads **@parallel** 任何任意的訓練指令碼，甚至是使用非 Microsoft rx 演算法。 通常，只有 RevoScaleR 演算法 （具有 rx 前置詞） 會提供 SQL Server 中的定型案例中的平行處理原則。 但是，新的參數，您可以平行處理呼叫函式，包括開放原始碼 R 函數，不是明確地使用這項功能設計的指令碼。 這是因為資料分割有特定的執行緒親和性，因此以每個分割區為基礎，在指定的執行緒上執行的指令碼中呼叫的所有作業。
 
 <a name="training-step"></a>
 

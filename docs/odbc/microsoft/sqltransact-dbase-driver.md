@@ -1,5 +1,5 @@
 ---
-title: SQLTransact (dBASE Driver) | Microsoft Docs
+title: SQLTransact (dBASE 驅動程式) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 159ca21a-ccc4-45e2-97ca-2a9387efa7df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d29adab062e11be3e6a74b604a6e70453d5856ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f05be059bc374b7b8236453e7c46feed4b8a6bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948941"
 ---
 # <a name="sqltransact-dbase-driver"></a>SQLTransact (dBASE 驅動程式)
 > [!NOTE]  

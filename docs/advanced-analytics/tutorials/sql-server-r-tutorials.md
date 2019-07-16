@@ -7,13 +7,12 @@ ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 99dc3aa20bd3f31766ed66a6cdabea5cf38553f6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 467c9320880f1b113cecd36101345f6ee99f7b75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510155"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961938"
 ---
 # <a name="sql-server-r-language-tutorials"></a>SQL Server R 語言教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

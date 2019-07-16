@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 77cf9410542f7924db804183d69a00fcba856946
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b94e7e34bb53d15bbb7466a5ff3e32df634e0f79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485834"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945046"
 ---
 # <a name="create-a-master-data-services-database"></a>建立 Master Data Services 資料庫
 

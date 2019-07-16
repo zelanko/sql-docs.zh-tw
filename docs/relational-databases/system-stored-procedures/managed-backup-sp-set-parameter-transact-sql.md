@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 578997f57c4092689e49cb0e3102c8bdf7b4f8d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 838a8b0d998476a37b0dd4d30cab5041ad4276a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942038"
 ---
 # <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

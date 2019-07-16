@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ee9a48b4bec625e4d64caf20aa1b5c8eaefe34f3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8e75db08f283631cf9b5daf064790786a1abc10f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946412"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>路徑運算式 - 使用縮寫語法
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   中的所有範例[了解 XQuery 中的路徑運算式](../xquery/path-expressions-xquery.md)使用路徑運算式的不縮寫的語法。 在路徑運算式中軸步的不縮寫語法包含軸名稱與節點測試，並以雙冒號分隔，後面接著零步或多步的限定詞。  
   
- 例如：  
+ 例如:  
   
 ```  
 child::ProductDescription[attribute::ProductModelID=19]  
@@ -59,7 +58,7 @@ child::ProductDescription[attribute::ProductModelID=19]
   
      如果您以縮寫語法 `//act:telephoneNumber` 取代路徑運算式，您會收到相同的結果。  
   
--   **Self:: node （)** 在步驟中可以縮寫成單點 （.）。 不過，點不相等或使用可互換**self:: node （)**。  
+-   **Self:: node （)** 在步驟中可以縮寫成單點 （.）。 不過，點不相等或使用可互換**self:: node （)** 。  
   
      例如，在下列查詢中，點的使用代表是一個值且不是節點：  
   

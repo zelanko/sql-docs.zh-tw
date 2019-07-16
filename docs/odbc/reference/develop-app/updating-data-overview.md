@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3edbd41bc5361d864abcc7d631a90521af98ef01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0701218b5ef489d1f8962ffadc9409986a0c36c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942819"
 ---
 # <a name="updating-data-overview"></a>更新資料概觀
 應用程式可以更新資料，執行 SQL 陳述式，或呼叫**SQLSetPos**或是**SQLBulkOperations**。 **更新**，**刪除**，以及**插入**陳述式直接處理資料來源及驅動程式通常會支援。 搜尋 update 和 delete 陳述式包含要變更的資料列的規格。 定位 update 和 delete 陳述式及**SQLSetPos**處理的資料來源，透過資料指標和較廣受支援。  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 0256881ffbf3a1729c89cd3a82522fd3e684ebf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57d174bbd24dea36470c4b8ca3e29f77dc4111f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776499"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935260"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>在知識探索中匯入 Excel 檔案中的定義域
 

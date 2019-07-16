@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 55f5d599ea2399697a0b96cc3d316776179b7562
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d7251e3a403168e8383e636a8e6b5f712b9f7bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922521"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS 程式設計模型詳述
 RDS 程式設計模型的重要元素如下：  
@@ -65,7 +64,7 @@ RDS 程式設計模型的重要元素如下：
   
  **Rds。DataControl**物件也有它自己的方法，來瀏覽、 排序和篩選相關聯的資料列**資料錄集**物件。 這些方法很相似，但不同的方法，在 ADO**資料錄集**物件。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  RDS 可支援兩個本身的 ADO 事件模型無關的事件。 [OnReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)事件會被呼叫時**rds。DataControl** [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)屬性變更，藉此非同步作業已順利完成，通知您終止，或發生錯誤。 [OnError](../../../ado/reference/rds-api/onerror-event-rds.md)事件每次錯誤發生時，即使呼叫非同步作業期間發生錯誤。  
   
 > [!NOTE]
@@ -75,7 +74,7 @@ RDS 程式設計模型的重要元素如下：
  [物件的 RDS 程式設計模型](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+ [DataSpace 物件 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [RDS 案例](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [RDS 提供使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)

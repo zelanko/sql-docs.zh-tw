@@ -5,17 +5,16 @@ description: 了解的步驟和部署 SQL Server 2019 巨量資料叢集 （預�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b090ec57ae62058a211e4e232f8bfa99e44f9675
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 8583610606e5d554f039a69688af3ddff8dc8bb3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958536"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>開始使用 SQL Server 的巨量資料叢集
 

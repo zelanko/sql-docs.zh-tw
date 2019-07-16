@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e113112e-ae42-469e-8e4b-a365a10d9071
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 23416cb067507d821701e57255fdc6f81ee607c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 829f924d8d4893d45a48c193cd27fdd7ac261e3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939717"
 ---
 # <a name="text-file-data-types"></a>文字檔資料類型
 下表顯示如何將文字資料型別對應至 ODBC SQL 資料類型。 請注意，並非所有的 ODBC SQL 資料類型都支援 ODBC 文字驅動程式。  

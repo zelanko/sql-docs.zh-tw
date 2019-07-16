@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 07f4dd70166928ed517e46fceb5a3ef81eba5bee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0e5ff3b73bfab224d21c35d1eff801df487b327
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937146"
 ---
 # <a name="autotranslation-of-character-data"></a>字元資料的自動轉譯
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

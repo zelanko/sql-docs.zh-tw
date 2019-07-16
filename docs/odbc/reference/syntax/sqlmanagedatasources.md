@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 529c503bc10d3ed0b69a4c280c7fa63e72893f8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 819856a584c6133e28e222a704b720337f99cd9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536569"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018959"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **合規性**  
@@ -94,7 +93,7 @@ BOOL SQLManageDataSources(
   
  系統 DSN 會註冊在 HKEY_LOCAL_MACHINE 項目中的系統資訊，而不是在 HKEY_CURRENT_USER 項目。 它不會連結到一個使用者使用其特定的使用者名稱和密碼登入，但可以使用該機器的任何使用者或自動的全系統服務。 系統 DSN，不過，繫結到一部電腦。 它不支援使用機器之間的遠端名稱 （dsn） 的功能。 系統名稱 （dsn） 中的系統資訊註冊，如下所示：  
   
- HKEY_LOCAL_MACHINE    SOFTWARE       ODBC          Odbc.ini  
+ HKEY_LOCAL_MACHINE 軟體 ODBC Odbc.ini  
   
 ## <a name="file-dsns"></a>檔案名稱 （dsn)  
  檔案資料來源沒有資料來源名稱，因為不機器資料來源，以及未註冊到任何一位使用者或電腦。 該資料來源的連接資訊包含在可以複製到任何機器.dsn 檔案。 檔案資料來源可以是共用，在此情況下.dsn 檔案所在的網路，並可以同時使用多個使用者在網路上，只要使用者有適當的驅動程式安裝。 檔案資料來源也可以是非共用，在此情況下只在單一機器上使用。  

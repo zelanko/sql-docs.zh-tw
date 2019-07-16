@@ -2,26 +2,25 @@
 title: 透過 SCOM-分析平台系統監視 |Microsoft Docs
 description: 使用 System Center Operations Manager (SCOM)，以監視 Analytics Platform System (APS) 設備。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0da122b7ff4f17621a896e3a9f5076f8564d32c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639834"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960543"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>監視與 System Center Operations Manager-Analytics Platform System
 使用 System Center Operations Manager (SCOM)，以監視 Analytics Platform System (APS) 設備。
   
 ## <a name="before-you-begin"></a>開始之前  
   
-### <a name="prerequisites"></a>先決條件  
+### <a name="prerequisites"></a>必要條件  
   
 1.  System Center Operations Manager 2007 R2、 2012年或 2012 SP1 必須安裝且正在執行。  
   
@@ -44,12 +43,12 @@ ms.locfileid: "62639834"
 ### <a name="alerts"></a>警示  
 警示是您可以在哪裡找到目前的警示管理。  
   
-![Alerts](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
+![警示](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>應用裝置  
 設備是您將在其中找到您的環境中目前已探索和監視 SQL Server PDW 應用裝置。 如果設備未這裡顯示，而且您已建立的 ODBC 連接，則可能會有 PDWWatcher 帳戶發生錯誤。 如果它們會顯示為 「 未受監視 」，可能有 PDWMonitor 帳戶發生錯誤。 因為 SCOM 不會變更，但會定期檢查新的設備，若要監視的耐心等候，定期將查詢傳送到設備的監視。  
   
-![Appliances](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
+![設備](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
   
 ### <a name="appliances-diagram"></a>應用裝置圖表  
 應用裝置圖表頁面是設備的您可以在其中取得了解您，樹狀結構檢視的健全狀況：  

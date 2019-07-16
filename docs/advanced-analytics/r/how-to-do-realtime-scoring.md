@@ -7,13 +7,12 @@ ms.date: 08/30/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 001b90eafd26c90f730e5647f0dc62d756ca9d1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4af5fff7581ae2ae8f74e09603b75bca620ca775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62503773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962638"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>如何產生預測與使用 SQL Server 中的機器學習服務模型的預測
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "62503773"
 | 方法           | 介面         | 程式庫需求 | 處理速度 |
 |-----------------------|-------------------|----------------------|----------------------|
 | Extensibility Framework | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 無。 模型可以根據任何 R 或 Python 函式 | 數百毫秒。 <br/>載入執行階段環境都有固定的成本之前的任何新資料計分,，平均三到六個 100 毫秒。 |
-| [即時評分的 CLR 延伸模組](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)上序列化的模型 | :RevoScaleR, MicrosoftML <br/>Python: revoscalepy microsoftml | 數以萬計的平均 （毫秒）。 |
+| [即時評分的 CLR 延伸模組](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)上序列化的模型 | :RevoScaleR MicrosoftML <br/>Python: revoscalepy microsoftml | 數以萬計的平均 （毫秒）。 |
 | [原生計分C++擴充功能](../sql-native-scoring.md) | [預測 T-SQL 函數](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)上序列化的模型 | :RevoScaleR <br/>Python: revoscalepy | 小於 20 毫秒，平均。 | 
 
 處理速度和不獨特是輸出的差異的功能。 假設相同的功能和輸入，經過評分的輸出應該不會隨著您使用的方法上。
@@ -110,4 +109,4 @@ _評分_是兩個步驟的程序。 首先，您可以指定已定型的模型�
 + [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)  
 + [rxRealTimeScoring](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxrealtimescoring)
 + [sp-rxPredict](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)
-+ [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)
++ [預測 T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)

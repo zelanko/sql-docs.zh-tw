@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 45839834e25a94d584ac250503de153bf6fb0eb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38f7dc64507e79704a62f321d7513419cc3c15d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932662"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Filter 和 RecordCount 屬性範例 （VC + +）
 這個範例會使用[篩選條件](../../../ado/reference/ado-api/filter-property.md)屬性，以開啟新[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)根據指定的條件套用至現有**資料錄集**。 它會使用[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)屬性，以在兩個顯示的記錄數目**資料錄集**。 若要執行此程序需要 FilterField 函式。  
