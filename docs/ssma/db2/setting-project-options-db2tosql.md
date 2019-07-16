@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 16bf79c185a23399d48d141b5d773e2e0d41dc3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d384433e5a2653291fac4d990bb3660b31c13855
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060036"
 ---
 # <a name="setting-project-options-db2tosql"></a>設定專案選項 (DB2ToSQL)
 針對每個 SSMA 專案中，您可以設定專案層級選項。 這些選項會指定物件轉換、 載入物件、 使用者介面和資料移轉設定。 轉換物件之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或移轉資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，確認組態選項都適用於專案。  
@@ -64,9 +63,9 @@ SSMA 中，您可以設定所有專案的預設的設定。 這些設定會儲�
   
 **若要設定預設專案選項**  
   
-1.  在 [**工具**功能表上，按一下**預設專案設定**。  
+1.  在 **工具**功能表上，按一下**預設專案設定**。  
   
-2.  在 [**預設專案設定**對話方塊，請使用下列程序的其中一個：  
+2.  在 **預設專案設定**對話方塊，請使用下列程序的其中一個：  
   
     -   選取移轉的專案類型，則需要可以檢視或變更設定**移轉目標版本**下拉式清單按一下**一般**在底部的左的窗格中，然後選取轉換或移轉。  
   
@@ -74,21 +73,21 @@ SSMA 中，您可以設定所有專案的預設的設定。 這些設定會儲�
   
     -   若要指定自訂的設定，請選取或輸入新的設定或值。  
   
-3.  按一下 [**確定**以儲存設定。  
+3.  按一下 **確定**以儲存設定。  
   
 您也可以自訂設定目前的專案。 這些設定會儲存到目前的專案檔。  
   
 **若要自訂目前專案的設定**  
   
-1.  在 [**工具**功能表上，按一下**專案設定**。  
+1.  在 **工具**功能表上，按一下**專案設定**。  
   
-2.  在 [**專案設定**對話方塊，請使用下列程序的其中一個：  
+2.  在 **專案設定**對話方塊，請使用下列程序的其中一個：  
   
     -   若要選取預先定義的模式中，在**模式**下拉式清單方塊中，選取**預設**， **Optimistic**，或**完整**。  
   
     -   若要指定自訂模式中，在**模式**方塊中，選取**自訂**，然後選取適當的專案設定。  
   
-3.  按一下 [**確定**以儲存設定。  
+3.  按一下 **確定**以儲存設定。  
   
 ## <a name="next-steps"></a>後續步驟  
 移轉的下一個步驟取決於您的專案需求：  

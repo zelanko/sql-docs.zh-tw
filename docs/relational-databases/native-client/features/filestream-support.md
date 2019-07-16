@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 030f2e002c4dba8148a1e4bbcbb9eff9033308f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47ea988c3c9ec2b784109e46ce30d1a0ed56dc61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987510"
 ---
 # <a name="filestream-support"></a>FILESTREAM 支援
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47688998"
 
   FILESTREAM 提供透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或直接存取 Windows 檔案系統來儲存及存取大型二進位值的方式。 大型二進位值是大於 2 GB 的值。 如需有關增強型 FILESTREAM 支援的詳細資訊，請參閱 < [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)。  
   
- 當開啟資料庫連線時，**@@TEXTSIZE** 預設會設定為 -1 (無限制)。  
+ 當開啟資料庫連線時， **@@TEXTSIZE** 預設會設定為 -1 (無限制)。  
   
  也可以使用 Windows 檔案系統 API 來存取及更新 FILESTREAM 資料行。  
   

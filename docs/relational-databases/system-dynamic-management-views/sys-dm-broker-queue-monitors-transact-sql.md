@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fed9d261f692e9c9e1eee4f7078ca69e8c74594e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2f363998699846ca5020127f19be6dc0ad59712
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948638"
 ---
 # <a name="sysdmbrokerqueuemonitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62760115"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|包含監視器所監看佇列之資料庫的物件識別碼。 NULLABLE。|  
 |**queue_id**|**int**|監視器監看之佇列的物件識別碼。 NULLABLE。|  
-|**state**|**nvarchar(32)**|監視器的狀態。 NULLABLE。 這是下列項目之一：<br /><br /> **INACTIVE**<br /><br /> **收到通知**<br /><br /> **RECEIVES_OCCURRING**|  
+|**state**|**nvarchar(32)**|監視器的狀態。 NULLABLE。 這是下列項目之一：<br /><br /> **非使用中**<br /><br /> **收到通知**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|上次佇列的 RECEIVE 傳回空結果的時間。 NULLABLE。|  
 |**last_activated_time**|**datetime**|上次這個佇列監視器啟動預存程序的時間。 NULLABLE。|  
 |**tasks_waiting**|**int**|目前 RECEIVE 陳述式中等候這個佇列的工作階段數目。 NULLABLE。<br /><br /> 注意:這個數目包括執行 receive 陳述式，而不論是否佇列監視器啟動工作階段的任何工作階段。 這個情況是配合 RECEIVE 使用 WAITFOR。 基本上，這些工作會等候訊息到達佇列。|  

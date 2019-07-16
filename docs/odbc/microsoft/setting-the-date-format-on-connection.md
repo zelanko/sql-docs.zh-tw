@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba0d5123-db52-448b-8e19-b7647ce4b361
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e36192279bfc5730559c795ee076db11394ab94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3075893d37a401110afbecacc68e452425ad684b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063460"
 ---
 # <a name="setting-the-date-format-on-connection"></a>設定連線的日期格式
 > [!IMPORTANT]  
@@ -27,7 +26,7 @@ ms.locfileid: "63313452"
   
  新版的 Microsoft ODBC Driver for Oracle 不會自動設定 Oracle 的日期欄位的日期格式。 先前的驅動程式連線時，它使用`ALTER SESSION SET NLS_DATE_FORMAT ='YYYY-MM-DD HH:MI:SS'`。  
   
- 若要設定的日期格式，請呼叫改變工作階段設定，然後再執行 插入。 例如：  
+ 若要設定的日期格式，請呼叫改變工作階段設定，然後再執行 插入。 例如:  
   
 ```  
 conn.Execute "ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD HH:MI:SS' "  

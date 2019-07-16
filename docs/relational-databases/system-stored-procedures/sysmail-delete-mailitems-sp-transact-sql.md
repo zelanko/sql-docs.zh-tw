@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3a8549d33b000744f4d8430ee306e0083455894c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 23ecda5fd8d91f20133eb2295d38dc9d9ace66f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069106"
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- Database Mail 訊息及其附件會儲存在**msdb**資料庫。 訊息應定期刪除，以防止**msdb**成長大於預期，並符合您組織的文件保留計畫。 使用**sysmail_delete_mailitems_sp**預存程序，從 Database Mail 資料表中永久刪除電子郵件訊息。 一個選擇性引數可藉由提供日期和時間，讓您只刪除較舊的電子郵件。 比該引數舊的電子郵件會被刪除。 另一個選擇性引數可讓您刪除特定類型，為指定的電子郵件**sent_status**引數。 您必須針對提供的引數**@sent_before**或是**@sent_status**。 若要刪除所有訊息，請使用 **@sent_before = getdate （）**。  
+ Database Mail 訊息及其附件會儲存在**msdb**資料庫。 訊息應定期刪除，以防止**msdb**成長大於預期，並符合您組織的文件保留計畫。 使用**sysmail_delete_mailitems_sp**預存程序，從 Database Mail 資料表中永久刪除電子郵件訊息。 一個選擇性引數可藉由提供日期和時間，讓您只刪除較舊的電子郵件。 比該引數舊的電子郵件會被刪除。 另一個選擇性引數可讓您刪除特定類型，為指定的電子郵件**sent_status**引數。 您必須針對提供的引數 **@sent_before** 或是 **@sent_status** 。 若要刪除所有訊息，請使用 **@sent_before = getdate （）** 。  
   
  刪除電子郵件也會刪除這些訊息的相關附加檔案。 刪除電子郵件不會刪除對應中的項目**sysmail_event_log**。 使用[sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)從記錄檔中刪除項目。  
   
@@ -87,9 +86,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
+ [sysmail_allitems &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
+ [sysmail_event_log &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_mailattachments &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
  [建立 SQL Server Agent 作業以封存 Database Mail 訊息及事件記錄檔](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

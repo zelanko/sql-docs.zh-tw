@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5ffb6fd01ebd565921a23a42c2ea0c2eced20a0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c66bca375951ec78593bafc2c2eff950e3282e4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966990"
 ---
 # <a name="clustered-property-adox"></a>Clustered 屬性 (ADOX)
 指出是否為叢集索引。  

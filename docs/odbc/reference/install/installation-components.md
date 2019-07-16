@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9de15ca0-fe6a-4634-8709-a928d3c9cc73
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9d58b5791fc3cd6418f5594828aff6c8419cc7e1
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 34d1b6d143f6f40d73e2feeb0b718f3c3b3248fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793411"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094127"
 ---
 # <a name="installation-components"></a>安裝元件
 > [!NOTE]  

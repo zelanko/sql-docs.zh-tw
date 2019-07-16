@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1063facd150c6dfd6273f1fd78b6f507d062788e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053055"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -43,9 +42,9 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ \@tsql = ] 'Transact-SQL_batch'` 一或多個[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)** 或是**nvarchar （max)**。  
+`[ \@tsql = ] 'Transact-SQL_batch'` 一或多個[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)** 或是**nvarchar （max)** 。  
   
-`[ \@params = ] N'parameters'` \@params 參數提供的宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，也就是類似於 sp_executesql。 參數可能**nvarchar （n)** 或是**nvarchar （max)**。  
+`[ \@params = ] N'parameters'` \@params 參數提供的宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，也就是類似於 sp_executesql。 參數可能**nvarchar （n)** 或是**nvarchar （max)** 。  
   
  是一個字串，其中包含已內嵌在的所有參數的定義[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch&lt*。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 陳述式中指定的每個參數必須定義在\@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或陳述式中的批次不包含參數， \@params 並非必要。 這個參數的預設值是 NULL。  
   
@@ -71,7 +70,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**is_nullable**|**位元 NOT NULL**|如果資料行允許 NULL 則包含值 1，如果資料行不允許 NULL 則包含 0，此外，如果無法判別資料行是否允許 NULL，則為 1。|  
 |**system_type_id**|**int NOT NULL**|包含 sys.types 中所指定的資料行的資料類型的 system_type_id。 針對 CLR 類型，即使 system_type_name 資料行將傳回 NULL，這個資料行將會傳回值 240。|  
 |**system_type_name**|**nvarchar(256) NULL**|包含名稱和引數 (例如長度、有效位數、小數位數)，已指定給資料行的資料類型。 如果資料類型是使用者定義的別名類型，這裡就會指定基礎系統類型。 如果它是 CLR 使用者定義類型，這個資料行就會傳回 NULL。|  
-|**max_length**|**smallint 非 NULL**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或**xml**。<br /><br /> 針對**文字**資料行**max_length**值會是 16，或是所設定的值**sp_tableoption 'text in row'**。|  
+|**max_length**|**smallint 非 NULL**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或**xml**。<br /><br /> 針對**文字**資料行**max_length**值會是 16，或是所設定的值**sp_tableoption 'text in row'** 。|  
 |**有效位數**|**tinyint NOT NULL**|如果以數值為基礎，就是資料行的有效位數。 否則傳回 0。|  
 |**scale**|**tinyint NOT NULL**|如果是以數值為基礎，便是資料行的小數位數。 否則傳回 0。|  
 |**collation_name**|**sysname 為 NULL**|如果是以字元為基礎，便是資料行的定序名稱。 否則，便傳回 NULL。|  
@@ -92,11 +91,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**source_schema**|**sysname**|這個結果中的資料行所傳回之原始結構描述名稱。 如果無法判別結構描述，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
 |**source_table**|**sysname**|這個結果的資料行所傳回之原始資料表名稱。 如果無法判別資料表，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
 |**source_column**|**sysname**|結果資料行所傳回之原始資料行名稱。 如果無法判別資料行，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
-|**is_identity_column**|**bit NULL**|如果資料行是識別欄位，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否為識別欄位，則傳回 NULL。|  
-|**is_part_of_unique_key**|**bit NULL**|如果資料行是唯一索引 (包括唯一和主要的條件約束) 的一部分，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否為唯一索引的一部分，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
-|**is_updateable**|**bit NULL**|如果資料行是可更新的，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否可更新，則傳回 NULL。|  
-|**is_computed_column**|**bit NULL**|如果資料行是計算資料行，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否為計算資料行，則傳回 NULL。|  
-|**is_sparse_column_set**|**bit NULL**|如果資料行是疏鬆資料行，則傳回 1，否則傳回 0。 如果它無法判別資料行是否為疏鬆資料行集的一部分，則傳回 NULL。|  
+|**is_identity_column**|**位元 NULL**|如果資料行是識別欄位，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否為識別欄位，則傳回 NULL。|  
+|**is_part_of_unique_key**|**位元 NULL**|如果資料行是唯一索引 (包括唯一和主要的條件約束) 的一部分，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否為唯一索引的一部分，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
+|**is_updateable**|**位元 NULL**|如果資料行是可更新的，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否可更新，則傳回 NULL。|  
+|**is_computed_column**|**位元 NULL**|如果資料行是計算資料行，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否為計算資料行，則傳回 NULL。|  
+|**is_sparse_column_set**|**位元 NULL**|如果資料行是疏鬆資料行，則傳回 1，否則傳回 0。 如果它無法判別資料行是否為疏鬆資料行集的一部分，則傳回 NULL。|  
 |**ordinal_in_order_by_list**|**smallint NULL**|這個資料行在 ORDER BY 清單中的位置。 如果資料行不會顯示在 ORDER BY 清單中，或如果無法唯一判別 ORDER BY 清單，則傳回 NULL。|  
 |**order_by_list_length**|**smallint NULL**|ORDER BY 清單的長度。 如果沒有 ORDER BY 清單，或如果無法唯一判別 ORDER BY 清單，則傳回 NULL。 請注意，這個值會是所傳回的所有資料列相同**sp_describe_first_result_set。**|  
 |**order_by_is_descending**|**smallint NULL**|如果 ordinal_in_order_by_list 不是 NULL， **order_by_is_descending**資料行則報告此資料行的 ORDER BY 子句方向。 否則，它會回報 NULL。|  
@@ -140,15 +139,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
     -   **varchar(a)** 要**varchar(a')** 其中 ' >。  
   
-    -   **varchar(a)** to **varchar(max)**  
+    -   **varchar(a)** 至**varchar （max)**  
   
     -   **nvarchar(a)** 要**nvarchar(a')** 其中 ' >。  
   
-    -   **nvarchar(a)** to **nvarchar(max)**  
+    -   **nvarchar(a)** 至**nvarchar （max)**  
   
     -   **varbinary(a)** 要**varbinary(a')** 其中 ' >。  
   
-    -   **varbinary(a)** to **varbinary(max)**  
+    -   **varbinary(a)** 至**varbinary （max)**  
   
  **sp_describe_first_result_set**不支援間接遞迴。  
   
@@ -191,7 +190,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|NULL|NULL|NULL|NULL|  
   
@@ -204,7 +203,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
 |1|2|a|dbo|t|a|1|  
@@ -217,7 +216,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULL|NULL|NULL|0|  

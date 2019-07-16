@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e4a8d9d7-8aba-48ab-8be6-1a6129adfb8f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6c76b1a931101fce366cc6d3b20d4aa74de23e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8a155f5d76e8a250c64d3d59e160fbb5863414f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071850"
 ---
 # <a name="driver-version-scheme"></a>驅動程式版本配置
 > [!IMPORTANT]  

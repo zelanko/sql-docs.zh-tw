@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: dc7976fae322dddc24eda7cf6ef84ef20a7a9e61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca2a595eb57d01554aa8389b002fcd6f8422b9da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086167"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>使用範例主控台指令碼檔 (DB2ToSQL)
 幾個範例檔案，以及產品提供的使用者參考和使用方式。 本章節描述的方式，輕鬆地自訂這些指令碼，以符合使用者需求。  

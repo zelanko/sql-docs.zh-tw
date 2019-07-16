@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8a3f6118c2227ad81d368c012c7282e3ba962881
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 53d14ec8fe32ef665571dde0b7cd4aa4c17c7388
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095489"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>使用伺服器事件的 WMI 提供者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +110,7 @@ WHERE DatabaseName = "AdventureWorks2012"
     -   DENY 或 REVOKE (僅適用於 ALTER DATABASE、ALTER ANY DATABASE EVENT NOTIFICATION、CREATE DATABASE DDL EVENT NOTIFICATION、CONTROL SERVER、ALTER ANY EVENT NOTIFICATION、CREATE DDL EVENT NOTIFICATION 或 CREATE TRACE EVENT NOTIFICATION 權限)。  
   
 ## <a name="working-with-event-data-on-the-client-side"></a>使用用戶端上的事件資料  
- WMI 提供者伺服器事件會在目標資料庫中，建立所需的事件通知事件通知事件會將資料傳送至目標服務名稱為的 msdb 中**SQL/通知/ProcessWMIEventProviderNotification/v1.0**。 目標服務會將事件放入 **msdb** 中，名稱為 **WMIEventProviderNotificationQueue**的佇列 (當此服務首次連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，提供者會同時動態地建立服務和佇列)。接著，提供者會從此佇列讀取 XML 事件資料，並將其轉換為 Managed 物件格式 (MOF)，然後再將其傳回到用戶端應用程式。 MOF 資料是由 WQL 查詢所要求的事件屬性所組成，做為通用訊息模型 (CIM) 類別定義。 每個屬性都有一個對應的 CIM 類型。 例如，`SPID`屬性會傳回當做 CIM 類型**Sint32**。 每個屬性的 CIM 類型都會列在＜ [伺服器事件類別和屬性的 WMI 提供者](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)＞中的每個事件類別之下。  
+ WMI 提供者伺服器事件會在目標資料庫中，建立所需的事件通知事件通知事件會將資料傳送至目標服務名稱為的 msdb 中**SQL/通知/ProcessWMIEventProviderNotification/v1.0**。 目標服務會將事件放入 **msdb** 中，名稱為 **WMIEventProviderNotificationQueue**的佇列 (服務和佇列會以動態方式提供者建立第一次連接到時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。)提供者然後會從此佇列讀取 XML 事件資料，並將它轉換成受管理的物件格式 (MOF) 中，然後再回到用戶端應用程式。 MOF 資料是由 WQL 查詢所要求的事件屬性所組成，做為通用訊息模型 (CIM) 類別定義。 每個屬性都有一個對應的 CIM 類型。 例如，`SPID`屬性會傳回當做 CIM 類型**Sint32**。 每個屬性的 CIM 類型都會列在＜ [伺服器事件類別和屬性的 WMI 提供者](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)＞中的每個事件類別之下。  
   
 ## <a name="see-also"></a>另請參閱  
  [伺服器事件的 WMI 提供者概念](https://technet.microsoft.com/library/ms180560.aspx)  

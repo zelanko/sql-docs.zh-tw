@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bff2c273-b535-4b32-83b3-0336a406859c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b8edd574dea39712f8b2acbc092a0a90482d2fff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be7f1cfdff083984f4aff4dd12d5d8251fd623f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921481"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vb"></a>ActualSize 和 DefinedSize 屬性範例 (VB)
 這個範例會使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)並[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)来顯示的已定義的大小和實際大小 欄位的屬性。  

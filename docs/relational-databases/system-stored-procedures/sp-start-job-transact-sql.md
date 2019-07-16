@@ -1,5 +1,5 @@
 ---
-title: sp_start_job (Transact-SQL) | Microsoft Docs
+title: sp_start_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85878b79ec98b3523f18ed1c5c4d3f1bf08fc540
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1b3015651dc263d95aa80e6108db2e8017e112d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032836"
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_start_job
   
 `[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @server_name = ] 'server_name'` 開始作業的目標伺服器。 *server_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。 *server_name*必須是其中一項作業目前鎖定的目標伺服器。  
+`[ @server_name = ] 'server_name'` 開始作業的目標伺服器。 *server_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** ，預設值是 NULL。 *server_name*必須是其中一項作業目前鎖定的目標伺服器。  
   
 `[ @step_name = ] 'step_name'` 要開始執行作業步驟的名稱。 只適用於本機作業。 *step_name*已**sysname**，預設值是 NULL  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 49cbfafa-b21e-4e89-b248-9c7098f46b20
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f5f0fb68f7f6b953ab75c5ba4786d98ea36a262
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c5d73339bc87097d81eade4df0b8ab1604979e07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665277"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054060"
 ---
 # <a name="sqlconnect-visual-foxpro-odbc-driver"></a>SQLConnect (Visual FoxPro ODBC Driver)
 > [!NOTE]  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14e35b85b594cadf90a467c5017ac31033bc464b
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: f676acf9b3ee91bb5a1fb46cae2f7c693dc66983
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061826"
 ---
 # <a name="spaddpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,13 +89,13 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@restricted = ] 'restricted'` 基於回溯相容性; 支援使用  *default_access*。  
   
-`[ \@sync_method = ] _'sync_method'` 是同步處理模式。 *sync_method*已**nvarchar(13)**，而且可以是下列值之一。  
+`[ \@sync_method = ] _'sync_method'` 是同步處理模式。 *sync_method*已**nvarchar(13)** ，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
 |**native**|產生所有資料表的原生模式大量複製程式輸出。 *不支援 Oracle 發行者*。|  
 |**character**|產生所有資料表的字元模式大量複製程式輸出。 _「 Oracle 發行者 」，如_**字元**_只適用於快照式複寫_。|  
-|**concurrent**|產生所有資料表的原生模式大量複製程式輸出，但在快照集期間，不鎖定資料表。 只支援交易式發行集使用這個項目。 *不支援 Oracle 發行者*。|  
+|**並行**|產生所有資料表的原生模式大量複製程式輸出，但在快照集期間，不鎖定資料表。 只支援交易式發行集使用這個項目。 *不支援 Oracle 發行者*。|  
 |**concurrent_c**|產生所有資料表的字元模式大量複製程式輸出，但在快照集期間，不鎖定資料表。 只支援交易式發行集使用這個項目。|  
 |**資料庫快照集**|從資料庫快照集產生所有資料表的原生模式大量複製程式輸出。 資料庫快照集不是每個版本都可使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。|  
 |**資料庫快照集字元**|從資料庫快照集產生所有資料表的字元模式大量複製程式輸出。 資料庫快照集不是每個版本都可使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。|  
@@ -107,11 +106,11 @@ sp_addpublication [ @publication = ] 'publication'
 |值|描述|  
 |-----------|-----------------|  
 |**連續**（預設值）|發行者會提供所有記錄式交易的輸出。 針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者，這需要*sync_method*設定為**concurrent_c**。|  
-|**snapshot**|發行者只會產生已排程的同步處理事件。 針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者，這需要*sync_method*設定為**字元**。|  
+|**快照集**|發行者只會產生已排程的同步處理事件。 針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者，這需要*sync_method*設定為**字元**。|  
   
-`[ \@description = ] 'description'` 是發行集的選擇性描述。 *描述*已**nvarchar(255)**，預設值是 NULL。  
+`[ \@description = ] 'description'` 是發行集的選擇性描述。 *描述*已**nvarchar(255)** ，預設值是 NULL。  
   
-`[ \@status = ] 'status'` 指定發行集資料是否可用。 *狀態*已**nvarchar(8)**，而且可以是下列值之一。  
+`[ \@status = ] 'status'` 指定發行集資料是否可用。 *狀態*已**nvarchar(8)** ，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -120,21 +119,21 @@ sp_addpublication [ @publication = ] 'publication'
   
  *不支援 Oracle 發行者*。  
   
-`[ \@independent_agent = ] 'independent_agent'` 指定是否針對這個發行集的獨立散發代理程式。 *independent_agent*已**nvarchar(5)**，預設值是 FALSE。 如果 **，則為 true**，沒有獨立的散發代理程式，針對這個發行集。 如果**false**、 發行集使用共用的散發代理程式，和每一組發行者資料庫/訂閱者資料庫都有單一共用代理程式。  
+`[ \@independent_agent = ] 'independent_agent'` 指定是否針對這個發行集的獨立散發代理程式。 *independent_agent*已**nvarchar(5)** ，預設值是 FALSE。 如果 **，則為 true**，沒有獨立的散發代理程式，針對這個發行集。 如果**false**、 發行集使用共用的散發代理程式，和每一組發行者資料庫/訂閱者資料庫都有單一共用代理程式。  
   
-`[ \@immediate_sync = ] 'immediate_synchronization'` 指定是否發行集的同步處理檔案會建立每次執行快照集代理程式。 *immediate_synchronization*已**nvarchar(5)**，預設值是 FALSE。 如果 **，則為 true**，建立或重新建立每次執行快照集代理程式的同步處理檔案。 如果在建立訂閱之前，快照集代理程式已經完成，訂閱者便能夠立即取得同步處理檔案。 新的訂閱會取得最近執行快照集代理程式所產生的最新同步處理檔案。 *independent_agent*必須是 **，則為 true**如*immediate_synchronization*要**true**。 如果**false**，只有當有新的訂用帳戶建立同步處理檔案。 您必須呼叫[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)當您以累加方式將新的發行項加入現有發行集中每個訂用帳戶。 在訂閱之後，快照集代理程式啟動和完成之前，訂閱者無法接收同步處理檔案。  
+`[ \@immediate_sync = ] 'immediate_synchronization'` 指定是否發行集的同步處理檔案會建立每次執行快照集代理程式。 *immediate_synchronization*已**nvarchar(5)** ，預設值是 FALSE。 如果 **，則為 true**，建立或重新建立每次執行快照集代理程式的同步處理檔案。 如果在建立訂閱之前，快照集代理程式已經完成，訂閱者便能夠立即取得同步處理檔案。 新的訂閱會取得最近執行快照集代理程式所產生的最新同步處理檔案。 *independent_agent*必須是 **，則為 true**如*immediate_synchronization*要**true**。 如果**false**，只有當有新的訂用帳戶建立同步處理檔案。 您必須呼叫[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)當您以累加方式將新的發行項加入現有發行集中每個訂用帳戶。 在訂閱之後，快照集代理程式啟動和完成之前，訂閱者無法接收同步處理檔案。  
   
-`[ \@enabled_for_internet = ] 'enabled_for_internet'` 指定是否發行集啟用給 Internet，並決定是否利用檔案傳輸通訊協定 (FTP) 快照集檔案傳送給訂閱者。 *enabled_for_internet*已**nvarchar(5)**，預設值是 FALSE。 如果 **，則為 true**，發行集的同步處理檔案會放在 C:\Program Files\Microsoft SQL Server\MSSQL\MSSQL.x\Repldata\Ftp 目錄。 使用者必須建立這個 Ftp 目錄。  
+`[ \@enabled_for_internet = ] 'enabled_for_internet'` 指定是否發行集啟用給 Internet，並決定是否利用檔案傳輸通訊協定 (FTP) 快照集檔案傳送給訂閱者。 *enabled_for_internet*已**nvarchar(5)** ，預設值是 FALSE。 如果 **，則為 true**，發行集的同步處理檔案會放在 C:\Program Files\Microsoft SQL Server\MSSQL\MSSQL.x\Repldata\Ftp 目錄。 使用者必須建立這個 Ftp 目錄。  
   
-`[ \@allow_push = ] 'allow_push'` 指定是否可以建立給定發行集的發送訂閱。 *allow_push*已**nvarchar(5)**，預設值為 TRUE，允許發送訂閱的發行集。  
+`[ \@allow_push = ] 'allow_push'` 指定是否可以建立給定發行集的發送訂閱。 *allow_push*已**nvarchar(5)** ，預設值為 TRUE，允許發送訂閱的發行集。  
   
-`[ \@allow_pull = ] 'allow_pull'` 指定是否可以建立給定發行集的提取訂閱。 *allow_pull*已**nvarchar(5)**，預設值是 FALSE。 如果**false**，發行集不允許提取訂閱。  
+`[ \@allow_pull = ] 'allow_pull'` 指定是否可以建立給定發行集的提取訂閱。 *allow_pull*已**nvarchar(5)** ，預設值是 FALSE。 如果**false**，發行集不允許提取訂閱。  
   
-`[ \@allow_anonymous = ] 'allow_anonymous'` 指定是否可以建立給定發行集的匿名訂閱。 *allow_anonymous*已**nvarchar(5)**，預設值是 FALSE。 如果**真**， *immediate_synchronization*也必須設定為**true**。 如果**false**，發行集不允許匿名訂閱。  
+`[ \@allow_anonymous = ] 'allow_anonymous'` 指定是否可以建立給定發行集的匿名訂閱。 *allow_anonymous*已**nvarchar(5)** ，預設值是 FALSE。 如果**真**， *immediate_synchronization*也必須設定為**true**。 如果**false**，發行集不允許匿名訂閱。  
   
-`[ \@allow_sync_tran = ] 'allow_sync_tran'` 指定是否發行集允許立即更新訂閱。 *allow_sync_tran*已**nvarchar(5)**，預設值是 FALSE。 **真**已*不支援 Oracle 發行者*。  
+`[ \@allow_sync_tran = ] 'allow_sync_tran'` 指定是否發行集允許立即更新訂閱。 *allow_sync_tran*已**nvarchar(5)** ，預設值是 FALSE。 **真**已*不支援 Oracle 發行者*。  
   
-`[ \@autogen_sync_procs = ] 'autogen_sync_procs'` 指定是否在發行者端產生更新訂閱的同步處理的預存程序。 *autogen_sync_procs*已**nvarchar(5)**，而且可以是下列值之一。  
+`[ \@autogen_sync_procs = ] 'autogen_sync_procs'` 指定是否在發行者端產生更新訂閱的同步處理的預存程序。 *autogen_sync_procs*已**nvarchar(5)** ，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -155,15 +154,15 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@pre_snapshot_script = ] 'pre_snapshot_script'` 指定的指標 **.sql**檔案位置。 *pre_snapshot_script*已**nvarchar(255)，** 預設值是 NULL。 在訂閱者端套用快照集時，散發代理程式會在執行任何複寫的物件指令碼之前，先執行前快照集 (pre-snapshot) 指令碼。 這個指令碼是在連接到訂閱資料庫時，在散發代理程式所用的安全性內容中執行。  
   
-`[ \@post_snapshot_script = ] 'post_snapshot_script'` 指定的指標 **.sql**檔案位置。 *post_snapshot_script*已**nvarchar(255)**，預設值是 NULL。 在初始同步處理期間，散發代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (post-snapshot) 指令碼。 這個指令碼是在連接到訂閱資料庫時，在散發代理程式所用的安全性內容中執行。  
+`[ \@post_snapshot_script = ] 'post_snapshot_script'` 指定的指標 **.sql**檔案位置。 *post_snapshot_script*已**nvarchar(255)** ，預設值是 NULL。 在初始同步處理期間，散發代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (post-snapshot) 指令碼。 這個指令碼是在連接到訂閱資料庫時，在散發代理程式所用的安全性內容中執行。  
   
-`[ \@compress_snapshot = ] 'compress_snapshot'` 指定的快照集，會寫入 **\@alt_snapshot_folder**位置是壓縮成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。 *compress_snapshot*已**nvarchar(5)**，預設值是 FALSE。 **false**指定，將不會壓縮快照集;**，則為 true**指定將會壓縮快照集。 超出 2 GB 的快照集檔案無法壓縮。 壓縮的快照集檔案是在執行散發代理程式的位置進行解壓縮；提取訂閱通常會搭配使用壓縮的快照集，因此，會在訂閱者端將檔案解壓縮。 預設資料夾中的快照集無法壓縮。  
+`[ \@compress_snapshot = ] 'compress_snapshot'` 指定的快照集，會寫入 **\@alt_snapshot_folder**位置是壓縮成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。 *compress_snapshot*已**nvarchar(5)** ，預設值是 FALSE。 **false**指定，將不會壓縮快照集; **，則為 true**指定將會壓縮快照集。 超出 2 GB 的快照集檔案無法壓縮。 壓縮的快照集檔案是在執行散發代理程式的位置進行解壓縮；提取訂閱通常會搭配使用壓縮的快照集，因此，會在訂閱者端將檔案解壓縮。 預設資料夾中的快照集無法壓縮。  
   
 `[ \@ftp_address = ] 'ftp_address'` 為散發者之 FTP 服務的網路位址。 *ftp_address*已**sysname**，預設值是 NULL。 指定發行集快照集檔案所在的位置，以便訂閱者的散發代理程式或合併代理程式能夠加以收取。 每個發行集都會儲存這個屬性，因為每個發行集可以有不同*ftp_address*。 發行集必須支援利用 FTP 來傳播快照集。  
   
 `[ \@ftp_port = ] ftp_port` 為散發者之 FTP 服務的通訊埠編號。 *ftp_port*已**int**，預設值為 21。 指定發行集快照集檔案所在的位置，以便訂閱者的散發代理程式或合併代理程式能夠加以收取。 每個發行集都會儲存這個屬性，因為每個發行集可以有它自己*ftp_port*。  
   
-`[ \@ftp_subdirectory = ] 'ftp_subdirectory'` 指定快照集檔案可使用之散發代理程式或合併代理程式以挑選如果發行集支援利用 FTP 的傳播快照集的訂閱者。 *ftp_subdirectory*已**nvarchar(255)**，預設值是 NULL。 每個發行集都會儲存這個屬性，因為每個發行集可以有它自己*ftp_subdirctory*或選擇不已指定了 NULL 值的任何子目錄。  
+`[ \@ftp_subdirectory = ] 'ftp_subdirectory'` 指定快照集檔案可使用之散發代理程式或合併代理程式以挑選如果發行集支援利用 FTP 的傳播快照集的訂閱者。 *ftp_subdirectory*已**nvarchar(255)** ，預設值是 NULL。 每個發行集都會儲存這個屬性，因為每個發行集可以有它自己*ftp_subdirctory*或選擇不已指定了 NULL 值的任何子目錄。  
   
 `[ \@ftp_login = ] 'ftp_login'` 用來連接到 FTP 服務的使用者名稱。 *ftp_login*已**sysname**，預設值為 ANONYMOUS。  
   
@@ -173,7 +172,7 @@ sp_addpublication [ @publication = ] 'publication'
   
  **真**已*不支援 Oracle 發行者*。  
   
-`[ \@allow_subscription_copy = ] 'allow_subscription_copy'` 啟用或停用複製訂閱這個發行集之訂閱資料庫的能力。 *allow_subscription_copy*已**nvarchar(5)**，預設值是 FALSE。  
+`[ \@allow_subscription_copy = ] 'allow_subscription_copy'` 啟用或停用複製訂閱這個發行集之訂閱資料庫的能力。 *allow_subscription_copy*已**nvarchar(5)** ，預設值是 FALSE。  
   
 `[ \@conflict_policy = ] 'conflict_policy'` 指定使用佇列更新訂閱者選項時，遵照的衝突解決原則。 *conflict_policy*已**nvarchar(100)** 預設值是 NULL，而且可以是下列值之一。  
   
@@ -186,7 +185,7 @@ sp_addpublication [ @publication = ] 'publication'
   
  *不支援 Oracle 發行者*。  
   
-`[ \@centralized_conflicts = ] 'centralized_conflicts'` 指定是否將衝突記錄儲存在 「 發行者 」。 *centralized_conflicts*已**nvarchar(5)**，預設值是 TRUE。 如果 **，則為 true**，衝突記錄會儲存在 「 發行者 」。 如果**false**，衝突記錄會儲存在發行者端和造成衝突的訂閱者端。 *不支援 Oracle 發行者*。  
+`[ \@centralized_conflicts = ] 'centralized_conflicts'` 指定是否將衝突記錄儲存在 「 發行者 」。 *centralized_conflicts*已**nvarchar(5)** ，預設值是 TRUE。 如果 **，則為 true**，衝突記錄會儲存在 「 發行者 」。 如果**false**，衝突記錄會儲存在發行者端和造成衝突的訂閱者端。 *不支援 Oracle 發行者*。  
   
 `[ \@conflict_retention = ] conflict_retention` 指定衝突保留期限，以天為單位。 這是針對點對點異動複寫和佇列更新訂閱儲存衝突中繼資料的時間週期。 *conflict_retention*已**int**，預設值是 14。 *不支援 Oracle 發行者*。  
   
@@ -213,7 +212,7 @@ sp_addpublication [ @publication = ] 'publication'
 > [!NOTE]  
 >  *發行者*不應該使用新增發行集時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
   
-`[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'` 表示是否訂閱者可以初始化的訂閱這個發行集的備份，而不是初始快照集。 *allow_initialize_from_backup*已**nvarchar(5)**，而且可以是下列其中一個值：  
+`[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'` 表示是否訂閱者可以初始化的訂閱這個發行集的備份，而不是初始快照集。 *allow_initialize_from_backup*已**nvarchar(5)** ，而且可以是下列其中一個值：  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -236,7 +235,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 -   Sysarticlecolumns DDL 陳述式加入新的資料行，不包含新的資料行。 DML 陳述式不會嘗試複寫新資料行的資料。 接受此參數是因為可接受複寫或不複寫 DDL。  
   
-`[ \@enabled_for_p2p = ] 'enabled_for_p2p'` 可讓使用端對端複寫拓撲中發行集。 *enabled_for_p2p*已**nvarchar(5)**，預設值是 FALSE。 **true**表示發行集支援端對端複寫。 設定時*enabled_for_p2p*要 **，則為 true**，適用下列限制：  
+`[ \@enabled_for_p2p = ] 'enabled_for_p2p'` 可讓使用端對端複寫拓撲中發行集。 *enabled_for_p2p*已**nvarchar(5)** ，預設值是 FALSE。 **true**表示發行集支援端對端複寫。 設定時*enabled_for_p2p*要 **，則為 true**，適用下列限制：  
   
 -   *allow_anonymous*必須是**false**。  
   

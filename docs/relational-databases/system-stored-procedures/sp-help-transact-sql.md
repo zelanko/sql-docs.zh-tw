@@ -1,5 +1,5 @@
 ---
-title: sp_help (Transact-SQL) | Microsoft Docs
+title: sp_help (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39a1e699b52b29db74209aa5288bb5dc01896a3b
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: fabfac2d228be78efb2fc728d1b405ec7edce035
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586251"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085038"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**Type_name**|**nvarchar(** 128 **)**|資料類型名稱。|  
     |**Storage_type**|**nvarchar(** 128 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型名稱。|  
     |**長度**|**smallint**|資料類型的實際長度 (以位元組為單位)。|  
-    |**Prec**|**int**|有效位數 (總位數)。|  
+    |**prec**|**int**|有效位數 (總位數)。|  
     |**小數位數**|**int**|小數點右側的位數。|  
     |**可為 Null**|**varchar(** 35 **)**|指出是否允許 NULL 值：Yes 或 no。|  
     |**Default_name**|**nvarchar(** 128 **)**|與這個類型繫結的預設值名稱。<br /><br /> NULL = 未繫結預設值。|  
@@ -96,7 +95,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**型別**|**nvarchar(** 128 **)**|資料行資料類型。|  
         |**計算**|**varchar(** 35 **)**|指出是否計算資料行的值：Yes 或 no。|  
         |**長度**|**int**|資料行長度 (以位元組為單位)。<br /><br /> 注意:如果資料行資料類型是大數值類型 (**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或**xml**)，將值顯示為-1。|  
-        |**Prec**|**char(** 5 **)**|資料行有效位數。|  
+        |**prec**|**char(** 5 **)**|資料行有效位數。|  
         |**小數位數**|**char(** 5 **)**|資料行小數位數。|  
         |**可為 Null**|**varchar(** 35 **)**|指出資料行是否允許 NULL 值：Yes 或 no。|  
         |**TrimTrailingBlanks**|**varchar(** 35 **)**|修剪尾端空白。 傳回 [是] 或 [否]。|  
@@ -157,7 +156,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Parameter_name**|**nvarchar(** 128 **)**|預存程序參數名稱。|  
         |**型別**|**nvarchar(** 128 **)**|預存程序參數的資料類型。|  
         |**長度**|**smallint**|最大的實體儲存體長度 (以位元組為單位)。|  
-        |**Prec**|**int**|有效位數或總位數。|  
+        |**prec**|**int**|有效位數或總位數。|  
         |**小數位數**|**int**|小數點右側的位數。|  
         |**Param_order**|**smallint**|參數的順序。|  
   
@@ -195,11 +194,11 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
+ [sp_helpindex &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
  [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
- [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_helpuser &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sysobjects &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   

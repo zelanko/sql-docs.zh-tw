@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4215753da5ef7f9bce51cd7bea8c87551e369da6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d256603927a4c717b1f5d3203ea1ce3939771cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085648"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>在衍生階層 (Master Data Services) 中顯示多對多關聯性
 
@@ -92,7 +91,7 @@ ms.locfileid: "65488070"
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="bkmk_member_security"></a> 成員安全性  
- 可讓成員重複的階層 (允許成員有一個以上的父系) 不能用來指派成員安全性權限。 例如：  
+ 可讓成員重複的階層 (允許成員有一個以上的父系) 不能用來指派成員安全性權限。 例如:  
   
 -   遞迴衍生階層 (RDH)，其未錨點 null 遞迴 (遞迴層級的每個成員皆會出現在 ROOT 與其遞迴父系之下)。  
   

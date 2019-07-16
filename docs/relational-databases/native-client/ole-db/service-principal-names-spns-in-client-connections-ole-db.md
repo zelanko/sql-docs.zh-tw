@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62073e1618d4ab43acbbfbaad1fb6e2ff16c7658
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23f0f32e07430dcb9829be48fea9f966dd1b453f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62631696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031926"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>用戶端連接中的服務主要名稱 (SPN) (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62631696"
 ## <a name="data-source-initialization-properties"></a>資料來源初始化屬性  
  中的下列屬性**DBPROPSET_SQLSERVERDBINIT**屬性將 允許應用程式指定 Spn。  
   
-|名稱|類型|使用量|  
+|名稱|type|使用量|  
 |----------|----------|-----------|  
 |SSPROP_INIT_SERVERSPN|VT_BSTR，讀取/寫入|指定伺服器的 SPN。 預設值為空字串，它可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用提供者產生的預設 SPN。|  
 |SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR，讀取/寫入|指定容錯移轉夥伴的 SPN。 預設值為空字串，它可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用提供者產生的預設 SPN。|  
@@ -44,7 +43,7 @@ ms.locfileid: "62631696"
 ## <a name="data-source-properties"></a>資料來源屬性  
  中的下列屬性**DBPROPSET_SQLSERVERDATASOURCEINFO**屬性集讓應用程式探索驗證方法。  
   
-|名稱|類型|使用量|  
+|名稱|type|使用量|  
 |----------|----------|-----------|  
 |SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR，唯讀|傳回連接所使用的驗證方法。 傳給應用程式的值就是 Windows 傳給 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的值。 以下是可能的值： <br />"NTLM"，當使用 NTLM 驗證開啟連接時所傳回。<br />"Kerberos"，當使用 Kerberos 驗證開啟連接時所傳回。<br /><br /> 如果連接已經開啟，而且無法判定驗證方法，就會傳回 VT_EMPTY。<br /><br /> 只有當已經初始化資料來源時，才可讀取這個屬性。 如果您嘗試在已初始化資料來源之前讀取這個屬性，IDataInitialize::GetDataSource 將會適當地傳回 DB_S_ERRORSOCCURRED 或 DB_E_ERRORSOCCURRED，而且將會針對這個屬性在 DBPROPSET_PROPERTIESINERROR 中設定 DBPROPSTATUS_NOTSUPPORTED。 這個行為會根據 OLE DB 核心規格。|  
 |SSPROP_MUTUALLYAUTHENICATED|VT_BOOL，唯讀|如果連接中的伺服器已互相驗證過，則會傳回 VARIANT_TRUE，否則會傳回 VARIANT_FALSE。<br /><br /> 只有當已經初始化資料來源時，才可讀取這個屬性。 如果嘗試在已初始化資料來源之前讀取這個屬性，IDataInitialize::GetDataSource 將會適當地傳回 DB_S_ERRORSOCCURRED 或 DB_E_ERRORSOCCURRED，而且將會針對這個屬性在 DBPROPSET_PROPERTIESINERROR 中設定 DBPROPSTATUS_NOTSUPPORTED。 這個行為會根據 OLE DB 核心規格。<br /><br /> 如果針對未使用 Windows 驗證的連接來查詢這個屬性，就會傳回 VARIANT_FALSE。|  

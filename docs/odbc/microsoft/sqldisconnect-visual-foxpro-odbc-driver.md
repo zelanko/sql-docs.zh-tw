@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 78ae1695-b53e-48ff-be49-ecff1f599e61
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d587ef50798aa0ba836c0b4a691bdb32a280465a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3789c065f11c1c7ce9a8cb34037fbc284ee17c52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63136079"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053988"
 ---
 # <a name="sqldisconnect-visual-foxpro-odbc-driver"></a>SQLDisconnect (Visual FoxPro ODBC Driver)
 > [!NOTE]  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8d87ca10-f955-4284-8689-e9f4cc31e7ae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 683b81f82094aa33deef86ffc19dc8c5c0a53a27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 802040851259a8537fabcd3cc0da1afdf9b8dbe0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057049"
 ---
 # <a name="sqlardtype"></a>SQL_ARD_TYPE
 SQL_ARD_TYPE 型別識別項用來表示緩衝區中的資料將會 ARD SQL_DESC_CONCISE_TYPE 欄位中指定之類型。 中輸入 SQL_ARD_TYPE *TargetType*呼叫的引數**SQLGetData**而不是特定資料類型並可讓應用程式變更的資料緩衝區的輸入變更的描述元欄位。 這個值會繫結的資料型別 *\*TargetValuePtr*緩衝區描述項欄位。 (的呼叫中未輸入 SQL_ARD_TYPE **SQLBindCol**或是**SQLBindParameter**因為的繫結的緩衝區類型已經繫結至 SQL_DESC_TYPE 和 SQL_DESC_CONCISE_TYPE 欄位，而且可以變更隨時變更這些欄位。）  

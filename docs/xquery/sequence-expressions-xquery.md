@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6c73d2be8550bd6ce3dad9e6c9e07e2403785f7b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946301"
 ---
 # <a name="sequence-expressions-xquery"></a>序列運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +131,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>篩選序列  
- 您可以將述詞加入到運算式中，來篩選運算式傳回的序列。 如需詳細資訊，請參閱 <<c0> [ 路徑運算式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)。</c0> 例如，下列查詢傳回的序列包含三個 <`a`> 元素節點：  
+ 您可以將述詞加入到運算式中，來篩選運算式傳回的序列。 如需詳細資訊，請參閱 <<c0> [ 路徑運算式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)。</c0> 例如，下列查詢會傳回序列，包含三個 <`a`> 元素節點：  
   
 ```  
 declare @x xml  
@@ -152,7 +151,7 @@ SELECT @x.query('/root/a')
 <a />  
 ```  
   
- 若只要擷取具有 attrA 屬性的 <`a`> 元素，您可以在述詞中指定篩選。 產生的序列將只會有一個 <`a`> 元素。  
+ 若要只擷取 <`a`> 項目具有 attrA 屬性，您可以指定篩選述詞中。 產生的序列將會有一個 <`a`> 項目。  
   
 ```  
 declare @x xml  
@@ -203,7 +202,7 @@ SELECT @x.query('
 <c>C under b</c>  
 ```  
   
- 下列範例會套用述詞篩選。 運算式將尋找包含 <`c`> 元素的 <`a`> 元素和 <`b`> 元素。  
+ 下列範例會套用述詞篩選。 運算式會尋找項目的 <`a`> 和 <`b`> 項目包含 <`c`>。  
   
 ```  
 declare @x xml  

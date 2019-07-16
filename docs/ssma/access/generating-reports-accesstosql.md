@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: fe6f45b2e35761fac5f8c49012b1eb370645bcb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9d1879cd5583ee7b87c12edb19bf5486cee4fcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986429"
 ---
 # <a name="generating-reports-accesstosql"></a>產生報表 (AccessToSQL)
 使用命令來執行某些活動的報表會產生物件樹狀結構層級的 SSMA 主控台中。  
@@ -32,7 +31,7 @@ ms.locfileid: "62759496"
     |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
     |3|migrate-data|DataMigrationReport&lt;n&gt;.XML|  
-    |4|synchronize-target|TargetSynchronizationReport&lt;n&gt;.XML|  
+    |4|同步處理目標|TargetSynchronizationReport&lt;n&gt;.XML|  
     |5|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
@@ -102,7 +101,7 @@ ms.locfileid: "62759496"
   
 />  
 ```  
-**object-name:** 指定視為 （它也可以有個別的物件名稱或群組的物件名稱） 的同步處理的物件。  
+**物件名稱：** 指定視為 （它也可以有個別的物件名稱或群組的物件名稱） 的同步處理的物件。  
   
 **錯誤：** 指定是否要指定同步處理錯誤視為警告或錯誤。 錯誤的可用選項：  
   
@@ -110,7 +109,7 @@ ms.locfileid: "62759496"
   
 -   report-each-as-warning  
   
--   fail-script  
+-   失敗指令碼  
   
 ### <a name="refresh-from-database"></a>重新整理從-資料庫：  
 命令**從資料庫重新整理**已**報告錯誤至**參數，指定重新整理作業的錯誤報表的位置。 然後，依名稱的檔案**SourceDBRefreshReport&lt;n&gt;。XML**會建立在指定的位置，其中 **&lt;n&gt;** 是唯一的檔案數目，以每次執行相同的命令數字會遞增。  
@@ -132,7 +131,7 @@ ms.locfileid: "62759496"
   
 />  
 ```  
-**object-name:** 指定重新整理 （它也可以有個別的物件名稱或群組的物件名稱） 被視為物件。  
+**物件名稱：** 指定重新整理 （它也可以有個別的物件名稱或群組的物件名稱） 被視為物件。  
   
 **錯誤：** 指定是否要指定重新整理錯誤視為警告或錯誤。 錯誤的可用選項：  
   
@@ -140,7 +139,7 @@ ms.locfileid: "62759496"
   
 -   report-each-as-warning  
   
--   fail-script  
+-   失敗指令碼  
   
 ## <a name="see-also"></a>另請參閱  
 [執行 SSMA 主控台 （存取）](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  

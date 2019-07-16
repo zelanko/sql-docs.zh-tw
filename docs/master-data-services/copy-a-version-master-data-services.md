@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cc92e04a39fce48c25362a5db61d004420f4e959
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e34aad020117fffe598d9134276c280a05f549f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079738"
 ---
 # <a name="copy-a-version-master-data-services"></a>複製版本 (Master Data Services)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65484358"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，複製模型的版本，以建立新版本。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  

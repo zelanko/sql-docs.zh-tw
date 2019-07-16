@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7dcec7e665fec8ea1eb1e1dff8d08bb59ee92133
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db2c2dbe6af2a50fc2507a9ade92d83e0502f2ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966917"
 ---
 # <a name="column-object-adox"></a>Column 物件 (ADOX)
 從資料表、 索引或索引鍵代表的資料行。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: fe66ff5b8902a737ff9a2ac0815069a4f01ea129
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 506b9a32b465c9006fe4030bd6fcbb8ba4d0f136
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938332"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>評定 DB2 結構描述的轉換 (DB2ToSQL)
 在您載入的物件，並將資料移轉至之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您應判斷移轉將會複雜程度，以及多少時間移轉。 SSMA 可以建立顯示的會成功轉換的物件百分比的評定報告。 SSMA 也可讓您檢視導致轉換失敗的特定問題。  

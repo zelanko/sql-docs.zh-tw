@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d8f64172685c42a5dde8de9027c8c7e621ddd9f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff187d5d2b67c5fc3d40a80a136ff9f0c65b2ed2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070037"
 ---
 # <a name="transfer-octet-length"></a>傳輸八位元長度
 傳輸八位元長度的資料行是資料傳輸至其預設 C 資料類型時，應用程式傳回的位元組數目上限。 若是字元資料，傳輸八位元長度不包括 null 結束字元的空間。 傳輸八位元資料行的長度可能是不同的資料儲存在資料來源上所需的位元組數目。  

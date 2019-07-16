@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 88ceba25-e41a-405f-a416-bb68918a0024
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef7aa35eea529857072492d4b1d80ddf92c69ef6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c2b3bf93abd6acfad699f47344f05ddbc34e85a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942479"
 ---
 # <a name="corespremovecollectortype-transact-sql"></a>core.sp_remove_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

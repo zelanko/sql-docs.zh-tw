@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 472df6ead97af5687ad2531dc53b9deacb126423
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2aede1654f993feba951d2053d9a0ae5e31011b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785465"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992242"
 ---
 # <a name="data-matching"></a>資料比對
 

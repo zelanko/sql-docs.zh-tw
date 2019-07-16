@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: jroth
-ms.openlocfilehash: 5effd31d37af5fbe119f1ad23781b994fa89c240
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d87df240d4b83e53ef8f670609d2c896df7fe62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794314"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054668"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>識別您的內部部署資料庫權限的 Azure SQL Database/受控執行個體 SKU
 
@@ -39,7 +38,7 @@ ms.locfileid: "66794314"
 
 以下是可協助您判斷 Azure SQL 資料庫 SKU 建議和佈建對應的單一資料庫或在 Azure 中使用 DMA 的 managed 執行個體的指示。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 下載並安裝最新版[DMA](https://aka.ms/get-dma)。 如果您已經有舊版的工具，開啟它，並將提示您升級 DMA。
 - 請確定您的電腦已[PowerShell 版本 5.1](https://www.microsoft.com/download/details.aspx?id=54616)或更新版本中，所需執行所有指令碼。 Findoug 出您的電腦安裝的 PowerShell 版本的相關資訊，請參閱文章[下載並安裝 Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)。
@@ -86,22 +85,22 @@ ms.locfileid: "66794314"
 若要使用 DMA CLI 取得 SKU 的建議，在命令提示字元，請使用下列引數執行 dmacmd.exe:
 
 - **/ 動作 = SkuRecommendation**:輸入這個引數執行 SKU 評量。
-- **/SkuRecommendationInputDataFilePath**:上一節中所收集計數器檔案的路徑。
+- **/ SkuRecommendationInputDataFilePath**:上一節中所收集計數器檔案的路徑。
 - **/ SkuRecommendationTsvOutputResultsFilePath**:要寫入以 TSV 格式的輸出結果的路徑。
 - **/ SkuRecommendationJsonOutputResultsFilePath**:若要以 JSON 格式寫入輸出結果路徑。
-- **/SkuRecommendationHtmlResultsFilePath**:若要以 HTML 格式寫入輸出結果的路徑。
+- **/ SkuRecommendationHtmlResultsFilePath**:若要以 HTML 格式寫入輸出結果的路徑。
 
 此外，請選取其中一個下列的引數：
 
 - 防止價格重新整理
-  - **/SkuRecommendationPreventPriceRefresh**:如果設為 True，防止發生價格重新整理，並假設預設的價格。 如果在離線模式中執行，請使用。 如果您不使用這個參數，您必須指定參數來取得指定的區域為基礎的最新價格。
+  - **/ SkuRecommendationPreventPriceRefresh**:如果設為 True，防止發生價格重新整理，並假設預設的價格。 如果在離線模式中執行，請使用。 如果您不使用這個參數，您必須指定參數來取得指定的區域為基礎的最新價格。
 - 取得最新的價格
   - **/ SkuRecommendationCurrencyCode**:要顯示的價格 （例如貨幣「 USD")。
   - **/ SkuRecommendationOfferName**:供應項目名稱 （例如："MS-AZR-0003 P")。 如需詳細資訊，請參閱 < [Microsoft Azure 優惠詳細資料](https://azure.microsoft.com/support/legal/offer-details/)頁面。
     - **/ SkuRecommendationRegionName**:區域名稱 （例如，「 美國西部 」）。
     - **/ SkuRecommendationSubscriptionId**:訂閱識別碼。
-    - **/AzureAuthenticationTenantId**:驗證租用戶中。
-    - **/AzureAuthenticationClientId**:用於驗證的 AAD 應用程式的用戶端識別碼。
+    - **/ AzureAuthenticationTenantId**:驗證租用戶中。
+    - **/ AzureAuthenticationClientId**:用於驗證的 AAD 應用程式的用戶端識別碼。
     - 其中一個下列的驗證選項：
       - 互動式
         - **AzureAuthenticationInteractiveAuthentication**:設為 true，驗證快顯視窗。
@@ -148,7 +147,7 @@ ms.locfileid: "66794314"
 /AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
 ```
 
-**範例 3:（例如取得特定資料庫的建議“TPCDS1G,EDW_3G,TPCDS10G”).**
+**範例 3:（例如取得特定資料庫的建議「 TPCDS1G，EDW_3G，TPCDS10G")。**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation 

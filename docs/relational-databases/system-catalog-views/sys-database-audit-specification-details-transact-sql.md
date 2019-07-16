@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 865fb25a08bdf549c09a9bb4e4e23cff929f12ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4dcf9664adcdeba495b53f1a1392781df3fa60bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940271"
 ---
 # <a name="sysdatabaseauditspecificationdetails-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62652476"
 |-----------------|---------------|-----------------|  
 |**database_specification_id**|**int**|稽核規格的識別碼。|  
 |**audit_action_id**|**int**|稽核動作的識別碼。|  
-|**audit_action_name**|**Sysname**|稽核動作或稽核動作群組的名稱|  
+|**audit_action_name**|**sysname**|稽核動作或稽核動作群組的名稱|  
 |**類別**|**int**|識別正在稽核之物件的類別。|  
 |**class_ desc**|**Nvarchar(60)**|正在稽核之物件類別的描述：<br /><br /> - SCHEMA<br /><br /> - TABLE|  
 |**major_id**|**int**|正在稽核之物件的主要識別碼，例如資料表稽核動作的資料表識別碼。|  

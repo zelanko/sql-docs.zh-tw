@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 91e6ab46cb0171f3e0c16deb5a494ed1f644a660
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce64900270fd1092320a12a6cc58a744eaadae7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085634"
 ---
 # <a name="staging-process-errors-master-data-services"></a>暫存處理序錯誤 (Master Data Services)
 

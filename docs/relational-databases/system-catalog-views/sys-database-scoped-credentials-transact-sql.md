@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: 68e8aa6b-bcdc-42aa-93d8-d498f724c188
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1deb05541e46ec1007d234dc622b14ea1e20eb3f
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
+ms.openlocfilehash: 03687ea50b04c96aa4dbafab9d02d2bbc33a14b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079426"
 ---
-# <a name="sysdatabasescopedcredentials-transact-sql"></a>sys.database_scoped_credentials (Transact-SQL)
+# <a name="sysdatabasescopedcredentials-transact-sql"></a>sys.database_scoped_credentials & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   傳回每個資料庫的一個資料列範圍在資料庫中的認證。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|NAME|**sysname**|名稱的資料庫範圍認證。 是在資料庫中是唯一的。|  
+|name|**sysname**|名稱的資料庫範圍認證。 是在資料庫中是唯一的。|  
 |credential_id|**int**|資料庫範圍認證的識別碼。 是在資料庫中是唯一的。|  
 |principal_id|**int**|擁有金鑰的資料庫主體識別碼。|  
 |credential_identity|**nvarchar(4000)**|要使用之識別的名稱。 這通常是 Windows 使用者。 這不需要是唯一的。|  

@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4a57d0b1c7f1fa75504e786712029326fc958135
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76b1f8ac9a5f7ad584f42110f2c3b22e5c1918ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62501809"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008139"
 ---
 # <a name="or-dmx"></a>OR (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,6 +52,6 @@ Expression1 OR Expression2
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [邏輯運算子&#40;DMX&#41;](../dmx/operators-logical.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [運算子&#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 406715f59a3a45184b9700d72331688911bc83e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2134429ae9d14e00e99c88f1596b1216170e5b66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62816991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078148"
 ---
 # <a name="mscachedpeerlsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "62816991"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|散發代理程式的識別碼。|  
-|**originator**|**sysname**|原始發行者名稱。|  
+|**建立者**|**sysname**|原始發行者名稱。|  
 |**originator_db**|**sysname**|原始發行集資料庫的名稱。|  
 |**originator_publication_id**|**int**|識別原始發行集。|  
 |**originator_db_version**|**int**|識別來源資料庫的版本號碼。|  

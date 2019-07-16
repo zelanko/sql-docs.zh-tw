@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79b4999db83063e8096abce8a8e1c4dcd5e3a6b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 718fc8b9a323ca6b1575021d748afde527dfb872
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62738881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062436"
 ---
 # <a name="sqlvariant-support-for-date-and-time-types"></a>日期和時間類型的 sql_variant 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,10 +54,10 @@ ms.locfileid: "62738881"
 |SQL_C_BINARY|varbinary|不會設定 SQL_CA_SS_VARIANT_SQL_TYPE。|  
 |SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> 小數位數設定為 SQL_DESC_PRECISION ( *DecimalDigits*的參數**SQLBindParameter**)。|  
 |SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> 小數位數設定為 SQL_DESC_PRECISION ( *DecimalDigits*的參數**SQLBindParameter**)。|  
-|SQL_C_TYPE_DATE|日期|SQL_CA_SS_VARIANT_SQL_TYPE 會被忽略。|  
+|SQL_C_TYPE_DATE|date|SQL_CA_SS_VARIANT_SQL_TYPE 會被忽略。|  
 |SQL_C_TYPE_TIME|time(0)|SQL_CA_SS_VARIANT_SQL_TYPE 會被忽略。|  
 |SQL_C_TYPE_TIMESTAMP|datetime2|小數位數設定為 SQL_DESC_PRECISION ( *DecimalDigits*的參數**SQLBindParameter**)。|  
-|SQL_C_NUMERIC|Decimal|有效位數設定為 SQL_DESC_PRECISION ( *ColumnSize*的參數**SQLBindParameter**)。<br /><br /> 小數位數設定為 SQL_DESC_SCALE ( *DecimalDigits* SQLBindParameter 參數)。|  
+|SQL_C_NUMERIC|decimal|有效位數設定為 SQL_DESC_PRECISION ( *ColumnSize*的參數**SQLBindParameter**)。<br /><br /> 小數位數設定為 SQL_DESC_SCALE ( *DecimalDigits* SQLBindParameter 參數)。|  
 |SQL_C_SS_TIME2|time|SQL_CA_SS_VARIANT_SQL_TYPE 會被忽略|  
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE 會被忽略|  
   

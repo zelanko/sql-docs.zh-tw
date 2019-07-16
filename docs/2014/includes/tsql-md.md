@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: ff673b8160c1be65df1779062e6af446151c63ee
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67231403"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68185548"
 ---
 Transact\-SQL

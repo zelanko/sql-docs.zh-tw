@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 608457b1732d2c1cc188b4b419903d20faa642c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bad08c06028a64a0423135b15641ebf6fa4e895e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62631949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029116"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>開始使用 SSMA for Sybase 主控台 (SybaseToSQL)
 本章節描述的程序啟動並開始使用 SSMA for Sybase 主控台應用程式。 也列出本文件所使用的慣例典型的 SSMA 主控台輸出 視窗中。  

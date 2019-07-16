@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.custom: seodec18
 ms.date: 07/11/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: 741c36331e6c0c8827e34517dd7ee4e5d04abf93
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: a2a4d4e755908d544e79b751d64ee99cad6fc96c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959696"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下載並安裝 Azure Data Studio
 

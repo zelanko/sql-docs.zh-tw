@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5b0d7a9965d1453441384b09690be7ac97a7f36c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 867f56234801e7eb659128ebeb35c38dddd2742e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484967"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085573"
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>根據商務規則驗證特定成員 (Master Data Services)
 
@@ -39,15 +38,15 @@ ms.locfileid: "65484967"
   
 ### <a name="to-apply-business-rules-selectively"></a>若要選擇性地套用商務規則  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 [模型] 下拉式清單中的模型。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 [模型]  下拉式清單中的模型。  
   
-2.  從 [版本]下拉式清單中，選取版本。  
+2.  從 [版本]  下拉式清單中，選取版本。  
   
 3.  按一下 [總管]  索引標籤。  
   
 4.  從功能表列指向 **[實體]** ，然後按一下包含要套用規則之成員的實體名稱。  
   
-5.  按一下 [套用規則] 。 商務規則只套用至方格中顯示的成員。  
+5.  按一下 [套用規則]  。 商務規則只套用至方格中顯示的成員。  
   
 ## <a name="see-also"></a>另請參閱  
  [根據商務規則驗證版本 &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6cca10f2a54a70e91e46bb8b98e9799885b5f175
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8680685640b234e47f6e68d7fb802fc7e2f5d81c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62740988"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029017"
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>安裝 SSMA for Sybase (SybaseToSQL)
 SSMA 用戶端包含用來連接到 Sybase Adaptive Server Enterprise (ASE) 的資料庫伺服器和執行個體的程式檔案[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB，ASE 資料庫物件，以轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 語法，載入物件組成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB，然後再移轉資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQLDB。  

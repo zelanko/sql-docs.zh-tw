@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f69acfa84272e73bcafb370eb85c6a14614a367c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7a13ad87d56f5e7855070d8fe577bb408d6ce9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709441"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938532"
 ---
 # <a name="dimension-object-ado-md"></a>Dimension 物件 (ADO MD)
 代表其中一個維度的多維度 cube，其中包含一或多個階層的成員。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d3cf324c-aa52-47a6-b44a-a59a778fad23
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 02d1bbcb168db03571e7cd74d77468c23c7e9ad7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adb76a40b9f8ed79af41fd122ac94f8a0d9ee7c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026787"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045045"
 ---
 # <a name="microsoft-excel-driver-programming-considerations"></a>Microsoft Excel 驅動程式的程式設計考量
 此章節包含下列主題。  

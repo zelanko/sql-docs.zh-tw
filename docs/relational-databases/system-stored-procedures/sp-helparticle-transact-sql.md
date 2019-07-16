@@ -1,5 +1,5 @@
 ---
-title: sp_helparticle (Transact-SQL) | Microsoft Docs
+title: sp_helparticle (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43eada100fb1de531c0d16082bdf0977e479ccfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cffdecba62283e3fc404c3630866467bc3a2b1c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084996"
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,9 +58,9 @@ sp_helparticle [ @publication = ] 'publication'
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**article id**|**int**|發行項的識別碼。|  
+|**文章識別碼**|**int**|發行項的識別碼。|  
 |**發行項名稱**|**sysname**|發行項的名稱。|  
-|**base object**|**nvarchar(257)**|發行項或預存程序所代表之基礎資料表的名稱。|  
+|**基底物件**|**nvarchar(257)**|發行項或預存程序所代表之基礎資料表的名稱。|  
 |**目的地物件**|**sysname**|目的地 (訂閱) 資料表的名稱。|  
 |**同步處理物件**|**nvarchar(257)**|定義已發行的發行項之檢視的名稱。|  
 |**type**|**smallint**|發行項的類型：<br /><br /> **1** = 記錄檔為基礎。<br /><br /> **3** = 含有手動篩選的 記錄檔為基礎。<br /><br /> **5** = 含有手動檢視記錄檔型。<br /><br /> **7** = 含有手動篩選和手動檢視記錄檔型。<br /><br /> **8** = 預存程序執行。<br /><br /> **24** = 可序列化的預存程序執行。<br /><br /> **32** = 預存程序 （僅限結構描述）。<br /><br /> **64** = 檢視 （僅限結構描述）。<br /><br /> **96** = 彙總函式 （僅限結構描述）。<br /><br /> **128** = 函式 （僅限結構描述）。<br /><br /> **257** = 記錄式索引檢視表。<br /><br /> **超過 259** = 含有手動篩選的記錄式索引檢視表。<br /><br /> **261** = 含有手動檢視的記錄式索引的檢視。<br /><br /> **263** = 含有手動篩選記錄式索引檢視表和手動檢視。<br /><br /> **320** = 索引檢視 （僅限結構描述）。<br /><br />|  

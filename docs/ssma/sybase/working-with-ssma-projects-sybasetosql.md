@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7e1be086b891d6888c6509b15adc6664b3022978
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb6f035b4d597e2b648134c195b698554dc78e12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072471"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>使用 SSMA 專案 (SybaseToSQL)
 若要移轉 Sybase 調整伺服器企業 (ASE) 資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 您先建立 SSMA 專案。 專案是一個包含您想要遷移到 ASE 資料庫相關的中繼資料檔案[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，目標執行個體的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或遷移的物件和資料，會收到的 SQL Azure[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure連線資訊和專案設定。  
@@ -57,7 +56,7 @@ SSMA 包含數個選項，藉以轉換和載入資料庫物件，移轉資料，
   
 1.  在 [檔案]  功能表上，選取 [新增專案]  。  
   
-    [新增專案]  對話方塊隨即出現。  
+    [ **新增專案** ] 對話方塊隨即出現。  
   
 2.  在 **名稱**方塊中，輸入您專案的名稱。  
   

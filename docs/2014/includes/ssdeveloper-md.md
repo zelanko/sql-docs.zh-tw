@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: a9e3245153eb26fc7e2447363b0090eeb176794b
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67226973"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68191396"
 ---
 SQL Server Developer

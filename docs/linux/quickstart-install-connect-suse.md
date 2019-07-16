@@ -4,18 +4,17 @@ titleSuffix: SQL Server
 description: 本快速入門示範如何在 SUSE Linux Enterprise Server 上安裝 SQL Server 2017 或 SQL Server 2019 然後建立並查詢資料庫，以使用 sqlcmd。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 19f74067db365fd9bdc867b97cef6ee5aa5162d8
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: b878e76546642ee9b9792ece31029c0640eb8864
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910488"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>快速入門：安裝 SQL Server 和 SUSE Linux Enterprise Server 上建立資料庫
 

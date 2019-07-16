@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: f49a303b2b3a29177107cb13153514c782ea2e56
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67217537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68210722"
 ---
 Visual C\+\+

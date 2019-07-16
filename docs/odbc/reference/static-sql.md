@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 667d92ec-fed9-4028-81d4-bb9ba867356a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cd82e2c3c44f05a27e9d14442d8d0fb58e1986cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e6d053e4d2a5520432c4c1debbafb35fdb17bc4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232055"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016746"
 ---
 # <a name="static-sql"></a>靜態 SQL
 內嵌的 SQL 中所示[內嵌 SQL 範例](../../odbc/reference/embedded-sql-example.md)稱為靜態 SQL。 因為在程式中的 SQL 陳述式都是靜態的所以稱為靜態 SQL也就是說，不會變更每個執行程式的時間。 上一節所述，編譯程式的其餘部分時，會編譯這些陳述式。  

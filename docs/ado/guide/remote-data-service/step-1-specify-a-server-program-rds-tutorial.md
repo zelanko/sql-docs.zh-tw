@@ -1,5 +1,5 @@
 ---
-title: 步驟 1:指定的伺服器程式 （RDS 教學課程） |Microsoft Docs
+title: 步驟 1：指定的伺服器程式 （RDS 教學課程） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 03d60a00a116f771e3854a4fe1b6b5ec512c0708
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cecddfe127bba43852412b6d804254f35103def
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922112"
 ---
-# <a name="step-1-specify-a-server-program-rds-tutorial"></a>步驟 1:指定伺服器程式 (RDS 教學課程)
+# <a name="step-1-specify-a-server-program-rds-tutorial"></a>步驟 1：指定伺服器程式 (RDS 教學課程)
 在最常見的案例中，使用[rds。DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)物件[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法，以指定預設 server 計畫[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)，或您自己自訂的伺服器程式 （商務物件）。 伺服器程式具現化伺服器和伺服器程式的參考或*proxy*，則會傳回。  
   
  本教學課程會使用預設伺服器程式：  

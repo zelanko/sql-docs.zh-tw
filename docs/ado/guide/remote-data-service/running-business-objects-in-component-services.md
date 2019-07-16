@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f64909f4f7db1f765d233878631eb90a4760531e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87eab0ac5611b437f6e0cbe1957a4d6e8652c4b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704208"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922272"
 ---
 # <a name="running-business-objects-in-component-services"></a>在 Component Services 中執行商務物件
 > [!IMPORTANT]

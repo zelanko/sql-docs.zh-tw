@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: a762fe474be4bd7337b8608af2c6aabcb6a34fd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 281d8a76ba66a6615eab44e8f22225e417bff31e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270505"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905805"
 ---
 # <a name="lastsibling-mdx"></a>LastSibling (MDX)
 

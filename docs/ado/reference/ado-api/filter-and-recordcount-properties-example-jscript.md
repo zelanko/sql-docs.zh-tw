@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dc0d846c77e2f5f237955a9ce437ea39b51d2cb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0832ddbbb16c54ee62c8fcec8749aeadb4f98449
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932651"
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>Filter 和 RecordCount 屬性範例 (JScript)
 這個範例會開啟**資料錄集**Northwind 資料庫然後再使用的公司資料表[篩選](../../../ado/reference/ado-api/filter-property.md)以限制顯示的記錄為供應商 欄位則是以字母開頭的屬性D.剪下並貼到 [記事本] 或其他文字編輯器，下列程式碼，然後將它儲存成**FilterJS.asp**。  
