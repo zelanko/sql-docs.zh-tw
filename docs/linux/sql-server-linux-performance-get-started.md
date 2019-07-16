@@ -3,18 +3,17 @@ title: 開始使用 Linux 上的 SQL Server 的效能功能
 description: 這篇文章介紹 SQL Server 效能功能的 SQL server 的 Linux 使用者。 許多這些範例作用於所有平台，但這篇文章的內容是 Linux。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.openlocfilehash: c5cf07107702579af1ae111c9c55843c16c01bd0
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: fe60b00654d93c6362a8671318a4b7b88ae90a5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834829"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896167"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的效能功能的逐步解說
 

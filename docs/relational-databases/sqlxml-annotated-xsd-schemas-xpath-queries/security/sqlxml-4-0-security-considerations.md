@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7281bdbd-cf1d-4d73-9fe7-ee8b2b946696
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fde4772f1285fc59fdb0c0e9ac49692fda048cc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9580aaa9bad8285f6cf61300a84cf6362dc12774
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040349"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896611"
 ---
 # <a name="sqlxml-40-security-considerations"></a>SQLXML 4.0 安全性考量
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

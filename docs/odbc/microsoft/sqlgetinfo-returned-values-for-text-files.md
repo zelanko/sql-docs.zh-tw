@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 36188b0cb646106d2b54ea8bcec8e417aa05c659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d2578c9abe6e2e3b1f99b0e680fc0fcf8c104f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898804"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>文字檔的 SQLGetInfo 傳回值
 下表列出 C 語言 #defines *fInfoType*引數和所傳回的對應值**SQLGetInfo**。 這項資訊可以擷取傳遞所列出的 C 語言 #defines **SQLGetInfo**中*fInfoType*引數。 如需詳細資訊，所傳回之值的相關**SQLGetInfo**，請參閱[ODBC 程式設計人員參考](../../odbc/reference/odbc-programmer-s-reference.md)。  

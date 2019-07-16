@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuL-Preview
 ms.author: xiaoyul
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a3aa0219e1e8d0733926662b22f929fa923ae071
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: 8e6514991c0819342861a50a2a50b37e7d8748cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67564178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899394"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -44,7 +43,7 @@ ms.locfileid: "67564178"
 |importance|**nvarchar(32)**|已提交設定要求的重要性。 以較低重要性的要求會保留在佇列中暫止狀態，如果較高的重要性要求提交。  以高重要性的要求將會執行較早提交的較低重要性要求之前。  如需有關重要性的詳細資訊，請參閱[工作負載重要性](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance)。  |NULL</br>低</br>below_normal</br>標準 （預設值）</br>above_normal</br>高|
 |group_name| |保留供內部使用。</br>適用於：Azure SQL 資料倉儲|
 |resource_allocation_percentage| |保留供內部使用。</br>適用於：Azure SQL 資料倉儲|
-|result_set_cache|**bit**|詳細資料是否已完成的查詢結果快取命中 (1) 與否 (0)。|0,1|
+|result_set_cache|**bit**|詳細資料是否已完成的查詢結果快取命中 (1) 與否 (0)。|0，1|
 ||||
   
  這份檢視所保留的最大資料列的相關資訊，請參閱中的 [中繼資料] 區段[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主題。   

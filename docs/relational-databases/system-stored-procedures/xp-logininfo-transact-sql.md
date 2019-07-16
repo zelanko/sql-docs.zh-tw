@@ -1,5 +1,5 @@
 ---
-title: xp_logininfo (Transact-SQL) | Microsoft Docs
+title: xp_logininfo & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2e48337afee5320355eb71025bffb972b85e3358
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 2b3af47a1c09160faab97494d9749fd67c051cd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898403"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,9 +58,9 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**account name**|**sysname**|完整的 Windows 帳戶名稱。|  
+|**帳戶名稱**|**sysname**|完整的 Windows 帳戶名稱。|  
 |**type**|**char(8)**|Windows 帳戶的類型。 有效值**使用者**或是**群組**。|  
-|**privilege**|**char(9)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的存取權限。 有效值**系統管理員**，**使用者**，或**null**。|  
+|**權限**|**char(9)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的存取權限。 有效值**系統管理員**，**使用者**，或**null**。|  
 |**對應的登入名稱**|**sysname**|使用者帳戶，具有使用者權限，如**對應登入名稱**會顯示對應的登入名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時它前面加上這個對應的規則使用的網域名稱的帳戶登入嘗試使用。|  
 |**權限路徑**|**sysname**|允許帳戶存取權的群組成員資格。|  
   

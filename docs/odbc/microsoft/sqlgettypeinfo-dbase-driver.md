@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e9ce02b-97c7-4c1a-91e0-829df7459c84
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 90bfbe29fd011f8b62527854f0ca5a179d8f63cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43319f7f23741a1533321c9369077d42a2484395
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898745"
 ---
 # <a name="sqlgettypeinfo-dbase-driver"></a>SQLGetTypeInfo (dBASE 驅動程式)
 > [!NOTE]  

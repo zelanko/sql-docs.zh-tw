@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3d117224e9afb331979556d12c6cddc0869382f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5279284c905384ea93c90ab10522a3998c906029
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896908"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>建立明確階層 (Master Data Services)
 
@@ -29,7 +28,7 @@ ms.locfileid: "65477161"
   
  建立明確階層之後，您可以在總管  功能區域的這個階層中加入成員。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
