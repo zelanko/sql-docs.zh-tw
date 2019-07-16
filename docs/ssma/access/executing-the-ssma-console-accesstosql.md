@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97425a6795889f72b329280ff70f9638378e7799
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63473524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006566"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>執行 SSMA 主控台 (AccessToSQL)
 Microsoft 為您提供一組強大的指令碼檔案的命令和命令列選項來執行，並控制 SSMA 活動。 後續章節將詳細說明相同。  
@@ -158,7 +157,7 @@ connect-source-database
 ```xml  
 <load-access-database  database-file="<Access-database>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <load-access-database>  
@@ -192,7 +191,7 @@ force-load-source/target-database
   
   metabase="<source/target>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <force-load>  
@@ -305,7 +304,7 @@ generate-assessment-report
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <generate-assessment-report  
@@ -377,7 +376,7 @@ convert-schema
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <convert-schema  
@@ -437,7 +436,7 @@ migrate-data
   
 </migrate-data>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <migrate-data  
@@ -467,7 +466,7 @@ migrate-data
   
 </link-tables>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <link-tables>  
@@ -493,7 +492,7 @@ migrate-data
   
 </unlink-tables>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <unlink-tables>  
@@ -531,7 +530,7 @@ migrate-data
   
 **Command**  
   
-synchronize-target  
+同步處理目標  
   
 1.  會使用目標資料庫，同步處理的目標物件。  
   
@@ -551,7 +550,7 @@ synchronize-target
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   失敗指令碼  
   
 4.  `report-errors-to:` 同步處理作業 （也就是選擇性屬性） 如果只指定資料夾路徑，然後檔案儲存依名稱指定的錯誤報表的位置**TargetSynchronizationReport.XML**建立。  
   
@@ -572,7 +571,7 @@ synchronize-target
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <synchronize-target  
@@ -581,7 +580,7 @@ synchronize-target
   
   object-type="category"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <synchronize-target>  
@@ -616,7 +615,7 @@ refresh-from-database
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   失敗指令碼  
   
 4.  `report-errors-to:` 重新整理作業 （也就是選擇性屬性） 如果只指定資料夾路徑，然後檔案儲存依名稱指定的錯誤報表的位置**SourceDBRefreshReport.XML**建立。  
   
@@ -637,7 +636,7 @@ refresh-from-database
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <refresh-from-database  
@@ -646,7 +645,7 @@ refresh-from-database
   
   object-type="category"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <refresh-from-database>  
@@ -696,7 +695,7 @@ save-as-script
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <save-as-script  

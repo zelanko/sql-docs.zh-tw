@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9713480e-8744-4f37-a630-20871590d4a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1fb077261eda4b2e013abd6d87e894637a29216a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3fb86e1332e3b7e4d89003ccf6421151e5d9cec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181238"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100673"
 ---
 # <a name="odbc-cursor-library-error-codes"></a>ODBC 資料指標程式庫錯誤碼
 > [!IMPORTANT]  

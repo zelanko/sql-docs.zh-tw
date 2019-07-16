@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9b648198-349f-46f6-b869-13d129945971
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44e773248cd2d61e211f6de98d5a0f81acc78bd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 884a33339db10ee8e07d8b432d1765720d45734a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019447"
 ---
 # <a name="insert---sql-command"></a>INSERT - SQL 命令
 將記錄附加至資料表，其中包含指定的欄位值的結尾。  
@@ -41,10 +40,10 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
   
  如果您指定的資料表開啟時，INSERT 會將新記錄附加至資料表。 如果資料表是在工作區中開啟的除了目前的工作區，未選取附加記錄; 之後目前的工作區仍為選取狀態。  
   
- [( *fname1*[, *fname2*[, ...]])]  
+ [( *fname1*[， *fname2*[，...]])]  
  指定新記錄中欄位的名稱到所插入的值。  
   
- VALUES ( *eExpression1*[, *eExpression2*[, ...]])  
+ 值 ( *eExpression1*[， *eExpression2*[，...]])  
  指定插入新資料錄的欄位值。 如果您省略的欄位名稱，您必須指定欄位值的資料表結構所定義的順序。  
   
 ## <a name="remarks"></a>備註  

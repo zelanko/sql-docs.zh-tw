@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 39554188-20fe-42ec-a53f-35e1dc98c274
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab42cd7c17915abef367ea30b97a750aef2dea9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a081fd1d3cebb7d5d83362d2cf5af700f75da09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62858763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942176"
 ---
 # <a name="log-shipping-stored-procedures-transact-sql"></a>記錄傳送預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 2a158ecd0223f7483494e4b28068c4634874e11d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4778d54fe3853f2560159a83dae42c4fd8e55e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797937"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959016"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>教學課程：使用 TRANSACT-SQL 編輯器來建立資料庫物件， [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -72,7 +71,7 @@ ms.locfileid: "66797937"
 
 3. 建立預存程序程式碼片段有兩個欄位可以進行 [快速編輯]， *StoredProcedureName* 和 *SchemaName*。 選取 *StoredProcedureName* ，按一下滑鼠右鍵，然後選取**變更所有相符項目**。 鍵入 *getCustomer* 並將全部 *StoredProcedureName* 項目變更為 *getCustomer*。
 
-   ![snippet](./media/tutorial-sql-editor/snippet.png)
+   ![程式碼片段](./media/tutorial-sql-editor/snippet.png)
 
 5. 同上一步操作，將所有 *SchemaName* 變更為 *dbo*。 
 6. 程式碼片段包含許多參數預留位置與內容需要更新。 *EXECUTE* 陳述式也包含文字預留位置，因為不知道預存程序有多少參數。 本教學課程更新程式碼片段後，結果如下列程式碼所示：

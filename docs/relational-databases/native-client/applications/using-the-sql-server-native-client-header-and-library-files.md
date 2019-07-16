@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb4265ac502aa5d8a90cf4df3060b1d10d5b4f36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01cfd9fe1aba63e5b63c6878d0332bd3a4a8eaff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987541"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>使用 SQL Server Native Client 標頭檔與程式庫檔案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47778016"
  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者的 OLE DB 應用程式僅需要參考 sqlncli.h。 如果應用程式同時使用 MDAC (SQLOLEDB) 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，則可以同時參考 sqloledb.h 和 sqlncli.h，但是必須先參考 sqloledb.h。  
   
 ## <a name="using-the-sql-server-native-client-header-file"></a>使用 SQL Server Native Client 標頭檔  
- 若要使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 標頭檔，您必須使用**包含**您 C/c + + 程式碼內的陳述式。 下列章節描述如何同時針對 OLE DB 和 ODBC 應用程式執行此動作。  
+ 若要使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 標頭檔，您必須使用**包括**陳述式併入您的 C /C++程式碼。 下列章節描述如何同時針對 OLE DB 和 ODBC 應用程式執行此動作。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 標頭檔和程式庫檔案僅能使用 Visual Studio C++ 2002 或更新版本編譯。  

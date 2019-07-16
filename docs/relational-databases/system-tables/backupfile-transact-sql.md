@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed2f40b2ea4f711c36a3c17031047fef555ab12a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c12575ae2eb07b5984d1e4a383830ff6fb44573a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62645506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091859"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "62645506"
 |**logical_name**|**nvarchar(128)**|備份檔案的邏輯名稱。 可以是 NULL。|  
 |**physical_drive**|**nvarchar(260)**|實體磁碟機或分割區名稱。 可以是 NULL。|  
 |**physical_name**|**nvarchar(260)**|實體 (作業系統) 檔案名稱的其餘部份。 可以是 NULL。|  
-|**state**|**tinyint**|這是檔案的狀態，它有下列幾種：<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = DROPPED<br /><br /> 注意:因此，這些值對應至資料庫狀態的值，則會略過的值是 5。|  
+|**state**|**tinyint**|這是檔案的狀態，它有下列幾種：<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = 卸除<br /><br /> 注意:因此，這些值對應至資料庫狀態的值，則會略過的值是 5。|  
 |**state_desc**|**nvarchar(64)**|這是檔案狀態的描述，它有下列幾種：<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|建立檔案的記錄序號。|  
 |**drop_lsn**|**numeric(25,0)**|卸除檔案的記錄序號。 可以是 NULL。<br /><br /> 如果檔案尚未卸除，這個值就是 NULL。|  

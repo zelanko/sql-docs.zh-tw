@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c806149a6d56547b5336bcbb59455c0cc297088a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 137805600b30876baa96e8b795b99b62b140e915
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933590"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks 方法範例 (VC++)
 此範例示範[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)方法。 除非特定的書籤是以某種方式特殊很少需要書籤的相對值。  

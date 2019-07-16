@@ -2,19 +2,18 @@
 title: 匯入 SCOM 管理組件-Analytics Platform System |Microsoft Docs
 description: 請遵循下列步驟來匯入 System Center Operations Manager (SCOM) 管理組件的 Analytics Platform System (APS)。 監視從 SCOM 的平行處理資料倉儲時，所需的管理組件。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c4280fb257147f3c401badc6eaec18929f6d69b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 070e7b73614f6884e45a5c91603d6086613d15ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960851"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>匯入 SCOM 管理組件-Analytics Platform System
 請遵循下列步驟來匯入 System Center Operations Manager (SCOM) 管理組件的 Analytics Platform System (APS)。 監視從 SCOM 的平行處理資料倉儲時，所需的管理組件。 

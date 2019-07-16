@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8315ec16-1c22-447a-a577-39bd94f61070
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3014c5c2af1a0ef8e5f485c790089e4807834446
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7e8a60030e9c5c7666ce3b25488cfc6adf00783
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313283"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053861"
 ---
 # <a name="sqlerror-visual-foxpro-odbc-driver"></a>SQLError (Visual FoxPro ODBC Driver)
 > [!NOTE]  

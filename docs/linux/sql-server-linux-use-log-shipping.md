@@ -3,17 +3,16 @@ title: 設定 SQL Server on Linux 的記錄傳送
 description: 本教學課程會示範如何將 Linux 上的 SQL Server 執行個體複寫至次要執行個體使用記錄傳送的基本範例。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 04/19/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0bbe4e8076578afd3addb9521a60bc72b5be9a06
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 5f5b795d35899025f1651b0f7db758d60103c511
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032206"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>開始使用 Linux 上的記錄傳送
 
@@ -30,7 +29,7 @@ SQL Server 記錄傳送是 HA 組態，將資料庫從主要伺服器複寫到�
 - 透過網路複製交易記錄備份檔案，一或多個次要 SQL Server 執行個體
 - 還原交易記錄備份檔案，在次要 SQL Server 執行個體上
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 - [在 Linux 上安裝 SQL Server 代理程式](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
 
 ## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>記錄傳送使用 CIFS 的網路共用安裝程式 

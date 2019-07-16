@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d5dd87cbf93ff2acd7c2c3753e85b1d6f7d110cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d985786e4743b8bcc691cf6888c24153f5cb5f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019068"
 ---
 # <a name="cursor-library-code-example"></a>資料指標程式庫程式碼範例
 > [!IMPORTANT]  

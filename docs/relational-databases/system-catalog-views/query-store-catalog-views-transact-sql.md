@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 43d5466a-89e2-4e59-b87e-a2a78e59a1de
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23a751336e9709a37121163263570e62b0c49f0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 014c9d6f965e62c4651634a92a473a9573642f71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62501593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018423"
 ---
 # <a name="query-store-catalog-views-transact-sql"></a>查詢存放區目錄檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]

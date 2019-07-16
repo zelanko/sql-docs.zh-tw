@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1e3009b4e3bed6fc871ecfd1aab4e2af2f1f1c86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5962882de08712dcff75790de7c58d69f965a3bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086377"
 ---
 # <a name="sqlgetdata-cursor-library"></a>SQLGetData (資料指標程式庫)
 > [!IMPORTANT]  

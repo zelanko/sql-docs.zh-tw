@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 474cc691a8adc0e022e10e52c766368e9f655d8a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 99cdd6fdf5db075cc8fd46b738f468fd5d9a028d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894923"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks 安裝和設定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,10 +66,10 @@ AdventureWorks OLTP 新版的直接連結可在下方：
 
 1. 開啟 SQL Server Management Studio 並連接至目標 SQL Server 執行個體。
 2. 以滑鼠右鍵按一下**資料庫**節點，然後選取**Restore Database**。
-3. 選取 **裝置**按一下省略符號 (**...**)
-4. 在對話方塊**選取備份裝置**，按一下**新增**，瀏覽至伺服器的檔案系統中的資料庫備份，並選取備份。 按一下 [確定] 。
+3. 選取 **裝置**按一下省略符號 ( **...** )
+4. 在對話方塊**選取備份裝置**，按一下**新增**，瀏覽至伺服器的檔案系統中的資料庫備份，並選取備份。 按一下 [確定]  。
 5. 如有需要變更資料的目標位置，並在記錄檔**檔案**窗格。 請注意，您要放置資料和記錄檔在不同的磁碟機上的最佳作法。
-6. 按一下 [確定] 。 這會起始資料庫還原。 完成之後，您必須安裝在您的 SQL Server 執行個體上的 AdventureWorks 資料庫。
+6. 按一下 [確定]  。 這會起始資料庫還原。 完成之後，您必須安裝在您的 SQL Server 執行個體上的 AdventureWorks 資料庫。
 
 如需有關還原 SQL Server 資料庫的詳細資訊，請參閱[還原資料庫備份，使用 SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)。
 
@@ -82,7 +81,7 @@ AdventureWorks OLTP 新版的直接連結可在下方：
 2. 以滑鼠右鍵按一下**資料庫**節點，然後選取**附加**。
 3. 選取 **新增**並瀏覽至。您想要附加的 MDF 檔案。 
 1. 選取檔案，然後按一下**確定**。 
-    1. 您選取的資料庫應該會顯示在下方視窗。 如果該檔案清單做為 「 找不到 」，選取省略符號 (**...**) 更新的正確路徑的路徑與檔案名稱旁邊。 
+    1. 您選取的資料庫應該會顯示在下方視窗。 如果該檔案清單做為 「 找不到 」，選取省略符號 ( **...** ) 更新的正確路徑的路徑與檔案名稱旁邊。 
     1. 如果您只需要資料檔案 (.mdf) 和不記錄檔 (.ldf)，然後在下方視窗.ldf 反白顯示並選取**移除**。 這會建立新的記錄檔。 
 1. 選取 **確定**附加檔案。 將檔案附加之後，您必須安裝在您的 SQL Server 執行個體上的 AdventureWorks 資料庫。  
 

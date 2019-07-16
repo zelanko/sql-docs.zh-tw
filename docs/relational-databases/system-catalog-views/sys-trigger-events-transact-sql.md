@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 92540447-131c-491c-b033-c064c7d950e1
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0071b7c0f955befba458a41ce813a8aff5aabe8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc2732797551317a392b0ab55d9ecbeb28d990a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091937"
 ---
 # <a name="systriggerevents-transact-sql"></a>sys.trigger_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,8 +40,8 @@ ms.locfileid: "47748936"
 |**\<繼承自 sys.events 的資料行 >**|不適用|繼承**object_id**，**型別**， **type_desc**中的資料行[sys.events](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)。|  
 |**is_first**|**bit**|觸發程序被標示為這個事件要引發的第一個觸發程序。|  
 |**is_last**|**bit**|觸發程序被標示為這個事件要引發的最後一個觸發程序。|  
-|**type_desc**|**int**|觸發程序建立所在的事件群組，如果未在事件群組上建立則為 null。|  
-|**event_group_type**|**nvarchar(60)**|觸發程序建立所在之事件群組的描述，如果未在事件群組上建立則為 null。|  
+|**event_group_type**|**int**|觸發程序建立所在的事件群組，如果未在事件群組上建立則為 null。|  
+|**event_group_type_desc**|**nvarchar(60)**|觸發程序建立所在之事件群組的描述，如果未在事件群組上建立則為 null。|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

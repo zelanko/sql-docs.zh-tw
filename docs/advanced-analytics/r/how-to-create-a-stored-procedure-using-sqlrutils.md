@@ -7,13 +7,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 014fb8344a0b2cf93dc7f375fffc717663f53a46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9519356bcd4add6887cf5ff41c754583607d1c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962650"
 ---
 # <a name="create-a-stored-pprocedure-using-sqlrutils"></a>建立預存的 pProcedure 使用 sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "62641840"
 
 如果輸入類型不是上述類型之一，就必須將其序列化並以 *未經處理的*形式傳遞給函式。 在此情況下，函式也必須包含可還原序列化輸入項目的程式碼。
 
-### <a name="outputs"></a>輸出
+### <a name="outputs"></a>outputs
 
 函式可以輸出下列其中一個項目：
 
@@ -65,7 +64,7 @@ R 程式碼已清除，而且可以當做單一函式呼叫之後，您將使用
 
 當您呼叫每個函式時，R 建立物件時，您稍後將會傳遞做為引數`StoredProcedure`，以建立完整的預存程序。
 
-### <a name="outputs"></a>輸出
+### <a name="outputs"></a>outputs
 
 **sqlrutils**提供多個函式，例如列出 SQL Server 所需的 data.frame 以轉換 R 物件。
 如果您的函式會直接輸出資料框架，而不需先將其包裝到清單中，您即可略過這個步驟。

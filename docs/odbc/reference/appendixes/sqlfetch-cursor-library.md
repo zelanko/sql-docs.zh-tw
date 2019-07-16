@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 35a0d493-778b-4fb1-84ee-a13540e2fe0e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 487a6b357d21ee675fa9594d32c7a2bb7c66e400
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2cb829f065421a13d3c7df06c670808bc3d9d77c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064427"
 ---
 # <a name="sqlfetch-cursor-library"></a>SQLFetch (資料指標程式庫)
 > [!IMPORTANT]  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 657f266ab4bcc6e03a645bcfc3d4f914c5fa6259
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a72e393716d3d24fdb9f0f95be9faae85651696
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964109"
 ---
 # <a name="handler-property-example-vb"></a>Handler 屬性範例 (VB)
 > [!IMPORTANT]

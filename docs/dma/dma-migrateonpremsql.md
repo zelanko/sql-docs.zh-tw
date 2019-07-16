@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: jroth
-ms.openlocfilehash: f424e8e799c7550ff426a7b4c2a2022fe4b0c4bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8366b04be48df3e47e9c6d531738ebebfee45da0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058819"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>在內部部署 SQL Server 升級至 SQL Server 或 SQL Server Azure Vm 上使用 Data Migration Assistant
 
@@ -79,7 +78,7 @@ Data Migration Assistant 中提供無縫式的評估，SQL Server 內部部署�
 
    ![若要將資料庫備份複製到不同位置的選項](../dma/media/CopyDatabaseDifferentLocation.png)
 
-5. 選取 **[下一步]** 。
+5. 選取 [下一步]  。
 
 Data Migration Assistant 上備份的資料夾、 資料和記錄檔位置執行驗證。 如果任何驗證失敗，修正選項，然後按**下一步**。
 

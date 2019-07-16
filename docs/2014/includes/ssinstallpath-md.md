@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: cc9692627cfaa7a09a7e602964d1a038b7cef5d9
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67230332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68195792"
 ---
 C:\\程式檔案\\Microsoft SQL Server\\120\\

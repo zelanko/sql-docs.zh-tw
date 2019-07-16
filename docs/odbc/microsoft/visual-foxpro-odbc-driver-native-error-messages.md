@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 661752a55b808b010f8a111bcc18e47048a3999b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8cb5022df9628607c94754cbbadceecaea02c4db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63065105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087783"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Visual FoxPro ODBC Driver 原生錯誤訊息
 下表列出 Visual FoxPro ODBC Driver 的原生的錯誤訊息。  

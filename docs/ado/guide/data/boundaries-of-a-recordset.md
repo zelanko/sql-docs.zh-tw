@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 967ccb49cd2bbaa805420e7c982cc11721931022
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f4efddad1b55ce57c62ce52418539ec06599bb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702342"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925917"
 ---
 # <a name="boundaries-of-a-recordset"></a>資料錄集的界限
 **資料錄集**支援**BOF**並**EOF**以框出開頭和結尾，分別將資料集的屬性。 您可以想像**BOF**並**EOF**為位於開頭和結尾的 「 虛設 」 記錄**資料錄集**。 計算**BOF**並**EOF**，我們的範例**資料錄集**現在看起來會像這樣：  
@@ -30,7 +29,7 @@ ms.locfileid: "66702342"
 |BOF|||  
 |7|得以 Bob 有機曬的梨子|30.0000|  
 |14|Tofu|23.2500|  
-|28|Rssle Sauerkraut|45.6000|  
+|28|Rssle 酸菜|45.6000|  
 |51|柳乾蘋果|53.0000|  
 |74|長壽豆腐|10.0000|  
 |EOF|||  

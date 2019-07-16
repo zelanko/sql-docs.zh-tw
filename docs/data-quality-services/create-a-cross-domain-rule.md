@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: f719ef6777dc86d9e815a837732dcc045b2599ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45222a4ae99578c40ce14870433fb929c1127f51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992327"
 ---
 # <a name="create-a-cross-domain-rule"></a>建立跨定義域規則
 

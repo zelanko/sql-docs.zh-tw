@@ -5,17 +5,16 @@ description: Mssqlctl 命令的參考文件。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a30f78b24a85f85b85beb914dc0f26af652242fd
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 5567b46376acc5aee6c42cdae19eef133c7af506
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728541"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957893"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -29,8 +28,8 @@ ms.locfileid: "67728541"
 |[mssqlctl 應用程式](reference-mssqlctl-app.md) | 建立、 刪除、 執行和管理應用程式。 |
 |[mssqlctl bdc](reference-mssqlctl-bdc.md) | 選取、 管理及操作 SQL Server 巨量資料叢集。 |
 |[mssqlctl hdfs](reference-mssqlctl-hdfs.md) | HDFS 模組提供命令，以存取 HDFS 檔案系統。 |
-[mssqlctl login](#mssqlctl-login) | 登入叢集的控制站的端點。
-[mssqlctl logout](#mssqlctl-logout) | 記錄移出叢集。
+[mssqlctl 登入](#mssqlctl-login) | 登入叢集的控制站的端點。
+[mssqlctl 登出](#mssqlctl-logout) | 記錄移出叢集。
 |[mssqlctl sql](reference-mssqlctl-sql.md) | SQL DB CLI 可讓使用者透過 T-SQL 的 SQL 伺服器互動。 |
 ## <a name="mssqlctl-login"></a>mssqlctl 登入
 部署您的叢集時，它會列出控制器端點在部署期間，您應該用來登入。  如果您不知道控制器端點，您可能會讓您的叢集 kube 設定您的系統中的預設位置上的登入<user home>/.kube/config 或使用 KUBECONFIG 環境變數，也就是匯出 KUBECONFIG=path/to/.kube/config。

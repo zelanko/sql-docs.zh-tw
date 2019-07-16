@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21756cadbfb924e95edd261942f018fb6aef6a4c
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: dbee7422bdf58d753c31c7aa57a81bc4b29d2568
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096229"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_微調\_建議 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "54226515"
   
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，動態管理檢視不可以公開可能會影響資料庫內含項目的資訊或公開有關使用者可存取之其他資料庫的資訊。 若要避免公開此資訊，每個資料列，其中包含不屬於連接租用戶的資料會被篩選掉。
 
-| **資料行名稱** | **Data type** | **說明** |
+| **資料行名稱** | **Data type** | **描述** |
 | --- | --- | --- |
 | **name** | **nvarchar(4000)** | 建議的唯一名稱。 |
 | **type** | **nvarchar(4000)** | 產生的建議，例如自動微調選項的名稱 `FORCE_LAST_GOOD_PLAN` |
@@ -73,7 +72,7 @@ ms.locfileid: "54226515"
 
 中的 JSON 文件`state`資料行包含描述為何建議的目前狀態的原因。 在 [原因] 欄位中的值可能是： 
 
-| Reason | 描述 |
+| `Reason` | 描述 |
 |--------|-------------|
 | `SchemaChanged` | 建議過期，因為參考的資料表的結構描述變更。 |
 | `StatisticsChanged`| 建議過期，因為參考的資料表上的統計資料變更。 |

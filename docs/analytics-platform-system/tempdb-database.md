@@ -2,19 +2,18 @@
 title: Tempdb 資料庫-Parallel Data Warehouse |Microsoft Docs
 description: 在平行處理資料倉儲中的 Tempdb 資料庫。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7e11f4eff980358f4b4906f8a100cfc509d19dd5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1790ae3bc63a379c1bcf143655f10829db60a339
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156968"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960013"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>平行處理資料倉儲中的 tempdb 資料庫
 **tempdb**已儲存的使用者資料庫的本機暫存資料表的 SQL Server PDW 系統資料庫。 暫存資料表通常會用來改善查詢效能。 比方說，您可以使用暫存資料表，以模塊化指令碼，並重複使用計算的資料。  

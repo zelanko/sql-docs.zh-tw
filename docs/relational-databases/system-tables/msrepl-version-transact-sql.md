@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1330f03-940b-4564-ac42-6030c6e21173
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94cb0913e8122997652786cd4bf09ddccf7fa433
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 45dad1cfaa6057cd50ee4c01b484df8250121a46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079148"
 ---
 # <a name="msreplversion-transact-sql"></a>MSrepl_version (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "52775432"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**major_version**|**int**|散發資料庫的主要版本號碼。|  
-|**即**|**int**|散發資料庫的次要版本號碼。|  
+|**minor_version**|**int**|散發資料庫的次要版本號碼。|  
 |**修訂**|**int**|修訂版本編號。|  
 |**db_existed**|**bit**|表示之前是否存在散發資料庫**sp_adddistributiondb**呼叫。|  
   
