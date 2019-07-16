@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3132b45713b3493aa2e82a48123e5f3693e6e8dc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 023ee54178c5f303797c6db83cc646353304b051
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090267"
 ---
 # <a name="sysdmxeobjects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +43,8 @@ ms.locfileid: "52543816"
 
  |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(60)**|物件的名稱。 名稱是唯一在封裝中的特定物件類型。 不可為 Null。|  
-|object_type|**nvarchar(60)**|物件的型別。 object_type 是下列其中一項：<br /><br /> event<br /><br /> action<br /><br /> 目標<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> 型別<br /><br /> 不可為 Null。|  
+|name|**nvarchar(60)**|物件的名稱。 名稱是唯一在封裝中的特定物件類型。 不可為 Null。|  
+|object_type|**nvarchar(60)**|物件的型別。 object_type 是下列其中一項：<br /><br /> event<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> 不可為 Null。|  
 |package_guid|**uniqueidentifier**|公開此動作之封裝的 GUID。 這與 sys.dm_xe_packages.package_id 之間是多對一的關聯性。 不可為 Null。|  
 |description|**nvarchar(256)**|動作的描述。 描述是由封裝作者所設定。 不可為 Null。|  
 |capabilities|**int**|描述此物件之功能的點陣圖。 可為 Null。|  

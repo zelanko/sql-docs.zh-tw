@@ -1,5 +1,5 @@
 ---
-title: sp_update_jobstep (Transact-SQL) | Microsoft Docs
+title: sp_update_jobstep (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1ab6c1408b9f9c2de2e4070ab35e34ea8a458df
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084882"
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,9 +69,9 @@ sp_update_jobstep
   
 `[ @step_name = ] 'step_name'` 是步驟的新名稱。 *step_name*已**sysname**，預設值是 NULL。  
   
-`[ @subsystem = ] 'subsystem'` Microsoft SQL Server Agent 執行子系統*命令*。 *子系統*已**nvarchar(40)**，預設值是 NULL。  
+`[ @subsystem = ] 'subsystem'` Microsoft SQL Server Agent 執行子系統*命令*。 *子系統*已**nvarchar(40)** ，預設值是 NULL。  
   
-`[ @command = ] 'command'` 若要透過執行命令*子系統*。 *命令*已**nvarchar （max)**，預設值是 NULL。  
+`[ @command = ] 'command'` 若要透過執行命令*子系統*。 *命令*已**nvarchar （max)** ，預設值是 NULL。  
   
 `[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -100,7 +99,7 @@ sp_update_jobstep
   
 `[ @on_fail_step_id = ] fail_step_id` 步驟失敗時執行此作業中步驟的識別碼和*fail_action*是**4**。 *fail_step_id*已**int**，預設值是 NULL。  
   
-`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *伺服器*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。  
+`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *伺服器*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** ，預設值是 NULL。  
   
 `[ @database_name = ] 'database'` 在其中執行的資料庫名稱[!INCLUDE[tsql](../../includes/tsql-md.md)]步驟。 *資料庫*已**sysname**。 不允許以括號 ([ ]) 括住的名稱。 預設值是 NULL。  
   

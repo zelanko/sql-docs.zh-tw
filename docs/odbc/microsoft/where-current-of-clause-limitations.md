@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12404fd7-ae11-4017-85cd-792ce20931f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43f4c31abdfc27d980850aca36dc1e83c85a9e35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e1c1a625e3dd21ef8217bbac95d8317ca1113f1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911389"
 ---
 # <a name="where-current-of-clause-limitations"></a>WHERE CURRENT OF 子句限制
 不支援。

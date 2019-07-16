@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 86e9d39e6dd56cb5762933dc5ed37b5740a34ea5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82558c7839263a777a15d374acff28b4c40103d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024751"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>尋找資料庫精靈 （選取位置） (AccessToSQL)
 在 [尋找資料庫精靈] 的 [選取位置] 頁面中，您可以輸入的搜尋參數來尋找存取資料庫。  
   
 若要開啟 [尋找資料庫精靈] 中，在**檔案**功能表上，按一下**尋找資料庫**。 如需如何使用此對話方塊的詳細資訊，請參閱[加入和移除的 Access 資料庫檔案](adding-and-removing-access-database-files-accesstosql.md)  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **瀏覽**  
 按一下 瀏覽電腦或網路。 選取的資料夾或位置搜尋，然後按**確定**。 按一下 **新增**將清單中的這個位置。  
   
