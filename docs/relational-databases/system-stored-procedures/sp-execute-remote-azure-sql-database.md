@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 100da3bfaeee1c4b1e4dae00c96bcc08a763f3b3
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 021a6e689dfc109f8a58ca080956aec7efc49291
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124467"
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  [ \@data_source_name = ] *datasourcename*  
  識別執行陳述式的外部資料來源。 請參閱[建立外部資料來源&#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)。 外部資料來源可以是類型的"RDBMS"或"SHARD_MAP_MANAGER"。  
   
- [ \@stmt= ] *statement*  
+ [ \@stmt =]*陳述式*  
  是 Unicode 字串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次。 \@陳述式必須是 Unicode 常數或 Unicode 變數。 不允許使用比較複雜的 Unicode 運算式，如用 + 運算子來串連兩個字串。 不允許使用字元常數。 如果指定了 Unicode 常數，它必須在前面加上**N**。比方說，Unicode 常數**N'SP_WHO '** 有效，但字元常數 **'sp_who'** 不是。 字串大小只受到可用資料庫伺服器記憶體的限制。 在 64 位元伺服器上字串的大小會限制為 2 GB，最大的大小**nvarchar （max)** 。  
   
 > [!NOTE]  
@@ -104,6 +103,6 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 
 ## <a name="see-also"></a>另請參閱：
 
-[CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
+[建立資料庫範圍認證](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
 [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
     

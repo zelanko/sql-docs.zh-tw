@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760880"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211381"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>作業屬性及新增作業 (一般頁面)
   使用此頁面來檢視和修改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的一般屬性。  
@@ -35,26 +35,26 @@ ms.locfileid: "52760880"
  **...**  
  檢視選取之類別目錄中的作業。  
   
- **說明**  
+ **描述**  
  變更作業的描述。  
   
  **已啟用**  
  啟用作業。 未啟用作業時，則不會執行作業以回應排程或警示，但是您仍可以使用 **sp_start_job** 預存程序來啟動作業。  
   
  **Source**  
- 顯示作業的主要伺服器。 只能在 [作業屬性] 的 [一般] 頁面使用。  
+ 顯示作業的主要伺服器。 只能在 [作業屬性] 的 [一般]  頁面使用。  
   
  **建立日期**  
- 顯示作業的建立日期和時間。 只能在 [作業屬性] 的 [一般] 頁面使用。  
+ 顯示作業的建立日期和時間。 只能在 [作業屬性] 的 [一般]  頁面使用。  
   
  **上次修改**  
- 顯示作業的上次修改日期和時間。 只能在 [作業屬性] 的 [一般] 頁面使用。  
+ 顯示作業的上次修改日期和時間。 只能在 [作業屬性] 的 [一般]  頁面使用。  
   
  **上次執行**  
- 顯示作業上次開始執行的日期和時間。 只能在 [作業屬性] 的 [一般] 頁面使用。  
+ 顯示作業上次開始執行的日期和時間。 只能在 [作業屬性] 的 [一般]  頁面使用。  
   
  **檢視作業記錄**  
- 檢視作業的作業記錄。 只能在 [作業屬性] 的 [一般] 頁面使用。  
+ 檢視作業的作業記錄。 只能在 [作業屬性] 的 [一般]  頁面使用。  
   
 ## <a name="see-also"></a>另請參閱  
  [實作作業](implement-jobs.md)   

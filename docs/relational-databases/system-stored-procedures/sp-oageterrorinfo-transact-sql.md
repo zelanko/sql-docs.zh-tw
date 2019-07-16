@@ -1,5 +1,5 @@
 ---
-title: sp_OAGetErrorInfo (Transact-SQL) | Microsoft Docs
+title: sp_OAGetErrorInfo (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2f4ab09693234d72890524628f4def5afcf447ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65450082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107906"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |------------------|---------------|-----------------|  
 |**錯誤**|**binary(4)**|錯誤號碼的二進位表示法。|  
 |**Source**|**nvarchar(nn)**|錯誤的來源。|  
-|**說明**|**nvarchar(nn)**|錯誤的描述。|  
+|**描述**|**nvarchar(nn)**|錯誤的描述。|  
 |**Helpfile**|**nvarchar(nn)**|來源的說明檔。|  
 |**HelpID**|**int**|說明來源檔案中的說明內容識別碼。|  
   

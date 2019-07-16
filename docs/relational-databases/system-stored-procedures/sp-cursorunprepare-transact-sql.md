@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b46d4813-c4a9-4f9d-9979-2b5082ecf06a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4427cb2db0169f5cb7a25937e230777318ab9201
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8bfdcafb37b6ff7b495f1306d5d8339725e55e10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507243"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108388"
 ---
 # <a name="spcursorunprepare-transact-sql"></a>sp_cursorunprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_cursorunprepare handle
 ```  
   
 ## <a name="arguments"></a>引數  
- *handle*  
+ *控制代碼*  
  已*處理*備妥的陳述式時，sp_cursorprepare 會傳回的值。  
   
 ## <a name="see-also"></a>另請參閱  

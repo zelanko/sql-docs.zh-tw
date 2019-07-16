@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2009acd3-0d92-435a-a8fb-057e50dc7146
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2fda1c5232b0fe7805de0590850a19285a261fad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1957103cf2c817f0ef77816446be5fb2d352c9d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124455"
 ---
 # <a name="spexecute-transact-sql"></a>sp_execute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]

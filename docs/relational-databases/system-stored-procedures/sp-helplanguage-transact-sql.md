@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1b567b7d20f4d588fe0ca70f68be4318ce24398
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d46e178fc1872a84bb573f16629803c59f2fb6c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122505"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,13 +52,13 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |-----------------|---------------|-----------------|  
 |**langid**|**smallint**|語言識別碼。|  
 |**dateformat**|**nchar(3)**|日期的格式。|  
-|**datefirst**|**tinyint**|每週第一天：1 代表星期一，2 代表星期二，依此類推，7 則代表星期日。|  
+|**datefirst**|**tinyint**|一週的第一天：1 代表星期一，2 代表星期二，以此類推至 7 代表星期日。|  
 |**upgrade**|**int**|這個語言最後升級的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。|  
 |**name**|**sysname**|語言名稱。|  
 |**alias**|**sysname**|語言的替代名稱。|  
 |**幾個月**|**nvarchar(372)**|月份名稱。|  
 |**shortmonths**|**nvarchar(132)**|簡短月份名稱。|  
-|**days**|**nvarchar(217)**|日期名稱。|  
+|**天**|**nvarchar(217)**|日期名稱。|  
 |**lcid**|**int**|語言的 Windows 地區設定識別碼。|  
 |**msglangid**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訊息群組識別碼。|  
   

@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375940"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206597"
 ---
 # <a name="working-with-query-notifications"></a>使用查詢通知
   查詢通知是在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中引進。 查詢通知是根據 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引進的 Service Broker 基礎結構而建置，可讓應用程式在資料變更時收到通知。 此功能對於從資料庫中提供資訊快取的應用程式 (如 Web 應用程式)，及需要在來源資料變更時收到通知的應用程式來說非常有用。  
@@ -37,7 +37,7 @@ ms.locfileid: "53375940"
   
  `service=<service-name>[;(local database=<database> | broker instance=<broker instance>)]`  
   
- 例如：  
+ 例如:  
   
  `service=mySSBService;local database=mydb`  
   
@@ -73,7 +73,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>DBPROPSET_SQLSERVERROWSET 屬性集  
  為了透過 OLE DB 支援查詢通知[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端會將下列的新屬性加入至 DBPROPSET_SQLSERVERROWSET 屬性集。  
   
-|名稱|類型|描述|  
+|名稱|type|描述|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|查詢通知要維持使用中的秒數。<br /><br /> 預設值為 432000 秒 (5 天)。 最小值為 1 秒，最大值為 2^31-1 秒。|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|通知的訊息文字。 這是使用者定義的，而且沒有預先定義的格式。<br /><br /> 根據預設，字串是空的。 您可以使用 1-2000 個字元指定訊息。|  
@@ -81,7 +81,7 @@ CREATE SERVICE myService ON QUEUE myQueue
   
  無論陳述式是以使用者交易或自動認可執行，或者陳述式在其中執行的交易是否已經認可或回復，系統閱永遠都會認可通知訂閱。 伺服器通知會在發生下列任何無效通知條件時觸發：基礎資料或結構描述變更，或達到逾時期限 (視何者為先)。 通知註冊會在觸發之後立刻刪除。 因此在接到通知後，應用程式必須再進行一次訂閱，才能接到進一步的更新。  
   
- 其他的連接或執行緒可以檢查目的地佇列是否有通知。 例如：  
+ 其他的連接或執行緒可以檢查目的地佇列是否有通知。 例如:  
   
 ```  
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   
@@ -131,7 +131,7 @@ RECEIVE * FROM MyQueue
   
  如果訂閱要求是針對批次或預存程序所建立的，就會針對批次或預存程序內執行的每個陳述式建立個別的訂閱要求。 EXECUTE 陳述式不會註冊通知，不過會將通知要求傳送至執行的命令。 如果它是批次，內容就會套用至執行的陳述式，而且適用上述的相同規則。  
   
- 如果通知的查詢是由相同使用者在相同的資料庫內容之下提交，且具有相同的範本、相同的參數值、相同的通知識別碼和相同的現有使用中訂閱的傳遞位置，則提交該查詢將會更新現有的訂閱，並重設新的指定逾時。這表示如果您針對相同的查詢要求通知，系統就只會傳送一則通知。 這適用於批次中重複的查詢，或預存程序中多次呼叫的查詢。  
+ 提交的查詢通知由同一位使用者在相同的資料庫內容下提交且具有相同的範本、 相同的參數值、 相同通知識別碼和相同的傳送位置的現有的作用中訂用帳戶，將會更新現有的訂用帳戶，重設新指定的逾時。這表示，如果針對相同的查詢要求通知，則只有一個會傳送通知。 這適用於批次中重複的查詢，或預存程序中多次呼叫的查詢。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 功能](sql-server-native-client-features.md)  

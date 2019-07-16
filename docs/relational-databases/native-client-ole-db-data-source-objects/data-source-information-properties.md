@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7fd80e47-5bd9-41e2-a3d3-091a7c8c5f2b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5454f7c41a55442c8b68cd57dd71c3859902be97
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1a272a93d0148524da2def06fb8b4bbc121a9b0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128686"
 ---
 # <a name="data-source-information-properties"></a>資料來源資訊屬性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "52535107"
   
 |屬性識別碼|描述|  
 |-----------------|-----------------|  
-|SSPROP_COLUMNLEVELCOLLATION|類型：VT_BOOL<br /><br /> R/W：讀取<br /><br /> 預設：VARIANT_TRUE<br /><br /> 描述：用來判斷是否支援資料行定序。<br /><br /> VARIANT_TRUE：支援資料行層級定序。<br /><br /> VARIANT_FALSE：不支援資料行層級定序。|  
+|SSPROP_COLUMNLEVELCOLLATION|類型：VT_BOOL<br /><br /> R/W:讀取<br /><br /> 預設：VARIANT_TRUE<br /><br /> 描述：用來判斷是否支援資料行定序。<br /><br /> VARIANT_TRUE:支援資料行層級定序。<br /><br /> VARIANT_FALSE:不支援資料行層級定序。|  
 |SSPROP_UNICODELCID|類型：VT_I4 R/W:讀取<br /><br /> 描述：Unicode 地區設定識別碼。<br /><br /> 這是用於 Unicode 資料排序的地區設定。|  
 |SSPROP_UNICODECOMPARISONSTYLE|類型：VT_I4 R/W:讀取<br /><br /> 描述：Unicode 比較樣式。<br /><br /> 用於 Unicode 資料排序的排序選項。|  
   

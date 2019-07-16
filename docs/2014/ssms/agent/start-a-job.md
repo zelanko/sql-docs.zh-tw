@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6c375c8776f7c33b445676e45ce70839353d469f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376620"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211323"
 ---
 # <a name="start-a-job"></a>啟動作業
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中開始執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。  
@@ -28,7 +28,7 @@ ms.locfileid: "53376620"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目啟動作業：**  
   
@@ -49,15 +49,15 @@ ms.locfileid: "53376620"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **[SQL Server Agent]** ，再展開 **[作業]**。 請依照您所需要的作業啟動方式，執行下列其中一項作：  
+2.  展開 **[SQL Server Agent]** ，再展開 **[作業]** 。 請依照您所需要的作業啟動方式，執行下列其中一項作：  
   
-    -   若要對單一伺服器或目標伺服器執行作業，或要在主要伺服器上執行本機伺服器作業，請在要啟動的作業上按一下滑鼠右鍵，然後按一下 [啟動作業]。  
+    -   若要對單一伺服器或目標伺服器執行作業，或要在主要伺服器上執行本機伺服器作業，請在要啟動的作業上按一下滑鼠右鍵，然後按一下 [啟動作業]  。  
   
-    -   若要啟動多項作業，請在 [作業活動監視器]，然後按一下 [檢視作業活動]。 您可以在作業活動監視器中選取多項作業，然後在選取範圍上按一下滑鼠右鍵，再按一下 [啟動作業]。  
+    -   若要啟動多項作業，請在 [作業活動監視器]  ，然後按一下 [檢視作業活動]  。 您可以在作業活動監視器中選取多項作業，然後在選取範圍上按一下滑鼠右鍵，再按一下 [啟動作業]  。  
   
-    -   若要對主要伺服器執行作業，並希望所有目標伺服器同時執行該作業，請在要啟動的作業上按一下滑鼠右鍵，然後按一下 [啟動作業]，再按一下 [在所有目標伺服器上啟動]。  
+    -   若要對主要伺服器執行作業，並希望所有目標伺服器同時執行該作業，請在要啟動的作業上按一下滑鼠右鍵，然後按一下 [啟動作業]  ，再按一下 [在所有目標伺服器上啟動]  。  
   
-    -   若要對主要伺服器執行作業，並要指定執行該作業的目標伺服器，請在要啟動的作業上按一下滑鼠右鍵，然後按一下 [啟動作業]，再按一下 [在特定目標伺服器上啟動]。 在 **[公佈下載指示]** 對話方塊中選取 **[下列目標伺服器]** 核取方塊，然後選取應該執行此作業的每個目標伺服器。  
+    -   若要對主要伺服器執行作業，並要指定執行該作業的目標伺服器，請在要啟動的作業上按一下滑鼠右鍵，然後按一下 [啟動作業]  ，再按一下 [在特定目標伺服器上啟動]  。 在 **[公佈下載指示]** 對話方塊中選取 **[下列目標伺服器]** 核取方塊，然後選取應該執行此作業的每個目標伺服器。  
   
 ##  <a name="TSQL"></a> 使用 Transact-SQL  
   
@@ -65,9 +65,9 @@ ms.locfileid: "53376620"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- starts a job named Weekly Sales Data Backup.    

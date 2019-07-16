@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c83a7de609d200da2957a65b9325d031eda49780
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd729956ee7bb1fccf7a8fceb7a435042df4df7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273034"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111188"
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC 程式設計人員&#39;參考
 *ODBC 程式設計人員參考*包含下列各節。  
@@ -50,7 +49,7 @@ ms.locfileid: "63273034"
   
 |格式|用於|  
 |------------|--------------|  
-|SELECT * FROM|大寫字母會指出 SQL 陳述式、 巨集名稱和作業系統命令層級使用的詞彙。|  
+|選取 * 從|大寫字母會指出 SQL 陳述式、 巨集名稱和作業系統命令層級使用的詞彙。|  
 |`RETCODE SQLFetch(hdbc)`|等寬字型用於命令列範例和程式碼而定。|  
 |*引數*|斜體的文字表示程式設計的引數，該使用者或應用程式必須提供，或 word 強調的資訊。|  
 |**SQLEndTran**|粗體類型表示語法必須完全如下所示，包括函式名稱來輸入。|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7410371f7d96f9770536a129de3a916b5f297a74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f5127d041817a41dcf2d6fb4ed65070c87d05dd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108477"
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -207,12 +206,12 @@ sp_cursoropen cursor OUTPUT, stmt
 ### <a name="boundparam-parameter"></a>bound_param 參數  
  第五個之後的任何參數都會當做輸入參數傳遞給陳述式計畫。 第一個參數必須是以下格式的字串：  
   
- *{ local variable name data type } [,...n]*  
+ *{區域變數名稱資料類型}[,...n]*  
   
  後續的參數用來傳遞的值來取代*區域變數名稱*陳述式中。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursorfetch &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

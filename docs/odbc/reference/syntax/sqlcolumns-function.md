@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 94afb817462022ff21c312291b31c738be15c72f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8de1a2053913ee0339c58a4a27ccd45772487e77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118668"
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns 函數
 **合規性**  

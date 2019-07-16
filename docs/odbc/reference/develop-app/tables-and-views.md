@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72cef4bd-13be-430e-9b6a-c75b60f9d1dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9949332d33f2d2a07e485bc0ff06c5c489df6440
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 670809a90de5917975c09bed2e65d6d0fcf33946
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114095"
 ---
 # <a name="tables-and-views"></a>資料表和檢視表
 在 ODBC 函數中，資料表和檢視表是可互換的。 詞彙*表格*用於資料表和檢視，除非詞彙*檢視*明確使用。

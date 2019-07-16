@@ -1,5 +1,5 @@
 ---
-title: 設定 Partition Slice 屬性 (Analysis Services) |Microsoft 文件
+title: 設定 Partition Slice 屬性 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1e0eaeb3238f3d3d728f9c05cbe6d01bdcb05755
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021335"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165201"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>設定 Partition Slice 屬性 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   資料配量是協助將查詢導向到適當之分割區資料的重要最佳化功能。 明確設定 Slice 屬性可提升查詢效能，方法是覆寫 MOLAP and HOLAP 分割區所產生的預設配量。 此外，Slice 屬性可在處理分割區時，提供額外的驗證檢查。  
   
- 您可以在建立分割區之後但在處理分割區之前，使用 Slice 屬性指定資料配量。 在 [資料分割] 索引標籤上，展開量值群組，然後以滑鼠右鍵按一下資料分割並選取 [屬性]。  
+ 您可以在建立分割區之後但在處理分割區之前，使用 Slice 屬性指定資料配量。 在 [資料分割] 索引標籤上，展開量值群組，然後以滑鼠右鍵按一下資料分割並選取 [屬性]  。  
   
  如需資料配量優點的說明，請參閱＜ [在 SSAS Cube 分割區上設定配量](http://go.microsoft.com/fwlink/?LinkId=317783)＞。  
   
@@ -43,6 +43,6 @@ ms.locfileid: "34021335"
 >  如果您需要定義複雜的配量，我們建議您使用 XMLA Alter 指令碼在配量中定義 Tuple。 然後在處理資料分割之前，您可以使用 ascmd 命令列工具或 Integration Services 中的 [Analysis Services 執行 DDL 工作](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) 立即執行該指令碼並建立指定的成員集。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立及管理本機分割區 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
+ [建立及管理本機資料分割 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
   

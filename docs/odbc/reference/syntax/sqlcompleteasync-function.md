@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 736867be33531a73c0ada66a3be0f1245f1c483a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e50e8128bb80b290e7610d9cc846dd3e148e398
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118633"
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync 函式
 **合規性**  

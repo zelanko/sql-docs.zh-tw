@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9d9d5d51-6d8f-4e42-84a9-82e58eb0301e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: df9253d534b3b3ece141d7b4aea693b4c9897ac1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e43c3350b546a13a95392b9e916a1d98ddddc7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714155"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130500"
 ---
 # <a name="sysarticles-transact-sql"></a>sysarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62714155"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**artid**|**int**|提供發行項唯一識別碼的識別欄位。|  
+|**artid&lt**|**int**|提供發行項唯一識別碼的識別欄位。|  
 |**creation_script**|**nvarchar(255)**|發行項的結構描述指令碼。|  
 |**del_cmd**|**nvarchar(255)**|當隨著資料表發行項而複寫刪除時，所用的複寫命令類型。 如需詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。|  
 |**description**|**nvarchar(255)**|發行項的描述性項目。|  
@@ -43,7 +42,7 @@ ms.locfileid: "62714155"
 |**name**|**sysname**|發行項的相關聯名稱，在發行集內是唯一的。|  
 |**objid**|**int**|已發行的資料表物件識別碼。|  
 |**pubid**|**int**|發行項所屬發行集的識別碼。|  
-|**pre_creation_cmd**|**tinyint**|DROP TABLE、DELETE TABLE 或 TRUNCATE 的預先建立命令：<br /><br /> **0** = none。<br /><br /> **1** = DROP.<br /><br /> **2** = DELETE.<br /><br /> **3** = TRUNCATE.|  
+|**pre_creation_cmd**|**tinyint**|DROP TABLE、DELETE TABLE 或 TRUNCATE 的預先建立命令：<br /><br /> **0** = none。<br /><br /> **1** = 卸除。<br /><br /> **2** = DELETE。<br /><br /> **3** = TRUNCATE。|  
 |**status**|**tinyint**|發行項選項和狀態的位元遮罩，它可能是一或多個這些值的位元邏輯 OR 結果：<br /><br /> **1** = 發行項在使用。<br /><br /> **8** = 包含 INSERT 陳述式中的資料行名稱。<br /><br /> **16** = 使用參數化陳述式。<br /><br /> **24** = 同時包含 INSERT 陳述式中的資料行名稱，並使用參數化陳述式。<br /><br /> **64** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 例如，作用中的文章，使用參數化陳述式會有值**17**此資料行中。 值為**0**表示發行項處於非使用中，而且沒有其他的屬性所定義。|  
 |**sync_objid**|**int**|代表發行項定義之資料表或檢視的識別碼。|  
 |**type**|**tinyint**|發行項的類型：<br /><br /> **1** = 記錄式發行項。<br /><br /> **3** = 含有手動篩選的記錄式發行項。<br /><br /> **5** = 含有手動檢視的記錄式發行項。<br /><br /> **7** = 含有手動篩選和手動檢視的記錄式發行項。<br /><br /> **8** = 預存程序執行。<br /><br /> **24** = 可序列化的預存程序執行。<br /><br /> **32** = 預存程序 （僅限結構描述）。<br /><br /> **64** = 檢視 （僅限結構描述）。<br /><br /> **128** = 函式 （僅限結構描述）。|  

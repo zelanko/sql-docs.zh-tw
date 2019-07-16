@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 163314576f609d6fc34ba55b05eff841d1361182
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185094"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210110"
 ---
 # <a name="data-mining-ssas"></a>資料採礦 (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,15 +38,15 @@ ms.locfileid: "54185094"
   
 -   多個可自訂的演算法：除了提供叢集、 類神經網路及決策樹等演算法之外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]也支援開發您自己的自訂外掛程式演算法。  
   
--   模型測試基礎結構：使用交叉驗證、分類矩陣、增益圖及散佈圖等重要的統計工具，來測試您的模型和資料集。 輕鬆建立及管理測試集和定型集。  
+-   模型測試基礎結構：測試您的模型使用交叉驗證的重要的統計工具的資料集，分類矩陣、 增益圖和散佈圖等。 輕鬆建立及管理測試集和定型集。  
   
 -   查詢和鑽研：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦提供 DMX 語言，將預測查詢整合至應用程式。 您也可以從模型中擷取詳細統計資料和模式，並鑽研到案例資料。  
   
--   用戶端工具：除了 SQL Server 提供的開發和設計 Studio 之外，您也可以使用 Excel 的資料採礦增益集建立、查詢及瀏覽模型。 或建立自訂用戶端，包括 Web 服務。  
+-   用戶端工具：除了 SQL Server 提供的開發和設計 studio，您可以使用資料採礦增益集適用於 Excel 來建立、 查詢及瀏覽模型。 或建立自訂用戶端，包括 Web 服務。  
   
--   指令碼語言支援和 Managed API：所有資料採礦物件皆可完整程式化。 您可以透過 MDX、XMLA 或 PowerShell Extensions for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]編寫指令碼。 使用資料採礦延伸模組 (DMX) 語言快速查詢及編寫指令碼。  
+-   指令碼語言支援和 managed API:所有的資料採礦物件皆完全可程式化。 您可以透過 MDX、XMLA 或 PowerShell Extensions for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]編寫指令碼。 使用資料採礦延伸模組 (DMX) 語言快速查詢及編寫指令碼。  
   
--   安全性和部署：透過 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供以角色為基礎的安全性，包括鑽研到模型及結構化資料的個別權限。 輕鬆將模型部署至其他伺服器，讓使用者可以存取模式或執行預測  
+-   安全性和部署：提供以角色為基礎的安全性，透過[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，包括鑽研到模型及結構化資料的個別權限。 輕鬆將模型部署至其他伺服器，讓使用者可以存取模式或執行預測  
   
 ## <a name="in-this-section"></a>本節內容  
  本節中的主題介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦的主要功能及相關工作。  

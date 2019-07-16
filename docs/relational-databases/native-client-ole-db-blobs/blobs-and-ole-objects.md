@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48cb02feac227ad224ffed05fe60c1e78c97406c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6f2a73f44d762a2d17eccc8cf82570b07933426
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128885"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 與 OLE 物件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**ISequentialStream**介面，以支援取用者存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**，**文字**，**映像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，以及 xml 資料類型當做二進位大型物件 (Blob). **ISequentialStream** 上的 **Read** 方法可讓取用者在可管理的區塊中擷取更多資料。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**ISequentialStream**介面，以支援取用者存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**，**文字**，**映像**， **varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，以及 xml 資料類型當做二進位大型物件 (Blob). **ISequentialStream** 上的 **Read** 方法可讓取用者在可管理的區塊中擷取更多資料。  
   
  如需示範這項功能的範例，請參閱 <<c0> [ 大型資料集&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)。</c0>  
   
@@ -37,7 +36,7 @@ ms.locfileid: "47742296"
   
  對於大數值資料類型， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查型別中的大小假設**IRowset**和 DDL 介面。 資料行**varchar**， **nvarchar**，並**varbinary**會透過結構描述資料列和介面以 ISLONG 表示資料型別，且設定為無限制的大小上限傳回資料行資料類型。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**varchar （max)**， **varbinary （max)** 並**nvarchar （max)** 為 DBTYPE_STR、 DBTYPE_BYTES 和 DBTYPE_ 類型WSTR 分別。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**varchar （max)** ， **varbinary （max)** 並**nvarchar （max)** 為 DBTYPE_STR、 DBTYPE_BYTES 和 DBTYPE_ 類型WSTR 分別。  
   
  為了使用這些類型，應用程式具有下列選項：  
   

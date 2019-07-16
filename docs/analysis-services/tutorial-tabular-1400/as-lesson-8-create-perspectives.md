@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 29a49478d75d7af5670f3e693cd87a5238c4ae11
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: c74e457d29f39201601a3a62d651cce97c52fa70
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57684935"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207307"
 ---
 # <a name="create-perspectives"></a>建立檢視方塊
 
@@ -27,7 +27,7 @@ ms.locfileid: "57684935"
   
 本課程的目的在於描述如何建立檢視方塊，以及熟悉表格式模型撰寫工具。 如果您之後展開此模型納入其他資料表，您可以建立其他檢視方塊來定義不同觀點的模型，例如，庫存與銷售。  
   
-完成本課程的估計時間：**五分鐘**  
+估計的時間才能完成這一課：**五分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 
@@ -39,7 +39,7 @@ ms.locfileid: "57684935"
   
 1.  按一下 **模型**功能表 >**觀點** > **建立及管理**。  
   
-2.  在 [檢視方塊] 對話方塊中，按一下 [新增檢視方塊]。  
+2.  在 [檢視方塊]  對話方塊中，按一下 [新增檢視方塊]  。  
   
 3.  按兩下**新的檢視方塊**資料行標題，然後重新命名**網際網路銷售**。  
   

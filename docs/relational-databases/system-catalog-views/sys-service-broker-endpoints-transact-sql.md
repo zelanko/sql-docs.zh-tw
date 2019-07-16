@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f93ac0b4a11e10d3db952fd850f4c83668a97d3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33d94bf5a709c2581c6ee99a1e019f4eebcabe0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62855261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132962"
 ---
 # <a name="sysservicebrokerendpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "62855261"
 |**\<繼承資料行 >**|**--**|繼承資料行從[sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)。|  
 |**is_message_forwarding_enabled**|**bit**|端點支援訊息轉送。 這一開始會設定為**0** （停用）。 不是 NULLABLE。|  
 |**message_forwarding_size**|**int**|最大 mb 數**tempdb**空間允許轉送的訊息時使用。 這一開始會設定為**10**。 不是 NULLABLE。|  
-|**connection_auth**|**tinyint**|與這個端點連接所需的連接驗證類型，它有下列幾種：<br /><br /> **1** - NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -交涉<br /><br /> **4** -憑證<br /><br /> **5** -NTLM、 CERTIFICATE<br /><br /> **6** -KERBEROS、 CERTIFICATE<br /><br /> **7** -NEGOTIATE、 CERTIFICATE<br /><br /> **8** -CERTIFICATE、 NTLM<br /><br /> **9** -CERTIFICATE、 KERBEROS<br /><br /> **10** -CERTIFICATE、 NEGOTIATE<br /><br /> 不是 NULLABLE。|  
+|**connection_auth**|**tinyint**|與這個端點連接所需的連接驗證類型，它有下列幾種：<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -交涉<br /><br /> **4** -憑證<br /><br /> **5** -NTLM、 CERTIFICATE<br /><br /> **6** -KERBEROS、 CERTIFICATE<br /><br /> **7** -NEGOTIATE、 CERTIFICATE<br /><br /> **8** -CERTIFICATE、 NTLM<br /><br /> **9** -CERTIFICATE、 KERBEROS<br /><br /> **10** -CERTIFICATE、 NEGOTIATE<br /><br /> 不是 NULLABLE。|  
 |**connection_auth_desc**|**nvarchar(60)**|與這個端點連接所需之連接類型的描述，它有下列幾種：<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM、CERTIFICATE<br /><br /> KERBEROS、CERTIFICATE<br /><br /> NEGOTIATE、CERTIFICATE<br /><br /> CERTIFICATE、NTLM<br /><br /> CERTIFICATE、KERBEROS<br /><br /> CERTIFICATE、NEGOTIATE<br /><br /> NULLABLE。|  
 |**certificate_id**|**int**|驗證所用的憑證識別碼 (如果有的話)。<br /><br /> 0 = 正在使用 Windows 驗證。|  
 |**encryption_algorithm**|**tinyint**|加密演算法。 以下是可能的值，其描述和對應的 DDL 選項。<br /><br /> **0** :NONE。 對應的 DDL 選項：已停用。<br /><br /> **1** :RC4. 對應的 DDL 選項: {需要&#124;必要的演算法 RC4}。<br /><br /> **2** :AES。 對應的 DDL 選項：必要的演算法 AES。<br /><br /> **3** :無、 RC4。 對應的 DDL 選項: {支援&#124;支援的演算法 RC4}。<br /><br /> **4** :NONE、 AES。 對應的 DDL 選項：支援的演算法 AES。<br /><br /> **5** :RC4 AES。 對應的 DDL 選項：必要的演算法 RC4 AES。<br /><br /> **6** :AES, RC4. 對應的 DDL 選項：必要的演算法 AES RC4。<br /><br /> **7** :無、 RC4 AES。 對應的 DDL 選項：支援的演算法 RC4 AES。<br /><br /> **8** :NONE、 AES RC4。 對應的 DDL 選項：支援的演算法 AES RC4。<br /><br /> 不是 NULLABLE。|  

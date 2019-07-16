@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100363"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211800"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定資料表中的計算資料行
   計算資料行是一個虛擬資料行，除非資料行標示了 PERSISTED，否則，並未實際儲存在資料表中。 計算資料行運算式可以使用來自其他資料行的資料來計算其所屬資料行的值。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中指定計算資料行的運算式。  
@@ -28,7 +28,7 @@ ms.locfileid: "54100363"
   
      [限制事項](#Limitations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目來指定計算資料行：**  
   
@@ -53,26 +53,26 @@ ms.locfileid: "54100363"
   
 ###  <a name="NewColumn"></a> 若要加入新的計算資料行  
   
-1.  在 **[物件總管]** 中，展開要在其中加入新的計算資料行的資料表。 以滑鼠右鍵按一下 [資料行]，然後選取 [新增資料行]。  
+1.  在 **[物件總管]** 中，展開要在其中加入新的計算資料行的資料表。 以滑鼠右鍵按一下 [資料行]  ，然後選取 [新增資料行]  。  
   
 2.  輸入資料行名稱並接受預設資料類型 (`nchar`(10))。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會判斷計算資料行的資料類型，方法是將資料類型優先順序規則套用至公式中指定的運算式。 例如，如果公式參考 `money` 類型的資料行以及 `int` 類型的資料行，則計算資料行會是 `money` 類型，因為該資料類型的優先順序較高。 如需詳細資訊，請參閱[資料類型優先順序 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-type-precedence-transact-sql)。  
   
 3.  在 **[資料行屬性]** 索引標籤中，展開 **[計算資料行規格]** 屬性。  
   
-4.  在 [(Formula)] 子屬性右邊的方格資料格中，輸入此資料行的運算式。 例如，在 `SalesTotal` 資料行中，您輸入的公式可能是 `SubTotal+TaxAmt+Freight`，該公式會將資料表中每一個資料列的這些資料行中的值相加。  
+4.  在 [(Formula)]  子屬性右邊的方格資料格中，輸入此資料行的運算式。 例如，在 `SalesTotal` 資料行中，您輸入的公式可能是 `SubTotal+TaxAmt+Freight`，該公式會將資料表中每一個資料列的這些資料行中的值相加。  
   
     > [!IMPORTANT]  
     >  當一個公式結合兩個不同資料類型的運算式時，資料類型優先順序的規則，會指定將低優先順序的資料類型，轉換為高優先順序的資料類型。 如果轉換不是支援的隱含轉換，就會傳回錯誤 "`Error validating the formula for column column_name.`"。 使用 CAST 或 CONVERT 函數解決資料類型衝突。 例如，如果 `nvarchar` 類型的資料行與 `int` 類型的資料行結合，則整數類型必須轉圜為 `nvarchar`，如 `('Prod'+CONVERT(nvarchar(23),ProductID))` 這個公式所示。 如需詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
   
-5.  藉由從 [Is Persisted] 子屬性的下拉式清單中選擇 [是] 或 [否]，指示資料是否為永續性。  
+5.  藉由從 [Is Persisted]  子屬性的下拉式清單中選擇 [是]  或 [否]  ，指示資料是否為永續性。  
   
-6.  在 [檔案]  功能表上，按一下 [儲存] _table name_。  
+6.  在 [檔案]  功能表上，按一下 [儲存]  _table name_。  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>若要將計算資料行定義新增至現有資料行  
   
-1.  在物件總管中，以滑鼠右鍵按一下包含您要變更之資料行的資料表，然後展開 [資料行] 資料夾。  
+1.  在物件總管  中，以滑鼠右鍵按一下包含您要變更之資料行的資料表，然後展開 [資料行]  資料夾。  
   
-2.  以滑鼠右鍵按一下要指定其計算資料行公式的資料行，然後按一下 [刪除]。 按一下 [確定] 。  
+2.  以滑鼠右鍵按一下要指定其計算資料行公式的資料行，然後按一下 [刪除]  。 按一下 [確定]  。  
   
 3.  加入新的資料行，並依照上述程序加入新的計算料行，藉此指定計算資料行公式。  
   
@@ -82,9 +82,9 @@ ms.locfileid: "54100363"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 此範例會建立包含計算資料行的資料表，該計算資料行會乘以 `QtyAvailable` 資料行的值乘 `UnitPrice` 資料行的值。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。 此範例會建立包含計算資料行的資料表，該計算資料行會乘以 `QtyAvailable` 資料行的值乘 `UnitPrice` 資料行的值。  
   
     ```  
     CREATE TABLE dbo.Products   
@@ -109,9 +109,9 @@ ms.locfileid: "54100363"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 下列範例會將新的資料行加入至上一個範例中建立的資料表。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。 下列範例會將新的資料行加入至上一個範例中建立的資料表。  
   
     ```  
     ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.35);  
@@ -122,9 +122,9 @@ ms.locfileid: "54100363"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  若要將現有的資料行變更為計算資料行，您必須卸除並重新建立計算資料行。 將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 下列範例會修改上一個範例中加入的資料行。  
+3.  若要將現有的資料行變更為計算資料行，您必須卸除並重新建立計算資料行。 將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。 下列範例會修改上一個範例中加入的資料行。  
   
     ```  
     ALTER TABLE dbo.Products DROP COLUMN RetailValue;  

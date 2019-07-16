@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 256dffe4e43bfcb995a3f4a35e5687472227608d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 883eda7f0e1ed233f4c221c2afdb2236d3be2ca1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103484"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>更新 SQL Server 資料指標中的資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

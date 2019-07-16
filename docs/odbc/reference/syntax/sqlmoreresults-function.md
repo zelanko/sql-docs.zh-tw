@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6cd3569425a862efd662c894c6839eb6df0f767e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ca7ed4f6bbcd31b8f67b95dc14a2c6c301b5a59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536514"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138833"
 ---
 # <a name="sqlmoreresults-function"></a>SQLMoreResults 函數
 **合規性**  

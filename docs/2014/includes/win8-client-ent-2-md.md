@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: eaae414f2b889d86c07c03f6d70955014f3efac7
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67228994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68191367"
 ---
 Windows 8 企業版

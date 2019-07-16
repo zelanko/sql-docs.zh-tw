@@ -1,5 +1,5 @@
 ---
-title: SQLSetConnectAttr |Microsoft Docs
+title: SQLSetConnectAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b1b48f9ee2e7ee3092e3f31fd6ef97e91c5cd9db
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351677"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207098"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會忽略 SQL_ATTR_CONNECTION_TIMEOUT 的設定。  
@@ -71,7 +71,7 @@ ms.locfileid: "53351677"
 |SQL_COPT_SS_USER_DATA|之前或之後|  
 |SQL_COPT_SS_WARN_ON_CP_ERROR|之前|  
   
- 針對相同工作階段、資料庫或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 狀態使用預先連接屬性與對等 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令，可能會產生非預期的行為。 例如，  
+ 針對相同工作階段、資料庫或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 狀態使用預先連接屬性與對等 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令，可能會產生非預期的行為。 例如，套用至物件的  
   
 ```  
 SQLSetConnectAttr(SQL_COPT_SS_QUOTED_IDENT, SQL_QI_ON) // turn ON via attribute  
@@ -91,7 +91,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
  如果您使用連接共用，連接字串，而不是使用 SQLSetConnectAttr 應該設定 SQL_COPT_SS_ANSI_NPW。 已經建立連接之後，在使用連接共用時，任何嘗試變更此屬性的行為將會以無訊息的方式發生失敗。  
   
 ## <a name="sqlcoptssapplicationintent"></a>SQL_COPT_SS_APPLICATION_INTENT  
- 宣告連接到伺服器時的應用程式工作負載類型。 可能的值是 `Readonly` 和 `ReadWrite`。 例如：  
+ 宣告連接到伺服器時的應用程式工作負載類型。 可能的值是 `Readonly` 和 `ReadWrite`。 例如:  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
@@ -188,7 +188,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
  如需有關 MARS 的詳細資訊，請參閱 <<c0> [ 使用 Multiple Active Result Sets &#40;MARS&#41;](../native-client/features/using-multiple-active-result-sets-mars.md)。</c0>  
   
 ## <a name="sqlcoptssmultisubnetfailover"></a>SQL_COPT_SS_MULTISUBNET_FAILOVER  
- 如果您的應用程式要連接到不同子網路上的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性群組 (AG)，則這個連接屬性會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 來提供目前使用中伺服器的更快速偵測與連接。 例如：  
+ 如果您的應用程式要連接到不同子網路上的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性群組 (AG)，則這個連接屬性會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 來提供目前使用中伺服器的更快速偵測與連接。 例如:  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  

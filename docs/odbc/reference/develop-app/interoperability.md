@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43b7c849-9d59-4002-9977-9e2c8730b859
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8d5e4fbee458bec88461d3e2945a466c848d3345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 434b27bffe3b32aa9fa0c5c6fd3a7100e8c7ea8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138858"
 ---
 # <a name="interoperability"></a>互通性
 *互通性*是單一的應用程式，有許多不同的 Dbms 一起運作的能力。 您不必撰寫泛型、 可互通的應用程式是其中一個連至 ODBC 的開發的主要選擇要素。 不過，互通性不是簡單的路徑，接著再從 「 不具互通性 」 到 「 完全互通。 」 路徑有多個分支，而且每個需要功能、 速度、 程式碼複雜度和開發時間之間的取捨。  

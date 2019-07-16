@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531576"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211719"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>建立使用者定義函數 (Database Engine)
   本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中建立使用者定義函數。  
@@ -32,7 +32,7 @@ ms.locfileid: "52531576"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要建立使用者定義函式：**  
   

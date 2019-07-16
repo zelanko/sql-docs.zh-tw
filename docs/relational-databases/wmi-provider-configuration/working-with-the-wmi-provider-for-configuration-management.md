@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 20a34f01908333650a4c5b566ccab2221a4e07c2
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 5e6736c73f7cda435d91e3ec9c9f523bdc08f1b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542118"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139273"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>針對組態管理使用 WMI 提供者
 

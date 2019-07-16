@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 58cb48c467bbd3ca1c929da1fdff4881086d2e1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5740095752b482430cd718d0e2bff813449d92ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105226"
 ---
 # <a name="item-tuple-mdx"></a>Item (Tuple) (MDX)
 

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54ec71df8efab1f60bfb7a5b9af448705e349d28
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760750"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211428"
 ---
 # <a name="designate-a-fail-safe-operator"></a>指定保全操作員
   如果在無法聯繫到指定的操作員時，就會由保全操作員這位使用者接收警示。 此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定保全操作員，以接收 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示通知。  
@@ -31,7 +31,7 @@ ms.locfileid: "52760750"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目指定保全操作員：**  
   
@@ -56,18 +56,18 @@ ms.locfileid: "52760750"
   
 #### <a name="to-designate-a-fail-safe-operator"></a>若要指定保全操作員  
   
-1.  在物件總管中，按一下加號，展開包含要指定為保全操作員之 SQL Server Agent 操作員的伺服器。  
+1.  在物件總管  中，按一下加號，展開包含要指定為保全操作員之 SQL Server Agent 操作員的伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後選取 [屬性]  。  
 
-3.  在  **SQL Server Agent 屬性-**_server_name_對話方塊的 **選取頁面**，選取**警示系統**。  
+3.  在  **SQL Server Agent 屬性-** _server_name_對話方塊的 **選取頁面**，選取**警示系統**。  
  
-4.  在 [保全操作員] 下方，選取 [啟用保全操作員]。  
+4.  在 [保全操作員]  下方，選取 [啟用保全操作員]  。  
   
-5.  在 [操作員] 清單中，選取您想要設為保全操作員的操作員。  
+5.  在 [操作員]  清單中，選取您想要設為保全操作員的操作員。  
   
-6.  選取下列任何一個或所有核取方塊，指定通知操作員的方法：**電子郵件**，**呼叫器**，或**Net send**。  
+6.  選取下列任何一個或所有核取方塊，指定通知操作員的方式：[電子郵件]  、[呼叫器]  ，或 [Net send]  。  
   
-7.  完成後，請按一下 **[確定]**。  
+7.  完成後，請按一下 **[確定]** 。  
   
   

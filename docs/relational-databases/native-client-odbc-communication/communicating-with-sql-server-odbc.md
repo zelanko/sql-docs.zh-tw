@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: cca3dcf0-2a7e-465a-84de-7ce055360eb6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93e78f822b064e54dffccb6acd35771ae7083958
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92e261d2c1cb1c96d3cce7cbb2ba13dcb0bad60c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013979"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134205"
 ---
 # <a name="communicating-with-sql-server-odbc"></a>與 SQL Server 進行通訊 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f9afa1b416b451689f4fd0c47957e6b28cb6e66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59985a7ca5ed382682777c84e971c86c95570c53
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128562"
 ---
 # <a name="persisted-data-source-objects"></a>保存的資料來源物件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

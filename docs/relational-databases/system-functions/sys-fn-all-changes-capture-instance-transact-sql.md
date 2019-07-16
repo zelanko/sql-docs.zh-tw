@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 40bf73a1cdca0bc582ac3e6ed6a977980d2aa24f
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: de589bbe1fe5f590ef3d75c884aae70b5276804a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140526"
 ---
-# <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
+# <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包裝函式**的所有變更**查詢函數。 sys.sp_cdc_generate_wrapper_function 系統預存程序會產生建立這些函數所需的指令碼。  
@@ -71,7 +70,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  如果為這個引數提供 NULL 的值，查詢範圍的高端點將會對應到擷取執行個體之有效範圍的高端點。  
   
- <row_filter_option> ::= { all | all update old }  
+ < row_filter_option >:: = {所有 | 所有更新舊}  
  管理結果集中傳回之中繼資料資料行及資料列內容的選項。  
   
  可以是下列其中一個選項：  
@@ -88,7 +87,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|與變更相關聯之交易的認可 LSN。 在相同交易中認可的所有變更都會共用相同的認可 LSN。|  
 |__CDC_SEQVAL|**binary(10)**|用來排序交易內資料列變更的序列值。|  
-|\<中的資料行@column_list>|**varies**|中所識別的資料行*column_list* sp_cdc_generate_wrapper_function 時呼叫它來產生建立包裝函式的指令碼的引數。|  
+|\<中的資料行@column_list>|**而有所不同**|中所識別的資料行*column_list* sp_cdc_generate_wrapper_function 時呼叫它來產生建立包裝函式的指令碼的引數。|  
 |__CDC_OPERATION|**nvarchar(2)**|表示將資料列套用到目標環境所需之作業的作業碼。 它會因引數的值*row_filter_option*呼叫中提供：<br /><br /> *row_filter_option* = 'all'<br /><br /> 'D' - 刪除作業<br /><br /> 'I' - 插入作業<br /><br /> 'UN' - 更新作業新值<br /><br /> *row_filter_option* = 'all update old'<br /><br /> 'D' - 刪除作業<br /><br /> 'I' - 插入作業<br /><br /> 'UN' - 更新作業新值<br /><br /> 'UO' - 更新作業舊值|  
 |\<中的資料行@update_flag_list>|**bit**|藉由將 _uflag 附加到資料行名稱所命名的位元旗標。 旗標一定會設定為 NULL 時\__CDC_OPERATION 為 '，'I'，'或 'uo'。 當\__CDC_OPERATION 為 ' UN '，如果更新產生了對應資料行的變更，它會設定為 1。 否則為 0。|  
   

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6b9363c9-04bf-4492-a210-7aa15dea4af8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 13cb433da64b78a8b5e70f28642fd576f6803ed5
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 1cb92afa9467717b8a589ddbcaee4ab8a5a529f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130085"
 ---
 # <a name="datetime-data-types"></a>日期時間資料類型
 在 ODBC *3.x*之識別項的日期、 時間和時間戳記 SQL 資料類型已從 SQL_DATE、 SQL_TIME、 和 SQL_TIMESTAMP (的執行個體 **#define** 9、 10 和 11 的標頭檔中) 至 SQL_TYPE_DATE、 SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP (的執行個體 **#define** 91、 92，和 93 標頭檔)，分別。 識別碼已從 SQL_C_DATE、 SQL_C_TIME 和 SQL_C_TIMESTAMP SQL_C_TYPE_DATE、 SQL_C_TYPE_TIME，和 SQL_C_TYPE_TIMESTAMP，分別對應的 C 類型和執行個體 **#define**已變更據此。  

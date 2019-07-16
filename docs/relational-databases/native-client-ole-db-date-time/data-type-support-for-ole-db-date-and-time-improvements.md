@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24661690a0252b1018e2ddc52ba99a44cb5cedbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 655b6045e8178e74e994e61691ede28052d8fb5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63029052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106973"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>對 OLE DB 日期和時間改善的資料類型支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "63029052"
 |-----------------------------------------|----------------------|-----------|  
 |datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
-|日期|DBTYPE_DBDATE|133 (oledb.h)|  
+|date|DBTYPE_DBDATE|133 (oledb.h)|  
 |time|DBTYPE_DBTIME2|145 (sqlncli.h)|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -46,7 +45,7 @@ ms.locfileid: "63029052"
 |-----------------------------------------|----------------------|------------------------------------------|  
 |datetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> 針對 Datetime，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最多支援三個小數秒位數。|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> 此資料類型的精確度為一分鐘。 輸出時，秒數元件為零，而在輸入時，將會由伺服器捨去。|  
-|日期|DBTYPE_DBDATE|'yyyy-mm-dd'|  
+|date|DBTYPE_DBDATE|'yyyy-mm-dd'|  
 |time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> 您最多可以使用七位數選擇性地指定小數秒。|  
 |datetime2|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.fffffff]'<br /><br /> 您最多可以使用七位數選擇性地指定小數秒。|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.fffffff] +/-hh:mm'<br /><br /> 您最多可以使用七位數選擇性地指定小數秒。|  
@@ -177,7 +176,7 @@ enum SQLVARENUM {
   
 |OLE DB 資料類型 (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型|注意|  
 |----------------------------------|-----------------------------------------|-----------|  
-|DBTYPE_DBDATE|日期||  
+|DBTYPE_DBDATE|date||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查 DBCOLUMDESC *bScale*成員來判斷小數秒數有效位數。|  
 |DBTYPE_DBTIME2|**time**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查 DBCOLUMDESC *bScale*成員來判斷小數秒數有效位數。|  
 |DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查 DBCOLUMDESC *bScale*成員來判斷小數秒數有效位數。|  

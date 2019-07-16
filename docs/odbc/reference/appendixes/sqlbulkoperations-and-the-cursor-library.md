@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f6c55be1-f020-4ae2-a423-ef8a0d877e20
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d1615c3149fda0ab131a05362542d6ba2d7d572
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04ffbec622aa26ecebae18c17787a0629848a490
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199633"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123404"
 ---
 # <a name="sqlbulkoperations-and-the-cursor-library"></a>SQLBulkOperations 和資料指標程式庫
 > [!IMPORTANT]  

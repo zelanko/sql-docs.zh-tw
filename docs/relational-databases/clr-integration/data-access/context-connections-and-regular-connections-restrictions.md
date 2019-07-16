@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 800ec59fb837b167b1bcbffc61ddf7e8ce695849
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8cbdd195f698090602b98cdb6e5bab0a86556ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216416"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>內容連線和一般連線 - 限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "47641786"
 ## <a name="restrictions-on-regular-connections"></a>一般連接的限制  
  開發應用程式時，請考慮下列適用於一般連接的限制：  
   
--   不支援針對內部伺服器執行非同步命令。 包括"async = true 」 在連接字串的命令，然後再執行命令，會導致**System.NotSupportedException**所擲回。 此訊息會顯示：「在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序內部執行時，不支援非同步處理」。  
+-   不支援針對內部伺服器執行非同步命令。 包括"async = true 」 在連接字串的命令，然後再執行命令，會導致**System.NotSupportedException**所擲回。 此時會出現此訊息：「 在執行時不支援非同步處理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]程序。 」  
   
 -   **SqlDependency**不支援物件。  
   

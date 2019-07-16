@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: a2b7415b995d2e2d81de52515f77cf8d264f6524
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67208843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68206301"
 ---
 SQL Server Managed Backup to Microsoft Azure

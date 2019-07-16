@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca0953b9ac191dfb765992f79988f3cc1502dfa4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529120"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211569"
 ---
 # <a name="add-business-logic-to-xml-data"></a>將商務邏輯加入至 XML 資料
   將商務邏輯加入至 XML 資料的方法有好幾種：  
@@ -51,7 +51,7 @@ public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {
 }   
 ```  
   
- 在註冊完組件，並建立使用者定義的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數之後 ( **SqlXslTransform()** 對應到 **TransformXml()**)，即可從 Transact-SQL 來叫用該函數，如下列查詢所示：  
+ 在註冊完組件，並建立使用者定義的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數之後 ( **SqlXslTransform()** 對應到 **TransformXml()** )，即可從 Transact-SQL 來叫用該函數，如下列查詢所示：  
   
 ```  
 SELECT SqlXslTransform (xCol, 'C:\MyFile\xsltransform.xsl')  

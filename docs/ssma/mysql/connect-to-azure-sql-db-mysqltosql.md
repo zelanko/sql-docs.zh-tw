@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 713a0ba96a2e82f10d4150b337d51f9f1774548f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12da1aa42f468b92e1833410e635183aabf3a384
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103238"
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>連線到 Azure SQL DB (MySQLToSQL)
 使用 [連線到 SQL Azure] 對話方塊中，連接到您想要移轉 SQL Azure 資料庫。  
   
 若要存取此對話方塊中，在**檔案**功能表上，選取**連接到 SQL Azure**。 如果您先前曾經連線，則命令是**重新連接到 SQL Azure。**  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **伺服器名稱**  
   
 選取或輸入伺服器名稱連接到 SQL Azure。  

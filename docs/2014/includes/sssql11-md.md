@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 0e7f5bd1710e8757684b0c83f05b7e74da69ffaf
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67229922"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68186031"
 ---
 SQL Server 2012

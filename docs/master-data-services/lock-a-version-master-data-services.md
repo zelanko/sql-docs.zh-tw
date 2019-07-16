@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4c2478cfa5753c094284f44c13cf0037bf927a5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c57ba8b2a5639dc271eaa7cf1877ab3ccbba9ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131846"
 ---
 # <a name="lock-a-version-master-data-services"></a>鎖定版本 (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "65488345"
 > [!NOTE]  
 >  版本已鎖定時，進階使用者和模型管理員可以繼續加入、編輯及移除成員。 其他具有模型權限的使用者只能檢視成員。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  

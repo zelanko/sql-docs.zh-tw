@@ -1,5 +1,5 @@
 ---
-title: 在 Excel 中使用的 BI 語意模型連接或 Reporting Services |Microsoft 文件
+title: 在 Excel 中使用的 BI 語意模型連接或 Reporting Services |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bfd1bde3a39af9954437c6f777d82db1f1ffe187
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34035459"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163616"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>在 Excel 或 Reporting Services 使用 BI 語意模型連接
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34035459"
   
  **從 SharePoint 啟動**  
   
--   以滑鼠右鍵按一下文件庫中的 BI 語意模型連接，然後選取 [啟動 Excel]。  
+-   以滑鼠右鍵按一下文件庫中的 BI 語意模型連接，然後選取 [啟動 Excel]  。  
   
  ![螢幕擷取畫面的 BISM 快速啟動命令](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "螢幕擷取畫面的 BISM 快速啟動命令")  
   
@@ -35,15 +35,15 @@ ms.locfileid: "34035459"
   
  **從 Excel 啟動**  
   
-1.  啟動 Excel 並開啟活頁簿。 在 [資料] 索引標籤上，按一下 [取得外部資料] 中的 **[從其他來源]**。  
+1.  啟動 Excel 並開啟活頁簿。 在 [資料] 索引標籤上，按一下 [取得外部資料] 中的 **[從其他來源]** 。  
   
 2.  按一下 **[從 Analysis Services]** ，然後使用 [資料連線精靈] 匯入資料。  
   
-3.  輸入 BI 語意模型連接檔案的 SharePoint URL (例如， `http://mysharepoint/shared documents/myData.bism`)。 接受認證選項 **[使用 Windows 驗證]** 上的預設記錄檔。 按一下 **[下一步]**。  
+3.  輸入 BI 語意模型連接檔案的 SharePoint URL (例如， `http://mysharepoint/shared documents/myData.bism`)。 接受認證選項 **[使用 Windows 驗證]** 上的預設記錄檔。 按一下 [下一步]  。  
   
 4.  在下一個頁面上，再按 **[下一步]** 。 雖然系統會提示您選取資料庫，但是您只能使用在 BI 語意模型連接中指定的資料庫。  
   
-5.  在最後一個頁面上，您可以提供易記名稱和描述。 按一下 **[完成]**，然後按一下 [匯入資料] 對話方塊上的 **[確定]** 來匯入資料。  
+5.  在最後一個頁面上，您可以提供易記名稱和描述。 按一下 **[完成]** ，然後按一下 [匯入資料] 對話方塊上的 **[確定]** 來匯入資料。  
   
  若要讓連接成功，您必須將 Excel 2010 和 MSOLAP.5.dll 安裝在用戶端電腦上。 您可以藉由安裝這個版本的目前 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 版本來取得提供者，或者可以從 [功能套件下載頁面](http://go.microsoft.com/fwlink/?linkid=214066)下載 Analysis Services OLE DB 提供者。  
   

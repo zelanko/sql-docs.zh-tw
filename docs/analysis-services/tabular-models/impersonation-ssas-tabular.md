@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 981b98523a53e0c828de5e9cdf8a6c35c6843805
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852903"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207654"
 ---
 # <a name="impersonation"></a>模擬 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "56852903"
  
 |選項|描述|  
 |------------|-----------------|  
-|**模擬帳戶**|指定模型使用的 Windows 使用者帳戶匯入或處理來自資料來源的資料。 網域和使用者帳戶的名稱使用下列格式：**\<網域名稱 >\\< 使用者帳戶名稱\>**。|  
+|**模擬帳戶**|指定模型使用的 Windows 使用者帳戶匯入或處理來自資料來源的資料。 網域和使用者帳戶的名稱使用下列格式： **\<網域名稱 >\\< 使用者帳戶名稱\>** 。|  
 |**模擬目前的使用者**|指定應該從資料來源使用的傳送要求之使用者的身分識別存取資料。 此設定僅適用於 DirectQuery 模式。|  
 |**模擬身分識別**|指定要存取資料來源的使用者名稱，但不需要指定帳戶的密碼。 只有在已啟用 Kerberos 委派，並指定應該使用 S4U 驗證時，適用於這項設定。|  
 |**模擬服務帳戶**|指定模型使用與管理模型的 Analysis Services 服務執行個體相關聯的安全性認證。|  
@@ -72,7 +72,7 @@ ms.locfileid: "56852903"
  
 |選項|描述|  
 |------------|-----------------|  
-|**特定的 Windows 使用者名稱和密碼**|此選項會指定模型使用 Windows 使用者帳戶匯入或處理來自資料來源的資料。 網域和使用者帳戶的名稱使用下列格式：**\<網域名稱 >\\< 使用者帳戶名稱\>**。 建立新模型，使用 [資料表匯入精靈] 時，此設定會是預設選項。|  
+|**特定的 Windows 使用者名稱和密碼**|此選項會指定模型使用 Windows 使用者帳戶匯入或處理來自資料來源的資料。 網域和使用者帳戶的名稱使用下列格式： **\<網域名稱 >\\< 使用者帳戶名稱\>** 。 建立新模型，使用 [資料表匯入精靈] 時，此設定會是預設選項。|  
 |**服務帳戶**|此選項會指定模型使用與管理該模型之 Analysis Services 服務執行個體相關聯的安全性認證。|  
   
 ##  <a name="bkmk_impers_sec"></a> 安全性  

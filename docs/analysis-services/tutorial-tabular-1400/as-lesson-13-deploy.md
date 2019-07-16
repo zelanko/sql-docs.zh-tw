@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ab561b096c4436349580201eec3b3ea10a8aaa75
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 4e8e6bea11794545a2b0ab9c340e85344ec23d33
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685305"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162194"
 ---
 # <a name="deploy"></a>部署
 
@@ -23,7 +23,7 @@ ms.locfileid: "57685305"
 
 在這一課，您可以設定部署屬性，指定要部署至的伺服器和模型的名稱。 然後，將模型部署到伺服器。 部署您的模型之後，使用者可以使用報表用戶端應用程式連線到它。 若要進一步了解，請參閱[部署至 Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy)並[表格式模型方案部署](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)。  
   
-完成本課程的估計時間：**5 分鐘**  
+估計的時間才能完成這一課：**5 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 
@@ -44,13 +44,13 @@ ms.locfileid: "57685305"
   
 2.  在  **AW 網際網路銷售屬性頁**對話方塊的 **部署伺服器**，請在**Server**屬性，輸入完整伺服器名稱。 如果連接到 Azure Analysis Services，則伺服器名稱必須包括完整的 URL。
 
-    ![as-lesson13-deploy-property](../tutorial-tabular-1400/media/as-lesson13-deploy-property.png)
+    ![為 lesson13-部署-屬性](../tutorial-tabular-1400/media/as-lesson13-deploy-property.png)
   
 3.  在 **資料庫**屬性中，輸入**Adventure Works Internet Sales**。  
   
 4.  在 **模型名稱**屬性中，輸入**Adventure Works Internet Sales Model**。  
   
-5.  確認您的選取，然後按一下 [確定]。  
+5.  確認您的選取，然後按一下 [確定]  。  
   
 #### <a name="to-deploy-the-adventure-works-internet-sales"></a>若要部署 Adventure Works Internet Sales
   
@@ -64,7 +64,7 @@ ms.locfileid: "57685305"
     
     ![as-lesson13-deploy-status](../tutorial-tabular-1400/media/as-lesson13-deploy-status.png)
   
-3. 當部署順利完成時，就可以按一下 [關閉]。  
+3. 當部署順利完成時，就可以按一下 [關閉]  。  
   
 
 這堂課說明從 SSDT 的表格式模型部署的最常見且最簡單的方法。 進階的部署選項，例如 「 部署精靈 」，或使用 XMLA 和 AMO 自動化提供更大的彈性、 一致性和排定的部署。 若要進一步了解，請參閱[表格式模型方案部署](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)。
@@ -72,7 +72,7 @@ ms.locfileid: "57685305"
 ## <a name="conclusion"></a>結論  
 恭喜您！ 您完成撰寫和部署第一個 Analysis Services 表格式模型。 本教學課程已幫助您完成建立表格式模型最常執行的工作。 現在您已部署了 Adventure Works Internet Sales Model，就可以使用 SQL Server Management Studio 管理此模型，並且建立處理序指令碼及備份計畫。 使用者現在也可以連接到使用 Microsoft Excel 或 Power BI 等報表用戶端應用程式模型中。  
 
-![as-lesson13-ssms](../tutorial-tabular-1400/media/as-lesson13-ssms.png)
+![為 lesson13 ssms](../tutorial-tabular-1400/media/as-lesson13-ssms.png)
   
   
   

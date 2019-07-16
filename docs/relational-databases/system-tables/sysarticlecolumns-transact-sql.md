@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4d31293e6e6b562e8ccfbb624a9ea9e226205ef2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61e1329fe35ae032b5d35f94dd2e1ce5e8d08d38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130521"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62714185"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**artid**|**int**|識別發行項。|  
+|**artid&lt**|**int**|識別發行項。|  
 |**colid**|**smallint**|識別發行項中的資料行。|  
 |**is_udt**|**bit**|指出資料行是否為使用者自訂資料類型 (UDT) 資料行。 值為**1**表示 UDT 資料行。|  
 |**is_xml**|**bit**|指出資料行是否**xml**資料行。 值為**1**表示的 xml 資料行。|  

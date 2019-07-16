@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6e4732425d0e400ef7247ae133b5713949664e0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5becd3382f07a9adc89055a253235495a7e50a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125843"
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals (MDX)
 

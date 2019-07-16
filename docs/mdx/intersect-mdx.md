@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: b24049cb81982075fa9234c6fa792db273d404db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f253dad526c509edff5c837b61ae2faae07d5758
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105362"
 ---
 # <a name="intersect-mdx"></a>Intersect (MDX)
 

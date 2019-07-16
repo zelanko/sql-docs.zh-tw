@@ -4,18 +4,17 @@ description: 本教學課程會示範如何在 Linux 上設定 SQL Server 快照
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 09/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cd0c2f2463abdc124f32d88fa9bd877c47a2fb76
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 9ac898430bbdc3704e43c62be09884ee1925cb75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834749"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130113"
 ---
 # <a name="configure-replication-with-t-sql"></a>使用 T-SQL 設定複寫
 
@@ -35,7 +34,7 @@ ms.locfileid: "67834749"
 
 可設定所有的複寫組態[複寫預存程序](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。
 
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
 若要完成本教學課程中，您必須：
 
 - Linux 上的 SQL Server 的最新版本的 SQL Server 兩個執行個體

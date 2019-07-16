@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 81e642877a1fcdbd77af276673fe8fc846f6f7b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62685966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220584"
 ---
 SQL Server Express

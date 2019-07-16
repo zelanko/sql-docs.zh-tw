@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6f2843456f4f95d1019b51f82082d59977ce14d5
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ce5d59e050aafa69a0b2584c66328c568f5ddee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493693"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118061"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @join_articlename = ] 'join_articlename'` 所指定的子發行項的父發行*一文*，必須使用所指定的聯結子句中加入*join_filterclause*，以判斷子發行項中符合的資料列合併篩選之篩選準則。 *join_articlename*已**sysname**，沒有預設值。 發行項必須是所指定的發行集中*發行集*。  
   
-`[ @join_filterclause = ] join_filterclause` 是一個聯結子句，必須用來將所指定的子發行項*一文*與所指定的父發行項*join_article*，以判斷符合合併篩選的資料列。 *join_filterclause*已**nvarchar(1000)**。  
+`[ @join_filterclause = ] join_filterclause` 是一個聯結子句，必須用來將所指定的子發行項*一文*與所指定的父發行項*join_article*，以判斷符合合併篩選的資料列。 *join_filterclause*已**nvarchar(1000)** 。  
   
 `[ @join_unique_key = ] join_unique_key` 如果指定子發行項之間的聯結*一文*與父發行項*join_article*是一個為一對多、 一對一、 多對一或多對多。 *join_unique_key*已**int**，預設值是 0。 **0**表示多對一或多對多聯結。 **1**表示一對一或一對多的聯結。 這個值是**1**聯結的資料行形成唯一的索引鍵中的當*join_article*，或如果*join_filterclause*之間的外部索引鍵*文章*和中的主索引鍵*join_article*。  
   
@@ -113,7 +112,7 @@ sp_addmergefilter [ @publication = ] 'publication'
  [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   
