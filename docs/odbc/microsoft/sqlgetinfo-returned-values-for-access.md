@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0035e5105f877d27114ded02f0cce5beb92c5881
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a771320793699811ddf79c2a3baca5ecb55309bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66009834"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003234"
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>Access 的 SQLGetInfo 傳回值
 下表列出 C 語言 #defines *fInfoType*引數和所傳回的對應值**SQLGetInfo**。 這項資訊可以擷取傳遞所列出的 C 語言 #defines **SQLGetInfo**中*fInfoType*引數。 如需詳細資訊，所傳回之值的相關**SQLGetInfo**，請參閱*ODBC 程式設計人員參考*。  

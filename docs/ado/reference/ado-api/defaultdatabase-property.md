@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41e8a8dd-e69c-4a09-8736-93502e01961c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2eb89353c29ae58194f89b48502f0a9cc5522b58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c78dfdc476dc9dcf599fcfe7cb87bd5e1a39d281
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919158"
 ---
 # <a name="defaultdatabase-property"></a>DefaultDatabase 屬性
 表示的預設資料庫[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件。  

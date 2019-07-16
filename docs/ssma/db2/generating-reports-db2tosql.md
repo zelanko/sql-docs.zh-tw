@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2186599ac56be3d3adca986ae8f087ecb3b2218c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d96b82e3ce883bcf9e704ea001024228be81761
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989653"
 ---
 # <a name="generating-reports-db2tosql"></a>產生報表 (DB2ToSQL)
 使用命令來執行某些活動的報表會產生物件樹狀結構層級的 SSMA 主控台中。  
@@ -33,7 +32,7 @@ ms.locfileid: "63299090"
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
     |3|migrate-data|DataMigrationReport&lt;n&gt;.XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
-    |5|synchronize-target|TargetSynchronizationReport&lt;n&gt;.XML|  
+    |5|同步處理目標|TargetSynchronizationReport&lt;n&gt;.XML|  
     |6|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
@@ -99,7 +98,7 @@ ms.locfileid: "63299090"
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**object-name:** 指定視為 （它也可以有個別的物件名稱或群組的物件名稱） 的同步處理的物件。  
+**物件名稱：** 指定視為 （它也可以有個別的物件名稱或群組的物件名稱） 的同步處理的物件。  
   
 **錯誤：** 指定是否要指定同步處理錯誤視為警告或錯誤。 錯誤的可用選項：  
   
@@ -107,7 +106,7 @@ ms.locfileid: "63299090"
   
 -   report-each-as-warning  
   
--   fail-script  
+-   失敗指令碼  
   
 ### <a name="refresh-from-database"></a>重新整理從-資料庫：  
 命令**從資料庫重新整理**已**報告錯誤至**參數，指定重新整理作業的錯誤報表的位置。 然後，依名稱的檔案**SourceDBRefreshReport&lt;n&gt;。XML**會建立在指定的位置，其中 **&lt;n&gt;** 是唯一的檔案數目，以每次執行相同的命令數字會遞增。  
@@ -127,7 +126,7 @@ ms.locfileid: "63299090"
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**object-name:** 指定重新整理 （它也可以有個別的物件名稱或群組的物件名稱） 被視為物件。  
+**物件名稱：** 指定重新整理 （它也可以有個別的物件名稱或群組的物件名稱） 被視為物件。  
   
 **錯誤：** 指定是否要指定重新整理錯誤視為警告或錯誤。 錯誤的可用選項：  
   
@@ -135,7 +134,7 @@ ms.locfileid: "63299090"
   
 -   report-each-as-warning  
   
--   fail-script  
+-   失敗指令碼  
   
 ## <a name="see-also"></a>另請參閱  
 [執行 SSMA 主控台](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  

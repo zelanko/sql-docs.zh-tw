@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1a828bbbc42638cddaec609fc101b4cf70f7e356
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41fd90d4f30c080951bd5d68407e38adac482418
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923799"
 ---
 # <a name="understanding-cursors-and-locks"></a>了解資料指標和鎖定
 請務必了解，因此您可以選取應用程式的資料存取需求的最佳且最有效率的資料指標類型，資料指標的運作方式。 較差的資料指標設定可以讓佔緩慢的資料存取作業。  

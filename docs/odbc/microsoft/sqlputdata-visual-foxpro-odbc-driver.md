@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8c79e9ba-afa0-4e20-9c53-371cc42b4a97
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3644516fc25a97abaefe5e6819b19d6669a94255
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef2ca2e365eb8f65fca8cd37a6668e32dab2c209
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305653"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895942"
 ---
 # <a name="sqlputdata-visual-foxpro-odbc-driver"></a>SQLPutData (Visual FoxPro ODBC Driver)
 > [!NOTE]  

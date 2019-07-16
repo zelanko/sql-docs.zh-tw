@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_partition_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/31/2019
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74e3de1c32cb1ca1833121b4de1cef4db66f9e49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb9ab9e3cbf5948e5e832171c179d6daa2c0bc28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096279"
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

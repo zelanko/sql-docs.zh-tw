@@ -5,17 +5,16 @@ description: 了解如何升級至新版本的 SQL Server 2019 巨量資料叢�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8c8b8df4dc5643febdf3ddc808f215a9c34d24fe
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 67ca9b09db398538b4adeedc9008dcb2f14f258f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958400"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>如何升級 SQL Server 的巨量資料叢集
 

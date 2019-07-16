@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a51183964fe36d799e0e62243c6a0012da99727
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 9939d11e3a779cc25d7faeb4950783353947f140
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081450"
 ---
 # <a name="writing-odbc-3x-applications"></a>撰寫 ODBC 3.x 應用程式
 當 ODBC *2.x*應用程式會升級到 ODBC *3.x*，就應該撰寫，它會使用這兩個 ODBC *2.x*並*3.x*驅動程式. 應用程式應該納入條件式的程式碼，以充分利用 ODBC *3.x*功能。  

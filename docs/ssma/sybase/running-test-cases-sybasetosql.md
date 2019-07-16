@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 664c2d3d4e1a1cea78bd93c748d9c17d2f1fe670
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667718"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021027"
 ---
 # <a name="running-test-cases-sybasetosql"></a>執行測試案例 (SybaseToSQL)
 當 SSMA 軟體測試人員執行測試案例時，它會執行測試所選取的物件，並建立驗證結果的相關報表。 如果這兩個平台上相同的結果，測試成功。 Sybase 之間的物件的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]取決於目前的 SSMA 專案的結構描述對應設定。  
@@ -45,7 +44,7 @@ SSMA 軟體測試人員將會在此步驟中，建立輔助物件 （資料表�
   
 下列物件會在 Sybase SSMATESTER2005db 或 SSMATESTER2008db 資料庫中，而是在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ssmatesterdb_syb 資料庫中。  
   
-|名稱|類型|描述|  
+|名稱|type|描述|  
 |--------|--------|---------------|  
 |USER_TABLE$Trg|觸發程序|稽核的變更已驗證的資料表中的觸發程序。|  
 |USER_TABLE$Aud|資料表|儲存已刪除和覆寫的資料列的資料表。|  
@@ -57,7 +56,7 @@ SSMA 軟體測試人員將會在此步驟中，建立輔助物件 （資料表�
   
 已驗證的資料表，在 Sybase 資料庫中建立下列物件和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-|名稱|類型|描述|  
+|名稱|type|描述|  
 |--------|--------|---------------|  
 |USER_TABLE$Trg|觸發程序|稽核的變更已驗證的資料表中的觸發程序。|  
   

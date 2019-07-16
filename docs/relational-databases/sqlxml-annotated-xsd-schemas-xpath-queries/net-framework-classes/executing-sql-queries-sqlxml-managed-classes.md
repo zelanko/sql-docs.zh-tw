@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 739c664e9e6c4085f55e68aa7222a3b47f556026
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 08fc10138a8c0a6c6e55eb0c6f757f9abe0b5b9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934277"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>執行 SQL 查詢 (SQLXML Managed 類別)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

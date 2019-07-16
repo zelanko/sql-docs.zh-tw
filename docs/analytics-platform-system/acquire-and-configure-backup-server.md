@@ -2,19 +2,18 @@
 title: 取得並設定備份伺服器-Parallel Data Warehouse |Microsoft Docs
 description: 本文說明如何設定非應用裝置的 Windows 系統做為備份伺服器與 Analytics Platform System (APS) 和 Parallel Data Warehouse (PDW) 的備份和還原功能搭配使用。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cba345eb7a5aec9ef857819a1f0499266649f6e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f79cb13658328927cab81bbf8d559066c5a4d5cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63040824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961641"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>取得並設定備份伺服器來進行平行處理資料倉儲
 本文說明如何設定非應用裝置的 Windows 系統做為備份伺服器與 Analytics Platform System (APS) 和 Parallel Data Warehouse (PDW) 的備份和還原功能搭配使用。  
@@ -89,7 +88,7 @@ PDW 會透過 UNC 檔案共用來存取備份伺服器。 若要設定檔案共�
   
 5.  將備份的網域帳戶認證新增至 PDW 中。  
   
-    例如：  
+    例如:  
   
     ```sql  
     EXEC sp_pdw_add_network_credentials '10.192.147.63', 'seattle\david', '********';  
@@ -109,7 +108,7 @@ PDW 會透過 UNC 檔案共用來存取備份伺服器。 若要設定檔案共�
 > [!IMPORTANT]  
 > 請記得使用備份伺服器的 InfiniBand IP 位址。 否則，資料將會複製透過乙太網路，而不是 InfiniBand。  
   
-例如：  
+例如:  
   
 ```sql  
 BACKUP DATABASE Invoices TO DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full';  

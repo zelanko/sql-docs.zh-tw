@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: edf912bf3b8073a05dd900cd00511715020ee0c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dfbf23f0be369ae540dac33d33a3e3c1505d5ebe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63045496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076285"
 ---
 # <a name="processing-a-sql-statement"></a>SQL 陳述式處理
 在討論之前以程式設計方式使用 SQL 的技巧，就必須討論的 SQL 陳述式的處理方式。 所需的步驟通用於所有三項技術，雖然每一種技巧所執行的是它們在不同的時間。 下圖顯示的步驟涉及處理 SQL 陳述式，將於本節的其餘部分討論。  

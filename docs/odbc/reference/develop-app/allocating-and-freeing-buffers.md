@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 388147de8935d36180ba9845c8353bbf3dd6edc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b783c2fc6766f0e2d2685724169894160c15ffc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288077"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077191"
 ---
 # <a name="allocating-and-freeing-buffers"></a>配置及釋放緩衝區
 所有緩衝區配置及釋放應用程式。 如果未延遲的緩衝區，它需要只存在於函式呼叫的持續時間。 例如， **SQLGetInfo**中所指向緩衝區的特定選項相關聯的值會傳回*InfoValuePtr*引數。 可以釋放這個緩衝區，以在呼叫之後立即**SQLGetInfo**，如下列程式碼範例所示：  

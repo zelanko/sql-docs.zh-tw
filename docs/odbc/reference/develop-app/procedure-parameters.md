@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1cab0fea9c39e4946122698f2476668464e556c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f85512a1686df26cad739dc906e49cc5499f62e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912306"
 ---
 # <a name="procedure-parameters"></a>程序參數
 程序呼叫中的參數可以輸入、 輸入/輸出或輸出參數。 這是從所有其他 SQL 陳述式，其一律為輸入的參數中的參數不同。  
   
- 輸入的參數用來將值傳送給程序。 例如，假設 Parts 資料表有 PartID、 描述和價格資料行。 InsertPart 程序可能會具有資料表中的每個資料行的輸入的參數。 例如：  
+ 輸入的參數用來將值傳送給程序。 例如，假設 Parts 資料表有 PartID、 描述和價格資料行。 InsertPart 程序可能會具有資料表中的每個資料行的輸入的參數。 例如:  
   
 ```  
 {call InsertPart(?, ?, ?)}  

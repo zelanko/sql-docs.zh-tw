@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f60c8d460ae2a7b103f0c8c13e81c5aed3708c58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2189bf9b2a82cdf21fdd13ed77a977f6b333ac87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925891"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>以 Connection 物件方法的形式來呼叫預存程序
 您可以呼叫預存程序，如同它是在相關聯的開啟的原生方法**連線**物件。 這是類似於呼叫上的具名的命令**連線**物件。  

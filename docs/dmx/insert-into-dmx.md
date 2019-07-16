@@ -1,5 +1,5 @@
 ---
-title: INSERT INTO (DMX) | Microsoft Docs
+title: 插入 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 463bd3ac40a2f90a66457faa9a80b9512b67b53a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62505153"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937781"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,13 +58,13 @@ INSERT INTO [MINING MODEL] <model>
   
  下表會根據物件的狀態，提供不同陳述式格式之結果的描述。  
   
-|引數|物件的狀態|結果|  
+|陳述式|物件的狀態|結果|  
 |---------------|----------------------|------------|  
 |INSERT INTO MINING MODEL&AMP;LT *\<模型 >*|處理採礦結構。|處理採礦模型。|  
 ||不處理採礦結構。|處理採礦模型與採礦結構。|  
 ||採礦結構包含其他的採礦模型。|處理失敗。 您必須重新處理結構與相關聯的採礦模型。|  
 |INSERT INTO MINING STRUCTURE *\<結構 >*|處理或不處理採礦結構。|處理採礦結構與相關聯的採礦模型。|  
-|INSERT INTO MINING MODEL&AMP;LT *\<模型 >* ，其中包含來源查詢<br /><br /> 中的多個<br /><br /> INSERT INTO MINING STRUCTURE *\<結構 >* ，其中包含來源查詢|結構或模型早已包含內容。|處理失敗。 您必須先使用執行此作業中，清除物件[刪除&#40;DMX&#41;](../dmx/delete-dmx.md)。|  
+|INSERT INTO MINING MODEL&AMP;LT *\<模型 >* ，其中包含來源查詢<br /><br /> 或<br /><br /> INSERT INTO MINING STRUCTURE *\<結構 >* ，其中包含來源查詢|結構或模型早已包含內容。|處理失敗。 您必須先使用執行此作業中，清除物件[刪除&#40;DMX&#41;](../dmx/delete-dmx.md)。|  
   
 ## <a name="mapped-model-columns"></a>對應的模型資料行  
  使用\<對應模型的資料行 > 項目，您可以在採礦模型中對應資料來源的資料行的資料行。 \<對應模型的資料行 > 項目具有下列格式：  

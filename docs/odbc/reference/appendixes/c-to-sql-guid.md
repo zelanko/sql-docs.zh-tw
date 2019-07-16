@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9168b0b6-a828-4fef-b8cd-bdf439776f23
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: af0ed8307652ccf45e7fbfffb6c00355c8a8b004
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5863935ddf595409d48be79dc646c0994ddeb0b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019319"
 ---
 # <a name="c-to-sql-guid"></a>C 轉換為 SQL：GUID
 GUID ODBC C 資料類型的識別項是：  
@@ -37,7 +36,7 @@ GUID ODBC C 資料類型的識別項是：
 |SQL_WCHAR|資料行的字元長度 > = 36|n/a|  
 |SQL_WVARCHAR|資料行的字元長度 < 36|22001|  
 |SQL_WLONGVARCHAR|資料值不是有效的 GUID|22018|  
-|SQL_GUID|None[a]|n/a|  
+|SQL_GUID|無 [a]|n/a|  
   
  [a] 所有的十六進位值的有效期為 GUID。  
   

@@ -1,5 +1,5 @@
 ---
-title: SQLGetStmtAttr Function | Microsoft Docs
+title: SQLGetStmtAttr 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e321d460-e997-4527-aee6-207cf5a498e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f6edec1b341855154e6df6ef24abb7da3d93ffc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 31ddab7291807222882050233715d3ad61e25124
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061458"
 ---
 # <a name="sqlgetstmtattr-function"></a>SQLGetStmtAttr 函數
 **合規性**  

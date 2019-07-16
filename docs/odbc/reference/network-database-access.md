@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f31dd938-e992-436b-b613-145c23973064
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ff13d2e46377b0d29c9bbc8e8ad1705dedc048b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f8eaebca02ef3987e3613b5dd896e0f7c130086
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63272893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938039"
 ---
 # <a name="network-database-access"></a>網路資料庫存取
 透過網路存取的資料庫需要多個元件，其中每一個都是獨立的且下方的程式設計介面。 下列圖例顯示這些元件。  

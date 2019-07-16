@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f860306c721bba75a9d5fc9af63ddbe0c6fc9bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38d21e20ec158ea316caf6acd17f7225c8d3a49d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002657"
 ---
 # <a name="sysdmdbmissingindexcolumns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,9 +44,9 @@ sys.dm_db_missing_index_columns(index_handle)
  *index_handle*  
  唯一識別遺漏索引的整數。 您可以從下列動態管理物件中取得：  
   
- [sys.dm_db_missing_index_details &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)  
+ [sys.dm_db_missing_index_details &#40;-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)  
   
- [sys.dm_db_missing_index_groups &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)  
+ [sys.dm_db_missing_index_groups &#40;-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
@@ -55,7 +54,7 @@ sys.dm_db_missing_index_columns(index_handle)
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|資料行的識別碼。|  
 |**column_name**|**sysname**|資料表資料行的名稱。|  
-|**column_usage**|**varchar(20)**|查詢使用資料行的方式。 可能的值和其描述如下：<br /><br /> 等號比較： 表示表單的等號比較述詞作為資料行： <br />                        *table.column* = *constant_value*<br /><br /> 不等比較： 作為資料行，例如表示不相等，述詞形式的述詞： *table.column* > *constant_value*。 "=" 以外的其他任何比較運算子都可表示不相等。<br /><br /> INCLUDE： 資料行不會用來評估述詞，但用於另一個原因，比方說，來涵蓋查詢。|  
+|**column_usage**|**varchar(20)**|查詢使用資料行的方式。 可能的值和其描述如下：<br /><br /> 等號比較：表示表單的等號比較述詞作為資料行： <br />                        *table.column* = *constant_value*<br /><br /> 不等比較：作為述詞的表示是否不相等，比方說，形式的述詞的資料行： *table.column* > *constant_value*。 "=" 以外的其他任何比較運算子都可表示不相等。<br /><br /> 包括：資料行不會用來評估述詞，但用於另一個原因，比方說，來涵蓋查詢。|  
   
 ## <a name="remarks"></a>備註  
  所傳回的資訊**sys.dm_db_missing_index_columns**會更新查詢最佳化，查詢最佳化工具，而不會保存。 遺漏索引資訊只會保留到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新啟動為止。 如果資料庫管理員想要在伺服器回收之後保留遺漏索引資訊，應該定期製作該項資訊的備份副本。  
@@ -86,8 +85,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.dm_db_missing_index_details &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [sys.dm_db_missing_index_groups &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
- [sys.dm_db_missing_index_group_stats &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
+ [sys.dm_db_missing_index_details &#40;-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [sys.dm_db_missing_index_group_stats &#40;-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
   
   

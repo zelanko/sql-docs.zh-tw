@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 63387552e2d4b355e7e491e07619ea4d3f8ec46b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a79d800a307683471422bdd75ce1db0c9bf6d8f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656169"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904658"
 ---
 # <a name="creating-altering-and-removing-databases"></a>建立、改變和移除資料庫
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

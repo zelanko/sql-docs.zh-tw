@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5c55db7072020f715882912b46cac0e9219cbbf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96eb620a89fc9f7507f194539d9c1e3e09fc169c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906648"
 ---
 # <a name="create-a-model-master-data-services"></a>建立模型 (Master Data Services)
 

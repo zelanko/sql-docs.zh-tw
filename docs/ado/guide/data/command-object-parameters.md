@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f4fb4128333f1fdc5865186a202188fc64b6109f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 29ad7f3aa9347af77080b04fb309f8b50b95dbe4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925870"
 ---
 # <a name="command-object-parameters"></a>Command 物件參數
 先前所討論的主題[建立和執行簡單的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)。 針對使用更有趣[命令](../../../ado/reference/ado-api/command-object-ado.md)物件會顯示在下一個範例中，在其中具有已參數化 SQL 命令。 這項修改讓您能夠重複使用的命令，在不同的值中的參數每次的傳遞。 因為[備妥屬性](../../../ado/reference/ado-api/prepared-property-ado.md)屬性上的**命令**物件設定為**true**，ADO 需要編譯命令中指定的提供者[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)再執行第一次。 它也會保留在記憶體中已編譯的命令。 這會執行的命令稍微因為準備，但每次之後呼叫此命令時獲得效能的結果所需的額外負荷而執行的第一次。 因此，將會用一次以上時，才應該準備命令。  

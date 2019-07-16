@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c08985b4fe50a657c08de40f112776cf064b2846
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 764b6154885dbd361f7d7d4a09d8e340b4a62ef5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044458"
 ---
 # <a name="sysmailhelpstatussp-transact-sql"></a>sysmail_help_status_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

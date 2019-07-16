@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8d9a0d746d88423c699907e266a93a2b3a08e031
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a8e6f6a7cb749ff2b22a1f7563b43ce07e060aab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709571"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911548"
 ---
 # <a name="childcount-property-ado-md"></a>ChildCount 屬性 (ADO MD)
 指出為其成員數目前[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)物件是階層中的父系。  

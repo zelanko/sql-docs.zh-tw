@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b9ff2c3a-2003-4832-adbe-08dd0f5ad948
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7b33bc399646a6d274c875abd36d53219a2814e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc37ef6d268dba71f8270909ea9c5b938ef3ee75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200514"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070488"
 ---
 # <a name="procedure-invocation"></a>程序引動過程
 使用 Microsoft Access 驅動程式時，程序可以使用叫用從驅動程式**SQLExecDirect**或是**SQLPrepare**函式，使用下列語法: {呼叫*程序名稱* [(*參數*[，*參數*]...)]}。 請注意，運算式不支援做為參數，呼叫的程序。  

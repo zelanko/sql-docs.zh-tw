@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf42231158f646e34c63bd148ba66c9780b14785
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: ee304c9847019b21f1e08f57a3e0fdf0b439d241
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101403"
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**MSSQLSERVER**|來源是一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。|  
 |**ORACLE**|來源是一個 Oracle 資料庫。|  
   
-`[ @source_version = ] 'source_version'` 是來源 DBMS 的產品版本。 *source_version*已**varchar(10)**，如果未指定，資料類型會傳回的來源 DBMS 所有版本的對應。 啟用 DBMS 來源版本所要篩選的結果集。  
+`[ @source_version = ] 'source_version'` 是來源 DBMS 的產品版本。 *source_version*已**varchar(10)** ，如果未指定，資料類型會傳回的來源 DBMS 所有版本的對應。 啟用 DBMS 來源版本所要篩選的結果集。  
   
 `[ @source_type = ] 'source_type'` 來源 DBMS 中列出的資料類型。 *source_type*已**sysname**，如果未指定，會傳回來源 DBMS 中的所有資料類型的對應。 啟用來源 DBMS 中的資料類型所要篩選的結果集。  
   
@@ -64,7 +63,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**DB2**|目的地是一個 IBM DB2 資料庫。|  
 |**SYBASE**|目的地是一個 Sybase 資料庫。|  
   
-`[ @destination_version = ] 'destination_version'` 這是目的地 DBMS 的產品版本。 *destination_version*已**varchar(10)**，如果未指定，會傳回目的地 DBMS 所有版本的對應。 啟用 DBMS 目的地版本所要篩選的結果集。  
+`[ @destination_version = ] 'destination_version'` 這是目的地 DBMS 的產品版本。 *destination_version*已**varchar(10)** ，如果未指定，會傳回目的地 DBMS 所有版本的對應。 啟用 DBMS 目的地版本所要篩選的結果集。  
   
 `[ @destination_type = ] 'destination_type'` 目的地 DBMS 中列出的資料類型。 *destination_type*已**sysname**，如果未指定，會傳回目的地 DBMS 中的所有資料類型的對應。 啟用目的地 DBMS 中的資料類型所要篩選的結果集。  
   
@@ -93,7 +92,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  只有成員**sysadmin**固定的伺服器角色的成員的散發者端**db_owner**散發資料庫的固定的資料庫角色可以執行**sp_helpdatatypemap**.  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_getdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
- [sp_setdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
+ [sp_getdefaultdatatypemapping &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
+ [sp_setdefaultdatatypemapping &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
   
   

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 9bddbb74-e67a-43e3-b89e-896c498e53cb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51490c83f63235694f52555ec8be378af1188b40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da56a46b684762fa9f82d40fba8603285877e525
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941900"
 ---
 # <a name="query-store-stored-procedures-transact-sql"></a>查詢存放區預存程序 & Amp;#40;transact-SQL&AMP;#41
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

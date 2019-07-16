@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 243847e8ac2a1f3cb06a121b9ec42f556accc0e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c86497b0a7231027d8b586147b372767f88b9605
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478595"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906409"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>刪除屬性群組 (Master Data Services)
 

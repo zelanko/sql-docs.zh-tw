@@ -1,5 +1,5 @@
 ---
-title: sp_helpdb (Transact-SQL) | Microsoft Docs
+title: sp_helpdb (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d47f8d8ebd0e37f106e7610937af8f6585820cce
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903024"
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,8 +66,8 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**filegroup**|**nvarchar(128)**|檔案所屬的檔案群組。<br /><br /> NULL = 檔案是記錄檔。 它永遠不在檔案群組中。|  
 |**size**|**nvarchar(18)**|檔案大小 (以 MB 為單位)。|  
 |**maxsize**|**nvarchar(18)**|檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
-|**growth**|**nvarchar(18)**|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。|  
-|**usage**|**varchar(9)**|檔案的使用方式。 資料檔案中，這個值是 **'僅限資料'** 的值是記錄檔**僅限記錄'**。|  
+|**成長**|**nvarchar(18)**|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。|  
+|**使用方式**|**varchar(9)**|檔案的使用方式。 資料檔案中，這個值是 **'僅限資料'** 的值是記錄檔**僅限記錄'** 。|  
   
 ## <a name="remarks"></a>備註  
  **狀態**結果中的資料行集的選項，已設定為 ON 的資料庫中的報表。 所有的資料庫選項不會報告**狀態**資料行。 若要查看目前的資料庫選項設定的完整清單，請使用**sys.databases**目錄檢視。  

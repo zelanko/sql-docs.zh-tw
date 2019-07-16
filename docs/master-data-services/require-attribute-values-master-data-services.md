@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ae1eb0a03e7387c7985a4b05f9f0fba562d03d67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e430e158c301279398574bee64d744a40664b623
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085703"
 ---
 # <a name="require-attribute-values-master-data-services"></a>要求屬性值 (Master Data Services)
 

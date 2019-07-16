@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ca6a5804-bf5c-4afc-99db-22904bc0b33d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0c9901adcc29d09290bc3144e3fae7efd3ef44ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e182792a78d07cd6423b4409be95872c707791d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917418"
 ---
 # <a name="putoledbcommand-method"></a>put_OLEDBCommand 方法
 這個方法會執行任何作業，而且一律會傳回 S_OK。  

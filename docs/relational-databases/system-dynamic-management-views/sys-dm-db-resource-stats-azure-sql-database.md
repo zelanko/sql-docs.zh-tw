@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1df2ac9979e99a301d416d25d143039bef3ee4ed
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: d78e3aa24f6e73d624eec1f33fbebb62108bcc65
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096288"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -35,18 +34,18 @@ ms.locfileid: "67833046"
 |[資料行]|資料類型|描述|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|UTC 時間會指出目前報告間隔的結束。|  
-|avg_cpu_percent|**decimal (5,2)**|平均運算使用率，以服務層限制的百分比計算。|  
-|avg_data_io_percent|**decimal (5,2)**|平均資料 I/O 使用率的服務層限制的百分比表示。|  
-|avg_log_write_percent|**decimal (5,2)**|平均交易記錄寫入 （以 mbps 為單位） 的服務層限制百分比。|  
-|avg_memory_usage_percent|**decimal (5,2)**|平均記憶體使用率，以服務層限制的百分比計算。<br /><br /> 這包括用於緩衝集區分頁和儲存體的記憶體內部 OLTP 物件的記憶體。|  
-|xtp_storage_percent|**decimal (5,2)**|儲存體使用量記憶體內部 OLTP 的服務層限制的百分比表示 （在報告的時間間隔結束）。 這包括用來儲存下列記憶體內部 OLTP 物件的記憶體： 記憶體最佳化資料表、 索引和資料表變數。 它也包含用於處理的 ALTER TABLE 作業的記憶體。<br /><br /> 如果未使用記憶體內部 OLTP 資料庫中，會傳回 0。|  
-|max_worker_percent|**decimal (5,2)**|最大並行背景工作角色 （要求） 的資料庫的服務層限制的百分比表示。|  
-|max_session_percent|**decimal (5,2)**|最大並行工作階段的資料庫服務層限制百分比表示。|  
+|avg_cpu_percent|**十進位 (5,2)**|平均運算使用率，以服務層限制的百分比計算。|  
+|avg_data_io_percent|**十進位 (5,2)**|平均資料 I/O 使用率的服務層限制的百分比表示。|  
+|avg_log_write_percent|**十進位 (5,2)**|平均交易記錄寫入 （以 mbps 為單位） 的服務層限制百分比。|  
+|avg_memory_usage_percent|**十進位 (5,2)**|平均記憶體使用率，以服務層限制的百分比計算。<br /><br /> 這包括用於緩衝集區分頁和儲存體的記憶體內部 OLTP 物件的記憶體。|  
+|xtp_storage_percent|**十進位 (5,2)**|儲存體使用量記憶體內部 OLTP 的服務層限制的百分比表示 （在報告的時間間隔結束）。 這包括用來儲存下列記憶體內部 OLTP 物件的記憶體： 記憶體最佳化資料表、 索引和資料表變數。 它也包含用於處理的 ALTER TABLE 作業的記憶體。<br /><br /> 如果未使用記憶體內部 OLTP 資料庫中，會傳回 0。|  
+|max_worker_percent|**十進位 (5,2)**|最大並行背景工作角色 （要求） 的資料庫的服務層限制的百分比表示。|  
+|max_session_percent|**十進位 (5,2)**|最大並行工作階段的資料庫服務層限制百分比表示。|  
 |dtu_limit|**int**|目前最大資料庫 DTU 此資料庫設定在此間隔期間。 使用以 vCore 為基礎的模型資料庫，此資料行是 NULL。|
-|cpu_limit|**decimal (5,2)**|在此間隔期間此資料庫的 Vcore 的數目。 使用以 DTU 為基礎的模型資料庫，此資料行是 NULL。|
-|avg_instance_cpu_percent|**decimal (5,2)**|平均資料庫 CPU 使用量百分比。|
-|avg_instance_memory_percent|**decimal (5,2)**|資料庫平均記憶體使用量百分比。|
-|avg_login_rate_percent|**decimal (5,2)**|僅供參考之用。 不支援。 我們無法保證未來的相容性。|
+|cpu_limit|**十進位 (5,2)**|在此間隔期間此資料庫的 Vcore 的數目。 使用以 DTU 為基礎的模型資料庫，此資料行是 NULL。|
+|avg_instance_cpu_percent|**十進位 (5,2)**|平均資料庫 CPU 使用量百分比。|
+|avg_instance_memory_percent|**十進位 (5,2)**|資料庫平均記憶體使用量百分比。|
+|avg_login_rate_percent|**十進位 (5,2)**|僅供參考之用。 不支援。 我們無法保證未來的相容性。|
 |replica_role|**int**|表示目前的複本角色為主要的 0、 1 與次要資料庫，以及 2 為轉寄站 （異地次要資料庫的主要）。 您會看到 「 1 」 時連接到所有的可讀取次要複本的唯讀意圖。 如果未指定唯讀意圖，以連接到異地次要資料庫，您應該會看到"2"（連線到轉寄站）。|
 |||
   

@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a31b03208eba573fc6bd50f2348733ef0a07c2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3728fddb26d45107b0e695453bef6eeb9fa5de63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097785"
 ---
 # <a name="sysdmexecdmsworkers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "63013318"
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**nvarchar(32)**|查詢此 DMS 背景工作角色是部分 of.request_id，step_index，，和 dms_step_index 形成這個檢視的索引鍵。||  
 |step_index|**int**|查詢此 DMS 背景工作角色是一部分的步驟。|請參閱中的步驟索引[sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)。|  
-|dms_step_index|**int**|此工作者執行的 DMS 計劃中的步驟。|See [sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
+|dms_step_index|**int**|此工作者執行的 DMS 計劃中的步驟。|請參閱[sys.dm_exec_dms_workers & Amp;#40;transact-SQL&AMP;#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |compute_node_id|**int**|Worker 執行所在的節點。|請參閱[sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
 |distribution_id|**int**|||  
 |type|**nvarcha(32)**|||  

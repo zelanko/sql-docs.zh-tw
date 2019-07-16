@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 57a2fb53226af9aeb6e546f6109a3e182ffc754f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43acc6708b5df71893c2c6b7658ca99bfb73f616
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019000"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx 函式
 **合規性**  
@@ -56,7 +55,7 @@ BOOL SQLInstallTranslatorEx(
   
  **Translator**並**安裝程式**關鍵字必須包含在*lpszTranslator*字串。 轉譯 DLL 會列出**Translator**關鍵字和轉譯程式安裝程式 DLL 列為**安裝**關鍵字。 每個配對會終止具有 NULL 位元組，並將整個清單結尾的 NULL 位元組。 （也就是兩個 NULL 位元組標記清單的結尾）。格式*lpszTranslator*如下所示：  
   
- \0Translator=*translator-DLL-filename*\0[Setup=*setup-DLL-filename*\0]\0  
+ \0Translator=*translator-DLL 檔名*\0[Setup=*安裝程式-DLL 檔名*\0]\0  
   
  *lpszPathIn*  
  [輸入]轉譯器所要安裝或 null 指標的完整路徑。 如果*lpszPath*為 null 指標，轉譯器將會安裝在系統目錄。  

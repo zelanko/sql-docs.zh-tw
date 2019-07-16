@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 91e6d478397cf9fa77a6ca33748b5a4515034471
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45daf970f69322cad36bbe5419bf1dc8cc8009b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63278521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088338"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
 

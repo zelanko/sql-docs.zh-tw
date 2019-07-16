@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d92e0c5c-d176-4282-bbe1-d449e2223d50
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45d9203a08b9c70809e81fb3d9cf84a521017068
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 803da51c8507faa47f92b295d3749f00317bc413
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628595"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915380"
 ---
 # <a name="file-based-drivers"></a>以檔案為基礎的驅動程式
 使用 dBASE 等的資料來源未提供要使用的驅動程式的獨立資料庫引擎會使用檔案為基礎的驅動程式。 這些驅動程式會直接存取實體的資料，而且必須實作資料庫引擎處理序的 SQL 陳述式。 標準的方法是，檔案為基礎的驅動程式中的資料庫引擎會實作最小 SQL 一致性層級; 所定義的 ODBC SQL 子集如需此一致性層級中的 SQL 陳述式的清單，請參閱[附錄 c:SQL 文法](../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。  

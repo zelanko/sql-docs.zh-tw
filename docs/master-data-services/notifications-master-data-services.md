@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: de89d59c6205dd2ab0789492a746b925fa74b5c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 265c285781484ab06a329a617f5a0f9433a6b4d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904029"
 ---
 # <a name="notifications-master-data-services"></a>通知 (Master Data Services)
 
@@ -37,9 +36,9 @@ ms.locfileid: "65486030"
   
 |執行個體|描述|  
 |--------------|-----------------|  
-|資料的商務規則驗證失敗|個別商務規則必須設定為屬性值的商務規則驗證失敗時傳送電子郵件。 通知包含下列資訊。<br /><br /> [模型]<br /><br /> 版本<br /><br /> 實體<br /><br /> 成員代碼<br /><br /> 失敗的商務規則<br /><br /> 屬性值未通過商務規則的成員連結<br /><br /> 發出通知的時間<br /><br /> 如需詳細資訊，請參閱 [設定商務規則來傳送通知 &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)中設定通知。|  
-|模型版本狀態變更|每次模型版本的狀態變更時，身為模型管理員的使用者會自動接收通知。 通知包含下列資訊。<br /><br /> [模型]<br /><br /> 版本<br /><br /> 版本的先前狀態與新狀態<br /><br /> 發出通知的時間<br /><br /> 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。|  
-|變更集的狀態變更|每當變更集狀態為需要核准的實體進行變更時，實體管理員及 (或) 變更集擁有者就會自動收到通知。 通知包含下列資訊。<br /><br /> [模型]<br /><br /> 版本<br /><br /> 變更集名稱<br /><br /> 先前狀態<br /><br /> 新狀態<br /><br /> 套用變更集以檢視和修改暫止變更的連結。<br /><br /> 如需詳細資訊，請參閱[變更集 &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)|  
+|資料的商務規則驗證失敗|個別商務規則必須設定為屬性值的商務規則驗證失敗時傳送電子郵件。 通知包含下列資訊。<br /><br /> [模型]<br /><br /> Version<br /><br /> 實體<br /><br /> 成員代碼<br /><br /> 失敗的商務規則<br /><br /> 屬性值未通過商務規則的成員連結<br /><br /> 發出通知的時間<br /><br /> 如需詳細資訊，請參閱 [設定商務規則來傳送通知 &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)中設定通知。|  
+|模型版本狀態變更|每次模型版本的狀態變更時，身為模型管理員的使用者會自動接收通知。 通知包含下列資訊。<br /><br /> [模型]<br /><br /> Version<br /><br /> 版本的先前狀態與新狀態<br /><br /> 發出通知的時間<br /><br /> 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。|  
+|變更集的狀態變更|每當變更集狀態為需要核准的實體進行變更時，實體管理員及 (或) 變更集擁有者就會自動收到通知。 通知包含下列資訊。<br /><br /> [模型]<br /><br /> Version<br /><br /> 變更集名稱<br /><br /> 先前狀態<br /><br /> 新狀態<br /><br /> 套用變更集以檢視和修改暫止變更的連結。<br /><br /> 如需詳細資訊，請參閱[變更集 &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)|  
   
 ## <a name="system-settings"></a>系統設定  
  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中有一些設定會影響通知。 您可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中或直接在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫 [系統設定] 資料表中調整這些設定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  

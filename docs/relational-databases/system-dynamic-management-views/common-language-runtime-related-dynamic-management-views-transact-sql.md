@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 57e79c45-ff47-4885-bdf5-aecf29891ab3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 917a0e5471019382bfe0e92c40f08ee2f9aeef91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd75656f2fa5d90bace8cfddb4b22da1a8c6db94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017946"
 ---
 # <a name="common-language-runtime-related-dynamic-management-views-transact-sql"></a>Common Language Runtime 相關的動態管理檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

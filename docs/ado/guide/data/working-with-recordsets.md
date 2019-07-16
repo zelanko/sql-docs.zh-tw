@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8e3c3c7ff7d623d3bec0adf60773266bb6e53571
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3025140929d7a7cf281f72c035bf79e0a5883b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923419"
 ---
 # <a name="working-with-recordsets"></a>使用資料錄集
 **資料錄集**物件具有內建功能，可讓您重新排列結果集中資料的順序，來搜尋特定的記錄，根據您提供的準則，並且即使最佳化使用索引搜尋作業。 這些功能是否可供使用取決於提供者以及在某些情況下-例如屬於[Index](../../../ado/reference/ado-api/index-property.md)屬性-資料來源本身的結構。  

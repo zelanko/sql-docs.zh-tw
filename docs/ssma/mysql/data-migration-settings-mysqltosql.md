@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 90f76ef4d52fd5a1b7ed04d268954d0fed756324
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2c903ef29ab1a103bc9aa4f7b061e83ee7f2a95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183074"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896376"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>資料移轉設定 (MySQLToSQL)
   

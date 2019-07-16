@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0cc6153993ffd5febbc9fdaa7a06b477ea3aad1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c05aa2d1543cfc3ebd1cbab6c199cd2992febfe2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070467"
 ---
 # <a name="sysasymmetrickeys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47683256"
 |**asymmetric_key_id**|**int**|金鑰的識別碼。 在資料庫中，這是唯一的。|  
 |**pvt_key_encryption_type**|**char(2)**|金鑰的加密方式。<br /><br /> NA = 未加密<br /><br /> MK = 金鑰由主要金鑰加密<br /><br /> PW = 金鑰由使用者自訂密碼加密<br /><br /> SK = 金鑰由服務主要金鑰加密。|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|私密金鑰加密方式的描述。<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
-|**憑證指紋**|**varbinary(32)**|金鑰的 SHA-1 雜湊。 此雜湊是全域唯一的。|  
+|**thumbprint**|**varbinary(32)**|金鑰的 SHA-1 雜湊。 此雜湊是全域唯一的。|  
 |**演算法**|**char(2)**|金鑰使用的演算法。<br /><br /> 1R = 512 位元 RSA<br /><br /> 2R = 1024 位元 RSA<br /><br /> 3R = 2048 位元 RSA|  
 |**algorithm_desc**|**nvarchar(60)**|金鑰使用之演算法的描述。<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**key_length**|**int**|金鑰的位元長度。|  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8dd1263d19972124166e1e11d91c8370fc3a9ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921086"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 動態屬性索引
 資料提供者、 服務提供者，以及服務元件可以動態將屬性新增至**屬性**未開啟的集合[連線](../../../ado/reference/ado-api/connection-object-ado.md)並[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 這些物件開啟時，指定提供者可能也會插入額外的屬性。 其中部分屬性所述[ADO 動態屬性](../../../ado/reference/ado-api/ado-dynamic-properties.md)一節。 多個列中的特定提供者在[附錄 a:提供者](../../../ado/guide/appendixes/appendix-a-providers.md)一節。  

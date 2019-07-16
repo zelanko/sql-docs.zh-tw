@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b4187dbe3ac00830919b07920a720b89818c25d8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1389e76d4e679a3ee16c548bf752d5668dfa48b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075667"
 ---
 # <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
  **sp_reinitpullsubscription**可以從 「 訂閱者 」 重新初始化訂閱，散發代理程式下一次執行期間呼叫。  
   
- 值建立的發行集的訂閱**false** for **@immediate_sync**無法從訂閱者重新初始化。  
+ 值建立的發行集的訂閱**false** for **@immediate_sync** 無法從訂閱者重新初始化。  
   
  您可以執行重新初始化提取訂閱**sp_reinitpullsubscription**訂閱者端或**sp_reinitsubscription**在 「 發行者 」。  
   

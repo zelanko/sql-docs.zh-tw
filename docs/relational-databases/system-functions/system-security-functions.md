@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: fa2c95df-1211-4330-adc6-9657e1a113e8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 13523ce92a2e4e97935079c70ef9d0c1aa426c43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dff237aca1c928e6921b99f62407848ba536d76e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62865848"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950958"
 ---
 # <a name="system-security-functions"></a>系統安全性函數
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b601b56c-0ac4-44ee-bc91-c3d2d104f00a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5187c73d4dde95a5ddd9396da95b2d4381c868c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea893a019ab6d1333cecc5da5f1f66928467adfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706935"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931789"
 ---
 # <a name="pagecount-property-ado"></a>PageCount 屬性 (ADO)
 表示網頁的資料數量[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件包含。  

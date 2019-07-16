@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9b8685f15ee926d4f92470980d818fc12f3b3105
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 995d39887aa6357519ce0cbf4771ae796b1ece69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094506"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>建立 Database Mail 設定檔和帳戶對話方塊
 

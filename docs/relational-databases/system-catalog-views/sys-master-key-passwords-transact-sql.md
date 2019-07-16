@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ac97ef26a358fb48749b7758f32ed5d2f82d3ba1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87bb4a97db318330f253d068febb1309e4eda12a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102397"
 ---
 # <a name="sysmasterkeypasswords-transact-sql"></a>sys.master_key_passwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回一個資料列，使用新增的每個資料庫主要金鑰密碼**sp_control_dbmasterkey_password**預存程序。 保護主要金鑰所用的密碼，是儲存在認證存放區中。 認證名稱遵照的格式如下：##DBMKEY_<database_family_guid>_<random_password_guid>##。 密碼會儲存為認證秘密。 使用新增的每個密碼**sp_control_dbmasterkey_password**，在一個資料列**sys.credentials**。  
+  傳回一個資料列，使用新增的每個資料庫主要金鑰密碼**sp_control_dbmasterkey_password**預存程序。 保護主要金鑰所用的密碼，是儲存在認證存放區中。 認證名稱遵照這種格式: # # DBMKEY_ < database_family_guid > _ < random_password_guid > # #。 密碼會儲存為認證秘密。 使用新增的每個密碼**sp_control_dbmasterkey_password**，在一個資料列**sys.credentials**。  
   
  在此檢視中的每個資料列會顯示**credential_id**並**family_guid**的資料庫主要金鑰受到與該認證相關聯的密碼。 結合**sys.credentials**上**credential_id**會傳回有用的欄位，例如**create_date**和認證名稱。  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 32c278c1-d8e1-4bb7-9ecd-2fbfdffee34b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f37e6cf355e035044e25979f4e76256936b7e240
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f6d6e03dd3288a5b0ca71bb9e129e1a57abf7c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949323"
 ---
 # <a name="parent-property-ado-md"></a>Parent 屬性 (ADO MD)
 指出目前的父系的成員[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)階層中。  

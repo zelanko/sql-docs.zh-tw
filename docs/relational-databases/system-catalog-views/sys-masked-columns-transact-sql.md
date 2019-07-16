@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5e90fb00a74324cce6267e372199153707ca7ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e059265dc5f5e0d2e4bc4a3b1396d2401386d7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102369"
 ---
 # <a name="sysmaskedcolumns-transact-sql"></a>sys.masked_columns & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47726106"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|這個資料行所屬的物件識別碼。|  
-|NAME|**sysname**|資料行的名稱。 在物件中，這是唯一的。|  
+|name|**sysname**|資料行的名稱。 在物件中，這是唯一的。|  
 |column_id|**int**|資料行的識別碼。 在物件中，這是唯一的。<br /><br /> 資料行識別碼不一定會循序排列。|  
 |**sys.masked_columns**會傳回許多更多的資料行，繼承自**sys.columns**。|各種|請參閱[sys.columns &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)如需更多的資料行定義。|  
 |is_masked|**bit**|指出資料行加上遮罩。 1 表示遮罩。|  

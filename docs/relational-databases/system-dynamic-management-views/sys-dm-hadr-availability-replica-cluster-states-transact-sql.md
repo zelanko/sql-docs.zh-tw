@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5e39bd1072f3de3448381d9ac457ef8ab4459184
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5021a2074d49d7a8b1da88d82c52b175f16ff3c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900640"
 ---
 # <a name="sysdmhadravailabilityreplicaclusterstates-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  在 Windows Server 容錯移轉叢集 (WSFC) 叢集中，傳回每個 Always On 可用性複本 （不論聯結狀態） 的所有 Always On 可用性群組 （不論複本位置） 的資料列。  
+  針對 Windows Server 容錯移轉叢集 (WSFC) 叢集中所有 Always On 可用性群組 (不論複本位置為何) 的每一個 Always On 可用性複本 (不論其聯結狀態為何)，各傳回一個資料列。  
   
 ##  <a name="connected_state"></a>  
   

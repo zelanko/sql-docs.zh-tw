@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_server_diagnostics_log_configurations | Microsoft Docs
+title: sys.dm_os_server_diagnostics_log_configurations |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: c09ea433-d283-4f83-af69-d458aad59217
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a3e03058b42e256991a525a70d6c1fe57e061e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a26ba08f6ddd7767dbd56371857c4d382b5ec15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62939676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899775"
 ---
 # <a name="sysdmosserverdiagnosticslogconfigurations"></a>sys.dm_os_server_diagnostics_log_configurations
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

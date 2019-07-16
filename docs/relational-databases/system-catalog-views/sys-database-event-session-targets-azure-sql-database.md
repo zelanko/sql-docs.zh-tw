@@ -10,14 +10,13 @@ ms.topic: language-reference
 ms.assetid: 38d775ee-1fe1-4820-88c6-02b2f875a66b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8828532142bbcd8c188286ba87c16c3b824a279c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e736adef1648785ec0d037688c340f31a0e1bda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62751530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915104"
 ---
 # <a name="sysdatabaseeventsessiontargets-azure-sql-database"></a>sys.database_event_session_targets (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62751530"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件工作階段的識別碼。 不可為 Null。|  
 |target_id|**int**|目標的識別碼。 這個識別碼在事件工作階段物件中是唯一的。 不可為 Null。|  
-|NAME|**sysname**|事件目標的名稱。 不可為 Null。|  
+|name|**sysname**|事件目標的名稱。 不可為 Null。|  
 |封裝|**sysname**|包含此事件目標之事件封裝的名稱。 不可為 Null。|  
 |module|**sysname**|包含此事件目標之模組的名稱。 不可為 Null。|  
   

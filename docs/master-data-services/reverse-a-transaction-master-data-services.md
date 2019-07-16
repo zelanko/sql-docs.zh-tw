@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d44c240962e27f04e44414866c12dcee07b6b50c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44424916a27220713ab5b31639ba86bea365026f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897812"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>反轉交易 (Master Data Services)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65485948"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，系統管理員可以在需要復原動作時，反轉交易。 交易的範例包括屬性值變更、階層移動或成員刪除。 本主題只適用於交易記錄類型為「屬性」之實體的交易。 請前往實體總管頁面，以檢視交易記錄類型為「成員」之實體的交易記錄。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  
   

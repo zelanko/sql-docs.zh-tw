@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fe9dc770f537b9b9f8b53461c30b890a4144a821
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 157e38c2c9c23ff8f7e92af40385b0962c6dcb70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918068"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord 方法 (ADO)
 移動所代表之實體[記錄](../../../ado/reference/ado-api/record-object-ado.md)到另一個位置。  

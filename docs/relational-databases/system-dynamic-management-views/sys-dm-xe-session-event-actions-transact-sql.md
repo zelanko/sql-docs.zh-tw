@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0c22a546-683e-4c84-ab97-1e9e95304b03
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b237cfca3f64335d74b340189b5eddfa02d1e9a5
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: c10ef9265ef659985d667632e864e55f58ef4911
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973227"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090256"
 ---
 # <a name="sysdmxesessioneventactions-transact-sql"></a>sys.dm_xe_session_event_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -64,7 +64,7 @@ ms.locfileid: "63201733"
 
 |||
 |-|-|-|
-|** _\* SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|**\* _SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;

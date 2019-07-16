@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 9b6040dafdea245bbfd15a9ecf7c9bd3ee80ca5e
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67208228"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68211931"
 ---
 C:\\Program Files\\Microsoft SQL Server\\120\\Samples\\Engine\\

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 257d9c604d441d8fae9fb34da5ddfce816336f20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0245d492b7014b2dfc0097a9d3f2c9a7098eae51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925351"
 ---
 # <a name="examining-data"></a>檢查資料
 [取得資料](../../../ado/guide/data/getting-data.md)一節說明如何從資料來源擷取資料，做為一或多個**資料錄集**物件。 本節將討論**Recordset**的詳細資料，包括如何瀏覽**資料錄集**並檢視其資料。  

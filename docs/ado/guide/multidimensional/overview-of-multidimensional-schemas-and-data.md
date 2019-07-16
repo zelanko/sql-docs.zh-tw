@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5c3aa056447bd6e2eb7451db4d9af8090edc54d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e4681bb9e1fd1028ee1ddc2bd7f72efc03fb6c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923182"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多維度結構描述和資料的概觀
 ## <a name="understanding-multidimensional-schemas"></a>了解多維度的結構描述  
@@ -69,7 +68,7 @@ Hamburg, Munich, Stuttgart}
   
 -   城市 `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
-### <a name="members"></a>成員  
+### <a name="members"></a>Members  
  在階層的分葉層級的成員有任何子節點，及根層級的成員具有沒有父代。 所有其他成員都有至少一個父代和至少一個子系。 例如，Geography 維度階層樹狀結構的部分周遊，就會產生下列的父子式關聯性：  
   
 -   `{All} (parent of) {Europe, North America}`  

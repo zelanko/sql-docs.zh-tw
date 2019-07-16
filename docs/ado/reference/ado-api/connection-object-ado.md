@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 701ced4f5e0ad511f4a1c5b39c9775e285d1f751
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 278e2d90ed20b99706f00acf72e2892941c42865
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933567"
 ---
 # <a name="connection-object-ado"></a>Connection 物件 (ADO)
 表示資料來源的開啟連接。  
@@ -64,7 +63,7 @@ ms.locfileid: "66695785"
 >  不使用此功能 (呼叫具名的命令或預存程序，它就彷彿的原生方法上**連線**物件) 中的 Microsoft®.NET Framework 應用程式，因為基礎實作的功能衝突方法在.NET Framework 交互操作 com。  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>執行命令做為連接物件的原生方法  
- 若要執行命令時，提供的命令名稱，使用**命令**物件[名稱](../../../ado/reference/ado-api/name-property-ado.md)屬性。 設定**ActiveConnection**屬性**命令**連接的物件。 接著發出的命令名稱使用，就好像方法上的陳述式**連接**物件，後面接著任何參數，以及**資料錄集**物件如果會傳回任何資料列。 設定**Recordset**屬性，以自訂產生**資料錄集**。 例如：  
+ 若要執行命令時，提供的命令名稱，使用**命令**物件[名稱](../../../ado/reference/ado-api/name-property-ado.md)屬性。 設定**ActiveConnection**屬性**命令**連接的物件。 接著發出的命令名稱使用，就好像方法上的陳述式**連接**物件，後面接著任何參數，以及**資料錄集**物件如果會傳回任何資料列。 設定**Recordset**屬性，以自訂產生**資料錄集**。 例如:  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -80,7 +79,7 @@ cnn. "parameter", rst
 ```  
   
 ## <a name="execute-a-stored-procedure-as-a-native-method-of-a-connection-object"></a>執行預存程序做為連接物件的原生方法  
- 若要執行預存程序，會發出陳述式，就好像方法上會使用預存程序名稱的地方**連線**物件，後面接著任何參數。 ADO 將參數類型的 「 最佳猜測"。 例如：  
+ 若要執行預存程序，會發出陳述式，就好像方法上會使用預存程序名稱的地方**連線**物件，後面接著任何參數。 ADO 將參數類型的 「 最佳猜測"。 例如:  
   
 ```  
 Dim cnn As New ADODB.Connection  

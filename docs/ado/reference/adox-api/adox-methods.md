@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 23a3bc56ad05f72875e86ee0c0d835f6c30118f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c96f28070fd06b48b4aeac40c3db6b8e7179830a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928540"
 ---
 # <a name="adox-methods"></a>ADOX 方法
 

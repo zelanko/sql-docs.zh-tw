@@ -18,28 +18,27 @@ helpviewer_keywords:
 ms.assetid: 6119bc94-0b22-45d4-a34b-967afd810a9d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c23935ef020763bffe80957f054637a96e6785db
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: b4e2a969450c2ec4593c7daec1b9c9b203b18410
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078360"
 ---
 # <a name="views-transact-sql"></a>VIEWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   針對目前資料庫中目前使用者所能存取的，傳回一個資料列。  
   
- 若要從這些檢視擷取資訊，請指定 完整格式的名稱**INFORMATION_SCHEMA。**_view_name_。  
+ 若要從這些檢視擷取資訊，請指定 完整格式的名稱**INFORMATION_SCHEMA。** _view_name_。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|檢視限定詞。|  
 |**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含檢視的結構描述名稱。<br /><br /> **&#42;&#42;重要&#42; &#42;** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|檢視名稱。|  
-|**VIEW_DEFINITION**|**nvarchar(** 4000 **)**|如果定義的長度大於**nvarchar (** 4000 **)**，此資料行是 NULL。 否則，這個資料行就是檢視定義文字。|  
+|**VIEW_DEFINITION**|**nvarchar(** 4000 **)**|如果定義的長度大於**nvarchar (** 4000 **)** ，此資料行是 NULL。 否則，這個資料行就是檢視定義文字。|  
 |**CHECK_OPTION**|**varchar(** 7 **)**|WITH CHECK OPTION 的類型。 如果原始檢視是利用 WITH CHECK OPTION 所建立，則為 CASCADE。 否則，就傳回 NONE。|  
 |**IS_UPDATABLE**|**varchar(** 2 **)**|指定檢視是否可以更新。 一律傳回 NO。|  
   

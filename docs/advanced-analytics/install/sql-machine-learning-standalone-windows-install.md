@@ -7,14 +7,13 @@ ms.date: 08/28/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 911086beaaaeb28a036a764e066402d7ba6f1da7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f721a840b6fba4a840484fccb1cafb334b1ba438
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62747070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962850"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>安裝 Machine Learning Server （獨立式） 或使用 SQL Server 安裝的 R Server （獨立式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -149,7 +148,7 @@ R 和 Python 開發常會在同一部電腦上有多個版本。 安裝 SQL Serv
 
 下表列出 Microsoft 安裝程式所建立的 R 和 Python 散發套件的路徑。 為求完整性，資料表會包含 SQL Server 安裝程式，以及 Microsoft Machine Learning Server 的獨立安裝程式所產生的路徑。
 
-|版本| 安裝方法 | 預設資料夾|
+|Version| 安裝方法 | 預設資料夾|
 |----|----|----|
 |SQL Server 2017 Machine Learning 伺服器 （獨立式） |  SQL Server 2017 安裝程式精靈 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Microsoft Machine Learning Server （獨立式） |  Windows 的獨立安裝程式 |`C:\Program Files\Microsoft\ML Server\R_SERVER`<br/>`C:\Program Files\Microsoft\ML Server\PYTHON_SERVER`|

@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b19713028bcc5569a6a4aace4528e7c725cf7d0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f1b867e1870b81641c7cea09d9a8fb3accfcc01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923640"
 ---
 # <a name="using-a-connection-object"></a>使用 Connection 物件
-開始前**連線**物件時，您必須定義有關資料來源和連線類型的特定資訊。 大部分的這項資訊由持有*ConnectionString*的參數[Open 方法](../../../ado/reference/ado-api/open-method-ado-connection.md)上**連接**物件，或由[ConnectionString屬性](../../../ado/reference/ado-api/connectionstring-property-ado.md)上**連線**物件。 連接字串是由單引號括住的值以分號分隔，引數/值組的清單所組成。 例如：  
+開始前**連線**物件時，您必須定義有關資料來源和連線類型的特定資訊。 大部分的這項資訊由持有*ConnectionString*的參數[Open 方法](../../../ado/reference/ado-api/open-method-ado-connection.md)上**連接**物件，或由[ConnectionString屬性](../../../ado/reference/ado-api/connectionstring-property-ado.md)上**連線**物件。 連接字串是由單引號括住的值以分號分隔，引數/值組的清單所組成。 例如:  
   
 ```  
 Dim sConn As String  

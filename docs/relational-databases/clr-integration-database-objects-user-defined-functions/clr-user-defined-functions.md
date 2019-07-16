@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: de5d1979d05899711d708e166b9659db0bb3bde0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6195badbf3fc0d789e1b083ab187eebbce2414fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009720"
 ---
 # <a name="clr-user-defined-functions"></a>CLR 使用者定義函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: LOCALDB_ERROR_UNKNOWN_ERROR_CODE | Microsoft Docs
+title: LOCALDB_ERROR_UNKNOWN_ERROR_CODE |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 8f8472b6-e6fc-44f3-82c7-25f127461fa8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94582cedbd95faeef568eaa694026ee3e7638bf2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd2a159b67670a2bbffa28bae7e2cc449b8ba6e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62986515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010998"
 ---
 # <a name="localdberrorunknownerrorcode"></a>LOCALDB_ERROR_UNKNOWN_ERROR_CODE
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
