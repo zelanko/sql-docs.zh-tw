@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d31b9ff3a60b746309224b0e0f9669cef229f234
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e391ad7c61bd6c303b0558892435af344a2768fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933492"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 屬性 (ADO)
 表示用來連接到資料來源的資訊。  
@@ -38,7 +37,7 @@ ms.locfileid: "66695952"
 |--------------|-----------------|  
 |*Provider=*|指定要用於連線提供者的名稱。|  
 |*檔名 =*|指定提供者特定檔案名稱 （例如，保存的資料來源物件） 包含預設的連接資訊。|  
-|*Remote Provider=*|指定開啟用戶端連接時使用的提供者的名稱。 （僅限遠端資料服務。）|  
+|*遠端提供者 =*|指定開啟用戶端連接時使用的提供者的名稱。 （僅限遠端資料服務。）|  
 |*Remote Server=*|指定要開啟用戶端連線時所使用的伺服器的路徑名稱。 （僅限遠端資料服務。）|  
 |*URL=*|指定的連接字串做為識別的資源，例如檔案或目錄的絕對 URL。|  
   

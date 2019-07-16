@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 92b317b92800b1fe8bd6c691d1c2db8b1edd69b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be12690eac91a8e9c7746e12bc01fd64f35ba7ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054487"
 ---
 # <a name="master-data-manager-web-application"></a>主資料管理員 Web 應用程式
 

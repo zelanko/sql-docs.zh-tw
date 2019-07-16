@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 31efe56dcb5ae926d5da08aa00a1005597b17b91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43623bc100fdfe071fcd00926117400a3c96eebe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922978"
 ---
 # <a name="address-book-data-binding-object"></a>通訊錄資料繫結物件
 通訊錄應用程式使用[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)繫結至資料的 SQL Server 資料庫 （在此情況下，DHTML 資料表） 的視覺物件在應用程式的用戶端 HTML 頁面中的物件。 事件驅動的 VBScript 程式邏輯會使用[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)來：  
@@ -61,7 +60,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |參數|描述|  
 |---------------|-----------------|  
-|[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|如果您使用 HTTP，值是前面加上的伺服器電腦的名稱`https://`。|  
+|[伺服器](../../../ado/reference/rds-api/server-property-rds.md)|如果您使用 HTTP，值是前面加上的伺服器電腦的名稱`https://`。|  
 |[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|會提供必要的連接資訊給**rds。DataControl**連接到 SQL Server。|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|設定或傳回用來擷取查詢字串[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。|  
   

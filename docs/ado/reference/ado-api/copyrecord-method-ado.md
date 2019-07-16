@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d11a8d5d775499246bd8af709764dec3f2ad61e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aaabb32234cefe2e3c3727ce5a18dd2d98549a77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933410"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord 方法 (ADO)
 複製所代表的實體[記錄](../../../ado/reference/ado-api/record-object-ado.md)到另一個位置。  

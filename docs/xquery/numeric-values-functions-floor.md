@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ace57dd-b66e-4b60-a2b9-a1b0f1a0831d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d67244c125b2b85d3db7c0d511a1bf74bcfe91dd
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 1c27e432dc258b4d2b9d21bfe0ab28df8ee5b510
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293054"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946538"
 ---
 # <a name="numeric-values-functions---floor"></a>數值函式 - floor
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

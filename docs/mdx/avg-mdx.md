@@ -1,5 +1,5 @@
 ---
-title: Avg (MDX) | Microsoft Docs
+title: Avg (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7d6b2e91504c2c9ba796d2c0a55ba19fb3f6493e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa8817e35a589def4631bd455637d05fc62d3a0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017008"
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
 

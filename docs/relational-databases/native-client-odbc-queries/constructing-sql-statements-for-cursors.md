@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5bfb18fea7b36236ad571dbd9b39301069fb00fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80255b80ffe05e2c89a0929c8f83999d1cb32c5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937309"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>建構資料指標的 SQL 陳述式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47717906"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會使用伺服器資料指標來實作 ODBC 規格中定義的資料指標功能。 ODBC 應用程式使用中控制資料指標行為[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)來設定不同的陳述式屬性。 下面是這些屬性及其預設值。  
   
-|attribute|預設|  
+|屬性|預設|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  

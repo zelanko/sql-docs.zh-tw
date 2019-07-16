@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 884c798e14964fbcaaf3ca9ba6656f4d62738fe8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b326ed0c4e9a196904aa0f5c60b705243ef3bd97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061577"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>捲動與擷取資料列 (ODBC)
 應用程式時使用可捲動資料指標，呼叫**SQLFetchScroll**來定位資料指標與提取資料列。 **SQLFetchScroll**支援相對捲動 (下一步，之前，而相對*n*資料列)，絕對的捲動 (first、 last、 和資料列*n*)，和依書籤的位置。 *Sqlfetchscroll*並*FetchOffset*中的引數**SQLFetchScroll**指定擷取，資料列集下, 圖所示。  

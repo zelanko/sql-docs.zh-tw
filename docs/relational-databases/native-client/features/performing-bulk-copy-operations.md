@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08b6accde41f7f1f557d5f6c6f80157ae79fb7a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4ba6b0f278c872dc8ae3dde6967f385c39880fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016646"
 ---
 # <a name="performing-bulk-copy-operations"></a>執行大量複製作業
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

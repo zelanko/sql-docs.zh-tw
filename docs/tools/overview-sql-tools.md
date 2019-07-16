@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ''
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 84cebceddc18ee3d288226ebd00bc86ea25ac926
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
-ms.translationtype: MTE75
+ms.openlocfilehash: 0d7683ed4f45a2d2e28843b24d9abd2592b08fae
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190988"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731592"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL 工具和公用程式 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,14 +26,13 @@ ms.locfileid: "52190988"
 
 有許多資料庫工具，因此這篇文章提供說明和可用的工具中的部分的指標來使用您的 SQL database。 如果您需要協助以決定哪一種工具您需要請參閱[應該使用哪一種工具？](#which-tool-should-i-choose)。
 
-
 ## <a name="gui-tools-to-manage-databases"></a>若要管理資料庫的 GUI 工具  
 
 以下是主要的圖形化使用者介面 (GUI) 工具：
 
 | 工具 | Description | 在上執行 |
 |:--|:--|:--|
-| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 是免費、 輕量級工具，管理資料庫，只要它們執行。 此預覽版本中提供資料庫管理功能，包括擴充的 TRANSACT-SQL 編輯器和可自訂的深入了解您的資料庫的操作狀態。 | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] 在 Windows、 macOS 和 Linux 上執行**。|
+| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 是免費、 輕量級工具，管理資料庫，只要它們執行。 此預覽版本中提供資料庫管理功能，包括擴充的 TRANSACT-SQL 編輯器和可自訂的深入了解您的資料庫的操作狀態。 | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] 可在 Windows、macOS 與 Linux 上執行**.|
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | 您可以使用 SQL Server Management Studio (SSMS) 來查詢、 設計和管理 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲。 | **SSMS 在 Windows 上執行**。|
 | [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | 將 Visual Studio 打造為強大的開發環境，SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲。| **SSDT 在 Windows 上執行**。|
 | [Visual Studio Code](https://code.visualstudio.com/)| 安裝 Visual Studio Code 之後, 安裝[mssql 擴充功能](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)開發 Microsoft SQL Server、 Azure SQL Database 和 SQL 資料倉儲。| **在 Windows、 macOS 和 Linux 上的 visual Studio Code 執行**。|
@@ -45,13 +44,13 @@ ms.locfileid: "52190988"
 
 | 工具 | Description | 在上執行 |
 |:--|:--|:--|
-|[**mssql-cli (預覽)**](mssql-cli.md)|**mssql cli**是查詢 SQL Server 的互動式命令列工具。 | Windows、 macOS 和 Linux|
+|[**mssql-cli (預覽)** ](mssql-cli.md)|**mssql cli**是查詢 SQL Server 的互動式命令列工具。 | Windows、 macOS 和 Linux|
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage**是命令列公用程式會自動執行數個資料庫開發工作。 macOS 和 Linux 版本的 sqlpackage 目前目前為預覽版。 | Windows、 macOS 和 Linux|
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell**提供 cmdlet 讓您使用 SQL| Windows、 macOS 和 Linux|
 | [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd**公用程式可讓您輸入 TRANSACT-SQL 陳述式、 系統程序和指令碼檔案，在命令提示字元。 | Windows、 macOS 和 Linux|
 |[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|**b**ulk **c**opy **p**rogram 公用程式 (**bcp**) 會以使用者指定格式，在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體與資料檔案之間大量複製資料。|Windows、 macOS 和 Linux|
-|[**mssql scripter （預覽）**](https://github.com/Microsoft/mssql-scripter)|**mssql scripter**是一種多平台命令列體驗來編寫指令碼 SQL Server 資料庫|Windows、 macOS 和 Linux|
-|[**mssql conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql conf**設定在 Linux 上執行的 SQL Server。|Linux|
+|[**mssql scripter （預覽）** ](https://github.com/Microsoft/mssql-scripter)|**mssql scripter**是一種多平台命令列體驗來編寫指令碼 SQL Server 資料庫|Windows、 macOS 和 Linux|
+|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql conf**設定在 Linux 上執行的 SQL Server。|Linux|
 
 
 

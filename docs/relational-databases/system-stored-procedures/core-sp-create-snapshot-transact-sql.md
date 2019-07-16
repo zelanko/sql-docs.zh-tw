@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 271c8baf01825baa9ee88e7c8ee365019b6bca66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef2bce1ff84172d01b1304a416f84865f1cb36bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078224"
 ---
 # <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

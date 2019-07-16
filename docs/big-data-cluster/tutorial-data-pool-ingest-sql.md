@@ -5,17 +5,16 @@ description: 本教學課程會示範如何將資料內嵌至 SQL Server 2019 �
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 52881f5102125cc008c1a35278b9bf46bef289f4
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 626b5442596c5a0f9beedef779937cf875efff00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957793"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教學課程：將資料內嵌到 SQL Server 資料集區使用 TRANSACT-SQL
 

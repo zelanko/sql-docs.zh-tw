@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81ba9453-c085-47c0-b411-90ca6a5ee428
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 268d5f00d787cef8dfdcb29bd9e091f81a5ed2c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 232d2e9b7e9eb695a40058075ea511392e464a32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064406"
 ---
 # <a name="catalog-functions"></a>目錄函式
 所有的資料庫有概述如何將資料儲存在資料庫中的結構。 例如，簡單的銷售訂單的資料庫可能顯示在下圖中，在其識別碼資料行用來連結資料表的結構。  

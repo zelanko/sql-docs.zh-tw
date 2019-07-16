@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d685f5e8837feebffeeeade95697f4f3bfea4c81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f06182f06e92ff581dd02c072b63fc10962921a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069078"
 ---
 # <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,8 +47,8 @@ ms.locfileid: "62470498"
  只有成員**sysadmin**固定的伺服器角色可以存取這份資料表。  
   
 ## <a name="see-also"></a>另請參閱  
- [dbo.sysproxysubsystem &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
- [dbo.sysproxies &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)   
+ [dbo.sysproxysubsystem &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
+ [dbo.sysproxies &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)   
  [sys.messages &#40;TRANSACT-SQL& #41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
   
   

@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cdf171c66c19d87ea4919eeb55dca65f14b89ebd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a63a88e24f62ba9d8a4a70107663ab2d585f4640
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061795"
 ---
-# <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact-SQL)
+# <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   測試從 SQL Server 連接到遠端 Azure 伺服器和報告可能會導致資料移轉的問題。  
@@ -72,7 +71,7 @@ EXECUTE sys.sp_rda_test_connection
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |link_state|ssNoversion|下列的值，對應至值的其中一個**link_state_desc**。<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
-|link_state_desc|varchar(32)|下列的值，這會對應到上述其中一個值**link_state**。<br /><br /> -狀況良好<br />     SQL Server 與遠端 Azure 伺服器狀況良好。<br />-   ERROR_AZURE_FIREWALL<br />     Azure 防火牆阻止 SQL Server 與遠端 Azure 伺服器之間的連結。<br />-   ERROR_NO_CONNECTION<br />     SQL Server 無法建立連線到遠端 Azure 伺服器。<br />-   ERROR_AUTH_FAILURE<br />     發生驗證錯誤會導致 SQL Server 與遠端 Azure 伺服器之間的連結。<br />-錯誤<br />     不是驗證問題、 連線問題或防火牆問題的錯誤導致 SQL Server 與遠端 Azure 伺服器之間的連結。|  
+|link_state_desc|varchar(32)|下列的值，這會對應到上述其中一個值**link_state**。<br /><br /> -狀況良好<br />     SQL Server 與遠端 Azure 伺服器狀況良好。<br />-   ERROR_AZURE_FIREWALL<br />     Azure 防火牆阻止 SQL Server 與遠端 Azure 伺服器之間的連結。<br />-ERROR_NO_CONNECTION<br />     SQL Server 無法建立連線到遠端 Azure 伺服器。<br />-   ERROR_AUTH_FAILURE<br />     發生驗證錯誤會導致 SQL Server 與遠端 Azure 伺服器之間的連結。<br />-錯誤<br />     不是驗證問題、 連線問題或防火牆問題的錯誤導致 SQL Server 與遠端 Azure 伺服器之間的連結。|  
 |error_number|ssNoversion|錯誤數目。 如果沒有發生錯誤，則此欄位會是 NULL。|  
 |error_message|nvarchar(1024)|錯誤訊息。 如果沒有發生錯誤，則此欄位會是 NULL。|  
   

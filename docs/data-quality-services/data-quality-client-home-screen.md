@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: f272827a41af88663086946f0127ad1cc9a61726
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ee3474d5fedd467170c601a7807117c23e37096
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785433"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935401"
 ---
 # <a name="data-quality-client-home-screen"></a>Data Quality Client 首頁畫面
 
@@ -26,7 +25,7 @@ ms.locfileid: "66785433"
 
   使用這個畫面以存取 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 三大工作群組的使用者介面：知識庫管理、資料品質專案，以及系統管理。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 ### <a name="knowledge-base-management"></a>知識庫管理  
  DQS 知識庫是中繼資料的儲存機制，DQS 使用中繼資料以改善資料品質。 此中繼資料是由 DQS 平台在電腦輔助的知識探索程序中以及資料服務員在互動式定義域管理程序中所建立。  

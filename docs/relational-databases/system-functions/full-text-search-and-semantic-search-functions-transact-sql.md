@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a61a3694-7604-4583-962e-fc30f771c6fa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1d8cccc6f36996808693e007e87ff1de7edfdd4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 58bf5650a5ab06783ad0c889bc3286184a7d73ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105104"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042750"
 ---
 # <a name="full-text-search-and-semantic-search-functions-transact-sql"></a>全文檢索搜尋與語意搜尋函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

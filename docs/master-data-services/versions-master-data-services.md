@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 27b5758dcac60f2c36ad08f600a36d9d501a811d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd9ed184d56cf85487d1f8833f7ec22acf60635c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017323"
 ---
 # <a name="versions-master-data-services"></a>版本 (Master Data Services)
 

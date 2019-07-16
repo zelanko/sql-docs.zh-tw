@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330b330375ee49d13242dd400ed76fae2bfc6e71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 070c2a362a69fb6863cc263da3975efc66c7c9f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661206"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006939"
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,16 +50,16 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  [ @objname = ] '*object_name*'  
  這是使用者物件或資料類型目前的完整或非完整名稱。 如果要重新命名的物件是在資料表中，資料行*object_name*必須是格式*table.column*或是*schema.table.column*。 如果要重新命名的物件是索引， *object_name*必須是格式*table.index*或是*schema.table.index*。 如果要重新命名物件的條件約束*object_name*必須是格式*schema.constraint*。  
   
- 只有在指定限定物件時，才需要引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 *object_name*已**nvarchar(776)**，沒有預設值。  
+ 只有在指定限定物件時，才需要引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 *object_name*已**nvarchar(776)** ，沒有預設值。  
   
- [ @newname =] '*new_name*'  
+ [ @newname = ] '*new_name*'  
  這是指定物件的新名稱。 *new_name*必須是單部分名稱，而且必須遵循識別碼的規則。 *newname*已**sysname**，沒有預設值。  
   
 > [!NOTE]  
 >  觸發程序名稱的開頭不能是 # 或 ##。  
   
  [ @objtype = ] '*object_type*'  
- 這是要重新命名的物件類型。 *object_type*已**varchar(13)**，預設值是 NULL，而且可以是下列值之一。  
+ 這是要重新命名的物件類型。 *object_type*已**varchar(13)** ，預設值是 NULL，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  

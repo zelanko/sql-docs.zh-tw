@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7a9125219ee8580967d93c2f2f9ead7745b6cd34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e75b76eda87580063dfdaea081a1b4f0efaa518
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084215"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>衍生階層 (Master Data Services)
 

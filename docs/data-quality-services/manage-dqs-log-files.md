@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 728c028236bf14d00b36b4ce32551a29c47ce2c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ddd910ea613c6ef9fcac3a4cfbb02c3e3244294
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991927"
 ---
 # <a name="manage-dqs-log-files"></a>管理 DQS 記錄檔
 

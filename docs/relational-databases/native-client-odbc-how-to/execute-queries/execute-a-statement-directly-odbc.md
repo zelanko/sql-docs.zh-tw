@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 685cd0891bb074acee5aa0c59cbb089333d2c7c8
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: c2342e24ec6763be32fce8d4fa5ade96b25c9bc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898553"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>直接執行陳述式 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

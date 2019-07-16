@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cae6c84d0ca85a8cb27d8310bcc3cb02dca47f8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 045f9ab13b701b8dbd5e0895531932c21767853f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62903305"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909065"
 ---
 # <a name="msmergereplinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "62903305"
 |**validation_level**|**int**|在訂閱執行的類型驗證。 指定的驗證層級可以是下列值之一：<br /><br /> **0** = 沒有驗證。<br /><br /> **1** = 僅限資料列計數驗證。<br /><br /> **2** = 資料列計數與總和檢查碼驗證。<br /><br /> **3** = 資料列計數及二進位總和檢查碼驗證。|  
 |**resync_gen**|**bigint**|用於重新同步訂閱的層代 (Generation) 號碼。 值為 **-1**指出訂用帳戶未標示為要重新同步處理。|  
 |**login_name**|**sysname**|建立訂閱的使用者名稱。|  
-|**hostname**|**sysname**|在產生訂閱用的資料分割時，參數化資料列篩選器所用的值。|  
+|**主機名稱**|**sysname**|在產生訂閱用的資料分割時，參數化資料列篩選器所用的值。|  
 |**merge_jobid**|**binary(16)**|這個訂閱的合併作業識別碼。|  
 |**sync_info**|**int**|僅供內部使用。|  
   

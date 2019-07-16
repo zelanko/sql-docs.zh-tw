@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 50a46b004a14358e7832edb16d57f11783a683a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab6554acd249e119c054754f5b6b6f5196071322
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935219"
 ---
 # <a name="grant-dqs-roles-to-users"></a>對使用者授與 DQS 角色
 

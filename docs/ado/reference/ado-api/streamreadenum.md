@@ -1,5 +1,5 @@
 ---
-title: StreamReadEnum | Microsoft Docs
+title: StreamReadEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 37d2ba0834d2a4469d97a36f39677f407a5e61be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7700fc1ddc3cc619db224ac46006370898af1d62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710679"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928666"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
 指定的整個資料流] 或 [下一列是否應該從讀取[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。  

@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 20b8bb332f2b8910d533407e79799dab162ac217
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34ee9c23569897247f05d6b9b5f9f2610f5d68fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959092"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>教學課程：建置自訂的深入解析小工具
 

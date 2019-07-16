@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fab7baf1771ad0600f4c1a0a8cac931f0adcc0a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b978e3d885e3ff06dda18859384f88eb4c564254
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919127"
 ---
 # <a name="delete-method-ado-recordset"></a>Delete 方法 (ADO Recordset)
 刪除目前的記錄或一組記錄。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 45f55646-4bf1-4493-9f72-d1363c9a9ac6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 76f71a4920e2980161032c519eb1fb3dacd12da3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f91e4ee829c502eb00c79cea216f74e8d20fc4a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028166"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Microsoft.VisualBasic.dll 中不允許的型別和成員
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

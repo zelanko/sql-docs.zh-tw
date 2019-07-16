@@ -10,13 +10,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2d1cd12ff92b45c78eaf3dbe17a08c4e83d0f3b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3d9346d301357fff052566cf66b7ce133b5e4ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985290"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 安裝和組態
 
@@ -130,7 +129,7 @@ ms.locfileid: "65994120"
   
 3.  在 **資料庫伺服器**頁面上，指定 SQL Server 執行個體。 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 新增支援 SQL Server 受控執行個體。 設定的值**SQL Server 執行個體**主應用程式的 Azure SQL Database 受控執行個體。 例如， `xxxxxx.xxxxxx.database.windows.net` 。
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 新增支援 SQL Server 受控執行個體。 設定的值**SQL Server 執行個體**主應用程式的 Azure SQL Database 受控執行個體。 例如： `xxxxxx.xxxxxx.database.windows.net` 。
 
 4. 選取 **驗證類型**，然後按一下**測試連接**以確認您可以連線到資料庫所選取的驗證類型使用的認證。 按一下 [下一步]  。
 

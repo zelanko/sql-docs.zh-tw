@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f2b3abf36923d11776ac08f4e4386981eb2aad48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2edf02c31b8b52d6743113e6c6c5878bf5180a83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024746"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>尋找資料庫精靈 （驗證選取項目） (AccessToSQL)
 [尋找資料庫精靈] 的 [確認選取項目] 頁面會列出可以加入至 SSMA 的檔案。 如果不正確的檔案清單，請按一下**回**修改清單。 否則，請按一下**完成**加入檔案。  
   
 若要開啟 [尋找資料庫精靈] 中，在**檔案**功能表上，按一下**尋找資料庫**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **檔案名稱**  
 顯示將新增至 SSMA Access 資料庫檔案的名稱。  
   

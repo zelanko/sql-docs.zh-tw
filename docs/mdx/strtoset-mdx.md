@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ee1e0cbeaa4e33be223e1b777ff243b5c3ef2d01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 729dae70fce03b3dec1394900126b216d09dc497
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036796"
 ---
 # <a name="strtoset-mdx"></a>StrToSet (MDX)
 

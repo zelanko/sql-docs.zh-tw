@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3a427a23-28ef-49aa-b9ec-6cab0914bdf3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87810dc52c1f4bc2e610b90dea9d2bb8997792d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0082245875f2f4dbf749876ede17dd0dc954737
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910829"
 ---
 # <a name="sqlgetcursorname"></a>SQLGetCursorName
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
