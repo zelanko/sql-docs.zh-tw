@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90a39ad540f3320ed78e981030679b59d911eeef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080768"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>規則、觸發程序、預設值和預存程序支援 (Visual FoxPro ODBC Driver)
 您無法建立 Visual FoxPro 規則、 觸發程序、 預設值或使用 Visual FoxPro ODBC Driver 的預存程序。 不過，您的應用程式可能互動與現有的規則、 觸發程序、 預設值或預存程序中，因為它會插入、 更新或刪除 Visual FoxPro 資料儲存在資料庫中。  
@@ -81,7 +80,7 @@ ms.locfileid: "63269870"
 |位元測試 （） 函式|BITXOR （） 函式||  
 |BOF （） 函式|BITAND （） 函式||  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
   
 ||||  
 |-|-|-|  
@@ -254,7 +253,7 @@ ms.locfileid: "63269870"
 |TTOC （） 函式|TTOD （） 函式||  
 |型別 （） 函式|TABLEREVERT （） 函式||  
   
-## <a name="u"></a>u  
+## <a name="u"></a>U  
   
 ||||  
 |-|-|-|  

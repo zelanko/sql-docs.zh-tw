@@ -1,5 +1,5 @@
 ---
-title: InheritTypeEnum | Microsoft Docs
+title: InheritTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b17bdd7204ec52ef5a2fc27d7bc364be7f017189
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aef8f768dd991e4e6ed740cc56600a6f1a8020e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965958"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
 指定物件會列印文件的繼承，請使用設定的權限[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)。  

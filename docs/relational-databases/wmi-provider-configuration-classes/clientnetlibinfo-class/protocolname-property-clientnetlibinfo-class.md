@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0306b08efda2809e57cdf277b109ec8cc7187fd3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dc5d6bce8e62b8c4b679aeaa0260d2b2597a7ee6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995442"
 ---
 # <a name="protocolname-property-clientnetlibinfo-class"></a>ProtocolName 屬性 (ClientNetLibInfo 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

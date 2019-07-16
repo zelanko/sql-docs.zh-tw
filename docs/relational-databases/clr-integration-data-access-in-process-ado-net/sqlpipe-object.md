@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 14a042da7bc757f0f00c0325efa6dd8087aee6b1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6ecc3f87313b6ddcd48b7b0e527ba4effd58e624
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913551"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

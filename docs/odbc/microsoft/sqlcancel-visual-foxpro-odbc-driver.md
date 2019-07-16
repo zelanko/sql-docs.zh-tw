@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f7baa1d-37ef-4051-ae13-7dc38033af16
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fd930376a07be90680dba0faa7d0267978c44e6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b47c611e8a1f403b190c4e73b3d2c327079976f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63050113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009810"
 ---
 # <a name="sqlcancel-visual-foxpro-odbc-driver"></a>SQLCancel (Visual FoxPro ODBC Driver)
 > [!NOTE]  

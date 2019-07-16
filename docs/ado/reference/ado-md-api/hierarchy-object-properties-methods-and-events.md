@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8ec0b00e-0e18-4f1b-9bbf-42168670bf5f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ef9547c1c6364b9799ad6eccade905783966b6c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 366e40cd507970b88a1a844454eeae8699ae699b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949647"
 ---
 # <a name="hierarchy-object-properties-methods-and-events"></a>Hierarchy 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
@@ -35,7 +34,7 @@ ms.locfileid: "66709170"
 ## <a name="methods"></a>方法  
  無。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

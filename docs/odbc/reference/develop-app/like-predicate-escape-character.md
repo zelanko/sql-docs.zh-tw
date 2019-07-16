@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30547551cc1793622eaa981c07bbc002d07a094d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20310c60759aea17d61b9252fd73d226567a7a54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312915"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027235"
 ---
 # <a name="like-predicate-escape-character"></a>LIKE 述詞逸出字元
 在 **像**述詞，百分比符號 （%）比對零或多個任意字元和底線 (_) 會比對任何單一字元。 比對實際的百分比符號或底線中**像**述詞，逸出字元必須在前面的百分比符號或底線。 定義逸出序列**像**述詞逸出字元是：  
   
- **{escape '** *escape-character* **'}**  
+ **{逸出 '** *逸出字元* **'}**  
   
  何處*逸出字元*是資料來源所支援的任何字元。  
   

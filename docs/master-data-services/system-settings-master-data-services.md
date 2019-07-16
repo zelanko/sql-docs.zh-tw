@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 327b0bdc83588ef988a716ba44e859aa5d3f8659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2384d6fa7831c38ff68f495485555701f2a1f7ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085603"
 ---
 # <a name="system-settings-master-data-services"></a>系統設定 (Master Data Services)
 

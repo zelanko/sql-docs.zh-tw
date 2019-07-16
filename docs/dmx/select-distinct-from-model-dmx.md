@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5906dc6d964603576831a5c7009cd0224f0ffb08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928441"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM&lt;模型&gt;(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 ## <a name="remarks"></a>備註  
  **SELECT DISTINCT FROM**陳述式僅適用於具有單一資料行或一組相關的資料行。 這個子句不能配合一組未關聯的資料行使用。  
   
- **SELECT DISTINCT FROM**陳述式可讓您直接參考巢狀資料表內部的資料行。 例如：  
+ **SELECT DISTINCT FROM**陳述式可讓您直接參考巢狀資料表內部的資料行。 例如:  
   
 ```  
 <model>.<table column reference>.<column reference>  
@@ -56,7 +55,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
  結果**SELECT DISTINCT FROM\<模型 >** 陳述式而有所不同，視資料行類型而定。 下表說明支援的資料行類型與陳述式的輸出。  
   
-|資料行類型|輸出|  
+|資料行類型|Output|  
 |-----------------|------------|  
 |Discrete|資料行中的唯一值。|  
 |Discretized|資料行中每個分隔式值區的中點。|  

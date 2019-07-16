@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 73ca766827c1b6149bcb40cec8adefe86e944890
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9181cfc0203bc9c37b5c8eece8d742d628e4bba5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044435"
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Database Mail 中有兩個佇列：郵件佇列和狀態佇列。 郵件佇列儲存等候傳送的郵件項目。 狀態佇列儲存已傳送之項目的狀態。 這個預存程序可檢視郵件或狀態佇列的狀態。 如果參數**@queue_type**未指定，預存程序傳回一個資料列的每個佇列。  
+  Database Mail 中有兩個佇列：郵件佇列和狀態佇列。 郵件佇列儲存等候傳送的郵件項目。 狀態佇列儲存已傳送之項目的狀態。 這個預存程序可檢視郵件或狀態佇列的狀態。 如果參數 **@queue_type** 未指定，預存程序傳回一個資料列的每個佇列。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,8 +51,8 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |**queue_type**|**nvarchar(6)**|佇列的類型。 可能的值為**mail**並**狀態**。|  
 |**length**|**int**|指定佇列中的郵件項目數。|  
 |**state**|**nvarchar(64)**|監視器的狀態。 可能的值為**INACTIVE** （佇列為非作用中），**收到通知**(佇列已受通知要進行接收)，並**RECEIVES_OCCURRING** （接收佇列）。|  
-|**last_empty_rowset_time**|**DATETIME**|佇列上次空的日期和時間。 以軍用時間格式和 GMT 時區表示。|  
-|**last_activated_time**|**DATETIME**|佇列上次啟動的日期和時間。 以軍用時間格式和 GMT 時區表示。|  
+|**last_empty_rowset_time**|**日期時間**|佇列上次空的日期和時間。 以軍用時間格式和 GMT 時區表示。|  
+|**last_activated_time**|**日期時間**|佇列上次啟動的日期和時間。 以軍用時間格式和 GMT 時區表示。|  
   
 ## <a name="remarks"></a>備註  
  當 Database Mail 進行疑難排解，使用**sysmail_help_queue_sp**若要查看佇列中有多少項目，啟動的佇列，和最後一次的狀態。  

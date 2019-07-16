@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4ad701efe914780a74bba3b8f0530b4881d7709
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 94f823cdefe4b3e5a62beb62062356dad3a88a03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036123"
 ---
 # <a name="sqlcancel-function"></a>SQLCancel 函式
 **合規性**  

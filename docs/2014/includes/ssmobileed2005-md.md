@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 3016a85edbd654d24e45e93eb12951b0e01e7789
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67208470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68199729"
 ---
 SQL Server 2005 Mobile Edition

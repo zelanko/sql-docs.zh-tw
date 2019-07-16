@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cbd46df1-cc6d-4fd4-b401-c68ca85e15c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 97a37c894e2f571418b9169fb44ab12abafd3290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 806e981ea897f3482c88808212dce1d0f5a02829
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63024239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002304"
 ---
 # <a name="other-access-driver-programming-details"></a>其他 Access 驅動程式的程式設計詳細資料
 > [!NOTE]  

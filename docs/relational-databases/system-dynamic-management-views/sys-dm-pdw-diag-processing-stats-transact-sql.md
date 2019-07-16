@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_diag_processing_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_diag_processing_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: df659c55-4f63-45f8-8afe-ce300031bc5b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f96dd7be6de1415abb8a71425b083c58e7012d9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b880820ac633402d1d3cdd679b16a54d1be358e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62691375"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899534"
 ---
 # <a name="sysdmpdwdiagprocessingstats-transact-sql"></a>sys.dm_pdw_diag_processing_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc7a140d7de8548f02fde6ab309823bbe1c9c656
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: acb4ff1637c1530527af88affaf437334596016b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62465920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094345"
 ---
 # <a name="sending-long-data"></a>傳送長資料
 定義 Dbms*長資料*為任何字元或二進位資料超過特定大小，例如 254 個字元。 它可能無法儲存在記憶體中，例如當項目所表示的長文字文件或點陣圖的長資料的整個項目。 因為這類資料無法儲存在單一緩衝區中，資料來源就會將它傳送至使用組件中驅動程式**SQLPutData**陳述式執行時。 參數的資料會在執行階段傳送稱為*資料在執行中參數*。  

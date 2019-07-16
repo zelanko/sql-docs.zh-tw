@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0cb332040b7d5e145639bc55feb41ecf62084478
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7687b678e755f508f363fa1b327950232038c04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090837"
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>使用 SSMA for MySQL 主控台 (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) 適用於 MySQL 現可透過在命令列主控台應用程式存取。 指令碼檔案會形成執行命令的應用程式的輸入。 是主控台應用程式中，SSMA 啟用指令碼層級互動可減少移轉週期，並調整的移轉工作。  
@@ -26,7 +25,7 @@ ms.locfileid: "63288327"
   
 |||  
 |-|-|  
-|**主題**|**說明**|  
+|**主題**|**描述**|  
 |[開始使用 SSMA for MySQL 主控台&#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md)|說明執行主控台應用程式的程序。|  
 |[SSMA 主控台中的命令列選項&#40;MySQLToSQL&#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)|描述操作 SSMA 主控台應用程式的命令列選項和參數。|  
 |[建立指令碼檔案&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md)|說明如何建立指令碼檔案。|  

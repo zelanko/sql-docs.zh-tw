@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8a2d19ed59aa10ad75843df03d626f5f880462ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90748ca7f725ddbf947d9686b846695da0c6626c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924061"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>步驟 4：填入 [詳細資料] 文字方塊
 若要填入 [詳細資料] 文字方塊中，建立一個名為新的副程式**recFields**並插入下列程式碼：  

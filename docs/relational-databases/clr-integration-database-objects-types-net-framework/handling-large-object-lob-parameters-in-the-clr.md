@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d07956f6-9543-4476-9426-536f95991150
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6079766625633391e281b99751ba42bb772531e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64b890f7b4dd801a43c85f0375987c6ff5f5cd1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081333"
 ---
 # <a name="handling-large-object-lob-parameters-in-the-clr"></a>處理 CLR 中的大型物件 (LOB) 參數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

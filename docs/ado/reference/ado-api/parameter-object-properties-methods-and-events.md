@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 83de81b055d337c5e68e67dc7128fc5c910cfa1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e20cb08ccfedbc2fa60b703279f8494d0f3f53c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917780"
 ---
 # <a name="parameter-object-properties-methods-and-events"></a>Parameter 物件屬性、 方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
@@ -43,7 +42,7 @@ ms.locfileid: "66703431"
 ## <a name="methods"></a>方法  
  [AppendChunk 方法](../../../ado/reference/ado-api/appendchunk-method-ado.md)  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

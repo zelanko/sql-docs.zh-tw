@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6ad7cdfdfc3c08175faf0584f2ae5069fcd39acb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae0b32385b98ac1b48688a7f89bbd7c91842a106
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911589"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection 屬性 (ADO MD)
 指出哪一個 ado[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件目前的資料格集，或目前所屬的目錄。  

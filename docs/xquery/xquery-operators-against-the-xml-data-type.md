@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2786295b344cfc2df6ae613e42a39f71aee4d3d8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b113fbd8111072790d1f0904b3e751c6629725b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038889"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945950"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>針對 xml 資料類型的 XQuery 運算子
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "56038889"
 ### <a name="a-using-general-operators"></a>A. 使用一般運算子  
  此查詢會說明套用到序列與比較序列的一般運算子使用方式。 此查詢會擷取每個客戶的電話號碼的序列**AdditionalContactInfo**資料行**連絡人**資料表。 然後，將此序列和這兩個電話號碼的序列 ("111-111-1111", "222-2222") 比較。  
   
- 此查詢會使用**=** 比較運算子。 在右側序列中的每個節點**=** 左側序列中每個節點會與比較運算子。 如果節點相符，節點比較就是 **，則為 TRUE**。 接著會轉換為整數並和 1 進行比較，然後查詢會傳回客戶識別碼。  
+ 此查詢會使用 **=** 比較運算子。 在右側序列中的每個節點 **=** 左側序列中每個節點會與比較運算子。 如果節點相符，節點比較就是 **，則為 TRUE**。 接著會轉換為整數並和 1 進行比較，然後查詢會傳回客戶識別碼。  
   
 ```sql
 WITH XMLNAMESPACES (  
@@ -79,7 +78,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-using-a-value-operator"></a>C. 使用值運算子  
- 下列查詢會為圖形大小為 "small" 的產品型號擷取 <`Picture`> 元素：  
+ 下列查詢會擷取 <`Picture`> 圖片大小為"small"的其中一個產品型號的項目：  
   
 ```sql
 SELECT CatalogDescription.query('  

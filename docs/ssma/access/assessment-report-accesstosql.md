@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1278552f1bfe1ccfb7ab250f843e86c62e63440b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c28fb4cf5d110e01b156fc6ce985b2cb2fb7bfe1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62651078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910678"
 ---
 # <a name="assessment-report-accesstosql"></a>評定報告 (AccessToSQL)
 評定報表視窗中顯示的資料庫物件的轉換結果[!INCLUDE[tsql](../../includes/tsql-md.md)]語法，也可以幫助您評估複雜度和成本的移轉專案。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 761cb5368c0b586b63f92952f3938d8708daaf86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d309a1d0bbdf21c94458771e38aa67fd3eb3fe4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183055"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102987"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>執行 SSMA 主控台 (MySQLToSQL)
 Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 SSMA 活動。  
@@ -286,7 +285,7 @@ generate-assessment-report
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <generate-assessment-report  
@@ -360,7 +359,7 @@ convert-schema
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <convert-schema  
@@ -420,7 +419,7 @@ migrate-data
   
 </migrate-data>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <migrate-data  
@@ -439,7 +438,7 @@ migrate-data
   
 **Command**  
   
-map-schema  
+對應結構描述  
   
 目標結構描述的來源資料庫的結構描述對應。  
   
@@ -467,7 +466,7 @@ map-schema
   
 **Command**  
   
-synchronize-target  
+同步處理目標  
   
 1.  會使用目標資料庫，同步處理的目標物件。  
   
@@ -487,7 +486,7 @@ synchronize-target
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   失敗指令碼  
   
 4.  `report-errors-to:` 同步處理作業 （也就是選擇性屬性） 如果只指定資料夾路徑，然後檔案儲存依名稱指定的錯誤報表的位置**TargetSynchronizationReport.XML**建立。  
   
@@ -508,7 +507,7 @@ synchronize-target
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <synchronize-target  
@@ -517,7 +516,7 @@ synchronize-target
   
   object-type="<object-category>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <synchronize-target>  
@@ -550,7 +549,7 @@ refresh-from-database
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   失敗指令碼  
   
 4.  `report-errors-to:` 同步處理作業 （也就是選擇性屬性） 如果只指定資料夾路徑，然後檔案儲存依名稱指定的錯誤報表的位置**SourceDBRefreshReport.XML**建立。  
   
@@ -573,7 +572,7 @@ refresh-from-database
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <refresh-from-database  
@@ -582,7 +581,7 @@ refresh-from-database
   
    object-type="<object-category>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <refresh-from-database>  
@@ -632,7 +631,7 @@ save-as-script
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <save-as-script  
@@ -708,7 +707,7 @@ convert-sql-statement
   
 </convert-sql-statement>  
 ```  
-中的多個  
+或  
   
 ```  
 <convert-sql-statement  
@@ -733,7 +732,7 @@ convert-sql-statement
   
 />  
 ```  
-中的多個  
+或  
   
 ```  
 <convert-sql-statement  

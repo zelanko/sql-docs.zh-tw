@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0f423eb2d06ccdc925402d0db5d8a459f7ffdd5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dabf974e36b1f6beaff36f3a4888c128d7dfe1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921517"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection 屬性 (ADO)
 表示要[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件指定[命令](../../../ado/reference/ado-api/command-object-ado.md)，[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，或[記錄](../../../ado/reference/ado-api/record-object-ado.md)目前所屬的物件。  

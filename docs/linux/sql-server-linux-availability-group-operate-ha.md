@@ -4,18 +4,17 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: c1dfdeead4f8eb82dc95882d719ef42f16017bdc
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 24a9d3d9ee0fd65b08e30f40a0597eadf47c6b76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916044"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>一律對 Linux 上的可用性群組
 

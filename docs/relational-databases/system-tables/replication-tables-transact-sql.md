@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f89da45bfaaf4c3878fa6535082f5872dcfd04a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3dc89ce68529212246d85bdbafa8d9487b77a067
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499545"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910231"
 ---
 # <a name="replication-tables-transact-sql"></a>複寫資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 44bede292cb49ddcfd791b3e7d65605e1aa2399c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a98aa3752259fe93fff7086c7918a31532a7d7e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906689"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>建立模型管理員 (Master Data Services)
 
@@ -29,7 +28,7 @@ ms.locfileid: "65487498"
 > [!TIP]  
 >  若要簡化管理，請建立 Windows 或本機群組，然後將此群組設定為模型管理員。 然後不需存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]，您就可以在群組中加入及移除使用者。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [使用者及群組的權限]  功能區域的權限。  

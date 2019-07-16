@@ -1,5 +1,5 @@
 ---
-title: sp_help_publication_access (Transact-SQL) | Microsoft Docs
+title: sp_help_publication_access (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb281923e5b6d48a23cb6aa3f60bf36bbe9764da
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8af56ae768ca883e22d7c9e18150e75025086d63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085266"
 ---
 # <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 `[ @return_granted = ] 'return_granted'` 這是登入識別碼。 *return_granted*已**元**，預設值是 1。 如果**0**指定和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用驗證時，會傳回出現在 「 發行者 」，而不是在散發者端的可用登入。 如果**0**指定和使用 Windows 驗證、 登入未明確拒絕存取在 「 發行者 」 或 「 散發者 」 會傳回。  
   
-`[ @login = ] 'login'` 這是標準安全性登入識別碼。 *登入*已**sysname**，預設值是**%**。  
+`[ @login = ] 'login'` 這是標準安全性登入識別碼。 *登入*已**sysname**，預設值是 **%** 。  
   
 `[ @initial_list = ] initial_list` 指定是否傳回含發行集存取權，或只是新成員加入至清單之前有存取權的所有成員。 *initial_list* bit，預設值是**0**。  
   
@@ -59,7 +58,7 @@ sp_help_publication_access [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**Loginname**|**nvarchar(256)**|實際的登入名稱。|  
 |**isntname**|**int**|**0** = 登入不是 Windows 使用者。<br /><br /> **1** = 登入是 Windows 使用者。|  
-|**Isntgroup**|**int**|**0** = 登入不是 Windows 群組。<br /><br /> **1** = 登入是 Windows 群組。|  
+|**isntgroup**|**int**|**0** = 登入不是 Windows 群組。<br /><br /> **1** = 登入是 Windows 群組。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -74,7 +73,7 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>另請參閱  
  [sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
- [sp_revoke_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d338d3d5039c6b8c3111dbccf7e49d161435e0cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fac1e0c639bbe49e0c837f6de0a5abd9d2139d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102560"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>使用者及群組的權限功能區域 (主資料管理員)
 

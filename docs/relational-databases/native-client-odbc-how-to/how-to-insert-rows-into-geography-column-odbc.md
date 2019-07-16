@@ -1,5 +1,5 @@
 ---
-title: 如何：將資料列插入至 Geography 資料行 (ODBC) |Microsoft Docs
+title: HOW TO：將資料列插入至 Geography 資料行 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,16 +10,15 @@ ms.topic: reference
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc99a6dc997dd5cad589784446235a2ea1011d7d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1941580667de39b4370df531aa4e82a1b50fdbfe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206277"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898468"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>如何：將資料列插入至 Geography 資料行 (ODBC)
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>HOW TO：將資料列插入 Geography 資料行 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 

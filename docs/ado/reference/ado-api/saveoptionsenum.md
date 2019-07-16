@@ -1,5 +1,5 @@
 ---
-title: SaveOptionsEnum | Microsoft Docs
+title: SaveOptionsEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 537c5bfa6e1da125b562d4cc26820a2fcb5618fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 807a8d7e5757a2caf76f100a1ae51c4a8a3f4e98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931142"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
 指定檔案是否要建立或覆寫時從儲存[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。 值可以是**adSaveCreateNotExist**或是**adSaveCreateOverWrite**...  

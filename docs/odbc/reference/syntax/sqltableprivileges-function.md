@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3581c5ae7b9f4e41d0f8646f4e6e1d2cca1a2ca8
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: e63677180cc86f022550477bd598eaa61013d694
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039518"
 ---
 # <a name="sqltableprivileges-function"></a>SQLTablePrivileges 函數
 **合規性**  

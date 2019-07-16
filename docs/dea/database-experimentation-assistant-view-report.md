@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: da99a24ab6729e78220aeed3d18819e7b075603f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 066297daff3393304b83b77238277f873e1c97fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050453"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>檢視分析報告，在 資料庫測試助理
 

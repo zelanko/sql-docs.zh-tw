@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37db1ae1-ca4e-4cd8-9b47-7f1a38e7fcad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2325cd7e4a10e91f351aa2107c64c0978b843fa6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1bb7f0fb02049b6d2f1897c4f495035aee2858f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085489"
 ---
 # <a name="jet-date-time-and-timestamp-literals"></a>Jet：日期、時間和時間戳記常值
 最大的互通性，應用程式應該傳遞日期常值使用 escape 子句語法的 ODBC 標準格式：  

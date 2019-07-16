@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 604718c747819517bd323b73f276eb1fcc2a220f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d9ce81a0d7aad6b41945b1564076004db80cd5e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900282"
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "56024991"
 |resource_type_desc|**nvarchar(2048)**|執行作業所在的資源類型描述。 在目前的版本中，這個檢視只會追蹤 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 上所執行的作業。|  
 |major_resource_id|**sql_variant**|執行作業所在的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的名稱。 非 Null。|  
 |minor_resource_id|**sql_variant**|僅供內部使用。 非 Null。|  
-|operation (作業)|**nvarchar(60)**|在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 上執行的運算，例如 CREATE 或 ALTER。|  
+|operation|**nvarchar(60)**|在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 上執行的運算，例如 CREATE 或 ALTER。|  
 |state|**tinyint**|作業的狀態。<br /><br /> 0 = 暫止<br />1 = 進行中<br />2 = 已完成<br />3 = 失敗<br />4 = 已取消|  
 |state_desc|**nvarchar(120)**|PENDING = 作業正在等候可用的資源或配額。<br /><br /> IN_PROGRESS = 作業已開始且正在進行。<br /><br /> COMPLETED = 作業已成功完成。<br /><br /> FAILED = 作業失敗。 請參閱**error_desc**如需詳細資訊的資料行。<br /><br /> CANCELLED = 使用者要求停止作業。|  
 |percent_complete|**int**|已完成作業的百分比。 值不連續且有效的值如下。 不是 NULL。<br/><br/>0 = 未啟動的作業<br/>50 = 作業進行中<br/>100 = 作業完成|  

@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd0d134e723a8ca45729933cbbf5b0d75bbde7e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ff5b859b9bddce216e4f6bed343611ec155ffbf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078348"
 ---
-# <a name="active-geo-replication---spwaitfordatabasecopysync"></a>Active Geo-Replication - sp_wait_for_database_copy_sync
+# <a name="active-geo-replication---spwaitfordatabasecopysync"></a>作用中異地複寫-sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   這個程序的範圍為主要和次要資料庫之間的 [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] 關聯性。 呼叫**sp_wait_for_database_copy_sync**會導致應用程式等候，直到所有認可的交易都複寫及認可作用中次要資料庫。 執行**sp_wait_for_database_copy_sync**僅在主要資料庫上。  

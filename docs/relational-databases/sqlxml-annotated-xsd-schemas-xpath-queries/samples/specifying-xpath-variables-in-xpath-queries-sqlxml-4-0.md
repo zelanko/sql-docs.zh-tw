@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f6d8bb97da7bd678f23c13f48c6a4c973071b43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1036b6e1255013fac79e10b31f5870436344c36c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62737477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027046"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定 XPath 變數 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 82194a6a14dd4222803460cb99921b85677727fc
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67231338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68185600"
 ---
 Visual Basic

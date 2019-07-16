@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb993a762ed4fed61c1a290fb8fa4c6eb7c0b885
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b25dda01866157b66c5bdac62207e968ea6bb165
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908179"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>處理結果的使用說明主題 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

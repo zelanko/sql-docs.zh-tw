@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f155e6bf823c687a52939e68fcfe10329bd33a35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 75a23041a3e822ec103012aa18475a092b27b816
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65476743"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074502"
 ---
 # <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>概觀：將資料匯出至 Excel (適用於 Excel 的 MDS 增益集)
 

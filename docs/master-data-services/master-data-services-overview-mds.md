@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3514f15156de2856be6e13b0df29affa23e78303
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f45fb5484d5c8c2d34cde9042018a0eb0370d29a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062730"
 ---
 # <a name="master-data-services-overview-mds"></a>Master Data Services 概觀 (MDS)
 
@@ -57,7 +56,7 @@ ms.locfileid: "65489748"
 > [!NOTE]  
 >  安裝 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]後，您可能想要在測試環境中完成下列工作，並使用所提供的範例資料。 如需詳細資訊，請參閱[部署模型 &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)。  
   
-|動作|詳細資料|相關主題|  
+|Action|詳細資料|相關主題|  
 |------------|-------------|--------------------|  
 |建立模型|模型建立時會被視為 VERSION_1。|[模型 &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)<br /><br /> [建立模型 &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
 |建立實體|視需要建立多個實體以包含成員。|[實體 &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)<br /><br /> [建立實體 &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)|  

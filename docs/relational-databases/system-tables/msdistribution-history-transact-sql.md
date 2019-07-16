@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 305223fca45bb1916598f02c16cc4e38981e861d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1053181486dba8c8119f9160d9c08cb8d2bbe56b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62903667"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907397"
 ---
 # <a name="msdistributionhistory-transact-sql"></a>MSdistribution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "62903667"
 |**start_time**|**datetime**|開始執行作業的時間。|  
 |**time**|**datetime**|記錄訊息的時間。|  
 |**duration**|**int**|訊息工作階段的持續時間 (以秒為單位)。|  
-|**comments**|**nvarchar(4000)**|訊息文字。|  
+|**註解**|**nvarchar(4000)**|訊息文字。|  
 |**xact_seqno**|**varbinary(16)**|前次處理的交易序號。|  
 |**current_delivery_rate**|**float**|在最後一個記錄項目之後，每秒傳遞的平均命令數。|  
 |**current_delivery_latency**|**int**|在前一個記錄項目之後，在命令輸入散發資料庫和套用至訂閱者之間的延遲 (毫秒)。|  

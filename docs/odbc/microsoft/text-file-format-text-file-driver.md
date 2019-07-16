@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cd2bc95e6fe5468e88fc61dd8ed4adcd985ec052
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 51619902398f0e3d0a8307a0c76a40ab898ce88d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912447"
 ---
 # <a name="text-file-format-text-file-driver"></a>文字檔格式 (文字檔驅動程式)
 ODBC 文字驅動程式支援這兩個分隔和固定寬度文字檔案。 文字檔案是由選擇性標頭行，零或多個文字行所組成。  
@@ -42,7 +41,7 @@ ODBC 文字驅動程式支援這兩個分隔和固定寬度文字檔案。 文�
 |------------|--------------------|  
 |非斜體|必須輸入所顯示的字元|  
 |*italics*|在文法中其他地方定義的引數|  
-|brackets ([])|選擇性項目|  
+|括號 ([])|選擇性項目|  
 |大括號 ({})|互斥的選項清單|  
 |分隔號 (&#124;)|不同的是互斥的選項|  
 |省略符號 （...）|可以重複一次以上的項目|  

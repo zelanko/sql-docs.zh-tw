@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b072c3c07ea2f70e365ca04be83d407203d48b01
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1248add51d33b46978230ffcb0467ec6ed25e976
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076629"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>使用 Multiple Active Result Sets (MARS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +77,7 @@ ms.locfileid: "52521366"
   
  如需從 ADO 使用 MARS 的範例，請參閱 <<c0> [ 使用與 SQL Server Native Client 的 ADO](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)。  
   
-## <a name="in-memory-oltp"></a>In-Memory OLTP  
+## <a name="in-memory-oltp"></a>記憶體內部 OLTP  
  記憶體內部 OLTP 支援 MARS 使用查詢，而且原生編譯的預存程序。 MARS 可讓多個查詢，而不需要完全擷取的各結果集傳送要求，以從新的結果集提取資料列之前要求資料。 為了能夠成功讀取從多個開啟的結果集，您必須使用 MARS 啟用連接。  
   
  MARS 預設為停用因此，您必須明確啟用它藉由新增`MultipleActiveResultSets=True`的連接字串。 下列範例示範如何連接到 SQL server 執行個體，並指定已啟用 MARS:  

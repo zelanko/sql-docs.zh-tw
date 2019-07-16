@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7382e4d1b9e9d968d7ad87af9830691dd931d657
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934550"
 ---
 # <a name="automatic-tuning"></a>自動調整
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "54226615"
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]監視的資料庫和自動執行的查詢可改善工作負載的效能。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]有內建智慧機制可自動調整並改善查詢效能的動態調整您的工作負載的資料庫。 有兩個自動調整功能，可用：
 
- -  **自動計劃更正**識別有問題的查詢執行計劃並修正查詢執行計劃效能問題。 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ -  **自動計劃更正**識別有問題的查詢執行計劃並修正查詢執行計劃效能問題。 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
  -  **自動索引管理**識別應該在資料庫中，新增的索引，以及應該移除的索引。 **適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ## <a name="why-automatic-tuning"></a>為什麼自動調整？
@@ -96,7 +95,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 在  [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，您可以找到使用查詢存放區的系統檢視的計畫選擇迴歸。 中[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]，則[!INCLUDE[ssde_md](../../includes/ssde_md.md)]偵測到，並顯示可能的計畫選擇迴歸和建議的動作應該套用在[sys.dm_db_tuning_recommendations &#40;-&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)檢視。 檢視會顯示相關問題的重要性，問題，以及詳細資料，例如識別查詢中，迴歸的計畫的識別碼，用來作為基礎進行比較，計畫的識別碼資訊和[!INCLUDE[tsql_md](../../includes/tsql-md.md)]可以執行，以修正的陳述式發生問題。
 
-| 型別 | description | DATETIME | score | 詳細資料 | ... |
+| type | description | datetime | score | details | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | 從 4 毫秒變更為 14 毫秒的 CPU 時間 | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | 從 37 毫秒變更為 84 毫秒的 CPU 時間 | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |

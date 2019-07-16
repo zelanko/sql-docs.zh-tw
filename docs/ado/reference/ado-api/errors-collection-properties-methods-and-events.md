@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 606f2b92-3821-4d11-a207-4c22f6f35619
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 79274201452e4f6a2e376576a9d77ca12eb9ad3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37f6f109a53ad576a3849b4d8977c457ee3cbef9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697989"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918900"
 ---
 # <a name="errors-collection-properties-methods-and-events"></a>錯誤的集合屬性、 方法和事件
 ## <a name="properties"></a>屬性  
@@ -31,7 +30,7 @@ ms.locfileid: "66697989"
   
  [Refresh 方法](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

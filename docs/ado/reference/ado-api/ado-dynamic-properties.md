@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2ad6c2804b70011380a12b5b9e0cd1f52fd56398
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71396a071a42d7dd40a6537a2834541aab2b6bad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696862"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921099"
 ---
 # <a name="ado-dynamic-properties"></a>ADO 動態屬性
 動態屬性可以新增至[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)的集合[連線](../../../ado/reference/ado-api/connection-object-ado.md)，[命令](../../../ado/reference/ado-api/command-object-ado.md)，或[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 這些屬性的來源是任一個資料提供者，例如[OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)，或服務提供者，例如[Microsoft OLE DB 的資料指標服務](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)。 請參閱適當的資料提供者或服務提供者文件，如需特定的動態屬性。  
@@ -31,7 +30,7 @@ ms.locfileid: "66696862"
 |||  
 |-|-|  
 |[最佳化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|指定是否應該在此欄位上建立索引。|  
-|[Prompt](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|指定的 OLE DB 提供者是否應該提示使用者提供初始化資訊。|  
+|[提示](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|指定的 OLE DB 提供者是否應該提示使用者提供初始化資訊。|  
 |[調整形狀名稱](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|指定的名稱**資料錄集**物件。|  
 |[重新同步命令](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|指定使用者所提供的命令字串**Resync**方法來重新整理中所命名的資料表中資料的問題**唯一資料表**動態屬性。|  
 |[唯一資料表、 唯一的結構描述、 唯一目錄](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**唯一資料表**指定基底資料表的更新、 插入和刪除允許的名稱。<br /><br /> **唯一的結構描述**指定結構描述或資料表的擁有者的名稱。<br /><br /> **唯一目錄**指定的目錄或資料庫包含資料表的名稱。|  

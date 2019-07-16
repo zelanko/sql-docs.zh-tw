@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1188bb26c8c63267f30110bf890589d1670fdf8b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 27c10f9d5fa04ae449bdcca84891f0f28376eeb6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075704"
 ---
 # <a name="spreinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
   
 `[ @subscriber_db = ] 'subscriber_db'` 為訂閱者資料庫的名稱。 *subscriber_db*已**sysname**，預設值是**所有**。  
   
-`[ @upload_first = ] 'upload_first'` 是，是否在訂閱者端的變更上傳之前重新初始化訂閱。 *upload_first*已**nvarchar(5)**，預設值是 FALSE。 如果 **，則為 true**，訂用帳戶重新初始化之前上傳變更。 如果**false**，不會上傳變更。  
+`[ @upload_first = ] 'upload_first'` 是，是否在訂閱者端的變更上傳之前重新初始化訂閱。 *upload_first*已**nvarchar(5)** ，預設值是 FALSE。 如果 **，則為 true**，訂用帳戶重新初始化之前上傳變更。 如果**false**，不會上傳變更。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

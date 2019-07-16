@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0409df7157705d5e2c8b5ea0fdfe18ef4fd0e4c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e37b2b4f4f6dc101f553fe4a399e428d1580b42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094360"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>刪除訂閱檢視 (Master Data Services)
 

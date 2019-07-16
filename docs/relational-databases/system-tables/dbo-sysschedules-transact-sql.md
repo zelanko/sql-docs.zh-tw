@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a1922fd8b9cdfb327186afe453fc1904d698579
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a87e7819d96151ea918b8b5f33fb5f4c9e1fbd3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096988"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "62470710"
 |**schedule_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業排程的識別碼。|  
 |**schedule_uid**|**uniqueidentifier**|作業排程的唯一識別碼。 這個值用來識別分散式作業的排程。|  
 |**originating_server_id**|**int**|作業排程的來源主要伺服器識別碼。|  
-|**name**|**sysname (nvarchar(128))**|作業排程的使用者自訂名稱。 這個名稱在作業內必須是唯一的。|  
+|**name**|**sysname （nvarchar(128）)**|作業排程的使用者自訂名稱。 這個名稱在作業內必須是唯一的。|  
 |**owner_sid**|**varbinary(85)**|Microsoft Windows *security_identifier&lt*的使用者或群組擁有作業排程。|  
 |**enabled**|**int**|作業排程的狀態：<br /><br /> **0** = 未啟用。<br /><br /> **1** = 啟用。<br /><br /> 如果未啟用排程，便不會依據這份排程來執行任何作業。|  
 |**freq_type**|**int**|針對這份排程來執行作業的頻率。<br /><br /> **1** = 只一次<br /><br /> **4** = 每天<br /><br /> **8** = 每週<br /><br /> **16** = 每月<br /><br /> **32** = 每月，相對於**freq_interval**<br /><br /> **64** = SQL Server Agent 服務啟動時執行<br /><br /> **128** = 時電腦閒置時執行|  
@@ -66,6 +65,6 @@ ms.locfileid: "62470710"
 |**128** （在電腦閒置時執行）|**freq_interval**未使用 (**0**)|  
   
 ## <a name="see-also"></a>另請參閱  
- [dbo.sysjobschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
+ [msdb &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   
   
