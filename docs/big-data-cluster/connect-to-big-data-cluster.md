@@ -5,17 +5,16 @@ description: 了解如何連接到 SQL Server 的主要執行個體和 SQL Serve
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d4eebad10a18b98ecc5d62ab981dcb3955ae2d29
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 1f09763b210427c84efe75d693fee302d7048db7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958648"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>連線到 SQL Server 的巨量資料叢集使用 Azure Data Studio
 
@@ -23,7 +22,7 @@ ms.locfileid: "67729083"
 
 本文說明如何從 Azure Data Studio 連接到 SQL Server 2019 巨量資料叢集 （預覽）。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 - 已部署[SQL Server 2019 巨量資料叢集](deployment-guidance.md)。
 - [SQL Server 2019 巨量資料工具](deploy-big-data-tools.md):

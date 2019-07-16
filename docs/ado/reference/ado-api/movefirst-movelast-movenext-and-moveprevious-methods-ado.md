@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 83e216f15da49150481af18ee98aac1f604b2394
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5f0cdacc6e0d7e5512dbc259815e5b9562c9b68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918114"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>MoveFirst、 MoveLast、 MoveNext 和 MovePrevious 方法 (ADO)
 移至 [first、 last、 下一步]，或上一個記錄中指定[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，會記錄目前的記錄。  

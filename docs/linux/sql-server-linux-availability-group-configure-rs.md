@@ -5,17 +5,16 @@ description: 了解 Linux 上設定 SQL Server Alwayson 上可用性群組 (AG) 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4cbb11da91864716838a7fbb4be26ac2dc00614c
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: fcfa4510c9f33ee3aa6fc33cafb43cb627b0f53c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027266"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>在 Linux 上設定 SQL Server 可用性群組的讀取級別
 

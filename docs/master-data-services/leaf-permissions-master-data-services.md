@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5854df5b70664de7455e3da87cd7233b7f419c5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72ac77fd62bd0dd0f315bd214f94fe759923ffda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007197"
 ---
 # <a name="leaf-permissions-master-data-services"></a>分葉權限 (Master Data Services)
 

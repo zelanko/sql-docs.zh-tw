@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: f929c973a400b600a220a920b944d7a9d46df6a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8101e9545b6b4d0c2d924092db9e0ed07982952
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802142"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935580"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>為 DQS 記錄檔設定嚴重性層級
 

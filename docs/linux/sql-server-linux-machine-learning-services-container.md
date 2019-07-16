@@ -3,19 +3,18 @@ title: 執行 SQL Server Machine Learning 在容器中的服務 |Microsoft Docs
 description: 本教學課程會示範如何使用 SQL Server Machine Learning 服務在 Docker 上執行的 Linux 容器。
 author: uc-msft
 ms.author: umajay
-manager: craigg
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.collection: linux-container
 moniker: '>= sql-server-linux-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3e654e29d6c49d3bf68cdfe7c4e3b479b47a973c
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 484f4fc9e51bc8d6ec4ad6e2e75df88593672c28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67840467"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941086"
 ---
 # <a name="run-sql-server-machine-learning-services-in-a-container"></a>執行 SQL Server Machine Learning 在容器中的服務
 

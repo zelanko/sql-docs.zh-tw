@@ -8,13 +8,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: c2cf95e2d86836cd22aaa9dc67942f9d83c97e8c
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 961d55237af75c0ef169332068c91e7d2341a542
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141407"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962780"
 ---
 #  <a name="get-r-and-python-package-information"></a>取得 R 和 Python 套件資訊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7e308589ab565b5702bbf2cba939835a50c08d8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f07f230f52fee5707084c01060e92220b35cb75c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029120"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>開始使用 SSMA for SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) 的 SAP ASE 可讓您快速轉換至 SAP Adaptive Server Enterprise (ASE) 的資料庫結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL Database 的結構描述上傳到產生的結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL Database，並將資料從SAP ASE[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL Database。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fdab9e6e60311aca4ce0ae35f92e38c45fdf3702
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13adfb16b772acc5fac30cf3d10c6199f16f479d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018473"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100618"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>覆寫間隔資料類型的預設前置和秒精確度
 當 ARD 的 SQL_DESC_TYPE 欄位設定為日期時間或間隔 C 類型時，藉由呼叫**SQLBindCol**或是**SQLSetDescField**，SQL_DESC_PRECISION 欄位 （其中包含間隔秒數有效位數） 會設定下列預設值為：  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a85aca1b-8135-4c81-9a05-da5aec76f1ed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6f2bae4087d929ec7f13caff28bd19afabfa6aae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 445d1c0e9d220e4dc9a2d8806bae8d7a7f8bfdc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004248"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010620"
 ---
 # <a name="spsyscollectorsetwarehousedatabasename-transact-sql"></a>sp_syscollector_set_warehouse_database_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

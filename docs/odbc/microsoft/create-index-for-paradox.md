@@ -1,5 +1,5 @@
 ---
-title: CREATE INDEX for Paradox | Microsoft Docs
+title: Paradox 的 CREATE INDEX |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: 6472bd69-b931-4bc2-a9bf-f1873ed4cdfe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15e16fb311bf3c9acb2823772247e0fc16eabeef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 331613676b748453a56da1e41fe85f04a7715038
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232305"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081943"
 ---
 # <a name="create-index-for-paradox"></a>Paradox 的 CREATE INDEX
 CREATE INDEX 陳述式，ODBC Paradox 驅動程式的語法是：  
   
  **CREATE** [**UNIQUE**] **INDEX** *index-name*  
   
- **ON** *table-name*  
+ **ON** *資料表名稱*  
   
  **(** *column-identifier* [**ASC**]  
   
- [ **,** *column-identifier* [**ASC**]...] **)**  
+ [ **，** *資料行識別碼*[**ASC**]...] **)**  
   
  ODBC Paradox 驅動程式不支援**DESC** CREATE INDEX 陳述式的 ODBC SQL 文法中的關鍵字。 *資料表名稱*引數可以指定資料表的完整路徑。  
   

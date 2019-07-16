@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4e587d29d8e711fa3e61a7e80fa447566b2e1411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28330ba902b32f0b9622a3b8df0ca316848e1752
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102573"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>升級資料庫精靈 (Master Data Services 組態管理員)
 
@@ -24,7 +23,7 @@ ms.locfileid: "65485043"
 
   使用 [升級資料庫精靈]  升級 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。  
   
-## <a name="action"></a>動作  
+## <a name="action"></a>Action  
  這是精靈的簡介頁面。 按一下 [下一步]  ，開始升級資料庫的程序。  
   
 ## <a name="upgrade-review"></a>升級檢閱  

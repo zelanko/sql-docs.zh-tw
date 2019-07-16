@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3253bf60-5ea6-4525-8744-c21070c4df0e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b90695d83817208922badcffb8bf1f2eda80b3a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7c47c229c925da14acfd58857d79b46a49deb6de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023726"
 ---
 # <a name="service-broker-related-dynamic-management-views-transact-sql"></a>Service Broker 相關的動態管理檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: sp_OASetProperty (Transact-SQL) | Microsoft Docs
+title: sp_OASetProperty (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d2d3cc319a99c9e1b157e5b6bc06cabea2dd19a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ecbfba038b1954565839a3d931ef96431b77f50b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65450079"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008945"
 ---
 # <a name="spoasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

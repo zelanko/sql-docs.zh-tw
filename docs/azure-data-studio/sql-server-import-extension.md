@@ -10,13 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: 5866e70945e7a507c0a8887abf006858d37c2bf0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 012c2c880e81c095e90086cf26ebffd6117d534e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959126"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server 匯入擴充功能 （預覽）
 

@@ -7,13 +7,12 @@ ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f31da296bf55b7da55a4e5a8398d411bc5a5b0ea
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: d5a434b6e089cd77a2bd685506e5552c4e1e7f6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961942"
 ---
 # <a name="sql-server-2017-python-tutorials"></a>SQL Server 2017 Python 教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

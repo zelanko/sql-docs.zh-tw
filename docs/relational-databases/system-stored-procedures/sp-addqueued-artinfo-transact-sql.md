@@ -1,5 +1,5 @@
 ---
-title: sp_addqueued_artinfo (Transact-SQL) | Microsoft Docs
+title: sp_addqueued_artinfo (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e44891f5a16625cb6c3176fac8188fa568822add
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: a0f94fbf686e9b9bd9fd1b6780b298c661ce42f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031016"
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
   
 `[ @dest_table = ] _'dest_table'` 是目的地資料表的名稱。 *dest_table*已**sysname**，沒有預設值。  
   
- [**@owner =** ] **'**_owner_**'**  
+ [ **@owner =** ] **'** _owner_ **'**  
  這是訂閱的擁有者。 *擁有者*已**sysname**，沒有預設值。  
   
 `[ @cft_table = ] 'cft_table'` 這篇文章的佇列更新衝突資料表名稱。 *cft_table*已**sysname**，沒有預設值。  
@@ -73,7 +72,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ## <a name="remarks"></a>備註  
  **sp_addqueued_artinfo**正由 「 散發代理程式做為訂閱初始化的一部分。 使用者通常不會執行這個預存程序，但如果使用者需要手動設定訂閱，它可能很有用。  
   
- [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) instead of **sp_addqueued_artinfo**.  
+ [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)而非**sp_addqueued_artinfo**。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_addqueued_artinfo**。  
@@ -81,7 +80,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ## <a name="see-also"></a>另請參閱  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [sp_script_synctran_commands &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
- [MSsubscription_articles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
+ [MSsubscription_articles &#40;Transact SQL&#41;](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

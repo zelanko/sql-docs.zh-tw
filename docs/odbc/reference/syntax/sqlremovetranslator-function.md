@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 42513e6dcf32e21030e56fd3b386800b7525f534
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a577a868f7b56a6677da3cb12cfb29057ea66f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537143"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024517"
 ---
 # <a name="sqlremovetranslator-function"></a>SQLRemoveTranslator 函式
 **合規性**  

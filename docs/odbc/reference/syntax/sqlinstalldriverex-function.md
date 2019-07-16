@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5664a4cb745a250aa8db6d98b92a275bb91c7a8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 673e3e53468780ef261a22b00a2ec1bb9df0e184
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030600"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx 函式
 **合規性**  
@@ -100,7 +99,7 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>註解  
  *LpszDriver*引數是一份關鍵字-值配對的形式的屬性。 每組都終止 null 位元組，並將整個清單結尾 null 位元組。 （也就是兩個 null 位元組標記清單的結尾）。此清單的格式如下所示：  
   
- _driver-desc_ **\\** 0Driver **=** _driver-DLL-filename_ **\\** 0[Setup **=** _setup-DLL-filename_<b>\\</b>0]  
+ _驅動程式 desc_ **\\** 0Driver **=** _驅動程式 DLL 的檔名_ **\\** 0 [安裝程式 **=** _安裝程式-DLL 檔名_<b>\\</b>0]  
   
  [_driver-attr-keyword1_ **=** _value1_<b>\\</b>0][_driver-attr-keyword2_ **=** _value2_<b>\\</b>0]...<b>\\</b>0  
   

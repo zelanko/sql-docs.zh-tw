@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 893921a7100ca22cae219f5a0e88d543499053b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 55ea62fac0cb2fe73b368429bb164cd28147fa7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923368"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 資料錄集保存案例
 在此案例中，您將建立 Active Server Pages (ASP) 應用程式，直接將資料錄集物件的內容將 ASP 回應物件。  
@@ -38,10 +37,10 @@ ms.locfileid: "66699701"
   
 -   接收並顯示資料  
   
-## <a name="step-1-set-up-the-application"></a>步驟 1:設定應用程式  
+## <a name="step-1-set-up-the-application"></a>步驟 1：設定應用程式  
  建立名為"XMLPersist 」 指令碼的權限的 IIS 虛擬目錄。 虛擬目錄指向，一個具名"XMLResponse.asp，「 其他具名"Default.htm。 」 的資料夾中建立兩個新的文字檔案  
   
-## <a name="step-2-get-the-data"></a>步驟 2:取得資料  
+## <a name="step-2-get-the-data"></a>步驟 2：取得資料  
  在此步驟中，您將撰寫程式碼以開啟 ADO 資料錄集，並準備將它傳送至用戶端。 開啟檔案 XMLResponse.asp 使用文字編輯器，例如 [記事本]，並插入下列程式碼。  
   
 ```  
