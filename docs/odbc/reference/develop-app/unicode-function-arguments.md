@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 83cb2faad86268c3270e9386ca10b25e4807e030
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 1fee0aa76bc5b903d65461261a8eb5dbc2349581
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793752"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087759"
 ---
 # <a name="unicode-function-arguments"></a>Unicode 函式引數
 ODBC 3.5 （或更新版本） 驅動程式管理員支援接受字元字串或 SQLPOINTER 指標，其引數中的所有函式的 ANSI 和 Unicode 版本。 Unicode 函式會實作為函式 (尾碼*W*)，而非巨集。 ANSI 函式 (使用或後置字元不可以呼叫它*A*) 與目前的 ODBC API 函式相同。  

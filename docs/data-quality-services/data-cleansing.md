@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: bab1a01466d278c80f38b8f4c6071e190737ed89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18bda14c90441375d59f6057f1cdfedac85bdaa0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785447"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935440"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 

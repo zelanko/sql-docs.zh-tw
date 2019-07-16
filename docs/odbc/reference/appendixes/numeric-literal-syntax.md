@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 18b1c144e84bf0be5aaeb68b66660f7bc7865ade
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9daa81e2e0c2e927ee7407d4a00d5d48c333bd54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990725"
 ---
 # <a name="numeric-literal-syntax"></a>數值常值語法
 ODBC 中的數值常值會使用下列語法：  
@@ -33,17 +32,17 @@ ODBC 中的數值常值會使用下列語法：
   
  *exact-numeric-literal* ::= *unsigned-integer* [*period*[*unsigned-integer*]] *&#124;period unsigned-integer*  
   
- *sign* ::= *plus-sign &#124; minus-sign*  
+ *登*:: =*加號&#124;負號*  
   
- *approximate-numeric-literal* ::= *mantissa E exponent*  
+ *近似數值常值*:: =*尾數 E 的指數*  
   
  *mantissa* ::= *exact-numeric-literal*  
   
- *exponent* ::= *signed-integer*  
+ *指數*:: =*帶正負號整數*  
   
- *signed-integer* ::= [*sign*] *unsigned-integer*  
+ *帶正負號整數*:: = [*號*]*不帶正負號整數*  
   
- *unsigned-integer* ::= *digit...*  
+ *不帶正負號整數*:: =*數字...*  
   
  *plus-sign* ::= *+*  
   

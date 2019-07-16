@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6b08e09e9d46ac31cf08205a7e9336194c4d4858
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f097d66259e51e2883dd350a33f7d7ff6a6bbba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963989"
 ---
 # <a name="internettimeout-property-example-vb"></a>InternetTimeout 屬性範例 (VB)
 > [!IMPORTANT]
@@ -78,7 +77,7 @@ End Sub
   
 ## <a name="see-also"></a>另請參閱  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+ [DataSpace 物件 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [InternetTimeout 屬性 (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)
 
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 54865b00-563a-4932-ad4d-cbfd36b1e6c5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bedca4dc79192c54c5262da05f5ba72d8fe191e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6eeba7adb9d1716120f046a3b937e0e9a0e21a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085579"
 ---
 # <a name="technical-reference-master-data-services"></a>技術參考 (Master Data Services)
 

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 68bde5e78c746579bcb34166469569fb594c129f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e35dd93e6d90a81934d8f272ea79c5eb7c8a97c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710274"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913927"
 ---
 # <a name="value-property-ado"></a>Value 屬性 (ADO)
 

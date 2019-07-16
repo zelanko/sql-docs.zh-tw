@@ -2,19 +2,18 @@
 title: dwloader 命令列載入器-Parallel Data Warehouse |Microsoft Docs
 description: dwloader 是 Parallel Data Warehouse (PDW) 的命令列工具，將資料表的資料列大量載入至現有的資料表。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd3f005346c5faae9e02513a144d04d80857b770
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961021"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader 平行處理資料倉儲的命令列載入器
 **dwloader**是 Parallel Data Warehouse (PDW) 的命令列工具，將資料表的資料列大量載入至現有的資料表。 載入時的資料列，您可以將所有資料列加入資料表的結尾 (*附加模式*或是*fastappend 模式*)、 附加新資料列，並更新現有的資料列 (*upsert 模式*)，或刪除所有現有之前載入的資料列，然後再將所有資料列插入空的資料表 (*重新載入模式*)。  
@@ -157,7 +156,7 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.* [*schema*].*table_name*  
+**-T** *target_database_name。* [*結構描述*]。*table_name*  
 在目的地資料表的三部分名稱。  
   
 * *-I***source_data_location*  
@@ -236,7 +235,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 範例:  
   
--t "|"  
+-t"|"  
   
 -t ' '  
   
@@ -340,7 +339,7 @@ LF 的範例：
   
 需要 Unix LF。 需要 Windows CR。  
   
-**-D** { **ymd** | ydm | mdy | myd |  dmy | dym | *custom_date_format* }  
+**-D** { **ymd** | ydm | mdy | myd | dmy |dym |*custom_date_format* }  
 在輸入檔中指定的月份 (m)、 一天 (d) 和年份 (y) 的所有日期時間欄位的順序。 預設順序是 ymd。 若要指定多個相同的原始程式檔的順序格式，請使用-dt 選項。  
   
 ymd |dmy  
@@ -363,10 +362,10 @@ mdy
 -   01011975  
   
 myd  
-年 3 月的輸入檔範例 04,2010:03-2010-04, 3/2010/4  
+年 3 月的輸入檔範例 04,2010:03-2010年-04，3/2010年/4  
   
 dym  
-2010 年 3 月 04 日的輸入的檔範例：04-2010-03, 4/2010/3  
+2010 年 3 月 04 日的輸入的檔範例：04-2010年-03，4/2010/3  
   
 *custom_date_format*  
 *custom_date_format*是自訂的日期格式 (例如，MM/dd/yyyy)，而且包含基於回溯相容性。 dwloader 不會強制使用的自訂日期格式。 相反地，當您指定自訂日期格式**dwloader**會將它轉換成 ymd、 ydm、 mdy、 myd、 dym，或 dmy 對應的設定。  
@@ -426,7 +425,7 @@ upsert **-K**  *merge_column* [ ,...*n* ]
 <reject_options>  
 指定決定，則載入器可讓載入失敗數目的選項。 如果載入失敗超過閾值時，載入器將會中止，並認可任何資料列。  
   
-**-rt** { **value** | percentage }  
+**-rt** {**值**| 百分比}  
 指定是否-*reject_value*中 **-rv** *reject_value*選項是常值的數字的資料列 （值） 或失敗 （百分比） 的速率。 預設為值。  
   
 [百分比] 選項是即時計算所根據的 rs 選項的間隔發生。  
@@ -490,7 +489,7 @@ upsert **-K**  *merge_column* [ ,...*n* ]
 ## <a name="return-code-values"></a>傳回碼值  
 0 （成功） 或其他的整數值 （失敗）  
   
-在命令視窗或批次檔中，使用`errorlevel`来顯示的傳回碼。 例如：  
+在命令視窗或批次檔中，使用`errorlevel`来顯示的傳回碼。 例如:  
   
 ```  
 dwloader  

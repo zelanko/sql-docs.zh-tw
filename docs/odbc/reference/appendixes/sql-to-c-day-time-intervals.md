@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8ea84d69-2292-4128-89a0-f184f68abb98
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee08f42a4ccd7eb51f45e1654f20e264f80c49d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db39751059d84e4e3a7950acbbbcb7f1a2b0b00d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056866"
 ---
 # <a name="sql-to-c-day-time-intervals"></a>SQL 轉換為 C：日期時間間隔
 
@@ -42,11 +41,11 @@ ms.locfileid: "63270425"
 
 |C 類型識別碼|測試|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|所有日期時間 C 間隔類型|不會被截斷尾端的欄位部分<br /><br /> 截斷尾端的欄位部分<br /><br /> 開頭有效位數不是目標的夠大，無法容納來自來源的資料|資料<br /><br /> 截斷的資料<br /><br /> 未定義|資料長度<br /><br /> 資料長度<br /><br /> 未定義|n/a<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_STINYINT[b] SQL_C_UTINYINT[b] SQL_C_USHORT[b] SQL_C_SHORT[b] SQL_C_SLONG[b] SQL_C_ULONG[b] SQL_C_NUMERIC[b] SQL_C_BIGINT[b]|間隔精確度是單一欄位，而不會截斷轉換資料<br /><br /> 間隔有效位數的單一欄位而且被截斷的小數<br /><br /> 間隔精確度是單一欄位和整個截斷<br /><br /> 未單一欄位間隔有效位數。|資料<br /><br /> 截斷的資料<br /><br /> 截斷的資料<br /><br /> 未定義|C 資料類型的大小<br /><br /> 資料長度<br /><br /> 資料長度<br /><br /> C 資料類型的大小|n/a<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
-|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|資料<br /><br /> 未定義|資料長度<br /><br /> 未定義|n/a<br /><br /> 22003|  
-|SQL_C_CHAR|字元的位元組長度 < *Columnsize*<br /><br /> （相對於小數） 的整數位數 < *Columnsize*<br /><br /> 整體 （而不是小數） 數 > = *Columnsize*|資料<br /><br /> 截斷的資料<br /><br /> 未定義|C 資料類型的大小<br /><br /> C 資料類型的大小<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|字元長度 < *Columnsize*<br /><br /> （相對於小數） 的整數位數 < *Columnsize*<br /><br /> 整體 （而不是小數） 數 > = *Columnsize*|資料<br /><br /> 截斷的資料<br /><br /> 未定義|C 資料類型的大小<br /><br /> C 資料類型的大小<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
+|所有日期時間 C 間隔類型|不會被截斷尾端的欄位部分<br /><br /> 截斷尾端的欄位部分<br /><br /> 開頭有效位數不是目標的夠大，無法容納來自來源的資料|Data<br /><br /> 截斷的資料<br /><br /> 未定義|資料長度<br /><br /> 資料長度<br /><br /> 未定義|n/a<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_STINYINT[b] SQL_C_UTINYINT[b] SQL_C_USHORT[b] SQL_C_SHORT[b] SQL_C_SLONG[b] SQL_C_ULONG[b] SQL_C_NUMERIC[b] SQL_C_BIGINT[b]|間隔精確度是單一欄位，而不會截斷轉換資料<br /><br /> 間隔有效位數的單一欄位而且被截斷的小數<br /><br /> 間隔精確度是單一欄位和整個截斷<br /><br /> 未單一欄位間隔有效位數。|Data<br /><br /> 截斷的資料<br /><br /> 截斷的資料<br /><br /> 未定義|C 資料類型的大小<br /><br /> 資料長度<br /><br /> 資料長度<br /><br /> C 資料類型的大小|n/a<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
+|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|Data<br /><br /> 未定義|資料長度<br /><br /> 未定義|n/a<br /><br /> 22003|  
+|SQL_C_CHAR|字元的位元組長度 < *Columnsize*<br /><br /> （相對於小數） 的整數位數 < *Columnsize*<br /><br /> 整體 （而不是小數） 數 > = *Columnsize*|Data<br /><br /> 截斷的資料<br /><br /> 未定義|C 資料類型的大小<br /><br /> C 資料類型的大小<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|字元長度 < *Columnsize*<br /><br /> （相對於小數） 的整數位數 < *Columnsize*<br /><br /> 整體 （而不是小數） 數 > = *Columnsize*|Data<br /><br /> 截斷的資料<br /><br /> 未定義|C 資料類型的大小<br /><br /> C 資料類型的大小<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
   
  [a] 的日期時間間隔 SQL 型別被可轉換成任何日期時間間隔 C 類型。  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98eb49e7-b190-4a21-8316-08c07cde14ed
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e3297f90499e606f6fa5f0bd2873ee49144955f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 139e22ae5911e81442a816a260666d81ccc42444
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017416"
 ---
 # <a name="validation-master-data-services"></a>驗證 (Master Data Services)
 

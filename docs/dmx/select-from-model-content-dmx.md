@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3498e841b70ca7a19d9353d277221a88b9cbf86f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 63cd10aaddfb0a22f8942e48007d36f8e634b233
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512248"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906729"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM&lt;模型&gt;。內容 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +46,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  選擇性。 傳回純量值的運算式。  
   
 ## <a name="remarks"></a>備註  
- **SELECT FROM** _\<模型 >_**。內容**陳述式會傳回每個演算法特定的內容。 例如，您可能想要使用自訂應用程式中關聯規則模型之所有規則的描述。 您可以使用**SELECT FROM\<模型 >。內容**陳述式來傳回模型之 NODE_RULE 資料行中的值。  
+ **SELECT FROM** _\<模型 >_ **。內容**陳述式會傳回每個演算法特定的內容。 例如，您可能想要使用自訂應用程式中關聯規則模型之所有規則的描述。 您可以使用**SELECT FROM\<模型 >。內容**陳述式來傳回模型之 NODE_RULE 資料行中的值。  
   
  下表列出包含在採礦模型內容中的資料行。  
   
@@ -144,7 +143,7 @@ WHERE NODE_TYPE = 26
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
 ## <a name="see-also"></a>另請參閱  
- [選取&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   

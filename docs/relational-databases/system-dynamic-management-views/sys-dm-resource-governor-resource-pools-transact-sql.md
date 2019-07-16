@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a3084f7b98edc3c9159576ae19323baeaa1b105
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0bc10288e7dbe204633eef70f9affb07855ae3e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62684042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053317"
 ---
 # <a name="sysdmresourcegovernorresourcepools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "62684042"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|資源集區的識別碼。 不可為 Null。|  
-|NAME|**sysname**|資源集區的名稱。 不可為 Null。|  
+|name|**sysname**|資源集區的名稱。 不可為 Null。|  
 |statistics_start_time|**datetime**|重設此集區統計資料時的時間。 不可為 Null。|  
 |total_cpu_usage_ms|**bigint**|重設資源管理員統計資料之後的累計 CPU 使用量 (以毫秒為單位)。 不可為 Null。|  
 |cache_memory_kb|**bigint**|目前的快取記憶體總使用量 (以 KB 為單位)。 不可為 Null。|  
@@ -90,7 +89,7 @@ ms.locfileid: "62684042"
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [sys.resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
+ [sys.resource_governor_resource_pools &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

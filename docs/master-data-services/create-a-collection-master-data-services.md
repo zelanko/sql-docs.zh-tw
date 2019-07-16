@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 32171c1bf82b0a46fd5a70c1ace2cb2004675e9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8d770d32ee60c2ec2407b5f0bc805b2ee3a5aa8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079765"
 ---
 # <a name="create-a-collection-master-data-services"></a>建立集合 (Master Data Services)
 
@@ -52,7 +51,7 @@ ms.locfileid: "65484194"
   
 8.  或者，在 **[描述]** 方塊中，輸入集合的描述。  
   
-9. 按一下 [確定]  。  
+9. 按一下 [確定 **Deploying Office Solutions**]。  
   
 ## <a name="next-steps"></a>後續步驟  
   

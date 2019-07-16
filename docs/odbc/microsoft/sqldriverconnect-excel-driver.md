@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect (Excel Driver) | Microsoft Docs
+title: SQLDriverConnect （Excel 驅動程式） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 285cb1ea-f461-4596-97f2-fc57af05dede
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b2d7e879c35e7cbf2f2b261d94eff22936f7880b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e38f2f513b7da2c9342470ba75e2ee11b3d7e52a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63238090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053899"
 ---
 # <a name="sqldriverconnect-excel-driver"></a>SQLDriverConnect (Excel 驅動程式)
 > [!NOTE]  
@@ -36,6 +35,6 @@ ms.locfileid: "63238090"
   
 |驅動程式|所需的關鍵字|範例|  
 |------------|-----------------------|--------------|  
-|Microsoft Excel 3.0 or 4.0|驅動程式 DriverID|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp; DriverID=278|  
+|Microsoft Excel 3.0 或 4.0|驅動程式 DriverID|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp; DriverID=278|  
 |Microsoft Excel 5.0/7.0|驅動程式，DriverID DBQ|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp\sample.xls; DriverID=22|  
 |Microsoft Excel 97 和更新版本|驅動程式，DriverID DBQ|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp\sample.xls; DriverID=790|

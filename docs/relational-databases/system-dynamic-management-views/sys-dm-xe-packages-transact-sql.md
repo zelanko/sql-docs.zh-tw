@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 895eeeea22b305236d263827156c6717b458a96a
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: 065625fdaca015de9c445e6e6f0e1ad0013f38e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785919"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090264"
 ---
 # <a name="sysdmxepackages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "53785919"
  
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(256)**|封裝的名稱。 描述會從封裝本身公開。 不可為 Null。|  
+|name|**nvarchar(256)**|封裝的名稱。 描述會從封裝本身公開。 不可為 Null。|  
 |guid|**uniqueidentifier**|識別此封裝的 GUID。 不可為 Null。|  
 |description|**nvarchar(3072)**|封裝的描述。 descriptionis 由封裝作者所設定，且不為 null。|  
 |capabilities|**int**|描述這個封裝之功能的點陣圖。 可為 Null。|  

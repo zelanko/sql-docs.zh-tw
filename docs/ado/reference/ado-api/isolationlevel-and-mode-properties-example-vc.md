@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 14e1012530745e0e695c70efaf8b1b1e16b8a064
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb39288499e2a78523ca29f2e1e4feff4ea9a310
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694778"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932312"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 和 Mode 屬性範例 （VC + +）
 這個範例會使用[模式](../../../ado/reference/ado-api/mode-property-ado.md)屬性，以開啟專屬的連線，而[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)開啟執行的交易中的其他交易隔離。  
@@ -235,7 +234,7 @@ void PrintComError(_com_error &e) {
 **電腦烹飪-未決的心理**  
 **但它是使用者易記嗎？-popular_comp**  
 **矽谷-popular_comp 的祕密**  
-**Net Etiquette -  popular_comp**  
+**Net 禮儀-popular_comp**  
 **電腦 Phobic 且非恐懼症個人：行為變化-self_help**  
 **是憤怒帶來的敵人嗎？-self_help**  
 **而不必擔心-self_help 生命**  

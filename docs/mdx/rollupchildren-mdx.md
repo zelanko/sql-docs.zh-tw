@@ -1,5 +1,5 @@
 ---
-title: RollupChildren (MDX) | Microsoft Docs
+title: RollupChildren (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 5df035ab7ae2949164869536c498c341327916c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 89f7545af0d98de2a6bd97630a893057aac36b12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037054"
 ---
 # <a name="rollupchildren-mdx"></a>RollupChildren (MDX)
 

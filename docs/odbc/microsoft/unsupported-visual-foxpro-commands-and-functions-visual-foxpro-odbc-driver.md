@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db6aff35944b8811e79627c6076ab61e838edf3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912327"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>不支援的 Visual FoxPro 命令和函式 (Visual FoxPro ODBC Driver)
 下表列出 FoxPro 命令和函式不會受到 Visual FoxPro ODBC Driver，但所支援的 Microsoft® Visual FoxPro®。  
@@ -33,7 +32,7 @@ ms.locfileid: "62633368"
   
 ||||  
 |-|-|-|  
-|#DEFINE...&GT; #UNDEF|#IF #ENDIF 前置處理器指示詞|#IFDEF &#124; #IFNDEF|  
+|#DEFINE...> #UNDEF|#IF #ENDIF 前置處理器指示詞|#IFDEF &#124; #IFNDEF|  
 |#INCLUDE 前置處理器指示詞|::範圍解析運算子|! 命令 (請參閱 < 執行&#124;！ 命令中）|  
 |? &#124; ?? 命令|??? 命令|\ &#124; \\\ 命令|  
 |@ ...方塊命令|@ ...類別的命令|@ ...清除命令|  
@@ -50,7 +49,7 @@ ms.locfileid: "62633368"
 |ActivateCell 方法|新增類別 命令|ADIR （） 函式|  
 |AFONT （） 函式|AINSTANCE （） 函式|_ALIGNMENT 系統記憶體變數|  
 |AMEMBERS （） 函式|ANSITOOEM （） 函式|APRINTERS （） 函式|  
-|ASELOBJ( ) Function|協助命令||  
+|ASELOBJ （） 函式|協助命令||  
   
 ## <a name="b"></a>B  
   
@@ -61,7 +60,7 @@ ms.locfileid: "62633368"
 |_BROWSER 系統記憶體變數|建置應用程式命令|建置 EXE 命令|  
 |建置專案命令|_BUILDER 系統記憶體變數||  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
   
 ||||  
 |-|-|-|  
@@ -71,7 +70,7 @@ ms.locfileid: "62633368"
 |CHDIR 命令|CHRSAW （） 函式|關閉的備忘 命令|  
 |CNTBAR （） 函式|CNTPAD （） 函式|資料行 （） 函式|  
 |編譯命令|編譯資料庫命令|編譯表單命令|  
-|COMPOBJ( ) Function|容器物件|控制項物件|  
+|COMPOBJ （） 函式|容器物件|控制項物件|  
 |複製檔案 命令|複製 [備忘] 命令|建立類別 命令|  
 |建立 CLASSLIB 命令|建立色彩 SET 命令|建立命令|  
 |建立連線的命令|建立資料庫命令|建立表單命令|  
@@ -84,7 +83,7 @@ ms.locfileid: "62633368"
   
 ||||  
 |-|-|-|  
-|_DBLCLICK 系統記憶體變數|_DIARYDATE 系統記憶體變數|DBSETPROP( ) Function|  
+|_DBLCLICK 系統記憶體變數|_DIARYDATE 系統記憶體變數|DBSETPROP （） 函式|  
 |DDE 函式|停用功能表命令|停用快顯功能表命令|  
 |停用視窗命令|宣告-DLL 命令|宣告命令|  
 |定義命令列|定義命令方塊|定義類別的命令|  
@@ -111,7 +110,7 @@ ms.locfileid: "62633368"
 |-|-|-|  
 |_FOXDOC 系統記憶體變數|_FOXGRAPH 系統記憶體變數|FEOF （） 函式|  
 |FCLOSE （） 函式|FCREATE （） 函式|FGETS （） 函式|  
-|FERROR( ) Function|FFLUSH （） 函式|FKLABEL （） 函式|  
+|FERROR （） 函式|FFLUSH （） 函式|FKLABEL （） 函式|  
 |篩選命令|尋找命令|FOPEN （） 函式|  
 |FKMAX （） 函式|FONTMETRIC （） 函式|FSEEK （） 函式|  
 |FPUTS （） 函式|FREAD （） 函式||  
@@ -237,7 +236,7 @@ ms.locfileid: "62633368"
 |重新命名連線命令|重新命名的資料表 命令|還原命令|  
 |報表命令|重新查詢 （） 函式|還原視窗命令|  
 |還原巨集指令|還原 [螢幕] 命令|RGBSCHEME （） 函式|  
-|RESUME 命令|RGB （） 函式|RUN &#124; ! 命令|  
+|RESUME 命令|RGB （） 函式|執行&#124;！ 命令|  
 |RMDIR 命令|資料列 （） 函式||  
 |RUNSCRIPT 命令|RDLEVEL （） 函式||  
   
@@ -291,7 +290,7 @@ ms.locfileid: "62633368"
 |轉換 （） 函式|_TRANSPORT 系統記憶體變數||  
 |TYPE 命令|_THROTTLE 系統記憶體變數||  
   
-## <a name="u"></a>u  
+## <a name="u"></a>U  
   
 ||||  
 |-|-|-|  

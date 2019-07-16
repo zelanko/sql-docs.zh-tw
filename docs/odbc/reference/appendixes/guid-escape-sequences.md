@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 71d43ef9-4a31-493e-b9e0-f864e9ef3ce6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf41671abc6393a18fad06e1debd297fed1f04c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a74ed9d4dfe0afb8bf59abb11220a0677d000bfb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947591"
 ---
 # <a name="guid-escape-sequences"></a>GUID 逸出序列
 ODBC 會將逸出序列用於 GUID 常值。 此逸出序列的語法如下所示：  
@@ -32,12 +31,12 @@ ODBC 會將逸出序列用於 GUID 常值。 此逸出序列的語法如下所�
 ## <a name="remarks"></a>備註  
  在 backus-naur form，BNF 標記法中，語法如下所示：  
   
- *ODBC-guid-escape* ::=  
+ *ODBC guid 逸出*:: =  
      *啟動 esc ODBC 者 guid* '*guid 值*' *ODBC esc 鍵結束字元*  
   
- *ODBC-esc-initiator* ::= {  
+ *起始 esc ODBC 端*:: = {  
   
- *ODBC-esc-terminator* ::= }  
+ *ODBC esc 鍵結束字元*:: =}  
   
  *guid-value* ::= *clock-low-value guid-separator clock-middle-value guid-separator clock-high-value guid-separator clock-seq-value guid-separator node-value*  
   

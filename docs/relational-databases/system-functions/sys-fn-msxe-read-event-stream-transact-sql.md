@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5edb1162-625a-41e0-8ec9-1edc8ab9a74a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 587180830491c10b6dc09a2af8d28718bf612e87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 886b874aeee47f71eb8b50dba27fdfdf8ea45c62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082696"
 ---
 # <a name="sysfnmsxereadeventstream-transact-sql"></a>sys.fn_MSxe_read_event_stream (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sys.fn_MSxe_read_event_stream ( session_name)
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|型別|**整數 (4)**|事件類型。 不可為 Null。|  
+|type|**整數 (4)**|事件類型。 不可為 Null。|  
 |data|**映像 (16)**|事件影像資料。 可為 Null。|  
   
 ## <a name="see-also"></a>另請參閱  

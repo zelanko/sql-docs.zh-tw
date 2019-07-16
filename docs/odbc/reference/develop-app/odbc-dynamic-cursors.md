@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 628de07f90de47efb0546dff84c03f56efb0674c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086305"
 ---
 # <a name="odbc-dynamic-cursors"></a>ODBC 動態資料指標
 動態資料指標只是： 動態。 它可以偵測到的成員資格、 順序和值之結果集資料指標開啟後所做的變更。 例如，假設動態資料指標擷取兩個資料列，而其他應用程式接著更新其中一個資料列並刪除另一個資料列。 如果動態資料指標則會嘗試重新提取這些資料列，它不會尋找已刪除的資料列，但會傳回更新的資料列的新值。  

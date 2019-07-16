@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c38c79f9-8bb0-4633-ac86-542366c09a95
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 56e0c7d633c6e15b1958d370e8d69c08505edbb6
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 6bc7e07ab65b5894c3ac2b913e5d4afcbd4f98f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793837"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076957"
 ---
 # <a name="datetime-data-type-changes"></a>Datetime 資料類型變更
 在 ODBC *3.x*之識別項的日期、 時間和時間戳記 SQL 資料類型已從 SQL_DATE、 SQL_TIME、 和 SQL_TIMESTAMP (的執行個體 **#define** 9、 10 和 11 的標頭檔中) 至 SQL_TYPE_DATE、 SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP (的執行個體 **#define** 91、 92，和 93 標頭檔)，分別。 對應的 C 類型識別項已從 SQL_C_DATE、 SQL_C_TIME 和 SQL_C_TIMESTAMP SQL_C_TYPE_DATE、 SQL_C_TYPE_TIME，和 SQL_C_TYPE_TIMESTAMP，分別。  
@@ -34,7 +33,7 @@ ms.locfileid: "67793837"
   
  下表顯示如何 ODBC *3.x*驅動程式管理員會執行的日期、 時間和時間戳記 C 資料類型對應中輸入*TargetType*引數的**SQLBindCol**並**SQLGetData**或是在*ValueType*引數**SQLBindParameter**。  
   
-|資料類型<br /><br /> 輸入的程式碼|*2.x*應用程式<br /><br /> *2.x* driver|*2.x*應用程式<br /><br /> *3.x* driver|*3.x*應用程式<br /><br /> *2.x* driver|*3.x*應用程式<br /><br /> *3.x* driver|  
+|資料類型<br /><br /> 輸入的程式碼|*2.x*應用程式<br /><br /> *2.x*驅動程式|*2.x*應用程式<br /><br /> *3.x*驅動程式|*3.x*應用程式<br /><br /> *2.x*驅動程式|*3.x*應用程式<br /><br /> *3.x*驅動程式|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  
 |SQL_C_DATE (9)|沒有對應|SQL_C_TYPE_DATE (91)|沒有對應 [1]|SQL_C_TYPE_DATE (91)|  
 |SQL_C_TYPE_DATE (91)|錯誤 （DM)|錯誤 （DM)|SQL_C_DATE (9)|沒有對應 [2]|  
@@ -49,7 +48,7 @@ ms.locfileid: "67793837"
   
  下表顯示如何 ODBC *3.x*驅動程式管理員會執行的日期、 時間和時間戳記 SQL 資料類型對應中輸入*ParameterType*引數**SQLBindParameter**或是在*DataType*引數**SQLGetTypeInfo**。  
   
-|資料類型<br /><br /> 輸入的程式碼|*2.x*應用程式<br /><br /> *2.x* driver|*2.x*應用程式<br /><br /> *3.x* driver|*3.x*應用程式<br /><br /> *2.x* driver|*3.x*應用程式<br /><br /> *3.x* driver|  
+|資料類型<br /><br /> 輸入的程式碼|*2.x*應用程式<br /><br /> *2.x*驅動程式|*2.x*應用程式<br /><br /> *3.x*驅動程式|*3.x*應用程式<br /><br /> *2.x*驅動程式|*3.x*應用程式<br /><br /> *3.x*驅動程式|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  
 |SQL_DATE (9)|沒有對應|SQL_TYPE_DATE (91)|沒有對應 [1]|SQL_TYPE_DATE (91)|  
 |SQL_TYPE_DATE (91)|錯誤 （DM)|錯誤 （DM)|SQL_DATE (9)|沒有對應 [2]|  

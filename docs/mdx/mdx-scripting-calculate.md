@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 389c5f470cb3bf00cfe668a9405e36cd4ac8950e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4a8be73a94ccbca1eb0deeacc0e7cc33c5cfaa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003453"
 ---
 # <a name="mdx-scripting---calculate"></a>MDX 指令碼 - CALCULATE
 

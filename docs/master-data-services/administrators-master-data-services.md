@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: edc42dc5746e551913395249cd029e41132f8f0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b70c5182ec177b8867d2afab7d39dc5ac5955a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486409"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047808"
 ---
 # <a name="administrators-master-data-services"></a>管理員 (Master Data Services)
 

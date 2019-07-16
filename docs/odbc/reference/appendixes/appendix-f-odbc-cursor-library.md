@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2a87f6c365762f5b262dfbed07bbae14cb08604a
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 3bfffd95dd88b0a25be682a3df581e55825ed9ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090827"
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>附錄 F：ODBC 資料指標程式庫
 > [!IMPORTANT]  

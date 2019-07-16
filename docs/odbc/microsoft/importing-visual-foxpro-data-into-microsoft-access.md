@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a3591295-0a76-4e3c-b4fa-8bd4f1cde705
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f19b58ba93c94088c4cae19f1093d89c8decb843
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 557b5505b9eb6a15080a7d0495df2e63aefd2d76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085537"
 ---
 # <a name="importing-visual-foxpro-data-into-microsoft-access"></a>將 Visual FoxPro 資料匯入 Microsoft Access 中
 您可以匯入到 Microsoft Access 資料庫，使用 [匯入] 選項在 Visual FoxPro 資料庫中儲存的資料。  
