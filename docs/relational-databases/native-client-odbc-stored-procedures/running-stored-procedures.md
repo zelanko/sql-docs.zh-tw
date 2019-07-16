@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b44a9b4a863de7d3c7b37ec3b8b53837e6acf953
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3239172c0d2c86447f117eadc6fe1496b83d70d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62740540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020326"
 ---
 # <a name="running-stored-procedures"></a>執行預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

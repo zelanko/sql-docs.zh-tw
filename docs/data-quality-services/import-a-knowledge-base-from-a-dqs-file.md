@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: d1dbd724cca4025d34b673e3181ff7be3fdb9c89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 807c3f30a23b9629cf8dcbc68555a66176654c2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935283"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>從 .dqs 檔案匯入知識庫
 
@@ -58,7 +57,7 @@ ms.locfileid: "66776611"
   
 8.  請選取您要執行的活動，然後按一下 **[建立]** 。  
   
-9. 在 **[匯入知識庫]** 對話方塊中，確認狀態行指出已完成匯入。 按一下 [確定]  。  
+9. 在 **[匯入知識庫]** 對話方塊中，確認狀態行指出已完成匯入。 按一下 [確定 **Deploying Office Solutions**]。  
   
 10. 完成您需要執行的知識探索、定義域管理或比對原則工作，然後按一下 **[完成]** 。  
   

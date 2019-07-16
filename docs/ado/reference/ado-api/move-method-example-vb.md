@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55eb797a-0205-40d2-a797-55b216d1d3bb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ea2eff0ac65e09b649945f5b2bdbd5bda4191ac8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 258f915b560bf7da9110909ada0f015fdc36af63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707541"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932126"
 ---
 # <a name="move-method-example-vb"></a>Move 方法範例 (VB)
 這個範例會使用[移動](../../../ado/reference/ado-api/move-method-ado.md)方法，以記錄指標位置會根據使用者輸入。  

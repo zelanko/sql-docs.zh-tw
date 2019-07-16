@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5934837db5b3027ee86dcdd81e4e8229869aa149
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11250cf591f576052434c641d8c65ba681000666
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966240"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>GetPermissions 和 SetPermissions 方法範例 (VB)
 此範例示範[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)並[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)方法。 下列程式碼可讓系統管理員使用者的 Orders 資料表的完整存取權。  

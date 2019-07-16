@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fda75488b170ebfbfc9cd2396d2478f3ae918f2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e50c4ff0b3c69d1f943c0cff266520a2fabc9bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051979"
 ---
 # <a name="entity-permissions-master-data-services"></a>實體權限 (Master Data Services)
 

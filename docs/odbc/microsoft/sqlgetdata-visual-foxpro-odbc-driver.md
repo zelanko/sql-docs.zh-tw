@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fbf1b1eb-ecab-43d6-9099-3d627344e0fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e9922927a9527fa3085581b547fd53ec701aed31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee603023798638b7bd5c25a72d1018d379da2075
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313114"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003316"
 ---
 # <a name="sqlgetdata-visual-foxpro-odbc-driver"></a>SQLGetData (Visual FoxPro ODBC Driver)
 > [!NOTE]  

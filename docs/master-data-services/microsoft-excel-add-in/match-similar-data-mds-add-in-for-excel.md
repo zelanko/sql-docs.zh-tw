@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f6fd6fc1-3569-42a5-b6cb-87a921c88f3b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0e4861ad317b71fd646ee8f6f91e73494bee9264
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34a8e6ac8d40e23e1ccf99eacff9d391e79a48a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65476981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074577"
 ---
 # <a name="match-similar-data-mds-add-in-for-excel"></a>比對相似資料 (適用於 Excel 的 MDS 增益集)
 
@@ -30,7 +29,7 @@ ms.locfileid: "65476981"
   
 -   建立您自己的自訂 DQS 知識庫和比對原則。 如需相關資訊，請參閱 [建立訂閱](../../data-quality-services/create-a-matching-policy.md)。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
   
 -   您必須擁有包含 MDS 管理之資料的工作表。 如需詳細資訊，請參閱 [Export Data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)(將資料從 Master Data Services 匯入 Excel)。  
   

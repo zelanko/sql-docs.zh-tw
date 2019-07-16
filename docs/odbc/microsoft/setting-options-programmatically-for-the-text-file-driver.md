@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cbde2ca1-5d4e-4444-a371-a72f3ac4d92a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 04bd9a37d87c91fe3f42cbb1fdf464660ba5a299
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e1a28e5c7ccf3c701e5f97440cd97ed843ab53dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313455"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063499"
 ---
 # <a name="setting-options-programmatically-for-the-text-file-driver"></a>以程式設計方式設定文字檔驅動程式的選項
 

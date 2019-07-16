@@ -5,17 +5,16 @@ description: 深入了解 SQL Server 2019 巨量資料叢集 （預覽），以�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dd9b649dbb7bf2fc68c34ae22a1d270515756df8
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 166fa1d5b736720b8bab7dff6a8ea56c63a702fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958858"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>什麼是 SQL Server 巨量資料叢集？
 

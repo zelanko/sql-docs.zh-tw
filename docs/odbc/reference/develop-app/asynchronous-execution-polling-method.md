@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8ca0a5094e40f13aef4b4f87d5642e51e7a9b765
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97fe8af6f02e9797bc14578edda09c420f8f94e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077054"
 ---
 # <a name="asynchronous-execution-polling-method"></a>非同步執行 (輪詢方法)
 之前 ODBC 3.8，而且 Windows 7 SDK，只被允許陳述式的函式的非同步作業。 如需詳細資訊，請參閱 <<c0>  **非同步執行陳述式作業**稍後在本主題中。  

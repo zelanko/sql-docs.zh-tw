@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f7bbc9fad964f5d58efeb48683b052275f7fb166
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 3c9b8bf0da73545a9ec9c582aedf5b8f44980c5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064333"
 ---
 # <a name="how-extended-stored-procedures-work"></a>擴充預存程序運作方式
 

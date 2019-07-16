@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8193643e59c89d1bdc2877e72105f83a1fd6df3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 12ae1efbf900a505a5f257f9684842a0ad9ff21f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670207"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004649"
 ---
 # <a name="functions-on-string-values---string-length"></a>字串值的相關函式 - string-length
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ fn:string-length($arg as xs:string?) as xs:integer
   
  如果該值包含一個有 4 個位元組但以兩個 Surrogate 字元代表的 Unicode 字元，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 將會個別計算 Surrogate 字元。  
   
- **String-length （)** 沒有參數只能在述詞內。 例如，以下查詢會傳回 <`ROOT`> 元素：  
+ **String-length （)** 沒有參數只能在述詞內。 例如，下列查詢會傳回 <`ROOT`> 項目：  
   
 ```  
 DECLARE @x xml;  
@@ -62,7 +61,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
  本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型資料行中的 AdventureWorks 資料庫。  
   
 ### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. 使用 string-length() XQuery 函式擷取摘要描述冗長的產品  
- 對於摘要描述超過 50 個字元的產品，以下查詢將會擷取產品識別碼、摘要描述的長度，以及摘要本身，即 <`Summary`> 元素。  
+ 對於摘要描述大於 50 個字元的產品，下列查詢會擷取產品識別碼的長度摘要的描述，以及摘要本身，<`Summary`> 項目。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
@@ -100,9 +99,9 @@ Result
 ```  
   
 ### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>B. 使用 string-length() XQuery 函式擷取保證描述簡短的產品  
- 對於保證描述長度少於 20 個字元的產品，以下查詢將會擷取的 XML 包含產品識別碼、長度、保證描述及 <`Warranty`> 元素本身。  
+ 對於保證描述長度少於 20 個字元，下列查詢會擷取 XML 包含產品識別碼、 長度、 保證描述及 <`Warranty`> 項目本身。  
   
- Warranty 是產品特性之一。 選擇性的 <`Warranty`> 子元素會跟在 <`Features`> 元素後面。  
+ Warranty 是產品特性之一。 選擇性 <`Warranty`> 子元素會跟在 <`Features`> 項目。  
   
 ```  
 WITH XMLNAMESPACES (  

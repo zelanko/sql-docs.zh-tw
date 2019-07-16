@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 34218bbe7e8ac2e94acbb55ceb8bd64008e67c1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1ad817a6659bd1ee6bd9f6d042c90d04c337193
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992037"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>執行 DQSInstaller.exe 完成 Data Quality Server 安裝
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d2a04f5052a0b686d3669c976ec7c4bee09e52b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57b187bf4f14bd5c05f91a433fa331e954fa0fb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020376"
 ---
 # <a name="row-status-array"></a>資料列狀態陣列
 除了資料之外， **SQLFetch**並**SQLFetchScroll**可以傳回陣列，提供資料列集中的每個資料列的狀態。 這個陣列會指定經由 sql_attr_row_status_ptr 設定陳述式屬性。 這個陣列由應用程式所配置，而且必須具有 SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性所指定的項目數。 陣列中的值由設定**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，和**SQLSetPos。** 值會描述資料列和自上次擷取後，該狀態是否已變更的狀態。  

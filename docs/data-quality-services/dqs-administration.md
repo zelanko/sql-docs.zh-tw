@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 1efdebf5ee4dd81e7b4ae9039d7062a87ad5e7f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a84ff61d1656743953f5f854a1b658b303a7acf1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772713"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992126"
 ---
 # <a name="dqs-administration"></a>dqs 管理
 

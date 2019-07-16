@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 35d686f2-ef31-4eaa-baa9-9cef5d6c87c2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aced26fc44c40e28fafc9bb8bcc7d9a44a01959f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fea210183ae67179dcc6f686e25f939cd00713b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056330"
 ---
 # <a name="spprepexecrpc-transact-sql"></a>sp_prepexecrpc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

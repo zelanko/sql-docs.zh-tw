@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c466a2e928afb5239c738463a39e6fee8a1991fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e5502c56c0435b73b4eb52446da2d692e3db72f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62514558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095537"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>伺服器事件的 WMI 提供者概念
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

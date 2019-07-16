@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 54da54a63fb1234478a3161cd46e7143258d2d65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fda38811fa876c9a0fad55e7f2ee7566ad3026d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943765"
 ---
 # <a name="rowset-size"></a>資料列集大小
 若要使用哪一個資料列集大小取決於應用程式。 以螢幕為基礎的應用程式通常會遵循兩種策略的其中一個。 第一個是將資料列集大小設定為畫面; 上所顯示的資料列數目如果使用者重新調整大小的螢幕，應用程式會據以變更資料列集大小。 第二個是將資料列集大小較大的數字，例如 100，可減少需要的資料來源的呼叫。 應用程式內的資料列集時可能在本機上捲動，並提取新的資料列，它將捲動超出資料列集時，才。  

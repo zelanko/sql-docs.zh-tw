@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16651df836ac3fb87c5e28b4b8fa25088e9dd86a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 686ecc89f44bac4b219b760e55160f451a15c503
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159349"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997723"
 ---
 # <a name="set-exact-command"></a>SET EXACT 命令
 指定的規則來比較兩個字串的長度不同。  
@@ -53,14 +52,14 @@ SET EXACT ON | OFF
   
 |比較|= 完全關閉|= 確切上|= = 確切的 ON 或 OFF|  
 |----------------|------------------|-----------------|--------------------------|  
-|"abc" = "abc"|相符項目|相符項目|相符項目|  
-|"ab" = "abc"|沒有相符項目|沒有相符項目|沒有相符項目|  
-|"abc" = "ab"|相符項目|沒有相符項目|沒有相符項目|  
-|"abc" = "ab_"|沒有相符項目|沒有相符項目|沒有相符項目|  
-|"ab" = "ab_"|沒有相符項目|相符項目|沒有相符項目|  
-|"ab_" = "ab"|相符項目|相符項目|沒有相符項目|  
+|"abc"="abc"|相符項目|相符項目|相符項目|  
+|"ab"="abc"|沒有相符項目|沒有相符項目|沒有相符項目|  
+|"abc"="ab"|相符項目|沒有相符項目|沒有相符項目|  
+|"abc"="ab_ 」|沒有相符項目|沒有相符項目|沒有相符項目|  
+|"ab"="ab_ 」|沒有相符項目|相符項目|沒有相符項目|  
+|「 ab_"="ab"|相符項目|相符項目|沒有相符項目|  
 |「"="ab"|沒有相符項目|沒有相符項目|沒有相符項目|  
-|"ab" = ""|相符項目|沒有相符項目|沒有相符項目|  
+|"ab"=""|相符項目|沒有相符項目|沒有相符項目|  
 |"__" = ""|相符項目|相符項目|沒有相符項目|  
 |"" = "___"|沒有相符項目|相符項目|沒有相符項目|  
 |TRIM("___") = ""|相符項目|相符項目|相符項目|  

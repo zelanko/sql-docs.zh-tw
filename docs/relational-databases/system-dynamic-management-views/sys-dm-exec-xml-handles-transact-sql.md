@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed7479109ef50ee3744b3a9acafc17a799670cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 303ceed8cc7078e4025f160d25ce1474d1be6aed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936782"
 ---
 # <a name="sysdmexecxmlhandles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -41,7 +40,7 @@ dm_exec_xml_handles (session_id | 0 )
 ```  
   
 ## <a name="arguments"></a>引數  
- *session_id* | 0,  
+ *session_id* | 0，  
  工作階段的識別碼。 如果*session_id*指定，此函式會傳回在指定的工作階段中的 XML 控制代碼的相關資訊。  
   
  如果指定 0，這個函數會傳回所有工作階段的全部 XML 控制代碼資訊。  

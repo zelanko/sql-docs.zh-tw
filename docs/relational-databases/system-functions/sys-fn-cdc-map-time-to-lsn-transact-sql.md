@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c22074e686f9dff1d988d7453c0c546fa6e049b5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 7f4f6820aeeca8b600631810ed35933d2519b495
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399931"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046327"
 ---
 # <a name="sysfncdcmaptimetolsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ```  
   
 ## <a name="arguments"></a>引數  
- **'**< relational_operator >**'** {較不超過最大 | 比大小於或等於 | 最小大於 | 最小 greater than 或 equal}  
+ **'** < relational_operator > **'** {較不超過最大 | 比大小於或等於 | 最小大於 | 最小 greater than 或 equal}  
  用來識別不同 LSN 值，在內**cdc.lsn_time_mapping**以及相關聯的資料表**tran_end_time** ，可滿足此關聯性，相較於*tracking_time*值。  
   
- *relational_operator*已**nvarchar(30)**。  
+ *relational_operator*已**nvarchar(30)** 。  
   
  *tracking_time*  
  這是要比對的日期時間值。 *tracking_time*已**datetime**。  

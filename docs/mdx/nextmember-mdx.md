@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4535b837d81db10f41f1445a7051678ce4fdd688
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b852564510c6b5918c781e0c75e84e3b30aecd44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088357"
 ---
 # <a name="nextmember-mdx"></a>NextMember (MDX)
 

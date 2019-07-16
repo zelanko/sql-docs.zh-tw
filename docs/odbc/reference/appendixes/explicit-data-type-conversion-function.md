@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77cb69877324b36120b3a277688bb1ad737f5c4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6982f7b7caa71abc08c5b84ef1bb6211dcadaecd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188983"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913617"
 ---
 # <a name="explicit-data-type-conversion-function"></a>明確資料類型轉換函式
 明確資料類型轉換是根據 SQL 資料類型定義所指定。  
@@ -57,7 +56,7 @@ ms.locfileid: "63188983"
   
  明確資料類型轉換函式的 ODBC 語法不支援的轉換格式的規格。 如果基礎資料來源所支援的明確的格式規格，則驅動程式就必須指定預設值，或實作格式規格。  
   
- 引數*value_exp*可以是資料行名稱、 結果的另一個純量函式或數值或字串常值。 例如：  
+ 引數*value_exp*可以是資料行名稱、 結果的另一個純量函式或數值或字串常值。 例如:  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  

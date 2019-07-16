@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b32182dd1d75a35d42587c839c3f46c89654511b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 988d57ab3d0f86c3da1e45109a6ad818cecb894e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906568"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>建立屬性群組 (Master Data Services)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65477136"
 
   當您想要在總管  方格的個別索引標籤上顯示屬性時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中建立屬性群組。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  

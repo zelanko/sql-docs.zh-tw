@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bbde3935181603bece9e07ac5cf1e0dffc2a6a5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 501b58a0d4e69ba7ea843441d866f8580858ea5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932442"
 ---
 # <a name="getstring-method-example-vc"></a>GetString 方法範例 (VC++)
 此範例示範[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法。  

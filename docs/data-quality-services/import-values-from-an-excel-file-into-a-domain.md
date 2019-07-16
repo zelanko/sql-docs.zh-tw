@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 5c89956fca8f0295a0f78b9f61aa97a35c47684f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59cf81243c76da1747c558c7ab6e0c15323eff62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992055"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>將 Excel 檔案中的值匯入定義域中
 

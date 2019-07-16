@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f1dc43ee81f1be386d0518625d36464f029dc0f
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: ea97e3cd7a8fee3b3397524bf2c48c428d6a0be0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076846"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>宣告應用程式&#39;s 的 ODBC 版本
 應用程式配置連接之前，它必須設定 SQL_ATTR_ODBC_VERSION 環境屬性。 這個屬性會指出應用程式遵循 ODBC *2.x*或 ODBC *3.x*規格，使用下列項目時：  

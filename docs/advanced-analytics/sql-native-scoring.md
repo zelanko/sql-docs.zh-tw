@@ -7,24 +7,23 @@ ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: bd0a79a3991c34ddbcf874aca80160299074919a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 65a7954aa18f9e8dbdfd814a6b0d189683e4606f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962316"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>使用預測 T-SQL 函式的原生評分
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-原生評分會使用[預測 T-SQL 函式](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)和 原生 c + + 延伸模組功能在 SQL Server 2017 中的產生預測值或*分數*中近乎即時的新資料輸入。 這種方法提供預測和預測的工作負載，可能的處理速度最快，但隨附平台和程式庫的需求： 只有來自 RevoScaleR 與 revoscalepy 函式具有 c + + 實作。
+原生評分使用[預測 T-SQL 函式](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)和 原生C++SQL Server 2017 中的擴充功能，來產生預測值或*分數*近乎即時的時間在新的資料輸入。 這種方法提供最快可以處理的速度預測和預測的工作負載，但隨附平台和程式庫的需求： 只從 RevoScaleR 與 revoscalepy 函式具有C++實作。
 
 原生評分，您需要已定型的模型。 在 SQL Server 2017 Windows 或 Linux，或 Azure SQL Database 中，您可以呼叫 PREDICT 函數中 TRANSACT-SQL 來叫用原生對您提供做為輸入參數的新資料評分。 PREDICT 函式會傳回分數，透過您提供的資料輸入。
 
 ## <a name="how-native-scoring-works"></a>原生評分的運作方式
 
-原生評分使用原生 c + + 程式庫可以讀取已定型的模型，microsoft 先前儲存在特殊的二進位格式或儲存至磁碟以原始位元組資料流，並產生新的資料輸入您所提供的分數。 已定型的模型，因為已發行，並儲存，它可以用於評分不必呼叫 R 或 Python 解譯器。 因此，多個處理程序互動的額外負荷已降低，導致更快的預測效能，在生產環境的企業案例。
+原生評分使用原生C++程式庫可以讀取已定型的 Microsoft 模型，先前儲存在特殊的二進位格式或儲存至磁碟以原始位元組資料流，然後產生新的資料輸入您所提供的分數。 已定型的模型，因為已發行，並儲存，它可以用於評分不必呼叫 R 或 Python 解譯器。 因此，多個處理程序互動的額外負荷已降低，導致更快的預測效能，在生產環境的企業案例。
 
 若要使用原生評分，呼叫預測 T-SQL 函數並傳遞下列必要的輸入：
 

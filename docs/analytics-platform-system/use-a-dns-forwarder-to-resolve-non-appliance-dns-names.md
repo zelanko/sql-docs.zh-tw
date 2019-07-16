@@ -2,19 +2,18 @@
 title: Analytics Platform System 中使用的 DNS 轉送工具 |Microsoft Docs 」
 description: 您可以使用 DNS 轉寄站解析非設備 DNS 名稱，Analytics Platform System 中。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 841d2da521bada840c1298d3fb9cea28c2835b4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63243784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959821"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>使用 DNS 轉寄站解析非設備 DNS 名稱在 Analytics Platform System
 可以在 Active Directory 網域服務節點上設定 DNS 轉寄站 ( **_設備\_網域_-AD01** 並 **_設備\_網域_-ad02 移** ) 的程式的 Analytics Platform System 設備，以允許指令碼和軟體應用程式存取外部伺服器。  

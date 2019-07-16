@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 4ce25830c3899ca0973fafe30c86489bfcdc949a
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: ea567d8fbe3f6bbd9b51133ec015768cd4c6e893
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140502"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962521"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>啟用或停用 SQL Server 的遠端封裝管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8483a908e31b9e4554c5594ecc5bbf186bbef88f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c9216ee655e371633837c5653ebac56fac1a782
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918710"
 ---
 # <a name="fields-collection-ado"></a>Fields 集合 (ADO)
 包含所有[欄位](../../../ado/reference/ado-api/field-object.md)的物件[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)或是[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件。  

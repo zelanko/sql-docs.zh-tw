@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 47a4fcc7-6e8c-4ea2-a68a-f2789151c25f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 629db42013df4fccfbd03c95cc3368d1538dbf6a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e76c91dc1bf07232d4cb531c7cb881e9bc142729
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989919"
 ---
 # <a name="issuedto-property-securitycertificate-class"></a>IssuedTo 屬性 (SecurityCertificate 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

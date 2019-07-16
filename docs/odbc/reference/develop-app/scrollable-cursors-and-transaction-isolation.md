@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e5510eb58315f70195eb40390edec1766c350fb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92e3694690ef1cba210da29766e7528762e691f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061605"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>可捲動的資料指標和交易隔離
 下表列出控管的可見性變更的因素。  
@@ -41,13 +40,13 @@ ms.locfileid: "62468588"
 |資料指標 type\action|Self|擁有<br /><br /> 交易|其他<br /><br /> 交易<br /><br /> (RU[a])|其他<br /><br /> 交易<br /><br /> (RC[a])|其他<br /><br /> 交易<br /><br /> (RR[a])|其他<br /><br /> 交易<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |Static|||||||  
-|Insert|Maybe[b]|否|否|否|否|否|  
-|Update|Maybe[b]|否|否|否|否|否|  
-|DELETE|Maybe[b]|否|否|否|否|否|  
+|Insert|或許是 [b]|否|否|否|否|否|  
+|Update|或許是 [b]|否|否|否|否|否|  
+|DELETE|或許是 [b]|否|否|否|否|否|  
 |索引鍵集導向的資料指標|||||||  
-|Insert|Maybe[b]|否|否|否|否|否|  
+|Insert|或許是 [b]|否|否|否|否|否|  
 |Update|是|是|是|是|否|否|  
-|DELETE|Maybe[b]|是|是|是|否|否|  
+|DELETE|或許是 [b]|是|是|是|否|否|  
 |動態|||||||  
 |Insert|是|是|是|是|是|否|  
 |Update|是|是|是|是|否|否|  

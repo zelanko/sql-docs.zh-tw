@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 21f8ec6ea0ed9cd1af8257dcd10b18f59903c929
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba871d6d0e84b8068cb36a3ed2516a2665db28d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932430"
 ---
 # <a name="index-property"></a>Index 屬性
 指出正在使用中的目前的索引名稱[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  

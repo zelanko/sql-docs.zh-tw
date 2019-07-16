@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 153c2e2b8c75c21451dca3b673129a059d78e3a6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e8285713df1fb17b2e82dcfa6edac0fd6db5500a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950666"
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +41,10 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [**@dbname=**] **'***dbname***'**  
+ [ **@dbname=** ] **'***dbname***'**  
  這是要設定複寫資料庫選項的資料庫。 *db_name*已**sysname**，沒有預設值。  
   
- [**@optname=**] **'***optname***'**  
+ [ **@optname=** ] **'***optname***'**  
  這是要啟用或停用的複寫資料庫選項。 *optname*已**sysname**，而且可以是下列值之一。  
   
 |值|描述|  
@@ -79,7 +78,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [刪除發行集](../../relational-databases/replication/publish/delete-a-publication.md)   
  [停用發行和散發](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
+ [sys.sysdatabases &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 52440d9e-89fd-4c15-a008-a1ea99f41387
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44e8d02cd90000a3a473a2e864345c483e5fda9d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8b46b6dd56744d0c55a7276e000db2a49889d1fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005268"
 ---
 # <a name="architecture-of-client-side-and-server-side-xml-formatting-sqlxml-40"></a>用戶端和伺服器端 XML 格式的架構 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "56028939"
   
  ![在用戶端 XML 格式化架構。](../../../relational-databases/sqlxml/formatting/media/clientsidexml.gif "架構的 XML 格式化的用戶端。")  
   
- 在這個範例中，用戶端會使用 SQLXMLOLEDB 提供者。 在連接字串中，則必須設定為 SQLOLEDB 的資料提供者屬性。 (這是 SQLXML 4.0 中唯一接受的值)。在用戶端上執行的命令會傳送至伺服器。 在伺服器上產生的資料列集會傳送至用戶端。 來自資料列集的 XML 文件的格式會在用戶端上執行。  
+ 在這個範例中，用戶端會使用 SQLXMLOLEDB 提供者。 在連接字串中，則必須設定為 SQLOLEDB 的資料提供者屬性。 （這是唯一在 SQLXML 4.0 中接受的值）。在用戶端執行此命令會傳送到伺服器。 在伺服器上產生的資料列集會傳送至用戶端。 來自資料列集的 XML 文件的格式會在用戶端上執行。  
   
  在 SQLXML 4.0 中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) 或 SQLOLEDB 提供者可用來當做資料提供者。 您可能可以存取任何資料來源。 只要查詢傳回單一資料列集，就可以在用戶端上套用 XML 轉換。  
   

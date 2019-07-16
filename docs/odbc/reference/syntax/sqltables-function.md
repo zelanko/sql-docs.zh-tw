@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2a69ffbde7ec4ff1d7eebbb73f0b60a619755c37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e99dd2f5cf3186120297d7679f87e973d5164a57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039536"
 ---
 # <a name="sqltables-function"></a>SQLTables 函數
 **合規性**  

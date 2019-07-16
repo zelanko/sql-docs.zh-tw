@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 23c97a9640195689a9e980f695163cc03841f672
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 616d03d7a76e0db922157e88cf450eb99b4aa25a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913524"
 ---
 # <a name="clr-integration-and-transactions"></a>CLR 整合和交易
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

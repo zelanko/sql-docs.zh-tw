@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3967e3f8548a7b8ef804d054cf746243a8fb5b96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f43e03e482bb7125100ed7bed56337fb75a2e711
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900083"
 ---
 # <a name="sysdmosloadedmodules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "63047186"
 |**private_build**|**bit**|1 = 模組是已載入模組的私用建置。|  
 |**special_build**|**bit**|1 = 模組是已載入模組的特殊建置。|  
 |**language**|**int**|模組之版本資訊的語言。|  
-|**company**|**nvarchar(256)**|建立模組的公司名稱。|  
+|**公司**|**nvarchar(256)**|建立模組的公司名稱。|  
 |**description**|**nvarchar(256)**|模組的描述。|  
 |**name**|**nvarchar(255)**|模組的名稱。 包含模組的完整路徑。|  
 |**pdw_node_id**|**int**|**適用於**：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  

@@ -7,13 +7,12 @@ ms.date: 12/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 7ccc3ad494658fc7a8f9c67472aecb1c4cddb7da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a66d79d376806383f1376510bb6de79493cb7ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641749"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962478"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils （SQL Server 中的 R 程式庫）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

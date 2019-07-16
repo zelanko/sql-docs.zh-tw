@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dea7ec95efc1f560a2279868b2116d02d7ad6fef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701202"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926669"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 索引服務概觀
 Microsoft OLE DB Provider for Microsoft 索引服務提供程式設計的唯讀存取檔案系統和 Web 資料由 Microsoft 索引服務編製索引。 ADO 應用程式可以發出 SQL 查詢來擷取內容和檔案屬性資訊。
@@ -76,7 +75,7 @@ MSIDXS
 |[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)*|讀取/寫入|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|讀取/寫入|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|一律**adUseServer**|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|一律**adOpenStatic**|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|一律**adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|唯讀|
 |[篩選](../../../ado/reference/ado-api/filter-property.md)|讀取/寫入|
