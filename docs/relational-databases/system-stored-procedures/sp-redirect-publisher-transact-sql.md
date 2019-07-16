@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5458d7a7693c742768a9a8a5e0c2f8583f1ca9ba
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cde6f00d16bcff4ee56513f515cf2ecac93a1b5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002517"
 ---
 # <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,14 +55,14 @@ sp_redirect_publisher
 ## <a name="remarks"></a>備註  
  **sp_redirect_publisher**用來允許將複寫發行者重新導向至目前的主要複本的 Alwayson 可用性群組所關聯的可用性群組接聽程式的發行者/資料庫配對。 執行**sp_redirect_publisher** AG 接聽程式設定為包含已發行的資料庫的可用性群組之後。  
   
- 如果移除原始發行者的發行集資料庫從可用性群組主要複本上，執行**sp_redirect_publisher**而不指定值*@redirected_publisher*若要移除發行者/資料庫配對的重新導向的參數。 如需有關重新導向和發行者，請參閱 <<c0> [ 維護 AlwaysOn 發行集資料庫&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)。</c0>  
+ 如果移除原始發行者的發行集資料庫從可用性群組主要複本上，執行**sp_redirect_publisher**而不指定值 *@redirected_publisher* 若要移除發行者/資料庫配對的重新導向的參數。 如需有關重新導向和發行者，請參閱 <<c0> [ 維護 AlwaysOn 發行集資料庫&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)。</c0>  
   
 ## <a name="permissions"></a>Permissions  
  呼叫端必須是隸屬**sysadmin**固定伺服器角色**db_owner**散發資料庫或定義的發行集的發行集存取清單成員的固定的資料庫角色發行者資料庫相關聯。  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_validate_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
+ [sp_validate_redirected_publisher &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
  [sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
  [sp_validate_replica_hosts_as_publishers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
   

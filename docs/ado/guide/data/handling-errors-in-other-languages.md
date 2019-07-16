@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8c57f35e-3c04-4f17-bf3e-3ad053951530
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5417fb01208e7811985dc7f27fd41cf9d23ee9c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83d9430dc368a3dc9eb93719f9698b0d39b1385b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925161"
 ---
 # <a name="handling-errors-in-other-languages"></a>處理其他語言的錯誤
 到目前為止，這一節已說明從 Microsoft® Visual Basic® 觀點來看的錯誤。 本節的其餘部分將提供 Visual Basic 以外的語言中的錯誤處理的概觀。  

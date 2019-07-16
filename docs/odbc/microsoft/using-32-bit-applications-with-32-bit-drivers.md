@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5c4f0b21bba9e56cad076ae08f5a561cc972d2ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b4d14cc65b31a0641149ace931efe46c914ad1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213469"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088160"
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>搭配使用 32 位元應用程式與 32 位元驅動程式
 您可以執行 32 位元應用程式與 32 位元驅動程式。 32 位元應用程式和 32 位元驅動程式會使用 Win32® API。  

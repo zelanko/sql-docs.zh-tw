@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9620f5d92393578493b4867a81cf462798319046
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bc5440969f662bdbebf885448a1c583a2d10843
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965359"
 ---
 # <a name="relatedcolumn-property-adox"></a>RelatedColumn 屬性 (ADOX)
 表示名稱的相關[資料行物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)相關的資料表 （只有索引鍵資料行） 中。  

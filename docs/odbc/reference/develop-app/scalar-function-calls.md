@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 24b62c2b5cd449b6e7201d413b315e48fbd570f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37209a75c03a051e3def4d26fa0d4e7f85d0e91d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897752"
 ---
 # <a name="scalar-function-calls"></a>純量函式呼叫
 純量函數會傳回每個資料列的值。 比方說，絕對值的純量函式會採用數值的資料行，做為引數，並傳回資料行中的每個值的絕對值。 呼叫純量函式逸出序列是  
