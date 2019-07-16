@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c4af3d6a65f6104240c5c9a32d1761e4be69a41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1a03ecd9f41fe7d236f8c61f7059014a6ac07fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088213"
 ---
 # <a name="operators-mdx-syntax"></a>運算子 (MDX 語法)
 
@@ -95,7 +94,7 @@ ms.locfileid: "63277596"
 |層級|將|\<層級 >.members|  
 |階層|成員|\<階層 >.defaultmember|  
 |成員|Tuple|(\<成員 >)|  
-|Tuple|成員|\<tuple>.item(0)|  
+|Tuple|成員|\<tuple >.item(0)|  
 |Tuple|純量|\<tuple>.value|  
   
 ## <a name="see-also"></a>另請參閱  

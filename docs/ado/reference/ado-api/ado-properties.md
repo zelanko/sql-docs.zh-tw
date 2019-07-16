@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3b6155de4c1bbc04e921b3b019eb0128694f6412
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3ddf4e26d015067c0b5bf06f6e2adeecd39f041
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920891"
 ---
 # <a name="ado-properties"></a>ADO 屬性
 
@@ -32,7 +31,7 @@ ms.locfileid: "66696631"
 |[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)|表示欄位值的實際長度。|  
 |[屬性](../../../ado/reference/ado-api/attributes-property-ado.md)|表示物件的一或多個特性。|  
 |[BOF 和 EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|**BOF**指出目前記錄的位置之前的資料錄集物件中的第一個記錄。<br /><br /> **EOF**指出目前記錄的位置之後的資料錄集物件中最後一筆記錄。|  
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|表示唯一識別目前的記錄中的書籤**資料錄集**物件，或設定目前資料錄**資料錄集**物件的有效書籤所識別的記錄。|  
+|[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)|表示唯一識別目前的記錄中的書籤**資料錄集**物件，或設定目前資料錄**資料錄集**物件的有效書籤所識別的記錄。|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|指出從資料錄數目**資料錄集**會在本機快取在記憶體中的物件。|  
 |[章節](../../../ado/reference/ado-api/chapter-property-ado.md)|取得或設定 OLE DB**一章**物件上的往返**ADORecordsetConstruction**物件。|  
 |[CharSet](../../../ado/reference/ado-api/charset-property-ado.md)|指出字元集所在的文字內容**Stream**應進行轉譯。|  
@@ -79,7 +78,7 @@ ms.locfileid: "66696631"
 |[提供者](../../../ado/reference/ado-api/provider-property-ado.md)|指出提供者的名稱**連線**物件。|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|表示中的記錄數目**資料錄集**物件。|  
 |[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)|表示的型別**記錄**物件。|  
-|[Row](../../../ado/reference/ado-api/row-property-ado.md)|取得或設定 OLE DB**資料列**物件上的往返**ADORecordConstruction**物件。|  
+|[資料列](../../../ado/reference/ado-api/row-property-ado.md)|取得或設定 OLE DB**資料列**物件上的往返**ADORecordConstruction**物件。|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|取得或設定 OLE DB **RowPosition**物件上的往返**ADORecordsetConstruction**物件。|  
 |[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|取得或設定 OLE DB**資料列集**物件上的往返**ADORecordsetConstruction**物件。|  
 |[來源 (ADO Error)](../../../ado/reference/ado-api/source-property-ado-error.md)|表示物件或最初產生錯誤的應用程式的名稱。|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6750e17b694086cf716e32629fcf3b3f3b48f486
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64348e33502e8407e567b8901890246344765f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989678"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>執行 SSMA 主控台 (DB2ToSQL)
 Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 SSMA 活動。 後續章節將詳細說明相同。 主控台應用程式會使用某些標準的指令碼檔命令為列舉這一節。  
@@ -159,7 +158,7 @@ force-load-source/target-database
   
   metabase="<source/target>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <force-load>  
@@ -272,7 +271,7 @@ generate-assessment-report
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <generate-assessment-report  
@@ -344,7 +343,7 @@ convert-schema
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <convert-schema  
@@ -410,7 +409,7 @@ convert-schema
   
 </migrate-data>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <migrate-data  
@@ -431,7 +430,7 @@ convert-schema
   
 **Command**  
   
-map-schema  
+對應結構描述  
   
 目標結構描述的來源資料庫的結構描述對應。  
   
@@ -452,7 +451,7 @@ map-schema
 ```  
 **Command**  
   
-map-schema  
+對應結構描述  
   
 目標結構描述的來源資料庫的結構描述對應。  
   
@@ -479,7 +478,7 @@ map-schema
   
 **Command**  
   
-synchronize-target  
+同步處理目標  
   
 -   會使用目標資料庫，同步處理的目標物件。  
   
@@ -499,7 +498,7 @@ synchronize-target
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   失敗指令碼  
   
 -   `report-errors-to:` 同步處理作業 （也就是選擇性屬性） 如果只指定資料夾路徑，然後檔案儲存依名稱指定的錯誤報表的位置**TargetSynchronizationReport.XML**建立。  
   
@@ -520,7 +519,7 @@ synchronize-target
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <synchronize-target  
@@ -529,7 +528,7 @@ synchronize-target
   
    object-type="<object-category>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <synchronize-target>  
@@ -564,7 +563,7 @@ refresh-from-database
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   失敗指令碼  
   
 -   `report-errors-to:` 重新整理作業 （也就是選擇性屬性） 如果只指定資料夾路徑，然後檔案儲存依名稱指定的錯誤報表的位置**SourceDBRefreshReport.XML**建立。  
   
@@ -585,7 +584,7 @@ refresh-from-database
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <refresh-from-database  
@@ -594,7 +593,7 @@ refresh-from-database
   
    object-type="<object-category>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <refresh-from-database>  
@@ -644,7 +643,7 @@ save-as-script
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <save-as-script  
@@ -720,7 +719,7 @@ convert-sql-statement
   
 </convert-sql-statement>  
 ```  
-中的多個  
+或  
   
 ```  
 <convert-sql-statement  
@@ -743,7 +742,7 @@ convert-sql-statement
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-中的多個  
+或  
   
 ```  
 <convert-sql-statement  

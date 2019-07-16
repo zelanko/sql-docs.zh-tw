@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7190fa68b8204e6b1cfea68a6571e07fd78a9bbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef30faf0fef05c4e86ffb4d2c21781592094c198
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718954"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967308"
 ---
 # <a name="append-method-adox-indexes"></a>Append 方法 (ADOX Indexes)
 加入新[Index](../../../ado/reference/adox-api/index-object-adox.md)物件[索引](../../../ado/reference/adox-api/indexes-collection-adox.md)集合。  

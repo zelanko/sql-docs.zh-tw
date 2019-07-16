@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 99fe38d78ff146503995a3e28dbe186b04be870d
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 5c60567da677564c168f0601625686bdfb8b3d67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926592"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 遠端處理提供者概觀
 Microsoft OLE DB 遠端服務提供者可讓用戶端電腦上的本機使用者叫用遠端電腦上的資料提供者。 如果您在遠端電腦上的本機使用者一樣，請指定遠端電腦的資料提供者參數。 然後指定用來存取遠端電腦的遠端服務提供者的參數。 然後，您可以如同是本機使用者存取遠端電腦。
@@ -50,7 +49,7 @@ Microsoft OLE DB 遠端服務提供者可讓用戶端電腦上的本機使用者
 |**DFMode**|指出 DataFactory 模式。 字串，指定所需的版本[DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)伺服器上的物件。 將此屬性設定開啟要求的特定版本的連接之前**DataFactory**。 如果要求的版本無法使用，將會嘗試使用先前的版本。 如果沒有上一個版本，會發生錯誤。 如果**DFMode**小於可用的版本中，會發生錯誤。 這個屬性是唯讀的之後將會連接。<br /><br /> 可以是下列有效的字串值的其中一個：<br /><br /> -"25"-版本 2.5 （預設值）<br />-"21"-2.1 版<br />-"20"-2.0 版<br />-"15"-1.5 版|
 |**命令屬性**|表示將會新增至 MS 遠端提供者傳送到伺服器的命令 （資料列集） 屬性的字串的值。 這個字串的預設值為 vt_empty。|
 |**目前的 DFMode**|表示的實際版本號碼**DataFactory**伺服器上。 檢查這個屬性，請參閱版本是否要求中**DFMode**屬性已被接受。<br /><br /> 可以是下列有效的長整數值的其中一個：<br /><br /> -25-2.5 版 （預設值）<br />-21-版本 2.1<br />-20 版本 2.0<br />-15 版本 1.5<br /><br /> 新增"DFMode = 20; 「 使用時，在連接字串**MSRemote**更新資料時，提供者可以改善伺服器效能。 使用此設定時， **RDSServer.DataFactory**伺服器上的物件會使用大量的資源模式。 不過，下列功能不適用於此組態：<br /><br /> -使用參數化的查詢。<br />-取得參數或資料行的資訊，然後再呼叫**Execute**方法。<br />-設定**Transact 更新**要 **，則為 True**。<br />-取得資料列狀態。<br />-呼叫**Resync**方法。<br />重新整理 （明確或自動） 透過**更新重新同步處理**屬性。<br />-設定**命令**或是**資料錄集**屬性。<br />-使用**adCmdTableDirect**。|
-|**Handler**|指出擴充功能的伺服器端自訂程式 （或處理常式） 的名稱[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)，並且所有以逗號分隔的處理常式所使用的任何參數 （"，"）。 **字串**值。|
+|**處理常式**|指出擴充功能的伺服器端自訂程式 （或處理常式） 的名稱[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)，並且所有以逗號分隔的處理常式所使用的任何參數 （"，"）。 **字串**值。|
 |**網際網路逾時**|表示最大要求傳入及傳出伺服器等待的毫秒數。 （預設值為 5 分鐘）。|
 |**遠端提供者**|表示要在遠端伺服器上使用的資料提供者的名稱。|
 |**遠端伺服器**|指出用於此連線的伺服器名稱與通訊協定。 這個屬性就相當於[rds。DataContro](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件[Server](../../../ado/reference/rds-api/server-property-rds.md)屬性。|

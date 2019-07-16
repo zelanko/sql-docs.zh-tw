@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8a79d6e39cb71c7dd7c5e055d9aa71cba23bc9c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1af45d9ac4674af98097083e2da89a217f17a58f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718562"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921019"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 事件模型範例 (VC++)
 視覺效果C++一節[ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)提供如何具現化 ADO 事件模型的一般描述。 以下是具現化所建立的環境內的事件模型的特定範例 **#import**指示詞。  

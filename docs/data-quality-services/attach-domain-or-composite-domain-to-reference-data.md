@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 551e66805dc53f7113aeb0260716967bb8a78486
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8171d552d850ec929f7aba5b55b6f0e2c6ae7265
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66780458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935630"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>將定義域或複合定義域附加至參考資料
 
@@ -57,7 +56,7 @@ ms.locfileid: "66780458"
   
 4.  在 **[定義域管理]** 畫面中，按一下 **[建立定義域]** 圖示建立定義域。 建立以下四個定義域：[地址行]  、[縣/市]  、[州/省]  和 [郵遞區號]  。  
   
-5.  按一下 **[建立複合定義域]** 圖示，建立複合定義域。 在 **[建立複合定義域]** 對話方塊中，於 **[複合定義域名稱]** 方塊中輸入 **地址驗證** ，並在複合定義域中包含步驟 3 所建立的所有定義域。 按一下 [確定]  。  
+5.  按一下 **[建立複合定義域]** 圖示，建立複合定義域。 在 **[建立複合定義域]** 對話方塊中，於 **[複合定義域名稱]** 方塊中輸入 **地址驗證** ，並在複合定義域中包含步驟 3 所建立的所有定義域。 按一下 [確定 **Deploying Office Solutions**]。  
   
 6.  在左邊的 **[定義域]** 窗格中選取複合定義域，方法是按一下 **[地址驗證]** ，然後按一下右邊的 **[參考資料]** 索引標籤。  
   

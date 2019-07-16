@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e33c149f270f499921824e70ca18c58118409cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 817fd54e0af1a6cc6b847c796c68ae24f9a495ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453457"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083625"
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>SSMA for Access to SQL 中的新 GUI 功能
 此章節會描述 SSMA 使用者介面的新功能  

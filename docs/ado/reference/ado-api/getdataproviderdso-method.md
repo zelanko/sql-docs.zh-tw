@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5a4c6bd5-0c79-4f81-a977-0561392d8d50
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5187e8f9fdce65b8e746a4a18a353462bb353d4f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2b5fbe59ab58b31cd0b796cbe46963683aa890b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932477"
 ---
 # <a name="getdataproviderdso-method"></a>GetDataProviderDSO 方法
 從 Shape 提供者擷取基礎 OLE DB 資料來源物件。  

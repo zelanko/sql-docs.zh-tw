@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0ce201c3-6657-4c87-ae81-0d7dc5b5a431
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ea4af6a527ce7a45bb9c654676f1a27a16a09a85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52a1968250f58102089b353e35e93689db653240
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702807"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926952"
 ---
 # <a name="appendix-b-ado-error-codes"></a>附錄 B：ADO 錯誤碼
 請參閱下列主題中的特定錯誤訊息的詳細資訊：

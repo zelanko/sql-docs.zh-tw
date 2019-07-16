@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 366e1a5812b4d8152e5c8965d3059e3a6b2ca1cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5adc631a3c3f7a66c02f9ebfe541fa5e923deb0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704201"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922233"
 ---
 # <a name="running-the-address-book-sql-script"></a>執行通訊錄 SQL 指令碼
 > [!IMPORTANT]

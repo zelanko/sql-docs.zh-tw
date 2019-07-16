@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 91425029546402edbd5bde7df45586c77e38d83b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b40b71dee32608756721d84a2e13f5f54f7bcbfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920548"
 ---
 # <a name="attributes-property-ado"></a>Attributes 屬性 (ADO)
 表示物件的一或多個特性。  

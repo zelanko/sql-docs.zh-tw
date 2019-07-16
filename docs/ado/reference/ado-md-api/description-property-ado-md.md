@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 23eba215622c423c69119308420a66bf60c4e2fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5636b5f4e49ff9a5bbe46937a8d7b972e61b4502
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709301"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938579"
 ---
 # <a name="description-property-ado-md"></a>Description 屬性 (ADO MD)
 傳回目前物件的文字說明。  

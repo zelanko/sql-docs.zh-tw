@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 17ce1263-5897-452a-9ea5-c7f96b33df65
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6bd1e02bf406906cc8a893ccee66a408b38510f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce8679c0c7b20dfaa641918f0447a2f77bfd474a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925447"
 ---
 # <a name="editing-existing-records"></a>編輯現有的記錄
 若要編輯現有的記錄，請移至您想要編輯和變更的資料列**值**您想要變更的欄位的屬性。 如需詳細資訊**欄位**物件的**值**屬性，請參閱[檢查資料](../../../ado/guide/data/examining-data.md)。 根據您的資料指標類型，您將使用**更新**或是**UpdateBatch**將變更傳送回資料來源。 如需詳細資訊，請參閱 <<c0> [ 更新和保存資料](../../../ado/guide/data/updating-and-persisting-data.md)。  

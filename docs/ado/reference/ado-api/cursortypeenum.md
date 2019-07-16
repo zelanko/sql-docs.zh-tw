@@ -1,5 +1,5 @@
 ---
-title: CursorTypeEnum | Microsoft Docs
+title: CursorTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dd3469b826ac4f577ff0e883b1a92a3acec4a981
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6333934997c9de38b8df1dd08849886ff3dd7f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698541"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933276"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
 指定資料指標中所使用的型別[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  

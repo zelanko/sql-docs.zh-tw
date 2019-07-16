@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: df6437e80ab746a7d6aa219fb3299cb54712b5c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62b78b608526ae0d6943a7416a21687fd1e51412
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918786"
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete 事件 (ADO)
 **ExecuteComplete**命令已完成執行之後，系統會呼叫事件。  

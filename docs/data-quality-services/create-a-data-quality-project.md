@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 139a8317b934ac262f57cb4025deb15d05dadc20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: badc06f5bc8becdb8a948a5740888e7f97be19ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935521"
 ---
 # <a name="create-a-data-quality-project"></a>建立資料品質專案
 

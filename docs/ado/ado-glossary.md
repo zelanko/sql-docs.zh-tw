@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6f139965c4235b84c66c460767d5c6d1695b68ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 67d791820e9dd22b035f98eb76e27723ebfb8fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701829"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927179"
 ---
 # <a name="ado-glossary-terms"></a>ADO 詞彙
 本主題會定義與 ADO 的詞彙。
@@ -53,7 +52,7 @@ ms.locfileid: "66701829"
 
  商務規則驗證的編輯、 登入驗證、 資料庫查閱、 原則和構成企業的方式進行商務往來的演算轉換的組合。 也稱為*商務邏輯*。
 
-## <a name="c"></a>c
+## <a name="c"></a>C
  計算運算式不是常數運算式，但其值取決於其他值。 要評估，必須取得的導出的運算式，並將其計算從其他來源，通常是在其他欄位或資料列的值中。
 
  章節的參考一組資料列從資料來源。 在 ADO 中，一整章通常是另一個的參考**資料錄集**。

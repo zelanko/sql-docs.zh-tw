@@ -4,17 +4,16 @@ titleSuffix: SQL Server
 description: SQL Server 指令碼範例-在 Ubuntu 上的自動安裝
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 3bd5728e8046d7e48945fe815b64735362873ac1
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: b71bad98aa6e9172b69efa67ce8708f1479fa691
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834467"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910487"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>範例：適用於 Ubuntu 的自動安裝的 SQL Server 安裝指令碼
 

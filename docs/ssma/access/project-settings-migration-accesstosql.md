@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 441366208d2bfd886794dd7e50dca7e0aef7b3ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e3d979b6f3c5943723fb5dd8f37831adfbc1305
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299284"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929398"
 ---
 # <a name="project-settings-migration-accesstosql"></a>專案設定 （移轉） (AccessToSQL)
 移轉專案設定可讓您設定如何將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
@@ -29,7 +28,7 @@ ms.locfileid: "63299284"
   
 -   使用**預設專案設定**對話方塊來設定的所有專案的組態選項。 若要存取的移轉設定中，在**工具**功能表上，選取**預設專案設定**，選取 專案類型中的**移轉目標版本**下拉式方塊，其中您要存取的設定，請按一下**一般**左的窗格中，然後再按一下底部**移轉**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **檢查條件約束**  
 指定 SSMA 是否應該將資料加入資料表檢查條件約束。  
   

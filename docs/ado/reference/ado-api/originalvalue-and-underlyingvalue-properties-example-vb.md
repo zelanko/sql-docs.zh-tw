@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8caf11b72de62c62484f7548a9f73f33b70795bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d424fb1033ff30044dd34134ac31991d8561c40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917804"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue 和 UnderlyingValue 屬性範例 (VB)
 此範例示範[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)並[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)藉由顯示一則訊息，如果記錄的基礎資料的屬性已變更期間[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)批次更新。  

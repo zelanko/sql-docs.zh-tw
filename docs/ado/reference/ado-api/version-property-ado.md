@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3691de816fb442ea1e0d94d2918829ab6cbb0e5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: addae0713fc175c7a261668c532b771ee0f4fa34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710303"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938739"
 ---
 # <a name="version-property-ado"></a>Version 屬性 (ADO)
 指示 ADO 版本號碼。  

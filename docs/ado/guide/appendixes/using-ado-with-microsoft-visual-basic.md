@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: abbdbeec81a029716ac6516f9436373e91365a23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22286cbe571420475cf273ca377d16e79610fc3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926561"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>應用程式搭配使用 ADO 與 Microsoft Visual Basic 和 Visual Basic
 設定 ADO 專案，並撰寫 ADO 程式碼很類似您是否使用 Visual Basic 或 Visual Basic 應用程式。 本主題說明使用 Visual Basic 和 Visual Basic 中使用 ADO 的應用程式，並資訊的任何差異。
@@ -99,7 +98,7 @@ Dim conn1
 Set conn1 = CreateObject("ADODB.Connection") As Object
 ```
 
- 使用物件具現化**CreateObject**是晚期繫結，這表示它們不強型別且已停用命令列完成。 不過，它確實可讓您略過從您的專案中參考 ADO 程式庫，並可讓您具現化物件的特定版本。 例如：
+ 使用物件具現化**CreateObject**是晚期繫結，這表示它們不強型別且已停用命令列完成。 不過，它確實可讓您略過從您的專案中參考 ADO 程式庫，並可讓您具現化物件的特定版本。 例如:
 
 ```
 Set conn1 = CreateObject("ADODB.Connection.2.0") As Object

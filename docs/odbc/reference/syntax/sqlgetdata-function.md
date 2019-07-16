@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0dc0e57356c972797cbd72fa4ce3427a0e473dad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f33d55cc8ac5dab37ce200a5a654bcb4be7cc9ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911367"
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 函數
 **合規性**  

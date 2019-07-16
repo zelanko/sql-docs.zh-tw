@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 44ab042814b95886faa9f632fb58d7a809c9e458
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 31a52f86692d5769fe22f4cf0b5a04ad324c3ac0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930110"
 ---
 # <a name="functions-on-nodes---number"></a>節點的相關函式 - number
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ fn:number($arg as node()?) as xs:double?
  節點值將以數字傳回。  
   
 ## <a name="remarks"></a>備註  
- 如果 *$arg*是未指定，會傳回內容節點，並轉換為雙精度浮點數，數字值。 在 SQL Server **fn:number()** 沒有引數僅適用於內容相依述詞的內容中。 具體而言，它只能在括號 ([ ]) 內使用。 例如，下列運算式會傳回 <`ROOT`> 元素。  
+ 如果 *$arg*是未指定，會傳回內容節點，並轉換為雙精度浮點數，數字值。 在 SQL Server **fn:number()** 沒有引數僅適用於內容相依述詞的內容中。 具體而言，它只能在括號 ([ ]) 內使用。 例如，下列運算式會傳回 <`ROOT`> 項目。  
   
 ```  
 declare @x xml  

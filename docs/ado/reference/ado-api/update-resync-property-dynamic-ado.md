@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 57ff6e224537feebaf51eee1435ed64ab845025d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed0e3ad8027c31a351ddb4506d3b420aa3a1124d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938801"
 ---
 # <a name="update-resync-property-dynamic-ado"></a>更新重新同步動態屬性 (ADO)
 指定是否[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法後面隱含[重新同步處理](../../../ado/reference/ado-api/resync-method.md)方法作業，如果是，該作業的範圍。  

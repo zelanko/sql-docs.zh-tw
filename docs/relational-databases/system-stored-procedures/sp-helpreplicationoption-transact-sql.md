@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b125eeaab0ea833a801123ea4540f076696894d0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9852aaaf0b719bfa03736997959d76110dff4d6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997503"
 ---
 # <a name="sphelpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,18 +42,18 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 |值|描述|  
 |-----------|-----------------|  
 |**transactional**|如果是啟用異動複寫，則傳回結果集。|  
-|**merge**|如果是啟用合併式複寫，則傳回結果集。|  
+|**合併式**|如果是啟用合併式複寫，則傳回結果集。|  
 |NULL (預設值)|不會傳回結果集。|  
   
 ## <a name="result-sets"></a>結果集  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**optname**|**sysname**|複寫選項的名稱，它可以是下列值之一：<br /><br /> **transactional**<br /><br /> **merge**|  
+|**optname**|**sysname**|複寫選項的名稱，它可以是下列值之一：<br /><br /> **transactional**<br /><br /> **合併式**|  
 |**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**major_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**minor_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**revision**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**修訂**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="return-code-values"></a>傳回碼值  

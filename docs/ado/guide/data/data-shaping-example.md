@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5690b104cea4cf29cb51c77d8dc8554dd5a31d50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a946329ad95a2b226f186e571152268baa5f37c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701094"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925661"
 ---
 # <a name="data-shaping-example"></a>資料成形範例
 下列資料成形命令示範如何建置一個階層式**Recordset**從**客戶**並**訂單**Northwind 資料庫中的資料表。  

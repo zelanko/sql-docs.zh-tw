@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ccfb1189e0c4d9bb0b1684ac3fd47709f491cd48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ea7ea83219780602f8d8d68e5c807178e775bc2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922706"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>啟用 DLL 以在 DCOM 上執行
 > [!IMPORTANT]

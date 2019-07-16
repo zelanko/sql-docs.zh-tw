@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0abc00fe-ee09-4c8e-b1f2-48ee9c5f3329
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 39f17727973a5ada4f28c8ff4b50d13bb5e991e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8439f7d8fabc5675e43fca5bba006b22574b992
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711228"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931040"
 ---
 # <a name="skipline-method"></a>SkipLine 方法
 讀取文字時，會略過整個一行[Stream](../../../ado/reference/ado-api/stream-object-ado.md)。  

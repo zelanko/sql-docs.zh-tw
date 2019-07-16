@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f02304e8bef26d552dbb402565e77269ac7057d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e30d3ba08c10b16768d75a9234cfa15fe501c9b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965210"
 ---
 # <a name="sortorder-property-adox"></a>SortOrder 屬性 (ADOX)
 指出資料行 （僅限索引欄） 的排序順序。  

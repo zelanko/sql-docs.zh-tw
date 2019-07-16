@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15a3efd678d7b1f055daebc31d71d4044ad19eef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43d4fe1ab363326269daf40375e126b930d2548b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901646"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>設定 ODBC 連線共用選項
 連接共用，可讓應用程式使用來自不需要重新建立每次使用的連接集區的連接。 您可以使用**連接共用**索引標籤**ODBC 資料來源管理員**啟用和停用效能監視 對話方塊。 按兩下驅動程式名稱，若要設定連接逾時期限。  

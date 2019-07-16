@@ -1,5 +1,5 @@
 ---
-title: 步驟 1:設定 Visual Basic 專案 |Microsoft Docs
+title: 步驟 1：設定 Visual Basic 專案 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: 77d3bfa5-fc9f-4a72-93b4-790c7d227988
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b5f6379eb6cfc1d0f9020019d543cda180d9d88b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd44990c38a30f26e682fbb7f1f6aef642043215
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924077"
 ---
-# <a name="step-1-set-up-the-visual-basic-project"></a>步驟 1:設定 Visual Basic 專案
+# <a name="step-1-set-up-the-visual-basic-project"></a>步驟 1：設定 Visual Basic 專案
 在此案例中，假設您有 Microsoft Visual Basic 6.0 ADO 2.5 或更新版本，Microsoft OLE DB Provider for Internet Publishing 安裝在您的系統上。 您會先建立新的專案，並再將某些控制項新增至專案中的預設表單。  
   
 ### <a name="to-create-an-ado-project"></a>若要建立 ADO 專案：  

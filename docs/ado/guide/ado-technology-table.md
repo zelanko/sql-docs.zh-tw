@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8403af8dec6e3d96f955b6b4523662a164931be3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e260ba5e9bfa4cc0d55187dff09072dd5842828
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927019"
 ---
 # <a name="products-and-technologies-table"></a>產品和技術資料表
 下表列出 Microsoft 產品、 工具和 ADO 程式設計人員指南中所討論的技術。 可能的情況下，本指南中的相關主題，它會提供連結。
 
 |Microsoft 產品或技術|參考|
 |-------------------------------------|----------------|
-|Access/Jet|[使用資料錄集](../../ado/guide/data/working-with-recordsets.md)<br /><br /> [ADOX 基礎](../../ado/guide/extensions/adox-fundamentals.md)<br /><br /> [Microsoft OLE DB Provider for Microsoft Jet](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
+|Access/Jet|[使用資料錄集](../../ado/guide/data/working-with-recordsets.md)<br /><br /> [ADOX 基礎](../../ado/guide/extensions/adox-fundamentals.md)<br /><br /> [Microsoft Jet 的 Microsoft OLE DB 提供者](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |Active Directory 服務介面 (ADSI)|[Microsoft Active Directory 服務的 Microsoft OLE DB 提供者](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
 |COM/DCOM|[使用 ADO 文件的必要條件](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)<br /><br /> [將商務物件標示為可安全編寫指令碼](../../ado/guide/remote-data-service/marking-business-objects-as-safe-for-scripting.md)<br /><br /> [在用戶端上註冊商務物件以用於 DOM](../../ado/guide/remote-data-service/registering-business-objects-on-the-client-for-use-with-dcom.md)<br /><br /> [設定 DCOM 資料流封送處理格式](../../ado/guide/remote-data-service/setting-dcom-stream-marshaling-format.md)<br /><br /> [啟用 DLL 以在 DCOM 上執行](../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md)<br /><br /> [在元件服務中執行商務物件](../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)|
 |FrontPage|[適用於網際網路發佈的 Microsoft OLE DB 提供者](../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|

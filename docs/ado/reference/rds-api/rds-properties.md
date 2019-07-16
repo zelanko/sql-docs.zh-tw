@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fc366321c9c9c3a6e19bb6a6e520007247bca5a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f6ada7e9c6c793ebc412abc00bf4c0957072740
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963618"
 ---
 # <a name="rds-properties"></a>RDS 屬性
 > [!IMPORTANT]
@@ -33,7 +32,7 @@ ms.locfileid: "66694669"
 |[FilterColumn (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)|表示要評估的篩選準則的資料行。|  
 |[FilterCriterion (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)|表示要在篩選值中使用的評估運算子。|  
 |[FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)|指出要篩選記錄的值。|  
-|[Handler (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)|表示伺服器端自訂程式的名稱 (*處理常式*)，可擴充功能**RDSServer.DataFactory**，以及任何所使用的參數*處理常式*.|  
+|[處理常式 (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)|表示伺服器端自訂程式的名稱 (*處理常式*)，可擴充功能**RDSServer.DataFactory**，以及任何所使用的參數*處理常式*.|  
 |[InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)|表示要求逾時之前要等候的毫秒數。|  
 |[ReadyState (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)|表示進度**DataControl**物件，它會擷取資料到其**資料錄集**物件。|  
 |[Recordset 和 SourceRecordset (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)|指出**資料錄集**從自訂商務物件傳回的物件。|  

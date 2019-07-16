@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 376f66c40960ab02ba0dd0693f92bb2f4f6124e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 898bbf0f1bdbdbd96ab6ca129fb43b87ad743a18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66777717"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935371"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
 

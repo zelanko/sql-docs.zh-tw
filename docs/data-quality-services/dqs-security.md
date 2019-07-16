@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 1d265a40d21a09bf7682075bf13d5b4c5079d914
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c732645c526b2179265a6669055d005e944ee114
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992099"
 ---
 # <a name="dqs-security"></a>DQS 安全性
 

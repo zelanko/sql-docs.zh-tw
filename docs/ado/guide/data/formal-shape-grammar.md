@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0af2421a0d1f80922560be556062c89074c21838
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91bdf0cfbfe87075d2c9484bca7edd835a950ee6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925342"
 ---
 # <a name="formal-shape-grammar"></a>正式 Shape 文法
 這是用於建立任何圖形命令的正式文法：  
@@ -44,26 +43,26 @@ ms.locfileid: "66701995"
 |----------|----------------|  
 |\<shape-command>|SHAPE [\<table-exp> [[AS] \<alias>]][\<shape-action>]|  
 |\<table-exp>|{\<provider-command-text>} &#124;<br /><br /> (\<shape-command>) &#124;<br /><br /> 資料表\<加上引號名稱 >&#124;<br /><br /> \<quoted-name>|  
-|\<shape-action>|APPEND \<aliased-field-list> &#124;<br /><br /> 計算\<別名欄位清單 > [BY\<欄位清單 >]|  
-|\<aliased-field-list>|\<aliased-field> [, \<aliased-field...>]|  
-|\<aliased-field>|\<field-exp> [[AS] \<alias>]|  
+|\<shape-action>|附加\<別名欄位清單 >&#124;<br /><br /> 計算\<別名欄位清單 > [BY\<欄位清單 >]|  
+|\<aliased-field-list>|\<別名欄位 > [，\<別名-欄位.../>>]|  
+|\<別名欄位 >|\<field-exp> [[AS] \<alias>]|  
 |\<field-exp>|(\<relation-exp>) &#124;<br /><br /> \<calculated-exp> &#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
-|<relation_exp>|\<table-exp> [[AS] \<alias>]<br /><br /> 有關\<關聯條件清單 >|  
-|\<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
-|\<relation-cond>|\<欄位名稱 > TO\<子 ref >|  
+|<relation_exp>|\<資料表 exp > [[AS]\<別名 >]<br /><br /> 有關\<關聯條件清單 >|  
+|\<relation-cond-list>|\<關聯條件 > [，\<關聯條件 >...]|  
+|\<關聯條件 >|\<欄位名稱 > TO\<子 ref >|  
 |\<child-ref>|\<field-name> &#124;<br /><br /> 參數\<param ref >|  
 |\<param-ref>|\<number>|  
 |\<field-list>|\<field-name> [, \<field-name>]|  
-|\<aggregate-exp>|SUM(\<qualified-field-name>) &#124;<br /><br /> AVG(\<qualified-field-name>) &#124;<br /><br /> MIN(\<qualified-field-name>) &#124;<br /><br /> MAX(\<qualified-field-name>) &#124;<br /><br /> COUNT(\<qualified-alias> &#124; \<qualified-name>) &#124;<br /><br /> STDEV(\<qualified-field-name>) &#124;<br /><br /> ANY(\<qualified-field-name>)|  
+|\<aggregate-exp>|SUM(\<qualified-field-name>) &#124;<br /><br /> AVG(\<qualified-field-name>) &#124;<br /><br /> MIN(\<qualified-field-name>) &#124;<br /><br /> MAX(\<qualified-field-name>) &#124;<br /><br /> COUNT(\<qualified-alias> &#124; \<qualified-name>) &#124;<br /><br /> STDEV(\<qualified-field-name>) &#124;<br /><br /> 任何 (\<限定欄位名稱 >)|  
 |\<calculated-exp>|CALC(\<expression>)|  
 |\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
 |\<alias>|\<quoted-name>|  
-|\<field-name>|\<quoted-name> [[AS] \<alias>]|  
-|\<quoted-name>|"\<string>" &#124;<br /><br /> '\<string>' &#124;<br /><br /> [\<string>] &#124;<br /><br /> \<name>|  
+|\<field-name>|\<加上引號名稱 > [[AS]\<別名 >]|  
+|\<quoted-name>|"\<string>" &#124;<br /><br /> '\<string>' &#124;<br /><br /> [\<string>] &#124;<br /><br /> \<名稱 >|  
 |\<qualified-name>|alias[.alias...]|  
-|\<name>|alpha [ alpha &#124; digit &#124; _ &#124; # &#124; : &#124; ...]|  
-|\<number>|digit [digit...]|  
-|\<new-exp>|NEW \<field-type> [(\<number> [, \<number>])]|  
+|\<名稱 >|alpha [ alpha &#124; digit &#124; _ &#124; # &#124; : &#124; ...]|  
+|\<number>|數字 [數字...]|  
+|\<new-exp>|新\<欄位類型 > [(\<數字 > [，\<數目 >])]|  
 |\<field-type>|OLE DB 或 ADO 資料類型。|  
 |\<string>|unicode 字元 [unicode 字元...]|  
 |\<expression>|Visual Basic 應用程式其運算元都是相同的資料列中的其他非計算資料行的運算式。|  
