@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a1fa7c0-7494-4706-bec1-1ac2c764f6be
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fead9d6f80c62995cf156adc092221113a9ff24c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6afb061e07b3d01395031b4ce00fe315364ef382
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045010"
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Microsoft 提供的 ODBC 驅動程式
 *驅動程式*ODBC API 中實作的函式的程式庫。 每個驅動程式是針對特定的資料庫管理系統 (DBMS)。 在大部分情況下，驅動程式會公開基礎 DBMS; 的功能它們不需要實作不支援的 DBMS 的功能。 驅動程式執行特定工作，並可以分為兩種類別： 檔案為基礎和以 DBMS 為基礎。 如需有關驅動程式和驅動程式架構的詳細資訊，請參閱 <<c0> [ 驅動程式](../../odbc/reference/drivers.md)。  

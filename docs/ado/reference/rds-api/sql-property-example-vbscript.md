@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1a985d3cf47c6032b494d448a82d7cdd99394e5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4974d6509a0ba864f0159271d9c8cc90e2c4047
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963396"
 ---
 # <a name="sql-property-example-vbscript"></a>SQL 屬性範例 (VBScript)
 > [!IMPORTANT]

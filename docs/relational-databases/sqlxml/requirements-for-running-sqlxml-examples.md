@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2a1ba69fe6d38bac50e0060c7c18abcbd853d51
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ac7d7d953b072d7bed43c69814f48043c5ff30c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020564"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079533"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>執行 SQLXML 範例的需求
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

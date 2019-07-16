@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d58edcfae92c94cfc635d3539f81faf834e382c7
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 81a73044c1ab413fb2b49286814f3e6b3951c6c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921963"
 ---
 # <a name="understanding-the-customization-file"></a>了解自訂檔案
 在自訂檔案中的每個區段標頭包含方括號 ( **[]** ) 包含型別和參數。 四個區段類型會以常值字串**連接**， **sql**， **userlist**，或**記錄**。 參數是常值字串、 預設值、 使用者指定的識別項，或執行任何動作。  

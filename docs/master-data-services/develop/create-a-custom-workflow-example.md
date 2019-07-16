@@ -10,13 +10,12 @@ ms.topic: reference
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c80799d2e4f7325d9d1c529c3104004b505cd2e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7063db46a9ab2dd98013667361c5eb0887bacf89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084177"
 ---
 # <a name="create-a-custom-workflow---example"></a>建立自訂工作流程 - 範例
 

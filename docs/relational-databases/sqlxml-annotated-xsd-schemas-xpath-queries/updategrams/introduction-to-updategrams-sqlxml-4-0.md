@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 884ed081e9d1ec445815802545da2160057e9f3b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cf5835e513b1d03ac1065ae039c989c6f80a659f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018546"
 ---
-# <a name="introduction-to-updategrams-sqlxml-40"></a>Updategram 簡介 (SQLXML 4.0) 
+# <a name="introduction-to-updategrams-sqlxml-40"></a>Updategram 簡介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   您可以修改 （插入、 更新或刪除） 中的資料庫[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]從現有的 XML 文件使用 updategram 或 OPENXML[!INCLUDE[tsql](../../../includes/tsql-md.md)]函式。  
   
@@ -43,10 +42,10 @@ ms.locfileid: "56026879"
 >  本文件集假設您非常熟悉 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的範本和對應結構描述支援。 如需詳細資訊，請參閱 <<c0> [ 註解式 XSD 結構描述簡介&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。</c0> 如需使用 XDR 的舊版應用程式，請參閱 < [Annotated XDR Schemas&#40;在 SQLXML 4.0 中已被取代&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
   
 ## <a name="required-namespaces-in-the-updategram"></a>Updategram 中的必要命名空間  
- 在 updategram 中，關鍵字這類**\<同步 >**， **\<之前 >**，以及**\<之後 >**，存在於**urn: schemas-microsoft-microsoft-schemas-microsoft-com:-updategram**命名空間。 您使用的命名空間前置詞是任意的。 此文件、 **updg**前置詞代表**updategram**命名空間。  
+ 在 updategram 中，關鍵字這類 **\<同步 >** ， **\<之前 >** ，以及 **\<之後 >** ，存在於**urn: schemas-microsoft-microsoft-schemas-microsoft-com:-updategram**命名空間。 您使用的命名空間前置詞是任意的。 此文件、 **updg**前置詞代表**updategram**命名空間。  
   
 ## <a name="reviewing-syntax"></a>檢閱語法  
- Updategram 會使用範本**\<同步 >**， **\<之前 >**，以及**\<之後 >** 形成的語法的區塊updategram。 下列程式碼以其簡單的形式顯示此語法：  
+ Updategram 會使用範本 **\<同步 >** ， **\<之前 >** ，以及 **\<之後 >** 形成的語法的區塊updategram。 下列程式碼以其簡單的形式顯示此語法：  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -70,18 +69,18 @@ ms.locfileid: "56026879"
  識別所要變更資料的新狀態。  
   
  **\<sync>**  
- 包含**\<之前 >** 並**\<之後 >** 區塊。 A **\<同步 >** 區塊可以包含多個一組**\<之前 >** 並**\<之後 >** 區塊。 如果有多個一組**\<之前 >** 並**\<之後 >** 區塊，這些區塊 （即使它們是空的） 必須指定為組。 此外，一個 updategram 可以有多個**\<同步 >** 區塊。 每個**\<同步 >** 區塊就是一個交易單位 (表示項目中**\<同步 >** 區塊完成，或執行任何動作)。 如果您指定多個**\<同步 >** 封鎖在 updategram 中，其中一個失敗**\<同步 >** 區塊不會影響其他**\<同步處理>** 區塊。  
+ 包含 **\<之前 >** 並 **\<之後 >** 區塊。 A **\<同步 >** 區塊可以包含多個一組 **\<之前 >** 並 **\<之後 >** 區塊。 如果有多個一組 **\<之前 >** 並 **\<之後 >** 區塊，這些區塊 （即使它們是空的） 必須指定為組。 此外，一個 updategram 可以有多個 **\<同步 >** 區塊。 每個 **\<同步 >** 區塊就是一個交易單位 (表示項目中 **\<同步 >** 區塊完成，或執行任何動作)。 如果您指定多個 **\<同步 >** 封鎖在 updategram 中，其中一個失敗 **\<同步 >** 區塊不會影響其他 **\<同步處理>** 區塊。  
   
- Updategram 是否刪除、 插入或更新記錄執行個體均視內容而定**\<之前 >** 並**\<之後 >** 區塊：  
+ Updategram 是否刪除、 插入或更新記錄執行個體均視內容而定 **\<之前 >** 並 **\<之後 >** 區塊：  
   
--   如果記錄執行個體只會顯示在**\<之前 >** 區塊中沒有對應執行個體**\<之後 >** 區塊中，updategram 會執行刪除作業。  
+-   如果記錄執行個體只會顯示在 **\<之前 >** 區塊中沒有對應執行個體 **\<之後 >** 區塊中，updategram 會執行刪除作業。  
   
--   如果記錄執行個體只會顯示在**\<之後 >** 區塊中沒有對應執行個體**\<之前 >** 區塊，它是一個插入作業。  
+-   如果記錄執行個體只會顯示在 **\<之後 >** 區塊中沒有對應執行個體 **\<之前 >** 區塊，它是一個插入作業。  
   
--   如果記錄執行個體出現在**\<之前 >** 封鎖，而且有對應的執行個體**\<之後 >** 區塊中，這是更新作業。 在此情況下，updategram 會更新記錄執行個體中所指定的值**\<之後 >** 區塊。  
+-   如果記錄執行個體出現在 **\<之前 >** 封鎖，而且有對應的執行個體 **\<之後 >** 區塊中，這是更新作業。 在此情況下，updategram 會更新記錄執行個體中所指定的值 **\<之後 >** 區塊。  
   
 ## <a name="specifying-a-mapping-schema-in-the-updategram"></a>指定 Updategram 中的對應結構描述  
- 在 Updategram 中，對應結構描述 (同時支援 XSD 和 XDR 結構描述) 提供的 XML 摘要可以是隱含的或明確的 (也就是說，Updategram 可以選擇是否搭配指定的對應結構描述使用)。 如果您未指定對應結構描述，updategram 會假設為隱含的對應 （預設對應），其中每個項目**\<之前 >** 區塊或**\<之後 >** 區塊會對應到資料表，而每個元素的子元素或屬性會對應到資料庫中的資料行。 如果您明確地指定對應結構描述，Updategram 中的元素和屬性必須符合對應結構描述中的元素和屬性。  
+ 在 Updategram 中，對應結構描述 (同時支援 XSD 和 XDR 結構描述) 提供的 XML 摘要可以是隱含的或明確的 (也就是說，Updategram 可以選擇是否搭配指定的對應結構描述使用)。 如果您未指定對應結構描述，updategram 會假設為隱含的對應 （預設對應），其中每個項目 **\<之前 >** 區塊或 **\<之後 >** 區塊會對應到資料表，而每個元素的子元素或屬性會對應到資料庫中的資料行。 如果您明確地指定對應結構描述，Updategram 中的元素和屬性必須符合對應結構描述中的元素和屬性。  
   
 ### <a name="implicit-default-mapping"></a>隱含的 (預設) 對應  
  在多數情況下，執行簡單更新的 Updategram 可能不需要對應結構描述。 在此情況下，Updategram 會依賴預設對應結構描述。  
@@ -111,7 +110,7 @@ ms.locfileid: "56026879"
  利用預設對應 (在 Updategram 中未指定對應結構描述時)，Updategram 元素會對應到資料表，而子元素 (如果是元素中心對應) 和屬性 (如果是屬性中心對應) 則會對應到資料行。  
   
 ### <a name="element-centric-mapping"></a>元素中心的對應  
- 在元素中心的 Updategram 中，一個元素包含表示元素屬性的多個子元素。 例如，請參閱下列 Updategram。  **\<Person.Contact >** 項目包含 **\<FirstName >** 並 **\<LastName >** 子項目。 這些子項目是屬性 **\<Person.Contact >** 項目。  
+ 在元素中心的 Updategram 中，一個元素包含表示元素屬性的多個子元素。 例如，請參閱下列 Updategram。 **\<Person.Contact >** 項目包含 **\<FirstName >** 並 **\<LastName >** 子項目。 這些子項目是屬性 **\<Person.Contact >** 項目。  
   
  這個 updategram 未指定對應結構描述，因此 updategram 會使用隱含的對應，其中 **\<Person.Contact >** 元素會對應到 Person.Contact 資料表，而其子項目對應到 FirstName 和LastName 資料行。  
   

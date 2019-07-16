@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0b73e699141e598115f9ce178b74d10cbf22b0f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e8bb3c3787effe8418db735a72425a793b73e35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931856"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimize 動態屬性 (ADO)
 指定是否應該在建立索引[欄位](../../../ado/reference/ado-api/field-object.md)。  

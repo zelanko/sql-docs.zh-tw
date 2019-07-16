@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 98a0cc1df12f905cd0d22d05b162983742d0f355
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18d17e0a761fe03053ba90b8ff1ef87f3067df76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930741"
 ---
 # <a name="stayinsync-property"></a>StayInSync 屬性
 表示以階層式[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件是否基礎的子記錄的參考 (也就是*章*) 的父資料列位置變更時的變更。  

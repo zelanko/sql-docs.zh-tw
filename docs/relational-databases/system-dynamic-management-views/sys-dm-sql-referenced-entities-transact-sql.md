@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4ed017d1b3571405127177bdb45857be7ccbf1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64ddba95ec5c7fb8dfa6e6e685fcf9d5b6846fe9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090669"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
@@ -66,15 +65,15 @@ sys.dm_sql_referenced_entities (
 ```  
   
 ## <a name="arguments"></a>引數  
- [ *schema_name*。 ] *referencing_entity_name*  
+ [ *schema_name*。 ] *referencing_entity_name&lt*  
  這是參考實體的名稱。 *schema_name*參考類別為 OBJECT 時，就需要。  
   
- *schema_name.referencing_entity_name* is **nvarchar(517)** .  
+ *schema_name.referencing_entity_name*已**nvarchar(517)** 。  
   
- *<referencing_class>* ::=  { OBJECT | DATABASE_DDL_TRIGGER   | SERVER_DDL_TRIGGER }  
+ *< >* :: = {物件 |DATABASE_DDL_TRIGGER |SERVER_DDL_TRIGGER}  
  這是指定之參考實體的類別。 每個陳述式只能指定一個類別。  
   
- *<referencing_class>* is **nvarchar(60)** .  
+ *< >* 已**nvarchar(60)** 。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   

@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8a453fb545fd0a51b7d356c0d855813cea69f272
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a34cdf743ff0bcecbb4b3088d99efdf3bbfef744
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938162"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +52,7 @@ FROM <existing model>
   
  **WITH DRILLTHROUGH**子句可讓新的採礦模型上鑽研。 唯有您建立模型時，才能啟用鑽研。  
   
-## <a name="example-1-altering-the-parameters-of-the-model"></a>範例 1：變更模型的參數  
+## <a name="example-1-altering-the-parameters-of-the-model"></a>範例 1：改變模型的參數  
  下列範例會建立新的採礦模型，根據現有的採礦模型， `TM_Clustering`，在[Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 在新的模型中，CLUSTER_COUNT 參數經過修改，使新模型中最多會有 5 個群集。 相反地，現有的模型使用預設值 10。  
   
 ```  
@@ -62,7 +61,7 @@ USING [Microsoft_Clustering] (CLUSTER_COUNT = 5)
 FROM [TM Clustering]  
 ```  
   
-## <a name="example-2-adding-a-filter-to-the-model"></a>範例 2：將篩選器加入到模型中  
+## <a name="example-2-adding-a-filter-to-the-model"></a>範例 2：將篩選加入至模型  
  下列範例根據現有的採礦模型建立新的採礦模型，並在模型上加入篩選器。 篩選器會將定型資料限制為僅住在特定區域的客戶。  
   
 ```  

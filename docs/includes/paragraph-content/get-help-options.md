@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: e0ef092d2227f380c9da1f982d954b8b5d310aaf
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.openlocfilehash: a3016d22680ed051a16f80e6f5ff768689d654b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877728"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68212320"
 ---
-##  <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) 取得說明
+## <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) 取得說明
 
 - [UserVoice - 改善 SQL Server 的建議？](https://feedback.azure.com/forums/908035-sql-server)
 - [安裝和升級 - MSDN 論壇](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)

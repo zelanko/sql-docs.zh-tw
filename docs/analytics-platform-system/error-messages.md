@@ -2,19 +2,18 @@
 title: 錯誤訊息-Parallel Data Warehouse |Microsoft Docs
 description: Parallel Data Warehouse (PDW) 錯誤訊息會報告錯誤和問題遇到的 PDW 元件，而且也可以包含 SQL Server PDW 透過顯示的錯誤。 這些錯誤訊息會使用一致的語法，來顯示資訊。 了解此語法可讓您識別並解決問題。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3ffc7a097845f4652f56d82c572ecfab868d33f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78c5cd8dab37ac9cb32de794861c68e6c8085747
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960963"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>平行處理資料倉儲中的錯誤訊息
 

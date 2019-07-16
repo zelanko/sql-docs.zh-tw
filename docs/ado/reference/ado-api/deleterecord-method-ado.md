@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f67f074596bfcf93eb7017a7afe273285f721aae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919087"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord 方法 (ADO)
 刪除所代表的實體[記錄](../../../ado/reference/ado-api/record-object-ado.md)。  
