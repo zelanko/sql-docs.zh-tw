@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: c4f56ac8334be617e800c388158074f801f4aa98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b891c7edc9fc8deb7c3f8dd033997525ef4e8f49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66777712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992143"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>卸離和附加 DQS 資料庫
 

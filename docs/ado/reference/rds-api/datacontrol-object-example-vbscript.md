@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 385b111c39e05a8ff975545a2fb90e5a9460e033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7eff8a3a016ad7e0cc6b9f928bef4f16891e8375
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697375"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964412"
 ---
 # <a name="datacontrol-object-example-vbscript"></a>DataControl 物件範例 (VBScript)
 > [!IMPORTANT]

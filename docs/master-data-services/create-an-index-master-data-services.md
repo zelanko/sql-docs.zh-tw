@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 008c1915c793eedb27d70cac27e135c2c7e753c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68b0ac877b812d78e3eddf433a08a87b8f9d45f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896866"
 ---
 # <a name="create-an-index-master-data-services"></a>建立索引 (Master Data Services)
 

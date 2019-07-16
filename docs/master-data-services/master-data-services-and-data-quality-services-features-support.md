@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a3e90ac3-69a6-47c9-aa18-8e9084717369
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 905d9c00776dc2c97b6772d6ea5ce0acfd4023fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5aa5a429d30a6bfa010ba2b1caa5513ffca88fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985291"
 ---
 # <a name="master-data-services-and-data-quality-services-features-support"></a>Master Data Services 和 Data Quality Services 功能支援
 

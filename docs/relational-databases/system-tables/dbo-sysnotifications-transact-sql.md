@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c5150d18-e8b7-48a7-ada7-77c583af6e41
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d2622328b29141e145a9877952b9d2a97c0994ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef7a5456f0bae470bcbf1f12f37843aa6c311d78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984916"
 ---
 # <a name="dbosysnotifications-transact-sql"></a>dbo.sysnotifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,6 +35,6 @@ ms.locfileid: "62470700"
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|警示的識別碼。|  
 |**operator_id**|**int**|這項通知所應送往的操作員識別碼。|  
-|**notification_method**|**tinyint**|通知方法：<br /><br /> **1** = 電子郵件<br /><br /> **2** = Pager<br /><br /> **4** = **netsend**<br /><br /> **7** = all|  
+|**notification_method**|**tinyint**|通知方法：<br /><br /> **1** = 電子郵件<br /><br /> **2** = 呼叫器<br /><br /> **4** = **netsend**<br /><br /> **7** = all|  
   
   

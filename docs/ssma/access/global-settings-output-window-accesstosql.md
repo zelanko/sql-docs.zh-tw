@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: ca64f234-38f2-4607-a9d6-d4906e48e336
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 5ce9f08d0e06fbb9d65e6ff891ec1f6b58e1f061
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff4dc8e042dc27156d03935c1de39c9fbd67a69c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986369"
 ---
 # <a name="global-settings-output-window-accesstosql"></a>全域設定 （[輸出] 視窗） (AccessToSQL)
 使用**全域設定**對話方塊來指定 SSMA 的設定。  
   
 若要存取 [輸出] 視窗設定] 中，在**工具**功能表上，選取**全域設定**，按一下 [ **GUI**在底部的左的窗格中，然後選取**輸出視窗**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **顯示 [錯誤清單] 窗格**  
 選取  **，則為 True**如果您想要以沒有訊息時，顯示 錯誤清單 窗格的 SSMA。  
   

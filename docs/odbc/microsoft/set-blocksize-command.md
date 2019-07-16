@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0c11580f-37f5-4a8e-99be-9fb9c44bb433
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e904d341513047b3940cf5b3fc2ba9538cdb5c8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4fe84a470f5e877c73701168394cd85d75253fb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127848"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997756"
 ---
 # <a name="set-blocksize-command"></a>SET BLOCKSIZE 命令
 指定附註欄位的儲存體如何配置磁碟空間。  

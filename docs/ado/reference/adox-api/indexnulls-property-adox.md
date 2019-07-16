@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 313b0bf7-3f37-4823-8fca-bd9c80e078a7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5b6fbb2dd87568f0d40705b6ab76e83cd825afbf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25a319d81fb3ecde22691f5197e93acb38a5e04a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966009"
 ---
 # <a name="indexnulls-property-adox"></a>IndexNulls 屬性 (ADOX)
 指出允許 null 值，其索引欄位中的記錄是否有索引項目。  

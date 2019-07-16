@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b2effb3900e4277d82edee70439628c8adc837d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3409376b5fd2f71ecff8d510d17ce3771e63fa73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990692"
 ---
 # <a name="numeric-literals"></a>數值常值
 數值資料值會儲存在字元字串時，會使用數值常值。 轉換成 SQL_C_CHAR 字串，數值的 SQL 資料或數值的 C 資料轉換為 SQL_CHAR 或 SQL_VARCHAR 字串、 數值常值語法用來指定目標中儲存的內容。 轉換的數字儲存為 SQL_C_CHAR 字串為數值的 SQL 資料或以數字的 C 資料 SQL_CHAR 字串的形式儲存的數字，此語法用來驗證來源中儲存的內容。  

@@ -7,7 +7,6 @@ ms.reviewer: ''
 ms.technology: native-client
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, uninstalling
@@ -22,12 +21,12 @@ helpviewer_keywords:
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2c6695fd8e005311667b1edaad1b9e315019487
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dee5cebb97ff491595ca5e875c3adfc08c82bf2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987587"
 ---
 # <a name="installing-sql-server-native-client"></a>安裝 SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +56,7 @@ ms.locfileid: "51670977"
   
  x64 和 Itanium 版本的 sqlncli.msi 會安裝 32 位元版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。 如果應用程式的目標使用平台與當初開發時的平台不同，您可以從 Microsoft 下載中心下載 x64、Itanium 和 x86 版本的 sqlncli.msi。  
   
- 當您叫用 sqlncli.msi 時，依預設會安裝用戶端元件。 用戶端元件是支援執行使用所開發的應用程式的檔案[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端。 如果也要安裝 SDK 元件，請在命令列上指定 `ADDLOCAL=All`。 例如：  
+ 當您叫用 sqlncli.msi 時，依預設會安裝用戶端元件。 用戶端元件是支援執行使用所開發的應用程式的檔案[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端。 如果也要安裝 SDK 元件，請在命令列上指定 `ADDLOCAL=All`。 例如:  
   
  `msiexec /i sqlncli.msi ADDLOCAL=ALL APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   

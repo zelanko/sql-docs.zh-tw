@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3f72b31ce4e6c43abf1f5e717f1f4a3c0c5c3e3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e1cab50c2aa784c77fbd4a51bc3d72daf115620c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965016"
 ---
 # <a name="type-property-table-adox"></a>Type 屬性 (Table) (ADOX)
 指出資料表類型。  

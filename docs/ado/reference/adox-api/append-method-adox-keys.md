@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ea4e06fa790e8a360cfb1254b3064b3b540e7842
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd66edb75bec4f4b7e35c53c9ebeabd9b3c75d83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967296"
 ---
 # <a name="append-method-adox-keys"></a>Append 方法 (ADOX Keys)
 加入新[金鑰](../../../ado/reference/adox-api/key-object-adox.md)物件[金鑰](../../../ado/reference/adox-api/keys-collection-adox.md)集合。  

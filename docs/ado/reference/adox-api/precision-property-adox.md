@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0b9ff1d51d762ea50a81f5542b88dd83e767060b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1416842f3c122e9e5e5e28b8a14310b679697cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965566"
 ---
 # <a name="precision-property-adox"></a>Precision 屬性 (ADOX)
 表示中的資料值的最大有效位數[資料行](../../../ado/reference/adox-api/column-object-adox.md)。  

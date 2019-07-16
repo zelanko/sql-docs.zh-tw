@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 835b09b5-eb42-47ea-b46e-e115d4d6461f
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2cc49bbd3d2927431da2c16debbe0f35dbf4bb79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72efa0f050a3b930ebaa99ff425b48e1fe9b6ba5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986647"
 ---
 # <a name="global-settings-logging-accesstosql"></a>全域設定 （記錄） (AccessToSQL)
 使用**全域設定**對話方塊來指定 SSMA 的記錄設定。 一般而言，您會在與產品支援人員合作時，才變更這些設定。  
@@ -30,13 +29,13 @@ ms.locfileid: "63453558"
 |----------|---------------|  
 |**[所有類別目錄]**|用來設定下列選項的所有的記錄層級。|  
 |**Collector**|會收集有關來源結構描述的中繼資料，並將它儲存至專案。|  
-|**Converter**|將來源資料庫物件，例如資料表和預存程序的結構轉換成對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]結構。|  
+|**轉換子**|將來源資料庫物件，例如資料表和預存程序的結構轉換成對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]結構。|  
 |**資料遷移程式**|將資料從來源資料庫移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**格式器**|產生的指令碼轉換子的子元件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]結構描述。|  
 |**圖形化使用者介面**|當您使用 SSMA 工具時出現的訊息。|  
 |**連結器**|解析的 SQL 識別項，並提供其他元件的資訊。|  
 |**其他**|不在任何其他分類中的所有訊息。|  
-|**Parser**|剖析來源結構描述。|  
+|**剖析器**|剖析來源結構描述。|  
 |**同步器**|載入來源資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**TreeConverter**|將來源中繼資料中的物件轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料。|  
   

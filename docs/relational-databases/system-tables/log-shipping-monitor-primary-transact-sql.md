@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5f629a29-1a62-40e6-ae33-6f6b7dd09a36
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 650fb8c3b043940658bcc50720c0e5dd1da822db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d39ea859f1fd2cc3064d8d8c71c91ba6324f162c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989971"
 ---
 # <a name="logshippingmonitorprimary-transact-sql"></a>log_shipping_monitor_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

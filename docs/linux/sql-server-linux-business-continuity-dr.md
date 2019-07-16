@@ -4,19 +4,18 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 745d9bacfb629ef6d671a7b7f88b65914c9e089b
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: d2653021cd25473f9b49df75023426ae88a068ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996422"
 ---
 # <a name="business-continuity-and-database-recovery---sql-server-on-linux"></a>商務持續性與資料庫復原-SQL Server on Linux
 

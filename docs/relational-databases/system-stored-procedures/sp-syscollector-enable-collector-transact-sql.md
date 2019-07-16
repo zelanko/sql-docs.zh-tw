@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 53ff2b0d-b7da-4e3d-8f3d-35e857bc3720
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: db13b0c96d551eeb88e7b6c8646e4cfb87187646
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab6087b68fba057e6acd91f43804b0e324992e1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63002147"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000802"
 ---
 # <a name="spsyscollectorenablecollector-transact-sql"></a>sp_syscollector_enable_collector (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
