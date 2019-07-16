@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 57bc9dd31299a70c5c8a2272dd49b577f58b7bb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 688716e9b7ba89500a4d2e8a579da42972e43d0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063547"
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>以程式設計方式設定 Access 驅動程式的選項
 
@@ -29,7 +28,7 @@ ms.locfileid: "63159293"
 |------------|-----------------|------------|  
 |緩衝區大小|內部緩衝區大小，以 kb 為單位，Microsoft Access 所用來傳輸資料進出磁碟。 預設緩衝區大小為 2048 KB （顯示為 2048年）。 您可以輸入任何以 256 整除的整數值。|若要以動態方式設定此選項，請在呼叫中使用 MAXBUFFERSIZE 關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
 |資料來源名稱|識別資料來源，例如薪資或人員的名稱。|若要以動態方式設定此選項，請使用**DSN**呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
-|[資料庫]|Microsoft Access 資料來源可以設定而不需要選取或建立資料庫。 如果未提供資料庫安裝程式時，您就會提示使用者連接到資料來源時，請選擇資料庫檔案。|若要以動態方式設定此選項，請使用**DBQ**呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
+|資料庫|Microsoft Access 資料來源可以設定而不需要選取或建立資料庫。 如果未提供資料庫安裝程式時，您就會提示使用者連接到資料來源時，請選擇資料庫檔案。|若要以動態方式設定此選項，請使用**DBQ**呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
 |描述|資料來源中資料的選擇性描述比方說，「 雇用日期、 薪資記錄以及目前檢閱所有員工。 」|若要以動態方式設定此選項，請使用**描述**呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
 |排除|如果**獨佔**方塊已選取，資料庫會以獨佔模式開啟，並只有一位使用者可以存取一次。 以獨佔模式執行時，會增強效能。|若要以動態方式設定此選項，請使用**獨佔**呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
 |ImplicitCommitSync|決定如何在交易外所做的變更會寫入資料庫。 此值一開始是設定為 [是]，這表示 Microsoft Access 驅動程式會等待完成內部/隱含交易中認可。|此選項會納入**設定進階選項**Microsoft Access 驅動程式 對話方塊。|  

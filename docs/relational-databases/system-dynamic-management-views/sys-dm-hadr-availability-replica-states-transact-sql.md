@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: affc00f25d57c273f3010d7a39a6720a6a7487e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05964e0557cb08e874424af542b8fc8a57ce0835
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832604"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900632"
 ---
 # <a name="sysdmhadravailabilityreplicastates-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  傳回針對每個本機複本的資料列和每個遠端複本的資料列相同 Always On 可用性群組中當做本機複本。 每個資料列包含給定複本的狀態資訊。  
+  傳回每個本機複本的資料列，並針對同一個 Always On 群組中當做本機複本的每一個遠端複本，各傳回一個資料列。 每一個資料列都包含有關給定複本狀態的資訊。  
   
 > [!IMPORTANT]  
 >  若要取得有關給定的可用性群組中的每個複本的資訊，請查詢**sys.dm_hadr_availability_replica_states**裝載主要複本的伺服器執行個體。 在裝載可用性群組之次要複本的伺服器執行個體上查詢時，這個動態管理檢視只會傳回此可用性群組的本機資訊。  
@@ -44,20 +43,20 @@ ms.locfileid: "47832604"
 |**role_desc**|**nvarchar(60)**|Popis**角色**，下列其中一個的：<br /><br /> RESOLVING<br /><br /> PRIMARY<br /><br /> SECONDARY|  
 |**operational_state**|**tinyint**|目前的複本，其中一個操作狀態：<br /><br /> 0 = 暫止容錯移轉<br /><br /> 1 = 暫止<br /><br /> 2 = 線上<br /><br /> 3 = 離線<br /><br /> 4 = 失敗<br /><br /> 5 = 失敗，無仲裁<br /><br /> NULL = 複本不是本機。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 角色和操作狀態](#RolesAndOperationalStates)稍後在本主題中。|  
 |**operational\_state\_desc**|**nvarchar(60)**|Popis **operational\_狀態**，下列其中一個的：<br /><br /> PENDING_FAILOVER<br /><br /> PENDING<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> FAILED<br /><br /> FAILED_NO_QUORUM<br /><br /> NULL|  
-|**復原\_健全狀況**|**tinyint**|彙總**資料庫\_狀態**資料行[sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)動態管理檢視。 以下是可能的值和它們的描述。<br /><br /> 0： 進行中。  至少一個聯結的資料庫有 ONLINE 以外的資料庫狀態 (**資料庫\_狀態**是不是 0)。<br /><br /> 1： 線上。 所有聯結的資料庫都有 ONLINE 資料庫狀態 (**database_state**為 0)。<br /><br /> NULL: **is_local** = 0|  
+|**復原\_健全狀況**|**tinyint**|彙總**資料庫\_狀態**資料行[sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)動態管理檢視。 以下是可能的值和它們的描述。<br /><br /> 0:進行中。  至少一個聯結的資料庫有 ONLINE 以外的資料庫狀態 (**資料庫\_狀態**是不是 0)。<br /><br /> 1:線上。 所有聯結的資料庫都有 ONLINE 資料庫狀態 (**database_state**為 0)。<br /><br /> NULL: **is_local** = 0|  
 |**recovery_health_desc**|**nvarchar(60)**|Popis **recovery_health**，下列其中一個的：<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
-|**同步處理\_健全狀況**|**tinyint**|會反映資料庫同步處理狀態的彙總套件 (**synchronization_state**) 所有聯結可用性資料庫 (也稱為*複本*) 和複本 （的可用性模式同步認可或非同步認可模式）。 彙總套件會反映最不健康的累積的狀態之資料庫複本上。 以下是可能的值和它們的描述。<br /><br /> 0： 非狀況良好。   至少有一個聯結資料庫處於 NOT SYNCHRONIZING 狀態下。<br /><br /> 1： 部分狀況良好。 某些複本未處於目標同步處理狀態：同步認可複本應該已同步處理，而非同步認可複本應該正在同步處理。<br /><br /> 2： 狀況良好。 所有複本都處於目標同步處理狀態：同步認可複本已同步處理，而非同步認可複本正在同步處理。|  
+|**同步處理\_健全狀況**|**tinyint**|會反映資料庫同步處理狀態的彙總套件 (**synchronization_state**) 所有聯結可用性資料庫 (也稱為*複本*) 和複本 （的可用性模式同步認可或非同步認可模式）。 彙總套件會反映最不健康的累積的狀態之資料庫複本上。 以下是可能的值和它們的描述。<br /><br /> 0:非狀況良好。   至少有一個聯結資料庫處於 NOT SYNCHRONIZING 狀態下。<br /><br /> 1:部分狀況良好。 某些複本未處於目標同步處理狀態：同步認可複本應該已同步處理，而非同步認可複本應該正在同步處理。<br /><br /> 2:狀況良好。 所有複本都處於目標同步處理狀態：同步認可複本已同步處理，而非同步認可複本正在同步處理。|  
 |**synchronization_health_desc**|**nvarchar(60)**|Popis **synchronization_health**，下列其中一個的：<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
-|**connected_state**|**tinyint**|次要複本目前是否已連接到主要複本。 可能的值如下所示及其說明。<br /><br /> 0： 已中斷連線。 可用性複本對 DISCONNECTED 狀態回應取決於其角色： 在主要複本，如果次要複本已中斷連接，其次要資料庫會標示為 NOT SYNCHRONIZED 在主要複本會等候次要重新連線;在次要複本，一旦偵測到它已中斷連接，次要複本會嘗試重新連接到主要複本。<br /><br /> 1： 連線。<br /><br /> 每個主要複本都會針對相同可用性群組中的每一個次要複本來追蹤連接狀態。 次要複本只會追蹤主要複本的連接狀態。|  
+|**connected_state**|**tinyint**|次要複本目前是否已連接到主要複本。 可能的值如下所示及其說明。<br /><br /> 0:已中斷連接 可用性複本對 DISCONNECTED 狀態回應取決於其角色：在主要複本，如果次要複本已中斷連接，其次要資料庫會標示為 NOT SYNCHRONIZED 在主要複本會等候次要複本重新連接;在次要複本，一旦偵測到它已中斷連接，次要複本會嘗試重新連接到主要複本。<br /><br /> 1:連接。<br /><br /> 每個主要複本都會針對相同可用性群組中的每一個次要複本來追蹤連接狀態。 次要複本只會追蹤主要複本的連接狀態。|  
 |**connected_state_desc**|**nvarchar(60)**|Popis **connection_state**，下列其中一個的：<br /><br /> DISCONNECTED<br /><br /> CONNECTED|  
 |**last_connect_error_number**|**int**|上次連接錯誤的號碼。|  
 |**last_connect_error_description**|**nvarchar(1024)**|文字**last_connect_error_number**訊息。|  
 |**last_connect_error_timestamp**|**datetime**|日期和時間戳記，指出何時**last_connect_error_number**發生錯誤。|  
   
 ##  <a name="RolesAndOperationalStates"></a> 角色和操作狀態  
- 此角色，**角色**，會反映給定的可用性複本的狀態和操作狀態， **operational_state**，描述此複本是否已準備好處理所有的用戶端要求可用性複本的資料庫。 以下是可能使用的每個角色的操作狀態的摘要： 解析、 主要和次要。  
+ 此角色，**角色**，會反映給定的可用性複本的狀態和操作狀態， **operational_state**，描述此複本是否已準備好處理所有的用戶端要求可用性複本的資料庫。 以下是可能使用的每個角色的操作狀態的摘要：正在解析、 主要及次要資料庫。  
   
- **正在解析：** 當可用性複本處於 RESOLVING 角色時，可能的操作狀態會在下表所示。  
+ **解決：** 當可用性複本處於 RESOLVING 角色時，可能的操作狀態會是下表所示。  
   
 |操作狀態|描述|  
 |-----------------------|-----------------|  
@@ -66,7 +65,7 @@ ms.locfileid: "47832604"
 |FAILED|嘗試從 WSFC 叢集中擷取資訊時發生讀取失敗。|  
 |FAILED_NO_QUORUM|本機 WSFC 節點沒有仲裁。 這是推斷的狀態。|  
   
- **PRIMARY:** 當可用性複本正在扮演主要角色時，它目前是主要複本。 可能的操作狀態會是下表所示。  
+ **主要：** 當可用性複本正在扮演主要角色時，但它目前是主要複本。 可能的操作狀態會是下表所示。  
   
 |操作狀態|描述|  
 |-----------------------|-----------------|  
@@ -74,7 +73,7 @@ ms.locfileid: "47832604"
 |ONLINE|可用性群組資源在線上，而且所有資料庫工作者執行緒都已收取。|  
 |FAILED|可用性複本無法從 WSFC 叢集讀取及/或將資料寫入其中。|  
   
- **次要資料庫：** 當可用性複本正在扮演次要角色時，它目前是次要複本。 可能的操作狀態會是下表所示。  
+ **次要資料庫：** 當可用性複本正在扮演次要角色時，但它目前是次要複本。 可能的操作狀態會是下表所示。  
   
 |操作狀態|描述|  
 |-----------------------|-----------------|  

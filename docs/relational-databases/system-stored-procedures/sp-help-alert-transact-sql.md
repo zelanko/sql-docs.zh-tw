@@ -1,5 +1,5 @@
 ---
-title: sp_help_alert (Transact-SQL) | Microsoft Docs
+title: sp_help_alert (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39d0c2f6e17f51928de561820f33bc0c34d89a62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62796554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055240"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @alert_name = ] 'alert_name'` 警示的名稱。 *alert_name* is **nvarchar(128)** . 如果*alert_name&lt*是未指定，會傳回有關所有警示的資訊。  
+`[ @alert_name = ] 'alert_name'` 警示的名稱。 *alert_name&lt*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。 如果*alert_name&lt*是未指定，會傳回有關所有警示的資訊。  
   
 `[ @order_by = ] 'order_by'` 用來產生結果的排序順序。 *order_by*已**sysname**，預設值是 N '*名稱*'。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c64b1ea3ecc283cdea92a5722c7a1dad120ecb50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9cc7b3dd309dfac9e35021ca3234ca66483181e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63272780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074098"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>將 DB2 資料移轉到 SQL Server (DB2ToSQL)
 您已成功同步處理與已轉換的物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以將資料從 DB2，以便移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -56,7 +55,7 @@ ms.locfileid: "63272780"
   
 **若要將資料移轉**  
   
-1.  驗證下列項目：  
+1.  驗證下列各項：  
   
     -   執行 SSMA 的電腦上安裝的 DB2 提供者。  
   

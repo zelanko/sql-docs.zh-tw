@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6eb91bb43407311a58e495b5f9391186821d3a67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 299004e869aeab826e5f1207a0ecc4d31639e2c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037946"
 ---
 # <a name="value-mdx"></a>Value (MDX)
 
@@ -56,7 +55,7 @@ from [Adventure Works]
 ## <a name="see-also"></a>另請參閱  
  [MemberValue &#40;MDX&#41;](../mdx/membervalue-mdx.md)   
  [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
- [Name &#40;MDX&#41;](../mdx/name-mdx.md)   
+ [名稱&#40;MDX&#41;](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
  [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
