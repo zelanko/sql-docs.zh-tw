@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e9ed2152873f40fd2f2ded34a11a2cfded2fbe2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 379dae51b913fc02a16a562037776620b1e0433c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904469"
 ---
 # <a name="sysresourcegovernorexternalresourcepools-transact-sql"></a>sys.resource_governor_external_resource_pools & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,8 +33,8 @@ ms.locfileid: "47823537"
   
 |資料行名稱|資料類型|描述|
 |-----------------|---------------|-----------------|
-|pool_id|**int**|資源集區的唯一識別碼。 不可為 Null。<br /><br /> **注意：** 可能在未來重新命名。|
-|NAME|**sysname**|資源集區的名稱。 不可為 Null。|
+|pool_id|**int**|資源集區的唯一識別碼。 不可為 Null。<br /><br /> **注意：** 可能會在未來重新命名。|
+|name|**sysname**|資源集區的名稱。 不可為 Null。|
 |max_cpu_percent|**int**|當 CPU 出現瓶頸時，針對資源集區中的所有要求所允許的最大平均 CPU 頻寬。 不可為 Null。|
 |max_memory_percent|**int**|在此資源集區中，可供要求所用的伺服器記憶體總量百分比。 不可為 Null。 有效的最大值取決於集區最小值。 例如，max_memory_percent 可以設定為 100，但有效的最大值比較低。|
 |max_processes|**int**|並行的外部處理序數目上限。 預設值為 0 時，不會指定任何限制。 不可為 Null。|
@@ -55,7 +54,7 @@ ms.locfileid: "47823537"
 
 [資源管理員](../../relational-databases/resource-governor/resource-governor.md)
 
-[sys.dm_resource_governor_resource_pool_affinity &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
+[sys.dm_resource_governor_resource_pool_affinity &#40;-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
 
 [外部指令碼已啟用伺服器組態選項](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 

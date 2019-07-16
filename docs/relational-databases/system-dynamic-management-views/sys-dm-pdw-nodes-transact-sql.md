@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_nodes (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_nodes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 93966909-d758-4d50-950b-f5066d104fa6
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a5df628a6b37c8d89843506c5b7f4c5050157158
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 61593522e09ed86ec10f08a6ad8ff7a941a2e10e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899350"
 ---
 # <a name="sysdmpdwnodes-transact-sql"></a>sys.dm_pdw_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,8 +27,8 @@ ms.locfileid: "56027390"
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|與節點相關聯的唯一數值識別碼。<br /><br /> 此檢視的索引鍵。|跨設備，無論何種類型是唯一的。|  
-|型別|**nvarchar(32)**|節點型別。|' COMPUTE'、 'CONTROL'，[管理]|  
-|NAME|**nvarchar(32)**|節點的邏輯名稱。|任何適當的長度的字串。|  
+|type|**nvarchar(32)**|節點型別。|' COMPUTE'、 'CONTROL'，[管理]|  
+|name|**nvarchar(32)**|節點的邏輯名稱。|任何適當的長度的字串。|  
 |address|**nvarchar(32)**|此節點的 IP 位址。|在 [0-255] 格式。[0-255]。[0-255]。[0-255]。|  
 |is_passive|**int**|指出執行節點的虛擬機器指派的伺服器上執行或已容錯移轉到備援伺服器。|0-節點 VM 會在原始伺服器上執行。<br /><br /> 1-節點 VM 會在備用的伺服器上執行。|  
 |區域|**nvarchar(32)**|節點正在執行的所在區域。|' PDW'，'HDINSIGHT'|  

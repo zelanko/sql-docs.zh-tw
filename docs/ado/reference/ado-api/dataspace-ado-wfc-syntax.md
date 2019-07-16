@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 950d45d8-07de-467b-b255-f9a7b997204c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 52e58cb358a28169a11b16e2c4d9f64ba4745bad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 569944991c029c091f0f17be4e5d943a893333a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919191"
 ---
 # <a name="dataspace-ado---wfc-syntax"></a>DataSpace (ADO - WFC 語法)
 **CreateObject**方法**DataSpace**類別會指定這兩個商務物件來處理用戶端應用程式要求 (*progid*) 和通訊協定與伺服器 (*連線*)。 **createObject**會傳回[ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)代表伺服器的物件。  
   
-## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>封裝 com.ms.wfc.data  
   
 ### <a name="constructor"></a>建構函式  
   

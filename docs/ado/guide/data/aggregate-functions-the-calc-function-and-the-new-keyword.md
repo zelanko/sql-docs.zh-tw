@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0a72cf80f9fee9c887e7805f3a2a5bd542d7f47c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a7ed836b9b57ddd690dd85dd94cc12cb967c472
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926002"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>彙總函式、CALC 函式和 NEW 關鍵字
 資料成形支援下列函數。 指派給包含的資料行的章節，以操作的名稱是*章別名*。  
@@ -60,7 +59,7 @@ ms.locfileid: "66702431"
 |DBTYPE_I8|adBigInt|  
 |DBTYPE_UI8|adUnsignedBigInt|  
 |DBTYPE_GUID|adGuid|  
-|DBTYPE_BYTES|adBinary, AdVarBinary, adLongVarBinary|  
+|DBTYPE_BYTES|adBinary，AdVarBinary，adLongVarBinary|  
 |DBTYPE_STR|adChar adVarChar adLongVarChar|  
 |DBTYPE_WSTR|adWChar adVarWChar adLongVarWChar|  
 |DBTYPE_NUMERIC|adNumeric|  
