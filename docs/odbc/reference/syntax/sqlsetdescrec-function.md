@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cee1f41c76a79edf1d78d8b94b07107c3c2771e0
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 3a733c2b88954c9937e8a170b949535ffa118bad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793157"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039730"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec 函式
 **合規性**  

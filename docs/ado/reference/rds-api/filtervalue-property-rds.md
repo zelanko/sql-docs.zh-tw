@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 28f17186-b842-4cf9-b320-a9bb941c481b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1e45986cdd44d0ab9bffc1ea11fe1a9ced350e3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 615b64322699ca24e03368430c8d80f16ce51d4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964057"
 ---
 # <a name="filtervalue-property-rds"></a>FilterValue 屬性 (RDS)
 表示用來篩選記錄的值。  

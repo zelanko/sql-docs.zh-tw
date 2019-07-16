@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 5825dfd51ddfc3b4a8478a0a528b5284fda49e37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01929ff721deff4011bcd1b53351c06463481491
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037920"
 ---
 # <a name="variance-mdx"></a>Variance (MDX)
 

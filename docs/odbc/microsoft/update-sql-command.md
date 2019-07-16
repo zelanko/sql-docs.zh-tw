@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3fbd5ec98791d782fe7ad1fdb1e1884b646dcf9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0230329d10d2414724379d4b9d38c4851a031bca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632555"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912337"
 ---
 # <a name="update---sql-command"></a>UPDATE - SQL 命令
 使用新值更新資料表中的記錄。  
@@ -36,12 +35,12 @@ SET Column_Name1 = eExpression1
 ```  
   
 ## <a name="arguments"></a>引數  
- UPDATE [ *DatabaseName1!* ] *TableName1*  
+ 更新 [ *DatabaseName1 ！* ]*TableName1*  
  指定的新值更新記錄的資料表。  
   
  *DatabaseName1!* 指定包含資料表的資料來源所指定的資料庫以外的資料庫名稱。 您必須包括包含的資料表，如果資料庫不是目前資料庫的名稱。 之後的資料庫名稱和資料表名稱之前，請包含驚嘆號 （！） 分隔符號。  
   
- SET *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
+ 設定*Column_Name1*= *eExpression1*[， *Column_Name2*= *eExpression2*  
  指定更新的資料行和其新的值。 如果您省略 WHERE 子句，資料行中的每個資料列會更新以相同的值。  
   
  何處*FilterCondition1*[AND&#124;或者*FilterCondition2*...]  
