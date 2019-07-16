@@ -1,5 +1,5 @@
 ---
-title: sp_helpxactsetjob (Transact-SQL) | Microsoft Docs
+title: sp_helpxactsetjob (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7402fcc825e6f537703268c1fd3fead9c88b1f5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db259133a2ddd7ebe18b6d198c0f91e8ffc7b8bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62959608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048193"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**nextdate**|**varchar(22)**|下次作業執行的日期。|  
 |**broken**|**varchar(1)**|指出作業是否中斷的旗標。|  
 |**interval**|**varchar(200)**|作業的間隔時間。|  
-|**failures**|**int**|作業的失敗次數。|  
+|**失敗**|**int**|作業的失敗次數。|  
 |**xactsetjobwhat**|**varchar(200)**|作業所執行的程序名稱。|  
 |**xactsetjob**|**varchar(1)**|作業的狀態，它可以是下列項目之一：<br /><br /> **1** -作業已啟用。<br /><br /> **0** -作業已停用。|  
 |**xactsetlonginterval**|**int**|作業的長間隔時間。|  

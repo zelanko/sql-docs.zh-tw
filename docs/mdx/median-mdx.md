@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: e962507d6e437974708aa042919ea6fb7bd632d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6f941e269bb9948dd39ba52db0ea4d0961c029a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63048522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033850"
 ---
 # <a name="median-mdx"></a>Median (MDX)
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 033f8d37-b2dd-4a4e-b93a-70c25b25b72e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1cfda465f8d9b4e04e60985b9fbd0b9aa9f2aeff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82351d7cc01dbf1318d443d1afd7f6a73b36707f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63048502"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054053"
 ---
 # <a name="sqldatasources-visual-foxpro-odbc-driver"></a>SQLDataSources (Visual FoxPro ODBC Driver)
 > [!NOTE]  

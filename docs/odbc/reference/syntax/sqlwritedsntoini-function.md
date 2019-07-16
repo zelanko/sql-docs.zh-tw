@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5a36be7a98a39cab8b9df428b8d4bd9a1d399a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8eece6a1347aa7fba41577f66493e35f92a69d6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039516"
 ---
 # <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni 函式
 **合規性**  

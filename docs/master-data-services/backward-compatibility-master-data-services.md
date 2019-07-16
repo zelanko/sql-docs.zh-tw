@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3f2ae84c-6666-460b-befe-bd72405c0778
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9ef06d2b37995b4669dd225fbfa065db4ea4ad82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d7165ad0c5f0bf5773768985e101d2aff3871c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485355"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047528"
 ---
 # <a name="backward-compatibility-master-data-services"></a>回溯相容性 (Master Data Services)
 

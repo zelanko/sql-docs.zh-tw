@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00daac655f0c435c1ee22239d3d4aafa23065997
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed99ab72e3d5112588a0b1c93df34b01aff7acdd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63217779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044926"
 ---
 # <a name="character-data-and-c-strings"></a>字元資料和 C 字串
 參考 （例如資料行名稱、 動態參數和字串屬性值） 的可變長度的字元資料的輸入的參數都有相關聯的長度參數。 如果應用程式會終止具有 null 字元，跟一般的 C 字串，它會提供做為引數是以位元組為單位 （不包括 null 結束字元） 字串的長度或 SQL_NTS （Null-Terminated 字串）。 非負數長度的引數會指定關聯的字串的實際長度。 長度引數可以是 0，表示指定零長度字串，也就是不同的 NULL 值。 負值 sql_nts; 會指示驅動程式，以找出之 null 結束字元，藉以判斷字串的長度。  

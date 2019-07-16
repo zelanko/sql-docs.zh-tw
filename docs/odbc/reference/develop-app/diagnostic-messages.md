@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 883cd29d8628f1e9270ae95a772c4d116b896710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39ebda5de5820cdfd7333ad1d0997593922e0a4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034915"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039887"
 ---
 # <a name="diagnostic-messages"></a>診斷訊息
 診斷訊息會傳回每個的 SQLSTATE。 一些不同的訊息通常會傳回相同的 SQLSTATE。 比方說，會傳回 SQLSTATE 42000 （語法錯誤或存取違規），發生 SQL 語法的大部分錯誤。 不過，每個語法錯誤很可能由不同的訊息描述。  
@@ -37,11 +36,11 @@ ms.locfileid: "63034915"
   
  錯誤和警告發生在資料來源中，診斷訊息必須使用此格式：  
   
- **[** *vendor-identifier* **][** *ODBC-component-identifier* **][** *data-source-identifier* **]** *data-source-supplied-text*  
+ **[** *廠商識別碼* **] [** *ODBC 元件識別碼* **] [** *資料來源識別碼* **]** *資料來源-提供-文字*  
   
  下表顯示每個元素的意義。  
   
-|元素|意義|  
+|項目|意義|  
 |-------------|-------------|  
 |*vendor-identifier*|識別發生錯誤或警告，或直接從資料來源收到的錯誤或警告之元件的廠商。|  
 |*ODBC-component-identifier*|識別發生錯誤或警告，或直接從資料來源收到的錯誤或警告的元件。|  

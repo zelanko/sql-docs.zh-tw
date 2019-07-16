@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9ae478cb2efc557acfd86e174d59a160fb8920c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3476ba45f7f563524cdfd9855e80f9c5dd96524
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054456"
 ---
 # <a name="managing-clr-integration-assemblies"></a>管理 CLR 整合組件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47686536"
 |「資料行」|描述|  
 |------------|-----------------|  
 |assembly_id|為組件定義的識別項。 此號碼會指派給與同一組件相關的所有物件。|  
-|NAME|物件的名稱。|  
+|name|物件的名稱。|  
 |file_id|數字，識別每個相關聯的第一個物件的物件，指定**assembly_id** 1 的值。 如果多個物件具有相同相關聯**assembly_id**，則每個後續**file_id**值都會遞增 1。|  
 |content|組件或檔案的十六進位表示法。|  
   

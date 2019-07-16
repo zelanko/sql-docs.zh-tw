@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: df58b5c7f6da05700f00b4ec5fd46b81926dd3bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ad0b92a970c3618584365d9ad6e99420daef05d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037008"
 ---
 # <a name="set-operators"></a>設定運算子
 
@@ -27,7 +26,7 @@ ms.locfileid: "63150163"
 |--------------|-----------------|  
 |[- (排除)](../mdx/except-mdx-operator.md)|傳回兩個集合間的差異，同時移除重複的成員。<br /><br /> 此運算子相當於[除了](../mdx/except-mdx-function.md)函式。|  
 |[* (交叉聯結)](../mdx/crossjoin-mdx-operator-reference.md)|傳回兩個集合的交叉產品(Cross Product)。<br /><br /> 此運算子相當於[Crossjoin](../mdx/crossjoin-mdx.md)函式。|  
-|[:(Range)](../mdx/range-mdx.md)|傳回一個自然順序的集合，以兩個指定成員作為端點，而介於這兩個成員之間的所有成員都會被併入為集合的成員。|  
+|[:（範圍）](../mdx/range-mdx.md)|傳回一個自然順序的集合，以兩個指定成員作為端點，而介於這兩個成員之間的所有成員都會被併入為集合的成員。|  
 |[(聯集)](../mdx/union-mdx-operator-reference.md)|傳回兩個集合的聯集，同時排除重複成員。<br /><br /> 此運算子相當於[Union &#40;MDX&#41; ](../mdx/union-mdx.md)函式。|  
   
 ## <a name="see-also"></a>另請參閱  

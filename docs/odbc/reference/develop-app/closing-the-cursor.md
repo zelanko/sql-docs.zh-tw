@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4f19bf5e-6d8c-40ae-a975-cfd62a0790ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 632a922abb544a379892dfa168f55efd605304c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de22797bdcf4ff526a8c17aee313567da3114b60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036539"
 ---
 # <a name="closing-the-cursor"></a>關閉資料指標
-當應用程式完成使用資料指標時，它會呼叫**SQLCloseCursor**來關閉資料指標。 例如：  
+當應用程式完成使用資料指標時，它會呼叫**SQLCloseCursor**來關閉資料指標。 例如:  
   
 ```  
 SQLCloseCursor(hstmt);  

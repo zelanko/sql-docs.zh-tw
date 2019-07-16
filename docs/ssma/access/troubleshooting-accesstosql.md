@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04cd7ffa-5402-4aba-90dd-8b562dd4b0bb
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8167857b3ee1653eac81067cc19efd198d7aa032
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea7cfd8940bdfbcda32d7a7338906db020b8c34a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299057"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051470"
 ---
 # <a name="troubleshooting-accesstosql"></a>疑難排解 (AccessToSQL)
 它不是屢見不鮮移轉問題中途島執行主控台指令碼或命令。  

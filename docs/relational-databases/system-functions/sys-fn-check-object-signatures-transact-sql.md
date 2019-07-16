@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc6d8bb4c3318f488c7969359c6aa8b18782b6cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046316"
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -56,14 +55,14 @@ fn_ check_object_signatures (
  \@*類別*已**sysname**。  
   
  { \@*指紋*}  
- 用來加密金鑰的憑證 SHA-1 雜湊，或用來加密金鑰的非對稱金鑰 GUID。 \@*憑證指紋*已**varbinary(20)**。  
+ 用來加密金鑰的憑證 SHA-1 雜湊，或用來加密金鑰的非對稱金鑰 GUID。 \@*憑證指紋*已**varbinary(20)** 。  
   
 ## <a name="tables-returned"></a>傳回的資料表  
  下表列出的資料行， **fn_check_object_signatures**傳回。  
   
-|「資料行」|類型|描述|  
+|「資料行」|type|描述|  
 |------------|----------|-----------------|  
-|型別|**nvarchar(120)**|傳回類型描述或組件。|  
+|type|**nvarchar(120)**|傳回類型描述或組件。|  
 |entity_id|**int**|傳回所評估之物件的物件識別碼。|  
 |is_signed|**int**|當此物件並非由提供的指模所簽署時，傳回 0。 當此物件是由提供的指模所簽署時，傳回 1。|  
 |is_signature_valid|**int**|如果 is_signed 值是 1，就會在簽章無效時傳回 0。 當簽章有效時，則傳回 1。<br /><br /> 如果 is_signed 值是 0，則一律傳回 0。|  

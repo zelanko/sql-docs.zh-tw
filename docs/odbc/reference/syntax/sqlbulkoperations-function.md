@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 14e51f1d04012e22c198b7ed5f70d9b508933c5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 496148e51e56ebbeea239101660b37e45cfa7eba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036176"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations 函式
 **合規性**  

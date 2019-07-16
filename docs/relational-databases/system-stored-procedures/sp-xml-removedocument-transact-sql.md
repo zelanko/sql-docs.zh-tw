@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5f249871fd1037ad5fcf485c85e7b758e9becf7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6219f18bee08d5c20431cb87a2cb30795c515d7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65979977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950477"
 ---
 # <a name="spxmlremovedocument-transact-sql"></a>sp_xml_removedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,6 +63,6 @@ EXEC sp_xml_removedocument @hdoc;
  <br>[XML 預存程序 & Amp;#40;transact-SQL&AMP;#41](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
  <br>[sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
  <br>[sp_xml_preparedocument(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)
- <br>[OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
+ <br>[OPENXML & Amp;#40;transact-SQL&AMP;#41](../../t-sql/functions/openxml-transact-sql.md)
   
   

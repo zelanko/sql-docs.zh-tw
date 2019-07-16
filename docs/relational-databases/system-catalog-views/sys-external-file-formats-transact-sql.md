@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: a89efb2c-0a3a-4b64-9284-6e93263e29ac
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b16deb7ed2bd43cc45966d27b79729897e76405c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eae119fe16b916f47f1acdcd2ebe15efd96e51e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048394"
 ---
 # <a name="sysexternalfileformats-transact-sql"></a>sys.external_file_formats & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "52532365"
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |file_format_id|**int**|外部檔案格式的物件識別碼。||  
-|NAME|**sysname**|檔案格式的名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，這是唯一的資料庫。 在  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，這是唯一的伺服器。||  
+|name|**sysname**|檔案格式的名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，這是唯一的資料庫。 在  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，這是唯一的伺服器。||  
 |format_type|**tinyint**|檔案格式類型。|DELIMITEDTEXT，RCFILE、 ORC、 PARQUET|  
 |field_terminator|**nvarchar(10)**|Format_type = DELIMITEDTEXT，這是將欄位結束字元。||  
 |string_delimiter|**nvarchar(10)**|Format_type = DELIMITEDTEXT，此為字串分隔符號。||  

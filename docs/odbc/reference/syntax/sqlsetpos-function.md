@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63bca42adcdfc83d1bdb96361680d0c70c9a031c
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: eb60350be75a6b4fae5e0c5c7c237d125ee3d3a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793132"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039688"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 函式
 **合規性**  

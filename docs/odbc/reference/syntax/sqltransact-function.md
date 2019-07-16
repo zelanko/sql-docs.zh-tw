@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 496249e0-8eff-4c60-8358-5543bc3ead9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4ad40522bd9f97c72a5d0a71d089b9e7c98a7d6b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 6c96c903b68dee2d1d215804d318d47b4c39a7a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039503"
 ---
 # <a name="sqltransact-function"></a>SQLTransact 函式
 **合規性**  

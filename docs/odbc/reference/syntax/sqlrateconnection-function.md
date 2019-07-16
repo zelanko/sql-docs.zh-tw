@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9614ea6bb3de3475f651fe900589b6fa5a9c0f4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74d7e2c52167682f0993006db3a1125ca741cf35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053646"
 ---
 # <a name="sqlrateconnection-function"></a>SQLRateConnection 函式
 **合規性**  

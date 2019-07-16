@@ -5,17 +5,16 @@ description: 本文說明 SQL Server 2019 巨量資料叢集 （預覽） 中的
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0b9cd9d8270a82eb578781a6376d8ac1045aa485
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: cafc62e12bcecad1ac6bcf389b87c864576c83a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958705"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>什麼是中的 SQL Server 的巨量資料叢集的主要執行個體？
 

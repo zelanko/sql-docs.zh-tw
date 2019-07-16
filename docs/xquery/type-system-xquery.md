@@ -23,22 +23,21 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34680d0af0e8c69bca15e4e93cddbe6b2a3386cb
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946206"
 ---
 # <a name="type-system-xquery"></a>類型系統 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery 對結構描述類型而言是一個強式類型語言，對於不具類型的資料而言是一個弱式類型語言。 XQuery 的預先定義類型包括下列各項：  
   
--   中的 XML 結構描述的內建型別**http://www.w3.org/2001/XMLSchema**命名空間。  
+-   中的 XML 結構描述的內建型別 **http://www.w3.org/2001/XMLSchema** 命名空間。  
   
--   中所定義的型別**http://www.w3.org/2004/07/xpath-datatypes**命名空間。  
+-   中所定義的型別 **http://www.w3.org/2004/07/xpath-datatypes** 命名空間。  
   
  此主題也描述下列項目：  
   
@@ -65,7 +64,7 @@ WHERE ProductModelID=7
  此類型資訊是由資料行相關聯的 XML 結構描述集合所提供。  
   
 ## <a name="types-defined-in-xpath-data-types-namespace"></a>XPath 資料類型命名空間中定義的類型  
- 中定義的類型**http://www.w3.org/2004/07/xpath-datatypes**命名空間包含預先定義前置詞**xdt**。 下列適用於這些類型：  
+ 中定義的類型 **http://www.w3.org/2004/07/xpath-datatypes** 命名空間包含預先定義前置詞**xdt**。 下列適用於這些類型：  
   
 -   當您建立 XML 結構描述集合時，不能使用這些類型。 這些類型會在 XQuery 類型系統，並且用於[XQuery 與靜態類型](../xquery/xquery-and-static-typing.md)。 您可以轉型為不可部分完成的型別，例如**xdt: untypedatomic**，請在**xdt**命名空間。  
   
@@ -97,7 +96,7 @@ SELECT @x.query( '/a[1] instance of element()')
 > [!NOTE]  
 >  若您是查詢具類型的 XML 執行個體且查詢運算式包含父軸，則結果節點的靜態類型資訊就無法再使用。 不過，動態類型仍與節點相關聯。  
   
-## <a name="typed-value-vs-string-value"></a>具類型值與字串值  
+## <a name="typed-value-vs-string-value"></a>具類型的值與。字串值  
  每一個節點都有一個具類型值和一個字串值。 若為具類型的 XML 資料，具類型值的類型是由被查詢的資料行或變數相關聯之 XML 結構描述集合來提供。 對於不具類型的 XML 資料，是具類型值的型別**xdt: untypedatomic**。  
   
  您可以使用**data （)** 或是**string （)** 函式來擷取節點的值：  
@@ -106,7 +105,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 -   [String 函式&#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md)傳回之節點的字串值。  
   
- 在下列 XML 結構描述集合中，定義了整數類型的 <`root`> 元素：  
+ 在下列 XML 結構描述集合中，<`root`> 定義了整數類型的項目：  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  

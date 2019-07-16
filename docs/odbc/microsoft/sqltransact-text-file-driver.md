@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0349bd4e-f402-4a69-b215-046210a433de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9bcdca10160345052cea9a5730202fe600764706
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7fd473dc750251bd93dbda97d270e3878d8cac1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62521218"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948847"
 ---
 # <a name="sqltransact-text-file-driver"></a>SQLTransact (文字檔驅動程式)
 > [!NOTE]  
