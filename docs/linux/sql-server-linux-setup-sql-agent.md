@@ -3,18 +3,17 @@ title: 在 Linux 上安裝 SQL Server 代理程式
 description: 本文說明如何在 Linux 上安裝 SQL Server Agent。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: 09751465dded818a51ca36df5a4328623b0b0a0a
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: c27a31a5e6b9ed771df82e942087d7be88270038
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834687"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032475"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>在 Linux 上安裝 SQL Server 代理程式
 

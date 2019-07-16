@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 64388f36f93857c9c6b2b5c036d3c96ddda9152d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7808e685792fda9c6a6a6a468a275d9d10bb87f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967106"
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>Catalog ActiveConnection 屬性範例 (VC++)
 設定[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)屬性，以有效的開啟連接的 「 開啟 」 目錄。 從開啟的目錄中，您可以存取包含在該目錄內的結構描述物件。  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f5159585bf7a3c7f618093286a152571598e70ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1ad62871870dc98b5de1e514150cc837ac16e4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097156"
 ---
 # <a name="using-mathematical-functions"></a>使用數學函數
 

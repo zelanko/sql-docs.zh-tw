@@ -1,5 +1,5 @@
 ---
-title: CREATE MINING MODEL (DMX) | Microsoft Docs
+title: 建立採礦模型 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0e7ca6765ee44201badc54d15fb2a20aa9a863a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b88ad1a7e048495f80d43234cb4e085bae515fa4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62853469"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071006"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +43,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  *資料行定義清單*  
  資料行定義的逗號分隔清單。  
   
- *algorithm*  
+ *演算法*  
  目前提供者所定義之資料採礦演算法的名稱。  
   
 > [!NOTE]  

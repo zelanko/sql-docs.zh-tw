@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8d50f940b191ee057febb81a59b90d6c842cf821
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1b01a48e15c06f021b41b3bded35a0cd2739313c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211937"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006913"
 ---
 # <a name="sprepladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,16 +53,16 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  這是複寫要加入之資料表中的資料行名稱。 *資料行*已**sysname**，沒有預設值。  
   
  [ @typetext =] '*typetext*'  
- 這是要加入之資料行的定義。 *typetext*已**nvarchar(3000)**，沒有預設值。 例如，如果資料行加入 order_filled，而且它是單一字元欄位時，不是 NULL，且具有預設值是**N**，order_filled 就是*資料行*參數，而的定義資料行**char(1) NOT NULL CONSTRAINT constraint_name DEFAULT 'n'** 會是*typetext*參數值。  
+ 這是要加入之資料行的定義。 *typetext*已**nvarchar(3000)** ，沒有預設值。 例如，如果資料行加入 order_filled，而且它是單一字元欄位時，不是 NULL，且具有預設值是**N**，order_filled 就是*資料行*參數，而的定義資料行**char(1) NOT NULL CONSTRAINT constraint_name DEFAULT 'n'** 會是*typetext*參數值。  
   
  [ @publication_to_add =] '*publication_to_add*'  
- 這是新資料行要加入其中的發行集名稱。 *publication_to_add*已**nvarchar(4000)**，預設值是**所有**。 如果**所有**，則所有的發行集包含此資料表會受到影響。 如果*publication_to_add*指定，則只有這個發行集會加入新的資料行。  
+ 這是新資料行要加入其中的發行集名稱。 *publication_to_add*已**nvarchar(4000)** ，預設值是**所有**。 如果**所有**，則所有的發行集包含此資料表會受到影響。 如果*publication_to_add*指定，則只有這個發行集會加入新的資料行。  
   
  [ @from_agent =] *from_agent*  
  預存程序是否由複寫代理程式執行。 *from_agent*已**int**，預設值是**0**的值**1**複寫代理程式，然後在執行這個預存程序時，會使用每個其他情況下的預設值**0**應該使用。  
   
  [ @schema_change_script =] '*schema_change_script&lt*'  
- 指定用來修改系統產生之自訂預存程序的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼的名稱和路徑。 *schema_change_script&lt*已**nvarchar(4000)**，預設值是 NULL。 複寫可讓使用者自訂的自訂預存程序，取代異動複寫所用的一個或多個預設程序。 *schema_change_script&lt*執行後結構描述變更複寫的資料表發行項使用 sp_repladdcolumn 時，會進行，可用來執行下列其中一項：  
+ 指定用來修改系統產生之自訂預存程序的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼的名稱和路徑。 *schema_change_script&lt*已**nvarchar(4000)** ，預設值是 NULL。 複寫可讓使用者自訂的自訂預存程序，取代異動複寫所用的一個或多個預設程序。 *schema_change_script&lt*執行後結構描述變更複寫的資料表發行項使用 sp_repladdcolumn 時，會進行，可用來執行下列其中一項：  
   
 -   如果自動重新產生自訂的預存程序， *schema_change_script&lt*可用來卸除這些自訂預存程序和它們取代成使用者自訂預存程序來支援新的結構描述。  
   

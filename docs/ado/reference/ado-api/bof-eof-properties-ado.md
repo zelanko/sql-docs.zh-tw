@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9a449c0e635c7fe0e63bc1f4d8b1b0b91712135d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920381"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF、EOF 屬性 (ADO)
 -   **BOF**指出目前的記錄位置位於第一筆記錄之前[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
@@ -62,7 +61,7 @@ ms.locfileid: "66696285"
 ||BOF|EOF|  
 |------|---------|---------|  
 |**MoveFirst**， **MoveLast**|若要設定 **，則為 True**|若要設定 **，則為 True**|  
-|**Move** 0|沒有變更|沒有變更|  
+|**移動**0|沒有變更|沒有變更|  
 |**MovePrevious**，**移動**< 0|若要設定 **，則為 True**|沒有變更|  
 |**MoveNext**，**移動**> 0|沒有變更|若要設定 **，則為 True**|  
   

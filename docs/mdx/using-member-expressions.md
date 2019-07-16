@@ -8,20 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7abc83ae3483afedaa540c8fdcff0383af6ae994
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41ff63d47a62b9b83fb583c55ff2405638de22cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097107"
 ---
 # <a name="using-member-expressions"></a>使用成員運算式
 
 
   成員運算式包含成員識別碼、成員函數或可轉換為成員的運算式。  
   
- 成員識別碼可以有許多不同格式。 最簡單的成員識別碼形式是由成員的名稱所組成。 例如：  
+ 成員識別碼可以有許多不同格式。 最簡單的成員識別碼形式是由成員的名稱所組成。 例如:  
   
 ```  
 SELECT Amount ON 0  

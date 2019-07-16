@@ -2,19 +2,18 @@
 title: 設定 SQL Server 以接收遠端資料表複本-Parallel Data Warehouse |Microsoft Docs
 description: 描述如何設定外部 SMP SQL Server 執行個體從平行處理資料倉儲接收遠端資料表複本。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ae6799d468d57dec04046b443c613823c0a8cb8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ad1ee005f5d28e7477fab7c1abe7ed4074e233d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961296"
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>設定外部 SMP SQL Server 以接收遠端資料表複本-平行處理資料倉儲
 描述如何設定外部 SQL Server 執行個體從平行處理資料倉儲接收遠端資料表複本。  

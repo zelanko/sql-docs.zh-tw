@@ -4,18 +4,17 @@ description: 本文說明如何在 Linux 上設定的快照集資料夾共用 SQ
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 456163bfec2324394455a5d098ef01c22d994696
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 6959b2073871f70fb33823b50419c208a23df2dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834798"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093177"
 ---
 # <a name="configure-replication-with-non-default-ports"></a>使用非預設連接埠設定複寫
 

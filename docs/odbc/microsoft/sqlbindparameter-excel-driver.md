@@ -1,5 +1,5 @@
 ---
-title: SQLBindParameter (Excel Driver) | Microsoft Docs
+title: SQLBindParameter （Excel 驅動程式） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 40489bc5-3e2a-425e-892d-e0dc037f4d7a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 84f6e44f4849db81c591a791674878190f21e486
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b33200e0628566bc88f770ca1fe8fd895ecbf2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063247"
 ---
 # <a name="sqlbindparameter-excel-driver"></a>SQLBindParameter (Excel 驅動程式)
 > [!NOTE]  

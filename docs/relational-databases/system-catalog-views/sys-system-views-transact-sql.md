@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a526c410-e7b5-4075-8103-e1f3c6837c3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 13568aae4723a695dd2ce3e611d5e92f96deffb7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fce2816d8cb169c5761f47dd0f9dd0a6ed1959f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078609"
 ---
 # <a name="syssystemviews-transact-sql"></a>sys.system_views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47714896"
 |**has_opaque_metadata**|**bit**|1 = 針對檢視所指定的 VIEW_METADATA 選項。 如需詳細資訊，請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)。|  
 |**has_unchecked_assembly_data**|**bit**|1 = 資料表包含保存資料，這些保存資料會隨著上次 ALTER ASSEMBLY 期間變更定義的組件而不同。 在下次 DBCC CHECKDB 或 DBCC CHECKTABLE 順利完成之後，將重設為 0。|  
 |**with_check_option**|**bit**|1 = WITH CHECK OPTION 是在檢視定義中指定。|  
-|**sys.views**|**bit**|1 = 檢視由儲存之間的相互關聯資訊系統會自動建立**datetime**資料行。 若要建立這份檢視，請將 DATE_CORRELATION_OPTIMIZATION 設為 ON。|  
+|**is_date_correlation_view**|**bit**|1 = 檢視由儲存之間的相互關聯資訊系統會自動建立**datetime**資料行。 若要建立這份檢視，請將 DATE_CORRELATION_OPTIMIZATION 設為 ON。|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

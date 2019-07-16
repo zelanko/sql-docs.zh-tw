@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 12dc7ca07dba7d36e7f65c9c6097b8b42457d3da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d88c4b986ab05ab3bd9e90308257dd94b9e6abf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008337"
 ---
 # <a name="lt-less-than-or-equal-to-dmx"></a>&lt;= （小於或等於） (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,6 +37,6 @@ DMX_Expression <= DMX_Expression
 ## <a name="see-also"></a>另請參閱  
  [比較運算子&#40;DMX&#41;](../dmx/operators-comparison.md)   
  [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [運算子&#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

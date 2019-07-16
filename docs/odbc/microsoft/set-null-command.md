@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 410c5a6e-e957-4ecc-9e2d-e591cbc0bc4f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b6f0e23abd31661210282967fa35080376eaaaf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f8addb9b4c7c200ee8f213bdd959067039ccfff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063675"
 ---
 # <a name="set-null-command"></a>SET NULL 命令
 決定如何支援 null 值的 ALTER TABLE-SQL、 CREATE TABLE-SQL 和 INSERT-SQL 命令。  

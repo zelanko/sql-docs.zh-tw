@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7c2eae25d729cf93206203da784185ed484c3b1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ea865049ecbcfa41390671880e0b5bbeae38cb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488015"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092403"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>刪除資料列 (適用於 Excel 的 MDS 增益集)
 
@@ -27,10 +26,10 @@ ms.locfileid: "65488015"
 > [!NOTE]  
 >  管理員可以重新啟動刪除的成員。 如需詳細資訊，請參閱[重新啟用成員或集合 &#40;Master Data Services&#41;](../../master-data-services/reactivate-a-member-or-collection-master-data-services.md)。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
--   您必須擁有 [總管] 功能區域的權限。  
+-   您必須擁有 [總管]  功能區域的權限。  
   
 -   您必須擁有包含 MDS 管理之資料的使用中工作表。  
   
@@ -38,9 +37,9 @@ ms.locfileid: "65488015"
   
 1.  按一下資料列標頭，藉以選取您想要刪除的整個資料列。  
   
-2.  按一下 [發行和驗證] 群組中的 [刪除]。  
+2.  按一下 [發行和驗證]  群組中的 [刪除]  。  
   
-3.  在確認對話方塊中，按一下 [是]。  
+3.  在確認對話方塊中，按一下 [是]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [概觀：從 Excel 匯入資料&#40;MDS 增益集的 Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  

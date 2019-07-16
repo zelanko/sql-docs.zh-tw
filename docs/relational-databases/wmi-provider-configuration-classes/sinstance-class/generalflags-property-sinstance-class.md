@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 36faf960-e49b-4866-bce0-f8bbf50fd225
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 55ac94e1f94e1bfab96b61109216b4ef1144de80
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 492f6a5738da78774e5396d44a2ffb68cc3d37ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052647"
 ---
 # <a name="generalflags-property-sinstance-class"></a>GeneralFlags 屬性 (SInstance 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
