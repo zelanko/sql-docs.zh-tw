@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6cd98b39421e95254fcb052db67cbc9f9205b668
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 71afc3c0bac0ea64285c450640d96fe5f5d709b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064967"
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (資料指標程式庫)
 > [!IMPORTANT]  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: af81fd6c4b0b56474497a829985a754ccf88f3ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fdc7f82059579f23c9a1a1203aee5e45c87693e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63238020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046937"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>驅動程式管理員&#39;s 的連線程序中的角色
 請記住，應用程式不驅動程式函式會直接呼叫。 相反地，它們呼叫具有相同名稱的驅動程式管理員函式，而驅動程式管理員呼叫的驅動程式函式。 通常，這幾乎會立即發生。 例如，應用程式會呼叫**SQLExecute**驅動程式管理員在驅動程式管理員和一些錯誤檢查後，呼叫**SQLExecute**驅動程式中。  

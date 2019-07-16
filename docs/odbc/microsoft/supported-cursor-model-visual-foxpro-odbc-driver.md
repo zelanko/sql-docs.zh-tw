@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 875348a501c292e55b267ece769f16dd6bc9dbdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e623c0ce5135a4b2e558be9c405ec2757e605ceb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080709"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>支援的資料指標模型 (Visual FoxPro ODBC Driver)
 Visual FoxPro ODBC Driver 同時支援*區塊*(*資料列集*) 和*靜態*資料指標。 靜態資料指標支援符合層級 1 ODBC 合規性的任何驅動程式。 驅動程式不支援動態、 索引鍵集驅動或混合 （索引鍵集與動態） 資料指標。  

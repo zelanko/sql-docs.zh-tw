@@ -1,5 +1,5 @@
 ---
-title: sp_OAStop (Transact-SQL) | Microsoft Docs
+title: sp_OAStop (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: db70245ce97811be77c102753b422c639531507b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ead1a768a89e9b43c02d7e80619dbf52165d2a38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65450035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097607"
 ---
 # <a name="spoastop-transact-sql"></a>sp_OAStop (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

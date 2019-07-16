@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: ff0a31fc4d825966fefafc11d8780862634f1937
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d53d8734e0c01fa2056b9d560f3bc65b7f64d9a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058959"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant"></a>建立分析報告中資料庫測試助理
 
@@ -98,7 +97,7 @@ DEA 來登入的使用者必須具有 analysis server 的 sysadmin 權限。 如
 |---|---|  
 |RInterop 叫用在啟動時發生。 檢查 RInterop 記錄檔，並再試一次。|DEA 需要存取網際網路才能下載相依的 R 套件。 檢查 RInterop 記錄在 %temp%\\RInterop 和 DEA 記錄在 %temp%\\DEA。 如果 RInterop 未正確初始化，或者它初始化不正確的 R 封裝，您可能會看到 「 無法產生新的分析報告 」 的例外狀況之後 DEA 記錄檔的 InitializeRInterop 步驟。<br><br>RInterop 記錄也可能會顯示錯誤類似於 「 有 」 沒有 jsonlite 套件可用。 如果您的電腦沒有網際網路存取，您可以手動下載必要的 jsonlite R 套件：<br><br><li>移至 %userprofile%\\DEARPackages 機器的檔案系統上的資料夾。 此資料夾包含用於 DEA R 套件。</li><br><li>在已安裝的套件清單中遺漏 jsonlite 資料夾時，您需要有網際網路存取才可下載 jsonlite 的發行版本的電腦\_從 1.4.zip [ https://cran.r-project.org/web/packages/jsonlite/index.html ](https://cran.r-project.org/web/packages/jsonlite/index.html)。</li><br><li>將.zip 檔案複製到您要在其中執行 DEA 的機器。  擷取 jsonlite 資料夾，並將它複製到 %userprofile%\\DEARPackages。 此步驟會自動安裝 jsonlite 封裝此資料夾應該命名**jsonlite**且內容應直接在資料夾中，未在一個層級。</li><br><li>一次關閉 DEA，再重新開啟，請嘗試分析。</li><br>您也可以使用 RGUI。 移至**封裝** > **從 zip 安裝**。 請移至您稍早下載的封裝，並安裝。<br><br>如果 RInterop 已初始化且已正確設定，您應該會看到 「 正在安裝相依 R 封裝 jsonlite"RInterop 記錄檔中。|  
 |無法連接到 SQL Server 執行個體，請確定伺服器名稱正確無誤，並檢查使用者已登入的必要存取權。|您可能沒有存取權，或使用者權限給伺服器或伺服器名稱可能不正確。| 
-|RInterop 程序已逾時。請檢查 DEA 和 RInterop 記錄、 停止 RInterop 程序在 [工作管理員] 中，並再試一次。<br><br>中的多個<br><br>RInterop 處於錯誤狀態。 停止 RInterop 程序在 [工作管理員] 中，並再試一次。|請參閱記錄檔在 %temp%\\RInterop 確認錯誤。 移除 RInterop 程序從 工作管理員才能再試一次。 如果問題持續發生，請連絡產品小組。| 
+|RInterop 程序已逾時。請檢查 DEA 和 RInterop 記錄、 停止 RInterop 程序在 [工作管理員] 中，並再試一次。<br><br>或<br><br>RInterop 處於錯誤狀態。 停止 RInterop 程序在 [工作管理員] 中，並再試一次。|請參閱記錄檔在 %temp%\\RInterop 確認錯誤。 移除 RInterop 程序從 工作管理員才能再試一次。 如果問題持續發生，請連絡產品小組。| 
 
 ### <a name="the-report-is-generated-but-data-appears-to-be-missing"></a>產生報告時，但資料似乎遺失
     

@@ -1,5 +1,5 @@
 ---
-title: PredictNodeId (DMX) | Microsoft Docs
+title: PredictNodeId (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 5202662b1bd41671905379272b2a52ba87510ecc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7c7751f317d4a56fb4aafb7085509d175f32255
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074677"
 ---
 # <a name="predictnodeid-dmx"></a>PredictNodeId (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40437cd27af345aff91314f07888c66e2bdff2d0
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072693"
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_addextendedproperty
  這是與屬性相關聯的值。 *值*已**sql_variant**，預設值是 NULL。 *value* 的大小不能超過 7,500 個位元組。  
   
  [ @level0type=] {'*level0_object_type&lt*'}  
- 這是層級 0 物件的類型。 *level0_object_type&lt*已**varchar(128)**，預設值是 NULL。  
+ 這是層級 0 物件的類型。 *level0_object_type&lt*已**varchar(128)** ，預設值是 NULL。  
   
  有效輸入如下：ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE、PLAN GUIDE 和 NULL。  
   
@@ -72,12 +71,12 @@ sp_addextendedproperty
  這是所指定之層級 0 物件類型的名稱。 *level0_object_name&lt*已**sysname**預設值是 NULL。  
   
  [ @level1type=] {'*level1_object_type&lt*'}  
- 這是層級 1 物件的類型。 *level1_object_type&lt*已**varchar(128)**，預設值是 NULL。 有效輸入如下，彙總、 預設、 函式、 LOGICAL FILE NAME、 程序、 佇列、 規則、 序列、 同義字、 資料表、 TABLE_TYPE、 類型、 檢視、 XML SCHEMA COLLECTION 和 NULL。    
+ 這是層級 1 物件的類型。 *level1_object_type&lt*已**varchar(128)** ，預設值是 NULL。 有效輸入如下，彙總、 預設、 函式、 LOGICAL FILE NAME、 程序、 佇列、 規則、 序列、 同義字、 資料表、 TABLE_TYPE、 類型、 檢視、 XML SCHEMA COLLECTION 和 NULL。    
  [ @level1name=] {'*level1_object_name&lt*'}  
  這是所指定之層級 1 物件類型的名稱。 *level1_object_name&lt*已**sysname**，預設值是 NULL。  
   
  [ @level2type=] {'*level2_object_type&lt*'}  
- 這是層級 2 物件的類型。 *level2_object_type&lt*已**varchar(128)**，預設值是 NULL。 有效輸入如下：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
+ 這是層級 2 物件的類型。 *level2_object_type&lt*已**varchar(128)** ，預設值是 NULL。 有效輸入如下：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
   
  [ @level2name=] {'*level2_object_name&lt*'}  
  這是所指定之層級 2 物件類型的名稱。 *level2_object_name&lt*已**sysname**，預設值是 NULL。  
@@ -86,7 +85,7 @@ sp_addextendedproperty
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 為了指定擴充屬性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的物件分為三種層級：0、1 和 2。 層級 0 是最高層級，且定義為包含在資料庫範圍的物件。 層級 1 物件包含在結構描述或使用者範圍中，層級 2 物件包含在層級 1 物件中。 任何這些層級的物件都可以定義擴充屬性。  
+ 為了指定擴充的屬性，在物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫分為三個層級：0、 1 和 2。 層級 0 是最高層級，且定義為包含在資料庫範圍的物件。 層級 1 物件包含在結構描述或使用者範圍中，層級 2 物件包含在層級 1 物件中。 任何這些層級的物件都可以定義擴充屬性。  
   
  對一個層級中物件的參考必須用擁有或包含其較高層級物件的名稱來限定。 例如，當您將擴充屬性加入至資料表資料行 (層級 2) 時，您也必須指定包含該資料行的資料表名稱 (層級 1) 和包含該資料表的結構描述 (層級 0)。  
   
@@ -99,8 +98,8 @@ sp_addextendedproperty
 ## <a name="replicating-extended-properties"></a>複寫擴充屬性  
  只在發行者與訂閱者之間的初始同步處理中複寫擴充屬性。 如果您在初始同步處理之後加入或修改擴充屬性，就不會複寫這項變更。 如需如何複寫資料庫物件的詳細資訊，請參閱[發行資料和資料庫物件](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  
   
-## <a name="schema-vs-user"></a>結構描述與使用者  
- 不建議您在將擴充屬性套用至資料庫物件時指定 USER 當做層級 0 類型，因為這會造成名稱解析模稜兩可。 例如，假設使用者 Mary 擁有兩個結構描述 (Mary 和 MySchema)，而這兩個結構描述都包含一個名為 MyTable 的資料表。 如果 Mary 將擴充的屬性加入至 MyTable 資料表，並指定 **@level0type = N'USER'**，  **@level0name = Mary**，並不清楚哪一個資料表擴充的屬性會套用。 為了維持回溯相容性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將套用屬性至包含在名為 Mary 之結構描述中的資料表。  
+## <a name="schema-vs-user"></a>結構描述與。使用者  
+ 不建議您在將擴充屬性套用至資料庫物件時指定 USER 當做層級 0 類型，因為這會造成名稱解析模稜兩可。 例如，假設使用者 Mary 擁有兩個結構描述 (Mary 和 MySchema)，而這兩個結構描述都包含一個名為 MyTable 的資料表。 如果 Mary 將擴充的屬性加入至 MyTable 資料表，並指定 **@level0type = N'USER'** ，  **@level0name = Mary**，並不清楚哪一個資料表擴充的屬性會套用。 為了維持回溯相容性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將套用屬性至包含在名為 Mary 之結構描述中的資料表。  
   
 ## <a name="permissions"></a>Permissions  
  db_owner 和 db_ddladmin 固定資料庫角色的成員可將擴充屬性加入至任何物件，但下列為例外狀況：db_ddladmin 不能將屬性加入至資料庫本身或加入至使用者或角色。  
@@ -239,7 +238,7 @@ EXEC sys.sp_addextendedproperty
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sys.fn_listextendedproperty &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
- [sp_dropextendedproperty &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
   
   

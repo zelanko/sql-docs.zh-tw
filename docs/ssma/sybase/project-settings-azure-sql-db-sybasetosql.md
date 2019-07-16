@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 14fa0cb949505ab2aeb15d1236add9acba9a1ab1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98430a626a628d4c8cc040b53a9cf24ad1752048
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62703721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028785"
 ---
 # <a name="project-settings-azure-sql-db--sybasetosql"></a>專案設定 (Azure SQL DB) (SybaseToSQL)
 Azure SQL DB 專案設定可讓您設定的 Azure SQL DB 資料庫後置字元新增連線] 對話方塊中，也允許 [Azure SQL DB 連接中實作活動訊號機制。  

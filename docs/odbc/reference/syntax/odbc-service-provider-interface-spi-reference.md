@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6e3d83f0aa27641c9dde164f51319a0e78d456ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88053620fa413c50a8faff4cc47cbbe1457249f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073827"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>ODBC 服務提供者介面 (SPI) 參考
 傳統上，ODBC 會定義應用程式開發介面 (API)。 應用程式可以呼叫 API 中的函式，它們應該實作在驅動程式管理員和驅動程式。  

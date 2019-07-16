@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 01e151f65c6decc7582a3c38413b180c6a51cb92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6fe1c0734864f8bde8b579ced77dc8106cb80ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084750"
 ---
 # <a name="database-maintenance-plan-tables-transact-sql"></a>資料庫維護計畫資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a723323-b2a6-4ac3-81d0-6ed66ec08ab8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a99861e41a8d64406cf3585f331e4b6f1ecc740e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b19265c66107e6059639663fac4f6c2ff44219f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63024127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043787"
 ---
 # <a name="other-paradox-driver-programming-details"></a>其他 Paradox 驅動程式的程式設計詳細資料
 > [!NOTE]  

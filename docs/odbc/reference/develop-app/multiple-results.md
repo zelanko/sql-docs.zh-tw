@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47e1250a92b78aefdc1611fd88e0ee9b0f772ad0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8679bea49b63ffd5dc7164942b42ac9eed7e9ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086358"
 ---
 # <a name="multiple-results"></a>多個結果
 A*結果*項目所傳回的資料來源之後執行的陳述式。 ODBC 有兩種類型的結果： 結果集和資料列計數。 *資料列計數*所刪除的更新時，受影響的資料列數目，或 insert 陳述式。 批次中所述[批次的 SQL 陳述式](../../../odbc/reference/develop-app/batches-of-sql-statements.md)，可以產生多個結果。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d18169eb-89f7-4079-be70-a85713030191
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 146d1cdbb62c54acd9669b803b9d85dddf259601
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c72c5e3c8176b878265dcaa4a7b27544ed8946b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073787"
 ---
 # <a name="setup-dll-function-summary"></a>安裝程式 DLL 函式摘要
 下表說明安裝程式 DLL 函式。 如需語法和語意，每個函式的詳細資訊，請參閱[安裝程式 DLL API 參考](../../../odbc/reference/syntax/setup-dll-api-reference.md)。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 04c53e4c-cd1d-40b2-9997-684ebe43499f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eafab0f29cb4e1b7ecdfea378f9315ba29cf133f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7943987d52554e0f5cd7723e8c9ae8a0e3afddd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199679"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093033"
 ---
 # <a name="sqlbindparameter-cursor-library"></a>SQLBindParameter (資料指標程式庫)
 > [!IMPORTANT]  

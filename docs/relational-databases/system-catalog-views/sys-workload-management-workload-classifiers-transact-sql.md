@@ -11,16 +11,15 @@ dev_langs:
 - TSQL
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 5d125f6bdbc024e0f72cb138075e5abb97ae93eb
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: c6947ae0df357c1a1bd1da2973ff3bf6a81717f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413238"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059333"
 ---
-# <a name="sysworkloadmanagementworkloadclassifiers-transact-sql"></a>sys.workload_management_workload_classifiers (Transact-SQL)
+# <a name="sysworkloadmanagementworkloadclassifiers-transact-sql"></a>sys.workload_management_workload_classifiers & Amp;#40;transact-SQL&AMP;#41;
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -30,7 +29,7 @@ ms.locfileid: "67413238"
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|分類器的唯一識別碼。 不可為 Null||
 group_name|**sysname**|分類指派給工作負載群組的名稱。 不可為 Null。 |靜態資源類別</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br> </br>靜態資源類別</br>smallrc</br>mediumrc</br>largerc</br>xlargerc|
-NAME|**sysname**|分類器的名稱。 必須是唯一的執行個體。 不可為 Null。||
+name|**sysname**|分類器的名稱。 必須是唯一的執行個體。 不可為 Null。||
 |importance|**sysname**|是在這個工作負載群組和間共用資源的工作負載群組的相對重要性。  指定分類中的重要性會覆寫工作負載群組重要性設定。|低、 below_normal、 normal、 above_normal，最高 |
 |create_time|**datetime**|建立分類器的時間。 不可為 Null。||
 modify_time|**datetime**|分類器上次修改時間。 不可為 Null。||

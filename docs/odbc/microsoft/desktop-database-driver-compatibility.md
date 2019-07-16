@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d081d53458ec59eb2ac9f05c5c1d47d6991b5010
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 31263162526b6bd2e0a116a473f09f9e2caeba94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077278"
 ---
 # <a name="desktop-database-driver-compatibility"></a>桌面資料庫驅動程式相容性
 Unicode 是軟體的字元編碼的方法將所有字元視為擁有兩個位元組的固定的寬度。 這個方法用來替代 Windows ANSI 字元編碼方式，因為它代表一個位元組中的字元是限制為 256 個字元。 Unicode 可以代表 65,000 個字元，因為它所能容納的字元都不會出現的許多語言以 ANSI 編碼方式。  

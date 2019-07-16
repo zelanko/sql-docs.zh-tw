@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 75d95fbe9c289eab419360bef35263b41930c9f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19b78ff53b5640d74b49d2e5956c39aa1df2e230
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032987"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068072"
 ---
 # <a name="sysplanguides-transact-sql"></a>sys.plan_guides (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "63032987"
 |**scope_object_id**|**整數**|定義計畫指南範圍之物件的 object_id (如果範圍是 OBJECT)。<br /><br /> 如果計畫指南的範圍不是 OBJECT，則為 NULL。|  
 |**scope_batch**|**nvarchar(max)**|如果批次文字**scope_type**為 SQL。<br /><br /> NULL (如果批次類型不是 SQL)。<br /><br /> 如果是 NULL， **scope_type**是 SQL、 windows 7 **query_text**套用。|  
 |**parameters**|**nvarchar(max)**|定義與計畫指南相關參數清單的字串。<br /><br /> NULL = 沒有一個參數清單與計畫指南相關。|  
-|**hints**|**nvarchar(max)**|與計畫指南相關的 OPTION 子句提示。|  
+|**提示**|**nvarchar(max)**|與計畫指南相關的 OPTION 子句提示。|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

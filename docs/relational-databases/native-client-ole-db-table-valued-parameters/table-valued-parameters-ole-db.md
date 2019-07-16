@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4298b73d-615b-4d28-9843-03b4d5fc489e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb03ccfd661fb4d80be605363e314381403a460b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4292022496d19ed80ff1cde71d5fbd4a35a68c9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069615"
 ---
 # <a name="table-valued-parameters-ole-db"></a>資料表值參數 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

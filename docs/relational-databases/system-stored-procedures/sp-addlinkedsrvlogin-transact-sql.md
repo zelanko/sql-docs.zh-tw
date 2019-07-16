@@ -1,5 +1,5 @@
 ---
-title: sp_addlinkedsrvlogin (Transact-SQL) | Microsoft Docs
+title: sp_addlinkedsrvlogin & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c34d7f326c10ceebb3ee3b97c72b583e13a78ff5
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072673"
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  這是登入對應所套用的連結伺服器名稱。 *rmtsrvname&lt*已**sysname**，沒有預設值。  
   
  `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
- 決定是否連接到*rmtsrvname&lt*模擬本機登入或明確提交登入和密碼。 資料類型是**varchar (** 8 **)**，預設值是 TRUE。  
+ 決定是否連接到*rmtsrvname&lt*模擬本機登入或明確提交登入和密碼。 資料類型是**varchar (** 8 **)** ，預設值是 TRUE。  
   
  值為 TRUE 可讓您指定登入使用他們自己的認證來連接到*rmtsrvname&lt*，使用*rmtuser&lt*並*rmtpassword&lt*引數被忽略。 FALSE 指定*rmtuser&lt*並*rmtpassword&lt*引數用來連接到*rmtsrvname&lt*指定*locallogin*. 如果*rmtuser&lt*並*rmtpassword&lt*也會設為 NULL、 沒有登入或密碼用來連接到連結的伺服器。  
   
@@ -120,7 +119,7 @@ EXEC sp_addlinkedsrvlogin 'Accounts', 'false', 'Domain\Mary', 'MaryP', 'd89q3w4u
 ## <a name="see-also"></a>另請參閱  
  [連結的伺服器目錄檢視&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_droplinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
+ [sp_droplinkedsrvlogin &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -3,17 +3,16 @@ title: 在 Linux 上設定使用量和適用於 SQL Server 的診斷資料收集
 description: 描述如何 SQL Server 客戶的使用量和診斷資料收集與 Linux 上設定。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ab0b00013c09c5328ad711307558e67adc784d05
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 36c5194df015b26e5c9925575a9e524ef17ce602
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057228"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-on-linux"></a>在 Linux 上設定使用量和適用於 SQL Server 的診斷資料收集
 

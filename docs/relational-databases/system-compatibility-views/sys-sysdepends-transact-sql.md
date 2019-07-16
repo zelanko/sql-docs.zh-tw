@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f9c182cb-386f-4e72-859f-9f1115b389f9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7bfcf815ce77bb21583b5ac3664ecec6da9c28ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d928926294bb3e80f860a535a266b5c106e3f18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053504"
 ---
 # <a name="syssysdepends-transact-sql"></a>sys.sysdepends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

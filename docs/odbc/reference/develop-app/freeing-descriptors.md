@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 317213f4-0ebb-4bf8-a37a-4d6b1313823f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d643ccad0110796127524a10e82aef7c3339b163
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe489222c026c1499135b716f0485bb04f51bad9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069776"
 ---
 # <a name="freeing-descriptors"></a>釋放描述項
 明確配置描述元可以是藉由呼叫其中一個明確地釋放**SQLFreeHandle**具有*HandleType* SQL_HANDLE_DESC，或以隱含的方式，當連接控制代碼釋放。 明確配置描述項會釋放時，要自動套用的釋放描述項會還原為隱含地配置給它們的描述元的所有陳述式控制代碼。  

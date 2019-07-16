@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 69903654faf21a7649ec8b54a269e71a99d559c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 922489d1145204a4ae5d2dcf8e483149f1b11bcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068457"
 ---
 # <a name="common-language-runtime-integration"></a>Common Language Runtime 整合
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

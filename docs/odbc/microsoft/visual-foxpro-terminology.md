@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a379b3cb-0393-46e7-b03b-724a56d8f31c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e8aeb7db6f844b5182165146905f6cc9de928726
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5abd8c5bc4e7cbc2442d44eace58dda37c99c4e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076290"
 ---
 # <a name="visual-foxpro-terminology"></a>Visual FoxPro 術語
 **資料庫**  

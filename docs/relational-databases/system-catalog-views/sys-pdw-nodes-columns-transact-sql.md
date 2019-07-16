@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_nodes_columns (Transact-SQL) | Microsoft Docs
+title: sys.pdw_nodes_columns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 949d8a90892e1954ee0a96f0025cb623569fbe55
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 201af9001703bb8f1dfbdaf2c41151697b945df3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024419"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059397"
 ---
 # <a name="syspdwnodescolumns-transact-sql"></a>sys.pdw_nodes_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "56024419"
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|這個資料行所屬的物件識別碼。||  
-|NAME|**sysname**|資料行的名稱。 物件中是唯一的。||  
+|name|**sysname**|資料行的名稱。 物件中是唯一的。||  
 |column_id|**int**|資料行的識別碼。 物件中是唯一的。||  
 |system_type_id|**tinyint**|資料行的系統類型識別碼。||  
 |user_type_id|**int**|使用者所定義的資料行類型識別碼。||  
@@ -58,7 +57,7 @@ ms.locfileid: "56024419"
  需要 CONTROL SERVER 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [SQL 資料倉儲與平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)  
   
   

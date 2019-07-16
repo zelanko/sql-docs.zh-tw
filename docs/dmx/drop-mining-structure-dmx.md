@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: b83de343e94c9263ba1ca6c6c8f09be90f3793b2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d5c94ec01ff5f11d2b7f663f09de0a7c1527f343
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074084"
 ---
 # <a name="drop-mining-structure-dmx"></a>DROP MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +28,7 @@ DROP MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>引數  
- *結構*  
+ *structure*  
  結構識別碼。  
   
 ## <a name="examples"></a>範例  

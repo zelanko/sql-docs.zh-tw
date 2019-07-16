@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 41c2c6b06744965144ca9d5feb27e9ea16d9903c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83b693922d08f7298d0c5282fe2c7d1c20149d5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046877"
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>對資料指標和已備妥陳述式的交易影響
 認可或回復交易，包含對資料指標和存取計劃的下列影響：  

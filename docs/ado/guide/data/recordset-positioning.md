@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c01d24a5f92b4bca1e5b41a0cbece980237fd961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cdce4c7b08a8b15cdb0a9ee1111a216aeef005bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924436"
 ---
 # <a name="recordset-positioning"></a>資料錄集定位
 使用**AbsolutePosition**屬性，以移至記錄，根據其序數位置中**資料錄集**物件，或若要判斷目前的資料錄的序數位置。 提供者必須支援這個屬性才能使用適當的功能。  
