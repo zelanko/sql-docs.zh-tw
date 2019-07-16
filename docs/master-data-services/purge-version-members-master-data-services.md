@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9834e79746feb3e7890ab8b6d5bdd43bbfc36dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 571ac34ad836bf25ad98f973f9fc33c9de499ba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024648"
 ---
 # <a name="purge-version-members-master-data-services"></a>清除版本成員 [Master Data Services]
 

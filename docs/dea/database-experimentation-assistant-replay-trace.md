@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: 7db0e6a83997a3be7b204f780f3c0a7ad856b0d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53534d9d269803a4bce0902c1f22349dfe6c57e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058888"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>重新執行追蹤，以在資料庫測試助理
 
@@ -52,7 +51,7 @@ ms.locfileid: "66794448"
 1.  **SQL Server 安裝路徑**:若要安裝 SQL Server 中輸入的路徑。 例如，c:\\Program Files (x86)\\Microsoft SQL Server\\120。
 1.  **控制器電腦名稱**:輸入已為控制器設定機器的名稱。 這部電腦執行名為 SQL Server Distributed Replay controller 的 Windows 服務。 Distributed Replay controller 會協調 Distributed Replay client 的動作。 每個 Distributed Replay 環境都只能有一個 Controller 執行個體。
 1.  **用戶端的電腦名稱**:輸入每個用戶端電腦，並以逗號分隔的名稱。 範例： client1，client2。 您可以有最多五個用戶端控制站。 用戶端會將一或多個機器，不論是實體或虛擬的執行名為 SQL Server Distributed Replay 用戶端的 Windows 服務。 Distributed Replay Client 會共同運作以模擬 SQL Server 執行個體的工作負載。 每個 Distributed Replay 環境中可以有一個或多個用戶端。
-1.  選取 **[下一步]** 。
+1.  選取 [下一步]  。
 
 ### <a name="select-a-trace"></a>選取 [追蹤]
 
@@ -60,7 +59,7 @@ ms.locfileid: "66794448"
 1.  **路徑來儲存重新執行前置處理輸出**:  
     \- 如果您還沒有 IRF 檔案，請輸入您想要用來儲存 IRF 檔案的位置的路徑和其他前置處理輸出。  
     \- 如果您已經有 IRF 檔案中，輸入 IRF 檔案的路徑。
-1. 選取 **[下一步]** 。
+1. 選取 [下一步]  。
 
 ### <a name="replay-a-trace"></a>重新執行追蹤
 

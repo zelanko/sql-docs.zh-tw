@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: db803266-57df-4864-a41b-901247549c1f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ea540d2ef6747bbe3bfc9ac55f04afe1d63349f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cfefcd9f2f55e2d78c5c6e5b1bac7ce52e9033e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024602"
 ---
 # <a name="sqlremovedefaultdatasource-function"></a>SQLRemoveDefaultDataSource 函式
 **合規性**  

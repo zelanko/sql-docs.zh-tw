@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dceda172caab5f93295eac9cf4cf86a07495fe3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df55c4e17640710b5ada50a0aa12edb046822821
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053242"
 ---
 # <a name="sysdmresourcegovernorworkloadgroups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47824998"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|工作負載群組的識別碼。 不可為 Null。|  
-|NAME|**sysname**|工作負載群組的名稱。 不可為 Null。|  
+|name|**sysname**|工作負載群組的名稱。 不可為 Null。|  
 |pool_id|**int**|資源集區的識別碼。 不可為 Null。|  
 |external_pool_id|**int**|**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 外部資源集區的識別碼。 不可為 Null。|  
 |statistics_start_time|**datetime**|針對工作負載群組重設之統計資料集合的時間。 不可為 Null。|  
@@ -58,7 +57,7 @@ ms.locfileid: "47824998"
 |total_reduced_memgrant_count|**bigint**|到達最大查詢大小限制之記憶體授與的累計計數。 不可為 Null。|  
 |max_request_grant_memory_kb|**bigint**|自重設統計資料以來，單一要求的最大記憶體授與大小 (以 KB 為單位)。 不可為 Null。|  
 |active_parallel_thread_count|**bigint**|平行執行緒使用量的目前計數。 不可為 Null。|  
-|importance|**sysname**|要求在此工作負載群組中之相對重要性的目前組態值。 重要性為下列其中之一，其中 「 中 」 是預設： 低、 中或高。<br /><br /> 不可為 Null。|  
+|importance|**sysname**|要求在此工作負載群組中之相對重要性的目前組態值。 重要性為下列程式碼，其中 Medium 為預設值的其中一個：低、 中或高。<br /><br /> 不可為 Null。|  
 |request_max_memory_grant_percent|**int**|單一要求之最大記憶體授與的目前設定 (以百分比為單位)。 不可為 Null。|  
 |request_max_cpu_time_sec|**int**|單一要求之最大 CPU 使用限制的目前設定 (以秒為單位)。 不可為 Null。|  
 |request_memory_grant_timeout_sec|**int**|單一要求記憶體授與逾時的目前設定 (以秒為單位)。 不可為 Null。|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7769021-bd18-4d8e-96e0-e184a82d6ca3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 715d51aeccf3085b8f98cd4b49b4a14efa87afe9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9343361e7ad6fbfdf68b82218a39a56fa8d928e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63238328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053907"
 ---
 # <a name="sqldriverconnect-text-file-driver"></a>SQLDriverConnect (文字檔驅動程式)
 > [!NOTE]  

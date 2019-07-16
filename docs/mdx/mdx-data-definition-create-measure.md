@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 37a8b8ef757184e7467c3551148c8c149bb45097
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9eb05d633dcbe660c34793fa39c10d788574700
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63309100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098377"
 ---
 # <a name="mdx-data-definition---create-measure"></a>MDX 資料定義 - CREATE MEASURE
 

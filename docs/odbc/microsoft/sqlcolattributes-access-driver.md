@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: adb6f81d-e8c7-4748-9b1d-f7a053788bbc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0fa4de89a1ca617f7955d89e18650b7cf1e0c0c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c78229da8a577670ba31ae82c679bfefbef4f80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62865737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903984"
 ---
 # <a name="sqlcolattributes-access-driver"></a>SQLColAttributes (Access 驅動程式)
 > [!NOTE]  

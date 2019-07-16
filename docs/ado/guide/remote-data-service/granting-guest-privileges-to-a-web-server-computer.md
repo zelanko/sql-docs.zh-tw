@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7fed7d31e0ee52e3f9691913b06f9a9ffede51e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bddf6ce0bbfb78435118ef3d87303a94c792c96d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922641"
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>將來賓權限授與網頁伺服器電腦
 匿名的 Web 伺服器帳戶 (iusr_< 電腦*ComputerName*) 必須新增至本機來賓在 Web 伺服器電腦上使用 RDS  
@@ -38,6 +37,6 @@ ms.locfileid: "66704290"
   
 5.  如果匿名的 Web 伺服器帳戶未出現在清單中**選取使用者或群組**對話方塊方塊中輸入其名稱 (iusr_< 電腦*ComputerName*) 到下方的空白方塊，，然後按一下 **新增**.  
   
-6.  按一下 [確定]  。
+6.  按一下 [確定 **Deploying Office Solutions**]。
 
 

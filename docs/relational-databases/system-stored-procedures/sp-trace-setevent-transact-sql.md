@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54f36b46f75bf943ecf08aafd93a6b861c2da90a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b90fe62de358c226fba4b3b4a26f941c75ce5a47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095950"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,8 +58,8 @@ sp_trace_setevent [ @traceid = ] trace_id
 |11|RPC:Starting|發生在 RPC 已啟動之時。|  
 |12|SQL:BatchCompleted|發生在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次已完成之時。|  
 |13|SQL:BatchStarting|發生在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次已啟動之時。|  
-|14|稽核登入|發生在使用者成功登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之時。|  
-|15|稽核登出|發生在使用者登出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之時。|  
+|14|Audit Login|發生在使用者成功登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之時。|  
+|15|Audit Logout|發生在使用者登出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之時。|  
 |16|Attention|發生在出現注意事項事件 (如用戶端中斷要求或中斷用戶端連接)。|  
 |17|ExistingConnection|在啟動追蹤之前，偵測連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之使用者的所有活動。|  
 |18|Audit Server Starts and Stops|發生在修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務狀態之時。|  
@@ -206,18 +205,18 @@ sp_trace_setevent [ @traceid = ] trace_id
 |177|Audit Server Principal Management Event|發生在建立、改變或卸除伺服器主體之時。|  
 |178|Audit Database Operation Event|發生在執行資料庫作業 (如檢查點或訂閱查詢通知) 之時。|  
 |180|Audit Database Object Access Event|發生在存取資料庫物件 (如結構描述) 之時。|  
-|181|TM:Begin Tran starting|發生在 BEGIN TRANSACTION 要求啟動之時。|  
-|182|TM:已完成 Begin Tran|發生在 BEGIN TRANSACTION 要求完成之時。|  
-|183|TM:升級 Tran starting|發生在 PROMOTE TRANSACTION 要求啟動之時。|  
-|184|TM:Promote Tran 完成|發生在 PROMOTE TRANSACTION 要求完成之時。|  
-|185|TM:Commit Tran starting|發生在 COMMIT TRANSACTION 要求啟動之時。|  
-|186|TM:Commit Tran 完成|發生在 COMMIT TRANSACTION 要求完成之時。|  
-|187|TM:正在啟動 rollback Tran|發生在 ROLLBACK TRANSACTION 要求啟動之時。|  
-|188|TM:已完成 rollback Tran|發生在 ROLLBACK TRANSACTION 要求完成之時。|  
+|181|TM：Begin Tran starting|發生在 BEGIN TRANSACTION 要求啟動之時。|  
+|182|TM：已完成 Begin Tran|發生在 BEGIN TRANSACTION 要求完成之時。|  
+|183|TM：升級 Tran starting|發生在 PROMOTE TRANSACTION 要求啟動之時。|  
+|184|TM：Promote Tran 完成|發生在 PROMOTE TRANSACTION 要求完成之時。|  
+|185|TM：Commit Tran starting|發生在 COMMIT TRANSACTION 要求啟動之時。|  
+|186|TM：Commit Tran 完成|發生在 COMMIT TRANSACTION 要求完成之時。|  
+|187|TM：正在啟動 rollback Tran|發生在 ROLLBACK TRANSACTION 要求啟動之時。|  
+|188|TM：已完成 rollback Tran|發生在 ROLLBACK TRANSACTION 要求完成之時。|  
 |189|Lock: Timeout (timeout > 0)|發生在資源 (如頁面) 鎖定要求逾時之時。|  
 |190|進度報表：線上索引作業|在建置處理序執行時，報告線上索引建置作業的進度。|  
-|191|TM:儲存 Tran starting|發生在 SAVE TRANSACTION 要求啟動之時。|  
-|192|TM:儲存完成的交易|發生在 SAVE TRANSACTION 要求完成之時。|  
+|191|TM：儲存 Tran starting|發生在 SAVE TRANSACTION 要求啟動之時。|  
+|192|TM：儲存完成的交易|發生在 SAVE TRANSACTION 要求完成之時。|  
 |193|Background Job Error|發生在背景作業異常結束之時。|  
 |194|OLEDB Provider Information|發生在執行分散式查詢及收集提供者連接的對應資訊之時。|  
 |195|Mount Tape|發生在收到磁帶掛載要求之時。|  
@@ -308,14 +307,14 @@ sp_trace_setevent [ @traceid = ] trace_id
 |63|**SqlHandle**|這是一個 64 位元雜湊，以隨選查詢的文字或 SQL 物件的資料庫和物件識別碼為基礎。 這個值可以傳給 **sys.dm_exec_sql_text()** ，以擷取相關聯的 SQL 文字。|  
 |64|**SessionLoginName**|引發工作階段的使用者登入名稱。 例如，如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **連接到** ，卻以 **Login2**執行陳述式，則 **SessionLoginName** 會顯示 **Login1**，而 **LoginName** 會顯示 **Login2**。 此資料行會同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|  
   
- **[ @on=]** *on*  
- 指定開啟 ON (1) 或關閉 OFF (0) 事件。 *在 *已**元**，沒有預設值。  
+ **[ @on=]** *上*  
+ 指定開啟 ON (1) 或關閉 OFF (0) 事件。 *在* 已**元**，沒有預設值。  
   
  如果*上*設為**1**，並*column_id* NULL，則事件會設為 ON 且已清除所有資料行。 如果*column_id*不是 null，則該事件的資料行設為 ON。  
   
  如果*上*設為**0**，並*column_id*是 NULL，則事件會變成 OFF 且已清除所有資料行。 如果*column_id*不是 null，則資料行已關閉。  
   
- 這份表格說明之間的互動**@on**並**@columnid**。  
+ 這份表格說明之間的互動 **@on** 並 **@columnid** 。  
   
 |@on|@columnid|結果|  
 |---------|---------------|------------|  
@@ -348,7 +347,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- 使用者必須執行**sp_trace_setevent**每個資料行加入每個事件。 每個在執行期間，如果**@on**設定為**1**， **sp_trace_setevent**將指定的事件加入至追蹤的事件清單。 如果**@on**設定為**0**， **sp_trace_setevent**從清單中移除指定的事件。  
+ 使用者必須執行**sp_trace_setevent**每個資料行加入每個事件。 每個在執行期間，如果 **@on** 設定為**1**， **sp_trace_setevent**將指定的事件加入至追蹤的事件清單。 如果 **@on** 設定為**0**， **sp_trace_setevent**從清單中移除指定的事件。  
   
  參數的所有 SQL 追蹤預存程序 (**sp_trace_xx**) 都有強制類型。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
   
@@ -360,7 +359,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 ## <a name="see-also"></a>另請參閱  
  [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [SQL Server 事件類別參考](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL 追蹤](../../relational-databases/sql-trace/sql-trace.md)  
   

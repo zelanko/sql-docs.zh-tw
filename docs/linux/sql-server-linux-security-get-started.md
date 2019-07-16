@@ -3,18 +3,17 @@ title: 開始使用 Linux 上的 SQL Server 安全性
 description: 本文說明一般的安全性動作。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 9fe29cadaa14168871e7448350d41bc89afed05b
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019506"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的安全性功能的逐步解說
 
@@ -139,7 +138,7 @@ Create a security policy adding the function as both a filter and a block predic
 建立安全性原則 SalesFilter   
 ADD FILTER PREDICATE Security.fn_securitypredicate(SalesPersonID)    
   在 Sales.SalesOrderHeader，   
-ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)    
+加入區塊述詞 Security.fn_securitypredicate(SalesPersonID)    
   在 Sales.SalesOrderHeader   
 WITH (STATE = ON);   
 ```
@@ -160,7 +159,7 @@ Alter the security policy to disable the policy.  Now both users can access all 
 
 ```
 改變安全性原則 SalesFilter   
-WITH (STATE = OFF);    
+使用 (狀態 = 關閉);    
 ``` 
 
 
@@ -171,15 +170,15 @@ WITH (STATE = OFF);
 Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
  
 ```
-USE AdventureWorks2014; GO ALTER TABLE Person.EmailAddress     ALTER COLUMN EmailAddress    
-ADD MASKED WITH (FUNCTION = 'email()');
+使用 AdventureWorks2014;移的 ALTER 資料表 Person.EmailAddress     ALTER 資料行 EmailAddress    
+新增遮罩與 (函式 = ' email()');
 ``` 
  
 Create a new user `TestUser` with `SELECT` permission on the table, then execute a query as `TestUser` to view the masked data:   
 
 ```  
 建立使用者 TestUser 沒有登入;   
-GRANT SELECT ON Person.EmailAddress TO TestUser;    
+GRANT SELECT ON Person.EmailAddress 至 TestUser;    
  
 EXECUTE AS USER = 'TestUser';   
 SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;       
@@ -226,13 +225,13 @@ GO
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';  
 GO  
 
-CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
+建立憑證 MyServerCert 主體 = '我資料庫加密金鑰憑證';  
 GO  
 
-USE AdventureWorks2014;   GO
+使用 AdventureWorks2014; 移
   
 CREATE DATABASE ENCRYPTION KEY  
-WITH ALGORITHM = AES_256  
+演算法 = AES_256  
 ENCRYPTION BY SERVER 憑證 MyServerCert;  
 GO
   
@@ -264,7 +263,7 @@ The following example creates a certificate, and then creates a backup protected
   壓縮，  
   ENCRYPTION   
    (  
-   ALGORITHM = AES_256,  
+   演算法 = AES_256，  
    SERVER CERTIFICATE = BackupEncryptCert  
    ),  
   STATS = 10  

@@ -1,5 +1,5 @@
 ---
-title: sp_table_privileges_ex (Transact-SQL) | Microsoft Docs
+title: sp_table_privileges_ex (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a11fb3f879336f5217abe138c91755154df868b5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b40f7233bb3c50203a68c0b01cfcbdaf631e0098
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096173"
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +60,12 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|資料表限定詞名稱。 各種 DBMS 產品都支援三部分的資料表命名 (_限定詞_**。**_擁有者_**。**_名稱_)。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。 這個欄位可以是 NULL。|  
+|**TABLE_CAT**|**sysname**|資料表限定詞名稱。 各種 DBMS 產品都支援三部分的資料表命名 (_限定詞_ **。** _擁有者_ **。** _名稱_)。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。 這個欄位可以是 NULL。|  
 |**TABLE_SCHEM**|**sysname**|資料表擁有者名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個資料行代表建立資料表的資料庫使用者名稱。 這個欄位一律會傳回值。|  
 |**TABLE_NAME**|**sysname**|資料表名稱。 這個欄位一律會傳回值。|  
 |**同意授權者**|**sysname**|已授與此權限的資料庫使用者名稱**TABLE_NAME**與列出**被授與者**。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此資料行一律是相同**TABLE_OWNER**。 這個欄位一律會傳回值。 另外，GRANTOR 資料行可能是資料庫擁有者 (**TABLE_OWNER**) 或使用者對象的資料庫擁有者授與權限的 GRANT 陳述式中使用 WITH GRANT OPTION 子句。|  
 |**被授與者**|**sysname**|已授與此權限的資料庫使用者名稱**TABLE_NAME**依列出**授與者**。 這個欄位一律會傳回值。|  
-|**PRIVILEGE**|**varchar(** 32 **)**|可用的資料表權限之一。 資料表權限可以是下列值之一，或定義實作時，資料來源所支援的其他值：<br /><br /> 選取 =**被授與者**可以擷取一個或多個資料行的資料。<br /><br /> INSERT =**被授與者**可以提供資料的新資料列的一個或多個資料行。<br /><br /> UPDATE =**被授與者**可以修改現有資料的一個或多個資料行。<br /><br /> 刪除 =**被授與者**可以從資料表移除資料列。<br /><br /> 參考 =**被授與者**可以參考外部資料表中主索引鍵/外部索引鍵關聯性中的資料行。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，主索引鍵/外部索引鍵關聯性是利用資料表條件約束來定義的。<br /><br /> 提供給動作的範圍**被授與者**特定資料表權限是資料來源而定。 例如，UPDATE 權限可能會讓**被授與者**更新其中一個資料來源上的資料表中的所有資料行和這些資料行**授與者**另一個資料來源有 UPDATE 權限。|  
+|**權限**|**varchar(** 32 **)**|可用的資料表權限之一。 資料表權限可以是下列值之一，或定義實作時，資料來源所支援的其他值：<br /><br /> 選取 =**被授與者**可以擷取一個或多個資料行的資料。<br /><br /> INSERT =**被授與者**可以提供資料的新資料列的一個或多個資料行。<br /><br /> UPDATE =**被授與者**可以修改現有資料的一個或多個資料行。<br /><br /> 刪除 =**被授與者**可以從資料表移除資料列。<br /><br /> 參考 =**被授與者**可以參考外部資料表中主索引鍵/外部索引鍵關聯性中的資料行。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，主索引鍵/外部索引鍵關聯性是利用資料表條件約束來定義的。<br /><br /> 提供給動作的範圍**被授與者**特定資料表權限是資料來源而定。 例如，UPDATE 權限可能會讓**被授與者**更新其中一個資料來源上的資料表中的所有資料行和這些資料行**授與者**另一個資料來源有 UPDATE 權限。|  
 |**IS_GRANTABLE**|**varchar(** 3 **)**|指出是否**被授與者**允許其他使用者授與權限。 這通常稱為 "grant with grant" 權限。 它可以是 YES、NO 或 NULL。 未知 (或 NULL) 值是指不適用 "grant with grant" 的資料來源。|  
   
 ## <a name="remarks"></a>備註  
@@ -76,7 +75,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
  需要結構描述的 SELECT 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會從指定連結伺服器 `Product` 中，傳回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中名稱開頭為 `Seattle1` 的資料表之權限資訊  ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會假定為連結的伺服器)。  
+ 下列範例會從指定連結伺服器 `Product` 中，傳回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中名稱開頭為 `Seattle1` 的資料表之權限資訊 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會假定為連結的伺服器)。  
   
 ```  
 EXEC sp_table_privileges_ex @table_server = 'Seattle1',   

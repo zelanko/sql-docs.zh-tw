@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c64e89fd5d965b98b59107d6047e6f43c0bcc9b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dffb53a2b6436725a2b7dc19dfb209a58b1134e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053118"
 ---
 # <a name="spdescribecursorcolumns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,18 +51,18 @@ sp_describe_cursor_columns
  這是用來接收資料指標輸出之宣告資料指標變數的名稱。 *output_cursor_variable*已**游標**，沒有預設值，而且不能關聯於任何資料指標在呼叫 sp_describe_cursor_tables 時的時間。 傳回的資料指標是一個可捲動的動態唯讀資料指標。  
   
  [ @cursor_source=] {N'local' |N'global' |N'variable'}  
- 指定報告的資料指標是利用本機資料指標、全域資料指標或資料指標變數的名稱來指定。 參數是**nvarchar(30)**。  
+ 指定報告的資料指標是利用本機資料指標、全域資料指標或資料指標變數的名稱來指定。 參數是**nvarchar(30)** 。  
   
  [ @cursor_identity=] N'*local_cursor_name&lt*'  
- 這是具有 LOCAL 關鍵字或預設為 LOCAL 之 DECLARE CURSOR 陳述式所建立的資料指標名稱。 *local_cursor_name&lt*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**。  
+ 這是具有 LOCAL 關鍵字或預設為 LOCAL 之 DECLARE CURSOR 陳述式所建立的資料指標名稱。 *local_cursor_name&lt*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。  
   
  [ @cursor_identity=] N'*global_cursor_name&lt*'  
- 這是具有 GLOBAL 關鍵字或預設為 GLOBAL 的 DECLARE CURSOR 陳述式所建立之資料指標的名稱。 *global_cursor_name&lt*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**。  
+ 這是具有 GLOBAL 關鍵字或預設為 GLOBAL 的 DECLARE CURSOR 陳述式所建立之資料指標的名稱。 *global_cursor_name&lt*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。  
   
  *global_cursor_name&lt*也可以是 ODBC 應用程式所開啟，並接著藉由呼叫 SQLSetCursorName 名為之 API 伺服器資料指標名稱。  
   
  [ @cursor_identity=] N'*input_cursor_variable&lt*'  
- 這是與開啟的資料指標相關聯的資料指標變數名稱。 *input_cursor_variable&lt*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**。  
+ 這是與開啟的資料指標相關聯的資料指標變數名稱。 *input_cursor_variable&lt*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
@@ -83,7 +82,7 @@ sp_describe_cursor_columns
 |column_precision|**tinyint**|為每個資料行的最大有效位數*bPrecision* OLE DB 中的值。|  
 |column_scale|**tinyint**|小數點右邊的位數**數值**或是**十進位**資料類型*bScale* OLE DB 中的值。|  
 |order_position|**int**|如果資料行參與結果集的排序，資料行在排序索引鍵中的位置是相對於最左側的資料行。|  
-|order_direction|**varchar(1)**(可為 null)|A = 資料行在排序索引鍵中，採遞增排序。<br /><br /> D = 資料行在排序索引鍵中，採遞減排序。<br /><br /> NULL = 資料行不參與排序。|  
+|order_direction|**varchar(1)** (可為 null)|A = 資料行在排序索引鍵中，採遞增排序。<br /><br /> D = 資料行在排序索引鍵中，採遞減排序。<br /><br /> NULL = 資料行不參與排序。|  
 |hidden_column|**smallint**|0 = 這個資料行出現在選取清單中。<br /><br /> 1 = 保留供日後使用。|  
 |columnid|**int**|基底資料行的資料行識別碼。 如果結果集資料行是運算式所建立的，columnid 便是 -1。|  
 |objectid|**int**|提供資料行之物件或基底資料表的物件識別碼。 如果結果集資料行是運算式所建立的，objectid 便是 -1。|  

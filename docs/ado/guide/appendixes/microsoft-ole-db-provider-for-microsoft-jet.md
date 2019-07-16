@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 71df952769ae509ba25b256ecdc9ddef3a54ebe5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926640"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Microsoft Jet 概觀
 Microsoft Jet OLE DB 提供者可讓 ADO 可以存取 Microsoft Jet 資料庫。
@@ -62,9 +61,9 @@ Microsoft.Jet.OLEDB.4.0
 |---------------|-----------------|
 |Jet OLEDB:Compact 回收的空間量 (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|表示的空間，以位元組為單位，可以回收壓縮的資料庫時的估計值。 建立資料庫連接之後，這個值才有效。|
 |Jet OLEDB:Connection 控制項 (DBPROP_JETOLEDB_CONNECTIONCONTROL)|指出使用者是否可以連接到資料庫。|
-|Jet OLEDB:Create System Database (DBPROP_JETOLEDB_CREATESYSTEMDATABASE)|表示建立新的資料來源時，是否應該建立一個系統資料庫。|
+|Jet OLEDB： 建立系統資料庫 (DBPROP_JETOLEDB_CREATESYSTEMDATABASE)|表示建立新的資料來源時，是否應該建立一個系統資料庫。|
 |Jet oledb: database 鎖定模式 (DBPROP_JETOLEDB_DATABASELOCKMODE)|指出這個資料庫的鎖定模式。 開啟資料庫的第一個使用者會決定資料庫在開啟時所用的模式。|
-|Jet OLEDB:Database Password (DBPROP_JETOLEDB_DATABASEPASSWORD)|指出資料庫密碼。|
+|Jet oledb: database 密碼 (DBPROP_JETOLEDB_DATABASEPASSWORD)|指出資料庫密碼。|
 |Jet OLEDB： 不複製光碟 (DBPROP_JETOLEDB_COMPACT_DONTCOPYLOCALE) 上的地區設定|表示 Jet 是否應該壓縮的資料庫複製的地區設定資訊。|
 |Jet OLEDB： 加密的資料庫 (DBPROP_JETOLEDB_ENCRYPTDATABASE)|指出是否應該加密已壓縮的資料庫。 如果未設定這個屬性，如果原始資料庫也已加密，將會加密已壓縮的資料庫。|
 |Jet OLEDB:Engine 型別 (DBPROP_JETOLEDB_ENGINE)|表示用來存取目前的資料存放區的儲存體引擎。|

@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: c30ac3b9-8150-4264-ba4c-c549f44261ab
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e815b125c736763974e9d6d50c5eeaf749e34ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d123337c106cdbaba2c461a370eb7800adaabb07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092726"
 ---
 # <a name="creating-altering-and-removing-defaults"></a>建立、改變和移除預設值
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
