@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6b83088e64314c21d8a71deb1da395d40eecfdec
-ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
+ms.openlocfilehash: 53471adf085fbe9a046d28fa09ce10a46953eae6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67351653"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028175"
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>使用使用者定義型別 - 操作 UDT 資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

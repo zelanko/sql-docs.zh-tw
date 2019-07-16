@@ -1,5 +1,5 @@
 ---
-title: C 轉換為 SQL：Time | Microsoft Docs
+title: C 轉換為 SQL：時間 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ea11803847505698ea42d13727b6177f3a24bda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4a3734ff8d9f0cb120e1d33433ee3a301bb59ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019298"
 ---
 # <a name="c-to-sql-time"></a>C 轉換為 SQL：Time
 時間 ODBC C 資料類型的識別項是：  

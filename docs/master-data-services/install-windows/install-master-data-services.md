@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: be150cce4e4dcdec19f2369e058a9283d8d137a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fbd4679502b433f6d25eacf51570e24ec50f649a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944979"
 ---
 # <a name="installation-tasks-for-master-data-services"></a>Master Data Services 的安裝工作
 
@@ -32,7 +31,7 @@ ms.locfileid: "65488482"
   
 ##  <a name="preinstall"></a> 安裝前工作  
   
-|動作|詳細資料|相關主題|  
+|Action|詳細資料|相關主題|  
 |------------|-------------|--------------------|  
 |確認安裝需求|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的電腦，必須符合以下項目的基本需求：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式。<br /><br /> [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式和 Web 服務。<br /><br /> [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫，如果您在與 Web 應用程序相同的電腦中裝載資料庫。<br /><br /> <br /><br /> 您可以只在網頁伺服器電腦上執行安裝程式，且在執行支援之 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 版本的遠端電腦上建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫，分開網頁伺服器電腦與資料庫伺服器電腦。|[SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)<br /><br /> [安裝 SQL Server 2016 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)<br /><br /> [Web 應用程式需求 &#40;Master Data Services&#41;](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)<br /><br /> [資料庫需求 &#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md)|  
 |設定必要角色、角色服務和功能|執行安裝程式之前，使用必要 Windows 角色、角色服務和功能來設定電腦。<br /><br /> 注意:雖然您可以稍後在工作流程來執行此步驟中，最好先進行此設定，以便您可以執行 web 組態工作，在安裝之後立即執行安裝程式之前。|[Web 應用程式需求 &#40;Master Data Services&#41;](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)|  
@@ -40,13 +39,13 @@ ms.locfileid: "65488482"
   
 ##  <a name="install"></a> 安裝作業  
   
-|動作|詳細資料|相關主題|  
+|Action|詳細資料|相關主題|  
 |------------|-------------|--------------------|  
-|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式|在即將裝載 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]Web 應用程式與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服務的電腦上，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式或於命令提示字元處，安裝 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。 當您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式時，可以從 [功能選擇] 頁面的 [共用功能] 下方存取 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。 當您使用命令提示字元時，[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 可當做功能參數。 請注意，命令列安裝程序會安裝 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]但不會進行設定。 您必須使用 Master Data Services 組態管理員進行設定。<br /><br /> 安裝程序：<br /><br /> 在您為共用功能指定的位置上安裝 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料夾和檔案，並指派這些物件的權限。<br /><br /> 在全域組件快取 (GAC) 中註冊 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 組件。<br /><br /> 安裝 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。|[從安裝精靈安裝 SQL Server 2016 &#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)<br /><br /> [資料夾和檔案的權限 &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)|  
+|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式|在即將裝載 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]Web 應用程式與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服務的電腦上，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式或於命令提示字元處，安裝 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。 當您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式時，可以從 [功能選擇]  頁面的 [共用功能]  下方存取 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。 當您使用命令提示字元時，[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 可當做功能參數。 請注意，命令列安裝程序會安裝 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]但不會進行設定。 您必須使用 Master Data Services 組態管理員進行設定。<br /><br /> 安裝程序：<br /><br /> 在您為共用功能指定的位置上安裝 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料夾和檔案，並指派這些物件的權限。<br /><br /> 在全域組件快取 (GAC) 中註冊 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 組件。<br /><br /> 安裝 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。|[從安裝精靈安裝 SQL Server 2016 &#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)<br /><br /> [資料夾和檔案的權限 &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)|  
   
 ##  <a name="postinstall"></a> 安裝後工作  
   
-|動作|詳細資料|相關主題|  
+|Action|詳細資料|相關主題|  
 |------------|-------------|--------------------|  
 |開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 到完整的後續安裝作業中|安裝程式完成之後，請開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 會在本機電腦上執行下列安裝後作業：<br /><br /> 建立 Windows 群組 **MDS_ServiceAccounts**，包含應用程式集區的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 服務帳戶。<br /><br /> 在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 安裝路徑之下建立 MDSTempDir 資料夾，並為 **MDS_ServiceAccounts**指派權限。 此為編譯 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式暫存編譯檔的資料夾。<br /><br /> 在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web.config 檔案中，以 MDSTempDir 資料夾的路徑設定 **\<compilation>** 項目的 **tempDirectory** 屬性。|[資料夾和檔案的權限 &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)<br /><br /> [Web 組態參考 &#40;Master Data Services&#41;](../../master-data-services/web-configuration-reference-master-data-services.md)|  
 |建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫|使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 可針對您的主要資料建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。|[建立 Master Data Services 資料庫](../../master-data-services/install-windows/create-a-master-data-services-database.md)|  

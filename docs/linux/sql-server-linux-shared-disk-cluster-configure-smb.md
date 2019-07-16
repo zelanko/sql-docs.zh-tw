@@ -4,17 +4,16 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 74b8779a4654f544f8085041adeafb14a59688bf
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: e93b7fac2f75758a0a95a4053ee0a989e410c70e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032319"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>設定容錯移轉叢集執行個體-SMB-Linux 上的 SQL Server
 
@@ -22,7 +21,7 @@ ms.locfileid: "67833186"
 
 這篇文章說明如何在 Linux 上設定容錯移轉叢集執行個體 (FCI) 的 SMB 存放裝置。 
  
-在非 Windows 世界中，SMB 通常是指為 Common Internet File System (CIFS) 共用，而且透過 Samba 實作。 在 Windows 世界中，存取 SMB 共用會進行這種方式：\\SERVERNAME\SHARENAME. 對於以 Linux 為基礎的 SQL Server 安裝中，SMB 共用必須可掛接為資料夾。
+在非 Windows 世界中，SMB 通常是指為 Common Internet File System (CIFS) 共用，而且透過 Samba 實作。 在 Windows 世界中，存取 SMB 共用會進行這種方式：\\SERVERNAME\SHARENAME。 對於以 Linux 為基礎的 SQL Server 安裝中，SMB 共用必須可掛接為資料夾。
 
 ## <a name="important-source-and-server-information"></a>來源和伺服器的重要資訊
 
@@ -31,7 +30,7 @@ ms.locfileid: "67833186"
 - SMB 共用必須提供高可用性。
 - 安全性必須設定 SMB 共用上的正確。 以下是共用的從 /etc/samba/smb.conf，範例 SQLData1 所在名稱。
 
-![05-smbsource][1]
+![05 smbsource][1]
 
 ## <a name="instructions"></a>Instructions
 

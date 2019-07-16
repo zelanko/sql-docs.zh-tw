@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: bc492b18-6965-4bb5-8065-fe2641d29590
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3437ba951804bc1a3eae4d166b0dc36412e9ea8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14ec2b0e98b2d6934233adb7a5b0b4159ed37333
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941997"
 ---
 # <a name="management-data-warehouse-stored-procedures-transact-sql"></a>管理資料倉儲預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

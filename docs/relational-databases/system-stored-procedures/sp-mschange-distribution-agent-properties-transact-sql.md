@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 93462a0f9529b20b3a74d37a3b844eb643e9f7b3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fbbe2e782da5892640ab66a93911b959317d0538
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022290"
 ---
 # <a name="spmschangedistributionagentproperties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` 是要變更的發行集屬性。 *屬性*已**sysname**，沒有預設值。  
   
-`[ @value = ] 'value'` 新的屬性值。 *值*已**nvarchar(524)**，預設值是 NULL。  
+`[ @value = ] 'value'` 新的屬性值。 *值*已**nvarchar(524)** ，預設值是 NULL。  
   
  下表描述可變更的散發代理程式作業屬性及這些屬性值的限制。  
   

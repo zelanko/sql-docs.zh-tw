@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: d6a440b76ee639c345d24c1c1e60a2038fca75de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b499fe50854e979b9407487903324b80e16ede77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62629784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038119"
 ---
 # <a name="mdx-data-definition-statements-mdx"></a>MDX 資料定義陳述式 (MDX)
 
@@ -36,7 +35,7 @@ ms.locfileid: "62629784"
 |[DROP ACTION 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md)|刪除指定 Cube 的指定動作。|  
 |[DROP CELL CALCULATION 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)|移除指定的資料格計算。|  
 |[DROP MEMBER 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)|移除導出成員。|  
-|[DROP SET Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)|移除命名集。|  
+|[DROP SET 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)|移除命名集。|  
 |[DROP SUBCUBE 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)|卸除指定的 Subcube，還原為先前定義的 Cube 或具有指定名稱的 Subcube 定義。|  
 |[重新整理 CUBE 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-refresh-cube.md)|重新整理 Cube 的用戶端快取。|  
   

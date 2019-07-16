@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b99fd70e0119aa01d384066aaa2f3b91eed152b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ff069ef0602e419eda93df0ca5a72dbf7c8ef1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045166"
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access 資料類型
 下表顯示 Microsoft Access 資料類型、 資料類型用來建立資料表，以及 ODBC SQL 資料類型。  
   
 |Microsoft Access 資料類型|資料類型 (CREATETABLE)|ODBC SQL 資料類型|  
 |--------------------------------|-------------------------------|------------------------|  
-|BIGBINARY[1]|LONGBINARY|SQL_LONGVARBINARY|  
+|BIGBINARY [1]|LONGBINARY|SQL_LONGVARBINARY|  
 |BINARY|BINARY|SQL_BINARY|  
 |BIT|BIT|SQL_BIT|  
 |計數器|計數器|SQL_INTEGER|  
@@ -43,7 +42,7 @@ ms.locfileid: "63026897"
 |數字 (欄位大小 = 單一)|單一|SQL_REAL|  
 |數字 (欄位大小 = 雙精度浮點數)|Double|SQL_DOUBLE|  
 |數字 (欄位大小 = BYTE)|不帶正負號的位元組|SQL_TINYINT|  
-|NUMBER (FieldSize= INTEGER)|簡短|SQL_SMALLINT|  
+|數字 (欄位大小 = INTEGER)|簡短|SQL_SMALLINT|  
 |數字 (欄位大小 = 長整數)|LONG|SQL_INTEGER|  
 |NUMERIC|NUMERIC|SQL_NUMERIC|  
 |OLE|LONGBINARY|SQL_LONGVARBINARY|  

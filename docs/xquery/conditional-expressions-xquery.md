@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 62a061632b5f598932fe29499519d7eb897c78a6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039014"
 ---
 # <a name="conditional-expressions-xquery"></a>條件運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ else
   <expression3>  
 ```  
   
- 視 `expression1` 有效的布林值而定，將評估 `expression2` 或 `expression3`。 例如：  
+ 視 `expression1` 有效的布林值而定，將評估 `expression2` 或 `expression3`。 例如:  
   
 -   如果測試運算式 `expression1` 產生空白時序，結果即為 False。  
   
@@ -56,7 +55,7 @@ else
   
 -   **其他**必須是運算式。 如果您不需要它，您可以傳回 " ( ) "，如本主題中的範例所說明。  
   
- 例如，下列查詢針對所指定**xml**類型變數。 **如果**測試條件的 SQL 變數的值 (@v) 內使用中的 XQuery 運算式[（） 函數](../xquery/xquery-extension-functions-sql-variable.md)擴充程式函式。 如果變數值是 "FirstName"，它會傳回 <`FirstName`> 元素。 否則它會傳回 <`LastName`> 元素。  
+ 例如，下列查詢針對所指定**xml**類型變數。 **如果**測試條件的 SQL 變數的值 (@v) 內使用中的 XQuery 運算式[（） 函數](../xquery/xquery-extension-functions-sql-variable.md)擴充程式函式。 如果變數的值會是 「 FirstName 」，它會傳回 <`FirstName`> 項目。 否則，它會傳回 <`LastName`> 項目。  
   
 ```  
 declare @x xml  
@@ -81,7 +80,7 @@ if ( sql:variable("@v")="FirstName" ) then
 <FirstName>fname</FirstName>  
 ```  
   
- 下列查詢會從特定產品型號的產品目錄描述擷取前兩個功能的描述。 如果在文件中有更多的功能，它會加入空內容的 <`there-is-more`> 元素。  
+ 下列查詢會從特定產品型號的產品目錄描述擷取前兩個功能的描述。 它有更多的功能文件中，新增 <`there-is-more`> 具有空白內容項目。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -123,7 +122,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- 在下列查詢中，如果工作中心位置未指定安裝時間，就會傳回 <`Location`> 元素加上 LocationID 屬性。  
+ 在下列查詢中，<`Location`> 如果工作中心位置未指定安裝時間，便會傳回 LocationID 屬性值的元素。  
   
 ```  
 SELECT Instructions.query('  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b3a518276f6bd1e102fbb1a4d6eacfac4e2563ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23e4773e96fbee408290684c8e9c5092c1d7ea40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483989"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052037"
 ---
 # <a name="entities-master-data-services"></a>實體 (Master Data Services)
 
