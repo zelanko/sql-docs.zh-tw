@@ -7,13 +7,12 @@ ms.date: 12/18/2018
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 47edd434445d57c5ca25373b5dc15fa328f94019
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 407a4c87101b2d422afbb982c7a07d92e84d26f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642595"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962515"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server （獨立式） 和 SQL Server 中的 Machine Learning Server （獨立式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,14 +52,14 @@ R 和 Python 開發人員通常會選擇獨立伺服器，以超越開放原始�
 
 啟動安裝程式、 將二進位檔附加至您最愛的開發工具和撰寫第一個指令碼。
 
-### <a name="step-1-install-the-software"></a>步驟 1:安裝軟體
+### <a name="step-1-install-the-software"></a>步驟 1：安裝軟體
 
 安裝這些版本其中之一：
 
 + [SQL Server 2017 Machine Learning Server （獨立式）](../install/sql-machine-learning-standalone-windows-install.md)
 + [SQL Server 2016 R Server （獨立式）-只有 R](../install/sql-r-standalone-windows-install.md)
 
-### <a name="step-2-configure-a-development-tool"></a>步驟 2:設定開發工具
+### <a name="step-2-configure-a-development-tool"></a>步驟 2：設定開發工具
 
 在獨立伺服器上，通常會在本機上使用安裝在同一部電腦上的開發工作。
 
