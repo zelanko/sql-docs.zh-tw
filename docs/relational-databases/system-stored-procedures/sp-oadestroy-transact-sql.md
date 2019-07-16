@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4b4a7b238d3f7ade1706a78c3e595ec63ae2cce7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98907614a132cfafd297e48f0ef625bc8eb4155d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65449726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107899"
 ---
 # <a name="spoadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ad3548bc-4780-4821-b962-b421d52daed9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 349abe5ccc5fb36ee6c3568e97163e6eb665f633
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe249cd389e71fa5565e2877fba46b47cf0a4f38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108777"
 ---
 # <a name="syssystemsqlmodules-transact-sql"></a>sys.system_sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: sp_datatype_info (Transact-SQL) | Microsoft Docs
+title: sp_datatype_info (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/25/2018
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3eadc5efc471f44998abddc596f1acc5c6e378ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39e8f688c23cffb1512be1cd1142d38c010668a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108298"
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]

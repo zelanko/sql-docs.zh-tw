@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17058af1d7f0ab1e35c2d6b31c0337daed4c9e01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0096dad8fbb4cf9847385759702e39ac074c4c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112054"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>描述項和桌面資料庫驅動程式
 描述元是保留資料行的資料或將動態參數的相關資訊的資料結構。 **SQLGetDescField**可用來擷取支援下面所列的描述元。 實作參數描述項 (IPD) 不會自動填入因為**SQLDescribeParam**不支援。 描述項欄位，便無法透過 Jet （例如 SQL_DESC_BASE_TABLE_NAME) 也不支援。  

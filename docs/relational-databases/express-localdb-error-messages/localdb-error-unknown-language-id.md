@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: fa082dca-bf88-46e7-b61e-7ac8835a3493
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f7315d541db987f8c309b8e6249b0ceb190473ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93d770fde71fe51b06bfe8fc95b87d023765eb5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62751632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127034"
 ---
 # <a name="localdberrorunknownlanguageid"></a>LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

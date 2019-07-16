@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc62e7b5225c434bac33630f2f0cf8f39c72bfc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e0ea6ff655140c979f400f67a59cd7259bac9e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118823"
 ---
 # <a name="block-cursors"></a>區塊資料指標
 許多應用程式花費大量時間將在網路上的資料。 此時間部分所花費的實際透過網路將資料以及其中的組件所花費網路額外負荷，例如驅動程式發出要求的資料列呼叫。 可以降低後者的時間，如果應用程式會有效率地使用*區塊中，* 或是*fat* *資料指標，* 這可以一次傳回多個資料列。  

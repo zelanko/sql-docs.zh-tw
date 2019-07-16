@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7289b3d5b287c1619a08921eba5cc30ff741e3b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fe4b59a5131838357d7f58e5333e0ba6b9c80f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63252711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103236"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>連線到 MySQL (MySQLToSQL)
 使用**連接到 MySQL**對話方塊，即可連接至您想要移轉的 MySQL 資料庫。  
   
 若要存取此對話方塊中，在**檔案**功能表上，選取**連線到 MySQL**。 如果您先前曾經連線，則命令是**重新連接至 MySQL**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **提供者**  
   
 可用的 MySQL 提供者是 MySQL ODBC 5.1 驅動程式 （受信任）。  

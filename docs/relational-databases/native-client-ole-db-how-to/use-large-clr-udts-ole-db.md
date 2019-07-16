@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7734c520d0e97246fe6a87aa6b1d4585b6507c54
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e3d2ed3b506b6df25ed0559944230822f8886a24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204407"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109909"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>使用大型 CLR UDT (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +29,11 @@ ms.locfileid: "53204407"
   
  將第一個 (C#) 程式碼清單編譯成 DLL。  然後，將此 DLL 複製到 C 磁碟機的根目錄。  
   
- 執行第二個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 加入至 master 資料庫的組件的程式碼清單。  
+ 執行第二個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單，以將組件新增至 master 資料庫。  
   
  使用 ole32.lib oleaut32.lib 編譯並執行第三個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連線到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
- 執行第四個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單，以便刪除 master 資料庫的組件。  
+ 執行第四個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單，以從 master 資料庫中刪除組件。  
   
 ```  
 // compile with: /target: library  

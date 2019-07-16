@@ -1,5 +1,5 @@
 ---
-title: 重新命名多維度資料庫 (Analysis Services) |Microsoft 文件
+title: 重新命名多維度資料庫 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0e894db8be928f3d4bb5c53b93ead85feae94128
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027105"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208548"
 ---
 # <a name="rename-a-multidimensional-database-analysis-services"></a>重新命名多維度資料庫 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34027105"
   
 1.  使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]直接連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。  
   
-2.  在方案總管中，以滑鼠右鍵按一下資料庫，然後按一下 [編輯資料庫]。  
+2.  在方案總管中，以滑鼠右鍵按一下資料庫，然後按一下 [編輯資料庫]  。  
   
 3.  在 **[資料庫名稱]** 文字方塊中，變更資料庫名稱。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "34027105"
   
 1.  開啟 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案。  
   
-2.  在方案總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案，然後按一下 [屬性]。  
+2.  在方案總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案，然後按一下 [屬性]  。  
   
 3.  在 **[屬性頁]** 對話方塊中，按一下 **[組態屬性]** 區段中的 **[部署]** 。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "34027105"
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
- [設定多維度資料庫屬性 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/set-multidimensional-database-properties-analysis-services.md)   
+ [設定多維度資料庫屬性 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/set-multidimensional-database-properties-analysis-services.md)   
  [設定 Analysis Services 專案屬性 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
  [部署 Analysis Services 專案 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   

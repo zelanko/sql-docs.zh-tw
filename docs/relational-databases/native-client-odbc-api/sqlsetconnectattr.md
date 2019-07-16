@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e27df2328474f4123daa9488af88eb7903832be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d246a0082714fe63546d1380812715f6ed3e0f71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014155"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131095"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 
@@ -76,7 +75,7 @@ ms.locfileid: "63014155"
 |SQL_COPT_SS_USER_DATA|之前或之後|  
 |SQL_COPT_SS_WARN_ON_CP_ERROR|之前|  
   
- 針對相同工作階段、資料庫或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 狀態使用預先連接屬性與對等 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令，可能會產生非預期的行為。 例如，  
+ 針對相同工作階段、資料庫或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 狀態使用預先連接屬性與對等 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令，可能會產生非預期的行為。 例如，套用至物件的  
   
 ```  
 SQLSetConnectAttr(SQL_COPT_SS_QUOTED_IDENT, SQL_QI_ON) // turn ON via attribute  
@@ -98,7 +97,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
 
 <a name="sqlcoptssapplicationintent"></a>
 ## <a name="sqlcoptssapplicationintent"></a>SQL_COPT_SS_APPLICATION_INTENT  
- 宣告連接到伺服器時的應用程式工作負載類型。 可能的值為**Readonly**並**ReadWrite**。 例如：  
+ 宣告連接到伺服器時的應用程式工作負載類型。 可能的值為**Readonly**並**ReadWrite**。 例如:  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
@@ -207,7 +206,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 
 <a name="sqlcoptssmultisubnetfailover"></a>
 ## <a name="sqlcoptssmultisubnetfailover"></a>SQL_COPT_SS_MULTISUBNET_FAILOVER  
- 如果您的應用程式要連接到不同子網路上的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性群組 (AG)，則這個連接屬性會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 來提供目前使用中伺服器的更快速偵測與連接。 例如：  
+ 如果您的應用程式要連接到不同子網路上的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性群組 (AG)，則這個連接屬性會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 來提供目前使用中伺服器的更快速偵測與連接。 例如:  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  

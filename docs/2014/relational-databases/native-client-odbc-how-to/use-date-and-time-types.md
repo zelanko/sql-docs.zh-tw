@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc57a2c286c9870421a223ce6a14ef201bef0c3d
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753445"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205507"
 ---
 # <a name="use-date-and-time-types"></a>使用日期和時間類型
   此範例顯示如何初始化在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中加入的日期/時間資料結構。 接著，它會準備輸入值、繫結參數，然後執行查詢。 如需使用這些類型的詳細資訊，請參閱[日期和時間改善&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  

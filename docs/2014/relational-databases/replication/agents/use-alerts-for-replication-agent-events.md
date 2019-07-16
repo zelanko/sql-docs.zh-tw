@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a670a78f6e906221638fb67c1cf5be8398b415b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762580"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210739"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>使用複寫代理程式事件的警示
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 提供了使用警示來監視事件 (如複寫代理程式事件) 的方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 會監視 Windows 應用程式記錄檔中與警示相關的事件。 如果發生這類事件， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 會藉由執行已經定義的工作，及 (或) 向指定操作員傳送電子郵件或呼叫器訊息，進行自動回應。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含一組預先定義的複寫代理程式警示，您可以設定這類警示來執行工作和 (或) 通知操作員。 如需定義要執行之工作的詳細資訊，請參閱本主題的「自動化回應警示」一節。  
@@ -60,7 +60,7 @@ ms.locfileid: "52762580"
 ### <a name="framework-for-automating-responses"></a>自動回應的架構  
  通常在觸發警示時，協助您了解造成警示原因和採取適當動作的唯一資訊，都包含在警示訊息中。 剖析此資訊可能較費時，並且很容易出錯。 複寫透過提供 **sysreplicationalerts** 系統資料表中警示的其他資訊，簡化了自動回應；提供的資訊已剖析成易於自訂程式使用的形式。  
   
- 例如，如果「訂閱者 A」 **Sales.SalesOrderHeader** 資料表中的資料驗證失敗， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 便會觸發 20574 訊息，通知您發生失敗。 您收到的訊息如下：「訂閱者 'A'」訂閱的發行項 'SalesOrderHeader' (在發行集 'MyPublication' 中)，未通過資料驗證。  
+ 例如，如果「訂閱者 A」 **Sales.SalesOrderHeader** 資料表中的資料驗證失敗， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 便會觸發 20574 訊息，通知您發生失敗。 您收到的訊息會是：「 訂閱者 'A'，訂用帳戶，在發行集 'MyPublication' 中的發行項 'SalesOrderHeader' 資料驗證失敗。 」  
   
  如果您根據此訊息建立回應，必須手動從訊息中剖析「訂閱者」名稱、發行項名稱、發行集名稱及錯誤。 但由於「散發代理程式」和「合併代理程式」會將相同資訊寫入 **sysreplicationalerts** (包括代理程式類型、警示時間、發行集資料庫、「訂閱者」資料庫以及發行集類型等詳細資料)，回應作業可從資料表中直接查詢相關資訊。 儘管實際資料列無法與警示的特定執行個體相關聯，但資料表含 **status** 資料行，該資料可用於追蹤已服務的項目。 在記錄保留期限內將保留此資料表中的項目。  
   

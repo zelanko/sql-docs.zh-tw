@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64690a297e70ac9d8d07a7ade58b03bee01df3da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d661072ae999721c258b2fd85b53665e2104b2f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106926"
 ---
 # <a name="metadata---parameter-and-rowset"></a>中繼資料 - 參數和資料列集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,10 +41,10 @@ ms.locfileid: "51662437"
   
 |參數類型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|日期|DBTYPE_DBDATE|6|10|0|Clear|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|將|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|將|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26,28..34|0..7|將|  
   
@@ -59,11 +58,11 @@ ms.locfileid: "51662437"
 |*pwszDataSourceType*<br /><br /> (提供者特定)|*pwszDataSourceType*<br /><br /> (OLE DB 一般)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|忽略|  
-|日期|DBTYPE_DBDATE|6|忽略|  
+|date|DBTYPE_DBDATE|6|忽略|  
 ||DBTYPE_DBTIME|10|忽略|  
 |time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|忽略|  
-|DATETIME||16|忽略|  
+|datetime||16|忽略|  
 |datetime2 或 DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
@@ -76,7 +75,7 @@ ms.locfileid: "51662437"
 |繫結類型|*pwszDataSourceType*<br /><br /> (提供者特定)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|日期|  
+|DBTYPE_DBDATE|date|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
@@ -85,12 +84,12 @@ ms.locfileid: "51662437"
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
  **Icolumnsrowset:: Getcolumnsrowset**傳回下列資料行：  
   
-|資料行類型|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
+|資料行型別|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|日期|DBTYPE_DBDATE|6|10|0|Clear|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|將|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|將|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|將|  
   
@@ -121,10 +120,10 @@ ms.locfileid: "51662437"
   
 |參數類型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|日期|DBTYPE_DBDATE|6|10|0|Clear|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|將|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|將|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|將|  
   
@@ -147,6 +146,6 @@ ms.locfileid: "51662437"
  在 *dwFlags* 中會提供新旗標 DBCOLUMNFLAGS_SS_ISVARIABLESCALE，以允許應用程式判斷資料行的伺服器類型，其中 *wType* 是 DBTYPE_DBTIMESTAMP。 *bScale* 也必須用來識別伺服器類型。  
   
 ## <a name="see-also"></a>另請參閱  
- [中繼資料&#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
+ [中繼資料 &#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

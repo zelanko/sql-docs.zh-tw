@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f3e88f85-edf4-47cd-a822-292b106ddb34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 02ce530385cdc911250a81d831dd2fdb81873f76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1333cd6cd5946b7a3a70152e12f4d3decfa7fed0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63301980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138426"
 ---
 # <a name="alter-table-statement-limitations"></a>ALTER TABLE 陳述式限制
 DBASE 或 Paradox 驅動程式會使用時，在建立索引，並新增新的記錄，無法由 ALTER TABLE 陳述式變更資料表的結構，除非卸除索引和資料表的內容會被刪除之後。  

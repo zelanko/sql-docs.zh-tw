@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 87e2903607b476b04c44ac81ba337ea38e68a58b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208071"
 ---
 # <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>管理中心的 Power Pivot 伺服器管理和組態
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,10 +53,10 @@ ms.locfileid: "38983490"
 |[在管理中心建立和設定 Power Pivot 服務應用程式](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)|必要項|這個步驟會佈建 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 系統服務。|  
 |[在管理中心為網站集合啟用 Power Pivot 功能整合](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|必要項|這個步驟會在網站集合層級開啟 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 功能。|  
 |[加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|必要項|此步驟會加入 Analysis Services OLE DB 提供者做為 Excel Services 中受信任的提供者。|  
-|[Power Pivot 資料重新整理與 SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)|建議|資料重新整理為選擇性，但是建議使用它。 它可讓您將自動更新排程到已發行之 Excel 活頁簿中的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 資料。|  
-|[設定 Power Pivot 無人看管的資料重新整理帳戶 (Power Pivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)|建議|這個步驟會佈建特殊目的的帳戶，此帳戶可在伺服器上用來執行資料重新整理作業。|  
+|[SharePoint 2010 中的 PowerPivot 資料重新整理](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)|建議|資料重新整理為選擇性，但是建議使用它。 它可讓您將自動更新排程到已發行之 Excel 活頁簿中的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 資料。|  
+|[設定 Power Pivot 自動資料重新整理帳戶 (Power Pivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)|建議|這個步驟會佈建特殊目的的帳戶，此帳戶可在伺服器上用來執行資料重新整理作業。|  
 |[設定使用量資料收集的對象 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|選擇性|預設會設定使用量資料收集。 您可以使用這些步驟來修改預設值。|  
-|[設定專用的資料重新整理或僅查詢處理 (Powerpivot for SharePoint)](http://msdn.microsoft.com/5e027605-1086-4941-bb01-f315df8f829b)|選擇性|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 執行個體可以專門處理資料重新整理作業或查詢。 此外，您也可以修改平行資料重新整理作業的預設值。|  
+|[設定專用的資料重新整理或僅查詢處理 (PowerPivot for SharePoint)](http://msdn.microsoft.com/5e027605-1086-4941-bb01-f315df8f829b)|選擇性|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 執行個體可以專門處理資料重新整理作業或查詢。 此外，您也可以修改平行資料重新整理作業的預設值。|  
 |[設定 Power Pivot 服務帳戶](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)|選擇性|說明如何更新密碼或變更服務帳戶。|  
 |[在管理中心將 PowerPivot 服務應用程式連接到 SharePoint Web 應用程式](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|選擇性|說明如何修改服務關聯。|  
 |[在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)|選擇性|說明如何將 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 圖庫當做信任的位置加入。|  
@@ -68,6 +68,6 @@ ms.locfileid: "38983490"
 ## <a name="see-also"></a>另請參閱  
  [Power Pivot for SharePoint 2010 安裝](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [組態設定參考 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
- [Power pivot for SharePoint 災害復原](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [PowerPivot for SharePoint 災害復原](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

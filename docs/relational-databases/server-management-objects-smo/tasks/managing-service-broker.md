@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1854d91b2438cad44535ae3efded150a7cc189e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2832e4cf0578599d63c449bec4c97b24172b6446
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66265459"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111400"
 ---
 # <a name="managing-service-broker"></a>管理 Service Broker
 

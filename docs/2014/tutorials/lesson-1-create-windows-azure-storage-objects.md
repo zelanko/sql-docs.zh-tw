@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 449f86b80b93055bb23fe4cd32ace10e15724dbc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038339"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210973"
 ---
 # <a name="lesson-1-create-windows-azure-storage-objects"></a>第 1 課：建立 Windows Azure 儲存體物件
   您必須先建立儲存體帳戶，然後建立 Blob 容器，才能在雲端儲存體上建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 備份。 第 1 課會逐步引導您完成登入 Windows Azure 管理入口網站以及建立儲存體帳戶和 Blob 容器的步驟。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137645"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
  [ @found **=** ] **'***找到***'** 輸出  
  這是指示傳回資料列的旗標。 *找到*已**int**和一個 OUTPUT 參數，預設值是 NULL。 **1**表示找到發行集。 **0**指出找不到發行集。  
   
- [ @publication_id **=** ] **'***publication_id***'** OUTPUT  
+ [ @publication_id **=** ] **'***publication_id&lt***'** 輸出  
  這是發行集識別碼。 *publication_id&lt*已**uniqueidentifier**和一個 OUTPUT 參數，預設值是 NULL。  
   
  [ @reserved **=** ] **'***reserved***'**  
@@ -66,7 +65,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |id|**int**|結果集清單中的發行集循序排列順序。|  
-|NAME|**sysname**|發行集的名稱。|  
+|name|**sysname**|發行集的名稱。|  
 |description|**nvarchar(255)**|發行集的描述。|  
 |status|**tinyint**|指示發行集資料的可用時機。|  
 |retention|**int**|儲存發行集中的發行項變更相關中繼資料時，所需的時間。 這段時間的單位可以是天、週、月或年。 如需有關單位的資訊，請參閱 retention_period_unit 欄。|  
@@ -131,7 +130,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
  [檢視及修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

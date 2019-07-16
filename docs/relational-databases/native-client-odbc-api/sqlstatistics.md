@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: e60101ae-a5f5-432f-a32a-d8e6fb0cbde8
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d9861ff474a2029a54ef09e5d707e23b334be2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d616ff1fb72b3f8afd618afa7bea7a873a6342e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131033"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

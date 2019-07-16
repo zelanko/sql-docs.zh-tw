@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 181d3aea0b2c756abc0dc603348cc9cfd728ac4f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f54be3d11f4870533513f464c1afdae13e04f367
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538159"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104657"
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers 函式
 **合規性**  

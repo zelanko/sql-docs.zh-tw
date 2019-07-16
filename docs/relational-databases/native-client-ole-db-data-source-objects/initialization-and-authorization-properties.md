@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e49f9b2bcd4784c76f693863c7837dd827ba2924
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07e487201b34b165304d946161e93ed28cd09612
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806039"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128582"
 ---
 # <a name="initialization-and-authorization-properties"></a>初始化和授權屬性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "62806039"
 |DBPROP_INIT_ASYNCH|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援非同步初始化。<br /><br /> 在 DBPROP_INIT_ASYNCH 屬性中設定 DBPROPVAL_ASYNCH_INITIALIZE 位元會使 **IDBInitialize::Initialize** 成為未封鎖的呼叫。 如需詳細資訊，請參閱 <<c0> [ 正在執行非同步作業](../../relational-databases/native-client/features/performing-asynchronous-operations.md)。|  
 |DBPROP_INIT_CATALOG|所連接之現有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的名稱。|  
 |DBPROP_INIT_DATASOURCE|執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之伺服器的網路名稱。 當有多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在電腦上執行時，如果要連線到特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，DBPROP_INIT_DATASOURCE 值會指定為 *\\\ServerName\InstanceName*。 逸出序列 \\\ 會用於反斜線本身。|  
-|DBPROP_INIT_GENERALTIMEOUT|表示要求之前, 的秒數而非資料來源初始化和命令執行，逾時。值為 0 表示無限逾時。工作透過網路連線，或者在分散或交易的案例中的提供者可支援這個屬性，以通知發生長時間執行要求時的逾時編列的元件。 資料來源初始化和命令執行的逾時仍然個別受到 DBPROP_INIT_TIMEOUT 和 DBPROP_COMMANDTIMEOUT 的管理。<br /><br /> DBPROP_INIT_GENERALTIMEOUT 是唯讀的，如果使用者嘗試它，就會傳回 DBPROPSTATUS_NOTSETTABLE 的 *dwstatus* 錯誤。|  
+|DBPROP_INIT_GENERALTIMEOUT|表示要求 (而非資料來源初始化和命令執行) 逾時前的秒數。值為 0 表示無限逾時。透過網路連線或者在分散或交易情況下工作的提供者可以支援此屬性，在出現長時間執行的要求時，通知編列的元件逾時。 資料來源初始化和命令執行的逾時仍然個別受到 DBPROP_INIT_TIMEOUT 和 DBPROP_COMMANDTIMEOUT 的管理。<br /><br /> DBPROP_INIT_GENERALTIMEOUT 是唯讀的，如果使用者嘗試它，就會傳回 DBPROPSTATUS_NOTSETTABLE 的 *dwstatus* 錯誤。|  
 |DBPROP_INIT_HWND|來自呼叫應用程式的 Windows 控制代碼。 在允許提示初始化屬性時顯示的初始化對話方塊需要有效的視窗控制代碼。|  
 |DBPROP_INIT_IMPERSONATION_LEVEL|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者不支援模擬層級調整。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會在嘗試設定屬性值時，傳回 DB_S_ERRORSOCCURRED。 DBPROP 結構的 *dwStatus* 成員表示 DBPROPSTATUS_NOTSUPPORTED。|  
 |DBPROP_INIT_LCID|如果不支援地區設定識別碼，或者沒有安裝在用戶端上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會驗證地區設定識別碼，並傳回錯誤。|  
@@ -79,7 +78,7 @@ ms.locfileid: "62806039"
  在提供者專用的屬性集 DBPROPSET_SQLSERVERDATASOURCEINFO 中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會定義其他屬性，請參閱[資料來源資訊屬性](../../relational-databases/native-client-ole-db-data-source-objects/data-source-information-properties.md)如需詳細資訊。  
   
 ## <a name="the-sql-server-native-client-ole-db-provider-string"></a>SQL Server Native Client OLE DB 提供者字串  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會識別提供者字串屬性值中類似 ODBC 的語法。 建立 OLE DB 資料來源的連接時，提供者字串屬性會當做 OLE DB 初始化屬性 DBPROP_INIT_PROVIDERSTRING 的值提供。 此屬性會將實作連接所需的 OLE DB 提供者專屬連接資料指定給 OLE DB 資料來源。 在字串內，這些元素會使用分號分隔。 字串中的最終元素必須以分號結束。 每個元素都由一個關鍵字、一個等號字元，以及初始化時傳遞的值所組成。 例如：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會識別提供者字串屬性值中類似 ODBC 的語法。 建立 OLE DB 資料來源的連接時，提供者字串屬性會當做 OLE DB 初始化屬性 DBPROP_INIT_PROVIDERSTRING 的值提供。 此屬性會將實作連接所需的 OLE DB 提供者專屬連接資料指定給 OLE DB 資料來源。 在字串內，這些元素會使用分號分隔。 字串中的最終元素必須以分號結束。 每個元素都由一個關鍵字、一個等號字元，以及初始化時傳遞的值所組成。 例如:  
   
 ```  
 Server=MyServer;UID=MyUserName;  

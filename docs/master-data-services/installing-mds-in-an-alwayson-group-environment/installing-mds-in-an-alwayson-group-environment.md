@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f7716b7e41e739a100c16e34560e737d2350e122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 81a8e4ae45f8652b5928bb768e506dc1acc682d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66015094"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135844"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和災害復原
 
@@ -183,7 +182,7 @@ Windows Server 作業系統安裝於所有執行個體上，並修補所有更�
 
     如果您稍後需要新增節點，請按一下 [容錯移轉叢集管理員]  之右窗格中的 [新增節點]  動作。
 
-注意：
+附註：
 
 -   並非所有 Windows Server 版本都會提供 WSFC 功能。 請確定您的版本有這項功能。
 
