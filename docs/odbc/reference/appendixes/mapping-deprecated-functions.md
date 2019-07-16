@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0568306ad0e2fd8a73737bf80a4270e8eaa3ed18
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990707"
 ---
 # <a name="mapping-deprecated-functions"></a>對應已淘汰的函式
 本節說明如何已被取代的函式會對應由 ODBC *3.x*以確保回溯相容性的 ODBC 驅動程式管理員*3.x*可搭配 ODBC 驅動程式*2.x*應用程式。 驅動程式管理員會執行這項對應，而不論應用程式版本。 因為每個 ODBC *2.x*下列清單中的函式會對應到對應的 ODBC *3.x*函式中的 ODBC 呼叫時*3.x*驅動程式，ODBC *3.x*驅動程式不需要實作 ODBC *2.x*函式。  

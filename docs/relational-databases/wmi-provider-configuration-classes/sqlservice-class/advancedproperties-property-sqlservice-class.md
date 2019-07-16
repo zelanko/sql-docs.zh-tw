@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a21f833f72dc008c1af3a2d9d326fa73d650c274
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 046499b3169ab73db9592952f2a71506960c2cbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660277"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929738"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>AdvancedProperties 屬性 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

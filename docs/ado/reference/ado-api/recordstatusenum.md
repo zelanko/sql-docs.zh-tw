@@ -1,5 +1,5 @@
 ---
-title: RecordStatusEnum | Microsoft Docs
+title: RecordStatusEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7c57878b73c3c6a20f8dc0a8abd422c12a0446a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 233b2f84b6a60c7b5162edce6c1b76b63946ae81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931289"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 指定[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)的批次更新和其他的大量作業的記錄。  

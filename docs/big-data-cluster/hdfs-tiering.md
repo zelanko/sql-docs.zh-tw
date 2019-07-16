@@ -5,17 +5,16 @@ description: 這篇文章說明如何設定外部 Azure 資料湖儲存區檔案
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 823e24b4ec78996140fa3f17cef9c1e56365a3f7
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 0397b0a27b98bb43a7513e0552124bba0972dfdf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728732"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958309"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>設定 SQL Server 的巨量資料叢集上的階層處理的 HDFS
 
@@ -35,7 +34,7 @@ HDFS 分層讓您能夠裝載外部，HDFS 中的 HDFS 相容檔案系統。 這
 
 下列各節提供如何設定 HDFS 階層處理的 Azure Data Lake 儲存體 Gen2 資料來源的範例。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - [已部署的巨量資料叢集](deployment-guidance.md)
 - [巨量資料工具](deploy-big-data-tools.md)

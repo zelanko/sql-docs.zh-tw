@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 90a96a06ba15afab165bedf3c5a8a9fd367c2c73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ebf86ddf0c9b2e54d2cc27248074263f13a0c860
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935118"
 ---
 # <a name="manage-dqs-databases"></a>管理 DQS 資料庫
 

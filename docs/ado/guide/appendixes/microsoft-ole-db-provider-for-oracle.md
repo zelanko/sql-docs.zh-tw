@@ -1,5 +1,5 @@
 ---
-title: Microsoft OLE DB Provider for Oracle | Microsoft Docs
+title: Microsoft OLE DB Provider for Oracle |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6af8fcd665fdfe503eab5aec591419982d0d3958
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926626"
 ---
-# <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle Overview
+# <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 概觀
 > [!IMPORTANT]
 >  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用 Oracle OLE DB 提供者。
 
@@ -68,7 +67,7 @@ MSDAORA
 |**視窗控制代碼**|表示將提示您輸入其他資訊的視窗控制代碼。|
 |**地區設定識別碼**|表示唯一 32 位元指定的數字 （例如，1033年） 的相關使用者的語言喜好設定。 這些喜好設定會指出如何格式化日期和時間，依字母順序排序項目，字串比較時，依此類推。|
 |**OLE DB 服務**|表示位元遮罩，指定啟用或停用的 OLE DB 服務。|
-|**Prompt**|指出是否要建立連接時提示使用者。|
+|**提示**|指出是否要建立連接時提示使用者。|
 |**擴充的屬性**|字串，包含提供者特定、 擴充連接資訊。 這個屬性僅適用於無法透過屬性機制中所述的提供者特有的連接資訊。|
 
 ## <a name="see-also"></a>另請參閱

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc1952cc-7581-4d69-9c72-7dc1cd370836
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f6e41dbd41aefeabecd9d60278aca718a413e33d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8264f1dfad8bff5d676cd4de8c8b9d7763b39b52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948758"
 ---
 # <a name="example-sqlgettypeinfo-result-set"></a>SQLGetTypeInfo 結果集範例
 應用程式呼叫**SQLGetTypeInfo**來判斷哪些資料類型支援的資料來源和這些資料類型的特性。 下表顯示範例結果集所傳回**SQLGetTypeInfo**支援 SQL_CHAR、 SQL_LONGVARCHAR、 SQL_DECIMAL、 SQL_REAL，如果是 SQL_DATETIME、 SQL_INTERVAL_YEAR 和 SQL_INTERVAL_DAY_TO_SECOND 為資料來源。  
@@ -28,29 +27,29 @@ ms.locfileid: "63188992"
 |TYPE_NAME|DATA_TYPE|COLUMN_SIZE|LITERAL_PREFIX|LITERAL_SUFFIX|CREATE_PARAMS|NULLABLE|  
 |----------------|----------------|------------------|---------------------|---------------------|--------------------|--------------|  
 |"char"|SQL_CHAR|255|"'"|"'"|「 長度 」|SQL_TRUE|  
-|"text"|SQL_LONGVARCHAR|2147483647|"'"|"'"|\<Null>|SQL_TRUE|  
-|[十進位]|SQL_DECIMAL|28|\<Null>|\<Null>|「 有效位數，<br />scale"|SQL_TRUE|  
-|「 實際 」|SQL_REAL|7|\<Null>|\<Null>|\<Null>|SQL_TRUE|  
-|"datetime"|SQL_TYPE_TIMESTAMP|23|"'"|"'"|\<Null>|SQL_TRUE|  
+|"text"|SQL_LONGVARCHAR|2147483647|"'"|"'"|\<空值 >|SQL_TRUE|  
+|[十進位]|SQL_DECIMAL|28|\<空值 >|\<空值 >|「 有效位數，<br />調整 」|SQL_TRUE|  
+|「 實際 」|SQL_REAL|7|\<空值 >|\<空值 >|\<空值 >|SQL_TRUE|  
+|"datetime"|SQL_TYPE_TIMESTAMP|23|"'"|"'"|\<空值 >|SQL_TRUE|  
 |「 年度的間隔 YEAR()"|SQL_INTERVAL_YEAR|9|"'"|"'"|「 精確度 」|SQL_TRUE|  
 |「 以 FRACTION(5) 間隔 DAY()"|SQL_INTERVAL_DAY_TO_SECOND|24|"'"|"'"|「 精確度 」|SQL_TRUE|  
   
 |DATA_TYPE|CASE_SENSITIVE|SEARCHABLE|UNSIGNED_ATTRIBUTE|FIXED_PREC_SCALE|AUTO_UNIQUE_VALUE|LOCAL_TYPE_NAME|  
 |----------------|---------------------|----------------|-------------------------|------------------------|-------------------------|-----------------------|  
-|**SQL_CHAR**|SQL_FALSE|SQL_SEARCHABLE|\<Null>|SQL_FALSE|\<Null>|"char"|  
-|**SQL_LONGVARCHAR**|SQL_FALSE|SQL_PRED_CHAR|\<Null>|SQL_FALSE|\<Null>|"text"|  
+|**SQL_CHAR**|SQL_FALSE|SQL_SEARCHABLE|\<空值 >|SQL_FALSE|\<空值 >|"char"|  
+|**SQL_LONGVARCHAR**|SQL_FALSE|SQL_PRED_CHAR|\<空值 >|SQL_FALSE|\<空值 >|"text"|  
 |**SQL_DECIMAL**|SQL_FALSE|SQL_PRED_BASIC|SQL_FALSE|SQL_FALSE|SQL_FALSE|[十進位]|  
 |**SQL_REAL**|SQL_FALSE|SQL_PRED_BASIC|SQL_FALSE|SQL_FALSE|SQL_FALSE|「 實際 」|  
-|**SQL_TYPE_TIMESTAMP**|SQL_FALSE|SQL_SEARCHABLE|\<Null>|SQL_FALSE|\<Null>|"datetime"|  
-|**SQL_INTERVAL_YEAR**|SQL_FALSE|SQL_SEARCHABLE|\<Null>|SQL_FALSE|\<Null>|「 年度的間隔 YEAR()"|  
-|**SQL_INTERVAL_DAY_TO_SECOND**|SQL_FALSE|SQL_PRED_BASIC|\<Null>|SQL_FALSE|\<Null>|「 以 FRACTION(5) 間隔 DAY()"|  
+|**SQL_TYPE_TIMESTAMP**|SQL_FALSE|SQL_SEARCHABLE|\<空值 >|SQL_FALSE|\<空值 >|"datetime"|  
+|**SQL_INTERVAL_YEAR**|SQL_FALSE|SQL_SEARCHABLE|\<空值 >|SQL_FALSE|\<空值 >|「 年度的間隔 YEAR()"|  
+|**SQL_INTERVAL_DAY_TO_SECOND**|SQL_FALSE|SQL_PRED_BASIC|\<空值 >|SQL_FALSE|\<空值 >|「 以 FRACTION(5) 間隔 DAY()"|  
   
 |DATA_TYPE|MINIMUM_SCALE|MAXIMUM_SCALE|SQL_DATA_TYPE|SQL_DATETIME_SUB|NUM_PREC_RADIX|INTERVAL_PRECISION|  
 |----------------|--------------------|--------------------|---------------------|------------------------|----------------------|-------------------------|  
-|**SQL_CHAR**|\<Null>|\<Null>|SQL_CHAR|\<Null>|\<Null>|\<Null>|  
-|**SQL_LONGVARCHAR**|\<Null>|\<Null>|SQL_LONGVARCHAR|\<Null>|\<Null>|\<Null>|  
-|**SQL_DECIMAL**|0|28|SQL_DECIMAL|\<Null>|10|\<Null>|  
-|**SQL_REAL**|\<Null>|\<Null>|SQL_REAL|\<Null>|10|\<Null>|  
-|**SQL_TYPE_TIMESTAMP**|3|3|SQL_DATETIME|SQL_CODE_TIMESTAMP|\<Null>|12|  
-|**SQL_INTERVAL_YEAR**|0|0|SQL_INTERVAL|SQL_CODE_INTERVALYEAR|\<Null>|9|  
-|**SQL_INTERVAL_DAY_TO_SECOND**|5|5|SQL_INTERVAL|SQL_CODE_INTERVALDAY_TO_SECOND|\<Null>|9|
+|**SQL_CHAR**|\<空值 >|\<空值 >|SQL_CHAR|\<空值 >|\<空值 >|\<空值 >|  
+|**SQL_LONGVARCHAR**|\<空值 >|\<空值 >|SQL_LONGVARCHAR|\<空值 >|\<空值 >|\<空值 >|  
+|**SQL_DECIMAL**|0|28|SQL_DECIMAL|\<空值 >|10|\<空值 >|  
+|**SQL_REAL**|\<空值 >|\<空值 >|SQL_REAL|\<空值 >|10|\<空值 >|  
+|**SQL_TYPE_TIMESTAMP**|3|3|SQL_DATETIME|SQL_CODE_TIMESTAMP|\<空值 >|12|  
+|**SQL_INTERVAL_YEAR**|0|0|SQL_INTERVAL|SQL_CODE_INTERVALYEAR|\<空值 >|9|  
+|**SQL_INTERVAL_DAY_TO_SECOND**|5|5|SQL_INTERVAL|SQL_CODE_INTERVALDAY_TO_SECOND|\<空值 >|9|

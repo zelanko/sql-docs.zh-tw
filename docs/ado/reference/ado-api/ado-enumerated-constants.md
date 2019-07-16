@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4d9b2e581bfbce225bd34e78761b9e8ade621172
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a2b02498905b73f321d7585b5c91adfbfd1b4b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921025"
 ---
 # <a name="ado-enumerated-constants"></a>ADO 列舉常數
 若要協助偵錯，ADO 列舉會列出每個常數的值。 不過，這個值會是純粹諮詢，，而且可能會從一個版本的 ADO 變更到另一個。 名稱，而非實際的值，每個列舉常數時，應該僅相依於您的程式碼。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 12a978c0-b8a0-4ef0-87f0-a43c13659272
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 64ac7dae1a5760ff18f1a109a031bd00bb30eb1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93436a5180f1a01269f1612f7e608b71b4c073e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718653"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923803"
 ---
 # <a name="types-of-locks"></a>鎖定的類型
 ## <a name="adlockbatchoptimistic"></a>adLockBatchOptimistic  

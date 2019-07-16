@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6e7b3631-38d5-4375-b565-21d2e3f36ae0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 760b5443def7ba775dedbf6fcc23ef949c024a62
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 4538b78cb64a5017230f0a879f5bf20a02df0341
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51290685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946510"
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>Ordered 和 Unordered 運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

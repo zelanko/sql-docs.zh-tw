@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: a22c6688-5321-4e6a-ba2a-87985a0e854a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a67735a4df12a88c7d0a8aaaeeaf13a5c601e777
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 201218ba5c82b88fabbb26e279f52ce95bb79527
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933021"
 ---
 # <a name="error-ado---wfc-syntax"></a>Error (ADO - WFC 語法)
-## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>封裝 com.ms.wfc.data  
   
 ### <a name="properties"></a>屬性  
   

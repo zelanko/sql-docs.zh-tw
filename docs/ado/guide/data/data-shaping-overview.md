@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6d693ccbeb06860cd4633a933e80b9ccbe6526a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3bce50892520dbc889a62960065ce3d8e423a81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925626"
 ---
 # <a name="data-shaping-overview"></a>資料成形概觀
 *資料成形*表示建置在查詢中的兩個或多個邏輯項目之間的階層式關聯性。 階層中所見的其中一個記錄之間的父子式關聯性[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)，和一或多個記錄 （也稱為一章） 的另一個**資料錄集**。 在父子式關聯性，父代**Recordset**包含子系**資料錄集**。 客戶和訂單這類的階層式關聯性的範例。 在資料庫中每位客戶，可以有零個或多個訂單。 階層式關聯性可以是遞迴的這表示可以在子記錄中巢狀孫系的記錄。 基本上，可以任意深度巢狀階層式資料錄。 在實務上，ADO 會限制為最多 512 個遞迴**資料錄集**s。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4b3014c9fa1eccd6b1efa04987293e464111e14d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f157532dd1029e2966f0259701c59ffb50928c4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932299"
 ---
 # <a name="item-property-example-vc"></a>Item 屬性範例 (VC++)
 此範例示範如何[項目](../../../ado/reference/ado-api/item-property-ado.md)屬性存取集合的成員。 此範例會開啟***作者***一覽表***Pubs***使用參數化命令的資料庫。  

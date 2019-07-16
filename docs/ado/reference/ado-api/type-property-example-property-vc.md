@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 538fcdf67654ad509e826fcfaaf141fb4f8e32ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e13079d18c8887aa0cdba8e5ae06f86eebca897c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938869"
 ---
 # <a name="type-property-example-property-vc"></a>Type 屬性範例 (Property) (VC++)
 此範例示範[型別](../../../ado/reference/ado-api/type-property-ado.md)屬性。 它是用於列出集合中的類型與名稱類似的公用程式模型[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)，[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)，依此類推。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: de41d864b6bfd8e7fe80188b69b50e2592d6cf16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 51c0253dce8e95a5a25110b47b348397c967af94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938266"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 主控台 (DB2ToSQL) 中的命令列選項
 Microsoft 為您提供執行及控制 SSMA 活動的一組健全命令列選項。 後續章節將詳細說明相同。  

@@ -1,5 +1,5 @@
 ---
-title: ConnectModeEnum | Microsoft Docs
+title: ConnectModeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3528034b4a87115d704e7cbbc1f9d98a36e11794
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: debf6f9dc4ac1326caf9fbf32b65f15f34a19094
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933450"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 指定在修改資料的可用權限[連接](../../../ado/reference/ado-api/connection-object-ado.md)，開啟[記錄](../../../ado/reference/ado-api/record-object-ado.md)，或指定值[模式](../../../ado/reference/ado-api/mode-property-ado.md)屬性**資料錄**並[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。  

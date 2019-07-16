@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b804bcf-4cce-4e6f-aa45-00bab9ef9921
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7dc74811bf6cead91850ebd3fcaa8cf64025c80d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36f1c5a18eb9f0b1939a2c3602f1ebe7695741f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948821"
 ---
 # <a name="stored-procedure-parameter-limitations"></a>預存程序參數限制
 > [!IMPORTANT]  

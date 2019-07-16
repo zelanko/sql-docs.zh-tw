@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 685c5a6290f9f6b51321c8d730b60614dc0f5fa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4eb94e51896e08f60389edde0c2a6cd0461e8538
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62934551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929951"
 ---
 # <a name="effective-boolean-value-xquery"></a>有效的布林值 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

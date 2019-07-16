@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 61bb013885238492d9c7324658ede198c489361d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4165dd51437f143351835bc1739ffb8279bd04ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952488"
 ---
 # <a name="functions-accepting-string-parameters"></a>接受字串參數的函式
 接受字串參數的所有函式會轉換成 Unicode。 （將匯出的函式的"W"形式）。位元組計數會轉換成這些適用的 ODBC api 的字元計數。 這適用於下列函數：  
@@ -47,9 +46,9 @@ ms.locfileid: "63127327"
   
 -   **SQLGetInfo**  
   
--   **SQLGetStmtOption** (becomes **SQLGetStmtAttr**)  
+-   **SQLGetStmtOption** (會變成**SQLGetStmtAttr**)  
   
--   **SQLSetStmtOption** (becomes **SQLSetStmtAttr**)  
+-   **SQLSetStmtOption** (會變成**SQLSetStmtAttr**)  
   
 -   **SQLGetConnectOption**  
   

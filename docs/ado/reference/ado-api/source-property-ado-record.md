@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9217658a645d731645b0c85a419ecf759b1fd3bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1870d8cd8253e1b6de74ce093d51ca6e33c5c6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930939"
 ---
 # <a name="source-property-ado-record"></a>Source 屬性 (ADO Record)
 指出資料來源或所代表的物件[記錄](../../../ado/reference/ado-api/record-object-ado.md)。  
