@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ad860e7-e054-4186-80a2-03977e42531d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e9153d73a70a46dbaedc420735fdd694565d276b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0b1db65cdb36bbbab99070d70892b8c9cd70a9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764708"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059113"
 ---
 # <a name="system-functions-for-transact-sql"></a>TRANSACT-SQL 的系統函式
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
