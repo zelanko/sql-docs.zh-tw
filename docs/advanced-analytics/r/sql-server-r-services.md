@@ -7,14 +7,13 @@ ms.date: 09/10/2018
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bc506d245878d459a3c4639ff4e5a6c2f2a9f8f6
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: efc1b939f3231aeca18e0b6547970af6b8eb39cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962421"
 ---
 # <a name="r-services-in-sql-server-2016"></a>SQL Server 2016 中的 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

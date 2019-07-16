@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: acb2fe2d6c6b439295c0a6f0b7a4e233c23cb337
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 7fc3da1474546f0719af20c52f44248baa8ce5da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028264"
 ---
 # <a name="creating-user-defined-types---requirements"></a>建立使用者定義型別 - 需求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +112,7 @@ ms.locfileid: "49119746"
  表示此 UDT 的所有執行個體是否為相同長度。  
   
  **MaxByteSize**  
- 執行個體的大小最大值 (位元組)。 您必須指定**MaxByteSize**具有**UserDefined**序列化格式。 使用指定的使用者定義序列化 udt **MaxByteSize**指 UDT 在其序列化形式的大小總計，如使用者所定義。 值**MaxByteSize**必須介於 1 到 8000 的範圍，或設為-1，表示 UDT 大於 8000 個位元組 （大小總計不得超過 LOB 大小的上限）。 請考量 UDT 與 10 個字元的字串屬性 (**System.Char**)。 當 UDT 使用 BinaryWriter 序列化時，序列化字串的總大小是 UDT 個位元組：每個 Unicode 2-16 字元兩個位元組，乘以字元的最大數目，再加上序列化二進位資料流所造成的兩個控制位元組負擔。 因此，判斷的值時**MaxByteSize**，必須考慮序列化 UDT 的總大小： 以二進位格式序列化資料，再加上序列化所造成的負擔的大小。  
+ 執行個體的大小最大值 (位元組)。 您必須指定**MaxByteSize**具有**UserDefined**序列化格式。 使用指定的使用者定義序列化 udt **MaxByteSize**指 UDT 在其序列化形式的大小總計，如使用者所定義。 值**MaxByteSize**必須介於 1 到 8000 的範圍，或設為-1，表示 UDT 大於 8000 個位元組 （大小總計不得超過 LOB 大小的上限）。 請考量 UDT 與 10 個字元的字串屬性 (**System.Char**)。 當 UDT 使用 BinaryWriter 序列化時，序列化字串的大小總計會是 22 個位元組：2 個位元組，每個 Unicode utf-16 字元，乘以字元，加上 2 個控制項的數目上限個位元組的序列化二進位資料流所造成的負擔。 因此，判斷的值時**MaxByteSize**，必須考慮序列化 UDT 的總大小： 以二進位格式序列化資料，再加上序列化所造成的負擔的大小。  
   
  **ValidationMethodName**  
  用於驗證 UDT 執行個體之方法的名稱。  
@@ -141,9 +140,9 @@ ms.locfileid: "49119746"
   
 -   小於 (\<)  
   
--   大於或等於 (>=)  
+-   大於或等於 (> =)  
   
--   小於或等於 (<=)  
+-   小於或等於 (< =)  
   
 ### <a name="implementing-nullability"></a>實作 Null 屬性  
  除了必須正確地指定組件的屬性外，您的類別還必須能夠支援 Null 屬性。 載入 Udt[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]感知 null，但是為了讓 UDT 能夠辨識 null 值，類別必須實作**INullable**介面。 如需詳細資訊和如何在 UDT 中實作 null 屬性的範例，請參閱[< 類型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)。  

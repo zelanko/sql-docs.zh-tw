@@ -18,13 +18,12 @@ ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: baeb646853294266e4dbca2a649236e1046ffa1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 280ab197ef9347c6a209be7ef05e8f1ce2dfd23e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900877"
 ---
 # <a name="sysdmftssemanticsimilaritypopulation-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "65947165"
     
 ||||  
 |-|-|-|  
-|**資料行名稱**|**型別**|**說明**|  
+|**資料行名稱**|**型別**|**描述**|  
 |**database_id**|**int**|包含要擴展之全文檢索索引的資料庫識別碼。|  
 |**catalog_id**|**int**|包含這個全文檢索索引之全文檢索目錄的識別碼。|  
 |**table_id**|**int**|要擴展全文檢索索引的資料表識別碼。|  

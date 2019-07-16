@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01d18e643dd769daa22309bb6c3df6407ab9043f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15115313613ea8f86dd2267c6be3c231cab92503
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931935"
 ---
 # <a name="open-method-ado-connection"></a>Open 方法 (ADO Connection)
 開啟資料來源的連接。  

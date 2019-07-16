@@ -8,18 +8,17 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: fdd0a3091440295e393d969f1b8161b83fb58d95
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 83dbe0c2ea6eb066f208223acd2c6062f964fcf3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063958"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938081"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;來源資料查詢&gt;
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  若要培訓資料採礦模型，並從採礦模型建立預測，您必須存取資料的外部[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫。 您使用\<來源資料查詢 > 子句中的資料採礦延伸模組 (DMX) 來定義這個外部的資料。 [插入&#40;DMX&#41;](../dmx/insert-into-dmx.md)， [FROM&#60;模型&#62;PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)，並[SELECT FROM NATURAL PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md)所有的陳述式會使用**\<來源資料查詢 >**。  
+  若要培訓資料採礦模型，並從採礦模型建立預測，您必須存取資料的外部[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫。 您使用\<來源資料查詢 > 子句中的資料採礦延伸模組 (DMX) 來定義這個外部的資料。 [插入&#40;DMX&#41;](../dmx/insert-into-dmx.md)， [FROM&#60;模型&#62;PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)，並[SELECT FROM NATURAL PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md)所有的陳述式會使用 **\<來源資料查詢 >** 。  
   
 ## <a name="query-types"></a>查詢類型  
  指定來源資料的三種最常見的方式為：  

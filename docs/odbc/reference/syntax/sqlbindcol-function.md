@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17b907be3e2641fe1dcbbb8fbd96586132e054ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3860243580981d995e6581d883e12afe3f033d3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036225"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 函數
 **合規性**  

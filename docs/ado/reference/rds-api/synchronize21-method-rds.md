@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1d731738938eab5732dcbfa86c0d624ae7941ed5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66c3b9ecefd63cf7de1806e6fa838a0204626605
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963258"
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21 方法 (RDS)
 使用與 ADO 2.1 搭配使用的連接字串所指定的資料庫，同步處理指定的資料錄集。  

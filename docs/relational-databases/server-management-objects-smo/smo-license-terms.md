@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50cf289af9c2b29f7239596ff04102308048456b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a4f7fe6f3662cc1d82cf72b2f5d8036d0284e48c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502294"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097990"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server 共用管理物件 (SMO) 授權條款
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -66,7 +65,7 @@ ms.locfileid: "52502294"
   * 提供他人修改的權利。
 
 
-**3.授權範圍。** 軟體係授權使用，而非出售賣斷。 除非相關法律授與　貴用戶更多權利，否則 Microsoft 保留本合約未明示授與之所有其他權利，包括暗示、禁反言等其他權利。 　貴用戶僅得在本合約明示許可之範圍內使用軟體。 因此，　貴用戶必須遵守只允許以特定方式使用軟體的科技保護措施。 您可能會執行下列其中一項：
+**3.授權範圍。** 軟體係授權使用，而非出售賣斷。 除非相關法律授與　貴用戶更多權利，否則 Microsoft 保留本合約未明示授與之所有其他權利，包括暗示、禁反言等其他權利。 貴用戶僅得在本合約明示許可之範圍內使用軟體。 因此，　貴用戶必須遵守只允許以特定方式使用軟體的科技保護措施。 您可能會執行下列其中一項：
 
 - 解決軟體中的所有技術限制。
 - 反向工程、 解編或軟體，但只有的適行法律明文許可者不在此限。

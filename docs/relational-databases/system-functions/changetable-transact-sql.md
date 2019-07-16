@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3a0ad02f508aea78faa8f3da80e68f8ea6b3c7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042897"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,9 +66,9 @@ CHANGETABLE (
  *last_sync_version*應該驗證以確保它不太老舊，因為部分或所有的變更資訊可能已經清除了根據針對資料庫設定的保留期限。 如需詳細資訊，請參閱 < [CHANGE_TRACKING_MIN_VALID_VERSION &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)並[ALTER DATABASE SET 選項&#40;-&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
  版本*資料表*，{< 主索引鍵值 >}  
- 針對指定的資料列傳回最新的變更追蹤資訊。 主索引鍵值必須識別資料列。 <主索引鍵值> 會識別主索引鍵資料行和指定值。 您可以用任何順序指定主索引鍵資料行名稱。  
+ 針對指定的資料列傳回最新的變更追蹤資訊。 主索引鍵值必須識別資料列。 < 主索引鍵值 > 會識別主索引鍵資料行，並指定這些值。 您可以用任何順序指定主索引鍵資料行名稱。  
   
- *[資料表]*  
+ *Table*  
  可取得其變更追蹤資訊的使用者定義資料表。 您必須在資料表上啟用變更追蹤。 可以使用一部分、兩部分、三部分或四部分資料表名稱。 資料表名稱可以是資料表的同義字。  
   
  *column_name*  

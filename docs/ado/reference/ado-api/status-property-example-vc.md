@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6a6d028acaf5d2354c520aed513082945e2fe397
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 708120992341b0e184cc42d13ebe1f461ecf861a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719056"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916787"
 ---
 # <a name="status-property-example-vc"></a>Status 屬性範例 (VC++)
 這個範例會使用[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)屬性來顯示哪些記錄內修改過的批次作業之前發生的批次更新。  

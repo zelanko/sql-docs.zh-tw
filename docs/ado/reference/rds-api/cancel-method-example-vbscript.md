@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fbb996c8c0d05028780275e6540147478dd4dabc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 764a99faf40450bfd550dfe3f96789e705e8624a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964722"
 ---
 # <a name="cancel-method-example-vbscript"></a>Cancel 方法範例 (VBScript)
 > [!IMPORTANT]

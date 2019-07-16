@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 05b0a054-e28d-4e16-b5b0-07418486b372
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2cf998ada7b0e6835265c8e58bfcab855d9c2361
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47766dbbb273d9e5e4d42e8df6b5cf3c26bf356a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036039"
 ---
 # <a name="sqlclosecursor-function"></a>SQLCloseCursor 函式
 **合規性**  

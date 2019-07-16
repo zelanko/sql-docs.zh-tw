@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b6f6538aa13b2236c7dca52189b37addad85ae53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9934771b6a887f6ae0984e79ce11729145e3d410
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051543"
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ class  class_desc        major_id    minor_id    dependency
   
 |單|受影響的物件|更正動作|  
 |-----------|---------------------|-----------------------|  
-|1|**[索引]**|重建所識別的任何索引**sys.dm_db_objects_impacted_on_version_change** ，例如：  `ALTER INDEX ALL ON <table> REBUILD`<br />中的多個<br />`ALTER TABLE <table> REBUILD`|  
-|2|**物件**|所識別的所有條件約束**sys.dm_db_objects_impacted_on_version_change** geometry 和 geography 資料表中的資料基礎會重新計算之後必須重新驗證。 請針對條件約束使用 ALTER TABLE 重新驗證。 <br />例如： <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />中的多個<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|1|**[索引]**|重建所識別的任何索引**sys.dm_db_objects_impacted_on_version_change** ，例如：  `ALTER INDEX ALL ON <table> REBUILD`<br />或<br />`ALTER TABLE <table> REBUILD`|  
+|2|**物件**|所識別的所有條件約束**sys.dm_db_objects_impacted_on_version_change** geometry 和 geography 資料表中的資料基礎會重新計算之後必須重新驗證。 請針對條件約束使用 ALTER TABLE 重新驗證。 <br />例如: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />或<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

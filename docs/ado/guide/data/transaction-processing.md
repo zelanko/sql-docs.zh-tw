@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 032677452fa80502d37383af8172ff9475dea363
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cab6638704856baf873274807c0e2eff9a1f92d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923866"
 ---
 # <a name="transaction-processing"></a>交易處理
 A*交易*分隔的開頭和結尾的資料存取作業透過連線執行一系列。 資料來源時，交易式功能而定**連線**物件也可讓您建立和管理交易。 例如，若要存取 Microsoft SQL Server 上的資料庫使用 Microsoft OLE DB Provider for SQL Server，您就可以建立您所執行之命令的多個巢狀的交易。  

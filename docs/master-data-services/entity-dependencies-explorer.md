@@ -12,13 +12,12 @@ keywords:
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 18c25a5ec9dfb17039baf11e66b3f4e2c7244552
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6572f8a72dbbd4b4c197db82819ad7a372cedf78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052055"
 ---
 # <a name="entity-dependencies-explorer"></a>Entity Dependencies (實體相依性) 總管
 

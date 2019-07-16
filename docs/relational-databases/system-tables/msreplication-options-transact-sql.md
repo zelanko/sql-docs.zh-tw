@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4bb4c4568c220df16f9f5592f8e38d143340f96b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c48a57b876cde41d6bb514c522bcaa241eec11fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062997"
 ---
 # <a name="msreplicationoptions-transact-sql"></a>MSreplication_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "52757940"
 |**optname**|**sysname**|僅供內部使用。|  
 |**value**|**bit**|僅供內部使用。|  
 |**major_version**|**int**|僅供內部使用。|  
-|**即**|**int**|僅供內部使用。|  
+|**minor_version**|**int**|僅供內部使用。|  
 |**修訂**|**int**|僅供內部使用。|  
 |**install_failures**|**int**|僅供內部使用。|  
   

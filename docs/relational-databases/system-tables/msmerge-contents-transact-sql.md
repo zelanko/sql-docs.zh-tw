@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e5aa95edeb1a947aea517de30efcbbbc3c6c799c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a4be6cffcc7e4f13b88d8037b53d438d604b9650
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089939"
 ---
 # <a name="msmergecontents-transact-sql"></a>MSmerge_contents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "52750380"
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|已發行資料表的暱稱。|  
 |**rowguid**|**uniqueidentifier**|給定資料列的資料列識別碼。|  
-|**產生**|**bigint**|所識別的資料列產生**tablenick**並**rowguid**。|  
+|**generation**|**bigint**|所識別的資料列產生**tablenick**並**rowguid**。|  
 |**partchangegen**|**bigint**|可能變更了資料列是否屬於篩選發行集的最後一項資料變更之相關聯層代 (Generation)。|  
 |**歷程**|**varbinary(501)**|用來維護這個資料列之變更記錄的訂閱者暱稱、版本號碼組。|  
 |**colvl**|**varbinary(7489)**|資料行版本資訊。|  

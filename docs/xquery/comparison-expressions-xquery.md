@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ac4e617b7abb220dd2a8767a334ddbdf1c685d2c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7462e089f70b4da76edea25dcfe6e7e314ad7c46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661831"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039027"
 ---
 # <a name="comparison-expressions-xquery"></a>比較運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -221,9 +220,9 @@ ProductModelID       Result
   
  這些是根據文件順序所做的比較：  
   
--   `<<` ： 沒有**operand 1**前面**運算元 2**文件順序。  
+-   `<<` :沒有**operand 1**前面**運算元 2**文件順序。  
   
--   `>>` ： 沒有**operand 1**遵循**運算元 2**文件順序。  
+-   `>>` :沒有**operand 1**遵循**運算元 2**文件順序。  
   
  下列查詢會傳回 True，如果產品目錄描述\<瑕疵責任擔保 > 元素之前出現\<維護 > 特定產品的文件順序中的項目。  
   

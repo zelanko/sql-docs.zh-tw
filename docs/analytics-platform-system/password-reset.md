@@ -2,19 +2,18 @@
 title: 密碼重設-Analytics Platform System |Microsoft Docs
 description: 密碼重設 頁面可讓您變更使用 Analytics Platform System 的系統管理員帳戶的密碼。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 63fbb097bf1ca926223ce7c0114c8da5d10cd969
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5fb3bbb5adba5754c220c34503a22656f6da39c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960465"
 ---
 # <a name="password-reset---analytics-platform-system"></a>密碼重設-Analytics Platform System
 **密碼重設**頁面可讓您變更使用 Analytics Platform System 的系統管理員帳戶的密碼。  
@@ -24,7 +23,7 @@ ms.locfileid: "62639946"
   
 設備傳遞時，您會獲得 Analytics Platform System 密碼。 當您要負責您的應用裝置時，一律變更成新值的密碼。 有三個更新的密碼。 密碼不必與彼此相同。  
   
-**F<*xxxx*>\Administrator**  
+**F <*xxxx*> \Administrator**  
 **系統管理員**的設備網域。  
   
 **.\Administrator**  

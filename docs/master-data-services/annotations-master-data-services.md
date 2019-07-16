@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c6401ef-17f0-41f5-be7a-01f49141f04c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a59e5a9e31f9ea90fd112b11676b56e07c9fafa3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9b6416383e332819e45bec6e6cbe42ece163edb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047769"
 ---
 # <a name="annotations-master-data-services"></a>註解 (Master Data Services)
 

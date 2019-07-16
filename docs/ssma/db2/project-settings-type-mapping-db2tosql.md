@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 91498db5535c99c7c8afaba85efc35639510a079
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c0866a753bb61cb688ffe491e1de77431ddcb22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060166"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>專案設定 （類型對應） (DB2ToSQL)
 類型對應 頁面**專案設定** 對話方塊中包含自訂 SSMA 如何轉換成的 DB2 資料類型的設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。  
@@ -28,7 +27,7 @@ ms.locfileid: "63270009"
   
 若要指定目前的物件或物件類別的設定，請使用**型別對應**主要的 SSMA 視窗索引標籤中。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 下表顯示**型別對應** 索引標籤選項：  
   
 **來源類型**  
@@ -60,8 +59,8 @@ SSMA for DB2，在中，您可以設定引數、 資料行、 區域變數和傳
 |DB2 資料類型|預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型|  
 |-----------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
 |binary_integer|ssNoversion|  
 |blob|varbinary(max)|  
 |boolean|bit|  
@@ -70,17 +69,17 @@ SSMA for DB2，在中，您可以設定引數、 資料行、 區域變數和傳
 |character|varchar(max)|  
 |character varying|varchar(max)|  
 |clob|varchar(max)|  
-|日期|datetime2[0]|  
+|date|datetime2[0]|  
 |dec|dec[38][0]|  
-|Decimal|float[53]|  
-|雙精度|float[53]|  
-|FLOAT|float[53]|  
+|decimal|float [53]|  
+|雙精度|float [53]|  
+|FLOAT|float [53]|  
 |ssNoversion|ssNoversion|  
 |integer|ssNoversion|  
 |long|varchar(max)|  
 |長資料列|varbinary(max)|  
-|long raw[\*..8000]<sup>\*</sup>|varbinary[\*]|  
-|long raw[8001..\*]<sup>\*</sup>|varbinary(max)|  
+|長時間的原始 [\*...8000]<sup>\*</sup>|varbinary [\*]|  
+|長時間的原始 [8001...\*]<sup>\*</sup>|varbinary(max)|  
 |national char|nvarchar(max)|  
 |national char varying|nvarchar(max)|  
 |國家字元集|nvarchar(max)|  
@@ -88,22 +87,22 @@ SSMA for DB2，在中，您可以設定引數、 資料行、 區域變數和傳
 |不同的國家字元集<sup>\*</sup>|nvarchar(max)|  
 |NCHAR|nvarchar(max)|  
 |nclob|nvarchar(max)|  
-|number|float[53]|  
-|NUMERIC|float[53]|  
+|number|float [53]|  
+|NUMERIC|float [53]|  
 |nvarchar2|nvarchar(max)|  
 |pls_integer|ssNoversion|  
 |未經處理的|varbinary(max)|  
-|REAL|float[53]|  
+|REAL|float [53]|  
 |rowid|UNIQUEIDENTIFIER|  
 |signtype|SMALLINT|  
 |SMALLINT|SMALLINT|  
 |string|varchar(max)|  
-|TIMESTAMP|datetime2|  
+|timestamp|datetime2|  
 |使用本地時區的時間戳記|datetimeoffset|  
 |時區的時間戳記|datetimeoffset|  
 |urowid|UNIQUEIDENTIFIER|  
 |varchar|varchar(max)|  
-|varchar2|varchar(max)|  
+|Varchar2|varchar(max)|  
 |xmltype|Xml|  
   
 <sup>\*</sup> 傳回值型別對應只會套用。  
@@ -116,57 +115,57 @@ SSMA for DB2，在中，您可以設定引數、 資料行、 區域變數和傳
 |DB2 資料類型|預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型|  
 |-----------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
 |blob|varbinary(max)|  
 |char|char|  
-|char varying[\*..\*]|varchar[\*]|  
-|char[\*..\*]|char[\*]|  
+|char varying [\*...\*]|varchar [\*]|  
+|char[\*..\*]|char [\*]|  
 |character|char|  
-|character varying[\*..\*]|varchar[\*]|  
-|character[\*..\*]|char[\*]|  
+|可變長度字元 [\*...\*]|varchar [\*]|  
+|character[\*..\*]|char [\*]|  
 |clob|varchar(max)|  
-|日期|datetime2[0]|  
+|date|datetime2[0]|  
 |dec|dec[38][0]|  
 |dec[\*..\*]|dec[\*][0]|  
 |dec[\*..\*][\*..\*]|dec[\*][\*]|  
-|Decimal|decimal[38][0]|  
+|decimal|decimal[38][0]|  
 |decimal[\*..\*]|decimal[\*][0]|  
 |decimal[\*..\*][\*..\*]|decimal[\*][\*]|  
-|雙精度|float[53]|  
-|FLOAT|float[53]|  
-|float[\*..53]|float[\*]|  
-|float[54..\*]|float[53]|  
+|雙精度|float [53]|  
+|FLOAT|float [53]|  
+|float [\*...53]|float [\*]|  
+|float[54..\*]|float [53]|  
 |ssNoversion|ssNoversion|  
 |integer|ssNoversion|  
 |long|varchar(max)|  
 |長資料列|varbinary(max)|  
-|長時間的原始 [\*...8000]|varbinary[\*]|  
+|長時間的原始 [\*...8000]|varbinary [\*]|  
 |長時間的原始 [8001...\*]|varbinary(max)|  
 |長 varchar|varchar(max)|  
-|long[\*..8000]|varchar[\*]|  
-|long[8001..\*]|varchar(max)|  
+|long[\*..8000]|varchar [\*]|  
+|長度 [8001...\*]|varchar(max)|  
 |national char|NCHAR|  
-|national char varying [\*...\*]|nvarchar[\*]|  
-|national char [\*...\*]|nchar[\*]|  
+|national char varying [\*...\*]|nvarchar [\*]|  
+|national char [\*...\*]|nchar [\*]|  
 |國家字元集|NCHAR|  
-|不同的國家字元集 [\*...\*]|nvarchar[\*]|  
-|國家字元集 [\*...\*]|nchar[\*]|  
+|不同的國家字元集 [\*...\*]|nvarchar [\*]|  
+|國家字元集 [\*...\*]|nchar [\*]|  
 |NCHAR|NCHAR|  
-|nchar[\*]|nchar[\*]|  
+|nchar [\*]|nchar [\*]|  
 |nclob|nvarchar(max)|  
-|number|float[53]|  
+|number|float [53]|  
 |number[\*..\*]|numeric[\*]|  
 |number[\*..\*][\*..\*]|numeric[\*][\*]|  
 |NUMERIC|NUMERIC|  
 |numeric[\*..\*]|numeric[\*]|  
 |numeric[\*..\*][\*..\*]|numeric[\*][\*]|  
-|nvarchar2[\*..\*]|nvarchar[\*]|  
-|raw[\*..\*]|varbinary[\*]|  
-|REAL|float[53]|  
+|nvarchar2[\*..\*]|nvarchar [\*]|  
+|raw[\*..\*]|varbinary [\*]|  
+|REAL|float [53]|  
 |rowid|UNIQUEIDENTIFIER|  
 |SMALLINT|SMALLINT|  
-|TIMESTAMP|datetime2|  
+|timestamp|datetime2|  
 |使用本地時區的時間戳記|datetimeoffset|  
 |使用本地時區的時間戳記 [\*...\*]|datetimeoffset[\*]|  
 |時區的時間戳記|datetimeoffset|  
@@ -174,8 +173,8 @@ SSMA for DB2，在中，您可以設定引數、 資料行、 區域變數和傳
 |timestamp[\*..\*]|datetime2[\*]|  
 |urowid|UNIQUEIDENTIFIER|  
 |urowid[\*..\*]|UNIQUEIDENTIFIER|  
-|varchar[\*..\*]|varchar[\*]|  
-|varchar2[\*..\*]|varchar[\*]|  
+|varchar[\*..\*]|varchar [\*]|  
+|varchar2[\*..\*]|varchar [\*]|  
 |Xmltype|Xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>預設本機變數的類型對應  
@@ -184,74 +183,74 @@ SSMA for DB2，在中，您可以設定引數、 資料行、 區域變數和傳
 |DB2 資料類型|預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型|  
 |-----------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
 |binary_interger|ssNoversion|  
 |Blob|varbinary(max)|  
-|布林|bit|  
+|Boolean|bit|  
 |Char|char|  
-|char varying[\*..8000]|varchar[\*]|  
+|char varying [\*...8000]|varchar [\*]|  
 |char varying [8001...\*]|varchar(max)|  
-|char[\*..8000]|char[\*]|  
-|char[8001..\*]|varchar(max)|  
+|char[\*..8000]|char [\*]|  
+|char [8001...\*]|varchar(max)|  
 |字元|char|  
-|character varying[\*..8000]|varchar[\*]|  
+|可變長度字元 [\*...8000]|varchar [\*]|  
 |可變長度字元 [8001...\*]|varchar(max)|  
-|character[\*..8000]|char[\*]|  
-|character[8001..\*]|varchar(max)|  
+|character[\*..8000]|char [\*]|  
+|字元 [8001...\*]|varchar(max)|  
 |clob|varchar(max)|  
-|日期|datetime2[0]|  
+|date|datetime2[0]|  
 |dec|dec[38][0]|  
 |dec[\*..\*]|dec[\*][0]|  
 |dec[\*..\*][\*..\*]|dec[\*][\*]|  
-|Decimal|decimal[38][0]|  
+|decimal|decimal[38][0]|  
 |decimal[\*..\*]|decimal[\*][0]|  
 |decimal[\*..\*][\*..\*]|decimal[\*][\*]|  
-|雙精度|float[53]|  
-|float|float[53]|  
-|float[\*..53]|float[\*]|  
-|float[54..\*]|float[53]|  
+|雙精度|float [53]|  
+|float|float [53]|  
+|float [\*...53]|float [\*]|  
+|float[54..\*]|float [53]|  
 |int|ssNoversion|  
 |Integer|ssNoversion|  
 |integer[\*..\*]|numeric[\*][0]|  
 |長整數|varchar(max)|  
 |長資料列|varbinary(max)|  
-|長時間的原始 [\*...8000]|varbinary[\*]|  
+|長時間的原始 [\*...8000]|varbinary [\*]|  
 |長時間的原始 [8001...\*]|varbinary(max)|  
 |national char|NCHAR|  
-|national char varying [\*...4000]|nvarchar[\*]|  
+|national char varying [\*...4000]|nvarchar [\*]|  
 |national char varying [4001...\*]|nvarchar(max)|  
-|national char [\*...4000]|nchar[\*]|  
+|national char [\*...4000]|nchar [\*]|  
 |national char [4001...\*]|nvarchar(max)|  
 |國家字元集|NCHAR|  
-|國家字元集 [\*...4000]|nvarchar[\*]|  
+|國家字元集 [\*...4000]|nvarchar [\*]|  
 |國家字元集 [4001...\*]|nvarchar(max)|  
-|不同的國家字元集 [\*...4000]|nvarchar[\*]|  
+|不同的國家字元集 [\*...4000]|nvarchar [\*]|  
 |不同的國家字元集 [4001...\*]|nvarchar(max)|  
 |Nchar|NCHAR|  
-|nchar[\*..4000]|nchar[\*]|  
-|nchar[4001..\*]|nvarchar(max)|  
-|nchar 不同 [\*...4000]|nvarchar[\*]|  
+|nchar[\*..4000]|nchar [\*]|  
+|nchar [4001...\*]|nvarchar(max)|  
+|nchar 不同 [\*...4000]|nvarchar [\*]|  
 |nchar 不同 [4001...\*]|nvarchar(max)|  
-|Nclob|nvarchar(max)|  
-|Number|float[53]|  
+|nclob|nvarchar(max)|  
+|Number|float [53]|  
 |number[\*..\*]|numeric[\*]|  
 |number[\*..\*][\*..\*]|numeric[\*][\*]|  
 |Numeric|numeric[38][0]|  
 |numeric[\*..\*]|numeric[\*]|  
 |numeric[\*..\*][\*..\*]|numeric[\*][\*]|  
-|nvarchar2[\*..4000]|nvarchar[\*]|  
+|nvarchar2[\*..4000]|nvarchar [\*]|  
 |nvarchar2[4001..\*]|nvarchar(max)|  
 |pls_integer|ssNoversion|  
-|raw[\*..8000]|varbinary[\*]|  
-|raw[8001..\*]|varbinary(max)|  
-|Real|float[53]|  
+|原始 [\*...8000]|varbinary [\*]|  
+|原始 [8001...\*]|varbinary(max)|  
+|Real|float [53]|  
 |Rowid|UNIQUEIDENTIFIER|  
 |signtype|SMALLINT|  
 |Smallint|SMALLINT|  
-|string[\*..8000]|varchar[\*]|  
+|string[\*..8000]|varchar [\*]|  
 |string[8001..\*]|varchar(max)|  
-|TIMESTAMP|datetime2|  
+|timestamp|datetime2|  
 |使用本地時區的時間戳記|datetimeoffset|  
 |時區的時間戳記|datetimeoffset|  
 |使用本地時區的時間戳記 [\*...\*]|datetimeoffset[\*]|  
@@ -259,10 +258,10 @@ SSMA for DB2，在中，您可以設定引數、 資料行、 區域變數和傳
 |timestamp[\*..\*]|datetime2[\*]|  
 |urowid|UNIQUEIDENTIFIER|  
 |urowid[\*..\*]|UNIQUEIDENTIFIER|  
-|varchar[\*..8000]|varchar[\*]|  
-|varchar[8001..\*]|varchar(max)|  
-|varchar2[\*..8000]|varchar[\*]|  
-|varchar2[8001..\*]|varcha(max)|  
+|varchar[\*..8000]|varchar [\*]|  
+|varchar [8001...\*]|varchar(max)|  
+|varchar2[\*..8000]|varchar [\*]|  
+|varchar2 [8001...\*]|varcha(max)|  
 |Xmltype|Xml|  
   
 ## <a name="see-also"></a>另請參閱  

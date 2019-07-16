@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5067855-20c9-456f-8d63-f375b4297f2e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f5eab1c3bf6891f10c897966035dced2ffdc10ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db5d2cb8decde9828acd3005551717ac9f6cef32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096587"
 ---
 # <a name="create-table-statement-limitations"></a>CREATE TABLE 陳述式限制
 使用 Microsoft Access、 Microsoft Excel 或 Paradoxdriver 時，文字或二進位資料行長度未指定 （或指定為 0），資料行的長度會設定為 255。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d0aedaa1-ed24-4aa6-92c8-83b0fa8c86fb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 089af95e914c844c6fc6220146ab4a635db2b4ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 921e9bce35ce9dc2ae91afb2c4cea5badafeaf2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063427"
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>設定 Visual FoxPro ODBC Driver
 如需下載和安裝 Visual FoxPro ODBC driver 的資訊，請參閱 < [Visual FoxPro ODBC Driver](https://go.microsoft.com/fwlink/?LinkId=121318)上 MSDN 下載。  

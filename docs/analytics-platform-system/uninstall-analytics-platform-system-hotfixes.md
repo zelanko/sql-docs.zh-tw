@@ -2,19 +2,18 @@
 title: 解除安裝中的 Analytics Platform System hotfix |Microsoft Docs
 description: 解除安裝 Analytics Platform System hotfix。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5507eae7bb2f8a5ce138223a031ac4946d9f0030
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7135972201fe8cce8a43cbd3c8fe547ce40248e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62675667"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959909"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>解除安裝 Analytics Platform System hotfix 
 下列步驟說明如何解除安裝先前安裝的 Analytics Platform System hotfix。  
@@ -26,13 +25,13 @@ ms.locfileid: "62675667"
   
 -   具有權限存取管理主控台來監視設備 Analytics Platform System 登入。  
   
--   網域系統管理員帳戶登入<em>< appliance_domain ></em>**-HST01**節點。  
+-   網域系統管理員帳戶登入<em>< appliance_domain ></em> **-HST01**節點。  
   
 -   知識庫文章編號，為了讓 hotfix 解除安裝。  
   
 ## <a name="HowToUninstallPDW"></a>若要解除安裝 SQL Server PDW hotfix  
   
-1.  登入<em>< appliance_domain ></em>**-HST01**節點為網狀架構網域系統管理員。  
+1.  登入<em>< appliance_domain ></em> **-HST01**節點為網狀架構網域系統管理員。  
   
 2.  使用 [執行為系統管理員] 選項開啟命令提示字元。  
   

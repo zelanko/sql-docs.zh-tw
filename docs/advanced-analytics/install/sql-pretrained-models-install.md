@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 002713c8c3eb92a33cbb1461eaacb8a0d63a5c3f
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 78e2a544766875b03144eb85b12aacee59295a2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962870"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>安裝預先定型的機器學習服務模型在 SQL Server 上
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -78,7 +77,7 @@ R 和 Python 模型的安裝路徑，如下所示：
    PS C:\WINDOWS\system32> C:\Users\<user-name>\Downloads\Install-MLModels.ps1 MSSQLSERVER
    ```
 
-**Output**
+**輸出**
 
 連線到網際網路的 SQL Server 2017 Machine Learning 預設執行個體上使用 R 和 Python，您應該會看到類似下列的訊息。
 

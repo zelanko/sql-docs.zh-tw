@@ -2,19 +2,18 @@
 title: Master 資料庫-Parallel Data Warehouse |Microsoft Docs
 description: 深入了解平行處理資料倉儲中的 master 資料庫。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: bf07b9c27e08a49cb0866b177a0ec37fed4528a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f37c7a85baea3b41f6016a57e4f57579b427719
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960657"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Master 資料庫-平行處理資料倉儲
 SQL Server PDW master 資料庫儲存應用裝置層級登入資訊和資料庫目錄。 它是位於 [控制] 節點的 SQL Server master 資料庫。 因此，提供類似的功能與 SQL Server PDW 主要提供給 SQL Server。  

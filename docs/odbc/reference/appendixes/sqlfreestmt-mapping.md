@@ -1,5 +1,5 @@
 ---
-title: SQLFreeStmt Mapping | Microsoft Docs
+title: SQLFreeStmt 對應 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 267d95f2-4f0c-47ab-9411-5afe105215a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b12c5286522bd0f1f8fbb40f101302aaa481cb8
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: a92af35d8a1b1e98a484c69d7d2e66bf5bef3196
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086083"
 ---
 # <a name="sqlfreestmt-mapping"></a>SQLFreeStmt 對應
 當應用程式呼叫**SQLFreeStmt**具有*選項*透過 ODBC SQL_DROP 引數*3.x*驅動程式，會呼叫  

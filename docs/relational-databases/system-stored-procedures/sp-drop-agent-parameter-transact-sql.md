@@ -1,5 +1,5 @@
 ---
-title: sp_drop_agent_parameter (Transact-SQL) | Microsoft Docs
+title: sp_drop_agent_parameter & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7abf2a3c2e9eebcd21a60beb72e650ad534cc80d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8356ee01b0c14a9cb87542d750a93ea537fac5cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016538"
 ---
 # <a name="spdropagentparameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ## <a name="arguments"></a>引數  
 `[ @profile_id = ] profile_id` 是，參數是要卸除的設定檔的識別碼。 *profile_id*已**int**，沒有預設值。  
   
-`[ @parameter_name = ] 'parameter_name'` 是要卸除之參數的名稱。 *parameter_name*已**sysname**，預設值是**%**。 如果**%**，為指定的設定檔的所有參數都會被卸都除。  
+`[ @parameter_name = ] 'parameter_name'` 是要卸除之參數的名稱。 *parameter_name*已**sysname**，預設值是 **%** 。 如果 **%** ，為指定的設定檔的所有參數都會被卸都除。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

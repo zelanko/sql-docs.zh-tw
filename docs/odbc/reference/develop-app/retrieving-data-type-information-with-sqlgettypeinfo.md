@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c69113e4bb5457cb997f832179e5c1aab2841d82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4f336a7ebfaf5e76ac464944900231c452809f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199099"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020554"
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>使用 SQLGetTypeInfo 擷取資料類型資訊
 ODBC 從基礎 SQL 資料類型對應，以 ODBC 類型識別碼為估計值，因為提供的函式 (**SQLGetTypeInfo**) 透過讓驅動程式可以完整地描述每個資料來源中的 SQL 資料類型。 此函式會傳回結果集，其中每個資料列描述單一資料類型，例如名稱、 型別識別項、 有效位數、 小數位數和 null 屬性的特性。  

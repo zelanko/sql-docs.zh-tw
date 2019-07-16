@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 81cb60413aaf6846e2aed429464aae6b92a548be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa6fde13ccf4941e61ec29c9a257aeff9ee214eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095735"
 ---
 # <a name="mapping-system-tables-to-system-views-transact-sql"></a>將系統資料表對應至系統檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

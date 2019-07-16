@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 22abaf8785b1509b0e992d99e5e0f57adb6a1e00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 909406b39a8acdd5e598b56b300124abf7bb1170
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964370"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>DataFactory 物件、Query 方法和 CreateObject 方法範例 (VBScript)
 > [!IMPORTANT]
@@ -140,7 +139,7 @@ to bring back a Recordset. </H4>
 ## <a name="see-also"></a>另請參閱  
  [CreateObject 方法 (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+ [DataSpace 物件 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [Query 方法 (RDS)](../../../ado/reference/rds-api/query-method-rds.md)
 
 

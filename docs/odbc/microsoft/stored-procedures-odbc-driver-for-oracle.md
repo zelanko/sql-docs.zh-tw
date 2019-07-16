@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: de0e1214-b9d8-4afc-8fc0-e8b9c4c648f6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 54379bde808a5283f637b8b308cd86cbb09561e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cef0c3737dbca640d6b842fc495c14c925c35723
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948811"
 ---
 # <a name="stored-procedures-odbc-driver-for-oracle"></a>預存程序 (ODBC Driver for Oracle)
 > [!IMPORTANT]  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2cdb71a-f301-45b3-878c-382356c93b4b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 84a8c5aa7fa12ea0763dc47635c4c6fbbf772a42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22825425e7f3eb18994e37efa996fcd784a257f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63272773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084545"
 ---
 # <a name="project-settings-gui-db2tosql"></a>專案設定 (GUI) (DB2ToSQL)
 GUI 專案設定可讓您設定資料顯示的方式**資料** 索引標籤，以及是否要顯示轉換後的評估報告，或不。  

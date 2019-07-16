@@ -2,19 +2,18 @@
 title: 設定存取 Azure Blob 儲存體中的外部資料的 PolyBase |Microsoft Docs
 description: 說明如何設定連接至外部 Hadoop 的平行處理資料倉儲的 PolyBase。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7bbf2dface759da63bd6b9845f4e62321b1cbe76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82c57ef57a01cabf2786c71fc53aed3660289451
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63027519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960282"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>設定 PolyBase 以存取 Azure Blob 儲存體中的外部資料
 
@@ -45,7 +44,7 @@ ms.locfileid: "63027519"
    GO
    ```  
 
-2. 重新啟動使用服務狀態] 頁面上的 APS 地區[設備 Configuration Manager](launch-the-configuration-manager.md)。
+2. 重新啟動使用服務狀態 頁面上的 APS 地區[設備 Configuration Manager](launch-the-configuration-manager.md)。
   
 ## <a name="configure-an-external-table"></a>設定外部資料表
 
@@ -173,7 +172,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="view-polybase-objects-in-ssdt"></a>在 SSDT 中的檢視 PolyBase 物件  
 
-在 SQL Server Data Tools，外部資料表會顯示在個別的資料夾**外部資料表**。 外部資料來源和外部檔案格式會在 [外部資源] 下方的子資料夾中。  
+在 SQL Server Data Tools，外部資料表會顯示在個別的資料夾**外部資料表**。 外部資料來源和外部檔案格式會在 [外部資源]  下方的子資料夾中。  
   
 ![在 SSDT 中的 PolyBase 物件](media/polybase/external-tables-datasource.png)  
 

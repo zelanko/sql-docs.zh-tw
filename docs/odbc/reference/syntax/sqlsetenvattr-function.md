@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0343241c-4b15-4d4b-aa2b-2e8ab5215cd2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7bf0269c76be272b30e055ae11e53940fc4873f1
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 92d3689c91d301a95427862f464738090c430619
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793149"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039723"
 ---
 # <a name="sqlsetenvattr-function"></a>SQLSetEnvAttr 函數
 **合規性**  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a8f9b0c-8452-4e95-a561-cfc4b7165c5e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 74974451ffcc04f8ea2f63bfdc84c1cbc9ac33a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf2f7602d1435b4a4075c437ba7f403b93aeed5e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697174"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964400"
 ---
 # <a name="datacontrol-object-rds-properties-methods-and-events"></a>DataControl 物件 (RDS) 屬性、方法和事件
 > [!IMPORTANT]
@@ -70,7 +69,7 @@ ms.locfileid: "66697174"
   
  [SubmitChanges 方法 (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  [onError 事件 (RDS)](../../../ado/reference/rds-api/onerror-event-rds.md)  
   
  [onReadyStateChange 事件 (RDS)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)  

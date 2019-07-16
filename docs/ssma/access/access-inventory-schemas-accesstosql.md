@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068949"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Access 清查結構描述 (AccessToSQL)
 下列各節描述資料表所建立的 SSMA 中，當您匯出要存取結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

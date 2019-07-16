@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0805246d5b88138cfa97019d1e0cd524c82456c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cb2f4196737cceec2f60684de1b7409f5e383a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083387"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>連線到 Sybase (SybaseToSQL)
 使用**連接到 Sybase**對話方塊連接到您想要移轉的 Sybase Adaptive Server Enterprise (ASE) 執行個體。  
@@ -52,7 +51,7 @@ ms.locfileid: "63061001"
   
     |設定|Sybase 12.5 參數|Sybase 15 參數|  
     |-----------|-------------------------|-----------------------|  
-    |伺服器名稱|伺服器名稱|[伺服器]|  
+    |伺服器名稱|伺服器名稱|伺服器|  
     |通訊埠|伺服器連接埠位址|通訊埠|  
     |[使用者名稱]|使用者識別碼|使用者識別碼|  
     |[密碼]|[密碼]|[密碼]|  
@@ -71,7 +70,7 @@ ms.locfileid: "63061001"
     |設定|Sybase 12.5/15 參數|  
     |-----------|-----------------------------|  
     |驅動程式名稱|驅動程式|  
-    |伺服器名稱|[伺服器]|  
+    |伺服器名稱|伺服器|  
     |使用者名稱|uid|  
     |[密碼]|pwd|  
     |通訊埠編號|通訊埠|  
@@ -84,7 +83,7 @@ ms.locfileid: "63061001"
   
     |設定|Sybase 12.5/15 參數|  
     |-----------|-----------------------------|  
-    |伺服器名稱|[伺服器]|  
+    |伺服器名稱|伺服器|  
     |使用者名稱|uid|  
     |[密碼]|pwd|  
     |通訊埠編號|通訊埠|  

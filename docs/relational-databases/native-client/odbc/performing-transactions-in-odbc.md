@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 378a8007d3bf00b26c285c4a7d51b3203b1d6e86
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f076622b30d1f1102bac8ff6c89ecf2e36a96860
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51655761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913158"
 ---
 # <a name="performing-transactions-in-odbc"></a>在 ODBC 中執行交易
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

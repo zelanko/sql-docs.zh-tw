@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7d6981879f08b65c334eae9cd81e73223bc353bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5868120af1e98c4b2f3be78f2cf7927df53b42d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072657"
 ---
 # <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,10 +67,10 @@ sp_addlogin [ @loginame = ] 'login'
  這是登入的預設語言。 *語言*已**sysname**，預設值是 NULL。 如果*語言*未指定，預設值*語言*，新登入設定為目前的伺服器的預設語言。  
   
  [ @sid=] '*sid*'  
- 這是安全性識別碼 (SID)。 *sid*已**varbinary(16)**，預設值是 NULL。 如果*sid*是 NULL，系統就會產生新的登入的 SID。 使用儘管**varbinary**資料型別，NULL 以外的值必須剛好為 16 個位元組的長度，且必須尚未存在。 指定*sid*非常有用，例如，當您要編寫指令碼或移動[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從一部伺服器的登入，到另一個您想要在不同伺服器上具有相同的 SID 的登入。  
+ 這是安全性識別碼 (SID)。 *sid*已**varbinary(16)** ，預設值是 NULL。 如果*sid*是 NULL，系統就會產生新的登入的 SID。 使用儘管**varbinary**資料型別，NULL 以外的值必須剛好為 16 個位元組的長度，且必須尚未存在。 指定*sid*非常有用，例如，當您要編寫指令碼或移動[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從一部伺服器的登入，到另一個您想要在不同伺服器上具有相同的 SID 的登入。  
   
  [ @encryptopt=] '*encryption_option*'  
- 指定以明碼方式傳遞密碼，或以純文字密碼的雜湊來傳遞密碼。 請注意，這裡並不進行任何加密。 這項討論用到 "encrypt" 一字，是為了與舊版相容。 如果傳入純文字密碼，就會雜湊這個密碼。 這項雜湊會儲存起來。 *encryption_option*已**varchar （20)**，而且可以是下列值之一。  
+ 指定以明碼方式傳遞密碼，或以純文字密碼的雜湊來傳遞密碼。 請注意，這裡並不進行任何加密。 這項討論用到 "encrypt" 一字，是為了與舊版相容。 如果傳入純文字密碼，就會雜湊這個密碼。 這項雜湊會儲存起來。 *encryption_option*已**varchar （20)** ，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -144,6 +143,6 @@ EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x
  [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_helpuser &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [xp_logininfo &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
+ [xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

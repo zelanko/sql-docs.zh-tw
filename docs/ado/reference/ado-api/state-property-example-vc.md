@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2da3fc845b5144cb7b2a0ae6a2cbfc718e4f3c4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dad78c3754fb55aa83c50d467920a611db277f13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930840"
 ---
 # <a name="state-property-example-vc"></a>State 屬性範例 (VC++)
 這個範例會使用[狀態](../../../ado/reference/ado-api/state-property-ado.md)屬性，以顯示一則訊息，而非同步連接所開啟，並執行非同步命令。  

@@ -9,14 +9,13 @@ ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c667b76764dc4ea6c6409d0ea5a55d16ae68c656
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 0a3b5c8d98b2c7bbfa62641b89b0bfcb031a6c02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419758"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067247"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>高可用性/災害復原的 SQL Server Native Client 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "52419758"
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 進行連接  
  在連接到 SQL Server 2012 可用性群組接聽程式或 SQL Server 2012 容錯移轉叢集執行個體時，永遠指定 **MultiSubnetFailover=Yes**。 **MultiSubnetFailover**啟用更快速的容錯移轉的所有可用性群組和容錯移轉叢集 SQL Server 2012 中執行個體，並大幅縮短單一和多重子網路 Alwayson 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會平行嘗試連接。 在子網路容錯移轉期間，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會積極重試 TCP 連接。  
   
- **MultiSubnetFailover** 連接屬性指示，應用程式正在可用性群組或容錯移轉叢集執行個體中部署，而且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會透過嘗試連接到所有 IP 位址，嘗試連接到主要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的資料庫。 當**MultiSubnetFailover = Yes**指定連線，用戶端重試 TCP 連接的速度比作業系統的預設 TCP 重新傳輸間隔快。 這可讓 「 Always On 可用性群組或 Alwayson 容錯移轉叢集執行個體，在容錯移轉之後的更快重新連線，而且是適用於單一-和多重子網路可用性群組和容錯移轉叢集執行個體。  
+ **MultiSubnetFailover** 連接屬性指示，應用程式正在可用性群組或容錯移轉叢集執行個體中部署，而且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會透過嘗試連接到所有 IP 位址，嘗試連接到主要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的資料庫。 為連接指定 **MultiSubnetFailover=Yes** 時，用戶端會重試 TCP 連接，其速度比作業系統的預設 TCP 重新傳輸間隔更快。 這可讓 「 Always On 可用性群組或 Alwayson 容錯移轉叢集執行個體，在容錯移轉之後的更快重新連線，而且是適用於單一-和多重子網路可用性群組和容錯移轉叢集執行個體。  
   
  如需連接字串關鍵字的詳細資訊，請參閱[搭配 SQL Server Native Client 使用連接字串關鍵字](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "52419758"
   
 -   連接到設定超過 64 個 IP 位址的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體會導致連接失敗。  
   
--   使用的應用程式的行為**MultiSubnetFailover**連接屬性不會影響基礎的驗證類型：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication、Kerberos Authentication 或 Windows Authentication。  
+-   使用的應用程式的行為**MultiSubnetFailover**連接屬性不會影響基礎的驗證類型：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證、 Kerberos 驗證或 Windows 驗證。  
   
 -   您可以增加 **loginTimeout** 的值，以容納容錯移轉時間並減少應用程式連接重試次數。  
   
@@ -131,7 +130,7 @@ ms.locfileid: "52419758"
  **IDBProperties::SetProperties**  
  若要設定 **ApplicationIntent** 屬性值，請呼叫 **IDBProperties::SetProperties**，其傳入值為 "**ReadWrite**" 或 "**ReadOnly**" 的 **SSPROP_INIT_APPLICATIONINTENT** 屬性，或是值包含 "**ApplicationIntent=ReadOnly**" 或 "**ApplicationIntent=ReadWrite**" 的 **DBPROP_INIT_PROVIDERSTRING** 屬性。  
   
- 您可以在 [資料連結屬性] 對話方塊中，[全部] 索引標籤的 [應用程式的意圖屬性] 欄位內指定應用程式意圖。  
+ 您可以在 [資料連結屬性]  對話方塊中，[全部] 索引標籤的 [應用程式的意圖屬性] 欄位內指定應用程式意圖。  
   
  當建立隱含連接時，隱含連接將會使用父連接的應用程式意圖設定。 同樣地，從相同資料來源建立的多個工作階段將會繼承資料來源的應用程式意圖設定。  
   

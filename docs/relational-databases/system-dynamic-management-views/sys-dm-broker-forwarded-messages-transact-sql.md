@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5576376d-6364-417a-8475-aa770e060845
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4ce05635464cc9b02e419c4f0a5b162a14042d51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87f471a91aad067dd1662f243cdbafd73d335979
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099149"
 ---
 # <a name="sysdmbrokerforwardedmessages-transact-sql"></a>sys.dm_broker_forwarded_messages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

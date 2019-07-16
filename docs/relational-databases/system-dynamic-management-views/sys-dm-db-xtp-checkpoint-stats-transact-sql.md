@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43474055a9dd9d5f8b71a0c2ec008b02f4b847ed
-ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
+ms.openlocfilehash: 84cbfafdba3bca9b06f250ed9996f0a87e71a18c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54211079"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026863"
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -43,9 +42,9 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 本質上不同於較新版本，在主題中較低討論[SQL Server 2014](#bkmk_2014)。**
   
 ## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本  
- 下表描述的資料行`sys.dm_db_xtp_checkpoint_stats`，與開頭**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**。  
+ 下表描述的資料行`sys.dm_db_xtp_checkpoint_stats`，與開頭 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|type|描述|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|控制器所看到的最後一個 LSN。|  
 |end_of_log_lsn|**numeric(38)**|記錄檔結束 LSN。|  
@@ -85,9 +84,9 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |bytes_of_large_data_serialized|**bigint**|已序列化的資料量。 |  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- 下表描述的資料行`sys.dm_db_xtp_checkpoint_stats`，如**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**。  
+ 下表描述的資料行`sys.dm_db_xtp_checkpoint_stats`，如 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|type|描述|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|執行緒目前的記錄序號 (LSN) 和記錄檔結束之間的記錄位元組數目。|  
 |total_log_blocks_processed|**bigint**|伺服器啟動後處理的記錄區塊總數。|  

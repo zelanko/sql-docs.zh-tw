@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7e69aa9e3da29abe054aaf272c5fe3ed12172a4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 411ae301c2f0ce858b7273c6bb721269f709b5c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63309137"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098480"
 ---
 # <a name="mdx-data-definition---create-cell-calculation"></a>MDX 資料定義 - CREATE CELL CALCULATION
 

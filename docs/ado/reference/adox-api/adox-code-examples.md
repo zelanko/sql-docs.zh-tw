@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 438e4369-f7e8-4dca-a709-dd501a3ca83f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 46f354620fce014191c982dd3a4be02b32e87dee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ac4e07dd4721cf2ae38f480563350fa0fbbaf51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718987"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952078"
 ---
 # <a name="adox-code-examples"></a>ADOX 程式碼範例
 您可以使用下列程式碼範例，了解如何使用 ADOX 物件、 方法、 屬性和事件。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7d39dcfa1d3351434a6e35b1b74f7551648f2281
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2689a75ed48e2affbe0c34bccb96014447cd7fae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906715"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>建立連結屬性 (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "66354359"
 > [!NOTE]  
 >  當使用者輸入連結屬性的值時，字串開頭必須為 **https://** ，否則將會顯示一個錯誤。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  

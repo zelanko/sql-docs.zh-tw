@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 39130be0e6be31700f70002726f3aaf674aa4c82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 188a95f985ac1d578bca8c7e10ac4c4054c935c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925959"
 ---
 # <a name="batch-mode"></a>批次模式
 批次模式的作用中時**LockType**屬性設定為**Adlockpessimistic**和批次更新的提供者支援。 無法使用資料指標位置根據特定鎖定類型設定。 比方說，封閉式鎖定類型不適用於何時**CursorLocation**設為**adUseClient**。 相反地，提供者無法支援批次的開放式鎖定，當資料指標位置是在伺服器上。 您應該使用批次使用 keyset 或 static 資料指標更新。  

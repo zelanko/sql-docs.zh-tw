@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5254b7bb3744e06dae300f33ff1b612b4aca2341
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 676f9fb526996e96b27bb758a7343c86afaac460
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537264"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053647"
 ---
 # <a name="sqlputdata-function"></a>SQLPutData 函數
 **合規性**  

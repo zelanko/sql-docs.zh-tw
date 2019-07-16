@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf95978f-a2c5-4325-8606-dbd4e88741b8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a3d4af19da0c5d1a6724a0e7beb87fa4b5c8661b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22c25126106c6b93d779b6c494af0bff7b5b08af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074558"
 ---
 # <a name="merge-conflicts-mds-add-in-for-excel"></a>合併衝突 (適用於 Excel 的 MDS 增益集)
 

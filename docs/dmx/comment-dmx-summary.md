@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: be2fc3e82e1da18a12af4bc4756811225e85a280
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 241ab17847a040e33c1fdb5e116e39fbc535d16d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62707258"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073093"
 ---
 # <a name="---comment-dmx-summary"></a>-（註解） (DMX) 摘要
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,6 +42,6 @@ ms.locfileid: "62707258"
  [斜線星形&#40;註解&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)   
  [雙斜線&#40;註解&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   
  [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [運算子&#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

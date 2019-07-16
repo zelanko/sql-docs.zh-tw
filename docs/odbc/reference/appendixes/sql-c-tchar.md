@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e27c8bd-ee15-4ce9-b70a-34cf1bf16f4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 42afb911dda26cbda53f9cd14c883abb3775b94b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68a03de54a8a5f63a994578d64c6bce5a1279138
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057043"
 ---
 # <a name="sqlctchar"></a>SQL_C_TCHAR
 SQL_C_TCHAR 型別識別項無法實際識別的資料類型;它是存在於標頭檔的 Unicode 轉換巨集。 它會根據設定的 unicode 取代 SQL_C_CHAR 或 SQL_C_WCHAR **#define**。 它可用於應用程式編譯為 ANSI 和 Unicode 應用程式的字元資料傳輸。

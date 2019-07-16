@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 15a5b859b260288cccad5e0ed01640c3e070d6fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e8704a01d810477fd0359196cb622984da357cf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946386"
 ---
 # <a name="primary-expressions-xquery"></a>主要運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ Go
   
  `<a>I don't know</a>`  
   
- 內建布林函數**true （)** 並**false （)**，可用來代表布林值，如下列範例所示。  
+ 內建布林函數**true （)** 並**false （)** ，可用來代表布林值，如下列範例所示。  
   
 ```  
 DECLARE @var XML  
@@ -157,7 +156,7 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
 ## <a name="context-item-expressions"></a>內容項目運算式  
  內容項目是路徑運算式內容中目前所處理的項目。 會在具有文件節點的非 NULL XML 資料類型執行個體中初始化它。 它也可以變更 nodes （） 方法，XPath 運算式的內容或 [] 述詞中。  
   
- 內容項目是由包含點 (.) 的運算式所傳回的內容項目。 例如，下列查詢會評估每個元素 <`a`>，是否存在 `attr` 屬性。 如果該屬性存在，就會傳回元素。 請注意，在述詞中的條件指定了單一句號所指定的內容節點。  
+ 內容項目是由包含點 (.) 的運算式所傳回的內容項目。 例如，下列查詢會評估每個項目 <`a`> 屬性是否存在`attr`。 如果該屬性存在，就會傳回元素。 請注意，在述詞中的條件指定了單一句號所指定的內容節點。  
   
 ```  
 DECLARE @var XML  

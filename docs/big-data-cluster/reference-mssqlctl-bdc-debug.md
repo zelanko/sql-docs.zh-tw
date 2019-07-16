@@ -5,17 +5,16 @@ description: Mssqlctl bdc 偵錯 命令的參考文件。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 20257039a40594cd592bcc4d4f6050027d8858ea
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 9e7fc8e54a1473803dbeacb9c671b060b8ff8b07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958109"
 ---
 # <a name="mssqlctl-bdc-debug"></a>mssqlctl bdc 偵錯
 
@@ -27,8 +26,8 @@ ms.locfileid: "67728575"
 |     |     |
 | --- | --- |
 [mssqlctl bdc debug copy-logs](#mssqlctl-bdc-debug-copy-logs) | 複製記錄檔。
-[mssqlctl bdc debug dump](#mssqlctl-bdc-debug-dump) | 觸發程序記錄傾印。
-## <a name="mssqlctl-bdc-debug-copy-logs"></a>mssqlctl bdc debug copy-logs
+[mssqlctl bdc 偵錯傾印](#mssqlctl-bdc-debug-dump) | 觸發程序記錄傾印。
+## <a name="mssqlctl-bdc-debug-copy-logs"></a>mssqlctl bdc 偵錯複製記錄
 從巨量資料叢集複製偵錯記錄檔-kube 設定需要您的系統上。
 ```bash
 mssqlctl bdc debug copy-logs --namespace -n 

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 56793e9c-aa90-452e-88c6-d9b799239888
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 87392911d8fa393777e1b2d7b9e5bec1c416e939
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06ed4b4820ce7a6e6483df6efd1de2e8fbadf954
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904460"
 ---
 # <a name="sysresourcegovernorresourcepools-transact-sql"></a>sys.resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47755826"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|資源集區的唯一識別碼。 不可為 Null。|  
-|NAME|**sysname**|資源集區的名稱。 不可為 Null。|  
+|name|**sysname**|資源集區的名稱。 不可為 Null。|  
 |min_cpu_percent|**int**|當 CPU 出現瓶頸時，為資源集區中的所有要求保證的平均 CPU 頻寬。 不可為 Null。|  
 |max_cpu_percent|**int**|當 CPU 出現瓶頸時，針對資源集區中的所有要求所允許的最大平均 CPU 頻寬。 不可為 Null。|  
 |min_memory_percent|**int**|為資源集區中的所有要求保證的記憶體數量。 這不會與其他資源集區共用。 不可為 Null。|  
@@ -53,7 +52,7 @@ ms.locfileid: "47755826"
 ## <a name="see-also"></a>另請參閱  
  [Resource Governor 目錄檢視&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
  [sys.dm_resource_governor_resource_pools &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
- [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
+ [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [sys.resource_governor_external_resource_pools &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)  
   
   

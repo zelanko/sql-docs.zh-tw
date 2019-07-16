@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6570694bc38eb6f32f660006f1ed1b6797793b7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6eb4b54df98cfbf297e6347dac336aa7405d1347
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006297"
 ---
 # <a name="comment-mdx-double-slash"></a>註解 MDX 雙斜線
 

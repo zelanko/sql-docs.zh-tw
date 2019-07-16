@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8efe8bb4-face-4608-83f4-cc7c6e9faf31
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c87d585e834e7b6c726d4c2e55856ccaead296d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6098b0a94947ddca1c35f91ed02469c7d23d3be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042888"
 ---
 # <a name="data-collector-functions--transact-sql"></a>資料收集器函數 & Amp;#40;transact-SQL&AMP;#41
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

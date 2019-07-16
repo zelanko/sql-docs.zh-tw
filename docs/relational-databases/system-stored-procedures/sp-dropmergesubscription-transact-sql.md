@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1b360eed1619317e7ca3092bc47da086c520bf04
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8bf38ef67089c65d53bedcb56afd81de3e21a413
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933876"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,11 +48,11 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @subscriber_db = ] 'subscriber_db'` 是訂閱資料庫的名稱。 *subscription_database*已**sysname**，預設值是 NULL。  
   
-`[ @subscription_type = ] 'subscription_type'` 是訂用帳戶的類型。 *subscription_type*已**nvarchar(15)**，而且可以是下列值之一。  
+`[ @subscription_type = ] 'subscription_type'` 是訂用帳戶的類型。 *subscription_type*已**nvarchar(15)** ，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**all**|發送、提取和匿名訂閱|  
+|**所有**|發送、提取和匿名訂閱|  
 |**匿名**|匿名訂閱。|  
 |**push**|發送訂閱。|  
 |**pull**|提取訂閱。|  
@@ -78,8 +77,8 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="see-also"></a>另請參閱  
  [刪除發送訂閱](../../relational-databases/replication/delete-a-push-subscription.md)   
  [刪除提取訂閱](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [sp_addmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

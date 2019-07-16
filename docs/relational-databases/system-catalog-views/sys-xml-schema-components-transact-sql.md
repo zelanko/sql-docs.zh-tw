@@ -1,5 +1,5 @@
 ---
-title: sys.xml_schema_components (Transact-SQL) | Microsoft Docs
+title: sys.xml_schema_components (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,13 +19,12 @@ ms.assetid: 70142d3a-f8b5-4ee2-8287-3935f0f67aa2
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 7066592f665309cfbe476c3ff8f05ab57306deef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b9ab66e0a25067440a496c6c5eb04b5d8b61e64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945918"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039286"
 ---
 # <a name="sysxmlschemacomponents-transact-sql"></a>sys.xml_schema_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +40,9 @@ ms.locfileid: "64945918"
 |**name**|**nvarchar**<br /><br /> **(4000)**|XML 結構描述元件的唯一名稱。 如果元件未命名，則為 NULL。|  
 |**symbol_space**|**char(1)**|這個符號名稱是唯一的空間將會根據**種類**:<br /><br /> N = 無<br /><br /> T = 類型<br /><br /> E = 元素<br /><br /> M = 模型群組<br /><br /> A = 屬性<br /><br /> G = 屬性群組|  
 |**symbol_space_desc**|**nvarchar**<br /><br /> **(60)**|描述的空間，這個符號名稱是唯一的根據**種類**:<br /><br /> 無<br /><br /> TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP|  
-|**kind**|**char(1)**|XML 結構描述元件的種類。<br /><br /> N = 任何類型 (特殊內建元件)<br /><br /> Z = 任何簡單類型 (特殊內建元件)<br /><br /> P = 基本類型 (內建類型)<br /><br /> S = 簡單類型<br /><br /> L = 清單類型<br /><br /> U = 聯集類型<br /><br /> C = 複雜簡單類型 (從「簡單」衍生)<br /><br /> K = 複雜類型<br /><br /> E = 元素<br /><br /> M = 模型群組<br /><br /> W = 元素萬用字元<br /><br /> A = 屬性<br /><br /> G = 屬性群組<br /><br /> V = 屬性萬用字元|  
+|**種類**|**char(1)**|XML 結構描述元件的種類。<br /><br /> N = 任何類型 (特殊內建元件)<br /><br /> Z = 任何簡單類型 (特殊內建元件)<br /><br /> P = 基本類型 (內建類型)<br /><br /> S = 簡單類型<br /><br /> L = 清單類型<br /><br /> U = 聯集類型<br /><br /> C = 複雜簡單類型 (從「簡單」衍生)<br /><br /> K = 複雜類型<br /><br /> E = 元素<br /><br /> M = 模型群組<br /><br /> W = 元素萬用字元<br /><br /> A = 屬性<br /><br /> G = 屬性群組<br /><br /> V = 屬性萬用字元|  
 |**kind_desc**|**nvarchar**<br /><br /> **(60)**|XML 結構描述元件種類的描述：<br /><br /> ANY_TYPE<br /><br /> ANY_SIMPLE_TYPE<br /><br /> PRIMITIVE_TYPE<br /><br /> SIMPLE_TYPE<br /><br /> LIST_TYPE<br /><br /> UNION_TYPE<br /><br /> COMPLEX_SIMPLE_TYPE<br /><br /> COMPLEX_TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ELEMENT_WILDCARD<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP<br /><br /> ATTRIBUTE_WILDCARD|  
-|**derivation**|**char(1)**|衍生類型的衍生方法：<br /><br /> N = 無 (不衍生)<br /><br /> X = 延伸<br /><br /> R = 限制<br /><br /> S = 替代|  
+|**衍生**|**char(1)**|衍生類型的衍生方法：<br /><br /> N = 無 (不衍生)<br /><br /> X = 延伸<br /><br /> R = 限制<br /><br /> S = 替代|  
 |**derivation_desc**|**nvarchar**<br /><br /> **(60)**|衍生類型之衍生方法的描述：<br /><br /> 無<br /><br /> EXTENSION<br /><br /> RESTRICTION<br /><br /> SUBSTITUTION|  
 |**base_xml_component_id**|**int**|從中衍生這個元件的元件識別碼。 如果沒有，則為 NULL。|  
 |**scoping_xml_component_id**|**int**|範圍元件的唯一識別碼。 如果沒有 (全域範圍)，則為 NULL。|  

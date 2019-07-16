@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f82087cc2549871147d0a85d6c36e9d8d211979
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 429075f01018abbe39b13f46b79a30aa95c5c2db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097857"
 ---
 # <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "63013485"
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|與節點相關聯的唯一數值識別碼。 此檢視的索引鍵。|跨相應放大叢集，無論何種類型是唯一的。|  
 |type|**nvarchar(32)**|節點型別。|' COMPUTE'、 'HEAD'|  
-|NAME|**nvarchar(32)**|節點的邏輯名稱。|任何適當的長度的字串。|  
+|name|**nvarchar(32)**|節點的邏輯名稱。|任何適當的長度的字串。|  
 |address|**nvarchar(32)**|此節點的 P 位址。|IP 位址範圍|  
   
 ## <a name="see-also"></a>另請參閱  

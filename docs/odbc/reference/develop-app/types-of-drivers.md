@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 08c1c9b4338502f20e5f99885d371d713971aa38
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: ea99ec6a5b0a76ce0647e3681a4cf919d3f086b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087768"
 ---
 # <a name="types-of-drivers"></a>驅動程式的類型
 ODBC 驅動程式可以分類如下：  

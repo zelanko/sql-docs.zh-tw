@@ -7,13 +7,12 @@ ms.date: 10/29/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 8d701d9e8595eee3a583e913baabc2148af214fe
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 4fd41ebb8f486b6117ba3e99c080566771bd4a63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963147"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>監視 SQL Server Machine Learning 服務使用動態管理檢視 (Dmv)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "67681608"
 
 監視 SQL Server 中的機器學習工作負載時，可以使用下列動態管理檢視。 若要查詢 Dmv，您需要`VIEW SERVER STATE`執行個體上的權限。
 
-| 動態管理檢視 | 類型 | 描述 |
+| 動態管理檢視 | type | 描述 |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | 執行 | 逐資料列傳回正在執行外部指令碼的每個使用中背景工作帳戶。 |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | 執行 | 逐資料列傳回各種類型的外部指令碼要求。 |
@@ -195,7 +194,7 @@ FROM sys.dm_os_sys_info;
 | 「資料行」 | 描述 |
 |--------|-------------|
 | physical_memory_kb | 在電腦上的實體記憶體總數量。 |
-| committed_kb | 記憶體管理員中的千位元組 (KB) 中認可的記憶體。 不包含記憶體管理員中的保留記憶體。 |
+| committed_kb&lt | 記憶體管理員中的千位元組 (KB) 中認可的記憶體。 不包含記憶體管理員中的保留記憶體。 |
 | external_pool_peak_memory_kb | 最大記憶體總和使用，以 kb 為單位，所有外部資源集區。 |
 
 ## <a name="memory-configuration"></a>記憶體組態
@@ -223,7 +222,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 | 「資料行」 | 描述 |
 |--------|-------------|
-| NAME | 外部資源集區或 SQL Server 的名稱。 |
+| name | 外部資源集區或 SQL Server 的名稱。 |
 | max_memory_percent | SQL Server 或外部資源集區可用的記憶體上限。 |
 
 ## <a name="resource-pools"></a>資源集區
@@ -278,7 +277,7 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 | 「資料行」 | 描述 |
 |--------|-------------|
 | 套件 | 已安裝封裝的名稱。 |
-| 版本 | 封裝的版本。 |
+| Version | 封裝的版本。 |
 | 相依 | 列出已安裝的套件相依的套件。 |
 | 使用權 | 已安裝套件的授權。 |
 | LibPath | 您可以在其中找到封裝的目錄。 |
@@ -304,7 +303,7 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 | 「資料行」 | 描述 |
 |--------|-------------|
 | 套件 | 已安裝封裝的名稱。 |
-| 版本 | 封裝的版本。 |
+| Version | 封裝的版本。 |
 | Location | 您可以在其中找到封裝的目錄。 |
 
 ## <a name="next-steps"></a>後續步驟

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4a423404a8f5db4e20331c3b187365a889bea48a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f3c989626f36c003937723869b5e17d1a405ea9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63261823"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908860"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>專案設定 (移轉) (MySQLToSQL)
 [移轉] 頁面**專案設定**對話方塊包含自訂如何 SSMA 會遷移資料從 MySQL 到 SQL Server 的設定。  
@@ -26,7 +25,7 @@ ms.locfileid: "63261823"
   
 -   若要指定目前的專案中，設定**工具**功能表上，選取**專案設定**，按一下 **一般**底部的左窗格中，然後按一下  **移轉**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 ### <a name="bulk-copy"></a>大量複製  
   

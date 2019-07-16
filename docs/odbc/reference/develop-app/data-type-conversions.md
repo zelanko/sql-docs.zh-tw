@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 84710ffd69ea377c979adf94af1394d8436ef10b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 590bd488ae87e8e871837c3055a3225794850d00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640473"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077009"
 ---
 # <a name="data-type-conversions"></a>資料類型轉換
 資料可從一種類型中轉換到另一個，在其中一個四次： 當資料傳輸從一個應用程式變數到另一個 (C 到 C)，當應用程式變數中的資料傳送至陳述式參數 (C 到 SQL) 中傳回結果集資料行中的資料時應用程式變數 (SQL 到 C) 和資料時從一個資料來源的資料行傳送至另一個 (SQL to SQL)。  

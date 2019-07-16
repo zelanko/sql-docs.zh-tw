@@ -2,19 +2,18 @@
 title: 設定 WSUS-Analytics Platform System |Microsoft Docs
 description: 這些指示會引導您完成使用 Windows Server Update Services (WSUS) 組態精靈設定 WSUS Analytics Platform System 的步驟。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16dc05500964bb37e3252edf81aff85042b7abdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63134770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961129"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Analytics Platform System 中設定 Windows Server Update Services (WSUS)
 這些指示會引導您完成使用 Windows Server Update Services (WSUS) 組態精靈設定 WSUS Analytics Platform System 的步驟。 您需要將 WSUS 設定，才能將軟體更新套用至應用裝置。 VMM 虛擬機器的應用裝置上已安裝 WSUS。  
@@ -167,7 +166,7 @@ ms.locfileid: "63134770"
   
 12. 完成。  
   
-    按一下 **[完成]** 。  
+    按一下 [ **完成**]。  
   
 ## <a name="bkmk_WSUSGroup"></a>群組在 WSUS 中的應用裝置伺服器  
 之後您可以設定 WSUS 的 Analytics Platform System 下, 一個步驟是設備伺服器分組。 將所有的設備伺服器新增至群組，WSUS 都將能夠將軟體更新套用至應用裝置中的所有伺服器。  

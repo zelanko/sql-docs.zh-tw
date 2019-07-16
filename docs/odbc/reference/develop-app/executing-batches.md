@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 53e1afcc780ff06d1d453f94deac984163099444
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 84d3cf65284d767d437987c8ff2b21793466106e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248275"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901263"
 ---
 # <a name="executing-batches"></a>執行批次
 在應用程式執行的陳述式批次之前，它應該先檢查是否支援這些。 若要這樣做，應用程式會呼叫**SQLGetInfo** SQL_BATCH_SUPPORT、 SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 選項。 第一個選項就會傳回是否資料列計數產生和結果集產生的陳述式中明確的批次和程序，並在後面的兩個選項中設定的可用性相關的資料列計數和結果的傳回資訊時支援參數化執行。  

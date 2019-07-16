@@ -10,14 +10,13 @@ dev_langs:
 ms.assetid: ef6f58e2-0162-4bb2-951a-a786da7453e4
 author: julieMSFT
 ms.author: jrasnick
-manager: jroth
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b8cb01e4f2c892bf9c59e47e35d4ce1e7175496
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: d7d9818e59029eb2e8e8d32d73807aab17d021c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67564145"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018237"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL 資料倉儲和平行處理資料倉儲目錄檢視
 
@@ -58,13 +57,13 @@ ms.locfileid: "67564145"
 
  [sys.pdw_replicated_table_cache_state (Transact-SQL)](sys-pdw-replicated-table-cache-state-transact-sql.md) 
   
- [sys.pdw_table_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-distribution-properties-transact-sql.md)  
+ [sys.pdw_table_distribution_properties &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-distribution-properties-transact-sql.md)  
   
  [sys.pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md) 
 
-[sys.workload_management_workload_classifier_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md) (Preview)
+[sys.workload_management_workload_classifier_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md) （預覽）
 
-[sys.workload_management_workload_classifiers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md) (Preview)
+[sys.workload_management_workload_classifiers &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md) （預覽）
 
 > [!Note]
 > 工作負載分類可在 SQL Data Warehouse Gen2 上以預覽形式取得。 「工作負載管理分類與重要性」預覽適用於發行日期為 2019 年 4 月 9 日或之後的組建。  使用者應避免使用早於此日期之前的組建進行工作負載管理測試。  若要判斷您的組建是否能使用工作負載管理，請在連線至您的 SQL 資料倉儲執行個體時，執行 select @ @version。
@@ -73,9 +72,9 @@ ms.locfileid: "67564145"
 
  下列目錄檢視會套用至[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]只有：
 
-[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)
-[sys.pdw_materialized_view_distribution_properties](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)
-[sys.pdw_materialized_view_mappings](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)
+[sys.pdw_materialized_view_column_distribution_properties &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)
+[sys.pdw_materialized_view_distribution_properties](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest) 
+ [sys.pdw_materialized_view_mappings](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)
 
 ## <a name="includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 目錄檢視
 
@@ -91,7 +90,7 @@ ms.locfileid: "67564145"
   
  [sys.pdw_health_alerts &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md)  
   
- [sys.pdw_health_component_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-component-groups-transact-sql.md)  
+ [sys.pdw_health_component_groups &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-component-groups-transact-sql.md)  
   
  [sys.pdw_health_component_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-component-properties-transact-sql.md)  
   

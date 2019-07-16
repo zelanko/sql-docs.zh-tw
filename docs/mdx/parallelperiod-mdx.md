@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c1f495ce1fad9a318ea5e6c1f3fadd88f8313cd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4122c13a5371cc0ffe1c5c6235ad750e7fdadad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63473082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020706"
 ---
 # <a name="parallelperiod-mdx"></a>ParallelPeriod (MDX)
 

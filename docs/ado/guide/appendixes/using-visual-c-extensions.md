@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f89b08d968b5f601c37f89b15196d6ef03db434
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926456"
 ---
 # <a name="visual-c-extensions"></a>視覺化C++擴充功能
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 介面
@@ -87,12 +86,12 @@ Update(CADORecordBinding *binding)
  如需詳細資訊，請參閱[附錄 a:資料型別](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)的 OLE DB 程式設計人員參考。
 
 ### <a name="begin-binding-entries"></a>開始繫結項目
- **BEGIN_ADO_BINDING**(*Class*)
+ **BEGIN_ADO_BINDING**(*類別*)
 
 ### <a name="fixed-length-data"></a>固定長度的資料
  **ADO_FIXED_LENGTH_ENTRY**(*序數、 資料型別、 緩衝區、 狀態、 修改*)
 
- **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
+ **ADO_FIXED_LENGTH_ENTRY2**(*序數、 資料型別，緩衝區中，修改*)
 
 ### <a name="numeric-data"></a>數值資料
  **ADO_NUMERIC_ENTRY**(*序數、 資料型別、 緩衝區、 有效位數、 小數位數、 狀態、 修改*)
@@ -102,11 +101,11 @@ Update(CADORecordBinding *binding)
 ### <a name="variable-length-data"></a>可變長度的資料
  **ADO_VARIABLE_LENGTH_ENTRY**(*序數、 資料型別、 緩衝區、 大小、 狀態、 長度、 修改*)
 
- **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Size, Status, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY2**(*序數、 資料型別、 緩衝區、 大小、 狀態、 修改*)
 
  **ADO_VARIABLE_LENGTH_ENTRY3**(*序數、 資料型別、 緩衝區、 大小、 長度、 修改*)
 
- **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, DataType, Buffer, Size, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY4**(*序數、 資料型別、 緩衝區、 大小、 修改*)
 
 ### <a name="end-binding-entries"></a>結束繫結項目
  **END_ADO_BINDING**()

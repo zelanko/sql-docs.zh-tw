@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9653f2f8-ccfc-4220-99ef-601dc0fa641c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9fe19efb2d39e875cdafec76f2c50164f3a66f03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cdddf2e757c549de460f5e22c2ea76ce91a2a969
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069974"
 ---
 # <a name="using-the-odbc-cursor-library"></a>使用 ODBC 資料指標程式庫
 > [!IMPORTANT]  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6a1f8893351ceb68ebd7c42e3ac82c876c01c10b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9dc741321894ae69a9ffb59738576a01d47628f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901662"
 ---
 # <a name="managing-data-sources"></a>管理資料來源
 您已安裝 ODBC 驅動程式從驅動程式的安裝程式之後，您可以為它定義一或多個資料來源。 資料來源名稱 (DSN) 應該提供唯一的資料描述例如，*薪資*或是*Accounts Payable*。 所有目前安裝的驅動程式所定義的使用者和系統資料來源所述**使用者 DSN**或是**系統 DSN**索引標籤的**ODBC 資料來源管理員** 對話方塊。 檔案資料來源，在指定的目錄中所述**檔案 DSN**索引標籤，顯示的目錄進入**查看**方塊中**檔案 DSN**  索引標籤。  
@@ -40,7 +39,7 @@ The specified DSN contains an architecture mismatch between the Driver and Appli
   
  資料來源會將特定的 ODBC 驅動程式與您想要透過該驅動程式存取的資料產生關聯。 例如，您可能會建立要使用 ODBC dBASE 驅動程式來存取您的硬碟或網路磁碟機上的特定目錄中找到的一或多個 dBASE 檔案的資料來源。 使用 ODBC 資料來源管理員，您可以新增、 修改及刪除資料來源下, 表中所述。  
   
-|動作|描述|  
+|Action|描述|  
 |------------|-----------------|  
 |新增資料來源|可以新增多個資料來源，每個驅動程式關聯至您想要使用該驅動程式存取部分的資料。 指定每個資料來源的名稱可唯一識別該資料來源。 比方說，如果您建立一組 dBASE 檔案包含客戶資訊的資料來源時，您可能會指定名稱的資料來源 「 客戶 」。 應用程式通常會顯示使用者可從中選擇的資料來源名稱。<br /><br /> 加入檔案資料來源會稍有不同於新增使用者或系統資料來源。 如需詳細資訊，請參閱說明檔的 ODBC 資料來源管理員。|  
 |修改資料來源|根據您的需求，您可能會發現需要重新設定資料來源。 您可以將選項重設，即可**設定**任何驅動程式安裝程式 對話方塊中。|  

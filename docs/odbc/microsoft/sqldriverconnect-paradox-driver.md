@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c2ba486e-5e01-4e67-adb1-68511f5f0206
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bae4a842729c8d302731ebf5fec22abb817f4c75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e17ca12e0c8745dcad30a3e5ce2c9689b041e7d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63238372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967480"
 ---
 # <a name="sqldriverconnect-paradox-driver"></a>SQLDriverConnect (Paradox 驅動程式)
 > [!NOTE]  

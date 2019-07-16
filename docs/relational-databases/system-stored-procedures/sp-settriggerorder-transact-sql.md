@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9dca1aca3883b16b13f4e0abdb842deaf5bbfdd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 55fedd154195b4f5abf230120a0e16e6a41ce6e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032934"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @triggername = ] '[ _triggerschema.] _triggername'` 觸發程序和結構描述名稱其所屬，如果適用的話，是設定或變更其順序。 [_triggerschema_**。**]*triggername*是**sysname**。 如果名稱未對應於觸發程序，或名稱對應於 INSTEAD OF 觸發程序，程序會傳回錯誤。 *triggerschema*不能指定 DDL 或登入觸發程序。  
+`[ @triggername = ] '[ _triggerschema.] _triggername'` 觸發程序和結構描述名稱其所屬，如果適用的話，是設定或變更其順序。 [_triggerschema_ **。** ]*triggername*是**sysname**。 如果名稱未對應於觸發程序，或名稱對應於 INSTEAD OF 觸發程序，程序會傳回錯誤。 *triggerschema*不能指定 DDL 或登入觸發程序。  
   
 `[ @order = ] 'value'` 是新的觸發程序順序的設定。 *值*已**varchar(10)** 和它可以是下列值之一。  
   
@@ -61,8 +60,8 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  觸發程序可以指定為**第一**或是**最後一個**陳述式類型，該觸發程序已定義為該陳述式類型的觸發程序之後，才觸發程序。 比方說，觸發程序**TR1**您可以指定**第一次**資料表的插入**T1**如果**TR1**定義為 INSERT 觸發程序。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]會傳回錯誤，如果**TR1**，其中已定義為 INSERT 觸發程序，只會設定為**第一個**，或**上次**，UPDATE 陳述式的觸發程序。 如需詳細資訊，請參閱＜備註＞一節。  
   
- **@namespace=** { **'DATABASE'** | **'SERVER'** | NULL }  
- 當*triggername* DDL 觸發程序**@namespace**指定是否*triggername*建立使用資料庫範圍或伺服器範圍。 如果*triggername*登入觸發程序，必須指定伺服器。 如需有關 DDL 觸發程序範圍的詳細資訊，請參閱 < [DDL 觸發程序](../../relational-databases/triggers/ddl-triggers.md)。 如果未指定，或指定 NULL，則*triggername* DML 觸發程序。  
+ **@namespace=** { **'DATABASE'**  |  **'SERVER'** | NULL }  
+ 當*triggername* DDL 觸發程序 **@namespace** 指定是否*triggername*建立使用資料庫範圍或伺服器範圍。 如果*triggername*登入觸發程序，必須指定伺服器。 如需有關 DDL 觸發程序範圍的詳細資訊，請參閱 < [DDL 觸發程序](../../relational-databases/triggers/ddl-triggers.md)。 如果未指定，或指定 NULL，則*triggername* DML 觸發程序。  
   
 ||  
 |-|  

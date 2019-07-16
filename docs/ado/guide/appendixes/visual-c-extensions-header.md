@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ac2dbb1b1bd120710909ebe42b362430bae998d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 675a31ab333a6c2d92e6afcd6a461b3baebd5b3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701114"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926381"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++ Extensions 標題
 下列標頭中， **icrsint.h**，允許擷取欄位的用戶端的介面將詳細說明**資料錄集**為衍生自的類別中定義的變數**CADORecordBinding**. 您必須指定您想要存取每個欄位的 ADO 繫結巨集。  

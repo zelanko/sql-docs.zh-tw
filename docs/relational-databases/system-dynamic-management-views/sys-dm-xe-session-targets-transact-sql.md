@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 76fbc3e1-ad88-4a47-8bf1-471c3bee5ad8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f9964e16fa543c6e5d4e4670af846992314f0818
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 977a5e0428f59a45a823dd82e30b3f4c63520c0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090222"
 ---
 # <a name="sysdmxesessiontargets-transact-sql"></a>sys.dm_xe_session_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

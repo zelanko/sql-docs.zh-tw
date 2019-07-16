@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f94a6e2-9c34-405c-b2b0-304d94269715
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a66f0cd3a17baa9a09a5eeef2ade3d730f0a206b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1adbde1b3df38d2b602f1ec42a2c96f36e8bd67b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996381"
 ---
 # <a name="sqlparamoptions-visual-foxpro-odbc-driver"></a>SQLParamOptions (Visual FoxPro ODBC Driver)
 > [!NOTE]  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 65c96ade0964146e1d8ff9cfa52f99938d290712
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28101e099f698039058aa4a4b252616aa4eef4b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759869"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060317"
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,17 +35,17 @@ ms.locfileid: "62759869"
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|郵件佇列中郵件項目的識別碼。|  
 |**profile_id**|**int**|用來傳送訊息之設定檔的識別碼。|  
-|**recipients**|**varchar(max)**|訊息收件者的電子郵件地址。|  
+|**收件者**|**varchar(max)**|訊息收件者的電子郵件地址。|  
 |**copy_recipients**|**varchar(max)**|訊息副本收件者的電子郵件地址。|  
 |**blind_copy_recipients**|**varchar(max)**|名稱未顯示於訊息標頭之訊息副本收件者的電子郵件地址。|  
 |**subject**|**nvarchar(510)**|訊息的主旨。|  
-|**body**|**varchar(max)**|訊息的主體。|  
+|**內文**|**varchar(max)**|訊息的主體。|  
 |**body_format**|**varchar(20)**|訊息的主體格式。 可能的值是 TEXT 和 HTML。|  
 |**importance**|**varchar(6)**|**重要性**訊息參數。|  
-|**sensitivity**|**varchar(12)**|**敏感度**訊息參數。|  
+|**敏感度**|**varchar(12)**|**敏感度**訊息參數。|  
 |**file_attachments**|**varchar(max)**|附加至電子郵件訊息中的檔案名稱清單，用分號分隔各檔案名稱。|  
 |**attachment_encoding**|**varchar(20)**|郵件附加檔案的類型。|  
-|**query**|**varchar(max)**|郵件程式執行的查詢。|  
+|**查詢**|**varchar(max)**|郵件程式執行的查詢。|  
 |**execute_query_database**|**sysname**|郵件程式執行查詢所在的資料庫內容。|  
 |**attach_query_result_as_file**|**bit**|當值是 0 時，查詢結果會包含在電子郵件訊息的主體中，在主體的內容之後。 當值是 1 時，會以附加檔案的方式傳回結果。|  
 |**query_result_header**|**bit**|當值是 1 時，查詢結果會包含資料行標頭。 當值是 0 時，查詢結果不會包含資料行標頭。|  

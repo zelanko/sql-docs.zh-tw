@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 11c494e07a18e9d5593620d8fba130f0ced86508
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f7c0f8997973cf73df5afd1dbe43b5971060799
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935258"
 ---
 # <a name="importing-and-exporting-knowledge"></a>匯入和匯出知識
 

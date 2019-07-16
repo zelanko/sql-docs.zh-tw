@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eeab20c5385b02a874908cc941c1c69910efa228
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 966962bdda79a57e83a0bce06b9254267efb474c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068664"
 ---
 # <a name="embedded-sql-example"></a>內嵌 SQL 範例
 下列程式碼是簡單內嵌的 SQL 程式，以 c 撰寫程式會說明許多，但不是全部的內嵌 SQL 技術。 程式會提示使用者輸入訂單號碼、 擷取客戶編號、 銷售人員，以及狀態的順序，以及在螢幕上顯示所擷取的資訊。  

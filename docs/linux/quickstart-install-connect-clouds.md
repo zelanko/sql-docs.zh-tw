@@ -4,18 +4,17 @@ titleSuffix: SQL Server
 description: 本快速入門示範如何在您選擇的雲端中的 Linux 上執行 SQL Server。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/25/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 00b2f24de925c1d957e535030079ad0b1e18487d
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 39cde4a4f3b4e970bfe1367432e986c48f55a975
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910527"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>快速入門：在雲端中執行 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -63,4 +62,4 @@ ms.locfileid: "67833614"
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.  設定遠端連線： 
     * 移至[防火牆規則](https://console.cloud.google.com/networking/firewalls)
-    * 新增輸入的規則以允許 SQL Server 所接聽的連接埠上的流量 (預設值 tcp:1433)
+    * 新增輸入的規則以允許 SQL Server 所接聽的連接埠上的流量 (預設值 tcp:預設為 1433)

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dcc3d02505a1bd568d440d5b70fc06bcfff93ae9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14e532d76f70f6a2d4fa623d80fa02e6c756348a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62688363"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096138"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
  如果目前使用者擁有一份含指定名稱的資料表，就會傳回該資料表的資料行。 如果*擁有者*未指定且目前使用者並未擁有指定的資料表*名稱*，此程序會尋找具有指定的資料表*table_name*所擁有資料庫擁有者。 如果資料表存在，就會傳回這份資料表的資料行。  
   
- [ @table_qualifier= ] '*table_qualifier*'  
+ [ @table_qualifier=] '*table_qualifier*'  
  這是資料表限定詞的名稱。 *table_qualifier*已**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (*qualifier.owner.name*)。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
  [ @fUsePattern= ] '*fUsePattern*'  

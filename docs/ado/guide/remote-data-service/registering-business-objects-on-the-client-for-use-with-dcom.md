@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2bbd0266dac1edc66bf70a21e51c9967af4d5fc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 31af4a68ec830a5fd514173c831ce3863fef7443
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922352"
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>在用戶端上註冊商務物件以用於 DOM
 自訂商務物件，就必須確保用戶端，可以將其程式名稱 (ProgId) 對應至可透過 DCOM 識別碼 (CLSID)。 基於這個理由，必須位於用戶端登錄 DCOM 物件的 ProgID，並將其對應至伺服器端商務物件的類別識別碼中。 其他支援之通訊協定 （HTTP、 HTTPS 和同處理序），這是不必要。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d2baa90f-1b77-47ce-988d-1910c7c74103
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2f1ee73e2d6ad21ea57825bd31997db0a519a720
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3745a7599f986073d1b759b46fe33dd741d62b09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63283617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083547"
 ---
 # <a name="advanced-object-selection-sybasetosql"></a>進階物件選取項目 (SybaseToSQL)
 **進階物件部分**對話方塊可讓您使用在 物件名稱的字串與子字串篩選資料庫物件，然後選取或取消選取這些物件。 SSMA 會執行轉換和移轉作業選取的物件。  
@@ -26,7 +25,7 @@ ms.locfileid: "63283617"
   
 使用此對話方塊之前，您可能想要強制載入所有的中繼資料轉換結構描述，或儲存專案的 SSMA。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **請檢查所有項目**  
 將所有的項目旁的核取記號。 在 [中繼資料總管] 中，會立即選取這些項目。  
   

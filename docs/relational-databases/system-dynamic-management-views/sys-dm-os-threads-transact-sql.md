@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 740dcc22d53ff6cd60bbc491fb6bb7b7f44947a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dd627a8361b29157b4e45bcba04dc78c72f26bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899772"
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "65577992"
 |stack_bytes_committed|**int**|堆疊中已認可的位元組數。|  
 |stack_bytes_used|**int**|執行緒目前使用的位元組數。|  
 |affinity|**bigint**|這個執行緒正在執行的 CPU 遮罩。 這取決於所設定的值**ALTER SERVER CONFIGURATION SET PROCESS AFFINITY**陳述式。 若是軟相似性，可能與排程器不同。|  
-|優先權|**int**|這個執行緒的優先權值。|  
+|Priority|**int**|這個執行緒的優先權值。|  
 |地區設定|**int**|執行緒的快取地區設定 LCID。|  
 |Token|**varbinary(8)**|執行緒的快取模擬 Token 控制代碼。|  
 |is_impersonating|**int**|指出這個執行緒是否使用 Win32 模擬。<br /><br /> 1 = 執行緒使用不同於處理序預設值的安全性認證。 這指出執行緒模擬的實體不是建立處理序的實體。|  
@@ -69,7 +68,7 @@ ms.locfileid: "65577992"
 ## <a name="permissions"></a>Permissions
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要資料庫中的 `VIEW DATABASE STATE` 權限。   
 
 ## <a name="notes-on-linux-version"></a>Linux 版本的注意事項
 
@@ -90,7 +89,7 @@ SELECT *
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-  [sys.dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)   
+  [sys.dm_os_workers &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)   
  [SQL Server 作業系統相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7220b0fe10f88ec9ba78d31a8507d12eba7aafff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 04cb465c5180b829ff7d125c1695c3865c3f33c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674067"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039000"
 ---
 # <a name="context-functions---last-xquery"></a>內容函式 - last (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

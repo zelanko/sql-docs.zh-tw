@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: acb05f10772ebdf77355b78e1f4ce998cc6c8056
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 658487186924fe5547edee70425524b2b4e3be6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083596"
 ---
 # <a name="migration-wizard-accesstosql"></a>移轉精靈 」 (AccessToSQL)
 移轉精靈引導您完成移轉的一個或多個資料庫存取權從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 使用精靈，您會建立專案、 將資料庫新增至專案，請選取要移轉，並連接到物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 您也會轉換、 載入和存取結構描述和資料移轉。 （選擇性） 您可以在此連結來存取資料表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料表。  

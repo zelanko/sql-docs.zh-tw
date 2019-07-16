@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e3a946626223a464b63b2099912c0f89d95ff32b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6f3f669f0f1699618399bbfdccaf33f6e4c13a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092487"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>建立模型 (適用於 Excel 的 MDS 增益集)
 

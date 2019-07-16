@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0805cafcdae76e3f4d7f8405088f5fe93fbc985b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 583639a5cd4680bf6cfcf03bbaf6ee9eb63adba8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039654"
 ---
 # <a name="sqlsetstmtattr-function"></a>SQLSetStmtAttr 函數
 **合規性**  

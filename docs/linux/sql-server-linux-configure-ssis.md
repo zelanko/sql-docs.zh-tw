@@ -4,17 +4,16 @@ description: 本文說明如何使用 ssis conf 公用程式在 Linux 上設定 
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0a6fc4a73d8991626c53d9caa8671673c0164a10
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 51dc2ba27e346dea75f1bd347491d4932695fd43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833989"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077527"
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>在 Linux 上設定 SQL Server Integration Services 使用 ssis conf
 
@@ -113,7 +112,7 @@ Send feature usage data to Microsoft. Feature usage data includes information ab
 
 若要執行`setup`命令和在語言中的提示，您希望，您可以指定地區設定。 例如，若要以中文收到提示，請執行下列命令： `sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`。
 
-## <a name="ssisconf-format"></a>ssis.conf format
+## <a name="ssisconf-format"></a>ssis.conf 格式
 
 下列`/var/opt/ssis/ssis.conf`檔案提供每個設定的範例。
 

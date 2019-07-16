@@ -1,5 +1,5 @@
 ---
-title: sys.xml_indexes (Transact-SQL) | Microsoft Docs
+title: sys.xml_indexes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3408de72-b067-4fda-b5d5-8e856dfd9db3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bda8c6c077d7cbe4d23e20300b15605b3a8072dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16d474fc6274fd43b7ebc426445a0881181dcf79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895067"
 ---
 # <a name="sysxmlindexes-transact-sql"></a>sys.xml_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

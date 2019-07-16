@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eca96ac675223971e0eec5433fb6c1822495d08d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 98f9a51b2248a1d218e9cbed576dc41bf64c91b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029626"
 ---
 # <a name="system-tables-transact-sql"></a>系統資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

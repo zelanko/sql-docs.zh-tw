@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10c58086a6d7e562548024273c71ef36664dff11
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: 28d98f7f95d9e9c2af967976b875f61388342583
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090168"
 ---
 # <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

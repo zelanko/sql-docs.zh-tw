@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a21c38506d44c687d639b13ca452e155a97adcef
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 05412c69aa121b9de14f2bab16555db2a8a4fdb4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929946"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>節點的相關函式 - namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
  因為指定的 QName 沒有命名空間 URI 部份，而只有本機名稱部份，所以結果是長度為零的字串。  
   
- 下列查詢針對 Instructions 類型所指定**xml**資料行。 運算式 `namespace-uri(/AWMI:root[1]/AWMI:Location[1])` 將會傳回 <`root`> 元素之第一個 <`Location`> 元素子系的命名空間 URI。  
+ 下列查詢針對 Instructions 類型所指定**xml**資料行。 運算式`namespace-uri(/AWMI:root[1]/AWMI:Location[1])`，傳回的命名空間 URI 的第一個 <`Location`> 元素子系 <`root`> 項目。  
   
 ```  
 SELECT Instructions.query('  
@@ -99,7 +98,7 @@ WHERE ProductModelID=19
 ...  
 ```  
   
- 您可以將上一個查詢中的命名空間 URI 變更為 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`。 接著，您將會收到 <`ProductDescription`> 元素的所有元素節點子系，而該元素之擴充 QName 的命名空間 URI 部份為 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`。  
+ 您可以將上一個查詢中的命名空間 URI 變更為 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`。 接著，您將收到的所有元素節點子系 <`ProductDescription`> 項目之擴充 qname 的命名空間 URI 部份為`https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`。  
   
 ### <a name="implementation-limitations"></a>實作限制  
  以下為其限制：  

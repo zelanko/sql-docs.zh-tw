@@ -1,5 +1,5 @@
 ---
-title: sp_add_data_file_recover_suspect_db (Transact-SQL) | Microsoft Docs
+title: sp_add_data_file_recover_suspect_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ee4b0fd37a3174f6e1c4a981cece8587ef48e1d5
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2c95b74b5c1875f2a1f1db40ec42e3f3ada87a63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493902"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942367"
 ---
 # <a name="spadddatafilerecoversuspectdb-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +47,19 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
 ## <a name="arguments"></a>引數  
 `[ @dbName = ] 'database_ '` 是資料庫的名稱。 *資料庫*已**sysname**，沒有預設值。  
   
-`[ @filegroup = ] 'filegroup_name_ '` 是要將檔案加入檔案群組。 *filegroup_name*已**nvarchar(260)**，預設值是 NULL，表示主要檔案。  
+`[ @filegroup = ] 'filegroup_name_ '` 是要將檔案加入檔案群組。 *filegroup_name*已**nvarchar(260)** ，預設值是 NULL，表示主要檔案。  
   
-`[ @name = ] 'logical_file_name_ '` 是中使用的名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]參考該檔案。 在伺服器中，這個名稱必須是唯一的。 *logical_file_name*已**nvarchar(260)**，沒有預設值。  
+`[ @name = ] 'logical_file_name_ '` 是中使用的名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]參考該檔案。 在伺服器中，這個名稱必須是唯一的。 *logical_file_name*已**nvarchar(260)** ，沒有預設值。  
   
-`[ @filename = ] 'os_file_name_ '` 路徑和檔案名稱用於作業系統檔案。 這個檔案必須在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體中。 *os_file_name*已**nvarchar(260)**，沒有預設值。  
+`[ @filename = ] 'os_file_name_ '` 路徑和檔案名稱用於作業系統檔案。 這個檔案必須在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體中。 *os_file_name*已**nvarchar(260)** ，沒有預設值。  
   
-`[ @size = ] 'size_ '` 是檔案初始大小。 *大小*已**nvarchar(20)**，預設值是 NULL。 請指定一個整數，不包括小數點。 您可以利用 MB 和 KB 後置詞來指定百萬位元組或千位元組。 預設值是 MB。 最小值是 512 KB。 如果*大小*未指定，預設值為 1 MB。  
+`[ @size = ] 'size_ '` 是檔案初始大小。 *大小*已**nvarchar(20)** ，預設值是 NULL。 請指定一個整數，不包括小數點。 您可以利用 MB 和 KB 後置詞來指定百萬位元組或千位元組。 預設值是 MB。 最小值是 512 KB。 如果*大小*未指定，預設值為 1 MB。  
   
-`[ @maxsize = ] 'max_size_ '` 是檔案所能成長的大小上限。 *max_size*已**nvarchar(20)**，預設值是 NULL。 請指定一個整數，不包括小數點。 您可以利用 MB 和 KB 後置詞來指定百萬位元組或千位元組。 預設值是 MB。  
+`[ @maxsize = ] 'max_size_ '` 是檔案所能成長的大小上限。 *max_size*已**nvarchar(20)** ，預設值是 NULL。 請指定一個整數，不包括小數點。 您可以利用 MB 和 KB 後置詞來指定百萬位元組或千位元組。 預設值是 MB。  
   
  如果*max_size*未指定，檔案會成長到磁碟已滿。 當磁碟將滿時，[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄檔會警告管理員。  
   
-`[ @filegrowth = ] 'growth_increment_ '` 是每次需要新空間時新增至檔案數量。 *growth_increment*已**nvarchar(20)**，預設值是 NULL。 0 值表示不成長。 請指定一個整數，不包括小數點。 您可以用 MB、KB 或百分比 (%) 來指定這個值。 當指定 % 時，成長的遞增是增量發生時之指定的檔案大小百分比。 如果指定的數字不含 MB、KB 或 % 後置詞，預設值是 MB。  
+`[ @filegrowth = ] 'growth_increment_ '` 是每次需要新空間時新增至檔案數量。 *growth_increment*已**nvarchar(20)** ，預設值是 NULL。 0 值表示不成長。 請指定一個整數，不包括小數點。 您可以用 MB、KB 或百分比 (%) 來指定這個值。 當指定 % 時，成長的遞增是增量發生時之指定的檔案大小百分比。 如果指定的數字不含 MB、KB 或 % 後置詞，預設值是 MB。  
   
  如果*growth_increment*是 NULL，預設值是 10%，而且最小值為 64 KB。 指定的大小會捨入到最接近 64 KB。  
   

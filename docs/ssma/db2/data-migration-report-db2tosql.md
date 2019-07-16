@@ -9,25 +9,24 @@ ms.topic: conceptual
 ms.assetid: 46ebada7-db36-4ae9-b7ae-baa4b854b237
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2305040ee7dc8541ff400f5f87c5c87fd85c118e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2fb50ca8cab409e117becdc1335d956d05cb818b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989753"
 ---
 # <a name="data-migration-report-db2tosql"></a>資料移轉報告 (DB2ToSQL)
 **資料移轉報告** 對話方塊隨即出現之後您將資料移轉至, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **狀態**  
 顯示移轉的狀態資料從來源到目標資料庫。  
   
 **來源**  
 來源資料表中。  
   
-**若要**  
+**To**  
 目標資料表中。  
   
 **資料列總數**  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e1f6123c-669e-469b-ac9a-a464d78ad60c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 345b720ff5692009eb5c6e55f5ff74b1dcb25cab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 224d19231eae84658580e17666221d6b76d99f69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018437"
 ---
 # <a name="policy-based-management-views-transact-sql"></a>以原則為基礎的管理檢視 (Transact - SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

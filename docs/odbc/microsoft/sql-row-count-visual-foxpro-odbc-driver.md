@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9d851f8d-94ca-47ae-a4ad-53863be2d404
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 240cc9b8e6ee5439a92db807a6334622760c63f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ddfa668a95345117aee3abfec638d50f49f2575b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063346"
 ---
 # <a name="sql-row-count-visual-foxpro-odbc-driver"></a>SQLRowCount (Visual FoxPro ODBC Driver)
 > [!NOTE]  

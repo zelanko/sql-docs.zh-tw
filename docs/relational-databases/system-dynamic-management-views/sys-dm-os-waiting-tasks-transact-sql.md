@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 10a17dba594359ca83fbc3b15e148fb72356e162
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6ce0fa8270a05d8c3385cbc7b5c25edeaa84bc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899640"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +54,7 @@ ms.locfileid: "62998009"
   
  **執行緒集區資源擁有者：**  
   
--   threadpool id=scheduler\<hex-address>  
+-   執行緒集區識別碼 = 排程器\<十六進位位址 >  
   
  **平行查詢資源擁有者：**  
   
@@ -83,13 +82,13 @@ ms.locfileid: "62998009"
   
      **\<型別特定描述 > 可以是：**  
   
-    -   For DATABASE: databaselock subresource=\<databaselock-subresource> dbid=\<db-id>  
+    -   針對 DATABASE: Databaselock subresource =\<databaselock subresource > dbid =\<資料庫識別碼 >  
   
     -   檔案： Filelock fileid =\<檔案識別碼 > subresource =\<filelock subresource > dbid =\<資料庫識別碼 >  
   
-    -   For OBJECT: objectlock lockPartition=\<lock-partition-id> objid=\<obj-id> subresource=\<objectlock-subresource> dbid=\<db-id>  
+    -   針對物件： Objectlock lockPartition =\<鎖定資料分割識別碼 > objid =\<obj-i d > subresource =\<l s > dbid =\<資料庫識別碼 >  
   
-    -   For PAGE: pagelock fileid=\<file-id> pageid=\<page-id> dbid=\<db-id> subresource=\<pagelock-subresource>  
+    -   對於 PAGE: Pagelock fileid =\<檔案識別碼 > pageid =\<的頁面識別碼 > dbid =\<db-i d > subresource =\<pagelock 子資源 >  
   
     -   對於 Key: Keylock hobtid =\<hobt 識別碼 > dbid =\<資料庫識別碼 >  
   
@@ -111,11 +110,11 @@ ms.locfileid: "62998009"
   
  **外部資源擁有者：**  
   
--   External ExternalResource=\<wait-type>  
+-   外部 ExternalResource =\<等候類型 >  
   
  **一般資源擁有者：**  
   
--   TransactionMutex TransactionInfo Workspace=\<workspace-id>  
+-   工作區中 TransactionInfo TransactionMutex =\<-i d >  
   
 -   Mutex  
   
@@ -129,16 +128,16 @@ ms.locfileid: "62998009"
   
  **閂鎖資源擁有者：**  
   
--   \<db-id>:\<file-id>:\<page-in-file>  
+-   \<db-i d >:\<檔案識別碼 >:\<分頁中檔案 >  
   
--   \<GUID>  
+-   \<GUID >  
   
 -   \<latch-class> (\<latch-address>)  
   
 ## <a name="permissions"></a>Permissions
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要資料庫中的 `VIEW DATABASE STATE` 權限。   
  
 ## <a name="example"></a>範例
 此範例會識別封鎖的工作階段。  執行[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。

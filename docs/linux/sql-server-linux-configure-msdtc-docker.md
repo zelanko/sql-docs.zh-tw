@@ -3,18 +3,17 @@ title: 如何使用 Docker 上的 SQL Server 的分散式的交易
 description: 這篇文章說明如何使用 Linux 上設定 MSDTC 的 Dprovides 逐步解說。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 09/25/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 808f9d0ef2911aa79c8a4fc5af55a222a056004b
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: fab3934a86994b3c4a0d7d7ecfc7768f65660023
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077685"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>如何使用 Docker 上的 SQL Server 的分散式的交易
 

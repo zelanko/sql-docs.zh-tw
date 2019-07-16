@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d41bad7792d21a5eae26b890bcbbfe43808b3faa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e652d2c42c61e1694c1f8adfa7976f3c1eda8406
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055745"
 ---
 # <a name="model-object-permissions-master-data-services"></a>模型物件權限 (Master Data Services)
 

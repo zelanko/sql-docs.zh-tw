@@ -5,17 +5,16 @@ description: Mssqlctl bdc 端點命令的參考文件。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 74065a075e4a2a80e3ab5455b7ac99e5a055f66a
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ae9a5ad79f388f260494c18448dd80e815b3ac02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958082"
 ---
 # <a name="mssqlctl-bdc-endpoint"></a>mssqlctl bdc 端點
 

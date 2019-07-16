@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d29ac26486c68bcce5b7876732ec398c995e9ee6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2d9216686cca6ed35d089130098026d5d958638a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078453"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>系統資訊結構描述檢視 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,10 +37,10 @@ ms.locfileid: "51667307"
   
 |SQL Server 名稱|對應至這個相等的 SQL 標準名稱|  
 |---------------------|-----------------------------------------------|  
-|[資料庫]|目錄|  
+|資料庫|目錄|  
 |結構描述|結構描述|  
 |Object|Object|  
-|使用者自訂資料類型|網域|  
+|使用者自訂資料類型|Domain|  
   
  這個名稱對應慣例適用於下列與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISO 相容的檢視。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "51667307"
   
  另外，部分檢視也會包含不同資料類別的參考，如字元資料或二進位資料。  
   
- 當您參考資訊結構描述檢視時，您必須使用包含 `INFORMATION_SCHEMA` 結構描述名稱的限定名稱。 例如：  
+ 當您參考資訊結構描述檢視時，您必須使用包含 `INFORMATION_SCHEMA` 結構描述名稱的限定名稱。 例如:  
   
 ```  
 SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_DEFAULT  

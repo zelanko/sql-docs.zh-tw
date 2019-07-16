@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_host_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_host_info (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/10/2017
 ms.prod: sql
@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32ef1fff3b5309da587aacc2fca14099e6bf2cac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 052402d3a394e8da3e08828992127d3cd89b95ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047218"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900172"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ FROM sys.dm_os_host_info;
  
  |host_platform |host_distribution |host_release |host_service_pack_level |host_sku |os_language_version |
  |----- |----- |----- |----- |----- |----- |
- |視窗   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
+ |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
 
 以下是在 Linux 上設定的範例結果：
  
