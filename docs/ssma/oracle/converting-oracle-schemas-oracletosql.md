@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 18da150a435b5d3d61740139309d109a16691da3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 638c16de8312456410c14e38fa632085e504913e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288886"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266146"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>轉換 Oracle 結構描述 (OracleToSQL)
 您已經連接到 Oracle 之後，連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並設定專案和對應的資料選項，您可以將轉換至 Oracle 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫物件。  
@@ -111,7 +111,7 @@ ms.locfileid: "63288886"
   
 -   您可以修改以移除或修改有問題的程式碼的 Oracle 資料庫中的物件。 若要更新的程式碼載入 SSMA 中，您必須更新的中繼資料。 如需詳細資訊，請參閱 <<c0> [ 連接到 Oracle 資料庫&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)。</c0>  
   
--   您可以從移轉排除的物件。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管，Oracle 中繼資料總管 中，清除項目旁的核取方塊，然後再載入到物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並將資料從 Oracle 移轉。  
+-   您可以從移轉排除的物件。 在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管，Oracle 中繼資料總管 中，清除項目旁的核取方塊，然後再載入到物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並將資料從 Oracle 移轉。  
   
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是[已轉換的物件載入 SQL Server](loading-converted-database-objects-into-sql-server-oracletosql.md)。  
