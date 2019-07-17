@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d2b4b47e6aa0426d09397844b291ee3636226fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15c3c9716adefbb95d24c9528dce8607678998c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096063"
 ---
 # <a name="sptableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  設定使用者定義資料表的選項值。 sp_tableoption 可用來控制資料表的 in-row 行為**varchar （max)**， **nvarchar （max)**， **varbinary （max)**， **xml**，**文字**， **ntext**，**映像**，或大型使用者定義型別資料行。  
+  設定使用者定義資料表的選項值。 sp_tableoption 可用來控制資料表的 in-row 行為**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ， **xml**，**文字**， **ntext**，**映像**，或大型使用者定義型別資料行。  
   
 > [!IMPORTANT]  
->  未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本將移除 text in row 功能。 若要儲存大數值資料，我們建議您利用**varchar （max)**， **nvarchar （max)** 並**varbinary （max)** 資料型別。  
+>  未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本將移除 text in row 功能。 若要儲存大數值資料，我們建議您利用**varchar （max)** ， **nvarchar （max)** 並**varbinary （max)** 資料型別。  
   
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -48,21 +47,21 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 ## <a name="arguments"></a>引數  
  [ @TableNamePattern =] '*表格*'  
- 這是使用者定義資料庫資料表的完整或非完整名稱。 如果提供其中包括資料庫名稱的完整資料表名稱，資料庫名稱就必須是目前資料庫的名稱。 您不能同時設定多份資料表的資料表選項。 *表格*已**nvarchar(776)**，沒有預設值。  
+ 這是使用者定義資料庫資料表的完整或非完整名稱。 如果提供其中包括資料庫名稱的完整資料表名稱，資料庫名稱就必須是目前資料庫的名稱。 您不能同時設定多份資料表的資料表選項。 *表格*已**nvarchar(776)** ，沒有預設值。  
   
  [ @OptionName =] '*option_name*'  
- 這是資料表選項名稱。 *option_name*已**varchar(35)**，沒有預設值是 NULL。 *option_name*可以是下列值之一。  
+ 這是資料表選項名稱。 *option_name*已**varchar(35)** ，沒有預設值是 NULL。 *option_name*可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
 |table lock on bulk load|當停用 (預設值) 時，它會讓使用者定義資料表上的大量載入程序取得資料列鎖定。 當啟用時，使用者定義資料表的大量載入處理序會取得大量更新鎖定。|  
 |insert row lock|不再支援。<br /><br /> 這個選項對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的鎖定行為沒有影響，併入它的目的，只是為了與現有的指令碼和程序相容。|  
 |text in row|當它是 OFF 或 0 (停用，預設值) 時，它不會變更目前的行為，資料列中沒有 BLOB。<br /><br /> 當指定並@OptionValue是 ON （已啟用） 或 24 至 7000 之間，新的整數值**文字**， **ntext**，或**映像**字串直接儲存在資料列。 所有現有的 BLOB (二進位大型物件：**文字**， **ntext**，或**映像**資料) 將會更新 BLOB 值時變更為 text in row 格式。 如需詳細資訊，請參閱＜備註＞。|  
-|large value types out of row|1 = **varchar （max)**， **nvarchar （max)**， **varbinary （max)**， **xml**並儲存在資料表中的大型使用者定義型別 (UDT) 資料行資料列外部，並且以 16 位元組指標指向根。<br /><br /> 0 = **varchar （max)**， **nvarchar （max)**， **varbinary （max)**， **xml**和大型 UDT 值直接儲存在資料列時，最大限制8000 個位元組，只要可以容納在記錄中的值。 如果記錄無法容納值，便會將指標儲存在同資料列中，其餘部分會儲存在資料列外 (LOB 儲存空間中)。 預設值是 0。<br /><br /> 大型使用者定義型別 (UDT) 適用於：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 <br /><br /> 使用 TEXTIMAGE_ON 選項[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)指定大型資料類型的儲存體的位置。 |  
+|large value types out of row|1 = **varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ， **xml**並儲存在資料表中的大型使用者定義型別 (UDT) 資料行資料列外部，並且以 16 位元組指標指向根。<br /><br /> 0 = **varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ， **xml**和大型 UDT 值直接儲存在資料列時，最大限制8000 個位元組，只要可以容納在記錄中的值。 如果記錄無法容納值，便會將指標儲存在同資料列中，其餘部分會儲存在資料列外 (LOB 儲存空間中)。 預設值是 0。<br /><br /> 大型使用者定義型別 (UDT) 適用於：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 <br /><br /> 使用 TEXTIMAGE_ON 選項[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)指定大型資料類型的儲存體的位置。 |  
 |Vardecimal 儲存格式|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 若為 TRUE、ON 或 1，指定的資料表會啟用為 Vardecimal 儲存格式。 若為 FALSE、OFF 或 0，資料表則不會啟用為 Vardecimal 儲存格式。 只有在使用資料庫啟用為 vardecimal 儲存格式時，就可以啟用 Vardecimal 儲存格式[sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更新版本中， **vardecimal**儲存格式已被取代。 請改用資料列壓縮。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。 預設值是 0。|  
   
  [ @OptionValue =] '*值*'  
- 是是否*option_name*已啟用 （TRUE、 ON 或 1） 或停用 (FALSE、 OFF 或 0)。 *值*已**varchar(12)**，沒有預設值。 *值*不區分大小寫。  
+ 是是否*option_name*已啟用 （TRUE、 ON 或 1） 或停用 (FALSE、 OFF 或 0)。 *值*已**varchar(12)** ，沒有預設值。 *值*不區分大小寫。  
   
  text in row 選項的有效選項值是 0、ON、OFF，或 24 至 7000 的整數。 當*值*是 ON，限制會預設為 256 個位元組。  
   
@@ -86,7 +85,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
  當 BLOB 字串儲存在資料列時，讀取和寫入**文字**， **ntext**，或**映像**字串可以跟讀取或寫入字元和二進位字串一樣快。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不必存取個別頁面，即可讀取或寫入 BLOB 字串。  
   
- 如果**文字**， **ntext**，或**映像**字串大於指定的限制或資料列中的可用空間，而指標會改為儲存的資料列中。 將 BLOB 字串儲存在資料列的條件仍適用，不過，資料列必須有足以保留指標的空間。  
+ 如果**文字**， **ntext**，或**映像**字串大於指定的限制或資料列中的可用空間，而指標會改為儲存的資料列中。 將 BLOB 字串儲存在資料列的條件仍適用：保留指標的資料列中必須有足夠的空間。  
   
  儲存在資料表資料列中之 BLOB 字串和指標的處理方式，類似於可變長度的字串。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只會使用儲存字串或指標所需要的位元組數。  
   

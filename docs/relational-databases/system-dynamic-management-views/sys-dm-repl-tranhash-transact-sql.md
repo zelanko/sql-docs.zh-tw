@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0cc52338-e805-4ed4-9835-b19bbf72448e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7d10d4451071ac476b25fdfef00ab4a48d1c3f63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c44c5c08dc46da5a0f2f3dfd2c53ab6cb20f27d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067868"
 ---
 # <a name="sysdmrepltranhash-transact-sql"></a>sys.dm_repl_tranhash (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

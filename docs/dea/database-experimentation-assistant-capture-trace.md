@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: dc53a9e1d151e07ce7e2eebf1444fd0d0065f8be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab361c4e83ae5e2b2bb6614bdc4a513e0bdd77ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058998"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>擷取追蹤資料庫測試助理
 
@@ -74,10 +73,10 @@ SQL Server 中的查詢快取可能會影響評估結果。 我們建議您重�
   
 |事件名稱|文字資料 (1)|二進位資料 (2)|資料庫識別碼 (3)|主機名稱 (8)|應用程式名稱 (10)|登入名稱 (11)|SPID (12)|開始時間 (14)|結束時間 (15)|資料庫名稱 (35)|事件序列 (51)|IsSystem (60)|  
 |---|---|---|---|---|---|---|---|---|---|---|---|---|  
-|**RPC:Completed (10)**||*|*|*|*|*|*|*|*|*|*|*|  
+|**RPC： 完成 (10)**||*|*|*|*|*|*|*|*|*|*|*|  
 |**RPC： 啟動 (11)**||*|*|*|*|*|*|*||*|*|*|  
 |**RPC Output Parameter (100)**|*||*|*|*|*|*|*||*|*|*|  
-|**SQL:BatchCompleted (12)**|*||*|*|*|*|*|*|*|*|*|*|  
+|**Sql: batchcompleted (12)**|*||*|*|*|*|*|*|*|*|*|*|  
 |**Sql: batchstarting (13)**|*||*|*|*|*|*|*||*|*|*|  
 |**稽核登入 (14)**|*|*|*|*|*|*|*|*||*|*|*|  
 |**Audit Logout (15)**|*||*|*|*|*|*|*|*|*|*|*|  

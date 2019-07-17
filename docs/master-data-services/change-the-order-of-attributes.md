@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 09043c7ddd8a57dff7b72048997af01b97b9328d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b95e3200a797ccd078731618ea9da643afacaad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052096"
 ---
 # <a name="change-the-order-of-attributes"></a>變更屬性的順序
 

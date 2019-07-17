@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3aeb3065f9c032585dd4c445cecdd1e7c148b007
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44e7ca81fd276e8538e19c1a7670daf4da10dde6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62943167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097997"
 ---
 # <a name="overview-smo"></a>概觀 (SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce34e46a49e88167606543a341aaef55591493ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e6c7759cf63611da167bf54a2e88487abc7b1cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016751"
 ---
 # <a name="configdriver-function"></a>ConfigDriver 函式
 **合規性**  

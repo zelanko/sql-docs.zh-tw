@@ -5693,6 +5693,8 @@
           href: dma/dma-migrateonpremsqltosqldb.md
         - name: 移轉 SQL Server 登入
           href: dma/dma-migrateserverlogins.md
+        - name: 評定 SQL Server 資料資產的 Azure SQL Database 整備程式
+          href: dma/dma-assess-sql-data-estate-to-sqldb.md
         - name: 最佳做法
           href: dma/dma-bestpractices.md
         - name: 合併評定報告

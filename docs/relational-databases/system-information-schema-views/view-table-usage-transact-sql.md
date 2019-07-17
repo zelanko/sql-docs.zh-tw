@@ -1,5 +1,5 @@
 ---
-title: VIEW_TABLE_USAGE (Transact-SQL) | Microsoft Docs
+title: VIEW_TABLE_USAGE (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,21 +18,20 @@ helpviewer_keywords:
 ms.assetid: 0aeefb3f-02ef-457e-8c42-84ddb26f1c88
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 451fef0ce805dcebdb8e3d7f3d13a9b42eeadaa7
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 7e691a52cebf3ca9de0454ca2ccd60b3f8daa43f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078367"
 ---
 # <a name="viewtableusage-transact-sql"></a>VIEW_TABLE_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   針對檢視所用目前資料庫中的每份資料表，各傳回一個資料列。 這個資訊結構描述檢視會傳回目前使用者有權限的物件之相關資訊。  
   
- 若要從這些檢視擷取資訊，請指定 完整格式的名稱**INFORMATION_SCHEMA。**_view_name_。  
+ 若要從這些檢視擷取資訊，請指定 完整格式的名稱**INFORMATION_SCHEMA。** _view_name_。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -46,7 +45,7 @@ ms.locfileid: "54255204"
 ## <a name="see-also"></a>另請參閱  
  [系統檢視表&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [資訊結構描述檢視&#40;Transact SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [sys.sql_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)   
+ [sys.sql_dependencies &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)  
   

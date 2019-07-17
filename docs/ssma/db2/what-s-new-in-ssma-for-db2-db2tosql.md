@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 author: HJToland3
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 02d320990b255cdee2a6d75ac88a93ab98ce5ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 036ae77a6d65ff396df60f54b38eeffba4e202f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66841076"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086199"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 中最新消息 (DB2ToSQL)
 

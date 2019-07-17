@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 732d23c5-1f6c-4e96-bc85-8f29b520cf0e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33cd6bb98fe17121a3903a82566dded929af6c8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bd5b497f1d96f813570282f785fe0cbfe73265d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017934"
 ---
 # <a name="change-tracking---sysdmtrancommittable"></a>變更追蹤-sys.dm_tran_commit_table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

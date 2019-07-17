@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 7bd6c42882c9adc938904621b7939bea1b0e68de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959541"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] 常見問題集
 
@@ -97,7 +96,7 @@ Azure Data Studio 和其資料提供者的原始程式碼可在 GitHub 上。 �
 |深色的模式|是||
 |Azure 資源總管|預覽||
 |產生指令碼精靈||是
-|Import\Export DACPAC||是|
+|DACPAC 匯入/匯出||是|
 |物件屬性||是|
 |資料表設計工具||是|
 

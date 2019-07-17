@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: joesackmsft
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: d25c4d3cfe8628c01b44a99c6e26a96adf453050
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: eebc22fa4f17680b843f195777d7cc5f4b2835ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090453"
 ---
-# <a name="sysdmuserdbresourcegovernance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-SQL)
+# <a name="sysdmuserdbresourcegovernance-transact-sql"></a>sys.dm_user_db_resource_governance & Amp;#40;transact-SQL&AMP;#41;
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 

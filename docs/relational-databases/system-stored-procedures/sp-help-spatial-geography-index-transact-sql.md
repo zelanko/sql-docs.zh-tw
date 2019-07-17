@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ec690eb615ed86ea5c99b34a91a11dad4fbd2716
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5118392bff90cc9f58cdda66ace40b0b68f612a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085147"
 ---
 # <a name="sphelpspatialgeographyindex-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

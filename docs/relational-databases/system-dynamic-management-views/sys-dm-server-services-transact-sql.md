@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8acb2fae0aa0edadf1995a0a103ff60b66a912a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c968c1c7445b89d0291faf97056417952e417dec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62686227"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090684"
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

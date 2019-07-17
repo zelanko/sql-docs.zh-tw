@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1dc56a7b-8e3a-4576-ad4f-47050bf7e28a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 73919295dbd53cbaaca3847d5be119e5fe2d0bb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be1530bdec1c1523a873dc93b1d70e6e72c880ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183098"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103017"
 ---
 # <a name="creating-variable-value-files-mysqltosql"></a>建立變數值檔案 (MySQLToSQL)
 變數值檔案是 XML 檔案包含一些來源或目的地伺服器名稱經常變更從一部伺服器移轉到另一個的命令的參數值。 大量的資料庫移轉發生時，會建立並使用主要的指令碼檔案中參考多個變數的檔案，以儲存每個來源伺服器的值 **-v**在命令列切換。 這有助於維護幾個指令碼檔案中的靜態值，與多個變數的檔案中的變數值。  

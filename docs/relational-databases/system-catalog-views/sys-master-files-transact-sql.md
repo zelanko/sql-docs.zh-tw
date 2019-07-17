@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 30a9d28c1fe7c07a4bcfb642fee2dc318aec6896
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 679a048a40c990c5c86c0c5a24f4f1c53fb9e0b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102396"
 ---
 # <a name="sysmasterfiles-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -38,16 +37,16 @@ ms.locfileid: "47810296"
 |database_id|**int**|套用這個檔案的資料庫識別碼。 Masterdatabase_id 永遠為 1。|  
 |file_id|**int**|資料庫內的檔案識別碼。 主要 file_id 一定是 1。|  
 |file_guid|**uniqueidentifier**|檔案的唯一識別碼。<br /><br /> NULL = 資料庫從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級。|  
-|型別|**tinyint**|檔案類型：<br /><br /> 0 = 資料列 <br /><br /> 1 = 記錄<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文檢索 (早於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的全文檢索目錄；已升級為 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本或是以此版本建立的全文檢索目錄將報告檔案類型 0)。|  
+|type|**tinyint**|檔案類型：<br /><br /> 0 = 資料列<br /><br /> 1 = 記錄<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文檢索 (早於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的全文檢索目錄；已升級為 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本或是以此版本建立的全文檢索目錄將報告檔案類型 0)。|  
 |type_desc|**nvarchar(60)**|檔案類型的描述：<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (早於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的全文檢索目錄)。|  
 |data_space_id|**int**|這個檔案所屬的資料空間識別碼。 資料空間是一個檔案群組。<br /><br /> 0 = 記錄檔。|  
-|NAME|**sysname**|資料庫中之檔案的邏輯名稱。|  
+|name|**sysname**|資料庫中之檔案的邏輯名稱。|  
 |physical_name|**nvarchar(260)**|作業系統檔案名稱。|  
-|state|**tinyint**|檔案狀態：<br /><br /> 0 = ONLINE <br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
+|state|**tinyint**|檔案狀態：<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |state_desc|**nvarchar(60)**|檔案狀態的描述：<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 如需詳細資訊，請參閱[檔案狀態](../../relational-databases/databases/file-states.md)。|  
-|size|**int**|目前檔案大小 (以 8 KB 頁面為單位)。 如果是資料庫快照集，size 會反映快照集可以使用的最大檔案空間。<br /><br /> 注意： 此欄位會填入零 FILESTREAM 容器。 查詢*sys.database_files*目錄檢視中 FILESTREAM 容器的實際大小。|  
-|max_size|**int**|最大檔案大小 (以 8 KB 頁面為單位)：<br /><br /> 0 = 不允許任何成長。<br /><br /> -1 = 檔案會成長到磁碟已滿。<br /><br /> 268435456 = 記錄檔可以成長到最大 2 TB 的大小。<br /><br /> 注意： 不受限的記錄檔大小會升級的資料庫將會報告記錄檔的大小上限為-1。|  
-|growth|**int**|0 = 檔案是固定大小，不會成長。<br /><br /> >0 = 檔案會自動成長。<br /><br /> 如果 is_percent_growth = 0，成長遞增是以 8 KB 頁面來表示，會捨入到最接近的 64 KB。<br /><br /> 如果 is_percent_growth = 1，便會以整數百分比的方式來表現成長遞增。|  
+|size|**int**|目前檔案大小 (以 8 KB 頁面為單位)。 如果是資料庫快照集，size 會反映快照集可以使用的最大檔案空間。<br /><br /> 注意:此欄位會填入零 FILESTREAM 容器。 查詢*sys.database_files*目錄檢視中 FILESTREAM 容器的實際大小。|  
+|max_size|**int**|最大檔案大小 (以 8 KB 頁面為單位)：<br /><br /> 0 = 不允許任何成長。<br /><br /> -1 = 檔案會成長到磁碟已滿。<br /><br /> 268435456 = 記錄檔可以成長到最大 2 TB 的大小。<br /><br /> 注意:升級不受限的記錄檔大小的資料庫將會報告記錄檔的大小上限為-1。|  
+|growth|**int**|0 = 檔案是固定大小，不會成長。<br /><br /> > 0 = 檔案會自動成長。<br /><br /> 如果 is_percent_growth = 0，成長遞增是以 8 KB 頁面來表示，會捨入到最接近的 64 KB。<br /><br /> 如果 is_percent_growth = 1，便會以整數百分比的方式來表現成長遞增。|  
 |is_media_read_onlyF|**bit**|1 = 檔案在唯讀媒體中。<br /><br /> 0 = 檔案在讀寫媒體中。|  
 |is_read_only|**bit**|1 = 檔案標示為唯讀。<br /><br /> 0 = 檔案標示為可讀寫。|  
 |is_sparse|**bit**|1 = 檔案是疏鬆檔案。<br /><br /> 0 = 檔案不是疏鬆檔案。<br /><br /> 如需詳細資訊，請參閱[檢視資料庫快照集的疏鬆檔案大小 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)。|  

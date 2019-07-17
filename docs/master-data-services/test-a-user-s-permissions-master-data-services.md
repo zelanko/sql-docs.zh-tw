@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 38d4b1e7f9bd3e76c00bb4228e53e09416ed8557
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 332a212af082b082379f4b1483c3c869cb8c542e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488095"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085596"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>測試使用者的權限 (Master Data Services)
 

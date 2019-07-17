@@ -1,5 +1,5 @@
 ---
-title: sys.xml_schema_namespaces (Transact-SQL) | Microsoft Docs
+title: sys.xml_schema_namespaces (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 60b30e74ab58e5fd6a7bb122ba7e1b247e21273b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec58d18c874f8b0060aadb753330976aad259b3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060443"
 ---
 # <a name="sysxmlschemanamespaces-transact-sql"></a>sys.xml_schema_namespaces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

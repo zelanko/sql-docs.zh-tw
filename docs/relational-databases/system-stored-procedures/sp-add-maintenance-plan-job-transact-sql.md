@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1f941269d1e42e1adc09dce2a6937b900e0aaa13
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ba27f90c8d2fc4c7e174333080815d56f90e48c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091925"
 ---
 # <a name="spaddmaintenanceplanjob-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +44,9 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@plan_id =**] **'**_plan_id_**'**  
- 指定維護計畫的識別碼。 *plan_id*已**uniqueidentifier**，而且必須是有效的識別碼。  
+`[ @plan_id = ] 'plan_id'` 指定維護計畫的識別碼。 *plan_id*已**uniqueidentifier**，而且必須是有效的識別碼。  
   
- [  **@job_id =**] **'**_job_id_**'**  
- 指定要與維護計畫相關聯的作業識別碼。 *job_id*已**uniqueidentifier**，而且必須是有效的識別碼。 若要建立作業，請執行**sp_add_job**，或使用 SQL Server Management Studio。  
+`[ @job_id = ] 'job_id'` 指定要與維護計畫相關聯的作業識別碼。 *job_id*已**uniqueidentifier**，而且必須是有效的識別碼。 若要建立作業，請執行**sp_add_job**，或使用 SQL Server Management Studio。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

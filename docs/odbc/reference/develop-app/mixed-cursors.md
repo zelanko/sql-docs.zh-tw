@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9beb2db9-0b6d-491d-9529-d64e64e59014
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef8d5142397b4169513cf262ba4126ccba1fc1c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97da67bca185cd86de944e8bccc86d2b4c149b0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785837"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086367"
 ---
 # <a name="mixed-cursors"></a>混合資料指標
 

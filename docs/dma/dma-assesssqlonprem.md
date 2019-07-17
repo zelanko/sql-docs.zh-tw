@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 575645d78e7046e607b891f0a6eadd6d9395a9a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 463ada293202007eb92b6d3dfedc3c96c7d2f9f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060954"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>執行 SQL Server 移轉評估，使用 Data Migration Assistant
 

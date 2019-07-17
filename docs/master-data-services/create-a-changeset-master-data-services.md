@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 97cc3f748f5d5b94a65eddcbcb54b9d407c7bed6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3e15590e2d8f8e3317c8d116ebbeac7049fb1ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484228"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079756"
 ---
 # <a name="create-a-changeset-master-data-services"></a>建立變更集 (Master Data Services)
 

@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad210f91d00f9e692c8ee20fef01a808a01501c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fae642b46b4c652583622ec4832b3217d0b1681c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068553"
 ---
 # <a name="data-source-specification-subkeys"></a>資料來源規格子機碼
 ODBC 資料來源的子機碼中所列每個資料來源都有自己的子機碼。 這個子機碼具有相同名稱做為 ODBC 資料來源的子機碼下對應的值。 這個子機碼底下的值都必須列出驅動程式 DLL，並可能會列出資料來源的描述。 如果驅動程式支援的轉譯器，值可能會列出預設轉譯器的預設轉譯 DLL 及預設轉譯選項的名稱。 值可能也會列出其他驅動程式連接到資料來源所需的資訊。 例如，驅動程式可能需要伺服器名稱、 資料庫名稱或結構描述名稱。  
   
  值的格式是下表所示。 需要驅動程式值。  
   
-|名稱|資料類型|資料|  
+|名稱|資料類型|Data|  
 |----------|---------------|----------|  
 |描述|REG_SZ|*description*|  
 |驅動程式|REG_SZ|*driver-DLL-path*|  

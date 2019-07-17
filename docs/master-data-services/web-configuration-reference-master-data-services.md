@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ef92aa3410ee12fd5edc4ea602e64a6fa06fdc9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9002f99435362e471467b6e8b24906dfd95e3ec8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477224"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017276"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 組態參考 (Master Data Services)
 

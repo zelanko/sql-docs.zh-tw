@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f60ce03d303941855b0b1eaa242b03966db1e79f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670837"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946109"
 ---
 # <a name="xqueries-involving-hierarchy"></a>與階層有關的 XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "51670837"
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. 從製造指示文件中，擷取工作中心位置以及這些位置上的第一個製造步驟  
  對於 產品型號 7 」，此查詢會建構 XML 包含 <`ManuInstr`> 項目，與**ProductModelID**並**ProductModelName**屬性，以及一個或多個 <`Location`>子項目。  
   
- 每一個 <`Location`> 元素有它自己的屬性集和一個 <`step`> 子元素。 這個 <`step`> 子元素是工作中心位置的第一個製造步驟。  
+ 每個 <`Location`> 項目有自己的屬性和一個 <`step`> 子元素。 這個 <`step`> 子元素是工作中心位置的第一個製造步驟。  
   
 ```sql
 SELECT Instructions.query('  
@@ -62,7 +61,7 @@ WHERE ProductModelID=7
   
 -   **: Column （)** 用來包含所建構的 XML 中的關聯式值。  
   
--   在建構 <`Location`> 元素時，$wc/@* 會擷取所有工作中心位置屬性。  
+-   在建構 <`Location`> 項目，$wc/@* 擷取所有工作中心位置屬性。  
   
 -   **String （)** 函式傳回的字串值從 <`step`> 項目。  
   
@@ -85,7 +84,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. 在 AdditionalContactInfo 資料行中尋找所有電話號碼  
- 下列查詢利用搜尋 <`telephoneNumber`> 元素的整個階層，來擷取特定客戶連絡人的其他電話號碼。 因為 <`telephoneNumber`> 元素可能出現在階層的任何地方，所以此查詢在搜尋中使用下階和自身運算子 (//)。  
+ 下列查詢會搜尋整個階層，來擷取特定客戶連絡人的其他電話號碼 <`telephoneNumber`> 項目。 因為 <`telephoneNumber`> 項目可以出現在任何位置的階層，此查詢使用階和自身運算子 (/ /) 在搜尋。  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -112,7 +111,7 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- 若只要擷取最上層電話號碼，尤其是 <`AdditionalContactInfo`> 的 <`telephoneNumber`> 子元素，則將查詢中的 FOR 運算式變更成  
+ 若要擷取只有最上層的電話號碼，尤其是 <`telephoneNumber`> 子元素 <`AdditionalContactInfo`>，在查詢中的 FOR 運算式變更為  
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   

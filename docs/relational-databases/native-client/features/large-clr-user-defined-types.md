@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: b65eb61d-ccf6-49c0-98e7-9a4ef4b2f790
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0176ba03151b084cb26eda03969b1e83afb1820d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dba68854d09a4cc37a5a53012ba4e575d7c758dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987461"
 ---
 # <a name="large-clr-user-defined-types"></a>大型 CLR 使用者定義型別
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

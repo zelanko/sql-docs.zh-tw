@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c75ab14-af54-4965-b376-8d75d385c941
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d7f05ad92e5e5264801302f2f1e64c76478141d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 159be22fcaba28183c8b6cc5089906c19bf2b765
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62742097"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064263"
 ---
 # <a name="unloading-an-extended-stored-procedure-dll"></a>卸載擴充預存程序 DLL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,6 +33,6 @@ DBCC xp_hello(FREE)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [DBCC dllname &#40;FREE&#41; &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)  
+ [DBCC dllname&#40;免費&#41; &#40;TRANSACT-SQL&#41;](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)  
   
   

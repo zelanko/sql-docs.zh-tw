@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a5320226-a6fc-4999-9b3b-2fdee6bdf7eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4e4f189c2e8911194a56b13c5d1ba612bc5cee80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 824942890ef8f6c7a301cc3befddb483ba3cc8be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053704"
 ---
 # <a name="sqlfreestmt-visual-foxpro-odbc-driver"></a>SQLFreeStmt (Visual FoxPro ODBC Driver)
 > [!NOTE]  

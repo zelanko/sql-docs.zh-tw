@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 29b5225f95c6b2cb04f42c0e67c504ac2cb20e53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2cc48fa530730beec07aaca4bfb933c9ff8fb2b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62740893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986352"
 ---
 # <a name="incompatible-access-features-accesstosql"></a>不相容的 Access 功能 (AccessToSQL)
 並非所有的 Access 資料庫功能都相容於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 比方說，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和存取有不同的保留關鍵字。 問題，例如這些妨礙成功移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以使用下表來深入了解可能的移轉問題，以及您可以執行其相關。  

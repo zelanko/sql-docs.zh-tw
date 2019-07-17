@@ -5,18 +5,17 @@ description: 了解如何建立可用性群組的叢集，適用於 Ubuntu
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 39753e86cc4d6f82d8bddb0c10356d9be172e90f
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 85391418d74ac81b0857e705c1dc250add1143b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027307"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>設定 Ubuntu 叢集和可用性群組資源
 

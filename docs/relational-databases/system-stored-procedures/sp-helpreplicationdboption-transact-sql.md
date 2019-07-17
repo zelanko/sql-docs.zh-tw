@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a56e8cb4531fbe48e2a66242d23406d6d647573c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fe71adc1be14b40d18baf50eecd68c2bef65c836
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997568"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @dbname = ] 'dbname'` 是資料庫的名稱。 *dbname*已**sysname**，預設值是**%**。 如果**%**，則結果集包含在 「 發行者 」 的所有資料庫，否則為指定的資料庫上的唯一資訊會傳回。 如下所描述，使用者沒有適當權限的任何資料庫都不會傳回資訊。  
+`[ @dbname = ] 'dbname'` 是資料庫的名稱。 *dbname*已**sysname**，預設值是 **%** 。 如果 **%** ，則結果集包含在 「 發行者 」 的所有資料庫，否則為指定的資料庫上的唯一資訊會傳回。 如下所描述，使用者沒有適當權限的任何資料庫都不會傳回資訊。  
   
 `[ @type = ] 'type'` 限制結果集包含只有在其上的資料庫指定的複寫選項*型別*已啟用值。 *型別*已**sysname**，而且可以是下列值之一。  
   

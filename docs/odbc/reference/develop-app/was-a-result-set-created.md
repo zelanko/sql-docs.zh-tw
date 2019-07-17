@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db287e729678f54aaf637950c89c724724678f08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f748e75f4e1579446b72b519356f2f649889fe0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078964"
 ---
 # <a name="was-a-result-set-created"></a>已建立結果集了嗎？
 在大部分情況下，應用程式設計人員會知道其應用程式執行的陳述式是否會建立結果集。 如果應用程式使用硬式編碼 SQL 陳述式寫入由程式設計師，這會是大小寫。 應用程式在執行階段建構 SQL 陳述式時，其乃常見情況：程式設計人員可以輕鬆地包含加上旗標的程式碼是否**選取** 陳述式或**插入**建構陳述式。 在少數情況下，程式設計人員可能不知道陳述式是否會建立結果集。 這是當應用程式提供方法，以讓使用者輸入並執行 SQL 陳述式，則為 true。 它也是如此應用程式建構的陳述式在執行程序的執行階段時。  

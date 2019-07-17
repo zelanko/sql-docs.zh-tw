@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bfa85e91-060e-4d70-88c3-f5c48df634f1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 586e5f26c943fdc267ad98627ada3b56cbc4013c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f13193ba437d0da0ee15bd4072fe6f53c7db5b9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043779"
 ---
 # <a name="other-text-file-driver-programming-details"></a>其他文字檔驅動程式的程式設計詳細資料
 > [!NOTE]  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 09544c1e8735c3a6ad4fd6abfca430e84fabd775
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de0325925bb1ad1626987361435056ff21a26be6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62910170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072652"
 ---
 # <a name="msmergeidentityrangeallocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

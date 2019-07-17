@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24784fd337a80b7fd545cca04f76ad9a548ebe6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73ee5d7ac8bd512b69cc187f9860b9e7f2c38a78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001291"
 ---
 # <a name="sysallocationunits-transact-sql"></a>sys.allocation_units (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47613166"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |allocation_unit_id|**bigint**|配置單位的識別碼。 在資料庫中，這是唯一的。|  
-|型別|**tinyint**|配置單位的類型：<br /><br /> 0 = 已卸除<br /><br /> 1 = 同資料列資料 (除 LOB 資料類型之外的所有資料類型)<br /><br /> 2 = 大型物件 (LOB) 資料 (**文字**， **ntext**，**映像**， **xml**，大數值類型以及 CLR 使用者定義型別)<br /><br /> 3 = 資料列溢位資料|  
+|type|**tinyint**|配置單位的類型：<br /><br /> 0 = 已卸除<br /><br /> 1 = 同資料列資料 (除 LOB 資料類型之外的所有資料類型)<br /><br /> 2 = 大型物件 (LOB) 資料 (**文字**， **ntext**，**映像**， **xml**，大數值類型以及 CLR 使用者定義型別)<br /><br /> 3 = 資料列溢位資料|  
 |type_desc|**nvarchar(60)**|配置單位類型的描述：<br /><br /> **卸除**<br /><br /> **IN_ROW_DATA**<br /><br /> **如果是 LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
 |container_id|**bigint**|與配置單位相關聯的儲存體容器識別碼。<br /><br /> 如果 type = 1 或 3，則 container_id = sys.partitions.hobt_id。<br /><br /> 如果 type 是 2，則 container_id = sys.partitions.partition_id。<br /><br /> 0 = 標示要延遲卸除的配置單位|  
 |data_space_id|**int**|這個配置單位所在的檔案群組識別碼。|  

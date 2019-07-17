@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ff4a76c38f04c7b9b12842ef800bc8a26a27ed9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf6b5127bac7aedf9e67918d38020c73a4afe186
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079605"
 ---
 # <a name="using-arrays-of-parameters"></a>使用參數陣列
 若要使用的應用程式會呼叫的參數陣列**SQLSetStmtAttr**具有*屬性*則 sql_attr_paramset_size 會以指定的參數集數目的引數。 它會呼叫**SQLSetStmtAttr**具有*屬性*SQL_ATTR_PARAMS_PROCESSED_PTR 指定變數的位址中驅動程式可傳回的處理，參數集數目的引數包括錯誤設定。 它會呼叫**SQLSetStmtAttr**具有*屬性*SQL_ATTR_PARAM_STATUS_PTR 指向用來傳回每個資料列的參數值的狀態資訊的陣列引數。 驅動程式會儲存在結構中的陳述式會維護這些位址。  

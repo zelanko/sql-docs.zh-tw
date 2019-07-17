@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4b907ca844c80dcdb0953776a5cfb73b57937ff3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 28f7788b0dc11c8c06e98b385d6814cb7fe81142
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061728"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>DMX 教學課程 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "51599939"
   
  您將在此教學課程中學會如何建立預測哪些產品可能會同時被購買的採礦模型。 此教學課程也會示範巢狀資料表在資料採礦中的用法。  
   
-## <a name="reference"></a>參考  
+## <a name="reference"></a>參考資料  
  [資料採礦延伸模組&#40;DMX&#41;語法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
  [資料採礦延伸模組 &#40;DMX&#41; 資料定義陳述式](../dmx/dmx-statements-data-definition.md)  

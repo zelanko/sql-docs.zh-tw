@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 91765f0572d8c880f7505948f7756b373fe28f62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c9179506ac96c1902c40de271f6024ed7e5c54d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042124"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001995"
 ---
 # <a name="cursors"></a>資料指標
 應用程式會擷取資料*游標*。 資料指標是不同的結果集：結果集是符合特定搜尋準則的資料列集，而游標位於應用程式會傳回這些資料列的軟體。 名稱*資料指標，* 套用至資料庫時，可能源自終端機的電腦上閃爍的游標。 就像該資料指標會指出目前的位置，在螢幕上輸入的文字會出現下一步，結果集的資料指標會指出結果集，接下來將會傳回哪些資料列中的目前位置。  

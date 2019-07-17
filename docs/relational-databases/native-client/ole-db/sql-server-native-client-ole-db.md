@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71ae84e82fff80097ab1a8e26b00c89dfec6ba56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a895b11786628a1a43103607337d4d972d81cdfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65097463"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031848"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

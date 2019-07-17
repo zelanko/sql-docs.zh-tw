@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc0c1d981180c61452f97a01bc0aba6fdc2d81e3
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: ef0f25660a0faa0747752a8ca15c207c1e939669
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039555"
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics 函數
 **合規性**  
@@ -148,7 +147,7 @@ SQLRETURN SQLStatistics(
 |型別 (ODBC 1.0)|7|Smallint 非 NULL|要傳回的資訊類型：<br /><br /> SQL_TABLE_STAT 表示 （中的基數或頁面的資料行） 之資料表的統計資料。<br /><br /> SQL_INDEX_BTREE 表示 B 型樹狀目錄索引。<br /><br /> SQL_INDEX_CLUSTERED 表示非叢集的索引。<br /><br /> SQL_INDEX_CONTENT 表示內容的索引。<br /><br /> SQL_INDEX_HASHED 表示雜湊的索引。<br /><br /> SQL_INDEX_OTHER 表示另一個索引類型。|  
 |ORDINAL_POSITION (ODBC 1.0)|8|Smallint|索引 （從 1 開始）; 中的資料行序號如果型別是 SQL_TABLE_STAT，則傳回 NULL。|  
 |COLUMN_NAME (ODBC 1.0)|9|Varchar|資料行名稱。 如果資料行根據運算式，例如薪資 + 權益，則會傳回運算式;如果無法判斷運算式，則會傳回空字串。 如果型別是 SQL_TABLE_STAT，則傳回 NULL。|  
-|ASC_OR_DESC (ODBC 1.0)|10|Char(1)|資料行的排序順序："A"表示遞增;"D"表示遞減;如果資料來源不支援資料行排序順序或型別是 SQL_TABLE_STAT，則傳回 NULL。|  
+|ASC_OR_DESC (ODBC 1.0)|10|char(1)|資料行的排序順序："A"表示遞增;"D"表示遞減;如果資料來源不支援資料行排序順序或型別是 SQL_TABLE_STAT，則傳回 NULL。|  
 |基數 (ODBC 1.0)|11|Integer|基數為資料表或索引;如果類型是 SQL_TABLE_STAT; 在資料表中的資料列數目如果類型不是 SQL_TABLE_STAT; 的索引中的唯一值數目如果值不是可從資料來源，則傳回 NULL。|  
 |頁面 (ODBC 1.0)|12|Integer|用來儲存索引或資料表的頁面數目如果型別是 SQL_TABLE_STAT; 資料表的頁面數目如果類型不是 SQL_TABLE_STAT; 的索引的頁面數目如果值不是可從資料來源，或如果不適用於資料來源，則傳回 NULL。|  
 |FILTER_CONDITION (ODBC 2.0)|13|Varchar|如果索引是篩選的索引，這是篩選條件，例如 SALARY > 30000;如果無法判斷篩選條件，這會是空字串。<br /><br /> 如果索引不是已篩選的索引，則為 NULL，它無法判斷索引是篩選的索引，還是別 SQL_TABLE_STAT。|  

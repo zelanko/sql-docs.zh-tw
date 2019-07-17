@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10df35f4f29de4ac3899efa0e86e48af861f1e65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 535f2feaf17d2060c1c65e7aba17951bb3339a5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080060"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>支援的 ODBC SQL 文法 (Visual FoxPro ODBC Driver)
 Microsoft Visual FoxPro ODBC Driver 支援以下功能：  
@@ -50,7 +49,7 @@ Microsoft Visual FoxPro ODBC Driver 支援以下功能：
   
  [DELETE](../../odbc/microsoft/delete-sql-command.md)  
   
- [DELETE TAG](../../odbc/microsoft/delete-tag-command.md)  
+ [刪除標記](../../odbc/microsoft/delete-tag-command.md)  
   
  [DROP TABLE](../../odbc/microsoft/drop-table-command.md)  
   

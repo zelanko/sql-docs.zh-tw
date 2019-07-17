@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: c99a8159-7693-4f97-8dcf-401336550e77
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 83964bf1e76eef5c7c4ba4121b0c581e8d8a406b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3bd3a44fe4f0466dfcf11a72fa0377564c1cf02f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077203"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>配置連線控制代碼 ODBC
 應用程式可以連接到資料來源或驅動程式之前，必須配置連接控制代碼，如下所示：  
   
-1.  應用程式宣告型別 SQLHDBC 的變數。 然後它會呼叫**SQLAllocHandle** ，並將傳遞這個變數，在其中配置的連接，並利用 SQL_HANDLE_DBC 選項環境的控制代碼位址。 例如：  
+1.  應用程式宣告型別 SQLHDBC 的變數。 然後它會呼叫**SQLAllocHandle** ，並將傳遞這個變數，在其中配置的連接，並利用 SQL_HANDLE_DBC 選項環境的控制代碼位址。 例如:  
   
     ```  
     SQLHDBC hdbc1;  

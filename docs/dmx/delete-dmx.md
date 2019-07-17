@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: bc78718c813ef1aa599c1ab299c634d018bc88d6
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: c1c75a6ff18b26bee65365acbc068de87678a9c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070759"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +32,7 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
  *model*  
  模型識別碼。  
   
- *結構*  
+ *structure*  
  結構識別碼。  
   
 ## <a name="remarks"></a>備註  
@@ -41,11 +40,11 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
  下表說明使用不同語法格式的結果。  
   
-|引數|結果|  
+|陳述式|結果|  
 |---------------|------------|  
-|DELETE FROM MINING STRUCTURE*\<結構 >*<br /><br /> 中的多個<br /><br /> DELETE FROM MINING STRUCTURE*\<結構 >*。內容|在採礦結構上執行 ProcessClear。 清除採礦結構及其相關聯的採礦模型中所有的內容。|  
-|DELETE FROM MINING STRUCTURE*\<結構 >*。案例|在採礦結構上執行 ProcessClearStructureOnly。 清除採礦結構中所有的內容，但是相關聯的採礦模型則保持不變。 清除採礦結構之後，在相關聯之採礦模型上的鑽研將會失敗。|  
-|刪除從採礦模型*\<模型 >*<br /><br /> 中的多個<br /><br /> 刪除從採礦模型*\<模型 >*。內容|在採礦模型上執行 ProcessClear，但會保留資料庫中的狀態值。 狀態值是資料行的可能狀態。 例如，性別資料行的狀態值為男性與女性。|  
+|DELETE FROM MINING STRUCTURE *\<結構 >*<br /><br /> 或<br /><br /> DELETE FROM MINING STRUCTURE *\<結構 >* 。內容|在採礦結構上執行 ProcessClear。 清除採礦結構及其相關聯的採礦模型中所有的內容。|  
+|DELETE FROM MINING STRUCTURE *\<結構 >* 。案例|在採礦結構上執行 ProcessClearStructureOnly。 清除採礦結構中所有的內容，但是相關聯的採礦模型則保持不變。 清除採礦結構之後，在相關聯之採礦模型上的鑽研將會失敗。|  
+|刪除從採礦模型 *\<模型 >*<br /><br /> 或<br /><br /> 刪除從採礦模型 *\<模型 >* 。內容|在採礦模型上執行 ProcessClear，但會保留資料庫中的狀態值。 狀態值是資料行的可能狀態。 例如，性別資料行的狀態值為男性與女性。|  
   
  如需處理類型的詳細資訊，請參閱 <<c0> [ 型別項目&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla)。</c0>  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ea326db0d0e093e4d6371d0dda10a4b9faccc572
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 35cfa3aeda8e296cd1a85a0e8a098aaddac90954
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084859"
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

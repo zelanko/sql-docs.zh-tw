@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098547"
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX 資料定義 - CREATE ACTION
 
@@ -86,10 +85,10 @@ FOR
 |**URL**|傳回的動作字串是 URL，應使用網際網路瀏覽器開啟。<br /><br /> 注意:如果此動作不是以開頭`https://`或`https://`，此動作會在瀏覽器無法使用除非**SafetyOptions**設定為**DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**。|  
 |**HTML**|傳回的動作字串是 HTML 指令碼。 應將此字串儲存至檔案，而且應使用網際網路瀏覽器來轉譯此檔案。 在此情況下，可能會將整個指令碼視為已產生 HTML 的一部分執行。|  
 |**陳述式**|傳回的動作字串是需要藉由設定執行的陳述式**ICommand::SetText**方法的字串，並呼叫命令物件**icommand:: Execute**方法。 如果未能成功執行此命令，會傳回錯誤。|  
-|**DATASET**|傳回的動作字串是必須藉由設定執行 MDX 陳述式**ICommand::SetText**方法的字串，並呼叫命令物件**icommand:: Execute**方法。 要求的介面識別碼 (IID) 應**IDataset**。 如果已建立資料集，此命令就能成功執行。 用戶端應用程式應該允許使用者瀏覽傳回的資料集。|  
+|**資料集**|傳回的動作字串是必須藉由設定執行 MDX 陳述式**ICommand::SetText**方法的字串，並呼叫命令物件**icommand:: Execute**方法。 要求的介面識別碼 (IID) 應**IDataset**。 如果已建立資料集，此命令就能成功執行。 用戶端應用程式應該允許使用者瀏覽傳回的資料集。|  
 |**資料列集**|類似於**資料集**，而不是要求的 IID，但**IDataset**，用戶端應用程式應該詢問的 iid **IRowset**。 如果已建立資料列集，此命令就能成功執行。 用戶端應用程式應該允許使用者瀏覽傳回的資料列集。|  
 |**命令列**|用戶端應用程式應執行此動作字串。 此字串是一個命令列。|  
-|**PROPRIETARY**|除非用戶端應用程式有自訂、非一般的特定動作，否則應用程式不應該顯示，也不該執行此動作。 除非用戶端應用程式明確提出要求上設定適當的限制不專屬動作傳回用戶端應用程式**APPLICATION_NAME**。|  
+|**專屬**|除非用戶端應用程式有自訂、非一般的特定動作，否則應用程式不應該顯示，也不該執行此動作。 除非用戶端應用程式明確提出要求上設定適當的限制不專屬動作傳回用戶端應用程式**APPLICATION_NAME**。|  
   
 ## <a name="invocation-types"></a>引動過程類型  
  下表描述 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中可用的不同引動過程類型。 引動過程類型只由用戶端應用程式使用，可協助判定何時要叫用動作。 引動過程類型實際上不會決定動作的引動過程行為。  

@@ -3,18 +3,17 @@ title: 設定 SQL Server 2017 和 2019 Linux 存放庫
 description: 請檢查並設定 SQL Server 2019 和 Linux 上的 SQL Server 2017 的來源存放庫。 來源儲存機制會影響在安裝和升級時套用的 SQL Server 的版本。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 05299a2efd374dc7d58b5e32fcdea918b12fc1d3
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 33616b9a7767156e4cfd69d233f7dcfe5fc080f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834079"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967527"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>設定存放庫進行安裝及升級 Linux 上的 SQL Server
 
@@ -54,7 +53,7 @@ ms.locfileid: "67834079"
 
 - **GDR**:GDR 存放庫包含自從該版本的基底的 SQL Server 版本及只有重大修正程式和安全性更新的封裝。 這些更新也會新增至下一步 的 CU 版本。
 
-每個 CU 和 GDR 版本包含完整的 SQL Server 封裝和所有先前的更新，該存放庫。 從 GDR 版本更新為 CU 版本都支援變更 SQL Server 設定的儲存機制。 您也可以[降級](sql-server-linux-setup.md#rollback)您主要的版本中的任何版本 (例如：2017).
+每個 CU 和 GDR 版本包含完整的 SQL Server 封裝和所有先前的更新，該存放庫。 從 GDR 版本更新為 CU 版本都支援變更 SQL Server 設定的儲存機制。 您也可以[降級](sql-server-linux-setup.md#rollback)您主要的版本中的任何版本 (例如：2017)。
 
 > [!NOTE]
 > 您可以更新從 GDR 發行 CU 版本隨時藉由變更存放庫。 更新不支援從 CU GDR 發行的版本。

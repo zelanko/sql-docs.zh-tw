@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 80be6994c7094b365bc24dd135bdda6ec4e561ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38eb4c8e5cc859297a36115ba5cc6dd2c0529304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468384"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061607"
 ---
 # <a name="scrollable-cursors"></a>可捲動的資料指標
 新式具有螢幕為基礎的應用程式，在使用者捲動向前及向後的資料。 對於這類應用程式中，返回先前擷取的資料列是問題。 其中一個可能性是關閉並重新開啟資料指標直到資料指標所需的資料列，然後提取資料列。 另一個可能性是讀取結果集、 快取在本機，和實作應用程式中捲動。 這兩種可能性也僅適用於小型結果集，後者可能的原因是難以實作。 更好的解決方案是使用*捲動資料指標，* 這可以向後移動，並轉送結果集中。  

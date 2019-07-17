@@ -4,19 +4,18 @@ titleSuffix: SQL Server
 description: 安裝、 更新及解除安裝 Linux 上的 SQL Server。 本文章涵蓋線上、 離線，和自動安裝案例。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: c4e58111fd6a584344b4f73e6986774040aa6211
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 7f4b2aa37b20cceaa3269527c95bfa97a2daa311
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833226"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032444"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的安裝指引
 
@@ -39,7 +38,7 @@ Red Hat Enterprise Linux (RHEL)、 SUSE Linux Enterprise Server (SLES) 和 Ubunt
 
 | 平台 | 支援的版本 | Get
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Get RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3、 7.4、 7.5、 7.6 | [Get RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [取得 SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [取得 Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
 | **Docker 引擎** | 1.8+ | [取得 Docker](https://www.docker.com/get-started)

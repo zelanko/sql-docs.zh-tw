@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 190ed0cd-0c5e-4607-9db4-9e77cacf17d7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 70839b61a7649bcd40839a4bd8fac168ac21b0fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d43f30f15502a41882190dcdd19984d9ec042d4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037390"
 ---
 # <a name="sysxmlschemaelements-transact-sql"></a>sys.xml_schema_elements (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

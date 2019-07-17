@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 35be486c-8f2d-4cec-beb8-df14151abfef
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 716471786400c030febb62ebf41c8422770a8c09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14715e40cd99f3f1a03c2ae19e825705a8376e30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040002"
 ---
 # <a name="determining-cursor-capabilities"></a>判斷資料指標的功能
 中的下列四個選項**SQLGetInfo**說明支援哪些類型的資料指標和其功能為何：  
   
 -   SQL_CURSOR_SENSITIVITY。 指出資料指標是否為另一個資料指標所做的變更影響。  
   
--   SQL_SCROLL_OPTIONS. 列出支援的資料指標類型 （順向、 靜態、 索引鍵集驅動、 動態的或混合式）。 所有資料來源必須都支援順向資料指標。  
+-   SQL_SCROLL_OPTIONS。 列出支援的資料指標類型 （順向、 靜態、 索引鍵集驅動、 動態的或混合式）。 所有資料來源必須都支援順向資料指標。  
   
 -   SQL_DYNAMIC_CURSOR_ATTRIBUTES1、 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、 SQL_KEYSET_CURSOR_ATTRIBUTES1，還是 SQL_STATIC_CURSOR_ATTRIBUTES1 （取決於資料指標類型）。 列出支援可捲動資料指標的 fetch 類型。 中的傳回值的位元對應中擷取的型別**SQLFetchScroll**。  
   

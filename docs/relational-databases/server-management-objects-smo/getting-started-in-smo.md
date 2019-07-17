@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89f43904c528c37963a397de450271d1e581e507
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6473cffbb4bdc611a5d4cb63693eb43ff4666fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62943035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098036"
 ---
 # <a name="getting-started-in-smo"></a>SMO 使用者入門
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

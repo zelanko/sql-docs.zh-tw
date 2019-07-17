@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db8bcf70823401f60efc316caabe283f5be59f48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f4f82a24e594a25b0b1ec9bbeab2256624ae6e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036248"
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle 函式
 **合規性**  

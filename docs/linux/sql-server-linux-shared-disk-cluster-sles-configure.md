@@ -4,18 +4,17 @@ description: 藉由設定 SUSE Linux Enterprise Server (SLES) 共用的磁碟叢
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 0b65c2cca781dc077e72ff06fb7de5ae8ee2e8c5
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 70701d5c0103da089444177db1143066d0c862cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032229"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>設定 SQL Server 的 SLES 共用的磁碟叢集
 
@@ -25,7 +24,7 @@ ms.locfileid: "67834650"
 
 如需有關叢集設定、 資源代理程式選項、 管理、 最佳做法和建議的詳細資訊，請參閱 < [SUSE Linux Enterprise 高可用性延伸模組 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 若要完成下列的端對端案例中，您需要部署兩個節點叢集並設定 NFS 共用的另一部伺服器的兩部機器。 下列步驟概述這些伺服器設定的方式。
 

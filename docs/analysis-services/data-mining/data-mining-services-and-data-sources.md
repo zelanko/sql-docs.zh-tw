@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: acb8f97708cd92bc0bdee1278d8b672908d65877
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145883"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183458"
 ---
 # <a name="data-mining-services-and-data-sources"></a>資料採礦服務與資料來源
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "50145883"
 -   管理伺服器資源  
   
 ### <a name="xmla-listener"></a>XMLA 接聽程式  
- XMLA 接聽程式元件會處理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 及其用戶端之間的所有 XMLA 通訊。 msmdsrv.ini 檔中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [通訊埠] 組態設定可用來指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體所接聽的通訊埠。 這個檔案中 0 的值表示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會接聽預設通訊埠。 除非另有指定，否則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用下列預設 TCP 通訊埠：  
+ XMLA 接聽程式元件會處理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 及其用戶端之間的所有 XMLA 通訊。 msmdsrv.ini 檔中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [通訊埠]  組態設定可用來指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體所接聽的通訊埠。 這個檔案中 0 的值表示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會接聽預設通訊埠。 除非另有指定，否則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用下列預設 TCP 通訊埠：  
   
 |通訊埠|描述|  
 |----------|-----------------|  
@@ -88,7 +88,7 @@ ms.locfileid: "50145883"
  您也可以設定屬性，以便微調伺服器以及控制用戶端使用量的安全性。 如需詳細資訊，請參閱 [功能屬性](../../analysis-services/server-properties/feature-properties.md)。  
   
 > [!NOTE]  
->  如需支援版本的外掛程式演算法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
+>  如需支援版本的外掛程式演算法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>以程式設計方式存取資料採礦物件  
  您可以使用下列物件模型來建立 Analysis Services 資料庫的連接以及使用資料採礦物件：  

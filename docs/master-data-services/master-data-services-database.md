@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bf99bfbc03d73fd5bd6e28634a279beb8e605f12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 159ab8c79be2cd27dba4db060b43a0e6b95290d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062746"
 ---
 # <a name="master-data-services-database"></a>Master Data Services 資料庫
 

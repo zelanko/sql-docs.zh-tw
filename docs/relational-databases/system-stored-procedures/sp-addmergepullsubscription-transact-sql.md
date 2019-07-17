@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59e639c1dd319d7db074d692d3776105abe89f0f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ef860a30ba5994e25a9d532445af0ec2c39f9e1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042735"
 ---
 # <a name="spaddmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +49,16 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
   
 `[ @publisher_db = ] 'publisher_db'` 是發行者資料庫的名稱。 *publisher_db*已**sysname**，預設值是 NULL。  
   
-`[ @subscriber_type = ] 'subscriber_type'` 為訂閱者的類型。 *subscriber_type*已**nvarchar(15)**，而且可以是**全域**，**本機**或是**匿名**。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本中，本機訂閱稱為客訂閱，而全域訂閱稱為主訂閱。  
+`[ @subscriber_type = ] 'subscriber_type'` 為訂閱者的類型。 *subscriber_type*已**nvarchar(15)** ，而且可以是**全域**，**本機**或是**匿名**。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本中，本機訂閱稱為客訂閱，而全域訂閱稱為主訂閱。  
   
 `[ @subscription_priority = ] subscription_priority` 這是訂閱優先權。 *subscription_priority*已**實際**，預設值是 NULL。 本機和匿名訂閱，是優先權就是**0.0**。 在偵測到衝突時，預設解析程式會利用優先權挑選贏的一方。 如果是全域訂閱者，訂閱優先權必須小於 100，也就是發行者的優先權。  
   
-`[ @sync_type = ] 'sync_type'` 這是訂閱同步處理類型。 *sync_type*已**nvarchar(15)**，預設值是**自動**。 可以是**自動**或是**無**。 如果**自動**，結構描述和發行資料表的初始資料傳送給 「 訂閱者 」 第一次。 如果**無**，便假設訂閱者端已有的結構描述和初始資料已發行資料表。 一律會傳送系統資料表和資料。  
+`[ @sync_type = ] 'sync_type'` 這是訂閱同步處理類型。 *sync_type*已**nvarchar(15)** ，預設值是**自動**。 可以是**自動**或是**無**。 如果**自動**，結構描述和發行資料表的初始資料傳送給 「 訂閱者 」 第一次。 如果**無**，便假設訂閱者端已有的結構描述和初始資料已發行資料表。 一律會傳送系統資料表和資料。  
   
 > [!NOTE]  
 >  不建議您指定的值是**無**。  
   
-`[ @description = ] 'description'` 是提取訂閱的簡要描述。 *描述*已**nvarchar(255)**，預設值是 NULL。 這個值會顯示在複寫監視器**易記名稱**資料行，可用來排序受監視發行集的訂閱。  
+`[ @description = ] 'description'` 是提取訂閱的簡要描述。 *描述*已**nvarchar(255)** ，預設值是 NULL。 這個值會顯示在複寫監視器**易記名稱**資料行，可用來排序受監視發行集的訂閱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

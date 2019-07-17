@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 368f16597a8060b5c1b9f2eb7fca5759bf8226b3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b6938a94b2cfe322abf55cbf663f91b4328c2120
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054295"
 ---
 # <a name="spdropmergealternatepublisher-transact-sql"></a>sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

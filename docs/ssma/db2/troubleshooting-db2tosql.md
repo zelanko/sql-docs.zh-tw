@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e88038c6-fd35-479c-a76f-aabd42d2efef
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ff0ef803274b23a54e3964ae2822dc351a3ce784
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0ab2e7721522e0671d195ec79a35bba72d462c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63077260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059976"
 ---
 # <a name="troubleshooting-db2tosql"></a>疑難排解 (DB2ToSQL)
 它不是屢見不鮮移轉問題中途島執行主控台指令碼或命令。  

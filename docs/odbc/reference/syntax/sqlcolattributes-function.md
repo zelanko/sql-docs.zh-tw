@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3ece37af-db56-47fc-bc9d-6a7d0d8a00ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ff7d1349666d236e640d8de3524a7d069662ec86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64df7ac6e212d103fab244dfa14ce4f8e932bcb4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039767"
 ---
 # <a name="sqlcolattributes-function"></a>SQLColAttributes 函式
 **合規性**  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_input_buffer (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_input_buffer & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 10/13/2017
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8531f33f2d027eba14d4416e9138560b25ead20e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 735173b6812093293c1473ee9d4bc8a7378be2c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013124"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097717"
 ---
 # <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]

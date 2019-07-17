@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0d92abe17128bff382d4b291fa9d20fe5c4fa77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41cb718b5425315856fe4db27658cce873f90e6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536633"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018937"
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData 函式
 **合規性**  

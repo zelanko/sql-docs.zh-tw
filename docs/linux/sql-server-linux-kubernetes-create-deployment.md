@@ -4,18 +4,17 @@ description: 這篇文章說明如何建立 SQL Server Always On 可用性群組
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: dfee5188c6fe54ed91172f9d83de7af6395c8956
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 181773a19e87c34a1931cae05f5a329aedbc1239
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833644"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000137"
 ---
 # <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>建立部署指令碼以 SQL Server Always On 可用性群組
 

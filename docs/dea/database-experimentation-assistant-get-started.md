@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: 8f5cf6696b66504357279ab45432b4439894e4ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e5affa5310c4443cd8458dfc987a506ada5982d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794473"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058955"
 ---
 # <a name="get-started-with-database-experimentation-assistant"></a>開始使用資料庫測試助理
 

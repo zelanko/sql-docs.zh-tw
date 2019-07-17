@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f948b50fae0995e16024ac41d8dd891630d1dbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fe4383e397c0fd06197be2ff25e6dbb876f6c0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037776"
 ---
 # <a name="c-data-types"></a>C 資料類型
 ODBC C 資料類型表示用來將資料儲存在應用程式的 C 緩衝區的資料類型。  
@@ -45,7 +44,7 @@ ODBC C 資料類型表示用來將資料儲存在應用程式的 C 緩衝區的�
 |SQL_C_BIT|SQLCHAR|不帶正負號的 char|  
 |SQL_C_STINYINT[j]|SQLSCHAR|帶正負號的 char|  
 |SQL_C_UTINYINT[j]|SQLCHAR|不帶正負號的 char|  
-|SQL_C_SBIGINT|SQLBIGINT|_int64[h]|  
+|SQL_C_SBIGINT|SQLBIGINT|_int64 [h]|  
 |SQL_C_UBIGINT|SQLUBIGINT|不帶正負號的 _int64 [h]|  
 |SQL_C_BINARY|SQLCHAR *|unsigned char *|  
 |SQL_C_BOOKMARK[i]|書籤|不帶正負號的 long int [d]|  

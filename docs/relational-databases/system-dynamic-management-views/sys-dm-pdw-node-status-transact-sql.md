@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c56d169e8aa55e83b86713e1b9fa476bc213ae3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4cd8788d19b06329d0280efc43a13a9a218e056c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014142"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899363"
 ---
 # <a name="sysdmpdwnodestatus-transact-sql"></a>sys.dm_pdw_node_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

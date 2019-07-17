@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9db18a572fc82b05e75fb7bb286afb572fe500fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f998463e0f8190aa040b801d2fd29c732bb31dce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704243"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922361"
 ---
 # <a name="registering-a-custom-business-object"></a>註冊自訂商務物件
 若要成功地透過 Web 伺服器啟動 （.dll 或.exe） 的自訂商務物件，商務物件的 ProgID 必須輸入登錄到此程序中所述。 此 RDS 功能會執行獲批准的可執行檔用來保護您的 Web 伺服器的安全性。  

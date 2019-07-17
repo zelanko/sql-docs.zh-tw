@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6704d9a2fad8b1b19d7757c0e6de40bfccdcc1f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1bb0dcbd16fc96cb587718504de8fa43babd0db6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097363"
 ---
 # <a name="unary-operators"></a>一元運算子
 

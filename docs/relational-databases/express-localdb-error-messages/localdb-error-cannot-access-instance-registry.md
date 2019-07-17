@@ -1,5 +1,5 @@
 ---
-title: LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY | Microsoft Docs
+title: LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: f1458ca8-54dd-48c4-86ae-a8bbedbb7db3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4ec640ab55bba01cb4b9a25912409e5388e95db7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a08ed3b0a138ae0fbe6a76abc31c7db27b4758ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62672055"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996024"
 ---
 # <a name="localdberrorcannotaccessinstanceregistry"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

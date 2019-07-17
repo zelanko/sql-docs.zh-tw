@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b80148d-2318-415c-9479-28c240e48bcd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4daf79842158cabf8dc42f5f544a6bb0f3d8b62b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21b3f21b33922a8967d800bf94db70e82a018e9f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047602"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>指派模型物件權限 (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "65478628"
 > [!NOTE]  
 >  當您指派某個模型的權限時，會明確拒絕所有其他模型的權限。 如果未指派模型物件權限，使用者或群組就無法存取 **[總管]** 中的資料。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  

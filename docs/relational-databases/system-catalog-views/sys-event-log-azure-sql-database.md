@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: afef7b79c10b3d7f72d69dbe9bfca8721f6d13ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a239624fcbc3913d636f7f57b496c006d06a64b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061380"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
@@ -42,7 +41,7 @@ ms.locfileid: "56041529"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|資料庫的名稱。 如果連接失敗且使用者未指定資料庫名稱，則這個資料行會是空白。|  
-|**start_time**|**datetime2**|彙總間隔開始的 UTC 日期和時間。 對於彙總的事件，這個時間永遠是 5 分鐘的倍數。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|彙總間隔開始的 UTC 日期和時間。 對於彙總的事件，這個時間永遠是 5 分鐘的倍數。 例如:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|彙總間隔結束的 UTC 日期和時間。 彙總的事件，如**End_time**一律為剛好 5 分鐘比對應**start_time**相同的資料列中。 不，彙總的事件**start_time**並**end_time**等於實際的 UTC 日期和時間的事件。|  
 |**event_category**|**nvarchar(64)**|產生這個事件的高階元件。<br /><br /> 請參閱[事件類型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)取得一份可能的值。|  
 |**event_type**|**nvarchar(64)**|事件的類型。<br /><br /> 請參閱[事件類型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)取得一份可能的值。|  
@@ -77,13 +76,13 @@ ms.locfileid: "56041529"
 |**連線能力**|**connection_failed**|9|**reconfiguration**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 連接失敗，因為資料庫當時正在進行重新組態。|  
 |**連線能力**|**connection_terminated**|0|**idle_connection_timeout**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 連接已閒置超過系統定義的臨界值。|  
 |**連線能力**|**connection_terminated**|1|**reconfiguration**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 由於資料庫重新設定，已終止工作階段。|  
-|**連線能力**|**throttling**|*\<原因代碼 >*|**reason_code**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 要求已節流。  節流原因代碼： *\<原因代碼 >*。 如需詳細資訊，請參閱 <<c0> [ 引擎節流](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
+|**連線能力**|**節流設定**|*\<原因代碼 >*|**reason_code**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 要求已節流。  節流原因代碼： *\<原因代碼 >* 。 如需詳細資訊，請參閱 <<c0> [ 引擎節流](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
 |**連線能力**|**throttling_long_transaction**|40549|**long_transaction**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 工作階段已終止，因為您有長時間執行的交易。 請嘗試縮短您的交易。 如需詳細資訊，請參閱 <<c0> [ 資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**連線能力**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它取得太多鎖定。 請嘗試在單一交易中讀取或修改較少的資料列。 如需詳細資訊，請參閱 <<c0> [ 資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**連線能力**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用 TEMPDB。 請嘗試修改查詢，減少使用暫存資料表空間。 如需詳細資訊，請參閱 <<c0> [ 資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**連線能力**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用交易記錄檔空間。 請嘗試在單一交易中修改較少的資料列。 如需詳細資訊，請參閱 <<c0> [ 資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**連線能力**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用記憶體。 請嘗試修改查詢以處理較少的資料列。 如需詳細資訊，請參閱 <<c0> [ 資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**engine**|**deadlock**|0|**deadlock**|2|發生死結。|  
+|**引擎**|**deadlock**|0|**deadlock**|2|發生死結。|  
   
 ## <a name="permissions"></a>Permissions
 
@@ -231,5 +230,5 @@ SELECT * FROM CTE2;
 
 ## <a name="see-also"></a>另請參閱
 
- [Azure SQL Database 中擴充的事件](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+ [Azure SQL Database 中的擴充事件](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8e50253b7c7fb6c59b4303c528c1ef7267ccf644
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79313d2344f6feb978a064f3fbd92e1f7bc7dce5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62706077"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028887"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>對應 Sybase ASE 和 SQL Server 資料類型 (SybaseToSQL)
 Sybase Adaptive Server Enterprise (ASE) 的資料庫型別不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫的型別。 當您將轉換至 ASE 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 物件，您必須指定如何對應資料類型 ASE 能夠從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 您可以接受預設資料類型對應，或您可以自訂對應，如下列各節中所示。  
@@ -64,7 +63,7 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
   
         某些類型需要目標資料類型長度。 如果需要，請輸入新的資料長度，以**取代為** 方塊中。  
   
-    5.  按一下 [確定]  。  
+    5.  按一下 [確定 **Deploying Office Solutions**]。  
   
 3.  若要編輯的資料類型對應，執行下列作業：  
   

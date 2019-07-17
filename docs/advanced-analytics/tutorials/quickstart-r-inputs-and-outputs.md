@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 4df9e266e16e2cc37ce527c19ba7be483e43d50a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 1672cdeb59dfe35e313c999549e46f3fd76b688e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962006"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>快速入門：處理輸入及輸出在 SQL Server 中使用 R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -72,7 +71,7 @@ SELECT * FROM RTestData
 
     ![從資料表傳回資料的 R 指令碼輸出](./media/r-output-rtestdata.png)
 
-2. 讓我們變更輸入或輸出變數的名稱。 上述指令碼使用預設的輸入和輸出變數名稱， _InputDataSet_並_OutputDataSet_。 若要定義輸入的資料與相關聯_InputDatSet_，您使用*@input_data_1*變數。
+2. 讓我們變更輸入或輸出變數的名稱。 上述指令碼使用預設的輸入和輸出變數名稱， _InputDataSet_並_OutputDataSet_。 若要定義輸入的資料與相關聯_InputDatSet_，您使用 *@input_data_1* 變數。
 
     此指令碼，在預存程序的輸出和輸入的變數名稱已變更為*SQL_out*並*SQL_in*:
 
@@ -92,7 +91,7 @@ SELECT * FROM RTestData
 
     `WITH RESULT SETS`陳述式在 SQL Server 中定義資料用的結構描述。 您必須提供每個資料行從 r 傳回的 SQL 相容的資料類型您可以使用的結構描述定義來提供新的資料行名稱太，因為您不需要使用 R 資料框架的資料行名稱。
 
-3. 您也可以使用 R 指令碼產生值，並保留中的輸入的查詢字串_@input_data_1_空白。
+3. 您也可以使用 R 指令碼產生值，並保留中的輸入的查詢字串 _@input_data_1_ 空白。
 
     ```sql
     EXECUTE sp_execute_external_script

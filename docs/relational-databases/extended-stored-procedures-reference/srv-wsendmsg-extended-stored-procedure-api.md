@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f2153076-32c9-4a52-8e1b-fc9618153543
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c49d9e3ac3ba60ded98c7bdba55465b914bf1b28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 301674b9acfd822d0049e548011633b68b249682
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035995"
 ---
 # <a name="srvwsendmsg-extended-stored-procedure-api"></a>srv_wsendmsg (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
