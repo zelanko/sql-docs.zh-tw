@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a1bdbe715aa970f87596060a774ac2b1ed8df15
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028059"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210744"
 ---
 # <a name="replication-distribution-agent"></a>複寫散發代理程式
   「複寫散發代理程式」是一個可執行檔，它會將快照集 (快照式複寫與異動複寫) 和散發資料庫資料表中保存的交易 (異動複寫) 移動至位於「訂閱者」端的目的地資料表。  
@@ -89,14 +89,14 @@ ms.locfileid: "56028059"
  **-?**  
  列印所有可用的參數。  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 <伺服器名稱>。 請針對該伺服器上 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 <伺服器名稱>  。 請針對該伺服器上 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
   
  **-PublisherDB** _publisher_database_  
  這是發行者資料庫的名稱。  
   
- **-Subscriber** _server_name_[**\\**_instance_name_]  
- 這是訂閱者的名稱。 請針對該伺服器上的 *預設執行個體指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 請針對該伺服器上 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ 這是訂閱者的名稱。 請針對該伺服器上的 *預設執行個體指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 請針對該伺服器上 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
   
  **-SubscriberDB** _subscriber_database_  
  這是訂閱者資料庫的名稱。  
@@ -167,7 +167,7 @@ ms.locfileid: "56028059"
  這是用來連接到 FTP 服務的使用者名稱。  沒有指定這個參數時，系統就會使用 anonymous。  
   
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
- 指定在散發作業期間記錄的記錄量。 您可以透過選取 1，盡量減少記錄作業的效能影響。  
+ 指定在散發作業期間記錄的記錄量。  您可以透過選取 1，盡量減少記錄作業的效能影響。  
   
 |HistoryVerboseLevel 值|描述|  
 |-------------------------------|-----------------|  
@@ -183,7 +183,7 @@ ms.locfileid: "56028059"
  這是記錄執行緒檢查是否有任何現有的連接正在等候伺服器回應之前的秒數。 執行長時間執行的批次時，您可以減少這個值，避免檢查代理程式將散發代理程式標示為有疑問。 預設值是 **300** 秒。  
   
  **-LoginTimeOut** _login_time_out_seconds_  
- 這是登入逾時之前的秒數。 預設值為 15 秒。  
+ 這是登入逾時之前的秒數。  預設值為 15 秒。  
   
  **-MaxBcpThreads** _number_of_threads_  
  指定可用平行方式執行的大量複製作業數目。 同時存在之執行緒和 ODBC 連接的最大數目是 **MaxBcpThreads** 或散發資料庫之同步處理交易中顯示的大量複製要求數目的較小者。 **MaxBcpThreads** 必須具有大於 **0** 的值而且沒有硬式編碼的上限。  預設值為 **2**乘以處理器的數目，最大值是 8。 當使用並行快照集選項來套用在發行者端產生的快照集時，系統會使用單一執行緒，不論您針對 **MaxBcpThreads**指定的數目為何都一樣。  
@@ -210,7 +210,7 @@ ms.locfileid: "56028059"
  這是代理程式輸出檔的路徑。 如果未提供檔案名稱，輸出將傳送至主控台。 如果指定的檔案名稱存在，輸出就會附加至該檔案。  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
- 指定輸出是否應該詳細。 如果詳細資訊層級為 0，系統就只會列印錯誤訊息。 如果詳細資訊層級為 1，系統就會列印所有進度報表訊息。  如果詳細資訊層級為 2 (預設值)，系統就會列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。  
+ 指定輸出是否應該詳細。  如果詳細資訊層級為 0，系統就只會列印錯誤訊息。  如果詳細資訊層級為 1，系統就會列印所有進度報表訊息。  如果詳細資訊層級為 2 (預設值)，系統就會列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。  
   
  **-PacketSize** _packet_size_  
  這是封包大小 (以位元組為單位)。 預設值是 4096 (位元組)。  
@@ -230,7 +230,7 @@ ms.locfileid: "56028059"
  **-QuotedIdentifier** _quoted_identifier_  
  指定要使用的引號識別碼字元。 此值的第一個字元表示散發代理程式所使用的值。 如果使用了沒有任何值的 **QuotedIdentifier** ，散發代理程式就會使用空格。 如果未使用 **QuotedIdentifier** ，散發代理程式就會使用訂閱者所支援的任何引號識別項。  
   
- **-SkipErrors** _native_error_id_ [**:**_...n_]  
+ **-SkipErrors** _native_error_id_ [ **:** _...n_]  
  這是冒號分隔的清單，其中指定了這個代理程式要忽略的錯誤號碼。  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  

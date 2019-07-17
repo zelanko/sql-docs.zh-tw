@@ -1,5 +1,5 @@
 ---
-title: sp_delete_targetserver (Transact-SQL) | Microsoft Docs
+title: sp_delete_targetserver 來 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 194395728e60f31c689293191be2cedca4d549f3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 487d88a7580432bf947893920d307e2f0adffd18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111996"
 ---
 # <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @server_name = ] 'server'` 要移除為可用的目標伺服器的伺服器名稱。 *伺服器*已**nvarchar(30)**，沒有預設值。  
+`[ @server_name = ] 'server'` 要移除為可用的目標伺服器的伺服器名稱。 *伺服器*已**nvarchar(30)** ，沒有預設值。  
   
 `[ @clear_downloadlist = ] clear_downloadlist` 指定是否要清除目標伺服器的下載清單。 *clear_downloadlist*是型別**位元**，預設值是**1**。 當*clear_downloadlist*是**1**，程序刪除伺服器之前，清除伺服器的下載清單。 當*clear_downloadlist*是**0**，則不會清除下載清單。  
   

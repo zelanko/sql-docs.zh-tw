@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c357efe4636c1b502cdb57305b9072907d4b2e98
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532072"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165214"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 慣例
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -144,7 +144,7 @@ ms.locfileid: "52532072"
 ### <a name="inherited-defaults"></a>繼承的預設值  
  物件上指定的某些屬性會針對子物件或下階物件上的相同屬性提供預設值。 例如， **Cube.StorageMode**提供的預設值**Partition.StorageMode**。 Analysis Services 套用於繼承預設值的規則如下所示：  
   
--   當子物件的屬性在 XML 中為 Null 時，其值就會預設為繼承的值。 但是，如果您從伺服器查詢此值，伺服器會傳回 XML 元素的 Null 值。  
+-   當子物件的屬性在 XML 中為 Null 時，其值就會預設為繼承的值。 但是，如果您從伺服器查詢此值，伺服器會傳回 XML 元素的 null 值。  
   
 -   您無法以程式設計方式判斷出子物件的屬性是直接在子物件上設定的，還是繼承而來。  
   

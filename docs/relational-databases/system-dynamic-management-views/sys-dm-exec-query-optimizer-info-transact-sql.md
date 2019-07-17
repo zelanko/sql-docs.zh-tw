@@ -20,12 +20,12 @@ ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a35e2f44825546d651917c4fbe4030d2a2a05e5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6195ee80fb851a9875e4a95a6e5aab87deb905e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097687"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255357"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "68097687"
 ## <a name="permissions"></a>Permissions  
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要資料庫中的 `VIEW DATABASE STATE` 權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
     
 ## <a name="remarks"></a>備註  
  **sys.dm_exec_query_optimizer_info**包含下列屬性 （計數器）。 所有發生值會累計並在系統重新啟動時設為 0。 所有值欄位的值於系統重新啟動時設為 NULL。 所有指定平均值的值資料行值會使用來自同一資料列的發生值作為平均值計算中的分母。 所有查詢最佳化時測量[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]判斷變更**dm_exec_query_optimizer_info**，包括這兩個使用者和系統產生的查詢。 已快取的計劃的執行不會變更中的值**dm_exec_query_optimizer_info**，只有最佳化是顯著。  

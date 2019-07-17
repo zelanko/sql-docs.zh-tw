@@ -12,25 +12,24 @@ helpviewer_keywords:
 ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b33688c27bef00196bce8778aef6e9855c768fdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 057e949e752abfe8dd4179fe9b1f61af8866dad4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111433"
 ---
 # <a name="implementing-endpoints"></a>實作端點
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  端點是可以透過原生方式接聽要求的服務。 SMO 支援各種端點類型使用<xref:Microsoft.SqlServer.Management.Smo.Endpoint>物件。 您可以藉由建立 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 物件的執行個體和設定其屬性，建立處理特定裝載類型的端點服務 (此類服務使用特定的通訊協定)。  
+  端點是可以透過原生方式接聽要求的服務。 SMO 藉由使用 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 物件來支援各種端點類型。 您可以藉由建立 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 物件的執行個體和設定其屬性，建立處理特定裝載類型的端點服務 (此類服務使用特定的通訊協定)。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A>屬性<xref:Microsoft.SqlServer.Management.Smo.Endpoint>物件可用來指定下列的裝載類型：  
+ <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 屬性可用於指定下列其中一個裝載類型：  
   
 -   資料庫鏡像  
   
--   SOAP ([!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 及更早的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本中存在 SOAP 端點的支援)  
+-   SOAP ( [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 及更早的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本中存在 SOAP 端點的支援)  
   
 -   Service Broker  
   
@@ -42,11 +41,11 @@ ms.locfileid: "47640416"
   
 -   TCP 通訊協定  
   
- 指定裝載的類型，實際的承載可以設定使用<xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A>物件屬性。 <xref:Microsoft.SqlServer.Management.Smo.Payload> 物件屬性針對可修改其屬性的指定類型，提供裝載物件的參考。  
+ 在指定裝載類型之後，就可以使用 <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A> 物件屬性設定實際的裝載。 <xref:Microsoft.SqlServer.Management.Smo.Payload> 物件屬性針對可修改其屬性的指定類型，提供裝載物件的參考。  
   
- 如果是 <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload> 物件，則您必須指定鏡像角色以及是否啟用加密。 <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload>物件需要訊息轉送、 允許的連線數目上限以及驗證模式的相關資訊。 <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> 物件需要設定多個屬性，包括 <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> 物件屬性，此屬性會指定用戶端可用的 SOAP 裝載方法 (預存程序和使用者定義函數)。  
+ 如果是 <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload> 物件，則您必須指定鏡像角色以及是否啟用加密。 <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> 物件需要訊息轉送、允許的最大連接數目以及驗證模式的相關資訊。 <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> 物件需要設定多個屬性，包括 <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> 物件屬性，此屬性會指定用戶端可用的 SOAP 裝載方法 (預存程序和使用者定義函數)。  
   
- 同樣地，實際的通訊協定也可使用 <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> 物件屬性來設定，此屬性會參考 <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A> 屬性所指定類型的通訊協定物件。 <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> 物件需要受限 IP 位址的清單，以及通訊埠、網站和驗證資訊。 <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol>物件也需要受限的 IP 位址和連接埠資訊的清單。  
+ 同樣地，實際的通訊協定也可使用 <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> 物件屬性來設定，此屬性會參考 <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A> 屬性所指定類型的通訊協定物件。 <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> 物件需要受限 IP 位址的清單，以及通訊埠、網站和驗證資訊。 <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> 物件也需要受限 IP 位址的清單和通訊埠資訊。  
   
  在建立和完整地定義端點後，就可以對資料庫使用者、群組、角色和登入等授與、撤銷和拒絕存取權限。  
   

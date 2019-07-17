@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 77ef7250c7af3918509e38c9aa1f5350f3ac5610
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8ed2484bb3eb31b1bb73000f848dffd27e85e9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690837"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118865"
 ---
 # <a name="expressions-mdx"></a>運算式 (MDX)
 

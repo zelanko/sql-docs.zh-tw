@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c99c3db-0b04-46c3-aa59-d6f680522fdd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 545aecbe00f075edd7443c75cbc0f00b98dbf549
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd242370cc3d2c200e4d8b3983d47e396be3004a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106653"
 ---
 # <a name="sql-server-profiler-stored-procedures-transact-sql"></a>SQL Server Profiler 預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

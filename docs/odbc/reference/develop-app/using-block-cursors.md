@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 388995cd5cb8a711d72533685c14088a7e908475
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 529b71540b4abde5fce868975fcbf2749e31dc8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135544"
 ---
 # <a name="using-block-cursors"></a>使用區塊資料指標
 內建的區塊資料指標支援 ODBC 3。*x*。 **SQLFetch**所以只可用於與多資料列提取呼叫在 ODBC 3 時。*x*; 如果 ODBC 2。*x*應用程式會呼叫**SQLFetch**，它會開啟僅有單一資料列、 順向資料指標。 當 ODBC 3。*x*應用程式會呼叫**SQLFetch** ODBC 2。*x*驅動程式，它會傳回單一資料列的驅動程式支援，除非**SQLExtendedFetch**。 如需詳細資訊，請參閱 <<c0> [ 區塊資料指標、 可捲動的資料指標和回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)在 < 附錄 g:為了與舊版相容的驅動程式指導方針。  

@@ -1,5 +1,5 @@
 ---
-title: sp_create_plan_guide (Transact-SQL) | Microsoft Docs
+title: sp_create_plan_guide & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b08de0ce5acde863d8f2683b9bc8d6f38c2fa4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108635"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  *sp_create_plan_guide*可讓查詢最佳化工具，以符合與批次中所提供的對應陳述式或模組所識別的方法中必須提供\@module_or_batch 和\@params。 如需詳細資訊，請參閱＜備註＞一節。 大小*sp_create_plan_guide*只受到可用記憶體的伺服器。  
   
- [\@type = ]N'{ OBJECT | SQL | TEMPLATE }'  
+ [\@類型 =] N'{物件 |SQL |範本}'  
  是在其中的實體型別*sp_create_plan_guide*隨即出現。 這會指定用於比對的內容*sp_create_plan_guide*要*plan_guide_name*。  
   
  OBJECT  
@@ -72,7 +71,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  TEMPLATE  
  表示計畫指南套用到任何查詢，參數化為中表示的格式*sp_create_plan_guide*。 如果有指定 TEMPLATE，只有 PARAMETERIZATION {FORCED |在您可以指定簡單} 查詢提示\@提示參數。 如需有關 TEMPLATE 計畫指南的詳細資訊，請參閱 <<c0> [ 所使用的計畫指南指定查詢參數化行為](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)。  
   
- [\@module_or_batch =]{ N'[ *schema_name*. ] *object_name*' | N'*batch_text*' | NULL }  
+ [\@module_or_batch =] {N'[ *schema_name*。 ] *object_name*' | N'*batch_text*' | NULL }  
  指定要在其中的物件名稱*sp_create_plan_guide*出現時，或在其中的批次文字*sp_create_plan_guide*隨即出現。 批次文字不能包含 USE*資料庫*陳述式。  
   
  用於計畫指南，以符合應用程式所提交的批次*batch_tex*t 必須提供相同的格式，為字元，如提交給[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不會執行內部轉換來簡化這個比對作業。 如需詳細資訊，請參閱＜備註＞一節。  
@@ -89,7 +88,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  *\@parameter_name data_type*必須完全相同的格式中提交給[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]利用 sp_executesql 或參數化之後內部提交。 如需詳細資訊，請參閱＜備註＞一節。 如果批次不包含參數，就必須指定 NULL。 大小\@params 只受到可用的伺服器記憶體。  
   
  [\@hints = ]{ N'OPTION (*query_hint* [ , *...n* ] )' | N'*XML_showplan*' | NULL }  
- N'OPTION (*query_hint* [ , *...n* ] )  
+ N'OPTION (*query_hint* [， *...n* ])  
  指定要附加至符合查詢的 OPTION 子句\@stmt。\@提示語法上必須與 SELECT 陳述式中的 OPTION 子句相同且可以包含任何有效順序的查詢提示。  
   
  N'*XML_showplan*'  

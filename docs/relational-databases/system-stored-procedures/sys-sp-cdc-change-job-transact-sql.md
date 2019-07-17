@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_change_job (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_change_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 644873dd367705b02c3d14fcc7d95e0c9c81736e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5f5973382b7a09080fa990b0807deb01660ce0d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106535"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,9 +63,9 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  當*連續*= 0， **sp_cdc_scan**作業最多會執行*max_scans*掃描的記錄檔中，最多處理*max_trans&lt*交易而且在每次掃描，然後結束。  
   
- 如果**@continuous**從 1 變更為 0， **@pollinginterval**會自動設為 0。 指定的值**@pollinginterval**以外 0 會被忽略。  
+ 如果 **@continuous** 從 1 變更為 0， **@pollinginterval** 會自動設為 0。 指定的值 **@pollinginterval** 以外 0 會被忽略。  
   
- 如果**@continuous**被省略或明確設定為 NULL 並**@pollinginterval**明確設定的值大於 0， **@continuous**會自動設定為 1。  
+ 如果 **@continuous** 被省略或明確設定為 NULL 並 **@pollinginterval** 明確設定的值大於 0， **@continuous** 會自動設定為 1。  
   
  *連續*只適用於擷取作業。  
   
@@ -112,7 +111,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>B. 變更清除作業  
- 下列範例會在 `AdventureWorks2012` 資料庫中更新清除作業。 所有有效的參數，此作業類型，除了**@threshold**，所指定。 值**@threshold**則不會修改。  
+ 下列範例會在 `AdventureWorks2012` 資料庫中更新清除作業。 所有有效的參數，此作業類型，除了 **@threshold** ，所指定。 值 **@threshold** 則不會修改。  
   
 ```  
 USE AdventureWorks2012;  

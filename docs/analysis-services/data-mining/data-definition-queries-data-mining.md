@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a38c0fb30533e0569d14cec0387d362fa4cabc87
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148273"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210136"
 ---
 # <a name="data-definition-queries-data-mining"></a>資料定義查詢 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "50148273"
 ###  <a name="bkmk_Scripts"></a> 編寫資料定義陳述式的指令碼  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供多種指令碼和程式語言，您可以使用這些語言來建立或更改資料採礦物件或是定義資料來源。  雖然 DMX 是為了加速資料採礦工作所設計，您也可以在指令碼或自訂程式碼中同時使用 XMLA 和 AMO 來操作物件。  
   
- 適用於 Excel 的資料採礦增益集也包含許多查詢範本，並提供 [進階查詢編輯器]，此編輯器可幫助您撰寫複雜的 DMX 陳述式。 您可以互動方式建立查詢，然後切換到 [SQL 檢視] 來擷取 DMX 陳述式。  
+ 適用於 Excel 的資料採礦增益集也包含許多查詢範本，並提供 [進階查詢編輯器]  ，此編輯器可幫助您撰寫複雜的 DMX 陳述式。 您可以互動方式建立查詢，然後切換到 [SQL 檢視] 來擷取 DMX 陳述式。  
   
 ##  <a name="bkmk_Export"></a> 匯入和匯出模型  
  您可以在 DMX 中使用資料定義陳述式來匯出模型的定義以及其必要結構和資料來源，然後將該定義匯入至不同的伺服器。 使用匯出和匯入是在不同的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體之間移動資料採礦模型和採礦結構的最快速且最簡單的方法。 如需詳細資訊，請參閱 [資料採礦方案與物件的管理](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)。  

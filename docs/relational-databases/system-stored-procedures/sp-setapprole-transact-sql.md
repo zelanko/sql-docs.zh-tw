@@ -1,5 +1,5 @@
 ---
-title: sp_setapprole (Transact-SQL) | Microsoft Docs
+title: sp_setapprole & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 10/12/2018
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c18aa6fefb23bb3d388069773aa1633c29859e90
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 44e7b670ef5f16b6df861e939f9b8b2d9ace8dd5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104417"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
@@ -63,10 +62,10 @@ sp_setapprole [ @rolename = ] 'role',
   
 `[ @fCreateCookie = ] true | false` 指定是否要建立 cookie。 **true**會隱含地轉換為 1。 **false**會隱含地轉換為 0。  
   
-`[ @cookie = ] @cookie OUTPUT` 指定輸出參數必須包含的 cookie。 只有當，會產生 cookie 的值**@fCreateCookie**是**true**。 **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` 指定輸出參數必須包含的 cookie。 只有當，會產生 cookie 的值 **@fCreateCookie** 是**true**。 **varbinary(8000)**  
   
 > [!NOTE]  
-> **sp_setapprole** 的 Cookie **OUTPUT** 參數目前記載成 **varbinary(8000)** ，這是正確的長度上限。 但目前的實作會傳回 **varbinary(50)**。 應用程式應繼續保留**varbinary(8000)** ，讓應用程式能夠繼續正常運作的 cookie 傳回大小如有增加在未來的版本。
+> **sp_setapprole** 的 Cookie **OUTPUT** 參數目前記載成 **varbinary(8000)** ，這是正確的長度上限。 但目前的實作會傳回 **varbinary(50)** 。 應用程式應繼續保留**varbinary(8000)** ，讓應用程式能夠繼續正常運作的 cookie 傳回大小如有增加在未來的版本。
   
 ## <a name="return-code-values"></a>傳回碼值
 

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_cleanup_change_table (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7bbcc576ab0ff38adde9042a713e0dfd0c7d54be
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: dcf68e23652eb81e163722f69d9645c7502af5b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106518"
 ---
 # <a name="sysspcdccleanupchangetable-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: fe8dd1ebcc6604b8cff514cff3628abc23275517
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: a4ee7047e2c517f05f311bf4e842f8f4c64ca8fe
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287245"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264236"
 ---
 # <a name="creating-script-files-oracletosql"></a>建立指令檔 (OracleToSQL)
 第一個步驟是啟動 SSMA 主控台應用程式建立的指令碼檔案之前，並在必要時建立的變數值檔案和伺服器連線檔案。  
@@ -30,7 +30,7 @@ ms.locfileid: "63287245"
   
 2.  **伺服器：** 可讓使用者設定的來源/目標伺服器定義。 這也可以是不同的伺服器連線檔案中。  
   
-3.  **script-commands:** 可讓使用者執行 SSMA 工作流程命令。  
+3.  **指令碼命令：** 可讓使用者執行 SSMA 工作流程命令。  
   
 以下將詳細說明每個區段：  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63287245"
   
     可以也就使用一部或其他指定的屬性：  
   
-    -   source-use-last-used="true" (default) or source-server="source_servername"  
+    -   來源-使用-上次使用 ="true"（預設值） 或來源伺服器 ="source_servername 」  
   
     -   target-use-last-used="true" (default) or target-server="target_servername"  
   

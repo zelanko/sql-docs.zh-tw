@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: feca89ac2ac888c2fa9f082595e761e898dea971
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815050"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211922"
 ---
 # <a name="programming-languages"></a>程式語言：
-  本章節描述如何進行程式設計[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO) 中[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Basic.NET [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.NET 和[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual c + +。  
+  本章節描述如何進行程式設計[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO) 中[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Basic.NET[!INCLUDE[msCoName](../../includes/msconame-md.md)]視覺化C#.NET，和[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual C++。  
   
 |主題|描述|  
 |-----------|-----------------|  

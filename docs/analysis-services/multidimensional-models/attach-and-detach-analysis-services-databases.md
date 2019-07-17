@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2419b057f6bc3fbe85c937911dd76bc8b9729b95
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144853"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180270"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>附加和卸離 Analysis Services 資料庫
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "50144853"
   
 |卸離讀取/寫入資料庫|卸離唯讀資料庫|  
 |--------------------------------------|-------------------------------------|  
-|1) 伺服器發出在資料庫上執行 CommitExclusive 鎖定的要求<br /><br /> 2) 伺服器等候直到所有進行中的交易都已認可或回復為止<br /><br /> 3) 伺服器建立卸離資料庫所需的所有中繼資料<br /><br /> 4) 資料庫標示為已刪除<br /><br /> 5) 伺服器認可交易|1) 資料庫標示為已刪除<br /><br /> 2) 伺服器認可交易<br /><br /> 注意：您無法針對唯讀資料庫變更卸離密碼。 如果您針對已經包含密碼的卸離資料庫提供密碼參數，就會引發錯誤。|  
+|1) 伺服器發出在資料庫上執行 CommitExclusive 鎖定的要求<br /><br /> 2) 伺服器等候直到所有進行中的交易都已認可或回復為止<br /><br /> 3) 伺服器建立卸離資料庫所需的所有中繼資料<br /><br /> 4) 資料庫標示為已刪除<br /><br /> 5) 伺服器認可交易|1) 資料庫標示為已刪除<br /><br /> 2) 伺服器認可交易<br /><br /> 注意:無法針對唯讀資料庫變更卸離密碼。 如果您針對已經包含密碼的卸離資料庫提供密碼參數，就會引發錯誤。|  
   
  **Attach** 和 **Detach** 命令必須當做單一作業執行。 它們無法在同一個交易中與其他作業結合。 此外， **Attach** 和 **Detach** 命令是不可部分完成的交易式命令。 這表示此作業不是成功，就是失敗。 沒有任何資料庫會處於未完成的狀態。  
   

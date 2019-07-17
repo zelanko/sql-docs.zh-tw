@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: abe670570dd2219247da0c70b2b62e1de4e60341
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc9f8dcc3782204c8bf1c9add1200e451edcf127
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181768"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103869"
 ---
 # <a name="behavioral-changes"></a>行為變更
 行為變更會讓這些變更*語法*介面的維持不變，但*語意*已變更。 如需這些變更，ODBC 2 中所使用的功能。*x*行為不同於相同的功能，在 ODBC 3 行為。*x*。  

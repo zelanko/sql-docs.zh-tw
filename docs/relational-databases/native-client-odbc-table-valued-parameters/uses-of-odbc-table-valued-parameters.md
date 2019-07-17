@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5421467aaf516ca3f1f153979916be01f9160d05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1c806e506f7ee344268a63278fda455926d4ef9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62738219"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129001"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>使用 ODBC 資料表值參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

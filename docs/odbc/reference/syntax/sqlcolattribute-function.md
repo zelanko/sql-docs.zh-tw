@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e23b7dd9ce81f02a822bece3546bf1c604030df1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4577b97c827d527422fe2448656496d7c196c40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118696"
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 函數
 **合規性**  
@@ -146,7 +145,7 @@ SQLRETURN SQLColAttribute (
   
  下表列出所傳回的描述元類型**SQLColAttribute**。 型別*NumericAttributePtr*的值是**SQLLEN \*** 。  
   
-|*FieldIdentifier*|[資訊]<br /><br /> 傳回|描述|  
+|*FieldIdentifier*|Information<br /><br /> 傳回|描述|  
 |-----------------------|---------------------------------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE 資料行是否自動遞增資料行。<br /><br /> 如果資料行不是自動遞增資料行，或不是數字，SQL_FALSE。<br /><br /> 這個欄位是適用於數值資料類型資料行。 應用程式可以將值插入含有自動遞增資料行的資料列，但通常不能更新資料行中的值。<br /><br /> 自動遞增資料行進行插入時，唯一的值會插入資料行在插入時。 增量未定義，但資料來源特有。 應用程式不應該假設任何特定值的自動遞增資料行開始在任何特定點或遞增。|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3.0)|*CharacterAttributePtr*|基底的資料行名稱的結果集資料行。 如果基底的資料行名稱不存在 （如所示的是運算式的資料行的情況下），則此變數包含空字串。<br /><br /> 這項資訊是從 SQL_DESC_BASE_COLUMN_NAME 記錄欄位傳回的 IRD，也就是唯讀的欄位。|  
@@ -157,8 +156,8 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_COUNT (ODBC 1.0)|*NumericAttributePtr*|在結果集中可用的資料行數目。 如果結果集中沒有資料行，這會傳回 0。 中的值*ColumnNumber*引數會被忽略。<br /><br /> 這項資訊會從 IRD 的 SQL_DESC_COUNT 標頭欄位中傳回。|  
 |SQL_DESC_DISPLAY_SIZE (ODBC 1.0)|*NumericAttributePtr*|若要顯示的資料行的資料所需的字元數目上限。 如需有關顯示大小的詳細資訊，請參閱[資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d:資料類型。|  
 |SQL_DESC_FIXED_PREC_SCALE (ODBC 1.0)|*NumericAttributePtr*|如果資料行具有固定有效位數和非零值的小數位數的資料來源特有的 SQL_TRUE。<br /><br /> 如果資料行沒有資料來源特有的固定有效位數和非零值的小數位數，SQL_FALSE。|  
-|SQL_DESC_LABEL (ODBC 2.0)|*CharacterAttributePtr*|資料行標籤或標題。 比方說，名為 EmpName 的資料行可能會標示為 員工名稱，或可能會加上別名。<br /><br /> 如果資料行沒有標籤，則會傳回資料行名稱。 如果是沒有標籤資料行，且未命名的則會傳回空字串。|  
-|SQL_DESC_LENGTH  (ODBC 3.0)|*NumericAttributePtr*|是一個數字值的最大頁數或實際字元長度的字元字串或二進位資料類型。 這是固定長度資料類型的最大字元長度或可變長度資料類型的實際字元長度。 其值一律不包括結束的字元字串的 null 終止位元組。<br /><br /> 這項資訊會從 IRD 的 SQL_DESC_LENGTH 記錄欄位傳回。<br /><br /> 如需長度的詳細資訊，請參閱[資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d:資料類型。|  
+|與 SQL_DESC_LABEL (ODBC 2.0)|*CharacterAttributePtr*|資料行標籤或標題。 比方說，名為 EmpName 的資料行可能會標示為 員工名稱，或可能會加上別名。<br /><br /> 如果資料行沒有標籤，則會傳回資料行名稱。 如果是沒有標籤資料行，且未命名的則會傳回空字串。|  
+|SQL_DESC_LENGTH (ODBC 3.0)|*NumericAttributePtr*|是一個數字值的最大頁數或實際字元長度的字元字串或二進位資料類型。 這是固定長度資料類型的最大字元長度或可變長度資料類型的實際字元長度。 其值一律不包括結束的字元字串的 null 終止位元組。<br /><br /> 這項資訊會從 IRD 的 SQL_DESC_LENGTH 記錄欄位傳回。<br /><br /> 如需長度的詳細資訊，請參閱[資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d:資料類型。|  
 |SQL_DESC_LITERAL_PREFIX (ODBC 3.0)|*CharacterAttributePtr*|此 VARCHAR(128) 記錄欄位包含驅動程式會辨識為此資料類型的常值的前置詞的字元。 此欄位包含不適用的常值的前置詞的資料類型的空字串。 如需詳細資訊，請參閱 <<c0> [ 常值前置詞和後置詞](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)。|  
 |SQL_DESC_LITERAL_SUFFIX (ODBC 3.0)|*CharacterAttributePtr*|此 VARCHAR(128) 記錄欄位包含驅動程式會辨識為此資料類型的常值後置詞的字元。 此欄位包含不適用常值後置詞的資料類型的空字串。 如需詳細資訊，請參閱 <<c0> [ 常值前置詞和後置詞](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)。|  
 |SQL_DESC_LOCAL_TYPE_NAME (ODBC 3.0)|*CharacterAttributePtr*|此 VARCHAR(128) 記錄欄位會包含任何當地語系化 （原生語言） 的名稱可能不同於一般的資料型別名稱的資料類型。 如果沒有當地語系化的名稱，則會傳回空字串。 這個欄位是僅供顯示。 字串的字元集是地區設定相關，而通常是伺服器的預設字元集。|  

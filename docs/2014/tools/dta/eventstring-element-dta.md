@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769510"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211110"
 ---
 # <a name="eventstring-element-dta"></a>EventString 元素 (DTA)
   在 XML 輸入檔中，直接指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼工作負載。  
@@ -37,7 +37,7 @@ ms.locfileid: "52769510"
   
 ## <a name="element-attributes"></a>元素屬性  
   
-|attribute|描述|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`Weight`|選擇性。 針對指定事件來指定查詢加權因數 (重要性因數)。 請利用 `float` 資料類型來指定加權。 例如，`Weight`="100.01"。 `Weight` 所能指定的最小值是 "0"。|  
   

@@ -1,5 +1,5 @@
 ---
-title: 在 SQL Server Management Studio 中建立 DMX 查詢 |Microsoft 文件
+title: SQL Server Management Studio 中建立 DMX 查詢 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9842dd19b9f613c7b10c86e3596ddda96a99f59b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014565"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183996"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中建立 DMX 查詢
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供一組可協助您建立預測查詢、 內容查詢，以及針對採礦模型和採礦結構的資料定義查詢的功能。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供一組功能，可幫助您針對採礦模型和採礦結構建立預測查詢、內容查詢和資料定義查詢。  
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中都有提供圖形化預測查詢產生器，可簡化撰寫預測查詢以及將資料集對應至模型的程序。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "34014565"
  本主題描述如何使用 [中繼資料總管] 和 DMX 查詢編輯器來建立 DMX 查詢。  
   
 ##  <a name="BKMK_Templates"></a> DMX 查詢範本  
- [範本總管] 有提供用來建立基本 DMX 查詢的範本。 [DMX] 資料夾包含資料採礦範本，這些範本分成以下類別：  
+ [範本總管] 有提供用來建立基本 DMX 查詢的範本。 [DMX]  資料夾包含資料採礦範本，這些範本分成以下類別：  
   
 -   **模型內容**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34014565"
  您也可以針對經常執行的查詢或命令建立自訂範本。  
   
 ## <a name="xmla-query-templates"></a>XMLA 查詢範本  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]也提供 XMLA 查詢範本。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也提供 XMLA 查詢的範本。  
   
  您可以使用 XMLA 和 DMX 執行的查詢類型之間有一些重疊。 例如，您可以使用 DMX 或資料採礦結構描述資料列集來建立某些模型內容查詢，但是結構描述資料列集有時會包含未在 DMX 內容查詢中公開的資訊。  
   
@@ -52,32 +52,32 @@ ms.locfileid: "34014565"
   
 #### <a name="open-a-new-dmx-query-window"></a>開啟新的 DMX 查詢視窗  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中按一下 [新增查詢]，然後選取 [新增 Analysis Server DMX 查詢]。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中按一下 [新增查詢]  ，然後選取 [新增 Analysis Server DMX 查詢]  。  
   
-2.  當 [連接到伺服器] 對話方塊出現時，請選取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，其中包含您要使用的採礦模型。  
+2.  當 [連接到伺服器]  對話方塊出現時，請選取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，其中包含您要使用的採礦模型。  
   
 #### <a name="open-template-explorer"></a>開啟範本總管  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [檢視] 功能表上，選取 [範本總管]。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [檢視]  功能表上，選取 [範本總管]  。  
   
-2.  按一下 [Analysis Server]，即可查看要套用至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 之範本的樹狀檢視。  
+2.  按一下 [Analysis Server]  ，即可查看要套用至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 之範本的樹狀檢視。  
   
 #### <a name="apply-a-template-to-build-a-query"></a>套用範本來建立查詢  
   
--   以滑鼠右鍵按一下適當的查詢類型，然後選取 [開啟]。  
+-   以滑鼠右鍵按一下適當的查詢類型，然後選取 [開啟]  。  
   
 -   或者將範本拖曳到查詢編輯器。  
   
--   您也可以使用 [查詢] 功能表上的 [指定參數值] 選項，填入查詢的參數。  
+-   您也可以使用 [查詢]  功能表上的 [指定參數值]  選項，填入查詢的參數。  
   
  如需如何從範本建立特定查詢類型的範例，請參閱以下主題：  
   
- [從範本建立單一預測查詢](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
+ [根據範本建立單一預測查詢](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
   
- [採礦模型上建立內容查詢](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
+ [建立採礦模型內容查詢](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦查詢工具](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [資料採礦延伸模組 & #40; DMX & #41;參考](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

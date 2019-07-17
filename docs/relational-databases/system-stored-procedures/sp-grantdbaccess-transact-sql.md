@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 author: VanMSFT
-manager: craigg
-ms.openlocfilehash: 285f1c5f2ab868bbf21db80e68ebbf5d71100f14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 184ebbde266ab21c0fa94ebff0e2be0aca61988b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822618"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123797"
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 

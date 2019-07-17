@@ -13,12 +13,12 @@ ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: fde69d6570b5a69f79e2f8f81d2d4d90c1c47777
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22a52ee146610dcacafc10dcd604441932a4fd17
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488987"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263986"
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>變更屬性名稱和資料類型 (Master Data Services)
 

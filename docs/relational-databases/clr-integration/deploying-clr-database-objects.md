@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3a7446027be3ec8df4d3ff35a2b806ffdda6f8f8
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 3bad8ec68ddeccd9ad8082b4f7b98422780581b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118553"
 ---
 # <a name="deploying-clr-database-objects"></a>部署 CLR 資料庫物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +98,7 @@ ms.locfileid: "67585691"
   
 6.  選取在每個物件類型**選擇物件類型**窗格中，**選擇\<類型 >** 窗格會顯示。 在這個窗格中，您可以從該資料庫物件類型 (已在指定的資料庫中註冊) 的所有執行個體中選擇。 選取一或多個物件，然後按一下**下一步**。  
   
-7.  **輸出選項**所有所需的資料庫物件已選取型別時，窗格會出現。 選取 **指令碼至檔案**並指定指令碼的檔案路徑。 選取 **[下一步]** 。 檢閱您的選擇，然後按一下**完成**。 此時，部署指令碼就會儲存至指定的檔案路徑。  
+7.  **輸出選項**所有所需的資料庫物件已選取型別時，窗格會出現。 選取 **指令碼至檔案**並指定指令碼的檔案路徑。 選取 [下一步]  。 檢閱您的選擇，然後按一下**完成**。 此時，部署指令碼就會儲存至指定的檔案路徑。  
   
 ## <a name="post-deployment-scripts"></a>部署後指令碼  
  您可以執行部署後指令碼。  

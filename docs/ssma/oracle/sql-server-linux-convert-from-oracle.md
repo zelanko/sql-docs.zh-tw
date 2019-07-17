@@ -3,18 +3,18 @@ title: 將 Oracle HR 結構描述移轉至 Linux 上的 SQL Server |Microsoft Do
 description: 將範例 Oracle 結構描述轉換成 SQL Server on Linux
 author: shamikg
 ms.author: shamikg
-manager: v-thobro
+manager: shamikg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
-ms.openlocfilehash: 312797b2b883f764fc65588e72cd67d7227e327a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1926c13b739de8294966fd6ce84df3d1e02a676e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62629839"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266522"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Oracle 結構描述移轉至 SQL Server 2017 Linux 上使用 SQL Server 移轉小幫手
 

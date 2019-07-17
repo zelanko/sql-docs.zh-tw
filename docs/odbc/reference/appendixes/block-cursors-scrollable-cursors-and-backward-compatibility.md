@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d9d271f6-d2d9-49b9-a365-4909ca06caae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66b4cf0ce2b2ffc15a9e450461021a9b20b1f0c3
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 433647481b2b73c22e00657c430d98177d3d4524
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125221"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>區塊資料指標、可捲動的資料指標和回溯相容性
 兩者的存在**SQLFetchScroll**並**SQLExtendedFetch**表示 ODBC 之間應用程式發展介面 (API)，也就是函式集分割成先清除應用程式呼叫和服務提供者介面 (SPI)，也就是函式集驅動程式實作。 這種分割是必要的讓 ODBC *3.x*，使用**SQLFetchScroll**，bealigned 的標準，而且也與 ODBC 相容*2.x*，它會使用**SQLExtendedFetch**。  
