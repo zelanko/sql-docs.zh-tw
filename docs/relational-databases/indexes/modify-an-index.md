@@ -16,17 +16,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ee26ba8891c2854bf772c0af021f48b8420d3356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2aba0c1526473d48fe1171bbd41f4e006ca1690
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680236"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732421"
 ---
 # <a name="modify-an-index"></a>修改索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，修改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的索引。  
+  此主題說明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，修改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的索引。  
   
 > [!IMPORTANT]  
 >  因 PRIMARY KEY 或 UNIQUE 條件約束而建立的索引將無法使用此方法來修改。 必須修改條件約束。  
@@ -45,11 +45,11 @@ ms.locfileid: "47680236"
   
 1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開 **[資料庫]**，展開資料表所在的資料庫，然後展開 **[資料表]**。  
+2.  展開 **[資料庫]** ，展開資料表所在的資料庫，然後展開 **[資料表]** 。  
   
-3.  展開索引所在的資料表，然後展開 **[索引]**。  
+3.  展開索引所在的資料表，然後展開 **[索引]** 。  
   
-4.  以滑鼠右鍵按一下您要修改的索引，然後按一下 [屬性]。  
+4.  以滑鼠右鍵按一下您要修改的索引，然後按一下 [屬性]  。  
   
 5.  在 **[索引屬性]** 對話方塊中，進行所需的變更。 例如，您可以在索引鍵中加入或移除資料行，或是變更索引選項的設定。  
   
@@ -61,15 +61,11 @@ ms.locfileid: "47680236"
   
 #### <a name="to-modify-an-index"></a>若要修改索引  
   
-1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
-  
-2.  在標準列中，按一下 **[新增查詢]**。  
-  
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會利用 `ProductID` 選項，在 `Production.WorkOrder` 資料表的 `DROP_EXISTING` 資料行上卸除及重新建立現有的索引。 也會設定 `FILLFACTOR` 和 `PAD_INDEX` 選項。  
+下列範例會利用 `ProductID` 選項，在 AdventureWorks 資料庫中 `Production.WorkOrder` 資料表的 `DROP_EXISTING` 資料行上卸除並重新建立現有的索引。 也會設定 `FILLFACTOR` 和 `PAD_INDEX` 選項。  
   
      [!code-sql[IndexDDL#CreateIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_1.sql)]  
   
-     下列範例會使用 ALTER INDEX 設定 `AK_SalesOrderHeader_SalesOrderNumber`索引的幾個選項。  
+     The following example uses ALTER INDEX to set several options on the index `AK_SalesOrderHeader_SalesOrderNumber`.  
   
      [!code-sql[IndexDDL#AlterIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_2.sql)]  
   

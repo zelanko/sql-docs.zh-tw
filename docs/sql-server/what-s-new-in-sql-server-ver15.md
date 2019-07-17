@@ -9,20 +9,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f3bd726fc0320d1dd0980f9e568190e00ea08bbb
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 9c833144fb94a06d4c8941dd7b39b762fc17ba3c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469096"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687761"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
 
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 是以舊版本為基礎，可讓 SQL Server 成長為平台，以供您選擇開發語言、資料類型、內部部署或雲端以及作業系統。 本文摘要說明 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 是以舊版本為基礎，可讓 SQL Server 成長為平台，以供您選擇開發語言、資料類型、內部部署或雲端以及作業系統。 此文章摘要說明 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能。
 
-本文摘要說明每個版本的功能，並指向每項功能的其他詳細資料。 [詳細資料](#details) 區段提供核心文件中可能未提供的功能技術詳細資料。 本文的其他章節會詳盡說明為此 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 最新發行的所有功能。
+此文章摘要說明每個版本的功能，並指向每項功能的其他詳細資料。 [詳細資料](#details) 區段提供核心文件中可能未提供的功能技術詳細資料。 此文章的其他節會詳盡說明為此 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 最新發行的所有功能。
 
 如需詳細資訊和已知問題，請參閱 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 版本資訊](sql-server-ver15-release-notes.md)。
 
@@ -44,8 +44,8 @@ Community Technical Preview (CTP) 3.1 是 [!INCLUDE[sql-server-2019](../includes
 |:---|:---|
 | `mssqlctl` 命令變更 | `mssqlctl cluster` 命令已重新命名為 `mssqlctl bdc`。 如需詳細資訊，請參閱 [`mssqlctl` 參考](../big-data-cluster/reference-mssqlctl.md)。 |
 |`mssqlsctl` 新的狀態命令|`mssqlctl` 已加入新的命令，補充現有的監視命令。 這些取代了已從此版本中移除的叢集系統管理入口網站。|
-| Spark 計算集區 | 可建立額外的節點，提升 Spark 的計算能力，而無須相應增加儲存體。 此外，您可以啟動不會用於 Spark 的儲存體集區節點。 Spark 與儲存體彼此分離。 如需詳細資訊，請參閱 [Configure SQL Server Agent](../big-data-cluster/deployment-custom-configuration.md#sparkstorage)。 |
-| MSSQL Spark 連接器 | 可對資料集區外部資料表提供讀寫支援。 先前的版本只支援對 MASTER 執行個體資料表進行讀寫。 如需詳細資訊，請參閱 [How to read and write to SQL Server from Spark using the MSSQL Spark Connector](../big-data-cluster/spark-mssql-connector.md)。 |
+| Spark 計算集區 | 可建立額外的節點，提升 Spark 的計算能力，而無須相應增加儲存體。 此外，您可以啟動不會用於 Spark 的儲存體集區節點。 Spark 與儲存體彼此分離。 如需詳細資訊，請參閱[設定 SQL Server 代理程式](../big-data-cluster/deployment-custom-configuration.md#sparkstorage)。 |
+| MSSQL Spark 連接器 | 可對資料集區外部資料表提供讀寫支援。 先前的版本只支援對 MASTER 執行個體資料表進行讀寫。 如需詳細資訊，請參閱[如何使用 MSSQL Spark 連接器從 Spark 讀取 SQL Server 資料及將資料寫入到其中](../big-data-cluster/spark-mssql-connector.md)。 |
 | 使用 MLeap 的機器學習 | [可在 Spark 中訓練 MLeap 機器學習模型，並使用 Java 語言延伸模組在 SQL Server 中評分](../big-data-cluster/spark-create-machine-learning-model.md)。 |
 | &nbsp; | &nbsp; |
 
@@ -186,7 +186,7 @@ Community Technical Preview (CTP) 3.1 是 [!INCLUDE[sql-server-2019](../includes
 | 在 IntelliJ 中於巨量資料叢集上提交 Spark 作業。 | [在 IntelliJ 中於 SQL Server 巨量資料叢集上提交 Spark 作業](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md) |
 | 適用於應用程式部署和叢集管理的一般 CLI。 | [如何在 SQL Server 2019 巨量資料叢集 (預覽) 上部署應用程式](../big-data-cluster/big-data-cluster-create-apps.md) |
 | 用來將應用程式部署到巨量資料叢集的 VS Code 延伸模組。 | [如何使用 VS Code 將應用程式部署到 SQL Server 巨量資料叢集](../big-data-cluster/app-deployment-extension.md) |
-| **mssqlctl** 工具命令使用方式的變更。 | 如需詳細資料，請參閱 [ 的已知問題](../big-data-cluster/release-notes-big-data-cluster.md#mssqlctlctp23)。 |
+| **mssqlctl** 工具命令使用方式的變更。 | 如需詳細資料，請參閱 [mssqlctl 的已知問題](../big-data-cluster/release-notes-big-data-cluster.md#mssqlctlctp23)。 |
 | 在巨量資料叢集中使用 Sparklyr。 | [在 SQL Server 2019 巨量資料叢集中使用 Sparklyr](../big-data-cluster/sparklyr-from-RStudio.md) |
 | 將外部 HDFS 相容儲存體裝載至具備 **HDFS 階層處理**的巨量資料叢集。 | 請參閱 [HDFS 階層處理](../big-data-cluster/hdfs-tiering.md)。 |
 | SQL Server 主要執行個體與 HDFS/Spark 閘道的新整合連線體驗。 | 請參閱 [SQL Server 主要執行個體與 HDFS/Spark 閘道](../big-data-cluster/connect-to-big-data-cluster.md)。 |
@@ -496,7 +496,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 此功能可能會節省大量儲存空間 (視使用的字元集而定)。 例如，使用啟用 UTF-8 的定序，將具有 ASCII (拉丁文) 字串的現有資料行資料類型從 `NCHAR(10)` 變更為 `CHAR(10)`，會使儲存體需求減少 50%。 這項減少的原因是 `NCHAR(10)` 需要 20 個位元組作為儲存空間，而 `CHAR(10)` 針對相同的 Unicode 字串需要 10 個位元組。
 
-如需詳細資訊，請參閱 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。
+如需詳細資訊，請參閱[定序與 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md)。
 
 **CTP 2.1** 新增在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 安裝期間選取 UTF-8 定序作為預設的支援。
 
@@ -653,7 +653,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 如果沒有此功能，您必須直接在索引 DDL 陳述式中指定線上和可繼續選項 (例如索引建立和重建)。
 
-如需索引可繼續作業的詳細資訊，請參閱 [Resumable Online Index Create](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/) (可繼續的線上索引建立)。
+如需索引可繼續作業的詳細資訊，請參閱[可繼續的線上索引建立](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/) \(英文\)。
 
 #### <a id="ha"></a>Always On 可用性群組 - 更多同步複本 (CTP 2.0)
 

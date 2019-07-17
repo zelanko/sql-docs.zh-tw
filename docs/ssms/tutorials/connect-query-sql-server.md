@@ -1,10 +1,10 @@
 ---
 title: 使用 SQL Server Management Studio (SSMS) 連線至 SQL Server 執行個體並進行查詢
-description: 使用 SQL Server Management Studio 連線至 SQL Server 執行個體並執行基本 T-SQL 查詢的快速教學課程。
+description: 透過使用 SQL Server Management Studio 並執行基本 T-SQL 查詢，來連線至 SQL Server 執行個體的教學課程。
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 ms.reviewer: sstein
 ms.topic: quickstart
 ms.prod_service: sql-tools
@@ -12,16 +12,16 @@ ms.prod: sql
 ms.technology: ssms
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 62646a7e2b09c4a733dde0ddff9d078cb0a3c958
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 4f3e1b5e03f70aa0d552e89d3ebdd254909d7b2a
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469226"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834957"
 ---
-# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>教學課程：使用 SQL Server Management Studio (SSMS) 連線至 SQL Server 執行個體並進行查詢 
+# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>教學課程：使用 SQL Server Management Studio (SSMS) 連線至 SQL Server 執行個體並進行查詢
 
-本教學課程將教導您如何使用 SQL Server Management Studio (SSMS) 連線到 SQL Server 執行個體，並執行一些基本的 Transact-SQL (T-SQL) 命令。 本文會示範如何執行下列操作：
+本教學課程將教導您如何使用 SQL Server Management Studio (SSMS) 連線到 SQL Server 執行個體，並執行一些基本的 Transact-SQL (T-SQL) 命令。 此文章示範如何遵循下列步驟：
 
 > [!div class="checklist"]
 > * 連接到 SQL Server 執行個體
@@ -52,13 +52,13 @@ ms.locfileid: "67469226"
 2. 在 [連線至伺服器]  視窗中，執行下列清單的動作：
 
     * 針對**伺服器類型**，選取 [資料庫引擎]  \(通常為預設選項)。
-    * 針對**伺服器名稱**，輸入您 SQL Server 執行個體的名稱。 (本文使用了主機名稱 NODE5 [NODE5\SQL2016ST] 上的執行個體名稱 SQL2016ST)。若您不確定如何判斷 SQL Server 執行個體名稱，請參閱[使用 SSMS 的其他提示與祕訣](ssms-tricks.md#determine-sql-server-name)。
+    * 針對**伺服器名稱**，輸入您 SQL Server 執行個體的名稱。 (此文章使用了主機名稱 NODE5 [NODE5\SQL2016ST] 上的執行個體名稱 SQL2016ST)。若您不確定如何判斷 SQL Server 執行個體名稱，請參閱[使用 SSMS 的其他提示與祕訣](ssms-tricks.md#determine-sql-server-name)。
+
+    * 針對**驗證**，請選取 [Windows 驗證]  。 此文章使用 Windows 驗證，但 SQL Server 登入亦受支援。 若您選取 [SQL 登入]  ，系統會提示您輸入使用者名稱與密碼。 如需驗證類型的詳細資訊，請參閱[連線至伺服器 (資料庫引擎)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine)。
 
     ![[伺服器名稱] 欄位與使用 SQL Server 執行個體的選項](media/connect-query-sql-server/connection2.png)
 
-    * 針對**驗證**，請選取 [Windows 驗證]  。 本文使用 Windows 驗證，但 SQL Server 登入亦受支援。 若您選取 [SQL 登入]  ，系統會提示您輸入使用者名稱及密碼。 如需驗證類型的詳細資訊，請參閱[連線至伺服器 (資料庫引擎)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine)。
-
-    您也可透過選取 [選項]  修改其他連線設定。 連線選項的範例為您所連線的資料庫、連線逾時值以及網路通訊協定。 本文會為所有選項使用預設值。
+    您也可透過選取 [選項]  修改其他連線設定。 連線選項的範例為您所連線的資料庫、連線逾時值以及網路通訊協定。 此文章會為所有選項使用預設值。
 
 3. 當您填完所有欄位後，請選取 [連線]  。
 
@@ -129,7 +129,7 @@ ms.locfileid: "67469226"
    GO
    ```
 
-查詢完成後，新的 [客戶] 資料表會顯示在物件總管的資料表清單中。 若資料表未顯示，請在物件總管中以滑鼠右鍵按一下 [TutorialDB]   > [資料表]  節點，然後選取 [重新整理]  。
+查詢完成後，新的 [客戶] 資料表會顯示在物件總管的資料表清單中。 若資料表未顯示，請在物件總管中以滑鼠右鍵按一下 **TutorialDB** > **Tables** 節點，然後選取 [重新整理]  。
 
 ## <a name="insert-rows-into-the-new-table"></a>在新的資料表插入資料列
 
@@ -188,7 +188,7 @@ ms.locfileid: "67469226"
 
 1. 以滑鼠右鍵按一下查詢視窗，然後選取 [連線]   > [變更連線]  。 [連線至伺服器]  視窗會再次開啟。
 
-2. 變更您查詢所使用的伺服器。 
+2. 變更您查詢所使用的伺服器。
 
    ![變更連線命令](media/connect-query-sql-server/changeconnection.png)
 
@@ -197,8 +197,9 @@ ms.locfileid: "67469226"
 
 ## <a name="next-steps"></a>後續步驟
 
-下一篇文章會教您如何在 SQL Server Management Studio 中撰寫不同物件的指令碼。
+熟悉 SSMS 的最佳方式是實際練習。 這些文章可協助您使用 SSMS 內所提供的各種功能。  這些文章會告訴您如何管理 SSMS 的元件及如何尋找您經常使用的功能。
 
-請前往下一篇文章以深入了解：
-> [!div class="nextstepaction"]
-> [後續步驟](scripting-ssms.md)
+* [指令碼](scripting-ssms.md)
+* [在 SSMS 中使用範本](../template/templates-ssms.md)
+* [SSMS 組態](ssms-configuration.md)
+* [使用 SSMS 的其他提示與訣竅](ssms-tricks.md)

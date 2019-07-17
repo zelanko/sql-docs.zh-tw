@@ -17,16 +17,16 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 7703ad7ce46c9dda59dacbc86ebbd9646b1015cf
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 5ee4fc6502b9d31d9ccade786c5cc0129c61da22
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584494"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860546"
 ---
 # <a name="compare-execution-plans"></a>比較執行計畫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本主題說明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 計畫比較功能，來比較實際圖形化執行計畫之間的相似處和差異。 
+此主題說明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 計畫比較功能，來比較實際圖形化執行計畫之間的相似處和差異。 
   
 > [!NOTE]
 > 實際執行計畫是在執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或 Batch 後產生。 基於這個緣故，實際執行計劃包含執行階段資訊；例如，實際資料列數目、資源使用量計量和執行階段警告 (如果有的話)。 如需詳細資訊，請參閱[顯示實際執行計畫](../../relational-databases/performance/display-an-actual-execution-plan.md)。
@@ -69,7 +69,7 @@ ms.locfileid: "67584494"
      > [!TIP]
      > 所有適用於執行計畫的縮放和導覽選項均可在計畫比較模式中運作。 如需更多詳細資料，請參閱[顯示實際執行計畫](../../relational-databases/performance/display-an-actual-execution-plan.md)。
 
-5.  雙重屬性視窗也會在預設選項的範圍內，於右側開啟。 存在於這兩個比較運算子內但有差異的屬性，將會在前面加上「不等於」  符號 (?)，以便更容易識別。
+5.  雙重屬性視窗也會在預設選項的範圍內，於右側開啟。 存在於這兩個比較運算子內但有差異的屬性，將會在前面加上「不等於」  符號 (&ne;)，以便更容易識別。
 
     ![雙重屬性視窗](../../relational-databases/performance/media/plancomparison-properties.png "雙重屬性視窗")  
 

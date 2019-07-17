@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f548fff9a7634e0c105fc8ce09fa39d2aa4100c7
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 3ae6d0d35da353a9307832989f562f3282af19e5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580745"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860710"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 資料庫中的智慧查詢處理
 
@@ -44,7 +44,7 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 | [交錯執行](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | 是，屬於相容性層級 140| 是，自 SQL Server 2017 開始屬於相容性層級 140|使用在第一次編譯時遇到的多重陳述式資料表值函式實際基數，而不是定點猜測。|
 | [記憶體授與意見反應 (批次模式)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | 是，屬於相容性層級 140| 是，自 SQL Server 2017 開始屬於相容性層級 140|若批次模式查詢有作業會溢出到磁碟，請新增記憶體以防執行中斷。 若查詢耗用了 > 50% 配置給它的記憶體，請縮減記憶體授與端，以防執行中斷。|
 | [記憶體授與意見反應 (資料列模式)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | 是，屬於相容性層級 150，公開預覽| 是，自 SQL Server 2019 CTP 2.0 開始屬於相容性層級 150，公開預覽|若資料列模式查詢有作業會溢出到磁碟，請新增記憶體以防執行中斷。 若查詢耗用了 > 50% 配置給它的記憶體，請縮減記憶體授與端，以防執行中斷。|
-| [純量 UDF 內嵌](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | 否 | 是，自 SQL Server 2019 CTP 2.1 開始屬於相容性層級 150，公開預覽|純量 UDF 會轉換成「內嵌」在呼叫查詢中的對等關聯運算式，而這通常可讓效能大幅提升。|
+| [純量 UDF 內嵌](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | 否 | 是，自 SQL Server 2019 CTP 2.1 開始屬於相容性層級 150，公開預覽|純量 UDF 會被轉換成「內嵌」在呼叫查詢中的對等關聯運算式，而這通常可讓效能大幅提升。|
 | [資料表變數延後編譯](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | 是，屬於相容性層級 150，公開預覽| 是，自 SQL Server 2019 CTP 2.0 開始屬於相容性層級 150，公開預覽|使用在第一次編譯時遇到的資料表值函式實際基數，而不是定點猜測。|
 
 ## <a name="batch-mode-adaptive-joins"></a>批次模式自適性聯結
@@ -107,7 +107,7 @@ WHERE [fo].[Quantity] = 361;
 ### <a name="tracking-adaptive-join-activity"></a>追蹤自適性聯結活動
 自適性聯結運算子有下列計劃運算子屬性：
 
-| 計劃屬性 | Description |
+| 計劃屬性 | 描述 |
 |--- |--- |
 | AdaptiveThresholdRows | 顯示從雜湊聯結切換至巢狀迴圈聯結所使用的閾值。 |
 | EstimatedJoinType | 可能的聯結類型。 |
@@ -243,7 +243,7 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 
 *LastRequestedMemory* 會在查詢執行之前，顯示授與的記憶體 (KB)。 *IsMemoryGrantFeedbackAdjusted* 屬性可讓您針對實際查詢執行計劃內的陳述式，檢查記憶體授與意見反應的狀態。 此屬性中顯示的值如下：
 
-| IsMemoryGrantFeedbackAdjusted 值 | Description |
+| IsMemoryGrantFeedbackAdjusted 值 | 描述 |
 |---|---|
 | 否：第一次執行 | 記憶體授與意見反應不會針對第一次編譯和相關聯的執行，調整記憶體。  |
 | 否：精確授與 | 如果沒有溢出到磁碟，而且陳述式使用至少 50% 的授與的記憶體，則不會觸發記憶體授與意見反應。 |
@@ -320,14 +320,14 @@ MSTVF 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始具有固定�
 ### <a name="tracking-interleaved-execution-activity"></a>追蹤交錯執行活動
 您可以在實際的查詢執行計劃中看到使用方式屬性：
 
-| 執行計劃屬性 | Description |
+| 執行計劃屬性 | 描述 |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | 適用於 *QueryPlan* 節點。 為 *true* 時，表示計劃包含交錯執行候選項目。 |
 | IsInterleavedExecuted | 位於 TVF 節點 RelOp 之下 *RuntimeInformation* 元素的屬性。 為 *true* 時，這表示作業已具體化為交錯執行作業的一部分。 |
 
 您也可以透過下列 xEvent 追蹤交錯執行項目：
 
-| xEvent | Description |
+| xEvent | 描述 |
 | ---- | --- |
 | interleaved_exec_status | 交錯執行進行時會引發這個事件。 |
 | interleaved_exec_stats_update | 此事件會描述由交錯執行更新的基數估計值。 |

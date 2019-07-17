@@ -33,39 +33,39 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 674a785d0e5d3dd6b847c8f26701ad0ce48e2d20
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: c5af94179548923fa29344e3861f91dd0e201b79
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582515"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860505"
 ---
-# <a name="configure-web-synchronization"></a>[設定 Web 同步處理]
+# <a name="configure-web-synchronization"></a>設定 Web 同步處理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 合併式複寫的 Web 同步處理選項可讓您透過網際網路使用 HTTPS 通訊協定進行資料複寫。 若要使用 Web 同步處理，您必須先執行下列組態設定動作：  
   
 1.  建立新的網域帳戶並對應 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   
-2.  將正在執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 的電腦設定為同步處理訂閱。  
+2.  將正在執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 的電腦設定為同步處理訂用帳戶。  
   
 3.  將合併式發行集設定為允許 Web 同步處理。  
   
-4.  將一個或多個訂閱設定為使用 Web 同步處理。  
+4.  將一或多個訂用帳戶設定為使用 Web 同步處理。  
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]  
->  如果您打算複寫大量資料或使用大型資料類型 (例如 **varchar(max)** )，請參閱本主題的＜複寫大量資料＞一節。  
+>  如果您打算複寫大量資料或使用大型資料類型 (例如 **varchar(max)** )，請參閱此主題的＜複寫大量資料＞一節。  
   
  為了順利設定 Web 同步處理，您必須決定如何設定安全性以符合特定需求和原則。 建議您最好先進行這些決定並建立必要的帳戶，然後再嘗試設定 IIS、發行集和訂閱。  
   
- 為了簡潔起見，在下列程序中，我們將描述使用本機帳戶的簡化安全性組態。 這個簡化的組態適用於 IIS 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者和散發者在同一部電腦上執行的安裝，即使您比較可能會使用多伺服器拓撲進行實際執行安裝也一樣 (而且這是建議作法)。 在這些程序中，您可以用網域帳戶來取代本機帳戶。  
+ 為了簡潔起見，在下列程序中，我們將描述使用本機帳戶的簡化安全性設定。 這個簡化的設定適用於 IIS 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者和散發者在同一部電腦上執行的安裝，即使您比較可能會使用多伺服器拓撲進行實際執行安裝也一樣 (而且這是建議作法)。 在這些程序中，您可以用網域帳戶來取代本機帳戶。  
   
 ## <a name="creating-new-accounts-and-mapping-sql-server-logins"></a>建立新的帳戶並對應 SQL Server 登入  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (replisapi.dll) 會透過模擬針對與複寫網站相關聯之應用程式集區指定的帳戶，連接至發行者。  
   
- 用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener 的帳戶必須擁有如＜ [Merge Agent Security](../../relational-databases/replication/merge-agent-security.md)＞中＜連接到發行者或散發者＞一節底下所描述的權限。 總而言之，此帳戶必須：  
+ 用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener 的帳戶必須擁有如[Merge Agent Security](../../relational-databases/replication/merge-agent-security.md)中＜連接到發行者或散發者＞一節底下所描述的權限。 總而言之，此帳戶必須：  
   
 -   是發行集存取清單 (PAL) 的成員。  
   
@@ -75,23 +75,23 @@ ms.locfileid: "67582515"
   
 -   擁有快照集共用的讀取權限。  
   
- 如果這是您第一次使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫，您也必須建立複寫代理程式的帳戶和登入。 如需詳細資訊，請參閱本主題中的＜設定發行集＞和＜設定訂閱＞章節。  
+ 如果這是您第一次使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫，您也必須建立複寫代理程式的帳戶和登入。 如需詳細資訊，請參閱此主題中的＜設定發行集＞與＜設定訂閱＞小節。  
   
- 在設定 Web 同步處理之前，我們建議您先閱讀本主題中的＜Web 同步處理安全性最佳作法＞一節。 如需有關 Web 同步處理安全性的詳細資訊，請參閱＜ [Security Architecture for Web Synchronization](../../relational-databases/replication/security/security-architecture-for-web-synchronization.md)＞。  
+ 在設定 Web 同步處理之前，我們建議您先閱讀此主題中的＜Web 同步處理安全性最佳作法＞一節。 如需有關 Web 同步處理安全性的詳細資訊，請參閱 [Web 同步處理的安全性架構](../../relational-databases/replication/security/security-architecture-for-web-synchronization.md)。  
   
 ## <a name="configuring-the-computer-that-is-running-iis"></a>設定正在執行 IIS 的電腦  
  Web 同步處理要求您安裝並設定 IIS。 您需要複寫網站的 URL，然後才能將發行集設定為使用 Web 同步處理。  
   
  IIS 5.0 版開始支援 Web 同步處理。 但是，IIS 7.0 版不支援「設定 Web 同步處理精靈」。 從 SQL Server 2012 開始，若要在 IIS 伺服器上使用 Web 同步處理元件，我們建議使用者安裝具有複寫功能的 SQL Server。 例如，免費的 SQL Server Express Edition。  
   
- Web 同步處理需要使用 SSL。 您需要擁有憑證授權單位所核發的安全性憑證。 如果只是為了測試，您可以使用自行核發的安全性憑證。  
+ Web 同步處理需要使用 SSL。 您需要擁有憑證授權單位所核發的安全性憑證。 如果只是為了測試，您可以使用自行簽發的安全性憑證。  
    
   
- **若要設定 Web 同步處理的 IIS**  
+ **設定 Web 同步處理的 IIS**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[設定 Web 同步處理的 IIS](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[設定 Web 同步處理的 IIS](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[設定 Web 同步處理的 IIS 7](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[設定 Web 同步處理的 IIS 7](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
 ## <a name="creating-a-web-garden"></a>建立 Web 處理序區  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener 支援每個執行緒有兩個並行同步處理作業。 超過這個限制可能會導致 Replication Listener 停止回應。 配置給 replisapi.dll 的執行緒數目是由應用程式集區的 [工作者處理序數上限] 屬性所決定。 根據預設，這個屬性設定為 1。  
@@ -100,22 +100,22 @@ ms.locfileid: "67582515"
   
  Web 處理序區會允許兩個以上的訂閱者同時訂閱。 此外，它也會增加 replisapi.dll 的 CPU 使用量，因此可能會對整體伺服器效能造成負面影響。 當您針對 [工作者處理序數上限] 選擇值時，請務必權衡這些考量。  
   
-#### <a name="to-increase-maximum-worker-processes-in-iis-7"></a>若要在 IIS 7 中增加工作者處理序數上限  
+#### <a name="to-increase-maximum-worker-processes-in-iis-7"></a>在 IIS 7 中增加工作者處理序數上限  
   
-1.  在 **[Internet Information Services (IIS) 管理員]** 中，展開本機伺服器節點，然後按一下 **[應用程式集區]** 節點。  
+1.  在 **[Internet Information Services (IIS) 管理員]** 中，展開本機伺服器節點，然後按一下 [應用程式集區]  節點。  
   
-2.  選取與 Web 同步處理網站相關聯的應用程式集區，然後按一下 **[動作]** 窗格上的 **[進階設定]** 。  
+2.  選取與 Web 同步處理網站相關聯的應用程式集區，然後按一下 [動作]  窗格上的 [進階設定]  。  
   
-3.  在 [進階設定] 對話方塊的 **[處理序模型]** 標題底下，按一下標示為 **[工作者處理序數上限]** 的列。 變更屬性值，然後按一下 **[確定]** 。  
+3.  在 [進階設定] 對話方塊的 [處理序模型]  標題底下，按一下標示為 [工作者處理序數上限]  的列。 變更屬性值，然後按一下 [確定]  。  
   
 ## <a name="configuring-the-publication"></a>設定發行集  
  若要使用 Web 同步處理，請採用您建立標準合併拓撲的相同方式來建立發行集。 如需詳細資訊，請參閱[發行資料和資料庫物件](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  
   
- 建立發行集之後，請利用下列其中一種方法來啟用允許 Web 同步處理的選項： [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 Replication Management Objects (RMO)。 若要啟用 Web 同步處理，您必須提供訂閱者連接的 Web 伺服器位址。  
+ 建立發行集之後，請利用下列其中一種方法來啟用允許 Web 同步處理的選項：[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 Replication Management Objects (RMO)。 若要啟用 Web 同步處理，您必須提供訂閱者連接的 Web 伺服器位址。  
   
  如果您是第一次使用發行者，也必須設定散發者和快照集共用。 每個訂閱者的合併代理程式都必須具有快照集共用的讀取權限。 如需詳細資訊，請參閱[設定散發](../../relational-databases/replication/configure-distribution.md)和[保護快照集資料夾](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
   
- **gen** 是 websync XML 檔案中的保留字。 請勿嘗試發行包含資料行名稱 **gen**的資料表。  
+ **gen** 是 websync XML 檔案中的保留字。 請勿嘗試發行包含資料行名稱 **gen** 的資料表。  
   
 ## <a name="configuring-the-subscription"></a>設定訂閱  
  啟用發行集及設定 IIS 之後，請建立提取訂閱，並指定提取訂閱應利用 IIS 來同步處理。 (只有提取訂閱才支援 Web 同步處理。)  
@@ -130,7 +130,7 @@ ms.locfileid: "67582515"
   
  **WebSyncMaxXmlSize DWORD 2000000**  
   
- 此機碼的可接受值範圍是 100 MB 到 4GB。 該值會以 KB 來指定。 將這個參數設定為高的值並不保證您可以同步處理該數量的資料。 有效的限制是由訂閱者電腦上可用的連續記憶體數量所限制。 如果您的值必須大於 100 MB，我們建議您最好以累加方式增加這個值，並在訂閱者上使用一般的工作負載來測試記憶體耗用量。  
+ 此機碼的可接受值範圍是 100 MB 到 4GB。 該值會是 KB 來指定。 將這個參數設定為高的值並不保證您可以同步處理該數量的資料。 有效的限制是由訂閱者電腦上可用的連續記憶體數量所限制。 如果您的值必須大於 100 MB，我們建議您最好以累加方式增加這個值，並在訂閱者上使用一般的工作負載來測試記憶體耗用量。  
   
  XML 檔案的大小上限為 4 GB，不過複寫會分批次同步處理來自該檔案的變更。 資料和中繼資料的批次大小上限為 25 MB。 您必須確定各批次的資料未超過約 20 MB，以便允許中繼資料和任何其他負擔。 這項限制具有下列含意：  
   
@@ -138,9 +138,9 @@ ms.locfileid: "67582515"
   
 -   如果您要複寫大量資料，可能必須調整合併代理程式的批次大小。  
   
- 合併式複寫的批次大小是以 *「層代」* (Generation) 為測量單位，而這是每個發行項的變更集合。 批次中的世代數目是使用合併代理程式的 ?**DownloadGenerationsPerBatch** 和 ?**UploadGenerationsPerBatch** 參數所指定。 如需詳細資訊，請參閱 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
+ 合併式複寫的批次大小是以 *「層代」* (Generation) 為測量單位，而這是每個發行項的變更集合。 批次中的世代數目是使用合併代理程式的 -**DownloadGenerationsPerBatch** 和 -**UploadGenerationsPerBatch** 參數指定的。 如需詳細資訊，請參閱[複寫合併代理程式](../../relational-databases/replication/agents/replication-merge-agent.md)。  
   
- 若為大量資料，請針對每個批次參數指定一個少量數目。 我們建議您從 10 這個值開始，然後根據需求和效能進行微調。 一般而言，這些參數都指定於代理程式設定檔中。 如需有關設定檔的詳細資訊，請參閱＜ [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)＞。  
+ 針對大量資料，請針對每個批次參數指定一個少量數目。 我們建議您從 10 這個值開始，然後根據需求和效能進行微調。 一般而言，這些參數都指定於代理程式設定檔中。 如需有關設定檔的詳細資訊，請參閱[複寫代理程式設定檔](../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
 ## <a name="security-best-practices-for-web-synchronization"></a>Web 同步處理安全性最佳作法  
  Web 同步處理的安全性相關設定有多種選擇， 我們建議下列方式：  
@@ -156,26 +156,26 @@ ms.locfileid: "67582515"
   
 -   指定「快照集代理程式」應在 Windows 網域帳戶下執行，同時指定代理程式應依照該帳戶採用的方式來建立連接。 (此為預設組態)。指定每個「合併代理程式」應在使用「訂閱者」電腦之使用者的網域帳戶下執行，同時指定代理程式應依照該帳戶採用的方式來建立連接。  
   
-     如需有關代理程式所需權限的詳細資訊，請參閱＜ [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)＞。  
+     如需有關代理程式所需權限的詳細資訊，請參閱[複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)＞。  
   
--   請指定網域帳戶，此帳戶應與您在指定「新增訂閱精靈」之 **[Web 伺服器資訊]** 頁面中的帳戶和密碼，或指定 **@internet_url** 及 **@internet_login** 和 [@internet_login](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)＞。 此帳戶必須具有快照集共用的讀取權限。  
+-   請指定網域帳戶，此帳戶應與您在指定「新增訂閱精靈」之 [Web 伺服器資訊]  頁面中的帳戶和密碼，或指定 **@internet_url** 及 **@internet_login** 和 [@internet_login](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) 的值時的網域帳戶相同。 此帳戶必須具有快照集共用的讀取權限。  
   
--   每個發行集應使用個別的 IIS 虛擬目錄。  
+-   每個發行集都應該使用個別的 IIS 虛擬目錄。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) 執行時所使用的帳戶也是在同步處理期間連接至發行者和散發者的帳戶。 這個帳戶必須對應至發行者和散發者的 SQL 登入帳戶。 如需詳細資訊，請參閱[設定 Web 同步處理的 IIS](../../relational-databases/replication/configure-iis-for-web-synchronization.md) 中的＜設定 SQL Server Replication Listener 的權限＞一節。  
   
 -   您可以利用 FTP，將快照集從發行者傳遞到執行 IIS 的電腦。 快照集永遠是利用 HTTPS，從執行 IIS 的電腦傳遞到「訂閱者」。 如需詳細資訊，請參閱[透過 FTP 傳送快照集](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)。  
   
--   如果複寫拓撲中的伺服器在防火牆後面，您可能需要在防火牆中開啟通訊埠，才能啟用 Web 同步處理。  
+-   如果複寫拓撲中的伺服器在防火牆後面，您可能需要在防火牆中開啟連接埠，才能啟用 Web 同步處理。  
   
-    -   訂閱者電腦會使用 SSL 透過 HTTPS 連接到執行 IIS 的電腦，而這部電腦通常設定為使用通訊埠 443。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 訂閱者也可透過 HTTP 進行連接，這通常設定為使用通訊埠 80。  
+    -   訂閱者電腦會使用 SSL 透過 HTTPS 連接到執行 IIS 的電腦，而這部電腦通常設定為使用連接埠 443。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 訂閱者也可透過 HTTP 進行連接，這通常設定為使用連接埠 80。  
   
-    -   執行 IIS 的電腦通常會使用通訊埠 1433 連接到發行者或散發者 (預設執行個體)。 當發行者或散發者為伺服器上的具名執行個體 (此伺服器具有另一個預設執行個體) 時，通常會使用通訊埠 1500 來連接至此具名執行個體。  
+    -   執行 IIS 的電腦通常會使用連接埠 1433 連接到發行者或散發者 (預設執行個體)。 當發行者或散發者為伺服器上的具名執行個體 (此伺服器具有另一個預設執行個體) 時，通常會使用連接埠 1500 來連接至此具名執行個體。  
   
-    -   如果您使用防火牆來隔開執行 IIS 的電腦與散發者，而且使用 FTP 共用進行快照集傳遞，則必須開啟用於 FTP 的通訊埠。 如需詳細資訊，請參閱[透過 FTP 傳送快照集](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)。  
+    -   如果您使用防火牆來隔開執行 IIS 的電腦與散發者，而且使用 FTP 共用進行快照集傳遞，則必須開啟用於 FTP 的連接埠。 如需詳細資訊，請參閱[透過 FTP 傳送快照集](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)。  
   
 > [!IMPORTANT]  
->  在防火牆中開啟通訊埠可能會讓您的伺服器面臨惡意攻擊的威脅。 請先確定您已了解防火牆系統，然後再開啟通訊埠。 如需詳細資訊，請參閱＜ [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)＞。  
+>  在防火牆中開啟連接埠可能會讓您的伺服器面臨惡意攻擊的威脅。 請先確定您已了解防火牆系統，然後再開啟連接埠。 如需詳細資訊，請參閱[SQL Server 安裝的安全性考量](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [合併式複寫的 Web 同步處理](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  

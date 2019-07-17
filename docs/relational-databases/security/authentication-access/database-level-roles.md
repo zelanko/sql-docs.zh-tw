@@ -1,7 +1,7 @@
 ---
 title: 資料庫層級角色 | Microsoft 文件
 ms.custom: ''
-ms.date: 01/19/2019
+ms.date: 07/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -39,12 +39,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a035182b6436f723abfb2a53a034ddac30fe2165
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 65330658d47ad371d992eaf15d648e7abfd4d5b6
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516494"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832955"
 ---
 # <a name="database-level-roles"></a>資料庫層級角色
 
@@ -71,7 +71,7 @@ ms.locfileid: "59516494"
   
  下表顯示固定資料庫角色及其功能。 這些角色存在所有資料庫中。 除了**公用**資料庫角色外，指派給固定資料庫角色的權限無法變更。   
   
-|固定資料庫角色名稱|Description|  
+|固定資料庫角色名稱|描述|  
 |-------------------------------|-----------------|  
 |**db_owner**|**db_owner** 固定資料庫角色的成員可以在資料庫上執行所有的組態和維護活動，也可以在 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]中卸除資料庫。 (在 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]中，某些維護活動需要伺服器層級的權限，而且無法由 **db_owners**執行。)|  
 |**db_securityadmin**|**db_securityadmin** 固定資料庫角色的成員可以修改角色成員資格 (僅自訂角色)、建立不具登入的使用者，以及管理權限。 將主體加入這個角色可能會產生不必要的權限擴大。|  
@@ -89,9 +89,9 @@ ms.locfileid: "59516494"
 
 ## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>針對 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 及 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]的特殊角色
 
-這些資料庫角色只存在於虛擬 master 資料庫中。 其權限僅限於能在 master 中執行的動作。 只有 master 資料庫使用者可以加入這些角色中。 這些角色中不能加入登入，但可以根據登入建立使用者，然後將這些使用者加入角色中。 包含的 master 資料庫使用者，也可加入這些角色中。
+這些資料庫角色只存在於虛擬 master 資料庫中。 其權限僅限於能在 master 中執行的動作。 只有 master 資料庫使用者可以加入這些角色中。 這些角色中不能加入登入，但可以根據登入建立使用者，然後將這些使用者加入角色中。 包含的 master 資料庫使用者，也可加入這些角色中。 但是，加入到 **dbmanager** 角色的包含的 master 資料庫使用者不能用來建立新的資料庫。
 
-|角色名稱|Description|  
+|角色名稱|描述|  
 |--------------------|-----------------|
 |**dbmanager** | 可以建立和刪除資料庫。 建立資料庫的 dbmanager 角色成員會變成該資料庫的擁有者，讓使用者能夠像 dbo 使用者一樣連線至該資料庫。 dbo 使用者具有資料庫的所有資料庫權限。 dbmanager 角色成員不一定有非其所有之資料庫的存取權限。|
 |**loginmanager** | 可以建立及刪除虛擬 master 資料庫的登入。|
@@ -102,7 +102,7 @@ ms.locfileid: "59516494"
 ## <a name="msdb-roles"></a>msdb 角色  
  msdb 資料庫含有下表所示的特殊用途角色。  
   
-|msdb 角色名稱|Description|  
+|msdb 角色名稱|描述|  
 |--------------------|-----------------|  
 |**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|這些資料庫角色的成員可以管理和使用 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]。 從舊版升級的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體可能會包含使用 Data Transformation Services (DTS) 而非 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 所命名的舊版角色。 如需詳細資訊，請參閱 [Integration Services 角色 &#40;SSIS 服務&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md)。|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|這些資料庫角色的成員可以管理和使用資料收集器。 如需相關資訊，請參閱 [Data Collection](../../../relational-databases/data-collection/data-collection.md)。|  
@@ -119,7 +119,7 @@ ms.locfileid: "59516494"
 
 安裝 R 服務時，可使用額外的資料庫角色來管理封裝。 如需詳細資訊，請參閱 [SQL Server 的 R 封裝管理](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)。
 
-|角色名稱 |Description|  
+|角色名稱 |描述|  
 |-------------|-----------------|
 |**rpkgs-users** |可讓使用者使用 rpkgs-shared 角色成員所安裝的任何共用封裝。|
 |**rpkgs-private** |提供與 rpkgs-users 角色相同的權限來存取共用封裝。 此角色成員也可以安裝、移除和使用具有私用範圍的封裝。|
@@ -128,7 +128,7 @@ ms.locfileid: "59516494"
 ## <a name="working-with-database-level-roles"></a>使用資料庫層級角色  
  下表說明用於使用資料庫層級角色的命令、檢視及函數。  
   
-|功能|類型|Description|  
+|功能|類型|描述|  
 |-------------|----------|-----------------|  
 |[sp_helpdbfixedrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)|中繼資料|傳回固定資料庫角色的清單。|  
 |[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)|中繼資料|顯示固定資料庫角色的權限。|  

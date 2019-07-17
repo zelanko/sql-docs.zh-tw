@@ -28,17 +28,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d45b1d74242476da155e387f8ec00f8e4e23278f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 94ccde1511dc2084574127190dc6f830bfd0a995
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946972"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716593"
 ---
 # <a name="ismember-transact-sql"></a>IS_MEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  指出目前使用者是指定之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 群組或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色的成員。  
+  指出目前使用者是指定之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 群組或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色的成員。 Azure Active Directory 群組不支援 IS_MEMBER 函式。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,10 +61,10 @@ IS_MEMBER ( { 'group' | 'role' } )
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  IS_MEMBER 會傳回下列值。  
   
-|傳回值|Description|  
+|傳回值|描述|  
 |------------------|-----------------|  
 |0|目前使用者不是 *group* 或 *role* 的成員。|  
 |1|目前使用者是 *group* 或 *role* 的成員。|  

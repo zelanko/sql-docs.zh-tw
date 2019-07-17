@@ -1,6 +1,6 @@
 ---
-title: 使用 SQL Server Management Studio 的其他祕訣和訣竅
-description: 涵蓋 SSMS 使用上之一些其他祕訣與訣竅的教學課程。
+title: 使用 SQL Server Management Studio (SSMS) 的提示和訣竅
+description: 了解如何使用 SQL Server Management Studio 對程式碼進行註解和取消註解、對文字進行縮排、在物件總管中篩選物件、存取 SQL Server 錯誤記錄檔，以及尋找 SQL Server 執行個體名稱。
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
@@ -8,7 +8,7 @@ ms.prod_service: sql-tools
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: sstein
-manager: craigg
+manager: jroth
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], tutorials
 - Help [SQL Server], SQL Server Management Studio
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 4c6585e8e2c467c6e0a4a288107fd59cae64f84b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c31c8243ef74b69a5fe050e5487911138db76741
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499425"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860651"
 ---
-# <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>教學課程：使用 SSMS 的其他祕訣與訣竅
+# <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 的提示和訣竅
 
-本教學課程提供 SQL Server Management Studio (SSMS) 使用上的一些其他祕訣。 本文示範如何： 
+此文章提供使用 SQL Server Management Studio (SSMS) 的一些提示和訣竅。 此文章示範如何： 
 
 > [!div class="checklist"]
 > * 註解與取消註解 TRANSACT-SQL (T-SQL) 文字
@@ -40,7 +40,7 @@ ms.locfileid: "66499425"
 
 ## <a name="prerequisites"></a>Prerequisites
 
-若要完成本教學課程，您需要 SQL Server Management Studio、SQL Server 存取權，以及 AdventureWorks 資料庫。 
+若要測試此文章所提供的步驟，您需要 SQL Server Management Studio、SQL 伺服器的存取權，以及 AdventureWorks 資料庫。 
 
 * 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 * 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
@@ -267,7 +267,7 @@ ms.locfileid: "66499425"
 
 ### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>如果您已連線到別名或可用性群組接聽程式
 
-如果您已連線到別名或可用性群組接聽程式，該資訊會顯示在 [物件總管] 和 [屬性]。 在此情況下，SQL Server 名稱可能不明顯，且必須進行查詢： 
+如果您已連線到別名或可用性群組接聽程式，該資訊會顯示在 [物件總管] 和 [屬性]。 在此情況下，SQL Server 名稱可能不明顯，且必須進行查詢：
 
 1. 連線到 SQL Server。
 
@@ -282,3 +282,12 @@ ms.locfileid: "66499425"
 4. 檢視查詢結果以識別您連線的 SQL Server 執行個體名稱： 
 
     ![查詢 SQL 伺服器名稱](media/ssms-tricks/queryservername.png)
+
+## <a name="next-steps"></a>後續步驟
+
+熟悉 SSMS 的最佳方式是實際練習。 這些「教學課程」  與「操作方式」  文章可協助您使用 SSMS 內所提供的各種功能。  這些文章會告訴您如何管理 SSMS 的元件及如何尋找您經常使用的功能。
+
+* [連線至執行個體並對其進行查詢](connect-query-sql-server.md)
+* [指令碼](scripting-ssms.md)
+* [在 SSMS 中使用範本](../template/templates-ssms.md)
+* [SSMS 組態](ssms-configuration.md)

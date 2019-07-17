@@ -13,12 +13,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e400ada65efa69dd1b3e5ccc7dbdc21f67e3674
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edc81e7f148a2d0c2572da4902a90499baf9db7e
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690786"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866284"
 ---
 # <a name="manage-trigger-security"></a>管理觸發程序安全性
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,14 +41,31 @@ ms.locfileid: "47690786"
 ## <a name="trigger-security-best-practices"></a>觸發程序安全性最佳作法  
  您可以採用下列措施來防止觸發程序的程式碼在提升權限的情況下執行：  
   
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+
 -   請透過查詢 [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 與 [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) 目錄檢視來了解資料庫與伺服器執行個體上所存在的 DML 與 DDL 觸發程序。 下列查詢會傳回目前資料庫中所有的 DML 與資料庫層級的 DDL 觸發程序，以及在伺服器執行個體上的所有伺服器層級的 DDL 觸發程序：  
   
-    ```  
+    ```sql
     SELECT type, name, parent_class_desc FROM sys.triggers  
     UNION  
     SELECT type, name, parent_class_desc FROM sys.server_triggers ;  
     ```  
+
+   > [!NOTE]
+   > 除非您是使用受控執行個體，否則 Azure SQL Database 只能使用 **sys.triggers**。
+
+::: moniker-end
+
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+-   透過查詢 [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 目錄檢視來了解資料庫上所存在的 DML 與 DDL 觸發程序。 下列查詢會傳回目前資料庫中的所有 DML 和資料庫層級的 DDL 觸發程序：  
   
+    ```sql
+    SELECT type, name, parent_class_desc FROM sys.triggers ; 
+    ```  
+  
+::: moniker-end
+
 -   如果觸發程序是在提升權限的情況下執行，使用 [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) 停用觸發程序有可能會傷害資料庫或伺服器的完整性。 下列陳述式會停用目前資料庫中所有資料庫層級的 DDL 觸發程序：  
   
     ```  

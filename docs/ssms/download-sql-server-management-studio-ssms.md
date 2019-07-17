@@ -21,19 +21,19 @@ keywords:
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
-manager: craigg
+manager: jroth
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 403ca9e5132a00f003aa67a2011d98d0044b4807
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: e7fb5ecb66552ef4d061c36326788f4be51255bb
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399656"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680386"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 SQL Server Management Studio (SSMS) 是整合式環境，可用於管理任何 SQL 基礎結構，從 SQL Sever 到 Azure SQL Database 皆適用。 SSMS 提供工具來設定、監視以及管理 SQL Server 執行個體和資料庫。 使用 SSMS，即可部署、監視和升級應用程式所使用的資料層元件，以及建置查詢和指令碼。
 

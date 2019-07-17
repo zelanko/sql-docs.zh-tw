@@ -9,7 +9,7 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-manager: craigg
+manager: jroth
 helpviewer_keywords:
 - templates [SQL Server], SQL Server Management Studio
 - source controls [SQL Server Management Studio], tutorials
@@ -20,23 +20,24 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 30b40d10ec7a4da7df0bfc9e4ba1f3aa6bb68ef5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a634a106704cebd91ce74910de17166c85c6c4de
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822948"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866264"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>使用 SQL Server Management Studio 中的範本
 
-本教學課程將介紹 SQL Server Management Studio (SSMS) 中可用的預先建立 Transact-SQL (T-SQL) 範本。 在本文中，您將學會如何：
+本教學課程將介紹 SQL Server Management Studio (SSMS) 中可用的預先建立 Transact-SQL (T-SQL) 範本。 在此文章中，您將學會如何：
 
 ## <a name="prerequisites"></a>Prerequisites
 
 若要完成本教學課程，您需要 SQL Server Management Studio 和 SQL Server 存取權。
 
-- 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
-- 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
+* 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+
+* 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
 
 ## <a name="use-template-browser"></a>使用範本瀏覽器
 
@@ -108,15 +109,17 @@ ms.locfileid: "66822948"
 
 5. 以滑鼠右鍵按一下您建立的範本，然後選取 [編輯]  。 隨即開啟 [新增查詢] 視窗。
 
-6. 輸入您想要儲存的 T-SQL 文字。 
+6. 輸入您想要儲存的 T-SQL 文字。
 
 7. 在 [檔案]  功能表中，選取 [儲存]  。
 
-8. 關閉現有查詢視窗，然後開啟您的新自訂範本。 
+8. 關閉現有查詢視窗，然後開啟您的新自訂範本。
 
 ## <a name="next-steps"></a>後續步驟
 
-下一篇文章將提供使用 SQL Server Management Studio 的其他祕訣和訣竅。 
+熟悉 SSMS 的最佳方式是實際練習。 這些「教學課程」  與「操作方式」  文章可協助您使用 SSMS 內所提供的各種功能。  這些文章會告訴您如何管理 SSMS 的元件及如何尋找您經常使用的功能。
 
-> [!div class="nextstepaction"]
-> [使用 SSMS 的其他祕訣與訣竅](../tutorials/ssms-tricks.md)
+* [連線至執行個體並對其進行查詢](../tutorials/connect-query-sql-server.md)
+* [指令碼](../tutorials/scripting-ssms.md)
+* [SSMS 組態](../tutorials/ssms-configuration.md)
+* [使用 SSMS 的其他提示與訣竅](../tutorials/ssms-tricks.md)

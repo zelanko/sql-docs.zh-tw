@@ -14,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: d7035a47368ead8af3a20d9ca56f0c5452395516
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 17879dc4c932ff127b858657a9af0aca340029b5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586182"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860515"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>設定及管理全文檢索搜尋的同義字檔案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,15 +36,15 @@ ms.locfileid: "67586182"
   
      展開集包含可以由全文檢索查詢彼此替代的一組同義字，例如 "writer"、"author" 和 "journalist"。 包含展開集中任何同義字之相符項目的查詢會展開成包含展開集中的其他每個同義字。  
   
-     如需詳細資訊，請參閱本主題後面的[展開集的 XML 結構](#expansion)。  
+     如需詳細資訊，請參閱此主題後面的[展開集的 XML 結構](#expansion)。  
   
 -   取代集  
   
-     取代集包含替代集所要取代的文字模式。 如需範例，請參閱本主題後面的[取代集的 XML 結構](#replacement)一節。 
+     取代集包含替代集所要取代的文字模式。 如需範例，請參閱此主題後面的[取代集的 XML 結構](#replacement)一節。 
 
 -   變音符號設定  
   
-     對於給定的同義字而言，所有搜尋模式都會區分或不區分變音符號，例如波狀符號 ( **~** )、尖重音符號 ( **?** ) 或母音變化 ( **?** ) (亦即，「區分腔調字」  或「不區分腔調字」  )。 例如，假設您在全文檢索查詢中指定模式 "caf?" 由其他模式取代。 如果同義字不區分腔調字，全文檢索搜尋就會取代模式 "caf?" 與 "cafe"。 如果同義字區分腔調字，全文檢索搜尋只會取代模式 "caf?"。 根據預設，同義字不會區分腔調字。  
+     針對給定的同義字，所有搜尋模式都會區分或不區分變音符號，例如波狀符號 ( **~** )、尖重音符號 ( **&acute;** ) 或母音變化 ( **&uml;** ) (亦即，「區分腔調字」  或「不區分腔調字」  )。 例如，假設您在全文檢索查詢中，指定以其他模式取代模式 "caf&eacute;"。 如果同義字不區分腔調字，全文檢索搜尋就會取代模式 "caf&eacute;" 和 "cafe"。 如果同義字區分腔調字，全文檢索搜尋只會取代模式 "caf&eacute;"。 根據預設，同義字不會區分腔調字。  
   
 ##  <a name="initial_thesaurus_files"></a> 預設的同義字檔案
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一組 XML 同義字檔案 (每個支援的語言都有一個檔案)。 這些檔案基本上都是空的。 它們僅包含所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同義字通用的最上層 XML 結構以及標記為註解的範例同義字。  

@@ -19,12 +19,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 88c74779b60ae25ea381a2814b06a11b4fdd2e22
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 471b4fac245dcdb1aec537ccd3e8345d99039871
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343862"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624395"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -156,7 +156,7 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 > 若您同時使用 **AS JSON** 選項，則資料行 *type* 必須是 `NVARCHAR(MAX)`。
   
 *column_path*  
-為指定要在指定資料行中傳回之屬性的 JSON 路徑。 如需詳細資訊，請參閱本主題先前的 *path* 參數描述。  
+為指定要在指定資料行中傳回之屬性的 JSON 路徑。 如需詳細資訊，請參閱此主題先前的 *path* 參數描述。  
   
 當輸出資料行的名稱與屬性的名稱不符時，請使用 *column_path* 來覆寫預設對應規則。  
   
@@ -239,9 +239,12 @@ OPENJSON 函式傳回的資料行取決於 WITH 選項。
   
      只會傳回第一層的屬性。 若 JSON 文字的格式不正確，陳述式便會失敗。  
 
-2. 當您呼叫 OPENJSON 且在 WITH 子句中指定明確的結構描述時，函式會傳回使用您在 WITH 子句中定義之結構描述的資料表。  
+2. 當您呼叫 OPENJSON 且在 WITH 子句中指定明確的結構描述時，函式會傳回使用您在 WITH 子句中定義之結構描述的資料表。
 
-## <a name="remarks"></a>Remarks  
+> [!NOTE]  
+> **Key**、**Value** 和 **Type** 資料行只會在您搭配預設結構描述使用 OPENJSON 時傳回，且無法搭配明確結構描述使用。
+
+## <a name="remarks"></a>備註  
 
 **OPENJSON** 的第二個引數或 *with_clause* 中的 *json_path* 開頭可為 **lax** 或 **strict** 關鍵字。
 

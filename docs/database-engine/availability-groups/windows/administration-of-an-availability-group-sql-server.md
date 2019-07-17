@@ -1,6 +1,6 @@
 ---
 title: 可用性群組的管理參考
-description: 連結參考頁面，可將您連結至 Always On 可用性群組的管理基本概念，例如改變屬性、新增或移除複本、新增或移除資料庫、容錯移轉、設定接聽程式等。
+description: 此參考頁面可將您連結至 Always On 可用性群組的管理基本概念，例如改變屬性、新增或移除複本、新增或移除資料庫、容錯移轉、設定接聽程式等。
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 379511e36b7e6a680b9971ace79b269a9df0db86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f1626c21649d276e6e6cb3e51207aaede006b566
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789676"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681082"
 ---
 # <a name="administration-of-an-availability-group"></a>可用性群組的管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中管理現有的 AlwaysOn 可用性群組包括下列一或多個工作：  
   
--   改變現有可用性副本的屬性 (例如，變更用戶端連接存取 (以設定可讀取的次要副本))；變更其容錯移轉模式、可用性模式或工作階段逾時設定。    
--   加入或移除次要副本。    
+-   改變現有可用性複本的屬性 (例如，變更用戶端連接存取 (以設定可讀取的次要複本))；變更其容錯移轉模式、可用性模式或工作階段逾時設定。    
+-   加入或移除次要複本。    
 -   加入或移除資料庫。    
 -   暫停或恢復資料庫。   
 -   執行已規劃的手動容錯移轉 ( *「手動容錯移轉」* (Manual Failover)) 或強制手動容錯移轉 ( *「強制容錯移轉」* (Forced Failover))。    

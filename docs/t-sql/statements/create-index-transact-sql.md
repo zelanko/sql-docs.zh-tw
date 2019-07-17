@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6ca14f18b89093db5ad3c6b86a381eebcd2fad5
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 195f7d0f298d191845a65864e752ab9a4dea5d06
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500237"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652797"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -579,7 +579,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 CREATE INDEX 陳述式的最佳化方式與其他任何查詢一樣。 若要儲存在 I/O 作業上，查詢處理器可以選擇掃描另一個索引，而不是執行資料表掃描。 在某些情況下，排序作業可以省略。 在多處理器電腦上，CREATE INDEX 可以利用更多的處理器來執行與建立索引相關聯的掃描和排序作業，執行方式與其他查詢的執行方式相同。 如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。
 
 如果資料庫復原模式設為大量記錄或簡單模式，建立索引作業就可以利用最低限度記錄。
@@ -734,7 +734,7 @@ INSERT INTO t1 VALUES (1, 0);
 - 線上索引建立已使用 `RESUMABLE = ON` 選項指定為可繼續的作業。
 - 指定索引的中繼資料中不會保存 RESUMABLE 選項，並且僅適用於目前 DDL 陳述式的持續時間。 因此，必須明確指定 `RESUMABLE = ON` 子句，才能啟用可繼續性。
 - 只有 `RESUMABLE = ON` 選項支援 MAX_DURATION 選項。
-- RESUMABLE 選項的 MAX_DURATION 可指定建置索引時的時間間隔。 使用此時間之後，索引建置就會暫停或完成執行。 使用者可決定何時可以繼續已暫停索引的建置。 MAX_DURATION 的**時間**是以分鐘計算，且必須大於 0 分鐘，並少於或等於一週i (7 * 24 * 60 = 10080 分鐘)。 索引作業長時間暫停可能會影響特定資料表上的 DML 效能，以及影響資料庫磁碟容量，因為原始索引和新建立的索引都需要磁碟空間，且需要在 DML 作業期間更新。 如果省略 MAX_DURATION 選項，索引作業將會繼續執行直到完成或發生失敗為止。
+- RESUMABLE 選項的 MAX_DURATION 可指定建置索引時的時間間隔。 使用此時間之後，索引建置就會暫停或完成執行。 使用者可決定何時可以繼續已暫停索引的建置。 MAX_DURATION 的**時間**是以分鐘計算，且必須大於 0 分鐘，並少於或等於一週 (7 \* 24 \* 60 = 10080 分鐘)。 索引作業長時間暫停可能會影響特定資料表上的 DML 效能，以及影響資料庫磁碟容量，因為原始索引和新建立的索引都需要磁碟空間，且需要在 DML 作業期間更新。 如果省略 MAX_DURATION 選項，索引作業將會繼續執行直到完成或發生失敗為止。
 - 若要立即暫停索引作業，您可以停止 (Ctrl-C) 進行中的命令，執行 [ALTER INDEX](alter-index-transact-sql.md) PAUSE 命令，或執行 `KILL <session_id>` 命令。 暫停命令之後，可以使用 [ALTER INDEX](alter-index-transact-sql.md) 命令繼續執行該命令。
 - 重新執行可繼續索引的原始 CREATE INDEX 陳述式，會自動繼續已暫停索引的建立作業。
 - 可繼續的索引不支援 `SORT_IN_TEMPDB = ON` 選項。

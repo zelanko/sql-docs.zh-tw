@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03f63929d54039399a292e086315c0b8d660f206
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 88eb2923a9037ad0e4ad07f2f560b85b45260cd2
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079454"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866248"
 ---
 # <a name="time-transact-sql"></a>時間 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,13 +72,13 @@ ms.locfileid: "56079454"
 ## <a name="supported-string-literal-formats-for-time"></a>支援 time 的字串常值格式  
  下表顯示 **time** 資料類型的有效字串常值格式。  
   
-|[SQL Server]|Description|  
+|SQL Server|描述|  
 |----------------|-----------------|  
 |hh:mm[:ss][:小數秒數][AM][PM]<br /><br /> hh:mm[:ss][.小數秒數][AM][PM]<br /><br /> hhAM[PM]<br /><br /> hh AM[PM]|無論您是否指定 AM，只要小時的值為 0 就表示午夜之後 (AM) 的小時。 小時等於 0 時，無法指定 PM。<br /><br /> 如果沒有指定 AM 或 PM，小時值 01 至 11 就代表正午之前的小時。 指定為 AM 時，這些值就代表正午之前的小時。 如果指定為 PM，這些值就代表正午之後的小時。<br /><br /> 如果沒有指定 AM 或 PM，小時值 12 就代表從正午開始的小時。 如果指定為 AM，此值就代表從午夜開始的小時。 如果指定為 PM，此值就代表從正午開始的小時。 例如，12:01 就是正午之後的 1 分鐘，也就是 12:01 PM，而 12:01 AM 則是午夜之後一分鐘。 指定為 12:01 AM 與指定為 00:01 或 00:01 AM 是相同的。<br /><br /> 如果未指定 AM 或 PM，從 13 到 23 的小時值就代表正午之後的小時。 如果指定為 PM，這些值也代表正午之後的小時。 當小時值為 13 至 23 時，則無法指定為 AM。<br /><br /> 24 小時值無效。 若要表示午夜，請使用 12: 00 AM 或 00:00。<br /><br /> 毫秒前可以用冒號 (:) 或句號 (.)。 如果使用冒號，數字是指千分之一秒。 如果使用句號，一位數代表十分之一秒、二位數代表百分之一秒，而三位數代表千分之一秒。 例如，12:30:20:1 表示 12:30 過 20 又千分之一秒；12:30:20.1 表示 12:30 過 20 又十分之一秒。|  
   
 |ISO 8601|注意|  
 |--------------|-----------|  
-|hh:mm:ss<br /><br /> hh:mm[:ss][.小數秒數]|hh 表示時區時差中的兩位數時數，範圍介於 0 至 14 之間。<br /><br /> mm 是代表時區位移中額外分鐘數的兩位數，範圍介於 0 至 59 之間。|  
+|hh:mm:ss<br /><br /> hh:mm[:ss][.小數秒數]|hh 表示時區時差中的兩位數時數，範圍介於 0 至 23 之間。<br /><br /> mm 是代表時區位移中額外分鐘數的兩位數，範圍介於 0 至 59 之間。|  
   
 |ODBC|注意|  
 |----------|-----------|  
@@ -245,14 +245,14 @@ SELECT
 ###  <a name="ExampleB"></a> B. 將有效的時間字串常值插入 time(7) 資料行  
  下表將列出可插入 **time(7)** 資料類型之資料行的不同字串常值，以及之後儲存在該資料行中的值。  
   
-|字串常值格式類型|插入的字串常值|儲存的 time(7) 值|Description|  
+|字串常值格式類型|插入的字串常值|儲存的 time(7) 值|描述|  
 |--------------------------------|-----------------------------|------------------------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01:123AM'|01:01:01.1230000|當冒號 (:) 出現在小數秒數有效位數之前時，小數位數就無法超過三個位置，否則將會引發錯誤。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01.1234567 AM'|01:01:01.1234567|指定為 AM 或 PM 時，時間就會採用 24 小時格式儲存，但不含常值 AM 或 PM。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01.1234567 PM'|13:01:01.1234567|指定為 AM 或 PM 時，時間就會採用 24 小時格式儲存，但不含常值 AM 或 PM。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01.1234567PM'|13:01:01.1234567|AM 或 PM 之前的空格是選擇性的。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01AM'|01:00:00.0000000|如果只有指定小時，則所有其他值都是 0。|  
-|[SQL Server]|'01 AM'|01:00:00.0000000|AM 或 PM 之前的空格是選擇性的。|  
+|SQL Server|'01 AM'|01:00:00.0000000|AM 或 PM 之前的空格是選擇性的。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01'|01:01:01.0000000|沒有指定小數秒數有效位數時，資料類型所定義的每個位置都是 0。|  
 |ISO 8601|'01:01:01.1234567'|01:01:01.1234567|若要符合 ISO 8601，請使用 24 小時格式，而非 AM 或 PM。|  
 |ISO 8601|'01:01:01.1234567 +01:01'|01:01:01.1234567|雖然輸入中允許使用選擇性的時區差異 (TZD)，但是不會進行儲存。|  
@@ -260,7 +260,7 @@ SELECT
 ### <a name="c-inserting-time-string-literal-into-columns-of-each-date-and-time-date-type"></a>C. 將時間字串常值插入每個 date 和 time 資料類型的資料行  
  在下表中，第一個資料行會顯示即將插入 date 或 time 資料類型 (顯示於第二個資料行) 之資料庫資料表資料行的時間字串常值。 第三個資料行會顯示將儲存在資料庫資料表資料行中的值。  
   
-|插入的字串常值|資料行資料類型|儲存在資料行中的值|Description|  
+|插入的字串常值|資料行資料類型|儲存在資料行中的值|描述|  
 |-----------------------------|----------------------|------------------------------------|-----------------|  
 |'12:12:12.1234567'|**time(7)**|12:12:12.1234567|如果小數秒數有效位數超過針對資料行所指定的值，字串就會被截斷，但不會發生錯誤。|  
 |'2007-05-07'|**date**|NULL|任何時間值都會導致 INSERT 陳述式失敗。|  

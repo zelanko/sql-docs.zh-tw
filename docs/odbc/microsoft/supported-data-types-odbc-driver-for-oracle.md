@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 219a6d2e837280ca3220382bea56d2ab610ce87a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 145170afee5ab791602695c662ce1e80e86cae7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915674"
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>支援的資料類型 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
