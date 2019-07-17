@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: da846d4afb4ce8fe745b98c8503901fe804520e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 42ab1e77dbdb7cee237a9ec22c49a725a64390c0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287733"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264476"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>連線到 Oracle (OracleToSQL)
 使用**連接到 Oracle**對話方塊連接到您想要移轉的 Oracle 資料庫。  
   
 若要存取此對話方塊中，在**檔案**功能表上，選取**連接到 Oracle**。 如果您先前曾經連線，則命令是**重新連接到 Oracle**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **提供者**  
 選取您的連線到 Oracle 資料庫的資料存取提供者。 可用的提供者是 Oracle 用戶端提供者和 OLE DB 提供者。 預設值是 Oracle 用戶端提供者。  
   

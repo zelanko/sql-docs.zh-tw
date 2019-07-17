@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 77d30142-c774-473c-96fb-b364bb92ac60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cad33f1ccf798a08ef1f11667e59b4d5fb4888d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ab0bdabe8b2d66bf054f07ea51056a4044b4ae8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149198"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114191"
 ---
 # <a name="step-4a-fetch-the-results"></a>步驟 4a：擷取結果
 下一步是擷取結果，如下圖所示。  

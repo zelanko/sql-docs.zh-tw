@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: c962c619-e18f-4315-9251-8d9862462299
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85e5f78e6096c2a860e376c72947f149b1cf8ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e55274d1e6dfa34a3cfb92317bb4f205cfdd964
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62668407"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109567"
 ---
 # <a name="syscomputedcolumns-transact-sql"></a>sys.computed_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62668407"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**\<繼承資料行 >**||**Sys.computed_columns**檢視會傳回所有資料行**sys.columns**檢視。 另外亦將傳回以下所述的其他資料行。 如需資料行的描述， **sys.computed_columns**檢視繼承自**sys.columns**，請參閱[sys.columns &#40;-&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)。 值**sys.computer_columns**資料行一律會設為 1 **sys.computed_columns**檢視。|  
-|**definition**|**nvarchar(max)**|定義這個計算資料行的 SQL 文字。|  
+|**定義**|**nvarchar(max)**|定義這個計算資料行的 SQL 文字。|  
 |**uses_database_collation**|**bit**|1 = 資料行定義須依據資料庫的預設定序進行正確評估；否則為 0。 這種相依性可以防止資料庫預設定序變更。|  
 |**is_persisted**|**bit**|計算資料行是保存計算資料行。|  
   

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 085afa47a00875f5311e6996502e9030b6070920
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763060"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211226"
 ---
 # <a name="visual-database-tools"></a>Visual Database Tools
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 包含建置 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢、資料表及圖表資料庫的視覺化設計工具。  
@@ -23,7 +23,7 @@ ms.locfileid: "52763060"
 ## <a name="related-tasks"></a>相關工作  
  若要開始使用 Visual Database Tools，請使用下列工作：  
   
-|**說明**|**主題**|  
+|**描述**|**主題**|  
 |---------------------|---------------|  
 |描述資料庫圖表工具。|[設計資料庫圖表 &#40;Visual Database Tools&#41;](design-database-diagrams-visual-database-tools.md)|  
 |描述視覺化資料表設計工具。|[設計資料表 &#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)|  

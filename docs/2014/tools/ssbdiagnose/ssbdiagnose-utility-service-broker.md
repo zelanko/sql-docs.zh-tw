@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823682"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211000"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 公用程式 [Service Broker]
   **ssbdiagnose** 公用程式會報告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務組態中的問題。 您可以針對兩個服務或單一服務進行組態檢查。 問題會在命令提示字元視窗中報告成人們可讀取的文字，或可重新導向至檔案或其他程式的格式化 XML。  
@@ -156,11 +156,11 @@ WHERE database_id = DB_ID();
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
  要求確認是否已針對指定的加密層級正確設定對話：  
   
- **ON**:預設的設定。 已設定完整的對話安全性。 已經在對話的兩端部署了憑證、存在遠端服務繫結，而且目標服務的 GRANT SEND 陳述式已指定了起始端使用者。  
+ **ON**：預設設定。 已設定完整的對話安全性。 已經在對話的兩端部署了憑證、存在遠端服務繫結，而且目標服務的 GRANT SEND 陳述式已指定了起始端使用者。  
   
- **關閉**:不設定任何對話安全性。 沒有部署任何憑證、沒有建立任何遠端服務繫結，而且起始端服務的 GRANT SEND 已指定了 **Public** 角色。  
+ **OFF**：未設定任何對話安全性。 沒有部署任何憑證、沒有建立任何遠端服務繫結，而且起始端服務的 GRANT SEND 已指定了 **Public** 角色。  
   
- **匿名**:已設定匿名對話安全性。 已經部署了一個憑證、遠端服務繫結已指定了匿名子句，而且目標服務的 GRANT SEND 已指定了 **Public** 角色。  
+ **ANONYMOUS**：已設定匿名對話安全性。 已經部署了一個憑證、遠端服務繫結已指定了匿名子句，而且目標服務的 GRANT SEND 已指定了 **Public** 角色。  
   
  **RUNTIME**  
  要求導致 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談發生執行階段錯誤之問題的報表。 如未指定 **-NEW** 或 **-ID** ， **ssbdiagnose** 就會監視連線選項中指定之所有資料庫中的所有交談。 如果指定了 **-NEW** 或 **-ID** ， **ssbdiagnose** 就會建立參數中指定的識別碼清單。  
@@ -183,14 +183,14 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  可識別應用程式中某個交談端點的唯一識別碼。 交談控制代碼對於交談的某個端點而言是唯一的，而起始端和目標端點具有不同的交談控制代碼。  
   
- 交談控制代碼傳回應用程式*@dialog_handle*參數**BEGIN DIALOG**陳述式，而`conversation_handle`結果中的資料行集的**接收**陳述式。  
+ 交談控制代碼傳回應用程式 *@dialog_handle* 參數**BEGIN DIALOG**陳述式，而`conversation_handle`結果中的資料行集的**接收**陳述式。  
   
  中會報告交談控制代碼`conversation_handle`資料行**sys.transmission_queue**並**sys.conversation_endpoints**目錄檢視。  
   
  *conversation_group_id*  
  識別交談群組且不重複的識別碼。  
   
- 交談群組識別碼傳回應用程式*@conversation_group_id*參數**GET CONVERSATION GROUP**陳述式和`conversation_group_id`結果集中的資料行**接收**陳述式。  
+ 交談群組識別碼傳回應用程式 *@conversation_group_id* 參數**GET CONVERSATION GROUP**陳述式和`conversation_group_id`結果集中的資料行**接收**陳述式。  
   
  中會報告交談群組識別碼`conversation_group_id`的資料行**sys.conversation_groups**並**sys.conversation_endpoints**目錄檢視。  
   
@@ -200,7 +200,7 @@ WHERE database_id = DB_ID();
  中會報告交談識別碼`conversation_id`資料行**sys.conversation_endpoints**目錄檢視。  
   
  **-TIMEOUT** *timeout_interval*  
- 指定 **RUNTIME** 報表要執行的秒數。 如未指定 **-TIMEOUT** ，執行階段報表就會無限期地執行。 **-TIMEOUT** 僅用於 **RUNTIME** 報表，不用在 **CONFIGURATION** 報表。 如果沒有指定 **ssbdiagnose** if **-TIMEOUT** 間隔到期之前結束執行階段報表，您可以使用 CTRL + C 結束**-**。 *timeout_interval* 必須是介於 1 和 2,147,483,647 之間的數字。  
+ 指定 **RUNTIME** 報表要執行的秒數。 如未指定 **-TIMEOUT** ，執行階段報表就會無限期地執行。 **-TIMEOUT** 僅用於 **RUNTIME** 報表，不用在 **CONFIGURATION** 報表。 如果沒有指定 **ssbdiagnose** if **-TIMEOUT** 間隔到期之前結束執行階段報表，您可以使用 CTRL + C 結束 **-** 。 *timeout_interval* 必須是介於 1 和 2,147,483,647 之間的數字。  
   
  **\<runtimeconnectionoptions>**  
  指定資料庫的連接資訊，而這些資料庫包含與受監視之交談元素相關聯的服務。 如果所有服務都位於相同的資料庫中，您就只需要指定一個 **CONNECT TO** 子句。 如果各項服務位於不同的資料庫中，您就必須針對每個資料庫提供一個 **CONNECT TO** 子句。 如未指定 **runtimeconnectionoptions** ，則 **ssbdiagnose** 會使用 **baseconnectionoptions**中的連接資訊。  

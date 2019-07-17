@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 210f25b55c2cc2536d4c6f00f215b27eac5f7be0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 5cb3ff58156d35a348a432e6d7edb7f794e59e6f
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287233"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266086"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>執行 SSMA 主控台 (OracleToSQL)
 Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 SSMA 活動。 主控台應用程式會使用某些標準的指令碼檔命令為列舉這一節。  
@@ -160,7 +160,7 @@ force-load-source/target-database
   
   metabase="<source/target>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <force-load>  
@@ -273,7 +273,7 @@ generate-assessment-report
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <generate-assessment-report  
@@ -347,7 +347,7 @@ convert-schema
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <convert-schema  
@@ -415,7 +415,7 @@ migrate-data
   
 </migrate-data>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <migrate-data  
@@ -436,7 +436,7 @@ migrate-data
   
 **Command**  
   
-map-schema  
+對應結構描述  
   
 目標結構描述的來源資料庫的結構描述對應。  
   
@@ -463,7 +463,7 @@ map-schema
   
 **Command**  
   
-synchronize-target  
+同步處理目標  
   
 -   會使用目標資料庫，同步處理的目標物件。  
   
@@ -483,7 +483,7 @@ synchronize-target
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   失敗指令碼  
   
 -   `report-errors-to:` 同步處理作業 （也就是選擇性屬性） 如果只指定資料夾路徑，然後檔案儲存依名稱指定的錯誤報表的位置**TargetSynchronizationReport.XML**建立。  
   
@@ -504,7 +504,7 @@ synchronize-target
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <synchronize-target  
@@ -513,7 +513,7 @@ synchronize-target
   
    object-type="<object-category>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <synchronize-target>  
@@ -548,7 +548,7 @@ refresh-from-database
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   失敗指令碼  
   
 -   `report-errors-to:` 重新整理作業 （也就是選擇性屬性） 如果只指定資料夾路徑，然後檔案儲存依名稱指定的錯誤報表的位置**SourceDBRefreshReport.XML**建立。  
   
@@ -569,7 +569,7 @@ refresh-from-database
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <refresh-from-database  
@@ -578,7 +578,7 @@ refresh-from-database
   
    object-type="<object-category>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <refresh-from-database>  
@@ -628,7 +628,7 @@ save-as-script
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <save-as-script  
@@ -704,7 +704,7 @@ convert-sql-statement
   
 </convert-sql-statement>  
 ```  
-中的多個  
+或  
   
 ```  
 <convert-sql-statement  
@@ -727,7 +727,7 @@ convert-sql-statement
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-中的多個  
+或  
   
 ```  
 <convert-sql-statement  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e02e5f55032f7a5d4e11e1ee4c908e84a83e00f8
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618285"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188294"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio 中的自訂報表
   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，許多物件總管節點會顯示一組由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建立的標準報表。 這些報表會摘要列出經常要求的伺服器資訊。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 開始，管理員就可以從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 執行在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中建立的自訂報表。  
@@ -32,9 +32,9 @@ ms.locfileid: "58618285"
 ## <a name="running-a-custom-report"></a>執行自訂報表  
  您可以利用下列方式在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中執行自訂報表：  
   
--   以滑鼠右鍵按一下物件總管中的節點、指向 [報表]，然後以滑鼠左鍵按一下 [自訂報表]。 在 [開啟檔案] 對話方塊中，找出包含 .rdl 檔的資料夾，然後開啟適當的報表檔案。  
+-   以滑鼠右鍵按一下物件總管中的節點、指向 [報表]  ，然後以滑鼠左鍵按一下 [自訂報表]  。 在 [開啟檔案]  對話方塊中，找出包含 .rdl 檔的資料夾，然後開啟適當的報表檔案。  
   
--   以滑鼠右鍵按一下物件總管中的節點、指向 [報表]、指向 [自訂報表]，然後從最近使用過的檔案清單中選取自訂報表。  
+-   以滑鼠右鍵按一下物件總管中的節點、指向 [報表]  、指向 [自訂報表]  ，然後從最近使用過的檔案清單中選取自訂報表。  
   
 ## <a name="limitations"></a>限制  
  當您使用自訂報表時，請考量下列限制：  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4cb723e7325454e6ff60e05d28a6321fd4d167e2
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 5a21af2a2067498a3ec495013554b70d6a86455a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125568"
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField 和 SQLSetDescRec (資料指標程式庫)
 > [!IMPORTANT]  

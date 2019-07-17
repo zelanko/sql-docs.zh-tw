@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab1f808b005afaa91ed93bf8f8ec7a8385c9c945
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4b602d5ff4a94d2888395e6a62f03553fb50f98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447282"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216371"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>實作 SQLGetDiagRec 和 SQLGetDiagField
 **SQLGetDiagRec**並**SQLGetDiagField**由驅動程式管理員和每個驅動程式。 驅動程式管理員和每個驅動程式維護的每個環境、 連接、 陳述式，以及描述項控制代碼，診斷記錄和另一個函式呼叫會釋放控制代碼或控制代碼時，才可用的記錄。  

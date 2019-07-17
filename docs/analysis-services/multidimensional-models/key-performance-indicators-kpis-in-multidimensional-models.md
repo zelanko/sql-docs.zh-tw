@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bf1ee397ea32faadc191d90eed11a33861a71e5d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147783"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208818"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多維度模型中的關鍵效能指標 (KPI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "50147783"
  子 KPI 也可指派加權。 加權可讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在計算父 KPI 值時，按比例調整子 KPI 的結果。  
   
 ## <a name="retrieving-and-displaying-kpis"></a>擷取及顯示 KPI  
- 關鍵效能指標的顯示取決於用戶端應用程式的實作。 例如，在 Cube 設計師 [KPI] 索引標籤的工具列上選取 [瀏覽器檢視]，就會示範一個可能的用戶端實作，其中利用圖形來顯示狀態和趨勢指標、顯示用來群組 KPI 的資料夾，以及顯示在父 KPI 之下的子 KPI。  
+ 關鍵效能指標的顯示取決於用戶端應用程式的實作。 例如，在 Cube 設計師 [KPI]  索引標籤的工具列上選取 [瀏覽器檢視]  ，就會示範一個可能的用戶端實作，其中利用圖形來顯示狀態和趨勢指標、顯示用來群組 KPI 的資料夾，以及顯示在父 KPI 之下的子 KPI。  
   
  您可以使用 MDX 函數來擷取 MDX 的個別區段，例如值或目標，以使用於 MDX 運算式、陳述式和指令碼。  
   

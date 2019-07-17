@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4975c455b942f053287b344a956a0083c8ca4e1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41bd34fbd3d296f4aa38877e6d26e25eba9ae726
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138685"
 ---
 # <a name="mdx-scripting---if"></a>MDX 指令碼 - IF
 

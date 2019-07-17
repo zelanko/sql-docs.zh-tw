@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4c96a85ceb4347d663735dfb310764be1052860e
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984049"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208717"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多維度模型資料存取 (Analysis Services - 多維度資料)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52984049"
   
  下列 Microsoft 應用程式支援多維度資料的原生連接。  
   
-### <a name="excel"></a>[匯出]  
+### <a name="excel"></a>Excel  
  Analysis Services 多維度資料通常是使用 Excel 活頁簿中的樞紐分析表和樞紐分析圖控制項呈現。 樞紐分析表適用於多維度資料，因為模型中的階層、彙總與導覽建構函式與樞紐分析表的資料摘要功能是絕配。 Analysis Services OLE DB 資料提供者包含在 Excel 安裝中，可以讓資料連接的設定更為容易。 如需詳細資訊，請參閱＜ [連接到 SQL Server Analysis Services 或是從中匯入資料](http://go.microsoft.com/fwlink/?linkID=215150)＞。  
   
 ### <a name="reporting-services-reports"></a>Reporting Services 報表  

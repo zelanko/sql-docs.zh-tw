@@ -9,13 +9,12 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d071a1d56808f7c634070e19707daf125d589396
-ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
+ms.openlocfilehash: 05b611f55d30f177ecc6f44f472430203a739d68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49390860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104298"
 ---
 # <a name="sql-samples"></a>SQL 範例
 
@@ -41,7 +40,7 @@ WideWorldImporters (WWI) 是展示使用目前的功能、 工具和設計技術
 
 - [WideWorldImporters 讀我檔案和範例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers)GitHub 上。
 
-- [教學課程： 將載入 WideWorldImportersDW 到 Azure SQL 資料倉儲](/azure/sql-data-warehouse/load-data-wideworldimportersdw)
+- [教學課程：載入 WideWorldImportersDW 到 Azure SQL 資料倉儲](/azure/sql-data-warehouse/load-data-wideworldimportersdw)
 
 
 ## <a name="adventureworks-sample-database"></a>AdventureWorks 範例資料庫

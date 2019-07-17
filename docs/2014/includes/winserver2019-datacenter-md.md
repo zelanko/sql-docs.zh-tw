@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 37d2532b79c836d2d2ea55fc0ad5e7ec4204ae3e
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67210479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68191430"
 ---
 Windows Server 2019 Datacenter

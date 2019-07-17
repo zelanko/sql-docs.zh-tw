@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2e99f026-ceb2-42a2-a549-c71d31ed0cf4
 author: HeidiSteen
 ms.author: heidist
-manager: cgronlund
-ms.openlocfilehash: 8bdbaf1fdb0fb0c27127611ace0fac00d861838f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: HT
+manager: cgronlun
+ms.openlocfilehash: 06b8e29e9aaf02c8e82f541a9113d5943b829b3b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68220278"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262162"
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

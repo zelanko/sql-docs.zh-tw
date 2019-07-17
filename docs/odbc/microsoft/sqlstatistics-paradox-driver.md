@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 886cab83-d599-4fbc-9c88-e8cb833aac4b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 634fbcdbf78515e59295e679072ffa5fd08e4823
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d60296a73367b4718c4da5df036befa0cd34b505
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62686929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114366"
 ---
 # <a name="sqlstatistics-paradox-driver"></a>SQLStatistics (Paradox 驅動程式)
 > [!NOTE]  

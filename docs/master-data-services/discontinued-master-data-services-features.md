@@ -11,12 +11,12 @@ ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: 492ae270cb4fb97cc0f236018b547d62591083eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6d7a8c67b4f3d7be777bb09fb096be73d6b7e68
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485543"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263398"
 ---
 # <a name="discontinued-master-data-services-features"></a>已停止的 Master Data Services 功能
 

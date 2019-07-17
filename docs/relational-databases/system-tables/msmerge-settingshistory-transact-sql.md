@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 25505e0b96c627feb51fd59abfe587851520b724
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8cb78229ea20d5b4c1b01b17c9fef1d85ca83b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106326"
 ---
 # <a name="msmergesettingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "63026561"
 |-----------------|---------------|-----------------|  
 |**eventtime**|**datetime**|發生事件的日期時間。|  
 |**pubid**|**uniqueidentifier**|給定發行集的唯一識別碼。|  
-|**artid**|**uniqueidentifier**|給定發行項的唯一識別碼。|  
+|**artid&lt**|**uniqueidentifier**|給定發行項的唯一識別碼。|  
 |**eventtype**|**tinyint**|指定所記錄之事件的類型，它可以是下列項目之一：<br /><br /> **1** -初始發行集層級的屬性設定。<br /><br /> **2** -發行集屬性中的變更。<br /><br /> **101** -初始發行項屬性設定。<br /><br /> **102** -發行項屬性中的變更。|  
 |**propertyname**|**sysname**|設定或變更的屬性名稱|  
 |**previousvalue**|**sysname**|如果變更了屬性，便是先前的屬性值。|  

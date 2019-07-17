@@ -21,21 +21,21 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ba5b5edf57bf877827fefe4f8764b8b71124a550
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078328"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196541"
 ---
 # <a name="create-nested-triggers"></a>建立巢狀觸發程序
-  觸發程序執行用來起始另一個觸發程序的動作時，DML 和 DDL 觸發程序就是巢狀觸發程序。 這些動作可以起始化其他觸發程序等等。 DML 與 DDL 觸發程序最多可以巢狀方式嵌套多達 32 層。 您可以透過 [巢狀觸發程序] 伺服器組態選項來控制 AFTER 觸發程序是否可為巢狀。 不論此設定為何，INSTEAD OF 觸發程序 (只有 DML 觸發程序可為 INSTEAD OF 觸發程序) 均可為巢狀。  
+  觸發程序執行用來起始另一個觸發程序的動作時，DML 和 DDL 觸發程序就是巢狀觸發程序。 這些動作可以起始化其他觸發程序等等。 DML 與 DDL 觸發程序最多可以巢狀方式嵌套多達 32 層。 您可以透過 [巢狀觸發程序]  伺服器組態選項來控制 AFTER 觸發程序是否可為巢狀。 不論此設定為何，INSTEAD OF 觸發程序 (只有 DML 觸發程序可為 INSTEAD OF 觸發程序) 均可為巢狀。  
   
 > [!NOTE]  
 >  任何從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 觸發程序對 Managed 程式碼的參考，都會算成 32 層巢狀限制中的一層。 從 Managed 程式碼內叫用的方法，不列入這項限制。  
   
  如果允許巢狀觸發程序，但鏈結中的觸發程序形成一個無限迴圈時，則觸發程序會因為超過巢狀層級而終止執行。  
   
- 您可利用巢狀觸發程序來執行實用的內部管理功能，如儲存被前一個觸發程序所影響的資料列備份。 例如，您可在 `PurchaseOrderDetail` 上建立觸發程序，其可儲存經 `PurchaseOrderDetail` 觸發程序所刪除的 `delcascadetrig` 資料列備份。 由於 `delcascadetrig` 觸發程序為作用中，刪除 `PurchaseOrderID` 的 `PurchaseOrderHeader` 1965，也會刪除 `PurchaseOrderDetail`對應的一或多個資料列。 若要儲存資料，您可在 `PurchaseOrderDetail` 上建立 DELETE 觸發程序，將刪除的資料儲存至另外建立的資料表 `del_save`。 例如：  
+ 您可利用巢狀觸發程序來執行實用的內部管理功能，如儲存被前一個觸發程序所影響的資料列備份。 例如，您可在 `PurchaseOrderDetail` 上建立觸發程序，其可儲存經 `PurchaseOrderDetail` 觸發程序所刪除的 `delcascadetrig` 資料列備份。 由於 `delcascadetrig` 觸發程序為作用中，刪除 `PurchaseOrderID` 的 `PurchaseOrderHeader` 1965，也會刪除 `PurchaseOrderDetail`對應的一或多個資料列。 若要儲存資料，您可在 `PurchaseOrderDetail` 上建立 DELETE 觸發程序，將刪除的資料儲存至另外建立的資料表 `del_save`。 例如:  
   
 ```  
 CREATE TRIGGER Purchasing.savedel  

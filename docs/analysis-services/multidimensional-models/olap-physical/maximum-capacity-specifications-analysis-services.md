@@ -1,5 +1,5 @@
 ---
-title: 最大容量規格 (Analysis Services) |Microsoft 文件
+title: 最大容量規格 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 187a3a76f63853c63b9fe92dbd7ccfd4a0cfcdb5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027355"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165482"
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>最大容量規格 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "34027355"
  [表格式 (DeploymentMode = 2)](#bkmk_vertipaq)  
   
 ##  <a name="bkmk_OLAP"></a> 多維度和資料採礦 (DeploymentMode = 0)  
- MOLAP 儲存模式，會同時儲存資料和中繼資料，對於檔案大小另有實體限制。 字串存放檔案的預設大小上限為 4 GB。 如果您需要更大的字串存放檔案，可以指定不同的字串儲存體架構。 如需詳細資訊，請參閱[設定的維度和分割區的字串儲存體](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)。  
+ MOLAP 儲存模式，會同時儲存資料和中繼資料，對於檔案大小另有實體限制。 字串存放檔案的預設大小上限為 4 GB。 如果您需要更大的字串存放檔案，可以指定不同的字串儲存體架構。 如需詳細資訊，請參閱 <<c0> [ 設定的維度和資料分割的字串儲存體](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)。  
   
-|物件|大小/數目上限|  
+|Object|大小/數目上限|  
 |------------|----------------------------|  
 |執行個體中的資料庫|2^31-1 = 2,147,483,647|  
 |資料庫中的維度|2^31-1 = 2,147,483,647|  
@@ -49,48 +49,48 @@ ms.locfileid: "34027355"
 |Cube 中的翻譯|2^31-1 = 2,147,483,647|  
 |資料分割中的彙總|2^31-1 = 2,147,483,647|  
 |查詢傳回的資料格|2^31-1 = 2,147,483,647|  
-|來源查詢的記錄大小|64 K|  
+|來源查詢的記錄大小|64K|  
 |物件名稱的長度|100 個字元|  
 |資料採礦模型屬性資料行中相異狀態數目的上限|2^31-1 = 2,147,483,647|  
 |考量的屬性數目上限 (特徵選取)|2^31-1 = 2,147,483,647|  
   
- 如需有關物件命名方針的詳細資訊，請參閱[ASSL 物件和物件特性](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)。  
+ 如需有關物件命名方針的詳細資訊，請參閱 < [ASSL 物件和物件特性](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)。  
   
- 如需有關線上分析處理 (OLAP) 和資料採礦的資料來源限制的詳細資訊，請參閱[支援資料來源&#40;SSAS-多維度&#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)，[支援&#40;SSAS-多維度&#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)，和[ASSL 物件和物件特性](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)。  
+ 如需有關線上分析處理 (OLAP) 和資料採礦的資料來源限制的詳細資訊，請參閱 <<c0> [ 支援的資料來源&#40;SSAS-多維度&#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)，[支援的資料來源&#40;AMP;#40;SSAS-多維度&#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)，並[ASSL 物件和物件特性](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)。</c0>  
   
 ##  <a name="bkmk_sharepoint"></a> SharePoint (DeploymentMode = 1)  
   
-|物件|大小/數目上限|  
+|Object|大小/數目上限|  
 |------------|----------------------------|  
 |執行個體中的資料庫|2^31-1 = 2,147,483,647|  
 |資料庫中的資料表|2^31-1 = 2,147,483,647|  
-|資料表中的資料行|2^31-1 = 2,147,483,647<br /><br /> **警告：** 量值的總數取決於資料表中的資料行總數，以及與同一個資料表相關聯的導出資料行。<br /><br /> 資料表的「資料行 + 量值 + 導出資料行」的最大數目為 2^31-1 = 2,147,483,647|  
-|資料表中的資料列|無限制<br /><br /> **警告：** 沒有單一的資料行可能包含超過 1,999,999,997 相異值的限制。|  
+|資料表中的資料行|2^31-1 = 2,147,483,647<br /><br /> **警告：** 導出資料行相關聯的相同資料表和資料表中的資料行總數取決於量值的總數。<br /><br /> 資料表的「資料行 + 量值 + 導出資料行」的最大數目為 2^31-1 = 2,147,483,647|  
+|資料表中的資料列|無限制<br /><br /> **警告：** 使用單一資料行可能包含超過 1,999,999,997 的相異值的限制。|  
 |資料表中的階層|2^31-1 = 2,147,483,647|  
 |階層中的層級|2^31-1 = 2,147,483,647|  
 |關聯性|2^31-1 = 2,147,483,647|  
 |資料表中的索引鍵資料行|2^31-1 = 2,147,483,647|  
-|資料表中的量值|2^31-1 = 2,147,483,647<br /><br /> **警告：** 資料表中的量值的總數目取決於資料行總數，以及與同一個資料表相關聯的導出資料行。<br /><br /> 資料表的「資料行 + 量值 + 導出資料行」的最大數目為 2^31-1 = 2,147,483,647|  
-|資料表中的導出資料行|2^31-1 = 2,147,483,647<br /><br /> **警告：** 導出資料行的資料表中的總數目取決於資料行總數，以及與同一個資料表相關聯的量值。<br /><br /> 資料表的「資料行 + 量值 + 導出資料行」的最大數目為 2^31-1 = 2,147,483,647|  
+|資料表中的量值|2^31-1 = 2,147,483,647<br /><br /> **警告：** 導出資料行相關聯的同一個資料表和資料表中的量值的總數取決於資料行總數。<br /><br /> 資料表的「資料行 + 量值 + 導出資料行」的最大數目為 2^31-1 = 2,147,483,647|  
+|資料表中的導出資料行|2^31-1 = 2,147,483,647<br /><br /> **警告：** 資料表中的導出資料行總數取決於資料行和相同的資料表相關聯的量值的總數。<br /><br /> 資料表的「資料行 + 量值 + 導出資料行」的最大數目為 2^31-1 = 2,147,483,647|  
 |查詢傳回的資料格|2^31-1 = 2,147,483,647|  
-|來源查詢的記錄大小|64 K|  
+|來源查詢的記錄大小|64K|  
 |物件名稱的長度|100 個字元|  
   
 ##  <a name="bkmk_vertipaq"></a> 表格式 (DeploymentMode = 2)  
-以下是理論上的限制。 在較低的數字，將會降低效能。   
+以下是理論上限制。 在較低的數字，將會降低效能。   
 
-|物件|大小/數目上限|  
+|Object|大小/數目上限|  
 |------------|----------------------------|  
 |執行個體中的資料庫|16,000|  
 |結合的資料表和資料庫中的資料行的數目|16,000|  
-|資料表中的資料列|無限制<br /><br /> **警告：** 資料表中的單一資料行可以有超過 1,999,999,997 相異值的限制。|  
+|資料表中的資料列|無限制<br /><br /> **警告：** 限制資料表中的單一資料行可以有超過 1,999,999,997 的相異值。|  
 |資料表中的階層|15,999|  
 |階層中的層級|15,999|  
 |關聯性|8,000|  
 |所有的資料表中的索引鍵資料行|15,999|  
-|資料表中的量值|2^31-1 = 2,147,483,647|  
+|在資料表中的量值|2^31-1 = 2,147,483,647|  
 |查詢傳回的資料格|2^31-1 = 2,147,483,647|  
-|來源查詢的記錄大小|64 K|  
+|來源查詢的記錄大小|64K|  
 |物件名稱的長度|512 個字元|  
   
 ## <a name="see-also"></a>另請參閱  

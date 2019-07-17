@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65f080c7-771f-4cf6-a7a0-88882c637f8d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: afe9eacb2f5e42dc945505d54e420877a8f4cbca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af9086ba9de7d9c61bcedecd4331e7e0e77d6489
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121115"
 ---
 # <a name="syspolicypolicycategories-transact-sql"></a>syspolicy_policy_categories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47646496"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |policy_category_id|**int**|原則類別目錄的識別碼。|  
-|NAME|**sysname**|原則類別目錄的名稱。|  
+|name|**sysname**|原則類別目錄的名稱。|  
 |mandate_database_subscriptions|**bit**|指出原則類別目錄是否會套用到執行個體內的所有資料庫而不需要明確訂閱 (1)，或是原則類別目錄是否必須使用明確訂閱 (0) 套用到資料庫。|  
   
 ## <a name="remarks"></a>備註  

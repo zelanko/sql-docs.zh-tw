@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3419faca26d9d252610c07cb994ab5faa738f937
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399181"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211703"
 ---
 # <a name="rename-user-defined-functions"></a>重新命名使用者定義函數
   您可以透過使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，重新命名 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的使用者定義函數。  
@@ -26,7 +26,7 @@ ms.locfileid: "52399181"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目重新命名使用者定義函數：**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "52399181"
   
     -   彙總函式  
   
-4.  以滑鼠右鍵按一下您要重新命名的函數，然後選取 [重新命名]。  
+4.  以滑鼠右鍵按一下您要重新命名的函數，然後選取 [重新命名]  。  
   
 5.  輸入函式的新名稱。  
   

@@ -1,5 +1,5 @@
 ---
-title: 資料來源檢視 (Analysis Services) 中定義具名的查詢 |Microsoft 文件
+title: 定義具名的查詢中的資料來源檢視 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bee48d9927e9caaea28fd201480e507e5cfa7d9d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026225"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208980"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>在資料來源檢視中定義具名查詢 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,27 +37,27 @@ ms.locfileid: "34026225"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟含有您想在其中加入具名查詢之資料來源檢視的專案，或連接到包含此資料來源檢視的資料庫。  
   
-2.  在方案總管中，展開 [資料來源檢視] 資料夾，然後按兩下資料來源檢視。  
+2.  在方案總管中，展開 [資料來源檢視]  資料夾，然後按兩下資料來源檢視。  
   
-3.  在 [資料表] 或 [圖表] 窗格中，以滑鼠右鍵按一下開放區域，然後按一下 [新增具名查詢]。  
+3.  在 [資料表]  或 [圖表]  窗格中，以滑鼠右鍵按一下開放區域，然後按一下 [新增具名查詢]  。  
   
-4.  在 [建立具名查詢] 對話方塊中，執行下列動作：  
+4.  在 [建立具名查詢]  對話方塊中，執行下列動作：  
   
-    1.  在 [名稱] 文字方塊中，輸入查詢名稱。  
+    1.  在 [名稱]  文字方塊中，輸入查詢名稱。  
   
-    2.  可以選擇在 [描述] 文字方塊中輸入查詢的描述。  
+    2.  可以選擇在 [描述]  文字方塊中輸入查詢的描述。  
   
-    3.  在 [資料來源] 清單方塊中，選取具名查詢執行時所要針對的資料來源。  
+    3.  在 [資料來源]  清單方塊中，選取具名查詢執行時所要針對的資料來源。  
   
     4.  在下方窗格中輸入查詢，或是使用圖形化查詢建立工具來建立查詢。  
   
     > [!NOTE]  
     >  請注意，建立查詢的使用者介面 (UI) 需視資料來源而定； 您可以取得一般文字式 UI，而非圖形 UI。 您可以使用不同的 UI 來完成相同的工作，但必須以不同的方式執行。 如需詳細資訊，請參閱[建立/編輯具名查詢對話方塊 &#40;Analysis Services - 多維度資料&#41;](http://msdn.microsoft.com/library/8e192ad6-a0b1-4e21-bb3f-087c93e62941)。  
   
-5.  按一下 **[確定]**。 資料表頁首會出現表示兩個重疊資料表的圖示，指出資料表已取代為具名查詢。  
+5.  按一下 [確定]  。 資料表頁首會出現表示兩個重疊資料表的圖示，指出資料表已取代為具名查詢。  
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [在資料來源檢視 & #40; 中定義具名的計算Analysis Services & #41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

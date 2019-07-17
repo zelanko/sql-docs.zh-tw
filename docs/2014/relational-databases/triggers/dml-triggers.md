@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797740"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196512"
 ---
 # <a name="dml-triggers"></a>DML 觸發程序
   DML 觸發程序是一種特殊類型的預存程序，會在影響觸發程序中所定義之資料表或檢視表的資料操作語言 (DML) 事件執行時自動執行。 DML 事件包括 INSERT、UPDATE 或 DELETE 陳述式。 DML 觸發程序可用以強制執行商務規則和資料完整性、查詢其他資料表，以及包括複雜的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 觸發程序和引發它的陳述式會被視為單一交易處理，而這樣的交易可以從觸發程序內部回復。 如果偵測到伺服器錯誤 (例如，磁碟空間不足)，整個交易就會自動回復。  
@@ -59,7 +59,7 @@ ms.locfileid: "52797740"
 |適用性|資料表|資料表與檢視|  
 |每個資料表或檢視的數量|每個觸發動作 (UPDATE、DELETE 與 INSERT) 有多個|每個觸發動作 (UPDATE、DELETE 與 INSERT) 各一個|  
 |串聯參考|沒有限制|INSTEAD OF UPDATE 及 DELETE 觸發程序不允許用於串聯參考完整性條件約束的目標資料表。|  
-|執行|之後：<br /><br /> 條件約束處理<br />宣告性參考動作<br />**inserted** 與 **deleted** 資料表建立<br />觸發動作|之前：條件約束處理<br /><br /> 取代：觸發動作<br /><br /> 之後：  **inserted** 與 **deleted** 資料表建立|  
+|執行|之後：<br /><br /> 條件約束處理<br />宣告性參考動作<br />**inserted** 與 **deleted** 資料表建立<br />觸發動作|之前：條件約束處理<br /><br /> 位置：觸發動作<br /><br /> 之後：  **inserted** 與 **deleted** 資料表建立|  
 |執行順序|可指定第一和最後一個執行|不適用|  
 |`varchar(max)``nvarchar(max)`，並`varbinary(max)`中的資料行參考**插入**並**刪除**資料表|Allowed|Allowed|  
 |`text``ntext`，並`image`中的資料行參考**插入**並**刪除**資料表|不允許|Allowed|  

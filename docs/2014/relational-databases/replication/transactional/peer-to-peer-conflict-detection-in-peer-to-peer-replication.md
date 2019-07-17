@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135443"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198987"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>點對點複寫中的衝突偵測
   點對點異動複寫可讓您在拓撲中的任何節點上插入、更新或刪除資料，以及讓資料變更傳播至其他節點。 由於您可以在任何節點上變更資料，因此不同節點的資料變更可能會彼此衝突。 如果在一個以上的節點上修改資料列，它可能會在此資料列傳播到其他節點時，造成衝突或甚至是遺失更新。  

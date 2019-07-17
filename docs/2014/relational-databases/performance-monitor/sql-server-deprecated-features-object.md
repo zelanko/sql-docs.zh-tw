@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763940"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206966"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server、Deprecated Features 物件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 SQLServer:Deprecated Features 物件提供了計數器來監視指定為已被取代的功能。 在每一個案例中，此計數器都會提供一個使用計數，列出上一次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後所遇到之已被取代功能的次數。  
@@ -30,7 +30,7 @@ ms.locfileid: "52763940"
 |SQL Server 已被取代的功能計數器執行個體|描述|  
 |------------------------------------------------------|-----------------|  
 |做為暫存資料表和預存程序名稱的 '#' 和 '##'。|遇到一個不包含 # 以外之任何字元的識別碼。 請至少使用一個其他字元。 每次編譯時發生一次。|  
-|'::' 函數呼叫語法|資料表值函式遇到 :: 函式呼叫語法。 取代`SELECT column_list FROM`  *\< function_name >*`()`。 例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)`取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次編譯時發生一次。|  
+|'::' 函數呼叫語法|資料表值函式遇到 :: 函式呼叫語法。 取代`SELECT column_list FROM`  *\< function_name >* `()`。 例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)`取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次編譯時發生一次。|  
 |'\@' 和以 '\@\@' 開頭的名稱作為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別碼|出現了以 \@ 或 \@\@ 開頭的識別碼。 請勿使用 \@ 或 \@\@，或是以 \@\@ 開頭的名稱，作為識別碼。 每次編譯時發生一次。|  
 |ADDING TAPE DEVICE|已被取代的功能 sp_addumpdevice'`tape`' 發現。 Sp_addumpdevice '`disk`' 改為。 每次使用時發生一次。|  
 |ALL 權限|遇到 GRANT ALL、DENY ALL 或 REVOKE ALL 語法的總次數。 請修改語法來拒絕特定權限。 每次查詢時發生一次。|  
@@ -38,7 +38,7 @@ ms.locfileid: "52763940"
 |ALTER LOGIN WITH SET CREDENTIAL|遇到已被取代的功能語法 ALTER LOGIN WITH SET CREDENTIAL 或 ALTER LOGIN WITH NO CREDENTIAL。 請改用 ADD 或 DROP CREDENTIAL 語法。 每次編譯時發生一次。|  
 |Azeri_Cyrilllic_90|每次啟動資料庫及使用定序時，事件會發生一次。 請規劃修改使用此定序的應用程式。|  
 |Azeri_Latin_90|每次啟動資料庫及使用定序時，事件會發生一次。 請規劃修改使用此定序的應用程式。|  
-|BACKUP DATABASE 或 LOG TO TAPE|遇到已被取代的功能 BACKUP { DATABASE &#124; LOG } TO TAPE 或 BACKUP { DATABASE &#124; LOG } TO <磁帶裝置>。<br /><br /> 請改用 BACKUP { DATABASE &#124; LOG } TO DISK 或 BACKUP { DATABASE &#124; LOG } TO <磁帶裝置>。 每次使用時發生一次。|  
+|BACKUP DATABASE 或 LOG TO TAPE|遇到已被取代的功能 BACKUP { DATABASE &#124; LOG } TO TAPE 或 BACKUP { DATABASE &#124; LOG } TO <磁帶裝置>  。<br /><br /> 請改用 BACKUP { DATABASE &#124; LOG } TO DISK 或 BACKUP { DATABASE &#124; LOG } TO <磁帶裝置>  。 每次使用時發生一次。|  
 |BACKUP DATABASE 或 LOG WITH MEDIAPASSWORD|遇到了已被取代的功能 BACKUP DATABASE WITH MEDIAPASSWORD 或 BACKUP LOG WITH MEDIAPASSWORD。 請勿使用 WITH MEDIAPASSWORD。|  
 |BACKUP DATABASE 或 LOG WITH PASSWORD|遇到了已被取代的功能 BACKUP DATABASE WITH PASSWORD 或 BACKUP LOG WITH PASSWORD。 請勿使用 WITH PASSWORD。|  
 |COMPUTE [BY]|遇到了 COMPUTE 或 COMPUTE BY 語法。 請重寫查詢，以搭配 ROLLUP 使用 GROUP BY。 每次編譯時發生一次。|  
@@ -58,7 +58,7 @@ ms.locfileid: "52763940"
 |DBCC INDEXDEFRAG|遇到 DBCC INDEXDEFRAG 陳述式。 請重寫此陳述式來使用 ALTER INDEX 的 REORGANIZE 選項。 每次查詢時發生一次。|  
 |DBCC SHOWCONTIG|遇到 DBCC SHOWCONTIG 陳述式。 請查詢 sys.dm_db_index_physical_stats，取得這項資訊。 每次查詢時發生一次。|  
 |當做預設值的 DEFAULT 關鍵字|遇到了使用 DEFAULT 關鍵字當做預設值的語法。 請勿使用。 每次編譯時發生一次。|  
-|已被取代的加密演算法|下一版的 SQL Server 將會移除已被取代的加密演算法 RC4。 請避免在新的開發工作中使用此項功能，並規劃修改目前使用此項功能的應用程式。 RC4 演算法功能並不強，只是為了與舊版相容才予以支援。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料  (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本中，使用 RC4 或 RC4_128 加密的資料可以在任何相容性層級進行解密。|  
+|已被取代的加密演算法|下一版的 SQL Server 將會移除已被取代的加密演算法 RC4。 請避免在新的開發工作中使用此項功能，並規劃修改目前使用此項功能的應用程式。 RC4 演算法功能並不強，只是為了與舊版相容才予以支援。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料 (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本中，使用 RC4 或 RC4_128 加密的資料可以在任何相容性層級進行解密。|  
 |DESX 演算法|遇到了使用 DESX 加密演算法的語法。 請使用另一種演算法進行加密。 每次編譯時發生一次。|  
 |dm_fts_active_catalogs|dm_fts_active_catalogs 計數器一定會保持為 0，因為 sys.dm_fts_active_catalogs 檢視表的某些資料行未被取代。 若要監視已被取代的資料行，請使用資料行特定的計數器，例如 dm_fts_active_catalogs.is_paused。|  
 |dm_fts_active_catalogs.is_paused|遇到了 [sys.dm_fts_active_catalogs](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql) 動態管理檢視的 is_paused 資料行。 請避免使用這個資料行。 每當伺服器執行個體偵測到此資料行的參考時，都會發生。|  
@@ -70,7 +70,7 @@ ms.locfileid: "52763940"
 |dm_fts_active_catalogs.worker_count|遇到了 sys.dm_fts_active_catalogs 動態管理檢視的 worker_count 資料行。 請避免使用這個資料行。 每當伺服器執行個體偵測到此資料行的參考時，都會發生。|  
 |dm_fts_memory_buffers|dm_fts_memory_buffers 計數器一定會保持為 0，因為 sys.dm_fts_memory_buffers 檢視表的大部分資料行都未被取代。 若要監視已被取代的資料行，請使用資料行特定的計數器：dm_fts_memory_buffers.row_count。|  
 |dm_fts_memory_buffers.row_count|遇到了 [sys.dm_fts_memory_buffers](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql) 動態管理檢視的 row_count 資料行。 請避免使用這個資料行。 每當伺服器執行個體偵測到此資料行的參考時，都會發生。|  
-|具有兩部分名稱的 DROP INDEX|DROP INDEX 語法在 DROP INDEX 中包含了 <資料表名稱>.<索引名稱> 語法格式。 在 DROP INDEX 陳述式中取代為 <索引名稱> ON <資料表名稱> 的語法。 每次編譯時發生一次。|  
+|具有兩部分名稱的 DROP INDEX|DROP INDEX 語法在 DROP INDEX 中包含了 <資料表名稱>.<索引名稱>  語法格式。 在 DROP INDEX 陳述式中取代為 <索引名稱>  ON <資料表名稱>  的語法。 每次編譯時發生一次。|  
 |EXT_CREATE_ALTER_SOAP_ENDPOINT|遇到了 FOR SOAP 選項的 CREATE 或 ALTER ENDPOINT 陳述式。 原生 XML Web Service 已被取代。 請改用 Windows Communications Foundation (WCF) 或 ASP.NET。|  
 |EXT_endpoint_webmethods|遇到 sys.endpoint_webmethods。 原生 XML Web Service 已被取代。 請改用 Windows Communications Foundation (WCF) 或 ASP.NET。|  
 |EXT_soap_endpoints|遇到 sys.soap_endpoints。 原生 XML Web Service 已被取代。 請改用 Windows Communications Foundation (WCF) 或 ASP.NET。|  
@@ -112,7 +112,7 @@ ms.locfileid: "52763940"
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|遇到了已被取代之 sys.numbered_procedure_parameters 的參考。 請勿使用。 每次編譯時發生一次。|  
 |numbered_procedures|遇到了已被取代之 deprecated sys.numbered_procedures 的參考。 請勿使用。 每次編譯時發生一次。|  
-|Oldstyle RAISEERROR|已被取代的 RAISERROR (格式：遇到 RAISERROR 整數字串) 語法。 請使用目前的 RAISERROR 語法重寫陳述式。 每次編譯時發生一次。|  
+|Oldstyle RAISEERROR|已被取代的 RAISERROR (格式：遇到 RAISERROR 整數字串） 語法。 請使用目前的 RAISERROR 語法重寫陳述式。 每次編譯時發生一次。|  
 |隨選連接的 OLEDB。|SQLOLEDB 不是支援的提供者。 請針對隨選連接使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。|  
 |PERMISSIONS|遇到了 PERMISSIONS 內建函數的參考。 請改為查詢 sys.fn_my_permissions。 每次查詢時發生一次。|  
 |ProcNums|遇到了已被取代的 ProcNums 語法。 請重寫陳述式來移除參考。 每次編譯時發生一次。|  
@@ -251,7 +251,7 @@ ms.locfileid: "52763940"
 |Text in row 資料表選項|遇到 'text in row' 資料表選項的參考。 請改用 sp_tableoption 'large value types out of row'。 每次查詢時發生一次。|  
 |TEXTPTR|遇到 TEXTPTR 函數的參考。 請重寫應用程式來使用 `varchar(max)` 資料類型及移除 `text`、`ntext` 和 `image` 資料類型語法。 每次查詢時發生一次。|  
 |TEXTVALID|遇到 TEXTVALID 函數的參考。 請重寫應用程式來使用 `varchar(max)` 資料類型及移除 `text`、`ntext` 和 `image` 資料類型語法。 每次查詢時發生一次。|  
-|timestamp|DDL 陳述式中遇到之已被取代的 `timestamp` 資料類型的總次數。 請改用 `rowversion` 資料類型。|  
+|TIMESTAMP|DDL 陳述式中遇到之已被取代的 `timestamp` 資料類型的總次數。 請改用 `rowversion` 資料類型。|  
 |UPDATETEXT 或 WRITETEXT|遇到 UPDATETEXT 或 WRITETEXT 陳述式。 請重寫應用程式來使用 `varchar(max)` 資料類型及移除 `text`、`ntext` 和 `image` 資料類型語法。 每次查詢時發生一次。|  
 |USER_ID|遇到 USER_ID 函數的參考。 請改用 DATABASE_PRINCIPAL_ID 函數。 每次編譯時發生一次。|  
 |針對連結的伺服器使用 OLEDB||  

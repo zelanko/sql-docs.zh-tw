@@ -1,5 +1,5 @@
 ---
-title: 定義連結的維度 |Microsoft 文件
+title: 定義連結的維度 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8441f37d902c823e9d8dce27a96b2d78f3f38b26
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023625"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209007"
 ---
 # <a name="define-linked-dimensions"></a>定義連結維度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34023625"
 > [!NOTE]  
 >  因為無法使用重新整理，所以大多數的 Analysis Services 開發人員都會複製維度而不是連結維度。 您可以在相同方案內複製不同專案中的維度。 如需詳細資訊，請參閱 [Refresh of a linked dimension in SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx)(在 SSAS 中重新整理連結維度)。  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>先決條件  
  提供維度的來源資料庫和使用該維度的目前資料庫都必須具有相同的版本和相容性層級。 如需詳細資訊，請參閱 [多維度資料庫的相容性層級 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)(在 SSAS 中重新整理連結維度)。  
   
  來源資料庫必須已部署並處於線上。 您必須將發行或取用連結物件的伺服器設定為允許該作業 (如下所示)。  
@@ -36,7 +36,7 @@ ms.locfileid: "34023625"
   
 ## <a name="configure-server-to-allow-linked-objects"></a>將伺服器設定為允許連結物件  
   
-1.  在 SQL Server Management Studio 中，連接到 Analysis Services 伺服器。 在 [物件總管] 中，以滑鼠右鍵按一下伺服器名稱，然後選取 [Facet]。  
+1.  在 SQL Server Management Studio 中，連接到 Analysis Services 伺服器。 在 [物件總管] 中，以滑鼠右鍵按一下伺服器名稱，然後選取 [Facet]  。  
   
 2.  將 **LinkedObjectsLinksFromOtherInstancesEnabled** 設定為 **True**，允許伺服器發出在其他執行個體上執行之資料庫的連結物件要求。  
   
@@ -44,18 +44,18 @@ ms.locfileid: "34023625"
   
 ## <a name="create-a-linked-dimension-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中建立連結維度  
   
-1.  啟動精靈。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫或專案中的 [維度] 資料夾，然後按一下 [新增連結維度]。  
+1.  啟動精靈。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫或專案中的 [維度]  資料夾，然後按一下 [新增連結維度]  。  
   
-2.  連接至提供維度的 Analysis Services 資料庫。 在連結物件精靈會的 [選取資料來源] 頁面上，選擇 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源或建立新的資料來源。  
+2.  連接至提供維度的 Analysis Services 資料庫。 在連結物件精靈會的 [選取資料來源]  頁面上，選擇 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源或建立新的資料來源。  
   
-3.  在精靈的 [選取物件] 頁面上，選擇您要在遠端資料庫中連結的維度。  
+3.  在精靈的 [選取物件]  頁面上，選擇您要在遠端資料庫中連結的維度。  
   
-4.  在 [正在完成精靈] 頁面上，您可以預覽連結物件。 如果您連結的維度與已存在的維度具有相同名稱，則會在名稱後附加序號 (第一個重複的名稱會從 '1' 開始)。 當您完成精靈時，維度會加入至 [維度] 資料夾。  
+4.  在 [正在完成精靈]  頁面上，您可以預覽連結物件。 如果您連結的維度與已存在的維度具有相同名稱，則會在名稱後附加序號 (第一個重複的名稱會從 '1' 開始)。 當您完成精靈時，維度會加入至 [維度]  資料夾。  
   
 ##  <a name="bkmk_CreateNew"></a> 建立新的資料來源與 Analysis Services 資料庫的連接  
- 使用 [建立新的資料來源] 精靈，以將提供維度之 Analysis Services 資料庫相關資訊加入您的專案連接。 您可以在 [連結物件精靈] 中的 [選取資料來源] 頁面上，按一下 [新增資料來源] 以啟動精靈。  
+ 使用 [建立新的資料來源] 精靈，以將提供維度之 Analysis Services 資料庫相關資訊加入您的專案連接。 您可以在 [連結物件精靈] 中的 [選取資料來源] 頁面上，按一下 [新增資料來源]  以啟動精靈。  
   
-1.  在 [資料來源精靈] 中的 [選取如何定義連接] 頁面上，按一下 [新增]。  
+1.  在 [資料來源精靈] 中的 [選取如何定義連接] 頁面上，按一下 [新增]  。  
   
 2.  在 [連線管理員] 中，確認提供者是否設定為 **Native OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0**。  
   
@@ -63,14 +63,14 @@ ms.locfileid: "34023625"
   
 4.  使用連接的 Windows 驗證。  
   
-5.  在 [初始目錄] 中，按一下向下鍵選取此伺服器上的資料庫。  
+5.  在 [初始目錄]  中，按一下向下鍵選取此伺服器上的資料庫。  
   
-6.  在 [資料來源精靈] 中，按一下 [下一步] 繼續。  
+6.  在 [資料來源精靈] 中，按一下 [下一步]  繼續。  
   
-7.  在 [模擬資訊] 頁面上，按一下 [使用服務帳戶]。 按一下 [下一步] 以完成精靈。 [連結物件精靈] 即會選取您所定義的連接。  
+7.  在 [模擬資訊] 頁面上，按一下 [使用服務帳戶]  。 按一下 [下一步]  以完成精靈。 [連結物件精靈] 即會選取您所定義的連接。  
   
 ## <a name="next-steps"></a>後續步驟  
- 您不能變更連結維度的結構，所以無法使用維度設計師的 [維度結構] 索引標籤來檢視它。 處理連結維度之後，您可以使用 [瀏覽器] 索引標籤來檢視。您也可以變更其名稱，並為名稱建立翻譯。  
+ 您不能變更連結維度的結構，所以無法使用維度設計師的 [維度結構]  索引標籤來檢視它。 處理連結維度之後，您可以使用 [瀏覽器]  索引標籤來檢視。您也可以變更其名稱，並為名稱建立翻譯。  
   
 ## <a name="see-also"></a>另請參閱  
  [多維度資料庫的相容性層級 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   

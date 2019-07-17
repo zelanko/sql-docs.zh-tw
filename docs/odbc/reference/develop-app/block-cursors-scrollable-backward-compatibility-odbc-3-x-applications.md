@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 49a7a1af0f4b487baddfffa3e4f14d2a148b7a1d
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 7d12906f8dec0bfb12fc861c067e6e615e758a3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134994"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>適用於 ODBC 3.x 應用程式的區塊資料指標、可捲動的資料指標和回溯相容性
 兩者的存在**SQLFetchScroll**並**SQLExtendedFetch**表示 ODBC 之間應用程式發展介面 (API)，也就是函式集分割成先清除應用程式呼叫和服務提供者介面 (SPI)，也就是函式集驅動程式實作。 這種分割，才能在 ODBC 中的需求之間取得平衡*3.x*，它會使用**SQLFetchScroll**，以符合標準，並使用 ODBC 相容*2.x*，它會使用**SQLExtendedFetch**。  

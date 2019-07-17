@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 15c1b428-ea6d-4672-894c-f0e289e2da3f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cee5d6711f18cc7ce21e162794858fbde7c893e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35c58f136668893bb6dd865859f42b2bcaefe128
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134218"
 ---
 # <a name="allocating-an-environment-handle"></a>配置環境控制代碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

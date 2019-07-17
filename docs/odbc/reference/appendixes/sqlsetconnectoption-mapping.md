@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a1b325cf-0c42-41c1-b141-b5a4fee7e708
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0351a6fa4621acb09d18a72b32ec2010a605ed9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b512a795c3b9e2d1c6aa1c7c9e92fbc42a8c7862
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125594"
 ---
 # <a name="sqlsetconnectoption-mapping"></a>SQLSetConnectOption 對應
 當 ODBC 2。*x*應用程式會呼叫**SQLSetConnectOption**透過 ODBC 3 *.x*驅動程式，會呼叫  

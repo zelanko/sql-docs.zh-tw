@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c6dde8b57112785bde5377d77cdb1d57f2767e3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2bf0be37313816ef4238df89d9157a2fc771e6e7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624146"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262715"
 ---
 # <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>sys.dm_resource_governor_external_resource_pools & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47624146"
 |資料行名稱      |資料類型      |描述|  
 |----------------|---------------|-----------------| 
 | external_pool_id|**int**|資源集區的識別碼。 不可為 Null。 |
-| NAME|**sysname**|資源集區的名稱。 不可為 Null。 
+| name|**sysname**|資源集區的名稱。 不可為 Null。 
 | pool_version|**int**|內部版本號碼。|
 | max_cpu_percent|**int**|當 CPU 出現競爭時，資源集區中所有要求允許之最大平均 CPU 頻寬的目前組態。 不可為 Null。 |
 | max_processes|**int**|並行的外部處理序數目上限。 預設值為 0 時，不會指定任何限制。 不可為 Null。|

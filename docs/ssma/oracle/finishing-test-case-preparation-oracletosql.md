@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 1bdbe8616f5f2c3252f813e6e2636966ff16ec16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: bc5693c71ac6061f12ee90386b3c135a45a14e09
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288524"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266071"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>完成測試案例準備 (OracleToSQL)
 精靈的最後一頁會顯示測試案例描述和物件參與測試的相關資訊。 此外，在此頁面上您可以設定測試執行選項。  

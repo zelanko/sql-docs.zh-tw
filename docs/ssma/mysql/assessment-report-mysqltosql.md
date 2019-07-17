@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 5525d989-024c-402d-9e84-faa4721cc5b9
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 72b6171864c0ab801e89d3eba5a19ff61031a81e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb6d01bf9c02d0a7b96adf8e46eb354cd426db4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139186"
 ---
 # <a name="assessment-report-mysqltosql"></a>評定報告 (MySQLToSQL)
 評定報表視窗中顯示的資料庫物件的轉換結果[!INCLUDE[tsql](../../includes/tsql-md.md)]語法，也可以幫助您評估複雜度和成本的移轉專案。  
   
 若要存取評估報表中，選取來源的中繼資料檔案總管 中要轉換的物件上按一下滑鼠右鍵**結構描述**，然後選取**建立報表**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 |||  
 |-|-|  

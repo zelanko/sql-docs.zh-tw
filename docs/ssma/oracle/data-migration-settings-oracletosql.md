@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 96b60573b81625c8896fb9022a6a718770f349ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 2b435b02060d32e61bc3e75054171023262a87b8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287176"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264211"
 ---
 # <a name="data-migration-settings-oracletosql"></a>資料移轉設定 (OracleToSQL)
   

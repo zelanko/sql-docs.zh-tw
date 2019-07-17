@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 59b5cae9075d9d3c692d56e74edebabda8884fe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e7706d3a7dd05273b4608d49211a6eaab8927f2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537585"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118611"
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource 函數 (英文)
 **合規性**  

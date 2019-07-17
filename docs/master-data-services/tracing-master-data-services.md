@@ -11,12 +11,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: f74158bcb8a83b65842d016f3dd8aeacf73f0427
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1c438eff7f3543b22fc2c0e4e2a7264cd1a91ee
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485068"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263977"
 ---
 # <a name="tracing-master-data-services"></a>追蹤 (Master Data Services)
 
@@ -60,7 +60,7 @@ ms.locfileid: "65485068"
   
 -   記錄格式是 CSV。 下表描述記錄格式。  
   
-    |元素|描述|  
+    |項目|描述|  
     |-------------|-----------------|  
     |Time|追蹤項目的發生時間。|  
     |CorrelationID|每個要求會指派一個相互關聯識別碼。 此要求觸發的所有追蹤會共用相同的相互關聯識別碼。<br /><br /> 當 UI 中發生錯誤時，相互關聯識別碼會出現在錯誤訊息中。|  

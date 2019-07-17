@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 0649e167ebaa90267422594ccd193ba468838e6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182008"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68187292"
 ---
 # <a name="reading-the-data-in-a-table-tutorial"></a>讀取資料表的資料 (教學課程)
   使用 SELECT 陳述式來讀取資料表的資料。 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中最重要的其中一個陳述式就是 SELECT 陳述式，而其中有很多的語法變化。 在本教學課程中，您將使用五種簡單的變化樣式。  
@@ -81,7 +81,7 @@ ms.locfileid: "48182008"
 |||  
 |-|-|  
 |[字串函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql)|[日期和時間資料類型與函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
-|[數學函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[文字和影像函數&#40;Transact SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
+|[數學函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[Text 和 Image 函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [摘要：建立資料庫物件](lesson-1-5-summary-creating-database-objects.md)  

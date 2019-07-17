@@ -1,7 +1,7 @@
 ---
 title: 什麼是新 Data Migration Assistant (SQL Server) |Microsoft 文件
 ms.custom: ''
-ms.date: 05/18/2019
+ms.date: 07/15/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -13,15 +13,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-ms.openlocfilehash: 5251b4da6334e8aeba1c467ff921f6f25b2ab26a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4bce2ed84dbaac8d6ec95bbcf34827a8113c1f54
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008374"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262267"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>資料移轉小幫手的新功能
 本文章列出新增的項目在每個版本的 Data Migration Assistant (DMA)。
+
+## <a name="dma-v44"></a>DMA 4.4 版
+
+DMA 的 4.4 版本提供支援上傳至 Azure Migrate 的評量。
 
 ## <a name="dma-v43"></a>DMA v4.3
 

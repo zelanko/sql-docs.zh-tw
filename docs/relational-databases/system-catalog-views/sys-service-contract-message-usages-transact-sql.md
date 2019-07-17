@@ -1,5 +1,5 @@
 ---
-title: sys.service_contract_message_usages (Transact-SQL) | Microsoft Docs
+title: sys.service_contract_message_usages (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f783e662-126c-4595-8e22-f9d05191f5d0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 280686087a0099fa374664eb0cbfe9d7c2b244ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bca839c61a59c69a7f6cf7e659ad940864fcee37
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62856050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132926"
 ---
 # <a name="sysservicecontractmessageusages-transact-sql"></a>sys.service_contract_message_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

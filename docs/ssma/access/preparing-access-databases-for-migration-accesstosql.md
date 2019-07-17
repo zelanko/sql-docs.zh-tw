@@ -21,12 +21,12 @@ ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 9495ff7a58da124255cc6bf5674d92ebeef4c2b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 58988d31687cacdce2954d8e4098d509a9dcbb2b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299483"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68260215"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>準備 Access 資料庫的移轉 (AccessToSQL)
 移轉至 Access 資料庫之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您必須判斷哪些資料庫移轉，並確保這些資料庫準備好進行移轉。  

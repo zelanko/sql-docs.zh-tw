@@ -1,5 +1,5 @@
 ---
-title: 通過個人化擴充 OLAP |Microsoft 文件
+title: 透過個人化擴充 OLAP |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1c49d2d350504daef36d0fbe861b26ccf220e7a7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026715"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208888"
 ---
 # <a name="extending-olap-through-personalizations"></a>通過個人化擴充 OLAP
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  Analysis Services 提供許多內建函式的多維度運算式 (MDX) 和資料採礦延伸模組 (DMX) 語言搭配使用。 這些函數是設計用來進行標準統計計算與階層中周遊成員間等工作。 不過，就如同其他複雜且功能強大的產品一樣，總是有進一步擴充產品功能的需求。  
+  Analysis Services 提供許多內建函式與多維度運算式 (MDX) 和資料採礦延伸模組 (DMX) 語言搭配使用。 這些函數是設計用來進行標準統計計算與階層中周遊成員間等工作。 不過，就如同其他複雜且功能強大的產品一樣，總是有進一步擴充產品功能的需求。  
   
  因此，Analysis Services 可讓您將組件和個人化的延伸模組加入到服務的執行個體，在標準功能不足時，完成您的商務需求。  
   

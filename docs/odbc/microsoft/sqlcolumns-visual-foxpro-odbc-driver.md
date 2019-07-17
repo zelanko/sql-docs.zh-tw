@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b588a875-0153-43a0-9b76-f89e728cfa65
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9895875caf7e05080dc46bea43a02b0e6cc6b57c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b15d3b06e357c60614ef8a5d30f38b078bf51db4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132531"
 ---
 # <a name="sqlcolumns-visual-foxpro-odbc-driver"></a>SQLColumns (Visual FoxPro ODBC Driver)
 > [!NOTE]  

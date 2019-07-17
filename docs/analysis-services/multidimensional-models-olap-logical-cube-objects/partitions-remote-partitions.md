@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3f7729fc1ddeb95c4ab9c780dfc6c48c253666f0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208357"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209306"
 ---
 # <a name="partitions---remote-partitions"></a>資料分割 - 遠端資料分割
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "53208357"
   
 |||  
 |-|-|  
-|儲存類型|資料|  
+|儲存類型|Data|  
 |MOLAP|資料分割的彙總，以及資料分割之來源資料的副本。|  
 |HOLAP|資料分割的彙總|  
 |ROLAP|無資料分割資料|  

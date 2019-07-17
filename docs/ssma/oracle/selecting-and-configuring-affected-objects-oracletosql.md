@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: fbd151b0fa8682865e44615c22a9fdd7577014ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62626522"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266498"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>選取及設定受影響的物件 (OracleToSQL)
 在此頁面中，您可以選取資料表和 SSMA 確認在上一個步驟中選擇之物件的執行結果時，所要比較的外部索引鍵，在其中變更。 此外，您可以自訂的驗證參數。  
@@ -50,7 +50,7 @@ ms.locfileid: "62626522"
 ## <a name="sql"></a>Sql  
 SQL 索引標籤包含 「 建立資料表 」 中所選取資料表的 SQL。  
   
-## <a name="data"></a>資料  
+## <a name="data"></a>Data  
 資料索引標籤會顯示選取之資料表中的資料。  
   
 ## <a name="properties"></a>屬性  
